@@ -1866,6 +1866,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier": (2, 11),
             "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base": (3, 4, 5),
             "four_eighty_directed_hashimoto_states_equal_directed_edge_count": (3, 7),
+            "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell": (3, 4),
+            "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector": (2, 8),
+            "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors": (2, 3),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -2307,6 +2310,36 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter7["directed_edge_packet"]["directed_edges"] == 2 * E
                 and 2 * E == 480
             ),
+            "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell": (
+                # The Clifford-Hopf sparse shadow names a shared_coxeter_number = 30 (ch 3).
+                # The H4 quasicrystal certificate names coxeter_number = 30 (ch 4).
+                # 30 is the Coxeter number of H4 (= highest degree of H4),
+                # linking the Clifford-Hopf algebra layer to the quasicrystal certificate.
+                chapter3["clifford_hopf_sparse_shadow"]["shared_coxeter_number"] == 30
+                and chapter4["w33_h4_certificate"]["coxeter_number"] == 30
+                and chapter4["w33_h4_certificate"]["coxeter_number"]
+                == chapter3["clifford_hopf_sparse_shadow"]["shared_coxeter_number"]
+            ),
+            "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector": (
+                # The two-qutrit Pauli core spread-line Morita rank is 16 (ch 2).
+                # The chiral mass sector spread-line Morita rank is 16 (ch 8).
+                # 16 = (Q + 1)^2 = 4^2 — the two-qutrit Hilbert-space dimension
+                # reappears as the Morita rank in both layers.
+                chapter2["two_qutrit_pauli_core_packet"]["spread_line_morita_rank"] == (Q + 1) ** 2
+                and chapter8["spread_line_morita_packet"]["rank"] == (Q + 1) ** 2
+                and (Q + 1) ** 2 == 16
+            ),
+            "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors": (
+                # The SRG overlap balance in trit economy is 108 (ch 2).
+                # The SRG overlap balance in cycle clock is 108 (ch 3).
+                # 108 = K*(K-1-LAMBDA) = MU*(V-K-1) is the standard SRG
+                # parameter consistency identity: adjacent pairs share LAMBDA
+                # common neighbours and non-adjacent pairs share MU = 4.
+                chapter2["sparse_point_economy"]["srg_overlap_balance"] == K * (K - 1 - LAMBDA)
+                and chapter3["least_change_packet"]["srg_overlap_balance"] == K * (K - 1 - LAMBDA)
+                and K * (K - 1 - LAMBDA) == MU * (V - K - 1)
+                and K * (K - 1 - LAMBDA) == 108
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -2396,7 +2429,18 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "shelling base count (ch 5); "
                 "(14) 2E = 480 is both the directed Hashimoto state count in the cycle-clock "
                 "packet (ch 3) and the total directed-edge count (ch 7), confirming the "
-                "Hashimoto operator acts on the same 480-state space."
+                "Hashimoto operator acts on the same 480-state space. "
+                "Three final arithmetic locks: (15) the H4 Coxeter number 30 appears as the "
+                "shared_coxeter_number in the Clifford-Hopf sparse shadow (ch 3) and as the "
+                "coxeter_number in the H4 quasicrystal certificate (ch 4), confirming the "
+                "Clifford-Hopf algebra and H4 quasicrystal layers share the same symmetry order; "
+                "(16) 16 = (Q+1)^2 is the two-qutrit Hilbert-space dimension and reappears as the "
+                "Morita rank of the spread-line structure in both the trit economy (ch 2) and the "
+                "chiral mass sector (ch 8); "
+                "(17) 108 = K*(K-1-Lambda) = mu*(V-K-1) is the SRG parameter consistency identity, "
+                "simultaneously the srg_overlap_balance in the trit economy (ch 2) and the cycle "
+                "clock (ch 3), confirming that adjacent degree K = 12 and non-adjacent overlap "
+                "mu = 4 are mutually determined by the single count V - K - 1 = 27."
             ),
         },
     }
