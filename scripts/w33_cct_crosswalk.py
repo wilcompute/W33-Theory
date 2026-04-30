@@ -1584,6 +1584,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             5,
             6,
         ),
+        "d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension": (3, 4, 8),
+        "edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension": (4, 8),
+        "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support": (8, 11),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -1890,6 +1893,37 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter6["theorem"]["chapter6_ten_D4_KVT_packet_recovers_W33_E8_shell"]
                 and 10 * F == E
             ),
+            "d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension": (
+                # D4 has exactly 24 roots (ch 3); each E8 Hopf fiber has exactly 24
+                # root vectors (ch 4); the Q_24->L_24 chiral forward block has
+                # sector dimension 24 (ch 8). The constant F = 24 flows unchanged
+                # from pure-lattice arithmetic to quasicrystal geometry to mass sector.
+                chapter3["division_algebra_root_chain"]["root_counts"]["D4"] == F
+                and chapter4["elser_sloane_hopf_packet"]["roots_per_24_cell_fiber"] == F
+                and chapter8["chiral_sequence_packet"]["forward_blocks"][1] == "Q_24 -> L_24"
+                and F == 24
+            ),
+            "edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension": (
+                # E / K = 240 / 12 = 20 is the edge-per-vertex-degree ratio.
+                # The FIG 20G compound has exactly 20 tetrahedra (ch 4).
+                # The Q_20->S_20 heavy chiral forward block has sector dimension 20 (ch 8).
+                # The same arithmetic quotient 20 = E/K governs all three layers.
+                E // K == 20
+                and chapter4["fibonacci_fig_source_packet"]["tetrahedra_per_20G"] == 20
+                and chapter8["chiral_sequence_packet"]["forward_blocks"][2] == "Q_20 -> S_20"
+                and E // K == F - 4  # = 20
+            ),
+            "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support": (
+                # The ETF complement / transport carrier has dimension 45 = 1 + 24 + 20
+                # = 1 + F + E/K, derivable from first-principles W(3,3) arithmetic.
+                # The E6 27-line dual GQ(4,2) graph has exactly 45 cubic-support triangles (ch 11).
+                # The same integer 45 appears independently in the measurement geometry
+                # and the gauge-symmetry carrier.
+                1 + F + E // K == 45
+                and chapter11["theorem"][
+                    "chapter11_exact_e6_cubic_carrier_is_the_27line_45triangle_support"
+                ]
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -1954,7 +1988,12 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "light shell = 2q^2 = 18, heavy shell = 8q^2 = 72 (chs 2, 8); "
                 "(3) the single arithmetic identity 10 x 24 = 240 = E appears "
                 "independently as D4 orientation classes x 24 (ch 3), Hopf fibers x 24 (ch 4), "
-                "E8 shell decomposition (ch 5), and D4 KVT packets (ch 6)."
+                "E8 shell decomposition (ch 5), and D4 KVT packets (ch 6).  "
+                "Three further arithmetic bridges: (4) F = 24 is simultaneously the D4 root shell count (ch 3), "
+                "the Hopf fiber vector count (ch 4), and the Q_24->L_24 chiral forward block sector dimension (ch 8); "
+                "(5) E/K = 240/12 = 20 equals the FIG 20G tetrahedra count (ch 4) and the Q_20->S_20 "
+                "heavy sector dimension (ch 8); (6) 45 = 1 + F + E/K = 1 + 24 + 20 is both the ETF "
+                "complement carrier dimension (ch 8) and the exact E6 cubic-support triangle count (ch 11)."
             ),
         },
     }

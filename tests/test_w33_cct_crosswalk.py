@@ -587,6 +587,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["girth_3_equals_trit_base_q_minimum_cycle_tick"]
         assert crosswalk["theorem"]["hodge_eigenvalue_ladder_is_trit_squared_light_18_equals_2q2_heavy_72_equals_8q2"]
         assert crosswalk["theorem"]["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"]
+        assert crosswalk["theorem"]["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"]
+        assert crosswalk["theorem"]["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"]
+        assert crosswalk["theorem"]["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -635,6 +638,9 @@ class TestCCT4H4Selector:
         assert motifs["girth_3_equals_trit_base_q_minimum_cycle_tick"] == (2, 3, 7)
         assert motifs["hodge_eigenvalue_ladder_is_trit_squared_18_equals_2q2_72_equals_8q2"] == (2, 8)
         assert motifs["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"] == (3, 4, 5, 6)
+        assert motifs["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"] == (3, 4, 8)
+        assert motifs["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"] == (4, 8)
+        assert motifs["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"] == (8, 11)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -661,6 +667,9 @@ class TestCCT4H4Selector:
         assert "girth(W(3,3)) = 3 = q" in crosswalk["theorem"]["interpretation"]
         assert "2q^2 = 18" in crosswalk["theorem"]["interpretation"]
         assert "10 x 24 = 240 = E" in crosswalk["theorem"]["interpretation"]
+        assert "F = 24 is simultaneously" in crosswalk["theorem"]["interpretation"]
+        assert "E/K = 240/12 = 20" in crosswalk["theorem"]["interpretation"]
+        assert "45 = 1 + F + E/K" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter2_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][2]
