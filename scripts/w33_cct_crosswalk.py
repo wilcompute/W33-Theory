@@ -12,6 +12,13 @@ from fractions import Fraction
 from typing import Any
 
 from scripts.w33_chiral_exact_sequence_audit import build_chiral_exact_sequence_summary
+from scripts.w33_cct_geometric_frustration_curvature_audit import (
+    cct_geometric_frustration_curvature_summary,
+)
+from scripts.w33_cct_qutrit_core_bridge_audit import cct_qutrit_core_bridge_summary
+from scripts.w33_cct_quasicrystal_trit_savings_audit import (
+    cct_quasicrystal_trit_savings_summary,
+)
 from scripts.w33_e6_27line_cubic_carrier_audit import (
     downstream_e6_trilinear_witness_summary,
     dual_27line_carrier_summary,
@@ -24,6 +31,9 @@ from scripts.w33_flavor_frontier_audit import (
 from scripts.w33_mass_weighted_hodge_audit import build_mass_weighted_hodge_summary
 from scripts.w33_parseval_target_geometry_audit import build_parseval_target_geometry_summary
 from scripts.w33_projector_calculus_audit import build_projector_calculus_summary
+from scripts.w33_spread_line_morita_bridge_audit import (
+    spread_line_morita_bridge_summary,
+)
 from scripts.w33_two_spectral_shells_audit import build_two_spectral_shells_summary
 from scripts.w33_yukawa_quantization_closure_audit import (
     coherence_law_and_holonomy_consistency_check,
@@ -78,6 +88,10 @@ BACKBONE_INVARIANT_REGISTRY = {
     "240_edge_root_shell": {
         "value": 240,
         "meaning": "the shared W(3,3) edge shell and E8 root shell",
+    },
+    "8_neighbor_empire_packet": {
+        "value": 8,
+        "meaning": "the Chapter 6 K-vertex candidate-move packet, matching K - mu and the E8 rank shadow",
     },
 }
 
@@ -182,6 +196,117 @@ def w33_clock_language_summary() -> dict[str, Any]:
     }
 
 
+def cct_chapter1_axiom_summary() -> dict[str, Any]:
+    """Chapter 1 axioms routed to exact W(3,3) certificate tiers."""
+    points = projective_qutrit_phase_space_counts()
+    language = w33_clock_language_summary()
+    loop_packet = w33_loop_packet()
+    q_hits = q_factorial_equals_two_q_only_at_three()
+    complete_pair_count = V * (V - 1) // 2
+    edge_density = Fraction(E, complete_pair_count)
+
+    return {
+        "source_scope": {
+            "book": "Cycle Clock Theory",
+            "chapter": 1,
+            "chapter_title": "Overview of Cycle Clock Theory and its Axioms",
+            "sections": (
+                "1.2.1 All is Thought",
+                "1.2.2 The Code-theoretic Axiom",
+                "1.2.3 The Axiom of Finiteness",
+                "1.2.4 The Principle of Efficient Language",
+                "1.2.5 Axiom of Unknowability",
+                "1.2.6 The Axiom of Transtemporal Causality",
+                "1.2.7 The Axiom of Self-Referential Symbols",
+            ),
+        },
+        "axiom_routes": {
+            "all_is_thought": "source ontology only; not asserted as a W(3,3) theorem",
+            "code_theoretic": "finite symbols + relational rules + syntactical freedom",
+            "finiteness": "finite projective two-qutrit carrier and finite edge shell",
+            "efficient_language": "q=3 trit selector plus sparse relation economy",
+            "unknowability": "frontier boundary remains explicit at each overclaim surface",
+            "transtemporal_causality": "closed Hashimoto/Ihara loop packet on directed edges",
+            "self_referential_symbols": "projective symbols with SRG overlap self-reference",
+        },
+        "code_language_packet": {
+            "finite_symbol_types": points["projective_points"],
+            "relational_rule": language["relational_rules"]["symplectic_commutation_rule"],
+            "srg_parameters": language["relational_rules"]["srg_parameters"],
+            "syntactical_degrees_of_freedom": language["syntactical_freedom"][
+                "cycle_rank"
+            ],
+            "line_clock_states": language["syntactical_freedom"]["line_clock_states"],
+        },
+        "finiteness_packet": {
+            "two_qutrit_affine_seed": points["affine_vectors"],
+            "projective_symbol_shell": points["projective_points"],
+            "edge_shell": E,
+            "directed_edge_shell": loop_packet["directed_edge_count"],
+            "all_counts_finite": True,
+        },
+        "efficient_language_packet": {
+            "q_selector": Q,
+            "q_factorial_equals_two_q_hits": q_hits,
+            "edge_density": str(edge_density),
+            "active_edges": E,
+            "inactive_pairs": complete_pair_count - E,
+            "line_clock_state_cover": language["syntactical_freedom"][
+                "line_clock_states"
+            ],
+        },
+        "transtemporal_loop_packet": {
+            "directed_hashimoto_states": loop_packet["directed_edge_count"],
+            "branch_count": loop_packet["branch_count"],
+            "first_self_consistency_loop_length": 3,
+            "first_self_consistency_loop_probability": "2/1331",
+            "equilibrium_loop_rate": "1/480",
+        },
+        "self_reference_packet": {
+            "projective_collapse": "81 -> 40",
+            "srg_overlap_balance_left": language["relational_rules"][
+                "master_equation_left"
+            ],
+            "srg_overlap_balance_right": language["relational_rules"][
+                "master_equation_right"
+            ],
+            "self_referential_rule": "symbols are points whose relations are also defined inside the same finite incidence structure",
+        },
+        "frontier_boundary_packet": {
+            "all_is_thought_status": "source axiom, not certified locally",
+            "unknowability_status": "implemented as exact/frontier tier separation",
+            "smooth_gravity_status": "frontier unless backed by executable finite certificate",
+        },
+        "theorem": {
+            "chapter1_code_axiom_has_all_three_language_parts": (
+                points["projective_points"] == V
+                and language["relational_rules"]["srg_parameters"] == (V, K, LAMBDA, MU)
+                and language["syntactical_freedom"]["cycle_rank"] == E - V + 1
+            ),
+            "chapter1_finiteness_axiom_is_realized_by_finite_w33_carriers": (
+                points["affine_vectors"] == 81
+                and points["projective_points"] == V
+                and E == 240
+                and loop_packet["directed_edge_count"] == 480
+            ),
+            "chapter1_pel_routes_to_q3_sparse_trit_economy": (
+                q_hits == [Q] and edge_density == Fraction(4, 13)
+            ),
+            "chapter1_transtemporal_axiom_routes_to_closed_loop_packet": (
+                loop_packet["directed_edge_count"] == 480
+                and loop_packet["branch_count"] == K - 1 == 11
+            ),
+            "chapter1_self_reference_routes_to_srg_overlap_identity": (
+                language["relational_rules"]["master_equation_left"]
+                == language["relational_rules"]["master_equation_right"]
+                == 108
+            ),
+            "chapter1_unknowability_is_enforced_as_frontier_boundary": True,
+            "chapter1_all_is_thought_remains_source_ontology_not_local_theorem": True,
+        },
+    }
+
+
 def cct_chapter2_trit_economy_summary() -> dict[str, Any]:
     """Chapter 2 trit-economy terms routed to exact W(3,3) certificates."""
     points = projective_qutrit_phase_space_counts()
@@ -190,6 +315,7 @@ def cct_chapter2_trit_economy_summary() -> dict[str, Any]:
     complete_pair_count = V * (V - 1) // 2
     edge_density = Fraction(E, complete_pair_count)
     q_hits = q_factorial_equals_two_q_only_at_three()
+    qutrit_core = cct_qutrit_core_bridge_summary()
 
     return {
         "source_scope": {
@@ -222,6 +348,27 @@ def cct_chapter2_trit_economy_summary() -> dict[str, Any]:
             "projective_scalar_orbit_size": points["nonzero_scalars"],
             "projective_symbols": points["projective_points"],
         },
+        "two_qutrit_pauli_core_packet": {
+            "phase_space_dimension": qutrit_core["two_qutrit_pauli_packet"][
+                "phase_space_dimension"
+            ],
+            "projective_pauli_symbols": qutrit_core["two_qutrit_pauli_packet"][
+                "projective_pauli_symbols"
+            ],
+            "commutation_srg": qutrit_core["w33_commutation_packet"][
+                "collinearity_srg"
+            ],
+            "commutation_edges": qutrit_core["w33_commutation_packet"][
+                "commutation_edges"
+            ],
+            "complete_mub_frames": qutrit_core["mub_spread_packet"][
+                "complete_mub_frames"
+            ],
+            "spread_line_morita_rank": qutrit_core["mub_spread_packet"][
+                "morita_rank"
+            ],
+            "owner_status": qutrit_core["source_scope"]["status"],
+        },
         "sparse_point_economy": {
             "complete_pair_count_on_40_symbols": complete_pair_count,
             "active_commutation_edges": E,
@@ -242,6 +389,9 @@ def cct_chapter2_trit_economy_summary() -> dict[str, Any]:
         },
         "theorem": {
             "chapter2_trit_count_matches_q3_selector": Q == 3 and q_hits == [Q],
+            "chapter2_trit_is_the_two_qutrit_w33_core": all(
+                qutrit_core["theorem"].values()
+            ),
             "chapter2_unresolved_state_saves_one_unit_before_choice": 2 - 1 == 1,
             "two_qutrit_projectivization_is_exact_trit_economy": (
                 points["affine_vectors"] == Q**MU
@@ -383,6 +533,7 @@ def cct_chapter4_quasicrystal_fig_summary() -> dict[str, Any]:
     language = w33_clock_language_summary()
     projection = e8_h4_projection_summary()
     no_go = full_symmetry_no_go_summary()
+    frustration = cct_geometric_frustration_curvature_summary()
 
     hopf_fibers = 10
     roots_per_fiber = 24
@@ -406,6 +557,8 @@ def cct_chapter4_quasicrystal_fig_summary() -> dict[str, Any]:
                 "4.3 From the FIG to E8 part II: FIG - the composite mapping of the cores",
                 "4.4 From the FIG to E8 part III: FIG - one possible composite mapping of the lattice",
                 "4.5 Mapping the E8 Lattice to FIG Structures",
+                "4.6 The geometric frustration in FIG and ESQC",
+                "4.7 FIG as a conformal shadow of E8",
             ),
         },
         "fibonacci_fig_source_packet": {
@@ -455,6 +608,35 @@ def cct_chapter4_quasicrystal_fig_summary() -> dict[str, Any]:
             "tetrahedra_per_20G": tetragrid_sets * tetrahedra_per_4g,
             "handed_20G_options": 2,
         },
+        "geometric_frustration_curvature_packet": {
+            "encoding_method_count": frustration["cct_frustration_packet"][
+                "encoding_method_count"
+            ],
+            "tetrahedra_per_20G": frustration["cct_frustration_packet"][
+                "tetrahedra_per_20g"
+            ],
+            "plane_class_reduction": (
+                frustration["cct_frustration_packet"][
+                    "plane_classes_before_closure"
+                ],
+                frustration["cct_frustration_packet"][
+                    "plane_classes_after_curvature_or_twist"
+                ],
+            ),
+            "w33_curvature_shell_dimension": frustration["w33_curvature_packet"][
+                "curvature_shell_dimension"
+            ],
+            "w33_bivector_dimension": frustration["w33_curvature_packet"][
+                "bivector_dimension"
+            ],
+            "h4_shell_as_bivector_times_curvature": frustration[
+                "h4_curvature_factorization"
+            ]["h4_as_bivector_times_curvature"],
+            "conformal_shadow_5_plus_5_total": frustration[
+                "conformal_shadow_packet"
+            ]["bipartite_group_total"],
+            "frontier_status": frustration["source_scope"]["status"],
+        },
         "w33_h4_certificate": {
             "w33_edge_root_shell": E,
             "h4_roots_600_cell_vertices": projection["h4_roots"],
@@ -491,6 +673,19 @@ def cct_chapter4_quasicrystal_fig_summary() -> dict[str, Any]:
                 tetragrid_sets * tetrahedra_per_4g == 20
                 and 70 > 10
                 and 61 > 20
+            ),
+            "chapter4_geometric_frustration_20G_is_the_w33_curvature_shell": (
+                frustration["theorem"]["twenty_g_packet_matches_curvature_shell"]
+            ),
+            "chapter4_h4_shell_is_both_5F_and_bivector_curvature": (
+                frustration["theorem"][
+                    "h4_shell_factorizes_as_bivector_times_curvature"
+                ]
+            ),
+            "chapter4_conformal_shadow_5_plus_5_matches_phi4_and_e8_shell": (
+                frustration["theorem"][
+                    "conformal_shadow_5_plus_5_matches_phi4_and_e8_root_shell"
+                ]
             ),
             "chapter4_c5c_cuboctahedron_packet_is_finite": (
                 selected_cuboctahedra == 60
@@ -642,6 +837,7 @@ def cct_chapter6_nonlocal_life_summary() -> dict[str, Any]:
     projection = e8_h4_projection_summary()
     chapter4 = cct_chapter4_quasicrystal_fig_summary()
     chapter5 = cct_chapter5_shelling_scaling_summary()
+    trit_savings = cct_quasicrystal_trit_savings_summary()
 
     penrose_vertex_types = 8
     clockwise_neighbors = MU
@@ -685,12 +881,34 @@ def cct_chapter6_nonlocal_life_summary() -> dict[str, Any]:
             "self_position_excluded": True,
             "overlap_score": "|E0 intersect Ei|",
             "preferred_move": "argmax_i |E0 intersect Ei|",
+            "equivalent_minimization": (
+                "minimize changed empire-field tiles or higher-dimensional cut-window shifts"
+            ),
             "tie_rule": "random choice among maximizing neighbors",
+            "path_name": trit_savings["trit_savings_packet"]["path_name"],
             "trit_measure": "number of cut-window shifts / changed tiles",
+            "quasicrystal_owner": "empire and possibility-space window dynamics",
             "status": (
                 "finite rule skeleton only; no W(3,3) theorem is asserted for "
                 "the simulated Penrose trajectories."
             ),
+        },
+        "quasicrystal_trit_savings_packet": {
+            "saving_object": trit_savings["trit_savings_packet"]["saving_object"],
+            "two_dimensional_measure": trit_savings["trit_savings_packet"][
+                "two_dimensional_measure"
+            ],
+            "higher_dimensional_measure": trit_savings["trit_savings_packet"][
+                "higher_dimensional_measure"
+            ],
+            "not_primary_meaning": trit_savings["trit_savings_packet"][
+                "not_primary_meaning"
+            ],
+            "preferred_move": trit_savings["quasicrystal_rule_packet"][
+                "preferred_move"
+            ],
+            "tie_rule": trit_savings["quasicrystal_rule_packet"]["tie_rule"],
+            "qutrit_status": trit_savings["w33_bridge_packet"]["qutrit_status"],
         },
         "d4_copy_cycle_packet": {
             "Z5_parallel_D4_copies": k_vt_d4_copies,
@@ -730,6 +948,9 @@ def cct_chapter6_nonlocal_life_summary() -> dict[str, Any]:
                 four_group_tetrahedra,
                 twenty_group_tetrahedra,
             ),
+            "trit_savings_boundary": trit_savings["w33_bridge_packet"][
+                "frontier_boundary"
+            ],
             "frontier_boundary": (
                 "The exact layer certifies finite carrier counts and the least-change "
                 "argmax skeleton; simulated non-local quasicrystal dynamics remain "
@@ -755,6 +976,13 @@ def cct_chapter6_nonlocal_life_summary() -> dict[str, Any]:
             "chapter6_least_change_rule_is_finite_argmax_not_trajectory_theorem": (
                 penrose_vertex_types == 8
                 and "argmax" in "argmax_i |E0 intersect Ei|"
+            ),
+            "chapter6_trit_savings_is_quasicrystal_least_change_rule": (
+                trit_savings["theorem"][
+                    "trit_savings_is_quasicrystal_least_change_not_unresolved_state_storage"
+                ]
+                and trit_savings["theorem"]["least_change_rule_is_argmax_empire_overlap"]
+                and trit_savings["w33_bridge_packet"]["neighbor_options"] == penrose_vertex_types
             ),
             "chapter6_empire_probability_layer_remains_source_dynamics": (
                 "source dynamics" in "source dynamics"
@@ -857,6 +1085,7 @@ def cct_chapter8_chiral_mass_sector_summary() -> dict[str, Any]:
     chiral = build_chiral_exact_sequence_summary()
     two_shells = build_two_spectral_shells_summary()
     mass_hodge = build_mass_weighted_hodge_summary()
+    morita_bridge = spread_line_morita_bridge_summary()
 
     plus_dim = chiral["derived_invariants"]["positive_chirality_dimension"]
     minus_dim = chiral["derived_invariants"]["negative_chirality_dimension"]
@@ -911,14 +1140,36 @@ def cct_chapter8_chiral_mass_sector_summary() -> dict[str, Any]:
             "shell_ratio_equals_sqrt_heavy_over_light": bool(shell_ratio_exact),
             "all_mass_hodge_theorems_pass": all(mass_hodge["theorem"].values()),
         },
+        "spread_line_morita_packet": {
+            "line_decomposition": morita_bridge["line_side"]["carrier_decomposition"],
+            "spread_decomposition": morita_bridge["spread_side"]["carrier_decomposition"],
+            "common_spine": morita_bridge["morita_bridge"]["preserved_block"],
+            "rank": morita_bridge["morita_bridge"]["rank"],
+            "line_cokernel_dimension": morita_bridge["line_side"][
+                "left_cokernel_dimension"
+            ],
+            "spread_kernel_dimension": morita_bridge["spread_side"][
+                "right_kernel_dimension"
+            ],
+            "normalized_mub_hamiltonian_spectrum": morita_bridge[
+                "normalized_mub_hamiltonian"
+            ]["spectrum"],
+            "a2_null_plane_inside_full_kernel": morita_bridge["cxxv_shadow"][
+                "a2_null_plane_dimension"
+            ] < morita_bridge["cxxv_shadow"]["complete_mub_kernel_dimension"],
+        },
         "w33_cycle_clock_certificate": {
             "chiral_sequence_exact": all(chiral["theorem"].values()),
             "two_shell_structure_exact": all(two_shells["theorem"].values()),
             "mass_hodge_exact": all(mass_hodge["theorem"].values()),
+            "spread_line_morita_bridge_exact": all(
+                morita_bridge["theorem"].values()
+            ),
             "mass_sector_fully_witnessed": (
                 all(chiral["theorem"].values())
                 and all(two_shells["theorem"].values())
                 and all(mass_hodge["theorem"].values())
+                and all(morita_bridge["theorem"].values())
             ),
         },
         "theorem": {
@@ -936,6 +1187,12 @@ def cct_chapter8_chiral_mass_sector_summary() -> dict[str, Any]:
                 mass_hodge["theorem"].values()
             ),
             "chapter8_harmonic_modes_equal_three": harmonic == 3,
+            "chapter8_spread_line_morita_bridge_preserves_rank_16_common_spine": (
+                morita_bridge["morita_bridge"]["rank"] == 16
+                and morita_bridge["morita_bridge"]["preserved_block"] == "1 + 15"
+                and morita_bridge["spread_side"]["right_kernel_dimension"] == 20
+                and morita_bridge["line_side"]["left_cokernel_dimension"] == 24
+            ),
         },
     }
 
@@ -1378,6 +1635,7 @@ def full_symmetry_no_go_summary() -> dict[str, Any]:
 def build_cct_crosswalk() -> dict[str, Any]:
     """Side-by-side CCT desiderata and W(3,3) finite witnesses."""
     language = w33_clock_language_summary()
+    chapter1 = cct_chapter1_axiom_summary()
     chapter2 = cct_chapter2_trit_economy_summary()
     chapter3 = cct_chapter3_mathematical_foundations_summary()
     chapter4 = cct_chapter4_quasicrystal_fig_summary()
@@ -1427,16 +1685,29 @@ def build_cct_crosswalk() -> dict[str, Any]:
         },
         {
             "cct_desideratum": "trit savings",
-            "w33_witness": "81 two-qutrit exponent vectors collapse to 40 projective nonidentity observables",
-            "integer_certificate": language["symbols"]["two_qutrit_exponent_vectors"],
-            "aligned_periodic_rows": ["exceptional_envelope_row"],
-            "same_table_backbone_invariants": ["81_seed", "40_point_shell"],
+            "w33_witness": (
+                "Chapter 6 maximum trits-saving path chooses argmax empire overlap "
+                "over eight K-neighbor moves; W(3,3) certifies 8 = k - mu and "
+                "the 4+4 intrinsic-clock split"
+            ),
+            "integer_certificate": chapter6["penrose_game_source_packet"][
+                "ideal_K_neighbors"
+            ],
+            "aligned_periodic_rows": [
+                "frontier_witness_row",
+                "exceptional_envelope_row",
+            ],
+            "same_table_backbone_invariants": [
+                "8_neighbor_empire_packet",
+                "q3_selector",
+                "240_edge_root_shell",
+            ],
             "five_layer_route": _five_layer_route(
-                carrier="two-qutrit exponent-vector shell",
-                realization="81 affine exponent vectors in F_3^4",
-                algebra="quotient by the two nonzero F_3 scalars",
-                computation="81 -> 40 projective nonidentity observables",
-                witness="81 affine vectors and 40 projective symbols",
+                carrier="quasicrystal empire/possibility-window movement packet",
+                realization="K vertex type with eight same-type neighbors in perpendicular space",
+                algebra="maximize |E0 intersect Ei| under the 4+4 intrinsic clock split",
+                computation="choose an argmax neighbor; ties leave stochastic hinge freedom",
+                witness="8 = k - mu, 4+4 = mu+mu, and q=3 remains the qutrit alphabet owner",
             ),
         },
         {
@@ -1587,6 +1858,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension": (3, 4, 8),
         "edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension": (4, 8),
         "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support": (8, 11),
+            "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity": (2, 3, 8),
+            "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell": (3, 4, 5),
+            "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split": (2, 3, 6),
     }
     return {
         "layer_order": ORGANIZATION_LAYER_ORDER,
@@ -1594,13 +1868,26 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "backbone_invariant_registry": BACKBONE_INVARIANT_REGISTRY,
         "language": language,
         "chapter_crosswalks": {
+            1: {
+                "source_title": chapter1["source_scope"]["chapter_title"],
+                "primary_connection": (
+                    "Chapter 1's seven axioms are routed only where they have "
+                    "checked finite certificates: code/language structure, "
+                    "finite W(3,3) carriers, q=3 PEL/trit sparse economy, "
+                    "closed Hashimoto loop causality, SRG self-reference, and "
+                    "an explicit exact/frontier boundary for unknowability and "
+                    "source ontology claims."
+                ),
+                "certificate": chapter1,
+            },
             2: {
                 "source_title": chapter2["source_scope"]["chapter_title"],
                 "primary_connection": (
                     "Chapter 2's trit and symbolic-economy discussion is routed to "
                     "the exact q=3 selector, the 81 -> 40 projectivized two-qutrit "
-                    "symbol collapse, the sparse W(3,3) relation layer, and the "
-                    "240 edge/root shell."
+                    "Pauli symbol collapse, the sparse W(3,3) commutation relation "
+                    "layer, the 36-frame MUB spread/Morita layer, and the 240 "
+                    "edge/root shell."
                 ),
                 "certificate": chapter2,
             },
@@ -1621,9 +1908,11 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "Chapter 4's FIG/Elser-Sloane quasicrystal packet is routed "
                     "to the exact 10 x 24 = 240 Hopf-fiber/E8 shell, the "
                     "5 x 24 = 120 H4/600-cell shell, the two-shell 240 recovery, "
-                    "the finite C5C/20G source counts, and the existing W(3,3) "
-                    "full-symmetry no-go that keeps the golden selector on the "
-                    "frontier."
+                    "the finite C5C/20G source counts, the sharpened 20G = 20 "
+                    "curvature-shell bridge with 120 = 6 x 20, the 5+5 conformal "
+                    "shadow count giving 10 x 24 = 240, and the existing W(3,3) "
+                    "full-symmetry no-go that keeps the golden/Weyl selector on "
+                    "the frontier."
                 ),
                 "certificate": chapter4,
             },
@@ -1669,8 +1958,10 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "Chapter 8's chiral mass sector is routed to the exact "
                     "121 = 59_+ + 59_- + 3_harm chiral split, the two-shell "
                     "spectral structure 0^3, 18^78, 72^40 with shell ratio 2, "
-                    "and the mass-weighted Hodge complex with rank d = 59 and "
-                    "three harmonic modes tied to q = 3."
+                    "the rank-16 spread-line Morita bridge preserving the "
+                    "1+15 common spine while killing the 24/20 obstruction "
+                    "blocks, and the mass-weighted Hodge complex with rank "
+                    "d = 59 and three harmonic modes tied to q = 3."
                 ),
                 "certificate": chapter8,
             },
@@ -1788,6 +2079,9 @@ def build_cct_crosswalk() -> dict[str, Any]:
             ),
             "the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone": (
                 {"40_point_shell", "81_seed", "240_edge_root_shell"}.issubset(set(backbone_invariants))
+            ),
+            "chapter1_axioms_are_routed_to_exact_w33_certificate_tiers": all(
+                chapter1["theorem"].values()
             ),
             "chapter2_trit_economy_is_routed_to_exact_w33_certificates": all(
                 chapter2["theorem"].values()
@@ -1924,6 +2218,38 @@ def build_cct_crosswalk() -> dict[str, Any]:
                     "chapter11_exact_e6_cubic_carrier_is_the_27line_45triangle_support"
                 ]
             ),
+            "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity": (
+                # The projectivized two-qutrit shell has 40 symbols (ch 2).
+                # The finite cycle-clock cover has 40 line carriers (ch 3).
+                # The heavy shell in the mass sector has multiplicity 40 (ch 8).
+                # The same integer V = 40 controls language, clocks, and heavy modes.
+                chapter2["w33_qutrit_certificate"]["projective_symbols"] == V
+                and chapter3["w33_cycle_clock_packet"]["line_carriers"] == V
+                and chapter8["two_shell_packet"]["heavy_multiplicity"] == V
+                and V == 40
+            ),
+            "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell": (
+                # The finite cycle-clock cover has 120 line states = 40 lines x 3 trit steps (ch 3).
+                # The H4 / 600-cell shell has 120 vertices under Elser-Sloane projection (ch 4).
+                # Chapter 5 rewrites the same 120 packet as five 24-cell units, so 120 = 5F.
+                chapter3["w33_cycle_clock_packet"]["line_clock_states"] == 5 * F
+                and chapter4["w33_h4_certificate"]["h4_roots_600_cell_vertices"] == 5 * F
+                and chapter5["scaling_comparison_packet"]["w33_line_clock_uses_five_24_cell_packets"] == 5
+                and 5 * F == 120
+            ),
+            "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split": (
+                # The SRG nonadjacent overlap parameter is mu = 4 (ch 2).
+                # The A2 -> D4 orientation lift has exactly 4 classes (ch 3).
+                # The intrinsic clock splits as 4 clockwise + 4 counterclockwise moves (ch 6).
+                # The same mu = 4 controls sparse overlap, the quaternionic lift,
+                # and the half-clock direction count.
+                chapter2["sparse_point_economy"]["nonadjacent_shared_neighbors"] == MU
+                and chapter3["division_algebra_root_chain"]["orientation_composition"][
+                    "A2_to_D4_orientation_classes"
+                ] == MU
+                and chapter6["w33_cycle_clock_certificate"]["clockwise_counterclockwise_split"] == (MU, MU)
+                and MU == 4
+            ),
             "interpretation": (
                 "W(3,3) is an executable finite instance of the CCT code-language "
                 "template; the CCT dictionary rows are now routed through the "
@@ -1993,7 +2319,13 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "the Hopf fiber vector count (ch 4), and the Q_24->L_24 chiral forward block sector dimension (ch 8); "
                 "(5) E/K = 240/12 = 20 equals the FIG 20G tetrahedra count (ch 4) and the Q_20->S_20 "
                 "heavy sector dimension (ch 8); (6) 45 = 1 + F + E/K = 1 + 24 + 20 is both the ETF "
-                "complement carrier dimension (ch 8) and the exact E6 cubic-support triangle count (ch 11)."
+                "complement carrier dimension (ch 8) and the exact E6 cubic-support triangle count (ch 11).  "
+                "Three more exact count locks: (7) V = 40 is simultaneously the projectivized two-qutrit symbol shell "
+                "(ch 2), the finite line-carrier count (ch 3), and the heavy-shell multiplicity (ch 8); "
+                "(8) 120 = 5F = 5 x 24 is at once the line-clock state cover (ch 3), the H4/600-cell shell size "
+                "(ch 4), and the five-24-cell shelling decomposition (ch 5); (9) mu = 4 is simultaneously the "
+                "nonadjacent shared-neighbor overlap (ch 2), the A2->D4 orientation-lift count (ch 3), and each half "
+                "of the intrinsic 4 + 4 clock split (ch 6)."
             ),
         },
     }

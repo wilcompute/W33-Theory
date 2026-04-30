@@ -14,6 +14,7 @@ from scripts.w33_cct_crosswalk import (
     Q,
     a2_prime_power_hexagon_count,
     build_cct_crosswalk,
+    cct_chapter1_axiom_summary,
     cct_chapter2_trit_economy_summary,
     cct_chapter3_mathematical_foundations_summary,
     cct_chapter4_quasicrystal_fig_summary,
@@ -71,6 +72,67 @@ class TestCCT2RelationalRules:
         assert "F_3" in rules["symplectic_commutation_rule"]
 
 
+class TestCCTChapter1Axioms:
+    def test_chapter1_axioms_route_to_exact_certificate_tiers(self):
+        summary = cct_chapter1_axiom_summary()
+
+        assert summary["source_scope"]["chapter"] == 1
+        assert summary["source_scope"]["chapter_title"] == (
+            "Overview of Cycle Clock Theory and its Axioms"
+        )
+        assert set(summary["axiom_routes"]) == {
+            "all_is_thought",
+            "code_theoretic",
+            "finiteness",
+            "efficient_language",
+            "unknowability",
+            "transtemporal_causality",
+            "self_referential_symbols",
+        }
+
+    def test_chapter1_code_finiteness_and_pel_packets(self):
+        summary = cct_chapter1_axiom_summary()
+
+        assert summary["code_language_packet"] == {
+            "finite_symbol_types": 40,
+            "relational_rule": "B(x,y)=0 over F_3",
+            "srg_parameters": (40, 12, 2, 4),
+            "syntactical_degrees_of_freedom": 201,
+            "line_clock_states": 120,
+        }
+        assert summary["finiteness_packet"] == {
+            "two_qutrit_affine_seed": 81,
+            "projective_symbol_shell": 40,
+            "edge_shell": 240,
+            "directed_edge_shell": 480,
+            "all_counts_finite": True,
+        }
+        assert summary["efficient_language_packet"] == {
+            "q_selector": 3,
+            "q_factorial_equals_two_q_hits": [3],
+            "edge_density": "4/13",
+            "active_edges": 240,
+            "inactive_pairs": 540,
+            "line_clock_state_cover": 120,
+        }
+
+    def test_chapter1_loop_self_reference_and_boundary_packets(self):
+        summary = cct_chapter1_axiom_summary()
+
+        assert summary["transtemporal_loop_packet"] == {
+            "directed_hashimoto_states": 480,
+            "branch_count": 11,
+            "first_self_consistency_loop_length": 3,
+            "first_self_consistency_loop_probability": "2/1331",
+            "equilibrium_loop_rate": "1/480",
+        }
+        assert summary["self_reference_packet"]["projective_collapse"] == "81 -> 40"
+        assert summary["self_reference_packet"]["srg_overlap_balance_left"] == 108
+        assert summary["self_reference_packet"]["srg_overlap_balance_right"] == 108
+        assert "frontier" in summary["frontier_boundary_packet"]["smooth_gravity_status"]
+        assert all(summary["theorem"].values())
+
+
 class TestCCTChapter2TritEconomy:
     def test_chapter2_trit_model_routes_to_q3_and_projective_collapse(self):
         summary = cct_chapter2_trit_economy_summary()
@@ -118,6 +180,19 @@ class TestCCTChapter2TritEconomy:
         assert root_bridge["e8_root_vectors"] == 240
         assert root_bridge["e8_weyl_order"] == E8_WEYL_ORDER == 696_729_600
         assert root_bridge["w33_edges_match_e8_roots"] is True
+
+    def test_chapter2_trit_economy_is_the_two_qutrit_w33_core(self):
+        summary = cct_chapter2_trit_economy_summary()
+
+        assert summary["two_qutrit_pauli_core_packet"] == {
+            "phase_space_dimension": 4,
+            "projective_pauli_symbols": 40,
+            "commutation_srg": (40, 12, 2, 4),
+            "commutation_edges": 240,
+            "complete_mub_frames": 36,
+            "spread_line_morita_rank": 16,
+            "owner_status": "repo-exact finite qutrit core",
+        }
 
     def test_chapter2_theorem(self):
         summary = cct_chapter2_trit_economy_summary()
@@ -275,6 +350,21 @@ class TestCCTChapter4QuasicrystalFIG:
         assert "frontier data" in certificate["frontier_status"]
         assert all(summary["theorem"].values())
 
+    def test_chapter4_geometric_frustration_curvature_packet(self):
+        summary = cct_chapter4_quasicrystal_fig_summary()
+        packet = summary["geometric_frustration_curvature_packet"]
+
+        assert packet == {
+            "encoding_method_count": 4,
+            "tetrahedra_per_20G": 20,
+            "plane_class_reduction": (70, 10),
+            "w33_curvature_shell_dimension": 20,
+            "w33_bivector_dimension": 6,
+            "h4_shell_as_bivector_times_curvature": 120,
+            "conformal_shadow_5_plus_5_total": 10,
+            "frontier_status": "exact finite-count bridge; smooth gravity remains frontier",
+        }
+
 
 class TestCCTChapter5ShellingScaling:
     def test_divisor_and_a2_prime_power_helpers(self):
@@ -385,11 +475,32 @@ class TestCCTChapter6NonlocalLife:
             "self_position_excluded": True,
             "overlap_score": "|E0 intersect Ei|",
             "preferred_move": "argmax_i |E0 intersect Ei|",
+            "equivalent_minimization": (
+                "minimize changed empire-field tiles or higher-dimensional cut-window shifts"
+            ),
             "tie_rule": "random choice among maximizing neighbors",
+            "path_name": "maximum trits-saving path",
             "trit_measure": "number of cut-window shifts / changed tiles",
+            "quasicrystal_owner": "empire and possibility-space window dynamics",
             "status": (
                 "finite rule skeleton only; no W(3,3) theorem is asserted for "
                 "the simulated Penrose trajectories."
+            ),
+        }
+
+        assert summary["quasicrystal_trit_savings_packet"] == {
+            "saving_object": "overlap between the current empire field and candidate next-step empires",
+            "two_dimensional_measure": "changed tiles; the 2D paper calls these bits",
+            "higher_dimensional_measure": (
+                "number of cut-window shifts guided by empire and possibility-space windows"
+            ),
+            "not_primary_meaning": (
+                "not merely unresolved third-state storage or 81-to-40 projectivization"
+            ),
+            "preferred_move": "argmax_i |Ui|",
+            "tie_rule": "random choice among maximizing neighbors",
+            "qutrit_status": (
+                "q=3 owns the finite trit/qutrit alphabet, while Chapter 6 owns the savings rule"
             ),
         }
 
@@ -430,6 +541,7 @@ class TestCCTChapter6NonlocalLife:
         assert certificate["split_matches_mu_plus_mu"] is True
         assert certificate["ten_D4_packets_recover_edge_shell"] == E == 240
         assert certificate["twenty_group_from_five_4G"] == (5, 4, 20)
+        assert "source/frontier dynamics" in certificate["trit_savings_boundary"]
         assert "frontier/source behavior" in certificate["frontier_boundary"]
         assert all(summary["theorem"].values())
 
@@ -495,6 +607,7 @@ class TestCCT4H4Selector:
             "240_edge_root_shell",
             "40_point_shell",
             "81_seed",
+            "8_neighbor_empire_packet",
             "q3_selector",
         ]
 
@@ -525,7 +638,24 @@ class TestCCT4H4Selector:
         trit_row = next(
             row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "trit savings"
         )
-        assert trit_row["same_table_backbone_invariants"] == ["81_seed", "40_point_shell"]
+        assert trit_row["integer_certificate"] == 8
+        assert trit_row["aligned_periodic_rows"] == [
+            "frontier_witness_row",
+            "exceptional_envelope_row",
+        ]
+        assert trit_row["same_table_backbone_invariants"] == [
+            "8_neighbor_empire_packet",
+            "q3_selector",
+            "240_edge_root_shell",
+        ]
+        assert "maximum trits-saving path" in trit_row["w33_witness"]
+        assert trit_row["five_layer_route"] == {
+            "carrier": "quasicrystal empire/possibility-window movement packet",
+            "realization": "K vertex type with eight same-type neighbors in perpendicular space",
+            "algebra": "maximize |E0 intersect Ei| under the 4+4 intrinsic clock split",
+            "computation": "choose an argmax neighbor; ties leave stochastic hinge freedom",
+            "witness": "8 = k - mu, 4+4 = mu+mu, and q=3 remains the qutrit alphabet owner",
+        }
 
         measurement_row = next(
             row
@@ -574,6 +704,7 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary"]
         assert crosswalk["theorem"]["crosswalk_rows_name_the_same_table_backbone_invariants_they_use"]
         assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
+        assert crosswalk["theorem"]["chapter1_axioms_are_routed_to_exact_w33_certificate_tiers"]
         assert crosswalk["theorem"]["chapter2_trit_economy_is_routed_to_exact_w33_certificates"]
         assert crosswalk["theorem"]["chapter3_foundations_are_routed_to_exact_w33_certificates"]
         assert crosswalk["theorem"]["chapter4_quasicrystal_fig_layer_is_routed_to_exact_w33_certificates"]
@@ -590,6 +721,9 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"]
         assert crosswalk["theorem"]["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"]
         assert crosswalk["theorem"]["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"]
+        assert crosswalk["theorem"]["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"]
+        assert crosswalk["theorem"]["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"]
+        assert crosswalk["theorem"]["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -641,6 +775,9 @@ class TestCCT4H4Selector:
         assert motifs["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"] == (3, 4, 8)
         assert motifs["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"] == (4, 8)
         assert motifs["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"] == (8, 11)
+        assert motifs["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"] == (2, 3, 8)
+        assert motifs["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"] == (3, 4, 5)
+        assert motifs["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"] == (2, 3, 6)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -670,13 +807,27 @@ class TestCCT4H4Selector:
         assert "F = 24 is simultaneously" in crosswalk["theorem"]["interpretation"]
         assert "E/K = 240/12 = 20" in crosswalk["theorem"]["interpretation"]
         assert "45 = 1 + F + E/K" in crosswalk["theorem"]["interpretation"]
+        assert "V = 40 is simultaneously" in crosswalk["theorem"]["interpretation"]
+        assert "120 = 5F = 5 x 24" in crosswalk["theorem"]["interpretation"]
+        assert "mu = 4 is simultaneously" in crosswalk["theorem"]["interpretation"]
+
+    def test_crosswalk_has_a_chapter1_certificate(self):
+        chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
+
+        assert chapter["source_title"] == "Overview of Cycle Clock Theory and its Axioms"
+        assert "seven axioms" in chapter["primary_connection"]
+        assert "code/language structure" in chapter["primary_connection"]
+        assert "closed Hashimoto loop causality" in chapter["primary_connection"]
+        assert "exact/frontier boundary" in chapter["primary_connection"]
+        assert all(chapter["certificate"]["theorem"].values())
 
     def test_crosswalk_has_a_chapter2_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][2]
 
         assert chapter["source_title"] == "Trits, the Irreducible Computational Element of Thought"
         assert "q=3 selector" in chapter["primary_connection"]
-        assert "81 -> 40" in chapter["primary_connection"]
+        assert "two-qutrit Pauli symbol collapse" in chapter["primary_connection"]
+        assert "36-frame MUB spread/Morita layer" in chapter["primary_connection"]
         assert "240 edge/root shell" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
@@ -698,6 +849,9 @@ class TestCCT4H4Selector:
         assert "10 x 24 = 240" in chapter["primary_connection"]
         assert "5 x 24 = 120" in chapter["primary_connection"]
         assert "two-shell 240 recovery" in chapter["primary_connection"]
+        assert "20G = 20" in chapter["primary_connection"]
+        assert "120 = 6 x 20" in chapter["primary_connection"]
+        assert "5+5 conformal" in chapter["primary_connection"]
         assert "full-symmetry no-go" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
@@ -760,6 +914,8 @@ class TestCCT4H4Selector:
         )
         assert "121 = 59_+ + 59_- + 3_harm" in chapter["primary_connection"]
         assert "18^78, 72^40" in chapter["primary_connection"]
+        assert "rank-16 spread-line Morita bridge" in chapter["primary_connection"]
+        assert "1+15 common spine" in chapter["primary_connection"]
         assert "shell ratio 2" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
@@ -843,6 +999,21 @@ class TestCCTChapter8ChiralMassSector:
         assert pkt["minus_sector"] == 59
         assert pkt["harmonic_modes"] == 3
         assert pkt["sum_checks"] is True
+
+    def test_chapter8_spread_line_morita_bridge_packet(self):
+        ch = cct_chapter8_chiral_mass_sector_summary()
+        pkt = ch["spread_line_morita_packet"]
+
+        assert pkt == {
+            "line_decomposition": (1, 15, 24),
+            "spread_decomposition": (1, 15, 20),
+            "common_spine": "1 + 15",
+            "rank": 16,
+            "line_cokernel_dimension": 24,
+            "spread_kernel_dimension": 20,
+            "normalized_mub_hamiltonian_spectrum": {5: 1, 1: 15, 0: 20},
+            "a2_null_plane_inside_full_kernel": True,
+        }
 
     def test_chapter8_theorem_all_pass(self):
         ch = cct_chapter8_chiral_mass_sector_summary()
