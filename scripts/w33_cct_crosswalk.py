@@ -1860,12 +1860,14 @@ def build_cct_crosswalk() -> dict[str, Any]:
         "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support": (8, 11),
             "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity": (2, 3, 8),
             "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell": (3, 4, 5),
+            "one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers": (1, 2, 3, 4),
             "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split": (2, 3, 6),
             "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator": (3, 4, 10),
             "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop": (3, 7),
             "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier": (2, 11),
             "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base": (3, 4, 5),
             "four_eighty_directed_hashimoto_states_equal_directed_edge_count": (3, 7),
+            "four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers": (1, 3, 7),
             "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell": (3, 4),
             "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector": (2, 8),
             "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors": (2, 3),
@@ -2251,6 +2253,16 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 and chapter5["scaling_comparison_packet"]["w33_line_clock_uses_five_24_cell_packets"] == 5
                 and 5 * F == 120
             ),
+            "one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers": (
+                # The same 120-state line-clock carrier is already present in the Chapter 1
+                # code-language packet, the Chapter 2 trit-economy packet, the Chapter 3
+                # cycle-clock packet, and the Chapter 4 H4 certificate shadow.
+                chapter1["code_language_packet"]["line_clock_states"] == V * Q
+                and chapter2["sparse_point_economy"]["line_clock_states"] == V * Q
+                and chapter3["w33_cycle_clock_packet"]["line_clock_states"] == V * Q
+                and chapter4["w33_h4_certificate"]["line_clock_states"] == V * Q
+                and V * Q == 120
+            ),
             "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split": (
                 # The SRG nonadjacent overlap parameter is mu = 4 (ch 2).
                 # The A2 -> D4 orientation lift has exactly 4 classes (ch 3).
@@ -2313,6 +2325,17 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 # directed-graph edge count, confirming the Hashimoto
                 # non-backtracking operator acts on the same 480-state space.
                 chapter3["w33_cycle_clock_packet"]["directed_hashimoto_states"] == 2 * E
+                and chapter7["directed_edge_packet"]["directed_edges"] == 2 * E
+                and 2 * E == 480
+            ),
+            "four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers": (
+                # Chapter 1 already exposes the same 480 directed transitions as both
+                # a finiteness shell and a transtemporal Hashimoto state count.
+                # Chapters 3 and 7 then reuse that identical 480-state carrier as the
+                # cycle-clock Hashimoto packet and the directed-edge loop packet.
+                chapter1["finiteness_packet"]["directed_edge_shell"] == 2 * E
+                and chapter1["transtemporal_loop_packet"]["directed_hashimoto_states"] == 2 * E
+                and chapter3["w33_cycle_clock_packet"]["directed_hashimoto_states"] == 2 * E
                 and chapter7["directed_edge_packet"]["directed_edges"] == 2 * E
                 and 2 * E == 480
             ),
@@ -2528,7 +2551,15 @@ def build_cct_crosswalk() -> dict[str, Any]:
                 "layers through the E6 symmetry group; "
                 "(23) 36 = Q * K = 3 * 12 is simultaneously the two-qutrit complete MUB frame "
                 "count (ch 2) and the 3rd PSp(4,3) orbital degree for its action on W(3,3) (ch 4), "
-                "linking quantum measurement theory (MUBs) to the symmetry group geometry of the graph."
+                "linking quantum measurement theory (MUBs) to the symmetry group geometry of the graph; "
+                "(24) 120 = V * Q = 40 * 3 is simultaneously the Chapter 1 code-language line-clock "
+                "state count, the Chapter 2 trit-economy line-clock state count, the Chapter 3 "
+                "cycle-clock state count, and the Chapter 4 H4 line-clock shadow, so the same 120-state "
+                "carrier survives from axioms through quasicrystal shadowing; "
+                "(25) 480 = 2 * E = 2 * 240 is simultaneously the Chapter 1 directed-edge shell, the "
+                "Chapter 1 transtemporal Hashimoto state count, the Chapter 3 cycle-clock Hashimoto "
+                "state space, and the Chapter 7 directed-edge packet, so the axiomatic causal shell and "
+                "the executable loop operator act on the same 480 directed transitions."
             ),
         },
         }

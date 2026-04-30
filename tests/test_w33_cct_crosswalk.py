@@ -738,6 +738,8 @@ class TestCCT4H4Selector:
         assert crosswalk["theorem"]["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"]
         assert crosswalk["theorem"]["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"]
         assert crosswalk["theorem"]["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"]
+        assert crosswalk["theorem"]["one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"]
+        assert crosswalk["theorem"]["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"]
         assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
         assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
@@ -791,12 +793,14 @@ class TestCCT4H4Selector:
         assert motifs["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"] == (8, 11)
         assert motifs["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"] == (2, 3, 8)
         assert motifs["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"] == (3, 4, 5)
+        assert motifs["one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"] == (1, 2, 3, 4)
         assert motifs["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"] == (2, 3, 6)
         assert motifs["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"] == (3, 4, 10)
         assert motifs["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"] == (3, 7)
         assert motifs["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"] == (2, 11)
         assert motifs["a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"] == (3, 4, 5)
         assert motifs["four_eighty_directed_hashimoto_states_equal_directed_edge_count"] == (3, 7)
+        assert motifs["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"] == (1, 3, 7)
         assert motifs["h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"] == (3, 4)
         assert motifs["spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"] == (2, 8)
         assert motifs["srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"] == (2, 3)
@@ -852,6 +856,8 @@ class TestCCT4H4Selector:
         assert "248 = E + 8" in crosswalk["theorem"]["interpretation"]
         assert "51840 = E * Q^2 * F" in crosswalk["theorem"]["interpretation"]
         assert "36 = Q * K = 3 * 12" in crosswalk["theorem"]["interpretation"]
+        assert "120 = V * Q = 40 * 3" in crosswalk["theorem"]["interpretation"]
+        assert "480 = 2 * E = 2 * 240" in crosswalk["theorem"]["interpretation"]
 
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
