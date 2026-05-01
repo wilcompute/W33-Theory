@@ -32,7 +32,9 @@ def test_raw_tower_profiles_realize_the_exact_z3_cycle() -> None:
     assert theorem["l6_first_full_gauge_return"] is True
 
 
-def test_tower_patterns_progress_exactly_from_balanced_to_democratic_plus_six_asymmetric() -> None:
+def test_tower_patterns_progress_exactly_from_balanced_to_democratic_plus_six_asymmetric() -> (
+    None
+):
     summary = build_lie_tower_cycle_bridge_summary()
     theorem = summary["pattern_progression_theorem"]
 
@@ -75,7 +77,10 @@ def test_l4_to_l6_bridge_strengthens_exactly_at_the_first_gauge_return() -> None
     assert bridge["l6_down_rank_lift"] == [6, 9]
     assert bridge["l6_currently_activates_only_cartan"] is True
     assert bridge["first_exact_gauge_return_is_l6"] is True
-    assert bridge["l6_residual_improvement_factor"] > bridge["l4_residual_improvement_factor"]
+    assert (
+        bridge["l6_residual_improvement_factor"]
+        > bridge["l4_residual_improvement_factor"]
+    )
 
 
 def test_bridge_verdict_mentions_both_tower_cycle_and_quark_escalation() -> None:

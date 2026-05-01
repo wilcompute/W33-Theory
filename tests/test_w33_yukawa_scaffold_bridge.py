@@ -47,7 +47,12 @@ def test_yukawa_scaffold_records_a2_activation_and_ce2_boundary() -> None:
 
     assert a2["minimal_full_a2_activation_seed_modes"] == [[8, 9], [246, 247]]
     assert a2["minimal_full_activation_is_exactly_fan_type"] is True
-    assert a2["minimal_rank_lift_seed_modes"] == [[8, 246], [8, 247], [9, 246], [9, 247]]
+    assert a2["minimal_rank_lift_seed_modes"] == [
+        [8, 246],
+        [8, 247],
+        [9, 246],
+        [9, 247],
+    ]
     assert a2["minimal_rank_lift_seed_size"] == 2
     assert a2["max_response_rank_within_unit_seed_family"] == 11
     assert a2["max_augmented_rank_within_unit_seed_family"] == 12

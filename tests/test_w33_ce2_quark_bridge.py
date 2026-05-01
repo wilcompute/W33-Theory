@@ -12,8 +12,17 @@ def _load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
+    previous = sys.modules.get(name)
+    had_previous = name in sys.modules
+    try:
+        sys.modules[name] = module
+        spec.loader.exec_module(module)
+    except BaseException:
+        if had_previous:
+            sys.modules[name] = previous
+        else:
+            sys.modules.pop(name, None)
+        raise
     return module
 
 
@@ -68,15 +77,23 @@ def test_ce2_bridge_closes_current_residual_only_trivially() -> None:
     assert certificate.down_right_mode_count == 9
     assert certificate.response_rank == 28
     assert certificate.augmented_rank == 28
-    assert certificate.original_total_residual_norm == pytest.approx(
-        2.0344259359556167
-    )
+    assert certificate.original_total_residual_norm == pytest.approx(2.0344259359556167)
     assert certificate.trivial_closure_total_residual_norm < 1e-12
     assert certificate.trivial_closure_up_residual_norm < 1e-12
     assert certificate.trivial_closure_down_residual_norm < 1e-12
 
-    assert np.count_nonzero(np.abs(MODULE.ce2_trivial_closed_up_quark_yukawa_8x8()) > 1e-12) == 0
-    assert np.count_nonzero(np.abs(MODULE.ce2_trivial_closed_down_quark_yukawa_8x8()) > 1e-12) == 0
+    assert (
+        np.count_nonzero(
+            np.abs(MODULE.ce2_trivial_closed_up_quark_yukawa_8x8()) > 1e-12
+        )
+        == 0
+    )
+    assert (
+        np.count_nonzero(
+            np.abs(MODULE.ce2_trivial_closed_down_quark_yukawa_8x8()) > 1e-12
+        )
+        == 0
+    )
 
 
 def test_full_quark_family_has_only_zero_clean_point() -> None:
