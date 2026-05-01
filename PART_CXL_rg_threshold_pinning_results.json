@@ -1,0 +1,64 @@
+{
+  "module": "PART_CXL_RG_THRESHOLD_PINNING",
+  "inputs": {
+    "alpha_unified": 0.04,
+    "target_alpha_s_MZ": 0.118,
+    "pdg_sigma": 0.0009,
+    "k3_eff_from_CXXXIX": 1.849461957178364,
+    "alpha_s_MZ_at_k3_eff": 0.11799999999999984,
+    "threshold_convention": "alpha_s(M_GUT)=alpha_unified/k3_bare*(1+delta_GUT)",
+    "delta_formula": "delta_GUT = k3_bare/k3_eff - 1"
+  },
+  "threshold_candidates": [
+    {
+      "label": "24/13 = 2k/Phi3",
+      "k3_bare": 1.8461538461538463,
+      "alpha_s_mz_without_threshold": 0.11923185745500198,
+      "sigma_without_threshold": 1.3687305055577594,
+      "delta_gut_to_target": -0.001788688332667654,
+      "delta_percent": -0.1788688332667654,
+      "effective_k3_after_threshold": 1.849461957178364,
+      "natural_loop_units": -0.2809665062735239
+    },
+    {
+      "label": "37/20",
+      "k3_bare": 1.85,
+      "alpha_s_mz_without_threshold": 0.11780212848781985,
+      "sigma_without_threshold": -0.21985723575571975,
+      "delta_gut_to_target": 0.0002909185666393199,
+      "delta_percent": 0.029091856663931992,
+      "effective_k3_after_threshold": 1.849461957178364,
+      "natural_loop_units": 0.045697381587348006
+    },
+    {
+      "label": "50/27",
+      "k3_bare": 1.8518518518518519,
+      "alpha_s_mz_without_threshold": 0.11712629791729523,
+      "sigma_without_threshold": -0.9707800918941819,
+      "delta_gut_to_target": 0.0012911309721525506,
+      "delta_percent": 0.12911309721525505,
+      "effective_k3_after_threshold": 1.849461957178364,
+      "natural_loop_units": 0.20280886845740328
+    },
+    {
+      "label": "13/7 = Phi3/Phi6",
+      "k3_bare": 1.8571428571428572,
+      "alpha_s_mz_without_threshold": 0.11523874164602309,
+      "sigma_without_threshold": -3.0680648377521176,
+      "delta_gut_to_target": 0.004153045665352239,
+      "delta_percent": 0.41530456653522396,
+      "effective_k3_after_threshold": 1.849461957178364,
+      "natural_loop_units": 0.6523533909069449
+    }
+  ],
+  "pinning_window": {
+    "lower_structural_candidate": "24/13",
+    "upper_structural_candidate": "13/7",
+    "k3_eff_lies_between": true,
+    "delta_24_over_13_percent": -0.1788688332667654,
+    "delta_13_over_7_percent": 0.41530456653522396,
+    "threshold_span_percent": 0.5941733998019894
+  },
+  "theorem_statement": "The inverse RG target k3_eff≈1.849461957 lies between the two structural W(3,3) rationals 24/13 and 13/7.  Pinning either rational to the observed alpha_s(M_Z) requires only a sub-percent GUT threshold: -0.179% for 24/13 or +0.415% for 13/7 under the minimal two-loop convention.",
+  "interpretive_note": "This turns the RG problem into a small-threshold derivation problem. The W(3,3) finite geometry should not fit k3_eff as a real number; it should select a rational bare embedding such as 24/13 or 13/7, then derive the sign and size of delta_GUT from the heavy E8/Hashimoto field sectors."
+}
