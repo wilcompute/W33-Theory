@@ -1,0 +1,61 @@
+{
+  "module": "PART_CXLVI_FIBONACCI_E6_MIXER",
+  "raw_shell": {
+    "positive_complex": 24,
+    "negative_complex": 15,
+    "positive_real": 48,
+    "negative_real": 30,
+    "complex_total": 39,
+    "real_total": 78
+  },
+  "reduced_mixer": {
+    "ratio": "8:5",
+    "denominator": 13,
+    "denominator_identification": "Phi3(3)=13",
+    "carrier_weight": "8/13",
+    "threshold_weight": "5/13",
+    "imbalance_weight": "3/13"
+  },
+  "components": [
+    {
+      "name": "carrier / positive Q(sqrt(-10)) sector",
+      "raw_complex_dim": 24,
+      "raw_real_dim": 48,
+      "reduced_weight": "8",
+      "normalized_weight": "8/13",
+      "generation_lift": "3*(8/13)=24/13",
+      "physical_role": "bare carrier factor k3_bare=24/13"
+    },
+    {
+      "name": "threshold / negative Q(sqrt(-7)) sector",
+      "raw_complex_dim": 15,
+      "raw_real_dim": 30,
+      "reduced_weight": "5",
+      "normalized_weight": "5/13",
+      "generation_lift": "3*(5/13)=15/13",
+      "physical_role": "negative-sector companion and QCD threshold field"
+    }
+  ],
+  "generation_lifts": {
+    "q_times_carrier": "24/13",
+    "q_times_threshold": "15/13",
+    "q_times_imbalance": "9/13"
+  },
+  "electroweak_diagnostic": {
+    "mixer_imbalance": "8/13 - 5/13 = 3/13 = q/Phi3",
+    "interpretation": "q/Phi3 is the imbalance of the two Ramanujan/E6 compiler weights"
+  },
+  "checks": {
+    "complex_ratio_reduces_to_8_5": true,
+    "real_ratio_reduces_to_8_5": true,
+    "mixer_denominator_is_Phi3": true,
+    "carrier_plus_threshold_is_one": true,
+    "imbalance_is_q_over_Phi3": true,
+    "q_lift_carrier_is_24_over_13": true,
+    "q_lift_threshold_is_15_over_13": true,
+    "complex_total_is_3Phi3": true,
+    "real_total_is_6Phi3": true
+  },
+  "theorem_statement": "The 24:15 Ramanujan/E6 compiler split reduces to the Fibonacci mixer 8:5 with denominator 13=Phi3.  The successful QCD bare factor 24/13 is the q-generation lift of the carrier weight 8/13, while the companion threshold sector is the q-generation lift 15/13 of the threshold weight 5/13.  Their normalized imbalance is 3/13=q/Phi3.",
+  "interpretive_note": "This turns the two-sector compiler into a mixing rule.  The shell does not merely contain dimensions 24 and 15; it normalizes them into the weights 8/13 and 5/13.  QCD uses the q-lifted carrier weight, while electroweak-like diagnostics naturally see the carrier-threshold imbalance q/Phi3."
+}
