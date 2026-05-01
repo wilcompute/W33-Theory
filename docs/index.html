@@ -19037,6 +19037,43 @@
           </ul>
           <p style="margin-top: 1rem;"><strong>One number &mdash; &Phi;<sub>6</sub>(3) = 7 &mdash; controls confinement,
               mass hierarchies, mixing, inflation, and exceptional algebra.</strong></p>
+
+          <h3 style="margin-top: 1.6rem; color: var(--accent);">May 2026 extension &mdash; the cyclotomic &beta;-tower</h3>
+          <p>At Standard-Model matter content (N<sub>c</sub>=3, N<sub>f</sub>=6 above m<sub>t</sub>) the first three
+            MS-bar QCD &beta;-coefficients are exact W(3,3) cyclotomic rationals at q=3:</p>
+          <div class="math-block">
+            <span class="eq">&beta;<sub>0</sub> = &Phi;<sub>6</sub>(q) = 7</span>&nbsp;&nbsp;
+            <span class="eq">&beta;<sub>1</sub> = 2&middot;&Phi;<sub>3</sub>(q) = 26</span>&nbsp;&nbsp;
+            <span class="eq">&beta;<sub>2</sub> = &minus;(5/2)&middot;&Phi;<sub>3</sub>(q) = &minus;65/2</span>
+          </div>
+          <ul style="margin-left: 1.5rem; color: var(--fg2);">
+            <li>&beta;<sub>0</sub> and &beta;<sub>1</sub> are scheme-independent; &beta;<sub>2</sub> is MS-bar specific.</li>
+            <li>From &beta;<sub>3</sub> onward MS-bar coefficients pick up &zeta;(3),&zeta;(5),&hellip; &mdash; the
+              cyclotomic-rational tower terminates at three loops, so this is the maximal rational slice.</li>
+            <li>Eisenstein reading: &Phi;<sub>6</sub> = |q+&omega;|<sup>2</sup> and &Phi;<sub>3</sub> = |q&minus;&omega;|<sup>2</sup>
+              are conjugate Eisenstein-prime norms over q=3 in &#8484;[&omega;].</li>
+            <li>Cross-ratios: &beta;<sub>1</sub>/&beta;<sub>0</sub> = 26/7, &beta;<sub>1</sub>/&beta;<sub>2</sub> = &minus;4/5,
+              &beta;<sub>0</sub>&middot;&beta;<sub>1</sub> = 14&middot;&Phi;<sub>3</sub> = 182.</li>
+          </ul>
+          <p style="color: var(--fg2);">Audit: <code>scripts/w33_qcd_beta_cyclotomic_audit.py</code>;
+            tests in <code>tests/test_w33_qcd_beta_cyclotomic_audit.py</code> (9 passing).</p>
+
+          <h3 style="margin-top: 1.6rem; color: var(--accent3);">May 2026 extension &mdash; the &alpha;<sup>&minus;1</sup> continued fraction</h3>
+          <p>The W(3,3) phenomenology fraction
+            &alpha;<sup>&minus;1</sup><sub>W33</sub> = 137 + 880/24445 = 669969/4889 has CF expansion
+            <code>[137; 27, 1, 3, 1, 1, 19]</code>; CODATA-2024 has
+            <code>[137; 27, 1, 3, 1, 1, 18, 1, 7, 1, &hellip;]</code>. The first six partial quotients agree, and
+            every one of those six integers is a W(3,3) structural invariant or an identity unit:</p>
+          <ul style="margin-left: 1.5rem; color: var(--fg2);">
+            <li>137 = (k&minus;1)<sup>2</sup> + &mu;<sup>2</sup> &mdash; Gaussian norm of z = 11+4i.</li>
+            <li>27 = v&minus;k&minus;1 = q<sup>3</sup> &mdash; dim of the fundamental of E<sub>6</sub>.</li>
+            <li>3 = q (the master integer); the remaining 1's are identity units.</li>
+          </ul>
+          <p style="color: var(--fg2);">Continued fractions give the optimal rational approximants, so this is
+            the sharpest constructive statement: the W(3,3) fraction is the best-possible rational approximation
+            to CODATA whose leading partial quotients are the W(3,3) structural integers {137, 27, q}.
+            Audit: <code>scripts/w33_alpha_continued_fraction_audit.py</code>;
+            tests in <code>tests/test_w33_alpha_continued_fraction_audit.py</code> (8 passing).</p>
         </div>
       </section>
 
