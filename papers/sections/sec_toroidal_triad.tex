@@ -1,0 +1,92 @@
+% ============================================================
+% sec_toroidal_triad.tex
+% W33-Theory — Section: The Toroidal Triad
+% Szilassi (×2), Császár (×5), and the Tetrahedron
+% ============================================================
+
+\section{The Toroidal Triad: Szilassi, Cs\'asz\'ar, and the Tetrahedron}
+\label{sec:toroidal_triad}
+
+Three polyhedra form a single combinatorial family related by duality,
+a common genus-0 seed, and the Fano self-duality of $\mathrm{PG}(2,2)$.
+Their invariants are collected in Table~\ref{tab:triad}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccl}
+\toprule
+Polyhedron & $V$ & $E$ & $F$ & Genus & Role \\
+\midrule
+Tetrahedron & 4 & 6 & 4 & 0 & Seed: satisfies both hole equations at $h=0$ \\
+Cs\'asz\'ar (\texttimes5) & 7 & 21 & 14 & 1 & $K_7$ triangulation of $T^2$; minimal triangulation \\
+Szilassi (\texttimes2) & 14 & 21 & 7 & 1 & Heawood dual; 7-colour lower bound \\
+\bottomrule
+\end{tabular}
+\caption{The toroidal triad. Edge count $E=21=\binom{7}{2}$ is invariant under the $V\leftrightarrow F$ duality.}
+\label{tab:triad}
+\end{table}
+
+\subsection{The Dual Hole Equations}
+
+Two Euler-characteristic equations, one for each adjacency type,
+give the set of polyhedra in which every pair of vertices (resp.\ faces)
+is connected by an edge (resp.\ share an edge):
+\begin{equation}
+  h_{\mathrm{vertex}}(v) = \frac{(v-3)(v-4)}{12}, \qquad
+  h_{\mathrm{face}}(f)   = \frac{(f-4)(f-3)}{12}.
+  \label{eq:hole_eqs}
+\end{equation}
+Both equations admit integer solutions at exactly the same residues
+$n \equiv 0,3,4,7 \pmod{12}$.
+The first two non-trivial solutions are $n=4$ ($h=0$, the tetrahedron)
+and $n=7$ ($h=6$, the torus polyhedra).  The next predicted level is $n=12$
+(resp.\ $n=44$), with invariant $E = \binom{12}{2} = 66$ edges.
+
+\subsection{The Tetrahedron as Intermediary}
+
+The tetrahedron is the \emph{only} known polyhedron satisfying
+\emph{both} hole equations simultaneously ($h=0$, $v=f=4$).
+It is also the only other polyhedron besides Szilassi in which every
+face shares an edge with every other face, \emph{and} the only other
+manifold besides Cs\'asz\'ar with no diagonals.
+It therefore sits precisely between the two toroidal types, mediating
+both vertex-adjacency and face-adjacency simultaneously.
+
+\subsection{Fano Plane as Self-Dual Bridge}
+
+The Fano plane $\mathrm{PG}(2,2)$ unifies both:
+reading its 7 points as \emph{vertices} yields Cs\'asz\'ar;
+reading its 7 points as \emph{faces} yields Szilassi.
+Since $\mathrm{PG}(2,2)$ is self-dual, swapping points $\leftrightarrow$ lines
+is isomorphic to the $V\leftrightarrow F$ duality between the two polyhedra.
+The flag-orbit count $42 = 6\times 7$ shared by both polyhedra
+equals $30 + 12$ (600-cell contribution plus the 12-periodic lattice)
+and encodes $b_0^{\mathrm{QCD}} = \Phi_6 = 7$.
+
+\subsection{Minimal Triangulations}
+
+The Heawood bound gives the minimum number of vertices needed to
+triangulate a surface of genus $g$:
+\begin{equation}
+  V_{\min}(g) =
+  \begin{cases} 4 & g=0, \\
+  \left\lceil\dfrac{7+\sqrt{1+48g}}{2}\right\rceil & g\geq 1.
+  \end{cases}
+  \label{eq:heawood}
+\end{equation}
+The tetrahedron achieves the bound for $g=0$ ($V=4$),
+and Cs\'asz\'ar achieves it exactly for $g=1$ ($V=7$),
+making it the \emph{unique} minimal triangulation of the torus.
+The difference $\Delta V = 7-4 = 3 = \binom{3}{2}$ mirrors the
+3-simplex step and the mod-12 residue shift from $4\to 7$.
+
+\subsection{Realization Counts and $\Phi_6=7$}
+
+The Szilassi polyhedron has exactly \textbf{2 realizations}
+(related by its $\mathbb{Z}_2^+ \times I$ espyric symmetry)
+and Cs\'asz\'ar has exactly \textbf{5 realizations}
+(M\"obius 1858; Cs\'asz\'ar 1949; Bokowski--Eggert 1991 $\times 3$).
+Their sum $2 + 5 = 7 = \Phi_6$ is the QCD beta-function coefficient
+$b_0 = 11 - \tfrac{2}{3}n_f$ at $n_f = 6$ and simultaneously
+the first nontrivial integer solution of both hole equations,
+the order of the Fano plane, and the chromatic number of the torus.
