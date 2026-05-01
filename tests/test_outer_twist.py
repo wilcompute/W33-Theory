@@ -11,17 +11,23 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from THEORY_PART_CCVIII_OUTER_TWIST import analyze
+from THEORY_PART_CCVIII_OUTER_TWIST import BUNDLE_E8, BUNDLE_PG, analyze
 
 
 @pytest.fixture(scope="module")
 def summary():
+    missing = [str(path) for path in (BUNDLE_E8, BUNDLE_PG) if not path.exists()]
+    if missing:
+        pytest.skip(
+            "optional outer-twist certificate bundle(s) missing: " + ", ".join(missing)
+        )
     return analyze()
 
 
 # ---------------------------------------------------------------------------
 # T1: Outer twist order 8
 # ---------------------------------------------------------------------------
+
 
 class TestT1OuterTwistOrder:
     """T1: N4 induces a permutation of order 8; N4 is NOT symplectic."""
@@ -47,6 +53,7 @@ class TestT1OuterTwistOrder:
 # T2: Inner residual order 6
 # ---------------------------------------------------------------------------
 
+
 class TestT2InnerResidual:
     """T2: Inner residual a = Q * N4^{-1} has order 6; Q is symplectic w.r.t. Omega'."""
 
@@ -66,6 +73,7 @@ class TestT2InnerResidual:
 # ---------------------------------------------------------------------------
 # T3: Vertex cycle structure
 # ---------------------------------------------------------------------------
+
 
 class TestT3VertexCycleStructure:
     """T3: a acts on 40 PG(3,3) points with cycle structure {1:2, 2:1, 3:2, 6:5}."""
@@ -113,6 +121,7 @@ class TestT3VertexCycleStructure:
 # T4: E8 root cycle structure
 # ---------------------------------------------------------------------------
 
+
 class TestT4RootCycleStructure:
     """T4: a acts on 240 E8 roots with cycle structure {1:2, 2:2, 3:10, 6:34}."""
 
@@ -155,6 +164,7 @@ class TestT4RootCycleStructure:
 # T5: Affine Heisenberg orbits
 # ---------------------------------------------------------------------------
 
+
 class TestT5AffineHeisenbergOrbits:
     """T5: Outer twist on AG(3,3) = 27 affine points gives 5 orbits {1:1,2:1,8:3}."""
 
@@ -186,6 +196,7 @@ class TestT5AffineHeisenbergOrbits:
 # ---------------------------------------------------------------------------
 # T6: Edge orbit structure
 # ---------------------------------------------------------------------------
+
 
 class TestT6EdgeOrbits:
     """T6: Outer twist has 34 orbits on 240 W(3,3) collinearity edges."""
@@ -225,21 +236,31 @@ class TestT6EdgeOrbits:
 # Output file
 # ---------------------------------------------------------------------------
 
+
 class TestOutputFile:
     def test_json_exists(self):
         assert (ROOT / "data" / "w33_outer_twist.json").exists()
 
     def test_json_has_required_keys(self):
-        data = json.loads(
-            (ROOT / "data" / "w33_outer_twist.json").read_text()
-        )
+        data = json.loads((ROOT / "data" / "w33_outer_twist.json").read_text())
         required = [
-            "T1_order_p", "T1_not_symplectic", "T1_twisted_form_correct",
-            "T2_order_a", "T2_Q_isomorphism_correct",
-            "T3_vertex_cycle_struct", "T3_total_pts", "T3_correct",
-            "T4_root_cycle_struct", "T4_total_roots", "T4_correct",
-            "T5_num_affine_orbits", "T5_affine_orbit_size_dist", "T5_correct",
-            "T6_num_edge_orbits", "T6_edge_size_dist", "T6_correct",
+            "T1_order_p",
+            "T1_not_symplectic",
+            "T1_twisted_form_correct",
+            "T2_order_a",
+            "T2_Q_isomorphism_correct",
+            "T3_vertex_cycle_struct",
+            "T3_total_pts",
+            "T3_correct",
+            "T4_root_cycle_struct",
+            "T4_total_roots",
+            "T4_correct",
+            "T5_num_affine_orbits",
+            "T5_affine_orbit_size_dist",
+            "T5_correct",
+            "T6_num_edge_orbits",
+            "T6_edge_size_dist",
+            "T6_correct",
         ]
         for key in required:
             assert key in data, f"Missing key: {key}"

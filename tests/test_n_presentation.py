@@ -8,11 +8,12 @@ from pathlib import Path
 
 from THEORY_PART_CXCV_N_PRESENTATION import find_presentation
 
+repo = Path(__file__).resolve().parent.parent
+ARCHIVE_FILE = repo / "archive" / "json" / "N_heis_presentation.json"
+
 
 def test_presentation_file_exists():
-    repo = Path(__file__).resolve().parent.parent
-    assert (repo / "N_heis_presentation.json").exists()
-    assert (repo / "N_heis_presentation_report.md").exists()
+    assert ARCHIVE_FILE.exists()
 
 
 def test_presentation_properties():

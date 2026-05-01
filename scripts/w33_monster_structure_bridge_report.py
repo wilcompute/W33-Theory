@@ -51,6 +51,9 @@ def _find_perm_hit_for_pair(perm_hits: object, pair_x: str) -> dict[str, Any] | 
     return None
 
 
+from scripts.derive_m12_p144_suborbits import compose, inv, perm_from_cycles
+from scripts.monomial_utils import find_sign_lifts_for_group, monomial_group_order
+
 # monomial factory registry (filled ahead of any analysis)
 # these generators are defined at module load time to make the registry
 # available to external tests and helpers.
@@ -58,8 +61,6 @@ from tools.s12_universal_algebra import (
     enumerate_linear_code_f3,
     ternary_golay_generator_matrix,
 )
-from scripts.monomial_utils import find_sign_lifts_for_group, monomial_group_order
-from scripts.derive_m12_p144_suborbits import perm_from_cycles, inv, compose
 
 
 def _factory_11A() -> list[tuple[int, ...]]:
@@ -72,7 +73,11 @@ def _factory_identity() -> list[tuple[int, ...]]:
     """Trivial identity generator set (useful for testing)."""
     return [tuple(range(12))]
 
-_MONOMIAL_FACTORIES: dict[str, Any] = {"11A": _factory_11A, "identity": _factory_identity}
+
+_MONOMIAL_FACTORIES: dict[str, Any] = {
+    "11A": _factory_11A,
+    "identity": _factory_identity,
+}
 
 
 def register_monomial_factory(name: str, factory: Any) -> None:
@@ -120,6 +125,7 @@ def analyze(*, max_q_exp: int = 3) -> dict[str, Any]:
         enumerate_linear_code_f3,
         ternary_golay_generator_matrix,
     )
+
     gen = ternary_golay_generator_matrix()
     generator_rows = [tuple(int(x) % 3 for x in row) for row in gen]
     code_set = set(enumerate_linear_code_f3(gen))
@@ -132,7 +138,11 @@ def analyze(*, max_q_exp: int = 3) -> dict[str, Any]:
         why = rec.get("best_pair_by_structure_reason")
 
         masses = rec.get("mass_by_pair", {})
-        m_mass = float(masses.get(best_mass, {}).get("float", 0.0) or 0.0) if isinstance(masses, dict) else 0.0
+        m_mass = (
+            float(masses.get(best_mass, {}).get("float", 0.0) or 0.0)
+            if isinstance(masses, dict)
+            else 0.0
+        )
         m_struct = (
             float(masses.get(str(best_struct), {}).get("float", 0.0) or 0.0)
             if isinstance(masses, dict) and isinstance(best_struct, str)
@@ -163,8 +173,14 @@ def analyze(*, max_q_exp: int = 3) -> dict[str, Any]:
                 "best_by_structure_reason": why,
                 "mass_best": m_mass,
                 "mass_structure": m_struct,
-                "mass_ratio_best_over_structure": (m_mass / m_struct) if (m_mass > 0 and m_struct > 0) else None,
-                "classes": list(rec.get("classes", [])) if isinstance(rec.get("classes"), list) else [],
+                "mass_ratio_best_over_structure": (
+                    (m_mass / m_struct) if (m_mass > 0 and m_struct > 0) else None
+                ),
+                "classes": (
+                    list(rec.get("classes", []))
+                    if isinstance(rec.get("classes"), list)
+                    else []
+                ),
                 "bridge": per_class,
             }
         )
@@ -188,7 +204,7 @@ def main() -> None:
     parser.add_argument(
         "--include-ce2",
         action="store_true",
-        help="Also run a quick CE2 anomaly search and report whether any anomalies exist."
+        help="Also run a quick CE2 anomaly search and report whether any anomalies exist.",
     )
     parser.add_argument("--out-json", type=Path, default=None)
     args = parser.parse_args()
@@ -201,11 +217,15 @@ def main() -> None:
     ce2_flag = bool(args.include_ce2)
     if bool(args.include_monomial_lifts) or ce2_flag:
         # compute monomial lift info for every registered factory
-        from scripts.monomial_utils import find_sign_lifts_for_group, monomial_group_order
+        from scripts.monomial_utils import (
+            find_sign_lifts_for_group,
+            monomial_group_order,
+        )
         from tools.s12_universal_algebra import (
             enumerate_linear_code_f3,
             ternary_golay_generator_matrix,
         )
+
         # prepare Golay code data
         gen_mat = ternary_golay_generator_matrix()
         gen_rows = [tuple(int(x) % 3 for x in row) for row in gen_mat]
@@ -218,7 +238,12 @@ def main() -> None:
             for a in [(i, j) for i in range(3) for j in range(3)]:
                 for b in [(i, j) for i in range(3) for j in range(3)]:
                     for c in [(i, j) for i in range(3) for j in range(3)]:
-                        uv = predict_ce2_uv(a, b, c)
+                        try:
+                            uv = predict_ce2_uv(a, b, c)
+                        except ValueError as exc:
+                            if "zero direction" in str(exc):
+                                continue
+                            raise
                         if uv is not None and (uv.U or uv.V):
                             return True
             return False
@@ -239,7 +264,9 @@ def main() -> None:
         lift_data = None
 
     print("=" * 78)
-    print("MONSTER STRUCTURE BRIDGE: structure-best pair -> cofactor perm degree -> stabilizer")
+    print(
+        "MONSTER STRUCTURE BRIDGE: structure-best pair -> cofactor perm degree -> stabilizer"
+    )
     print("=" * 78)
     print(f"Primes: {rep.get('scan_primes')}")
     print()
@@ -259,7 +286,11 @@ def main() -> None:
         tag = ""
         if isinstance(struct, str) and struct and struct != mass:
             # avoid non-ascii '≈' to keep output safe under default Windows encoding
-            tag = f"  (ratio best/structure ~ {float(r):.3g})" if isinstance(r, (int, float)) else ""
+            tag = (
+                f"  (ratio best/structure ~ {float(r):.3g})"
+                if isinstance(r, (int, float))
+                else ""
+            )
         print(f"p={p:2d}: mass={mass}  structure={struct} ({why}){tag}")
 
         bridge = row.get("bridge", [])
@@ -267,7 +298,7 @@ def main() -> None:
             for b in bridge:
                 if not isinstance(b, dict):
                     continue
-                cls = str(b.get('class_name') or '?')
+                cls = str(b.get("class_name") or "?")
                 H = b.get("cofactor_group")
                 hit = b.get("perm_hit_for_structure_pair")
                 if not isinstance(hit, dict):

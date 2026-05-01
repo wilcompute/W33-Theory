@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
+
 from scripts.w33_local_albert_shadow_audit import (
     analyze,
     canonical_signed_cubic_summary,
@@ -7,6 +11,17 @@ from scripts.w33_local_albert_shadow_audit import (
     cubic_cocycle_boundary_summary,
     jordan_boundary_summary,
     local_shell_summary,
+)
+
+SAGE_TRANSPORT = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "sage_h27_to_schlafli_effective_triads_conjugacy.json"
+)
+
+pytestmark = pytest.mark.skipif(
+    not SAGE_TRANSPORT.exists(),
+    reason="optional Sage H27-to-Schlafli transport artifact is absent",
 )
 
 
@@ -51,7 +66,9 @@ def test_canonical_signed_cubic_matches_the_full_45_tritangent_support() -> None
     assert summary["affine_negative_signs"] == 16
 
 
-def test_cocycle_boundary_separates_naive_we6_failure_from_canonical_gauge_success() -> None:
+def test_cocycle_boundary_separates_naive_we6_failure_from_canonical_gauge_success() -> (
+    None
+):
     summary = cubic_cocycle_boundary_summary()
 
     assert summary["canonical_generator_count"] == 6
@@ -82,10 +99,22 @@ def test_record_classification_and_overall_audit_keep_the_boundary_honest() -> N
     summary = analyze()
     theorem = summary["local_albert_shadow_theorem"]
 
-    assert records["local_h27_heisenberg_schlafli_shell"]["support_level"] == "repo-exact + classical exact"
-    assert records["canonical_45_tritangent_signed_cubic"]["support_level"] == "repo-exact + classical exact"
-    assert records["cocycle_gauge_local_invariance_boundary"]["support_level"] == "exact boundary condition"
-    assert records["full_local_jordan_product_theorem"]["support_level"] == "not-yet-exact local product law"
+    assert (
+        records["local_h27_heisenberg_schlafli_shell"]["support_level"]
+        == "repo-exact + classical exact"
+    )
+    assert (
+        records["canonical_45_tritangent_signed_cubic"]["support_level"]
+        == "repo-exact + classical exact"
+    )
+    assert (
+        records["cocycle_gauge_local_invariance_boundary"]["support_level"]
+        == "exact boundary condition"
+    )
+    assert (
+        records["full_local_jordan_product_theorem"]["support_level"]
+        == "not-yet-exact local product law"
+    )
 
     assert summary["status"] == "ok"
     assert summary["record_names_exact_or_boundary"] == (
@@ -94,13 +123,31 @@ def test_record_classification_and_overall_audit_keep_the_boundary_honest() -> N
         "cocycle_gauge_local_invariance_boundary",
     )
     assert summary["record_names_open"] == ("full_local_jordan_product_theorem",)
-    assert theorem["the_local_shell_has_exact_27_point_heisenberg_schlafli_geometry"] is True
-    assert theorem["the_canonical_signed_cubic_support_is_exactly_the_45_tritangents_split_as_9_plus_36"] is True
-    assert theorem["each_local_line_lies_on_exactly_five_tritangents"] is True
-    assert theorem["the_signed_cubic_support_requires_the_canonical_cocycle_gauge_for_we6_invariance"] is True
-    assert theorem["the_naive_we6_permutation_action_does_not_preserve_the_signed_cubic"] is True
     assert (
-        theorem["the_repo_currently_reaches_a_local_albert_shadow_not_a_full_local_jordan_product"]
+        theorem["the_local_shell_has_exact_27_point_heisenberg_schlafli_geometry"]
+        is True
+    )
+    assert (
+        theorem[
+            "the_canonical_signed_cubic_support_is_exactly_the_45_tritangents_split_as_9_plus_36"
+        ]
+        is True
+    )
+    assert theorem["each_local_line_lies_on_exactly_five_tritangents"] is True
+    assert (
+        theorem[
+            "the_signed_cubic_support_requires_the_canonical_cocycle_gauge_for_we6_invariance"
+        ]
+        is True
+    )
+    assert (
+        theorem["the_naive_we6_permutation_action_does_not_preserve_the_signed_cubic"]
+        is True
+    )
+    assert (
+        theorem[
+            "the_repo_currently_reaches_a_local_albert_shadow_not_a_full_local_jordan_product"
+        ]
         is True
     )
     assert "canonical cocycle gauge" in summary["boundary_note"]

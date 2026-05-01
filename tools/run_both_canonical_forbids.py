@@ -10,6 +10,7 @@ Steps:
 
 Usage: python tools/run_both_canonical_forbids.py --cands 0-18-25,0-20-23 --time 300 --w-list 0,4
 """
+
 from __future__ import annotations
 
 import argparse
@@ -35,11 +36,16 @@ REPORTS.mkdir(exist_ok=True)
 # Prefer full Aut(W33) analysis (requires networkx), but fall back to the
 # AGL(2,3)×Z3 orbit analysis if that dependency is missing.
 try:
-    from tools.forbid_full_aut_orbit_analysis import build_schlafli_mapping
+    from tools.forbid_full_aut_orbit_analysis import (
+        build_schlafli_mapping,
+    )
     from tools.forbid_full_aut_orbit_analysis import (
         compute_canonical_for_pick as compute_canonical_full,
     )
-    from tools.forbid_full_aut_orbit_analysis import induce_27_action, triad_orbit
+    from tools.forbid_full_aut_orbit_analysis import (
+        induce_27_action,
+        triad_orbit,
+    )
 
     def compute_canonical_for_pick(cands, pick):
         # Use the full-aut computation when available
@@ -56,7 +62,7 @@ except Exception:
         # This is a fallback when the full-group tools (networkx etc.) are unavailable.
         subprocess.run(
             [
-                "python",
+                sys.executable,
                 str(ROOT / "tools" / "forbid_orbit_analysis.py"),
             ],
             check=True,
@@ -87,7 +93,7 @@ except Exception:
 
 def run_anchor_and_archive(forbid_str: str, time: int, w_list: str, workers: int):
     cmd = [
-        "python",
+        sys.executable,
         str(ROOT / "tools" / "run_anchor_and_archive.py"),
         "--forbid",
         forbid_str,
@@ -103,7 +109,7 @@ def run_anchor_and_archive(forbid_str: str, time: int, w_list: str, workers: int
 
 
 def run_generate_gf2_cert():
-    cmd = ["python", str(ROOT / "tools" / "generate_gf2_certificate.py")]
+    cmd = [sys.executable, str(ROOT / "tools" / "generate_gf2_certificate.py")]
     subprocess.run(cmd, check=True)
 
 
@@ -149,7 +155,7 @@ def main():
         forbid_str = "-".join(map(str, tri))
         try:
             cmd = [
-                "python",
+                sys.executable,
                 str(ROOT / "tools" / "run_anchor_and_archive.py"),
                 "--forbid",
                 forbid_str,

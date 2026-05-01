@@ -17,21 +17,21 @@ Results are printed and the best assignment saved to
 
 from __future__ import annotations
 
-import json
 import itertools
+import json
+
+# ensure repo root on path
+import os
 import sys
 from pathlib import Path
 
 import numpy as np
 
-# ensure repo root on path
-import os
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, repo_root)
 
-from MASS_PREDICTIONS import masses_GeV, koide_parameter
-from scripts.ckm_from_grams import compute_ckm,V_CKM_exp
-from scripts.yukawa_analysis import load_gram_list
+from scripts.ckm_from_grams import V_CKM_exp, compute_ckm
+from scripts.yukawa_analysis import koide_parameter, load_gram_list, masses_GeV
 
 sectors = ["up", "down", "lepton"]
 
@@ -59,7 +59,7 @@ def mass_ratio_error(pred: np.ndarray, actual: tuple[float, float, float]) -> fl
     penalty for how well the hierarchy matches experiment.
     """
     if pred.size < 3:
-        return float('inf')
+        return float("inf")
     r_pred = (pred[1] / pred[0], pred[2] / pred[0])
     r_actual = (actual[1] / actual[0], actual[2] / actual[0])
     return sum(((rp - ra) / ra) ** 2 for rp, ra in zip(r_pred, r_actual))
@@ -79,6 +79,7 @@ def main():
         Glep = np.array(grams[perm[2]], dtype=float)
         ckm_err = ckmlike_error(Gup, Gdown)
         koide_err = koide_error(Glep)
+
         # compute predicted light masses if largest eigenlet scaled to heavy mass
         def scaled_masses(G, heavy_mass):
             vals = np.linalg.eigvalsh(G)
@@ -88,7 +89,11 @@ def main():
             return scale * sqrt_vals
 
         # heavy masses for each sector
-        heavy = {"up": masses_GeV["t"], "down": masses_GeV["b"], "lepton": masses_GeV["τ"]}
+        heavy = {
+            "up": masses_GeV["t"],
+            "down": masses_GeV["b"],
+            "lepton": masses_GeV["τ"],
+        }
         pred_up = scaled_masses(Gup, heavy["up"])
         pred_down = scaled_masses(Gdown, heavy["down"])
         pred_lep = scaled_masses(Glep, heavy["lepton"])
@@ -106,11 +111,17 @@ def main():
         )
 
         # also compute best-fit scale factor for each sector and resulting heavy-mass prediction
-        def fit_scale(pred: np.ndarray, target: tuple[float, float, float]) -> tuple[float, float]:
+        def fit_scale(
+            pred: np.ndarray, target: tuple[float, float, float]
+        ) -> tuple[float, float]:
             # least-squares scale through origin
             vec = pred[:3]
             targ = np.array(target, dtype=float)
-            scale = float(np.dot(vec, targ) / np.dot(vec, vec)) if np.dot(vec, vec) > 0 else 0.0
+            scale = (
+                float(np.dot(vec, targ) / np.dot(vec, vec))
+                if np.dot(vec, vec) > 0
+                else 0.0
+            )
             pred_heavy = scale * pred[-1]
             return scale, pred_heavy
 
@@ -156,7 +167,11 @@ def main():
 
     print("\nBest assignment:", best)
     Path("data").mkdir(exist_ok=True)
-    json.dump({"results": results, "best": best}, open("data/yukawa_sector_assignment.json", "w"), indent=2)
+    json.dump(
+        {"results": results, "best": best},
+        open("data/yukawa_sector_assignment.json", "w"),
+        indent=2,
+    )
     print("saved data/yukawa_sector_assignment.json")
 
 

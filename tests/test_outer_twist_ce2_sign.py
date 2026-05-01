@@ -4,13 +4,14 @@ import json
 from pathlib import Path
 
 import numpy as np
+import pytest
 
 from scripts.ce2_global_cocycle import (
-    _simple_family_sign_map,
-    _heisenberg_vec_maps,
-    _f3_omega,
     _f3_dot,
     _f3_k_of_direction,
+    _f3_omega,
+    _heisenberg_vec_maps,
+    _simple_family_sign_map,
 )
 
 # outer twist formulas from conversation
@@ -43,6 +44,18 @@ def branch_type(c, match, other):
 
 
 def test_outer_twist_pushes_ce2_sign():
+    required = [
+        Path("H27_OUTER_TWIST_ACTION_BUNDLE_v01") / "perm40_and_H27_pg_ids.json",
+        Path("H27_CE2_FUSION_BRIDGE_BUNDLE_v01") / "pg_point_to_h27_vertex_coords.csv",
+        Path("H27_CE2_FUSION_BRIDGE_BUNDLE_v01") / "H27_v0_0_heisenberg_coords.csv",
+        Path("artifacts") / "schlafli_e6id_to_w33_h27.json",
+    ]
+    missing = [str(path) for path in required if not path.exists()]
+    if missing:
+        pytest.skip(
+            "optional outer-twist CE2 sign artifact(s) missing: " + ", ".join(missing)
+        )
+
     # compute permutation P on e6 ids by reading the certified outer bundle
     bundle = Path("H27_OUTER_TWIST_ACTION_BUNDLE_v01")
     perm_data = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())
@@ -51,11 +64,15 @@ def test_outer_twist_pushes_ce2_sign():
     # convert pg ids -> vertex_id using fusion bundle
     FUSION_DIR = Path("H27_CE2_FUSION_BRIDGE_BUNDLE_v01")
     import pandas as pd
+
     df_pg = pd.read_csv(FUSION_DIR / "pg_point_to_h27_vertex_coords.csv")
     pg_to_vid = {int(r.pg_id): int(r.vertex_id) for r in df_pg.itertuples(index=False)}
 
     coords = pd.read_csv(FUSION_DIR / "H27_v0_0_heisenberg_coords.csv")
-    vid_to_xyz = {int(r.vertex): (int(r.x), int(r.y), int(r.t)) for r in coords.itertuples(index=False)}
+    vid_to_xyz = {
+        int(r.vertex): (int(r.x), int(r.y), int(r.t))
+        for r in coords.itertuples(index=False)
+    }
 
     # E6-id -> vid via schlafli artifact
     sch = json.loads((Path("artifacts") / "schlafli_e6id_to_w33_h27.json").read_text())
@@ -80,20 +97,20 @@ def test_outer_twist_pushes_ce2_sign():
 
     sign_map = _simple_family_sign_map()
     ratios = {+1: 0, -1: 0}
-    branch_ratios = {"constant": {+1:0, -1:0}, "weil": {+1:0, -1:0}}
+    branch_ratios = {"constant": {+1: 0, -1: 0}, "weil": {+1: 0, -1: 0}}
 
     skipped = 0
-    for (c,m,o), s in sign_map.items():
+    for (c, m, o), s in sign_map.items():
         c2 = perm[c]
         m2 = perm[m]
         o2 = perm[o]
         if (c2, m2, o2) not in sign_map:
             skipped += 1
             continue
-        s2 = sign_map[(c2,m2,o2)]
+        s2 = sign_map[(c2, m2, o2)]
         r = int(s2) * int(s)
         ratios[r] += 1
-        br = branch_type(c,m,o)
+        br = branch_type(c, m, o)
         branch_ratios[br][r] += 1
 
     # expected regression counts with current canonical bundle
@@ -101,9 +118,9 @@ def test_outer_twist_pushes_ce2_sign():
     assert ratios[+1] == 156 and ratios[-1] == 198
     assert ratios[+1] + ratios[-1] == 354
     assert branch_ratios["constant"][+1] == 34
-    assert branch_ratios["constant"][ -1] == 32
+    assert branch_ratios["constant"][-1] == 32
     assert branch_ratios["weil"][+1] == 122
-    assert branch_ratios["weil"][ -1] == 166
+    assert branch_ratios["weil"][-1] == 166
 
     print("skipped", skipped)
     print("ratios", ratios)

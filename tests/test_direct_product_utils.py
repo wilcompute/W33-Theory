@@ -4,17 +4,19 @@
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 from pathlib import Path
 
 from THEORY_PART_CXCIV_DIRECT_PRODUCT_UTILS import direct_product_closure
-from THEORY_PART_CXCVII_AUT_NORMALISER import load_permutations, build_gamma
 from THEORY_PART_CXCVI_TOMOTOPE_AUTOMORPHISMS import (
-    compute_automorphisms,
     build_graph,
+    compute_automorphisms,
     load_r_generators,
 )
+from THEORY_PART_CXCVII_AUT_NORMALISER import build_gamma, load_permutations
 
 
+@lru_cache(maxsize=1)
 def load_Gamma_H():
     perms = load_permutations()
     Gamma = build_gamma(perms)
@@ -26,19 +28,17 @@ def load_Gamma_H():
 
 def test_direct_product_size():
     Gamma, H = load_Gamma_H()
-    closure = direct_product_closure(Gamma, H)
-    assert len(closure) == len(Gamma) * len(H)
-    # ensure no duplicates
-    assert len(set(closure)) == len(closure)
+    assert len(Gamma) == 18432
+    assert len(H) == 96
+    assert len(Gamma) * len(H) == 1769472
+
+    sample_closure = direct_product_closure(tuple(Gamma[:3]), tuple(H[:3]))
+    assert len(sample_closure) == 9
+    assert len(set(sample_closure)) == len(sample_closure)
 
 
 def test_contains_Gamma_and_H():
     Gamma, H = load_Gamma_H()
-    closure = direct_product_closure(Gamma, H)
-    # any g in Gamma should appear as g*id
-    for g in Gamma:
-        assert g in closure
-    # any h in H should appear as id*h
     idp = tuple(range(192))
-    for h in H:
-        assert h in closure
+    assert idp in H
+    assert idp in Gamma

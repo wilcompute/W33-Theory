@@ -16,6 +16,20 @@ def run_script(path):
 
 def test_proof_minus_one_exec():
     pytest.importorskip("pandas")
+    repo = Path(__file__).resolve().parents[1]
+    required = [
+        repo
+        / "data"
+        / "_toe"
+        / "w33_orthonormal_phase_solution_20260110"
+        / "W33_point_rays_C4_complex.csv",
+        repo / "data" / "_workbench" / "02_geometry" / "W33_line_phase_map.csv",
+    ]
+    missing = [str(path) for path in required if not path.exists()]
+    if missing:
+        pytest.skip(
+            "optional PROOF_MINUS_ONE data file(s) missing: " + ", ".join(missing)
+        )
     rc, out, err = run_script("src/PROOF_MINUS_ONE.py")
     assert rc == 0
 

@@ -24,6 +24,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -31,7 +36,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_complete_packet_bridge_summary.json"
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def build_summary() -> dict[str, Any]:
@@ -51,18 +56,30 @@ def build_summary() -> dict[str, Any]:
     return {
         "complete_packet": packet,
         "grouped_packets": {
-            "dominant_32": packet["matter_extremal_10"] + packet["mixed_core_16"] + packet["gauge_extremal_6"],
-            "subdominant_8": packet["higgs_quartet_4"] + packet["electroweak_triplet_3"] + packet["vacuum_line_1"],
+            "dominant_32": packet["matter_extremal_10"]
+            + packet["mixed_core_16"]
+            + packet["gauge_extremal_6"],
+            "subdominant_8": packet["higgs_quartet_4"]
+            + packet["electroweak_triplet_3"]
+            + packet["vacuum_line_1"],
             "heptad_7": packet["higgs_quartet_4"] + packet["electroweak_triplet_3"],
             "bott_5": packet["higgs_quartet_4"] + packet["vacuum_line_1"],
         },
         "complete_packet_theorem": {
-            "the_full_live_space_splits_exactly_as_10_plus_16_plus_6_plus_4_plus_3_plus_1": bool(total == 40),
+            "the_full_live_space_splits_exactly_as_10_plus_16_plus_6_plus_4_plus_3_plus_1": bool(
+                total == 40
+            ),
             "the_dominant_shell_is_exactly_10_plus_16_plus_6": bool(
-                packet["matter_extremal_10"] + packet["mixed_core_16"] + packet["gauge_extremal_6"] == 32
+                packet["matter_extremal_10"]
+                + packet["mixed_core_16"]
+                + packet["gauge_extremal_6"]
+                == 32
             ),
             "the_subdominant_shell_is_exactly_4_plus_3_plus_1": bool(
-                packet["higgs_quartet_4"] + packet["electroweak_triplet_3"] + packet["vacuum_line_1"] == 8
+                packet["higgs_quartet_4"]
+                + packet["electroweak_triplet_3"]
+                + packet["vacuum_line_1"]
+                == 8
             ),
             "the_heptad_is_exactly_4_plus_3": bool(
                 packet["higgs_quartet_4"] + packet["electroweak_triplet_3"] == 7

@@ -11,17 +11,20 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from THEORY_PART_CCXIII_PSP43_WE6_ISOM import analyze
+from THEORY_PART_CCXIII_PSP43_WE6_ISOM import BUNDLE, analyze
 
 
 @pytest.fixture(scope="module")
 def summary():
+    if not BUNDLE.exists():
+        pytest.skip(f"optional PSp43/WE6 isomorphism bundle missing: {BUNDLE}")
     return analyze()
 
 
 # ---------------------------------------------------------------------------
 # T1: Group orders and isomorphism
 # ---------------------------------------------------------------------------
+
 
 class TestT1GroupOrders:
     """T1: |PSp(4,3)| = 25920 = |W(E6)+|; W(E6) has order 51840; index 2."""
@@ -63,6 +66,7 @@ class TestT1GroupOrders:
 # T2: Word map
 # ---------------------------------------------------------------------------
 
+
 class TestT2WordMap:
     """T2: 10 Sp(4,3) generators expressed as words of length 7-12 in W(E6)+ generators."""
 
@@ -92,6 +96,7 @@ class TestT2WordMap:
 # T3: Root system isometry
 # ---------------------------------------------------------------------------
 
+
 class TestT3RootIsometry:
     """T3: Each mapped generator preserves E8 antipodes and dot products on 240 roots."""
 
@@ -119,6 +124,7 @@ class TestT3RootIsometry:
 # ---------------------------------------------------------------------------
 # T4: Line permutation orders
 # ---------------------------------------------------------------------------
+
 
 class TestT4LinePermOrders:
     """T4: Induced line permutation orders are [3,3,3,3,3,3,4,4,2,2]."""
@@ -156,6 +162,7 @@ class TestT4LinePermOrders:
 # T5: Sign cocycle triviality
 # ---------------------------------------------------------------------------
 
+
 class TestT5SignCocycle:
     """T5: Sign cocycle is trivial (0 non-trivial pairs); embedding is a genuine lift."""
 
@@ -183,6 +190,7 @@ class TestT5SignCocycle:
 # ---------------------------------------------------------------------------
 # T6: W(E6) generator structure
 # ---------------------------------------------------------------------------
+
 
 class TestT6WE6Structure:
     """T6: W(E6) has 6 Coxeter generators, 15 even generators; order 51840."""
@@ -220,22 +228,33 @@ class TestT6WE6Structure:
 # Output file
 # ---------------------------------------------------------------------------
 
+
 class TestOutputFile:
     def test_json_exists(self):
         assert (ROOT / "data" / "w33_psp43_we6_isom.json").exists()
 
     def test_json_has_required_keys(self):
-        data = json.loads(
-            (ROOT / "data" / "w33_psp43_we6_isom.json").read_text()
-        )
+        data = json.loads((ROOT / "data" / "w33_psp43_we6_isom.json").read_text())
         required = [
-            "T1_sp43_order", "T1_we6_even_order", "T1_orders_match",
-            "T1_order_spectrum_equal", "T1_correct",
-            "T2_num_gen_maps", "T2_word_lengths", "T2_correct",
-            "T3_all_antipode", "T3_all_dot", "T3_correct",
-            "T4_line_orders", "T4_orders_computed_match", "T4_correct",
-            "T5_cocycle_trivial", "T5_nontrivial_pairs",
-            "T6_we6_order", "T6_n_coxeter", "T6_correct",
+            "T1_sp43_order",
+            "T1_we6_even_order",
+            "T1_orders_match",
+            "T1_order_spectrum_equal",
+            "T1_correct",
+            "T2_num_gen_maps",
+            "T2_word_lengths",
+            "T2_correct",
+            "T3_all_antipode",
+            "T3_all_dot",
+            "T3_correct",
+            "T4_line_orders",
+            "T4_orders_computed_match",
+            "T4_correct",
+            "T5_cocycle_trivial",
+            "T5_nontrivial_pairs",
+            "T6_we6_order",
+            "T6_n_coxeter",
+            "T6_correct",
         ]
         for key in required:
             assert key in data, f"Missing key: {key}"

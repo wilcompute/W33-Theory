@@ -5,6 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 import tools.s12_universal_algebra as s12
 
 
@@ -46,8 +48,22 @@ def test_analyze_s12_jacobi_failure_pattern_cli_smoke(tmp_path: Path) -> None:
 
     # Explicit algebra bridge: the missing Jacobi phase is a Weyl–Heisenberg cocycle,
     # and the same phase threads through the E8 Z3 / L-infinity firewall via CE2.
+    fw_path = Path("artifacts") / "firewall_bad_triads_mapping.json"
+    if not fw_path.exists():
+        pytest.skip(
+            "firewall_bad_triads_mapping.json is an ignored heavy artifact; "
+            "run tools/map_firewall_bad_triangles_to_cubic_triads.py to materialize the bridge input"
+        )
+    e6_basis_path = Path("artifacts") / "e6_27rep_basis_export" / "E6_basis_78.npy"
+    if not e6_basis_path.exists():
+        pytest.skip(
+            "E6_basis_78.npy is an ignored E6 basis export; "
+            "run tools/build_e6_27rep_minuscule.py --export-basis78 to materialize the bridge input"
+        )
     cmd2 = [sys.executable, "-X", "utf8", "scripts/w33_s12_linfty_phase_bridge.py"]
-    run2 = subprocess.run(cmd2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    run2 = subprocess.run(
+        cmd2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+    )
     assert run2.returncode == 0, run2.stderr
     # recent script prints improved confirmation line
     assert "Global predictor reproduces CE2 sparse entry exactly" in run2.stdout

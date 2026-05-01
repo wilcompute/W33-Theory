@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
+import pytest
 
 from tools.build_linfty_firewall_extension import (
     LInftyE8Extension,
@@ -8,6 +11,17 @@ from tools.build_linfty_firewall_extension import (
     _load_bracket_tool,
 )
 from tools.exhaustive_homotopy_check_rationalized_l3 import basis_elem_g1, basis_elem_g2
+
+ROOT = Path(__file__).resolve().parents[1]
+E6_BASIS_PATH = ROOT / "artifacts" / "e6_27rep_basis_export" / "E6_basis_78.npy"
+
+pytestmark = pytest.mark.skipif(
+    not E6_BASIS_PATH.exists(),
+    reason=(
+        "artifacts/e6_27rep_basis_export/E6_basis_78.npy is an optional E6 basis export; "
+        "run tools/build_e6_27rep_minuscule.py --export-basis to materialize this integration suite"
+    ),
+)
 
 
 def max_abs(e) -> float:
@@ -342,7 +356,9 @@ def test_global_ce2_predictor_cancels_origin_line_v_family_second_line() -> None
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_origin_same_fiber_uv_family_mirror_z_order() -> None:
+def test_global_ce2_predictor_cancels_origin_same_fiber_uv_family_mirror_z_order() -> (
+    None
+):
     """The 1/108 overlap family should also cover the mirrored z-order."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -582,7 +598,9 @@ def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_line_v_family() ->
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_overlap_uv_family() -> None:
+def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_overlap_uv_family() -> (
+    None
+):
     """Half-strength overlap on the active nonvertical z=2 branch."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -678,7 +696,9 @@ def test_global_ce2_predictor_cancels_anchored_z1_to_z0_overlap_uv_family() -> N
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_complement_uv_family() -> None:
+def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_complement_uv_family() -> (
+    None
+):
     """Complementary overlap on the u1=1 half of the anchored z=2 pencil."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -702,7 +722,9 @@ def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_complement_uv_fami
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_complement_uv_family_negative_v_sign() -> None:
+def test_global_ce2_predictor_cancels_anchored_nonvertical_z2_complement_uv_family_negative_v_sign() -> (
+    None
+):
     """A second direction checks the complementary V-sign table."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -798,7 +820,9 @@ def test_global_ce2_predictor_cancels_anchor_01_samefiber_z2_line_w_family() -> 
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchor_01_samefiber_z2_overlap_uv_family() -> None:
+def test_global_ce2_predictor_cancels_anchor_01_samefiber_z2_overlap_uv_family() -> (
+    None
+):
     """Half-strength same-fiber overlap for the new a=(0,1,2) anchor."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -894,7 +918,9 @@ def test_global_ce2_predictor_cancels_anchor_01_affine_z1_overlap_uv_family() ->
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchor_01_affine_z1_complement_uv_family() -> None:
+def test_global_ce2_predictor_cancels_anchor_01_affine_z1_complement_uv_family() -> (
+    None
+):
     """Complementary z=1 overlap on the u1=1 half of the a=(0,1,2) pencil."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -918,7 +944,9 @@ def test_global_ce2_predictor_cancels_anchor_01_affine_z1_complement_uv_family()
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchor_01_affine_z1_complement_uv_family_second_direction() -> None:
+def test_global_ce2_predictor_cancels_anchor_01_affine_z1_complement_uv_family_second_direction() -> (
+    None
+):
     """A second direction checks the complementary z=1 U-sign character."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -990,7 +1018,9 @@ def test_global_ce2_predictor_cancels_anchor_20_samefiber_z2_line_w_family() -> 
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchor_20_samefiber_z2_overlap_uv_family() -> None:
+def test_global_ce2_predictor_cancels_anchor_20_samefiber_z2_overlap_uv_family() -> (
+    None
+):
     """Half-strength same-fiber overlap for the anchored a=(2,0,2) orbit."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(
@@ -2214,7 +2244,9 @@ def test_global_ce2_predictor_cancels_anchor_010_line_families() -> None:
     _assert_predictor_cancels_triples(triples)
 
 
-def test_global_ce2_predictor_cancels_anchor_010_line_families_on_other_g1_colors() -> None:
+def test_global_ce2_predictor_cancels_anchor_010_line_families_on_other_g1_colors() -> (
+    None
+):
     """The az=0 line branch lifts across the nonzero g1 colors as well."""
     triples = [
         ((20, 1), (1, 1), (21, 0)),
@@ -2403,7 +2435,9 @@ def test_global_ce2_predictor_cancels_a01_source1_z0_line_uv12_families() -> Non
     _assert_predictor_cancels_triples(triples)
 
 
-def test_global_ce2_predictor_leaves_translated_2v_overlap_false_positive_zero() -> None:
+def test_global_ce2_predictor_leaves_translated_2v_overlap_false_positive_zero() -> (
+    None
+):
     """The legacy translated-2v overlap rule must stay inactive on a=(0,1,2)."""
     triples = [
         ((2, 0), (0, 1), (22, 0)),
@@ -2629,7 +2663,9 @@ def test_global_ce2_predictor_cancels_anchor_002_line_v_family_first_branch() ->
     assert max_abs(repaired) < 1e-10
 
 
-def test_global_ce2_predictor_cancels_anchor_002_overlap_uv_family_first_branch() -> None:
+def test_global_ce2_predictor_cancels_anchor_002_overlap_uv_family_first_branch() -> (
+    None
+):
     """Half-strength overlap branch on the first promoted a=(0,0,2) witness."""
     toe = _load_bracket_tool()
     e6_basis = np.load("artifacts/e6_27rep_basis_export/E6_basis_78.npy").astype(

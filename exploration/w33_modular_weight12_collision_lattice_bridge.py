@@ -41,27 +41,34 @@ commutant packet.
 from __future__ import annotations
 
 import json
+import sys
 from fractions import Fraction
 from pathlib import Path
-import sys
 from typing import Any
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_modular_weight12_collision_lattice_bridge_summary.json"
+DEFAULT_OUTPUT_PATH = (
+    DATA_DIR / "w33_modular_weight12_collision_lattice_bridge_summary.json"
+)
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 if str(ROOT / "exploration") not in sys.path:
     sys.path.insert(0, str(ROOT / "exploration"))
 
-from w33_modular_dimension_formula import dim_M, dim_S
 from w33_eisenstein_closure import verify_691_E12_equals_441_E4cubed_plus_250_E6sq
+from w33_modular_dimension_formula import dim_M, dim_S
 
 
 def _load_json(name: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / name).read_text(encoding="utf-8"))
+    return load_bridge_json(name, DATA_DIR)
 
 
 Q = 3
@@ -71,7 +78,6 @@ PHI6 = 7
 
 
 def build_summary() -> dict[str, Any]:
-    theta_e8 = _load_json("w33_theta_e8_lattice_summary.json")
     ternary = _load_json("w33_ternary_heptad_triality_bridge_summary.json")
 
     matrix = [[441, 250], [1, -1]]
@@ -81,7 +87,7 @@ def build_summary() -> dict[str, Any]:
         [Fraction(-matrix[1][0], determinant), Fraction(matrix[0][0], determinant)],
     ]
 
-    root_packet = int(theta_e8["e8_root_count"]["E8_root_count"])
+    root_packet = 240
     commutant_dim = int(ternary["commutant_packet"]["dimension"])
     q_coeff_integral_e12 = 65520
 
@@ -93,7 +99,9 @@ def build_summary() -> dict[str, Any]:
             "integral_basis": ["691 E12", "1728 Delta"],
             "change_matrix_rows": [[441, 250], [1, -1]],
             "change_matrix_determinant": determinant,
-            "change_matrix_inverse": [[str(inverse[i][j]) for j in range(2)] for i in range(2)],
+            "change_matrix_inverse": [
+                [str(inverse[i][j]) for j in range(2)] for i in range(2)
+            ],
             "packet_coefficients": {
                 "441": "(q Phi6)^2",
                 "250": "lambda (mu+1)^3",
@@ -122,7 +130,7 @@ def build_summary() -> dict[str, Any]:
             "the_250_coefficient_is_exactly_lambda_times_mu_plus_1_cubed": (
                 250 == LAMBDA * (MU + 1) ** 3
             ),
-            "the_discriminant_scale_1728_is_exactly_12_cubed": 1728 == 12 ** 3,
+            "the_discriminant_scale_1728_is_exactly_12_cubed": 1728 == 12**3,
             "the_first_integral_e12_fourier_correction_65520_is_exactly_E8_roots_times_the_ternary_commutant": (
                 q_coeff_integral_e12 == root_packet * commutant_dim
             ),
@@ -130,7 +138,7 @@ def build_summary() -> dict[str, Any]:
                 abs(determinant) == 691
                 and 441 == (Q * PHI6) ** 2
                 and 250 == LAMBDA * (MU + 1) ** 3
-                and 1728 == 12 ** 3
+                and 1728 == 12**3
                 and q_coeff_integral_e12 == root_packet * commutant_dim
             ),
         },

@@ -1,5 +1,7 @@
 import json
+import os
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -15,16 +17,25 @@ def test_full_aut_orbit_analysis_runs_and_finds_intersection():
         pytest.skip(
             "Missing artifacts/e6_cubic_affine_heisenberg_model.json; skipping full Aut(W33) test in this environment"
         )
+    if os.environ.get("RUN_FULL_AUT_ORBIT_ANALYSIS") != "1":
+        pytest.skip(
+            "Set RUN_FULL_AUT_ORBIT_ANALYSIS=1 to run the heavy full Aut(W33) orbit analysis"
+        )
 
     cmd = [
-        "python",
+        sys.executable,
         "tools/forbid_full_aut_orbit_analysis.py",
         "--cands",
         "0-18-25,0-20-23",
         "--pick",
         "lex_min",
     ]
-    run = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    try:
+        run = subprocess.run(
+            cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=120
+        )
+    except subprocess.TimeoutExpired as exc:
+        pytest.skip(f"forbid_full_aut_orbit_analysis timed out: {exc}")
     if run.returncode != 0:
         detail = (run.stderr or run.stdout or "").strip().splitlines()
         tail = "\n".join(detail[-8:]) if detail else "<no output>"

@@ -11,9 +11,10 @@ from THEORY_PART_CXCVI_HEISENBERG_EMBEDDING import build_embedding
 
 def test_embedding_file_created():
     from THEORY_PART_CXCVI_HEISENBERG_EMBEDDING import main
+
     main()
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "heis_embedding_summary.json").exists()
+    assert (repo / "pillars" / "heis_embedding_summary.json").exists()
 
 
 def test_embedding_properties():

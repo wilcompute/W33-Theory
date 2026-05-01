@@ -9,13 +9,27 @@ These are compact, deterministic checks that codify Claude's outputs into CI tes
 from __future__ import annotations
 
 import math
+from pathlib import Path
+
+import pytest
 
 from scripts.w33_weinberg_dirac import weinberg_angle_derivation
 
 # repository modules (tools/scripts are importable in the test environment)
 from tools import toe_sm_cubic_firewall_analysis as sm
 
+CARTAN_MATS_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "e6_27rep_basis_export"
+    / "Cartan_mats.npy"
+)
 
+
+@pytest.mark.skipif(
+    not CARTAN_MATS_PATH.exists(),
+    reason="SO(10) Q_psi decomposition requires optional E6 Cartan_mats.npy export",
+)
 def test_so10_qpsi_decomposition_counts():
     """Check Q_psi pattern: 16 (Q_psi=1), 10 (Q_psi=-2), 1 (Q_psi=4)."""
     w27 = sm._compute_weights_27()

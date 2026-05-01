@@ -17,11 +17,11 @@ and corresponding weights.
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
-import sys
-import argparse
 import random
+import sys
 
 import numpy as np
 
@@ -30,18 +30,20 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, repo_root)
 sys.path.insert(0, os.path.dirname(__file__))
 
+from e8_embedding_group_theoretic import build_w33
 from w33_ckm_from_vev import (
     _build_hodge_and_generations,
     build_generation_profiles,
-    cubic_form_on_h27,
     compute_ckm_and_jarlskog,
+    cubic_form_on_h27,
 )
-from e8_embedding_group_theoretic import build_w33
 
+from utils.json_safe import dump_json
 
 # ---------------------------------------------------------------------------
 # helpers
 # ---------------------------------------------------------------------------
+
 
 def ckme(v_up, v_dn, X_profiles, local_tris):
     Y_u = np.zeros((3, 3), dtype=complex)
@@ -55,11 +57,13 @@ def ckme(v_up, v_dn, X_profiles, local_tris):
                 None, local_tris, X_profiles[a], X_profiles[b], v_dn
             )
     V, J = compute_ckm_and_jarlskog(Y_u, Y_d)
-    Vexp = np.array([
-        [0.97373, 0.2243, 0.00382],
-        [0.2210, 0.987, 0.0410],
-        [0.0080, 0.0388, 1.013],
-    ])
+    Vexp = np.array(
+        [
+            [0.97373, 0.2243, 0.00382],
+            [0.2210, 0.987, 0.0410],
+            [0.0080, 0.0388, 1.013],
+        ]
+    )
     err = float(np.linalg.norm(np.abs(V) - Vexp))
     return err, V, J
 
@@ -68,9 +72,9 @@ def random_convex(vecs, rng):
     """Return random convex combination of given basis vectors.
 
     `vecs` is a list of numpy arrays with same length; we return
-    
+
         sum_i w_i * vecs[i]  with w_i >=0, sum w_i = 1
-    
+
     Sampling is done by generating exponential randoms and normalizing.
     """
     weights = rng.exponential(scale=1.0, size=len(vecs))
@@ -83,10 +87,10 @@ def random_convex(vecs, rng):
 
 def main():
     parser = argparse.ArgumentParser(description="Stochastic CKM optimizer")
-    parser.add_argument("--trials", type=int, default=1000,
-                        help="number of random combinations to try")
-    parser.add_argument("--seed", type=int, default=42,
-                        help="random seed")
+    parser.add_argument(
+        "--trials", type=int, default=1000, help="number of random combinations to try"
+    )
+    parser.add_argument("--seed", type=int, default=42, help="random seed")
     args = parser.parse_args()
 
     if not os.path.exists("data/w33_yukawa_blocks.json"):
@@ -118,16 +122,18 @@ def main():
     # construct basis list for up and down: include the original and neighbors
     up_basis_indices = [H27_idx[vi]] + h27_adj[H27_idx[vi]]
     dn_basis_indices = [H27_idx[vj]] + h27_adj[H27_idx[vj]]
-    up_vectors = [np.eye(27)[up_basis_indices.index(idx)] for idx in up_basis_indices]
-    dn_vectors = [np.eye(27)[dn_basis_indices.index(idx)] for idx in dn_basis_indices]
     # note: we need mapping from H27_idx to position in vector
     index_to_pos = {idx: pos for pos, idx in enumerate(H27_idx)}
+    up_vectors = [np.eye(27)[index_to_pos[idx]] for idx in up_basis_indices]
+    dn_vectors = [np.eye(27)[index_to_pos[idx]] for idx in dn_basis_indices]
 
     rng = np.random.default_rng(args.seed)
 
     # base error
-    v_up0 = np.zeros(27); v_up0[index_to_pos[H27_idx[vi]]] = 1.0
-    v_dn0 = np.zeros(27); v_dn0[index_to_pos[H27_idx[vj]]] = 1.0
+    v_up0 = np.zeros(27)
+    v_up0[index_to_pos[H27_idx[vi]]] = 1.0
+    v_dn0 = np.zeros(27)
+    v_dn0[index_to_pos[H27_idx[vj]]] = 1.0
     base_err, _, _ = ckme(v_up0, v_dn0, X_profiles, local_tris)
     best_err = base_err
     best_data = {
@@ -144,16 +150,17 @@ def main():
         err, V, J = ckme(v_up_rand, v_dn_rand, X_profiles, local_tris)
         if err < best_err:
             best_err = err
-            best_data.update({
-                "err": err,
-                "weights_up": wu.tolist(),
-                "weights_dn": wd.tolist(),
-            })
+            best_data.update(
+                {
+                    "err": err,
+                    "weights_up": wu.tolist(),
+                    "weights_dn": wd.tolist(),
+                }
+            )
             print(f"trial {t}: improved error to {err:.6f}")
 
     print("base err", base_err, "best err", best_err)
-    with open("data/ckm_opt2.json", "w") as f:
-        json.dump(best_data, f, indent=2)
+    dump_json(best_data, "data/ckm_opt2.json", indent=2)
     print("written data/ckm_opt2.json")
 
 

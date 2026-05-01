@@ -11,10 +11,12 @@ This script supports two modes:
 Usage:
   python scripts/w33_triangle_irrep_match_gap.py
 """
+
 from __future__ import annotations
 
 import json
 import sys
+from fractions import Fraction
 from pathlib import Path
 
 import numpy as np
@@ -39,6 +41,24 @@ except Exception:
 import ast
 import shlex
 import subprocess
+
+
+def _gap_line_payload(stdout: str, marker: str) -> str | None:
+    for line in stdout.splitlines():
+        if line.startswith(marker):
+            return line[len(marker) :].strip()
+    return None
+
+
+def _gap_block_payload(stdout: str, begin_marker: str, end_marker: str) -> str | None:
+    begin = stdout.find(begin_marker)
+    if begin < 0:
+        return None
+    begin += len(begin_marker)
+    end = stdout.find(end_marker, begin)
+    if end < 0:
+        return None
+    return stdout[begin:end].strip()
 
 
 def build_triangle_perm_from_vp(vp, triangles, tri_idx):
@@ -143,16 +163,20 @@ def main():
             perm_strings.append(f"PermList([{ps}])")
 
         gap_code = []
-        gap_code.append(f"gens := [{','.join(perm_strings)}];")
-        gap_code.append("G := Group(gens);")
-        gap_code.append("CC := ConjugacyClasses(G);")
-        gap_code.append('Print("GAP:GORDER:", Size(G), "\n");')
-        gap_code.append('Print("GAP:NUM_CLASSES:", Length(CC), "\n");')
-        gap_code.append('Print("GAP:CLASS_SIZES:", List(CC, c->Size(c)), "\n");')
+        gap_code.append(f"gens := [{','.join(perm_strings)}];;")
+        gap_code.append("G := Group(gens);;")
+        gap_code.append("CC := ConjugacyClasses(G);;")
+        gap_code.append('Print("GAP:GORDER:", Size(G), "\\n");')
+        gap_code.append('Print("GAP:NUM_CLASSES:", Length(CC), "\\n");')
+        gap_code.append('Print("GAP:CLASS_SIZES_BEGIN\\n");')
+        gap_code.append('Print(List(CC, c->Size(c)), "\\n");')
+        gap_code.append('Print("GAP:CLASS_SIZES_END\\n");')
         # Print representatives as lists of images on [1..40]
+        gap_code.append('Print("GAP:CLASS_REPS_BEGIN\\n");')
         gap_code.append(
-            'Print("GAP:CLASS_REPS:", List(CC, c -> List([1..40], x -> Representative(c)(x))), "\n");'
+            'Print(List(CC, c -> List([1..40], x -> x ^ Representative(c))), "\\n");'
         )
+        gap_code.append('Print("GAP:CLASS_REPS_END\\n");')
         gap_code.append("quit;")
         gap_script = "\n".join(gap_code)
 
@@ -168,26 +192,30 @@ def main():
             raise RuntimeError(
                 "GAP executable not found on PATH — please install GAP or use Sage/libgap"
             ) from exc
-        out = proc.stdout.splitlines()
-
-        # Parse GAP output lines (look for our GAP: markers)
-        G_order = None
-        class_sizes = None
-        class_reps = None
-        for line in out:
-            if line.startswith("GAP:GORDER:"):
-                G_order = int(line.split(":", 2)[1].strip())
-            elif line.startswith("GAP:CLASS_SIZES:"):
-                payload = line.split(":", 1)[1].strip()
-                class_sizes = ast.literal_eval(payload)
-            elif line.startswith("GAP:CLASS_REPS:"):
-                payload = line.split(":", 1)[1].strip()
-                # payload is like [[1,2,...],[...],...]
-                class_reps = ast.literal_eval(payload)
+        # Parse GAP output by explicit markers; GAP wraps large lists across lines.
+        stdout = proc.stdout
+        g_order_payload = _gap_line_payload(stdout, "GAP:GORDER:")
+        class_sizes_payload = _gap_block_payload(
+            stdout, "GAP:CLASS_SIZES_BEGIN\n", "\nGAP:CLASS_SIZES_END"
+        )
+        class_reps_payload = _gap_block_payload(
+            stdout, "GAP:CLASS_REPS_BEGIN\n", "\nGAP:CLASS_REPS_END"
+        )
+        G_order = int(g_order_payload) if g_order_payload is not None else None
+        class_sizes = (
+            ast.literal_eval(class_sizes_payload)
+            if class_sizes_payload is not None
+            else None
+        )
+        class_reps = (
+            ast.literal_eval(class_reps_payload)
+            if class_reps_payload is not None
+            else None
+        )
 
         if G_order is None or class_sizes is None or class_reps is None:
             raise RuntimeError(
-                f"Failed to parse GAP output (stdout snippets): {out[:20]}"
+                f"Failed to parse GAP output (stdout snippets): {stdout.splitlines()[:20]}"
             )
 
         print(f"Group order (from GAP CLI): {G_order}, classes: {len(class_sizes)}")
@@ -209,41 +237,7 @@ def main():
             # but we only have representative permutation; use GAP to factor it into gens.
             # Instead call GAP again to obtain factorization words for each rep (we'll do that below).
 
-        # We'll request factorization and compute trace per class in a second GAP call that
-        # returns the generator-word factorization for each conjugacy-class representative.
-        factor_gap_code = []
-        factor_gap_code.append(f"gens := [{','.join(perm_strings)}];")
-        factor_gap_code.append("G := Group(gens);")
-        factor_gap_code.append("CC := ConjugacyClasses(G);")
-        # For each class, output the list of generator-index/power pairs in the Factorization
-        factor_gap_code.append(
-            "repWords := List(CC, c -> Factorization(G, Representative(c)));"
-        )
-        factor_gap_code.append('Print("GAP:CLASS_FACTOR_WORDS:", repWords, "\n");')
-        factor_gap_code.append("quit;")
-        factor_script = "\n".join(factor_gap_code)
-        proc2 = subprocess.run(
-            ["gap", "-q"],
-            input=factor_script,
-            text=True,
-            capture_output=True,
-            check=True,
-        )
-        # parse repWords output
-        rep_words = None
-        for line in proc2.stdout.splitlines():
-            if line.startswith("GAP:CLASS_FACTOR_WORDS:"):
-                payload = line.split(":", 1)[1].strip()
-                # payload is GAP list-of-lists-of-pairs with 1-based gen indices and exponents
-                # We will massage it into a Python-evaluable list by replacing '|' and ' ' patterns
-                # Example GAP output: [ [ g1^1 * g2^2 ], [ ... ] ] — instead we request ExtRepOfObj earlier
-                # Simpler approach: instead of parsing Factorization output, compute permutation image
-                # on triangles by applying power of generator matrices using GAP's Permutation
-                # representation is complicated; instead we reuse class_reps (we already have the
-                # representative permutation lists) and compute triangle-action directly from vp.
-                rep_words = payload
-        # If parsing factorization failed, fall back to using class_reps directly (we already have them)
-        # Compute traces directly from class_reps
+        # Compute traces directly from class representatives.
         chi_c2_by_class = []
         for rep in class_reps:
             vp = [int(x) - 1 for x in rep]
@@ -252,39 +246,56 @@ def main():
             chi_c2_by_class.append(float(np.trace(M)))
 
         # Now call GAP to get irreducible characters and compute multiplicities by inner product
-        # Prepare the chiC2 list string for GAP (floats)
-        chi_list_str = ",".join(str(float(x)) for x in chi_c2_by_class)
+        # Prepare the chiC2 list string for GAP as exact integers.
+        chi_list_str = ",".join(str(int(round(float(x)))) for x in chi_c2_by_class)
+        rep_perm_strings = []
+        for rep in class_reps:
+            rep_perm_strings.append(f"PermList([{','.join(str(int(x)) for x in rep)}])")
         mult_gap_code = []
-        mult_gap_code.append(f"gens := [{','.join(perm_strings)}];")
-        mult_gap_code.append("G := Group(gens);")
-        mult_gap_code.append("CC := ConjugacyClasses(G);")
-        mult_gap_code.append("classSizes := List(CC, c -> Size(c));")
-        mult_gap_code.append("tbl := CharacterTable(G);")
-        mult_gap_code.append("irr := Irr(tbl);")
-        mult_gap_code.append(f"chiC2 := [{chi_list_str}];")
+        mult_gap_code.append(f"gens := [{','.join(perm_strings)}];;")
+        mult_gap_code.append("G := Group(gens);;")
+        mult_gap_code.append("CC := ConjugacyClasses(G);;")
+        mult_gap_code.append("classSizes := List(CC, c -> Size(c));;")
+        mult_gap_code.append("tbl := CharacterTable(G);;")
+        mult_gap_code.append("irr := Irr(tbl);;")
+        mult_gap_code.append(f"firstReps := [{','.join(rep_perm_strings)}];;")
+        mult_gap_code.append(f"chiInput := [{chi_list_str}];;")
         mult_gap_code.append(
-            "mults := List(irr, chi -> Sum([1..Length(CC)], i -> classSizes[i] * chiC2[i] * chi[i]) / Size(G));"
+            "chiC2 := List(CC, c -> chiInput[PositionProperty(firstReps, r -> r in c)]);;"
         )
         mult_gap_code.append(
-            'Print("GAP:IRR_MULTIPLICITIES:", List(mults, x->Float(x)), "\n");'
+            "mults := List(irr, chi -> Sum([1..Length(CC)], i -> classSizes[i] * chiC2[i] * chi[i]) / Size(G));;"
         )
-        mult_gap_code.append(
-            'Print("GAP:IRR_DEGREES:", List(irr, chi -> chi[1]), "\n");'
-        )
+        mult_gap_code.append('Print("GAP:IRR_MULTIPLICITIES_BEGIN\\n");')
+        mult_gap_code.append('Print(List(mults, x->String(x)), "\\n");')
+        mult_gap_code.append('Print("GAP:IRR_MULTIPLICITIES_END\\n");')
+        mult_gap_code.append('Print("GAP:IRR_DEGREES_BEGIN\\n");')
+        mult_gap_code.append('Print(List(irr, chi -> chi[1]), "\\n");')
+        mult_gap_code.append('Print("GAP:IRR_DEGREES_END\\n");')
         mult_gap_code.append("quit;")
         mult_script = "\n".join(mult_gap_code)
         proc3 = subprocess.run(
             ["gap", "-q"], input=mult_script, text=True, capture_output=True, check=True
         )
-        mults = None
-        degrees = None
-        for line in proc3.stdout.splitlines():
-            if line.startswith("GAP:IRR_MULTIPLICITIES:"):
-                payload = line.split(":", 1)[1].strip()
-                mults = ast.literal_eval(payload)
-            elif line.startswith("GAP:IRR_DEGREES:"):
-                payload = line.split(":", 1)[1].strip()
-                degrees = ast.literal_eval(payload)
+        mults_payload = _gap_block_payload(
+            proc3.stdout,
+            "GAP:IRR_MULTIPLICITIES_BEGIN\n",
+            "\nGAP:IRR_MULTIPLICITIES_END",
+        )
+        degrees_payload = _gap_block_payload(
+            proc3.stdout, "GAP:IRR_DEGREES_BEGIN\n", "\nGAP:IRR_DEGREES_END"
+        )
+        mults_raw = (
+            ast.literal_eval(mults_payload) if mults_payload is not None else None
+        )
+        mults = (
+            [int(Fraction(str(value))) for value in mults_raw]
+            if mults_raw is not None
+            else None
+        )
+        degrees = (
+            ast.literal_eval(degrees_payload) if degrees_payload is not None else None
+        )
 
         if mults is None or degrees is None:
             raise RuntimeError(

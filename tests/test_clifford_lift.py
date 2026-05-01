@@ -1,13 +1,30 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 
 def test_clifford_lift_verifies(tmp_path):
     # Run the Clifford-lift builder on the W33 bundle and assert both generators verify.
-    import sys
-
     sys.path.insert(0, str(Path("tools").resolve()))
     from tools import build_qutrit_clifford_lift as clf
+
+    bundle_dir = tmp_path / "bundle"
+    export_run = subprocess.run(
+        [
+            sys.executable,
+            "tools/export_w33_heisenberg_bundle.py",
+            "--out-dir",
+            str(bundle_dir),
+            "--v0",
+            "0",
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        check=False,
+    )
+    assert export_run.returncode == 0, export_run.stderr
 
     argv_backup = sys.argv.copy()
     try:
@@ -15,7 +32,7 @@ def test_clifford_lift_verifies(tmp_path):
         sys.argv = [
             "clf",
             "--bundle-dir",
-            "artifacts/bundles/W33_Heisenberg_action_bundle_20260209_v1",  # pragma: allowlist secret
+            str(bundle_dir),
             "--out-dir",
             str(outdir),
         ]

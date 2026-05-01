@@ -30,13 +30,18 @@ the same object:
 
 from __future__ import annotations
 
-from collections import Counter, defaultdict
 import json
 import math
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
 import numpy as np
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,7 +50,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_ternary_heptad_triality_bridge_summary.jso
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def _serialize_complex(value: complex) -> dict[str, float]:
@@ -119,7 +124,9 @@ def _cluster_eigenspaces(operator: np.ndarray) -> dict[tuple[float, float], list
     eigenvalues, _ = np.linalg.eig(operator)
     clusters: dict[tuple[float, float], list[int]] = defaultdict(list)
     for index, eigenvalue in enumerate(eigenvalues):
-        clusters[(round(float(eigenvalue.real), 6), round(float(eigenvalue.imag), 6))].append(index)
+        clusters[
+            (round(float(eigenvalue.real), 6), round(float(eigenvalue.imag), 6))
+        ].append(index)
     return clusters
 
 
@@ -139,8 +146,16 @@ def _subspace_block(
     left_indices: list[int],
     right_indices: list[int],
 ) -> np.ndarray:
-    left = _normalized_columns(left_eigenvectors[:, left_indices]) if left_indices else np.zeros((coupling.shape[0], 0), dtype=complex)
-    right = _normalized_columns(right_eigenvectors[:, right_indices]) if right_indices else np.zeros((coupling.shape[1], 0), dtype=complex)
+    left = (
+        _normalized_columns(left_eigenvectors[:, left_indices])
+        if left_indices
+        else np.zeros((coupling.shape[0], 0), dtype=complex)
+    )
+    right = (
+        _normalized_columns(right_eigenvectors[:, right_indices])
+        if right_indices
+        else np.zeros((coupling.shape[1], 0), dtype=complex)
+    )
     return left.T.conj() @ coupling @ right
 
 
@@ -163,15 +178,37 @@ def build_summary() -> dict[str, Any]:
     clusters24 = _cluster_eigenspaces(b24)
     clusters15 = _cluster_eigenspaces(b15)
 
-    matter_singlet_indices = [indices[0] for indices in clusters24.values() if len(indices) == 1]
-    gauge_singlet_indices = [indices[0] for indices in clusters15.values() if len(indices) == 1]
-    matter_dominant_indices = [index for indices in clusters24.values() if len(indices) > 1 for index in indices]
-    gauge_dominant_indices = [index for indices in clusters15.values() if len(indices) > 1 for index in indices]
+    matter_singlet_indices = [
+        indices[0] for indices in clusters24.values() if len(indices) == 1
+    ]
+    gauge_singlet_indices = [
+        indices[0] for indices in clusters15.values() if len(indices) == 1
+    ]
+    matter_dominant_indices = [
+        index
+        for indices in clusters24.values()
+        if len(indices) > 1
+        for index in indices
+    ]
+    gauge_dominant_indices = [
+        index
+        for indices in clusters15.values()
+        if len(indices) > 1
+        for index in indices
+    ]
 
-    singlet_to_singlet = _subspace_block(coupling, eigvecs24, eigvecs15, matter_singlet_indices, gauge_singlet_indices)
-    singlet_to_dominant = _subspace_block(coupling, eigvecs24, eigvecs15, matter_singlet_indices, gauge_dominant_indices)
-    dominant_to_singlet = _subspace_block(coupling, eigvecs24, eigvecs15, matter_dominant_indices, gauge_singlet_indices)
-    dominant_to_dominant = _subspace_block(coupling, eigvecs24, eigvecs15, matter_dominant_indices, gauge_dominant_indices)
+    singlet_to_singlet = _subspace_block(
+        coupling, eigvecs24, eigvecs15, matter_singlet_indices, gauge_singlet_indices
+    )
+    singlet_to_dominant = _subspace_block(
+        coupling, eigvecs24, eigvecs15, matter_singlet_indices, gauge_dominant_indices
+    )
+    dominant_to_singlet = _subspace_block(
+        coupling, eigvecs24, eigvecs15, matter_dominant_indices, gauge_singlet_indices
+    )
+    dominant_to_dominant = _subspace_block(
+        coupling, eigvecs24, eigvecs15, matter_dominant_indices, gauge_dominant_indices
+    )
 
     global_singular_values = np.linalg.svd(coupling, compute_uv=False)
     singlet_singular_values = np.linalg.svd(singlet_to_singlet, compute_uv=False)
@@ -194,10 +231,12 @@ def build_summary() -> dict[str, Any]:
     return {
         "oriented_operator_packet": {
             "v24_eigenvalue_multiplicities": {
-                f"{real}{imag:+}i": len(indices) for (real, imag), indices in sorted(clusters24.items())
+                f"{real}{imag:+}i": len(indices)
+                for (real, imag), indices in sorted(clusters24.items())
             },
             "v15_eigenvalue_multiplicities": {
-                f"{real}{imag:+}i": len(indices) for (real, imag), indices in sorted(clusters15.items())
+                f"{real}{imag:+}i": len(indices)
+                for (real, imag), indices in sorted(clusters15.items())
             },
             "matter_singlet_count": matter_singlets,
             "gauge_singlet_count": gauge_singlets,
@@ -242,10 +281,12 @@ def build_summary() -> dict[str, Any]:
         },
         "ternary_heptad_triality_theorem": {
             "a1_splits_v24_as_10_plus_10_plus_1_plus_1_plus_1_plus_1": (
-                sorted(len(indices) for indices in clusters24.values()) == [1, 1, 1, 1, 10, 10]
+                sorted(len(indices) for indices in clusters24.values())
+                == [1, 1, 1, 1, 10, 10]
             ),
             "a1_splits_v15_as_6_plus_6_plus_1_plus_1_plus_1": (
-                sorted(len(indices) for indices in clusters15.values()) == [1, 1, 1, 6, 6]
+                sorted(len(indices) for indices in clusters15.values())
+                == [1, 1, 1, 6, 6]
             ),
             "the_gauge_matter_bridge_has_rank_exactly_three": (
                 int(np.sum(global_singular_values > 1e-8)) == 3
@@ -256,7 +297,11 @@ def build_summary() -> dict[str, Any]:
                 and float(np.linalg.norm(dominant_to_dominant)) < 1e-10
             ),
             "the_singlet_block_has_the_exact_golden_ratio_singular_packet": (
-                np.allclose(np.sort(singlet_singular_values[:3] ** 2), np.sort(expected_svsq), atol=1e-10)
+                np.allclose(
+                    np.sort(singlet_singular_values[:3] ** 2),
+                    np.sort(expected_svsq),
+                    atol=1e-10,
+                )
             ),
             "the_four_matter_singlets_match_the_tetra_chart_packet": (
                 matter_singlets == mod12["packet_counts"]["chart_count"] == 4
@@ -265,7 +310,9 @@ def build_summary() -> dict[str, Any]:
                 gauge_singlets == mod12["packet_counts"]["mode_count"] == 3
             ),
             "the_total_ternary_singlet_packet_is_exactly_the_heptad_4_plus_3": (
-                matter_singlets + gauge_singlets == heptad["realization_packet"]["count"] == 7
+                matter_singlets + gauge_singlets
+                == heptad["realization_packet"]["count"]
+                == 7
             ),
             "the_ternary_commutant_dimension_is_exactly_triality_times_heptad_times_phi3": (
                 commutant_dimension == 3 * 7 * 13

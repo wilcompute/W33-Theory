@@ -10,9 +10,11 @@ Pillar 46 — area-law / minimal-cut behavior on W33
 Usage:
     python scripts/w33_holography.py
 """
+
 from __future__ import annotations
 
 import json
+import math
 import random
 import time
 from pathlib import Path
@@ -35,7 +37,7 @@ def sample_boundary_statistics(adj: List[List[int]], trials: int = 2000):
     n = len(adj)
     stats = []
     for size in range(1, n // 2 + 1):
-        sample_sizes = min(trials, int(np.comb(n, size)) if size <= 6 else trials)
+        sample_sizes = min(trials, math.comb(n, size) if size <= 6 else trials)
         vals = []
         for _ in range(sample_sizes):
             S = set(random.sample(range(n), size))

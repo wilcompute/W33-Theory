@@ -1,3 +1,7 @@
+from pathlib import Path
+
+import pytest
+
 from scripts.w33_exact_lie_bridge_audit import (
     analyze,
     classify_lie_bridges,
@@ -7,6 +11,17 @@ from scripts.w33_exact_lie_bridge_audit import (
     psp43_order,
     sp43_order,
     we6_order,
+)
+
+SAGE_TRANSPORT = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "sage_h27_to_schlafli_effective_triads_conjugacy.json"
+)
+
+pytestmark = pytest.mark.skipif(
+    not SAGE_TRANSPORT.exists(),
+    reason="optional Sage H27-to-Schlafli transport artifact is absent",
 )
 
 
@@ -74,20 +89,42 @@ def test_local_h27_affine_symmetry_separates_full_and_projective_stabilizers() -
 def test_bridge_classification_keeps_e6_exact_and_e8_non_functorial() -> None:
     records = {record["name"]: record for record in classify_lie_bridges()}
 
-    assert records["local_schlafli_e6_bridge"]["support_level"] == "repo-exact + classical exact"
+    assert (
+        records["local_schlafli_e6_bridge"]["support_level"]
+        == "repo-exact + classical exact"
+    )
     assert records["local_schlafli_e6_bridge"]["depends_only_on_qutrit_kernel"] is True
 
-    assert records["local_h27_affine_symmetry"]["support_level"] == "repo-exact + classical exact"
+    assert (
+        records["local_h27_affine_symmetry"]["support_level"]
+        == "repo-exact + classical exact"
+    )
     assert records["local_h27_affine_symmetry"]["depends_only_on_qutrit_kernel"] is True
 
-    assert records["projective_symplectic_we6_symmetry"]["support_level"] == "repo-exact + classical exact"
-    assert records["projective_symplectic_we6_symmetry"]["depends_only_on_qutrit_kernel"] is True
+    assert (
+        records["projective_symplectic_we6_symmetry"]["support_level"]
+        == "repo-exact + classical exact"
+    )
+    assert (
+        records["projective_symplectic_we6_symmetry"]["depends_only_on_qutrit_kernel"]
+        is True
+    )
 
-    assert records["edge_count_equals_e8_root_count"]["support_level"] == "count identity only"
-    assert records["edge_count_equals_e8_root_count"]["depends_only_on_qutrit_kernel"] is False
+    assert (
+        records["edge_count_equals_e8_root_count"]["support_level"]
+        == "count identity only"
+    )
+    assert (
+        records["edge_count_equals_e8_root_count"]["depends_only_on_qutrit_kernel"]
+        is False
+    )
 
-    assert records["spectral_248_e8_dimension"]["support_level"] == "later spectral layer"
-    assert records["spectral_248_e8_dimension"]["depends_only_on_qutrit_kernel"] is False
+    assert (
+        records["spectral_248_e8_dimension"]["support_level"] == "later spectral layer"
+    )
+    assert (
+        records["spectral_248_e8_dimension"]["depends_only_on_qutrit_kernel"] is False
+    )
 
 
 def test_analyze_summary_lists_exact_and_non_functorial_bridges() -> None:

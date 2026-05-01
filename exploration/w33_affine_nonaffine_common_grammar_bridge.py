@@ -29,10 +29,17 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_affine_nonaffine_common_grammar_bridge_summary.json"
+DEFAULT_OUTPUT_PATH = (
+    DATA_DIR / "w33_affine_nonaffine_common_grammar_bridge_summary.json"
+)
 
 
 Q = 3
@@ -55,7 +62,7 @@ def _riemann_algebraic_curvature_dim(n: int) -> int:
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 NONAFFINE_PACKET_ROWS = {
@@ -147,12 +154,17 @@ def build_summary() -> dict[str, Any]:
                 "dim_Riem_alg_R4": exact_curvature_20,
             },
             "grammar_rows": rows,
-            "common_input_grammar": [rows[key]["mu_times_input"] for key in grammar_sequence],
-            "common_affine_output_grammar": [rows[key]["affine_kernel_value"] for key in grammar_sequence],
+            "common_input_grammar": [
+                rows[key]["mu_times_input"] for key in grammar_sequence
+            ],
+            "common_affine_output_grammar": [
+                rows[key]["affine_kernel_value"] for key in grammar_sequence
+            ],
         },
         "affine_nonaffine_common_grammar_theorem": {
             "mu_squared_is_the_exact_common_dirac_core_16": (
-                rows["mu"]["mu_times_input"] == 16 and rows["mu"]["nonaffine_value"] == 16
+                rows["mu"]["mu_times_input"] == 16
+                and rows["mu"]["nonaffine_value"] == 16
             ),
             "mu_times_mu_plus_1_is_the_exact_4d_algebraic_curvature_shell_20": (
                 rows["mu_plus_1"]["mu_times_input"] == 20
@@ -160,25 +172,34 @@ def build_summary() -> dict[str, Any]:
                 and LAMBDA * PHI4 == exact_curvature_20
             ),
             "mu_times_2q_is_the_exact_corrected_24_packet": (
-                rows["2q"]["mu_times_input"] == 24 and rows["2q"]["nonaffine_value"] == 24
+                rows["2q"]["mu_times_input"] == 24
+                and rows["2q"]["nonaffine_value"] == 24
             ),
             "mu_times_q_squared_is_the_exact_spread_carrier_36": (
-                rows["q_squared"]["mu_times_input"] == 36 and rows["q_squared"]["nonaffine_value"] == 36
+                rows["q_squared"]["mu_times_input"] == 36
+                and rows["q_squared"]["nonaffine_value"] == 36
             ),
             "mu_times_Theta_is_the_exact_point_carrier_40": (
-                rows["Theta"]["mu_times_input"] == 40 and rows["Theta"]["nonaffine_value"] == 40
+                rows["Theta"]["mu_times_input"] == 40
+                and rows["Theta"]["nonaffine_value"] == 40
             ),
             "the_affine_mu_input_grammar_is_exactly_the_nonaffine_packet_ladder_16_20_24_36_40": (
-                [rows[key]["mu_times_input"] for key in grammar_sequence] == [16, 20, 24, 36, 40]
-                and [rows[key]["nonaffine_value"] for key in grammar_sequence] == [16, 20, 24, 36, 40]
+                [rows[key]["mu_times_input"] for key in grammar_sequence]
+                == [16, 20, 24, 36, 40]
+                and [rows[key]["nonaffine_value"] for key in grammar_sequence]
+                == [16, 20, 24, 36, 40]
             ),
             "the_shared_input_grammar_maps_under_the_affine_divisor_kernel_to_248_336_480_728_720": (
-                [rows[key]["affine_kernel_value"] for key in grammar_sequence] == [248, 336, 480, 728, 720]
+                [rows[key]["affine_kernel_value"] for key in grammar_sequence]
+                == [248, 336, 480, 728, 720]
             ),
             "the_promoted_affine_shell_grammar_and_the_nonaffine_operator_spine_share_one_exact_input_grammar": (
-                [rows[key]["mu_times_input"] for key in grammar_sequence] == [16, 20, 24, 36, 40]
-                and [rows[key]["nonaffine_value"] for key in grammar_sequence] == [16, 20, 24, 36, 40]
-                and [rows[key]["affine_kernel_value"] for key in grammar_sequence] == [248, 336, 480, 728, 720]
+                [rows[key]["mu_times_input"] for key in grammar_sequence]
+                == [16, 20, 24, 36, 40]
+                and [rows[key]["nonaffine_value"] for key in grammar_sequence]
+                == [16, 20, 24, 36, 40]
+                and [rows[key]["affine_kernel_value"] for key in grammar_sequence]
+                == [248, 336, 480, 728, 720]
             ),
         },
         "interpretation": (

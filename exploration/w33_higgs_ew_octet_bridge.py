@@ -24,6 +24,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -31,7 +36,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_higgs_ew_octet_bridge_summary.json"
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def build_summary() -> dict[str, Any]:
@@ -71,9 +76,15 @@ def build_summary() -> dict[str, Any]:
             ),
             "the_higgs_quartet_count_is_exactly_mu": bool(higgs_quartet == 4),
             "the_ew_triplet_count_is_exactly_q": bool(ew_triplet == 3),
-            "the_goldstone_count_is_exactly_mu_minus_one_equals_q": bool(higgs_quartet - 1 == ew_triplet == 3),
-            "the_previous_bott_five_is_exactly_vacuum_plus_higgs_quartet": bool(vacuum + higgs_quartet == 5),
-            "the_ternary_heptad_is_exactly_higgs_quartet_plus_ew_triplet": bool(higgs_quartet + ew_triplet == 7),
+            "the_goldstone_count_is_exactly_mu_minus_one_equals_q": bool(
+                higgs_quartet - 1 == ew_triplet == 3
+            ),
+            "the_previous_bott_five_is_exactly_vacuum_plus_higgs_quartet": bool(
+                vacuum + higgs_quartet == 5
+            ),
+            "the_ternary_heptad_is_exactly_higgs_quartet_plus_ew_triplet": bool(
+                higgs_quartet + ew_triplet == 7
+            ),
         },
         "interpretation": (
             "The spectral packet now has a clean physical read. The exact "

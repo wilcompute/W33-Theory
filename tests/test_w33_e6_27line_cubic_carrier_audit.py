@@ -1,16 +1,35 @@
 from __future__ import annotations
 
-from scripts.w33_e6_27line_cubic_carrier_audit import analyze, classify_e6_27line_cubic_carrier
+import pytest
+
+from scripts.e6_hessian_tritangents import ART
+from scripts.w33_e6_27line_cubic_carrier_audit import (
+    analyze,
+    classify_e6_27line_cubic_carrier,
+)
 
 
-def test_e6_27line_cubic_carrier_audit_keeps_carrier_and_witness_layers_distinct() -> None:
+def test_e6_27line_cubic_carrier_audit_keeps_carrier_and_witness_layers_distinct() -> (
+    None
+):
+    if not (ART / "sage_h27_to_schlafli_effective_triads_conjugacy.json").exists():
+        pytest.skip("optional Sage H27-to-Schlafli transport artifact is absent")
+
     records = {record["name"]: record for record in classify_e6_27line_cubic_carrier()}
     payload = analyze()
     theorem = payload["e6_27line_cubic_carrier_theorem"]
 
     assert records["dual_27line_gq42_carrier"]["support_level"] == "repo-exact carrier"
-    assert records["canonical_signed_cubic_support_on_27line_carrier"]["support_level"] == "repo-exact cubic support"
-    assert records["current_e6_trilinear_symmetry_breaking_as_downstream_witness"]["support_level"] == "downstream witness on exact carrier"
+    assert (
+        records["canonical_signed_cubic_support_on_27line_carrier"]["support_level"]
+        == "repo-exact cubic support"
+    )
+    assert (
+        records["current_e6_trilinear_symmetry_breaking_as_downstream_witness"][
+            "support_level"
+        ]
+        == "downstream witness on exact carrier"
+    )
 
     carrier = payload["dual_27line_carrier"]
     assert carrier["dual_gq42_incidence"] == {
@@ -49,7 +68,17 @@ def test_e6_27line_cubic_carrier_audit_keeps_carrier_and_witness_layers_distinct
     assert witness["full_sign_closed_form_holds"] is True
     assert witness["full_sign_mismatch_count"] in (0, 20)
 
-    assert theorem["the_exact_exceptional_carrier_is_the_dual_27line_gq42_graph"] is True
-    assert theorem["the_signed_cubic_support_is_exactly_the_45_triangles_on_that_carrier"] is True
-    assert theorem["the_current_e6_trilinear_symmetry_breaking_surface_is_a_downstream_witness_on_that_exact_cubic"] is True
+    assert (
+        theorem["the_exact_exceptional_carrier_is_the_dual_27line_gq42_graph"] is True
+    )
+    assert (
+        theorem["the_signed_cubic_support_is_exactly_the_45_triangles_on_that_carrier"]
+        is True
+    )
+    assert (
+        theorem[
+            "the_current_e6_trilinear_symmetry_breaking_surface_is_a_downstream_witness_on_that_exact_cubic"
+        ]
+        is True
+    )
     assert "downstream witness" in payload["boundary_note"]

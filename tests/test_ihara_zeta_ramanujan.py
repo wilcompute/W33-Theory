@@ -24,10 +24,11 @@ Weil-Ihara note: k-1=11 is NOT a prime power, so Ihara poles 1/sqrt(11)
 do NOT match Weil zeros 3^{-j/2}. The bridge requires Hashimoto/non-backtracking.
 """
 
-import numpy as np
-from itertools import product as iproduct
 from fractions import Fraction
+from itertools import product as iproduct
 from math import comb, sqrt
+
+import numpy as np
 import pytest
 
 v, k, l, m, q = 40, 12, 2, 4, 3
@@ -46,7 +47,7 @@ class TestIharaZetaRamanujan:
     def test_ramanujan_bound(self):
         """2*sqrt(k-1) = 2*sqrt(11) ≈ 6.633."""
         bound = 2 * sqrt(k - 1)
-        assert abs(bound - 2*sqrt(11)) < 1e-10
+        assert abs(bound - 2 * sqrt(11)) < 1e-10
         assert bound < 7
 
     def test_r_eig_ramanujan(self):
@@ -79,31 +80,31 @@ class TestIharaZetaRamanujan:
         """Factor for ev=k: 1-12u+11u^2 = (1-u)(1-11u)."""
         # Verify factorization
         from numpy.polynomial import polynomial as P
+
         # 1-12u+11u^2 at u=1: 1-12+11=0 ✓; at u=1/11: 1-12/11+11/121=1-12/11+1/11=0 ✓
-        assert 1 - 12*1 + 11*1**2 == 0  # root at u=1
-        assert 1 - 12*(1/11) + 11*(1/11)**2 == 0  # root at u=1/11... check
+        assert 1 - 12 * 1 + 11 * 1**2 == 0  # root at u=1
         # 1 - 12/11 + 11/121 = 121/121 - 132/121 + 11/121 = 0 ✓
-        assert abs(1 - 12*(Fraction(1,11)) + 11*(Fraction(1,11)**2)) == 0
+        assert abs(1 - 12 * (Fraction(1, 11)) + 11 * (Fraction(1, 11) ** 2)) == 0
 
     def test_nontrivial_factor_ev_r_complex(self):
         """Factor for ev=r=2: 1-2u+11u^2 has discriminant < 0 (complex poles)."""
-        disc = r_eig**2 - 4*(k-1)
+        disc = r_eig**2 - 4 * (k - 1)
         assert disc == 4 - 44 == -40
         assert disc < 0  # complex roots
 
     def test_nontrivial_factor_ev_s_complex(self):
         """Factor for ev=s=-4: 1+4u+11u^2 has discriminant < 0 (complex poles)."""
-        disc = s_eig**2 - 4*(k-1)
+        disc = s_eig**2 - 4 * (k - 1)
         assert disc == 16 - 44 == -28
         assert disc < 0
 
     def test_both_nontrivial_poles_on_circle(self):
         """Both non-trivial factors have roots with |u|^2 = 1/(k-1) = 1/11."""
         for ev in [r_eig, s_eig]:
-            disc = ev**2 - 4*(k-1)
+            disc = ev**2 - 4 * (k - 1)
             assert disc < 0  # complex roots
             # Product of roots of 1-ev*u+(k-1)*u^2 = 1/(k-1) (Vieta's)
-            product_of_roots = Fraction(1, k-1)
+            product_of_roots = Fraction(1, k - 1)
             assert product_of_roots == Fraction(1, 11)
             # |u1|^2 = |u2|^2 = 1/(k-1) since they're complex conjugates
             # Product |u1|*|u2| = |product| = 1/(k-1) and |u1|=|u2|
@@ -112,24 +113,24 @@ class TestIharaZetaRamanujan:
     def test_ihara_RH_holds(self):
         """Ihara RH: all non-trivial poles on |u| = 1/sqrt(k-1)."""
         for ev in [r_eig, s_eig]:
-            disc = ev**2 - 4*(k-1)
+            disc = ev**2 - 4 * (k - 1)
             # Roots: (ev ± sqrt(disc)) / (2*(k-1))
             # |root|^2 = (ev/2)^2 / (k-1)^2 + (-disc/4) / (k-1)^2
             #          = [(ev^2/4) + (-disc/4)] / (k-1)^2
             #          = [ev^2/4 + (k-1) - ev^2/4] / (k-1)^2
             #          = (k-1) / (k-1)^2 = 1/(k-1)
-            mod_sq = (k - 1) / (k - 1)**2
-            assert abs(mod_sq - 1/(k-1)) < 1e-15
+            mod_sq = (k - 1) / (k - 1) ** 2
+            assert abs(mod_sq - 1 / (k - 1)) < 1e-15
 
     # --- Hashimoto eigenvalues ---
 
     def test_hashimoto_trivial_eigenvalues(self):
         """Hashimoto for ev=k=12: lambda = 11 or 1 (real, trivial)."""
-        disc = k**2 - 4*(k-1)
+        disc = k**2 - 4 * (k - 1)
         assert disc == 144 - 44 == 100 > 0
         l1 = (k + sqrt(disc)) / 2  # = (12+10)/2 = 11
         l2 = (k - sqrt(disc)) / 2  # = (12-10)/2 = 1
-        assert abs(l1 - (k-1)) < 1e-10
+        assert abs(l1 - (k - 1)) < 1e-10
         assert abs(l2 - 1) < 1e-10
 
     def test_hashimoto_nontrivial_modulus(self):
@@ -137,32 +138,32 @@ class TestIharaZetaRamanujan:
         for ev in [r_eig, s_eig]:
             # lambda = (ev ± i*sqrt(4*(k-1)-ev^2)) / 2
             re = ev / 2
-            im_sq = (k-1) - (ev/2)**2
+            im_sq = (k - 1) - (ev / 2) ** 2
             mod_sq = re**2 + im_sq
-            assert abs(mod_sq - (k-1)) < 1e-10
-            assert abs(sqrt(mod_sq) - sqrt(k-1)) < 1e-10
+            assert abs(mod_sq - (k - 1)) < 1e-10
+            assert abs(sqrt(mod_sq) - sqrt(k - 1)) < 1e-10
 
     def test_hashimoto_r_eigenvalue(self):
         """Hashimoto for ev=r=2: lambda = 1 ± i*sqrt(10), |lambda| = sqrt(11)."""
         re = r_eig / 2  # = 1
-        im = sqrt(4*(k-1) - r_eig**2) / 2  # = sqrt(44-4)/2 = sqrt(40)/2 = sqrt(10)
+        im = sqrt(4 * (k - 1) - r_eig**2) / 2  # = sqrt(44-4)/2 = sqrt(40)/2 = sqrt(10)
         mod = sqrt(re**2 + im**2)
         assert abs(re - 1) < 1e-10
         assert abs(im - sqrt(10)) < 1e-10
-        assert abs(mod - sqrt(k-1)) < 1e-10
+        assert abs(mod - sqrt(k - 1)) < 1e-10
 
     def test_hashimoto_s_eigenvalue(self):
         """Hashimoto for ev=s=-4: lambda = -2 ± i*sqrt(7) = -2 ± i*sqrt(Phi6)."""
         re = s_eig / 2  # = -2
-        im = sqrt(4*(k-1) - s_eig**2) / 2  # = sqrt(44-16)/2 = sqrt(28)/2 = sqrt(7)
+        im = sqrt(4 * (k - 1) - s_eig**2) / 2  # = sqrt(44-16)/2 = sqrt(28)/2 = sqrt(7)
         mod = sqrt(re**2 + im**2)
         assert abs(re - (-2)) < 1e-10
         assert abs(im - sqrt(Phi6)) < 1e-10  # sqrt(7) = sqrt(Phi6)!
-        assert abs(mod - sqrt(k-1)) < 1e-10
+        assert abs(mod - sqrt(k - 1)) < 1e-10
 
     def test_hashimoto_s_imaginary_part_is_sqrt_Phi6(self):
         """Imaginary part of Hashimoto s-eigenvalue = sqrt(Phi6) = sqrt(7)."""
-        im = sqrt(4*(k-1) - s_eig**2) / 2
+        im = sqrt(4 * (k - 1) - s_eig**2) / 2
         assert abs(im**2 - Phi6) < 1e-10
         assert Phi6 == 7
 
@@ -172,9 +173,9 @@ class TestIharaZetaRamanujan:
         """Sum of Betti numbers chi(Gr(3,6)) = 20 = N."""
         betti = {}
         for a in range(4):
-            for b in range(a+1):
-                for c in range(b+1):
-                    d = a+b+c
+            for b in range(a + 1):
+                for c in range(b + 1):
+                    d = a + b + c
                     betti[d] = betti.get(d, 0) + 1
         assert sum(betti.values()) == N
 
@@ -182,9 +183,9 @@ class TestIharaZetaRamanujan:
         """Betti numbers are palindromic: b_{2j} = b_{2*(dim/2-j)} (Poincare duality)."""
         betti = {}
         for a in range(4):
-            for b in range(a+1):
-                for c in range(b+1):
-                    d = a+b+c
+            for b in range(a + 1):
+                for c in range(b + 1):
+                    d = a + b + c
                     betti[d] = betti.get(d, 0) + 1
         max_d = max(betti.keys())
         for d in betti:
@@ -202,6 +203,7 @@ class TestIharaZetaRamanujan:
     def test_k_minus_1_not_prime_power_of_q(self):
         """k-1 = 11 is prime but NOT a power of q=3."""
         import sympy
+
         assert k - 1 == 11
         assert sympy.isprime(11)
         # 11 is NOT a power of 3
@@ -210,5 +212,5 @@ class TestIharaZetaRamanujan:
     def test_Phi6_in_Hashimoto(self):
         """Phi6=7 appears as imaginary part squared of Hashimoto s-eigenvalue: remarkable."""
         # im^2 = (4*(k-1) - s^2)/4 = (44-16)/4 = 28/4 = 7 = Phi6
-        im_sq = (4*(k-1) - s_eig**2) // 4
+        im_sq = (4 * (k - 1) - s_eig**2) // 4
         assert im_sq == Phi6 == 7

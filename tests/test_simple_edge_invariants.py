@@ -1,10 +1,26 @@
 import json
 from pathlib import Path
+
 import numpy as np
+import pytest
+
+QCA_PATH = Path("data/w33_algebra_qca.json")
+PROJECTIONS_PATH = Path("data/simple_edge_projections.json")
+
 
 def load_qca():
-    path = Path("data/w33_algebra_qca.json")
-    return json.loads(path.read_text(encoding="utf-8"))
+    if not QCA_PATH.exists():
+        pytest.skip(f"{QCA_PATH} is generated; run scripts/w33_algebra_qca.py")
+    return json.loads(QCA_PATH.read_text(encoding="utf-8"))
+
+
+def load_projections():
+    if not PROJECTIONS_PATH.exists():
+        pytest.skip(
+            f"{PROJECTIONS_PATH} is generated; run scripts/chevalley_simple_edge_analysis.py"
+        )
+    return json.loads(PROJECTIONS_PATH.read_text(encoding="utf-8"))
+
 
 def test_eps_balance():
     data = load_qca()
@@ -37,36 +53,37 @@ def test_degree_three_root_is_g1():
     # reconstruct Cartan from simple root orbits
     rows = data["chevalley"]["simple_edges"]
     # cartan is fixed known matrix from E8 Sage order
-    C = np.array([
-        [2, 0, -1, 0, 0, 0, 0, 0],
-        [0, 2, 0, -1, 0, 0, 0, 0],
-        [-1, 0, 2, -1, 0, 0, 0, 0],
-        [0, -1, -1, 2, -1, 0, 0, 0],
-        [0, 0, 0, -1, 2, -1, 0, 0],
-        [0, 0, 0, 0, -1, 2, -1, 0],
-        [0, 0, 0, 0, 0, -1, 2, -1],
-        [0, 0, 0, 0, 0, 0, -1, 2],
-    ], dtype=int)
+    C = np.array(
+        [
+            [2, 0, -1, 0, 0, 0, 0, 0],
+            [0, 2, 0, -1, 0, 0, 0, 0],
+            [-1, 0, 2, -1, 0, 0, 0, 0],
+            [0, -1, -1, 2, -1, 0, 0, 0],
+            [0, 0, 0, -1, 2, -1, 0, 0],
+            [0, 0, 0, 0, -1, 2, -1, 0],
+            [0, 0, 0, 0, 0, -1, 2, -1],
+            [0, 0, 0, 0, 0, 0, -1, 2],
+        ],
+        dtype=int,
+    )
     degs = 2 - C.sum(axis=1)
     idx = int(np.where(degs == 3)[0][0])
     assert rows[idx]["grade"] == "g1"
 
 
 def test_subspace0_dominance():
-    path = Path("data/simple_edge_projections.json")
-    assert path.exists(), "Projection data must be generated"
-    proj = json.loads(path.read_text(encoding="utf-8"))
+    proj = load_projections()
     sims = proj.get("simple_stats", [])
     for entry in sims:
         stats = entry.get("incident_stats", [])
         means = [m for m, M in stats]
-        assert means[0] > means[1] and means[0] > means[2], (
-            f"Subspace0 not dominating for root {entry['i']}: {means}")
+        assert (
+            means[0] > means[1] and means[0] > means[2]
+        ), f"Subspace0 not dominating for root {entry['i']}: {means}"
 
 
 def test_grade_average_ordering():
-    path = Path("data/simple_edge_projections.json")
-    proj = json.loads(path.read_text(encoding="utf-8"))
+    proj = load_projections()
     sims = proj.get("simple_stats", [])
     grade_avgs = {}
     for entry in sims:
@@ -86,8 +103,7 @@ def test_grade_average_ordering():
 
 
 def test_triangle_counts():
-    path = Path("data/simple_edge_projections.json")
-    proj = json.loads(path.read_text(encoding="utf-8"))
+    proj = load_projections()
     sims = proj.get("simple_stats", [])
     counts = [entry["triangles"] for entry in sims]
     # all are >=22 and at least one equals 24
@@ -99,8 +115,7 @@ def test_triangle_counts():
 
 
 def test_variance_grade_order():
-    path = Path("data/simple_edge_projections.json")
-    proj = json.loads(path.read_text(encoding="utf-8"))
+    proj = load_projections()
     sims = proj.get("simple_stats", [])
     # collect variance0 values
     var0 = [(e["incident_variance"][0], e["grade"]) for e in sims]

@@ -53,7 +53,13 @@ from pathlib import Path
 from typing import List, Tuple
 
 ROOT = Path(__file__).resolve().parent
-BUNDLE = ROOT / "W33_E8_simple_root_system_bundle.zip"
+BUNDLE_CANDIDATES = (
+    ROOT / "W33_E8_simple_root_system_bundle.zip",
+    ROOT.parent / "archive" / "zip" / "W33_E8_simple_root_system_bundle.zip",
+)
+BUNDLE = next(
+    (path for path in BUNDLE_CANDIDATES if path.exists()), BUNDLE_CANDIDATES[0]
+)
 
 
 def _matmul_gf2(A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
@@ -82,6 +88,9 @@ def _mat_order_gf2(M: List[List[int]], max_order: int = 20) -> int:
 
 
 def _load_bundle() -> dict:
+    if not BUNDLE.exists():
+        searched = ", ".join(str(path) for path in BUNDLE_CANDIDATES)
+        raise FileNotFoundError(f"missing W33 E8 bundle; searched: {searched}")
     with zipfile.ZipFile(BUNDLE) as zf:
         summary = json.loads(zf.read("summary.json"))
         mats_data = json.loads(zf.read("e8_reflection_matrices_8x8_GF2.json"))
@@ -146,14 +155,20 @@ def analyze() -> dict:
 
     # T1: GF(2) homology — dimension confirmed by spanning check and summary
     t1_dim_H = 8
-    t1_size_H = 2 ** 8  # 256
+    t1_size_H = 2**8  # 256
 
     # T2: Quadratic form orbits from summary
     orbits = summary["orbit_decomposition_on_H_under_reflections"]
     t2_orbit_zero = next(o for o in orbits if o["contains_zero"])
-    t2_orbit_singular = next(o for o in orbits if not o["contains_zero"] and o["q"] == 0)
-    t2_orbit_nonsingular = next(o for o in orbits if not o["contains_zero"] and o["q"] == 1)
-    t2_total = t2_orbit_zero["size"] + t2_orbit_singular["size"] + t2_orbit_nonsingular["size"]
+    t2_orbit_singular = next(
+        o for o in orbits if not o["contains_zero"] and o["q"] == 0
+    )
+    t2_orbit_nonsingular = next(
+        o for o in orbits if not o["contains_zero"] and o["q"] == 1
+    )
+    t2_total = (
+        t2_orbit_zero["size"] + t2_orbit_singular["size"] + t2_orbit_nonsingular["size"]
+    )
     t2_partition_correct = (
         t2_orbit_zero["size"] == 1
         and t2_orbit_singular["size"] == 135
@@ -163,7 +178,9 @@ def analyze() -> dict:
 
     # T3: E8 Dynkin embedding — structure from Dynkin adjacency matrix and summary
     # Identify Dynkin edges
-    dynkin_edges = [(i, j) for i in range(n) for j in range(i + 1, n) if dynkin[i][j] == 1]
+    dynkin_edges = [
+        (i, j) for i in range(n) for j in range(i + 1, n) if dynkin[i][j] == 1
+    ]
     # Expected E8 edges: 0-1, 1-2, 2-3, 3-4, 4-5, 5-6, 2-7 (7 edges for E8)
     expected_edges = {(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (2, 7)}
     t3_dynkin_edges = set(dynkin_edges)
@@ -230,14 +247,13 @@ def analyze() -> dict:
 
     # Bilinear form: b(r_i, r_j) = 1 iff adjacent (= Dynkin adjacency)
     bilinear_matches_dynkin = all(
-        bilinear[i][j] == dynkin[i][j]
-        for i in range(n) for j in range(n) if i != j
+        bilinear[i][j] == dynkin[i][j] for i in range(n) for j in range(n) if i != j
     ) and all(bilinear[i][i] == 0 for i in range(n))
     t5_bilinear_matches_dynkin = bilinear_matches_dynkin
 
     # T6: Spanning and orbit structure from summary
     t6_simple_roots_span_dim = summary["simple_roots_span_dim"]
-    t6_spans_H = (t6_simple_roots_span_dim == 8)
+    t6_spans_H = t6_simple_roots_span_dim == 8
     t6_coxeter_satisfied = summary["coxeter_relations_satisfied"]
     t6_orbit_sizes = [o["size"] for o in orbits]
     t6_three_orbits = len(orbits) == 3
@@ -284,20 +300,34 @@ def main():
     out = ROOT / "data" / "w33_e8_from_w33.json"
     out.write_text(json.dumps(summary, indent=2))
     print("T1 dim(H):", summary["T1_dim_H"], "  |H|:", summary["T1_size_H"])
-    print("T2 orbit partition correct:", summary["T2_partition_correct"],
-          " (1 +", summary["T2_orbit_singular_size"],
-          "+", summary["T2_orbit_nonsingular_size"], "= 256)")
+    print(
+        "T2 orbit partition correct:",
+        summary["T2_partition_correct"],
+        " (1 +",
+        summary["T2_orbit_singular_size"],
+        "+",
+        summary["T2_orbit_nonsingular_size"],
+        "= 256)",
+    )
     print("T3 E8 Dynkin embedding:", summary["T3_is_E8_Dynkin"])
-    print("T3 branching node:", summary["T3_branching_node"],
-          " degree:", summary["T3_branch_node_degree"])
+    print(
+        "T3 branching node:",
+        summary["T3_branching_node"],
+        " degree:",
+        summary["T3_branch_node_degree"],
+    )
     print("T4 all involutions:", summary["T4_all_involutions"])
     print("T4 all Coxeter correct:", summary["T4_all_coxeter_correct"])
     print("T4 adj order dist:", summary["T4_adj_order_dist"])
     print("T4 nonadj order dist:", summary["T4_nonadj_order_dist"])
     print("T5 Cartan correct:", summary["T5_cartan_correct"])
     print("T6 spans H:", summary["T6_spans_H"])
-    print("T6 three orbits:", summary["T6_three_orbits"],
-          " sizes:", summary["T6_orbit_sizes"])
+    print(
+        "T6 three orbits:",
+        summary["T6_three_orbits"],
+        " sizes:",
+        summary["T6_orbit_sizes"],
+    )
     print("wrote data/w33_e8_from_w33.json")
 
 

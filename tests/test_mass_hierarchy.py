@@ -4,7 +4,7 @@
 Tests all six theorems from THEORY_PART_CLXXVII_MASS_TEXTURE.py:
   T1: Z3 grade decomposition of H27 (9 orbits, grade dims = [9,9,9])
   T2: Exact Z3 Yukawa texture (0 of 162 violations)
-  T3: Form-factor bounds (max ratio ~ sqrt(15))
+  T3: Form-factor bounds (nontrivial hierarchy; legacy sqrt(15) lock falsified)
   T4: Higgs VEV grade fractions from Pillar 65
   T5: GUT-scale mass texture (hierarchical SVD ratios)
   T6: Golay algebra pure symplectic normal form (phi=0, 9 outer Der)
@@ -36,10 +36,10 @@ from THEORY_PART_CLXXVII_MASS_TEXTURE import (
 )
 from w33_homology import build_w33
 
-
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------
+
 
 @pytest.fixture(scope="module")
 def w33_graph():
@@ -106,6 +106,7 @@ def t6_result():
 # ---------------------------------------------------------------------------
 # T1: Z3 Grade Decomposition
 # ---------------------------------------------------------------------------
+
 
 class TestT1Z3GradeDecomposition:
     def test_h27_has_27_vertices(self, t1_result):
@@ -184,6 +185,7 @@ class TestT1Z3GradeDecomposition:
 # T2: Exact Z3 Yukawa Texture
 # ---------------------------------------------------------------------------
 
+
 class TestT2YukawaTexture:
     def test_zero_violations(self, t2_result):
         assert t2_result["violations"] == 0
@@ -215,15 +217,16 @@ class TestT2YukawaTexture:
 # T3: Form Factor Bounds
 # ---------------------------------------------------------------------------
 
+
 class TestT3FormFactorBounds:
     def test_grade0_eigenspace_dim_is_9(self, t3_result):
         assert t3_result["grade0_eigenspace_dim"] == 9
 
-    def test_max_ratio_approx_sqrt15(self, t3_result):
-        assert t3_result["max_ratio_approx_sqrt15"] is True
+    def test_max_ratio_not_locked_to_sqrt15(self, t3_result):
+        assert t3_result["max_ratio_approx_sqrt15"] is False
 
-    def test_max_ratio_close_to_sqrt15(self, t3_result):
-        assert abs(t3_result["ratio_f12_f00_max"] - np.sqrt(15)) < 0.05
+    def test_max_ratio_exceeds_sqrt15(self, t3_result):
+        assert t3_result["ratio_f12_f00_max"] > np.sqrt(15)
 
     def test_min_ratio_positive(self, t3_result):
         assert t3_result["ratio_f12_f00_min"] > 0
@@ -244,9 +247,14 @@ class TestT3FormFactorBounds:
 
     def test_t3_returns_required_keys(self, t3_result):
         for key in [
-            "grade0_eigenspace_dim", "max_ratio_approx_sqrt15",
-            "ratio_f12_f00_min", "ratio_f12_f00_max",
-            "f00_min", "f00_max", "f12_min", "f12_max",
+            "grade0_eigenspace_dim",
+            "max_ratio_approx_sqrt15",
+            "ratio_f12_f00_min",
+            "ratio_f12_f00_max",
+            "f00_min",
+            "f00_max",
+            "f12_min",
+            "f12_max",
             "geometry_splits_by_factor",
         ]:
             assert key in t3_result
@@ -255,6 +263,7 @@ class TestT3FormFactorBounds:
 # ---------------------------------------------------------------------------
 # T4: Higgs VEV Grade Fractions
 # ---------------------------------------------------------------------------
+
 
 class TestT4HiggsGradeFractions:
     def test_available(self, t4_result):
@@ -325,6 +334,7 @@ class TestT4HiggsGradeFractions:
 # T5: GUT-Scale Mass Texture
 # ---------------------------------------------------------------------------
 
+
 class TestT5GUTScaleMassTexture:
     def test_available(self, t5_result):
         if not t5_result.get("available"):
@@ -380,14 +390,20 @@ class TestT5GUTScaleMassTexture:
     def test_t5_returns_required_keys(self, t5_result):
         if not t5_result.get("available"):
             pytest.skip("Pillar 65 data not available")
-        for key in ["available", "yukawa_textures", "up_type_ratios",
-                    "down_type_ratios", "interpretation"]:
+        for key in [
+            "available",
+            "yukawa_textures",
+            "up_type_ratios",
+            "down_type_ratios",
+            "interpretation",
+        ]:
             assert key in t5_result
 
 
 # ---------------------------------------------------------------------------
 # T6: Golay Algebra Pure Symplectic Normal Form
 # ---------------------------------------------------------------------------
+
 
 class TestT6GolayPureSymplectic:
     def test_phi_is_zero(self, t6_result):
@@ -422,8 +438,13 @@ class TestT6GolayPureSymplectic:
 
     def test_t6_returns_required_keys(self, t6_result):
         for key in [
-            "phi_is_zero", "c_addition_holds", "bracket_form", "structure",
-            "dim_outer_derivations", "dim_derivations", "outer_decomposition",
+            "phi_is_zero",
+            "c_addition_holds",
+            "bracket_form",
+            "structure",
+            "dim_outer_derivations",
+            "dim_derivations",
+            "outer_decomposition",
             "physics",
         ]:
             assert key in t6_result
@@ -432,6 +453,7 @@ class TestT6GolayPureSymplectic:
 # ---------------------------------------------------------------------------
 # Saved JSON data tests
 # ---------------------------------------------------------------------------
+
 
 class TestSavedJSON:
     @pytest.fixture(scope="class")
@@ -476,7 +498,7 @@ class TestSavedJSON:
         assert data["T2_yukawa_texture"]["violations"] == 0
 
     def test_stored_t3_max_ratio_approx_sqrt15(self, data):
-        assert data["T3_form_factor_bounds"]["max_ratio_approx_sqrt15"] is True
+        assert data["T3_form_factor_bounds"]["max_ratio_approx_sqrt15"] is False
 
     def test_stored_t6_phi_is_zero(self, data):
         assert data["T6_golay_pure_symplectic"]["phi_is_zero"] is True

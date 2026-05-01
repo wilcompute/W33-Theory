@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 
 def _load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
@@ -23,6 +25,13 @@ def test_basis_export_chevalley_normalization_dynkin_and_serre():
         repo_root / "tools" / "ingest_more_new_work.py", "ingest_more_new_work"
     )
     ingest.main()
+    if not list(
+        (repo_root / "artifacts" / "more_new_work_extracted").rglob("E6_basis_78.npy")
+    ):
+        pytest.skip(
+            "More New Work E6_basis_78.npy export is absent; "
+            "run tools/ingest_more_new_work.py with the external drop to enable this regression"
+        )
 
     tool = _load_module(
         repo_root / "tools" / "chevalley_normalize_e6_from_basis_export.py",

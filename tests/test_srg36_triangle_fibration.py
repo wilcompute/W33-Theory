@@ -23,6 +23,7 @@ def summary():
 # T1: 1200 triangles split as 120 + 240 + 840
 # ---------------------------------------------------------------------------
 
+
 class TestT1TriangleSplit:
     """T1: 1200 = 120 faces + 240 odd-nonface + 840 even-nonface."""
 
@@ -48,9 +49,11 @@ class TestT1TriangleSplit:
 
     def test_sum_equals_1200(self, summary):
         """120 + 240 + 840 = 1200."""
-        assert (summary["T1_faces_chosen"] +
-                summary["T1_nonface_hol1"] +
-                summary["T1_nonface_hol0"]) == 1200
+        assert (
+            summary["T1_faces_chosen"]
+            + summary["T1_nonface_hol1"]
+            + summary["T1_nonface_hol0"]
+        ) == 1200
 
     def test_t1_correct(self, summary):
         """T1 overall correctness flag."""
@@ -60,6 +63,7 @@ class TestT1TriangleSplit:
 # ---------------------------------------------------------------------------
 # T2: 240 odd non-faces fiber over 40 special faces
 # ---------------------------------------------------------------------------
+
 
 class TestT2OddNonfaceFibration:
     """T2: 240 odd non-faces / 40 special faces = fiber size 6."""
@@ -93,6 +97,7 @@ class TestT2OddNonfaceFibration:
 # T3: 40 special faces = 40 W33 lines
 # ---------------------------------------------------------------------------
 
+
 class TestT3SpecialFacesLines:
     """T3: 40 special faces correspond bijectively to 40 W33 lines."""
 
@@ -117,6 +122,7 @@ class TestT3SpecialFacesLines:
 # T4: Face preimage map has degree 10
 # ---------------------------------------------------------------------------
 
+
 class TestT4PreimageDegree:
     """T4: Every face has exactly 10 preimages."""
 
@@ -140,6 +146,7 @@ class TestT4PreimageDegree:
 # ---------------------------------------------------------------------------
 # T5: Special face profile (6+3+1=10)
 # ---------------------------------------------------------------------------
+
 
 class TestT5SpecialFaceProfile:
     """T5: Each special face: 6 odd + 3 even + 1 self = 10 preimages."""
@@ -168,6 +175,7 @@ class TestT5SpecialFaceProfile:
 # ---------------------------------------------------------------------------
 # T6: Ordinary face profile (0+9+1=10)
 # ---------------------------------------------------------------------------
+
 
 class TestT6OrdinaryFaceProfile:
     """T6: Each ordinary face: 0 odd + 9 even + 1 self = 10 preimages."""
@@ -201,22 +209,36 @@ class TestT6OrdinaryFaceProfile:
 # Output file
 # ---------------------------------------------------------------------------
 
-class TestOutputFile:
-    def test_json_exists(self):
-        assert (ROOT / "data" / "w33_srg36_triangle_fibration.json").exists()
 
-    def test_json_has_required_keys(self):
-        data = json.loads(
-            (ROOT / "data" / "w33_srg36_triangle_fibration.json").read_text()
-        )
+class TestOutputFile:
+    def test_summary_has_required_keys(self, summary):
         required = [
-            "T1_triangles_total", "T1_faces_chosen", "T1_nonface_hol1",
-            "T1_nonface_hol0", "T1_correct",
-            "T2_n_odd", "T2_n_special", "T2_fiber_size", "T2_correct",
-            "T3_n_special", "T3_all_lines_covered", "T3_correct",
-            "T4_n_faces", "T4_all_degree_10", "T4_correct",
-            "T5_n_special", "T5_all_odd_6", "T5_all_even_3", "T5_correct",
-            "T6_n_ordinary", "T6_all_odd_0", "T6_all_even_9", "T6_correct",
+            "T1_triangles_total",
+            "T1_faces_chosen",
+            "T1_nonface_hol1",
+            "T1_nonface_hol0",
+            "T1_correct",
+            "T2_n_odd",
+            "T2_n_special",
+            "T2_fiber_size",
+            "T2_correct",
+            "T3_n_special",
+            "T3_all_lines_covered",
+            "T3_correct",
+            "T4_n_faces",
+            "T4_all_degree_10",
+            "T4_correct",
+            "T5_n_special",
+            "T5_all_odd_6",
+            "T5_all_even_3",
+            "T5_correct",
+            "T6_n_ordinary",
+            "T6_all_odd_0",
+            "T6_all_even_9",
+            "T6_correct",
         ]
         for key in required:
-            assert key in data, f"Missing key: {key}"
+            assert key in summary, f"Missing key: {key}"
+
+    def test_summary_is_json_serializable(self, summary):
+        json.dumps(summary)

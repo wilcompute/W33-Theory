@@ -23,14 +23,27 @@ f_dim, g_dim = 24, 15
 ev_r, ev_s = 2, -4
 
 # Ramanujan tau function values
-tau = {1:1, 2:-24, 3:252, 4:-1472, 5:4830, 6:-6048, 7:-16744, 8:84480,
-       9:-113643, 10:-115920, 11:534612, 12:-370944, 13:-577738}
+tau = {
+    1: 1,
+    2: -24,
+    3: 252,
+    4: -1472,
+    5: 4830,
+    6: -6048,
+    7: -16744,
+    8: 84480,
+    9: -113643,
+    10: -115920,
+    11: 534612,
+    12: -370944,
+    13: -577738,
+}
 
 # j-invariant at Heegner points
 j_neg7 = -3375  # j((1+sqrt(-7))/2)
-j_neg8 = 8000   # j(sqrt(-2)) -- for comparison
-j_neg3 = 0      # j(rho) where rho = e^{2pi*i/3}
-j_neg4 = 1728   # j(i)
+j_neg8 = 8000  # j(sqrt(-2)) -- for comparison
+j_neg3 = 0  # j(rho) where rho = e^{2pi*i/3}
+j_neg4 = 1728  # j(i)
 
 
 class TestModularHeegner:
@@ -51,12 +64,12 @@ class TestModularHeegner:
 
     def test_j_neg7_equals_minus_g_cubed(self):
         """j((1+sqrt(-7))/2) = -3375 = -(g_dim)^3 = -15^3."""
-        assert j_neg7 == -(g_dim)**3
+        assert j_neg7 == -((g_dim) ** 3)
         assert j_neg7 == -3375
 
     def test_j_neg7_cbrt_equals_g(self):
         """Cube root of |j(-7)| = g_dim = 15."""
-        assert round(abs(j_neg7)**(1/3)) == g_dim
+        assert round(abs(j_neg7) ** (1 / 3)) == g_dim
 
     def test_f_is_bosonic_string_d_minus_2(self):
         """f = 24 = d-2 for d=26 (bosonic string critical dimension)."""
@@ -89,8 +102,8 @@ class TestModularHeegner:
 
     def test_three_j_values_encode_W33(self):
         """Three j-invariants encode W(3,3) parameters: g^3, k^3, (k-1)^3."""
-        assert abs(j_neg7) == g_dim**3    # j(-7) = -(g)^3
-        assert j_neg4 == k**3             # j(i) = k^3 = 1728
+        assert abs(j_neg7) == g_dim**3  # j(-7) = -(g)^3
+        assert j_neg4 == k**3  # j(i) = k^3 = 1728
         # j(-11) = -32768 = -2^15 = -2^(k+3)? No: 2^15 = 32768, k+3=15 ✓ but weak
         j_neg11 = -32768
         assert -j_neg11 == 2**15
@@ -98,9 +111,6 @@ class TestModularHeegner:
         assert -j_neg11 == 2**g_dim
 
     def test_tau3_factored(self):
-        """tau(3) = 252 = 4 * 63 = 4 * 9 * 7 = mu^2 * Phi3_related * Phi6."""
+        """tau(3) = 252 = 4 * 63 = 4 * 9 * 7 = m * q^2 * Phi6."""
         assert tau[3] == 4 * 9 * 7
-        assert tau[3] == m**2 * q**2 * Phi6  # = 4*9*7 = 252
-        assert m**2 == 16  # wait: m=4, m^2=16 != 4
-        assert tau[3] == (m//1) * (q**2) * Phi6  # 4 * 9 * 7 = 252 with m=4
-        assert tau[3] == m * q**2 * Phi6  # 4 * 9 * 7 = 252 ✓
+        assert tau[3] == m * q**2 * Phi6  # 4 * 9 * 7 = 252

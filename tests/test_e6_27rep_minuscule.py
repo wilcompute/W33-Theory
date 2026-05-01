@@ -15,8 +15,22 @@ def _load_module(path: Path, name: str):
     return module
 
 
+def _ensure_signed_we6_action(repo_root: Path) -> None:
+    signed_action = repo_root / "artifacts" / "we6_signed_action_on_27.json"
+    if signed_action.exists():
+        return
+
+    exporter = _load_module(
+        repo_root / "tools" / "export_we6_signed_action_on_27.py",
+        "export_we6_signed_action_on_27",
+    )
+    exporter.main()
+
+
 def test_e6_27rep_minuscule_aligned_and_cubic_invariant():
     repo_root = Path(__file__).resolve().parents[1]
+    _ensure_signed_we6_action(repo_root)
+
     tool = _load_module(
         repo_root / "tools" / "build_e6_27rep_minuscule.py", "build_e6_27rep_minuscule"
     )

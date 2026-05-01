@@ -4,6 +4,7 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
 from w33_center_quad_gq42_e6_bridge import (
     build_center_quad_gq42_e6_bridge_summary,
     center_quad_pairing,
@@ -85,15 +86,19 @@ def test_exceptional_line_graph_has_schlafli_complement_parameters() -> None:
 def test_45_quotient_points_equal_45_line_graph_triangles() -> None:
     point_to_lines, _ = quotient_incidence()
     assert len(line_graph_triangles()) == 45
-    assert set(line_graph_triangles()) == {tuple(sorted(lines)) for lines in point_to_lines.values()}
+    assert set(line_graph_triangles()) == {
+        tuple(sorted(lines)) for lines in point_to_lines.values()
+    }
 
 
 def test_reconstruction_matches_archived_v13_incidence_counts() -> None:
-    with open(
-        "bundles/v13_GQ42_reconstruction/center_quad_gq42_v13/gq42_incidence_check.json",
-        encoding="utf-8",
-    ) as handle:
-        archived = json.load(handle)
+    archive_path = Path(
+        "bundles/v13_GQ42_reconstruction/center_quad_gq42_v13/gq42_incidence_check.json"
+    )
+    raw = archive_path.read_text(encoding="utf-8")
+    if raw.startswith("version https://git-lfs.github.com/spec/"):
+        pytest.skip("Git LFS payload missing for archived v13 incidence check")
+    archived = json.loads(raw)
 
     point_to_lines, line_to_points = quotient_incidence()
     assert archived == {

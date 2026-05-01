@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
+
 from scripts.w33_qutrit_ladder_audit import (
     analyze,
     classify_qutrit_ladder,
@@ -8,6 +12,17 @@ from scripts.w33_qutrit_ladder_audit import (
     six_qutrit_backbone_summary,
     three_qutrit_sl27_layer_summary,
     two_qutrit_global_layer_summary,
+)
+
+SAGE_TRANSPORT = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "sage_h27_to_schlafli_effective_triads_conjugacy.json"
+)
+
+pytestmark = pytest.mark.skipif(
+    not SAGE_TRANSPORT.exists(),
+    reason="optional Sage H27-to-Schlafli transport artifact is absent",
 )
 
 
@@ -94,20 +109,50 @@ def test_e8_side_exact_decomposition_keeps_the_three_27_generation_orbits() -> N
 def test_ladder_classification_separates_kernel_from_exact_finite_extensions() -> None:
     records = {record["name"]: record for record in classify_qutrit_ladder()}
 
-    assert records["local_one_qutrit_heisenberg_e6_shell"]["support_level"] == "repo-exact + classical exact"
-    assert records["local_one_qutrit_heisenberg_e6_shell"]["depends_only_on_qutrit_kernel"] is True
+    assert (
+        records["local_one_qutrit_heisenberg_e6_shell"]["support_level"]
+        == "repo-exact + classical exact"
+    )
+    assert (
+        records["local_one_qutrit_heisenberg_e6_shell"]["depends_only_on_qutrit_kernel"]
+        is True
+    )
 
-    assert records["global_two_qutrit_pauli_clifford_kernel"]["support_level"] == "repo-exact"
-    assert records["global_two_qutrit_pauli_clifford_kernel"]["depends_only_on_qutrit_kernel"] is True
+    assert (
+        records["global_two_qutrit_pauli_clifford_kernel"]["support_level"]
+        == "repo-exact"
+    )
+    assert (
+        records["global_two_qutrit_pauli_clifford_kernel"][
+            "depends_only_on_qutrit_kernel"
+        ]
+        is True
+    )
 
-    assert records["three_qutrit_sl27_closure"]["support_level"] == "repo-exact finite extension"
-    assert records["three_qutrit_sl27_closure"]["depends_only_on_qutrit_kernel"] is False
+    assert (
+        records["three_qutrit_sl27_closure"]["support_level"]
+        == "repo-exact finite extension"
+    )
+    assert (
+        records["three_qutrit_sl27_closure"]["depends_only_on_qutrit_kernel"] is False
+    )
 
-    assert records["six_qutrit_sp12_clifford_backbone"]["support_level"] == "repo-exact finite extension"
-    assert records["six_qutrit_sp12_clifford_backbone"]["depends_only_on_qutrit_kernel"] is False
+    assert (
+        records["six_qutrit_sp12_clifford_backbone"]["support_level"]
+        == "repo-exact finite extension"
+    )
+    assert (
+        records["six_qutrit_sp12_clifford_backbone"]["depends_only_on_qutrit_kernel"]
+        is False
+    )
 
-    assert records["e8_side_e6_a2_decomposition"]["support_level"] == "exact E8-side decomposition"
-    assert records["e8_side_e6_a2_decomposition"]["depends_only_on_qutrit_kernel"] is False
+    assert (
+        records["e8_side_e6_a2_decomposition"]["support_level"]
+        == "exact E8-side decomposition"
+    )
+    assert (
+        records["e8_side_e6_a2_decomposition"]["depends_only_on_qutrit_kernel"] is False
+    )
 
 
 def test_overall_audit_closes_the_exact_ladder_up_to_the_e8_side_boundary() -> None:
@@ -124,10 +169,27 @@ def test_overall_audit_closes_the_exact_ladder_up_to_the_e8_side_boundary() -> N
         "six_qutrit_sp12_clifford_backbone",
         "e8_side_e6_a2_decomposition",
     )
-    assert theorem["the_local_h27_shell_size_matches_the_exact_e8_side_generation_orbit_size"] is True
+    assert (
+        theorem[
+            "the_local_h27_shell_size_matches_the_exact_e8_side_generation_orbit_size"
+        ]
+        is True
+    )
     assert theorem["the_two_qutrit_edge_count_matches_the_exact_e8_root_count"] is True
-    assert theorem["the_three_qutrit_operator_basis_matches_the_six_qutrit_heisenberg_irrep"] is True
+    assert (
+        theorem[
+            "the_three_qutrit_operator_basis_matches_the_six_qutrit_heisenberg_irrep"
+        ]
+        is True
+    )
     assert theorem["the_exact_kernel_stops_after_the_first_two_rungs"] is True
-    assert theorem["the_later_rungs_are_exact_but_require_additional_finite_input_beyond_the_kernel"] is True
-    assert theorem["the_exact_qutrit_ladder_is_closed_up_to_the_e8_side_boundary"] is True
+    assert (
+        theorem[
+            "the_later_rungs_are_exact_but_require_additional_finite_input_beyond_the_kernel"
+        ]
+        is True
+    )
+    assert (
+        theorem["the_exact_qutrit_ladder_is_closed_up_to_the_e8_side_boundary"] is True
+    )
     assert "continuum/dynamical lift" in summary["boundary_note"]

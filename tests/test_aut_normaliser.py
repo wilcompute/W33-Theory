@@ -6,7 +6,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from THEORY_PART_CXCVII_AUT_NORMALISER import analyze, load_permutations, compose, invert
+from THEORY_PART_CXCVII_AUT_NORMALISER import (
+    analyze,
+    compose,
+    invert,
+    load_permutations,
+)
 
 
 def test_gamma_generation():
@@ -35,12 +40,11 @@ def test_orbit_and_normaliser():
 def test_summary_files_created(tmp_path):
     # mimic main behaviour
     summ = analyze()
-    repo = Path(__file__).resolve().parent.parent
-    repo.joinpath("aut_normaliser_summary.json").write_text(json.dumps(summ))
-    assert (repo / "aut_normaliser_summary.json").exists()
-    assert (repo / "aut_normaliser_report.md").exists() or True
+    summary_path = tmp_path / "aut_normaliser_summary.json"
+    summary_path.write_text(json.dumps(summ))
+    assert summary_path.exists()
 
 
 def test_pillar_91_narrative_exists():
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "PILLAR_91.md").exists(), "PILLAR_91.md missing"
+    assert (repo / "archive" / "misc" / "PILLAR_91.md").exists(), "PILLAR_91.md missing"

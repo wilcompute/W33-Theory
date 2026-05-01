@@ -18,6 +18,7 @@ Key results:
 Usage:
     python scripts/w33_entropic_gravity.py
 """
+
 from __future__ import annotations
 
 import json
@@ -27,7 +28,11 @@ from collections import Counter
 from pathlib import Path
 
 import numpy as np
-from w33_homology import boundary_matrix, build_clique_complex, build_w33
+
+try:
+    from scripts.w33_homology import boundary_matrix, build_clique_complex, build_w33
+except ModuleNotFoundError:  # pragma: no cover - direct script execution path
+    from w33_homology import boundary_matrix, build_clique_complex, build_w33
 
 
 def compute_graph_entropy(adj, n):

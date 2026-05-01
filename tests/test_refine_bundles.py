@@ -5,22 +5,28 @@ from __future__ import annotations
 
 import json
 
+import pytest
 from THEORY_PART_CXCV_REFINE_BUNDLES import report_closure
 
 
-def test_closure_sizes():
-    info = report_closure()
+@pytest.fixture(scope="module")
+def closure_info():
+    return report_closure()
+
+
+def test_closure_sizes(closure_info):
+    info = closure_info
     assert info["closure_size"] == info["expected_product"]
     assert info["Gamma_size"] > 0
     assert info["H_size"] > 0
 
 
-def test_closure_file_exists():
+def test_closure_file_exists(closure_info):
     # ensure the json file is written and parseable
-    info = report_closure()
-    # file already written to repo root
+    info = closure_info
     from pathlib import Path
-    path = Path(__file__).resolve().parent.parent / "closure_info.json"
+
+    path = Path(__file__).resolve().parent.parent / "pillars" / "closure_info.json"
     assert path.exists()
     data = json.loads(path.read_text())
     assert data["closure_size"] == info["closure_size"]

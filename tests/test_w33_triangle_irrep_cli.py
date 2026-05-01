@@ -11,8 +11,8 @@ import pytest
 def test_w33_triangle_irrep_match_gap_cli(tmp_path, monkeypatch):
     """Run the GAP-CLI fallback of the triangle→PSp(4,3) irrep matcher.
 
-    - Forces the CLI path and asserts the produced JSON contains the expected
-      decomposition 160 = 10 + 30 + 30 + 90.
+    - Forces the CLI path and asserts the produced JSON contains the exact
+      PSp-layer decomposition 160 = 2*5 + 2*30 + 2*45.
     - Skipped when `gap` executable isn't available on PATH.
     """
     # Locate the script and import it as a module
@@ -48,7 +48,7 @@ def test_w33_triangle_irrep_match_gap_cli(tmp_path, monkeypatch):
     # Basic sanity
     assert obj["n_triangles"] == 160
 
-    # Check irrep multiplicities: expect one 10-dim, two 30-dim, one 90-dim
+    # Check PSp(4,3) irrep multiplicities.
     mults = obj.get("irrep_matches")
     assert mults and isinstance(mults, list)
 
@@ -57,9 +57,9 @@ def test_w33_triangle_irrep_match_gap_cli(tmp_path, monkeypatch):
         d = int(m["degree"])
         bydeg[d] = bydeg.get(d, 0) + int(m["mult"])
 
-    assert bydeg.get(10, 0) == 1
+    assert bydeg.get(5, 0) == 2
     assert bydeg.get(30, 0) == 2
-    assert bydeg.get(90, 0) == 1
+    assert bydeg.get(45, 0) == 2
 
     # Degrees sum check
     total = sum(d * c for d, c in bydeg.items())

@@ -3,7 +3,16 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 from tools.w33_rootword_uv_parser import W33RootwordParser
+
+COMBINED_EDGE_ROOT_MAP = Path("artifacts/edge_to_e8_root_combined.json")
+
+pytestmark = pytest.mark.skipif(
+    not COMBINED_EDGE_ROOT_MAP.exists(),
+    reason="optional consolidated edge-to-E8 root map is absent",
+)
 
 
 def is_rotation(a, b):

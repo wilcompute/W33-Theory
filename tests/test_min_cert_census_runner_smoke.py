@@ -5,6 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 
 def _fixture_payload() -> dict:
     fixture_lines = [
@@ -93,7 +95,9 @@ def test_min_cert_census_runner_dryrun_with_core_motif_chain(tmp_path: Path):
 
 def test_min_cert_census_runner_execute_smoke(tmp_path: Path):
     if not Path("artifacts/nontrivial_core_rulebook_2026_02_11.json").exists():
-        pytest.skip("Missing artifacts/nontrivial_core_rulebook_2026_02_11.json (integration-only)")
+        pytest.skip(
+            "Missing artifacts/nontrivial_core_rulebook_2026_02_11.json (integration-only)"
+        )
     out_dir = tmp_path / "artifacts"
     docs_dir = tmp_path / "docs"
     in_json = tmp_path / "fixture_map.json"

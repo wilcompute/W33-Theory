@@ -20,5 +20,6 @@ def test_structure_summary():
 
 def test_pillar_92_narrative_exists():
     from pathlib import Path
+
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "PILLAR_92.md").exists(), "PILLAR_92.md missing"
+    assert (repo / "archive" / "misc" / "PILLAR_92.md").exists(), "PILLAR_92.md missing"

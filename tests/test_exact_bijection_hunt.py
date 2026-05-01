@@ -1,16 +1,27 @@
+import contextlib
+import io
 import runpy
+from pathlib import Path
+
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
 
 def test_optimal_assignment_has_low_cost():
     # run the hunt script to compute mapping and costs
-    globs = runpy.run_path("EXACT_BIJECTION_HUNT.py")
+    repo_root = Path(__file__).resolve().parents[1]
+    with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(
+        io.StringIO()
+    ):
+        globs = runpy.run_path(
+            str(repo_root / "exploration" / "EXACT_BIJECTION_HUNT.py")
+        )
     # script prints results but also leaves variables in globals
     # We can't easily capture cost matrix, so recompute here using same logic
     edges = globs.get("edges")
     E8_roots = globs.get("E8_roots")
     vertices = globs.get("vertices")
+
     # rebuild lifting function
     def lift_gf3_to_Z(v):
         return tuple(c if c <= 1 else c - 3 for c in v)

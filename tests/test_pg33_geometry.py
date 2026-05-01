@@ -1,10 +1,12 @@
 import itertools
 import json
-from pathlib import Path
+import os
 import shutil
 import subprocess
+from pathlib import Path
 
 import numpy as np
+import pytest
 
 
 def canonical_pg33_points():
@@ -51,7 +53,9 @@ def compute_perm_from_matrix(mat, pts2):
 def test_perm40_matches_canonical():
     pts2 = canonical_pg33_points()
     bundle = Path("H27_OUTER_TWIST_ACTION_BUNDLE_v01")
-    perm40 = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())["perm40_points_from_phi_n"]
+    perm40 = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())[
+        "perm40_points_from_phi_n"
+    ]
     assert sorted(perm40) == list(range(40))
     # compute canonical->phi_n mapping (should equal perm40)
     assert [perm40[i] for i in range(40)] == perm40
@@ -68,7 +72,9 @@ def test_outer_matrix_and_symplectic():
     ]
     perm_from_N4 = compute_perm_from_matrix(N4, pts2)
     bundle = Path("H27_OUTER_TWIST_ACTION_BUNDLE_v01")
-    perm40 = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())["perm40_points_from_phi_n"]
+    perm40 = json.loads((bundle / "perm40_and_H27_pg_ids.json").read_text())[
+        "perm40_points_from_phi_n"
+    ]
     assert perm_from_N4 == perm40
     # symplectic form J
     J = np.array([[0, 0, 0, 1], [0, 0, 1, 0], [0, 2, 0, 0], [2, 0, 0, 0]], dtype=int)
@@ -204,19 +210,32 @@ def test_edge_orbits_and_bundle():
 
 # new tests for infinity and direction bundles
 
+
 def test_infinity_and_direction_bundles(tmp_path):
     """Run the bundle creation script and verify its output files."""
     # locate script relative to repository root
     repo_root = Path(__file__).resolve().parents[1]
     script = repo_root / "tools" / "make_infinity_charge_table_bundles.py"
-    import subprocess, shutil
+    import shutil
+    import subprocess
+
     work = tmp_path / "work"
     work.mkdir()
     # copy required input bundles into working directory
-    shutil.copytree("PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01", work / "PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01")
-    shutil.copytree("H27_CE2_FUSION_BRIDGE_BUNDLE_v01", work / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01")
+    shutil.copytree(
+        "PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01",
+        work / "PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01",
+    )
+    shutil.copytree(
+        "H27_CE2_FUSION_BRIDGE_BUNDLE_v01", work / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01"
+    )
     # copy the JSON files the script expects
-    for fname in ["neighbor_map.json","orbits_outer.json","orbits_P.json","orbits_NP.json"]:
+    for fname in [
+        "neighbor_map.json",
+        "orbits_outer.json",
+        "orbits_P.json",
+        "orbits_NP.json",
+    ]:
         shutil.copy(repo_root / fname, work / fname)
     # execute script
     res = subprocess.run([".venv\\Scripts\\python.exe", str(script)], cwd=work)
@@ -225,6 +244,7 @@ def test_infinity_and_direction_bundles(tmp_path):
     zip2 = work / "W33_DIRECTION_DECOMPOSITION_BUNDLE_v01.zip"
     assert zip1.exists() and zip2.exists()
     import zipfile
+
     with zipfile.ZipFile(zip1) as z:
         names = set(z.namelist())
     expected1 = {
@@ -255,12 +275,21 @@ def test_outer_twist_root_certificate(tmp_path):
     work = tmp_path / "work"
     work.mkdir()
     # copy needed files: bundles and mapping
-    shutil.copytree(repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01", work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01")
+    shutil.copytree(
+        repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+        work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+    )
     # also need the fusion bridge bundle for PG->internal mapping
-    shutil.copytree(repo / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01", work / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01")
+    shutil.copytree(
+        repo / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01",
+        work / "H27_CE2_FUSION_BRIDGE_BUNDLE_v01",
+    )
     # only copy the edge_to_e8_root.json since that's all the script needs
     (work / "artifacts").mkdir()
-    shutil.copy(repo / "artifacts" / "edge_to_e8_root.json", work / "artifacts" / "edge_to_e8_root.json")
+    shutil.copy(
+        repo / "artifacts" / "edge_to_e8_root.json",
+        work / "artifacts" / "edge_to_e8_root.json",
+    )
     shutil.copy(repo / "pg_to_edge_labeling.json", work / "pg_to_edge_labeling.json")
     shutil.copy(repo / "pg_to_internal_inf.json", work / "pg_to_internal_inf.json")
     # also copy conjugacy directory for sigma
@@ -268,14 +297,17 @@ def test_outer_twist_root_certificate(tmp_path):
     if conj_src.exists():
         shutil.copytree(conj_src, work / conj_src.name)
     # run script
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "outer_twist_on_roots.py")], cwd=work)
+    res = subprocess.run(
+        [".venv\\Scripts\\python.exe", str(repo / "tools" / "outer_twist_on_roots.py")],
+        cwd=work,
+    )
     assert res.returncode == 0
     cert = work / "artifacts" / "outer_twist_root_action_certificate.json"
     assert cert.exists()
     data = json.loads(cert.read_text())
     assert "root_cycle_structure" in data
     # ensure total edges count matches
-    total = sum(int(k) * v for k,v in data["root_cycle_structure"].items())
+    total = sum(int(k) * v for k, v in data["root_cycle_structure"].items())
     assert total == 240
 
 
@@ -285,14 +317,29 @@ def test_outer_twist_cocycle_and_bundle(tmp_path):
     work = tmp_path / "work"
     work.mkdir()
     # prepare workspace with required inputs
-    shutil.copytree(repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01", work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01")
+    shutil.copytree(
+        repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+        work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+    )
     shutil.copy(repo / "pg_to_edge_labeling.json", work / "pg_to_edge_labeling.json")
     shutil.copy(repo / "pg_to_internal_inf.json", work / "pg_to_internal_inf.json")
     (work / "artifacts").mkdir()
-    shutil.copy(repo / "artifacts" / "edge_to_e8_root.json", work / "artifacts" / "edge_to_e8_root.json")
-    shutil.copy(repo / "artifacts" / "a2_4_decomposition.json", work / "artifacts" / "a2_4_decomposition.json")
+    shutil.copy(
+        repo / "artifacts" / "edge_to_e8_root.json",
+        work / "artifacts" / "edge_to_e8_root.json",
+    )
+    shutil.copy(
+        repo / "artifacts" / "a2_4_decomposition.json",
+        work / "artifacts" / "a2_4_decomposition.json",
+    )
     # run cocycle script
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "compute_outer_twist_root_cocycle.py")], cwd=work)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "compute_outer_twist_root_cocycle.py"),
+        ],
+        cwd=work,
+    )
     assert res.returncode == 0
     cocycle_dir = work / "analysis" / "outer_twist_cocycle"
     assert (cocycle_dir / "edge_defect.json").exists()
@@ -306,7 +353,10 @@ def test_cocycle_properties(tmp_path):
     work = tmp_path / "work"
     work.mkdir()
     # set up same inputs as previous test
-    shutil.copytree(repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01", work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01")
+    shutil.copytree(
+        repo / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+        work / "H27_OUTER_TWIST_ACTION_BUNDLE_v01",
+    )
     shutil.copy(repo / "pg_to_edge_labeling.json", work / "pg_to_edge_labeling.json")
     shutil.copy(repo / "pg_to_internal_inf.json", work / "pg_to_internal_inf.json")
     (work / "analysis" / "outer_twist_cocycle").mkdir(parents=True)
@@ -314,9 +364,17 @@ def test_cocycle_properties(tmp_path):
     orig = repo / "analysis" / "outer_twist_cocycle" / "edge_defect.json"
     shutil.copy(orig, work / "analysis" / "outer_twist_cocycle" / "edge_defect.json")
     # run property script
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "compute_cocycle_properties.py")], cwd=work)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "compute_cocycle_properties.py"),
+        ],
+        cwd=work,
+    )
     assert res.returncode == 0
-    summary = json.loads((work / "analysis" / "outer_twist_cocycle" / "defect_summary.json").read_text())
+    summary = json.loads(
+        (work / "analysis" / "outer_twist_cocycle" / "defect_summary.json").read_text()
+    )
     # ensure triangle violations field and sample list exist
     assert "triangle_violations" in summary
     assert "triangle_violation_samples" in summary
@@ -334,9 +392,17 @@ def test_outer_twist_rootword_cocycle_defect(tmp_path):
     """Run the full defect driver and check that delta_histograms are nonempty."""
     repo = Path(__file__).resolve().parents[1]
     # simply run the driver in the repository (it writes into artifacts)
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "outer_twist_rootword_cocycle_defect.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "outer_twist_rootword_cocycle_defect.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
-    out = json.loads((repo / "artifacts" / "outer_twist_rootword_cocycle_defect.json").read_text())
+    out = json.loads(
+        (repo / "artifacts" / "outer_twist_rootword_cocycle_defect.json").read_text()
+    )
     assert "cycles" in out and len(out["cycles"]) == 4
     for entry in out["cycles"]:
         stats = entry.get("delta_stats", {})
@@ -345,25 +411,48 @@ def test_outer_twist_rootword_cocycle_defect(tmp_path):
 
 def test_analyze_lift_subgroup(tmp_path):
     repo = Path(__file__).resolve().parents[1]
+    cert = repo / "artifacts" / "phi_lift_subgroup.json"
+    if not cert.exists():
+        pytest.skip("optional phi lift subgroup certificate missing")
     # run analyzer (should never fail)
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "analyze_lift_subgroup.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "analyze_lift_subgroup.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     summary = repo / "artifacts" / "phi_lift_subgroup_summary.txt"
     assert summary.exists()
     txt = summary.read_text()
-    assert 'lift_size' in txt
+    assert "lift_size" in txt
 
 
 def test_search_phi(tmp_path):
     repo = Path(__file__).resolve().parents[1]
     # perform a short search (only checks script runs); limit trials so test is quick
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "search_phi.py"), "--trials", "20"], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "search_phi.py"),
+            "--trials",
+            "20",
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
 
 
 def test_compute_phi_sign_gauge(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "compute_phi_sign_gauge.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "compute_phi_sign_gauge.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     gauget = repo / "artifacts" / "sign_gauge.json"
     assert gauget.exists()
@@ -373,7 +462,13 @@ def test_compute_phi_sign_gauge(tmp_path):
 
 def test_extract_gl23_module(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "extract_gl23_module.py")], cwd=repo)
+    cert = repo / "artifacts" / "phi_lift_subgroup.json"
+    if not cert.exists():
+        pytest.skip("optional phi lift subgroup certificate missing")
+    res = subprocess.run(
+        [".venv\\Scripts\\python.exe", str(repo / "tools" / "extract_gl23_module.py")],
+        cwd=repo,
+    )
     assert res.returncode == 0
     out = repo / "artifacts" / "gl23_rep.json"
     assert out.exists()
@@ -388,7 +483,17 @@ def test_extract_gl23_module(tmp_path):
 
 def test_optimize_phi_smoke(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "optimize_phi.py"), "--trials", "10", "--temp", "0.1"], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "optimize_phi.py"),
+            "--trials",
+            "10",
+            "--temp",
+            "0.1",
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     # candidate files may or may not exist depending on improvements
     # just check command completed
@@ -405,13 +510,19 @@ def test_conjugacy_obstruction(tmp_path):
     ln5 = ln["fixed_counts_by_order"].get("5", [])
     assert ep5 and ln5
     # edgepair has all zeros, line has nonzero
-    assert all(x==0 for x in ep5)
-    assert any(x!=0 for x in ln5)
+    assert all(x == 0 for x in ep5)
+    assert any(x != 0 for x in ln5)
 
 
 def test_verify_orbit_decompositions(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "verify_orbit_decompositions.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "verify_orbit_decompositions.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     out = repo / "artifacts" / "line_action_orbits.json"
     assert out.exists()
@@ -424,7 +535,13 @@ def test_verify_orbit_decompositions(tmp_path):
 
 def test_classify_dotpair(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "classify_e8_roots_dotpair.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "classify_e8_roots_dotpair.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     out = repo / "artifacts" / "e8_dotpair_class_summary.json"
     assert out.exists()
@@ -434,7 +551,13 @@ def test_classify_dotpair(tmp_path):
 
 def test_classify_w33_edges(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "classify_w33_edges_by_rootclass.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "classify_w33_edges_by_rootclass.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     csvf = repo / "artifacts" / "w33_edges_by_rootclass.csv"
     jsonf = repo / "artifacts" / "w33_edges_by_rootclass_counts.json"
@@ -445,15 +568,28 @@ def test_classify_w33_edges(tmp_path):
 
 def test_sector_physics(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "sector_physics.py")], cwd=repo)
+    res = subprocess.run(
+        [".venv\\Scripts\\python.exe", str(repo / "tools" / "sector_physics.py")],
+        cwd=repo,
+    )
     assert res.returncode == 0
     # appearance of output is sufficient; nothing to assert numerically
 
 
 def test_meataxe_decompose(tmp_path):
     repo = Path(__file__).resolve().parents[1]
+    if not (repo / "artifacts" / "gl23_rep.json").exists():
+        pytest.skip("optional GL(2,3) representation artifact missing")
     # first run on GL23 rep (may be trivial)
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "meataxe_decompose.py"), "--input", str(repo / "artifacts" / "gl23_rep.json")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "meataxe_decompose.py"),
+            "--input",
+            str(repo / "artifacts" / "gl23_rep.json"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     out = repo / "artifacts" / "meataxe_decomp.json"
     assert out.exists()
@@ -463,11 +599,21 @@ def test_meataxe_decompose(tmp_path):
     M1 = np.eye(8, dtype=int)
     # permutation matrix that swaps first 3 basis elements (cycle of length3)
     P = np.eye(8, dtype=int)
-    P[[0,1,2]] = P[[1,2,0]]
+    P[[0, 1, 2]] = P[[1, 2, 0]]
     test_json = tmp_path / "test_mats.json"
     # write JSON manually since json.dump doesn't accept a Path directly
     test_json.write_text(json.dumps({"matrices": [M1.tolist(), P.tolist()]}))
-    res2 = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "meataxe_decompose.py"), "--input", str(test_json), "--output", str(tmp_path / "out.json")], cwd=repo)
+    res2 = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "meataxe_decompose.py"),
+            "--input",
+            str(test_json),
+            "--output",
+            str(tmp_path / "out.json"),
+        ],
+        cwd=repo,
+    )
     assert res2.returncode == 0
     dims2 = json.loads((tmp_path / "out.json").read_text())["dims"]
     assert sum(dims2) == 8
@@ -478,16 +624,34 @@ def test_meataxe_decompose(tmp_path):
 def test_match_bose_mesner_self():
     """Run the matching utility on the reference bundle itself."""
     repo = Path(__file__).resolve().parents[1]
-    bundle = repo / "TOE_BoseMesner_Algebra_Solution_bundle_v04_20260227" / "duad_intersection_numbers.json"
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "match_bose_mesner.py"),
-                          "--candidate", str(bundle),
-                          "--solution", str(bundle)], cwd=repo)
+    bundle = (
+        repo
+        / "TOE_BoseMesner_Algebra_Solution_bundle_v04_20260227"
+        / "duad_intersection_numbers.json"
+    )
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "match_bose_mesner.py"),
+            "--candidate",
+            str(bundle),
+            "--solution",
+            str(bundle),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
 
 
 def test_z2_obstruction(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "compute_z2_obstruction.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "compute_z2_obstruction.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     mat = json.loads((repo / "artifacts" / "z2_cocycle.json").read_text())
     assert len(mat) == 10
@@ -497,7 +661,13 @@ def test_z2_obstruction(tmp_path):
 
 def test_srg_cycle_holonomy(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "compute_srg_cycle_holonomy.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "compute_srg_cycle_holonomy.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     csvf = repo / "artifacts" / "srg_cycle_holonomy.csv"
     assert csvf.exists()
@@ -506,8 +676,8 @@ def test_srg_cycle_holonomy(tmp_path):
     with open(csvf) as f:
         next(f)
         for line in f:
-            parts = line.strip().split(',')
-            if parts and parts[-1] == '1':
+            parts = line.strip().split(",")
+            if parts and parts[-1] == "1":
                 odd += 1
     assert odd > 0
     # minimal odd cycle length should be 3 by manual computation
@@ -516,15 +686,22 @@ def test_srg_cycle_holonomy(tmp_path):
         next(f)
         found3 = False
         for line in f:
-            cyc,par = line.strip().split(',')
-            if par == '1' and len(cyc.split('-')) == 3:
+            cyc, par = line.strip().split(",")
+            if par == "1" and len(cyc.split("-")) == 3:
                 found3 = True
                 break
     assert found3
 
+
 def test_edge_to_rootpair_mapping(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "build_edge_to_rootpairs.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            ".venv\\Scripts\\python.exe",
+            str(repo / "tools" / "build_edge_to_rootpairs.py"),
+        ],
+        cwd=repo,
+    )
     assert res.returncode == 0
     jsonf = repo / "artifacts" / "edge_to_rootpair_triple.json"
     csvf = repo / "artifacts" / "edge_to_rootpair_triple.csv"
@@ -541,8 +718,13 @@ def test_edge_to_rootpair_mapping(tmp_path):
 
 
 def test_duad_we6_conjugacy():
+    if os.environ.get("RUN_DUAD_WE6_CONJUGACY") != "1":
+        pytest.skip("full duad/WE6 conjugacy search is opt-in")
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "duad_we6_conjugacy.py")], cwd=repo)
+    res = subprocess.run(
+        [".venv\\Scripts\\python.exe", str(repo / "tools" / "duad_we6_conjugacy.py")],
+        cwd=repo,
+    )
     # script may return nonzero if no conjugator found; we just verify it executed
     logf = repo / "artifacts" / "duad_we6_conjugacy.log"
     assert logf.exists()
@@ -561,5 +743,3 @@ def test_duad_we6_conjugacy():
             assert len(mapping) == size
             vals = set(mapping.values())
             assert vals == set(range(size))
-
-
