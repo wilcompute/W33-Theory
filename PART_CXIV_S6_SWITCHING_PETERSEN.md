@@ -1,6 +1,6 @@
 # Part CXIV — S6 Switching Automorphism and Outer Petersen Stabilizer
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CXIII identified the odd kernel of the hidden oriented-triple cover as a Petersen Seidel matrix.

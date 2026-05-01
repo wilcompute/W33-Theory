@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 
 import pytest
-
 from THEORY_PART_CXCVI_TOMOTOPE_AUTOMORPHISMS import (
     analyze,
     build_graph,
@@ -44,15 +43,17 @@ def test_write_results(tmp_path):
 
 
 def test_summary_file_created(tmp_path, monkeypatch):
-    # call main and ensure files appear in workspace root
-    repo = Path(__file__).resolve().parent.parent
-    # run the module's main
+    # call main and ensure files appear at the module output root
     import THEORY_PART_CXCVI_TOMOTOPE_AUTOMORPHISMS as mod
+
+    monkeypatch.setattr(mod, "ROOT", tmp_path)
     mod.main()
-    assert (repo / "tomotope_aut_summary.json").exists()
-    assert (repo / "tomotope_aut_report.md").exists()
+    assert (tmp_path / "tomotope_aut_summary.json").exists()
+    assert (tmp_path / "tomotope_aut_report.md").exists()
 
 
 def test_pillar_90_narrative_exists():
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "PILLAR_90.md").exists(), "narrative PILLAR_90.md should be present"
+    assert (
+        repo / "archive" / "misc" / "PILLAR_90.md"
+    ).exists(), "narrative PILLAR_90.md should be present"

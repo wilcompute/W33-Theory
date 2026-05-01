@@ -1,6 +1,6 @@
 # Part CVII — q=3 Rank-Lock and W33 Reconstruction of B29/C9
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part CVI showed that the hidden 20 converts local W33 SRG data into global pair geometry.

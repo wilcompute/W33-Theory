@@ -1,6 +1,6 @@
 # Part CXX — S4 Parity Skeleton and Derangement Hexads
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CXIX showed that a complete two-qutrit stabilizer MUB frame is:

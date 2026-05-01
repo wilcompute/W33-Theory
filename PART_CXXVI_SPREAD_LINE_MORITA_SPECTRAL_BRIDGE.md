@@ -1,6 +1,6 @@
 # Part CXXVI — Spread-Line Morita Spectral Bridge
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Part CXXV isolated the `A2` null plane in the coarse chirality quotient of the complete two-qutrit MUB-frame overlap form. Looking back through the spread algebra and the paper's `1+24+15` W33 decomposition reveals the bigger statement: the spread incidence matrix itself is a rectangular Morita bridge between the 40-line W33 carrier and the 36-spread complete-MUB-frame carrier.

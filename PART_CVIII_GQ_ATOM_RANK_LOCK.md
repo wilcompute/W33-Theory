@@ -1,6 +1,6 @@
 # Part CVIII — GQ Atom Rank-Lock and Lambda-Spread Hidden Heavy Factor
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part CVII showed that W33 reconstructs B29/C9.

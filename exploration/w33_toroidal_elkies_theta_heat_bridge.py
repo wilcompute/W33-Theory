@@ -32,13 +32,12 @@ modular plane is then the level-1 continuation of that lift.
 
 from __future__ import annotations
 
-from functools import lru_cache
 import json
+import sys
+from functools import lru_cache
 from math import comb
 from pathlib import Path
-import sys
 from typing import Any
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -49,6 +48,11 @@ if str(ROOT) not in sys.path:
 if str(ROOT / "exploration") not in sys.path:
     sys.path.insert(0, str(ROOT / "exploration"))
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 Q = 3
 LEVEL = 3
@@ -58,7 +62,7 @@ N_MAX = 7
 
 
 def _load_json(name: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / name).read_text(encoding="utf-8"))
+    return load_bridge_json(name, DATA_DIR)
 
 
 def _chi3(n: int) -> int:
@@ -91,7 +95,9 @@ def _series_pow(a: list[int], exponent: int, n_max: int) -> list[int]:
     return out
 
 
-def _eta_quotient_series(exponents: dict[int, int], n_max: int, q_shift: int = 0) -> list[int]:
+def _eta_quotient_series(
+    exponents: dict[int, int], n_max: int, q_shift: int = 0
+) -> list[int]:
     """Return q^q_shift * prod_m prod_d (1 - q^(d m))^{exp_d} truncated to q^n_max."""
     series = [0] * (n_max + 1)
     series[0] = 1
@@ -178,7 +184,9 @@ def build_summary() -> dict[str, Any]:
     theta_e8 = _load_json("w33_theta_e8_lattice_summary.json")
 
     middle_shell = heawood["heawood_middle_shell"]
-    packet_counts = _load_json("w33_mod12_packet_selector_bridge_summary.json")["packet_counts"]
+    packet_counts = _load_json("w33_mod12_packet_selector_bridge_summary.json")[
+        "packet_counts"
+    ]
 
     theta_a2 = theta_a2_series()
     delta3 = delta3_series()
@@ -198,7 +206,9 @@ def build_summary() -> dict[str, Any]:
             "middle_linear_term": 6,
             "middle_constant_term": 7,
             "heawood_middle_heat_trace": heat["closed_formula"],
-            "toroidal_genus_numerator": toroidal["genus_dictionary"]["primal_numerator_at_phi6"],
+            "toroidal_genus_numerator": toroidal["genus_dictionary"][
+                "primal_numerator_at_phi6"
+            ],
         },
         "elkies_level3_dictionary": {
             "dim_M_gamma1_3": {str(k): dim_M_gamma1_3(k) for k in (1, 3, 6, 12)},
@@ -232,7 +242,10 @@ def build_summary() -> dict[str, Any]:
             "the_Heawood_middle_heat_trace_is_exactly_12_exp_minus_3t_cosh_sqrt2_t": (
                 heat["closed_formula"] == "12*exp(-3*t)*cosh(sqrt(2)*t)"
             ),
-            "the_A2_first_shell_size_is_exactly_6_matching_the_discrete_linear_term": theta_a2[1] == 6,
+            "the_A2_first_shell_size_is_exactly_6_matching_the_discrete_linear_term": theta_a2[
+                1
+            ]
+            == 6,
             "the_first_level3_cusp_weight_is_exactly_6_matching_the_discrete_linear_term": (
                 dim_S_gamma1_3(6) == 1 and DELTA3_WEIGHT == 6
             ),
@@ -255,7 +268,9 @@ def build_summary() -> dict[str, Any]:
                 theta_k12[5] == ramanujan_shell_60480 == 60480
             ),
             "the_level3_tower_continues_into_the_existing_level1_E8_plane": (
-                e8_root_packet == 240 and packet_counts["chart_count"] == 4 and packet_counts["mode_count"] == 3
+                e8_root_packet == 240
+                and packet_counts["chart_count"] == 4
+                and packet_counts["mode_count"] == 3
             ),
         },
         "exact_chain": {

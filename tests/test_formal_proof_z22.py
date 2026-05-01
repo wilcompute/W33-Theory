@@ -41,13 +41,16 @@ def test_formal_proof_z22_no_invariant_reps() -> None:
         / "min_cert_census_medium_2026_02_10"
         / "e6_f3_trilinear_min_cert_exact_hessian_full_with_geotypes.json"
     )
+    trilinear_map = ROOT / "artifacts" / "e6_f3_trilinear_map.json"
+    if not classified.exists() or not trilinear_map.exists():
+        pytest.skip(
+            "Missing generated E6 trilinear census/map artifacts for Z22 invariant-rep enumeration"
+        )
     payload = json.loads(classified.read_text(encoding="utf-8"))
     reps = payload.get("representatives", [])
 
     # canonical affine flag from product sign
-    lines, sign_field = analyze._load_sign_field(
-        ROOT / "artifacts" / "e6_f3_trilinear_map.json"
-    )
+    lines, sign_field = analyze._load_sign_field(trilinear_map)
     product_sign = analyze._line_product_signs(lines, sign_field)
     flag = analyze._line_product_flag_geometry_check(lines, product_sign, [])
     point = flag.get("missing_point") or flag.get(

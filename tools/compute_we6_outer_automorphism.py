@@ -20,11 +20,13 @@ automorphism swaps the symplectic vs unitary geometries and to connect the
 whole story back to the CE2/Weil phase mapping.
 """
 
-import json, math
-import numpy as np
-from collections import deque
+import json
+import math
 import sys
+from collections import deque
 from pathlib import Path
+
+import numpy as np
 
 # make sure project root and the scripts directory are available on
 # sys.path so that imports such as ``ce2_global_cocycle`` work regardless of
@@ -38,7 +40,8 @@ for p in (ROOT, ROOT / "scripts"):
 
 # constants used by multiple helpers
 SU3_ALPHA = np.array([1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-SU3_BETA  = np.array([0.0,  1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0])
+SU3_BETA = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0])
+
 
 def su3_weight(r: np.ndarray):
     """Return the SU(3) weight (alpha,beta) of a root vector.
@@ -52,6 +55,7 @@ def su3_weight(r: np.ndarray):
 
 
 # utility helpers copied/modified from verify_bundle.py
+
 
 def inv_perm(p):
     inv = np.empty_like(p)
@@ -97,6 +101,21 @@ def load_perm_list(path):
     return [np.array(p, dtype=np.uint16) for p in data]
 
 
+def resolve_sp43_fixed_artifact(name: str) -> Path:
+    for candidate in (
+        ROOT / "artifacts" / name,
+        ROOT
+        / "archive"
+        / "dirs"
+        / "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25"
+        / name,
+        ROOT / "SP43_TO_WE6_TRUE_FIXED_BUNDLE_v01_2026-02-25" / name,
+    ):
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(ROOT / "artifacts" / name)
+
+
 def perm_to_list(p):
     return list(int(x) for x in p)
 
@@ -104,6 +123,7 @@ def perm_to_list(p):
 # ---------------------------------------------------------------------------
 # helpers for root→E6id mapping (used by main and tests)
 # ---------------------------------------------------------------------------
+
 
 def e6_key(r: np.ndarray):
     """Compute E6 key (27‑class) of a normalized E8 root vector r."""
@@ -152,8 +172,9 @@ def build_root_to_e6id(roots_array, orbit_list, p_perm=None):
     from itertools import combinations
 
     # precompute keys for each candidate orbit
-    orbit_keys = {oi: [e6_key(roots_array[ridx]) for ridx in orbit_list[oi]]
-                  for oi in mix}
+    orbit_keys = {
+        oi: [e6_key(roots_array[ridx]) for ridx in orbit_list[oi]] for oi in mix
+    }
 
     # helper for closure check
     def triple_closes(triple_indices):
@@ -200,8 +221,10 @@ def build_root_to_e6id(roots_array, orbit_list, p_perm=None):
     # or there were valid triples but none closed under p_perm.
     if first_valid is not None:
         if p_perm is not None:
-            print("WARNING: no 27-triple satisfies closure under provided permutation;",
-                  "defaulting to first valid triple without closure")
+            print(
+                "WARNING: no 27-triple satisfies closure under provided permutation;",
+                "defaulting to first valid triple without closure",
+            )
         triple = first_valid
     else:
         print("WARNING: no valid triple found; defaulting to first three mix_orbs")
@@ -220,8 +243,8 @@ def build_root_to_e6id(roots_array, orbit_list, p_perm=None):
     return rt, color_orbs, triple
 
 
-
 # main workflow
+
 
 def main():
     # load we6 action
@@ -260,8 +283,8 @@ def main():
     print("odd element normalizes WE6_even (as expected index-2 subgroup)")
 
     # load previously fixed SP43 root perms and eps
-    root_path = "artifacts/sp43_root_perms_fixed.json"
-    eps_path = "artifacts/sp43_line_eps_fixed.json"
+    root_path = resolve_sp43_fixed_artifact("sp43_root_perms_fixed.json")
+    eps_path = resolve_sp43_fixed_artifact("sp43_line_eps_fixed.json")
     sp43_roots = load_perm_list(root_path)
     sp43_eps = [np.array(x, dtype=np.int8) for x in json.load(open(eps_path))]
     # compute conjugated (outer) root perms
@@ -272,6 +295,7 @@ def main():
     for i in range(120):
         root_to_line[i] = i
         root_to_line[i + 120] = i
+
     def line_perm_and_eps(root_perm):
         rep = np.arange(120, dtype=np.uint16)
         img = root_perm[rep]
@@ -279,6 +303,7 @@ def main():
         rep_img = rep[line_img]
         eps = np.where(img == rep_img, 1, -1).astype(np.int8)
         return line_img.astype(np.uint16), eps
+
     sp43_lines_outer = []
     sp43_eps_outer = []
     for rperm in sp43_roots_outer:
@@ -309,7 +334,13 @@ def main():
 
     # also output the outer automorphism permutation p itself and a note
     with open(out_dir + "/we6_outer_element.json", "w") as f:
-        json.dump({"perm": perm_to_list(p), "description": "odd WE6 generator used for outer automorphism"}, f)
+        json.dump(
+            {
+                "perm": perm_to_list(p),
+                "description": "odd WE6 generator used for outer automorphism",
+            },
+            f,
+        )
 
     print("Wrote outer automorphism artifacts")
 
@@ -333,6 +364,7 @@ def main():
 
     import importlib.util
     from pathlib import Path
+
     cds_path = Path(__file__).resolve().parents[1] / "tools" / "compute_double_sixes.py"
     spec = importlib.util.spec_from_file_location("compute_double_sixes", cds_path)
     cds = importlib.util.module_from_spec(spec)
@@ -362,8 +394,11 @@ def main():
         w = su3_weight(original_roots[artifact_orbits[oi][0]])
         print(f" orbit {oi} SU3 weight {w}")
     from collections import Counter
+
     counts = Counter(root_to_e6id.values())
-    print(f"counts per e6id: {sorted(counts.values())[:5]} (unique {set(counts.values())})")
+    print(
+        f"counts per e6id: {sorted(counts.values())[:5]} (unique {set(counts.values())})"
+    )
     eid = len(set(root_to_e6id.values()))
 
     # compute mapping of E6 ids under outer element p using key lookup
@@ -372,7 +407,7 @@ def main():
     for rid, eid in root_to_e6id.items():
         key_to_eid[e6_key(original_roots[rid])] = eid
     # compute mapping of E6 ids under outer element p (may be partial)
-    e6id_after: dict[int,int] = {}
+    e6id_after: dict[int, int] = {}
     for rid, eid in root_to_e6id.items():
         rid2 = int(p[rid])
         key2 = e6_key(original_roots[rid2])
@@ -383,11 +418,16 @@ def main():
     all_eids = set(root_to_e6id.values())
     completely_unmapped = sorted(all_eids - set(e6id_after.keys()))
     if completely_unmapped:
-        print("outer element sends these e6ids completely outside colour set:", completely_unmapped)
+        print(
+            "outer element sends these e6ids completely outside colour set:",
+            completely_unmapped,
+        )
     else:
         print("every e6id has at least one representative remaining in colour set")
     # optionally also report partial failures
-    partial_unmapped = sorted({eid for eid in all_eids if eid not in completely_unmapped})
+    partial_unmapped = sorted(
+        {eid for eid in all_eids if eid not in completely_unmapped}
+    )
     print("(partial unmapped counts will be visible in perm27 if present)")
     # build perm27 list with -1 for completely unmapped ids
     perm27 = [-1] * 27
@@ -403,9 +443,12 @@ def main():
     # CE2 coordinate transformation (allow partial mapping)
     try:
         from ce2_global_cocycle import _heisenberg_vec_maps
+
         e6id_to_vec, _ = _heisenberg_vec_maps()
         # compute u,z before/after for each e6id
-        u_before = [(int(e6id_to_vec[i][0]) % 3, int(e6id_to_vec[i][1]) % 3) for i in range(27)]
+        u_before = [
+            (int(e6id_to_vec[i][0]) % 3, int(e6id_to_vec[i][1]) % 3) for i in range(27)
+        ]
         z_before = [int(e6id_to_vec[i][2]) % 3 for i in range(27)]
         u_after = []
         z_after = []
@@ -417,10 +460,20 @@ def main():
                 u_after.append(None)
                 z_after.append(None)
         with open(out_dir + "/we6_outer_e6id_coords.json", "w") as f:
-            json.dump({"u_before": u_before, "z_before": z_before, "u_after": u_after, "z_after": z_after}, f)
+            json.dump(
+                {
+                    "u_before": u_before,
+                    "z_before": z_before,
+                    "u_after": u_after,
+                    "z_after": z_after,
+                },
+                f,
+            )
         # also build a permutation of the 27 H27 points, using lexicographic
         # ordering of (u1,u2,z) triples to index the set.
-        h27_list = sorted((u_before[i][0], u_before[i][1], z_before[i]) for i in range(27))
+        h27_list = sorted(
+            (u_before[i][0], u_before[i][1], z_before[i]) for i in range(27)
+        )
         vec_to_hidx = {v: i for i, v in enumerate(h27_list)}
         h27_perm = [-1] * 27
         for eid, eid2 in enumerate(perm27):
@@ -432,6 +485,7 @@ def main():
             json.dump(h27_perm, f)
     except Exception as exc:
         print("Failed to compute CE2 coordinate transform:", exc)
+
 
 if __name__ == "__main__":
     main()

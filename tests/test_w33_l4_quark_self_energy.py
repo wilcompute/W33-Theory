@@ -11,15 +11,22 @@ def _load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
+    previous = sys.modules.get(name)
+    had_previous = name in sys.modules
+    try:
+        sys.modules[name] = module
+        spec.loader.exec_module(module)
+    except BaseException:
+        if had_previous:
+            sys.modules[name] = previous
+        else:
+            sys.modules.pop(name, None)
+        raise
     return module
 
 
 MODULE = _load_module(
-    Path(__file__).resolve().parents[1]
-    / "exploration"
-    / "w33_l4_quark_self_energy.py",
+    Path(__file__).resolve().parents[1] / "exploration" / "w33_l4_quark_self_energy.py",
     "w33_l4_quark_self_energy",
 )
 

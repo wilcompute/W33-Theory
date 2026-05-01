@@ -1,6 +1,6 @@
 # Part CII — Residual Levi Factors and Parabolic Anatomy
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part CI computed local orbit-stabilizer orders. This part identifies the residual stabilizers structurally.

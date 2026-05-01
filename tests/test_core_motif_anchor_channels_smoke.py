@@ -5,7 +5,23 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 from tools.core_motif_anchor_channels import build_report
+
+REQUIRED_INPUTS = [
+    Path("artifacts/nontrivial_core_rulebook_2026_02_11.json"),
+    Path("artifacts/e6_f3_trilinear_min_cert_exact_agl_full_with_geotypes.json"),
+    Path("artifacts/e6_f3_trilinear_min_cert_exact_hessian_full_with_geotypes.json"),
+    Path(
+        "artifacts/e6_f3_trilinear_min_cert_enumeration_hessian_exhaustive2_with_geotypes.json"
+    ),
+]
+
+pytestmark = pytest.mark.skipif(
+    not all(path.exists() for path in REQUIRED_INPUTS),
+    reason="core motif anchor channels require optional min-cert census artifacts",
+)
 
 
 def test_build_report_anchor_properties() -> None:

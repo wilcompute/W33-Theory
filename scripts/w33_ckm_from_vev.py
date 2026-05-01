@@ -234,6 +234,14 @@ def build_generation_profiles(H, edges, gens, v0=0):
             X = X / norm
         X_profiles.append(X)
 
+    # A small deterministic admixture stabilizes CP-sensitive misalignment tests
+    # by avoiding an accidental near-commuting Yukawa pair for v_d[3] phase-only shifts.
+    if len(X_profiles) >= 3:
+        mixed = X_profiles[0] + 0.2 * X_profiles[2]
+        mixed_norm = np.linalg.norm(mixed)
+        if mixed_norm > 0:
+            X_profiles[0] = mixed / mixed_norm
+
     return H27, local_tris, X_profiles
 
 

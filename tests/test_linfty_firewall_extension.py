@@ -1,6 +1,15 @@
+from pathlib import Path
+
 import numpy as np
+import pytest
 
 from tools.build_linfty_firewall_extension import LInftyE8Extension, _load_bracket_tool
+
+E6_BASIS_EXPORT = Path("artifacts/e6_27rep_basis_export/E6_basis_78.npy")
+pytestmark = pytest.mark.skipif(
+    not E6_BASIS_EXPORT.exists(),
+    reason=f"Missing optional E6 basis export: {E6_BASIS_EXPORT}",
+)
 
 
 def max_abs(e):

@@ -10,9 +10,9 @@ Tests all six theorems from THEORY_PART_CLXXVI_INFORMATION_STRUCTURE.py:
   T6: Golay 24-dim Lie algebra (perfect, center=0, Der=33)
 """
 
+import json
 import os
 import sys
-import json
 
 import numpy as np
 import pytest
@@ -23,15 +23,20 @@ sys.path.insert(0, os.path.join(repo_root, "scripts"))
 
 from THEORY_PART_CLXXVI_INFORMATION_STRUCTURE import (
     build_adjacency,
-    lovász_theta,
-    build_f3_symplectic_form,
-    is_isotropic_f3,
-    build_sl3_generators_f3,
-    sl3_triple_action_on_27,
-    rank_mod3,
-    sl3_triple_is_24_dimensional,
-    sl3_triple_bracket_closure,
     build_e6_epsilon_cubic,
+    build_f3_symplectic_form,
+    build_sl3_generators_f3,
+    is_isotropic_f3,
+    lovász_theta,
+)
+from THEORY_PART_CLXXVI_INFORMATION_STRUCTURE import (
+    main as build_information_structure_report,
+)
+from THEORY_PART_CLXXVI_INFORMATION_STRUCTURE import (
+    rank_mod3,
+    sl3_triple_action_on_27,
+    sl3_triple_bracket_closure,
+    sl3_triple_is_24_dimensional,
     sl3_triple_preserves_cubic,
     theorem1_causal_decomposition,
     theorem2_lovász_capacity,
@@ -42,10 +47,10 @@ from THEORY_PART_CLXXVI_INFORMATION_STRUCTURE import (
 )
 from w33_homology import build_w33
 
-
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------
+
 
 @pytest.fixture(scope="module")
 def w33_graph():
@@ -89,6 +94,7 @@ def sl3_triple_mats(sl3_generators):
 # T1: Causal decomposition
 # ---------------------------------------------------------------------------
 
+
 class TestT1CausalDecomposition:
     def test_w33_has_40_vertices(self, w33_graph):
         n, adj, edges = w33_graph
@@ -126,7 +132,7 @@ class TestT1CausalDecomposition:
         """Any two adjacent vertices have exactly 2 common neighbors (lambda=2)."""
         n, adj, edges = w33_graph
         A = build_adjacency(edges, n)
-        A2 = (A @ A)
+        A2 = A @ A
         # For adjacent pair (u,v), A2[u,v] = number of common neighbors
         for u, v in edges[:20]:  # spot check first 20
             assert A2[u, v] == 2
@@ -135,7 +141,7 @@ class TestT1CausalDecomposition:
         """Any two non-adjacent vertices have exactly 4 common neighbors (mu=4)."""
         n, adj, edges = w33_graph
         A = build_adjacency(edges, n)
-        A2 = (A @ A)
+        A2 = A @ A
         adj_set = [set() for _ in range(n)]
         for u, v in edges:
             adj_set[u].add(v)
@@ -155,6 +161,7 @@ class TestT1CausalDecomposition:
 # ---------------------------------------------------------------------------
 # T2: Lovász information capacity
 # ---------------------------------------------------------------------------
+
 
 class TestT2LovaszCapacity:
     def test_theta_w33_equals_10(self, w33_graph):
@@ -222,6 +229,7 @@ class TestT2LovaszCapacity:
 # T3: Monster 3B three-generation bridge
 # ---------------------------------------------------------------------------
 
+
 class TestT3MonsterBridge:
     def test_omega4_antisymmetric(self):
         omega4 = build_f3_symplectic_form(4)
@@ -235,7 +243,7 @@ class TestT3MonsterBridge:
         omega4 = build_f3_symplectic_form(4)
         omega12 = np.zeros((12, 12), dtype=int)
         for b in range(3):
-            omega12[4*b:4*(b+1), 4*b:4*(b+1)] = omega4
+            omega12[4 * b : 4 * (b + 1), 4 * b : 4 * (b + 1)] = omega4
         assert rank_mod3(omega12) == 12
         assert np.all((omega12 + omega12.T) % 3 == 0)
 
@@ -251,12 +259,12 @@ class TestT3MonsterBridge:
         omega4 = build_f3_symplectic_form(4)
         omega12 = np.zeros((12, 12), dtype=int)
         for b in range(3):
-            omega12[4*b:4*(b+1), 4*b:4*(b+1)] = omega4
+            omega12[4 * b : 4 * (b + 1), 4 * b : 4 * (b + 1)] = omega4
         lag_vecs = []
         for b in range(3):
             for i in range(2):
                 v = np.zeros(12, dtype=int)
-                v[4*b + i] = 1
+                v[4 * b + i] = 1
                 lag_vecs.append(v)
         assert rank_mod3(np.array(lag_vecs, dtype=int)) == 6
         assert is_isotropic_f3(lag_vecs, omega12) is True
@@ -281,6 +289,7 @@ class TestT3MonsterBridge:
 # T4: sl(3,F3)^3 Yukawa structure algebra
 # ---------------------------------------------------------------------------
 
+
 class TestT4Sl3Structure:
     def test_sl3_has_8_generators(self, sl3_generators):
         assert len(sl3_generators) == 8
@@ -298,7 +307,7 @@ class TestT4Sl3Structure:
 
     def test_each_factor_rank_8(self, sl3_triple_mats):
         for start in (0, 8, 16):
-            block = np.array([m.flatten() for m in sl3_triple_mats[start:start+8]])
+            block = np.array([m.flatten() for m in sl3_triple_mats[start : start + 8]])
             assert rank_mod3(block) == 8
 
     def test_combined_rank_22_char3_identity(self, sl3_triple_mats):
@@ -344,6 +353,7 @@ class TestT4Sl3Structure:
 # T5: Code rate, Bekenstein bound, QCA causal structure
 # ---------------------------------------------------------------------------
 
+
 class TestT5BekensteinkQCA:
     def test_code_rate_is_27_over_80(self, w33_graph):
         n, adj, edges = w33_graph
@@ -374,6 +384,7 @@ class TestT5BekensteinkQCA:
     def test_causal_diameter_2(self, w33_graph):
         n, adj, edges = w33_graph
         from collections import deque
+
         adj_local = [[] for _ in range(n)]
         for u, v in edges:
             adj_local[u].append(v)
@@ -417,6 +428,7 @@ class TestT5BekensteinkQCA:
 # ---------------------------------------------------------------------------
 # T6: Golay 24-dim Lie algebra
 # ---------------------------------------------------------------------------
+
 
 class TestT6GolayLieAlgebra:
     @pytest.fixture(scope="class")
@@ -464,10 +476,13 @@ class TestT6GolayLieAlgebra:
 # Data file
 # ---------------------------------------------------------------------------
 
+
 class TestDataFile:
     @pytest.fixture(scope="class")
     def data(self):
         path = os.path.join(repo_root, "data", "w33_information_structure.json")
+        if not os.path.exists(path):
+            build_information_structure_report()
         with open(path) as f:
             return json.load(f)
 
@@ -499,6 +514,7 @@ class TestDataFile:
 # ---------------------------------------------------------------------------
 # Integration: rank_mod3 correctness
 # ---------------------------------------------------------------------------
+
 
 class TestRankMod3:
     def test_rank_identity(self):

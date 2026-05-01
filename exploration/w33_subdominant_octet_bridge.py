@@ -23,12 +23,17 @@ scalar/vacuum line, and the full octet is the Higgs-EW packet plus vacuum.
 
 from __future__ import annotations
 
-from collections import defaultdict
 import json
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 import numpy as np
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,7 +42,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_subdominant_octet_bridge_summary.json"
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def _w33_points() -> list[tuple[int, int, int, int]]:
@@ -99,11 +104,15 @@ def _basis_from_projector(projector: np.ndarray) -> np.ndarray:
     return eigenvectors[:, eigenvalues > 0.5]
 
 
-def _singlet_subspace(operator: np.ndarray) -> tuple[np.ndarray, dict[tuple[float, float], list[int]]]:
+def _singlet_subspace(
+    operator: np.ndarray,
+) -> tuple[np.ndarray, dict[tuple[float, float], list[int]]]:
     eigenvalues, eigenvectors = np.linalg.eig(operator)
     clusters: dict[tuple[float, float], list[int]] = defaultdict(list)
     for index, eigenvalue in enumerate(eigenvalues):
-        clusters[(round(float(eigenvalue.real), 6), round(float(eigenvalue.imag), 6))].append(index)
+        clusters[
+            (round(float(eigenvalue.real), 6), round(float(eigenvalue.imag), 6))
+        ].append(index)
     singlet_indices = [indices[0] for indices in clusters.values() if len(indices) == 1]
     singlet_vectors = eigenvectors[:, singlet_indices]
     singlet_q, _ = np.linalg.qr(singlet_vectors)
@@ -152,7 +161,9 @@ def build_summary() -> dict[str, Any]:
     return {
         "dirac_packet": {
             "dominant_eigenvalues": {"5": 10, "-1": 16, "-7": 6},
-            "subdominant_eigenvalues": [float(value) for value in eigenvalues_dh[~dominant_mask]],
+            "subdominant_eigenvalues": [
+                float(value) for value in eigenvalues_dh[~dominant_mask]
+            ],
             "subdominant_count": int(np.sum(~dominant_mask)),
         },
         "singlet_packet": {
@@ -162,15 +173,23 @@ def build_summary() -> dict[str, Any]:
             "combined_heptad_rank": int(q7.shape[1]),
         },
         "octet_geometry": {
-            "principal_singular_values_between_7_and_8_packets": [float(value) for value in singular_values],
+            "principal_singular_values_between_7_and_8_packets": [
+                float(value) for value in singular_values
+            ],
             "intersection_dimension": int(np.sum(singular_values > 1 - 1e-8)),
             "trace_p7_p8": float(np.trace(p7 @ p8).real),
             "residual_singular_values": [float(value) for value in residual_s],
-            "extra_line_overlap_with_vacuum": float(abs(np.vdot(vacuum_line, extra_line))),
-            "vacuum_weight_in_extra_line": float(np.linalg.norm(p_vacuum @ extra_line) ** 2),
+            "extra_line_overlap_with_vacuum": float(
+                abs(np.vdot(vacuum_line, extra_line))
+            ),
+            "vacuum_weight_in_extra_line": float(
+                np.linalg.norm(p_vacuum @ extra_line) ** 2
+            ),
             "v24_weight_in_extra_line": float(np.linalg.norm(p24 @ extra_line) ** 2),
             "v15_weight_in_extra_line": float(np.linalg.norm(p15 @ extra_line) ** 2),
-            "dh_expectation_on_extra_line": float(np.vdot(extra_line, d_h @ extra_line).real),
+            "dh_expectation_on_extra_line": float(
+                np.vdot(extra_line, d_h @ extra_line).real
+            ),
         },
         "dictionary": {
             "bott_asymmetry_packet": bott["bott_triality_packet"],
@@ -179,7 +198,9 @@ def build_summary() -> dict[str, Any]:
             "five_split": "4 + 1",
         },
         "subdominant_octet_theorem": {
-            "the_subdominant_dh_packet_has_exact_dimension_eight": bool(int(np.sum(~dominant_mask)) == 8),
+            "the_subdominant_dh_packet_has_exact_dimension_eight": bool(
+                int(np.sum(~dominant_mask)) == 8
+            ),
             "the_ternary_four_plus_three_singlet_packet_sits_exactly_inside_the_subdominant_octet": (
                 bool(int(np.sum(singular_values > 1 - 1e-8)) == 7)
             ),

@@ -16,9 +16,8 @@ def test_we6_orbit_source_present():
 
 def test_e8_root_to_w33_edge_source_present():
     p = W33RootwordParser()
-    # check a simple root key '[1, 0, 0, 0, 0, 0, 0, 0]' present from artifacts/e8_root_to_w33_edge.json
+    # check a simple root key loaded from artifacts/e8_root_to_edge.json
     vec = (1, 0, 0, 0, 0, 0, 0, 0)
     assert vec in p.vec_to_edges_map
     entries = p.vec_to_edges_map[vec]
-    # expect at least one candidate edge corresponding to (1, 2) (1-based)
-    assert any(e == (1, 2) for (e, tag) in entries)
+    assert any(e == (15, 1) and tag == "e8root_to_edge" for (e, tag) in entries)

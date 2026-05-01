@@ -8,6 +8,7 @@ Writes:
 
 This is safe, non-destructive and idempotent.
 """
+
 from __future__ import annotations
 
 import importlib.util
@@ -41,17 +42,35 @@ def main():
         }
 
     # 27 lines artifact (CKM script produces summary + intersection data)
-    ckm_path = ROOT / "CKM_27_LINES.json"
+    ckm_path = next(
+        (
+            path
+            for path in [
+                ROOT / "CKM_27_LINES.json",
+                ROOT / "archive" / "json" / "CKM_27_LINES.json",
+            ]
+            if path.exists()
+        ),
+        None,
+    )
     lines27 = None
-    if ckm_path.exists():
+    if ckm_path is not None:
         lines27 = {"ckm_file": str(ckm_path)}
 
     # MOG mapping from THE_EXACT_MAP (pos_to_line_mog)
     mog_map = None
     try:
-        exact = _load_module(ROOT / "THE_EXACT_MAP.py", "THE_EXACT_MAP")
+        exact_path = next(
+            path
+            for path in [
+                ROOT / "THE_EXACT_MAP.py",
+                ROOT / "exploration" / "THE_EXACT_MAP.py",
+            ]
+            if path.exists()
+        )
+        exact = _load_module(exact_path, "THE_EXACT_MAP")
         mog_map = {str(k): int(v) for k, v in exact.pos_to_line_mog.items()}
-    except Exception:
+    except (FileNotFoundError, StopIteration):
         mog_map = None
 
     out = {

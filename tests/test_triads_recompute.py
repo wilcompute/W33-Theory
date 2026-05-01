@@ -3,6 +3,10 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
+ROOT = Path(__file__).resolve().parent.parent
+
 
 def load_recorded(path: Path):
     d = {}
@@ -26,20 +30,28 @@ def load_recorded(path: Path):
 
 def test_recomputed_triads_match_recorded(tmp_path: Path):
     recorded = load_recorded(
-        Path(
+        ROOT
+        / (
             "bundles/phase_aware_v3/W33_N12_58_phase_aware_loop_v3/w33_four_center_triads_with_ray_holonomy.csv"
         )
     )
+    w33_csv = ROOT / "data/_workbench/02_geometry/W33_line_phase_map.csv"
+    rays_csv = (
+        ROOT
+        / "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv"
+    )
+    if not w33_csv.exists() or not rays_csv.exists():
+        pytest.skip("raw phase-aware recomputation inputs are optional and absent")
 
     outdir = tmp_path / "triad_recompute"
     outdir.mkdir(parents=True, exist_ok=True)
     cmd = [
         sys.executable,
-        "bundles/phase_aware_v1/scripts_recompute_w33_ray_holonomy.py",
+        str(ROOT / "bundles/phase_aware_v1/scripts_recompute_w33_ray_holonomy.py"),
         "--w33_csv",
-        "data/_workbench/02_geometry/W33_line_phase_map.csv",
+        str(w33_csv),
         "--rays_csv",
-        "data/_toe/w33_orthonormal_phase_solution_20260110/W33_point_rays_C4_complex.csv",
+        str(rays_csv),
         "--outdir",
         str(outdir),
     ]

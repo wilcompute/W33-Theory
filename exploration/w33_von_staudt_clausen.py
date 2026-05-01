@@ -118,10 +118,23 @@ def irregular_indices(p: int) -> list[int]:
     return hits
 
 
+def has_irregular_index(p: int, two_k: int) -> bool:
+    """Return whether p divides numerator(B_two_k) for a valid Kummer index."""
+    if p < 5 or not _is_prime(p) or two_k < 2 or two_k > p - 3 or two_k % 2:
+        return False
+    return bernoulli(two_k).numerator % p == 0
+
+
 def is_regular_prime(p: int) -> bool:
     if p < 5 or not _is_prime(p):
         return True  # trivially for p = 2, 3 we skip; here we assume odd p >= 5
-    return len(irregular_indices(p)) == 0
+    for k in range(1, (p - 1) // 2):
+        two_k = 2 * k
+        if two_k > p - 3:
+            break
+        if has_irregular_index(p, two_k):
+            return False
+    return True
 
 
 # ----------------------------------------------------------------------
@@ -137,14 +150,16 @@ def verify_denominator_formula(n_max: int = 30) -> dict[str, Any]:
         actual_den = B.denominator
         predicted = staudt_clausen_denominator(n)
         match = actual_den == predicted
-        rows.append({
-            "n": n,
-            "B_n": str(B),
-            "actual_den": actual_den,
-            "predicted_den": predicted,
-            "primes": staudt_clausen_primes(n),
-            "match": match,
-        })
+        rows.append(
+            {
+                "n": n,
+                "B_n": str(B),
+                "actual_den": actual_den,
+                "predicted_den": predicted,
+                "primes": staudt_clausen_primes(n),
+                "match": match,
+            }
+        )
         all_match = all_match and match
     return {"all_match": all_match, "rows": rows}
 
@@ -156,8 +171,13 @@ def verify_integral_part(n_max: int = 30) -> dict[str, Any]:
     for n in range(2, n_max + 1, 2):
         v = integral_part_bernoulli(n)
         match = v.denominator == 1
-        rows.append({"n": n, "integer_value": v.numerator if match else str(v),
-                     "is_integer": match})
+        rows.append(
+            {
+                "n": n,
+                "integer_value": v.numerator if match else str(v),
+                "is_integer": match,
+            }
+        )
         all_match = all_match and match
     return {"all_match": all_match, "rows": rows}
 
@@ -187,8 +207,8 @@ def verify_691_is_irregular_via_B_12() -> dict[str, Any]:
         "numerator_abs": num_abs,
         "is_691": num_abs == 691,
         "divides_by_691": num_abs % 691 == 0,
-        "irregular_index": 12 in irregular_indices(691),
-        "match": num_abs == 691 and 12 in irregular_indices(691),
+        "irregular_index": has_irregular_index(691, 12),
+        "match": num_abs == 691 and has_irregular_index(691, 12),
     }
 
 
@@ -220,32 +240,35 @@ def verify_small_primes_regular() -> dict[str, Any]:
 def verify_specific_denominators() -> dict[str, Any]:
     """Spot-check denom(B_n) for a few key n."""
     targets = {
-        2: 6,        # 2 * 3
-        4: 30,       # 2 * 3 * 5
-        6: 42,       # 2 * 3 * 7
-        8: 30,       # 2 * 3 * 5
-        10: 66,      # 2 * 3 * 11
-        12: 2730,    # 2 * 3 * 5 * 7 * 13
-        14: 6,       # 2 * 3 (no 5, 7 since (p-1)|14 gives 2, 3, 8*no, 15*no, ...
-                     # wait (p-1)|14: divisors of 14 are 1,2,7,14, so p in {2,3,8,15};
-                     # primes are 2, 3 only.  denom = 6.
-        16: 510,     # 2 * 3 * 5 * 17
-        18: 798,     # 2 * 3 * 7 * 19
-        20: 330,     # 2 * 3 * 5 * 11
-        22: 138,     # 2 * 3 * 23
-        24: 2730,    # 2 * 3 * 5 * 7 * 13
+        2: 6,  # 2 * 3
+        4: 30,  # 2 * 3 * 5
+        6: 42,  # 2 * 3 * 7
+        8: 30,  # 2 * 3 * 5
+        10: 66,  # 2 * 3 * 11
+        12: 2730,  # 2 * 3 * 5 * 7 * 13
+        14: 6,  # 2 * 3 (no 5, 7 since (p-1)|14 gives 2, 3, 8*no, 15*no, ...
+        # wait (p-1)|14: divisors of 14 are 1,2,7,14, so p in {2,3,8,15};
+        # primes are 2, 3 only.  denom = 6.
+        16: 510,  # 2 * 3 * 5 * 17
+        18: 798,  # 2 * 3 * 7 * 19
+        20: 330,  # 2 * 3 * 5 * 11
+        22: 138,  # 2 * 3 * 23
+        24: 2730,  # 2 * 3 * 5 * 7 * 13
     }
     rows = []
     all_match = True
     for n, expected in targets.items():
         B = bernoulli(n)
         match = B.denominator == expected
-        rows.append({
-            "n": n, "B_n": str(B),
-            "actual_den": B.denominator,
-            "expected_den": expected,
-            "match": match,
-        })
+        rows.append(
+            {
+                "n": n,
+                "B_n": str(B),
+                "actual_den": B.denominator,
+                "expected_den": expected,
+                "match": match,
+            }
+        )
         all_match = all_match and match
     return {"all_match": all_match, "rows": rows}
 
@@ -262,20 +285,13 @@ def derive_all() -> dict[str, Any]:
     smallreg = verify_small_primes_regular()
     spec = verify_specific_denominators()
     chain = {
-        "von_staudt_clausen_denominator_formula_up_to_n_30":
-            den["all_match"],
-        "von_staudt_clausen_integral_part_up_to_n_30":
-            integ["all_match"],
-        "first_eight_irregular_primes_are_37_59_67_101_103_131_149_157":
-            irreg["match"],
-        "691_is_irregular_via_B_12_numerator_equals_691":
-            b691["match"],
-        "37_is_irregular_at_index_32_via_B_32":
-            b37["match"],
-        "primes_5_through_31_all_regular":
-            smallreg["all_match"],
-        "specific_denominators_B_2_through_B_24":
-            spec["all_match"],
+        "von_staudt_clausen_denominator_formula_up_to_n_30": den["all_match"],
+        "von_staudt_clausen_integral_part_up_to_n_30": integ["all_match"],
+        "first_eight_irregular_primes_are_37_59_67_101_103_131_149_157": irreg["match"],
+        "691_is_irregular_via_B_12_numerator_equals_691": b691["match"],
+        "37_is_irregular_at_index_32_via_B_32": b37["match"],
+        "primes_5_through_31_all_regular": smallreg["all_match"],
+        "specific_denominators_B_2_through_B_24": spec["all_match"],
     }
     return {
         "denominator_formula": den,
@@ -296,13 +312,19 @@ if __name__ == "__main__":
         print(f"  {k}: {v}")
     print("\nVon Staudt-Clausen check: denominator of B_n:")
     for row in s["denominator_formula"]["rows"][:8]:
-        print(f"  n={row['n']:>3}: B_n = {row['B_n']:<25} "
-              f"den = {row['actual_den']:>5} "
-              f"=  prod({row['primes']})")
+        print(
+            f"  n={row['n']:>3}: B_n = {row['B_n']:<25} "
+            f"den = {row['actual_den']:>5} "
+            f"=  prod({row['primes']})"
+        )
     print(f"\nFirst irregular primes: {s['irregular_primes']['found']}")
-    print(f"691 is irregular? "
-          f"numerator(B_12) = {s['b691']['numerator_abs']}, "
-          f"match = {s['b691']['match']}")
-    print(f"37 is irregular at index 32? "
-          f"B_32 num mod 37 = {s['b37']['mod_37']}, "
-          f"match = {s['b37']['match']}")
+    print(
+        f"691 is irregular? "
+        f"numerator(B_12) = {s['b691']['numerator_abs']}, "
+        f"match = {s['b691']['match']}"
+    )
+    print(
+        f"37 is irregular at index 32? "
+        f"B_32 num mod 37 = {s['b37']['mod_37']}, "
+        f"match = {s['b37']['match']}"
+    )

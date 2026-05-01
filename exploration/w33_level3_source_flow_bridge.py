@@ -35,9 +35,14 @@ after condensation from the level-3 theta tower to the full level-1 plane.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import Any
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,8 +55,7 @@ if str(ROOT / "exploration") not in sys.path:
     sys.path.insert(0, str(ROOT / "exploration"))
 
 from w33_ramanujan_system import e2_series, q_d_dq, series_mul
-from w33_toroidal_elkies_theta_heat_bridge import theta_a2_series, delta3_series
-
+from w33_toroidal_elkies_theta_heat_bridge import delta3_series, theta_a2_series
 
 N_MAX = 12
 
@@ -72,9 +76,21 @@ def e2_3z_series(n_max: int = N_MAX) -> list[int]:
 
 def e2_level3_divisor_series(n_max: int = N_MAX) -> list[int]:
     return [
-        1 if n == 0 else 12 * _sigma1(n) - 36 * _sigma1(n // 3) if n % 3 == 0 else 12 * _sigma1(n)
+        (
+            1
+            if n == 0
+            else (
+                12 * _sigma1(n) - 36 * _sigma1(n // 3)
+                if n % 3 == 0
+                else 12 * _sigma1(n)
+            )
+        )
         for n in range(n_max + 1)
     ]
+
+
+def _load_json(filename: str) -> dict[str, Any]:
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def build_summary(n_max: int = N_MAX) -> dict[str, Any]:
@@ -86,15 +102,16 @@ def build_summary(n_max: int = N_MAX) -> dict[str, Any]:
     qd_delta3 = q_d_dq(delta3)
 
     e2_lvl3_from_e2 = [(3 * e2_3[n] - e2[n]) // 2 for n in range(n_max + 1)]
-    mixed_rhs = series_mul([e2[n] + e2_lvl3[n] for n in range(n_max + 1)], delta3, n_max)
+    mixed_rhs = series_mul(
+        [e2[n] + e2_lvl3[n] for n in range(n_max + 1)], delta3, n_max
+    )
 
-    mod12 = json.loads((DATA_DIR / "w33_mod12_packet_selector_bridge_summary.json").read_text(encoding="utf-8"))
-    heawood = json.loads((DATA_DIR / "w33_heawood_tetra_radical_bridge_summary.json").read_text(encoding="utf-8"))
-    affine_e2 = json.loads((DATA_DIR / "w33_affine_e8_e2_source_summary.json").read_text(encoding="utf-8"))
+    mod12 = _load_json("w33_mod12_packet_selector_bridge_summary.json")
+    heawood = _load_json("w33_heawood_tetra_radical_bridge_summary.json")
 
     middle_shell_dim = heawood["heawood_middle_shell"]["middle_shell_dimension"]
     genus_num = mod12["modulus"]
-    cumulative_ladder = affine_e2["packet_weights"]["first_15"][:8]
+    cumulative_ladder = [8 * _sigma1(n) for n in range(1, 9)]
 
     return {
         "level3_source_dictionary": {
@@ -106,13 +123,19 @@ def build_summary(n_max: int = N_MAX) -> dict[str, Any]:
             "E2_3z_coefficients": e2_3,
         },
         "level3_source_flow_theorem": {
-            "theta_A2_squared_is_exactly_the_level3_weight2_source": e2_lvl3 == e2_lvl3_div,
-            "theta_A2_squared_equals_3E2_3z_minus_E2_over_2_exactly": e2_lvl3 == e2_lvl3_from_e2,
+            "theta_A2_squared_is_exactly_the_level3_weight2_source": e2_lvl3
+            == e2_lvl3_div,
+            "theta_A2_squared_equals_3E2_3z_minus_E2_over_2_exactly": e2_lvl3
+            == e2_lvl3_from_e2,
             "the_first_level3_source_coefficient_is_exactly_12": e2_lvl3[1] == 12,
             "the_first_level3_source_coefficient_matches_the_Heawood_middle_shell_dimension": (
                 e2_lvl3[1] == middle_shell_dim == 12
             ),
-            "the_first_level3_source_coefficient_matches_the_toroidal_modulus": e2_lvl3[1] == genus_num == 12,
+            "the_first_level3_source_coefficient_matches_the_toroidal_modulus": e2_lvl3[
+                1
+            ]
+            == genus_num
+            == 12,
             "the_first_level3_cusp_obeys_the_exact_mixed_source_flow_2qdDelta3_equals_E2_plus_E2level3_times_Delta3": (
                 [2 * qd_delta3[n] for n in range(n_max + 1)] == mixed_rhs
             ),
@@ -138,8 +161,12 @@ def build_summary(n_max: int = N_MAX) -> dict[str, Any]:
         ),
         "sources": {
             "elkies_level3_lattices": "https://people.math.harvard.edu/~elkies/M272.19/nov25.pdf",
-            "ramanujan_system_local": str((ROOT / "exploration" / "w33_ramanujan_system.py").resolve()),
-            "affine_E2_boundary_local": str((ROOT / "exploration" / "w33_affine_e8_e2_source.py").resolve()),
+            "ramanujan_system_local": str(
+                (ROOT / "exploration" / "w33_ramanujan_system.py").resolve()
+            ),
+            "affine_E2_boundary_local": str(
+                (ROOT / "exploration" / "w33_affine_e8_e2_source.py").resolve()
+            ),
         },
     }
 

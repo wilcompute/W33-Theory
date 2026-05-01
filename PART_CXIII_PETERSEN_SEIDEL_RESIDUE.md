@@ -1,6 +1,6 @@
 # Part CXIII — Petersen-Seidel Kernel of the Hidden Oriented-Triple Cover
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CXII showed that the hidden 20 oriented triples form J(6,3), an antipodal double cover of K10, with splitting

@@ -1,6 +1,6 @@
 # Part CIII — Arithmetic Buildings and Generator Counts
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part CII identified residual Levi/parabolic anatomy. This part turns that residual symmetry into the associated finite buildings.

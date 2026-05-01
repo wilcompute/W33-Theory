@@ -1,6 +1,6 @@
 # Part XCIX — Witt Strata and Local Orbit Anatomy
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part XCVIII identified the local arithmetic symmetry groups

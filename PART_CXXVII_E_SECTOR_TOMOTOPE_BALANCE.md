@@ -1,6 +1,6 @@
 # Part CXXVII — E-Sector Tomotope Balance in the S4 Relative-Cycle Law
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Part CXXIV left one place where the pair-overlap law was not decided by the relative `S4` cycle type alone: the `E/E` relative 3-cycle layer.  The unresolved-looking split is actually highly structured once the two chiral sectors are kept together.

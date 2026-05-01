@@ -1,6 +1,11 @@
 # W(3,3) Theory of Everything
 
-> **One integer. Zero free parameters. 116 predictions.**
+> **One integer. Exact finite spine. 116 tracked predictions.**
+
+Release metadata: DOI
+[10.5281/zenodo.18652825](https://doi.org/10.5281/zenodo.18652825);
+207+ pillar verification scripts; 5500+ automated tests; pillar ledger extends
+through Pillar 207.
 
 [![arXiv-ready](https://img.shields.io/badge/arXiv-READY-brightgreen)](https://github.com/wilcompute/W33-Theory/blob/master/PART_LXIII_ARXIV_COMPLETE_PAPER.tex)
 [![G_release](https://img.shields.io/badge/G__release-1-brightgreen)](https://github.com/wilcompute/W33-Theory/blob/master/PART_LXII_master_results.json)
@@ -33,6 +38,17 @@ of the graph invariants **(q, v, k, λ, μ, r, s)** and cyclotomic values **Φ�
 
 **There is one free parameter: the integer q = 3.**
 
+Current audited boundary: the repo certifies an exact finite spine through an
+executable exact-to-frontier bridge. The promoted CKM/E6 response and CP-breaking
+onset are carried as audited frontier response laws on the exact 27-line /
+45-triangle local carrier, not as a finished exact phenomenology closure theorem.
+
+Public-facing anchors remain synchronized with `docs/index.html`: the exact PMNS
+route is `sin^2(theta_12)=4/13`, `sin^2(theta_23)=7/13`, and
+`sin^2(theta_13)=2/91`; the named frontier surfaces include TQFT invariants,
+Continuum Limit & Spectral Action Convergence, and Information-Theoretic Closure
+& Holographic Bound.
+
 ---
 
 ## Key Results
@@ -55,7 +71,7 @@ of the graph invariants **(q, v, k, λ, μ, r, s)** and cyclotomic values **Φ�
 | Δ_YM (mass gap) | **10** | >0 | exact |
 | λ_H (Higgs quartic) | **7/54** | 0.1296 | exact |
 
-**57 of 116 predictions confirmed. 0 free parameters. G_release = 1.**
+**57 of 116 predictions tracked. Exact finite spine executable. G_release = 1.**
 
 ---
 

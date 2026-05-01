@@ -1,8 +1,11 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 REPORTS = Path(__file__).resolve().parents[1] / "reports"
 ART = Path(__file__).resolve().parents[1] / "artifacts"
+TOOLS = Path(__file__).resolve().parents[1] / "tools"
 
 
 def test_anchor_for_canonical_forbid_0_20_23_all_feasible():
@@ -20,6 +23,10 @@ def test_anchor_for_canonical_forbid_0_20_23_all_feasible():
 
 def test_gf2_certificates_exist_and_contradict():
     gf2 = ART / "gf2_certificates.json"
+    if not gf2.exists():
+        subprocess.check_call(
+            [sys.executable, str(TOOLS / "generate_gf2_certificate.py")]
+        )
     assert gf2.exists(), "gf2_certificates.json missing"
     data = json.loads(gf2.read_text(encoding="utf-8"))
     assert isinstance(data, list) and len(data) > 0

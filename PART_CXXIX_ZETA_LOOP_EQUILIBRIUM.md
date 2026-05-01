@@ -1,6 +1,6 @@
 # Part CXXIX — Zeta Loop Equilibrium and Ramanujan Closure Noise
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Part CXXVIII introduced loop-conditioned probability on the 480-state Hashimoto carrier. This part pushes the idea further: the loop probabilities are not arbitrary. They are the logarithmic coefficients of the Ihara zeta function, and after normalization they split into a uniform equilibrium term plus a decaying Ramanujan oscillation.

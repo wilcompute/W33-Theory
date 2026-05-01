@@ -1,14 +1,15 @@
 import subprocess
 import sys
-import json
+from pathlib import Path
 
+SCRIPT = Path(__file__).resolve().parents[1] / "exploration" / "RG_PRECISION_MASSES.py"
 
-import os
 
 def run_script(args):
-    script = os.path.abspath("RG_PRECISION_MASSES.py")
-    cmd = [sys.executable, script] + args
-    proc = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='replace')
+    cmd = [sys.executable, str(SCRIPT)] + args
+    proc = subprocess.run(
+        cmd, capture_output=True, text=True, encoding="utf-8", errors="replace"
+    )
     return proc.stdout, proc.stderr, proc.returncode
 
 

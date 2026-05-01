@@ -61,6 +61,20 @@ def test_parseval_target_geometry_records_visible_target_channels() -> None:
                 "spectrum": {"-3": 24, "3": 20, "12": 1},
             },
             "positive_sign_isomorphic_to_transport_graph": True,
+            "canonical_transport_carrier": {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {5: 27},
+                "point_line_incidence_distribution": {3: 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            },
         },
     }
 
@@ -135,6 +149,9 @@ def test_parseval_target_geometry_records_sign_duality_and_theorem() -> None:
     assert summary["theorem"] == {
         "the_centered_spread_features_form_the_exact_etf_36_15": True,
         "the_anti_line_channel_collapses_to_a_doubled_45_vector_transport_frame_in_the_24_sector": True,
+        "the_anti_line_transport_target_is_the_existing_center_quad_quotient_carrier": True,
+        "the_anti_line_transport_target_recovers_the_full_27_line_dual_gq_4_2_incidence": True,
+        "the_full_dual_gq_4_2_incidence_is_already_recoverable_from_the_negative_sign_graph_five_cliques": True,
         "both_target_systems_share_the_same_hidden_naimark_shadow_split_21_equals_1_plus_20": True,
         "naimark_complement_swaps_the_positive_and_negative_target_side_srg_signatures": True,
     }

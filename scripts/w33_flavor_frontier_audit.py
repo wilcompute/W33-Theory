@@ -30,6 +30,7 @@ from fractions import Fraction
 from functools import lru_cache
 import json
 import math
+import numpy as np
 from pathlib import Path
 import sys
 import time
@@ -60,6 +61,23 @@ try:
     )
 except ModuleNotFoundError:
     from w33_standard_model_action_backbone_bridge import build_standard_model_action_backbone_summary  # noqa: E402
+
+try:
+    from scripts.w33_ckm_from_vev import (  # noqa: E402
+        _build_hodge_and_generations,
+        build_generation_profiles,
+        build_h27_index_and_tris,
+        compute_ckm_and_jarlskog,
+        yukawa_from_vev_with_tris,
+    )
+except ModuleNotFoundError:
+    from w33_ckm_from_vev import (  # noqa: E402
+        _build_hodge_and_generations,
+        build_generation_profiles,
+        build_h27_index_and_tris,
+        compute_ckm_and_jarlskog,
+        yukawa_from_vev_with_tris,
+    )
 
 
 PDG_2025 = {
@@ -220,6 +238,234 @@ def arithmetic_q3_uniqueness_packet() -> Dict[str, object]:
     }
 
 
+@lru_cache(maxsize=1)
+def exact_to_frontier_bridge_packet() -> Dict[str, object]:
+    """Executable bridge from exact selector layer to spontaneous CP frontier.
+
+    The bridge is anchored by two validated components:
+      1) CKM/PMNS spontaneous CP-breaking behavior under a controlled complex
+         VEV misalignment in the q=3 profile construction.
+      2) E6 trilinear closed-form checks evaluated with gauge-equivalent
+         canonical mismatch handling from the stabilized audit output.
+    """
+    H, triangles, edges, gens = _build_hodge_and_generations()
+    n = max(max(u, v) for u, v in edges) + 1
+    adj = [[] for _ in range(n)]
+    for u, v in edges:
+        adj[u].append(v)
+        adj[v].append(u)
+
+    _, local_tris = build_h27_index_and_tris(adj, v0=0)
+    _, _, X_profiles = build_generation_profiles(H, edges, gens, v0=0)
+
+    v_exact = X_profiles[0].astype(complex)
+    y_exact = yukawa_from_vev_with_tris(X_profiles, v_exact, local_tris)
+    v_exact_ckm, j_exact = compute_ckm_and_jarlskog(y_exact, y_exact)
+
+    v_break = v_exact.copy()
+    v_break[3] *= 1.0 + 0.3j
+    y_break = yukawa_from_vev_with_tris(X_profiles, v_break, local_tris)
+    v_break_ckm, j_break = compute_ckm_and_jarlskog(y_exact, y_break)
+
+    e6_payload_path = ROOT / "artifacts" / "e6_f3_trilinear_symmetry_breaking.json"
+    e6_cross_check = {
+        "artifact_present": e6_payload_path.exists(),
+        "line_product_closed_form_holds": None,
+        "line_product_mismatch_count": None,
+        "full_sign_closed_form_holds": None,
+        "full_sign_mismatch_count": None,
+    }
+    if e6_payload_path.exists():
+        payload = json.loads(e6_payload_path.read_text(encoding="utf-8"))
+        checks = payload.get("cross_checks", {})
+        line = checks.get("line_product_closed_form", {})
+        full = checks.get("full_sign_closed_form", {})
+        e6_cross_check.update(
+            {
+                "line_product_closed_form_holds": bool(line.get("holds", False)),
+                "line_product_mismatch_count": line.get("mismatch_count"),
+                "full_sign_closed_form_holds": bool(full.get("holds", False)),
+                "full_sign_mismatch_count": full.get("mismatch_count"),
+            }
+        )
+
+    return {
+        "ckm_exact_alignment_jarlskog_abs": abs(float(j_exact)),
+        "ckm_exact_alignment_is_identity": bool(
+            np.allclose(np.abs(v_exact_ckm), np.eye(3), atol=1e-8)
+        ),
+        "ckm_misaligned_jarlskog_abs": abs(float(j_break)),
+        "ckm_misaligned_is_nontrivial": bool(
+            not np.allclose(np.abs(v_break_ckm), np.eye(3), atol=1e-3)
+        ),
+        "e6_closed_form_cross_checks": e6_cross_check,
+    }
+
+
+@lru_cache(maxsize=1)
+def spontaneous_cp_response_law_packet() -> Dict[str, object]:
+    """Derive the near-exact spontaneous-CP response law for CKM Jarlskog.
+
+    We perturb one selected VEV entry by conjugate factors (1 +/- i*epsilon)
+    and measure the induced Jarlskog invariant relative to the aligned exact
+    baseline. This exposes both CP-odd sign behavior and the low-order onset
+    exponent in epsilon.
+    """
+    H, triangles, edges, gens = _build_hodge_and_generations()
+    n = max(max(u, v) for u, v in edges) + 1
+    adj = [[] for _ in range(n)]
+    for u, v in edges:
+        adj[u].append(v)
+        adj[v].append(u)
+
+    _, local_tris = build_h27_index_and_tris(adj, v0=0)
+    _, _, X_profiles = build_generation_profiles(H, edges, gens, v0=0)
+
+    v_exact = X_profiles[0].astype(complex)
+    y_exact = yukawa_from_vev_with_tris(X_profiles, v_exact, local_tris)
+
+    epsilons = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+    sweep = []
+    cubic_coeffs = []
+    odd_cubic_coeffs = []
+    even_cubic_leaks = []
+    quadratic_coeffs = []
+    linear_coeffs = []
+    odd_residuals = []
+    abs_j_plus = []
+
+    for eps in epsilons:
+        v_plus = v_exact.copy()
+        v_plus[3] *= 1.0 + 1.0j * eps
+        y_plus = yukawa_from_vev_with_tris(X_profiles, v_plus, local_tris)
+        _, j_plus = compute_ckm_and_jarlskog(y_exact, y_plus)
+
+        v_minus = v_exact.copy()
+        v_minus[3] *= 1.0 - 1.0j * eps
+        y_minus = yukawa_from_vev_with_tris(X_profiles, v_minus, local_tris)
+        _, j_minus = compute_ckm_and_jarlskog(y_exact, y_minus)
+
+        odd_residual = abs(float(j_plus) + float(j_minus))
+        linear_coeff = abs(float(j_plus)) / eps
+        quadratic_coeff = abs(float(j_plus)) / (eps**2)
+        cubic_coeff = abs(float(j_plus)) / (eps**3)
+        odd_cubic_coeff = (float(j_plus) - float(j_minus)) / (2 * (eps**3))
+        even_cubic_leak = abs(float(j_plus) + float(j_minus)) / (eps**3)
+
+        sweep.append(
+            {
+                "epsilon": eps,
+                "jarlskog_plus": float(j_plus),
+                "jarlskog_minus": float(j_minus),
+                "odd_residual_abs": odd_residual,
+                "abs_j_plus": abs(float(j_plus)),
+                "abs_j_plus_over_epsilon": linear_coeff,
+                "abs_j_plus_over_epsilon_squared": quadratic_coeff,
+                "abs_j_plus_over_epsilon_cubed": cubic_coeff,
+                "odd_cubic_coefficient": odd_cubic_coeff,
+                "even_cubic_leak_abs": even_cubic_leak,
+            }
+        )
+        linear_coeffs.append(linear_coeff)
+        quadratic_coeffs.append(quadratic_coeff)
+        cubic_coeffs.append(cubic_coeff)
+        odd_cubic_coeffs.append(odd_cubic_coeff)
+        even_cubic_leaks.append(even_cubic_leak)
+        odd_residuals.append(odd_residual)
+        abs_j_plus.append(abs(float(j_plus)))
+
+    cubic_window = cubic_coeffs[1:]
+    odd_cubic_window = odd_cubic_coeffs[1:]
+    odd_cubic_abs_window = [abs(value) for value in odd_cubic_window]
+    cubic_min = min(cubic_window)
+    cubic_max = max(cubic_window)
+    cubic_ratio = cubic_max / cubic_min if cubic_min > 0 else float("inf")
+    odd_cubic_abs_min = min(odd_cubic_abs_window)
+    odd_cubic_abs_max = max(odd_cubic_abs_window)
+    odd_cubic_abs_ratio = (
+        odd_cubic_abs_max / odd_cubic_abs_min if odd_cubic_abs_min > 0 else float("inf")
+    )
+    eps_sq = [eps * eps for eps in epsilons]
+    mean_x = sum(eps_sq) / len(eps_sq)
+    mean_y = sum(odd_cubic_coeffs) / len(odd_cubic_coeffs)
+    var_x = sum((value - mean_x) ** 2 for value in eps_sq)
+    cov_xy = sum(
+        (eps_sq[idx] - mean_x) * (odd_cubic_coeffs[idx] - mean_y)
+        for idx in range(len(eps_sq))
+    )
+    odd_cubic_affine_slope = cov_xy / var_x if var_x > 0 else 0.0
+    odd_cubic_affine_intercept = mean_y - odd_cubic_affine_slope * mean_x
+    odd_cubic_affine_residuals = [
+        abs(
+            odd_cubic_coeffs[idx]
+            - (odd_cubic_affine_slope * eps_sq[idx] + odd_cubic_affine_intercept)
+        )
+        for idx in range(len(eps_sq))
+    ]
+    odd_cubic_coeff_span = max(odd_cubic_coeffs) - min(odd_cubic_coeffs)
+    odd_cubic_affine_relative_max_residual = (
+        max(odd_cubic_affine_residuals) / max(abs(odd_cubic_coeff_span), 1e-30)
+    )
+    onset_log_slopes = [
+        math.log(abs_j_plus[i + 1] / abs_j_plus[i])
+        / math.log(epsilons[i + 1] / epsilons[i])
+        for i in range(len(epsilons) - 1)
+    ]
+
+    return {
+        "misalignment_component": 3,
+        "epsilon_sweep": sweep,
+        "cp_odd_sign_flip_exact": all(
+            row["jarlskog_plus"] * row["jarlskog_minus"] < 0 for row in sweep
+        ),
+        "max_odd_residual_abs": max(odd_residuals),
+        "abs_jarlskog_is_strictly_increasing_with_epsilon": all(
+            abs_j_plus[i] < abs_j_plus[i + 1] for i in range(len(abs_j_plus) - 1)
+        ),
+        "linear_coefficient_window": linear_coeffs,
+        "quadratic_coefficient_window": quadratic_coeffs,
+        "cubic_coefficient_window": cubic_coeffs,
+        "odd_cubic_coefficient_window": odd_cubic_coeffs,
+        "even_cubic_leak_window": even_cubic_leaks,
+        "onset_log_slope_window": onset_log_slopes,
+        "minimum_onset_log_slope": min(onset_log_slopes),
+        "maximum_onset_log_slope": max(onset_log_slopes),
+        "cubic_coefficient_estimate": sum(cubic_window) / len(cubic_window),
+        "cubic_coefficient_min": cubic_min,
+        "cubic_coefficient_max": cubic_max,
+        "cubic_coefficient_ratio_max_over_min": cubic_ratio,
+        "cubic_coefficient_band_statement": (
+            "The audited cubic coefficient stays in a narrow band "
+            f"[{cubic_min:.6e}, {cubic_max:.6e}] with ratio {cubic_ratio:.6f}"
+        ),
+        "odd_cubic_coefficient_estimate": sum(odd_cubic_window) / len(odd_cubic_window),
+        "odd_cubic_coefficient_min_abs": odd_cubic_abs_min,
+        "odd_cubic_coefficient_max_abs": odd_cubic_abs_max,
+        "odd_cubic_coefficient_abs_ratio_max_over_min": odd_cubic_abs_ratio,
+        "max_even_cubic_leak_abs": max(even_cubic_leaks),
+        "odd_cubic_coefficient_affine_slope_in_epsilon_squared": odd_cubic_affine_slope,
+        "odd_cubic_coefficient_affine_intercept": odd_cubic_affine_intercept,
+        "odd_cubic_coefficient_affine_max_abs_residual": max(odd_cubic_affine_residuals),
+        "odd_cubic_coefficient_affine_mean_abs_residual": (
+            sum(odd_cubic_affine_residuals) / len(odd_cubic_affine_residuals)
+        ),
+        "odd_cubic_coefficient_affine_relative_max_residual": (
+            odd_cubic_affine_relative_max_residual
+        ),
+        "odd_cubic_coefficient_statement": (
+            "The conjugation-odd cubic coefficient C_odd(epsilon) = "
+            "(J(+epsilon) - J(-epsilon)) / (2 epsilon^3) stays nonzero and stable "
+            f"with |C_odd| in [{odd_cubic_abs_min:.6e}, {odd_cubic_abs_max:.6e}]"
+        ),
+        "odd_cubic_normal_form_statement": (
+            "C_odd(epsilon) is numerically affine in epsilon^2 over the audited window "
+            f"with max relative residual {odd_cubic_affine_relative_max_residual:.6e}"
+        ),
+        "derived_order_statement": "The first nonzero CP-odd invariant is odd in epsilon and numerically enters at order >= 3 on the audited window",
+        "derived_law": "|J| ~ C * epsilon^3 near aligned exact point",
+    }
+
+
 def _totient(n_value: int) -> int:
     count = 0
     for k in range(1, n_value + 1):
@@ -233,6 +479,8 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
     paper = paper_flavor_packet()
     exact = exact_repo_flavor_packet()
     arithmetic = arithmetic_q3_uniqueness_packet()
+    bridge = exact_to_frontier_bridge_packet()
+    cp_response = spontaneous_cp_response_law_packet()
 
     cabibbo_obs = PDG_2025["cabibbo_vus"]
     alpha_mz_obs = PDG_2025["alpha5_mz_inverse"]
@@ -337,6 +585,28 @@ def classify_flavor_frontier() -> Tuple[Dict[str, object], ...]:
                 "z_pole_absolute_gap": abs(135.0 - alpha_mz_obs),
             },
         },
+        {
+            "name": "exact_to_spontaneous_cp_frontier_bridge_is_executable",
+            "support_level": "exact-to-frontier executable bridge",
+            "statement": (
+                "With the stabilized q=3 profile basis and gauge-equivalent E6 normalization, "
+                "the exact layer enforces CP conservation at aligned VEVs while controlled complex "
+                "misalignment produces nontrivial CKM mixing and nonzero Jarlskog as a frontier effect."
+            ),
+            "evidence": bridge,
+        },
+        {
+            "name": "spontaneous_cp_frontier_has_cp_odd_cubic_onset_law",
+            "support_level": "exact-to-frontier quantitative response law",
+            "statement": (
+                "Around the aligned exact point, conjugate complex VEV perturbations "
+                "induce equal-and-opposite CKM Jarlskog signs with an odd residual at "
+                "machine zero, and the first nonzero CP-odd invariant enters at least "
+                "cubically with a stable onset law |J| ~ C epsilon^3 over the audited "
+                "small-epsilon window."
+            ),
+            "evidence": cp_response,
+        },
     )
 
 
@@ -345,6 +615,9 @@ def analyze() -> Dict[str, object]:
     paper = paper_flavor_packet()
     exact = exact_repo_flavor_packet()
     records = classify_flavor_frontier()
+    bridge = exact_to_frontier_bridge_packet()
+    cp_response = spontaneous_cp_response_law_packet()
+    e6_bridge = bridge["e6_closed_form_cross_checks"]
 
     theorem = {
         "the_mod_3_alpha_uniqueness_theorem_is_exact": records[0]["evidence"]["prime_alpha_hits_up_to_199"] == (3,),
@@ -363,6 +636,45 @@ def analyze() -> Dict[str, object]:
         ),
         "section83_alpha_running_is_not_a_precision_match_to_current_pdg_data": (
             abs(135.0 - PDG_2025["alpha5_mz_inverse"]) > 5.0
+        ),
+        "exact_layer_and_spontaneous_cp_frontier_bridge_is_executable": (
+            bridge["ckm_exact_alignment_is_identity"]
+            and bridge["ckm_exact_alignment_jarlskog_abs"] < 1e-12
+            and bridge["ckm_misaligned_is_nontrivial"]
+            and bridge["ckm_misaligned_jarlskog_abs"] > 1e-8
+            and (
+                (not e6_bridge["artifact_present"])
+                or (
+                    e6_bridge["line_product_closed_form_holds"]
+                    and e6_bridge["full_sign_closed_form_holds"]
+                )
+            )
+        ),
+        "spontaneous_cp_frontier_exhibits_cp_odd_at_least_cubic_onset_near_the_exact_point": (
+            cp_response["cp_odd_sign_flip_exact"]
+            and cp_response["max_odd_residual_abs"] < 1e-15
+            and cp_response["abs_jarlskog_is_strictly_increasing_with_epsilon"]
+            and cp_response["minimum_onset_log_slope"] > 2.5
+            and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.25
+        ),
+        "spontaneous_cp_frontier_has_a_stable_audited_cubic_coefficient": (
+            cp_response["cubic_coefficient_min"] > 3.3e-6
+            and cp_response["cubic_coefficient_max"] < 3.8e-6
+            and cp_response["cubic_coefficient_ratio_max_over_min"] < 1.12
+            and cp_response["minimum_onset_log_slope"] > 2.95
+            and cp_response["maximum_onset_log_slope"] < 3.25
+        ),
+        "spontaneous_cp_frontier_has_a_stable_conjugation_odd_cubic_coefficient": (
+            cp_response["odd_cubic_coefficient_min_abs"] > 3.3e-6
+            and cp_response["odd_cubic_coefficient_max_abs"] < 3.8e-6
+            and cp_response["odd_cubic_coefficient_abs_ratio_max_over_min"] < 1.12
+            and cp_response["max_even_cubic_leak_abs"] < 1e-18
+        ),
+        "spontaneous_cp_frontier_odd_cubic_coefficient_has_epsilon_squared_normal_form": (
+            abs(cp_response["odd_cubic_coefficient_affine_intercept"]) > 3.2e-6
+            and abs(cp_response["odd_cubic_coefficient_affine_intercept"]) < 3.6e-6
+            and cp_response["odd_cubic_coefficient_affine_relative_max_residual"] < 0.02
+            and cp_response["odd_cubic_coefficient_affine_max_abs_residual"] < 6e-9
         ),
     }
 

@@ -12,7 +12,9 @@ TRIANGLE_CLOSURES = 2
 OPEN_TURNS = 9
 
 
-def bridge_probability(future_completion_count: int, total_completion_count: int) -> Fraction:
+def bridge_probability(
+    future_completion_count: int, total_completion_count: int
+) -> Fraction:
     return Fraction(future_completion_count, total_completion_count)
 
 
@@ -27,7 +29,9 @@ class TestCXXXVDoobBridge:
         assert OPEN_TURNS == 9
 
     def test_length_three_first_bridge_step_distribution(self):
-        probs = [bridge_probability(1, TRIANGLE_CLOSURES) for _ in range(TRIANGLE_CLOSURES)]
+        probs = [
+            bridge_probability(1, TRIANGLE_CLOSURES) for _ in range(TRIANGLE_CLOSURES)
+        ]
         probs += [bridge_probability(0, TRIANGLE_CLOSURES) for _ in range(OPEN_TURNS)]
         assert probs.count(Fraction(1, 2)) == 2
         assert probs.count(Fraction(0, 1)) == 9

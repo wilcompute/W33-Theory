@@ -7,7 +7,9 @@ From just two W(3,3) identities:
 
 All tau(2^a * 3^b) values are reconstructible via Hecke recursions.
 
-New: 23 = 2k-1 divides tau(n) for all composite n (Ramanujan congruence).
+The mod-23 layer is a finite checked packet: 23 = 2k-1 divides selected
+initial tau values, but tau(6), tau(8), and tau(13) are counterexamples to a
+universal divisibility law.
 """
 
 import pytest
@@ -17,10 +19,23 @@ Phi3, Phi4, Phi6 = 13, 10, 7
 f_dim, g_dim = 24, 15
 ev_r, ev_s = 2, -4
 
-tau = {1:1, 2:-24, 3:252, 4:-1472, 5:4830, 6:-6048, 7:-16744, 8:84480,
-       9:-113643, 10:-115920, 11:534612, 12:-370944, 13:-577738}
+tau = {
+    1: 1,
+    2: -24,
+    3: 252,
+    4: -1472,
+    5: 4830,
+    6: -6048,
+    7: -16744,
+    8: 84480,
+    9: -113643,
+    10: -115920,
+    11: 534612,
+    12: -370944,
+    13: -577738,
+}
 
-double_k_minus_1 = 2*k - 1  # = 23
+double_k_minus_1 = 2 * k - 1  # = 23
 
 
 class TestTauReconstruction:
@@ -39,15 +54,15 @@ class TestTauReconstruction:
 
     def test_tau4_hecke_recursion(self):
         """tau(4) = tau(2)^2 - 2^11 (Hecke recursion at prime 2)."""
-        assert tau[4] == tau[2]**2 - 2**11
+        assert tau[4] == tau[2] ** 2 - 2**11
 
     def test_tau9_hecke_recursion(self):
         """tau(9) = tau(3)^2 - 3^11 (Hecke recursion at prime 3)."""
-        assert tau[9] == tau[3]**2 - 3**11
+        assert tau[9] == tau[3] ** 2 - 3**11
 
     def test_tau8_hecke_recursion(self):
         """tau(8) = tau(2)*tau(4) - 2^11 * tau(2)."""
-        assert tau[8] == tau[2]*tau[4] - 2**11 * tau[2]
+        assert tau[8] == tau[2] * tau[4] - 2**11 * tau[2]
 
     def test_tau12_multiplicativity(self):
         """tau(12) = tau(4)*tau(3) (gcd(4,3)=1)."""
@@ -78,25 +93,26 @@ class TestTauReconstruction:
     def test_2k_minus_1_equals_23(self):
         """2k-1 = 23 is a W(3,3) parameter."""
         assert double_k_minus_1 == 23
-        assert double_k_minus_1 == 2*k - 1
+        assert double_k_minus_1 == 2 * k - 1
 
-    def test_tau_divisible_by_23_composite(self):
-        """tau(n) divisible by 23 for all composite n in range."""
+    def test_tau_divisible_by_23_composite_packet(self):
+        """Composite initial values have an exact packet plus counterexamples."""
         composites = [4, 6, 8, 9, 10, 12]
-        for n in composites:
-            assert tau[n] % 23 == 0, f"tau({n}) not divisible by 23"
+        divisible = {n for n in composites if tau[n] % 23 == 0}
+        assert divisible == {4, 9, 10, 12}
+        assert {6, 8}.isdisjoint(divisible)
 
-    def test_tau_divisible_by_23_prime(self):
-        """tau(p) divisible by 23 for primes p != 23 (Ramanujan congruence)."""
-        # tau(n) ≡ 0 mod 23 for gcd(n,23)=1 except n=1
-        for n in [2, 3, 5, 7, 9, 10, 11, 12, 13]:
-            if n != 1:
-                assert tau[n] % 23 == 0, f"tau({n}) = {tau[n]} not divisible by 23"
+    def test_tau_divisible_by_23_prime_packet(self):
+        """Prime initial values divisible by 23 are selected, not universal."""
+        primes = [2, 3, 5, 7, 11, 13]
+        divisible = {p for p in primes if tau[p] % 23 == 0}
+        assert divisible == {5, 7, 11}
+        assert {2, 3, 13}.isdisjoint(divisible)
 
     def test_tau4_divisible_by_f(self):
         """tau(4) = -1472 = -f * 184/3 ... verify exact relation."""
         # tau(4) = -1472 = -64 * 23 = -64 * (2k-1)
-        assert tau[4] == -64 * (2*k - 1)
+        assert tau[4] == -64 * (2 * k - 1)
         assert tau[4] == -(2**6) * double_k_minus_1
 
     def test_tau2_generates_tower(self):
@@ -105,4 +121,4 @@ class TestTauReconstruction:
         assert tau[2] == -f_dim  # generator 1
         assert tau[3] == k * q * Phi6  # generator 2
         assert tau[6] == tau[2] * tau[3]  # cross product
-        assert tau[9] == tau[3]**2 - 3**11  # recursion
+        assert tau[9] == tau[3] ** 2 - 3**11  # recursion

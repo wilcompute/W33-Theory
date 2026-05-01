@@ -17,8 +17,9 @@ Key results (exact fractions):
   Sigma m_nu = lambda*(v-k+1) = 2*29 = 58 meV
 """
 
-import numpy as np
 from fractions import Fraction
+
+import numpy as np
 import pytest
 
 # W(3,3) parameters
@@ -32,14 +33,14 @@ class TestSeesawNeutrinoMassPrediction:
     def test_mD_texture(self):
         """mD = (k-lambda)I + lambda*J = 10I + 2J."""
         a_D = k - l  # = 10 = Phi4
-        b_D = l      # = 2 = lambda
+        b_D = l  # = 2 = lambda
         assert a_D == 10 == Phi4
         assert b_D == 2 == l
 
     def test_MR_texture(self):
         """MR = (k-mu)I + mu*J = 8I + 4J."""
         a_R = k - m  # = 8
-        b_R = m      # = 4
+        b_R = m  # = 4
         assert a_R == 8
         assert b_R == 4
         assert a_R + n * b_R == 20  # = v/2
@@ -106,14 +107,16 @@ class TestSeesawNeutrinoMassPrediction:
         """Sum of |eigenvalues| = 189/5 in seesaw units."""
         # Diagonal basis: mD eigvals are (k-l)=10 (x2) and (k+2l)=16 (x1)
         # MR eigvals are (k-m)=8 (x2) and (k+2m)=20 (x1)
-        mD_ev12 = Fraction((k - l)**2, k - m)   # = 100/8 = 25/2
-        mD_ev3 = Fraction((k + 2*l)**2, k + 2*m)  # = 256/20 = 64/5
+        mD_ev12 = Fraction((k - l) ** 2, k - m)  # = 100/8 = 25/2
+        mD_ev3 = Fraction((k + 2 * l) ** 2, k + 2 * m)  # = 256/20 = 64/5
         Sigma = 2 * mD_ev12 + mD_ev3
         assert Sigma == Fraction(189, 5)
 
     def test_algebraic_trace_formula(self):
         """Tr[M_nu] = -(2(k-l)^2/(k-m) + (k+2l)^2/(k+2m)) = -189/5."""
-        Tr = -(2 * Fraction((k - l)**2, k - m) + Fraction((k + 2*l)**2, k + 2*m))
+        Tr = -(
+            2 * Fraction((k - l) ** 2, k - m) + Fraction((k + 2 * l) ** 2, k + 2 * m)
+        )
         assert Tr == Fraction(-189, 5)
 
     def test_physical_scale_definition(self):
@@ -144,13 +147,9 @@ class TestSeesawNeutrinoMassPrediction:
         Sigma_meV = 58.0
         Sigma_dl = 189 / 5
         Lambda_meV = Sigma_meV / Sigma_dl  # seesaw unit in meV
-        v_EW_meV = 246e12  # 246 GeV in meV
-        MR_meV = v_EW_meV**2 / (Lambda_meV * (k - m)**2 / 1)  # rough scale
-        # More precisely: MR = v_EW^2 * (189/5) / (Sigma_meV * (k-m)^2)
-        # The dominant channel: MR_1 ~ (mD_ev12)^2 / (m_nu_ev12)
-        # = ((k-l)^2)^2 / ((k-l)^2/(k-m)) / Lambda = (k-l)^2 * (k-m) / Lambda
-        MR1_meV = float(Fraction((k - l)**2 * (k - m), 1)) / Lambda_meV
-        MR1_GeV = MR1_meV * 1e-12
+        Lambda_GeV = Lambda_meV * 1e-12
+        v_EW_GeV = 246.0
+        MR1_GeV = v_EW_GeV**2 / Lambda_GeV
         # Should be ~ 10^15 to 10^17 GeV range
         assert 1e14 < MR1_GeV < 1e18, f"MR = {MR1_GeV:.2e} GeV"
 

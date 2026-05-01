@@ -28,6 +28,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -35,7 +40,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_bott_triality_asymmetry_bridge_summary.jso
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def build_summary() -> dict[str, Any]:
@@ -68,7 +73,9 @@ def build_summary() -> dict[str, Any]:
             "csaszar_centered_rank": csaszar_centered,
             "szilassi_centered_rank": szilassi_centered,
             "family_separation_rank": family_separation,
-            "centered_four_plus_one_plus_one_rank": heptad["projector_heptad"]["centered_4_plus_1_plus_1_rank"],
+            "centered_four_plus_one_plus_one_rank": heptad["projector_heptad"][
+                "centered_4_plus_1_plus_1_rank"
+            ],
         },
         "bott_triality_packet": {
             "q": q,

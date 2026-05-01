@@ -1,6 +1,6 @@
 # Part XCII — Morita-Reduced Hodge Quiver
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Parts XC–XCI identified the carrier algebra as

@@ -10,6 +10,7 @@ Pillar 45 — Ternary code & stabilizer-building primitives
 Usage:
     python scripts/w33_quantum_error_correction.py
 """
+
 from __future__ import annotations
 
 import json
@@ -18,9 +19,8 @@ from pathlib import Path
 from typing import Tuple
 
 import numpy as np
-from w33_homology import build_clique_complex, build_w33
-
 from w33_h1_decomposition import build_incidence_matrix
+from w33_homology import build_clique_complex, build_w33
 
 
 def compute_basis_rows_mod3(M: np.ndarray) -> np.ndarray:
@@ -50,13 +50,45 @@ def compute_basis_rows_mod3(M: np.ndarray) -> np.ndarray:
     return np.zeros((0, b), dtype=int)
 
 
-def code_min_distance_from_basis(basis: np.ndarray) -> int:
+def code_min_distance_from_basis(basis: np.ndarray, exact_max_dim: int = 14) -> int:
     """Enumerate all nonzero ternary linear combinations of basis to find min Hamming weight.
-    Works well when basis dimension bs is modest (bs <= 12..14 in practice here).
+    Works well when basis dimension bs is modest. For large W33-derived bases,
+    certify distance 3 by excluding weight-1 and weight-2 row-space vectors with
+    the parity-check columns, then using a weight-3 generator row as witness.
     """
     bs = basis.shape[0]
     if bs == 0:
         return 0
+    row_weights = [
+        int(np.count_nonzero(row % 3)) for row in np.asarray(basis, dtype=int) % 3
+    ]
+    upper = min((w for w in row_weights if w > 0), default=0)
+    if bs > exact_max_dim:
+        if upper == 0:
+            return 0
+        if upper <= 3:
+            H = gf3_nullspace_basis(basis)
+            if H.size:
+                columns = [
+                    tuple(int(x) for x in H[:, i] % 3) for i in range(H.shape[1])
+                ]
+                if any(all(x == 0 for x in col) for col in columns):
+                    return 1
+                seen = set()
+                for col in columns:
+                    if all(x == 0 for x in col):
+                        continue
+                    first = next(x for x in col if x != 0)
+                    inv = pow(int(first), -1, 3)
+                    canonical = tuple((x * inv) % 3 for x in col)
+                    if canonical in seen:
+                        return 2
+                    seen.add(canonical)
+            return upper
+        raise ValueError(
+            "Exact minimum-distance enumeration would be exponential; "
+            "pass a smaller basis or provide a bounded certificate"
+        )
     total = 3**bs
     min_w = basis.shape[1] + 1
     # enumerate combinations

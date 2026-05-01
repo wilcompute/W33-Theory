@@ -7,6 +7,7 @@ If the JSON does not exist, tests are skipped.
 """
 
 from __future__ import annotations
+
 import json
 import os
 import sys
@@ -22,7 +23,9 @@ DATA_FILE = os.path.join(
 @pytest.fixture(scope="module")
 def results():
     if not os.path.exists(DATA_FILE):
-        pytest.skip(f"data file not found: {DATA_FILE} — run THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION.py first")
+        pytest.skip(
+            f"data file not found: {DATA_FILE} — run THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION.py first"
+        )
     with open(DATA_FILE) as f:
         return json.load(f)
 
@@ -31,15 +34,14 @@ def results():
 # Tensor structure
 # ---------------------------------------------------------------------------
 
+
 def test_pillar_is_65(results):
     assert results["pillar"] == 65
 
 
 def test_tensor_rank_is_6(results):
     """Yukawa tensor has rank exactly 6 (3 pairs = 3 generations x 2 Higgs)."""
-    assert results["tensor_rank"] == 6, (
-        f"Expected rank 6, got {results['tensor_rank']}"
-    )
+    assert results["tensor_rank"] == 6, f"Expected rank 6, got {results['tensor_rank']}"
 
 
 def test_tensor_active_subspace_dim(results):
@@ -56,33 +58,34 @@ def test_tensor_singular_values_descending(results):
     """Tensor singular values are in non-increasing order."""
     svs = results["tensor_singular_values"]
     for i in range(len(svs) - 1):
-        assert svs[i] >= svs[i + 1] - 1e-10, (
-            f"SVs not descending at index {i}: {svs[i]:.6f} < {svs[i+1]:.6f}"
-        )
+        assert (
+            svs[i] >= svs[i + 1] - 1e-10
+        ), f"SVs not descending at index {i}: {svs[i]:.6f} < {svs[i+1]:.6f}"
 
 
 def test_tensor_sv_degenerate_pairs():
-    """Singular values 2-3 and 5-6 are degenerate (Z3 CP-conjugate symmetry)."""
+    """Singular values 1-2 and 5-6 are degenerate (Z3 CP-conjugate symmetry)."""
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     sys.path.insert(0, repo_root)
     sys.path.insert(0, os.path.join(repo_root, "scripts"))
-    from w33_complex_yukawa import build_z3_complex_profiles, build_dominant_profiles
-    from w33_ckm_from_vev import cubic_form_on_h27
     from THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION import build_yukawa_tensor
+    from w33_ckm_from_vev import cubic_form_on_h27
+    from w33_complex_yukawa import build_dominant_profiles, build_z3_complex_profiles
 
     _, local_tris, _, P = build_z3_complex_profiles()
     psi_dom = build_dominant_profiles(P)
     T = build_yukawa_tensor(psi_dom, local_tris)
     T_mat = T.reshape(9, 27)
     _, s, _ = np.linalg.svd(T_mat, full_matrices=False)
-    # s[1] == s[2] and s[4] == s[5] (CP-conjugate pairs)
-    assert abs(s[1] - s[2]) < 1e-10, f"s[1]={s[1]:.8f} != s[2]={s[2]:.8f}"
+    # s[0] == s[1] and s[4] == s[5] (CP-conjugate pairs)
+    assert abs(s[0] - s[1]) < 1e-10, f"s[0]={s[0]:.8f} != s[1]={s[1]:.8f}"
     assert abs(s[4] - s[5]) < 1e-10, f"s[4]={s[4]:.8f} != s[5]={s[5]:.8f}"
 
 
 # ---------------------------------------------------------------------------
 # CKM optimization improvements
 # ---------------------------------------------------------------------------
+
 
 def test_gradient_ckm_better_than_grid(results):
     """Gradient optimization gives strictly better CKM error than grid scan."""
@@ -102,9 +105,7 @@ def test_vub_essentially_exact(results):
     """V_ub predicted to within 30% of experiment (0.0038)."""
     V = np.array(results["ckm"]["V"])
     Vub = V[0, 2]
-    assert 0.002 < Vub < 0.008, (
-        f"|V_ub| = {Vub:.4f}, expected in [0.002, 0.008]"
-    )
+    assert 0.002 < Vub < 0.008, f"|V_ub| = {Vub:.4f}, expected in [0.002, 0.008]"
 
 
 def test_vud_accurate(results):
@@ -139,14 +140,15 @@ def test_quark_jarlskog_order_of_magnitude(results):
     J = results["ckm"]["Jarlskog"]
     J_exp = 3.1e-5
     ratio = abs(J) / J_exp
-    assert 0.1 < ratio < 10, (
-        f"Jarlskog |J| = {abs(J):.2e}, exp 3.1e-5, ratio = {ratio:.2f}"
-    )
+    assert (
+        0.1 < ratio < 10
+    ), f"Jarlskog |J| = {abs(J):.2e}, exp 3.1e-5, ratio = {ratio:.2f}"
 
 
 # ---------------------------------------------------------------------------
 # PMNS optimization improvements
 # ---------------------------------------------------------------------------
+
 
 def test_gradient_pmns_better_than_grid(results):
     """Gradient PMNS error is strictly better than grid scan."""
@@ -193,6 +195,7 @@ def test_lepton_jarlskog_large(results):
 # Structural consistency
 # ---------------------------------------------------------------------------
 
+
 def test_improved_ckm_flag(results):
     assert results["improved_ckm"] is True
 
@@ -204,11 +207,12 @@ def test_improved_pmns_flag(results):
 def test_tensor_build_fast():
     """Yukawa tensor builds in < 1 second."""
     import time
+
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     sys.path.insert(0, repo_root)
     sys.path.insert(0, os.path.join(repo_root, "scripts"))
-    from w33_complex_yukawa import build_z3_complex_profiles, build_dominant_profiles
     from THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION import build_yukawa_tensor
+    from w33_complex_yukawa import build_dominant_profiles, build_z3_complex_profiles
 
     _, local_tris, _, P = build_z3_complex_profiles()
     psi_dom = build_dominant_profiles(P)
@@ -224,11 +228,11 @@ def test_tensor_vs_direct_yukawa():
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     sys.path.insert(0, repo_root)
     sys.path.insert(0, os.path.join(repo_root, "scripts"))
+    from THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION import build_yukawa_tensor, yukawa_fast
     from w33_complex_yukawa import (
-        build_z3_complex_profiles, build_dominant_profiles, yukawa3x3
-    )
-    from THEORY_PART_CLXXIV_YUKAWA_OPTIMIZATION import (
-        build_yukawa_tensor, yukawa_fast
+        build_dominant_profiles,
+        build_z3_complex_profiles,
+        yukawa3x3,
     )
 
     H27, local_tris, _, P = build_z3_complex_profiles()

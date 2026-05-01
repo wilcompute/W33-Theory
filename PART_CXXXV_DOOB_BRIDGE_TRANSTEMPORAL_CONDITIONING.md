@@ -1,6 +1,6 @@
 # Part CXXXV — Doob-Bridge Transtemporal Conditioning
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 30, 2026
 
 Part CXXXIV identified the W33 non-backtracking cycle clock's equilibrium state as the uniform Parry/KMS state on the 480 directed-edge carrier.  This part extracts the precise finite mathematics behind the CCT-style phrase `future boundary condition influences the present` without introducing paradox or acausal signaling.

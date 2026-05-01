@@ -1,9 +1,24 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
+
 from scripts.w33_e8_correspondence_boundary_audit import (
     analyze,
     classify_correspondence_claims,
     correspondence_surface_summary,
+)
+
+SAGE_TRANSPORT = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "sage_h27_to_schlafli_effective_triads_conjugacy.json"
+)
+
+pytestmark = pytest.mark.skipif(
+    not SAGE_TRANSPORT.exists(),
+    reason="optional Sage H27-to-Schlafli transport artifact is absent",
 )
 
 
@@ -30,11 +45,15 @@ def test_surface_summary_keeps_exact_finite_backbone_visible() -> None:
     assert summary["checks"]["ALL_VERIFIED"] is True
 
 
-def test_claim_classification_separates_exact_interpretive_and_phenomenology_layers() -> None:
+def test_claim_classification_separates_exact_interpretive_and_phenomenology_layers() -> (
+    None
+):
     records = {record["name"]: record for record in classify_correspondence_claims()}
 
     assert records["edge_root_count_identity"]["claim_class"] == "exact"
-    assert records["edge_root_count_identity"]["support_level"] == "exact count identity"
+    assert (
+        records["edge_root_count_identity"]["support_level"] == "exact count identity"
+    )
 
     assert records["sp43_we6_edge_transitivity"]["claim_class"] == "exact"
     assert records["e8_z3_root_split_78_81_81"]["claim_class"] == "exact"
@@ -45,10 +64,15 @@ def test_claim_classification_separates_exact_interpretive_and_phenomenology_lay
     assert records["e6_a2_zero_sector_algebraic_split"]["claim_class"] == "exact"
 
     assert records["cycle_space_as_matter_sector"]["claim_class"] == "interpretive"
-    assert records["w33_sector_alignment_as_gauge_matter_antimatter"]["claim_class"] == "interpretive"
+    assert (
+        records["w33_sector_alignment_as_gauge_matter_antimatter"]["claim_class"]
+        == "interpretive"
+    )
 
     assert records["dark_matter_ratio_27_over_5"]["claim_class"] == "phenomenology"
-    assert records["weinberg_angle_3_over_8_inheritance"]["claim_class"] == "phenomenology"
+    assert (
+        records["weinberg_angle_3_over_8_inheritance"]["claim_class"] == "phenomenology"
+    )
 
 
 def test_three_generation_pattern_is_exact_but_matter_identification_is_not() -> None:
@@ -82,7 +106,9 @@ def test_phenomenology_layers_remain_present_but_are_not_marked_exact() -> None:
     assert weinberg["low_energy_running"]["experimental"] == 0.23122
 
 
-def test_overall_boundary_audit_marks_old_all_verified_surface_as_broader_than_exact_boundary() -> None:
+def test_overall_boundary_audit_marks_old_all_verified_surface_as_broader_than_exact_boundary() -> (
+    None
+):
     summary = analyze()
     theorem = summary["boundary_theorem"]
 
@@ -105,9 +131,27 @@ def test_overall_boundary_audit_marks_old_all_verified_surface_as_broader_than_e
         "weinberg_angle_3_over_8_inheritance",
     )
     assert theorem["the_count_group_homology_and_tetrahedron_claims_are_exact"] is True
-    assert theorem["the_three_generation_pattern_is_exact_finite_structure_but_not_yet_full_physics_by_itself"] is True
-    assert theorem["the_e6_plus_a2_zero_sector_is_exact_on_the_e8_side_but_physical_gauge_reading_is_later_input"] is True
-    assert theorem["the_dark_matter_and_weinberg_outputs_are_phenomenology_layers_not_exact_bridge_theorems"] is True
-    assert theorem["the_old_all_verified_surface_is_stronger_than_the_exact_boundary"] is True
+    assert (
+        theorem[
+            "the_three_generation_pattern_is_exact_finite_structure_but_not_yet_full_physics_by_itself"
+        ]
+        is True
+    )
+    assert (
+        theorem[
+            "the_e6_plus_a2_zero_sector_is_exact_on_the_e8_side_but_physical_gauge_reading_is_later_input"
+        ]
+        is True
+    )
+    assert (
+        theorem[
+            "the_dark_matter_and_weinberg_outputs_are_phenomenology_layers_not_exact_bridge_theorems"
+        ]
+        is True
+    )
+    assert (
+        theorem["the_old_all_verified_surface_is_stronger_than_the_exact_boundary"]
+        is True
+    )
     assert theorem["the_correspondence_boundary_is_now_cleanly_separated"] is True
     assert "ALL_VERIFIED" in summary["boundary_note"]

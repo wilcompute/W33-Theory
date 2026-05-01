@@ -1,6 +1,6 @@
 # Part XCV — Bockstein Torsion Resolution
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part XCIV found the integral Smith form

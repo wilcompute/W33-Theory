@@ -17,7 +17,9 @@ cosmological constant, dark matter mass and cross-section, the
 baryon asymmetry, primordial gravitational wave spectrum, proton
 decay lifetimes, and quantum gravity parameters — 82 independent
 results, 56 confirmed against experiment, 26 falsifiable within
-10 years, with zero free parameters beyond q=3. The false-positive
+10 years, over an exact finite spine with promoted frontier-response
+layers where noted, and with no free continuous parameters beyond the
+selected integer q=3. The false-positive
 probability is p < 10^{-73}.
 
 ---

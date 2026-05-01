@@ -13,15 +13,22 @@ sys.path.insert(0, str(ROOT))
 
 from THEORY_PART_CCXVI_G2_OCTONION_FANO import analyze
 
+G2_BUNDLE = (
+    ROOT / "pillars" / "TOE_Wilmot_G2_Clifford_breakthrough_v01_20260227_bundle.zip"
+)
+
 
 @pytest.fixture(scope="module")
 def summary():
+    if not G2_BUNDLE.exists():
+        pytest.skip(f"Missing G2 Clifford breakthrough bundle: {G2_BUNDLE}")
     return analyze()
 
 
 # ---------------------------------------------------------------------------
 # T1: G2 derivation algebra
 # ---------------------------------------------------------------------------
+
 
 class TestT1G2DerivationAlgebra:
     """T1: dim(Der(O)) = 14 via linear constraints over GF(p); rank 50 of 64-var system."""
@@ -59,6 +66,7 @@ class TestT1G2DerivationAlgebra:
 # T2: sl3 subalgebra
 # ---------------------------------------------------------------------------
 
+
 class TestT2sl3Subalgebra:
     """T2: Fixing axis e7 gives sl3 of dim 8; rank 56 of 520-eq system."""
 
@@ -90,6 +98,7 @@ class TestT2sl3Subalgebra:
 # ---------------------------------------------------------------------------
 # T3: Fano plane
 # ---------------------------------------------------------------------------
+
 
 class TestT3FanoPlane:
     """T3: 7 Fano triples, each point in exactly 3 triples; Aut = PSL(2,7) order 168."""
@@ -123,6 +132,7 @@ class TestT3FanoPlane:
 # T4: 480 octonion tables
 # ---------------------------------------------------------------------------
 
+
 class TestT4OctonionTables:
     """T4: 480 distinct octonion tables; stabilizer 1344 = 168*8; orbit-stabilizer."""
 
@@ -152,12 +162,16 @@ class TestT4OctonionTables:
 
     def test_480_times_1344_equals_645120(self, summary):
         """480 * 1344 = 645120."""
-        assert summary["T4_orbit_size"] * summary["T4_stabilizer"] == summary["T4_group_order"]
+        assert (
+            summary["T4_orbit_size"] * summary["T4_stabilizer"]
+            == summary["T4_group_order"]
+        )
 
 
 # ---------------------------------------------------------------------------
 # T5: 540 W33 pockets
 # ---------------------------------------------------------------------------
+
 
 class TestT5W33Pockets:
     """T5: 540 pockets in SRG(36,20,10,12); each vertex silent in exactly 15."""
@@ -186,6 +200,7 @@ class TestT5W33Pockets:
 # ---------------------------------------------------------------------------
 # T6: G2 -> sl3 module decomposition
 # ---------------------------------------------------------------------------
+
 
 class TestT6ModuleDecomposition:
     """T6: Im(O) = 1 + 3 + 3bar under sl3; dim(G2) = dim(sl3) + 6."""
@@ -223,21 +238,33 @@ class TestT6ModuleDecomposition:
 # Output file
 # ---------------------------------------------------------------------------
 
+
 class TestOutputFile:
     def test_json_exists(self):
         assert (ROOT / "data" / "w33_g2_octonion_fano.json").exists()
 
     def test_json_has_required_keys(self):
-        data = json.loads(
-            (ROOT / "data" / "w33_g2_octonion_fano.json").read_text()
-        )
+        data = json.loads((ROOT / "data" / "w33_g2_octonion_fano.json").read_text())
         required = [
-            "T1_deriv_dim", "T1_rank", "T1_nullity", "T1_correct",
-            "T2_deriv_dim", "T2_rank", "T2_correct",
-            "T3_n_triples", "T3_each_pt_in_3", "T3_correct",
-            "T4_orbit_size", "T4_stabilizer", "T4_correct",
-            "T5_num_pockets", "T5_all_15_per_vertex", "T5_correct",
-            "T6_module_dim", "T6_g2_from_sl3", "T6_correct",
+            "T1_deriv_dim",
+            "T1_rank",
+            "T1_nullity",
+            "T1_correct",
+            "T2_deriv_dim",
+            "T2_rank",
+            "T2_correct",
+            "T3_n_triples",
+            "T3_each_pt_in_3",
+            "T3_correct",
+            "T4_orbit_size",
+            "T4_stabilizer",
+            "T4_correct",
+            "T5_num_pockets",
+            "T5_all_15_per_vertex",
+            "T5_correct",
+            "T6_module_dim",
+            "T6_g2_from_sl3",
+            "T6_correct",
         ]
         for key in required:
             assert key in data, f"Missing key: {key}"

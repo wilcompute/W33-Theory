@@ -4,9 +4,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_pg32_artifact_exists_and_valid():
+def _pg32_lines_artifact(tmp_path):
     p = ROOT / "artifacts" / "pg32_lines_from_remaining15.json"
-    assert p.exists(), "pg32 lines artifact missing"
+    if p.exists():
+        return p
+
+    import contextlib
+    import io
+
+    import tools.verify_pg32_remaining15 as verify_pg32
+
+    verify_pg32.ROOT = tmp_path
+    with contextlib.redirect_stdout(io.StringIO()):
+        verify_pg32.main()
+    return tmp_path / "artifacts" / "pg32_lines_from_remaining15.json"
+
+
+def test_pg32_artifact_exists_and_valid(tmp_path):
+    p = _pg32_lines_artifact(tmp_path)
     data = json.loads(p.read_text(encoding="utf-8"))
     summary = data.get("summary", {})
     assert summary.get("n_lines") == 35
@@ -18,8 +33,18 @@ def test_pg32_artifact_exists_and_valid():
 
 
 def test_ckm_27_lines_summary():
-    p = ROOT / "CKM_27_LINES.json"
-    assert p.exists(), "CKM 27-lines summary missing"
+    p = next(
+        (
+            path
+            for path in [
+                ROOT / "CKM_27_LINES.json",
+                ROOT / "archive" / "json" / "CKM_27_LINES.json",
+            ]
+            if path.exists()
+        ),
+        None,
+    )
+    assert p is not None and p.exists(), "CKM 27-lines summary missing"
     d = json.loads(p.read_text(encoding="utf-8"))
     isec = d.get("intersection_structure", {})
     assert isec.get("lines") == 27
@@ -32,8 +57,10 @@ def test_mog_map_builds():
     # THE_EXACT_MAP provides build_mog_map()
     import importlib.util
 
+    path = ROOT / "exploration" / "THE_EXACT_MAP.py"
     spec = importlib.util.spec_from_file_location(
-        "THE_EXACT_MAP", ROOT / "THE_EXACT_MAP.py"
+        "THE_EXACT_MAP",
+        path,
     )
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)

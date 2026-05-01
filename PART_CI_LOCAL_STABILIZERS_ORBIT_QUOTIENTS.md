@@ -1,6 +1,6 @@
 # Part CI — Local Stabilizers and Orbit Quotients
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Parts XCVIII–C identified the local arithmetic phase symmetries:

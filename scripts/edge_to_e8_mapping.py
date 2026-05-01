@@ -27,18 +27,32 @@ if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 # Import construction helpers from existing module
-from HYBRID_BIJECTION_CONSTRUCTION import (
-    build_E8_roots,
-    build_W33,
-    is_E8_root,
-    lift_concat,
-    lift_diff_double,
-    lift_diff_pad,
-    lift_diff_pad_right,
-    lift_half_int,
-    lift_sum_double,
-    lift_sum_pad,
-)
+try:
+    from exploration.HYBRID_BIJECTION_CONSTRUCTION import (
+        build_E8_roots,
+        build_W33,
+        is_E8_root,
+        lift_concat,
+        lift_diff_double,
+        lift_diff_pad,
+        lift_diff_pad_right,
+        lift_half_int,
+        lift_sum_double,
+        lift_sum_pad,
+    )
+except ModuleNotFoundError:  # pragma: no cover - legacy direct import path
+    from HYBRID_BIJECTION_CONSTRUCTION import (
+        build_E8_roots,
+        build_W33,
+        is_E8_root,
+        lift_concat,
+        lift_diff_double,
+        lift_diff_pad,
+        lift_diff_pad_right,
+        lift_half_int,
+        lift_sum_double,
+        lift_sum_pad,
+    )
 
 ARTIFACTS = Path("artifacts")
 ARTIFACTS.mkdir(parents=True, exist_ok=True)
@@ -62,11 +76,18 @@ def anchors_from_strategies():
         lift_half_int,
     ]
     # also try scaled/variant families
-    from HYBRID_BIJECTION_CONSTRUCTION import (
-        lift_concat_variants,
-        lift_diff_scaled_variants,
-        lift_half_int_variants,
-    )
+    try:
+        from exploration.HYBRID_BIJECTION_CONSTRUCTION import (
+            lift_concat_variants,
+            lift_diff_scaled_variants,
+            lift_half_int_variants,
+        )
+    except ModuleNotFoundError:  # pragma: no cover - legacy direct import path
+        from HYBRID_BIJECTION_CONSTRUCTION import (
+            lift_concat_variants,
+            lift_diff_scaled_variants,
+            lift_half_int_variants,
+        )
 
     for lift_fn in strategies:
         for i in range(len(edges)):
@@ -151,18 +172,32 @@ def compute_procrustes(A, B, allow_scale=True):
 
 def all_lift_variants(edge_idx):
     """Return a list of candidate lift vectors for the given edge index."""
-    from HYBRID_BIJECTION_CONSTRUCTION import (
-        lift_concat,
-        lift_concat_variants,
-        lift_diff_double,
-        lift_diff_pad,
-        lift_diff_pad_right,
-        lift_diff_scaled_variants,
-        lift_half_int,
-        lift_half_int_variants,
-        lift_sum_double,
-        lift_sum_pad,
-    )
+    try:
+        from exploration.HYBRID_BIJECTION_CONSTRUCTION import (
+            lift_concat,
+            lift_concat_variants,
+            lift_diff_double,
+            lift_diff_pad,
+            lift_diff_pad_right,
+            lift_diff_scaled_variants,
+            lift_half_int,
+            lift_half_int_variants,
+            lift_sum_double,
+            lift_sum_pad,
+        )
+    except ModuleNotFoundError:  # pragma: no cover - legacy direct import path
+        from HYBRID_BIJECTION_CONSTRUCTION import (
+            lift_concat,
+            lift_concat_variants,
+            lift_diff_double,
+            lift_diff_pad,
+            lift_diff_pad_right,
+            lift_diff_scaled_variants,
+            lift_half_int,
+            lift_half_int_variants,
+            lift_sum_double,
+            lift_sum_pad,
+        )
 
     vecs = []
     for fn in [

@@ -1,6 +1,6 @@
 # Part CXXXIII — Prime-Loop Thermodynamics and the Critical Cycle Clock
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Part CXXXII identified primitive non-backtracking loops as the irreducible semantic atoms of the W33 finite language. The next step is thermodynamic: the primitive loop language has an exact entropy, an exact critical inverse temperature, and an exact zeta singularity.

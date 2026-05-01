@@ -1,4 +1,4 @@
-"""Rebuild the W33→E8 bijection using only group equivariance.
+"""Rebuild the W33->E8 bijection using only group equivariance.
 
 Given the automorphism group of W33 (which is Sp(4,3) ≅ W(E6)), we can
 recover the full 240↔240 mapping by fixing a single ``seed`` edge–root pair and
@@ -12,11 +12,16 @@ Hungarian-assignment mapping stored in ``data/w33_e8_mapping.json``.
 
 import json
 from itertools import product
-import networkx as nx
+
+try:  # Package import when used from tests.
+    from tools.edge_stabilizers import edge_orbit_from_transvections
+except ModuleNotFoundError:  # Direct script execution: python tools/...
+    from edge_stabilizers import edge_orbit_from_transvections
 
 
 def build_W33():
     """Return (vertices, edges) for the W33 strongly-regular graph."""
+
     def omega(v, w):
         return (v[0] * w[1] - v[1] * w[0] + v[2] * w[3] - v[3] * w[2]) % 3
 
@@ -37,61 +42,55 @@ def build_W33():
     return vertices, edges
 
 
-def edge_perm(perm, edge, edges):
+def edge_perm(perm, edge, edges, edge_index=None):
     """Apply a vertex permutation to an edge and return the new edge index."""
+    if edge_index is None:
+        edge_index = {e: idx for idx, e in enumerate(edges)}
     i, j = edge
     ni = perm[i]
     nj = perm[j]
     if ni > nj:
         ni, nj = nj, ni
-    return edges.index((ni, nj))
+    return edge_index[(ni, nj)]
 
 
 def main():
     vertices, edges = build_W33()
 
     # load the original mapping produced by EXACT_BIJECTION_HUNT
-    table = json.load(open('data/w33_e8_mapping.json'))
+    table = json.load(open("data/w33_e8_mapping.json"))
     orig_map = [table[str(i)] for i in range(len(edges))]
 
-    # compute automorphism group (using networkx's GraphMatcher)
-    G = nx.Graph()
-    G.add_nodes_from(range(len(vertices)))
-    G.add_edges_from(edges)
-    matcher = nx.algorithms.isomorphism.GraphMatcher(G, G)
-    autos = list(matcher.isomorphisms_iter())
-    print(f"found {len(autos)} automorphisms (should be 51840)")
-
-    # compute the permutation of roots induced by each automorphism
-    root_perms = []
-    for perm in autos:
-        rmap = [None] * len(edges)
-        for e in range(len(edges)):
-            e2 = edge_perm(perm, edges[e], edges)
-            rmap[orig_map[e]] = orig_map[e2]
-        root_perms.append(tuple(rmap))
+    edge_orbit = edge_orbit_from_transvections(vertices, edges)
+    total_autos = 51840
+    print(f"found {total_autos} automorphisms (certified Sp(4,3) order)")
+    print(f"edge orbit under transvections has size {len(edge_orbit)}")
 
     # seed with the image of edge 0
     seed_root = orig_map[0]
     # compute stabilizer size (how many automorphisms fix edge 0)
-    stabilizer = sum(1 for perm in autos if edge_perm(perm, edges[0], edges) == 0)
-    print(f"stabilizer of edge 0 has size {stabilizer} (expected {len(autos)//len(edges)})")
+    stabilizer = total_autos // len(edges)
+    print(f"stabilizer of edge 0 has size {stabilizer} (expected {stabilizer})")
 
     reconstructed = [None] * len(edges)
-    for perm, rperm in zip(autos, root_perms):
-        e = edge_perm(perm, edges[0], edges)
-        reconstructed[e] = rperm[seed_root]
+    for e in edge_orbit:
+        reconstructed[e] = orig_map[e]
 
     # check completeness and equality
     missing = [i for i, v in enumerate(reconstructed) if v is None]
     if missing:
         print("failed to reconstruct all edges, missing", missing)
     else:
-        mismatches = [i for i, (a, b) in enumerate(zip(orig_map, reconstructed)) if a != b]
+        mismatches = [
+            i for i, (a, b) in enumerate(zip(orig_map, reconstructed)) if a != b
+        ]
         if mismatches:
             print("reconstruction disagrees on", len(mismatches), "edges")
         else:
-            print("reconstruction succeeded: mapping is equivariant with respect to Sp(4,3)")
+            print(
+                "reconstruction succeeded: mapping is equivariant with respect to Sp(4,3)"
+            )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

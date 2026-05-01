@@ -121,8 +121,7 @@ print("\n" + "=" * 80)
 print("PART 3: The Key Insight - Duality")
 print("=" * 80)
 
-print(
-    """
+print("""
 In F₃²:
   - 9 points, 12 lines
   - Each point on 4 lines
@@ -141,8 +140,7 @@ THE DUALITY:
 
 Actually, Golay positions should map to F₃² LINES, not points!
 Then the constraint is: hexad structure matches some line structure.
-"""
-)
+""")
 
 # ============================================================================
 print("\n" + "=" * 80)
@@ -195,8 +193,7 @@ print("\n" + "=" * 80)
 print("PART 5: The MOG Connection")
 print("=" * 80)
 
-print(
-    """
+print("""
 The Miracle Octad Generator (MOG) arranges 24 positions in a 4×6 array.
 For our 12 positions (half of MOG), there's a natural 3×4 or 2×6 structure.
 
@@ -211,8 +208,7 @@ Better: 12 = 4 × 3 (4 groups of 3, like parallel classes!)
 
 This matches the F₃² structure perfectly:
   4 parallel classes × 3 lines per class = 12 lines
-"""
-)
+""")
 
 # ============================================================================
 print("\n" + "=" * 80)
@@ -258,8 +254,7 @@ print("\n" + "=" * 80)
 print("PART 7: The Correct Map via MOG")
 print("=" * 80)
 
-print(
-    """
+print("""
 The MOG for M₁₂ arranges 12 positions in a specific way.
 Standard labeling:
   0  1  2  3
@@ -272,8 +267,7 @@ The 3 rows are: {0,1,2,3}, {4,5,6,7}, {8,9,10,11}
 Map to F₃² lines:
   Column i → Parallel class i
   Position in column → Line within class
-"""
-)
+""")
 
 # Build the MOG-based map
 # Columns (parallel classes) — PROMOTED: columns are positions after applying BEST_TETRACODE_PERM
@@ -342,8 +336,7 @@ print("\n" + "=" * 80)
 print("PART 9: The Symplectic Form")
 print("=" * 80)
 
-print(
-    """
+print("""
 Now we can define the symplectic sign using the F₃² structure.
 
 For positions i, j:
@@ -355,8 +348,7 @@ But lines don't have unique points! Need to pick consistently.
 
 Better approach: Define directly on lines using the CROSS-RATIO
 or a fixed point on each line.
-"""
-)
+""")
 
 
 # Pick a canonical point on each line. (Default behavior is lexicographic minimum.)
@@ -366,22 +358,22 @@ def canonical_point(line):
     return min(line)
 
 
-# Canonical representatives (SA-refined candidate)
+# Canonical representatives (bounded greedy candidate, 1743/2652 sample passes)
 line_rep = [
-    (0, 0),  # line 0
-    (1, 0),  # line 1
-    (0, 0),  # line 2
-    (1, 2),  # line 3
+    (0, 2),  # line 0
+    (0, 0),  # line 1
+    (1, 1),  # line 2
+    (0, 0),  # line 3
     (2, 2),  # line 4
-    (1, 1),  # line 5
-    (2, 0),  # line 6
-    (2, 1),  # line 7
+    (0, 1),  # line 5
+    (0, 1),  # line 6
+    (1, 0),  # line 7
     (1, 1),  # line 8
-    (2, 2),  # line 9
-    (1, 2),  # line 10
-    (2, 1),  # line 11
+    (1, 2),  # line 9
+    (1, 0),  # line 10
+    (2, 2),  # line 11
 ]
-print("Canonical point for each line (SA candidate):")
+print("Canonical point for each line (bounded greedy candidate):")
 for i, l in enumerate(F3_lines):
     print(f"  Line {i}: rep = {line_rep[i]}")
 
@@ -492,8 +484,7 @@ print("\n" + "=" * 80)
 print("FINAL SYNTHESIS")
 print("=" * 80)
 
-print(
-    """
+print("""
 THE EXACT MAP IS FOUND:
 
   Position → MOG column/row → Parallel class/line → F₃² line
@@ -508,5 +499,4 @@ This is the 2-COCYCLE that makes Jacobi work!
 
 The full structure:
   Golay code ↔ Heisenberg on F₃² ↔ sl(27) via Weyl operators
-"""
-)
+""")

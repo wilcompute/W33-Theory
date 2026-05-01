@@ -31,9 +31,14 @@ already the old W33 packet dictionary.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import Any
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,7 +55,7 @@ from w33_modular_generator_packet_bridge import _list_monomials
 
 
 def _load_json(name: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / name).read_text(encoding="utf-8"))
+    return load_bridge_json(name, DATA_DIR)
 
 
 LOW_WEIGHT_LABELS = {
@@ -98,7 +103,9 @@ def build_summary() -> dict[str, Any]:
         for weight in sorted(LOW_WEIGHT_LABELS)
     }
 
-    common_input_grammar = list(common["affine_nonaffine_common_grammar_dictionary"]["common_input_grammar"])
+    common_input_grammar = list(
+        common["affine_nonaffine_common_grammar_dictionary"]["common_input_grammar"]
+    )
     common_input_rows = {
         weight: {
             "weight": weight,
@@ -125,19 +132,22 @@ def build_summary() -> dict[str, Any]:
         "common_input_monomial_dictionary": common_input_rows,
         "modular_weight_packet_ladder_theorem": {
             "weight_4_is_exactly_the_chart_count": chart_count == 4 and dim_M(4) == 1,
-            "weight_6_is_exactly_the_centered_toroidal_shell": centered_shell == 6 and dim_M(6) == 1,
-            "weight_8_is_exactly_the_bosonic_octet": bosonic_octet == 8 and dim_M(8) == 1,
-            "weight_10_is_exactly_the_existing_Phi_4_packet": phi4_packet == 10 and dim_M(10) == 1,
+            "weight_6_is_exactly_the_centered_toroidal_shell": centered_shell == 6
+            and dim_M(6) == 1,
+            "weight_8_is_exactly_the_bosonic_octet": bosonic_octet == 8
+            and dim_M(8) == 1,
+            "weight_10_is_exactly_the_existing_Phi_4_packet": phi4_packet == 10
+            and dim_M(10) == 1,
             "weight_12_is_exactly_the_modular_period_and_toroidal_genus_numerator": (
                 modular_period == genus_numerator == 12 and dim_M(12) == 2
             ),
             "weight_14_is_exactly_dim_G2": g2_dimension == 14 and dim_M(14) == 1,
             "the_first_modular_collision_is_exactly_q_times_4_equals_lambda_times_6": (
-                q * 4 == lam * 6 == 12
-                and _list_monomials(12) == [(3, 0), (0, 2)]
+                q * 4 == lam * 6 == 12 and _list_monomials(12) == [(3, 0), (0, 2)]
             ),
             "the_unique_low_weight_modular_ladder_4_6_8_10_14_plus_the_first_collision_12_is_the_old_W33_packet_ladder": (
-                low_weight_packet_dictionary == {4: 4, 6: 6, 8: 8, 10: 10, 12: 12, 14: 14}
+                low_weight_packet_dictionary
+                == {4: 4, 6: 6, 8: 8, 10: 10, 12: 12, 14: 14}
             ),
             "the_shared_affine_nonaffine_input_grammar_16_20_24_36_40_is_already_a_modular_subgrammar": (
                 common_input_grammar == [16, 20, 24, 36, 40]

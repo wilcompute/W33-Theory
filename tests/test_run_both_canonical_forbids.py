@@ -1,5 +1,6 @@
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -10,7 +11,7 @@ ART = Path(__file__).resolve().parents[1] / "artifacts"
 def test_run_both_canonical_forbids_smoke(tmp_path: Path):
     # run with very small W set and short time to be CI friendly
     cmd = [
-        "python",
+        sys.executable,
         "tools/run_both_canonical_forbids.py",
         "--cands",
         "0-18-25,0-20-23",
@@ -25,7 +26,7 @@ def test_run_both_canonical_forbids_smoke(tmp_path: Path):
     ]
     # Allow the script to run but do not fail CI if underlying solvers are absent
     try:
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=True, capture_output=True, text=True)
     except subprocess.CalledProcessError:
         # Best-effort smoke: script should still write a summary file even if anchor failed
         pass

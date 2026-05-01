@@ -1,6 +1,6 @@
 # Part LXXXIX — Closed Operator Algebra and Polar Decomposition
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 27, 2026
 
 Part LXXXVIII gave the shell projector calculus. This part shows that the raw Hamiltonian, normalized Dirac operator, grading, complex structure, massive phase operator, and supercharges all live inside one closed finite operator algebra.

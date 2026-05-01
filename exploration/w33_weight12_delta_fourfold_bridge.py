@@ -24,10 +24,9 @@ moonshine quotient geometry meet.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import Any
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -37,6 +36,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 if str(ROOT / "exploration") not in sys.path:
     sys.path.insert(0, str(ROOT / "exploration"))
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 from w33_eisenstein_delta_moonshine import (
     RAMANUJAN_TAU,
@@ -48,15 +52,16 @@ from w33_eisenstein_delta_moonshine import (
 )
 from w33_hecke_delta import tau as hecke_tau
 from w33_modular_dimension_formula import dim_S
-from w33_modular_weight12_line_triad_bridge import build_summary as build_line_triad_summary
+from w33_modular_weight12_line_triad_bridge import (
+    build_summary as build_line_triad_summary,
+)
 from w33_weight12_moonshine_gap_bridge import build_summary as build_gap_summary
-
 
 LFUNCTION_DELTA_SUMMARY_PATH = DATA_DIR / "w33_lfunction_delta_summary.json"
 
 
 def _load_lfunction_delta_summary() -> dict[str, Any]:
-    return json.loads(LFUNCTION_DELTA_SUMMARY_PATH.read_text(encoding="utf-8"))
+    return load_bridge_json(LFUNCTION_DELTA_SUMMARY_PATH.name, DATA_DIR)
 
 
 def build_summary() -> dict[str, Any]:
@@ -83,27 +88,42 @@ def build_summary() -> dict[str, Any]:
     theorem = {
         "weight_12_has_the_unique_cusp_line_dim_S_12_equals_1": dim_S(12) == 1,
         "delta_is_the_cusp_line_in_the_12_455_691_weight_12_triad": (
-            line_triad["weight12_line_triad_theorem"]["the_cusp_line_is_1728_Delta_with_vector_1_minus_1"]
-            and line_triad["weight12_line_triad_theorem"]["the_integral_weight12_line_triad_satisfies_12I_equals_691L_plus_455D"]
+            line_triad["weight12_line_triad_theorem"][
+                "the_cusp_line_is_1728_Delta_with_vector_1_minus_1"
+            ]
+            and line_triad["weight12_line_triad_theorem"][
+                "the_integral_weight12_line_triad_satisfies_12I_equals_691L_plus_455D"
+            ]
         ),
-        "delta_equals_eta_24_equals_the_eisenstein_difference": delta_identity["all_match"],
+        "delta_equals_eta_24_equals_the_eisenstein_difference": delta_identity[
+            "all_match"
+        ],
         "the_tau_packet_matches_the_lfunction_delta_coefficients_on_the_first_twelve_terms": all(
             row["match"] for row in first_twelve_match.values()
-        ) and lfunction_delta["summary_chain"]["tau_first_twelve_match"],
+        )
+        and lfunction_delta["summary_chain"]["tau_first_twelve_match"],
         "the_tau_packet_is_hecke_multiplicative": multiplicativity["all_hold"],
-        "the_tau_packet_satisfies_the_ramanujan_mod_691_congruence": ramanujan_691["all_hold"],
-        "the_completed_lfunction_satisfies_Lambda_s_equals_Lambda_12_minus_s": functional_equation["all_ok"],
+        "the_tau_packet_satisfies_the_ramanujan_mod_691_congruence": ramanujan_691[
+            "all_hold"
+        ],
+        "the_completed_lfunction_satisfies_Lambda_s_equals_Lambda_12_minus_s": functional_equation[
+            "all_ok"
+        ],
         "the_central_value_Lambda_6_is_real_and_positive": (
             central["Lambda_real_positive"] and central["Lambda_imag_negligible"]
         ),
         "delta_is_the_denominator_of_the_leech_moonshine_quotient": (
-            moonshine_gap["weight12_moonshine_gap_theorem"]["j_equals_theta_leech_over_delta_plus_720"]
-            and moonshine_gap["weight12_moonshine_gap_theorem"]["J_equals_theta_leech_over_delta_minus_24"]
+            moonshine_gap["weight12_moonshine_gap_theorem"][
+                "j_equals_theta_leech_over_delta_plus_720"
+            ]
+            and moonshine_gap["weight12_moonshine_gap_theorem"][
+                "J_equals_theta_leech_over_delta_minus_24"
+            ]
         ),
     }
-    theorem["the_weight_12_delta_line_closes_algebraic_arithmetic_analytic_and_moonshine_data"] = all(
-        theorem.values()
-    )
+    theorem[
+        "the_weight_12_delta_line_closes_algebraic_arithmetic_analytic_and_moonshine_data"
+    ] = all(theorem.values())
 
     return {
         "weight12_delta_fourfold_dictionary": {

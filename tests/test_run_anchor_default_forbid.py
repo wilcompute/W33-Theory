@@ -1,5 +1,6 @@
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -16,7 +17,7 @@ def test_run_anchor_uses_config_default(tmp_path: Path):
     forbid_str = f"{cf[0]}-{cf[1]}-{cf[2]}"
 
     cmd = [
-        "python",
+        sys.executable,
         "tools/run_anchor_and_archive.py",
         "--time",
         "10",
@@ -29,7 +30,7 @@ def test_run_anchor_uses_config_default(tmp_path: Path):
     ]
     # best-effort: allow failures but expect the anchor summary file to be created for canonical forbid
     try:
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=True, capture_output=True, text=True)
     except subprocess.CalledProcessError:
         pass
 

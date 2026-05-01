@@ -1,6 +1,6 @@
 # Part CX — Fixed-Spread Residue Design and C9 Eigenspace
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CIX found the hidden 20 as the degree of the one-line spread-intersection graph. This part localizes the result inside a single fixed spread.

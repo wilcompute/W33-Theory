@@ -19,12 +19,11 @@ together.
 
 from __future__ import annotations
 
-from functools import lru_cache
 import json
-from pathlib import Path
 import sys
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
-
 
 if __package__ in {None, ""}:
     ROOT = Path(__file__).resolve().parents[1]
@@ -37,17 +36,23 @@ from w33_transport_filtered_shadow_bridge import (
     build_transport_filtered_shadow_bridge_summary,
 )
 
-
-DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_transport_nilpotent_glue_obstruction_bridge_summary.json"
+DEFAULT_OUTPUT_PATH = (
+    ROOT / "data" / "w33_transport_nilpotent_glue_obstruction_bridge_summary.json"
+)
 
 
 def _transport_cocycle_summary() -> dict[str, Any]:
+    fallback_path = ROOT / "data" / "w33_transport_ternary_cocycle_bridge_summary.json"
+    if fallback_path.exists():
+        return json.loads(fallback_path.read_text(encoding="utf-8"))
+
     try:
-        from w33_transport_ternary_cocycle_bridge import build_transport_ternary_cocycle_summary
+        from w33_transport_ternary_cocycle_bridge import (
+            build_transport_ternary_cocycle_summary,
+        )
     except ModuleNotFoundError as exc:
         if exc.name != "networkx":
             raise
-        fallback_path = ROOT / "data" / "w33_transport_ternary_cocycle_bridge_summary.json"
         return json.loads(fallback_path.read_text(encoding="utf-8"))
     return build_transport_ternary_cocycle_summary()
 
@@ -73,7 +78,9 @@ def build_transport_nilpotent_glue_obstruction_bridge_summary() -> dict[str, Any
             "logical_qutrits": internal_operator["logical_qutrits"],
         },
         "external_split_filtered_shadow": {
-            "ordered_filtration_dimensions": external_filtration["ordered_filtration_dimensions"],
+            "ordered_filtration_dimensions": external_filtration[
+                "ordered_filtration_dimensions"
+            ],
             "ordered_line_types": external_filtration["ordered_line_types"],
             "is_split": external_filtration["is_split"],
             "extension_class_zero": external_filtration["is_split"],
@@ -96,7 +103,8 @@ def build_transport_nilpotent_glue_obstruction_bridge_summary() -> dict[str, Any
                 internal_operator["dimension"] == 162
                 and internal_operator["rank"] == 81
                 and internal_operator["square_zero"] is True
-                and external_filtration["ordered_filtration_dimensions"] == [81, 162, 81]
+                and external_filtration["ordered_filtration_dimensions"]
+                == [81, 162, 81]
                 and external_filtration["is_split"] is True
             ),
             "current_bridge_reaches_head_middle_tail_and_ordering_but_not_nilpotent_glue": (
@@ -124,7 +132,9 @@ def build_transport_nilpotent_glue_obstruction_bridge_summary() -> dict[str, Any
 
 def write_summary(path: Path = DEFAULT_OUTPUT_PATH) -> Path:
     path.write_text(
-        json.dumps(build_transport_nilpotent_glue_obstruction_bridge_summary(), indent=2),
+        json.dumps(
+            build_transport_nilpotent_glue_obstruction_bridge_summary(), indent=2
+        ),
         encoding="utf-8",
     )
     return path

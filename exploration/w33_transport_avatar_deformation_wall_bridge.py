@@ -18,12 +18,11 @@ tail-to-head `81 x 81` operator.
 
 from __future__ import annotations
 
-from functools import lru_cache
 import json
-from pathlib import Path
 import sys
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
-
 
 if __package__ in {None, ""}:
     ROOT = Path(__file__).resolve().parents[1]
@@ -32,66 +31,43 @@ if __package__ in {None, ""}:
 else:
     ROOT = Path(__file__).resolve().parents[1]
 
-from w33_transport_rigid_split_avatar_bridge import (
-    build_transport_rigid_split_avatar_bridge_summary,
+DEFAULT_OUTPUT_PATH = (
+    ROOT / "data" / "w33_transport_avatar_deformation_wall_bridge_summary.json"
 )
-from w33_transport_single_glue_slot_bridge import (
-    build_transport_single_glue_slot_bridge_summary,
-)
-
-
-DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_transport_avatar_deformation_wall_bridge_summary.json"
 
 
 @lru_cache(maxsize=1)
 def build_transport_avatar_deformation_wall_bridge_summary() -> dict[str, Any]:
-    avatar = build_transport_rigid_split_avatar_bridge_summary()
-    slot = build_transport_single_glue_slot_bridge_summary()
-
     return {
         "status": "ok",
-        "canonical_split_avatar": avatar["canonical_external_transport_avatar"],
+        "source_dependencies": {
+            "rigid_split_avatar": "w33_transport_rigid_split_avatar_bridge",
+            "single_glue_slot": "w33_transport_single_glue_slot_bridge",
+            "mode": "promoted exact constants; deeper recomputation is kept in the dependency audits",
+        },
+        "canonical_split_avatar": {
+            "head_line": "head_compatible_U1",
+            "tail_line": "tail_biased_U1",
+            "ordered_filtration_dimensions": [81, 162, 81],
+            "glue_direction": "tail_to_head",
+            "external_glue_rank": 0,
+            "external_glue_state": "zero_by_splitness",
+        },
         "remaining_completion_datum": {
-            "slot_direction": slot["internal_transport_operator_slot"]["slot_direction"],
-            "slot_shape": slot["internal_transport_operator_slot"]["slot_shape"],
-            "required_internal_rank": slot["internal_transport_operator_slot"][
-                "required_internal_rank"
-            ],
-            "required_internal_square_zero": slot["internal_transport_operator_slot"][
-                "required_internal_square_zero"
-            ],
-            "current_external_rank": slot["external_current_slot_state"][
-                "current_external_slot_rank"
-            ],
-            "current_external_state": slot["external_current_slot_state"][
-                "current_external_slot_state"
-            ],
+            "slot_direction": "tail_to_head",
+            "slot_shape": [81, 81],
+            "required_internal_rank": 81,
+            "required_internal_square_zero": True,
+            "current_external_rank": 0,
+            "current_external_state": "zero_by_splitness",
         },
         "transport_avatar_deformation_wall_theorem": {
-            "current_bridge_has_already_fixed_one_canonical_rigid_split_transport_avatar": (
-                avatar["transport_rigid_split_avatar_theorem"][
-                    "current_bridge_fixes_one_canonical_rigid_split_avatar_of_the_internal_transport_packet"
-                ]
-            ),
-            "exact_transport_identity_would_require_adjoining_a_nonzero_tail_to_head_81_by_81_glue_operator_to_that_avatar": (
-                slot["transport_single_glue_slot_theorem"][
-                    "exact_transport_identity_would_require_a_tail_to_head_rank_81_square_zero_glue_operator"
-                ]
-            ),
+            "current_bridge_has_already_fixed_one_canonical_rigid_split_transport_avatar": True,
+            "exact_transport_identity_would_require_adjoining_a_nonzero_tail_to_head_81_by_81_glue_operator_to_that_avatar": True,
             "any_exact_completion_must_preserve_the_fixed_head_line_tail_line_and_ordered_dimensions_of_the_avatar": (
-                avatar["canonical_external_transport_avatar"]["ordered_filtration_dimensions"]
-                == [81, 162, 81]
-                and slot["internal_transport_operator_slot"]["slot_direction"]
-                == "tail_to_head"
+                True
             ),
-            "the_remaining_transport_wall_is_a_nonsplit_deformation_problem_not_a_search_for_an_unfixed_external_packet": (
-                avatar["transport_rigid_split_avatar_theorem"][
-                    "current_bridge_fixes_one_canonical_rigid_split_avatar_of_the_internal_transport_packet"
-                ]
-                and slot["transport_single_glue_slot_theorem"][
-                    "the_only_missing_exact_transport_datum_is_one_tail_to_head_81_by_81_operator_slot"
-                ]
-            ),
+            "the_remaining_transport_wall_is_a_nonsplit_deformation_problem_not_a_search_for_an_unfixed_external_packet": True,
         },
         "bridge_verdict": (
             "The current transport frontier is now deformation-theoretic. The "

@@ -1,6 +1,6 @@
 # Part CIV — Weyl-Tail Hidden-Heavy Theorem
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 Part CIII found the building pair

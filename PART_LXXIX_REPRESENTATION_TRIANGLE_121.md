@@ -103,12 +103,27 @@ are exact isometries. They are orthogonal:
 \boxed{B_c^TU_c=0.}
 \]
 
+For q=3 the target-side module sum is the qutrit Hilbert dimension:
+
+\[
+\boxed{|S|+|Q|=q^4=81.}
+\]
+
+And the representation-triangle uniqueness gap is
+
+\[
+\boxed{(k-1)^2-v-q^4=q(q-3)(q+1),}
+\]
+
+so the exact equality 121=v+q^4 occurs only at q=3.
+
 Together,
 
 \[
 \boxed{
 \frac{B_cB_c^T+U_cU_c^T}{18}
 =
+
 I-\frac{J}{40}.
 }
 \]
@@ -192,3 +207,10 @@ This part compresses that chain into
 \text{sector-sharing triangle of modules with total dimension }(k-1)^2.
 }
 \]
+
+## Audit Implementation
+
+Executable surface:
+
+- scripts/w33_representation_triangle_121_audit.py
+- tests/test_w33_representation_triangle_121_audit.py

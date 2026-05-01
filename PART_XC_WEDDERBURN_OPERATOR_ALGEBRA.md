@@ -1,6 +1,6 @@
 # Part XC — Wedderburn Collapse of the Finite Operator Algebra
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 27, 2026
 
 Part LXXXIX closed the operator algebra around H, |H|, D, Gamma, J, K, Q, and d.

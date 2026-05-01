@@ -1,6 +1,6 @@
 # Part CXXIV — S4 Relative-Cycle Overlap Law for Qutrit MUB Frames
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 29, 2026
 
 Part CXXIII found the A2 chirality quotient of the complete two-qutrit MUB-frame scheme.

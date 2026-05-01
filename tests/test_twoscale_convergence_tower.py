@@ -16,15 +16,16 @@ The two decay channels:
 
 from fractions import Fraction
 from math import comb, pi
+
 import pytest
 
 # W(3,3) parameters
 v, k, l, m, q = 40, 12, 2, 4, 3
 Phi3, Phi4, Phi6 = 13, 10, 7
 f, g = 24, 15
-s = k // l      # = 6
+s = k // l  # = 6
 N = comb(s, q)  # = 20
-vol = s * N     # = 120
+vol = s * N  # = 120
 
 # Geodesic diameter of Gr(3,6) with Fubini-Study metric
 GEO_DIAM = pi / 2  # = 1.5708...
@@ -76,7 +77,7 @@ class TestTwoscaleConvergenceTower:
     def test_N_correction_dominant_over_topo(self):
         """N^{-n} >> vol^{-n} for all n >= 1 (N < vol)."""
         for n in range(1, 8):
-            assert N**(-n) > vol**(-n)
+            assert Fraction(1, N**n) > Fraction(1, vol**n)
 
     # --- Geodesic convergence ---
 
@@ -91,13 +92,13 @@ class TestTwoscaleConvergenceTower:
 
     def test_error_n5_small(self):
         """At n=5: error < 1e-6 relative to geodesic diameter."""
-        error_n5 = N**(-5)  # = 1/3200000 ~ 3e-7
-        assert error_n5 < 1e-6
+        error_n5 = Fraction(1, N**5)  # = 1/3200000 ~ 3e-7
+        assert error_n5 < Fraction(1, 1_000_000)
 
     def test_convergence_is_geometric(self):
         """Convergence is geometric: error(n+1)/error(n) = 1/N = 1/20."""
         for n in range(1, 6):
-            assert N**(-(n+1)) * N == N**(-n)  # exact
+            assert Fraction(1, N ** (n + 1)) * N == Fraction(1, N**n)
 
     # --- Three-term asymptotic structure ---
 
@@ -109,14 +110,14 @@ class TestTwoscaleConvergenceTower:
         # Verify the rate hierarchy:
         # N^{-n} / vol^{-n} = (vol/N)^n = s^n = 6^n -> infinity
         for n in range(1, 6):
-            ratio = (vol / N)**n
+            ratio = Fraction(vol, N) ** n
             assert ratio == s**n
 
     def test_main_correction_channel(self):
         """Main correction channel N=20 comes from transverse Plucker shell."""
-        assert N == comb(s, q)    # Plucker 3-form dim
-        assert N == l * Phi4      # W(3,3) parameter product
-        assert N == v // 2        # half the vertex count
+        assert N == comb(s, q)  # Plucker 3-form dim
+        assert N == l * Phi4  # W(3,3) parameter product
+        assert N == v // 2  # half the vertex count
 
     def test_topological_channel(self):
         """Topological channel vol=120 = s*N = (k/lambda)*C(k/lambda,3)."""

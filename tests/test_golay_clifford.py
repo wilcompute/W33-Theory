@@ -1,10 +1,20 @@
 import json
 import subprocess
+import sys
 from pathlib import Path
+
 
 def test_golay_clifford_mapping(tmp_path):
     repo = Path(__file__).resolve().parents[1]
-    res = subprocess.run([".venv\\Scripts\\python.exe", str(repo / "tools" / "golay_clifford.py")], cwd=repo)
+    res = subprocess.run(
+        [
+            sys.executable,
+            str(repo / "tools" / "golay_clifford.py"),
+            "--mapping-only",
+        ],
+        cwd=repo,
+        timeout=30,
+    )
     assert res.returncode == 0
     jsonf = repo / "artifacts" / "golay_clifford_mapping.json"
     csvf = repo / "artifacts" / "golay_clifford_mapping.csv"
@@ -23,9 +33,11 @@ def test_golay_clifford_mapping(tmp_path):
         assert bin(w).count("1") % 2 == 0
     # closure sampling: multiply a few random pairs and ensure result appears
     import random
+
     monos = [tuple(v) for v in mapping.values()]
     mono_set = set(monos)
-    def mult(a,b):
+
+    def mult(a, b):
         sign = 1
         prod = list(a)
         for x in b:
@@ -41,7 +53,8 @@ def test_golay_clifford_mapping(tmp_path):
                     pos += 1
                 prod.insert(pos, x)
         return tuple(prod)
+
     for _ in range(100):
         a = random.choice(monos)
         b = random.choice(monos)
-        assert mult(a,b) in mono_set
+        assert mult(a, b) in mono_set

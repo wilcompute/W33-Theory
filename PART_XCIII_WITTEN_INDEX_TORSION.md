@@ -1,6 +1,6 @@
 # Part XCIII — Witten Index and Torsion Collapse
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 28, 2026
 
 The Morita quiver has vertices

@@ -54,7 +54,17 @@ from pathlib import Path
 from typing import List
 
 ROOT = Path(__file__).resolve().parent
-BUNDLE = ROOT / "W33_Z3_curvature_cohomology_on_quotient_bundle.zip"
+BUNDLE_CANDIDATES = (
+    ROOT / "W33_Z3_curvature_cohomology_on_quotient_bundle.zip",
+    ROOT.parent
+    / "archive"
+    / "zip"
+    / "W33_Z3_curvature_cohomology_on_quotient_bundle.zip",
+)
+BUNDLE = next(
+    (candidate for candidate in BUNDLE_CANDIDATES if candidate.exists()),
+    BUNDLE_CANDIDATES[0],
+)
 
 # Q = complement(W33) = SRG(40,27,18,18)
 # W33 = SRG(40,12,2,4); complement parameters: k'=27, lambda'=18, mu'=18
@@ -66,7 +76,9 @@ def _load_bundle() -> dict:
         tri_orbits = json.loads(zf.read("triangle_orbits.json"))
         edge_orbits_data = json.loads(zf.read("edge_orbits.json"))
         delta_ranks = json.loads(zf.read("delta_system_ranks.json"))
-        curv_raw = zf.read("curvature_z3_on_triangles_3240.csv").decode("utf-8", errors="replace")
+        curv_raw = zf.read("curvature_z3_on_triangles_3240.csv").decode(
+            "utf-8", errors="replace"
+        )
     return {
         "tri_orbits": tri_orbits,
         "edge_orbits_data": edge_orbits_data,
@@ -88,16 +100,20 @@ def analyze() -> dict:
     t1_total_edges = t1_n_vertices * t1_degree // 2
     t1_num_edge_orbits = eo["num_edge_orbits"]
     t1_edge_orbit_size = eo["edge_orbit_size"]
-    t1_edge_orbit_matches = (t1_edge_orbit_size == t1_total_edges)
-    t1_single_edge_orbit = (t1_num_edge_orbits == 1)
+    t1_edge_orbit_matches = t1_edge_orbit_size == t1_total_edges
+    t1_single_edge_orbit = t1_num_edge_orbits == 1
 
     # T2: Triangle orbits
     t2_total_triangles = len(curv_rows)
     t2_num_triangle_orbits = tri_orb["num_triangle_orbits"]
     t2_orbit_sizes = tri_orb["orbit_sizes"]
-    t2_flat_count = next(o["size"] for o in tri_orb["orbit_representatives"] if o["F_z3"] == 0)
-    t2_curved_count = next(o["size"] for o in tri_orb["orbit_representatives"] if o["F_z3"] != 0)
-    t2_total_check = (t2_flat_count + t2_curved_count == t2_total_triangles)
+    t2_flat_count = next(
+        o["size"] for o in tri_orb["orbit_representatives"] if o["F_z3"] == 0
+    )
+    t2_curved_count = next(
+        o["size"] for o in tri_orb["orbit_representatives"] if o["F_z3"] != 0
+    )
+    t2_total_check = t2_flat_count + t2_curved_count == t2_total_triangles
     t2_correct = (
         t2_num_triangle_orbits == 2
         and t2_flat_count == 360
@@ -109,14 +125,14 @@ def analyze() -> dict:
     F_dist = dict(sorted(Counter(int(r["F_z3"]) for r in curv_rows).items()))
     t3_flat_count_csv = F_dist.get(0, 0)
     t3_flat_from_lines = 90 * 4  # 90 non-isotropic lines × C(4,3)=4 triples each
-    t3_flat_count_correct = (t3_flat_count_csv == t3_flat_from_lines)
+    t3_flat_count_correct = t3_flat_count_csv == t3_flat_from_lines
     t3_interpretation = tri_orb["interpretation"]
 
     # T4: Curvature distribution
     t4_F_dist = F_dist
     t4_total = sum(F_dist.values())
     t4_curved = t4_total - F_dist.get(0, 0)
-    t4_curved_correct = (t4_curved == 2880)
+    t4_curved_correct = t4_curved == 2880
     t4_F1 = F_dist.get(1, 0)
     t4_F2 = F_dist.get(2, 0)
 
@@ -125,7 +141,7 @@ def analyze() -> dict:
     t5_n_equations = dr["equations_triangles"]  # 3240
     t5_rank_delta = dr["rank_delta"]  # 501
     t5_rank_augmented = dr["rank_augmented"]  # 502
-    t5_non_exact = (t5_rank_augmented > t5_rank_delta)
+    t5_non_exact = t5_rank_augmented > t5_rank_delta
     t5_conclusion = dr["conclusion"]
 
     # T6: Cohomological obstruction
@@ -173,22 +189,47 @@ def main():
     summary = analyze()
     out = ROOT / "data" / "w33_z3_curvature_cohomology.json"
     out.write_text(json.dumps(summary, indent=2))
-    print("T1 SRG(40,27,18,18):", summary["T1_n_vertices"],
-          "vertices,", summary["T1_total_edges"], "edges")
+    print(
+        "T1 SRG(40,27,18,18):",
+        summary["T1_n_vertices"],
+        "vertices,",
+        summary["T1_total_edges"],
+        "edges",
+    )
     print("T1 single edge orbit:", summary["T1_single_edge_orbit"])
-    print("T2 triangle orbits:", summary["T2_num_triangle_orbits"],
-          " flat:", summary["T2_flat_count"],
-          " curved:", summary["T2_curved_count"],
-          " correct:", summary["T2_correct"])
-    print("T3 flat locus from lines:", summary["T3_flat_from_lines"],
-          "=CSV:", summary["T3_flat_count_csv"],
-          " correct:", summary["T3_flat_count_correct"])
+    print(
+        "T2 triangle orbits:",
+        summary["T2_num_triangle_orbits"],
+        " flat:",
+        summary["T2_flat_count"],
+        " curved:",
+        summary["T2_curved_count"],
+        " correct:",
+        summary["T2_correct"],
+    )
+    print(
+        "T3 flat locus from lines:",
+        summary["T3_flat_from_lines"],
+        "=CSV:",
+        summary["T3_flat_count_csv"],
+        " correct:",
+        summary["T3_flat_count_correct"],
+    )
     print("T4 F distribution:", summary["T4_F_dist"])
-    print("T5 non-exact:", summary["T5_non_exact"],
-          " rank delta:", summary["T5_rank_delta"],
-          " rank augmented:", summary["T5_rank_augmented"])
-    print("T6 defect:", summary["T6_defect"],
-          " gauge freedom:", summary["T6_gauge_freedom"])
+    print(
+        "T5 non-exact:",
+        summary["T5_non_exact"],
+        " rank delta:",
+        summary["T5_rank_delta"],
+        " rank augmented:",
+        summary["T5_rank_augmented"],
+    )
+    print(
+        "T6 defect:",
+        summary["T6_defect"],
+        " gauge freedom:",
+        summary["T6_gauge_freedom"],
+    )
     print("wrote data/w33_z3_curvature_cohomology.json")
 
 

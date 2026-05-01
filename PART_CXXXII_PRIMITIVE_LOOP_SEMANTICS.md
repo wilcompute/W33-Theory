@@ -1,6 +1,6 @@
 # Part CXXXII — Primitive Loop Semantics and the Euler Product Language
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 The Cycle Clock Theory book frames reality as a finite code/language with self-referential symbols, relational rules, syntactical freedom, trit efficiency, cycle clocks, least change, and probability-generating dynamics.  Parts CXXVIII--CXXXI turned this into W33 loop probability and trit-action.  This part adds the missing language-theoretic layer:

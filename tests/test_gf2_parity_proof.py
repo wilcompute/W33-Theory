@@ -37,6 +37,7 @@ def test_certificates_are_contradictions():
 
 
 def test_minimal_hitting_sets_contains_020_23():
+    ensure_minimal_hitting_sets()
     hs = json.load(open(ART / "minimal_hitting_sets.json", "r", encoding="utf-8"))
     hitting_sets = hs.get("hitting_sets", [])
     assert any([[0, 20, 23]] == hs_ for hs_ in hitting_sets) or any(

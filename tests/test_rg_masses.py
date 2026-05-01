@@ -1,18 +1,34 @@
+import json
+import os
 import subprocess
 import sys
-import os
-import json
+from pathlib import Path
 
-def test_rg_script_runs():
+import pytest
+
+OUTPUT = Path("RG_MASSES.json")
+SCRIPT = Path("exploration") / "RG_PRECISION_MASSES.py"
+
+
+@pytest.fixture(scope="module")
+def rg_masses_data():
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"
-    res = subprocess.run([sys.executable, "RG_PRECISION_MASSES.py"], env=env)
-    assert res.returncode == 0
-    assert os.path.exists("RG_MASSES.json")
+    OUTPUT.unlink(missing_ok=True)
+    res = subprocess.run(
+        [sys.executable, str(SCRIPT)], env=env, capture_output=True, text=True
+    )
+    assert res.returncode == 0, res.stdout + res.stderr
+    assert OUTPUT.exists()
+    return json.loads(OUTPUT.read_text(encoding="utf-8"))
 
 
-def test_rg_output_structure():
-    data = json.load(open("RG_MASSES.json"))
+def test_rg_script_runs(rg_masses_data):
+    assert "masses_predicted" in rg_masses_data
+
+
+def test_rg_output_structure(rg_masses_data):
+    data = rg_masses_data
     assert "masses_predicted" in data
     preds = data["masses_predicted"]
     # ensure top mass prediction is nonzero numeric

@@ -52,6 +52,36 @@
           "36": 24
         }
       },
+      "representation_triangle_121": {
+        "line_module": "40 = 1 + 15 + 24",
+        "spread_module": "36 = 1 + 15 + 20",
+        "anti_line_quotient_module": "45 = 1 + 24 + 20",
+        "total_dimension_identity": "40 + 36 + 45 = 121 = (k - 1)^2",
+        "sector_double_count_identity": "3 + 2(15 + 20 + 24) = 121",
+        "nonbacktracking_outdegree": "k - 1 = 11",
+        "common_singular_constant": "sqrt(18) = 3sqrt(2)",
+        "sector_sharing_triangle": {
+          "L_intersect_S": "1 + 15",
+          "L_intersect_Q": "1 + 24",
+          "S_intersect_Q": "1 + 20",
+          "hidden_target_sector": 20
+        }
+      },
+      "chiral_exact_sequence": {
+        "positive_chirality": "P_+ = L_15 + L_24 + S_20",
+        "negative_chirality": "P_- = S_15 + Q_24 + Q_20",
+        "harmonic_sector": "H = 1_L + 1_S + 1_Q",
+        "nonzero_forward_blocks": [
+          "S_15 -> L_15",
+          "Q_24 -> L_24",
+          "Q_20 -> S_20"
+        ],
+        "exact_dimension_identity": "2(15 + 24 + 20) = 118",
+        "total_dimension_identity": "121 = 59_+ + 59_- + 3_harm",
+        "cohomology_statement": "the only cohomology is the three module means",
+        "rank_Q": 59,
+        "nullity_Q": 62
+      },
       "target_side_geometry": {
         "spread_etf": {
           "frame_type": "ETF(36,15)",
@@ -109,7 +139,25 @@
               "12": 1
             }
           },
-          "positive_sign_isomorphic_to_transport_graph": true
+          "positive_sign_isomorphic_to_transport_graph": true,
+          "canonical_transport_carrier": {
+            "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+            "anti_lines_equal_center_quads_after_coordinate_conversion": true,
+            "duplicate_pairing_equals_center_quad_antipodes": true,
+            "duplicate_classes_equal_quotient_point_quad_pairs": true,
+            "paired_supports_equal_quotient_point_supports": true,
+            "quotient_line_count": 27,
+            "support_partitions_equal_quotient_lines": true,
+            "line_size_distribution": {
+              "5": 27
+            },
+            "point_line_incidence_distribution": {
+              "3": 45
+            },
+            "negative_sign_graph_five_cliques_equal_quotient_lines": true,
+            "positive_sign_equals_transport_graph_without_relabeling": true,
+            "negative_sign_equals_quotient_point_graph_without_relabeling": true
+          }
         },
         "shared_naimark_shadow": {
           "shared_shadow_dimension": 21,
@@ -122,6 +170,32 @@
           ],
           "naimark_complement_swaps_sign_graphs": true
         }
+      },
+      "two_spectral_shells": {
+        "light_shell_rank": 78,
+        "heavy_shell_rank": 40,
+        "harmonic_dimension": 3,
+        "total_dimension": 121,
+        "shell_scale_ratio": 2.0,
+        "parseval_identity_holds": true
+      },
+      "mass_weighted_hodge": {
+        "rank_d": 59,
+        "nullity_d": 62,
+        "forward_blocks_count": 3,
+        "shell_light_eigenvalue": 18.0,
+        "shell_heavy_eigenvalue": 72.0,
+        "laplacian_spectrum_harmonic_multiplicity": 3,
+        "laplacian_spectrum_light_shell_multiplicity": 78,
+        "laplacian_spectrum_heavy_shell_multiplicity": 40
+      },
+      "projector_calculus_propagator": {
+        "rank_P0": 3,
+        "rank_P_light": 78,
+        "rank_P_heavy": 40,
+        "projector_calculus_is_closed": true,
+        "finite_propagator_system_complete": true,
+        "H_determines_all_propagators": true
       },
       "signed_sector_operator": "S = A_iso - A_non = 2A + I - J",
       "seidel_spectrum": {

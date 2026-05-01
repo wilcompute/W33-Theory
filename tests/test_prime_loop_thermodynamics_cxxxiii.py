@@ -47,7 +47,9 @@ def S(lam: int, n: int) -> int:
 
 
 def Z(n: int) -> int:
-    return M_MINUS_N * (1 + (-1) ** n) + sum(mult * S(lam, n) for lam, mult in ADJ_EIGS.items())
+    return M_MINUS_N * (1 + (-1) ** n) + sum(
+        mult * S(lam, n) for lam, mult in ADJ_EIGS.items()
+    )
 
 
 def primitive_count(n: int) -> int:

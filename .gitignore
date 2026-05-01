@@ -124,6 +124,7 @@ data/*
 !data/atlas/
 !data/atlas/**
 !data/w33_e8_mapping.json
+!data/w33_s3_sheet_transport.json
 !data/w33_transport_ternary_cocycle_bridge_summary.json
 !data/w33_yukawa_unipotent_reduction_bridge_summary.json
 
@@ -173,3 +174,7 @@ archive/dirs/
 
 # Large computation output directories (multi-GB binary data)
 V*_output*/
+
+# Continuity
+SESSION_HANDOFF.md
+.continuity/

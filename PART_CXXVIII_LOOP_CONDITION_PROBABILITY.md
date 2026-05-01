@@ -1,6 +1,6 @@
 # Part CXXVIII — Loop-Conditioned Probability and First Self-Consistency
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 This part formalizes the intuition that probability becomes nontrivial only after a loop/self-consistency condition is imposed.  In the W(3,3) carrier this is not philosophical decoration: it is an exact theorem for the Hashimoto non-backtracking operator.

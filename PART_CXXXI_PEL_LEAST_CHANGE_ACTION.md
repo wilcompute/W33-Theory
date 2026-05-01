@@ -1,6 +1,6 @@
 # Part CXXXI — PEL Least-Change Action and W33 Loop Realization
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 The Cycle Clock Theory book repeatedly frames the Principle of Efficient Language as a least-computational-cost principle, and it later connects this to a Least Change Principle.  The W33 Hashimoto carrier gives an exact finite version of that idea.

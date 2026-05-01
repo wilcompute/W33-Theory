@@ -18,8 +18,8 @@ eigenvalues are 0, 10, 16 with multiplicities 1, 24, 15.
 """
 
 import numpy as np
-from numpy.linalg import eigh, eigvalsh, norm
 import pytest
+from numpy.linalg import eigh, eigvalsh, norm
 
 # ── W(3,3) builder ───────────────────────────────────────────────────────────
 
@@ -46,13 +46,14 @@ def _build_w33():
     for i in range(n):
         for j in range(i + 1, n):
             u, v = points[i], points[j]
-            omega = (u[0]*v[1] - u[1]*v[0] + u[2]*v[3] - u[3]*v[2]) % 3
+            omega = (u[0] * v[1] - u[1] * v[0] + u[2] * v[3] - u[3] * v[2]) % 3
             if omega == 0:
                 A[i, j] = A[j, i] = 1
     return A
 
 
 # ── Module-scoped fixtures ───────────────────────────────────────────────────
+
 
 @pytest.fixture(scope="module")
 def A():
@@ -94,6 +95,7 @@ def num_edges(A):
 # Section 1 : Graph structure prerequisites  (6 tests)
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestGraphStructure:
     """Verify W(3,3) = SRG(40,12,2,4)."""
 
@@ -127,6 +129,7 @@ class TestGraphStructure:
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 2 : Laplacian spectrum  (9 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestLaplacianSpectrum:
     """Eigenvalues {0^1, 10^24, 16^15} and eigenvector orthonormality."""
@@ -169,6 +172,7 @@ class TestLaplacianSpectrum:
 # forward: f_hat = U^T f        inverse: f = U f_hat
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestGFT:
 
     def test_gft_constant_signal_dc_only(self, U):
@@ -202,7 +206,8 @@ class TestGFT:
     def test_gft_delta_at_vertex(self, U):
         """GFT of delta_v equals the v-th row of U (= v-th column of U^T)."""
         v = 7
-        delta = np.zeros(_N); delta[v] = 1.0
+        delta = np.zeros(_N)
+        delta[v] = 1.0
         f_hat = U.T @ delta
         assert np.allclose(f_hat, U[v, :], atol=1e-10)
 
@@ -230,6 +235,7 @@ class TestGFT:
 # ||f||^2 = ||f_hat||^2
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestParseval:
 
     def test_parseval_random_signals(self, U):
@@ -245,7 +251,10 @@ class TestParseval:
         assert np.isclose(f @ f, f_hat @ f_hat, atol=1e-10)
 
     def test_parseval_sparse(self, U):
-        f = np.zeros(_N); f[0] = 1; f[10] = -2; f[20] = 3
+        f = np.zeros(_N)
+        f[0] = 1
+        f[10] = -2
+        f[20] = 3
         f_hat = U.T @ f
         assert np.isclose(f @ f, f_hat @ f_hat, atol=1e-10)
 
@@ -268,6 +277,7 @@ class TestParseval:
 # Section 5 : Graph spectral convolution  (6 tests)
 # (f *_G g) = U (f_hat . g_hat)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestGraphConvolution:
 
@@ -320,6 +330,7 @@ class TestGraphConvolution:
 # Section 6 : Graph filters  (10 tests)
 # h(L) f  = U diag(h(lambda)) U^T f
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestGraphFilters:
 
@@ -396,13 +407,13 @@ class TestGraphFilters:
         rng = np.random.RandomState(55)
         f = rng.randn(_N)
         sequential = self._filter(self._filter(f, h1, U), h2, U)
-        composed  = self._filter(f, h1 * h2, U)
+        composed = self._filter(f, h1 * h2, U)
         assert np.allclose(sequential, composed, atol=1e-10)
 
     def test_complementary_lowpass_highpass_sum_identity(self, eigenvalues):
         """h_low + h_high = 1 for complementary pair."""
         alpha = 0.1
-        h_low  = 1.0 / (1.0 + alpha * eigenvalues)
+        h_low = 1.0 / (1.0 + alpha * eigenvalues)
         h_high = alpha * eigenvalues / (1.0 + alpha * eigenvalues)
         assert np.allclose(h_low + h_high, 1.0, atol=1e-14)
 
@@ -434,6 +445,7 @@ class TestGraphFilters:
 # E(f) = f^T L f = sum_{(i,j) in E} (f_i - f_j)^2
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestDirichletEnergy:
 
     def test_constant_zero_energy(self, L):
@@ -464,7 +476,7 @@ class TestDirichletEnergy:
         f = rng.randn(_N)
         quad = f @ L @ f
         f_hat = U.T @ f
-        spectral = np.sum(eigenvalues * f_hat ** 2)
+        spectral = np.sum(eigenvalues * f_hat**2)
         assert np.isclose(quad, spectral, atol=1e-8)
 
     def test_eigenvector_energy_equals_eigenvalue(self, U, eigenvalues, L):
@@ -493,6 +505,7 @@ class TestDirichletEnergy:
 # Spectral wavelet kernel g(s*lam); scaling function h(s*lam)
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestGraphWavelets:
 
     @staticmethod
@@ -505,7 +518,7 @@ class TestGraphWavelets:
     def _scaling_kernel(s, lam):
         """Low-pass scaling: h(x) = exp(-x^2)."""
         x = s * lam
-        return np.exp(-x ** 2)
+        return np.exp(-(x**2))
 
     def test_wavelet_coefficients_shape(self, U, eigenvalues):
         rng = np.random.RandomState(62)
@@ -518,7 +531,8 @@ class TestGraphWavelets:
     def test_wavelet_at_vertex_localization(self, U, eigenvalues):
         """Wavelet atom centred at vertex v is non-zero at v."""
         v, s = 3, 0.1
-        delta = np.zeros(_N); delta[v] = 1.0
+        delta = np.zeros(_N)
+        delta[v] = 1.0
         g = self._wavelet_kernel(s, eigenvalues)
         psi = U @ (g * (U.T @ delta))
         assert abs(psi[v]) > 1e-10
@@ -526,7 +540,7 @@ class TestGraphWavelets:
     def test_small_scale_responds_to_high_freq(self, eigenvalues):
         """Small scale emphasises high eigenvalues more than large scale."""
         g_small = self._wavelet_kernel(0.01, eigenvalues)
-        g_large = self._wavelet_kernel(1.0,  eigenvalues)
+        g_large = self._wavelet_kernel(1.0, eigenvalues)
         # At eigenvalue 16, small scale should have larger g
         idx16 = np.where(np.abs(eigenvalues - 16) < 1e-8)[0][0]
         assert g_small[idx16] >= g_large[idx16] - 1e-15
@@ -541,13 +555,13 @@ class TestGraphWavelets:
     def test_scaling_function_is_lowpass(self, eigenvalues):
         s = 0.1
         h = self._scaling_kernel(s, eigenvalues)
-        assert h[0] > h[-1]   # DC passed more than high freq
+        assert h[0] > h[-1]  # DC passed more than high freq
 
     def test_wavelet_kernel_zero_at_dc(self, eigenvalues):
         """g(0) = 0 -- wavelet kills DC."""
         for s in [0.01, 0.1, 1.0]:
             g = self._wavelet_kernel(s, eigenvalues)
-            assert abs(g[0]) < 1e-15
+            assert np.isclose(g[0], 0.0, atol=1e-12)
 
     def test_frame_bound_positive(self, eigenvalues):
         """Sum of |g_s(lam)|^2 + |h(lam)|^2 > 0 for all nonzero eigenvalues."""
@@ -563,6 +577,7 @@ class TestGraphWavelets:
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 9 : Bandlimited signals  (7 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestBandlimitedSignals:
 
@@ -598,8 +613,8 @@ class TestBandlimitedSignals:
         coeffs = rng.randn(_N) * mask
         f = U @ coeffs
         f_hat = U.T @ f
-        in_band  = np.sum(f_hat[mask > 0.5] ** 2)
-        total    = np.sum(f_hat ** 2)
+        in_band = np.sum(f_hat[mask > 0.5] ** 2)
+        total = np.sum(f_hat**2)
         assert np.isclose(in_band, total, atol=1e-10)
 
     def test_three_band_decomposition_complete(self, U, eigenvalues):
@@ -620,14 +635,16 @@ class TestBandlimitedSignals:
 # Section 10 : Sampling theory  (5 tests)
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestSamplingTheory:
 
     def test_dc_signal_from_one_sample(self, U, eigenvalues):
         """DC-bandlimited (dim 1): one sample suffices."""
-        mask = (np.abs(eigenvalues) < 1e-8)
+        mask = np.abs(eigenvalues) < 1e-8
         band_idx = np.where(mask)[0]
         # Build bandlimited signal
-        coeffs = np.zeros(_N); coeffs[band_idx] = 3.0
+        coeffs = np.zeros(_N)
+        coeffs[band_idx] = 3.0
         f = U @ coeffs
         # Sample at vertex 0
         U_omega = U[np.ix_([0], band_idx)]
@@ -686,6 +703,7 @@ class TestSamplingTheory:
 # Section 11 : Signal denoising  (5 tests)
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestSignalDenoising:
 
     def test_ideal_projection_denoising(self, U, eigenvalues):
@@ -698,7 +716,7 @@ class TestSignalDenoising:
         noise = rng.randn(_N) * 0.5
         f_noisy = f_clean + noise
         f_den = U @ (mask * (U.T @ f_noisy))
-        assert np.mean((f_den - f_clean) ** 2) < np.mean(noise ** 2)
+        assert np.mean((f_den - f_clean) ** 2) < np.mean(noise**2)
 
     def test_heat_kernel_denoising(self, U, eigenvalues):
         rng = np.random.RandomState(72)
@@ -707,7 +725,7 @@ class TestSignalDenoising:
         f_noisy = f_clean + noise
         h = np.exp(-0.05 * eigenvalues)
         f_den = U @ (h * (U.T @ f_noisy))
-        assert np.mean((f_den - f_clean) ** 2) < np.mean(noise ** 2)
+        assert np.mean((f_den - f_clean) ** 2) < np.mean(noise**2)
 
     def test_tikhonov_spectral_equals_matrix(self, U, eigenvalues, L):
         """Tikhonov (I + mu L)^{-1} f agrees with spectral formula."""
@@ -716,7 +734,7 @@ class TestSignalDenoising:
         f = rng.randn(_N)
         h = 1.0 / (1.0 + mu * eigenvalues)
         f_spec = U @ (h * (U.T @ f))
-        f_mat  = np.linalg.solve(np.eye(_N) + mu * L, f)
+        f_mat = np.linalg.solve(np.eye(_N) + mu * L, f)
         assert np.allclose(f_spec, f_mat, atol=1e-8)
 
     def test_denoising_preserves_clean_component(self, U, eigenvalues):
@@ -750,6 +768,7 @@ class TestSignalDenoising:
 # TV(f) = sum_{(i,j) in E} |f_i - f_j|
 # ═════════════════════════════════════════════════════════════════════════════
 
+
 class TestTotalVariation:
 
     @staticmethod
@@ -778,12 +797,14 @@ class TestTotalVariation:
         rng = np.random.RandomState(78)
         f = rng.randn(_N)
         alpha = -2.5
-        assert np.isclose(self._tv(alpha * f, A),
-                          abs(alpha) * self._tv(f, A), atol=1e-10)
+        assert np.isclose(
+            self._tv(alpha * f, A), abs(alpha) * self._tv(f, A), atol=1e-10
+        )
 
     def test_tv_indicator_equals_cut(self, A):
         """TV of {0,1}-indicator counts edge cut."""
-        f = np.zeros(_N); f[:10] = 1.0
+        f = np.zeros(_N)
+        f[:10] = 1.0
         cut = sum(1 for i in range(10) for j in range(10, _N) if A[i, j])
         assert np.isclose(self._tv(f, A), cut)
 
@@ -794,12 +815,13 @@ class TestTotalVariation:
         f = rng.randn(_N)
         tv = self._tv(f, A)
         de = f @ L @ f
-        assert tv ** 2 <= num_edges * de + 1e-8
+        assert tv**2 <= num_edges * de + 1e-8
 
 
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 13 : Graph filter banks  (6 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestGraphFilterBanks:
 
@@ -809,8 +831,7 @@ class TestGraphFilterBanks:
         rng = np.random.RandomState(80)
         f = rng.randn(_N)
         f_hat = U.T @ f
-        assert np.allclose(
-            U @ (h_lo * f_hat) + U @ (h_hi * f_hat), f, atol=1e-10)
+        assert np.allclose(U @ (h_lo * f_hat) + U @ (h_hi * f_hat), f, atol=1e-10)
 
     def test_three_channel_perfect_reconstruction(self, U, eigenvalues):
         h0 = (np.abs(eigenvalues) < 1e-8).astype(float)
@@ -850,11 +871,13 @@ class TestGraphFilterBanks:
     def test_smooth_filter_bank_normalised(self, U, eigenvalues):
         """Gaussian-shaped channels normalised to partition of unity."""
         sigma = 3.0
-        h0 = np.exp(-eigenvalues ** 2 / (2 * sigma ** 2))
-        h1 = np.exp(-(eigenvalues - 10) ** 2 / (2 * sigma ** 2))
-        h2 = np.exp(-(eigenvalues - 16) ** 2 / (2 * sigma ** 2))
+        h0 = np.exp(-(eigenvalues**2) / (2 * sigma**2))
+        h1 = np.exp(-((eigenvalues - 10) ** 2) / (2 * sigma**2))
+        h2 = np.exp(-((eigenvalues - 16) ** 2) / (2 * sigma**2))
         total = h0 + h1 + h2
-        h0 /= total; h1 /= total; h2 /= total
+        h0 /= total
+        h1 /= total
+        h2 /= total
         assert np.allclose(h0 + h1 + h2, 1.0)
         rng = np.random.RandomState(84)
         f = rng.randn(_N)
@@ -868,15 +891,16 @@ class TestGraphFilterBanks:
         rng = np.random.RandomState(85)
         f = rng.randn(_N)
         f_hat = U.T @ f
-        analysed  = h * f_hat          # analysis
+        analysed = h * f_hat  # analysis
         synthesised = U @ (h * analysed)  # synthesis (h applied twice)
-        direct = U @ (h ** 2 * f_hat)
+        direct = U @ (h**2 * f_hat)
         assert np.allclose(synthesised, direct, atol=1e-10)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 14 : Windowed Graph Fourier Transform  (5 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestWindowedGFT:
 
@@ -909,11 +933,12 @@ class TestWindowedGFT:
 
     def test_wgft_localization(self, A, U):
         """Windowed spectrum at v captures energy near v, not far away."""
-        f = np.zeros(_N); f[5] = 10.0
+        f = np.zeros(_N)
+        f[5] = 10.0
         w_near = self._window(5, A, width=1)
-        w_far  = self._window(30, A, width=1)
+        w_far = self._window(30, A, width=1)
         e_near = norm(U.T @ (f * w_near)) ** 2
-        e_far  = norm(U.T @ (f * w_far)) ** 2
+        e_far = norm(U.T @ (f * w_far)) ** 2
         if A[5, 30] == 0:
             assert e_near > e_far
 
@@ -943,7 +968,7 @@ class TestWindowedGFT:
         for v in range(_N):
             w = self._window(v, A, width=2)
             spec = U.T @ (f * w)
-            energy_per_freq += spec ** 2
+            energy_per_freq += spec**2
         # Index k should carry significant energy
         assert energy_per_freq[k] > 0
 
@@ -951,6 +976,7 @@ class TestWindowedGFT:
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 15 : Advanced graph-signal identities for W(3,3)  (10 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestAdvancedGSP:
 
@@ -993,7 +1019,7 @@ class TestAdvancedGSP:
     def test_trace_L2_equals_6240(self, L, eigenvalues):
         """tr(L^2) = 10^2*24 + 16^2*15 = 2400 + 3840 = 6240."""
         assert np.isclose(np.trace(L @ L), 6240, atol=1e-4)
-        assert np.isclose(np.sum(eigenvalues ** 2), 6240, atol=1e-4)
+        assert np.isclose(np.sum(eigenvalues**2), 6240, atol=1e-4)
 
     def test_spectral_radius_16(self, eigenvalues):
         assert np.isclose(np.max(eigenvalues), 16.0, atol=1e-8)
@@ -1009,12 +1035,13 @@ class TestAdvancedGSP:
         """lambda_1 / 2 <= h_G  (Cheeger constant)."""
         lam1 = 10.0
         lower = lam1 / 2
-        assert lower == 5.0   # just a sanity anchor
+        assert lower == 5.0  # just a sanity anchor
 
 
 # ═════════════════════════════════════════════════════════════════════════════
 # Section 16 : Graph shift / diffusion / modulation operators  (5 tests)
 # ═════════════════════════════════════════════════════════════════════════════
+
 
 class TestGraphSignalOperators:
 

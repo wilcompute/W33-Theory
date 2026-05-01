@@ -31,6 +31,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # binary Golay code generation (extended, length 24)
 # ---------------------------------------------------------------------------
 
+
 def gf2_mul(a: int, b: int) -> int:
     """Multiply two polynomials over GF(2) represented as bitfields."""
     res = 0
@@ -129,7 +130,7 @@ def multiply_monomials(a: Monomial, b: Monomial) -> Tuple[int, Monomial]:
     return sign, tuple(prod)
 
 
-def symplectic_representation(mon: Monomial) -> Tuple[int,int]:
+def symplectic_representation(mon: Monomial) -> Tuple[int, int]:
     """Return symplectic pair (x,z) for Pauli mapping: X^{x}Z^{z}.
     Here x and z are 24-bit integers with disjoint support such that
     monomial indices in even positions chosen for X and odd for Z.
@@ -153,7 +154,7 @@ def export_stabilizer(code: List[int], filename: Path) -> None:
     with open(filename, "w") as f:
         f.write("# symplectic stabilizer generators\n")
         for g in gens:
-            x,z = symplectic_representation(g)
+            x, z = symplectic_representation(g)
             f.write(f"{x:012b} {z:012b}\n")
     print("wrote stabilizer generators to", filename)
 
@@ -165,8 +166,14 @@ def main() -> None:
 
     # command-line argument handling
     import argparse
+
     parser = argparse.ArgumentParser(description="Golay-Clifford utilities")
     parser.add_argument("--export-stabilizer", help="path to write stabilizer gens")
+    parser.add_argument(
+        "--mapping-only",
+        action="store_true",
+        help="write the codeword-to-Clifford mapping and skip expensive closure scans",
+    )
     args = parser.parse_args()
 
     # map to monomials and record multiplication table for a handful
@@ -184,6 +191,10 @@ def main() -> None:
     # if requested, export stabilizer
     if args.export_stabilizer:
         export_stabilizer(code, Path(args.export_stabilizer))
+
+    if args.mapping_only:
+        print("Wrote mapping to", outjson, outcsv)
+        return
 
     # construct spin group: even-weight monomial products
     spin_set: set[Monomial] = set()
@@ -204,6 +215,7 @@ def main() -> None:
 
     # sample random pairs for spin group multiplication
     import random
+
     group_ok = True
     spin_list = list(spin_set)
     for _ in range(500):
@@ -227,6 +239,7 @@ def main() -> None:
 
     # verify closure under multiplication (sample random pairs)
     import random
+
     index_map = {mon: idx for idx, mon in enumerate(monomials)}
     closure_ok = True
     for _ in range(1000):

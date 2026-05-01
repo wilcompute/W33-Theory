@@ -1,6 +1,6 @@
 # Part CXII — Antipodal Johnson Cover and 1+9+5+5 Residue Splitting
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CXI identified the local fixed-spread residue as a six-letter object:

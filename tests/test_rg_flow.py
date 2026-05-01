@@ -1,6 +1,5 @@
 def test_rg_flow_sanity():
-    from w33_mass_synthesis import derive_yukawas_from_triads
-
+    from scripts.w33_mass_synthesis import derive_yukawas_from_triads
     from scripts.w33_rg_flow import integrate_rg
 
     yuk = derive_yukawas_from_triads()

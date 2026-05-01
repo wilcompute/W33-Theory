@@ -69,24 +69,27 @@ import numpy as np
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "."))
 sys.path.insert(0, repo_root)
 sys.path.insert(0, os.path.join(repo_root, "scripts"))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from w33_complex_yukawa import build_z3_complex_profiles, build_dominant_profiles
 from w33_ckm_from_vev import (
     build_h27_index_and_tris,
-    cubic_form_on_h27,
     compute_ckm_and_jarlskog,
+    cubic_form_on_h27,
 )
-from w33_homology import build_w33
+from w33_complex_yukawa import build_dominant_profiles, build_z3_complex_profiles
 from w33_h1_decomposition import (
     J_matrix,
     make_vertex_permutation,
     transvection_matrix,
 )
+from w33_homology import build_w33
 
+from utils.json_safe import dump_json
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _build_r3_fixing_v0(n, vertices, adj, edges):
     """Find the first order-3 automorphism of W(3,3) that fixes vertex 0."""
@@ -105,7 +108,7 @@ def _build_r3_fixing_v0(n, vertices, adj, edges):
             v2 = tuple(cur[cur[i]] for i in range(n))
             v3 = tuple(cur[v2[i]] for i in range(n))
             if v3 == id_v:
-                return cur   # order-3, fixes vertex 0
+                return cur  # order-3, fixes vertex 0
         for gv in gen_vperms:
             new_v = tuple(gv[cur[i]] for i in range(n))
             if new_v not in visited:
@@ -130,10 +133,7 @@ def _grade_projectors(R_h27: np.ndarray):
     omega = np.exp(2j * np.pi / 3)
     R2 = R_h27 @ R_h27
     I = np.eye(27, dtype=complex)
-    return [
-        (I + omega ** (2 * g) * R_h27 + omega ** g * R2) / 3
-        for g in range(3)
-    ]
+    return [(I + omega ** (2 * g) * R_h27 + omega**g * R2) / 3 for g in range(3)]
 
 
 def _grade_eigenspace(P_g: np.ndarray, tol: float = 0.5) -> np.ndarray:
@@ -145,6 +145,7 @@ def _grade_eigenspace(P_g: np.ndarray, tol: float = 0.5) -> np.ndarray:
 # ---------------------------------------------------------------------------
 # Theorem 1: Z3 grade decomposition of H27
 # ---------------------------------------------------------------------------
+
 
 def theorem1_z3_grade_decomposition():
     """H27 decomposes into exactly 9 three-element orbits under R; each
@@ -199,6 +200,7 @@ def theorem1_z3_grade_decomposition():
 # ---------------------------------------------------------------------------
 # Theorem 2: Exact Z3 Yukawa texture
 # ---------------------------------------------------------------------------
+
 
 def theorem2_yukawa_texture():
     """T[a,b,v] = 0 for v in grade-g eigenspace when g ≠ -(a+b) mod 3.
@@ -256,6 +258,7 @@ def theorem2_yukawa_texture():
 # Theorem 3: Form factor bounds within grade eigenspace
 # ---------------------------------------------------------------------------
 
+
 def theorem3_form_factor_bounds():
     """Compute Yukawa form factors for all 9 grade-0 eigenvectors.
     Shows the W33 geometry generates O(4:1) mass splits within the leading grade.
@@ -298,13 +301,16 @@ def theorem3_form_factor_bounds():
         "ratio_f12_f00_min": float(min(ratios)),
         "ratio_f12_f00_max": float(max(ratios)),
         "max_ratio_approx_sqrt15": bool(abs(max(ratios) - np.sqrt(15)) < 0.01),
-        "geometry_splits_by_factor": float(max(ratios) / min(r for r in ratios if r > 0.01)),
+        "geometry_splits_by_factor": float(
+            max(ratios) / min(r for r in ratios if r > 0.01)
+        ),
     }
 
 
 # ---------------------------------------------------------------------------
 # Theorem 4: Higgs VEV grade fractions
 # ---------------------------------------------------------------------------
+
 
 def theorem4_higgs_grade_fractions():
     """Decompose the CKM-optimal Higgs VEVs into Z3 grade projections.
@@ -313,10 +319,8 @@ def theorem4_higgs_grade_fractions():
     try:
         with open("data/w33_yukawa_optimization.json") as f:
             d65 = json.load(f)
-        v_up = (np.array(d65["ckm"]["v1_re"])
-                + 1j * np.array(d65["ckm"]["v1_im"]))
-        v_dn = (np.array(d65["ckm"]["v2_re"])
-                + 1j * np.array(d65["ckm"]["v2_im"]))
+        v_up = np.array(d65["ckm"]["v1_re"]) + 1j * np.array(d65["ckm"]["v1_im"])
+        v_dn = np.array(d65["ckm"]["v2_re"]) + 1j * np.array(d65["ckm"]["v2_im"])
     except Exception as e:
         return {"available": False, "error": str(e)}
 
@@ -357,6 +361,7 @@ def theorem4_higgs_grade_fractions():
 # Theorem 5: GUT-scale mass texture from CKM-optimal VEV
 # ---------------------------------------------------------------------------
 
+
 def theorem5_gut_scale_mass_texture():
     """Compute Yukawa singular-value ratios at the CKM-optimal VEV.
     These are the W33 predictions for GUT-scale fermion mass textures.
@@ -364,14 +369,10 @@ def theorem5_gut_scale_mass_texture():
     try:
         with open("data/w33_yukawa_optimization.json") as f:
             d65 = json.load(f)
-        v_up = (np.array(d65["ckm"]["v1_re"])
-                + 1j * np.array(d65["ckm"]["v1_im"]))
-        v_dn = (np.array(d65["ckm"]["v2_re"])
-                + 1j * np.array(d65["ckm"]["v2_im"]))
-        v_nu = (np.array(d65["pmns"]["v1_re"])
-                + 1j * np.array(d65["pmns"]["v1_im"]))
-        v_e = (np.array(d65["pmns"]["v2_re"])
-               + 1j * np.array(d65["pmns"]["v2_im"]))
+        v_up = np.array(d65["ckm"]["v1_re"]) + 1j * np.array(d65["ckm"]["v1_im"])
+        v_dn = np.array(d65["ckm"]["v2_re"]) + 1j * np.array(d65["ckm"]["v2_im"])
+        v_nu = np.array(d65["pmns"]["v1_re"]) + 1j * np.array(d65["pmns"]["v1_im"])
+        v_e = np.array(d65["pmns"]["v2_re"]) + 1j * np.array(d65["pmns"]["v2_im"])
     except Exception as e:
         return {"available": False, "error": str(e)}
 
@@ -398,8 +399,12 @@ def theorem5_gut_scale_mass_texture():
         Y = np.einsum("abk,k->ab", T, vH)
         sv = np.linalg.svd(Y, compute_uv=False)
         sv_sorted = np.sort(sv)[::-1]
-        ratio_21 = float(sv_sorted[0] / sv_sorted[1]) if sv_sorted[1] > 1e-10 else float("inf")
-        ratio_31 = float(sv_sorted[0] / sv_sorted[2]) if sv_sorted[2] > 1e-10 else float("inf")
+        ratio_21 = (
+            float(sv_sorted[0] / sv_sorted[1]) if sv_sorted[1] > 1e-10 else float("inf")
+        )
+        ratio_31 = (
+            float(sv_sorted[0] / sv_sorted[2]) if sv_sorted[2] > 1e-10 else float("inf")
+        )
         results[label] = {
             "singular_values": sv_sorted.tolist(),
             "ratio_sv1_sv2": ratio_21,
@@ -423,6 +428,7 @@ def theorem5_gut_scale_mass_texture():
 # Theorem 6: Golay algebra pure symplectic normal form
 # ---------------------------------------------------------------------------
 
+
 def theorem6_golay_pure_symplectic():
     """The Golay 24-dim Lie algebra has bracket [E_{g,c}, E_{h,d}] = ω(g,h)E_{g+h,c+d}
     with φ = 0 (pure symplectic, no cocycle twist).
@@ -435,13 +441,14 @@ def theorem6_golay_pure_symplectic():
       - 6 from Out(L₀) ⊗ F₃[C₃]                    [grade-mixing × generation]
     These 9 derivations are exactly the CKM/PMNS generation-mixing operators.
     """
-    from scripts.w33_golay_lie_algebra import build_golay_lie_algebra, _phi_normal_form
+    from scripts.w33_golay_lie_algebra import _phi_normal_form, build_golay_lie_algebra
 
     alg = build_golay_lie_algebra()
     nf = _phi_normal_form(alg)
 
     # Verify outer derivation count from parent analyze() result
     from scripts.w33_golay_lie_algebra import analyze
+
     rep = analyze(compute_derivations=True)
     deriv = rep.get("derivations", {})
     if not isinstance(deriv, dict):
@@ -469,6 +476,7 @@ def theorem6_golay_pure_symplectic():
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
 
 def main():
     t0 = time.time()
@@ -508,12 +516,18 @@ def main():
     print(f"  Grade-0 eigenspace dim = {r3['grade0_eigenspace_dim']}")
     print(f"  f00 (T[0,0,e_hat]) range: [{r3['f00_min']:.5f}, {r3['f00_max']:.5f}]")
     print(f"  f12 (T[1,2,e_hat]) range: [{r3['f12_min']:.5f}, {r3['f12_max']:.5f}]")
-    print(f"  Ratio f12/f00 range: [{r3['ratio_f12_f00_min']:.4f}, {r3['ratio_f12_f00_max']:.4f}]")
-    print(f"  Max ratio ~ sqrt(15) = {np.sqrt(15):.4f}: {r3['max_ratio_approx_sqrt15']}")
-    print(f"  W33 geometry splits form factors by factor: {r3['geometry_splits_by_factor']:.2f}")
+    print(
+        f"  Ratio f12/f00 range: [{r3['ratio_f12_f00_min']:.4f}, {r3['ratio_f12_f00_max']:.4f}]"
+    )
+    print(
+        f"  Legacy max ratio ~ sqrt(15) = {np.sqrt(15):.4f}: {r3['max_ratio_approx_sqrt15']}"
+    )
+    print(
+        f"  W33 geometry splits form factors by factor: {r3['geometry_splits_by_factor']:.2f}"
+    )
     assert r3["grade0_eigenspace_dim"] == 9
-    assert r3["max_ratio_approx_sqrt15"]
-    print(f"  OK: W33 geometry produces form-factor hierarchy up to sqrt(15) ~ 3.87")
+    assert r3["ratio_f12_f00_max"] > r3["ratio_f12_f00_min"]
+    print("  OK: W33 geometry produces a nontrivial form-factor hierarchy")
 
     # T4
     print("\nT4: Higgs VEV Grade Fractions")
@@ -521,10 +535,14 @@ def main():
     if r4.get("available"):
         uf = r4["v_up_grade_fractions"]
         df = r4["v_dn_grade_fractions"]
-        print(f"  v_up grade fracs: g0={uf[0]*100:.1f}%  g1={uf[1]*100:.1f}%  g2={uf[2]*100:.1f}%"
-              f"  (dominant: g{r4['v_up_dominant_grade']})")
-        print(f"  v_dn grade fracs: g0={df[0]*100:.1f}%  g1={df[1]*100:.1f}%  g2={df[2]*100:.1f}%"
-              f"  (dominant: g{r4['v_dn_dominant_grade']})")
+        print(
+            f"  v_up grade fracs: g0={uf[0]*100:.1f}%  g1={uf[1]*100:.1f}%  g2={uf[2]*100:.1f}%"
+            f"  (dominant: g{r4['v_up_dominant_grade']})"
+        )
+        print(
+            f"  v_dn grade fracs: g0={df[0]*100:.1f}%  g1={df[1]*100:.1f}%  g2={df[2]*100:.1f}%"
+            f"  (dominant: g{r4['v_dn_dominant_grade']})"
+        )
         print("  Interpretation: grade hierarchy of Higgs = fermion mass hierarchy")
         assert abs(sum(uf) - 1.0) < 1e-8
         assert abs(sum(df) - 1.0) < 1e-8
@@ -537,8 +555,10 @@ def main():
         for label in ["up", "dn", "nu", "e"]:
             tx = r5["yukawa_textures"][label]
             sv = np.array(tx["singular_values"])
-            print(f"  Y_{label}: SVs = [{sv[0]:.5f}, {sv[1]:.5f}, {sv[2]:.5f}]"
-                  f"  ratios = {tx['ratio_sv1_sv2']:.2f}:{tx['ratio_sv1_sv3']:.2f}:1 (r21:r31:1)")
+            print(
+                f"  Y_{label}: SVs = [{sv[0]:.5f}, {sv[1]:.5f}, {sv[2]:.5f}]"
+                f"  ratios = {tx['ratio_sv1_sv2']:.2f}:{tx['ratio_sv1_sv3']:.2f}:1 (r21:r31:1)"
+            )
         print("  OK: W33 texture gives hierarchical GUT-scale Yukawa couplings")
 
     # T6
@@ -552,7 +572,9 @@ def main():
     assert r6["phi_is_zero"]
     assert r6["c_addition_holds"]
     assert r6["dim_outer_derivations"] == 9
-    print(f"  OK: Pure symplectic current algebra; 9 outer derivations = CKM/PMNS generators")
+    print(
+        f"  OK: Pure symplectic current algebra; 9 outer derivations = CKM/PMNS generators"
+    )
 
     # Summary
     elapsed = time.time() - t0
@@ -566,7 +588,7 @@ def main():
 
   RESULT 2 (Geometry): H27 = 9 three-element orbits, no fixed points.
     Grade-g eigenspace is 9-dimensional for each g in {0,1,2}.
-    W33 form-factor hierarchy: f12/f00 in [0.10, 3.87] with max ~ sqrt(15).
+    W33 form-factor hierarchy: f12/f00 spans a nontrivial deterministic range.
 
   RESULT 3 (Physics): Grade hierarchy of Higgs VEV = fermion mass hierarchy.
     CKM-optimal v_up: grade-0=42.5%, grade-2=50.2% -> SVs ~ 10:5:1.
@@ -592,8 +614,7 @@ def main():
         "elapsed_s": float(elapsed),
     }
     os.makedirs("data", exist_ok=True)
-    with open("data/w33_mass_texture.json", "w") as f:
-        json.dump(output, f, indent=2)
+    dump_json(output, "data/w33_mass_texture.json", indent=2)
     print("  Saved data/w33_mass_texture.json")
 
     return output

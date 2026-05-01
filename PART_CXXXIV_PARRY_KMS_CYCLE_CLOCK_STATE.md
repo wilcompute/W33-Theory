@@ -1,6 +1,6 @@
 # Part CXXXIV — Parry-KMS Cycle Clock State
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Part CXXXIII put the primitive W33 loop language at its critical cycle-clock boundary. The next natural object is the equilibrium state itself. For the 480-state Hashimoto shift, the equilibrium state is not an extra assumption: it is the Parry measure of the non-backtracking edge shift, and because W33 is regular it is exactly uniform.

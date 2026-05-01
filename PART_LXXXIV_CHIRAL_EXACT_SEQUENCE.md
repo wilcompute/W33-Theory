@@ -91,6 +91,7 @@ Equivalently,
 \boxed{
 Q
 =
+
 Q_{S15\to L15}
 \oplus
 Q_{Q24\to L24}
@@ -140,3 +141,10 @@ and the harmonic/cohomology part has dimension
 \[
 \boxed{3.}
 \]
+
+## Audit Implementation
+
+Executable surface:
+
+- scripts/w33_chiral_exact_sequence_audit.py
+- tests/test_w33_chiral_exact_sequence_audit.py

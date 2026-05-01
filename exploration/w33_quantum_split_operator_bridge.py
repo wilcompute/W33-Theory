@@ -25,6 +25,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -32,7 +37,7 @@ DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_quantum_split_operator_bridge_summary.json
 
 
 def _load_json(filename: str) -> dict[str, Any]:
-    return json.loads((DATA_DIR / filename).read_text(encoding="utf-8"))
+    return load_bridge_json(filename, DATA_DIR)
 
 
 def build_summary() -> dict[str, Any]:
@@ -58,14 +63,19 @@ def build_summary() -> dict[str, Any]:
         },
         "quantum_split_operator_theorem": {
             "the_pulled_github_quantum_split_40_equals_16_plus_24_is_compatible_with_the_exact_operator_packet_law": (
-                gamma["exact_packets"]["dominant_shell"]["16"] == 16 and complement_24 == 24
+                gamma["exact_packets"]["dominant_shell"]["16"] == 16
+                and complement_24 == 24
             ),
             "the_16_side_is_the_exact_common_dirac_core": (
-                gamma["gamma16_chirality_theorem"]["the_exact_16_core_is_common_to_the_two_live_dirac_operators"]
+                gamma["gamma16_chirality_theorem"][
+                    "the_exact_16_core_is_common_to_the_two_live_dirac_operators"
+                ]
             ),
             "the_complementary_24_side_is_exact_but_not_primitive": (
                 complement_24 == 24
-                and complete["complete_packet_theorem"]["the_full_live_space_splits_exactly_as_10_plus_16_plus_6_plus_4_plus_3_plus_1"]
+                and complete["complete_packet_theorem"][
+                    "the_full_live_space_splits_exactly_as_10_plus_16_plus_6_plus_4_plus_3_plus_1"
+                ]
             ),
             "the_exact_refinement_of_the_24_side_is_10_plus_6_plus_4_plus_3_plus_1": (
                 complement_24

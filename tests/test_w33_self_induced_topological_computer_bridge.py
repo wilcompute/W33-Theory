@@ -1,5 +1,21 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
 from w33_self_induced_topological_computer_bridge import (
     build_self_induced_topological_computer_summary,
+)
+
+SAGE_TRANSPORT = (
+    Path(__file__).resolve().parents[1]
+    / "artifacts"
+    / "sage_h27_to_schlafli_effective_triads_conjugacy.json"
+)
+
+pytestmark = pytest.mark.skipif(
+    not SAGE_TRANSPORT.exists(),
+    reason="optional Sage H27-to-Schlafli transport artifact is absent",
 )
 
 

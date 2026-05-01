@@ -11,8 +11,17 @@ def _load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
+    previous = sys.modules.get(name)
+    had_previous = name in sys.modules
+    try:
+        sys.modules[name] = module
+        spec.loader.exec_module(module)
+    except BaseException:
+        if had_previous:
+            sys.modules[name] = previous
+        else:
+            sys.modules.pop(name, None)
+        raise
     return module
 
 
@@ -23,9 +32,7 @@ BRIDGE = _load_module(
     "w33_l4_quark_dirac_bridge",
 )
 SELF_ENERGY = _load_module(
-    Path(__file__).resolve().parents[1]
-    / "exploration"
-    / "w33_l4_quark_self_energy.py",
+    Path(__file__).resolve().parents[1] / "exploration" / "w33_l4_quark_self_energy.py",
     "w33_l4_quark_self_energy_for_bridge_tests",
 )
 
@@ -93,11 +100,17 @@ def test_l4_dirac_bridge_lifts_quark_block_ranks() -> None:
     assert candidate.up_block.original_rank == 2
     assert candidate.up_block.bridged_rank == 3
     assert candidate.up_block.support_count == 15
-    assert candidate.up_block.original_residual_norm == pytest.approx(1.1135528725660053)
+    assert candidate.up_block.original_residual_norm == pytest.approx(
+        1.1135528725660053
+    )
     assert candidate.up_block.bridged_residual_norm == pytest.approx(1.0931431037711359)
 
     assert candidate.down_block.original_rank == 2
     assert candidate.down_block.bridged_rank == 3
     assert candidate.down_block.support_count == 17
-    assert candidate.down_block.original_residual_norm == pytest.approx(1.7026123718829504)
-    assert candidate.down_block.bridged_residual_norm == pytest.approx(1.2914031246850464)
+    assert candidate.down_block.original_residual_norm == pytest.approx(
+        1.7026123718829504
+    )
+    assert candidate.down_block.bridged_residual_norm == pytest.approx(
+        1.2914031246850464
+    )

@@ -1,7 +1,9 @@
 # Part XLV — Master Prediction Table: P1–P116
 
 Complete enumeration of all W(3,3) predictions with experimental status.
-All predictions follow from q=3, v=40, k=12, λ=2, μ=4, r=2 with **zero free parameters**.
+All predictions are organized over the q=3 exact finite spine. Exact carrier,
+spectral, transport, and continuum-seed records are distinguished from promoted
+frontier response laws where the current repo boundary requires that separation.
 
 ## Gauge and Coupling Constants (P1–P12)
 

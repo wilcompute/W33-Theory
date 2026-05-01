@@ -59,7 +59,12 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 ROOT = Path(__file__).resolve().parent
-BUNDLE = ROOT / "TOE_srg36_triangle_fibration_240_v01_20260227_bundle.zip"
+REPO_ROOT = ROOT.parent
+BUNDLE_NAME = "TOE_srg36_triangle_fibration_240_v01_20260227_bundle.zip"
+BUNDLE_CANDIDATES = (
+    ROOT / BUNDLE_NAME,
+    REPO_ROOT / "archive" / "zip" / BUNDLE_NAME,
+)
 PREFIX = "TOE_srg36_triangle_fibration_240_v01_20260227/"
 
 N_TRIANGLES = 1200
@@ -68,8 +73,8 @@ N_ODD_NONFACE = 240
 N_EVEN_NONFACE = 840
 N_SPECIAL_FACES = 40
 N_ORDINARY_FACES = 80
-FIBER_SIZE = 6          # 240 / 40 = 6
-PREIMAGE_DEGREE = 10    # each face has 10 preimages
+FIBER_SIZE = 6  # 240 / 40 = 6
+PREIMAGE_DEGREE = 10  # each face has 10 preimages
 SPECIAL_ODD = 6
 SPECIAL_EVEN = 3
 ORDINARY_ODD = 0
@@ -77,7 +82,17 @@ ORDINARY_EVEN = 9
 
 
 def _load_bundle() -> dict:
-    with zipfile.ZipFile(BUNDLE) as zf:
+    for path in BUNDLE_CANDIDATES:
+        if path.exists():
+            bundle = path
+            break
+    else:
+        raise FileNotFoundError(
+            "SRG36 triangle fibration bundle missing from "
+            + ", ".join(str(path) for path in BUNDLE_CANDIDATES)
+        )
+
+    with zipfile.ZipFile(bundle) as zf:
         summary = json.loads(zf.read(PREFIX + "SUMMARY.json"))
         odd_raw = zf.read(PREFIX + "odd_nonface_triangles_240.csv").decode("utf-8")
         special_raw = zf.read(PREFIX + "special_faces_40.csv").decode("utf-8")
@@ -105,12 +120,12 @@ def analyze() -> dict:
     t1_nonface_hol1 = hol_counts.get("nonface_hol1", 0)
     t1_nonface_hol0 = hol_counts.get("nonface_hol0", 0)
     t1_correct = (
-        t1_triangles_total == N_TRIANGLES and
-        t1_faces_chosen == N_FACES and
-        t1_chosen_hol1 == N_FACES and
-        t1_nonface_hol1 == N_ODD_NONFACE and
-        t1_nonface_hol0 == N_EVEN_NONFACE and
-        t1_nonface_hol1 + t1_nonface_hol0 + t1_chosen_hol1 == N_TRIANGLES
+        t1_triangles_total == N_TRIANGLES
+        and t1_faces_chosen == N_FACES
+        and t1_chosen_hol1 == N_FACES
+        and t1_nonface_hol1 == N_ODD_NONFACE
+        and t1_nonface_hol0 == N_EVEN_NONFACE
+        and t1_nonface_hol1 + t1_nonface_hol0 + t1_chosen_hol1 == N_TRIANGLES
     )
 
     # T2: 240 odd non-faces fiber over 40 special faces
@@ -121,22 +136,20 @@ def analyze() -> dict:
     t2_all_fiber_size_6 = all(v == FIBER_SIZE for v in line_id_counts.values())
     t2_fiber_size = FIBER_SIZE if t2_all_fiber_size_6 else 0
     t2_correct = (
-        t2_n_odd == N_ODD_NONFACE and
-        t2_n_special == N_SPECIAL_FACES and
-        t2_all_fiber_size_6
+        t2_n_odd == N_ODD_NONFACE
+        and t2_n_special == N_SPECIAL_FACES
+        and t2_all_fiber_size_6
     )
 
     # T3: 40 special faces = 40 W33 lines
     t3_n_special = len(special_rows)
     # Each special face has a unique line_id
     line_ids = sorted(int(r["line_id"]) for r in special_rows)
-    t3_line_ids_unique = (len(set(line_ids)) == t3_n_special)
-    t3_line_ids_range = (min(line_ids) == 0 and max(line_ids) == 39)
-    t3_all_lines_covered = (set(line_ids) == set(range(N_SPECIAL_FACES)))
+    t3_line_ids_unique = len(set(line_ids)) == t3_n_special
+    t3_line_ids_range = min(line_ids) == 0 and max(line_ids) == 39
+    t3_all_lines_covered = set(line_ids) == set(range(N_SPECIAL_FACES))
     t3_correct = (
-        t3_n_special == N_SPECIAL_FACES and
-        t3_line_ids_unique and
-        t3_all_lines_covered
+        t3_n_special == N_SPECIAL_FACES and t3_line_ids_unique and t3_all_lines_covered
     )
 
     # T4: Face preimage map has degree 10
@@ -144,49 +157,46 @@ def analyze() -> dict:
     t4_n_faces = len(preimage_rows)
     t4_all_degree_10 = all(c == PREIMAGE_DEGREE for c in preimage_counts)
     t4_preimage_dist = dict(Counter(preimage_counts))
-    t4_correct = (
-        t4_n_faces == N_FACES and
-        t4_all_degree_10
-    )
+    t4_correct = t4_n_faces == N_FACES and t4_all_degree_10
 
     # T5: Special face profile (6 odd + 3 even + 1 self)
     special_profiles = [
-        (int(r["odd_nonface_preimages"]),
-         int(r["even_nonface_preimages"]),
-         1)  # self
+        (int(r["odd_nonface_preimages"]), int(r["even_nonface_preimages"]), 1)  # self
         for r in preimage_rows
         if int(r["odd_nonface_preimages"]) > 0
     ]
     t5_n_special = len(special_profiles)
     t5_all_odd_6 = all(p[0] == SPECIAL_ODD for p in special_profiles)
     t5_all_even_3 = all(p[1] == SPECIAL_EVEN for p in special_profiles)
-    t5_all_total_10 = all(p[0] + p[1] + p[2] == PREIMAGE_DEGREE for p in special_profiles)
+    t5_all_total_10 = all(
+        p[0] + p[1] + p[2] == PREIMAGE_DEGREE for p in special_profiles
+    )
     t5_correct = (
-        t5_n_special == N_SPECIAL_FACES and
-        t5_all_odd_6 and
-        t5_all_even_3 and
-        t5_all_total_10
+        t5_n_special == N_SPECIAL_FACES
+        and t5_all_odd_6
+        and t5_all_even_3
+        and t5_all_total_10
     )
 
     # T6: Ordinary face profile (0 odd + 9 even + 1 self)
     ordinary_profiles = [
-        (int(r["odd_nonface_preimages"]),
-         int(r["even_nonface_preimages"]),
-         1)  # self
+        (int(r["odd_nonface_preimages"]), int(r["even_nonface_preimages"]), 1)  # self
         for r in preimage_rows
         if int(r["odd_nonface_preimages"]) == 0
     ]
     t6_n_ordinary = len(ordinary_profiles)
     t6_all_odd_0 = all(p[0] == ORDINARY_ODD for p in ordinary_profiles)
     t6_all_even_9 = all(p[1] == ORDINARY_EVEN for p in ordinary_profiles)
-    t6_all_total_10 = all(p[0] + p[1] + p[2] == PREIMAGE_DEGREE for p in ordinary_profiles)
+    t6_all_total_10 = all(
+        p[0] + p[1] + p[2] == PREIMAGE_DEGREE for p in ordinary_profiles
+    )
     t6_special_plus_ordinary = t5_n_special + t6_n_ordinary
     t6_correct = (
-        t6_n_ordinary == N_ORDINARY_FACES and
-        t6_all_odd_0 and
-        t6_all_even_9 and
-        t6_all_total_10 and
-        t6_special_plus_ordinary == N_FACES
+        t6_n_ordinary == N_ORDINARY_FACES
+        and t6_all_odd_0
+        and t6_all_even_9
+        and t6_all_total_10
+        and t6_special_plus_ordinary == N_FACES
     )
 
     return {
@@ -231,26 +241,61 @@ def analyze() -> dict:
 
 def main():
     import json as _json
+
     summary = analyze()
     out = ROOT / "data" / "w33_srg36_triangle_fibration.json"
     out.write_text(_json.dumps(summary, indent=2))
-    print("T1 triangles: total=%d faces=%d odd_nonface=%d even_nonface=%d correct:%s" % (
-        summary["T1_triangles_total"], summary["T1_faces_chosen"],
-        summary["T1_nonface_hol1"], summary["T1_nonface_hol0"], summary["T1_correct"]))
-    print("T2 fibration: odd=%d special=%d fiber_size=%d correct:%s" % (
-        summary["T2_n_odd"], summary["T2_n_special"],
-        summary["T2_fiber_size"], summary["T2_correct"]))
-    print("T3 special=lines: n=%d unique=%s covered=%s correct:%s" % (
-        summary["T3_n_special"], summary["T3_line_ids_unique"],
-        summary["T3_all_lines_covered"], summary["T3_correct"]))
-    print("T4 degree-10 map: faces=%d all_10=%s correct:%s" % (
-        summary["T4_n_faces"], summary["T4_all_degree_10"], summary["T4_correct"]))
-    print("T5 special profile (6+3+1): n=%d odd6=%s even3=%s correct:%s" % (
-        summary["T5_n_special"], summary["T5_all_odd_6"],
-        summary["T5_all_even_3"], summary["T5_correct"]))
-    print("T6 ordinary profile (0+9+1): n=%d odd0=%s even9=%s total=%d correct:%s" % (
-        summary["T6_n_ordinary"], summary["T6_all_odd_0"],
-        summary["T6_all_even_9"], summary["T6_special_plus_ordinary"], summary["T6_correct"]))
+    print(
+        "T1 triangles: total=%d faces=%d odd_nonface=%d even_nonface=%d correct:%s"
+        % (
+            summary["T1_triangles_total"],
+            summary["T1_faces_chosen"],
+            summary["T1_nonface_hol1"],
+            summary["T1_nonface_hol0"],
+            summary["T1_correct"],
+        )
+    )
+    print(
+        "T2 fibration: odd=%d special=%d fiber_size=%d correct:%s"
+        % (
+            summary["T2_n_odd"],
+            summary["T2_n_special"],
+            summary["T2_fiber_size"],
+            summary["T2_correct"],
+        )
+    )
+    print(
+        "T3 special=lines: n=%d unique=%s covered=%s correct:%s"
+        % (
+            summary["T3_n_special"],
+            summary["T3_line_ids_unique"],
+            summary["T3_all_lines_covered"],
+            summary["T3_correct"],
+        )
+    )
+    print(
+        "T4 degree-10 map: faces=%d all_10=%s correct:%s"
+        % (summary["T4_n_faces"], summary["T4_all_degree_10"], summary["T4_correct"])
+    )
+    print(
+        "T5 special profile (6+3+1): n=%d odd6=%s even3=%s correct:%s"
+        % (
+            summary["T5_n_special"],
+            summary["T5_all_odd_6"],
+            summary["T5_all_even_3"],
+            summary["T5_correct"],
+        )
+    )
+    print(
+        "T6 ordinary profile (0+9+1): n=%d odd0=%s even9=%s total=%d correct:%s"
+        % (
+            summary["T6_n_ordinary"],
+            summary["T6_all_odd_0"],
+            summary["T6_all_even_9"],
+            summary["T6_special_plus_ordinary"],
+            summary["T6_correct"],
+        )
+    )
     print("wrote data/w33_srg36_triangle_fibration.json")
 
 

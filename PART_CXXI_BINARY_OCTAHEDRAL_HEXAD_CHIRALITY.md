@@ -1,6 +1,6 @@
 # Part CXXI — Binary-Octahedral Lift and Entangled-Hexad Chirality
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 29, 2026
 
 Part CXX found the projective S4 derangement rule:

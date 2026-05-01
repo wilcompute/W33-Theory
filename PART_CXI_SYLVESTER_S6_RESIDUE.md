@@ -1,6 +1,6 @@
 # Part CXI — Sylvester S6 Residue and Oriented-Triple Hidden 20
 
-Status: theorem-grade structural extension  
+Status: theorem-grade structural extension
 Date: April 28, 2026
 
 Part CX localized the B29/C9 rank lock inside every fixed spread. This part identifies the local residue explicitly as a six-letter Sylvester object.

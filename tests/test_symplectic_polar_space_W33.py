@@ -26,6 +26,7 @@ Lifting to continuous geometry:
 
 from fractions import Fraction
 from math import comb
+
 import pytest
 
 # W(3,3) parameters
@@ -61,10 +62,10 @@ class TestSymplecticPolarSpaceW33:
 
     def test_all_srg_params_from_q(self):
         """All SRG parameters (v,k,lambda,mu) follow from q=3 alone."""
-        assert (q**4-1)//(q-1) == v
-        assert q*(q+1) == k
-        assert q-1 == l
-        assert q+1 == m
+        assert (q**4 - 1) // (q - 1) == v
+        assert q * (q + 1) == k
+        assert q - 1 == l
+        assert q + 1 == m
 
     def test_srg_consistency_equation(self):
         """SRG consistency: k*(k-lambda-1) = mu*(v-k-1)."""
@@ -76,7 +77,7 @@ class TestSymplecticPolarSpaceW33:
 
     def test_Phi3_as_PG2_Fq(self):
         """Phi3 = q^2+q+1 = |PG(2,F_q)| = number of lines through each point."""
-        # In PG(3,F_q): lines through a point = |PG(2,F_q)| ... 
+        # In PG(3,F_q): lines through a point = |PG(2,F_q)| ...
         # Actually: number of lines through a point in PG(3,q) = (q^3-1)/(q-1) = q^2+q+1
         lines_through_pt = (q**3 - 1) // (q - 1)
         assert lines_through_pt == Phi3 == 13
@@ -140,8 +141,8 @@ class TestSymplecticPolarSpaceW33:
         """Tr(A^3) = k^3 + r^3*f + s_ev^3*g = 6*E*lambda = 6*240*2 = 2880."""
         r_eig, s_eig = 2, -4
         tr_A3 = k**3 * 1 + r_eig**3 * f + s_eig**3 * g
-        # Tr(A^3) = 6 * (number of triangles) * ... 
-        # For SRG: Tr(A^3) = k*(k-1)*lambda * v/... = v*k*(k-1)*lambda / k ... 
+        # Tr(A^3) = 6 * (number of triangles) * ...
+        # For SRG: Tr(A^3) = k*(k-1)*lambda * v/... = v*k*(k-1)*lambda / k ...
         # Standard: Tr(A^3)/6 = number of triangles = v*k*(k-1-mu+...)/6?
         # Actually Tr(A^3) = v * k * lambda (for SRG without self-loops)
         tr_A3_formula = v * k * l
@@ -162,8 +163,8 @@ class TestSymplecticPolarSpaceW33:
 
     def test_Sp4_to_SU6_embedding(self):
         """Sp(4) embeds in SU(6): dim Sp(4) = 10 = Phi4, dim SU(6) = 35."""
-        dim_Sp4 = 2 * (2*2 + 1)  # = 10
-        dim_SU6 = 6**2 - 1        # = 35
+        dim_Sp4 = 2 * (2 * 2 + 1)  # = 10
+        dim_SU6 = 6**2 - 1  # = 35
         assert dim_Sp4 == Phi4
         assert dim_SU6 == 35
         assert dim_Sp4 < dim_SU6
@@ -171,18 +172,19 @@ class TestSymplecticPolarSpaceW33:
     def test_W33_q_is_field_size(self):
         """The q in W(3,3) name IS the field size |F_q| = 3."""
         assert q == 3
-        assert q**2 - 1 == (q-1)*(q+1) == l*m == 2*4 == 8  # |F_9^*|
+        assert q**2 - 1 == (q - 1) * (q + 1) == l * m == 2 * 4 == 8  # |F_9^*|
 
     def test_PG3_F3_point_count(self):
         """40 points of PG(3,F_3) = v."""
         # Standard formula: |PG(n,q)| = (q^{n+1}-1)/(q-1)
-        assert (3**4 - 1) // (3-1) == 40 == v
+        assert (3**4 - 1) // (3 - 1) == 40 == v
 
     def test_tangent_space_equals_bivectors(self):
         """Tangent space at each point of W(3,q) has dim 2*(q^2+q) = 24 = f."""
         # Actually tangent to GQ W(3,q): at each point, the space has f=24 neighbors
         # More precisely: the symplectic tangent space has q*(q^2+1) = 3*10 = 30? No.
         # k = 12 = q*(q+1) = tangent degree
-        assert q*(q+1) == k == f//m  # 12 = 24/2 ... hmm
+        assert q * (q + 1) == k == 12
+        assert 2 * k == f == 24
         # Better: f = mu * k/mu... let's just verify the key formula
         assert f == m * s  # 24 = 4 * 6 = mu * (k/lambda)

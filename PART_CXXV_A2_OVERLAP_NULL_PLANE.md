@@ -1,6 +1,6 @@
 # Part CXXV — A2 Overlap Null Plane for Complete Two-Qutrit MUB Frames
 
-**Status:** theorem-grade structural extension  
+**Status:** theorem-grade structural extension
 **Date:** April 29, 2026
 
 Parts CXX--CXXIV identify the complete two-qutrit stabilizer MUB frames as a binary-octahedral lift of an `S4` local skeleton.  Part CXXIV gives the decisive pair law:

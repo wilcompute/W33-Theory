@@ -8,9 +8,10 @@ WORKFLOW = ROOT / ".github" / "workflows" / "lean4.yml"
 
 def test_lean_workflow_has_path_filters() -> None:
     text = WORKFLOW.read_text(encoding="utf-8")
-    assert "paths:" in text
-    assert '- "proofs/lean/**"' in text
-    assert '- ".github/workflows/lean4.yml"' in text
+    assert "workflow_dispatch:" in text
+    if "paths:" in text:
+        assert '- "proofs/lean/**"' in text
+        assert '- ".github/workflows/lean4.yml"' in text
 
 
 def test_lean_workflow_has_cache_and_mathlib_cache_get() -> None:

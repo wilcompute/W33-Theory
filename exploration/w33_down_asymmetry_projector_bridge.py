@@ -51,9 +51,14 @@ different.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from fractions import Fraction
+from pathlib import Path
 from typing import Any
+
+try:
+    from exploration.w33_bridge_inputs import load_bridge_json
+except ModuleNotFoundError:  # pragma: no cover - direct script execution
+    from w33_bridge_inputs import load_bridge_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,7 +84,7 @@ def _frac(value: Fraction) -> str:
 
 
 def _load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return load_bridge_json(path.name, path.parent)
 
 
 def _count_labels(matrix: list[list[str]]) -> dict[str, int]:
@@ -101,7 +106,9 @@ def build_summary() -> dict[str, Any]:
     closure_matrix = closure["slot_profiles"]["Hbar_2"]["canonical_label_matrix"]
     label_counts = _count_labels(closure_matrix)
     a_count = label_counts.get("A", 0)
-    non_a_nonzero_count = sum(count for label, count in label_counts.items() if label not in {"A", "0"})
+    non_a_nonzero_count = sum(
+        count for label, count in label_counts.items() if label not in {"A", "0"}
+    )
 
     return {
         "canonical_real_dressings": {
@@ -134,8 +141,12 @@ def build_summary() -> dict[str, Any]:
             "vanishing_minus_minus_rank": hbar2["--"]["rank"],
         },
         "derived_identity": {
-            "up_equals_triality_triplet_over_cyclic_shell": _frac(Fraction(triplet_rank, 1) / (V - Q)),
-            "up_equals_a_label_count_over_cyclic_shell": _frac(Fraction(a_count, 1) / (V - Q)),
+            "up_equals_triality_triplet_over_cyclic_shell": _frac(
+                Fraction(triplet_rank, 1) / (V - Q)
+            ),
+            "up_equals_a_label_count_over_cyclic_shell": _frac(
+                Fraction(a_count, 1) / (V - Q)
+            ),
             "down_minus_up_equals_minus_inactive_plus_singled_over_dim_g2_times_cyclic_shell": _frac(
                 -Fraction(inactive_rank + singled_rank, 1) / ((2 * PHI6) * (V - Q))
             ),
@@ -160,10 +171,13 @@ def build_summary() -> dict[str, Any]:
             "the_mu_plus_one_correction_equals_the_non_a_nonzero_label_count": (
                 non_a_nonzero_count == int(MU + 1)
             ),
-            "the_triality_triplet_count_equals_the_a_label_count": (a_count == triplet_rank),
+            "the_triality_triplet_count_equals_the_a_label_count": (
+                a_count == triplet_rank
+            ),
             "the_real_up_down_asymmetry_has_an_exact_operator_count_reading": (
                 UP_REAL == Fraction(triplet_rank, 1) / (V - Q)
-                and REAL_DIFFERENCE == -Fraction(inactive_rank + singled_rank, 1) / ((2 * PHI6) * (V - Q))
+                and REAL_DIFFERENCE
+                == -Fraction(inactive_rank + singled_rank, 1) / ((2 * PHI6) * (V - Q))
                 and a_count == triplet_rank
                 and non_a_nonzero_count == inactive_rank + singled_rank
             ),

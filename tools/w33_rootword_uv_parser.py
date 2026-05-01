@@ -10,6 +10,7 @@ by rotating the cycle so the smaller N12 vertex appears first.
 This is intentionally lightweight and contains robust handling of the two
 common edge->root JSON formats used in this repo.
 """
+
 from __future__ import annotations
 
 import csv
@@ -59,7 +60,11 @@ class W33RootwordParser:
         return int(parts[0]), int(parts[1])
 
     def _load_edge_to_root(self) -> None:
-        data = json.loads(self.edge_root_json.read_text(encoding="utf-8"))
+        data = (
+            json.loads(self.edge_root_json.read_text(encoding="utf-8"))
+            if self.edge_root_json.exists()
+            else {}
+        )
         raw_map: Dict[Tuple[int, int], Tuple[int, ...]] = {}
         if isinstance(data, dict):
             for k, v in data.items():

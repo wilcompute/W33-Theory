@@ -55,6 +55,32 @@ def test_periodic_table_organization_summary_tracks_four_exact_rows() -> None:
         "centered_spread_probe_spectrum": {"0": 25, "18": 15},
         "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
     }
+    assert pascal["representation_triangle_121"] == {
+        "line_module": "40 = 1 + 15 + 24",
+        "spread_module": "36 = 1 + 15 + 20",
+        "anti_line_quotient_module": "45 = 1 + 24 + 20",
+        "total_dimension_identity": "40 + 36 + 45 = 121 = (k - 1)^2",
+        "sector_double_count_identity": "3 + 2(15 + 20 + 24) = 121",
+        "nonbacktracking_outdegree": "k - 1 = 11",
+        "common_singular_constant": "sqrt(18) = 3sqrt(2)",
+        "sector_sharing_triangle": {
+            "L_intersect_S": "1 + 15",
+            "L_intersect_Q": "1 + 24",
+            "S_intersect_Q": "1 + 20",
+            "hidden_target_sector": 20,
+        },
+    }
+    assert pascal["chiral_exact_sequence"] == {
+        "positive_chirality": "P_+ = L_15 + L_24 + S_20",
+        "negative_chirality": "P_- = S_15 + Q_24 + Q_20",
+        "harmonic_sector": "H = 1_L + 1_S + 1_Q",
+        "nonzero_forward_blocks": ["S_15 -> L_15", "Q_24 -> L_24", "Q_20 -> S_20"],
+        "exact_dimension_identity": "2(15 + 24 + 20) = 118",
+        "total_dimension_identity": "121 = 59_+ + 59_- + 3_harm",
+        "cohomology_statement": "the only cohomology is the three module means",
+        "rank_Q": 59,
+        "nullity_Q": 62,
+    }
     assert pascal["target_side_geometry"] == {
         "spread_etf": {
             "frame_type": "ETF(36,15)",
@@ -97,6 +123,20 @@ def test_periodic_table_organization_summary_tracks_four_exact_rows() -> None:
                 "spectrum": {"-3": 24, "3": 20, "12": 1},
             },
             "positive_sign_isomorphic_to_transport_graph": True,
+            "canonical_transport_carrier": {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {"5": 27},
+                "point_line_incidence_distribution": {"3": 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            },
         },
         "shared_naimark_shadow": {
             "shared_shadow_dimension": 21,
@@ -109,6 +149,14 @@ def test_periodic_table_organization_summary_tracks_four_exact_rows() -> None:
     }
     assert pascal["signed_sector_operator"] == "S = A_iso - A_non = 2A + I - J"
     assert pascal["seidel_spectrum"] == {"-15": 1, "-7": 15, "5": 24}
+    assert pascal["projector_calculus_propagator"] == {
+        "rank_P0": 3,
+        "rank_P_light": 78,
+        "rank_P_heavy": 40,
+        "projector_calculus_is_closed": True,
+        "finite_propagator_system_complete": True,
+        "H_determines_all_propagators": True,
+    }
 
     witness = rows["frontier_witness_row"]
     assert witness["tail_package_sizes"] == [81, 162, 81]
@@ -253,6 +301,21 @@ def test_export_payload_freezes_the_same_checked_rows() -> None:
         "centered_spread_probe_spectrum": {"0": 25, "18": 15},
         "centered_anti_line_probe_spectrum": {"0": 16, "36": 24},
     }
+    assert payload["rows"]["pascal_computation_row"]["representation_triangle_121"] == {
+        "line_module": "40 = 1 + 15 + 24",
+        "spread_module": "36 = 1 + 15 + 20",
+        "anti_line_quotient_module": "45 = 1 + 24 + 20",
+        "total_dimension_identity": "40 + 36 + 45 = 121 = (k - 1)^2",
+        "sector_double_count_identity": "3 + 2(15 + 20 + 24) = 121",
+        "nonbacktracking_outdegree": "k - 1 = 11",
+        "common_singular_constant": "sqrt(18) = 3sqrt(2)",
+        "sector_sharing_triangle": {
+            "L_intersect_S": "1 + 15",
+            "L_intersect_Q": "1 + 24",
+            "S_intersect_Q": "1 + 20",
+            "hidden_target_sector": 20,
+        },
+    }
     assert payload["rows"]["pascal_computation_row"]["target_side_geometry"] == {
         "spread_etf": {
             "frame_type": "ETF(36,15)",
@@ -295,6 +358,20 @@ def test_export_payload_freezes_the_same_checked_rows() -> None:
                 "spectrum": {"-3": 24, "3": 20, "12": 1},
             },
             "positive_sign_isomorphic_to_transport_graph": True,
+            "canonical_transport_carrier": {
+                "coordinate_conversion": "(x0,x1,x2,x3) -> (x0,x2,x1,x3)",
+                "anti_lines_equal_center_quads_after_coordinate_conversion": True,
+                "duplicate_pairing_equals_center_quad_antipodes": True,
+                "duplicate_classes_equal_quotient_point_quad_pairs": True,
+                "paired_supports_equal_quotient_point_supports": True,
+                "quotient_line_count": 27,
+                "support_partitions_equal_quotient_lines": True,
+                "line_size_distribution": {"5": 27},
+                "point_line_incidence_distribution": {"3": 45},
+                "negative_sign_graph_five_cliques_equal_quotient_lines": True,
+                "positive_sign_equals_transport_graph_without_relabeling": True,
+                "negative_sign_equals_quotient_point_graph_without_relabeling": True,
+            },
         },
         "shared_naimark_shadow": {
             "shared_shadow_dimension": 21,
