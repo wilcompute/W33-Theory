@@ -1,234 +1,148 @@
-\documentclass[aps,prd,twocolumn,showpacs,superscriptaddress,longbibliography]{revtex4-2}
+\documentclass[12pt,a4paper]{article}
 
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{microtype}
-\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
 
+%% Theorem environments
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem*{remark}{Remark}
+\newtheorem{remark}[theorem]{Remark}
 \newtheorem{conjecture}[theorem]{Conjecture}
-
-\begin{document}
 
 \title{A Theory of Everything from the W(3,3) Ramanujan Graph:\\
        Arithmetic Uniqueness, Generation Structure, Langlands Correspondence,\\
        Motivic Cohomology, and Quantum Gravity}
 
-\author{Wil Dahn}
-\affiliation{Independent Researcher, Severna Park, Maryland, USA}
+\author{Wil Dahn\\
+  \small Independent Researcher, Severna Park, Maryland, USA\\
+  \small\texttt{github.com/wilcompute/W33-Theory}}
 
 \date{\today}
 
-\begin{abstract}
-We develop a complete theory of everything grounded in the unique arithmetic
-properties of the W(3,3) Ramanujan bipartite graph. We prove that W(3,3) is the
-unique member of the Lubotzky--Phillips--Sarnak $W(3,q)$ family satisfying five
-simultaneous arithmetic conditions (C1--C5). From this uniqueness we derive:
-(i) the three-generation structure of the Standard Model via Frobenius triality
-and a Burnside orbit count on $\mathbb{Z}[\zeta_{12}]$; (ii) the CKM CP-violating
-phase $\delta_{CP}=1.144$~rad from the Langlands root number $\varepsilon(\pi_2)=-1$;
-(iii) the Yukawa hierarchy from Frobenius spectral ratios
-$r_i\in\{(2\pm\sqrt{3})/6,\,1/3\}$; (iv) the cosmological constant from the graph
-spectral zeta $\zeta_{W_{33}}(4)$; (v) the spectral dimension $d_s=2$ at the
-asymptotic safety UV fixed point; and (vi) the full motivic decomposition
-$h^1(\mathcal{V}_{W_{33}})=M_{E_{-3}}\oplus M_{E_{-4}}\oplus M_{E_{-7}}$,
-showing that the three Standard Model generations are Chow motives of CM
-elliptic curves. We enumerate 26 falsifiable predictions, of which 14 pass
-current experimental tests and 3 are cleanly falsifiable by near-future experiments.
-\end{abstract}
-
-\pacs{02.10.Ox, 14.60.Pq, 11.30.Pb, 02.10.Ud, 04.60.-m, 14.80.Bn}
-
+\begin{document}
 \maketitle
 
-%%===================================================================
-\section{The W(3,3) Ramanujan Graph}
-\label{sec:graph}
-%%===================================================================
+\begin{abstract}
+We show that the Ramanujan bipartite graph $W(3,3)$—the unique member of the
+Lubotzky--Phillips--Sarnak family satisfying five simultaneous arithmetic
+conditions C1--C5—encodes a complete and falsifiable theory of everything.
+The adjacency spectrum $\{\pm12^{(1)},\pm2^{(24)},\pm4^{(15)}\}$ together
+with its Hashimoto zeta function, spectral moments, and motivic cohomology
+yields, with no free parameters: (1)~a proof that $W(3,3)$ is the unique such
+graph (Theorem~1); (2)~ring formulas for the Ramanujan tau function at
+$p=2,3,5,7$ via $\tau(2)=-f=-24$ and $\tau(3)=kq\Phi_6=252$; (3)~neutrino
+mass predictions $\sum m_\nu=101.5$~meV (NH) matching PDG 2024 to $<2\sigma$;
+(4)~a Langlands--Frobenius correspondence between $\zeta_{W_{33}}(u)$ and
+$L(s,\Delta)$ for Ramanujan's cusp form $\Delta$; (5)~a motivic
+$L$-value resolution of the cosmological constant problem via
+$\Lambda\propto\zeta_{W_{33}}(4)=0.03897$; (6)~an asymptotic-safety UV fixed
+point at spectral dimension $d_s=2$ with Newton's constant
+$G_N^{W_{33}}\approx0.055$ Planck units; and (7)~dark energy parameters
+$w_0=-0.846$, $w_a=+0.877$, Hubble constant $H_0=68.2$~km/s/Mpc, and a
+NANOGrav-consistent stochastic gravitational-wave background with
+$f_{\rm peak}\approx7.8\times10^{-9}$~Hz and tilt $n_T=2/3$.
+We compile 26 falsifiable predictions testable by DESI-II, Euclid, LEGEND-200,
+SKA-PTA, and CMB-S4.
+All proofs, numerical scripts, and data are open-source at
+\url{https://github.com/wilcompute/W33-Theory}.
+\end{abstract}
 
-\subsection{Definition and LPS Construction}
+\tableofcontents
+\newpage
 
-The Lubotzky--Phillips--Sarnak (LPS) family $W(3,q)$~\cite{LPS1988} consists
-of Cayley graphs on $\mathrm{PSp}(4,\mathbb{F}_q)$ for prime powers $q$. For
-$q=3$ the graph $W(3,3)$ is $k$-regular bipartite with $k=q(q+1)=12$, $v=40$
-vertices per side, and all non-trivial eigenvalues bounded by $2\sqrt{k-1}=2\sqrt{11}$,
-satisfying the Ramanujan condition~\cite{Ramanujan1916}.
+%% ============================================================
+%%  SECTIONS
+%% ============================================================
 
-\subsection{Spectral Parameters}
+\input{section_intro}
 
-Table~\ref{tab:params} lists the key parameters. Multiplicity formulas:
-$f(q)=q(q+1)^2/2$, $g(q)=q(q^2+1)/2$.
+\input{section1_graph}
 
-\begin{table}[h]
-\centering
-\caption{W(3,3) spectral and arithmetic parameters.}
-\label{tab:params}
-\begin{tabular}{lcc}
-\toprule
-\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} \\
-\midrule
-Degree & $k$ & 12 \\
-Vertices per side & $v$ & 40 \\
-$f$-multiplicity & $f$ & 24 \\
-$g$-multiplicity & $g$ & 15 \\
-$r$-eigenvalue & $\lambda_r$ & $+2$ \\
-$s$-eigenvalue & $\lambda_s$ & $-4$ \\
-$\Phi_3(3)$ & --- & 13 \\
-$\Phi_4(3)$ & --- & 10 \\
-$\Phi_6(3)$ & --- & 7 \\
-$\mu=q+1$ & --- & 4 \\
-$2k-1$ & --- & 23 \\
-$|\mathrm{PSp}(4,3)|$ & --- & 25920 \\
-\bottomrule
-\end{tabular}
-\end{table}
+\input{section2_uniqueness}
 
-\subsection{Corrected Bipartite Spectrum}
+\input{section3_tau}
 
-Being bipartite, $W(3,3)$ has fully symmetric spectrum: eigenvalue $\lambda$
-with multiplicity $m$ is paired with $-\lambda$ at the same multiplicity.
-The complete spectrum on $2v=80$ vertices is
-\begin{equation}
-  \sigma(A) = \{\pm 12^{(1)},\; \pm 2^{(f)},\; \pm 4^{(g)}\},
-  \quad 2(1+f+g)=80.
-\end{equation}
+\input{section4_moments}
 
-%%===================================================================
-\section{The W(3,3) Uniqueness Theorem}
-\label{sec:uniqueness}
-%%===================================================================
+\input{section5_neutrino}
 
-\begin{theorem}[$W(3,3)$ Uniqueness]
-W(3,3) is the unique $W(3,q)$ Ramanujan graph satisfying
-conditions C1--C5 simultaneously.
-\end{theorem}
+\input{section6_seesaw}
 
-\textbf{C1}: $\Delta(q)=0 \Leftrightarrow q=3$. \\
-\textbf{C2}: $k+g=q^q \Leftrightarrow q=3$. \\
-\textbf{C3}: $-f=\tau(2)=-24$ and $kq\Phi_6=\tau(3)=252$, both $\Leftrightarrow q=3$. \\
-\textbf{C4}: $h(\mathbb{Q}(\sqrt{-\Phi_6(3)}))=h(\mathbb{Q}(\sqrt{-7}))=1$. \\
-\textbf{C5}: $a_{k-1}(E_{-\Phi_6})=\lambda_s \Leftrightarrow a_{11}(E_{-7})=-4$.
+\input{section7_zeta}
 
-%%===================================================================
-\section{The Ramanujan Tau Bridge}
-\label{sec:tau}
-%%===================================================================
-
-\begin{align}
-  \tau(2) &= -f = -24, \\
-  \tau(3) &= k\cdot q\cdot\Phi_6 = 252, \\
-  \tau(5) &= q(q-1)(2q-1)\,\Phi_6\,(2k-1) = 4830, \\
-  \tau(7) &= -(q-1)^3\,\Phi_6\,\Phi_3\,(2k-1) = -16744.
-\end{align}
-
-The tau congruence $\tau(n)\equiv0\pmod{23}$ for $n\geq4$, $\gcd(n,23)=1$
-holds with exceptions only at the W(3,3) generating set, providing an
-infinite family of arithmetic tests.
-
-%%===================================================================
-\section{New Spectral Moment Identities}
-\label{sec:moments}
-%%===================================================================
-
-\begin{theorem}[Spectral 4-moment]
-For any $W(3,q)$,
-\begin{equation}
-  M_4(q) = q(q+1)(q^3+3q^2-q+1),
-\end{equation}
-specializing to $M_4(3)=624=q\mu^2\Phi_3$ at $q=3$.
-\end{theorem}
-
-The three-term recurrence $a_n = 164a_{n-1}-2944a_{n-2}+9216a_{n-3}$
-generates all even moments from initial data $(M_2,M_4,M_6)=(12,624,76224)$.
-
-%%===================================================================
-\section{Neutrino Mass Prediction}
-\label{sec:neutrino}
-%%===================================================================
-
-The $\mu_{\rm eff}^2$ parameter and W(3,3) fixed-point solutions
-are computed by \texttt{scripts/SOLVE\_RG\_NEUTRINO.py} (NuFIT~6.0 IC24 default).
-The leading prediction is $\sum m_\nu=101.5$~meV (NH, $\mu_{\rm eff}^2=1/4$),
-and the j-invariant CM tower gives exact integer predictions:
-$j(-4)=k^3=1728$, $j(-7)=-g^3$, $j(-8)=(v/2)^3$, $j(-11)=-2^g$.
-
-%%===================================================================
-\section{Seesaw Cascade}
-\label{sec:seesaw}
-%%===================================================================
-
-Type-I seesaw gives $M_R\sim5\times10^{14}$--$10^{15}$~GeV. The
-spectral cascade descends through
-$1/\mu\to1/\Phi_6\to1/\Phi_3\to1/(2k-1)$
-with convergence ratio $\approx\sqrt{\Phi_4}/\Phi_6\approx0.452$.
-Full numerical solutions in \texttt{artifacts/rg\_neutrino\_results.json}.
-
-%%===================================================================
-\section{Spectral Zeta and L-Function Connection}
-\label{sec:zeta}
-%%===================================================================
-
-The spectral zeta $\zeta_{W_{33}}(s)=\frac{1}{v}\sum_{\lambda\neq0}|\lambda|^{-s}$
-takes values $\zeta(1)=0.3958$, $\zeta(2)=0.1736$, $\zeta(4)=0.03897$.
-The critical exponent $s=11$ (weight of $\Delta(z)$) gives
-$\zeta_{W_{33}}(11)\approx2.931\times10^{-4}$, linking $W(3,3)$ to $L(\Delta,s)$.
-
-%%===================================================================
-%%  LANGLANDS / FROBENIUS (deep section)
-%%===================================================================
 \input{section5_langlands_frobenius}
 
-%%===================================================================
-%%  MOTIVIC COHOMOLOGY
-%%===================================================================
 \input{section_motivic}
 
-%%===================================================================
-%%  QUANTUM GRAVITY AND ASYMPTOTIC SAFETY
-%%===================================================================
 \input{section_graviton}
 
-%%===================================================================
-%%  COSMOLOGY
-%%===================================================================
 \input{section_cosmology}
 
-%%===================================================================
-%%  CONSOLIDATED PREDICTIONS
-%%===================================================================
 \input{section_predictions}
 
-%%===================================================================
-\section{Current Exact Boundary}
+%% ============================================================
+%%  BOUNDARY  &  OPEN PROBLEMS
+%% ============================================================
+
+\section{Current Exact Boundary and Open Problems}
 \label{sec:boundary}
-%%===================================================================
 
-The live exact boundary is consistent on five mutually reinforcing layers:
-local qutrit kernel $\{1,3,9,27,40,240\}$;
-corrected spectral packet $(v,k,\lambda,\mu)=(40,12,2,4)$;
-continuum seed $\{8,56,320,2240,12480\}$;
-residue fermion seed $\{98,17,208\}$;
-and the transport layer, where the remaining open problem is the first
-transport witness attaching the finite spectral packet to its smooth
-continuum and dynamical realization. The five layers converge on $q=3$
-and no other value.
+The live exact boundary rests on five mutually consistent layers all selecting
+$q=3$:
+\begin{itemize}
+\item the local qutrit kernel packet $\{1,3,9,27,40,240\}$;
+\item the corrected spectral packet $(v,k,\lambda,\mu)=(40,12,2,4)$,
+  nontrivial multiplicity sum $39=24+15$;
+\item the continuum coefficient seed $\{8,56,320,2240,12480\}$;
+\item the residual fermion seed $\{98,17,208\}$;
+\item the transport reduction: quotient-triangle parity equals the sign of
+  an exact local $S_3$ holonomy; the mixed-plane wall reduces to one missing
+  non-identity unipotent sign-trivial witness.
+\end{itemize}
+The three residual-fermion factors land on the same qutrit/toroidal/exceptional
+backbone: $17=\mu^2+1$, $98=\Phi_6\dim(G_2)=7\cdot14$, and
+$208=\mu\dim(F_4)=8\cdot26$.
+The honest remaining open problem is therefore not finite $q$-selection but
+the first transport witness attaching the selected finite packet to its smooth
+continuum and dynamical realisation.
 
-%%===================================================================
+\paragraph{Open problems.}
+\begin{enumerate}
+\item Prove or disprove $w_a=+0.877$ from first principles in a
+  lattice/functional-RG computation.
+\item Construct the explicit motivic cohomology class
+  $[Z]\in H^4_\mathcal{M}(M_{W_{33}},\mathbb{Q}(4))$ and verify the
+  Beilinson regulator map.
+\item Identify the sign-trivial unipotent witness completing the transport
+  layer and thereby fixing the CKM $\delta_{CP}$ phase.
+\item Extend the asymptotic-safety analysis beyond the single-operator
+  truncation to include the full Seeley--DeWitt heat-kernel expansion.
+\end{enumerate}
+
+%% ============================================================
+%%  ACKNOWLEDGEMENTS
+%% ============================================================
+
 \section*{Acknowledgements}
-%%===================================================================
 
-All results are reproducible from
+All results are fully reproducible from the open-source repository:
 \url{https://github.com/wilcompute/W33-Theory}.
-Computational verification in \texttt{scripts/};
-paper source in \texttt{paper/}.
+The spectral computations used
+\texttt{NetworkX}, \texttt{NumPy}, \texttt{SciPy}, and \texttt{SymPy}.
 
+%% ============================================================
+%%  BIBLIOGRAPHY
+%% ============================================================
+
+\bibliographystyle{unsrt}
 \bibliography{references}
 
 \end{document}
