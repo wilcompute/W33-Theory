@@ -1,0 +1,29 @@
+{
+  "module": "scripts/w33_rg_phi6_polar_pipeline.py",
+  "selected_branch": {
+    "model": "W33-Phi6-polar",
+    "selection_principle": "QCD-local Phi6 sector because beta0=Phi6(3)=7",
+    "k3_bare": "24/13",
+    "tau_gut": "log sqrt(mu/Phi6)",
+    "alpha_s_gut_formula": "alpha_unified/(24/13) * (1 + alpha_unified/(2*pi)*log sqrt(mu/Phi6))"
+  },
+  "result": {
+    "status": "ok",
+    "model": "W33-Phi6-polar",
+    "alpha_unified_gut": 0.04,
+    "k3_bare": 1.8461538461538463,
+    "tau_gut": -0.27980789396771133,
+    "delta_gut": -0.0017813123776437676,
+    "k3_effective": 1.849448291286928,
+    "alpha_s_gut": 0.021628071565151053,
+    "alpha_s_mtop_nf6": 0.10726377053541218,
+    "alpha_s_mtop_nf5": 0.10726377053541218,
+    "alpha_s_mz": 0.11800503473579949,
+    "pdg_alpha_s_mz": 0.118,
+    "residual": 5.034735799491763e-06,
+    "sigma": 0.0055941508883241816,
+    "M_GUT": 1.8571428571428572e+16,
+    "M_top": 172.57,
+    "M_Z": 91.1876
+  }
+}
