@@ -1,0 +1,157 @@
+{
+  "module": "PART_CXXXVIII_HASHIMOTO_QUADRATIC_FIELD_COMPILER",
+  "graph": {
+    "v": 40,
+    "m": 240,
+    "directed_edges": 480,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "hashimoto_q": 11
+  },
+  "new_theorem": "The 78-dimensional nontrivial Hashimoto/Ramanujan layer splits into two exact imaginary-quadratic cyclotomic sectors: 24 copies of roots 1±i√Phi4(3), and 15 copies of roots -2±i√Phi6(3).",
+  "quadratic_sectors": [
+    {
+      "adjacency_eigenvalue": 2,
+      "adjacency_multiplicity": 24,
+      "real_part": "1",
+      "imag_square": 10,
+      "cyclotomic_label": "Phi_4(3)",
+      "field_label": "Q(sqrt(-10))",
+      "norm": 11,
+      "root_label": "+1 ± i√10"
+    },
+    {
+      "adjacency_eigenvalue": -4,
+      "adjacency_multiplicity": 15,
+      "real_part": "-2",
+      "imag_square": 7,
+      "cyclotomic_label": "Phi_6(3)",
+      "field_label": "Q(sqrt(-7))",
+      "norm": 11,
+      "root_label": "-2 ± i√7"
+    }
+  ],
+  "characteristic_polynomial": {
+    "factorization": "(x-11)(x-1)^201(x+1)^200(x^2-2x+11)^24(x^2+4x+11)^15",
+    "degree_check": 480,
+    "trace_check": "11 + 201*(1) + 200*(-1) + 24*(2) + 15*(-4) = 0"
+  },
+  "ihara_zeta_inverse": {
+    "factorization": "(1-11u)(1-u)^201(1+u)^200(1-2u+11u^2)^24(1+4u+11u^2)^15",
+    "bass_form": "(1-u^2)^200(1-12u+11u^2)(1-2u+11u^2)^24(1+4u+11u^2)^15",
+    "critical_circle": "|u| = 1/sqrt(11) for all 78 nontrivial zeros"
+  },
+  "trace_compiler": "tr(B^n)=11^n+1+24L_n(2,11)+15L_n(-4,11)+200(1+(-1)^n), where L_0=2,L_1=a,L_n=aL_{n-1}-11L_{n-2}.",
+  "trace_table": [
+    {
+      "n": 1,
+      "trace_B^n": 0,
+      "closure_fraction": 0.0,
+      "closure_fraction_exact": "0"
+    },
+    {
+      "n": 2,
+      "trace_B^n": 0,
+      "closure_fraction": 0.0,
+      "closure_fraction_exact": "0"
+    },
+    {
+      "n": 3,
+      "trace_B^n": 960,
+      "closure_fraction": 0.01652892561983471,
+      "closure_fraction_exact": "2/121"
+    },
+    {
+      "n": 4,
+      "trace_B^n": 13920,
+      "closure_fraction": 0.021788129226145755,
+      "closure_fraction_exact": "29/1331"
+    },
+    {
+      "n": 5,
+      "trace_B^n": 181440,
+      "closure_fraction": 0.025817908612799673,
+      "closure_fraction_exact": "378/14641"
+    },
+    {
+      "n": 6,
+      "trace_B^n": 1818240,
+      "closure_fraction": 0.023520499717480797,
+      "closure_fraction_exact": "3788/161051"
+    },
+    {
+      "n": 7,
+      "trace_B^n": 19178880,
+      "closure_fraction": 0.02255412034922873,
+      "closure_fraction_exact": "39956/1771561"
+    },
+    {
+      "n": 8,
+      "trace_B^n": 214015200,
+      "closure_fraction": 0.022879924438493408,
+      "closure_fraction_exact": "445865/19487171"
+    },
+    {
+      "n": 9,
+      "trace_B^n": 2359466880,
+      "closure_fraction": 0.022931431518342364,
+      "closure_fraction_exact": "4915556/214358881"
+    },
+    {
+      "n": 10,
+      "trace_B^n": 25940386560,
+      "closure_fraction": 0.0229192836661617,
+      "closure_fraction_exact": "446632/19487171"
+    },
+    {
+      "n": 11,
+      "trace_B^n": 285329352000,
+      "closure_fraction": 0.022918086862682655,
+      "closure_fraction_exact": "54039650/2357947691"
+    },
+    {
+      "n": 12,
+      "trace_B^n": 3138359764320,
+      "closure_fraction": 0.0229161656619171,
+      "closure_fraction_exact": "594386319/25937424601"
+    },
+    {
+      "n": 13,
+      "trace_B^n": 34522992666240,
+      "closure_fraction": 0.022916347608389568,
+      "closure_fraction_exact": "65384455807/2853116706111"
+    },
+    {
+      "n": 14,
+      "trace_B^n": 379751238715200,
+      "closure_fraction": 0.022916726626158216,
+      "closure_fraction_exact": "719208785445/31384283767221"
+    },
+    {
+      "n": 15,
+      "trace_B^n": 4177245159408000,
+      "closure_fraction": 0.02291667151113451,
+      "closure_fraction_exact": "7911458635240/345227121439431"
+    },
+    {
+      "n": 16,
+      "trace_B^n": 45949730308089920,
+      "closure_fraction": 0.022916635271298055,
+      "closure_fraction_exact": "8702600437139/3797498335833741"
+    }
+  ],
+  "checks": {
+    "phi3": 13,
+    "phi4": 10,
+    "phi6": 7,
+    "hashimoto_q": 11,
+    "norm_identity_phi4": 11,
+    "norm_identity_phi6": 11,
+    "ramanujan_layer_dimension": 78,
+    "bass_trivial_plus_perron_mate": 401,
+    "carrier_total": 480,
+    "triangle_trace_T3": 960
+  },
+  "interpretive_note": "Phi6=7 is no longer only a QCD beta/Higgs cyclotomic number: it is the imaginary-square of the s=-4 Hashimoto Ramanujan root. Phi4=10 is the companion imaginary-square of the r=2 root. The non-backtracking operator therefore compiles the two cyclotomic sectors {Phi4,Phi6} directly into closed-loop trace arithmetic."
+}
