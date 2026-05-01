@@ -1569,6 +1569,7 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
     total_cct_tests = 35  # chapters 2-6 CCT crosswalk tests
     q8_master = q8_spectral_action_master_audit()
     q8_boundary_conflicts = tuple(q8_master["boundary_conflicts"])
+    q8_claim_ledger = q8_master["claim_ledger_packet"]
     q8_master_exact = all(q8_master["theorem"].values())
 
     return {
@@ -1607,6 +1608,8 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
             "yukawa_quantization_closure_exact": True,
             "q8_spectral_action_master_audit_exact": q8_master_exact,
             "q8_boundary_conflict_count": len(q8_boundary_conflicts),
+            "q8_claim_ledger_row_count": q8_claim_ledger["row_count"],
+            "q8_claim_ledger_repo_exact_rows": q8_claim_ledger["repo_exact_row_count"],
             "test_count_new_modules": total_new_tests,
             "test_count_cct_crosswalk": total_cct_tests,
         },
@@ -1644,6 +1647,10 @@ def cct_chapter12_realization_theorem_summary() -> dict[str, Any]:
             ],
             "mckay_minus_leech": q8_master["monster_leech_packet"]["mckay_minus_leech"],
             "boundary_conflicts": q8_boundary_conflicts,
+            "claim_ledger_source": q8_claim_ledger["source_of_truth"],
+            "claim_ledger_tier_order": q8_claim_ledger["tier_order"],
+            "claim_ledger_row_count": q8_claim_ledger["row_count"],
+            "claim_ledger_repo_exact_rows": q8_claim_ledger["repo_exact_row_count"],
         },
         "w33_cycle_clock_certificate": {
             "all_repo_exact_records": total_repo_exact_records,

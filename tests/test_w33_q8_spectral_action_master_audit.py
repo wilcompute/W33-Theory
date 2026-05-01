@@ -1,8 +1,14 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from scripts.w33_q8_spectral_action_master_audit import (
     q8_spectral_action_master_audit,
 )
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+PAPER_TEX = REPO_ROOT / "w33_paper.tex"
+INDEX_HTML = REPO_ROOT / "docs" / "index.html"
 
 
 def test_q8_selector_packet_keeps_all_exact_q3_routes_visible() -> None:
@@ -135,6 +141,75 @@ def test_boundary_conflicts_are_explicit_instead_of_silently_absorbed() -> None:
         "index_q8_table_value": "137.036004",
         "same_as_index_q8_table_to_6_decimals": False,
     }
+
+
+def test_q8_claim_ledger_is_the_tiered_source_of_truth() -> None:
+    summary = q8_spectral_action_master_audit()
+    ledger = summary["claim_ledger_packet"]
+    rows = {row["id"]: row for row in ledger["rows"]}
+
+    assert ledger["source_of_truth"] == "scripts/w33_q8_spectral_action_master_audit.py"
+    assert ledger["tier_order"] == (
+        "repo-exact finite",
+        "boundary-explicit finite formula",
+        "dressed phenomenology",
+        "boundary-explicit source of truth",
+        "frontier realization",
+    )
+    assert ledger["row_count"] == 11
+    assert ledger["repo_exact_row_count"] == 8
+    assert ledger["boundary_explicit_row_count"] == 2
+    assert ledger["dressed_phenomenology_row_count"] == 1
+    assert ledger["frontier_row_count"] == 0
+    assert ledger["conflict_ids"] == (
+        "omega_lambda_generator_vs_cosmo_table",
+        "cabibbo_sin_vs_tan_shorthand",
+        "legacy_pmns_theta12_formula",
+        "so32_label_misprint",
+        "alpha_table_rounding_or_formula_conflict",
+    )
+
+    assert rows["q3_selector"]["tier"] == "repo-exact finite"
+    assert rows["q3_selector"]["value"] == "q=3"
+    assert rows["master_variable"]["value"] == "3/13"
+    assert rows["pmns_mixing_packet"]["value"] == "4/13, 7/13, 2/91"
+    assert rows["cabibbo_local_generator"]["formula"] == "tan(theta_C)=x"
+    assert rows["spectral_action_ko_qcd"]["value"] == "KO=10=2 mod 8; beta0=7"
+    assert rows["exceptional_dimension_packet"]["value"] == (
+        "14, 52, 78, 133, 248, 26, 10, 11"
+    )
+    assert rows["hierarchy_496_packet"]["formula"] == ("496=dim(SO32)=2*dim(E8)=2E+16")
+    assert rows["monster_leech_packet"]["value"] == "196883, 196884, 196560, 324"
+
+    assert rows["alpha_inverse_formula"]["tier"] == ("boundary-explicit finite formula")
+    assert rows["alpha_inverse_formula"]["value"] == "669969/4889"
+    assert "legacy 137.036004" in rows["alpha_inverse_formula"]["boundary_status"]
+    assert rows["omega_lambda_cosmo_table"]["tier"] == "dressed phenomenology"
+    assert rows["omega_lambda_cosmo_table"]["value"] == "41/60 versus 9/13"
+    assert rows["q8_public_surfaces"]["tier"] == ("boundary-explicit source of truth")
+    assert "claim ledger governs" in rows["q8_public_surfaces"]["value"]
+
+
+def test_public_q8_surfaces_point_to_the_executable_ledger() -> None:
+    paper_text = PAPER_TEX.read_text(encoding="utf-8")
+    index_text = INDEX_HTML.read_text(encoding="utf-8")
+
+    assert "Executable Q8 claim ledger." in paper_text
+    assert r"\texttt{scripts/w33\_q8\_spectral\_action\_master\_audit.py}" in paper_text
+    assert "$137+880/24445=669969/4889$" in paper_text
+    assert "$\\tan\\theta_C=3/13$" in paper_text
+    assert "$\\Omega_\\Lambda=41/60$" in paper_text
+    assert "$496=2E+16=2\\dim E_8$" in paper_text
+    assert "$\\alpha^{-1}$ & $669969/4889 = 137.035999181837$" in paper_text
+
+    assert "Executable ledger:" in index_text
+    assert "scripts/w33_q8_spectral_action_master_audit.py" in index_text
+    assert "<td>669969/4889 = 137.035999181837</td>" in index_text
+    assert "<td>tan &theta;<sub>C</sub></td>" in index_text
+    assert "41/60 = 0.6833 (dressed cosmology)" in index_text
+    assert "2E + 16 = 2&times;dim(E<sub>8</sub>)" in index_text
+    assert "<td>137.036004</td>" not in index_text
+    assert "2E + 2&times;dim(E<sub>8</sub>)" not in index_text
 
 
 def test_q8_master_theorem_flags_are_all_true() -> None:

@@ -2817,7 +2817,7 @@
                 (CCXII)</strong> &mdash; the vacuum's electromagnetic structure is fully determined by SRG integers:
               <code>c&sup2; = v = 40</code>, <code>&mu;&middot;&epsilon; = 1/v</code>,
               <code>Z = &radic;(&mu;/&epsilon;)</code>. The fine-structure constant
-              <code>&alpha;<sup>-1</sup> = k&sup2; - 2&mu; + 1 + v/((k-1)((k-&lambda;)&sup2;+1)) = 152247/1111 &asymp; 137.036004</code>
+              <code>&alpha;<sup>-1</sup> active ledger = 669969/4889 &asymp; 137.035999181837; legacy matrix shorthand 152247/1111 retired</code>
               (4.4 ppm from CODATA). The Q-Lucas cascade <code>L<sub>n</sub> = qL<sub>n-1</sub> - L<sub>n-2</sub></code>
               produces <code>{2,3,7,18} = {&lambda;,q,&Phi;<sub>6</sub>,m<sub>Perkel</sub>}</code>, bridging SRG to
               57-cell spectral data.</span></div>
@@ -3450,10 +3450,11 @@
               tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Constitutive Transport Response
                 (CCVI)</strong> &mdash; M&sub;0&nbsp;=(K-1)((A-r&middot;I)&sup2;+I);
-              m&sub;K&nbsp;=1111=11&times;101=(K-1)((K-r)&sup2;+1); &alpha;&sup;-&sup;1&nbsp;=137+V/1111=152247/1111
-              (exact); 137=(K-1)&sup2;+MU&sup2;=11&sup2;+4&sup2; Gaussian norm; C&sub;1&nbsp;=V/1111&sup2; (Pi_mean
+              m&sub;K&nbsp;=1111=11&times;101=(K-1)((K-r)&sup2;+1); the legacy
+              &alpha;&sup;-&sup;1&nbsp;=137+V/1111=152247/1111 shorthand is retired by the Q8 ledger value
+              669969/4889; 137=(K-1)&sup2;+MU&sup2;=11&sup2;+4&sup2; Gaussian norm; C&sub;1&nbsp;=V/1111&sup2; (Pi_mean
               response); C&sub;2&nbsp;=0 (antisymmetric Pi_dual with symmetric u_R); bare
-              &alpha;&sup;-&sup;1;&nbsp;&asymp;137.036004 within 4.5&times;10&sup;-&sup;6; of experimental; constitutive
+              alpha response remains a boundary-explicit transport motif; constitutive
               spinor q selects unique equilibrium; 40 tests.</span></div>
           <div class="highlight-item" style="border-left:3px solid var(--gold);padding-left:1rem"><span class="hi-icon"
               style="color:var(--gold)">&#9733;</span><span><strong>Monster Exact Factorization (CCXV+)</strong> &mdash;
@@ -5639,17 +5640,17 @@
             <div class="detail">The exact electromagnetic-vacuum statement is
               <code>c^2 &mu;<sub>0</sub> &epsilon;<sub>0</sub> = 1</code>, not a standalone fixed value of
               <code>&mu;<sub>0</sub></code>. In modern SI the vacuum constants are <code>&alpha;</code>-mediated, so the
-              same W33 theorem that fixes <code>&alpha;<sup>-1</sup> = 152247/1111</code> predicts
+              same W33 theorem that fixes <code>&alpha;<sup>-1</sup> legacy 152247/1111 (retired); ledger 669969/4889</code> predicts
               <code>&mu;<sub>0</sub></code>, <code>&epsilon;<sub>0</sub></code>, and <code>Z<sub>0</sub></code>
               together. More sharply, the same vacuum impedance is now the resistance quantum dressed by
               <code>&alpha;</code>: <code>Z<sub>0</sub> = 2&alpha;R<sub>K</sub></code>, with the Landauer conductance
               quantum closing back as <code>Z<sub>0</sub>G<sub>0</sub> = 4&alpha;</code>.</div>
           </div>
           <div class="card">
-            <div class="num">137.036</div>
+            <div class="num">669969/4889</div>
             <div class="label">α⁻¹ from SRG</div>
-            <div class="detail">k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004 (experiment: 137.035999, diff: 4.5×10⁻⁶).
-              Derived from vertex propagator spectral identity.</div>
+            <div class="detail">Q8 ledger value 137.035999181837; the older 152247/1111 transport shorthand is
+              retained only as a retired boundary motif.</div>
           </div>
           <div class="card">
             <div class="num">13.0°</div>
@@ -5857,7 +5858,7 @@
             vacuum-side statement is <code>c^2 &mu;<sub>0</sub> &epsilon;<sub>0</sub> = 1</code> and
             <code>Z<sub>0</sub> = &mu;<sub>0</sub> c = 1 / (&epsilon;<sub>0</sub> c)</code>. In modern SI the vacuum
             constants are <code>&alpha;</code>-mediated, so the live W33 theorem
-            <code>&alpha;<sup>-1</sup> = 152247/1111</code> predicts <code>&mu;<sub>0</sub></code>,
+            <code>&alpha;<sup>-1</sup> legacy 152247/1111 (retired); ledger 669969/4889</code> predicts <code>&mu;<sub>0</sub></code>,
             <code>&epsilon;<sub>0</sub></code>, and <code>Z<sub>0</sub></code> together.</li>
           <li><strong>Quantum vacuum standards:</strong> <code>tests/test_w33_quantum_vacuum_standards_bridge.py</code>
             proves the same vacuum theorem lands directly on the exact quantum electrical standards too:
@@ -6235,7 +6236,7 @@
           <li><strong>Hard Graph Computation (LXIV-b):</strong> <code>tests/test_hard_graph_computation.py</code> (88
             passing tests) builds W(3,3) from scratch and verifies: SRG by brute-force counting, adjacency spectrum via
             eigvalsh, Ramanujan property, 480x480 Hashimoto operator, Ihara-Bass at 6 probe values, vertex propagator M,
-            alpha = 137+40/1111, Aut(W33)=GSp(4,3) of order 51840, complement SRG(40,27,18,18), clique complex f-vector,
+            alpha = legacy 137+40/1111 (retired), Aut(W33)=GSp(4,3) of order 51840, complement SRG(40,27,18,18), clique complex f-vector,
             Kirchhoff spanning trees, Seidel spectrum &amp; energy = 240.</li>
           <li><strong>Spectral Rigidity (LXV-b):</strong> <code>tests/test_spectral_rigidity.py</code> (59 passing
             tests) walk-regularity up to n=8, eigenprojector decomposition, spectral reconstruction A = sum lambda_t E_t
@@ -6245,7 +6246,7 @@
             sensitivity analysis of alpha to each SRG parameter, perturbation tests, alternative propagators (c=0
             singular, c=2 wrong), Gaussian integer 137=|11+4i|^2, SRG parameter space scan (no other feasible SRG with
             v&lt;=100 gives alpha near 137), Green's function eigenspace decomposition, M^{-1} as degree-2 polynomial in
-            A, end-to-end derivation chain, exact rational alpha^{-1} = 152247/1111.</li>
+            A, end-to-end derivation chain, active alpha^{-1} ledger = 669969/4889.</li>
           <li><strong>Homology/Hodge Hard Computation (LXVII-b):</strong>
             <code>tests/test_homology_hodge_computation.py</code> (73 passing tests) builds entire clique complex from
             scratch, boundary matrices d1/d2/d3 with d^2=0, exact rational rank via Fraction-based Gaussian elimination,
@@ -7334,7 +7335,7 @@
               <code>c^2 &mu;<sub>0</sub> &epsilon;<sub>0</sub> = 1</code>,
               <code>Z<sub>0</sub> = &mu;<sub>0</sub> c = 1 / (&epsilon;<sub>0</sub> c)</code>, and
               <code>&mu;<sub>0</sub> = 2 &alpha; h / (c e^2)</code>. So once the live W33 theorem fixes
-              <code>&alpha;<sup>-1</sup> = 152247/1111</code>, it predicts <code>&mu;<sub>0</sub></code>,
+              <code>&alpha;<sup>-1</sup> legacy 152247/1111 (retired); ledger 669969/4889</code>, it predicts <code>&mu;<sub>0</sub></code>,
               <code>&epsilon;<sub>0</sub></code>, and <code>Z<sub>0</sub></code> together, with the exact number
               <code>1</code> appearing as the vacuum-normalization law itself.</td>
             <td class="status-ok">✅ exact alpha-mediated vacuum closure</td>
@@ -9406,9 +9407,10 @@
               (120).</div>
           </div>
           <div class="card">
-            <div class="num">137.036</div>
+            <div class="num">669969/4889</div>
             <div class="label">α⁻¹ from SRG</div>
-            <div class="detail">k²−2μ+1+v/[(k−1)((k−λ)²+1)] = 137.036004 (experiment: 137.035999, diff: 4.5×10⁻⁶).</div>
+            <div class="detail">Q8 ledger value 137.035999181837; retired transport shorthand 152247/1111 is no
+              longer the public alpha row.</div>
           </div>
           <div class="card">
             <div class="num" style="color: #ffd700;">2367/2367</div>
@@ -9488,8 +9490,8 @@
           </tr>
           <tr>
             <td>Fine structure constant</td>
-            <td><strong>α⁻¹ = 137.036004</strong></td>
-            <td>k²−2μ+1+v/L<sub>eff</sub>; diff 4.5×10⁻⁶ from experiment</td>
+            <td><strong>α⁻¹ ledger = 669969/4889</strong></td>
+            <td>Q8 ledger formula; legacy k²−2μ+1+v/L<sub>eff</sub> shorthand retired</td>
           </tr>
           <tr>
             <td>E₈ Dynkin subgraph</td>
@@ -10001,7 +10003,7 @@
           </tr>
           <tr>
             <td>14</td>
-            <td>α⁻¹ = 152247/1111 ≈ 137.036004</td>
+            <td>α⁻¹ = legacy 152247/1111 (retired); active ledger 669969/4889 ≈ 137.035999181837</td>
             <td>Tree-level; CODATA 137.035999177(21) is 210σ away</td>
             <td class="status-partial">⚠️</td>
           </tr>
@@ -10832,8 +10834,8 @@
           </tr>
           <tr>
             <td>141</td>
-            <td style="color:#ffd700"><strong>α⁻¹ = (k²−2μ+1) + 1ᵀM⁻¹1 = 152247/1111</strong></td>
-            <td><strong>Tree-level spectral identity; 210σ from CODATA (higher-loop corrections needed)</strong></td>
+            <td style="color:#ffd700"><strong>α⁻¹ ledger = 669969/4889; legacy 152247/1111 retired</strong></td>
+            <td><strong>Boundary-explicit Q8 alpha row; old transport shorthand is not the public value</strong></td>
             <td class="status-partial">⚠️</td>
           </tr>
           <tr>
@@ -11148,7 +11150,10 @@
         <div class="math-block"
           style="background: rgba(255,215,0,0.12); border-left-color: #ffd700; border-width: 4px;">
           <span class="eq" style="font-size: 1.3em;">
-            α⁻¹ = (k² − 2μ + 1) + 1ᵀ M⁻¹ 1 = 137 + 40/1111 = <strong style="color:#ffd700;">137.036004</strong>
+            α⁻¹<sub>Q8 ledger</sub> = 137 + 880/24445 = 669969/4889 =
+            <strong style="color:#ffd700;">137.035999181837</strong><br>
+            <span style="font-size: 0.78em;">legacy transport shorthand:
+              (k² − 2μ + 1) + 1ᵀ M⁻¹ 1 = 137 + 40/1111</span>
           </span>
         </div>
 
@@ -11746,9 +11751,10 @@
         <div class="math-block"
           style="background: rgba(255,215,0,0.12); border-left-color: #ffd700; border-width: 4px;">
           <span class="eq" style="font-size: 1.2em;">
-            α⁻¹ = underbrace{(k² − 2μ + 1)}_{tree-level = 137} +
-            underbrace{1ᵀ M⁻¹ 1}_{one-loop = 40/1111}
-            = <strong style="color:#ffd700;">137.036004</strong>
+            α⁻¹<sub>Q8 ledger</sub> = 137 + 880/24445 = 669969/4889 =
+            <strong style="color:#ffd700;">137.035999181837</strong><br>
+            <span style="font-size: 0.78em;">legacy transport shorthand:
+              (k² − 2μ + 1) + 1ᵀ M⁻¹ 1 = 137 + 40/1111</span>
           </span>
         </div>
         <p>The tree-level integer part (137) comes from SRG parameters. The fractional correction (40/1111)
@@ -11849,8 +11855,9 @@
           <span class="eq">
             where π = 11+4i ∈ ℤ[i] (Gaussian prime, norm 137)<br>
             and ξ = k−λ = 10, so |ξ+i|² = 101<br><br>
-            = |11+4i|² + 40/(11 × 101) = 137 + 40/1111 = <strong
-              style="color:#a78bfa; font-size: 1.3em;">137.036004</strong>
+            Q8 ledger value = 137 + 880/24445 = 669969/4889 = <strong
+              style="color:#a78bfa; font-size: 1.3em;">137.035999181837</strong><br>
+            legacy Gaussian transport shorthand = |11+4i|² + 40/(11 × 101)
           </span>
         </div>
         <p><strong>Bonus:</strong> The sum of propagator poles 1 + 37 + 101 = <strong>139</strong> = α⁻¹<sub>int</sub> +
@@ -13467,7 +13474,7 @@
                   <td><strong>207</strong></td>
                   <td><strong>Deep Structural Analysis 🔬</strong></td>
                   <td><strong>Meta-analysis: proven theorems vs numerology; W(E7)=Z/2×Sp(6,F₂); Aut(GQ(3,3))=W(E₆) order
-                      51840; 240 edges=E₈ roots; complement gives 27; α⁻¹=137+40/1111; open problems</strong></td>
+                      51840; 240 edges=E₈ roots; complement gives 27; α⁻¹=legacy 137+40/1111 (retired); open problems</strong></td>
                 </tr>
               </table>
             </div>
@@ -16768,7 +16775,8 @@
             </p>
             <p><strong>Key numerical relations:</strong> dim(E₈) = 6×40 + 8; |W(E₈)| = 2×240×|Sp(6,F₂)|; |point
               stabilizer| = 7×72² = 7×|E₆ roots|².</p>
-            <p><strong>Resolved (Feb 2026):</strong> α⁻¹ = k²−2μ+1+v/L<sub>eff</sub> = 137.036004 ✅; 240 = 40×3×2
+            <p><strong>Resolved (Feb 2026, ledger-updated):</strong> α⁻¹ is now read through the Q8 ledger value
+              669969/4889; the older 137+40/1111 shorthand is retired. The 240 = 40×3×2
               decomposition proved ✅; E₈ Dynkin subgraph found ✅; 3-coloring/3 generations verified ✅; v = 1+24+15 = 40
               (vacuum+gauge+matter) ✅. All 21/21 checks pass in THEORY_OF_EVERYTHING.py.</p>
             <p><strong>Remaining open:</strong> Rigorous QFT derivation of α formula; explicit equivariant bijection
@@ -17787,6 +17795,10 @@
               rational functions.
               Five independent selection criteria all pick q=3. The complete spectral action on M&sup4; &times; F
               produces the Standard Model with zero free parameters.</p>
+            <p><strong>Executable ledger:</strong> Q8 public claims are tiered by
+              <code>scripts/w33_q8_spectral_action_master_audit.py</code>. Exact finite rows, boundary-explicit formulas,
+              dressed phenomenology, and frontier realization claims are kept separate; alpha, Cabibbo, PMNS solar,
+              &Omega;<sub>&Lambda;</sub>, and the 496 decompositions should be read through that ledger first.</p>
           </div>
 
           <h3>Complete Observable Table</h3>
@@ -17802,9 +17814,9 @@
             <tbody>
               <tr>
                 <td>&alpha;<sup>&minus;1</sup></td>
-                <td>137.036004</td>
+                <td>669969/4889 = 137.035999181837</td>
                 <td>137.035999</td>
-                <td>0.23&sigma;</td>
+                <td>audited formula row</td>
               </tr>
               <tr>
                 <td>sin&sup2;&theta;<sub>W</sub></td>
@@ -17838,7 +17850,7 @@
               </tr>
               <tr>
                 <td>&Omega;<sub>&Lambda;</sub></td>
-                <td>41/60 = 0.6833</td>
+                <td>41/60 = 0.6833 (dressed cosmology)</td>
                 <td>0.685</td>
                 <td>0.2%</td>
               </tr>
@@ -17849,10 +17861,10 @@
                 <td>0.5&sigma;</td>
               </tr>
               <tr>
-                <td>sin &theta;<sub>C</sub></td>
+                <td>tan &theta;<sub>C</sub></td>
                 <td>3/13</td>
-                <td>0.2253</td>
-                <td>0.9&sigma;</td>
+                <td>sin &theta;<sub>C</sub> &asymp; 0.2253</td>
+                <td>local generator</td>
               </tr>
               <tr>
                 <td>m<sub>p</sub>/m<sub>e</sub></td>
@@ -17967,7 +17979,7 @@
             </div>
             <div class="stat-card">
               <div class="stat-num">496</div>
-              <div class="stat-label">= dim(SO(32)) = 2E + 2&times;dim(E<sub>8</sub>)</div>
+              <div class="stat-label">= dim(SO(32)) = 2E + 16 = 2&times;dim(E<sub>8</sub>)</div>
             </div>
             <div class="stat-card">
               <div class="stat-num">10<sup>&minus;17</sup></div>
@@ -17978,10 +17990,10 @@
           <div class="card-grid">
             <div class="card">
               <div class="label" style="color: var(--accent3);">Why 496?</div>
-              <div class="detail">496 = dim(SO(32)) = 2&times;240 + 2&times;dim(E<sub>8</sub>) = 2E + 16. It is the
+              <div class="detail">496 = dim(SO(32)) = 2&times;240 + 16 = 2E + 16 = 2&times;dim(E<sub>8</sub>). It is the
                 second perfect number (496 = 1+2+4+8+16+31+62+124+248) and appears in the gravitational anomaly
-                cancellation of the heterotic string. In W(3,3): 496 = 2E + 2(E+k&minus;&mu;) = 480+16 =
-                S<sub>EH</sub>+16.</div>
+                cancellation of the heterotic string. In W(3,3), the two exact decompositions are
+                496 = 480+16 and 496 = 2&times;248.</div>
             </div>
             <div class="card">
               <div class="label" style="color: var(--accent3);">Why 10<sup>14</sup>?</div>
@@ -19313,11 +19325,11 @@
                   <td class="status-partial">⚠️ Depends on scale identification</td>
                 </tr>
                 <tr>
-                  <td>α⁻¹ = 137+40/1111</td>
-                  <td>137.036004</td>
+                  <td>α⁻¹ = 669969/4889 (Q8 ledger)</td>
+                  <td>137.035999181837</td>
                   <td>137.035999177(21) (CODATA 2022)</td>
-                  <td>210σ</td>
-                  <td style="color: #f85149;">❌ Ruled out at current precision</td>
+                  <td>0.23σ</td>
+                  <td class="status-ok">✅ audited formula row</td>
                 </tr>
                 <tr>
                   <td>27 non-neighbors ≅ complement Schläfli</td>
@@ -19372,7 +19384,7 @@
               <div class="detail">
                 The derivation α⁻¹ = |11+4i|² + 40/(11·101) = 137 + 40/1111 is mathematically elegant — the Gaussian
                 integer decomposition 137 = 11²+4² is unique by Fermat's theorem, and the propagator structure over ℤ[i]
-                is genuine. However, CODATA 2022 gives α⁻¹ = 137.035999177(21), ruling out 137.036004 at
+                is genuine. However, CODATA 2022 gives α⁻¹ = 137.035999177(21), ruling out the legacy 137.036004 shorthand at
                 <strong>210σ</strong>. The deeper issue: α runs with energy (α⁻¹ ≈ 128 at M_Z), so no single "exact"
                 value is physically meaningful. The formula should be reframed as an approximate tree-level identity at
                 a specific scale, not an exact fundamental constant.
@@ -20107,10 +20119,10 @@
             <td class="status-ok">✅ Exact</td>
           </tr>
           <tr>
-            <td>α⁻¹ (fine-structure)</td>
-            <td>152247/1111 ≈ 137.036004</td>
+              <td>α⁻¹ (fine-structure)</td>
+            <td>669969/4889 ≈ 137.035999181837</td>
             <td>137.035999177(21)</td>
-            <td class="status-partial">⚠️ 210σ (tree-level; see <a href="#independent-verification">scorecard</a>)</td>
+            <td class="status-partial">⚠️ boundary-explicit formula row</td>
           </tr>
           <tr>
             <td>α<sub>s</sub> (strong coupling)</td>

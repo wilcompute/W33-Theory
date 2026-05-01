@@ -1503,6 +1503,8 @@ class TestCCTChapter12RealizationTheorem:
         assert pkt["transport_holonomy_exact"] is True
         assert pkt["q8_spectral_action_master_audit_exact"] is True
         assert pkt["q8_boundary_conflict_count"] == 5
+        assert pkt["q8_claim_ledger_row_count"] == 11
+        assert pkt["q8_claim_ledger_repo_exact_rows"] == 8
 
         q8 = ch["q8_master_audit_packet"]
         assert q8["master_variable"] == "3/13"
@@ -1519,6 +1521,18 @@ class TestCCTChapter12RealizationTheorem:
             "so32_label_misprint",
             "alpha_table_rounding_or_formula_conflict",
         )
+        assert q8["claim_ledger_source"] == (
+            "scripts/w33_q8_spectral_action_master_audit.py"
+        )
+        assert q8["claim_ledger_tier_order"] == (
+            "repo-exact finite",
+            "boundary-explicit finite formula",
+            "dressed phenomenology",
+            "boundary-explicit source of truth",
+            "frontier realization",
+        )
+        assert q8["claim_ledger_row_count"] == 11
+        assert q8["claim_ledger_repo_exact_rows"] == 8
 
     def test_chapter12_theorem_all_pass(self):
         ch = cct_chapter12_realization_theorem_summary()
