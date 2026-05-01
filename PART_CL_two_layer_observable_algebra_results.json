@@ -1,0 +1,179 @@
+{
+  "module": "PART_CL_TWO_LAYER_OBSERVABLE_ALGEBRA",
+  "w33_atoms": {
+    "q": 3,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Hashimoto_norm_k_minus_1": 11
+  },
+  "mixer_layer": [
+    {
+      "name": "C",
+      "value": "8/13",
+      "layer": "mixer",
+      "operation": "C",
+      "interpretation": "carrier weight"
+    },
+    {
+      "name": "T",
+      "value": "5/13",
+      "layer": "mixer",
+      "operation": "T",
+      "interpretation": "threshold weight"
+    },
+    {
+      "name": "D",
+      "value": "3/13",
+      "layer": "mixer",
+      "operation": "C-T",
+      "interpretation": "carrier-threshold imbalance"
+    },
+    {
+      "name": "1_minus_D",
+      "value": "10/13",
+      "layer": "mixer",
+      "operation": "1-D",
+      "interpretation": "Phi4 complement / bridge candidate"
+    },
+    {
+      "name": "1_plus_D",
+      "value": "16/13",
+      "layer": "mixer",
+      "operation": "1+D",
+      "interpretation": "heavy plus branch"
+    },
+    {
+      "name": "qC",
+      "value": "24/13",
+      "layer": "mixer",
+      "operation": "q*C",
+      "interpretation": "QCD bare carrier"
+    },
+    {
+      "name": "qT",
+      "value": "15/13",
+      "layer": "mixer",
+      "operation": "q*T",
+      "interpretation": "threshold q-lift companion"
+    },
+    {
+      "name": "qD",
+      "value": "9/13",
+      "layer": "mixer",
+      "operation": "q*D",
+      "interpretation": "q-lifted imbalance"
+    }
+  ],
+  "projection_layer": [
+    {
+      "name": "P_Phi6",
+      "value": "7/13",
+      "layer": "projection",
+      "operation": "P(Phi6)",
+      "interpretation": "threshold-field projection"
+    },
+    {
+      "name": "P_Phi4",
+      "value": "10/13",
+      "layer": "projection",
+      "operation": "P(Phi4)",
+      "interpretation": "carrier-field projection / bridge"
+    },
+    {
+      "name": "P_hashimoto_norm",
+      "value": "11/13",
+      "layer": "projection",
+      "operation": "P(k-1)",
+      "interpretation": "Hashimoto radial projection"
+    },
+    {
+      "name": "P_k",
+      "value": "12/13",
+      "layer": "projection",
+      "operation": "P(k)",
+      "interpretation": "adjacency degree projection"
+    },
+    {
+      "name": "P_Phi6_inverse",
+      "value": "13/7",
+      "layer": "projection",
+      "operation": "P(Phi6)^-1",
+      "interpretation": "inverse threshold projection"
+    }
+  ],
+  "intersection": [
+    {
+      "value": "10/13",
+      "decimal": 0.7692307692307693,
+      "mixer_token": {
+        "name": "1_minus_D",
+        "value": "10/13",
+        "layer": "mixer",
+        "operation": "1-D",
+        "interpretation": "Phi4 complement / bridge candidate"
+      },
+      "projection_token": {
+        "name": "P_Phi4",
+        "value": "10/13",
+        "layer": "projection",
+        "operation": "P(Phi4)",
+        "interpretation": "carrier-field projection / bridge"
+      }
+    }
+  ],
+  "union": [
+    {"value":"3/13","decimal":0.23076923076923078,"mixer":{"name":"D","value":"3/13","layer":"mixer","operation":"C-T","interpretation":"carrier-threshold imbalance"},"projection":null},
+    {"value":"5/13","decimal":0.38461538461538464,"mixer":{"name":"T","value":"5/13","layer":"mixer","operation":"T","interpretation":"threshold weight"},"projection":null},
+    {"value":"7/13","decimal":0.5384615384615384,"mixer":null,"projection":{"name":"P_Phi6","value":"7/13","layer":"projection","operation":"P(Phi6)","interpretation":"threshold-field projection"}},
+    {"value":"8/13","decimal":0.6153846153846154,"mixer":{"name":"C","value":"8/13","layer":"mixer","operation":"C","interpretation":"carrier weight"},"projection":null},
+    {"value":"9/13","decimal":0.6923076923076923,"mixer":{"name":"qD","value":"9/13","layer":"mixer","operation":"q*D","interpretation":"q-lifted imbalance"},"projection":null},
+    {"value":"10/13","decimal":0.7692307692307693,"mixer":{"name":"1_minus_D","value":"10/13","layer":"mixer","operation":"1-D","interpretation":"Phi4 complement / bridge candidate"},"projection":{"name":"P_Phi4","value":"10/13","layer":"projection","operation":"P(Phi4)","interpretation":"carrier-field projection / bridge"}},
+    {"value":"11/13","decimal":0.8461538461538461,"mixer":null,"projection":{"name":"P_hashimoto_norm","value":"11/13","layer":"projection","operation":"P(k-1)","interpretation":"Hashimoto radial projection"}},
+    {"value":"12/13","decimal":0.9230769230769231,"mixer":null,"projection":{"name":"P_k","value":"12/13","layer":"projection","operation":"P(k)","interpretation":"adjacency degree projection"}},
+    {"value":"15/13","decimal":1.1538461538461537,"mixer":{"name":"qT","value":"15/13","layer":"mixer","operation":"q*T","interpretation":"threshold q-lift companion"},"projection":null},
+    {"value":"16/13","decimal":1.2307692307692308,"mixer":{"name":"1_plus_D","value":"16/13","layer":"mixer","operation":"1+D","interpretation":"heavy plus branch"},"projection":null},
+    {"value":"24/13","decimal":1.8461538461538463,"mixer":{"name":"qC","value":"24/13","layer":"mixer","operation":"q*C","interpretation":"QCD bare carrier"},"projection":null},
+    {"value":"13/7","decimal":1.8571428571428572,"mixer":null,"projection":{"name":"P_Phi6_inverse","value":"13/7","layer":"projection","operation":"P(Phi6)^-1","interpretation":"inverse threshold projection"}}
+  ],
+  "layer_word_examples": [
+    {
+      "observable": "QCD alpha_s(M_GUT) carrier",
+      "word": "q*C followed by Phi6-polar threshold",
+      "formula": "alpha_unified/(q*C) * (1 + alpha/(2*pi)*log sqrt(mu/Phi6))"
+    },
+    {
+      "observable": "electroweak imbalance diagnostic",
+      "word": "C-T",
+      "formula": "D = 3/13 = q/Phi3"
+    },
+    {
+      "observable": "Phi4 bridge / Ko complement",
+      "word": "1-D = P(Phi4)",
+      "formula": "10/13"
+    },
+    {
+      "observable": "threshold-field pure projection",
+      "word": "P(Phi6)",
+      "formula": "7/13"
+    },
+    {
+      "observable": "inverse threshold branch",
+      "word": "P(Phi6)^-1",
+      "formula": "13/7"
+    }
+  ],
+  "checks": {
+    "bridge_token_is_10_over_13": true,
+    "bridge_is_mixer_complement": true,
+    "bridge_is_phi4_projection": true,
+    "qcd_bare_is_mixer_only": true,
+    "phi6_projection_is_projection_only": true,
+    "hashimoto_norm_projection_is_projection_only": true,
+    "union_has_expected_size": true
+  },
+  "theorem_statement": "W(3,3) observables are organized by a two-layer algebra: a mixer layer generated by C=8/13, T=5/13, D=C-T=3/13, and a projection layer generated by P(A)=A/Phi3.  The layers intersect uniquely at 10/13, where the mixer complement 1-D equals the carrier-field projection P(Phi4).",
+  "interpretive_note": "This is the deeper form that should replace many older one-off claims in the arXiv paper.  The single most important bridge is 10/13: it is both a mixer-complement and the direct projection of the Q(sqrt(-10)) carrier field.  QCD then uses a mixer-only carrier qC=24/13 plus the Phi6-polar threshold; pure field diagnostics use projection-only tokens such as 7/13."
+}
