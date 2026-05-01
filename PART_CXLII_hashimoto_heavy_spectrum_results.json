@@ -1,0 +1,75 @@
+{
+  "module": "PART_CXLII_HASHIMOTO_HEAVY_SPECTRUM_DERIVATION",
+  "w33_atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "k_minus_1_hashimoto_norm": 11,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "hashimoto_field_sectors": [
+    {
+      "label": "positive r=2 / Phi4 sector",
+      "adjacency_eigenvalue": 2,
+      "adjacency_multiplicity": 24,
+      "root_label": "1 ± i*sqrt(Phi4) = 1 ± i*sqrt(10)",
+      "real_square": 1,
+      "imaginary_square": 10,
+      "norm_square": 11,
+      "field_label": "Q(sqrt(-Phi4)) = Q(sqrt(-10))",
+      "real_imag_ratio": 0.31622776601683794,
+      "real_imag_log": -1.151292546497023,
+      "modulus": 3.3166247903554
+    },
+    {
+      "label": "negative s=-4 / Phi6 sector",
+      "adjacency_eigenvalue": -4,
+      "adjacency_multiplicity": 15,
+      "root_label": "-2 ± i*sqrt(Phi6) = -2 ± i*sqrt(7)",
+      "real_square": 4,
+      "imaginary_square": 7,
+      "norm_square": 11,
+      "field_label": "Q(sqrt(-Phi6)) = Q(sqrt(-7))",
+      "real_imag_ratio": 0.7559289460184544,
+      "real_imag_log": -0.27980789396771133,
+      "modulus": 3.3166247903554
+    }
+  ],
+  "derived_threshold_branches": [
+    {
+      "branch_label": "24/13 branch from Phi6-sector polar ratio",
+      "bare_k3": 1.8461538461538463,
+      "tau_source": "log(|Re(-2+i√7)|/|Im(-2+i√7)|)=log sqrt(mu/Phi6)",
+      "tau": -0.27980789396771133,
+      "delta_template": -0.0017813123776437676,
+      "delta_target": -0.001788688332667654,
+      "effective_k3_template": 1.849448291286928,
+      "effective_k3_target": 1.849461957178364,
+      "k3_error": -1.366589143603214e-05,
+      "relative_k3_error_ppm": -7.389117350098395
+    },
+    {
+      "branch_label": "13/7 branch from Ramanujan radial/q-clock ratio",
+      "bare_k3": 1.8571428571428572,
+      "tau_source": "log(|mu_Hashimoto|/sqrt(q))=log sqrt((k-1)/q)",
+      "tau": 0.6496414920651304,
+      "delta_template": 0.004135746187990393,
+      "delta_target": 0.00415304566535224,
+      "effective_k3_template": 1.8494938201265572,
+      "effective_k3_target": 1.849461957178364,
+      "k3_error": 3.186294819323976e-05,
+      "relative_k3_error_ppm": 17.228225792642604
+    }
+  ],
+  "exact_derivations": {
+    "phi6_polar_ratio": "|Re(-2+i*sqrt(7))|/|Im(-2+i*sqrt(7))| = 2/sqrt(7) = sqrt(mu/Phi6)",
+    "ramanujan_q_clock_ratio": "|root|/sqrt(q) = sqrt(k-1)/sqrt(q) = sqrt((k-1)/q)",
+    "24_over_13_branch": "k3_bare=24/Phi3, tau=log sqrt(mu/Phi6)",
+    "13_over_7_branch": "k3_bare=Phi3/Phi6, tau=log sqrt((k-1)/q)"
+  },
+  "theorem_statement": "The two primitive heavy-threshold logarithms found in CXLI are derived directly from the Hashimoto quadratic spectrum: the 24/13 branch uses the Phi6-sector polar ratio |Re|/|Im|=sqrt(mu/Phi6), while the 13/7 branch uses the universal Ramanujan modulus divided by the q-clock, sqrt((k-1)/q).",
+  "interpretive_note": "This upgrades CXLI from a numerical log match to a spectral derivation of the threshold templates.  The remaining unresolved choice is branch selection: whether the W(3,3)/E8 heavy spectrum selects the Phi6 polar threshold with bare k3=24/13 or the radial q-clock threshold with bare k3=13/7.  Both are ppm-close before any multi-heavy correction."
+}
