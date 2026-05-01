@@ -1,0 +1,107 @@
+{
+  "module": "PART_CXLVII_OBSERVABLE_GRAMMAR",
+  "w33_atoms": {
+    "q": 3,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "base_mixer": {
+    "carrier": "8/13",
+    "threshold": "5/13",
+    "imbalance": "3/13",
+    "ratio": "8:5"
+  },
+  "tokens": [
+    {
+      "name": "carrier_weight",
+      "expression": "C = 8/13",
+      "value": "8/13",
+      "decimal": 0.6153846153846154,
+      "classification": "base mixer token",
+      "proposed_observable_role": "positive Q(sqrt(-10)) / su(5) carrier weight"
+    },
+    {
+      "name": "threshold_weight",
+      "expression": "T = 5/13",
+      "value": "5/13",
+      "decimal": 0.38461538461538464,
+      "classification": "base mixer token",
+      "proposed_observable_role": "negative Q(sqrt(-7)) / so(6) threshold weight"
+    },
+    {
+      "name": "imbalance",
+      "expression": "D = C-T = 3/13 = q/Phi3",
+      "value": "3/13",
+      "decimal": 0.23076923076923078,
+      "classification": "difference token",
+      "proposed_observable_role": "electroweak-like carrier-threshold imbalance"
+    },
+    {
+      "name": "phi4_complement",
+      "expression": "1-D = 10/13 = Phi4/Phi3",
+      "value": "10/13",
+      "decimal": 0.7692307692307693,
+      "classification": "complement token",
+      "proposed_observable_role": "Phi4/Ko-dimensional complement of the imbalance"
+    },
+    {
+      "name": "heavy_plus_branch",
+      "expression": "1+D = 16/13 = (k+mu)/Phi3",
+      "value": "16/13",
+      "decimal": 1.2307692307692308,
+      "classification": "sum token",
+      "proposed_observable_role": "heavy-sector normalized k+mu branch"
+    },
+    {
+      "name": "q_lift_carrier",
+      "expression": "q*C = 24/13",
+      "value": "24/13",
+      "decimal": 1.8461538461538463,
+      "classification": "q-lift token",
+      "proposed_observable_role": "QCD bare embedding factor k3_bare"
+    },
+    {
+      "name": "q_lift_threshold",
+      "expression": "q*T = 15/13",
+      "value": "15/13",
+      "decimal": 1.1538461538461537,
+      "classification": "q-lift token",
+      "proposed_observable_role": "negative-sector companion"
+    },
+    {
+      "name": "q_lift_imbalance",
+      "expression": "q*D = 9/13",
+      "value": "9/13",
+      "decimal": 0.6923076923076923,
+      "classification": "q-lift token",
+      "proposed_observable_role": "q-lifted electroweak/imbalance companion"
+    }
+  ],
+  "relations": {
+    "normalization": "C + T = 1",
+    "imbalance": "C - T = D = q/Phi3 = 3/13",
+    "phi4_complement": "1 - D = Phi4/Phi3 = 10/13",
+    "heavy_plus_branch": "1 + D = (k+mu)/Phi3 = 16/13",
+    "q_lift_sum": "q*C + q*T = q = 3",
+    "qcd_bare_factor": "q*C = 24/13",
+    "threshold_companion": "q*T = 15/13",
+    "lifted_imbalance": "q*D = 9/13",
+    "fibonacci_ratio": "C/T = 8/5"
+  },
+  "checks": {
+    "carrier_plus_threshold_is_one": true,
+    "imbalance_is_q_over_phi3": true,
+    "phi4_complement_is_phi4_over_phi3": true,
+    "heavy_plus_is_k_plus_mu_over_phi3": true,
+    "q_lift_carrier_is_24_over_13": true,
+    "q_lift_threshold_is_15_over_13": true,
+    "q_lift_imbalance_is_9_over_13": true,
+    "q_lift_sum_is_q": true,
+    "fibonacci_ratio_is_8_over_5": true
+  },
+  "theorem_statement": "The Fibonacci E6 mixer generates a finite observable grammar from C=8/13 and T=5/13.  QCD uses the q-lifted carrier qC=24/13; electroweak-like diagnostics use the imbalance D=C-T=3/13=q/Phi3; Phi4/Ko diagnostics use the complement 1-D=10/13=Phi4/Phi3; and heavy-sector diagnostics use 1+D=16/13=(k+mu)/Phi3.",
+  "interpretive_note": "This grammar gives the program a non-arbitrary classification system. Instead of hunting isolated constants, each observable should be tested as a base token, complement, imbalance, q-lift, or q-lifted imbalance of the same Ramanujan/E6 carrier-threshold mixer."
+}
