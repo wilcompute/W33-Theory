@@ -76,6 +76,7 @@ python PART_LXII_MASTER_VERIFICATION.py
 ```
 
 Expected output:
+
 ```
 == W(3,3) TOE -- PART LXII: MASTER VERIFICATION SUITE ==
   ✅ PASS  Trace(A) = k + f·r + g·s = 0

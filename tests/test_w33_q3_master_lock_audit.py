@@ -401,6 +401,7 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
         "q3_transport_tail_coherence_affine_closure",
         "q3_sign_trivial_unipotent_holonomy_witness",
         "q3_yukawa_quantization_closure_verification",
+        "q3_mckay_e_group_binary_polyhedral_bridge",
         "q3_full_physical_realization_theorem",
     )
     assert summary["record_names_open"] == ()
@@ -431,6 +432,22 @@ def test_q3_master_lock_analysis_keeps_the_boundary_honest() -> None:
     assert theorem["the_live_positive_target_is_the_same_ordered_path_transport_law_written_on_the_fixed_k3_chart"] is True
     assert theorem["the_remaining_wall_is_not_finite_q_selection_but_smooth_realization"] is True
     assert theorem["the_exact_layer_now_has_an_executable_bridge_to_spontaneous_cp_frontier"] is True
+    assert theorem["the_dirac_index_encodes_topological_invariant_minus_80"] is True
+    assert theorem["the_spanning_tree_count_encodes_q3_via_exponent_81_equals_3_to_the_4"] is True
+    assert theorem["the_exceptional_root_system_counting_encodes_q3_via_e8_bridge_and_phi12_tower"] is True
+    assert theorem["the_exceptional_coxeter_arithmetic_encodes_q3_via_string_and_leech_bridges"] is True
+    assert theorem["the_exceptional_coxeter_ladder_encodes_q3_via_fibonacci_multipliers_and_transport_bridge"] is True
+    assert "w33_arboreal_census" in summary
+    assert theorem["the_mckay_e_group_bridge_encodes_q3_via_binary_polyhedral_groups_and_transport_numerator"] is True
+    assert "w33_mckay_e_group_bridge" in summary
+    assert summary["w33_mckay_e_group_bridge"]["T"] == 217
+    assert summary["w33_mckay_e_group_bridge"]["sum_mckay_E"] == 192
+    assert records["q3_mckay_e_group_binary_polyhedral_bridge"]["support_level"] == "repo-exact McKay correspondence bridge"
+    assert "mE6=24=2k" in records["q3_mckay_e_group_binary_polyhedral_bridge"]["statement"]
+    assert "T=217" in records["q3_mckay_e_group_binary_polyhedral_bridge"]["statement"]
+    assert "w33_exceptional_root_system" in summary
+    assert "w33_exceptional_coxeter_arithmetic" in summary
+    assert "w33_exceptional_coxeter_ladder" in summary
     assert "exact finite spine" in records["q3_full_physical_realization_theorem"]["statement"]
     assert "not by a newly claimed exact phenomenology theorem" in records["q3_full_physical_realization_theorem"]["statement"]
     assert records["q3_full_physical_realization_theorem"]["evidence"]["frontier_boundary"].startswith("CKM/E6 promotion remains")

@@ -171,4 +171,4 @@ Verification: 12 + 24×2 + 15×(−4) = 12 + 48 − 60 = 0 = Tr(A) ✓
 
 ---
 *Wil Dahn · W(3,3) Theory of Everything · v1.0-LXI · April 2026*
-*Repository: https://github.com/wilcompute/W33-Theory*
+*Repository: <https://github.com/wilcompute/W33-Theory>*

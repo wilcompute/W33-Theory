@@ -20,18 +20,22 @@ symplectic polar space W(3,𝔽₃). Then:
    - Φ₃(3) = 13, Φ₄(3) = 10, Φ₅(3) = 121, Φ₆(3) = 7
 
 3. The electroweak hierarchy is:
+
    ```
    ln(M̄_Pl / v_EW) = s² · ln(Φ₄(q)) = 16 · ln(10) = 36.84
    ```
+
    matching the observed value 36.83 to **0.030%**.
 
 4. The Higgs sector (Theorem LIX):
+
    ```
    λ_H = Φ₆(q) / (6q²) = 7/54  (exact rational)
    m_H = √(2λ_H) × v_EW = 125.37 GeV  [PDG: 125.20 GeV, 0.13%]
    ```
 
 5. The neutrino sector (Theorem LVIII):
+
    ```
    m_ν₃ = λ_CKM² × (M_W/M_Z) × √(Φ₃/Φ₄) = 50.9 meV  [PDG: ~49.5 meV, 1.5%]
    Σmν = 59.5 meV  (< Planck 120 meV ✓)
@@ -45,6 +49,7 @@ symplectic polar space W(3,𝔽₃). Then:
    theorem.
 
 7. Gravity and cosmology emerge from the spectral action:
+
    ```
    S_EH = Tr(Δ₀) = a₀ = 480
    Λ_cosmo ~ 10^{−122}  (E/μ + v + kλ − λ = 122, EXACT)
@@ -65,6 +70,7 @@ symplectic polar space W(3,𝔽₃). Then:
 | G_release gate | **1** |
 
 ### Error Distribution (57 confirmed)
+
 ```
 Exact (error = 0):         31 observables
 < 0.1% error:               6 observables
@@ -86,30 +92,37 @@ an executable frontier bridge and response law on that exact carrier spine.
 ## The Six Pillars
 
 ### Pillar 1: NCG Spectral Action Hierarchy ✓
+
 `UNIFIED_HIERARCHY_PROOF.py` — 50 assertions, all pass.
 Spectral action: a₀=480, a₂=480, a₄=102720.
 Hierarchy: μ²·ln(Φ₄(q)) = 16·ln(10) = 36.8414 vs 36.8303 (0.030%).
 
 ### Pillar 2: K3 Transport Closure ✓
+
 `UNIFIED_K3_TRANSPORT_SOLUTION.py`
 H¹(W(3,3);𝔽₃) ≅ 𝔽₃⁸¹. Primitive generator (780, 7944, 62600, 53979).
 Theory closes at F₃, Q, and Z (3-adic) levels.
 
 ### Pillar 3: Gravity-Gauge Unification ✓
+
 `UNIFIED_GRAVITY_SPINFOAM.py` + `V43_GRAVITY_SECTOR.py`
 S_EH = Tr(L₀) = 480. Graviton mass gap m²=10.
 24 spin-2 modes, 15 spin-0 modes. Λ_cosmo exponent = 122 (EXACT).
 
 ### Pillar 4: Complete SM Dictionary ✓
+
 `UNIFIED_MASTER_THEOREM.py` — 50 SM parameters from W(3,3).
 
 ### Pillar 5: CKM + PMNS Mixing Sector ✓ *(Closed April 12 2026)*
+
 `V37_FULL_MIXING_SYNTHESIS.py` — All 13 CKM+PMNS observables from **16 = 10 + 6**.
 
 ### Pillar 6: Strong Coupling + GUT Scale ✓ *(Closed April 13 2026)*
+
 `V42_STRONG_COUPLING_GUT.py` — α_s(M_Z) = 0.11601 (1.69% from PDG).
 
 ### Pillar 7: Higgs Quartic + Neutrino Tower ✓ *(Closed April 26 2026)*
+
 `PART_LIX_HIGGS_MASS.py` — λ_H = 7/54, m_H = 125.37 GeV (0.13%).
 `PART_LVIII_SOLAR_NEUTRINO.py` — m_ν₃ = 50.9 meV (1.5%).
 
@@ -127,6 +140,7 @@ S_EH = Tr(L₀) = 480. Graviton mass gap m²=10.
 - All checks pass: `python PART_LXII_MASTER_VERIFICATION.py` → 14/14
 
 ### Compile Command
+
 ```bash
 pdflatex PART_LXIII_ARXIV_COMPLETE_PAPER.tex
 bibtex   PART_LXIII_ARXIV_COMPLETE_PAPER
@@ -178,4 +192,4 @@ python PART_LIX_HIGGS_MASS.py            # Higgs quartic + mass
 
 ---
 *Wil Dahn · W(3,3) Theory of Everything · v1.0-LXIII · April 26, 2026*
-*Repository: https://github.com/wilcompute/W33-Theory*
+*Repository: <https://github.com/wilcompute/W33-Theory>*

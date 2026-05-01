@@ -114,3 +114,102 @@ def test_status_ok() -> None:
     assert summary["q"] == 3
     assert summary["k"] == 12
     assert summary["v"] == 40
+
+
+# --- Additional granular tests ---
+
+def test_coxeter_multiplier_G2_is_1() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_multipliers_over_q_factorial"]["G2"] == 1
+
+
+def test_coxeter_multiplier_F4_is_2() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_multipliers_over_q_factorial"]["F4"] == 2
+
+
+def test_coxeter_multiplier_E6_is_2() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_multipliers_over_q_factorial"]["E6"] == 2
+
+
+def test_coxeter_multiplier_E7_is_3() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_multipliers_over_q_factorial"]["E7"] == 3
+
+
+def test_coxeter_multiplier_E8_is_5() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_multipliers_over_q_factorial"]["E8"] == 5
+
+
+def test_distinct_multipliers_sum_is_11() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert sum(summary["distinct_multipliers"]) == 11
+
+
+def test_fibonacci_context_sequence() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    fib = summary["fibonacci_context"]
+    # sequence starts at F(1)
+    assert fib["sequence"][0] == 1  # F1
+    assert fib["sequence"][2] == 2  # F3
+    assert fib["sequence"][3] == 3  # F4
+    assert fib["sequence"][4] == 5  # F5
+
+
+def test_step_E7_minus_E6_equals_6() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["step_sizes"]["h_E7_minus_h_E6"] == 6
+
+
+def test_step_E8_minus_E7_equals_12() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["step_sizes"]["h_E8_minus_h_E7"] == 12
+
+
+def test_C_k_2_equals_66() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["sum_identities"]["C_k_2"] == 66
+
+
+def test_dim_E6_over_rank_equals_phi3_value() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    dr = summary["dimension_rank_identities"]
+    assert dr["phi3"] == 13
+    assert dr["dim_E6_over_rank_E6"] == dr["phi3"]
+
+
+def test_transport_bridge_T_factorization_string() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    bridge = summary["transport_bridge"]
+    assert "217" in bridge["factorization"]
+    assert "31" in bridge["factorization"]
+    assert "7" in bridge["factorization"]
+
+
+def test_h_E8_equals_q_times_phi4() -> None:
+    """h(E8) = 30 = q * Phi4 = 3 * 10."""
+    summary = build_exceptional_coxeter_ladder_summary()
+    assert summary["coxeter_numbers"]["h_E8"] == summary["q"] * 10
+
+
+def test_interpretation_nonempty_and_key_terms() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    interp = summary["interpretation"]
+    assert len(interp) > 80
+    assert "Fibonacci" in interp
+    assert "transport" in interp
+
+
+def test_exact_factorizations_has_transport_key() -> None:
+    summary = build_exceptional_coxeter_ladder_summary()
+    ef = summary["exact_factorizations"]
+    assert "transport_numerator_T_equals_phi6_times_dim_E8_over_rank_E8" in ef
+    assert ef["transport_numerator_T_equals_phi6_times_dim_E8_over_rank_E8"] is True
+
+
+def test_lru_cache_returns_same_object() -> None:
+    s1 = build_exceptional_coxeter_ladder_summary()
+    s2 = build_exceptional_coxeter_ladder_summary()
+    assert s1 is s2

@@ -173,3 +173,7 @@ archive/dirs/
 
 # Large computation output directories (multi-GB binary data)
 V*_output*/
+
+# Continuity
+SESSION_HANDOFF.md
+.continuity/

@@ -165,3 +165,122 @@ def test_status_ok() -> None:
     assert summary["phi3"] == 13
     assert summary["phi4"] == 10
     assert summary["phi12"] == 73
+
+
+# --- Individual Coxeter number values ---
+
+def test_coxeter_numbers_individual_values() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    h = summary["coxeter_numbers"]
+    assert h["G2"] == 6
+    assert h["F4"] == 12
+    assert h["E6"] == 12
+    assert h["E7"] == 18
+    assert h["E8"] == 30
+
+
+def test_ranks_individual_values() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    rk = summary["ranks"]
+    assert rk["G2"] == 2
+    assert rk["F4"] == 4
+    assert rk["E6"] == 6
+    assert rk["E7"] == 7
+    assert rk["E8"] == 8
+
+
+def test_dimensions_individual_values() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    dm = summary["dimensions"]
+    assert dm["G2"] == 14
+    assert dm["F4"] == 52
+    assert dm["E6"] == 78
+    assert dm["E7"] == 133
+    assert dm["E8"] == 248
+
+
+def test_h_G2_plus_h_E6_equals_h_E7_via_equality_h_F4_h_E6() -> None:
+    # h(F4) = h(E6) = k, so both sum identities are equivalent
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    h = summary["coxeter_numbers"]
+    assert h["F4"] == h["E6"]
+    assert h["G2"] + h["E6"] == h["E7"]
+
+
+def test_coxeter_step_h_E8_minus_h_G2_equals_2k() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    h = summary["coxeter_numbers"]
+    k = summary["k"]
+    assert h["E8"] - h["G2"] == 2 * k
+    assert 30 - 6 == 24
+
+
+def test_coxeter_addition_identity_strings() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    ca = summary["coxeter_addition"]
+    assert "18" in ca["identity_small_pair"]
+    assert "30" in ca["identity_E_tower"]
+
+
+def test_E_tower_sum_over_k_equals_5() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    cs = summary["coxeter_sums"]
+    assert cs["E_tower_sum_over_k"] == 5
+
+
+def test_coxeter_sums_identity_string() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    cs = summary["coxeter_sums"]
+    assert "60" in cs["identity"]
+    assert "A5" in cs["identity"]
+
+
+def test_dim_E6_factored_string() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    da = summary["dimension_arithmetic"]
+    assert "78" in da["dim_E6_factored"]
+    assert "66" in da["dim_E6_factored"]
+
+
+def test_dim_E7_factored_string() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    da = summary["dimension_arithmetic"]
+    assert "133" in da["dim_E7_factored"]
+    assert "73" in da["dim_E7_factored"]
+
+
+def test_string_dimensions_formula_strings() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    sd = summary["string_dimensions"]
+    assert "26" in sd["bosonic_string_formula"]
+    assert "10" in sd["superstring_formula"]
+    assert "11" in sd["M_theory_formula"]
+    assert "k" in sd["SM_gauge_formula"]
+
+
+def test_leech_bridge_formula_string() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    lb = summary["leech_bridge"]
+    assert "240" in lb["formula"]
+    assert "24" in lb["formula"]
+
+
+def test_leech_bridge_bosonic_equals_leech_plus_2_string() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    lb = summary["leech_bridge"]
+    assert "26" in lb["bosonic_string_equals_leech_plus_2"]
+    assert "24" in lb["bosonic_string_equals_leech_plus_2"]
+
+
+def test_interpretation_nonempty_and_contains_key_terms() -> None:
+    summary = build_exceptional_coxeter_arithmetic_summary()
+    interp = summary["interpretation"]
+    assert len(interp) > 80
+    assert "Leech" in interp
+    assert "bosonic" in interp
+
+
+def test_lru_cache_returns_same_object() -> None:
+    s1 = build_exceptional_coxeter_arithmetic_summary()
+    s2 = build_exceptional_coxeter_arithmetic_summary()
+    assert s1 is s2

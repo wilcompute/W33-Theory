@@ -25,15 +25,16 @@ pdflatex PART_LXIII_ARXIV_COMPLETE_PAPER.tex
 ```
 
 Requires standard TeX Live / MiKTeX distribution with:
+
 - `amsmath`, `amssymb`, `amsthm`, `booktabs`, `hyperref`, `physics`, `bbm`, `mathtools`
 
 ---
 
 ## arXiv Submission Steps
 
-1. **Create account** at https://arxiv.org if needed.
+1. **Create account** at <https://arxiv.org> if needed.
 
-2. **Start submission** at https://arxiv.org/submit.
+2. **Start submission** at <https://arxiv.org/submit>.
 
 3. **Primary category:** `hep-ph` (High Energy Physics - Phenomenology)
    **Cross-list:** `math-ph` (Mathematical Physics), `gr-qc` (General Relativity)
@@ -50,6 +51,7 @@ Requires standard TeX Live / MiKTeX distribution with:
    - **ACM classes:** not applicable
 
 6. **Comments field:**
+
    ```
    63 parts. 116 predictions. 57 confirmed against PDG-2024. G_release=1.
    Code: https://github.com/wilcompute/W33-Theory
@@ -63,7 +65,7 @@ Requires standard TeX Live / MiKTeX distribution with:
 
 After arXiv submission:
 
-1. Go to https://zenodo.org and link your GitHub repo (`.zenodo.json` already in repo).
+1. Go to <https://zenodo.org> and link your GitHub repo (`.zenodo.json` already in repo).
 2. Create a release tag: `git tag v1.0-LXIII && git push origin v1.0-LXIII`
 3. Zenodo auto-mints a DOI from the release.
 4. Add the Zenodo DOI to the arXiv record metadata.
@@ -77,6 +79,7 @@ For JHEP or Nuclear Physics B, adapt the tone to emphasise the mathematical
 construction over the phenomenology.
 
 **Recommended submission path:**
+
 1. Post to arXiv (hep-ph + math-ph)
 2. Share on LinkedIn / ResearchGate (see `LINKEDIN_ANNOUNCEMENT.md`)
 3. Submit to PRL (4-page limit requires cutting to Theorems I-III + key table)

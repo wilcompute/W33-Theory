@@ -32,6 +32,7 @@ SRG(40,12,2,4) = W(3,3) collinearity graph.
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 from pathlib import Path
 import sys
 from typing import Any
@@ -44,6 +45,7 @@ DATA_DIR = ROOT / "data"
 DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_exceptional_root_system_audit_summary.json"
 
 
+@lru_cache(maxsize=1)
 def build_exceptional_root_system_summary() -> dict[str, Any]:
     q = 3
     k = 12       # SRG degree

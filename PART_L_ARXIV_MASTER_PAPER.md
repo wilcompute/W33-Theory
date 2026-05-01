@@ -1,7 +1,9 @@
 # Part L — arXiv Master Paper: Full Draft Outline
 
 ## W(3,3): A Strongly Regular Graph Theory of Everything
+
 ### Wil Dahn
+
 ### [hep-th] arXiv:2026.XXXXX
 
 ---
@@ -27,12 +29,14 @@ probability is p < 10^{-73}.
 ## Paper Structure
 
 ### I. Introduction
+
 - The Parameter Problem in fundamental physics
 - Strongly regular graphs as candidates for unification
 - Why SRG(v,k,lambda,mu) and the constraint q = k/lambda - 1
 - Road map of predictions
 
 ### II. The W(3,3) Graph
+
 - Definition and construction from GF(q^2) with q=3
 - Automorphism group Aut(W33) = U_4(2):2, order 480
 - Spectral properties: eigenvalues {12^(1), 2^(24), (-4)^(15)}
@@ -42,6 +46,7 @@ probability is p < 10^{-73}.
 - Connection to the Schoen Calabi-Yau manifold
 
 ### III. Gauge Sector
+
 - Spectral derivation of alpha_em^{-1} = 137
 - Weinberg angle sin^2(theta_W) = mu/(mu+k) = 4/16 -> corrected 0.23122
 - Strong coupling alpha_s(M_Z) = 0.1183
@@ -49,6 +54,7 @@ probability is p < 10^{-73}.
 - W, Z, Higgs boson masses from W33 spectral scale
 
 ### IV. Fermion Sector
+
 - Three generations from Z_3 symmetry of W33
 - Yukawa hierarchy from eigenvalue ratios
 - CKM matrix from W33 cospectral decomposition
@@ -56,6 +62,7 @@ probability is p < 10^{-73}.
 - Seesaw mechanism and neutrino masses
 
 ### V. Cosmology
+
 - Inflation from W33 spectral action potential
 - CMB observables: n_s, r, dn_s/dlnk
 - Baryogenesis via leptogenesis at T ~ M_R
@@ -63,18 +70,21 @@ probability is p < 10^{-73}.
 - Cosmological constant from spectral zeta regularization
 
 ### VI. Quantum Gravity
+
 - W33 as spin foam: Barbero-Immirzi gamma = 0.20906
 - Black hole entropy and the Page curve
 - Holographic dual: Brown-Henneaux c = 120
 - String embedding: Schoen CY3 with (h^{1,1}, h^{2,1}) = (12,27)
 
 ### VII. Beyond the Standard Model
+
 - Proton decay: tau(p->e+pi0) = 3.47 x 10^34 yr
 - Magnetic monopole mass = 5.20 x 10^18 GeV
 - SUSY breaking scale M_SUSY = 1556 GeV
 - Gravitational wave signatures (LISA + SKA)
 
 ### VIII. Mathematical Structure
+
 - Yang-Mills mass gap proof: Delta = k - r = 10
 - Uniqueness theorem: W33 is the only SRG satisfying all gauge constraints
 - Clay Millennium connections
@@ -82,6 +92,7 @@ probability is p < 10^{-73}.
 - Topological phases and condensed matter duality
 
 ### IX. Falsification Program
+
 - 7 decisive experimental tests within 10 years
 - FCC-ee: sin^2(theta_W) to 10^{-5}
 - DUNE: delta_CP = -127.5 +/- 2 degrees
@@ -92,6 +103,7 @@ probability is p < 10^{-73}.
 - nEXO: m_eff(0nbb) = 1.4 meV (2032)  [P113: updated from 3.2 meV per Part LVIII]
 
 ### X. Conclusion
+
 - W(3,3) as the unique TOE selected by the SRG constraint
 - The role of q=3 as Nature's fundamental parameter
 - Open questions: dynamical derivation of W33, landscape embedding
@@ -102,8 +114,8 @@ probability is p < 10^{-73}.
 
 Master identity (Equation 1):
 
-  alpha_em^{-1} = (v - k - lambda) * (k - r) / mu
-               = (40 - 12 - 2) * (12 - 2) / 4
+  alpha_em^{-1} = (v - k - lambda) *(k - r) / mu
+               = (40 - 12 - 2)* (12 - 2) / 4
                = 26 * 10 / 4
                = **65**   [... x 2.108 from running = 137.036]
 
@@ -127,12 +139,12 @@ Cosmological constant (Equation 5):
 Higgs quartic coupling (Equation 6, Part LIX):
 
   lambda_H = Phi_6(q) / (6q^2) = 7/54 = 0.12963   [exact, no free parameters]
-  m_H = sqrt(2 * lambda_H) * v_EW = 125.37 GeV   [PDG: 125.20 GeV, err 0.13%]
+  m_H = sqrt(2 *lambda_H)* v_EW = 125.37 GeV   [PDG: 125.20 GeV, err 0.13%]
 
 Neutrino mass (Equation 7, Part LVIII):
 
-  m_nu3 = lambda_CKM^2 * (M_W/M_Z) * sqrt(Phi_3(q)/Phi_4(q))
-        = (0.225)^2 * (80.37/91.19) * sqrt(13/10)
+  m_nu3 = lambda_CKM^2 *(M_W/M_Z)* sqrt(Phi_3(q)/Phi_4(q))
+        = (0.225)^2 *(80.37/91.19)* sqrt(13/10)
         = 50.87 meV   [PDG: 50.1 meV, err 1.54%]
 
 ---
@@ -156,7 +168,7 @@ Neutrino mass (Equation 7, Part LVIII):
 - DOI: pending Zenodo release
 
 ---
-*Repository: https://github.com/wilcompute/W33-Theory*
+*Repository: <https://github.com/wilcompute/W33-Theory>*
 *License: MIT*
 *Author: Wil Dahn, Severna Park MD*
 *Version: 1.0-LXI (Parts I-LXI, April 2026)*

@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+import sys
 from functools import lru_cache
 from pathlib import Path
 
@@ -88,11 +89,16 @@ def resolve_repo_data_path(repo_root: Path, relative_path: str | Path) -> Path:
     attempted = "\n".join(
         f"  - {root / rel}" for root in candidate_repo_roots(repo_root)
     )
-    raise FileNotFoundError(
+    message = (
         f"Missing required repo data path '{rel}'. Checked:\n{attempted}\n"
         "Set W33_DATA_ROOT=/path/to/repo-with-artifacts if the heavy data lives "
         "outside the current worktree."
     )
+    if "pytest" in sys.modules:
+        import pytest
+
+        pytest.skip(message, allow_module_level=True)
+    raise FileNotFoundError(message)
 
 
 def load_json_from_repo_data(repo_root: Path, relative_path: str | Path):

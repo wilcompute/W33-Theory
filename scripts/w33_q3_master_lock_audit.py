@@ -86,6 +86,24 @@ from w33_transport_ternary_cocycle_bridge import (  # noqa: E402
 from scripts.w33_h4_branch_selection_search import (  # noqa: E402
     build_branch_selection_search_summary,
 )
+from scripts.w33_h4_s3_selector_holonomy_audit import (  # noqa: E402
+    h4_s3_selector_holonomy_summary,
+)
+from scripts.w33_dirac_index_theorem_audit import (  # noqa: E402
+    w33_dirac_index_theorem_summary,
+)
+from scripts.w33_arboreal_census_audit import (  # noqa: E402
+    w33_arboreal_census_summary,
+)
+from scripts.w33_exceptional_root_system_audit import (  # noqa: E402
+    build_exceptional_root_system_summary as w33_exceptional_root_system_summary,
+)
+from scripts.w33_exceptional_coxeter_arithmetic_audit import (  # noqa: E402
+    build_exceptional_coxeter_arithmetic_summary as w33_exceptional_coxeter_arithmetic_summary,
+)
+from scripts.w33_exceptional_coxeter_ladder_audit import (  # noqa: E402
+    build_exceptional_coxeter_ladder_summary as w33_exceptional_coxeter_ladder_summary,
+)
 from scripts.w33_parseval_measurement_frame_audit import (  # noqa: E402
     build_parseval_measurement_frame_summary,
 )
@@ -122,6 +140,9 @@ from scripts.w33_toroidal_continuum_seed_audit import (  # noqa: E402
 )
 from scripts.w33_zeta_loop_equilibrium_audit import (  # noqa: E402
     zeta_loop_equilibrium_summary,
+)
+from scripts.w33_mckay_e_group_bridge_audit import (  # noqa: E402
+    build_mckay_e_group_bridge_summary as w33_mckay_e_group_bridge_summary,
 )
 
 
@@ -712,6 +733,13 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
     continuum = q3_continuum_seed_summary()
     fermion_seed = q3_fermion_seed_summary()
     transport = q3_transport_algebra_summary()
+    h4_s3_selector = h4_s3_selector_holonomy_summary()
+    dirac_index = w33_dirac_index_theorem_summary()
+    arboreal_census = w33_arboreal_census_summary()
+    exceptional_roots = w33_exceptional_root_system_summary()
+    exceptional_coxeter = w33_exceptional_coxeter_arithmetic_summary()
+    exceptional_coxeter_ladder = w33_exceptional_coxeter_ladder_summary()
+    mckay_bridge = w33_mckay_e_group_bridge_summary()
 
     return (
         {
@@ -868,6 +896,19 @@ def classify_q3_master_lock() -> Tuple[Dict[str, object], ...]:
                 "tests_passing": 11,
             },
         },
+        {
+            "name": "q3_mckay_e_group_binary_polyhedral_bridge",
+            "support_level": "repo-exact McKay correspondence bridge",
+            "statement": (
+                "The McKay correspondence at q=3 assigns binary polyhedral groups to E6/E7/E8 "
+                "with orders mE6=24=2k, mE7=48=4k, mE8=120=10k (all exact multiples of the SRG "
+                "degree k=12); their sum 192=16k=|W(D4)| equals the tomotope flag count; "
+                "mE7+mE8=168=|PSL(2,Phi6)|=|PSL(2,7)| recovers Phi6=7; the transport numerator "
+                "T=217 appears as h(E7)*k+1=18*12+1 and |W(D4)|+mE6+1=192+24+1, with "
+                "T-1=216=(q!)^3=h(E6)*h(E7)=12*18; and mE8/k=10=Phi4."
+            ),
+            "evidence": mckay_bridge,
+        },
         build_q3_full_physical_realization_boundary_record(),
     )
 
@@ -891,6 +932,13 @@ def analyze() -> Dict[str, object]:
     continuum = q3_continuum_seed_summary()
     fermion_seed = q3_fermion_seed_summary()
     transport = q3_transport_algebra_summary()
+    h4_s3_selector = h4_s3_selector_holonomy_summary()
+    dirac_index = w33_dirac_index_theorem_summary()
+    arboreal_census = w33_arboreal_census_summary()
+    exceptional_roots = w33_exceptional_root_system_summary()
+    exceptional_coxeter = w33_exceptional_coxeter_arithmetic_summary()
+    exceptional_coxeter_ladder = w33_exceptional_coxeter_ladder_summary()
+    mckay_bridge = w33_mckay_e_group_bridge_summary()
 
     theorem = {
         "the_local_kernel_exactly_realizes_the_q3_packet_1_3_9_27_40_240": (
@@ -1240,6 +1288,79 @@ def analyze() -> Dict[str, object]:
             and local_kernel["exact_to_frontier_bridge"]["misaligned_vev_cp_breaking"]
             and local_kernel["exact_to_frontier_bridge"]["e6_closed_form_gauge_equivalence_consistent"]
         ),
+        "the_h4_s3_selector_holonomy_lifts_the_irreducible_binary_deck_to_ternary": all(
+            h4_s3_selector["theorem"][flag]
+            for flag in [
+                "T1_mixed_cover_is_exponent_4_order_16",
+                "T2_heisenberg_packet_is_order_27_nonabelian",
+                "T3_ternary_lift_is_equivariant_s3",
+                "T4_s3_selector_exists",
+            ]
+        ),
+        "the_dirac_index_encodes_topological_invariant_minus_80": all(
+            dirac_index["theorem"][flag]
+            for flag in [
+                "T1_dirac_index_equals_euler_characteristic",
+                "T2_zero_eigenspace_dimension_is_computed",
+                "T3_spectral_gap_zero_from_nonzero",
+                "T4_nonzero_eigenvalues_are_sqrt_laplacian_eigenvalues",
+                "T5_dirac_operator_is_self_adjoint",
+                "T6_euler_characteristic_from_betti_numbers",
+            ]
+        ),
+        "the_spanning_tree_count_encodes_q3_via_exponent_81_equals_3_to_the_4": all(
+            arboreal_census["theorem"][flag]
+            for flag in [
+                "T1_kirchhoff_formula_gives_exact_integer_tau",
+                "T2_L0_eigenvalues_are_exactly_srg_packet",
+                "T3_kirchhoff_reduction_is_exact",
+                "T4_prime_factorisation_is_2_and_5_only",
+                "T5_exponent_81_equals_q4_at_q3",
+                "T6_two_methods_agree",
+            ]
+        ),
+        "the_exceptional_root_system_counting_encodes_q3_via_e8_bridge_and_phi12_tower": all(
+            exceptional_roots["theorem"][flag]
+            for flag in [
+                "all_exceptional_root_counts_are_multiples_of_q_factorial",
+                "the_E8_root_count_equals_the_SRG_edge_count_v_times_q_factorial",
+                "the_E6_root_count_equals_rank_E6_times_k",
+                "the_E_tower_root_count_sum_over_q_factorial_equals_phi12_q",
+                "the_phi12_index_equals_k_the_E6_coxeter_number_and_SRG_degree",
+                "the_exceptional_root_system_counting_is_fully_exact",
+            ]
+        ),
+        "the_exceptional_coxeter_arithmetic_encodes_q3_via_string_and_leech_bridges": all(
+            exceptional_coxeter["theorem"][flag]
+            for flag in [
+                "the_small_exceptional_coxeter_sum_h_G2_plus_h_F4_equals_h_E7",
+                "the_E_tower_addition_theorem_h_E6_plus_h_E7_equals_h_E8",
+                "the_E_tower_coxeter_sum_equals_5k_equals_A5_order",
+                "the_all_five_exceptional_coxeter_sum_equals_dim_E6",
+                "bosonic_string_dim_equals_2_phi3_at_q",
+                "superstring_dim_equals_k_minus_2_equals_phi4",
+                "leech_lattice_dim_equals_phi_E8_over_phi4_equals_4_q_factorial",
+                "the_exceptional_coxeter_arithmetic_is_fully_exact",
+            ]
+        ),
+        "the_exceptional_coxeter_ladder_encodes_q3_via_fibonacci_multipliers_and_transport_bridge": all(
+            exceptional_coxeter_ladder["theorem"][flag]
+            for flag in [
+                "all_exceptional_coxeter_numbers_are_multiples_of_q_factorial",
+                "the_distinct_multipliers_1_2_3_5_are_fibonacci_and_sum_to_k_minus_1",
+                "the_E_tower_step_sizes_are_q_factorial_and_k",
+                "the_G2_E_tower_sum_equals_C_k_2",
+                "the_sum_of_all_five_exceptional_coxeter_numbers_equals_dim_E6",
+                "the_transport_numerator_T_equals_phi6_times_dim_E8_over_rank_E8",
+                "the_exceptional_coxeter_ladder_is_fully_exact",
+            ]
+        ),
+        "the_mckay_e_group_bridge_encodes_q3_via_binary_polyhedral_groups_and_transport_numerator": (
+            mckay_bridge["theorem"]["the_mckay_e_group_bridge_is_fully_exact"]
+            and mckay_bridge["T"] == 217
+            and mckay_bridge["sum_mckay_E"] == 192
+            and mckay_bridge["mckay_e_groups"]["mE7"]["order"] + mckay_bridge["mckay_e_groups"]["mE8"]["order"] == 168
+        ),
     }
 
     return {
@@ -1249,6 +1370,13 @@ def analyze() -> Dict[str, object]:
         "q3_continuum_seed": continuum,
         "q3_fermion_seed": fermion_seed,
         "q3_transport_algebra": transport,
+        "h4_s3_selector_holonomy": h4_s3_selector,
+        "w33_dirac_index_theorem": dirac_index,
+        "w33_arboreal_census": arboreal_census,
+        "w33_exceptional_root_system": exceptional_roots,
+        "w33_exceptional_coxeter_arithmetic": exceptional_coxeter,
+        "w33_exceptional_coxeter_ladder": exceptional_coxeter_ladder,
+        "w33_mckay_e_group_bridge": mckay_bridge,
         "record_names_exact_or_boundary": exact_record_names,
         "record_names_open": open_record_names,
         "record_details": records,
@@ -1276,7 +1404,40 @@ def analyze() -> Dict[str, object]:
             "without weakening the conservative exactness boundary. In promoted witness "
             "coordinates the current candidate is simply the "
             "origin, and the "
-            "exact target is the single affine point (14105,143654,3396050/3,3904481/4)."
+            "exact target is the single affine point (14105,143654,3396050/3,3904481/4). "
+            "A seventh exact layer (Dirac Index Theorem) proves the topological invariant χ = -80 "
+            "is realized exactly by W(3,3)'s spectral geometry. An eighth exact layer (Arboreal "
+            "Census) now proves the spanning-tree count τ(W33) = 2^81 × 5^23, where the exponent "
+            "81 = q^4 at q=3 links the W(3,3) arithmetic combinatorics back to the q=3 master-lock "
+            "selection: the very same q that fixes the 1/3/9/27/40/240 local kernel packet also "
+            "governs the prime factorisation of the spanning-tree census. A ninth exact layer "
+            "(Exceptional Root System) now certifies that all five exceptional Lie root counts "
+            "|Phi(G2)|=12, |Phi(F4)|=48, |Phi(E6)|=72, |Phi(E7)|=126, |Phi(E8)|=240 are "
+            "divisible by q!=6; the E8 root count 240=v*q! is the SRG edge count (direct "
+            "W(3,3) bridge); the E-tower cyclotomic identity "
+            "(72+126+240)/6=73=Phi_12(q)=q^4-q^2+1 introduces the 12th cyclotomic polynomial "
+            "at index k=h(E6)=12; and the E6+E8 cross-partition gives dim(F4)=52. "
+            "A tenth exact layer (Exceptional Coxeter Arithmetic) proves the Coxeter "
+            "addition algebra h(G2)+h(F4)=h(E7), h(E6)+h(E7)=h(E8); the E-tower Coxeter "
+            "sum 60=5k=|A5|; all-five sum = dim(E6)=78; the SRG degree k anchors the "
+            "bosonic string (2*Phi3=26), superstring (k-2=Phi4=10), M-theory (k-1=11), "
+            "and SM gauge (k=12) critical dimensions; and the Leech lattice "
+            "dimension 24=|Phi(E8)|/Phi4=4*q!. "
+            "An eleventh exact layer (Exceptional Coxeter Ladder) proves that every "
+            "exceptional Coxeter number is an exact multiple of q!=6; the distinct "
+            "multipliers {1,2,3,5} are Fibonacci numbers F1,F3,F4,F5 summing to k-1=11 "
+            "(non-backtracking out-degree); the E-tower step sizes h(E7)-h(E6)=q! and "
+            "h(E8)-h(E7)=k close the ladder; h(G2)+h(E6)+h(E7)+h(E8)=66=C(k,2) and "
+            "dim(E8)/rank(E8)=31=h(E8)+1 bridges to the transport numerator T=phi6*31=217. "
+            "A twelfth exact layer (McKay-E Group Bridge) proves the binary polyhedral "
+            "groups for E6/E7/E8 have orders mE6=24=2k, mE7=48=4k, mE8=120=10k (exact "
+            "multiples of the SRG degree k=12); their sum 192=16k=|W(D4)| equals the "
+            "tomotope flag count; mE7+mE8=168=|PSL(2,Phi6)| and T=217=h(E7)*k+1; the "
+            "sum of irrep dimensions of each binary polyhedral group recovers the Coxeter "
+            "number (sum_dims(2T)=h(E6)=k, sum_dims(2O)=h(E7)=18, sum_dims(2I)=h(E8)=30) "
+            "with ratios {2,3,5} identical to the Fibonacci multipliers of the eleventh "
+            "layer; and k=12 is the common anchor through mE6=24=Leech_dim=2k, "
+            "|PSL(2,q)|=k=mE6/2, and T-1=216=(q!)^3=mE6*q^2."
         ),
     }
 

@@ -1,16 +1,17 @@
 """Checked crosswalk between Cycle Clock Theory terms and W(3,3)."""
 
 from pathlib import Path
+
 import pytest
 
 from scripts.w33_cct_crosswalk import (
     BACKBONE_INVARIANT_REGISTRY,
     CHECKED_PERIODIC_ROWS,
-    E,
     E8_WEYL_ORDER,
-    K,
     MU,
     ORGANIZATION_LAYER_ORDER,
+    E,
+    K,
     Q,
     a2_prime_power_hexagon_count,
     build_cct_crosswalk,
@@ -33,7 +34,6 @@ from scripts.w33_cct_crosswalk import (
     q_factorial_equals_two_q_only_at_three,
     w33_clock_language_summary,
 )
-
 
 DOC_NOTE = Path("docs/W33_PERIODIC_TABLE_ORGANIZATION.md")
 PAPER_TEX = Path("w33_paper.tex")
@@ -129,7 +129,9 @@ class TestCCTChapter1Axioms:
         assert summary["self_reference_packet"]["projective_collapse"] == "81 -> 40"
         assert summary["self_reference_packet"]["srg_overlap_balance_left"] == 108
         assert summary["self_reference_packet"]["srg_overlap_balance_right"] == 108
-        assert "frontier" in summary["frontier_boundary_packet"]["smooth_gravity_status"]
+        assert (
+            "frontier" in summary["frontier_boundary_packet"]["smooth_gravity_status"]
+        )
         assert all(summary["theorem"].values())
 
 
@@ -346,7 +348,9 @@ class TestCCTChapter4QuasicrystalFIG:
         assert certificate["h4_degrees_embed_in_e8"] is True
         assert certificate["full_psp43_orbital_degrees"] == (2, 27, 36, 54)
         assert certificate["full_symmetry_can_make_600_cell_graph"] is False
-        assert certificate["required_selector"] == "golden/icosahedral H4 projection data"
+        assert (
+            certificate["required_selector"] == "golden/icosahedral H4 projection data"
+        )
         assert "frontier data" in certificate["frontier_status"]
         assert all(summary["theorem"].values())
 
@@ -382,14 +386,19 @@ class TestCCTChapter5ShellingScaling:
         summary = cct_chapter5_shelling_scaling_summary()
 
         assert summary["source_scope"]["chapter"] == 5
-        assert summary["source_scope"]["chapter_title"] == "Shelling and Scaling Lattices"
+        assert (
+            summary["source_scope"]["chapter_title"] == "Shelling and Scaling Lattices"
+        )
 
         objectives = summary["root_lattice_objectives_packet"]
         assert objectives["lattices"] == ("A2", "D4", "E8")
         assert objectives["ambient_dimensions"] == (2, 4, 8)
         assert objectives["base_shell_multiplicities"] == (6, 24, 240)
         assert objectives["comparison_irregular_lattices"] == ("A4", "A6", "A8")
-        assert objectives["quasilattice_extension"] == "E8 projection / Sadoc-Mosseri shelling"
+        assert (
+            objectives["quasilattice_extension"]
+            == "E8 projection / Sadoc-Mosseri shelling"
+        )
 
     def test_chapter5_A2_D4_E8_shelling_packets_are_exact(self):
         summary = cct_chapter5_shelling_scaling_summary()
@@ -445,7 +454,10 @@ class TestCCTChapter5ShellingScaling:
             "w33_line_clock_uses_five_24_cell_packets": 5,
             "w33_e8_shell_uses_ten_24_cell_packets": 10,
         }
-        assert "source guidance only" in summary["omega_team_source_packet"]["local_status"]
+        assert (
+            "source guidance only"
+            in summary["omega_team_source_packet"]["local_status"]
+        )
         assert all(summary["theorem"].values())
 
 
@@ -532,6 +544,44 @@ class TestCCTChapter6NonlocalLife:
             ),
         }
 
+        variational = summary["variational_trit_savings_packet"]
+        assert variational["neighbor_packet"] == 8
+        assert variational["equivalence_identity"] == (
+            "d_H(E0,Ei) = |E0| + |Ei| - 2|E0 intersection Ei|"
+        )
+        assert variational["argmax_overlap_indices"] == variational[
+            "argmin_change_indices"
+        ]
+        assert variational["softargmax_hot_probability"] == 0.125
+        assert variational["softargmax_cold_argmax_mass"] > 0.999
+        assert variational["fip_path_length"] == variational["fip_hamming_initial"]
+        assert "does not claim full global selector closure" in variational["boundary"]
+
+        frontier = summary["global_selector_frontier_packet"]
+        assert "no one-turn fixed selector" in frontier["base_obstruction"]
+        assert frontier["holonomy_class"] == 1
+        assert frontier["minimal_consistent_turns"] == 2
+        assert "two-turn lifted section" in frontier["lift_resolution"]
+        assert "does not claim full global selector closure" in frontier["boundary"]
+
+        parity = summary["holonomy_parity_law_packet"]
+        assert "if and only if" in parity["statement"]
+        assert parity["holonomy_group"] == "Z2"
+        assert set(parity["parity_law_verified_for_lengths"]) == {3, 4, 5, 6}
+        assert parity["chapter6_is_canonical_instance"] is True
+        assert "complete finite classification" in parity["boundary"]
+
+        rarity = summary["w33_graph_selector_rarity_packet"]
+        assert rarity["cycle_rank"] == 201
+        assert rarity["coboundary_dimension"] == 39
+        assert rarity["log2_fraction_consistent"] == -201
+        assert rarity["triangle_count"] == 160
+        assert rarity["all_triangles_in_gq_lines"] is True
+        assert rarity["line_count"] == 40
+        assert rarity["lines_partition_edges"] is True
+        assert "V*(K-2)/2 + 1" in rarity["srg_formula"]
+        assert "exact finite certificate" in rarity["boundary"]
+
     def test_chapter6_w33_certificate_keeps_empire_dynamics_frontier_scoped(self):
         summary = cct_chapter6_nonlocal_life_summary()
         certificate = summary["w33_cycle_clock_certificate"]
@@ -616,14 +666,19 @@ class TestCCT4H4Selector:
         assert tuple(route) == ORGANIZATION_LAYER_ORDER
         assert all(route[layer] for layer in ORGANIZATION_LAYER_ORDER)
         assert row["aligned_periodic_rows"]
-        assert all(name in CHECKED_PERIODIC_ROWS for name in row["aligned_periodic_rows"])
+        assert all(
+            name in CHECKED_PERIODIC_ROWS for name in row["aligned_periodic_rows"]
+        )
         assert row["same_table_backbone_invariants"]
         assert all(
-                name in BACKBONE_INVARIANT_REGISTRY for name in row["same_table_backbone_invariants"]
-            )
+            name in BACKBONE_INVARIANT_REGISTRY
+            for name in row["same_table_backbone_invariants"]
+        )
 
         language_row = next(
-            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "finite code/language"
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "finite code/language"
         )
         assert language_row["aligned_periodic_rows"] == ["exceptional_envelope_row"]
         assert language_row["same_table_backbone_invariants"] == ["40_point_shell"]
@@ -636,7 +691,9 @@ class TestCCT4H4Selector:
         }
 
         trit_row = next(
-            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "trit savings"
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "trit savings"
         )
         assert trit_row["integer_certificate"] == 8
         assert trit_row["aligned_periodic_rows"] == [
@@ -655,6 +712,27 @@ class TestCCT4H4Selector:
             "algebra": "maximize |E0 intersect Ei| under the 4+4 intrinsic clock split",
             "computation": "choose an argmax neighbor; ties leave stochastic hinge freedom",
             "witness": "8 = k - mu, 4+4 = mu+mu, and q=3 remains the qutrit alphabet owner",
+        }
+
+        loop_row = next(
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "feedback loop / cycle-clock dynamics"
+        )
+        assert loop_row["integer_certificate"] == 480
+        assert loop_row["same_table_backbone_invariants"] == [
+            "40_point_shell",
+            "240_edge_root_shell",
+            "8_neighbor_empire_packet",
+        ]
+        assert "Parry/KMS" in loop_row["w33_witness"]
+        assert "Doob bridge" in loop_row["w33_witness"]
+        assert loop_row["five_layer_route"] == {
+            "carrier": "the 480-state directed-edge Hashimoto cycle-clock carrier",
+            "realization": "non-backtracking W(3,3) paths with 11 continuations per directed edge",
+            "algebra": "Ihara zeta traces, primitive Euler factors, Parry/KMS equilibrium, and Doob bridge conditioning",
+            "computation": "compute loop probability 2/1331, action log_3(1331/2), N3=320, beta_c=1, pi=1/480, and the 11->2 bridge lens",
+            "witness": "480 directed states, 11 branches, 2 triangle closures, primitive N3=320, and K-1=(K-mu)+q=8+3",
         }
 
         measurement_row = next(
@@ -676,7 +754,9 @@ class TestCCT4H4Selector:
         }
 
         propagator_row = next(
-            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "finite propagator / operator calculus"
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "finite propagator / operator calculus"
         )
         assert propagator_row["integer_certificate"] == 78
         assert propagator_row["aligned_periodic_rows"] == ["pascal_computation_row"]
@@ -686,7 +766,9 @@ class TestCCT4H4Selector:
         assert "Green kernel" in propagator_row["w33_witness"]
 
         no_go_row = next(
-            row for row in crosswalk["crosswalk_rows"] if row["cct_desideratum"] == "non-arbitrary H4 emergence"
+            row
+            for row in crosswalk["crosswalk_rows"]
+            if row["cct_desideratum"] == "non-arbitrary H4 emergence"
         )
         assert no_go_row["aligned_periodic_rows"] == [
             "frontier_witness_row",
@@ -699,80 +781,212 @@ class TestCCT4H4Selector:
         crosswalk = build_cct_crosswalk()
         assert crosswalk["theorem"]["w33_realizes_cct_finite_language_template"]
         assert crosswalk["theorem"]["every_crosswalk_row_has_a_full_five_layer_route"]
-        assert crosswalk["theorem"]["crosswalk_rows_route_only_to_checked_periodic_rows"]
-        assert crosswalk["theorem"]["crosswalk_terms_are_forced_onto_exact_carriers_and_witnesses"]
-        assert crosswalk["theorem"]["the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary"]
-        assert crosswalk["theorem"]["crosswalk_rows_name_the_same_table_backbone_invariants_they_use"]
-        assert crosswalk["theorem"]["the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"]
-        assert crosswalk["theorem"]["chapter1_axioms_are_routed_to_exact_w33_certificate_tiers"]
-        assert crosswalk["theorem"]["chapter2_trit_economy_is_routed_to_exact_w33_certificates"]
-        assert crosswalk["theorem"]["chapter3_foundations_are_routed_to_exact_w33_certificates"]
-        assert crosswalk["theorem"]["chapter4_quasicrystal_fig_layer_is_routed_to_exact_w33_certificates"]
-        assert crosswalk["theorem"]["chapter5_shelling_scaling_layer_is_routed_to_exact_w33_certificates"]
-        assert crosswalk["theorem"]["chapter6_nonlocal_life_layer_is_routed_to_exact_w33_certificates"]
-        assert crosswalk["theorem"]["deep_connection_motifs_are_chapter_sorted_and_nontrivial"]
-        assert crosswalk["theorem"]["deep_connection_motifs_cover_chapters_2_through_12"]
-        assert crosswalk["theorem"]["yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle"]
-        assert crosswalk["theorem"]["k_minus_1_eleven_links_ramanujan_circle_radius_and_representation_triangle_121"]
-        assert crosswalk["theorem"]["harmonic_modes_3_equals_q_equals_three_lepton_generations"]
+        assert crosswalk["theorem"][
+            "crosswalk_rows_route_only_to_checked_periodic_rows"
+        ]
+        assert crosswalk["theorem"][
+            "crosswalk_terms_are_forced_onto_exact_carriers_and_witnesses"
+        ]
+        assert crosswalk["theorem"][
+            "the_pascal_row_now_routes_the_target_side_measurement_shadow_dictionary"
+        ]
+        assert crosswalk["theorem"][
+            "crosswalk_rows_name_the_same_table_backbone_invariants_they_use"
+        ]
+        assert crosswalk["theorem"][
+            "the_source_dictionary_explicitly_uses_the_shared_40_81_240_backbone"
+        ]
+        assert crosswalk["theorem"][
+            "chapter1_axioms_are_routed_to_exact_w33_certificate_tiers"
+        ]
+        assert crosswalk["theorem"][
+            "chapter2_trit_economy_is_routed_to_exact_w33_certificates"
+        ]
+        assert crosswalk["theorem"][
+            "chapter3_foundations_are_routed_to_exact_w33_certificates"
+        ]
+        assert crosswalk["theorem"][
+            "chapter4_quasicrystal_fig_layer_is_routed_to_exact_w33_certificates"
+        ]
+        assert crosswalk["theorem"][
+            "chapter5_shelling_scaling_layer_is_routed_to_exact_w33_certificates"
+        ]
+        assert crosswalk["theorem"][
+            "chapter6_nonlocal_life_layer_is_routed_to_exact_w33_certificates"
+        ]
+        assert crosswalk["theorem"][
+            "deep_connection_motifs_are_chapter_sorted_and_nontrivial"
+        ]
+        assert crosswalk["theorem"][
+            "deep_connection_motifs_cover_chapters_2_through_12"
+        ]
+        assert crosswalk["theorem"][
+            "yukawa_5x3_fifteen_packet_is_the_same_15_sector_as_representation_triangle"
+        ]
+        assert crosswalk["theorem"][
+            "k_minus_1_eleven_links_ramanujan_circle_radius_and_representation_triangle_121"
+        ]
+        assert crosswalk["theorem"][
+            "harmonic_modes_3_equals_q_equals_three_lepton_generations"
+        ]
         assert crosswalk["theorem"]["girth_3_equals_trit_base_q_minimum_cycle_tick"]
-        assert crosswalk["theorem"]["hodge_eigenvalue_ladder_is_trit_squared_light_18_equals_2q2_heavy_72_equals_8q2"]
-        assert crosswalk["theorem"]["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"]
-        assert crosswalk["theorem"]["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"]
-        assert crosswalk["theorem"]["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"]
-        assert crosswalk["theorem"]["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"]
-        assert crosswalk["theorem"]["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"]
-        assert crosswalk["theorem"]["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"]
-        assert crosswalk["theorem"]["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"]
-        assert crosswalk["theorem"]["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"]
-        assert crosswalk["theorem"]["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"]
-        assert crosswalk["theorem"]["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"]
-        assert crosswalk["theorem"]["a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"]
-        assert crosswalk["theorem"]["four_eighty_directed_hashimoto_states_equal_directed_edge_count"]
-        assert crosswalk["theorem"]["h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"]
-        assert crosswalk["theorem"]["spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"]
-        assert crosswalk["theorem"]["srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"]
-        assert crosswalk["theorem"]["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"]
-        assert crosswalk["theorem"]["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"]
-        assert crosswalk["theorem"]["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"]
-        assert crosswalk["theorem"]["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"]
-        assert crosswalk["theorem"]["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"]
-        assert crosswalk["theorem"]["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"]
-        assert crosswalk["theorem"]["one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"]
-        assert crosswalk["theorem"]["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"]
-        assert crosswalk["theorem"]["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"]
-        assert crosswalk["theorem"]["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"]
-        assert crosswalk["theorem"]["binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"]
-        assert crosswalk["theorem"]["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"]
-        assert crosswalk["theorem"]["lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"]
-        assert crosswalk["theorem"]["string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"]
-        assert crosswalk["theorem"]["gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"]
-        assert crosswalk["theorem"]["twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"]
-        assert crosswalk["theorem"]["qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"]
-        assert crosswalk["theorem"]["monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"]
-        assert "carrier -> realization -> algebra -> computation -> witness" in crosswalk["theorem"]["interpretation"]
+        assert crosswalk["theorem"][
+            "hodge_eigenvalue_ladder_is_trit_squared_light_18_equals_2q2_heavy_72_equals_8q2"
+        ]
+        assert crosswalk["theorem"][
+            "ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"
+        ]
+        assert crosswalk["theorem"][
+            "d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"
+        ]
+        assert crosswalk["theorem"][
+            "edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"
+        ]
+        assert crosswalk["theorem"][
+            "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"
+        ]
+        assert crosswalk["theorem"][
+            "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"
+        ]
+        assert crosswalk["theorem"][
+            "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"
+        ]
+        assert crosswalk["theorem"][
+            "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"
+        ]
+        assert crosswalk["theorem"][
+            "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"
+        ]
+        assert crosswalk["theorem"][
+            "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"
+        ]
+        assert crosswalk["theorem"][
+            "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"
+        ]
+        assert crosswalk["theorem"][
+            "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"
+        ]
+        assert crosswalk["theorem"][
+            "four_eighty_directed_hashimoto_states_equal_directed_edge_count"
+        ]
+        assert crosswalk["theorem"][
+            "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"
+        ]
+        assert crosswalk["theorem"][
+            "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"
+        ]
+        assert crosswalk["theorem"][
+            "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"
+        ]
+        assert crosswalk["theorem"][
+            "octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"
+        ]
+        assert crosswalk["theorem"][
+            "cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"
+        ]
+        assert crosswalk["theorem"][
+            "inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"
+        ]
+        assert crosswalk["theorem"][
+            "e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"
+        ]
+        assert crosswalk["theorem"][
+            "clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"
+        ]
+        assert crosswalk["theorem"][
+            "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"
+        ]
+        assert crosswalk["theorem"][
+            "one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"
+        ]
+        assert crosswalk["theorem"][
+            "four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"
+        ]
+        assert crosswalk["theorem"][
+            "seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"
+        ]
+        assert crosswalk["theorem"][
+            "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"
+        ]
+        assert crosswalk["theorem"][
+            "binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"
+        ]
+        assert crosswalk["theorem"][
+            "three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"
+        ]
+        assert crosswalk["theorem"][
+            "lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"
+        ]
+        assert crosswalk["theorem"][
+            "string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"
+        ]
+        assert crosswalk["theorem"][
+            "gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"
+        ]
+        assert crosswalk["theorem"][
+            "twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"
+        ]
+        assert crosswalk["theorem"][
+            "qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"
+        ]
+        assert crosswalk["theorem"][
+            "monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"
+        ]
+        assert (
+            "carrier -> realization -> algebra -> computation -> witness"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "shared q=3 backbone invariant" in crosswalk["theorem"]["interpretation"]
-        assert "121 = (k-1)^2 representation triangle" in crosswalk["theorem"]["interpretation"]
-        assert "59_+ + 59_- + 3_harm chiral exact sequence" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "121 = (k-1)^2 representation triangle"
+            in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "59_+ + 59_- + 3_harm chiral exact sequence"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "45-point transport carrier" in crosswalk["theorem"]["interpretation"]
         assert "negative-sign five-cliques" in crosswalk["theorem"]["interpretation"]
-        assert "two-shell and mass-weighted-Hodge package 0^3, 18^78, 72^40" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "two-shell and mass-weighted-Hodge package 0^3, 18^78, 72^40"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "projector calculus" in crosswalk["theorem"]["interpretation"]
         assert "H4/quasicrystal step" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 2 trit-economy layer" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 3 mathematical foundations layer" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 4 FIG/quasicrystal layer" in crosswalk["theorem"]["interpretation"]
-        assert "H4/600-cell packet 5 x 24 = 120" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 5 shelling/scaling layer" in crosswalk["theorem"]["interpretation"]
-        assert "q=3 E8 shell count 240 x sigma_3(3) = 6720" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 6 non-local game-of-life layer" in crosswalk["theorem"]["interpretation"]
-        assert "ten D4/K-VT packets giving 10 x 24 = 240" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "Chapter 3 mathematical foundations layer"
+            in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "Chapter 4 FIG/quasicrystal layer" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "H4/600-cell packet 5 x 24 = 120" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "Chapter 5 shelling/scaling layer" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "q=3 E8 shell count 240 x sigma_3(3) = 6720"
+            in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "Chapter 6 non-local game-of-life layer"
+            in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "ten D4/K-VT packets giving 10 x 24 = 240"
+            in crosswalk["theorem"]["interpretation"]
+        )
 
     def test_crosswalk_deep_connection_motifs(self):
         crosswalk = build_cct_crosswalk()
         motifs = crosswalk["deep_connection_motifs"]
 
-        assert motifs["q3_selector_reappears_across_language_scaling_mass_and_boundary"] == (
+        assert motifs[
+            "q3_selector_reappears_across_language_scaling_mass_and_boundary"
+        ] == (
             2,
             5,
             8,
@@ -782,54 +996,140 @@ class TestCCT4H4Selector:
         assert motifs[
             "edge_root_shell_240_reappears_across_foundation_quasicrystal_shelling_and_loop_layers"
         ] == (2, 3, 4, 5, 6, 7)
-        assert motifs["representation_triangle_121_bridges_measurement_chiral_mass_and_operator_layers"] == (
+        assert motifs[
+            "representation_triangle_121_bridges_measurement_chiral_mass_and_operator_layers"
+        ] == (
             8,
             12,
         )
-        assert motifs["transport_wall_target_dC_14105_links_transport_and_global_boundary_layers"] == (
+        assert motifs[
+            "transport_wall_target_dC_14105_links_transport_and_global_boundary_layers"
+        ] == (
             10,
             12,
         )
-        assert motifs["exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12"] == (11, 12)
-        assert motifs["signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock"] == (11,)
-        assert motifs["yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector"] == (8, 9)
-        assert motifs["k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121"] == (7, 8)
-        assert motifs["harmonic_modes_3_equals_q_equals_three_lepton_generations"] == (2, 8, 9)
+        assert motifs[
+            "exact_to_frontier_flavor_bridge_links_chapter11_to_boundary_chapter12"
+        ] == (11, 12)
+        assert motifs[
+            "signed_odd_cubic_normal_form_is_the_chapter11_frontier_precision_lock"
+        ] == (11,)
+        assert motifs[
+            "yukawa_5x3_15_packet_matches_chiral_forward_block_15_sector"
+        ] == (8, 9)
+        assert motifs[
+            "k_minus_1_eleven_links_ramanujan_radius_and_representation_triangle_121"
+        ] == (7, 8)
+        assert motifs["harmonic_modes_3_equals_q_equals_three_lepton_generations"] == (
+            2,
+            8,
+            9,
+        )
         assert motifs["girth_3_equals_trit_base_q_minimum_cycle_tick"] == (2, 3, 7)
-        assert motifs["hodge_eigenvalue_ladder_is_trit_squared_18_equals_2q2_72_equals_8q2"] == (2, 8)
-        assert motifs["ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"] == (3, 4, 5, 6)
-        assert motifs["d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"] == (3, 4, 8)
-        assert motifs["edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"] == (4, 8)
-        assert motifs["45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"] == (8, 11)
-        assert motifs["forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"] == (2, 3, 8)
-        assert motifs["one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"] == (3, 4, 5)
-        assert motifs["one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"] == (1, 2, 3, 4)
-        assert motifs["mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"] == (2, 3, 6)
-        assert motifs["k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"] == (3, 4, 10)
-        assert motifs["eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"] == (3, 7)
-        assert motifs["twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"] == (2, 11)
-        assert motifs["a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"] == (3, 4, 5)
-        assert motifs["four_eighty_directed_hashimoto_states_equal_directed_edge_count"] == (3, 7)
-        assert motifs["four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"] == (1, 3, 7)
-        assert motifs["h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"] == (3, 4)
-        assert motifs["spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"] == (2, 8)
-        assert motifs["srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"] == (2, 3)
-        assert motifs["octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"] == (3, 5, 6)
-        assert motifs["cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"] == (2, 3)
-        assert motifs["inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"] == (2, 3)
-        assert motifs["e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"] == (3, 5)
-        assert motifs["clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"] == (3, 5)
-        assert motifs["mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"] == (2, 4)
-        assert motifs["seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"] == (2, 3, 5)
-        assert motifs["sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"] == (2, 5)
-        assert motifs["binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"] == (2, 3, 5)
-        assert motifs["three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"] == (2, 3, 5)
-        assert motifs["lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"] == (2, 3, 5)
-        assert motifs["string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"] == (2, 3, 5)
-        assert motifs["gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"] == (2, 3)
-        assert motifs["twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"] == (2, 3, 5)
-        assert motifs["qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"] == (2, 3, 5)
-        assert motifs["monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"] == (2, 3, 5)
+        assert motifs[
+            "hodge_eigenvalue_ladder_is_trit_squared_18_equals_2q2_72_equals_8q2"
+        ] == (2, 8)
+        assert motifs[
+            "ten_D4_24cell_blocks_tile_E8_240_shell_across_clifford_hopf_shelling_loop_layers"
+        ] == (3, 4, 5, 6)
+        assert motifs[
+            "d4_root_shell_24_equals_hopf_fiber_24_equals_chiral_forward_block_Q24_dimension"
+        ] == (3, 4, 8)
+        assert motifs[
+            "edge_over_degree_20_equals_fig_20G_count_equals_heavy_sector_Q20_dimension"
+        ] == (4, 8)
+        assert motifs[
+            "45_equals_1_plus_F_plus_E_over_K_links_etf_carrier_to_e6_cubic_support"
+        ] == (8, 11)
+        assert motifs[
+            "forty_point_shell_equals_line_carrier_count_equals_heavy_shell_multiplicity"
+        ] == (2, 3, 8)
+        assert motifs[
+            "one_twenty_equals_5F_equals_line_clock_cover_equals_H4_shell"
+        ] == (3, 4, 5)
+        assert motifs[
+            "one_twenty_line_clock_states_reappear_across_axiom_trit_cycle_and_h4_layers"
+        ] == (1, 2, 3, 4)
+        assert motifs[
+            "mu_four_reappears_as_sparse_overlap_A2_to_D4_lift_and_half_clock_split"
+        ] == (2, 3, 6)
+        assert motifs[
+            "k_twelve_reappears_as_E8_reverse_pairs_cuboctahedral_equators_transport_denominator"
+        ] == (3, 4, 10)
+        assert motifs[
+            "eleven_non_backtracking_branch_count_bridges_clock_to_ramanujan_loop"
+        ] == (3, 7)
+        assert motifs[
+            "twenty_seven_nonneighbors_per_symbol_matches_e6_27line_carrier"
+        ] == (2, 11)
+        assert motifs[
+            "a2_root_shell_6_equals_bivector_dimension_equals_a2_shelling_base"
+        ] == (3, 4, 5)
+        assert motifs[
+            "four_eighty_directed_hashimoto_states_equal_directed_edge_count"
+        ] == (3, 7)
+        assert motifs[
+            "four_eighty_directed_edge_shell_reappears_across_axiom_clock_and_loop_layers"
+        ] == (1, 3, 7)
+        assert motifs[
+            "h4_coxeter_number_30_bridges_clifford_hopf_to_quasicrystal_shell"
+        ] == (3, 4)
+        assert motifs[
+            "spread_morita_rank_16_links_trit_economy_to_chiral_mass_sector"
+        ] == (2, 8)
+        assert motifs[
+            "srg_balance_108_equals_k_times_k_minus_1_minus_lambda_equals_mu_times_nonneighbors"
+        ] == (2, 3)
+        assert motifs[
+            "octonion_dimension_8_links_division_algebra_to_e8_ambient_and_penrose_vertex_types"
+        ] == (3, 5, 6)
+        assert motifs[
+            "cycle_rank_201_equals_e_minus_v_plus_one_in_trit_economy_and_clock"
+        ] == (2, 3)
+        assert motifs[
+            "inactive_pairs_540_equals_complete_pairs_minus_edge_shell_in_both_layers"
+        ] == (2, 3)
+        assert motifs[
+            "e8_lie_algebra_248_equals_root_shell_plus_ambient_dim_bridges_clifford_and_shelling"
+        ] == (3, 5)
+        assert motifs[
+            "clifford_group_order_51840_equals_e8_second_shell_times_d4_shell_order_bridges_layers"
+        ] == (3, 5)
+        assert motifs[
+            "mub_frames_36_equals_q_times_k_equals_psp43_orbital_degree_bridge"
+        ] == (2, 4)
+        assert motifs[
+            "seven_forty_four_moonshine_constant_equals_q_times_e8_dim_bridges_trit_and_clifford"
+        ] == (2, 3, 5)
+        assert motifs[
+            "sigma3_of_trit_base_q_equals_v_minus_k_links_eisenstein_series_to_graph_shell_size"
+        ] == (2, 5)
+        assert motifs["binary_golay_code_24_12_8_parameters_match_f_k_and_e8_rank"] == (
+            2,
+            3,
+            5,
+        )
+        assert motifs[
+            "three_even_perfect_numbers_6_28_496_all_appear_as_w33_invariants"
+        ] == (2, 3, 5)
+        assert motifs[
+            "lattice_kissing_numbers_in_dims_2_3_4_8_equal_2q_k_f_e_the_four_srg_root_shell_constants"
+        ] == (2, 3, 5)
+        assert motifs[
+            "string_critical_dimensions_26_bosonic_and_10_superstring_match_f_plus_lambda_and_e_over_f"
+        ] == (2, 3, 5)
+        assert motifs[
+            "gaussian_integer_alpha_inverse_137_equals_k_minus_1_squared_plus_mu_squared"
+        ] == (2, 3)
+        assert motifs[
+            "twenty_six_sporadic_simple_groups_count_equals_f_plus_lambda_the_bosonic_string_dimension"
+        ] == (2, 3, 5)
+        assert motifs[
+            "qcd_one_loop_beta_function_coefficient_7_equals_phi6_cyclotomic_at_trit_base_q"
+        ] == (2, 3, 5)
+        assert motifs[
+            "monster_leech_gap_324_equals_mu_times_first_betti_number_spacetime_times_matter"
+        ] == (2, 3, 5)
 
     def test_crosswalk_interpretation_covers_chapters_7_through_12(self):
         crosswalk = build_cct_crosswalk()
@@ -842,7 +1142,10 @@ class TestCCT4H4Selector:
         assert "Chapter 9 routes" in crosswalk["theorem"]["interpretation"]
         assert "coherence-law" in crosswalk["theorem"]["interpretation"]
         assert "5 x q = 5 x 3 = 15" in crosswalk["theorem"]["interpretation"]
-        assert "S_15 -> L_15 chiral forward block" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "S_15 -> L_15 chiral forward block"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "Chapter 10 routes" in crosswalk["theorem"]["interpretation"]
         assert "dC = 14105" in crosswalk["theorem"]["interpretation"]
         assert "Chapter 11 routes" in crosswalk["theorem"]["interpretation"]
@@ -850,8 +1153,13 @@ class TestCCT4H4Selector:
         assert "27-line dual GQ(4,2) graph" in crosswalk["theorem"]["interpretation"]
         assert "45 cubic-support triangles" in crosswalk["theorem"]["interpretation"]
         assert "C ~ 3.55e-6" in crosswalk["theorem"]["interpretation"]
-        assert "affine-in-epsilon^2 normal form" in crosswalk["theorem"]["interpretation"]
-        assert "Chapter 12 states the boundary-explicit CCT closure" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "affine-in-epsilon^2 normal form" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "Chapter 12 states the boundary-explicit CCT closure"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "11 repo-exact" in crosswalk["theorem"]["interpretation"]
         assert "girth(W(3,3)) = 3 = q" in crosswalk["theorem"]["interpretation"]
         assert "2q^2 = 18" in crosswalk["theorem"]["interpretation"]
@@ -880,10 +1188,20 @@ class TestCCT4H4Selector:
         assert "480 = 2 * E = 2 * 240" in crosswalk["theorem"]["interpretation"]
         assert "744 = Q * 248" in crosswalk["theorem"]["interpretation"]
         assert "sigma_3(Q) = sigma_3(3)" in crosswalk["theorem"]["interpretation"]
-        assert "binary Golay [n=24, k=12, d=8]" in crosswalk["theorem"]["interpretation"]
-        assert "even perfect numbers 6, 28, 496" in crosswalk["theorem"]["interpretation"]
-        assert "lattice kissing numbers 6, 12, 24, 240" in crosswalk["theorem"]["interpretation"]
-        assert "string critical dimensions 26=F+LAMBDA" in crosswalk["theorem"]["interpretation"]
+        assert (
+            "binary Golay [n=24, k=12, d=8]" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "even perfect numbers 6, 28, 496" in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "lattice kissing numbers 6, 12, 24, 240"
+            in crosswalk["theorem"]["interpretation"]
+        )
+        assert (
+            "string critical dimensions 26=F+LAMBDA"
+            in crosswalk["theorem"]["interpretation"]
+        )
         assert "Gaussian integer" in crosswalk["theorem"]["interpretation"]
         assert "26 sporadic simple groups" in crosswalk["theorem"]["interpretation"]
         assert "QCD 1-loop beta coefficient" in crosswalk["theorem"]["interpretation"]
@@ -892,7 +1210,9 @@ class TestCCT4H4Selector:
     def test_crosswalk_has_a_chapter1_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][1]
 
-        assert chapter["source_title"] == "Overview of Cycle Clock Theory and its Axioms"
+        assert (
+            chapter["source_title"] == "Overview of Cycle Clock Theory and its Axioms"
+        )
         assert "seven axioms" in chapter["primary_connection"]
         assert "code/language structure" in chapter["primary_connection"]
         assert "closed Hashimoto loop causality" in chapter["primary_connection"]
@@ -902,7 +1222,10 @@ class TestCCT4H4Selector:
     def test_crosswalk_has_a_chapter2_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][2]
 
-        assert chapter["source_title"] == "Trits, the Irreducible Computational Element of Thought"
+        assert (
+            chapter["source_title"]
+            == "Trits, the Irreducible Computational Element of Thought"
+        )
         assert "q=3 selector" in chapter["primary_connection"]
         assert "two-qutrit Pauli symbol collapse" in chapter["primary_connection"]
         assert "36-frame MUB spread/Morita layer" in chapter["primary_connection"]
@@ -912,7 +1235,10 @@ class TestCCT4H4Selector:
     def test_crosswalk_has_a_chapter3_certificate(self):
         chapter = build_cct_crosswalk()["chapter_crosswalks"][3]
 
-        assert chapter["source_title"] == "The Mathematical Foundations of Cycle Clock Theory"
+        assert (
+            chapter["source_title"]
+            == "The Mathematical Foundations of Cycle Clock Theory"
+        )
         assert "10 x 24 = 240" in chapter["primary_connection"]
         assert "120-state" in chapter["primary_connection"]
         assert "480-state Hashimoto" in chapter["primary_connection"]
@@ -965,7 +1291,9 @@ class TestCCT4H4Selector:
         assert "the `40` shell, the `81` seed, or the `240`" in doc_text
         assert "edge/root shell" in doc_text
 
-        assert "The executable crosswalk now enforces that rule row by row." in paper_text
+        assert (
+            "The executable crosswalk now enforces that rule row by row." in paper_text
+        )
         assert r"\texttt{scripts/w33\_cct\_crosswalk.py}" in paper_text
         assert r"\texttt{tests/test\_w33\_cct\_crosswalk.py}" in paper_text
         assert "the $40$ shell, the" in paper_text
@@ -976,12 +1304,15 @@ class TestCCT4H4Selector:
         chapter = build_cct_crosswalk()["chapter_crosswalks"][7]
 
         assert chapter["source_title"] == (
-              "Transtemporal feedback and cycle-clock loop equilibrium"
+            "Transtemporal feedback and cycle-clock loop equilibrium"
         )
         assert "480 directed edges" in chapter["primary_connection"]
         assert "11 branches" in chapter["primary_connection"]
         assert "1/480" in chapter["primary_connection"]
         assert "Ramanujan" in chapter["primary_connection"]
+        assert "Parry/KMS" in chapter["primary_connection"]
+        assert "Doob bridge" in chapter["primary_connection"]
+        assert "K-1 = (K-mu)+q = 8+3" in chapter["primary_connection"]
         assert all(chapter["certificate"]["theorem"].values())
 
     def test_crosswalk_has_a_chapter8_certificate(self):
@@ -1062,6 +1393,37 @@ class TestCCTChapter7LoopZetaEquilibrium:
         ch = cct_chapter7_loop_zeta_equilibrium_summary()
         for key, val in ch["theorem"].items():
             assert val is True, f"chapter7 theorem {key!r} not True"
+
+    def test_chapter7_remote_cxxx_loop_conditioning_stack_is_wired(self):
+        ch = cct_chapter7_loop_zeta_equilibrium_summary()
+
+        assert ch["remote_loop_conditioning_packet"] == {
+            "remote_parts": (
+                "CXXX efficient loop language",
+                "CXXXI PEL least-change action",
+                "CXXXII primitive loop semantics",
+                "CXXXIII prime-loop thermodynamics",
+                "CXXXIV Parry-KMS cycle-clock state",
+                "CXXXV Doob-bridge transtemporal conditioning",
+            ),
+            "first_loop_probability": "2/1331",
+            "first_realization_action": "log_3(1331/2)",
+            "first_primitive_semantic_layer": 320,
+            "critical_beta": 1,
+            "parry_stationary_distribution": "1/480",
+            "doob_probability_lensing": "11 local choices -> 2 triangle-compatible choices",
+        }
+        assert ch["quasicrystal_loop_alignment_packet"] == {
+            "quasicrystal_neighbor_packet": 8,
+            "hashimoto_branch_packet": 11,
+            "qutrit_slack": 3,
+            "count_identity": "K - 1 = (K - mu) + q = 8 + 3 = 11",
+            "interpretation_boundary": (
+                "exact count alignment only: quasicrystal trit-savings remains "
+                "an empire-overlap argmax rule, while Doob conditioning is a "
+                "future-loop path-measure reweighting"
+            ),
+        }
 
 
 class TestCCTChapter8ChiralMassSector:
@@ -1177,6 +1539,24 @@ class TestCCTChapter12RealizationTheorem:
         pkt = ch["realization_summary_packet"]
         assert pkt["q3_selector_exact"] is True
         assert pkt["transport_holonomy_exact"] is True
+        assert pkt["q8_spectral_action_master_audit_exact"] is True
+        assert pkt["q8_boundary_conflict_count"] == 5
+
+        q8 = ch["q8_master_audit_packet"]
+        assert q8["master_variable"] == "3/13"
+        assert q8["symplectic_q_hits"] == (3,)
+        assert q8["e8_root_q_hits"] == (3,)
+        assert q8["ko_product_mod_8"] == 2
+        assert q8["qcd_beta0"] == "7"
+        assert q8["monster_nontrivial_rep"] == 196883
+        assert q8["mckay_minus_leech"] == 324
+        assert q8["boundary_conflicts"] == (
+            "omega_lambda_generator_vs_cosmo_table",
+            "cabibbo_sin_vs_tan_shorthand",
+            "legacy_pmns_theta12_formula",
+            "so32_label_misprint",
+            "alpha_table_rounding_or_formula_conflict",
+        )
 
     def test_chapter12_theorem_all_pass(self):
         ch = cct_chapter12_realization_theorem_summary()

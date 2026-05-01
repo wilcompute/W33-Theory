@@ -166,6 +166,58 @@ def build_mckay_e_group_bridge_summary() -> dict[str, Any]:
     assert mE6_over_k + mE7_over_k + mE8_over_k == 16
 
     # ------------------------------------------------------------------ #
+    # Layer 11: Sum of irrep dimensions = Coxeter number                 #
+    # ------------------------------------------------------------------ #
+    # McKay correspondence: the extended Dynkin diagram of E_r has
+    # dimension vector whose entries are the irrep dimensions of the
+    # corresponding binary polyhedral group, and their sum equals h(E_r).
+    #
+    # Binary tetrahedral 2T (E6): 7 irreps with dims 1,1,1,2,2,2,3
+    irrep_dims_2T = [1, 1, 1, 2, 2, 2, 3]
+    # Binary octahedral 2O (E7): 8 irreps with dims 1,1,2,2,3,3,4,2
+    irrep_dims_2O = [1, 1, 2, 2, 3, 3, 4, 2]
+    # Binary icosahedral 2I (E8): 9 irreps with dims 1,2,2,3,3,4,4,5,6
+    irrep_dims_2I = [1, 2, 2, 3, 3, 4, 4, 5, 6]
+
+    # Verify: sum(d^2) = |group| (standard representation theory)
+    assert sum(d**2 for d in irrep_dims_2T) == mE6   # 24
+    assert sum(d**2 for d in irrep_dims_2O) == mE7   # 48
+    assert sum(d**2 for d in irrep_dims_2I) == mE8   # 120
+
+    # Coxeter-number sums
+    sum_irrep_dims_2T = sum(irrep_dims_2T)   # 12 = k = h(E6)
+    sum_irrep_dims_2O = sum(irrep_dims_2O)   # 18 = h(E7)
+    sum_irrep_dims_2I = sum(irrep_dims_2I)   # 30 = h(E8)
+
+    assert sum_irrep_dims_2T == h_E6         # = k = 12
+    assert sum_irrep_dims_2O == h_E7         # = 18
+    assert sum_irrep_dims_2I == h_E8         # = 30
+
+    # Ratios to q! = 6 give the Fibonacci-subset multipliers {2, 3, 5}
+    # (same as the Coxeter Ladder's exact multipliers for E6, E7, E8)
+    assert sum_irrep_dims_2T // q_fact == 2  # F3
+    assert sum_irrep_dims_2O // q_fact == 3  # F4
+    assert sum_irrep_dims_2I // q_fact == 5  # F5
+
+    # ------------------------------------------------------------------ #
+    # Layer 12: k=12 anchor — Leech dimension, PSL/SL chain             #
+    # ------------------------------------------------------------------ #
+    # mE6 = 24 = dimension of the Leech lattice
+    leech_dim = 24
+    assert leech_dim == mE6
+
+    # k = 12 is simultaneously:
+    #   h(E6) = SRG degree = |PSL(2,q)| = Leech_dim / 2 = mE6 / 2
+    assert k == h_E6
+    assert k == PSL_2_q
+    assert k == leech_dim // 2
+    assert k == mE6 // 2
+
+    # Center quotient: |SL(2,q)| / |PSL(2,q)| = center order = gcd(2, q-1) = 2 = phi1
+    center_order_SL_2_q = mE6 // PSL_2_q    # = 24 / 12 = 2 = q-1 = phi1
+    assert center_order_SL_2_q == phi1       # = 2 = q - 1
+
+    # ------------------------------------------------------------------ #
     # Exact factorization summary                                        #
     # ------------------------------------------------------------------ #
     exact_factorizations = {
@@ -187,6 +239,19 @@ def build_mckay_e_group_bridge_summary() -> dict[str, Any]:
         "mE8_multiplier_equals_phi4": mE8_over_k == phi4,
         "mE8_equals_phi4_times_k": mE8 == phi4 * k,
         "sum_of_multipliers_equals_16": mE6_over_k + mE7_over_k + mE8_over_k == 16,
+        # Layer 11: irrep dimension sums equal Coxeter numbers
+        "sum_irrep_dims_2T_equals_h_E6": sum_irrep_dims_2T == h_E6,
+        "sum_irrep_dims_2O_equals_h_E7": sum_irrep_dims_2O == h_E7,
+        "sum_irrep_dims_2I_equals_h_E8": sum_irrep_dims_2I == h_E8,
+        "irrep_dim_sum_ratios_are_fibonacci_2_3_5": [
+            sum_irrep_dims_2T // q_fact,
+            sum_irrep_dims_2O // q_fact,
+            sum_irrep_dims_2I // q_fact,
+        ] == [2, 3, 5],
+        # Layer 12: k=12 anchor chain
+        "mE6_equals_leech_lattice_dimension": mE6 == leech_dim,
+        "k_equals_leech_dim_half": k == leech_dim // 2,
+        "center_order_SL_2_q_equals_phi1": center_order_SL_2_q == phi1,
     }
 
     theorem = {
@@ -199,6 +264,12 @@ def build_mckay_e_group_bridge_summary() -> dict[str, Any]:
         "T_minus_1_equals_q_factorial_cubed_equals_h_E6_times_h_E7": T_minus_1 == q_fact**3 == h_E6 * h_E7,
         "mE7_equals_F4_root_count": mE7 == phi_F4,
         "mE8_multiplier_over_k_equals_phi4": mE8_over_k == phi4,
+        "irrep_dim_sums_of_binary_polyhedral_groups_equal_coxeter_numbers": (
+            sum_irrep_dims_2T == h_E6 and sum_irrep_dims_2O == h_E7 and sum_irrep_dims_2I == h_E8
+        ),
+        "mE6_is_leech_lattice_dimension_and_k12_is_PSL_2_q_anchor": (
+            mE6 == leech_dim and k == leech_dim // 2 and center_order_SL_2_q == phi1
+        ),
         "the_mckay_e_group_bridge_is_fully_exact": all(exact_factorizations.values()),
     }
 
@@ -248,6 +319,18 @@ def build_mckay_e_group_bridge_summary() -> dict[str, Any]:
             "T_equals_W_D4_plus_mE6_plus_1": f"|W(D4)|+|mE6|+1 = {W_D4}+{mE6}+1 = {T}",
             "T_minus_1_equals_cube": f"T-1 = {T_minus_1} = {q_fact}^3 = h(E6)*h(E7) = {h_E6}*{h_E7}",
         },
+        "irrep_dims": {
+            "2T_binary_tetrahedral": irrep_dims_2T,
+            "2O_binary_octahedral": irrep_dims_2O,
+            "2I_binary_icosahedral": irrep_dims_2I,
+        },
+        "sum_irrep_dims": {
+            "sum_2T": sum_irrep_dims_2T,
+            "sum_2O": sum_irrep_dims_2O,
+            "sum_2I": sum_irrep_dims_2I,
+        },
+        "leech_dim": leech_dim,
+        "center_order_SL_2_q": center_order_SL_2_q,
         "exact_factorizations": exact_factorizations,
         "theorem": theorem,
         "interpretation": (

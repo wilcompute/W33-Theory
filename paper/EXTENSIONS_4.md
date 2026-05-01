@@ -21,6 +21,7 @@ Laplacian (mass²) spectrum:
 | 24 |  1          | trivial (−k)   | maximum mass level       |
 
 **Mass level pairing**: each pair sums to 2k = 24:
+
 ```
 (m²=0, m²=24):   sum 24 = 2k
 (m²=8, m²=16):   sum 24 = 2k
@@ -28,9 +29,11 @@ Laplacian (mass²) spectrum:
 ```
 
 Physical masses m = √(m²) × m_unit:
+
 ```
 0, √8, √10, √14, √16, √24  (in Planck units)
 ```
+
 The spectral gap m² = 8 = q²−1 = Fiedler value provides the Yang-Mills mass gap.
 
 ---
@@ -52,6 +55,7 @@ The eigenvalue ratio ev_s/ev_r = (q+1)/(q−1) = 4/2 = 2 (generation doubling).
 ## §45: THEOREM — SM Gauge Bosons = k (ALL q)
 
 **THEOREM** (exact, all prime powers q):
+
 ```
 dim(SU(q)) + dim(SU(2)) + dim(U(1)) = (q²−1) + q + 1 = q(q+1) = k(q)
 ```
@@ -62,6 +66,7 @@ SU(q)×SU(2)×U(1) gauge group!
 At q=3: 8 + 3 + 1 = 12 = k ✓
 
 Verification:
+
 | q | k = q(q+1) | (q²−1)+q+1 | Match |
 |---|-----------|------------|-------|
 | 2 |  6        |  6         | ✓    |
@@ -85,12 +90,15 @@ Discrepancy: 0.195%
 ```
 
 The RG running factor from GUT to M_Z scale is:
+
 ```
 sin²θ_W(bare)/sin²θ_W(dressed) = Φ₃/Cartan = 13/8 = 1.625
 ```
+
 a pure ratio of W(3,3) cyclotomic invariants.
 
 Derived identities:
+
 ```
 cos²θ_W = Φ₄/Φ₃ = 10/13
 tan²θ_W = q/Φ₄ = 3/10
@@ -101,6 +109,7 @@ tan²θ_W = q/Φ₄ = 3/10
 ## §47: Fine Structure Constant 1/α = Φ₃·Φ₄ + Φ₆
 
 **NEW RESULT**:
+
 ```
 1/α (integer) = Φ₃(q)·Φ₄(q) + Φ₆(q) = q⁴+q³+3q²+2
 ```
@@ -117,6 +126,7 @@ The formula is exact at the integer level. The sub-integer correction 0.036
 is consistent with the Schwinger one-loop QED contribution.
 
 Values at other q:
+
 | q | Φ₃·Φ₄+Φ₆ |
 |---|----------|
 | 2 | 38       |
@@ -153,6 +163,7 @@ Discrepancy: 0.50%
 Under E8 ⊃ SU(9) ⊃ SU(3)³ (trinification):
 
 **SU(9) adjoint branching**:
+
 ```
 80 = 3×8 + 6×9 + 2
    = 3·dim(SU(3)) + 6·q² + 2·(extra Cartans)
@@ -160,6 +171,7 @@ Under E8 ⊃ SU(9) ⊃ SU(3)³ (trinification):
 ```
 
 **Fermion content** (trinification):
+
 ```
 One generation:    (3,3̄,1)+(1,3,3̄)+(3̄,1,3) = 3×q² = 27 = q³
 Three generations: 3×27 = 81 = q⁴

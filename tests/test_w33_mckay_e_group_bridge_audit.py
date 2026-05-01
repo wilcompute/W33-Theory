@@ -128,6 +128,39 @@ def test_theorem_all_clauses_hold() -> None:
     assert theorem["mE7_equals_F4_root_count"] is True
     assert theorem["mE8_multiplier_over_k_equals_phi4"] is True
     assert theorem["the_mckay_e_group_bridge_is_fully_exact"] is True
+    assert theorem["irrep_dim_sums_of_binary_polyhedral_groups_equal_coxeter_numbers"] is True
+    assert theorem["mE6_is_leech_lattice_dimension_and_k12_is_PSL_2_q_anchor"] is True
+
+
+def test_irrep_dim_sums_equal_coxeter_numbers() -> None:
+    summary = build_mckay_e_group_bridge_summary()
+    sd = summary["sum_irrep_dims"]
+
+    assert sd["sum_2T"] == 12   # h(E6) = k
+    assert sd["sum_2O"] == 18   # h(E7)
+    assert sd["sum_2I"] == 30   # h(E8)
+    assert sd["sum_2T"] == summary["h_E6"]
+    assert sd["sum_2O"] == summary["h_E7"]
+    assert sd["sum_2I"] == summary["h_E8"]
+
+    # Verify the dim vectors satisfy sum(d^2) = |group|
+    dims = summary["irrep_dims"]
+    mE6 = summary["mckay_e_groups"]["mE6"]["order"]
+    mE7 = summary["mckay_e_groups"]["mE7"]["order"]
+    mE8 = summary["mckay_e_groups"]["mE8"]["order"]
+    assert sum(d**2 for d in dims["2T_binary_tetrahedral"]) == mE6
+    assert sum(d**2 for d in dims["2O_binary_octahedral"]) == mE7
+    assert sum(d**2 for d in dims["2I_binary_icosahedral"]) == mE8
+
+
+def test_k12_anchor_and_leech_dim() -> None:
+    summary = build_mckay_e_group_bridge_summary()
+
+    assert summary["leech_dim"] == 24
+    assert summary["leech_dim"] == summary["mckay_e_groups"]["mE6"]["order"]
+    assert summary["k"] == summary["leech_dim"] // 2
+    assert summary["center_order_SL_2_q"] == summary["phi1"]
+    assert summary["center_order_SL_2_q"] == 2
 
 
 def test_status_ok() -> None:
