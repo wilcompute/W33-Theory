@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W33 Toroidal Triad — Five-Level Self-Heawood Lattice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --bg:           #0e0d0b;
+  --surface:      #141310;
+  --surface-2:    #1a1917;
+  --surface-3:    #211f1c;
+  --border:       rgba(255,255,255,0.07);
+  --divider:      rgba(255,255,255,0.04);
+  --text:         #d4d0c8;
+  --text-muted:   #6e6b63;
+  --text-faint:   #3d3b36;
+  --accent:       #4f98a3;   /* Hydra Teal */
+  --accent-hover: #227f8b;
+  --gold:         #e8af34;   /* Altana Gold  — tetrahedron */
+  --teal:         #4f98a3;   /* torus level */
+  --violet:       #a86fdf;   /* SRG level */
+  --orange:       #fdab43;   /* n=19 level */
+  --green:        #6daa45;   /* n=24 level */
+  --red:          #dd6974;   /* warning/closure */
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono:    'JetBrains Mono', 'Cascadia Code', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+}
+
+/* ===== BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+::selection { background: rgba(79,152,163,0.25); color: var(--text); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+/* ===== LAYOUT ===== */
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+/* ===== HEADER ===== */
+header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.header-left {}
+.header-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(79,152,163,0.3);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+}
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #e8e4dc;
+  margin-bottom: var(--space-2);
+}
+.header-sub {
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.parts-tag {
+  font-size: 11px;
+  color: var(--text-faint);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #c8c4bc;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--divider);
+}
+.section-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: var(--space-1);
+}
+section { margin-bottom: var(--space-12); }
+
+/* ===== COMPILER SPINE ===== */
+.spine {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  font-size: 13px;
+}
+.spine-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--divider);
+}
+.spine-row:last-child { border-bottom: none; }
+.spine-arrow {
+  color: var(--text-faint);
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+.spine-body { flex: 1; }
+.spine-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-left: var(--space-2);
+}
+.hi-seed   { color: var(--gold); }
+.hi-geom   { color: var(--teal); }
+.hi-hash   { color: var(--violet); }
+.hi-mixer  { color: var(--orange); }
+.hi-proj   { color: var(--green); }
+.hi-bridge { color: var(--accent); }
+
+/* ===== FIVE-LEVEL LATTICE ===== */
+.lattice-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+@media (max-width: 768px) {
+  .lattice-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .lattice-grid { grid-template-columns: 1fr; }
+}
+.level-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+  overflow: hidden;
+}
+.level-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+.level-card.c-gold::before   { background: var(--gold); }
+.level-card.c-teal::before   { background: var(--teal); }
+.level-card.c-violet::before { background: var(--violet); }
+.level-card.c-orange::before { background: var(--orange); }
+.level-card.c-green::before  { background: var(--green); }
+.level-card:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.level-card.active {
+  border-color: rgba(255,255,255,0.2);
+  background: var(--surface-2);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+.level-n {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.c-gold .level-n   { color: var(--gold); }
+.c-teal .level-n   { color: var(--teal); }
+.c-violet .level-n { color: var(--violet); }
+.c-orange .level-n { color: var(--orange); }
+.c-green .level-n  { color: var(--green); }
+.level-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: var(--space-3);
+}
+.level-stat {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.level-stat span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ===== DETAIL PANEL ===== */
+.detail-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  min-height: 200px;
+  transition: all 240ms ease;
+}
+.detail-panel h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: var(--space-4);
+  color: #ddd9d0;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-8);
+}
+@media (max-width: 600px) { .detail-grid { grid-template-columns: 1fr; } }
+.detail-item label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: var(--space-1);
+}
+.detail-item .val {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.detail-item .val.accent { color: var(--accent); }
+.detail-polyhedra {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.detail-polyhedra strong { color: var(--text); }
+
+/* ===== STEP DIAGRAM ===== */
+.step-diagram {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: var(--space-6) 0;
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+.step-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.step-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  background: var(--surface-2);
+  position: relative;
+  z-index: 1;
+}
+.step-node-label {
+  margin-top: var(--space-2);
+  font-size: 10px;
+  text-align: center;
+  color: var(--text-faint);
+  letter-spacing: 0.05em;
+  max-width: 60px;
+}
+.step-node-genus {
+  font-size: 9px;
+  color: var(--text-faint);
+  margin-top: 2px;
+  text-align: center;
+}
+.step-arrow {
+  flex: 1;
+  min-width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--space-2);
+  margin-bottom: 28px;
+}
+.step-line {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+}
+.step-line::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  border: 5px solid transparent;
+  border-left-color: var(--text-faint);
+}
+.step-label {
+  font-size: 11px;
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+  font-weight: 700;
+}
+.step-interp {
+  font-size: 9px;
+  color: var(--text-faint);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ===== HEAWOOD TABLE ===== */
+.hw-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+thead th {
+  background: var(--surface-3);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 500;
+  white-space: nowrap;
+}
+tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--divider);
+  vertical-align: top;
+  font-size: 13px;
+}
+tbody tr:hover td { background: var(--surface-2); }
+.td-n { font-weight: 700; font-size: 15px; }
+.td-root { font-weight: 500; color: var(--accent); }
+.td-token { color: var(--text-muted); font-size: 12px; }
+.td-poly { font-size: 12px; color: var(--text-muted); }
+.chip {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 100px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.chip-gold   { background: rgba(232,175,52,0.15); color: var(--gold); }
+.chip-teal   { background: rgba(79,152,163,0.15); color: var(--teal); }
+.chip-violet { background: rgba(168,111,223,0.15); color: var(--violet); }
+.chip-orange { background: rgba(253,171,67,0.15); color: var(--orange); }
+.chip-green  { background: rgba(109,170,69,0.15); color: var(--green); }
+
+/* ===== PALINDROME VIZ ===== */
+.palindrome-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.palindrome-roots {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.pal-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+.pal-root-val {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+.pal-root-label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+.pal-gap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+.pal-gap-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.pal-gap-line {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+.pal-gap-sub {
+  font-size: 9px;
+  color: var(--text-faint);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.palindrome-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.7;
+}
+.center-marker {
+  font-size: 10px;
+  color: var(--violet);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ===== PROJECTION DICT ===== */
+.proj-dict {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+@media (max-width: 600px) { .proj-dict { grid-template-columns: 1fr; } }
+.proj-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: 13px;
+}
+.proj-item.unit   { border-left: 3px solid var(--teal); }
+.proj-item.over   { border-left: 3px solid var(--orange); }
+.proj-item.seed   { border-left: 3px solid var(--gold); }
+.proj-n    { font-weight: 700; margin-bottom: var(--space-2); font-size: 16px; }
+.proj-tok  { color: var(--accent); font-size: 13px; margin-bottom: var(--space-1); }
+.proj-atom { color: var(--text-muted); font-size: 12px; }
+
+/* ===== CATALAN / TRIANGULAR ===== */
+.jump-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--divider);
+  font-size: 13px;
+}
+.jump-row:last-child { border-bottom: none; }
+.jump-from  { width: 120px; color: var(--text-muted); }
+.jump-val   { width: 40px; font-weight: 700; font-size: 16px; }
+.jump-type  { flex: 1; }
+
+/* ===== FORMULAS ===== */
+.formula-block {
+  background: var(--surface-3);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  font-size: 13px;
+  line-height: 2;
+  margin: var(--space-4) 0;
+  border-left: 3px solid var(--accent);
+}
+.formula-block code {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+/* ===== THEOREM BOX ===== */
+.theorem {
+  border: 1px solid rgba(79,152,163,0.25);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  background: rgba(79,152,163,0.04);
+  margin: var(--space-6) 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.theorem-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+.theorem p { color: var(--text-muted); margin-bottom: var(--space-2); }
+.theorem p:last-child { margin-bottom: 0; }
+.theorem strong { color: var(--text); }
+
+/* ===== FANO SVG ===== */
+.fano-wrap {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.fano-svg-col { flex-shrink: 0; }
+.fano-text-col { flex: 1; min-width: 260px; font-size: 13px; line-height: 1.9; }
+.fano-text-col p { color: var(--text-muted); margin-bottom: var(--space-3); }
+.fano-text-col strong { color: var(--text); }
+
+/* ===== EDGE FACTOR TABLE ===== */
+.ef-row {
+  display: grid;
+  grid-template-columns: 50px 60px 80px 1fr;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--divider);
+  font-size: 13px;
+  align-items: center;
+}
+.ef-row:last-child { border-bottom: none; }
+.ef-n { font-weight: 700; font-size: 15px; }
+.ef-e { color: var(--accent); font-weight: 500; }
+.ef-factor { color: var(--text-muted); font-size: 12px; }
+.ef-atom { color: var(--text-faint); font-size: 12px; }
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-8);
+  margin-top: var(--space-16);
+  font-size: 11px;
+  color: var(--text-faint);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+footer a { color: var(--text-faint); text-decoration: none; }
+footer a:hover { color: var(--text-muted); }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-left">
+    <div class="header-badge">W33-Theory</div>
+    <h1>The Toroidal Triad &amp; Five-Level Self-Heawood Lattice</h1>
+    <div class="header-sub">Parts CLII &ndash; CLV &nbsp;&middot;&nbsp; 2026-05-01 &nbsp;&middot;&nbsp; wilcompute/W33-Theory</div>
+  </div>
+  <div class="parts-tag">CLII &rarr; CLIII &rarr; CLIV &rarr; CLV</div>
+</header>
+
+<!-- ===== COMPILER SPINE ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Foundation</span>The W(3,3) Compiler Spine</h2>
+  <div class="spine">
+    <div class="spine-row">
+      <div class="spine-arrow">&mdash;</div>
+      <div class="spine-body"><span class="hi-seed">q! = 2q &rArr; q = 3</span> <span class="spine-tag">seed equation</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body"><span class="hi-geom">W(3,3) = SRG(40, 12, 2, 4)</span> <span class="spine-tag">finite geometry</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body"><span class="hi-hash">&Qopf;(&radic;&minus;10): 1&pm;i&radic;10 &nbsp;[orbit 5] &nbsp;&nbsp; &Qopf;(&radic;&minus;7): &minus;2&pm;i&radic;7 &nbsp;[orbit 2]</span> <span class="spine-tag">Hashimoto fields</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body"><span class="hi-mixer">Mixer: C = 8/13, T = 5/13, D = 3/13</span> <span class="spine-tag">E6 / Ramanujan layer</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body"><span class="hi-proj">Projection: P(A) = A/&Phi;<sub>3</sub> &nbsp; (&Phi;<sub>3</sub> = 13)</span> <span class="spine-tag">Part CXLIX</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body"><span class="hi-bridge">Bridge: 1 &minus; D = P(&Phi;<sub>4</sub>) = 10/13</span> <span class="spine-tag">Part CL &mdash; unique overlap</span></div>
+    </div>
+    <div class="spine-row">
+      <div class="spine-arrow">&darr;</div>
+      <div class="spine-body" style="color:var(--text-faint)">Hole-equation lattice licensed at n = 4, 7, 12, 19, 24 <span class="spine-tag">Parts CLII&ndash;CLV</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIVE-LEVEL CARDS ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Core</span>Five Self-Heawood Levels</h2>
+  <div class="lattice-grid">
+    <div class="level-card c-gold active" onclick="showDetail(0)" id="card-0">
+      <div class="level-n">4</div>
+      <div class="level-tag">q + 1 &nbsp;&middot;&nbsp; Seed</div>
+      <div class="level-stat">
+        genus <span>0</span><br>
+        &chi; = <span>+2</span><br>
+        E = <span>6</span><br>
+        token: <span>seed</span>
+      </div>
+    </div>
+    <div class="level-card c-teal" onclick="showDetail(1)" id="card-1">
+      <div class="level-n">7</div>
+      <div class="level-tag">&Phi;<sub>6</sub> &nbsp;&middot;&nbsp; Torus</div>
+      <div class="level-stat">
+        genus <span>1</span><br>
+        &chi; = <span>0</span><br>
+        E = <span>21</span><br>
+        token: <span>7/13</span>
+      </div>
+    </div>
+    <div class="level-card c-violet" onclick="showDetail(2)" id="card-2">
+      <div class="level-n">12</div>
+      <div class="level-tag">k &nbsp;&middot;&nbsp; SRG Valency</div>
+      <div class="level-stat">
+        genus <span>6</span><br>
+        &chi; = <span>&minus;10</span><br>
+        E = <span>66</span><br>
+        token: <span>12/13</span>
+      </div>
+    </div>
+    <div class="level-card c-orange" onclick="showDetail(3)" id="card-3">
+      <div class="level-n">19</div>
+      <div class="level-tag">k + &Phi;<sub>6</sub> &nbsp;&middot;&nbsp; Coda</div>
+      <div class="level-stat">
+        genus <span>20</span><br>
+        &chi; = <span>&minus;38</span><br>
+        E = <span>171</span><br>
+        token: <span>19/13</span>
+      </div>
+    </div>
+    <div class="level-card c-green" onclick="showDetail(4)" id="card-4">
+      <div class="level-n">24</div>
+      <div class="level-tag">2k &nbsp;&middot;&nbsp; Closure</div>
+      <div class="level-stat">
+        genus <span>35</span><br>
+        &chi; = <span>&minus;68</span><br>
+        E = <span>276</span><br>
+        token: <span>24/13</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail Panel -->
+  <div class="detail-panel" id="detail-panel">
+    <h3 id="dp-title">n = 4 &mdash; Tetrahedron (Genus-0 Seed)</h3>
+    <div class="detail-grid" id="dp-grid"></div>
+    <div class="detail-polyhedra" id="dp-poly"></div>
+  </div>
+</section>
+
+<!-- ===== STEP DIAGRAM ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Structure</span>Odd-Prime Step Pattern</h2>
+  <div class="step-diagram">
+    <div class="step-node">
+      <div class="step-circle" style="color:var(--gold)">4</div>
+      <div class="step-node-label" style="color:var(--gold)">Tetrahedron</div>
+      <div class="step-node-genus">g = 0</div>
+    </div>
+    <div class="step-arrow">
+      <div class="step-label">+3</div>
+      <div class="step-line"></div>
+      <div class="step-interp">= q (seed prime)</div>
+    </div>
+    <div class="step-node">
+      <div class="step-circle" style="color:var(--teal)">7</div>
+      <div class="step-node-label" style="color:var(--teal)">Cs&aacute;sz&aacute;r / Szilassi</div>
+      <div class="step-node-genus">g = 1</div>
+    </div>
+    <div class="step-arrow">
+      <div class="step-label">+5</div>
+      <div class="step-line"></div>
+      <div class="step-interp">= T &middot; &Phi;<sub>3</sub></div>
+    </div>
+    <div class="step-node">
+      <div class="step-circle" style="color:var(--violet)">12</div>
+      <div class="step-node-label" style="color:var(--violet)">K<sub>12</sub> surface</div>
+      <div class="step-node-genus">g = 6</div>
+    </div>
+    <div class="step-arrow">
+      <div class="step-label">+7</div>
+      <div class="step-line"></div>
+      <div class="step-interp">= &Phi;<sub>6</sub></div>
+    </div>
+    <div class="step-node">
+      <div class="step-circle" style="color:var(--orange)">19</div>
+      <div class="step-node-label" style="color:var(--orange)">K<sub>19</sub> surface</div>
+      <div class="step-node-genus">g = 20</div>
+    </div>
+    <div class="step-arrow" style="opacity:0.4">
+      <div class="step-label" style="color:var(--red)">+11?</div>
+      <div class="step-line" style="background:rgba(221,105,116,0.3)"></div>
+      <div class="step-interp" style="color:var(--red)">30 mod 12 = 6 &times;</div>
+    </div>
+    <div class="step-node">
+      <div class="step-circle" style="color:var(--green)">24</div>
+      <div class="step-node-label" style="color:var(--green)">K<sub>24</sub> surface</div>
+      <div class="step-node-genus">g = 35</div>
+    </div>
+  </div>
+  <div class="theorem">
+    <div class="theorem-label">Theorem &mdash; Odd-Prime Triad Closure</div>
+    <p>The steps <strong>+3, +5, +7</strong> are the three consecutive odd primes (p<sub>2</sub>, p<sub>3</sub>, p<sub>4</sub>). Each maps to a W(3,3) structural atom: <strong>+3 = q</strong> (seed prime), <strong>+5 = T&middot;&Phi;<sub>3</sub></strong> (threshold-channel count), <strong>+7 = &Phi;<sub>6</sub></strong> (Fano/torus atom). The next step +11 yields n=30 &equiv; 6 (mod 12), which is not a valid residue class &mdash; proving the triad is <em>structurally complete</em> by the same mod-12 arithmetic that generates it.</p>
+    <p>After the triad breaks, the lattice continues at <strong>n=24=2k</strong> via a separate +5 step (not an odd-prime extension) licensed by the Hashimoto radial projection.</p>
+  </div>
+</section>
+
+<!-- ===== HEAWOOD PALINDROME ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Symmetry</span>Heawood Discriminant Root Palindrome</h2>
+  <div class="palindrome-wrap">
+    <div class="palindrome-roots">
+      <div class="pal-root">
+        <div class="pal-root-val" style="color:var(--gold)">1</div>
+        <div class="pal-root-label">n=4</div>
+      </div>
+      <div class="pal-gap">
+        <div class="pal-gap-val">+6</div>
+        <div class="pal-gap-line"></div>
+        <div class="pal-gap-sub">2&times;3</div>
+      </div>
+      <div class="pal-root">
+        <div class="pal-root-val" style="color:var(--teal)">7</div>
+        <div class="pal-root-label">n=7</div>
+      </div>
+      <div class="pal-gap">
+        <div class="pal-gap-val">+10</div>
+        <div class="pal-gap-line"></div>
+        <div class="pal-gap-sub">2&times;5</div>
+      </div>
+      <div class="pal-root">
+        <div class="pal-root-val" style="color:var(--violet)">17</div>
+        <div class="pal-root-label">n=12 &mdash; axis</div>
+        <div class="center-marker">&uarr; center</div>
+      </div>
+      <div class="pal-gap">
+        <div class="pal-gap-val">+14</div>
+        <div class="pal-gap-line"></div>
+        <div class="pal-gap-sub">2&times;7</div>
+      </div>
+      <div class="pal-root">
+        <div class="pal-root-val" style="color:var(--orange)">31</div>
+        <div class="pal-root-label">n=19</div>
+      </div>
+      <div class="pal-gap">
+        <div class="pal-gap-val">+10</div>
+        <div class="pal-gap-line"></div>
+        <div class="pal-gap-sub">2&times;5</div>
+      </div>
+      <div class="pal-root">
+        <div class="pal-root-val" style="color:var(--green)">41</div>
+        <div class="pal-root-label">n=24</div>
+      </div>
+    </div>
+    <div class="palindrome-note">
+      Root differences: <strong style="color:var(--accent)">6, 10, 14, 10</strong> &nbsp;=&nbsp; 2&times;(3, 5, 7, 5).
+      The inner values <strong>10 = 10</strong> are equal (d[1] = d[3]), with center diff <strong>14</strong> at n=12.
+      Every discriminant 1+48g is a perfect square. The SRG valency k=12 is the axis of symmetry.
+      The root 31 = n<sub>19</sub> + k, and 41 = 31 + |disc(&Qopf;(&radic;&minus;10))|.
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL LATTICE TABLE ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Reference</span>Complete Lattice Data</h2>
+  <div class="hw-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>n</th>
+          <th>Identity</th>
+          <th>Genus</th>
+          <th>&chi;</th>
+          <th>E = C(n,2)</th>
+          <th>F</th>
+          <th>H-root &radic;(1+48g)</th>
+          <th>Proj. Token</th>
+          <th>Polyhedra / Objects</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n" style="color:var(--gold)">4</td>
+          <td>q+1 <span class="chip chip-gold">seed</span></td>
+          <td>0</td>
+          <td>+2</td>
+          <td class="td-e">6</td>
+          <td>4</td>
+          <td class="td-root">1</td>
+          <td class="td-token">below threshold</td>
+          <td class="td-poly"><strong>Tetrahedron</strong> &mdash; genus-0 image of q=3<br>h=0 in both hole equations</td>
+        </tr>
+        <tr>
+          <td class="td-n" style="color:var(--teal)">7</td>
+          <td>&Phi;<sub>6</sub> <span class="chip chip-teal">torus</span></td>
+          <td>1</td>
+          <td>0</td>
+          <td>21</td>
+          <td>14</td>
+          <td class="td-root">7 = &Phi;<sub>6</sub></td>
+          <td class="td-token">P(&Phi;<sub>6</sub>) = 7/13 &nbsp;[unit]</td>
+          <td class="td-poly"><strong>Cs&aacute;sz&aacute;r &times;5</strong> (V=7) &mdash; &Qopf;(&radic;&minus;10) orbit<br><strong>Szilassi &times;2</strong> (F=7) &mdash; &Qopf;(&radic;&minus;7) orbit<br>Fano plane PG(2,2) bridge</td>
+        </tr>
+        <tr>
+          <td class="td-n" style="color:var(--violet)">12</td>
+          <td>k <span class="chip chip-violet">SRG</span></td>
+          <td>6</td>
+          <td>&minus;10</td>
+          <td>66</td>
+          <td>44</td>
+          <td class="td-root">17</td>
+          <td class="td-token">P(k) = 12/13 &nbsp;[unit]</td>
+          <td class="td-poly">&chi;=&minus;10 = disc(&Qopf;(&radic;&minus;10)) &mdash; Hashimoto carrier<br>E = k&middot;b<sub>0</sub>/2 = 12&middot;11/2<br>SRG vertex = PG(2,3) minus 1 point</td>
+        </tr>
+        <tr>
+          <td class="td-n" style="color:var(--orange)">19</td>
+          <td>k+&Phi;<sub>6</sub> <span class="chip chip-orange">coda</span></td>
+          <td>20</td>
+          <td>&minus;38</td>
+          <td>171</td>
+          <td>114</td>
+          <td class="td-root">31 = n+k</td>
+          <td class="td-token">1 + P(E<sub>tet</sub>) = 19/13 &nbsp;[over]</td>
+          <td class="td-poly">Self-Heawood: &gamma;(20)=19<br>E = q&sup2;&middot;n = 9&middot;19<br>First wrap-around projection</td>
+        </tr>
+        <tr>
+          <td class="td-n" style="color:var(--green)">24</td>
+          <td>2k <span class="chip chip-green">closure</span></td>
+          <td>35</td>
+          <td>&minus;68</td>
+          <td>276</td>
+          <td>184</td>
+          <td class="td-root">41 = 31+10</td>
+          <td class="td-token">1 + P(k&minus;1) = 24/13 &nbsp;[over]</td>
+          <td class="td-poly">Self-Heawood: &gamma;(35)=24<br>E = k(2k&minus;1) = 12&middot;23<br>Hashimoto norm wrap: b<sub>0</sub>=11</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== PROJECTION DICTIONARY ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Dictionary</span>Projection-Layer Token Closure</h2>
+  <div class="proj-dict">
+    <div class="proj-item seed">
+      <div class="proj-n" style="color:var(--gold)">n = 4</div>
+      <div class="proj-tok">Below projection threshold</div>
+      <div class="proj-atom">Seed: n = q+1, no P(A) token required</div>
+    </div>
+    <div class="proj-item unit">
+      <div class="proj-n" style="color:var(--teal)">n = 7</div>
+      <div class="proj-tok">P(&Phi;<sub>6</sub>) = 7/13 &nbsp;[unit]</div>
+      <div class="proj-atom">Raw atom: &Phi;<sub>6</sub> = PG(2,2) point count<br>Fano-to-PG(2,3) projective-ladder ratio</div>
+    </div>
+    <div class="proj-item unit">
+      <div class="proj-n" style="color:var(--violet)">n = 12</div>
+      <div class="proj-tok">P(k) = 12/13 &nbsp;[unit]</div>
+      <div class="proj-atom">Raw atom: k = SRG valency<br>Vertex neighborhood = PG(2,3) minus 1 point</div>
+    </div>
+    <div class="proj-item over">
+      <div class="proj-n" style="color:var(--orange)">n = 19</div>
+      <div class="proj-tok">1 + P(E<sub>tet</sub>) = 1 + 6/13 = 19/13 &nbsp;[overcomplete]</div>
+      <div class="proj-atom">Derived: E<sub>tet</sub> = C(4,2) = 6 = (q&minus;1)&middot;q<br>Wrap by seed-level edge count</div>
+    </div>
+    <div class="proj-item over" style="grid-column: span 1">
+      <div class="proj-n" style="color:var(--green)">n = 24</div>
+      <div class="proj-tok">1 + P(k&minus;1) = 1 + 11/13 = 24/13 &nbsp;[overcomplete]</div>
+      <div class="proj-atom">Derived: k&minus;1 = b<sub>0</sub> = 11 = |1+i&radic;10|&sup2; &minus; 1<br>Wrap by Hashimoto carrier-field norm</div>
+    </div>
+  </div>
+  <div class="theorem" style="margin-top:var(--space-5)">
+    <div class="theorem-label">Theorem &mdash; Dictionary Closed</div>
+    <p>All five levels are licensed by atoms already present in the W(3,3) compiler spine through Part CXLIX. No new operations are required beyond <strong>P(A) = A/&Phi;<sub>3</sub></strong>. The modular remainders encode the physical atoms: 7 mod 13 = 7 = &Phi;<sub>6</sub>, 12 mod 13 = 12 = k, 19 mod 13 = 6 = E<sub>tet</sub>, 24 mod 13 = 11 = b<sub>0</sub>.</p>
+  </div>
+</section>
+
+<!-- ===== FANO BRIDGE ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Geometry</span>The Fano Plane Bridge</h2>
+  <div class="fano-wrap">
+    <div class="fano-svg-col">
+      <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fano plane: 7 points, 7 lines -->
+        <!-- outer triangle: p1(30,190) p2(190,190) p3(110,30) -->
+        <!-- midpoints: p4(110,190) p5(150,110) p6(70,110) -->
+        <!-- center: p7(110,120) -->
+        <!-- incircle -->
+        <circle cx="110" cy="143" r="47" stroke="rgba(79,152,163,0.2)" stroke-width="1.5" fill="none"/>
+        <!-- outer triangle -->
+        <line x1="30" y1="190" x2="190" y2="190" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <line x1="30" y1="190" x2="110" y2="30" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <line x1="190" y1="190" x2="110" y2="30" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <!-- medians through center -->
+        <line x1="110" y1="30" x2="110" y2="190" stroke="rgba(168,111,223,0.3)" stroke-width="1.5"/>
+        <line x1="30" y1="190" x2="150" y2="110" stroke="rgba(168,111,223,0.3)" stroke-width="1.5"/>
+        <line x1="190" y1="190" x2="70" y2="110" stroke="rgba(168,111,223,0.3)" stroke-width="1.5"/>
+        <!-- points -->
+        <!-- p1 -->
+        <circle cx="30" cy="190" r="7" fill="var(--teal)" opacity="0.9"/>
+        <text x="14" y="208" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p1</text>
+        <!-- p2 -->
+        <circle cx="190" cy="190" r="7" fill="var(--teal)" opacity="0.9"/>
+        <text x="194" y="208" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p2</text>
+        <!-- p3 -->
+        <circle cx="110" cy="30" r="7" fill="var(--teal)" opacity="0.9"/>
+        <text x="114" y="22" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p3</text>
+        <!-- p4 midpoint bottom -->
+        <circle cx="110" cy="190" r="7" fill="var(--violet)" opacity="0.8"/>
+        <text x="114" y="208" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p4</text>
+        <!-- p5 right -->
+        <circle cx="150" cy="110" r="7" fill="var(--violet)" opacity="0.8"/>
+        <text x="155" y="108" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p5</text>
+        <!-- p6 left -->
+        <circle cx="70" cy="110" r="7" fill="var(--violet)" opacity="0.8"/>
+        <text x="38" y="108" fill="var(--text-faint)" font-size="10" font-family="JetBrains Mono">p6</text>
+        <!-- p7 center -->
+        <circle cx="110" cy="120" r="9" fill="var(--gold)" opacity="1"/>
+        <text x="115" y="117" fill="var(--bg)" font-size="9" font-weight="700" font-family="JetBrains Mono">p7</text>
+        <!-- label -->
+        <text x="110" y="215" fill="rgba(255,255,255,0.2)" font-size="9" font-family="JetBrains Mono" text-anchor="middle">PG(2,2) &mdash; 7 points, 7 lines</text>
+      </svg>
+    </div>
+    <div class="fano-text-col">
+      <p>The <strong>Fano plane PG(2,2)</strong> is the projective plane over &Fopf;<sub>2</sub> with 7 points and 7 lines. It is self-dual: swapping points &harr; lines is an isomorphism.</p>
+      <p>Reading its 7 points as <strong>vertices</strong> gives the <strong>Cs&aacute;sz&aacute;r polyhedron</strong>. Reading its 7 points as <strong>faces</strong> gives the <strong>Szilassi polyhedron</strong>. The self-duality of PG(2,2) is the geometric source of the V&harr;F duality between the two.</p>
+      <p>The projective ladder: <strong>PG(2,2)</strong> has q&sup2;+q+1 = 7 points at q=2. <strong>PG(2,3)</strong> (the W(3,3) host) has 13 points at q=3. The projection token P(&Phi;<sub>6</sub>) = 7/13 is literally the ratio of these point counts &mdash; the q=2 rung below the W(3,3) floor.</p>
+      <p>The center point <strong>p7</strong> (gold) corresponds to the mod-12 gate: the one fixed point of the Z<sub>2</sub> espyric reflection, sourcing the 1+2+2+2=7 orbit decomposition and the 2 Szilassi realizations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GENUS JUMPS ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Pattern</span>Catalan &amp; Triangular Genus Jumps</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-6);">
+    <div class="jump-row">
+      <div class="jump-from" style="color:var(--text-faint)">Transition</div>
+      <div class="jump-val" style="color:var(--text-faint);font-size:13px">Jump</div>
+      <div class="jump-type" style="color:var(--text-faint);font-size:11px;letter-spacing:0.1em;text-transform:uppercase">Classification</div>
+    </div>
+    <div class="jump-row">
+      <div class="jump-from">g(7) &minus; g(4)</div>
+      <div class="jump-val" style="color:var(--teal)">1</div>
+      <div class="jump-type"><span class="chip chip-teal">C<sub>1</sub></span> Catalan number 1</div>
+    </div>
+    <div class="jump-row">
+      <div class="jump-from">g(12) &minus; g(7)</div>
+      <div class="jump-val" style="color:var(--violet)">5</div>
+      <div class="jump-type"><span class="chip chip-violet">C<sub>3</sub></span> Catalan number 5 &nbsp;&mdash;&nbsp; <span style="color:var(--text-faint);font-size:12px">C<sub>2</sub>=2 absent (no n=3 level)</span></div>
+    </div>
+    <div class="jump-row">
+      <div class="jump-from">g(19) &minus; g(12)</div>
+      <div class="jump-val" style="color:var(--orange)">14</div>
+      <div class="jump-type"><span class="chip chip-orange">C<sub>4</sub></span> Catalan number 14</div>
+    </div>
+    <div class="jump-row" style="border-bottom:none">
+      <div class="jump-from">g(24) &minus; g(19)</div>
+      <div class="jump-val" style="color:var(--green)">15</div>
+      <div class="jump-type"><span class="chip chip-green">T<sub>5</sub></span> Triangular number 15 = 5&middot;6/2 &nbsp;&mdash;&nbsp; <span style="color:var(--text-faint);font-size:12px">exits Catalan regime</span></div>
+    </div>
+  </div>
+  <div class="formula-block" style="margin-top:var(--space-4)">
+    The genus jump <strong>15 = T<sub>5</sub></strong> at n=24 marks the transition from the <strong>Catalan regime</strong> (inside the closed odd-prime triad) to the <strong>Hashimoto-overcomplete regime</strong>. C<sub>2</sub>=2 is absent because there is no valid n&equiv;3 (mod 12) level between n=4 and n=7 supporting a complete triangulation.
+  </div>
+</section>
+
+<!-- ===== EDGE FACTOR SEQUENCE ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">Pattern</span>Rising q-Power Edge Factors</h2>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-6);">
+    <div class="ef-row" style="color:var(--text-faint);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;">
+      <div>n</div><div>E</div><div>Factor</div><div>W(3,3) atom</div>
+    </div>
+    <div class="ef-row">
+      <div class="ef-n" style="color:var(--gold)">4</div>
+      <div class="ef-e">6</div>
+      <div class="ef-factor">(q&minus;1)&middot;q = 2&middot;3</div>
+      <div class="ef-atom">q&minus;1 = 2 &nbsp; (step below seed prime)</div>
+    </div>
+    <div class="ef-row">
+      <div class="ef-n" style="color:var(--teal)">7</div>
+      <div class="ef-e">21</div>
+      <div class="ef-factor">q&middot;n = 3&middot;7</div>
+      <div class="ef-atom">q = 3 &nbsp; (seed prime)</div>
+    </div>
+    <div class="ef-row">
+      <div class="ef-n" style="color:var(--violet)">12</div>
+      <div class="ef-e">66</div>
+      <div class="ef-factor">b<sub>0</sub>&middot;n/2 = 11&middot;6</div>
+      <div class="ef-atom">b<sub>0</sub> = k&minus;1 = 11 &nbsp; (QCD &beta; coeff.)</div>
+    </div>
+    <div class="ef-row">
+      <div class="ef-n" style="color:var(--orange)">19</div>
+      <div class="ef-e">171</div>
+      <div class="ef-factor">q&sup2;&middot;n = 9&middot;19</div>
+      <div class="ef-atom">q&sup2; = 9 &nbsp; (first q-squared level)</div>
+    </div>
+    <div class="ef-row" style="border-bottom:none">
+      <div class="ef-n" style="color:var(--green)">24</div>
+      <div class="ef-e">276</div>
+      <div class="ef-factor">k(2k&minus;1) = 12&middot;23</div>
+      <div class="ef-atom">2k&minus;1 = 23 &nbsp; (largest prime &lt; 2k)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REALIZATION SPLIT ===== -->
+<section>
+  <h2 class="section-title"><span class="section-label">CLII</span>Realization Split at n = 7</h2>
+  <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
+    <div style="flex:1;min-width:240px;background:var(--surface);border:1px solid rgba(79,152,163,0.25);border-radius:var(--radius-lg);padding:var(--space-5);">
+      <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--space-3);">Cs&aacute;sz&aacute;r &times;5</div>
+      <div style="font-size:32px;font-weight:700;color:var(--teal);margin-bottom:var(--space-2);">5</div>
+      <div style="font-size:13px;color:var(--text-muted);line-height:1.8;">
+        realizations<br>
+        V=7, E=21, F=14, genus 1<br>
+        no diagonals, K<sub>7</sub> embedding<br>
+        <strong style="color:var(--text)">&Qopf;(&radic;&minus;10) orbit &mdash; 5 = 13&middot;T</strong>
+      </div>
+    </div>
+    <div style="flex:0;display:flex;align-items:center;justify-content:center;padding:0 var(--space-2);">
+      <div style="font-size:28px;font-weight:700;color:var(--text-faint);">+</div>
+    </div>
+    <div style="flex:1;min-width:240px;background:var(--surface);border:1px solid rgba(168,111,223,0.25);border-radius:var(--radius-lg);padding:var(--space-5);">
+      <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--violet);margin-bottom:var(--space-3);">Szilassi &times;2</div>
+      <div style="font-size:32px;font-weight:700;color:var(--violet);margin-bottom:var(--space-2);">2</div>
+      <div style="font-size:13px;color:var(--text-muted);line-height:1.8;">
+        realizations<br>
+        V=14, E=21, F=7, genus 1<br>
+        every face adjacent to every other<br>
+        <strong style="color:var(--text)">&Qopf;(&radic;&minus;7) orbit &mdash; 2 = conjugation orbit</strong>
+      </div>
+    </div>
+    <div style="flex:0;display:flex;align-items:center;justify-content:center;padding:0 var(--space-2);">
+      <div style="font-size:28px;font-weight:700;color:var(--text-faint);">=</div>
+    </div>
+    <div style="flex:0;min-width:120px;background:var(--surface-3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <div style="font-size:42px;font-weight:700;color:var(--gold);">7</div>
+      <div style="font-size:11px;color:var(--text-faint);letter-spacing:0.1em;text-transform:uppercase;">&Phi;<sub>6</sub></div>
+    </div>
+  </div>
+  <div class="theorem" style="margin-top:var(--space-5)">
+    <div class="theorem-label">Theorem &mdash; Realization Split Licensed by Hashimoto Fields</div>
+    <p>The split 5+2=7=&Phi;<sub>6</sub> mirrors the two Hashimoto fields of W(3,3). The <strong>5 Cs&aacute;sz&aacute;r realizations</strong> trace to &Qopf;(&radic;&minus;10): the threshold orbit count 5 = 13&middot;T = 13&middot;(5/13). The <strong>2 Szilassi realizations</strong> trace to &Qopf;(&radic;&minus;7): the conjugation orbit size 2 of &minus;2&pm;i&radic;7. The split is generated by the compiler, not asserted by hand.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div>W33-Theory &nbsp;&middot;&nbsp; wilcompute/W33-Theory &nbsp;&middot;&nbsp; Parts CLII&ndash;CLV &nbsp;&middot;&nbsp; 2026-05-01</div>
+  <div>
+    <a href="https://github.com/wilcompute/W33-Theory" target="_blank" rel="noopener">github.com/wilcompute/W33-Theory</a>
+  </div>
+</footer>
+
+</div><!-- end page-wrap -->
+
+<!-- ===== JS ===== -->
+<script>
+const LEVELS = [
+  {
+    n: 4, color: 'gold', label: 'Tetrahedron', sublabel: 'Genus-0 Seed',
+    genus: 0, chi: 2, E: 6, F: 4, hroot: 1, token: 'Below threshold',
+    identity: 'q + 1',
+    poly: '<strong>Tetrahedron</strong> &mdash; the only polyhedron satisfying both hole equations with h=0. Every face shares an edge with every other face. The only manifold (besides Cs\u00e1sz\u00e1r) without diagonals. Genus-0 image of the compiler seed q=3, living at n=q+1=4. <br><br><strong>Automorphisms:</strong> 24 = 2&times;12, the hole-equation denominator.',
+    hashimoto: '&mdash; (below projection threshold)',
+    step: 'Origin &mdash; no prior level',
+    edgeFactor: '(q\u22121)\u00b7q = 2\u00b73 = 6'
+  },
+  {
+    n: 7, color: 'teal', label: 'Cs\u00e1sz\u00e1r & Szilassi', sublabel: 'Torus Level \u03a6\u2086',
+    genus: 1, chi: 0, E: 21, F: 14, hroot: 7, token: 'P(\u03a6\u2086) = 7/13  [unit]',
+    identity: '\u03a6\u2086 = PG(2,2) points',
+    poly: '<strong>Cs\u00e1sz\u00e1r \u00d75</strong> (V=7, E=21, F=14): the only known toroidal polyhedron without diagonals besides the tetrahedron. Embeds K\u2087 on the torus. 5 realizations from the \u211a(\u221a\u221210) Hashimoto orbit.<br><br><strong>Szilassi \u00d72</strong> (V=14, E=21, F=7): every face shares an edge with every other face. 2 realizations from the \u211a(\u221a\u22127) conjugation orbit.<br><br><strong>Fano plane PG(2,2)</strong>: 7 points \u2192 vertices = Cs\u00e1sz\u00e1r; 7 points \u2192 faces = Szilassi. Self-duality of PG(2,2) is the V\u2194F duality source.',
+    hashimoto: '&Qopf;(&radic;&minus;7): orbit 2 (Szilassi) &nbsp; &Qopf;(&radic;&minus;10): orbit 5 (Cs\u00e1sz\u00e1r)',
+    step: '+3 = q (seed prime) from n=4',
+    edgeFactor: 'q\u00b7n = 3\u00b77 = 21'
+  },
+  {
+    n: 12, color: 'violet', label: 'K\u2081\u2082 surface', sublabel: 'SRG Valency k',
+    genus: 6, chi: -10, E: 66, F: 44, hroot: 17, token: 'P(k) = 12/13  [unit]',
+    identity: 'k = SRG(40,12,2,4) valency',
+    poly: '<strong>K\u2081\u2082 complete triangulation</strong> on genus-6 surface.<br><br>\u03c7 = &minus;10 = disc(\u211a(\u221a&minus;10)) &mdash; the Hashimoto carrier-field discriminant. First non-degenerate Hashimoto resonance in the lattice.<br><br>E = k\u00b7b\u2080/2 = 12\u00b711/2 = 66, where b\u2080=11 is the QCD one-loop beta coefficient at N\u2099=q=3.<br><br>P(k) = 12/13: SRG vertex neighborhood = PG(2,3) minus exactly 1 point (itself).',
+    hashimoto: '&Qopf;(&radic;&minus;10): \u03c7 = &minus;10 = discriminant (exact resonance)',
+    step: '+5 = T\u00b7\u03a6\u2083 (threshold-channel count) from n=7',
+    edgeFactor: 'b\u2080\u00b7n/2 = 11\u00b76 = 66'
+  },
+  {
+    n: 19, color: 'orange', label: 'K\u2081\u2089 surface', sublabel: 'Coda k+\u03a6\u2086',
+    genus: 20, chi: -38, E: 171, F: 114, hroot: 31, token: '1 + P(E\u209c\u2091\u209c) = 19/13  [overcomplete]',
+    identity: 'k + \u03a6\u2086 = 12 + 7',
+    poly: '<strong>Self-Heawood</strong>: \u03b3(20) = 19, with \u221a(1+48\u00b720) = 31 = n+k (perfect square, 31 prime).<br><br>First <strong>wrap-around projection</strong>: 19/13 = 1 + 6/13 = 1 + P(E\u209c\u2091\u209c), where E\u209c\u2091\u209c = C(4,2) = 6 is the tetrahedral edge count. The overcomplete token wraps by the seed-level geometry.<br><br>E = q\u00b2\u00b7n = 9\u00b719 = 171. First level where edge count = q\u00b2 times vertex count.',
+    hashimoto: 'Overcomplete token wraps by E\u209c\u2091\u209c = 6 = (q\u22121)\u00b7q',
+    step: '+7 = \u03a6\u2086 (Fano atom) from n=12  &mdash; odd-prime triad closes here',
+    edgeFactor: 'q\u00b2\u00b7n = 9\u00b719 = 171'
+  },
+  {
+    n: 24, color: 'green', label: 'K\u2082\u2084 surface', sublabel: 'Closure 2k',
+    genus: 35, chi: -68, E: 276, F: 184, hroot: 41, token: '1 + P(k\u22121) = 24/13  [overcomplete]',
+    identity: '2k = double valency',
+    poly: '<strong>Self-Heawood</strong>: \u03b3(35) = 24, with \u221a(1+48\u00b735) = 41 (perfect square).<br><br>41 = 31 + 10 = prev Heawood root + |disc(\u211a(\u221a&minus;10))|. Hashimoto carrier-field magnitude reappears in the root gap.<br><br>Projection token 24/13 = 1 + 11/13 = 1 + P(k&minus;1) wraps by the Hashimoto norm: |1+i\u221a10|\u00b2 = 11 = b\u2080.<br><br>Genus jump 35\u221220 = 15 = T\u2085 (triangular), marking exit from the Catalan-jump regime. <strong>Projection dictionary closed</strong> &mdash; all five levels licensed by existing CXLIX atoms.',
+    hashimoto: 'Wrap by Hashimoto norm: |1+i\u221a10|\u00b2 = 11 = b\u2080 = k\u22121',
+    step: '+5 (separate from triad) from n=19 &mdash; Hashimoto radial projection',
+    edgeFactor: 'k(2k\u22121) = 12\u00b723 = 276'
+  }
+];
+
+function showDetail(idx) {
+  const L = LEVELS[idx];
+  const colors = { gold:'var(--gold)', teal:'var(--teal)', violet:'var(--violet)', orange:'var(--orange)', green:'var(--green)' };
+  const col = colors[L.color];
+
+  // Update active card
+  document.querySelectorAll('.level-card').forEach((c,i) => {
+    c.classList.toggle('active', i === idx);
+  });
+
+  document.getElementById('dp-title').innerHTML =
+    `n = <span style="color:${col}">${L.n}</span> &mdash; ${L.label} <em style="color:var(--text-muted);font-style:normal;font-size:0.85em">(${L.sublabel})</em>`;
+
+  document.getElementById('dp-grid').innerHTML = `
+    <div class="detail-item">
+      <label>Identity</label>
+      <div class="val">${L.identity}</div>
+    </div>
+    <div class="detail-item">
+      <label>Projection Token</label>
+      <div class="val accent">${L.token}</div>
+    </div>
+    <div class="detail-item">
+      <label>Genus / &chi;</label>
+      <div class="val">${L.genus} &nbsp;&middot;&nbsp; &chi; = ${L.chi >= 0 ? '+' : ''}${L.chi}</div>
+    </div>
+    <div class="detail-item">
+      <label>E = C(n,2) &nbsp; F</label>
+      <div class="val">${L.E} &nbsp;&middot;&nbsp; ${L.F} faces</div>
+    </div>
+    <div class="detail-item">
+      <label>Heawood Root &radic;(1+48g)</label>
+      <div class="val" style="color:${col}">${L.hroot}</div>
+    </div>
+    <div class="detail-item">
+      <label>Edge Factor</label>
+      <div class="val">${L.edgeFactor}</div>
+    </div>
+    <div class="detail-item">
+      <label>Hashimoto Connection</label>
+      <div class="val" style="font-size:12px;color:var(--text-muted)">${L.hashimoto}</div>
+    </div>
+    <div class="detail-item">
+      <label>Step from Previous</label>
+      <div class="val" style="font-size:12px;color:var(--text-muted)">${L.step}</div>
+    </div>
+  `;
+
+  document.getElementById('dp-poly').innerHTML = L.poly;
+}
+
+// Init
+showDetail(0);
+</script>
+</body>
+</html>
