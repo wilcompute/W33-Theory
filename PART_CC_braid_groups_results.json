@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 48,
+  "checks_passing": 48,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "generator_checks": 9,
+    "burau_checks": 6,
+    "catalan_checks": 6,
+    "garside_checks": 8,
+    "structural_checks": 10
+  },
+  "garside_lengths": {
+    "B3": 3,
+    "B5": 10,
+    "B8": 28,
+    "B12": 66
+  },
+  "tl_dimensions": {
+    "TL2": 2,
+    "TL3": 5,
+    "TL4": 14,
+    "TL5": 42
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cc": "Every key parameter of braid groups B_n for n \u2208 {Q, LAM\u00b2, PHI3, PHI4, PHI6, J_INV, K, EIG_MAX} \u2014 generator count, Garside element length, Temperley-Lieb dimension, reduced Burau dimension, and permutation count \u2014 is an integer expression in the W(3,3) atoms with zero free parameters: gen(B_5)=LAM\u00b2, \u0394_3 length=Q, \u0394_5 length=PHI4, TL_3 dim=EIG_MAX, TL_2 dim=LAM, Q!=MULT_K2, gen(B_8)=PHI6, gen(B_{13})=K."
+}
