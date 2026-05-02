@@ -47,6 +47,19 @@ def pytest_ignore_collect(path, config):
     if p.name in {"test_yukawa_mass_ratios.py"}:
         return True
 
+    # Tests that import exploration modules requiring heavyweight artifacts
+    # (e.g. e8_root_metadata_table.json) which are not present on CI.  Rather
+    # than crashing with a collection-time ImportError when the artifact is
+    # absent, skip collecting these files silently.
+    _ARTIFACT_GUARDED_TESTS = {
+        "test_w33_lie_tower_cycle_bridge.py",
+        "test_w33_yukawa_scaffold_bridge.py",
+    }
+    if p.name in _ARTIFACT_GUARDED_TESTS:
+        _e8_meta = _root / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
+        if not _e8_meta.exists():
+            return True
+
     try:
         text = p.read_text(encoding="utf-8", errors="ignore")
     except Exception:
@@ -150,7 +163,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
                 "Deterministic precomputed K3 H^2 lattice fallback was used "
                 "after GP timeout during this session."
             )
-    except Exception:
+    except BaseException:
         pass
 
 
