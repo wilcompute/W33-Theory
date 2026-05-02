@@ -1,0 +1,56 @@
+{
+  "module": "PART_CLXXI_REALIZATION_ORIGIN_CARRIER_COMPILER",
+  "source_hint": "full toroidal-triad page realization data: Csaszar 5, Szilassi 2, tetrahedron seed 1, and lone-1 asymmetry 1+2+2+2",
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J_stabilizer_residue": 5,
+    "J_inverse_carrier": 8,
+    "binary_duality_q_minus_1": 2
+  },
+  "realization_counts": [
+    {"name":"Csaszar_realizations","value":5,"formula":"J=5","interpretation":"stabilizer residue / threshold count"},
+    {"name":"Szilassi_realizations","value":2,"formula":"q-1=2","interpretation":"binary mirror/duality count"},
+    {"name":"toroidal_geometric_total","value":7,"formula":"J+(q-1)=Phi6=7","interpretation":"toroidal realization closure"},
+    {"name":"tetrahedron_seed","value":1,"formula":"1","interpretation":"genus-zero origin seed"},
+    {"name":"full_triad_geometric_total","value":8,"formula":"1+Phi6=8=J^{-1}","interpretation":"carrier completion by adding the origin seed"},
+    {"name":"combinatorial_type_total","value":7,"formula":"1+5+1=7=Phi6","interpretation":"Szilassi mirror pair collapsed to one combinatorial type"}
+  ],
+  "fano_origin_decomposition": {
+    "origin": 1,
+    "pairs": [
+      {"direction":"threshold_horizontal","pair":[5,3],"interpretation":"threshold affine endpoint plus q infinity"},
+      {"direction":"rank_vertical","pair":[12,6],"interpretation":"k/opposition endpoint plus 2q infinity"},
+      {"direction":"carrier_diagonal","pair":[8,9],"interpretation":"carrier endpoint plus q^2 infinity"}
+    ],
+    "formula": "7 = 1 + 2 + 2 + 2",
+    "interpretation": "lone origin plus three direction-pairs; same structure read as Csaszar vertices or Szilassi faces"
+  },
+  "bridge_identities": {
+    "toroidal_realizations": "5+2=7=Phi6",
+    "full_geometric_triad": "1+5+2=8=J^{-1}",
+    "combinatorial_types": "1+5+1=7=Phi6",
+    "carrier_transition": "Phi6+1=8 and J+q=8"
+  },
+  "checks": {
+    "csaszar_count_is_J": true,
+    "szilassi_count_is_binary_duality": true,
+    "toroidal_realizations_are_phi6": true,
+    "full_geometric_total_is_carrier": true,
+    "combinatorial_type_total_is_phi6": true,
+    "geometric_minus_combinatorial_is_one": true,
+    "carrier_is_threshold_plus_q": true,
+    "carrier_is_toroidal_plus_origin": true,
+    "phi6_is_J_plus_q_minus_one": true,
+    "fano_origin_decomposition_size": true,
+    "fano_pairs_cover_remaining_six": true,
+    "origin_not_in_pairs": true,
+    "origin_plus_pairs_gives_seven": true,
+    "direction_pairs_expected": true,
+    "threshold_and_carrier_inverse": true
+  },
+  "theorem_statement": "The realization data realizes the same threshold/carrier grammar. Csaszar's five realizations are J=5, Szilassi's two geometric realizations are q-1=2, and their toroidal total is Phi6=7. Adding the tetrahedron origin gives 1+5+2=8=J^{-1}, the carrier residue. Collapsing the two Szilassi geometries to one combinatorial type gives 1+5+1=7=Phi6.",
+  "interpretive_note": "This uses the realizations rather than only the polyhedron counts. The page's lone-1 asymmetry is the Fano-origin decomposition: one origin plus three affine/infinity direction-pairs. The realization layer moves from threshold closure Phi6=7 to carrier completion J^{-1}=8 by adjoining the tetrahedron origin."
+}
