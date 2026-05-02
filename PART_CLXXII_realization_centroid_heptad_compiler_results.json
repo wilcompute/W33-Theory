@@ -1,0 +1,60 @@
+{
+  "module": "PART_CLXXII_REALIZATION_CENTROID_HEPTAD_COMPILER",
+  "source_links": {
+    "formatted_data": "data/Toroidal-Polyhedra-Realizations.txt",
+    "projector_bridge": "exploration/w33_toroidal_heptad_projector_bridge.py",
+    "CLXXI": "realization origin/carrier compiler"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "q_plus_1": 4,
+    "rank_seed_2q": 6,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "centroid_reading_rule": {
+    "Csaszar": "use the seven vertices as the K7 torus shell",
+    "Szilassi": "use the seven face centroids as the dual heptad shell",
+    "reason": "the dual polyhedron has fourteen vertices but seven faces; the dual heptad lives at face centroids"
+  },
+  "heptad_layers": [
+    {"name":"Csaszar_realization_family","count_or_rank":5,"formula":"J=5","interpretation":"five vertex-shell realizations / threshold family"},
+    {"name":"Szilassi_realization_family","count_or_rank":2,"formula":"q-1=2","interpretation":"two dual face-centroid-shell realizations"},
+    {"name":"toroidal_heptad","count_or_rank":7,"formula":"J+(q-1)=Phi6=7","interpretation":"seven toroidal geometric realizations"},
+    {"name":"mean_projector","count_or_rank":1,"formula":"1","interpretation":"operator origin / scalar mean"},
+    {"name":"centered_operator_shell","count_or_rank":6,"formula":"Phi6-1=2q=6","interpretation":"mean-subtracted heptad shell"},
+    {"name":"Csaszar_centered_shell","count_or_rank":4,"formula":"5-1=4=q+1","interpretation":"internal Csaszar deformation shell"},
+    {"name":"Szilassi_centered_shell","count_or_rank":1,"formula":"2-1=1","interpretation":"internal Szilassi mirror mode"},
+    {"name":"family_separation","count_or_rank":1,"formula":"1","interpretation":"primal-dual separation mode"},
+    {"name":"centered_refinement","count_or_rank":6,"formula":"4+1+1=6","interpretation":"Cs centered + Sz centered + family separation"},
+    {"name":"full_refinement","count_or_rank":7,"formula":"4+3=7","interpretation":"Cs centered shell + three external modes"},
+    {"name":"geometric_triad_with_tetra","count_or_rank":8,"formula":"1+5+2=8=J^{-1}","interpretation":"carrier completion by adjoining tetrahedron origin"}
+  ],
+  "operator_heptad_dictionary": {
+    "seven_projectors": "Phi6=7",
+    "centered_shell": "Phi6-1=6=2q",
+    "family_split": "5+2=7",
+    "centered_rank_split": "4+1+1=6",
+    "full_rank_split": "4+3=7",
+    "carrier_completion": "1+5+2=8=J^{-1}"
+  },
+  "checks": {
+    "heptad_is_phi6": true,
+    "cs_plus_sz_is_phi6": true,
+    "tetra_plus_heptad_is_carrier": true,
+    "centered_shell_is_2q": true,
+    "cs_centered_rank_is_qplus1": true,
+    "sz_centered_rank_is_one": true,
+    "family_separation_rank_is_one": true,
+    "centered_refinement_is_4_plus_1_plus_1": true,
+    "full_refinement_is_4_plus_3": true,
+    "mean_plus_centered_shell_is_heptad": true,
+    "threshold_carrier_inverse": true,
+    "phi6_to_carrier_step": true
+  },
+  "theorem_statement": "The seven realization coordinate sets should be read as an operator heptad: five Csaszar vertex shells plus two Szilassi face-centroid shells give Phi6=7 rank-3 projectors. Removing the mean gives a 6D=2q shell; the centered shell refines as 4+1+1, and the full heptad refines as 4+3. Adding the tetrahedron origin completes the toroidal heptad from Phi6=7 to J^{-1}=8.",
+  "interpretive_note": "This is the clean way to use the C#/centroid data. The C-values are realization-specific anchors appearing inside coordinate charts, but the invariant object is obtained only after centering the relevant heptad shell. For Csaszar that shell is vertices; for Szilassi, because of duality, it is face centroids."
+}
