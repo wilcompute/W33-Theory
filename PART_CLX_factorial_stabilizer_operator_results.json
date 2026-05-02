@@ -1,0 +1,86 @@
+{
+  "module": "PART_CLX_FACTORIAL_STABILIZER_OPERATOR",
+  "source_links": {
+    "CLVIII": "E6 Weyl orbit-stabilizer closure",
+    "CLIX": "root-stabilizer spectral action"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "edges_E": 240,
+    "directed_edges": 480
+  },
+  "factorial_scales": {
+    "local_seed_q_factorial": 6,
+    "cartan_rank_2q": 6,
+    "global_lift_2q_factorial": 720,
+    "root_stabilizer_qE": 720,
+    "lift_over_seed": 120
+  },
+  "closure_rows": [
+    {
+      "name": "local_seed",
+      "formula": "q! = 2q",
+      "value": 6,
+      "interpretation": "rank/Cartan seed"
+    },
+    {
+      "name": "global_factorial_lift",
+      "formula": "(2q)!",
+      "value": 720,
+      "interpretation": "factorial root-stabilizer scale"
+    },
+    {
+      "name": "edge_carrier_from_lift",
+      "formula": "E = (2q)!/q",
+      "value": 240,
+      "interpretation": "W(3,3) undirected edge carrier"
+    },
+    {
+      "name": "directed_edge_carrier_from_lift",
+      "formula": "2(2q)!/q",
+      "value": 480,
+      "interpretation": "directed edge carrier a0"
+    },
+    {
+      "name": "e6_root_orbit_from_lift",
+      "formula": "(2q)!/Phi4",
+      "value": 72,
+      "interpretation": "E6 root orbit size"
+    },
+    {
+      "name": "weyl_order_from_lift",
+      "formula": "(2q)!^2/Phi4",
+      "value": 51840,
+      "interpretation": "global Weyl closure |W(E6)|"
+    }
+  ],
+  "derived_closure": {
+    "E": "E=(2q)!/q=240",
+    "a0": "a0=2(2q)!/q=480",
+    "E6_roots": "roots(E6)=(2q)!/Phi4=72",
+    "W_E6": "|W(E6)|=(2q)!^2/Phi4=51840"
+  },
+  "checks": {
+    "local_seed_q_factorial_equals_2q": true,
+    "global_lift_is_2q_factorial": true,
+    "root_stabilizer_is_global_lift": true,
+    "edge_carrier_from_global_lift": true,
+    "directed_edges_from_global_lift": true,
+    "a0_is_directed_edge_carrier": true,
+    "e6_roots_from_global_lift_over_phi4": true,
+    "weyl_order_from_factorial_lift": true,
+    "weyl_order_from_roots_times_stabilizer": true,
+    "phi4_divides_global_lift": true,
+    "global_lift_over_local_seed_is_5_factorial": true,
+    "edge_carrier_is_2_times_5_factorial": true
+  },
+  "theorem_statement": "The original seed q!=2q has a global factorial lift: at q=3, q!=2q=6 is the E6 Cartan rank, while (2q)!=720 equals the q-lifted W(3,3) edge carrier qE and hence the E6 root stabilizer. Consequently E=(2q)!/q, a0=2(2q)!/q, roots(E6)=(2q)!/Phi4, and |W(E6)|=(2q)!^2/Phi4.",
+  "interpretive_note": "This closes the seed-to-global loop. The same factorial identity that selects q=3 locally expands to the E6 Weyl stabilizer globally. The edge carrier, directed-edge spectral coefficient, root orbit, and Weyl order are all factorial descendants of q!=2q."
+}
