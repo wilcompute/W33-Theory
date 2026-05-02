@@ -1,0 +1,52 @@
+{
+  "module": "PART_CLXVII_FANO_TRANSPORT_GRAMMAR",
+  "source_links": {
+    "CLXVI": "Fano affine completion",
+    "CLXI_CLXII": "stabilizer residue and finite-field dynamics"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "rank_seed_2q": 6,
+    "q_square": 9,
+    "k": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J_threshold": 5,
+    "J_inverse_carrier": 8,
+    "Hashimoto_norm": 11
+  },
+  "transport_lines": [
+    {"name":"horizontal_y0","points":[1,5,3],"direction":3,"affine_pair":[1,5],"affine_pair_sum_mod13":6,"affine_pair_product_mod13":5,"total_sum_mod13":9,"total_product_mod13":2,"interpretation":"unit-to-threshold transport with q at infinity"},
+    {"name":"horizontal_y1","points":[12,8,3],"direction":3,"affine_pair":[12,8],"affine_pair_sum_mod13":7,"affine_pair_product_mod13":5,"total_sum_mod13":10,"total_product_mod13":2,"interpretation":"k-to-carrier transport with q at infinity"},
+    {"name":"vertical_x0","points":[1,12,6],"direction":6,"affine_pair":[1,12],"affine_pair_sum_mod13":0,"affine_pair_product_mod13":12,"total_sum_mod13":6,"total_product_mod13":7,"interpretation":"unit-to-k opposition with 2q at infinity"},
+    {"name":"vertical_x1","points":[5,8,6],"direction":6,"affine_pair":[5,8],"affine_pair_sum_mod13":0,"affine_pair_product_mod13":1,"total_sum_mod13":6,"total_product_mod13":6,"interpretation":"threshold-to-carrier opposition with 2q at infinity"},
+    {"name":"diagonal_main","points":[1,8,9],"direction":9,"affine_pair":[1,8],"affine_pair_sum_mod13":9,"affine_pair_product_mod13":8,"total_sum_mod13":5,"total_product_mod13":7,"interpretation":"unit-to-carrier transport with q^2 at infinity"},
+    {"name":"diagonal_shift","points":[5,12,9],"direction":9,"affine_pair":[5,12],"affine_pair_sum_mod13":4,"affine_pair_product_mod13":8,"total_sum_mod13":0,"total_product_mod13":7,"interpretation":"threshold-to-k transport with q^2 at infinity"},
+    {"name":"line_at_infinity","points":[3,6,9],"direction":3,"affine_pair":[],"affine_pair_sum_mod13":0,"affine_pair_product_mod13":0,"total_sum_mod13":5,"total_product_mod13":6,"interpretation":"q-axis closure / missing decimal axis"}
+  ],
+  "direction_transports": [
+    {"direction_name":"threshold_horizontal_q","direction_residue":3,"line_names":["horizontal_y0","horizontal_y1"],"invariant":"affine-pair product","value":"5","interpretation":"q-horizontal transport preserves threshold residue J=5"},
+    {"direction_name":"rank_vertical_2q","direction_residue":6,"line_names":["vertical_x0","vertical_x1"],"invariant":"affine-pair sum","value":"0 mod 13","interpretation":"2q-vertical transport pairs additive inverses / opposition"},
+    {"direction_name":"carrier_diagonal_q2","direction_residue":9,"line_names":["diagonal_main","diagonal_shift"],"invariant":"affine-pair product","value":"8","interpretation":"q^2-diagonal transport preserves carrier residue J^{-1}=8"},
+    {"direction_name":"q_axis_infinity","direction_residue":0,"line_names":["line_at_infinity"],"invariant":"line sum/product","value":"sum=5, product=6","interpretation":"line at infinity closes q-axis: sum gives J, product gives 2q"}
+  ],
+  "checks": {
+    "horizontal_affine_products_are_threshold": true,
+    "vertical_affine_sums_are_zero": true,
+    "diagonal_affine_products_are_carrier": true,
+    "line_at_infinity_sum_is_threshold": true,
+    "line_at_infinity_product_is_rank": true,
+    "threshold_and_carrier_inverse": true,
+    "threshold_plus_carrier_closes_phi3": true,
+    "threshold_minus_carrier_abs_is_q": true,
+    "horizontal_direction_is_q": true,
+    "vertical_direction_is_2q": true,
+    "diagonal_direction_is_q2": true,
+    "vertical_pairs_are_additive_inverses": true,
+    "diagonal_total_products_are_phi6": true,
+    "horizontal_total_products_are_binary_duality": true
+  },
+  "theorem_statement": "The Fano affine completion carries a transport grammar: q-horizontal lines preserve affine-pair product J=5, giving threshold transport; 2q-vertical lines pair additive inverses, giving rank/opposition transport; and q^2-diagonal lines preserve affine-pair product J^{-1}=8, giving carrier transport. The line at infinity {3,6,9} closes the q-axis with sum J and product 2q.",
+  "interpretive_note": "This is the first explicit transport law on the Fano bridge. The affine square is not just a diagram: its parallel classes encode the threshold, rank/opposition, and carrier operations that have been appearing separately in the mixer, decimal, and toroidal analyses."
+}
