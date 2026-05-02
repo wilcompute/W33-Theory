@@ -1,0 +1,34 @@
+{
+  "weight_filtration_depth": 5,
+  "chow_rank_codim1": 12,
+  "chow_rank_codim2": 2,
+  "motivic_euler_char": -200,
+  "k0_virtual_rank": 16,
+  "k0_grothendieck_class": -199,
+  "hodge_11": 12,
+  "hodge_pq": {
+    "0,0": 1,
+    "1,1": 12,
+    "2,2": 2
+  },
+  "motivic_zeta_degree": 240,
+  "chow_motive_factors": 14,
+  "tate_twist_dim": 24,
+  "motivic_cohom_top_p": 24,
+  "motivic_cohom_top_q": 12,
+  "adams_psi_k_eigenvalue": 9,
+  "bloch_kato_rank": 5,
+  "verified": true,
+  "failures": [],
+  "w33_atoms": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "PHI3": 13,
+    "EDGES": 240,
+    "EIG_MAX": 5,
+    "LEECH_DIM": 24
+  }
+}
