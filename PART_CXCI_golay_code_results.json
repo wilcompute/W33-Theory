@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "failed_checks": [],
+  "check_count": 40,
+  "checks_passing": 40,
+  "atom_check_count": 9,
+  "golay_check_count": 18,
+  "lattice_check_count": 13,
+  "golay_parameters": {
+    "binary_extended": {
+      "n": 24,
+      "k": 12,
+      "d": 8,
+      "q": 2
+    },
+    "ternary_extended": {
+      "n": 12,
+      "k": 6,
+      "d": 6,
+      "q": 3
+    },
+    "binary_perfect": {
+      "n": 23,
+      "k": 12,
+      "d": 7,
+      "t": 3,
+      "q": 2
+    },
+    "ternary_perfect": {
+      "n": 11,
+      "k": 6,
+      "d": 5,
+      "t": 2,
+      "q": 3
+    }
+  },
+  "lattice_parameters": {
+    "E8": {
+      "rank": 8,
+      "kissing": 240
+    },
+    "Leech": {
+      "rank": 24,
+      "kissing": 196560
+    }
+  },
+  "e8_theta_series": {
+    "norm_2_vectors": 240,
+    "norm_4_vectors": 2160,
+    "norm_6_vectors": 6720,
+    "sigma3_2_equals_Q2": true,
+    "sigma3_3_equals_V_minus_K": true
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "PHI12": 73,
+    "J_INV": 8,
+    "EDGES": 240
+  },
+  "theorem_cxci": "Theorem CXCI (Golay Code Bridge): The W(3,3) graph parameters index all four Golay codes and both the E8 and Leech lattices with zero free parameters. The extended ternary Golay [12,6,6]_3 has length K=12, dimension K/2=6, distance K/2=6, and alphabet Q=3. The perfect ternary Golay [11,6,5]_3 has length K-1=11 (M-theory dimension), correction capacity lambda=2. The E8 root system has rank J^{-1}=8 and kissing number equal to the edge count of W(3,3) (both 240). The Leech lattice has rank 2K=24 and kissing number E*Q^2*Phi6*Phi3=196560."
+}
