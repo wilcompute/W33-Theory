@@ -1,0 +1,79 @@
+{
+  "module": "PART_CLXVIII_FANO_EDGE_COLOR_LIFT",
+  "source_links": {
+    "CLXVII": "Fano transport grammar",
+    "W33_core": "3-color edge split E=3*80"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "edges_E": 240,
+    "directed_edges": 480,
+    "edge_colors": 3,
+    "edges_per_color": 80,
+    "directed_edges_per_color": 160,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "direction_lifts": [
+    {
+      "name": "threshold_q_horizontal",
+      "direction_residue": 3,
+      "transport": "threshold",
+      "seed_transitions": 2,
+      "lift_vertices": 40,
+      "lifted_edges": 80,
+      "lifted_directed_edges": 160,
+      "invariant": "pair product J=5"
+    },
+    {
+      "name": "rank_2q_vertical",
+      "direction_residue": 6,
+      "transport": "rank/opposition",
+      "seed_transitions": 2,
+      "lift_vertices": 40,
+      "lifted_edges": 80,
+      "lifted_directed_edges": 160,
+      "invariant": "pair sum 0 mod Phi3"
+    },
+    {
+      "name": "carrier_q2_diagonal",
+      "direction_residue": 9,
+      "transport": "carrier",
+      "seed_transitions": 2,
+      "lift_vertices": 40,
+      "lifted_edges": 80,
+      "lifted_directed_edges": 160,
+      "invariant": "pair product J^{-1}=8"
+    }
+  ],
+  "lift_identity": {
+    "one_direction": "2 affine seed-transitions * 40 vertices = 80 edges",
+    "three_directions": "3 * 2 * 40 = 240 edges",
+    "directed_version": "3 * 2 * 2 * 40 = 480 directed edges"
+  },
+  "checks": {
+    "w33_edge_count": true,
+    "three_edge_colors": true,
+    "edges_per_color": true,
+    "directed_edges_per_color": true,
+    "each_direction_has_two_seed_transitions": true,
+    "each_direction_lifts_to_80_edges": true,
+    "each_direction_lifts_to_160_directed_edges": true,
+    "three_directions_cover_all_edges": true,
+    "three_directions_cover_all_directed_edges": true,
+    "direction_residues_are_q_axis": true,
+    "color_factorization": true,
+    "directed_color_factorization": true,
+    "edges_per_color_is_2v": true,
+    "directed_edges_per_color_is_4v": true
+  },
+  "theorem_statement": "The three Fano transport directions lift exactly to the three W(3,3) edge colors. Each Fano direction contains two affine seed-transitions; lifting each over the 40 W(3,3) vertices gives 2*40=80 edges per color. Hence the full edge set is 3*2*40=240 edges, and the directed carrier is 480 states.",
+  "interpretive_note": "This makes the Fano bridge operational: the threshold, rank/opposition, and carrier directions are primitive color directions. W(3,3)'s 3-color edge split is the 40-fold lift of the Fano affine transport grammar."
+}
