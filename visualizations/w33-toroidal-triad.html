@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W33 Toroidal Triad</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --panel-2: #1e2330;
+      --text: #e8ecf3;
+      --muted: #aeb8c8;
+      --line: #2f3747;
+      --accent: #7dd3fc;
+      --accent-2: #c084fc;
+      --gold: #facc15;
+      --green: #86efac;
+      --red: #fca5a5;
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: linear-gradient(180deg, #0b0d12 0%, #111521 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    header {
+      padding: 64px 24px 32px;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(circle at top right, rgba(192,132,252,.18), transparent 30%),
+                  radial-gradient(circle at top left, rgba(125,211,252,.16), transparent 28%);
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+    .subtitle {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    main { padding: 28px 24px 80px; }
+    section {
+      background: rgba(23,26,33,.88);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      margin: 22px auto;
+      max-width: var(--max);
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      margin: 24px 0 10px;
+      font-size: 1.08rem;
+      color: var(--accent);
+    }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0 10px 20px; }
+    li { margin: 8px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .label {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #202636;
+      color: #f7fafc;
+    }
+    .formula {
+      font-family: "Times New Roman", Georgia, serif;
+      background: #111722;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 1.08rem;
+      overflow-x: auto;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      background: rgba(125,211,252,.08);
+      border-radius: 10px;
+      margin: 14px 0;
+      color: #d8e7f7;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .8rem;
+      border: 1px solid var(--line);
+      background: #151b27;
+      color: var(--muted);
+      margin: 0 8px 8px 0;
+    }
+    footer {
+      max-width: var(--max);
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      color: var(--muted);
+    }
+    @media (max-width: 820px) {
+      .split { grid-template-columns: 1fr; }
+      section { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="pill">W33 geometry</div>
+      <div class="pill">Toroidal polyhedra</div>
+      <div class="pill">Adjacency duality</div>
+      <h1>W33 Toroidal Triad</h1>
+      <p class="subtitle">An expanded synthesis of the tetrahedron, the Császár polyhedron, and the Szilassi polyhedron as a single W33 structure: dual adjacency types, minimal triangulations, Fano-plane mediation, shared mod-12 residue law, and the 7-total realization count.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Triad overview</h2>
+      <p>The central claim of this page is that the tetrahedron, Császár, and Szilassi are not isolated curiosities but a tightly coupled triad. The tetrahedron is the genus-0 seed, Császár is the vertex-complete toroidal realization, and Szilassi is the face-complete toroidal dual partner.</p>
+      <div class="grid">
+        <div class="card"><div class="label">Seed</div><div class="value">Tetrahedron</div><p>Only object known to satisfy both adjacency hole equations at genus 0.</p></div>
+        <div class="card"><div class="label">Vertex-complete</div><div class="value">Császár</div><p>7 vertices, 21 edges, 14 triangular faces, no diagonals, minimal torus triangulation.</p></div>
+        <div class="card"><div class="label">Face-complete</div><div class="value">Szilassi</div><p>14 vertices, 21 edges, 7 faces, every face adjacent to every other face.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Invariant census</h2>
+      <table>
+        <thead>
+          <tr><th>Object</th><th>V</th><th>E</th><th>F</th><th>Genus</th><th>Adjacency completeness</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tetrahedron</td><td>4</td><td>6</td><td>4</td><td>0</td><td>Both vertex and face complete</td></tr>
+          <tr><td>Császár</td><td>7</td><td>21</td><td>14</td><td>1</td><td>Every vertex adjacent to every other vertex</td></tr>
+          <tr><td>Szilassi</td><td>14</td><td>21</td><td>7</td><td>1</td><td>Every face adjacent to every other face</td></tr>
+        </tbody>
+      </table>
+      <div class="note">The edge count 21 is shared by Császár and Szilassi, signaling that the dual exchange primarily swaps the roles of vertices and faces while preserving the combinatorial middle.</div>
+    </section>
+
+    <section>
+      <h2>Dual hole equations</h2>
+      <p>The two adjacency problems are governed by parallel Euler-characteristic equations. One counts the genus required for complete vertex adjacency; the other counts the genus required for complete face adjacency.</p>
+      <div class="formula">h<sub>vertex</sub> = ((v − 3)(v − 4)) / 12</div>
+      <div class="formula">h<sub>face</sub> = ((f − 4)(f − 3)) / 12</div>
+      <p>Both equations admit the same residue classes modulo 12: 0, 3, 4, 7. The tetrahedron is the shared h = 0 solution, while Császár and Szilassi are the shared h = 1 solutions under the V ↔ F exchange.</p>
+      <h3>Next shared prediction</h3>
+      <p>At the next common genus level h = 6, the vertex equation predicts v = 12 and f = 44, while the face equation predicts f = 12 and v = 44. In both cases the complete adjacency count fixes the edge total at 66, preserving a deeper dual invariant.</p>
+    </section>
+
+    <section>
+      <h2>The tetrahedron between adjacency types</h2>
+      <div class="split">
+        <div>
+          <p>The tetrahedron occupies the unique middle position. It is simultaneously the smallest simplicial polyhedron and the smallest face-complete polyhedron, so it already contains both adjacency logics before toroidal separation pulls them apart into Császár and Szilassi.</p>
+          <p>This makes it the hinge of the triad rather than just an introductory example. In W33 language, it is the neutral gate where vertex-complete and face-complete structures are still identical.</p>
+        </div>
+        <div class="card">
+          <div class="label">Why it matters</div>
+          <ul>
+            <li>It satisfies both hole equations.</li>
+            <li>It has V = F = 4 symmetry.</li>
+            <li>It is the sphere-side precursor of both toroidal partners.</li>
+            <li>It makes the later duality concept mathematically concrete.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Realization count 5 + 2 = 7</h2>
+      <p>A striking W33 feature is the exact total realization count across the toroidal pair. Szilassi has 2 realizations, while Császár has 5 known realizations, producing a combined total of 7.</p>
+      <div class="grid">
+        <div class="card"><div class="label">Szilassi</div><div class="value">2</div><p>Two realizations linked by its 180° espyric symmetry.</p></div>
+        <div class="card"><div class="label">Császár</div><div class="value">5</div><p>Möbius, Császár, and three Bokowski–Eggert realizations.</p></div>
+        <div class="card"><div class="label">Combined</div><div class="value">7</div><p>Matches the recurring W33 count and Φ₆ resonance.</p></div>
+      </div>
+      <p>This is more than arithmetic bookkeeping. The total 7 behaves like a closure count for the toroidal pair, making the entire dual system numerically terminate at the same number that keeps appearing elsewhere in the framework.</p>
+    </section>
+
+    <section>
+      <h2>Fano-plane bridge</h2>
+      <p>The Fano plane provides a natural mediator because it is self-dual. If its 7 points are interpreted as vertices, the structure points toward the Császár side; if the 7 points are interpreted as faces, it points toward the Szilassi side.</p>
+      <p>That makes the Fano plane a compact combinatorial transformer that swaps point-line logic without leaving the 7-fold system. The inner-circle point p7 serves as the central singleton that closes the 1 + 2 + 2 + 2 decomposition.</p>
+      <div class="note">W33 reading: the Fano plane is not just a diagrammatic analogy — it acts as the self-dual combinatorial core that explains why the same count 7 governs both toroidal constructions.</div>
+    </section>
+
+    <section>
+      <h2>Minimal triangulations</h2>
+      <p>The minimal triangulation thread strengthens the connection between the sphere seed and the toroidal pair. The tetrahedron is the minimal triangulation of the sphere, while the Császár polyhedron is the minimal triangulation of the torus.</p>
+      <table>
+        <thead>
+          <tr><th>Surface</th><th>Minimal object</th><th>Vertex count</th><th>Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sphere S²</td><td>Tetrahedron</td><td>4</td><td>Smallest triangulation possible</td></tr>
+          <tr><td>Torus T²</td><td>Császár</td><td>7</td><td>Minimal torus triangulation, complete vertex adjacency</td></tr>
+        </tbody>
+      </table>
+      <p>Szilassi then appears not as a triangulation minimum in the same sense, but as the dual face-complete companion to that minimal toroidal triangulation. So the toroidal pair is asymmetric in construction but symmetric in adjacency principle.</p>
+    </section>
+
+    <section>
+      <h2>Shared residues and mod-12 law</h2>
+      <p>The two hole equations share the same admissible residue classes modulo 12: 0, 3, 4, and 7. This common arithmetic filter is one of the strongest reasons to treat the two adjacency problems as expressions of a single hidden law.</p>
+      <p>Within the triad, those residues appear immediately in the tetrahedron and Császár/Szilassi counts. The recurrence of 12 in the genus formulas, 66 = C(12,2) at the next shared level, and the V/F swap all suggest that mod-12 structure is not incidental but structural.</p>
+      <div class="grid">
+        <div class="card"><div class="label">Residues</div><div class="value">0, 3, 4, 7</div><p>Exactly the same admissible classes for both equations.</p></div>
+        <div class="card"><div class="label">Next edge total</div><div class="value">66</div><p>Appears on both sides at the next common genus prediction.</p></div>
+        <div class="card"><div class="label">Dual action</div><div class="value">V ↔ F</div><p>Swaps the equations while preserving the residue gate.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>W33 interpretations</h2>
+      <h3>Flag orbit resonance</h3>
+      <p>The shared flag-orbit count 42 = 6 × 7 gives the triad a second layer beyond the raw 7-count. That makes the toroidal pair not merely dual but orbitally synchronized inside the same 6-by-7 structure.</p>
+      <h3>Adjacency as a split observable</h3>
+      <p>One way to frame the triad is that adjacency comes in two observables: vertex adjacency and face adjacency. The tetrahedron is the unbroken phase where both observables coincide; genus-1 toroidal geometry splits them into Császár and Szilassi.</p>
+      <h3>7 as closure</h3>
+      <p>The total realization count, Fano bridge, and Φ₆ reading all converge on 7. In that sense, the toroidal triad behaves like a closure machine where 7 is not just counted but generated by multiple independent routes.</p>
+    </section>
+
+    <section>
+      <h2>Next extensions</h2>
+      <p>This page can be expanded in several clear directions while keeping the same framework intact.</p>
+      <ul>
+        <li>Add a dedicated section on automorphism groups and symmetry differences.</li>
+        <li>Add diagrams for the V ↔ F dual swap and the tetrahedron hinge role.</li>
+        <li>Add a genus ladder section showing h = 0, 1, 6, and the next predicted admissible levels.</li>
+        <li>Add a W33 constants panel connecting 7, 12, 21, 42, and 66.</li>
+        <li>Add a minimal triangulations appendix tying in Heawood bounds and torus colorability.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Drafted as a living synthesis page for the W33 project. Current version focuses on the triad structure, dual adjacency equations, minimal triangulations, and the 5 + 2 = 7 realization closure.</p>
+  </footer>
+</body>
+</html>
