@@ -1,0 +1,55 @@
+{
+  "module": "PART_CLXIX_FANO_THREE_GENERATION_LIFT",
+  "source_links": {
+    "CLXVIII": "Fano edge-color lift",
+    "W33_H1": "H1(W33)=81=27+27+27"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "edges_E": 240,
+    "directed_edges": 480,
+    "edge_colors": 3,
+    "edges_per_color": 80,
+    "q4_carrier": 81,
+    "H1_dim": 81,
+    "generation_dim_q3": 27,
+    "generations": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "carrier_completion": {
+    "edge_color_nonzero_states": "80=q^4-1",
+    "zero_closure": 1,
+    "completed_carrier": "80+1=81=q^4",
+    "generation_slicing": "q^4=q*q^3=3*27"
+  },
+  "generation_lifts": [
+    {"generation":1,"direction_name":"threshold_q_horizontal","direction_residue":3,"transport":"threshold transport","invariant":5,"slice_dimension":27,"carrier_formula":"q^3=27","interpretation":"generation 1 is the q^3 slice selected by the threshold transport direction"},
+    {"generation":2,"direction_name":"rank_2q_vertical","direction_residue":6,"transport":"rank/opposition transport","invariant":0,"slice_dimension":27,"carrier_formula":"q^3=27","interpretation":"generation 2 is the q^3 slice selected by the rank/opposition transport direction"},
+    {"generation":3,"direction_name":"carrier_q2_diagonal","direction_residue":9,"transport":"carrier transport","invariant":8,"slice_dimension":27,"carrier_formula":"q^3=27","interpretation":"generation 3 is the q^3 slice selected by the carrier transport direction"}
+  ],
+  "checks": {
+    "h1_dim_is_q4": true,
+    "generation_dim_is_q3": true,
+    "three_generations": true,
+    "generation_sum": true,
+    "edges_per_color_is_q4_minus_one": true,
+    "completed_color_carrier_is_q4": true,
+    "all_edges_are_three_colors": true,
+    "directed_edges": true,
+    "direction_residues_are_q_axis": true,
+    "one_generation_per_direction": true,
+    "each_generation_has_27": true,
+    "fano_direction_count_matches_generation_count": true,
+    "q4_slices_as_q_by_q3": true,
+    "phi3_relation": true,
+    "threshold_and_carrier_inverse": true
+  },
+  "theorem_statement": "The Fano transport directions give the three-generation slicing of the W33 H1 carrier. One W33 edge color has 80=q^4-1 edges; adding the closure state gives q^4=81. The q-axis of three Fano directions slices this q^4 carrier into q slices of size q^3, so H1(W33)=81=3*27, one q^3 generation per Fano direction.",
+  "interpretive_note": "This ties the edge-color lift to the homology/generation count. The same Fano directions that lift to the three 80-edge colors also label the three 27-dimensional generation slices inside the completed q^4 carrier."
+}
