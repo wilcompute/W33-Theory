@@ -1,0 +1,48 @@
+{
+  "bridge": "PART_CCIII Operad / Koszul Duality Bridge",
+  "status": "PASS",
+  "check_count": 62,
+  "checks_passing": 62,
+  "all_checks_pass": true,
+  "failed_checks": [],
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "EIG_MAX": 5,
+    "MULT_K2": 6,
+    "PHI3": 13,
+    "J_INV": 8,
+    "EDGES": 240
+  },
+  "operad_dims": {
+    "Ass_Q": 6,
+    "Ass_EIG": 120,
+    "Lie_Q": 2,
+    "Lie_EIG": 24,
+    "Com_Q": 1
+  },
+  "catalan_numbers": {
+    "C_2": 2,
+    "C_3": 5,
+    "C_4": 14,
+    "C_5": 42,
+    "C_6": 132
+  },
+  "bell_numbers": {
+    "B_2": 2,
+    "B_3": 5,
+    "B_5": 52
+  },
+  "category_counts": {
+    "atom_checks": 9,
+    "ass_checks": 9,
+    "lie_checks": 9,
+    "stasheff_checks": 9,
+    "bell_checks": 7,
+    "catalan_checks": 9,
+    "structural_checks": 10
+  },
+  "theorem_cciii": "Operad combinatorics at arities Q,LAM,EIG_MAX recover W(3,3) atoms: Ass(Q)=Q!=MULT_K2, Lie(Q)=(Q-1)!=LAM, Lie(EIG)=LEECH_DIM, Ass(EIG)=EIG*LEECH, B_2=LAM, B_3=EIG_MAX, C_2=LAM, C_3=EIG_MAX, K_4-vertices=LAM, K_5-vertices=EIG_MAX."
+}
