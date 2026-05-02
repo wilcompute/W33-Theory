@@ -1,0 +1,84 @@
+{
+  "module": "PART_CLIX_ROOT_STABILIZER_SPECTRAL_ACTION",
+  "source_links": {
+    "CLVII": "spectral-action ladder",
+    "CLVIII": "global E6/Weyl closure"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Hashimoto_norm": 11,
+    "edges": 240,
+    "directed_edges": 480,
+    "triangles": 160
+  },
+  "global_closure": {
+    "E6_dim": 78,
+    "Cartan_seed_2q": 6,
+    "E6_roots": 72,
+    "root_stabilizer_qE": 720,
+    "W_E6_order": 51840,
+    "Sp_4_3_order": 51840
+  },
+  "spectral_action": {
+    "a0": 480,
+    "a2": 2240,
+    "a4": 17600,
+    "a2_over_a0": "14/3",
+    "a4_over_a2": "55/7",
+    "lambda_H": "7/55"
+  },
+  "normalized_coefficients": [
+    {
+      "coefficient": "a0",
+      "raw_value": 480,
+      "global_normalization": "a0/|W(E6)|",
+      "normalized_value": "1/108",
+      "structural_identity": "1/(mu*q^3)=1/108",
+      "interpretation": "directed-edge carrier normalized by directed-edge stabilizer"
+    },
+    {
+      "coefficient": "a2",
+      "raw_value": 2240,
+      "global_normalization": "a2/|W(E6)|",
+      "normalized_value": "7/162",
+      "structural_identity": "Phi6/(2*q^4)=7/162",
+      "interpretation": "threshold field normalized by the 2*q^4 root/triangle scale"
+    },
+    {
+      "coefficient": "a4",
+      "raw_value": 17600,
+      "global_normalization": "a4/|W(E6)|",
+      "normalized_value": "55/162",
+      "structural_identity": "C(k-1,2)/(2*q^4)=55/162",
+      "interpretation": "Hashimoto radial wedge normalized by the 2*q^4 root/triangle scale"
+    }
+  ],
+  "stabilizer_scales": {
+    "directed_edge_stabilizer": 108,
+    "triangle_stabilizer": 324,
+    "normalizer_den_2q4": 162,
+    "normalizer_den_identity": "2*q^4 = triangle_stabilizer/2 = 162"
+  },
+  "checks": {
+    "global_order_matches_sp43": true,
+    "root_orbit_times_stabilizer": true,
+    "a0_is_directed_edges": true,
+    "a0_global_norm_is_inverse_directed_edge_stabilizer": true,
+    "a2_global_norm_is_phi6_over_2q4": true,
+    "a4_global_norm_is_radial_wedge_over_2q4": true,
+    "a2_over_a0_survives_global_normalization": true,
+    "a4_over_a2_survives_global_normalization": true,
+    "lambda_H_is_inverse_radial_threshold": true,
+    "normalizer_den_is_half_triangle_stabilizer": true,
+    "directed_edge_stabilizer_is_mu_q3": true
+  },
+  "theorem_statement": "The Seeley-DeWitt spectral action is normalized by the global E6/Weyl root-stabilizer closure. Dividing by |W(E6)|=51840 gives a0/|W|=1/108, a2/|W|=Phi6/(2q^4)=7/162, and a4/|W|=C(k-1,2)/(2q^4)=55/162. Thus a0 is the directed-edge carrier, a2 is the threshold field, and a4 is the radial wedge, all expressed in the same global root-stabilizer units.",
+  "interpretive_note": "This fuses CLVII and CLVIII. The heat-kernel ladder is the local spectral shadow of the E6 root orbit closure: the global Weyl group normalizes the directed-edge carrier, the Phi6 threshold field, and the Hashimoto radial wedge."
+}
