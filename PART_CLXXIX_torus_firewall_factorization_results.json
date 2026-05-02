@@ -1,0 +1,62 @@
+{
+  "module": "PART_CLXXIX_TORUS_FIREWALL_FACTORIZATION",
+  "source_links": {
+    "CLXXIII": "Eisenstein torus map bridge",
+    "CLXXVIII": "E6/H1 firewall closure square"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "q2": 9,
+    "q3": 27,
+    "q4": 81,
+    "k": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "rank_seed_2q": 6,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "factorization_rows": [
+    {"name":"affine_triads","value":36,"formula":"k*q=12*3=36","interpretation":"mod-12 affine-triad skeleton over q"},
+    {"name":"firewall_fibers","value":9,"formula":"q^2=9","interpretation":"fiber/diagonal firewall grid"},
+    {"name":"cubic_triads","value":45,"formula":"k*q+q^2=J*q^2=45","interpretation":"stabilizer-residue closure of affine plus fibers"},
+    {"name":"oriented_roots","value":72,"formula":"2*k*q=72","interpretation":"oriented affine triads / E6 roots"},
+    {"name":"E6_dimension","value":78,"formula":"2*k*q+2q=78","interpretation":"rank-completed E6 closure"},
+    {"name":"H1_dimension","value":81,"formula":"2*k*q+q^2=q^4=81","interpretation":"firewall-completed H1/triple-Albert closure"},
+    {"name":"torus_edges","value":21,"formula":"q*Phi6=3*7=21","interpretation":"Csaszar/Szilassi shared edge count"},
+    {"name":"flag_orbits","value":42,"formula":"2q*Phi6=42","interpretation":"toroidal flag orbit count"},
+    {"name":"flags","value":84,"formula":"k*Phi6=84","interpretation":"toroidal flag count"},
+    {"name":"next_h6_edges","value":66,"formula":"C(k,2)=66","interpretation":"next genus h=2q edge invariant"}
+  ],
+  "bridge_identities": {
+    "eisenstein_generator": "Phi6=N(q-1,1)=7",
+    "toroidal_projection": "q*Phi6=21, 2q*Phi6=42, k*Phi6=84",
+    "firewall_projection": "k*q=36, q^2=9, J*q^2=45",
+    "root_projection": "2*k*q=72, 2*k*q+2q=78, 2*k*q+q^2=81",
+    "closure_equation": "k*q+q^2=J*q^2 because k+q=qJ"
+  },
+  "checks": {
+    "k_is_q_qplus1": true,
+    "phi6_eisenstein_norm": true,
+    "affine_triads_are_kq": true,
+    "firewall_fibers_are_q2": true,
+    "cubic_triads_are_affine_plus_fibers": true,
+    "cubic_triads_are_J_q2": true,
+    "closure_equation_k_plus_q_equals_qJ": true,
+    "oriented_roots_are_2kq": true,
+    "e6_is_2kq_plus_2q": true,
+    "h1_is_2kq_plus_q2": true,
+    "h1_minus_e6_is_q": true,
+    "torus_edges_are_q_phi6": true,
+    "flag_orbits_are_2q_phi6": true,
+    "flags_are_k_phi6": true,
+    "flags_are_four_torus_edges": true,
+    "next_h6_edges": true,
+    "next_h6_edges_phi3J_plus_one": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "The firewall closure square is the mod-12/toroidal factorization of the same q=3 carrier. The affine triads are kq=36, the firewall grid is q^2=9, and the cubic total is kq+q^2=45=Jq^2. Orientation gives 2kq=72 roots; adding rank 2q gives E6=78, while adding firewall q^2 gives H1=q^4=81. On the torus side Phi6=N(q-1,1)=7 generates edges qPhi6=21, flag orbits 2qPhi6=42, and flags kPhi6=84.",
+  "interpretive_note": "This connects the Eisenstein torus quotient directly to the firewall square. The count 36 is not isolated: it is k times the q-clock. The cubic 45 is not isolated either: it is the stabilizer-residue count J=5 over the q^2 fiber grid."
+}
