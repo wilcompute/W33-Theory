@@ -1,0 +1,64 @@
+{
+  "module": "PART_CLXVI_FANO_AFFINE_COMPLETION",
+  "source_links": {
+    "CLXII": "stabilizer residue quarter-turn J-cycle",
+    "CLXV": "mod-12 observable wheel"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "rank_seed_2q": 6,
+    "q_square": 9,
+    "k": 12,
+    "Phi3": 13,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "point_partition": {
+    "affine_J_cycle": [1, 5, 12, 8],
+    "points_at_infinity_q_axis": [3, 6, 9],
+    "all_points": [1, 5, 12, 8, 3, 6, 9]
+  },
+  "fano_points": [
+    {"residue": 1, "kind": "affine", "coordinate_or_direction": "(0, 0)", "role": "unit / affine origin / J-cycle identity"},
+    {"residue": 5, "kind": "affine", "coordinate_or_direction": "(1, 0)", "role": "threshold residue / affine x-step"},
+    {"residue": 12, "kind": "affine", "coordinate_or_direction": "(0, 1)", "role": "k=-1 / affine y-step"},
+    {"residue": 8, "kind": "affine", "coordinate_or_direction": "(1, 1)", "role": "carrier residue / affine diagonal point"},
+    {"residue": 3, "kind": "infinity", "coordinate_or_direction": "(1, 0)", "role": "q / horizontal point at infinity"},
+    {"residue": 6, "kind": "infinity", "coordinate_or_direction": "(0, 1)", "role": "2q rank seed / vertical point at infinity"},
+    {"residue": 9, "kind": "infinity", "coordinate_or_direction": "(1, 1)", "role": "q^2 / diagonal point at infinity"}
+  ],
+  "fano_lines": [
+    {"name": "horizontal_y0", "points": [1, 5, 3], "interpretation": "affine horizontal line through origin plus horizontal infinity q"},
+    {"name": "horizontal_y1", "points": [12, 8, 3], "interpretation": "parallel horizontal line plus same infinity q"},
+    {"name": "vertical_x0", "points": [1, 12, 6], "interpretation": "affine vertical line through origin plus vertical infinity 2q"},
+    {"name": "vertical_x1", "points": [5, 8, 6], "interpretation": "parallel vertical line plus same infinity 2q"},
+    {"name": "diagonal_x_eq_y", "points": [1, 8, 9], "interpretation": "main diagonal plus diagonal infinity q^2"},
+    {"name": "diagonal_x_plus_y_eq_1", "points": [5, 12, 9], "interpretation": "parallel diagonal plus same infinity q^2"},
+    {"name": "line_at_infinity", "points": [3, 6, 9], "interpretation": "q-axis line at infinity / missing decimal axis"}
+  ],
+  "incidence_counts": {
+    "1": 3,
+    "5": 3,
+    "12": 3,
+    "8": 3,
+    "3": 3,
+    "6": 3,
+    "9": 3
+  },
+  "checks": {
+    "seven_points": true,
+    "seven_lines": true,
+    "three_points_per_line": true,
+    "three_lines_per_point": true,
+    "every_pair_on_unique_line": true,
+    "j_cycle_is_affine_square": true,
+    "q_axis_is_line_at_infinity": true,
+    "line_at_infinity_is_missing_decimal_axis": true,
+    "fano_pair_count_is_C7_2": true,
+    "fano_incidence_count_is_7_times_3": true,
+    "fano_points_are_4_plus_3": true
+  },
+  "theorem_statement": "The primitive CLXV set {1,5,12,8} union {3,6,9} is the projective completion of AG(2,2). The J-cycle gives the four affine points, the q-axis gives the three points at infinity, and the seven affine/projective lines form the Fano plane PG(2,2).",
+  "interpretive_note": "This explains the Fano bridge: the stabilizer quarter-turn dynamics and the q-axis are not merely two lists summing to seven. They are the affine square and its three directions at infinity. The line at infinity is exactly the missing decimal q-axis {3,6,9}."
+}
