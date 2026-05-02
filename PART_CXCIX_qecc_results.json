@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 59,
+  "checks_passing": 59,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "classical_code_checks": 15,
+    "quantum_code_checks": 15,
+    "stabilizer_checks": 8,
+    "concatenation_checks": 4,
+    "structural_checks": 8
+  },
+  "hamming_code": {
+    "n": 7,
+    "k": 4,
+    "d": 3
+  },
+  "golay_code": {
+    "n": 23,
+    "k": 12,
+    "d": 7
+  },
+  "q5_code": {
+    "n": 5,
+    "k": 1,
+    "d": 3
+  },
+  "steane_code": {
+    "n": 7,
+    "k": 1,
+    "d": 3
+  },
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxcix": "Every key parameter of the perfect classical codes [7,4,3] and [23,12,7] and the fundamental quantum codes [[5,1,3]] and [[7,1,3]] is an integer expression in the W(3,3) atoms: n(Hamming)=PHI6, d(Hamming)=Q, k(Golay)=K, d(Golay)=PHI6, n(5-qubit)=EIG_MAX, d(5-qubit)=Q, n(Steane)=PHI6, d(Steane)=Q, n(RM)=PHI4+EIG_MAX, k(RM)=PHI6, with zero free parameters."
+}
