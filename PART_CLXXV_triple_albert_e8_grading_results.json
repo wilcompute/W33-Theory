@@ -1,0 +1,55 @@
+{
+  "module": "PART_CLXXV_TRIPLE_ALBERT_E8_GRADING",
+  "source_links": {
+    "CLXXIV": "Fano-Cayley / Albert / E6 algebra",
+    "CLXIX": "Fano three-generation lift",
+    "known_E8_Z3": "E8 = (E6 + A2) + 81 + 81"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "rank_seed_2q": 6,
+    "J_threshold": 5,
+    "J_inverse_carrier": 8,
+    "octonion_dim": 8,
+    "Albert_dim": 27
+  },
+  "albert_copies": [
+    {"generation":1,"direction_name":"threshold_q_horizontal","direction_residue":3,"module":"J_3(O)_q","diagonal_dim":3,"offdiagonal_dim":24,"total_dim":27,"interpretation":"generation 1: 3 diagonal scalars plus 3 octonion off-diagonal slots"},
+    {"generation":2,"direction_name":"rank_2q_vertical","direction_residue":6,"module":"J_3(O)_2q","diagonal_dim":3,"offdiagonal_dim":24,"total_dim":27,"interpretation":"generation 2: 3 diagonal scalars plus 3 octonion off-diagonal slots"},
+    {"generation":3,"direction_name":"carrier_q2_diagonal","direction_residue":9,"module":"J_3(O)_q2","diagonal_dim":3,"offdiagonal_dim":24,"total_dim":27,"interpretation":"generation 3: 3 diagonal scalars plus 3 octonion off-diagonal slots"}
+  ],
+  "triple_albert_split": {
+    "formula": "3*(3+24)=9+72=81",
+    "diagonal_sector": "3*3=9=q^2",
+    "offdiagonal_octonion_sector": "3*24=72=|roots(E6)|",
+    "interpretation": "three generation modules contain a q^2 diagonal/fiber sector plus the E6-root count"
+  },
+  "e8_z3_grading": [
+    {"layer":"g0","dimension":86,"formula":"E6 + A2 = 78 + 8 = 86","interpretation":"degree-zero symmetry algebra"},
+    {"layer":"g1","dimension":81,"formula":"3*J_3(O)=3*27=81","interpretation":"matter/generation carrier"},
+    {"layer":"g2","dimension":81,"formula":"dual 3*J_3(O)=81","interpretation":"dual matter/generation carrier"},
+    {"layer":"E8","dimension":248,"formula":"86+81+81=248","interpretation":"Z3-graded exceptional closure"}
+  ],
+  "checks": {
+    "octonion_dim_is_carrier": true,
+    "albert_dim_is_q3": true,
+    "albert_internal_split": true,
+    "triple_albert_is_h1": true,
+    "triple_albert_split_is_9_plus_72": true,
+    "offdiagonal_matches_e6_roots": true,
+    "rank_plus_roots_is_e6": true,
+    "a2_dim_is_octonion_carrier": true,
+    "g0_is_e6_plus_a2": true,
+    "e8_z3_grading_dimension": true,
+    "one_albert_per_fano_direction": true,
+    "direction_residues_are_q_axis": true,
+    "each_copy_has_27": true,
+    "each_copy_has_3_plus_24": true,
+    "threshold_carrier_inverse": true
+  },
+  "theorem_statement": "Three Fano-indexed Albert algebras give the W33 generation carrier: 3*J_3(O)=3*27=81. Internally this splits as 3*(3+24)=9+72, where 9=q^2 is the diagonal/fiber sector and 72 is the E6 root count. With g0=E6+A2=78+8=86 and a dual 81-sector, the standard Z3 grading closes E8 dimensionally as 86+81+81=248.",
+  "interpretive_note": "This is the algebraic weld between three generations and E6/E8. The same octonion carrier that makes one Albert generation also produces the 72 off-diagonal directions across three generations, matching the E6 roots, while the leftover q^2=9 diagonal sector matches the fiber/diagonal grammar seen earlier."
+}
