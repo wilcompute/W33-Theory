@@ -1,0 +1,70 @@
+{
+  "module": "PART_CLXIII_DECIMAL_REPTEND_COMPILER",
+  "source_hint": "user decimal-cycle observation: 1/7 reptend 142857, missing 3/6/9, mod-12 quarters, 6 middle and 7 first cyclic after middle",
+  "w33_atoms": {
+    "q": 3,
+    "Phi3": 13,
+    "Phi4_base": 10,
+    "Phi6_denominator": 7,
+    "rank_seed_2q": 6,
+    "q_square": 9
+  },
+  "reptend_core": {
+    "base": 10,
+    "denominator": 7,
+    "period_ord_den_base": 6,
+    "reptend": "142857",
+    "formula": "R=(Phi4^(2q)-1)/Phi6",
+    "formula_value": "142857",
+    "all_nines_identity": "7*142857=999999=10^6-1"
+  },
+  "digit_partition_1_to_9": {
+    "terminating_denominators": [1, 2, 4, 5, 8],
+    "cyclic_denominator": 7,
+    "q_axis_missing_denominators": [3, 6, 9],
+    "interpretation": "1..9 partitions into terminating digits {1,2,4,5,8}, cyclic Phi6 denominator {7}, and q-axis {3,6,9}."
+  },
+  "decimal_denominator_rows": [
+    {"denominator": 1, "fraction": "1/1", "kind": "terminating", "w33_role": "unit"},
+    {"denominator": 2, "fraction": "1/2", "kind": "terminating", "w33_role": "binary/base factor"},
+    {"denominator": 3, "fraction": "1/3", "kind": "pure periodic", "w33_role": "q-clock fixed repetend axis"},
+    {"denominator": 4, "fraction": "1/4", "kind": "terminating", "w33_role": "mu/base-square terminating factor"},
+    {"denominator": 5, "fraction": "1/5", "kind": "terminating", "w33_role": "stabilizer residue / threshold numerator"},
+    {"denominator": 6, "fraction": "1/6", "kind": "mixed preperiodic", "w33_role": "2q rank transition: mixed base factor and q-clock"},
+    {"denominator": 7, "fraction": "1/7", "kind": "pure periodic", "w33_role": "Phi6 cyclic threshold denominator"},
+    {"denominator": 8, "fraction": "1/8", "kind": "terminating", "w33_role": "inverse residue / carrier numerator"},
+    {"denominator": 9, "fraction": "1/9", "kind": "pure periodic", "w33_role": "q^2 fixed repetend square axis"}
+  ],
+  "reptend_multiples": [
+    {"numerator": 1, "fraction": "1/7", "block": "142857", "is_rotation": true},
+    {"numerator": 2, "fraction": "2/7", "block": "285714", "is_rotation": true},
+    {"numerator": 3, "fraction": "3/7", "block": "428571", "is_rotation": true},
+    {"numerator": 4, "fraction": "4/7", "block": "571428", "is_rotation": true},
+    {"numerator": 5, "fraction": "5/7", "block": "714285", "is_rotation": true},
+    {"numerator": 6, "fraction": "6/7", "block": "857142", "is_rotation": true}
+  ],
+  "mod12_quarter_axis": {
+    "markers": [3, 6, 9, 12],
+    "quarters": ["1-2-3", "4-5-6", "7-8-9", "10-11-12"],
+    "middle_transition": "6=2q=q! is the rank seed; 7=Phi6 is the cyclic threshold immediately after it."
+  },
+  "checks": {
+    "base_is_phi4": true,
+    "denominator_is_phi6": true,
+    "period_is_2q": true,
+    "reptend_is_142857": true,
+    "reptend_formula": true,
+    "seven_times_reptend_is_all_nines": true,
+    "terminating_denominators_are_subset_of_reptend_digits": true,
+    "terminating_denominators_expected": true,
+    "q_axis_missing_denominators": true,
+    "q_axis_disjoint_from_terminating": true,
+    "q_axis_plus_terminating_plus_cyclic_is_1_to_9": true,
+    "six_is_rank_middle_transition": true,
+    "seven_follows_rank_seed": true,
+    "multiples_are_rotations": true,
+    "mod12_quarter_markers": true
+  },
+  "theorem_statement": "The decimal cycle 1/7=0.overline{142857} is the base-Phi4 expansion of 1/Phi6, and its period is ord_{Phi6}(Phi4)=2q=6. The reptend is R=(Phi4^(2q)-1)/Phi6=142857. Among denominators 1..9, the terminating set {1,2,4,5,8} appears inside the reptend, while the missing set {3,6,9} is exactly {q,2q,q^2}, the q-clock/rank-square axis.",
+  "interpretive_note": "This connects the user decimal hint to the W33 compiler: base ten is Phi4, the cyclic denominator seven is Phi6, and the six-digit period is the Cartan rank seed 2q. The point after the middle, 7, is cyclic because Phi4 has full order 2q modulo Phi6."
+}
