@@ -1,0 +1,65 @@
+{
+  "module": "PART_CLXXXII_CCT_HASHIMOTO_CARRIER_WELD",
+  "source_links": {
+    "CLXXX": "master identity ladder",
+    "CLXXXI": "repo hint atlas",
+    "CCT_loop_conditioning": "scripts/w33_cct_loop_conditioning_bridge_audit.py",
+    "Hashimoto_480_bundle": "archive/misc/ChatGPT Files/v01/W33_480_OPERATOR_ALPHA_BUNDLE_v01/README.md"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "q2": 9,
+    "q3": 27,
+    "q4": 81,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8
+  },
+  "carrier_layers": [
+    {"name":"completed_albert_boundary","value":81,"formula":"q^4=81","interpretation":"completed algebraic/H1 carrier"},
+    {"name":"nonzero_color_boundary","value":80,"formula":"q^4-1=80","interpretation":"one nonzero edge-color boundary"},
+    {"name":"edge_shell","value":240,"formula":"q(q^4-1)=240","interpretation":"three W33 edge colors"},
+    {"name":"directed_hashimoto_shell","value":480,"formula":"2q(q^4-1)=480","interpretation":"oriented nonbacktracking state space"},
+    {"name":"hashimoto_branch","value":11,"formula":"k-1=11","interpretation":"nonbacktracking choices per directed edge"},
+    {"name":"branch_split","value":11,"formula":"11=(k-mu)+q=8+3","interpretation":"empire packet plus qutrit slack"},
+    {"name":"first_loop_probability","value":"2/1331","formula":"lambda/(k-1)^q=2/11^3","interpretation":"first trit triangle-loop probability"},
+    {"name":"primitive_triangle_layer","value":320,"formula":"2*160=320","interpretation":"oriented primitive triangle semantic layer"},
+    {"name":"parry_stationary_weight","value":"1/480","formula":"1/480","interpretation":"uniform Parry/KMS state on directed edges"},
+    {"name":"doob_lensing","value":9,"formula":"11 -> 2, open turns=9","interpretation":"first-loop conditioning kills nine open turns"}
+  ],
+  "bridge_identities": {
+    "algebra_to_edge_shell": "q^4=81 -> q^4-1=80 -> q(q^4-1)=240",
+    "edge_to_hashimoto": "2*q*(q^4-1)=480 directed states",
+    "branch_law": "k-1=11=(k-mu)+q=8+3",
+    "first_loop_law": "P(first trit loop)=lambda/(k-1)^q=2/11^3",
+    "doob_lensing": "11 choices = 2 triangle-compatible + 9 open turns",
+    "firewall_match": "9 open turns = q^2 firewall/fiber diagonal sector",
+    "primitive_semantics": "first primitive oriented triangle layer = 2*160=320 = 480*lambda/q"
+  },
+  "checks": {
+    "completed_boundary_is_q4": true,
+    "nonzero_color_boundary_is_q4_minus_one": true,
+    "edge_shell_is_q_times_nonzero_boundary": true,
+    "directed_shell_is_two_q_times_nonzero_boundary": true,
+    "hashimoto_branch_is_k_minus_one": true,
+    "branch_split_is_empire_plus_q": true,
+    "empire_packet_is_k_minus_mu": true,
+    "first_loop_words_are_11_cubed": true,
+    "first_loop_probability_is_two_over_1331": true,
+    "open_turns_are_q2": true,
+    "doob_lenses_11_to_lambda": true,
+    "oriented_triangle_primitives": true,
+    "primitive_triangle_factorization": true,
+    "parry_weight_is_one_over_480": true,
+    "legal_length3_cylinder": true,
+    "phi6_carrier_step": true,
+    "threshold_carrier_inverse": true
+  },
+  "theorem_statement": "The CCT/Hashimoto loop carrier is the directed dynamical lift of the CLXXX algebraic boundary. The completed carrier q^4=81 loses its closure point to give q^4-1=80 states per edge color; three colors give 240 edges, and orientation gives 480 Hashimoto states. The nonbacktracking branch law k-1=11 splits as 8+3=(k-mu)+q. First-loop Doob conditioning lenses these 11 choices to lambda=2 triangle-compatible choices, leaving 9 open turns, exactly the q^2 firewall/fiber diagonal sector.",
+  "interpretive_note": "This is the first weld between the CCT loop-clock files and the CLXXX master ladder. The CCT loop calculus is not a separate numerology layer: its 480-state Parry/KMS carrier is the oriented edge lift of the same 81-completed Albert boundary, and its 11->2 Doob lens exposes the same missing 9-sector as the firewall square."
+}
