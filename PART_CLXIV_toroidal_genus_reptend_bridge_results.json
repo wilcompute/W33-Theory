@@ -1,0 +1,78 @@
+{
+  "module": "PART_CLXIV_TOROIDAL_GENUS_REPTEND_BRIDGE",
+  "source_hint": "connect CLXIII decimal reptend and uploaded toroidal-triad page to dual genus/hole equations and realization counts",
+  "w33_atoms": {
+    "q": 3,
+    "q_plus_1": 4,
+    "k": 12,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "rank_seed_2q": 6,
+    "stabilizer_residue_J": 5,
+    "binary_duality_q_minus_1": 2
+  },
+  "hole_equation": {
+    "formula": "H(n)=((n-q)(n-(q+1)))/k = ((n-3)(n-4))/12",
+    "integer_residue_set_mod12": [3, 4, 7, 12],
+    "interpretation": "accepted residues are {q,q+1,Phi6,k}; the torus value Phi6 is the CRT cross-recombination of the two zero roots"
+  },
+  "hole_residues": [
+    {"n": 3, "genus": "0", "crt_mod_q_mod_qplus1": "(0, 3)", "role": "q-root / degenerate zero-genus root / q-axis entry"},
+    {"n": 4, "genus": "0", "crt_mod_q_mod_qplus1": "(1, 0)", "role": "q+1 root / tetrahedron seed / h=0 sphere triangulation"},
+    {"n": 7, "genus": "1", "crt_mod_q_mod_qplus1": "(1, 3)", "role": "Phi6 / first toroidal h=1 solution / cyclic denominator"},
+    {"n": 12, "genus": "6", "crt_mod_q_mod_qplus1": "(0, 0)", "role": "k=12 / mod-12 closure / next h=2q solution"}
+  ],
+  "crt_gate": {
+    "moduli": [3, 4],
+    "root_q_coords": "(0, 3)",
+    "root_qplus1_coords": "(1, 0)",
+    "closure_coords": "(0, 0)",
+    "torus_cross_coords": "(1, 3)",
+    "torus_cross_identity": "Phi6=7 is the CRT recombination (1 mod 3, 3 mod 4)"
+  },
+  "polyhedron_rows": [
+    {"name": "tetrahedron", "vertices": 4, "edges": 6, "faces": 4, "genus": 0, "role": "h=0 seed satisfying both equations"},
+    {"name": "Csaszar", "vertices": 7, "edges": 21, "faces": 14, "genus": 1, "role": "vertex-complete K7 torus / 5 realization side"},
+    {"name": "Szilassi", "vertices": 14, "edges": 21, "faces": 7, "genus": 1, "role": "face-complete torus / 2 realization side"},
+    {"name": "next vertex-complete h=6", "vertices": 12, "edges": 66, "faces": 44, "genus": 6, "role": "predicted h=2q closure with E=66"},
+    {"name": "next face-complete h=6", "vertices": 44, "edges": 66, "faces": 12, "genus": 6, "role": "dual predicted h=2q closure with same E=66"}
+  ],
+  "realization_bridge": {
+    "Csaszar_realizations": 5,
+    "Szilassi_realizations": 2,
+    "sum": 7,
+    "identity": "5+2=7=Phi6=the h=1 torus residue",
+    "interpretation": "realization split is stabilizer residue plus binary duality; its sum is the genus-one torus solution"
+  },
+  "decimal_bridge": {
+    "reptend": "142857",
+    "digits": [1, 2, 4, 5, 7, 8],
+    "accepted_residues_visible": [3, 4, 7, 12],
+    "interpretation": "hole residues select q-axis root 3, tetra digit 4, cyclic denominator 7, and mod-12 closure 12"
+  },
+  "checks": {
+    "hole_denominator_is_k": true,
+    "accepted_residues_are_q_qp1_phi6_k": true,
+    "q_and_qp1_are_zero_roots": true,
+    "phi6_is_h1_torus_solution": true,
+    "k_is_h_2q_solution": true,
+    "crt_phi6_is_cross_recombination": true,
+    "crt_k_is_zero_zero_recombination": true,
+    "crt_roots_are_axis_roots": true,
+    "realization_split_sums_to_phi6": true,
+    "csaszar_realizations_are_stabilizer_residue": true,
+    "szilassi_realizations_are_binary_duality": true,
+    "toroidal_edges_are_C_phi6_2": true,
+    "flag_orbits_are_rank_times_phi6": true,
+    "flag_count_is_2_rank_phi6": true,
+    "next_edges_are_C_k_2": true,
+    "next_dual_swap_preserves_edges": true,
+    "next_dual_swap_vertices_faces": true,
+    "decimal_reptend_contains_tetra_and_phi6": true,
+    "q_axis_mod12_quarters": true
+  },
+  "theorem_statement": "The dual toroidal hole equations are CRT gates over the denominator k=12: H(n)=((n-3)(n-4))/12 is integral exactly at residues {3,4,7,12}={q,q+1,Phi6,k}. The h=1 torus solution 7 is the nontrivial Chinese-remainder recombination of the zero roots 3 and 4. The realization split 5+2=7 is the same Phi6 value, with 5 the stabilizer residue and 2=q-1 the binary duality count.",
+  "interpretive_note": "This connects the decimal/reptend hint, the toroidal triad, and the genus equations. The hole equation accepts one q-axis root, one tetrahedral seed, one cyclic Phi6 torus point, and the full mod-12 closure. At the next closure n=12, the genus is 2q=6 and the shared edge count is C(12,2)=66."
+}
