@@ -1,0 +1,67 @@
+{
+  "module": "PART_CLXX_SIMPLEX_COUNT_CARRIER_COMPILER",
+  "source_hint": "full toroidal-triad page: flags 84, flag orbits 42, h=6 edge invariant 66, 5+2=7 realization closure",
+  "source_links": {
+    "CLXIX": "completed q^4 carrier and three-generation lift",
+    "uploaded_toroidal_triad": "full Szilassi-Csaszar-Tetrahedron reference page"
+  },
+  "w33_atoms": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "rank_seed_2q": 6,
+    "J": 5,
+    "J_inverse": 8,
+    "q4": 81,
+    "q4_minus_1": 80
+  },
+  "carrier_counts": [
+    {"name":"completed_q4_carrier","value":81,"formula":"q^4","interpretation":"completed color/H1 carrier"},
+    {"name":"nonzero_q4_carrier","value":80,"formula":"q^4-1","interpretation":"one W33 edge color"},
+    {"name":"w33_triangles","value":160,"formula":"2(q^4-1)","interpretation":"2D simplex faces of W33 clique complex"},
+    {"name":"w33_edges","value":240,"formula":"q(q^4-1)","interpretation":"three edge colors"},
+    {"name":"w33_directed_edges","value":480,"formula":"2q(q^4-1)","interpretation":"Hashimoto carrier states"},
+    {"name":"generation_slice","value":27,"formula":"q^3","interpretation":"one generation slice"}
+  ],
+  "toroidal_counts": [
+    {"name":"torus_shared_edges","value":21,"formula":"C(Phi6,2)=C(7,2)","interpretation":"shared Csaszar/Szilassi edge count"},
+    {"name":"flag_orbits","value":42,"formula":"2q*Phi6=6*7","interpretation":"shared flag orbit count"},
+    {"name":"flag_count","value":84,"formula":"k*Phi6=12*7","interpretation":"shared flag count"},
+    {"name":"next_h6_edges","value":66,"formula":"C(k,2)=C(12,2)","interpretation":"shared next h=2q edge invariant"},
+    {"name":"next_vertex_complete","value":44,"formula":"E - V + 2 - 2h","interpretation":"faces for V=12,E=66,h=6"},
+    {"name":"next_face_complete","value":44,"formula":"E - F + 2 - 2h","interpretation":"vertices for F=12,E=66,h=6"}
+  ],
+  "bridge_identities": {
+    "w33_counts": "triangles=2(q^4-1), edges=q(q^4-1), directed=2q(q^4-1)",
+    "toroidal_flags": "edges=C(Phi6,2), flag_orbits=2q*Phi6, flags=k*Phi6",
+    "next_closure": "h=2q, E=C(k,2)=Phi3*J+1=66"
+  },
+  "checks": {
+    "q4_completion": true,
+    "nonzero_q4_is_edge_color": true,
+    "w33_triangles_from_q4": true,
+    "w33_edges_from_q4": true,
+    "w33_directed_from_q4": true,
+    "generation_slicing": true,
+    "torus_edges": true,
+    "flag_orbits": true,
+    "flag_count": true,
+    "flag_orbits_are_twice_torus_edges": true,
+    "flag_count_is_four_times_torus_edges": true,
+    "flag_count_is_twice_flag_orbits": true,
+    "next_h_is_rank_seed": true,
+    "next_edges_are_C_k_2": true,
+    "next_edges_phi3J_plus_one": true,
+    "next_vertex_complete_faces": true,
+    "next_face_complete_vertices": true,
+    "toroidal_flag_count_is_12_times_7": true,
+    "fano_incidence_count_is_torus_edges": true
+  },
+  "theorem_statement": "The W33 simplex counts and toroidal flag counts are two projections of the same q=3 carrier. The completed q^4 carrier gives q^4-1=80, so W33 has triangles=2(q^4-1), edges=q(q^4-1), and directed edges=2q(q^4-1). The toroidal projection uses Phi6 and k: E_torus=C(Phi6,2)=21, flag orbits=2q*Phi6=42, flags=k*Phi6=84, and the next h=2q closure has E=C(k,2)=66=Phi3*J+1.",
+  "interpretive_note": "This integrates the fuller toroidal page with the Fano/generation lift. The 42/84 flag counts are not floating facts: they are Phi6 multiplied by the rank seed and by k. The h=6 count 66 is both C(12,2) and Phi3 times the stabilizer residue plus one."
+}
