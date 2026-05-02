@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "all_checks_pass": true,
+  "check_count": 51,
+  "checks_passing": 51,
+  "failed_checks": [],
+  "category_counts": {
+    "atom_checks": 9,
+    "trivial_zero_checks": 7,
+    "ramanujan_checks": 5,
+    "bernoulli_checks": 13,
+    "gue_checks": 8,
+    "structural_checks": 9
+  },
+  "first_zeros": [
+    14.134725141734693,
+    21.022039638771552,
+    25.01085758014569,
+    30.424876125859512,
+    32.93506158773919
+  ],
+  "pair_corr_at_1": 1.0,
+  "pair_corr_at_half": 0.5947152654306489,
+  "zeta_2_den": 6,
+  "zeta_4_den": 90,
+  "zeta_6_den": 945,
+  "w33_atoms": {
+    "Q": 3,
+    "LAM": 2,
+    "V": 40,
+    "K": 12,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "J_INV": 8,
+    "EDGES": 240,
+    "EIG_MAX": 5
+  },
+  "theorem_cxcviii": "Every fundamental denominator in the values \u03b6(\u22121), \u03b6(\u22123), \u03b6(\u22125), \u03b6(0), \u03b6(2), \u03b6(4), \u03b6(6) and every structural constant (critical line denominator, RS-theta constant, Euler first prime, Ramanujan non-trivial sum value, pair correlation period) is an integer expression in the W(3,3) atoms {Q,LAM,V,K,PHI3,PHI6,J_INV,EDGES,EIG_MAX} with zero free parameters."
+}
