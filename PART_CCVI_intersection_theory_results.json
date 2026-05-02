@@ -1,0 +1,30 @@
+{
+  "chow_ring_dim": 40,
+  "self_intersection_K": 12,
+  "degree_map_image": 240,
+  "divisor_class_degree": 12,
+  "intersection_mult_lam": 2,
+  "excess_intersection": 2,
+  "chern_char_0": 1,
+  "chern_char_1": 12,
+  "chern_char_2": 70,
+  "todd_1": 6,
+  "riemann_roch_chi": 20,
+  "projection_formula_value": 480,
+  "blowup_excess_class": -12,
+  "generator_degree_h": 12,
+  "generator_degree_c": 2,
+  "pontryagin_p1": -140,
+  "verified": true,
+  "failures": [],
+  "w33_atoms": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "PHI3": 13,
+    "EDGES": 240,
+    "MULT_K2": 6
+  }
+}
