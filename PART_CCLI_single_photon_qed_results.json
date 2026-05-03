@@ -1,0 +1,47 @@
+{
+  "Part": "CCLI",
+  "Title": "Single Photon QED: Dirac Algebra and Gauge Structure",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "photon_qed": {
+    "spin": 1,
+    "helicity_states": 2,
+    "magnetic_numbers_count": 3
+  },
+  "clifford_algebra": {
+    "dim": 16,
+    "formula": "LAM^MU = 2^4 = 16",
+    "dirac_components": 4,
+    "bivectors": 6
+  },
+  "lorentz_group": {
+    "rank": 2,
+    "vector_dim": 4,
+    "adj_dim": 6
+  },
+  "gauge_structure": {
+    "a_components": 4,
+    "physical_dof": 2,
+    "u1_rank": 1,
+    "ward_identity": 0
+  },
+  "families": {
+    "lepton_families": 3,
+    "quark_colors": 3,
+    "quark_generations": 3
+  },
+  "photon_mass_exp": 54,
+  "schwinger_denom": 2
+}
