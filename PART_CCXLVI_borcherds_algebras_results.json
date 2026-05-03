@@ -1,0 +1,23 @@
+{
+  "Part": "CCXLVI",
+  "Title": "Borcherds-Kac-Moody Algebras and Monster Moonshine",
+  "Verified": true,
+  "checks_passed": 21,
+  "checks_total": 21,
+  "E8": {
+    "dim": 248,
+    "roots": 240,
+    "rank": 8
+  },
+  "j_function": {
+    "constant": 744,
+    "c1": 196884,
+    "leech_kissing": 196560
+  },
+  "sporadics": {
+    "total": 26,
+    "happy_family": 20,
+    "pariah": 6
+  },
+  "bosonic_string_dim": 26
+}
