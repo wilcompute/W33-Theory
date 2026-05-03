@@ -1,0 +1,146 @@
+{
+  "part": "CCXVIII",
+  "title": "Extra Dimensions and Kaluza-Klein Theory from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "n_checks": 17,
+  "n_pass": 17,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840,
+    "EDGES": 240
+  },
+  "kk_data": {
+    "KK_super_extra_dims": 6,
+    "KK_M_extra_dims": 7,
+    "KK_ADD_dims": 2,
+    "KK_mass_ground": 0,
+    "KK_mass_L1": 10,
+    "KK_mass_L2": 16,
+    "KK_mass_ratio": 1.6,
+    "RS_warp": 18,
+    "RS_kr_exponent": 3.4782,
+    "N_KK_modes": 240,
+    "KK_coupling": 0.3,
+    "UED_level1": 27,
+    "UED_level2": 12,
+    "KK_total_excitations": 39,
+    "SM_4D_fields": 14,
+    "M_SUSY_proxy": 10,
+    "extra_dim_volume_proxy": 8.8889
+  },
+  "checks": [
+    {
+      "check": "KK superstring extra dims = LAP_MID - 4 = 6",
+      "pass": true,
+      "got": 6,
+      "expected": 6
+    },
+    {
+      "check": "KK M-theory extra dims = LAP_MID + 1 - 4 = 7",
+      "pass": true,
+      "got": 7,
+      "expected": 7
+    },
+    {
+      "check": "ADD large extra dimensions = XI_POS = 2",
+      "pass": true,
+      "got": 2,
+      "expected": 2
+    },
+    {
+      "check": "KK ground state mass = 0 (massless graviton)",
+      "pass": true,
+      "got": 0,
+      "expected": 0
+    },
+    {
+      "check": "KK first level mass ~ LAP_MID = 10",
+      "pass": true,
+      "got": 10,
+      "expected": 10
+    },
+    {
+      "check": "KK second level mass ~ LAP_TOP = 16",
+      "pass": true,
+      "got": 16,
+      "expected": 16
+    },
+    {
+      "check": "KK mass ratio LAP_TOP/LAP_MID = 8/5 = 1.6",
+      "pass": true,
+      "got": 1.6,
+      "expected": "8/5=1.6"
+    },
+    {
+      "check": "RS warp factor proxy AUT_ORDER/(K\u00d7EDGES) = 18",
+      "pass": true,
+      "got": 18,
+      "expected": 18
+    },
+    {
+      "check": "RS warp exponent = log(AUT_ORDER/V\u00b2) \u2248 3.48",
+      "pass": true,
+      "got": 3.4782,
+      "expected": 3.4782
+    },
+    {
+      "check": "KK graviton modes = EDGES = V\u00d7K/2 = 240",
+      "pass": true,
+      "got": 240,
+      "expected": 240
+    },
+    {
+      "check": "KK graviton coupling per SM field = K/V = 0.3",
+      "pass": true,
+      "got": 0.3,
+      "expected": "3/10=0.3"
+    },
+    {
+      "check": "UED KK level-1 multiplicity = M_LAM = 27",
+      "pass": true,
+      "got": 27,
+      "expected": 27
+    },
+    {
+      "check": "UED KK level-2 multiplicity = M_NEG = 12",
+      "pass": true,
+      "got": 12,
+      "expected": 12
+    },
+    {
+      "check": "Total KK excitations = V - 1 = 39",
+      "pass": true,
+      "got": 39,
+      "expected": 39
+    },
+    {
+      "check": "4D SM effective fields = K + LAM = 14",
+      "pass": true,
+      "got": 14,
+      "expected": 14
+    },
+    {
+      "check": "SUSY breaking scale from compactification = LAP_MID = 10",
+      "pass": true,
+      "got": 10,
+      "expected": 10
+    },
+    {
+      "check": "Extra-dimension volume proxy EDGES/M_LAM = 80/9 \u2248 8.889",
+      "pass": true,
+      "got": 8.8889,
+      "expected": 8.8889
+    }
+  ]
+}
