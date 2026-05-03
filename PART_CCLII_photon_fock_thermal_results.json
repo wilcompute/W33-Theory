@@ -1,0 +1,37 @@
+{
+  "Part": "CCLII",
+  "Title": "Photon Fock Space and Thermal Statistics",
+  "Verified": true,
+  "checks_passed": 29,
+  "checks_total": 29,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "bose_einstein": {
+    "photon_spin_integer": 1,
+    "be_pole_order": 1
+  },
+  "thermal_statistics": {
+    "stefan_boltzmann_exp": 4,
+    "photon_number_exp": 3,
+    "zeta_arg_number": 3,
+    "zeta_arg_energy": 4
+  },
+  "modes": {
+    "polarizations_per_k": 2,
+    "momentum_dim": 3,
+    "zero_point_denom": 2
+  },
+  "universe_photon_exp": 88,
+  "fock_space": {
+    "vacuum_dim": 1,
+    "noon_modes": 2,
+    "coherent_mean": 1
+  }
+}
