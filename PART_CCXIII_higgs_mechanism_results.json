@@ -1,0 +1,52 @@
+{
+  "part": "CCXIII",
+  "title": "Higgs Mechanism and Mass Generation from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840
+  },
+  "electroweak": {
+    "n_massive_bosons": 3,
+    "n_goldstone": 3,
+    "n_higgs_singlet": 1,
+    "sin2_weinberg_W33": 0.25,
+    "sin2_weinberg_exp": 0.23122,
+    "weinberg_error_pct": 8.122134763428765,
+    "mW_mZ_W33": 0.8660254037844386,
+    "mW_mZ_exp": 0.8814685330022942,
+    "mWZ_error_pct": 1.7519773695444472
+  },
+  "higgs": {
+    "eigenvalue_ratio": 0.5,
+    "vacuum_degeneracy": 27,
+    "K_over_Q": 4
+  },
+  "yukawa": {
+    "estimate": 24,
+    "SM_approx": 22
+  },
+  "all_checks": {
+    "ew_massive_bosons_count_is_Q": true,
+    "goldstone_count_equals_Q": true,
+    "higgs_singlet_count_is_1": true,
+    "weinberg_angle_estimate_within_10pct": true,
+    "mW_to_mZ_ratio_within_2pct": true,
+    "K_over_Q_equals_MU": true,
+    "eigenvalue_ratio_half_matches_higgs_quartic": true,
+    "M_LAM_equals_Q_cubed": true,
+    "yukawa_count_estimate_24": true,
+    "yukawa_count_within_3_of_SM": true
+  }
+}
