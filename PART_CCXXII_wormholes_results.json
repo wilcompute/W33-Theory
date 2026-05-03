@@ -1,0 +1,159 @@
+{
+  "Part": "CCXXII",
+  "Theme": "Wormholes and ER=EPR",
+  "Parameters": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "Bridges": {
+    "1_er_bridge_length": 1.2,
+    "2_entanglement_entropy": 15.5,
+    "3_traversability_param": 11.3,
+    "4_entanglement_wedge": 28,
+    "5_throat_radius": 1.1,
+    "6_stability_lambda": 0.041667,
+    "7_minimal_surface": 40.0,
+    "8_exotic_matter": 0.0471,
+    "9_epr_pairs_equivalent": 120,
+    "10_correlation_volume_ratio": 0.68
+  },
+  "Checks": [
+    {
+      "name": "Einstein-Rosen bridge length proxy",
+      "value": 1.2,
+      "expected": 1.2,
+      "pass": true
+    },
+    {
+      "name": "ER throat circumference",
+      "value": 3.46,
+      "expected": 3.46,
+      "pass": true
+    },
+    {
+      "name": "Entanglement entropy (RT proxy)",
+      "value": 15.5,
+      "expected": 15.5,
+      "pass": true
+    },
+    {
+      "name": "Minimal surface area",
+      "value": 240,
+      "expected": 240,
+      "pass": true
+    },
+    {
+      "name": "Traversability parameter sqrt(K\u00b2\u2212MU\u00b2)",
+      "value": 11.3,
+      "expected": 11.3,
+      "pass": true
+    },
+    {
+      "name": "ER bridge traversable (exotic matter)",
+      "value": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "Entanglement wedge volume",
+      "value": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "name": "Accessible spacetime fraction",
+      "value": 0.7,
+      "expected": 0.7,
+      "pass": true
+    },
+    {
+      "name": "Wormhole throat radius",
+      "value": 1.1,
+      "expected": 1.1,
+      "pass": true
+    },
+    {
+      "name": "Throat proper distance (diameter)",
+      "value": 10.95,
+      "expected": 10.95,
+      "pass": true
+    },
+    {
+      "name": "Wormhole stability parameter \u03bb",
+      "value": 0.0416666667,
+      "expected": 0.0416666667,
+      "pass": true
+    },
+    {
+      "name": "Wormhole stable (\u03bb < 0.1)",
+      "value": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "Holographic minimal surface area",
+      "value": 40.0,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "Minimal surface = boundary dimension",
+      "value": 40.0,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "Exotic matter fraction b\u2080",
+      "value": 0.0471,
+      "expected": 0.0471,
+      "pass": true
+    },
+    {
+      "name": "Exotic matter energy density proxy",
+      "value": 471.0,
+      "expected": 471,
+      "pass": true
+    },
+    {
+      "name": "Equivalent EPR pairs for ER wormhole",
+      "value": 120,
+      "expected": 120,
+      "pass": true
+    },
+    {
+      "name": "ER wormhole entropy (pairs)",
+      "value": 83.2,
+      "expected": 83.2,
+      "pass": true
+    },
+    {
+      "name": "Boundary mutual information proxy",
+      "value": 324,
+      "expected": 324,
+      "pass": true
+    },
+    {
+      "name": "Bulk wormhole volume proxy",
+      "value": 480,
+      "expected": 480,
+      "pass": true
+    },
+    {
+      "name": "Correlation-volume ratio M_LAM/V",
+      "value": 0.68,
+      "expected": 0.68,
+      "pass": true
+    }
+  ],
+  "Verified": true
+}
