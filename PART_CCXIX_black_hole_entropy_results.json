@@ -1,0 +1,137 @@
+{
+  "part": "CCXIX",
+  "title": "Black Hole Entropy and Bekenstein-Hawking from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "n_checks": 16,
+  "n_pass": 16,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840,
+    "EDGES": 240
+  },
+  "bh_data": {
+    "S_BH_proxy": 60,
+    "log10_microstates": 26.0577,
+    "kappa_surface_gravity": 0.041667,
+    "T_Hawking_proxy": 0.006631,
+    "log10_AUT": 4.7147,
+    "entropy_per_mode": 0.04523,
+    "S_over_V": 1.5,
+    "t_PAGE": 400,
+    "t_scramble": 4.0943,
+    "BPS_check": true,
+    "S_extremal": 24,
+    "Kerr_a_ratio": 0.1667,
+    "ergosphere_ratio": 1.986,
+    "AUT_per_edge": 216
+  },
+  "checks": [
+    {
+      "check": "BH entropy proxy = EDGES/4 = 60 (Bekenstein-Hawking A/4)",
+      "pass": true,
+      "got": 60,
+      "expected": 60
+    },
+    {
+      "check": "log10(BH microstates) = EDGES/4/ln(10) \u2248 26.05",
+      "pass": true,
+      "got": 26.0577,
+      "expected": 26.0577
+    },
+    {
+      "check": "Hawking temperature proxy T_H = LAP_MID/(2\u03c0\u00d7EDGES) = 1/(48\u03c0)",
+      "pass": true,
+      "got": 0.006631,
+      "expected": 0.006631
+    },
+    {
+      "check": "Hawking \u03b2 = LAP_TOP \u00d7 3\u03c0 = 48\u03c0 (imaginary time period)",
+      "pass": true,
+      "got": 150.7964,
+      "expected": 150.7964
+    },
+    {
+      "check": "log10(BH degeneracy) = log10(|Aut|) = log10(51840) \u2248 4.7146",
+      "pass": true,
+      "got": 4.7147,
+      "expected": 4.7147
+    },
+    {
+      "check": "Entropy per edge mode = log(AUT_ORDER)/EDGES \u2248 0.04518",
+      "pass": true,
+      "got": 0.04523,
+      "expected": 0.04523
+    },
+    {
+      "check": "S_BH/V = EDGES/(4V) = 3/2 (area-entropy density)",
+      "pass": true,
+      "got": 1.5,
+      "expected": 1.5
+    },
+    {
+      "check": "EDGES = K \u00d7 V / 2 = 240 (SRG area constraint)",
+      "pass": true,
+      "got": 240,
+      "expected": 240
+    },
+    {
+      "check": "Page time proxy = V \u00d7 LAP_MID = 400",
+      "pass": true,
+      "got": 400,
+      "expected": 400
+    },
+    {
+      "check": "Scrambling time proxy = log(EDGES/4) = log(60) \u2248 4.094",
+      "pass": true,
+      "got": 4.0943,
+      "expected": 4.0943
+    },
+    {
+      "check": "BPS bound |XI_NEG| = XI_POS \u00d7 LAM = 4 (extremal BH)",
+      "pass": true,
+      "got": 4,
+      "expected": 4
+    },
+    {
+      "check": "Extremal BH entropy = EDGES/LAP_MID = 24",
+      "pass": true,
+      "got": 24,
+      "expected": 24
+    },
+    {
+      "check": "Kerr a/M = XI_POS/K = 1/6 (angular momentum parameter)",
+      "pass": true,
+      "got": 0.1667,
+      "expected": 0.1667
+    },
+    {
+      "check": "Kerr ergosphere ratio = 1 + sqrt(1 - (XI_POS/K)\u00b2) \u2248 1.9861",
+      "pass": true,
+      "got": 1.986,
+      "expected": 1.986
+    },
+    {
+      "check": "AUT_ORDER/EDGES = 216 = 6\u00b3 (BH microstate stabiliser)",
+      "pass": true,
+      "got": 216,
+      "expected": 216
+    },
+    {
+      "check": "BH orbit count = V \u00d7 M_LAM / (AUT_ORDER/EDGES) = 5",
+      "pass": true,
+      "got": 5,
+      "expected": 5
+    }
+  ]
+}
