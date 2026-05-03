@@ -1,0 +1,36 @@
+{
+  "Part": "CCXXXVII",
+  "Title": "Mathieu Groups from W(3,3)",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "counting": {
+    "num_sporadic": 26,
+    "num_Mathieu": 5
+  },
+  "degrees": {
+    "M11": 11,
+    "M12": 12,
+    "M22": 22,
+    "M23": 23,
+    "M24": 24
+  },
+  "orders": {
+    "M11": 7920,
+    "M12": 95040,
+    "PSL34": 20160,
+    "M22": 443520,
+    "M23": 10200960,
+    "M24": 244823040
+  }
+}
