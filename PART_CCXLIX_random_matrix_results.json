@@ -1,0 +1,22 @@
+{
+  "Part": "CCXLIX",
+  "Title": "Random Matrix Theory and the Riemann Hypothesis",
+  "Verified": true,
+  "checks_passed": 27,
+  "checks_total": 27,
+  "Dyson_beta": {
+    "GOE": 1,
+    "GUE": 2,
+    "GSE": 4
+  },
+  "SRG_eigenvalues": {
+    "K": 12,
+    "r": 2,
+    "s": -4,
+    "gap_K_r": 10,
+    "gap_K_s": 16,
+    "gap_r_s": 6
+  },
+  "spectral_gap": 8,
+  "matrix_size": 40
+}
