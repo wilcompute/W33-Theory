@@ -1,0 +1,83 @@
+{
+  "Part": "CCXXVIII",
+  "Title": "Causal Dynamical Triangulation from W(3,3)",
+  "Verified": true,
+  "checks_passed": 28,
+  "checks_total": 28,
+  "bridges": {
+    "1_simplex_geometry": {
+      "dim_CDT": 4,
+      "n_simplex_verts": 5
+    },
+    "2_euler_characteristic": {
+      "chi_S4": 2,
+      "chi_S2": 2,
+      "chi_sum": 4
+    },
+    "3_spectral_dimension": {
+      "d_s_UV": 2,
+      "d_s_IR": 4,
+      "delta_d_s": 2
+    },
+    "4_regge_links": {
+      "regge_links": 20,
+      "regge_check": 40
+    },
+    "5_foliation": {
+      "N_slices": 3,
+      "slice_vol": 30,
+      "slice_dS": 30
+    },
+    "6_4volume": {
+      "vol4_proxy": 480,
+      "vol4_per_slice": 48
+    },
+    "7_planck_length": {
+      "l_Pl_num": 2,
+      "l_Pl_den": 4,
+      "l_Pl_red_num": 1,
+      "l_Pl_red_den": 2
+    },
+    "8_cosm_constant": {
+      "Lambda_cdt": 2
+    },
+    "9_newton_constant": {
+      "G_N_proxy": 3,
+      "G_N_times_MU": 12
+    },
+    "10_desitter_entropy": {
+      "S_dS_proxy": 30,
+      "S_dS_Q_check": 30
+    }
+  },
+  "checks": {
+    "B1-dim_CDT-MU": true,
+    "B1-simplex_verts-MU+1": true,
+    "B2-chiS4-LAM": true,
+    "B2-chiS2-LAM": true,
+    "B2-chi_sum-MU": true,
+    "B3-ds_UV-LAM": true,
+    "B3-ds_IR-MU": true,
+    "B3-delta_ds-LAM": true,
+    "B4-regge_links-EDGES//K": true,
+    "B4-regge_links-V//2": true,
+    "B4-regge_check-V": true,
+    "B5-N_slices-Q": true,
+    "B5-slice_vol-30": true,
+    "B5-slice_vol-eq-slice_dS": true,
+    "B6-vol4_proxy-V*K": true,
+    "B6-vol4_proxy-2*EDGES": true,
+    "B6-vol4_per_slice-MU*K": true,
+    "B7-lPl_num-LAM": true,
+    "B7-lPl_red_num-1": true,
+    "B7-lPl_red_den-2": true,
+    "B8-Lambda_cdt-MLAM//K": true,
+    "B8-Lambda_cdt-LAM": true,
+    "B9-GN_proxy-K//MU": true,
+    "B9-GN_proxy-Q": true,
+    "B9-GN_times_MU-K": true,
+    "B10-SdS_proxy-EDGES//8": true,
+    "B10-SdS_Q_check-Q*LM": true,
+    "B10-SdS_proxy-eq-check": true
+  }
+}
