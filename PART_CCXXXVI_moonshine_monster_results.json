@@ -1,0 +1,36 @@
+{
+  "Part": "CCXXXVI",
+  "Title": "Moonshine and the Monster Group from W(3,3)",
+  "Verified": true,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "j_function": {
+    "j_at_i": 1728,
+    "j_constant_744": 744,
+    "j_coeff_196884": 196884
+  },
+  "monster_group": {
+    "smallest_irrep": 196883,
+    "max_element_order": 119,
+    "prime_factors_from_K": [
+      47,
+      59,
+      71
+    ]
+  },
+  "moonshine_module": {
+    "central_charge": 24,
+    "j_vanishes_at_cube_root": true
+  },
+  "dim_E8": 248
+}
