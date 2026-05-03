@@ -1,0 +1,210 @@
+{
+  "Part": "CCXXV",
+  "Title": "Conformal Field Theory and OPE from W(3,3)",
+  "SRG": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "Verified": true,
+  "Checks": [
+    {
+      "name": "Central charge c = V - K - 1",
+      "value": 27,
+      "expected": 27,
+      "pass": true
+    },
+    {
+      "name": "Central charge = M_LAM",
+      "value": 27,
+      "expected": 27,
+      "pass": true
+    },
+    {
+      "name": "Conformal weight h_pos numerator = 7",
+      "value": 7,
+      "expected": 7,
+      "pass": true
+    },
+    {
+      "name": "Conformal weight h_pos denominator = 12",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Conformal weight h_neg numerator = 2",
+      "value": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "Conformal weight h_neg denominator = 3",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "OPE coefficient denominator (K/LAM)^MU",
+      "value": 1296,
+      "expected": 1296,
+      "pass": true
+    },
+    {
+      "name": "OPE coefficient denominator = 1296",
+      "value": 1296,
+      "expected": 1296,
+      "pass": true
+    },
+    {
+      "name": "Kac table h_{1,1} numerator = 0",
+      "value": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "Kac table denominator 4*m*n = 48",
+      "value": 48,
+      "expected": 48,
+      "pass": true
+    },
+    {
+      "name": "Kac h_{2,1} numerator = 1",
+      "value": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "Kac h_{2,1} denominator = 2",
+      "value": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "Virasoro L0 eigenvalue = K",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "L0 = K = 12",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Minimal model p = V//K",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "Minimal model q = K//MU",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "Minimal model p = Q",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "Minimal model q = Q",
+      "value": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "Minimal model c numerator = 9",
+      "value": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "name": "Minimal model c denominator = 9",
+      "value": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "name": "Minimal model c = c_num//c_den = 1",
+      "value": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "name": "S-matrix dimension = K + 1",
+      "value": 13,
+      "expected": 13,
+      "pass": true
+    },
+    {
+      "name": "Number of primary operators = 13",
+      "value": 13,
+      "expected": 13,
+      "pass": true
+    },
+    {
+      "name": "Fusion coefficient ~ M_NEG",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Fusion coefficient = M_NEG = K",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "UV central charge proxy = K",
+      "value": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "name": "Central charge flow K - MU = 8",
+      "value": 8,
+      "expected": 8,
+      "pass": true
+    },
+    {
+      "name": "IR charge drop = K - MU = 2*MU",
+      "value": 8,
+      "expected": 8,
+      "pass": true
+    }
+  ],
+  "Bridges": {
+    "1_central_charge": 27,
+    "2_h_pos_num": 7,
+    "2_h_pos_den": 12,
+    "2_h_neg_num": 2,
+    "2_h_neg_den": 3,
+    "3_ope_denom": 1296,
+    "4_kac_11_num": 0,
+    "4_kac_21_frac_num": 1,
+    "4_kac_21_frac_den": 2,
+    "5_L0_eigenvalue": 12,
+    "6_mm_p": 3,
+    "6_mm_q": 3,
+    "7_c_minimal_num": 9,
+    "7_c_minimal_den": 9,
+    "8_dim_S": 13,
+    "9_N_fusion": 12,
+    "10_c_flow": 8
+  },
+  "FreeParameters": 0
+}
