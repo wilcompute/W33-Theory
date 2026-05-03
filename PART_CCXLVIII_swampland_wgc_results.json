@@ -1,0 +1,22 @@
+{
+  "Part": "CCXLVIII",
+  "Title": "Swampland Conjectures",
+  "Verified": true,
+  "checks_passed": 27,
+  "checks_total": 27,
+  "WGC": {
+    "tower_trivial": 1,
+    "tower_plus": 27,
+    "tower_minus": 12,
+    "total_species": 40
+  },
+  "distance_conjecture": {
+    "lattice_dim": 24,
+    "moduli": 20
+  },
+  "species_scale": {
+    "dim": 6,
+    "exponent_denom": 4,
+    "N": 40
+  }
+}
