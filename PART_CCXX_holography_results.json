@@ -1,0 +1,160 @@
+{
+  "Part": "CCXX",
+  "Theme": "Holography and AdS-CFT",
+  "Parameters": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "Bridges": {
+    "1_boundary_dimension": 40,
+    "2_primary_operators": 39,
+    "3_leading_scaling_dim": 2,
+    "4_bulk_graviton_modes": 240,
+    "5_central_charge": 24,
+    "6_minimal_scaling_dim": 10,
+    "6b_scaling_ratio": 250,
+    "7_spectral_dimension": 4.0,
+    "8_large_N_exponent": 3.0,
+    "9_bulk_correlation_scale": 3.1623,
+    "10_holographic_entropy": 15
+  },
+  "Checks": [
+    {
+      "name": "CFT boundary dimension",
+      "value": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "Bulk-boundary volume scaling factor",
+      "value": 6.0,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "Primary CFT operators (non-zero eigenspace)",
+      "value": 39,
+      "expected": 39,
+      "pass": true
+    },
+    {
+      "name": "Scaling dimension of marginal operator",
+      "value": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "Leading operator scaling dimension",
+      "value": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "Leading dim (gap ratio proxy)",
+      "value": 26.0,
+      "expected": 26,
+      "pass": true
+    },
+    {
+      "name": "Bulk graviton modes",
+      "value": 240,
+      "expected": 240,
+      "pass": true
+    },
+    {
+      "name": "Graviton DOF per mode",
+      "value": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "name": "Total bulk graviton DOF",
+      "value": 960,
+      "expected": 960,
+      "pass": true
+    },
+    {
+      "name": "Central charge (area/gap)",
+      "value": 24,
+      "expected": 24,
+      "pass": true
+    },
+    {
+      "name": "Central charge (aut/edges/top)",
+      "value": 13.5,
+      "expected": 13.5,
+      "pass": true
+    },
+    {
+      "name": "Minimal scaling dimension (bulk gap)",
+      "value": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "name": "Scaling ratio \u0394_min/V",
+      "value": 250,
+      "expected": 250,
+      "pass": true
+    },
+    {
+      "name": "Spectral (Hausdorff) dimension",
+      "value": 4.0,
+      "expected": 4.0,
+      "pass": true
+    },
+    {
+      "name": "Spectral dimension floor(d_S)",
+      "value": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "name": "Effective large-N parameter",
+      "value": 27,
+      "expected": 27,
+      "pass": true
+    },
+    {
+      "name": "Large-N exponent (log_3)",
+      "value": 3.0,
+      "expected": 3.0,
+      "pass": true
+    },
+    {
+      "name": "Bulk correlation scale sqrt(LAP_MID)",
+      "value": 3.1622776601683795,
+      "expected": 3.1622776601683795,
+      "pass": true
+    },
+    {
+      "name": "Boundary 2-pt function exponent",
+      "value": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "name": "Ryu-Takayanagi bulk area ratio",
+      "value": 2.0,
+      "expected": 2.0,
+      "pass": true
+    },
+    {
+      "name": "Holographic entanglement entropy proxy",
+      "value": 15,
+      "expected": 15,
+      "pass": true
+    }
+  ],
+  "Verified": true
+}
