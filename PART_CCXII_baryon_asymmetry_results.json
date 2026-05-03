@@ -1,0 +1,53 @@
+{
+  "part": "CCXII",
+  "title": "Baryon Asymmetry and CP Violation from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840
+  },
+  "sakharov": {
+    "baryon_violation": true,
+    "cp_violation": true,
+    "non_equilibrium": true,
+    "all_satisfied": true
+  },
+  "cp": {
+    "n_cp_phases": 1,
+    "formula": "(Q-1)(Q-2)/2 = 1",
+    "jarlskog_structural": 0.006172839506172839,
+    "jarlskog_exp": 3.18e-05
+  },
+  "baryon_asymmetry": {
+    "eta_W33_estimate": 1.2421875e-07,
+    "eta_exp": 6.1e-10,
+    "ratio_estimate_to_exp": 203.63729508196724,
+    "formula": "J_exp / LAP_TOP^2"
+  },
+  "automorphism": {
+    "order": 51840,
+    "Z3_power": 4
+  },
+  "all_checks": {
+    "baryon_violation_non_bipartite": true,
+    "cp_violation_one_phase_from_Q": true,
+    "non_equilibrium_spectral_gap_positive": true,
+    "jarlskog_structural_positive": true,
+    "jarlskog_structural_below_max": true,
+    "aut_has_Z3_power_ge_4": true,
+    "baryon_asymmetry_order_magnitude": true,
+    "Q_equals_3_enables_baryogenesis": true,
+    "all_three_sakharov_conditions_met": true
+  }
+}
