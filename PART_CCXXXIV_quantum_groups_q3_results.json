@@ -1,0 +1,44 @@
+{
+  "Part": "CCXXXIV",
+  "Title": "Quantum Groups at q=Q=3 from W(3,3)",
+  "Verified": true,
+  "checks_passed": 31,
+  "checks_total": 31,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "q_integers": {
+    "[1]_3": 1,
+    "[2]_3": 4,
+    "[3]_3": 13,
+    "[4]_3": 40,
+    "[5]_3": 121
+  },
+  "q_factorials": {
+    "[1]!_3": 1,
+    "[2]!_3": 4,
+    "[3]!_3": 52
+  },
+  "cyclotomic_Phi3_Q": 13,
+  "transport_wall": {
+    "n_star": 4,
+    "q_int_n_star": 40,
+    "above_wall": 121
+  },
+  "quantum_spin_dims": {
+    "spin0": 1,
+    "spin_half": 4,
+    "spin1": 13,
+    "spin_3half": 40
+  },
+  "wzw_central_charge_E6_level_K": 39,
+  "aut_order_from_q": 51840,
+  "q_dim_E6_27": 27
+}
