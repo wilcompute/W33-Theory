@@ -1,0 +1,293 @@
+{
+  "part": "CCXLI",
+  "title": "Griess Algebra & Monster VOA Bridge",
+  "verified": true,
+  "n_checks": 38,
+  "n_pass": 38,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "EDGES": 240,
+    "AUT_ORDER": 51840
+  },
+  "primes": {
+    "prime_17": 17,
+    "prime_19": 19,
+    "prime_23": 23,
+    "prime_29": 29,
+    "prime_31": 31,
+    "prime_41": 41,
+    "prime_47": 47,
+    "prime_59": 59,
+    "prime_71": 71
+  },
+  "dimensions": {
+    "dim_E8": 248,
+    "kissing_Leech": 196560,
+    "dim_Griess": 196884,
+    "dim_Monster_rep": 196883,
+    "voa_central_charge": 24,
+    "j_const": 744,
+    "j_linear": 196884
+  },
+  "monster_order": {
+    "value": 808017424794512875886459904961710757005754368000000000,
+    "exp_2": 46,
+    "exp_3": 20,
+    "exp_5": 9,
+    "exp_7": 6,
+    "exp_11": 2,
+    "exp_13": 3
+  },
+  "prime_structure": {
+    "num_primes_total": 15,
+    "num_primes_higher_exp": 6,
+    "num_primes_single_exp": 9
+  },
+  "baby_monster": {
+    "exp_2": 41,
+    "exp_3": 13,
+    "exp_5": 6,
+    "exp_7": 2,
+    "dim_rep": 4371,
+    "order": 4154781481226426191177580544000000
+  },
+  "moonshine": {
+    "num_conj_classes": 194,
+    "mckay_E8_nodes": 9,
+    "j_const": 744
+  },
+  "checks": [
+    {
+      "label": "Q=3 order of F_3",
+      "got": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "V=40 points of W(3,3)",
+      "got": 40,
+      "expected": 40,
+      "ok": true
+    },
+    {
+      "label": "EDGES=240 = E8 roots",
+      "got": 240,
+      "expected": 240,
+      "ok": true
+    },
+    {
+      "label": "prime_17 = K+K//LAM-1",
+      "got": 17,
+      "expected": 17,
+      "ok": true
+    },
+    {
+      "label": "prime_19 = K+K//LAM+1",
+      "got": 19,
+      "expected": 19,
+      "ok": true
+    },
+    {
+      "label": "prime_23 = 2K-1",
+      "got": 23,
+      "expected": 23,
+      "ok": true
+    },
+    {
+      "label": "prime_29 = K*LAM+K//LAM-1",
+      "got": 29,
+      "expected": 29,
+      "ok": true
+    },
+    {
+      "label": "prime_31 = K*LAM+K//LAM+1",
+      "got": 31,
+      "expected": 31,
+      "ok": true
+    },
+    {
+      "label": "prime_41 = V+1",
+      "got": 41,
+      "expected": 41,
+      "ok": true
+    },
+    {
+      "label": "prime_47 = LAP_TOP*Q-1",
+      "got": 47,
+      "expected": 47,
+      "ok": true
+    },
+    {
+      "label": "prime_59 = LAP_TOP*Q+K-1",
+      "got": 59,
+      "expected": 59,
+      "ok": true
+    },
+    {
+      "label": "prime_71 = K*M_NEG//LAM-1",
+      "got": 71,
+      "expected": 71,
+      "ok": true
+    },
+    {
+      "label": "dim_E8 = EDGES+K//LAM+LAM = 248",
+      "got": 248,
+      "expected": 248,
+      "ok": true
+    },
+    {
+      "label": "kissing_Leech = 196560",
+      "got": 196560,
+      "expected": 196560,
+      "ok": true
+    },
+    {
+      "label": "dim_Griess = kissing_Leech+(K+K//LAM)^2 = 196884",
+      "got": 196884,
+      "expected": 196884,
+      "ok": true
+    },
+    {
+      "label": "dim_Monster_rep = prime_47*prime_59*prime_71 = 196883",
+      "got": 196883,
+      "expected": 196883,
+      "ok": true
+    },
+    {
+      "label": "dim_Griess = dim_Monster_rep + 1",
+      "got": 196884,
+      "expected": 196884,
+      "ok": true
+    },
+    {
+      "label": "j_const = Q*dim_E8 = 744",
+      "got": 744,
+      "expected": 744,
+      "ok": true
+    },
+    {
+      "label": "j_linear = dim_Griess = 196884",
+      "got": 196884,
+      "expected": 196884,
+      "ok": true
+    },
+    {
+      "label": "VOA central charge = K*LAM = 24",
+      "got": 24,
+      "expected": 24,
+      "ok": true
+    },
+    {
+      "label": "num_conj_Monster = K*(K//2+LAP_MID)+LAM = 194",
+      "got": 194,
+      "expected": 194,
+      "ok": true
+    },
+    {
+      "label": "exp_2_Monster = LAP_TOP*Q-LAM = 46",
+      "got": 46,
+      "expected": 46,
+      "ok": true
+    },
+    {
+      "label": "exp_3_Monster = V//LAM = 20",
+      "got": 20,
+      "expected": 20,
+      "ok": true
+    },
+    {
+      "label": "exp_5_Monster = Q^2 = 9",
+      "got": 9,
+      "expected": 9,
+      "ok": true
+    },
+    {
+      "label": "exp_7_Monster = K//LAM = 6",
+      "got": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "exp_11_Monster = LAM = 2",
+      "got": 2,
+      "expected": 2,
+      "ok": true
+    },
+    {
+      "label": "exp_13_Monster = Q = 3",
+      "got": 3,
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "label": "order_Monster exact value",
+      "got": 808017424794512875886459904961710757005754368000000000,
+      "expected": 808017424794512875886459904961710757005754368000000000,
+      "ok": true
+    },
+    {
+      "label": "num_primes_Monster = K+Q = 15",
+      "got": 15,
+      "expected": 15,
+      "ok": true
+    },
+    {
+      "label": "num_primes_higher_exp = K//LAM = 6",
+      "got": 6,
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "label": "num_primes_single_exp = Q^2 = 9",
+      "got": 9,
+      "expected": 9,
+      "ok": true
+    },
+    {
+      "label": "total primes = higher+single = 15",
+      "got": 15,
+      "expected": 15,
+      "ok": true
+    },
+    {
+      "label": "exp_2_Baby = V+1 = 41",
+      "got": 41,
+      "expected": 41,
+      "ok": true
+    },
+    {
+      "label": "exp_3_Baby = K+1 = 13",
+      "got": 13,
+      "expected": 13,
+      "ok": true
+    },
+    {
+      "label": "dim_B_rep = Q*prime_31*prime_47 = 4371",
+      "got": 4371,
+      "expected": 4371,
+      "ok": true
+    },
+    {
+      "label": "dim_Griess = 1 + dim_Monster_rep (McKay)",
+      "got": 196884,
+      "expected": 196884,
+      "ok": true
+    },
+    {
+      "label": "McKay E8 nodes = Q^2 = 9",
+      "got": 9,
+      "expected": 9,
+      "ok": true
+    },
+    {
+      "label": "all 9 single-exp Monster primes are prime",
+      "got": true,
+      "expected": true,
+      "ok": true
+    }
+  ]
+}
