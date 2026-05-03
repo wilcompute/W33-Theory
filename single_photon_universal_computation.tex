@@ -2,18 +2,22 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{physics}
-\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{cite}
 \usepackage{graphicx}
-\usepackage{abstract}
 
-\title{\textbf{Universal Quantum Computation Through a Single Photon}\\
+\title{\textbf{Universal Quantum Computation Through a Single Photon}\\[6pt]
 \large A Framework Connecting Linear Optics, Measurement-Based Quantum Computing,\\
 and the Strongly Regular Graph $W(3,3)$}
 
-\author{Theory of Everything Project}
+\author{%
+  Wil Dahn\\[4pt]
+  \normalsize\textit{Co-authored in partnership with the DTR \& UOR Foundation}\\[2pt]
+  \normalsize\textit{Theory of Everything Project}%
+}
 
-\date{}
+\date{May 2026}
 
 \begin{document}
 \maketitle
@@ -210,24 +214,26 @@ developed in this project — encodes every cardinal number governing single-pho
 universality.
 
 \begin{center}
-\begin{tabular}{lcc}
-\hline
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lcc@{}}
+\toprule
 \textbf{Physical Quantity} & \textbf{Value} & \textbf{$W(3,3)$ Parameter} \\
-\hline
-Polarisation states (qubit dimension) & 2 & $\lambda = 2$ \\
-Physical photon polarisations         & 2 & $\lambda = 2$ \\
-Spinor (Weyl) dimension               & 2 & $\lambda = 2$ \\
-$\mathrm{SU}(2)$ rank                 & 1 & --- \\
-Spacetime dimensions                  & 4 & $\mu = 4$ \\
-Beam-splitter mode action ($\mathrm{U}(2)$) & 2 & $\lambda = 2$ \\
-Photon momentum components            & 4 & $\mu = 4$ \\
-Dual-rail modes per logical qubit     & 2 & $\lambda = 2$ \\
-Gell-Mann $\mathrm{SU}(2)$ generators (Pauli)  & 3 & $Q = 3$ \\
-Maximum single-qubit wave plates      & 3 & $Q = 3$ \\
-Graph vertices ($= V$)               & 40 & $v = 40$ \\
-Vertex degree                         & 12 & $k = 12$ \\
-Spectral gap (bandwidth)              & 10 & $\mathrm{lap\_mid} = 10$ \\
-\hline
+\midrule
+Polarisation states (qubit dimension)           & 2  & $\lambda = 2$ \\
+Physical photon polarisations                   & 2  & $\lambda = 2$ \\
+Spinor (Weyl) dimension                         & 2  & $\lambda = 2$ \\
+SU(2) rank                                      & 1  & $Q - 2 = 1$ \\
+Spacetime dimensions                            & 4  & $\mu = 4$ \\
+Beam-splitter mode count ($\mathrm{U}(2)$)      & 2  & $\lambda = 2$ \\
+Photon helicity states                          & 2  & $\lambda = 2$ \\
+Dual-rail modes per logical qubit               & 2  & $\lambda = 2$ \\
+Pauli generator count for $\mathrm{SU}(2)$      & 3  & $Q = 3$ \\
+Maximum wave plates for universal SU(2)         & 3  & $Q = 3$ \\
+SM gauge generators (gluons$+W+B$)              & 12 & $k = 12$ \\
+Graph vertices                                  & 40 & $V = 40$ \\
+Spectral bandwidth (Laplacian gap)              & 10 & $\mathrm{lap\_mid} = 10$ \\
+Automorphism order / 1296                       & 40 & $V = |\mathrm{Aut}|/(k^2\lambda/2)$ \\
+\bottomrule
 \end{tabular}
 \end{center}
 
