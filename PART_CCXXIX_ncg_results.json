@@ -1,0 +1,86 @@
+{
+  "Part": "CCXXIX",
+  "Title": "Non-commutative Geometry and Spectral Triples from W(3,3)",
+  "Verified": true,
+  "checks_passed": 29,
+  "checks_total": 29,
+  "bridges": {
+    "1_ko_dimension": {
+      "KO_dim": 6,
+      "KO_dim_mod8": 6,
+      "KO_plus_spacetime": 10
+    },
+    "2_fermionic_generations": {
+      "n_gen": 3,
+      "Q_sq": 9,
+      "n_gen_K_product": 36
+    },
+    "3_gauge_rank": {
+      "SM_rank": 4,
+      "SM_rank_sq": 16
+    },
+    "4_spectral_triple_dim": {
+      "d_spec": 4,
+      "d_KO": 6,
+      "d_sum": 10
+    },
+    "5_dirac_zero_modes": {
+      "KL_prod": 24,
+      "zero_modes_proxy": 16
+    },
+    "6_heat_kernel": {
+      "a_0": 40,
+      "a_2": 12,
+      "a_4": 2,
+      "a_4_times_a_2": 24,
+      "a_0_minus_a4a2": 16
+    },
+    "7_spectral_action": {
+      "spec_act_proxy": 10,
+      "spec_act_cross": 20
+    },
+    "8_hochschild": {
+      "hh_dim": 16
+    },
+    "9_moyal_deformation": {
+      "theta_proxy": 2,
+      "theta_scaling": 24
+    },
+    "10_spectral_zeta": {
+      "z_0": 10,
+      "z_1": 4,
+      "z_product": 40
+    }
+  },
+  "checks": {
+    "B1-KO_dim-K//2": true,
+    "B1-KO_dim_mod8-6": true,
+    "B1-KO_plus_spacetime-LAPMID": true,
+    "B2-n_gen-Q": true,
+    "B2-n_gen_K-MU*Qsq": true,
+    "B3-SM_rank-MU": true,
+    "B3-SM_rank_sq-LAPTOP": true,
+    "B4-d_spec-MU": true,
+    "B4-d_KO-K//2": true,
+    "B4-d_sum-LAPMID": true,
+    "B5-zero_modes-V%KL": true,
+    "B5-zero_modes-LAPTOP": true,
+    "B6-a0-V": true,
+    "B6-a2-K": true,
+    "B6-a4-LAM": true,
+    "B6-a4a2-KL_prod": true,
+    "B6-a0-a4a2-LAPTOP": true,
+    "B7-spec_act-EDGES//KL": true,
+    "B7-spec_act-LAPMID": true,
+    "B7-spec_act_cross-V//2": true,
+    "B8-hh_dim-LAPTOP": true,
+    "B8-hh_dim-MU2": true,
+    "B9-theta_proxy-MU//LAM": true,
+    "B9-theta_proxy-LAM": true,
+    "B9-theta_scaling-KL_prod": true,
+    "B10-z0-V//MU": true,
+    "B10-z0-LAPMID": true,
+    "B10-z1-K//Q-MU": true,
+    "B10-z_product-V": true
+  }
+}
