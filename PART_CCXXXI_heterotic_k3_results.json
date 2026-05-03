@@ -1,0 +1,90 @@
+{
+  "Part": "CCXXXI",
+  "Title": "Heterotic String Compactification on K3 from W(3,3)",
+  "Verified": true,
+  "checks_passed": 33,
+  "checks_total": 33,
+  "bridges": {
+    "1_E8xE8_gauge_group": {
+      "dim_E8_one": 248,
+      "dim_E8xE8": 496
+    },
+    "2_K3_hodge": {
+      "h11_K3": 20,
+      "h20_K3": 1,
+      "h21_K3": 0,
+      "b2_K3": 22
+    },
+    "3_K3_betti_euler": {
+      "b0": 1,
+      "b2": 22,
+      "b4": 1,
+      "chi_K3": 24
+    },
+    "4_K3_signature": {
+      "b2_plus": 3,
+      "b2_minus": 19,
+      "sigma_K3": -16
+    },
+    "5_standard_embedding": {
+      "rank_SU3": 2,
+      "rank_E8": 8,
+      "rank_std_embed": 8
+    },
+    "6_instanton_numbers": {
+      "inst_per_E8": 12,
+      "inst_total": 24
+    },
+    "7_wilson_line_moduli": {
+      "wilson_per_E8": 16,
+      "wilson_total": 32
+    },
+    "8_6D_susy": {
+      "susy_6D": 8
+    },
+    "9_spacetime_dimensions": {
+      "d_het": 10,
+      "d_K3": 4,
+      "d_external_K3": 6
+    },
+    "10_anomaly_cancellation": {
+      "anom_cancel": 496,
+      "anom_cancel_ratio": 2
+    }
+  },
+  "checks": {
+    "B1-dim_E8_one-248": true,
+    "B1-dim_E8xE8-496": true,
+    "B1-dim_E8xE8_half-248": true,
+    "B2-h11_K3-20": true,
+    "B2-h11_K3-V//2": true,
+    "B2-b2_K3-22": true,
+    "B2-b2_K3-srg": true,
+    "B3-chi_K3-24": true,
+    "B3-chi_K3-K_LAM": true,
+    "B3-b0_b2_b4-sum": true,
+    "B4-b2_plus-Q": true,
+    "B4-b2_minus-19": true,
+    "B4-b2_minus-LAPTOP_Q": true,
+    "B4-sigma_K3-minus_LAPTOP": true,
+    "B4-sigma_K3-value": true,
+    "B5-rank_SU3-LAM": true,
+    "B5-rank_E8-2MU": true,
+    "B5-rank_std_embed-rank_E8": true,
+    "B6-inst_per_E8-K": true,
+    "B6-inst_total-chi_K3": true,
+    "B6-inst_total-K_LAM": true,
+    "B7-wilson_per_E8-LAPTOP": true,
+    "B7-wilson_total-2LAPTOP": true,
+    "B8-susy_6D-2MU": true,
+    "B8-susy_6D-value-8": true,
+    "B8-susy_6D_alt-value-2": true,
+    "B9-d_het-LAPMID": true,
+    "B9-d_K3-MU": true,
+    "B9-d_external-6": true,
+    "B9-d_external-rank_E6": true,
+    "B10-anom_cancel-496": true,
+    "B10-anom_cancel-2E8": true,
+    "B10-anom_cancel_ratio-2": true
+  }
+}
