@@ -1,0 +1,37 @@
+{
+  "Part": "CCLV",
+  "Title": "Photon Entanglement and Bell Inequalities",
+  "Verified": true,
+  "checks_passed": 27,
+  "checks_total": 27,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4
+  },
+  "bell_inequalities": {
+    "epr_pair_count": 2,
+    "bell_states": 4,
+    "chsh_correlators": 4,
+    "chsh_classical_bound": 2,
+    "tsirelson_int_factor": 2,
+    "bell_angle_denom": 4
+  },
+  "multipartite": {
+    "ghz_qubits": 3,
+    "w_state_qubits": 3,
+    "mermin_parties": 3
+  },
+  "quantum_protocols": {
+    "teleport_cbits": 2,
+    "superdense_bits": 2,
+    "e91_settings": 3
+  },
+  "entanglement": {
+    "hilbert_dim": 4,
+    "entropy_ebits": 1,
+    "schmidt_rank": 2
+  }
+}
