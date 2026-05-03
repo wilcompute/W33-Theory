@@ -1,0 +1,42 @@
+{
+  "Part": "CCLIII",
+  "Title": "Casimir Effect: Zero-Point Photons and W(3,3) Zeta Functions",
+  "Verified": true,
+  "checks_passed": 28,
+  "checks_total": 28,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_NEG": 12,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "LAP_MID": 10
+  },
+  "casimir": {
+    "force_denom": 240,
+    "force_denom_formula": "EDGES = 240",
+    "energy_denom": 720,
+    "energy_denom_formula": "6! = AUT_ORDER//(K*Q*LAM)"
+  },
+  "zeta_regularization": {
+    "zeta_neg1": {
+      "num": -1,
+      "denom": 12
+    },
+    "zeta_neg3": {
+      "num": 1,
+      "denom": 120
+    }
+  },
+  "bekenstein_casimir_link": {
+    "S_BH": 60,
+    "casimir_link": 60
+  },
+  "string_theory": {
+    "d_bosonic": 26,
+    "d_superstring": 10
+  }
+}
