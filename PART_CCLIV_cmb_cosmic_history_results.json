@@ -1,0 +1,39 @@
+{
+  "Part": "CCLIV",
+  "Title": "CMB Photons and Cosmic History",
+  "Verified": true,
+  "checks_passed": 24,
+  "checks_total": 24,
+  "SRG_parameters": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "EDGES": 240,
+    "LAP_MID": 10,
+    "Phi6": 7
+  },
+  "photon_count": {
+    "universe_exponent": 88,
+    "formula": "LAM*MU*(K-1) = 2*4*11 = 88"
+  },
+  "cmb_structure": {
+    "healpix_base": 12,
+    "photon_baryon_exp": 10,
+    "recombination_z_exp": 3,
+    "dipole_l": 1,
+    "quadrupole_l": 2
+  },
+  "inflation": {
+    "efolds": 60,
+    "S_BH_identity": 60
+  },
+  "bbn": {
+    "np_ratio_denom": 7
+  },
+  "temperature_scalings": {
+    "energy_exp": 4,
+    "number_exp": 3
+  }
+}
