@@ -1,0 +1,19 @@
+{
+  "Part": "CCL",
+  "Title": "Conformal Bootstrap",
+  "Verified": true,
+  "checks_passed": 26,
+  "checks_total": 26,
+  "conformal_group": {
+    "spacetime_dim": 3,
+    "group_dim": 10,
+    "group_rank": 2
+  },
+  "bootstrap": {
+    "crossing_channels": 3,
+    "stress_tensor_spin": 2,
+    "max_spin": 10,
+    "ope_matrix_size": 40,
+    "island_corners": 4
+  }
+}
