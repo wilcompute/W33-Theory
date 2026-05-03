@@ -1,0 +1,168 @@
+{
+  "Part": "CCXXVII",
+  "Title": "Holographic Entanglement Entropy and Ryu-Takayanagi from W(3,3)",
+  "FreeParameters": 0,
+  "Verified": true,
+  "Checks": [
+    {
+      "id": "B1-nA",
+      "pass": true
+    },
+    {
+      "id": "B1-nB",
+      "pass": true
+    },
+    {
+      "id": "B1-total",
+      "pass": true
+    },
+    {
+      "id": "B1-bsym",
+      "pass": true
+    },
+    {
+      "id": "B1-product",
+      "pass": true
+    },
+    {
+      "id": "B2-cut1",
+      "pass": true
+    },
+    {
+      "id": "B2-cut2",
+      "pass": true
+    },
+    {
+      "id": "B2-cut-eq",
+      "pass": true
+    },
+    {
+      "id": "B3-page-K",
+      "pass": true
+    },
+    {
+      "id": "B3-page-MNEG",
+      "pass": true
+    },
+    {
+      "id": "B4-renyi2-mod",
+      "pass": true
+    },
+    {
+      "id": "B4-renyi2-2K",
+      "pass": true
+    },
+    {
+      "id": "B4-renyi2-quot",
+      "pass": true
+    },
+    {
+      "id": "B5-I-proxy",
+      "pass": true
+    },
+    {
+      "id": "B5-I-LAP_MID",
+      "pass": true
+    },
+    {
+      "id": "B5-cut-rem",
+      "pass": true
+    },
+    {
+      "id": "B6-EW-MLAM",
+      "pass": true
+    },
+    {
+      "id": "B6-EW-Q3",
+      "pass": true
+    },
+    {
+      "id": "B6-EW-modK",
+      "pass": true
+    },
+    {
+      "id": "B7-code-dist",
+      "pass": true
+    },
+    {
+      "id": "B7-code-2MU",
+      "pass": true
+    },
+    {
+      "id": "B8-CV-proxy",
+      "pass": true
+    },
+    {
+      "id": "B8-CV-LAP_MID",
+      "pass": true
+    },
+    {
+      "id": "B8-CV-times-MU",
+      "pass": true
+    },
+    {
+      "id": "B9-island",
+      "pass": true
+    },
+    {
+      "id": "B9-island-K",
+      "pass": true
+    },
+    {
+      "id": "B10-Srel",
+      "pass": true
+    },
+    {
+      "id": "B10-Srel-Q",
+      "pass": true
+    }
+  ],
+  "Bridges": {
+    "1_bipartition": {
+      "n_A": 12,
+      "n_B": 27,
+      "boundary_sym": 18,
+      "product_AB": 324
+    },
+    "2_rt_cut": {
+      "cut": 108,
+      "cut_alt": 108
+    },
+    "3_page_entropy": {
+      "page_entropy": 12
+    },
+    "4_renyi2": {
+      "renyi2": 24,
+      "renyi2_quot": 3
+    },
+    "5_mutual_info": {
+      "I_proxy": 10,
+      "cut_rem": 8
+    },
+    "6_ent_wedge": {
+      "EW_size": 27,
+      "EW_mod_K": 3
+    },
+    "7_qec_distance": {
+      "code_dist": 8
+    },
+    "8_holographic_complexity": {
+      "C_V_proxy": 10
+    },
+    "9_island": {
+      "S_island": 12
+    },
+    "10_relative_entropy": {
+      "delta_S": 15,
+      "S_rel": 3
+    }
+  },
+  "SRG": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "AUT_ORDER": 51840
+  }
+}
