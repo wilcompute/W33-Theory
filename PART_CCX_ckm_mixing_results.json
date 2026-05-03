@@ -1,0 +1,63 @@
+{
+  "part": "CCX",
+  "title": "CKM Quark Mixing from W(3,3)",
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4
+  },
+  "atoms": {
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "L_EFF": 1111,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "ckm_dimension": 3,
+  "n_physical_mixing_angles": 3,
+  "n_cp_phases": 1,
+  "cabibbo": {
+    "sin_C_W33_primary": 0.2222222222222222,
+    "sin_C_W33_fraction": "4/18",
+    "sin_C_experiment": 0.22537,
+    "error": 0.003147777777777777,
+    "relative_error_pct": 1.396715524594124,
+    "digits": 1.8548920396121982
+  },
+  "cabibbo_alt": {
+    "sin_C_alt": 0.23570226039551587,
+    "error": 0.01033226039551588,
+    "relative_error_pct": 4.584576649738599,
+    "digits": 1.338700761885158
+  },
+  "wolfenstein": {
+    "lambda_W": 0.22537,
+    "A": 0.814,
+    "rho": 0.117,
+    "eta": 0.353,
+    "sin_12": 0.22537,
+    "sin_23": 0.04134439243659999,
+    "sin_13": 0.00346513906585319
+  },
+  "all_checks": {
+    "ckm_dimension_equals_Q": true,
+    "ckm_is_3x3": true,
+    "n_physical_angles_equals_3": true,
+    "n_angles_from_Q": true,
+    "n_cp_phases_equals_1": true,
+    "n_phases_from_Q": true,
+    "cabibbo_denom_is_18": true,
+    "cabibbo_approx_1pt4_pct": true,
+    "cabibbo_within_2pct": true,
+    "cabibbo_formula_gives_2over9": true,
+    "alt_formula_within_5pct": true,
+    "wolfenstein_hierarchy_3_angles": true,
+    "eigenvalue_ratio_gives_Q": true
+  },
+  "verified": true,
+  "free_parameters": 0
+}
