@@ -1,0 +1,27 @@
+{
+  "Part": "CCXLVII",
+  "Title": "F-theory and Elliptic Fibrations",
+  "Verified": true,
+  "checks_passed": 31,
+  "checks_total": 31,
+  "dimensions": {
+    "F_theory": 12,
+    "M_theory": 11,
+    "IIB": 10,
+    "torus_fiber": 2
+  },
+  "Kodaira_Euler": {
+    "II": 2,
+    "III": 3,
+    "IV": 4,
+    "I0s": 6,
+    "IIs": 10,
+    "IIIs": 9,
+    "IVs": 8
+  },
+  "gauge_groups": {
+    "dim_E8": 248,
+    "dim_E8xE8": 496,
+    "dim_SO32": 496
+  }
+}
