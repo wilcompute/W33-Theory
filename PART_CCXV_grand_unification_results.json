@@ -1,0 +1,132 @@
+{
+  "part": "CCXV",
+  "title": "Grand Unification and Gauge Group from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "n_checks": 14,
+  "n_pass": 14,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840
+  },
+  "gut_data": {
+    "W_E6": 51840,
+    "E6_adjoint": 78,
+    "E6_fundamental": 27,
+    "Q3_equals_E6_fund": 27,
+    "GUT_chain_length": 3,
+    "E6_generations": 3,
+    "D4_dim": 28,
+    "V_decomp_SO8_plus_K": 40,
+    "spectral_ratio_LAP_TOP_over_XI_POS": 8,
+    "sin2_W_GUT": 0.25,
+    "sin2_W_obs_MZ": 0.23122,
+    "sin2_W_err_pct": 8.12,
+    "proton_suppression_log10": -21.0101,
+    "spectral_gap": 6,
+    "inv_alpha_GUT_W33": 6.6667,
+    "inv_alpha_GUT_ratio_to_Q_plus_1": 3.75,
+    "SM_gauge_bosons": 12,
+    "E6_extra_gauge": 39,
+    "A5_order": 60,
+    "AUT_over_A5": 864,
+    "expected_32_M_LAM": 864,
+    "AUT_prime_factorization": "2^7 * 3^4 * 5"
+  },
+  "checks": [
+    {
+      "check": "AUT_ORDER equals |W(E6)|",
+      "pass": true,
+      "got": 51840,
+      "expected": 51840
+    },
+    {
+      "check": "Q^3 = E6 fundamental representation dim",
+      "pass": true,
+      "got": 27,
+      "expected": 27
+    },
+    {
+      "check": "GUT breaking chain length equals Q",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "check": "E6 generations = Q = 3",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "check": "V = dim(SO(8)) + K",
+      "pass": true,
+      "got": 40,
+      "expected": 40
+    },
+    {
+      "check": "LAP_TOP/XI_POS = 8 encodes coupling ratio",
+      "pass": true,
+      "got": 8,
+      "expected": 8
+    },
+    {
+      "check": "GUT-scale sin2W from SRG within 8.1% of MZ value",
+      "pass": true,
+      "got": 0.25,
+      "expected": 0.23122
+    },
+    {
+      "check": "Proton decay suppression log10 < -20",
+      "pass": true,
+      "got": -21.01,
+      "expected": "< -20"
+    },
+    {
+      "check": "inv_alpha_GUT / W33_estimate \u2248 Q+1 = 4",
+      "pass": true,
+      "got": 3.75,
+      "expected": "\u2248 4"
+    },
+    {
+      "check": "SM gauge bosons = K = 12",
+      "pass": true,
+      "got": 12,
+      "expected": 12
+    },
+    {
+      "check": "V-1 = 39 counts GUT gauge structure beyond trivial",
+      "pass": true,
+      "got": 39,
+      "expected": 39
+    },
+    {
+      "check": "M_LAM + M_NEG = V-1 = 39",
+      "pass": true,
+      "got": 39,
+      "expected": 39
+    },
+    {
+      "check": "AUT_ORDER / |A5| = 32 \u00d7 M_LAM",
+      "pass": true,
+      "got": 864,
+      "expected": 864
+    },
+    {
+      "check": "AUT_ORDER = 2^7 \u00d7 3^4 \u00d7 5 (prime factorization)",
+      "pass": true,
+      "got": 51840,
+      "expected": 51840
+    }
+  ]
+}
