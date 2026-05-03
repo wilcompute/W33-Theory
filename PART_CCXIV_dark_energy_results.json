@@ -1,0 +1,57 @@
+{
+  "part": "CCXIV",
+  "title": "Dark Energy and Cosmological Constant from W(3,3)",
+  "verified": true,
+  "free_parameters": 0,
+  "srg_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "M_NEG": 12,
+    "XI_POS": 2,
+    "XI_NEG": -4,
+    "LAP_MID": 10,
+    "LAP_TOP": 16,
+    "AUT_ORDER": 51840
+  },
+  "cosmology": {
+    "omega_lambda_obs": 0.6847,
+    "omega_lambda_W33": 0.675,
+    "omega_lambda_error_pct": 1.4167,
+    "omega_m_obs": 0.3153,
+    "omega_m_W33": 0.3,
+    "omega_m_error_pct": 4.8525,
+    "omega_ratio_obs": 2.171583,
+    "omega_ratio_W33": 2.25,
+    "omega_ratio_error_pct": 3.6111
+  },
+  "spectral": {
+    "spectral_sum": 6,
+    "spectral_gap": 6,
+    "r_neg": 0.3,
+    "r_pos": 0.675,
+    "delta_modes": 0.375,
+    "suppression": 4.1359030627651384e-25,
+    "log10_suppression": -24.3834,
+    "ext_suppression": 7.978208068605591e-30,
+    "log10_ext_suppression": -29.0981
+  },
+  "all_checks": {
+    "negative_mode_fraction_correct": true,
+    "spectral_sum_positive": true,
+    "spectral_sum_value": true,
+    "suppression_estimate_exists": true,
+    "aut_extended_suppression": true,
+    "omega_lambda_W33": true,
+    "omega_lambda_within_2pct": true,
+    "omega_m_W33": true,
+    "omega_m_within_5pct": true,
+    "omega_ratio_W33": true,
+    "omega_ratio_within_5pct": true,
+    "spectral_gap_value": true,
+    "spectral_gap_divides_aut": true
+  }
+}
