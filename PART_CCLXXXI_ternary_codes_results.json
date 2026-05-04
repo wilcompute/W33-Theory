@@ -1,0 +1,94 @@
+{
+  "part": "CCLXXXI",
+  "title": "Ternary Codes, Perfect Codes over GF(3), and the W(3,3) Coding Bridge",
+  "all_checks_pass": true,
+  "total_checks": 426,
+  "failed_checks": [],
+  "results": {
+    "hamming_codes_gf3": {
+      "passed": true,
+      "checks": 21,
+      "failures": []
+    },
+    "perfect_code_sphere_packing": {
+      "passed": true,
+      "checks": 18,
+      "failures": []
+    },
+    "singleton_plotkin_bounds": {
+      "passed": true,
+      "checks": 15,
+      "failures": []
+    },
+    "ternary_golay_code": {
+      "passed": true,
+      "checks": 43,
+      "failures": []
+    },
+    "binary_golay_code": {
+      "passed": true,
+      "checks": 20,
+      "failures": []
+    },
+    "reed_solomon_codes": {
+      "passed": true,
+      "checks": 32,
+      "failures": []
+    },
+    "mds_codes": {
+      "passed": true,
+      "checks": 23,
+      "failures": []
+    },
+    "self_dual_ternary_codes": {
+      "passed": true,
+      "checks": 25,
+      "failures": []
+    },
+    "repetition_parity_codes": {
+      "passed": true,
+      "checks": 16,
+      "failures": []
+    },
+    "code_bounds_atlas": {
+      "passed": true,
+      "checks": 18,
+      "failures": []
+    },
+    "krawtchouk_polynomials": {
+      "passed": true,
+      "checks": 61,
+      "failures": []
+    },
+    "transport_coding_bridge": {
+      "passed": true,
+      "checks": 15,
+      "failures": []
+    },
+    "coset_decoding": {
+      "passed": true,
+      "checks": 17,
+      "failures": []
+    },
+    "generator_matrix_properties": {
+      "passed": true,
+      "checks": 23,
+      "failures": []
+    },
+    "coding_theory_identities": {
+      "passed": true,
+      "checks": 25,
+      "failures": []
+    },
+    "linear_code_families": {
+      "passed": true,
+      "checks": 26,
+      "failures": []
+    },
+    "w33_coding_atlas": {
+      "passed": true,
+      "checks": 28,
+      "failures": []
+    }
+  }
+}
