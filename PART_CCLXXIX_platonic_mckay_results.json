@@ -1,0 +1,506 @@
+{
+  "part": "CCLXXIX",
+  "headline": "Platonic Solids, McKay Correspondence, and the W(3,3) ADE Atlas: Tet V=MU, Cube E=K, Icos E=h(E8)=EDGES/rank; |BT|=2K\u2192E6, |BO|=4K\u2192E7, |BI|=EDGES/2\u2192E8; h(E6)=K, h(E7)=2Q\u00b2, h(E8)=EDGES/rank",
+  "all_checks_pass": true,
+  "total_checks": 237,
+  "check_results": {
+    "tetrahedron_w33": {
+      "pass": true,
+      "n_checks": 7,
+      "details": {
+        "TETRA_V_eq_MU": true,
+        "TETRA_E_eq_2Q": true,
+        "TETRA_F_eq_MU": true,
+        "TETRA_V_eq_TETRA_F": true,
+        "ORDER_A4_eq_K": true,
+        "FULL_TETRA_eq_2K": true,
+        "TETRA_E_div_TETRA_V_eq_Q_half": true,
+        "note": "Tetrahedron(V=4, E=6, F=4), |A4|=12=K=12"
+      }
+    },
+    "cube_octahedron_w33": {
+      "pass": true,
+      "n_checks": 10,
+      "details": {
+        "CUBE_E_eq_K": true,
+        "OCTA_E_eq_K": true,
+        "CUBE_V_eq_E8_RANK": true,
+        "OCTA_V_eq_2Q": true,
+        "CUBE_F_eq_2Q": true,
+        "OCTA_F_eq_E8_RANK": true,
+        "ORDER_S4_eq_2K": true,
+        "FULL_CUBE_eq_4K": true,
+        "CUBE_V_times_Q_eq_CUBE_E_x3": true,
+        "CUBE_V_plus_CUBE_F_eq_CUBE_E_plus_2": true,
+        "note": "Cube(V=8=E8_RANK, E=12=K, F=6=2Q), Octa dual"
+      }
+    },
+    "icosahedron_w33": {
+      "pass": true,
+      "n_checks": 10,
+      "details": {
+        "ICOS_V_eq_K": true,
+        "ICOS_E_eq_E8_COXETER": true,
+        "ICOS_E_eq_EDGES_div_rank": true,
+        "ICOS_F_eq_V_half": true,
+        "ICOS_F_eq_Vdiv2": true,
+        "ICOS_E_eq_TRANSPORT_div_Q2": true,
+        "ORDER_A5_eq_EDGES_div4": true,
+        "FULL_ICOS_eq_EDGES_half": true,
+        "FULL_ICOS_eq_ORDER_BI": true,
+        "ICOS_VEF_euler": true,
+        "note": "Icosahedron(V=12=K, E=30=h(E8), F=20=V/2)"
+      }
+    },
+    "dodecahedron_w33": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "DODEC_V_eq_V_half": true,
+        "DODEC_E_eq_E8_COXETER": true,
+        "DODEC_E_eq_ICOS_E": true,
+        "DODEC_F_eq_K": true,
+        "DODEC_F_eq_ICOS_V": true,
+        "DODEC_V_eq_ICOS_F": true,
+        "DODEC_VEF_euler": true,
+        "DODEC_V_times_Q_eq_ORDER_A5": true,
+        "note": "Dodecahedron(V=20=V/2, E=30=h(E8), F=12=K)"
+      }
+    },
+    "platonic_euler": {
+      "pass": true,
+      "n_checks": 9,
+      "details": {
+        "tetrahedron": true,
+        "cube": true,
+        "octahedron": true,
+        "dodecahedron": true,
+        "icosahedron": true,
+        "total_V_eq_total_F": true,
+        "total_E_eq_TRANSPORT_plus_half_V": true,
+        "total_V_eq_V_plus_10": true,
+        "total_E_x5_eq_total_V_x_Q2": true,
+        "total_V": 50,
+        "total_E": 90,
+        "total_F": 50
+      }
+    },
+    "rotation_group_orders": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "ORDER_A4_eq_K": true,
+        "ORDER_S4_eq_2K": true,
+        "ORDER_A5_eq_5K": true,
+        "ORDER_A5_eq_EDGES_div4": true,
+        "ORDER_A5_div_ORDER_A4_eq_5": true,
+        "ORDER_S4_div_ORDER_A4_eq_2": true,
+        "product_all_rot_groups": true,
+        "ORDER_A4_x_5_eq_ORDER_A5": true,
+        "note": "All polyhedral rotation groups have order divisible by K"
+      }
+    },
+    "binary_tetrahedral_mckay": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "ORDER_BT_eq_2K": true,
+        "ORDER_BT_eq_FULL_TETRA": true,
+        "ORDER_BT_eq_ORDER_S4": true,
+        "ORDER_BT_div_ORDER_A4_eq_2": true,
+        "ORDER_BT_eq_COXETER_E6_x2": true,
+        "E6_TILDE_nodes_eq_PHI6": true,
+        "AUT_ORDER_div_BT_eq_AUT_div_2K": true,
+        "AUT_div_BT_eq_LINES27_V_x2": true,
+        "ORDER_BT": 24,
+        "note": "|BT|=24=2K=24, McKay \u2192 E6, |Aut|/|BT|=2160=16\u00d7LINES_27"
+      }
+    },
+    "binary_octahedral_mckay": {
+      "pass": true,
+      "n_checks": 7,
+      "details": {
+        "ORDER_BO_eq_4K": true,
+        "ORDER_BO_eq_FULL_CUBE": true,
+        "ORDER_BO_div_ORDER_BT_eq_2": true,
+        "ORDER_BO_eq_COXETER_E7_x2_plus_12": true,
+        "ORDER_BO_eq_E7_TILDE_sq_sum": true,
+        "E7_TILDE_nodes_eq_E8_RANK": true,
+        "ORDER_BO_div_K_eq_4": true,
+        "e7_tilde_sq_sum": 48,
+        "note": "|BO|=48=4K=48=\u00ca7_sum_sq=48, McKay \u2192 E7"
+      }
+    },
+    "binary_icosahedral_mckay": {
+      "pass": true,
+      "n_checks": 9,
+      "details": {
+        "ORDER_BI_eq_EDGES_half": true,
+        "ORDER_BI_eq_E8_POSITIVE_ROOTS": true,
+        "ORDER_BI_eq_10K": true,
+        "ORDER_BI_eq_FULL_ICOS": true,
+        "ORDER_BI_eq_E8_TILDE_sq_sum": true,
+        "ORDER_BI_div_ORDER_BO_eq_2_5": true,
+        "ORDER_BI_div_ORDER_BT_eq_5": true,
+        "E8_TILDE_nodes_eq_Q2": true,
+        "E8_TILDE_nodes_eq_9": true,
+        "e8_tilde_sq_sum": 120,
+        "note": "|BI|=120=EDGES/2=120=\u00ca8_sum_sq=120, McKay \u2192 E8"
+      }
+    },
+    "e6_tilde_kac": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "kac_sum_eq_K": true,
+        "kac_sum_eq_COXETER_E6": true,
+        "node_count_eq_PHI6": true,
+        "node_count_eq_7": true,
+        "kac_max_eq_Q": true,
+        "kac_sq_eq_2K": true,
+        "kac_sq_eq_ORDER_BT": true,
+        "affine_node_label_1": true,
+        "labels": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          2,
+          1
+        ],
+        "sum": 12,
+        "sq_sum": 24
+      }
+    },
+    "e7_tilde_kac": {
+      "pass": true,
+      "n_checks": 10,
+      "details": {
+        "kac_sum_eq_2Q2": true,
+        "kac_sum_eq_18": true,
+        "kac_sum_eq_COXETER_E7": true,
+        "node_count_eq_E8_RANK": true,
+        "node_count_eq_8": true,
+        "kac_max_eq_4": true,
+        "kac_max_eq_MU": true,
+        "kac_sq_eq_ORDER_BO": true,
+        "kac_sq_eq_4K": true,
+        "affine_node_label_1": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4,
+          3,
+          2,
+          1,
+          2
+        ],
+        "sum": 18,
+        "sq_sum": 48
+      }
+    },
+    "e8_tilde_kac": {
+      "pass": true,
+      "n_checks": 11,
+      "details": {
+        "kac_sum_eq_E8_COXETER": true,
+        "kac_sum_eq_30": true,
+        "kac_sum_eq_COXETER_E8": true,
+        "kac_sum_eq_EDGES_div_rank": true,
+        "node_count_eq_Q2": true,
+        "node_count_eq_9": true,
+        "kac_max_eq_2Q": true,
+        "kac_sq_eq_ORDER_BI": true,
+        "kac_sq_eq_EDGES_half": true,
+        "kac_sq_eq_E8_POSITIVE_ROOTS": true,
+        "affine_node_label_1": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          4,
+          3,
+          2
+        ],
+        "sum": 30,
+        "sq_sum": 120
+      }
+    },
+    "coxeter_e_series": {
+      "pass": true,
+      "n_checks": 11,
+      "details": {
+        "h_E6_eq_K": true,
+        "h_E6_eq_12": true,
+        "h_E7_eq_2Q2": true,
+        "h_E7_eq_18": true,
+        "h_E8_eq_EDGES_div_rank": true,
+        "h_E8_eq_E8_COXETER": true,
+        "h_E8_eq_30": true,
+        "h_E6_x_h_E8_div_h_E7_eq_20": true,
+        "h_product_E678": true,
+        "h_E6_x_h_E8_eq_Q2_x_V": true,
+        "h_E7_x_h_E8_eq_TRANSPORT_x_2": true,
+        "h_E6": 12,
+        "h_E7": 18,
+        "h_E8": 30
+      }
+    },
+    "coxeter_small_rank": {
+      "pass": true,
+      "n_checks": 11,
+      "details": {
+        "h_A2_eq_Q": true,
+        "h_A2_eq_3": true,
+        "h_A3_eq_MU": true,
+        "h_A3_eq_4": true,
+        "h_D4_eq_2Q": true,
+        "h_D5_eq_E8_RANK": true,
+        "h_D5_eq_8": true,
+        "h_A2_x_h_A3_eq_K": true,
+        "h_A3_x_h_D5_eq_2K_plus_8": true,
+        "h_D4_x_h_D5_eq_48_eq_ORDER_BO": true,
+        "h_A2_x_h_D4_eq_2Q2": true,
+        "note": "h(A2)*h(A3) = Q*MU = K; h(D4)*h(D5) = 2Q*E8_RANK = |BO|"
+      }
+    },
+    "platonic_duality": {
+      "pass": true,
+      "n_checks": 10,
+      "details": {
+        "cube_V_eq_octa_F": true,
+        "cube_F_eq_octa_V": true,
+        "cube_E_eq_octa_E": true,
+        "icos_V_eq_dodec_F": true,
+        "icos_F_eq_dodec_V": true,
+        "icos_E_eq_dodec_E": true,
+        "tetra_V_eq_tetra_F": true,
+        "cube_VplusF_eq_2_PHI6": true,
+        "icos_VplusF_eq_2K_plus_E8_RANK": true,
+        "icos_VplusF_eq_2K_plus_8": true
+      }
+    },
+    "mckay_e_series_chain": {
+      "pass": true,
+      "n_checks": 10,
+      "details": {
+        "ORDER_BT_eq_2K": true,
+        "ORDER_BO_eq_4K": true,
+        "ORDER_BI_eq_10K": true,
+        "BO_div_BT_eq_2": true,
+        "BI_div_BT_eq_5": true,
+        "BI_x2_eq_BO_x5": true,
+        "BI_div_K_eq_PHI4": true,
+        "BI_eq_A5_x_2": true,
+        "BT_x2_eq_BO": true,
+        "BT_x5_eq_BI": true,
+        "note": "|BT|=24=2K, |BO|=48=4K, |BI|=120=10K=EDGES/2"
+      }
+    },
+    "transport_icosahedron": {
+      "pass": true,
+      "n_checks": 5,
+      "details": {
+        "TRANSPORT_eq_Q2_x_ICOS_E": true,
+        "TRANSPORT_eq_Q2_x_E8_COXETER": true,
+        "ICOS_E_x_ICOS_V_eq_K_x_E8_COXETER": true,
+        "ICOS_E_x_DODEC_F_eq_Q2_x_V": true,
+        "ICOS_E_x_Q_eq_TRANSPORT_div_Q": true,
+        "note": "TRANSPORT=270=Q\u00b2\u00d7h(E8)=Q\u00b2\u00d7ICOS_E; ICOS_E\u00d7ICOS_V=K\u00d7h(E8)=360=Q\u00b2\u00d7V"
+      }
+    },
+    "polyhedral_products": {
+      "pass": true,
+      "n_checks": 7,
+      "details": {
+        "ICOS_V_x_ICOS_E_eq_K_x_E8_COXETER": true,
+        "ICOS_V_x_ICOS_F_eq_K_x_V_half": true,
+        "ICOS_V_x_ICOS_F_eq_EDGES": true,
+        "CUBE_V_x_CUBE_E_eq_E8_RANK_x_K": true,
+        "CUBE_E_x_CUBE_F_eq_K_x_2Q": true,
+        "DODEC_V_x_DODEC_F_eq_EDGES": true,
+        "DODEC_E_x_DODEC_F_eq_TRANSPORT_plus_Q2xPHI4": true,
+        "note": "ICOS_V\u00d7ICOS_F = 240 = EDGES; DODEC_V\u00d7DODEC_F = 240 = EDGES"
+      }
+    },
+    "kac_label_max_values": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "E6_max_eq_Q": true,
+        "E7_max_eq_MU": true,
+        "E8_max_eq_2Q": true,
+        "E8_max_eq_6": true,
+        "E8_max_div_E6_max_eq_2": true,
+        "E7_max_div_E6_max_eq_1_third": true,
+        "label_max_product_E678": true,
+        "label_max_product_eq_6K": true,
+        "E6_max": 3,
+        "E7_max": 4,
+        "E8_max": 6
+      }
+    },
+    "icosa_binary_quotient": {
+      "pass": true,
+      "n_checks": 7,
+      "details": {
+        "ORDER_BI_eq_2_ORDER_A5": true,
+        "ORDER_A5_eq_ORDER_BI_half": true,
+        "ORDER_A5_eq_EDGES_div4": true,
+        "ORDER_A5_eq_TRANSPORT_div_PHI4_half": true,
+        "ICOS_V_x_ORDER_A5_eq_EDGES_x_Q": true,
+        "ORDER_A5_x_K_eq_3_x_240": true,
+        "ORDER_A5_x_K_eq_Q_x_EDGES": true,
+        "note": "|BI|=120=2|A5|=EDGES/2; |A5|\u00d7K=720=Q\u00d7EDGES"
+      }
+    },
+    "kac_ade_completeness": {
+      "pass": true,
+      "n_checks": 11,
+      "details": {
+        "E6_nodes_E7_nodes_E8_nodes_eq_7_8_9": true,
+        "E8_minus_E6_nodes_eq_2": true,
+        "E8_minus_E7_nodes_eq_1": true,
+        "node_count_product_E678": true,
+        "E6_min_eq_1": true,
+        "E7_min_eq_1": true,
+        "E8_min_eq_1": true,
+        "E8_kac_contains_6": true,
+        "node_count_product_eq_504": true,
+        "504_eq_K_x_42": true,
+        "E8_kac_sum_x_Q2_eq_TRANSPORT": true,
+        "node_counts": [
+          7,
+          8,
+          9
+        ],
+        "note": "\u00ca\u2086:7=PHI6, \u00ca\u2087:8=E8_RANK, \u00ca\u2088:9=Q\u00b2 nodes; sum(\u00ca\u2088)\u00d7Q\u00b2=TRANSPORT=270"
+      }
+    },
+    "solid_angle_faces": {
+      "pass": true,
+      "n_checks": 8,
+      "details": {
+        "TETRA_F_eq_MU": true,
+        "CUBE_F_eq_2Q": true,
+        "OCTA_F_eq_E8_RANK": true,
+        "DODEC_F_eq_K": true,
+        "ICOS_F_eq_V_half": true,
+        "face_sum_eq_total_V": true,
+        "face_sum_eq_50": true,
+        "50_eq_V_plus_PHI4": true,
+        "note": "Each Platonic solid face count encodes a distinct W(3,3) constant"
+      }
+    },
+    "vertex_counts_w33": {
+      "pass": true,
+      "n_checks": 9,
+      "details": {
+        "TETRA_V_eq_MU": true,
+        "CUBE_V_eq_E8_RANK": true,
+        "OCTA_V_eq_2Q": true,
+        "DODEC_V_eq_V_half": true,
+        "ICOS_V_eq_K": true,
+        "vertex_sum_eq_50": true,
+        "50_eq_V_plus_PHI4": true,
+        "vertex_product_top3": true,
+        "1920_eq_WD5_ORDER": true,
+        "note": "Cube\u00d7Dodec\u00d7Icos vertex product = 1920 = |W(D5)| = Gosset coset CCLXXVIII"
+      }
+    },
+    "edge_counts_w33": {
+      "pass": true,
+      "n_checks": 9,
+      "details": {
+        "TETRA_E_eq_2Q": true,
+        "CUBE_E_eq_K": true,
+        "OCTA_E_eq_K": true,
+        "DODEC_E_eq_E8_COXETER": true,
+        "ICOS_E_eq_E8_COXETER": true,
+        "edge_sum_eq_90": true,
+        "90_eq_TRANSPORT_div_Q": true,
+        "90_eq_Q2_x_PHI4": true,
+        "CUBE_E_x_ICOS_E_eq_TRANSPORT_plus_Q2_x_PHI4": true,
+        "note": "Edge sum = 90 = TRANSPORT/Q = Q\u00b2\u00d7PHI4; CUBE_E\u00d7ICOS_E=360=TRANSPORT+Q\u00b2\u00d7PHI4"
+      }
+    },
+    "binary_kac_sq_tower": {
+      "pass": true,
+      "n_checks": 11,
+      "details": {
+        "sq6_eq_2K": true,
+        "sq6_eq_ORDER_BT": true,
+        "sq7_eq_4K": true,
+        "sq7_eq_ORDER_BO": true,
+        "sq8_eq_10K": true,
+        "sq8_eq_ORDER_BI": true,
+        "sq8_eq_EDGES_half": true,
+        "sq7_div_sq6_eq_2": true,
+        "sq8_div_sq6_eq_5": true,
+        "sq8_div_sq7_x2_eq_sq8": true,
+        "sq6_x_sq7_x_sq8_eq_2K_x_4K_x_10K": true,
+        "sq6": 24,
+        "sq7": 48,
+        "sq8": 120,
+        "note": "Kac sq-sums: E6\u219224=2K, E7\u219248=4K=|BO|, E8\u2192120=10K=|BI|=EDGES/2"
+      }
+    },
+    "mckay_aut_connections": {
+      "pass": true,
+      "n_checks": 6,
+      "details": {
+        "AUT_ORDER_div_BI_eq_16_x_LINES27": true,
+        "AUT_div_BO": true,
+        "1080_eq_LINES27_x_V": true,
+        "AUT_div_BT_eq_2160": true,
+        "2160_eq_LINES27_x_V_x2": true,
+        "AUT_div_BI_x_Q2_eq_LINES27_x_16_x_Q2": true,
+        "note": "AUT/BI=432=16\u00d7LINES_27; AUT/BO=1080=LINES_27\u00d7V"
+      }
+    },
+    "icosa_dodeca_graph_params": {
+      "pass": true,
+      "n_checks": 9,
+      "details": {
+        "icos_degree_eq_5": true,
+        "dodec_degree_eq_Q": true,
+        "dodec_degree_eq_3": true,
+        "icos_degree_x_Q_eq_PHI4_x_Q_half": true,
+        "icos_degree_x_ICOS_V_eq_2_ICOS_E": true,
+        "dodec_degree_x_DODEC_V_eq_2_DODEC_E": true,
+        "icos_x_dodec_degree_eq_2Q_minus_Q": true,
+        "icos_degree_x_dodec_degree_eq_PHI4_plus_5": true,
+        "handshaking_icos_eq_dodec": true,
+        "icos_degree": 5,
+        "dodec_degree": 3
+      }
+    }
+  },
+  "constants": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "PHI4": 10,
+    "PHI6": 7,
+    "EDGES": 240,
+    "TETRA_V": 4,
+    "ICOS_V": 12,
+    "DODEC_V": 20,
+    "ORDER_BT": 24,
+    "ORDER_BO": 48,
+    "ORDER_BI": 120,
+    "COXETER_E6": 12,
+    "COXETER_E7": 18,
+    "COXETER_E8": 30,
+    "E6_TILDE_sum": 12,
+    "E7_TILDE_sum": 18,
+    "E8_TILDE_sum": 30
+  }
+}
