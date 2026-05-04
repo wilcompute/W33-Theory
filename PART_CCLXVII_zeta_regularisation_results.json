@@ -1,0 +1,204 @@
+{
+  "part": "CCLXVII",
+  "title": "Zeta Regularisation and the Tomotope Covering Tower",
+  "timestamp": "2026-05-03T22:25:14.663903",
+  "zeta_values": {
+    "zeta(-1)": "-1/12",
+    "zeta(0)": "-1/2",
+    "zeta(-3)": "1/120"
+  },
+  "w33_params": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "M_LAM": 27,
+    "LAP_MID": 10,
+    "LAP_TOP": 16
+  },
+  "tomotope": {
+    "TV": 4,
+    "TE": 12,
+    "TF": 16,
+    "TC": 8,
+    "chi": 0,
+    "T_FLAGS": 192
+  },
+  "bosonic_string": {
+    "D_crit": 26,
+    "D_sup": 10,
+    "N_trans": 24,
+    "casimir_energy": "-2",
+    "casimir_eq_neg_LAM": true
+  },
+  "euler_maclaurin": {
+    "correction_B2_over_2fact": "1/12",
+    "sum_V": 820,
+    "integral_V": 800,
+    "difference": 20
+  },
+  "dimension_jump": {
+    "PG33_points": 40,
+    "dim_projective": 3,
+    "dim_tomotope_ambient": 4,
+    "jump": 1
+  },
+  "checks": [
+    {
+      "id": "B01-zeta_neg1_is_neg1_over_12",
+      "pass": true
+    },
+    {
+      "id": "B02-zeta_neg1_denominator_eq_K",
+      "pass": true
+    },
+    {
+      "id": "B03-zeta_neg1_denominator_eq_TE",
+      "pass": true
+    },
+    {
+      "id": "B04-B2_eq_one_sixth",
+      "pass": true
+    },
+    {
+      "id": "B05-zeta_neg1_eq_neg_B2_over_2",
+      "pass": true
+    },
+    {
+      "id": "B06-D_bos_eq_26",
+      "pass": true
+    },
+    {
+      "id": "B07-D_bos_eq_M_LAM_minus1",
+      "pass": true
+    },
+    {
+      "id": "B08-D_sup_eq_10",
+      "pass": true
+    },
+    {
+      "id": "B09-D_sup_eq_LAP_MID",
+      "pass": true
+    },
+    {
+      "id": "B10-D_bos_minus_D_sup_eq_TF",
+      "pass": true
+    },
+    {
+      "id": "B11-D_bos_minus_D_sup_eq_LAP_TOP",
+      "pass": true
+    },
+    {
+      "id": "B12-N_trans_bos_eq_2K",
+      "pass": true
+    },
+    {
+      "id": "B13-N_trans_bos_eq_24",
+      "pass": true
+    },
+    {
+      "id": "B14-casimir_bos_eq_neg2",
+      "pass": true
+    },
+    {
+      "id": "B15-casimir_bos_eq_neg_LAM",
+      "pass": true
+    },
+    {
+      "id": "B16-N_trans_sup_eq_2_MU",
+      "pass": true
+    },
+    {
+      "id": "B17-N_trans_sup_eq_8",
+      "pass": true
+    },
+    {
+      "id": "B18-chi_tomotope_eq_0",
+      "pass": true
+    },
+    {
+      "id": "B19-T_FLAGS_eq_TE_times_TF",
+      "pass": true
+    },
+    {
+      "id": "B20-zeta_neg1_times_T_FLAGS_eq_neg_TF",
+      "pass": true
+    },
+    {
+      "id": "B21-zeta_neg1_times_T_FLAGS_eq_neg_LAP_TOP",
+      "pass": true
+    },
+    {
+      "id": "B22-abs_zeta_neg1_times_K_eq_unity",
+      "pass": true
+    },
+    {
+      "id": "B23-string_tachyon_numerator_eq_1",
+      "pass": true
+    },
+    {
+      "id": "B24-EM_correction_eq_1over12",
+      "pass": true
+    },
+    {
+      "id": "B25-EM_correction_denominator_eq_K",
+      "pass": true
+    },
+    {
+      "id": "B26-EM_correction_denominator_eq_TE",
+      "pass": true
+    },
+    {
+      "id": "B27-EM_correction_eq_neg_zeta_neg1",
+      "pass": true
+    },
+    {
+      "id": "B28-discrete_sum_V_eq_820",
+      "pass": true
+    },
+    {
+      "id": "B29-continuous_integral_V_eq_800",
+      "pass": true
+    },
+    {
+      "id": "B30-sum_minus_integral_eq_V_half",
+      "pass": true
+    },
+    {
+      "id": "B31-zeta_0_eq_neg_half",
+      "pass": true
+    },
+    {
+      "id": "B32-neg_zeta_0_times_K_eq_LAM_Q",
+      "pass": true
+    },
+    {
+      "id": "B33-zeta_neg3_eq_1over120",
+      "pass": true
+    },
+    {
+      "id": "B34-zeta_neg3_denominator_eq_V_Q",
+      "pass": true
+    },
+    {
+      "id": "B35-PG33_point_count_eq_V",
+      "pass": true
+    },
+    {
+      "id": "B36-TV_eq_Q_plus_1",
+      "pass": true
+    },
+    {
+      "id": "B37-dim_jump_discrete_to_continuous",
+      "pass": true
+    },
+    {
+      "id": "B38-dim_jump_eq_LAM_minus_1",
+      "pass": true
+    }
+  ],
+  "checks_passed": 38,
+  "checks_total": 38,
+  "verified": true
+}
