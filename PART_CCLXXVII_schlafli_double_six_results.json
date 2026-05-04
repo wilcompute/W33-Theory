@@ -1,0 +1,363 @@
+{
+  "part": "CCLXXVII",
+  "title": "Schläfli Double-Six, 27 Lines on a Cubic Surface, and the W(3,3) Arithmetic Atlas",
+  "headline": "DOUBLE_SIX_SIZE = K = 12 (W33 valency); NUM_TRIADS = V = 40 (W33 vertex count); 27 lines on cubic ↔ E6 fund. rep.; AUT = W(E6) = 51840",
+  "all_checks_pass": true,
+  "total_checks": 40,
+  "check_results": {
+    "double_six_size_equals_K": {
+      "pass": true,
+      "detail": {
+        "half_size": 6,
+        "double_six_size": 12,
+        "W33_valency_K": 12,
+        "equal": true
+      }
+    },
+    "double_six_count_36": {
+      "pass": true,
+      "detail": {
+        "AUT_ORDER": 51840,
+        "STAB_DOUBLE_SIX": 1440,
+        "from_orbit_formula": 36,
+        "num_double_sixes": 36,
+        "e6_positive_roots": 36
+      }
+    },
+    "stabiliser_double_six_1440": {
+      "pass": true,
+      "detail": {
+        "S6_order": 720,
+        "Z2_order": 2,
+        "stab_product": 1440,
+        "orbit_formula": 1440
+      }
+    },
+    "triads_equal_V_40": {
+      "pass": true,
+      "detail": {
+        "NUM_TRIADS": 40,
+        "V": 40,
+        "equal": true,
+        "stab_triad_order": 1296,
+        "WD5_order": 1920,
+        "WA5_order": 720,
+        "derivation": "40 triads of double-sixes = 40 = V(W33) — the key identity"
+      }
+    },
+    "tritangent_planes_45": {
+      "pass": true,
+      "detail": {
+        "C_10_2": 45,
+        "from_orbit": 45,
+        "num_tritangent": 45,
+        "stab_tritangent": 1152
+      }
+    },
+    "tritangent_hessian_split_9_36": {
+      "pass": true,
+      "detail": {
+        "fiber_triads": 9,
+        "affine_line_triads": 36,
+        "total": 45,
+        "expected": 45,
+        "affine_equals_num_double_sixes": true
+      }
+    },
+    "schlafli_graph_SRG_27_10_1_5": {
+      "pass": true,
+      "detail": {
+        "SRG_params": [
+          27,
+          10,
+          1,
+          5
+        ],
+        "feasibility_lhs": 80,
+        "feasibility_rhs": 80,
+        "feasible": true,
+        "schlafli_K_equals_PHI4": true,
+        "edges": 135
+      }
+    },
+    "complement_edges_216": {
+      "pass": true,
+      "detail": {
+        "complement_edges_formula": 216,
+        "six_cubed": 216,
+        "two_Q_cubed": 216,
+        "expected": 216
+      }
+    },
+    "we6_order_51840": {
+      "pass": true,
+      "detail": {
+        "order": 51840,
+        "factorisation": "2^7 × 3^4 × 5",
+        "2_7": 128,
+        "3_4": 81,
+        "5": 5,
+        "product": 51840,
+        "equals_AUT_ORDER": true
+      }
+    },
+    "simple_group_25920": {
+      "pass": true,
+      "detail": {
+        "AUT_ORDER_half": 25920,
+        "simple_group_order": 25920,
+        "PSp43_order": 25920,
+        "PSU42_order": 25920,
+        "isomorphisms": "PSp_4(3) ≅ PSU_4(2) ≅ PSΩ_5(3) ≅ PSΩ_6^-(2)"
+      }
+    },
+    "e6_roots_72": {
+      "pass": true,
+      "detail": {
+        "positive_roots": 36,
+        "negative_roots": 36,
+        "total": 72,
+        "factorisation": "2^3 × 3^2 = 8 × 9",
+        "equals_E6_ROOTS": true
+      }
+    },
+    "transport_edges_270": {
+      "pass": true,
+      "detail": {
+        "LINES_27": 27,
+        "SCHLAFLI_GRAPH_K": 10,
+        "product": 270,
+        "TRANSPORT_EDGES": 270,
+        "W33_edges": 240
+      }
+    },
+    "pg33_points_equal_V": {
+      "pass": true,
+      "detail": {
+        "q": 3,
+        "formula": "(q^4 - 1)/(q - 1)",
+        "pg_points": 40,
+        "PG33_POINTS": 40,
+        "equals_V": true
+      }
+    },
+    "w33_cycles_81": {
+      "pass": true,
+      "detail": {
+        "3_times_27": 81,
+        "Q_4": 81,
+        "W33_CYCLES": 81
+      }
+    },
+    "gewirtz_graph": {
+      "pass": true,
+      "detail": {
+        "aut_formula": 80640,
+        "GEWIRTZ_AUT": 80640,
+        "SRG_feasible": true,
+        "gewirtz_K_equals_PHI4": true,
+        "GEWIRTZ_V": 56
+      }
+    },
+    "del_pezzo_tower": {
+      "pass": true,
+      "detail": {
+        "dP3_lines": 27,
+        "dP4_lines": 16,
+        "dP5_lines": 10,
+        "dP3_equals_LINES_27": true,
+        "dP5_equals_PHI4": true,
+        "tower": "E6→D5→A4 ↔ 27→16→10 ↔ dP3→dP4→dP5"
+      }
+    },
+    "lines_27_decomposition_3_24": {
+      "pass": true,
+      "detail": {
+        "apex_lines": 3,
+        "orbiting_lines": 24,
+        "total": 27,
+        "LINES_27": 27,
+        "decomposition": "27 = 3 (apices) + 24 (3 orbits × 8)"
+      }
+    },
+    "hessian_witting_split_9_36": {
+      "pass": true,
+      "detail": {
+        "fiber_triads": 9,
+        "affine_triads": 36,
+        "families": 12,
+        "per_family": 3,
+        "total": 45,
+        "equals_45": true
+      }
+    },
+    "psl2p_tower": {
+      "pass": true,
+      "detail": {
+        "PSL_2_Q_order": 12,
+        "DOUBLE_SIX_SIZE": 12,
+        "equal": true,
+        "p_values": {
+          "Q": 3,
+          "Q+2": 5,
+          "PHI6": 7,
+          "K-1": 11,
+          "K+Q+MU": 19
+        },
+        "psl_orders": {
+          "3": 12,
+          "5": 60,
+          "7": 168,
+          "11": 660,
+          "19": 3420
+        }
+      }
+    },
+    "srg36_fiber_structure": {
+      "pass": true,
+      "detail": {
+        "SRG36_params": [
+          36,
+          20,
+          10,
+          12
+        ],
+        "fiber_count": 40,
+        "fiber_size": 6,
+        "triangle_fiber_product": 240,
+        "EDGES": 240,
+        "fiber_equals_V": true
+      }
+    },
+    "e6_gut_symmetry_chain": {
+      "pass": true,
+      "detail": {
+        "S6_Z2": 1440,
+        "STAB_DOUBLE_SIX": 1440,
+        "S5_Z2": 240,
+        "chain": "W(E6)[51840] → S6×Z2[1440] → S5×Z2[240] → (S3×S2)×Z2",
+        "gut_chain": "E6 → SU(6) → SU(5) → SU(3)×SU(2)×U(1)"
+      }
+    },
+    "combinatorial_batch": {
+      "pass": true,
+      "detail": {
+        "12*3 == K*Q == 36 == NUM_DOUBLE_SIXES": true,
+        "STAB_DOUBLE_SIX // NUM_TRIADS == 36": true,
+        "72*40 == 240*12": true,
+        "27*(V-K-1) == 3^6": true,
+        "AUT_ORDER == 45 * 1152": true,
+        "51840 // 36 // 40 == NUM_DOUBLE_SIXES (36)": true,
+        "W33_CYCLES * LINES_27 == 3^7": true,
+        "LINES_27^2 == Q^6": true,
+        "V*STAB_DOUBLE_SIX == AUT*V/36": true,
+        "TRANSPORT_EDGES == LINES_27 * PHI4": true,
+        "36 double-sixes == 36 positive E6 roots": true,
+        "Schlafli K == PHI4 == 10": true
+      }
+    },
+    "srg_feasibility": {
+      "pass": true,
+      "detail": {
+        "v_sg": 27,
+        "k_sg": 10,
+        "lam_sg": 1,
+        "mu_sg": 5,
+        "lhs": 80,
+        "rhs": 80,
+        "feasible": true,
+        "discriminant": 36,
+        "sqrt_disc": 6,
+        "is_perfect_square": true
+      }
+    },
+    "triality_and_w33": {
+      "pass": true,
+      "detail": {
+        "triality_order": 3,
+        "LINES_27": 27,
+        "cover": 81,
+        "W33_CYCLES": 81
+      }
+    },
+    "total_flag_count": {
+      "pass": true,
+      "detail": {
+        "flags_from_tritangent": 135,
+        "per_line": 5,
+        "cross_check": 135,
+        "MU_plus_1": 5,
+        "equal_MU_plus_1": true
+      }
+    },
+    "e6_d5_index_27": {
+      "pass": true,
+      "detail": {
+        "AUT_ORDER": 51840,
+        "WD5_order": 1920,
+        "index": 27,
+        "LINES_27": 27,
+        "equal": true
+      }
+    },
+    "e6_a5_index_72": {
+      "pass": true,
+      "detail": {
+        "AUT_ORDER": 51840,
+        "WA5_order": 720,
+        "index": 72,
+        "E6_ROOTS": 72,
+        "equal": true
+      }
+    },
+    "27_lines_e6_fund_rep": {
+      "pass": true,
+      "detail": {
+        "stab_line": 1920,
+        "WD5_order": 1920,
+        "equal": true,
+        "LINES_27": 27,
+        "e6_fund_rep_dim": 27
+      }
+    },
+    "edge_fraction_checks": {
+      "pass": true,
+      "detail": {
+        "w33_edges": 240,
+        "EDGES": 240,
+        "schlafli_edges": 135,
+        "36_times_40": 1440,
+        "STAB_DOUBLE_SIX": 1440
+      }
+    }
+  },
+  "constants": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "LINES_27": 27,
+    "DOUBLE_SIX_SIZE": 12,
+    "NUM_DOUBLE_SIXES": 36,
+    "STAB_DOUBLE_SIX": 1440,
+    "NUM_TRIADS": 40,
+    "NUM_TRITANGENT_PLANES": 45,
+    "STAB_TRITANGENT": 1152,
+    "SCHLAFLI_GRAPH_K": 10,
+    "COMPLEMENT_EDGES": 216,
+    "SIMPLE_GROUP_ORDER": 25920,
+    "E6_ROOTS": 72,
+    "E6_POSITIVE_ROOTS": 36,
+    "W33_CYCLES": 81,
+    "PG33_POINTS": 40,
+    "GEWIRTZ_V": 56,
+    "GEWIRTZ_AUT": 80640,
+    "TRANSPORT_EDGES": 270
+  }
+}
