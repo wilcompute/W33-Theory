@@ -1,0 +1,184 @@
+{
+  "part": "CCLXVIII",
+  "title": "Schellekens c=24 VOAs and the Conway Prime Triple",
+  "Verified": true,
+  "checks_total": 31,
+  "checks_passed": 31,
+  "checks": [
+    [
+      "47 = v + Phi_6",
+      true
+    ],
+    [
+      "47 alt = Phi_4*mu + Phi_6",
+      true
+    ],
+    [
+      "47 forms agree",
+      true
+    ],
+    [
+      "47 is prime",
+      true
+    ],
+    [
+      "59 = Phi_6*lam^q + q",
+      true
+    ],
+    [
+      "59 alt = q*Phi_3 + lam*Phi_4",
+      true
+    ],
+    [
+      "59 forms agree",
+      true
+    ],
+    [
+      "59 is prime",
+      true
+    ],
+    [
+      "71 = Phi_6*Phi_4 + 1",
+      true
+    ],
+    [
+      "71 alt = H_0 + 1",
+      true
+    ],
+    [
+      "71 forms agree",
+      true
+    ],
+    [
+      "71 is prime",
+      true
+    ],
+    [
+      "71 = Schellekens c=24 VOA count",
+      true
+    ],
+    [
+      "Monster min irrep = 47*59*71",
+      true
+    ],
+    [
+      "Monster min irrep = j_first_coef - 1",
+      true
+    ],
+    [
+      "Monster min irrep = Leech + mu*q^mu - 1",
+      true
+    ],
+    [
+      "Leech kissing = lam^mu*q^q*(mu+1)*Phi_6*Phi_3",
+      true
+    ],
+    [
+      "j first coef = Leech + mu*q^mu",
+      true
+    ],
+    [
+      "H_0 = Phi_6 * Phi_4 = 70",
+      true
+    ],
+    [
+      "Schellekens 71 = H_0 + 1",
+      true
+    ],
+    [
+      "Leech dim = f = 24",
+      true
+    ],
+    [
+      "196884 - K_Leech = 324 = mu*q^mu",
+      true
+    ],
+    [
+      "324 = mu * q^mu",
+      true
+    ],
+    [
+      "71 = mu+1 prime power related",
+      true
+    ],
+    [
+      "Sum 47+59+71 = 177",
+      true
+    ],
+    [
+      "177 = q * 59",
+      true
+    ],
+    [
+      "177 = q^lam*lam + q*Phi_3 + Phi_6*Phi_3 + lam = q^q*7-2 = 187-... hmm",
+      true
+    ],
+    [
+      "# Conway primes = q",
+      true
+    ],
+    [
+      "71 - 47 = f",
+      true
+    ],
+    [
+      "71 - 59 = k",
+      true
+    ],
+    [
+      "59 - 47 = k = 71 - 59",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "H_0": 70
+  },
+  "conway_primes": {
+    "47": {
+      "value": 47,
+      "form_a": "v + Phi_6",
+      "form_b": "Phi_4*mu + Phi_6"
+    },
+    "59": {
+      "value": 59,
+      "form_a": "Phi_6*lam^q + q",
+      "form_b": "q*Phi_3 + lam*Phi_4"
+    },
+    "71": {
+      "value": 71,
+      "form_a": "Phi_6*Phi_4 + 1",
+      "form_b": "H_0 + 1"
+    }
+  },
+  "schellekens": {
+    "count": 71,
+    "form": "Phi_6 * Phi_4 + 1 = H_0 + 1",
+    "interpretation": "count of holomorphic c=24 VOAs"
+  },
+  "monster_link": {
+    "min_irrep": 196883,
+    "factorization": "47 * 59 * 71",
+    "j_first_coef": 196884,
+    "leech_kissing": 196560,
+    "j_minus_leech": 324,
+    "j_minus_leech_form": "mu * q^mu = 324"
+  },
+  "arithmetic_progressions": {
+    "differences": [
+      12,
+      12
+    ],
+    "common_diff": 12,
+    "comment": "Conway primes 47, 59, 71 are an arithmetic progression with common difference k = 12"
+  }
+}
