@@ -1,0 +1,22 @@
+{
+  "part": "CCLXIV",
+  "title": "Cosmic Strings and Monopoles",
+  "checks_pass": 18,
+  "checks_total": 18,
+  "Verified": true,
+  "monopole_species_count": 6,
+  "monopole_charge_quantization": 5,
+  "su3_tooft_order": 3,
+  "q_matches_su3": 3,
+  "monopole_loops_genus_1": 2,
+  "monopole_loops_genus_2": 4,
+  "monopole_loops_genus_6": 12,
+  "cosmic_string_energy_scale": "10^16 GeV",
+  "gw_peak_ew_hz": 0.0032,
+  "gw_peak_gut_hz": 1.7e-08,
+  "effective_monopole_mass_factor": 12,
+  "chern_simons_level": 16,
+  "consistent_monopole_charge_pairs": 12,
+  "monopole_moduli_dimension_genus_1": 4,
+  "monopole_moduli_dimension_genus_2": 8
+}
