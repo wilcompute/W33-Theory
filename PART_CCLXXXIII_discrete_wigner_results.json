@@ -1,0 +1,167 @@
+{
+  "part": "CCLXXXIII",
+  "title": "Discrete Wigner Functions, Phase Space over GF(3), and the W(3,3) Quasi-Probability Atlas",
+  "date": "2026-05-04",
+  "bridge_script": "exploration/PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.py",
+  "test_file": "tests/test_discrete_wigner_cclxxxiii.py",
+  "checks_passed": 165,
+  "checks_total": 165,
+  "tests_passed": 87,
+  "tests_total": 87,
+  "srg_constants": {
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "Q": 3,
+    "PHI4": 10,
+    "PHI3": 13,
+    "PHI6": 7,
+    "LINES_27": 27,
+    "EDGES": 240,
+    "AUT_ORDER": 51840,
+    "TRANSPORT_EDGES": 270,
+    "GEWIRTZ_V": 56,
+    "COXETER_E6": 12,
+    "COXETER_E7": 18,
+    "COXETER_E8": 30
+  },
+  "phase_space_parameters": {
+    "n_qudits": 2,
+    "d": 3,
+    "dim_hilbert": 9,
+    "phase_space_size": 81,
+    "displacement_operators": 81,
+    "sp4f3_order": 51840,
+    "isotropic_lines": 40
+  },
+  "polar_space_geometry": {
+    "description": "Symplectic polar space W(3,3) over GF(3)",
+    "isotropic_points_pg33": 40,
+    "total_projective_points_pg33": 40,
+    "all_points_isotropic": true,
+    "formula_isotropic": "(q+1)(q^2+1) = 4 * 10 = 40 = V",
+    "totally_isotropic_lines": 90,
+    "formula_lines": "q^2(q^2+1) = 9 * 10 = 90",
+    "points_per_line": 4,
+    "lines_per_point": 4,
+    "identification": "Collinearity graph of W(3,3) = SRG(40,12,2,4)"
+  },
+  "symplectic_group": {
+    "group": "Sp(4,F_3)",
+    "order": 51840,
+    "formula": "3^4 * (3^2-1) * (3^4-1) = 81 * 8 * 80 = 51840",
+    "psp4f3_order": 25920,
+    "transvection_count": 40,
+    "transvections_equal_V": true,
+    "stabilizer_index": 1296,
+    "action": "transitive on W(3,3) vertices"
+  },
+  "stabilizer_states": {
+    "lagrangian_subspaces": 40,
+    "lagrangian_formula": "(q^2+1)(q+1) = 10 * 4 = 40 = V",
+    "states_per_lagrangian": 9,
+    "total_pure_stabilizer_states": 360,
+    "clifford_group_order": 25194240,
+    "clifford_formula": "2 * d^(2n+1) * |Sp(4,F_3)| = 2 * 243 * 51840"
+  },
+  "wigner_function": {
+    "formula": "W_rho(alpha) = (1/d^n) Tr[rho A(alpha)]",
+    "phase_point": "A(alpha) = D(alpha) A(0) D(alpha)^dagger",
+    "parity_operator": "A(0) = (1/d^n) sum_{beta in GF(3)^4} D(beta)",
+    "minimum_value": "-10/81",
+    "minimum_value_fraction": {"numerator": -10, "denominator": 81},
+    "minimum_formula": "-(d-1)/(d^{2n}) * (d^n+1)/2 for d=3, n=2",
+    "max_phase_point_eigenvalue": "8/9",
+    "negative_eigenvalue_slots": 72
+  },
+  "hudsons_theorem": {
+    "statement": "Pure state W(alpha) >= 0 for all alpha iff stabilizer state (odd prime d)",
+    "reference": "Gross 2006, Appleby 2005",
+    "consequence": "Wigner negativity = magic resource for non-Clifford computation",
+    "gottesman_knill": "Clifford circuits preserve W non-negativity"
+  },
+  "sic_povm": {
+    "sic_size_d3": 9,
+    "sic_size_d9": 81,
+    "sic_size_d9_equals_phase_space": true,
+    "equiangularity_d3": "1/4",
+    "equiangularity_d9": "1/10",
+    "equiangularity_d9_equals_1_over_phi4": true,
+    "zauner_element_order": 3,
+    "zauner_order_equals_Q": true
+  },
+  "w33_wigner_atlas": {
+    "description": "40 W(3,3) vertices as Wigner phase-space atlas",
+    "atlas_size": 40,
+    "each_vertex_encodes": [
+      "An isotropic direction in GF(3)^4",
+      "A totally isotropic line through origin",
+      "A stabilizer operator (Pauli eigenstate)",
+      "A Wigner marginal direction",
+      "A symplectic transvection in Sp(4,F_3)"
+    ],
+    "adjacency_meaning": "collinear = commuting Pauli observables",
+    "edge_count": 240,
+    "lagrangian_subspaces": 40,
+    "marginals_count": 40
+  },
+  "phase_space_entropy": {
+    "phase_space_size": 81,
+    "H_maximally_mixed": "4 log(3)",
+    "H_pure_stabilizer": "2 log(3)",
+    "entropy_ratio": 2
+  },
+  "ghz_state": {
+    "state": "|GHZ> = (|00>+|11>+|22>)/sqrt(3)",
+    "is_stabilizer": true,
+    "wigner_nonnegative": true,
+    "support_size": 9,
+    "wigner_value_on_support": "1/9",
+    "total_weight": 1
+  },
+  "maximally_entangled": {
+    "state": "|Phi+> = (|00>+|11>+|22>)/sqrt(3)",
+    "lagrangian_support": "q1=q2, p1+p2=0 in GF(3)^4",
+    "total_lagrangians": 40,
+    "sp2f3_order": 24,
+    "local_clifford_order": 576
+  },
+  "wigner_negativity_resource": {
+    "stabilizer_negativity": 0,
+    "magic_condition": "Wigner negativity > 0",
+    "aut_invariance": true,
+    "aut_order": 51840,
+    "isotropic_directions": 40,
+    "clifford_gates_per_axis": 12,
+    "sp4f3_preserves_nonnegativity": true
+  },
+  "transport_and_e8": {
+    "transport_edges": 270,
+    "formula": "PHI4 * LINES_27 = 10 * 27 = 270",
+    "e8_roots": 240,
+    "edges_equals_e8_roots": true,
+    "coxeter_e6": 12,
+    "coxeter_e6_equals_K": true,
+    "e8_connection": "EDGES=240 coincides with number of E8 roots"
+  },
+  "wigner_marginals": {
+    "isotropic_directions": 40,
+    "marginal_count": 40,
+    "line_size": 3,
+    "lines_per_direction": 9,
+    "total_affine_lines": 360
+  },
+  "key_identifications": [
+    "40 W(3,3) vertices = 40 isotropic directions in PG(3,3) = 40 Lagrangian subspaces = 40 stabilizer bases",
+    "|Sp(4,F_3)| = 51840 = AUT_ORDER = Aut(W(3,3))",
+    "W(3,3) collinearity graph = SRG(40,12,2,4)",
+    "For alternating form over GF(3), all PG(3,3) points are isotropic",
+    "EDGES=240 = number of E8 roots",
+    "TRANSPORT_EDGES=270 = PHI4 * LINES_27",
+    "Coxeter E6 = K = 12",
+    "360 pure stabilizer states = 40 Lagrangians * 9 states each",
+    "SIC size for d=9 = 81 = phase space size",
+    "Wigner negativity is the magic resource for non-Clifford computation"
+  ]
+}
