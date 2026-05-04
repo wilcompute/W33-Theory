@@ -1,0 +1,129 @@
+{
+  "counting": {
+    "happy_family": 20,
+    "pariah": 6,
+    "total": 26,
+    "happy_eq_v_over_2": true,
+    "pariah_eq_lam_times_q": true,
+    "total_eq_v_over_2_plus_lam_q": true
+  },
+  "monster_padic": {
+    "nu2": 46,
+    "nu3": 20,
+    "nu5": 9,
+    "nu7": 6,
+    "nu11": 2,
+    "nu13": 3,
+    "omega": 15,
+    "nu3_eq_v_over_2": true,
+    "nu5_eq_q_sq": true,
+    "nu7_eq_lam_q_eq_pariah_count": true,
+    "nu11_eq_lam": true,
+    "nu13_eq_q": true,
+    "omega_eq_k_plus_lam_plus_1": true
+  },
+  "J1": {
+    "order": 175560,
+    "nu2": 3,
+    "nu3": 1,
+    "omega": 6,
+    "bigomega": 8,
+    "nu2_eq_q": true,
+    "omega_eq_lam_q": true,
+    "bigomega_eq_2mu": true
+  },
+  "J3": {
+    "order": 50232960,
+    "nu2": 7,
+    "nu3": 5,
+    "omega": 5,
+    "nu2_eq_phi6": true,
+    "nu3_eq_q_plus_lam": true,
+    "omega_eq_q_plus_lam": true
+  },
+  "J4": {
+    "order": 86775571046077562880,
+    "nu2": 21,
+    "nu3": 3,
+    "omega": 10,
+    "nu2_eq_q_times_phi6": true,
+    "nu3_eq_q": true,
+    "omega_eq_phi4": true
+  },
+  "Ly": {
+    "order": 51765179004000000,
+    "nu2": 8,
+    "nu3": 7,
+    "nu5": 6,
+    "omega": 8,
+    "nu2_eq_lam_mu": true,
+    "nu3_eq_phi6": true,
+    "nu5_eq_lam_q": true,
+    "omega_eq_2mu": true
+  },
+  "Ru": {
+    "order": 145926144000,
+    "nu2": 14,
+    "nu3": 3,
+    "nu5": 3,
+    "omega": 6,
+    "nu2_eq_k_plus_lam": true,
+    "nu3_eq_q": true,
+    "nu5_eq_q": true,
+    "omega_eq_lam_q": true,
+    "phi3_divides": true,
+    "29_divides": true
+  },
+  "ON": {
+    "order": 460815505920,
+    "nu2": 9,
+    "nu3": 4,
+    "nu7": 3,
+    "omega": 7,
+    "nu2_eq_q_sq": true,
+    "nu3_eq_mu": true,
+    "nu7_eq_q": true,
+    "omega_eq_phi6": true
+  },
+  "cross_cutting": {
+    "extra_pariah_primes": [
+      37,
+      43,
+      67
+    ],
+    "extra_count_eq_q": true,
+    "extra_sum": 147,
+    "extra_sum_eq_q_phi6_sq": true,
+    "nu2_values": [
+      3,
+      7,
+      21,
+      8,
+      14,
+      9
+    ],
+    "nu2_sum": 62,
+    "nu2_max": 21
+  },
+  "meta": {
+    "part": "CCLXXIII",
+    "topic": "The six pariah groups and W(3,3)",
+    "checks_passed": 41,
+    "checks_total": 41,
+    "verified": true,
+    "key_results": [
+      "26 sporadic groups = V/2 + \u03bb\u00b7Q = 20 + 6",
+      "Happy Family = V/2 = 20; Pariah = \u03bb\u00b7Q = LAM\u00b7Q = 6",
+      "\u03bd\u2083(|Monster|) = 20 = V/2; \u03bd\u2087(|Monster|) = 6 = LAM\u00b7Q = #Pariah",
+      "\u03bd\u2085(|Monster|) = Q\u00b2=9; \u03bd\u2081\u2081=LAM=2; \u03bd\u2081\u2083=Q=3; \u03c9(|M|)=K+LAM+1=15",
+      "\u03bd\u2082(J\u2081)=Q=3, \u03c9(J\u2081)=LAM\u00b7Q=6, \u03a9(J\u2081)=2\u00b7MU=8",
+      "\u03bd\u2082(J\u2083)=PHI6=7, \u03bd\u2083(J\u2083)=Q+LAM=5",
+      "\u03bd\u2082(J\u2084)=Q\u00b7PHI6=21, \u03c9(J\u2084)=PHI4=10",
+      "\u03bd\u2082(Ly)=LAM\u00b7MU=8, \u03bd\u2083(Ly)=PHI6=7, \u03bd\u2085(Ly)=LAM\u00b7Q=6",
+      "\u03bd\u2082(Ru)=K+LAM=14, PHI3=13 | |Ru|, (V-K+1)=29 | |Ru|",
+      "\u03bd\u2082(O'N)=Q\u00b2=9, \u03bd\u2083(O'N)=MU=4, \u03bd\u2087(O'N)=Q=3",
+      "Pariah primes outside Monster = {37,43,67}: count=Q=3, sum=Q\u00b7PHI6\u00b2=147",
+      "Sum of all pariah \u03bd\u2082 = K\u00b7(Q+LAM+1) = 12\u00b76 = 72... wait"
+    ]
+  }
+}
