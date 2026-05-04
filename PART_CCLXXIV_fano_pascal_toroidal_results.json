@@ -1,0 +1,704 @@
+{
+  "part": "CCLXXIV",
+  "title": "Fano-Pascal-Toroidal Bridge: the (4,7) Orbit Duality",
+  "q": 3,
+  "V": 40,
+  "K": 12,
+  "MU": 4,
+  "PHI3": 13,
+  "PHI6": 7,
+  "checks_total": 87,
+  "checks_passed": 87,
+  "checks_failed": 0,
+  "failed_check_names": [],
+  "all_pass": true,
+  "sections": {
+    "A_fano_plane": {
+      "desc": "PG(2,2): 7 points, 7 lines, PSL(2,7) order 168",
+      "key": "7 = PHI6 = \u03a6\u2086(3)"
+    },
+    "B_csaszar": {
+      "desc": "K\u2087 on torus: 7 verts, 21 edges, 14 faces",
+      "key": "half-turn Z\u2082 orbits: 4 vertex-orbits = MU, 7 face-orbits = PHI6"
+    },
+    "C_szilassi": {
+      "desc": "dual torus polyhedron: 14 verts, 21 edges, 7 faces",
+      "key": "half-turn Z\u2082 orbits: 7 vertex-orbits = PHI6, 4 face-orbits = MU"
+    },
+    "D_heawood": {
+      "desc": "Szilassi face-adjacency = Heawood graph",
+      "key": "Heawood = Levi graph of Fano plane: bipartite, 14 nodes, 21 edges, girth 6"
+    },
+    "E_pascal": {
+      "desc": "Gaussian Pascal row [1,40,130,40,1]",
+      "key": "local split PHI3 = MU + Q\u00b2 = 4 + 9 = 13"
+    },
+    "F_galois": {
+      "desc": "5+2 split from (Z/7Z)* and cyclic number 142857",
+      "key": "multiplier 6 = complex conjugation \u03c3\u2086; 5 Csasz\u00e1r + 2 Szilassi = 7"
+    },
+    "G_w33": {
+      "desc": "W(3,3) arithmetic linkages",
+      "key": "MU \u00d7 PHI6 = 28 = D\u2084-triality count; (K\u22121)\u00b2 = V + Q\u2074 = 121"
+    }
+  },
+  "key_identity": "MU \u00d7 PHI6 = 4 \u00d7 7 = 28 = D\u2084-triality count (zero free parameters, q=3)",
+  "orbit_duality": {
+    "csaszar_vertex_orbits": 4,
+    "csaszar_face_orbits": 7,
+    "szilassi_vertex_orbits": 7,
+    "szilassi_face_orbits": 4,
+    "swap": "(MU, PHI6) \u2194 (PHI6, MU): exact half-turn orbit dual"
+  },
+  "pascal_local_split": {
+    "PHI3": 13,
+    "isotropic_per_point": 4,
+    "nonisotropic_per_point": 9,
+    "identity": "PHI3 = MU + Q\u00b2 = 4 + 9 = 13"
+  },
+  "checks": [
+    {
+      "name": "fano_point_count",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "PG(2,2) has exactly 7 points"
+    },
+    {
+      "name": "fano_line_count",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "PG(2,2) has exactly 7 lines (self-dual projective plane)"
+    },
+    {
+      "name": "fano_points_per_line",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "every line contains exactly 3 points"
+    },
+    {
+      "name": "fano_lines_per_point",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "every point lies on exactly 3 lines"
+    },
+    {
+      "name": "fano_self_dual",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "|points| = |lines| = 7: Fano plane is self-dual"
+    },
+    {
+      "name": "fano_incidence_count",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "21 = 7 lines \u00d7 3 pts/line total incidences"
+    },
+    {
+      "name": "fano_incidence_symmetry",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "21 = 7 points \u00d7 3 lines/point (same total)"
+    },
+    {
+      "name": "fano_lines_give_k7_edges",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "21 = C(7,2): Fano incidence count = K\u2087 edge count"
+    },
+    {
+      "name": "psl27_order",
+      "value": 168,
+      "expected": 168,
+      "pass": true,
+      "note": "Aut(Fano) = PSL(2,7) = GL(3,2), order 168"
+    },
+    {
+      "name": "psl27_order_factored",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "168 = 7 \u00d7 24"
+    },
+    {
+      "name": "psl27_order_gl32",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "168 = 7 \u00d7 8 \u00d7 3 = |GL(3,2)|"
+    },
+    {
+      "name": "psl27_order_phi6_times_24",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "168 = PHI6 \u00d7 24 = 7 \u00d7 24"
+    },
+    {
+      "name": "fano_size_is_phi6",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "7 = PHI6 = \u03a6\u2086(3) = q\u00b2\u2212q+1: Fano plane size is a W(3,3) eigenvalue parameter"
+    },
+    {
+      "name": "csaszar_vertices",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Csasz\u00e1r = K\u2087 on torus: 7 vertices"
+    },
+    {
+      "name": "csaszar_edges",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "Csasz\u00e1r: 21 = C(7,2) edges (complete graph)"
+    },
+    {
+      "name": "csaszar_faces",
+      "value": 14,
+      "expected": 14,
+      "pass": true,
+      "note": "Csasz\u00e1r: 14 triangular faces"
+    },
+    {
+      "name": "csaszar_euler_zero",
+      "value": 0,
+      "expected": 0,
+      "pass": true,
+      "note": "torus: V\u2212E+F = 7\u221221+14 = 0"
+    },
+    {
+      "name": "csaszar_faces_split_7_7",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "14 faces = 7 Fano lines (Steiner triple system S(2,3,7)) + 7 complementary triples"
+    },
+    {
+      "name": "csaszar_faces_per_vertex",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "each of 7 vertices belongs to 14\u00d73/7 = 6 triangular faces"
+    },
+    {
+      "name": "csaszar_vertex_orbits_z2",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "Z\u2082 on 7 vertices: 1 fixed + 3 pairs = 4 orbits"
+    },
+    {
+      "name": "csaszar_vertex_orbits_eq_mu",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "Csasz\u00e1r vertex-orbits = MU = 4"
+    },
+    {
+      "name": "csaszar_face_orbits_z2",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Z\u2082 on 14 faces: 7 pairs = 7 orbits"
+    },
+    {
+      "name": "csaszar_face_orbits_eq_phi6",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Csasz\u00e1r face-orbits = PHI6 = 7"
+    },
+    {
+      "name": "szilassi_vertices",
+      "value": 14,
+      "expected": 14,
+      "pass": true,
+      "note": "Szilassi: 14 vertices (dual of 14 Csasz\u00e1r faces)"
+    },
+    {
+      "name": "szilassi_edges",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "Szilassi: 21 edges (same as Csasz\u00e1r)"
+    },
+    {
+      "name": "szilassi_faces",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Szilassi: 7 hexagonal faces (dual of Csasz\u00e1r's 7 vertices)"
+    },
+    {
+      "name": "szilassi_euler_zero",
+      "value": 0,
+      "expected": 0,
+      "pass": true,
+      "note": "torus: V\u2212E+F = 14\u221221+7 = 0"
+    },
+    {
+      "name": "szilassi_vertex_orbits_z2",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Z\u2082 on 14 vertices: 7 pairs = 7 orbits"
+    },
+    {
+      "name": "szilassi_vertex_orbits_eq_phi6",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "Szilassi vertex-orbits = PHI6 = 7"
+    },
+    {
+      "name": "szilassi_face_orbits_z2",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "Z\u2082 on 7 faces: 1 fixed + 3 pairs = 4 orbits"
+    },
+    {
+      "name": "szilassi_face_orbits_eq_mu",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "Szilassi face-orbits = MU = 4"
+    },
+    {
+      "name": "orbit_dual_swap_csaszar",
+      "value": [
+        4,
+        7
+      ],
+      "expected": [
+        4,
+        7
+      ],
+      "pass": true,
+      "note": "Csasz\u00e1r (vertex-orbits, face-orbits) = (MU, PHI6) = (4, 7)"
+    },
+    {
+      "name": "orbit_dual_swap_szilassi",
+      "value": [
+        7,
+        4
+      ],
+      "expected": [
+        7,
+        4
+      ],
+      "pass": true,
+      "note": "Szilassi (vertex-orbits, face-orbits) = (PHI6, MU) = (7, 4)"
+    },
+    {
+      "name": "orbit_swap_is_exact_dual",
+      "value": [
+        7,
+        4
+      ],
+      "expected": [
+        7,
+        4
+      ],
+      "pass": true,
+      "note": "(4,7)[::-1] = (7,4): Csasz\u00e1r and Szilassi are orbit-dual"
+    },
+    {
+      "name": "orbit_product_28",
+      "value": 28,
+      "expected": 28,
+      "pass": true,
+      "note": "MU \u00d7 PHI6 = 4 \u00d7 7 = 28"
+    },
+    {
+      "name": "orbit_product_eq_d4_triality",
+      "value": 28,
+      "expected": 28,
+      "pass": true,
+      "note": "28 = number of D\u2084-triality graphs from W(3,3) (paper \u00a7D\u2084 Triality and the 28 Graphs)"
+    },
+    {
+      "name": "heawood_node_count",
+      "value": 14,
+      "expected": 14,
+      "pass": true,
+      "note": "Heawood graph: 14 nodes (7 point-nodes + 7 line-nodes)"
+    },
+    {
+      "name": "heawood_edge_count",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "Heawood graph: 21 edges"
+    },
+    {
+      "name": "heawood_bipartite",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "Heawood graph is bipartite (point-nodes vs line-nodes)"
+    },
+    {
+      "name": "heawood_3regular",
+      "value": [
+        3
+      ],
+      "expected": [
+        3
+      ],
+      "pass": true,
+      "note": "Heawood graph is 3-regular"
+    },
+    {
+      "name": "heawood_nodes_2phi6",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "14 = 2 \u00d7 PHI6 = 2 \u00d7 7 nodes"
+    },
+    {
+      "name": "heawood_edges_eq_csaszar_edges",
+      "value": 21,
+      "expected": 21,
+      "pass": true,
+      "note": "Heawood: 21 edges = Csasz\u00e1r edge count (both encode K\u2087/Fano)"
+    },
+    {
+      "name": "heawood_is_levi_fano",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "21 = 7 pts \u00d7 3 lines/pt: Heawood is the Levi graph of Fano"
+    },
+    {
+      "name": "heawood_girth_6",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "Heawood graph has girth 6: it is the (3,6)-cage"
+    },
+    {
+      "name": "heawood_is_36_cage",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "Heawood is the smallest 3-regular graph with girth 6"
+    },
+    {
+      "name": "pascal_row_0",
+      "value": 1,
+      "expected": 1,
+      "pass": true,
+      "note": "[4,0]_3 = 1 (the trivial subspace)"
+    },
+    {
+      "name": "pascal_row_1",
+      "value": 40,
+      "expected": 40,
+      "pass": true,
+      "note": "[4,1]_3 = 40 = V (projective points of PG(3,F\u2083))"
+    },
+    {
+      "name": "pascal_row_2",
+      "value": 130,
+      "expected": 130,
+      "pass": true,
+      "note": "[4,2]_3 = 130 (projective lines of PG(3,F\u2083))"
+    },
+    {
+      "name": "pascal_row_3",
+      "value": 40,
+      "expected": 40,
+      "pass": true,
+      "note": "[4,3]_3 = 40 = V (projective hyperplanes of PG(3,F\u2083))"
+    },
+    {
+      "name": "pascal_row_4",
+      "value": 1,
+      "expected": 1,
+      "pass": true,
+      "note": "[4,4]_3 = 1 (the full space)"
+    },
+    {
+      "name": "pascal_row_palindrome",
+      "value": [
+        1,
+        40,
+        130,
+        40,
+        1
+      ],
+      "expected": [
+        1,
+        40,
+        130,
+        40,
+        1
+      ],
+      "pass": true,
+      "note": "Gaussian Pascal row [1,40,130,40,1] is palindromic"
+    },
+    {
+      "name": "pascal_line_split",
+      "value": true,
+      "expected": true,
+      "pass": true,
+      "note": "130 projective lines = 40 isotropic + 90 non-isotropic (PART LXIV)"
+    },
+    {
+      "name": "pascal_iso_to_edges",
+      "value": 240,
+      "expected": 240,
+      "pass": true,
+      "note": "40 isotropic lines \u00d7 C(4,2)=6 unordered pairs = 240 = EDGES"
+    },
+    {
+      "name": "pascal_local_phi3",
+      "value": 13,
+      "expected": 13,
+      "pass": true,
+      "note": "PHI3 = \u03a6\u2083(3) = 13 = q\u00b2+q+1 lines through each W(3,3) point"
+    },
+    {
+      "name": "pascal_local_mu_iso",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "MU = 4 = q+1 = isotropic lines per W(3,3) point"
+    },
+    {
+      "name": "pascal_local_q2_noniso",
+      "value": 9,
+      "expected": 9,
+      "pass": true,
+      "note": "Q\u00b2 = 9 = non-isotropic lines per W(3,3) point"
+    },
+    {
+      "name": "pascal_local_split_13_4_9",
+      "value": 13,
+      "expected": 13,
+      "pass": true,
+      "note": "PHI3 = MU + Q\u00b2: 13 = 4 + 9 (local Pascal split)"
+    },
+    {
+      "name": "pascal_mu_eq_csaszar_vertex_orbits",
+      "value": 4,
+      "expected": 4,
+      "pass": true,
+      "note": "MU = 4 = isotropic lines/pt = Csasz\u00e1r vertex-orbits: Pascal \u2194 toroidal"
+    },
+    {
+      "name": "pascal_phi6_from_q",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "PHI6 = \u03a6\u2086(3) = q\u00b2\u2212q+1 = 7"
+    },
+    {
+      "name": "pascal_phi3_from_q",
+      "value": 13,
+      "expected": 13,
+      "pass": true,
+      "note": "PHI3 = \u03a6\u2083(3) = q\u00b2+q+1 = 13"
+    },
+    {
+      "name": "pascal_phi3_phi6_product_91",
+      "value": 91,
+      "expected": 91,
+      "pass": true,
+      "note": "PHI3 \u00d7 PHI6 = 13 \u00d7 7 = 91"
+    },
+    {
+      "name": "galois_z7star",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "|(Z/7Z)*| = 6: 6 non-zero residues mod 7"
+    },
+    {
+      "name": "galois_cyclic_order_6",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "(Z/7Z)* \u2245 Z/6Z (cyclic): order 6 = |Gal(Q(\u03b6\u2087)/Q)|"
+    },
+    {
+      "name": "galois_conj_mult_6",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "\u03c3\u2086: \u03b6\u2087 \u21a6 \u03b6\u2087\u2076 = \u03b6\u2087\u207b\u00b9 (complex conjugation), multiplier 6"
+    },
+    {
+      "name": "galois_6_self_inverse",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "6\u207b\u00b9 \u2261 6 mod 7 (self-inverse): conjugation is an involution"
+    },
+    {
+      "name": "galois_five_primal_multipliers",
+      "value": 5,
+      "expected": 5,
+      "pass": true,
+      "note": "5 non-conjugating multipliers {1,2,3,4,5} \u2192 5 Csasz\u00e1r realizations"
+    },
+    {
+      "name": "galois_one_conj_multiplier",
+      "value": 1,
+      "expected": 1,
+      "pass": true,
+      "note": "1 conjugating multiplier (\u03c3\u2086) + dual completion \u2192 2 Szilassi realizations"
+    },
+    {
+      "name": "galois_5_plus_2_eq_phi6",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "5 Csasz\u00e1r + 2 Szilassi = 7 = PHI6 = |Fano plane|"
+    },
+    {
+      "name": "galois_5_plus_2_eq_fano_pts",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "5 + 2 = 7 = number of Fano points (cross-check with built PG(2,2))"
+    },
+    {
+      "name": "cyclic_142857_times_7",
+      "value": 999999,
+      "expected": 999999,
+      "pass": true,
+      "note": "142857 \u00d7 7 = 999999 (cyclic number for 1/7)"
+    },
+    {
+      "name": "cyclic_142857_period",
+      "value": 6,
+      "expected": 6,
+      "pass": true,
+      "note": "142857 has period 6 = |(Z/7Z)*|"
+    },
+    {
+      "name": "cyclic_142857_digit_sum",
+      "value": 27,
+      "expected": 27,
+      "pass": true,
+      "note": "digit sum of 142857 = 27 = Q\u00b3 = q\u00b3"
+    },
+    {
+      "name": "cyclic_fano_link",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "period 6 + 1 = 7 = PHI6: cyclic number links to Fano via +1"
+    },
+    {
+      "name": "V_gaussian_binom_41",
+      "value": 40,
+      "expected": 40,
+      "pass": true,
+      "note": "[4,1]_q = (q\u2074\u22121)/(q\u22121) = 40 = V"
+    },
+    {
+      "name": "lines_gaussian_binom_42",
+      "value": 130,
+      "expected": 130,
+      "pass": true,
+      "note": "[4,2]_q = 130 (all projective lines in PG(3,F\u2083))"
+    },
+    {
+      "name": "edges_formula",
+      "value": 240,
+      "expected": 240,
+      "pass": true,
+      "note": "EDGES = K\u00b7V/2 = 12\u00b740/2 = 240"
+    },
+    {
+      "name": "121_identity",
+      "value": 121,
+      "expected": 121,
+      "pass": true,
+      "note": "(K\u22121)\u00b2 = 11\u00b2 = 121"
+    },
+    {
+      "name": "121_decomp_v_q4",
+      "value": 121,
+      "expected": 121,
+      "pass": true,
+      "note": "(K\u22121)\u00b2 = V + Q\u2074 = 40 + 81 = 121"
+    },
+    {
+      "name": "seventh_overdetermination",
+      "value": 0,
+      "expected": 0,
+      "pass": true,
+      "note": "q(q\u22123)(q+1) = 0 iff q = 3: seventh overdetermination (unique to q=3)"
+    },
+    {
+      "name": "phi6_from_q_formula",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "\u03a6\u2086(3) = 3\u00b2\u22123+1 = 7 = PHI6"
+    },
+    {
+      "name": "phi3_from_q_formula",
+      "value": 13,
+      "expected": 13,
+      "pass": true,
+      "note": "\u03a6\u2083(3) = 3\u00b2+3+1 = 13 = PHI3"
+    },
+    {
+      "name": "phi4_from_q_formula",
+      "value": 10,
+      "expected": 10,
+      "pass": true,
+      "note": "\u03a6\u2084(3) = 3\u00b2+1 = 10 = PHI4"
+    },
+    {
+      "name": "d4_triality_28_eq_mu_phi6",
+      "value": 28,
+      "expected": 28,
+      "pass": true,
+      "note": "28 = MU \u00d7 PHI6 = (iso lines/pt) \u00d7 (Fano size) = D\u2084-triality count"
+    },
+    {
+      "name": "total_realizations_is_phi6",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "5 + 2 = 7 realizations = PHI6 = \u03a6\u2086(q) = Fano size"
+    },
+    {
+      "name": "fano_size_eq_szilassi_faces",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "7 = |Fano points| = Szilassi face count: Fano \u2194 Szilassi faces"
+    },
+    {
+      "name": "fano_size_eq_csaszar_vertices",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "7 = |Fano points| = Csasz\u00e1r vertex count: Fano \u2194 Csasz\u00e1r vertices"
+    },
+    {
+      "name": "unified_key_identity_phi6_eq_7",
+      "value": 7,
+      "expected": 7,
+      "pass": true,
+      "note": "PHI6 = 7: the single number uniting Fano, Csasz\u00e1r, Szilassi, and (Z/7Z)*"
+    }
+  ]
+}
