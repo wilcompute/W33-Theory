@@ -1,0 +1,77 @@
+{
+  "cyclotomic_tower": {
+    "phi1": 2,
+    "phi2": 4,
+    "phi3": 13,
+    "phi4": 10,
+    "phi6": 7,
+    "phi1_eq_LAM": true,
+    "phi2_eq_MU": true,
+    "phi4_eq_LAP_MID": true
+  },
+  "sp4_order": {
+    "sp4_order": 51840,
+    "eq_aut_order": true,
+    "factored": "3^4 * Phi1^2 * Phi2^2 * Phi4 = 51840"
+  },
+  "langlands_dual": {
+    "sp4_dim": 10,
+    "so5_dim": 10,
+    "both_equal_phi4": true,
+    "phi4_eq_q_sq_plus_1": true,
+    "sp4_is_langlands_dual_of_so5": true,
+    "b2_eq_c2": true
+  },
+  "laplacian_satake": {
+    "lap_eig_0": 0,
+    "lap_eig_mid": 10,
+    "lap_eig_top": 16,
+    "lap_mid_eq_k_minus_lam": true,
+    "lap_top_eq_k_plus_mu": true,
+    "so5_fund_rep1_dim": 5,
+    "so5_fund_rep2_dim": 4,
+    "spectral_gap": 8
+  },
+  "p_adic_valuations": {
+    "nu2_51840": 7,
+    "nu3_51840": 4,
+    "nu5_51840": 1,
+    "nu2_eq_phi6": true,
+    "nu3_eq_mu": true,
+    "nu2_eq_q_plus_mu": true
+  },
+  "gf3_polar_space": {
+    "point_count": 40,
+    "eq_V": true,
+    "line_count": 120,
+    "ovoid_size": 4,
+    "spread_lines": 10,
+    "spread_lines_eq_phi4": true
+  },
+  "geometric_langlands": {
+    "rank": 2,
+    "positive_roots": 4,
+    "dim_flag_variety": 4,
+    "dim_flag_eq_mu": true,
+    "weyl_order": 8,
+    "weyl_eq_2mu": true,
+    "schubert_cells": 8,
+    "total_roots": 8
+  },
+  "meta": {
+    "part": "CCLXXII",
+    "topic": "Sp(4)/SO(5) Langlands duality and cyclotomic tower at q=3",
+    "checks_passed": 40,
+    "checks_total": 40,
+    "verified": true,
+    "key_results": [
+      "All W(3,3) parameters = cyclotomic poly \u03a6\u2099(3): \u03a6\u2081=LAM, \u03a6\u2082=MU, \u03a6\u2083=PHI3, \u03a6\u2084=PHI4=LAP_MID, \u03a6\u2086=PHI6",
+      "Aut(W(3,3)) = Sp(4,3) of order q\u2074(q\u00b2-1)(q\u2074-1) = 51840 = AUT_ORDER",
+      "Langlands dual of Sp(4) is SO(5); both have dim = Q\u00b2+1 = PHI4 = LAP_MID = 10",
+      "\u03bd\u2082(AUT_ORDER) = PHI6 = 7 = Q+MU,  \u03bd\u2083(AUT_ORDER) = MU = 4",
+      "W(3,3) polar space points = (Q\u2074-1)/(Q-1) = Q\u00b3+Q\u00b2+Q+1 = V = 40",
+      "Flag variety Sp(4)/B has dim = MU = 4; Weyl group W(C\u2082) order = 2\u00b7MU = 8",
+      "Spread of W(3,3) has PHI4=10 lines; Schubert cells = |W(C\u2082)| = 2\u00b7MU = 8"
+    ]
+  }
+}
