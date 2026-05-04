@@ -1,0 +1,289 @@
+{
+  "part": "CCLXXI",
+  "title": "Monster Group, Baby Monster & Monstrous Moonshine",
+  "checks_passed": 40,
+  "checks_total": 40,
+  "verified": true,
+  "bridge_checks": [
+    {
+      "id": "B01",
+      "lhs": 26,
+      "rhs": 26,
+      "pass": true,
+      "note": "Total sporadic simple groups = 2K+2"
+    },
+    {
+      "id": "B02",
+      "lhs": 20,
+      "rhs": 20,
+      "pass": true,
+      "note": "Happy Family (Monster subquotients) = EDGES/K = 240/12"
+    },
+    {
+      "id": "B03",
+      "lhs": 6,
+      "rhs": 6,
+      "pass": true,
+      "note": "Pariah groups (outside Happy Family) = LAM*Q = 2\u00d73"
+    },
+    {
+      "id": "B04",
+      "lhs": 15,
+      "rhs": 15,
+      "pass": true,
+      "note": "Distinct prime divisors of |Monster| = K+Q = 12+3"
+    },
+    {
+      "id": "B05",
+      "lhs": 11,
+      "rhs": 11,
+      "pass": true,
+      "note": "Distinct prime divisors of |Baby Monster| = LAP_TOP-PHI6+LAM = 16-7+2"
+    },
+    {
+      "id": "B06",
+      "lhs": 6,
+      "rhs": 6,
+      "pass": true,
+      "note": "Number of moonshine primes = LAM*Q = 6"
+    },
+    {
+      "id": "B07",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 2+1=3=Q  (moonshine prime 2)"
+    },
+    {
+      "id": "B08",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 3+1=4=MU  (moonshine prime 3)"
+    },
+    {
+      "id": "B09",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 5+1=6=LAM*Q  (moonshine prime 5)"
+    },
+    {
+      "id": "B10",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 7+1=8=2*MU  (moonshine prime 7)"
+    },
+    {
+      "id": "B11",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 11+1=12=K  (moonshine prime 11)"
+    },
+    {
+      "id": "B12",
+      "lhs": 0,
+      "rhs": 0,
+      "pass": true,
+      "note": "2K divisible by 23+1=24=2K  (moonshine prime 23)"
+    },
+    {
+      "id": "B13",
+      "lhs": 51,
+      "rhs": 51,
+      "pass": true,
+      "note": "Sum of moonshine primes = M_LAM+LAM*K = 27+24 = 51"
+    },
+    {
+      "id": "B14",
+      "lhs": 46,
+      "rhs": 46,
+      "pass": true,
+      "note": "v\u2082(|M|) = 46 = 2K+LAP_TOP+MU+LAM = 24+16+4+2"
+    },
+    {
+      "id": "B15",
+      "lhs": 20,
+      "rhs": 20,
+      "pass": true,
+      "note": "v\u2083(|M|) = 20 = EDGES/K = 240/12"
+    },
+    {
+      "id": "B16",
+      "lhs": 9,
+      "rhs": 9,
+      "pass": true,
+      "note": "v\u2085(|M|) = 9 = Q\u00b2 = 3\u00b2"
+    },
+    {
+      "id": "B17",
+      "lhs": 6,
+      "rhs": 6,
+      "pass": true,
+      "note": "v\u2087(|M|) = 6 = LAM*Q = 2\u00d73"
+    },
+    {
+      "id": "B18",
+      "lhs": 2,
+      "rhs": 2,
+      "pass": true,
+      "note": "v\u2081\u2081(|M|) = 2 = LAM"
+    },
+    {
+      "id": "B19",
+      "lhs": 3,
+      "rhs": 3,
+      "pass": true,
+      "note": "v\u2081\u2083(|M|) = 3 = Q"
+    },
+    {
+      "id": "B20",
+      "lhs": 29,
+      "rhs": 29,
+      "pass": true,
+      "note": "29 = M_LAM+LAM = 27+2  (Monster prime with exponent 1)"
+    },
+    {
+      "id": "B21",
+      "lhs": 31,
+      "rhs": 31,
+      "pass": true,
+      "note": "31 = V-Q\u00b2 = 40-9  (Monster prime; also: 744 = 31\u00d724 = j-function constant)"
+    },
+    {
+      "id": "B22",
+      "lhs": 41,
+      "rhs": 41,
+      "pass": true,
+      "note": "41 = V+1 = 40+1  (Monster prime with exponent 1)"
+    },
+    {
+      "id": "B23",
+      "lhs": 47,
+      "rhs": 47,
+      "pass": true,
+      "note": "47 = V+MU+Q = 40+4+3  (Monster & Baby Monster prime)"
+    },
+    {
+      "id": "B24",
+      "lhs": 59,
+      "rhs": 59,
+      "pass": true,
+      "note": "59 = V+PHI3+PHI4-MU = 40+13+10-4  (Monster prime)"
+    },
+    {
+      "id": "B25",
+      "lhs": 71,
+      "rhs": 71,
+      "pass": true,
+      "note": "71 = V+PHI3+LAP_TOP+LAM = 40+13+16+2  (Monster prime)"
+    },
+    {
+      "id": "B26",
+      "lhs": 196883,
+      "rhs": 196883,
+      "pass": true,
+      "note": "47\u00d759\u00d771 = 196883 = dim(smallest non-trivial Monster representation)"
+    },
+    {
+      "id": "B27",
+      "lhs": 200,
+      "rhs": 200,
+      "pass": true,
+      "note": "Sum of Monster-only primes = 200 = MU*(V+LAP_MID) = 4\u00d750"
+    },
+    {
+      "id": "B28",
+      "lhs": 41,
+      "rhs": 41,
+      "pass": true,
+      "note": "v\u2082(|B|) = 41 = V+1 = 40+1"
+    },
+    {
+      "id": "B29",
+      "lhs": 13,
+      "rhs": 13,
+      "pass": true,
+      "note": "v\u2083(|B|) = 13 = PHI3"
+    },
+    {
+      "id": "B30",
+      "lhs": 6,
+      "rhs": 6,
+      "pass": true,
+      "note": "v\u2085(|B|) = 6 = LAM*Q = 2\u00d73"
+    },
+    {
+      "id": "B31",
+      "lhs": 2,
+      "rhs": 2,
+      "pass": true,
+      "note": "v\u2087(|B|) = 2 = LAM"
+    },
+    {
+      "id": "B32",
+      "lhs": 4,
+      "rhs": 4,
+      "pass": true,
+      "note": "Primes in |M| not in |B| = {29,41,59,71}: count = MU = 4"
+    },
+    {
+      "id": "B33",
+      "lhs": 196884,
+      "rhs": 196884,
+      "pass": true,
+      "note": "dim(V\u266e) = EDGES\u00b7Q\u00b2\u00b7\u03a6\u2086\u00b7\u03a6\u2083 + (K+MU+LAM)\u00b2 = 196560+324"
+    },
+    {
+      "id": "B34",
+      "lhs": 1,
+      "rhs": 1,
+      "pass": true,
+      "note": "dim(V\u266e) \u2212 dim(min rep) = 196884 \u2212 196883 = 1  (trivial rep gap)"
+    },
+    {
+      "id": "B35",
+      "lhs": 744,
+      "rhs": 744,
+      "pass": true,
+      "note": "j-function constant 744 = (V-Q\u00b2)\u00b72K = 31\u00d724"
+    },
+    {
+      "id": "B36",
+      "lhs": 23,
+      "rhs": 23,
+      "pass": true,
+      "note": "Largest moonshine prime 23 = 2K-1 = 24-1"
+    },
+    {
+      "id": "B37",
+      "lhs": 194,
+      "rhs": 194,
+      "pass": true,
+      "note": "Monster conjugacy classes = 194 = LAM+K\u00b7LAP_TOP = 2+12\u00d716"
+    },
+    {
+      "id": "B38",
+      "lhs": 378,
+      "rhs": 378,
+      "pass": true,
+      "note": "Sum of all 15 Monster primes = 378 = LAM\u00b7M_LAM\u00b7PHI6 = 2\u00d727\u00d77"
+    },
+    {
+      "id": "B39",
+      "lhs": 26,
+      "rhs": 26,
+      "pass": true,
+      "note": "Bosonic string critical dim = 26 = 2K+2  (same as sporadic-group count!)"
+    },
+    {
+      "id": "B40",
+      "lhs": 10,
+      "rhs": 10,
+      "pass": true,
+      "note": "Superstring critical dim = 10 = PHI4"
+    }
+  ]
+}
