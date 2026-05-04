@@ -52,6 +52,7 @@ The splitting type of an odd prime $p \nmid 3$ is determined by $p \bmod 12$:
 | 2,3 | ramified | $p \mid 12$ |
 
 This follows immediately from quadratic reciprocity:
+
 - $p$ splits in $\mathbb{Z}[i]$ $\iff$ $p \equiv 1 \pmod{4}$
 - $p$ splits in $\mathbb{Z}[\omega]$ $\iff$ $p \equiv 1 \pmod{3}$
 
@@ -67,6 +68,7 @@ The three constants land in **three distinct Frobenius sectors** of
 $Q(\zeta_{12})$, exhausting the non-trivial splitting classes.
 
 Two supporting arithmetic facts:
+
 - $137 = 4^2 + 11^2 = N_{\mathbb{Z}[i]}(4 + 11i)$, confirming 137 is a
   Gaussian prime norm;
 - $7 = \Phi_6(3) = 3^2 - 3 + 1$ and $13 = \Phi_3(3) = 3^2 + 3 + 1$,

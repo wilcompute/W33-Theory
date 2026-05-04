@@ -76,6 +76,7 @@ of |A| = m/2 legs each, the tensor is an isometry from A to Ā. In the HaPPY
 construction, perfect tensors tile the hyperbolic plane.
 
 With K = 12 legs per tensor and Q = 3 states per leg:
+
 - **Half-legs**: K//2 = 6 legs per party
 - **Von Neumann entropy per leg**: ln(Q) = ln(3) ≈ 1.0986 nats
 - **Total entropy for K legs**: K·ln(Q) = 12·ln(3) ≈ 13.18 nats

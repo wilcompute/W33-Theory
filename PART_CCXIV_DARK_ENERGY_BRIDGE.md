@@ -147,6 +147,7 @@ The SRG eigenvalue gap:
 $$\Delta\xi = \xi_+ - \xi_- = 2 - (-4) = 6$$
 
 Properties:
+
 - $V / \Delta\xi = 40/6 \approx 6.67$ — encodes Q + Q/K = 3 + 3/12 = 3.25 pattern
 - $|\text{Aut}| \mod \Delta\xi = 51840 \mod 6 = 0$ — the automorphism group is
   divisible by the spectral gap, locking the vacuum energy scale to the

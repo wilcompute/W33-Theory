@@ -133,6 +133,7 @@ The ratio 496/248 = 2 reflects the double E₈ structure, and 248 = EDGES + 2μ.
 ## 14. Connection to the Broader Theory
 
 This bridge connects three pillars of the W(3,3) framework:
+
 - **Spectral pillar**: LAP_MID=10 (heterotic dimension), LAP_TOP=16 (K3 signature)
 - **Gauge pillar**: EDGES=240 (→ E₈ via +8), AUT_ORDER=51840 = |W(E₆)|
 - **Arithmetic pillar**: χ(K3) = K·λ = 24 connects graph degree to string compactification

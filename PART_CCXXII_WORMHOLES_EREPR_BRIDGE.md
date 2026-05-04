@@ -133,6 +133,7 @@ The ER=EPR conjecture states:
 **A wormhole in the bulk (ER) is equivalent to entanglement in the boundary (EPR).**
 
 **W(3,3) equivalence:**
+
 - Number of entangled pairs: $N_\text{EPR} = \text{EDGES} / 2 = 120$
 - Each pair encodes one "bit" of entanglement
 - These 120 EPR pairs collectively realise the ER wormhole

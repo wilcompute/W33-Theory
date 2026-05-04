@@ -108,6 +108,7 @@ connectivity structure to the Yukawa coupling hierarchy.
 ## Bridge 6 — Higgs Potential Curvature Ratio
 
 The quartic Higgs potential $V = -\mu^2|\Phi|^2 + \lambda|\Phi|^4$ has:
+
 - Curvature at origin: $d^2V/d\phi^2 = -2\mu^2$ (negative, tachyonic)
 - Curvature at minimum: $d^2V/d\phi^2 = +4\mu^2 v^2$ (positive)
 

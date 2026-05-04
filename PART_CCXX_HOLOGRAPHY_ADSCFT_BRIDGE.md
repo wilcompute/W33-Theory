@@ -37,11 +37,13 @@ The AdS/CFT correspondence equates a boundary conformal field theory (CFT) to a 
 anti-de Sitter (AdS) gravity theory. The fundamental duality is:
 
 **CFT side** (boundary):
+
 - Spacetime dimension: $d_\text{CFT} = V = 40$
 - Fields and operators at the boundary
 - Correlation functions of CFT operators
 
 **Gravity side** (bulk):
+
 - AdS spacetime with interior volume
 - Bulk-to-boundary volume ratio: $K/\lambda = 12/2 = 6$
 - Gravitational action and geometry
@@ -63,6 +65,7 @@ In W(3,3), the primary operators arise from the non-trivial eigenspaces:
 $$N_\text{primary} = M_\lambda + M_\text{neg} = 27 + 12 = 39$$
 
 These 39 primary operators generate the entire CFT operator algebra through:
+
 - Operator product expansion (OPE)
 - Conformal descendants (acting with conformal generators)
 - Free field realisations (if the CFT is free or integrable)

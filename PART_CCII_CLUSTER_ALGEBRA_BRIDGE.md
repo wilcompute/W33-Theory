@@ -54,6 +54,7 @@ Number of positive roots for A_n = n(n+1)/2:
 - A_K = A_12: 78 = **MULT_K2 · PHI3** ✓
 
 For D_n, positive roots = n(n-1):
+
 - D_Q = D_3: 6 = **MULT_K2** ✓
 - D_4: 12 = **K** ✓
 

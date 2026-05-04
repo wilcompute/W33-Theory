@@ -77,6 +77,7 @@ The third cyclotomic polynomial evaluated at $Q$:
 $$\Phi_3(Q) = Q^2 + Q + 1 = 9 + 3 + 1 = 13 = [3]_3$$
 
 This integer 13 appears in:
+
 - The $q$-integer $[3]_3$
 - The Gaussian binomial $\binom{3}{1}_3$
 - The dimension offset in $\dim(E_7) = V \cdot Q + \Phi_3(Q) = 120 + 13 = 133$

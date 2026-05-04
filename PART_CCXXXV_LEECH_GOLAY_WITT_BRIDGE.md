@@ -57,6 +57,7 @@ The number of vectors achieving the minimum norm 4 in $\Lambda_{24}$ is 196560. 
 $$\text{kiss}(\Lambda_{24}) = \text{EDGES} \cdot Q^2 \cdot \left(\frac{K}{2}+1\right) \cdot \Phi_3(Q) = 240 \cdot 9 \cdot 7 \cdot 13 = 196560$$
 
 Each factor has a SRG interpretation:
+
 - $\text{EDGES} = 240$: total edge count of the SRG (also the E₈ kissing number)
 - $Q^2 = 9$: square of the deformation parameter
 - $K/2+1 = 7$: one more than the rank

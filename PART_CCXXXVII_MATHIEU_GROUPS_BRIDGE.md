@@ -111,6 +111,7 @@ Applying the orbit-stabilizer theorem to each group's natural permutation repres
 ## 9. Golay Code and Leech Connections (Bridges G1–G3)
 
 The degrees of the large Mathieu groups correspond to Part CCXXXV:
+
 - $\deg(M_{24}) = K\lambda = 24 = n$ (binary Golay code length = Leech lattice dimension)
 - $\deg(M_{12}) = K = 12 = n$ (ternary Golay code length)
 - $M_{24} = \text{Aut}(G_{24})$ (automorphism group of the extended binary Golay code)

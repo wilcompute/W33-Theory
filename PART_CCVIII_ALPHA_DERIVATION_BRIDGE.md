@@ -103,6 +103,7 @@ The SRG eigenvalue equation ξ² + (μ−λ)ξ − (K−μ) = 0 has roots:
 $$\xi_+ = \lambda = 2, \quad \xi_- = -(μ - λ + 2) = -4$$
 
 Vieta's formulas:
+
 - ξ₊ · ξ₋ = −(K−μ) = −8  ✓
 - ξ₊ + ξ₋ = −(μ−λ) = −2  ✓
 

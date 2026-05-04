@@ -20,6 +20,7 @@ W(3,3) with V = 40 vertices and Q = 3 states per vertex (matching the GQ order):
 $$\dim \mathcal{H} = Q^V = 3^{40}$$
 
 This Hilbert space has:
+
 - **log₃(dim)** = V = 40 (log base Q equals vertex count)
 - **log₂(dim)** = V · log₂(Q) = 40 · log₂(3) ≈ 63.4 bits
 
@@ -48,6 +49,7 @@ For W(3,3):
 $$k_{\rm WRT} = \frac{|{\rm Aut}|}{V} = \frac{51840}{40} = 1296 = 6^4 = 36^2$$
 
 This remarkable factorization:
+
 - 1296 = 6^4 reflects the four-fold structure of W(E₆) symmetry
 - 1296 = 36² is the square of the degree of W(E₆) as a Weyl group representation
 - 1296 is the order of the Sylow 2/3 subgroup structure of W(E₆)
@@ -79,6 +81,7 @@ The Jones polynomial V_L(t) is evaluated at roots of unity. With code distance d
 $$t = e^{2\pi i/4} = e^{\pi i/2} = i$$
 
 So t = i (the imaginary unit), giving:
+
 - Re(t) = cos(π/2) = 0
 - Im(t) = sin(π/2) = 1
 - |t|² = 0² + 1² = 1 (lies on the unit circle)
@@ -98,6 +101,7 @@ The topological charge associated with the W(3,3) graph is:
 $$q_{\rm top} = \frac{|{\rm Aut}|}{K} = \frac{51840}{12} = 4320$$
 
 This has the factorization 4320 = 6 × 720 = 6 × 6!, revealing:
+
 - 6! = 720 = |S₆|: the symmetric group on 6 elements
 - 4320 = 2 × |A₆| × 6 = 2160 × 2 (alternating group A₆ has order 360)
 
@@ -150,6 +154,7 @@ A = Q = 3, the numerator of the skein relation:
 $$Q^K - 1 = 3^{12} - 1 = 531{,}441 - 1 = 531{,}440$$
 
 Properties:
+
 - Cyclotomic factorization: Q^K − 1 = (Q−1)(Q^(K−1) + Q^(K−2) + ··· + 1)
   → 531440 is divisible by Q−1 = 2 ✓ (even number)
 - The quantum dimension [K]_Q = (Q^K − Q^(−K))/(Q − Q^(−1)) is the Kauffman analog

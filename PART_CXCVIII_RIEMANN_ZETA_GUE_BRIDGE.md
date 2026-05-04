@@ -40,6 +40,7 @@ is an integer expression in the W(3,3) atoms with zero free parameters.
 ## Montgomery Pair Correlation
 
 The pair correlation function r(α) = 1 − (sin πα / πα)² satisfies:
+
 - r(0) = 0, r(1) = r(2) = … = 1 (at positive integers)
 - Period of leading correction: 1/LAM = 1/2
 - The natural GUE matrix size from W(3,3): N = EDGES = 240
@@ -49,11 +50,13 @@ The pair correlation function r(α) = 1 − (sin πα / πα)² satisfies:
 The denominators of ζ at negative odd integers are von Staudt–Clausen
 Bernoulli denominators. Every denominator up to ζ(−5) factors entirely
 via W(3,3) atoms:
+
 - ζ(−1) = −1/12 = −1/K
 - ζ(−3) = 1/120 = 1/EIG_MAX!
 - ζ(−5) = −1/252 = −1/(K·(PHI3+J_INV))
 
 The positive-integer zeta values follow Euler's formula ζ(2k) = π^{2k}·(−1)^{k+1}·B_{2k}/(2·(2k)!):
+
 - ζ(2) = π²/6 denominator 6 = MULT_K2
 - ζ(4) = π⁴/90 denominator 90 = 2·Q²·EIG_MAX
 - ζ(6) = π⁶/945 denominator 945 = Q²·EIG_MAX·(PHI3+J_INV)
