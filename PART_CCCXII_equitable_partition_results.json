@@ -1,0 +1,49 @@
+{
+  "part": "CCCXII",
+  "title": "Equitable Partition & Interlacing Eigenvalues of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "partition_sizes": [
+      1,
+      12,
+      27
+    ],
+    "Q_entries": [
+      [
+        0,
+        12,
+        0
+      ],
+      [
+        1,
+        2,
+        9
+      ],
+      [
+        0,
+        4,
+        8
+      ]
+    ],
+    "Q_eigs": [
+      12,
+      2,
+      -4
+    ],
+    "Q_trace": 10,
+    "Q_det": -96,
+    "Q_sq_trace": 164
+  },
+  "discoveries": [
+    "Partition {center, neighbors, non-neighbors} is equitable for W(3,3)",
+    "Quotient matrix Q has eigenvalues K=12, r=2, s=-4: perfect interlacing",
+    "tr(Q) = 10 = ALPHA: trace encodes fine structure constant digit",
+    "Diagonal entries: 0, 2, 8 sum to ALPHA; off-diagonals encode SRG params",
+    "Q[1][2] = 9 = GENERATIONS^2: neighbor-to-non-neighbor adjacency",
+    "Q[2][2] = 8 = 2^GENERATIONS: non-neighbor internal structure",
+    "M2 = 27 = GUT_DIM: second class size matches E6 dimension",
+    "Row regularity: all rows sum to K=12, reflecting SRG regularity"
+  ]
+}
