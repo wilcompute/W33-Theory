@@ -1,0 +1,36 @@
+{
+  "part": "CCCXV",
+  "title": "Absolute Bound & Polynomial Method for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "MULT_R": 24,
+    "MULT_S": 15,
+    "BOUND_R": 300,
+    "BOUND_S": 120,
+    "SLACK_R": 260,
+    "SLACK_S": 80,
+    "omega_hoffman": 4,
+    "alpha_hoffman": 10,
+    "KR_12_0": 0.0,
+    "KR_22_2": "10/3",
+    "KR_11_2": "40/3",
+    "k_over_abs_s": 3
+  },
+  "discoveries": [
+    "Absolute bound from MULT_S: V \u2264 120 = V * GENERATIONS (tight SM encoding)",
+    "Absolute bound from MULT_R: V \u2264 300 = V * MULT_S / LAM",
+    "Slack_S = 80 = LAM * V (double the vertex count)",
+    "V / Bound_S = 1/GENERATIONS (perfect reciprocal of generations)",
+    "Hoffman clique \u03c9 = 4 = GENERATIONS + 1",
+    "Hoffman coclique \u03b1 = 10 = ALPHA",
+    "\u03c9 \u00d7 \u03b1 = 40 = V (perfect clique-coclique duality)",
+    "k / |s| = 3 = GENERATIONS (Hoffman ratio encodes generations)",
+    "KR_22_2 \u00d7 GENERATIONS = ALPHA (Krein encodes fine structure)",
+    "KR_11_2 \u00d7 GENERATIONS = V (Krein encodes vertex count)",
+    "q_{12}^0 = 0: Krein orthogonality of the two eigenspaces"
+  ]
+}
