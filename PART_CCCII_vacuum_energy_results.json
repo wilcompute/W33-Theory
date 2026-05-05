@@ -1,0 +1,21 @@
+{
+  "part": "CCCII",
+  "title": "The W33 Vacuum Energy Problem",
+  "tests_passed": 92,
+  "tests_failed": 0,
+  "total_tests": 92,
+  "cc_geometric_suppression": "(1/12)^270 = 10^-290.28",
+  "dark_energy_scale": "2^(-270) = 10^-81.28",
+  "w_de": -1,
+  "hierarchy_ratio": "(1/3)^6.75 = 10^-3.22",
+  "groups": {
+    "cc_problem":    {"pass": 8,  "fail": 0},
+    "refined":       {"pass": 14, "fail": 0},
+    "spectral_zeta": {"pass": 8,  "fail": 0},
+    "dark_energy":   {"pass": 7,  "fail": 0},
+    "hierarchy":     {"pass": 9,  "fail": 0},
+    "anthropic":     {"pass": 6,  "fail": 0},
+    "general":       {"pass": 40, "fail": 0}
+  },
+  "status": "ALL PASS"
+}

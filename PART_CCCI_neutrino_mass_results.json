@@ -1,0 +1,25 @@
+{
+  "part": "CCCI",
+  "title": "Neutrino Mass Matrix from GQ(3,3) Flag Geometry",
+  "tests_passed": 88,
+  "tests_failed": 0,
+  "total_tests": 88,
+  "pmns_angles": {
+    "sin2_12": "3/7",
+    "sin2_23": "1/2",
+    "sin2_13": "1/24"
+  },
+  "delta_cp": "-pi/2",
+  "mass_ratio_1_32": "1/32 = 0.03125 (loop corrected)",
+  "tbm_correction_12": "2/21",
+  "groups": {
+    "flags":       {"pass": 10, "fail": 0},
+    "pmns":        {"pass": 8,  "fail": 0},
+    "pmns_matrix": {"pass": 8,  "fail": 0},
+    "nu_masses":   {"pass": 10, "fail": 0},
+    "tribimaximal":{"pass": 8,  "fail": 0},
+    "ckm_pmns":    {"pass": 6,  "fail": 0},
+    "general":     {"pass": 38, "fail": 0}
+  },
+  "status": "ALL PASS"
+}
