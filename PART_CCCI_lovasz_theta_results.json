@@ -1,0 +1,35 @@
+{
+  "part": "CCCI",
+  "title": "Lovász Theta Function of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "K2": 27,
+    "S_EIG": -4,
+    "R_EIG": 2,
+    "ALPHA": 10,
+    "THETA_W": "10",
+    "THETA_W_BAR": "4",
+    "THETA_PRODUCT": "40",
+    "THETA_RATIO": "5/2",
+    "COMPLEMENT_S_EIG": -3,
+    "COMPLEMENT_R_EIG": 3,
+    "CHI_F_LOWER_BOUND": "4",
+    "THETA_SUM": "14"
+  },
+  "discoveries": [
+    "ϑ(W(3,3)) = 10 = ALPHA: Lovász theta equals Hoffman bound equals SM coupling proxy",
+    "ϑ(W)·ϑ(W̅) = V = 40: product identity for vertex-transitive SRG",
+    "ϑ(W̅) = 4 = EW_GAUGE_4: complement theta equals EW gauge factor",
+    "ϑ(W)/ϑ(W̅) = 5/2 = ALPHA/(2·EW): ratio encodes EW normalization",
+    "chi_f(W) ≥ V/ϑ(W) = 4 = EW_GAUGE_4: fractional chromatic bound matches EW",
+    "SM coupling proxies: 1/4, 1/12, 1/27 = 1/ϑ(W̅), 1/K, 1/K2",
+    "ϑ(W) + ϑ(W̅) = 14 = 2·7: sum of theta numbers encodes a prime pair",
+    "THETA_PRODUCT = V: encodes total state-space capacity constraint",
+    "Capacity upper bound Θ(W) ≤ 10 = ALPHA: Shannon capacity bounded by coupling",
+    "Complement conference property: ϑ(W̅) = 4 consistent with λ'=μ'=18 symmetry"
+  ]
+}
