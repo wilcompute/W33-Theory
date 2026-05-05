@@ -1,0 +1,69 @@
+{
+  "module": "PART_CCCXIX_EMPIRICAL_CLOSURE_FALSIFICATION_COMPILER",
+  "status": "empirical closure protocol: finite theorem -> lab emulator -> dimensionless matching -> dimensionful theory",
+  "w33_atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "V": 40,
+    "K": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "H1": 81,
+    "Albert": 27,
+    "E": 240,
+    "directed": 480,
+    "triangles": 160,
+    "triangle_trace": 960
+  },
+  "closure_requirements": [
+    "invariant-to-observable dictionary",
+    "scale-setting rule",
+    "renormalization/continuum flow prescription",
+    "numerical predictions with uncertainties",
+    "explicit falsification list"
+  ],
+  "directly_testable_now": {
+    "projective_observables": 40,
+    "cluster_edges": 240,
+    "full_stabilizer_weight": 13,
+    "fusion_probability": "1/2",
+    "critical_edge_half": 120,
+    "critical_mean_degree": 6,
+    "critical_stabilizer_weight": 7,
+    "expected_trials": 480,
+    "clifford_resource_quotients": [432, 216, 108, 54]
+  },
+  "candidate_dimensionless_physics_targets": {
+    "gut_weak_mixing": "3/8",
+    "koide_ratio": "2/3",
+    "fusion_probability": "1/2",
+    "klm_probability": "1/4"
+  },
+  "checks": {
+    "finite_atoms": true,
+    "tree_factor": true,
+    "resource_ladder": true,
+    "clifford_quotients": true,
+    "projective_observables": true,
+    "cluster_edges": true,
+    "full_stabilizer_weight": true,
+    "fusion_probability": true,
+    "critical_edge_half": true,
+    "critical_mean_degree": true,
+    "critical_degree_variance": true,
+    "critical_stabilizer_weight": true,
+    "expected_trials": true,
+    "critical_triangle_trace": true,
+    "gut_weak_mixing_target": true,
+    "koide_target": true,
+    "klm_target": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "A complete empirical interpretation of the W33 finite theorem requires four layers. T0 is the exact finite theorem. T1 is directly testable in laboratory finite emulators such as photonic/qutrit graph states. T2 compares dimensionless Standard Model quantities after a specified physical scale and RG prescription. T3 handles dimensionful observables only after a dimensionalization map is fixed. The theory is empirically meaningful only where it gives numbers plus failure conditions.",
+  "honesty_boundary": "The finite invariant skeleton is exact. The empirical theory becomes complete only after the T2/T3 scale map is specified and tested. This file defines that missing closure protocol rather than pretending it is already solved."
+}
