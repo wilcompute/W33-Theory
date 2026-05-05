@@ -1,0 +1,22 @@
+{
+  "part": "CCXCVIII",
+  "title": "Equitable Partitions and Quotient Matrices in W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "ALL_PASS",
+  "quot3_trace": 10,
+  "cross_edges": 120,
+  "b2_disc": 256,
+  "eig2_plus": 12,
+  "eig2_minus": -4,
+  "b2_10": 4,
+  "b2_11": 8,
+  "discoveries": [
+    "Distance partition quotient has char poly root K+R+S=10 matching trace 0+2+8",
+    "2-cell quotient discriminant 256 = 16\u00b2 = EW_GAUGE_4\u2074 (perfect square)",
+    "b\u2081\u2080 = 4 = MU = EW_GAUGE_4 in the 2-cell quotient (Hoffman b\u2081\u2080 = \u03bc)",
+    "Cross edges \u03b1 \u00d7 K = 120 = EDGES / 2 (half all edges touch independent set)",
+    "All three SRG eigenvalues {K, R, S} are roots of the 3\u00d73 quotient char poly",
+    "2-cell quotient eigenvalues are exactly {K, S_EIG} \u2014 R_EIG drops out"
+  ]
+}
