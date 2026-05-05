@@ -1,0 +1,30 @@
+{
+  "part": "CCCX",
+  "title": "Krein Parameters of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "KR_11_0": "24",
+    "KR_11_1": "44/3",
+    "KR_11_2": "40/3",
+    "KR_12_0": "0",
+    "KR_12_1": "25/3",
+    "KR_12_2": "32/3",
+    "KR_22_0": "15",
+    "KR_22_1": "20/3",
+    "KR_22_2": "10/3",
+    "KR_SUM_NONTRIVIAL": "57"
+  },
+  "discoveries": [
+    "KR_11_1 = 44/3: numerator = (ALPHA+1)*EW_GAUGE_4 = 44, denominator = GENERATIONS",
+    "KR_11_2 = 40/3: numerator = V = ALPHA*EW_GAUGE_4 = 40, denominator = GENERATIONS",
+    "KR_22_0 = 15 = MULT_S = ALPHA+GENERATIONS+LAM: Krein multiplicity encodes SM sum",
+    "KR_22_2 = 10/3: numerator = ALPHA = 10, denominator = GENERATIONS = 3",
+    "KR_12_1 = 25/3: numerator = (MU+1)^2 = 25, denominator = GENERATIONS",
+    "KR_12_2 = 32/3: numerator = 2^(GENERATIONS+LAM) = 2^5 = 32, denominator = GENERATIONS",
+    "All non-integer Krein params share denominator 3 = GENERATIONS",
+    "Sum of 6 non-trivial Krein params = 57 = V + MULT_S + LAM = 40+15+2",
+    "KR_12_0 = 0: orthogonality of eigenspaces 1 and 2 in Krein algebra"
+  ]
+}
