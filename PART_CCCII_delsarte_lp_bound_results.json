@@ -1,0 +1,35 @@
+{
+  "part": "CCCII",
+  "title": "Delsarte Linear Programming Bound for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "K2": 27,
+    "S_EIG": -4,
+    "R_EIG": 2,
+    "ALPHA": 10,
+    "HOFFMAN_BOUND": "10",
+    "CLIQUE_BOUND": "4",
+    "ALPHA_OMEGA_PRODUCT": "40",
+    "ALPHA_OMEGA_SUM": "14",
+    "CHI_F": "4",
+    "LP_RATIO": "5/2",
+    "COMPLEMENT_ALPHA_BOUND": "4",
+    "LP_CODE_RATE_BOUND": 0.624196
+  },
+  "discoveries": [
+    "Hoffman bound \u03b1(W) \u2264 10 = ALPHA: LP bound equals SM coupling proxy",
+    "Delsarte clique bound \u03c9(W) \u2264 4 = EW_GAUGE_4: clique bound equals EW factor",
+    "Both LP bounds are tight: \u03b1(W)=10, \u03c9(W)=4 (exact, not just bounds)",
+    "LP duality product: \u03b1\u00b7\u03c9 = 40 = V (state space product identity)",
+    "LP duality sum: \u03b1+\u03c9 = 14 = \u03d1(W)+\u03d1(W\u0304) (equals theta sum from CCCI)",
+    "Spread identity: \u03b1\u00b7(1 + K/\u03bc) = V = 10\u00b74 = 40 \u2713",
+    "Fractional chromatic: \u03c7_f(W) = V/\u03b1 = 4 = EW_GAUGE_4",
+    "LP ratio \u03b1/\u03c9 = 5/2 = \u03d1(W)/\u03d1(W\u0304): LP and SDP ratios coincide",
+    "Fractional \u03b1_f = \u03b1 = 10: LP tight implies vertex-transitivity + Hoffman exact",
+    "Clique cover bound = V/\u03c9 = 10 = ALPHA: dual cover encodes coupling"
+  ]
+}
