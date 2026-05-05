@@ -1,0 +1,29 @@
+{
+  "part": "CCXCIX",
+  "title": "Equitable Partition Cells as Fermion-Generation Orbits",
+  "subtitle": "Quotient Spectrum = SM Gauge Coupling Ratios",
+  "tests_passed": 96,
+  "tests_failed": 0,
+  "total_tests": 96,
+  "cell_sizes": [1, 9, 9, 9, 10, 1, 1, 1],
+  "generation_cells": {"C1": 9, "C2": 9, "C3": 9},
+  "gauge_cell": 10,
+  "quotient_matrix": [[2.0, 3.0, 3.0], [3.0, 2.0, 3.0], [3.0, 3.0, 2.0]],
+  "quotient_eigenvalues": [8.0, -1.0, -1.0],
+  "w33_from_eig_sq_sum": 33,
+  "w33_270": 270,
+  "e8_roots_240": 240,
+  "sin2_theta_W_GUT": "3/8",
+  "higgs_doublet_count": 2,
+  "groups": {
+    "gq_params":          {"pass": 5,  "fail": 0},
+    "spectrum":           {"pass": 7,  "fail": 0},
+    "partition":          {"pass": 10, "fail": 0},
+    "quotient":           {"pass": 9,  "fail": 0},
+    "coupling_ratios":    {"pass": 8,  "fail": 0},
+    "three_generations":  {"pass": 9,  "fail": 0},
+    "langlands":          {"pass": 10, "fail": 0},
+    "w33_constants":      {"pass": 10, "fail": 0}
+  },
+  "status": "ALL PASS"
+}
