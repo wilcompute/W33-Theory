@@ -1,0 +1,75 @@
+{
+  "module": "PART_CCCXX_OBSERVABLE_DICTIONARY_SCALE_MAP_V1",
+  "status": "first concrete empirical scale-map candidate with locked dictionary and no-refit rules",
+  "w33_atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "V": 40,
+    "K": 12,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "J": 5,
+    "J_inverse": 8,
+    "H1": 81,
+    "Albert": 27,
+    "E": 240,
+    "directed": 480,
+    "triangles": 160,
+    "triangle_trace": 960
+  },
+  "scale_levels": {
+    "M0": "no-scale finite predictions",
+    "M1": "dimensionless physical predictions with fixed scale/scheme/RG prescription",
+    "M2": "dimensionful predictions after action/speed/energy-or-length anchors"
+  },
+  "required_dimensionful_anchors": [
+    "action_unit_anchor (usually hbar)",
+    "causal_speed_anchor (usually c)",
+    "one energy/mass/length anchor fixing the remaining unit scale"
+  ],
+  "exact_targets": {
+    "sin2_theta_W_GUT": "3/8",
+    "Koide": "2/3",
+    "fusion": "1/2",
+    "KLM": "1/4",
+    "Markov_contraction": "1/3",
+    "nonreverse_probability": "11/12",
+    "return_probability": "1/12"
+  },
+  "no_refit_rules": [
+    "After anchors and RG/continuum rules are fixed, no observable-specific refitting is allowed.",
+    "Dimensionless ratios must be tested before dimensionful absolute quantities.",
+    "Every fitted anchor consumes one degree of freedom and must be listed separately from predictions.",
+    "The RG or continuum rule must be specified before comparing with data.",
+    "Each empirical claim must include measurement uncertainty and theory uncertainty."
+  ],
+  "checks": {
+    "w33_atoms": true,
+    "cyclotomic_atoms": true,
+    "projective_observables": true,
+    "full_stabilizer_weight": true,
+    "critical_fusion": true,
+    "critical_edge_half": true,
+    "critical_mean_degree": true,
+    "critical_degree_variance": true,
+    "critical_stabilizer_weight": true,
+    "expected_fusion_trials": true,
+    "resource_ladder": true,
+    "clifford_quotients": true,
+    "sin2_target": true,
+    "koide_target": true,
+    "fusion_target": true,
+    "klm_target": true,
+    "markov_modes": true,
+    "nonreverse_return": true,
+    "dictionary_entries": true,
+    "scale_rules": true,
+    "dimensionful_anchors": true,
+    "threshold_carrier_inverse": true,
+    "phi6_carrier_step": true
+  },
+  "theorem_statement": "Scale Map v1 turns the W33 finite theorem into an empirical framework by separating no-scale finite predictions, dimensionless physical predictions, and dimensionful predictions. It locks an observable dictionary and no-refit rules: after anchors, schemes, and RG/continuum flow are fixed, all residuals must be evaluated without moving the map.",
+  "honesty_boundary": "This is a candidate empirical dictionary, not a completed data fit. It defines what must be compared and how it can fail. Measured constants should be supplied by a separate versioned data file before numerical residuals are claimed."
+}
