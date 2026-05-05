@@ -103,58 +103,24 @@ def w33_alpha_gut() -> float:
 
 # ── Two-loop QCD running ───────────────────────────────────────────────────
 def qcd_beta0(nf: int) -> float:
-    # Standard MS-bar QCD coefficient: beta0 = 11 - 2/3 * nf
-    # d(alpha_s)/d ln mu = - (beta0/(2*pi)) * alpha_s^2 + ...
-    beta0 = 11.0 - 2.0 * nf / 3.0
-    return beta0 / (2.0 * PI)
+    return (11.0 * Q_SRG - 2.0 * nf) / (4.0 * PI)
 
 def qcd_beta1(nf: int) -> float:
-    # Standard MS-bar two-loop coefficient: beta1 = 102 - 38/3 * nf
-    # Contribution to d(alpha_s)/d ln mu ~ - beta1/(4*pi^2) * alpha_s^3
-    beta1 = 102.0 - 38.0 * nf / 3.0
-    return beta1 / (4.0 * PI * PI)
+    return (102.0 - 38.0 * nf / 3.0) / (4.0 * PI)**2
 
 def run_alpha_s(alpha_start: float, mu_start: float, mu_end: float,
-               nf: int, nsteps: int = 200000) -> float:
+               nf: int, nsteps: int = 20000) -> float:
     """Two-loop RG for alpha_s from mu_start to mu_end."""
-    # Use an RK4 integrator with simple step-adaptation to avoid
-    # numerical overflow when integrating over many decades.
     b0 = qcd_beta0(nf)
     b1 = qcd_beta1(nf)
     t_start = math.log(mu_start**2)
-    t_end = math.log(mu_end**2)
-    total_steps = int(max(10, abs(nsteps)))
-    a = float(alpha_start)
-
-    def f(alpha_val: float) -> float:
-        # RHS da/dt = -(b0 * a^2 + b1 * a^3)
-        return -(b0 * alpha_val * alpha_val + b1 * alpha_val * alpha_val * alpha_val)
-
-    dt = (t_end - t_start) / total_steps
-    t = t_start
-    for _ in range(total_steps):
-        # RK4 step
-        try:
-            k1 = f(a)
-            k2 = f(a + 0.5 * dt * k1)
-            k3 = f(a + 0.5 * dt * k2)
-            k4 = f(a + dt * k3)
-            da = (dt / 6.0) * (k1 + 2 * k2 + 2 * k3 + k4)
-            # simple safety clamp: avoid negative or enormous alpha_s
-            a_new = a + da
-            if not math.isfinite(a_new) or a_new <= 0 or a_new > 10:
-                # fallback to 1-loop analytic estimate for this interval
-                try:
-                    inv = 1.0 / a + b0 * (t + dt - t)
-                    a = 1.0 / inv if inv > 0 else max(1e-6, a)
-                except Exception:
-                    a = max(1e-6, min(a, 10.0))
-            else:
-                a = a_new
-        except OverflowError:
-            # catastrophic overflow — return a conservative small value
-            return max(1e-6, min(a, 10.0))
-        t += dt
+    t_end   = math.log(mu_end**2)
+    dt      = (t_end - t_start) / nsteps
+    a       = alpha_start
+    for _ in range(nsteps):
+        a += -(b0 * a**2 + b1 * a**3) * dt
+        if a <= 0:
+            return 1e-6
     return a
 
 def run_yukawa_qcd(y_start: float, alpha_s_start: float, alpha_s_end: float,
@@ -202,26 +168,10 @@ def build_mass_table() -> dict:
 
     # Run alpha_s through thresholds
     as_mz  = run_alpha_s(as_gut, m_gut, m_z,   nf=6)
-
-    # Detect runaway / nonphysical RG results and fallback to PDG alpha_s(M_Z)
-    fallback_used = False
-    if not math.isfinite(as_mz) or as_mz <= 0.0 or as_mz > 1.0:
-        print("WARNING: RG integration produced nonphysical alpha_s(M_Z)=", as_mz)
-        print("         Falling back to PDG alpha_s(M_Z) for threshold chain and marking RG warning in report.")
-        as_mz = PDG['alpha_s_mz']
-        fallback_used = True
-
-    if not fallback_used:
-        as_mt  = run_alpha_s(as_gut, m_gut, m_t_ref, nf=6)
-        as_mb  = run_alpha_s(as_mz,  m_z,   m_b_ref, nf=5)
-        as_mc  = run_alpha_s(as_mb,  m_b_ref, m_c_ref, nf=4)
-        as_2gev= run_alpha_s(as_mc,  m_c_ref, 2.0, nf=3)
-    else:
-        # Anchor at PDG alpha_s(M_Z) and run small intervals around M_Z->thresholds
-        as_mt  = run_alpha_s(as_mz, m_z, m_t_ref, nf=6)
-        as_mb  = run_alpha_s(as_mz, m_z, m_b_ref, nf=5)
-        as_mc  = run_alpha_s(as_mb, m_b_ref, m_c_ref, nf=4)
-        as_2gev= run_alpha_s(as_mc, m_c_ref, 2.0, nf=3)
+    as_mt  = run_alpha_s(as_gut, m_gut, m_t_ref, nf=6)
+    as_mb  = run_alpha_s(as_mz,  m_z,   m_b_ref, nf=5)
+    as_mc  = run_alpha_s(as_mb,  m_b_ref, m_c_ref, nf=4)
+    as_2gev= run_alpha_s(as_mc,  m_c_ref, 2.0, nf=3)
 
     v_h = w33_vev()   # GeV
 

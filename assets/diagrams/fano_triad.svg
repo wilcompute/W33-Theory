@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" font-family="monospace" font-size="13">
+  <title>Fano Plane Triad: Tetrahedron ↔ Császár ↔ Szilassi</title>
+
+  <!-- Background -->
+  <rect width="560" height="420" fill="#0f0f0f" rx="10"/>
+
+  <!-- ── Title ── -->
+  <text x="280" y="28" text-anchor="middle" fill="#e0e0e0" font-size="15" font-weight="bold">Fano Plane PG(2,2) — Toroidal Triad</text>
+
+  <!-- ── Fano outer triangle vertices ── -->
+  <!-- p1=top, p2=bottom-left, p3=bottom-right -->
+  <!-- p4=mid-left, p5=mid-right, p6=bottom-mid, p7=center -->
+  <g transform="translate(280,230)">
+    <!-- Outer triangle edges -->
+    <line x1="0" y1="-130" x2="-113" y2="65"  stroke="#4f98a3" stroke-width="1.5"/>
+    <line x1="0" y1="-130" x2="113"  y2="65"  stroke="#4f98a3" stroke-width="1.5"/>
+    <line x1="-113" y1="65" x2="113" y2="65"  stroke="#4f98a3" stroke-width="1.5"/>
+    <!-- Inner medians -->
+    <line x1="0" y1="-130" x2="0"    y2="65"  stroke="#4f98a3" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="-113" y1="65" x2="56.5" y2="-32.5" stroke="#4f98a3" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="113"  y1="65" x2="-56.5" y2="-32.5" stroke="#4f98a3" stroke-width="1" stroke-dasharray="4,3"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="52" fill="none" stroke="#bb653b" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- 7 Fano points -->
+    <!-- p1 top -->
+    <circle cx="0" cy="-130" r="7" fill="#4f98a3" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="0" y="-140" text-anchor="middle" fill="#e0e0e0" font-size="11">p1</text>
+    <!-- p2 bottom-left -->
+    <circle cx="-113" cy="65" r="7" fill="#4f98a3" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="-125" y="80" text-anchor="middle" fill="#e0e0e0" font-size="11">p2</text>
+    <!-- p3 bottom-right -->
+    <circle cx="113" cy="65" r="7" fill="#4f98a3" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="125" y="80" text-anchor="middle" fill="#e0e0e0" font-size="11">p3</text>
+    <!-- p4 mid-left (on p1-p3 median) -->
+    <circle cx="-56.5" cy="-32.5" r="7" fill="#6daa45" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="-68" y="-36" text-anchor="middle" fill="#e0e0e0" font-size="11">p4</text>
+    <!-- p5 mid-right (on p1-p2 median) -->
+    <circle cx="56.5" cy="-32.5" r="7" fill="#6daa45" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="68" y="-36" text-anchor="middle" fill="#e0e0e0" font-size="11">p5</text>
+    <!-- p6 bottom-mid (on p2-p3 edge midpoint) -->
+    <circle cx="0" cy="65" r="7" fill="#6daa45" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="0" y="82" text-anchor="middle" fill="#e0e0e0" font-size="11">p6</text>
+    <!-- p7 center -->
+    <circle cx="0" cy="0" r="9" fill="#bb653b" stroke="#e8af34" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">p7</text>
+    <!-- label: center = mod-12 closure -->
+    <text x="22" y="-6" fill="#e8af34" font-size="10">mod-12 gate</text>
+  </g>
+
+  <!-- ── Left annotation: Császár -->
+  <rect x="12" y="60" width="130" height="90" rx="6" fill="#1c2a1c" stroke="#6daa45" stroke-width="1.5"/>
+  <text x="77" y="80" text-anchor="middle" fill="#6daa45" font-size="13" font-weight="bold">Cs&#225;sz&#225;r ×5</text>
+  <text x="77" y="97" text-anchor="middle" fill="#a0c090" font-size="11">V=7  E=21  F=14</text>
+  <text x="77" y="113" text-anchor="middle" fill="#a0c090" font-size="11">genus 1  (T²)</text>
+  <text x="77" y="129" text-anchor="middle" fill="#a0c090" font-size="11">K₇ triangulation</text>
+  <text x="77" y="145" text-anchor="middle" fill="#a0c090" font-size="11">points → vertices</text>
+
+  <!-- ── Right annotation: Szilassi -->
+  <rect x="418" y="60" width="130" height="90" rx="6" fill="#1c1c2a" stroke="#4f98a3" stroke-width="1.5"/>
+  <text x="483" y="80" text-anchor="middle" fill="#4f98a3" font-size="13" font-weight="bold">Szilassi ×2</text>
+  <text x="483" y="97" text-anchor="middle" fill="#90a0c0" font-size="11">V=14  E=21  F=7</text>
+  <text x="483" y="113" text-anchor="middle" fill="#90a0c0" font-size="11">genus 1  (T²)</text>
+  <text x="483" y="129" text-anchor="middle" fill="#90a0c0" font-size="11">Heawood dual</text>
+  <text x="483" y="145" text-anchor="middle" fill="#90a0c0" font-size="11">lines → faces</text>
+
+  <!-- ── Bottom annotation: Tetrahedron -->
+  <rect x="195" y="358" width="170" height="52" rx="6" fill="#2a1c1c" stroke="#bb653b" stroke-width="1.5"/>
+  <text x="280" y="377" text-anchor="middle" fill="#bb653b" font-size="13" font-weight="bold">Tetrahedron</text>
+  <text x="280" y="394" text-anchor="middle" fill="#c09090" font-size="11">V=F=4  E=6  genus 0</text>
+  <text x="280" y="410" text-anchor="middle" fill="#c09090" font-size="11">seed: h_v = h_f = 0</text>
+
+  <!-- ── Duality arrows ── -->
+  <!-- Fano ↔ Császár -->
+  <line x1="142" y1="105" x2="195" y2="200" stroke="#6daa45" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Fano ↔ Szilassi -->
+  <line x1="418" y1="105" x2="365" y2="200" stroke="#4f98a3" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Center ↔ Tetrahedron -->
+  <line x1="280" y1="310" x2="280" y2="358" stroke="#bb653b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr_r)"/>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e0e0e0"/>
+    </marker>
+    <marker id="arr_r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#bb653b"/>
+    </marker>
+  </defs>
+
+  <!-- ── Bottom row invariants ── -->
+  <text x="280" y="395" text-anchor="middle" fill="#555" font-size="1"> </text>
+
+  <!-- Shared invariants label -->
+  <text x="280" y="48" text-anchor="middle" fill="#7a7974" font-size="11">E=21=C(7,2) invariant · flag orbits=42=6×7 · Φ₆=7 · 2+5 realizations</text>
+</svg>

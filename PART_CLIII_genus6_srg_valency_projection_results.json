@@ -1,0 +1,41 @@
+{
+  "part": "CLIII",
+  "title": "Genus-6 Level as SRG Valency Projection",
+  "atoms": {
+    "q": 3, "Phi3": 13, "Phi6": 7, "Phi4": 10, "k": 12, "b0": 11
+  },
+  "levels": {
+    "n4":  {"genus": 0,  "chi": 2,   "E": 6,   "F": 4,  "step_from_prev": null,  "token": "seed"},
+    "n7":  {"genus": 1,  "chi": 0,   "E": 21,  "F": 14, "step_from_prev": 3,     "token": "P(Phi6)=7/13"},
+    "n12": {"genus": 6,  "chi": -10, "E": 66,  "F": 44, "step_from_prev": 5,     "token": "P(k)=12/13"},
+    "n19": {"genus": 20, "chi": -38, "E": 171, "F": null, "step_from_prev": 7,   "token": "[Part CLIV]"}
+  },
+  "step_pattern": {
+    "4_to_7": 3,
+    "7_to_12": 5,
+    "12_to_19": 7,
+    "pattern": "consecutive odd primes 3, 5, 7",
+    "interpretation": "q-step, T*Phi3-step, Phi6-step"
+  },
+  "hashimoto_resonance": {
+    "chi_n12": -10,
+    "Q_sqrt_minus10_discriminant": -10,
+    "match": true,
+    "significance": "genus-6 surface carries exact discriminant of Hashimoto carrier field"
+  },
+  "P_k": "12/13",
+  "E_66_decomposition": {
+    "C_12_2": 66,
+    "k_times_b0_over_2": 66,
+    "b0": 11,
+    "note": "QCD one-loop beta coefficient b0=11 at Nc=q=3"
+  },
+  "SRG_self_reflection": {
+    "k_out_of_Phi3_points": "12/13",
+    "points_left_out": 1,
+    "interpretation": "SRG vertex neighborhood is PG(2,3) minus one point"
+  },
+  "tests_passed": 28,
+  "tests_total": 28,
+  "all_pass": true
+}
