@@ -1,0 +1,32 @@
+{
+  "part": "CCCVIII",
+  "title": "Seidel Matrix Spectrum of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "SEI_EIG_0": 15,
+    "SEI_EIG_1": -5,
+    "SEI_EIG_2": 7,
+    "SEI_MULT_0": 1,
+    "SEI_MULT_1": 24,
+    "SEI_MULT_2": 15,
+    "SEI_SPEC_SUM": 0,
+    "SEI_TRACE_SQ_EIG": 1560,
+    "SEI_TRACE_SQ_VM": 1560,
+    "SEI_DIFF_01": 10,
+    "SEI_SUM_02": 22,
+    "SEI_SUM_0ABS1": 20,
+    "SEI_DIFF_21": 2
+  },
+  "discoveries": [
+    "SEI_EIG_0=15=ALPHA+GENERATIONS+LAM: Seidel Perron eigenvalue encodes fine-structure proxy plus generation count plus triangle parameter.",
+    "SEI_EIG_0=MULT_S=15: Perron Seidel eigenvalue equals the multiplicity of the smaller SRG adjacency eigenvalue.",
+    "SEI_EIG_1=-5=-(MU+1): The negative Seidel eigenvalue is determined by the SRG co-degree parameter.",
+    "SEI_EIG_2=7=LAM+MU+1=K//2+1: The positive off-Perron eigenvalue is encoded by the SRG lambda/mu parameters and half the valency.",
+    "SEI_SUM_02=22=2(K-1): Sum of two Seidel eigenvalues equals the line graph valency from Part CCCVII.",
+    "tr(S^2)=1560=ALPHA*(V-1)*MU=V*(V-1): Second Seidel moment encodes fine-structure proxy times V-1 times co-degree.",
+    "SEI_DIFF_01=10=ALPHA: Perron minus |smallest| Seidel eigenvalue returns the fine-structure proxy exactly.",
+    "SEI_DIFF_21=2=LAM: The two positive Seidel eigenvalues differ by exactly the SRG triangle parameter."
+  ]
+}
