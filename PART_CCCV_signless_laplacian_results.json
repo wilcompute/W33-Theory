@@ -1,0 +1,29 @@
+{
+  "part": "CCCV",
+  "title": "Signless Laplacian Spectrum of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "Q_EIG_0": 24,
+    "Q_EIG_1": 14,
+    "Q_EIG_2": 8,
+    "Q_SPEC_SUM": 480,
+    "Q_TRACE_SQ": 6240,
+    "QLE": 120,
+    "Q_DISTINCT_SUM": 46,
+    "Q_DISTINCT_PROD": 2688
+  },
+  "discoveries": [
+    "q_0=24=MULT_R: spectral radius of Q coincides with restricted eigenmultiplicity",
+    "q_0=2*ALPHA+EW_GAUGE_4=24: SM alpha and EW factor encode the largest Q-eigenvalue",
+    "q_2=8=2*EW_GAUGE_4=MU+EW=K-EW: three simultaneous SM encodings of smallest Q-eigenvalue",
+    "q_1=GUT_DIM-K-1=14: GUT dimension minus valency minus 1",
+    "q_0-q_1=ALPHA=10: gap encodes fine-structure constant analogue",
+    "QLE=120=EDGES/2=K*V/EW: signless Laplacian energy encodes edge count and SM constants",
+    "tr(Q^2)=V*K*(K+1)=6240: universal identity for regular graphs, verified exactly",
+    "Weighted eigenvalue sum = 2*EDGES = 480: trace identity"
+  ]
+}
