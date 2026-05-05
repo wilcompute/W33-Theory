@@ -1,0 +1,22 @@
+{
+  "part": "CCLXIX",
+  "title": "Graviton Emergence from W(3,3)",
+  "graviton_sector": "Sym2_0(V1)",
+  "dim_graviton_sector": 299,
+  "graviton_spin": 2,
+  "graviton_mass": 0,
+  "TT_polarizations_4D": 2,
+  "G_W_graph_units": 0.10610329539135797,
+  "G_planck_units": 0.008841941282613164,
+  "G_formula": "1/(3*pi)",
+  "cosmological_constant": 2.308545069553421e-55,
+  "S_edge": 122,
+  "S_edge_formula": "k^2 - f + lambda = 144 - 24 + 2",
+  "Lambda_formula": "(1/36) * exp(-122)",
+  "Hawking_temperature": 0.026525823848649224,
+  "Hawking_formula": "kappa/(2*pi) = 1/(12*pi)",
+  "ollivier_ricci_kappa": 0.16666666666666666,
+  "de_sitter": true,
+  "q_selection_6th_principle": "Gauss-Bonnet E*kappa = v => q=3",
+  "status": "COMPLETE"
+}
