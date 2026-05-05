@@ -35,8 +35,6 @@ It also gives signless Laplacian energy
 QLE=120.
 \]
 
-fileciteturn366file0
-
 2. **Distance Matrix Spectrum**: \(\Delta=2J-2I-A\) with spectrum
 
 \[
@@ -56,8 +54,6 @@ and Wiener index
 \[
 W=1320.
 \]
-
-fileciteturn367file0
 
 Together with CCCIV/CCCV, these complete the operator tetrahedron.
 
@@ -263,7 +259,7 @@ The 5-exponent is now seen two ways:
 and
 
 \[
-23=\Phi_3+\Phi_4.
+23=\Phi_3+\Phi_4.
 \]
 
 Thus the global tree complexity has two exponent channels:
@@ -273,7 +269,7 @@ e_2=q^4,
 \]
 
 \[
-e_5=\Phi_3+\Phi_4.
+e_5=\Phi_3+\Phi_4.
 \]
 
 The first is the H1/triple-Albert carrier.  The second is the combined projective-plane/theta-distance second moment.
@@ -393,7 +389,7 @@ in
 is literally the sum of normalized second moments of the signless and distance operators:
 
 \[
-23=13+10=\Phi_3+\Phi_4.
+23=13+10=\Phi_3+\Phi_4.
 \]
 
 And the q-clock is their difference:
@@ -437,7 +433,7 @@ The strongest statement is now:
 
 \[
 \boxed{
-\tau(W)=2^{q^4}5^{\Phi_3+\Phi_4}.
+\tau(W)=2^{q^4}5^{\Phi_3+\Phi_4}.
 }
 \]
 
