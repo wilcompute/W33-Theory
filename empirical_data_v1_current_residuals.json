@@ -1,0 +1,66 @@
+{
+  "schema_version": "empirical_data_v1_current_residuals",
+  "module": "PART_CCCXXII_EMPIRICAL_DATA_V1_CURRENT_RESIDUALS",
+  "status": "first current-source residual table for W33 empirical program",
+  "external_sources": {
+    "electron_mass": "PDG/pdgLive e mass 0.51099895069 ± 0.00000000016 MeV, accessed 2026-05-05",
+    "muon_mass": "PDG/pdgLive mu mass 105.6583755 ± 0.0000023 MeV, accessed 2026-05-05",
+    "tau_mass": "PDG/pdgLive tau mass 1776.93 ± 0.09 MeV, accessed 2026-05-05",
+    "weak_mixing": "PDG/pdgLive sin^2(theta_eff^lept) average 0.23148 ± 0.00012, accessed 2026-05-05"
+  },
+  "input_values": {
+    "m_e_MeV": 0.51099895069,
+    "sigma_m_e_MeV": 1.6e-10,
+    "m_mu_MeV": 105.6583755,
+    "sigma_m_mu_MeV": 2.3e-06,
+    "m_tau_MeV": 1776.93,
+    "sigma_m_tau_MeV": 0.09,
+    "sin2_eff_lept": 0.23148,
+    "sigma_sin2_eff_lept": 0.00012
+  },
+  "residuals": [
+    {
+      "id": "M1_KOIDE_CHARGED_LEPTON_PDGLIVE_2026",
+      "observable": "charged-lepton Koide ratio",
+      "theory_value": "2/3",
+      "measured_value": 0.6666644634026365,
+      "uncertainty": 5.080958195161698e-06,
+      "residual": -2.2032640301095086e-06,
+      "z_score": -0.43363159968675774,
+      "scheme": "PDG/pdgLive charged-lepton masses in MeV; simple independent uncertainty propagation",
+      "status": "PASS_WITHIN_1_SIGMA_UNDER_THIS_SCHEME",
+      "interpretation": "Dimensionless W33 target 2/3 is compatible with current charged-lepton masses under this scheme.",
+      "source": "PDG/pdgLive electron, muon, tau mass entries accessed 2026-05-05"
+    },
+    {
+      "id": "M1_SIN2_THETA_W_RAW_Z_POLE_NOT_RG_TEST",
+      "observable": "effective leptonic weak mixing angle at Z pole vs GUT-boundary target",
+      "theory_value": "3/8",
+      "measured_value": 0.23148,
+      "uncertainty": 0.00012,
+      "residual": -0.14352,
+      "z_score": -1196.0,
+      "scheme": "raw direct comparison only; no RG/unification running applied",
+      "status": "RG_REQUIRED_NOT_A_DIRECT_PASS_FAIL_TEST",
+      "interpretation": "The 3/8 value is a unification-boundary target, not a direct Z-pole prediction. A running map is mandatory.",
+      "source": "PDG/pdgLive sin^2(theta_eff^lept) entry accessed 2026-05-05"
+    }
+  ],
+  "koide_derivatives": {
+    "dQ_dme": -0.01719357989315995,
+    "dQ_dmmu": -0.0008662910833123759,
+    "dQ_dmtau": 0.00005645508671859166
+  },
+  "checks": {
+    "koide_target": true,
+    "sin2_target": true,
+    "koide_value_window": true,
+    "koide_residual_small": true,
+    "koide_sigma_positive": true,
+    "koide_within_one_sigma": true,
+    "sin2_raw_is_not_gut": true,
+    "records": true
+  },
+  "theorem_statement": "The first current-source empirical residual table confirms that the W33 Koide target Q=2/3 is compatible with current charged-lepton masses under the stated PDG/pdgLive mass scheme, with z about -0.43. The weak-mixing target 3/8 remains an RG-boundary claim, not a direct Z-pole prediction.",
+  "honesty_boundary": "Only Koide is evaluated here as a direct dimensionless comparison. Weak mixing requires a specified RG/unification map before it can be used as pass/fail evidence for or against the W33 interpretation."
+}
