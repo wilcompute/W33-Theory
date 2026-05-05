@@ -1,0 +1,30 @@
+{
+  "part": "CCCIX",
+  "title": "Normalized Laplacian Spectrum of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "NL_EIG_0": "0",
+    "NL_EIG_1": "5/6",
+    "NL_EIG_2": "4/3",
+    "NL_MULT_0": 1,
+    "NL_MULT_1": 24,
+    "NL_MULT_2": 15,
+    "NL_TRACE": "40",
+    "NL_TRACE_SQ": "130/3",
+    "NL_GAP": "5/6",
+    "NL_LARGEST": "4/3",
+    "NL_PROD_12": "10/9"
+  },
+  "discoveries": [
+    "NL_eig1 = 5/6: numerator=MU+1=5, denominator=K/2=6",
+    "NL_eig2 = 4/3: numerator=MU=4, denominator=GENERATIONS=3",
+    "NL_eig1*NL_eig2 = 10/9: numerator=ALPHA, denominator=V//4-1",
+    "NL_eig1+NL_eig2 = 13/6: numerator=ALPHA+GENERATIONS, denominator=K/2",
+    "tr(L_norm)=V=ALPHA*EW_GAUGE_4: fundamental SM-SRG trace identity",
+    "NL_eig2 - NL_eig1 = 1/2: the gap between non-trivial eigenvalues is 1/2",
+    "Cheeger lower bound = 5/12: numerator=MU+1, denominator=K",
+    "6*NL_eig1 = 5 = MU+1: Fiedler value times K/2 encodes co-degree"
+  ]
+}
