@@ -1,0 +1,37 @@
+{
+  "part": "CCXCIII",
+  "title": "Lov\u00e1sz Theta Function and Spectral Independence Bounds for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "ALL_PASS",
+  "theta_lov\u00e1sz": 10,
+  "theta_comp": 4,
+  "theta_product": 40,
+  "alpha_exact": 10,
+  "chi_frac": 4,
+  "omega_clique": 4,
+  "eigenvalue_r": 2,
+  "eigenvalue_s": -4,
+  "sm_triple": {
+    "theta_comp": 4,
+    "chi_frac": 4,
+    "omega": 4,
+    "all_equal_EW_GAUGE_4": true
+  },
+  "discoveries": [
+    "\u03d1(W(3,3)) = 10 = \u03b1(W(3,3)) \u2014 Lov\u00e1sz theta is tight; theta-exact",
+    "\u03d1(W(3,3)^c) = 4 = EW_GAUGE_4 \u2014 complement theta equals electroweak gauge count",
+    "\u03d1(G) \u00b7 \u03d1(\u1e20) = 40 = V \u2014 Lov\u00e1sz product recovers vertex count exactly",
+    "\u03c7_f(W(3,3)) = 4 = EW_GAUGE_4 \u2014 fractional chromatic equals EW gauge bosons",
+    "\u03c9(W(3,3)) = 4 = EW_GAUGE_4 \u2014 max clique (totally isotropic plane) = EW_GAUGE_4",
+    "Triple: \u03d1(\u1e20) = \u03c9 = \u03c7_f = 4 = EW_GAUGE_4 \u2014 spectral, clique, fractional agree",
+    "K / |s| = 12 / 4 = 3 = Q \u2014 degree\u2013eigenvalue ratio recovers ternary base"
+  ],
+  "created": "2026-05-04",
+  "connections": [
+    "CCXCII: Gleason weight enumerator ring and Lov\u00e1sz-type symmetry",
+    "CCXCI: Covering radius and packing",
+    "CCXC: MacWilliams and dual weight enumerators",
+    "CCLXX: W(3,3) SRG core parameters"
+  ]
+}
