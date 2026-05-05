@@ -1,0 +1,37 @@
+{
+  "part": "CCCXI",
+  "title": "Bose-Mesner Algebra of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "P11": [
+      12,
+      2,
+      4
+    ],
+    "P12": [
+      0,
+      9,
+      8
+    ],
+    "P22": [
+      27,
+      18,
+      18
+    ],
+    "BMA_DIM": 3,
+    "EIGEN_TRACE_A1": "0",
+    "EIGEN_TRACE_A2": "0"
+  },
+  "discoveries": [
+    "A^2 = k*I + lambda*A + mu*A_2: p_{11}^(0,1,2) = (12, 2, 4) = (K, LAM, MU)",
+    "A*A_2 = 0*I + (K-1-LAM)*A + (K-MU)*A_2 = 9*A + 8*A_2",
+    "A_2^2 = K2*I + 18*A + 18*A_2: both off-diagonal parameters equal 18",
+    "P12_1 = 9 = ALPHA - 1 = GENERATIONS^2: dual encoding of alpha and generations",
+    "P22_0 = 27 = GUT_DIM (E6 root/weight count): second associate class encodes GUT",
+    "P22_1 = P22_2 = 18 = 2*GENERATIONS^2 = 2*9: symmetric structure in A_2^2",
+    "P12_2 = 8 = 2^GENERATIONS: power-of-2 encoding of generation count",
+    "BMA dimension = 3 = GENERATIONS: algebra dimension matches fermion generations"
+  ]
+}
