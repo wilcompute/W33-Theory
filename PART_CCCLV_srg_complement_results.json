@@ -1,0 +1,25 @@
+{
+  "part": "CCCLV",
+  "title": "Strongly Regular Complement of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K_c": 27,
+    "LAM_c": 18,
+    "MU_c": 18,
+    "r_c": 3,
+    "s_c": -3,
+    "mult_rc": 15,
+    "mult_sc": 24,
+    "edges_c": 540
+  },
+  "discoveries": [
+    "K_c = 27 = GUT_DIM = 27: complement degree equals the GUT / E6 dimension",
+    "r_c = 3 = GENERATIONS = 3: positive complement eigenvalue equals generation count",
+    "LAM_c = MU_c = 18 = 2*GENERATIONS^2: conference-type SRG with equal intersection numbers",
+    "Multiplicities swap: mult(r_c) = 15 = MULT_S = SU5_MATTER; mult(s_c) = 24 = MULT_R = SU5_ADJ",
+    "K * K_c = 324 = LAM_c^2 = 324: product of degrees equals square of lambda"
+  ]
+}
