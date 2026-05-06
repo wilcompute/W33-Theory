@@ -1,0 +1,19 @@
+{
+  "part": "CCCXCII",
+  "title": "E8 Pipeline Orchestrator Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "runner": "tools/run_e8_operation_bridge_pipeline.py",
+  "dry_run_command": "python tools/run_e8_operation_bridge_pipeline.py --dry-run",
+  "run_command": "python tools/run_e8_operation_bridge_pipeline.py",
+  "pipeline_steps": [
+    "build_root_metadata",
+    "export_structure_constants",
+    "verify_z3_grading",
+    "analyze_g1g2_to_g0",
+    "analyze_g1g1_cubic_firewall"
+  ],
+  "architecture_upgrade": "Adds a single-command runner that preflights and executes the E8 artifact bridge pipeline in dependency order, stopping at the first missing dependency or failed script.",
+  "honesty_boundary": "The audit imports and preflights the runner only. It does not execute heavy subprocess steps."
+}
