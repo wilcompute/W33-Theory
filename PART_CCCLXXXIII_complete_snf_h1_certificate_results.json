@@ -1,0 +1,21 @@
+{
+  "part": "CCCLXXXIII",
+  "title": "Complete SNF H1 Certificate",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "relation_matrix_shape": [201, 160],
+  "rank_Q": 120,
+  "free_rank": 81,
+  "smith_report": {
+    "status": "computed",
+    "nonzero_count": 120,
+    "unit_count": 120,
+    "nonunit_factors": [],
+    "all_nonzero_unit": true
+  },
+  "complete_certificate": true,
+  "certificate_statement": "The quotient has 120 unit relations and free rank 81, so H1 is Z^81.",
+  "architecture_upgrade": "Runs the actual Smith-normal-form invariant-factor computation for the 201 x 160 H1 relation matrix when the backend is available.",
+  "honesty_boundary": "The final torsion-free statement is made only when complete_certificate is true; otherwise this file reports exact rank with backend-unavailable status."
+}
