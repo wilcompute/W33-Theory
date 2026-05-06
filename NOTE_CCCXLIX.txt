@@ -1,0 +1,28 @@
+Part CCCXLIX compact note
+
+This note summarizes the result stored in PART_CCCXLIX_w33_derived_sector_assignments_results.json.
+
+Purpose:
+Derive response-sector assignments from the finite W33 operator registry instead of using hand-made sector guesses.
+
+Main output:
+1. operator_core map
+2. order_parity map
+3. transform_class map
+4. trace_flag map
+5. minimal_bridge map
+
+Recommended first tests:
+1. operator_core
+2. minimal_bridge
+3. transform_class
+
+Status:
+The code, tests, and JSON result snapshot were pushed successfully.
+
+Files:
+- exploration/PART_CCCXLIX_W33_DERIVED_SECTOR_ASSIGNMENTS.py
+- tests/test_w33_derived_sector_assignments_cccxlix.py
+- PART_CCCXLIX_w33_derived_sector_assignments_results.json
+
+Checks: 11/11 passed.
