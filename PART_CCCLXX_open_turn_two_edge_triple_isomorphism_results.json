@@ -1,0 +1,19 @@
+{
+  "part": "CCCLXX",
+  "title": "Open-Turn / Two-Edge Triple Isomorphism",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "triple_distribution": {"0": 3240, "1": 4320, "2": 2160, "3": 160},
+  "canonical_isomorphism": "open Hashimoto turns <-> oriented two-edge triples",
+  "counts": {
+    "two_edge_triples": 2160,
+    "oriented_two_edge_triples": 4320,
+    "open_turns": 4320,
+    "one_edge_odd_triples": 4320
+  },
+  "correction": "one-edge odd triples have the same count as open turns but are complement-dual, not the canonical graph-open-turn support",
+  "architecture_upgrade": "CCCLXVIII matched counts. CCCLXX constructs the exact canonical bijection: each two-edge triple has a unique middle vertex and two orientations, giving precisely the 4320 open Hashimoto turns.",
+  "theorem": "In W(3,3), the canonical support of an open Hashimoto turn is a two-edge induced triple. The map from a two-edge triple to its two endpoint orientations around the unique middle vertex is a bijection onto all open nonbacktracking turns. One-edge odd triples are count-equal because they are two-edge triples in the complement graph.",
+  "honesty_boundary": "This corrects the earlier count-only bridge. Any use of one-edge odd triples for open dynamics requires an explicit complement-duality map, not the direct Hashimoto support map."
+}
