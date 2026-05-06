@@ -1,0 +1,47 @@
+{
+  "architecture_upgrade": "CCCXXX made the RG renderer projective.  CCCXXXI identifies the renderer as an sl2/spin(2,1) Lorentzian spinor flow: G is a Lorentz vector of norm 5049/4 and its normalized form defines Clifford branch projectors.",
+  "checks": [
+    {"name":"G lies in sl2: trace zero","passed":true,"value":"0"},
+    {"name":"G decomposes as (B/2)H + A E + F","passed":true,"value":[["67/2","140"],["1","-67/2"]]},
+    {"name":"sl2 relation [H,E]=2E","passed":true,"value":[["0","2"],["0","0"]]},
+    {"name":"sl2 relation [H,F]=-2F","passed":true,"value":[["0","0"],["-2","0"]]},
+    {"name":"sl2 relation [E,F]=H","passed":true,"value":[["1","0"],["0","-1"]]},
+    {"name":"Lorentz reconstruction [[z,x+y],[x-y,-z]] equals G","passed":true,"value":[["67/2","140"],["1","-67/2"]]},
+    {"name":"Lorentz components are z=67/2, x=141/2, y=139/2","passed":true,"value":["67/2","141/2","139/2"]},
+    {"name":"Lorentz norm z^2+x^2-y^2 = 5049/4","passed":true,"value":"5049/4"},
+    {"name":"G^2=(5049/4)I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"det(G)=-5049/4","passed":true,"value":"-5049/4"},
+    {"name":"normalized generator J=(2/sqrtDelta)G squares to I","passed":true,"value":[[1.0,0.0],[0.0,1.0]]},
+    {"name":"P_plus is idempotent","passed":true,"value":[[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]]},
+    {"name":"P_minus is idempotent","passed":true,"value":[[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]]},
+    {"name":"branch projectors are orthogonal","passed":true,"value":[[0.0,0.0],[0.0,0.0]]},
+    {"name":"P_plus+P_minus=I","passed":true,"value":[[1.0,0.0],[0.0,1.0]]}
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "clifford_branching": {
+    "P_minus_numeric": [[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]],
+    "P_plus_numeric": [[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]],
+    "normalized_involution": "J=(2/sqrt(5049))G, J^2=I",
+    "projectors": "P_±=(I±J)/2"
+  },
+  "honesty_boundary": "This is a finite Lorentzian/projective spinor structure for the RG renderer. It is not yet a derivation of physical spacetime Lorentz symmetry or a continuum spin bundle.",
+  "lorentzian_vector": {
+    "mass_gap": "sqrt(5049)/2",
+    "matrix_form": "G=[[z,x+y],[x-y,-z]]",
+    "norm": "5049/4",
+    "norm_form": "z^2+x^2-y^2=5049/4",
+    "x": "141/2",
+    "y": "139/2",
+    "z": "67/2"
+  },
+  "part": "CCCXXXI",
+  "sl2_generator": {
+    "G": [["67/2","140"],["1","-67/2"]],
+    "commutators": ["[H,E]=2E", "[H,F]=-2F", "[E,F]=H"],
+    "decomposition": "G=(67/2)H + 140E + F"
+  },
+  "theorem": "The projective RG generator G=[[67/2,140],[1,-67/2]] is an sl2 element equivalently represented by the Lorentzian vector (z,x,y)=(67/2,141/2,139/2) with norm z^2+x^2-y^2=5049/4.  The normalized generator J=(2/sqrt(5049))G satisfies J^2=I, producing two Clifford idempotent branch projectors.",
+  "title": "Lorentzian RG Spinor Compiler",
+  "verified": true
+}
