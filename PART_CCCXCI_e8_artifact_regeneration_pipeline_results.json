@@ -1,0 +1,17 @@
+{
+  "part": "CCCXCI",
+  "title": "E8 Artifact Regeneration Pipeline",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "pipeline_order": [
+    "tools/build_e8_root_metadata_table.py",
+    "tools/export_e8_structure_constants_from_w33_discrete.py",
+    "tools/verify_e8_z3grading_from_structure_constants.py",
+    "tools/analyze_e8_g1g2_to_g0_couplings.py",
+    "tools/analyze_e8_g1g1_couplings_cubic_firewall.py"
+  ],
+  "architecture_upgrade": "Records the exact regeneration DAG from root metadata to structure constants to Z3/bracket analyzers, turning the artifact blocker into an executable pipeline plan.",
+  "theorem": "The E8 operation bridge has a finite regeneration order: root metadata must be built first, structure constants second, grading verification third, and coupling analyzers after that. No bracket-level claim is allowed until the preflight reaches the relevant ready state.",
+  "honesty_boundary": "This is a preflight/pipeline manifest, not a run log. It does not execute subprocesses or fabricate missing artifacts."
+}
