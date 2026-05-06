@@ -1,0 +1,26 @@
+{
+  "part": "CCCLVII",
+  "title": "Two-Graph Structure of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "total_triples": 9880,
+    "triangles": 160,
+    "two_graph_size": 4480,
+    "odd_triples_per_vertex": 336,
+    "odd_per_edge": 20,
+    "odd_per_nonedge": 16,
+    "triples_0": 3240,
+    "triples_1": 4320,
+    "triples_2": 2160,
+    "triples_3": 160
+  },
+  "discoveries": [
+    "|T| = 4480 = ALPHA*MULT_R*MULT_S/3 = 10*24*15/3",
+    "Vertex-regular: each vertex in 336 = ALPHA*(GUT_DIM+GENERATIONS) odd triples",
+    "Edge pair-count 20 = 2*ALPHA; Non-edge pair-count 16 = 2*(K-MU)",
+    "Difference = 4 = EW_GAUGE_4 (electroweak gauge group dimension)",
+    "triangles = 160 = V*ALPHA*LAM/3"
+  ]
+}
