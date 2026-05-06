@@ -1,0 +1,63 @@
+name: E8 Operation Bridge Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_mode:
+        description: "Pipeline mode: dry-run or run"
+        required: true
+        default: "dry-run"
+        type: choice
+        options:
+          - dry-run
+          - run
+  push:
+    paths:
+      - "tools/run_e8_operation_bridge_pipeline.py"
+      - "tools/build_e8_root_metadata_table.py"
+      - "tools/export_e8_structure_constants_from_w33_discrete.py"
+      - "tools/verify_e8_z3grading_from_structure_constants.py"
+      - "tools/analyze_e8_g1g2_to_g0_couplings.py"
+      - "tools/analyze_e8_g1g1_couplings_cubic_firewall.py"
+      - "artifacts/**"
+      - ".github/workflows/e8-operation-bridge-pipeline.yml"
+
+jobs:
+  e8-operation-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install lightweight dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install sympy
+
+      - name: Preflight dry run
+        run: |
+          mkdir -p artifacts/ci
+          python tools/run_e8_operation_bridge_pipeline.py --dry-run | tee artifacts/ci/e8_operation_bridge_preflight.json
+
+      - name: Run bridge pipeline
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_mode == 'run' }}
+        run: |
+          mkdir -p artifacts/ci
+          python tools/run_e8_operation_bridge_pipeline.py | tee artifacts/ci/e8_operation_bridge_run.json
+
+      - name: Upload bridge artifacts and logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e8-operation-bridge-artifacts
+          path: |
+            artifacts/**/*.json
+            artifacts/**/*.md
+          if-no-files-found: warn
