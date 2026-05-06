@@ -1,0 +1,17 @@
+{
+  "part": "CCCLXI",
+  "title": "Two-Graph Incidence Operator Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "triple_distribution": {"0": 3240, "1": 4320, "2": 2160, "3": 160},
+  "odd_triples": 4480,
+  "incidence_operator": {"shape": [40, 4480], "row_sum": 336, "column_sum": 3},
+  "gram_identity": "M M^T = 320 I + 16 J + 4 A",
+  "adjacency_recovery": "A = (M M^T - 320 I - 16 J)/4",
+  "gram_spectrum": {"1008": 1, "328": 24, "304": 15},
+  "sector_certificate": "The two-graph incidence operator recovers adjacency with coefficient 4, matching the edge/nonedge parity gap 20-16=4 and certifying the action-gap separation used by the preferred response-sector split.",
+  "architecture_upgrade": "CCCLX fused two-graph/interlacing counts with response sectors. CCCLXI constructs the actual two-graph incidence operator M and proves the operator identity M M^T=320I+16J+4A.",
+  "theorem": "For the W(3,3) Seidel two-graph, the vertex-by-odd-triple incidence matrix M satisfies M M^T=320I+16J+4A. Therefore the W33 adjacency operator is recoverable from the two-graph incidence operator, and the edge/nonedge parity gap 4 becomes an operator-level certificate rather than only a counting identity.",
+  "honesty_boundary": "This is an exact finite graph/operator theorem. Physical interpretation still depends on the response-channel dictionary."
+}
