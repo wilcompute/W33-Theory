@@ -1,0 +1,89 @@
+{
+  "anchor_free_identities": {
+    "all_channel_scale": "mass^2=(gap/2)^2=-log(H/2)/tau=(arcosh(T/2)/t)^2=s^2-2s/R=(2/zeta_p)^(1/p)",
+    "gap_mass": "gap = 2 mass",
+    "mass_heat": "mass^2 = -log(H/2)/tau",
+    "resolvent_heat": "s^2 - 2s/R = -log(H/2)/tau",
+    "spinor_heat": "(arcosh(T/2)/t)^2 = -log(H/2)/tau",
+    "zeta_heat": "(2/zeta_p)^(1/p) = -log(H/2)/tau"
+  },
+  "architecture_upgrade": "CCCXLI made Lambda the kappa-free comparison object.  CCCXLII eliminates Lambda from the front-facing tests: every response channel must satisfy direct anchor-free identities against every other channel.",
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"all channels recover same scale","passed":true,"value":{"consistent":true,"max_abs_deviation":2.7284841053187847e-12,"max_relative_deviation":3.9702898593186436e-16,"mean_scale":6872.249999999997,"scales":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25},"std_scale":2.434379247763182e-12,"tolerance":1e-08}},
+    {"name":"mass scale equals heat scale","passed":true,"value":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}},
+    {"name":"gap scale equals heat scale","passed":true,"value":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}},
+    {"name":"spinor scale equals heat scale","passed":true,"value":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}},
+    {"name":"resolvent scale equals heat scale","passed":true,"value":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}},
+    {"name":"zeta scale equals heat scale","passed":true,"value":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25}},
+    {"name":"all pairwise residuals near zero","passed":true,"value":{"gap_minus_heat_scale":9.094947017729282e-13,"mass_minus_heat_scale":9.094947017729282e-13,"resolvent_trace_minus_heat_scale":-1.8189894035458565e-12,"spinor_trace_minus_heat_scale":-5.4569682106375694e-12,"zeta_minus_heat_scale":0.0}},
+    {"name":"corrupted packet fails anchor-free identities","passed":true,"value":{"consistent":false,"max_abs_deviation":629.308051010596,"max_relative_deviation":0.10101913868959489,"mean_scale":6229.117163206031,"scales":{"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":3012.4539792361866,"zeta":6872.25},"std_scale":1438.5816382483318,"tolerance":1e-08}},
+    {"name":"mass predicts all other channels","passed":true,"value":8.526512829121202e-14},
+    {"name":"heat predicts all other channels","passed":true,"value":0.0},
+    {"name":"spinor predicts all other channels","passed":true,"value":8.526512829121202e-14},
+    {"name":"resolvent predicts all other channels","passed":true,"value":2.2737367544323206e-13},
+    {"name":"zeta predicts all other channels","passed":true,"value":0.0},
+    {"name":"gap/mass identity holds","passed":true,"value":{"gap":165.7980699525785,"mass":82.89903497628925}}
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "corrupted_report": {
+    "consistent": false,
+    "max_abs_deviation": 629.308051010596,
+    "max_relative_deviation": 0.10101913868959489,
+    "mean_scale": 6229.117163206031,
+    "scales": {"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":3012.4539792361866,"zeta":6872.25},
+    "std_scale": 1438.5816382483318,
+    "tolerance": 1e-08
+  },
+  "dimensionless_kernel": {
+    "M2": "5049/4",
+    "role": "internal W33 scale; not needed for front-facing channel identities until kappa is reconstructed"
+  },
+  "honesty_boundary": "These are exact one-sector response identities. They become empirical only after specific physical measurements are identified with the finite response channels.",
+  "pairwise_identity_residuals": {
+    "gap_minus_heat_scale": 9.094947017729282e-13,
+    "mass_minus_heat_scale": 9.094947017729282e-13,
+    "resolvent_trace_minus_heat_scale": -1.8189894035458565e-12,
+    "spinor_trace_minus_heat_scale": -5.4569682106375694e-12,
+    "zeta_minus_heat_scale": 0.0
+  },
+  "part": "CCCXLII",
+  "recovered_channel_scales": {
+    "gap": 6872.250000000001,
+    "heat_trace": 6872.25,
+    "mass": 6872.250000000001,
+    "resolvent_trace": 6872.249999999998,
+    "spinor_trace": 6872.2499999999945,
+    "zeta": 6872.25
+  },
+  "sample_packet": {
+    "gap": 165.7980699525785,
+    "heat_trace": 0.002032961285775859,
+    "mass": 82.89903497628925,
+    "resolvent_trace": 0.07784653570485622,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.7000919341649367,
+    "zeta": 4.2355317044381655e-08
+  },
+  "scale_report": {
+    "consistent": true,
+    "max_abs_deviation": 2.7284841053187847e-12,
+    "max_relative_deviation": 3.9702898593186436e-16,
+    "mean_scale": 6872.249999999997,
+    "scales": {"gap":6872.250000000001,"heat_trace":6872.25,"mass":6872.250000000001,"resolvent_trace":6872.249999999998,"spinor_trace":6872.2499999999945,"zeta":6872.25},
+    "std_scale": 2.434379247763182e-12,
+    "tolerance": 1e-08
+  },
+  "single_channel_prediction_max_diffs": {
+    "gap": 0.0,
+    "heat_trace": 0.0,
+    "mass": 8.526512829121202e-14,
+    "resolvent_trace": 2.2737367544323206e-13,
+    "spinor_trace": 8.526512829121202e-14,
+    "zeta": 0.0
+  },
+  "theorem": "For a one-sector W33 observable packet, mass, gap, heat trace, spinor trace, resolvent trace, and zeta data are mutually constrained by direct response identities. Any one channel predicts all others; violation of these identities falsifies the one-sector observable interpretation without choosing kappa or Lambda.",
+  "title": "Anchor-Free Response Identities Compiler",
+  "verified": true
+}
