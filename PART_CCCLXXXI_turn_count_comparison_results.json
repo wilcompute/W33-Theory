@@ -1,0 +1,25 @@
+{
+  "part": "CCCLXXXI",
+  "title": "Turn Count Comparison",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "system_A": {
+    "directed_edge_states": 480,
+    "turns": 4320,
+    "middle_profile": [108],
+    "support": "oriented two-edge triples in the base graph"
+  },
+  "system_B": {
+    "directed_edge_states": 1080,
+    "turns": 8640,
+    "middle_profile": [216],
+    "support": "oriented two-edge triples in the paired graph"
+  },
+  "triple_distributions": {
+    "base": {"0": 3240, "1": 4320, "2": 2160, "3": 160},
+    "paired": {"0": 160, "1": 2160, "2": 4320, "3": 3240}
+  },
+  "architecture_upgrade": "Compares the two turn systems and records that the paired system has twice the turn count and twice the uniform middle profile of the base system.",
+  "honesty_boundary": "This records turn counts and uniform profiles; a full operator-spectrum comparison is a separate refinement."
+}
