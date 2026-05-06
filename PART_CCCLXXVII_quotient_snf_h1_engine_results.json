@@ -1,0 +1,16 @@
+{
+  "part": "CCCLXXVII",
+  "title": "Quotient SNF H1 Engine",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "presentation": "H1 = Z^201 / im(R), where R is the 201 x 160 triangle-boundary matrix in fundamental-cycle coordinates",
+  "R_shape": [201, 160],
+  "rank_Q_R": 120,
+  "free_rank": 81,
+  "sampled_primes": [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47],
+  "optional_snf": "computed when a Smith normal form backend is available; otherwise skipped while exact ranks and sampled modular ranks remain active",
+  "architecture_upgrade": "CCCLXXIII added a general SNF audit path. CCCLXXVII constructs the actual quotient presentation H1=Z^201/im(R), making the torsion problem a Smith-normal-form problem for the 201 x 160 relation matrix R.",
+  "theorem": "Choosing a spanning tree identifies ker(d1) with Z^201 via fundamental cycles. Triangle boundaries define a relation matrix R:Z^160->Z^201. The quotient H1 is Z^201/im(R), with rank_Q(R)=120 and free rank 81. If the Smith invariants of R are all unit on the nonzero diagonal, this presentation proves H1 is torsion-free of rank 81.",
+  "honesty_boundary": "The quotient presentation is exact. Full torsion-freeness depends on computing or certifying the Smith invariants of R; if optional_snf is unavailable, only rank and sampled-prime checks are reported."
+}
