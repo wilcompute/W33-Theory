@@ -1,0 +1,15 @@
+{
+  "part": "CCCLXXIV",
+  "title": "Complement-Duality Map for Open Turns",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "G_triple_distribution": {"0": 3240, "1": 4320, "2": 2160, "3": 160},
+  "complement_triple_distribution": {"0": 160, "1": 2160, "2": 4320, "3": 3240},
+  "duality": "one-edge triples in G are exactly two-edge triples in complement(G)",
+  "complement_open_turns": 8640,
+  "mapped_turns": 8640,
+  "architecture_upgrade": "CCCLXX corrected direct open turns as oriented two-edge triples in G. CCCLXXIV explains the one-edge 4320 count as complement-dual: one-edge triples in G are two-edge triples in complement(G), and orient to all complement-open turns.",
+  "theorem": "For any triple, edge_count_G + edge_count_complement = 3. Therefore one-edge triples in W33 correspond exactly to two-edge triples in the complement graph. Orienting around the unique middle vertex gives a bijection from one-edge triples of G, with two orientations each, to the open Hashimoto turns of complement(G).",
+  "honesty_boundary": "This is a complement-dynamics bridge, not the direct W33 Hashimoto open-turn bridge. Direct W33 open turns remain oriented two-edge triples in G."
+}
