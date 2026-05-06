@@ -1,0 +1,28 @@
+{
+  "part": "CCCLXVIII",
+  "title": "Odd-Triple 4320+160 Factorization Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "factorization": {
+    "one_edge_triples": 4320,
+    "three_edge_triples": 160,
+    "total_odd_triples": 4480
+  },
+  "hashimoto_bridge": {
+    "triangle_turns": "6*160=960=|T|",
+    "open_turns": "4320=|O|"
+  },
+  "vertex_degrees": {
+    "one_edge_sector": [324],
+    "triangle_sector": [12]
+  },
+  "pair_coverage": {
+    "one_edge_sector": {"edge_pair_values": [18], "nonedge_pair_values": [16]},
+    "triangle_sector": {"edge_pair_values": [2], "nonedge_pair_values": [0]},
+    "combined": {"edge": 20, "nonedge": 16, "gap": 4}
+  },
+  "architecture_upgrade": "CCCLXV exposed the full odd-triple space. CCCLXVIII factors it into 4320 one-edge triples and 160 triangle triples, exactly matching the Hashimoto open/triangle turn counts |O|=4320 and |T|=960 after orientation of triangles.",
+  "theorem": "The W33 odd triples split as 4320 one-edge triples plus 160 three-edge triples. The three-edge sector is exactly the triangle set and gives 6*160=960 directed triangle turns. The one-edge sector has size 4320, matching the open-turn operator size. Pair coverage refines the two-graph 20/16 split as edge pairs receive 18+2 and nonedge pairs receive 16+0.",
+  "honesty_boundary": "The count bridge is exact. A full operator isomorphism between one-edge triples and oriented open turns is the next refinement."
+}
