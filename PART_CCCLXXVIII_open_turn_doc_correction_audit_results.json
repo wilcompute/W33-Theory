@@ -1,0 +1,15 @@
+{
+  "part": "CCCLXXVIII",
+  "title": "Open-Turn Doc Correction Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "doc_path": "docs/OPEN_TURN_COMPLEMENT_DUALITY_CORRECTION.md",
+  "architecture_upgrade": "Adds a correction note distinguishing direct W33 open turns from complement-dual one-edge triples.",
+  "key_points": [
+    "Direct W33 open dynamics uses oriented two-edge triples in W33.",
+    "One-edge triples in W33 are the complement-dual partner.",
+    "The count 2 * 2160 = 4320 explains direct W33 open turns.",
+    "The architecture docs now keep direct Hashimoto dynamics separate from complement-dual parity dynamics."
+  ]
+}
