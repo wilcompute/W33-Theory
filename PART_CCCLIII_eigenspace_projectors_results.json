@@ -1,0 +1,21 @@
+{
+  "part": "CCCLIII",
+  "title": "Eigenspace Projectors and Gram Matrices in W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "er_diag": "3/5",
+    "er_adj": "1/10",
+    "er_non_adj": "-1/15",
+    "es_diag": "3/8",
+    "es_adj": "-1/8",
+    "es_non_adj": "1/24"
+  },
+  "discoveries": [
+    "(E_r)_{adj} = 1/10 = 1/|2*ABS_S+1|",
+    "(E_s)_{adj} = -1/8 = -1/(2*MU)",
+    "(E_s)_{non-adj} = 1/24 = 1/(V-MULT_R)",
+    "MULT_R=24 = SU(5) adjoint; MULT_S=15 = SU(5) matter rep"
+  ]
+}
