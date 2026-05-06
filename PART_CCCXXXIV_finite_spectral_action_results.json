@@ -1,0 +1,48 @@
+{
+  "architecture_upgrade": "CCCXXXIII supplied the resolvent and branch propagator.  CCCXXXIV turns them into spectral-action data: characteristic determinant, resolvent trace, spinor trace, KG heat trace, zeta function, and sharp cutoff mode count.",
+  "checks": [
+    {"name":"G trace is zero","passed":true,"value":"0"},
+    {"name":"G determinant is -m^2","passed":true,"value":"-5049/4"},
+    {"name":"G^2=m^2 I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"mass squared = 5049/4","passed":true,"value":"5049/4"},
+    {"name":"characteristic determinant det(sI-G)=s^2-m^2","passed":true,"value":"34951/4"},
+    {"name":"resolvent trace = 2s/(s^2-m^2)","passed":true,"value":"800/34951"},
+    {"name":"zeta_G2(1)=2/m^2","passed":true,"value":"8/5049"},
+    {"name":"zeta_G2(2)=2/m^4","passed":true,"value":"32/25492401"},
+    {"name":"sharp spectral action below mass shell is zero","passed":true,"value":0},
+    {"name":"sharp spectral action above mass shell counts two modes","passed":true,"value":2},
+    {"name":"spinor heat/propagator trace >= 2","passed":true,"value":2.1271897588648534},
+    {"name":"KG heat trace between 0 and 2 for positive tau","passed":true,"value":0.5658372432569382}
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "honesty_boundary": "This is a finite spectral-action/heat-kernel layer for the RG spinor.  It is not yet the continuum spectral action of a physical Dirac operator on spacetime.",
+  "part": "CCCXXXIV",
+  "sample_values": {
+    "KG_heat_trace_tau_0_001": 0.5658372432569382,
+    "det_sI_minus_G": "34951/4",
+    "resolvent_trace": "800/34951",
+    "s": "100",
+    "sharp_cutoff_1000": 0,
+    "sharp_cutoff_2000": 2,
+    "spinor_trace_t_0_01": 2.1271897588648534,
+    "zeta_G2_1": "8/5049",
+    "zeta_G2_2": "32/25492401"
+  },
+  "spectral_identities": {
+    "KG_heat_trace": "2 exp(-(5049/4) tau)",
+    "det_sI_minus_G": "s^2 - 5049/4",
+    "resolvent_trace": "2s/(s^2-5049/4)",
+    "spinor_propagator_trace": "2 cosh(sqrt(5049)t/2)",
+    "zeta_G2_p": "2(5049/4)^(-p)"
+  },
+  "spectrum": {
+    "G2_eigenvalue": "5049/4",
+    "eigenvalues": ["+sqrt(5049)/2", "-sqrt(5049)/2"],
+    "multiplicity_G2": 2,
+    "operator": "G"
+  },
+  "theorem": "The finite RG spinor generator has spectrum {+sqrt(5049)/2,-sqrt(5049)/2}. Therefore det(sI-G)=s^2-5049/4, tr((sI-G)^-1)=2s/(s^2-5049/4), tr(exp(tG))=2cosh(sqrt(5049)t/2), and tr(exp(-tau G^2))=2exp(-(5049/4)tau).",
+  "title": "Finite Spectral Action / Heat Kernel Compiler",
+  "verified": true
+}
