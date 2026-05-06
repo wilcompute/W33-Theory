@@ -1,0 +1,24 @@
+{
+  "part": "CCCLXXXVIII",
+  "title": "H1 / E8 Operation Compatibility Manifest",
+  "verified": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "h1_rank": 81,
+  "e8_dims": {"g0": 86, "g1": 81, "g2": 81, "total": 248},
+  "grade_rules": {
+    "g0,g0": "g0",
+    "g0,g1": "g1",
+    "g0,g2": "g2",
+    "g1,g1": "g2",
+    "g1,g2": "g0",
+    "g2,g2": "g1"
+  },
+  "required_artifacts": [
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "artifacts/e8_root_metadata_table.json"
+  ],
+  "architecture_upgrade": "Turns the H1-to-E8 bridge into an operation-compatibility checklist with explicit Z3 bracket-grade rules and repo tool/artifact dependencies.",
+  "theorem": "The integral W33 matter module has the correct rank to map into each E8 matter grade, and the operation-preserving problem reduces to verifying the six Z3 grade-product rules plus pairing/Jacobi compatibility against concrete E8 structure constants.",
+  "honesty_boundary": "This is a manifest and reduction of the problem, not the completed operation-preserving map. The required structure-constant artifacts must be loadable before bracket-level verification can be run end-to-end."
+}
