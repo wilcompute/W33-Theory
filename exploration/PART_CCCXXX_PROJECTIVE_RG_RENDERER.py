@@ -22,7 +22,7 @@ The generator satisfies
 
     G^2 = (5049/4) I,
 
-so its eigenvalues are ±sqrt(5049)/2 and the projective gap is sqrt(5049),
+so its eigenvalues are +/- sqrt(5049)/2 and the projective gap is sqrt(5049),
 exactly the RG-time eigenvalue from CCCXXIX.
 
 This makes the finite RG renderer a genuine PSL(2)-type projective action.
@@ -39,7 +39,6 @@ from typing import Any, Dict, List, Tuple
 ROOT = Path(__file__).resolve().parents[1]
 
 Q = 3
-LAM = 2
 K = 12
 V = 40
 PHI3 = Q * Q + Q + 1
@@ -53,24 +52,25 @@ D = math.sqrt(DELTA)
 # Traceless projective generator G = [[B/2, A], [1, -B/2]].
 G = ((Fraction(B, 2), Fraction(A, 1)), (Fraction(1, 1), Fraction(-B, 2)))
 
+Matrix2 = Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]
+
 
 def ok(name: str, condition: bool, value: Any = None) -> Dict[str, Any]:
     return {"name": name, "passed": bool(condition), "value": value}
 
 
-def matmul2(X: Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]],
-            Y: Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]) -> Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]:
+def matmul2(X: Matrix2, Y: Matrix2) -> Matrix2:
     return (
         (X[0][0] * Y[0][0] + X[0][1] * Y[1][0], X[0][0] * Y[0][1] + X[0][1] * Y[1][1]),
         (X[1][0] * Y[0][0] + X[1][1] * Y[1][0], X[1][0] * Y[0][1] + X[1][1] * Y[1][1]),
     )
 
 
-def trace2(X: Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]) -> Fraction:
+def trace2(X: Matrix2) -> Fraction:
     return X[0][0] + X[1][1]
 
 
-def det2(X: Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]) -> Fraction:
+def det2(X: Matrix2) -> Fraction:
     return X[0][0] * X[1][1] - X[0][1] * X[1][0]
 
 
@@ -78,7 +78,7 @@ def frac_str(x: Fraction) -> str:
     return f"{x.numerator}/{x.denominator}" if x.denominator != 1 else str(x.numerator)
 
 
-def generator_square() -> Tuple[Tuple[Fraction, Fraction], Tuple[Fraction, Fraction]]:
+def generator_square() -> Matrix2:
     return matmul2(G, G)
 
 
@@ -110,6 +110,10 @@ def fixed_points() -> Tuple[float, float]:
     return ((B + D) / 2.0, (B - D) / 2.0)
 
 
+def det_float(M: Tuple[Tuple[float, float], Tuple[float, float]]) -> float:
+    return M[0][0] * M[1][1] - M[0][1] * M[1][0]
+
+
 def build_results() -> Dict[str, Any]:
     checks: List[Dict[str, Any]] = []
     G2 = generator_square()
@@ -117,20 +121,22 @@ def build_results() -> Dict[str, Any]:
     y_plus, y_minus = fixed_points()
     y0 = float(B)
     t = 0.05
+    M_t = mobius_matrix(t)
     y_projective = projective_action(y0, t)
     deriv_at_zero = derivative_numeric(y0, 0.0)
-    det_exp = det2(G)
+    det_G = det2(G)
+    det_M_t = det_float(M_t)
 
     checks.append(ok("projective generator trace is zero", trace2(G) == 0, frac_str(trace2(G))))
-    checks.append(ok("projective generator determinant = -Delta/4", det_exp == Fraction(-DELTA, 4), frac_str(det_exp))))
+    checks.append(ok("projective generator determinant = -Delta/4", det_G == Fraction(-DELTA, 4), frac_str(det_G)))
     checks.append(ok("G^2 = (Delta/4) I", G2 == expected_G2, [[frac_str(x) for x in row] for row in G2]))
     checks.append(ok("Delta=q^3(k-1)(Phi4+Phi6)", DELTA == Q ** 3 * (K - 1) * (PHI4 + PHI6), DELTA))
     checks.append(ok("projective gap = sqrt(Delta)", abs((y_plus - y_minus) - D) < 1e-12, y_plus - y_minus))
-    checks.append(ok("fixed points are eigenline slopes", abs(beta(y_plus)) < 1e-10 and abs(beta(y_minus)) < 1e-10, (y_plus, y_minus))))
-    checks.append(ok("Mobius action identity at t=0", abs(projective_action(y0, 0.0) - y0) < 1e-12, projective_action(y0, 0.0))))
+    checks.append(ok("fixed points are eigenline slopes", abs(beta(y_plus)) < 1e-10 and abs(beta(y_minus)) < 1e-10, (y_plus, y_minus)))
+    checks.append(ok("Mobius action identity at t=0", abs(projective_action(y0, 0.0) - y0) < 1e-12, projective_action(y0, 0.0)))
     checks.append(ok("Mobius derivative equals beta at t=0", abs(deriv_at_zero - beta(y0)) < 1e-4, (deriv_at_zero, beta(y0))))
-    checks.append(ok("forward Mobius action moves toward attracting branch", y_projective > y0 and y_projective < y_plus, y_projective)))
-    checks.append(ok("exp(tG) has determinant 1", abs((mobius_matrix(t)[0][0] * mobius_matrix(t)[1][1] - mobius_matrix(t)[0][1] * mobius_matrix(t)[1][0]) - 1.0) < 1e-12, mobius_matrix(t))))
+    checks.append(ok("forward Mobius action moves toward attracting branch", y_projective > y0 and y_projective < y_plus, y_projective))
+    checks.append(ok("exp(tG) has determinant 1", abs(det_M_t - 1.0) < 1e-12, det_M_t))
 
     verified = all(check["passed"] for check in checks)
 
@@ -143,7 +149,7 @@ def build_results() -> Dict[str, Any]:
         "generator": {
             "G": [[frac_str(x) for x in row] for row in G],
             "trace": frac_str(trace2(G)),
-            "determinant": frac_str(det_exp),
+            "determinant": frac_str(det_G),
             "square": [[frac_str(x) for x in row] for row in G2],
             "square_form": "G^2=(5049/4)I",
             "eigenvalues": ["+sqrt(5049)/2", "-sqrt(5049)/2"],
@@ -160,6 +166,7 @@ def build_results() -> Dict[str, Any]:
             "sample_y0": y0,
             "sample_t": t,
             "sample_y_t": y_projective,
+            "sample_det_exp_tG": det_M_t,
         },
         "architecture_upgrade": (
             "CCCXXIX integrated the beta flow.  CCCXXX shows the integrated flow is "
