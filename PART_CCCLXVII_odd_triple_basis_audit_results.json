@@ -1,0 +1,13 @@
+{
+  "part": "CCCLXVII",
+  "title": "Odd-Triple Basis Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "matrix_shape": [40, 4480],
+  "pivot_column_count": 40,
+  "free_column_count": 4440,
+  "basis_rule_summary": "choose 40 independent columns P; each remaining column c gives a relation with pivot coefficients -P^{-1}c and coefficient 1 on c",
+  "architecture_upgrade": "CCCLXV found the 4480-column odd-triple incidence space has rank 40. CCCLXVII gives a constructive pivot/free-column certificate and verifies sample relations exactly over rational arithmetic.",
+  "honesty_boundary": "The repository stores the reproducible construction rule and sample checks rather than all 4440 generated relations."
+}
