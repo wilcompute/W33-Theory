@@ -1,0 +1,57 @@
+{
+  "architecture_upgrade": "CCCXXXVI reconstructed the spectral measure mathematically.  CCCXXXVII turns that into an observability protocol: finite moment samples and one optional spectral response sample are enough to reconstruct and verify the branch mass shell and projector sectors.",
+  "checks": [
+    {"name":"Tier A recovers symmetry from m1=0","passed":true,"value":true},
+    {"name":"Tier A recovers M2=m2/m0=5049/4","passed":true,"value":"5049/4"},
+    {"name":"Tier A recovers equal weights","passed":true,"value":["1","1"]},
+    {"name":"Tier B certifies Hankel rank two","passed":true,"value":{"H2_det":"5049","H3_det":"0"}},
+    {"name":"Tier B certifies recurrence at m4","passed":true,"value":true},
+    {"name":"Resolvent sample recovers M2 exactly","passed":true,"value":"5049/4"},
+    {"name":"Heat trace sample recovers M2 numerically","passed":true,"value":1262.25},
+    {"name":"Spinor trace sample recovers M numerically","passed":true,"value":35.5281578469811},
+    {"name":"Measured-mass P_plus is idempotent","passed":true,"value":[[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]]},
+    {"name":"Measured-mass P_minus is idempotent","passed":true,"value":[[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]]},
+    {"name":"Measured-mass branch projectors are orthogonal","passed":true,"value":[[0.0,0.0],[0.0,0.0]]}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "honesty_boundary": "This is a finite mathematical measurement protocol. Mapping these samples to laboratory measurements requires a physical observable/unit assignment.",
+  "mass_shell": {
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4",
+    "w33_form": "q^3(k-1)(Phi4+Phi6)/4"
+  },
+  "part": "CCCXXXVII",
+  "protocol": [
+    {"tier":"A","samples":["m0","m1","m2"],"recovers":["symmetry","M2=m2/m0","equal branch weights under symmetry"]},
+    {"tier":"B","samples":["m0","m1","m2","m3","m4"],"recovers":["Hankel rank two","recurrence m_{n+2}=M2 m_n","two-atom certificate"]},
+    {"tier":"C","samples":["one resolvent trace OR one heat trace OR one spinor trace"],"recovers":["independent M2/M check"]},
+    {"tier":"D","samples":["G plus recovered M"],"recovers":["branch projectors P_±=(I±G/M)/2"]}
+  ],
+  "theorem": "The W33 RG spinor architecture is finitely observable: m0,m1,m2 recover the symmetric two-branch mass shell M2=5049/4 and equal weights; m0..m4 certify Hankel rank two and the recurrence; any one of a resolvent, heat, or spinor-trace sample independently recovers the same mass shell; and G with recovered M gives the projectors P_±.",
+  "tier_A_moment_reconstruction": {
+    "atoms": ["+sqrt(5049)/2", "-sqrt(5049)/2"],
+    "input_moments": {"m0":"2","m1":"0","m2":"5049/2"},
+    "recovered_M2": "5049/4",
+    "recovered_weights": ["1","1"]
+  },
+  "tier_B_rank_certificate": {
+    "H2_det": "5049",
+    "H3_det": "0",
+    "rank_two": true,
+    "recurrence_m4_equals_M2_m2": true
+  },
+  "tier_C_independent_mass_samples": {
+    "heat_trace": {"recovered_M2":1262.25,"tau":0.001,"trace":0.5658372432569382},
+    "resolvent": {"recovered_M2":"5049/4","s":"100","trace":"800/34951"},
+    "spinor_trace": {"recovered_M":35.5281578469811,"t":0.01,"trace":2.1271897588648534}
+  },
+  "tier_D_projector_reconstruction": {
+    "P_minus_numeric": [[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]],
+    "P_plus_numeric": [[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]],
+    "formula": "P_±=(I±G/M)/2",
+    "requires": "G and recovered M"
+  },
+  "title": "Finite Measurement Protocol Compiler",
+  "verified": true
+}
