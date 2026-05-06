@@ -1,0 +1,26 @@
+{
+  "part": "CCCXLIV",
+  "title": "Three-Idempotent GUT Projector Decomposition",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "rank_E0": 1,
+    "rank_E1": 24,
+    "rank_E2": 15,
+    "SU5_ADJ": 24,
+    "SU5_MATTER_PER_GEN": 15,
+    "SU5_TOTAL_MATTER": 45,
+    "GUT_DIM_minus_K": 15,
+    "completeness": 40
+  },
+  "discoveries": [
+    "W(3,3) Bose-Mesner algebra has exactly 3 primitive idempotents with ranks 1, 24, 15",
+    "rank(E_1) = 24 = SU(5) adjoint: W(3,3) R-sector = SU(5) gauge-boson sector (8g+3W+1\u03b3+12XY)",
+    "rank(E_2) = 15 = SU(5) matter per generation (5\u0304+10): W(3,3) S-sector = SU(5) matter sector",
+    "rank(E_2) = GUT_DIM \u2212 K = 27 \u2212 12 = 15: E_6 fundamental rep dimension minus W(3,3) degree",
+    "3 \u00d7 rank(E_2) = 45: three SM generations of SU(5) Weyl fermions encoded in spectral rank",
+    "Completeness: I-coefficients sum to 1, A-coefficients sum to 0, J-coefficients sum to 0",
+    "A-coefficient antisymmetry: E_1 and E_2 are mirror images under A \u2192 \u2212A (sector duality)"
+  ]
+}
