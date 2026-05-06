@@ -1,0 +1,25 @@
+{
+  "part": "CCCLIV",
+  "title": "Seidel Matrix and Two-Graphs of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "sigma_trivial": 15,
+    "sigma_r": -5,
+    "sigma_s": 7,
+    "s2_adj": 2,
+    "s2_non_adj": 6,
+    "frobenius_sq": 1560,
+    "count_minus_one": 480,
+    "count_plus_one": 1080
+  },
+  "discoveries": [
+    "sigma_r + sigma_s = 2 = LAM (non-trivial eigenvalue sum = lambda)",
+    "|sigma_r| + |sigma_s| = 12 = K (absolute sum = vertex degree)",
+    "sigma_r*sigma_s + MULT_R + MULT_S = 4 = MU",
+    "sigma_trivial = 15 = MULT_S = SU5_MATTER",
+    "S^2_adj = 2 = LAM;  S^2_non-adj = 6 = LAM+MU",
+    "sigma_s = 7 = EW_GAUGE_4 + GENERATIONS = 4+3"
+  ]
+}
