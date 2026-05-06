@@ -1,0 +1,41 @@
+{
+  "architecture_upgrade": "CCCXXXII supplied the finite Dirac factorization.  CCCXXXIII adds the Green's-function layer: the exact resolvent (sI-G)^(-1) and the branch propagator exp(tG)=e^{mt}P_+ + e^{-mt}P_-.",
+  "checks": [
+    {"name":"G^2=m^2 I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"mass squared is 5049/4","passed":true,"value":"5049/4"},
+    {"name":"resolvent left inverse exact","passed":true,"value":[["1","0"],["0","1"]]},
+    {"name":"resolvent right inverse exact","passed":true,"value":[["1","0"],["0","1"]]},
+    {"name":"resolvent denominator at s=100","passed":true,"value":"34951/4"},
+    {"name":"projector exponential equals hyperbolic exponential","passed":true,"value":[[1.5713888736926689,2.3939550509718935],[0.017099678935513526,-0.7192897169867677]]},
+    {"name":"projector propagator semigroup law","passed":true,"value":[[3.9872452189144285,12.786644421295656],[0.0913331744378261,-2.1322734694289055]]},
+    {"name":"P_plus idempotent numeric","passed":true,"value":[[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]]},
+    {"name":"P_minus idempotent numeric","passed":true,"value":[[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]]},
+    {"name":"P_plus P_minus orthogonal","passed":true,"value":[[0.0,0.0],[0.0,0.0]]}
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "honesty_boundary": "This is a finite Green's-function/propagator layer for the RG spinor. Physical scattering amplitudes or continuum QFT propagators still require a physical unit map and spacetime representation.",
+  "mass_shell": {
+    "G_squared": [["5049/4","0"],["0","5049/4"]],
+    "mass": "sqrt(5049)/2",
+    "mass_squared": "5049/4"
+  },
+  "part": "CCCXXXIII",
+  "propagator": {
+    "P_minus_numeric": [[0.028411380064939538,-1.9702696667421855],[-0.014073354762444183,0.9715886199350604]],
+    "P_plus_numeric": [[0.9715886199350604,1.9702696667421855],[0.014073354762444183,0.028411380064939538]],
+    "branch_form": "exp(tG)=exp(mt)P_+ + exp(-mt)P_-",
+    "hyperbolic_form": "exp(tG)=cosh(mt)I+sinh(mt)G/m",
+    "sample_exp_tG": [[1.5713888736926689,2.3939550509718935],[0.017099678935513526,-0.7192897169867677]],
+    "sample_t": 0.01
+  },
+  "resolvent": {
+    "formula": "(sI-G)^(-1)=(sI+G)/(s^2-5049/4)",
+    "sample_denominator": "34951/4",
+    "sample_resolvent": [["534/34951","560/34951"],["4/34951","266/34951"]],
+    "sample_s": "100"
+  },
+  "theorem": "Since G^2=(5049/4)I, the Dirac resolvent is exactly (sI-G)^(-1)=(sI+G)/(s^2-5049/4), and the spinor propagator decomposes over the Clifford branch projectors as exp(tG)=e^{mt}P_+ + e^{-mt}P_- with m=sqrt(5049)/2.",
+  "title": "Finite Propagator / Resolvent Compiler",
+  "verified": true
+}
