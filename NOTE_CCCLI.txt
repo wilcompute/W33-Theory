@@ -1,0 +1,21 @@
+Part CCCLI compact note
+
+Purpose:
+Derive additional response-sector maps from larger W33 structures beyond the 2x2 RG spinor registry.
+
+Structures used:
+- Hashimoto carrier roles
+- triangle/open-turn split
+- K4 local geometry and quotient transport roles
+- E8/E6 grading motif
+- Dirac/KG factorization role
+
+Main result:
+The compiler produced deterministic sector maps for hashimoto_role, turn_role, tetra_role, quotient_role, grading_role, and dirac_role.
+
+Files:
+- exploration/PART_CCCLI_LARGER_W33_STRUCTURE_SECTOR_MAPS.py
+- tests/test_larger_w33_structure_sector_maps_cccli.py
+- PART_CCCLI_larger_w33_structure_sector_maps_results.json
+
+Checks: 11/11 passed.
