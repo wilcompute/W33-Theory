@@ -1,0 +1,32 @@
+{
+  "part": "CCCLV",
+  "title": "Hashimoto Triangle/Open Turn Operator Spectra Compiler",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "carrier": {
+    "directed_edges": 480,
+    "B_row_sum": [11],
+    "T_row_sum": [2],
+    "O_row_sum": [9],
+    "B_edges": 5280,
+    "T_edges": 960,
+    "O_edges": 4320
+  },
+  "trace_moments": {
+    "B1": 0,
+    "T1": 0,
+    "O1": 0,
+    "TO_trace": 0,
+    "OT_trace": 0
+  },
+  "rank_diagnostics_note": "Positive modular-rank diagnostics are computed by the executable audit over prime 1000003.",
+  "sector_interpretation": {
+    "T": "triangle-compatible local turns, even/closed kernel evidence",
+    "O": "open nonbacktracking turns, transition/transport evidence",
+    "B": "full Hashimoto carrier B=T+O"
+  },
+  "architecture_upgrade": "CCCLII computed W33 graph counts. CCCLV builds the actual 480-state Hashimoto operator and its triangle/open-turn decomposition B=T+O, providing direct operator-level evidence for response-sector separation.",
+  "theorem": "In the directed-edge carrier of W(3,3), every state has 11 non-backtracking continuations split uniformly as 2 triangle turns and 9 open turns. The sparse matrices T and O are disjoint and sum to the Hashimoto operator B, giving an exact operator decomposition for local closed/even versus open/transition sector tests.",
+  "honesty_boundary": "The compiler reports sparse operator moments and modular rank diagnostics, not full real/complex eigenvalue lists. Full numerical spectra can be added if a numerical linear algebra dependency is allowed."
+}
