@@ -1,0 +1,27 @@
+{
+  "part": "CCCLXII",
+  "title": "RG Spinor Generator from Two-Graph / Interlacing Atoms",
+  "verified": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "derivation_chain": {
+    "q": 3,
+    "v": 40,
+    "Phi3": "q^2+q+1=13",
+    "Phi6": "q^2-q+1=7",
+    "B": "2v-Phi3=67",
+    "A": "(v/2)Phi6=140",
+    "G": "[[B/2,A],[1,-B/2]]",
+    "M2": "(B^2+4A)/4=5049/4"
+  },
+  "generator": {
+    "G": [["67/2", "140"], ["1", "-67/2"]],
+    "trace": "0",
+    "determinant": "-5049/4",
+    "G_squared": [["5049/4", "0"], ["0", "5049/4"]]
+  },
+  "operator_identity": "G^2=(5049/4)I",
+  "architecture_upgrade": "CCCLXI showed that the two-graph incidence operator recovers adjacency with coefficient 4. CCCLXII derives the RG spinor generator G from W33 atoms B=2v-Phi3 and A=(v/2)Phi6, with the same action coefficient 4 entering G^2=(B^2+4A)/4.",
+  "theorem": "The finite RG spinor generator G=[[67/2,140],[1,-67/2]] is derived from W33 two-graph/interlacing atoms B=2v-Phi3=67 and A=(v/2)Phi6=140. Its square is scalar: G^2=(B^2+4A)I/4=(5049/4)I, so the response mass shell is a direct consequence of the W33 parity/interlacing atoms.",
+  "honesty_boundary": "This derives the internal finite generator from W33 atoms. It does not by itself identify a laboratory mass scale; that still requires the response-channel calibration layer."
+}
