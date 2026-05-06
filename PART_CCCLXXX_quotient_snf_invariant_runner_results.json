@@ -1,0 +1,15 @@
+{
+  "part": "CCCLXXX",
+  "title": "Quotient SNF Invariant Runner",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "relation_matrix_shape": [201, 160],
+  "rank_Q": 120,
+  "free_rank": 81,
+  "sampled_primes": [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59],
+  "certificate_policy": "complete torsion-free certificate only if SNF backend returns complete_snf; otherwise exact rank plus sampled modular agreement is reported",
+  "architecture_upgrade": "CCCLXXVII built the exact quotient relation matrix. CCCLXXX runs the invariant-factor path when available and otherwise emits a clear rank-plus-modular fallback certificate.",
+  "theorem": "The H1 quotient relation matrix R has rank 120 and free rank 81. If SNF computes with all nonzero invariant factors equal to 1, this proves the quotient is torsion-free. Otherwise the runner records the exact rank and sampled modular agreement as a fallback audit.",
+  "honesty_boundary": "A complete torsion-free certificate is claimed only when certificate_type is complete_snf. Otherwise the output remains a transparent partial invariant audit."
+}
