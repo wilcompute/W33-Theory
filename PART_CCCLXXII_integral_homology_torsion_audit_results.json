@@ -1,0 +1,22 @@
+{
+  "part": "CCCLXXII",
+  "title": "Integral Homology / Torsion Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "chain_counts": {
+    "vertices": 40,
+    "edges": 240,
+    "triangles": 160
+  },
+  "rational_ranks": {
+    "rank_d1": 39,
+    "rank_d2": 120,
+    "beta1": 81
+  },
+  "sampled_primes": [2,3,5,7,11,13,17,19,23,29,31,37],
+  "torsion_audit": "No rank drops detected at sampled primes; full Smith normal form remains the definitive torsion-free certificate.",
+  "architecture_upgrade": "CCCLXXI produced a GF2 81-cycle basis. CCCLXXII lifts the audit to integer boundary matrices, verifies rank_Q(d1)=39, rank_Q(d2)=120, beta1=81, and checks sampled-prime torsion obstructions by modular rank agreement.",
+  "theorem": "The W33 triangle chain complex over Q has beta1=81. The integer boundary matrices satisfy d1*d2=0, rank_Q(d1)=39, and rank_Q(d2)=120. Modular ranks agree with these rational ranks for sampled primes, giving a strong torsion audit consistent with H1 being free of rank 81, pending full Smith normal form for a complete integral certificate.",
+  "honesty_boundary": "This is not a full Smith normal form proof. It certifies the free rank exactly over Q and rules out sampled-prime rank drops, but a complete torsion-free proof should compute SNF or gcd of maximal minors."
+}
