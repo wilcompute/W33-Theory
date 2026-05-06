@@ -1,0 +1,47 @@
+{
+  "architecture_upgrade": "CCCXXXI identified the RG renderer as a Lorentzian spinor generator. CCCXXXII factors the scalar mass-shell equation through first-order finite Dirac operators D±G, so the renderer now has a Dirac/Klein-Gordon layer.",
+  "checks": [
+    {"name":"G is traceless","passed":true,"value":"0"},
+    {"name":"det(G)=-5049/4","passed":true,"value":"-5049/4"},
+    {"name":"G^2=(5049/4)I","passed":true,"value":[["5049/4","0"],["0","5049/4"]]},
+    {"name":"mass squared = q^3(k-1)(Phi4+Phi6)/4","passed":true,"value":"5049/4"},
+    {"name":"Dirac factor (D-G)(D+G) has no first-order term","passed":true,"value":[["0","0"],["0","0"]]},
+    {"name":"Dirac factor (D-G)(D+G) constant = -G^2","passed":true,"value":[["-5049/4","0"],["0","-5049/4"]]},
+    {"name":"Dirac factor (D+G)(D-G) has no first-order term","passed":true,"value":[["0","0"],["0","0"]]},
+    {"name":"same-sign factor has first-order term 2G","passed":true,"value":[["67","280"],["2","-67"]]},
+    {"name":"spinor solution satisfies KG equation numerically","passed":true,"value":{"kg_rhs":[1365.9945706066566,32.67641017624073],"psi_dd":[1365.992429398058,32.67635539978876]}},
+    {"name":"mass gap = sqrt(5049)/2","passed":true,"value":"sqrt(5049)/2"}
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "finite_dirac_equation": {
+    "dirac_operator_minus": "D - G",
+    "dirac_operator_plus": "D + G",
+    "factorization": "(D-G)(D+G)=D^2-(5049/4)I",
+    "first_order": "d psi/dt = G psi"
+  },
+  "finite_klein_gordon_equation": {
+    "mass": "sqrt(5049)/2",
+    "mass_squared": "5049/4",
+    "mass_squared_form": "q^3(k-1)(Phi4+Phi6)/4",
+    "second_order": "d^2 psi/dt^2 = (5049/4) psi"
+  },
+  "generator": {
+    "G": [["67/2","140"],["1","-67/2"]],
+    "determinant": "-5049/4",
+    "square": [["5049/4","0"],["0","5049/4"]],
+    "trace": "0"
+  },
+  "honesty_boundary": "This is a finite Dirac/Klein-Gordon factorization for the RG spinor flow, not yet a continuum relativistic field equation in physical spacetime.",
+  "numeric_solution_check": {
+    "kg_rhs": [1365.9945706066566,32.67641017624073],
+    "psi0": [1.0,0.25],
+    "psi_t": [1.0822145582656492,0.025888241495288384],
+    "second_derivative": [1365.992429398058,32.67635539978876],
+    "t": 0.001
+  },
+  "part": "CCCXXXII",
+  "theorem": "Because G^2=(5049/4)I, the spinor transport equation d psi/dt=G psi squares to d^2 psi/dt^2=(5049/4)psi.  Equivalently, (D-G)(D+G)=D^2-(5049/4)I.  The projective W33 RG renderer therefore admits a finite Dirac factorization with mass sqrt(5049)/2.",
+  "title": "Finite Dirac Factorization Compiler",
+  "verified": true
+}
