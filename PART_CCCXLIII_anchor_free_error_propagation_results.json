@@ -1,0 +1,125 @@
+{
+  "architecture_upgrade": "CCCXLII gave exact anchor-free identities.  CCCXLIII turns them into an empirical error-propagation protocol with channel sensitivities, weighted scale estimates, residual z-scores, and chi-square diagnostics.",
+  "bad_consensus": {
+    "chi_square": 1687.265147804531,
+    "degrees_of_freedom": 5,
+    "max_abs_z": 40.97270750756854,
+    "passes_3sigma_channel_test": false,
+    "reduced_chi_square": 337.4530295609062,
+    "residuals": {
+      "gap": -0.4870550047030486,
+      "heat_trace": -0.4870550047030486,
+      "mass": -0.4870550047021391,
+      "resolvent_trace": -0.48705500470486757,
+      "spinor_trace": 197.36404108260563,
+      "zeta": -0.4870550047030486
+    },
+    "sigma_weighted_scale": 0.0009255831756612353,
+    "weighted_scale": 6872.737055004703,
+    "z_scores": {
+      "gap": -0.0029388654958970144,
+      "heat_trace": -0.00014430440502245833,
+      "mass": -0.002938865495891528,
+      "resolvent_trace": -0.000253739801666612,
+      "spinor_trace": 40.97270750756854,
+      "zeta": -0.0002435275023515243
+    }
+  },
+  "bad_packet": {
+    "gap": 165.7980699525785,
+    "heat_trace": 0.002032961285775859,
+    "mass": 82.89903497628925,
+    "resolvent_trace": 0.07784653570485622,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.700361943358353,
+    "zeta": 4.2355317044381655e-08
+  },
+  "checks": [
+    {"name":"dimensionless W33 M2=5049/4","passed":true,"value":1262.25},
+    {"name":"clean weighted scale recovers true scale","passed":true,"value":6872.249999999997},
+    {"name":"clean packet passes 3sigma test","passed":true,"value":1.1282633138797997e-15},
+    {"name":"small noisy packet passes 3sigma test","passed":true,"value":1.3113686130663058},
+    {"name":"bad packet fails 3sigma test","passed":true,"value":40.97270750756854},
+    {"name":"mass derivative matches finite difference","passed":true,"value":{"analytic":165.7980699525785,"finite_difference":165.79806941840833}},
+    {"name":"gap derivative matches finite difference","passed":true,"value":{"analytic":82.89903497628925,"finite_difference":82.89903470920416}},
+    {"name":"heat derivative matches finite difference","passed":true,"value":{"analytic":-491891.80519083195,"finite_difference":-491891.8052100445}},
+    {"name":"spinor derivative matches finite difference","passed":true,"value":{"analytic":17843.037622344534,"finite_difference":17843.037623369713}},
+    {"name":"resolvent derivative matches finite difference","passed":true,"value":{"analytic":32999.6976218754,"finite_difference":32999.69762233548}},
+    {"name":"zeta derivative matches finite difference","passed":true,"value":{"analytic":-81128482275.98033,"finite_difference":-81128482274.66919}}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "clean_channel_estimates": {
+    "gap": {"channel":"gap","derivative":82.89903497628925,"scale_estimate":6872.250000000001,"sigma_scale":0.013744500000000002,"sigma_value":0.00016579806995257848,"value":165.7980699525785,"weight":5293.450168381662},
+    "heat_trace": {"channel":"heat_trace","derivative":-491891.80519083195,"scale_estimate":6872.25,"sigma_scale":0.001,"sigma_value":2.0329612857758587e-09,"value":0.002032961285775859,"weight":1000000.0},
+    "mass": {"channel":"mass","derivative":165.7980699525785,"scale_estimate":6872.250000000001,"sigma_scale":0.013744500000000002,"sigma_value":8.289903497628925e-05,"value":82.89903497628925,"weight":5293.450168381662},
+    "resolvent_trace": {"channel":"resolvent_trace","derivative":32999.6976218754,"scale_estimate":6872.249999999998,"sigma_scale":0.0025699090709003166,"sigma_value":7.784653570485621e-08,"value":0.07784653570485622,"weight":151407.25855314272},
+    "spinor_trace": {"channel":"spinor_trace","derivative":17843.037622344534,"scale_estimate":6872.2499999999945,"sigma_scale":0.04817199375460196,"sigma_value":2.7000919341649365e-06,"value":2.7000919341649367,"weight":430.9633693264184},
+    "zeta": {"channel":"zeta","derivative":-81128482275.98033,"scale_estimate":6872.25,"sigma_scale":0.003436125,"sigma_value":4.235531704438165e-14,"value":4.2355317044381655e-08,"weight":84721.64951010658}
+  },
+  "clean_consensus": {
+    "chi_square": 2.7032326360080775e-30,
+    "degrees_of_freedom": 5,
+    "max_abs_z": 1.1282633138797997e-15,
+    "passes_3sigma_channel_test": true,
+    "reduced_chi_square": 5.406465272016155e-31,
+    "residuals": {"gap":3.637978807091713e-12,"heat_trace":2.7284841053187847e-12,"mass":3.637978807091713e-12,"resolvent_trace":9.094947017729282e-13,"spinor_trace":-2.7284841053187847e-12,"zeta":2.7284841053187847e-12},
+    "sigma_weighted_scale": 0.0008961419735530475,
+    "weighted_scale": 6872.249999999997,
+    "z_scores": {"gap":2.6468635017533357e-10,"heat_trace":2.7284841053187847e-09,"mass":2.6468635017533357e-10,"resolvent_trace":3.538036514854638e-10,"spinor_trace":-5.663418815356193e-11,"zeta":7.940574474085436e-10}
+  },
+  "derivative_checks": {
+    "gap": {"analytic":82.89903497628925,"finite_difference":82.89903470920416},
+    "heat_trace": {"analytic":-491891.80519083195,"finite_difference":-491891.8052100445},
+    "mass": {"analytic":165.7980699525785,"finite_difference":165.79806941840833},
+    "resolvent_trace": {"analytic":32999.6976218754,"finite_difference":32999.69762233548},
+    "spinor_trace": {"analytic":17843.037622344534,"finite_difference":17843.037623369713},
+    "zeta": {"analytic":-81128482275.98033,"finite_difference":-81128482274.66919}
+  },
+  "derivative_formulas": {
+    "gap": "dX/dg=g/2",
+    "heat_trace": "dX/dH=-1/(tau H)",
+    "mass": "dX/dm=2m",
+    "resolvent_trace": "dX/dR=2s/R^2",
+    "spinor_trace": "dX/dT=acosh(T/2)/(t^2 sqrt((T/2)^2-1))",
+    "zeta": "dX/dzeta=-X/(p zeta)"
+  },
+  "dimensionless_kernel": {
+    "M2": "5049/4",
+    "role": "internal W33 dimensionless scale; physical packets estimate X=kappa^2 M2"
+  },
+  "honesty_boundary": "This is first-order Gaussian-style propagation. Real experimental use must replace synthetic uncertainties with actual measurement models and correlations.",
+  "noisy_consensus": {
+    "chi_square": 2.8100568434165584,
+    "degrees_of_freedom": 5,
+    "max_abs_z": 1.3113686130663058,
+    "passes_3sigma_channel_test": true,
+    "reduced_chi_square": 0.5620113686833117,
+    "residuals": {"gap":-0.04200831862945872,"heat_trace":-0.0022468557233449537,"mass":0.052010278720582486,"resolvent_trace":0.024206456051360292,"spinor_trace":-0.004061480193486786,"zeta":0.011760953723911662},
+    "sigma_weighted_scale":0.0008961419735530475,
+    "weighted_scale":6872.2032568557235,
+    "z_scores":{"gap":-0.3056285336968259,"heat_trace":-2.2468557233449535,"mass":0.3784144239185765,"resolvent_trace":0.9419226731220304,"spinor_trace":-0.08431622172284253,"zeta":0.342270260407221}
+  },
+  "noisy_packet": {
+    "gap": 165.79802021315753,
+    "heat_trace": 0.0020329616923681165,
+    "mass": 82.8990681360263,
+    "resolvent_trace": 0.07784655516649,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.7000916641557433,
+    "zeta": 4.235530222001069e-08
+  },
+  "part": "CCCXLIII",
+  "theorem": "For the one-sector W33 response packet, every channel estimates the same squared scale X.  First-order uncertainty propagation gives sigma_X=|dX/dy|sigma_y for each channel, enabling a weighted consensus estimate and residual z-score test.  A packet passes only if the channel estimates agree within propagated uncertainty.",
+  "title": "Anchor-Free Error Propagation Compiler",
+  "true_scale": 6872.25,
+  "uncertainties": {
+    "gap": 0.00016579806995257848,
+    "heat_trace": 2.0329612857758587e-09,
+    "mass": 8.289903497628925e-05,
+    "resolvent_trace": 7.784653570485621e-08,
+    "spinor_trace": 2.7000919341649365e-06,
+    "zeta": 4.235531704438165e-14
+  },
+  "verified": true
+}
