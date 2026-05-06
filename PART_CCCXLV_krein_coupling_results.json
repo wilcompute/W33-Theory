@@ -1,0 +1,36 @@
+{
+  "part": "CCCXLV",
+  "title": "Krein Coupling Constants: Dual Algebra Structure of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "V": 40,
+    "K": 12,
+    "MULT_R": 24,
+    "MULT_S": 15,
+    "L": 27,
+    "q_11_0": "24",
+    "q_11_1": "44/3",
+    "q_11_2": "40/3",
+    "q_12_0": "0",
+    "q_12_1": "25/3",
+    "q_12_2": "32/3",
+    "q_22_0": "15",
+    "q_22_1": "20/3",
+    "q_22_2": "10/3",
+    "krein_ratio_22": "2",
+    "gauge_sector_sum": "28",
+    "matter_sector_sum": "10",
+    "cross_sector_sum": "19"
+  },
+  "discoveries": [
+    "q[1][1][0] = MULT_R = SU5_ADJ = 24: R-sector self-coupling saturates at the SU(5) adjoint dimension",
+    "q[2][2][0] = MULT_S = SU5_MATTER = 15: S-sector self-coupling saturates at the SU(5) matter dimension",
+    "q[1][2][0] = 0: gauge x matter Hadamard product has no trivial (scalar) output -- charge neutrality",
+    "q[2][2][1] / q[2][2][2] = ABS_S / R_EIG = 2: the SRG eigenvalue ratio appears in the dual algebra",
+    "q[1][1][1]+q[1][1][2] = V-K and q[2][2][1]+q[2][2][2] = K-R_EIG: sector sums equal graph degree gaps",
+    "q[1][2][1]+q[1][2][2] = (V-R_EIG)/2: cross-sector sum is the arithmetic mean of the sector sums",
+    "q[1][1][2]/q[2][2][2] = V/(K-R_EIG) = 4: ratio of gauge/matter non-trivial outputs = ABS_S^2/R_EIG^2"
+  ]
+}
