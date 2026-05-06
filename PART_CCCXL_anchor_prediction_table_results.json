@@ -1,0 +1,95 @@
+{
+  "architecture_upgrade": "CCCXXXIX made calibration falsifiable.  CCCXL makes it predictive: once any one anchor fixes kappa, the finite architecture deterministically predicts mass, projective gap, heat trace, spinor trace, resolvent trace, and zeta responses.",
+  "checks": [
+    {"name":"dimensionless mass shell M2=5049/4","passed":true,"value":1262.25},
+    {"name":"projective gap/mass prediction is 2","passed":true,"value":2.0},
+    {"name":"mass anchor round-trips","passed":true,"value":8.881784197001252e-16},
+    {"name":"heat anchor round-trips","passed":true,"value":8.881784197001252e-16},
+    {"name":"spinor anchor round-trips","passed":true,"value":8.881784197001252e-16},
+    {"name":"resolvent anchor round-trips","passed":true,"value":1.3322676295501878e-15},
+    {"name":"zeta anchor round-trips","passed":true,"value":8.881784197001252e-16},
+    {"name":"all anchor prediction tables agree","passed":true,"value":{"heat_trace":8.500145032286355e-17,"mass":4.263256414560601e-14,"projective_gap":8.526512829121202e-14,"resolvent_trace":1.249000902703301e-16,"spinor_trace":1.7763568394002505e-15,"zeta":1.9852334701272664e-23}},
+    {"name":"predicted heat trace is positive","passed":true,"value":0.002032961285775859},
+    {"name":"predicted spinor trace is at least 2","passed":true,"value":2.7000919341649367},
+    {"name":"predicted zeta is positive","passed":true,"value":1.0637608969385362e-08}
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "dimensionless_kernel": {
+    "M": "sqrt(5049)/2",
+    "M2": "5049/4",
+    "projective_gap_over_M": 2
+  },
+  "honesty_boundary": "This compiler produces deterministic prediction tables conditional on a chosen anchor. It does not claim which physical observable should be used as the real anchor.",
+  "part": "CCCXL",
+  "prediction_formulas": {
+    "heat_trace": "H(tau)=2 exp(-kappa^2 M^2 tau)",
+    "mass": "M_phys=kappa M",
+    "projective_gap": "gap_phys=2 M_phys",
+    "resolvent_trace": "R(s)=2s/(s^2-kappa^2 M^2)",
+    "spinor_trace": "T(t)=2 cosh(kappa M t)",
+    "zeta": "zeta_phys(p)=kappa^(-2p) 2(M^2)^(-p)"
+  },
+  "prediction_tables_by_anchor": {
+    "heat_trace": {
+      "input_anchor": {"type":"heat_trace","value":0.002032961285775859},
+      "recovered_kappa_from_anchor": 2.3333333333333335,
+      "round_trip_max_deviation": 8.881784197001252e-16,
+      "round_trip_mean": 2.333333333333333,
+      "round_trip_recovered_kappas": {"heat_trace":2.3333333333333335,"mass":2.3333333333333335,"resolvent_trace":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.3333333333333335},
+      "round_trip_std": 7.021666937153402e-16
+    },
+    "mass": {
+      "input_anchor": {"type":"mass","value":82.89903497628925},
+      "recovered_kappa_from_anchor": 2.3333333333333335,
+      "round_trip_max_deviation": 8.881784197001252e-16,
+      "round_trip_mean": 2.333333333333333,
+      "round_trip_recovered_kappas": {"heat_trace":2.3333333333333335,"mass":2.3333333333333335,"resolvent_trace":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.3333333333333335},
+      "round_trip_std": 7.021666937153402e-16
+    },
+    "resolvent_trace": {
+      "input_anchor": {"type":"resolvent_trace","value":0.07784653570485622},
+      "recovered_kappa_from_anchor": 2.333333333333332,
+      "round_trip_max_deviation": 1.3322676295501878e-15,
+      "round_trip_mean": 2.333333333333332,
+      "round_trip_recovered_kappas": {"heat_trace":2.333333333333332,"mass":2.333333333333332,"resolvent_trace":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.333333333333332},
+      "round_trip_std": 0.0
+    },
+    "spinor_trace": {
+      "input_anchor": {"type":"spinor_trace","value":2.7000919341649367},
+      "recovered_kappa_from_anchor": 2.333333333333332,
+      "round_trip_max_deviation": 8.881784197001252e-16,
+      "round_trip_mean": 2.3333333333333317,
+      "round_trip_recovered_kappas": {"heat_trace":2.333333333333332,"mass":2.333333333333332,"resolvent_trace":2.333333333333331,"spinor_trace":2.333333333333332,"zeta":2.333333333333332},
+      "round_trip_std": 3.972054645195637e-16
+    },
+    "zeta": {
+      "input_anchor": {"type":"zeta","value":1.0637608969385362e-08},
+      "recovered_kappa_from_anchor": 2.3333333333333335,
+      "round_trip_max_deviation": 8.881784197001252e-16,
+      "round_trip_mean": 2.333333333333333,
+      "round_trip_recovered_kappas": {"heat_trace":2.3333333333333335,"mass":2.3333333333333335,"resolvent_trace":2.333333333333332,"spinor_trace":2.333333333333332,"zeta":2.3333333333333335},
+      "round_trip_std": 7.021666937153402e-16
+    }
+  },
+  "sample_kappa": 2.3333333333333335,
+  "sample_predictions": {
+    "heat_trace": 0.002032961285775859,
+    "kappa": 2.3333333333333335,
+    "mass": 82.89903497628925,
+    "projective_gap": 165.7980699525785,
+    "projective_gap_over_mass": 2.0,
+    "resolvent_trace": 0.07784653570485622,
+    "samples": {"p":2,"s":100.0,"t":0.01,"tau":0.001},
+    "spinor_trace": 2.7000919341649367,
+    "zeta": 1.0637608969385362e-08
+  },
+  "table_comparison": {
+    "all_tables_agree": true,
+    "max_prediction_differences": {"heat_trace":8.500145032286355e-17,"mass":4.263256414560601e-14,"projective_gap":8.526512829121202e-14,"resolvent_trace":1.249000902703301e-16,"spinor_trace":1.7763568394002505e-15,"zeta":1.9852334701272664e-23},
+    "reference_anchor": "mass"
+  },
+  "theorem": "For the one-sector W33 unit map, any single valid anchor determines kappa. Once kappa is fixed, every other response channel is fixed by closed formulas. Anchor tables generated from mass, heat, spinor-trace, resolvent, or zeta anchors must agree; disagreement is a falsification of the one-sector interpretation.",
+  "title": "Anchor Prediction Table Compiler",
+  "verified": true
+}
