@@ -1,0 +1,28 @@
+{
+  "part": "CCCLXIV",
+  "title": "Two-Graph Primitive Response Operator Compiler",
+  "verified": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "primitive_chain": {
+    "primitive": "odd-triple incidence M",
+    "gram": "M M^T",
+    "adjacency_recovery": "A=(M M^T-320I-16J)/4",
+    "degree": "k=12",
+    "q": "q=3 from k=q(q+1)",
+    "Phi3": "13",
+    "Phi6": "7",
+    "B": "2v-Phi3=67",
+    "offdiag": "(v/2)Phi6=140",
+    "G": "[[67/2,140],[1,-67/2]]",
+    "mass_shell": "G^2=(5049/4)I"
+  },
+  "generator": {
+    "G": [["67/2", "140"], ["1", "-67/2"]],
+    "G_squared": [["5049/4", "0"], ["0", "5049/4"]],
+    "M2": "5049/4"
+  },
+  "architecture_upgrade": "CCCLXI made the two-graph incidence operator recover adjacency. CCCLXIV makes that incidence operator the primitive source of the RG spinor response generator and derives G from M alone.",
+  "theorem": "The odd-triple incidence operator M determines A by A=(MM^T-320I-16J)/4. From recovered degree k=12 one infers q=3, then Phi3=13, Phi6=7, B=2v-Phi3=67, C=(v/2)Phi6=140, and G=[[67/2,140],[1,-67/2]] with G^2=(5049/4)I. Thus the finite response generator is two-graph-incidence-derived.",
+  "honesty_boundary": "This is an exact internal derivation. Physical scale calibration still belongs to the empirical response layer."
+}
