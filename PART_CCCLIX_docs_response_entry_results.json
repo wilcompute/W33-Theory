@@ -1,0 +1,19 @@
+{
+  "part": "CCCLIX",
+  "title": "Docs Response Entry Audit",
+  "verified": true,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "entry_row": "| Finite W33 response architecture | [docs/RESPONSE_ARCHITECTURE_ENTRYPOINT.md](./RESPONSE_ARCHITECTURE_ENTRYPOINT.md) | Operator-response bridge, derived sector maps, computed W33 graph evidence, and empirical model-comparison stack |",
+  "entrypoint": "docs/RESPONSE_ARCHITECTURE_ENTRYPOINT.md",
+  "main_doc": "docs/FINITE_W33_RESPONSE_ARCHITECTURE.md",
+  "note": "A helper script was committed at tools/apply_response_architecture_index_patch.py to add this single row to docs/INDEX.md in a narrow reviewable way.",
+  "checks": [
+    {"name":"row contains entrypoint","passed":true},
+    {"name":"row contains response architecture title","passed":true},
+    {"name":"row contains computed evidence phrase","passed":true},
+    {"name":"entrypoint path recorded","passed":true},
+    {"name":"main doc path recorded","passed":true},
+    {"name":"row is markdown table row","passed":true}
+  ]
+}
