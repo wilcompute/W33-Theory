@@ -1,0 +1,28 @@
+{
+  "part": "CCCXLVI",
+  "title": "Q-Matrix Coupling Ratios and the Weinberg Angle",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "Q11": "4",
+    "Q12": "-5",
+    "Q21": "-8/3",
+    "Q22": "5/3",
+    "KAPPA_Y": "5/3",
+    "SIN2_W_GUT": "3/8",
+    "COS2_W_GUT": "5/8",
+    "GLUON_COUNT": 8,
+    "EW_GAUGE_4": 4,
+    "SU5_DIM": 5
+  },
+  "discoveries": [
+    "Q[2,2] = (MU+1)/GENERATIONS = 5/3 = κ_Y (SU(5) hypercharge normalization): no free parameter",
+    "sin²θ_W = 1/(1 + Q[2,2]) = 3/8: tree-level Weinberg angle from W(3,3) spectral data",
+    "sin²θ_W = GENERATIONS/(GENERATIONS + SU5_DIM) = 3/(3+5): generations and SU5 rank from Q",
+    "Q[1,1] = MU = 4: four electroweak gauge bosons (W+, W-, Z, γ) = μ of the SRG",
+    "Q[1,2] = -(MU+1) = -5 = -(SU5_DIM): SU(5) rank appears as negated Q entry",
+    "|Q[2,1]| × GENERATIONS = K − MU = 8: gluon octet count from Q and graph parameters",
+    "K − MU = V / SU5_DIM = 8: gluon count is vertex count divided by SU(5) rank"
+  ]
+}
