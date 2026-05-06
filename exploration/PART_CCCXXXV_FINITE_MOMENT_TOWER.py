@@ -125,7 +125,7 @@ def build_results() -> Dict[str, Any]:
     checks.append(ok("spinor trace t^2 coefficient is 5049/4", spinor_coeffs[1]["coefficient"] == "5049/4", spinor_coeffs[1]))
     checks.append(ok("heat trace tau coefficient is -5049/2", heat_coeffs[1]["coefficient"] == "-5049/2", heat_coeffs[1]))
     checks.append(ok("logdet first correction is -5049/4", logdet_coeffs[0]["coefficient_after_2log_s"] == "-5049/4", logdet_coeffs[0]))
-    checks.append(ok("large-s resolvent partial series underestimates exact positive trace", remainder > 0, frac_str(remainder))))
+    checks.append(ok("large-s resolvent partial series underestimates exact positive trace", remainder > 0, frac_str(remainder)))
     checks.append(ok("large-s resolvent remainder is small at s=100", abs(float(remainder)) < 1e-12, float(remainder)))
 
     verified = all(check["passed"] for check in checks)
