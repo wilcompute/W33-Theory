@@ -1,0 +1,31 @@
+{
+  "part": "CCCXLVII",
+  "title": "Intersection Numbers as Primal Propagators of W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "p_11_0": "12",
+    "p_11_1": "2",
+    "p_11_2": "4",
+    "p_12_0": "0",
+    "p_12_1": "9",
+    "p_12_2": "8",
+    "p_22_0": "27",
+    "p_22_1": "18",
+    "p_22_2": "18",
+    "lambda_eq_r": "True",
+    "mu_eq_abs_s": "True",
+    "gluon_octet": "8",
+    "gut_dim": "27"
+  },
+  "discoveries": [
+    "p[1][1][1] = lambda = R_EIG = 2: triangle count equals R eigenvalue",
+    "p[1][1][2] = mu = ABS_S = 4 = EW_GAUGE_4: quad count = |S eigenvalue| = EW gauge count",
+    "p[1][2][2] = 8 = GLUON_COUNT: adj-complement cross-number = SU(3)_C gluon octet",
+    "p[2][2][0] = L = GUT_DIM = 27: complement valency = E_6 fundamental rep dimension",
+    "p[2][2][1] = p[2][2][2] = 18: complement is conference-type (lambda_c = mu_c)",
+    "p[1][1][0] = K = SU5_ADJ/2 = 12: adjacency degree = half the SU(5) adjoint dimension",
+    "Valency conservation: sum_l p[ij][l]*k_l = k_i*k_j for all i,j"
+  ]
+}
