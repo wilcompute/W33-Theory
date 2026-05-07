@@ -1,0 +1,16 @@
+{
+  "part": "CCCXCV",
+  "title": "E8 Operation Bridge Pipeline Run Request",
+  "requested_pipeline": "tools/run_e8_operation_bridge_pipeline.py",
+  "mode": "run",
+  "trigger_reason": "Push-trigger the E8 Operation Bridge Pipeline workflow after enabling push-mode full runs.",
+  "expected_workflow": ".github/workflows/e8-operation-bridge-pipeline.yml",
+  "expected_outputs": [
+    "artifacts/ci/e8_operation_bridge_preflight.json",
+    "artifacts/ci/e8_operation_bridge_run.json",
+    "artifacts/e8_root_metadata_table.json",
+    "artifacts/e8_structure_constants_w33_discrete.json",
+    "artifacts/verify_e8_z3grading_from_structure_constants.json"
+  ],
+  "honesty_boundary": "This file requests/marks a workflow-triggering push. Actual remote workflow execution status must be checked in GitHub Actions or via workflow run APIs."
+}
