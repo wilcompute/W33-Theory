@@ -18,6 +18,7 @@ on:
       - "tools/export_e8_structure_constants_from_w33_discrete.py"
       - "tools/verify_e8_z3grading_from_structure_constants.py"
       - "tools/analyze_e8_g1g2_to_g0_couplings.py"
+      - "tools/analyze_e8_g1g2_to_g0_couplings.py"
       - "tools/analyze_e8_g1g1_couplings_cubic_firewall.py"
       - "artifacts/**"
       - ".github/workflows/e8-operation-bridge-pipeline.yml"
@@ -47,7 +48,7 @@ jobs:
           python tools/run_e8_operation_bridge_pipeline.py --dry-run | tee artifacts/ci/e8_operation_bridge_preflight.json
 
       - name: Run bridge pipeline
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_mode == 'run' }}
+        if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.run_mode == 'run') }}
         run: |
           mkdir -p artifacts/ci
           python tools/run_e8_operation_bridge_pipeline.py | tee artifacts/ci/e8_operation_bridge_run.json
