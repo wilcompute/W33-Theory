@@ -1,0 +1,26 @@
+{
+  "part": "CCCCVII",
+  "title": "Cyclic Cover Low-Weight Logical Audit",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "cover_audits": {
+    "L2": {
+      "n": 480,
+      "distance_conclusion": "d=3 because d_X=3",
+      "no_X_logicals_weight_1_2": true,
+      "no_Z_logicals_weight_1_2": true,
+      "x_weight3_logical_found": true
+    },
+    "L3": {
+      "n": 720,
+      "distance_conclusion": "d=3 because d_X=3",
+      "no_X_logicals_weight_1_2": true,
+      "no_Z_logicals_weight_1_2": true,
+      "x_weight3_logical_found": true
+    }
+  },
+  "architecture_upgrade": "Shows that the valid triangle-flat cyclic covers do not by themselves raise CSS distance: inherited K4 line-star weight-3 X logicals survive for L=2 and L=3.",
+  "theorem": "For the tested triangle-flat non-coboundary cyclic covers, no weight-1 or weight-2 logicals exist, but weight-3 X logicals do exist. Therefore the full CSS distance remains d=3 for L=2 and L=3.",
+  "honesty_boundary": "This audits deterministic covers selected by the solver. It does not prove all possible cyclic voltage covers have distance 3; it proves these natural triangle-flat covers do."
+}
