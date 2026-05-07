@@ -1,0 +1,25 @@
+{
+  "part": "CCCXCIV",
+  "title": "H1 / E8 Bracket Gate",
+  "verified": true,
+  "checks_passed": 5,
+  "checks_total": 5,
+  "gate_policy": {
+    "ready_state": "READY_H1_E8_BRACKET_GATE",
+    "blocked_states": [
+      "BLOCKED_H1_CERTIFICATE_INCOMPLETE",
+      "BLOCKED_MISSING_E8_ARTIFACTS",
+      "BLOCKED_NEEDS_Z3_VERIFIER_RUN",
+      "BLOCKED_Z3_VERIFIER_FAILED"
+    ]
+  },
+  "required_ready_conditions": [
+    "complete H1 Smith-normal-form certificate",
+    "E8 structure constants artifact exists",
+    "E8 root metadata artifact exists",
+    "Z3 bracket verifier output exists and reports status=ok"
+  ],
+  "architecture_upgrade": "Combines the SNF-certified H1=Z^81 certificate with the E8 Z3 bracket verifier status into a single bridge-gate state machine.",
+  "theorem": "The H1-to-E8 operation bridge can advance only when the integral H1 certificate is complete, E8 structure constants/root metadata exist, and the E8 Z3 bracket verifier reports status=ok.",
+  "honesty_boundary": "This gate does not prove the H1 basis map preserves brackets. It certifies readiness of the E8 target algebra and blocks honestly when required artifacts or verifier outputs are missing."
+}
