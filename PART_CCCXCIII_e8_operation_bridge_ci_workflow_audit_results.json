@@ -1,0 +1,12 @@
+{
+  "part": "CCCXCIII",
+  "title": "E8 Operation Bridge CI Workflow Audit",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "workflow": ".github/workflows/e8-operation-bridge-pipeline.yml",
+  "manual_modes": ["dry-run", "run"],
+  "runner": "tools/run_e8_operation_bridge_pipeline.py",
+  "architecture_upgrade": "Adds a GitHub Actions workflow so the E8 operation bridge pipeline can be run and reviewed reproducibly from CI, with preflight JSON and generated artifacts uploaded.",
+  "honesty_boundary": "This audits the workflow definition. It does not claim the remote workflow has already been executed successfully."
+}
