@@ -1,0 +1,14 @@
+{
+  "part": "CCCCV",
+  "title": "W33 Cyclic Cover Distance Search",
+  "verified": true,
+  "checks_passed": 5,
+  "checks_total": 5,
+  "cover_results_summary": {
+    "L2": {"n": 480, "local_X_weight": 12, "local_Z_weight": 3, "status": "search_seed"},
+    "L3": {"n": 720, "local_X_weight": 12, "local_Z_weight": 3, "status": "search_seed"}
+  },
+  "architecture_upgrade": "Adds the first native cover/lift search harness for raising W33 CSS distance while preserving local check weights 12 and 3, avoiding immediate brute-force concatenation overhead.",
+  "theorem": "A cyclic edge-fiber lift can preserve W33 local check weights, but commutation and distance must be verified for each voltage assignment. This harness provides that verification/search layer for L=2,3.",
+  "honesty_boundary": "The deterministic voltage assignment here is a search seed, not an optimized or guaranteed-good lift. If commutation fails for a seed, a constrained voltage solver is the next step."
+}
