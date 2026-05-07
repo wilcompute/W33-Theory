@@ -1,0 +1,30 @@
+{
+  "part": "CCCCI",
+  "title": "Signed Switching and Triangle-Face Quotient",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "correction": {
+    "old_CCCC_switching_class_exponent": 200,
+    "correct_switching_class_exponent": 201,
+    "reason": "global all-vertex switching is the kernel, so switching orbit size is 2^(V-1), not 2^V"
+  },
+  "sector_counts": {
+    "all_edge_signings": "2^240",
+    "balanced_signings": "2^39",
+    "graph_switching_classes": "2^201",
+    "triangle_flat_signings": "2^120",
+    "triangle_flat_switching_classes": "2^81"
+  },
+  "chain_complex_interpretation": {
+    "C0_rank": 40,
+    "C1_rank": 240,
+    "C2_triangles": 160,
+    "rank_d0_coboundary": 39,
+    "rank_triangle_coboundary": 120,
+    "H1_rank": 81
+  },
+  "architecture_upgrade": "Corrects the signed-switching exponent and identifies the triangle-flat signed sectors modulo switching with the 2^81 topological matter-flux sectors matching H1(W33;Z)=Z^81.",
+  "theorem": "Unconstrained signed edge assignments modulo vertex switching give 2^201 graph cohomology sectors. Imposing positive triangle products cuts by the rank-120 triangle coboundary, leaving 2^81 switching classes. This is the signed-graph form of the W33 topological matter module.",
+  "honesty_boundary": "This corrects Part CCCC's switching-class exponent. Any downstream use of 2^200 for switching classes should be replaced by 2^201 unless it is intentionally quotienting by the full vertex-switch group without accounting for the global kernel."
+}
