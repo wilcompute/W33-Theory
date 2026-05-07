@@ -1,0 +1,50 @@
+{
+  "part": "CCCXCVII",
+  "title": "Distance-Regular Algebra and Root System Crosswalk",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "intersection_array": [
+      12,
+      9,
+      1,
+      4
+    ],
+    "a_params": [
+      0,
+      2,
+      8
+    ],
+    "char_poly_coeffs": [
+      1,
+      -10,
+      -32,
+      96
+    ],
+    "second_adjacency_eigenvalues": [
+      27,
+      -3,
+      3
+    ],
+    "sm_crosswalk": {
+      "alpha": 10,
+      "k_minus_s": 16,
+      "alpha_times_k_minus_s": 160,
+      "discriminant": 36,
+      "gut_dim_from_a2": 27,
+      "su5_adj": 24,
+      "su5_matter": 15,
+      "mult_sum": 39,
+      "mult_total": 40
+    }
+  },
+  "discoveries": [
+    "Intersection array {12,9;1,4} completely encodes W(3,3) geometry.",
+    "A2 eigenvalue V-1-K=27=GUT_DIM bridges graph distance to E6 fund. rep.",
+    "Restricted eigenvalue discriminant Delta=36=6^2 is a perfect square.",
+    "Multiplicities (24,15) match SU(5) adjoint and matter representations.",
+    "K-r=10=alpha and alpha*(K-s)=V*mu=160 link Hoffman bound to SM.",
+    "A2 top eigenvalue 27=3*9=GENERATIONS*b1 ties families to geometry."
+  ]
+}
