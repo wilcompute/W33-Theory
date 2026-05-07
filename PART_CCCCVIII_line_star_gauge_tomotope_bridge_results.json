@@ -1,0 +1,30 @@
+{
+  "part": "CCCCVIII",
+  "title": "Line-Star Gauge / Tomotope Bridge",
+  "verified": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "line_star_packet": {
+    "k4_lines": 40,
+    "stars_per_line": 4,
+    "line_star_triples": 160,
+    "line_star_span_rank": 120,
+    "line_star_weight": 3
+  },
+  "rank_effect": {
+    "base_X_rank": 39,
+    "Z_rank": 120,
+    "X_plus_line_star_rank": 159,
+    "if_added_as_stabilizers_k": -39
+  },
+  "tomotope_packet": {
+    "flags": 192,
+    "edges": 12,
+    "local_flags_per_edge": 16,
+    "local_decomposition": "16=2 orientations * 4 tetrahedral chart vertices * 2 Clifford chiralities",
+    "axis_tomotope_block_duality": "48 common <r0,r3> blocks; tomotope (12,4,16,3) dual to axis (16,3,12,4)"
+  },
+  "architecture_upgrade": "Identifies the weight-3 X-logical obstruction as the K4 line-star packet and links it to the tomotope local incidence/Fourier-Clifford packet. The correct protection move is subsystem gauge treatment, not adding all line-stars as stabilizers.",
+  "theorem": "W33 has 40 K4 lines and 160 line-star triples of weight 3. These triples span rank 120 and commute with the triangle Z checks, but adjoining them as ordinary stabilizers would overconstrain the code. Therefore they should be treated as gauge generators/local tomotope-chart degrees, not stabilizer checks, in the next fault-tolerance layer.",
+  "honesty_boundary": "This proves the line-star obstruction and its rank effect. It does not yet construct the final subsystem code distance after gauge fixing; that is the next compiler step."
+}
