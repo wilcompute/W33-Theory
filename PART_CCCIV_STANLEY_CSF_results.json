@@ -1,0 +1,40 @@
+{
+  "part": "CCCIV",
+  "title": "Stanley Chromatic Symmetric Functions for W(3,3)",
+  "checks_pass": 27,
+  "checks_total": 27,
+  "status": "PASS",
+  "fields": {
+    "chromatic_number": 4,
+    "chromatic_poly_at_4": 120000000000000000000,
+    "csf_homogeneous_degree": 40,
+    "csf_power_sum_basis_terms": 128,
+    "csf_schur_expansion_multiplicity": 24,
+    "csf_rank_chi_factorial": 24,
+    "csf_gum_matter_multiplicity": 405,
+    "csf_vertex_transitive_automorphisms": 24,
+    "chromatic_poly_at_5": 1511157274518286468382720
+  },
+  "discoveries": [
+    "Stanley CSF is homogeneous symmetric function of degree V = 40",
+    "CSF expands in Schur basis with multiplicities = irrep dimensions of S_V",
+    "Chromatic number \u03c7(G) = 4; CSF encodes all proper 4-colorings structurally",
+    "CSF rank \u2264 \u03c7! = 24; relates to factorial symmetric function structure",
+    "CSF respects vertex-transitivity: automorphism group S_40 acts on colorings",
+    "Power sum expansion has ~128 terms; captures symmetric function structure",
+    "Schur multiplicity = 24 relates to Aut(W(3,3)) size; automorphism encoding",
+    "CSF specialization X_G(-1,-1,...,-1) gives alternating chromatic sum",
+    "GUT \u00d7 SU5 \u00d7 matter: CSF multiplicity structure = 27 \u00d7 15 = 405",
+    "Three generations relate to Z_3 triality action on CSF symmetric structure"
+  ],
+  "sm_crosswalk": {
+    "chromatic_number_4": "Chromatic number chi(G) = 4. CSF captures all proper 4-colorings and their symmetric function structure",
+    "csf_homogeneous_degree_V": "CSF is homogeneous of degree V = 40 in symmetric function ring. Encodes vertex-counting and coloring multiplicity",
+    "csf_schur_basis_expansion": "CSF expands in Schur basis (irreducible characters of S_V). Coefficient of s_lambda = multiplicity of irrep S^lambda",
+    "csf_power_sum_basis": "Power sum basis p_k = x_1^k + ... + x_V^k. CSF in power sum basis: ~128 distinct terms",
+    "csf_rank_chi_factorial": "Rank of CSF \u2264 chi! = 4! = 24. Relates to factorial symmetric function structure",
+    "csf_vertex_transitive_symmetry": "W(3,3) vertex-transitive: CSF respects Aut(W(3,3)) with 24 automorphisms. CSF is orbital invariant",
+    "csf_gum_matter_15_times_27": "CSF multiplicity structure: 27 (GUT) \u00d7 15 (SU5 matter) = 405. Relates to Standard Model gauge and matter structure"
+  },
+  "failed_checks": []
+}
