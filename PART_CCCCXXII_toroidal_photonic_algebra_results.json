@@ -1,0 +1,359 @@
+{
+  "algebra": {
+    "ancilla_modes_szilassi": 2,
+    "fano_interaction_vertices": 7,
+    "heawood_harmonic_freq_sq": 2,
+    "hopping_edges": 21,
+    "hopping_graph": "K7",
+    "input_modes_csaszar": 5,
+    "k7_spectral_gap": 7,
+    "modes": 7,
+    "name": "A(7)",
+    "symmetry_dim": 14,
+    "symmetry_group": "G2"
+  },
+  "checks": [
+    {
+      "name": "total modes equal Phi6",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "Csaszar input count = Phi6 - lambda",
+      "passed": true,
+      "value": 5
+    },
+    {
+      "name": "Szilassi ancilla count = lambda",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "input + ancilla = total modes = Phi6",
+      "passed": true,
+      "value": [
+        5,
+        2
+      ]
+    },
+    {
+      "name": "input count = q^2 - 2q + 2 at q=3",
+      "passed": true,
+      "value": 5
+    },
+    {
+      "name": "Szilassi count * Phi6 = G2_DIM",
+      "passed": true,
+      "value": 14
+    },
+    {
+      "name": "K7 edge count = Q * Phi6",
+      "passed": true,
+      "value": 21
+    },
+    {
+      "name": "K7 max eigenvalue = Phi6 - 1 (degree)",
+      "passed": true,
+      "value": 6
+    },
+    {
+      "name": "K7 min eigenvalue = -1",
+      "passed": true,
+      "value": -1
+    },
+    {
+      "name": "K7 spectral gap = Phi6",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "K7 min eigenvalue multiplicity = Phi6 - 1",
+      "passed": true,
+      "value": 6
+    },
+    {
+      "name": "K7 handshake: n * degree = 2 * edges",
+      "passed": true,
+      "value": 42
+    },
+    {
+      "name": "Fano line count = Phi6",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "each Fano line has Q = 3 points",
+      "passed": true,
+      "value": 3
+    },
+    {
+      "name": "each Fano point lies in exactly Q = 3 lines",
+      "passed": true,
+      "value": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "total Fano flags (point, line) = K7 edges",
+      "passed": true,
+      "value": 21
+    },
+    {
+      "name": "Fano incidence BB^T = 2I + J",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Fano incidence B^T B = 2I + J (self-dual design)",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Csaszar C2 vertex orbits = mu = 4 (3 pairs + 1 apex)",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "Csaszar C2 face orbits = Phi6 = 7 (7 paired triangles)",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "Szilassi C2 vertex orbits = Phi6 = 7 (7 paired vertices)",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "Szilassi C2 face orbits = mu = 4 (3 pairs + 1 singleton)",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "2 Szilassi * Phi6 orbital modes = G2_DIM",
+      "passed": true,
+      "value": 14
+    },
+    {
+      "name": "5 Csaszar * mu orbital modes = V_W33 / 2",
+      "passed": true,
+      "value": 20
+    },
+    {
+      "name": "C1 volume = (Q + lambda)^3 = 5^3 = 125",
+      "passed": true,
+      "value": 125
+    },
+    {
+      "name": "C1 volume exact = Fraction(125)",
+      "passed": true,
+      "value": "125"
+    },
+    {
+      "name": "S1 volume exact = Fraction(5226, 5)",
+      "passed": true,
+      "value": "5226/5"
+    },
+    {
+      "name": "S2 volume exact = Fraction(7976, 9)",
+      "passed": true,
+      "value": "7976/9"
+    },
+    {
+      "name": "S1 volume denominator = Q + lambda = 5",
+      "passed": true,
+      "value": 5
+    },
+    {
+      "name": "S2 volume denominator = Q^2 = 9",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "Heawood vertex count = G2_DIM = 14",
+      "passed": true,
+      "value": 14
+    },
+    {
+      "name": "Heawood edge count = K7 edges = 21",
+      "passed": true,
+      "value": 21
+    },
+    {
+      "name": "Heawood degree = Q = 3",
+      "passed": true,
+      "value": 3
+    },
+    {
+      "name": "Heawood harmonic oscillator frequency^2 = lambda = 2",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "Heawood handshake: V * degree = 2 * edges",
+      "passed": true,
+      "value": 42
+    },
+    {
+      "name": "Heawood BBT non-trivial eigenvalue = lambda (from 2I+J)",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "Type-II fusion probability = 1 / lambda",
+      "passed": true,
+      "value": "1/2"
+    },
+    {
+      "name": "KLM primitive probability = 1 / mu",
+      "passed": true,
+      "value": "1/4"
+    },
+    {
+      "name": "fusion denominator = toric logical qubits = lambda",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "KLM denominator = toric GSD = mu",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "directed K7 edges = (Phi6-1) * Phi6 = 42",
+      "passed": true,
+      "value": 42
+    },
+    {
+      "name": "fusion denom + KLM denom = Phi6 - 1 = K7 degree",
+      "passed": true,
+      "value": 6
+    },
+    {
+      "name": "G2_DIM = 2 * Phi6",
+      "passed": true,
+      "value": 14
+    },
+    {
+      "name": "U(7) algebra dim = Phi6^2 = 2*K7_edges + Phi6 (off-diag + diag)",
+      "passed": true,
+      "value": 49
+    },
+    {
+      "name": "PSL(2,7) order = 24 * Phi6 = 168",
+      "passed": true,
+      "value": 168
+    },
+    {
+      "name": "toric logical qubits = lambda = 2",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "Csaszar Euler characteristic = 0 (genus-1 torus)",
+      "passed": true,
+      "value": 0
+    },
+    {
+      "name": "mu + lambda = Phi6 - 1 = K7 max eigenvalue",
+      "passed": true,
+      "value": 6
+    }
+  ],
+  "checks_passed": 48,
+  "checks_total": 48,
+  "fano_data": {
+    "bbt_equals_2i_plus_j": true,
+    "btb_equals_2i_plus_j": true,
+    "lines": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        3,
+        4,
+        6
+      ],
+      [
+        4,
+        5,
+        0
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        6,
+        0,
+        2
+      ]
+    ],
+    "point_degrees": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "honesty_boundary": "This is an invariant-matching algebra theorem.  It does not claim a new optical threshold, a physical G2 anyon realisation, or a new proof of the K7 CSS distance bound.",
+  "mode_map": {
+    "C1": "Csaszar-1  mode 0  volume=125=(Q+lam)^3",
+    "C2": "Csaszar-2  mode 1",
+    "C3": "Csaszar-3  mode 2",
+    "C4": "Csaszar-4  mode 3",
+    "C5": "Csaszar-5  mode 4",
+    "S1": "Szilassi-1 mode 5  ancilla p_fusion=1/2",
+    "S2": "Szilassi-2 mode 6  ancilla p_KLM=1/4"
+  },
+  "orbital_structure": {
+    "csaszar_c2_face_orbits": 7,
+    "csaszar_c2_vertex_orbits": 4,
+    "csaszar_orbit_pair": "(4, 7) = (mu, Phi6)",
+    "szilassi_c2_face_orbits": 4,
+    "szilassi_c2_vertex_orbits": 7,
+    "szilassi_orbit_pair": "(7, 4) = (Phi6, mu)"
+  },
+  "part": "CCCCXXII",
+  "photonic_bus": {
+    "fusion_denominator": 2,
+    "klm_denominator": 4,
+    "p_fusion": "1/2",
+    "p_klm": "1/4",
+    "toric_gsd": 4,
+    "toric_logical_qubits": 2
+  },
+  "status": "PASS",
+  "theorem": "The seven toroidal polyhedra realizations in R^3 generate the 7-mode photonic harmonic TQC algebra A(7).  The 5 Csaszar realizations form the input register with K7 hopping Hamiltonian (spectral gap Phi6=7, 21 bond operators) and 7 Fano triple-mode interactions.  The 2 Szilassi realizations are the KLM Type-II ancilla pair (p=1/4=1/mu), giving the 5+2=Phi6 bus split.  C2 symmetry decomposes each Csaszar into mu=4 Bell-pair modes and each Szilassi into Phi6=7 Bell-pair modes; combined totals are 5*4=20=V_W33/2 and 2*7=14=G2_DIM orbital modes.  The Heawood 14-mode harmonic rail has frequency^2 = lambda = 2 and biadjacency equal to the Fano incidence BB^T=2I+J.  Volume spectrum: C1=5^3=(Q+lam)^3, S1=5226/5 (denom Q+lam), S2=7976/9 (denom Q^2).  The full algebra has U(7) dimension Phi6^2=49=2*K7_edges+Phi6, G2 symmetry of dimension 2*Phi6=14, and the toric CSS code on each Csaszar K7 triangulation has k=2=lambda logical qubits and GSD=4=mu.  Every constant is a polynomial in q=3.",
+  "title": "Photonic Harmonic TQC Algebra from 7 Toroidal Realizations",
+  "verified": true,
+  "volume_spectrum": {
+    "C1": "125",
+    "C1_formula": "(Q+lambda)^3 = 5^3 = 125",
+    "S1": "5226/5",
+    "S1_denominator_meaning": "Q + lambda = 5",
+    "S2": "7976/9",
+    "S2_denominator_meaning": "Q^2 = 9"
+  }
+}
