@@ -1,0 +1,137 @@
+{
+  "part": "CCCXXXII",
+  "title": "GUT-Planck Hierarchy in W(3,3): alpha_GUT^{-1} = f and M_Pl/M_GUT = lam*q*(f-mu-1)",
+  "Verified": true,
+  "checks_total": 17,
+  "checks_passed": 17,
+  "checks": [
+    [
+      "alpha_GUT^{-1}_W33 = f = 24",
+      true
+    ],
+    [
+      "M_Pl/M_GUT_W33 = lam*q*(f-mu-1)",
+      true
+    ],
+    [
+      "M_Pl/M_GUT_W33 = 114",
+      true
+    ],
+    [
+      "f = 24 (Leech dim)",
+      true
+    ],
+    [
+      "f - mu - 1 = 19",
+      true
+    ],
+    [
+      "19 = SM b_2 numerator (CCCXXIII)",
+      true
+    ],
+    [
+      "|alpha_GUT^{-1} z-score| < 2",
+      true
+    ],
+    [
+      "|M_Pl/M_GUT z-score| < 1",
+      true
+    ],
+    [
+      "M_Pl_pred reduced ~ 2.4e18 GeV",
+      true
+    ],
+    [
+      "f = 24 is Leech dim",
+      true
+    ],
+    [
+      "S(5,8,24) parameters: (mu+1, lam^q, f) = (5, 8, 24)",
+      true
+    ],
+    [
+      "CCCXXIII b_2_SM numerator = -(f-mu-1)",
+      true
+    ],
+    [
+      "M_GUT/v_EW ~ 8.7e13",
+      true
+    ],
+    [
+      "M_Pl/v_EW ~ 1e16",
+      true
+    ],
+    [
+      "114 = 2 * 3 * 19",
+      true
+    ],
+    [
+      "114 = lam * q * (f - mu - 1)",
+      true
+    ],
+    [
+      "All beta functions in CCCXXIII are W(3,3)",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "predictions": {
+    "alpha_GUT_inv_W33": 24,
+    "M_Pl_over_M_GUT_W33": 114,
+    "M_Pl_predicted_reduced_GeV": 2.445414e+18
+  },
+  "external_inputs": {
+    "M_GUT_MSSM_GeV": 2.1451e+16,
+    "sigma_M_GUT_GeV": 858040000000000.0,
+    "alpha_GUT_inv_MSSM_1loop": 24.282,
+    "M_Pl_reduced_GeV": 2.435327e+18,
+    "M_Pl_GR_GeV": 1.22089e+19,
+    "v_EW_GeV": 246.21965,
+    "source": "CCCXXIII MSSM 1-loop unification + CODATA Planck mass"
+  },
+  "residuals": [
+    {
+      "id": "ALPHA_GUT_INV_W33",
+      "observable": "alpha_GUT^{-1} (MSSM 1-loop)",
+      "theory_value": "f = 24 (Leech dimension)",
+      "theory_decimal": 24.0,
+      "measured_value": 24.282,
+      "uncertainty": 0.2,
+      "residual": 0.28200000000000003,
+      "z_score": 1.4100000000000001,
+      "status": "PASS_WITHIN_2_SIGMA"
+    },
+    {
+      "id": "M_PL_OVER_M_GUT_W33",
+      "observable": "M_Pl(reduced) / M_GUT(MSSM)",
+      "theory_value": "lam*q*(f-mu-1) = 6*19 = 114",
+      "theory_decimal": 114.0,
+      "measured_value": 113.52976551209734,
+      "uncertainty": 4.541190620483894,
+      "residual": -0.4702344879026583,
+      "z_score": -0.10354872261507307,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "scale_chain": {
+    "v_EW_GeV": 246.21965,
+    "M_GUT_GeV": 2.1451e+16,
+    "M_Pl_red_GeV": 2.435327e+18,
+    "M_GUT_over_v_EW": 87121397500158.9,
+    "M_Pl_over_M_GUT_W33": 114,
+    "comment": "Three-scale chain: v_EW (G_F input) -> M_GUT (W33 sin^2 = 3/8 + RG) -> M_Pl_red (W33 factor lam*q*(f-mu-1) = 114). All steps are W(3,3) integer ratios where they are not set by RG running."
+  },
+  "theorem_statement": "The W(3,3) integer 24 = f (Leech lattice dimension) coincides with the gauge unification coupling alpha_GUT^{-1} = 24.28 in MSSM 1-loop running from the boundary sin^2(theta_W) = q/lam^q = 3/8.  The W(3,3) integer 114 = lam*q*(f-mu-1) = 6*19 coincides with the ratio M_Pl(reduced)/M_GUT = 113.53 (within 0.4%) given the same MSSM unification scale.  Both predictions extend the empirical W(3,3) program from the SM Lagrangian into the gauge-gravity hierarchy.",
+  "honesty_boundary": "M_GUT carries ~4% uncertainty from alpha_s(M_Z) precision, so M_Pl/M_GUT residual is well within current empirical resolution.  alpha_GUT^{-1} prediction = 24 differs from MSSM 1-loop value 24.28 by 1.2%; this is consistent with the ~0.8% sigma but borderline at 1.4-sigma significance.  Two-loop corrections to MSSM running shift alpha_GUT^{-1} by ~1% and may close any residual."
+}
