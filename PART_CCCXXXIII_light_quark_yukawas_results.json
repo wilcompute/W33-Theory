@@ -1,0 +1,160 @@
+{
+  "part": "CCCXXXIII",
+  "title": "Light-quark Yukawas y_d = H_0/137^3 and y_u = lam^5/137^3 in W(3,3)",
+  "Verified": true,
+  "checks_total": 21,
+  "checks_passed": 21,
+  "checks": [
+    [
+      "y_d = Phi_6*Phi_4 / 137^3",
+      true
+    ],
+    [
+      "y_d = 70/137^3",
+      true
+    ],
+    [
+      "y_u = lam^5 / 137^3",
+      true
+    ],
+    [
+      "y_u = 32/137^3",
+      true
+    ],
+    [
+      "H_0 = Phi_6 * Phi_4 = 70",
+      true
+    ],
+    [
+      "137 = q^q*(mu+1) + lam",
+      true
+    ],
+    [
+      "137^3 = 2571353",
+      true
+    ],
+    [
+      "lam^5 = 32",
+      true
+    ],
+    [
+      "|z_y_d| < 1",
+      true
+    ],
+    [
+      "|z_y_u| < 1",
+      true
+    ],
+    [
+      "4.4 < m_d_pred < 5.0 MeV",
+      true
+    ],
+    [
+      "1.7 < m_u_pred < 2.6 MeV",
+      true
+    ],
+    [
+      "y_u/y_d = lam^5/H_0 = 16/35",
+      true
+    ],
+    [
+      "|m_u/m_d residual| < 0.05",
+      true
+    ],
+    [
+      "y_c = 1/137 (CCCXXIX)",
+      true
+    ],
+    [
+      "y_s = Phi_4/137^2 (CCCXXX)",
+      true
+    ],
+    [
+      "y_c denom = 137^1",
+      true
+    ],
+    [
+      "y_s denom = 137^2",
+      true
+    ],
+    [
+      "y_d denom = 137^3",
+      true
+    ],
+    [
+      "y_u denom = 137^3",
+      true
+    ],
+    [
+      "y_d numerator = H_0 (Hubble fixed point)",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7,
+    "H_0": 70,
+    "ALPHA_INV": 137
+  },
+  "predictions": {
+    "y_d_W33": 2.7223022276599128e-05,
+    "y_u_W33": 1.2444810183588173e-05,
+    "m_d_pred_MeV": 4.739625750469298,
+    "m_u_pred_MeV": 2.1666860573573934,
+    "y_u_over_y_d_W33": "16/35"
+  },
+  "external_inputs": {
+    "m_d_MeV": 4.7,
+    "sigma_m_d": 0.07,
+    "m_u_MeV": 2.16,
+    "sigma_m_u": 0.4,
+    "v_EW_GeV": 246.21965,
+    "source": "PDG 2024 m_d, m_u (MSbar at 2 GeV)"
+  },
+  "residuals": [
+    {
+      "id": "DOWN_YUKAWA_W33",
+      "observable": "y_d(MSbar, 2 GeV)",
+      "theory_value": "(Phi_6*Phi_4) / 137^3 = 70/2571353",
+      "theory_decimal": 2.7223022276599128e-05,
+      "measured_value": 2.699542357059458e-05,
+      "uncertainty": 4.0205949998757887e-07,
+      "residual": -2.275987060045489e-07,
+      "z_score": -0.5660821495613965,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "UP_YUKAWA_W33",
+      "observable": "y_u(MSbar, 2 GeV)",
+      "theory_value": "lam^5 / 137^3 = 32/2571353",
+      "theory_decimal": 1.2444810183588173e-05,
+      "measured_value": 1.2406407428188146e-05,
+      "uncertainty": 2.2974828570718788e-06,
+      "residual": -3.8402755400026835e-08,
+      "z_score": -0.016715143393483598,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "down_sector_pattern": {
+    "y_b": "q/(mu+1)^3      = 3/125     (CCCXXVIII)",
+    "y_s": "Phi_4/137^2     = 10/18769  (CCCXXX)",
+    "y_d": "(Phi_6*Phi_4)/137^3 = H_0/137^3  (this part)",
+    "comment": "Down-sector Yukawas progress through powers of 137: y_s ~ 137^-2, y_d ~ 137^-3.  y_b uses (mu+1)^3 = 125 instead. y_d numerator equals the Hubble fixed point H_0 = Phi_6*Phi_4 = 70."
+  },
+  "up_sector_pattern": {
+    "y_t^3": "v/(v+1) = 40/41        (CCCXXVI)",
+    "y_c": "1/137                  (CCCXXIX)",
+    "y_u": "lam^5/137^3 = 32/137^3 (this part)",
+    "comment": "Up-sector Yukawas: y_t close to 1, y_c = 1/137, y_u = lam^5/137^3.  Skip 137^2 in the up sector."
+  },
+  "theorem_statement": "The light-quark Yukawas in MS-bar at 2 GeV admit W(3,3) closed forms with common denominator 137^3:  y_d = H_0/137^3 and y_u = lam^5/137^3, where H_0 = Phi_6 * Phi_4 = 70 is the Hubble fixed point of Supplement W and 137 = q^q*(mu+1) + lam is the fine-structure W(3,3) prime from CCCXXIX. Both predictions are within 1 sigma of PDG 2024 (y_u within 0.02 sigma, y_d within 0.6 sigma). m_d_pred = 4.74 MeV (vs 4.70 +- 0.07), m_u_pred = 2.17 MeV (vs 2.16 +- 0.40).",
+  "honesty_boundary": "Light-quark masses have substantial PDG uncertainty (m_u ~ 18 percent, m_d ~ 1.5 percent) from lattice extraction.  W(3,3) predictions are well within these uncertainties.  The numerator H_0 = 70 in y_d connects the down-quark Yukawa to the cosmological Hubble fixed point; this is a numerical coincidence of W(3,3) integers, not yet a structural derivation."
+}
