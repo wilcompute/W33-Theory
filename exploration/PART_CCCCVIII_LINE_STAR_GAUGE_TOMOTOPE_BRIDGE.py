@@ -21,11 +21,11 @@ natural subsystem move suggested by the tomotope/Fourier/Clifford local packet.
 This file proves the count/rank effect over GF(2):
   - there are 160 line-star triples,
   - their span has rank 120,
-  - adjoining them to the X-gauge/check algebra raises X-side rank from 39 to
-    159,
-  - the protected/gauge-quotiented dimension drops from 81 to 240-159-120=-39
-    if imposed as stabilizers, so they must be subsystem gauge operators, not
-    stabilizers.
+  - adjoining them to the vertex X-check algebra gives rank 120, not 159,
+  - modulo the 39 vertex checks, the line-stars are the 81-dimensional matter
+    sector,
+  - imposing them all as stabilizers collapses k to zero, so they must be
+    re-encoded rather than killed.
 
 Therefore the correct architecture is not "add all line-stars as stabilizers";
 it is "promote line-stars to gauge degrees and protect logical information in a
@@ -108,11 +108,12 @@ def build_results():
     checks.append(ok('line-star rows have weight 3',sorted({r.bit_count() for r in line_rows})==[3],sorted({r.bit_count() for r in line_rows})))
     checks.append(ok('line-star span rank = 120',len(bl)==120,len(bl)))
     checks.append(ok('base X rank 39, Z rank 120',len(bx)==39 and len(bz)==120,{"rx":len(bx),"rz":len(bz)}))
-    checks.append(ok('X plus line-star gauge rank = 159',len(bg)==159,len(bg)))
+    checks.append(ok('X plus line-star gauge rank = 120',len(bg)==120,len(bg)))
     checks.append(ok('line-stars commute with triangle Z checks',commute(line_rows,Hz),True))
-    checks.append(ok('adding line-stars as stabilizers overconstrains k negative',stabilizer_if_added_k==-39,stabilizer_if_added_k))
+    checks.append(ok('line-star quotient rank = 81',len(bg)-len(bx)==81,{"combined_rank":len(bg),"base_rank":len(bx)}))
+    checks.append(ok('adding line-stars as stabilizers collapses k to zero',stabilizer_if_added_k==0,stabilizer_if_added_k))
     verified=all(c['passed'] for c in checks)
-    return {"part":"CCCCVIII","title":"Line-Star Gauge / Tomotope Bridge","verified":verified,"checks_total":len(checks),"checks_passed":sum(c['passed'] for c in checks),"line_star_packet":{"k4_lines":40,"stars_per_line":4,"line_star_triples":160,"line_star_span_rank":120,"line_star_weight":3,"sample_witnesses":wit[:8]},"rank_effect":{"base_X_rank":len(bx),"Z_rank":len(bz),"X_plus_line_star_rank":len(bg),"if_added_as_stabilizers_k":stabilizer_if_added_k},"tomotope_packet":{"flags":192,"edges":12,"local_flags_per_edge":16,"local_decomposition":"16=2 orientations * 4 tetrahedral chart vertices * 2 Clifford chiralities","axis_tomotope_block_duality":"48 common <r0,r3> blocks; tomotope (12,4,16,3) dual to axis (16,3,12,4)"},"architecture_upgrade":"Identifies the weight-3 X-logical obstruction as the K4 line-star packet and links it to the tomotope local incidence/Fourier-Clifford packet. The correct protection move is subsystem gauge treatment, not adding all line-stars as stabilizers.","theorem":"W33 has 40 K4 lines and 160 line-star triples of weight 3. These triples span rank 120 and commute with the triangle Z checks, but adjoining them as ordinary stabilizers would overconstrain the code. Therefore they should be treated as gauge generators/local tomotope-chart degrees, not stabilizer checks, in the next fault-tolerance layer.","honesty_boundary":"This proves the line-star obstruction and its rank effect. It does not yet construct the final subsystem code distance after gauge fixing; that is the next compiler step.","checks":checks}
+    return {"part":"CCCCVIII","title":"Line-Star Gauge / Tomotope Bridge","verified":verified,"checks_total":len(checks),"checks_passed":sum(c['passed'] for c in checks),"line_star_packet":{"k4_lines":40,"stars_per_line":4,"line_star_triples":160,"line_star_span_rank":120,"line_star_weight":3,"sample_witnesses":wit[:8]},"rank_effect":{"base_X_rank":len(bx),"Z_rank":len(bz),"X_plus_line_star_rank":len(bg),"line_star_mod_vertex_rank":len(bg)-len(bx),"if_added_as_stabilizers_k":stabilizer_if_added_k},"tomotope_packet":{"flags":192,"edges":12,"local_flags_per_edge":16,"local_decomposition":"16=2 orientations * 4 tetrahedral chart vertices * 2 Clifford chiralities","axis_tomotope_block_duality":"48 common <r0,r3> blocks; tomotope (12,4,16,3) dual to axis (16,3,12,4)"},"architecture_upgrade":"Identifies the weight-3 X-logical obstruction as the K4 line-star packet and links it to the tomotope local incidence/Fourier-Clifford packet. The corrected rank read is that line-stars span the 81-dimensional matter sector modulo vertex checks, so the protection move is re-encoding, not adding all line-stars as stabilizers.","theorem":"W33 has 40 K4 lines and 160 line-star triples of weight 3. These triples span rank 120 and commute with the triangle Z checks. Together with the 39 vertex checks they still span rank 120, so the quotient line-star/vertex sector has rank 81. Adding them all as ordinary stabilizers collapses k to zero.","honesty_boundary":"This corrects the earlier CCCCVIII rank-effect wording and agrees with CCCCIX. It does not yet construct the final subsystem code distance after re-encoding; that is handled by the later Q4 packet and dressed-logical audits.","checks":checks}
 def main():
     r=build_results(); out=ROOT/'PART_CCCCVIII_line_star_gauge_tomotope_bridge_results.json'; out.write_text(json.dumps(r,indent=2,sort_keys=True)+'\n',encoding='utf-8'); print(json.dumps({"part":r['part'],"verified":r['verified'],"checks_passed":r['checks_passed'],"checks_total":r['checks_total'],"out_path":str(out)},indent=2))
 if __name__=='__main__': main()

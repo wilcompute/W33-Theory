@@ -12,6 +12,7 @@ current readiness state without executing the heavy pipeline.
 from __future__ import annotations
 import importlib.util
 import json
+import sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 RUNNER=ROOT/'tools'/'run_e8_operation_bridge_pipeline.py'
@@ -20,6 +21,7 @@ def load_runner():
     spec=importlib.util.spec_from_file_location('run_e8_operation_bridge_pipeline',RUNNER)
     mod=importlib.util.module_from_spec(spec)
     assert spec.loader is not None
+    sys.modules[spec.name]=mod
     spec.loader.exec_module(mod)
     return mod
 def build_results():
@@ -28,6 +30,7 @@ def build_results():
     checks.append(ok('pipeline has five steps',len(mod.STEPS)==5,[s.name for s in mod.STEPS]))
     checks.append(ok('first step builds root metadata',mod.STEPS[0].name=='build_root_metadata',mod.STEPS[0].name))
     checks.append(ok('second step exports structure constants',mod.STEPS[1].name=='export_structure_constants',mod.STEPS[1].name))
+    checks.append(ok('z3 step declares actual verifier JSON',mod.STEPS[2].produces[0]=='artifacts/verify_e8_z3grading_from_structure_constants.json',mod.STEPS[2].produces))
     checks.append(ok('preflight has first_blocked or ready flag','first_blocked' in pf and 'ready_to_run_all' in pf,pf))
     checks.append(ok('preflight step records match pipeline length',len(pf['steps'])==len(mod.STEPS),len(pf['steps'])))
     verified=all(c['passed'] for c in checks)

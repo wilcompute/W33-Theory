@@ -72,8 +72,8 @@ STEPS: List[Step] = [
             "artifacts/e8_root_metadata_table.json",
         ],
         produces=[
-            "artifacts/e8_z3grading_from_structure_constants.json",
-            "artifacts/e8_z3grading_from_structure_constants.md",
+            "artifacts/verify_e8_z3grading_from_structure_constants.json",
+            "artifacts/verify_e8_z3grading_from_structure_constants.md",
         ],
     ),
     Step(

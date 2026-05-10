@@ -16,5 +16,7 @@ def test_runner_imports():
     mod=load_module(); runner=mod.load_runner(); assert len(runner.STEPS)==5; assert runner.STEPS[0].name=='build_root_metadata'
 def test_preflight_shape():
     mod=load_module(); runner=mod.load_runner(); pf=runner.preflight(); assert 'first_blocked' in pf; assert 'ready_to_run_all' in pf; assert len(pf['steps'])==5
+def test_z3_output_contract_matches_verifier_script():
+    mod=load_module(); runner=mod.load_runner(); assert runner.STEPS[2].produces[0]=='artifacts/verify_e8_z3grading_from_structure_constants.json'
 def test_commands_recorded():
     mod=load_module(); r=mod.build_results(); assert r['dry_run_command'].endswith('--dry-run'); assert r['run_command'].startswith('python tools/')

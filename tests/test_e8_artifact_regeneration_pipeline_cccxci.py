@@ -16,5 +16,7 @@ def test_pipeline_shape():
     mod=load_module(); assert len(mod.STEPS)==5; assert mod.STEPS[0]['name']=='build_root_metadata'; assert mod.STEPS[1]['name']=='export_structure_constants'
 def test_preflight_shape():
     mod=load_module(); pf=mod.preflight(); assert len(pf)==5; assert all('ready' in st for st in pf)
+def test_z3_manifest_output_contract_matches_verifier_script():
+    mod=load_module(); assert mod.STEPS[2]['produces'][0]=='artifacts/verify_e8_z3grading_from_structure_constants.json'
 def test_next_action_defined():
     mod=load_module(); na=mod.next_action(mod.preflight()); assert 'blocked_at_step' in na or na.get('state')=='ALL_STEPS_PREFLIGHT_READY'

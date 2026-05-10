@@ -50,7 +50,7 @@ STEPS=[
         "name":"verify_z3_grading",
         "script":"tools/verify_e8_z3grading_from_structure_constants.py",
         "requires":["artifacts/e8_structure_constants_w33_discrete.json","artifacts/e8_root_metadata_table.json"],
-        "produces":["artifacts/e8_z3grading_from_structure_constants.json","artifacts/e8_z3grading_from_structure_constants.md"]
+        "produces":["artifacts/verify_e8_z3grading_from_structure_constants.json","artifacts/verify_e8_z3grading_from_structure_constants.md"]
     },
     {
         "step":4,
@@ -94,6 +94,7 @@ def build_results():
     checks.append(ok('root metadata builder exists',exists('tools/build_e8_root_metadata_table.py'),None))
     checks.append(ok('structure constants exporter exists',exists('tools/export_e8_structure_constants_from_w33_discrete.py'),None))
     checks.append(ok('z3 verifier exists',exists('tools/verify_e8_z3grading_from_structure_constants.py'),None))
+    checks.append(ok('z3 manifest declares actual verifier JSON',STEPS[2]['produces'][0]=='artifacts/verify_e8_z3grading_from_structure_constants.json',STEPS[2]['produces']))
     checks.append(ok('preflight returns five records',len(pf)==5,pf))
     checks.append(ok('next action is defined','blocked_at_step' in na or na.get('state')=='ALL_STEPS_PREFLIGHT_READY',na))
     verified=all(c['passed'] for c in checks)

@@ -15,8 +15,8 @@ def test_all_line_star_checks_pass():
 def test_line_star_counts_and_rank():
     mod=load_module(); r=mod.build_results(); pkt=r['line_star_packet']; assert pkt['k4_lines']==40; assert pkt['line_star_triples']==160; assert pkt['line_star_span_rank']==120; assert pkt['line_star_weight']==3
 def test_rank_effect():
-    mod=load_module(); r=mod.build_results(); eff=r['rank_effect']; assert eff['base_X_rank']==39; assert eff['Z_rank']==120; assert eff['X_plus_line_star_rank']==159; assert eff['if_added_as_stabilizers_k']==-39
+    mod=load_module(); r=mod.build_results(); eff=r['rank_effect']; assert eff['base_X_rank']==39; assert eff['Z_rank']==120; assert eff['X_plus_line_star_rank']==120; assert eff['line_star_mod_vertex_rank']==81; assert eff['if_added_as_stabilizers_k']==0
 def test_tomotope_packet():
     mod=load_module(); r=mod.build_results(); tomo=r['tomotope_packet']; assert tomo['flags']==192; assert tomo['local_flags_per_edge']==16; assert 'Clifford chiralities' in tomo['local_decomposition']
 def test_payload():
-    mod=load_module(); r=mod.build_results(); assert 'subsystem gauge treatment' in r['architecture_upgrade']; assert 'does not yet construct the final subsystem code distance' in r['honesty_boundary']
+    mod=load_module(); r=mod.build_results(); assert 're-encoding' in r['architecture_upgrade']; assert 'agrees with CCCCIX' in r['honesty_boundary']
