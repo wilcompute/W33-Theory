@@ -83,7 +83,7 @@ def main() -> None:
     # Internal closure identities: these should be exact in rational arithmetic.
     identities = {
         "q_factorial_seed": math.factorial(q) == 2 * q,
-        "srg_vertex_formula": ((q + 1) * (q**3 + 1)) == v,
+        "srg_vertex_formula": ((q + 1) * (q**2 + 1)) == v,
         "srg_valency_formula": q * (q + 1) == k,
         "top_denominator_matches_hypercharge_numerator": (v + 1) == 41,
         "higgs_denominator_is_phi4_squared": phi4**2 == 100,

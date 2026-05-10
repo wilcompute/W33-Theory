@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 PART CCCXXXII -- GUT-Planck Hierarchy in W(3,3): alpha_GUT^{-1} = f and M_Pl/M_GUT = lam*q*(f-mu-1)
 ====================================================================================================
 

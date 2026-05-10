@@ -1,0 +1,305 @@
+{
+  "architecture_upgrade": "Completes the CCCCXXIV local theta compiler to the full W33 CSS rank accounting: local Csaszar toric checks plus U(5) input algebra give the W33 triangle rank, then vertex-star checks and H1 fill the carrier.",
+  "checks": [
+    {
+      "name": "CCCCXXIV theta compiler verified",
+      "passed": true,
+      "value": 25
+    },
+    {
+      "name": "CCCCXXIII A7 toric verified",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "W33 CSS topology verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "W33 CSS distance verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "Steane/Phi6 lift verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "five-block packet is [[105,10,>=3]]",
+      "passed": true,
+      "value": {
+        "blocks": 5,
+        "check_rank": 95,
+        "d_lower": 3,
+        "gsd": 1024,
+        "k": 10,
+        "logical_equals_lovasz_theta": true,
+        "n": 105,
+        "notation": "[[105,10,>=3]]",
+        "theta_times_local_gsd": 40
+      }
+    },
+    {
+      "name": "local check rank is 95",
+      "passed": true,
+      "value": {
+        "blocks": 5,
+        "check_rank": 95,
+        "d_lower": 3,
+        "gsd": 1024,
+        "k": 10,
+        "logical_equals_lovasz_theta": true,
+        "n": 105,
+        "notation": "[[105,10,>=3]]",
+        "theta_times_local_gsd": 40
+      }
+    },
+    {
+      "name": "five input modes define U(5) rank 25",
+      "passed": true,
+      "value": 25
+    },
+    {
+      "name": "U(5) completion closes local checks to triangle rank",
+      "passed": true,
+      "value": {
+        "local": 95,
+        "triangle": 120,
+        "u5": 25
+      }
+    },
+    {
+      "name": "triangle rank matches CCCCXXIV rank-120 closure",
+      "passed": true,
+      "value": {
+        "ancilla_g2_modes": 14,
+        "rank_120_closure": 120,
+        "rank_120_read": "105 local Csaszar edge qubits + 14 G2 ancilla modes + 1 scalar/control line = W33 triangle-check rank 120",
+        "szilassi_ancilla_modes": 2,
+        "theta_plus_g2": 24
+      }
+    },
+    {
+      "name": "vertex-star completion rank is 39",
+      "passed": true,
+      "value": 39
+    },
+    {
+      "name": "triangle plus vertex ranks give full stabilizer rank",
+      "passed": true,
+      "value": {
+        "triangle": 120,
+        "vertex": 39
+      }
+    },
+    {
+      "name": "full stabilizer rank plus H1 fills 240",
+      "passed": true,
+      "value": {
+        "edges": 240,
+        "h1": 81,
+        "stabilizer": 159
+      }
+    },
+    {
+      "name": "completion rank 25+39 is 64",
+      "passed": true,
+      "value": 64
+    },
+    {
+      "name": "local checks plus completion plus H1 fill 240",
+      "passed": true,
+      "value": {
+        "completion": 64,
+        "h1": 81,
+        "local": 95
+      }
+    },
+    {
+      "name": "physical edge split is 105+135=240",
+      "passed": true,
+      "value": {
+        "theta_edges": 105,
+        "transport_edges": 135
+      }
+    },
+    {
+      "name": "theta physical share is 7/16",
+      "passed": true,
+      "value": "7/16"
+    },
+    {
+      "name": "transport physical share is 9/16",
+      "passed": true,
+      "value": "9/16"
+    },
+    {
+      "name": "transport complement is 45*3",
+      "passed": true,
+      "value": 135
+    },
+    {
+      "name": "theta plus G2 rail is 24",
+      "passed": true,
+      "value": {
+        "ancilla_g2_modes": 14,
+        "rank_120_closure": 120,
+        "rank_120_read": "105 local Csaszar edge qubits + 14 G2 ancilla modes + 1 scalar/control line = W33 triangle-check rank 120",
+        "szilassi_ancilla_modes": 2,
+        "theta_plus_g2": 24
+      }
+    },
+    {
+      "name": "U7 dim minus G2 dim is five Csaszar vertex sets",
+      "passed": true,
+      "value": {
+        "bond_g2_adj": 14,
+        "bond_g2_fund": 7,
+        "g2_dim": 14,
+        "modes": 7,
+        "su7_dim": 48,
+        "u7_dim": 49
+      }
+    },
+    {
+      "name": "W33 base CSS is [[240,81,3]]",
+      "passed": true,
+      "value": {
+        "d": 3,
+        "d_X": 3,
+        "d_Z": 4,
+        "k": 81,
+        "n": 240,
+        "notation": "[[240,81,3]]"
+      }
+    },
+    {
+      "name": "three Steane lifts use Phi6^3=343",
+      "passed": true,
+      "value": 343
+    },
+    {
+      "name": "protected theta packet has n=36015",
+      "passed": true,
+      "value": 36015
+    },
+    {
+      "name": "protected transport complement has n=46305",
+      "passed": true,
+      "value": 46305
+    },
+    {
+      "name": "protected theta plus transport equals global protected n",
+      "passed": true,
+      "value": {
+        "global": 82320,
+        "theta": 36015,
+        "transport": 46305
+      }
+    },
+    {
+      "name": "protected distance lower bound remains H1",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "protected correctable weight remains 40",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "completion has four ordered layers",
+      "passed": true,
+      "value": [
+        {
+          "name": "local_csaszar_toric_checks",
+          "rank": 95,
+          "read": "five [[21,2,>=3]] toric blocks give 95 local checks"
+        },
+        {
+          "name": "u5_input_mode_completion",
+          "rank": 25,
+          "read": "U(5) input-mode algebra completes 95 to W33 triangle rank 120"
+        },
+        {
+          "name": "w33_vertex_star_completion",
+          "rank": 39,
+          "read": "W33 vertex-star rank completes triangle checks to full CSS stabilizer rank"
+        },
+        {
+          "name": "h1_logical_tail",
+          "rank": 81,
+          "read": "remaining H1=81 sector is preserved as logical matter"
+        }
+      ]
+    }
+  ],
+  "checks_passed": 29,
+  "checks_total": 29,
+  "completion_layers": [
+    {
+      "name": "local_csaszar_toric_checks",
+      "rank": 95,
+      "read": "five [[21,2,>=3]] toric blocks give 95 local checks"
+    },
+    {
+      "name": "u5_input_mode_completion",
+      "rank": 25,
+      "read": "U(5) input-mode algebra completes 95 to W33 triangle rank 120"
+    },
+    {
+      "name": "w33_vertex_star_completion",
+      "rank": 39,
+      "read": "W33 vertex-star rank completes triangle checks to full CSS stabilizer rank"
+    },
+    {
+      "name": "h1_logical_tail",
+      "rank": 81,
+      "read": "remaining H1=81 sector is preserved as logical matter"
+    }
+  ],
+  "honesty_boundary": "This is a stabilizer-rank and physical-carrier compiler. It does not assert that the U(5) rank completion is a canonical W33 triangle operator isomorphism, and it does not replace the existing Steane/Phi6 protection or the Q4 routing boundary.",
+  "part": "CCCCXXV",
+  "physical_split": {
+    "theta_edges": 105,
+    "theta_share": "7/16",
+    "total_edges": 240,
+    "transport_edges": 135,
+    "transport_read": "135 = 45*3 transport bundle complement",
+    "transport_share": "9/16"
+  },
+  "protected_split": {
+    "active_protection_code": "[[82320,81,>=81]]",
+    "correctable_weight": 40,
+    "distance_lower_bound": 81,
+    "global_protected_n": 82320,
+    "steane_block": 343,
+    "theta_protected_n": 36015,
+    "transport_protected_n": 46305
+  },
+  "rank_completion": {
+    "completion_rank_25_plus_39": 64,
+    "full_stabilizer_rank": 159,
+    "h1_logical_rank": 81,
+    "identity": "95 + 25 + 39 + 81 = 240",
+    "local_csaszar_check_rank": 95,
+    "u5_input_completion_rank": 25,
+    "w33_triangle_rank": 120,
+    "w33_vertex_rank": 39
+  },
+  "theorem": "The five Csaszar [[21,2,>=3]] input blocks have check rank 95. The U(5) algebra on the five input modes contributes 25, so 95+25=120, the W33 triangle-check rank. Adding the W33 vertex-star rank 39 gives the full CSS stabilizer rank 159, and 159+H1=159+81=240. The physical carrier splits as 105 theta edges plus 135 transport edges, i.e. 7/16 plus 9/16, and this split is preserved after the three Steane/Phi6 lifts inside [[82320,81,>=81]].",
+  "title": "Theta / U(5) Stabilizer Completion",
+  "verified": true
+}

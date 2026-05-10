@@ -1,0 +1,160 @@
+{
+  "architecture_upgrade": "Connects the index's self-referential snake-tail loop to the verified QEC architecture: the line-star tail is exactly the H1=81 logical sector, so the architecture must protect/reencode it instead of adding it as disposable stabilizer checks.",
+  "checks": [
+    {
+      "name": "index exposes self-referential loop",
+      "passed": true,
+      "value": "The Self-Referential Loop</h3>\n          <div class=\"loop\">\n            <span class=\"symbol\">Q\u2088</span> \u2192 Cayley-Dickson \u2192\n            <span class=\"symbol\">O</sp"
+    },
+    {
+      "name": "index contains snake eats its tail phrase",
+      "passed": true,
+      "value": "ro; the current Q4 layer remains <code>[[1296,81,4]]</code> routing while the\n            Steane/<code>&Phi;<sub>6</sub></code> <code>[[82320,81,&ge;81]]</code> lift is the protected closure.\n          </div>\n\n          "
+    },
+    {
+      "name": "CSS topology artifact verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "CSS distance artifact verified",
+      "passed": true,
+      "value": 9
+    },
+    {
+      "name": "line-star rank correction verified",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "dressed Q4 verifier verified",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "Steane lift verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "protection ledger verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "W33 CSS head is [[240,81,d]] before distance",
+      "passed": true,
+      "value": {
+        "distance": "not_computed",
+        "k_logical_qubits": 81,
+        "n_physical_edge_qubits": 240,
+        "notation": "[[240,81,d]] with d pending",
+        "rank_X_vertex_checks": 39,
+        "rank_Z_triangle_checks": 120
+      }
+    },
+    {
+      "name": "base CSS distance is [[240,81,3]]",
+      "passed": true,
+      "value": {
+        "d": 3,
+        "d_X": 3,
+        "d_Z": 4,
+        "k": 81,
+        "n": 240,
+        "notation": "[[240,81,3]]"
+      }
+    },
+    {
+      "name": "line-star tail is the 81-sector not a disposable stabilizer",
+      "passed": true,
+      "value": {
+        "base_k": 81,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "rank_X_plus_line_star": 120,
+        "rank_X_vertex": 39,
+        "rank_Z_triangle": 120,
+        "rank_line_star_span": 120
+      }
+    },
+    {
+      "name": "Q4 local gauge closure dresses raw 12 to 4",
+      "passed": true,
+      "value": {
+        "current_subsystem_packet_distance": 4,
+        "integrated_12_claim_status": "not_proved_by_current_subsystem_dressing",
+        "raw_replacement_target": 12,
+        "reason": "three packet columns are center-equivalent to one column in the 4x4 Bacon-Shor packet"
+      }
+    },
+    {
+      "name": "Steane/Phi6 closure protects the same 81-sector",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "selector commits only after protected acceptance",
+      "passed": true,
+      "value": {
+        "active_protection_layer": "[[82320,81,>=81]] Steane/Phi6 lift",
+        "local_routing_layer": "[[1296,81,4]] Q4/Bacon-Shor subsystem packets",
+        "operation_layer": "H1=81 -> E8 Z3 gate with 8347 checked bracket terms",
+        "rejected_distance_upgrade": "triangle-flat cyclic covers L=2,3 remain d=3",
+        "retry_layer": "heralded photonic assembly",
+        "selector_layer": "40-trit classical selector in a 64-bit envelope"
+      }
+    },
+    {
+      "name": "ouroboros map has seven architectural legs",
+      "passed": true,
+      "value": {
+        "classical_commit": "the 40-trit selector commits only after protected acceptance",
+        "failed_shortcut": "adding the tail as stabilizers gives k=0",
+        "head": "W33 edge-qubit CSS carrier [[240,81,3]]",
+        "local_gauge_closure": "Q4/Bacon-Shor routing is [[1296,81,4]] because raw 12 dresses to 4",
+        "mouth": "vertex X checks and triangle Z checks read the carrier without measuring the logical state",
+        "protected_closure": "Steane/Phi6 lift protects the same 81-sector as [[82320,81,>=81]]",
+        "tail": "line-star triples are the H1=81 logical/matter sector modulo vertex checks"
+      }
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "closure_numbers": {
+    "active_protection_code": "[[82320,81,>=81]]",
+    "base_css_code": "[[240,81,3]]",
+    "correctable_weight": 40,
+    "k_if_line_stars_are_stabilizers": 0,
+    "line_star_mod_vertex_rank": 81,
+    "logical_sector": 81,
+    "physical_edge_qubits": 240,
+    "q4_dressed_weight": 4,
+    "q4_local_routing_code": "[[1296,81,4]]",
+    "q4_raw_target": 12
+  },
+  "honesty_boundary": "This connects the existing index motif to existing QEC certificates. It is not a new proof that the current Q4/Bacon-Shor packet has distance 12, a new physical noise model, or a new device calibration.",
+  "index_anchor": {
+    "interpretation": "the stabilizer/logical tail loops back into the protected QEC head",
+    "phrase": "The snake eats its tail.",
+    "section": "The Self-Referential Loop"
+  },
+  "part": "CCCCXVII",
+  "qec_ouroboros_map": {
+    "classical_commit": "the 40-trit selector commits only after protected acceptance",
+    "failed_shortcut": "adding the tail as stabilizers gives k=0",
+    "head": "W33 edge-qubit CSS carrier [[240,81,3]]",
+    "local_gauge_closure": "Q4/Bacon-Shor routing is [[1296,81,4]] because raw 12 dresses to 4",
+    "mouth": "vertex X checks and triangle Z checks read the carrier without measuring the logical state",
+    "protected_closure": "Steane/Phi6 lift protects the same 81-sector as [[82320,81,>=81]]",
+    "tail": "line-star triples are the H1=81 logical/matter sector modulo vertex checks"
+  },
+  "theorem": "The W33 QEC ouroboros is the stabilizer/logical feedback loop. Local vertex and triangle checks read the same 240-edge carrier that holds the 81 logical sectors. The line-star tail spans those 81 sectors modulo vertex checks; imposing it as stabilizers collapses k to zero. Therefore the correct closure is protected self-reference: preserve and protect H1=81 by the Steane/Phi6 [[82320,81,>=81]] layer, while Q4 packets remain local [[1296,81,4]] routing hardware.",
+  "title": "QEC Ouroboros Stabilizer Loop",
+  "verified": true
+}

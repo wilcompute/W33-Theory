@@ -1,0 +1,387 @@
+{
+  "architecture_upgrade": "Closes the CCCCXIV honesty boundary for the current Q4/Bacon-Shor packet attachment: the raw replacement weight is 12, but subsystem dressing reduces each three-column representative to weight 4.",
+  "attachment_audit": {
+    "attachments": 81,
+    "packet_column_weight": 4,
+    "raw_columns_per_attachment": 3,
+    "raw_replacement_weight": 12,
+    "sample_columns": [
+      0,
+      1,
+      2
+    ],
+    "sample_dressed": {
+      "best_dressed_column_count": 1,
+      "best_dressed_mask": 1,
+      "best_dressed_physical_weight": 4,
+      "center_span": [
+        0,
+        3,
+        5,
+        6,
+        9,
+        10,
+        12,
+        15
+      ],
+      "center_span_size": 8,
+      "is_nontrivial": true,
+      "raw_column_count": 3,
+      "raw_column_mask": 7
+    }
+  },
+  "checks": [
+    {
+      "name": "Q4 packet artifact verified",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "full Q4 module still verifies",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "global packet layer is [[1296,81,4]]",
+      "passed": true,
+      "value": {
+        "center_rank": 486,
+        "d_packet_layer": 4,
+        "gauge_qubits": 729,
+        "gauge_row_rank": 1944,
+        "k": 81,
+        "n": 1296,
+        "notation": "[[1296,81,4]] packet subsystem layer"
+      }
+    },
+    {
+      "name": "81 W33 line-star attachments exist",
+      "passed": true,
+      "value": {
+        "all_line_stars": 160,
+        "attachments": 81,
+        "k4_lines": 40,
+        "replacement_weight_target": 12,
+        "selected_line_star_reps": 81
+      }
+    },
+    {
+      "name": "each raw attachment uses three packet columns",
+      "passed": true,
+      "value": {
+        "closure_column": {
+          "packet_column": 3,
+          "support": [
+            3,
+            7,
+            11,
+            15
+          ],
+          "support_weight": 4
+        },
+        "edge_columns": [
+          {
+            "base_edge": [
+              0,
+              1
+            ],
+            "packet_column": 0,
+            "support": [
+              0,
+              4,
+              8,
+              12
+            ],
+            "support_weight": 4
+          },
+          {
+            "base_edge": [
+              0,
+              2
+            ],
+            "packet_column": 1,
+            "support": [
+              1,
+              5,
+              9,
+              13
+            ],
+            "support_weight": 4
+          },
+          {
+            "base_edge": [
+              0,
+              3
+            ],
+            "packet_column": 2,
+            "support": [
+              2,
+              6,
+              10,
+              14
+            ],
+            "support_weight": 4
+          }
+        ],
+        "line_star": {
+          "center": 0,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "line": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "other_vertices": [
+            1,
+            2,
+            3
+          ]
+        },
+        "matter_index": 0,
+        "packet_index": 0
+      }
+    },
+    {
+      "name": "each raw attachment has replacement weight 12",
+      "passed": true,
+      "value": {
+        "closure_column": {
+          "packet_column": 3,
+          "support": [
+            3,
+            7,
+            11,
+            15
+          ],
+          "support_weight": 4
+        },
+        "edge_columns": [
+          {
+            "base_edge": [
+              0,
+              1
+            ],
+            "packet_column": 0,
+            "support": [
+              0,
+              4,
+              8,
+              12
+            ],
+            "support_weight": 4
+          },
+          {
+            "base_edge": [
+              0,
+              2
+            ],
+            "packet_column": 1,
+            "support": [
+              1,
+              5,
+              9,
+              13
+            ],
+            "support_weight": 4
+          },
+          {
+            "base_edge": [
+              0,
+              3
+            ],
+            "packet_column": 2,
+            "support": [
+              2,
+              6,
+              10,
+              14
+            ],
+            "support_weight": 4
+          }
+        ],
+        "line_star": {
+          "center": 0,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "line": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "other_vertices": [
+            1,
+            2,
+            3
+          ]
+        },
+        "matter_index": 0,
+        "packet_index": 0
+      }
+    },
+    {
+      "name": "column center span has even parity size 8",
+      "passed": true,
+      "value": [
+        0,
+        3,
+        5,
+        6,
+        9,
+        10,
+        12,
+        15
+      ]
+    },
+    {
+      "name": "three-column attachment is nontrivial modulo center",
+      "passed": true,
+      "value": {
+        "best_dressed_column_count": 1,
+        "best_dressed_mask": 1,
+        "best_dressed_physical_weight": 4,
+        "center_span": [
+          0,
+          3,
+          5,
+          6,
+          9,
+          10,
+          12,
+          15
+        ],
+        "center_span_size": 8,
+        "is_nontrivial": true,
+        "raw_column_count": 3,
+        "raw_column_mask": 7
+      }
+    },
+    {
+      "name": "three-column attachment dresses to one column",
+      "passed": true,
+      "value": {
+        "best_dressed_column_count": 1,
+        "best_dressed_mask": 1,
+        "best_dressed_physical_weight": 4,
+        "center_span": [
+          0,
+          3,
+          5,
+          6,
+          9,
+          10,
+          12,
+          15
+        ],
+        "center_span_size": 8,
+        "is_nontrivial": true,
+        "raw_column_count": 3,
+        "raw_column_mask": 7
+      }
+    },
+    {
+      "name": "dressed physical weight is 4",
+      "passed": true,
+      "value": {
+        "best_dressed_column_count": 1,
+        "best_dressed_mask": 1,
+        "best_dressed_physical_weight": 4,
+        "center_span": [
+          0,
+          3,
+          5,
+          6,
+          9,
+          10,
+          12,
+          15
+        ],
+        "center_span_size": 8,
+        "is_nontrivial": true,
+        "raw_column_count": 3,
+        "raw_column_mask": 7
+      }
+    },
+    {
+      "name": "all attachments have dressed physical weight 4",
+      "passed": true,
+      "value": {
+        "best_dressed_column_count": 1,
+        "best_dressed_mask": 1,
+        "best_dressed_physical_weight": 4,
+        "center_span": [
+          0,
+          3,
+          5,
+          6,
+          9,
+          10,
+          12,
+          15
+        ],
+        "center_span_size": 8,
+        "is_nontrivial": true,
+        "raw_column_count": 3,
+        "raw_column_mask": 7
+      }
+    },
+    {
+      "name": "raw 12 target is not the dressed subsystem distance",
+      "passed": true,
+      "value": {
+        "dressed": 4,
+        "raw": 12
+      }
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "dressed_distance_conclusion": {
+    "current_subsystem_packet_distance": 4,
+    "integrated_12_claim_status": "not_proved_by_current_subsystem_dressing",
+    "raw_replacement_target": 12,
+    "reason": "three packet columns are center-equivalent to one column in the 4x4 Bacon-Shor packet"
+  },
+  "honesty_boundary": "This is an obstruction/verification result for the current subsystem packet model. It does not rule out a column-locked, multi-packet, or Steane-concatenated architecture that achieves higher distance.",
+  "packet_layer": {
+    "d_packet_layer": 4,
+    "k": 81,
+    "n": 1296,
+    "notation": "[[1296,81,4]] packet subsystem layer"
+  },
+  "part": "CCCCXV",
+  "repair_options": [
+    "add column-lock checks that forbid even-column center dressing for replacement attachments",
+    "route the three base line-star edges into three independent packets before repetition/majority decoding",
+    "keep the Steane/Phi6 concatenated lift as the distance-81 protection layer while Q4 packets serve as local gauge/routing hardware"
+  ],
+  "theorem": "In the current 4x4 Q4/Bacon-Shor packet, X-center rows span the even column parities. A three-column line-star attachment has odd parity, so it is a valid nontrivial logical representative, but adding center rows dresses it to a one-column representative of physical weight 4. Therefore the integrated packet layer proves [[1296,81,4]], not yet [[1296,81,>=12]].",
+  "title": "Dressed Q4 Packet Logical Verifier",
+  "verified": true
+}

@@ -1,0 +1,294 @@
+{
+  "active_architecture": {
+    "active_protection_layer": "[[82320,81,>=81]] Steane/Phi6 lift",
+    "local_routing_layer": "[[1296,81,4]] Q4/Bacon-Shor subsystem packets",
+    "operation_layer": "H1=81 -> E8 Z3 gate with 8347 checked bracket terms",
+    "rejected_distance_upgrade": "triangle-flat cyclic covers L=2,3 remain d=3",
+    "retry_layer": "heralded photonic assembly",
+    "selector_layer": "40-trit classical selector in a 64-bit envelope"
+  },
+  "architecture_upgrade": "Converts the recent cover, line-star, Q4 packet, dressed-distance, Steane, scheduler, and E8 artifacts into a protection/selection ledger that assigns each mechanism its correct architectural role.",
+  "checks": [
+    {
+      "name": "scheduler verified",
+      "passed": true,
+      "value": 34
+    },
+    {
+      "name": "cyclic low-weight audit verified",
+      "passed": true,
+      "value": 8
+    },
+    {
+      "name": "line-star rank correction verified",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "Q4 packet matrix verified",
+      "passed": true,
+      "value": 10
+    },
+    {
+      "name": "dressed Q4 verifier verified",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "Steane lift verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "protected kernel verified",
+      "passed": true,
+      "value": 17
+    },
+    {
+      "name": "cyclic covers preserve d=3",
+      "passed": true,
+      "value": {
+        "L2": {
+          "distance_conclusion": "d=3 because d_X=3",
+          "n": 480,
+          "no_X_logicals_weight_1_2": true,
+          "no_Z_logicals_weight_1_2": true,
+          "x_weight3_logical_found": true
+        },
+        "L3": {
+          "distance_conclusion": "d=3 because d_X=3",
+          "n": 720,
+          "no_X_logicals_weight_1_2": true,
+          "no_Z_logicals_weight_1_2": true,
+          "x_weight3_logical_found": true
+        }
+      }
+    },
+    {
+      "name": "line-stars are full 81 matter sector",
+      "passed": true,
+      "value": {
+        "base_k": 81,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "rank_X_plus_line_star": 120,
+        "rank_X_vertex": 39,
+        "rank_Z_triangle": 120,
+        "rank_line_star_span": 120
+      }
+    },
+    {
+      "name": "Q4 packet layer is [[1296,81,4]]",
+      "passed": true,
+      "value": {
+        "center_rank": 486,
+        "d_packet_layer": 4,
+        "gauge_qubits": 729,
+        "gauge_row_rank": 1944,
+        "k": 81,
+        "n": 1296,
+        "notation": "[[1296,81,4]] packet subsystem layer"
+      }
+    },
+    {
+      "name": "Q4 raw 12 target dresses to 4",
+      "passed": true,
+      "value": {
+        "current_subsystem_packet_distance": 4,
+        "integrated_12_claim_status": "not_proved_by_current_subsystem_dressing",
+        "raw_replacement_target": 12,
+        "reason": "three packet columns are center-equivalent to one column in the 4x4 Bacon-Shor packet"
+      }
+    },
+    {
+      "name": "Steane layer remains active distance-81 protection",
+      "passed": true,
+      "value": {
+        "guaranteed_correctable_weight": 40,
+        "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+        "logical_sector_count": 81,
+        "three_lift_code": "[[82320,81,>=81]]"
+      }
+    },
+    {
+      "name": "classical selector stays after protection",
+      "passed": true,
+      "value": {
+        "controller_bits": 64,
+        "measurement_states": "12157665459056928801",
+        "measurement_trits": 40,
+        "pauli_frame_bits": 7,
+        "pauli_frame_states": 81,
+        "projective_frame_bits": 6,
+        "projective_frame_states": 40
+      }
+    },
+    {
+      "name": "E8 operation gate stays bounded",
+      "passed": true,
+      "value": {
+        "correctable_weight": 40,
+        "e8_z3_terms_checked": 8347,
+        "logical_sector": 81,
+        "protected_distance_lower_bound": 81,
+        "steane_length": 7,
+        "w33_vertices": 40
+      }
+    },
+    {
+      "name": "ledger has seven distinct decisions",
+      "passed": true,
+      "value": [
+        {
+          "decision": "fusion/KLM failures are hardware retries, not committed logical faults",
+          "mechanism": "heralded_photonic_assembly",
+          "scale": {
+            "fusion_attempts": 480,
+            "klm_attempts": 960
+          },
+          "source": "CCCCVI",
+          "status": "retry_before_logic"
+        },
+        {
+          "decision": "L=2 and L=3 covers commute but retain d=3 via inherited line-star X logicals",
+          "mechanism": "triangle_flat_cyclic_covers",
+          "scale": {
+            "L2_distance": 3,
+            "L3_distance": 3
+          },
+          "source": "CCCCVII",
+          "status": "valid_but_rejected_as_distance_upgrade"
+        },
+        {
+          "decision": "line-stars span the 81-dimensional matter sector modulo vertex checks; killing them collapses k to zero",
+          "mechanism": "line_star_matter_sector",
+          "scale": {
+            "k_if_stabilized": 0,
+            "matter_rank": 81
+          },
+          "source": "CCCCIX",
+          "status": "preserve_and_reencode"
+        },
+        {
+          "decision": "the Q4 packet layer is [[1296,81,4]]; raw weight 12 dresses to weight 4 in the current center",
+          "mechanism": "q4_bacon_shor_packet",
+          "scale": {
+            "packet_distance": 4,
+            "raw_target": 12
+          },
+          "source": "CCCCXIV/CCCCXV",
+          "status": "local_routing_not_final_distance_layer"
+        },
+        {
+          "decision": "the active protection layer is [[82320,81,>=81]], correcting 40 faults",
+          "mechanism": "steane_phi6_lift",
+          "scale": {
+            "correctable_weight": 40,
+            "distance_lower_bound": 81
+          },
+          "source": "CCCCIV/CCCCVI",
+          "status": "committed_quantum_protection"
+        },
+        {
+          "decision": "the 40-trit selector is exposed only after protected logical acceptance",
+          "mechanism": "classical_selector_commit",
+          "scale": {
+            "controller_bits": 64,
+            "measurement_trits": 40
+          },
+          "source": "CCCCVI",
+          "status": "commit_after_protection"
+        },
+        {
+          "decision": "the protected H1=81 sector feeds the verified E8 Z3 operation gate",
+          "mechanism": "e8_z3_operation_gate",
+          "scale": {
+            "h1": 81,
+            "z3_terms_checked": 8347
+          },
+          "source": "CCCCV/CCCCVI",
+          "status": "bounded_operation_gate"
+        }
+      ]
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "honesty_boundary": "This ledger solves role assignment, not device calibration. It does not simulate optical loss, detector dark counts, decoding latency, or a future column-locked Q4 distance repair.",
+  "ledger": [
+    {
+      "decision": "fusion/KLM failures are hardware retries, not committed logical faults",
+      "mechanism": "heralded_photonic_assembly",
+      "scale": {
+        "fusion_attempts": 480,
+        "klm_attempts": 960
+      },
+      "source": "CCCCVI",
+      "status": "retry_before_logic"
+    },
+    {
+      "decision": "L=2 and L=3 covers commute but retain d=3 via inherited line-star X logicals",
+      "mechanism": "triangle_flat_cyclic_covers",
+      "scale": {
+        "L2_distance": 3,
+        "L3_distance": 3
+      },
+      "source": "CCCCVII",
+      "status": "valid_but_rejected_as_distance_upgrade"
+    },
+    {
+      "decision": "line-stars span the 81-dimensional matter sector modulo vertex checks; killing them collapses k to zero",
+      "mechanism": "line_star_matter_sector",
+      "scale": {
+        "k_if_stabilized": 0,
+        "matter_rank": 81
+      },
+      "source": "CCCCIX",
+      "status": "preserve_and_reencode"
+    },
+    {
+      "decision": "the Q4 packet layer is [[1296,81,4]]; raw weight 12 dresses to weight 4 in the current center",
+      "mechanism": "q4_bacon_shor_packet",
+      "scale": {
+        "packet_distance": 4,
+        "raw_target": 12
+      },
+      "source": "CCCCXIV/CCCCXV",
+      "status": "local_routing_not_final_distance_layer"
+    },
+    {
+      "decision": "the active protection layer is [[82320,81,>=81]], correcting 40 faults",
+      "mechanism": "steane_phi6_lift",
+      "scale": {
+        "correctable_weight": 40,
+        "distance_lower_bound": 81
+      },
+      "source": "CCCCIV/CCCCVI",
+      "status": "committed_quantum_protection"
+    },
+    {
+      "decision": "the 40-trit selector is exposed only after protected logical acceptance",
+      "mechanism": "classical_selector_commit",
+      "scale": {
+        "controller_bits": 64,
+        "measurement_trits": 40
+      },
+      "source": "CCCCVI",
+      "status": "commit_after_protection"
+    },
+    {
+      "decision": "the protected H1=81 sector feeds the verified E8 Z3 operation gate",
+      "mechanism": "e8_z3_operation_gate",
+      "scale": {
+        "h1": 81,
+        "z3_terms_checked": 8347
+      },
+      "source": "CCCCV/CCCCVI",
+      "status": "bounded_operation_gate"
+    }
+  ],
+  "part": "CCCCXVI",
+  "theorem": "In the current architecture, triangle-flat cyclic covers are valid but do not raise distance; line-star triples are the H1=81 matter sector; Q4/Bacon-Shor packets provide local [[1296,81,4]] subsystem routing but not a dressed [[1296,81,>=12]] proof; therefore the active quantum protection layer remains the Steane/Phi6 [[82320,81,>=81]] lift. The 40-trit selector is committed only after that protection layer accepts, then the H1=81 sector feeds the bounded E8 Z3 gate.",
+  "title": "Protection / Selection Ledger",
+  "verified": true
+}

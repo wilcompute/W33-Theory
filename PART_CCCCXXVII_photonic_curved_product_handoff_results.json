@@ -1,0 +1,719 @@
+{
+  "a2_transport_product": {
+    "cp2_product_dimension": 22950,
+    "internal_dimension": 90,
+    "k3_product_dimension": 153360,
+    "laplacian_spectrum": {
+      "24": 20,
+      "33": 64,
+      "48": 6
+    },
+    "positive_gap": 24,
+    "product_zero_modes_vanish_exactly": true
+  },
+  "architecture_upgrade": "Attaches the protected photonic runtime to the explicit curved 4D operator packages. The finite kernel supplies H1=81, the [[82320,81,>=81]] protected code, and the 40-trit selector; CP2_9 and K3_16 supply genuine external Hodge sectors, product heat factorization, and barycentric 4D refinement limits.",
+  "checks": [
+    {
+      "name": "protected finite kernel verified",
+      "passed": true,
+      "value": 17
+    },
+    {
+      "name": "fusion-control scheduler splice verified",
+      "passed": true,
+      "value": 29
+    },
+    {
+      "name": "explicit curved complexes verified by builder",
+      "passed": true,
+      "value": {
+        "cp2_base_facets": 12,
+        "cp2_orbit_generator_order": 3,
+        "k3_orbit_group_order": 240,
+        "k3_seed_facets": 2
+      }
+    },
+    {
+      "name": "curved external Hodge product verified by builder",
+      "passed": true,
+      "value": "The curved external factor is now an explicit operator package. CP2_9 and K3_16 have executable Hodge spectra on the full chain complex, with harmonic sectors matching topology, and their almost-commutative product heat traces with the W33 finite Dirac square factorize exactly on the explicit spectra."
+    },
+    {
+      "name": "curved barycentric density verified by builder",
+      "passed": true,
+      "value": "The curved 4D barycentric refinement family now has an exact mode decomposition. For every 3-neighborly 4-manifold seed, the f-vector splits into a topological eigenvalue-1 mode, a decaying eigenvalue-6 mode, and a universal local eigenvalue-120 mode, with the 2- and 24-modes absent. Therefore the external chain density and the first Dirac-Kahler squared moment per top simplex converge exactly to the universal limits 120/19 and 860/19, while Euler characteristic stays seed-specific and topological. This is the first exact local-density theorem in the curved 4D refinement program."
+    },
+    {
+      "name": "curved A2 transport product verified by builder",
+      "passed": true,
+      "value": "The native A2 transport local system now pairs directly with the explicit curved 4D side. Its positive internal Laplacian has exact spectrum 24, 33, 48 with gap 24, and its product heat traces with the explicit CP2_9 and K3_16 Hodge/Dirac-Kahler spectra factorize exactly. This yields exact curved-product dimensions, traces, and refined local-density limits 10800/19 and 423000/19 per top simplex."
+    },
+    {
+      "name": "curved H2 host constraints verified by builder",
+      "passed": true,
+      "value": {
+        "cp2_has_definite_h2_signature": true,
+        "cp2_is_not_rank2_h2_host": true,
+        "first_explicit_rank2_h2_host_is_k3": true,
+        "k3_has_indefinite_h2_signature": true,
+        "k3_is_rank2_h2_host": true,
+        "six_mode_sign_matches_signature_on_both_explicit_seeds": true
+      }
+    },
+    {
+      "name": "finite protected code remains [[82320,81,>=81]]",
+      "passed": true,
+      "value": {
+        "active_code": "[[82320,81,>=81]]",
+        "full_refined_identity": "95 + 25 + 39 + 81 = 240",
+        "scheduler_css_tick": "39 X-rank + 120 Z-rank + 81 logical = 240",
+        "theta_u5_refined_z_rank": "95 + 25 = 120"
+      }
+    },
+    {
+      "name": "finite snake head/tail remains H1",
+      "passed": true,
+      "value": {
+        "classical_selector_trits": 40,
+        "correctable_weight": 40,
+        "head_projective_frame_states": 81,
+        "operation_input": "protected H1=81 matter sector",
+        "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+        "tail_logical_h1": 81
+      }
+    },
+    {
+      "name": "finite classical selector remains V=40",
+      "passed": true,
+      "value": {
+        "classical_selector_trits": 40,
+        "correctable_weight": 40,
+        "head_projective_frame_states": 81,
+        "operation_input": "protected H1=81 matter sector",
+        "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+        "tail_logical_h1": 81
+      }
+    },
+    {
+      "name": "finite edge carrier remains 240",
+      "passed": true,
+      "value": 240
+    },
+    {
+      "name": "CP2_9 has explicit 4D chain profile",
+      "passed": true,
+      "value": {
+        "betti_numbers": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "boundary_ranks": [
+          8,
+          28,
+          55,
+          35
+        ],
+        "euler_characteristic": 3,
+        "f_vector": [
+          9,
+          36,
+          84,
+          90,
+          36
+        ],
+        "facets": 36,
+        "harmonic_form_total": 3,
+        "name": "CP2",
+        "vertices": 9
+      }
+    },
+    {
+      "name": "K3_16 has explicit 4D chain profile",
+      "passed": true,
+      "value": {
+        "betti_numbers": [
+          1,
+          0,
+          22,
+          0,
+          1
+        ],
+        "boundary_ranks": [
+          15,
+          105,
+          433,
+          287
+        ],
+        "euler_characteristic": 24,
+        "f_vector": [
+          16,
+          120,
+          560,
+          720,
+          288
+        ],
+        "facets": 288,
+        "harmonic_form_total": 24,
+        "name": "K3",
+        "vertices": 16
+      }
+    },
+    {
+      "name": "CP2_9 and K3_16 have expected harmonic totals",
+      "passed": true,
+      "value": {
+        "CP2": {
+          "chain_dimensions": [
+            9,
+            36,
+            84,
+            90,
+            36
+          ],
+          "degree_spectral_gaps": [
+            8.999999999999995,
+            9.0,
+            1.945915784613943,
+            1.945915784613937,
+            1.9459157846139405
+          ],
+          "harmonic_form_total": 3,
+          "name": "CP2",
+          "total_chain_dim": 255,
+          "total_spectral_gap": 1.945915784613937,
+          "trace_dk_squared": 1727.9999999999998,
+          "zero_modes_by_degree": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        "K3": {
+          "chain_dimensions": [
+            16,
+            120,
+            560,
+            720,
+            288
+          ],
+          "degree_spectral_gaps": [
+            15.999999999999986,
+            16.0,
+            0.6875840739067445,
+            0.6875840739067168,
+            0.913044171560156
+          ],
+          "harmonic_form_total": 24,
+          "name": "K3",
+          "total_chain_dim": 1704,
+          "total_spectral_gap": 0.6875840739067168,
+          "trace_dk_squared": 12479.999999999996,
+          "zero_modes_by_degree": [
+            1,
+            0,
+            22,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "external total chain dimensions are 255 and 1704",
+      "passed": true,
+      "value": {
+        "CP2": 255,
+        "K3": 1704
+      }
+    },
+    {
+      "name": "curved product heat traces factorize to numerical tolerance",
+      "passed": true,
+      "value": [
+        {
+          "abs_error": 9.094947017729282e-13,
+          "direct_product_heat_trace": 6433.2102910395815,
+          "external_heat_trace": 183.27228211986906,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 6433.210291039581,
+          "t": 0.05
+        },
+        {
+          "abs_error": 0.0,
+          "direct_product_heat_trace": 2792.5865513218578,
+          "external_heat_trace": 134.13000042187662,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 2792.5865513218578,
+          "t": 0.1
+        },
+        {
+          "abs_error": 1.1368683772161603e-13,
+          "direct_product_heat_trace": 781.3779895030377,
+          "external_heat_trace": 76.22971599463325,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 781.3779895030376,
+          "t": 0.2
+        },
+        {
+          "abs_error": 7.275957614183426e-12,
+          "direct_product_heat_trace": 42569.18996625473,
+          "external_heat_trace": 1212.730851341252,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 42569.18996625472,
+          "t": 0.05
+        },
+        {
+          "abs_error": 0.0,
+          "direct_product_heat_trace": 18834.442791846315,
+          "external_heat_trace": 904.632237242696,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 18834.442791846315,
+          "t": 0.1
+        },
+        {
+          "abs_error": 9.094947017729282e-13,
+          "direct_product_heat_trace": 5763.6939561415375,
+          "external_heat_trace": 562.294765477196,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 5763.693956141537,
+          "t": 0.2
+        }
+      ]
+    },
+    {
+      "name": "logical harmonic channel on CP2_9 is 243",
+      "passed": true,
+      "value": {
+        "CP2_9_by_degree": [
+          81,
+          0,
+          81,
+          0,
+          81
+        ],
+        "CP2_9_total": 243,
+        "K3_16_by_degree": [
+          81,
+          0,
+          1782,
+          0,
+          81
+        ],
+        "K3_16_middle_h2": 1782,
+        "K3_16_total": 1944
+      }
+    },
+    {
+      "name": "logical harmonic channel on K3_16 is 1944",
+      "passed": true,
+      "value": {
+        "CP2_9_by_degree": [
+          81,
+          0,
+          81,
+          0,
+          81
+        ],
+        "CP2_9_total": 243,
+        "K3_16_by_degree": [
+          81,
+          0,
+          1782,
+          0,
+          81
+        ],
+        "K3_16_middle_h2": 1782,
+        "K3_16_total": 1944
+      }
+    },
+    {
+      "name": "K3_16 middle H2 matter channel is 1782",
+      "passed": true,
+      "value": {
+        "CP2_9_by_degree": [
+          81,
+          0,
+          81,
+          0,
+          81
+        ],
+        "CP2_9_total": 243,
+        "K3_16_by_degree": [
+          81,
+          0,
+          1782,
+          0,
+          81
+        ],
+        "K3_16_middle_h2": 1782,
+        "K3_16_total": 1944
+      }
+    },
+    {
+      "name": "CP2_9 cannot host rank-2 H2 branch",
+      "passed": true,
+      "value": {
+        "cp2_has_definite_h2_signature": true,
+        "cp2_is_not_rank2_h2_host": true,
+        "first_explicit_rank2_h2_host_is_k3": true,
+        "k3_has_indefinite_h2_signature": true,
+        "k3_is_rank2_h2_host": true,
+        "six_mode_sign_matches_signature_on_both_explicit_seeds": true
+      }
+    },
+    {
+      "name": "K3_16 is first explicit rank-2 H2 host",
+      "passed": true,
+      "value": {
+        "cp2_has_definite_h2_signature": true,
+        "cp2_is_not_rank2_h2_host": true,
+        "first_explicit_rank2_h2_host_is_k3": true,
+        "k3_has_indefinite_h2_signature": true,
+        "k3_is_rank2_h2_host": true,
+        "six_mode_sign_matches_signature_on_both_explicit_seeds": true
+      }
+    },
+    {
+      "name": "K3_16 has indefinite H2 signature split",
+      "passed": true,
+      "value": {
+        "b2_minus": 19,
+        "b2_plus": 3,
+        "betti_numbers": [
+          1,
+          0,
+          22,
+          0,
+          1
+        ],
+        "h2_dimension": 22,
+        "mixed_sign_h2_plane_available": true,
+        "name": "K3_16",
+        "rank2_h2_branch_available": true,
+        "signature": -16,
+        "six_mode": {
+          "exact": "-880/19",
+          "float": -46.31578947368421
+        },
+        "six_mode_sign_matches_signature": true,
+        "vertices": 16
+      }
+    },
+    {
+      "name": "external barycentric chain density limit is 120/19",
+      "passed": true,
+      "value": {
+        "a2_product_chain": "10800/19",
+        "a2_product_trace": "423000/19",
+        "external_chain": "120/19",
+        "external_trace": "860/19",
+        "w33_product_chain": "19440/19",
+        "w33_product_trace": "7512120/19"
+      }
+    },
+    {
+      "name": "external barycentric trace density limit is 860/19",
+      "passed": true,
+      "value": {
+        "a2_product_chain": "10800/19",
+        "a2_product_trace": "423000/19",
+        "external_chain": "120/19",
+        "external_trace": "860/19",
+        "w33_product_chain": "19440/19",
+        "w33_product_trace": "7512120/19"
+      }
+    },
+    {
+      "name": "W33 product chain density limit is 19440/19",
+      "passed": true,
+      "value": {
+        "a2_product_chain": "10800/19",
+        "a2_product_trace": "423000/19",
+        "external_chain": "120/19",
+        "external_trace": "860/19",
+        "w33_product_chain": "19440/19",
+        "w33_product_trace": "7512120/19"
+      }
+    },
+    {
+      "name": "W33 product trace density limit is 7512120/19",
+      "passed": true,
+      "value": {
+        "a2_product_chain": "10800/19",
+        "a2_product_trace": "423000/19",
+        "external_chain": "120/19",
+        "external_trace": "860/19",
+        "w33_product_chain": "19440/19",
+        "w33_product_trace": "7512120/19"
+      }
+    },
+    {
+      "name": "barycentric modes 2 and 24 vanish",
+      "passed": true,
+      "value": {
+        "chi_mode": "n(n^2 - 15n + 74) / 60",
+        "local_mode": "n(n - 1)(n - 4) / 10",
+        "six_mode": "-n(n - 1)(5n - 58) / 114",
+        "vanishing_modes": [
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "name": "A2 transport internal dimension is 90",
+      "passed": true,
+      "value": {
+        "laplacian_spectrum": {
+          "24": 20,
+          "33": 64,
+          "48": 6
+        },
+        "spectral_gap": 24,
+        "total_dimension": 90,
+        "trace_laplacian": 2880,
+        "trace_laplacian_squared": 95040
+      }
+    },
+    {
+      "name": "A2 transport positive gap is 24",
+      "passed": true,
+      "value": {
+        "laplacian_spectrum": {
+          "24": 20,
+          "33": 64,
+          "48": 6
+        },
+        "spectral_gap": 24,
+        "total_dimension": 90,
+        "trace_laplacian": 2880,
+        "trace_laplacian_squared": 95040
+      }
+    },
+    {
+      "name": "A2 curved product heat traces factorize",
+      "passed": true,
+      "value": [
+        {
+          "a2_internal_heat_trace": 18.85938610970878,
+          "abs_error": 0.0,
+          "direct_product_heat_trace": 3456.4027317060873,
+          "external_heat_trace": 183.27228211986906,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 3456.4027317060873,
+          "t": 0.05
+        },
+        {
+          "a2_internal_heat_trace": 4.224260261761729,
+          "abs_error": 1.1368683772161603e-13,
+          "direct_product_heat_trace": 566.6000306922174,
+          "external_heat_trace": 134.13000042187662,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 566.6000306922173,
+          "t": 0.1
+        },
+        {
+          "a2_internal_heat_trace": 0.2520648678024108,
+          "abs_error": 3.552713678800501e-15,
+          "direct_product_heat_trace": 19.214833284802552,
+          "external_heat_trace": 76.22971599463325,
+          "external_name": "CP2",
+          "factorized_product_heat_trace": 19.21483328480255,
+          "t": 0.2
+        },
+        {
+          "a2_internal_heat_trace": 18.85938610970878,
+          "abs_error": 0.0,
+          "direct_product_heat_trace": 22871.35937260051,
+          "external_heat_trace": 1212.730851341252,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 22871.35937260051,
+          "t": 0.05
+        },
+        {
+          "a2_internal_heat_trace": 4.224260261761729,
+          "abs_error": 9.094947017729282e-13,
+          "direct_product_heat_trace": 3821.40201129293,
+          "external_heat_trace": 904.632237242696,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 3821.4020112929293,
+          "t": 0.1
+        },
+        {
+          "a2_internal_heat_trace": 0.2520648678024108,
+          "abs_error": 5.684341886080802e-14,
+          "direct_product_heat_trace": 141.73475572599705,
+          "external_heat_trace": 562.294765477196,
+          "external_name": "K3",
+          "factorized_product_heat_trace": 141.734755725997,
+          "t": 0.2
+        }
+      ]
+    },
+    {
+      "name": "A2 CP2 product has no zero modes",
+      "passed": true,
+      "value": {
+        "external_name": "CP2",
+        "spectral_gap": 24,
+        "total_dimension": 22950,
+        "trace_product": 889920,
+        "zero_modes": 0
+      }
+    },
+    {
+      "name": "A2 K3 product has no zero modes",
+      "passed": true,
+      "value": {
+        "external_name": "K3",
+        "spectral_gap": 24,
+        "total_dimension": 153360,
+        "trace_product": 6030720,
+        "zero_modes": 0
+      }
+    },
+    {
+      "name": "A2 product density limits are exact",
+      "passed": true,
+      "value": {
+        "a2_product_chain": "10800/19",
+        "a2_product_trace": "423000/19",
+        "external_chain": "120/19",
+        "external_trace": "860/19",
+        "w33_product_chain": "19440/19",
+        "w33_product_trace": "7512120/19"
+      }
+    },
+    {
+      "name": "protected harmonic channels lift CP2 and K3",
+      "passed": true,
+      "value": {
+        "CP2_9_total": 246960,
+        "K3_16_total": 1975680
+      }
+    },
+    {
+      "name": "finite runtime degree plus external dimension lands on K3 seed scale",
+      "passed": true,
+      "value": {
+        "cp2_seed_vertices": 9,
+        "external_dimension": 4,
+        "finite_plus_external": 16,
+        "finite_runtime_degree": 12,
+        "k3_seed_vertices": 16,
+        "read": "the finite runtime closes at K=12; the genuine curved factor supplies dimension 4, and K+4 lands on the K3_16 seed scale"
+      }
+    },
+    {
+      "name": "external dimension is not replaced by finite kernel",
+      "passed": true,
+      "value": {
+        "cp2_seed_vertices": 9,
+        "external_dimension": 4,
+        "finite_plus_external": 16,
+        "finite_runtime_degree": 12,
+        "k3_seed_vertices": 16,
+        "read": "the finite runtime closes at K=12; the genuine curved factor supplies dimension 4, and K+4 lands on the K3_16 seed scale"
+      }
+    }
+  ],
+  "checks_passed": 36,
+  "checks_total": 36,
+  "curved_external_seeds": {
+    "CP2_9": {
+      "betti_numbers": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "harmonic_total": 3,
+      "total_chain_dim": 255,
+      "vertices": 9
+    },
+    "K3_16": {
+      "betti_numbers": [
+        1,
+        0,
+        22,
+        0,
+        1
+      ],
+      "h2_signature_split": [
+        3,
+        19
+      ],
+      "harmonic_total": 24,
+      "total_chain_dim": 1704,
+      "vertices": 16
+    }
+  },
+  "density_limits": {
+    "a2_product_chain": "10800/19",
+    "a2_product_trace": "423000/19",
+    "external_chain": "120/19",
+    "external_trace": "860/19",
+    "w33_product_chain": "19440/19",
+    "w33_product_trace": "7512120/19"
+  },
+  "handoff_read": {
+    "cp2_seed_vertices": 9,
+    "external_dimension": 4,
+    "finite_plus_external": 16,
+    "finite_runtime_degree": 12,
+    "k3_seed_vertices": 16,
+    "read": "the finite runtime closes at K=12; the genuine curved factor supplies dimension 4, and K+4 lands on the K3_16 seed scale"
+  },
+  "honesty_boundary": "This proves a finite-to-curved product handoff, not the final Einstein-Hilbert spectral-action asymptotic theorem. The finite kernel does not by itself create a 4D Weyl law; the external curved refinement family supplies the genuine continuum scale.",
+  "logical_harmonic_channels": {
+    "CP2_9_by_degree": [
+      81,
+      0,
+      81,
+      0,
+      81
+    ],
+    "CP2_9_total": 243,
+    "K3_16_by_degree": [
+      81,
+      0,
+      1782,
+      0,
+      81
+    ],
+    "K3_16_middle_h2": 1782,
+    "K3_16_total": 1944
+  },
+  "part": "CCCCXXVII",
+  "protected_finite_kernel": {
+    "active_code": "[[82320,81,>=81]]",
+    "edge_carrier": 240,
+    "fusion_budget": {
+      "read": "p_fusion=1/2 splits 480 attempts as 210 theta + 270 transport",
+      "theta_expected_attempts": 210,
+      "total_expected_attempts": 480,
+      "transport_expected_attempts": 270
+    },
+    "h1_logical": 81,
+    "klm_budget": {
+      "read": "p_KLM=1/4 splits 960 primitives as 420 theta + 540 transport",
+      "theta_expected_primitives": 420,
+      "total_expected_primitives": 960,
+      "transport_expected_primitives": 540
+    },
+    "selector_trits": 40
+  },
+  "protected_harmonic_channels": {
+    "CP2_9_total": 246960,
+    "K3_16_total": 1975680
+  },
+  "theorem": "The protected finite photonic kernel can be paired with the explicit curved 4D seeds by the almost-commutative product. CP2_9 contributes 3 harmonic sectors and K3_16 contributes 24, so the H1=81 logical tail lifts to 243 and 1944 curved harmonic channels. Product heat traces factorize on the explicit spectra, barycentric refinement has universal local limits 120/19 and 860/19, and the native A2 transport product has positive gap 24 with zero product zero modes.",
+  "title": "Photonic Curved Product Handoff",
+  "verified": true
+}
