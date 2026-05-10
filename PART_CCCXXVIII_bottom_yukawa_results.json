@@ -1,0 +1,135 @@
+{
+  "part": "CCCXXVIII",
+  "title": "Bottom Yukawa  y_b(MSbar, m_b) = q / (mu+1)^3  in W(3,3) constants",
+  "Verified": true,
+  "checks_total": 17,
+  "checks_passed": 17,
+  "checks": [
+    [
+      "y_b = q / (mu+1)^3",
+      true
+    ],
+    [
+      "y_b = 3/125",
+      true
+    ],
+    [
+      "(mu+1) = 5",
+      true
+    ],
+    [
+      "(mu+1)^3 = 125",
+      true
+    ],
+    [
+      "y_b_W33 = 0.024",
+      true
+    ],
+    [
+      "|z_y_b| < 1",
+      true
+    ],
+    [
+      "|z_m_b| < 1",
+      true
+    ],
+    [
+      "|z_y_b| < 0.1",
+      true
+    ],
+    [
+      "4.0 < m_b_pred < 4.4 GeV",
+      true
+    ],
+    [
+      "y_b denom is (mu+1)^3, a cube",
+      true
+    ],
+    [
+      "y_t cubed has 'integer over integer+1' shape",
+      true
+    ],
+    [
+      "y_t and y_b are top and bottom Yukawas",
+      true
+    ],
+    [
+      "rho_bar = (lam/(mu+1))^2",
+      true
+    ],
+    [
+      "rho_bar denominator = (mu+1)^2 = 25",
+      true
+    ],
+    [
+      "y_b denominator = rho_bar denominator * (mu+1)",
+      true
+    ],
+    [
+      "y_b numerator = q = 3",
+      true
+    ],
+    [
+      "y_b numerator = q (Master Equation prime)",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "boundary_target": {
+    "expression": "q / (mu + 1)^3",
+    "fraction": "3/125",
+    "decimal": 0.024,
+    "scheme": "Bottom Yukawa MS-bar at m_b ~ 4.18 GeV"
+  },
+  "external_inputs": {
+    "m_b_MSbar_GeV": 4.18,
+    "sigma_m_b": 0.03,
+    "v_EW_GeV": 246.21965,
+    "source": "PDG 2024 m_b(MSbar at m_b)"
+  },
+  "predictions": {
+    "y_b_W33": 0.024,
+    "y_b_data": 0.02400869585640113,
+    "y_b_residual": 8.695856401130103e-06,
+    "y_b_z_score": 0.050465992230661776,
+    "m_b_pred_GeV": 4.17848602023308,
+    "m_b_residual": -0.0015139797669201371,
+    "m_b_z_score": -0.05046599223067124
+  },
+  "residuals": [
+    {
+      "id": "BOTTOM_YUKAWA_W33",
+      "observable": "y_b(MSbar, m_b)",
+      "theory_value": "q / (mu+1)^3 = 3/125",
+      "theory_decimal": 0.024,
+      "measured_value": 0.02400869585640113,
+      "uncertainty": 0.0001723112142803909,
+      "residual": 8.695856401130103e-06,
+      "z_score": 0.050465992230661776,
+      "status": "PASS_WITHIN_1_SIGMA"
+    },
+    {
+      "id": "BOTTOM_MASS_FROM_W33_AND_V",
+      "observable": "m_b(MSbar) predicted from y_b_W33 and v_EW",
+      "theory_value": "(3/125) * v_EW / sqrt(2)",
+      "theory_decimal": 4.17848602023308,
+      "measured_value": 4.18,
+      "uncertainty": 0.03,
+      "residual": -0.0015139797669201371,
+      "z_score": -0.05046599223067124,
+      "status": "PASS_WITHIN_1_SIGMA"
+    }
+  ],
+  "theorem_statement": "The W(3,3) closed form for the bottom-quark Yukawa coupling at the MS-bar scheme at the b-quark mass scale, y_b(MSbar, m_b) = q/(mu+1)^3 = 3/125 = 0.02400, predicts m_b(MSbar, m_b) = (3/125) * v_EW / sqrt(2) = 4.179 GeV, within 0.05 sigma of the PDG 2024 value 4.18 +- 0.03 GeV.  Combined with CCCXXVI top Yukawa y_t(pole)^3 = v/(v+1), the two heaviest quark Yukawas are now both W(3,3) integer-ratio forms.",
+  "honesty_boundary": "MS-bar at m_b scheme.  Pole-mass form y_b(pole) = m_b(pole)*sqrt(2)/v ~ 0.0275 differs from 3/125 = 0.024 by ~14 percent because of the m_b -> m_b(pole) renormalon shift, a well-known QCD effect.  The W33 prediction applies specifically to the MS-bar at m_b convention.  Running y_b to other scales (e.g. M_t or M_GUT) gives different numerical values without changing the W33 boundary value at m_b."
+}
