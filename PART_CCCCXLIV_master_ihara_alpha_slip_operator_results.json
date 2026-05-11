@@ -1,0 +1,61 @@
+{
+  "part": "CCCCXLIV",
+  "title": "Master--Ihara Alpha Slip Operator",
+  "master_equation": "q! = 2q",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "k_minus_1": 11
+  },
+  "srg_checks": {
+    "degree_set": [12],
+    "common_adjacent": [2],
+    "common_nonadjacent": [4],
+    "srg_ok": true
+  },
+  "ramanujan_ihara": {
+    "nontrivial_eigenvalues": [2, -4],
+    "bound_squared": 44,
+    "critical_radius_squared": "1/11",
+    "ramanujan_ok": true,
+    "ihara_bass_outdegree": 11
+  },
+  "operator_spectrum": {
+    "M0_constant_channel": "1111",
+    "M0_r_channel_multiplicity_24": "11",
+    "M0_s_channel_multiplicity_15": "407",
+    "Delta_M_constant_rank_one": "3/22",
+    "M_alpha_constant_channel": "24445/22"
+  },
+  "alpha_charm_operator_identity": {
+    "y_c_inverse_core": 137,
+    "alpha_slip": "880/24445",
+    "alpha_inverse_refined": "669969/4889",
+    "alpha_refined_decimal": 0.007297352573756915,
+    "quadratic_form_1T_Malpha_inv_1": "880/24445"
+  },
+  "checks": {
+    "true_master_equation_q_factorial_equals_2q": true,
+    "srg_quadratic_roots_lambda_mu": true,
+    "symplectic_construction_is_srg_40_12_2_4": true,
+    "directed_edges_equal_hashimoto_dimension": true,
+    "ramanujan_bound_passes": true,
+    "constant_eigenline_A1_equals_k1": true,
+    "m_vac_equals_1111": true,
+    "m_eff_equals_24445_over_22": true,
+    "quadratic_form_equals_alpha_slip": true,
+    "alpha_core_forms_match": true,
+    "charm_inverse_equals_alpha_core": true,
+    "alpha_refined_inverse_exact": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The refined alpha correction is the constant-channel propagator of a rank-one-renormalized Ihara vertex operator. The true Master Equation q!=2q generates q, lambda, mu; W(3,3) then forces k-1=11 as the non-backtracking outdegree; the Gaussian core 137 is y_c^{-1}; and the rank-one constant-channel shift Delta_M=3/22 produces alpha^{-1}-y_c^{-1}=880/24445."
+}
