@@ -1,0 +1,99 @@
+{
+  "part": "CCCCVI",
+  "title": "Spectral Action Channel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "dirac_sectors": {
+    "ground": {
+      "eig": 0,
+      "mult": 82
+    },
+    "gauge": {
+      "eig": 4,
+      "mult": 320
+    },
+    "r_gap": {
+      "eig": 10,
+      "mult": 48
+    },
+    "s_gap": {
+      "eig": 16,
+      "mult": 30
+    }
+  },
+  "spectral_action_coefficients": {
+    "a0_by_channel": {
+      "ground": 82,
+      "gauge": 320,
+      "r_gap": 48,
+      "s_gap": 30
+    },
+    "a2_by_channel": {
+      "ground": 0,
+      "gauge": 1280,
+      "r_gap": 480,
+      "s_gap": 480
+    },
+    "a4_by_channel": {
+      "ground": 0,
+      "gauge": 5120,
+      "r_gap": 4800,
+      "s_gap": 7680
+    },
+    "a0_total": 480,
+    "a2_total": 2240,
+    "a4_total": 17600
+  },
+  "channel_identities": {
+    "excited_dim": 78,
+    "E6_dim": 78,
+    "excited_a2": 960,
+    "Tr_A3": 960,
+    "Tr_A2": 480,
+    "restricted_a2_equipartition": {
+      "r_gap": 480,
+      "s_gap": 480
+    },
+    "restricted_a4": {
+      "r_gap": 4800,
+      "s_gap": 7680,
+      "ratio_s_over_r": "8/5"
+    },
+    "E8_dim": 248
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "sector_eigenvalues": true,
+    "sector_multiplicities": true,
+    "a0_equals_480": true,
+    "a2_equals_2240": true,
+    "a4_equals_17600": true,
+    "a2_channel_split": true,
+    "a4_channel_split": true,
+    "excited_dim_equals_E6": true,
+    "excited_a2_equals_trace_A3": true,
+    "trace_A2_equals_a0": true,
+    "restricted_a2_equipartition": true,
+    "restricted_a4_ratio_is_gap_ratio": true,
+    "gauge_plus_excited_a2": true,
+    "gauge_plus_excited_a4": true,
+    "e8_dimension": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The spectral-action coefficients a0=480, a2=2240, and a4=17600 decompose by the same W(3,3) Dirac channel map. The r/s excited sectors have dimension 78=dim(E6), their a2 trace equals Tr(A^3)=960, and their a2 energies are equipartitioned at 480+480. Thus the finite spectral action is channelized by the W(3,3) graph spectrum rather than appended as separate data."
+}
