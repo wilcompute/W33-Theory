@@ -1,0 +1,56 @@
+{
+  "part": "CCCCXLIX",
+  "title": "Rank-One Determinant Top-Flavor Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "theta_k_minus_1": 11,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "rank_one_determinant": {
+    "operator": "I + J = I + 1*1^T on vertex space",
+    "one_norm_squared": 40,
+    "determinant_lemma": "det(I+1*1^T)=1+1^T1=v+1",
+    "det_I_plus_J": 41,
+    "perron_eigenvalue_of_I_plus_J": 41,
+    "orthogonal_eigenvalue_of_I_plus_J": 1,
+    "determinant_from_spectrum": 41
+  },
+  "top_flavor_identity": {
+    "y_t_cubed": "40/41",
+    "lambda_CKM": "9/40",
+    "lambda_CKM_times_y_t_cubed": "9/41",
+    "q_squared_over_det_I_plus_J": "9/41",
+    "finite_weight": "40/41",
+    "infinity_weight": "1/41"
+  },
+  "global_channel_comparison": {
+    "alpha_slip_v_over_Meff": "880/24445",
+    "alpha_Meff": "24445/22",
+    "top_flavor_denominator_det_I_plus_J": 41,
+    "statement": "alpha uses a rank-one Perron residue/Green mass; top flavor uses a rank-one Perron determinant/compactification count"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "v_is_40": true,
+    "edge_count_240": true,
+    "det_I_plus_J_equals_v_plus_1": true,
+    "det_from_spectrum_equals_v_plus_1": true,
+    "matrix_determinant_lemma_form": true,
+    "top_yukawa_cube_equals_40_over_41": true,
+    "infinity_plus_finite_weight_one": true,
+    "lambda_ckm_equals_9_over_40": true,
+    "ckm_top_product_equals_9_over_41": true,
+    "compactified_flavor_equals_q2_over_det": true,
+    "determinant_is_monster_prime_41": true,
+    "alpha_slip_global_channel_still_880_over_24445": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The top-Yukawa denominator v+1=41 is the determinant of the rank-one global all-ones update I+J. Thus y_t^3=v/det(I+J), and lambda_CKM*y_t^3=q^2/det(I+J)=9/41. The same Perron channel that gives alpha a residue/Green correction gives flavor a determinant/compactification correction."
+}
