@@ -1,0 +1,520 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.83in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{W(3,3) Millennium Prize Attack Surfaces}
+\rhead{Part CCCCCXXIV}
+\cfoot{\thepage}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  citecolor=blue!50!black
+}
+
+\titleformat{\section}{\large\bfseries\color{blue!40!black}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{blue!35!black}}{\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{black!80}}{\thesubsubsection}{0.7em}{}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\newcommand{\W}{W(3,3)}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\PhiThree}{\Phi_3}
+\newcommand{\PhiFour}{\Phi_4}
+\newcommand{\PhiSix}{\Phi_6}
+\newcommand{\Deltar}{\Delta_r}
+\newcommand{\Deltas}{\Delta_s}
+
+\definecolor{boxblue}{RGB}{236,246,255}
+\definecolor{darkblue}{RGB}{18,52,100}
+\definecolor{softred}{RGB}{130,20,20}
+\definecolor{softgreen}{RGB}{0,90,55}
+\definecolor{softgray}{RGB}{245,245,245}
+
+\newenvironment{keybox}{%
+  \begin{center}\begin{minipage}{0.94\linewidth}\color{darkblue}\hrule\vspace{0.65em}
+}{%
+  \vspace{0.65em}\hrule\end{minipage}\end{center}
+}
+
+\newenvironment{warningbox}{%
+  \begin{center}\begin{minipage}{0.94\linewidth}\color{softred}\hrule\vspace{0.65em}
+}{%
+  \vspace{0.65em}\hrule\end{minipage}\end{center}
+}
+
+\newenvironment{graybox}{%
+  \begin{center}\begin{minipage}{0.94\linewidth}\hrule\vspace{0.65em}
+}{%
+  \vspace{0.65em}\hrule\end{minipage}\end{center}
+}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{softgray}
+}
+
+\title{\textbf{The Millennium Prize Problems as W(3,3) Attack Surfaces}\\[0.35em]
+\large Finite Analogues, Spectral Mechanisms, Transfer Obstructions, and a Seven-Problem Architecture}
+\author{Wil Dahn and Sage\\\small W33-Theory Repository, Part CCCCCXXIV}
+\date{May 11, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper develops a disciplined W(3,3) framework for the seven Clay Millennium Prize Problems.  It does not claim to solve the six open Clay problems.  Instead, it separates each problem into four layers: official status, exact W(3,3) finite identity, finite analogue or attack surface, and the remaining transfer obstruction required for a Clay-level proof.  The resulting compression is striking: the seven problems match \(\Phi_6=7\), the six still-open Clay problems match the master spectral gap \(q!=2q=r-s=6\), and the already-solved Poincare conjecture plays the role of the identity/topology seed.  The six open problems split naturally into three W(3,3) pairs: arithmetic/zeta problems, PDE/gap-dissipation problems, and certificate/cycle problems.  The paper formalizes the finite attack surfaces for Riemann, Yang--Mills, Navier--Stokes, P vs NP, Hodge, and Birch--Swinnerton-Dyer, while keeping Poincare in its correct solved-by-Perelman status.  The central conclusion is that W(3,3) supplies a coherent research architecture for the Millennium surfaces, not an accepted solution to the Clay problems.
+\end{abstract}
+
+\begin{warningbox}
+\textbf{Status discipline.} The Clay Mathematics Institute lists seven Millennium Prize Problems, with the Poincare Conjecture solved and six problems still unsolved.  CMI's rules require publication in a qualifying outlet, a two-year period, and general acceptance in the mathematics community before a proposed solution can be considered.  This paper is therefore an internal research architecture and finite-analogue theorem note, not a Clay Prize submission and not a claim that the six open problems have been solved.  See CMI's official problem page and rules.\footnote{Clay Mathematics Institute, \emph{The Millennium Prize Problems}, \url{https://www.claymath.org/millennium-problems/}.  Clay Mathematics Institute, \emph{Rules for the Millennium Prize Problems}, \url{https://www.claymath.org/millennium-problems/rules/}.}
+\end{warningbox}
+
+\tableofcontents
+\newpage
+
+\section{The Big Picture}
+
+The W(3,3) program starts from the symplectic polar space \(\W\), whose collinearity graph is
+\[
+  \operatorname{SRG}(40,12,2,4).
+\]
+The raw W(3,3) atoms are
+\[
+  q=3,
+  \qquad \lambda=2,
+  \qquad \mu=4,
+  \qquad k=12,
+  \qquad v=40,
+  \qquad E=240.
+\]
+The restricted adjacency eigenvalues are
+\[
+  r=2,\qquad s=-4,
+\]
+with multiplicities
+\[
+  f=24,
+  \qquad g=15.
+\]
+The cyclotomic integers are
+\[
+  \PhiThree=q^2+q+1=13,
+  \qquad \PhiFour=q^2+1=10,
+  \qquad \PhiSix=q^2-q+1=7.
+\]
+
+The new millennium architecture is the following compression:
+
+\begin{keybox}
+\[
+\boxed{
+\#\{\text{Millennium problems}\}=7=\PhiSix.
+}
+\]
+\[
+\boxed{
+\#\{\text{open Millennium problems}\}=6=q!=2q=r-s.
+}
+\]
+\[
+\boxed{
+\#\{\text{solved Millennium problems}\}=1=\text{identity unit in }U(12).
+}
+\]
+\end{keybox}
+
+The point is not that these equalities solve the problems.  The point is that the seven-problem landscape has a natural W(3,3) finite-spectral encoding:
+\[
+  7 = 6+1 = (q!=2q=r-s)+1.
+\]
+
+\section{Official Status of the Seven Problems}
+
+CMI identifies seven Millennium Prize Problems.  Six are listed as unsolved: Birch and Swinnerton-Dyer, Hodge, Navier--Stokes, P vs NP, Riemann, and Yang--Mills.  Poincare is listed as solved, with Perelman's proof described by CMI as yielding the geometrization conclusion that every three-manifold is built from standard pieces with one of eight geometries.\footnote{Clay Mathematics Institute, \emph{The Millennium Prize Problems}, \url{https://www.claymath.org/millennium-problems/}.}
+
+Thus this paper uses the following language:
+\[
+\begin{array}{lll}
+\text{Poincare} &:& \text{solved externally; W(3,3) topology seed only},\\[0.25em]
+\text{six others} &:& \text{open Clay problems; W(3,3) attack surfaces only}.
+\end{array}
+\]
+
+\section{The Seven-Problem Attack-Surface Theorem}
+
+\begin{theorem}[Millennium Prize Attack-Surface Theorem]
+The W(3,3) finite spectral architecture assigns to each Millennium Prize Problem an exact finite identity and an associated transfer obstruction.  The seven surfaces compress as
+\[
+  7=\PhiSix,
+  \qquad 6=q!=2q=r-s,
+  \qquad 1=1\in U(12),
+\]
+and the six open Clay problems split into three pairs:
+\[
+\begin{array}{lll}
+\text{arithmetic/zeta} &:& \text{Riemann + Birch--Swinnerton-Dyer},\\
+\text{PDE/gap-dissipation} &:& \text{Yang--Mills + Navier--Stokes},\\
+\text{certificate/cycle} &:& \text{P vs NP + Hodge}.
+\end{array}
+\]
+\end{theorem}
+
+\begin{proof}[Verification]
+The finite identities are checked directly from the W(3,3) atoms:
+\[
+  \PhiSix=q^2-q+1=9-3+1=7,
+\]
+\[
+  r-s=2-(-4)=6=3!=2\cdot3=q!=2q.
+\]
+The unit group of the Z12 phase lattice is
+\[
+  U(12)=\{1,5,7,11\}=\{1,\mu+1,\PhiSix,k-1\}.
+\]
+The remaining sections give the exact finite identity for each attack surface.  Each identity is internal to W(3,3), while each transfer obstruction records what remains necessary for a Clay-level proof.
+\end{proof}
+
+\section{Three Natural Pairs of Open Problems}
+
+The six still-open problems are not random from the W(3,3) viewpoint.  They form three pairs.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Pair & Clay problems & W(3,3) mechanism \\
+\midrule
+Arithmetic/zeta & Riemann, BSD & Ihara/Ramanujan + motive/L-function surfaces \\
+PDE/gap-dissipation & Yang--Mills, Navier--Stokes & spectral gap + finite heat dissipation \\
+Certificate/cycle & P vs NP, Hodge & finite verifier + algebraic-cycle surfaces \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This is the most useful way to read the paper: each pair shares a W(3,3) mechanism, but each member has a different transfer obstruction.
+
+\section{Poincare Conjecture: Solved Topology Seed}
+
+\subsection{Official status}
+
+Poincare is already solved by Perelman.  The W(3,3) architecture therefore does not attempt to solve it.  It uses Poincare as the solved topology seed of the seven-problem system.
+
+\subsection{Finite W(3,3) identities}
+
+The relevant identities are
+\[
+  q=3,
+  \qquad 2^q=8,
+  \qquad q+1=4.
+\]
+These match three structural facts in the surrounding topology story:
+\[
+  \text{three-dimensional topology},
+  \qquad \text{eight Thurston geometries},
+  \qquad \text{3+1 Ricci-flow setting}.
+\]
+
+\subsection{Transfer obstruction}
+
+There is no Clay transfer obstruction remaining for Poincare, because the problem is already solved externally.  However, W(3,3) does not replace Perelman's proof.
+
+\section{Riemann Hypothesis: Ihara/Ramanujan Attack Surface}
+
+\subsection{Clay problem}
+
+The Riemann Hypothesis asserts that the nontrivial zeros of the Riemann zeta function have real part \(1/2\).  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+W(3,3) is Ramanujan.  The restricted eigenvalues satisfy
+\[
+  \max\{|r|,|s|\}^2=16
+\]
+and
+\[
+  4(k-1)=4\cdot11=44.
+\]
+Thus
+\[
+  \max\{|r|,|s|\}^2\leq 4(k-1).
+\]
+The Ihara zeta trivial exponent is
+\[
+  E-v=240-40=200.
+\]
+The explicit zeta carrier is
+\[
+Z_{\W}(u)^{-1}=(1-u^2)^{200}(1-12u-11u^2)(1-2u+11u^2)^{24}(1+4u+11u^2)^{15}.
+\]
+
+\subsection{Mechanism}
+
+This is a finite graph-RH mechanism: the graph satisfies the Ramanujan/Ihara analogue of RH.
+
+\subsection{Transfer obstruction}
+
+One must construct an equivalence or transfer theorem from the W(3,3) Ihara zeta, or an associated automorphic/L-function object, to the classical Riemann zeta function.  Without that bridge, this remains a finite analogue.
+
+\section{Yang--Mills Existence and Mass Gap: Spectral Gap Attack Surface}
+
+\subsection{Clay problem}
+
+The Yang--Mills problem asks for a rigorous construction of quantum Yang--Mills theory on \(\R^4\) for any compact simple gauge group, with a positive mass gap.  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+The W(3,3) graph Laplacian gap is
+\[
+  \Deltar=k-r=12-2=10=\PhiFour.
+\]
+The finite Dirac-square gap is
+\[
+  4=\mu.
+\]
+The color-adjoint identity is
+\[
+  q^2-1=3^2-1=8=2^3=\lambda^q.
+\]
+
+\subsection{Mechanism}
+
+W(3,3) supplies a finite spectral mass-gap analogue: a discrete gauge/internal Yang--Mills sector has a positive spectral gap.
+
+\subsection{Transfer obstruction}
+
+A finite graph gap is not a constructive continuum quantum field theory.  The Clay-level gap requires a rigorous continuum theory satisfying the appropriate axioms and a physical mass gap in infinite volume.
+
+\section{Navier--Stokes: Finite Dissipation Attack Surface}
+
+\subsection{Clay problem}
+
+The Navier--Stokes problem asks for global existence and smoothness, or breakdown, for the three-dimensional incompressible Navier--Stokes equations.  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+The finite heat/Poincare gap is
+\[
+  \Deltar=10.
+\]
+The W(3,3) Kolmogorov-like exponent is
+\[
+  \frac{\mu+1}{q}=\frac{5}{3}.
+\]
+The dimension seed is
+\[
+  q=3.
+\]
+
+\subsection{Mechanism}
+
+The finite spectral gap gives finite-mode dissipation and relaminarization structure.  The exponent \(5/3\) suggests a W(3,3) turbulence-scaling surface.
+
+\subsection{Transfer obstruction}
+
+The Clay problem is about continuum PDE behavior, where singularity formation is not ruled out by a finite-mode graph model.  One needs a rigorous continuum compactness, regularity, or blow-up criterion.
+
+\section{P vs NP: Certificate/Finite-Oracle Attack Surface}
+
+\subsection{Clay problem}
+
+P vs NP asks whether every efficiently checkable problem is efficiently solvable in the asymptotic Turing-machine sense.  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+W(3,3) is finite:
+\[
+  v=40.
+\]
+It has diameter 2 because \(\lambda>0\) and \(\mu>0\) for the SRG.  A graph traversal scale is
+\[
+  v+E=40+240=280.
+\]
+
+\subsection{Mechanism}
+
+This gives a finite certificate/verifier domain: every decision problem restricted to this finite geometry is bounded.
+
+\subsection{Transfer obstruction}
+
+P vs NP is asymptotic.  A finite graph world, even a highly structured one, cannot decide whether \(P=NP\) over all input lengths.
+
+\section{Hodge Conjecture: Cycle-Class Attack Surface}
+
+\subsection{Clay problem}
+
+The Hodge conjecture concerns rational Hodge classes on smooth complex projective varieties and whether they arise from algebraic cycles.  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+The finite complement/cycle surface is
+\[
+  v-k-1=40-12-1=27=q^q.
+\]
+The E6 excited sector is
+\[
+  2f+2g=48+30=78=\dim(E_6).
+\]
+
+\subsection{Mechanism}
+
+This gives a finite algebraic-cycle/Hodge-class analogue tied to the E6 fundamental \(27\) and adjoint \(78\) surfaces.
+
+\subsection{Transfer obstruction}
+
+The Hodge conjecture is about smooth complex projective varieties.  A finite combinatorial Hodge decomposition must be lifted to an algebraic-geometric construction over \(\C\) with rational Hodge classes.
+
+\section{Birch--Swinnerton-Dyer: Arithmetic/Motive Attack Surface}
+
+\subsection{Clay problem}
+
+BSD predicts that the rank of the group of rational points on an elliptic curve over \(\Q\) equals the order of vanishing of its L-function at \(s=1\).  It remains open.
+
+\subsection{Finite W(3,3) identity}
+
+The automorphism/Weyl order is
+\[
+  |Sp(4,3)|=3^4(3^4-1)(3^2-1)=51840.
+\]
+The alpha/motive core is
+\[
+  137=(k-1)^2+\mu^2=\PhiThree\PhiFour+\PhiSix.
+\]
+The conductor-like degree surface is
+\[
+  \lambda q=6.
+\]
+
+\subsection{Mechanism}
+
+W(3,3) supplies a finite arithmetic/motive surface with an E6/Weyl symmetry, an alpha core, and a degree-six conductor-like marker.
+
+\subsection{Transfer obstruction}
+
+A BSD proof requires a specific elliptic curve or family over \(\Q\), a genuine L-function, and a theorem equating analytic rank with Mordell--Weil rank.  The W(3,3) finite surface is an attack map, not the theorem.
+
+\section{The Verifier Theorem}
+
+The Part CCCCCXXIV verifier checks the following exact identities:
+\begin{longtable}{lll}
+\toprule
+Check & Identity & Status \\
+\midrule
+Master equation & \(q!=2q=6\) & pass \\
+W(3,3) atoms & \((3,2,4,12,40,240,480,2,-4,24,15)\) & pass \\
+Problem count & \(7=\PhiSix\) & pass \\
+Open count & \(6=q!=2q=r-s\) & pass \\
+Solved count & \(1\) identity unit & pass \\
+Riemann finite surface & \(16\le 44\) & pass \\
+Ihara exponent & \(E-v=200\) & pass \\
+Yang--Mills finite gaps & \((10,4,8)\) & pass \\
+Navier--Stokes finite dissipation & \(10,5/3\) & pass \\
+P vs NP finite domain & \((40,2,280)\) & pass \\
+Hodge finite cycle surface & \(27=q^q,\;78=E_6\) & pass \\
+BSD finite arithmetic surface & \((51840,137,6)\) & pass \\
+Poincare topology seed & \((3,8,4)\) & pass \\
+Open-pair partition & three pairs cover six problems & pass \\
+\bottomrule
+\end{longtable}
+
+\section{What This Paper Claims}
+
+This paper claims the following:
+\begin{enumerate}[leftmargin=2em]
+  \item W(3,3) gives exact finite analogues for all seven Clay Millennium surfaces.
+  \item The seven surfaces compress as \(7=\PhiSix\), while the six open surfaces compress as \(6=q!=2q=r-s\).
+  \item The six open surfaces form three natural W(3,3) attack pairs.
+  \item Each finite analogue comes with a clear transfer obstruction.
+\end{enumerate}
+
+\section{What This Paper Does Not Claim}
+
+This paper does not claim:
+\begin{enumerate}[leftmargin=2em]
+  \item a proof of the Riemann Hypothesis;
+  \item a construction of continuum Yang--Mills with mass gap;
+  \item a proof of global regularity for Navier--Stokes;
+  \item a proof that \(P\ne NP\) or \(P=NP\);
+  \item a proof of the Hodge conjecture;
+  \item a proof of BSD.
+\end{enumerate}
+
+The value is architectural: W(3,3) gives a finite map of attack surfaces and tells us exactly what the missing transfer theorem must do.
+
+\section{Research Program}
+
+Each Millennium surface has a next target.
+
+\begin{center}
+\begin{tabular}{p{0.23\linewidth}p{0.67\linewidth}}
+\toprule
+Problem & Next W(3,3) target \\
+\midrule
+Riemann & Construct an automorphic/L-function transfer from W(3,3) Ihara zeta to classical zeta data. \\
+Yang--Mills & Build a continuum limit of the W(3,3) finite gauge sector satisfying QFT axioms. \\
+Navier--Stokes & Prove a finite-to-continuum dissipation compactness theorem preserving no-blow-up bounds. \\
+P vs NP & Identify whether W(3,3) induces a nontrivial asymptotic family, not just a finite verifier domain. \\
+Hodge & Lift finite W(3,3) cycle classes to rational Hodge classes on smooth projective varieties. \\
+BSD & Build an elliptic curve or abelian-variety family whose L-function carries the W(3,3) arithmetic core. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Final Compression}
+
+The paper's compressed statement is:
+
+\begin{keybox}
+\[
+\boxed{
+\text{Millennium problems}=\Phi_6=7,
+\qquad
+\text{open Millennium problems}=q!=2q=r-s=6.
+}
+\]
+\[
+\boxed{
+\text{six open surfaces}=\text{arithmetic/zeta}+\text{PDE/gap}+\text{certificate/cycle}.
+}
+\]
+\end{keybox}
+
+And the intellectual stance is:
+
+\begin{graybox}
+W(3,3) does not magically solve the Clay problems.  It gives a finite spectral atlas of the problem surfaces, exact integer identities on each surface, and a sharply defined transfer obstruction for each open Clay problem.
+\end{graybox}
+
+\end{document}
