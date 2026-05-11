@@ -1,0 +1,60 @@
+{
+  "part": "CCCCCI",
+  "title": "Gap-Square Scalar-Flavor Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "gap_square_surface": {
+    "r_channel": "positive restricted adjacency eigenvalue r=lambda=2",
+    "laplacian_gap_delta_r": 10,
+    "gap_square_delta_r_squared": 100,
+    "lambda_H": "13/100",
+    "A_CKM": "81/100",
+    "A_CKM_over_lambda_H": "81/13",
+    "A_CKM_minus_lambda_H": "17/25",
+    "A_CKM_plus_lambda_H": "47/50"
+  },
+  "perron_surface_comparison": {
+    "top_yukawa_cubed": "40/41",
+    "lambda_CKM": "9/40",
+    "lambda_CKM_times_top_cube": "9/41",
+    "det_I_plus_J": 41,
+    "statement": "Perron channel controls 40/41 and 9/41; r-gap-square channel controls 13/100 and 81/100"
+  },
+  "pmns_gap_crosslink": {
+    "sin2_theta13": "9/400",
+    "sin2_theta13_times_lambda_squared": "9/100",
+    "interpretation": "PMNS reactor angle uses the same Phi4^2 gap denominator with an additional lambda^2 spinor/polarization scaling"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "restricted_eigenvalues": true,
+    "r_laplacian_gap_is_phi4": true,
+    "s_laplacian_gap_is_16": true,
+    "gap_square_is_100": true,
+    "lambda_H_is_13_over_100": true,
+    "A_ckm_is_81_over_100": true,
+    "A_over_lambdaH_is_81_over_13": true,
+    "A_minus_lambdaH_is_17_over_25": true,
+    "A_plus_lambdaH_is_47_over_50": true,
+    "perron_top_cube_still_40_over_41": true,
+    "perron_compactified_flavor_still_9_over_41": true,
+    "pmns_theta13_is_9_over_400": true,
+    "pmns_theta13_times_lambda_squared_is_9_over_100": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The Higgs quartic and CKM A are normalized by the square of the r-channel Laplacian gap, Delta_r^2=(k-r)^2=Phi4^2=100. This gives a second operator surface complementary to the Perron global channel: Perron controls alpha/top/CKM-lambda compactification, while the r-gap-square controls scalar self-coupling and CKM normalization."
+}
