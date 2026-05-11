@@ -1,0 +1,69 @@
+{
+  "part": "CCCCCIX",
+  "title": "Cumulant Phenomenology Bridge",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "free_energy_cumulants": {
+    "mean_kappa1": "14/3",
+    "variance_kappa2": "272/9",
+    "coefficient_variation_squared": "68/49",
+    "mean_as_G2_over_q": "14/3",
+    "variance_as_E8_plus_SU5_over_q2": "(248+24)/9"
+  },
+  "excited_sector_bridge": {
+    "excited_total": 78,
+    "E6_dim": 78,
+    "excited_mean": "160/13",
+    "gap_ratio_Delta_s_over_Delta_r": "8/5",
+    "lambda_H_from_gap_ratio_over_excited_mean": "13/100"
+  },
+  "phenomenology_reconstruction": {
+    "lambda_H": "13/100",
+    "A_CKM_from_lambda_H": "81/100",
+    "PMNS_theta13_from_lambda_H": "9/400",
+    "A_over_lambda_H": "81/13"
+  },
+  "fluctuation_bridge": {
+    "CV_squared": "68/49",
+    "CV_squared_structural": "lambda^2*(Phi3+mu)/Phi6^2",
+    "Phi3_plus_mu": 17
+  },
+  "structural_dimensions": {
+    "G2": 14,
+    "SU5": 24,
+    "SO10": 45,
+    "E6": 78,
+    "E8": 248
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "mean_is_G2_dim_over_q": true,
+    "variance_is_E8_plus_SU5_over_q2": true,
+    "coefficient_variation_sq_is_68_over_49": true,
+    "cv2_structural_form": true,
+    "excited_total_E6": true,
+    "excited_mean_160_over_13": true,
+    "gap_ratio_8_over_5": true,
+    "lambda_H_from_excited_mean": true,
+    "A_ckm_from_lambda_H": true,
+    "pmns_theta13_from_lambda_H": true,
+    "dimensions": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The free-energy cumulants reconstruct phenomenology. The full mean is dim(G2)/q, the variance is (dim(E8)+dim(SU5))/q^2, and the excited E6 mean combined with the restricted gap ratio gives lambda_H=13/100. That Higgs value then generates CKM A and PMNS theta13 by existing gap-square projections."
+}
