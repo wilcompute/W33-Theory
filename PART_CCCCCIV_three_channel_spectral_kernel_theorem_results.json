@@ -1,0 +1,93 @@
+{
+  "part": "CCCCCIV",
+  "title": "Three-Channel Spectral Kernel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "theta_k_minus_1": 11,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "three_channels": {
+    "perron_global": {
+      "spectral_data": "adjacency eigenvalue k=12, multiplicity 1; Hashimoto theta=11",
+      "role": "global coupling and compactification",
+      "observables": {
+        "y_c_inverse": "137",
+        "alpha_inverse": "669969/4889",
+        "alpha_slip": "880/24445",
+        "top_yukawa_cubed": "40/41",
+        "lambda_CKM": "9/40",
+        "lambda_CKM_times_top_cube": "9/41"
+      }
+    },
+    "r_gap_square": {
+      "spectral_data": "adjacency eigenvalue r=2, multiplicity f=24; Laplacian gap Delta_r=10",
+      "role": "scalar/flavor normalization",
+      "observables": {
+        "Delta_r": 10,
+        "Delta_r_squared": 100,
+        "lambda_H": "13/100",
+        "A_CKM": "81/100",
+        "PMNS_theta13": "9/400",
+        "f_Delta_r": 240
+      }
+    },
+    "s_heavy_root": {
+      "spectral_data": "adjacency eigenvalue s=-4, multiplicity g=15; Laplacian gap Delta_s=16",
+      "role": "heavy/root completion",
+      "observables": {
+        "Delta_s": 16,
+        "g_Delta_s": 240,
+        "E8_roots": 240,
+        "E8_rank": 8,
+        "E8_dim": 248,
+        "SU5_dim": 24,
+        "SO10_dim": 45,
+        "E6_dim": 78
+      }
+    }
+  },
+  "kernel_accounting": {
+    "trace_A": 0,
+    "trace_A2": 480,
+    "trace_A3": 960,
+    "restricted_r_energy": 240,
+    "restricted_s_energy": 240,
+    "restricted_total": 480,
+    "directed_edges": 480,
+    "gap_difference": 6,
+    "gap_sum": 26
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "full_adjacency_spectrum": true,
+    "trace_A_zero": true,
+    "trace_A2_equals_480": true,
+    "trace_A3_equals_960": true,
+    "perron_channel_alpha": true,
+    "perron_channel_top_flavor": true,
+    "r_channel_gap_square": true,
+    "r_channel_observables": true,
+    "s_channel_gap": true,
+    "restricted_equipartition": true,
+    "restricted_total_directed_edges": true,
+    "s_channel_e8": true,
+    "gut_dimensions": true,
+    "gap_difference_is_master_factorial": true,
+    "gap_sum_is_2phi3": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The full W(3,3) adjacency spectrum now has an assigned kernel role: Perron/global controls coupling and compactification constants; the r-channel gap-square controls scalar/flavor normalization; the s-channel heavy gap controls E8-root/heavy completion. The restricted channels exactly balance into two 240-unit carriers whose sum is the 480-dimensional Hashimoto/spectral-triple carrier."
+}
