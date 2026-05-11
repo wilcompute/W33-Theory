@@ -1,0 +1,50 @@
+{
+  "part": "CCCCXLV",
+  "title": "Hashimoto Alpha Slip Lift",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "theta_hashimoto_constant": 11
+  },
+  "hashimoto_channel": {
+    "B_constant_eigenvalue": 11,
+    "mass_polynomial": "h(theta)=theta*((theta-(lambda-1))^2+1)",
+    "M_vac_hashimoto_constant": 1111,
+    "Delta_M": "3/22",
+    "M_eff": "24445/22",
+    "directed_unnormalized_amplitude": "10560/24445",
+    "compressed_by_k": "880/24445",
+    "vertex_amplitude": "880/24445"
+  },
+  "alpha_identity": {
+    "alpha_core_yc_inverse": 137,
+    "alpha_slip_from_hashimoto_compression": "880/24445",
+    "alpha_inverse_refined": "669969/4889",
+    "alpha_inverse_refined_decimal": 137.0359991818378
+  },
+  "checks": {
+    "true_master_equation": true,
+    "srg_quadratic_roots_lambda_mu": true,
+    "projective_point_count": true,
+    "degree_set_is_12": true,
+    "edge_count_240": true,
+    "directed_edge_count_480": true,
+    "hashimoto_outdegree_set_is_11": true,
+    "common_adjacent_lambda": true,
+    "common_nonadjacent_mu": true,
+    "hashimoto_constant_mass_equals_1111": true,
+    "rank_one_delta_equals_3_over_22": true,
+    "m_eff_equals_24445_over_22": true,
+    "directed_unnormalized_amplitude_equals_10560_over_24445": true,
+    "directed_vertex_compression_equals_vertex_amplitude": true,
+    "compressed_amplitude_equals_alpha_slip": true,
+    "alpha_inverse_refined_exact": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The CCCCXLIV vertex alpha slip is exactly the k-normalized constant-flow amplitude of the 480-dimensional Hashimoto carrier. The factor k appears because each vertex constant lifts to k outgoing directed edges. Thus 480/M_eff compresses to v/M_eff, recovering alpha^{-1}-y_c^{-1}=880/24445 from the non-backtracking sector."
+}
