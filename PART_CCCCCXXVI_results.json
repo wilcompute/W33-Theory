@@ -1,0 +1,13 @@
+{
+  "part": "CCCCCXXVI",
+  "title": "Complement Duality and Clique Identity",
+  "results": {
+    "complement_parameters": [40, 27, 18, 18],
+    "complement_eigenvalues": [27, 3, -3],
+    "clique_polynomial_coefficients": [1, 40, 240, 160, 40],
+    "clique_at_1": 481,
+    "clique_at_minus_1": 81,
+    "q": 3,
+    "q_power_q_plus_1": 81
+  }
+}

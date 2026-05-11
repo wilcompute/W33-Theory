@@ -1,0 +1,14 @@
+{
+  "part": "CCCCCXXVII",
+  "title": "Heat Kernel and Kirchhoff Index",
+  "results": {
+    "laplacian_eigenvalues": [0, 10, 16],
+    "laplacian_multiplicities": [1, 24, 15],
+    "heat_trace_constant_term": 79,
+    "heat_trace_linear_term": -480,
+    "two_E": 480,
+    "vk": 480,
+    "laplacian_zeta_at_1": "267/80",
+    "kirchhoff_index": "267/2"
+  }
+}

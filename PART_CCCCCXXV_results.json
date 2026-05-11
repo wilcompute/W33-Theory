@@ -1,0 +1,13 @@
+{
+  "part": "CCCCCXXV",
+  "title": "Quantum Return and Shannon Capacity",
+  "results": {
+    "adjacency_eigenvalues": [12, 2, -4],
+    "quantum_return_time": "pi",
+    "quantum_return_identity": true,
+    "independence_number": 10,
+    "lovasz_theta": 10,
+    "shannon_capacity": 10,
+    "bits_per_channel_use": 3.321928094887362
+  }
+}
