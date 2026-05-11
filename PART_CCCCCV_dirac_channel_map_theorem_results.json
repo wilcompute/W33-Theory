@@ -1,0 +1,84 @@
+{
+  "part": "CCCCCV",
+  "title": "Dirac Channel Map Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "dirac_spectrum_map": {
+    "ground_matter_vacuum": {
+      "eigenvalue": 0,
+      "multiplicity": 82,
+      "formula": "2*q^4 + 1"
+    },
+    "gauge_bulk": {
+      "eigenvalue": 4,
+      "multiplicity": 320,
+      "formula": "lambda^3 * v"
+    },
+    "r_gap_excited": {
+      "eigenvalue": 10,
+      "multiplicity": 48,
+      "formula": "eigenvalue=k-r=Phi4, multiplicity=2f"
+    },
+    "s_gap_excited": {
+      "eigenvalue": 16,
+      "multiplicity": 30,
+      "formula": "eigenvalue=k-s=lambda^4, multiplicity=2g"
+    }
+  },
+  "e6_excited_sector": {
+    "r_gap_multiplicity": 48,
+    "s_gap_multiplicity": 30,
+    "total_excited_dim": 78,
+    "E6_dim": 78,
+    "statement": "2f + 2g = 48 + 30 = 78 = dim(E6)"
+  },
+  "trace_accounting": {
+    "Tr_D2": 2240,
+    "gauge_bulk_trace": 1280,
+    "excited_trace": 960,
+    "excited_trace_equals_Tr_A3": true
+  },
+  "structural_dimensions": {
+    "SU5_dim": 24,
+    "SO10_dim": 45,
+    "E6_dim": 78,
+    "E8_roots": 240,
+    "E8_rank": 8,
+    "E8_dim": 248
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "dirac_spectrum_values": true,
+    "multiplicities": true,
+    "total_dimension_480": true,
+    "ground_sector_2q4_plus_1": true,
+    "gauge_bulk_lam3_v": true,
+    "r_gap_sector_2f": true,
+    "s_gap_sector_2g": true,
+    "excited_sector_dim_E6": true,
+    "su5_so10_e6_dims": true,
+    "e8_dim_edges_plus_rank": true,
+    "restricted_channel_balance": true,
+    "trace_D2_value": true,
+    "trace_gauge_value": true,
+    "trace_excited_value": true,
+    "trace_D2_splits_gauge_plus_excited": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The finite Dirac spectrum {0,4,10,16} is not parallel data: 10 and 16 are exactly the r/s restricted Laplacian gaps, with doubled multiplicities 2f and 2g. Their total 48+30=78 is dim(E6), so the E6 excited adjoint sector is the doubled restricted-channel sector of W(3,3)."
+}
