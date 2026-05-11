@@ -1,0 +1,89 @@
+{
+  "part": "CCCCCII",
+  "title": "Two-Channel Standard Model Kernel Theorem",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "directed_edges": 480,
+    "theta_k_minus_1": 11,
+    "r": 2,
+    "s": -4,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "channels": {
+    "perron_global_channel": {
+      "spectral_data": "adjacency eigenvalue k=12, multiplicity 1; Hashimoto theta=k-1=11",
+      "operations": [
+        "Gaussian norm core",
+        "Perron Green/residue",
+        "rank-one determinant compactification"
+      ],
+      "observables": {
+        "y_c_inverse": "137",
+        "alpha_inverse": "669969/4889",
+        "alpha_slip": "880/24445",
+        "y_t_cubed": "40/41",
+        "lambda_CKM": "9/40",
+        "lambda_CKM_times_y_t_cubed": "9/41"
+      }
+    },
+    "r_gap_square_channel": {
+      "spectral_data": "adjacency eigenvalue r=lambda=2, multiplicity f=24; Laplacian gap k-r=Phi4=10",
+      "operations": [
+        "gap-square normalization",
+        "spinor-scaled gap-square projection"
+      ],
+      "observables": {
+        "lambda_H": "13/100",
+        "A_CKM": "81/100",
+        "A_CKM_over_lambda_H": "81/13",
+        "PMNS_sin2_theta13": "9/400",
+        "lambda_squared_PMNS_sin2_theta13": "9/100"
+      }
+    }
+  },
+  "interface": {
+    "alpha_top_denominator_bridge": [
+      "41",
+      "41"
+    ],
+    "ckm_before_after_compactification": [
+      "9/40",
+      "9/41"
+    ],
+    "scalar_flavor_shared_denominator": 100,
+    "statement": "Perron controls global compactification; r-gap-square controls scalar/flavor normalization"
+  },
+  "checks": {
+    "true_master_equation": true,
+    "w33_atoms": true,
+    "perron_channel_multiplicity_one": true,
+    "r_channel_multiplicity_24": true,
+    "perron_hashimoto_mass_1111": true,
+    "perron_alpha_slip": true,
+    "gaussian_charm_core_137": true,
+    "alpha_inverse_refined": true,
+    "perron_det_41": true,
+    "top_cube_40_over_41": true,
+    "lambda_ckm_9_over_40": true,
+    "compactified_flavor_9_over_41": true,
+    "r_gap_is_phi4": true,
+    "r_gap_square_100": true,
+    "higgs_lambda_13_over_100": true,
+    "ckm_A_81_over_100": true,
+    "A_over_lambdaH_81_over_13": true,
+    "pmns_theta13_9_over_400": true,
+    "pmns_scaled_9_over_100": true,
+    "channels_have_distinct_denominators": true
+  },
+  "all_checks_pass": true,
+  "interpretation": "The empirical SM closure arc splits into at least two W(3,3) spectral channels. The Perron/global channel controls charm/alpha/top/CKM-lambda through Gaussian, Green, and determinant operations. The r-gap-square channel controls Higgs/CKM-A/PMNS-theta13 through the square of the positive restricted Laplacian gap Phi4^2."
+}
