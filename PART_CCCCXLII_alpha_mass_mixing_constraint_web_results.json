@@ -1,0 +1,145 @@
+{
+  "part": "CCCCXLII",
+  "title": "Alpha--Mass--Mixing Constraint Web",
+  "atoms": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "f": 24,
+    "g": 15,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7
+  },
+  "derived_quantities": {
+    "lambda_H": "13/100",
+    "ckm_lambda": "9/40",
+    "ckm_A": "81/100",
+    "rho_bar": "4/25",
+    "eta_bar": "343/1000",
+    "top_yukawa_cubed": "40/41",
+    "alpha_core": 137,
+    "M_vac": 1111,
+    "Delta_M": "3/22",
+    "M_eff": "24445/22",
+    "alpha_correction": "880/24445",
+    "alpha_inv_refined": "669969/4889"
+  },
+  "exact_identities": [
+    {
+      "name": "A_over_lambdaH",
+      "left": "A_CKM/lambda_H",
+      "right": "q^4/Phi_3",
+      "value": "81/13",
+      "decimal": 6.230769230769231,
+      "passes": true
+    },
+    {
+      "name": "lambdaCKM_times_topcube",
+      "left": "lambda_CKM*y_t^3",
+      "right": "q^2/(v+1)",
+      "value": "9/41",
+      "decimal": 0.21951219512195122,
+      "passes": true
+    },
+    {
+      "name": "A_minus_lambdaH",
+      "left": "A_CKM-lambda_H",
+      "right": "(Phi_3+mu)/(mu+1)^2",
+      "value": "17/25",
+      "decimal": 0.68,
+      "passes": true
+    },
+    {
+      "name": "A_plus_lambdaH",
+      "left": "A_CKM+lambda_H",
+      "right": "(v+Phi_6)/(lambda*(mu+1)^2)",
+      "value": "47/50",
+      "decimal": 0.94,
+      "passes": true
+    },
+    {
+      "name": "rho_bar_definition",
+      "left": "rho_bar",
+      "right": "(lambda/(mu+1))^2",
+      "value": "4/25",
+      "decimal": 0.16,
+      "passes": true
+    },
+    {
+      "name": "eta_bar_definition",
+      "left": "eta_bar",
+      "right": "(Phi_6/Phi_4)^3",
+      "value": "343/1000",
+      "decimal": 0.343,
+      "passes": true
+    },
+    {
+      "name": "alpha_core_gaussian_equals_cyclotomic",
+      "left": "(k-1)^2+mu^2",
+      "right": "Phi_3*Phi_4+Phi_6",
+      "value": "137",
+      "decimal": 137.0,
+      "passes": true
+    },
+    {
+      "name": "alpha_core_gaussian_equals_suzuki",
+      "left": "(k-1)^2+mu^2",
+      "right": "q^q*(mu+1)+lambda",
+      "value": "137",
+      "decimal": 137.0,
+      "passes": true
+    },
+    {
+      "name": "alpha_core_gaussian_equals_alt",
+      "left": "(k-1)^2+mu^2",
+      "right": "q^2*g+lambda",
+      "value": "137",
+      "decimal": 137.0,
+      "passes": true
+    },
+    {
+      "name": "charm_inverse_equals_alpha_core",
+      "left": "1/y_c",
+      "right": "|(k-1)+mu*i|^2",
+      "value": "137",
+      "decimal": 137.0,
+      "passes": true
+    },
+    {
+      "name": "alpha_refined_slip_from_charm_inverse",
+      "left": "alpha_refined^{-1}-y_c^{-1}",
+      "right": "v/M_eff",
+      "value": "880/24445",
+      "decimal": 0.03599918183779914,
+      "passes": true
+    },
+    {
+      "name": "alpha_correction_expanded",
+      "left": "v/M_eff",
+      "right": "v*lambda*(k-1)/(lambda*(k-1)*M_vac+q)",
+      "value": "880/24445",
+      "decimal": 0.03599918183779914,
+      "passes": true
+    }
+  ],
+  "all_exact_identities_pass": true,
+  "dashboard": {
+    "lambda_H": 0.13,
+    "ckm_lambda": 0.225,
+    "ckm_A": 0.81,
+    "rho_bar": 0.16,
+    "eta_bar": 0.343,
+    "top_yukawa_cubed": 0.975609756097561,
+    "top_yukawa": 0.9918029100085936,
+    "y_c_core": 0.0072992700729927005,
+    "alpha_inv_core": 137.0,
+    "alpha_inv_refined": 137.0359991818378,
+    "alpha_refined": 0.007297352573756915,
+    "alpha_minus_yc": -0.0000019174992357855524,
+    "yc_over_alpha_minus_1": 0.00026276652490421966
+  },
+  "interpretation": "The refined electromagnetic coupling does not merely sit near the charm Yukawa; its integer core is exactly the inverse charm Yukawa, and the refined alpha correction is a W(3,3) finite-spectral slip v/M_eff. Simultaneously, Higgs and CKM share Phi4^2, and CKM lambda times the top-Yukawa cube collapses to q^2/(v+1)=9/41."
+}
