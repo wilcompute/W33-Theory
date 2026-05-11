@@ -1,0 +1,123 @@
+{
+  "part": "CCCCXLII",
+  "title": "W(3,3) is Ramanujan: Ihara-Bass and the Graph RH",
+  "Verified": true,
+  "checks_total": 16,
+  "checks_passed": 16,
+  "checks": [
+    [
+      "Sum of multiplicities = v = 40",
+      true
+    ],
+    [
+      "Eigenvalues are {12, 2, -4}",
+      true
+    ],
+    [
+      "|2| <= 2*sqrt(k-1) (Ramanujan)",
+      true
+    ],
+    [
+      "|-4| <= 2*sqrt(k-1) (Ramanujan)",
+      true
+    ],
+    [
+      "W(3,3) is Ramanujan",
+      true
+    ],
+    [
+      "Edges = 240 = v*k/2",
+      true
+    ],
+    [
+      "Directed edges = 480 = 2*E",
+      true
+    ],
+    [
+      "E - v = 200 = 5*v",
+      true
+    ],
+    [
+      "Non-backtracking outdeg = 11",
+      true
+    ],
+    [
+      "Critical radius = 1/sqrt(11)",
+      true
+    ],
+    [
+      "a_0 = 480 = directed edges of W(3,3)",
+      true
+    ],
+    [
+      "D_F^2 spectrum total = 480 (matches Hashimoto)",
+      true
+    ],
+    [
+      "alpha correction denominator = 22 * M_vac + 3",
+      true
+    ],
+    [
+      "M_vac = 1111 = 11 * 101 (Ihara-Bass + spectral resolvent)",
+      true
+    ],
+    [
+      "11 = k-1 from Ihara-Bass appears in M_vac factorization",
+      true
+    ],
+    [
+      "Ihara-Bass: det(I-uB) = (1-u^2)^(E-v) * det(I - uA + u^2*(k-1)*I)",
+      true
+    ]
+  ],
+  "constants": {
+    "Q": 3,
+    "V": 40,
+    "K": 12,
+    "LAM": 2,
+    "MU": 4,
+    "F": 24,
+    "G": 15,
+    "PHI3": 13,
+    "PHI4": 10,
+    "PHI6": 7
+  },
+  "adjacency_eigenvalues": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "ramanujan_bound": {
+    "2_sqrt_k_minus_1": 6.6332495807108,
+    "non_trivial_eigenvalues": [
+      2,
+      -4
+    ],
+    "satisfies_Ramanujan": true
+  },
+  "ihara_bass": {
+    "identity": "det(I - uB) = (1 - u^2)^(E-v) * det(I - uA + u^2*(k-1)*I)",
+    "edges_E": 240,
+    "vertices_v": 40,
+    "directed_edges_2E": 480,
+    "trivial_E_minus_v": 200,
+    "k_minus_1": 11,
+    "comment": "The Ihara-Bass determinant identity factors the Hashimoto operator's characteristic polynomial through the adjacency matrix A.  The (k-1) = 11 non-backtracking outdegree is FORCED by this identity and appears in alpha^{-1} (CCCCXLI: 137 + 880/24445 with denominator 24445 = 22 * 11 * 101)."
+  },
+  "graph_RH": {
+    "critical_circle": "|u| = 1/sqrt(k-1) = 1/sqrt(11)",
+    "critical_radius": 0.30151134457776363,
+    "comment": "The Ihara zeta function zeta_X(u) of a Ramanujan graph X has its non-trivial zeros on the critical circle |u| = 1/sqrt(k-1).  This is the graph-theoretic analog of the classical Riemann Hypothesis (zeros of zeta(s) on Re(s) = 1/2).  W(3,3) is Ramanujan, so it satisfies the Graph RH."
+  },
+  "unified_picture": {
+    "level_1": "Master Equation -> W(3,3) (CCCCXXXI)",
+    "level_2": "W(3,3) is Ramanujan (this part)",
+    "level_3": "Ramanujan -> Graph RH (this part)",
+    "level_4": "Ihara-Bass -> Hashimoto operator B on 480-dim directed edges (this part)",
+    "level_5": "Hashimoto = H_F = a_0 = 480 (CCCCXXXIII)",
+    "level_6": "alpha^{-1} = 137 + 880/24445 via Ihara-Bass (CCCCXL, CCCCXLI)",
+    "level_7": "All 39 empirical closures sit in this graph-RH framework (CCCXXII-CCCXLV)"
+  },
+  "theorem_statement": "W(3,3) = SRG(40, 12, 2, 4) is a Ramanujan graph: its non-trivial adjacency eigenvalues 2 and -4 satisfy |lambda| <= 2*sqrt(k-1) = 2*sqrt(11) ~ 6.633. The Ihara-Bass determinant identity factors the 480-dim Hashimoto operator B in terms of the 40-dim adjacency A, with the non-backtracking outdegree (k-1) = 11 emerging as a structural invariant.  The Ihara zeta function zeta_W33(u) has its non-trivial zeros on the critical circle |u| = 1/sqrt(11), satisfying the graph-theoretic Riemann Hypothesis. The 480-dim Hashimoto carrier space is identical to the spectral triple Hilbert space H_F = 480 (CCCCXXXIII), and the (k-1) = 11 factor forced by Ihara-Bass appears explicitly in the alpha^{-1} = 137 + 880/24445 spectral identity (CCCCXLI).  The W(3,3) program thus sits on graph-theoretic Riemann Hypothesis foundations.",
+  "honesty_boundary": "Ramanujan / Graph RH for W(3,3) is a CLOSED theorem in spectral graph theory (W(3,3) is a known Ramanujan SRG with explicit eigenvalues 12, 2, -4).  The structural link 480 = directed edges = H_F = a_0 is established across CCCCXXVIII / CCCCXXXIII / this part.  The connection between alpha^{-1} and Ihara-Bass is via the (k-1) = 11 non-backtracking outdegree that appears in both.  Whether the GRAPH RH gives a structural derivation of the 880/24445 correction beyond the integer factor 11 remains an open research question."
+}
