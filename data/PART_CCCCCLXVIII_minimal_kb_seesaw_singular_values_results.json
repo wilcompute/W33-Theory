@@ -1,0 +1,60 @@
+{
+  "part": "CCCCCLXVIII",
+  "title": "Minimal K-B Seesaw and Singular-Value Reduction",
+  "ansatz": {
+    "carrier": "K direct_sum B",
+    "dim_K": 81,
+    "dim_B": 120,
+    "Phi_min": "[[0,Y],[Y*,h I_B]]",
+    "Y": "B_120 -> K_81",
+    "H": "h I_B",
+    "boundary_eigenvalue": 4,
+    "kernel_eigenvalue": 0
+  },
+  "rank_lock": {
+    "rank_Y_bound": "rank(Y) <= min(81,120) = 81",
+    "max_rank": 81,
+    "forced_boundary_nullity": 39,
+    "identity": "120 = 81 + 39",
+    "rank_d1": 39,
+    "interpretation": "maximal K-B Yukawa bridge leaves a 39-dimensional residual boundary sector matching rank(d1)=|V|-1"
+  },
+  "singular_value_invariants": {
+    "sigma_i": "nonzero singular values of Y",
+    "S2": "sum_i sigma_i^2 = ||Y||^2",
+    "S4": "sum_i sigma_i^4 = Tr((Y Y*)^2)",
+    "rank": "number of nonzero sigma_i"
+  },
+  "trace_formulas": {
+    "Tr_Phi_min_squared": "2 S2 + 120 h^2",
+    "Tr_Delta_Phi_min_squared": "4 S2 + 480 h^2",
+    "commutator_penalty": "32 S2",
+    "Tr_Phi_min_fourth": "2 S4 + 4 h^2 S2 + 120 h^4"
+  },
+  "effective_mass_formulas": {
+    "fermion_carrier": "K^+ direct_sum K^-",
+    "fermion_dimension": "162",
+    "algebraic_mass_operator": "M_alg = h Y Y*",
+    "algebraic_mass_eigenvalues": "h sigma_i^2",
+    "integrated_boundary_operator": "M_eff = (4 M_F^2 + h)^(-1) Y Y*",
+    "integrated_boundary_eigenvalues": "sigma_i^2/(4 M_F^2 + h)",
+    "heavy_boundary_limit": "sigma_i^2/(4 M_F^2)",
+    "massive_kernel_modes": "rank(Y)",
+    "residual_massless_kernel_modes": "81 - rank(Y)"
+  },
+  "potential_ledger": {
+    "V_hY": "alpha(2S2+120h^2)+beta(2S4+4h^2S2+120h^4)+gamma(32S2)+delta(4S2+480h^2)",
+    "free_invariants": "h, S2, S4, rank(Y), singular-value distribution of Y",
+    "next_required_structure": "choose a canonical W(3,3)-equivariant or incidence-derived Y"
+  },
+  "checks": {
+    "max_rank_81": true,
+    "forced_residual_B_39": true,
+    "residual_matches_rank_d1": true,
+    "dimension_split_120_81_39": true,
+    "delta_phi_KB_weight_4": true,
+    "commutator_KB_cost_32": true,
+    "fermion_double_162": true
+  },
+  "all_checks_pass": true
+}
