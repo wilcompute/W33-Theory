@@ -1,0 +1,121 @@
+{
+  "part": "CCCCCLXVII",
+  "title": "Scalar/Yukawa Block Ledger on the W(3,3) 240-Carrier",
+  "sector_decomposition": {
+    "K": {
+      "dim": 81,
+      "lambda": 0,
+      "meaning": "cellular H1 / massless matter kernel"
+    },
+    "B": {
+      "dim": 120,
+      "lambda": 4,
+      "meaning": "triangle-boundary / gauge-local sector"
+    },
+    "R": {
+      "dim": 24,
+      "lambda": 10,
+      "meaning": "r-sector heavy correction"
+    },
+    "S": {
+      "dim": 15,
+      "lambda": 16,
+      "meaning": "s-sector heavy correction"
+    }
+  },
+  "quadratic_trace_weights": {
+    "diagonal_coefficients_Tr_Phi_ii_squared": {
+      "K": 1,
+      "B": 1,
+      "R": 1,
+      "S": 1
+    },
+    "offdiag_coefficients_norm_Phi_ij_squared": {
+      "KB": 2,
+      "KR": 2,
+      "KS": 2,
+      "BR": 2,
+      "BS": 2,
+      "RS": 2
+    },
+    "formula": "Tr(Phi^2)=sum_i Tr(Phi_ii^2)+2 sum_{i<j} ||Phi_ij||^2"
+  },
+  "delta_phi_squared_weights": {
+    "diagonal_coefficients_Tr_Phi_ii_squared": {
+      "K": 0,
+      "B": 4,
+      "R": 10,
+      "S": 16
+    },
+    "offdiag_coefficients_norm_Phi_ij_squared": {
+      "KB": 4,
+      "KR": 10,
+      "KS": 16,
+      "BR": 14,
+      "BS": 20,
+      "RS": 26
+    },
+    "formula": "Tr(Delta_1 Phi^2)=sum_i lambda_i Tr(Phi_ii^2)+sum_{i<j}(lambda_i+lambda_j)||Phi_ij||^2"
+  },
+  "commutator_gap_penalty": {
+    "offdiag_coefficients_norm_Phi_ij_squared": {
+      "KB": 32,
+      "KR": 200,
+      "KS": 512,
+      "BR": 72,
+      "BS": 288,
+      "RS": 72
+    },
+    "formula": "Tr([Delta_1,Phi]^*[Delta_1,Phi])=2 sum_{i<j}(lambda_i-lambda_j)^2||Phi_ij||^2",
+    "ordered_by_cost": [
+      ["KB", 32],
+      ["BR", 72],
+      ["RS", 72],
+      ["KR", 200],
+      ["BS", 288],
+      ["KS", 512]
+    ]
+  },
+  "minimal_KB_ansatz": {
+    "name": "minimal K-B Higgs/Yukawa interface",
+    "nonzero_blocks": {
+      "Phi_KB": "Y : B -> K",
+      "Phi_BK": "Y* : K -> B",
+      "Phi_BB": "H : B -> B"
+    },
+    "trace_Phi_squared": "2||Y||^2 + Tr(H^2)",
+    "trace_Delta_Phi_squared": "4||Y||^2 + 4Tr(H^2)",
+    "commutator_penalty": "32||Y||^2",
+    "quartic_trace": "2Tr((Y Y*)^2)+4Tr(Y H^2 Y*)+Tr(H^4)",
+    "why_minimal": "K-B is the cheapest nonzero bridge from the 81-dimensional kernel into massive sectors."
+  },
+  "quartic_block_rules": {
+    "general_block_path_formula": "Tr(Phi^4)=sum_{i,j,k,l} Tr(Phi_ij Phi_jk Phi_kl Phi_li)",
+    "path_condition": "only sector-compatible closed length-4 block paths contribute",
+    "minimal_KB_formula": "2Tr((Y Y*)^2)+4Tr(Y H^2 Y*)+Tr(H^4)"
+  },
+  "effective_fermion_mass": {
+    "fermion_kernel": "K^+ direct_sum K^-",
+    "dimension": 162,
+    "direct_kernel_dimension": 81,
+    "boundary_scale": "4 M_F^2",
+    "algebraic_composite": "M_eff ~ Y H Y*",
+    "integrated_boundary_composite": "M_eff ~ Y (4 M_F^2 + H)^(-1) Y*",
+    "interpretation": "massless H1 modes acquire effective mass through the massive boundary/gauge sector"
+  },
+  "checks": {
+    "total_dimension_240": true,
+    "kernel_dimension_81": true,
+    "boundary_dimension_120": true,
+    "eigenvalues": true,
+    "KB_delta_weight_4": true,
+    "KR_delta_weight_10": true,
+    "KS_delta_weight_16": true,
+    "KB_commutator_cost_32": true,
+    "KR_commutator_cost_200": true,
+    "KS_commutator_cost_512": true,
+    "KB_cheapest_from_kernel": true,
+    "fermion_double_162": true
+  },
+  "all_checks_pass": true
+}
