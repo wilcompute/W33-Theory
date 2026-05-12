@@ -1,0 +1,199 @@
+{
+  "part": "CCCCCLXV",
+  "title": "QFT Extraction from the 240-Dimensional W(3,3) 1-Chain Carrier",
+  "external_spectral_triple": {
+    "algebra": "A_ext = C^infty(M)",
+    "hilbert_space": "H_ext = L^2(M,S)",
+    "dirac_operator": "D_ext = gamma^mu (nabla_mu^S + A_mu)",
+    "grading": "gamma_5",
+    "dimension": 4,
+    "heat_trace_expansion": "K_ext(t) ~ sum_{r>=0} a_{2r}^{ext} t^{r-2}",
+    "normalization": {
+      "laplace_type_operator": "P = -(g^{mu nu} nabla_mu nabla_nu + E)",
+      "a0_ext": "(4pi)^(-2) int_M sqrt(g) tr(1)",
+      "a2_ext": "(4pi)^(-2) int_M sqrt(g) tr(E + R/6)",
+      "a4_ext": "(4pi)^(-2)/360 int_M sqrt(g) tr(60RE + 180E^2 + 30Omega^2 + curvature scalars)"
+    }
+  },
+  "internal_carrier": {
+    "carrier": "H_F = C_1(W(3,3); C)",
+    "dimension": 240,
+    "operator": "Delta_1 = d1^* d1 + d2 d2^*",
+    "product_operator": "D_tot = D_ext tensor 1_F + gamma_5 tensor D_F",
+    "product_square": "D_tot^2 = D_ext^2 tensor 1_F + 1_ext tensor Delta_1",
+    "heat_factorization": "K_tot(t) = K_ext(t) K_F(t)",
+    "heat_trace": "K_F(t)=81+120 exp(-4t)+24 exp(-10t)+15 exp(-16t)",
+    "sector_split": {
+      "harmonic_H1_zero_modes": 81,
+      "triangle_boundary_gauge_exact": 120,
+      "r_sector": 24,
+      "s_sector": 15
+    },
+    "why_chosen": "Smallest carrier that simultaneously sees the 81 physical H1 modes, 120 triangle-boundary/gauge sector, and 24/15 W(3,3) heavy sectors."
+  },
+  "internal_spectrum": {
+    "0": 81,
+    "4": 120,
+    "10": 24,
+    "16": 15
+  },
+  "moments": {
+    "0": "240",
+    "1": "960",
+    "2": "8160",
+    "3": "93120",
+    "4": "1253760",
+    "5": "18251520",
+    "6": "276149760",
+    "7": "4268497920",
+    "8": "66832373760"
+  },
+  "taylor_coefficients": {
+    "0": "240",
+    "1": "-960",
+    "2": "4080",
+    "3": "-15520",
+    "4": "52240",
+    "5": "-152096",
+    "6": "1150624/3",
+    "7": "-17785408/21",
+    "8": "34808528/21"
+  },
+  "convolution_coefficients": {
+    "A0_tot": {
+      "a0_ext": "240"
+    },
+    "A2_tot": {
+      "a2_ext": "240",
+      "a0_ext": "-960"
+    },
+    "A4_tot": {
+      "a4_ext": "240",
+      "a2_ext": "-960",
+      "a0_ext": "4080"
+    },
+    "A6_tot": {
+      "a6_ext": "240",
+      "a4_ext": "-960",
+      "a2_ext": "4080",
+      "a0_ext": "-15520"
+    },
+    "A8_tot": {
+      "a8_ext": "240",
+      "a6_ext": "-960",
+      "a4_ext": "4080",
+      "a2_ext": "-15520",
+      "a0_ext": "52240"
+    },
+    "A10_tot": {
+      "a10_ext": "240",
+      "a8_ext": "-960",
+      "a6_ext": "4080",
+      "a4_ext": "-15520",
+      "a2_ext": "52240",
+      "a0_ext": "-152096"
+    },
+    "A12_tot": {
+      "a12_ext": "240",
+      "a10_ext": "-960",
+      "a8_ext": "4080",
+      "a6_ext": "-15520",
+      "a4_ext": "52240",
+      "a2_ext": "-152096",
+      "a0_ext": "1150624/3"
+    },
+    "A14_tot": {
+      "a14_ext": "240",
+      "a12_ext": "-960",
+      "a10_ext": "4080",
+      "a8_ext": "-15520",
+      "a6_ext": "52240",
+      "a4_ext": "-152096",
+      "a2_ext": "1150624/3",
+      "a0_ext": "-17785408/21"
+    },
+    "A16_tot": {
+      "a16_ext": "240",
+      "a14_ext": "-960",
+      "a12_ext": "4080",
+      "a10_ext": "-15520",
+      "a8_ext": "52240",
+      "a6_ext": "-152096",
+      "a4_ext": "1150624/3",
+      "a2_ext": "-17785408/21",
+      "a0_ext": "34808528/21"
+    }
+  },
+  "sector_extraction": {
+    "bosonic_spectral_action": "S_bos(Lambda) ~ f4 Lambda^4 A0 + f2 Lambda^2 A2 + f0 A4 + f_-2 Lambda^-2 A6 + ...",
+    "volume_ladder": [
+      "240",
+      "-960",
+      "4080",
+      "-15520",
+      "52240",
+      "-152096"
+    ],
+    "einstein_hilbert_ladder": {
+      "coefficient_series_for_a2_ext_R": "f2 Lambda^2*c0 + f0*c1 + f_-2 Lambda^-2*c2 + f_-4 Lambda^-4*c3 + ...",
+      "first_terms": {
+        "f2_Lambda2": "240",
+        "f0": "-960",
+        "f_minus2_Lambda_minus2": "4080",
+        "f_minus4_Lambda_minus4": "-15520"
+      }
+    },
+    "gauge_sector": {
+      "normalization": "a4_ext[F^2] = (4pi)^(-2) int sqrt(g) (1/12) kappa_G tr(F_{mu nu}F^{mu nu})",
+      "leading_inverse_coupling": "1/(4 g_G^2) = f0 * 20 * kappa_G / (4pi)^2",
+      "derivation": "c0/12 = 240/12 = 20",
+      "relative_couplings_depend_on": "representation trace normalizations kappa_G"
+    },
+    "higgs_sector": {
+      "inner_fluctuation": "D_F -> D_F + Phi(x)",
+      "required_exact_traces": [
+        "tr_F(Phi^2)",
+        "tr_F(Phi^4)",
+        "tr_F(Delta_1 Phi^2)",
+        "tr_F((nabla Phi)^2) after representation choice"
+      ],
+      "fixed_W33_inputs": {
+        "tr_F(1)": "240",
+        "tr_F(Delta_1)": "960",
+        "tr_F(Delta_1^2)": "8160"
+      },
+      "guardrail": "No Higgs mass/quartic number is fixed until Phi representation traces are explicit."
+    },
+    "fermion_sector": {
+      "fermionic_action": "S_ferm = <psi, D_tot^{A,Phi} psi>",
+      "massless_matter_carrier": "ker Delta_1, dimension 81",
+      "chiral_real_projection": "H_ferm = H1_cell^+ direct_sum H1_cell^-, dimension 162",
+      "full_internal_bosonic_carrier": "C_1(W(3,3)), dimension 240"
+    },
+    "carrier_dictionary": {
+      "40": "adjacency theorem kernel",
+      "81": "cellular H1 harmonic matter/generation sector",
+      "162": "fermionic chiral doubled H1 sector",
+      "240": "full cellular 1-chain QFT extraction carrier",
+      "480": "directed-edge Hashimoto propagation carrier"
+    }
+  },
+  "checks": {
+    "dimension_240": true,
+    "zero_modes_81": true,
+    "boundary_sector_120": true,
+    "heavy_sectors_24_15": true,
+    "mu0_240": true,
+    "mu1_960": true,
+    "mu2_8160": true,
+    "mu3_93120": true,
+    "mu4_1253760": true,
+    "c0_240": true,
+    "c1_minus960": true,
+    "c2_4080": true,
+    "c3_minus15520": true,
+    "gauge_factor_20": true,
+    "A4_coefficients": true
+  },
+  "all_checks_pass": true
+}
