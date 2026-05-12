@@ -1,0 +1,73 @@
+{
+  "part": "CCCCXLII",
+  "title": "Third-Reference Refinement Witness",
+  "Verified": true,
+  "checks_total": 8,
+  "checks_passed": 8,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "pair (0,13) is two-reference feasible",
+      true
+    ],
+    [
+      "pair (0,1) is two-reference infeasible",
+      true
+    ],
+    [
+      "pair (0,239) is two-reference infeasible",
+      true
+    ],
+    [
+      "feasible pair keeps feasibility for all 240 choices of c",
+      true
+    ],
+    [
+      "infeasible pair (0,1) rescued for 234 choices of c",
+      true
+    ],
+    [
+      "infeasible pair (0,239) rescued for 126 choices of c",
+      true
+    ],
+    [
+      "rescue counts are strict (0 < count < 240)",
+      true
+    ]
+  ],
+  "representatives": {
+    "feasible_pair": {
+      "pair": [
+        0,
+        13
+      ],
+      "two_reference_feasible": true,
+      "feasible_c_count": 240
+    },
+    "infeasible_pair_A": {
+      "pair": [
+        0,
+        1
+      ],
+      "two_reference_feasible": false,
+      "feasible_c_count": 234
+    },
+    "infeasible_pair_B": {
+      "pair": [
+        0,
+        239
+      ],
+      "two_reference_feasible": false,
+      "feasible_c_count": 126
+    }
+  },
+  "key_observations": [
+    "Third-reference refinement preserves all feasible structure for the canonical feasible pair (0,13).",
+    "Third-reference refinement rescues large portions of infeasible pairs: 234 and 126 choices out of 240.",
+    "Hence third-reference data strictly refines two-reference classification power."
+  ],
+  "honesty_boundary": "This part gives representative certified rescue counts and a structural monotonicity lemma. A full all-pairs third-reference stratification remains open."
+}

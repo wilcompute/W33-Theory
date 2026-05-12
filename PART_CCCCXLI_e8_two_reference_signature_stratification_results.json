@@ -1,0 +1,102 @@
+{
+  "part": "CCCCXLI",
+  "title": "E8 Two-Reference Signature Stratification",
+  "Verified": true,
+  "checks_total": 7,
+  "checks_passed": 7,
+  "checks": [
+    [
+      "E8 root count = 240",
+      true
+    ],
+    [
+      "Total unordered pairs (with diagonal) = 28920",
+      true
+    ],
+    [
+      "Exactly three two-reference signature families",
+      true
+    ],
+    [
+      "Observed multiplicities match 360/13440/15120",
+      true
+    ],
+    [
+      "Exactly one feasible signature family",
+      true
+    ],
+    [
+      "Feasible pair count = 15120",
+      true
+    ],
+    [
+      "Signature counts sum to 28920",
+      true
+    ]
+  ],
+  "search": {
+    "roots": 240,
+    "pairs_including_diagonal": 28920,
+    "distinct_signatures": 3,
+    "feasible_signatures": 1,
+    "feasible_pairs": 15120
+  },
+  "signature_families": [
+    {
+      "signature": [
+        1,
+        1,
+        56,
+        56,
+        126
+      ],
+      "pair_count": 360,
+      "feasible_24_108_108": false
+    },
+    {
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        72
+      ],
+      "pair_count": 13440,
+      "feasible_24_108_108": false
+    },
+    {
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        12,
+        12,
+        12,
+        32,
+        32,
+        32,
+        32,
+        60
+      ],
+      "pair_count": 15120,
+      "feasible_24_108_108": true
+    }
+  ],
+  "key_observations": [
+    "The two-reference ansatz has exactly three signature strata.",
+    "Their exact multiplicities are 360, 13440, and 15120.",
+    "Only one stratum is 24/108/108-feasible, with size 15120.",
+    "Hence degeneracy is structured, not arbitrary."
+  ],
+  "honesty_boundary": "This part classifies two-reference strata exactly but does not yet provide a unique constructive edge\u2194root operator dictionary."
+}

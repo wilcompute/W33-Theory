@@ -1,0 +1,172 @@
+{
+  "part": "CCCCXLVI",
+  "title": "E8 Inner-Product Rescue Trichotomy",
+  "Verified": true,
+  "checks_total": 7,
+  "checks_passed": 7,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "Exactly three two-reference families",
+      true
+    ],
+    [
+      "Total pairs (including diagonal) = 28920",
+      true
+    ],
+    [
+      "Dot histogram matches exact E8 pair counts",
+      true
+    ],
+    [
+      "All dot classes are constant over first-50 samples",
+      true
+    ],
+    [
+      "Rescue trichotomy constants are 126/234/240",
+      true
+    ],
+    [
+      "Strict ordering holds: 126 < 234 < 240",
+      true
+    ]
+  ],
+  "sample_per_dot_class": 50,
+  "dot_histogram": {
+    "-8": 120,
+    "-4": 6720,
+    "0": 15120,
+    "4": 6720,
+    "8": 240
+  },
+  "profiles": [
+    {
+      "family_id": 1,
+      "signature": [
+        1,
+        1,
+        56,
+        56,
+        126
+      ],
+      "pair_count": 360,
+      "two_reference_feasible": false,
+      "dot_profiles": {
+        "-8": {
+          "pair_count": 120,
+          "sample_size": 50,
+          "sample_min": 126,
+          "sample_max": 126,
+          "constant_over_sample": true,
+          "sample_constant": 126,
+          "representative_pair": [
+            0,
+            239
+          ]
+        },
+        "8": {
+          "pair_count": 240,
+          "sample_size": 50,
+          "sample_min": 126,
+          "sample_max": 126,
+          "constant_over_sample": true,
+          "sample_constant": 126,
+          "representative_pair": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "family_id": 2,
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        72
+      ],
+      "pair_count": 13440,
+      "two_reference_feasible": false,
+      "dot_profiles": {
+        "-4": {
+          "pair_count": 6720,
+          "sample_size": 50,
+          "sample_min": 234,
+          "sample_max": 234,
+          "constant_over_sample": true,
+          "sample_constant": 234,
+          "representative_pair": [
+            0,
+            150
+          ]
+        },
+        "4": {
+          "pair_count": 6720,
+          "sample_size": 50,
+          "sample_min": 234,
+          "sample_max": 234,
+          "constant_over_sample": true,
+          "sample_constant": 234,
+          "representative_pair": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "family_id": 3,
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        12,
+        12,
+        12,
+        32,
+        32,
+        32,
+        32,
+        60
+      ],
+      "pair_count": 15120,
+      "two_reference_feasible": true,
+      "dot_profiles": {
+        "0": {
+          "pair_count": 15120,
+          "sample_size": 50,
+          "sample_min": 240,
+          "sample_max": 240,
+          "constant_over_sample": true,
+          "sample_constant": 240,
+          "representative_pair": [
+            0,
+            13
+          ]
+        }
+      }
+    }
+  ],
+  "trichotomy_constants": [
+    126,
+    234,
+    240
+  ],
+  "theorem_statement": "Two-reference pairs in E8 organize into dot-classes d in {-8,-4,0,4,8}. Their third-reference rescue profile exhibits a strict trichotomy: 126 (d=\u00b18), 234 (d=\u00b14), 240 (d=0).",
+  "honesty_boundary": "This part certifies exact pair-count histograms and stable sampled constants (first 50 per dot class). A full all-pairs proof of constant rescue per dot class is left open."
+}

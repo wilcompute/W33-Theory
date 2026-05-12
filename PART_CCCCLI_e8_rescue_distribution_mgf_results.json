@@ -1,0 +1,86 @@
+{
+  "part": "CCCCLI",
+  "title": "E8 Rescue Distribution and Generating-Function Law",
+  "Verified": true,
+  "checks_total": 8,
+  "checks_passed": 8,
+  "checks": [
+    [
+      "E8 roots count = 240",
+      true
+    ],
+    [
+      "Total unordered pairs = 28920",
+      true
+    ],
+    [
+      "Dot histogram matches exact classes",
+      true
+    ],
+    [
+      "Rescue distribution is exactly 360/13440/15120",
+      true
+    ],
+    [
+      "Weighted rescue total = 6819120",
+      true
+    ],
+    [
+      "Mean rescue is between 234 and 240",
+      true
+    ],
+    [
+      "Variance is strictly positive",
+      true
+    ],
+    [
+      "Third central moment is finite",
+      true
+    ]
+  ],
+  "pair_count": 28920,
+  "dot_histogram": {
+    "-8": 120,
+    "-4": 6720,
+    "0": 15120,
+    "4": 6720,
+    "8": 240
+  },
+  "rescue_distribution": {
+    "126": 360,
+    "234": 13440,
+    "240": 15120
+  },
+  "counting_generating_polynomial": "P(t)=360 t^126 + 13440 t^234 + 15120 t^240",
+  "probability_generating_function": "G(t)=P(t)/28920",
+  "weighted_rescue_total": 6819120,
+  "moments": {
+    "raw_m1": {
+      "numerator": 56826,
+      "denominator": 241,
+      "float": 235.79253112033194
+    },
+    "raw_m2": {
+      "numerator": 13437900,
+      "denominator": 241,
+      "float": 55758.921161825725
+    },
+    "raw_m3": {
+      "numerator": 3182870376,
+      "denominator": 241,
+      "float": 13206931.020746889
+    },
+    "variance": {
+      "numerator": 9339624,
+      "denominator": 58081,
+      "float": 160.80342969301492
+    },
+    "central_mu3": {
+      "numerator": -230100039792,
+      "denominator": 13997521,
+      "float": -16438.62793933297
+    }
+  },
+  "theorem_statement": "The all-pairs rescue distribution is exactly triatomic: 126 (360 pairs), 234 (13440 pairs), and 240 (15120 pairs), hence P(t)=360 t^126 + 13440 t^234 + 15120 t^240.",
+  "honesty_boundary": "This part is a global distributional corollary of the exact dot-class lookup law (CCCCL), not an independent structural derivation of that lookup."
+}
