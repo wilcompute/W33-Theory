@@ -77,13 +77,13 @@ class TestEffectiveYMassSpectrum:
         """Verify vertex spectrum has correct structure."""
         v_spec = ccccclxxvi_result["marked_vertex_y_spectrum"]
         assert v_spec["rank"] == 8
-        assert len(v_spec["nonzero_eigenvalues_count"]) == 8 or v_spec["nonzero_eigenvalues_count"] == 8
+        assert v_spec["nonzero_eigenvalues_count"] == 8
 
     def test_triangle_spectrum_structure(self, ccccclxxvi_result: dict) -> None:
         """Verify triangle spectrum has correct structure."""
         t_spec = ccccclxxvi_result["marked_triangle_y_spectrum"]
         assert t_spec["rank"] == 2
-        assert len(t_spec["nonzero_eigenvalues_count"]) == 2 or t_spec["nonzero_eigenvalues_count"] == 2
+        assert t_spec["nonzero_eigenvalues_count"] == 2
 
     def test_coupling_determinant_values(self, ccccclxxvi_result: dict) -> None:
         """Verify determinant values are positive and consistent."""
