@@ -1,0 +1,84 @@
+{
+  "part": "CCCCCXLV",
+  "title": "Discrete/Continuous Spectral Bridge and Dimension Descent",
+  "finite_kernel": {
+    "points": 40,
+    "edges": 240,
+    "triangles": 160,
+    "degrees": [
+      12
+    ],
+    "lambda_values": [
+      2
+    ],
+    "mu_values": [
+      4
+    ],
+    "diag_A2": [
+      12
+    ],
+    "adjacency_spectrum": {
+      "12": 1,
+      "2": 24,
+      "-4": 15
+    },
+    "laplacian_spectrum": {
+      "0": 1,
+      "10": 24,
+      "16": 15
+    }
+  },
+  "continuous_functional_calculus": {
+    "master_formula": "f(L)=f(0)P0+f(10)P10+f(16)P16",
+    "heat_trace_internal": "K_W(t)=1+24 exp(-10t)+15 exp(-16t)",
+    "zeta_internal": "zeta_W(s)=24*10^(-s)+15*16^(-s)",
+    "spectral_action": "Tr Phi(L/Lambda^2)=Phi(0)+24 Phi(10/Lambda^2)+15 Phi(16/Lambda^2)",
+    "finite_heat_guardrail": "K_W(t) is analytic at t=0; no internal t^(-d/2) divergence occurs before adding an external continuum."
+  },
+  "dimension_descent": {
+    "rank_d1": 39,
+    "rank_d2": 120,
+    "graph_cycle_rank": 201,
+    "cellular_H1_rank": 81,
+    "graph_tropical_jacobian_dim": 201,
+    "cellular_jacobian_dim": 81,
+    "descent_identity": "201 - 120 = 81 = 3*27",
+    "interpretation": "Triangle boundaries remove 120 local curvature/gauge-exact graph cycles, leaving the 81-dimensional physical H1 torus."
+  },
+  "resistance_metric": {
+    "P0": "J/40",
+    "P10": "-((A-12I)(A+4I))/60",
+    "P16": "((A-12I)(A-2I))/96",
+    "Lplus_diag": "267/3200",
+    "Lplus_adjacent_offdiag": "7/3200",
+    "Lplus_nonadjacent_offdiag": "-13/3200",
+    "R_adjacent": "13/80",
+    "R_nonadjacent": "7/40",
+    "R_ratio_non_over_adj": "14/13",
+    "Kirchhoff_index_standard": "267/2",
+    "Kirchhoff_index_half_normalized": "267/4"
+  },
+  "external_continuum_bridge": {
+    "almost_commutative_operator": "D_total^2 = Delta_ext tensor I_40 + I_ext tensor L_W",
+    "heat_trace_factorization": "K_total(t)=K_ext(t) K_W(t)",
+    "four_dimensional_weyl_law": "For external (C_n)^4 with diffusive scaling, K_ext(t) ~ C t^(-2), so K_total(t) ~ 40 C t^(-2).",
+    "tomotope_Qk_role": "Internal cover towers can change finite multiplicities but not the external Weyl exponent."
+  },
+  "checks": {
+    "points_40": true,
+    "edges_240": true,
+    "triangles_160": true,
+    "degree_12": true,
+    "lambda_2": true,
+    "mu_4": true,
+    "rank_d1_39": true,
+    "rank_d2_120": true,
+    "graph_cycle_rank_201": true,
+    "cellular_h1_81": true,
+    "resistance_adj_13_80": true,
+    "resistance_non_7_40": true,
+    "kirchhoff_standard_267_2": true,
+    "kirchhoff_half_normalized_267_4": true
+  },
+  "all_checks_pass": true
+}
