@@ -1,0 +1,63 @@
+{
+  "part": "CCCCCLXX",
+  "title": "Marked-Vertex Incidence Bridge for Y",
+  "construction": {
+    "vertex_bridge": "Y_v = P_K M_v P_B",
+    "triangle_bridge": "Y_tau = P_K M_tau P_B",
+    "P_K": "orthogonal projector onto ker Delta_1",
+    "P_B": "orthogonal projector onto 4-eigenspace / boundary sector",
+    "M_v": "diagonal mask on the 12 edges incident to marked vertex v",
+    "M_tau": "diagonal mask on the 3 edges of marked triangle tau"
+  },
+  "laplacian_spectrum": {
+    "0": 81,
+    "4": 120,
+    "10": 24,
+    "16": 15
+  },
+  "vertex_bridge": {
+    "marked_vertex": 0,
+    "marked_edges": 12,
+    "rank": 8,
+    "nonzero_singular_squared_exact": "81/640",
+    "nonzero_singular_squared_multiplicity": 8,
+    "nonzero_singular_exact": "sqrt(81/640)=9/(8 sqrt(10))",
+    "S2_exact": "81/80",
+    "S4_exact": "6561/51200",
+    "S2_numeric": 1.0125,
+    "S4_numeric": 0.12814453125
+  },
+  "triangle_bridge": {
+    "marked_triangle": [0, 1, 2],
+    "marked_edges": 3,
+    "rank": 2,
+    "nonzero_singular_squared_exact": "81/640",
+    "nonzero_singular_squared_multiplicity": 2,
+    "S2_exact": "81/320",
+    "S4_exact": "6561/204800",
+    "S2_numeric": 0.253125,
+    "S4_numeric": 0.0320361328125
+  },
+  "effective_mass_atom": {
+    "vertex_mass_eigenvalues": "(81/640)/(4 M_F^2 + h), multiplicity 8",
+    "triangle_mass_eigenvalues": "(81/640)/(4 M_F^2 + h), multiplicity 2",
+    "single_vertex_residual_kernel_modes": "81 - 8 = 73",
+    "principle": "physical Y should be synthesized from incidence-frame bridge atoms"
+  },
+  "checks": {
+    "points_40": true,
+    "edges_240": true,
+    "triangles_160": true,
+    "spectrum_0_81": true,
+    "spectrum_4_120": true,
+    "vertex_mask_12_edges": true,
+    "vertex_rank_8": true,
+    "vertex_S2_81_over_80": true,
+    "vertex_S4_6561_over_51200": true,
+    "triangle_mask_3_edges": true,
+    "triangle_rank_2": true,
+    "triangle_S2_81_over_320": true,
+    "triangle_S4_6561_over_204800": true
+  },
+  "all_checks_pass": true
+}
