@@ -1,0 +1,193 @@
+{
+  "part": "CCCCCLXVI",
+  "title": "Dimensional Normalization Ledger for W(3,3) Spectral Action",
+  "dimensionless_spectrum": {
+    "0": 81,
+    "4": 120,
+    "10": 24,
+    "16": 15
+  },
+  "dimensionful_operator": {
+    "D_F^2": "M_F^2 Delta_1",
+    "D_tot": "D_ext tensor 1_F + gamma_5 tensor D_F",
+    "D_tot^2": "D_ext^2 tensor 1_F + 1_ext tensor M_F^2 Delta_1",
+    "control_ratio": "x = M_F^2 / Lambda^2"
+  },
+  "dimensionless_moments": {
+    "0": "240",
+    "1": "960",
+    "2": "8160",
+    "3": "93120",
+    "4": "1253760",
+    "5": "18251520",
+    "6": "276149760",
+    "7": "4268497920",
+    "8": "66832373760"
+  },
+  "scaled_moments": {
+    "0": "240",
+    "1": "960 M_F^2",
+    "2": "8160 M_F^4",
+    "3": "93120 M_F^6",
+    "4": "1253760 M_F^8",
+    "5": "18251520 M_F^10",
+    "6": "276149760 M_F^12",
+    "7": "4268497920 M_F^14",
+    "8": "66832373760 M_F^16"
+  },
+  "scaled_taylor_coefficients": {
+    "0": "240",
+    "1": "-960 M_F^2",
+    "2": "4080 M_F^4",
+    "3": "-15520 M_F^6",
+    "4": "52240 M_F^8",
+    "5": "-152096 M_F^10",
+    "6": "1150624/3 M_F^12",
+    "7": "-17785408/21 M_F^14",
+    "8": "34808528/21 M_F^16"
+  },
+  "normalized_polynomial_coefficients": {
+    "0": "1",
+    "1": "-4",
+    "2": "17",
+    "3": "-194/3",
+    "4": "653/3",
+    "5": "-9506/15",
+    "6": "71914/45",
+    "7": "-1111588/315",
+    "8": "2175533/315"
+  },
+  "convolution_coefficients": {
+    "A0_tot(M_F)": {
+      "a0_ext": "240"
+    },
+    "A2_tot(M_F)": {
+      "a2_ext": "240",
+      "a0_ext": "-960 M_F^2"
+    },
+    "A4_tot(M_F)": {
+      "a4_ext": "240",
+      "a2_ext": "-960 M_F^2",
+      "a0_ext": "4080 M_F^4"
+    },
+    "A6_tot(M_F)": {
+      "a6_ext": "240",
+      "a4_ext": "-960 M_F^2",
+      "a2_ext": "4080 M_F^4",
+      "a0_ext": "-15520 M_F^6"
+    },
+    "A8_tot(M_F)": {
+      "a8_ext": "240",
+      "a6_ext": "-960 M_F^2",
+      "a4_ext": "4080 M_F^4",
+      "a2_ext": "-15520 M_F^6",
+      "a0_ext": "52240 M_F^8"
+    },
+    "A10_tot(M_F)": {
+      "a10_ext": "240",
+      "a8_ext": "-960 M_F^2",
+      "a6_ext": "4080 M_F^4",
+      "a4_ext": "-15520 M_F^6",
+      "a2_ext": "52240 M_F^8",
+      "a0_ext": "-152096 M_F^10"
+    },
+    "A12_tot(M_F)": {
+      "a12_ext": "240",
+      "a10_ext": "-960 M_F^2",
+      "a8_ext": "4080 M_F^4",
+      "a6_ext": "-15520 M_F^6",
+      "a4_ext": "52240 M_F^8",
+      "a2_ext": "-152096 M_F^10",
+      "a0_ext": "1150624/3 M_F^12"
+    },
+    "A14_tot(M_F)": {
+      "a14_ext": "240",
+      "a12_ext": "-960 M_F^2",
+      "a10_ext": "4080 M_F^4",
+      "a8_ext": "-15520 M_F^6",
+      "a6_ext": "52240 M_F^8",
+      "a4_ext": "-152096 M_F^10",
+      "a2_ext": "1150624/3 M_F^12",
+      "a0_ext": "-17785408/21 M_F^14"
+    },
+    "A16_tot(M_F)": {
+      "a16_ext": "240",
+      "a14_ext": "-960 M_F^2",
+      "a12_ext": "4080 M_F^4",
+      "a10_ext": "-15520 M_F^6",
+      "a8_ext": "52240 M_F^8",
+      "a6_ext": "-152096 M_F^10",
+      "a4_ext": "1150624/3 M_F^12",
+      "a2_ext": "-17785408/21 M_F^14",
+      "a0_ext": "34808528/21 M_F^16"
+    }
+  },
+  "sector_ledgers": {
+    "dimensionless_ratio": "x = M_F^2 / Lambda^2",
+    "volume_density_coefficient": {
+      "formula": "sum_{l>=0} f_{4-2l} Lambda^{4-2l} c_l(M_F)",
+      "first_terms": {
+        "f4_Lambda4": "240",
+        "f2_Lambda2": "-960 M_F^2",
+        "f0": "4080 M_F^4",
+        "f_minus2_Lambda_minus2": "-15520 M_F^6",
+        "f_minus4_Lambda_minus4": "52240 M_F^8"
+      }
+    },
+    "einstein_hilbert_coefficient": {
+      "formula": "sum_{l>=0} f_{2-2l} Lambda^{2-2l} c_l(M_F) multiplying a2_ext[R]",
+      "first_terms": {
+        "f2_Lambda2": "240",
+        "f0": "-960 M_F^2",
+        "f_minus2_Lambda_minus2": "4080 M_F^4",
+        "f_minus4_Lambda_minus4": "-15520 M_F^6"
+      },
+      "normalized_W33_polynomial": "1 - 4x + 17x^2 - (194/3)x^3 + (653/3)x^4 - ..."
+    },
+    "yang_mills_coefficient": {
+      "normalization": "a4_ext[F^2] = (4pi)^(-2) int sqrt(g) (1/12) kappa_G tr(F^2)",
+      "formula": "1/(4g_G^2) = kappa_G/(12(4pi)^2) * C_YM",
+      "C_YM": {
+        "f0": "240",
+        "f_minus2_Lambda_minus2": "-960 M_F^2",
+        "f_minus4_Lambda_minus4": "4080 M_F^4",
+        "f_minus6_Lambda_minus6": "-15520 M_F^6"
+      },
+      "leading_factor": "20 f0 kappa_G / (4pi)^2",
+      "normalized_W33_polynomial": "1 - 4x + 17x^2 - (194/3)x^3 + ..."
+    },
+    "higgs_guardrail": {
+      "fixed_traces": {
+        "tr_F(1)": "240",
+        "tr_F(M_F^2 Delta_1)": "960 M_F^2",
+        "tr_F((M_F^2 Delta_1)^2)": "8160 M_F^4"
+      },
+      "still_required": [
+        "finite algebra representation on C_1(W(3,3))",
+        "Phi action on the 81,120,24,15 sectors",
+        "tr_F(Phi^2)",
+        "tr_F(Phi^4)",
+        "tr_F(Delta_1 Phi^2)",
+        "tr_F((nabla Phi)^2)"
+      ]
+    },
+    "fermion_projection": {
+      "massless_kernel": "ker Delta_1, dimension 81",
+      "chiral_double": "162",
+      "yukawa_location": "Phi couplings on/through the 81-dimensional kernel and massive sectors"
+    }
+  },
+  "checks": {
+    "dimension_240": true,
+    "mu0_240": true,
+    "mu1_960": true,
+    "mu2_8160": true,
+    "c1_scaled": true,
+    "c2_scaled": true,
+    "normalized_coeff_1_minus4": true,
+    "normalized_coeff_2_17": true,
+    "normalized_coeff_3_minus194_over_3": true,
+    "leading_gauge_factor_20": true
+  },
+  "all_checks_pass": true
+}
