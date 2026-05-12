@@ -43,6 +43,7 @@ These 40 vectors satisfy the single linear dependence:
 ```text
 Σ_v grad(v) = 2 · (all edges)  
 ```
+
 because each edge is incident to exactly 2 vertices.
 
 The 40 vectors span a 39-dimensional subspace. An orthonormal basis {v₁, ..., v₃₉} for this subspace carries the incidence-weight structure: applications to vertex-degree sums, vertex-gradient flows, and weight-balanced decompositions.
