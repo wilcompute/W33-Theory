@@ -1,0 +1,134 @@
+{
+  "part": "CCCCCXLVI",
+  "title": "Almost-Commutative Moment-Coupling Theorem",
+  "internal_spectrum": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "moments": {
+    "0": "40",
+    "1": "480",
+    "2": "6240",
+    "3": "85440",
+    "4": "1223040",
+    "5": "18128640",
+    "6": "275658240",
+    "7": "4266531840",
+    "8": "66824509440"
+  },
+  "taylor_coefficients": {
+    "0": "40",
+    "1": "-480",
+    "2": "3120",
+    "3": "-14240",
+    "4": "50960",
+    "5": "-151072",
+    "6": "1148576/3",
+    "7": "-17777216/21",
+    "8": "34804432/21"
+  },
+  "convolution_coefficients": {
+    "A0_tot": {
+      "a0_ext": "40"
+    },
+    "A2_tot": {
+      "a2_ext": "40",
+      "a0_ext": "-480"
+    },
+    "A4_tot": {
+      "a4_ext": "40",
+      "a2_ext": "-480",
+      "a0_ext": "3120"
+    },
+    "A6_tot": {
+      "a6_ext": "40",
+      "a4_ext": "-480",
+      "a2_ext": "3120",
+      "a0_ext": "-14240"
+    },
+    "A8_tot": {
+      "a8_ext": "40",
+      "a6_ext": "-480",
+      "a4_ext": "3120",
+      "a2_ext": "-14240",
+      "a0_ext": "50960"
+    },
+    "A10_tot": {
+      "a10_ext": "40",
+      "a8_ext": "-480",
+      "a6_ext": "3120",
+      "a4_ext": "-14240",
+      "a2_ext": "50960",
+      "a0_ext": "-151072"
+    },
+    "A12_tot": {
+      "a12_ext": "40",
+      "a10_ext": "-480",
+      "a8_ext": "3120",
+      "a6_ext": "-14240",
+      "a4_ext": "50960",
+      "a2_ext": "-151072",
+      "a0_ext": "1148576/3"
+    },
+    "A14_tot": {
+      "a14_ext": "40",
+      "a12_ext": "-480",
+      "a10_ext": "3120",
+      "a8_ext": "-14240",
+      "a6_ext": "50960",
+      "a4_ext": "-151072",
+      "a2_ext": "1148576/3",
+      "a0_ext": "-17777216/21"
+    },
+    "A16_tot": {
+      "a16_ext": "40",
+      "a14_ext": "-480",
+      "a12_ext": "3120",
+      "a10_ext": "-14240",
+      "a8_ext": "50960",
+      "a6_ext": "-151072",
+      "a4_ext": "1148576/3",
+      "a2_ext": "-17777216/21",
+      "a0_ext": "34804432/21"
+    }
+  },
+  "flat_torus_leading_example": {
+    "A0_tot_multiplier_of_V_over_4pi_squared": "160",
+    "A2_tot_multiplier_of_V_over_4pi_squared": "-1920",
+    "A4_tot_multiplier_of_V_over_4pi_squared": "12480",
+    "A6_tot_multiplier_of_V_over_4pi_squared": "-56960",
+    "A8_tot_multiplier_of_V_over_4pi_squared": "203840",
+    "A10_tot_multiplier_of_V_over_4pi_squared": "-604288",
+    "A12_tot_multiplier_of_V_over_4pi_squared": "4594304/3",
+    "A14_tot_multiplier_of_V_over_4pi_squared": "-71108864/21",
+    "A16_tot_multiplier_of_V_over_4pi_squared": "139217728/21"
+  },
+  "factorization_check": {
+    "external_mock_spectrum": [0, 1, 1, 4, 4, 9],
+    "internal_spectrum_summary": {
+      "0": 1,
+      "10": 24,
+      "16": 15
+    },
+    "passed": true,
+    "interpretation": "Finite Kronecker-sum heat trace exactly factorizes; numerical error is floating roundoff."
+  },
+  "checks": {
+    "mu0_40": true,
+    "mu1_480": true,
+    "mu2_6240": true,
+    "mu3_85440": true,
+    "mu4_1223040": true,
+    "taylor_c0_40": true,
+    "taylor_c1_minus480": true,
+    "taylor_c2_3120": true,
+    "taylor_c3_minus14240": true,
+    "taylor_c4_50960": true,
+    "convolution_A4_has_3120_a0": true,
+    "convolution_A4_has_minus480_a2": true,
+    "convolution_A4_has_40_a4": true,
+    "factorization_numeric": true
+  },
+  "all_checks_pass": true
+}
