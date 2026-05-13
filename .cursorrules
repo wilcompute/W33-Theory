@@ -5,52 +5,55 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 129
-- **Known Topics:** why, w33, auto-draft, needs-review, cct, audit, testing, qutrit, quasicrystal, performance, crosswalk, cleanup, chapter4, mub, trit-savings
+- **Total Decisions:** 934
+- **Known Topics:** auto-draft, needs-review, why, w33, testing, photonic, docs, css, toe, tqc, cct, audit, harmonic, architecture, qec
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 52, behind 41
+**Tracking:** ahead 0, behind 4
 
 **Recent Commits:**
-- `1b08449 Broaden Q8 docs drift guard for authoritative sections`
-- `cf752c6 Boundary-tag legacy Q8 alpha/PMNS claims and add drift guard`
-- `158e93a Add Q8 claim ledger and normalize alpha/PMNS claim tiers`
-- `a22efca Add Gaussian integer alpha, sporadic count, QCD beta, Monster-Leech gap (motifs 41-44)`
-- `df7f785 Add lattice kissing numbers and string critical dimensions external bridges (motifs 39-40)`
+- `dcabbcf Part CCCCCXCIII: add tomotope monodromy square tests`
+- `579c41a Part CCCCCXCIII: add tomotope monodromy square and six-phase kernel`
+- `9163797 Part CCCCCXCII: add tomotope two-192 mechanism tests`
+- `7d1f7ca Part CCCCCXCII: add tomotope two-192 mechanisms refinement`
+- `9f57a56 Part CCCCCXCI: add tomotope 24-cell D4 bridge tests`
 
 **Working Tree:**
-- M .gitignore
-- M ARXIV_SUBMISSION.md
-- M PAPER_MIXING_SECTION.md
-- M PART_L_ARXIV_MASTER_PAPER.md
-- M PART_XLV_MASTER_PREDICTION_TABLE.md
-- M README.md
-- M UNIFIED_TOE_STATUS.md
-- M docs/index.html
-- M exploration/_artifact_paths.py
-- M exploration/w33_transport_avatar_deformation_wall_bridge.py
-- M exploration/w33_transport_filtered_shadow_bridge.py
-- M exploration/w33_transport_nilpotent_glue_obstruction_bridge.py
-- M paper/EXTENSIONS_4.md
-- M pillars/TOE_270_transport_analysis_v01_20260228_bundle.zip
-- M scripts/w33_cct_crosswalk.py
+- ?? docs/PART_CCCCCXCIV_TOMOTOPE_SIX_KERNEL_LABEL_MATCH.md
+- ?? docs/PART_CCCCCXCIX_TOMOTOPE_TOROIDAL_STEP_TRANSPORT_BRIDGE.md
+- ?? docs/PART_CCCCCXCVIII_TOMOTOPE_TOROIDAL_DUAL_PACKET_BRIDGE.md
+- ?? docs/PART_CCCCCXCVII_TOMOTOPE_SIX_KERNEL_VERTEX_LIFT.md
+- ?? docs/PART_CCCCCXCVI_TOMOTOPE_SIX_KERNEL_S4_EDGE_BRIDGE.md
+- ?? docs/PART_CCCCCXCV_TOMOTOPE_SIX_KERNEL_GENERATOR_ALIGNMENT.md
+- ?? docs/PART_DCIII_TOMOTOPE_TOROIDAL_MARKOV_RELAXATION_BRIDGE.md
+- ?? docs/PART_DCII_TOMOTOPE_TOROIDAL_MARKOV_FOURIER_BRIDGE.md
+- ?? docs/PART_DCIV_TOMOTOPE_TOROIDAL_MARKOV_HORIZON_BRIDGE.md
+- ?? docs/PART_DCIX_TOMOTOPE_TOROIDAL_DIRECTIONAL_SPLIT_BRIDGE.md
+- ?? docs/PART_DCI_TOMOTOPE_TOROIDAL_MARKOV_SPECTRAL_MOMENT_BRIDGE.md
+- ?? docs/PART_DCVIII_TOMOTOPE_TOROIDAL_FAMILY_ENERGY_SPLIT_BRIDGE.md
+- ?? docs/PART_DCVII_TOMOTOPE_TOROIDAL_EDGE_PAIR_BRIDGE.md
+- ?? docs/PART_DCVI_TOMOTOPE_TOROIDAL_MARKOV_ENERGY_BRIDGE.md
+- ?? docs/PART_DCV_TOMOTOPE_TOROIDAL_MARKOV_PHASE_REGIME_BRIDGE.md
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-05-01T14:29:02.297Z
-**Startup Summary:** mode=degraded-fallback | decisions=129 | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [Phase 3] Loaded 7 tool calls from previous session
-[Continuity MCP] Active domain: research
-[GitCommitDetector] Startup audit: 126 uncovered commits in last 7 days (auto-drafted 0)
-[MCP] Background init completed in 3ms | fallback-files=12
-**Decision Count:** 129
+**Generated At:** 2026-05-13T16:33:35.573Z
+**Startup Summary:** mode=degraded-fallback | decisions=934 | lastTask=Recent commits: | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [Continuity MCP] Active domain: research
+[GitCommitDetector] Using cached audit (385 uncovered, 3min old)
+[GitCommitDetector] Startup audit: 385 uncovered commits in last 7 days (auto-drafted 0)
+[MCP] Background init completed in 13ms | fallback-files=12
+**Decision Count:** 934
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Resume Snapshot
-**Last Successful Tool Call:** search_decisions @ 2026-04-30T18:32:42.042Z
-**Relevant Files:** .vscode\mcp.json, tests\test_w33_exceptional_coxeter_ladder_audit.py, scripts\w33_exceptional_coxeter_ladder_audit.py, tests\test_w33_exceptional_coxeter_arithmetic_audit.py, scripts\w33_exact_lie_bridge_audit.py, scripts\w33_exceptional_coxeter_arithmetic_audit.py
+**Last Task:** Recent commits:
+**Last Completed Milestone:** Auto-saved at 2026-05-13T16:33:13.507Z (reason: timer)
+**Next Expected Step:** Recent commits:
+**Last Successful Tool Call:** search_decisions @ 2026-05-01T15:06:07.971Z
+**Relevant Files:** docs\PART_DCXIII_TOMOTOPE_TOROIDAL_Z2_SWAP_SYMMETRY_BRIDGE.md, tests\test_tomotope_toroidal_z2_swap_symmetry_bridge_dcxiii.py, scripts\tomotope_toroidal_z2_swap_symmetry_bridge.py, docs\PART_DCXII_TOMOTOPE_TOROIDAL_COMMUTATIVE_CLOSURE_BRIDGE.md, tests\test_tomotope_toroidal_commutative_closure_bridge_dcxii.py, scripts\tomotope_toroidal_commutative_closure_bridge.py
 
 ## Workflow
 
@@ -69,14 +72,14 @@ Use the repo-local artifacts directly — these are always available:
 
 
 ## Decision Freshness
-**0 stale decisions** · 44 need review · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 653 need review · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
-1. **1777318403161-yzf17v** (score 35) — "Why: Add q3 master-lock paper certificate?"
-2. **1777318403161-z23gfu** (score 35) — "Why: Add dual Weyl supplement witnesses?"
-3. **1777318403161-putaqm** (score 35) — "Why: Add Omega final seal tests and fix eigenvalue assertion?"
-4. **1777318403161-2gx4ng** (score 35) — "Why: Add Supplement W Hubble tension tests; fix octonion test collection error?"
-5. **1777318403161-2e244x** (score 35) — "Why: Add Part XXXI: ER=EPR Wormhole Network, Part XXXII: Conformal Bootstrap at "
+1. **1777318403161-pu8p9x** (score 36) — "Why: theory: add Witting packet ternary transport bridge?" — status: superseded
+2. **1777755243730-5k8xdt** (score 36) — "Why: Add Part CXCIV: Regular polytopes bridge for W(3,3)?" — status: superseded
+3. **1777755243730-8swlgh** (score 36) — "Why: Add Part CXCIII: Exceptional Lie algebra bridge for W(3,3)?" — status: superseded
+4. **1777755243731-ypks6z** (score 36) — "Why: Add Part CXCII: Ramanujan modular forms bridge for W(3,3)?" — status: superseded
+5. **1777755243731-ckwdm2** (score 36) — "Why: Add Part CXCI regression tests: 92 tests pass?" — status: superseded
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
@@ -177,21 +180,21 @@ Describe how this repository prefers to work with AI assistants.
 ---
 
 ## Recent Decisions
-1. **decision-037cf990** (4/30/2026) [why, performance]
-   - Q: Why fix transport helper import ordering?
-   - A: The final explicit style pass caught import-order drift in the three transpor...
+1. **decision-8816d3f1** (5/13/2026) [why, express]
+   - Q: Why add Part DCXIII tomotope-toroidal Z2 swap-symmetry bridge?
+   - A: To express the 21+21 duality as an explicit order-2 involution on both direct...
 
-2. **decision-17775644** (4/30/2026) [auto-draft, needs-review]
-   - Q: Why: Add Gaussian integer alpha, sporadic count, QCD beta, Monster-Leech gap ...
-   - A: (Auto-drafted from commit a22efca on 2026-04-30.) Please review and expand wi...
+2. **decision-17786199** (5/11/2026) [auto-draft, needs-review]
+   - Q: Why: Tomotope: add internal Reye mapping exporter?
+   - A: (Auto-drafted from commit 6cd6432 on 2026-05-11.) Please review and expand wi...
 
-3. **decision-mohlhmfy** (4/27/2026) [auto-scanned, configuration]
+3. **decision-17785096** (5/11/2026) [architecture, e8]
+   - Q: Why add CCCCXLVI E8 inner-product rescue trichotomy?
+   - A: After reviewing recent CCCCXL–CCCCXLV changes, we found third-reference rescu...
+
+4. **decision-mohlhmfy** (4/27/2026) [auto-scanned, configuration]
    - Q: Why use GitHub Actions for CI/CD?
    - A: Detected .github/workflows/ directory. GitHub Actions automates testing, buil...
-
-4. **decision-mohlhmd7** (4/27/2026) [architecture, auto-scanned]
-   - Q: Why use Python with Python?
-   - A: We chose Python for its readability, rich standard library, and ecosystem. Ke...
 
 5. **decision-mohlhk1j** (4/27/2026)
    - Q: Why: Sharpen tail wall to coordinate witness?
@@ -215,6 +218,6 @@ Describe how this repository prefers to work with AI assistants.
 
 ---
 
-*Auto-generated by Continuity v2.3+ | Updated: 2026-05-01*
+*Auto-generated by Continuity v2.3+ | Updated: 2026-05-13*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
