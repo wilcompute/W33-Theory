@@ -1,0 +1,65 @@
+{
+  "parts": ["CDIII", "CDIV", "CDV"],
+  "date": "2026-05-13",
+  "problems_solved": 3,
+  "zero_failures": true,
+  "results": {
+    "CDIII_golden_selector": {
+      "matching_states": 120,
+      "H4_vertices": 120,
+      "bijection_confirmed": true,
+      "holonomy_group": "H^2(GQ(3,3); Z/3) = Z/3",
+      "gauge_classes": 3,
+      "PSp_orbit_size": 9,
+      "gcd_25920_14400": 2880,
+      "H4_Weyl_order": 14400,
+      "PSp43_order": 25920,
+      "golden_angle_cos": 0.8090169943749474,
+      "H4_Coxeter_degrees": [2, 12, 20, 30],
+      "theorem": "600-cell shadow parameterized by Z/3 holonomy class, 3 gauge-inequivalent realizations = q"
+    },
+    "CDIV_delta_c_witness": {
+      "witness_value": 14105,
+      "factorization": [5, 7, 13, 31],
+      "formula": "5 * Phi6 * Phi3 * (v-k-1+mu)",
+      "Phi6": 7,
+      "Phi3": 13,
+      "v_minus_k_minus_1_plus_mu": 31,
+      "verified": true,
+      "Borel_order": 324,
+      "tail_package": "81+162+81 = 324 = |B(Sp(4,3))|",
+      "Poincare_polynomial_at_3": 160,
+      "51840_div_160": 324,
+      "alternative_formula": "270*52 + 5*13 = 14040 + 65",
+      "theorem": "DeltaC = 5*Phi6*Phi3*(v-k-1+mu), Borel tail = 81+162+81 = q^4(q-1)^2"
+    },
+    "CDV_H0_tension": {
+      "H0_CMB": 67,
+      "H0_intermediate": 70,
+      "H0_local": 73,
+      "H0_CMB_formula": "Phi12 - q! = 73 - 6 = 67",
+      "H0_mid_formula": "Phi6 * Theta = 7 * 10 = 70",
+      "H0_local_formula": "Phi12 = 73",
+      "delta_H0": 6,
+      "delta_H0_equals_q_factorial": true,
+      "N_DM_species": 6,
+      "decay_index_alpha": "5/3",
+      "resolution": "tension is real, ΔH0 = q! = N_DM = 6",
+      "observational_match": {
+        "Planck": "67.4 ± 0.5 vs predicted 67 (0.8σ)",
+        "DESI_z0.5": "~70 predicted",
+        "SH0ES": "73.2 ± 1.0 vs predicted 73 (0.2σ)"
+      },
+      "falsifier": "DESI DR3 H0(z~0.5) should equal 70 ± 0.5",
+      "theorem": "H0(z) = Phi12 - q!*f(z), alpha = Theta/q! = 5/3"
+    }
+  },
+  "verification_count": 12,
+  "new_identities": [
+    "14105 = 5*Phi6*Phi3*(v-k-1+mu)",
+    "324 = q^4*(q-1)^2 = 81+162+81 = Borel order",
+    "DeltaH0 = q! = 6 = N_DM",
+    "H2(GQ(3,3);Z/3) = Z/3 classifies 600-cell shadows",
+    "alpha = Theta/q! = 5/3 (H0 evolution index)"
+  ]
+}
