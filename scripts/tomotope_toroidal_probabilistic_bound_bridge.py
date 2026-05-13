@@ -35,11 +35,14 @@ class ProbabilisticSummary:
     energy_half_horizon: int
     energy_packet_horizon: int
     perturbation_stddev: float
+    random_seed: int
+    trials: int
+    stable_successes: int
     stability_probability: float
     all_identities_hold: bool
 
 
-def build_bridge(stddev: float = 0.5, trials: int = 10000) -> dict[str, Any]:
+def build_bridge(stddev: float = 0.5, trials: int = 10000, seed: int = 1337) -> dict[str, Any]:
     dcxx = _load_json_or_build(
         DCXX_PATH, "scripts.tomotope_toroidal_biscale_automaton_bridge"
     )
@@ -49,11 +52,13 @@ def build_bridge(stddev: float = 0.5, trials: int = 10000) -> dict[str, Any]:
     e_half = int(dcxx["summary"]["energy_half_horizon"])
     e_packet = int(dcxx["summary"]["energy_packet_horizon"])
 
+    rng = random.Random(seed)
+
     def simulate_perturbation() -> bool:
-        perturbed_l_half = l_half + random.gauss(0, stddev)
-        perturbed_l_packet = l_packet + random.gauss(0, stddev)
-        perturbed_e_half = e_half + random.gauss(0, stddev)
-        perturbed_e_packet = e_packet + random.gauss(0, stddev)
+        perturbed_l_half = l_half + rng.gauss(0, stddev)
+        perturbed_l_packet = l_packet + rng.gauss(0, stddev)
+        perturbed_e_half = e_half + rng.gauss(0, stddev)
+        perturbed_e_packet = e_packet + rng.gauss(0, stddev)
 
         return (
             perturbed_l_half < perturbed_l_packet
@@ -66,6 +71,7 @@ def build_bridge(stddev: float = 0.5, trials: int = 10000) -> dict[str, Any]:
 
     identities = {
         "upstream_dcxx_ok": bool(dcxx["summary"]["all_identities_hold"]),
+        "trial_budget_at_least_1000": trials >= 1000,
         "stability_probability_high": stability_probability > 0.95,
     }
 
@@ -75,6 +81,9 @@ def build_bridge(stddev: float = 0.5, trials: int = 10000) -> dict[str, Any]:
         energy_half_horizon=e_half,
         energy_packet_horizon=e_packet,
         perturbation_stddev=stddev,
+        random_seed=seed,
+        trials=trials,
+        stable_successes=stability_count,
         stability_probability=stability_probability,
         all_identities_hold=all(identities.values()),
     )
@@ -85,7 +94,7 @@ def build_bridge(stddev: float = 0.5, trials: int = 10000) -> dict[str, Any]:
         "notes": (
             "DCXXII probabilistic bound: the bi-scale automaton is stable under "
             "random perturbations with stddev=0.5, achieving >95% stability probability "
-            "over 10,000 trials."
+            "over a seeded Monte Carlo run."
         ),
     }
 

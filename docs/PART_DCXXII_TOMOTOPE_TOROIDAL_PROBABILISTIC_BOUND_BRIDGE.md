@@ -10,6 +10,7 @@ Additive Gaussian noise on horizon thresholds:
 
 ```text
 stddev = 0.5.
+seeded Monte Carlo for reproducibility.
 ```
 
 ---
@@ -39,3 +40,4 @@ data/tomotope_toroidal_probabilistic_bound_bridge.json
 ```
 
 with perturbation simulations and stability probability checks.
+The JSON summary includes `seed`, `trials`, and `stable_successes`.
