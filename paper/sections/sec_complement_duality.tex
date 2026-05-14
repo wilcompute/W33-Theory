@@ -1,0 +1,91 @@
+% W33-Theory Paper — Section: Complement Duality Theorem
+% Parts DCLII–DCLIII
+
+\section{The Complement Duality Theorem and the Origin of the Hierarchy}
+\label{sec:complement_duality}
+
+\subsection{Setup}
+
+Let $W33 = \mathrm{SRG}(40,12,2,4)$ be the visible-sector graph with
+adjacency matrix $A_{vis}$ and graph Laplacian $L_{vis} = kI - A_{vis}$.
+Its complement $\overline{W33} = \mathrm{SRG}(40,27,18,18)$ is the dark-sector
+graph with Laplacian $L_{dark} = k^c I - A_{dark}$, where $k^c = V-k-1 = 27$.
+
+\subsection{Theorem}
+
+\begin{theorem}[Complement Duality]
+On the non-trivial eigenspace (orthogonal complement of the all-ones vector),
+\begin{equation}
+  L_{\mathrm{vis}} + L_{\mathrm{dark}} = V \cdot I = 40\, I.
+  \label{eq:complement_duality}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let $v$ be a non-trivial eigenvector ($Jv=0$). Then
+\[
+  L_{\mathrm{vis}}\, v = k\, v - A_{vis}\, v, \qquad
+  L_{\mathrm{dark}}\, v = (V-k)\, v + A_{vis}\, v
+\]
+(the second line follows because $A_{\bar{G}} = J - I - A_G$ and $Jv=0$).
+Adding: $(L_{\mathrm{vis}} + L_{\mathrm{dark}})\, v = V\, v$. \qed
+\end{proof}
+
+The spectral decomposition is tabulated below:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Multiplicity & $\lambda_{\mathrm{vis}}$ & $\lambda_{\mathrm{dark}}$ & Sum \\
+\midrule
+24 & 10 & 30 & 40 \\
+15 & 16 & 24 & 40 \\
+\bottomrule
+\end{tabular}
+\caption{Mode-by-mode spectral pairing of visible and dark Laplacians.}
+\label{tab:duality}
+\end{table}
+
+\subsection{The Determinant Origin of the Electroweak Hierarchy}
+
+The relative one-loop vacuum tension between the dark and visible sectors is
+given by the ratio of Laplacian pseudo-determinants:
+\begin{equation}
+  \mathcal{T} \;=\; \frac{\det' L_{\mathrm{dark}}}{\det' L_{\mathrm{vis}}}
+  \;=\; \frac{30^{24}\cdot 24^{15}}{10^{24}\cdot 16^{15}}
+  \;=\; \frac{3^{39}}{2^{15}}.
+  \label{eq:det_ratio}
+\end{equation}
+
+The 3-adic valuation of $\mathcal{T}$ is $v_3(\mathcal{T}) = 39$, which equals
+the hierarchy exponent derived independently from $\Phi_3$ and the SRG cubic root $u$:
+\begin{equation}
+  \Phi_3 \cdot \frac{u}{2} \;=\; 13 \times 3 \;=\; 39,
+  \qquad
+  \frac{m_{\mathrm{EW}}}{m_{\mathrm{Pl}}} \;\sim\; e^{-39} \;\approx\; 10^{-17}.
+\end{equation}
+
+We therefore identify the electroweak hierarchy as the spectral-pressure gap
+between the visible graph and its dark complement: the dark sector structurally
+enforces the hierarchy at the level of one-loop determinants without fine-tuning.
+
+\subsection{Breathing Vacuum and Dark Energy}
+
+The complement coupling introduces a backreaction on the dark vacuum:
+\begin{equation}
+  \delta w_0 \;=\; \frac{\Delta^c_{\min}}{k^c} \cdot \frac{s_{\mathrm{vis}}}{k_{\mathrm{vis}}}
+  \;=\; \frac{24}{27} \cdot \frac{4}{12} \;=\; \frac{8}{27},
+\end{equation}
+yielding the exact W33 dark energy equation of state:
+\begin{equation}
+  w_0 \;=\; -1 + \frac{8}{27} \;=\; -\frac{19}{27} \approx -0.704,
+  \qquad
+  w_a \;=\; -\frac{\Delta^c_{\max} - \Delta^c_{\min}}{k^c V}
+  \;=\; -\frac{1}{180} \approx -0.006.
+  \label{eq:dark_energy}
+\end{equation}
+
+This prediction is consistent with the DESI DR2 (2025) preference for $w_0 > -1$,
+$w_a < 0$~\cite{DESI2025DR2}. Equation~(\ref{eq:dark_energy}) constitutes
+Falsifier~F36 (Section~\ref{sec:falsifiers}).
