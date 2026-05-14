@@ -1,0 +1,56 @@
+name: W33-Theory Verification
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    name: Verify W33 Core Theorems
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install numpy
+
+      - name: Run DCLII-DCLXII verification
+        run: python3 verify_dclii_dclxii.py
+
+      - name: Run full W33 spectral verification
+        run: python3 verify_w33_full.py
+
+  latex:
+    runs-on: ubuntu-latest
+    name: Compile LaTeX Preprint
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y texlive-latex-extra texlive-science
+
+      - name: Compile preprint
+        run: |
+          cd paper
+          pdflatex -interaction=nonstopmode w33_preprint.tex
+          pdflatex -interaction=nonstopmode w33_preprint.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: w33-preprint-pdf
+          path: paper/w33_preprint.pdf
+          retention-days: 90
