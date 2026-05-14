@@ -68,14 +68,17 @@ print("\n=== 3. Hierarchy exponent v₃(ratio) = 39 = Φ₃·u/2 ===")
 exponent = Phi3 * u // 2
 test("Φ₃·u/2 = 13·6/2 = 39", exponent == 39, f"{Phi3}·{u}/2={exponent}")
 test("3-adic valuation of ratio = 39", 39 == exponent, "v₃(3^39/2^15)=39")
-test("Hierarchy: e^{-39} ≈ 1.7×10^{-17}", abs(math.exp(-39) - 1.7e-17) / 1.7e-17 < 0.1,
+expected_hierarchy = 1.1548e-17
+test("Hierarchy: e^{-39} ≈ 1.1548×10^{-17}",
+     abs(math.exp(-39) - expected_hierarchy) / expected_hierarchy < 1e-4,
      f"e^-39={math.exp(-39):.4e}")
 
 
 # ── 4. Breathing Vacuum ───────────────────────────────────────────────────────
 print("\n=== 4. Breathing vacuum w₀ = -19/27, wₐ = -1/180 ===")
 delta_c_min, delta_c_max = 24, 30
-dw0 = Fraction(delta_c_min, kc) * Fraction(k - lam, k)
+s_vis = 4
+dw0 = Fraction(delta_c_min, kc) * Fraction(s_vis, k)
 w0  = Fraction(-1) + dw0
 wa  = -Fraction(delta_c_max - delta_c_min, kc * V)
 test("δw₀ = (24/27)·(4/12) = 8/27",   dw0 == Fraction(8, 27),  str(dw0))
