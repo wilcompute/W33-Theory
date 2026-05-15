@@ -184,6 +184,16 @@ def build_bridge() -> dict[str, Any]:
             "propagator": "K=(I-N)^(-1)=I+N+N^2+N^3+N^4+N^5",
             "log_generator": "log(K)=sum_{m=1}^5 N^m/m",
         },
+        "generator_definition": {
+            "shift": "S e_i = e_{i+1}, S e_5 = 0",
+            "generator": "G = N = (1/2) S",
+        },
+        "shift_matrix": _json_matrix(shift),
+        "generator_matrix": _json_matrix(nilpotent_generator),
+        "generator_powers": {
+            f"G^{power}": _json_matrix(_pow(nilpotent_generator, power))
+            for power in range(n + 1)
+        },
         "matrices": {
             "nilpotent_generator": _json_matrix(nilpotent_generator),
             "propagator": _json_matrix(propagator),

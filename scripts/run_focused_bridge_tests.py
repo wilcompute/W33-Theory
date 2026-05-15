@@ -62,6 +62,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxlii_closure_jordan_residue_bridge.py",
         "tests/test_dccxliii_nilpotent_logarithm_action_bridge.py",
         "tests/test_dccxliv_nilpotent_action_variation_bridge.py",
+        "tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py",
     ],
 }
 
