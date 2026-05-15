@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "q": 3,
+    "factorial_q": 6,
+    "two_q": 6,
+    "master_equation_holds": true,
+    "local_codec_size": 12,
+    "directed_carrier": 480,
+    "all_identities_hold": true
+  },
+  "master_equation": {
+    "statement": "q! = 2q",
+    "evaluated_at_q": 3,
+    "factorial_q": 6,
+    "two_q": 6,
+    "holds": true,
+    "unique_positive_solutions": [
+      3
+    ],
+    "implication_chain": "q! = 2q  <=>  |S_q| = |D_q|  <=>  S_q = D_q (every vertex permutation of the regular q-gon is realised as a rigid symmetry)  <=>  q = 3."
+  },
+  "local_codec_decomposition": {
+    "size": 12,
+    "symmetric_face": {
+      "size": 6,
+      "interpretation": "S_q combinatorial face (q! = 6 signed Clifford channels)"
+    },
+    "dihedral_face": {
+      "size": 6,
+      "interpretation": "D_q geometric face (2q = 6 A2/Weyl return channels)"
+    },
+    "axis_x_sign_x_role": {
+      "axes": 3,
+      "signs": 2,
+      "roles": 2,
+      "product": 12
+    },
+    "identity": "12 = q! + 2q = 3 * 2 * 2 = |S_q| + |D_q| at q = 3"
+  },
+  "directed_carrier": {
+    "vertices": 40,
+    "edges": 240,
+    "directed_edges": 480,
+    "vertex_count_formula": "v = (q^4 - 1)/(q - 1)",
+    "valency_formula": "k = q(q+1)",
+    "carrier_identity": "2E = v * k = ((q^4 - 1)/(q-1)) * q(q+1)",
+    "carrier_value": 480
+  },
+  "qec_layers": {
+    "classical_axis_selector": {
+      "alphabet_size": 3,
+      "origin": "the prime q forced by q! = 2q"
+    },
+    "quantum_sign_frame": {
+      "alphabet_size": 2,
+      "origin": "Z_2 = S_q / A_q (the reflection coset of S_3)"
+    },
+    "heralded_return_syndrome": {
+      "alphabet_size": 2,
+      "origin": "Z_2 again: the A_q / Z_q = {accepted, return} quotient at q = 3"
+    },
+    "klm_rail_lift": {
+      "alphabet_size": 2,
+      "origin": "optical doubling (KLM dual-rail); independent of master equation"
+    }
+  },
+  "identities": {
+    "master_equation_at_q_3": true,
+    "master_equation_unique_to_q_3": true,
+    "local_codec_equals_sym_plus_dih": true,
+    "local_codec_equals_axes_times_signs_times_roles": true,
+    "directed_carrier_equals_v_times_codec": true,
+    "directed_carrier_matches_dccxvi": true,
+    "logical_h1_equals_q_to_the_q_plus_1": true,
+    "css_stabilizer_identity": true,
+    "kml_doubling_equals_2_times_directed": true
+  },
+  "theorem": "The W(3,3) photonic-QEC codec is forced by q! = 2q.  At q = 3, |S_q| = |D_q| = 6, so the local turn alphabet of size 12 = q! + 2q splits canonically into a symmetric (Clifford) face and a dihedral (A_2/Weyl) face.  The 3-2-2 sub-factorisation decomposes the codec into (axis trit from q) * (sign bit from Z_2 = S_q/A_q) * (syndrome bit from A_q/Z_q).  The full directed carrier 2E = v*k = 480 inherits the factorisation from the master equation alone.  No independent codec axiom is needed.",
+  "one_line": "q! = 2q  =>  S_q = D_q  =>  local 12-turn codec = 6 + 6  =>  480-directed carrier  =>  photonic-QEC runtime.",
+  "honesty_boundary": "This is a finite codec/group-theory theorem.  It does not derive hardware noise rates, biological substrates, or curved 4D spectral asymptotics; those remain bridged by separate parts of the W33 program."
+}
