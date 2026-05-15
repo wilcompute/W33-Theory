@@ -1,0 +1,240 @@
+{
+  "summary": {
+    "q": 3,
+    "pascal_row_q": [
+      1,
+      3,
+      3,
+      1
+    ],
+    "pascal_row_qp1": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ],
+    "cl3_total": 8,
+    "cl4_total": 16,
+    "cl4_central": 6,
+    "central_binomial_at_q": 20,
+    "trinomial_row_3_sum": 27,
+    "trinomial_row_4_sum": 81,
+    "rd_f_vector": [
+      14,
+      24,
+      12
+    ],
+    "all_identities_hold": true
+  },
+  "pascal_triangle_rows": {
+    "row_q": [
+      1,
+      3,
+      3,
+      1
+    ],
+    "row_qp1": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ],
+    "row_q_interpretation": "Cl(3) grades = (scalars, vectors, bivectors, pseudoscalar) = (1, 3, 3, 1); total = 8 = tomotope cells",
+    "row_qp1_interpretation": "Cl(4) grades = (1, 4, 6, 4, 1); total = 16 = Cartan(E_8) trace; central = 6 = q!"
+  },
+  "pascal_tetrahedron_rows": {
+    "row_3_sum": 27,
+    "row_3_interpretation": "3^3 = 27 = q^q = E_6 fundamental rep dim",
+    "row_4_sum": 81,
+    "row_4_interpretation": "3^4 = 81 = q^(q+1) = H_1 of W(3,3) (off-genus-spectrum)"
+  },
+  "central_binomial": {
+    "C(2q, q)": 20,
+    "synergetics_identification": "cuboctahedron volume = 20",
+    "w33_identification": "v(W(3,3)) / 2 = 20 (antipodal pairs)"
+  },
+  "clifford_grades": {
+    "Cl_3": {
+      "n": 3,
+      "grades": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "total_dim": 8,
+      "central_entry": null,
+      "vector_grade": 3,
+      "bivector_grade": 3
+    },
+    "Cl_4": {
+      "n": 4,
+      "grades": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "total_dim": 16,
+      "central_entry": 6,
+      "vector_grade": 4,
+      "bivector_grade": 6
+    }
+  },
+  "synergetics_hierarchy": [
+    {
+      "shape": "A module",
+      "volume": "1/24",
+      "w33_reading": "1 / tetrahedron flag count = 1/24 (DCCXXV)"
+    },
+    {
+      "shape": "B module",
+      "volume": "1/24",
+      "w33_reading": "same as A; chiral partner"
+    },
+    {
+      "shape": "T module",
+      "volume": "1/24",
+      "w33_reading": "five-fold module; vol = 5 * (1/24) * 24 = 5"
+    },
+    {
+      "shape": "MITE",
+      "volume": "1/8",
+      "w33_reading": "1 / tomotope cells = 1 / rank E_8 = 1/8 (DCCXXVII, DCCXLIX)"
+    },
+    {
+      "shape": "Coupler",
+      "volume": "1",
+      "w33_reading": "= tetrahedron volume; ground state"
+    },
+    {
+      "shape": "Tetrahedron",
+      "volume": "1",
+      "w33_reading": "sphere mode (DCCXXV); 24 flags = 2 codec; q+1 = 4 vertices"
+    },
+    {
+      "shape": "Cube",
+      "volume": "3",
+      "w33_reading": "q (Master Equation root)"
+    },
+    {
+      "shape": "Octahedron",
+      "volume": "4",
+      "w33_reading": "q + 1 (consecutive pair partner); 6 vertices = q! = closure-clock V"
+    },
+    {
+      "shape": "Rh Triacontahedron",
+      "volume": "5",
+      "w33_reading": "# Csaszar realisations (DCCXXV); = \u03bc + 1"
+    },
+    {
+      "shape": "Rh Dodecahedron",
+      "volume": "6",
+      "w33_reading": "q! = E(tetrahedron) = octahedron V = nilpotence index (DCCXLIX)"
+    },
+    {
+      "shape": "Icosahedron",
+      "volume": "~18.51",
+      "w33_reading": "jitterbug-contracted cuboctahedron; bridges 4-fold and 5-fold"
+    },
+    {
+      "shape": "Cuboctahedron",
+      "volume": "20",
+      "w33_reading": "v(W(3,3)) / 2 = 20; also C(6, 3) central binomial; nuclear shape of CCP"
+    }
+  ],
+  "synergetics_integer_volumes_W33_matches": [
+    {
+      "volume": 1,
+      "shape": "Tetrahedron",
+      "w33_role": "sphere mode / unit"
+    },
+    {
+      "volume": 3,
+      "shape": "Cube",
+      "w33_role": "q = Master Equation root"
+    },
+    {
+      "volume": 4,
+      "shape": "Octahedron",
+      "w33_role": "q + 1 = consecutive partner"
+    },
+    {
+      "volume": 5,
+      "shape": "Rh Triacontahedron",
+      "w33_role": "# Csaszar realisations"
+    },
+    {
+      "volume": 6,
+      "shape": "Rh Dodecahedron",
+      "w33_role": "q! = octahedron V = nilpotence"
+    },
+    {
+      "volume": 20,
+      "shape": "Cuboctahedron",
+      "w33_role": "v(W(3,3))/2 = C(6,3)"
+    }
+  ],
+  "three_natural_constants": {
+    "e": {
+      "pascal_form": "lim_{n -> oo} (1 + 1/n)^n",
+      "approximation_at_n_10000": 2.7181459268249255,
+      "true_value": 2.718281828459045
+    },
+    "pi": {
+      "pascal_form": "Stirling: C(2n, n) ~ 4^n / sqrt(pi * n)",
+      "approximation_at_n_1000": 3.1423781499034096,
+      "true_value": 3.141592653589793
+    },
+    "phi": {
+      "pascal_form": "lim F_{n+1} / F_n where F_n = sum_{k} C(n-k, k) (shallow diagonals)",
+      "approximation_at_n_40": 1.618033988749895,
+      "true_value": 1.618033988749895
+    }
+  },
+  "rhombic_dodecahedron_as_hub": {
+    "V": 14,
+    "E": 24,
+    "F": 12,
+    "vol_synergetics": 6,
+    "vertex_split": {
+      "tetrahedral_voids": 8,
+      "octahedral_voids": 6,
+      "total": 14
+    },
+    "w33_identifications": {
+      "V_14": "Csaszar F = Szilassi V (DCCXXV)",
+      "E_24": "tetrahedron flag count (DCCXXV) = D_bosonic - 2 (DCCXXVI)",
+      "F_12": "codec = q(q+1) (DCCXVII, DCCXXII)",
+      "vol_6": "q! = octahedron V = closure-clock nilpotence (DCCXLIX)",
+      "tet_voids_8": "tomotope cells (DCCXXV) = rank E_8 (DCCXXVII) = octahedron F",
+      "octa_voids_6": "octahedron V = q! = closure-clock levels"
+    }
+  },
+  "identities": {
+    "pascal_row_q_is_1_3_3_1": true,
+    "pascal_row_qp1_is_1_4_6_4_1": true,
+    "cl3_total_is_8_equals_tomotope_cells": true,
+    "cl4_total_is_16_equals_E8_cartan_trace": true,
+    "cl4_central_is_6_equals_q_factorial": true,
+    "cl3_bivectors_equal_q": true,
+    "cl4_bivectors_equal_q_factorial": true,
+    "trinomial_row_q_sums_to_q_to_q": true,
+    "trinomial_row_qp1_sums_to_q_to_qp1": true,
+    "central_binomial_at_q_is_cuboctahedron_volume": true,
+    "e_approximation_close": true,
+    "pi_approximation_close": true,
+    "phi_approximation_close": true,
+    "rd_vertices_split_8_plus_6": true,
+    "rd_E_equals_tetrahedron_flags": true,
+    "rd_F_equals_codec": true,
+    "rd_volume_equals_q_factorial": true,
+    "synergetics_hierarchy_has_W33_volumes": true
+  },
+  "theorem": "Pascal-Synergetics-Clifford Theorem.  At q = 3 the Pascal Triangle row q + 1 = 4 has entries (1, 4, 6, 4, 1) whose sum 16 = trace(Cartan E_8) = F of the tomotope (DCCXXVII), whose central entry 6 = q! = octahedron V = closure-clock nilpotence index (DCCXLIX), and whose grade interpretation gives the Cl(q+1)-Clifford algebra dimensions of scalars / vectors / bivectors / pseudovectors / pseudoscalars on 4D spacetime.  Pascal row q = 3 has entries (1, 3, 3, 1) summing to 2^q = 8 = tomotope cells, with central entries = q = 3 = Master Equation root.  Pascal's Tetrahedron row sums (1+1+1)^n = 3^n at q = 3 give 27 = q^q at row 3 (E_6 fundamental rep) and 81 = q^(q+1) at row 4 (H_1 of W(3,3)).  The central binomial C(2q, q) at q = 3 is 20, exactly the cuboctahedron volume in Fuller's Synergetics concentric hierarchy and v(W(3,3))/2.  Every integer volume in the Synergetics hierarchy (1, 3, 4, 5, 6, 20) is a W(3,3) primitive; the rhombic dodecahedron (V=14, E=24, F=12, vol=6) is the unifying polyhedron whose f-vector encodes the Csaszar / Szilassi vertex-face count, the tetrahedron flag count, the codec, and the closure-clock nilpotence in one object.",
+  "one_line": "Pascal row q+1 = (1, 4, 6, 4, 1) = Clifford grades of Cl(4); sum = 16 = E_8 Cartan trace; central = 6 = q! = closure-clock nilpotence; central binomial C(2q, q) = 20 = cuboctahedron volume = v(W33)/2.",
+  "honesty_boundary": "All Pascal-row identities are exact arithmetic.  The Synergetics volumes are Fuller's convention with the tetrahedron normalised to unit volume.  The Clifford grade identification (Pascal row n+1 = dim Cl(n)_k) is a standard fact about exterior algebras.  The W(3,3) re-readings of Synergetics volumes (e.g. cuboctahedron = v(W33)/2) are numerical alignments at q = 3.  This part does NOT derive the Synergetics hierarchy or e/pi/phi from W(3,3); it documents the structural alignment of Pascal, Synergetics, Clifford, and W(3,3) at the q = 3 saturation point."
+}
