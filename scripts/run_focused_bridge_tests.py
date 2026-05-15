@@ -65,6 +65,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py",
         "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py",
         "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py",
+        "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py",
     ],
 }
 
