@@ -1,0 +1,298 @@
+{
+  "summary": {
+    "q": 3,
+    "heawood": 7,
+    "codec": 12,
+    "spectrum_size_up_to_50": 16,
+    "w33_primitives_in_spectrum": [
+      "q",
+      "q + 1",
+      "q + (q+1) = sum = Heawood",
+      "q (q+1) = product = codec",
+      "q^q",
+      "v",
+      "mu_eigen_mult",
+      "g_eigen_mult"
+    ],
+    "w33_primitives_off_spectrum": [
+      "q! = 2q",
+      "q^(q+1) = H_1"
+    ],
+    "all_identities_hold": true
+  },
+  "genus_equation": {
+    "formula": "g(K_n) = (n - 3)(n - 4) / 12",
+    "quadratic_in_n": "n^2 - 7 n + 12 = 12 g",
+    "discriminant_of_n_for_g": "49 - 4(12 - 12 g) = 1 + 48 g (Heawood)",
+    "matches_dccxxii_quadratic": true
+  },
+  "integer_spectrum_n_le_50": [
+    {
+      "n": 3,
+      "g": 0,
+      "m_mod_12": 11,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 4,
+      "g": 0,
+      "m_mod_12": 0,
+      "polyhedron_hint": "tetrahedron (sphere, g = 0)"
+    },
+    {
+      "n": 7,
+      "g": 1,
+      "m_mod_12": 3,
+      "polyhedron_hint": "Csaszar / Szilassi (torus, g = 1)"
+    },
+    {
+      "n": 12,
+      "g": 6,
+      "m_mod_12": 8,
+      "polyhedron_hint": "K_12 hypothetical (g = 6); also W(3,3) valency"
+    },
+    {
+      "n": 15,
+      "g": 11,
+      "m_mod_12": 11,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 16,
+      "g": 13,
+      "m_mod_12": 0,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 19,
+      "g": 20,
+      "m_mod_12": 3,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 24,
+      "g": 35,
+      "m_mod_12": 8,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 27,
+      "g": 46,
+      "m_mod_12": 11,
+      "polyhedron_hint": "K_27 hypothetical (g = 46); q^q = E_6 fundamental rep dim"
+    },
+    {
+      "n": 28,
+      "g": 50,
+      "m_mod_12": 0,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 31,
+      "g": 63,
+      "m_mod_12": 3,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 36,
+      "g": 88,
+      "m_mod_12": 8,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 39,
+      "g": 105,
+      "m_mod_12": 11,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 40,
+      "g": 111,
+      "m_mod_12": 0,
+      "polyhedron_hint": "K_40 hypothetical (g = 111); W(3,3) point count"
+    },
+    {
+      "n": 43,
+      "g": 130,
+      "m_mod_12": 3,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    },
+    {
+      "n": 48,
+      "g": 165,
+      "m_mod_12": 8,
+      "polyhedron_hint": "K_n hypothetical at integer genus"
+    }
+  ],
+  "w33_primitive_audit": [
+    {
+      "name": "q",
+      "n": 3,
+      "in_spectrum": true,
+      "g": 0,
+      "role": "Master Equation root"
+    },
+    {
+      "name": "q + 1",
+      "n": 4,
+      "in_spectrum": true,
+      "g": 0,
+      "role": "consecutive partner"
+    },
+    {
+      "name": "q! = 2q",
+      "n": 6,
+      "in_spectrum": false,
+      "g": null,
+      "role": "Master Equation value"
+    },
+    {
+      "name": "q + (q+1) = sum = Heawood",
+      "n": 7,
+      "in_spectrum": true,
+      "g": 1,
+      "role": "torus Csaszar V"
+    },
+    {
+      "name": "q (q+1) = product = codec",
+      "n": 12,
+      "in_spectrum": true,
+      "g": 6,
+      "role": "W(3,3) valency"
+    },
+    {
+      "name": "q^q",
+      "n": 27,
+      "in_spectrum": true,
+      "g": 46,
+      "role": "E_6 fundamental dim"
+    },
+    {
+      "name": "v",
+      "n": 40,
+      "in_spectrum": true,
+      "g": 111,
+      "role": "W(3,3) point count"
+    },
+    {
+      "name": "q^(q+1) = H_1",
+      "n": 81,
+      "in_spectrum": false,
+      "g": null,
+      "role": "W(3,3) protected logical content"
+    },
+    {
+      "name": "mu_eigen_mult",
+      "n": 24,
+      "in_spectrum": true,
+      "g": 35,
+      "role": "multiplicity of eigenvalue 2"
+    },
+    {
+      "name": "g_eigen_mult",
+      "n": 15,
+      "in_spectrum": true,
+      "g": 11,
+      "role": "multiplicity of eigenvalue -4"
+    }
+  ],
+  "genus_oscillator": [
+    {
+      "h": 0,
+      "v": 4,
+      "E": 6,
+      "F": 4,
+      "chi": 2,
+      "genus_via_chi": 0
+    },
+    {
+      "h": 1,
+      "v": 7,
+      "E": 21,
+      "F": 14,
+      "chi": 0,
+      "genus_via_chi": 1
+    },
+    {
+      "h": 2,
+      "v": 10,
+      "E": 36,
+      "F": 24,
+      "chi": -2,
+      "genus_via_chi": 2
+    },
+    {
+      "h": 3,
+      "v": 13,
+      "E": 51,
+      "F": 34,
+      "chi": -4,
+      "genus_via_chi": 3
+    }
+  ],
+  "increments_mod_12": {
+    "delta_v_mod_12": 3,
+    "delta_E_mod_12": 3,
+    "delta_F_mod_12": 10,
+    "delta_chi": -2
+  },
+  "three_clocks": {
+    "mod_12_clock": {
+      "modulus": 12,
+      "origin": "local W(3,3) valency = codec = q(q+1)",
+      "role": "phase clock for directed edge / triangle transport",
+      "appears_in": [
+        "K_n genus denominator (n-3)(n-4)/12",
+        "Z_12 = Z_3 x Z_4 = Z_q x Z_{q+1} CRT",
+        "zeta(-1) = -1/12",
+        "tomotope t = r1*r2 order = 12"
+      ]
+    },
+    "mod_7_clock": {
+      "modulus": 7,
+      "origin": "Heawood number = q + (q+1) at q = 3",
+      "role": "toroidal color shell / Csaszar V / Szilassi F / Fano",
+      "appears_in": [
+        "Csaszar 7 vertices",
+        "Szilassi 7 hexagonal faces",
+        "Fano plane: 7 points, 7 lines",
+        "Heawood graph: 14 = 2*7 vertices, 21 = 3*7 edges",
+        "5 Csaszar + 2 Szilassi = 7 toroidal realisation modes"
+      ]
+    },
+    "mod_10_clock": {
+      "modulus": 10,
+      "origin": "Delta F = 10 = 2(q+1) + 2 = q+1 + (q+1) + 2",
+      "role": "face / decimal increment of the genus oscillator",
+      "appears_in": [
+        "F(h) = 4 + 10 h face count at handle level h",
+        "base-10 decimal expansion of 1/7 = 0.142857 (DCCXXII)",
+        "Tesla 3-6-9 = base-10 multiples of 3 missing from 142857"
+      ]
+    }
+  },
+  "identities": {
+    "genus_zero_at_n_4_tetrahedron": true,
+    "genus_one_at_n_7_csaszar": true,
+    "genus_six_at_n_12_codec": true,
+    "k_27_has_integer_genus_46": true,
+    "k_40_has_integer_genus_111": true,
+    "h1_81_NOT_in_spectrum": true,
+    "tetrahedron_VEF_matches_h_0": true,
+    "csaszar_VEF_matches_h_1": true,
+    "delta_v_mod_12_equals_q": true,
+    "delta_E_mod_12_equals_q": true,
+    "delta_F_mod_12_equals_minus_two": true,
+    "delta_chi_equals_minus_two": true,
+    "genus_polynomial_is_master_quadratic": true,
+    "spectrum_first_three_match_VEF_oscillator": true,
+    "spectrum_n_12_is_W33_valency": true,
+    "spectrum_includes_q_to_q": true,
+    "spectrum_includes_v_40_at_g_111": true,
+    "m_mod_12_residues_in_0_3_8_11": true,
+    "three_clocks_count": true
+  },
+  "theorem": "Genus-Equation Spectrum Theorem.  The Heawood-Ringel genus formula g(K_n) = (n - 3)(n - 4) / 12 is the SAME quadratic x^2 - 7 x + 12 that DCCXXII identified as the (sum, product) of (q, q+1) at q = 3.  Its integer-solution spectrum -- n such that K_n embeds in an orientable surface at integer genus -- contains the W(3,3) structural integers q + 1 = 4 (tetrahedron, g = 0), q + (q+1) = 7 (Csaszar/Szilassi, g = 1), q(q+1) = 12 (W(3,3) valency, g = 6), q^q = 27 (E_6 fundamental rep, g = 46) and v = 40 (W(3,3) point count, g = 111).  The single value q^(q+1) = 81 = H_1 lies OFF the spectrum, distinguishing the protected-logical layer from the K_n graph lattice.  The genus oscillator v(h) = 4 + 3h, E(h) = 6 + 15h, F(h) = 4 + 10h has increments equal to (3, 3, -2) mod 12 = (q, q, -(q-1)) mod 12, so the genus decrement Delta chi = -2 per handle is the residue of the local 12-clock.",
+  "one_line": "Csaszar/Szilassi genus equation g(K_n) = (n-3)(n-4)/12  =  DCCXXII quadratic x^2 - 7x + 12  divided by codec 12, with integer spectrum including 4, 7, 12, 27, 40 = q+1, q+(q+1), q(q+1), q^q, v of the W(3,3) program.",
+  "honesty_boundary": "The genus-equation spectrum lists integer n values such that the genus formula returns an integer.  Beyond n = 7 (Csaszar) no other K_n simplicial polyhedron on a closed orientable surface is known to physically exist; integer-genus K_12, K_27, K_40 are graph-theoretic existence claims (Ringel-Youngs 1968), not constructed polyhedra.  This part identifies the spectral overlap with W(3,3) primitives; it does NOT realise K_12 or K_40 as concrete polyhedra."
+}
