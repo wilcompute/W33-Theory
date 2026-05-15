@@ -1,0 +1,287 @@
+{
+  "summary": {
+    "q": 3,
+    "hps_levels": [
+      1,
+      4,
+      10,
+      26,
+      89,
+      534
+    ],
+    "600_cell_f_vector": [
+      120,
+      720,
+      1200,
+      600
+    ],
+    "e8_eq_2_600cells": true,
+    "polytope_tower_size": 9,
+    "all_identities_hold": true
+  },
+  "hyperbolic_pascal_simplex": [
+    {
+      "level": 0,
+      "size": 1,
+      "identification": "vacuum / unity"
+    },
+    {
+      "level": 1,
+      "size": 4,
+      "identification": "mu = q + 1 = 4"
+    },
+    {
+      "level": 2,
+      "size": 10,
+      "identification": "Phi_4 = q^2 + 1 = 10"
+    },
+    {
+      "level": 3,
+      "size": 26,
+      "identification": "2 * Phi_3 = 2 * 13 = 26; also D_bosonic = 26 (DCCXXVI)"
+    },
+    {
+      "level": 4,
+      "size": 89,
+      "identification": "F_11 = Fibonacci(11) = 89; index 11 = k - 1"
+    },
+    {
+      "level": 5,
+      "size": 534,
+      "identification": "6 * F_11 = q! * F_11 = 534"
+    }
+  ],
+  "600_cell_w33_divisions": [
+    {
+      "quantity": "V / q",
+      "value": 40,
+      "id": "v(W(3,3)) = 40"
+    },
+    {
+      "quantity": "E / q",
+      "value": 240,
+      "id": "E(W(3,3)) = 240 = E_8 roots"
+    },
+    {
+      "quantity": "E / q!",
+      "value": 120,
+      "id": "= V = 120"
+    },
+    {
+      "quantity": "F / Phi_4",
+      "value": 120,
+      "id": "= V = 120"
+    },
+    {
+      "quantity": "C / v",
+      "value": 15,
+      "id": "g eigen-multiplicity = SM gauge generators = 15"
+    },
+    {
+      "quantity": "V / mu",
+      "value": 30,
+      "id": "5! / 4 = 30 = h(E_8) Coxeter number"
+    },
+    {
+      "quantity": "V / Phi_6",
+      "value": 17,
+      "id": "5! / 7 \u2014 non-integer; floor 17"
+    },
+    {
+      "quantity": "C / g",
+      "value": 40,
+      "id": "= 40 = v"
+    }
+  ],
+  "600_cell_factorial_form": {
+    "V_eq_5_factorial": true,
+    "V_eq_q_plus_2_factorial": true,
+    "E_eq_6_factorial": true,
+    "E_eq_q_plus_q_factorial": true,
+    "E_eq_q_times_E_W33": true,
+    "C_eq_5_times_v_plus_5_squared": false,
+    "C_eq_q_times_v_times_5": true
+  },
+  "e8_as_two_600_cells": {
+    "E_8_root_count": 240,
+    "600_cell_V": 120,
+    "two_600_cells": 240,
+    "match": true,
+    "interpretation": "E_8's 240 roots split into two 600-cell vertex sets, related by a golden-ratio scaling.  The 600-cell IS the H_4 root polytope; the E_8 lattice contains TWO H_4 sub-lattices that interlock via phi.  This is the standard 'E_8 from H_4 x H_4' factorisation."
+  },
+  "pascal_row_4_tetrahedron": {
+    "row": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ],
+    "sum": 16,
+    "evaluated_at_Phi_4": 14641,
+    "expected_11_to_4": 14641,
+    "matches_k_minus_one_to_mu": true,
+    "polytope_interpretation": "row 4 = (1, 4, 6, 4, 1) = tetrahedron (V, E, F) plus 1 body and 1 vacuum = Cl(3) grades = sphere-mode sub-cell vector (DCCXXIV, DCCL)"
+  },
+  "pascal_row_7_csaszar_szilassi_palindrome": {
+    "row": [
+      1,
+      7,
+      21,
+      35,
+      35,
+      21,
+      7,
+      1
+    ],
+    "sum": 128,
+    "palindrome_pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        21,
+        21
+      ],
+      [
+        35,
+        35
+      ]
+    ],
+    "evaluated_at_Phi_4": 19487171,
+    "expected_11_to_Phi_6": 19487171,
+    "matches_k_minus_one_to_Phi_6": true,
+    "csaszar_szilassi_duality": "C(7, 1) = 7 = Csaszar V <-> C(7, 6) = 7 = Szilassi F (paper); C(7, 2) = 21 = Csaszar/Szilassi E (paper) \u2014 palindromic match."
+  },
+  "polytope_tower_at_q_3": [
+    {
+      "polytope": "tetrahedron (3-simplex)",
+      "dim": 3,
+      "f_vector": [
+        4,
+        6,
+        4
+      ],
+      "genus": 0,
+      "w33_role": "sphere mode (DCCXXV); 24 flags = 2 codec; Cl(3) grades"
+    },
+    {
+      "polytope": "octahedron",
+      "dim": 3,
+      "f_vector": [
+        6,
+        12,
+        8
+      ],
+      "genus": 0,
+      "w33_role": "closure-clock phase space (DCCXLIX); = L(K_4)"
+    },
+    {
+      "polytope": "cube",
+      "dim": 3,
+      "f_vector": [
+        8,
+        12,
+        6
+      ],
+      "genus": 0,
+      "w33_role": "Synergetics vol 3 = q (DCCL); dual to octahedron"
+    },
+    {
+      "polytope": "rhombic dodecahedron",
+      "dim": 3,
+      "f_vector": [
+        14,
+        24,
+        12
+      ],
+      "genus": 0,
+      "w33_role": "Synergetics vol 6 = q!; unifying hub (DCCL)"
+    },
+    {
+      "polytope": "Csaszar polyhedron",
+      "dim": 3,
+      "f_vector": [
+        7,
+        21,
+        14
+      ],
+      "genus": 1,
+      "w33_role": "K_7 toroidal (DCCXXV); 84 flags"
+    },
+    {
+      "polytope": "Szilassi polyhedron",
+      "dim": 3,
+      "f_vector": [
+        14,
+        21,
+        7
+      ],
+      "genus": 1,
+      "w33_role": "dual of Csaszar (DCCXXV); 84 flags"
+    },
+    {
+      "polytope": "icosahedron",
+      "dim": 3,
+      "f_vector": [
+        12,
+        30,
+        20
+      ],
+      "genus": 0,
+      "w33_role": "vertex figure of 600-cell; (k, 2g, 2*Theta)"
+    },
+    {
+      "polytope": "tomotope",
+      "dim": 4,
+      "f_vector": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "genus": null,
+      "w33_role": "abstract 4-polytope (DCCXXV); 192 flags = tet + Cs + Sz"
+    },
+    {
+      "polytope": "600-cell",
+      "dim": 4,
+      "f_vector": [
+        120,
+        720,
+        1200,
+        600
+      ],
+      "genus": null,
+      "w33_role": "H_4 root polytope = W(3,3) x q; 240 E_8 roots / 2"
+    }
+  ],
+  "identities": {
+    "hps_level_1_eq_mu": true,
+    "hps_level_2_eq_Phi_4": true,
+    "hps_level_4_eq_fibonacci_11": true,
+    "hps_level_4_index_eq_k_minus_1": true,
+    "cell_600_V_eq_120": true,
+    "cell_600_E_eq_720": true,
+    "cell_600_V_over_q_eq_v": true,
+    "cell_600_E_over_q_eq_E_W33": true,
+    "cell_600_C_over_v_eq_g": true,
+    "cell_600_V_eq_5_factorial": true,
+    "cell_600_E_eq_6_factorial": true,
+    "cell_600_E_eq_q_factorial_squared": true,
+    "e8_eq_2_600cells": true,
+    "row4_is_tetrahedron_f_vector": true,
+    "row4_eval_at_Phi_4_eq_11_to_4": true,
+    "row7_is_palindrome": true,
+    "row7_eval_at_Phi_4_eq_11_to_Phi_6": true,
+    "tower_has_9_polytopes": true
+  },
+  "theorem": "Hyperbolic Pascal / 600-cell / E_8 Theorem.  The hyperbolic Pascal simplex (HPS) on the {4, 3, 3, 5} mosaic has vertex figure = 600-cell, and its first six level sums are exactly (1, mu, Phi_4, 2 Phi_3, F_11, q! F_11) = (1, 4, 10, 26, 89, 534).  Level 4 is the Fibonacci number F_11 where the index 11 = k - 1 is the non-back-tracking out-degree of W(3,3).  The 600-cell f-vector (120, 720, 1200, 600) divided by q = 3 gives (40, 240, ..., g): v and E of W(3,3) and the g-eigen-multiplicity.  The 600-cell is the H_4 root polytope, and the 240 roots of E_8 split as two interlocking 600-cells (golden-ratio fold).  Pascal row mu = (1, 4, 6, 4, 1) is the tetrahedron sub-cell vector; evaluated at x = Phi_4 = 10 it gives 11^4 = 14641 = (k-1)^mu.  Pascal row Phi_6 = (1, 7, 21, 35, 35, 21, 7, 1) is the Csaszar / Szilassi duality palindrome.  The 600-cell extends the q = 3 polytope tower (tetrahedron, octahedron, Csaszar/Szilassi, tomotope) to four dimensions as the natural Pascal reification.",
+  "one_line": "HPS levels (1, mu, Phi_4, 2 Phi_3, F_11, q!*F_11); 600-cell V = 5!, E = 6! = q * E_W33; E_8 = 2 * 600-cell; row mu and row Phi_6 of Pascal are the sphere and torus f-vectors.",
+  "honesty_boundary": "All numerical identities are exact arithmetic.  The HPS level values are documented in exploration/W33_PASCAL_GENERALIZATIONS.py as derived from the {4, 3, 3, 5} hyperbolic mosaic.  The 'E_8 = 2 * 600-cell' identification is the standard H_4 x H_4 subgroup decomposition of E_8 with a golden-ratio glue.  This part consolidates the Pascal-Hyperbolic-600-cell-E_8 chain in the W(3,3) program; it does NOT derive new physical observables beyond DCCXXVI's critical-dimension hierarchy."
+}
