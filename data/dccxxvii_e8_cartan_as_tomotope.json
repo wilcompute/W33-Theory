@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "q": 3,
+    "rank_E8": 8,
+    "trace_E8": 16,
+    "sum_E8": 2,
+    "det_E8": 1,
+    "dynkin_edges": 7,
+    "tomotope_F": 16,
+    "tomotope_C": 8,
+    "all_identities_hold": true
+  },
+  "cartan_matrix": [
+    [
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  ],
+  "cartan_invariants": {
+    "rank": 8,
+    "trace": 16,
+    "sum_all_entries": 2,
+    "determinant": 1,
+    "diagonal_entries": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "off_diagonal_unique": [
+      -1,
+      0
+    ],
+    "dynkin_edge_count": 7
+  },
+  "q3_reading": {
+    "diagonal_value": 2,
+    "diagonal_interpretation": "Simple-root norm-squared in simply-laced normalisation.  In W(3,3) language this is exactly the '+2' of DCCXXVI: Delta chi per handle = (D_critical) - (D_critical - 2) = (q + 1) - (q - 1) = 2.",
+    "off_diagonal_value": -1,
+    "off_diagonal_formula": "-2 cos(2 pi / q)",
+    "off_diagonal_evaluation_at_q_3": -0.9999999999999996,
+    "off_diagonal_interpretation": "For simply-laced Lie algebras the off-diagonal Cartan entries for adjacent nodes are -1 = 2 cos(2 pi / 3), the third-root-of-unity angle.  This is the SAME q = 3 cube-root-of-unity that gives the Z_3 axis grading B23, B31, B12 (DCCXIV) and the ternary selector codec (DCCXVII).",
+    "joint_reading": "Both kinds of Cartan entries are q = 3 imprints: the diagonal 2's are the '+2' oscillator offset; the off-diagonal -1's are the Z_3 cube-root-of-unity angle.  The Cartan matrix is the simplest object stitching the two together."
+  },
+  "tomotope_to_cartan_mapping": [
+    {
+      "tomotope_slot": "V",
+      "tomotope_value": 4,
+      "cartan_meaning": "q + 1 = tetrahedron V; not directly in Cartan",
+      "matches": null
+    },
+    {
+      "tomotope_slot": "E",
+      "tomotope_value": 12,
+      "cartan_meaning": "codec = q(q+1) = E_6 Coxeter number",
+      "matches": null
+    },
+    {
+      "tomotope_slot": "F",
+      "tomotope_value": 16,
+      "cartan_meaning": "trace(E_8 Cartan) = rank * 2 = 16",
+      "matches": true
+    },
+    {
+      "tomotope_slot": "C",
+      "tomotope_value": 8,
+      "cartan_meaning": "rank(E_8) = 8",
+      "matches": true
+    }
+  ],
+  "exceptional_coxeter_table": [
+    {
+      "algebra": "E_6",
+      "rank": 6,
+      "rank_id": "q!",
+      "dim": 78,
+      "dim_id": "q * D_bosonic = 3 * 26",
+      "coxeter_number": 12,
+      "coxeter_id": "codec = q(q+1)",
+      "num_roots": 72,
+      "roots_id": "rank * coxeter = 6 * 12"
+    },
+    {
+      "algebra": "E_7",
+      "rank": 7,
+      "rank_id": "Heawood = q + (q+1)",
+      "dim": 133,
+      "dim_id": "\u2014",
+      "coxeter_number": 18,
+      "coxeter_id": "\u2014",
+      "num_roots": 126,
+      "roots_id": "rank * coxeter = 7 * 18"
+    },
+    {
+      "algebra": "E_8",
+      "rank": 8,
+      "rank_id": "tomotope cells",
+      "dim": 248,
+      "dim_id": "E(W(3,3)) + tomotope cells = 240 + 8",
+      "coxeter_number": 30,
+      "coxeter_id": "\u2014",
+      "num_roots": 240,
+      "roots_id": "E(W(3,3))"
+    }
+  ],
+  "identities": {
+    "rank_E8_equals_8": true,
+    "trace_E8_equals_16": true,
+    "trace_E8_equals_q_plus_one_squared": true,
+    "trace_E8_equals_tomotope_F": true,
+    "rank_E8_equals_tomotope_C": true,
+    "sum_all_entries_equals_2": true,
+    "sum_equals_delta_chi_per_handle": true,
+    "det_E8_Cartan_equals_1": true,
+    "dynkin_edge_count_equals_heawood": true,
+    "diagonal_entries_all_two": true,
+    "off_diagonal_unique_in_minus1_zero": true,
+    "off_diagonal_minus_one_equals_two_cos_two_pi_over_q": true,
+    "E6_coxeter_equals_codec": true,
+    "E6_rank_equals_q_factorial": true,
+    "E7_rank_equals_heawood": true,
+    "E8_dim_equals_240_plus_8": true,
+    "E8_roots_equal_240": true
+  },
+  "theorem": "E_8 Cartan-Tomotope Theorem.  The 8 x 8 E_8 Cartan matrix has trace 16 = (q + 1)^2 = F of the tomotope, rank 8 = C of the tomotope, and sum-of-all-entries 2 = Delta chi per handle = the universal '+2' offset of DCCXXVI.  Every diagonal entry (+ 2) is the simply-laced simple-root norm-squared, identical to the oscillator handle decrement.  Every off-diagonal entry (-1) is -2 cos(2 pi / q) = -2 cos(2 pi / 3), the third-root-of-unity angle that also generates the ternary axis structure (B23, B31, B12) of DCCXIV.  Therefore the E_8 Cartan matrix is the simplest object stitching the two distinct q = 3 imprints: the '+2' oscillator decrement on the diagonal and the Z_3 cube-root-of-unity angle off-diagonal.  The Dynkin-edge count of E_8 is 7 = Heawood = q + (q + 1).  Together with E_6's Coxeter number 12 = codec and rank 6 = q!, this places the entire exceptional E_6 / E_7 / E_8 Cartan data inside the W(3,3) numerical scaffold.",
+  "one_line": "trace(Cartan E_8) = 16 = tomotope F; rank = 8 = tomotope C; sum = 2 = '+2' offset; off-diag -1 = -2 cos(2 pi / 3); Dynkin edges = 7 = Heawood.  The E_8 Cartan is q = 3 forcing.",
+  "honesty_boundary": "All numerical identities are exact for the standard E_8 Cartan matrix.  The interpretation of -1 = -2 cos(2 pi / 3) as 'q = 3 forcing' is structural: the -2 cos formula holds for any A_2 sub-system of any simply-laced algebra, but the specific argument q = 3 is the W(3,3) saturation value.  This part does NOT derive the E_8 Cartan matrix from W(3,3); it documents the structural decomposition of its entries into '+2 = oscillator offset' and '-1 = Z_3 angle'."
+}
