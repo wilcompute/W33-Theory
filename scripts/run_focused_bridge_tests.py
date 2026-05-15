@@ -20,6 +20,7 @@ SUITES: dict[str, list[str]] = {
     "photonic-qec": [
         "tests/test_dccxiv_holonomy_signed_triad_a2_projection_bridge.py",
         "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py",
+        "tests/test_dccxvi_axis_syndrome_selector_codec_bridge.py",
         "tests/test_cyclic_cayley_obstruction_ccccxxx.py",
         "tests/test_qec_ouroboros_stabilizer_loop_ccccxvii.py",
         "tests/test_fusion_control_scheduler_splice_ccccxxvi.py",
@@ -30,6 +31,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxi_holonomy_weld_associator_support_bridge.py",
         "tests/test_dccxiv_holonomy_signed_triad_a2_projection_bridge.py",
         "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py",
+        "tests/test_dccxvi_axis_syndrome_selector_codec_bridge.py",
     ],
     "tomotope-klitzing": [
         "tests/test_w33_tomotope_klitzing_partial_operation_commutation.py",
