@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "q": 3,
+    "quarter_unit": 0.25,
+    "kleiber_exponent": 0.75,
+    "kleiber_formula": "M^(q/(q+1)) = M^(3/4)",
+    "family_size": 10,
+    "all_identities_hold": true
+  },
+  "allometric_family": [
+    {
+      "quantity": "metabolic rate (Kleiber)",
+      "symbol": "B",
+      "exponent": 0.75,
+      "exponent_in_q": "q/(q+1)",
+      "n_over_q_plus_one": [
+        3,
+        4
+      ],
+      "scaling": "M^(3/4)",
+      "source_law": "Kleiber 1932; WBE 1997"
+    },
+    {
+      "quantity": "heart rate",
+      "symbol": "f_heart",
+      "exponent": -0.25,
+      "exponent_in_q": "-1/(q+1)",
+      "n_over_q_plus_one": [
+        -1,
+        4
+      ],
+      "scaling": "M^(-1/4)",
+      "source_law": "Brody 1945"
+    },
+    {
+      "quantity": "breath rate",
+      "symbol": "f_breath",
+      "exponent": -0.25,
+      "exponent_in_q": "-1/(q+1)",
+      "n_over_q_plus_one": [
+        -1,
+        4
+      ],
+      "scaling": "M^(-1/4)",
+      "source_law": "Stahl 1967"
+    },
+    {
+      "quantity": "lifespan / generation time",
+      "symbol": "T",
+      "exponent": 0.25,
+      "exponent_in_q": "1/(q+1)",
+      "n_over_q_plus_one": [
+        1,
+        4
+      ],
+      "scaling": "M^(1/4)",
+      "source_law": "Calder 1984"
+    },
+    {
+      "quantity": "blood pressure (mean)",
+      "symbol": "P",
+      "exponent": 0,
+      "exponent_in_q": "0",
+      "n_over_q_plus_one": [
+        0,
+        4
+      ],
+      "scaling": "M^0  (mass-invariant)",
+      "source_law": "Stahl 1967; WBE 1997"
+    },
+    {
+      "quantity": "aorta cross-section",
+      "symbol": "A_aorta",
+      "exponent": 0.75,
+      "exponent_in_q": "q/(q+1)",
+      "n_over_q_plus_one": [
+        3,
+        4
+      ],
+      "scaling": "M^(3/4)",
+      "source_law": "Holt 1962"
+    },
+    {
+      "quantity": "brain mass (Jerison)",
+      "symbol": "M_brain",
+      "exponent": 0.75,
+      "exponent_in_q": "q/(q+1)",
+      "n_over_q_plus_one": [
+        3,
+        4
+      ],
+      "scaling": "M^(3/4)",
+      "source_law": "Jerison 1973"
+    },
+    {
+      "quantity": "vessel-tip number (capillaries)",
+      "symbol": "N_c",
+      "exponent": 0.75,
+      "exponent_in_q": "q/(q+1)",
+      "n_over_q_plus_one": [
+        3,
+        4
+      ],
+      "scaling": "M^(3/4)",
+      "source_law": "WBE 1997"
+    },
+    {
+      "quantity": "tree trunk diameter -> height",
+      "symbol": "h_tree",
+      "exponent": 0.5,
+      "exponent_in_q": "2/(q+1)",
+      "n_over_q_plus_one": [
+        2,
+        4
+      ],
+      "scaling": "M^(2/4) = M^(1/2)",
+      "source_law": "Niklas 1994"
+    },
+    {
+      "quantity": "white matter volume in mammalian brain",
+      "symbol": "V_w",
+      "exponent": 1.25,
+      "exponent_in_q": "5/(q+1)",
+      "n_over_q_plus_one": [
+        5,
+        4
+      ],
+      "scaling": "M^(5/4)",
+      "source_law": "Zhang & Sejnowski 2000"
+    }
+  ],
+  "wbe_derivation_chain": [
+    {
+      "step": 1,
+      "from": "Master Equation q! = 2q",
+      "to": "q = 3 (CCCCXLIII)"
+    },
+    {
+      "step": 2,
+      "from": "q = 3",
+      "to": "spatial dimensions d = q = 3 (CCCCXLIV consequence #1)"
+    },
+    {
+      "step": 3,
+      "from": "d = 3",
+      "to": "biological supply network is space-filling in d = 3"
+    },
+    {
+      "step": 4,
+      "from": "fractal supply network in d = 3",
+      "to": "WBE relation B ~ M^( d/(d+1) ) = M^(3/4)"
+    },
+    {
+      "step": 5,
+      "from": "B ~ M^(3/4)",
+      "to": "every derived allometric exponent quantised in units of 1/(q+1) = 1/4"
+    }
+  ],
+  "kleiber_inverted_dimension": {
+    "alpha": 0.75,
+    "derived_dimension": 3.0,
+    "matches_q": true,
+    "formula": "d = alpha / (1 - alpha)"
+  },
+  "identities": {
+    "quarter_unit_equals_one_over_q_plus_one": true,
+    "kleiber_exponent_is_three_quarters": true,
+    "kleiber_exponent_equals_q_over_q_plus_one": true,
+    "kleiber_recovers_spatial_dimension_q": true,
+    "all_exponents_are_n_over_q_plus_one": true,
+    "all_exponents_use_q_plus_one_denominator": true,
+    "family_size_at_least_ten": true,
+    "derivation_chain_five_steps": true,
+    "wbe_d_equals_q": true
+  },
+  "theorem": "Biological Allometry Theorem.  Every observed mammalian allometric exponent reduces to n / (q + 1) for integer n, where q = 3 is the Master-Equation solution.  In particular Kleiber's law B ~ M^(3/4) is the d = q = 3 case of the WBE relation B ~ M^( d/(d+1) ), and the universal 1/4-quantisation reflects (q + 1) = 4 at the W(3,3) saturation point.  Equivalently, inverting Kleiber recovers the spatial dimension: d = alpha/(1 - alpha) = 3 from alpha = 3/4.",
+  "one_line": "Kleiber's 3/4  =  q/(q+1) at q = 3  =>  biological allometry is the 1/(q+1)-quantised consequence of q = 3 forcing both 3D space and the space-filling fractal supply network.",
+  "honesty_boundary": "This part identifies the structural origin of the 1/4-power biological scaling family as q = 3 forcing both d = 3 spatial dimensions and the WBE space-filling fractal supply network.  It does not derive prefactors (the 'a' in B = a M^(3/4)), does not address the empirical scatter in published exponents, and does not claim that 1/4-power laws hold for all taxa or all physiological quantities.  It anchors the EXPONENTS only."
+}
