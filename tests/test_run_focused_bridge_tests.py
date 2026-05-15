@@ -26,6 +26,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxliv_nilpotent_action_variation_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py" in SUITES["closure-clock"]
+    assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in SUITES["closure-clock"]
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
@@ -35,8 +36,9 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in paths
     assert "tests/test_dccxliv_nilpotent_action_variation_bridge.py" in paths
     assert "tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py" in paths
+    assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in paths
     assert len(paths) == len(set(paths))
-    assert len(paths) >= 30
+    assert len(paths) >= 31
 
 
 def test_focused_bridge_runner_builds_noconftest_command() -> None:
