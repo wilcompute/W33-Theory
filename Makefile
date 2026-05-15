@@ -8,7 +8,7 @@ FIGS   = figures/fig1_spectral_diagram.pdf \
           figures/fig2_predictions_timeline.pdf \
           figures/fig3_spectral_decomposition.pdf
 
-.PHONY: all clean arxiv figures
+.PHONY: all clean arxiv figures focused-tests
 
 all: $(TEX).pdf
 
@@ -37,6 +37,13 @@ arxiv: $(TEX).pdf
 		figures/fig3_spectral_decomposition.pdf
 	@echo "Tarball ready: W33_Theory_arXiv_submission.tar.gz"
 	@echo "Submit at: https://arxiv.org/submit"
+
+## ── Focused bridge tests ───────────────────────────────────────────────
+PYTHON ?= python
+FOCUS ?= photonic-qec
+
+focused-tests:
+	$(PYTHON) scripts/run_focused_bridge_tests.py $(FOCUS)
 
 ## ── Clean ───────────────────────────────────────────────────────────────
 clean:

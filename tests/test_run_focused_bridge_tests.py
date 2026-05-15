@@ -1,0 +1,35 @@
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.run_focused_bridge_tests import (  # noqa: E402
+    SUITES,
+    build_pytest_command,
+    expand_suites,
+)
+
+
+def test_focused_bridge_runner_has_expected_core_suites() -> None:
+    assert {"photonic-qec", "dcc-weld", "tomotope-klitzing", "sector-split"} <= set(SUITES)
+    assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
+
+
+def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
+    paths = expand_suites(["architecture"])
+
+    assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in paths
+    assert len(paths) == len(set(paths))
+    assert len(paths) >= 12
+
+
+def test_focused_bridge_runner_builds_noconftest_command() -> None:
+    command = build_pytest_command(["tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py"], ["-k", "qec"])
+
+    assert command[:4] == [sys.executable, "-m", "pytest", "--noconftest"]
+    assert "-q" in command
+    assert command[-2:] == ["-k", "qec"]
