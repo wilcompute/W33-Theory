@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "q": 3,
+    "heawood": 7,
+    "codec": 12,
+    "quadratic": "x^2 - 7 x + 12 = (x - 3)(x - 4)",
+    "z3_zero_class": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "tesla_missing_digits": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "zeta_minus_one": "-1/12",
+    "all_identities_hold": true
+  },
+  "consecutive_pair_quadratic": {
+    "roots": [
+      3,
+      4
+    ],
+    "sum_of_roots": 7,
+    "product_of_roots": 12,
+    "polynomial": "x^2 - 7 x + 12",
+    "factorised": "(x - 3)(x - 4)",
+    "discriminant": 1
+  },
+  "polyhedra": {
+    "tetrahedron_g0": {
+      "V": 4,
+      "E": 6,
+      "F": 4,
+      "genus": 0
+    },
+    "csaszar_g1": {
+      "V": 7,
+      "E": 21,
+      "F": 14,
+      "genus": 1
+    },
+    "szilassi_g1": {
+      "V": 14,
+      "E": 21,
+      "F": 7,
+      "genus": 1
+    }
+  },
+  "fano_plane": {
+    "points": 7,
+    "lines": 7,
+    "points_per_line": 3,
+    "lines_per_point": 3,
+    "incidence_edges": 21
+  },
+  "heawood_graph": {
+    "vertices": 14,
+    "edges": 21,
+    "girth": 6
+  },
+  "z3_grading_of_codec": {
+    "0": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "1": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "2": [
+      2,
+      5,
+      8,
+      11
+    ]
+  },
+  "tesla_missing_digits": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "codec_multiples_of_three": [
+    3,
+    6,
+    9,
+    12
+  ],
+  "small_fraction_decimal_classes": [
+    {
+      "n": 1,
+      "kind": "terminating"
+    },
+    {
+      "n": 2,
+      "kind": "terminating"
+    },
+    {
+      "n": 3,
+      "kind": "repeating",
+      "rep_block": "3",
+      "period": 1,
+      "leading_digits": ""
+    },
+    {
+      "n": 4,
+      "kind": "terminating"
+    },
+    {
+      "n": 5,
+      "kind": "terminating"
+    },
+    {
+      "n": 6,
+      "kind": "repeating",
+      "rep_block": "6",
+      "period": 1,
+      "leading_digits": "1"
+    },
+    {
+      "n": 7,
+      "kind": "repeating",
+      "rep_block": "142857",
+      "period": 6,
+      "leading_digits": ""
+    },
+    {
+      "n": 8,
+      "kind": "terminating"
+    },
+    {
+      "n": 9,
+      "kind": "repeating",
+      "rep_block": "1",
+      "period": 1,
+      "leading_digits": ""
+    }
+  ],
+  "transition_fractions_1_over_3_6_9": [
+    {
+      "n": 3,
+      "kind": "repeating",
+      "rep_block": "3",
+      "period": 1,
+      "leading_digits": ""
+    },
+    {
+      "n": 6,
+      "kind": "repeating",
+      "rep_block": "6",
+      "period": 1,
+      "leading_digits": "1"
+    },
+    {
+      "n": 9,
+      "kind": "repeating",
+      "rep_block": "1",
+      "period": 1,
+      "leading_digits": ""
+    }
+  ],
+  "spacetime_factorisation": {
+    "space_dim": 3,
+    "time_dim": 4,
+    "product": 12,
+    "interpretation": "The local codec 12 factors as q * (q + 1) = 3 spatial axes (B23, B31, B12) times (q + 1) sign-x-role configurations. Equivalently dim_space x dim_time = 12 at the W(3,3) saturation."
+  },
+  "zeta_minus_one_reading": {
+    "value": "-1/12",
+    "denominator_meaning": "local codec size = q(q+1) = q! + 2q at q = 3",
+    "physical_reading": "the unique 'index-out-of-bounds' eigenvalue when the formal sum 1 + 2 + 3 + ... is renormalised inside the 12-element local codec carrier"
+  },
+  "identities": {
+    "heawood_equals_q_plus_q_plus_one": true,
+    "codec_equals_q_times_q_plus_one": true,
+    "codec_equals_q_factorial_plus_two_q": true,
+    "quadratic_has_q_and_q_plus_one_as_roots": true,
+    "quadratic_discriminant_is_one": true,
+    "tetrahedron_genus_zero": true,
+    "csaszar_genus_one": true,
+    "szilassi_genus_one": true,
+    "csaszar_is_K7_with_7_vertices": true,
+    "szilassi_is_K7_dual_with_7_faces": true,
+    "csaszar_edges_equal_szilassi_edges": true,
+    "fano_plane_has_7_points_and_lines": true,
+    "fano_points_per_line_equals_q": true,
+    "heawood_graph_vertices_equal_2_heawood": true,
+    "heawood_graph_edges_equal_3_heawood": true,
+    "z3_zero_class_size_is_codec_over_3": true,
+    "z3_zero_class_equals_3_6_9_12": true,
+    "tesla_missing_digits_are_0_3_6_9": true,
+    "tesla_missing_minus_zero_equals_3_6_9_class": true,
+    "codec_size_is_in_z3_zero_class": true,
+    "zeta_minus_one_is_minus_one_over_codec": true,
+    "transition_point_one_over_six_is_middle_of_369": true,
+    "one_over_three_repeats_denominator_only": true,
+    "one_over_six_includes_numerator_and_denominator": true,
+    "one_over_nine_repeats_numerator_only": true,
+    "spacetime_dim_product_equals_codec": true
+  },
+  "theorem": "Mod-12 Toroidal Synthesis Theorem.  At the W(3,3) saturation q = 3 the consecutive-integer pair (q, q + 1) = (3, 4) has sum 7 and product 12, and these two numbers are simultaneously the Heawood number (Csaszar vertex count, Szilassi face count, Fano point and line count, chromatic number of the torus) and the local W(3,3) codec size (= q! + 2q = the W(3,3) valency = the denominator of zeta(-1) = -1/12).  Equivalently q and q + 1 are the two roots of x^2 - 7 x + 12 = 0 whose discriminant equals 1.  The set {3, 6, 9, 12} -- the codec elements in the Z_3 = 0 grade -- coincides exactly with the digits missing from the cyclic decimal 142857 of 1/7 in base 10 (excluding zero).  The middle element 6 is the unique transition fraction 1/6 = 0.16666... that includes BOTH the numerator and the denominator in its decimal expansion, between the 'denominator-only' 1/3 = 0.333... and the 'numerator-only' 1/9 = 0.111....",
+  "one_line": "(q, q+1) at q = 3 has (sum, product) = (7, 12)  =  (Heawood, codec)  =  (torus colours, -1/zeta(-1))  =  (Csaszar K_7, W(3,3) valency).",
+  "honesty_boundary": "This is a synthesis theorem identifying the algebraic hinge (q, q+1) at q = 3 with (Heawood, codec) = (7, 12) and exhibiting the corresponding mod-3 / mod-12 / decimal structures.  It does NOT derive the Cesaro embedding, the Szilassi geometric coordinates, or the zeta-regularisation machinery; it documents the structural coincidences that follow from the Master Equation."
+}
