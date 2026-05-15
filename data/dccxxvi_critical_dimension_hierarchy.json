@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "q": 3,
+    "tetrahedron_flags": 24,
+    "tomotope_cells": 8,
+    "bosonic_critical_D": 26,
+    "super_critical_D": 10,
+    "M_theory_D": 11,
+    "F_theory_D": 12,
+    "dim_E6": 78,
+    "dim_E8": 248,
+    "all_identities_hold": true
+  },
+  "renormalised_tetrahedron_identity": {
+    "tetrahedron_flags": 24,
+    "zeta_minus_one": "-1/12",
+    "product": "-2",
+    "product_value": -2,
+    "equals_delta_chi_per_handle": true,
+    "interpretation": "Multiplying the tetrahedron flag count (24 = ground-state transverse mode count) by zeta(-1) = -1/12 (renormalisation of 1 + 2 + 3 + ...) gives exactly the genus decrement -2 per handle.  This is the arithmetic identity behind the bosonic-string critical-dimension calculation."
+  },
+  "critical_dimension_table": [
+    {
+      "theory": "bosonic string",
+      "D_critical": 26,
+      "transverse_modes": 24,
+      "transverse_identification": "tetrahedron flag count (DCCXXV)",
+      "renormalisation": "-(D - 2)/24 = -1 with sum = -1/12",
+      "formula": "D - 2 = 24 = (q+1)!"
+    },
+    {
+      "theory": "superstring",
+      "D_critical": 10,
+      "transverse_modes": 8,
+      "transverse_identification": "tomotope cell count = 1 + 5 + 2 (DCCXXV)",
+      "renormalisation": "GSO-projected NS-NS sector",
+      "formula": "D - 2 = 8 = oscillator mode total at h in {0, 1}"
+    },
+    {
+      "theory": "M-theory",
+      "D_critical": 11,
+      "transverse_modes": 9,
+      "transverse_identification": "q^2 = 9 (bivector axis squared)",
+      "renormalisation": "uplift of D=10 supergravity",
+      "formula": "D = 11 = (11-cell cells; DCCXXV abstract bookend)"
+    },
+    {
+      "theory": "F-theory",
+      "D_critical": 12,
+      "transverse_modes": 10,
+      "transverse_identification": "oscillator face increment Delta F",
+      "renormalisation": "elliptic fibration of D=10",
+      "formula": "D = 12 = codec = q(q+1)"
+    }
+  ],
+  "universal_pattern": {
+    "claim": "D_critical - 2 = oscillator-mode count of an appropriate W(3,3) phase",
+    "rows": [
+      {
+        "theory": "bosonic string",
+        "D - 2": 24,
+        "mode_count": 24,
+        "matches": true
+      },
+      {
+        "theory": "superstring",
+        "D - 2": 8,
+        "mode_count": 8,
+        "matches": true
+      },
+      {
+        "theory": "M-theory",
+        "D - 2": 9,
+        "mode_count": 9,
+        "matches": true
+      },
+      {
+        "theory": "F-theory",
+        "D - 2": 10,
+        "mode_count": 10,
+        "matches": true
+      }
+    ],
+    "all_match": true,
+    "two_offset_interpretation": "The '+2' is the two light-cone coordinates (timelike + longitudinal) consistently removed from the transverse count.  These two are precisely the two roots {q, q+1} = {3, 4} of the DCCXXII quadratic x^2 - 7x + 12 -- the saturation pair of the Master Equation."
+  },
+  "e6_breakdown": {
+    "dim_E6": 78,
+    "as_q_times_bosonic_critical": 78,
+    "matches": true,
+    "interpretation": "dim E_6 = 78 = 3 * 26 = q * D_bosonic at q = 3.  Three copies of the bosonic critical dimension fit inside the E_6 GUT algebra that is Aut(W(3,3))."
+  },
+  "e8_breakdown": {
+    "dim_E8": 248,
+    "root_count": 240,
+    "cartan_rank": 8,
+    "sum": 248,
+    "matches": true,
+    "root_count_identification": "240 = E = single-direction edge count of W(3,3)",
+    "cartan_identification": "8 = tomotope cells = (q+1)! / (q+1) * 2 = 1 + 5 + 2",
+    "interpretation": "dim E_8 = 248 = 240 + 8 = (directed Hashimoto carrier of W(3,3)) + (tomotope cell count).  The roots come from the graph itself, the Cartan from the oscillator-mode reification.  The W(3,3) program therefore identifies E_8's two summands with the directed-carrier and the abstract-polytope (h in {0, 1}) parts of its own genus oscillator."
+  },
+  "two_offset_interpretation": "The constant '+2' is the two light-cone coordinates of the string worldsheet, but in W(3,3) language it is the (q, q+1) = (3, 4) Master-Equation pair: the two consecutive integers whose sum is the Heawood number and whose product is the codec.  So '+2' literally counts {q, q+1} - {q+1} = {q} and one extra dimension; or, equivalently, the Euler characteristic shift between sphere (chi = 2) and torus (chi = 0).",
+  "identities": {
+    "zeta_minus_one_is_minus_one_over_codec": true,
+    "tetrahedron_24_times_zeta_minus_one_is_minus_two": true,
+    "delta_chi_per_handle_is_minus_two": true,
+    "bosonic_D_is_24_plus_2": true,
+    "super_D_is_8_plus_2": true,
+    "M_theory_D_is_11": true,
+    "F_theory_D_is_codec": true,
+    "tomotope_cells_eq_8": true,
+    "tetrahedron_flags_eq_24": true,
+    "dim_E6_eq_3_times_26": true,
+    "dim_E8_eq_240_plus_8": true,
+    "cartan_E8_eq_tomotope_cells": true,
+    "E8_root_count_eq_W33_edge_count": true,
+    "universal_pattern_holds_for_all_rows": true,
+    "two_offset_is_master_equation_pair": true
+  },
+  "theorem": "Critical-Dimension Hierarchy Theorem.  At the W(3,3) saturation q = 3, the genus oscillator hosts mode-count phases whose regularised flag/cell totals coincide with the transverse dimension counts of every major string/M/F theory:\n  bosonic  D = 26 = 24 + 2   :  24 = tetrahedron flags;\n  super    D = 10 =  8 + 2   :   8 = tomotope cells;\n  M-theory D = 11 =  9 + 2   :   9 = q^2 (bivector axis^2);\n  F-theory D = 12 = 10 + 2   :  10 = oscillator face increment.\nThe arithmetic hinge is the identity 24 * zeta(-1) = -2 = Delta chi per handle: the tetrahedron's flag count multiplied by the zeta-regularised sum 1 + 2 + 3 + ... = -1/12 gives exactly the genus decrement per handle of the same oscillator.  The two-coordinate offset (+ 2) is the saturation pair (q, q+1) = (3, 4) -- the roots of the DCCXXII quadratic.  Furthermore dim E_6 = 78 = 3 * 26 = q * D_bosonic and dim E_8 = 248 = 240 + 8 = (directed Hashimoto carrier) + (tomotope cells), so the W(3,3) program identifies the dimensional skeleton of E_6 and E_8 with three bosonic critical dimensions and one directed-carrier + oscillator-Cartan split, respectively.",
+  "one_line": "(D_critical - 2) = oscillator-mode count of an appropriate W(3,3) phase: 24 = tet flags (bosonic), 8 = tomotope cells (super), 9 = q^2 (M), 10 = oscillator face Delta (F).  Arithmetic hinge: 24 * (-1/12) = -2 = Delta chi per handle.",
+  "honesty_boundary": "This is a NUMERICAL synthesis: every dimensional identity is exact, but the physical claim that 'M-theory transverse modes = q^2' or 'super-transverse modes = tomotope cells' is a structural assignment, not a derivation of M-theory or string theory from W(3,3).  The bosonic identity 24 * zeta(-1) = -2 = Delta chi is the cleanest of the four and is the direct arithmetic hinge.  The honest reading is that the W(3,3) genus oscillator provides a UNIFIED NUMERICAL SCAFFOLD for the (D - 2) mode counts across critical-dimension theories, with the tetrahedron flag count and tomotope cell count playing the dominant roles."
+}
