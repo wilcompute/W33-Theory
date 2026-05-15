@@ -1,3 +1,15 @@
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.PART_CCCCCLXXXI_clifford_percolation_hole_oscillator import build_bridge
+
+
 def test_torus_mode_polarization_split():
     csaszar_vector_modes = 5
     szilassi_bivector_modes = 2
@@ -27,8 +39,32 @@ def test_hole_as_nonboundary_cycle():
 
 
 def test_threshold_chain_names():
-    thresholds = ["p_geom", "p_beta1", "p_Cl", "p_H1", "p_full", "p_split"]
-    assert thresholds == ["p_geom", "p_beta1", "p_Cl", "p_H1", "p_full", "p_split"]
+    thresholds = build_bridge()["threshold_surface"]["threshold_order"]
+    assert thresholds == [
+        "p_geom",
+        "p_beta1",
+        "p_Cl",
+        "p_H1",
+        "p_81_plus",
+        "p_81_minus",
+        "p_162",
+        "p_split",
+    ]
+
+
+def test_sector_thresholds_are_named_explicitly():
+    threshold_surface = build_bridge()["threshold_surface"]
+    assert threshold_surface["sector_thresholds"] == {
+        "p_81_plus": "first 81-sector saturation",
+        "p_81_minus": "conjugate 81-sector saturation",
+        "p_162": "total two-sector saturation",
+    }
+
+
+def test_continuum_claims_remain_conditional_without_external_factor():
+    threshold_surface = build_bridge()["threshold_surface"]
+    assert threshold_surface["continuum_claim_status"] == "conditional"
+    assert threshold_surface["external_4d_factor_required"] is False
 
 
 def test_clifford_percolation_observables():

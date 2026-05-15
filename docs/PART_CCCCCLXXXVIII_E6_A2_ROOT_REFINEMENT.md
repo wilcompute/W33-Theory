@@ -12,6 +12,8 @@ This part sharpens the interpretation by matching it to the standard E8 Z3-grade
 E8 = (E6 + A2) + 81 + 81.
 ```
 
+Claim-surface guardrail: this part is an **exact finite root-refinement theorem**. Any statement that infinite tomotope covers by themselves generate a true 4D continuum remains **conditional** unless an explicit external 4D factor (or a separate convergence theorem) is supplied.
+
 ## 1. Root-count refinement
 
 The W(E6) orbit data gives:
@@ -174,3 +176,10 @@ The W(E6) orbit decomposition now has a direct E8 grading interpretation:
 ```
 
 So the 84/168 phase-superperiod did not merely identify a 168 complement.  It exposed the A2-charged matter complement sitting between E6 and the two 81-dimensional sectors.
+
+Typed status summary:
+
+```text
+exact_verified:       240 = 72 + 6 + 81 + 81 root decomposition,
+conditional_verified: infinite-cover continuity bridge (requires external 4D factor / convergence theorem).
+```

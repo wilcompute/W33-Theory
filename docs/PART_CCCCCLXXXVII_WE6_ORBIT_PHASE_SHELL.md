@@ -30,6 +30,16 @@ Therefore
 
 This is the first concrete representation-theoretic support for the phase/root split.
 
+The implementation now makes the `162` matter shell explicit as two paired sectors:
+
+```text
+81^+ = 27 + 27 + 27,
+81^- = 27 + 27 + 27,
+162 = 81^+ + 81^-.
+```
+
+The six singleton representatives are also extracted as six signed Clifford channels, so the residual axis data is no longer just an aggregate count.
+
 ## 1. Interpretation
 
 The `72` orbit is naturally the E6 root shell.
@@ -70,6 +80,8 @@ The new orbit data is compatible with the same scale:
 ```
 
 The remaining six singleton states are naturally interpreted as the residual rank/spectral-axis data needed to connect the 162 matter roots to the 72 E6 root shell.
+
+In other words, the 162 shell should be read sector-by-sector rather than as a single undifferentiated `p_full` block.
 
 Thus the 168 phase shell may be read as
 

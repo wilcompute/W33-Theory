@@ -153,3 +153,25 @@ T_facets = 4 tetrahedra + 4 hemioctahedra.
 ```
 
 Then compare the repository's `tomotope_flag_model_192.json` against this two-orbit flag-carrier interpretation.
+
+## 8. Code-crack verdict (discrete to continuous)
+
+The executable verifier now computes the live tower exponents directly from the tomotope cover module:
+
+```text
+intrinsic carrier growth degree   = 3,
+intrinsic monodromy growth degree = 6.
+```
+
+So the sharp independent verdict is:
+
+```text
+The internal tower closes two 192 mechanisms exactly,
+but does NOT close intrinsic 4D continuum scaling by itself.
+```
+
+In other words, the code crack is not "everything is 4D now"; the crack is that the theory has a precise split:
+
+- exact finite packet/symmetry ladder is real,
+- intrinsic cover growth is cubic,
+- 4D continuum still needs external factorization or a new intrinsic convergence theorem.

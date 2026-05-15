@@ -163,6 +163,16 @@ Clifford transport does not necessarily see all H1 matter modes.
 
 So the model separates classical percolation, homological percolation, Clifford holonomy percolation, and W33 matter visibility.
 
+For the current bridge, the threshold surface is now sector-aware:
+
+```text
+p_geom < p_beta1 < p_Cl < p_H1 < p_81^+ < p_81^- < p_162 < p_split.
+```
+
+Here `p_81^+` saturates the first 81-sector, `p_81^-` saturates the conjugate 81-sector, and `p_162` is total two-sector saturation.
+
+Any continuum interpretation of this finite percolation model should remain **conditional** unless a genuine external 4D factor is supplied separately.
+
 ---
 
 ## 6. Toroidal duality as maximum-adjacency Clifford duality
