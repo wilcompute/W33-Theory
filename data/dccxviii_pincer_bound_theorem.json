@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "q_star": 3,
+    "delta_h_at_q_star": 0.0,
+    "delta_h_lower_branch": [
+      -0.6931471805599453,
+      -0.6931471805599453
+    ],
+    "delta_h_upper_branch": [
+      1.09861228866811,
+      2.484906649788,
+      4.094344562222101,
+      5.886104031450156
+    ],
+    "lower_bound_q": 3,
+    "upper_bound_q": 3,
+    "pincer_collapses_to_singleton": true
+  },
+  "scan": [
+    {
+      "q": 1,
+      "factorial_q": 1,
+      "two_q": 2,
+      "delta_h": -0.6931471805599453,
+      "non_abelian": false,
+      "dihedral_dominant": true,
+      "saturation": "under"
+    },
+    {
+      "q": 2,
+      "factorial_q": 2,
+      "two_q": 4,
+      "delta_h": -0.6931471805599453,
+      "non_abelian": false,
+      "dihedral_dominant": true,
+      "saturation": "under"
+    },
+    {
+      "q": 3,
+      "factorial_q": 6,
+      "two_q": 6,
+      "delta_h": 0.0,
+      "non_abelian": true,
+      "dihedral_dominant": true,
+      "saturation": "saturated"
+    },
+    {
+      "q": 4,
+      "factorial_q": 24,
+      "two_q": 8,
+      "delta_h": 1.09861228866811,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 5,
+      "factorial_q": 120,
+      "two_q": 10,
+      "delta_h": 2.484906649788,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 6,
+      "factorial_q": 720,
+      "two_q": 12,
+      "delta_h": 4.094344562222101,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 7,
+      "factorial_q": 5040,
+      "two_q": 14,
+      "delta_h": 5.886104031450156,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 8,
+      "factorial_q": 40320,
+      "two_q": 16,
+      "delta_h": 7.832014180505469,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 9,
+      "factorial_q": 362880,
+      "two_q": 18,
+      "delta_h": 9.911455722185305,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 10,
+      "factorial_q": 3628800,
+      "two_q": 20,
+      "delta_h": 12.108680299521525,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 11,
+      "factorial_q": 39916800,
+      "two_q": 22,
+      "delta_h": 14.41126539251557,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    },
+    {
+      "q": 12,
+      "factorial_q": 479001600,
+      "two_q": 24,
+      "delta_h": 16.80916066531394,
+      "non_abelian": true,
+      "dihedral_dominant": false,
+      "saturation": "over"
+    }
+  ],
+  "deep_chain": {
+    "lower_bound": {
+      "source": "quantum non-commutativity (S_q must be non-abelian)",
+      "statement": "q >= 3",
+      "value": 3
+    },
+    "upper_bound": {
+      "source": "topological / geometric realisability (D_q realises all of S_q)",
+      "statement": "q <= 3",
+      "value": 3
+    },
+    "intersection": [
+      3
+    ],
+    "uniqueness": true,
+    "interpretation": "q = 3 is the unique integer at which the quantum lower bound (q >= 3) and the classical upper bound (q <= 3) coincide. The Master Equation q! = 2q is the saturating identity at this intersection."
+  },
+  "entropy_gap": {
+    "definition": "Delta_H(q) = log(q!) - log(2q) = log((q-1)!/2)",
+    "saturating_q": [
+      3
+    ],
+    "under_realised_q": [
+      1,
+      2
+    ],
+    "over_realised_q": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "asymptotic_growth": "Delta_H(q) ~ q log q - q - log 2 for q -> infty (Stirling); i.e., for q >= 4 the entropy gap diverges factorially."
+  },
+  "identities": {
+    "delta_h_zero_at_q_3": true,
+    "delta_h_negative_for_q_1_2": true,
+    "delta_h_positive_for_q_geq_4": true,
+    "lower_bound_is_3": true,
+    "upper_bound_is_3": true,
+    "pincer_singleton_is_3": true,
+    "master_equation_saturates_pincer": true,
+    "delta_h_grows_factorially": true
+  },
+  "theorem": "Pincer-Bound Theorem.  The entropy gap Delta_H(q) = log(q!/(2q)) vanishes uniquely at q = 3 among positive integers, with Delta_H < 0 for q in {1, 2} (D_q over-realises S_q in the abelian/trivial regime) and Delta_H > 0 for q >= 4 (S_q outgrows D_q factorially).  The quantum-non-commutativity bound forces q >= 3 and the geometric-realisability bound forces q <= 3; the unique integer satisfying both saturates the Master Equation q! = 2q.  Hence q = 3 is the saturated critical point of the quantum-classical interface.",
+  "one_line": "q = 3  =  argmin {q in Z_+ : S_q non-abelian and q! <= 2q}  =  unique zero of Delta_H(q)  =  W(3,3) seed.",
+  "honesty_boundary": "This part formalises the WHY of q = 3 as a one-variable critical-point theorem.  It does not extend the W(3,3) physics arc or derive new empirical observables; it sharpens the foundational axiom into a saturation theorem and is the deepest single-variable characterisation of q = 3 inside the program."
+}
