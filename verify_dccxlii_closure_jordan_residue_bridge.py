@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from verify_dccxl_closure_transfer_generator_bridge import build_bridge as build_dccxl
+from verify_dccxl_closure_jordan_resolvent_bridge import build_bridge as build_dccxl
 from verify_dccxli_closure_resolvent_kernel_bridge import build_bridge as build_dccxli
 
 OUT_PATH = ROOT / "data" / "dccxlii_closure_jordan_residue_bridge.json"
