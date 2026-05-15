@@ -15,16 +15,24 @@ from scripts.run_focused_bridge_tests import (  # noqa: E402
 
 
 def test_focused_bridge_runner_has_expected_core_suites() -> None:
-    assert {"photonic-qec", "dcc-weld", "tomotope-klitzing", "sector-split"} <= set(SUITES)
+    assert {
+        "photonic-qec",
+        "dcc-weld",
+        "tomotope-klitzing",
+        "sector-split",
+        "closure-clock",
+    } <= set(SUITES)
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
+    assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in SUITES["closure-clock"]
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     paths = expand_suites(["architecture"])
 
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in paths
+    assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in paths
     assert len(paths) == len(set(paths))
-    assert len(paths) >= 12
+    assert len(paths) >= 25
 
 
 def test_focused_bridge_runner_builds_noconftest_command() -> None:

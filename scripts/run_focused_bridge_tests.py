@@ -44,10 +44,31 @@ SUITES: dict[str, list[str]] = {
         "tests/test_tomotope_two_192_mechanisms_cccccxcII.py",
         "tests/test_we6_orbit_phase_shell_ccccclxxxvii.py",
     ],
+    "closure-clock": [
+        "tests/test_dccxxviii_ternary_quaternion_codec_tower.py",
+        "tests/test_dccxxix_pauli_klitzing_codec_ladder_bridge.py",
+        "tests/test_dccxxx_clifford_even_quaternion_pauli_bridge.py",
+        "tests/test_dccxxxi_loop_closure_clock_bridge.py",
+        "tests/test_dccxxxii_closure_clock_codec_flow_bridge.py",
+        "tests/test_dccxxxiii_spatial_closure_time_bridge.py",
+        "tests/test_dccxxxiv_proper_time_causal_order_bridge.py",
+        "tests/test_dccxxxv_closure_interval_invariant_bridge.py",
+        "tests/test_dccxxxvi_closure_action_weight_bridge.py",
+        "tests/test_dccxxxvii_closure_geodesic_refinement_bridge.py",
+        "tests/test_dccxxxviii_closure_bellman_principle_bridge.py",
+        "tests/test_dccxxxix_closure_semigroup_propagator_bridge.py",
+        "tests/test_dccxl_closure_jordan_resolvent_bridge.py",
+    ],
 }
 
 ALIASES = {
-    "architecture": ["photonic-qec", "dcc-weld", "tomotope-klitzing", "sector-split"],
+    "architecture": [
+        "photonic-qec",
+        "dcc-weld",
+        "tomotope-klitzing",
+        "sector-split",
+        "closure-clock",
+    ],
 }
 
 
