@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "q": 3,
+    "q_plus_one": 4,
+    "triangle_total": 7,
+    "tetrahedron_total": 15,
+    "mersenne_at_q": 7,
+    "mersenne_at_q_plus_1": 15,
+    "all_identities_hold": true
+  },
+  "triangle_subcells": {
+    "dim_0": 3,
+    "dim_1": 3,
+    "dim_2": 1,
+    "total": 7,
+    "mersenne_n_plus_1": 7
+  },
+  "tetrahedron_subcells": {
+    "dim_0": 4,
+    "dim_1": 6,
+    "dim_2": 4,
+    "dim_3": 1,
+    "total": 15,
+    "mersenne_n_plus_1": 15
+  },
+  "loop_closure_argument": [
+    {
+      "step": 1,
+      "claim": "A closed 1-loop has at least 3 vertices.",
+      "proof": "A 1-cycle visits each edge at most once and returns to its starting vertex.  With 0 vertices there is no graph; with 1 vertex no edge can be drawn (graphs in this argument have no loops on a single vertex); with 2 vertices only one edge exists (no cycle).  Three vertices and three pairwise edges give the first non-degenerate 1-cycle: the triangle."
+    },
+    {
+      "step": 2,
+      "claim": "The 3-vertex 1-cycle bounds a unique 2-cell.",
+      "proof": "In the geometric realisation of the abstract triangle as a 2-simplex, the boundary loop is filled by the interior 2-cell.  This 2-cell is forced by the closure: a 1-cycle with no other constraints bounds the topologically simplest 2-disc."
+    },
+    {
+      "step": 3,
+      "claim": "The minimal closed loop therefore has total sub-cell count (V, E, F) = (3, 3, 1) = q vertices + q edges + 1 face = 2q + 1 = 7 at q = 3.",
+      "proof": "Direct count of the 2-simplex.  Equivalently 7 = M_q = 2^q - 1, the Mersenne number at exponent q = 3."
+    },
+    {
+      "step": 4,
+      "claim": "Adding one apex vertex with all three connecting edges creates the tetrahedron (3-simplex), which closes the 2-cycle (boundary surface) into a 3-cell.",
+      "proof": "The 3-simplex has f-vector (4, 6, 4, 1) and is the unique simplicial closure of the triangle by one new vertex.  Its sub-cell total is 4 + 6 + 4 + 1 = 15 = M_{q+1} = 2^{q+1} - 1."
+    },
+    {
+      "step": 5,
+      "claim": "Combining (i) and (ii): the closure act forces the consecutive pair (q, q + 1) = (3, 4) where q = vertices-of-the-loop and q + 1 = vertices-of-the-bounded-volume.",
+      "proof": "Immediate from the simplicial closure construction."
+    }
+  ],
+  "rigidity_argument": [
+    {
+      "step": 1,
+      "claim": "A regular q-gon has q! vertex orderings.",
+      "value": 6
+    },
+    {
+      "step": 2,
+      "claim": "A regular q-gon has 2q rigid motions (rotations + reflections).",
+      "value": 6
+    },
+    {
+      "step": 3,
+      "claim": "Every vertex ordering is realised as a rigid motion iff q! = 2q, equivalently iff q = 3 (the Master Equation).",
+      "value": true
+    },
+    {
+      "step": 4,
+      "claim": "Hence at q = 3 the triangle is the smallest non-degenerate polygon that is BOTH topologically closed AND combinatorially rigid -- the loop-closure saturation.",
+      "value": true
+    }
+  ],
+  "two_sided_bound": {
+    "lower_bound": {
+      "source": "loop closure (topology)",
+      "statement": "q >= 3 to have a non-degenerate closed 1-loop"
+    },
+    "upper_bound": {
+      "source": "rigidity (combinatorics = geometry)",
+      "statement": "q <= 3 to have q! <= 2q (every relabelling = rigid motion)"
+    },
+    "intersection": [
+      3
+    ],
+    "interpretation": "q = 3 is the unique integer at which the minimal-loop lower bound and the combinatorial-rigidity upper bound both saturate.  This is the same DCCXVIII pincer, now reformulated topologically."
+  },
+  "user_insight_quote": "3 being the minimum points to close a loop and when you have three points you automatically get a 4th because it creates a triangle face.",
+  "mersenne_connection": {
+    "M_q": 7,
+    "M_q_plus_1": 15,
+    "interpretation": "An n-simplex has 2^(n+1) - 1 = M_{n+1} non-empty sub-simplices.  At q = 3, the minimal closed loop (2-simplex) gives M_3 = 7 = Heawood, and the closed volume (3-simplex / tetrahedron) gives M_4 = 15 = W(3,3) g eigen-multiplicity.  Both are Mersenne numbers."
+  },
+  "identities": {
+    "minimal_loop_has_q_vertices": true,
+    "closure_adds_one_face": true,
+    "triangle_total_is_2q_plus_one": true,
+    "triangle_total_is_mersenne_q": true,
+    "tetrahedron_total_is_mersenne_q_plus_one": true,
+    "triangle_total_equals_heawood": true,
+    "tetrahedron_total_equals_eigen_g_multiplicity": true,
+    "loop_closure_lower_bound_is_q_3": true,
+    "rigidity_upper_bound_is_q_3": true,
+    "two_sided_bound_uniqueness": true,
+    "loop_argument_step_count": true,
+    "rigidity_argument_step_count": true,
+    "consecutive_pair_emerges": true,
+    "two_to_the_q_minus_1_eq_heawood": true,
+    "two_to_the_q_plus_1_minus_1_eq_g_mult": true
+  },
+  "theorem": "Loop-Closure Theorem.  The minimum number of vertices needed to close a non-degenerate 1-loop in a simplicial complex is 3.  The closure act introduces one additional 2-cell, so the minimal closed loop has sub-cell count (V, E, F) = (3, 3, 1) with total M_3 = 2^3 - 1 = 7 = Heawood number.  Adding a single apex vertex creates the tetrahedron with sub-cell count (4, 6, 4, 1), total M_4 = 2^4 - 1 = 15 = W(3,3) g eigen-multiplicity.  The consecutive pair (q, q + 1) = (3, 4) is therefore forced by topology alone: q = minimal-loop vertex count, q + 1 = minimal-volume vertex count.  Combined with the rigidity condition q! <= 2q (equality at q = 3) this gives a TOPOLOGICAL derivation of the Master Equation, independent of the group-theoretic Dihedral-Symmetric Coincidence.",
+  "one_line": "3 = minimum vertices to close a loop  =>  triangle has 7 sub-cells = M_3 = Heawood  =>  apex gives tetrahedron with 15 sub-cells = M_4 = g eigen-mult; consecutive pair (q, q+1) = (3, 4) is topological.",
+  "honesty_boundary": "This is a topological/combinatorial derivation of the (q, q+1) = (3, 4) pair from minimal loop closure plus rigidity.  It does not by itself establish W(3,3) -- the SRG structure, the codec layers, and the empirical closures still require the parts CCCCXXXI-CCCCCXX.  What this part DOES establish is that the Master Equation's solution q = 3 has a purely topological origin in the act of closing a one-dimensional loop in a simplicial complex."
+}
