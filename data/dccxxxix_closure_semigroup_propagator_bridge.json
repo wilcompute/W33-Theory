@@ -1,0 +1,917 @@
+{
+  "summary": {
+    "causal_class_count": 6,
+    "maximal_value": 5,
+    "minimal_propagator_numerator": 1,
+    "minimal_propagator_denominator": 32,
+    "all_identities_hold": true
+  },
+  "propagator_definition": {
+    "value": "J(a,b)=tau_b-tau_a for causal pairs",
+    "weight": "K(a,b)=2^{-J(a,b)}",
+    "min_plus_law": "J(a,c)=min_b (J(a,b)+J(b,c))",
+    "multiplicative_law": "K(a,c)=K(a,b)K(b,c)"
+  },
+  "value_table": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      null,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      null,
+      null,
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      null,
+      null,
+      null,
+      0,
+      1,
+      2
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      0,
+      1
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  ],
+  "propagator_table": [
+    [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 1,
+        "denominator": 4
+      },
+      {
+        "numerator": 1,
+        "denominator": 8
+      },
+      {
+        "numerator": 1,
+        "denominator": 16
+      },
+      {
+        "numerator": 1,
+        "denominator": 32
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 1,
+        "denominator": 4
+      },
+      {
+        "numerator": 1,
+        "denominator": 8
+      },
+      {
+        "numerator": 1,
+        "denominator": 16
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 1,
+        "denominator": 4
+      },
+      {
+        "numerator": 1,
+        "denominator": 8
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 1,
+        "denominator": 4
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      }
+    ]
+  ],
+  "semigroup_witness": [
+    {
+      "from": 0,
+      "to": 0,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "target_value": 1,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        },
+        {
+          "midpoint": 1,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        }
+      ]
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "target_value": 2,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 1,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        }
+      ]
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "target_value": 3,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 1,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        }
+      ]
+    },
+    {
+      "from": 0,
+      "to": 4,
+      "target_value": 4,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 1,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        }
+      ]
+    },
+    {
+      "from": 0,
+      "to": 5,
+      "target_value": 5,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 32
+      },
+      "candidates": [
+        {
+          "midpoint": 0,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        },
+        {
+          "midpoint": 1,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        },
+        {
+          "midpoint": 5,
+          "value_sum": 5,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 32
+          }
+        }
+      ]
+    },
+    {
+      "from": 1,
+      "to": 1,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 1,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "target_value": 1,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "candidates": [
+        {
+          "midpoint": 1,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        }
+      ]
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "target_value": 2,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "candidates": [
+        {
+          "midpoint": 1,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        }
+      ]
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "target_value": 3,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "candidates": [
+        {
+          "midpoint": 1,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        }
+      ]
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "target_value": 4,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "candidates": [
+        {
+          "midpoint": 1,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 2,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        },
+        {
+          "midpoint": 5,
+          "value_sum": 4,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 16
+          }
+        }
+      ]
+    },
+    {
+      "from": 2,
+      "to": 2,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 2,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "target_value": 1,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "candidates": [
+        {
+          "midpoint": 2,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        }
+      ]
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "target_value": 2,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "candidates": [
+        {
+          "midpoint": 2,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        }
+      ]
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "target_value": 3,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "candidates": [
+        {
+          "midpoint": 2,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 3,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        },
+        {
+          "midpoint": 5,
+          "value_sum": 3,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 8
+          }
+        }
+      ]
+    },
+    {
+      "from": 3,
+      "to": 3,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 3,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "target_value": 1,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "candidates": [
+        {
+          "midpoint": 3,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        }
+      ]
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "target_value": 2,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "candidates": [
+        {
+          "midpoint": 3,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 4,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        },
+        {
+          "midpoint": 5,
+          "value_sum": 2,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 4
+          }
+        }
+      ]
+    },
+    {
+      "from": 4,
+      "to": 4,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 4,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "target_value": 1,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "candidates": [
+        {
+          "midpoint": 4,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        },
+        {
+          "midpoint": 5,
+          "value_sum": 1,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 2
+          }
+        }
+      ]
+    },
+    {
+      "from": 5,
+      "to": 5,
+      "target_value": 0,
+      "target_propagator": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "candidates": [
+        {
+          "midpoint": 5,
+          "value_sum": 0,
+          "propagator_product": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ]
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "The closure chain carries a propagator semigroup: value propagates by min-plus composition and the exponential weight propagates multiplicatively, with every intermediate causal class saturating the composition law on the chain.",
+    "conditional_layer": "Promoting this discrete propagator law to a continuum semigroup kernel requires an additional limit construction."
+  },
+  "identities": {
+    "value_table_is_delta_tau": true,
+    "propagator_is_two_to_minus_delta_tau": true,
+    "min_plus_semigroup_holds": true,
+    "every_midpoint_saturates_min_plus_identity": true,
+    "multiplicative_propagator_identity_holds": true,
+    "maximal_value_is_five": true,
+    "minimal_nonzero_propagator_is_one_over_32": true
+  }
+}

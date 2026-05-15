@@ -1,0 +1,172 @@
+{
+  "summary": {
+    "maximal_span": 5,
+    "value_at_maximal_span": 5,
+    "unique_local_minimizer": 1,
+    "recursion_depth": 5,
+    "all_identities_hold": true
+  },
+  "value_function": {
+    "definition": "V(n) = min_{d_1+...+d_m=n} sum_i d_i^2",
+    "values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bellman_witness": [
+      {
+        "span": 1,
+        "candidates": [
+          {
+            "jump": 1,
+            "candidate_value": 1
+          }
+        ],
+        "min_value": 1,
+        "minimizers": [
+          1
+        ],
+        "bellman_step": "V(1) = min_d (d^2 + V(1-d))"
+      },
+      {
+        "span": 2,
+        "candidates": [
+          {
+            "jump": 1,
+            "candidate_value": 2
+          },
+          {
+            "jump": 2,
+            "candidate_value": 4
+          }
+        ],
+        "min_value": 2,
+        "minimizers": [
+          1
+        ],
+        "bellman_step": "V(2) = min_d (d^2 + V(2-d))"
+      },
+      {
+        "span": 3,
+        "candidates": [
+          {
+            "jump": 1,
+            "candidate_value": 3
+          },
+          {
+            "jump": 2,
+            "candidate_value": 5
+          },
+          {
+            "jump": 3,
+            "candidate_value": 9
+          }
+        ],
+        "min_value": 3,
+        "minimizers": [
+          1
+        ],
+        "bellman_step": "V(3) = min_d (d^2 + V(3-d))"
+      },
+      {
+        "span": 4,
+        "candidates": [
+          {
+            "jump": 1,
+            "candidate_value": 4
+          },
+          {
+            "jump": 2,
+            "candidate_value": 6
+          },
+          {
+            "jump": 3,
+            "candidate_value": 10
+          },
+          {
+            "jump": 4,
+            "candidate_value": 16
+          }
+        ],
+        "min_value": 4,
+        "minimizers": [
+          1
+        ],
+        "bellman_step": "V(4) = min_d (d^2 + V(4-d))"
+      },
+      {
+        "span": 5,
+        "candidates": [
+          {
+            "jump": 1,
+            "candidate_value": 5
+          },
+          {
+            "jump": 2,
+            "candidate_value": 7
+          },
+          {
+            "jump": 3,
+            "candidate_value": 11
+          },
+          {
+            "jump": 4,
+            "candidate_value": 17
+          },
+          {
+            "jump": 5,
+            "candidate_value": 25
+          }
+        ],
+        "min_value": 5,
+        "minimizers": [
+          1
+        ],
+        "bellman_step": "V(5) = min_d (d^2 + V(5-d))"
+      }
+    ],
+    "optimal_policy": [
+      {
+        "span": 1,
+        "optimal_jump": 1,
+        "value": 1
+      },
+      {
+        "span": 2,
+        "optimal_jump": 1,
+        "value": 2
+      },
+      {
+        "span": 3,
+        "optimal_jump": 1,
+        "value": 3
+      },
+      {
+        "span": 4,
+        "optimal_jump": 1,
+        "value": 4
+      },
+      {
+        "span": 5,
+        "optimal_jump": 1,
+        "value": 5
+      }
+    ]
+  },
+  "bridge_claim": {
+    "exact_layer": "The closure geodesic law is generated locally by the Bellman recursion V(n)=min_d(d^2+V(n-d)), whose unique optimizer is always the unit jump d=1.",
+    "conditional_layer": "Reading this discrete Bellman identity as a continuum Hamilton-Jacobi equation requires an additional limiting argument."
+  },
+  "identities": {
+    "value_function_starts_at_zero": true,
+    "bellman_recursion_holds_exactly": true,
+    "value_function_is_linear_V_n_equals_n": true,
+    "unique_local_minimizer_is_unit_jump": true,
+    "policy_is_stationary_unit_step": true,
+    "discrete_hamilton_jacobi_identity_holds": true,
+    "maximal_span_value_matches_geodesic_action": true
+  }
+}

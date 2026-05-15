@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "q": 3,
+    "qp1": 4,
+    "codec": 12,
+    "two_qutrit_vertices": 40,
+    "two_qutrit_valency": 12,
+    "two_qutrit_commuting_pairs": 240,
+    "matches_W33_v": true,
+    "matches_W33_k": true,
+    "matches_W33_E": true,
+    "all_identities_hold": true
+  },
+  "ternary_quaternion_codec_tower": [
+    {
+      "layer": 1,
+      "name": "TERNARY (qutrit)",
+      "size": 3,
+      "structure": "3 Clifford bivectors B23, B31, B12 (DCCXIV)",
+      "physics": "single qutrit Pauli generators X, Z (mod phase)",
+      "topology": "minimum closed 1-loop has 3 vertices (DCCXXIV)"
+    },
+    {
+      "layer": 2,
+      "name": "QUATERNION (qubit-pair / spacetime)",
+      "size": 4,
+      "structure": "H = Cl^+(3,0) = {1, B23, B31, B12}",
+      "physics": "SU(2) = double cover of SO(3); 4D spacetime basis",
+      "topology": "triangle's closure adds a 4th element (face / apex)"
+    },
+    {
+      "layer": 3,
+      "name": "CODEC (two-qutrit valency)",
+      "size": 12,
+      "structure": "12 = q(q+1) = ternary * quaternion",
+      "physics": "12 = #(2-qutrit Pauli operators commuting with given operator) (Saniga-Planat)",
+      "topology": "W(3,3) valency; tomotope E; E_6 Coxeter; \u03b6(-1) denom"
+    }
+  ],
+  "quaternion_basis": {
+    "1": {
+      "role": "identity (real unit)",
+      "clifford": "+1"
+    },
+    "B23": {
+      "role": "imaginary unit i = e_2 e_3",
+      "clifford": "e_2 e_3"
+    },
+    "B31": {
+      "role": "imaginary unit j = e_3 e_1",
+      "clifford": "e_3 e_1"
+    },
+    "B12": {
+      "role": "imaginary unit k = e_1 e_2",
+      "clifford": "e_1 e_2"
+    }
+  },
+  "quaternion_multiplication_rule": {
+    "B23 * B31": "B12 (i j = k)",
+    "B31 * B12": "B23 (j k = i)",
+    "B12 * B23": "B31 (k i = j)",
+    "B23 * B23": "-1",
+    "B31 * B31": "-1",
+    "B12 * B12": "-1",
+    "B23 * B31 * B12": "-1 (ijk = -1)"
+  },
+  "two_qutrit_pauli_check": {
+    "projective_classes_count": 40,
+    "neighborhood_audit": {
+      "min_valency": 12,
+      "max_valency": 12,
+      "all_same": true,
+      "common_valency": 12
+    },
+    "pair_counts": {
+      "vertices": 40,
+      "commuting_pairs": 240,
+      "non_commuting_pairs": 540,
+      "total_pairs": 780
+    }
+  },
+  "single_qutrit_commutation_phase": {
+    "X_Z_equals_omega_power_times_Z_X": 2,
+    "interpretation": "single qutrit Heisenberg-Weyl commutation"
+  },
+  "identities": {
+    "ternary_size_equals_q": true,
+    "quaternion_size_equals_q_plus_1": true,
+    "codec_equals_ternary_times_quaternion": true,
+    "single_qutrit_pauli_phase_is_omega_power": true,
+    "two_qutrit_projective_class_count_is_40": true,
+    "two_qutrit_commuting_pair_count_is_240": true,
+    "two_qutrit_valency_constant": true,
+    "two_qutrit_common_valency_is_12": true,
+    "F3_vector_space_dim_is_4": true,
+    "F3_to_4_minus_one_over_2_equals_40": true,
+    "pauli_group_order_is_3_to_5": true,
+    "centre_order_is_3": true,
+    "tower_three_layers": true,
+    "layer_sizes_are_3_4_12": true
+  },
+  "theorem": "Ternary-Quaternion-Codec Tower Theorem.  At the W(3,3) saturation q = 3 the ternary structure (3 Clifford bivectors B23, B31, B12 of DCCXIV, equivalently the 3 generators of a single qutrit Pauli group mod centre) closes by adding one identity element into the QUATERNION algebra H = Cl^+(3, 0) = {1, B23, B31, B12}, of dimension q + 1 = 4.  The product q * (q + 1) = 12 is the local codec.  In direct physical realisation, two qutrits have a Heisenberg-Weyl Pauli group of order 3^5 = 243; its quotient by the Z_3 centre is F_3^4 (81 = 3^4 elements).  The symplectic form induced by the commutator on F_3^4 makes its 40 = (3^4 - 1) / 2 projective classes into the vertices of W(3,3) = Sp(4, F_3), with 12 commuting partners per vertex and 240 commuting pairs total.  All three W(3,3) numbers (v, k, E) = (40, 12, 240) are quantum-information quantities for two qutrits.",
+  "one_line": "3 (ternary bivectors) + 1 (identity) = 4 (quaternion) ; 3 * 4 = 12 (codec) ; W(3,3) = (Sp(4, F_3)) = two-qutrit Pauli commutation geometry, with (v, k, E) = (40, 12, 240) computed explicitly here.",
+  "honesty_boundary": "The W(3,3) = Sp(4, F_3) = two-qutrit Pauli commutation geometry identification is a known theorem (Saniga-Planat 2007 and follow-ups).  This part VERIFIES the identification numerically by computing the 40 projective classes of F_3^4, their pairwise symplectic form, and confirming valency 12 and edge count 240.  The ternary-quaternion-codec tower is the Clifford-algebra reading of the same q = 3 saturation already documented in DCCXIV / DCCXVII / DCCXXIV; this part does not derive new physical observables."
+}

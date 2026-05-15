@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "q_value": 3,
+    "pauli_valency_12": 12,
+    "klitzing_rectified_12": 12,
+    "mod_b_omnitruncated_96": 96,
+    "mod_a_omnitruncated_192": 192,
+    "all_identities_hold": true
+  },
+  "ladders": {
+    "mod_b_direct": [
+      12,
+      24,
+      48,
+      96
+    ],
+    "mod_a_sheet_lift": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "stage_names": [
+      "rectified",
+      "truncated",
+      "maximal_expanded",
+      "omnitruncated"
+    ]
+  },
+  "bridge_claim": {
+    "statement": "The Klitzing operation ladder is a Pauli-anchored codec doubling tower: W(3,3) valency k=12 is the rectified base, mod_b runs 12->24->48->96, and sheet lifting yields mod_a 24->48->96->192."
+  },
+  "identities": {
+    "w33_pauli_valency_equals_codec_equals_12": true,
+    "klitzing_mod_b_ladder_is_exactly_12_24_48_96": true,
+    "mod_b_ladder_is_codec_times_powers_of_two": true,
+    "mod_a_ladder_is_sheet_lift_of_mod_b": true,
+    "mod_a_omnitruncated_192_matches_two_192_mechanism_carrier": true,
+    "omnitruncated_step_ratio_is_two": true,
+    "full_codec_tower_is_12_times_1_2_4_8_16": true,
+    "q_three_explains_eightfold_operation_growth_as_2_to_q": true
+  }
+}

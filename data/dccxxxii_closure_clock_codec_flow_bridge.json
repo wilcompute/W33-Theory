@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "base_codec_scale": 12,
+    "steps": 7,
+    "final_tau": 5,
+    "final_scale": 384,
+    "reached_96": true,
+    "reached_192": true,
+    "all_identities_hold": true
+  },
+  "clock": {
+    "events": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "tau": [
+      1,
+      1,
+      2,
+      3,
+      3,
+      4,
+      5
+    ],
+    "tau0": 0
+  },
+  "codec_flow": {
+    "definition": "C_n = 12 * 2^{tau_n}",
+    "values": [
+      24,
+      24,
+      48,
+      96,
+      96,
+      192,
+      384
+    ],
+    "values_with_base": [
+      12,
+      24,
+      24,
+      48,
+      96,
+      96,
+      192,
+      384
+    ],
+    "unique_levels": [
+      12,
+      24,
+      48,
+      96,
+      192,
+      384
+    ]
+  },
+  "reference_ladders": {
+    "mod_b_direct": [
+      12,
+      24,
+      48,
+      96
+    ],
+    "mod_a_sheet_lift": [
+      24,
+      48,
+      96,
+      192
+    ]
+  },
+  "bridge_claim": {
+    "exact_layer": "Closure-clock increments generate a deterministic doubling flow that embeds the Klitzing codec ladder levels.",
+    "conditional_layer": "Interpreting the flow index as physical RG time requires additional dynamical assumptions beyond the discrete closure theorem."
+  },
+  "identities": {
+    "base_scale_matches_pauli_valency_and_codec": true,
+    "clock_events_are_binary": true,
+    "tau_is_monotone": true,
+    "scale_definition_is_12_times_two_to_tau": true,
+    "event_zero_holds_scale_event_one_doubles": true,
+    "flow_unique_levels_embed_b_ladder": true,
+    "flow_reaches_a_omnitruncated_192": true,
+    "final_scale_matches_final_tau": true
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "spatial_dimension": 3,
+    "time_dimension": 1,
+    "total_state_dimension": 4,
+    "base_codec_scale": 12,
+    "final_clock_value": 5,
+    "final_scale": 384,
+    "all_identities_hold": true
+  },
+  "spatial_time_split": {
+    "spatial_basis": [
+      "B23",
+      "B31",
+      "B12"
+    ],
+    "time_channel": "tau = log2(C/12)",
+    "state_dimension": [
+      3,
+      1
+    ],
+    "interpretation": "3 Clifford bivector channels plus 1 closure-generated scalar clock channel."
+  },
+  "state_history": [
+    {
+      "step": 1,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 1,
+      "tau": 1,
+      "scale": 24,
+      "log2_scale_over_12": 1
+    },
+    {
+      "step": 2,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 0,
+      "tau": 1,
+      "scale": 24,
+      "log2_scale_over_12": 1
+    },
+    {
+      "step": 3,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 1,
+      "tau": 2,
+      "scale": 48,
+      "log2_scale_over_12": 2
+    },
+    {
+      "step": 4,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 1,
+      "tau": 3,
+      "scale": 96,
+      "log2_scale_over_12": 3
+    },
+    {
+      "step": 5,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 0,
+      "tau": 3,
+      "scale": 96,
+      "log2_scale_over_12": 3
+    },
+    {
+      "step": 6,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 1,
+      "tau": 4,
+      "scale": 192,
+      "log2_scale_over_12": 4
+    },
+    {
+      "step": 7,
+      "spatial_basis": [
+        "B23",
+        "B31",
+        "B12"
+      ],
+      "closure_event": 1,
+      "tau": 5,
+      "scale": 384,
+      "log2_scale_over_12": 5
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "The three bivectors B23, B31, B12 form the spatial triad, while the closure clock is exactly the base-2 logarithm of codec scale relative to 12.",
+    "conditional_layer": "Reading this discrete scalar clock as macroscopic physical time still requires additional dynamical and continuum hypotheses."
+  },
+  "identities": {
+    "three_spatial_bivectors_exist": true,
+    "identity_completes_fourth_clifford_even_basis_slot": true,
+    "closure_clock_is_single_scalar_channel": true,
+    "three_plus_one_gives_four_total_channels": true,
+    "time_is_exact_logarithm_of_codec_scale": true,
+    "closure_event_zero_holds_time_event_one_advances_time": true,
+    "time_channel_is_not_an_extra_spatial_bivector": true,
+    "final_scale_is_12_times_two_to_time": true
+  }
+}

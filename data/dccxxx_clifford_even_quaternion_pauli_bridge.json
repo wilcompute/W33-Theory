@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "q_value": 3,
+    "ternary_bivector_count": 3,
+    "quaternion_basis_count": 4,
+    "codec_12": 12,
+    "w33_vertices": 40,
+    "w33_valency": 12,
+    "w33_edges": 240,
+    "all_identities_hold": true
+  },
+  "clifford_even_subalgebra": {
+    "basis": [
+      "1",
+      "B23",
+      "B31",
+      "B12"
+    ],
+    "raw_bivector_products": {
+      "B23*B23": {
+        "sign": -1,
+        "token": "1"
+      },
+      "B23*B31": {
+        "sign": 1,
+        "token": "B12"
+      },
+      "B23*B12": {
+        "sign": -1,
+        "token": "B31"
+      },
+      "B31*B23": {
+        "sign": -1,
+        "token": "B12"
+      },
+      "B31*B31": {
+        "sign": -1,
+        "token": "1"
+      },
+      "B31*B12": {
+        "sign": 1,
+        "token": "B23"
+      },
+      "B12*B23": {
+        "sign": 1,
+        "token": "B31"
+      },
+      "B12*B31": {
+        "sign": -1,
+        "token": "B23"
+      },
+      "B12*B12": {
+        "sign": -1,
+        "token": "1"
+      }
+    }
+  },
+  "quaternion_realization": {
+    "map": {
+      "1": "1",
+      "i": "B23",
+      "j": "B31",
+      "k": "B12"
+    },
+    "multiplication": {
+      "i*i": "-1",
+      "j*j": "-1",
+      "k*k": "-1",
+      "i*j": "k",
+      "j*k": "i",
+      "k*i": "j",
+      "j*i": "-k",
+      "k*j": "-i",
+      "i*k": "-j"
+    }
+  },
+  "pauli_w33_link": {
+    "q": 3,
+    "codec": 12,
+    "w33": {
+      "v": 40,
+      "k": 12,
+      "E": 240
+    }
+  },
+  "bridge_claim": {
+    "statement": "The ternary-to-quaternion closure is literal Clifford structure: Cl^+(3,0) has basis {1,B23,B31,B12} and is isomorphic to H under a sign-corrected bivector map; the same q=3 yields codec 12 and W(3,3) two-qutrit invariants (40,12,240)."
+  },
+  "identities": {
+    "dccxxiv_pair_is_3_4": true,
+    "three_even_bivectors_exist": true,
+    "ternary_plus_identity_is_quaternion_dimension_4": true,
+    "clifford_bivectors_square_to_minus_one": true,
+    "sign_corrected_map_obeys_quaternion_relations": true,
+    "codec_remains_q_times_q_plus_1": true,
+    "w33_two_qutrit_invariants_match": true,
+    "pauli_valency_equals_codec": true
+  }
+}

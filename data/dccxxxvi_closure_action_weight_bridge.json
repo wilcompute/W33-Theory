@@ -1,0 +1,957 @@
+{
+  "summary": {
+    "causal_class_count": 6,
+    "elementary_action": 1,
+    "maximal_action": 5,
+    "maximal_weight_numerator": 1,
+    "maximal_weight_denominator": 32,
+    "all_identities_hold": true
+  },
+  "action_definition": {
+    "line_element": "ds = Delta_tau on elementary causal edges",
+    "path_action": "S(a,b) = sum_path ds = Delta_tau(a,b)",
+    "path_weight": "W(a,b) = 2^{-S(a,b)} = C_a / C_b",
+    "base_scale": 12
+  },
+  "elementary_edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "ds": 1,
+      "delta_tau": 1,
+      "action": 1,
+      "weight": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "ds": 1,
+      "delta_tau": 1,
+      "action": 1,
+      "weight": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "ds": 1,
+      "delta_tau": 1,
+      "action": 1,
+      "weight": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "ds": 1,
+      "delta_tau": 1,
+      "action": 1,
+      "weight": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "ds": 1,
+      "delta_tau": 1,
+      "action": 1,
+      "weight": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    }
+  ],
+  "path_table": [
+    [
+      {
+        "from": 0,
+        "to": 0,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      },
+      {
+        "from": 0,
+        "to": 1,
+        "causal": true,
+        "action": 1,
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "scale_ratio": 2
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "causal": true,
+        "action": 2,
+        "weight": {
+          "numerator": 1,
+          "denominator": 4
+        },
+        "scale_ratio": 4
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "causal": true,
+        "action": 3,
+        "weight": {
+          "numerator": 1,
+          "denominator": 8
+        },
+        "scale_ratio": 8
+      },
+      {
+        "from": 0,
+        "to": 4,
+        "causal": true,
+        "action": 4,
+        "weight": {
+          "numerator": 1,
+          "denominator": 16
+        },
+        "scale_ratio": 16
+      },
+      {
+        "from": 0,
+        "to": 5,
+        "causal": true,
+        "action": 5,
+        "weight": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "scale_ratio": 32
+      }
+    ],
+    [
+      {
+        "from": 1,
+        "to": 0,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 1,
+        "to": 1,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "causal": true,
+        "action": 1,
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "scale_ratio": 2
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "causal": true,
+        "action": 2,
+        "weight": {
+          "numerator": 1,
+          "denominator": 4
+        },
+        "scale_ratio": 4
+      },
+      {
+        "from": 1,
+        "to": 4,
+        "causal": true,
+        "action": 3,
+        "weight": {
+          "numerator": 1,
+          "denominator": 8
+        },
+        "scale_ratio": 8
+      },
+      {
+        "from": 1,
+        "to": 5,
+        "causal": true,
+        "action": 4,
+        "weight": {
+          "numerator": 1,
+          "denominator": 16
+        },
+        "scale_ratio": 16
+      }
+    ],
+    [
+      {
+        "from": 2,
+        "to": 0,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 2,
+        "to": 2,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "causal": true,
+        "action": 1,
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "scale_ratio": 2
+      },
+      {
+        "from": 2,
+        "to": 4,
+        "causal": true,
+        "action": 2,
+        "weight": {
+          "numerator": 1,
+          "denominator": 4
+        },
+        "scale_ratio": 4
+      },
+      {
+        "from": 2,
+        "to": 5,
+        "causal": true,
+        "action": 3,
+        "weight": {
+          "numerator": 1,
+          "denominator": 8
+        },
+        "scale_ratio": 8
+      }
+    ],
+    [
+      {
+        "from": 3,
+        "to": 0,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 3,
+        "to": 1,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 3,
+        "to": 2,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 3,
+        "to": 3,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "causal": true,
+        "action": 1,
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "scale_ratio": 2
+      },
+      {
+        "from": 3,
+        "to": 5,
+        "causal": true,
+        "action": 2,
+        "weight": {
+          "numerator": 1,
+          "denominator": 4
+        },
+        "scale_ratio": 4
+      }
+    ],
+    [
+      {
+        "from": 4,
+        "to": 0,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 4,
+        "to": 1,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 4,
+        "to": 2,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 4,
+        "to": 3,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 4,
+        "to": 4,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "causal": true,
+        "action": 1,
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "scale_ratio": 2
+      }
+    ],
+    [
+      {
+        "from": 5,
+        "to": 0,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 5,
+        "to": 1,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 5,
+        "to": 2,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 5,
+        "to": 3,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 5,
+        "to": 4,
+        "causal": false,
+        "action": null,
+        "weight": null,
+        "scale_ratio": null
+      },
+      {
+        "from": 5,
+        "to": 5,
+        "causal": true,
+        "action": 0,
+        "weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "scale_ratio": 1
+      }
+    ]
+  ],
+  "composition_witness": [
+    {
+      "i": 0,
+      "j": 0,
+      "k": 0,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "k": 1,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "k": 2,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "k": 3,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "k": 4,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "k": 1,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "k": 2,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "k": 3,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "k": 4,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "k": 2,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "k": 3,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "k": 4,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 0,
+      "j": 3,
+      "k": 3,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 0,
+      "j": 3,
+      "k": 4,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 0,
+      "j": 3,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 0,
+      "j": 4,
+      "k": 4,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 0,
+      "j": 4,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 0,
+      "j": 5,
+      "k": 5,
+      "action_ik": 5,
+      "action_ij_plus_jk": 5,
+      "ratio_ik": 32,
+      "ratio_ij_times_jk": 32
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "k": 1,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "k": 2,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "k": 3,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "k": 4,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "k": 5,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "k": 2,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "k": 3,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "k": 4,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "k": 5,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "k": 3,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "k": 4,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "k": 5,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 1,
+      "j": 4,
+      "k": 4,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 1,
+      "j": 4,
+      "k": 5,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 1,
+      "j": 5,
+      "k": 5,
+      "action_ik": 4,
+      "action_ij_plus_jk": 4,
+      "ratio_ik": 16,
+      "ratio_ij_times_jk": 16
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "k": 2,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "k": 3,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "k": 4,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "k": 5,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "k": 3,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "k": 4,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "k": 5,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 2,
+      "j": 4,
+      "k": 4,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 2,
+      "j": 4,
+      "k": 5,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 2,
+      "j": 5,
+      "k": 5,
+      "action_ik": 3,
+      "action_ij_plus_jk": 3,
+      "ratio_ik": 8,
+      "ratio_ij_times_jk": 8
+    },
+    {
+      "i": 3,
+      "j": 3,
+      "k": 3,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    },
+    {
+      "i": 3,
+      "j": 3,
+      "k": 4,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 3,
+      "j": 3,
+      "k": 5,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 3,
+      "j": 4,
+      "k": 4,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 3,
+      "j": 4,
+      "k": 5,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 3,
+      "j": 5,
+      "k": 5,
+      "action_ik": 2,
+      "action_ij_plus_jk": 2,
+      "ratio_ik": 4,
+      "ratio_ij_times_jk": 4
+    },
+    {
+      "i": 4,
+      "j": 4,
+      "k": 4,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    },
+    {
+      "i": 4,
+      "j": 4,
+      "k": 5,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 4,
+      "j": 5,
+      "k": 5,
+      "action_ik": 1,
+      "action_ij_plus_jk": 1,
+      "ratio_ik": 2,
+      "ratio_ij_times_jk": 2
+    },
+    {
+      "i": 5,
+      "j": 5,
+      "k": 5,
+      "action_ik": 0,
+      "action_ij_plus_jk": 0,
+      "ratio_ik": 1,
+      "ratio_ij_times_jk": 1
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "The closure chain carries an exact discrete action S=Delta_tau whose path weight is the inverse codec scale ratio W=2^{-S}.",
+    "conditional_layer": "Interpreting this weight as a full continuum path-integral amplitude requires an additional continuum measure and dynamical prescription."
+  },
+  "identities": {
+    "elementary_steps_have_unit_action": true,
+    "path_action_equals_delta_tau": true,
+    "path_action_equals_log2_scale_ratio": true,
+    "path_weight_is_inverse_scale_ratio": true,
+    "action_is_additive_under_composition": true,
+    "weight_is_multiplicative_under_composition": true,
+    "maximal_path_has_action_five_and_weight_one_over_32": true
+  }
+}

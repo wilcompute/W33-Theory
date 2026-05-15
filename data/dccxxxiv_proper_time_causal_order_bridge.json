@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "spatial_symmetry_count": 48,
+    "proper_time_level_count": 6,
+    "initial_proper_time": 0,
+    "final_proper_time": 5,
+    "final_scale": 384,
+    "all_identities_hold": true
+  },
+  "causal_order": {
+    "definition": "T_a <= T_b iff tau_a <= tau_b",
+    "classes": [
+      {
+        "proper_time": 0,
+        "representative_scale": 12,
+        "class_name": "T_0"
+      },
+      {
+        "proper_time": 1,
+        "representative_scale": 24,
+        "class_name": "T_1"
+      },
+      {
+        "proper_time": 2,
+        "representative_scale": 48,
+        "class_name": "T_2"
+      },
+      {
+        "proper_time": 3,
+        "representative_scale": 96,
+        "class_name": "T_3"
+      },
+      {
+        "proper_time": 4,
+        "representative_scale": 192,
+        "class_name": "T_4"
+      },
+      {
+        "proper_time": 5,
+        "representative_scale": 384,
+        "class_name": "T_5"
+      }
+    ],
+    "differences": [
+      {
+        "from": 0,
+        "to": 1,
+        "delta_tau": 1,
+        "scale_ratio": 2
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "delta_tau": 1,
+        "scale_ratio": 2
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "delta_tau": 1,
+        "scale_ratio": 2
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "delta_tau": 1,
+        "scale_ratio": 2
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "delta_tau": 1,
+        "scale_ratio": 2
+      }
+    ]
+  },
+  "spatial_symmetry": {
+    "base_spatial_triads": [
+      "B23",
+      "B31",
+      "B12"
+    ],
+    "signed_permutation_count": 48,
+    "witness_samples": [
+      {
+        "spatial_transform": [
+          "B23",
+          "B31",
+          "B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "B23",
+          "B31",
+          "-B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "B23",
+          "-B31",
+          "B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "B23",
+          "-B31",
+          "-B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "-B23",
+          "B31",
+          "B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "-B23",
+          "B31",
+          "-B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "-B23",
+          "-B31",
+          "B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "spatial_transform": [
+          "-B23",
+          "-B31",
+          "-B12"
+        ],
+        "proper_time_history": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "bridge_claim": {
+    "exact_layer": "Proper time is the symmetry-invariant scalar tau labeling the totally ordered causal classes of the closure process, while space is the 48-fold signed-permutation orbit of the Clifford bivector triad.",
+    "conditional_layer": "Connecting this discrete proper time to relativistic continuum proper time requires an additional continuum dynamics theorem."
+  },
+  "identities": {
+    "there_are_48_signed_spatial_symmetries": true,
+    "proper_time_levels_are_0_through_5": true,
+    "proper_time_is_monotone": true,
+    "every_spatial_symmetry_preserves_proper_time_history": true,
+    "proper_time_difference_equals_log_scale_ratio": true,
+    "causal_classes_are_totally_ordered_by_tau": true,
+    "final_scale_matches_final_proper_time_level": true
+  }
+}
