@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "q": 3,
+    "tetrahedron_flags": 24,
+    "csaszar_flags": 84,
+    "szilassi_flags": 84,
+    "tomotope_flags": 192,
+    "tomotope_cells": 8,
+    "oscillator_total_modes": 8,
+    "oscillator_total_flags": 192,
+    "all_identities_hold": true
+  },
+  "tetrahedron": {
+    "faces": 4,
+    "sides_per_face": 3,
+    "flags": 24,
+    "orientation_split": [
+      12,
+      12
+    ],
+    "aut_group_order": 24,
+    "rotation_subgroup_order": 12,
+    "self_dual": true,
+    "hodge_star_fixed_point": true
+  },
+  "csaszar": {
+    "V": 7,
+    "E": 21,
+    "F": 14,
+    "sides_per_face": 3,
+    "flags": 84,
+    "genus": 1,
+    "type": "max_vertex_adjacency_K7",
+    "realizations": 5
+  },
+  "szilassi": {
+    "V": 14,
+    "E": 21,
+    "F": 7,
+    "sides_per_face": 6,
+    "flags": 84,
+    "genus": 1,
+    "type": "max_face_adjacency",
+    "realizations": 2
+  },
+  "tomotope": {
+    "V": 4,
+    "E": 12,
+    "F": 16,
+    "C": 8,
+    "flags": 192,
+    "cells_type": "hemioctahedra",
+    "abstract_polytope": true,
+    "sits_between": [
+      "11-cell (Grunbaum-Coxeter)",
+      "57-cell"
+    ],
+    "f_vector_total": 40
+  },
+  "oscillator_phases": {
+    "h_0_phase": {
+      "polyhedron": "tetrahedron",
+      "modes": 1,
+      "flags_per_mode": 24,
+      "phase_flags": 24,
+      "role": "self-dual ground state; Hodge-star fixed point"
+    },
+    "h_1_phase": {
+      "polyhedra": [
+        "Csaszar",
+        "Szilassi"
+      ],
+      "modes": 7,
+      "csaszar_modes": 5,
+      "szilassi_modes": 2,
+      "phase_flags": 168,
+      "role": "first-excited toroidal duality pair"
+    },
+    "totals": {
+      "modes": 8,
+      "flags": 192
+    }
+  },
+  "chirality_split": [
+    {
+      "step": 1,
+      "claim": "The tetrahedron's full symmetry group is S_4 of order 24.",
+      "value": 24
+    },
+    {
+      "step": 2,
+      "claim": "S_4 = A_4 union (S_4 \\ A_4) splits as orientation-preserving (rotations) and orientation-reversing (reflections), each of order 12.",
+      "value": [
+        12,
+        12
+      ]
+    },
+    {
+      "step": 3,
+      "claim": "Each 12-flag chirality is one LOCAL CODEC (12 = q(q+1)) of incidence data.",
+      "value": 12
+    },
+    {
+      "step": 4,
+      "claim": "The two chiralities promote to the two toroidal maximum-adjacency types: vertex-max (Csaszar) and face-max (Szilassi).",
+      "value": [
+        "Csaszar",
+        "Szilassi"
+      ]
+    }
+  ],
+  "flag_accounting": {
+    "tetrahedron_genus_0": 24,
+    "csaszar_genus_1": 84,
+    "szilassi_genus_1": 84,
+    "h0_h1_total": 192,
+    "tomotope_flag_count": 192,
+    "match": true
+  },
+  "mode_accounting": {
+    "h0_modes": 1,
+    "csaszar_modes": 5,
+    "szilassi_modes": 2,
+    "h1_modes_total": 7,
+    "h0_plus_h1": 8,
+    "tomotope_cells": 8,
+    "match": true
+  },
+  "user_insight": "The tetrahedron sits between Csaszar (max vertex adjacency) and Szilassi (max face adjacency) as the self-dual hinge where both adjacency maxima coincide.  Its 24 = 12 + 12 flags split by chirality assign one local codec to each toroidal side.",
+  "abstract_polytope_bookends": {
+    "11_cell": {
+      "cells": 11,
+      "cell_type": "hemi-icosahedra",
+      "role": "lower universal locally-projective abstract 4-polytope"
+    },
+    "tomotope_in_between": {
+      "cells": 8,
+      "f_vector": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "role": "concrete maniplex between 11-cell and 57-cell"
+    },
+    "57_cell": {
+      "cells": 57,
+      "cell_type": "hemi-dodecahedra",
+      "role": "upper universal locally-projective abstract 4-polytope"
+    }
+  },
+  "identities": {
+    "tetrahedron_24_flags": true,
+    "tetrahedron_24_equals_two_codecs": true,
+    "tetrahedron_split_12_plus_12": true,
+    "rotation_subgroup_equals_codec": true,
+    "tetrahedron_self_dual": true,
+    "csaszar_84_flags": true,
+    "szilassi_84_flags": true,
+    "csaszar_szilassi_share_E_21": true,
+    "csaszar_szilassi_dual_swap_V_F": true,
+    "toroidal_realizations_5_plus_2_equal_7": true,
+    "oscillator_h_1_has_7_modes": true,
+    "oscillator_total_modes_equal_tomotope_cells": true,
+    "oscillator_total_flags_equal_tomotope_flags": true,
+    "flag_sum_24_plus_84_plus_84_equals_192": true,
+    "toroidal_combined_168_equals_7_times_24": true,
+    "tomotope_cells_per_24_flags": true,
+    "tomotope_total_cells_equals_W33_v": true,
+    "tomotope_E_equals_codec": true,
+    "tomotope_V_equals_q_plus_one": true,
+    "chirality_split_4_steps": true
+  },
+  "theorem": "Self-Dual Hinge Theorem.  In 3-dimensional polyhedral incidence, the tetrahedron is the unique self-dual polyhedron and is the Hodge-star fixed point: every face is opposite a vertex and duality swaps vertices <-> faces leaving the combinatorial type invariant.  Its 24 flags split as 12 + 12 by orientation, each chirality being exactly one local codec (12 = q(q+1)).  At genus 1 the oscillator hosts 7 toroidal realisations: 5 Csaszar (maximum vertex adjacency) and 2 Szilassi (maximum face adjacency).  Flag-counting accounting gives 24 (tetrahedron) + 84 (Csaszar) + 84 (Szilassi) = 192, which is EXACTLY the tomotope flag count, with the combined cell count 1 + 7 = 8 = tomotope cell count.  The tomotope is therefore the 4D abstract polytope that reifies the h in {0, 1} phases of the genus oscillator at q = 3.",
+  "one_line": "Tetrahedron 24 + Csaszar 84 + Szilassi 84 = 192 flags = tomotope; 1 + (5 + 2) = 8 modes = tomotope cells; the tetrahedron is the self-dual Hodge-star hinge between the two toroidal duals.",
+  "honesty_boundary": "This part establishes a FLAG and MODE accounting bridge between the genus-0 tetrahedron, the genus-1 Csaszar/Szilassi dual pair, and the tomotope.  It identifies the tomotope as the unique abstract polytope whose flag count (192) and cell count (8) match the combined h in {0, 1} oscillator phase.  It does NOT derive the tomotope's automorphism group structure, the 11-cell/57-cell quotient maps, or any new empirical observables; those remain bridged by separate parts of the W(3,3) program."
+}
