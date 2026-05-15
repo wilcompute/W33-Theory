@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "q": 3,
+    "octahedron_V": 6,
+    "octahedron_E": 12,
+    "octahedron_F": 8,
+    "nilpotence_index": 6,
+    "codec": 12,
+    "tomotope_cells": 8,
+    "all_identities_hold": true
+  },
+  "octahedron": {
+    "vertices": [
+      [
+        "B23",
+        1
+      ],
+      [
+        "B23",
+        -1
+      ],
+      [
+        "B31",
+        1
+      ],
+      [
+        "B31",
+        -1
+      ],
+      [
+        "B12",
+        1
+      ],
+      [
+        "B12",
+        -1
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "faces": [
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        3,
+        5
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        3,
+        5
+      ]
+    ],
+    "f_vector": [
+      6,
+      12,
+      8
+    ],
+    "euler_characteristic": 2,
+    "vertex_degrees": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "antipodal_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ]
+  },
+  "line_graph_check": {
+    "K4_edges_as_L_vertices": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "L_edge_count": 12,
+    "is_octahedron_edge_count": true
+  },
+  "closure_clock_nilpotence_check": {
+    "G_to_5_nonzero": true,
+    "G_to_6_zero": true,
+    "nilpotence_index": 6,
+    "matches_q_factorial": true,
+    "matches_octahedron_V": true
+  },
+  "correspondence": {
+    "clock_levels": {
+      "count": 6,
+      "geometric_realisation": "octahedron vertices = \u00b1B_ij",
+      "closure_clock_basis": [
+        "e_0",
+        "e_1",
+        "e_2",
+        "e_3",
+        "e_4",
+        "e_5"
+      ],
+      "signed_bivectors": [
+        "+B23",
+        "-B23",
+        "+B31",
+        "-B31",
+        "+B12",
+        "-B12"
+      ]
+    },
+    "generator_transitions": {
+      "count": 12,
+      "geometric_realisation": "octahedron edges",
+      "interpretation": "each octahedron edge connects two non-antipodal signed bivectors; the 12 codec transitions of the generator G are in bijection with the 12 octahedron edges."
+    },
+    "oscillator_modes": {
+      "count": 8,
+      "geometric_realisation": "octahedron faces",
+      "interpretation": "each octahedron face picks one signed bivector per axis (2^3 = 8 sign patterns); these match the tomotope cells of DCCXXV (1 sphere + 5 Csaszar + 2 Szilassi) and the rank 8 of E_8 (DCCXXVII)."
+    }
+  },
+  "identities": {
+    "octahedron_V_is_6": true,
+    "octahedron_E_is_12": true,
+    "octahedron_F_is_8": true,
+    "f_vector_matches_oscillator_numbers": true,
+    "euler_characteristic_is_2": true,
+    "all_vertices_degree_4": true,
+    "three_antipodal_pairs": true,
+    "octahedron_V_equals_q_factorial": true,
+    "octahedron_V_equals_E_tetrahedron": true,
+    "octahedron_E_equals_codec": true,
+    "octahedron_F_equals_tomotope_cells": true,
+    "line_graph_of_K4_is_octahedron": true,
+    "closure_generator_nilpotence_6": true,
+    "nilpotence_matches_octahedron_V": true,
+    "eight_faces_are_2_cube_sign_patterns": true
+  },
+  "theorem": "Octahedron Phase-Space Theorem.  The closure-clock chain T_0, ..., T_5 of DCCXL has 6 levels = nilpotence index of the generator G = (1/2)S.  This 6 equals (i) q! = order of S_3, (ii) the edge count of the tetrahedron (DCCXXV), (iii) the vertex count of the octahedron, and (iv) the signed-bivector count 2 * q = 2 * 3 of the DCCXIV Clifford triad.  The octahedron's full f-vector (V, E, F) = (6, 12, 8) is the phase-space encoding of the closure clock: V = nilpotence index, E = codec = number of generator transitions, F = tomotope cells = oscillator modes = rank E_8.  Since octahedron = L(K_4) (line graph of K_4 = tetrahedron 1-skeleton), the closure clock is dual to the tetrahedron's edge graph; each clock level T_i is one tetrahedron edge, and each generator step is a pair of incident tetrahedron edges.  The 8 octahedron faces are the 2^3 = 8 sign-orientation patterns of the three Clifford bivector axes, in bijection with the tomotope cells of DCCXXV.",
+  "one_line": "Octahedron f-vector (6, 12, 8) = (closure nilpotence, codec, tomotope cells); octahedron V = q! = signed bivectors of DCCXIV; octahedron = L(K_4) of tetrahedron; the closure clock lives on tetrahedron edges.",
+  "honesty_boundary": "This part establishes a GEOMETRIC bijection between the parallel agent's 6-level closure clock (DCCXL-DCCXLVIII) and the octahedron, with the octahedron's f-vector matching the (nilpotence, codec, tomotope-cells) triple.  It does NOT derive the closure action (DCCXLIII-XLV), the Ward recursion (DCCXLVII), or the retarded Green's function (DCCXLVIII) from octahedral geometry; those remain bridged by the parallel chain.  The bijection is a phase-space interpretation, providing a concrete polyhedral substrate for the previously abstract closure-clock chain."
+}
