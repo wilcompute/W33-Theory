@@ -1,0 +1,162 @@
+{
+  "summary": {
+    "q": 3,
+    "solved_density_dims": [
+      1,
+      2,
+      3,
+      8,
+      24
+    ],
+    "rho_8_denominator": 384,
+    "rho_24_denominator": 479001600,
+    "rho_8_pi_exponent": 4,
+    "rho_24_pi_exponent": 12,
+    "G_384_factorisations_count": 7,
+    "all_identities_hold": true
+  },
+  "density_table": [
+    {
+      "dim": 1,
+      "density_formula": "1",
+      "density_decimal": 1.0,
+      "denominator": 1,
+      "w33_reading": "trivial",
+      "proved_by": "trivial"
+    },
+    {
+      "dim": 2,
+      "density_formula": "pi / (2 sqrt(3))",
+      "density_decimal": 0.9068996821171089,
+      "denominator_as_radical": "2 sqrt(q)",
+      "w33_reading": "uses 1/sqrt(q) = 1/sqrt(3)",
+      "proved_by": "Thue 1890 / Toth 1940"
+    },
+    {
+      "dim": 3,
+      "density_formula": "pi / (3 sqrt(2))",
+      "density_decimal": 0.7404804896930609,
+      "denominator_as_radical": "q sqrt(lambda)",
+      "w33_reading": "uses 1/sqrt(lambda) and 1/q",
+      "proved_by": "Hales (Kepler conjecture, 1998-2017)"
+    },
+    {
+      "dim": 8,
+      "density_formula": "pi^4 / 384",
+      "density_decimal": 0.253669507901048,
+      "denominator": 384,
+      "w33_reading": "pi^mu / G_384; G_384 = stabilizer cascade step 4 (DCCLIV)",
+      "proved_by": "Viazovska 2016"
+    },
+    {
+      "dim": 24,
+      "density_formula": "pi^12 / 12!",
+      "density_decimal": 0.001929574309403922,
+      "denominator": 479001600,
+      "w33_reading": "pi^k / k!; k = codec = q(q+1)",
+      "proved_by": "Cohn-Kumar-Miller-Radchenko-Viazovska 2017"
+    }
+  ],
+  "G_384_w33_factorisations": [
+    {
+      "role": "stabilizer cascade step 4 (DCCLIV)",
+      "value": 384,
+      "formula": "G_384"
+    },
+    {
+      "role": "2 * |W(D_4)|",
+      "value": 384,
+      "formula": "2 * 192"
+    },
+    {
+      "role": "2 * tomotope flag count (DCCXXV)",
+      "value": 384,
+      "formula": "2 * 192"
+    },
+    {
+      "role": "(q+1)^2 * f",
+      "value": 384,
+      "formula": "16 * 24"
+    },
+    {
+      "role": "trace(Cartan E_8) * f (DCCXXVII)",
+      "value": 384,
+      "formula": "16 * 24"
+    },
+    {
+      "role": "(q+1)! * (q+1)^2",
+      "value": 384,
+      "formula": "24 * 16"
+    },
+    {
+      "role": "(q+1)! * trace(Cartan E_8)",
+      "value": 384,
+      "formula": "24 * 16"
+    }
+  ],
+  "pi_exponents_in_densities": [
+    {
+      "dim": 2,
+      "pi_exponent": 1,
+      "w33_role": "linear (vacuum)"
+    },
+    {
+      "dim": 3,
+      "pi_exponent": 1,
+      "w33_role": "linear"
+    },
+    {
+      "dim": 8,
+      "pi_exponent": 4,
+      "w33_role": "mu = q + 1 (quaternion dim)"
+    },
+    {
+      "dim": 24,
+      "pi_exponent": 12,
+      "w33_role": "k = q(q+1) = codec"
+    }
+  ],
+  "cross_link_kissing_density": {
+    "dimensions_with_kissing_proved": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      24
+    ],
+    "dimensions_with_density_proved": [
+      1,
+      2,
+      3,
+      8,
+      24
+    ],
+    "intersection": [
+      1,
+      2,
+      3,
+      8,
+      24
+    ],
+    "difference": [
+      4
+    ],
+    "interpretation": "All 5 dimensions with proved optimal sphere packing also have proved kissing numbers.  Only d = 4 = mu has K(4) = 24 proved (Musin 2003) without an exact density formula. The W(3,3) program covers both lists with primitives {1, lambda, q, 2^q, f} for density and {1, lambda, q, q+1, 2^q, f} for kissing."
+  },
+  "identities": {
+    "G_384_eq_2_W_D4": true,
+    "G_384_eq_q_plus_1_squared_times_f": true,
+    "G_384_eq_q_plus_1_factorial_squared_div_factor": true,
+    "rho_8_denominator_is_G_384": true,
+    "rho_24_denominator_is_k_factorial": true,
+    "rho_8_pi_exponent_is_mu": true,
+    "rho_24_pi_exponent_is_k": true,
+    "density_table_5_rows": true,
+    "G_384_factorisations_all_equal_384": true,
+    "kissing_minus_density_eq_d_4": true
+  },
+  "theorem": "Sphere-Packing Density Tower Theorem.  The optimal sphere packing density is currently proved exactly in only five dimensions: d in {1, 2, 3, 8, 24}.  In every solved case the denominator of the density formula and the pi-exponent are W(3,3) primitives:\n   d = 8:   rho = pi^mu / G_384   (mu = q + 1; G_384 = step 4 of the W(E_6) stabilizer cascade of DCCLIV)\n   d = 24:  rho = pi^k / k!       (k = q(q+1) = codec)\nG_384 has at least 7 W(3,3) factorisations: 2 * |W(D_4)|, 2 * tomotope flags, (q+1)^2 * f, trace(Cartan E_8) * f, (q+1)! * (q+1)^2, (q+1)! * trace(Cartan E_8), and the cascade step itself.  The W(3,3) program therefore contains the entire current state of the sphere-packing problem -- the kissing-number tower (DCCLV) AND the density-formula tower.",
+  "one_line": "rho_8 = pi^mu / G_384 (cascade step) and rho_24 = pi^k / k! (codec factorial); both Viazovska density denominators are W(3,3) primitives.",
+  "honesty_boundary": "All numerical identifications are exact arithmetic.  The sphere-packing density is proved optimal only in five dimensions, with Viazovska's 2016/2017 work completing the 8D and 24D cases.  This part shows the denominators of those density formulas are W(3,3) primitives; it does NOT prove additional density bounds or derive Viazovska's theorem from W(3,3)."
+}
