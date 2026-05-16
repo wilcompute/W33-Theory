@@ -1,0 +1,399 @@
+{
+  "summary": {
+    "signed_axis_count": 6,
+    "local_axis_syndrome_slots": 12,
+    "local_directed_turns": 24,
+    "global_fusion_slots": 480,
+    "global_klm_primitives": 960,
+    "global_extension_dimension": 162,
+    "global_nilpotent_rank": 81,
+    "all_identities_hold": true
+  },
+  "local_axis_syndrome_basis": [
+    {
+      "basis_index": 0,
+      "signed_axis_index": 0,
+      "axis": "B23",
+      "sign": 1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:+B23"
+    },
+    {
+      "basis_index": 1,
+      "signed_axis_index": 0,
+      "axis": "B23",
+      "sign": 1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:+B23"
+    },
+    {
+      "basis_index": 2,
+      "signed_axis_index": 1,
+      "axis": "B23",
+      "sign": -1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:-B23"
+    },
+    {
+      "basis_index": 3,
+      "signed_axis_index": 1,
+      "axis": "B23",
+      "sign": -1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:-B23"
+    },
+    {
+      "basis_index": 4,
+      "signed_axis_index": 2,
+      "axis": "B31",
+      "sign": 1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:+B31"
+    },
+    {
+      "basis_index": 5,
+      "signed_axis_index": 2,
+      "axis": "B31",
+      "sign": 1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:+B31"
+    },
+    {
+      "basis_index": 6,
+      "signed_axis_index": 3,
+      "axis": "B31",
+      "sign": -1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:-B31"
+    },
+    {
+      "basis_index": 7,
+      "signed_axis_index": 3,
+      "axis": "B31",
+      "sign": -1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:-B31"
+    },
+    {
+      "basis_index": 8,
+      "signed_axis_index": 4,
+      "axis": "B12",
+      "sign": 1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:+B12"
+    },
+    {
+      "basis_index": 9,
+      "signed_axis_index": 4,
+      "axis": "B12",
+      "sign": 1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:+B12"
+    },
+    {
+      "basis_index": 10,
+      "signed_axis_index": 5,
+      "axis": "B12",
+      "sign": -1,
+      "role": "accepted",
+      "extension_coordinate": 0,
+      "label": "accepted:-B12"
+    },
+    {
+      "basis_index": 11,
+      "signed_axis_index": 5,
+      "axis": "B12",
+      "sign": -1,
+      "role": "return",
+      "extension_coordinate": 1,
+      "label": "return:-B12"
+    }
+  ],
+  "octahedral_turn_data": {
+    "signed_axis_vertices": [
+      {
+        "index": 0,
+        "axis": "B23",
+        "sign": 1,
+        "label": "+B23"
+      },
+      {
+        "index": 1,
+        "axis": "B23",
+        "sign": -1,
+        "label": "-B23"
+      },
+      {
+        "index": 2,
+        "axis": "B31",
+        "sign": 1,
+        "label": "+B31"
+      },
+      {
+        "index": 3,
+        "axis": "B31",
+        "sign": -1,
+        "label": "-B31"
+      },
+      {
+        "index": 4,
+        "axis": "B12",
+        "sign": 1,
+        "label": "+B12"
+      },
+      {
+        "index": 5,
+        "axis": "B12",
+        "sign": -1,
+        "label": "-B12"
+      }
+    ],
+    "octahedral_adjacency": [
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "undirected_edge_count": 12,
+    "directed_turn_count": 24,
+    "directed_turn_sample": [
+      {
+        "source": "+B23",
+        "source_index": 0,
+        "role": "accepted",
+        "klm_rail": 0,
+        "target": "+B31",
+        "target_index": 2,
+        "edge_key": [
+          0,
+          2
+        ]
+      },
+      {
+        "source": "+B23",
+        "source_index": 0,
+        "role": "accepted",
+        "klm_rail": 1,
+        "target": "+B12",
+        "target_index": 4,
+        "edge_key": [
+          0,
+          4
+        ]
+      },
+      {
+        "source": "+B23",
+        "source_index": 0,
+        "role": "return",
+        "klm_rail": 0,
+        "target": "-B31",
+        "target_index": 3,
+        "edge_key": [
+          0,
+          3
+        ]
+      },
+      {
+        "source": "+B23",
+        "source_index": 0,
+        "role": "return",
+        "klm_rail": 1,
+        "target": "-B12",
+        "target_index": 5,
+        "edge_key": [
+          0,
+          5
+        ]
+      },
+      {
+        "source": "-B23",
+        "source_index": 1,
+        "role": "accepted",
+        "klm_rail": 0,
+        "target": "-B31",
+        "target_index": 3,
+        "edge_key": [
+          1,
+          3
+        ]
+      },
+      {
+        "source": "-B23",
+        "source_index": 1,
+        "role": "accepted",
+        "klm_rail": 1,
+        "target": "-B12",
+        "target_index": 5,
+        "edge_key": [
+          1,
+          5
+        ]
+      },
+      {
+        "source": "-B23",
+        "source_index": 1,
+        "role": "return",
+        "klm_rail": 0,
+        "target": "+B31",
+        "target_index": 2,
+        "edge_key": [
+          1,
+          2
+        ]
+      },
+      {
+        "source": "-B23",
+        "source_index": 1,
+        "role": "return",
+        "klm_rail": 1,
+        "target": "+B12",
+        "target_index": 4,
+        "edge_key": [
+          1,
+          4
+        ]
+      }
+    ],
+    "each_undirected_edge_has_two_directions": true,
+    "edge_multiplicities": {
+      "0-2": 2,
+      "0-3": 2,
+      "0-4": 2,
+      "0-5": 2,
+      "1-2": 2,
+      "1-3": 2,
+      "1-4": 2,
+      "1-5": 2,
+      "2-4": 2,
+      "2-5": 2,
+      "3-4": 2,
+      "3-5": 2
+    }
+  },
+  "nilpotent_extension": {
+    "reduced_increment_mod3": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "local_12_slot_nilpotent": {
+      "copy_count": 6,
+      "dimension": 12,
+      "rank": 6,
+      "kernel_dimension": 6,
+      "image_dimension": 6,
+      "square_zero": true
+    },
+    "global_matter_nilpotent": {
+      "copy_count": 81,
+      "dimension": 162,
+      "rank": 81,
+      "kernel_dimension": 81,
+      "image_dimension": 81,
+      "square_zero": true
+    },
+    "dclxxxv_single_photon_increment": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "dclxxxv_source_note": "DCLXXXV promotes the same canonical reduced single-photon Jordan increment. DCCLXVII keeps the matrix inline to avoid pulling optional exploration graph dependencies into the focused architecture suite."
+  },
+  "codec_counts": {
+    "signed_axis_count": 6,
+    "axis_syndrome_basis_size": 12,
+    "octahedral_undirected_turn_edges": 12,
+    "octahedral_directed_turns": 24,
+    "w33_vertices": 40,
+    "w33_edges": 240,
+    "fusion_slots": 480,
+    "klm_primitives": 960
+  },
+  "qec_extension": {
+    "matter_dimension": 81,
+    "extension_fiber_dimension": 2,
+    "total_dimension": 162,
+    "nilpotent_rank": 81,
+    "exact_sequence": "0 -> 81 -> 162 -> 81 -> 0",
+    "read": "The return/syndrome branch is a square-zero extension of the accepted frame branch; tensoring it with H1 gives image = kernel = 81."
+  },
+  "theorem": "Axis-Syndrome Nilpotent / Octahedral Codec Theorem. The six signed Clifford axes are the six octahedron vertices. The promoted local photonic/QEC alphabet is the 12-dimensional signed-axis tensor transport-extension basis, matching DCCXVI's 3*2*2 codec and the octahedron's 12 undirected turn edges. The KLM rail bit resolves each slot to one of two non-opposite target axes, giving the 24 directed octahedral incidences and hence 960=40*24 primitives. The same F3 extension carries N=[[0,1],[0,0]], so locally N has rank 6 on 12 slots, and on H1 it gives the exact square-zero sequence 0 -> 81 -> 162 -> 81 -> 0.",
+  "snake_eats_tail_read": "The return branch is not an extra classical selector. It is the nilpotent tail of the accepted frame branch: N sends the return syndrome into the protected frame and then vanishes. This is the finite QEC version of the ouroboros loop.",
+  "honesty_boundary": "This proves a finite runtime/codec/holonomy identity. It does not construct a universal non-Clifford photonic gate set, solve detector noise, or prove the curved 4D spectral-action asymptotics.",
+  "identities": {
+    "local_signed_axis_set_is_the_octahedron_vertex_set": true,
+    "local_axis_syndrome_basis_is_dccxvi_3_times_2_times_2": true,
+    "same_local_12_is_also_the_octahedral_undirected_turn_count": true,
+    "klm_rail_resolves_axis_syndrome_slots_to_directed_octahedral_turns": true,
+    "global_fusion_slots_are_40_times_local_12": true,
+    "global_klm_slots_are_40_times_directed_octahedral_24": true,
+    "reduced_nilpotent_matches_dclxxxv_canonical_single_photon_jordan_witness": true,
+    "local_nilpotent_on_12_slots_is_square_zero_with_image_kernel_six": true,
+    "global_matter_extension_is_0_81_162_81_0": true,
+    "snake_tail_runtime_counts_close": true
+  }
+}
