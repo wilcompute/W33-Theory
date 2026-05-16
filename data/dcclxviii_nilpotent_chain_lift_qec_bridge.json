@@ -1,0 +1,145 @@
+{
+  "summary": {
+    "vertex_count": 40,
+    "edge_count": 240,
+    "triangle_count": 160,
+    "h1_dimension": 81,
+    "lifted_edge_dimension": 480,
+    "lifted_h1_dimension": 162,
+    "induced_nilpotent_rank_h1": 81,
+    "all_identities_hold": true
+  },
+  "base_chain_complex": {
+    "chain_dimensions": {
+      "C0": 40,
+      "C1": 240,
+      "C2": 160
+    },
+    "boundary_ranks": {
+      "rank_d1": 39,
+      "rank_d2": 120
+    },
+    "homology_dimensions": {
+      "H0": 1,
+      "H1": 81,
+      "H2": 40
+    },
+    "euler_characteristic": -40,
+    "d1_d2_is_zero": true
+  },
+  "dual_number_lift": {
+    "dual_number_extension": "F3[epsilon]/epsilon^2",
+    "lifted_chain_dimensions": {
+      "C0": 80,
+      "C1": 480,
+      "C2": 320
+    },
+    "lifted_boundary_ranks": {
+      "rank_d1": 78,
+      "rank_d2": 240
+    },
+    "lifted_homology_dimensions": {
+      "H0": 2,
+      "H1": 162,
+      "H2": 80
+    },
+    "lifted_euler_characteristic": -80,
+    "fusion_read": {
+      "C1_lifted_dimension": 480,
+      "KLM_rail_cover": 960
+    }
+  },
+  "nilpotent_chain_map": {
+    "local_increment": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "chain_nilpotents": {
+      "C0": {
+        "dimension": 80,
+        "rank": 40,
+        "kernel_dimension": 40,
+        "image_dimension": 40,
+        "square_zero": true
+      },
+      "C1": {
+        "dimension": 480,
+        "rank": 240,
+        "kernel_dimension": 240,
+        "image_dimension": 240,
+        "square_zero": true
+      },
+      "C2": {
+        "dimension": 320,
+        "rank": 160,
+        "kernel_dimension": 160,
+        "image_dimension": 160,
+        "square_zero": true
+      }
+    },
+    "homology_nilpotents": {
+      "H0": {
+        "dimension": 2,
+        "rank": 1,
+        "kernel_dimension": 1,
+        "image_dimension": 1,
+        "square_zero": true
+      },
+      "H1": {
+        "dimension": 162,
+        "rank": 81,
+        "kernel_dimension": 81,
+        "image_dimension": 81,
+        "square_zero": true
+      },
+      "H2": {
+        "dimension": 80,
+        "rank": 40,
+        "kernel_dimension": 40,
+        "image_dimension": 40,
+        "square_zero": true
+      }
+    },
+    "exact_sequence_on_h1": "0 -> 81 -> 162 -> 81 -> 0",
+    "read": "At chain level N sends the return/syndrome copy to the accepted/frame copy and then vanishes. Since it commutes with d1 and d2, the same square-zero map descends to homology."
+  },
+  "boundary_commutation": {
+    "d1_lift_shape": [
+      80,
+      480
+    ],
+    "d2_lift_shape": [
+      480,
+      320
+    ],
+    "rank_d1_lift": 78,
+    "rank_d2_lift": 240,
+    "d1_commutes_with_nilpotent": true,
+    "d2_commutes_with_nilpotent": true,
+    "lifted_composition_zero": true
+  },
+  "identities": {
+    "oriented_w33_chain_counts_are_40_240_160": true,
+    "oriented_boundaries_form_a_chain_complex_over_f3": true,
+    "boundary_ranks_are_39_and_120": true,
+    "base_homology_is_1_81_40": true,
+    "truncated_euler_characteristic_is_minus_40": true,
+    "dual_number_lift_doubles_chain_groups": true,
+    "lifted_edge_module_is_the_480_fusion_ledger": true,
+    "klm_rail_cover_is_960": true,
+    "lifted_boundary_ranks_double": true,
+    "lifted_homology_is_2_162_80": true,
+    "lifted_euler_matches_promoted_full_tetrahedral_shell_value": true,
+    "nilpotent_commutes_with_lifted_boundaries": true,
+    "h1_nilpotent_is_exact_0_81_162_81_0": true
+  },
+  "theorem": "Nilpotent Chain-Lift / QEC Bridge. The oriented W33 2-skeleton over F3 has chain dimensions (40,240,160), boundary ranks (39,120), and H=(1,81,40). Tensoring the full chain complex with F3[epsilon]/epsilon^2 doubles the edge-chain module to 480, exactly the photonic fusion ledger, and doubles H1 to 162. The square-zero nilpotent epsilon map commutes with both boundaries and descends to a rank-81 square-zero operator on H1, giving 0 -> 81 -> 162 -> 81 -> 0.",
+  "snake_eats_tail_read": "The QEC tail is a chain map, not an analogy: the return/syndrome copy is mapped into the accepted/frame copy by N, N commutes with the CSS boundaries, and the induced H1 tail has image = kernel = 81.",
+  "honesty_boundary": "This is an exact finite chain-complex and nilpotent-extension theorem over F3. It does not prove a hardware noise threshold, a non-Clifford photonic magic-state protocol, or the curved 4D spectral-action limit."
+}

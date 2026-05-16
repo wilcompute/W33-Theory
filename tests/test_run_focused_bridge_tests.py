@@ -37,6 +37,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in SUITES["octahedral-dynamics"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["octahedral-dynamics"]
+    assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in SUITES["photonic-qec"]
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
@@ -53,6 +54,7 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dcclviii_universal_overdetermination.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
+    assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths
     assert len(paths) == len(set(paths))
     assert len(paths) >= 60
 
