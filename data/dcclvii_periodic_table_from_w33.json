@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "q": 3,
+    "orbital_capacities": [
+      2,
+      6,
+      10,
+      14
+    ],
+    "magnetic_counts": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "row_lengths": [
+      2,
+      8,
+      8,
+      18,
+      18,
+      32,
+      32
+    ],
+    "noble_gas_atomic_numbers": [
+      2,
+      10,
+      18,
+      36,
+      54,
+      86,
+      118
+    ],
+    "all_identities_hold": true
+  },
+  "orbital_table": [
+    {
+      "name": "s",
+      "l": 0,
+      "magnetic_count": 1,
+      "capacity": 2,
+      "magnetic_w33": "identity",
+      "capacity_w33": "lambda (SRG parameter)"
+    },
+    {
+      "name": "p",
+      "l": 1,
+      "magnetic_count": 3,
+      "capacity": 6,
+      "magnetic_w33": "q = Master Equation root",
+      "capacity_w33": "q! = octahedron V = closure-clock nilpotence"
+    },
+    {
+      "name": "d",
+      "l": 2,
+      "magnetic_count": 5,
+      "capacity": 10,
+      "magnetic_w33": "mu + 1 = # Csaszar realisations (DCCXXV)",
+      "capacity_w33": "Phi_4 = q^2 + 1 = oscillator face increment"
+    },
+    {
+      "name": "f",
+      "l": 3,
+      "magnetic_count": 7,
+      "capacity": 14,
+      "magnetic_w33": "Phi_6 = q^2 - q + 1 = Heawood number",
+      "capacity_w33": "2 * Phi_6 = 14 = Heawood graph vertices"
+    },
+    {
+      "name": "g (hypothetical)",
+      "l": 4,
+      "magnetic_count": 9,
+      "capacity": 18,
+      "magnetic_w33": "9 = q^2",
+      "capacity_w33": "18 = 2 q^2 (also Kr ground state)"
+    }
+  ],
+  "periodic_row_lengths": [
+    {
+      "row": 1,
+      "length": 2,
+      "w33_reading": "lambda (SRG parameter)"
+    },
+    {
+      "row": 2,
+      "length": 8,
+      "w33_reading": "2^q = tomotope cells = rank E_8"
+    },
+    {
+      "row": 3,
+      "length": 8,
+      "w33_reading": "2^q"
+    },
+    {
+      "row": 4,
+      "length": 18,
+      "w33_reading": "2 q^2 = 18"
+    },
+    {
+      "row": 5,
+      "length": 18,
+      "w33_reading": "2 q^2"
+    },
+    {
+      "row": 6,
+      "length": 32,
+      "w33_reading": "2 (q+1)^2 = 2 * 16 = 2 trace(Cartan E_8)"
+    },
+    {
+      "row": 7,
+      "length": 32,
+      "w33_reading": "2 (q+1)^2"
+    }
+  ],
+  "noble_gas_table": [
+    {
+      "symbol": "He",
+      "atomic_number": 2,
+      "configuration_close": "1s",
+      "w33_reading": "lambda"
+    },
+    {
+      "symbol": "Ne",
+      "atomic_number": 10,
+      "configuration_close": "1s 2s 2p",
+      "w33_reading": "Phi_4"
+    },
+    {
+      "symbol": "Ar",
+      "atomic_number": 18,
+      "configuration_close": "[Ne] 3s 3p",
+      "w33_reading": "2 q^2"
+    },
+    {
+      "symbol": "Kr",
+      "atomic_number": 36,
+      "configuration_close": "[Ar] 3d 4s 4p",
+      "w33_reading": "T_8 = |S| (W(3,3) spreads, DCCLI)"
+    },
+    {
+      "symbol": "Xe",
+      "atomic_number": 54,
+      "configuration_close": "[Kr] 4d 5s 5p",
+      "w33_reading": "2 q^q (twin pairs; T_3B leading coeff, DCCLIII)"
+    },
+    {
+      "symbol": "Rn",
+      "atomic_number": 86,
+      "configuration_close": "[Xe] 4f 5d 6s 6p",
+      "w33_reading": "2 q^q + 2(q+1)^2 = 54 + 32"
+    },
+    {
+      "symbol": "Og",
+      "atomic_number": 118,
+      "configuration_close": "[Rn] 5f 6d 7s 7p",
+      "w33_reading": "Rn + 32 = 86 + 32"
+    }
+  ],
+  "shell_sums_2n_squared": [
+    2,
+    10,
+    28,
+    60
+  ],
+  "identities": {
+    "s_capacity_eq_lambda": true,
+    "p_capacity_eq_q_factorial": true,
+    "d_capacity_eq_Phi_4": true,
+    "f_capacity_eq_2_Phi_6": true,
+    "g_capacity_eq_2_q_squared": true,
+    "magnetic_p_eq_q": true,
+    "magnetic_d_eq_5": true,
+    "magnetic_f_eq_Phi_6": true,
+    "row_1_length_eq_lambda": true,
+    "row_2_length_eq_2_to_q": true,
+    "row_4_length_eq_2_q_squared": true,
+    "row_6_length_eq_2_q_plus_1_squared": true,
+    "He_eq_lambda": true,
+    "Ne_eq_Phi_4": true,
+    "Ar_eq_2_q_squared": true,
+    "Kr_eq_36_eq_T_8": true,
+    "Kr_atomic_number_36": true,
+    "Xe_eq_2_q_to_q": true,
+    "Rn_eq_2_q_to_q_plus_2_q_plus_1_squared": true,
+    "orbital_table_5_rows": true,
+    "noble_gas_table_7_rows": true
+  },
+  "theorem": "Periodic-Table-from-W(3,3) Theorem.  The electron-orbital capacities (s, p, d, f) given by the quantum-mechanical quantisation rule 2(2l + 1) are 2, 6, 10, 14 -- exactly the W(3,3) primitives lambda, q!, Phi_4, 2 Phi_6.  Both halves of the formula carry W(3,3) meaning: the spin doubling is 2 = lambda and the magnetic-quantum-number counts {1, 3, 5, 7} for l = 0, 1, 2, 3 are W(3,3) primitives {identity, q, mu+1, Phi_6}.  Periodic-table row lengths {2, 8, 18, 32} are {lambda, 2^q, 2q^2, 2(q+1)^2}.  Noble gas atomic numbers {He, Ne, Ar, Kr, Xe, Rn} = {2, 10, 18, 36, 54, 86} are {lambda, Phi_4, 2q^2, |S|, 2q^q, 2q^q + 2(q+1)^2} -- six noble-gas closures of shells, each a W(3,3) primitive or sum of two W(3,3) primitives.",
+  "one_line": "Orbital capacities (s,p,d,f) = (lambda, q!, Phi_4, 2 Phi_6); noble gas atomic numbers match W(3,3) primitives; periodic table is q = 3 chemistry.",
+  "honesty_boundary": "All identifications are exact arithmetic.  The 2(2l + 1) rule is the standard quantum-mechanical formula for electron-shell capacity; this part shows that at the first five values of l (s, p, d, f, g) it yields W(3,3) primitives.  The noble-gas atomic numbers are documented experimental values.  This part does NOT derive the Schrodinger equation or the Madelung rule from W(3,3); it documents the W(3,3) arithmetic alignment with the periodic-table structural numerics."
+}
