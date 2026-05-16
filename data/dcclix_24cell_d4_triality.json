@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "q": 3,
+    "24_cell_f_vector": [
+      24,
+      96,
+      96,
+      24
+    ],
+    "24_cell_f_sum": 240,
+    "24_cell_f_sum_eq_E_W33": true,
+    "D_4_root_count": 24,
+    "all_identities_hold": true
+  },
+  "24_cell_data": {
+    "V": 24,
+    "E": 96,
+    "F": 96,
+    "C": 24
+  },
+  "24_cell_w33_table": [
+    {
+      "slot": "V",
+      "value": 24,
+      "w33_readings": [
+        "f = eigen-mult of +2",
+        "tetrahedron flag count (DCCXXV)",
+        "D_bosonic - 2 (DCCXXVI)",
+        "Leech lattice dim",
+        "|D_4 roots| (24-cell = D_4 root polytope)",
+        "-tau(2) Ramanujan (DCCLIII)"
+      ]
+    },
+    {
+      "slot": "E",
+      "value": 96,
+      "w33_readings": [
+        "(q + 1) * f = 4 * 24",
+        "(rank E_8) * k = 8 * 12",
+        "snub-24-cell V count (DCCLII)",
+        "(q+1)! * (q+1) = 24 * 4"
+      ]
+    },
+    {
+      "slot": "F",
+      "value": 96,
+      "w33_readings": [
+        "same as E by self-duality",
+        "96 = (q+1) * f"
+      ]
+    },
+    {
+      "slot": "C",
+      "value": 24,
+      "w33_readings": [
+        "same as V by self-duality",
+        "24 = f"
+      ]
+    }
+  ],
+  "f_vector_total_identity": {
+    "f_vector": [
+      24,
+      96,
+      96,
+      24
+    ],
+    "sum": 240,
+    "eq_E_W33": true,
+    "eq_E_8_roots": true,
+    "decomposition": "24 + 96 + 96 + 24 = 240",
+    "interpretation": "The total number of cells of all dimensions in the 24-cell equals the edge count of W(3,3) = the number of E_8 roots.  Each summand has a W(3,3) reading: V = C = f, E = F = (q+1) * f."
+  },
+  "D_4_triality_data": {
+    "D_4_root_count": 24,
+    "D_4_root_count_eq_f": true,
+    "D_4_root_count_eq_24_cell_V": true,
+    "W_D_4_order": 192,
+    "W_D_4_order_eq_tomotope_flags": true,
+    "Out_D_4_order": 6,
+    "Out_D_4_eq_S_3_eq_q_factorial": true,
+    "Out_D_4_is_unique_S_3_among_Dynkin": true,
+    "W_F_4_order": 1152,
+    "W_F_4_eq_W_D4_times_Out_D4": true,
+    "interpretation": "D_4 is the only Dynkin diagram whose outer automorphism group is non-trivial of order > 2.  Out(D_4) = S_3 = q-fold permutations at q = 3.  This 'triality' explains SO(8) triality (3-way symmetry of the vector and two spinor reps), and the 24-cell carries that S_3 structure as its symmetry group's coset."
+  },
+  "polytope_chain": [
+    {
+      "level": 1,
+      "object": "24-cell",
+      "key_count": 24,
+      "label": "D_4 root polytope",
+      "w33": "f = 24"
+    },
+    {
+      "level": 2,
+      "object": "600-cell",
+      "key_count": 120,
+      "label": "H_4 root polytope; contains 5 disjoint 24-cells",
+      "w33": "5 * f = (q+2)! = (q+2) * f"
+    },
+    {
+      "level": 3,
+      "object": "E_8 root system",
+      "key_count": 240,
+      "label": "2 disjoint 600-cells (golden-ratio fold; DCCLII)",
+      "w33": "E = 240 = 10 * f = 2 * (q+2)! = E(W(3,3))"
+    }
+  ],
+  "identities": {
+    "24_cell_V_eq_f": true,
+    "24_cell_E_eq_F_self_dual": true,
+    "24_cell_V_eq_C_self_dual": true,
+    "24_cell_E_eq_4f": true,
+    "24_cell_E_eq_rank_E8_times_k": true,
+    "24_cell_f_sum_eq_240": true,
+    "24_cell_f_sum_eq_E_W33": true,
+    "24_cell_f_sum_eq_E8_roots": true,
+    "D_4_roots_eq_24_cell_V": true,
+    "Out_D_4_eq_S_3": true,
+    "W_F_4_eq_W_D_4_times_Out_D_4": true,
+    "chain_3_steps": true,
+    "E_8_eq_10_times_f": true,
+    "600_cell_eq_5_times_f": true
+  },
+  "theorem": "24-cell f-vector Theorem.  The self-dual 24-cell, the unique regular 4D polytope outside the simplex family, has f-vector (24, 96, 96, 24).  Its TOTAL CELL COUNT across all dimensions is\n  V + E + F + C  =  24 + 96 + 96 + 24  =  240,\nwhich equals E(W(3,3)) = |Phi(E_8)|.  Each entry has a clean W(3,3) reading: V = C = f (the eigen-multiplicity of +2 in W(3,3), also tetrahedron flags, also Leech dim, also D_4 roots) and E = F = (q+1) * f = (rank E_8) * k.  The 24-cell is the D_4 root polytope, and D_4 has triality (Out = S_3 = q-fold permutations at q = 3, the unique Dynkin diagram with this property).  The polytope chain 24-cell -> 600-cell -> E_8 has vertex counts (24, 120, 240) = (f, 5f, 10f), the last being E(W(3,3)).  So E_8 = 10 * f = 10 * (24-cell vertices).",
+  "one_line": "24-cell f-sum = 240 = E(W(3,3)); 24-cell V = f; D_4 triality Out = S_3 = q! at q = 3; E_8 = 10 * (24-cell V).",
+  "honesty_boundary": "All identifications are exact arithmetic.  The 24-cell is the standard regular 4-polytope of f-vector (24, 96, 96, 24), and its role as the D_4 root polytope is classical.  The new identity in this part is the f-vector SUM = 240 = E(W(3,3)) = E_8 root count, plus the chain 24-cell -> 600-cell -> E_8 with vertex counts (f, 5f, 10f) at q = 3.  This part does NOT derive D_4 triality or the 24-cell from W(3,3); it documents the arithmetic alignment."
+}
