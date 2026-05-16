@@ -1,0 +1,317 @@
+{
+  "summary": {
+    "q": 3,
+    "frobenius_carrier": 240,
+    "w33_vertices": 40,
+    "octahedral_phase_pairs": 6,
+    "edge_phase_slots": 240,
+    "directed_phase_slots": 480,
+    "full_chain_closure_dimension": 480,
+    "all_identities_hold": true
+  },
+  "factorization": {
+    "frobenius": "q^5 - q = q(q^4 - 1)",
+    "projective_points": "[4]_q = (q^4 - 1)/(q - 1)",
+    "q3_specialization": "3^5 - 3 = 40 * 6 = W33 vertices * octahedral phase pairs",
+    "directed_lift": "480 = 40 * 12 = W33 vertices * octahedron edges",
+    "selection_note": "At q=3, q(q-1)=q! and k/2=q!, so the Frobenius quotient is the closure-clock phase count."
+  },
+  "octahedral_phase_data": {
+    "vertices": [
+      [
+        "B23",
+        1
+      ],
+      [
+        "B23",
+        -1
+      ],
+      [
+        "B31",
+        1
+      ],
+      [
+        "B31",
+        -1
+      ],
+      [
+        "B12",
+        1
+      ],
+      [
+        "B12",
+        -1
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "antipodal_vertex_map": {
+      "0": 1,
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 5,
+      "5": 4
+    },
+    "antipodal_edge_pair_orbits": [
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    "phase_pair_count": 6,
+    "directed_phase_count": 12
+  },
+  "slot_samples": {
+    "edge_phase_slots_first_12": [
+      {
+        "w33_vertex": 0,
+        "phase_pair": 0
+      },
+      {
+        "w33_vertex": 0,
+        "phase_pair": 1
+      },
+      {
+        "w33_vertex": 0,
+        "phase_pair": 2
+      },
+      {
+        "w33_vertex": 0,
+        "phase_pair": 3
+      },
+      {
+        "w33_vertex": 0,
+        "phase_pair": 4
+      },
+      {
+        "w33_vertex": 0,
+        "phase_pair": 5
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 0
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 1
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 2
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 3
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 4
+      },
+      {
+        "w33_vertex": 1,
+        "phase_pair": 5
+      }
+    ],
+    "directed_phase_slots_first_12": [
+      {
+        "w33_vertex": 0,
+        "directed_phase": 0
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 1
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 2
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 3
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 4
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 5
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 6
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 7
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 8
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 9
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 10
+      },
+      {
+        "w33_vertex": 0,
+        "directed_phase": 11
+      }
+    ]
+  },
+  "carrier_counts": {
+    "frobenius_nonbase_elements": 240,
+    "gq_edges": {
+      "numerator": 240,
+      "denominator": 1
+    },
+    "w33_edges": 240,
+    "w33_directed_edges": 480,
+    "w33_full_clique_chain_nonempty_simplices": 480
+  },
+  "qec_read": {
+    "physical_edge_slots": 240,
+    "rank_X_vertex_checks": 39,
+    "rank_Z_triangle_checks": 120,
+    "logical_H1": 81,
+    "stabilizer_rank": 159,
+    "rate": {
+      "numerator": 27,
+      "denominator": 80
+    },
+    "closure": 240
+  },
+  "bridge_claim": {
+    "exact_layer": "The selected Frobenius carrier q^5-q at q=3 is the same 240-slot carrier as W33 edges, E8 roots, and the W33 CSS physical code. It factorizes as 40 W33 projective points times six octahedral antipodal edge-pair phases, while its directed lift is 40 times the twelve octahedron edges.",
+    "conditional_layer": "This is a count-preserving phase/ledger lift. It does not construct a canonical incidence-preserving bijection from W33 edges to vertex-phase pairs, nor does it replace the explicit CSS boundary maps."
+  },
+  "identities": {
+    "incoming_octahedron_bridge_verified": true,
+    "incoming_frobenius_bridge_verified": true,
+    "frobenius_at_q3_is_w33_edge_count": true,
+    "gq_edges_at_q3_match_frobenius": true,
+    "w33_projective_points_are_40": true,
+    "frobenius_factor_is_six": true,
+    "frobenius_factor_is_q_factorial": true,
+    "local_half_valency_is_q_factorial": true,
+    "octahedron_has_six_antipodal_edge_pairs": true,
+    "octahedron_edges_are_twelve_directed_phases": true,
+    "edge_phase_slots_are_240": true,
+    "directed_phase_slots_are_480": true,
+    "directed_phase_slots_are_vertex_times_octahedron_edges": true,
+    "edge_phase_slots_are_vertex_times_octahedral_pairs": true,
+    "full_clique_chain_dimension_is_480": true,
+    "qec_split_closes_edge_carrier": true,
+    "qec_rate_is_27_over_80": true,
+    "e8_a2_phase_split_respects_six_shell": true
+  }
+}

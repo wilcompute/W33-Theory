@@ -67,6 +67,15 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py",
         "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py",
     ],
+    "pascal-ouroboros": [
+        "tests/test_dccxlix_octahedron_closure_phase_space.py",
+        "tests/test_dccl_pascal_synergetics_clifford_hierarchy.py",
+        "tests/test_dccli_pascal_diagonal_w33_generator.py",
+        "tests/test_dcclii_hyperbolic_pascal_600cell_e8.py",
+        "tests/test_dccliii_monster_moonshine_w33_bridge.py",
+        "tests/test_dccliv_frobenius_selection_and_ouroboros.py",
+        "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py",
+    ],
 }
 
 ALIASES = {
@@ -76,6 +85,7 @@ ALIASES = {
         "tomotope-klitzing",
         "sector-split",
         "closure-clock",
+        "pascal-ouroboros",
     ],
 }
 

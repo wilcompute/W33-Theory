@@ -21,6 +21,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
         "tomotope-klitzing",
         "sector-split",
         "closure-clock",
+        "pascal-ouroboros",
     } <= set(SUITES)
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in SUITES["closure-clock"]
@@ -29,6 +30,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in SUITES["closure-clock"]
+    assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in SUITES["pascal-ouroboros"]
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
@@ -41,8 +43,9 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in paths
     assert "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py" in paths
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in paths
+    assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in paths
     assert len(paths) == len(set(paths))
-    assert len(paths) >= 33
+    assert len(paths) >= 40
 
 
 def test_focused_bridge_runner_builds_noconftest_command() -> None:
