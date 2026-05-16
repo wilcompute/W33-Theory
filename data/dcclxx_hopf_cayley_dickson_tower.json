@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "q": 3,
+    "cayley_dickson_dims": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "hopf_total_dims": [
+      1,
+      3,
+      7,
+      15
+    ],
+    "hopf_base_dims": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "all_identities_hold": true
+  },
+  "cayley_dickson_tower": [
+    {
+      "level": 0,
+      "algebra": "R (real)",
+      "dim": 1,
+      "w33_reading": "identity",
+      "is_division_algebra": true
+    },
+    {
+      "level": 1,
+      "algebra": "C (complex)",
+      "dim": 2,
+      "w33_reading": "lambda",
+      "is_division_algebra": true
+    },
+    {
+      "level": 2,
+      "algebra": "H (quaternion)",
+      "dim": 4,
+      "w33_reading": "mu = q + 1 (DCCXXVIII)",
+      "is_division_algebra": true
+    },
+    {
+      "level": 3,
+      "algebra": "O (octonion)",
+      "dim": 8,
+      "w33_reading": "2^q = tomotope cells = rank E_8",
+      "is_division_algebra": true
+    },
+    {
+      "level": 4,
+      "algebra": "S (sedenion)",
+      "dim": 16,
+      "w33_reading": "2^(q+1) = (q+1)^2 = trace(Cartan E_8) (DCCXXVII)",
+      "is_division_algebra": false
+    }
+  ],
+  "hopf_fibrations": [
+    {
+      "level": 0,
+      "algebra": "R",
+      "fiber_dim": 0,
+      "fiber": "S^0",
+      "total_dim": 1,
+      "total": "S^1",
+      "base_dim": 1,
+      "base": "S^1",
+      "w33_total": "identity",
+      "w33_base": "identity"
+    },
+    {
+      "level": 1,
+      "algebra": "C",
+      "fiber_dim": 1,
+      "fiber": "S^1",
+      "total_dim": 3,
+      "total": "S^3",
+      "base_dim": 2,
+      "base": "S^2",
+      "w33_total": "q (M_2 = Mersenne 3)",
+      "w33_base": "lambda"
+    },
+    {
+      "level": 2,
+      "algebra": "H",
+      "fiber_dim": 3,
+      "fiber": "S^3",
+      "total_dim": 7,
+      "total": "S^7",
+      "base_dim": 4,
+      "base": "S^4",
+      "w33_total": "Phi_6 = M_3 = Heawood (DCCXXIV)",
+      "w33_base": "mu = q + 1"
+    },
+    {
+      "level": 3,
+      "algebra": "O",
+      "fiber_dim": 7,
+      "fiber": "S^7",
+      "total_dim": 15,
+      "total": "S^15",
+      "base_dim": 8,
+      "base": "S^8",
+      "w33_total": "g = M_4 = SM gauge generators (DCCLI)",
+      "w33_base": "2^q = tomotope cells = rank E_8"
+    }
+  ],
+  "hopf_total_dims_are_mersenne": {
+    "S_1_eq_M_1": true,
+    "S_3_eq_M_2": true,
+    "S_7_eq_M_3": true,
+    "S_15_eq_M_4": true,
+    "values": [
+      1,
+      3,
+      7,
+      15
+    ]
+  },
+  "tits_magic_square_O_corner": [
+    {
+      "A": "R",
+      "B": "O",
+      "result": "F_4",
+      "w33_role": "all 5 exceptional Lie groups in W(3,3)"
+    },
+    {
+      "A": "C",
+      "B": "O",
+      "result": "E_6",
+      "w33_role": "Aut(W(3,3)) = W(E_6)"
+    },
+    {
+      "A": "H",
+      "B": "O",
+      "result": "E_7",
+      "w33_role": "133-dim exceptional"
+    },
+    {
+      "A": "O",
+      "B": "O",
+      "result": "E_8",
+      "w33_role": "240 roots = E(W(3,3))"
+    }
+  ],
+  "identities": {
+    "R_dim_1": true,
+    "C_dim_eq_lambda": true,
+    "H_dim_eq_mu": true,
+    "O_dim_eq_2_to_q": true,
+    "S_dim_eq_qp1_squared": true,
+    "C_is_division": true,
+    "H_is_division": true,
+    "O_is_division": true,
+    "S_not_division": true,
+    "S_1_total_M_1": true,
+    "S_3_total_M_2": true,
+    "S_7_total_M_3": true,
+    "S_15_total_M_4": true,
+    "S_3_dim_eq_q": true,
+    "S_7_dim_eq_Phi_6": true,
+    "S_15_dim_eq_g": true,
+    "S_2_base_eq_lambda": true,
+    "S_4_base_eq_mu": true,
+    "S_8_base_eq_2_to_q": true,
+    "tits_magic_square_4_rows": true
+  },
+  "theorem": "Hopf-Cayley-Dickson W(3,3) Theorem.  The FOUR normed division algebras (R, C, H, O) have dimensions (1, 2, 4, 8) = (identity, lambda, mu, 2^q), all W(3,3) primitives.  Their unit spheres (S^0, S^1, S^3, S^7) carry the four Hopf fibrations with total-space dimensions (1, 3, 7, 15) = (identity, q, Phi_6, g) and base-space dimensions (1, 2, 4, 8) -- both sequences are W(3,3) primitives at q = 3.  The total-space dims are also the Mersenne numbers M_1, M_2, M_3, M_4 (= 2^n - 1), and the base dims are the Cayley-Dickson division-algebra dims.  Adams' Hopf Invariant One theorem (1960) proves there are exactly four such fibrations, matching the four normed division algebras.  The Cayley-Dickson process terminates at sedenions S (dim 16 = (q+1)^2 = trace(Cartan E_8)), which are no longer a division algebra.  Through the Tits-Freudenthal magic square the octonion row produces F_4, E_6, E_7, E_8 -- all five exceptional Lie groups appearing in W(3,3) at q = 3.  So the entire Hopf-Cayley-Dickson-magic-square tower is W(3,3) at q = 3.",
+  "one_line": "4 normed division algebras (R,C,H,O) at dims (1, lambda, mu, 2^q); 4 Hopf fibrations at total dims (1, q, Phi_6, g); Tits magic square octonion row -> F_4, E_6, E_7, E_8 in W(3,3).",
+  "honesty_boundary": "All dimensions are exact classical mathematics: Hurwitz theorem (only 4 normed division algebras exist), Adams' Hopf Invariant One theorem (only 4 Hopf fibrations), Cayley-Dickson construction, and the Tits-Freudenthal magic square.  The new observation is that EVERY dimension and EVERY exceptional Lie group in the tower is a W(3,3) primitive at q = 3.  This part does NOT prove the classical theorems; it documents the arithmetic alignment."
+}
