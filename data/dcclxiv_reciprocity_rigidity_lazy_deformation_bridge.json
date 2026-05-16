@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "weak_scalar_num": 3,
+    "weak_scalar_den": 13,
+    "base_kemeny_num": 13,
+    "base_kemeny_den": 3,
+    "lambda_star_num": 1,
+    "lambda_star_den": 1,
+    "all_identities_hold": true
+  },
+  "deformation_definition": {
+    "P_lambda": "(1-lambda)I + lambda P",
+    "kemeny_scaling": "K_lambda = K/lambda",
+    "product_scaling": "xK_lambda = 1/lambda",
+    "rigidity_point": "xK_lambda=1 iff lambda=1"
+  },
+  "rows": [
+    {
+      "lambda": {
+        "num": 1,
+        "den": 1
+      },
+      "kemeny_numeric": 4.333333333333333,
+      "kemeny_pred": {
+        "num": 13,
+        "den": 3
+      },
+      "xK_pred": {
+        "num": 1,
+        "den": 1
+      },
+      "xK_numeric": 1.0
+    },
+    {
+      "lambda": {
+        "num": 3,
+        "den": 4
+      },
+      "kemeny_numeric": 5.777777777777779,
+      "kemeny_pred": {
+        "num": 52,
+        "den": 9
+      },
+      "xK_pred": {
+        "num": 4,
+        "den": 3
+      },
+      "xK_numeric": 1.3333333333333335
+    },
+    {
+      "lambda": {
+        "num": 1,
+        "den": 2
+      },
+      "kemeny_numeric": 8.666666666666664,
+      "kemeny_pred": {
+        "num": 26,
+        "den": 3
+      },
+      "xK_pred": {
+        "num": 2,
+        "den": 1
+      },
+      "xK_numeric": 1.9999999999999996
+    },
+    {
+      "lambda": {
+        "num": 1,
+        "den": 4
+      },
+      "kemeny_numeric": 17.333333333333346,
+      "kemeny_pred": {
+        "num": 52,
+        "den": 3
+      },
+      "xK_pred": {
+        "num": 4,
+        "den": 1
+      },
+      "xK_numeric": 4.0000000000000036
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "The 3/13 \u2194 13/3 reciprocity is rigid under lazy deformation: xK_lambda=1/lambda, so exact inverse pairing survives only at lambda=1 and breaks for any lambda<1.",
+    "conditional_layer": "Extending rigidity beyond this lazy family to broader deformation classes requires an additional universality theorem."
+  },
+  "identities": {
+    "base_reciprocity_holds_at_lambda_1": true,
+    "kemeny_scales_as_inverse_lambda": true,
+    "xK_scales_as_inverse_lambda": true,
+    "reciprocity_breaks_for_lambda_lt_1": true,
+    "deformed_product_equals_1_over_lambda": true
+  }
+}

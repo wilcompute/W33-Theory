@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "vertex_count": 6,
+    "det_prime_laplacian": 2304,
+    "spanning_tree_count": 384,
+    "rho_8_denominator": 384,
+    "all_identities_hold": true
+  },
+  "matrix_tree_data": {
+    "laplacian": [
+      [
+        4,
+        0,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        0,
+        4,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        4,
+        0,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        0,
+        4,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        -1,
+        4,
+        0
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        4
+      ]
+    ],
+    "laplacian_spectrum": [
+      0,
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "nonzero_spectrum": [
+      4,
+      4,
+      4,
+      6,
+      6
+    ],
+    "det_prime_laplacian": 2304,
+    "det_prime_formula": "4^3 * 6^2",
+    "spanning_tree_count_from_spectrum": 384,
+    "principal_cofactors": [
+      384,
+      384,
+      384,
+      384,
+      384,
+      384
+    ],
+    "all_principal_cofactors_equal": true,
+    "matrix_tree_count": 384
+  },
+  "spectral_zeta_data": {
+    "zeta_formula": "zeta_L(s) = 3*4^(-s) + 2*6^(-s)",
+    "zeta_at_0": 5,
+    "rank_laplacian": 5,
+    "zeta_prime_at_0": -7.742402021815781,
+    "minus_zeta_prime_at_0": 7.742402021815781,
+    "regularized_det": 2304,
+    "det_prime_laplacian": 2304
+  },
+  "density_denominator_bridge": {
+    "rho_8_formula": "pi^4 / 384",
+    "rho_8_denominator": 384,
+    "G_384_factorisations": [
+      {
+        "role": "stabilizer cascade step 4 (DCCLIV)",
+        "value": 384,
+        "formula": "G_384"
+      },
+      {
+        "role": "2 * |W(D_4)|",
+        "value": 384,
+        "formula": "2 * 192"
+      },
+      {
+        "role": "2 * tomotope flag count (DCCXXV)",
+        "value": 384,
+        "formula": "2 * 192"
+      },
+      {
+        "role": "(q+1)^2 * f",
+        "value": 384,
+        "formula": "16 * 24"
+      },
+      {
+        "role": "trace(Cartan E_8) * f (DCCXXVII)",
+        "value": 384,
+        "formula": "16 * 24"
+      },
+      {
+        "role": "(q+1)! * (q+1)^2",
+        "value": 384,
+        "formula": "24 * 16"
+      },
+      {
+        "role": "(q+1)! * trace(Cartan E_8)",
+        "value": 384,
+        "formula": "24 * 16"
+      }
+    ],
+    "new_finite_harmonic_reading": "384 is the spanning-tree count of the exact octahedral closure phase-space graph.",
+    "additional_factorisations": [
+      {
+        "formula": "tau(O)",
+        "value": 384,
+        "reading": "octahedral spanning trees"
+      },
+      {
+        "formula": "2 * |W(D_4)|",
+        "value": 384,
+        "reading": "double D4 Weyl/tomotope flags"
+      },
+      {
+        "formula": "(q+1)^2 * f",
+        "value": 384,
+        "reading": "Cartan trace times +2 eigenspace"
+      },
+      {
+        "formula": "q! * (q+1)^3",
+        "value": 384,
+        "reading": "triality permutations times cubic closure axes"
+      }
+    ]
+  },
+  "identities": {
+    "laplacian_spectrum_is_0_4_4_4_6_6": true,
+    "det_prime_eq_4_cubed_6_squared": true,
+    "matrix_tree_from_spectrum_eq_384": true,
+    "all_principal_cofactors_eq_384": true,
+    "rho_8_denominator_eq_tree_count": true,
+    "G_384_eq_2_W_D4": true,
+    "G_384_eq_mu_squared_times_f": true,
+    "G_384_eq_q_factorial_times_mu_cubed": true,
+    "zeta_at_0_eq_rank": true,
+    "regularized_det_eq_det_prime": true,
+    "imported_G_384_factorisations_all_equal_384": true
+  },
+  "theorem": "Octahedral Matrix-Tree / Density-Denominator Theorem. The exact octahedral closure Laplacian has spectrum (0,4,4,4,6,6), hence det'(L)=4^3*6^2=2304. Kirchhoff's matrix-tree theorem gives tau(O)=det'(L)/6=384. The same integer is the denominator of the optimal E8 packing density rho_8=pi^4/384 and the W(3,3) G_384 cascade value. Thus the E8 density denominator is also the spanning-tree count of the finite octahedral harmonic closure phase space.",
+  "one_line": "tau(octahedron)=384=rho_8 denominator=G_384; the E8 density denominator is the octahedral matrix-tree count.",
+  "honesty_boundary": "This proves an exact finite graph identity and an exact equality with the denominator used in the standard E8 density formula. It does not re-prove Viazovska's E8 optimality theorem, nor does it derive continuum sphere packing from the octahedron. The new content is the finite harmonic/topological anchoring of 384."
+}

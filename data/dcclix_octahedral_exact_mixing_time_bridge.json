@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "state_count": 6,
+    "tv_t0": 0.8333333333333335,
+    "tv_prefactor": 0.6666666666666666,
+    "contraction_base": 0.5,
+    "tau_eps_0_1": 3,
+    "tau_eps_0_01": 7,
+    "all_identities_hold": true
+  },
+  "mixing_definition": {
+    "tv_profile": "TV_0 = 5/6; TV_t = (2/3) 2^{-t} for t>=1",
+    "tau_formula": "tau(eps) = ceil(max(1, log2(2/(3 eps))))"
+  },
+  "tv_timeline": [
+    {
+      "t": 0,
+      "tv": 0.833333333333,
+      "closed_form": 0.833333333333,
+      "difference": 0.0
+    },
+    {
+      "t": 1,
+      "tv": 0.333333333333,
+      "closed_form": 0.333333333333,
+      "difference": 0.0
+    },
+    {
+      "t": 2,
+      "tv": 0.166666666667,
+      "closed_form": 0.166666666667,
+      "difference": -0.0
+    },
+    {
+      "t": 3,
+      "tv": 0.083333333333,
+      "closed_form": 0.083333333333,
+      "difference": 0.0
+    },
+    {
+      "t": 4,
+      "tv": 0.041666666667,
+      "closed_form": 0.041666666667,
+      "difference": -0.0
+    },
+    {
+      "t": 5,
+      "tv": 0.020833333333,
+      "closed_form": 0.020833333333,
+      "difference": 0.0
+    },
+    {
+      "t": 6,
+      "tv": 0.010416666667,
+      "closed_form": 0.010416666667,
+      "difference": -0.0
+    },
+    {
+      "t": 7,
+      "tv": 0.005208333333,
+      "closed_form": 0.005208333333,
+      "difference": 0.0
+    },
+    {
+      "t": 8,
+      "tv": 0.002604166667,
+      "closed_form": 0.002604166667,
+      "difference": -0.0
+    },
+    {
+      "t": 9,
+      "tv": 0.001302083333,
+      "closed_form": 0.001302083333,
+      "difference": 0.0
+    },
+    {
+      "t": 10,
+      "tv": 0.000651041667,
+      "closed_form": 0.000651041667,
+      "difference": -0.0
+    },
+    {
+      "t": 11,
+      "tv": 0.000325520833,
+      "closed_form": 0.000325520833,
+      "difference": 0.0
+    },
+    {
+      "t": 12,
+      "tv": 0.000162760417,
+      "closed_form": 0.000162760417,
+      "difference": -0.0
+    },
+    {
+      "t": 13,
+      "tv": 8.1380208e-05,
+      "closed_form": 8.1380208e-05,
+      "difference": 0.0
+    },
+    {
+      "t": 14,
+      "tv": 4.0690104e-05,
+      "closed_form": 4.0690104e-05,
+      "difference": -0.0
+    },
+    {
+      "t": 15,
+      "tv": 2.0345052e-05,
+      "closed_form": 2.0345052e-05,
+      "difference": 0.0
+    },
+    {
+      "t": 16,
+      "tv": 1.0172526e-05,
+      "closed_form": 1.0172526e-05,
+      "difference": -0.0
+    },
+    {
+      "t": 17,
+      "tv": 5.086263e-06,
+      "closed_form": 5.086263e-06,
+      "difference": 0.0
+    },
+    {
+      "t": 18,
+      "tv": 2.543132e-06,
+      "closed_form": 2.543132e-06,
+      "difference": -0.0
+    },
+    {
+      "t": 19,
+      "tv": 1.271566e-06,
+      "closed_form": 1.271566e-06,
+      "difference": 0.0
+    },
+    {
+      "t": 20,
+      "tv": 6.35783e-07,
+      "closed_form": 6.35783e-07,
+      "difference": -0.0
+    }
+  ],
+  "mixing_table": [
+    {
+      "epsilon": 0.25,
+      "tau_formula": 2,
+      "tau_bruteforce": 2
+    },
+    {
+      "epsilon": 0.1,
+      "tau_formula": 3,
+      "tau_bruteforce": 3
+    },
+    {
+      "epsilon": 0.05,
+      "tau_formula": 4,
+      "tau_bruteforce": 4
+    },
+    {
+      "epsilon": 0.01,
+      "tau_formula": 7,
+      "tau_bruteforce": 7
+    },
+    {
+      "epsilon": 0.001,
+      "tau_formula": 10,
+      "tau_bruteforce": 10
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "Octahedral closure walk has exact TV profile TV_t=(2/3)2^{-t} (t>=1), hence exact epsilon-mixing time tau(eps)=ceil(max(1,log2(2/(3eps)))).",
+    "conditional_layer": "Interpreting this finite exact mixing-time law as continuum equilibration time requires a scaling limit."
+  },
+  "identities": {
+    "tv_t0_is_five_over_six": true,
+    "tv_closed_form_holds_t_ge_1": true,
+    "tv_ratio_is_half_for_t_ge_1": true,
+    "mixing_formula_matches_bruteforce": true,
+    "tau_is_monotone_in_epsilon": true,
+    "tau_nondecreasing_when_epsilon_decreases": true
+  }
+}

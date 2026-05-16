@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "state_count": 6,
+    "stationary_mass": 0.16666666666666666,
+    "mean_return_time": 6.0,
+    "p1_return": 0.0,
+    "p2_return": 0.25,
+    "p3_return": 0.125,
+    "all_identities_hold": true
+  },
+  "return_definition": {
+    "profile": "p_t(i,i)=1/6 + (1/3)(-1/2)^t for t>=1",
+    "kac": "E_i[T_i^+] = 1/pi_i = 6",
+    "generating_function": "G(z)=1 + z/(6(1-z)) + (1/3)*((-z/2)/(1+z/2))"
+  },
+  "return_timeline": [
+    {
+      "t": 0,
+      "direct": 1.0,
+      "closed_form": 1.0,
+      "difference": 0.0
+    },
+    {
+      "t": 1,
+      "direct": 0.0,
+      "closed_form": 0.0,
+      "difference": 0.0
+    },
+    {
+      "t": 2,
+      "direct": 0.25,
+      "closed_form": 0.25,
+      "difference": 0.0
+    },
+    {
+      "t": 3,
+      "direct": 0.125,
+      "closed_form": 0.125,
+      "difference": 0.0
+    },
+    {
+      "t": 4,
+      "direct": 0.1875,
+      "closed_form": 0.1875,
+      "difference": 0.0
+    },
+    {
+      "t": 5,
+      "direct": 0.15625,
+      "closed_form": 0.15625,
+      "difference": 0.0
+    },
+    {
+      "t": 6,
+      "direct": 0.171875,
+      "closed_form": 0.171875,
+      "difference": 0.0
+    },
+    {
+      "t": 7,
+      "direct": 0.1640625,
+      "closed_form": 0.1640625,
+      "difference": 0.0
+    },
+    {
+      "t": 8,
+      "direct": 0.16796875,
+      "closed_form": 0.16796875,
+      "difference": 0.0
+    },
+    {
+      "t": 9,
+      "direct": 0.166015625,
+      "closed_form": 0.166015625,
+      "difference": 0.0
+    },
+    {
+      "t": 10,
+      "direct": 0.1669921875,
+      "closed_form": 0.1669921875,
+      "difference": 0.0
+    },
+    {
+      "t": 11,
+      "direct": 0.16650390625,
+      "closed_form": 0.16650390625,
+      "difference": 0.0
+    },
+    {
+      "t": 12,
+      "direct": 0.166748046875,
+      "closed_form": 0.166748046875,
+      "difference": 0.0
+    }
+  ],
+  "generating_checks": [
+    {
+      "z": 0.25,
+      "closed_form": 1.018518518519,
+      "partial_sum": 1.018518518519,
+      "difference": 0.0
+    },
+    {
+      "z": 0.5,
+      "closed_form": 1.1,
+      "partial_sum": 1.1,
+      "difference": -0.0
+    },
+    {
+      "z": 0.8,
+      "closed_form": 1.571428571429,
+      "partial_sum": 1.571428571429,
+      "difference": -0.0
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "Octahedral closure walk has exact return profile p_t(i,i)=1/6+(1/3)(-1/2)^t (t>=1), exact mean return time 6, and an exact closed return generating function.",
+    "conditional_layer": "Interpreting this finite recurrence law as continuum recurrence/Green-resolvent structure requires a scaling-limit theorem."
+  },
+  "identities": {
+    "uniform_stationary_mass_is_one_sixth": true,
+    "p0_return_is_one": true,
+    "closed_return_profile_matches_direct": true,
+    "first_return_values_match_profile": true,
+    "oscillation_around_one_sixth": true,
+    "mean_return_linear_equals_kac": true,
+    "mean_return_equals_six": true,
+    "return_generating_function_matches_closed_form": true,
+    "projector_diagonal_constants_hold": true
+  }
+}

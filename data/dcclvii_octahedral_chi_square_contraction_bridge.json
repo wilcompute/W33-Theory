@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "state_count": 6,
+    "initial_chi2": 5.000000000000003,
+    "first_step_chi2": 0.5,
+    "contraction_ratio": 0.25,
+    "first_step_l2sq": 0.08333333333333334,
+    "all_identities_hold": true
+  },
+  "quadratic_information_definition": {
+    "l2sq": "sum_i (mu_i - pi_i)^2",
+    "chi2": "sum_i (mu_i - pi_i)^2 / pi_i",
+    "uniform_relation": "chi2 = 6 * L2sq",
+    "contraction": "for t>=1: L2sq_{t+1} = (1/4) L2sq_t and chi2_{t+1} = (1/4) chi2_t"
+  },
+  "timeline": [
+    {
+      "t": 0,
+      "distribution": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "l2sq_to_uniform": 0.8333333333333335,
+      "chi2_to_uniform": 5.000000000000003
+    },
+    {
+      "t": 1,
+      "distribution": [
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "l2sq_to_uniform": 0.08333333333333334,
+      "chi2_to_uniform": 0.5
+    },
+    {
+      "t": 2,
+      "distribution": [
+        0.25,
+        0.25,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "l2sq_to_uniform": 0.02083333333333334,
+      "chi2_to_uniform": 0.12499999999999999
+    },
+    {
+      "t": 3,
+      "distribution": [
+        0.125,
+        0.125,
+        0.1875,
+        0.1875,
+        0.1875,
+        0.1875
+      ],
+      "l2sq_to_uniform": 0.005208333333333333,
+      "chi2_to_uniform": 0.031249999999999997
+    },
+    {
+      "t": 4,
+      "distribution": [
+        0.1875,
+        0.1875,
+        0.15625,
+        0.15625,
+        0.15625,
+        0.15625
+      ],
+      "l2sq_to_uniform": 0.0013020833333333335,
+      "chi2_to_uniform": 0.007812499999999999
+    },
+    {
+      "t": 5,
+      "distribution": [
+        0.15625,
+        0.15625,
+        0.171875,
+        0.171875,
+        0.171875,
+        0.171875
+      ],
+      "l2sq_to_uniform": 0.00032552083333333337,
+      "chi2_to_uniform": 0.0019531249999999998
+    },
+    {
+      "t": 6,
+      "distribution": [
+        0.171875,
+        0.171875,
+        0.1640625,
+        0.1640625,
+        0.1640625,
+        0.1640625
+      ],
+      "l2sq_to_uniform": 8.138020833333333e-05,
+      "chi2_to_uniform": 0.00048828124999999995
+    },
+    {
+      "t": 7,
+      "distribution": [
+        0.1640625,
+        0.1640625,
+        0.16796875,
+        0.16796875,
+        0.16796875,
+        0.16796875
+      ],
+      "l2sq_to_uniform": 2.0345052083333336e-05,
+      "chi2_to_uniform": 0.00012207031249999999
+    },
+    {
+      "t": 8,
+      "distribution": [
+        0.16796875,
+        0.16796875,
+        0.166015625,
+        0.166015625,
+        0.166015625,
+        0.166015625
+      ],
+      "l2sq_to_uniform": 5.086263020833335e-06,
+      "chi2_to_uniform": 3.0517578124999997e-05
+    },
+    {
+      "t": 9,
+      "distribution": [
+        0.166015625,
+        0.166015625,
+        0.1669921875,
+        0.1669921875,
+        0.1669921875,
+        0.1669921875
+      ],
+      "l2sq_to_uniform": 1.2715657552083333e-06,
+      "chi2_to_uniform": 7.629394531249999e-06
+    }
+  ],
+  "ratios": {
+    "l2sq_ratio": {
+      "1": 0.25,
+      "2": 0.25,
+      "3": 0.25,
+      "4": 0.25,
+      "5": 0.25,
+      "6": 0.25,
+      "7": 0.25,
+      "8": 0.25
+    },
+    "chi2_ratio": {
+      "1": 0.25,
+      "2": 0.25,
+      "3": 0.25,
+      "4": 0.25,
+      "5": 0.25,
+      "6": 0.25,
+      "7": 0.25,
+      "8": 0.25
+    }
+  },
+  "closed_form": {
+    "l2sq": {
+      "1": 0.083333333333,
+      "2": 0.020833333333,
+      "3": 0.005208333333,
+      "4": 0.001302083333,
+      "5": 0.000325520833,
+      "6": 8.1380208e-05,
+      "7": 2.0345052e-05,
+      "8": 5.086263e-06,
+      "9": 1.271566e-06
+    },
+    "chi2": {
+      "1": 0.5,
+      "2": 0.125,
+      "3": 0.03125,
+      "4": 0.0078125,
+      "5": 0.001953125,
+      "6": 0.00048828125,
+      "7": 0.000122070312,
+      "8": 3.0517578e-05,
+      "9": 7.629395e-06
+    }
+  },
+  "bridge_claim": {
+    "exact_layer": "Octahedral closure walk has exact quadratic-information contraction: after step 1, both L2 distance squared and chi-square divergence to equilibrium decay by an exact factor 1/4 per step.",
+    "conditional_layer": "Interpreting this finite chi-square contraction as continuum hypocoercive decay requires a scaling-limit theorem."
+  },
+  "identities": {
+    "initial_chi2_is_5": true,
+    "first_step_chi2_is_half": true,
+    "chi2_equals_6_times_l2sq": true,
+    "l2sq_ratio_is_quarter_from_step1": true,
+    "chi2_ratio_is_quarter_from_step1": true,
+    "l2sq_matches_closed_form": true,
+    "chi2_matches_closed_form": true,
+    "quadratic_information_monotone_decay": true
+  }
+}

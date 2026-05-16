@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "base_x_num": 3,
+    "base_x_den": 13,
+    "base_K_num": 13,
+    "base_K_den": 3,
+    "invariant_num": 1,
+    "invariant_den": 1,
+    "sample_count": 7,
+    "all_identities_hold": true
+  },
+  "running_definition": {
+    "base_reciprocity": "xK=1 at lambda=1 with x=3/13, K=13/3",
+    "deformation": "K_lambda=K/lambda",
+    "running_scalar": "x_lambda=lambda x",
+    "invariant": "x_lambda K_lambda = 1"
+  },
+  "samples": [
+    {
+      "lambda": {
+        "num": 1,
+        "den": 1
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 3,
+        "den": 13
+      },
+      "K_lambda": {
+        "num": 13,
+        "den": 3
+      },
+      "bare_product": {
+        "num": 1,
+        "den": 1
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 9,
+        "den": 10
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 27,
+        "den": 130
+      },
+      "K_lambda": {
+        "num": 130,
+        "den": 27
+      },
+      "bare_product": {
+        "num": 10,
+        "den": 9
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 3,
+        "den": 4
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 9,
+        "den": 52
+      },
+      "K_lambda": {
+        "num": 52,
+        "den": 9
+      },
+      "bare_product": {
+        "num": 4,
+        "den": 3
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 2,
+        "den": 3
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 2,
+        "den": 13
+      },
+      "K_lambda": {
+        "num": 13,
+        "den": 2
+      },
+      "bare_product": {
+        "num": 3,
+        "den": 2
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 1,
+        "den": 2
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 3,
+        "den": 26
+      },
+      "K_lambda": {
+        "num": 26,
+        "den": 3
+      },
+      "bare_product": {
+        "num": 2,
+        "den": 1
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 1,
+        "den": 3
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 1,
+        "den": 13
+      },
+      "K_lambda": {
+        "num": 13,
+        "den": 1
+      },
+      "bare_product": {
+        "num": 3,
+        "den": 1
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    },
+    {
+      "lambda": {
+        "num": 1,
+        "den": 4
+      },
+      "x_bare": {
+        "num": 3,
+        "den": 13
+      },
+      "x_running": {
+        "num": 3,
+        "den": 52
+      },
+      "K_lambda": {
+        "num": 52,
+        "den": 3
+      },
+      "bare_product": {
+        "num": 4,
+        "den": 1
+      },
+      "running_product": {
+        "num": 1,
+        "den": 1
+      }
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "Although bare reciprocity breaks under lazy deformation (xK_lambda=1/lambda), a unique linear running scalar x_lambda=lambda x restores exact reciprocity invariant x_lambda K_lambda=1 for all sampled lambda.",
+    "conditional_layer": "Whether the same running-law form remains unique in broader non-lazy deformation classes requires an additional universality theorem."
+  },
+  "identities": {
+    "bare_product_is_inverse_lambda": true,
+    "running_product_is_exactly_one": true,
+    "running_scalar_is_lambda_times_x": true,
+    "base_point_matches_original_reciprocity": true,
+    "flow_equation_discrete_form": true
+  }
+}

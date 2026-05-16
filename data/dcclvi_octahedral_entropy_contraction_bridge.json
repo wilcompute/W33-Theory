@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "state_count": 6,
+    "equilibrium_entropy_nats": 1.7917442301912443,
+    "initial_entropy_nats": -0.0,
+    "initial_kl_nats": 1.791759469228055,
+    "first_step_tv": 0.33333333333333337,
+    "mixing_ratio": 0.5,
+    "all_identities_hold": true
+  },
+  "information_definition": {
+    "entropy": "H(mu) = -sum_i mu_i log mu_i",
+    "kl": "D(mu||pi) = sum_i mu_i log(mu_i/pi_i)",
+    "pinsker": "TV(mu,pi)^2 <= D(mu||pi)/2",
+    "equilibrium": "pi = uniform on 6 states"
+  },
+  "timeline": [
+    {
+      "t": 0,
+      "distribution": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "support_size": 1,
+      "entropy_nats": -0.0,
+      "kl_to_uniform_nats": 1.791759469228055,
+      "tv_to_uniform": 0.8333333333333335,
+      "pinsker_lhs": 0.6944444444444446,
+      "pinsker_rhs": 0.8958797346140275
+    },
+    {
+      "t": 1,
+      "distribution": [
+        0.0,
+        0.0,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "support_size": 4,
+      "entropy_nats": 1.3862943611198906,
+      "kl_to_uniform_nats": 0.4054651081081644,
+      "tv_to_uniform": 0.33333333333333337,
+      "pinsker_lhs": 0.11111111111111113,
+      "pinsker_rhs": 0.2027325540540822
+    },
+    {
+      "t": 2,
+      "distribution": [
+        0.25,
+        0.25,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7328679513998633,
+      "kl_to_uniform_nats": 0.05889151782819177,
+      "tv_to_uniform": 0.16666666666666663,
+      "pinsker_lhs": 0.027777777777777766,
+      "pinsker_rhs": 0.029445758914095885
+    },
+    {
+      "t": 3,
+      "distribution": [
+        0.125,
+        0.125,
+        0.1875,
+        0.1875,
+        0.1875,
+        0.1875
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7753427105987127,
+      "kl_to_uniform_nats": 0.01641675862934236,
+      "tv_to_uniform": 0.08333333333333334,
+      "pinsker_lhs": 0.006944444444444446,
+      "pinsker_rhs": 0.00820837931467118
+    },
+    {
+      "t": 4,
+      "distribution": [
+        0.1875,
+        0.1875,
+        0.15625,
+        0.15625,
+        0.15625,
+        0.15625
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7879274065678934,
+      "kl_to_uniform_nats": 0.003832062660161808,
+      "tv_to_uniform": 0.04166666666666666,
+      "pinsker_lhs": 0.0017361111111111104,
+      "pinsker_rhs": 0.001916031330080904
+    },
+    {
+      "t": 5,
+      "distribution": [
+        0.15625,
+        0.15625,
+        0.171875,
+        0.171875,
+        0.171875,
+        0.171875
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7907722417501526,
+      "kl_to_uniform_nats": 0.000987227477902166,
+      "tv_to_uniform": 0.020833333333333343,
+      "pinsker_lhs": 0.0004340277777777782,
+      "pinsker_rhs": 0.000493613738951083
+    },
+    {
+      "t": 6,
+      "distribution": [
+        0.171875,
+        0.171875,
+        0.1640625,
+        0.1640625,
+        0.1640625,
+        0.1640625
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7915165708216996,
+      "kl_to_uniform_nats": 0.00024289840635525247,
+      "tv_to_uniform": 0.010416666666666657,
+      "pinsker_lhs": 0.00010850694444444425,
+      "pinsker_rhs": 0.00012144920317762624
+    },
+    {
+      "t": 7,
+      "distribution": [
+        0.1640625,
+        0.1640625,
+        0.16796875,
+        0.16796875,
+        0.16796875,
+        0.16796875
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7916982732487199,
+      "kl_to_uniform_nats": 6.119597933500458e-05,
+      "tv_to_uniform": 0.005208333333333343,
+      "pinsker_lhs": 2.7126736111111208e-05,
+      "pinsker_rhs": 3.059798966750229e-05
+    },
+    {
+      "t": 8,
+      "distribution": [
+        0.16796875,
+        0.16796875,
+        0.166015625,
+        0.166015625,
+        0.166015625,
+        0.166015625
+      ],
+      "support_size": 6,
+      "entropy_nats": 1.7917442301912443,
+      "kl_to_uniform_nats": 1.5239036810741529e-05,
+      "tv_to_uniform": 0.0026041666666666574,
+      "pinsker_lhs": 6.78168402777773e-06,
+      "pinsker_rhs": 7.619518405370764e-06
+    }
+  ],
+  "bridge_claim": {
+    "exact_layer": "On octahedral closure dynamics, entropy grows and KL-to-equilibrium decays while TV contracts by exact factor 1/2 from step 1 onward, giving an explicit finite information arrow toward uniform equilibrium.",
+    "conditional_layer": "Interpreting this finite entropy production law as continuum thermodynamic irreversibility requires a scaling-limit theorem."
+  },
+  "identities": {
+    "equilibrium_entropy_is_log6": true,
+    "initial_entropy_is_zero": true,
+    "initial_kl_is_log6": true,
+    "support_expands_to_four_after_one_step": true,
+    "entropy_is_strictly_increasing_first_four_steps": true,
+    "kl_is_strictly_decreasing_first_four_steps": true,
+    "tv_half_contraction_from_step1": true,
+    "pinsker_holds_each_step": true
+  }
+}

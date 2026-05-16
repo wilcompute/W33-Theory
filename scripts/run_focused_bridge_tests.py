@@ -76,6 +76,32 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccliv_frobenius_selection_and_ouroboros.py",
         "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py",
     ],
+    "selection-tower": [
+        "tests/test_dcclv_kissing_number_tower.py",
+        "tests/test_dcclvi_sphere_packing_density_tower.py",
+        "tests/test_dcclvii_periodic_table_from_w33.py",
+        "tests/test_dcclviii_universal_overdetermination.py",
+        "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py",
+    ],
+    "octahedral-dynamics": [
+        "tests/test_dccl_octahedral_laplacian_heat_kernel_bridge.py",
+        "tests/test_dccli_octahedral_spectral_projector_semigroup_bridge.py",
+        "tests/test_dcclii_octahedral_poisson_green_bridge.py",
+        "tests/test_dccliii_octahedral_effective_resistance_dirichlet_bridge.py",
+        "tests/test_dccliv_octahedral_commute_hitting_time_bridge.py",
+        "tests/test_dcclv_octahedral_transition_mixing_bridge.py",
+        "tests/test_dcclvi_octahedral_entropy_contraction_bridge.py",
+        "tests/test_dcclvii_octahedral_chi_square_contraction_bridge.py",
+        "tests/test_dcclviii_octahedral_dobrushin_contraction_bridge.py",
+        "tests/test_dcclix_octahedral_exact_mixing_time_bridge.py",
+        "tests/test_dcclx_octahedral_return_recurrence_bridge.py",
+        "tests/test_dcclxi_octahedral_first_return_renewal_bridge.py",
+        "tests/test_dcclxii_octahedral_fundamental_matrix_hitting_bridge.py",
+        "tests/test_dcclxiii_inverse_reciprocity_3_13_13_3_bridge.py",
+        "tests/test_dcclxiv_reciprocity_rigidity_lazy_deformation_bridge.py",
+        "tests/test_dcclxv_running_reciprocity_invariant_bridge.py",
+        "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py",
+    ],
 }
 
 ALIASES = {
@@ -86,6 +112,8 @@ ALIASES = {
         "sector-split",
         "closure-clock",
         "pascal-ouroboros",
+        "selection-tower",
+        "octahedral-dynamics",
     ],
 }
 

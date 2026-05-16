@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "weak_scalar_num": 3,
+    "weak_scalar_den": 13,
+    "transport_scalar_num": 13,
+    "transport_scalar_den": 3,
+    "reciprocal_product_num": 1,
+    "reciprocal_product_den": 1,
+    "all_identities_hold": true
+  },
+  "reciprocity_definition": {
+    "weak_scalar": "x = 3/13",
+    "transport_scalar": "K = 13/3",
+    "duality": "xK = 1",
+    "inverse_map": "K = 1/x"
+  },
+  "derived_invariants": {
+    "x": {
+      "num": 3,
+      "den": 13
+    },
+    "K": {
+      "num": 13,
+      "den": 3
+    },
+    "product": {
+      "num": 1,
+      "den": 1
+    },
+    "x_times_13": 3,
+    "K_times_3": 13
+  },
+  "bridge_claim": {
+    "exact_layer": "On the current octahedral closure branch, the weak-angle scalar 3/13 and the transport scalar 13/3 form an exact reciprocal pair: xK=1.",
+    "conditional_layer": "Whether this reciprocity persists across broader deformation families or continuum limits requires an additional parameterized extension theorem."
+  },
+  "identities": {
+    "kemeny_is_exact_13_over_3": true,
+    "weak_scalar_is_exact_3_over_13": true,
+    "reciprocity_product_is_one": true,
+    "transport_is_inverse_of_weak_scalar": true,
+    "weak_scalar_is_inverse_of_transport": true,
+    "integer_normalization_x_times_13_is_3": true,
+    "integer_normalization_K_times_3_is_13": true,
+    "duality_has_zero_error": true
+  }
+}
