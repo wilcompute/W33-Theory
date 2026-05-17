@@ -40,6 +40,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dcclviii_universal_overdetermination.py" in SUITES["selection-tower"]
     assert "tests/test_reproduce_w33_core.py" in SUITES["audit-core"]
     assert "tests/test_dcclxxii_formula_regime_registry_bridge.py" in SUITES["audit-core"]
+    assert "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py" in SUITES["audit-core"]
     assert (
         "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py"
         in SUITES["markov-e6-burden"]
@@ -67,6 +68,7 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dcclviii_universal_overdetermination.py" in paths
     assert "tests/test_reproduce_w33_core.py" in paths
     assert "tests/test_dcclxxii_formula_regime_registry_bridge.py" in paths
+    assert "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
     assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths

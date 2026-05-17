@@ -1,0 +1,569 @@
+{
+  "summary": {
+    "range_start": 784,
+    "range_end": 813,
+    "expected_result_count": 30,
+    "result_file_count": 30,
+    "markdown_file_count": 30,
+    "claimed_proven_count": 14,
+    "prediction_count": 5,
+    "partial_count": 4,
+    "tension_count": 2,
+    "mixed_count": 4,
+    "audit_flag_count": 2,
+    "master_verification_stale_by": 16,
+    "all_identities_hold": true
+  },
+  "status_counts": {
+    "claimed_proven": 14,
+    "partial": 4,
+    "prediction": 5,
+    "mixed": 4,
+    "tension": 2,
+    "concluded": 1
+  },
+  "entries": [
+    {
+      "part": "DCCLXXXIV",
+      "decimal": 784,
+      "title": "Neutrino Seesaw Scale from E8 Root Tower",
+      "result_file": "PART_DCCLXXXIV_neutrino_seesaw_e8_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXIV_NEUTRINO_SEESAW_E8.md"
+      ],
+      "status": "PROVEN",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCLXXXV",
+      "decimal": 785,
+      "title": "Full CKM/PMNS 4-Angle Holonomy Derivation",
+      "result_file": "PART_DCCLXXXV_ckm_pmns_holonomy_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXV_CKM_PMNS_HOLONOMY.md"
+      ],
+      "status": "PROVEN",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCLXXXVI",
+      "decimal": 786,
+      "title": "Graviton Scattering Amplitudes via Steinberg Representation",
+      "result_file": "PART_DCCLXXXVI_graviton_steinberg_scattering_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXVI_GRAVITON_STEINBERG_SCATTERING.md"
+      ],
+      "status": "PROVEN",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCLXXXVII",
+      "decimal": 787,
+      "title": "P != NP via W(3,3) Spectral Gap",
+      "result_file": "PART_DCCLXXXVII_p_neq_np_spectral_gap_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXVII_P_NEQ_NP_SPECTRAL_GAP.md"
+      ],
+      "status": "PARTIAL_PROOF - geometric barrier established, full circuit lower bound open",
+      "status_class": "partial",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCLXXXVIII",
+      "decimal": 788,
+      "title": "Prediction: New Scalar Resonance at 3.2 TeV",
+      "result_file": "PART_DCCLXXXVIII_3tev_scalar_prediction_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXVIII_3TEV_SCALAR_PREDICTION.md"
+      ],
+      "status": "PREDICTION - falsifiable experimental signature",
+      "status_class": "prediction",
+      "sigma_values": [
+        {
+          "path": "production.sigma_10TeV_fb",
+          "value": 0.2
+        },
+        {
+          "path": "production.sigma_14TeV_fb",
+          "value": 0.008
+        },
+        {
+          "path": "collider_reach.10TeV_3ab.significance_sigma",
+          "value": 85.0
+        },
+        {
+          "path": "collider_reach.14TeV_HL-LHC_3ab.significance_sigma",
+          "value": 4.5
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCLXXXIX",
+      "decimal": 789,
+      "title": "W(3,3) Circuit Complexity Barrier",
+      "result_file": "PART_DCCLXXXIX_circuit_complexity_barrier_results.json",
+      "markdown_files": [
+        "PART_DCCLXXXIX_CIRCUIT_COMPLEXITY_BARRIER.md"
+      ],
+      "status": "PROVEN - monotone and AC0 bounds; GCT extension open",
+      "status_class": "mixed",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXC",
+      "decimal": 790,
+      "title": "CKM theta13 Three-Loop Precision Derivation",
+      "result_file": "PART_DCCXC_ckm_theta13_precision_results.json",
+      "markdown_files": [
+        "PART_DCCXC_CKM_THETA13_PRECISION.md"
+      ],
+      "status": "PROVEN - exact agreement at 3-loop precision",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCI",
+      "decimal": 791,
+      "title": "Full 3x3 Neutrino Majorana Mass Matrix from W(3,3) Holonomy",
+      "result_file": "PART_DCCXCI_neutrino_mass_matrix_results.json",
+      "markdown_files": [
+        "PART_DCCXCI_NEUTRINO_MASS_MATRIX.md"
+      ],
+      "status": "PROVEN - mass matrix derived; m3 needs full 3-loop RG correction",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCII",
+      "decimal": 792,
+      "title": "Dark Matter Direct Detection Cross-Section",
+      "result_file": "PART_DCCXCII_dark_matter_direct_detection_results.json",
+      "markdown_files": [
+        "PART_DCCXCII_DARK_MATTER_DIRECT_DETECTION.md"
+      ],
+      "status": "PREDICTION - observable at XLZD 2030",
+      "status_class": "prediction",
+      "sigma_values": [
+        {
+          "path": "cross_sections.sigma_SI_cm2",
+          "value": 2.4e-48
+        },
+        {
+          "path": "cross_sections.sigma_SD_cm2",
+          "value": 1.7e-16
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCIII",
+      "decimal": 793,
+      "title": "W(3,3) Cosmological Recurrence Time",
+      "result_file": "PART_DCCXCIII_cosmological_recurrence_time_results.json",
+      "markdown_files": [
+        "PART_DCCXCIII_COSMOLOGICAL_RECURRENCE_TIME.md"
+      ],
+      "status": "PROVEN",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCIV",
+      "decimal": 794,
+      "title": "The Phi6-Polar RG Theorem",
+      "result_file": "PART_DCCXCIV_phi6_polar_rg_results.json",
+      "markdown_files": [
+        "PART_DCCXCIV_PHI6_POLAR_RG_THEOREM.md"
+      ],
+      "status": "PROVEN - 0.006 sigma agreement",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "result.residual_sigma",
+          "value": 0.0056
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCV",
+      "decimal": 795,
+      "title": "Higgs Boson Mass from W(3,3) Primitives",
+      "result_file": "PART_DCCXCV_higgs_mass_results.json",
+      "markdown_files": [
+        "PART_DCCXCV_HIGGS_MASS.md"
+      ],
+      "status": "PROVEN - 4 significant figure agreement",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCVI",
+      "decimal": 796,
+      "title": "Strong CP Problem and W(3,3) Axion Mass",
+      "result_file": "PART_DCCXCVI_strong_cp_axion_results.json",
+      "markdown_files": [
+        "PART_DCCXCVI_STRONG_CP_AXION.md"
+      ],
+      "status": "PROVEN (strong CP); PREDICTION (axion mass)",
+      "status_class": "mixed",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCVII",
+      "decimal": 797,
+      "title": "Cosmological Constant from W(3,3) Spectral Gap",
+      "result_file": "PART_DCCXCVII_cosmological_constant_results.json",
+      "markdown_files": [
+        "PART_DCCXCVII_COSMOLOGICAL_CONSTANT.md"
+      ],
+      "status": "PARTIAL THEOREM - prefactor proven; full suppression requires S_cosm input",
+      "status_class": "mixed",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCVIII",
+      "decimal": 798,
+      "title": "Master Numerical Verification of All W(3,3) Predictions",
+      "result_file": "PART_DCCXCVIII_master_verification_results.json",
+      "markdown_files": [
+        "PART_DCCXCVIII_MASTER_VERIFICATION.md"
+      ],
+      "status": "VERIFIED through Part 797",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "key_predictions_table.alpha_s_MZ.residual_sigma",
+          "value": 0.006
+        },
+        {
+          "path": "key_predictions_table.sigma_SI_DM_cm2.W33",
+          "value": 2.4e-48
+        },
+        {
+          "path": "key_predictions_table.sigma_SI_DM_cm2.LZ_limit",
+          "value": 9.2e-48
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCXCIX",
+      "decimal": 799,
+      "title": "CKM CP Phase delta_CP at Three-Loop Precision",
+      "result_file": "PART_DCCXCIX_ckm_delta_cp_results.json",
+      "markdown_files": [
+        "PART_DCCXCIX_CKM_DELTA_CP_PRECISION.md"
+      ],
+      "status": "PROVEN - all 4 CKM parameters derived",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "delta_CP.residual_sigma",
+          "value": 0.0
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCC",
+      "decimal": 800,
+      "title": "Proton Decay Lifetime from W(3,3)",
+      "result_file": "PART_DCCC_proton_decay_results.json",
+      "markdown_files": [
+        "PART_DCCC_PROTON_DECAY.md"
+      ],
+      "status": "PREDICTION - testable by Hyper-Kamiokande ~2041",
+      "status_class": "prediction",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCI",
+      "decimal": 801,
+      "title": "Fine Structure Constant alpha = 1/137 from W(3,3)",
+      "result_file": "PART_DCCCI_fine_structure_constant_results.json",
+      "markdown_files": [
+        "PART_DCCCI_FINE_STRUCTURE_CONSTANT.md"
+      ],
+      "status": "PROVEN - exact integer; 2.6e-4 fractional correction from QED running",
+      "status_class": "claimed_proven",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCII",
+      "decimal": 802,
+      "title": "Top Quark Mass from W(3,3)",
+      "result_file": "PART_DCCCII_top_quark_mass_results.json",
+      "markdown_files": [
+        "PART_DCCCII_TOP_QUARK_MASS.md"
+      ],
+      "status": "PARTIAL - MSbar within 1-sigma at leading order; pole mass needs 3-loop QCD",
+      "status_class": "partial",
+      "sigma_values": [
+        {
+          "path": "comparison.residual_sigma",
+          "value": 3.3
+        },
+        {
+          "path": "comparison.pole_residual_sigma",
+          "value": 16.3
+        }
+      ],
+      "claimed_sigma_limits": [
+        1.0
+      ]
+    },
+    {
+      "part": "DCCCIII",
+      "decimal": 803,
+      "title": "Leptogenesis and Baryon Asymmetry eta_B",
+      "result_file": "PART_DCCCIII_leptogenesis_baryon_asymmetry_results.json",
+      "markdown_files": [
+        "PART_DCCCIII_LEPTOGENESIS_BARYON_ASYMMETRY.md"
+      ],
+      "status": "PARTIAL - correct order of magnitude; 150x tension identified as open problem",
+      "status_class": "tension",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCIV",
+      "decimal": 804,
+      "title": "N2 Flavor Leptogenesis: Resolution of the Baryon Asymmetry Tension",
+      "result_file": "PART_DCCCIV_n2_leptogenesis_resolution_results.json",
+      "markdown_files": [
+        "PART_DCCCIV_N2_LEPTOGENESIS_RESOLUTION.md"
+      ],
+      "status": "PROVEN - baryon asymmetry tension closed",
+      "status_class": "mixed",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCV",
+      "decimal": 805,
+      "title": "W(3,3) Inflation: Potential, Spectral Index, and Reheating",
+      "result_file": "PART_DCCCV_w33_inflation_results.json",
+      "markdown_files": [
+        "PART_DCCCV_W33_INFLATION.md"
+      ],
+      "status": "PROVEN - n_s and r derived; T_reh confirms N3 leptogenesis",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "potential.sigma_0_over_MP",
+          "value": 2.582
+        },
+        {
+          "path": "comparison.Planck_ns_sigma",
+          "value": 0.0042
+        },
+        {
+          "path": "comparison.ns_residual_sigma",
+          "value": 0.43
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCVI",
+      "decimal": 806,
+      "title": "Stochastic Gravitational Wave Background from W(3,3) Phase Transition",
+      "result_file": "PART_DCCCVI_gravitational_wave_background_results.json",
+      "markdown_files": [
+        "PART_DCCCVI_GRAVITATIONAL_WAVE_BACKGROUND.md"
+      ],
+      "status": "PREDICTION - LiteBIRD 2028 for inflation; GHz detectors for PT",
+      "status_class": "prediction",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCVII",
+      "decimal": 807,
+      "title": "W Boson Mass from W(3,3)",
+      "result_file": "PART_DCCCVII_w_boson_mass_results.json",
+      "markdown_files": [
+        "PART_DCCCVII_W_BOSON_MASS.md"
+      ],
+      "status": "PROVEN - 0.25 sigma from PDG",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "result.residual_sigma",
+          "value": 0.25
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCVIII",
+      "decimal": 808,
+      "title": "Muon Anomalous Magnetic Moment g-2",
+      "result_file": "PART_DCCCVIII_muon_g_minus_2_results.json",
+      "markdown_files": [
+        "PART_DCCCVIII_MUON_G_MINUS_2.md"
+      ],
+      "status": "PARTIAL - HVP identified as source; 3-loop ChPT calculation needed",
+      "status_class": "partial",
+      "sigma_values": [
+        {
+          "path": "experimental.significance_sigma",
+          "value": 5.1
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCIX",
+      "decimal": 809,
+      "title": "CKM sin(theta23) Three-Loop Fix",
+      "result_file": "PART_DCCCIX_ckm_theta23_fix_results.json",
+      "markdown_files": [
+        "PART_DCCCIX_CKM_THETA23_FIX.md"
+      ],
+      "status": "PROVEN - CKM matrix fully determined, all 4 parameters within 0.2 sigma",
+      "status_class": "claimed_proven",
+      "sigma_values": [
+        {
+          "path": "comparison.residual_sigma",
+          "value": 0.18
+        },
+        {
+          "path": "CKM_complete_final.sin_theta12.sigma",
+          "value": 0.0
+        },
+        {
+          "path": "CKM_complete_final.sin_theta23.sigma",
+          "value": 0.18
+        },
+        {
+          "path": "CKM_complete_final.sin_theta13.sigma",
+          "value": 0.0
+        },
+        {
+          "path": "CKM_complete_final.delta_CP_rad.sigma",
+          "value": 0.0
+        }
+      ],
+      "claimed_sigma_limits": [
+        0.2
+      ]
+    },
+    {
+      "part": "DCCCX",
+      "decimal": 810,
+      "title": "Neutrino m3: Full Two-Loop RG Derivation",
+      "result_file": "PART_DCCCX_neutrino_m3_rg_results.json",
+      "markdown_files": [
+        "PART_DCCCX_NEUTRINO_M3_RG.md"
+      ],
+      "status": "PARTIAL - 2-loop done; 3-loop numerical needed",
+      "status_class": "partial",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCXI",
+      "decimal": 811,
+      "title": "Top Quark Pole Mass at Three-Loop QCD",
+      "result_file": "PART_DCCCXI_top_mass_3loop_results.json",
+      "markdown_files": [
+        "PART_DCCCXI_TOP_MASS_3LOOP.md"
+      ],
+      "status": "TENSION - 11.5 sigma; graviton correction next",
+      "status_class": "tension",
+      "sigma_values": [
+        {
+          "path": "comparison.residual_sigma",
+          "value": 11.5
+        }
+      ],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCXII",
+      "decimal": 812,
+      "title": "Three-Loop ChPT and Muon g-2 HVP",
+      "result_file": "PART_DCCCXII_ChPT_g_minus_2_results.json",
+      "markdown_files": [
+        "PART_DCCCXII_ChPT_G_MINUS_2.md"
+      ],
+      "status": "CONCLUDED - no new physics; HVP systematic identified",
+      "status_class": "concluded",
+      "sigma_values": [],
+      "claimed_sigma_limits": []
+    },
+    {
+      "part": "DCCCXIII",
+      "decimal": 813,
+      "title": "W(3,3) Dark Matter Halo Profile and Gravitational Lensing",
+      "result_file": "PART_DCCCXIII_dm_halo_lensing_results.json",
+      "markdown_files": [
+        "PART_DCCCXIII_DM_HALO_LENSING.md"
+      ],
+      "status": "PREDICTION - direct detection by XENONnT/LZ; indirect by CTA 2028",
+      "status_class": "prediction",
+      "sigma_values": [
+        {
+          "path": "DM_properties.sigma_SI_cm2",
+          "value": 2.4e-48
+        },
+        {
+          "path": "DM_properties.sigma_self_over_m_cm2_per_g",
+          "value": 9.69e-29
+        },
+        {
+          "path": "detection_signatures.direct_detection.sigma_SI",
+          "value": 2.4e-48
+        }
+      ],
+      "claimed_sigma_limits": []
+    }
+  ],
+  "audit_flags": [
+    {
+      "kind": "sigma_status_mismatch",
+      "part": "DCCCII",
+      "claimed_limit_sigma": 1.0,
+      "max_sigma_in_payload": 16.3,
+      "message": "DCCCII claims within 1 sigma but its result JSON contains a sigma value 16.3."
+    },
+    {
+      "kind": "stale_master_verification",
+      "part": "DCCXCVIII",
+      "through_decimal": 797,
+      "current_max_decimal": 813,
+      "stale_by": 16,
+      "message": "DCCXCVIII master verification is older than the live phenomenology burst."
+    }
+  ],
+  "identities": {
+    "result_ledger_has_expected_count": true,
+    "result_ledger_is_contiguous_784_to_813": true,
+    "all_result_decimals_are_unique": true,
+    "all_results_have_markdown_notes": true,
+    "top_mass_sigma_mismatch_is_detected": true,
+    "master_verification_staleness_is_detected": true,
+    "ledger_contains_mixed_or_non_proven_claims": true
+  },
+  "theorem": "Phenomenology Claim-Ledger Audit. The DCCLXXXIV-DCCCXIII burst is a contiguous 30-part ledger, but it is not uniformly verified: it contains predictions, partial theorems, mixed proof/prediction claims, explicit tensions, stale master-verification coverage, and at least one internal sigma-status mismatch.",
+  "honesty_boundary": "This audit checks claim hygiene and internal result-JSON consistency. It does not validate the underlying phenomenological derivations, external experimental inputs, or physical correctness of the model."
+}
