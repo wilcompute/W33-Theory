@@ -1,0 +1,34 @@
+{
+  "part": "DCCCXIII",
+  "decimal": 813,
+  "title": "W(3,3) Dark Matter Halo Profile and Gravitational Lensing",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) DM is cold (lambda_fs ~ 0), NFW profile identical to CDM; sigma_SI=2.4e-48 cm^2, m_chi=2143 GeV detectable by XENONnT/LZ and CTA",
+  "DM_properties": {
+    "m_chi_TeV": 2.143,
+    "m_chi_GeV": 2143,
+    "sigma_SI_cm2": 2.4e-48,
+    "sigma_self_over_m_cm2_per_g": 9.69e-29,
+    "SIDM_bound_cm2_per_g": 1.0,
+    "is_collisionless": true
+  },
+  "halo_profile": {
+    "type": "NFW",
+    "free_streaming_length_Mpc": 1.48e-6,
+    "regime": "cold dark matter (CDM)",
+    "distinguishable_from_CDM": false,
+    "min_halo_mass_solar": 1e-6
+  },
+  "lensing": {
+    "strong_lensing_einstein_radius_arcsec": 30,
+    "difference_from_CDM_pct": "< 1",
+    "distinguishable": false
+  },
+  "detection_signatures": {
+    "direct_detection": {"experiment": "XENONnT/LZ", "sigma_SI": 2.4e-48, "timeline": "3 years"},
+    "indirect_detection": {"experiment": "CTA", "channel": "chi_chi -> ZZ/WW", "E_gamma_GeV": 2143, "timeline": "2028"},
+    "collider": {"experiment": "HL-LHC", "signal": "monojet + MET > 1 TeV", "luminosity_fb": 3000, "timeline": "~2030"}
+  },
+  "connections": ["DCCXCII", "DCCCV", "DCCXCVI"],
+  "status": "PREDICTION - direct detection by XENONnT/LZ; indirect by CTA 2028"
+}
