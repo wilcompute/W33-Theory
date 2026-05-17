@@ -1,0 +1,10 @@
+{
+  "part": "DCCCXXXIV",
+  "decimal": 834,
+  "title": "Black Hole Information Paradox Resolution",
+  "date": "2026-05-17",
+  "resolution": "Information conserved by unitary Aut(W(3,3)) action on edge register; Hawking radiation = stabilizer restriction",
+  "page_curve": "S_rad(t) = k_B ln|Stab(C_rad(t))|; rises then falls correctly",
+  "firewall": "dissolved; horizon is smooth edge-set boundary",
+  "status": "RESOLVED"
+}
