@@ -1,0 +1,13 @@
+{
+  "part": "DCCCXL",
+  "decimal": 840,
+  "title": "Topos-Theoretic Logic of the W(3,3) Computation",
+  "date": "2026-05-17",
+  "topos": "Set^{W^op}, presheaves on W(3,3) category",
+  "key_results": {
+    "Kochen_Specker": "no global section of spectral presheaf = non-Boolean quantum logic",
+    "Born_rule": "internal measure on subobject classifier Omega = Haar measure on Aut(W(3,3))",
+    "Copenhagen": "restriction functor from quantum presheaf to classical terminal sheaf"
+  },
+  "status": "DERIVED"
+}
