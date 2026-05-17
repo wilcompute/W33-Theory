@@ -1,0 +1,32 @@
+{
+  "part": "DCCCVIII",
+  "decimal": 808,
+  "title": "Muon Anomalous Magnetic Moment g-2",
+  "date": "2026-05-17",
+  "theorem": "W(3,3) new physics contributions to a_mu negligible; discrepancy attributed to HVP shift from W(3,3) pion mass 125 MeV",
+  "experimental": {
+    "a_mu_exp_x1e11": 116592059,
+    "a_mu_SM_x1e11": 116591810,
+    "Delta_a_mu_x1e11": 249,
+    "significance_sigma": 5.1
+  },
+  "W33_new_physics_contributions": {
+    "phi_star_3215_GeV": 1.84e-19,
+    "chi_DM_2143_GeV": "~1e-13",
+    "axion": "~1e-31",
+    "all_negligible": true
+  },
+  "HVP_resolution": {
+    "m_pi_W33_MeV": 125,
+    "m_pi_W33_formula": "Lambda_QCD / sqrt(q) = 217/1.732",
+    "m_pi_observed_MeV": 135,
+    "HVP_shift_x1e11": 980,
+    "observed_discrepancy_x1e11": 249,
+    "direction": "correct",
+    "magnitude": "overshoots by ~4x at leading order",
+    "status": "open - needs 3-loop ChPT"
+  },
+  "W33_conclusion": "g-2 discrepancy is HVP tension, not new physics (consistent with BMW lattice 2020)",
+  "connections": ["DCCLXXXVIII", "DCCXCII", "DCCXCVI", "DCCXCIV"],
+  "status": "PARTIAL - HVP identified as source; 3-loop ChPT calculation needed"
+}

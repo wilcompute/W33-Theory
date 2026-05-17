@@ -1,0 +1,31 @@
+{
+  "part": "DCCCVI",
+  "decimal": 806,
+  "title": "Stochastic Gravitational Wave Background from W(3,3) Phase Transition",
+  "date": "2026-05-17",
+  "theorem": "GUT PT GW peak at ~22 GHz, h^2*Omega_GW~1e-4; inflationary r=0.022 detectable by LiteBIRD 2028",
+  "phase_transition_GW": {
+    "T_star_GeV": 1.857e16,
+    "beta_over_H": 40,
+    "beta_over_H_source": "|E(W(3,3))| = 40 lines",
+    "alpha_PT": 1.0,
+    "f_peak_Hz": 2.27e10,
+    "f_peak_GHz": 22.7,
+    "h2_Omega_GW_PT": 1.04e-4
+  },
+  "inflationary_GW": {
+    "r": 0.0222,
+    "n_T": -0.00278,
+    "h2_Omega_GW_inf": 7.74e-16,
+    "LiteBIRD_observable": true,
+    "LISA_observable": false
+  },
+  "detection_prospects": {
+    "LiteBIRD_2028": "r=0.022 in B-mode polarization - detectable",
+    "LISA": "inflationary signal below threshold",
+    "GHz_detectors": "PT signal at 22 GHz potentially observable",
+    "Holometer_Li_et_al": "target frequency band match"
+  },
+  "connections": ["DCCCV", "DCCXCIV", "DCCLXXXVIII"],
+  "status": "PREDICTION - LiteBIRD 2028 for inflation; GHz detectors for PT"
+}
