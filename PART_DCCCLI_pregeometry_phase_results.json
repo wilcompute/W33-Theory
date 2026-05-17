@@ -1,0 +1,10 @@
+{
+  "part": "DCCCLI",
+  "decimal": 851,
+  "title": "Pregeometry: Why Distinction Must Become Phase",
+  "date": "2026-05-17",
+  "thesis": "Distinction alone is static; recursive distinction requires phase, and minimal phase recursion is ternary. W(3,3) is the first stable crystallization of recursive ternary phase.",
+  "core_cycle": "0 -> 1 -> 2 -> 0",
+  "primitive_relation": "delta^3 = 1, delta != 1",
+  "status": "DEEPENING LAYER"
+}

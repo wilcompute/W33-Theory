@@ -1,0 +1,9 @@
+{
+  "part": "DCCCLII",
+  "decimal": 852,
+  "title": "Why the Complex Numbers Appear from Ternary Phase",
+  "date": "2026-05-17",
+  "thesis": "Complex numbers are the continuum envelope of recursive ternary phase; quantum amplitudes are complex because ternary distinction smooths into U(1) phase.",
+  "relation": "F_3 -> {1, omega, omega^2} subset U(1) subset C",
+  "status": "DEEPENING LAYER"
+}
