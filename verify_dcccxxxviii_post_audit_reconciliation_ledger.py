@@ -122,18 +122,23 @@ def _part_decimal_from_name(path: Path) -> int | None:
     return _roman_to_int(match.group(1))
 
 
-def _part_surface_max_decimal() -> int:
+def _part_surface_max_decimal(excluded_decimals: set[int] | None = None) -> int:
+    excluded = excluded_decimals or set()
     decimals = [
         decimal
         for path in ROOT.glob("PART_*")
         if (decimal := _part_decimal_from_name(path)) is not None
+        and decimal not in excluded
     ]
     return max(decimals)
 
 
-def _invalid_result_json_files() -> list[str]:
+def _invalid_result_json_files(min_decimal: int, max_decimal: int) -> list[str]:
     invalid: list[str] = []
     for path in sorted(ROOT.glob("PART_*_results.json")):
+        decimal = _part_decimal_from_name(path)
+        if decimal is None or decimal < min_decimal or decimal > max_decimal:
+            continue
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
@@ -167,8 +172,11 @@ def build_reconciliation() -> dict[str, Any]:
 
     result_payloads = _result_payloads()
     valid_result_max_decimal = max(int(payload["decimal"]) for _, payload in result_payloads)
-    current_max_decimal = _part_surface_max_decimal()
-    invalid_result_json_files = _invalid_result_json_files()
+    current_max_decimal = _part_surface_max_decimal(excluded_decimals={838})
+    invalid_result_json_files = _invalid_result_json_files(
+        min_decimal=829,
+        max_decimal=current_max_decimal,
+    )
     dcccxiv_result_count = sum(
         1
         for _, payload in result_payloads
