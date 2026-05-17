@@ -1942,6 +1942,104 @@ runs through the $E_6$ Weyl-group order ($|W(E_6)| = 51{,}840$) at the second st
 
 We do not claim a functorial isomorphism between $W(3,3)$ and the Monster vertex operator algebra (the Borcherds construction is its own object, not a $W(3,3)$ consequence). What the program establishes is an \emph{exact arithmetic alignment}: the integers $15$, $46$, $20$, $9$, $6$, $2$, $3$, $24$, $27$, $54$, $196{,}560$, $196{,}884$, $196{,}883$, $744$ all carry $W(3,3)$ names, and the Monster's prime-divisor count, its first six exponents, the smallest non-trivial representation, the McKay split, the Leech kissing number, and the $j$-constants all read in $W(3,3)$ primitives. This is the program's phrase: \textbf{the same arithmetic in two different cathedrals}.
 
+\section{Cubic surfaces and the Schläfli double-six}
+
+\label{sec:schlafli}
+
+\textbf{Cayley's $27$ lines on a smooth cubic surface} (1849) is the oldest non-trivial result in enumerative geometry. The combinatorial structure of these 27 lines is encoded in the \emph{Schläfli double-six}: a pair of six skew lines whose intersection graph is bipartite-complete.
+
+\begin{theorem}[Schläfli Double-Six in $W(3,3)$ (Part CCLXXVII)]
+The combinatorics of $27$ lines on a smooth cubic surface lift exactly into $W(3,3)$:
+\[
+\begin{array}{lcl}
+\#\text{lines in a double-six} & = & 6 + 6 \;=\; 12 \;=\; k, \\
+\#\text{double-sixes on the surface} & = & 36 \;=\; |\Phi^+(E_6)|, \\
+\#\text{triads of double-sixes} & = & 40 \;=\; v, \\
+\#\text{tritangent planes} & = & 45 \;=\; \binom{10}{2} \;=\; \binom{\Phi_4}{2}, \\
+\#\text{lines on the surface} & = & 27 \;=\; q^q \;=\; \dim(E_6\text{ fundamental}), \\
+|\mathrm{Aut}(\text{cubic surface})| & = & 51{,}840 \;=\; |W(E_6)|.
+\end{array}
+\]
+\end{theorem}
+
+The $45$ tritangent planes split as $9 + 36$: the $9$ Hessian fibre triads (constant-$u$) plus the $36$ affine-line triads (matching the $E_6$ positive roots). \textbf{Triads of double-sixes $=$ $W(3,3)$ vertices} is the deepest combinatorial identification between $19$th-century algebraic geometry and the substrate.
+
+\section{The K3 surface and umbral moonshine}
+
+\label{sec:k3-umbral}
+
+The K3 surface is the unique simply-connected compact complex surface with trivial canonical bundle. Its topological invariants are all $W(3,3)$ polynomials.
+
+\begin{theorem}[K3 Invariants from $W(3,3)$ (Part CCXLV)]
+\[
+\begin{array}{l|l|c}
+\text{invariant} & W(3,3) \text{ form} & \text{value} \\
+\hline
+\chi(K3) & k\lambda & 24 \\
+h^{1,1}(K3) & v/\lambda & 20 \\
+b_2(K3) & \lambda(k - 1) & 22 \\
+\text{signature } b^+ & q & 3 \\
+\text{signature } b^- & 2(k-1)-q & 19 \\
+\end{array}
+\]
+The cohomology lattice is $H^2(K3, \mathbb{Z}) \cong 3U \oplus 2(-E_8)$: \textbf{$q = 3$ hyperbolic planes plus $\lambda = 2$ copies of $-E_8$}.
+\end{theorem}
+
+\textbf{Umbral Moonshine} (Cheng--Duncan--Harvey 2014) generalises Mathieu moonshine from $M_{24}$ to $\mathbf{23}$ cases, one for each Niemeier lattice with roots. In $W(3,3)$:
+\[
+\boxed{\;N_{\text{umbral}} \;=\; k\lambda - 1 \;=\; 23 \;=\; q^q - \mu.\;}
+\]
+
+\section{The 600-cell and $E_8$}
+
+\label{sec:600-cell-e8}
+
+The 600-cell is the $H_4$ root polytope and vertex figure of the regular 4-mosaic $\{4,3,3,5\}$.
+
+\begin{theorem}[600-cell from $W(3,3)$ (Part DCCLII)]
+The 600-cell $f$-vector is $(V, E, F, C) = (120, 720, 1200, 600)$, with $W(3,3)$ identifications
+\[
+\begin{array}{l|l|c}
+\text{quantity} & W(3,3) \text{ form} & \text{value} \\
+\hline
+V / q & v & 40 \\
+E / q & |E(W(3,3))| & 240 \\
+C / v & g & 15 \\
+V & (q+2)! = 5! & 120 \\
+\end{array}
+\]
+\end{theorem}
+
+\textbf{$E_8$ as two 600-cells.} The 240 roots of $E_8$ split as $2 \times 120 = 2 \cdot V(\text{600-cell})$, with the two copies scaled by the golden ratio $\varphi$ and interlocked: the standard $H_4 \times H_4 \to E_8$ subgroup decomposition. Combined with the codec split,
+\[
+\boxed{\;\dim(E_8) \;=\; 248 \;=\; \underbrace{240}_{2 \cdot V(\text{600-cell})} + \underbrace{8}_{2^q \text{ Cartan generators}}.\;}
+\]
+$E_8$ dimensionally decomposes as two 600-cells plus $2^q$ Cartan generators. The golden ratio appears here for the same reason it appears in the Higgs IR fixed point $\lambda_h(M_Z) = \varphi - 1$: $\varphi$ is the structural ratio of the $H_4 / E_8$ root system that the $W(3,3)$ codec inherits.
+
+\section{The hyperbolic Pascal simplex (HPS)}
+
+\label{sec:hps}
+
+The \emph{hyperbolic Pascal simplex} on the regular mosaic $\{4, 3, 3, 5\}$ has the 600-cell as vertex figure. Its first six level sums are simultaneously $W(3,3)$ primitives and Fibonacci numbers:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c c l}
+\toprule
+level & sum & identification \\
+\midrule
+$0$ & $1$ & unity \\
+$1$ & $4$ & $\mu = q + 1$ \\
+$2$ & $10$ & $\Phi_4 = q^2 + 1$ \\
+$3$ & $26$ & $2\Phi_3 = D_{\text{bosonic}}$ (bosonic critical dim!) \\
+$4$ & $89$ & $F_{11} = \mathrm{Fib}(k-1)$ \\
+$5$ & $534$ & $q! \cdot F_{11} = 6 \cdot 89$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Level 3 of the HPS equals $\mathbf{26}$ --- the critical dimension of bosonic string theory --- and the level-4 jump is a Fibonacci number indexed by $k - 1$. The HPS thereby unifies Pascal's binomial structure, the 600-cell mosaic, string-theoretic critical dimensions, and the Fibonacci shallow-diagonal --- all on a single substrate signature.
+
 % ─────────────────────────────────────────────────────────────────────────
 \part{The convergent attractor}
 
@@ -3025,6 +3123,13 @@ Conway AP Triple & $\{47, 59, 71\}$ in AP common diff $k$; $71 = H_0{+}1$ & CCLX
 $196{,}883$ $W(3,3)$ Poly & $(4k{-}1)(5k{-}1)(6k{-}1)$ & CCXXXVI \\
 $j(i) = k^3$ & $j$-function at imaginary unit $= 12^3 = 1728$ & CCXXXVI \\
 Sporadic Family Sizes & $(5, 4, 3, 3, 11) = (\mu{+}1, \mu, q, q, k{-}1)$ & DCCLXXVI \\
+Schläfli Double-Six & $12 = k$, $36 = |\Phi^+(E_6)|$, $40 = v$ triads & CCLXXVII \\
+$27$ Lines on Cubic & $27 = q^q = \dim E_6$ fund.; Aut $= |W(E_6)| = 51840$ & CCLXXVII \\
+K3 Invariants & $\chi = k\lambda = 24$; $b_2 = \lambda(k{-}1) = 22$ & CCXLV \\
+Umbral Moonshine 23 & $N_{\text{umbral}} = k\lambda - 1 = q^q - \mu$ & CCXLV \\
+600-cell $f$-vector & $V = (q{+}2)! = 5!$; $E = q \cdot |E_{W(3,3)}|$ & DCCLII \\
+$E_8 = 2 \cdot 600$-cell $+ 8$ & $248 = 240 + 8$ as two H$_4$ root systems & DCCLII \\
+HPS Levels & $(1, 4, 10, 26, 89, \ldots)$: bosonic dim at level 3 & DCCLII \\
 Witting--$W(3,3)$ Bridge & $40$ Witting rays $=$ $W(3,3)$; $|\langle\psi|\varphi\rangle|^2\in\{0,\tfrac13\}$ & Vlasov 2025 \\
 KS on Witting & no $\{0,1\}$-marking works; max $34/40$ tetrads & Vlasov 2025 \\
 $40 = 28 + 12$ Bases & basis split $= \mu\Phi_6 + k$ in Vlasov Table III & Vlasov 2025 \\
