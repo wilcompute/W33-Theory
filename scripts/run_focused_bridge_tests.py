@@ -85,6 +85,10 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dcclviii_universal_overdetermination.py",
         "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py",
     ],
+    "audit-core": [
+        "tests/test_reproduce_w33_core.py",
+        "tests/test_dcclxxii_formula_regime_registry_bridge.py",
+    ],
     "octahedral-dynamics": [
         "tests/test_dccl_octahedral_laplacian_heat_kernel_bridge.py",
         "tests/test_dccli_octahedral_spectral_projector_semigroup_bridge.py",
@@ -116,6 +120,7 @@ ALIASES = {
         "closure-clock",
         "pascal-ouroboros",
         "selection-tower",
+        "audit-core",
         "octahedral-dynamics",
     ],
 }

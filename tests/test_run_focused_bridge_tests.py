@@ -23,6 +23,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
         "closure-clock",
         "pascal-ouroboros",
         "selection-tower",
+        "audit-core",
         "octahedral-dynamics",
     } <= set(SUITES)
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
@@ -34,6 +35,8 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in SUITES["pascal-ouroboros"]
     assert "tests/test_dcclviii_universal_overdetermination.py" in SUITES["selection-tower"]
+    assert "tests/test_reproduce_w33_core.py" in SUITES["audit-core"]
+    assert "tests/test_dcclxxii_formula_regime_registry_bridge.py" in SUITES["audit-core"]
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in SUITES["octahedral-dynamics"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["octahedral-dynamics"]
@@ -52,6 +55,8 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in paths
     assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in paths
     assert "tests/test_dcclviii_universal_overdetermination.py" in paths
+    assert "tests/test_reproduce_w33_core.py" in paths
+    assert "tests/test_dcclxxii_formula_regime_registry_bridge.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
     assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths

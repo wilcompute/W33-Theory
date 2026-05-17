@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "alpha_variant_count": 2,
+    "alpha_delta_num": 24,
+    "alpha_delta_den": 5431679,
+    "electroweak_regime_count": 2,
+    "promoted_low_energy_num": 3,
+    "promoted_low_energy_den": 13,
+    "promoted_bare_num": 3,
+    "promoted_bare_den": 8,
+    "all_identities_hold": true
+  },
+  "alpha_registry": [
+    {
+      "name": "docs_script_lineage",
+      "expression": "137 + 40/1111",
+      "value_num": 152247,
+      "value_den": 1111,
+      "decimal": 137.03600360036003,
+      "status": "unresolved_variant",
+      "source_surface": "docs/script lineage"
+    },
+    {
+      "name": "paper_report_lineage",
+      "expression": "137 + 880/24445",
+      "value_num": 669969,
+      "value_den": 4889,
+      "decimal": 137.0359991818368,
+      "status": "unresolved_variant",
+      "source_surface": "paper/report lineage"
+    }
+  ],
+  "alpha_delta": {
+    "num": 24,
+    "den": 5431679,
+    "decimal": 4.418523259566701e-06,
+    "policy": "Do not present either alpha expression as the final zero-parameter theorem until a later bridge promotes one expression or separates the variants by physical regime."
+  },
+  "electroweak_registry": [
+    {
+      "name": "bare_internal_unification_shell",
+      "regime": "bare/internal shell",
+      "expression": "2q/(q+1)^2",
+      "value_num": 3,
+      "value_den": 8,
+      "decimal": 0.375,
+      "status": "regime_labeled"
+    },
+    {
+      "name": "dressed_projective_electroweak_shell",
+      "regime": "dressed/projective low-energy bridge shell",
+      "expression": "q/(q^2+q+1)",
+      "value_num": 3,
+      "value_den": 13,
+      "decimal": 0.23076923076923078,
+      "status": "promoted_live_electroweak_value"
+    }
+  ],
+  "consistency_note_checks": {
+    "notes_name_docs_alpha_variant": true,
+    "notes_name_paper_alpha_variant": true,
+    "notes_name_dressed_3_13": true,
+    "notes_name_bare_3_8": true,
+    "notes_require_regime_labels": true,
+    "audit_names_formula_drift": true,
+    "audit_requests_canonical_source": true
+  },
+  "identities": {
+    "alpha_registry_has_exactly_two_unresolved_variants": true,
+    "alpha_docs_variant_matches_reproduction_hook": true,
+    "alpha_paper_variant_matches_reproduction_hook": true,
+    "alpha_variants_are_not_equal": true,
+    "alpha_delta_is_exactly_24_over_5431679": true,
+    "alpha_delta_is_larger_than_one_e_minus_6": true,
+    "electroweak_registry_has_two_regime_labeled_values": true,
+    "bare_internal_shell_is_3_over_8": true,
+    "dressed_projective_shell_is_3_over_13": true,
+    "dressed_shell_is_live_promoted_value": true,
+    "audit_and_notes_expose_all_drift_terms": true
+  },
+  "theorem": "Formula-Regime Registry Theorem. The current finite W33 public surface contains two alpha expressions and two electroweak normalizations. The exact alpha delta is 24/5431679, so the variants are not interchangeable in a zero-free-parameter claim. The electroweak values are coherent only when regime-labeled: 3/8 belongs to the bare/internal unification shell, while 3/13 belongs to the dressed/projective live electroweak bridge shell. Future theorem scripts must import or mirror this registry rather than presenting unlabeled alternatives.",
+  "honesty_boundary": "This is a reproducibility and claim-hygiene theorem. It does not derive the fine-structure constant, decide the unresolved alpha variants, or perform renormalization-group matching."
+}
