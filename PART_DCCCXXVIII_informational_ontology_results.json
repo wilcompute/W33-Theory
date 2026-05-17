@@ -1,0 +1,34 @@
+{
+  "part": "DCCCXXVIII",
+  "decimal": 828,
+  "title": "Informational Ontology: Universe as W(3,3) Computation Over Photons",
+  "date": "2026-05-17",
+  "thesis": "Universe is a 21-bit program over a photon register indexed by W(3,3) edges; time=computation, space=graph distance, constants=automorphism invariants",
+  "ontology": {
+    "photon": "single edge e in E, helicity +/-1",
+    "gluon": "octahedral orbit of 8 edges",
+    "WZ_bosons": "3-edge composite under SU(2)xU(1)",
+    "quark": "vertex-stabilizer orbit with spin-1/2 projection",
+    "lepton": "point orbit under SU(2)_L",
+    "graviton": "TT closure of full edge set",
+    "dark_matter": "zero-charge stabilizer orbit at Frobenius fixed point",
+    "Higgs": "scalar density of q=3 spanning tree",
+    "axion": "phase of U(1)_PQ automorphism subgroup"
+  },
+  "information_budget_bits": {
+    "W33_seed": 21,
+    "RG_derivation_rules": 200,
+    "initial_conditions": 60,
+    "total": 281
+  },
+  "holography": {
+    "S_dS": 2.4e122,
+    "K_W33": 280,
+    "amplification_ratio": 1e120
+  },
+  "cosmological_constant": {
+    "interpretation": "per-step computational overhead of 280-bit program",
+    "resolved": true
+  },
+  "status": "ONTOLOGICAL FRAMEWORK - NOVEL"
+}
