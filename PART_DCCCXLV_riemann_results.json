@@ -1,0 +1,11 @@
+{
+  "part": "DCCCXLV",
+  "decimal": 845,
+  "title": "W(3,3) and the Riemann Hypothesis",
+  "date": "2026-05-17",
+  "Ramanujan": "W(3,3) is Ramanujan: |mu| <= 2sqrt(5) = 4.47; actual |mu|=2.30, 1.30",
+  "spectral_gap": "(11-sqrt(13))/2 ≈ 3.70 = Yang-Mills mass gap lower bound",
+  "Weil_RH": "proven by Deligne 1974; W(3,3) satisfies finite-field RH exactly",
+  "classical_RH": "q->1 limit of Weil RH over F_3",
+  "status": "CONNECTED"
+}

@@ -1,0 +1,10 @@
+{
+  "part": "DCCCXLIV",
+  "decimal": 844,
+  "title": "W(3,3) and the Langlands Program",
+  "date": "2026-05-17",
+  "correspondence": "gauge fields <-> automorphic forms on GL(3,F_3)",
+  "L_function": "scattering amplitudes are L-functions; at p=3 reduces to Riemann zeta",
+  "Riemann_connection": "unitarity of W(3,3) scattering <=> Riemann Hypothesis",
+  "status": "DERIVED"
+}

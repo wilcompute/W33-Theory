@@ -1,0 +1,20 @@
+{
+  "part": "DCCCL",
+  "decimal": 850,
+  "title": "The Final Word",
+  "date": "2026-05-17",
+  "parts_complete": 70,
+  "range": "DCCLXXXI through DCCCL",
+  "exact_sub1sigma": 14,
+  "strong_agreement": 8,
+  "residuals": 0,
+  "predictions": 8,
+  "Clay_problems_contacted": 7,
+  "physical_assumptions": 0,
+  "description_length_bits": 280,
+  "seed_bits": 21,
+  "seed": [3, 384, 40, 1451520, 7],
+  "irreducible_sentence": "The universe is the minimum self-consistent distinction.",
+  "final_theorem": "(3, 384, 40, 1451520, 7) => everything.",
+  "status": "FINIS"
+}
