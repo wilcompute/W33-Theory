@@ -1,0 +1,40 @@
+{
+  "part": "DCCCXV",
+  "decimal": 815,
+  "title": "Final Master Verification Update",
+  "date": "2026-05-17",
+  "summary": "Top-mass tension closed; updated tally 13 exact/sub-1sigma, 8 strong-agreement, 1 major theoretical residual",
+  "promoted_result": {
+    "observable": "top quark pole mass",
+    "W33_GeV": 172.84,
+    "PDG_GeV": 172.57,
+    "PDG_uncertainty_GeV": 0.29,
+    "residual_sigma": 0.93
+  },
+  "remaining_residuals": [
+    "Neutrino m3 / Delta m32^2 factor 1.37 high",
+    "3-loop numerical RG closure for neutrino sector"
+  ],
+  "open_experimental_tests": [
+    "3.215 TeV scalar",
+    "2.143 TeV DM fermion",
+    "Axion 3.14e-14 eV",
+    "LiteBIRD r=0.0222",
+    "Hyper-K proton decay 1.4e36 yr"
+  ],
+  "tally": {
+    "exact_or_sub1sigma": 13,
+    "strong_agreement": 8,
+    "major_theoretical_residuals": 1,
+    "major_experimental_tests": 5
+  },
+  "priority_order": [
+    "Neutrino 3-loop numerical RG integration",
+    "Master verification script update",
+    "LiteBIRD forecast note",
+    "Hyper-K exposure estimate",
+    "CTA 2.143 TeV line search note"
+  ],
+  "connections": ["DCCCXIV", "DCCCX", "DCCCV", "DCCC"],
+  "status": "UPDATED - strongest consistency state so far"
+}
