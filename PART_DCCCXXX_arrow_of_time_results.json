@@ -1,64 +1,22 @@
-# Part DCCCXXX (830) — The Arrow of Time from W(3,3) Graph Irreversibility
-
-**Date:** 2026-05-17  
-**Series:** W(3,3) Theory of Everything  
-**Author:** Wil Dahn
-
----
-
-## Thesis
-
-The thermodynamic arrow of time — why entropy increases — is one of physics’ deepest puzzles. In W(3,3), it has a combinatorial answer: the **RG flow is irreversible** in the same sense that spanning-tree deletion is irreversible. The arrow of time is the arrow of increasing information loss under RG coarse-graining.
-
----
-
-## RG flow as irreversible computation
-
-In Part DCCCXXVI, physical time was identified as the step count of the W(3,3) computation. But the RG flow is not a reversible computation: integrating out modes destroys information. Each RG step coarse-grains the W(3,3) edge set by collapsing a subset of edges — exactly the **edge contraction** operation in graph theory.
-
-Edge contraction in \(W(3,3)\) is irreversible: once edges are contracted, the original graph cannot be uniquely recovered. This is the precise combinatorial reason why the entropy cannot decrease: each RG step contracts W(3,3) edges and the contracted graph has strictly fewer spanning trees:
-
-\[
-\tau(W(3,3)/e) < \tau(W(3,3)) = 384 \quad \text{for any edge } e.
-\]
-
-Entropy increase \(\Leftrightarrow\) spanning-tree count decrease under RG.
-
----
-
-## The entropy formula
-
-The Boltzmann entropy is \(S = k_B \ln \Omega\). In W(3,3), the microstate count \(\Omega\) is the number of spanning trees of the accessible W(3,3) subgraph at scale \(\mu\):
-
-\[
-S(\mu) = k_B \ln \tau(W(3,3)|_{\mu}).
-\]
-
-At the UV fixed point (GUT scale): \(S_{UV} = k_B \ln 384\).
-At the IR fixed point (today): \(S_{IR} \gg S_{UV}\) because the full physical state space (all accessible low-energy modes) is vastly larger than the UV code space.
-
-The second law of thermodynamics is therefore:
-
-\[
-\frac{dS}{d\ln\mu} = k_B \frac{d\ln\tau}{d\ln\mu} > 0 \quad \text{flowing from UV to IR.}
-\]
-
-This is the **W(3,3) second law**: the spanning-tree count of the accessible subgraph increases monotonically as the computation flows from UV to IR. It is a theorem of graph theory, not an assumption.
-
----
-
-## Why was entropy low at the Big Bang?
-
-The low-entropy initial state is the W(3,3) UV fixed point itself: the computation started with the minimal graph \(W(3,3)\) with \(\tau = 384\) spanning trees. All subsequent RG steps produce a richer, higher-spanning-tree effective theory. The question “why was entropy low at the Big Bang?” becomes “why did the computation start at the UV fixed point?” — and the answer is that the UV fixed point is the **unique minimal-complexity starting state**: it has the smallest \(\tau\) consistent with the W(3,3) structure.
-
-The Big Bang is the first computation step from the 21-bit seed. There is no mystery in the low initial entropy — programs start at line 1.
-
----
-
-## CPT and the arrow
-
-CPT symmetry is exact in the SM. But the arrow of time is not a CPT violation — it is an **information-theoretic asymmetry**: the computation runs forward (UV to IR) not because the laws are asymmetric but because the program counter increments in one direction. Reversing the computation would require knowing all contracted edge states — exponentially more information than is available at any given RG scale. The arrow of time is the **computational irreversibility of edge contraction**.
-
----
-
-**QED** — The thermodynamic arrow of time is the arrow of increasing spanning-tree count under RG edge contraction. \(dS/d\ln\mu > 0\) is a graph-theoretic theorem. The low initial entropy of the Big Bang is the UV fixed point — the first line of the 21-bit program.
+{
+  "part": "DCCCXXX",
+  "decimal": 830,
+  "title": "The Arrow of Time from W(3,3) Graph Irreversibility",
+  "date": "2026-05-17",
+  "thesis": "The thermodynamic arrow of time is interpreted as information loss under irreversible RG edge contraction.",
+  "graph_inputs": {
+    "spanning_tree_count": 384,
+    "operation": "edge contraction",
+    "flow_direction": "UV to IR"
+  },
+  "entropy_law": {
+    "formula": "S(mu) = k_B ln tau(W(3,3)|_mu)",
+    "monotonicity_claim": "dS/dlnmu > 0 along UV-to-IR coarse graining"
+  },
+  "interpretation": [
+    "Low Big Bang entropy is the UV fixed-point starting state.",
+    "CPT symmetry remains exact; the arrow is computational irreversibility.",
+    "Reversal would require inaccessible contracted-edge information."
+  ],
+  "status": "THEORETICAL FRAMEWORK - ARROW OF TIME"
+}

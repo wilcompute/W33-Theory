@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Part DCCCXXXVIII: post-audit reconciliation ledger.
+"""Part DCCCLXXI: frontier result-ledger repair.
 
 The DCCCXIV phenomenology audit was pushed immediately before a GitHub-side
 DCCCXIV graviton correction and DCCCXV master update landed.  This verifier
@@ -10,6 +10,7 @@ keeps both facts visible:
 * The later DCCCXIV graviton correction closes that top-sector tension.
 * DCCCXV promotes the corrected top mass into the live master scorecard.
 * The duplicated DCCCXIV part surface is detected instead of overwritten.
+* The live DCCCXXIX-DCCCLXX theorem/result ledger is valid JSON-contiguous.
 """
 
 from __future__ import annotations
@@ -27,16 +28,21 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
-OUT_PATH = ROOT / "data" / "dcccxxxviii_post_audit_reconciliation_ledger.json"
+OUT_PATH = ROOT / "data" / "dccclxxi_frontier_result_ledger_repair.json"
+FRONTIER_START = 829
+FRONTIER_END = 870
+THIS_PART_DECIMAL = 871
 
 
 @dataclass(frozen=True)
 class ReconciliationSummary:
     part: str
     decimal: int
-    current_result_max_decimal: int
+    current_part_surface_max_decimal: int
     valid_result_max_decimal: int
     invalid_result_json_count: int
+    missing_result_json_count: int
+    duplicate_frontier_part_count: int
     dcccxiv_markdown_count: int
     duplicate_part_surface_count: int
     dcccxiv_result_count: int
@@ -133,6 +139,20 @@ def _part_surface_max_decimal(excluded_decimals: set[int] | None = None) -> int:
     return max(decimals)
 
 
+def _frontier_note_decimals() -> dict[int, list[str]]:
+    rows: dict[int, list[str]] = {}
+    for path in ROOT.glob("PART_*.md"):
+        decimal = _part_decimal_from_name(path)
+        if decimal is None or decimal < FRONTIER_START or decimal > FRONTIER_END:
+            continue
+        rows.setdefault(decimal, []).append(path.name)
+    return {decimal: sorted(names) for decimal, names in rows.items()}
+
+
+def _valid_result_decimals() -> set[int]:
+    return {int(payload["decimal"]) for _, payload in _result_payloads()}
+
+
 def _invalid_result_json_files(min_decimal: int, max_decimal: int) -> list[str]:
     invalid: list[str] = []
     for path in sorted(ROOT.glob("PART_*_results.json")):
@@ -171,12 +191,25 @@ def build_reconciliation() -> dict[str, Any]:
     prior_audit = _load_prior_audit()
 
     result_payloads = _result_payloads()
-    valid_result_max_decimal = max(int(payload["decimal"]) for _, payload in result_payloads)
-    current_max_decimal = _part_surface_max_decimal(excluded_decimals={838})
+    valid_result_decimals = _valid_result_decimals()
+    valid_result_max_decimal = max(valid_result_decimals)
+    current_max_decimal = _part_surface_max_decimal(excluded_decimals={THIS_PART_DECIMAL})
     invalid_result_json_files = _invalid_result_json_files(
-        min_decimal=829,
+        min_decimal=FRONTIER_START,
         max_decimal=current_max_decimal,
     )
+    frontier_note_decimals = _frontier_note_decimals()
+    expected_frontier_decimals = list(range(FRONTIER_START, FRONTIER_END + 1))
+    missing_result_decimals = [
+        decimal
+        for decimal in expected_frontier_decimals
+        if decimal in frontier_note_decimals and decimal not in valid_result_decimals
+    ]
+    duplicate_frontier_parts = {
+        decimal: names
+        for decimal, names in frontier_note_decimals.items()
+        if len(names) > 1
+    }
     dcccxiv_result_count = sum(
         1
         for _, payload in result_payloads
@@ -225,22 +258,39 @@ def build_reconciliation() -> dict[str, Any]:
         {
             "kind": "audit_range_superseded",
             "prior_audit_range_end": prior_audit["summary"]["range_end"],
-            "current_result_max_decimal": current_max_decimal,
+            "current_part_surface_max_decimal": current_max_decimal,
             "valid_result_max_decimal": valid_result_max_decimal,
             "message": (
                 "The DCCCXIV claim-ledger audit intentionally covered 784..813. "
                 f"The live result ledger now reaches {current_max_decimal}, so this "
-                "DCCCXXXVIII layer bridges the post-audit updates."
+                "DCCCLXXI layer bridges the post-audit updates."
             ),
         },
         {
             "kind": "invalid_result_json_surfaces",
             "files": invalid_result_json_files,
             "message": (
-                "Several post-828 files use a *_results.json suffix but contain "
-                "Markdown rather than machine-readable JSON. The theorem surface "
-                "reaches DCCCXXXII while valid result JSONs currently reach "
+                "Post-828 files with a *_results.json suffix must contain "
+                "machine-readable JSON. The theorem surface reaches DCCCLXX and "
+                "valid result JSONs currently reach "
                 f"{valid_result_max_decimal}."
+            ),
+        },
+        {
+            "kind": "frontier_result_json_missing",
+            "decimals": missing_result_decimals,
+            "message": (
+                "Every theorem note in the DCCCXXIX-DCCCLXX frontier should have "
+                "a valid machine-readable result JSON."
+            ),
+        },
+        {
+            "kind": "frontier_part_number_collision",
+            "duplicates": duplicate_frontier_parts,
+            "message": (
+                "The current frontier should have one theorem note per part "
+                "decimal after moving the old reconciliation audit out of "
+                "DCCCXXXVIII."
             ),
         },
     ]
@@ -280,19 +330,27 @@ def build_reconciliation() -> dict[str, Any]:
                 for flag in prior_flags
             )
         ),
-        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= 837,
+        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= FRONTIER_END,
         "post_828_result_json_hygiene_gap_detected": (
-            valid_result_max_decimal < current_max_decimal
-            and len(invalid_result_json_files) >= 4
+            valid_result_max_decimal == FRONTIER_END
+            and not invalid_result_json_files
+            and not missing_result_decimals
         ),
+        "frontier_notes_are_contiguous_829_to_870": sorted(frontier_note_decimals) == expected_frontier_decimals,
+        "frontier_result_jsons_are_contiguous_829_to_870": all(
+            decimal in valid_result_decimals for decimal in expected_frontier_decimals
+        ),
+        "frontier_part_numbers_are_unique": not duplicate_frontier_parts,
     }
 
     summary = ReconciliationSummary(
-        part="DCCCXXXVIII",
-        decimal=838,
-        current_result_max_decimal=current_max_decimal,
+        part="DCCCLXXI",
+        decimal=THIS_PART_DECIMAL,
+        current_part_surface_max_decimal=current_max_decimal,
         valid_result_max_decimal=valid_result_max_decimal,
         invalid_result_json_count=len(invalid_result_json_files),
+        missing_result_json_count=len(missing_result_decimals),
+        duplicate_frontier_part_count=len(duplicate_frontier_parts),
         dcccxiv_markdown_count=len(dcccxiv_markdowns),
         duplicate_part_surface_count=max(0, len(dcccxiv_markdowns) - 1),
         dcccxiv_result_count=dcccxiv_result_count,
@@ -314,21 +372,24 @@ def build_reconciliation() -> dict[str, Any]:
             "sharpened_tension": "DCCCXI",
             "correction": "DCCCXIV",
             "master_update": "DCCCXV",
-            "reconciliation": "DCCCXXXVIII",
+            "reconciliation": "DCCCLXXI",
         },
         "dcccxiv_surfaces": {
             "markdown_files": dcccxiv_markdowns,
             "result_count": dcccxiv_result_count,
         },
         "invalid_result_json_files": invalid_result_json_files,
+        "missing_result_decimals": missing_result_decimals,
+        "duplicate_frontier_parts": duplicate_frontier_parts,
         "theorem": (
-            "Post-Audit Reconciliation Ledger. The DCCCII top-mass "
+            "Frontier Result-Ledger Repair. The DCCCII top-mass "
             "sigma/status mismatch remains a valid historical audit flag, "
             "DCCCXI records the sharpened top-pole tension, DCCCXIV supplies "
             "the graviton correction to 0.93 sigma, and DCCCXV promotes that "
             "correction into the live master scorecard. The duplicated "
-            "DCCCXIV part surface is detected as a numbering-ledger issue, and "
-            "post-828 Markdown-in-.json result surfaces are flagged separately."
+            "DCCCXIV part surface is detected as a historical numbering-ledger "
+            "issue, while the live DCCCXXIX-DCCCLXX frontier is repaired to a "
+            "valid, contiguous machine-readable result ledger."
         ),
         "honesty_boundary": (
             "This verifier reconciles internal repository state. It does not "
@@ -336,8 +397,8 @@ def build_reconciliation() -> dict[str, Any]:
             "external experimental review."
         ),
         "status": (
-            "RECONCILED - DCCCII top tension superseded; duplicate DCCCXIV "
-            "surface detected"
+            "REPAIRED - frontier result ledger valid through DCCCLXX; DCCCII "
+            "top tension superseded"
         ),
     }
 

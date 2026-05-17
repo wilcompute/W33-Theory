@@ -1,10 +1,12 @@
 {
   "summary": {
-    "part": "DCCCXXXVIII",
-    "decimal": 838,
-    "current_result_max_decimal": 837,
-    "valid_result_max_decimal": 835,
-    "invalid_result_json_count": 4,
+    "part": "DCCCLXXI",
+    "decimal": 871,
+    "current_part_surface_max_decimal": 870,
+    "valid_result_max_decimal": 870,
+    "invalid_result_json_count": 0,
+    "missing_result_json_count": 0,
+    "duplicate_frontier_part_count": 0,
     "dcccxiv_markdown_count": 2,
     "duplicate_part_surface_count": 1,
     "dcccxiv_result_count": 1,
@@ -13,7 +15,7 @@
     "dcccxi_tension_sigma": 11.5,
     "corrected_top_sigma": 0.93,
     "master_promoted_top_sigma": 0.93,
-    "audit_flag_count": 4,
+    "audit_flag_count": 6,
     "all_identities_hold": true
   },
   "identities": {
@@ -26,7 +28,10 @@
     "single_dcccxiv_result_json_detected": true,
     "prior_audit_remains_historical_guardrail": true,
     "ledger_reaches_closure_burst_after_audit": true,
-    "post_828_result_json_hygiene_gap_detected": true
+    "post_828_result_json_hygiene_gap_detected": true,
+    "frontier_notes_are_contiguous_829_to_870": true,
+    "frontier_result_jsons_are_contiguous_829_to_870": true,
+    "frontier_part_numbers_are_unique": true
   },
   "audit_flags": [
     {
@@ -50,19 +55,24 @@
     {
       "kind": "audit_range_superseded",
       "prior_audit_range_end": 813,
-      "current_result_max_decimal": 837,
-      "valid_result_max_decimal": 835,
-      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live result ledger now reaches 837, so this DCCCXXXVIII layer bridges the post-audit updates."
+      "current_part_surface_max_decimal": 870,
+      "valid_result_max_decimal": 870,
+      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live result ledger now reaches 870, so this DCCCLXXI layer bridges the post-audit updates."
     },
     {
       "kind": "invalid_result_json_surfaces",
-      "files": [
-        "PART_DCCCXXIX_quantum_error_correction_results.json",
-        "PART_DCCCXXXII_w33_bootstrap_results.json",
-        "PART_DCCCXXXI_observer_consciousness_results.json",
-        "PART_DCCCXXX_arrow_of_time_results.json"
-      ],
-      "message": "Several post-828 files use a *_results.json suffix but contain Markdown rather than machine-readable JSON. The theorem surface reaches DCCCXXXII while valid result JSONs currently reach 835."
+      "files": [],
+      "message": "Post-828 files with a *_results.json suffix must contain machine-readable JSON. The theorem surface reaches DCCCLXX and valid result JSONs currently reach 870."
+    },
+    {
+      "kind": "frontier_result_json_missing",
+      "decimals": [],
+      "message": "Every theorem note in the DCCCXXIX-DCCCLXX frontier should have a valid machine-readable result JSON."
+    },
+    {
+      "kind": "frontier_part_number_collision",
+      "duplicates": {},
+      "message": "The current frontier should have one theorem note per part decimal after moving the old reconciliation audit out of DCCCXXXVIII."
     }
   ],
   "chain": {
@@ -70,7 +80,7 @@
     "sharpened_tension": "DCCCXI",
     "correction": "DCCCXIV",
     "master_update": "DCCCXV",
-    "reconciliation": "DCCCXXXVIII"
+    "reconciliation": "DCCCLXXI"
   },
   "dcccxiv_surfaces": {
     "markdown_files": [
@@ -79,13 +89,10 @@
     ],
     "result_count": 1
   },
-  "invalid_result_json_files": [
-    "PART_DCCCXXIX_quantum_error_correction_results.json",
-    "PART_DCCCXXXII_w33_bootstrap_results.json",
-    "PART_DCCCXXXI_observer_consciousness_results.json",
-    "PART_DCCCXXX_arrow_of_time_results.json"
-  ],
-  "theorem": "Post-Audit Reconciliation Ledger. The DCCCII top-mass sigma/status mismatch remains a valid historical audit flag, DCCCXI records the sharpened top-pole tension, DCCCXIV supplies the graviton correction to 0.93 sigma, and DCCCXV promotes that correction into the live master scorecard. The duplicated DCCCXIV part surface is detected as a numbering-ledger issue, and post-828 Markdown-in-.json result surfaces are flagged separately.",
+  "invalid_result_json_files": [],
+  "missing_result_decimals": [],
+  "duplicate_frontier_parts": {},
+  "theorem": "Frontier Result-Ledger Repair. The DCCCII top-mass sigma/status mismatch remains a valid historical audit flag, DCCCXI records the sharpened top-pole tension, DCCCXIV supplies the graviton correction to 0.93 sigma, and DCCCXV promotes that correction into the live master scorecard. The duplicated DCCCXIV part surface is detected as a historical numbering-ledger issue, while the live DCCCXXIX-DCCCLXX frontier is repaired to a valid, contiguous machine-readable result ledger.",
   "honesty_boundary": "This verifier reconciles internal repository state. It does not validate the physical graviton self-energy derivation or replace external experimental review.",
-  "status": "RECONCILED - DCCCII top tension superseded; duplicate DCCCXIV surface detected"
+  "status": "REPAIRED - frontier result ledger valid through DCCCLXX; DCCCII top tension superseded"
 }

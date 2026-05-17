@@ -91,7 +91,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_reproduce_w33_core.py",
         "tests/test_dcclxxii_formula_regime_registry_bridge.py",
         "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py",
-        "tests/test_dcccxxxviii_post_audit_reconciliation_ledger.py",
+        "tests/test_dccclxxi_frontier_result_ledger_repair.py",
     ],
     "markov-e6-burden": [
         "tests/test_tomotope_toroidal_markov_algebraic_closure_bridge.py",
