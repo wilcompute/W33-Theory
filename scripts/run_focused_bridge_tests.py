@@ -21,6 +21,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxiv_holonomy_signed_triad_a2_projection_bridge.py",
         "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py",
         "tests/test_dccxvi_axis_syndrome_selector_codec_bridge.py",
+        "tests/test_dcclxxv_photonic_retry_closure_kernel_bridge.py",
         "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py",
         "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py",
         "tests/test_cyclic_cayley_obstruction_ccccxxx.py",

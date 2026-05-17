@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "closure_depth_count": 6,
+    "fusion_denominator": 2,
+    "accepted_slots": 240,
+    "return_slots": 240,
+    "directed_attempt_slots": 480,
+    "klm_primitive_slots": 960,
+    "maximal_retry_denominator": 32,
+    "all_identities_hold": true
+  },
+  "retry_kernel": {
+    "law": "d heralded returns carry transfer weight 2^{-d}",
+    "depth_rows": [
+      {
+        "heralded_return_count": 0,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "retry_read": "2^-0"
+      },
+      {
+        "heralded_return_count": 1,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "retry_read": "2^-1"
+      },
+      {
+        "heralded_return_count": 2,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 4
+        },
+        "retry_read": "2^-2"
+      },
+      {
+        "heralded_return_count": 3,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 8
+        },
+        "retry_read": "2^-3"
+      },
+      {
+        "heralded_return_count": 4,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 16
+        },
+        "retry_read": "2^-4"
+      },
+      {
+        "heralded_return_count": 5,
+        "transfer_weight": {
+          "numerator": 1,
+          "denominator": 32
+        },
+        "retry_read": "2^-5"
+      }
+    ],
+    "finite_horizon": "d=0..5; the sixth transfer power vanishes by nilpotence"
+  },
+  "photonic_ledger": {
+    "accepted_slots": 240,
+    "return_slots": 240,
+    "directed_attempt_slots": 480,
+    "klm_primitive_slots": 960,
+    "qec_identity": "39 + 120 + 81 = 240"
+  },
+  "identities": {
+    "fusion_summary_holds": true,
+    "closure_kernel_summary_holds": true,
+    "fusion_denominator_matches_transfer_weight": true,
+    "closure_depth_count_matches_success_slots": true,
+    "closure_depth_count_matches_return_slots": true,
+    "local_attempt_alphabet_is_two_closure_depths": true,
+    "accepted_and_return_rows_are_equal_depth_lifts": true,
+    "directed_attempt_slots_are_vertex_lift_of_retry_alphabet": true,
+    "klm_primitives_are_binary_rail_lift": true,
+    "retry_weights_are_transfer_powers": true,
+    "maximal_retry_tail_is_one_over_32": true,
+    "qec_absorption_preserves_h1": true
+  },
+  "theorem": "Photonic Retry Closure-Kernel Theorem. The p_fusion=1/2 heralded return ledger of DCCXV and the G=(1/2)S closure transfer kernel of DCCLXXIV carry the same finite retry law: d consecutive return updates have weight 2^{-d} for d=0..5. Across 40 vertices the six accepted depths plus six return depths give 480 directed attempt slots, and the KLM rail doubles this to 960 primitives while 39+120+81=240 preserves H1=81.",
+  "honesty_boundary": "This is a finite scheduler/QEC retry-kernel theorem. It does not prove a physical fusion threshold, detector model, loss budget, biological origin claim, or continuum dynamics theorem."
+}
