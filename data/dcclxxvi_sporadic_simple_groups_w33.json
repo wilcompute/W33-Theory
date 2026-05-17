@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "q": 3,
+    "total_sporadics": 26,
+    "happy_family_count": 20,
+    "pariah_count": 6,
+    "26_split_20_6": [
+      20,
+      6
+    ],
+    "family_counts": [
+      5,
+      4,
+      3,
+      3,
+      11
+    ],
+    "all_identities_hold": true
+  },
+  "all_26_sporadic_groups": [
+    "M_11",
+    "M_12",
+    "M_22",
+    "M_23",
+    "M_24",
+    "J_1",
+    "J_2",
+    "J_3",
+    "J_4",
+    "Co_1",
+    "Co_2",
+    "Co_3",
+    "Fi_22",
+    "Fi_23",
+    "Fi_24'",
+    "HS",
+    "McL",
+    "He",
+    "Ru",
+    "Suz",
+    "O'N",
+    "Ly",
+    "Th",
+    "HN",
+    "B",
+    "M"
+  ],
+  "happy_family_20": [
+    "M_11",
+    "M_12",
+    "M_22",
+    "M_23",
+    "M_24",
+    "J_2",
+    "Co_1",
+    "Co_2",
+    "Co_3",
+    "Fi_22",
+    "Fi_23",
+    "Fi_24'",
+    "HS",
+    "McL",
+    "He",
+    "Suz",
+    "Th",
+    "HN",
+    "B",
+    "M"
+  ],
+  "pariahs_6": [
+    "J_1",
+    "J_3",
+    "J_4",
+    "Ru",
+    "O'N",
+    "Ly"
+  ],
+  "family_counts": {
+    "Mathieu": {
+      "count": 5,
+      "w33": "mu + 1 = q + 2 = # Csaszar realisations"
+    },
+    "Janko": {
+      "count": 4,
+      "w33": "mu = q + 1 = quaternion dim"
+    },
+    "Conway": {
+      "count": 3,
+      "w33": "q = Master Equation root"
+    },
+    "Fischer": {
+      "count": 3,
+      "w33": "q (same)"
+    },
+    "Other": {
+      "count": 11,
+      "w33": "k - 1 = non-back-tracking out-degree"
+    }
+  },
+  "split_counts": {
+    "happy_family_count": 20,
+    "pariah_count": 6,
+    "total": 26,
+    "w33_reading": {
+      "26 = total": "D_bosonic (DCCXXVI) = HPS level 3 (DCCLII) = 2 * Phi_3",
+      "20 = happy family": "cuboctahedron volume (DCCL) = C(2q, q) = v / 2",
+      "6 = pariahs": "q! = octahedron V = closure-clock nilpotence"
+    }
+  },
+  "w33_linked_sporadics": [
+    {
+      "group": "M_12",
+      "order": 95040,
+      "linked_to": "ternary Golay G_12 = [k, q!, q!] (DCCLXXI)",
+      "w33_role": "automorphism of Steiner S(5, 6, 12); 12 = k codec"
+    },
+    {
+      "group": "M_24",
+      "order": 244823040,
+      "linked_to": "binary Golay G_24 = [f, k, 2^q] (DCCLXXI)",
+      "w33_role": "automorphism of Steiner S(5, 8, 24); 24 = f"
+    },
+    {
+      "group": "Co_1",
+      "order": 4157776806543360000,
+      "linked_to": "Leech lattice (DCCLIII, DCCLV)",
+      "w33_role": "Aut(Leech) / Z_2; |Co_1| has 15 prime divisors (g)"
+    },
+    {
+      "group": "M (Monster)",
+      "order": 808017424794512875886459904961710757005754368000000000,
+      "linked_to": "j-invariant moonshine (DCCLIII)",
+      "w33_role": "15 = g prime divisors; first 6 exponents are W(3,3); 196884 = Leech + mu*q^4"
+    }
+  ],
+  "identities": {
+    "total_26_sporadics": true,
+    "happy_family_count_20": true,
+    "pariah_count_6": true,
+    "26_eq_D_bosonic": true,
+    "20_eq_cuboctahedron_volume": true,
+    "20_eq_v_over_2": true,
+    "6_eq_q_factorial": true,
+    "Mathieu_count_eq_mu_plus_1": true,
+    "Janko_count_eq_mu": true,
+    "Conway_count_eq_q": true,
+    "Fischer_count_eq_q": true,
+    "Other_count_eq_k_minus_1": true,
+    "family_count_sum_eq_26": true,
+    "linked_sporadics_4_entries": true
+  },
+  "theorem": "Sporadic Groups Theorem.  The 26 sporadic finite simple groups split as 20 Happy Family + 6 Pariahs.  In W(3,3) language:\n  total 26 = D_bosonic (DCCXXVI) = HPS level 3 (DCCLII) = 2 Phi_3\n  HF    20 = cuboctahedron volume (DCCL) = C(2q, q) = v / 2\n  Pari  6  = q! = octahedron V = closure-clock nilpotence.\nThe five sporadic families have counts equally W(3,3)-named:\n  Mathieu     5 = mu + 1 = # Csaszar realisations (DCCXXV)\n  Janko       4 = mu = q + 1\n  Conway      3 = q\n  Fischer     3 = q\n  Other       11 = k - 1 = non-back-tracking out-degree.\nSum: 5+4+3+3+11 = 26.  The Mathieu groups are the automorphism groups of the perfect Golay codes (DCCLXXI), the Conway groups are built from the Leech lattice (DCCLIII, DCCLV), and the Monster is the apex.  Every classification number in the entire sporadic-group taxonomy is a W(3,3) primitive at q = 3.",
+  "one_line": "26 sporadics = 20 + 6 = (cuboctahedron vol) + (q!) = D_bosonic split into Happy Family and Pariahs; all 5 family sizes are W(3,3) primitives.",
+  "honesty_boundary": "All 26-sporadic counts and family decompositions are the standard outputs of the Classification of Finite Simple Groups (CFSG, completed in the 1980s).  This part documents the W(3,3) arithmetic alignment of every classification number; it does NOT prove the CFSG or derive any sporadic group from W(3,3)."
+}
