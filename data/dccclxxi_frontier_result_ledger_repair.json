@@ -2,7 +2,7 @@
   "summary": {
     "part": "DCCCLXXI",
     "decimal": 871,
-    "current_part_surface_max_decimal": 870,
+    "current_part_surface_max_decimal": 872,
     "valid_result_max_decimal": 870,
     "invalid_result_json_count": 0,
     "missing_result_json_count": 0,
@@ -55,9 +55,9 @@
     {
       "kind": "audit_range_superseded",
       "prior_audit_range_end": 813,
-      "current_part_surface_max_decimal": 870,
+      "current_part_surface_max_decimal": 872,
       "valid_result_max_decimal": 870,
-      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live result ledger now reaches 870, so this DCCCLXXI layer bridges the post-audit updates."
+      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live part surface now reaches 872, while the valid result ledger reaches 870; this DCCCLXXI layer bridges the post-audit updates without expanding the DCCCXXIX-DCCCLXX result-contiguity claim."
     },
     {
       "kind": "invalid_result_json_surfaces",

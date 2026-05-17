@@ -1,0 +1,162 @@
+{
+  "part": "DCCCLXXII",
+  "title": "W33 For Everyone QEC Ouroboros Consistency Bridge",
+  "summary": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lam": 2,
+    "mu": 4,
+    "edges": 240,
+    "f_mult": 24,
+    "g_mult": 15,
+    "primitive_count": 34,
+    "alpha_delta_num": 24,
+    "alpha_delta_den": 5431679,
+    "qec_logical_qudits": 81,
+    "qec_check_rank": 159,
+    "dual_carrier": 480,
+    "klm_primitive_slots": 960,
+    "manuscript_anchor_count": 10,
+    "all_identities_hold": true
+  },
+  "constants": {
+    "q": 3,
+    "phi3": 13,
+    "phi4": 10,
+    "phi6": 7
+  },
+  "qec_ouroboros": {
+    "vertex_x_rank": 39,
+    "triangle_z_rank": 120,
+    "check_rank": 159,
+    "logical_qudits": 81,
+    "base_code": {
+      "n": 240,
+      "k": 81,
+      "d_z": 4
+    },
+    "nilpotent_exact_sequence": [
+      81,
+      162,
+      81
+    ],
+    "local_turn_split": {
+      "accepted_signed_clifford": 6,
+      "return_a2_weyl": 6
+    },
+    "directed_carrier": 480,
+    "accepted_bonds": 240,
+    "heralded_return_syndrome_slots": 240,
+    "klm_primitive_slots": 960
+  },
+  "alpha_variants": {
+    "docs_variant": {
+      "numerator": 40,
+      "denominator": 1111
+    },
+    "paper_variant": {
+      "numerator": 176,
+      "denominator": 4889
+    },
+    "exact_delta": {
+      "numerator": 24,
+      "denominator": 5431679
+    }
+  },
+  "manuscript": {
+    "path": "W33_FOR_EVERYONE.tex",
+    "bytes": 102992,
+    "anchors": {
+      "master_equation_section": true,
+      "pure_logic_chain_theorem": true,
+      "dual_number_carrier_480": true,
+      "h1_short_exact_sequence": true,
+      "photonic_fusion_carrier_statement": true,
+      "universal_quantum_computer_section": true,
+      "css_bus_row": true,
+      "distance_four_row": true,
+      "recursive_distinction_layer": true,
+      "fine_structure_running_layer": true
+    }
+  },
+  "promoted_bridge_anchors": {
+    "qec_ouroboros": "PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md",
+    "photonic_qec": "PART_DCCXV_PHOTONIC_FUSION_SYNDROME_QEC_BRIDGE.md",
+    "frobenius_ouroboros": "PART_DCCLIV_FROBENIUS_SELECTION_OUROBOROS.md",
+    "anchors": {
+      "qec_ouroboros_names_snake_tail": true,
+      "qec_ouroboros_base_code": true,
+      "qec_ouroboros_line_star_tail": true,
+      "qec_ouroboros_protected_lift": true,
+      "photonic_bridge_return_alphabet": true,
+      "photonic_bridge_accepted_return_split": true,
+      "frobenius_ouroboros_q8_loop": true
+    }
+  },
+  "primitive_values_sorted": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    20,
+    21,
+    24,
+    26,
+    27,
+    30,
+    36,
+    40,
+    45,
+    66,
+    78,
+    81,
+    120,
+    192,
+    240,
+    248,
+    384,
+    1728,
+    196560,
+    196884
+  ],
+  "identities": {
+    "srg_parameters_match_w33": true,
+    "edge_count_is_240": true,
+    "adjacency_spectrum_multiplicities": true,
+    "sm_codec_dimension": true,
+    "dim_e8_identity": true,
+    "j_constant_identity": true,
+    "leech_kissing_identity": true,
+    "j_linear_coefficient_identity": true,
+    "bosonic_dim_identity": true,
+    "sporadic_split_identity": true,
+    "k_cubed_identity": true,
+    "triangular_embeddings": true,
+    "alpha_variants_unresolved_but_close": true,
+    "alpha_delta_matches_registry": true,
+    "primitive_table_size_34": true,
+    "qec_check_rank_identity": true,
+    "qec_logical_sector_identity": true,
+    "qec_carrier_partition_identity": true,
+    "nilpotent_homology_lift_identity": true,
+    "dual_carrier_identity": true,
+    "local_turn_split_identity": true,
+    "global_turn_carrier_identity": true,
+    "accepted_return_split_identity": true,
+    "klm_primitive_lift_identity": true,
+    "manuscript_architecture_anchors_present": true,
+    "promoted_ouroboros_anchors_present": true
+  },
+  "notes": "This bridge is a manuscript-level consistency checksum for W33_FOR_EVERYONE.tex. It enforces exact arithmetic claims, pins the QEC ouroboros/photonic carrier interpretation, and keeps unresolved alpha-regime claims explicitly labeled."
+}

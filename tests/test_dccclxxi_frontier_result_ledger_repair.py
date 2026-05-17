@@ -22,7 +22,7 @@ def test_frontier_repair_moves_audit_out_of_dcccxxxviii() -> None:
 
     assert summary["part"] == "DCCCLXXI"
     assert summary["decimal"] == 871
-    assert summary["current_part_surface_max_decimal"] == 870
+    assert summary["current_part_surface_max_decimal"] == 872
     assert summary["valid_result_max_decimal"] == 870
     assert summary["invalid_result_json_count"] == 0
     assert summary["missing_result_json_count"] == 0

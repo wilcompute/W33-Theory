@@ -262,8 +262,10 @@ def build_reconciliation() -> dict[str, Any]:
             "valid_result_max_decimal": valid_result_max_decimal,
             "message": (
                 "The DCCCXIV claim-ledger audit intentionally covered 784..813. "
-                f"The live result ledger now reaches {current_max_decimal}, so this "
-                "DCCCLXXI layer bridges the post-audit updates."
+                f"The live part surface now reaches {current_max_decimal}, while "
+                f"the valid result ledger reaches {valid_result_max_decimal}; this "
+                "DCCCLXXI layer bridges the post-audit updates without expanding "
+                "the DCCCXXIX-DCCCLXX result-contiguity claim."
             ),
         },
         {
