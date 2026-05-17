@@ -34,6 +34,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in SUITES["closure-clock"]
+    assert "tests/test_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in SUITES["pascal-ouroboros"]
     assert "tests/test_dcclviii_universal_overdetermination.py" in SUITES["selection-tower"]
     assert "tests/test_reproduce_w33_core.py" in SUITES["audit-core"]
@@ -59,6 +60,7 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py" in paths
     assert "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py" in paths
     assert "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py" in paths
+    assert "tests/test_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py" in paths
     assert "tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py" in paths
     assert "tests/test_dcclviii_universal_overdetermination.py" in paths
     assert "tests/test_reproduce_w33_core.py" in paths

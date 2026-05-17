@@ -68,6 +68,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py",
         "tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py",
         "tests/test_dccxlviii_retarded_green_uniqueness_bridge.py",
+        "tests/test_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py",
     ],
     "pascal-ouroboros": [
         "tests/test_dccxlix_octahedron_closure_phase_space.py",

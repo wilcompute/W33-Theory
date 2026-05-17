@@ -1,0 +1,425 @@
+{
+  "summary": {
+    "causal_class_count": 6,
+    "generator_weight_num": 1,
+    "generator_weight_den": 2,
+    "nilpotent_index": 6,
+    "maximal_transfer_denominator": 32,
+    "all_identities_hold": true
+  },
+  "equivalence": {
+    "transfer_generator": "G=(1/2)S",
+    "power_rule": "(G^d)_{i,i+d}=2^{-d}",
+    "semigroup_rule": "K(i,j)=2^{-(j-i)}",
+    "resolvent_rule": "K=sum_{d=0}^5 G^d=(I-G)^(-1)"
+  },
+  "transfer_power_checks": [
+    {
+      "delta": 0,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 1,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 2,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 3,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 4,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 5,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    },
+    {
+      "delta": 6,
+      "canonical_matches_direct_power": true,
+      "direct_power_matches_transfer_rule": true
+    }
+  ],
+  "entry_rows": [
+    {
+      "from": 0,
+      "to": 0,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "delta": 1,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "delta": 2,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 4
+      }
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "delta": 3,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 8
+      }
+    },
+    {
+      "from": 0,
+      "to": 4,
+      "delta": 4,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 16
+      }
+    },
+    {
+      "from": 0,
+      "to": 5,
+      "delta": 5,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 32
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 32
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 32
+      }
+    },
+    {
+      "from": 1,
+      "to": 1,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "delta": 1,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "delta": 2,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 4
+      }
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "delta": 3,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 8
+      }
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "delta": 4,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 16
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 16
+      }
+    },
+    {
+      "from": 2,
+      "to": 2,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "delta": 1,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "delta": 2,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 4
+      }
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "delta": 3,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 8
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 8
+      }
+    },
+    {
+      "from": 3,
+      "to": 3,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "delta": 1,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "delta": 2,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 4
+      }
+    },
+    {
+      "from": 4,
+      "to": 4,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "delta": 1,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    {
+      "from": 5,
+      "to": 5,
+      "delta": 0,
+      "semigroup_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "power_entry": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "resolvent_entry": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    }
+  ],
+  "identities": {
+    "canonical_dccxl_summary_holds": true,
+    "dccxxxix_semigroup_summary_holds": true,
+    "generator_is_half_shift": true,
+    "all_generator_powers_match_transfer_rule": true,
+    "semigroup_entries_equal_power_entries": true,
+    "semigroup_entries_equal_resolvent_entries": true,
+    "resolvent_is_sum_of_transfer_powers": true,
+    "nilpotence_terminates_at_six": true,
+    "maximal_transfer_is_one_over_32": true
+  },
+  "theorem": "Closure Transfer-Resolvent Equivalence Theorem. The DCCXXXIX semigroup table, the transfer-generator power rule G=(1/2)S, and the promoted DCCXL Jordan resolvent K=(I-G)^(-1) are exactly the same six-level finite operator package.",
+  "honesty_boundary": "This resolves an internal finite-operator equivalence and numbering hygiene issue. It does not add a continuum Hamiltonian, heat kernel, or Lorentzian propagator interpretation."
+}
