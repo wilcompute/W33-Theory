@@ -131,7 +131,7 @@ def build_bridge() -> dict[str, Any]:
         "photonic_fusion_carrier_statement": "The photonic fusion carrier $480 = C_1'$" in manuscript,
         "universal_quantum_computer_section": r"\section{$W(3,3)$ as a universal quantum computer}" in manuscript,
         "css_bus_row": r"Bus width & $240$ & physical edges (CSS code)" in manuscript,
-        "distance_four_row": r"Distance & $4$ & minimum CSS code distance = $\mu$" in manuscript,
+        "distance_four_row": r"Distance marker & $4$ & verified $Z$-distance $d_Z=\mu$" in manuscript,
         "recursive_distinction_layer": "recursive coherent distinction" in manuscript,
         "fine_structure_running_layer": r"\section{The fine-structure correction: $137 + \delta_{\mathrm{RG}}$}" in manuscript,
     }
