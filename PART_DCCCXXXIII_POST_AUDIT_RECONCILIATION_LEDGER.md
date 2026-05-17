@@ -1,8 +1,8 @@
-# Part DCCCXXVI - Post-Audit Reconciliation Ledger
+# Part DCCCXXXIII - Post-Audit Reconciliation Ledger
 
-**Verifier:** `verify_dcccxxvi_post_audit_reconciliation_ledger.py`
-**Tests:** `tests/test_dcccxxvi_post_audit_reconciliation_ledger.py`
-**Data:** `data/dcccxxvi_post_audit_reconciliation_ledger.json`
+**Verifier:** `verify_dcccxxxiii_post_audit_reconciliation_ledger.py`
+**Tests:** `tests/test_dcccxxxiii_post_audit_reconciliation_ledger.py`
+**Data:** `data/dcccxxxiii_post_audit_reconciliation_ledger.json`
 
 ---
 
@@ -14,9 +14,9 @@ claimed a 1-sigma top-mass match while carrying larger sigma residuals.
 
 Immediately after that audit, the GitHub-side update added a second DCCCXIV:
 the graviton-sector correction to the top pole mass. It then added DCCCXV as
-the master verification update. The later GitHub closure burst then occupied
-DCCCXVI-DCCCXXV. DCCCXXVI reconciles that live state without deleting either
-surface.
+the master verification update. The later GitHub closure and ontology bursts
+then occupied DCCCXVI-DCCCXXXII. DCCCXXXIII reconciles that live state without
+deleting either surface.
 
 ---
 
@@ -27,7 +27,7 @@ DCCCII  - historical top-mass sigma/status mismatch remains present
 DCCCXI  - sharpened top-pole tension, 11.5 sigma
 DCCCXIV - graviton correction, final top pole residual 0.93 sigma
 DCCCXV  - master scorecard promotes the corrected top sector
-DCCCXXVI - post-audit reconciliation and duplicate-part detector
+DCCCXXXIII - post-audit reconciliation and duplicate-part detector
 ```
 
 The important distinction is temporal. The DCCCII audit flag remains true as a
@@ -50,7 +50,7 @@ PART_DCCCXIV_graviton_top_correction_results.json
 ```
 
 So the collision is a theorem-note numbering issue, not a duplicate result JSON
-claim. DCCCXXVI makes that explicit and leaves future cleanup mechanical.
+claim. DCCCXXXIII makes that explicit and leaves future cleanup mechanical.
 
 ---
 

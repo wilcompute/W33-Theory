@@ -1,8 +1,8 @@
 {
   "summary": {
-    "part": "DCCCXXIII",
-    "decimal": 823,
-    "current_result_max_decimal": 815,
+    "part": "DCCCXXVI",
+    "decimal": 826,
+    "current_result_max_decimal": 825,
     "dcccxiv_markdown_count": 2,
     "duplicate_part_surface_count": 1,
     "dcccxiv_result_count": 1,
@@ -23,7 +23,7 @@
     "duplicate_dcccxiv_markdown_detected": true,
     "single_dcccxiv_result_json_detected": true,
     "prior_audit_remains_historical_guardrail": true,
-    "ledger_reaches_815_after_audit": true
+    "ledger_reaches_closure_burst_after_audit": true
   },
   "audit_flags": [
     {
@@ -47,8 +47,8 @@
     {
       "kind": "audit_range_superseded",
       "prior_audit_range_end": 813,
-      "current_result_max_decimal": 815,
-      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live result ledger now reaches 815, so this DCCCXXIII layer bridges the post-audit updates."
+      "current_result_max_decimal": 825,
+      "message": "The DCCCXIV claim-ledger audit intentionally covered 784..813. The live result ledger now reaches 825, so this DCCCXXVI layer bridges the post-audit updates."
     }
   ],
   "chain": {
@@ -56,7 +56,7 @@
     "sharpened_tension": "DCCCXI",
     "correction": "DCCCXIV",
     "master_update": "DCCCXV",
-    "reconciliation": "DCCCXXIII"
+    "reconciliation": "DCCCXXVI"
   },
   "dcccxiv_surfaces": {
     "markdown_files": [

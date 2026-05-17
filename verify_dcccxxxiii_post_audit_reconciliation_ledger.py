@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Part DCCCXXVI: post-audit reconciliation ledger.
+"""Part DCCCXXXIII: post-audit reconciliation ledger.
 
 The DCCCXIV phenomenology audit was pushed immediately before a GitHub-side
 DCCCXIV graviton correction and DCCCXV master update landed.  This verifier
@@ -27,7 +27,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
-OUT_PATH = ROOT / "data" / "dcccxxvi_post_audit_reconciliation_ledger.json"
+OUT_PATH = ROOT / "data" / "dcccxxxiii_post_audit_reconciliation_ledger.json"
 
 
 @dataclass(frozen=True)
@@ -174,7 +174,7 @@ def build_reconciliation() -> dict[str, Any]:
             "message": (
                 "The DCCCXIV claim-ledger audit intentionally covered 784..813. "
                 f"The live result ledger now reaches {current_max_decimal}, so this "
-                "DCCCXXVI layer bridges the post-audit updates."
+                "DCCCXXXIII layer bridges the post-audit updates."
             ),
         },
     ]
@@ -214,12 +214,12 @@ def build_reconciliation() -> dict[str, Any]:
                 for flag in prior_flags
             )
         ),
-        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= 825,
+        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= 832,
     }
 
     summary = ReconciliationSummary(
-        part="DCCCXXVI",
-        decimal=826,
+        part="DCCCXXXIII",
+        decimal=833,
         current_result_max_decimal=current_max_decimal,
         dcccxiv_markdown_count=len(dcccxiv_markdowns),
         duplicate_part_surface_count=max(0, len(dcccxiv_markdowns) - 1),
@@ -242,7 +242,7 @@ def build_reconciliation() -> dict[str, Any]:
             "sharpened_tension": "DCCCXI",
             "correction": "DCCCXIV",
             "master_update": "DCCCXV",
-            "reconciliation": "DCCCXXVI",
+            "reconciliation": "DCCCXXXIII",
         },
         "dcccxiv_surfaces": {
             "markdown_files": dcccxiv_markdowns,

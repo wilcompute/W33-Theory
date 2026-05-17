@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from verify_dcccxxvi_post_audit_reconciliation_ledger import (  # noqa: E402
+from verify_dcccxxxiii_post_audit_reconciliation_ledger import (  # noqa: E402
     OUT_PATH,
     build_reconciliation,
     write_reconciliation,
@@ -20,9 +20,9 @@ def test_reconciliation_detects_post_audit_part_collision() -> None:
     payload = build_reconciliation()
     summary = payload["summary"]
 
-    assert summary["part"] == "DCCCXXVI"
-    assert summary["decimal"] == 826
-    assert summary["current_result_max_decimal"] >= 825
+    assert summary["part"] == "DCCCXXXIII"
+    assert summary["decimal"] == 833
+    assert summary["current_result_max_decimal"] >= 832
     assert summary["dcccxiv_markdown_count"] == 2
     assert summary["duplicate_part_surface_count"] == 1
     assert summary["dcccxiv_result_count"] == 1
@@ -62,7 +62,7 @@ def test_reconciliation_flags_are_explicit_and_non_destructive() -> None:
         "sharpened_tension": "DCCCXI",
         "correction": "DCCCXIV",
         "master_update": "DCCCXV",
-        "reconciliation": "DCCCXXVI",
+        "reconciliation": "DCCCXXXIII",
     }
     assert payload["summary"]["all_identities_hold"] is True
 
@@ -75,7 +75,7 @@ def test_public_index_exposes_post_audit_reconciliation() -> None:
     assert "Post-Audit Reconciliation Ledger" in index
     assert "<code>DCCCXIV</code>" in index
     assert "<code>DCCCXV</code>" in index
-    assert "<code>DCCCXXVI</code>" in index
+    assert "<code>DCCCXXXIII</code>" in index
     assert "<code>0.93 sigma</code>" in index
 
 
@@ -84,6 +84,6 @@ def test_write_and_reload() -> None:
     assert out == OUT_PATH
 
     data = json.loads(out.read_text(encoding="utf-8"))
-    assert data["summary"]["part"] == "DCCCXXVI"
+    assert data["summary"]["part"] == "DCCCXXXIII"
     assert data["summary"]["all_identities_hold"] is True
     assert data["status"].startswith("RECONCILED")
