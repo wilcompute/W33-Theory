@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "q": 3,
+    "SM_dim": 12,
+    "SM_dim_eq_codec": true,
+    "decomposition": [
+      8,
+      3,
+      1
+    ],
+    "octahedron_correspondence_rows": 5,
+    "all_identities_hold": true
+  },
+  "sm_gauge_decomposition": {
+    "SU(3)_C": {
+      "dim": 8,
+      "gauge_bosons": "8 gluons",
+      "w33_reading": "2^q = octahedron F = tomotope cells = rank E_8 = sign-orientation patterns of 3 axes",
+      "octahedron_correspondence": "8 octahedron faces (one per +/- choice of 3 axes)"
+    },
+    "SU(2)_L": {
+      "dim": 3,
+      "gauge_bosons": "W^+, W^-, Z",
+      "w33_reading": "q = Master Equation root = 3 spatial bivector axes (B_23, B_31, B_12)",
+      "octahedron_correspondence": "3 antipodal pairs of octahedron vertices"
+    },
+    "U(1)_Y": {
+      "dim": 1,
+      "gauge_bosons": "B-boson (after EW symmetry breaking: photon)",
+      "w33_reading": "identity / zero mode",
+      "octahedron_correspondence": "ground state"
+    }
+  },
+  "octahedron_to_sm_correspondence": [
+    {
+      "octahedron_data": "6 signed bivectors {+/- B_23, +/- B_31, +/- B_12}",
+      "sm_data": "12 gauge bosons (decomposed via faces, axes, identity)",
+      "interpretation": "DCCXIV codec = SM gauge content"
+    },
+    {
+      "octahedron_data": "8 faces (sign patterns of 3 axes)",
+      "sm_data": "8 gluons (SU(3)_C adjoint)",
+      "interpretation": "2^q sign patterns = colour octet"
+    },
+    {
+      "octahedron_data": "3 antipodal pairs (3 axes)",
+      "sm_data": "3 weak bosons (SU(2)_L adjoint)",
+      "interpretation": "q axes = isospin triplet"
+    },
+    {
+      "octahedron_data": "1 identity (vacuum)",
+      "sm_data": "1 photon (U(1)_em)",
+      "interpretation": "ground state = electromagnetic field"
+    },
+    {
+      "octahedron_data": "12 edges (codec)",
+      "sm_data": "12 gauge boson states total",
+      "interpretation": "8 + 3 + 1 = k = codec"
+    }
+  ],
+  "chain_lift_matter_antimatter": {
+    "H_1": 81,
+    "H_1_prime": 162,
+    "interpretation": {
+      "81": "matter sector (H_1 = Z^81 in W(3,3))",
+      "162": "matter + antimatter doublet (dual-number lift)",
+      "N_nilpotent": "CPT involution N^2 = 0"
+    },
+    "exact_sequence": "0 -> 81 -> 162 -> 81 -> 0",
+    "sm_reading": "The chain lift represents matter+antimatter doublet under CPT.  N: matter -> antimatter with N^2 = 0 because CPT^2 is identity on observable states but its action on the internal sector squares to zero (a Z_2 grading)."
+  },
+  "w33_as_universal_quantum_computer": {
+    "register_file": {
+      "size": 81,
+      "type": "logical qutrits",
+      "w33_role": "H_1 = q^(q+1) = protected matter sector"
+    },
+    "instruction_set": {
+      "size": 12,
+      "type": "SU(3) x SU(2) x U(1) gauge bosons",
+      "w33_role": "12 = k = codec = local edge channels"
+    },
+    "bus_width": {
+      "size": 240,
+      "type": "physical CSS edges",
+      "w33_role": "E = single-direction edge count"
+    },
+    "directed_carrier": {
+      "size": 480,
+      "type": "Hashimoto / fusion attempt slots",
+      "w33_role": "C_1' = dual-number chain lift (DCCLXVIII)"
+    },
+    "clock": {
+      "size": 6,
+      "type": "closure-clock nilpotent levels",
+      "w33_role": "q! = nilpotence index of G = (1/2)S (DCCXL)"
+    },
+    "CPT_involution": {
+      "operator": "N (square zero)",
+      "w33_role": "N^2 = 0 on H_1' = 162; matter <-> antimatter"
+    },
+    "self_closure": {
+      "property": "axiom = derivation",
+      "w33_role": "Master Equation q! = 2q is its own consequence (DCCXIX)"
+    }
+  },
+  "identities": {
+    "SU3_dim_8": true,
+    "SU2_dim_3": true,
+    "U1_dim_1": true,
+    "SM_total_dim_eq_codec": true,
+    "8_plus_3_plus_1_eq_12": true,
+    "8_eq_2_to_q": true,
+    "8_eq_octahedron_F": true,
+    "3_eq_q": true,
+    "3_eq_octahedron_axes": true,
+    "1_eq_identity": true,
+    "H_1_eq_q_to_qp1": true,
+    "H_1_prime_eq_2_H_1": true,
+    "octahedron_correspondence_5_rows": true,
+    "register_file_eq_H_1": true,
+    "instruction_set_eq_k": true,
+    "clock_eq_q_factorial": true
+  },
+  "theorem": "SM Gauge Codec Theorem.  The Standard Model gauge group G_SM = SU(3)_C x SU(2)_L x U(1)_Y has dimension 8 + 3 + 1 = 12 = k = the W(3,3) local codec.  Each summand has a clean octahedral correspondence:\n  8 gluons (SU(3)_C)   <->  8 octahedron faces (= 2^q sign-orientation patterns of the 3 spatial bivector axes)\n  3 W-bosons (SU(2)_L) <->  3 octahedron axes (B_23, B_31, B_12)\n  1 photon (U(1)_em)   <->  1 ground-state / identity.\nThe DCCLXVIII chain-lift 0 -> 81 -> 162 -> 81 -> 0 with N^2 = 0 represents the matter + antimatter doublet under CPT.  The complete W(3,3) substrate is therefore a UNIVERSAL QUANTUM COMPUTER with: register file = 81 logical qutrits (H_1), instruction set = SM gauge group (12 = k codec), bus width = 240 physical edges (CSS code), clock = 6-level closure-clock (q! nilpotence), CPT involution = N^2 = 0, and self-closure = axiom-is-its-own-consequence (DCCXIX).  Physics = quantum computation on the W(3,3) substrate with SM gauge group as the instruction set.",
+  "one_line": "SM gauge dim 8 + 3 + 1 = k = local codec; 8 gluons = octahedron faces, 3 W-bosons = octahedron axes, 1 photon = identity; W(3,3) = universal quantum computer with SM as instruction set.",
+  "honesty_boundary": "The SM gauge group structure SU(3) x SU(2) x U(1) with dimensions 8, 3, 1 is the experimentally established Standard Model.  The octahedron <-> SM correspondence is the natural arithmetic identification at q = 3.  This part does NOT derive the Yang-Mills equations, the Higgs mechanism, or specific gauge coupling values; it documents the substrate-level dimensional alignment between the W(3,3) local codec (DCCXVII) and the SM gauge content.  The 'universal quantum computer' framing is structural: each W(3,3) datum is identified with a standard QC component, not a derivation of computational dynamics."
+}
