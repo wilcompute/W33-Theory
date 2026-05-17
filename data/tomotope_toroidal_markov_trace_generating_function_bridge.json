@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "checked_max_power": 12,
+    "numerator_t1_num": 1,
+    "numerator_t1_den": 1,
+    "numerator_t2_num": 21,
+    "numerator_t2_den": 16,
+    "numerator_t3_num": -399,
+    "numerator_t3_den": 256,
+    "numerator_t4_num": -49,
+    "numerator_t4_den": 512,
+    "denominator_d0_num": 1,
+    "denominator_d0_den": 1,
+    "denominator_d1_num": -1,
+    "denominator_d1_den": 1,
+    "denominator_d2_num": -21,
+    "denominator_d2_den": 64,
+    "denominator_d3_num": 161,
+    "denominator_d3_den": 512,
+    "denominator_d4_num": 7,
+    "denominator_d4_den": 512,
+    "all_identities_hold": true
+  },
+  "trace_generating_function": {
+    "definition": "T(z)=sum_{n>=1} Tr(P^n) z^n",
+    "identity_from_moment_gf": "T(z)=z/(1-z)+(M(z)-6)",
+    "numerator": {
+      "t1": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "t2": {
+        "numerator": 21,
+        "denominator": 16
+      },
+      "t3": {
+        "numerator": -399,
+        "denominator": 256
+      },
+      "t4": {
+        "numerator": -49,
+        "denominator": 512
+      }
+    },
+    "denominator": {
+      "d0": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "d1": {
+        "numerator": -1,
+        "denominator": 1
+      },
+      "d2": {
+        "numerator": -21,
+        "denominator": 64
+      },
+      "d3": {
+        "numerator": 161,
+        "denominator": 512
+      },
+      "d4": {
+        "numerator": 7,
+        "denominator": 512
+      }
+    }
+  },
+  "identities": {
+    "upstream_moment_gf_identities_hold": true,
+    "upstream_recurrence_identities_hold": true,
+    "trace_rational_series_matches_coefficients": true,
+    "trace_linear_term_is_one": true
+  },
+  "notes": "The full trace ladder of the 8-state chain is encoded by one exact rational series derived from the nontrivial packet generating function."
+}

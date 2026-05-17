@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "active_cycle_size": 7,
+    "nontrivial_mode_count": 6,
+    "affine_offset_num": 1,
+    "affine_offset_den": 8,
+    "cosine_scale_num": 3,
+    "cosine_scale_den": 4,
+    "nontrivial_sum_num": 0,
+    "nontrivial_sum_den": 1,
+    "nontrivial_square_sum_num": 21,
+    "nontrivial_square_sum_den": 16,
+    "all_identities_hold": true
+  },
+  "closed_form": {
+    "formula": "lambda_k = 1/8 + (3/4) cos(2*pi*k/7), k=1..6",
+    "nontrivial_modes_numeric": [
+      0.5926173513940503,
+      -0.04189070046723575,
+      -0.5507266509268143,
+      -0.5507266509268144,
+      -0.04189070046723595,
+      0.59261735139405
+    ],
+    "special_modes": [
+      1.0,
+      0.0
+    ]
+  },
+  "trigonometric_identities": {
+    "sum_cos_2pi_k_over_7_k_1_to_6": "-1",
+    "sum_cos2_2pi_k_over_7_k_1_to_6": "5/2"
+  },
+  "identities": {
+    "nontrivial_sum_is_zero": true,
+    "trace_p_is_one": true,
+    "nontrivial_square_sum_is_21_over_16": true,
+    "trace_p2_is_37_over_16": true,
+    "trace_p_matches_dci": true,
+    "trace_p2_matches_dci": true,
+    "nontrivial_square_sum_matches_dci": true,
+    "float_sum_consistent_with_exact": true,
+    "float_square_sum_consistent_with_exact": true
+  },
+  "notes": "Fourier bridge: the six nontrivial Markov modes on the active 7-cycle are an affine cosine packet. Their exact square-sum is 21/16, which is the spectral source of the 21->42->168 transport ladder."
+}

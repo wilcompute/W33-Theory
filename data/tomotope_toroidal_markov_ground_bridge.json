@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "state_count": 8,
+    "active_state_count": 7,
+    "packet_total_weight": 192,
+    "stationary_active_mass_num": 7,
+    "stationary_active_mass_den": 8,
+    "stationary_ground_mass_num": 1,
+    "stationary_ground_mass_den": 8,
+    "stationary_active_weight": 168,
+    "stationary_ground_weight": 24,
+    "all_identities_hold": true
+  },
+  "states": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "S1",
+    "S2",
+    "G"
+  ],
+  "transition_matrix": [
+    [
+      "1/8",
+      "3/8",
+      "0/1",
+      "0/1",
+      "0/1",
+      "0/1",
+      "3/8",
+      "1/8"
+    ],
+    [
+      "3/8",
+      "1/8",
+      "3/8",
+      "0/1",
+      "0/1",
+      "0/1",
+      "0/1",
+      "1/8"
+    ],
+    [
+      "0/1",
+      "3/8",
+      "1/8",
+      "3/8",
+      "0/1",
+      "0/1",
+      "0/1",
+      "1/8"
+    ],
+    [
+      "0/1",
+      "0/1",
+      "3/8",
+      "1/8",
+      "3/8",
+      "0/1",
+      "0/1",
+      "1/8"
+    ],
+    [
+      "0/1",
+      "0/1",
+      "0/1",
+      "3/8",
+      "1/8",
+      "3/8",
+      "0/1",
+      "1/8"
+    ],
+    [
+      "0/1",
+      "0/1",
+      "0/1",
+      "0/1",
+      "3/8",
+      "1/8",
+      "3/8",
+      "1/8"
+    ],
+    [
+      "3/8",
+      "0/1",
+      "0/1",
+      "0/1",
+      "0/1",
+      "3/8",
+      "1/8",
+      "1/8"
+    ],
+    [
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8"
+    ]
+  ],
+  "row_sums": [
+    "1/1",
+    "1/1",
+    "1/1",
+    "1/1",
+    "1/1",
+    "1/1",
+    "1/1",
+    "1/1"
+  ],
+  "stationary_distribution": {
+    "C1": "1/8",
+    "C2": "1/8",
+    "C3": "1/8",
+    "C4": "1/8",
+    "C5": "1/8",
+    "S1": "1/8",
+    "S2": "1/8",
+    "G": "1/8"
+  },
+  "identities": {
+    "all_rows_sum_to_one": true,
+    "stationary_vector_fixed": true,
+    "active_mass_is_7_over_8": true,
+    "ground_mass_is_1_over_8": true,
+    "weights_are_168_and_24": true,
+    "active_weight_matches_packet_bridge": true,
+    "ground_weight_matches_packet_bridge": true
+  },
+  "notes": "The 7+1 toroidal/tomotope split is realized dynamically: in stationarity the chain carries 7/8 active mass and 1/8 ground mass, reproducing 168/24 out of total packet weight 192."
+}

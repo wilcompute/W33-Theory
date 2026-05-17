@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "state_count": 8,
+    "trace_p_num": 1,
+    "trace_p_den": 1,
+    "trace_p2_num": 37,
+    "trace_p2_den": 16,
+    "nontrivial_second_moment_num": 21,
+    "nontrivial_second_moment_den": 16,
+    "scaled_unoriented_transport": 21,
+    "scaled_oriented_transport": 42,
+    "stabilizer_weighted_transport": 168,
+    "all_identities_hold": true
+  },
+  "identities": {
+    "trace_p_is_one": true,
+    "trace_p2_is_37_over_16": true,
+    "nontrivial_second_moment_is_21_over_16": true,
+    "scaled_unoriented_matches_21": true,
+    "scaled_unoriented_matches_step_count": true,
+    "scaled_oriented_matches_42": true,
+    "scaled_oriented_matches_step_count": true,
+    "stabilizer_weighted_matches_168": true,
+    "stabilizer_weighted_matches_active_packet": true
+  },
+  "notes": "Exact spectral-moment bridge: Tr(P^2)-1 = 21/16 is the nontrivial mode-square packet. Scaling by 16 gives 21 (unoriented transports), doubling gives 42 (oriented transports), and stabilizer weighting by 4 gives 168 (active toroidal/tomotope packet weight)."
+}

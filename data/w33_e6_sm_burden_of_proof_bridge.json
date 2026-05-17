@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "gauge_algebra_dimension": 12,
+    "harmonic_dimension": 81,
+    "generation_count": 3,
+    "e6_fundamental_dimension": 27,
+    "so10_plus_u1_branch_sum": 27,
+    "all_identities_hold": true
+  },
+  "decomposition": {
+    "h1": 81,
+    "three_times_27": 81,
+    "e6_fundamental": 27,
+    "so10_u1_branch": {
+      "16": 16,
+      "10": 10,
+      "1": 1,
+      "sum": 27
+    }
+  },
+  "anomalies_per_generation": {
+    "su3_sq_u1": {
+      "num": 0,
+      "den": 1
+    },
+    "su2_sq_u1": {
+      "num": 0,
+      "den": 1
+    },
+    "u1_cubed": {
+      "num": 0,
+      "den": 1
+    },
+    "grav_sq_u1": {
+      "num": 0,
+      "den": 1
+    }
+  },
+  "running_summary": {
+    "base_x": {
+      "num": 3,
+      "den": 13
+    },
+    "base_kemeny": {
+      "num": 13,
+      "den": 3
+    },
+    "invariant": {
+      "num": 1,
+      "den": 1
+    }
+  },
+  "markov_closure": {
+    "algebraic_cubic": "512*x^3 - 168*x - 7",
+    "recurrence": "m_{n+3} = (21/64) m_{n+1} + (7/512) m_n",
+    "m2": {
+      "num": 21,
+      "den": 16
+    }
+  },
+  "identities": {
+    "gauge_dimension_is_12": true,
+    "h1_is_three_e6_fundamentals": true,
+    "e6_branch_27_equals_16_plus_10_plus_1": true,
+    "su3_sq_u1_anomaly_cancels": true,
+    "su2_sq_u1_anomaly_cancels": true,
+    "u1_cubed_anomaly_cancels": true,
+    "grav_sq_u1_anomaly_cancels": true,
+    "running_reciprocity_identities_hold": true,
+    "running_invariant_is_one": true,
+    "markov_algebraic_identities_hold": true,
+    "markov_recurrence_identities_hold": true
+  },
+  "boundary_note": "This certificate is exact for finite arithmetic, anomaly sums, running invariant, and Markov closure. A full symbolic branching-functor proof remains a separate target."
+}

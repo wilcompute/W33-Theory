@@ -89,6 +89,15 @@ SUITES: dict[str, list[str]] = {
         "tests/test_reproduce_w33_core.py",
         "tests/test_dcclxxii_formula_regime_registry_bridge.py",
     ],
+    "markov-e6-burden": [
+        "tests/test_tomotope_toroidal_markov_algebraic_closure_bridge.py",
+        "tests/test_tomotope_toroidal_markov_cubic_recurrence_bridge.py",
+        "tests/test_tomotope_toroidal_markov_generating_function_bridge.py",
+        "tests/test_tomotope_toroidal_markov_trace_generating_function_bridge.py",
+        "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py",
+        "tests/test_w33_e6_so10_charge_moment_bridge.py",
+        "tests/test_w33_e6_sm_burden_of_proof_bridge.py",
+    ],
     "octahedral-dynamics": [
         "tests/test_dccl_octahedral_laplacian_heat_kernel_bridge.py",
         "tests/test_dccli_octahedral_spectral_projector_semigroup_bridge.py",

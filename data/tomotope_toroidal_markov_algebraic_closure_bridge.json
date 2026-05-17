@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "polynomial_degree": 3,
+    "distinct_nontrivial_roots": 3,
+    "nontrivial_multiplicity_per_root": 2,
+    "weighted_sum_num": 0,
+    "weighted_sum_den": 1,
+    "weighted_square_sum_num": 21,
+    "weighted_square_sum_den": 16,
+    "all_identities_hold": true
+  },
+  "cubic": {
+    "polynomial": "512*x^3 - 168*x - 7",
+    "factorization_over_rationals": "irreducible_over_Q",
+    "roots_numeric": [
+      -0.5507266509268144,
+      -0.0418907004672358,
+      0.5926173513940501
+    ],
+    "nontrivial_mode_formula": "lambda_k = 1/8 + (3/4) cos(2*pi*k/7), k=1..6"
+  },
+  "identities": {
+    "upstream_fourier_identities_hold": true,
+    "upstream_moment_identities_hold": true,
+    "all_six_modes_annihilate_cubic": true,
+    "nontrivial_weighted_sum_is_zero": true,
+    "nontrivial_weighted_square_sum_is_21_over_16": true,
+    "nontrivial_weighted_square_sum_matches_dci": true,
+    "three_distinct_real_roots": true
+  },
+  "notes": "The DCII six-mode packet closes algebraically by a cubic with three real roots, each doubled by k<->(7-k) symmetry. This recovers the DCI nontrivial square-sum 21/16 exactly, without floating-point assumptions."
+}

@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "generations": 3,
+    "one_gen_m0": 27,
+    "one_gen_m1": 0,
+    "one_gen_m2": 72,
+    "one_gen_m3": 0,
+    "three_gen_m0": 81,
+    "three_gen_m1": 0,
+    "three_gen_m2": 216,
+    "three_gen_m3": 0,
+    "all_identities_hold": true
+  },
+  "branching_packet": {
+    "decomposition": [
+      {
+        "dim": 16,
+        "u1_charge": -1
+      },
+      {
+        "dim": 10,
+        "u1_charge": 2
+      },
+      {
+        "dim": 1,
+        "u1_charge": -4
+      }
+    ],
+    "label": "27 = 16_{-1} + 10_{+2} + 1_{-4}"
+  },
+  "moments": {
+    "one_generation": {
+      "m0": 27,
+      "m1": 0,
+      "m2": 72,
+      "m3": 0
+    },
+    "three_generations": {
+      "m0": 81,
+      "m1": 0,
+      "m2": 216,
+      "m3": 0
+    }
+  },
+  "root_split": {
+    "e6_roots": 72,
+    "a2_roots": 6,
+    "g1_roots": 81,
+    "g2_roots": 81,
+    "total": 240,
+    "identity": "240 = 72 + 6 + 81 + 81"
+  },
+  "identities": {
+    "branching_dimension_is_27": true,
+    "u1_linear_moment_cancels": true,
+    "u1_cubic_moment_cancels": true,
+    "quadratic_moment_is_72": true,
+    "three_generation_dimension_is_81": true,
+    "three_generation_linear_moment_cancels": true,
+    "three_generation_cubic_moment_cancels": true,
+    "three_generation_quadratic_moment_is_216": true,
+    "m2_matches_e6_root_count": true,
+    "m0_three_gen_matches_g1_sector": true,
+    "root_split_is_72_6_81_81": true
+  },
+  "notes": "Charge moments provide an exact arithmetic bridge from the SO(10)xU(1) branching packet to the root/matter count surfaces used in the W33-E8 chain."
+}

@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "checked_max_power": 12,
+    "recurrence_coeff_a_num": 21,
+    "recurrence_coeff_a_den": 64,
+    "recurrence_coeff_b_num": 7,
+    "recurrence_coeff_b_den": 512,
+    "m0_num": 6,
+    "m0_den": 1,
+    "m1_num": 0,
+    "m1_den": 1,
+    "m2_num": 21,
+    "m2_den": 16,
+    "all_identities_hold": true
+  },
+  "recurrence": {
+    "equation": "m_{n+3} = (21/64) m_{n+1} + (7/512) m_n",
+    "coefficients": {
+      "a": {
+        "numerator": 21,
+        "denominator": 64
+      },
+      "b": {
+        "numerator": 7,
+        "denominator": 512
+      }
+    }
+  },
+  "moments": [
+    {
+      "n": 0,
+      "numerator": 6,
+      "denominator": 1
+    },
+    {
+      "n": 1,
+      "numerator": 0,
+      "denominator": 1
+    },
+    {
+      "n": 2,
+      "numerator": 21,
+      "denominator": 16
+    },
+    {
+      "n": 3,
+      "numerator": 21,
+      "denominator": 256
+    },
+    {
+      "n": 4,
+      "numerator": 441,
+      "denominator": 1024
+    },
+    {
+      "n": 5,
+      "numerator": 735,
+      "denominator": 16384
+    },
+    {
+      "n": 6,
+      "numerator": 18669,
+      "denominator": 131072
+    },
+    {
+      "n": 7,
+      "numerator": 21609,
+      "denominator": 1048576
+    },
+    {
+      "n": 8,
+      "numerator": 198597,
+      "denominator": 4194304
+    },
+    {
+      "n": 9,
+      "numerator": 73059,
+      "denominator": 8388608
+    },
+    {
+      "n": 10,
+      "numerator": 8492337,
+      "denominator": 536870912
+    },
+    {
+      "n": 11,
+      "numerator": 7527135,
+      "denominator": 2147483648
+    },
+    {
+      "n": 12,
+      "numerator": 182430381,
+      "denominator": 34359738368
+    }
+  ],
+  "trace_rows": [
+    {
+      "n": 1,
+      "trace_pn": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 1,
+        "denominator": 1
+      }
+    },
+    {
+      "n": 2,
+      "trace_pn": {
+        "numerator": 37,
+        "denominator": 16
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 37,
+        "denominator": 16
+      }
+    },
+    {
+      "n": 3,
+      "trace_pn": {
+        "numerator": 277,
+        "denominator": 256
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 277,
+        "denominator": 256
+      }
+    },
+    {
+      "n": 4,
+      "trace_pn": {
+        "numerator": 1465,
+        "denominator": 1024
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 1465,
+        "denominator": 1024
+      }
+    },
+    {
+      "n": 5,
+      "trace_pn": {
+        "numerator": 17119,
+        "denominator": 16384
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 17119,
+        "denominator": 16384
+      }
+    },
+    {
+      "n": 6,
+      "trace_pn": {
+        "numerator": 149741,
+        "denominator": 131072
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 149741,
+        "denominator": 131072
+      }
+    },
+    {
+      "n": 7,
+      "trace_pn": {
+        "numerator": 1070185,
+        "denominator": 1048576
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 1070185,
+        "denominator": 1048576
+      }
+    },
+    {
+      "n": 8,
+      "trace_pn": {
+        "numerator": 4392901,
+        "denominator": 4194304
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 4392901,
+        "denominator": 4194304
+      }
+    },
+    {
+      "n": 9,
+      "trace_pn": {
+        "numerator": 8461667,
+        "denominator": 8388608
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 8461667,
+        "denominator": 8388608
+      }
+    },
+    {
+      "n": 10,
+      "trace_pn": {
+        "numerator": 545363249,
+        "denominator": 536870912
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 545363249,
+        "denominator": 536870912
+      }
+    },
+    {
+      "n": 11,
+      "trace_pn": {
+        "numerator": 2155010783,
+        "denominator": 2147483648
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 2155010783,
+        "denominator": 2147483648
+      }
+    },
+    {
+      "n": 12,
+      "trace_pn": {
+        "numerator": 34542168749,
+        "denominator": 34359738368
+      },
+      "one_plus_nontrivial_moment": {
+        "numerator": 34542168749,
+        "denominator": 34359738368
+      }
+    }
+  ],
+  "identities": {
+    "upstream_algebraic_identities_hold": true,
+    "initial_m0_is_6": true,
+    "initial_m1_is_0": true,
+    "initial_m2_is_21_over_16": true,
+    "recurrence_matches_symbolic_moments": true,
+    "trace_equals_one_plus_nontrivial_moment": true
+  },
+  "notes": "The cubic mode closure upgrades to a finite exact recurrence for all nontrivial power moments, and those moments reconstruct Markov traces via Tr(P^n)=1+m_n for n>=1."
+}

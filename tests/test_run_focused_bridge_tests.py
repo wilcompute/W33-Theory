@@ -24,6 +24,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
         "pascal-ouroboros",
         "selection-tower",
         "audit-core",
+        "markov-e6-burden",
         "octahedral-dynamics",
     } <= set(SUITES)
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
@@ -37,6 +38,11 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dcclviii_universal_overdetermination.py" in SUITES["selection-tower"]
     assert "tests/test_reproduce_w33_core.py" in SUITES["audit-core"]
     assert "tests/test_dcclxxii_formula_regime_registry_bridge.py" in SUITES["audit-core"]
+    assert (
+        "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py"
+        in SUITES["markov-e6-burden"]
+    )
+    assert "tests/test_w33_e6_sm_burden_of_proof_bridge.py" in SUITES["markov-e6-burden"]
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in SUITES["octahedral-dynamics"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in SUITES["octahedral-dynamics"]

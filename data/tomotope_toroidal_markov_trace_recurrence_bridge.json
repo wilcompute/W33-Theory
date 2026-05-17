@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "checked_max_power": 16,
+    "coeff_r1_num": 1,
+    "coeff_r1_den": 1,
+    "coeff_r2_num": 21,
+    "coeff_r2_den": 64,
+    "coeff_r3_num": -161,
+    "coeff_r3_den": 512,
+    "coeff_r4_num": -7,
+    "coeff_r4_den": 512,
+    "seed_t1_num": 1,
+    "seed_t1_den": 1,
+    "seed_t2_num": 37,
+    "seed_t2_den": 16,
+    "seed_t3_num": 277,
+    "seed_t3_den": 256,
+    "seed_t4_num": 1465,
+    "seed_t4_den": 1024,
+    "all_identities_hold": true
+  },
+  "recurrence": {
+    "equation": "t_n = t_{n-1} + (21/64)t_{n-2} - (161/512)t_{n-3} - (7/512)t_{n-4}, n>=5",
+    "coefficients": {
+      "r1": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "r2": {
+        "numerator": 21,
+        "denominator": 64
+      },
+      "r3": {
+        "numerator": -161,
+        "denominator": 512
+      },
+      "r4": {
+        "numerator": -7,
+        "denominator": 512
+      }
+    }
+  },
+  "trace_seeds": {
+    "t1": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "t2": {
+      "numerator": 37,
+      "denominator": 16
+    },
+    "t3": {
+      "numerator": 277,
+      "denominator": 256
+    },
+    "t4": {
+      "numerator": 1465,
+      "denominator": 1024
+    }
+  },
+  "identities": {
+    "upstream_trace_gf_identities_hold": true,
+    "denominator_shape_matches_expected": true,
+    "trace_recurrence_matches_matrix_traces": true
+  },
+  "notes": "The denominator of the exact trace generating function yields a closed order-4 recurrence for Tr(P^n), verified against exact matrix-power traces."
+}
