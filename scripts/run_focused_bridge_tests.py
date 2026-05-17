@@ -28,6 +28,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_qec_ouroboros_stabilizer_loop_ccccxvii.py",
         "tests/test_fusion_control_scheduler_splice_ccccxxvi.py",
         "tests/test_photonic_harmonic_tqc_bus_ccccxviii.py",
+        "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "dcc-weld": [
         "tests/test_dccx_holonomy_selector_carrier_weld_bridge.py",
@@ -93,6 +94,8 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py",
         "tests/test_dccclxxi_frontier_result_ledger_repair.py",
         "tests/test_w33_for_everyone_consistency_bridge.py",
+        "tests/test_dcmi_sub_distinction_boundary_audit.py",
+        "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "markov-e6-burden": [
         "tests/test_tomotope_toroidal_markov_algebraic_closure_bridge.py",

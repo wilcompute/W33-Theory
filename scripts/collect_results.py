@@ -23,6 +23,11 @@ PART_DIRS = [
 
 
 def roman_to_int(text: str) -> int:
+    text = text.upper()
+    if text.startswith("DCM"):
+        suffix = text[3:]
+        return 900 + (roman_to_int(suffix) if suffix else 0)
+
     roman_map = {
         "I": 1,
         "V": 5,
@@ -34,7 +39,6 @@ def roman_to_int(text: str) -> int:
     }
     total = 0
     index = 0
-    text = text.upper()
     while index < len(text):
         current = roman_map.get(text[index], 0)
         nxt = roman_map.get(text[index + 1], 0) if index + 1 < len(text) else 0

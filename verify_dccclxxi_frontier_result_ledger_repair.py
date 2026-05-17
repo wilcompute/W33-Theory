@@ -108,6 +108,10 @@ def _result_payloads() -> list[tuple[Path, dict[str, Any]]]:
 
 
 def _roman_to_int(text: str) -> int:
+    if text.startswith("DCM"):
+        suffix = text[3:]
+        return 900 + (_roman_to_int(suffix) if suffix else 0)
+
     values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     total = 0
     previous = 0
@@ -273,7 +277,8 @@ def build_reconciliation() -> dict[str, Any]:
             "files": invalid_result_json_files,
             "message": (
                 "Post-828 files with a *_results.json suffix must contain "
-                "machine-readable JSON. The theorem surface reaches DCCCLXX and "
+                "machine-readable JSON. The theorem surface reaches "
+                f"{current_max_decimal} and "
                 "valid result JSONs currently reach "
                 f"{valid_result_max_decimal}."
             ),
@@ -334,7 +339,7 @@ def build_reconciliation() -> dict[str, Any]:
         ),
         "ledger_reaches_closure_burst_after_audit": current_max_decimal >= FRONTIER_END,
         "post_828_result_json_hygiene_gap_detected": (
-            valid_result_max_decimal == FRONTIER_END
+            valid_result_max_decimal >= FRONTIER_END
             and not invalid_result_json_files
             and not missing_result_decimals
         ),

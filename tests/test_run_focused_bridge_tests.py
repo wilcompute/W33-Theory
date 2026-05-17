@@ -29,6 +29,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     } <= set(SUITES)
     assert "tests/test_dccxv_photonic_fusion_syndrome_qec_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dcclxxv_photonic_retry_closure_kernel_bridge.py" in SUITES["photonic-qec"]
+    assert "tests/test_dcmii_projective_screen_bulk_qec_bridge.py" in SUITES["photonic-qec"]
     assert "tests/test_dccxl_closure_jordan_resolvent_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxliv_nilpotent_action_variation_bridge.py" in SUITES["closure-clock"]
     assert "tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py" in SUITES["closure-clock"]
@@ -43,6 +44,8 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py" in SUITES["audit-core"]
     assert "tests/test_dccclxxi_frontier_result_ledger_repair.py" in SUITES["audit-core"]
     assert "tests/test_w33_for_everyone_consistency_bridge.py" in SUITES["audit-core"]
+    assert "tests/test_dcmi_sub_distinction_boundary_audit.py" in SUITES["audit-core"]
+    assert "tests/test_dcmii_projective_screen_bulk_qec_bridge.py" in SUITES["audit-core"]
     assert (
         "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py"
         in SUITES["markov-e6-burden"]
@@ -73,6 +76,8 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dcccxiv_phenomenology_claim_ledger_audit.py" in paths
     assert "tests/test_dccclxxi_frontier_result_ledger_repair.py" in paths
     assert "tests/test_w33_for_everyone_consistency_bridge.py" in paths
+    assert "tests/test_dcmi_sub_distinction_boundary_audit.py" in paths
+    assert "tests/test_dcmii_projective_screen_bulk_qec_bridge.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
     assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths

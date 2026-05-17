@@ -11,9 +11,11 @@ if str(ROOT) not in sys.path:
 
 from verify_dccclxxi_frontier_result_ledger_repair import (  # noqa: E402
     OUT_PATH,
+    _part_decimal_from_name,
     build_reconciliation,
     write_reconciliation,
 )
+from scripts.collect_results import roman_to_int  # noqa: E402
 
 
 def test_frontier_repair_moves_audit_out_of_dcccxxxviii() -> None:
@@ -22,8 +24,8 @@ def test_frontier_repair_moves_audit_out_of_dcccxxxviii() -> None:
 
     assert summary["part"] == "DCCCLXXI"
     assert summary["decimal"] == 871
-    assert summary["current_part_surface_max_decimal"] == 872
-    assert summary["valid_result_max_decimal"] == 870
+    assert summary["current_part_surface_max_decimal"] == 902
+    assert summary["valid_result_max_decimal"] == 902
     assert summary["invalid_result_json_count"] == 0
     assert summary["missing_result_json_count"] == 0
     assert summary["duplicate_frontier_part_count"] == 0
@@ -32,6 +34,14 @@ def test_frontier_repair_moves_audit_out_of_dcccxxxviii() -> None:
     assert summary["dcccxiv_result_count"] == 1
     assert payload["identities"]["duplicate_dcccxiv_markdown_detected"] is True
     assert payload["identities"]["single_dcccxiv_result_json_detected"] is True
+
+
+def test_project_dcm_numbering_convention_is_visible_to_scanners() -> None:
+    assert roman_to_int("DCM") == 900
+    assert roman_to_int("DCMI") == 901
+    assert roman_to_int("DCMII") == 902
+    assert _part_decimal_from_name(Path("PART_DCM_THOUSANDTH_DOOR.md")) == 900
+    assert _part_decimal_from_name(Path("PART_DCMII_PROJECTIVE_SCREEN_BULK_QEC_BRIDGE.md")) == 902
 
 
 def test_top_sector_chain_is_resolved_without_erasing_old_audit() -> None:
