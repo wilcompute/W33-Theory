@@ -1,8 +1,8 @@
-# Part DCCCXXXIII - Post-Audit Reconciliation Ledger
+# Part DCCCXXXVIII - Post-Audit Reconciliation Ledger
 
-**Verifier:** `verify_dcccxxxiii_post_audit_reconciliation_ledger.py`
-**Tests:** `tests/test_dcccxxxiii_post_audit_reconciliation_ledger.py`
-**Data:** `data/dcccxxxiii_post_audit_reconciliation_ledger.json`
+**Verifier:** `verify_dcccxxxviii_post_audit_reconciliation_ledger.py`
+**Tests:** `tests/test_dcccxxxviii_post_audit_reconciliation_ledger.py`
+**Data:** `data/dcccxxxviii_post_audit_reconciliation_ledger.json`
 
 ---
 
@@ -15,7 +15,7 @@ claimed a 1-sigma top-mass match while carrying larger sigma residuals.
 Immediately after that audit, the GitHub-side update added a second DCCCXIV:
 the graviton-sector correction to the top pole mass. It then added DCCCXV as
 the master verification update. The later GitHub closure and ontology bursts
-then occupied DCCCXVI-DCCCXXXII. DCCCXXXIII reconciles that live state without
+then occupied DCCCXVI-DCCCXXXVII. DCCCXXXVIII reconciles that live state without
 deleting either surface.
 
 ---
@@ -27,7 +27,7 @@ DCCCII  - historical top-mass sigma/status mismatch remains present
 DCCCXI  - sharpened top-pole tension, 11.5 sigma
 DCCCXIV - graviton correction, final top pole residual 0.93 sigma
 DCCCXV  - master scorecard promotes the corrected top sector
-DCCCXXXIII - post-audit reconciliation and duplicate-part detector
+DCCCXXXVIII - post-audit reconciliation and duplicate-part detector
 ```
 
 The important distinction is temporal. The DCCCII audit flag remains true as a
@@ -50,7 +50,7 @@ PART_DCCCXIV_graviton_top_correction_results.json
 ```
 
 So the collision is a theorem-note numbering issue, not a duplicate result JSON
-claim. DCCCXXXIII makes that explicit and leaves future cleanup mechanical.
+claim. DCCCXXXVIII makes that explicit and leaves future cleanup mechanical.
 
 ---
 
@@ -60,3 +60,15 @@ This is a repository-state theorem. It reconciles the audit trail, the updated
 top-sector status, and the duplicated DCCCXIV surface. It does not validate the
 physical graviton self-energy derivation or replace external experimental
 review.
+
+---
+
+## 5. Post-828 Result Hygiene
+
+The theorem surface now reaches DCCCXXXII, but the valid machine-readable
+result JSON ledger reaches DCCCXXVIII. DCCCXXIX-DCCCXXXII currently include
+files with a `*_results.json` suffix whose contents are Markdown theorem notes.
+
+That is not a physics rejection. It is a serialization issue: those four
+surfaces should either become valid JSON result artifacts or be renamed out of
+the result-JSON namespace.

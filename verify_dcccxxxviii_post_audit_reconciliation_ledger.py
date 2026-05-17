@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Part DCCCXXXIII: post-audit reconciliation ledger.
+"""Part DCCCXXXVIII: post-audit reconciliation ledger.
 
 The DCCCXIV phenomenology audit was pushed immediately before a GitHub-side
 DCCCXIV graviton correction and DCCCXV master update landed.  This verifier
@@ -27,7 +27,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
-OUT_PATH = ROOT / "data" / "dcccxxxiii_post_audit_reconciliation_ledger.json"
+OUT_PATH = ROOT / "data" / "dcccxxxviii_post_audit_reconciliation_ledger.json"
 
 
 @dataclass(frozen=True)
@@ -35,6 +35,8 @@ class ReconciliationSummary:
     part: str
     decimal: int
     current_result_max_decimal: int
+    valid_result_max_decimal: int
+    invalid_result_json_count: int
     dcccxiv_markdown_count: int
     duplicate_part_surface_count: int
     dcccxiv_result_count: int
@@ -99,6 +101,49 @@ def _result_payloads() -> list[tuple[Path, dict[str, Any]]]:
     return sorted(payloads, key=lambda row: int(row[1]["decimal"]))
 
 
+def _roman_to_int(text: str) -> int:
+    values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    total = 0
+    previous = 0
+    for char in reversed(text):
+        value = values[char]
+        if value < previous:
+            total -= value
+        else:
+            total += value
+            previous = value
+    return total
+
+
+def _part_decimal_from_name(path: Path) -> int | None:
+    match = re.match(r"PART_([MDCLXVI]+)_", path.name)
+    if not match:
+        return None
+    return _roman_to_int(match.group(1))
+
+
+def _part_surface_max_decimal() -> int:
+    decimals = [
+        decimal
+        for path in ROOT.glob("PART_*")
+        if (decimal := _part_decimal_from_name(path)) is not None
+    ]
+    return max(decimals)
+
+
+def _invalid_result_json_files() -> list[str]:
+    invalid: list[str] = []
+    for path in sorted(ROOT.glob("PART_*_results.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            invalid.append(path.name)
+            continue
+        if not isinstance(payload, dict) or not isinstance(payload.get("decimal"), int):
+            invalid.append(path.name)
+    return invalid
+
+
 def _part_markdowns(part: str) -> list[str]:
     return sorted(path.name for path in ROOT.glob(f"PART_{part}_*.md"))
 
@@ -121,7 +166,9 @@ def build_reconciliation() -> dict[str, Any]:
     prior_audit = _load_prior_audit()
 
     result_payloads = _result_payloads()
-    current_max_decimal = max(int(payload["decimal"]) for _, payload in result_payloads)
+    valid_result_max_decimal = max(int(payload["decimal"]) for _, payload in result_payloads)
+    current_max_decimal = _part_surface_max_decimal()
+    invalid_result_json_files = _invalid_result_json_files()
     dcccxiv_result_count = sum(
         1
         for _, payload in result_payloads
@@ -171,10 +218,21 @@ def build_reconciliation() -> dict[str, Any]:
             "kind": "audit_range_superseded",
             "prior_audit_range_end": prior_audit["summary"]["range_end"],
             "current_result_max_decimal": current_max_decimal,
+            "valid_result_max_decimal": valid_result_max_decimal,
             "message": (
                 "The DCCCXIV claim-ledger audit intentionally covered 784..813. "
                 f"The live result ledger now reaches {current_max_decimal}, so this "
-                "DCCCXXXIII layer bridges the post-audit updates."
+                "DCCCXXXVIII layer bridges the post-audit updates."
+            ),
+        },
+        {
+            "kind": "invalid_result_json_surfaces",
+            "files": invalid_result_json_files,
+            "message": (
+                "Several post-828 files use a *_results.json suffix but contain "
+                "Markdown rather than machine-readable JSON. The theorem surface "
+                "reaches DCCCXXXII while valid result JSONs currently reach "
+                f"{valid_result_max_decimal}."
             ),
         },
     ]
@@ -214,13 +272,19 @@ def build_reconciliation() -> dict[str, Any]:
                 for flag in prior_flags
             )
         ),
-        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= 832,
+        "ledger_reaches_closure_burst_after_audit": current_max_decimal >= 837,
+        "post_828_result_json_hygiene_gap_detected": (
+            valid_result_max_decimal < current_max_decimal
+            and len(invalid_result_json_files) >= 4
+        ),
     }
 
     summary = ReconciliationSummary(
-        part="DCCCXXXIII",
-        decimal=833,
+        part="DCCCXXXVIII",
+        decimal=838,
         current_result_max_decimal=current_max_decimal,
+        valid_result_max_decimal=valid_result_max_decimal,
+        invalid_result_json_count=len(invalid_result_json_files),
         dcccxiv_markdown_count=len(dcccxiv_markdowns),
         duplicate_part_surface_count=max(0, len(dcccxiv_markdowns) - 1),
         dcccxiv_result_count=dcccxiv_result_count,
@@ -242,19 +306,21 @@ def build_reconciliation() -> dict[str, Any]:
             "sharpened_tension": "DCCCXI",
             "correction": "DCCCXIV",
             "master_update": "DCCCXV",
-            "reconciliation": "DCCCXXXIII",
+            "reconciliation": "DCCCXXXVIII",
         },
         "dcccxiv_surfaces": {
             "markdown_files": dcccxiv_markdowns,
             "result_count": dcccxiv_result_count,
         },
+        "invalid_result_json_files": invalid_result_json_files,
         "theorem": (
             "Post-Audit Reconciliation Ledger. The DCCCII top-mass "
             "sigma/status mismatch remains a valid historical audit flag, "
             "DCCCXI records the sharpened top-pole tension, DCCCXIV supplies "
             "the graviton correction to 0.93 sigma, and DCCCXV promotes that "
             "correction into the live master scorecard. The duplicated "
-            "DCCCXIV part surface is detected as a numbering-ledger issue."
+            "DCCCXIV part surface is detected as a numbering-ledger issue, and "
+            "post-828 Markdown-in-.json result surfaces are flagged separately."
         ),
         "honesty_boundary": (
             "This verifier reconciles internal repository state. It does not "

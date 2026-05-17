@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from verify_dcccxxxiii_post_audit_reconciliation_ledger import (  # noqa: E402
+from verify_dcccxxxviii_post_audit_reconciliation_ledger import (  # noqa: E402
     OUT_PATH,
     build_reconciliation,
     write_reconciliation,
@@ -20,9 +20,11 @@ def test_reconciliation_detects_post_audit_part_collision() -> None:
     payload = build_reconciliation()
     summary = payload["summary"]
 
-    assert summary["part"] == "DCCCXXXIII"
-    assert summary["decimal"] == 833
-    assert summary["current_result_max_decimal"] >= 832
+    assert summary["part"] == "DCCCXXXVIII"
+    assert summary["decimal"] == 838
+    assert summary["current_result_max_decimal"] >= 837
+    assert summary["valid_result_max_decimal"] >= 835
+    assert summary["invalid_result_json_count"] >= 4
     assert summary["dcccxiv_markdown_count"] == 2
     assert summary["duplicate_part_surface_count"] == 1
     assert summary["dcccxiv_result_count"] == 1
@@ -56,15 +58,20 @@ def test_reconciliation_flags_are_explicit_and_non_destructive() -> None:
         "duplicate_dcccxiv_part_surface",
         "superseded_top_tension",
         "audit_range_superseded",
+        "invalid_result_json_surfaces",
     } <= kinds
     assert payload["chain"] == {
         "historical_source": "DCCCII",
         "sharpened_tension": "DCCCXI",
         "correction": "DCCCXIV",
         "master_update": "DCCCXV",
-        "reconciliation": "DCCCXXXIII",
+        "reconciliation": "DCCCXXXVIII",
     }
     assert payload["summary"]["all_identities_hold"] is True
+    assert payload["identities"]["post_828_result_json_hygiene_gap_detected"] is True
+    assert "PART_DCCCXXIX_quantum_error_correction_results.json" in payload[
+        "invalid_result_json_files"
+    ]
 
 
 def test_public_index_exposes_post_audit_reconciliation() -> None:
@@ -75,8 +82,9 @@ def test_public_index_exposes_post_audit_reconciliation() -> None:
     assert "Post-Audit Reconciliation Ledger" in index
     assert "<code>DCCCXIV</code>" in index
     assert "<code>DCCCXV</code>" in index
-    assert "<code>DCCCXXXIII</code>" in index
+    assert "<code>DCCCXXXVIII</code>" in index
     assert "<code>0.93 sigma</code>" in index
+    assert "<code>DCCCXXIX-DCCCXXXII</code>" in index
 
 
 def test_write_and_reload() -> None:
@@ -84,6 +92,6 @@ def test_write_and_reload() -> None:
     assert out == OUT_PATH
 
     data = json.loads(out.read_text(encoding="utf-8"))
-    assert data["summary"]["part"] == "DCCCXXXIII"
+    assert data["summary"]["part"] == "DCCCXXXVIII"
     assert data["summary"]["all_identities_hold"] is True
     assert data["status"].startswith("RECONCILED")
