@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "scheme_vertices": 160,
+    "classes_excluding_identity": 4,
+    "primitive_multiplicities": [1, 24, 30, 24, 81],
+    "H1_primitive_row": ["1", "1", "-2", "2", "-2"],
+    "all_identities_hold": true
+  },
+  "columns": ["R0_identity", "R1_overlap_1", "R3_overlap_3", "R9_overlap_9", "R27_overlap_27"],
+  "primitive_rows_first_eigenmatrix": [
+    {
+      "name": "trivial",
+      "multiplicity": 1,
+      "eigenvalues_exact": ["1", "81", "54", "18", "6"],
+      "interpretation": "constant all-ones sector; relation valencies"
+    },
+    {
+      "name": "plus_24_sqrt6",
+      "multiplicity": 24,
+      "eigenvalues_exact": ["1", "-9", "6 + 3*sqrt(6)", "-2*sqrt(6)", "2 - sqrt(6)"],
+      "interpretation": "first 24-sector; sqrt(6) branch"
+    },
+    {
+      "name": "middle_30",
+      "multiplicity": 30,
+      "eigenvalues_exact": ["1", "9", "-6", "-6", "2"],
+      "interpretation": "middle integral sector"
+    },
+    {
+      "name": "minus_24_sqrt6",
+      "multiplicity": 24,
+      "eigenvalues_exact": ["1", "-9", "6 - 3*sqrt(6)", "2*sqrt(6)", "2 + sqrt(6)"],
+      "interpretation": "second 24-sector; conjugate sqrt(6) branch"
+    },
+    {
+      "name": "protected_H1",
+      "multiplicity": 81,
+      "eigenvalues_exact": ["1", "1", "-2", "2", "-2"],
+      "interpretation": "protected H1 primitive eigenspace; signed phase-frame rank"
+    }
+  ],
+  "relation_spectra": {
+    "R0_identity": {"1": 160},
+    "R1_overlap_1": {"81": 1, "9": 30, "1": 81, "-9": 48},
+    "R3_overlap_3": {"54": 1, "6 + 3*sqrt(6)": 24, "-6": 30, "6 - 3*sqrt(6)": 24, "-2": 81},
+    "R9_overlap_9": {"18": 1, "2*sqrt(6)": 24, "-6": 30, "-2*sqrt(6)": 24, "2": 81},
+    "R27_overlap_27": {"6": 1, "2 + sqrt(6)": 24, "2": 30, "2 - sqrt(6)": 24, "-2": 81}
+  },
+  "unsigned_gram_spectrum": {
+    "648": 1,
+    "144 + 36*sqrt(6)": 24,
+    "72": 30,
+    "144 - 36*sqrt(6)": 24,
+    "40": 81
+  },
+  "closed_forms": {
+    "multiplicity_pattern": "1,24,30,24,81 = vacuum, 24-sector, middle 30, conjugate 24-sector, protected H1",
+    "H1_character_row": "R0,R1,R3,R9,R27 eigenvalues = 1,1,-2,2,-2",
+    "sqrt6_pairing": "two 24-dimensional primitive sectors are conjugate over Q(sqrt(6))",
+    "gram_operator": "U U^T = 81 R0 + R1 + 3 R3 + 9 R9 + 27 R27"
+  },
+  "identities": {
+    "multiplicities_sum_160": true,
+    "H1_multiplicity_81": true,
+    "two_24_sectors": true,
+    "middle_30_sector": true,
+    "H1_row_integral": true
+  },
+  "theorem": "Minimal Logical X-Scheme Eigenmatrix Theorem. The 4-class association scheme on 160 projective minimal X-rays has primitive multiplicities 1,24,30,24,81. The protected H1=81 sector is a primitive eigenspace with integral eigenvalue row (1,1,-2,2,-2) across the relations R0,R1,R3,R9,R27. The two 24-dimensional sectors form a conjugate pair over Q(sqrt(6)).",
+  "honesty_boundary": "This is an exact finite spectral invariant of the association scheme; physical interpretations remain downstream bridges."
+}
