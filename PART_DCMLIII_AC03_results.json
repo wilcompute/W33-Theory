@@ -1,0 +1,8 @@
+{
+  "part": "DCMLIII",
+  "decimal": 953,
+  "title": "NP not in AC^0[3]",
+  "proved": "NP ⊄ AC^0[3] via CSS degree-4 Razborov-Smolensky",
+  "open": "P != NP (general circuits, not just AC^0)",
+  "status": "COMPLEXITY LOWER BOUND PROVED"
+}

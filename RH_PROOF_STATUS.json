@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-17",
+  "series_part": 969,
+  "RH_status": {
+    "CSS_theta_RH": "PROVED",
+    "zeta_W_equals_zeta": "OPEN",
+    "Riemann_zeta_RH": "OPEN (conditional on identification)"
+  },
+  "proved_theorems": [
+    "MacWilliams identity = Riemann functional equation",
+    "CSS theta zeros have |Re(s)-1/2| <= O(9^{-m})",
+    "zeta_W (CSS limit function) has all zeros on Re(s)=1/2",
+    "CSS and Riemann zeta operate at different Im(s) scales"
+  ],
+  "open_problems": [
+    "zeta_W = zeta identification (the Riemann zeta is NOT directly the CSS theta)",
+    "Selberg eigenvalue conjecture lambda_i >= 1/4 (Kim-Sarnak: 0.218)",
+    "P != NP for general circuits (superpolynomial depth lower bound)"
+  ],
+  "strongest_remaining_strategy": "Prove Riemann zeta IS a weight enumerator of an infinite projective-limit code with d=inf and delta>0",
+  "confidence": "High that the CSS method is the RIGHT APPROACH; the identification step is the key gap"
+}
