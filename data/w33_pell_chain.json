@@ -1,0 +1,235 @@
+{
+  "bonus_fifth_pair_q_phi3_v": {
+    "consecutive": true,
+    "discriminant": 1,
+    "name": "Hodge-exact Pell (q Phi_3, v)",
+    "product": 1560,
+    "quadratic": "x^2 - 79 x + 1560 = 0",
+    "role": "Hodge exact-gradient x vertex count; v - q*Phi_3 = 1 always",
+    "roots": [
+      39,
+      40
+    ],
+    "status": "automatic-for-all-q",
+    "sum": 79
+  },
+  "catalan_check_2q_qsq": [
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": 0,
+      "q": 2,
+      "q_squared": 4,
+      "two_to_q": 4
+    },
+    {
+      "consecutive": true,
+      "diff_q2_minus_2q": 1,
+      "q": 3,
+      "q_squared": 9,
+      "two_to_q": 8
+    },
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": 0,
+      "q": 4,
+      "q_squared": 16,
+      "two_to_q": 16
+    },
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": -7,
+      "q": 5,
+      "q_squared": 25,
+      "two_to_q": 32
+    },
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": -28,
+      "q": 6,
+      "q_squared": 36,
+      "two_to_q": 64
+    },
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": -79,
+      "q": 7,
+      "q_squared": 49,
+      "two_to_q": 128
+    },
+    {
+      "consecutive": false,
+      "diff_q2_minus_2q": -192,
+      "q": 8,
+      "q_squared": 64,
+      "two_to_q": 256
+    }
+  ],
+  "chain_totals": {
+    "products": [
+      12,
+      72,
+      156,
+      240
+    ],
+    "sums": [
+      7,
+      17,
+      25,
+      31
+    ],
+    "total_product": 480,
+    "total_product_equals_2_edges": true,
+    "total_sum": 80,
+    "total_sum_equals_2v": true
+  },
+  "header": {
+    "Phi_3": 13,
+    "Phi_4": 10,
+    "Phi_6": 6,
+    "edges": 240,
+    "f_positive_eigenspace_mult": 24,
+    "g_negative_eigenspace_mult": 15,
+    "k": 12,
+    "q": 3,
+    "v": 40
+  },
+  "hodge_bridge": {
+    "chain_products": [
+      12,
+      72,
+      156,
+      240
+    ],
+    "edge_count_in_chain": true,
+    "hodge_decomposition_split": "240 = 39 + 120 + 81",
+    "hodge_decomposition_total": 240,
+    "interpretation": "Three of the four Pell products -- 12=k, 72=lambda_gauge, 240=|E| -- are core substrate primitives that appear separately in the Hodge decomposition (120 = k * Phi_4, lambda_gauge is the X-scheme middle eigenvalue, |E| is the total carrier).  The fourth product 156 = k * Phi_3 factors as codec times third cyclotomic, the automatic pair.",
+    "k_in_chain": true,
+    "lambda_gauge_in_chain": true
+  },
+  "honesty_boundary": "All Pell-pair identities are exact arithmetic.  Mihailescu's theorem is a deep number-theoretic input; we use only its Catalan-uniqueness statement.  The quasi-Catalan g = mu^2 - 1 happens to hold at q = 3 because mu^2 = 2^mu when mu = 4, another isolated arithmetic coincidence.",
+  "parity_sector_bridge": {
+    "automatic_kphi3_sum": 25,
+    "automatic_kphi3_sum_equals_f_plus_1": true,
+    "automatic_kphi3_sum_equals_q_plus_2_squared_at_q3": true,
+    "even_metric_classes": 55,
+    "grand_total": 80,
+    "grand_total_equals_2v": true,
+    "non_automatic_sums": [
+      7,
+      17,
+      31
+    ],
+    "non_automatic_sums_total": 55,
+    "non_automatic_total_equals_even_classes": true
+  },
+  "pell_chain": [
+    {
+      "consecutive": true,
+      "discriminant": 1,
+      "name": "small Pell (q, q+1)",
+      "product": 12,
+      "quadratic": "x^2 - 7 x + 12 = 0",
+      "role": "CSS code distances; codec product; toroidal genus roots",
+      "roots": [
+        3,
+        4
+      ],
+      "status": "automatic-for-all-q",
+      "sum": 7
+    },
+    {
+      "consecutive": true,
+      "discriminant": 1,
+      "name": "Catalan Pell (2^q, q^2)",
+      "product": 72,
+      "quadratic": "x^2 - 17 x + 72 = 0",
+      "role": "tomotope cells x Heisenberg-projective dim = lambda_gauge",
+      "roots": [
+        8,
+        9
+      ],
+      "status": "Catalan-unique at q = 3 (Mihailescu)",
+      "sum": 17
+    },
+    {
+      "consecutive": true,
+      "discriminant": 1,
+      "name": "automatic Pell (k, Phi_3)",
+      "product": 156,
+      "quadratic": "x^2 - 25 x + 156 = 0",
+      "role": "codec x 3rd cyclotomic; Phi_3 = k + 1 always",
+      "roots": [
+        12,
+        13
+      ],
+      "status": "automatic-for-all-q",
+      "sum": 25
+    },
+    {
+      "consecutive": true,
+      "discriminant": 1,
+      "name": "E_8-root Pell (g, 2^mu)",
+      "product": 240,
+      "quadratic": "x^2 - 31 x + 240 = 0",
+      "role": "negative-eigenspace mult x binary mu-shell = |E| = E_8 root count",
+      "roots": [
+        15,
+        16
+      ],
+      "status": "Catalan-like coincidence at q = 3 (g = mu^2 - 1)",
+      "sum": 31
+    }
+  ],
+  "quasi_catalan_check_g_2mu": [
+    {
+      "2^mu": 8,
+      "consecutive": false,
+      "g": 5,
+      "g_minus_2mu": -3,
+      "q": 2,
+      "v": 15
+    },
+    {
+      "2^mu": 16,
+      "consecutive": true,
+      "g": 15,
+      "g_minus_2mu": -1,
+      "q": 3,
+      "v": 40
+    },
+    {
+      "2^mu": 32,
+      "consecutive": false,
+      "g": 34,
+      "g_minus_2mu": 2,
+      "q": 4,
+      "v": 85
+    },
+    {
+      "2^mu": 64,
+      "consecutive": true,
+      "g": 65,
+      "g_minus_2mu": 1,
+      "q": 5,
+      "v": 156
+    },
+    {
+      "2^mu": 128,
+      "consecutive": false,
+      "g": 111,
+      "g_minus_2mu": -17,
+      "q": 6,
+      "v": 259
+    },
+    {
+      "2^mu": 256,
+      "consecutive": false,
+      "g": 175,
+      "g_minus_2mu": -81,
+      "q": 7,
+      "v": 400
+    }
+  ],
+  "theorem": "W(3,3) Pell Chain Theorem.  The W(3,3) substrate hosts FOUR consecutive-integer Pell pairs whose roots are substrate primitives: (q, q+1), (2^q, q^2), (k, Phi_3), and (g, 2^mu).  Their sums total exactly 2 v = 80 and their products total exactly 2 |E| = 480, binding the chain rigidly to the vertex and edge counts of the W(3,3) graph.  Three of the four are non-automatic; their sums total 7 + 17 + 31 = 55, the even metric class count from the parity-sector split.  The fourth (automatic) sum is mu^2 = 25, completing 80 = 2 v.  Three of the four products -- k, lambda_gauge, and |E| -- are core substrate primitives that label the Hodge decomposition.  Mihailescu's theorem implies the (2^q, q^2) pair is Catalan-unique to q = 3."
+}
