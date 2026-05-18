@@ -1,0 +1,155 @@
+{
+  "all_ladder_totals": {
+    "gap_total": 9,
+    "match_q_squared_f_v": [
+      true,
+      true,
+      true
+    ],
+    "multiplier_total": 40,
+    "sum_increment_total": 24
+  },
+  "consistency_identity": {
+    "Phi_6": 7,
+    "f": 24,
+    "identity_holds": true,
+    "physics_interpretation": "The W(3,3) vertex count splits as f (positive spectral multiplicity) plus q^2 (gap-ladder total) plus Phi_6 (small Pell sum / Heawood shell).  This is the substrate's vertex-count ledger expressed in Pell-ladder primitives.",
+    "q_squared": 9,
+    "sum_f_qsq_phi6": 40,
+    "v": 40
+  },
+  "cross_links": {
+    "comment": "q! is the only substrate primitive that appears in TWO of the three ladders.  The other primitives are unique to their ladder, so the three ladders are nearly independent except for q!.",
+    "lam_in_gap_ladder": true,
+    "mu_in_gap_ladder": true,
+    "phi3_in_multipliers": true,
+    "qfact_in_multipliers": true,
+    "qfact_in_sum_increments": true,
+    "qfact_is_unique_two_ladder_appearance": true,
+    "shared_substrate_primitives": [
+      "q!",
+      "2^q",
+      "Phi_3",
+      "Phi_4",
+      "mu",
+      "q",
+      "lam",
+      "2g"
+    ],
+    "two_to_q_in_sum_increments": true
+  },
+  "gap_ladder": {
+    "expected": [
+      4,
+      3,
+      2
+    ],
+    "gaps": [
+      4,
+      3,
+      2
+    ],
+    "match": true,
+    "substrate_forms": [
+      "mu = q + 1",
+      "q",
+      "lam = q - 1"
+    ],
+    "sum": 9,
+    "sum_equals_3q": true,
+    "sum_equals_q_squared_at_q3": true,
+    "values_in_order": [
+      4,
+      3,
+      2
+    ]
+  },
+  "honesty_boundary": "All identities are exact arithmetic given the established Pell chain.  The 'three independent ladders' framing is structural language, not a derivation of new empirical observables.  The q = 3 consistency v = f + q^2 + Phi_6 is q = 3 specific and does not extend to general q (since g varies non-linearly with q in the W(3, q) family).",
+  "master_ladder_figure": "\n   pair      |  3  4    8  9    12 13   15 16\n             |  *--*    *--*    *--*    *--*\n   gap       |      <-mu->   <-q->   <-lam->     (mu, q, lam) sum = q^2 = 9\n   sum       |    7        17       25        31\n   incr      |     <-Phi_4-> <-2^q-> <-q!->        (Phi_4, 2^q, q!) sum = f = 24\n   prod      |   12        72      156       240\n   m=p/k     |    1         q!      Phi_3    2Phi_4    (1, q!, Phi_3, 2 Phi_4) sum = v = 40\n\n   Three ladder totals: q^2 = 9, f = 24, v = 40.\n   Consistency: v = f + q^2 + Phi_6 = 24 + 9 + 7 = 40.\n",
+  "multiplier_ladder": {
+    "expected": [
+      1,
+      6,
+      13,
+      20
+    ],
+    "match": true,
+    "multipliers": [
+      1,
+      6,
+      13,
+      20
+    ],
+    "products": [
+      12,
+      72,
+      156,
+      240
+    ],
+    "substrate_forms": [
+      "1",
+      "q!",
+      "Phi_3",
+      "2 Phi_4"
+    ],
+    "sum_equals_v": true,
+    "sum_of_multipliers": 40
+  },
+  "pell_chain": [
+    [
+      3,
+      4
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      15,
+      16
+    ]
+  ],
+  "pell_products": [
+    12,
+    72,
+    156,
+    240
+  ],
+  "pell_sums": [
+    7,
+    17,
+    25,
+    31
+  ],
+  "sum_increment_ladder": {
+    "expected": [
+      10,
+      8,
+      6
+    ],
+    "increments": [
+      10,
+      8,
+      6
+    ],
+    "match": true,
+    "substrate_forms": [
+      "Phi_4 = q^2 + 1",
+      "2^q",
+      "q!"
+    ],
+    "sum_equals_f": true,
+    "sum_of_increments": 24,
+    "sums": [
+      7,
+      17,
+      25,
+      31
+    ]
+  },
+  "theorem": "W(3,3) Pell Triple-Ladder Theorem.  The four substrate Pell pairs (3,4), (8,9), (12,13), (15,16) carry three independent substrate-primitive ladder structures: a GAP ladder (mu, q, lam) with total q^2, a SUM-INCREMENT ladder (Phi_4, 2^q, q!) with total f, and a MULTIPLIER ladder (1, q!, Phi_3, 2 g) with total v.  The three totals satisfy v = f + q^2 + Phi_6 at q = 3.  The substrate primitive q! is the unique number appearing in two of the three ladders (sum-increment and multiplier)."
+}
