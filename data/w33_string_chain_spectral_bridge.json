@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "dimension_chain": [7, 10, 11, 12, 26],
+    "core_sum": 40,
+    "total_sum": 66,
+    "middle_index": 72,
+    "all_identities_hold": true
+  },
+  "identities": {
+    "core_is_v": true,
+    "total_is_C12_2": true,
+    "middle_is_total_plus_qfac": true,
+    "hessian_is_q2_middle": true,
+    "conjugate_real_part": true,
+    "conjugate_radical_coeff": true,
+    "F4_from_total": true,
+    "E6_from_total": true,
+    "E7_from_total": true,
+    "E8_from_total": true,
+    "cycle_from_total": true
+  },
+  "closed_forms": {
+    "40": "7+10+11+12 = v",
+    "66": "7+10+11+12+26 = C(12,2)",
+    "72": "66+6",
+    "648": "9*72",
+    "144_pm_36sqrt6": "2*72 +/- 36*sqrt(6)",
+    "F4": "52 = 66 - 14",
+    "E6": "78 = 66 + 12",
+    "E7": "133 = 66 + 12 + 55",
+    "E8": "248 = 66 + 2*91",
+    "Ihara_cycle": "200 = 3*66 + 2"
+  },
+  "theorem": "The dimension chain 7,10,11,12,26 gives core 40, total 66, middle 72, Hessian 648, and the conjugate pair 144 +/- 36 sqrt(6)."
+}
