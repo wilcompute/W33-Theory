@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "X_rays": 160,
+    "Z_rays": 1620,
+    "row_degree": 160,
+    "overlap_values": [1, 3, 9, 27],
+    "per_row_overlap_counts": {"1": 81, "3": 54, "9": 18, "27": 6},
+    "signed_rank": 81,
+    "H1": 81,
+    "all_identities_hold": true
+  },
+  "unsigned_projective_overlap_scheme": {
+    "matrix_shape": [160, 1620],
+    "gram_shape": [160, 160],
+    "diagonal_distribution": {"81": 160},
+    "off_diagonal_distribution": {"1": 6480, "3": 4320, "9": 1440, "27": 480},
+    "per_row_overlap_distribution": {
+      "1": {"81": 160},
+      "3": {"54": 160},
+      "9": {"18": 160},
+      "27": {"6": 160}
+    },
+    "spectrum_symbolic": {
+      "648": 1,
+      "144 + 36*sqrt(6)": 24,
+      "72": 30,
+      "144 - 36*sqrt(6)": 24,
+      "40": 81
+    },
+    "spectrum_numeric_min_max": [39.99999999999988, 648.0]
+  },
+  "signed_phase_projector": {
+    "signed_gram_spectrum": {"160": 81, "0": 79},
+    "signed_gram_relation": "S = A A^T satisfies S^2 = 160 S exactly.",
+    "rank": 81
+  },
+  "closed_forms": {
+    "overlap_values": "1,3,9,27 = q^0,q^1,q^2,q^3",
+    "per_row_counts": "81,54,18,6 = 3^4, 2*3^3, 2*3^2, 2*3",
+    "off_diagonal_pair_counts": "6480,4320,1440,480 = 80*(81,54,18,6)",
+    "projective_nonzero_pairings": "160*81 = 12960 = 6480+4320+1440+480",
+    "signed_projection": "A A^T / 160 is an exact rank-81 projector."
+  },
+  "identities": {
+    "ray_counts": true,
+    "row_degree_81": true,
+    "off_values_are_powers_of_3": true,
+    "row_overlap_1_count_81": true,
+    "row_overlap_3_count_54": true,
+    "row_overlap_9_count_18": true,
+    "row_overlap_27_count_6": true,
+    "off_count_1": true,
+    "off_count_3": true,
+    "off_count_9": true,
+    "off_count_27": true,
+    "signed_projector_idempotent": true,
+    "signed_rank_81": true
+  },
+  "theorem": "Minimal Logical 3-adic Overlap Theorem. For the projective minimal logical incidence matrix U of the W(3,3) edge CSS code, each X-ray is incident with 81 Z-rays, and pairwise X-ray visibility overlaps are only 1, 3, 9, and 27. Per row, the multiplicities are 81, 54, 18, and 6 respectively. Thus the unsigned minimal logical surface forms a 3-adic overlap scheme; the signed phase refinement simultaneously gives the exact rank-81 projector A A^T / 160.",
+  "honesty_boundary": "This proves an exact finite overlap scheme. It does not by itself assign physical probabilities or continuum dynamics."
+}
