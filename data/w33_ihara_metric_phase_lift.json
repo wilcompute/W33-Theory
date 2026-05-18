@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "ihara_cycle_exponent": 200,
+    "cycle_decomposition": [120, 79, 1],
+    "compressed_ihara_exponents": [1, 24, 15],
+    "lifted_x_scheme_multiplicities": [1, 24, 30, 24, 81]
+  },
+  "identities": {
+    "cycle_exponent_is_E_minus_v": true,
+    "cycle_decomposes_as_120_79_1": true,
+    "phase_kernel_is_79": true,
+    "compressed_exponents_sum_to_v": true,
+    "lifted_multiplicities_sum_to_mu_v": true,
+    "E6_middle": true,
+    "cycle_minus_kernel_is_ihara_square": true,
+    "cycle_minus_coexact_is_pell_total": true,
+    "trace_split": true
+  },
+  "closed_forms": {
+    "200": "E-v=240-40=5v",
+    "120": "coexact/curvature sector",
+    "79": "toroidal metric degeneracy kernel = 147-68 = 160-81",
+    "1": "vacuum line",
+    "121": "200-79=11^2",
+    "80": "200-120=2v=Pell sum total",
+    "lift": "(1,24,15) -> (1,24,30,24,81) by CP/Galois 24 copy, Dirac 15 doubling, and H1 addition"
+  },
+  "theorem": "Ihara Metric-Phase Lift Theorem: the Ihara cycle exponent 200=E-v decomposes as 120+79+1, and the compressed Ihara exponents (1,24,15) lift to the X-scheme multiplicities (1,24,30,24,81).",
+  "honesty_boundary": "This is an exact finite arithmetic/spectral bridge. It is not by itself a derivation of empirical observables."
+}
