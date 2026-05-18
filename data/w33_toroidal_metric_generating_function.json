@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "P_coefficients_low_to_high": [68, 147, 127, 86, 54, 19, 3],
+    "Q_coefficients_low_to_high": [68, 79, 48, 38, 16, 3],
+    "factorization": "P(t)=(1+t)Q(t)",
+    "P_minus_1": 0,
+    "Q_minus_1": 12,
+    "P_plus_1": 504,
+    "Q_plus_1": 252,
+    "all_identities_hold": true
+  },
+  "polynomial": {
+    "P": "68 + 147 t + 127 t^2 + 86 t^3 + 54 t^4 + 19 t^5 + 3 t^6",
+    "Q": "68 + 79 t + 48 t^2 + 38 t^3 + 16 t^4 + 3 t^5",
+    "factorization": "P=(1+t)Q",
+    "evaluations": {
+      "P(-1)": 0,
+      "Q(-1)": 12,
+      "P(1)": 504,
+      "Q(1)": 252
+    }
+  },
+  "cyclotomic_residues": {
+    "Phi3": {
+      "relation": "t^2+t+1=0",
+      "residue_a_plus_b_t": [11, 55],
+      "residue_closed_form": "11 + 55 t = 11(1+5t)",
+      "norm": 2541,
+      "norm_closed_form": "11^2 * 21"
+    },
+    "Phi4": {
+      "relation": "t^2+1=0",
+      "residue_a_plus_b_t": [-8, 80],
+      "residue_closed_form": "-8 + 80 t = 8(-1+10t)",
+      "norm": 6464
+    },
+    "Phi6": {
+      "relation": "t^2-t+1=0",
+      "residue_a_plus_b_t": [-123, 201],
+      "residue_closed_form": "-123 + 201 t = 3(-41+67t)",
+      "norm": 30807
+    }
+  },
+  "closed_forms": {
+    "parity_null": "P(-1)=0",
+    "kernel_in_quotient": "coefficient of t in Q is 79",
+    "genus_from_quotient": "Q(-1)=12",
+    "middle_eigenvalue": "P(1)/7=72",
+    "half_boolean_lift": "Q(1)=252=21*12",
+    "heptad_subsets": "B2=127=2^7-1",
+    "Ihara_toroidal_norm": "Norm_{Phi3}(P)=11^2*21"
+  },
+  "identities": {
+    "factorization": true,
+    "parity_null": true,
+    "quotient_kernel_coefficient": true,
+    "quotient_minus_one_genus": true,
+    "quotient_plus_one": true,
+    "boolean_total_middle_eigenvalue": true,
+    "B0_B1_kernel": true,
+    "B2_heptad_boolean": true,
+    "phi3_residue": true,
+    "phi3_norm": true,
+    "phi4_residue": true,
+    "phi4_norm": true,
+    "phi6_residue": true,
+    "phi6_norm": true
+  },
+  "theorem": "Toroidal Metric Generating Function Theorem. The binomial moment sequence of the seven-realization metric edge spectrum defines P(t)=68+147t+127t^2+86t^3+54t^4+19t^5+3t^6. This polynomial has the exact factorization P(t)=(1+t)(68+79t+48t^2+38t^3+16t^4+3t^5). The factor (1+t) is the parity-null/euler cancellation; the quotient contains the phase-kernel coefficient 79 and evaluates to the genus numerator 12 at t=-1. Its Boolean value gives P(1)=504=7*72, so the middle eigenvalue 72 is the per-realization Boolean lift. Modulo Phi_3, P reduces to 11(1+5t), whose Eisenstein norm is 11^2*21, exposing the Ihara prime and toroidal edge count together.",
+  "honesty_boundary": "This is an exact finite generating-function identity for the toroidal metric edge spectrum. It does not by itself prove physical dynamics or empirical observables."
+}
