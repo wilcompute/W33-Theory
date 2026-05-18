@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "odd_metric_classes": 13,
+    "even_metric_classes": 55,
+    "even_minus_odd": 42,
+    "odd_boolean_lift": 56,
+    "even_boolean_lift": 448,
+    "middle_eigenvalue_split_per_realization": "72 = 8 + 64",
+    "all_identities_hold": true
+  },
+  "histogram": {"1": 12, "2": 48, "3": 0, "4": 4, "5": 1, "6": 3},
+  "odd_sector": {
+    "multiplicities": [1, 3, 5],
+    "metric_classes": 13,
+    "edge_instances": 17,
+    "kernel_excess": 4,
+    "boolean_lift": 56,
+    "raw_second_moment": 37
+  },
+  "even_sector": {
+    "multiplicities": [2, 4, 6],
+    "metric_classes": 55,
+    "edge_instances": 130,
+    "kernel_excess": 75,
+    "boolean_lift": 448,
+    "raw_second_moment": 364
+  },
+  "total": {
+    "metric_classes": 68,
+    "edge_instances": 147,
+    "kernel_excess": 79,
+    "boolean_lift": 504,
+    "raw_second_moment": 401
+  },
+  "closed_forms": {
+    "odd_classes": "13 = Phi3",
+    "even_classes": "55 = 5*11 = Csaszar_count * Ihara prime",
+    "even_minus_odd": "42 = one toroidal chart flag count = v+e+f = 2e",
+    "odd_instances": "17",
+    "even_instances": "130 = Phi4*Phi3 = 10*13",
+    "odd_kernel": "4 = d_Z = q+1",
+    "even_kernel": "75 = 3*25",
+    "odd_boolean": "56 = 7*8",
+    "even_boolean": "448 = 7*64",
+    "middle_eigenvalue": "72 = 8 + 64 = tomotope_cells + tomotope_cells^2",
+    "raw_second": "401 = 37 + 364 = 37 + 28*Phi3"
+  },
+  "spectrum_bridge": {
+    "target_middle_eigenvalue": 72,
+    "per_realization_split": {"odd": 8, "even": 64, "sum": 72},
+    "target_spectrum": ["648^1", "(144 + 36*sqrt(6))^24", "72^30", "(144 - 36*sqrt(6))^24", "40^81"]
+  },
+  "identities": {
+    "odd_classes_phi3": true,
+    "even_classes_5_ihara": true,
+    "even_minus_odd_flags": true,
+    "total_classes": true,
+    "odd_instances_prime17": true,
+    "even_instances_phi4_phi3": true,
+    "total_instances": true,
+    "odd_kernel_dz": true,
+    "even_kernel_75": true,
+    "total_kernel_79": true,
+    "odd_boolean_7_8": true,
+    "even_boolean_7_64": true,
+    "total_boolean_7_72": true,
+    "middle_eigenvalue_split": true,
+    "raw_second_split": true
+  },
+  "theorem": "Toroidal Metric Parity-Sector Theorem. The parity-Taylor histogram c_m=(12,48,0,4,1,3) splits into odd and even metric sectors with odd class count 13=Phi_3 and even class count 55=5*11. Their difference is 42, exactly one toroidal chart flag count. The Boolean lift splits as 56+448=7*8+7*64=7*(8+64), so the middle eigenvalue 72 decomposes per realization as 8+64. Odd edge instances give 17, while even edge instances give 130=Phi_4*Phi_3. The odd kernel excess is 4=d_Z, leaving 75 in the even sector for the full kernel 79.",
+  "honesty_boundary": "This is an exact finite parity-sector identity for the toroidal metric edge packet. It does not by itself infer physical dynamics or empirical observables."
+}
