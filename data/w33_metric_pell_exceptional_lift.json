@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "metric_parity_vector": [55, 13],
+    "pell_sums": [7, 17, 25, 31],
+    "nonautomatic_pell_sum": 55,
+    "automatic_pell_sum": 25,
+    "exceptional_dimensions": {"G2": 14, "F4": 52, "E6": 78, "E7": 133, "E8": 248},
+    "all_identities_hold": true
+  },
+  "metric_pell_handoff": {
+    "metric_even": 55,
+    "metric_odd": 13,
+    "closed_forms": {
+      "metric_even": "55 = 7+17+31 = nonautomatic Pell sums",
+      "metric_odd": "13 = Phi3 = automatic Pell root",
+      "automatic_sum": "25 = f+1 = (12,13) Pell sum",
+      "total_pell_sums": "7+17+25+31 = 80 = 2v",
+      "metric_plus_auto": "55+25=80=2v",
+      "metric_difference": "55-13=42 = one toroidal chart flag count"
+    }
+  },
+  "exceptional_lift": {
+    "G2": "14 = 2*Phi6; chart flags 42 = q*G2",
+    "F4": "52 = dZ*Phi3 = 4*13 = odd_metric*dZ",
+    "E6": "78 = even_metric + Szilassi_metric_packet = 55+23 = f+2g+f",
+    "E7": "133 = E6 + even_metric = 78+55",
+    "E8": "248 = edge_carrier + tomotope_cells = 240+8"
+  },
+  "spectrum_and_modular_bridge": {
+    "target_spectrum": ["648^1", "(144 + 36*sqrt(6))^24", "72^30", "(144 - 36*sqrt(6))^24", "40^81"],
+    "top": "648 = H1*8 = Hessian/local qutrit braid order",
+    "middle": "72 = 64+8 = Boolean per-chart lift = Pell product 8*9 = index X0(36)",
+    "protected": "40 = v = multiplier ladder total",
+    "image_kernel": "160 = 81 protected image + 79 metric kernel = mu*v",
+    "moonshine": "324 = 4*H1 = dZ*H1"
+  },
+  "identities": {
+    "even_metric_is_nonautomatic_pell_sum": true,
+    "odd_metric_is_phi3": true,
+    "automatic_pell_sum": true,
+    "pell_sum_total": true,
+    "metric_plus_auto_sum": true,
+    "metric_total": true,
+    "metric_difference_flags": true,
+    "G2_flags": true,
+    "F4_from_odd_metric": true,
+    "E6_from_metric_and_sz": true,
+    "E6_from_xscheme": true,
+    "E7_from_E6_even_metric": true,
+    "E8_from_edge_tomotope": true,
+    "middle_is_boolean_index_pell": true,
+    "top_is_hessian": true,
+    "protected_is_v": true,
+    "kernel_plus_image": true,
+    "moonshine_gap": true
+  },
+  "theorem": "Metric-Pell Exceptional Lift Theorem. The toroidal metric parity vector c=(55,13) is the handoff between the Pell ladder and the exceptional Lie chain. Its even component 55 is the nonautomatic Pell-sum sector 7+17+31, while its odd component 13 is Phi3, the automatic Pell root. From this vector, the exceptional dimensions lift as G2=2Phi6, F4=4*13, E6=55+23, E7=E6+55, and E8=240+8. Simultaneously, the spectrum anchors are 648=81*8, 72=64+8=index X0(36)=Pell product 8*9, and 40=v.",
+  "honesty_boundary": "This is an exact finite arithmetic bridge using repo-established Pell, metric, and exceptional ledgers. It is structural evidence, not by itself a derivation of empirical observables."
+}
