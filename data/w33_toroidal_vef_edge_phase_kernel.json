@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "rows": 7,
+    "total_v": 63,
+    "total_e": 147,
+    "total_f": 84,
+    "total_vef": 294,
+    "total_metric_edge_classes": 68,
+    "total_edge_instances": 147,
+    "metric_degeneracy_excess": 79,
+    "phase_frame_kernel_dimension": 79,
+    "phase_frame_image_dimension": 81,
+    "all_identities_hold": true
+  },
+  "aggregate_vef_packet": {
+    "total_vertices": 63,
+    "total_edges": 147,
+    "total_faces": 84,
+    "total_v_plus_e_plus_f": 294,
+    "total_face_incidence_flags": 294,
+    "total_edge_flags": 294,
+    "closed_forms": {
+      "V_total": "63 = 7*9 = Phi6*q^2",
+      "E_total": "147 = 7*21 = Phi6*C(Phi6,2)",
+      "F_total": "84 = 7*12 = Phi6*genus_numerator",
+      "VEF_total": "294 = 7*42 = 2*147"
+    }
+  },
+  "metric_edge_class_operator": {
+    "edge_multiplicity_histogram": {"1": 12, "2": 48, "4": 4, "5": 1, "6": 3},
+    "metric_edge_classes": 68,
+    "actual_edge_instances": 147,
+    "metric_degeneracy_excess": 79,
+    "closed_forms": {
+      "metric_classes": "68 = 4*17",
+      "actual_edge_instances": "147 = 7*21",
+      "degeneracy_excess": "79 = 147 - 68",
+      "histogram": "12 classes of multiplicity 1, 48 of multiplicity 2, 4 of multiplicity 4, 1 of multiplicity 5, 3 of multiplicity 6"
+    }
+  },
+  "phase_spectrum_bridge": {
+    "signed_phase_spectrum": {"160": 81, "0": 79},
+    "unsigned_gram_spectrum": {
+      "648": 1,
+      "144 + 36*sqrt(6)": 24,
+      "72": 30,
+      "144 - 36*sqrt(6)": 24,
+      "40": 81
+    },
+    "primitive_multiplicities": [1, 24, 30, 24, 81],
+    "non_H1_primitive_sum": 79,
+    "trace_split": {
+      "non_H1_trace": 9720,
+      "non_H1_trace_closed_form": "9720 = 120*81",
+      "H1_trace": 3240,
+      "H1_trace_closed_form": "3240 = 40*81",
+      "total_trace": 12960,
+      "total_trace_closed_form": "12960 = 160*81"
+    },
+    "kernel_identity": "0^79 = metric degeneracy excess = 147 actual edge instances - 68 metric edge classes",
+    "image_identity": "160^81 image = protected H1 directions"
+  },
+  "identities": {
+    "seven_realizations": true,
+    "five_plus_two": true,
+    "constant_euler_zero": true,
+    "constant_vef_42": true,
+    "constant_flags_42": true,
+    "total_v": true,
+    "total_e": true,
+    "total_f": true,
+    "total_vef_flags": true,
+    "metric_classes_68": true,
+    "edge_instances_147": true,
+    "metric_degeneracy_79": true,
+    "phase_kernel_match": true,
+    "phase_image_match": true,
+    "x_ray_split": true,
+    "edge_class_plus_kernel": true,
+    "edge_histogram_weighted_sum": true,
+    "edge_histogram_class_sum": true,
+    "non_h1_trace": true,
+    "h1_trace": true,
+    "total_trace": true
+  },
+  "theorem": "Toroidal VEF Edge-Phase Kernel Theorem. Across the seven Csaszar/Szilassi toroidal realizations, the v,e,f packet is constant by chart in the sense that v+e+f=42 and edge/face flags are 42. Globally, the packet has 147 actual edge instances but only 68 metric edge classes, producing a metric degeneracy excess of 79. This 79 is exactly the zero multiplicity of the signed minimal logical phase frame, spec(A A^T)=160^81 + 0^79, and equals the sum of the non-H1 primitive multiplicities 1+24+30+24. Thus the signed phase projector splits the 160 minimal X-rays as 79 toroidal metric-kernel directions plus 81 protected H1 directions.",
+  "honesty_boundary": "This is an exact finite combinatorial/metric bridge. It identifies the phase-frame kernel with toroidal metric edge degeneracy; it does not by itself infer physical dynamics or empirical observables."
+}
