@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "vertices_in_scheme": 160,
+    "classes_excluding_identity": 4,
+    "relations": ["0", "1", "3", "9", "27"],
+    "valencies": {"0": 1, "1": 81, "3": 54, "9": 18, "27": 6},
+    "all_identities_hold": true
+  },
+  "association_scheme": {
+    "relation_definition": "R_k connects two minimal X-rays iff their visible-Z overlap is k, for k in {1,3,9,27}; R_0 is identity.",
+    "valencies": {"0": 1, "1": 81, "3": 54, "9": 18, "27": 6},
+    "intersection_numbers": {
+      "1": {
+        "1": {"0": 81, "1": 40, "3": 42, "9": 36, "27": 54},
+        "3": {"0": 0, "1": 28, "3": 24, "9": 36, "27": 27},
+        "9": {"0": 0, "1": 8, "3": 12, "9": 9, "27": 0},
+        "27": {"0": 0, "1": 4, "3": 3, "9": 0, "27": 0}
+      },
+      "3": {
+        "1": {"0": 0, "1": 28, "3": 24, "9": 36, "27": 27},
+        "3": {"0": 54, "1": 16, "3": 24, "9": 9, "27": 18},
+        "9": {"0": 0, "1": 8, "3": 3, "9": 6, "27": 9},
+        "27": {"0": 0, "1": 2, "3": 2, "9": 3, "27": 0}
+      },
+      "9": {
+        "1": {"0": 0, "1": 8, "3": 12, "9": 9, "27": 0},
+        "3": {"0": 0, "1": 8, "3": 3, "9": 6, "27": 9},
+        "9": {"0": 18, "1": 2, "3": 2, "9": 0, "27": 6},
+        "27": {"0": 0, "1": 0, "3": 1, "9": 2, "27": 3}
+      },
+      "27": {
+        "1": {"0": 0, "1": 4, "3": 3, "9": 0, "27": 0},
+        "3": {"0": 0, "1": 2, "3": 2, "9": 3, "27": 0},
+        "9": {"0": 0, "1": 0, "3": 1, "9": 2, "27": 3},
+        "27": {"0": 6, "1": 0, "3": 0, "9": 1, "27": 2}
+      }
+    },
+    "partition_complete": true,
+    "symmetric": true,
+    "commutative": true
+  },
+  "closed_forms": {
+    "overlap_values": "1,3,9,27 = q^0,q^1,q^2,q^3",
+    "valencies": "1,81,54,18,6 = identity plus 3^4, 2*3^3, 2*3^2, 2*3",
+    "association_class_count": "4 nontrivial classes, matching d_Z=4 and q+1=4",
+    "scheme_size": "160 minimal X-rays = 40 isotropic lines * 4 line-stars"
+  },
+  "identities": {
+    "ray_counts": true,
+    "partition_complete": true,
+    "symmetric_relations": true,
+    "commutative_relations": true,
+    "valencies": true,
+    "closed_under_multiplication": true,
+    "rank_of_signed_phase": true
+  },
+  "theorem": "Minimal Logical X-Association Scheme Theorem. The projective minimal X-rays of the canonical W(3,3) edge CSS code form a 4-class commutative association scheme under visible-Z overlap. The nontrivial relations are indexed by overlap values 1,3,9,27, with valencies 81,54,18,6. The relation matrices partition the complete relation on 160 points and close under matrix multiplication.",
+  "honesty_boundary": "This is an exact finite association-scheme invariant. It does not by itself assign continuum dynamics or empirical observables."
+}
