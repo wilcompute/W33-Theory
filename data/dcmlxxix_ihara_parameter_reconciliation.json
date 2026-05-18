@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "part": "DCMLXXIX",
+    "decimal": 979,
+    "pg23_field_q": 3,
+    "pg23_degree": 4,
+    "pg23_bass_q": 3,
+    "pg23_nontrivial_radius_squared_numerator": 1,
+    "pg23_nontrivial_radius_squared_denominator": 3,
+    "w33_degree": 12,
+    "w33_bass_q": 11,
+    "classical_rh_status": "OPEN: finite graph-Ihara RH does not identify the Riemann zeta zeros",
+    "all_identities_hold": true
+  },
+  "pg23_levi_graph": {
+    "field_q": 3,
+    "degree": 4,
+    "bass_q": 3,
+    "vertices": 26,
+    "edges": 52,
+    "e_minus_v": 26,
+    "adjacency_spectrum": {
+      "+4": 1,
+      "-4": 1,
+      "+sqrt(3)": 12,
+      "-sqrt(3)": 12
+    },
+    "ihara_inverse_factorization": {
+      "bass_formula": "(1-u^2)^(E-V) det(I - A u + (d-1)u^2)",
+      "e_minus_v_factor": "(1-u^2)^26",
+      "trivial_eigen_pair": "1 - 10u^2 + 9u^4 = (1-u^2)(1-9u^2)",
+      "nontrivial_eigen_pair": "1 + 3u^2 + 9u^4",
+      "nontrivial_multiplicity": 12
+    },
+    "nontrivial_pole_radius_squared": {
+      "numerator": 1,
+      "denominator": 3
+    },
+    "nontrivial_pole_radius": "3^(-1/2)"
+  },
+  "rejected_stale_formula": {
+    "formula": "1 + 5u^2 + 16u^4",
+    "source_of_error": "uses degree d=4 where Bass/Ihara requires d-1=3",
+    "radius_squared_if_used": {
+      "numerator": 1,
+      "denominator": 4
+    },
+    "correct_radius_squared": {
+      "numerator": 1,
+      "denominator": 3
+    }
+  },
+  "w33_collinearity_graph": {
+    "vertices": 40,
+    "edges": 240,
+    "degree": 12,
+    "bass_q": 11,
+    "adjacency_spectrum": {
+      "12": 1,
+      "2": 24,
+      "-4": 15
+    },
+    "ramanujan_bound": "2*sqrt(11)",
+    "max_nontrivial_adjacency_abs": 4,
+    "nontrivial_pole_radius_squared": {
+      "numerator": 1,
+      "denominator": 11
+    },
+    "nontrivial_pole_radius": "11^(-1/2)"
+  },
+  "status_boundary": {
+    "proved": [
+      "Ihara/graph RH for the PG(2,3) Levi graph",
+      "Ihara/graph RH for the W(3,3) collinearity graph",
+      "finite CSS/Ramanujan analogues tracked by the repository"
+    ],
+    "open": [
+      "identifying the finite/projective-limit graph zeta with the classical Riemann zeta",
+      "uniform continuum/adelic limit needed to transfer graph RH to classical RH"
+    ]
+  },
+  "identities": {
+    "pg23_bass_parameter_is_degree_minus_one": true,
+    "pg23_levi_counts_are_exact": true,
+    "pg23_nontrivial_quartic_is_correct": true,
+    "pg23_trivial_eigen_pair_factors_correctly": true,
+    "pg23_nontrivial_radius_is_1_over_sqrt_3": true,
+    "stale_degree_substitution_is_rejected": true,
+    "w33_collinearity_bass_parameter_is_11_not_3": true,
+    "w33_collinearity_is_ramanujan_with_bass_11": true,
+    "w33_collinearity_radius_differs_from_pg23_levi_radius": true,
+    "critical_audit_keeps_zeta_identification_open": true,
+    "honest_assessment_keeps_riemann_rh_open": true,
+    "clean_proof_is_graph_ihara_not_classical_rh": true,
+    "rh_status_json_keeps_classical_rh_open": true
+  }
+}

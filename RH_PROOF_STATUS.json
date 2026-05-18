@@ -1,12 +1,16 @@
 {
-  "date": "2026-05-17",
-  "series_part": 969,
+  "date": "2026-05-18",
+  "series_part": 979,
   "RH_status": {
+    "PG23_Levi_Ihara_RH": "PROVED (Bass parameter d-1=3, non-trivial poles on |u|=3^-1/2)",
+    "W33_collinearity_Ihara_RH": "PROVED (Bass parameter 11, non-trivial poles on |u|=11^-1/2)",
     "CSS_theta_RH": "PROVED",
     "zeta_W_equals_zeta": "OPEN",
-    "Riemann_zeta_RH": "OPEN (conditional on identification)"
+    "Riemann_zeta_RH": "OPEN (finite graph-Ihara RH does not identify the Riemann zeta zeros)"
   },
   "proved_theorems": [
+    "PG(2,3) Levi graph Ihara poles satisfy graph RH with radius 3^-1/2",
+    "W(3,3) collinearity graph Ihara poles satisfy graph RH with radius 11^-1/2",
     "MacWilliams identity = Riemann functional equation",
     "CSS theta zeros have |Re(s)-1/2| <= O(9^{-m})",
     "zeta_W (CSS limit function) has all zeros on Re(s)=1/2",
@@ -14,6 +18,7 @@
   ],
   "open_problems": [
     "zeta_W = zeta identification (the Riemann zeta is NOT directly the CSS theta)",
+    "uniform continuum/adelic limit transferring graph-Ihara RH to the classical zeta function",
     "Selberg eigenvalue conjecture lambda_i >= 1/4 (Kim-Sarnak: 0.218)",
     "P != NP for general circuits (superpolynomial depth lower bound)"
   ],

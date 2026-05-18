@@ -3,7 +3,7 @@
 **Date:** 2026-05-17  
 **Series:** W(3,3) Theory of Everything  
 **Author:** Wil Dahn  
-**Status:** PROOF COMPLETE
+**Status:** GRAPH/IHARA PROOF COMPLETE — classical RH still requires an identification bridge
 
 ---
 
@@ -84,4 +84,18 @@ The analogy:
 | Non-trivial zeros | Non-trivial poles |
 | **OPEN** | **PROVED** (for $PG(2,q)$) |
 
-The CSS model provides the first **proved** example where the full analogy is realized.
+The CSS model provides a proved finite graph/Ihara realization of the analogy.
+It does not prove the classical Riemann Hypothesis by itself; that still
+requires an identification or limiting theorem connecting the finite graph/CSS
+zeta package to the classical Riemann zeta function.
+
+\medskip
+
+\textbf{Part DCMLXXIX reconciliation.} The PG(2,3) Levi graph has degree
+\(d=4\), so the Bass/Ihara parameter is \(d-1=3\). The \(W(3,3)\) collinearity
+graph has degree \(12\), so its Bass/Ihara parameter is \(11\). These are both
+valid graph-RH layers, but they have different critical radii:
+\[
+|u|=3^{-1/2}\quad\text{for the PG(2,3) Levi graph},\qquad
+|u|=11^{-1/2}\quad\text{for the W(3,3) collinearity graph}.
+\]

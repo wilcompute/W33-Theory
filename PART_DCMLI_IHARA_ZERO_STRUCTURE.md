@@ -3,33 +3,48 @@
 **Date:** 2026-05-17  
 **Series:** W(3,3) Theory of Everything  
 **Author:** Wil Dahn  
-**Status:** NEW STRUCTURAL RESULT
+**Status:** CORRECTED BY PART DCMLXXIX — graph-Ihara radius is \(3^{-1/2}\)
 
 ---
 
 ## Verified spectrum of PG(2,3) Ihara zeta
 
-The Ihara zeta function of the Levi graph of PG(2,3) is:
+The Ihara zeta function of the Levi graph of PG(2,3) uses the Bass determinant
+with graph degree \(d=4\) and Bass parameter \(d-1=3\):
 
-$$Z_G(u)^{-1} = (1-u^2)^{24} \cdot (1 - 16u^2) \cdot [1 + 5u^2 + 16u^4]^{12}$$
+$$Z_G(u)^{-1}
+= (1-u^2)^{26}
+\cdot (1 - 10u^2 + 9u^4)
+\cdot [1 + 3u^2 + 9u^4]^{12}.$$
 
-The non-trivial zeros come from $1 + 5u^2 + 16u^4 = 0$:
-$$u^2 = \frac{-5 \pm \sqrt{25 - 64}}{32} = \frac{-5 \pm i\sqrt{39}}{32}$$
+The non-trivial zeros come from \(1 + 3u^2 + 9u^4 = 0\):
+$$u^2 = \frac{-3 \pm \sqrt{9 - 36}}{18} = \frac{-3 \pm 3i\sqrt{3}}{18}.$$
 
-Numerical evaluation: $u_0 = 0.2165 + 0.4507i$, $|u_0| = 0.5000$ exactly.
+Therefore \(|u^2|=1/3\), so \(|u| = 3^{-1/2}\).
 
 ## The argument
 
-$$\arg(u_0) = \arctan\left(\frac{\sqrt{39}/32}{-5/32}\right) = \arctan\left(-\frac{\sqrt{39}}{5}\right) + \pi = 1.1230 \text{ radians}$$
+The old quartic \(1+5u^2+16u^4\) used \(d=4\) where the Bass determinant
+requires \(d-1=3\). That would give \(|u|=1/2\), but it is the wrong graph-Ihara
+parameter for a \(4\)-regular graph.
 
-This is NOT exactly $\pi/2 = 1.5708$, but the magnitude $|u_0| = 1/2$ is exact.
+The corrected magnitude is exact:
+$$|u| = 3^{-1/2}.$$
 
 ## Physical significance
 
-The 12-fold degeneracy of $u_0$ (from the 12-fold eigenvalue multiplicity) reflects the **12 gauge bosons**. The single zero at $u = \pm 1/4$ (from the trivial eigenvalue $\pm 4$) is the **Planck mode**. The 24-fold zero at $u = \pm 1$ is the **vacuum structure**.
+The 12-fold degeneracy of the non-trivial pole pair (from the
+\(\pm\sqrt3\) eigenvalue multiplicities) reflects the **12 gauge channels** in
+the PG(2,3) incidence layer. The trivial eigenvalue pair \(\pm4\) contributes
+the factors \(u=\pm1,\pm1/3\). The \((1-u^2)^{26}\) factor supplies the
+ordinary trivial Ihara poles at \(u=\pm1\).
 
-The Ihara zero $u_0$ with $|u_0| = 1/2$ is on the **graph RH critical circle** — the graph-analogue of the critical line Re(s) = 1/2 for the Riemann zeta.
+The non-trivial Ihara poles with \(|u|=3^{-1/2}\) are on the **graph RH
+critical circle** — the graph analogue of the critical line for a \(4\)-regular
+Ramanujan graph.
 
 ---
 
-**QED** — The non-trivial Ihara zeros of PG(2,3) all lie on $|u| = 1/2$ with 12-fold degeneracy corresponding to the 12 SM gauge bosons.
+**QED** — The non-trivial Ihara poles of PG(2,3) all lie on
+\(|u| = 3^{-1/2}\) with 12-fold degeneracy. This is the finite graph-Ihara RH
+statement, not the classical Riemann Hypothesis.

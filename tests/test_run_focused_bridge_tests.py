@@ -46,6 +46,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_w33_for_everyone_consistency_bridge.py" in SUITES["audit-core"]
     assert "tests/test_dcmi_sub_distinction_boundary_audit.py" in SUITES["audit-core"]
     assert "tests/test_dcmii_projective_screen_bulk_qec_bridge.py" in SUITES["audit-core"]
+    assert "tests/test_dcmlxxix_ihara_parameter_reconciliation.py" in SUITES["audit-core"]
     assert (
         "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py"
         in SUITES["markov-e6-burden"]
@@ -78,6 +79,7 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_w33_for_everyone_consistency_bridge.py" in paths
     assert "tests/test_dcmi_sub_distinction_boundary_audit.py" in paths
     assert "tests/test_dcmii_projective_screen_bulk_qec_bridge.py" in paths
+    assert "tests/test_dcmlxxix_ihara_parameter_reconciliation.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
     assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths
