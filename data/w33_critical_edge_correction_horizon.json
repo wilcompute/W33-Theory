@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "critical_n": 12,
+    "complete_edge_count": 66,
+    "genus_numerator": 72,
+    "gap": 6,
+    "genus_value": 6,
+    "all_identities_hold": true
+  },
+  "identities": {
+    "k_equals_12": true,
+    "css_roots_are_3_and_4": true,
+    "complete_edges_K12_equals_66": true,
+    "genus_numerator_at_12_equals_72": true,
+    "gap_equals_q_factorial": true,
+    "genus_at_12_equals_q_factorial": true,
+    "edge_plus_gap_equals_72": true,
+    "edge_plus_k_equals_78": true,
+    "edge_minus_14_equals_52": true,
+    "edge_plus_k_plus_55_equals_133": true,
+    "edge_plus_182_equals_248": true,
+    "edge_equals_21_plus_45": true,
+    "edge_equals_42_plus_24": true,
+    "edge_equals_55_plus_11": true
+  },
+  "closed_forms": {
+    "66": "C(12,2)",
+    "72": "(12-3)(12-4)",
+    "6": "3!",
+    "21_plus_45": "66 = C(7,2) + C(10,2)",
+    "42_plus_24": "66 = 42 + 24",
+    "55_plus_11": "66 = 55 + 11",
+    "exceptional": "52=66-14, 78=66+12, 133=66+12+55, 248=66+182"
+  },
+  "theorem": "Critical Edge Correction Horizon Theorem: at n=k=12, C(k,2)=66 and (k-dX)(k-dZ)=72, so 72=66+q!.",
+  "honesty_boundary": "Exact finite arithmetic and topology identities; interpretive claims are separate."
+}
