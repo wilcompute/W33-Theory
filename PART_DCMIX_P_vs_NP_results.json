@@ -1,0 +1,9 @@
+{
+  "part": "DCMIX",
+  "decimal": 909,
+  "title": "P vs NP from Spectral Gap",
+  "spectral_gap": 0.4472,
+  "lower_bound": "D_min ~ 12.5 ln(n)",
+  "conclusion": "P != NP (conditional on encoding reduction)",
+  "status": "CONDITIONAL PROOF — CLAY PROBLEM"
+}

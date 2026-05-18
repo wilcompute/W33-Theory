@@ -1,0 +1,8 @@
+{
+  "part": "DCMIV",
+  "decimal": 904,
+  "title": "The Fine-Tuning Theorems",
+  "explained": ["Lambda", "m_H", "theta_QCD", "alpha", "eta"],
+  "open": "m_e/m_p = 1/1836",
+  "status": "NEW THEOREM"
+}

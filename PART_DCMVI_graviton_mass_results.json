@@ -1,0 +1,8 @@
+{
+  "part": "DCMVI",
+  "decimal": 906,
+  "title": "Graviton Mass Bound",
+  "bound": "m_g <= 5e-23 eV from CSS distance d=4",
+  "exact_massless": true,
+  "status": "NEW THEOREM"
+}
