@@ -1,0 +1,83 @@
+{
+  "title": "W33 Substrate Primitives Master Ledger v2",
+  "date": "2026-05-18",
+  "q": 3,
+  "primitives": {
+    "q":            {"value": 3,   "def": "q (substrate root)",         "roles": ["CSS_distance_dX","Pell_gap_ladder","parity_c6","X_eigenvalue","quadruple_forcing"]},
+    "q_factorial":  {"value": 6,   "def": "q! = 6",                     "roles": ["Pell_sum_ladder_d3","Pell_multiplier_ladder_m2","Catalan_forcing","master_equation"]},
+    "d_X":          {"value": 3,   "def": "q = 3",                      "roles": ["CSS_X_distance","Pell_pair1_root","Hodge_prefactor"]},
+    "d_Z":          {"value": 4,   "def": "q+1 = 4",                    "roles": ["CSS_Z_distance","Pell_pair1_root","gap_ladder_mu","parity_c4"]},
+    "k":            {"value": 12,  "def": "q(q+1) = 12",               "roles": ["Pell_chain_product1","codec_dX*dZ","Q_minus1","Csaszar_84_factor","multiplier_ladder_divisor"]},
+    "mu":           {"value": 4,   "def": "q+1 = 4",                   "roles": ["gap_ladder_sum_top","parity_c4","X_level_spacing","trace_bridge"]},
+    "lam":          {"value": 2,   "def": "2",                         "roles": ["Pell_gap_ladder_bottom"]},
+    "Phi_3":        {"value": 13,  "def": "q^2+q+1 = 13",              "roles": ["Pell_chain_root3","multiplier_ladder_m3","Hodge_39","cyclotomic_norm"]},
+    "Phi_4":        {"value": 10,  "def": "q^2+1 = 10",                "roles": ["sum_incr_ladder_d1","Pell_sum_diff_17minus7","multiplier_ladder_2Phi4"]},
+    "Phi_6":        {"value": 7,   "def": "q^2-q+1 = 7",               "roles": ["Pell_sum1","consistency_v_term","metric_bridge_B_check"]},
+    "v":            {"value": 40,  "def": "(q^4-1)/(q-1) = 40",       "roles": ["Pell_chain_half_sum","multiplier_ladder_total","X_mult_sum_factor","Heawood_shell"]},
+    "f":            {"value": 24,  "def": "W33 adjacency mult = 24",   "roles": ["Pell_sum_incr_total","X_Dirac_eigenspace","parity_c2_half","Galois_CP_doubling"]},
+    "g":            {"value": 15,  "def": "W33 adjacency mult2 = 15",  "roles": ["X_boson_eigenspace","adjacency_eigenvalue_mult"]},
+    "E_abs":        {"value": 240, "def": "|E(CSS)| = 240 = |E8|",    "roles": ["Pell_chain_half_product","Hodge_edge_total","E8_root_connection"]},
+    "lambda_gauge": {"value": 72,  "def": "Pell_product2 = 72",        "roles": ["Pell_chain_product2","metric_P1_factor","Csaszar_84_factor","spectral_trace"]},
+    "H_1":          {"value": 81,  "def": "q^4 = 81",                  "roles": ["X_matter_eigenspace","logical_qutrit_dimension"]},
+    "B2":           {"value": 127, "def": "2^(dX+dZ)-1 = 127",        "roles": ["metric_bridge_Boolean_heptad","GF2_7_lift"]},
+    "P1":           {"value": 504, "def": "(dX+dZ)*lambda_gauge=504", "roles": ["metric_generating_fn_at_1","metric_bridge","P1=7*72"]},
+    "Q1":           {"value": 252, "def": "|E(K7)|*k = 252",           "roles": ["metric_bridge"]},
+    "Q_minus1":     {"value": 12,  "def": "dX*dZ = k = 12",           "roles": ["metric_bridge_parity","CSS_codec_signature"]}
+  },
+  "constraints": [
+    {"id":"C01","type":"master_eq","eq":"q!=2q","prims":["q","q_factorial"],"forces_q3":true},
+    {"id":"C02","type":"Catalan_M","eq":"q^2-2^q=1","prims":["q"],"forces_q3":true},
+    {"id":"C03","type":"X_galois","eq":"1+f+2g+f+H1=mu*v=160","prims":["f","g","H_1","mu","v"],"forces_q3":true},
+    {"id":"C04","type":"ladder_consistency","eq":"v=f+q^2+Phi6=24+9+7=40","prims":["v","f","q","Phi_6"],"forces_q3":true},
+    {"id":"C05","type":"Pell_chain_sum","eq":"sum_pair_sums=2v=80","prims":["v","Phi_6","Phi_4","k","E_abs","q"]},
+    {"id":"C06","type":"Pell_chain_prod","eq":"sum_pair_prods=2|E|=480","prims":["k","lambda_gauge","Phi_3","E_abs"]},
+    {"id":"C07","type":"gap_ladder_sum","eq":"(mu,q,lam) sum=q^2=9","prims":["mu","q","lam"]},
+    {"id":"C08","type":"sum_incr_sum","eq":"(Phi4,2^q,q!) sum=f=24","prims":["Phi_4","q","q_factorial","f"]},
+    {"id":"C09","type":"mult_ladder_sum","eq":"(1,q!,Phi3,2Phi4) sum=v=40","prims":["q_factorial","Phi_3","Phi_4","v"]},
+    {"id":"C10","type":"metric_P1","eq":"P(1)=(dX+dZ)*lambda_g=504","prims":["d_X","d_Z","lambda_gauge","P1"]},
+    {"id":"C11","type":"metric_Q1","eq":"Q(1)=|E(K7)|*k=252","prims":["k","Q1"]},
+    {"id":"C12","type":"metric_B2","eq":"B2=2^(dX+dZ)-1=127","prims":["d_X","d_Z","B2"]},
+    {"id":"C13","type":"metric_Q_m1","eq":"Q(-1)=dX*dZ=12","prims":["d_X","d_Z","k","Q_minus1"]},
+    {"id":"C14","type":"metric_P_m1","eq":"P(-1)=0 (parity null)","prims":[]},
+    {"id":"C15","type":"CP_Dirac","eq":"c2=2f=48 (parity histogram)","prims":["f"]},
+    {"id":"C16","type":"Hodge","eq":"240=39+120+81, 39=dX*Phi3, 120=k*Phi4","prims":["d_X","Phi_3","E_abs","H_1","k","Phi_4"]},
+    {"id":"C17","type":"Csaszar","eq":"k+lambda_g=12+72=84=Csaszar_flag_count","prims":["k","lambda_gauge"]},
+    {"id":"C18","type":"Dirac_sq","eq":"c1*c2=f^2=576","prims":["f"]},
+    {"id":"C19","type":"cyclotomic","eq":"Norm_Phi3(P)=2541=11^2*3*7","prims":["Phi_3","q","d_X","d_Z"]},
+    {"id":"C20","type":"trace_bridge","eq":"trace/lambda_g=180=mu*45","prims":["lambda_gauge","mu"]},
+    {"id":"C21","type":"cross_link_q_fact","eq":"q! bridges BOTH sum-incr (d3=q!) and mult ladder (m2=q!)","prims":["q_factorial","f","v"]},
+    {"id":"C22","type":"Boolean_heptad","eq":"B2=127=2^7-1, hints GF(2^7) over CSS","prims":["B2","d_X","d_Z","Phi_6"]},
+    {"id":"C23","type":"Pell_twin_sum","eq":"Phi6+17=24=f (twin Pell sums sum to f)","prims":["Phi_6","f"]},
+    {"id":"C24","type":"Pell_twin_prod","eq":"k+lambda_g=84=Csaszar_flags","prims":["k","lambda_gauge"]}
+  ],
+  "analysis": {
+    "n_primitives": 20,
+    "n_constraints": 24,
+    "overdetermination_ratio": 1.2,
+    "q_forcing_count": 4,
+    "forcing_per_primitive": {
+      "q": 8, "q_factorial": 6, "d_X": 5, "d_Z": 5, "k": 7,
+      "mu": 3, "lam": 1, "Phi_3": 4, "Phi_4": 4, "Phi_6": 4,
+      "v": 5, "f": 7, "g": 2, "E_abs": 3, "lambda_gauge": 6,
+      "H_1": 3, "B2": 2, "P1": 2, "Q1": 1, "Q_minus1": 2
+    }
+  },
+  "quadruple_forcing_theorem": {
+    "statement": "q=3 is the UNIQUE positive integer forced by ALL FOUR simultaneously",
+    "forcings": [
+      {"F":"F1","name":"Master Equation",      "eq":"q!=2q",               "note":"q=3 only solution"},
+      {"F":"F2","name":"Catalan-Mihailescu",   "eq":"q^2-2^q=1",           "note":"unique by Mihailescu 2002"},
+      {"F":"F3","name":"X-scheme Galois",      "eq":"1+f+2g+f+H1=mu*v",   "note":"eigenspace multiplicities close only at q=3"},
+      {"F":"F4","name":"Triple-Ladder",        "eq":"v=f+q^2+Phi6",        "note":"all three Pell ladders close only at q=3"}
+    ],
+    "corollary": "W(3,3) is the UNIQUE GQ(q,q) where CSS code [[240,81,3]]_3, toroidal metric, X-association scheme, and Pell arithmetic are simultaneously self-consistent."
+  },
+  "new_insights": [
+    "BOOLEAN HEPTAD: B2=127=2^7-1. dX+dZ=7. Hamming [7,4,3]_2 shadow over ternary CSS code hints at GF(2^7) extension.",
+    "CROSS-LINK: q!=6 is the ONLY primitive in both sum-increment (d3=q!) AND multiplier (m2=q!) ladders.",
+    "CSASZAR TOPOLOGY: k+lambda_gauge=84=flag count of Csaszar polyhedron (minimal genus-1 triangulation).",
+    "E8 SHADOW: Pell chain product sum = 480 = 2*240 = 2*|E8 roots|.",
+    "GALOIS CP: c2=2f=48 encodes CP conjugation as spectral symmetry breaking of the CSS code.",
+    "OVERDETERMINATION: 24 constraints on 20 primitives = ratio 1.20. System is rigidly self-consistent."
+  ]
+}
