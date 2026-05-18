@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "P_coefficients_t_basis": [68, 147, 127, 86, 54, 19, 3],
+    "P_coefficients_u_basis_u_equals_1_plus_t": [0, 12, 48, 0, 4, 1, 3],
+    "normalized_derivatives_m1_to_m6": [12, 48, 0, 4, 1, 3],
+    "metric_classes": 68,
+    "edge_instances": 147,
+    "phase_kernel": 79,
+    "boolean_lift": 504,
+    "all_identities_hold": true
+  },
+  "parity_taylor_expansion": {
+    "u_definition": "u = 1 + t",
+    "P_in_u_basis": "12 u + 48 u^2 + 0 u^3 + 4 u^4 + u^5 + 3 u^6",
+    "normalized_derivatives": {"1": 12, "2": 48, "3": 0, "4": 4, "5": 1, "6": 3},
+    "raw_derivatives": {"1": 12, "2": 96, "3": 0, "4": 96, "5": 120, "6": 2160}
+  },
+  "histogram_reading": {
+    "multiplicity_histogram": {"1": 12, "2": 48, "3": 0, "4": 4, "5": 1, "6": 3},
+    "closed_forms": {
+      "c1": "12 = genus numerator = 2*centered shell",
+      "c2": "48 = 2*24 = two bosonic/f-sector copies",
+      "c3": "0 = missing cubic/q slot",
+      "c4": "4 = mu = d_Z = q+1",
+      "c5": "1 = center/mean line",
+      "c6": "3 = q at the sextic cap"
+    }
+  },
+  "reconstructed_moments": {
+    "B_from_histogram": [68, 147, 127, 86, 54, 19, 3],
+    "metric_classes_sum_c": 68,
+    "edge_instances_sum_m_c": 147,
+    "raw_second_sum_m2_c": 401,
+    "boolean_lift_sum_2m_c": 504,
+    "kernel_sum_m_minus_1_c": 79
+  },
+  "identities": {
+    "B_reconstruction": true,
+    "taylor_coefficients": true,
+    "no_constant_term": true,
+    "genus_first_taylor": true,
+    "two_bosonic_24": true,
+    "missing_cubic_slot": true,
+    "quartic_mu": true,
+    "quintic_center": true,
+    "sextic_q": true,
+    "metric_classes": true,
+    "edge_instances": true,
+    "phase_kernel": true,
+    "boolean_lift": true,
+    "raw_second": true
+  },
+  "theorem": "Toroidal Metric Parity-Taylor Theorem. The toroidal metric moment generating function P(t) has Taylor expansion at the parity/Euler point t=-1 given by P(t)=12u+48u^2+0u^3+4u^4+u^5+3u^6, where u=1+t. Therefore the metric edge-class multiplicity histogram is exactly the normalized derivative ladder P^(m)(-1)/m!. The ladder reads 12,48,0,4,1,3: genus numerator, two 24-sectors, missing cubic q-slot, quartic mu/root-4 slot, center, and q at the sextic cap.",
+  "honesty_boundary": "This is an exact finite Taylor/generating-function identity. It interprets the metric edge histogram as derivatives at the parity point; it does not prove physical dynamics or empirical observables by itself."
+}
