@@ -1,0 +1,260 @@
+{
+  "primitives": {
+    "q": 3,
+    "k": 12,
+    "lam": 2,
+    "mu": 4,
+    "v": 40,
+    "f": 24,
+    "g": 15,
+    "edges": 240,
+    "we6": 51840,
+    "aut": 1451520,
+    "tauO": 384,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "Phi12": 73,
+    "qq": 27,
+    "qqp1": 81,
+    "qfact": 6,
+    "S": 36,
+    "Q": 45,
+    "1": 1,
+    "2": 2,
+    "5": 5,
+    "11": 11,
+    "17": 17,
+    "47": 47,
+    "59": 59,
+    "71": 71
+  },
+  "predictions": [
+    {
+      "name": "alpha^-1 (integer)",
+      "predicted": 137.0,
+      "measured": 137.035999084,
+      "formula": "tau(O)/q + q^2",
+      "err_pct": 0.026269800811923878
+    },
+    {
+      "name": "sin^2(theta_W)",
+      "predicted": 0.23076923076923078,
+      "measured": 0.23121,
+      "formula": "q/Phi_3 = 3/13",
+      "err_pct": 0.1906358854587677
+    },
+    {
+      "name": "m_W/m_Z",
+      "predicted": 0.8770580193070292,
+      "measured": 0.8813588689690265,
+      "formula": "sqrt(Phi_4/Phi_3)",
+      "err_pct": 0.4879793933461206
+    },
+    {
+      "name": "m_Z",
+      "predicted": 91.63475873979263,
+      "measured": 91.1876,
+      "formula": "m_W * sqrt(Phi_3/Phi_4)",
+      "err_pct": 0.49037230916553026
+    },
+    {
+      "name": "m_h (GeV)",
+      "predicted": 193.39323892832613,
+      "measured": 125.25,
+      "formula": "sqrt(2(phi-1))*v_EW/sqrt(2)",
+      "err_pct": 54.40577958349392
+    },
+    {
+      "name": "m_t pole (GeV)",
+      "predicted": 172.21875,
+      "measured": 172.69,
+      "formula": "(k-1)/2^q * m_h",
+      "err_pct": 0.27288783369042663
+    },
+    {
+      "name": "m_b (GeV)",
+      "predicted": 4.31725,
+      "measured": 4.183,
+      "formula": "m_t/v",
+      "err_pct": 3.209419077217303
+    },
+    {
+      "name": "m_c (GeV)",
+      "predicted": 1.2605109489051094,
+      "measured": 1.273,
+      "formula": "m_t / alpha_inv",
+      "err_pct": 0.9810723562364896
+    },
+    {
+      "name": "m_s (MeV)",
+      "predicted": 94.05773420479304,
+      "measured": 93.39999999999999,
+      "formula": "m_t/(m_p/m_e)",
+      "err_pct": 0.7042122106991909
+    },
+    {
+      "name": "m_mu (MeV)",
+      "predicted": 104.52117647058824,
+      "measured": 105.66000000000001,
+      "formula": "m_tau/(Phi_3+mu)",
+      "err_pct": 1.0778189754039051
+    },
+    {
+      "name": "m_e (MeV)",
+      "predicted": 0.5104347826086957,
+      "measured": 0.5109999999999999,
+      "formula": "m_mu/(q^2*(Phi_3+Phi_4))",
+      "err_pct": 0.11061005700669631
+    },
+    {
+      "name": "m_p/m_e",
+      "predicted": 1836,
+      "measured": 1836.15267343,
+      "formula": "mu*q^q*(Phi_3+mu)",
+      "err_pct": 0.008314854870692768
+    },
+    {
+      "name": "V_us",
+      "predicted": 0.22360679774997896,
+      "measured": 0.22436,
+      "formula": "sqrt(lambda/v) = sqrt(1/20)",
+      "err_pct": 0.3357114681855233
+    },
+    {
+      "name": "V_cb",
+      "predicted": 0.041666666666666664,
+      "measured": 0.0413,
+      "formula": "1/f = 1/24",
+      "err_pct": 0.887812752219518
+    },
+    {
+      "name": "sin^2(theta_12)_PMNS",
+      "predicted": 0.3076923076923077,
+      "measured": 0.307,
+      "formula": "mu/Phi_3 = 4/13",
+      "err_pct": 0.22550739163117728
+    },
+    {
+      "name": "sin^2(theta_23)_PMNS",
+      "predicted": 0.5714285714285714,
+      "measured": 0.572,
+      "formula": "mu/Phi_6 = 4/7",
+      "err_pct": 0.09990009990009724
+    },
+    {
+      "name": "sin^2(theta_13)_PMNS",
+      "predicted": 0.022222222222222223,
+      "measured": 0.0224,
+      "formula": "1/|Q| = 1/45",
+      "err_pct": 0.7936507936507889
+    },
+    {
+      "name": "Omega_Lambda",
+      "predicted": 0.6842105263157895,
+      "measured": 0.685,
+      "formula": "Phi_3/(Phi_3+2q) = 13/19",
+      "err_pct": 0.11525163273146892
+    },
+    {
+      "name": "Omega_m",
+      "predicted": 0.3157894736842105,
+      "measured": 0.315,
+      "formula": "2q/(Phi_3+2q) = 6/19",
+      "err_pct": 0.25062656641603387
+    },
+    {
+      "name": "Omega_L/Omega_m",
+      "predicted": 2.1666666666666665,
+      "measured": 2.174603174603175,
+      "formula": "Phi_3/(2q) = 13/6",
+      "err_pct": 0.36496350364965413
+    },
+    {
+      "name": "Omega_DM/Omega_b",
+      "predicted": 5,
+      "measured": 5.408163265306123,
+      "formula": "mu+1 = 5",
+      "err_pct": 7.547169811320763
+    },
+    {
+      "name": "n_s",
+      "predicted": 0.9666666666666667,
+      "measured": 0.9649,
+      "formula": "1 - 1/(q^q+q) = 29/30",
+      "err_pct": 0.18309323936850389
+    },
+    {
+      "name": "eta_B",
+      "predicted": 6e-10,
+      "measured": 6.12e-10,
+      "formula": "q!*10^(-Phi_4)",
+      "err_pct": 1.9607843137254837
+    },
+    {
+      "name": "H_0 (Planck)",
+      "predicted": 67,
+      "measured": 67.4,
+      "formula": "Phi_12(q) - q! = 67",
+      "err_pct": 0.5934718100890292
+    },
+    {
+      "name": "H_0 (SH0ES)",
+      "predicted": 73,
+      "measured": 73.0,
+      "formula": "Phi_12(q) = 73",
+      "err_pct": 0.0
+    },
+    {
+      "name": "H_0 tension",
+      "predicted": 6,
+      "measured": 5.599999999999994,
+      "formula": "q! = 6 km/s/Mpc",
+      "err_pct": 7.1428571428572525
+    },
+    {
+      "name": "m_nu3 (eV)",
+      "predicted": 0.032518057002457,
+      "measured": 0.0497,
+      "formula": "v^2/M_R where M_R=M_Pl/q^{2^q}",
+      "err_pct": 34.57131387835613
+    },
+    {
+      "name": "m_DM (GeV) vs 2143",
+      "predicted": 2129.25,
+      "measured": 2143.0,
+      "formula": "(Phi_3+mu)*m_h = 17*m_h",
+      "err_pct": 0.6416238917405506
+    },
+    {
+      "name": "spec gap 16/10",
+      "predicted": 1.6,
+      "measured": 1.6,
+      "formula": "Fibonacci F_6/F_5",
+      "err_pct": 0.0
+    },
+    {
+      "name": "spec gap to phi",
+      "predicted": 1.6,
+      "measured": 1.618033988749895,
+      "formula": "8/5 -> golden ratio",
+      "err_pct": 1.114561800016822
+    }
+  ],
+  "match_quality": {
+    "exact (<0.1%)": 5,
+    "tight (0.1-1%)": 17,
+    "good (1-3%)": 3,
+    "ok (3-10%)": 3,
+    "loose (>=10%)": 2
+  },
+  "ihara_critical_radius": 0.30151134457776363,
+  "cannonball": {
+    "n": 24,
+    "sum_sq": 4900,
+    "root": 70,
+    "matches_Phi6_v_4": true
+  },
+  "pell_99_70_valid": true,
+  "phi6_squared_minus_4k": 1
+}

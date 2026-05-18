@@ -222,10 +222,10 @@ print(f"  Match: {47*59*71 == (4*k-1)*(5*k-1)*(6*k-1) == 196883}")
 
 # Conway primes mod 12
 print(f"\nMod 12: 47 % 12 = {47 % 12}, 59 % 12 = {59 % 12}, 71 % 12 = {71 % 12}")
-print("All ≡ 11 (mod 12) -> fully inert in Z[zeta_12]")
+print("All == 11 (mod 12) -> fully inert in Z[zeta_12]")
 
 # ============================================================================
-hr("CANNONBALL → PELL → LEECH")
+hr("CANNONBALL -> PELL -> LEECH")
 
 # Cannonball
 n_cb = 2 * k
@@ -264,7 +264,7 @@ print(f"             = aut = {aut}  -> {aut_expr == aut}")
 print(f"\n|W(E_6)| = 2^Phi_6 * q^(q+1) * (mu+1) = {2**Phi6 * qqp1 * (mu+1)} = we6 = {we6}  -> {2**Phi6 * qqp1 * (mu+1) == we6}")
 
 # ============================================================================
-hr("Φ_6 - 4k = 1 IS A SPECIAL DISCRIMINANT-ONE PAIR")
+hr("Phi_6 - 4k = 1 IS A SPECIAL DISCRIMINANT-ONE PAIR")
 
 # Find all pairs (a, b) with gcd(a^2-1, b) maximal
 # This is the discriminant-one corner of cyclotomic structure
