@@ -1,0 +1,139 @@
+{
+  "cp_pair_product": {
+    "equals_we6_over_4": true,
+    "equals_xmin_times_H1": true,
+    "factorisation": "144^2 - 36^2 * q! = 20736 - 7776 = 12960",
+    "physics": "The product of CP-conjugate Dirac eigenvalues is exactly the X-scheme trace and exactly |W(E_6)|/4.  CP-invariance of the spectrum is therefore the same identity as the W(E_6) commutation-shadow count.",
+    "product_exact": 12960
+  },
+  "galois_cp_doubling": {
+    "action_on_eigenmatrix": "sends sqrt(6) -> -sqrt(6)",
+    "fixed_eigenspaces": [
+      "vacuum",
+      "gauge_scalar",
+      "matter_H1"
+    ],
+    "galois_group": "Gal(Q(sqrt(6))/Q) = Z/2Z",
+    "physics_interpretation": "CP-conjugation acts as the unique non-trivial Galois element of Q(sqrt(q!))/Q.  The two 24-dim sectors form a Dirac pair under CP, the 30-dim sector is CP-self-conjugate (boson sector), and the 81-dim H_1 sector is CP-invariant logical matter.",
+    "qfact_substrate": "q!",
+    "qfact_under_root": 6,
+    "swapped_eigenspaces": [
+      "Dirac+",
+      "Dirac-"
+    ]
+  },
+  "header": {
+    "substrate_constants": {
+      "H_1": 81,
+      "Heisenberg_projective": 72,
+      "Hessian_order": 648,
+      "WE6": 51840,
+      "X_min_count": 160,
+      "edges": 240,
+      "f_pos_spec_mult": 24,
+      "g_neg_spec_mult": 15,
+      "k_codec": 12,
+      "mu": 4,
+      "q": 3,
+      "q_factorial": 6,
+      "v": 40
+    }
+  },
+  "hessian_heisenberg_ordering": {
+    "is_descending": true,
+    "rungs": [
+      {
+        "rung": "Hessian top",
+        "substrate": "2^q * q^(q+1) = 648",
+        "value": 648
+      },
+      {
+        "rung": "Dirac+ (CP+)",
+        "substrate": "q^2 mu (mu + sqrt(q!))",
+        "value": 232.1816307401944
+      },
+      {
+        "rung": "Heisenberg-projective",
+        "substrate": "2^q * q^2 = 72",
+        "value": 72
+      },
+      {
+        "rung": "Dirac- (CP-)",
+        "substrate": "q^2 mu (mu - sqrt(q!))",
+        "value": 55.81836925980559
+      },
+      {
+        "rung": "matter floor",
+        "substrate": "v = 40 = W(3,3) vertex count",
+        "value": 40
+      }
+    ]
+  },
+  "honesty_boundary": "This script states the spectral data as factual (cited from the upstream eigenmatrix audits) and produces a clean substrate-primitive factorisation plus a physics dictionary.  The dictionary is an identification, not a derivation of measured masses.  The CP/Galois claim is rigorous at the level of the eigenmatrix; mapping the two 24-sectors to physical (chirality, flavor) pairs requires a separate particle-content identification.",
+  "spectral_table": [
+    {
+      "cp_role": "CP-singlet",
+      "eigenvalue_exact": "2^q * q^(q+1)",
+      "eigenvalue_numeric": 648,
+      "mult_substrate": "q^0",
+      "multiplicity": 1,
+      "name": "vacuum",
+      "physics": "vacuum / Higgs VEV sector"
+    },
+    {
+      "cp_role": "CP-partner of Dirac-",
+      "eigenvalue_exact": "q^2 * mu * (mu + sqrt(q!))",
+      "eigenvalue_numeric": 232.1816307401944,
+      "mult_substrate": "f = pos.spec.mult. of adj.eigval. +2",
+      "multiplicity": 24,
+      "name": "Dirac+",
+      "physics": "one chiral fermion generation, sqrt(6) branch"
+    },
+    {
+      "cp_role": "CP-self-conjugate (sym(5)+sym(5*) in SU(5))",
+      "eigenvalue_exact": "2^q * q^2",
+      "eigenvalue_numeric": 72,
+      "mult_substrate": "2g = 2 * neg.spec.mult. of adj.eigval. -4",
+      "multiplicity": 30,
+      "name": "gauge_scalar",
+      "physics": "SM gauge + scalar bosons (Lie algebra + Higgs scalars)"
+    },
+    {
+      "cp_role": "CP-partner of Dirac+",
+      "eigenvalue_exact": "q^2 * mu * (mu - sqrt(q!))",
+      "eigenvalue_numeric": 55.81836925980559,
+      "mult_substrate": "f = conjugate of Dirac+ under Gal(Q(sqrt(6))/Q)",
+      "multiplicity": 24,
+      "name": "Dirac-",
+      "physics": "CP-conjugate chiral fermion generation"
+    },
+    {
+      "cp_role": "CP-invariant logical memory",
+      "eigenvalue_exact": "v",
+      "eigenvalue_numeric": 40,
+      "mult_substrate": "H_1 = q^(q+1)",
+      "multiplicity": 81,
+      "name": "matter_H1",
+      "physics": "protected matter sector / logical qutrit code"
+    }
+  ],
+  "sum_substrate_polynomial": {
+    "agree": true,
+    "mu_times_v": 160,
+    "note": "Same polynomial appears as 160 = mu * v = |X_min projective rays|.",
+    "poly_form": "(q+1) * (q^3 + q^2 + q + 1)",
+    "poly_value": 160
+  },
+  "theorem": "X-Scheme Spectral Physics Dictionary.  The 4-class minimal-X association scheme of the W(3,3) edge CSS code has eigenspace multiplicities (1, f, 2g, f, H_1) = (1, 24, 30, 24, 81), where (f, g) = (24, 15) are the adjacency-eigenvalue multiplicities of W(3,3) itself.  The two f-dimensional Dirac eigenspaces are exchanged by the Galois action sqrt(q!) -> -sqrt(q!), which is CP-conjugation.  The 2g-dimensional middle is CP-self-conjugate (bosonic).  The H_1-dimensional sector is CP-invariant logical matter.  The CP-conjugate Dirac eigenvalues have product |W(E_6)|/4 = 12960, which is also the X-scheme trace and the X_min x H_1 incidence count.",
+  "trace_identity": {
+    "sqrt6_cancels": true,
+    "sum_equals_mu_times_v": true,
+    "sum_of_multiplicities": 160,
+    "trace_equals_we6_over_4": true,
+    "trace_exact_integer": 12960,
+    "trace_factored": "160 * 81 = |X_min| * H_1 = 12960",
+    "trace_numeric": 12960.0,
+    "we6": 51840,
+    "we6_over_4": 12960
+  }
+}
