@@ -1,0 +1,114 @@
+{
+  "bridge_identities": {
+    "c1_plus_c2_equals_60_inflation_efolds": true,
+    "c1_times_c2_equals_f_squared": true,
+    "c_2_equals_2f_two_dirac_sum": true,
+    "c_4_equals_mu_codec": true,
+    "c_5_equals_vacuum": true,
+    "c_6_equals_q_substrate_root": true,
+    "missing_cubic_slot": true,
+    "product_matches": true,
+    "product_of_nonzero_c": 6912,
+    "product_substrate_form": "2^(2q+2) * q^q = 2^8 * 27",
+    "ratio_c2_over_c1_is_mu": true,
+    "ratio_c4_over_c5_is_mu": true,
+    "ratio_c6_over_c5_is_q": true
+  },
+  "cp_doubling_consistency": {
+    "X_scheme_dirac_pair_sum": 48,
+    "interpretation": "The X-association eigenspace doubling (Dirac+ / Dirac-) under Gal(Q(sqrt(q!))/Q) shows up in the parity-Taylor expansion of the toroidal metric polynomial as the single histogram entry c_2 = 48 = 2f.  The Galois swap on the X-side is the same as the doubling-into-c_2 on the metric side: both encode CP-pairing of Dirac generations.",
+    "match": true,
+    "parity_taylor_c2": 48
+  },
+  "cumulative_sums": {
+    "cumulative_c": [
+      12,
+      60,
+      60,
+      64,
+      65,
+      68
+    ],
+    "cumulative_m_c": [
+      12,
+      108,
+      108,
+      124,
+      129,
+      147
+    ],
+    "total_classes_B0": 68,
+    "total_classes_equals_68": true,
+    "total_edge_instances_B1": 147,
+    "total_edge_instances_equals_147": true
+  },
+  "honesty_boundary": "Both inputs are exact upstream invariants.  The bridge is pure arithmetic identification using substrate primitives; it does not predict empirical masses on its own.  The missing c_3 = 0 slot and the absence of histogram entries equal to 2g = 30 or H_1 = 81 are documented honestly: the metric histogram and the X-scheme multiplicity table agree on the vacuum/Dirac/codec/q sectors, and DIFFER (as expected) on the gauge-scalar and logical-matter sectors that live off the metric support.",
+  "parity_taylor_histogram": {
+    "c_1_to_c_6": [
+      12,
+      48,
+      0,
+      4,
+      1,
+      3
+    ]
+  },
+  "theorem": "Parity-Taylor / X-Scheme Bridge.  The metric edge-class multiplicity histogram c = (12, 48, 0, 4, 1, 3) computed as the normalized Taylor coefficients of P(t) at the parity point t = -1 contains a one-to-one substrate-primitive correspondence with three X-association eigenspaces of [[240,81,3]]_3: c_2 = 2 f matches the CP-conjugate Dirac pair, c_4 = mu = d_Z matches the codec signature, c_5 = 1 matches the trivial (vacuum) sector, and c_6 = q matches the substrate root.  The Galois action sqrt(q!) -> -sqrt(q!) that doubles the X-Dirac sector into (Dirac+, Dirac-) corresponds on the metric side to the single histogram entry c_2 = 48 = 2 f.  Product of nonzero histogram entries equals 2^(2q+2) * q^q, the Heisenberg-Hessian boundary value 6912.",
+  "x_scheme_multiplicities": {
+    "trivial,Dirac+,gauge,Dirac-,matter": [
+      1,
+      24,
+      30,
+      24,
+      81
+    ]
+  },
+  "x_to_metric_table": {
+    "bridge_substrate_pairs": {
+      "(c_2, two-Dirac)": [
+        48,
+        48
+      ],
+      "(c_4, mu)": [
+        4,
+        4
+      ],
+      "(c_5, vacuum)": [
+        1,
+        1
+      ],
+      "(c_6, q)": [
+        3,
+        3
+      ]
+    },
+    "side_by_side": [
+      {
+        "X_scheme_mult": 1,
+        "match": true,
+        "metric_c5": 1,
+        "sector": "vacuum"
+      },
+      {
+        "X_scheme_mult_sum": 48,
+        "match": true,
+        "metric_c2": 48,
+        "sector": "Dirac+/-"
+      },
+      {
+        "X_scheme_mult": 30,
+        "match": null,
+        "metric_c_unspecified": null,
+        "note": "30 = 2g lives on X-side as a distinct eigenspace; no single Taylor slot equals 30.",
+        "sector": "gauge_scalar"
+      },
+      {
+        "X_scheme_mult": 81,
+        "match": null,
+        "metric_c_unspecified": null,
+        "note": "81 = H_1 protected sector; lives off the metric histogram support.",
+        "sector": "matter_H1"
+      }
+    ]
+  }
+}
