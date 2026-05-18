@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "spectrum": [
+      "648^1",
+      "(144 + 36*sqrt(6))^24",
+      "72^30",
+      "(144 - 36*sqrt(6))^24",
+      "40^81"
+    ],
+    "primitive_multiplicities": [1, 24, 30, 24, 81],
+    "multiplicity_factorization": "1,24,30,24,81 = 1,4*6,5*6,4*6,81",
+    "toroidal_heptad": "5 Csaszar + 2 Szilassi = 7 = Phi6; centered shell = 6",
+    "all_identities_hold": true
+  },
+  "toroidal_realization_packet": {
+    "csaszar_realizations": 5,
+    "szilassi_realizations": 2,
+    "total_realizations": 7,
+    "centered_shell_dimension": 6,
+    "centered_refinement": {
+      "csaszar_internal": 4,
+      "szilassi_internal": 1,
+      "family_separation": 1,
+      "sum": 6
+    },
+    "genus_numerator_oriented_double_cover": 12,
+    "tomotope_cells": 8
+  },
+  "spectrum_bridge": {
+    "primitive_multiplicities": [1, 24, 30, 24, 81],
+    "eigenvalue_decompositions": {
+      "trivial": "648 = H1*(1+Phi6) = 81*8 = 24*27",
+      "plus_branch": "144 + 36*sqrt(6) = 6^2*(4 + sqrt(6))",
+      "middle": "72 = 6*12 = centered_shell * genus_numerator",
+      "minus_branch": "144 - 36*sqrt(6) = 6^2*(4 - sqrt(6))",
+      "protected": "40 = W33 vertex count = 5*8 = Csaszar_count * tomotope_cells"
+    },
+    "conjugate_pair_invariants": {
+      "lambda_plus": "144 + 36*sqrt(6)",
+      "lambda_minus": "144 - 36*sqrt(6)",
+      "sum": "288 = 4*72",
+      "product": "12960 = 160*81 = projective nonzero pairings"
+    }
+  },
+  "edge_data_bridge": {
+    "csaszar_edge_type_counts": [10, 9, 9, 8, 9],
+    "csaszar_sum": 45,
+    "csaszar_sum_closed_form": "45 = C(Phi4,2) = C(10,2)",
+    "szilassi_edge_type_counts": [12, 11],
+    "szilassi_sum": 23,
+    "szilassi_sum_closed_form": "23 = f - 1 = 24 - 1",
+    "total_edge_type_sum": 68,
+    "total_closed_form": "68 = 4*17"
+  },
+  "topological_oscillator": {
+    "rows": [
+      {"h": 0, "vertices": 4, "edges": 6, "faces": 4, "euler_characteristic": 2, "expected_chi": 2},
+      {"h": 1, "vertices": 7, "edges": 21, "faces": 14, "euler_characteristic": 0, "expected_chi": 0},
+      {"h": 2, "vertices": 10, "edges": 36, "faces": 24, "euler_characteristic": -2, "expected_chi": -2}
+    ],
+    "formulas": {
+      "vertices": "v(h)=mu+h*q = 4+3h",
+      "edges": "e(h)=q!+h*g = 6+15h",
+      "faces": "f(h)=mu+h*Phi4 = 4+10h",
+      "euler": "v-e+f = 2-2h"
+    }
+  },
+  "identities": {
+    "heptad_5_plus_2_phi6": true,
+    "centered_shell_6": true,
+    "genus_numerator_12": true,
+    "tomotope_cells_8": true,
+    "multiplicities": true,
+    "plus_minus_multiplicity_4_times_6": true,
+    "middle_multiplicity_5_times_6": true,
+    "trivial_eigenvalue": true,
+    "middle_eigenvalue": true,
+    "protected_eigenvalue": true,
+    "conjugate_sum": true,
+    "conjugate_product": true,
+    "csaszar_edge_types_sum_45": true,
+    "szilassi_edge_types_sum_23": true,
+    "total_edge_types_68": true,
+    "oscillator_euler": true
+  },
+  "theorem": "Toroidal Spectrum Realization Theorem. The non-H1 primitive multiplicities of the minimal logical X-association scheme factor through the seven-realization toroidal heptad: 24,30,24 = 4*6,5*6,4*6. The factor 6 is the centered realization shell, 5 is the Csaszar realization packet, and the two 4*6 sectors are the conjugate Q(sqrt(6)) branches of the Csaszar internal shell. The eigenvalues also respect the toroidal packet: 648=81*(1+7), 72=6*12, and 40=5*8. Thus the spectrum of U U^T is the spectral shadow of the toroidal heptad acting on the minimal logical surface.",
+  "honesty_boundary": "This is an exact finite arithmetic/spectral bridge. It identifies how the toroidal realization packet organizes the association-scheme spectrum; it does not by itself prove physical dynamics or empirical predictions."
+}
