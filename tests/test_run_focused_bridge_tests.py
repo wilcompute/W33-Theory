@@ -49,6 +49,8 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert "tests/test_dcmlxxix_ihara_parameter_reconciliation.py" in SUITES["audit-core"]
     assert "tests/test_dcmlxxx_z12_709_ihara_genus_bridge.py" in SUITES["audit-core"]
     assert "tests/test_dcmlxxxi_heegner_ihara_gaussian_audit.py" in SUITES["audit-core"]
+    assert "tests/test_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py" in SUITES["audit-core"]
+    assert "tests/test_dcmlxxxiii_bass_cnub_entropy_branch_selector.py" in SUITES["audit-core"]
     assert (
         "tests/test_tomotope_toroidal_markov_trace_recurrence_bridge.py"
         in SUITES["markov-e6-burden"]
@@ -84,6 +86,8 @@ def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:
     assert "tests/test_dcmlxxix_ihara_parameter_reconciliation.py" in paths
     assert "tests/test_dcmlxxx_z12_709_ihara_genus_bridge.py" in paths
     assert "tests/test_dcmlxxxi_heegner_ihara_gaussian_audit.py" in paths
+    assert "tests/test_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py" in paths
+    assert "tests/test_dcmlxxxiii_bass_cnub_entropy_branch_selector.py" in paths
     assert "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py" in paths
     assert "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py" in paths
     assert "tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py" in paths

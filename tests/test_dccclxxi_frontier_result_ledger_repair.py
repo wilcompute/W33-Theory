@@ -24,8 +24,8 @@ def test_frontier_repair_moves_audit_out_of_dcccxxxviii() -> None:
 
     assert summary["part"] == "DCCCLXXI"
     assert summary["decimal"] == 871
-    assert summary["current_part_surface_max_decimal"] == 981
-    assert summary["valid_result_max_decimal"] == 981
+    assert summary["current_part_surface_max_decimal"] == 983
+    assert summary["valid_result_max_decimal"] == 983
     assert summary["invalid_result_json_count"] == 0
     assert summary["missing_result_json_count"] == 0
     assert summary["duplicate_frontier_part_count"] == 0

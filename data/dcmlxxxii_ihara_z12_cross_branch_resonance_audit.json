@@ -1,0 +1,275 @@
+{
+  "summary": {
+    "part": "DCMLXXXII",
+    "decimal": 982,
+    "remote_main_commit": "ec327312",
+    "live_bass_parameter": 11,
+    "shadow_coefficient": 12,
+    "z12_algebraic_norm": 709,
+    "z12_eisenstein_norm": 13,
+    "alpha_inverse_gaussian_norm": 137,
+    "live_nonstructural_709_degrees": [
+      338
+    ],
+    "shadow_nonstructural_709_degrees": [
+      424
+    ],
+    "classical_rh_status": "OPEN",
+    "all_identities_hold": true
+  },
+  "remote_main_sources": [
+    {
+      "commit": "ec327312",
+      "file": "NOTES/BREAKTHROUGH_MAY17_2026.md",
+      "audit_status": "Corrected: the Z12 algebraic norm is 709, the 709^2 value is a squared-magnitude artifact, and the genus map does not put RH on the genus axis."
+    },
+    {
+      "commit": "ec327312",
+      "file": "NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
+      "audit_status": "Classified as coefficient-12 shadow; the live W33 Ihara-Bass determinant uses coefficient 11."
+    },
+    {
+      "commit": "ec327312",
+      "file": "NOTES/BREAKTHROUGH21_MASTER_THEOREM_MAY18.md",
+      "audit_status": "Finite Bass-11 graph-Ihara structure is retained; classical RH still requires an identification/limit theorem."
+    }
+  ],
+  "live_bass_11": {
+    "vertices": 40,
+    "edges": 240,
+    "degree": 12,
+    "bass_parameter": 11,
+    "factorization": "(1-u^2)^200*(1-12u+11u^2)*(1-2u+11u^2)^24*(1+4u+11u^2)^15",
+    "nontrivial_sectors": [
+      {
+        "lambda": 2,
+        "coefficient": 11,
+        "factor": "1 - (2)u + 11u^2",
+        "discriminant": -40,
+        "field_radicand": -10,
+        "is_heegner_field": false,
+        "pole_radius_squared": "1/11"
+      },
+      {
+        "lambda": -4,
+        "coefficient": 11,
+        "factor": "1 - (-4)u + 11u^2",
+        "discriminant": -28,
+        "field_radicand": -7,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/11"
+      }
+    ],
+    "graph_ihara_rh_status": "PROVED"
+  },
+  "coefficient_12_shadow": {
+    "coefficient": 12,
+    "factorization": "(1-u^2)^200*(1-12u+12u^2)*(1-2u+12u^2)^24*(1+4u+12u^2)^15",
+    "nontrivial_sectors": [
+      {
+        "lambda": 2,
+        "coefficient": 12,
+        "factor": "1 - (2)u + 12u^2",
+        "discriminant": -44,
+        "field_radicand": -11,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/12"
+      },
+      {
+        "lambda": -4,
+        "coefficient": 12,
+        "factor": "1 - (-4)u + 12u^2",
+        "discriminant": -32,
+        "field_radicand": -2,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/12"
+      }
+    ],
+    "status": "shadow_branch_not_live_graph_zeta"
+  },
+  "bass_decrement": [
+    {
+      "sector": "r",
+      "lambda": 2,
+      "shadow_discriminant": -44,
+      "live_discriminant": -40,
+      "shadow_field_radicand": -11,
+      "live_field_radicand": -10,
+      "live_lands_in_heegner_field": false
+    },
+    {
+      "sector": "s",
+      "lambda": -4,
+      "shadow_discriminant": -32,
+      "live_discriminant": -28,
+      "shadow_field_radicand": -2,
+      "live_field_radicand": -7,
+      "live_lands_in_heegner_field": true
+    }
+  ],
+  "z12_709_norm_packet": {
+    "element_basis": "1, zeta_12, zeta_12^2, zeta_12^3",
+    "coefficients": [
+      1,
+      2,
+      6,
+      4
+    ],
+    "algebraic_norm": 709,
+    "script_squared_norm_artifact": 502681,
+    "eisenstein_shadow": {
+      "as_a_plus_b_omega": [
+        -1,
+        -4
+      ],
+      "norm": 13
+    },
+    "identity_embedding_abs2": {
+      "exact": "71 + 38*sqrt(3)",
+      "nearest_integer": 137,
+      "nearest_integer_error": 0.18206931238267998,
+      "is_exact_integer_137": false
+    },
+    "classification": {
+      "709": "exact Z12 algebraic norm",
+      "13": "exact Eisenstein shadow norm",
+      "137": "rounded identity-sheet shadow for this Z12 element"
+    }
+  },
+  "z12_709_resonance_comparison": {
+    "primitive_factor_prime_support": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "target_prime_intersection": [
+      7
+    ],
+    "live_bass_11_scan": {
+      "coefficient": 11,
+      "modulus": 709,
+      "degree": 480,
+      "exact_zero_coefficient_degrees": [
+        1,
+        2,
+        479
+      ],
+      "mod_zero_coefficient_degrees": [
+        1,
+        2,
+        338,
+        479
+      ],
+      "nonstructural_mod_zero_coefficient_degrees": [
+        338
+      ],
+      "nonstructural_mod_zero_coefficient_count": 1,
+      "coefficient_certificates": {
+        "1": {
+          "exact_zero": true,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 0
+        },
+        "2": {
+          "exact_zero": true,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 0
+        },
+        "338": {
+          "exact_zero": false,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 530966
+        },
+        "479": {
+          "exact_zero": true,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 0
+        }
+      }
+    },
+    "coefficient_12_shadow_scan": {
+      "coefficient": 12,
+      "modulus": 709,
+      "degree": 480,
+      "exact_zero_coefficient_degrees": [
+        1,
+        479
+      ],
+      "mod_zero_coefficient_degrees": [
+        1,
+        424,
+        479
+      ],
+      "nonstructural_mod_zero_coefficient_degrees": [
+        424
+      ],
+      "nonstructural_mod_zero_coefficient_count": 1,
+      "coefficient_certificates": {
+        "1": {
+          "exact_zero": true,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 0
+        },
+        "424": {
+          "exact_zero": false,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 672394
+        },
+        "479": {
+          "exact_zero": true,
+          "coefficient_mod_709": 0,
+          "coefficient_mod_1000003": 0
+        }
+      }
+    },
+    "reading": "The nonstructural mod-709 resonance moves from degree 338 in the live Bass-11 determinant to degree 424 in the coefficient-12 shadow determinant."
+  },
+  "alpha_heegner_boundary": {
+    "alpha_inverse": 137,
+    "gaussian_norm": [
+      11,
+      4
+    ],
+    "gaussian_norm_identity": "11^2 + 4^2 = 137",
+    "splitting_roots": {
+      "Q_sqrt_minus_7": [
+        33,
+        104
+      ],
+      "Q_sqrt_minus_11": [
+        20,
+        117
+      ]
+    },
+    "reading": "137 is exact as the Bass-11/mu Gaussian norm.  It splits in both Q(sqrt(-7)) and Q(sqrt(-11)), but Q(sqrt(-11)) belongs to the coefficient-12 shadow branch, not the live r-sector graph zeta."
+  },
+  "rh_boundary": {
+    "finite_w33_graph_ihara_rh": "PROVED",
+    "zeta_W_equals_riemann_zeta": "OPEN",
+    "classical_riemann_hypothesis": "OPEN",
+    "next_proof_target": "adelic/projective-limit identification bridge"
+  },
+  "identities": {
+    "part_number_is_982": true,
+    "remote_sources_are_static_inputs": true,
+    "live_bass_parameter_is_11": true,
+    "live_fields_are_minus_10_and_minus_7": true,
+    "shadow_fields_are_minus_11_and_minus_2": true,
+    "live_radius_is_one_over_11": true,
+    "shadow_radius_is_one_over_12": true,
+    "only_live_s_sector_is_heegner": true,
+    "bass_decrement_moves_discriminants": true,
+    "z12_norm_is_709": true,
+    "eisenstein_shadow_norm_is_13": true,
+    "identity_shadow_rounds_to_137_but_is_not_exact": true,
+    "alpha_inverse_is_bass_mu_gaussian_norm": true,
+    "alpha_splits_on_minus_7_and_minus_11_sheets": true,
+    "primitive_support_excludes_13_137_709": true,
+    "live_709_resonance_is_degree_338": true,
+    "shadow_709_resonance_is_degree_424": true,
+    "live_and_shadow_resonances_are_distinct": true,
+    "classical_rh_boundary_remains_open": true
+  }
+}
