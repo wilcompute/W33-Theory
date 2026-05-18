@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "B2": 127,
+    "boolean_heptad_closure": 128,
+    "H1": 81,
+    "csaszar_count": 5,
+    "nonzero_pairings_WE6": 51840,
+    "all_identities_hold": true
+  },
+  "identities": {
+    "B2_is_nonempty_heptad_subsets": true,
+    "closure_is_2_to_7": true,
+    "WE6_from_metric_heptad": true,
+    "WE6_over_hessian": true,
+    "WE6_over_middle": true,
+    "WE6_over_v": true,
+    "binary_tetrahedral_order": true,
+    "metric_c2_is_CP_binary_tetrahedral": true,
+    "G2F3_from_heptad_odd_metric": true
+  },
+  "closed_forms": {
+    "WE6": "51840 = (B2+1)*H1*5 = 128*81*5",
+    "B2_plus_1": "128 = 2^7 = full Boolean closure of the seven-realization heptad",
+    "5": "five Csaszar realizations",
+    "H1": "81 protected homology/qutrit memory sector",
+    "WE6_over_648": "80 = Pell sum total = 2v",
+    "WE6_over_72": "720 = 6! = (q!)! symmetry shell",
+    "WE6_over_40": "1296 = 36^2 = X0(36) level squared",
+    "G2F3": "|G2(F3)| = 2^6*q^6*Phi6*Phi3 uses centered binary shell, heptad, and odd metric sector"
+  },
+  "theorem": "McKay-Heptad Noncommutation Theorem: the exact minimal X/Z nonzero pairing count |W(E6)| is the product of the full Boolean heptad closure, protected H1 memory, and the five Csaszar realizations: 51840=(127+1)*81*5.",
+  "honesty_boundary": "This is a finite arithmetic bridge between the metric heptad, McKay/Weyl order, and minimal-logical noncommutation census. It is not by itself a derivation of empirical observables."
+}
