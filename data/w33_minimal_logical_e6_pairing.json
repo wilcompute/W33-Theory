@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "X_supports": 160,
+    "X_unique_vectors": 320,
+    "Z_supports": 1620,
+    "Z_unique_F3_vectors": 3240,
+    "Z_oriented_walk_presentations": 6480,
+    "support_nonempty_intersections": 12960,
+    "vector_nonzero_pairings": 51840,
+    "W_E6_order": 51840,
+    "all_identities_hold": true
+  },
+  "substrate_counts": {
+    "points": 40,
+    "edges": 240,
+    "lines": 40,
+    "line_triangles": 160,
+    "nonedges": 540,
+    "mu_common_neighbors_for_nonedge": 4
+  },
+  "minimal_witness_counts": {
+    "X_supports": 160,
+    "X_unique_vectors": 320,
+    "Z_supports": 1620,
+    "Z_unique_F3_vectors": 3240,
+    "Z_oriented_walk_presentations": 6480,
+    "convention_correction": "6480 counts oriented-walk presentations; the unique F_3 Z-vector count is 3240.",
+    "Z_examples": [
+      {
+        "cycle_order": [0, 1, 4, 13],
+        "support_edges": [[0, 1], [0, 13], [1, 4], [4, 13]],
+        "coefficients": [1, 2, 1, 1]
+      }
+    ]
+  },
+  "support_incidence_graph": {
+    "total_support_incidences": 12960,
+    "X_support_degree_distribution": {"81": 160},
+    "Z_support_degree_distribution": {"8": 1620},
+    "biregular_identity": "160*81 = 1620*8 = 12960"
+  },
+  "vector_pairing_graph": {
+    "matrix_shape": [320, 3240],
+    "total_pairs": 1036800,
+    "phase_counts": {"0": 984960, "1": 25920, "2": 25920},
+    "nonzero_pairings": 51840,
+    "phase_1_pairings": 25920,
+    "phase_2_pairings": 25920,
+    "X_vector_nonzero_degree_distribution": {"162": 320},
+    "Z_vector_nonzero_degree_distribution": {"16": 3240},
+    "W_E6_identity": true,
+    "phase_balance": true,
+    "biregular_identity": "320*162 = 3240*16 = 51840"
+  },
+  "closed_forms": {
+    "X_supports": "160 = 40 lines * 4 line-stars",
+    "X_vectors": "320 = 2 * 160 = 40 * 2^3",
+    "Z_supports": "1620 = 540 nonedges * C(4,2) / 2 = 20 * 81 = 60 * 27",
+    "Z_unique_vectors": "3240 = 2 * 1620 = 40 * 81",
+    "Z_oriented_presentations": "6480 = 4 * 1620 = 240 * 27 = 80 * 81 = |W(E6)|/8",
+    "support_pairings": "12960 = 160 * 81 = 1620 * 8",
+    "nonzero_vector_pairings": "51840 = 320 * 162 = 3240 * 16 = |W(E6)|",
+    "phase_split": "51840 = 25920 + 25920"
+  },
+  "identities": {
+    "points_40": true,
+    "edges_240": true,
+    "lines_40": true,
+    "triangles_160": true,
+    "X_supports_160": true,
+    "X_vectors_320": true,
+    "Z_supports_1620": true,
+    "Z_unique_vectors_3240": true,
+    "Z_oriented_presentations_6480": true,
+    "support_incidence_total_12960": true,
+    "support_X_degree_81": true,
+    "support_Z_degree_8": true,
+    "vector_nonzero_pairings_WE6": true,
+    "vector_phase_balance": true,
+    "vector_X_degree_162": true,
+    "vector_Z_degree_16": true,
+    "Z_support_formula": true
+  },
+  "theorem": "Minimal Logical E6 Pairing Theorem. In the canonical W(3,3) edge CSS code over F_3, there are 320 minimal X logical vectors and 3240 unique minimal Z logical vectors. The number of nonzero symplectic pairings between them is exactly 51840 = |W(E6)|, split evenly into 25920 phase-1 and 25920 phase-2 pairings. Equivalently, the noncommutation graph is biregular with X-degree 162 and Z-degree 16.",
+  "honesty_boundary": "This is an exact finite CSS commutation census. It identifies |W(E6)| as the nonzero minimal-logical pairing count; physical TQC/SM interpretations are separate bridges."
+}
