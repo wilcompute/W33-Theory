@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "W_values": {"-2": 392, "-1": 42, "0": 0, "1": 68, "2": 504},
+    "even_classes_from_pm1": 55,
+    "odd_classes_from_pm1": 13,
+    "even_boolean_from_pm2": 448,
+    "odd_boolean_from_pm2": 56,
+    "middle_eigenvalue_per_chart": 72,
+    "all_identities_hold": true
+  },
+  "polynomial_shifted": {
+    "definition": "W(s)=P(s-1)=sum c_m s^m",
+    "W": "12s + 48s^2 + 0s^3 + 4s^4 + s^5 + 3s^6",
+    "evaluation_lattice": {"-2": 392, "-1": 42, "0": 0, "1": 68, "2": 504}
+  },
+  "class_parity_projectors": {
+    "from_values": "W(1)=68, W(-1)=42",
+    "even_classes": 55,
+    "odd_classes": 13,
+    "closed_forms": {
+      "even": "55 = 5*11 = Csaszar packet * Ihara prime",
+      "odd": "13 = Phi3",
+      "difference": "42 = one toroidal chart flag count"
+    }
+  },
+  "boolean_parity_projectors": {
+    "from_values": "W(2)=504, W(-2)=392",
+    "even_boolean": 448,
+    "odd_boolean": 56,
+    "closed_forms": {
+      "even": "448 = 7*64 = Phi6 * 8^2",
+      "odd": "56 = 7*8 = Phi6 * 8",
+      "total_per_chart": "72 = 8 + 64",
+      "imbalance_total": "392 = 7^2*8"
+    }
+  },
+  "spectral_bridge": {
+    "middle_eigenvalue": "W(2)/7 = 72",
+    "signed_boolean_imbalance": "W(-2)=392=7^2*8",
+    "target_spectrum": ["648^1", "(144 + 36*sqrt(6))^24", "72^30", "(144 - 36*sqrt(6))^24", "40^81"]
+  },
+  "identities": {
+    "W_minus_2": true,
+    "W_minus_1": true,
+    "W_zero": true,
+    "W_one": true,
+    "W_two": true,
+    "ratio_boolean_total_to_imbalance": true,
+    "even_classes": true,
+    "odd_classes": true,
+    "even_minus_odd": true,
+    "even_boolean": true,
+    "odd_boolean": true,
+    "middle_eigenvalue_split": true,
+    "boolean_ratio": true
+  },
+  "theorem": "Toroidal Metric Evaluation-Lattice Theorem. In the shifted variable s=1+t, the toroidal metric multiplicity operator W(s)=sum c_m s^m has the five-point lattice W(-2)=392, W(-1)=42, W(0)=0, W(1)=68, W(2)=504. The +/-1 pair gives the class parity projectors 55=5*11 and 13=Phi_3; the +/-2 pair gives the Boolean parity projectors 448=7*64 and 56=7*8. Hence W(2)/7=72 is the middle association-scheme eigenvalue, while W(-2)/7=56 is the signed Boolean imbalance 7*8.",
+  "honesty_boundary": "This is an exact finite evaluation-lattice identity for the toroidal metric edge packet. It does not by itself infer physical dynamics or empirical observables."
+}
