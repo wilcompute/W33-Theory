@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "X_rays": 160,
+    "Z_rays": 1620,
+    "X_row_degree": 81,
+    "Z_column_degree": 8,
+    "Z_nonzero_overlap_degree": 432,
+    "Z_nonzero_overlap_closed_form": "432 = 16 * 27 = 2^4 * 3^3",
+    "all_identities_hold": true
+  },
+  "X_side_3adic_scheme": {
+    "diagonal_distribution": {"81": 160},
+    "off_diagonal_distribution": {"1": 6480, "3": 4320, "9": 1440, "27": 480},
+    "per_row_distribution": {
+      "1": {"81": 160},
+      "3": {"54": 160},
+      "9": {"18": 160},
+      "27": {"6": 160}
+    },
+    "spectrum_symbolic": {
+      "648": 1,
+      "144 + 36*sqrt(6)": 24,
+      "72": 30,
+      "144 - 36*sqrt(6)": 24,
+      "40": 81
+    }
+  },
+  "Z_side_dual_visibility_scheme": {
+    "diagonal_distribution": {"8": 1620},
+    "off_diagonal_distribution": {"0": 961470, "1": 233280, "2": 77760, "3": 25920, "4": 12960},
+    "per_column_distribution": {
+      "0": {"1187": 1620},
+      "1": {"288": 1620},
+      "2": {"96": 1620},
+      "3": {"32": 1620},
+      "4": {"16": 1620}
+    },
+    "nonzero_overlap_degree_distribution": {"432": 1620}
+  },
+  "signed_phase_projector": {
+    "relation": "A A^T satisfies (A A^T)^2 = 160 A A^T exactly.",
+    "rank": 81,
+    "rank_expected_H1": 81
+  },
+  "closed_forms": {
+    "X_overlap_values": "1,3,9,27 = q^0,q^1,q^2,q^3",
+    "X_per_row_counts": "81,54,18,6 = 3^4, 2*3^3, 2*3^2, 2*3",
+    "Z_overlap_values": "0,1,2,3,4 = possible shared visible X-rays for two minimal Z-rays",
+    "Z_per_column_counts": "1187,288,96,32,16 with nonzero total 432 = 16*27",
+    "Z_nonzero_counts": "288,96,32 is a 3:1 cascade; 16 is the overlap-4 core",
+    "dual_reading": "X-side is q-adic by overlap value; Z-side is bounded by d_Z=4 and q-adic by multiplicity cascade."
+  },
+  "identities": {
+    "ray_counts": true,
+    "X_row_degree_81": true,
+    "Z_col_degree_8": true,
+    "X_overlap_scheme": true,
+    "Z_overlap_scheme": true,
+    "Z_nonzero_degree_432": true,
+    "Z_nonzero_degree_formula": true,
+    "Z_off_counts": true,
+    "signed_projector": true
+  },
+  "theorem": "Dual Visibility Scheme Theorem. For the projective minimal logical incidence matrix U of the W(3,3) edge CSS code, the X-side overlaps are the 3-adic values 1,3,9,27 with per-row counts 81,54,18,6. Dually, every minimal Z-ray has column degree 8, is disjoint from 1187 other Z-rays, and has pairwise visibility overlaps 1,2,3,4 with 288,96,32,16 other Z-rays. In particular, every Z-ray overlaps nontrivially with exactly 432 = 16*27 other Z-rays.",
+  "honesty_boundary": "This is an exact finite dual visibility scheme; physical probabilities and continuum dynamics are not inferred here."
+}
