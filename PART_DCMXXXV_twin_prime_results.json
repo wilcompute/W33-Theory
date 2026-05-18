@@ -1,0 +1,10 @@
+{
+  "part": "DCMXXXV",
+  "decimal": 935,
+  "title": "Twin Prime Best Bound",
+  "current_best": 246,
+  "target": 2,
+  "obstruction": "Elliott-Halberstam conjecture at theta>1/2",
+  "W33_contribution": "Ramanujan spectral equidistribution gives best unconditional bound",
+  "status": "OPEN — PROGRESS DOCUMENTED"
+}

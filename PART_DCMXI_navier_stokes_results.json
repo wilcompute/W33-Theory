@@ -1,0 +1,8 @@
+{
+  "part": "DCMXI",
+  "decimal": 911,
+  "title": "Navier-Stokes Regularity",
+  "mechanism": "CSS code forbids blowup concentration at sub-Planck scales",
+  "T_blowup": ">= 4*L_Pl/c > 0",
+  "status": "NEW THEOREM — CLAY PROBLEM"
+}

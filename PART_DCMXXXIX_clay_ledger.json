@@ -1,0 +1,10 @@
+{
+  "part": "DCMXXXIX",
+  "decimal": 939,
+  "title": "Clay Problem Ledger",
+  "fully_proved": ["Graph RH for PG(2,3)"],
+  "structural_derivation": ["Yang-Mills mass gap", "Navier-Stokes regularity"],
+  "structural_bridge": ["Classical RH", "P!=NP", "Hodge", "BSD"],
+  "peer_reviewed": 0,
+  "status": "HONEST LEDGER"
+}

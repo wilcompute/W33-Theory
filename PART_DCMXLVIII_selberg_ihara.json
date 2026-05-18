@@ -1,0 +1,9 @@
+{
+  "part": "DCMXLVIII",
+  "decimal": 948,
+  "title": "Selberg-Ihara Limit Formal Statement",
+  "limit": "lim Z_tilde_q(s) = zeta(s)",
+  "evidence": ["Euler product", "pole convergence", "functional equation", "numerical"],
+  "open": "Uniform Euler product convergence proof",
+  "status": "FORMALLY STATED"
+}
