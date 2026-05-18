@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "X_rays": 160,
+    "Z_rays": 1620,
+    "X_vectors": 320,
+    "Z_vectors": 3240,
+    "ray_signed_rank": 81,
+    "vector_signed_rank": 81,
+    "H1": 81,
+    "all_identities_hold": true
+  },
+  "signed_projective_phase_frame": {
+    "matrix_shape": [160, 1620],
+    "phase_counts_mod3": {"0": 246240, "1": 6480, "2": 6480},
+    "signed_gram_spectrum": {"0": 79, "160": 81},
+    "rank": 81,
+    "frame_statement": "A A^T has spectrum 160^81 + 0^79; projective minimal pairings form an H1-rank tight frame."
+  },
+  "signed_vector_phase_frame": {
+    "matrix_shape": [320, 3240],
+    "phase_counts_mod3": {"0": 984960, "1": 25920, "2": 25920},
+    "signed_gram_spectrum": {"0": 239, "640": 81},
+    "rank": 81,
+    "frame_statement": "M M^T has spectrum 640^81 + 0^239; scalar expansion multiplies the frame constant by 4 but preserves H1 rank."
+  },
+  "unsigned_projective_incidence_spectrum": {
+    "matrix_shape": [160, 1620],
+    "row_degree": 81,
+    "column_degree": 8,
+    "symbolic_spectrum_AAT": {
+      "648": 1,
+      "144 + 36*sqrt(6)": 24,
+      "72": 30,
+      "144 - 36*sqrt(6)": 24,
+      "40": 81
+    },
+    "numeric_eigenvalue_min_max": [39.99999999999988, 648.0]
+  },
+  "identities": {
+    "ray_counts": true,
+    "vector_counts": true,
+    "ray_phase_nonzero_WE6_over_4": true,
+    "vector_phase_nonzero_WE6": true,
+    "ray_signed_spectrum_H1": true,
+    "vector_signed_spectrum_H1": true,
+    "signed_rank_ray_H1": true,
+    "signed_rank_vector_H1": true,
+    "ray_frame_constant_160": true,
+    "vector_frame_constant_640": true
+  },
+  "theorem": "Minimal Logical Phase Frame Theorem. Let A be the projective signed phase matrix of minimal X and Z logical rays in the canonical W(3,3) edge CSS code, with entries 0,+1,-1 according to the F_3 symplectic pairing. Then A has rank 81 and A A^T has spectrum 160^81, 0^79. Keeping scalar multiples gives a vector-level signed matrix M with M M^T spectrum 640^81, 0^239. Thus the phase-weighted minimal logical pairing system is a tight frame whose rank is exactly the protected H_1 dimension.",
+  "honesty_boundary": "This proves an exact finite phase-frame invariant. It does not by itself identify a continuum Hilbert-space dynamics or physical braid representation."
+}
