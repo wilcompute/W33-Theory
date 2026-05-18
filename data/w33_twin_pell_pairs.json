@@ -1,0 +1,136 @@
+{
+  "catalan_uniqueness": {
+    "catalan_theorem": "Mihailescu's theorem (2002) -- Catalan's conjecture -- states that 3^2 - 2^3 = 1 is the UNIQUE non-trivial integer solution to x^p - y^q = 1 with x,y,p,q > 1.  Equivalently, (8, 9) is the unique pair of consecutive perfect powers.",
+    "substrate_reading": "At the W(3,3) saturation point q = 3, the second Pell pair (2^q, q^2) is the unique non-trivial Catalan pair.  The saturation is therefore TWICE forced: once by q! = 2q (Master Equation) and once by q^2 - 2^q = 1 (Catalan-Mihailescu).",
+    "table": [
+      {
+        "diff_q2_minus_2q": 0,
+        "q": 2,
+        "q_squared": 4,
+        "two_to_q": 4,
+        "unit_discriminant": false
+      },
+      {
+        "diff_q2_minus_2q": 1,
+        "q": 3,
+        "q_squared": 9,
+        "two_to_q": 8,
+        "unit_discriminant": true
+      },
+      {
+        "diff_q2_minus_2q": 0,
+        "q": 4,
+        "q_squared": 16,
+        "two_to_q": 16,
+        "unit_discriminant": false
+      },
+      {
+        "diff_q2_minus_2q": -7,
+        "q": 5,
+        "q_squared": 25,
+        "two_to_q": 32,
+        "unit_discriminant": false
+      },
+      {
+        "diff_q2_minus_2q": -28,
+        "q": 6,
+        "q_squared": 36,
+        "two_to_q": 64,
+        "unit_discriminant": false
+      },
+      {
+        "diff_q2_minus_2q": -79,
+        "q": 7,
+        "q_squared": 49,
+        "two_to_q": 128,
+        "unit_discriminant": false
+      }
+    ],
+    "uniqueness_at_q3": true
+  },
+  "four_primitive_rectangle": {
+    "deep_identities": {
+      "big_pell_product_equals_lambda_gauge": true,
+      "big_pell_sum_minus_small_pell_sum_equals_phi4": true,
+      "small_pell_product_equals_codec": true,
+      "small_pell_sum_plus_big_pell_sum_equals_f": true,
+      "small_pell_sum_times_big_pell_product_is_504": true,
+      "small_product_plus_big_product_equals_csaszar_flags": true
+    },
+    "products": {
+      "(q+1)*2^q": 32,
+      "(q+1)*q^2": 36,
+      "2^q*q^2": 72,
+      "q*(q+1)": 12,
+      "q*2^q": 24,
+      "q*q^2": 27
+    },
+    "rectangle": [
+      {
+        "label": "q",
+        "value": 3
+      },
+      {
+        "label": "q+1",
+        "value": 4
+      },
+      {
+        "label": "2^q",
+        "value": 8
+      },
+      {
+        "label": "q^2",
+        "value": 9
+      }
+    ],
+    "sums": {
+      "(q+1)+q^2": 13,
+      "2^q+q^2": 17,
+      "q+(q+1)": 7,
+      "q+2^q": 11
+    }
+  },
+  "hodge_cross_check": {
+    "exact_gradient": 39,
+    "exact_via_pell": "d_X * Phi_3 = 3 * 13 = 39",
+    "harmonic_H1": 81,
+    "interpretation": "The Hodge triangle-boundary dimension equals (small Pell product) times Phi_4.  So the small Pell pair appears as the SCALING PREFACTOR in the Hodge decomposition.  The big Pell pair appears directly as the X-scheme middle eigenvalue and as the odd-metric-instance count.  Both Pell pairs are visible simultaneously in the substrate's spectral decomposition.",
+    "matches_edges": true,
+    "sum_check": 240,
+    "triangle_boundary": 120,
+    "triangle_via_pell": "(small Pell product) * Phi_4 = 12 * 10 = 120"
+  },
+  "honesty_boundary": "Twin Pell is a clean arithmetic theorem.  Its physics reading -- the substrate's saturation point q = 3 is doubly forced -- is a STRUCTURAL claim, not an empirical prediction.  Mihailescu's theorem is a deep result from analytic number theory; its application here is purely classifying which q can host this second Pell saturation.",
+  "theorem": "Twin Pell Pairs Theorem.  The W(3,3) substrate is the unique q for which the substrate primitives split into TWO consecutive-integer pairs both arising as roots of unit-discriminant quadratics with substrate-primitive coefficients: (q, q+1) = (3, 4) from x^2 - 7 x + 12 = 0 and (2^q, q^2) = (8, 9) from x^2 - 17 x + 72 = 0.  Both pairs are Pell-saturated; the second pair is in addition the unique non-trivial Catalan pair (Mihailescu 2002).  Hence q = 3 is doubly forced: by the Master Equation q! = 2 q and by the Catalan-Mihailescu uniqueness q^2 - 2^q = 1.  Equivalently, the X-scheme middle eigenvalue lambda_gauge = 72 = 8 * 9 = 2^q q^2 factors as a Pell pair with discriminant 1, mirroring the factoring k = 12 = 3 * 4 of the W(3,3) valency.",
+  "twin_pell": {
+    "both_discriminants_are_one": true,
+    "first_pair": {
+      "discriminant": 1,
+      "name": "first Pell pair (CSS distances)",
+      "product_coefficient": 12,
+      "product_substrate": "k = W(3,3) valency = codec",
+      "quadratic": "x^2 - 7 x + 12 = 0",
+      "roots": [
+        3,
+        4
+      ],
+      "substrate_roots": "(q, q+1) = (d_X, d_Z) = CSS code distances",
+      "sum_coefficient": 7,
+      "sum_substrate": "Phi_6 = Heawood/Csaszar-Szilassi shell"
+    },
+    "second_pair": {
+      "discriminant": 1,
+      "name": "second Pell pair (Catalan / tomotope-Heisenberg)",
+      "product_coefficient": 72,
+      "product_substrate": "lambda_gauge = X-scheme middle eigenvalue",
+      "quadratic": "x^2 - 17 x + 72 = 0",
+      "roots": [
+        8,
+        9
+      ],
+      "substrate_roots": "(2^q, q^2) = (tomotope cells, Heisenberg-projective dim)",
+      "sum_coefficient": 17,
+      "sum_substrate": "odd metric edge instances (parity-sector theorem)"
+    }
+  }
+}
