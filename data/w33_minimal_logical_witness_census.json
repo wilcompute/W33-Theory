@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "X_weight": 3,
+    "X_supports": 160,
+    "X_vectors": 320,
+    "Z_weight": 4,
+    "Z_supports": 1620,
+    "Z_vectors": 6480,
+    "all_identities_hold": true
+  },
+  "substrate_counts": {
+    "points": 40,
+    "edges": 240,
+    "lines": 40,
+    "line_triangles": 160,
+    "nonedges": 540,
+    "mu_common_neighbors_for_nonedge": 4
+  },
+  "X_minimal_logicals": {
+    "supports": 160,
+    "vectors": 320,
+    "non_exact_vectors": 320,
+    "vectors_per_support": [2],
+    "closed_forms": {
+      "supports": "40 lines * 4 stars per line = 160 = line-triangles",
+      "vectors": "2 * 160 = 320 = 40 * 2^3"
+    }
+  },
+  "Z_minimal_logicals": {
+    "supports": 1620,
+    "non_boundary_supports": 1620,
+    "vectors": 6480,
+    "closed_forms": {
+      "supports": "nonedges * C(mu,2) / 2 = 540 * 6 / 2 = 1620 = 20 * 81 = 60 * 27",
+      "vectors": "4 * 1620 = 6480 = 240 * 27 = 80 * 81 = |W(E6)|/8"
+    },
+    "examples": [
+      {
+        "cycle_order": [9, 25, 11, 28],
+        "support_edges": [[9, 25], [9, 28], [11, 25], [11, 28]],
+        "coefficients": [1, 2, 2, 1]
+      }
+    ]
+  },
+  "identities": {
+    "points_40": true,
+    "edges_240": true,
+    "lines_40": true,
+    "line_triangles_160": true,
+    "x_supports_equal_line_triangles": true,
+    "x_vectors_equal_2_line_triangles": true,
+    "x_vectors_equal_v_2_power_q": true,
+    "z_supports_formula": true,
+    "z_all_quadrangles_nonboundary": true,
+    "z_vectors_equal_4_supports": true,
+    "z_vectors_equal_edges_qcubed": true,
+    "z_vectors_equal_80_H1": true,
+    "z_vectors_equal_WE6_over_8": true
+  },
+  "theorem": "Minimal Logical Census Theorem. In the canonical W(3,3) edge CSS code, the weight-3 X logical witnesses are exactly the 160 line-star supports inside the 40 isotropic K4 lines, with two scalar vectors per support for 320 vectors total. The weight-4 Z logical witnesses are exactly the 1620 quadrangle supports determined by noncollinear point pairs and pairs of their four common neighbours; all are non-boundary, and each support has four oriented/scalar vectors, giving 6480 vectors total.",
+  "honesty_boundary": "This is an exact finite CSS witness census. Physical anyon, TQC, and SM interpretations remain separate bridges."
+}
