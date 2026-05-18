@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "multiplicity_histogram": {"1": 12, "2": 48, "4": 4, "5": 1, "6": 3},
+    "binomial_moments_B0_to_B6": [68, 147, 127, 86, 54, 19, 3],
+    "metric_classes_B0": 68,
+    "edge_instances_B1": 147,
+    "kernel_B1_minus_B0": 79,
+    "collision_pairs_B2": 127,
+    "boolean_lift_total": 504,
+    "boolean_lift_average_per_realization": 72,
+    "raw_second_moment": 401,
+    "all_identities_hold": true
+  },
+  "binomial_moment_operator": {
+    "B_all": {"0": 68, "1": 147, "2": 127, "3": 86, "4": 54, "5": 19, "6": 3},
+    "B_csaszar": {"0": 45, "1": 105, "2": 108, "3": 86, "4": 54, "5": 19, "6": 3},
+    "B_szilassi": {"0": 23, "1": 42, "2": 19, "3": 0, "4": 0, "5": 0, "6": 0},
+    "closed_forms": {
+      "B0": "68 metric edge classes",
+      "B1": "147 actual edge instances",
+      "B1_minus_B0": "79 = phase-frame kernel dimension",
+      "B2": "127 = 2^7 - 1 = nonempty subsets of the toroidal heptad",
+      "sum_Bk": "504 = 7*72 = 21*24",
+      "average_Boolean_lift": "72 = middle eigenvalue of U U^T spectrum",
+      "Cs_Boolean_lift": "420 = 5*84",
+      "Sz_Boolean_lift": "84"
+    }
+  },
+  "raw_moment_operator": {
+    "R_all": {"0": 68, "1": 147, "2": 401, "3": 1425, "4": 6317},
+    "R_csaszar": {"0": 45, "1": 105, "2": 321, "3": 1269, "4": 6009},
+    "R_szilassi": {"0": 23, "1": 42, "2": 80, "3": 156, "4": 308},
+    "closed_forms": {
+      "R2_total": "401 = 320 + 81 = |X_min unique F3 vectors| + H1",
+      "R2_csaszar": "321 = 320 + 1",
+      "R2_szilassi": "80 = 81 - 1",
+      "B2_csaszar": "108 = 4*27 = 4*q^q",
+      "B2_szilassi": "19",
+      "higher_collisions": "All k>=3 binomial collisions live in the Csaszar packet; Szilassi has only multiplicities 1 and 2."
+    }
+  },
+  "spectrum_bridge": {
+    "target_spectrum": ["648^1", "(144 + 36*sqrt(6))^24", "72^30", "(144 - 36*sqrt(6))^24", "40^81"],
+    "middle_eigenvalue_bridge": "sum_k B_k / 7 = 72",
+    "phase_kernel_bridge": "B1-B0 = 79 = zero multiplicity 0^79 in spec(A A^T)",
+    "raw_second_moment_bridge": "R2 = 401 = 320 + 81"
+  },
+  "identities": {
+    "histogram": true,
+    "B_sequence": true,
+    "B0_classes": true,
+    "B1_instances": true,
+    "kernel_79": true,
+    "B2_mersenne_heptad": true,
+    "boolean_total_504": true,
+    "boolean_average_72": true,
+    "boolean_cs_420": true,
+    "boolean_sz_84": true,
+    "raw_second_total": true,
+    "raw_second_cs": true,
+    "raw_second_sz": true,
+    "cs_collision_pairs": true,
+    "sz_collision_pairs": true,
+    "higher_collisions_cs_only": true,
+    "B5_19_B6_3": true
+  },
+  "theorem": "Toroidal Metric Moment Operator Theorem. The seven-realization edge-class multiplicity operator has binomial moments B_k=sum C(m,k) = 68,147,127,86,54,19,3. Its first difference B_1-B_0=79 is the signed phase-frame kernel. Its second binomial moment B_2=127=2^7-1 is the full nonempty heptad subset count. The total Boolean lift sum_k B_k is 504=7*72=21*24, so the average Boolean lift per toroidal realization is exactly the middle eigenvalue 72 of the minimal-logical X-association spectrum. The raw second moment is 401=320+81, splitting the minimal X-vector count from H1.",
+  "honesty_boundary": "This is an exact finite metric-moment identity. It gives an operator interpretation of the edge multiplicity spectrum, but does not by itself prove physical dynamics or empirical observables."
+}
