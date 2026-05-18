@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "horizon_total": 72,
+    "data_payload_edges": 66,
+    "parity_symbols": 6,
+    "rate_simplified": [11, 12],
+    "redundancy_fraction_simplified": [1, 12],
+    "genus_value": 6,
+    "all_identities_hold": true
+  },
+  "identities": {
+    "data_payload_is_C12_2": true,
+    "parity_is_q_factorial": true,
+    "total_is_genus_numerator": true,
+    "total_is_data_plus_parity": true,
+    "rate_is_11_over_12": true,
+    "redundancy_is_1_over_12": true,
+    "genus_is_parity": true,
+    "row_edges": true,
+    "column_edges": true,
+    "mixed_edges": true,
+    "pure_edges_are_30": true,
+    "mixed_plus_parity_is_flags": true,
+    "total_split": true
+  },
+  "grid_split": {
+    "row_edges": 18,
+    "column_edges": 12,
+    "mixed_edges": 36,
+    "pure_edges": 30,
+    "corrected_mixed": 42,
+    "closed_form": "72 = (18+12) + (36+6) = 30 + 42"
+  },
+  "closed_forms": {
+    "data": "66 = C(12,2)",
+    "parity": "6 = q! = genus(K12)",
+    "total": "72 = (12-3)(12-4)",
+    "rate": "66/72 = 11/12",
+    "redundancy": "6/72 = 1/12, the genus denominator fraction",
+    "grid": "66 = 18 row-fiber + 12 column-fiber + 36 mixed; parity corrects 36 to 42 flags"
+  },
+  "theorem": "Edge-Horizon Parity Code Theorem: at n=k=12, the genus numerator 72 is a [72,66]+6 horizon code: 66 complete-edge payload symbols plus q!=6 parity/check symbols. The rate is 11/12 and the redundancy is 1/12, matching the genus denominator.",
+  "honesty_boundary": "This is a finite qutrit-substrate code analogy, not a literal binary linear error-correcting code without an explicit parity-check/generator construction."
+}
