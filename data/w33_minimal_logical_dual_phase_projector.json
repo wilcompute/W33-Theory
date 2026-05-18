@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "matrix_shape": [160, 1620],
+    "rank": 81,
+    "row_projector_rank": 81,
+    "column_projector_rank": 81,
+    "row_projector_diagonal": "81/160",
+    "column_projector_diagonal": "1/20",
+    "trace_each_projector": 81,
+    "all_identities_hold": true
+  },
+  "signed_phase_matrix": {
+    "entries": "0,+1,-1 from F_3 symplectic pairing",
+    "shape": [160, 1620],
+    "rank": 81,
+    "nonzero_singular_values_squared": "160 repeated 81 times"
+  },
+  "row_projector": {
+    "matrix": "A A^T / 160",
+    "shape": [160, 160],
+    "rank": 81,
+    "spectrum": {"1": 81, "0": 79},
+    "unnormalized_spectrum": {"160": 81, "0": 79},
+    "constant_diagonal": "81/160",
+    "trace": 81
+  },
+  "column_projector": {
+    "matrix": "A^T A / 160",
+    "shape": [1620, 1620],
+    "rank": 81,
+    "spectrum": {"1": 81, "0": 1539},
+    "unnormalized_spectrum": {"160": 81, "0": 1539},
+    "constant_diagonal": "8/160 = 1/20",
+    "trace": 81
+  },
+  "trace_checks": {
+    "row_side": "160 * (81/160) = 81",
+    "column_side": "1620 * (1/20) = 81"
+  },
+  "interpretation": {
+    "row_side": "X-ray phase visibility collapses onto H1.",
+    "column_side": "Z-ray phase visibility also collapses onto H1.",
+    "asymmetry": "X side is small and high-weight; Z side is large and low-weight; both carry total trace 81."
+  },
+  "theorem": "Dual Phase-Projector Theorem. For the signed projective minimal logical pairing matrix A of the W(3,3) edge CSS code, both normalized Gram matrices A A^T/160 and A^T A/160 are exact rank-81 projectors onto the same nonzero singular spectrum. The row projector has constant diagonal 81/160, while the column projector has constant diagonal 1/20. Both traces are exactly 81, the protected H1 dimension.",
+  "honesty_boundary": "This is an exact finite phase-projector invariant. It does not by itself assign physical amplitudes, probabilities, continuum dynamics, or empirical observables."
+}
