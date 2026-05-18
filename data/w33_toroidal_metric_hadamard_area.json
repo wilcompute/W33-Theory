@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "class_parity_vector": [55, 13],
+    "boolean_parity_vector_total": [448, 56],
+    "boolean_parity_vector_per_chart": [64, 8],
+    "chart_area": -392,
+    "total_area": -2744,
+    "raw_evaluation_area": 5488,
+    "all_identities_hold": true
+  },
+  "evaluation_lattice": {"-2": 392, "-1": 42, "0": 0, "1": 68, "2": 504},
+  "hadamard_projectors": {
+    "class_from_pm1": {
+      "even": 55,
+      "odd": 13,
+      "vector": [55, 13],
+      "closed_form": "c=(55,13)=(5*11,Phi3)"
+    },
+    "boolean_from_pm2": {
+      "even": 448,
+      "odd": 56,
+      "vector_total": [448, 56],
+      "vector_per_chart": [64, 8],
+      "closed_form": "B=7*(64,8); b=(64,8)=(8^2,8)"
+    }
+  },
+  "area_invariants": {
+    "chart_normalized_area": -392,
+    "chart_normalized_area_closed_form": "-392 = -7^2*8 = -W(-2)",
+    "full_heptad_area": -2744,
+    "full_heptad_area_closed_form": "-2744 = -(2*7)^3",
+    "raw_evaluation_area": 5488,
+    "raw_evaluation_area_closed_form": "5488 = 2*(2*7)^3 = -2*full_heptad_area"
+  },
+  "spectral_bridge": {
+    "middle_eigenvalue": "64+8=72",
+    "flag_difference": "55-13=42",
+    "signed_boolean_imbalance": "392=7^2*8",
+    "target_spectrum": ["648^1", "(144 + 36*sqrt(6))^24", "72^30", "(144 - 36*sqrt(6))^24", "40^81"]
+  },
+  "identities": {
+    "class_vector": true,
+    "boolean_vector": true,
+    "boolean_chart_vector": true,
+    "middle_eigenvalue": true,
+    "class_difference_flags": true,
+    "chart_area": true,
+    "total_area": true,
+    "raw_area": true,
+    "raw_area_relation": true
+  },
+  "theorem": "Toroidal Metric Hadamard-Area Theorem. The +/-1 Hadamard transform of the metric evaluation lattice gives the class parity vector c=(55,13)=(5*11,Phi_3), while the +/-2 transform gives the Boolean parity vector B=(448,56)=7*(64,8). Per chart, b=(64,8), and the wedge determinant det(c,b)=-392=-7^2*8=-W(-2). On the full heptad, det(c,B)=-2744=-(2*7)^3. Thus the mismatch between class parity and Boolean parity is a quantized heptadic symplectic area.",
+  "honesty_boundary": "This is an exact finite Hadamard/determinant identity for the toroidal metric edge packet. It does not by itself imply physical dynamics or empirical observables."
+}
