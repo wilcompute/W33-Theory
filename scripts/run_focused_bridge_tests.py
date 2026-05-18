@@ -97,6 +97,8 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dcmi_sub_distinction_boundary_audit.py",
         "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
         "tests/test_dcmlxxix_ihara_parameter_reconciliation.py",
+        "tests/test_dcmlxxx_z12_709_ihara_genus_bridge.py",
+        "tests/test_dcmlxxxi_heegner_ihara_gaussian_audit.py",
     ],
     "markov-e6-burden": [
         "tests/test_tomotope_toroidal_markov_algebraic_closure_bridge.py",

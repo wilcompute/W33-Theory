@@ -1,0 +1,164 @@
+{
+  "summary": {
+    "part": "DCMLXXX",
+    "decimal": 980,
+    "z12_element": [
+      1,
+      2,
+      6,
+      4
+    ],
+    "algebraic_norm": 709,
+    "script_squared_norm": 502681,
+    "eisenstein_shadow_norm": 13,
+    "nearest_identity_shadow_integer": 137,
+    "w33_ihara_unique_709_coefficient_degree": 338,
+    "critical_line_maps_to_re_n": "5",
+    "genus_axis_maps_to_re_s": "1/8",
+    "all_identities_hold": true
+  },
+  "z12_unified_element": {
+    "basis": "1, zeta_12, zeta_12^2, zeta_12^3",
+    "coefficients": [
+      1,
+      2,
+      6,
+      4
+    ],
+    "algebraic_norm": 709,
+    "script_squared_norm": 502681,
+    "identity_embedding_abs2": {
+      "exact": "71 + 38*sqrt(3)",
+      "rational_part": {
+        "numerator": 71,
+        "denominator": 1
+      },
+      "sqrt3_coeff": 38,
+      "numeric": 136.81793068761732,
+      "nearest_integer": 137,
+      "nearest_integer_error": 0.18206931238267998,
+      "is_exact_integer_137": false
+    },
+    "eisenstein_shadow": {
+      "as_a_plus_b_omega": [
+        -1,
+        -4
+      ],
+      "norm": 13
+    },
+    "relative_norms": {
+      "relative_norm_to_Q_i": {
+        "z12_basis": [
+          15,
+          0,
+          0,
+          22
+        ],
+        "as_gaussian_integer": [
+          15,
+          22
+        ],
+        "norm": 709
+      },
+      "relative_norm_to_Q_omega": {
+        "z12_basis": [
+          -3,
+          0,
+          28,
+          0
+        ],
+        "as_eisenstein_integer": [
+          25,
+          28
+        ],
+        "norm": 709
+      }
+    },
+    "splitting_709": {
+      "is_prime": true,
+      "mod_12": 1,
+      "minus_one": 708,
+      "minus_one_over_12": 59,
+      "splits_completely_in_Q_zeta12": true
+    },
+    "prime_cube_curio": {
+      "first_prime": 709,
+      "triple": [
+        193,
+        461,
+        631
+      ],
+      "identity_holds": true
+    }
+  },
+  "w33_ihara_alignment": {
+    "factorization": "(1-u^2)^200*(1-12u+11u^2)*(1-2u+11u^2)^24*(1+4u+11u^2)^15",
+    "primitive_factor_prime_support": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "target_prime_intersection": [
+      7
+    ],
+    "expanded_mod_709_scan": {
+      "modulus": 709,
+      "degree": 480,
+      "exact_zero_coefficient_degrees": [
+        1,
+        2,
+        479
+      ],
+      "mod_zero_coefficient_degrees": [
+        1,
+        2,
+        338,
+        479
+      ],
+      "nonstructural_mod_zero_coefficient_degrees": [
+        338
+      ],
+      "nonstructural_nonzero_certificate_prime": 1000003,
+      "certificate_nonzero_degrees": [
+        338
+      ],
+      "exact_zero_coefficient_count": 3,
+      "mod_zero_coefficient_count": 4,
+      "nonstructural_mod_zero_coefficient_count": 1
+    },
+    "reading": "709 is not a primitive W33 Ihara pole factor. Beyond the exact structural zero coefficients, it appears as a unique nonstructural expanded coefficient resonance of the W33 Ihara determinant modulo 709."
+  },
+  "spectral_genus": {
+    "H_definition": "H(n)=(n-3)(n-4)/12",
+    "critical_line_map": "n=3+4s maps Re(s)=1/2 to Re(n)=5",
+    "critical_line_re_n": "5",
+    "im_H_identity_on_critical_line": "Im H(3+4(1/2+it)) = t",
+    "genus_axis_re_n": "7/2",
+    "genus_axis_re_s_under_n_3_plus_4s": "1/8",
+    "axis_claim_for_n_3_plus_4s_is_false": true,
+    "H_minus_1_over_12": {
+      "value": "1813/1728",
+      "numerator_factorization": {
+        "7": 2,
+        "37": 1
+      },
+      "denominator": 1728
+    }
+  },
+  "identities": {
+    "z12_norm_is_709": true,
+    "script_full_norm_is_norm_squared": true,
+    "identity_shadow_rounds_to_137_but_is_not_exact": true,
+    "eisenstein_shadow_norm_is_13": true,
+    "relative_norms_have_norm_709": true,
+    "prime_709_splits_completely_in_zeta12": true,
+    "prime_709_is_first_59n_plus_1_prime": true,
+    "prime_709_cube_prime_cube_identity": true,
+    "w33_ihara_primitive_support_excludes_13_137_709": true,
+    "w33_ihara_expanded_mod_709_has_unique_zero_coefficient": true,
+    "spectral_genus_imaginary_identity_has_non_axis_map": true,
+    "H_minus_1_over_12_is_1813_over_1728": true
+  }
+}

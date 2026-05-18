@@ -1,0 +1,163 @@
+{
+  "summary": {
+    "part": "DCMLXXXI",
+    "decimal": 981,
+    "bass_parameter": 11,
+    "corrected_ihara_radius_squared": "1/11",
+    "incorrect_shadow_radius_squared": "1/12",
+    "gaussian_division_is_integral": false,
+    "gaussian_137_divides_74441": false,
+    "all_identities_hold": true
+  },
+  "remote_main_note": {
+    "commit": "adddef43",
+    "file": "NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
+    "audit_status": "coefficient-12 shadow; not the W33 Ihara-Bass determinant"
+  },
+  "correct_w33_ihara": {
+    "degree": 12,
+    "bass_parameter": 11,
+    "factorization": "(1-u^2)^200*(1-12u+11u^2)*(1-2u+11u^2)^24*(1+4u+11u^2)^15",
+    "nontrivial_sectors": [
+      {
+        "lambda": 2,
+        "coefficient": 11,
+        "factor": "1 - (2)u + 11u^2",
+        "discriminant": -40,
+        "field_radicand": -10,
+        "is_heegner_field": false,
+        "pole_radius_squared": "1/11"
+      },
+      {
+        "lambda": -4,
+        "coefficient": 11,
+        "factor": "1 - (-4)u + 11u^2",
+        "discriminant": -28,
+        "field_radicand": -7,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/11"
+      }
+    ],
+    "reading": "The W33 collinearity graph has strict adjacency spectral slack, but its non-trivial Ihara poles sit on the graph-RH circle |u|=1/sqrt(11)."
+  },
+  "coefficient_12_shadow": {
+    "factorization": "(1-u^2)^200*(1-12u+12u^2)*(1-2u+12u^2)^24*(1+4u+12u^2)^15",
+    "nontrivial_sectors": [
+      {
+        "lambda": 2,
+        "coefficient": 12,
+        "factor": "1 - (2)u + 12u^2",
+        "discriminant": -44,
+        "field_radicand": -11,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/12"
+      },
+      {
+        "lambda": -4,
+        "coefficient": 12,
+        "factor": "1 - (-4)u + 12u^2",
+        "discriminant": -32,
+        "field_radicand": -2,
+        "is_heegner_field": true,
+        "pole_radius_squared": "1/12"
+      }
+    ],
+    "reading": "Using 12 instead of the Bass coefficient 11 produces the note's Q(sqrt(-11)) and Q(sqrt(-2)) fields and radius 1/sqrt(12), but that polynomial is not the Ihara-Bass determinant."
+  },
+  "gaussian_alpha_packet": {
+    "primes": {
+      "137": {
+        "is_prime": true,
+        "mod_4": 1,
+        "mod_12": 5,
+        "sum_of_two_squares": [
+          4,
+          11
+        ]
+      },
+      "4889": {
+        "is_prime": true,
+        "mod_4": 1,
+        "mod_12": 5,
+        "sum_of_two_squares": [
+          20,
+          67
+        ]
+      },
+      "74441": {
+        "is_prime": true,
+        "mod_4": 1,
+        "mod_12": 5,
+        "sum_of_two_squares": [
+          160,
+          221
+        ]
+      }
+    },
+    "division_160_221_by_4_11": {
+      "numerator": [
+        160,
+        221
+      ],
+      "denominator": [
+        4,
+        11
+      ],
+      "denominator_norm": 137,
+      "quotient_real": "3071/137",
+      "quotient_imag": "-876/137",
+      "real_remainder_mod_norm": 57,
+      "imag_remainder_mod_norm": 83,
+      "is_gaussian_integer": false
+    },
+    "division_160_221_by_4_minus_11": {
+      "numerator": [
+        160,
+        221
+      ],
+      "denominator": [
+        4,
+        -11
+      ],
+      "denominator_norm": 137,
+      "quotient_real": "-1791/137",
+      "quotient_imag": "2644/137",
+      "real_remainder_mod_norm": 127,
+      "imag_remainder_mod_norm": 41,
+      "is_gaussian_integer": false
+    },
+    "norm_137_divides_norm_74441": false,
+    "alpha_fraction": {
+      "numerator": 669969,
+      "denominator": 4889,
+      "numerator_factorization": {
+        "3": 2,
+        "74441": 1
+      },
+      "denominator_factorization": {
+        "4889": 1
+      },
+      "numerator_gaussian_norm": [
+        480,
+        663
+      ],
+      "denominator_gaussian_norm": [
+        20,
+        67
+      ],
+      "reading": "alpha numerator and denominator lie on the Gaussian sheet, but not through a 137 divisor."
+    }
+  },
+  "identities": {
+    "bass_parameter_is_degree_minus_one": true,
+    "corrected_ihara_uses_11_not_12": true,
+    "corrected_poles_are_on_graph_rh_circle": true,
+    "coefficient_12_shadow_has_note_fields": true,
+    "actual_ihara_fields_are_minus_10_and_minus_7": true,
+    "only_actual_s_sector_is_heegner": true,
+    "gaussian_division_not_integral": true,
+    "norm_137_does_not_divide_74441": true,
+    "gaussian_primes_share_mod_12_class": true,
+    "alpha_numerator_is_scaled_gaussian_norm": true
+  }
+}
