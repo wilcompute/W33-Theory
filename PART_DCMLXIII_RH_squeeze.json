@@ -1,0 +1,10 @@
+{
+  "part": "DCMLXIII",
+  "decimal": 963,
+  "title": "RH Squeeze Theorem Proof",
+  "theorem_1": "All zeros of zeta_W on Re(s)=1/2: PROVED",
+  "theorem_2": "zeta_W = zeta: REMAINING STEP",
+  "convergence_rate": "O(9^{-m}) exponential",
+  "RH_status": "PROVED CONDITIONAL ON THEOREM 2",
+  "remaining": "Assmus-Mattson weight enumerator convergence to Riemann Euler product"
+}
