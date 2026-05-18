@@ -1,0 +1,109 @@
+{
+  "chain_complex_over_F3": {
+    "beta1": 81,
+    "dim_C0": 40,
+    "dim_C1": 240,
+    "dim_C2_line_triangles": 160,
+    "hodge_decomposition_C1": {
+      "exact_gradient_modes_im_d1T": 39,
+      "harmonic_modes_H1": 81,
+      "sum": 240,
+      "triangle_boundary_modes_im_d2": 120
+    },
+    "rank_d1": 39,
+    "rank_d2": 120
+  },
+  "claim_audit": [
+    {
+      "claim": "W(3,3) collinearity graph is SRG(40,12,2,4)",
+      "computed": "{\"k\": 12, \"lambda\": 2, \"mu\": 4, \"v\": 40}",
+      "note": "Constructed directly from the alternating form on PG(3,F_3).",
+      "status": "PASS_EXACT"
+    },
+    {
+      "claim": "Adjacency spectrum has multiplicities 12^1, 2^24, (-4)^15",
+      "computed": "{\"-4\": 15, \"12\": 1, \"2\": 24}",
+      "note": "The multiplicities 1,24,15 are exact graph invariants.",
+      "status": "PASS_EXACT"
+    },
+    {
+      "claim": "Line-triangle complex has H_1 dimension 81 over F_3",
+      "computed": "C1=240, rank(d1)=39, rank(d2)=120, beta1=81",
+      "note": "This gives the exact qutrit carrier decomposition 240=39+120+81.",
+      "status": "PASS_EXACT"
+    },
+    {
+      "claim": "SM count identity 40 = 1 + 24 + 15",
+      "computed": "40 = 1 + 24 + 15",
+      "note": "Exact arithmetic and suggestive dictionary; not by itself a particle-physics derivation.",
+      "status": "PASS_NUMERIC_DICTIONARY"
+    },
+    {
+      "claim": "Total SM on-shell count 73 = Phi_12(3) = 28 + 45",
+      "computed": "Phi12=73, T7=28, Q=45, T7+Q=73",
+      "note": "Exact arithmetic; physical degree-of-freedom convention must be specified separately.",
+      "status": "PASS_NUMERIC_DICTIONARY"
+    },
+    {
+      "claim": "Aut(W(3,3)) = 1,451,520 as full braid representation order",
+      "computed": "standard PGSp/Sp order for W(3,3) action = 51840; claimed = 1451520",
+      "note": "1,451,520 = 28 * 51,840; it may be an extended carrier action, but it is not the bare W(3,3) automorphism order without extra structure.",
+      "status": "CONFLICT_OR_UNSPECIFIED_EXTENSION"
+    },
+    {
+      "claim": "W(3,3) is a [[40,12,13]]_3 CSS code",
+      "computed": "No stabilizer check matrix supplied by W(3,3) alone in this audit.",
+      "note": "A CSS code claim requires explicit commuting H_X,H_Z and a distance computation; graph counts alone do not determine [[n,k,d]].",
+      "status": "THEOREM_OBLIGATION"
+    },
+    {
+      "claim": "Z_3 parafermion braiding gives universal TQC on this substrate",
+      "computed": "Not a finite-graph invariant computed here.",
+      "note": "Requires a concrete modular category / braid representation / density theorem or compilation theorem.",
+      "status": "BRIDGE_ONLY"
+    },
+    {
+      "claim": "Bruhat-Tits tree degree p+1=12 at p=11 matches k=12",
+      "computed": "p+1=12 and k=12",
+      "note": "Degree matching is exact arithmetic; finite-quotient and SM-over-Q_11 claims require a covering/lattice construction.",
+      "status": "PASS_NUMERIC_BRIDGE"
+    }
+  ],
+  "physics_dictionary_counts": {
+    "cyclotomics_at_q3": {
+      "Phi12": 73,
+      "Phi3": 13,
+      "Phi4": 10,
+      "Phi6": 7
+    },
+    "on_shell_count_dictionary": {
+      "Phi12_total": 73,
+      "Q_fermion_total": 45,
+      "T7_bosonic_count": 28
+    },
+    "vertex_split": {
+      "negative_spectral_sector": 15,
+      "positive_spectral_sector": 24,
+      "total": 40,
+      "vacuum_or_Higgs": 1
+    }
+  },
+  "substrate": {
+    "adjacency_spectrum_multiplicities": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "edges": 240,
+    "line_triangles": 160,
+    "lines": 40,
+    "points": 40,
+    "q": 3,
+    "srg": {
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "v": 40
+    }
+  }
+}
