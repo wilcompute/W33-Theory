@@ -1,0 +1,39 @@
+{
+  "canonical_edge_css_code": {
+    "field": "F_3",
+    "physical_qutrits_n_edges": 240,
+    "HX_shape": [40, 240],
+    "HZ_shape": [160, 240],
+    "rank_HX": 39,
+    "rank_HZ": 120,
+    "commuting_HX_HZ": true,
+    "logical_qutrits_k": 81,
+    "Z_distance": 4,
+    "Z_witness": [
+      {"edge_index": 0, "edge": [0, 1], "coeff": 1},
+      {"edge_index": 3, "edge": [0, 13], "coeff": 2},
+      {"edge_index": 14, "edge": [1, 4], "coeff": 1},
+      {"edge_index": 44, "edge": [4, 13], "coeff": 1}
+    ],
+    "X_distance": 3,
+    "X_witness": [
+      {"edge_index": 0, "edge": [0, 1], "coeff": 1},
+      {"edge_index": 1, "edge": [0, 2], "coeff": 1},
+      {"edge_index": 2, "edge": [0, 3], "coeff": 1}
+    ],
+    "symmetric_distance": 3,
+    "parameters": "[[240,81,3]]_3 with asymmetric distances d_X=3, d_Z=4"
+  },
+  "vertex_code_warning": {
+    "n_vertex_qutrits": 40,
+    "num_line_checks": 40,
+    "rank_line_incidence": 25,
+    "rank_line_gram_BBT": 15,
+    "commuting_if_HX_equals_HZ_line_incidence": false,
+    "conclusion": "The raw line-point incidence matrix is not self-orthogonal over F_3, so it is not by itself a symmetric CSS stabilizer on 40 vertex qutrits."
+  },
+  "interpretation": {
+    "exact_statement": "The protected 81 sector is exactly the logical dimension of the canonical edge-chain CSS code.",
+    "theorem_obligation": "A [[40,12,13]]_3 vertex code needs explicit commuting stabilizers and a distance-13 proof; it is not implied by W(3,3) counts alone."
+  }
+}
