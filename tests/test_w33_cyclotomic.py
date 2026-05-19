@@ -49,10 +49,16 @@ from w33.cyclotomic import (
     completed_defect_spectral_log_odd_tail_bound,
     completed_defect_spectral_log_series,
     completed_defect_spectral_global_limit_profile,
+    completed_defect_spectral_hessian_tail_bound,
     completed_defect_spectral_profile,
+    completed_defect_spectral_phase_geometry_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
+    completed_defect_spectral_real_local_coordinates,
+    completed_defect_spectral_local_hessian_real,
+    completed_defect_spectral_local_order_parameter_real,
     completed_defect_spectral_infinite_cutoff_profile,
+    completed_defect_spectral_order_parameter_tail_bound,
     completed_defect_spectral_series_profile,
     completed_defect_spectral_min_radius,
     completed_defect_spectral_uniform_radius_lower_bound,
@@ -452,6 +458,38 @@ def test_completed_defect_spectral_standalone_global_limit_package():
     finite_value = completed_defect_spectral_L_function(100000, s, deformation=1.0)
     finite_log = completed_defect_spectral_log(100000, s, deformation=1.0)
     assert abs(cmath.exp(finite_log) - finite_value) < 1e-10
+
+
+def test_completed_defect_spectral_phase_geometry_package():
+    s = 1.0
+    coords = completed_defect_spectral_real_local_coordinates(7, s)
+    assert coords["a"] == 1 / 7
+    assert coords["kernel"] > 0.0
+
+    local_order_0 = completed_defect_spectral_local_order_parameter_real(7, s, deformation=0.0)
+    local_order_1 = completed_defect_spectral_local_order_parameter_real(7, s, deformation=1.0)
+    local_hessian_0 = completed_defect_spectral_local_hessian_real(7, s, deformation=0.0)
+    local_hessian_1 = completed_defect_spectral_local_hessian_real(7, s, deformation=1.0)
+    assert local_order_1 > local_order_0 > 0.0
+    assert abs(local_hessian_0) < 1e-18
+    assert local_hessian_1 > 0.0
+
+    assert completed_defect_spectral_order_parameter_tail_bound(100000, 1.0) < completed_defect_spectral_order_parameter_tail_bound(1000, 1.0)
+    assert completed_defect_spectral_hessian_tail_bound(100000, 1.0) < completed_defect_spectral_hessian_tail_bound(1000, 1.0)
+
+    profile = completed_defect_spectral_phase_geometry_profile([1000, 10000, 100000], [1.0], [0.0, 1.0, 2.0])
+    zero_rows = profile["1.0"]["0.0"]
+    one_rows = profile["1.0"]["1.0"]
+    two_rows = profile["1.0"]["2.0"]
+
+    assert abs(zero_rows[-1]["hessian_real"]) < 1e-18
+    assert zero_rows[-1]["order_positive"]
+    assert one_rows[-1]["order_positive"] and one_rows[-1]["hessian_positive"]
+    assert two_rows[-1]["order_positive"] and two_rows[-1]["hessian_positive"]
+    assert one_rows[-1]["order_tail_bound"] < one_rows[0]["order_tail_bound"]
+    assert one_rows[-1]["hessian_tail_bound"] < one_rows[0]["hessian_tail_bound"]
+    assert one_rows[-1]["order_jump_from_previous"] is not None and one_rows[-1]["order_jump_from_previous"] > 0.0
+    assert one_rows[-1]["hessian_jump_from_previous"] is not None and one_rows[-1]["hessian_jump_from_previous"] > 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

@@ -2278,6 +2278,36 @@ the limiting object inherits the same centered reciprocity exactly:
 \]
 So the odd symmetry is not a cutoff artifact. It survives all the way to the true global object.
 
+There is one more surprising payoff once we look at the deformation variable as genuine physics instead of mere bookkeeping. On the real slice $s>0$, set
+\[
+y_p(s)=1-p^{-s},
+\qquad
+a_p(s)=\frac{y_p(s)}{p-1}.
+\]
+Then the local free energy is
+\[
+\mathcal F_p(s;\lambda)=2\operatorname{artanh}(\lambda a_p(s))-2\lambda y_p(s)\bigl[-\log(1-1/p)\bigr].
+\]
+Its first derivative (the order parameter) can be rearranged into the visibly positive form
+\[
+\mathcal M_p(s;\lambda)=2y_p(s)\left[\frac{1}{p-1}+\log\!\left(1-\frac1p\right)+\frac{\lambda^2 a_p(s)^2}{(p-1)(1-\lambda^2 a_p(s)^2)}\right].
+\]
+Everything in brackets is positive for every split prime and every physical deformation $0\le\lambda<6$. So every local piece pushes in the same direction: the deformation branch rises monotonically away from the trivial packet.
+
+The second derivative is even cleaner:
+\[
+\chi_p(s;\lambda)=\frac{4\lambda a_p(s)^3}{(1-\lambda^2 a_p(s)^2)^2}.
+\]
+At $\lambda=0$ this is exactly $0$, but for every positive deformation it is strictly positive. That means the branch is not only rising; it is bending upward everywhere. There is no hidden local instability waiting between the centered packet at $\lambda=0$ and the physical packet at $\lambda=1$.
+
+Summing over split primes preserves that positivity, and the tails are summable with explicit bounds. So at infinite cutoff the completed spectral action has a very rigid phase portrait:
+\begin{enumerate}
+\item the order parameter is positive on the whole physical branch $0\le\lambda<6$;
+\item the Hessian is positive for every $\lambda>0$;
+\item therefore there is no interior critical point or phase transition before the analyticity wall.
+\end{enumerate}
+This is a big conceptual upgrade. The completed packet is not balancing on some mysterious edge. It lives on a unique, smoothly rising, strictly convex branch. The physical slice $\lambda=1$ is therefore not selected by a near-critical accident; it is simply one distinguished point on a branch whose geometry is now fully controlled.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3545,6 +3575,7 @@ Odd Spectral Taylor Tower & all even $\lambda$-coefficients vanish and the famil
 Infinite-Cutoff Spectral Limit & the odd Taylor tower converges absolutely to a genuine limiting analytic object & MCVII \\
 Spectral Action / Free Energy & deformation cumulants, Hessian, and the free-energy functional are explicit & MCVIII \\
 Standalone Spectral $L$-Limit & the infinite-cutoff Euler product exists with certified cutoff error bounds & MCIX \\
+Spectral Phase Geometry & the infinite-cutoff order parameter is positive and the Hessian is strictly positive for $\lambda>0$ & MCX \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

@@ -1155,6 +1155,113 @@ def completed_defect_spectral_global_limit_profile(
     return payload
 
 
+def completed_defect_spectral_real_local_coordinates(split_prime: int, s: float) -> dict[str, float]:
+    """Positive real-slice coordinates for the completed spectral packet on s > 0."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    z = float(prime_weight(p, s).real)
+    y = 1.0 - z
+    a = y / (p - 1)
+    kernel = 1 / (p - 1) + math.log(1 - 1 / p)
+    return {
+        "p": float(p),
+        "z": z,
+        "y": y,
+        "a": a,
+        "kernel": kernel,
+        "log_counterterm_strength": -math.log(1 - 1 / p),
+    }
+
+
+def completed_defect_spectral_local_order_parameter_real(split_prime: int, s: float, deformation: float = 1.0) -> float:
+    """Local order parameter of the real-slice spectral action F = -log Λ."""
+    coords = completed_defect_spectral_real_local_coordinates(split_prime, s)
+    a = coords["a"]
+    if abs(deformation) >= 1 / a:
+        raise ValueError("deformation lies outside the local analytic domain")
+    y = coords["y"]
+    kernel = coords["kernel"]
+    geometric = (deformation**2) * (a**2) / ((int(coords["p"]) - 1) * (1 - (deformation * a) ** 2))
+    return 2 * y * (kernel + geometric)
+
+
+def completed_defect_spectral_local_hessian_real(split_prime: int, s: float, deformation: float = 1.0) -> float:
+    """Local Hessian / susceptibility of the real-slice spectral action."""
+    coords = completed_defect_spectral_real_local_coordinates(split_prime, s)
+    a = coords["a"]
+    if abs(deformation) >= 1 / a:
+        raise ValueError("deformation lies outside the local analytic domain")
+    return 4 * deformation * (a**3) / ((1 - (deformation * a) ** 2) ** 2)
+
+
+def completed_defect_spectral_order_parameter_tail_bound(prime_limit: int, deformation_radius: float) -> float:
+    """Certified compact-disk tail bound for the infinite-cutoff order parameter."""
+    if prime_limit < 1:
+        raise ValueError("prime_limit must be >= 1")
+    if deformation_radius < 0:
+        raise ValueError("deformation_radius must be >= 0")
+    if deformation_radius >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("deformation_radius must be < 6 for a uniform compact-disk tail bound")
+    x = float(max(prime_limit, 6))
+    return 2 / x + (deformation_radius**2) / ((1 - (deformation_radius / x) ** 2) * (x**2))
+
+
+def completed_defect_spectral_hessian_tail_bound(prime_limit: int, deformation_radius: float) -> float:
+    """Certified compact-disk tail bound for the infinite-cutoff Hessian on the real slice."""
+    if prime_limit < 1:
+        raise ValueError("prime_limit must be >= 1")
+    if deformation_radius < 0:
+        raise ValueError("deformation_radius must be >= 0")
+    if deformation_radius >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("deformation_radius must be < 6 for a uniform compact-disk tail bound")
+    x = float(max(prime_limit, 6))
+    if deformation_radius == 0:
+        return 0.0
+    return (2 * deformation_radius) / (((1 - (deformation_radius / x) ** 2) ** 2) * (x**2))
+
+
+def completed_defect_spectral_phase_geometry_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile the monotone order parameter / convex Hessian geometry of the real-slice spectral action."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            previous_order = None
+            previous_hessian = None
+            for prime_limit in prime_limits:
+                order_parameter = completed_defect_spectral_order_parameter(prime_limit, s, deformation=deformation)
+                hessian = completed_defect_spectral_hessian(prime_limit, s, deformation=deformation)
+                action = completed_defect_spectral_action(prime_limit, s, deformation=deformation)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "action_real": action.real,
+                        "order_parameter_real": order_parameter.real,
+                        "hessian_real": hessian.real,
+                        "order_tail_bound": completed_defect_spectral_order_parameter_tail_bound(prime_limit, abs(deformation)),
+                        "hessian_tail_bound": completed_defect_spectral_hessian_tail_bound(prime_limit, abs(deformation)),
+                        "order_positive": order_parameter.real > 0 if deformation >= 0 else order_parameter.real < 0,
+                        "hessian_positive": hessian.real > 0 if deformation > 0 else abs(hessian.real) < 1e-18,
+                        "order_jump_from_previous": (order_parameter.real - previous_order) if previous_order is not None else None,
+                        "hessian_jump_from_previous": (hessian.real - previous_hessian) if previous_hessian is not None else None,
+                    }
+                )
+                previous_order = order_parameter.real
+                previous_hessian = hessian.real
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

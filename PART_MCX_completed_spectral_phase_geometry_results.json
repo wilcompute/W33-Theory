@@ -1,0 +1,47 @@
+{
+  "theorem": "Completed spectral phase geometry and no-critical-point branch",
+  "sample_tail_bounds": {
+    "order_lambda1_X1e6": 2.0000009999999997e-06,
+    "hessian_lambda1_X1e6": 2.000000000004e-12,
+    "order_lambda2_X1e6": 2.000004e-06,
+    "hessian_lambda2_X1e6": 4.000000000032e-12
+  },
+  "sample_rows": {
+    "s=1.0,lambda=1.0": {
+      "prime_limit": 1000000,
+      "action_real": 0.03692515847523429,
+      "order_parameter_real": 0.04182812771385852,
+      "hessian_real": 0.01491812170842033,
+      "order_tail_bound": 2.0000009999999997e-06,
+      "hessian_tail_bound": 2.000000000004e-12,
+      "order_positive": true,
+      "hessian_positive": true,
+      "order_jump_from_previous": 3.6639532158960764e-07,
+      "hessian_jump_from_previous": 8.219872699166686e-12
+    },
+    "s=1.0,lambda=2.0": {
+      "prime_limit": 1000000,
+      "action_real": 0.08905122676274098,
+      "order_parameter_real": 0.06547929945917508,
+      "hessian_real": 0.033342877257361826,
+      "order_tail_bound": 2.000004e-06,
+      "hessian_tail_bound": 4.000000000032e-12,
+      "order_positive": true,
+      "hessian_positive": true,
+      "order_jump_from_previous": 3.66407652191425e-07,
+      "hessian_jump_from_previous": 1.6437691485737815e-11
+    },
+    "s=2.0,lambda=1.0": {
+      "prime_limit": 1000000,
+      "action_real": 0.041768210077750396,
+      "order_parameter_real": 0.04887458847516111,
+      "hessian_real": 0.021727030582585665,
+      "order_tail_bound": 2.0000009999999997e-06,
+      "hessian_tail_bound": 2.000000000004e-12,
+      "order_positive": true,
+      "hessian_positive": true,
+      "order_jump_from_previous": 3.6639737682753193e-07,
+      "hessian_jump_from_previous": 8.21902615411041e-12
+    }
+  }
+}

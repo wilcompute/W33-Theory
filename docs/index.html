@@ -12611,6 +12611,36 @@
           <code>Λ<sub>X</sub><sup>def</sup>(s;λ)Λ<sub>X</sub><sup>def</sup>(s;−λ)=1</code>, the exact centered reciprocity survives
           to the infinite-cutoff limit as well.</p>
 
+        <h4>Spectral phase geometry: no hidden critical point before the wall</h4>
+        <p>Once the infinite-cutoff object exists, the next question is genuinely physical: what does its deformation
+          branch look like? Does the packet hide a phase transition before the analytic wall at <code>|λ| = 6</code>, or
+          does it sit on one rigid branch all the way from <code>λ = 0</code> to the physical slice <code>λ = 1</code>?</p>
+        <p>On the real slice <code>s &gt; 0</code>, define</p>
+        <div class="math-block">
+          <span class="eq">y<sub>p</sub>(s) = 1 − p<sup>−s</sup>, &ensp; a<sub>p</sub>(s) = y<sub>p</sub>(s)/(p−1)</span>
+        </div>
+        <p>Then the local order parameter of the completed spectral action rearranges into</p>
+        <div class="math-block">
+          <span class="eq">M<sub>p</sub>(s;λ) = 2y<sub>p</sub>(s)
+            [ 1/(p−1) + log(1−1/p) + λ²a<sub>p</sub>(s)² / ((p−1)(1−λ²a<sub>p</sub>(s)²)) ]</span>
+        </div>
+        <p>Every term in brackets is positive. So each split prime pushes the packet in the same direction: the free
+          energy rises monotonically as soon as the deformation is turned on.</p>
+        <p>The Hessian is even cleaner:</p>
+        <div class="math-block">
+          <span class="eq">χ<sub>p</sub>(s;λ) = 4λa<sub>p</sub>(s)³ / (1−λ²a<sub>p</sub>(s)²)²</span>
+        </div>
+        <p>That is exactly zero at <code>λ = 0</code> and strictly positive for every <code>λ &gt; 0</code>. Summing over split
+          primes preserves the sign and still converges absolutely. So the infinite-cutoff completed spectral action is</p>
+        <ul>
+          <li><strong>strictly increasing</strong> on the full physical branch <code>0 ≤ λ &lt; 6</code>,</li>
+          <li><strong>strictly convex</strong> for every <code>λ &gt; 0</code>, and</li>
+          <li>has <strong>no interior critical point</strong> before the analyticity wall.</li>
+        </ul>
+        <p>This is a stronger statement than mere convergence. It says the physical packet at <code>λ = 1</code> is not
+          balanced near some hidden transition. It lives on a unique smooth monotone branch whose geometry is now
+          explicitly controlled, complete with derivative tail bounds that shrink as the split-prime cutoff grows.</p>
+
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
           Eisenstein integers <strong>ℤ[ω]</strong>. Each split prime <code>p ≡ 1 (mod 3)</code> factors into two

@@ -1666,6 +1666,71 @@ Moreover the reciprocity law survives the limit exactly:
 So the completed defect packet is no longer merely a sequence of improving truncations: it is a bona fide global analytic spectral $L$-object with explicit cutoff error bars.
 \end{theorem}
 
+The global object also has a rigid phase geometry on the real deformation slice. Write
+\[
+y_p(s)=1-p^{-s},
+\qquad
+a_p(s)=\frac{y_p(s)}{p-1},
+\qquad
+J_p=\frac{1}{p-1}+\log\!\left(1-\frac1p\right).
+\]
+Then $a_p(s)>0$ and $J_p>0$ for every split prime $p\equiv1\pmod3$, and the local free energy
+\[
+\mathcal F_p(s;\lambda)=2\operatorname{artanh}(\lambda a_p(s))-2\lambda y_p(s)\bigl[-\log(1-1/p)\bigr]
+\]
+has the exact derivatives
+\[
+\mathcal M_p(s;\lambda)
+=
+\frac{\partial\mathcal F_p}{\partial\lambda}
+=
+2y_p(s)\left[
+J_p+\frac{\lambda^2 a_p(s)^2}{(p-1)(1-\lambda^2 a_p(s)^2)}
+\right],
+\]
+\[
+\chi_p(s;\lambda)
+=
+\frac{\partial^2\mathcal F_p}{\partial\lambda^2}
+=
+\frac{4\lambda a_p(s)^3}{(1-\lambda^2 a_p(s)^2)^2}.
+\]
+These formulas are manifestly positive on the real physical branch.
+
+\begin{theorem}[Completed Spectral Phase Geometry and No-Critical-Point Branch]
+For real $s>0$ and $0\le\lambda<6$, the infinite-cutoff order parameter and Hessian
+\[
+\mathcal M_\infty(s;\lambda)=\frac{\partial \mathcal F_\infty}{\partial\lambda},
+\qquad
+\chi_\infty(s;\lambda)=\frac{\partial^2 \mathcal F_\infty}{\partial\lambda^2}
+\]
+exist as absolutely convergent split-prime sums. Moreover
+\[
+\mathcal M_\infty(s;\lambda)>0
+\quad(0\le\lambda<6),
+\qquad
+\chi_\infty(s;\lambda)>0
+\quad(0<\lambda<6),
+\qquad
+\chi_\infty(s;0)=0.
+\]
+So the completed spectral action is strictly increasing and strictly convex on the full physical branch $0<\lambda<6$, with no interior critical point before the analyticity wall.
+
+The finite-cutoff derivatives approximate these limits monotonically from below, with explicit uniform tail bounds on $0\le\lambda\le\rho<6$:
+\[
+0<\mathcal M_\infty(s;\lambda)-\mathcal M_X(s;\lambda)
+\le
+\frac{2}{X_*}+\frac{\rho^2}{(1-(\rho/X_*)^2)X_*^2},
+\]
+\[
+0<\chi_\infty(s;\lambda)-\chi_X(s;\lambda)
+\le
+\frac{2\rho}{(1-(\rho/X_*)^2)^2X_*^2},
+\qquad X_*=\max\{X,6\}.
+\]
+Thus the physical packet at $\lambda=1$ lies on a unique monotone convex branch rather than near a hidden phase transition.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[
