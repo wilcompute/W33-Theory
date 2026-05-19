@@ -1,0 +1,163 @@
+{
+  "header": {
+    "all_polynomial_primitives_shift_closed_q_3_to_7": true,
+    "polynomial_primitives_fully_clean": 7,
+    "shift_tower_size": "7 polynomial primitives x 5 q-shifts = 35 entries"
+  },
+  "honesty_boundary": "All identities are exact integer arithmetic.  The 'all entries substrate-clean' claim depends on the substrate primitive set including products like Phi_6*37 (where 37 is itself derived in substrate via g(K_v) = q*37).  This is a structural closure observation, not a derivation of a new physical observable.",
+  "shift_tower": [
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        40,
+        85,
+        156,
+        259,
+        400
+      ],
+      "primitive": "v",
+      "substrate_readings": [
+        "v (W33 vertex count)",
+        "Csaszar count * Twin Pell sum = (q+2)(q^2+2^q)",
+        "k * Phi_3 (Pell chain product #3)",
+        "Phi_6 * 37",
+        "m_4^2 = (2 Phi_4)^2"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        12,
+        20,
+        30,
+        42,
+        56
+      ],
+      "primitive": "k",
+      "substrate_readings": [
+        "k",
+        "m_4 = 2 Phi_4 (Pell mult #4)",
+        "2 g_neg (gauge mult)",
+        "mu*T_6 (Hurwitz orbits)",
+        "sextactic = 2^q * Phi_6 (Klein)"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "primitive": "lam",
+      "substrate_readings": [
+        "lam_SRG",
+        "q",
+        "mu",
+        "Csaszar count = q+2",
+        "q!"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "primitive": "mu",
+      "substrate_readings": [
+        "mu",
+        "Csaszar count = q+2",
+        "q!",
+        "Phi_6",
+        "2^q (tomotope cells)"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        13,
+        21,
+        31,
+        43,
+        57
+      ],
+      "primitive": "Phi_3",
+      "substrate_readings": [
+        "Phi_3",
+        "T_6 (Csaszar edges)",
+        "Pell sum #4 = g+2^mu",
+        "Heegner 43 (factor of g(K_lambda_vacuum))",
+        "q * 19 = q * staircase_n"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        10,
+        17,
+        26,
+        37,
+        50
+      ],
+      "primitive": "Phi_4",
+      "substrate_readings": [
+        "Phi_4",
+        "Twin Pell sum #2 (Catalan)",
+        "2 Phi_3",
+        "first prime above N_M",
+        "g(K_28) = v + Phi_4 (spine)"
+      ]
+    },
+    {
+      "all_substrate_clean": true,
+      "orbit_q_3_to_7": [
+        7,
+        13,
+        21,
+        31,
+        43
+      ],
+      "primitive": "Phi_6",
+      "substrate_readings": [
+        "Phi_6",
+        "Phi_3",
+        "T_6 (Csaszar edges)",
+        "Pell sum #4 = g+2^mu",
+        "Heegner 43 (factor of g(K_lambda_vacuum))"
+      ]
+    }
+  ],
+  "special_observations": [
+    {
+      "label": "Phi_6(q+1) = Phi_3(q)",
+      "type": "general polynomial identity"
+    },
+    {
+      "comment": "Valency -> Pell -> Gauge -> Klein-Hurwitz -> Klein-Sextactic chain",
+      "label": "k shift orbit (12, 20, 30, 42, 56)"
+    },
+    {
+      "comment": "Small substrate ladder: mu, Csaszar, q!, Phi_6, 2^q",
+      "label": "mu shift orbit (4, 5, 6, 7, 8)"
+    },
+    {
+      "comment": "Within shift window, Heegner 43 is hit by both cyclotomic shifts",
+      "label": "Heegner 43 appears at Phi_3(6) and Phi_6(7)"
+    },
+    {
+      "comment": "First prime above N_M (37) appears as substrate factor",
+      "label": "v(6) = 259 = Phi_6 * 37"
+    },
+    {
+      "comment": "Square of a Pell multiplier appears in v's shift orbit",
+      "label": "v(7) = 400 = m_4^2 = (Pell multiplier #4)^2"
+    }
+  ],
+  "theorem": "W(3,3) Substrate Shift Tower Theorem.  Each of the seven polynomial substrate primitives v, k, lam, mu, Phi_3, Phi_4, Phi_6 shifted to q in {3, 4, 5, 6, 7} produces a 5-element orbit ALL of whose entries are substrate primitives or simple substrate combinations.  35 of 35 entries verify, including the k-orbit (12, 20, 30, 42, 56) = (k, m_4, 2g_neg, mu*T_6, 2^q*Phi_6) which traverses (valency, Pell multiplier, X-scheme gauge mult, Klein Hurwitz orbits, Klein sextactic) -- five structurally distinct substrate quantities -- in a single five-step shift sequence.  Heegner 43 appears within the window at Phi_3(6) and Phi_6(7), and v(7) = m_4^2 supplies the first squared Pell multiplier."
+}
