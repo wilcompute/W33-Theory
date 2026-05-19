@@ -1,0 +1,7 @@
+{
+  "statement": "The completed defect Dirichlet factor is naturally a finite adelic spectral package in the independent local coordinates z_p = p^{-s}. In those coordinates the exact involution is z_p -> 2-z_p, equivalently u_p=z_p-1 -> -u_p, and the completed product is centered-self-reciprocal coordinatewise. The one-variable diagonal s restriction inherits only p-local involutions s -> -log_p(2-p^{-s})/log p, so the exact reciprocity is adelic rather than a single global reflection in s.",
+  "largest_cutoff_max_local_error": {
+    "0.5": 4.440892098500626e-16,
+    "1.0": 4.440892098500626e-16
+  }
+}

@@ -12472,7 +12472,8 @@
           <span class="eq">C<sub>X</sub>(1+u) C<sub>X</sub>(1-u) = 1</span>
         </div>
         <p>for every cutoff <code>X</code>. So the renormalized packet is perfectly balanced around <code>t=1</code>:
-          the left and right displacements are exact multiplicative inverses. Equivalently, <code>log C<sub>X</sub>(1+u)</code>
+          the left and right displacements are exact multiplicative inverses. Equivalently,
+          <code>log C<sub>X</sub>(1+u)</code>
           is an odd function of <code>u</code>.</p>
         <p>That forces the completed Hessian to vanish exactly:</p>
         <div class="math-block">
@@ -12482,10 +12483,47 @@
           cubic. The surviving odd completed cumulants are explicit split-prime sums, and at the current cutoff they
           already stabilize near</p>
         <div class="math-block">
-          <span class="eq">κ<sub>3</sub> ≈ 0.0218824, &ensp; κ<sub>5</sub> ≈ 0.00639444, &ensp; κ<sub>7</sub> ≈ 0.00518666</span>
+          <span class="eq">κ<sub>3</sub> ≈ 0.0218824, &ensp; κ<sub>5</sub> ≈ 0.00639444, &ensp; κ<sub>7</sub> ≈
+            0.00518666</span>
         </div>
-        <p>That is a very sharp structural statement: the completed cyclotomic packet is <strong>centered-self-reciprocal</strong>,
+        <p>That is a very sharp structural statement: the completed cyclotomic packet is
+          <strong>centered-self-reciprocal</strong>,
           has <strong>zero quadratic curvature</strong>, and carries a fully <strong>odd cumulant tower</strong>.</p>
+
+        <h4>Completed Defect Dirichlet Package — the symmetry is adelic, not one global mirror</h4>
+        <p>The same reciprocity survives after replacing the bookkeeping variable <code>t</code> by the genuine
+          Dirichlet weight <code>z = p<sup>−s</sup></code>. The right centered coordinate is therefore local to each
+          split prime:</p>
+        <div class="math-block">
+          <span class="eq">z<sub>p</sub> = p<sup>−s</sup>, &ensp; u<sub>p</sub> = z<sub>p</sub> − 1</span>
+        </div>
+        <p>For each split prime <code>p ≡ 1 (mod 3)</code>, the completed local Dirichlet factor is</p>
+        <div class="math-block">
+          <span class="eq">D̂<sub>p</sub>(z) = ((p−2+z)/(p−z)) · (1−1/p)<sup>−2(1−z)</sup></span>
+        </div>
+        <p>and it obeys the exact centered reciprocity law</p>
+        <div class="math-block">
+          <span class="eq">D̂<sub>p</sub>(z) D̂<sub>p</sub>(2−z) = 1</span>
+        </div>
+        <p>So the completed Dirichlet symmetry is <strong>adelic</strong>: every split prime carries its own mirror.
+          There is no single linear reflection on the global <code>s</code>-line that does the whole job at once.</p>
+
+        <p>Even better, the logarithm closes in an exact artanh-form:</p>
+        <div class="math-block">
+          <span class="eq">log D̂<sub>p</sub>(z) = 2 artanh((z−1)/(p−1)) + 2(z−1) log(1−1/p)</span>
+        </div>
+        <p>That means the completed defect package is not merely an infinite product with nice derivatives. It is an
+          explicit odd split-prime signal, prime by prime.</p>
+
+        <h4>Eisenstein local-global valuation theorem</h4>
+        <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
+          Eisenstein integers <strong>ℤ[ω]</strong>. Each split prime <code>p ≡ 1 (mod 3)</code> factors into two
+          conjugate prime ideals <code>π<sub>r</sub></code> and <code>π̄<sub>r</sub></code>, and the cyclotomic packet is
+          the valuation packet of <code>q−ω</code> or <code>q+ω</code>.</p>
+        <div class="math-block">
+          <span class="eq">v<sub>π<sub>r</sub></sub>(q∓ω)=n &ensp;⇔&ensp; q ≡ r (mod p<sup>n</sup>) but not (mod p<sup>n+1</sup>)</span>
+        </div>
+        <p>So the Hensel branch depth and the Eisenstein ideal depth are exactly the same object in two languages.</p>
 
         <h3 style="color: #a78bfa;">The Gaussian Integer Layer — Why α = 137.036 is Forced</h3>
         <div class="formula-highlight" style="border-left-color: #a78bfa; background: rgba(167,139,250,0.08);">

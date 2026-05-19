@@ -78,8 +78,11 @@ Write-Host "Using mpm:      $mpm"
 
 # MiKTeX may abort compilation if it has never checked for updates in this
 # user profile. A read-only update query is enough to populate the timestamp
-# and suppress the warning without actually installing anything.
-& $mpm --find-updates *> $null
+# and suppress the warning without actually installing anything. Route the
+# probe through cmd.exe so any deprecation warning on stderr cannot abort the
+# PowerShell build itself.
+$escapedMpm = '"' + $mpm + '"'
+& cmd.exe /d /c "$escapedMpm --find-updates 1>nul 2>nul"
 
 $targets = @('w33_paper', 'W33_FOR_EVERYONE')
 if ($IncludeLegacyW36) {

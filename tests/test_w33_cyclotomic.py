@@ -1,3 +1,4 @@
+import cmath
 import math
 
 from w33.cyclotomic import (
@@ -8,13 +9,25 @@ from w33.cyclotomic import (
     cyclotomic_perfect_power_theorem,
     branch_classes_for_split_prime,
     completed_cumulant_constant,
+    completed_defect_adelic_centered_reciprocity,
+    completed_defect_adelic_log_artanh,
+    completed_defect_adelic_product,
     completed_global_centered_reciprocity,
     completed_higher_cumulant_profile,
     completed_local_centered_reciprocity,
     completed_defect_dirichlet_local_factor,
+    completed_defect_dirichlet_log_artanh,
+    completed_defect_dirichlet_log_artanh_profile,
+    completed_defect_dirichlet_log_artanh_series,
+    completed_defect_dirichlet_reciprocity_profile,
     completed_defect_dirichlet_log_derivative,
     completed_defect_dirichlet_product,
     completed_defect_dirichlet_profile,
+    completed_defect_local_centered_reciprocity_from_z,
+    completed_defect_local_centered_reciprocity_in_s,
+    completed_defect_local_factor_from_z,
+    completed_defect_local_log_artanh_form,
+    completed_defect_local_log_artanh_series,
     completed_local_log_derivative_at_one,
     completed_local_log_nth_derivative_at_one,
     completed_log_nth_derivative_at_one,
@@ -22,11 +35,14 @@ from w33.cyclotomic import (
     completed_tangent_profile,
     cyclotomic_perfect_power_scan,
     defect_density_partial_product,
+    defect_spectral_involution,
     defect_dirichlet_local_factor,
     defect_dirichlet_product,
     defect_residue_classifier,
     defect_match_for_q,
+    eisenstein_local_global_valuation_packet,
     eisenstein_ideal_witness,
+    exact_branch_congruence_valuation,
     eisenstein_split_ideal_data,
     eisenstein_norm,
     empirical_defect_density,
@@ -251,6 +267,54 @@ def test_completed_dirichlet_package():
     assert profile["0.5"][1]["completed_real"] > 0.0
     assert completed_defect_dirichlet_log_derivative(31, 1.0).imag == 0.0
     assert completed_defect_dirichlet_local_factor(7, 1.0).real > defect_dirichlet_local_factor(7, 1.0).real
+
+
+def test_completed_dirichlet_reciprocity_and_artanh_package():
+    s = 0.5
+    z7 = 7 ** (-s)
+    z13 = 13 ** (-s)
+    assert abs(completed_defect_local_factor_from_z(7, z7) - completed_defect_dirichlet_local_factor(7, s)) < 1e-15
+    assert abs(completed_defect_local_centered_reciprocity_from_z(7, z7) - 1.0) < 1e-15
+    assert abs(completed_defect_local_centered_reciprocity_in_s(7, s) - 1.0) < 1e-15
+    s_star = defect_spectral_involution(7, s)
+    assert abs(completed_defect_dirichlet_local_factor(7, s) * completed_defect_dirichlet_local_factor(7, s_star) - 1.0) < 1e-15
+    adelic = {7: z7, 13: z13}
+    assert abs(completed_defect_adelic_centered_reciprocity(adelic) - 1.0) < 1e-15
+    exact_local_log = completed_defect_local_log_artanh_form(7, z7)
+    exact_local_factor = completed_defect_local_factor_from_z(7, z7)
+    assert abs(cmath.exp(exact_local_log) - exact_local_factor) < 1e-12
+    assert abs(completed_defect_local_log_artanh_series(7, z7, max_terms=8) - exact_local_log) < 1e-10
+    exact_global_log = completed_defect_dirichlet_log_artanh(31, s)
+    series_global_log = completed_defect_dirichlet_log_artanh_series(31, s, max_terms=8)
+    assert abs(cmath.exp(exact_global_log) - completed_defect_dirichlet_product(31, s)) < 1e-10
+    assert abs(series_global_log - exact_global_log) < 1e-8
+    assert abs(cmath.exp(completed_defect_adelic_log_artanh(adelic)) - completed_defect_adelic_product(adelic)) < 1e-12
+    profile = completed_defect_dirichlet_log_artanh_profile([31, 1000], [0.5, 1.0], max_terms=8)
+    assert profile["0.5"][1]["abs_series_error"] < 1e-7
+    reciprocity_profile = completed_defect_dirichlet_reciprocity_profile([31, 1000], [0.5, 1.0])
+    assert reciprocity_profile["0.5"][1]["max_abs_local_error_from_one"] < 1e-12
+
+
+def test_eisenstein_exact_local_global_valuation_criterion():
+    row_phi3 = exact_branch_congruence_valuation(18, 7, "Phi3")
+    row_phi6 = exact_branch_congruence_valuation(19, 7, "Phi6")
+    row_phi3_simple = exact_branch_congruence_valuation(4, 7, "Phi3")
+    row_phi6_simple = exact_branch_congruence_valuation(5, 7, "Phi6")
+    assert row_phi3["branch_valuation"] == 3
+    assert row_phi3["phi_exponent"] == 3
+    assert row_phi3["exact_criterion_holds"]
+    assert row_phi3["exact_residue_mod_pn"] == 18
+    assert not row_phi3["extends_to_next_power"]
+    assert row_phi6["branch_valuation"] == 3
+    assert row_phi6["phi_exponent"] == 3
+    assert row_phi6["exact_criterion_holds"]
+    assert row_phi6["exact_residue_mod_pn"] == 19
+    assert row_phi3_simple["branch_valuation"] == 1 and row_phi3_simple["exact_criterion_holds"]
+    assert row_phi6_simple["branch_valuation"] == 1 and row_phi6_simple["exact_criterion_holds"]
+    packet3 = eisenstein_local_global_valuation_packet(18, "Phi3")
+    packet6 = eisenstein_local_global_valuation_packet(19, "Phi6")
+    assert packet3["all_exact"] and packet6["all_exact"]
+    assert packet3["split_prime_rows"][0]["statement"].startswith("v_pi")
 
 
 def test_eisenstein_prime_ideal_packet():

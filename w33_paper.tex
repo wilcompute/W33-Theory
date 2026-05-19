@@ -1393,9 +1393,56 @@ At $X=10^6$ this gives the first higher constants
 So the completed cyclotomic packet is not merely finite at $t=1$; it is centered-self-reciprocal there, with an exactly vanishing curvature and a fully odd cumulant tower.
 The same package globalizes from PGFs to a genuine completed defect Dirichlet series: for $\Re(s)>0$,
 \[
-\widehat D_X(s)=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{p-2+p^{-s}}{p-p^{-s}}\left(1-\frac1p\right)^{-2(1-p^{-s})}
+\widehat D_X(s)=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}
+\left(\frac{p-2+p^{-s}}{p-p^{-s}}\right)
+\left(1-\frac1p\right)^{-2(1-p^{-s})}
 \]
 converges numerically to stable values, with $\widehat D(1/2)\approx0.9731105378$, $\widehat D(1)\approx0.9637482610$, and $\widehat D(2)\approx0.9590920627$ already visible at $X=10^6$.
+The right centered variable in this Dirichlet picture is not a single global reflection on the $s$-line but the local coordinate
+\[
+z_p=p^{-s}, \qquad u_p=z_p-1.
+\]
+In these coordinates each completed local factor is exactly the completed $t$-packet evaluated at $t=z_p$:
+\[
+\widehat D_p(z)=\left(\frac{p-2+z}{p-z}\right)\left(1-\frac1p\right)^{-2(1-z)}.
+\]
+Therefore the same centered reciprocity survives prime-by-prime:
+\[
+\widehat D_p(z)\widehat D_p(2-z)=1.
+\]
+Equivalently, on the $s$-line one has the split-prime spectral involution
+\[
+\sigma_p(s)=-\log_p\!\left(2-p^{-s}\right),
+\qquad
+\widehat D_p(s)\widehat D_p\bigl(\sigma_p(s)\bigr)=1.
+\]
+So the completed Dirichlet reciprocity is \emph{adelic rather than diagonal}: each split prime carries its own centered coordinate and its own reflection.
+There is also an exact closed-form logarithm. For every split prime,
+\[
+\log \widehat D_p(z)
+=
+2\,\operatorname{artanh}\!\left(\frac{z-1}{p-1}\right)
++2(z-1)\log\!\left(1-\frac1p\right),
+\]
+and hence globally
+\[
+\log \widehat D_X(s)=
+2\sum_{\substack{p\le X\\ p\equiv1\ (3)}}
+\left[
+\operatorname{artanh}\!\left(\frac{p^{-s}-1}{p-1}\right)
++(p^{-s}-1)\log\!\left(1-\frac1p\right)
+\right].
+\]
+Expanding $\operatorname{artanh}$ yields the explicit odd-power packet
+\[
+\log \widehat D_X(s)=
+2\sum_{\substack{p\le X\\ p\equiv1\ (3)}}
+\left[
+\sum_{m\ge0}\frac{(p^{-s}-1)^{2m+1}}{(2m+1)(p-1)^{2m+1}}
++(p^{-s}-1)\log\!\left(1-\frac1p\right)
+\right],
+\]
+so the entire completed defect package is an explicit global artanh-type series rather than only a derivative-by-derivative object.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[
 p^n\mid\Phi_3(q)\iff \pi_r^n\mid(q-\omega),
@@ -1403,6 +1450,14 @@ p^n\mid\Phi_3(q)\iff \pi_r^n\mid(q-\omega),
 p^n\mid\Phi_6(q)\iff \pi_r^n\mid(q+\omega)
 \]
 on the corresponding branch. The famous Heawood cube is therefore literally an Eisenstein prime-cube event.
+More sharply, the branch depth is exact:
+\[
+v_{\pi_r}(q\mp\omega)=n
+\iff
+q\equiv r \pmod{p^n}
+\text{ but not }\pmod{p^{n+1}}
+\]
+on the matching branch (with the sign and root chosen appropriately for $\Phi_3$ or $\Phi_6$). So the Hensel tree and the Eisenstein valuation tree are the same packet in two languages.
 Finally, the perfect-power problem is now global rather than empirical. Since
 \[
 4\Phi_3(q)-3=(2q+1)^2, \qquad 4\Phi_6(q)-3=(2q-1)^2,

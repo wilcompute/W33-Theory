@@ -547,7 +547,86 @@ def completed_defect_dirichlet_local_factor(split_prime: int, s: complex) -> com
     """Completed local Dirichlet factor with the split-prime Mertens singularity removed."""
     p = split_prime
     z = prime_weight(p, s)
-    return defect_dirichlet_local_factor(p, s) * cmath.exp(-2 * (1 - z) * math.log(1 - 1 / p))
+    return completed_defect_local_factor_from_z(p, z)
+
+
+def defect_dirichlet_local_factor_from_z(split_prime: int, z: complex) -> complex:
+    """Local Dirichlet factor viewed in the spectral coordinate z = p^{-s}."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return (p - 2 + z) / (p - z)
+
+
+def completed_defect_local_factor_from_z(split_prime: int, z: complex) -> complex:
+    """Completed local defect factor in the centered spectral variable z = p^{-s}."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return defect_dirichlet_local_factor_from_z(p, z) * cmath.exp(-2 * (1 - z) * math.log(1 - 1 / p))
+
+
+def completed_defect_local_centered_reciprocity_from_z(split_prime: int, z: complex) -> complex:
+    """Local centered reciprocity in z: Dhat_p(z) Dhat_p(2-z) = 1."""
+    p = split_prime
+    return completed_defect_local_factor_from_z(p, z) * completed_defect_local_factor_from_z(p, 2 - z)
+
+
+def defect_spectral_involution(split_prime: int, s: complex) -> complex:
+    """Local spectral involution in the s-variable induced by z -> 2-z."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return -cmath.log(2 - prime_weight(p, s)) / math.log(p)
+
+
+def completed_defect_local_centered_reciprocity_in_s(split_prime: int, s: complex) -> complex:
+    """Local reciprocity pulled back to s via the split-prime spectral involution."""
+    s_star = defect_spectral_involution(split_prime, s)
+    return completed_defect_dirichlet_local_factor(split_prime, s) * completed_defect_dirichlet_local_factor(split_prime, s_star)
+
+
+def completed_defect_local_log_artanh_form(split_prime: int, z: complex) -> complex:
+    """Closed-form logarithm of the completed local factor in centered spectral variable z."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    u = z - 1
+    return 2 * cmath.atanh(u / (p - 1)) + 2 * u * math.log(1 - 1 / p)
+
+
+def completed_defect_local_log_artanh_series(split_prime: int, z: complex, max_terms: int = 8) -> complex:
+    """Truncated artanh-series log expansion for the completed local factor."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if max_terms < 1:
+        raise ValueError("max_terms must be >= 1")
+    u = z - 1
+    x = u / (p - 1)
+    series = sum((x ** (2 * m + 1)) / (2 * m + 1) for m in range(max_terms))
+    return 2 * series + 2 * u * math.log(1 - 1 / p)
+
+
+def completed_defect_adelic_product(z_by_prime: dict[int, complex]) -> complex:
+    """Finite adelic completed defect package on independent split-prime spectral coordinates."""
+    value = 1 + 0j
+    for p, z in sorted(z_by_prime.items()):
+        value *= completed_defect_local_factor_from_z(p, z)
+    return value
+
+
+def completed_defect_adelic_centered_reciprocity(z_by_prime: dict[int, complex]) -> complex:
+    """Adelic centered reciprocity: Dhat(z_p) Dhat(2-z_p) = 1 coordinatewise."""
+    return completed_defect_adelic_product(z_by_prime) * completed_defect_adelic_product({p: 2 - z for p, z in z_by_prime.items()})
+
+
+def completed_defect_adelic_log_artanh(z_by_prime: dict[int, complex]) -> complex:
+    """Closed-form adelic logarithm as a sum of local artanh packets."""
+    total = 0 + 0j
+    for p, z in sorted(z_by_prime.items()):
+        total += completed_defect_local_log_artanh_form(p, z)
+    return total
 
 
 def completed_defect_dirichlet_product(prime_limit: int, s: complex) -> complex:
@@ -587,6 +666,75 @@ def completed_defect_dirichlet_profile(prime_limits: list[int], s_values: list[f
                     "completed_imag": completed.imag,
                     "completed_log_derivative_real": deriv.real,
                     "completed_log_derivative_imag": deriv.imag,
+                }
+            )
+        payload[key] = rows
+    return payload
+
+
+def completed_defect_dirichlet_reciprocity_profile(prime_limits: list[int], s_values: list[float]) -> dict[str, list[dict[str, object]]]:
+    """Profile the local spectral involution and centered reciprocity on the diagonal s-line."""
+    payload: dict[str, list[dict[str, object]]] = {}
+    for s in s_values:
+        key = str(s)
+        rows = []
+        for prime_limit in prime_limits:
+            local_rows = []
+            for p in split_primes_mod_3(prime_limit):
+                reciprocity = completed_defect_local_centered_reciprocity_in_s(p, s)
+                local_rows.append(
+                    {
+                        "split_prime": p,
+                        "spectral_involution_real": defect_spectral_involution(p, s).real,
+                        "spectral_involution_imag": defect_spectral_involution(p, s).imag,
+                        "reciprocity_real": reciprocity.real,
+                        "reciprocity_imag": reciprocity.imag,
+                    }
+                )
+            rows.append(
+                {
+                    "prime_limit": prime_limit,
+                    "first_local_rows": local_rows[:6],
+                    "max_abs_local_error_from_one": max(abs(row["reciprocity_real"] - 1.0) + abs(row["reciprocity_imag"]) for row in local_rows),
+                }
+            )
+        payload[key] = rows
+    return payload
+
+
+def completed_defect_dirichlet_log_artanh(prime_limit: int, s: complex) -> complex:
+    """Exact global log of the completed Dirichlet product via the centered artanh form."""
+    total = 0 + 0j
+    for p in split_primes_mod_3(prime_limit):
+        total += completed_defect_local_log_artanh_form(p, prime_weight(p, s))
+    return total
+
+
+def completed_defect_dirichlet_log_artanh_series(prime_limit: int, s: complex, max_terms: int = 8) -> complex:
+    """Truncated global artanh-series expansion of the completed Dirichlet log."""
+    total = 0 + 0j
+    for p in split_primes_mod_3(prime_limit):
+        total += completed_defect_local_log_artanh_series(p, prime_weight(p, s), max_terms=max_terms)
+    return total
+
+
+def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
+    """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
+    payload: dict[str, list[dict[str, object]]] = {}
+    for s in s_values:
+        key = str(s)
+        rows = []
+        for prime_limit in prime_limits:
+            exact = completed_defect_dirichlet_log_artanh(prime_limit, s)
+            series = completed_defect_dirichlet_log_artanh_series(prime_limit, s, max_terms=max_terms)
+            rows.append(
+                {
+                    "prime_limit": prime_limit,
+                    "exact_log_real": exact.real,
+                    "exact_log_imag": exact.imag,
+                    "series_log_real": series.real,
+                    "series_log_imag": series.imag,
+                    "abs_series_error": abs(exact - series),
                 }
             )
         payload[key] = rows
@@ -666,6 +814,79 @@ def eisenstein_ideal_witness(q: int, family: str) -> dict[str, object]:
         "factorization": factors,
         "target_packet": target_sign,
         "ideal_witnesses": witnesses,
+    }
+
+
+def exact_branch_congruence_valuation(q: int, split_prime: int, family: str, max_power: int | None = None) -> dict[str, object]:
+    """Exact valuation on the matching Eisenstein branch via successive Hensel congruences."""
+    if family not in {"Phi3", "Phi6"}:
+        raise ValueError("family must be 'Phi3' or 'Phi6'")
+    if not is_prime(split_prime) or split_prime % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+
+    value = phi3_value(q) if family == "Phi3" else phi6_value(q)
+    exponent = prime_factorization(value).get(split_prime, 0)
+    roots_fn = phi3_roots_mod_prime_power if family == "Phi3" else phi6_roots_mod_prime_power
+    if max_power is None:
+        max_power = max(1, exponent + 2)
+
+    matched_residues: dict[str, int] = {}
+    valuation = 0
+    for power in range(1, max_power + 1):
+        target = q % (split_prime**power)
+        residues = roots_fn(split_prime, power)
+        if target in residues:
+            valuation = power
+            matched_residues[str(power)] = target
+        else:
+            break
+
+    exact_residue_mod_pn = matched_residues.get(str(valuation)) if valuation > 0 else None
+    next_match = None
+    if valuation + 1 <= max_power:
+        next_target = q % (split_prime ** (valuation + 1))
+        next_residues = roots_fn(split_prime, valuation + 1)
+        if next_target in next_residues:
+            next_match = next_target
+
+    target_packet = "q-ω" if family == "Phi3" else "q+ω"
+    return {
+        "q": q,
+        "family": family,
+        "split_prime": split_prime,
+        "value": value,
+        "phi_exponent": exponent,
+        "branch_valuation": valuation,
+        "target_packet": target_packet,
+        "matched_residues": matched_residues,
+        "exact_residue_mod_pn": exact_residue_mod_pn,
+        "extends_to_next_power": next_match is not None,
+        "next_match_mod_pn1": next_match,
+        "exact_criterion_holds": (valuation == exponent) and (next_match is None),
+        "statement": (
+            f"v_pi({target_packet})={valuation} iff q is congruent to the branch residue modulo {split_prime}^{valuation} "
+            f"but not modulo {split_prime}^{valuation + 1}."
+        ),
+    }
+
+
+def eisenstein_local_global_valuation_packet(q: int, family: str) -> dict[str, object]:
+    """Assemble the exact local-global valuation data on all split primes dividing Phi3(q) or Phi6(q)."""
+    if family not in {"Phi3", "Phi6"}:
+        raise ValueError("family must be 'Phi3' or 'Phi6'")
+    value = phi3_value(q) if family == "Phi3" else phi6_value(q)
+    factors = prime_factorization(value)
+    rows = []
+    for p in sorted(factors):
+        if is_prime(p) and p % 3 == 1:
+            rows.append(exact_branch_congruence_valuation(q, p, family))
+    return {
+        "q": q,
+        "family": family,
+        "value": value,
+        "factorization": factors,
+        "split_prime_rows": rows,
+        "all_exact": all(row["exact_criterion_holds"] for row in rows),
     }
 
 
