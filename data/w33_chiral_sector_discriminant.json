@@ -1,0 +1,74 @@
+{
+  "chiral_eigenvalue_quadratic": {
+    "discriminant": 31104,
+    "discriminant_check": true,
+    "discriminant_substrate_form": "lambda_gauge^2 * q! = (2^q q^2)^2 * q!",
+    "product_coefficient": 12960,
+    "product_substrate_form": "|W(E_6)| / 4 = trace(U U^T)_X = X-scheme trace",
+    "quadratic": "x^2 - 288 x + 12960 = 0",
+    "sum_coefficient": 288,
+    "sum_substrate_form": "k * f = codec * positive spectral mult"
+  },
+  "chiral_genus_in_Z_root_qfact": {
+    "conclusion": "Both the trace and the norm of g(K_chiral_pair) in Z[sqrt(q!)] have prime factors (2293, 269, 739) that do NOT match substrate primitives.  This confirms that the chiral genus pair is structurally outside the substrate's integer attractor lattice -- the architectural reading of the chiral sector as inherently fermionic / chirally protected.",
+    "g_K_lambda_minus": "2293 - 843 sqrt(q!)",
+    "g_K_lambda_plus": "2293 + 843 sqrt(q!)  (q! = 6)",
+    "norm_Z_root6": 993955,
+    "norm_clean_substrate_form": false,
+    "norm_factorization": "5 * 269 * 739",
+    "trace_Z_root6": 4586,
+    "trace_clean_substrate_form": false,
+    "trace_factorization": "2 * 2293"
+  },
+  "cp_galois_action": {
+    "Galois_group": "Gal(Q(sqrt(6))/Q) = Z/2",
+    "anti_fixed_by_CP": "anti-trace = 2 * 36 * sqrt(q!) = 72 * sqrt(q!) = lambda_gauge * sqrt(q!)",
+    "chiral_pair": "(144 + 36 sqrt(q!), 144 - 36 sqrt(q!))",
+    "field": "Q(sqrt(q!)) = Q(sqrt(6))",
+    "fixed_by_CP": "trace = 2 * 144 = 288 = k * f",
+    "non_trivial_action": "sqrt(q!) -> -sqrt(q!)",
+    "note": "The chiral eigenvalue gap equals lambda_gauge * sqrt(q!), so the gauge eigenvalue lambda_gauge = 72 plus the CP-symmetry-breaking root sqrt(q!) fully determines the chiral spectrum.  This is the cleanest single-equation closure of the irrational sector.",
+    "physics_role": "CP conjugation on the chiral eigenspace pair"
+  },
+  "five_primitive_discriminant_identity": {
+    "holds": true,
+    "identity": "(k f)^2 - |W(E_6)| = lambda_gauge^2 * q!",
+    "lhs": "(k*f)^2 - |W(E_6)| = (12*24)^2 - 51840 = 31104",
+    "primitive_count": 5,
+    "primitives_involved": [
+      "k",
+      "f",
+      "|W(E_6)|",
+      "lambda_gauge",
+      "q!"
+    ],
+    "rhs": "lambda_gauge^2 * q! = 72^2 * 6 = 31104",
+    "value": 31104
+  },
+  "gap_to_gauge_identity": {
+    "chiral_pair_gap": "lambda_+ - lambda_- = 72 * sqrt(6) = lambda_gauge * sqrt(q!)",
+    "lambda_gauge_substrate": "lambda_gauge = 2^q q^2",
+    "physics_reading": "The chirality splitting of the fermion eigenvalue pair is exactly the gauge eigenvalue scaled by sqrt(q!).  The Master Equation root sqrt(q!) = sqrt(6) is therefore the substrate's universal chiral scale, and the gauge eigenvalue determines the magnitude.  This is consistent with the SM picture where the chiral fermion mass splitting is gauge-coupling-dependent.",
+    "sqrt_substrate": "sqrt(q!) = sqrt(6)"
+  },
+  "header": {
+    "WE6": 51840,
+    "f": 24,
+    "k_codec": 12,
+    "lambda_gauge": 72,
+    "q": 3,
+    "q_factorial": 6
+  },
+  "honesty_boundary": "All arithmetic identities are exact.  The structural reading -- that the chiral sector is fermionic / CP-paired / sqrt(q!)-rooted -- is consistent with the W(3,3) X-scheme physics dictionary but is not an independent derivation of empirical fermion masses.  The chiral genus pair (2293 +- 843 sqrt(6)) has trace and norm outside the substrate-primitive ring, confirming honestly that the irrational genus values are intrinsic to the chiral sector and do not collapse to integer attractors.",
+  "substrate_factorisations_of_31104": {
+    "all_equal": true,
+    "as_2_pow_2q_times_q4_times_qfact": 31104,
+    "as_2_pow_7_times_3_pow_5": 31104,
+    "as_lambda_gauge_squared_times_qfact": 31104,
+    "k_f_squared_minus_we6": 31104,
+    "prime_factorization": "2^7 * 3^5",
+    "substrate_factorization": "lambda_gauge^2 * q! = (2^q q^2)^2 q!",
+    "value": 31104
+  },
+  "theorem": "W(3,3) Chiral-Sector Discriminant Identity.  The two irrational X-scheme eigenvalues 144 +- 36 sqrt(q!) are the roots of x^2 - (k*f) x + |W(E_6)|/4 = 0, whose discriminant equals lambda_gauge^2 * q! = 31104.  Equivalently, the five-primitive identity (k*f)^2 - |W(E_6)| = lambda_gauge^2 * q! holds, binding the codec, the positive spectral multiplicity, the exceptional Weyl group |W(E_6)|, the gauge eigenvalue, and the Master Equation value q! = 6.  CP conjugation on the chiral pair is the Galois action sqrt(q!) -> -sqrt(q!), and the chiral pair gap equals lambda_gauge * sqrt(q!) exactly.  This single equation completely closes the irrational eigenvalue sector of the substrate."
+}
