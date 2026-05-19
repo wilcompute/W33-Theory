@@ -794,6 +794,114 @@ def completed_defect_spectral_profile(prime_limits: list[int], s_values: list[fl
     return payload
 
 
+def completed_defect_spectral_local_radius(split_prime: int, s: complex) -> float:
+    """Analytic radius in the deformation variable λ for one split-prime local factor."""
+    x = completed_defect_spectral_coordinate(split_prime, s)
+    magnitude = abs(x)
+    if magnitude == 0:
+        return math.inf
+    return 1.0 / magnitude
+
+
+def completed_defect_spectral_min_radius(prime_limit: int, s: complex) -> float:
+    """Minimum local deformation radius across split primes up to a finite cutoff."""
+    radii = [completed_defect_spectral_local_radius(p, s) for p in split_primes_mod_3(prime_limit)]
+    if not radii:
+        return math.inf
+    return min(radii)
+
+
+def completed_defect_spectral_uniform_radius_lower_bound() -> float:
+    """Uniform lower bound on the deformation radius along the positive real s-axis.
+
+    For real s > 0, one has 0 < p^{-s} < 1, so |x_p(s)| = |p^{-s}-1|/(p-1) < 1/(p-1).
+    The smallest split prime is p = 7, hence every local factor is analytic for |λ| < 6,
+    and therefore every finite-cutoff global log packet has a uniformly convergent odd Taylor
+    tower on that disk.
+    """
+    return 6.0
+
+
+def completed_defect_spectral_local_log_odd_coefficient(split_prime: int, s: complex, order: int) -> complex:
+    """Coefficient of λ^order in the local log Taylor tower of the completed spectral family."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if order < 1:
+        raise ValueError("order must be >= 1")
+    if order % 2 == 0:
+        return 0.0 + 0.0j
+    z = prime_weight(p, s)
+    x = completed_defect_spectral_coordinate(p, s)
+    if order == 1:
+        return 2 * x + 2 * (z - 1) * math.log(1 - 1 / p)
+    return 2 * (x**order) / order
+
+
+def completed_defect_spectral_log_odd_coefficient(prime_limit: int, s: complex, order: int) -> complex:
+    """Coefficient of λ^order in the finite-cutoff global log Taylor tower."""
+    return sum(completed_defect_spectral_local_log_odd_coefficient(p, s, order) for p in split_primes_mod_3(prime_limit))
+
+
+def completed_defect_spectral_local_log_series(split_prime: int, s: complex, deformation: complex = 1.0, max_order: int = 9) -> complex:
+    """Truncated odd Taylor tower for the local log of the completed spectral family."""
+    if max_order < 1:
+        raise ValueError("max_order must be >= 1")
+    total = 0.0 + 0.0j
+    for order in range(1, max_order + 1, 2):
+        total += (deformation**order) * completed_defect_spectral_local_log_odd_coefficient(split_prime, s, order)
+    return total
+
+
+def completed_defect_spectral_log_series(prime_limit: int, s: complex, deformation: complex = 1.0, max_order: int = 9) -> complex:
+    """Truncated odd Taylor tower for the finite-cutoff global log of the completed spectral family."""
+    if max_order < 1:
+        raise ValueError("max_order must be >= 1")
+    total = 0.0 + 0.0j
+    for order in range(1, max_order + 1, 2):
+        total += (deformation**order) * completed_defect_spectral_log_odd_coefficient(prime_limit, s, order)
+    return total
+
+
+def completed_defect_spectral_series_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+    max_orders: list[int],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile convergence of the odd Taylor tower to the exact completed spectral log."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    uniform_radius = completed_defect_spectral_uniform_radius_lower_bound()
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            for prime_limit in prime_limits:
+                exact_log = completed_defect_spectral_log(prime_limit, s, deformation=deformation)
+                approximants: dict[str, object] = {}
+                for max_order in max_orders:
+                    series_log = completed_defect_spectral_log_series(prime_limit, s, deformation=deformation, max_order=max_order)
+                    approximants[str(max_order)] = {
+                        "series_log_real": series_log.real,
+                        "series_log_imag": series_log.imag,
+                        "abs_series_error": abs(series_log - exact_log),
+                    }
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "exact_log_real": exact_log.real,
+                        "exact_log_imag": exact_log.imag,
+                        "min_local_radius": completed_defect_spectral_min_radius(prime_limit, s),
+                        "uniform_radius_lower_bound": uniform_radius,
+                        "approximants": approximants,
+                    }
+                )
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

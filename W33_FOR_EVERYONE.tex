@@ -2201,6 +2201,27 @@ What does this do? It packages the whole split-prime signal into a single analyt
 \]
 So the old completed packet is now seen as one special slice of a larger and cleaner spectral $L$-family.
 
+There is one more exact upgrade hiding inside that formula. Because $0<p^{-s}<1$ on the positive real $s$-axis, the centered split-prime coordinate satisfies
+\[
+|x_p(s)|=\frac{|p^{-s}-1|}{p-1}<\frac{1}{p-1}\le\frac16.
+\]
+That means every local artanh-series in the deformation parameter converges at least for
+\[
+|\lambda|<6.
+\]
+So the completed spectral family is not just an elegant formula: it is an honest analytic family on a disk six units wide around $\lambda=0$, and the physical packet at $\lambda=1$ lies comfortably inside that disk.
+
+Better still, the logarithm has an exact odd Taylor tower
+\[
+\log \Lambda_X^{\mathrm{def}}(s;\lambda)=\sum_{m\ge0}\mathcal O_{2m+1}^{(X)}(s)\,\lambda^{2m+1},
+\]
+with \emph{no even powers at all}. The first coefficient is
+\[
+\mathcal O_1^{(X)}(s)=2\sum_{\substack{p\le X\\ p\equiv1\ (3)}}
+\left[x_p(s)+(p^{-s}-1)\log\!\left(1-\frac1p\right)\right],
+\]
+and every higher odd coefficient is just the corresponding odd split-prime power sum of $x_p(s)$. In plain language: once the packet is centered correctly, the deformation theory is purely odd and globally convergent.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3464,6 +3485,7 @@ Adelic Dirichlet Reciprocity & local symmetry is $\widehat D_p(z)\widehat D_p(2-
 Global Artanh Log Expansion & $\log\widehat D_X(s)$ is an explicit split-prime artanh sum & MCIII \\
 Eisenstein Local-Global Valuation & $v_{\pi_r}(q\mp\omega)=n$ iff the branch holds mod $p^n$ but not $p^{n+1}$ & MCIV \\
 Completed Spectral $L$-Package & the completed packet is the $\lambda=1$ slice of an odd spectral family & MCV \\
+Odd Spectral Taylor Tower & all even $\lambda$-coefficients vanish and the family stays analytic for $|\lambda|<6$ & MCVI \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

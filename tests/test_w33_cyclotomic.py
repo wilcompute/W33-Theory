@@ -35,10 +35,18 @@ from w33.cyclotomic import (
     completed_defect_spectral_coordinate,
     completed_defect_spectral_local_factor,
     completed_defect_spectral_local_log,
+    completed_defect_spectral_local_log_odd_coefficient,
+    completed_defect_spectral_local_log_series,
+    completed_defect_spectral_local_radius,
     completed_defect_spectral_L_function,
+    completed_defect_spectral_log_odd_coefficient,
     completed_defect_spectral_log,
+    completed_defect_spectral_log_series,
     completed_defect_spectral_profile,
     completed_defect_spectral_reciprocity,
+    completed_defect_spectral_series_profile,
+    completed_defect_spectral_min_radius,
+    completed_defect_spectral_uniform_radius_lower_bound,
     completed_reciprocity_profile,
     completed_tangent_profile,
     cyclotomic_perfect_power_scan,
@@ -322,6 +330,40 @@ def test_completed_defect_spectral_l_family_package():
     profile = completed_defect_spectral_profile([31, 1000], [0.5, 1.0], [0.25, 0.5, 1.0])
     assert profile["0.5"]["0.5"][1]["abs_reciprocity_error"] < 1e-10
     assert profile["0.5"]["1.0"][0]["value_real"] > 0.0
+
+
+def test_completed_defect_spectral_odd_taylor_tower_and_radius():
+    s = 1.0
+    x7 = completed_defect_spectral_coordinate(7, s)
+    assert abs(x7 + (1 / 7)) < 1e-15
+    assert abs(completed_defect_spectral_local_radius(7, s) - 7.0) < 1e-15
+    assert abs(completed_defect_spectral_min_radius(31, s) - 7.0) < 1e-15
+    assert completed_defect_spectral_uniform_radius_lower_bound() == 6.0
+
+    coeff1_local = completed_defect_spectral_local_log_odd_coefficient(7, s, 1)
+    coeff3_local = completed_defect_spectral_local_log_odd_coefficient(7, s, 3)
+    coeff2_local = completed_defect_spectral_local_log_odd_coefficient(7, s, 2)
+    assert abs(coeff2_local) < 1e-18
+    assert abs(coeff1_local - (2 * x7 + 2 * ((7 ** (-s)) - 1) * math.log(6 / 7))) < 1e-15
+    assert abs(coeff3_local - (2 * (x7**3) / 3)) < 1e-18
+
+    coeff2_global = completed_defect_spectral_log_odd_coefficient(31, s, 2)
+    assert abs(coeff2_global) < 1e-18
+
+    exact_local_log = completed_defect_spectral_local_log(7, s, deformation=1.0)
+    series_local_log = completed_defect_spectral_local_log_series(7, s, deformation=1.0, max_order=9)
+    assert abs(series_local_log - exact_local_log) < 1e-10
+
+    exact_global_log = completed_defect_spectral_log(1000, s, deformation=1.0)
+    series_global_log = completed_defect_spectral_log_series(1000, s, deformation=1.0, max_order=9)
+    assert abs(series_global_log - exact_global_log) < 1e-7
+
+    profile = completed_defect_spectral_series_profile([31, 1000], [1.0], [0.5], [1, 3, 5, 7, 9])
+    row = profile["1.0"]["0.5"][1]
+    assert row["uniform_radius_lower_bound"] == 6.0
+    assert row["min_local_radius"] >= 6.0
+    assert row["approximants"]["9"]["abs_series_error"] < row["approximants"]["5"]["abs_series_error"]
+    assert row["approximants"]["5"]["abs_series_error"] < row["approximants"]["3"]["abs_series_error"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

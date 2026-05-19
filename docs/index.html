@@ -12474,7 +12474,8 @@
         <p>for every cutoff <code>X</code>. So the renormalized packet is perfectly balanced around <code>t=1</code>:
           the left and right displacements are exact multiplicative inverses. Equivalently,
           <code>log C<sub>X</sub>(1+u)</code>
-          is an odd function of <code>u</code>.</p>
+          is an odd function of <code>u</code>.
+        </p>
         <p>That forces the completed Hessian to vanish exactly:</p>
         <div class="math-block">
           <span class="eq">d²/dt² log C<sub>X</sub>(t) |<sub>t=1</sub> = 0</span>
@@ -12488,7 +12489,8 @@
         </div>
         <p>That is a very sharp structural statement: the completed cyclotomic packet is
           <strong>centered-self-reciprocal</strong>,
-          has <strong>zero quadratic curvature</strong>, and carries a fully <strong>odd cumulant tower</strong>.</p>
+          has <strong>zero quadratic curvature</strong>, and carries a fully <strong>odd cumulant tower</strong>.
+        </p>
 
         <h4>Completed Defect Dirichlet Package — the symmetry is adelic, not one global mirror</h4>
         <p>The same reciprocity survives after replacing the bookkeeping variable <code>t</code> by the genuine
@@ -12522,22 +12524,45 @@
         </div>
         <p>and turn on a deformation parameter <code>λ</code>:</p>
         <div class="math-block">
-          <span class="eq">Λ<sub>p</sub><sup>def</sup>(s;λ) = ((1+λx<sub>p</sub>)/(1−λx<sub>p</sub>)) · exp(2λ(p<sup>−s</sup>−1)log(1−1/p))</span>
+          <span class="eq">Λ<sub>p</sub><sup>def</sup>(s;λ) = ((1+λx<sub>p</sub>)/(1−λx<sub>p</sub>)) ·
+            exp(2λ(p<sup>−s</sup>−1)log(1−1/p))</span>
         </div>
-        <p>At <code>λ = 1</code> this is exactly the completed defect package. At <code>λ = 0</code> it is the trivial value
+        <p>At <code>λ = 1</code> this is exactly the completed defect package. At <code>λ = 0</code> it is the trivial
+          value
           1. And because the family is odd in the deformation variable, it satisfies</p>
         <div class="math-block">
           <span class="eq">Λ<sub>X</sub><sup>def</sup>(s;λ) Λ<sub>X</sub><sup>def</sup>(s;−λ) = 1</span>
         </div>
-        <p>So the completed defect package is really the <strong>λ = 1 slice of a full spectral L-family</strong>, not an isolated endpoint.</p>
+        <p>So the completed defect package is really the <strong>λ = 1 slice of a full spectral L-family</strong>, not
+          an isolated endpoint.</p>
+
+        <h4>Odd Taylor tower and the radius-six analytic disk</h4>
+        <p>There is one more exact structural payoff. On the positive real <code>s</code>-axis we have
+          <code>0 &lt; p<sup>−s</sup> &lt; 1</code>, so the centered spectral coordinate satisfies</p>
+        <div class="math-block">
+          <span class="eq">|x<sub>p</sub>(s)| = |p<sup>−s</sup>−1|/(p−1) &lt; 1/(p−1) ≤ 1/6</span>
+        </div>
+        <p>because the first split prime is <code>7</code>. So every local artanh-series converges at least on the disk</p>
+        <div class="math-block">
+          <span class="eq">|λ| &lt; 6</span>
+        </div>
+        <p>and therefore the whole finite-cutoff completed spectral package is analytic there. Even better, its logarithm has a
+          purely odd Taylor expansion</p>
+        <div class="math-block">
+          <span class="eq">log Λ<sub>X</sub><sup>def</sup>(s;λ) = Σ<sub>m≥0</sub> O<sub>2m+1</sub><sup>(X)</sup>(s) λ<sup>2m+1</sup></span>
+        </div>
+        <p>with <strong>every even power missing exactly</strong>. So the completed defect packet at <code>λ = 1</code> is not just a
+          convenient slice of the family; it sits inside a genuinely convergent odd Taylor tower with room to spare.</p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
           Eisenstein integers <strong>ℤ[ω]</strong>. Each split prime <code>p ≡ 1 (mod 3)</code> factors into two
-          conjugate prime ideals <code>π<sub>r</sub></code> and <code>π̄<sub>r</sub></code>, and the cyclotomic packet is
+          conjugate prime ideals <code>π<sub>r</sub></code> and <code>π̄<sub>r</sub></code>, and the cyclotomic packet
+          is
           the valuation packet of <code>q−ω</code> or <code>q+ω</code>.</p>
         <div class="math-block">
-          <span class="eq">v<sub>π<sub>r</sub></sub>(q∓ω)=n &ensp;⇔&ensp; q ≡ r (mod p<sup>n</sup>) but not (mod p<sup>n+1</sup>)</span>
+          <span class="eq">v<sub>π<sub>r</sub></sub>(q∓ω)=n &ensp;⇔&ensp; q ≡ r (mod p<sup>n</sup>) but not (mod
+            p<sup>n+1</sup>)</span>
         </div>
         <p>So the Hensel branch depth and the Eisenstein ideal depth are exactly the same object in two languages.</p>
 

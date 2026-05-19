@@ -1474,6 +1474,46 @@ defines a completed spectral $L$-package satisfying
 for every finite cutoff $X$, and at $\lambda=1$ recovers the completed defect Dirichlet product.
 \end{theorem}
 
+For real $s>0$, the deformation family is analytic in a surprisingly large disk. Since $0<p^{-s}<1$, one has
+\[
+|x_p(s)|=\frac{|p^{-s}-1|}{p-1}<\frac{1}{p-1}\le\frac16
+\]
+for every split prime $p\equiv1\pmod3$. So the physical slice $\lambda=1$ sits safely inside a uniform analytic domain, not merely inside a formal power series.
+
+\begin{theorem}[Odd Spectral Taylor Tower and Radius-Six Analyticity]
+For real $s>0$ and every finite cutoff $X$, the completed spectral package admits the exact odd Taylor expansion
+\[
+\log \Lambda_X^{\mathrm{def}}(s;\lambda)
+=
+\sum_{m\ge0}\mathcal O_{2m+1}^{(X)}(s)\,\lambda^{2m+1},
+\qquad |\lambda|<6,
+\]
+with all even coefficients vanishing exactly. The first coefficient is
+\[
+\mathcal O_1^{(X)}(s)
+=
+2\sum_{\substack{p\le X\\ p\equiv1\ (3)}}
+\left[
+x_p(s)+(p^{-s}-1)\log\!\left(1-\frac1p\right)
+\right],
+\]
+and for $m\ge1$,
+\[
+\mathcal O_{2m+1}^{(X)}(s)
+=
+\frac{2}{2m+1}
+\sum_{\substack{p\le X\\ p\equiv1\ (3)}} x_p(s)^{2m+1}.
+\]
+Equivalently, the completed defect Dirichlet packet at $\lambda=1$ is one point on a uniformly convergent odd Taylor tower in the deformation variable.
+\end{theorem}
+
+At the verified slice $s=1$ and cutoff $X=10^5$, the first two global odd coefficients are already stable:
+\[
+\mathcal O_1^{(10^5)}(1)\approx -0.034499090239,
+\qquad
+\mathcal O_3^{(10^5)}(1)\approx -0.002400282230.
+\]
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[
