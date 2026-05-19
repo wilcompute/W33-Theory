@@ -44,10 +44,13 @@ from w33.cyclotomic import (
     completed_defect_spectral_L_function,
     completed_defect_spectral_log_odd_coefficient,
     completed_defect_spectral_log,
+    completed_defect_spectral_log_compact_tail_bound,
     completed_defect_spectral_log_lambda_derivative,
     completed_defect_spectral_log_odd_tail_bound,
     completed_defect_spectral_log_series,
+    completed_defect_spectral_global_limit_profile,
     completed_defect_spectral_profile,
+    completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_infinite_cutoff_profile,
     completed_defect_spectral_series_profile,
@@ -427,6 +430,28 @@ def test_completed_defect_spectral_deformation_derivatives_and_free_energy():
     free_energy = completed_defect_spectral_free_energy_profile([31, 1000], [1.0], [0.0, 1.0])
     assert abs(free_energy["1.0"]["0.0"][0]["action_real"]) < 1e-18
     assert abs(free_energy["1.0"]["0.0"][0]["hessian_real"]) < 1e-18
+
+
+def test_completed_defect_spectral_standalone_global_limit_package():
+    s = 1.0
+    tail_1000 = completed_defect_spectral_log_compact_tail_bound(1000, 1.0)
+    tail_100000 = completed_defect_spectral_log_compact_tail_bound(100000, 1.0)
+    assert tail_100000 < tail_1000
+    assert completed_defect_spectral_relative_error_bound(100000, 1.0) < completed_defect_spectral_relative_error_bound(1000, 1.0)
+
+    profile = completed_defect_spectral_global_limit_profile([1000, 10000, 100000], [1.0], [1.0, 2.0])
+    row_phys = profile["1.0"]["1.0"]
+    row_deformed = profile["1.0"]["2.0"]
+    assert row_phys[-1]["log_tail_bound"] < row_phys[0]["log_tail_bound"]
+    assert row_phys[-1]["relative_value_error_bound"] < row_phys[0]["relative_value_error_bound"]
+    assert row_phys[-1]["abs_jump_from_previous_log"] is not None
+    assert row_phys[-1]["uniform_radius_lower_bound"] == 6.0
+    assert row_deformed[-1]["relative_value_error_bound"] > row_phys[-1]["relative_value_error_bound"]
+    assert row_phys[-1]["abs_reciprocity_error"] < 1e-12
+
+    finite_value = completed_defect_spectral_L_function(100000, s, deformation=1.0)
+    finite_log = completed_defect_spectral_log(100000, s, deformation=1.0)
+    assert abs(cmath.exp(finite_log) - finite_value) < 1e-10
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

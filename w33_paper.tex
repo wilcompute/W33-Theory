@@ -1613,6 +1613,59 @@ and for $m\ge1$,
 At $\lambda=1$ the same cumulants remain explicit split-prime sums through the derivative formulas above, so the completed spectral package carries a closed thermodynamic and information-theoretic interpretation.
 \end{theorem}
 
+The finite-cutoff free energy is now strong enough to be promoted to a standalone global object. Write
+\[
+K_p(s)=(p^{-s}-1)\left[\frac{1}{p-1}+\log\!\left(1-\frac1p\right)\right].
+\]
+Then
+\[
+\log \Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+2\lambda K_p(s)+2\sum_{m\ge1}\frac{\lambda^{2m+1}x_p(s)^{2m+1}}{2m+1},
+\]
+so on every compact disk $|\lambda|\le \rho<6$ one has the explicit majorant
+\[
+\left|\log \Lambda_p^{\mathrm{def}}(s;\lambda)\right|
+\le
+2\rho\,|K_p(s)|+\frac{2}{3}\,\frac{(\rho/(p-1))^3}{1-(\rho/(p-1))^2}.
+\]
+Since $K_p(s)=O(p^{-2})$ and the second term is $O(p^{-3})$, the split-prime log packet converges absolutely and uniformly on compact $\lambda$-disks.
+
+\begin{theorem}[Standalone Infinite-Cutoff Completed Spectral $L$-Limit]
+For real $s>0$ there is a genuine global analytic object
+\[
+\Lambda_\infty^{\mathrm{def}}(s;\lambda)
+=
+\prod_{p\equiv1\ (3)}\Lambda_p^{\mathrm{def}}(s;\lambda),
+\qquad |\lambda|<6,
+\]
+whose logarithm is the absolutely and uniformly convergent split-prime series
+\[
+\log \Lambda_\infty^{\mathrm{def}}(s;\lambda)
+=
+\sum_{p\equiv1\ (3)}\log \Lambda_p^{\mathrm{def}}(s;\lambda).
+\]
+The finite-cutoff packets approximate this limit with the certified compact-disk bound
+\[
+\left|\log \Lambda_\infty^{\mathrm{def}}(s;\lambda)-\log \Lambda_X^{\mathrm{def}}(s;\lambda)\right|
+\le
+B_X(\rho),
+\qquad
+\left|\frac{\Lambda_\infty^{\mathrm{def}}(s;\lambda)}{\Lambda_X^{\mathrm{def}}(s;\lambda)}-1\right|
+\le e^{B_X(\rho)}-1,
+\]
+for $|\lambda|\le \rho<6$, where
+\[
+B_X(\rho)=\frac{2\rho}{X_*}+\frac{\rho^3}{3\bigl(1-(\rho/X_*)^2\bigr)X_*^2},
+\qquad X_*=\max\{X,6\}.
+\]
+Moreover the reciprocity law survives the limit exactly:
+\[
+\Lambda_\infty^{\mathrm{def}}(s;\lambda)\Lambda_\infty^{\mathrm{def}}(s;-\lambda)=1.
+\]
+So the completed defect packet is no longer merely a sequence of improving truncations: it is a bona fide global analytic spectral $L$-object with explicit cutoff error bars.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

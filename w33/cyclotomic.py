@@ -1079,6 +1079,82 @@ def completed_defect_spectral_free_energy_profile(
     return payload
 
 
+def completed_defect_spectral_log_compact_tail_bound(prime_limit: int, deformation_radius: float) -> float:
+    """Certified uniform tail bound for the completed spectral log on |λ| <= deformation_radius.
+
+    For real s > 0, the local spectral coordinate satisfies |x_p(s)| < 1/(p-1). Splitting the
+    local log into the convergent linear kernel plus the odd artanh tail gives the coarse bound
+
+        |log Λ_∞ - log Λ_X| <= 2ρ/X + ρ^3 / (3(1-(ρ/X)^2)X^2)
+
+    with X replaced by max(prime_limit, 6), since the first split prime is p = 7 and thus p-1 >= 6.
+    This is uniform in s on the positive real axis and uniform on compact λ-disks with 0 <= ρ < 6.
+    """
+    if prime_limit < 1:
+        raise ValueError("prime_limit must be >= 1")
+    if deformation_radius < 0:
+        raise ValueError("deformation_radius must be >= 0")
+    if deformation_radius >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("deformation_radius must be < 6 for a uniform compact-disk tail bound")
+    if deformation_radius == 0:
+        return 0.0
+    base = float(max(prime_limit, 6))
+    linear_tail = 2 * deformation_radius / base
+    ratio = deformation_radius / base
+    odd_tail = (deformation_radius**3) / (3 * (1 - ratio**2) * (base**2))
+    return linear_tail + odd_tail
+
+
+def completed_defect_spectral_relative_error_bound(prime_limit: int, deformation_radius: float) -> float:
+    """Relative multiplicative error bound for the finite-cutoff spectral L-approximant on |λ| <= ρ."""
+    return math.expm1(completed_defect_spectral_log_compact_tail_bound(prime_limit, deformation_radius))
+
+
+def completed_defect_spectral_global_limit_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile finite-cutoff approximants to the standalone infinite-cutoff spectral L-object.
+
+    Each row reports the finite-cutoff value together with a certified log-tail bound and the
+    induced relative multiplicative error bound for the true infinite-cutoff object.
+    """
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    uniform_radius = completed_defect_spectral_uniform_radius_lower_bound()
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            previous_log = None
+            deformation_radius = abs(deformation)
+            for prime_limit in prime_limits:
+                value = completed_defect_spectral_L_function(prime_limit, s, deformation=deformation)
+                log_value = completed_defect_spectral_log(prime_limit, s, deformation=deformation)
+                tail_bound = completed_defect_spectral_log_compact_tail_bound(prime_limit, deformation_radius)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "value_real": value.real,
+                        "value_imag": value.imag,
+                        "log_real": log_value.real,
+                        "log_imag": log_value.imag,
+                        "action_real": -log_value.real,
+                        "action_imag": -log_value.imag,
+                        "abs_jump_from_previous_log": abs(log_value - previous_log) if previous_log is not None else None,
+                        "uniform_radius_lower_bound": uniform_radius,
+                        "log_tail_bound": tail_bound,
+                        "relative_value_error_bound": completed_defect_spectral_relative_error_bound(prime_limit, deformation_radius),
+                        "abs_reciprocity_error": abs(completed_defect_spectral_reciprocity(prime_limit, s, deformation=deformation) - 1.0),
+                    }
+                )
+                previous_log = log_value
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

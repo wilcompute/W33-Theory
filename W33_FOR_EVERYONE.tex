@@ -2238,6 +2238,46 @@ then $\mathcal F_X$ plays the role of a free energy or effective action for the 
 \]
 So the centered packet sits at a flat point of the deformation potential, and all of the non-trivial information is carried by the odd deformation cumulants.
 
+There is one final upgrade that turns this from a beautiful family into a fully standalone object. The finite-cutoff packets are not merely converging in some vague sense; they come with an honest error bar. If we stay inside any compact disk
+\[
+|\lambda|\le \rho<6,
+\]
+then the split-prime local logs are bounded by a convergent majorant, so the whole sum
+\[
+\log \Lambda_\infty^{\mathrm{def}}(s;\lambda)=\sum_{p\equiv1\ (3)}\log \Lambda_p^{\mathrm{def}}(s;\lambda)
+\]
+converges absolutely and uniformly. In other words, the completed spectral family really does exist at infinite cutoff as a genuine analytic function, and not only as a formal limit of truncations.
+
+Even better, the truncations know how close they are to the limit. For $|\lambda|\le \rho<6$ one has the explicit bound
+\[
+\left|\log \Lambda_\infty^{\mathrm{def}}(s;\lambda)-\log \Lambda_X^{\mathrm{def}}(s;\lambda)\right|
+\le
+B_X(\rho),
+\]
+with
+\[
+B_X(\rho)=\frac{2\rho}{X_*}+\frac{\rho^3}{3\bigl(1-(\rho/X_*)^2\bigr)X_*^2},
+\qquad X_*=\max\{X,6\}.
+\]
+After exponentiating, this becomes a relative multiplicative error bound for the actual spectral $L$-value itself. So by the time we reach a large cutoff such as $10^6$, the physical slice $\lambda=1$ is not just numerically stable --- it is accompanied by a certified tiny remainder.
+
+This is the clean conceptual endpoint of the whole cyclotomic/spectral tower. The packet now has four layers at once:
+\begin{enumerate}
+\item it is an adelic reciprocity packet prime by prime;
+\item it is an odd analytic deformation family in $\lambda$;
+\item it is a free-energy / effective-action functional;
+\item it is a genuine infinite-cutoff global spectral $L$-object with explicit cutoff error bars.
+\end{enumerate}
+And because the finite packets satisfy
+\[
+\Lambda_X^{\mathrm{def}}(s;\lambda)\Lambda_X^{\mathrm{def}}(s;-\lambda)=1,
+\]
+the limiting object inherits the same centered reciprocity exactly:
+\[
+\Lambda_\infty^{\mathrm{def}}(s;\lambda)\Lambda_\infty^{\mathrm{def}}(s;-\lambda)=1.
+\]
+So the odd symmetry is not a cutoff artifact. It survives all the way to the true global object.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3504,6 +3544,7 @@ Completed Spectral $L$-Package & the completed packet is the $\lambda=1$ slice o
 Odd Spectral Taylor Tower & all even $\lambda$-coefficients vanish and the family stays analytic for $|\lambda|<6$ & MCVI \\
 Infinite-Cutoff Spectral Limit & the odd Taylor tower converges absolutely to a genuine limiting analytic object & MCVII \\
 Spectral Action / Free Energy & deformation cumulants, Hessian, and the free-energy functional are explicit & MCVIII \\
+Standalone Spectral $L$-Limit & the infinite-cutoff Euler product exists with certified cutoff error bounds & MCIX \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\
