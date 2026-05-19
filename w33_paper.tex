@@ -9,7 +9,8 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{physics}
 \usepackage{geometry}
-\usepackage{hyperref}
+\usepackage[unicode,psdextra]{hyperref}
+\usepackage{xurl}
 \usepackage{cleveref}
 \usepackage{booktabs}
 \usepackage{array}
@@ -44,6 +45,40 @@
   citecolor=green!50!black,
   urlcolor=blue!60!black
 }
+\pdfstringdefDisableCommands{%
+  \def\mathbb#1{#1}%
+  \def\mathrm#1{#1}%
+  \def\mathbf#1{#1}%
+  \def\mathcal#1{#1}%
+  \def\mathfrak#1{#1}%
+  \def\bm#1{#1}%
+  \def\textbf#1{#1}%
+  \def\textit#1{#1}%
+  \def\texttt#1{#1}%
+  \def\text#1{#1}%
+  \def\omega{omega}%
+  \def\alpha{alpha}%
+  \def\beta{beta}%
+  \def\delta{delta}%
+  \def\Delta{Delta}%
+  \def\lambda{lambda}%
+  \def\Lambda{Lambda}%
+  \def\mu{mu}%
+  \def\phi{phi}%
+  \def\Phi#1{Phi#1}%
+  \def\pi{pi}%
+  \def\tau{tau}%
+  \def\Theta{Theta}%
+  \def\aleph{aleph}%
+  \def\beth{beth}%
+  \def\gimel{gimel}%
+  \def\daleth{daleth}%
+  \def\Omega{Omega}%
+  \def\cdot{ }%
+  \def\to{ to }%
+  \def\Rightarrow{ => }%
+}
+\setlength{\emergencystretch}{3em}
 
 % ═══════════════════════════════════════════════════════════════
 %  Theorem environments
@@ -105,7 +140,7 @@
   (skipping $\mu, \pi, \phi$), $\aleph$, $\beth$, $\gimel$, $\daleth$, $\Omega$ \\
   \small 3300$+$ Verified Identities \ $\cdot$\  600$+$ Phases \ $\cdot$\  Zero Failures}
 }
-\author{\normalsize\itshape Quantum Gravity Research}
+\author{\normalsize\itshape Wil Dahn}
 \date{April 2026}
 
 \begin{document}
@@ -236,7 +271,7 @@ z &=& (k-1)+\mu\,i = 11+4i
 
 
 % ═══════════════════════════════════════════════════════════════
-\section{The Symplectic Polar Space $W(3,3)$}
+\section{\texorpdfstring{The Symplectic Polar Space $W(3,3)$}{The Symplectic Polar Space W(3,3)}}
 \label{sec:W33}
 
 This section gives the formal mathematical definition of $W(3,3)$
@@ -314,7 +349,7 @@ interchanging points and lines yields an isomorphic structure.
 \end{theorem}
 
 
-\subsection{The Collinearity Graph: $\SRG(40,12,2,4)$}
+\subsection{\texorpdfstring{The Collinearity Graph: $\SRG(40,12,2,4)$}{The Collinearity Graph: SRG(40,12,2,4)}}
 \label{ssec:srg}
 
 \begin{definition}[Collinearity Graph]
@@ -406,7 +441,7 @@ This identity holds for \emph{no other} strongly regular graph.
 
 
 % ═══════════════════════════════════════════════════════════════
-\section{The Symplectic Group $\Sp(4,3)$ and its Exceptional Isomorphisms}
+\section{\texorpdfstring{The Symplectic Group $\Sp(4,3)$ and its Exceptional Isomorphisms}{The Symplectic Group Sp(4,3) and its Exceptional Isomorphisms}}
 \label{sec:sp}
 
 \begin{definition}[Symplectic Group]
@@ -475,7 +510,7 @@ quadrangle of $W(3,3)$.
 \end{theorem}
 
 
-\subsection{$D_4$ Triality and the 28 Graphs}
+\subsection{\texorpdfstring{$D_4$ Triality and the 28 Graphs}{D4 Triality and the 28 Graphs}}
 
 \begin{theorem}
 The Lie algebra $D_4 = \mathfrak{so}(8)$ is the unique simple Lie algebra
@@ -490,7 +525,7 @@ Triality exchanges $\mathbf{8}_v\leftrightarrow\mathbf{8}_s
 \end{theorem}
 
 
-\subsection{$E_8$ and the Edge Count}
+\subsection{\texorpdfstring{$E_8$ and the Edge Count}{E8 and the Edge Count}}
 
 \begin{theorem}[$E_8$ Root System]
 \begin{equation}
@@ -635,7 +670,7 @@ the deep identity~\eqref{eq:deep}.
 
 
 % ═══════════════════════════════════════════════════════════════
-\section{Projective Embedding: $\PG(3,\FF_3)$}
+\section{\texorpdfstring{Projective Embedding: $\PG(3,\FF_3)$}{Projective Embedding: PG(3,F3)}}
 \label{sec:pg}
 
 \begin{theorem}
@@ -659,7 +694,7 @@ $\Phithree = 13$ (total), $\mu = 4$ (isotropic), $q^2 = 9$ (non-isotropic).
 %  PART II: PHYSICS DERIVATIONS
 % ═══════════════════════════════════════════════════════════════
 \newpage
-\part{Complete Physics from $W(3,3)$}
+\part{\texorpdfstring{Complete Physics from $W(3,3)$}{Complete Physics from W(3,3)}}
 
 \section{The Bose--Mesner Equation as Einstein's Equation}
 \label{sec:einstein}
@@ -799,6 +834,56 @@ Deviation & $\mathbf{0.23\sigma}$ & \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\subsection{Six exact closed forms for the integer skeleton}
+
+The rational correction in \eqref{eq:alpha} sharpens the comparison with
+CODATA, but the integer skeleton $137$ is already heavily overdetermined
+inside the substrate.  Repository verification from the May 18 closure pass
+isolates six exact $W(3,3)$ forms of the same prime.
+
+\begin{proposition}[Six exact $W(3,3)$ forms for $137$]
+\label{prop:alpha-six-forms}
+The integer skeleton of the electromagnetic coupling satisfies
+\begin{equation}
+\renewcommand{\arraystretch}{1.2}
+\begin{aligned}
+137 &= \frac{\tau(O)}{q}+q^2 = 128+9
+&&\text{(octahedral / codec form)},\\
+137 &= q^4+2q^3+2 = 81+54+2
+&&\text{(pure polynomial form)},\\
+137 &= \Phi_5(q)+\Phi_2(q)^2 = 121+16
+&&\text{(cyclotomic form)},\\
+137 &= (k-1)^2+\mu^2 = 11^2+4^2
+&&\text{(Gaussian norm form)},\\
+137 &= (k-1)k + (q+2) = 132+5
+&&\text{(codec-plus-shift form)},\\
+137 &= (v+\Phi_6) + (v+k+\Phi_6) + (\Phi_{12}-\lambda) - v \\
+  &= 47+59+71-40
+&&\text{(Conway / moonshine prime form)}.
+\end{aligned}
+\label{eq:alpha-six-forms}
+\end{equation}
+\end{proposition}
+
+\begin{remark}[Electroweak cross-check and historical shorthand]
+The first line of \eqref{eq:alpha-six-forms} already contains the familiar
+$Z$-pole scale inverse coupling:
+\[
+\alpha(m_Z)^{-1}\approx 128 = \frac{\tau(O)}{q}.
+\]
+In this reading the finite lift from the electroweak shell to the infrared
+integer skeleton is the matter contribution $q^2 = 9$, while the rational
+slip term in \eqref{eq:alpha} supplies the observed $0.036$ residue.  For
+historical continuity with the older W36 manuscript we also retain the compact
+spectral checksum
+\[
+\alpha^{-1}_{\mathrm{skel}} = k^2-(|r|+|s|+1)=144-7=137,
+\]
+but the six formulas above are the stronger statement: the same prime is
+simultaneously octahedral, polynomial, cyclotomic, Gaussian, codec-shifted,
+and moonshine-visible.
+\end{remark}
 
 
 \subsection{Gaussian Integer Structure}
@@ -1439,20 +1524,20 @@ $\chi^2/\text{dof} = 0.64$ across 31 precision observables.
 
 Building upon the phenomenological observables, we present the unification of decay widths, mass gaps, QED running, and the fermion hierarchy natively within the $W(3,3)$ topological substrate.
 
-\subsection{The $W$-Boson Decay Width as the Transport Bottleneck}
+\subsection{\texorpdfstring{The $W$-Boson Decay Width as the Transport Bottleneck}{The W-Boson Decay Width as the Transport Bottleneck}}
 Particle lifetimes can be cast as structural failure rates of the QEC network. For the $W^\pm$ boson, the fractional decay width maps to the ratio of the Heawood primitive ($\Phisix = 7$) to the structural transport capacity:
 \begin{equation}
 \frac{\Gamma_W}{m_W} \approx \frac{\Phisix}{10\cdot q^q} = \frac{7}{270} \approx 0.0259259 \qquad (\text{obs: } \approx 0.0259396)
 \end{equation}
 The Weak interaction vector boson decays exactly at the structural bottleneck of the 270-transport layer bridging the bulk to the screen.
 
-\subsection{The $\Lambda_{\text{QCD}}$ Mass Gap}
+\subsection{\texorpdfstring{The $\Lambda_{\text{QCD}}$ Mass Gap}{The Lambda_QCD Mass Gap}}
 The strong-force confinement boundary correlates to the negative spectrum multiplicity ($g=15$) distributed across the matter sector ($H_1=81$), scaled by the fine-structure anchor:
 \begin{equation}
 \frac{\Lambda_{\text{QCD}}}{\vEW} \cong \frac{g}{H_1 \cdot 137} = \frac{15}{81 \cdot 137} \approx 0.0013517 \qquad (\text{obs: } \approx 0.001348)
 \end{equation}
 
-\subsection{The QED Running Residue $\delta_{\text{RG}}$}
+\subsection{\texorpdfstring{The QED Running Residue $\delta_{\text{RG}}$}{The QED Running Residue delta_RG}}
 The empirical deviation from the $137$ fine-structure anchor ($\delta_{\text{RG}} \approx 0.035999$) corresponds geometrically to the bleed-over of the Higgs golden-ratio scale into the discrete ternary gap:
 \begin{equation}
 \delta_{\text{RG}} \approx \frac{\phi}{g \cdot q} = \frac{\frac{1+\sqrt{5}}{2}}{15 \cdot 3} \approx 0.035956
@@ -1682,11 +1767,11 @@ $\mathrm{SRG}(45,32,22,24)$.  Both target systems share the same
 Naimark shadow split $21 = 1 + 20$, and the Naimark complement swaps
 the visible positive and negative sign graphs on both channels.  The
 executable surfaces are
-\texttt{scripts/w33\_parseval\_measurement\_frame\_audit.py} and
-\texttt{scripts/w33\_parseval\_target\_geometry\_audit.py}, with
+\path{scripts/w33_parseval_measurement_frame_audit.py} and
+\path{scripts/w33_parseval_target_geometry_audit.py}, with
 focused validation in
-\texttt{tests/test\_w33\_parseval\_measurement\_frame\_audit.py} and
-\texttt{tests/test\_w33\_parseval\_target\_geometry\_audit.py}.
+\path{tests/test_w33_parseval_measurement_frame_audit.py} and
+\path{tests/test_w33_parseval_target_geometry_audit.py}.
 
 The three natural permutation modules --- $L$ (the $v=40$ isotropic
 lines), $S$ (the $36$ spreads), and $Q$ (the $45$ anti-line quotient
@@ -1720,22 +1805,22 @@ representation triangle is therefore a seventh, independent
 overdetermination of the $q=3$ master lock: the only $\GQ(q,q)$ whose
 representation-triangle size equals $v+q^4=(k-1)^2$ is $W(3,3)$.
 The executable surface is
-\texttt{scripts/w33\_representation\_triangle\_121\_audit.py}, with
+\path{scripts/w33_representation_triangle_121_audit.py}, with
 focused validation in
-\texttt{tests/test\_w33\_representation\_triangle\_121\_audit.py}.
+\path{tests/test_w33_representation_triangle_121_audit.py}.
 
 The organization table is now also executable.  The summary surface
-\texttt{scripts/w33\_periodic\_table\_organization.py} packages the
+\path{scripts/w33_periodic_table_organization.py} packages the
 toroidal realization row, the Pascal computation row, the current
 frontier witness row, and the exceptional-envelope row into one checked
 object.  Focused validation lives in:
-{\small\par\noindent\texttt{tests/test\_w33\_periodic\_table\_organization.py}\par}
+{\small\par\noindent\path{tests/test_w33_periodic_table_organization.py}\par}
 The
 exceptional row is sourced from
-\texttt{scripts/w33\_qutrit\_ladder\_audit.py} and the boundary
-separation in \texttt{scripts/w33\_e8\_correspondence\_boundary\_audit.py}.
+\path{scripts/w33_qutrit_ladder_audit.py} and the boundary
+separation in \path{scripts/w33_e8_correspondence_boundary_audit.py}.
 The tracked artifact
-\texttt{artifacts/w33\_periodic\_table\_organization\_summary.json}
+\path{artifacts/w33_periodic_table_organization_summary.json}
 freezes that same table as data.
 
 The same closure now sharpens the exact $q=3$ master lock as well.  The
@@ -1749,9 +1834,9 @@ q(q-3)(q+1)$ vanishes if and only if $q=3$.  So the honest remaining
 wall is not finite $q$-selection but smooth realization on the fixed
 transport host.
 The executable surface is
-\texttt{scripts/w33\_q3\_master\_lock\_audit.py}, with focused
+\path{scripts/w33_q3_master_lock_audit.py}, with focused
 validation in
-\texttt{tests/test\_w33\_q3\_master\_lock\_audit.py}.
+\path{tests/test_w33_q3_master_lock_audit.py}.
 
 \medskip
 \noindent\textbf{Exceptional Coxeter ladder (eighth symbolic layer).}\quad
@@ -1797,7 +1882,7 @@ T \;=\; \Phi_6 \cdot \frac{\dim(E_8)}{\mathrm{rank}(E_8)}
 tying the exceptional Coxeter ladder to the exact affine witness
 $\Delta C = 14105$ via~\eqref{eq:dC-anatomy}.  All identities in
 \eqref{eq:cox-ladder}--\eqref{eq:dim-rank} are machine-verified in
-\texttt{scripts/w33\_exceptional\_coxeter\_ladder\_audit.py}.
+\path{scripts/w33_exceptional_coxeter_ladder_audit.py}.
 
 \medskip
 \noindent\textbf{Exceptional root system counting (ninth symbolic layer).}\quad
@@ -1814,8 +1899,10 @@ also a multiple of $q!$:
 \end{equation}
 Three individual bridges are exact:
 \begin{equation}
-|\Phi(E_8)| = v\cdot q! = 240\quad\text{(SRG edge count)},\qquad
-|\Phi(E_6)| = \mathrm{rank}(E_6)\cdot k = 72.
+\begin{aligned}
+|\Phi(E_8)| &= v\cdot q! = 240\quad\text{(SRG edge count)},\\
+|\Phi(E_6)| &= \mathrm{rank}(E_6)\cdot k = 72.
+\end{aligned}
 \label{eq:root-bridges}
 \end{equation}
 The E-tower root count sum satisfies the $\Phi_{12}$ identity
@@ -1830,13 +1917,15 @@ The E-tower root count sum satisfies the $\Phi_{12}$ identity
 where $\Phi_{12}$ is the $12$th cyclotomic polynomial, whose index
 $12 = k = h(E_6)$.  The cross-partition identities are
 \begin{equation}
-\frac{|\Phi(G_2)|+|\Phi(F_4)|}{q!} = \Phi_4(q) = 10,\qquad
-\frac{|\Phi(E_6)|+|\Phi(E_8)|}{q!} = 52 = \dim(F_4).
+\begin{aligned}
+\frac{|\Phi(G_2)|+|\Phi(F_4)|}{q!} &= \Phi_4(q) = 10,\\
+\frac{|\Phi(E_6)|+|\Phi(E_8)|}{q!} &= 52 = \dim(F_4).
+\end{aligned}
 \label{eq:root-partitions}
 \end{equation}
 All identities in \eqref{eq:root-counts}--\eqref{eq:root-partitions}
 are machine-verified in
-\texttt{scripts/w33\_exceptional\_root\_system\_audit.py}.
+\path{scripts/w33_exceptional_root_system_audit.py}.
 
 \medskip
 \noindent\textbf{McKay-E binary polyhedral group bridge (tenth symbolic layer).}\quad
@@ -1844,9 +1933,11 @@ The McKay correspondence assigns a binary polyhedral group to each simply-laced
 exceptional Dynkin diagram.  At $q=3$ every McKay-E group order is an exact
 multiple of $k=12$:
 \begin{equation}
-|\text{McKay-}E_6| = 2k = 24 = |SL(2,q)|,\quad
-|\text{McKay-}E_7| = 4k = 48 = |\Phi(F_4)|,\quad
-|\text{McKay-}E_8| = 10k = 120 = (q{+}2)!
+\begin{aligned}
+|\text{McKay-}E_6| &= 2k = 24 = |SL(2,q)|,\\
+|\text{McKay-}E_7| &= 4k = 48 = |\Phi(F_4)|,\\
+|\text{McKay-}E_8| &= 10k = 120 = (q{+}2)!.
+\end{aligned}
 \label{eq:mckay-e-orders}
 \end{equation}
 The three orders sum to the $W(D_4)$ Weyl group order---the tomotope flag
@@ -1871,7 +1962,7 @@ T = |W(D_4)| + |\text{McKay-}E_6| + 1 = 192+24+1 = 217.
 Equivalently, $T-1 = 216 = (q!)^3 = h(E_6)\cdot h(E_7) = 12\cdot 18$.
 All identities in \eqref{eq:mckay-e-orders}--\eqref{eq:T-mckay} are
 machine-verified in
-\texttt{scripts/w33\_mckay\_e\_group\_bridge\_audit.py}.
+\path{scripts/w33_mckay_e_group_bridge_audit.py}.
 
 
 \section{Verification Statistics}
@@ -4896,7 +4987,7 @@ For positive prime $q$ this again has the unique solution
 \]
 
 \begin{theorem}[Prime Corollary from the $E_6$ Dimension Identity]
-\label{thm:master}
+\label{thm:prime-corollary-e6}
 Assume:
 \begin{itemize}[leftmargin=2em]
 \item \textbf{(G1)} $v = (q+1)(q^2+1)$ \hfill (vertex count of $\GQ(q,q)$)
@@ -5994,7 +6085,7 @@ and cover size admit the group-order decompositions
 so the failed quadrangle cover exhausts precisely the non-adjacent
 vertex pairs of $\Gamma$.  All four identities
 \eqref{eq:T-anatomy}--\eqref{eq:4320-540} are machine-verified in
-\texttt{scripts/w33\_transport\_constant\_anatomy\_audit.py}.
+\path{scripts/w33_transport_constant_anatomy_audit.py}.
 
 More positively, the repository now identifies the next exact target on
 that same fixed carrier package.  No new line, plane, shell, or

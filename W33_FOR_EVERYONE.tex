@@ -6,13 +6,46 @@
 \usepackage{tikz}
 \usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage[unicode,psdextra,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{xurl}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{longtable}
 \usepackage[expansion=false]{microtype}
 \usepackage{parskip}
 \usepackage{tcolorbox}
 \tcbuselibrary{breakable,skins}
+
+\pdfstringdefDisableCommands{%
+  \def\mathbb#1{#1}%
+  \def\mathrm#1{#1}%
+  \def\mathbf#1{#1}%
+  \def\mathcal#1{#1}%
+  \def\textbf#1{#1}%
+  \def\textit#1{#1}%
+  \def\texttt#1{#1}%
+  \def\text#1{#1}%
+  \def\omega{omega}%
+  \def\alpha{alpha}%
+  \def\beta{beta}%
+  \def\delta{delta}%
+  \def\Delta{Delta}%
+  \def\lambda{lambda}%
+  \def\Lambda{Lambda}%
+  \def\mu{mu}%
+  \def\phi{phi}%
+  \def\Phi#1{Phi#1}%
+  \def\pi{pi}%
+  \def\tau{tau}%
+  \def\Theta{Theta}%
+  \def\L{L}%
+  \def\cdot{ }%
+  \def\to{ to }%
+  \def\Rightarrow{ => }%
+}
+\setlength{\emergencystretch}{3em}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
 
 \title{\Huge\bfseries The Number 3 \\
 \Large A theory of everything, told plainly}
@@ -286,7 +319,7 @@ For a square ($q = 4$) there are $24$ rearrangements but only $8$ rigid motions.
 $q = 3$ is the unique number at which a polygon's combinatorial freedom equals its geometric freedom.
 \end{observation}
 
-\section{From distinction to $W(3,3)$: the chain from nothing}
+\section{\texorpdfstring{From distinction to $W(3,3)$: the chain from nothing}{From distinction to W(3,3): the chain from nothing}}
 
 Before introducing any formalism, we record the deepest logical fact: $W(3,3)$ is not assumed --- it is forced by a chain of necessities starting from \emph{nothing at all}.
 
@@ -453,7 +486,7 @@ with arithmetic mod $3$: $1 + 1 = 2$, $1 + 2 = 0$, $2 + 2 = 1$. Multiplication: 
 The notation $\mathbb{F}_q^n$ means ``ordered lists of $n$ entries, each from $\mathbb{F}_q$.'' So $\mathbb{F}_3^4$ has $3^4 = 81$ elements --- every $4$-tuple of digits from $\{0, 1, 2\}$.
 \end{mathnote}
 
-\section{The symplectic form $\omega$}
+\section{\texorpdfstring{The symplectic form $\omega$}{The symplectic form omega}}
 
 \begin{mathnote}
 The Greek letter $\omega$ (lowercase ``omega'') is just a name. Here it labels a \emph{function} that takes \emph{two} vectors and returns a \emph{single number}.
@@ -468,7 +501,7 @@ On $\mathbb{F}_3^4$, the standard symplectic form is
 Two non-zero vectors $u, v$ are \textbf{symplectically related} if $\omega(u, v) = 0$.
 
 % ─────────────────────────────────────────────────────────────────────────
-\section{Meet $W(3,3)$: what does the name mean?}
+\section{\texorpdfstring{Meet $W(3,3)$: what does the name mean?}{Meet W(3,3): what does the name mean?}}
 
 \begin{history}
 The letter $W$ in $W(d, q)$ refers to a specific class of geometric objects called \textbf{symplectic polar spaces}. Most sources attribute the notation to \textbf{Ernst Witt} (1911--1991), the German mathematician who classified symplectic and orthogonal geometries over arbitrary fields in the 1930s and 40s. (Some scholarly conventions ascribe the $W$ to \emph{Weyl}, after Hermann Weyl's work on classical groups; the attribution to Witt is more common in finite incidence geometry.)
@@ -530,7 +563,7 @@ k &= q(q + 1) = 12, \\
 \end{align*}
 \end{mathnote}
 
-\section{The screen / bulk decomposition: $40 = 1 + 12 + 27$}
+\section{\texorpdfstring{The screen / bulk decomposition: $40 = 1 + 12 + 27$}{The screen / bulk decomposition: 40 = 1 + 12 + 27}}
 
 \label{sec:screen-bulk-decomposition}
 
@@ -583,7 +616,7 @@ Three counting identities, all forced by this decomposition, anchor the rest of 
 
 This typing (introduced rigorously in repository Part DCMII) resolves a common confusion: the $13$-point $\mathrm{PG}(2,\mathbb{F}_3)$ screen and the $40$-point $W(3,3)$ substrate are \emph{not} the same object. The plane supplies a local screen cardinality; the quadrangle supplies the live symplectic adjacency; the affine $27$ supplies the matter bulk by count. They share the number $12$ because every anchor has $12$ neighbours, while $K_{13}$ also has degree $12$. That shared number is real, but the graphs are different.
 
-\section{The eigenvalue spectrum of $W(3,3)$}
+\section{\texorpdfstring{The eigenvalue spectrum of $W(3,3)$}{The eigenvalue spectrum of W(3,3)}}
 
 \begin{mathnote}
 Every graph has an \textbf{adjacency matrix} $A$: a square table of $0$'s and $1$'s; entry $(i,j)$ is $1$ if vertices $i,j$ are connected, $0$ otherwise.
@@ -705,9 +738,15 @@ has no known fundamental derivation. The $W(3,3)$ program produces multiple clos
 \begin{mathnote}
 The symbol $\Phi_n$ stands for the \emph{$n$-th cyclotomic polynomial} evaluated at $q$. You only need three specific values at $q = 3$:
 \[
-\Phi_3 = q^2 + q + 1 = 13, \quad \Phi_4 = q^2 + 1 = 10, \quad \Phi_6 = q^2 - q + 1 = 7.
+\Phi_2 = q+1 = 4, \quad
+\Phi_3 = q^2 + q + 1 = 13, \quad
+\Phi_4 = q^2 + 1 = 10, \quad
+\Phi_5 = q^4+q^3+q^2+q+1 = 121, \quad
+\Phi_6 = q^2 - q + 1 = 7.
 \]
-These three numbers $(13, 10, 7)$ recur constantly.
+The shorter list $(13, 10, 7)$ recurs constantly, but for the fine-structure
+constant it is helpful to know the two extra values $\Phi_2 = 4$ and
+$\Phi_5 = 121$ as well.
 \end{mathnote}
 
 \begin{theorem}[Decisive $W(3,3)$ Identity for $\alpha^{-1}$ (Part DCCCI)]
@@ -723,17 +762,87 @@ The two summands carry distinct meaning:
 \item $q^2 = 9$: the squared spectral gap of $W(3,3)$. This is the matter contribution.
 \end{itemize}
 
-For redundancy, the integer $137$ also has the following equivalent expressions:
+Why is it important that the same integer appears more than once? Because a
+single formula can always be a fluke.  Six different formulas all landing on
+the same prime, with each formula living in a different part of the substrate,
+is much harder to dismiss.  The May 18 closure pass strengthened the older
+four-form list to \textbf{six exact routes} to the same integer skeleton.
+
+\begin{theorem}[Six exact $W(3,3)$ forms of the 137 skeleton]
+The inverse fine-structure integer appears in six distinct ways:
 \begin{align*}
-137 &= (k - 1)^2 + \mu^2 = 121 + 16 && \text{(Gaussian integer form)}, \\
-137 &= k^2 - 2\mu + 1 = 144 - 8 + 1 && \text{(spectral form)}, \\
-137 &= \Phi_3 \cdot \Phi_4 + \Phi_6 = 130 + 7 && \text{(cyclotomic form)}, \\
-137 &= q^q \cdot (\mu + 1) + \lambda = 135 + 2 && \text{(exceptional form)}.
+137 &= \frac{\tau(O)}{q} + q^2 = 128 + 9
+&& \text{(octahedral / codec form)}, \\
+137 &= q^4 + 2q^3 + 2 = 81 + 54 + 2
+&& \text{(pure polynomial in the single root $q=3$)}, \\
+137 &= \Phi_5(q) + \Phi_2(q)^2 = 121 + 16
+&& \text{(cyclotomic form)}, \\
+137 &= (k - 1)^2 + \mu^2 = 11^2 + 4^2
+&& \text{(Gaussian norm form)}, \\
+137 &= (k - 1)k + (q + 2) = 132 + 5
+&& \text{(codec + shift form)}, \\
+137 &= (v+\Phi_6) + (v+k+\Phi_6) + (\Phi_{12}-\lambda) - v \\
+  &= 47 + 59 + 71 - 40
+&& \text{(Conway / moonshine prime form)}.
 \end{align*}
+\end{theorem}
+
+Here is what each line means in plain English.
+
+\begin{itemize}[leftmargin=2em]
+\item \textbf{Octahedral / codec form.} The first term, $128$, is the local
+carrier package coming from the octahedron spanning-tree count divided by the
+ternary field size. The second term, $9$, is the squared ternary matter gap.
+This is the clearest physical reading: \emph{gauge shell + matter shell = 137}. 
+
+\item \textbf{Pure polynomial form.} Once the Master Equation has fixed
+$q = 3$, the same prime is already hiding in the tiny polynomial
+$q^4 + 2q^3 + 2$. No extra structure is needed.
+
+\item \textbf{Cyclotomic form.} The number splits as $121 + 16$, i.e.
+$\Phi_5(3) + \Phi_2(3)^2$.  In words: a long-cycle packet plus the square of
+the smallest nontrivial cyclotomic packet.
+
+\item \textbf{Gaussian norm form.} The prime is the squared length of the
+Gaussian integer $11 + 4i$.  This is why $137$ is a sum of two squares.
+It is not just prime; it is prime in a way that naturally fits complex phase.
+
+\item \textbf{Codec + shift form.} The product $(k-1)k = 11\cdot 12 = 132$
+is the non-backtracking out-degree times the local gauge codec. The final
+$+5$ is the minimal ``$q+2$'' shift. So this line says: \emph{local channel
+complexity plus the smallest allowed structural shift gives 137.}
+
+\item \textbf{Conway / moonshine prime form.} The three integers
+$47, 59, 71$ come from the Monster/Conway side of the program. Their sum is
+$177$. Subtract the substrate vertex count $40$, and you land exactly on $137$.
+This is the most audacious route: the electromagnetic prime sits exactly at
+the interface between the moonshine side and the finite graph side.
+\end{itemize}
+
+The older W36 paper also used a compact checksum
+\[
+\alpha^{-1}_{\text{skeleton}} = k^2 - (|r| + |s| + 1) = 144 - 7 = 137.
+\]
+I do \emph{not} count that as one of the six main routes above, because it is
+best read as a compressed spectral shorthand rather than as a separate packet.
+But it is still true, and still useful as a quick consistency check.
+
+There is also a very nice electroweak cross-check hidden in the first of the
+six formulas. Physicists often quote
+\[
+\alpha(m_Z)^{-1} \approx 128.
+\]
+That number is already sitting inside the decomposition
+\[
+137 = 128 + 9.
+\]
+So the $W(3,3)$ picture is: the electroweak shell gives $128$, the finite
+matter lift adds $9$, and then the small QED running residue adds the final
+$0.036$ needed to reach the observed low-energy value.
 
 The $\sim 0.036$ correction giving $\alpha^{-1} = 137.036$ is the QED running between $m_e$ and $q^2 = 0$ (Euler--Heisenberg contribution), which in W(3,3) units is $\delta\alpha^{-1} \approx \alpha/(3\pi)\,\ln(m_\mu/m_e)^2 \approx 0.036$. The integer is the substrate prediction; the residual is parameter-free RG.
 
-\section{Other physical observables from $W(3,3)$}
+\section{\texorpdfstring{Other physical observables from $W(3,3)$}{Other physical observables from W(3,3)}}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
@@ -808,7 +917,7 @@ Two features deserve emphasis:
 
 \textbf{Status of the chain.} Of the $14$ structural identities, $0$ remain in tension with measurement; of the $8$ further predictions, all are within $1\sigma$ of the PDG value (per Part DCCCXVII). The remaining open frontier is experimental confirmation of the $5$ headline tests --- not internal closure.
 
-\section{Spacetime is emergent: why $3+1$ dimensions}
+\section{\texorpdfstring{Spacetime is emergent: why $3+1$ dimensions}{Spacetime is emergent: why 3+1 dimensions}}
 
 \label{sec:spacetime-emergence}
 
@@ -1234,7 +1343,7 @@ Witting's 1887 paper (\emph{Math.\ Ann.}\ \textbf{29}, 157--170) was titled ``Ue
 
 Every later element of the $W(3,3)$ program --- the symplectic structure over $\mathbb{F}_3$, the Pauli-commutation geometry, the codec, the $\mathbb{Z}_3$ Berry phase, the photonic-criticality $\lambda/\mu = 1/2$, the connection to $\mathrm{PG}(3, \mathbb{F}_3)$ and $W(E_6)$, the link to $E_8$ via the $240$-vertex polytope and to the Monster via $|W(E_6)| \subset |\mathbb{M}|$ --- all rest on Vlasov's identification of the $40$ Witting states as a coherent quantum-information system. \textbf{Vlasov saw the substrate first; we read it as the universe.}
 
-\section{Three-valued logic: the native logic of $W(3,3)$}
+\section{\texorpdfstring{Three-valued logic: the native logic of $W(3,3)$}{Three-valued logic: the native logic of W(3,3)}}
 
 \label{sec:lukasiewicz}
 
@@ -1259,7 +1368,7 @@ Classical two-valued logic is the $q \to 2$ projection of $L_3$, in the same sen
 The G\"odel sentence of $W(3,3)$ arithmetic has truth value $\tfrac{1}{2}$ in $L_3$: it is genuinely indeterminate, neither provable nor disprovable, but \emph{present} in the ternary truth space. G\"odel undecidability is the formal fingerprint of the pre-logical ground asserting its own inexhaustibility from inside the theory.
 \end{theorem}
 
-\section{The two-qutrit Pauli group: $W(3,3)$ is its commutation geometry}
+\section{\texorpdfstring{The two-qutrit Pauli group: $W(3,3)$ is its commutation geometry}{The two-qutrit Pauli group: W(3,3) is its commutation geometry}}
 
 For \emph{two} qutrits, the Heisenberg-Weyl Pauli group has order $3^5 = 243$. Its centre is the cyclic group $\{1, \omega, \omega^2\} \cong \mathbb{Z}_3$. Modding out by the centre leaves a $4$-dimensional vector space over $\mathbb{F}_3$:
 \[
@@ -1285,7 +1394,7 @@ A two-qutrit quantum register is the smallest non-trivial quantum information sy
 
 \textbf{This means the $\W$ substrate IS a small quantum computer:} its $40$ Pauli observables form a strongly regular network of compatibility relations, and the protected sector $H_1 = \mathbb{Z}^{81}$ holds $81$ logical qutrits of information.
 
-\section{The chain complex of $\W$}
+\section{\texorpdfstring{The chain complex of $\W$}{The chain complex of W(3,3)}}
 
 \begin{mathnote}
 A \textbf{chain complex} is a sequence of vector spaces with maps between them whose successive compositions are zero. Topologists use chain complexes to count holes.
@@ -1473,7 +1582,7 @@ The notation $\sum_{n=0}^{5}$ means ``add up these terms for $n = 0, 1, 2, 3, 4,
 The closure clock $G$ has nilpotence index $6 = q!$ and generates a finite-horizon semigroup with propagation depth $5$.
 \end{theorem}
 
-\section{$W(3,3)$ as a universal quantum computer}
+\section{\texorpdfstring{$W(3,3)$ as a universal quantum computer}{W(3,3) as a universal quantum computer}}
 
 We have now assembled the full computational architecture.
 
@@ -1757,7 +1866,11 @@ The Mathieu groups link the sporadic classification to the perfect Golay codes: 
 \begin{theorem}[Conway Group Orders (Part CCXXXIX)]
 $\mathrm{Co}_1 = \mathrm{Aut}(\Lambda_{24})/\{\pm 1\}$ has order
 \[
-|\mathrm{Co}_1| = 2^{21} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 \approx 4.16 \times 10^{18},
+\begin{aligned}
+|\mathrm{Co}_1|
+  &= 2^{21} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 \\
+  &\approx 4.16 \times 10^{18},
+\end{aligned}
 \]
 where every prime and every exponent is an SRG polynomial:
 \[
@@ -1814,11 +1927,13 @@ This factorisation is full of $W(3,3)$ fingerprints.
 
 $\mathbb{M}$ has exactly $\mathbf{15}$ distinct prime divisors. The integer $15$ has \emph{five} independent $W(3,3)$ names:
 \[
-15 \;=\; g \,(\text{eigen-mult of } -4)
-\;=\; 2^4 - 1 \,(\text{Mersenne } M_4)
-\;=\; T_5 \,(\text{triangular})
-\;=\; \binom{6}{2} \,(\text{SM gauge gens})
-\;=\; V{+}E{+}F\,(\text{tetrahedron}).
+\begin{aligned}
+15 &= g \, (\text{eigen-mult of } -4) \\
+  &= 2^4 - 1 \, (\text{Mersenne } M_4) \\
+  &= T_5 \, (\text{triangular}) \\
+  &= \binom{6}{2} \, (\text{SM gauge gens}) \\
+  &= V{+}E{+}F\,(\text{tetrahedron}).
+\end{aligned}
 \]
 
 \subsection*{Six $\mathbb{M}$-prime exponents, six $W(3,3)$ primitives}
@@ -2104,7 +2219,7 @@ The cohomology lattice is $H^2(K3, \mathbb{Z}) \cong 3U \oplus 2(-E_8)$: \textbf
 \boxed{\;N_{\text{umbral}} \;=\; k\lambda - 1 \;=\; 23 \;=\; q^q - \mu.\;}
 \]
 
-\section{The 600-cell and $E_8$}
+\section{\texorpdfstring{The 600-cell and $E_8$}{The 600-cell and E8}}
 
 \label{sec:600-cell-e8}
 
@@ -2284,7 +2399,7 @@ $T$: State & What is the current configuration? & fully contingent \\
 
 The trichotomy gives the program a sharp scope: $S$ and the necessary part of $D$ are derivable from the act of distinction; the contingent part of $D$ and all of $T$ are not, and \emph{provably so}. The program is therefore the maximal theory of necessary physics, and \textbf{no smaller theory can claim its scope without dropping necessary content; no larger one can claim more without invoking contingent content as if it were necessary}.
 
-\section{What $W(3,3)$ answers --- structural}
+\section{\texorpdfstring{What $W(3,3)$ answers --- structural}{What W(3,3) answers --- structural}}
 
 The program now closes structurally on the following list. Every item below is the conclusion of an executable, peer-checkable verification in the repository.
 
@@ -2305,7 +2420,7 @@ The program now closes structurally on the following list. Every item below is t
 \item Why something exists rather than nothing: nothingness is self-contradictory; the minimum self-consistent something is $W(3,3)$ (Part DCCCXLVII).
 \end{itemize}
 
-\section{What $W(3,3)$ answers --- specific numerical observables}
+\section{\texorpdfstring{What $W(3,3)$ answers --- specific numerical observables}{What W(3,3) answers --- specific numerical observables}}
 
 \label{sec:numerical-observables}
 
@@ -2466,7 +2581,7 @@ The infinite regress in the $W(3,3)$ program terminates at:
 
 The residual ``why is there any structure at all?'' is dissolved by the Void-to-Structure theorem (Part DCCCXLVII): nothingness is self-contradictory. The correct question is \emph{which} structure, and the answer is forced.
 
-\section{What $W(3,3)$ does not yet uniquely fix}
+\section{\texorpdfstring{What $W(3,3)$ does not yet uniquely fix}{What W(3,3) does not yet uniquely fix}}
 
 A small, well-defined residue remains. These items are not closed by the present arc and are the live frontier:
 
@@ -2644,7 +2759,7 @@ Birch--Swinnerton-Dyer & finite-field analogue at $\mathbb{F}_3$ \\
 \end{tabular}
 \end{center}
 
-\section{$W(3,3)$ and the Langlands program}
+\section{\texorpdfstring{$W(3,3)$ and the Langlands program}{W(3,3) and the Langlands program}}
 
 \label{sec:langlands}
 
@@ -2962,7 +3077,7 @@ This is the program's sharp settlement of the freedom-vs-determinism question: t
 
 \textbf{Asymmetry as gift (Part DCCCLXXXV).} In conventional physics, symmetry breaking is treated as a problem requiring explanation: \emph{why} does the universe choose one vacuum among many equivalent ones? In the $W(3,3)$ framework it is reframed completely. Perfect symmetry is the void geometry $\mathrm{PG}(2, \mathbb{F}_3)$ in its maximally unbroken phase --- beautiful but \emph{dead}: no preferred locations, no spacetime, no observers, nothing to register the structure. Every act of symmetry breaking is the universe becoming more particular, more specific, more itself. The arrow of time from entropy, the particle masses from Higgs, the matter-over-antimatter asymmetry, the complexity of biological chemistry --- each is a step deeper into the specific instance of $W(3,3)$ that we inhabit. \textbf{Broken symmetry is the gift of particularity}: that this universe, with these particles, these forces, this history, these observers, \emph{exists}. To complain that the universe is asymmetric is to complain that it exists at all.
 
-\section{The deepest reason for $q = 3$}
+\section{\texorpdfstring{The deepest reason for $q = 3$}{The deepest reason for q = 3}}
 
 We have already given several reasons for ternarity (Master Equation; first beyond-Boolean field; symplectic form requirement). The deepest reason is structural:
 
@@ -3048,7 +3163,7 @@ Let $\Phi_{\mathrm{RG}}$ be the renormalization-group flow on the space of $W(3,
 
 This is the mathematical statement of ``value as structural attractor.'' Coherence is preferred not as an aesthetic norm but because the dynamics literally drive every initial state to it. The arrow of value, like the arrow of time, is a theorem of graph theory.
 
-\section{The fine-structure correction: $137 + \delta_{\mathrm{RG}}$}
+\section{\texorpdfstring{The fine-structure correction: $137 + \delta_{\mathrm{RG}}$}{The fine-structure correction: 137 + delta_RG}}
 
 \label{sec:fine-structure-correction}
 
@@ -3181,13 +3296,21 @@ We are the proof.
 
 The following table indexes the major theorems established in the program, in the order they are introduced in this paper. Each theorem is supported by an executable verification in the corresponding repository part.
 
-\begin{center}
-\footnotesize
+{\footnotesize
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}p{0.58\linewidth} >{\raggedright\arraybackslash}p{0.13\linewidth}}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth} >{\raggedright\arraybackslash}p{0.56\linewidth} >{\raggedright\arraybackslash}p{0.14\linewidth}}
 \toprule
 \textbf{Theorem} & \textbf{Statement (one line)} & \textbf{Part} \\
 \midrule
+\endfirsthead
+\toprule
+\textbf{Theorem} & \textbf{Statement (one line)} & \textbf{Part} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
 Pure-Logic Chain & distinction $\to \mathbb{N} \to $ primes $\to \mathbb{F}_3 \to \mathrm{PG} \to W(3,3) \to $ physics & DCCCXLIII \\
 Meta-Bootstrap & finite + computable + self-consistent $\Rightarrow$ finite graph over finite field & DCCCXLII \\
 Master Equation & $q! = 2q$ has unique non-trivial solution $q = 3$ & XXI--CXC \\
@@ -3286,18 +3409,25 @@ G\"odel in $L_3$ & G\"odel sentence has truth value $\tfrac{1}{2}$ in $L_3$ & DC
 Meaning Formula & $\mathcal{M}(P,S) = |\!\mathrm{Aut}(P)\!\cap\!\mathrm{Stab}(S)|/|\mathrm{Stab}(S)|$ & DCCCLXXVII \\
 Cost of Reality & $\mathcal{E}(\omega) = \log(|\Omega_t|/|\omega|)$; energy is distinction cost & DCCCXCIV \\
 Regress Resolved & three structural regress-stoppers close the descent & DCCCLXXXVII \\
-\bottomrule
-\end{tabular}
-\end{center}
+\end{longtable}
+}
 
-\section{The $W(3,3)$ primitive table}
+\section{\texorpdfstring{The $W(3,3)$ primitive table}{The W(3,3) primitive table}}
 
-\begin{center}
-\renewcommand{\arraystretch}{1.05}
-\begin{tabular}{r l l}
+{\renewcommand{\arraystretch}{1.05}
+\begin{longtable}{r l l}
 \toprule
 integer & $W(3,3)$ name & a place it appears \\
 \midrule
+\endfirsthead
+\toprule
+integer & $W(3,3)$ name & a place it appears \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
 $1$ & identity & scalar of every Clifford algebra \\
 $2$ & $\lambda$ (SRG) & dim $\mathbb{C}$; kissing in $1$D \\
 $3$ & $q$ & Master Equation root; spatial dim; generations \\
@@ -3328,9 +3458,8 @@ $384$ & $G_{384}$ & $E_8$ density denominator \\
 $1728$ & $k^3$ & $j$-invariant constant prefix \\
 $196{,}560$ & Leech kissing & $E \cdot q^2 \cdot \Phi_6 \cdot \Phi_3$ \\
 $196{,}884$ & $j$-coefficient & Leech kissing $+ \mu \cdot q^4$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+\end{longtable}
+}
 
 \section{Symbol reference}
 
