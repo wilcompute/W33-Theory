@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "part": "DCMLXXXIV",
+    "decimal": 984,
+    "ramanujan_root_status": "corrected: additive B2 bridge, not multiplicative B2 factor",
+    "johnson_girth_pincer_status": "rejected: W33 is not J(40,12)",
+    "q3_status": "preserved exact, but not proved by Johnson/girth pincer",
+    "live_frontier": "functorial CSS/horizon proof of d_X=3 without Johnson misidentification",
+    "all_identities_hold": true
+  },
+  "source_anchor_checks": {
+    "burst_contains_false_640320_product": true,
+    "correction_contains_additive_b2_bridge": true,
+    "burst_contains_johnson_girth_claim": true,
+    "theta_eta_contains_a2_bridge": true,
+    "monster_3b_contains_horizon_jump": true
+  },
+  "moonshine_640320_boundary": {
+    "ramanujan_heegner_root": 640320,
+    "rejected_product": {
+      "formula": "2^7*q^2*5*Phi6*B2",
+      "value": 5120640,
+      "target": 640320,
+      "difference": 4480320,
+      "classification": "false_multiplicative_b2_claim"
+    },
+    "correct_prime_factorization": {
+      "2": 6,
+      "3": 1,
+      "5": 1,
+      "23": 1,
+      "29": 1
+    },
+    "correct_edge_factorization": {
+      "formula": "|E|*dZ*(f-1)*(f+lambda+q)",
+      "value": 640320,
+      "factors": [
+        240,
+        4,
+        23,
+        29
+      ]
+    },
+    "correct_additive_b2_bridge": {
+      "formula": "Phi6!*B2 + |E|",
+      "value": 640320,
+      "factors": [
+        5040,
+        127,
+        240
+      ]
+    }
+  },
+  "johnson_girth_boundary": {
+    "w33_collinearity_graph": {
+      "vertices": 40,
+      "degree": 12,
+      "line_count": 40,
+      "line_size": 4,
+      "triangles_from_lines": 160,
+      "girth": 3
+    },
+    "johnson_J_40_12": {
+      "vertices": 5586853480,
+      "degree": 336,
+      "triangle_example": {
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "B": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "C": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13
+        ],
+        "pairwise_intersections": {
+          "A_cap_B": 11,
+          "A_cap_C": 11,
+          "B_cap_C": 11
+        },
+        "is_triangle_in_J_40_12": true
+      }
+    },
+    "classification": "rejected: W(3,3) collinearity is 40-vertex 12-regular with line K4 triangles; J(40,12) has C(40,12) vertices and valency 336.",
+    "girth_over_two_for_w33": {
+      "numerator": 3,
+      "denominator": 2,
+      "text": "3/2",
+      "float": 1.5
+    },
+    "d_x_from_girth_over_two": "not_applicable"
+  },
+  "preserved_exact_identities": {
+    "monster_3b_level": {
+      "level": 108,
+      "forms": {
+        "k*q^2": 108,
+        "q*N_M": 108,
+        "2*horizon_jump": 108
+      },
+      "q_selected_if_k_and_N_M_fixed": {
+        "numerator": 3,
+        "denominator": 1,
+        "text": "3/1",
+        "float": 3.0
+      }
+    },
+    "theta_eta_horizon": {
+      "horizon_jump": 54,
+      "theta_E8_a2": 2160,
+      "a2_equals_v_jump": 2160,
+      "a2_over_jump": {
+        "numerator": 40,
+        "denominator": 1,
+        "text": "40/1",
+        "float": 40.0
+      }
+    },
+    "leech_monster_split": {
+      "leech_minimal_vectors": 196560,
+      "leech_scaled_from_E8": 196560,
+      "monster_c1": 196884,
+      "monster_gap": 324,
+      "gap_form_k_q3": 324
+    },
+    "prime_1823_boundary": {
+      "leech_factor": 1820,
+      "additive_identity": 1823,
+      "factor_1820": 1820,
+      "classification": "additive Leech-shadow identity; it uses the external factor 5 and is not a pure multiplicative substrate factorization of 1823"
+    }
+  },
+  "q3_forcing_status": {
+    "d_x": 3,
+    "q": 3,
+    "preserved_exact_sources": [
+      "CSS/Hamming parameter d_X=q=3",
+      "Monster level selector q=N_M/k=36/12 when N_M and k are fixed"
+    ],
+    "rejected_source": "Johnson graph girth-over-two pincer",
+    "classification": "q=3 remains exact in the audited finite/code layers, but the DCCLXXXII Johnson/girth argument is not a valid independent proof."
+  },
+  "static_external_sources": [
+    {
+      "label": "MathWorld Johnson Graph",
+      "url": "https://mathworld.wolfram.com/JohnsonGraph.html",
+      "used_fact": "J(n,k) has k-subsets of an n-set as vertices; this already rules out identifying J(40,12) with a 40-vertex graph.",
+      "runtime_dependency": false
+    },
+    {
+      "label": "MathWorld Generalized Quadrangle",
+      "url": "https://mathworld.wolfram.com/GeneralizedQuadrangle.html",
+      "used_fact": "A generalized quadrangle of order (3,3) has 40 points with 4 points on a line; line cliques give collinearity triangles.",
+      "runtime_dependency": false
+    },
+    {
+      "label": "MathWorld Leech Lattice",
+      "url": "https://mathworld.wolfram.com/LeechLattice.html",
+      "used_fact": "The Leech lattice has 196560 minimal vectors/kissing number, matching the exact Monster-Leech split used here.",
+      "runtime_dependency": false
+    }
+  ],
+  "honesty_boundary": "This is a corrective audit. It preserves exact post-burst arithmetic while refusing to count the false B2 product or the Johnson/girth claim as proved theory.",
+  "identities": {
+    "part_number_is_984": true,
+    "source_anchors_present": true,
+    "wrong_640320_product_is_false": true,
+    "correct_prime_factorization": true,
+    "correct_edge_factorization": true,
+    "correct_additive_b2_bridge": true,
+    "b2_is_mersenne_heptad": true,
+    "w33_has_40_vertices_and_degree_12": true,
+    "w33_collinearity_has_triangles": true,
+    "johnson_j_40_12_not_w33": true,
+    "johnson_j_40_12_has_triangle_counterexample": true,
+    "girth_over_two_pincer_rejected": true,
+    "monster_3b_level_forms_hold": true,
+    "theta_eta_horizon_bridge_holds": true,
+    "leech_minimal_vectors_scaled_from_e8": true,
+    "monster_c1_leech_gap_holds": true,
+    "prime_1823_additive_boundary": true,
+    "external_sources_are_static": true
+  }
+}

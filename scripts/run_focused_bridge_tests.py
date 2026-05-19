@@ -101,6 +101,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dcmlxxxi_heegner_ihara_gaussian_audit.py",
         "tests/test_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py",
         "tests/test_dcmlxxxiii_bass_cnub_entropy_branch_selector.py",
+        "tests/test_dcmlxxxiv_post_burst_forcing_moonshine_audit.py",
     ],
     "markov-e6-burden": [
         "tests/test_tomotope_toroidal_markov_algebraic_closure_bridge.py",

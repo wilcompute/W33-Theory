@@ -1,0 +1,14 @@
+{
+  "part": "DCMLXXXIV",
+  "decimal": 984,
+  "status": "VERIFIED: post-burst forcing/moonshine corrective audit",
+  "summary": {
+    "part": "DCMLXXXIV",
+    "decimal": 984,
+    "ramanujan_root_status": "corrected: additive B2 bridge, not multiplicative B2 factor",
+    "johnson_girth_pincer_status": "rejected: W33 is not J(40,12)",
+    "q3_status": "preserved exact, but not proved by Johnson/girth pincer",
+    "live_frontier": "functorial CSS/horizon proof of d_X=3 without Johnson misidentification",
+    "all_identities_hold": true
+  }
+}
