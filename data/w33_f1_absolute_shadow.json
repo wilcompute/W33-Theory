@@ -1,0 +1,151 @@
+{
+  "css_code_F1_shadow": {
+    "F1_CSS_code": "[[4, 1, 1]]_1",
+    "F1_H1_logical_dim": 1,
+    "F1_d_X": 1,
+    "F1_edges_count": 4,
+    "growth_factor_H1": 81.0,
+    "growth_factor_edges": 60.0,
+    "interpretation": "Trivial F_1 repetition code; minimal CSS structure",
+    "substrate_lift_at_q_3": "[[240, 81, 3]]_3"
+  },
+  "f1_shadow_is_K22": {
+    "F1_match_substrate_2_to_q": true,
+    "aut_group_at_F1": "Aut(C_4) = D_4 (dihedral of order 8)",
+    "aut_order_F1": 8,
+    "aut_order_via_signed_permutations": 8,
+    "comment": "The F_1-shadow of W(3,3) is the 4-cycle C_4 = K_{2,2}.  Its automorphism group D_4 has order 8 = 2^q at the substrate saturation q = 3.  This is the 'absolute' duality: the F_1 shadow of the substrate's symmetry group equals the substrate's binary tomotope-cell count.",
+    "f1_srg_parameters": {
+      "k": 2,
+      "lambda": 0,
+      "mu": 2,
+      "v": 4
+    },
+    "interpretation": "SRG(4, 2, 0, 2) = K_{2,2} = C_4 (4-cycle)",
+    "is_4_cycle": true,
+    "is_bipartite": true,
+    "is_simplest_non_trivial_bipartite_graph": true
+  },
+  "four_uniqueness_conditions_at_q_3": {
+    "F1_shadow_collapses_all_four": {
+      "interpretation": "F_1 is the structural baseline; q = 3 is the unique structural saturation.",
+      "statement": "At q = 1 all four conditions degenerate: 1! = 1 != 2; 1-2 = -1; SRG = C_4; (1,2)"
+    },
+    "F_a_master_equation_q_factorial_2q": {
+      "at_q_3": "3! = 6 = 2 * 3",
+      "statement": "q! = 2 q has solution q = 3 only (among integers > 1)"
+    },
+    "F_b_catalan_q_squared_minus_2_to_q": {
+      "at_q_3": "9 - 8 = 1",
+      "statement": "q^2 - 2^q = 1 (Catalan-Mihailescu, 2002)"
+    },
+    "F_c_GQ_Sp_4_F_3": {
+      "at_q_3": "Sp(4, F_3) of order 51840 = |W(E_6)|",
+      "statement": "W(3, q) = GQ(q, q) admits Sp(4, F_q) as automorphism group"
+    },
+    "F_d_CSS_distance_pair": {
+      "at_q_3": "(3, 4)",
+      "statement": "(q, q + 1) = (d_X, d_Z) asymmetric CSS distance pair"
+    }
+  },
+  "header": {
+    "polynomials": {
+      "Sp(4, F_q) order": "q^4 * (q^2 - 1) * (q^4 - 1)",
+      "k(q)": "q * (q + 1)",
+      "lam(q)": "q - 1",
+      "mu(q)": "q + 1",
+      "v(q)": "(q + 1) * (q^2 + 1)"
+    },
+    "what_this_is": "F_1 ABSOLUTE SHADOW of the W(3, q) family at q = 1"
+  },
+  "honesty_boundary": "F_1-geometry has several inequivalent definitions (Soule, Connes-Consani, Manin-Marcolli, Borger, Deitmar).  Here we use the polynomial-extrapolation interpretation: SRG parameters and |Sp_4| are polynomials in q, and their q -> 1 limits are taken in the standard sense.  The identification |Sp_{2n}(F_1)| = 2^n n! is the Tits-Knuth signed-permutation convention.  This direction is NOT covered in any existing primary W(3,3) document (index.html, w33_paper.tex, W33_FOR_EVERYONE.tex, single_photon_universal_computation.tex).",
+  "q_contour_table": [
+    {
+      "Sp_4_q_order_polynomial": 0,
+      "is_F1_shadow": true,
+      "is_substrate_saturation": false,
+      "k": 2,
+      "lambda": 0,
+      "mu": 2,
+      "q": 1,
+      "v": 4
+    },
+    {
+      "Sp_4_q_order_polynomial": 720,
+      "is_F1_shadow": false,
+      "is_substrate_saturation": false,
+      "k": 6,
+      "lambda": 1,
+      "mu": 3,
+      "q": 2,
+      "v": 15
+    },
+    {
+      "Sp_4_q_order_polynomial": 51840,
+      "is_F1_shadow": false,
+      "is_substrate_saturation": true,
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "q": 3,
+      "v": 40
+    },
+    {
+      "Sp_4_q_order_polynomial": 979200,
+      "is_F1_shadow": false,
+      "is_substrate_saturation": false,
+      "k": 20,
+      "lambda": 3,
+      "mu": 5,
+      "q": 4,
+      "v": 85
+    },
+    {
+      "Sp_4_q_order_polynomial": 9360000,
+      "is_F1_shadow": false,
+      "is_substrate_saturation": false,
+      "k": 30,
+      "lambda": 4,
+      "mu": 6,
+      "q": 5,
+      "v": 156
+    },
+    {
+      "Sp_4_q_order_polynomial": 276595200,
+      "is_F1_shadow": false,
+      "is_substrate_saturation": false,
+      "k": 56,
+      "lambda": 6,
+      "mu": 8,
+      "q": 7,
+      "v": 400
+    }
+  ],
+  "substrate_primitives_at_q_1": {
+    "H_1_q_to_q_plus_1": 1,
+    "Phi_3": 3,
+    "Phi_4": 2,
+    "Phi_6": 1,
+    "k_q_q_plus_1": 2,
+    "lambda_SRG_q_minus_1": 0,
+    "mu_q_plus_1": 2,
+    "q": 1,
+    "q_factorial": 1,
+    "two_to_q": 2,
+    "v": 4
+  },
+  "substrate_primitives_at_q_3": {
+    "H_1_q_to_q_plus_1": 81,
+    "Phi_3": 13,
+    "Phi_4": 10,
+    "Phi_6": 7,
+    "k_q_q_plus_1": 12,
+    "lambda_SRG_q_minus_1": 2,
+    "mu_q_plus_1": 4,
+    "q": 3,
+    "q_factorial": 6,
+    "two_to_q": 8,
+    "v": 40
+  },
+  "theorem": "W(3,3) F_1 Absolute Shadow Theorem.  The substrate's parameters are polynomials in q for the W(3, q) = GQ(q, q) family.  Evaluating at the F_1 / absolute-geometry point q = 1 gives SRG(4, 2, 0, 2) = K_{2,2} = C_4, the 4-cycle -- the simplest non-trivial bipartite graph.  All substrate primitives degenerate to {0, 1, 2, 3}; the CSS code shadow is the trivial [[2, 1, 1]]_1 repetition code; and |Sp_4(F_1)| = 8 = 2^q at q = 3, exposing an absolute duality between the F_1-shadow of the symmetry group and the substrate's tomotope-cell count.  The substrate is uniquely saturated at q = 3 by four independent forcings (Master Equation, Catalan-Mihailescu, GQ(q,q) Sp(4,F_3), CSS asymmetric distance pair); the F_1 shadow degenerates all four to the absolute baseline."
+}
