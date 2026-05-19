@@ -1928,6 +1928,119 @@ The Ramanujan $\tau$-function (Fourier coefficients of $\Delta = \eta^{24}$) tak
 \]
 The dimension of $\Delta$ is $k = 12 = q(q+1)$.
 
+\subsection*{Arithmetic closure of the substrate}
+
+A new exact census, not part of the earlier synthesis wave, is that the cleanest $W(3,3)$ primitives are stable under the three classical arithmetic functions $\varphi(n)$, $d(n)$, and $\sigma_1(n)$. The headline identities are
+\[
+\sigma_1(240) = 744, \qquad \sigma_1(12) = 28, \qquad \sigma_1(24) = 60, \qquad \sigma_1(27) = 40, \qquad \sigma_1(81) = 121,
+\]
+\[
+d(240) = 20, \qquad d(40) = 8, \qquad \varphi(240) = 64, \qquad \varphi(13) = 12, \qquad \varphi(7) = 6.
+\]
+These land back on named substrate quantities: the Klein $j$-constant $744$, the Klein bitangent count $28$, the inflation e-fold count $60$, the vertex count $40$, the Ihara square $121$, the Pell multiplier $20$, the tomotope cell count $8$, the binary shell $64$, the valency $12$, and the Master Equation root $6$. Combined with multiplication, differentiation at $q=3$, and the new shift tower $q \mapsto q+N$, this gives four independent closure operations on the clean substrate vocabulary.
+
+It gets stronger. Extending the arithmetic layer to Jordan totients, radicals, cototients, total prime-factor counts, and the arithmetic derivative gives a second exact packet:
+\[
+J_2(\lambda)=q, \qquad J_2(q)=2^q, \qquad J_2(\mu)=k, \qquad J_4(\mu)=|E|,
+\]
+\[
+\operatorname{rad}(v)=\Phi_4, \qquad \operatorname{cotot}(v)=f, \qquad \Omega_{\mathrm{pf}}(v)=\mu, \qquad \Omega_{\mathrm{pf}}(|E|)=q!,
+\]
+\[
+D(2^q)=k, \qquad D(\Phi_4)=\Phi_6, \qquad D(q^q)=q^q.
+\]
+And on the shift tower itself the operators do not act independently: the verified families
+\[
+\varphi(\Phi_3(q)) = k(q), \qquad \varphi(\Phi_6(q)) = k(q-1), \qquad \sigma_1(\lambda(q)) = \lambda(q+1),
+\]
+\[
+\operatorname{rad}(\Phi_3(q)) = \Phi_6(q+1), \qquad \operatorname{rad}(\Phi_6(q)) = \Phi_3(q-1)
+\]
+hold on the scanned support sets $q=3,\dots,7$. So the substrate is not just closed under isolated arithmetic maps; it carries a small commutation dictionary of operators acting on the whole $q$-family.
+
+There is an even cleaner second layer once the operators are composed. On the broader scan $3 \le q \le 20$, the radical ladder is almost perfect:
+\[
+\operatorname{rad}(\operatorname{rad}(\Phi_3(q))) = \Phi_3(q), \qquad \operatorname{rad}(\operatorname{rad}(\Phi_6(q))) = \Phi_6(q)
+\]
+except at the first local cube defect
+\[
+\Phi_3(18) = \Phi_6(19) = 343 = 7^3.
+\]
+So the first place where the radical ladder fails is not random; the shifted cyclotomic packet has literally collapsed to the cube of the base Heawood prime $7$. An even broader scan to $q \le 1000$ shows the same defect set lives only on primes $p \equiv 1 \pmod 3$: every repeated prime factor is in the split ternary class, and none with $p \equiv 2 \pmod 3$ ever appears squared. So the defect locus already knows it belongs to a discriminant-$-3$ world.
+Even better, the defect set is no longer just a list of examples. For each split prime $p \equiv 1 \pmod 3$, there are exactly two bad residue classes modulo $p^2$ for $\Phi_3(q)$, and they are precisely the two nontrivial cube roots of unity mod $p^2$. The bad classes for $\Phi_6(q)$ are just their negatives. On the tested range $q \le 1000$, every observed defect comes from one of these lifted residue classes.
+At an even deeper level, this is because
+\[
+\Phi_3(q)=N(q-\omega), \qquad \Phi_6(q)=N(q+\omega)
+\]
+in the Eisenstein integers. So the defect set is really the place where a split Eisenstein prime hits one of those two norm packets with multiplicity.
+And on the much larger scan $q \le 10^5$, the first cube defect stays isolated: the only perfect powers we see are $\Phi_3(18)=7^3$ and $\Phi_6(19)=7^3$.
+The defect set is also quantitatively thin: its natural density is
+\[
+1-\prod_{p\equiv1\ (3)}\left(1-\frac{2}{p^2}\right)\approx0.06516,
+\]
+so the radical ladder is generic and the failures occupy only a small split-prime residue fraction of the full shift tower.
+This is not merely asymptotic: for any finite set $S$ of split primes, CRT gives exactly $2^{|S|}$ simultaneous defect classes modulo $\prod_{p\in S}p^2$, with exact finite-cutoff density $\prod_{p\in S}2/p^2$.
+Even more locally, each split prime contributes two infinite Hensel branches modulo $p^n$ with probability $2/p^n$, and the famous Heawood cube $343=7^3$ is exactly the first depth-3 node on the $p=7$ branch.
+There is an even simpler layer underneath all of that: the packet already knows it lives on split primes before any defect appears. Every prime divisor of $\Phi_3(q)=q^2+q+1$ is either $3$ or else congruent to $1\pmod 3$, and every prime divisor of $\Phi_6(q)=q^2-q+1$ is either $3$ or else congruent to $1\pmod 6$. So the split-prime arithmetic is not merely a defect shadow; it is the native prime support of the whole cyclotomic pair.
+Once that is recognized, the total split-prime valuation packet becomes clean too. For a finite split-prime set $S$, its exact generating function is the product of the local factors, and its mean and variance are both
+\[
+\sum_{p\in S}\frac{2}{p-1}.
+\]
+For the first three split primes $7,13,19$, this is
+\[
+\frac13+\frac16+\frac19=\frac{11}{18}=\frac1q+\frac1{q!}+\frac1{q^2}.
+\]
+And as the split-prime cutoff $X$ grows, that total packet is not bounded; it grows slowly like
+\[
+\log\log X + C_{\mathrm{cycl}}, \qquad C_{\mathrm{cycl}}\approx -0.63893.
+\]
+So the global message is very cheeky: the packet is thin locally, exact finitely, but globally it accumulates with unit log-log slope.
+There is even a matching decay law for the packet's generating function itself. If we keep a weight $t<1$ and multiply the local factors across split primes up to $X$, the whole product falls only like $(\log X)^{-(1-t)}$, not exponentially fast. On the $X=10^6$ scan the normalized values already stabilize near
+\[
+G_X(0)\log X\approx1.88745,\qquad G_X(1/2)\sqrt{\log X}\approx1.37576,
+\]
+which is a very neat signature that the exponent really is the simple linear shadow $1-t$.
+Even better, that logarithmic singularity can now be peeled off exactly. If $M_X$ is the split-prime Mertens product
+\[
+M_X=\prod_{p\le X,\ p\equiv1\ (3)}\left(1-\frac1p\right),
+\]
+then the renormalized packet
+\[
+\mathcal C_X(t)=G_X(t)M_X^{-2(1-t)}
+\]
+has local factors $1+O(1/p^2)$, so it converges as a genuine completed Euler product. On the $X=10^6$ run the completed constants are already extremely steady:
+\[
+\mathcal C(0)\approx0.95836,\qquad \mathcal C(1/2)\approx0.98033,\qquad \mathcal C(3/4)\approx0.99028.
+\]
+So the global packet has now split into two clean pieces: a convergent completed product, and the classical residue-class Mertens kernel carrying the entire logarithmic singularity.
+That completed product even has a finite slope at the special point $t=1$. Its exact first cumulant is
+\[
+\kappa_{\mathrm{cycl}}=\sum_{p\equiv1\ (3)}\left(\frac{2}{p-1}+2\log\left(1-\frac1p\right)\right),
+\]
+which the current cutoff already estimates as about $0.0388253$. In other words: after you strip away the whole split-prime logarithmic growth, the packet still has a tiny but exact residual tangent.
+There is also now a genuine global Dirichlet-series version of the story. Replacing the fixed weight $t$ by $p^{-s}$ gives a completed defect product that is numerically stable for real $s>0$, with values already near $0.97311$ at $s=1/2$, $0.96375$ at $s=1$, and $0.95909$ at $s=2$ on the $X=10^6$ cutoff.
+And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
+Best of all, the perfect-power mystery is now global. The identities
+\[
+4\Phi_3(q)-3=(2q+1)^2,
+\qquad
+4\Phi_6(q)-3=(2q-1)^2
+\]
+reduce the whole problem to the classical equation $x^2+3=4y^n$. That equation has only one nontrivial positive solution, $(x,y,n)=(37,7,3)$, so the only nontrivial perfect powers in the whole cyclotomic packet are exactly
+\[
+\Phi_3(18)=7^3,
+\qquad
+\Phi_6(19)=7^3.
+\]
+The strongest short compositions on the original $q=3,\dots,7$ window are
+\[
+d(\varphi(\Phi_6(q))) = \mu(q), \qquad \Omega_{\mathrm{pf}}\!\bigl(\sigma_1(\operatorname{cotot}(k(q)))\bigr)=\lambda(q),
+\]
+\[
+d\bigl(d(\varphi(v(q)))\bigr) = \lambda(q).
+\]
+That is the next upgrade in the picture: the arithmetic layer is not only closed, it is beginning to behave like a finite operator semigroup with a visible defect set.
+
 The five central moonshine integers all carry $W(3,3)$ names:
 \[
 12 = k, \qquad 24 = f, \qquad 27 = q^q, \qquad 54 = 2q^q, \qquad 248 = E + \lambda^q.

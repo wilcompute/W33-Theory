@@ -1,0 +1,62 @@
+{
+    "part": "DCMLXXXVI",
+    "title": "Cyclotomic p-adic Valuation Tree",
+    "status": "verified",
+    "local_density_law": {
+        "at_least_n": "2/p^n",
+        "exactly_n": "2(p-1)/p^(n+1)"
+    },
+    "heawood_cube_depth_three": {
+        "phi3": {
+            "q": 18,
+            "value": 343,
+            "valuation_at_7": 3
+        },
+        "phi6": {
+            "q": 19,
+            "value": 343,
+            "valuation_at_7": 3
+        }
+    },
+    "first_split_prime_levels": {
+        "7": {
+            "phi3_mod_7": [
+                2,
+                4
+            ],
+            "phi3_mod_49": [
+                18,
+                30
+            ],
+            "phi6_mod_7": [
+                3,
+                5
+            ],
+            "phi6_mod_49": [
+                19,
+                31
+            ]
+        },
+        "13": {
+            "phi3_mod_169": [
+                22,
+                146
+            ],
+            "phi6_mod_169": [
+                23,
+                147
+            ]
+        },
+        "19": {
+            "phi3_mod_361": [
+                68,
+                292
+            ],
+            "phi6_mod_361": [
+                69,
+                293
+            ]
+        }
+    },
+    "theorem_summary": "For each split prime p congruent to 1 mod 3, the cyclotomic defect locus forms two infinite Hensel branches modulo p^n on both Phi3 and Phi6, with p-adic divisibility density 2/p^n and exact valuation density 2(p-1)/p^(n+1). The Heawood cube 343=7^3 is the first visible depth-3 node on the p=7 branch."
+}

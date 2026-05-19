@@ -1,0 +1,14 @@
+{
+    "part": "DCMXCI",
+    "title": "Cyclotomic Log-Log Packet Growth",
+    "status": "verified",
+    "exact_packet_formula": "E[T_X] = Var(T_X) = Sum_{p<=X, p≡1 mod 3} 2/(p-1)",
+    "asymptotic_law": "E[T_X] = Var(T_X) = log log X + C_cycl + o(1)",
+    "leading_coefficient": 1,
+    "first_packets": {
+        "X=19": "11/18 = 1/q + 1/q! + 1/q^2",
+        "X=31": "61/90"
+    },
+    "constant_estimate_at_1e6": -0.6389275849561205,
+    "theorem_summary": "The total split-prime valuation packet for Phi3(q) has exact finite-cutoff mean and variance Sum 2/(p-1), and by the prime number theorem in arithmetic progressions this globalizes to a unit-slope log-log growth law E[T_X]=Var(T_X)=log log X + C_cycl + o(1)."
+}

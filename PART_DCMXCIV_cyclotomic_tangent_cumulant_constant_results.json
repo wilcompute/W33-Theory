@@ -1,0 +1,10 @@
+{
+    "part": "DCMXCIV",
+    "title": "Cyclotomic Tangent / Cumulant Constant at t=1",
+    "status": "verified",
+    "local_tangent_formula": "kappa_p = 2/(p-1) + 2 log(1-1/p)",
+    "global_tangent_formula": "kappa_X = Sum_{p<=X, p≡1 mod 3} (2/(p-1) + 2 log(1-1/p))",
+    "recombination_formula": "kappa_X = E[T_X] + 2 log M_X",
+    "largest_cutoff_cumulant_constant_at_1e6": 0.03882532064856443,
+    "theorem_summary": "The completed split-prime product is analytic at t=1 and has exact first cumulant/tangent constant equal to the convergent split-prime sum Sum (2/(p-1) + 2 log(1-1/p))."
+}

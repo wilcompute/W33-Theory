@@ -1,0 +1,19 @@
+{
+    "part": "DCMXCII",
+    "title": "Cyclotomic Global PGF Decay",
+    "status": "verified",
+    "global_pgf_formula": "G_X(t) = Product_{p<=X, p≡1 mod 3} (p - 2 + t)/(p - t)",
+    "decay_law": "log G_X(t) = -(1-t) log log X + C(t) + o(1)",
+    "normalized_shadow": "G_X(t) * (log X)^(1-t) -> C_t",
+    "tested_t_values": [
+        0.0,
+        0.5,
+        0.75
+    ],
+    "largest_cutoff_constants_at_1e6": {
+        "0.0": 1.8874490038271914,
+        "0.5": 1.3757599046506699,
+        "0.75": 1.1731293762698072
+    },
+    "theorem_summary": "For fixed t<1, the finite split-prime PGF of the cyclotomic valuation packet decays like (log X)^(-(1-t)); equivalently the normalized packet G_X(t)(log X)^(1-t) approaches a stable constant shadow."
+}

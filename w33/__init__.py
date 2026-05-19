@@ -7,3 +7,6 @@ from .substrate import *
 from .phenomenology import *
 from .cosmology import *
 from .clay_math import *
+from .arithmetic import *
+from .cyclotomic import *
+from .shift_tower import *

@@ -1,0 +1,26 @@
+{
+    "part": "DCMXCVII",
+    "title": "Cyclotomic Perfect-Power Theorem",
+    "status": "verified",
+    "reduction_formula": "4 Phi3(q)-3=(2q+1)^2 and 4 Phi6(q)-3=(2q-1)^2, reducing perfect powers to x^2+3=4y^n",
+    "classical_input": "Ljunggren theorem: the only nontrivial positive solution of x^2+3=4y^n with y>1, n>1 is (37,7,3)",
+    "solutions": [
+        {
+            "family": "Phi3",
+            "q": 18,
+            "value": 343,
+            "base": 7,
+            "exponent": 3,
+            "x": 37
+        },
+        {
+            "family": "Phi6",
+            "q": 19,
+            "value": 343,
+            "base": 7,
+            "exponent": 3,
+            "x": 37
+        }
+    ],
+    "theorem_summary": "For q>=3 and n>1, the only nontrivial perfect-power values of Phi3(q)=q^2+q+1 and Phi6(q)=q^2-q+1 are Phi3(18)=7^3 and Phi6(19)=7^3."
+}
