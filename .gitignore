@@ -118,6 +118,8 @@ temp_*.py
 scripts/show_*.py
 scripts/inspect_*.py
 *.aux
+*.bbl
+*.blg
 *.log
 *.toc
 *.out

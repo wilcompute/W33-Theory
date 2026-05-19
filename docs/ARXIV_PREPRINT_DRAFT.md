@@ -327,6 +327,33 @@ $$\alpha^{-1} = 137 + \frac{40}{11 \times 101} = 137 + \frac{40}{1111} = 137.036
 
 Experiment: α⁻¹ = 137.035999, relative error 4.5×10⁻⁶.
 
+The integer skeleton 137 is also massively overdetermined inside the substrate.
+The May 18 closure pass produced six exact W(3,3) forms of the same prime:
+
+$$\alpha^{-1}_{\mathrm{skel}} = \frac{\tau(O)}{q}+q^2 = 128+9 = 137$$
+
+$$\alpha^{-1}_{\mathrm{skel}} = q^4 + 2q^3 + 2 = 81 + 54 + 2 = 137$$
+
+$$\alpha^{-1}_{\mathrm{skel}} = \Phi_5(q) + \Phi_2(q)^2 = 121 + 16 = 137$$
+
+$$\alpha^{-1}_{\mathrm{skel}} = (k-1)^2 + \mu^2 = 11^2 + 4^2 = 137$$
+
+$$\alpha^{-1}_{\mathrm{skel}} = (k-1)k + (q+2) = 132 + 5 = 137$$
+
+$$\alpha^{-1}_{\mathrm{skel}} = (47 + 59 + 71) - 40 = 137$$
+
+The older spectral checksum
+
+$$\alpha^{-1}_{\mathrm{skel}} = k^2 - (|r| + |s| + 1) = 144 - 7 = 137$$
+
+is still useful as a compact consistency identity, but the six formulas above
+are stronger because they tie 137 simultaneously to the codec shell, the pure
+polynomial root q=3, the cyclotomic tower, Gaussian arithmetic, the non-backtracking
+shift packet, and the Monster/Conway prime boundary.  The electroweak shell is
+already visible in the first of these: $\alpha(m_Z)^{-1} \approx 128 = \tau(O)/q$,
+with the $+q^2 = +9$ matter lift and the small propagator correction producing
+the observed Thomson-limit value.
+
 The non-backtracking operator B (Hashimoto matrix) on the 480 directed
 edges satisfies the Ihara-Bass identity, which forces the structure
 M = (k−1)((A−λI)²+I) with spectrum {11^(×24), 407^(×15), 1111^(×1)},

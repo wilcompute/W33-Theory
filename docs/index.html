@@ -12445,6 +12445,24 @@
           is the <strong>quadratic form of the inverse vertex propagator</strong> — a one-loop correction from
           integrating out massive modes in the discrete gauge theory.</p>
 
+        <h4>Six exact W(3,3) routes to the 137 skeleton</h4>
+        <p>The integer part is not supported by one formula only. The May 18 closure pass produced six exact
+          closed forms for the same prime, each living in a different structural layer of the program:</p>
+        <ul>
+          <li><strong>Octahedral / codec:</strong> α⁻¹<sub>skel</sub> = τ(O)/q + q² = 128 + 9 = 137.</li>
+          <li><strong>Polynomial:</strong> α⁻¹<sub>skel</sub> = q⁴ + 2q³ + 2 = 81 + 54 + 2 = 137.</li>
+          <li><strong>Cyclotomic:</strong> α⁻¹<sub>skel</sub> = Φ<sub>5</sub>(q) + Φ<sub>2</sub>(q)² = 121 + 16 = 137.</li>
+          <li><strong>Gaussian norm:</strong> α⁻¹<sub>skel</sub> = (k−1)² + μ² = 11² + 4² = 137.</li>
+          <li><strong>Codec + shift:</strong> α⁻¹<sub>skel</sub> = (k−1)k + (q+2) = 132 + 5 = 137.</li>
+          <li><strong>Conway / moonshine:</strong> α⁻¹<sub>skel</sub> = 47 + 59 + 71 − 40 = 137.</li>
+        </ul>
+        <p>The older compact spectral checksum <code>k² − (|r| + |s| + 1) = 144 − 7 = 137</code> remains a useful
+          consistency line, but the six-form closure is stronger: the same prime appears simultaneously in the
+          codec shell, the pure q = 3 polynomial tower, the cyclotomic packet, Gaussian arithmetic, the
+          non-backtracking shift packet, and the Conway–Monster boundary.  The electroweak shell is already visible
+          before the matter lift: <strong>α<sup>−1</sup>(M<sub>Z</sub>) ≈ 128 = τ(O)/q</strong>, and the extra +9 plus the
+          propagator correction produce the Thomson-limit value.</p>
+
         <h3 style="color: #a78bfa;">The Gaussian Integer Layer — Why α = 137.036 is Forced</h3>
         <div class="formula-highlight" style="border-left-color: #a78bfa; background: rgba(167,139,250,0.08);">
           <strong style="color:#a78bfa;">DISCOVERY:</strong> Every component of α⁻¹ lives naturally in the
@@ -18734,8 +18752,9 @@
             </div>
             <div class="card">
               <div class="num" style="color: var(--accent3);">3</div>
-              <div class="detail"><strong>Fine-structure constant:</strong> &alpha;<sup>&minus;1</sup> =
-                (k&minus;1)&sup2; + &mu;&sup2; closest to 137.036 among all tested SRGs</div>
+              <div class="detail"><strong>Fine-structure constant:</strong> the 137 skeleton now has six exact
+                W(3,3) forms — codec, polynomial, cyclotomic, Gaussian, shift, and Conway/moonshine — before the
+                propagator correction lifts it to 137.036004</div>
             </div>
             <div class="card">
               <div class="num" style="color: var(--accent4);">4</div>
