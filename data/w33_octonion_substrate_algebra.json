@@ -1,0 +1,457 @@
+{
+  "fano_lines_of_imaginary_units": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      1,
+      7,
+      6
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      2,
+      5,
+      7
+    ],
+    [
+      3,
+      4,
+      7
+    ],
+    [
+      3,
+      6,
+      5
+    ]
+  ],
+  "four_uniqueness_conditions_for_q_equals_3": {
+    "conclusion": "All FOUR independent conditions select q = 3 uniquely.  Hurwitz dimension, D_4 triality order, CSS distance pair, and Catalan consecutivity ALL force the substrate to q = 3.",
+    "condition_a_hurwitz_dim": {
+      "at_q_3": "2^3 = 8 = dim O",
+      "selected": true,
+      "statement": "2^q = dim of last Hurwitz division algebra"
+    },
+    "condition_b_triality_order": {
+      "at_q_3": "3! = 6 = |S_3| = |Out(D_4)|",
+      "selected": true,
+      "statement": "q! = order of D_4 triality automorphism group"
+    },
+    "condition_c_CSS_pair": {
+      "at_q_3": "(3, 4) = (d_X, d_Z)",
+      "selected": true,
+      "statement": "(q, q+1) = CSS distance pair"
+    },
+    "condition_d_catalan": {
+      "at_q_3": "(8, 9), with 9 - 8 = 1",
+      "selected": true,
+      "statement": "(2^q, q^2) = Catalan-Mihailescu unique consecutive perfect powers"
+    }
+  },
+  "header": {
+    "substrate_constants": {
+      "G_2_dim": 14,
+      "Phi_6": 7,
+      "T_6": 21,
+      "edges_equals_E8_roots": 240,
+      "mu": 4,
+      "q": 3,
+      "q_factorial_equals_triality_order": 6,
+      "tomotope_cells_equals_dim_O": 8
+    }
+  },
+  "honesty_boundary": "All four properties of the octonion algebra (alternative, Hurwitz multiplicative norm, non-associativity, anti-commutativity of imaginary units) are exact numerical verifications on the explicit 8x8 multiplication table.  The substrate identifications are exact arithmetic.  The four uniqueness conditions for q = 3 are: (a) classical Hurwitz theorem, (b) standard D_4 outer automorphism group, (c) the substrate's CSS code definition, (d) Mihailescu's theorem.  All are theorems in their respective fields, here brought together by the substrate identification.",
+  "hurwitz_classification": [
+    {
+      "algebra": "R",
+      "as_2_pow_k": "2^0",
+      "dim": 1,
+      "in_substrate": "trivial baseline",
+      "index": 0
+    },
+    {
+      "algebra": "C",
+      "as_2_pow_k": "2^1",
+      "dim": 2,
+      "in_substrate": "complex (no substrate match in this notation)",
+      "index": 1
+    },
+    {
+      "algebra": "H",
+      "as_2_pow_k": "2^2",
+      "dim": 4,
+      "in_substrate": "mu = q + 1 = d_Z",
+      "index": 2
+    },
+    {
+      "algebra": "O",
+      "as_2_pow_k": "2^q",
+      "dim": 8,
+      "in_substrate": "tomotope cells; substrate saturation",
+      "index": 3
+    },
+    {
+      "algebra": "S",
+      "as_2_pow_k": "2^mu",
+      "dim": 16,
+      "in_substrate": "sedenions; NOT division algebra; substrate STOPS here",
+      "index": 4
+    }
+  ],
+  "octonion_multiplication_table_8x8": [
+    [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -1,
+        7
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -1,
+        5
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        -1,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        -1,
+        4
+      ]
+    ],
+    [
+      [
+        1,
+        4
+      ],
+      [
+        -1,
+        5
+      ],
+      [
+        -1,
+        6
+      ],
+      [
+        -1,
+        7
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        -1,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        -1,
+        5
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        7
+      ],
+      [
+        -1,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        0
+      ]
+    ]
+  ],
+  "substrate_identifications": {
+    "G_2_dim_equals_2_Phi_6": {
+      "match": true,
+      "substrate_form": "2 * Phi_6 = dim(Aut(O))",
+      "value": 14
+    },
+    "dim_O": {
+      "match": true,
+      "substrate_form": "2^q = tomotope cells = E_8 rank",
+      "value": 8
+    },
+    "n_fano_lines": {
+      "match": true,
+      "substrate_form": "Phi_6 = number of multiplication triples",
+      "value": 7
+    },
+    "n_imaginary_units": {
+      "match": true,
+      "substrate_form": "Phi_6 = Heawood / Fano shell",
+      "value": 7
+    },
+    "n_relations": {
+      "match": true,
+      "substrate_form": "T_6 = Phi_6 * (Phi_6 - 1) / 2 = Csaszar edge count",
+      "value": 21
+    },
+    "three_8_dim_irreps_of_Spin8": {
+      "substrate_form": "Three 2^q-dim Spin(8) irreps permuted by S_3 = Out(D_4)",
+      "value": "(8_v, 8_s, 8_c)"
+    },
+    "triality_order_S_3": {
+      "match": true,
+      "substrate_form": "q! = |Out(D_4)| = triality group order",
+      "value": 6
+    },
+    "unit_integral_octonions_E_8": {
+      "match": true,
+      "substrate_form": "|E| = E_8 root count = W(3,3) edges",
+      "value": 240
+    }
+  },
+  "theorem": "W(3,3) Octonion Substrate Algebra Theorem.  The deepest object behind the W(3,3) substrate is the octonion algebra O, the last (Hurwitz-classified) normed division algebra.  Its dimension dim O = 2^q = 8 is the tomotope cell count and E_8 rank; its 7 = Phi_6 imaginary units form a Fano plane whose 7 = Phi_6 lines encode the multiplication via 21 = T_6 cyclic relations; its automorphism group is the smallest exceptional Lie group G_2 with dim 14 = 2 * Phi_6; and its integral lattice has 240 = |E| unit norm elements, the E_8 root system.  The triality of D_4 = Spin(8) is the outer automorphism group of order q! = 6 permuting three 8-dimensional Spin(8) representations (the algebra O and its two spinorial modules).  Four independent uniqueness conditions -- Hurwitz dimension, triality order, CSS distance pair, and Catalan-Mihailescu consecutivity -- all select q = 3 simultaneously.  W(3,3) IS the substrate of the octonion algebra at its triality-forced saturation point.",
+  "verified_algebra_properties": {
+    "alternative_assoc_a_a_b_zero": true,
+    "anti_commutative": true,
+    "e_i_squared_is_minus_one": true,
+    "hurwitz_multiplicative_norm": true,
+    "non_associative_example": {
+      "(e1 e2) e4": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "differ": true,
+      "e1 (e2 e4)": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ]
+    }
+  }
+}
