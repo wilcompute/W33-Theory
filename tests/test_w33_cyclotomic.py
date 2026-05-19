@@ -28,9 +28,17 @@ from w33.cyclotomic import (
     completed_defect_local_factor_from_z,
     completed_defect_local_log_artanh_form,
     completed_defect_local_log_artanh_series,
+    completed_defect_counterterm_local,
     completed_local_log_derivative_at_one,
     completed_local_log_nth_derivative_at_one,
     completed_log_nth_derivative_at_one,
+    completed_defect_spectral_coordinate,
+    completed_defect_spectral_local_factor,
+    completed_defect_spectral_local_log,
+    completed_defect_spectral_L_function,
+    completed_defect_spectral_log,
+    completed_defect_spectral_profile,
+    completed_defect_spectral_reciprocity,
     completed_reciprocity_profile,
     completed_tangent_profile,
     cyclotomic_perfect_power_scan,
@@ -293,6 +301,27 @@ def test_completed_dirichlet_reciprocity_and_artanh_package():
     assert profile["0.5"][1]["abs_series_error"] < 1e-7
     reciprocity_profile = completed_defect_dirichlet_reciprocity_profile([31, 1000], [0.5, 1.0])
     assert reciprocity_profile["0.5"][1]["max_abs_local_error_from_one"] < 1e-12
+
+
+def test_completed_defect_spectral_l_family_package():
+    s = 0.5
+    x7 = completed_defect_spectral_coordinate(7, s)
+    assert abs(x7 - ((7 ** (-s) - 1) / 6)) < 1e-15
+    assert abs(completed_defect_spectral_local_factor(7, s, deformation=0.0) - 1.0) < 1e-15
+    assert abs(completed_defect_spectral_L_function(31, s, deformation=0.0) - 1.0) < 1e-15
+    assert abs(completed_defect_spectral_local_factor(7, s, deformation=1.0) - completed_defect_dirichlet_local_factor(7, s)) < 1e-15
+    assert abs(completed_defect_spectral_L_function(31, s, deformation=1.0) - completed_defect_dirichlet_product(31, s)) < 1e-15
+    assert abs(completed_defect_counterterm_local(7, s, deformation=1.0) * defect_dirichlet_local_factor(7, s) - completed_defect_dirichlet_local_factor(7, s)) < 1e-15
+    local_log = completed_defect_spectral_local_log(7, s, deformation=0.5)
+    local_val = completed_defect_spectral_local_factor(7, s, deformation=0.5)
+    assert abs(cmath.exp(local_log) - local_val) < 1e-12
+    global_log = completed_defect_spectral_log(31, s, deformation=0.5)
+    global_val = completed_defect_spectral_L_function(31, s, deformation=0.5)
+    assert abs(cmath.exp(global_log) - global_val) < 1e-10
+    assert abs(completed_defect_spectral_reciprocity(31, s, deformation=0.5) - 1.0) < 1e-12
+    profile = completed_defect_spectral_profile([31, 1000], [0.5, 1.0], [0.25, 0.5, 1.0])
+    assert profile["0.5"]["0.5"][1]["abs_reciprocity_error"] < 1e-10
+    assert profile["0.5"]["1.0"][0]["value_real"] > 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

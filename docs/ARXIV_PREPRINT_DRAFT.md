@@ -7,6 +7,8 @@ of the Standard Model and Gravity
 > **Status:** All 47/47 internal verification checks pass.  
 > **To do before submission:** LaTeX conversion, journal style file, peer review.
 
+> **Post-March 2026 addendum.** The later cyclotomic tower now contributes four additional exact layers beyond the original draft: (i) an adelic reciprocity theorem for the completed split-prime defect packet in the local variables $z_p=p^{-s}$; (ii) a closed-form global artanh expansion for the completed logarithm; (iii) an Eisenstein local-global valuation theorem identifying the Hensel branches with the valuations of $q\mp\omega$ by the split prime ideals in $\mathbb{Z}[\omega]$; and (iv) a completed spectral $L$-family whose $\lambda=1$ slice is the completed defect Dirichlet package. In the current repository these are the MCII, MCIII, MCIV, and MCV theorem layers.
+
 ---
 
 ## Abstract

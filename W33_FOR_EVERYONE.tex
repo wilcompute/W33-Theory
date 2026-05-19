@@ -2184,6 +2184,23 @@ Even better, the logarithm closes in a very friendly form:
 \]
 That means the global completed packet is an explicit sum of tiny odd split-prime contributions rather than an opaque infinite product. In plain English: once the classical split-prime Mertens growth is removed, the remaining packet is a convergent odd signal.
 
+There is one final way to package this that is both cleaner and more flexible. Introduce a deformation knob $\lambda$ and set
+\[
+x_p(s)=\frac{p^{-s}-1}{p-1}.
+\]
+Then define
+\[
+\Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+\left(\frac{1+\lambda x_p(s)}{1-\lambda x_p(s)}\right)
+\exp\!\left(2\lambda\,(p^{-s}-1)\log\!\left(1-\frac1p\right)\right).
+\]
+What does this do? It packages the whole split-prime signal into a single analytic family. When $\lambda=0$, nothing has been turned on yet and the answer is exactly $1$. When $\lambda=1$, we recover the completed defect Dirichlet package we were already studying. And because the family is odd in $\lambda$,
+\[
+\Lambda_X^{\mathrm{def}}(s;\lambda)\Lambda_X^{\mathrm{def}}(s;-\lambda)=1.
+\]
+So the old completed packet is now seen as one special slice of a larger and cleaner spectral $L$-family.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3443,6 +3460,10 @@ $e, \pi, \varphi$ in Pascal & three natural constants in one combinatorial objec
 Synergetics Hierarchy & every integer vol is a $W(3,3)$ primitive & DCCL \\
 Kolmogorov Bound & $K(W(3,3)) \leq 21$ bits; max compression of physics & \S\ref{sec:implications} \\
 Fine-Structure Run & $\alpha^{-1} = 137 + \delta_{\mathrm{RG}}$, $\delta_{\mathrm{RG}}\approx 0.036$ & DCCCI \\
+Adelic Dirichlet Reciprocity & local symmetry is $\widehat D_p(z)\widehat D_p(2-z)=1$ in $z_p=p^{-s}$ & MCII \\
+Global Artanh Log Expansion & $\log\widehat D_X(s)$ is an explicit split-prime artanh sum & MCIII \\
+Eisenstein Local-Global Valuation & $v_{\pi_r}(q\mp\omega)=n$ iff the branch holds mod $p^n$ but not $p^{n+1}$ & MCIV \\
+Completed Spectral $L$-Package & the completed packet is the $\lambda=1$ slice of an odd spectral family & MCV \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

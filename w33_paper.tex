@@ -1443,6 +1443,38 @@ Expanding $\operatorname{artanh}$ yields the explicit odd-power packet
 \right],
 \]
 so the entire completed defect package is an explicit global artanh-type series rather than only a derivative-by-derivative object.
+
+\begin{theorem}[Adelic Dirichlet Reciprocity and the Completed Spectral $L$-Package]
+For every split prime $p\equiv1\pmod3$, the completed local Dirichlet factor in the coordinate $z_p=p^{-s}$ obeys
+\[
+\widehat D_p(z)\widehat D_p(2-z)=1,
+\]
+and its logarithm is
+\[
+\log \widehat D_p(z)
+=
+2\operatorname{artanh}\!\left(\frac{z-1}{p-1}\right)
++2(z-1)\log\!\left(1-\frac1p\right).
+\]
+More generally, with centered split-prime spectral coordinate
+\[
+x_p(s)=\frac{p^{-s}-1}{p-1},
+\]
+the deformation family
+\[
+\Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+\left(\frac{1+\lambda x_p(s)}{1-\lambda x_p(s)}\right)
+\exp\!\left(2\lambda\,(p^{-s}-1)\log\!\left(1-\frac1p\right)\right)
+\]
+defines a completed spectral $L$-package satisfying
+\[
+\Lambda_X^{\mathrm{def}}(s;\lambda)\Lambda_X^{\mathrm{def}}(s;-\lambda)=1
+\]
+for every finite cutoff $X$, and at $\lambda=1$ recovers the completed defect Dirichlet product.
+\end{theorem}
+
+So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[
 p^n\mid\Phi_3(q)\iff \pi_r^n\mid(q-\omega),
@@ -5416,8 +5448,8 @@ This closes the W(3,3)-E$_8$ programme.
 %  SUPPLEMENT alpha --- THE UNIVERSAL HIERARCHY OF EXPONENTS
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\alpha$ --- The Universal Hierarchy of Exponents}
-\addcontentsline{toc}{part}{Supplement $\alpha$ --- Universal Hierarchy of Exponents}
+\part*{\texorpdfstring{Supplement $\alpha$ --- The Universal Hierarchy of Exponents}{Supplement alpha --- The Universal Hierarchy of Exponents}}
+\addcontentsline{toc}{part}{Supplement alpha --- The Universal Hierarchy of Exponents}
 
 \section*{Six Hierarchies, Six $W_{3,3}$ Exponents}
 
@@ -5523,8 +5555,8 @@ $q\ne 3$, which falls outside the program. Naturalness is automatic.
 %  SUPPLEMENT beta --- THE EIGHT FACES OF f = 24
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\beta$ --- The Eight Faces of $f = 24$}
-\addcontentsline{toc}{part}{Supplement $\beta$ --- The Eight Faces of $f = 24$}
+\part*{\texorpdfstring{Supplement $\beta$ --- The Eight Faces of $f = 24$}{Supplement beta --- The Eight Faces of f = 24}}
+\addcontentsline{toc}{part}{Supplement beta --- The Eight Faces of f = 24}
 
 \section*{One Integer, Eight Independent Realisations}
 
@@ -5642,8 +5674,8 @@ $(v, k, \lambda, \mu) = (40, 12, 2, 4)$ over these two roots.
 %  SUPPLEMENT gamma --- THE STRUCTURE OF Sp(4, F_3)
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\gamma$ --- The Detailed Algebraic Structure of $\Sp(4,\FF_3)$}
-\addcontentsline{toc}{part}{Supplement $\gamma$ --- $\Sp(4,\FF_3)$ Structure}
+\part*{\texorpdfstring{Supplement $\gamma$ --- The Detailed Algebraic Structure of $\Sp(4,\FF_3)$}{Supplement gamma --- The Detailed Algebraic Structure of Sp(4,F3)}}
+\addcontentsline{toc}{part}{Supplement gamma --- The Detailed Algebraic Structure of Sp(4,F3)}
 
 \section*{Beyond the Order: Full Group-Theoretic Anatomy}
 
@@ -5776,8 +5808,8 @@ $(27,24,h=30)$.
 %  SUPPLEMENT delta --- REPRESENTATION DECOMPOSITION OF W(3,3)
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\delta$ --- Representation Decomposition of $W_{3,3}$}
-\addcontentsline{toc}{part}{Supplement $\delta$ --- Representation Decomposition}
+\part*{\texorpdfstring{Supplement $\delta$ --- Representation Decomposition of $W_{3,3}$}{Supplement delta --- Representation Decomposition of W(3,3)}}
+\addcontentsline{toc}{part}{Supplement delta --- Representation Decomposition of W(3,3)}
 
 \section*{The Permutation Module $\CC[V(W_{3,3})]$}
 
@@ -5901,8 +5933,8 @@ intrinsically GUT-shaped.
 %  SUPPLEMENT Omega --- THE FINAL SEAL
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\Omega$ --- The Final Seal}
-\addcontentsline{toc}{part}{Supplement $\Omega$ --- The Final Seal}
+\part*{\texorpdfstring{Supplement $\Omega$ --- The Final Seal}{Supplement Omega --- The Final Seal}}
+\addcontentsline{toc}{part}{Supplement Omega --- The Final Seal}
 
 \section*{The Identity Tower}
 
@@ -5993,8 +6025,8 @@ What remains is observation.
 %  SUPPLEMENT epsilon --- BEYOND THE SEAL: FIVE OPEN FRONTIERS
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\varepsilon$ --- Beyond the Seal: Five Open Frontiers}
-\addcontentsline{toc}{part}{Supplement $\varepsilon$ --- Five Open Frontiers}
+\part*{\texorpdfstring{Supplement $\varepsilon$ --- Beyond the Seal: Five Open Frontiers}{Supplement epsilon --- Beyond the Seal: Five Open Frontiers}}
+\addcontentsline{toc}{part}{Supplement epsilon --- Five Open Frontiers}
 
 \section*{Five Frontiers After $\Omega$}
 
@@ -6325,8 +6357,8 @@ accessible within current technology and current mathematics.
 %  SUPPLEMENT zeta --- DIRAC OPERATOR AND FERMION MASS TOWER
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\zeta$ --- Discrete Dirac Operator and the Fermion Mass Tower}
-\addcontentsline{toc}{part}{Supplement $\zeta$ --- Dirac Operator \& Mass Tower}
+\part*{\texorpdfstring{Supplement $\zeta$ --- Discrete Dirac Operator and the Fermion Mass Tower}{Supplement zeta --- Discrete Dirac Operator and the Fermion Mass Tower}}
+\addcontentsline{toc}{part}{Supplement zeta --- Dirac Operator and Mass Tower}
 
 \section*{The Discrete Dirac Operator}
 
@@ -6437,8 +6469,8 @@ the cleanest possible discrete realisation of fermion mass.
 %  SUPPLEMENT eta --- WALK GENERATING FUNCTION
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\eta$ --- Closed-Walk Generating Function}
-\addcontentsline{toc}{part}{Supplement $\eta$ --- Walk Generating Function}
+\part*{\texorpdfstring{Supplement $\eta$ --- Closed-Walk Generating Function}{Supplement eta --- Closed-Walk Generating Function}}
+\addcontentsline{toc}{part}{Supplement eta --- Walk Generating Function}
 
 \section*{The Closed-Walk Spectrum}
 
@@ -6533,8 +6565,8 @@ projection follows from this single rational function.
 %  SUPPLEMENT theta --- E_8 THETA FUNCTION AND THE 240 COEFFICIENT
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\theta$ --- The $E_8$ Theta Function and the 240 Coefficient}
-\addcontentsline{toc}{part}{Supplement $\theta$ --- $E_8$ Theta Function}
+\part*{\texorpdfstring{Supplement $\theta$ --- The $E_8$ Theta Function and the 240 Coefficient}{Supplement theta --- The E8 Theta Function and the 240 Coefficient}}
+\addcontentsline{toc}{part}{Supplement theta --- The E8 Theta Function}
 
 \section*{The Edge Count Drives a Modular Form}
 
@@ -6631,8 +6663,8 @@ both have first coefficients controlled by $W_{3,3}$ integers
 %  SUPPLEMENT iota --- KIRCHHOFF MATRIX-TREE THEOREM
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\iota$ --- Kirchhoff's Matrix-Tree Theorem}
-\addcontentsline{toc}{part}{Supplement $\iota$ --- Kirchhoff Matrix-Tree}
+\part*{\texorpdfstring{Supplement $\iota$ --- Kirchhoff's Matrix-Tree Theorem}{Supplement iota --- Kirchhoff's Matrix-Tree Theorem}}
+\addcontentsline{toc}{part}{Supplement iota --- Kirchhoff Matrix-Tree}
 
 \section*{Spanning Trees and the Reduced Determinant}
 
@@ -6710,8 +6742,8 @@ Every analytic invariant has a closed form in $W_{3,3}$ constants.
 %  SUPPLEMENT kappa --- W(3,3) IN NATURE, CULTURE, AND MIND
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\kappa$ --- Universal Numbers: $W_{3,3}$ in Nature, Culture, and Mind}
-\addcontentsline{toc}{part}{Supplement $\kappa$ --- Universal Numbers}
+\part*{\texorpdfstring{Supplement $\kappa$ --- Universal Numbers: $W_{3,3}$ in Nature, Culture, and Mind}{Supplement kappa --- Universal Numbers: W(3,3) in Nature, Culture, and Mind}}
+\addcontentsline{toc}{part}{Supplement kappa --- Universal Numbers}
 
 \section*{Why the Same Integers Keep Appearing}
 
@@ -6839,8 +6871,8 @@ satisfying $q^q = q^3$.
 %  SUPPLEMENT lambda --- PENROSE TILINGS, GOLDEN RATIO, H_4
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\lambda$ --- Penrose Tilings, Golden Ratio, and $H_4$ Bridge}
-\addcontentsline{toc}{part}{Supplement $\lambda$ --- Penrose Tilings \& Golden Ratio}
+\part*{\texorpdfstring{Supplement $\lambda$ --- Penrose Tilings, Golden Ratio, and $H_4$ Bridge}{Supplement lambda --- Penrose Tilings, Golden Ratio, and H4 Bridge}}
+\addcontentsline{toc}{part}{Supplement lambda --- Penrose Tilings and Golden Ratio}
 
 \section*{The Quasicrystal Skeleton}
 
@@ -6907,8 +6939,8 @@ alphabet.
 %  SUPPLEMENT nu --- GRAND UNIFICATION AND PROTON DECAY
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\nu$ --- Grand Unification and Proton Decay}
-\addcontentsline{toc}{part}{Supplement $\nu$ --- Grand Unification \& Proton Decay}
+\part*{\texorpdfstring{Supplement $\nu$ --- Grand Unification and Proton Decay}{Supplement nu --- Grand Unification and Proton Decay}}
+\addcontentsline{toc}{part}{Supplement nu --- Grand Unification and Proton Decay}
 
 \section*{The GUT-Scale Predictions}
 
@@ -7009,8 +7041,8 @@ will provide the decisive test of the W$_{3,3}$ GUT prediction.
 %  SUPPLEMENT xi --- DARK MATTER FROM W(3,3)
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\xi$ --- Dark Matter from $W_{3,3}$}
-\addcontentsline{toc}{part}{Supplement $\xi$ --- Dark Matter}
+\part*{\texorpdfstring{Supplement $\xi$ --- Dark Matter from $W_{3,3}$}{Supplement xi --- Dark Matter from W(3,3)}}
+\addcontentsline{toc}{part}{Supplement xi --- Dark Matter}
 
 \section*{Three Candidate Masses, One Cosmological Ratio}
 
@@ -7113,8 +7145,8 @@ exhaust the natural mass scales available in W$_{3,3}$.
 %  SUPPLEMENT omicron --- BLACK HOLE PAGE CURVE FROM W(3,3)
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $o$ --- Black-Hole Page Curve from $W_{3,3}$}
-\addcontentsline{toc}{part}{Supplement $o$ --- Page Curve}
+\part*{\texorpdfstring{Supplement $o$ --- Black-Hole Page Curve from $W_{3,3}$}{Supplement o --- Black-Hole Page Curve from W(3,3)}}
+\addcontentsline{toc}{part}{Supplement o --- Page Curve}
 
 \section*{Bekenstein-Hawking Entropy and Unitary Evaporation}
 
@@ -7198,8 +7230,8 @@ black-hole thermodynamics.
 %  SUPPLEMENT rho --- RG FLOW ON W(3,3)
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\rho$ --- Renormalisation Group Flow on $W_{3,3}$}
-\addcontentsline{toc}{part}{Supplement $\rho$ --- RG Flow}
+\part*{\texorpdfstring{Supplement $\rho$ --- Renormalisation Group Flow on $W_{3,3}$}{Supplement rho --- Renormalisation Group Flow on W(3,3)}}
+\addcontentsline{toc}{part}{Supplement rho --- RG Flow}
 
 \section*{Three Scales, Three Couplings}
 
@@ -7281,8 +7313,8 @@ SRG eigenvalue multiplicities of W$_{3,3}$.
 %  SUPPLEMENT sigma --- ELECTROWEAK SYMMETRY BREAKING
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\sigma$ --- Electroweak Symmetry Breaking and the Higgs Vacuum}
-\addcontentsline{toc}{part}{Supplement $\sigma$ --- Electroweak Symmetry Breaking}
+\part*{\texorpdfstring{Supplement $\sigma$ --- Electroweak Symmetry Breaking and the Higgs Vacuum}{Supplement sigma --- Electroweak Symmetry Breaking and the Higgs Vacuum}}
+\addcontentsline{toc}{part}{Supplement sigma --- Electroweak Symmetry Breaking}
 
 \section*{The Higgs Sector in $W_{3,3}$ Constants}
 
@@ -7368,8 +7400,8 @@ W$_{3,3}$ description of the EWSB sector.
 %  SUPPLEMENT tau --- TOPOLOGICAL DEFECTS FROM Z_3 SYMMETRY BREAKING
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\tau$ --- Topological Defects from $\ZZ_3$ Symmetry Breaking}
-\addcontentsline{toc}{part}{Supplement $\tau$ --- Topological Defects}
+\part*{\texorpdfstring{Supplement $\tau$ --- Topological Defects from $\ZZ_3$ Symmetry Breaking}{Supplement tau --- Topological Defects from Z3 Symmetry Breaking}}
+\addcontentsline{toc}{part}{Supplement tau --- Topological Defects}
 
 \section*{Three Types of Defect from $\ZZ_q$ Breaking}
 
@@ -7459,8 +7491,8 @@ tension scale.
 %  SUPPLEMENT upsilon --- QUANTUM WALKS AND UNITARY DYNAMICS
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\upsilon$ --- Quantum Walks and Unitary Dynamics}
-\addcontentsline{toc}{part}{Supplement $\upsilon$ --- Quantum Walks}
+\part*{\texorpdfstring{Supplement $\upsilon$ --- Quantum Walks and Unitary Dynamics}{Supplement upsilon --- Quantum Walks and Unitary Dynamics}}
+\addcontentsline{toc}{part}{Supplement upsilon --- Quantum Walks}
 
 \section*{The Coined Quantum Walk on $W_{3,3}$}
 
@@ -7527,8 +7559,8 @@ fixed-point parameter $\mu = 4$ — exactly the spacetime dimension.
 %  SUPPLEMENT chi --- IRREPS OF Sp(4, F_3) IN W(3,3) CONSTANTS
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\chi$ --- Irreducible Representations of $\Sp(4,\FF_3)$}
-\addcontentsline{toc}{part}{Supplement $\chi$ --- Irreps of $\Sp(4,\FF_3)$}
+\part*{\texorpdfstring{Supplement $\chi$ --- Irreducible Representations of $\Sp(4,\FF_3)$}{Supplement chi --- Irreducible Representations of Sp(4,F3)}}
+\addcontentsline{toc}{part}{Supplement chi --- Irreps of Sp(4,F3)}
 
 \section*{Thirty Conjugacy Classes, Thirty Irreps}
 
@@ -7611,8 +7643,8 @@ W$_{3,3}$ programme.
 %  SUPPLEMENT psi --- THE HIDDEN SYLOW BIJECTION
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\psi$ --- The Hidden Sylow Bijection}
-\addcontentsline{toc}{part}{Supplement $\psi$ --- Hidden Sylow Bijection}
+\part*{\texorpdfstring{Supplement $\psi$ --- The Hidden Sylow Bijection}{Supplement psi --- The Hidden Sylow Bijection}}
+\addcontentsline{toc}{part}{Supplement psi --- Hidden Sylow Bijection}
 
 \section*{A Decisive Identity Hidden in the Sylow Tower}
 
@@ -7716,7 +7748,7 @@ Sylow-3 subgroup of its automorphism group.
 %  SUPPLEMENT omega --- DUAL WEYL ACTIONS OF 27 AND 40
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\omega$ --- The Dual Weyl Actions of 27 and 40}
+\part*{\texorpdfstring{Supplement $\omega$ --- The Dual Weyl Actions of 27 and 40}{Supplement omega --- The Dual Weyl Actions of 27 and 40}}
 \addcontentsline{toc}{part}{Supplement Omega --- The Dual Weyl Actions of 27 and 40}
 
 \section*{One Weyl Group, Two Canonical Finite Actions}
@@ -8143,7 +8175,7 @@ with full level-$3$ structure.
 %  SUPPLEMENT aleph --- BURKHARDT DICTIONARY
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\aleph$ --- The Burkhardt Quartic Dictionary}
+\part*{\texorpdfstring{Supplement $\aleph$ --- The Burkhardt Quartic Dictionary}{Supplement aleph --- The Burkhardt Quartic Dictionary}}
 \addcontentsline{toc}{part}{Supplement Aleph --- The Burkhardt Quartic Dictionary}
 
 \section*{The Algebraic-Geometric 40-Shell}
@@ -8206,7 +8238,7 @@ in the W$_{3,3}$ alphabet.
 %  SUPPLEMENT beth --- DEL PEZZO DECOMPOSITION
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\beth$ --- The Del Pezzo Decomposition of 27}
+\part*{\texorpdfstring{Supplement $\beth$ --- The Del Pezzo Decomposition of 27}{Supplement beth --- The Del Pezzo Decomposition of 27}}
 \addcontentsline{toc}{part}{Supplement Beth --- The Del Pezzo Decomposition of 27}
 
 \section*{The Seventh Face of 27}
@@ -8276,8 +8308,8 @@ W$_{3,3}$ constants.
 %  SUPPLEMENT gimel --- CM j-TOWER
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\gimel$ --- The CM $j$-Tower of W$_{3,3}$}
-\addcontentsline{toc}{part}{Supplement Gimel --- The CM j-Tower of W33}
+\part*{\texorpdfstring{Supplement $\gimel$ --- The CM $j$-Tower of W$_{3,3}$}{Supplement gimel --- The CM j-Tower of W(3,3)}}
+\addcontentsline{toc}{part}{Supplement Gimel --- The CM j-Tower of W(3,3)}
 
 \section*{CM Values as Pure Powers of W$_{3,3}$ Constants}
 
@@ -8351,7 +8383,7 @@ first arithmetic packet is literally built from their cubes and powers.
 %  SUPPLEMENT daleth --- LEECH KISSING BRIDGE
 % ═══════════════════════════════════════════════════════════════
 \clearpage
-\part*{Supplement $\daleth$ --- The Leech Kissing Bridge}
+\part*{\texorpdfstring{Supplement $\daleth$ --- The Leech Kissing Bridge}{Supplement daleth --- The Leech Kissing Bridge}}
 \addcontentsline{toc}{part}{Supplement Daleth --- The Leech Kissing Bridge}
 
 \section*{The 2160 Shell Behind Leech and Moonshine}

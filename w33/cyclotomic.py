@@ -718,6 +718,82 @@ def completed_defect_dirichlet_log_artanh_series(prime_limit: int, s: complex, m
     return total
 
 
+def completed_defect_spectral_coordinate(split_prime: int, s: complex) -> complex:
+    """Centered split-prime spectral coordinate x_p(s) = (p^{-s}-1)/(p-1)."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return (prime_weight(p, s) - 1) / (p - 1)
+
+
+def completed_defect_counterterm_local(split_prime: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Local Mertens-counterterm factor in the completed spectral package."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return cmath.exp(2 * deformation * (prime_weight(p, s) - 1) * math.log(1 - 1 / p))
+
+
+def completed_defect_spectral_local_factor(split_prime: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Canonical local spectral L-family; deformation=1 recovers the completed Dirichlet factor."""
+    x = completed_defect_spectral_coordinate(split_prime, s)
+    return ((1 + deformation * x) / (1 - deformation * x)) * completed_defect_counterterm_local(split_prime, s, deformation=deformation)
+
+
+def completed_defect_spectral_local_log(split_prime: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Closed-form logarithm of the local spectral L-family."""
+    p = split_prime
+    x = completed_defect_spectral_coordinate(split_prime, s)
+    return 2 * cmath.atanh(deformation * x) + 2 * deformation * (prime_weight(p, s) - 1) * math.log(1 - 1 / p)
+
+
+def completed_defect_spectral_L_function(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Finite-cutoff completed spectral L-family over split primes."""
+    value = 1 + 0j
+    for p in split_primes_mod_3(prime_limit):
+        value *= completed_defect_spectral_local_factor(p, s, deformation=deformation)
+    return value
+
+
+def completed_defect_spectral_log(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Global logarithm of the completed spectral L-family."""
+    total = 0 + 0j
+    for p in split_primes_mod_3(prime_limit):
+        total += completed_defect_spectral_local_log(p, s, deformation=deformation)
+    return total
+
+
+def completed_defect_spectral_reciprocity(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Oddness in the deformation variable: Lambda(s;λ)Lambda(s;-λ)=1."""
+    return completed_defect_spectral_L_function(prime_limit, s, deformation=deformation) * completed_defect_spectral_L_function(prime_limit, s, deformation=-deformation)
+
+
+def completed_defect_spectral_profile(prime_limits: list[int], s_values: list[float], deformations: list[float]) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile the completed spectral L-family over cutoffs, s-values, and deformation strengths."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            for prime_limit in prime_limits:
+                value = completed_defect_spectral_L_function(prime_limit, s, deformation=deformation)
+                log_value = completed_defect_spectral_log(prime_limit, s, deformation=deformation)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "value_real": value.real,
+                        "value_imag": value.imag,
+                        "log_real": log_value.real,
+                        "log_imag": log_value.imag,
+                        "abs_reciprocity_error": abs(completed_defect_spectral_reciprocity(prime_limit, s, deformation=deformation) - 1.0),
+                    }
+                )
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
