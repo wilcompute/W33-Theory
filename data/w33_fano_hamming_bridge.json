@@ -1,0 +1,106 @@
+{
+  "binary_ternary_duality_table": {
+    "binary": {
+      "alphabet": "F_2",
+      "auto_group": "PSL(2, 7) = GL(3, F_2)",
+      "auto_order": 168,
+      "code": "Hamming [7, 4, 3]_2",
+      "distance": 3,
+      "host_geometry": "Fano plane PG(2, F_2)",
+      "host_size": 7,
+      "info_dim": 4,
+      "length": 7
+    },
+    "shared": {
+      "(d_X, d_Z)": [
+        3,
+        4
+      ],
+      "Heegner_7_link": true,
+      "minimum_distance": 3
+    },
+    "ternary": {
+      "alphabet": "F_3",
+      "auto_group": "Aut(W(3,3))",
+      "auto_order": "1,451,520 (extended carrier action)",
+      "code": "[[240, 81, 3]]_3 edge CSS",
+      "distance": 3,
+      "host_geometry": "W(3, 3) edge carrier",
+      "host_size": 240,
+      "info_dim": 81,
+      "length": 240
+    }
+  },
+  "boolean_heptad_check": {
+    "B_2": 127,
+    "comment": "127 = 2^7 - 1 is the 4th Mersenne prime M_7.  GF(128) = F_2 [x] / irreducible degree-7 polynomial.  Multiplicative group is cyclic of order 127, which appears as the B_2 binomial moment of the toroidal metric polynomial.",
+    "equals_2_to_phi6_minus_1": true,
+    "field_GF_2_to_phi6": "GF(2^Phi_6) = GF(128)",
+    "is_mersenne_prime_M_7": true,
+    "order_of_GF128_minus_zero": true
+  },
+  "fano_PSL_x_E8_factorial_identity": {
+    "PSL_2_7_order_times_E8_roots": 40320,
+    "comment": "168 * 240 = 40320 = 8! = (2^q)! at q = 3.  PSL(2, 7) order times E_8 root count equals the factorial of the tomotope cell count.  This binds the Fano/Klein automorphism group to the E_8 root lattice through a factorial of the substrate's natural binary shell 2^q.",
+    "equals_factorial_2_to_q": true,
+    "factorial_2_to_q": 40320
+  },
+  "fano_plane_invariants": {
+    "aut_order": 168,
+    "aut_order_equals_f_times_phi6": true,
+    "gl3_F2_substrate": "168 = (Phi_6 - 1) * Phi_6 * (Phi_6 + 1) / 2",
+    "incidences": 21,
+    "incidences_equals_E_K7": true,
+    "incidences_equals_T6": true,
+    "lines": 7,
+    "points": 7,
+    "points_equals_phi6": true,
+    "psl27_substrate": "168 = f * Phi_6"
+  },
+  "hamming_parameter_identification": {
+    "hamming_d_equals_d_X": true,
+    "hamming_in_substrate_form": "[Phi_6, mu, q] = [d_X + d_Z, d_Z, d_X]",
+    "hamming_k_equals_d_Z": true,
+    "hamming_n_equals_d_X_plus_d_Z": true,
+    "numeric": [
+      7,
+      4,
+      3
+    ],
+    "substrate_form": [
+      "Phi_6 = q^2 - q + 1",
+      "mu = q + 1",
+      "q"
+    ]
+  },
+  "header": {
+    "substrate_constants": {
+      "H_1": 81,
+      "Phi_6": 7,
+      "edges": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k": 12,
+      "mu": 4,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "heegner_link": {
+    "Phi_6_is_heegner": true,
+    "Phi_6_role": "d_X + d_Z = Hamming length = Fano size = Heegner prime",
+    "comment": "The Heawood/Fano shell Phi_6 = 7 is one of the 9 Heegner numbers, tying the substrate's CSS distance sum to class-number-1 imaginary quadratic Q(sqrt(-7)).  This is the SAME 7 that appears as the modular curve level for the Klein quartic = X(7)."
+  },
+  "honesty_boundary": "All arithmetic identities are exact.  The identification of the Hamming [7, 4, 3] parameters with substrate primitives is a parameter match, not a categorical equivalence of the two codes.  The binary-ternary duality is structural -- the two codes share their minimum distance d_X and host on Fano-related geometry -- but they encode different information sectors (Hamming: 4 bits from 7; CSS: 81 qutrits from 240).",
+  "klein_quartic_invariants": {
+    "aut_order": 168,
+    "aut_order_equals_f_times_phi6": true,
+    "genus": 3,
+    "genus_equals_q": true,
+    "hurwitz_bound_at_genus_q": 168,
+    "hurwitz_substrate_form": "84(g - 1) = Csaszar_flag_count * (q - 1) = 84 * (q-1)",
+    "klein_modular_curve": "X(7) = X(Phi_6); 7 is the modular level",
+    "saturates_hurwitz": true
+  },
+  "theorem": "Fano-Hamming Bridge Theorem.  The binary Hamming code [7, 4, 3] has parameters [d_X + d_Z, d_Z, d_X] in the W(3,3) substrate, matching the ternary CSS code [[240, 81, 3]]_3 in its minimum distance d_X.  The Fano plane PG(2, F_2) -- the natural host of Hamming -- has Phi_6 = 7 points, Phi_6 = 7 lines, T_6 = 21 incidences, and automorphism order |PSL(2, 7)| = f * Phi_6 = 168.  The Klein quartic X(7) at genus q = 3 saturates the Hurwitz bound 84(g - 1) = (Csaszar flag count) * (q - 1) with the SAME 168 automorphisms.  Boolean heptad B_2 = 2^Phi_6 - 1 = 127 is the Mersenne prime M_7 and the order of GF(128) \\ {0}.  And 168 * |E| = (2^q)! = 8!, tying the Fano automorphism group, the E_8 root lattice, and the tomotope-cell factorial into a single identity."
+}
