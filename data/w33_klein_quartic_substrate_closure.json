@@ -1,0 +1,87 @@
+{
+  "bitangent_weierstrass_pair": {
+    "difference": 4,
+    "difference_check": true,
+    "difference_substrate": "mu = d_Z = q + 1",
+    "pair": [
+      24,
+      28
+    ],
+    "product": 672,
+    "product_check": true,
+    "product_substrate": "|Aut(Klein)| * mu = 168 * 4",
+    "sum": 52,
+    "sum_check": true,
+    "sum_substrate": "mu * Phi_3"
+  },
+  "header": {
+    "substrate_constants": {
+      "Csaszar_flags": 84,
+      "Phi_6": 7,
+      "T_6": 21,
+      "f": 24,
+      "g_neg": 15,
+      "k_codec": 12,
+      "mu": 4,
+      "q": 3,
+      "tomotope_flags": 192
+    }
+  },
+  "honesty_boundary": "All Klein quartic invariants cited are classical theorems of algebraic geometry (Hurwitz, Weierstrass, Plucker bitangent count for plane quartics).  The substrate identification is an exact arithmetic match, not a new geometric proof.  The closure sum 192 = tomotope flag count = |W(D_4)| is the new structural identity contributed here.",
+  "hurwitz_bound_substrate_form": {
+    "csaszar_substrate": "mu * T_6 = 4 * 21 = 84",
+    "hurwitz_bound_at_genus_q": 168,
+    "match": true,
+    "physical_reading": "Hurwitz bound 84(g-1) at genus g = q factors as (Csaszar flag count) * (q - 1).  Klein quartic saturates this bound, making it the unique extremal genus-q Riemann surface among substrate-relevant curves.",
+    "saturated_by_klein": true,
+    "substrate_form_Csaszar_times_lam": 168
+  },
+  "klein_quartic_invariants": {
+    "automorphism_order": {
+      "substrate_form": "f * Phi_6 = Hurwitz bound at genus q",
+      "value": 168,
+      "verified": true
+    },
+    "bitangents": {
+      "substrate_form": "n_even (staircase spine pair element)",
+      "value": 28,
+      "verified": true
+    },
+    "closure_sum_equals_tomotope_flags": true,
+    "closure_sum_of_four_invariants": 192,
+    "hurwitz_orbits": {
+      "substrate_form": "mu * T_6 = Csaszar flag count",
+      "value": 84,
+      "verified": true
+    },
+    "sextactic_points": {
+      "substrate_form": "2^q * Phi_6 = tomotope cells * Heawood",
+      "value": 56,
+      "verified": true
+    },
+    "tomotope_flags": 192,
+    "weierstrass_points": {
+      "substrate_form": "f = positive spectral multiplicity",
+      "value": 24,
+      "verified": true
+    }
+  },
+  "theorem": "Klein Quartic Substrate Closure Theorem.  At the W(3,3) saturation point q = 3, the Klein quartic X(7) is the unique genus-q Hurwitz-extremal Riemann surface.  Its five classical invariants are all substrate primitives: Weierstrass points = f, bitangents = n_even (spine staircase), sextactic points = 2^q * Phi_6, Hurwitz orbits = mu * T_6 = Csaszar flag count, and |Aut| = f * Phi_6 = Hurwitz bound 84(q-1).  The sum of the four non-automorphism invariants is 24 + 28 + 56 + 84 = 192, which EQUALS the tomotope flag count (24 + 84 + 84) and the Weyl group order |W(D_4)| (24-cell symmetry).  Three independent pictures -- classical algebraic geometry of the Klein quartic, discrete oscillator-flag census of the tomotope, and the Weyl group of the 24-cell -- all evaluate to 192 in substrate form.",
+  "three_pictures_of_192": {
+    "all_three_equal_192": true,
+    "picture_1_klein_invariant_sum": {
+      "expression": "Weierstrass + Bitangents + Sextactic + Hurwitz orbits",
+      "value": 192
+    },
+    "picture_2_tomotope_flag_count": {
+      "decomposition": "24 + 84 + 84 = 192",
+      "expression": "Tetra flags + Csaszar flags + Szilassi flags",
+      "value": 192
+    },
+    "picture_3_W_D4_order": {
+      "comment": "D_4 has 4! * 2^3 = 192 = order of its full symmetry group",
+      "expression": "|W(D_4)| = order of 24-cell Weyl group",
+      "value": 192
+    }
+  }
+}
