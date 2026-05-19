@@ -12538,21 +12538,50 @@
 
         <h4>Odd Taylor tower and the radius-six analytic disk</h4>
         <p>There is one more exact structural payoff. On the positive real <code>s</code>-axis we have
-          <code>0 &lt; p<sup>−s</sup> &lt; 1</code>, so the centered spectral coordinate satisfies</p>
+          <code>0 &lt; p<sup>−s</sup> &lt; 1</code>, so the centered spectral coordinate satisfies
+        </p>
         <div class="math-block">
           <span class="eq">|x<sub>p</sub>(s)| = |p<sup>−s</sup>−1|/(p−1) &lt; 1/(p−1) ≤ 1/6</span>
         </div>
-        <p>because the first split prime is <code>7</code>. So every local artanh-series converges at least on the disk</p>
+        <p>because the first split prime is <code>7</code>. So every local artanh-series converges at least on the disk
+        </p>
         <div class="math-block">
           <span class="eq">|λ| &lt; 6</span>
         </div>
-        <p>and therefore the whole finite-cutoff completed spectral package is analytic there. Even better, its logarithm has a
+        <p>and therefore the whole finite-cutoff completed spectral package is analytic there. Even better, its
+          logarithm has a
           purely odd Taylor expansion</p>
         <div class="math-block">
-          <span class="eq">log Λ<sub>X</sub><sup>def</sup>(s;λ) = Σ<sub>m≥0</sub> O<sub>2m+1</sub><sup>(X)</sup>(s) λ<sup>2m+1</sup></span>
+          <span class="eq">log Λ<sub>X</sub><sup>def</sup>(s;λ) = Σ<sub>m≥0</sub> O<sub>2m+1</sub><sup>(X)</sup>(s)
+            λ<sup>2m+1</sup></span>
         </div>
-        <p>with <strong>every even power missing exactly</strong>. So the completed defect packet at <code>λ = 1</code> is not just a
+        <p>with <strong>every even power missing exactly</strong>. So the completed defect packet at <code>λ = 1</code>
+          is not just a
           convenient slice of the family; it sits inside a genuinely convergent odd Taylor tower with room to spare.</p>
+
+        <h4>Infinite-cutoff spectral limit</h4>
+        <p>This odd Taylor tower is not only a finite-cutoff phenomenon. The linear coefficient already has the exact
+          convergent kernel</p>
+        <div class="math-block">
+          <span class="eq">(p<sup>−s</sup>−1) · (1/(p−1) + log(1−1/p))</span>
+        </div>
+        <p>whose bracket decays like <code>1/p²</code>, while every higher odd coefficient is dominated by the summable
+          split-prime majorant <code>(p−1)<sup>−(2m+1)</sup></code>. So the whole Taylor tower survives the limit
+          <code>X → ∞</code>: the completed spectral family lifts to a genuine limiting analytic object on the same disk
+          <code>|λ| &lt; 6</code>.</p>
+
+        <h4>Spectral action / free-energy functional</h4>
+        <p>The deformation variable also has a clean thermodynamic meaning. Define</p>
+        <div class="math-block">
+          <span class="eq">F<sub>X</sub>(s;λ) = − log Λ<sub>X</sub><sup>def</sup>(s;λ)</span>
+        </div>
+        <p>Then the first λ-derivative is the order parameter and the second λ-derivative is the Hessian /
+          susceptibility. Because the whole packet is odd in λ, the centered point is exactly flat:</p>
+        <div class="math-block">
+          <span class="eq">∂²F<sub>X</sub>/∂λ² (s;0) = 0</span>
+        </div>
+        <p>So the completed defect packet is now simultaneously an adelic reciprocity package, an analytic spectral
+          <em>L</em>-family, and an exact free-energy functional built from split-prime data.</p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the

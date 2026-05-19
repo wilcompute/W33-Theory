@@ -38,15 +38,26 @@ from w33.cyclotomic import (
     completed_defect_spectral_local_log_odd_coefficient,
     completed_defect_spectral_local_log_series,
     completed_defect_spectral_local_radius,
+    completed_defect_spectral_local_linear_kernel,
+    completed_defect_spectral_local_log_lambda_derivative,
+    completed_defect_spectral_local_log_odd_coefficient_bound,
     completed_defect_spectral_L_function,
     completed_defect_spectral_log_odd_coefficient,
     completed_defect_spectral_log,
+    completed_defect_spectral_log_lambda_derivative,
+    completed_defect_spectral_log_odd_tail_bound,
     completed_defect_spectral_log_series,
     completed_defect_spectral_profile,
     completed_defect_spectral_reciprocity,
+    completed_defect_spectral_infinite_cutoff_profile,
     completed_defect_spectral_series_profile,
     completed_defect_spectral_min_radius,
     completed_defect_spectral_uniform_radius_lower_bound,
+    completed_defect_spectral_action,
+    completed_defect_spectral_order_parameter,
+    completed_defect_spectral_hessian,
+    completed_defect_spectral_free_energy_profile,
+    completed_defect_spectral_deformation_cumulant_profile,
     completed_reciprocity_profile,
     completed_tangent_profile,
     cyclotomic_perfect_power_scan,
@@ -364,6 +375,58 @@ def test_completed_defect_spectral_odd_taylor_tower_and_radius():
     assert row["min_local_radius"] >= 6.0
     assert row["approximants"]["9"]["abs_series_error"] < row["approximants"]["5"]["abs_series_error"]
     assert row["approximants"]["5"]["abs_series_error"] < row["approximants"]["3"]["abs_series_error"]
+
+
+def test_completed_defect_spectral_infinite_cutoff_and_tail_bounds():
+    s = 1.0
+    kernel7 = completed_defect_spectral_local_linear_kernel(7, s)
+    coeff1_7 = completed_defect_spectral_local_log_odd_coefficient(7, s, 1)
+    assert abs(coeff1_7 - 2 * kernel7) < 1e-15
+    assert completed_defect_spectral_local_log_odd_coefficient_bound(7, s, 2) == 0.0
+    assert completed_defect_spectral_log_odd_tail_bound(1000, 1) > 0.0
+    assert completed_defect_spectral_log_odd_tail_bound(1000, 3) < completed_defect_spectral_log_odd_tail_bound(100, 3)
+    profile = completed_defect_spectral_infinite_cutoff_profile([1000, 10000, 100000], [1.0], [1, 3, 5])
+    row1 = profile["1.0"]["1"]
+    row3 = profile["1.0"]["3"]
+    assert row1[-1]["tail_bound"] < row1[0]["tail_bound"]
+    assert row3[-1]["tail_bound"] < row3[0]["tail_bound"]
+    assert row1[-1]["abs_jump_from_previous"] is not None
+
+
+def test_completed_defect_spectral_deformation_derivatives_and_free_energy():
+    s = 1.0
+    coeff1_local = completed_defect_spectral_local_log_odd_coefficient(7, s, 1)
+    coeff3_local = completed_defect_spectral_local_log_odd_coefficient(7, s, 3)
+    deriv1_zero = completed_defect_spectral_local_log_lambda_derivative(7, s, 1, deformation=0.0)
+    deriv2_zero = completed_defect_spectral_local_log_lambda_derivative(7, s, 2, deformation=0.0)
+    deriv3_zero = completed_defect_spectral_local_log_lambda_derivative(7, s, 3, deformation=0.0)
+    assert abs(deriv1_zero - coeff1_local) < 1e-15
+    assert abs(deriv2_zero) < 1e-18
+    assert abs(deriv3_zero - (math.factorial(3) * coeff3_local)) < 1e-15
+
+    global_deriv2_zero = completed_defect_spectral_log_lambda_derivative(31, s, 2, deformation=0.0)
+    assert abs(global_deriv2_zero) < 1e-18
+
+    h = 1e-6
+    exact_local_deriv1_one = completed_defect_spectral_local_log_lambda_derivative(7, s, 1, deformation=1.0)
+    fd_local_deriv1_one = (
+        completed_defect_spectral_local_log(7, s, deformation=1.0 + h)
+        - completed_defect_spectral_local_log(7, s, deformation=1.0 - h)
+    ) / (2 * h)
+    assert abs(exact_local_deriv1_one - fd_local_deriv1_one) < 1e-8
+
+    action0 = completed_defect_spectral_action(31, s, deformation=0.0)
+    hessian0 = completed_defect_spectral_hessian(31, s, deformation=0.0)
+    order1 = completed_defect_spectral_order_parameter(31, s, deformation=1.0)
+    assert abs(action0) < 1e-18
+    assert abs(hessian0) < 1e-18
+    assert order1.real != 0.0
+
+    cumulants = completed_defect_spectral_deformation_cumulant_profile([31, 1000], [1.0], [0.0, 1.0], [1, 2, 3])
+    assert abs(cumulants["1.0"]["0.0"][0]["order_2_real"]) < 1e-18
+    free_energy = completed_defect_spectral_free_energy_profile([31, 1000], [1.0], [0.0, 1.0])
+    assert abs(free_energy["1.0"]["0.0"][0]["action_real"]) < 1e-18
+    assert abs(free_energy["1.0"]["0.0"][0]["hessian_real"]) < 1e-18
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

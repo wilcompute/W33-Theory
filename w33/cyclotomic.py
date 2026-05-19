@@ -902,6 +902,183 @@ def completed_defect_spectral_series_profile(
     return payload
 
 
+def completed_defect_spectral_local_linear_kernel(split_prime: int, s: complex) -> complex:
+    """The convergent local kernel underlying the λ-linear coefficient."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    z = prime_weight(p, s)
+    return (z - 1) * (1 / (p - 1) + math.log(1 - 1 / p))
+
+
+def completed_defect_spectral_local_log_odd_coefficient_bound(split_prime: int, s: complex, order: int) -> float:
+    """Absolute convergence majorant for one odd Taylor coefficient."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if order < 1:
+        raise ValueError("order must be >= 1")
+    if order % 2 == 0:
+        return 0.0
+    if order == 1:
+        return 2 * abs(completed_defect_spectral_local_linear_kernel(p, s))
+    return (2 / order) * (completed_defect_spectral_local_radius(p, s) ** (-order))
+
+
+def completed_defect_spectral_log_odd_tail_bound(prime_limit: int, order: int) -> float:
+    r"""A simple explicit tail majorant for the odd Taylor coefficients beyond a finite cutoff.
+
+    For order >= 3, use the crude comparison \sum_{n > X} n^{-order}.
+    For order = 1, the linear kernel is O(p^{-2}), so we use a coarse 2/X bound.
+    """
+    if order < 1 or order % 2 == 0:
+        raise ValueError("order must be a positive odd integer")
+    x = max(prime_limit - 1, 1)
+    if order == 1:
+        return 2 / x
+    return 2 / (order * (order - 1) * (x ** (order - 1)))
+
+
+def completed_defect_spectral_infinite_cutoff_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    odd_orders: list[int],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Numerical convergence profile for the infinite-cutoff odd Taylor coefficients."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for order in odd_orders:
+            order_key = str(order)
+            rows = []
+            previous = None
+            for prime_limit in prime_limits:
+                coeff = completed_defect_spectral_log_odd_coefficient(prime_limit, s, order)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "coefficient_real": coeff.real,
+                        "coefficient_imag": coeff.imag,
+                        "abs_jump_from_previous": abs(coeff - previous) if previous is not None else None,
+                        "tail_bound": completed_defect_spectral_log_odd_tail_bound(prime_limit, order),
+                    }
+                )
+                previous = coeff
+            payload[outer_key][order_key] = rows
+    return payload
+
+
+def completed_defect_spectral_local_log_lambda_derivative(
+    split_prime: int,
+    s: complex,
+    order: int,
+    deformation: complex = 0.0,
+) -> complex:
+    """Exact λ-derivative of the local spectral log at an arbitrary deformation point."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if order < 1:
+        raise ValueError("order must be >= 1")
+    x = completed_defect_spectral_coordinate(p, s)
+    z = prime_weight(p, s)
+    if order == 1:
+        return 2 * x / (1 - (deformation * x) ** 2) + 2 * (z - 1) * math.log(1 - 1 / p)
+    return math.factorial(order - 1) * (x**order) * (
+        (1 / ((1 - deformation * x) ** order)) + ((-1) ** (order - 1)) / ((1 + deformation * x) ** order)
+    )
+
+
+def completed_defect_spectral_log_lambda_derivative(
+    prime_limit: int,
+    s: complex,
+    order: int,
+    deformation: complex = 0.0,
+) -> complex:
+    """Finite-cutoff λ-derivative of the global spectral log."""
+    total = 0.0 + 0.0j
+    for p in split_primes_mod_3(prime_limit):
+        total += completed_defect_spectral_local_log_lambda_derivative(p, s, order, deformation=deformation)
+    return total
+
+
+def completed_defect_spectral_deformation_cumulant_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformation_points: list[float],
+    orders: list[int],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile deformation-side cumulants/Hessians at λ=0, λ=1, or other points."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformation_points:
+            inner_key = str(deformation)
+            rows = []
+            for prime_limit in prime_limits:
+                row = {"prime_limit": prime_limit}
+                for order in orders:
+                    deriv = completed_defect_spectral_log_lambda_derivative(prime_limit, s, order, deformation=deformation)
+                    row[f"order_{order}_real"] = deriv.real
+                    row[f"order_{order}_imag"] = deriv.imag
+                rows.append(row)
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
+def completed_defect_spectral_action(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Completed spectral action / free-energy functional: minus the global spectral log."""
+    return -completed_defect_spectral_log(prime_limit, s, deformation=deformation)
+
+
+def completed_defect_spectral_order_parameter(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Deformation-side order parameter: first derivative of the spectral action."""
+    return -completed_defect_spectral_log_lambda_derivative(prime_limit, s, 1, deformation=deformation)
+
+
+def completed_defect_spectral_hessian(prime_limit: int, s: complex, deformation: complex = 1.0) -> complex:
+    """Deformation-side Hessian / susceptibility of the spectral action."""
+    return -completed_defect_spectral_log_lambda_derivative(prime_limit, s, 2, deformation=deformation)
+
+
+def completed_defect_spectral_free_energy_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, list[dict[str, object]]]]:
+    """Profile the spectral action, order parameter, and Hessian on real slices."""
+    payload: dict[str, dict[str, list[dict[str, object]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            for prime_limit in prime_limits:
+                action = completed_defect_spectral_action(prime_limit, s, deformation=deformation)
+                order_parameter = completed_defect_spectral_order_parameter(prime_limit, s, deformation=deformation)
+                hessian = completed_defect_spectral_hessian(prime_limit, s, deformation=deformation)
+                third = -completed_defect_spectral_log_lambda_derivative(prime_limit, s, 3, deformation=deformation)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "action_real": action.real,
+                        "action_imag": action.imag,
+                        "order_parameter_real": order_parameter.real,
+                        "order_parameter_imag": order_parameter.imag,
+                        "hessian_real": hessian.real,
+                        "hessian_imag": hessian.imag,
+                        "third_derivative_real": third.real,
+                        "third_derivative_imag": third.imag,
+                        "information_content": -action.real,
+                    }
+                )
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

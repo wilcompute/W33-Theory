@@ -1514,6 +1514,105 @@ At the verified slice $s=1$ and cutoff $X=10^5$, the first two global odd coeffi
 \mathcal O_3^{(10^5)}(1)\approx -0.002400282230.
 \]
 
+This finite-cutoff theorem actually globalizes. For the linear coefficient one has the exact convergent kernel
+\[
+\mathcal O_1^{(X)}(s)
+=
+2\sum_{\substack{p\le X\\ p\equiv1\ (3)}}
+(p^{-s}-1)
+\left[
+\frac{1}{p-1}+\log\!\left(1-\frac1p\right)
+\right],
+\]
+and the bracket is $O(p^{-2})$. For every higher odd coefficient,
+\[
+\left|\mathcal O_{2m+1}^{(X)}(s)\right|
+\le
+\frac{2}{2m+1}\sum_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{1}{(p-1)^{2m+1}},
+\qquad m\ge1,
+\]
+because $|x_p(s)|<1/(p-1)$ on the positive real $s$-axis. Hence every odd coefficient converges absolutely as $X\to\infty$, and the whole Taylor tower passes to a genuine limiting analytic object by the Weierstrass $M$-test.
+
+\begin{theorem}[Infinite-Cutoff Completed Spectral Taylor Limit]
+For real $s>0$ there is a genuine limiting analytic object
+\[
+\Lambda_\infty^{\mathrm{def}}(s;\lambda)
+\quad\text{for }|\lambda|<6,
+\]
+whose logarithm is the absolutely convergent odd Taylor tower
+\[
+\log \Lambda_\infty^{\mathrm{def}}(s;\lambda)
+=
+\sum_{m\ge0}\mathcal O_{2m+1}^{(\infty)}(s)\,\lambda^{2m+1},
+\]
+with
+\[
+\mathcal O_1^{(\infty)}(s)
+=
+2\sum_{\substack{p\equiv1\ (3)}}
+(p^{-s}-1)
+\left[
+\frac{1}{p-1}+\log\!\left(1-\frac1p\right)
+\right],
+\]
+and for $m\ge1$,
+\[
+\mathcal O_{2m+1}^{(\infty)}(s)
+=
+\frac{2}{2m+1}\sum_{\substack{p\equiv1\ (3)}} x_p(s)^{2m+1}.
+\]
+So the completed defect packet is a true limiting analytic family rather than merely a finite-cutoff package.
+\end{theorem}
+
+The deformation-side cumulants are equally explicit. Since
+\[
+\log \Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+\log(1+\lambda x_p)-\log(1-\lambda x_p)+2\lambda(p^{-s}-1)\log\!\left(1-\frac1p\right),
+\]
+one gets for every $n\ge2$ the exact local derivative formula
+\[
+\frac{\partial^n}{\partial\lambda^n}\log \Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+(n-1)!x_p(s)^n
+\left[
+\frac{1}{(1-\lambda x_p(s))^n}+\frac{(-1)^{n-1}}{(1+\lambda x_p(s))^n}
+\right],
+\]
+while the first derivative is
+\[
+\frac{\partial}{\partial\lambda}\log \Lambda_p^{\mathrm{def}}(s;\lambda)
+=
+\frac{2x_p(s)}{1-\lambda^2x_p(s)^2}+2(p^{-s}-1)\log\!\left(1-\frac1p\right).
+\]
+At $\lambda=0$ all even deformation cumulants vanish; at $\lambda=1$ they become explicit rational functions of $x_p(s)$.
+
+\begin{theorem}[Deformation Cumulant/Hessian Tower and Spectral Action]
+Define the completed spectral action / free-energy functional by
+\[
+\mathcal F_X(s;\lambda)=-\log \Lambda_X^{\mathrm{def}}(s;\lambda).
+\]
+Then the order parameter and Hessian are
+\[
+\mathcal M_X(s;\lambda)=\frac{\partial \mathcal F_X}{\partial\lambda}
+=-\frac{\partial}{\partial\lambda}\log \Lambda_X^{\mathrm{def}}(s;\lambda),
+\qquad
+\chi_X(s;\lambda)=\frac{\partial^2 \mathcal F_X}{\partial\lambda^2}.
+\]
+At $\lambda=0$ one has the exact odd/even collapse
+\[
+\chi_X(s;0)=0,
+\qquad
+\frac{\partial^{2m}}{\partial\lambda^{2m}}\log \Lambda_X^{\mathrm{def}}(s;0)=0,
+\]
+and for $m\ge1$,
+\[
+\frac{\partial^{2m+1}}{\partial\lambda^{2m+1}}\log \Lambda_X^{\mathrm{def}}(s;0)
+=(2m+1)!\,\mathcal O_{2m+1}^{(X)}(s).
+\]
+At $\lambda=1$ the same cumulants remain explicit split-prime sums through the derivative formulas above, so the completed spectral package carries a closed thermodynamic and information-theoretic interpretation.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

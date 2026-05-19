@@ -2222,6 +2222,22 @@ with \emph{no even powers at all}. The first coefficient is
 \]
 and every higher odd coefficient is just the corresponding odd split-prime power sum of $x_p(s)$. In plain language: once the packet is centered correctly, the deformation theory is purely odd and globally convergent.
 
+And this is not only a finite-cutoff phenomenon. The linear coefficient already has a convergent prime kernel,
+\[
+(p^{-s}-1)\left[\frac{1}{p-1}+\log\!\left(1-\frac1p\right)\right],
+\]
+whose bracket decays like $1/p^2$, while every higher odd coefficient is bounded by a summable split-prime power series because $|x_p(s)|<1/(p-1)$. So the whole odd Taylor tower survives the limit $X\to\infty$: the completed spectral family is a genuine limiting analytic object, not just a sequence of nicer and nicer finite products.
+
+There is also now a clean thermodynamic read. If we define
+\[
+\mathcal F_X(s;\lambda)=-\log \Lambda_X^{\mathrm{def}}(s;\lambda),
+\]
+then $\mathcal F_X$ plays the role of a free energy or effective action for the completed defect packet. Its first $\lambda$-derivative is the order parameter, its second $\lambda$-derivative is the Hessian / susceptibility, and because the whole tower is odd one gets the exact statement
+\[
+\chi_X(s;0)=0.
+\]
+So the centered packet sits at a flat point of the deformation potential, and all of the non-trivial information is carried by the odd deformation cumulants.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3486,6 +3502,8 @@ Global Artanh Log Expansion & $\log\widehat D_X(s)$ is an explicit split-prime a
 Eisenstein Local-Global Valuation & $v_{\pi_r}(q\mp\omega)=n$ iff the branch holds mod $p^n$ but not $p^{n+1}$ & MCIV \\
 Completed Spectral $L$-Package & the completed packet is the $\lambda=1$ slice of an odd spectral family & MCV \\
 Odd Spectral Taylor Tower & all even $\lambda$-coefficients vanish and the family stays analytic for $|\lambda|<6$ & MCVI \\
+Infinite-Cutoff Spectral Limit & the odd Taylor tower converges absolutely to a genuine limiting analytic object & MCVII \\
+Spectral Action / Free Energy & deformation cumulants, Hessian, and the free-energy functional are explicit & MCVIII \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\
