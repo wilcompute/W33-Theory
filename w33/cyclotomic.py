@@ -419,6 +419,76 @@ def split_prime_completed_pgf(prime_limit: int, t: float) -> float:
     return value
 
 
+def completed_local_centered_reciprocity(split_prime: int, offset: float) -> float:
+    """Return C_p(1+u) C_p(1-u) for the completed local factor."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    return split_prime_completed_local_factor(p, 1 + offset) * split_prime_completed_local_factor(p, 1 - offset)
+
+
+def completed_global_centered_reciprocity(prime_limit: int, offset: float) -> float:
+    """Return C_X(1+u) C_X(1-u) for the completed split-prime product."""
+    return split_prime_completed_pgf(prime_limit, 1 + offset) * split_prime_completed_pgf(prime_limit, 1 - offset)
+
+
+def completed_local_log_nth_derivative_at_one(split_prime: int, order: int) -> float:
+    """Exact nth derivative of log C_p(t) at t=1 for the completed local factor."""
+    p = split_prime
+    if not is_prime(p) or p % 3 != 1:
+        raise ValueError("split_prime must be a prime congruent to 1 mod 3")
+    if order < 1:
+        raise ValueError("order must be >= 1")
+    if order == 1:
+        return completed_local_log_derivative_at_one(p)
+    if order % 2 == 0:
+        return 0.0
+    return 2 * math.factorial(order - 1) / ((p - 1) ** order)
+
+
+def completed_log_nth_derivative_at_one(prime_limit: int, order: int) -> float:
+    """Finite-cutoff nth derivative of log C_X(t) at t=1."""
+    return sum(completed_local_log_nth_derivative_at_one(p, order) for p in split_primes_mod_3(prime_limit))
+
+
+def completed_higher_cumulant_profile(prime_limits: list[int], orders: list[int]) -> dict[str, list[dict[str, object]]]:
+    """Profile the centered reciprocity and higher completed cumulants at t=1."""
+    payload: dict[str, list[dict[str, object]]] = {}
+    for order in orders:
+        key = str(order)
+        rows = []
+        for prime_limit in prime_limits:
+            rows.append(
+                {
+                    "prime_limit": prime_limit,
+                    "split_prime_count": len(split_primes_mod_3(prime_limit)),
+                    "log_derivative_at_one": completed_log_nth_derivative_at_one(prime_limit, order),
+                }
+            )
+        payload[key] = rows
+    return payload
+
+
+def completed_reciprocity_profile(prime_limits: list[int], offsets: list[float]) -> dict[str, list[dict[str, object]]]:
+    """Profile the exact centered reciprocity C_X(1+u) C_X(1-u)=1 numerically."""
+    payload: dict[str, list[dict[str, object]]] = {}
+    for offset in offsets:
+        key = str(offset)
+        rows = []
+        for prime_limit in prime_limits:
+            product = completed_global_centered_reciprocity(prime_limit, offset)
+            rows.append(
+                {
+                    "prime_limit": prime_limit,
+                    "offset": offset,
+                    "reciprocity_product": product,
+                    "abs_error_from_one": abs(product - 1.0),
+                }
+            )
+        payload[key] = rows
+    return payload
+
+
 def completed_local_log_derivative_at_one(split_prime: int) -> float:
     """First derivative of log of the completed local factor at t=1."""
     p = split_prime

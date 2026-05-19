@@ -738,11 +738,10 @@ has no known fundamental derivation. The $W(3,3)$ program produces multiple clos
 \begin{mathnote}
 The symbol $\Phi_n$ stands for the \emph{$n$-th cyclotomic polynomial} evaluated at $q$. You only need three specific values at $q = 3$:
 \[
-\Phi_2 = q+1 = 4, \quad
-\Phi_3 = q^2 + q + 1 = 13, \quad
-\Phi_4 = q^2 + 1 = 10, \quad
-\Phi_5 = q^4+q^3+q^2+q+1 = 121, \quad
-\Phi_6 = q^2 - q + 1 = 7.
+\begin{aligned}
+\Phi_2 &= q+1 = 4, &\qquad \Phi_3 &= q^2 + q + 1 = 13, &\qquad \Phi_4 &= q^2 + 1 = 10, \\
+\Phi_5 &= q^4+q^3+q^2+q+1 = 121, &\qquad \Phi_6 &= q^2 - q + 1 = 7.
+\end{aligned}
 \]
 The shorter list $(13, 10, 7)$ recurs constantly, but for the fine-structure
 constant it is helpful to know the two extra values $\Phi_2 = 4$ and
@@ -2133,6 +2132,33 @@ That completed product even has a finite slope at the special point $t=1$. Its e
 \kappa_{\mathrm{cycl}}=\sum_{p\equiv1\ (3)}\left(\frac{2}{p-1}+2\log\left(1-\frac1p\right)\right),
 \]
 which the current cutoff already estimates as about $0.0388253$. In other words: after you strip away the whole split-prime logarithmic growth, the packet still has a tiny but exact residual tangent.
+But the completed packet has an even cheekier property than that. If we write the parameter as $t=1+u$, then every completed local factor satisfies
+\[
+\mathcal C_p(1+u)\mathcal C_p(1-u)=1.
+\]
+That means the completed product is perfectly balanced around $t=1$: moving a little to the right is exactly inverted by moving the same distance to the left. In logarithmic language, $\log\mathcal C_p(1+u)$ is an odd function of $u$.
+
+The immediate consequence is striking: the completed Hessian is exactly zero. In plain English, once the split-prime logarithmic growth has been peeled off, the packet is not curved at second order at all. Its first bend is cubic, not quadratic. Concretely,
+\[
+\left.\frac{d^2}{dt^2}\log \mathcal C_X(t)\right|_{t=1}=0
+\]
+for every cutoff $X$, and in fact every even completed cumulant vanishes identically. Only the odd ones survive.
+
+Even better, those odd cumulants are explicit. Beyond the first tangent, the next ones are
+\[
+\left.\frac{d^{2m+1}}{dt^{2m+1}}\log \mathcal C_X(t)\right|_{t=1}
+=2(2m)!\sum_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{1}{(p-1)^{2m+1}}
+\qquad (m\ge1).
+\]
+So the whole higher packet is now known exactly, not just heuristically. On the $X=10^6$ cutoff the first few odd constants are already
+\[
+\kappa_3\approx0.0218824,
+\qquad
+\kappa_5\approx0.00639444,
+\qquad
+\kappa_7\approx0.00518666.
+\]
+This is a very clean picture: after renormalization, the completed cyclotomic packet is centered-self-reciprocal, has zero quadratic curvature, and carries a fully odd cumulant tower.
 There is also now a genuine global Dirichlet-series version of the story. Replacing the fixed weight $t$ by $p^{-s}$ gives a completed defect product that is numerically stable for real $s>0$, with values already near $0.97311$ at $s=1/2$, $0.96375$ at $s=1$, and $0.95909$ at $s=2$ on the $X=10^6$ cutoff.
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 Best of all, the perfect-power mystery is now global. The identities

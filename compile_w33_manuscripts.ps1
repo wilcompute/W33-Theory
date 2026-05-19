@@ -65,14 +65,21 @@ function Get-MiKTeXTool {
 $pdflatex = Get-MiKTeXTool -ToolName 'pdflatex.exe'
 $initexmf = Get-MiKTeXTool -ToolName 'initexmf.exe'
 $bibtex = Get-MiKTeXTool -ToolName 'bibtex.exe'
+$mpm = Get-MiKTeXTool -ToolName 'mpm.exe'
 
 Write-Host '================================================'
 Write-Host ' W(3,3) Manuscript Build'
 Write-Host '================================================'
 Write-Host "Using pdflatex: $pdflatex"
 Write-Host "Using bibtex:   $bibtex"
+Write-Host "Using mpm:      $mpm"
 
 & $initexmf --enable-installer | Out-Null
+
+# MiKTeX may abort compilation if it has never checked for updates in this
+# user profile. A read-only update query is enough to populate the timestamp
+# and suppress the warning without actually installing anything.
+& $mpm --find-updates *> $null
 
 $targets = @('w33_paper', 'W33_FOR_EVERYONE')
 if ($IncludeLegacyW36) {

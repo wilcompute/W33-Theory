@@ -8,11 +8,17 @@ from w33.cyclotomic import (
     cyclotomic_perfect_power_theorem,
     branch_classes_for_split_prime,
     completed_cumulant_constant,
+    completed_global_centered_reciprocity,
+    completed_higher_cumulant_profile,
+    completed_local_centered_reciprocity,
     completed_defect_dirichlet_local_factor,
     completed_defect_dirichlet_log_derivative,
     completed_defect_dirichlet_product,
     completed_defect_dirichlet_profile,
     completed_local_log_derivative_at_one,
+    completed_local_log_nth_derivative_at_one,
+    completed_log_nth_derivative_at_one,
+    completed_reciprocity_profile,
     completed_tangent_profile,
     cyclotomic_perfect_power_scan,
     defect_density_partial_product,
@@ -209,6 +215,29 @@ def test_completed_tangent_constant_profile():
     assert math.isclose(profile[1]["completed_tangent_constant"], profile[1]["recombined"], rel_tol=0.0, abs_tol=1e-15)
     assert profile[1]["completed_tangent_constant"] > profile[0]["completed_tangent_constant"] > 0.0
     assert math.isclose(completed_cumulant_constant(19), profile[0]["completed_tangent_constant"], rel_tol=0.0, abs_tol=1e-18)
+
+
+def test_completed_reciprocity_and_hessian_tower():
+    for p in [7, 13, 19]:
+        assert math.isclose(completed_local_centered_reciprocity(p, 0.2), 1.0, rel_tol=0.0, abs_tol=1e-15)
+        assert math.isclose(completed_local_log_nth_derivative_at_one(p, 2), 0.0, rel_tol=0.0, abs_tol=1e-18)
+        assert math.isclose(completed_local_log_nth_derivative_at_one(p, 4), 0.0, rel_tol=0.0, abs_tol=1e-18)
+    assert math.isclose(completed_local_log_nth_derivative_at_one(7, 3), 4 / (6**3), rel_tol=0.0, abs_tol=1e-18)
+    assert math.isclose(completed_local_log_nth_derivative_at_one(7, 5), 48 / (6**5), rel_tol=0.0, abs_tol=1e-18)
+    assert math.isclose(completed_global_centered_reciprocity(1000, 0.25), 1.0, rel_tol=0.0, abs_tol=1e-12)
+    assert math.isclose(completed_log_nth_derivative_at_one(31, 2), 0.0, rel_tol=0.0, abs_tol=1e-18)
+    assert math.isclose(
+        completed_log_nth_derivative_at_one(19, 3),
+        4 * ((1 / 6**3) + (1 / 12**3) + (1 / 18**3)),
+        rel_tol=0.0,
+        abs_tol=1e-18,
+    )
+    profile = completed_higher_cumulant_profile([19, 31], [1, 2, 3, 5])
+    assert math.isclose(profile["2"][0]["log_derivative_at_one"], 0.0, rel_tol=0.0, abs_tol=1e-18)
+    assert profile["3"][1]["log_derivative_at_one"] > profile["3"][0]["log_derivative_at_one"] > 0.0
+    reciprocity = completed_reciprocity_profile([31, 1000], [0.2, 0.25])
+    assert reciprocity["0.2"][0]["abs_error_from_one"] < 1e-12
+    assert reciprocity["0.25"][1]["abs_error_from_one"] < 1e-12
 
 
 def test_completed_dirichlet_package():

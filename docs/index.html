@@ -12451,7 +12451,8 @@
         <ul>
           <li><strong>Octahedral / codec:</strong> α⁻¹<sub>skel</sub> = τ(O)/q + q² = 128 + 9 = 137.</li>
           <li><strong>Polynomial:</strong> α⁻¹<sub>skel</sub> = q⁴ + 2q³ + 2 = 81 + 54 + 2 = 137.</li>
-          <li><strong>Cyclotomic:</strong> α⁻¹<sub>skel</sub> = Φ<sub>5</sub>(q) + Φ<sub>2</sub>(q)² = 121 + 16 = 137.</li>
+          <li><strong>Cyclotomic:</strong> α⁻¹<sub>skel</sub> = Φ<sub>5</sub>(q) + Φ<sub>2</sub>(q)² = 121 + 16 = 137.
+          </li>
           <li><strong>Gaussian norm:</strong> α⁻¹<sub>skel</sub> = (k−1)² + μ² = 11² + 4² = 137.</li>
           <li><strong>Codec + shift:</strong> α⁻¹<sub>skel</sub> = (k−1)k + (q+2) = 132 + 5 = 137.</li>
           <li><strong>Conway / moonshine:</strong> α⁻¹<sub>skel</sub> = 47 + 59 + 71 − 40 = 137.</li>
@@ -12459,9 +12460,32 @@
         <p>The older compact spectral checksum <code>k² − (|r| + |s| + 1) = 144 − 7 = 137</code> remains a useful
           consistency line, but the six-form closure is stronger: the same prime appears simultaneously in the
           codec shell, the pure q = 3 polynomial tower, the cyclotomic packet, Gaussian arithmetic, the
-          non-backtracking shift packet, and the Conway–Monster boundary.  The electroweak shell is already visible
-          before the matter lift: <strong>α<sup>−1</sup>(M<sub>Z</sub>) ≈ 128 = τ(O)/q</strong>, and the extra +9 plus the
+          non-backtracking shift packet, and the Conway–Monster boundary. The electroweak shell is already visible
+          before the matter lift: <strong>α<sup>−1</sup>(M<sub>Z</sub>) ≈ 128 = τ(O)/q</strong>, and the extra +9 plus
+          the
           propagator correction produce the Thomson-limit value.</p>
+
+        <h4>Completed Cyclotomic Reciprocity — the packet is flat at second order</h4>
+        <p>The newer split-prime cyclotomic packet has now gone one level deeper too. After removing the whole
+          split-prime Mertens singularity, the completed product satisfies an exact centered reciprocity law</p>
+        <div class="math-block">
+          <span class="eq">C<sub>X</sub>(1+u) C<sub>X</sub>(1-u) = 1</span>
+        </div>
+        <p>for every cutoff <code>X</code>. So the renormalized packet is perfectly balanced around <code>t=1</code>:
+          the left and right displacements are exact multiplicative inverses. Equivalently, <code>log C<sub>X</sub>(1+u)</code>
+          is an odd function of <code>u</code>.</p>
+        <p>That forces the completed Hessian to vanish exactly:</p>
+        <div class="math-block">
+          <span class="eq">d²/dt² log C<sub>X</sub>(t) |<sub>t=1</sub> = 0</span>
+        </div>
+        <p>So after renormalization the packet is not curved at quadratic order at all; its first nontrivial bend is
+          cubic. The surviving odd completed cumulants are explicit split-prime sums, and at the current cutoff they
+          already stabilize near</p>
+        <div class="math-block">
+          <span class="eq">κ<sub>3</sub> ≈ 0.0218824, &ensp; κ<sub>5</sub> ≈ 0.00639444, &ensp; κ<sub>7</sub> ≈ 0.00518666</span>
+        </div>
+        <p>That is a very sharp structural statement: the completed cyclotomic packet is <strong>centered-self-reciprocal</strong>,
+          has <strong>zero quadratic curvature</strong>, and carries a fully <strong>odd cumulant tower</strong>.</p>
 
         <h3 style="color: #a78bfa;">The Gaussian Integer Layer — Why α = 137.036 is Forced</h3>
         <div class="formula-highlight" style="border-left-color: #a78bfa; background: rgba(167,139,250,0.08);">

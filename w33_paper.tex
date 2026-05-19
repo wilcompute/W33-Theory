@@ -1343,9 +1343,10 @@ G_X(0)\log X\approx1.88745,\qquad G_X(1/2)\sqrt{\log X}\approx1.37576,
 so the exponent is not heuristic: it interpolates exactly as $1-t$.
 There is now a sharper global object underneath this decay law. If
 \[
-M_X=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}\left(1-\frac1p\right),
-\qquad
-\mathcal C_X(t)=G_X(t)M_X^{-2(1-t)},
+\begin{aligned}
+M_X&=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}\left(1-\frac1p\right), \\
+\mathcal C_X(t)&=G_X(t)M_X^{-2(1-t)},
+\end{aligned}
 \]
 then each local completed factor satisfies
 \[
@@ -1365,6 +1366,31 @@ which on the verified cutoff $X=10^6$ is already stabilized near $\kappa_{\mathr
 \kappa_X=\mathbb E[T_X]+2\log M_X,
 \]
 so the completed tangent is the finite packet mean with its full split-prime Mertens singularity subtracted off.
+There is a sharper hidden symmetry at exactly the same point. Writing $t=1+u$, each completed local factor obeys the centered reciprocity law
+\[
+\mathcal C_p(1+u)\mathcal C_p(1-u)=1,
+\]
+so $\log\mathcal C_p(1+u)$ is an odd function of $u$. Hence the completed Hessian vanishes identically:
+\[
+\left.\frac{d^2}{dt^2}\log \mathcal C_p(t)\right|_{t=1}=0,
+\qquad
+\left.\frac{d^2}{dt^2}\log \mathcal C_X(t)\right|_{t=1}=0
+\]
+for every finite cutoff $X$. More generally, every even completed cumulant is exactly zero, while the odd derivatives are explicit split-prime sums:
+\[
+\left.\frac{d^{2m+1}}{dt^{2m+1}}\log \mathcal C_X(t)\right|_{t=1}
+=2(2m)!\sum_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{1}{(p-1)^{2m+1}}
+\qquad (m\ge1).
+\]
+At $X=10^6$ this gives the first higher constants
+\[
+\kappa_3\approx0.021882373868,
+\qquad
+\kappa_5\approx0.006394439992,
+\qquad
+\kappa_7\approx0.005186664291.
+\]
+So the completed cyclotomic packet is not merely finite at $t=1$; it is centered-self-reciprocal there, with an exactly vanishing curvature and a fully odd cumulant tower.
 The same package globalizes from PGFs to a genuine completed defect Dirichlet series: for $\Re(s)>0$,
 \[
 \widehat D_X(s)=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{p-2+p^{-s}}{p-p^{-s}}\left(1-\frac1p\right)^{-2(1-p^{-s})}

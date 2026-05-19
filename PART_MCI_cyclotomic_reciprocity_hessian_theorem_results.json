@@ -1,0 +1,11 @@
+{
+  "statement": "For the completed split-prime product C_X(t), the centered involution C_X(1+u) C_X(1-u)=1 holds exactly. Hence log C_X(1+u) is odd in u, all even derivatives at t=1 vanish exactly, and the odd completed cumulants are explicit split-prime sums.",
+  "largest_cutoff_cumulants": {
+    "1": 0.03882532064856443,
+    "2": 0.0,
+    "3": 0.0218823738684296,
+    "4": 0.0,
+    "5": 0.006394439992050697,
+    "7": 0.005186664291268501
+  }
+}
