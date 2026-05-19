@@ -1,0 +1,102 @@
+{
+  "cascade_quotients": [
+    {
+      "expected": 6,
+      "from": "D_4",
+      "from_order": 192,
+      "match": true,
+      "quotient": 6,
+      "substrate_form": "q! = Master Equation root",
+      "to": "F_4",
+      "to_order": 1152
+    },
+    {
+      "expected": 45,
+      "from": "F_4",
+      "from_order": 1152,
+      "match": true,
+      "quotient": 45,
+      "substrate_form": "Q_count = substrate Q primitive",
+      "to": "E_6",
+      "to_order": 51840
+    },
+    {
+      "expected": 56,
+      "from": "E_6",
+      "from_order": 51840,
+      "match": true,
+      "quotient": 56,
+      "substrate_form": "2^q * Phi_6 = Klein sextactic count = tomotope cells * Heawood",
+      "to": "E_7",
+      "to_order": 2903040
+    },
+    {
+      "expected": 240,
+      "from": "E_7",
+      "from_order": 2903040,
+      "match": true,
+      "quotient": 240,
+      "substrate_form": "|E| = E_8 root count = W(3,3) edge count",
+      "to": "E_8",
+      "to_order": 696729600
+    }
+  ],
+  "chiral_sector_tie_in": {
+    "all_equal": true,
+    "as_2qplus1_f_H1": 31104,
+    "as_two_H1_WD4": 31104,
+    "comment": "The chiral-sector discriminant decomposes as 2^(q+1) * f * H_1, exposing the gauge sector (f = 24 = positive spectral multiplicity), the logical sector (H_1 = 81 = matter), and the binary shell (2^(q+1) = 16 = 2^mu) simultaneously in one number.",
+    "delta_chiral": 31104,
+    "substrate_decomposition": "Delta_chiral = 2 * H_1 * |W(D_4)| = 2^(q+1) * f * H_1"
+  },
+  "header": {
+    "substrate_constants": {
+      "H_1": 81,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Q_count": 45,
+      "edges": 240,
+      "f": 24,
+      "mu": 4,
+      "q": 3,
+      "q_factorial": 6,
+      "sextactic": 56,
+      "tomotope_cells": 8
+    }
+  },
+  "honesty_boundary": "All Weyl group orders are standard arithmetic facts (Bourbaki).  The substrate identifications of the quotient values (q!, Q_count, 2^q Phi_6, |E|) are exact arithmetic matches.  The Phi_4-factorial closure is a clean structural identity, not a new proof of anything about E_8; it is a substrate-primitive reading of the exceptional Lie hierarchy.",
+  "klein_anchor": {
+    "WD4_value": 192,
+    "comment": "|W(D_4)| = 192 is the Klein quartic invariant sum AND the 24-cell Weyl group order AND the substrate's tomotope flag count.  The exceptional Weyl chain is anchored at this triple-coincidence.",
+    "is_klein_closure_value": true,
+    "klein_quartic_invariant_sum": "Weierstrass + Bitangents + Sextactic + Hurwitz = 192",
+    "substrate_check": true,
+    "substrate_form_WD4": "f * 2^q = 24 * 8"
+  },
+  "substrate_factorisation_of_WE8": {
+    "WE8": 696729600,
+    "alt_form_1": "|W(D_4)| * Phi_4! = 192 * 3628800",
+    "alt_form_2": "f * 2^q * Phi_4! = 24 * 8 * 3628800",
+    "key_point": "|W(E_8)| = positive spectral multiplicity * tomotope cells * factorial of the 4th cyclotomic of q.",
+    "match": true,
+    "substrate_form": "f * 2^q * Phi_4!",
+    "substrate_value": 696729600
+  },
+  "theorem": "W(3,3) Exceptional Weyl Chain Closure Theorem.  The exceptional Weyl group cascade D_4 subset F_4 subset E_6 subset E_7 subset E_8 has four consecutive index quotients all equal to substrate primitives: q! = 6, Q_count = 45, 2^q * Phi_6 = 56, and |E| = 240.  Their product equals Phi_4! = 10! = 3 628 800, so the total quotient |W(E_8)| / |W(D_4)| equals the factorial of the fourth cyclotomic Phi_4 = q^2 + 1.  Equivalently, |W(E_8)| = |W(D_4)| * Phi_4! = f * 2^q * Phi_4!.  The base |W(D_4)| = 192 is the Klein quartic invariant sum, anchoring the exceptional chain at the Klein closure point.  The chiral-sector discriminant equals 2 * H_1 * |W(D_4)| = 2^(q+1) * f * H_1, exposing the logical, gauge, and binary sectors of the substrate in one number.",
+  "total_quotient_phi4_factorial": {
+    "WE8_over_WD4": 3628800,
+    "closed_form": "|W(E_8)| = |W(D_4)| * Phi_4!",
+    "match_phi4_factorial": true,
+    "match_product_of_quotients": true,
+    "phi4_factorial": 3628800,
+    "product_of_4_quotients": 3628800,
+    "value_check": true
+  },
+  "weyl_orders": {
+    "D_4": 192,
+    "E_6": 51840,
+    "E_7": 2903040,
+    "E_8": 696729600,
+    "F_4": 1152
+  }
+}
