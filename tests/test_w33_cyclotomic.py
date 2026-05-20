@@ -63,6 +63,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_real_packet,
     completed_defect_spectral_uniform_wall_packet,
     completed_defect_spectral_uniform_wall_profile,
+    completed_defect_spectral_wall_effective_packet,
+    completed_defect_spectral_wall_effective_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -611,6 +613,22 @@ def test_completed_defect_spectral_uniform_wall_limit_package():
     assert wall_rows[-1]["wall_gap"] == 0.0
     assert wall_rows[-1]["hessian"] > wall_rows[-2]["hessian"] > wall_rows[0]["hessian"]
     assert wall_rows[-1]["stiffness"] < wall_rows[-2]["stiffness"] < wall_rows[0]["stiffness"]
+
+
+def test_completed_defect_spectral_wall_effective_theory_package():
+    packet = completed_defect_spectral_wall_effective_packet(100000, 1.0)
+    assert packet["third_derivative"] > 0.0
+    assert packet["epsilon_order_slope"] == packet["hessian"]
+    assert packet["epsilon_hessian_slope"] == packet["third_derivative"]
+    assert packet["epsilon_stiffness_slope"] > 0.0
+
+    profile = completed_defect_spectral_wall_effective_profile([100000], [1.0], [1e-1, 1e-2, 1e-3])
+    rows_1e1 = profile["1.0"]["0.1"][0]
+    rows_1e2 = profile["1.0"]["0.01"][0]
+    rows_1e3 = profile["1.0"]["0.001"][0]
+    assert rows_1e3["order_error"] < rows_1e2["order_error"] < rows_1e1["order_error"]
+    assert rows_1e3["hessian_error"] < rows_1e2["hessian_error"] < rows_1e1["hessian_error"]
+    assert rows_1e3["stiffness_error"] < rows_1e2["stiffness_error"] < rows_1e1["stiffness_error"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

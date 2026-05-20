@@ -1690,6 +1690,66 @@ def completed_defect_spectral_uniform_wall_profile(
     return payload
 
 
+def completed_defect_spectral_wall_effective_packet(prime_limit: int, s: float) -> dict[str, float]:
+    """Exact wall packet together with first-order boundary effective coefficients in ε = 6 - λ."""
+    wall_packet = completed_defect_spectral_uniform_wall_packet(prime_limit, s)
+    wall = completed_defect_spectral_uniform_radius_lower_bound()
+    third = -completed_defect_spectral_log_lambda_derivative(prime_limit, s, 3, deformation=wall).real
+    hessian = wall_packet["hessian"]
+    stiffness = wall_packet["stiffness"]
+    return {
+        **wall_packet,
+        "third_derivative": third,
+        "epsilon_order_slope": hessian,
+        "epsilon_hessian_slope": third,
+        "epsilon_stiffness_slope": (third / (hessian**2)) if hessian > 0 else math.inf,
+        "wall_epsilon": 0.0,
+        "wall_stiffness": stiffness,
+    }
+
+
+def completed_defect_spectral_wall_effective_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    epsilons: list[float],
+) -> dict[str, dict[str, list[dict[str, float]]]]:
+    """Profile the first-order boundary effective theory around λ = 6 using ε = 6 - λ."""
+    payload: dict[str, dict[str, list[dict[str, float]]]] = {}
+    wall = completed_defect_spectral_uniform_radius_lower_bound()
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for epsilon in epsilons:
+            if epsilon <= 0 or epsilon > wall:
+                raise ValueError("epsilons must satisfy 0 < epsilon <= 6")
+            inner_key = str(epsilon)
+            rows = []
+            for prime_limit in prime_limits:
+                wall_packet = completed_defect_spectral_wall_effective_packet(prime_limit, s)
+                actual = completed_defect_spectral_real_packet(prime_limit, s, deformation=wall - epsilon)
+                predicted_order = wall_packet["order_parameter"] - wall_packet["epsilon_order_slope"] * epsilon
+                predicted_hessian = wall_packet["hessian"] - wall_packet["epsilon_hessian_slope"] * epsilon
+                predicted_stiffness = wall_packet["stiffness"] + wall_packet["epsilon_stiffness_slope"] * epsilon
+                rows.append(
+                    {
+                        "prime_limit": float(prime_limit),
+                        "epsilon": epsilon,
+                        "deformation": wall - epsilon,
+                        "actual_order_parameter": actual["order_parameter"],
+                        "predicted_order_parameter": predicted_order,
+                        "order_error": abs(actual["order_parameter"] - predicted_order),
+                        "actual_hessian": actual["hessian"],
+                        "predicted_hessian": predicted_hessian,
+                        "hessian_error": abs(actual["hessian"] - predicted_hessian),
+                        "actual_stiffness": actual["stiffness"],
+                        "predicted_stiffness": predicted_stiffness,
+                        "stiffness_error": abs(actual["stiffness"] - predicted_stiffness),
+                    }
+                )
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
