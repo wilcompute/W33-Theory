@@ -1477,6 +1477,154 @@ def completed_defect_spectral_infinite_dual_branch_profile(
     return payload
 
 
+def completed_defect_spectral_dual_stiffness(
+    prime_limit: int,
+    s: float,
+    target_order_parameter: float,
+    deformation_max: float = 5.9,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> dict[str, float]:
+    """Finite-cutoff dual curvature packet for the completed spectral action.
+
+    On the monotone real branch the Legendre dual satisfies
+
+        dΓ_X / dM = λ_X,
+        d²Γ_X / dM² = dλ_X / dM = 1 / χ_X,
+
+    where χ_X is the Hessian / susceptibility of the primal free energy.
+    """
+    dual_packet = completed_defect_spectral_legendre_dual(
+        prime_limit,
+        s,
+        target_order_parameter,
+        deformation_max=deformation_max,
+        tolerance=tolerance,
+        max_iterations=max_iterations,
+    )
+    hessian = dual_packet["hessian"]
+    stiffness = math.inf if hessian <= 0 else 1 / hessian
+    return {
+        "deformation": dual_packet["deformation"],
+        "action": dual_packet["action"],
+        "order_parameter": dual_packet["order_parameter"],
+        "hessian": hessian,
+        "dual": dual_packet["dual"],
+        "stiffness": stiffness,
+    }
+
+
+def completed_defect_spectral_infinite_dual_stiffness_interval(
+    prime_limit: int,
+    s: float,
+    target_order_parameter: float,
+    deformation_max: float = 5.9,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> dict[str, float]:
+    """Certified enclosure for the infinite-cutoff dual stiffness Υ∞ = Γ∞'' = dλ∞/dM.
+
+    Combine the MCXII inverse enclosure λ_- <= λ_∞ <= λ_+ with the compact-disk Hessian
+    tail bound 0 <= χ_∞ - χ_X <= H_X(ρ) and the monotonicity of χ_X in λ on the physical
+    branch. This yields
+
+        χ_X(λ_-) <= χ_∞(λ_∞) <= χ_X(λ_+) + H_X(ρ),
+
+    and therefore the reciprocal-stiffness bracket
+
+        1 / (χ_X(λ_+) + H_X(ρ)) <= Υ_∞ <= 1 / χ_X(λ_-).
+    """
+    lambda_interval = completed_defect_spectral_infinite_equation_of_state_interval(
+        prime_limit,
+        s,
+        target_order_parameter,
+        deformation_max=deformation_max,
+        tolerance=tolerance,
+        max_iterations=max_iterations,
+    )
+    lower_lambda = lambda_interval["lower_lambda"]
+    upper_lambda = lambda_interval["upper_lambda"]
+    hessian_tail = completed_defect_spectral_hessian_tail_bound(prime_limit, deformation_max)
+    lower_hessian_bound = completed_defect_spectral_hessian_real_global(prime_limit, s, lower_lambda)
+    upper_hessian_bound = completed_defect_spectral_hessian_real_global(prime_limit, s, upper_lambda) + hessian_tail
+
+    lower_stiffness = 0.0 if upper_hessian_bound <= 0 else 1 / upper_hessian_bound
+    upper_stiffness = math.inf if lower_hessian_bound <= 0 else 1 / lower_hessian_bound
+    stiffness_interval_width = math.inf if math.isinf(upper_stiffness) else upper_stiffness - lower_stiffness
+
+    return {
+        "lower_lambda": lower_lambda,
+        "upper_lambda": upper_lambda,
+        "lambda_interval_width": lambda_interval["interval_width"],
+        "order_parameter_tail_bound": lambda_interval["tail_bound"],
+        "lower_hessian_bound": lower_hessian_bound,
+        "upper_hessian_bound": upper_hessian_bound,
+        "hessian_tail_bound": hessian_tail,
+        "lower_stiffness": lower_stiffness,
+        "upper_stiffness": upper_stiffness,
+        "stiffness_interval_width": stiffness_interval_width,
+    }
+
+
+def completed_defect_spectral_infinite_dual_stiffness_profile(
+    reference_prime_limit: int,
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, dict[str, object]]]:
+    """Profile the reciprocal-susceptibility / dual-stiffness branch toward infinite cutoff."""
+    payload: dict[str, dict[str, dict[str, object]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            target_order = completed_defect_spectral_order_parameter_real_global(reference_prime_limit, s, deformation=deformation)
+            rows = []
+            previous_width = None
+            previous_stiffness = None
+            for prime_limit in prime_limits:
+                dual_packet = completed_defect_spectral_dual_stiffness(
+                    prime_limit,
+                    s,
+                    target_order,
+                    deformation_max=deformation,
+                )
+                interval = completed_defect_spectral_infinite_dual_stiffness_interval(
+                    prime_limit,
+                    s,
+                    target_order,
+                    deformation_max=deformation,
+                )
+                width = interval["stiffness_interval_width"]
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "reference_deformation": deformation,
+                        "target_order_parameter": target_order,
+                        "recovered_lambda": dual_packet["deformation"],
+                        "recovered_hessian": dual_packet["hessian"],
+                        "recovered_stiffness": dual_packet["stiffness"],
+                        "dual": dual_packet["dual"],
+                        "interval_lower_stiffness": interval["lower_stiffness"],
+                        "interval_upper_stiffness": interval["upper_stiffness"],
+                        "stiffness_interval_width": width,
+                        "lambda_interval_width": interval["lambda_interval_width"],
+                        "hessian_tail_bound": interval["hessian_tail_bound"],
+                        "stiffness_jump_from_previous": abs(dual_packet["stiffness"] - previous_stiffness) if previous_stiffness is not None else None,
+                        "interval_width_drop_from_previous": (previous_width - width) if previous_width is not None and not math.isinf(previous_width) and not math.isinf(width) else None,
+                    }
+                )
+                previous_width = width
+                previous_stiffness = dual_packet["stiffness"]
+            payload[outer_key][inner_key] = {
+                "reference_prime_limit": reference_prime_limit,
+                "target_order_parameter": target_order,
+                "rows": rows,
+            }
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

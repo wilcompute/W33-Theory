@@ -2348,6 +2348,29 @@ This is more than a numerical observation. It means the completed spectral packe
 \end{enumerate}
 So by this stage the completed spectral object is no longer just “an Euler product with remarkable arithmetic.” It is a complete one-parameter thermodynamic system all the way to infinite cutoff, with both primal and dual descriptions under control.
 
+There is one more piece of thermodynamic geometry hiding inside that statement. The dual branch does not just exist; it has an exact curvature law. On the primal side, the Hessian
+\[
+\chi_X(s;\lambda)=\frac{\partial^2 \mathcal F_X}{\partial\lambda^2}
+\]
+measures how rapidly the order parameter changes when we move the deformation variable. On the dual side, the natural question is the opposite one: how rapidly does the reconstructed deformation change when we move the response variable $M$? The answer is beautifully clean:
+\[
+\frac{d\lambda_X}{dM}=\Gamma_X''(s;M)=\frac{1}{\chi_X\bigl(s;\lambda_X(s;M)\bigr)}.
+\]
+So the primal susceptibility and the dual curvature are exact reciprocals. A soft primal branch means a stiff dual branch, and a stiff primal branch means a soft dual branch.
+
+Because MCXII already fenced the true infinite-cutoff inverse branch between two explicit finite-cutoff inverse branches, the same idea now fences the dual curvature itself. The finite-cutoff Hessian sits below the true infinite-cutoff Hessian by at most an explicit tail bound, so the infinite-cutoff dual stiffness is trapped between two completely explicit reciprocals built from the finite-cutoff branch. In other words: not only do the dual variables exist globally, their curvature is quantitatively controlled.
+
+That is a genuine completion of the thermodynamic side of the packet. We now know all of the following:
+\begin{enumerate}
+\item the free energy exists to infinite cutoff;
+\item the order parameter gives a true global equation of state;
+\item that equation of state has a unique inverse branch;
+\item the Legendre-dual potential exists globally;
+\item the curvature of the dual branch is exactly the reciprocal of the primal susceptibility;
+\item that dual curvature itself comes with explicit infinite-cutoff enclosures.
+\end{enumerate}
+So the completed spectral packet is not just thermodynamic in spirit. It now has a controlled response theory on both sides of the Legendre transform.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3618,6 +3641,7 @@ Standalone Spectral $L$-Limit & the infinite-cutoff Euler product exists with ce
 Spectral Phase Geometry & the infinite-cutoff order parameter is positive and the Hessian is strictly positive for $\lambda>0$ & MCX \\
 Spectral Equation of State & the order parameter determines $\lambda$ uniquely and the branch admits a Legendre dual & MCXI \\
 Infinite-Cutoff Dual Branch & the inverse branch and Legendre dual survive to infinite cutoff with certified enclosures & MCXII \\
+Dual Stiffness / Reciprocal Susceptibility & the dual curvature is exactly $1/\chi$ and survives to infinite cutoff with explicit bounds & MCXIII \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

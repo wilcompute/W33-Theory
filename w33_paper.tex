@@ -1808,6 +1808,56 @@ converge to the corresponding infinite-cutoff dual branch
 Thus the completed spectral packet admits a genuine infinite-cutoff equation of state and a limiting Legendre-dual thermodynamic description.
 \end{theorem}
 
+The dual branch also inherits an exact curvature law. Since
+\[
+\frac{\partial\Gamma_X}{\partial M}=\lambda_X(s;M),
+\]
+differentiating the identity $M=\mathcal M_X\bigl(s;\lambda_X(s;M)\bigr)$ gives
+\[
+\frac{\partial^2\Gamma_X}{\partial M^2}=\frac{d\lambda_X}{dM}=\frac{1}{\chi_X\bigl(s;\lambda_X(s;M)\bigr)}.
+\]
+Thus the dual thermodynamic geometry is not merely present; its curvature is the exact reciprocal of the primal susceptibility.
+
+\begin{theorem}[Completed Spectral Dual Stiffness and Reciprocal Susceptibility]
+Fix real $s>0$ and finite cutoff $X$. On the monotone physical branch, the Legendre-dual potential
+\[
+\Gamma_X(s;M)=\lambda_X(s;M)\,M-\mathcal F_X\bigl(s;\lambda_X(s;M)\bigr)
+\]
+satisfies the exact derivative identities
+\[
+\frac{\partial\Gamma_X}{\partial M}=\lambda_X(s;M),
+\qquad
+\frac{\partial^2\Gamma_X}{\partial M^2}=\frac{d\lambda_X}{dM}=\frac{1}{\chi_X\bigl(s;\lambda_X(s;M)\bigr)}.
+\]
+In particular the dual branch is strictly convex wherever the primal Hessian is positive.
+
+Now fix a compact branch interval $0\le\lambda\le\rho<6$ and a target response value $M$ in the common image. If MCXII furnishes the inverse enclosure
+\[
+\lambda_-(X;M)\le \lambda_\infty(s;M)\le \lambda_+(X;M)
+\]
+and $H_X(\rho)$ denotes the compact-disk Hessian tail bound, then the infinite-cutoff Hessian satisfies
+\[
+\chi_X\bigl(s;\lambda_-(X;M)\bigr)
+\le
+\chi_\infty\bigl(s;\lambda_\infty(s;M)\bigr)
+\le
+\chi_X\bigl(s;\lambda_+(X;M)\bigr)+H_X(\rho).
+\]
+Therefore the infinite-cutoff dual stiffness
+\[
+\Upsilon_\infty(s;M)=\frac{d\lambda_\infty}{dM}=\Gamma_\infty''(s;M)
+\]
+admits the certified enclosure
+\[
+\frac{1}{\chi_X\bigl(s;\lambda_+(X;M)\bigr)+H_X(\rho)}
+\le
+\Upsilon_\infty(s;M)
+\le
+\frac{1}{\chi_X\bigl(s;\lambda_-(X;M)\bigr)}.
+\]
+So the dual branch survives to infinite cutoff together with explicit quantitative curvature control.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

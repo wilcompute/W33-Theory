@@ -1,0 +1,24 @@
+{
+  "theorem": "Completed spectral dual stiffness and reciprocal susceptibility",
+  "sample_target_order_parameter": 0.041764615734711484,
+  "sample_dual_stiffness_packet": {
+    "deformation": 0.9957575511652976,
+    "action": 0.03674747399299385,
+    "order_parameter": 0.041764615734711484,
+    "hessian": 0.014850347923420874,
+    "dual": 0.004839957496362117,
+    "stiffness": 67.33848965402849
+  },
+  "sample_infinite_stiffness_interval": {
+    "lower_lambda": 0.9944097981788218,
+    "upper_lambda": 0.9957575511652976,
+    "lambda_interval_width": 0.0013477529864758253,
+    "order_parameter_tail_bound": 2.0000100000000012e-05,
+    "lower_hessian_bound": 0.014828829820272246,
+    "upper_hessian_bound": 0.014850348123420874,
+    "hessian_tail_bound": 2.0000000004e-10,
+    "lower_stiffness": 67.33848874713406,
+    "upper_stiffness": 67.43620448276482,
+    "stiffness_interval_width": 0.0977157356307572
+  }
+}

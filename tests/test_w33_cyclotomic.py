@@ -57,6 +57,9 @@ from w33.cyclotomic import (
     completed_defect_spectral_equation_of_state_profile,
     completed_defect_spectral_infinite_equation_of_state_interval,
     completed_defect_spectral_infinite_dual_branch_profile,
+    completed_defect_spectral_dual_stiffness,
+    completed_defect_spectral_infinite_dual_stiffness_interval,
+    completed_defect_spectral_infinite_dual_stiffness_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -550,6 +553,41 @@ def test_completed_defect_spectral_infinite_dual_branch_limit_package():
     assert one_rows[2]["recovered_lambda"] < one_rows[1]["recovered_lambda"] < one_rows[0]["recovered_lambda"]
     assert two_rows[2]["recovered_lambda"] < two_rows[1]["recovered_lambda"] < two_rows[0]["recovered_lambda"]
     assert one_rows[2]["interval_width"] < one_rows[1]["interval_width"] < one_rows[0]["interval_width"]
+
+
+def test_completed_defect_spectral_dual_stiffness_package():
+    s = 1.0
+    prime_limit = 100000
+    target_order = completed_defect_spectral_order_parameter_real_global(prime_limit, s, 1.0)
+
+    packet = completed_defect_spectral_dual_stiffness(prime_limit, s, target_order, deformation_max=1.1)
+    assert abs(packet["deformation"] - 1.0) < 1e-10
+    assert packet["hessian"] > 0.0
+    assert packet["stiffness"] > 0.0
+    assert math.isclose(packet["stiffness"] * packet["hessian"], 1.0, rel_tol=0.0, abs_tol=1e-12)
+
+    h = 1e-6
+    dual_plus = completed_defect_spectral_legendre_dual(prime_limit, s, target_order + h, deformation_max=1.1)
+    dual_minus = completed_defect_spectral_legendre_dual(prime_limit, s, target_order - h, deformation_max=1.1)
+    fd_dual_prime = (dual_plus["dual"] - dual_minus["dual"]) / (2 * h)
+    fd_inverse_slope = (dual_plus["deformation"] - dual_minus["deformation"]) / (2 * h)
+    assert abs(fd_dual_prime - packet["deformation"]) < 1e-6
+    assert abs(fd_inverse_slope - packet["stiffness"]) < 1e-4
+
+    interval_1k = completed_defect_spectral_infinite_dual_stiffness_interval(1000, s, target_order, deformation_max=1.0)
+    interval_10k = completed_defect_spectral_infinite_dual_stiffness_interval(10000, s, target_order, deformation_max=1.0)
+    interval_100k = completed_defect_spectral_infinite_dual_stiffness_interval(100000, s, target_order, deformation_max=1.0)
+    assert 0.0 < interval_1k["lower_stiffness"] <= interval_1k["upper_stiffness"]
+    assert interval_100k["stiffness_interval_width"] < interval_10k["stiffness_interval_width"] < interval_1k["stiffness_interval_width"]
+    assert interval_100k["lower_stiffness"] <= packet["stiffness"] <= interval_100k["upper_stiffness"]
+
+    profile = completed_defect_spectral_infinite_dual_stiffness_profile(1000, [1000, 10000, 100000], [1.0], [1.0, 2.0])
+    one_rows = profile["1.0"]["1.0"]["rows"]
+    two_rows = profile["1.0"]["2.0"]["rows"]
+    assert one_rows[2]["stiffness_interval_width"] < one_rows[1]["stiffness_interval_width"] < one_rows[0]["stiffness_interval_width"]
+    assert two_rows[2]["stiffness_interval_width"] < two_rows[1]["stiffness_interval_width"] < two_rows[0]["stiffness_interval_width"]
+    assert one_rows[2]["interval_lower_stiffness"] <= one_rows[2]["recovered_stiffness"] <= one_rows[2]["interval_upper_stiffness"]
+    assert two_rows[2]["interval_lower_stiffness"] <= two_rows[2]["recovered_stiffness"] <= two_rows[2]["interval_upper_stiffness"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
