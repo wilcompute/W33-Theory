@@ -1,0 +1,281 @@
+{
+  "theorem": "Poisson-Kemeny Green kernel",
+  "packet": {
+    "parameters": {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "stationary_entry": {
+        "fraction": "1/40",
+        "numerator": 1,
+        "denominator": 40,
+        "float": 0.025
+      },
+      "edges": 240,
+      "nonedge_pairs": 540
+    },
+    "poisson_spectrum": {
+      "P_eigenvalues": {
+        "stationary": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "positive": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "negative": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        }
+      },
+      "Z_eigenvalues": {
+        "stationary": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "positive": {
+          "fraction": "6/5",
+          "numerator": 6,
+          "denominator": 5,
+          "float": 1.2
+        },
+        "negative": {
+          "fraction": "3/4",
+          "numerator": 3,
+          "denominator": 4,
+          "float": 0.75
+        }
+      },
+      "centered_Z_minus_Pi_eigenvalues": {
+        "stationary": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "positive": {
+          "fraction": "6/5",
+          "numerator": 6,
+          "denominator": 5,
+          "float": 1.2
+        },
+        "negative": {
+          "fraction": "3/4",
+          "numerator": 3,
+          "denominator": 4,
+          "float": 0.75
+        }
+      },
+      "multiplicities": {
+        "stationary": 1,
+        "positive": 24,
+        "negative": 15
+      }
+    },
+    "poisson_kernel": {
+      "formula": "Z = (I - P + Pi)^-1 = 21I/20 + 3A/40 - 19J/800",
+      "coefficients": {
+        "I": {
+          "fraction": "21/20",
+          "numerator": 21,
+          "denominator": 20,
+          "float": 1.05
+        },
+        "A": {
+          "fraction": "3/40",
+          "numerator": 3,
+          "denominator": 40,
+          "float": 0.075
+        },
+        "J": {
+          "fraction": "-19/800",
+          "numerator": -19,
+          "denominator": 800,
+          "float": -0.02375
+        }
+      },
+      "entry_values": {
+        "diagonal": {
+          "fraction": "821/800",
+          "numerator": 821,
+          "denominator": 800,
+          "float": 1.02625
+        },
+        "adjacent": {
+          "fraction": "41/800",
+          "numerator": 41,
+          "denominator": 800,
+          "float": 0.05125
+        },
+        "nonedge": {
+          "fraction": "-19/800",
+          "numerator": -19,
+          "denominator": 800,
+          "float": -0.02375
+        }
+      },
+      "shell_row_sum": {
+        "fraction": "1",
+        "numerator": 1,
+        "denominator": 1,
+        "float": 1.0
+      },
+      "trace": {
+        "fraction": "821/20",
+        "numerator": 821,
+        "denominator": 20,
+        "float": 41.05
+      }
+    },
+    "centered_poisson_kernel": {
+      "formula": "Z - Pi = 21I/20 + 3A/40 - 39J/800",
+      "coefficients": {
+        "I": {
+          "fraction": "21/20",
+          "numerator": 21,
+          "denominator": 20,
+          "float": 1.05
+        },
+        "A": {
+          "fraction": "3/40",
+          "numerator": 3,
+          "denominator": 40,
+          "float": 0.075
+        },
+        "J": {
+          "fraction": "-39/800",
+          "numerator": -39,
+          "denominator": 800,
+          "float": -0.04875
+        }
+      },
+      "entry_values": {
+        "diagonal": {
+          "fraction": "801/800",
+          "numerator": 801,
+          "denominator": 800,
+          "float": 1.00125
+        },
+        "adjacent": {
+          "fraction": "21/800",
+          "numerator": 21,
+          "denominator": 800,
+          "float": 0.02625
+        },
+        "nonedge": {
+          "fraction": "-39/800",
+          "numerator": -39,
+          "denominator": 800,
+          "float": -0.04875
+        }
+      },
+      "shell_row_sum": {
+        "fraction": "0",
+        "numerator": 0,
+        "denominator": 1,
+        "float": 0.0
+      },
+      "trace": {
+        "fraction": "801/20",
+        "numerator": 801,
+        "denominator": 20,
+        "float": 40.05
+      },
+      "diagonal_equals_kemeny_per_vertex": true,
+      "row_sum_equation": "801/800 + 12*(21/800) + 27*(-39/800) = 0"
+    },
+    "kemeny": {
+      "constant": {
+        "fraction": "801/20",
+        "numerator": 801,
+        "denominator": 20,
+        "float": 40.05
+      },
+      "trace_Z_minus_one": {
+        "fraction": "801/20",
+        "numerator": 801,
+        "denominator": 20,
+        "float": 40.05
+      },
+      "per_vertex": {
+        "fraction": "801/800",
+        "numerator": 801,
+        "denominator": 800,
+        "float": 1.00125
+      },
+      "formula": "24*(6/5) + 15*(3/4) = 801/20"
+    },
+    "hitting_times": {
+      "adjacent": {
+        "fraction": "39",
+        "numerator": 39,
+        "denominator": 1,
+        "float": 39.0
+      },
+      "nonedge": {
+        "fraction": "42",
+        "numerator": 42,
+        "denominator": 1,
+        "float": 42.0
+      },
+      "nonedge_minus_adjacent": {
+        "fraction": "3",
+        "numerator": 3,
+        "denominator": 1,
+        "float": 3.0
+      },
+      "nonedge_minus_adjacent_equals_q": true,
+      "formula": "H_ij = v*(Z_jj - Z_ij)"
+    },
+    "commute_and_resistance": {
+      "commute_adjacent": {
+        "fraction": "78",
+        "numerator": 78,
+        "denominator": 1,
+        "float": 78.0
+      },
+      "commute_nonedge": {
+        "fraction": "84",
+        "numerator": 84,
+        "denominator": 1,
+        "float": 84.0
+      },
+      "effective_resistance_adjacent": {
+        "fraction": "13/80",
+        "numerator": 13,
+        "denominator": 80,
+        "float": 0.1625
+      },
+      "effective_resistance_nonedge": {
+        "fraction": "7/40",
+        "numerator": 7,
+        "denominator": 40,
+        "float": 0.175
+      },
+      "kirchhoff_index": {
+        "fraction": "267/2",
+        "numerator": 267,
+        "denominator": 2,
+        "float": 133.5
+      },
+      "kirchhoff_from_shell_counts": true
+    },
+    "claim_boundary": "finite W33 random-walk Poisson/Kemeny kernel and hitting-resistance identity; not a continuum stochastic-process limit",
+    "poisson_kemeny_green_kernel_detected": true
+  }
+}
