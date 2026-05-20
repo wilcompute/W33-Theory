@@ -1,0 +1,146 @@
+{
+  "theorem": "Cross-branch gap normalization spine",
+  "packet": {
+    "source_commit_after_fetch": "3c619a82",
+    "ym_floor": {
+      "mass_gap_squared": {
+        "fraction": "1/9",
+        "numerator": 1,
+        "denominator": 9,
+        "float": 0.1111111111111111
+      },
+      "p2_local_factor": {
+        "fraction": "3/4",
+        "numerator": 3,
+        "denominator": 4,
+        "float": 0.75
+      },
+      "p2_floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "global_floor_scan": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "declared_floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "formula_aligned": true
+    },
+    "navier_stokes": {
+      "delta": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "enstrophy_decay_rate_2nu_delta": {
+        "fraction": "1/6",
+        "numerator": 1,
+        "denominator": 6,
+        "float": 0.16666666666666666
+      },
+      "vortex_barrier_delta_over_2": {
+        "fraction": "1/24",
+        "numerator": 1,
+        "denominator": 24,
+        "float": 0.041666666666666664
+      },
+      "delta_matches_ym_floor": true
+    },
+    "heat_kernel": {
+      "lambda_2": {
+        "fraction": "10",
+        "numerator": 10,
+        "denominator": 1,
+        "float": 10.0
+      },
+      "theta": {
+        "fraction": "10",
+        "numerator": 10,
+        "denominator": 1,
+        "float": 10.0
+      },
+      "lambda_2_equals_theta": true,
+      "residual_amplitudes": {
+        "C4_times_floor": {
+          "fraction": "30",
+          "numerator": 30,
+          "denominator": 1,
+          "float": 30.0
+        },
+        "C2_times_floor": {
+          "fraction": "20",
+          "numerator": 20,
+          "denominator": 1,
+          "float": 20.0
+        },
+        "C0_times_floor": {
+          "fraction": "880",
+          "numerator": 880,
+          "denominator": 1,
+          "float": 880.0
+        }
+      },
+      "residual_floor_amplitudes_integral": true
+    },
+    "cross_branch_spine": {
+      "integer_gap": {
+        "fraction": "5",
+        "numerator": 5,
+        "denominator": 1,
+        "float": 5.0
+      },
+      "integer_gap_over_q": {
+        "fraction": "5/3",
+        "numerator": 5,
+        "denominator": 3,
+        "float": 1.6666666666666667
+      },
+      "lambda_2_times_ns_decay_rate": {
+        "fraction": "5/3",
+        "numerator": 5,
+        "denominator": 3,
+        "float": 1.6666666666666667
+      },
+      "lambda2_decay_equals_kolmogorov": true,
+      "ns_delta_half_is_vortex_barrier": true,
+      "ym_floor_to_decay_rate_ratio": {
+        "fraction": "2",
+        "numerator": 2,
+        "denominator": 1,
+        "float": 2.0
+      }
+    },
+    "einstein_hilbert_ratios": {
+      "a0_over_a2": {
+        "fraction": "55/7",
+        "numerator": 55,
+        "denominator": 7,
+        "float": 7.857142857142857
+      },
+      "a4_over_a0": {
+        "fraction": "3/110",
+        "numerator": 3,
+        "denominator": 110,
+        "float": 0.02727272727272727
+      },
+      "c_EH_over_theta": {
+        "fraction": "32",
+        "numerator": 32,
+        "denominator": 1,
+        "float": 32.0
+      }
+    },
+    "normalization_spine_detected": true,
+    "claim_boundary": "finite W33 substrate normalization across the GitHub MCXXXIV-MCXL scripts; not an external continuum Clay proof by itself"
+  }
+}

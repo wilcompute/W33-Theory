@@ -87,8 +87,10 @@ def substrate_laplacian_spectrum(winding_number: int,
     # Winding contribution: n^2 * m^2
     winding_contrib = Fraction(winding_number ** 2) * m2
 
-    # Color-charge contribution: q^2 * (V/E)
-    charge_contrib = Fraction(color_charge ** 2) * MASS_GAP_RATIO
+    # Color-charge contribution: q^2 * m^2.
+    # The theorem statement uses m^2=(V/E)^2 as the charged-sector floor;
+    # keeping the square here makes the p=2 worst local factor exactly 1/12.
+    charge_contrib = Fraction(color_charge ** 2) * m2
 
     # Local p-adic factor: (1 - 1/p^2) for good primes, 1 for p|33
     if prime in (3, 11) or prime == 33:  # primes dividing E=33
@@ -235,12 +237,13 @@ def vacuum_uniqueness_proof() -> Dict:
     W33 zero-sheet: genus=0, TS-shadow=1 (absorbed into CSS-3), leaving
     exactly one ground state.
     """
-    zero_eigenvalue_sector = substrate_laplacian_spectrum(0, 0, 3)  # q=0,n=0
-    next_eigenvalue = float(substrate_laplacian_spectrum(0, 1, 3))   # q=1,n=0
+    zero_eigenvalue_sector = substrate_laplacian_spectrum(0, 0, 2)  # q=0,n=0, worst local prime
+    next_eigenvalue = float(substrate_laplacian_spectrum(0, 1, 2))   # q=1,n=0, global floor
 
     return {
         'vacuum_eigenvalue': float(zero_eigenvalue_sector),
         'first_excited_eigenvalue': next_eigenvalue,
+        'first_excited_prime': 2,
         'spectral_gap': next_eigenvalue - float(zero_eigenvalue_sector),
         'vacuum_is_zero_eigenstate': float(zero_eigenvalue_sector) == 0.0,
         'pi1_zero_sheet': 0,           # trivial fundamental group
