@@ -1939,6 +1939,25 @@ Then in the wall variable $\varepsilon=6-\lambda$ one has the first-order expans
 So the wall packet is a genuine finite boundary effective theory: moving inward from the wall decreases the primal response linearly and increases the dual stiffness linearly.
 \end{theorem}
 
+The canonical zero-sheet interior/wall pair is therefore not merely a two-point packet. The interval
+$[4,6]$ itself carries an exact transport law.
+
+\begin{theorem}[Zero-Sheet Boundary Transfer Law]
+Fix finite real $s>0$ and split-prime cutoff $X$. Between the canonical zero-sheet scales $\lambda=4$ and $\lambda=6$ one has the exact identities
+\[
+\mathcal F_X(6)-\mathcal F_X(4)=\int_4^6 \mathcal M_X(\lambda)\,d\lambda,
+\]
+\[
+\mathcal M_X(6)-\mathcal M_X(4)=\int_4^6 \chi_X(\lambda)\,d\lambda,
+\]
+\[
+\Sigma_X(4)-\Sigma_X(6)=\int_4^6 \frac{\tau_X(\lambda)}{\chi_X(\lambda)^2}\,d\lambda,
+\qquad
+\tau_X(\lambda)=\frac{d\chi_X}{d\lambda}.
+\]
+So the wall packet is obtained from the interior packet by transporting the order, susceptibility, and dual-softening densities across the zero-sheet interval $[4,6]$.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

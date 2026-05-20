@@ -65,6 +65,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_uniform_wall_profile,
     completed_defect_spectral_wall_effective_packet,
     completed_defect_spectral_wall_effective_profile,
+    completed_defect_spectral_dual_softening_density,
+    completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -629,6 +631,18 @@ def test_completed_defect_spectral_wall_effective_theory_package():
     assert rows_1e3["order_error"] < rows_1e2["order_error"] < rows_1e1["order_error"]
     assert rows_1e3["hessian_error"] < rows_1e2["hessian_error"] < rows_1e1["hessian_error"]
     assert rows_1e3["stiffness_error"] < rows_1e2["stiffness_error"] < rows_1e1["stiffness_error"]
+
+
+def test_completed_defect_spectral_boundary_transfer_law_package():
+    packet = completed_defect_spectral_boundary_transfer_packet(10000, 1.0, subintervals=160)
+    assert packet["wall_order_parameter"] > packet["interior_order_parameter"] > 0.0
+    assert packet["wall_hessian"] > packet["interior_hessian"] > 0.0
+    assert packet["interior_stiffness"] > packet["wall_stiffness"] > 0.0
+    assert completed_defect_spectral_dual_softening_density(10000, 1.0, 4.0) > 0.0
+    assert completed_defect_spectral_dual_softening_density(10000, 1.0, 6.0) > 0.0
+    assert packet["action_transfer_error"] < 1e-4
+    assert packet["order_transfer_error"] < 1e-4
+    assert packet["stiffness_transfer_error"] < 1e-4
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

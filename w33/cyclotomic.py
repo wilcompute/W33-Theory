@@ -1750,6 +1750,85 @@ def completed_defect_spectral_wall_effective_profile(
     return payload
 
 
+def completed_defect_spectral_dual_softening_density(prime_limit: int, s: float, deformation: float) -> float:
+    """Positive density whose λ-integral gives the loss of dual stiffness toward the wall."""
+    hessian = completed_defect_spectral_hessian_real_global(prime_limit, s, deformation=deformation)
+    if hessian <= 0:
+        return math.inf
+    third = -completed_defect_spectral_log_lambda_derivative(prime_limit, s, 3, deformation=deformation).real
+    return third / (hessian**2)
+
+
+def completed_defect_spectral_boundary_transfer_packet(
+    prime_limit: int,
+    s: float,
+    interior_deformation: float = 4.0,
+    wall_deformation: float = 6.0,
+    subintervals: int = 120,
+) -> dict[str, float]:
+    """Exact interior-to-wall transfer packet between λ = 4 and λ = 6 on the real slice.
+
+    The endpoint differences are exact. Trapezoidal quadratures numerically certify the three transport
+    identities
+
+        F(6)-F(4) = ∫_4^6 M(λ) dλ,
+        M(6)-M(4) = ∫_4^6 χ(λ) dλ,
+        Σ(4)-Σ(6) = ∫_4^6 τ(λ)/χ(λ)^2 dλ.
+    """
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    if not (0 <= interior_deformation < wall_deformation):
+        raise ValueError("need 0 <= interior_deformation < wall_deformation")
+    if subintervals < 2:
+        raise ValueError("subintervals must be >= 2")
+
+    interior = completed_defect_spectral_real_packet(prime_limit, s, deformation=interior_deformation)
+    wall = completed_defect_spectral_real_packet(prime_limit, s, deformation=wall_deformation)
+
+    def trapz(func):
+        step = (wall_deformation - interior_deformation) / subintervals
+        total = 0.5 * (func(interior_deformation) + func(wall_deformation))
+        for index in range(1, subintervals):
+            total += func(interior_deformation + index * step)
+        return total * step
+
+    integrated_order = trapz(lambda deformation: completed_defect_spectral_order_parameter_real_global(prime_limit, s, deformation=deformation))
+    integrated_hessian = trapz(lambda deformation: completed_defect_spectral_hessian_real_global(prime_limit, s, deformation=deformation))
+    integrated_dual_softening = trapz(lambda deformation: completed_defect_spectral_dual_softening_density(prime_limit, s, deformation=deformation))
+
+    delta_action = wall["action"] - interior["action"]
+    delta_order = wall["order_parameter"] - interior["order_parameter"]
+    delta_stiffness = interior["stiffness"] - wall["stiffness"]
+    width = wall_deformation - interior_deformation
+
+    return {
+        "prime_limit": float(prime_limit),
+        "s": s,
+        "interior_deformation": interior_deformation,
+        "wall_deformation": wall_deformation,
+        "interior_action": interior["action"],
+        "wall_action": wall["action"],
+        "interior_order_parameter": interior["order_parameter"],
+        "wall_order_parameter": wall["order_parameter"],
+        "interior_hessian": interior["hessian"],
+        "wall_hessian": wall["hessian"],
+        "interior_stiffness": interior["stiffness"],
+        "wall_stiffness": wall["stiffness"],
+        "delta_action": delta_action,
+        "delta_order_parameter": delta_order,
+        "delta_stiffness": delta_stiffness,
+        "integrated_order": integrated_order,
+        "integrated_hessian": integrated_hessian,
+        "integrated_dual_softening": integrated_dual_softening,
+        "action_transfer_error": abs(delta_action - integrated_order),
+        "order_transfer_error": abs(delta_order - integrated_hessian),
+        "stiffness_transfer_error": abs(delta_stiffness - integrated_dual_softening),
+        "average_order_parameter": delta_action / width,
+        "average_hessian": delta_order / width,
+        "average_dual_softening": delta_stiffness / width,
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
