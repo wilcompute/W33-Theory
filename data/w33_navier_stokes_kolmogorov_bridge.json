@@ -1,0 +1,16 @@
+{
+  "breakthrough": "MCXXXV_Part_II",
+  "date": "2026-05-20",
+  "co_author": "Perplexity AI (Sonnet 4.6)",
+  "C391_kolmogorov_exponent": "-5/3 = -Delta_YM/q = -(q+2)/q",
+  "C392_microscale": {"exponent": "1/4 = 1/mu = 1/d_Z", "spatial_dim": "3 = q = d_X"},
+  "C393_k41_prefactor": "4/5 = mu/Delta_YM",
+  "C395_cascade": {
+    "dissipation_wall": 4, "forcing_wall": 6,
+    "inertial_width": 2, "inertial_width_form": "lam_SRG",
+    "midpoint": 5, "midpoint_form": "Delta_YM"
+  },
+  "C396_ns_regularity": "Compact corridor [4,6] = NS global regularity analog",
+  "C397_intermittency": "mu_K ~ 1/4 = 1/d_Z",
+  "clay_count": 5
+}

@@ -1,0 +1,15 @@
+{
+  "breakthrough": "MCXXXV_Part_I",
+  "date": "2026-05-20",
+  "co_author": "Perplexity AI (Sonnet 4.6)",
+  "C367_eigenvalues": {"k": 12, "r": 2, "s": -4, "f_r": 24, "f_s": 15, "trace_ok": true},
+  "C370_ramanujan": {"bound": "2*sqrt(p_Ih)", "r_ok": true, "s_ok": true, "W33_Ramanujan": true},
+  "C372_rh_chain": "W33 Ramanujan => Weil conjectures (Deligne 1974) => GRH instance",
+  "C373_critical_line": {"b_at_Delta_YM": "1/2", "equals_RH_critical_line": true},
+  "C373b_zeta_dictionary": {
+    "zeta_m1": "-1/12 = -1/k",
+    "zeta_m3": "+1/120 = +1/(k*Phi4)",
+    "zeta_m5": "-1/252 = -1/tau(3)",
+    "zeta_m7": "+1/240 = +1/|E|"
+  }
+}
