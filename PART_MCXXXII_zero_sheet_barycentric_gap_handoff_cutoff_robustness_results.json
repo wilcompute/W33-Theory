@@ -1,0 +1,166 @@
+{
+  "theorem": "Zero-sheet barycentric gap-handoff cutoff robustness",
+  "shared_resonance_all_equal": true,
+  "cascade_all_detected": true,
+  "wall_gap_drop_reference": 0.38305552720929903,
+  "wall_gap_drop_max_deviation": 5.820721682425756e-11,
+  "secondary_crossing_reference": 1.7384967374464677,
+  "secondary_crossing_max_deviation": 2.0027860692106714e-06,
+  "dominant_recipient_all_equal": true,
+  "majority_transfer_all": true,
+  "per_cutoff": [
+    {
+      "prime_limit": 1000,
+      "shared_resonance_s": 2.0,
+      "handoff_cascade_detected": true,
+      "secondary_gap_sequence": [
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "softening_to_order",
+        "softening_to_order",
+        "softening_to_order"
+      ],
+      "wall_gap_rank_sequence": [
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "softening_to_order_gap_rank_sequence": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "order_to_hessian_gap_rank_sequence": [
+        5,
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "wall_gap_drop": 0.3830555271510918,
+      "secondary_handoff_linear_crossing_s": 1.7384947346603985,
+      "order_hessian_wall_linear_crossing_s": 2.279430530071676,
+      "dominant_wall_mass_recipient": "softening_to_order",
+      "softening_to_order_receives_majority_wall_transfer": true,
+      "wall_mass_transfer_shares": {
+        "interior_to_softening": 0.10934323438127495,
+        "softening_to_order": 0.5666318302210902,
+        "order_to_hessian": 0.2787646217892192,
+        "hessian_to_third_derivative": 0.04526031360841569
+      },
+      "from_previous_wall_gap_drop_delta": null,
+      "from_reference_wall_gap_drop_delta": -5.820721682425756e-11,
+      "from_reference_secondary_handoff_delta": -2.0027860692106714e-06
+    },
+    {
+      "prime_limit": 10000,
+      "shared_resonance_s": 2.0,
+      "handoff_cascade_detected": true,
+      "secondary_gap_sequence": [
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "softening_to_order",
+        "softening_to_order",
+        "softening_to_order"
+      ],
+      "wall_gap_rank_sequence": [
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "softening_to_order_gap_rank_sequence": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "order_to_hessian_gap_rank_sequence": [
+        5,
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "wall_gap_drop": 0.38305552720929903,
+      "secondary_handoff_linear_crossing_s": 1.7384967227472208,
+      "order_hessian_wall_linear_crossing_s": 2.2794301448741012,
+      "dominant_wall_mass_recipient": "softening_to_order",
+      "softening_to_order_receives_majority_wall_transfer": true,
+      "wall_mass_transfer_shares": {
+        "interior_to_softening": 0.10934507387336276,
+        "softening_to_order": 0.5666305882806894,
+        "order_to_hessian": 0.27876468590757175,
+        "hessian_to_third_derivative": 0.0452596519383762
+      },
+      "from_previous_wall_gap_drop_delta": 5.820721682425756e-11,
+      "from_reference_wall_gap_drop_delta": 0.0,
+      "from_reference_secondary_handoff_delta": -1.4699246930760523e-08
+    },
+    {
+      "prime_limit": 100000,
+      "shared_resonance_s": 2.0,
+      "handoff_cascade_detected": true,
+      "secondary_gap_sequence": [
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "softening_to_order",
+        "softening_to_order",
+        "softening_to_order"
+      ],
+      "wall_gap_rank_sequence": [
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "softening_to_order_gap_rank_sequence": [
+        3,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "order_to_hessian_gap_rank_sequence": [
+        5,
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "wall_gap_drop": 0.38305552720929903,
+      "secondary_handoff_linear_crossing_s": 1.7384967374464677,
+      "order_hessian_wall_linear_crossing_s": 2.279430142026481,
+      "dominant_wall_mass_recipient": "softening_to_order",
+      "softening_to_order_receives_majority_wall_transfer": true,
+      "wall_mass_transfer_shares": {
+        "interior_to_softening": 0.10934508776073451,
+        "softening_to_order": 0.5666305790962431,
+        "order_to_hessian": 0.27876468636755825,
+        "hessian_to_third_derivative": 0.045259646775464096
+      },
+      "from_previous_wall_gap_drop_delta": 0.0,
+      "from_reference_wall_gap_drop_delta": 0.0,
+      "from_reference_secondary_handoff_delta": 0.0
+    }
+  ]
+}

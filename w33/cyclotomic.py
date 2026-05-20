@@ -3179,6 +3179,111 @@ def completed_defect_spectral_boundary_barycentric_gap_handoff_packet(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite cutoff-robustness profile for the zero-sheet barycentric gap handoff cascade."""
+    if len(prime_limits) < 2:
+        raise ValueError("need at least two prime limits to profile cutoff robustness")
+    if any(prime_limits[index] >= prime_limits[index + 1] for index in range(len(prime_limits) - 1)):
+        raise ValueError("prime_limits must be strictly increasing")
+
+    packets = [
+        completed_defect_spectral_boundary_barycentric_gap_handoff_packet(
+            prime_limit,
+            s_values,
+            subintervals=subintervals,
+        )
+        for prime_limit in prime_limits
+    ]
+
+    reference = packets[-1]
+    per_cutoff: list[dict[str, object]] = []
+    for index, packet in enumerate(packets):
+        secondary = packet["secondary_handoff"]
+        order_hessian = packet["order_hessian_wall_handoff"]
+        per_cutoff.append(
+            {
+                "prime_limit": packet["prime_limit"],
+                "shared_resonance_s": packet["shared_resonance_s"],
+                "handoff_cascade_detected": packet["handoff_cascade_detected"],
+                "secondary_gap_sequence": packet["secondary_gap_sequence"],
+                "wall_gap_rank_sequence": packet["wall_gap_rank_sequence"],
+                "softening_to_order_gap_rank_sequence": packet["softening_to_order_gap_rank_sequence"],
+                "order_to_hessian_gap_rank_sequence": packet["order_to_hessian_gap_rank_sequence"],
+                "wall_gap_drop": packet["wall_gap_drop"],
+                "secondary_handoff_linear_crossing_s": None if secondary is None else secondary["linear_crossing_s"],
+                "order_hessian_wall_linear_crossing_s": None if order_hessian is None else order_hessian["linear_crossing_s"],
+                "dominant_wall_mass_recipient": packet["dominant_wall_mass_recipient"],
+                "softening_to_order_receives_majority_wall_transfer": packet[
+                    "softening_to_order_receives_majority_wall_transfer"
+                ],
+                "wall_mass_transfer_shares": packet["wall_mass_transfer_shares"],
+                "from_previous_wall_gap_drop_delta": (
+                    None if index == 0 else packet["wall_gap_drop"] - packets[index - 1]["wall_gap_drop"]
+                ),
+                "from_reference_wall_gap_drop_delta": packet["wall_gap_drop"] - reference["wall_gap_drop"],
+                "from_reference_secondary_handoff_delta": (
+                    None
+                    if secondary is None or reference["secondary_handoff"] is None
+                    else secondary["linear_crossing_s"] - reference["secondary_handoff"]["linear_crossing_s"]
+                ),
+            }
+        )
+
+    shared_resonance_all_equal = all(packet["shared_resonance_s"] == reference["shared_resonance_s"] for packet in packets)
+    cascade_all_detected = all(packet["handoff_cascade_detected"] for packet in packets)
+    secondary_sequences_all_equal = all(packet["secondary_gap_sequence"] == reference["secondary_gap_sequence"] for packet in packets)
+    rank_sequences_all_equal = all(packet["wall_gap_rank_sequence"] == reference["wall_gap_rank_sequence"] for packet in packets)
+    softening_rank_sequences_all_equal = all(
+        packet["softening_to_order_gap_rank_sequence"] == reference["softening_to_order_gap_rank_sequence"]
+        for packet in packets
+    )
+    order_rank_sequences_all_equal = all(
+        packet["order_to_hessian_gap_rank_sequence"] == reference["order_to_hessian_gap_rank_sequence"]
+        for packet in packets
+    )
+    dominant_recipient_all_equal = all(
+        packet["dominant_wall_mass_recipient"] == reference["dominant_wall_mass_recipient"]
+        for packet in packets
+    )
+    majority_transfer_all = all(packet["softening_to_order_receives_majority_wall_transfer"] for packet in packets)
+
+    wall_gap_drop_reference = reference["wall_gap_drop"]
+    secondary_crossing_reference = None if reference["secondary_handoff"] is None else reference["secondary_handoff"]["linear_crossing_s"]
+    wall_gap_drop_max_deviation = max(abs(row["from_reference_wall_gap_drop_delta"]) for row in per_cutoff)
+    secondary_crossing_max_deviation = max(
+        0.0 if row["from_reference_secondary_handoff_delta"] is None else abs(row["from_reference_secondary_handoff_delta"])
+        for row in per_cutoff
+    )
+
+    return {
+        "prime_limits": prime_limits,
+        "s_values": s_values,
+        "per_cutoff": per_cutoff,
+        "shared_resonance_all_equal": shared_resonance_all_equal,
+        "cascade_all_detected": cascade_all_detected,
+        "secondary_sequences_all_equal": secondary_sequences_all_equal,
+        "rank_sequences_all_equal": rank_sequences_all_equal,
+        "softening_rank_sequences_all_equal": softening_rank_sequences_all_equal,
+        "order_rank_sequences_all_equal": order_rank_sequences_all_equal,
+        "dominant_recipient_all_equal": dominant_recipient_all_equal,
+        "majority_transfer_all": majority_transfer_all,
+        "wall_gap_drop_reference": wall_gap_drop_reference,
+        "secondary_crossing_reference": secondary_crossing_reference,
+        "wall_gap_drop_max_deviation": wall_gap_drop_max_deviation,
+        "secondary_crossing_max_deviation": secondary_crossing_max_deviation,
+        "wall_gap_drop_profile_converges": wall_gap_drop_max_deviation < 1e-9,
+        "secondary_crossing_profile_converges": secondary_crossing_max_deviation < 1e-5,
+        "majority_transfer_profile_converges": all(
+            abs(row["wall_mass_transfer_shares"]["softening_to_order"] - reference["wall_mass_transfer_shares"]["softening_to_order"]) < 1e-5
+            for row in per_cutoff
+        ),
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

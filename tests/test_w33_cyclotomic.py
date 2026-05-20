@@ -83,6 +83,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet,
     completed_defect_spectral_boundary_barycentric_recurrence_phase_packet,
     completed_defect_spectral_boundary_barycentric_gap_handoff_packet,
+    completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -1037,6 +1038,51 @@ def test_completed_defect_spectral_boundary_barycentric_gap_handoff_packet():
     assert abs(shares["softening_to_order"] - 0.5666305790962431) < 1e-12
     assert shares["softening_to_order"] > shares["order_to_hessian"] > shares["interior_to_softening"]
     assert shares["interior_to_softening"] > shares["hessian_to_third_derivative"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile(
+        [1000, 10000, 100000],
+        s_values,
+        subintervals=40,
+    )
+
+    assert packet["shared_resonance_all_equal"]
+    assert packet["cascade_all_detected"]
+    assert packet["secondary_sequences_all_equal"]
+    assert packet["rank_sequences_all_equal"]
+    assert packet["softening_rank_sequences_all_equal"]
+    assert packet["order_rank_sequences_all_equal"]
+    assert packet["dominant_recipient_all_equal"]
+    assert packet["majority_transfer_all"]
+    assert packet["wall_gap_drop_profile_converges"]
+    assert packet["secondary_crossing_profile_converges"]
+    assert packet["majority_transfer_profile_converges"]
+
+    assert packet["wall_gap_drop_max_deviation"] < 1e-9
+    assert packet["secondary_crossing_max_deviation"] < 1e-5
+    assert packet["wall_gap_drop_reference"] > 0.0
+    assert packet["secondary_crossing_reference"] is not None
+
+    per_cutoff = packet["per_cutoff"]
+    assert [row["prime_limit"] for row in per_cutoff] == [1000, 10000, 100000]
+    assert all(row["shared_resonance_s"] == 2.0 for row in per_cutoff)
+    assert all(row["handoff_cascade_detected"] for row in per_cutoff)
+    assert all(
+        row["secondary_gap_sequence"] == [
+            "third_derivative_to_wall",
+            "third_derivative_to_wall",
+            "third_derivative_to_wall",
+            "softening_to_order",
+            "softening_to_order",
+            "softening_to_order",
+        ]
+        for row in per_cutoff
+    )
+    assert all(row["wall_gap_rank_sequence"] == [2, 2, 2, 3, 4, 4] for row in per_cutoff)
+    assert all(row["dominant_wall_mass_recipient"] == "softening_to_order" for row in per_cutoff)
+    assert all(abs(sum(row["wall_mass_transfer_shares"].values()) - 1.0) < 1e-15 for row in per_cutoff)
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
