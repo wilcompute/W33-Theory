@@ -65,6 +65,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_uniform_wall_profile,
     completed_defect_spectral_wall_effective_packet,
     completed_defect_spectral_wall_effective_profile,
+    completed_defect_spectral_infinite_wall_packet,
+    completed_defect_spectral_infinite_wall_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -643,6 +645,38 @@ def test_completed_defect_spectral_boundary_transfer_law_package():
     assert packet["action_transfer_error"] < 1e-4
     assert packet["order_transfer_error"] < 1e-4
     assert packet["stiffness_transfer_error"] < 1e-4
+
+
+def test_completed_defect_spectral_infinite_wall_packet_package():
+    wall_1k = completed_defect_spectral_infinite_wall_packet(1000, 1.0)
+    wall_10k = completed_defect_spectral_infinite_wall_packet(10000, 1.0)
+    wall_100k = completed_defect_spectral_infinite_wall_packet(100000, 1.0)
+
+    assert wall_1k["action_tail_bound"] > wall_10k["action_tail_bound"] > wall_100k["action_tail_bound"] > 0.0
+    assert wall_1k["order_tail_bound"] > wall_10k["order_tail_bound"] > wall_100k["order_tail_bound"] > 0.0
+    assert wall_1k["hessian_tail_bound"] > wall_10k["hessian_tail_bound"] > wall_100k["hessian_tail_bound"] > 0.0
+    assert wall_1k["relative_value_error_bound"] > wall_10k["relative_value_error_bound"] > wall_100k["relative_value_error_bound"] > 0.0
+
+    assert wall_100k["lower_infinite_action"] <= wall_100k["action"] <= wall_100k["upper_infinite_action"]
+    assert wall_100k["lower_infinite_order_parameter"] <= wall_100k["order_parameter"] <= wall_100k["upper_infinite_order_parameter"]
+    assert wall_100k["lower_infinite_hessian"] <= wall_100k["hessian"] <= wall_100k["upper_infinite_hessian"]
+    assert wall_100k["lower_infinite_stiffness"] <= wall_100k["stiffness"] <= wall_100k["upper_infinite_stiffness"]
+    assert wall_100k["lower_infinite_dual"] <= wall_100k["dual"] <= wall_100k["upper_infinite_dual"]
+
+    assert wall_100k["action"] > wall_10k["action"] > wall_1k["action"] > 0.0
+    assert wall_100k["order_parameter"] > wall_10k["order_parameter"] > wall_1k["order_parameter"] > 0.0
+    assert wall_100k["hessian"] > wall_10k["hessian"] > wall_1k["hessian"] > 0.0
+    assert wall_100k["stiffness"] < wall_10k["stiffness"] < wall_1k["stiffness"]
+    assert wall_100k["stiffness_interval_width"] < wall_10k["stiffness_interval_width"] < wall_1k["stiffness_interval_width"]
+
+    profile = completed_defect_spectral_infinite_wall_profile([1000, 10000, 100000], [1.0, 2.0])
+    rows_1 = profile["1.0"]
+    rows_2 = profile["2.0"]
+    assert rows_1[-1]["action_jump_from_previous"] is not None and rows_1[-1]["action_jump_from_previous"] > 0.0
+    assert rows_1[-1]["order_jump_from_previous"] is not None and rows_1[-1]["order_jump_from_previous"] > 0.0
+    assert rows_1[-1]["hessian_jump_from_previous"] is not None and rows_1[-1]["hessian_jump_from_previous"] > 0.0
+    assert rows_1[-1]["stiffness_drop_from_previous"] is not None and rows_1[-1]["stiffness_drop_from_previous"] > 0.0
+    assert rows_2[-1]["stiffness_interval_width_drop_from_previous"] is not None and rows_2[-1]["stiffness_interval_width_drop_from_previous"] > 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

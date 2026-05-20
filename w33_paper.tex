@@ -1958,6 +1958,55 @@ Fix finite real $s>0$ and split-prime cutoff $X$. Between the canonical zero-she
 So the wall packet is obtained from the interior packet by transporting the order, susceptibility, and dual-softening densities across the zero-sheet interval $[4,6]$.
 \end{theorem}
 
+The boundary packet now admits a final global sharpening. It is not only finite cutoff by cutoff; it survives the split-prime completion itself.
+
+\begin{theorem}[Completed Spectral Infinite Wall Packet]
+Fix finite real $s>0$ and a split-prime cutoff $X\ge 7$. At the wall scale $\lambda=6$, the finite-cutoff action, order parameter, and Hessian converge monotonically from below to finite infinite-cutoff wall values:
+\[
+\mathcal F_X(s;6)\uparrow\mathcal F_\infty(s;6),
+\qquad
+\mathcal M_X(s;6)\uparrow\mathcal M_\infty(s;6),
+\qquad
+\chi_X(s;6)\uparrow\chi_\infty(s;6).
+\]
+Writing $X_*=\max\{X,7\}$, one has the explicit wall-tail bounds
+\[
+0<\mathcal F_\infty(s;6)-\mathcal F_X(s;6)\le B_X^{\mathrm{wall}},
+\qquad
+0<\mathcal M_\infty(s;6)-\mathcal M_X(s;6)\le T_X^{\mathrm{wall}},
+\]
+\[
+0<\chi_\infty(s;6)-\chi_X(s;6)\le H_X^{\mathrm{wall}},
+\]
+where
+\[
+B_X^{\mathrm{wall}}=\frac{12}{X_*}+\frac{72}{(1-(6/X_*)^2)X_*^2},
+\]
+\[
+T_X^{\mathrm{wall}}=\frac{2}{X_*}+\frac{36}{(1-(6/X_*)^2)X_*^2},
+\qquad
+H_X^{\mathrm{wall}}=\frac{12}{(1-(6/X_*)^2)^2 X_*^2}.
+\]
+Therefore the infinite-cutoff wall stiffness
+\[
+\Sigma_\infty(s;6)=\chi_\infty(s;6)^{-1}
+\]
+admits the reciprocal enclosure
+\[
+\frac{1}{\chi_X(s;6)+H_X^{\mathrm{wall}}}
+\le
+\Sigma_\infty(s;6)
+\le
+\frac{1}{\chi_X(s;6)}.
+\]
+The wall Legendre dual also survives with the certified absolute error bound
+\[
+\bigl|\Gamma_\infty(s;6)-\Gamma_X(s;6)\bigr|\le 6T_X^{\mathrm{wall}}+B_X^{\mathrm{wall}}.
+\]
+\end{theorem}
+
+So the zero-sheet $6$-cycle lands on a boundary packet that survives the full split-prime completion with explicit thermodynamic error bars.
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

@@ -1829,6 +1829,122 @@ def completed_defect_spectral_boundary_transfer_packet(
     }
 
 
+def completed_defect_spectral_wall_log_tail_bound(prime_limit: int) -> float:
+    """Certified wall-log tail bound at the real boundary scale λ = 6 for cutoffs X >= 7.
+
+    Once the finite cutoff has already included the first split prime p = 7, every remaining tail
+    prime satisfies p - 1 >= X with X >= 7. Therefore the odd artanh tail is still uniformly
+    summable at λ = 6 and the linear kernel keeps its O(p^-2) decay. A coarse explicit majorant is
+
+        |log Λ_∞(6) - log Λ_X(6)|
+        <= 12/X + 72 / ((1-(6/X)^2) X^2)
+
+    for X >= 7.
+    """
+    if prime_limit < 7:
+        raise ValueError("prime_limit must be >= 7 for the wall-tail bound at λ = 6")
+    x = float(max(prime_limit, 7))
+    ratio = 6.0 / x
+    return 12.0 / x + 72.0 / ((1.0 - ratio**2) * (x**2))
+
+
+def completed_defect_spectral_wall_relative_error_bound(prime_limit: int) -> float:
+    """Relative multiplicative wall-value error bound induced by the wall-log tail bound."""
+    return math.expm1(completed_defect_spectral_wall_log_tail_bound(prime_limit))
+
+
+def completed_defect_spectral_wall_order_parameter_tail_bound(prime_limit: int) -> float:
+    """Certified tail bound for the infinite-cutoff wall order parameter M_∞(s;6)."""
+    if prime_limit < 7:
+        raise ValueError("prime_limit must be >= 7 for the wall order-parameter tail bound")
+    x = float(max(prime_limit, 7))
+    ratio = 6.0 / x
+    return 2.0 / x + 36.0 / ((1.0 - ratio**2) * (x**2))
+
+
+def completed_defect_spectral_wall_hessian_tail_bound(prime_limit: int) -> float:
+    """Certified tail bound for the infinite-cutoff wall Hessian χ_∞(s;6)."""
+    if prime_limit < 7:
+        raise ValueError("prime_limit must be >= 7 for the wall Hessian tail bound")
+    x = float(max(prime_limit, 7))
+    ratio = 6.0 / x
+    return 12.0 / (((1.0 - ratio**2) ** 2) * (x**2))
+
+
+def completed_defect_spectral_infinite_wall_packet(prime_limit: int, s: float) -> dict[str, float]:
+    """Finite wall packet together with certified infinite-cutoff enclosures at λ = 6.
+
+    This upgrades the finite wall packet from MCXV to a genuine infinite-cutoff boundary object.
+    For X >= 7, the wall action, order parameter, and Hessian converge monotonically from below,
+    while the dual stiffness inherits a reciprocal enclosure from the Hessian bracket.
+    """
+    if prime_limit < 7:
+        raise ValueError("prime_limit must be >= 7 for the infinite wall packet")
+    wall_packet = completed_defect_spectral_uniform_wall_packet(prime_limit, s)
+    action_tail = completed_defect_spectral_wall_log_tail_bound(prime_limit)
+    order_tail = completed_defect_spectral_wall_order_parameter_tail_bound(prime_limit)
+    hessian_tail = completed_defect_spectral_wall_hessian_tail_bound(prime_limit)
+    hessian = wall_packet["hessian"]
+    stiffness = wall_packet["stiffness"]
+    lower_stiffness = 0.0 if hessian + hessian_tail <= 0 else 1.0 / (hessian + hessian_tail)
+    upper_stiffness = math.inf if hessian <= 0 else 1.0 / hessian
+    dual_error = 6.0 * order_tail + action_tail
+    return {
+        **wall_packet,
+        "action_tail_bound": action_tail,
+        "relative_value_error_bound": completed_defect_spectral_wall_relative_error_bound(prime_limit),
+        "order_tail_bound": order_tail,
+        "hessian_tail_bound": hessian_tail,
+        "lower_infinite_action": wall_packet["action"],
+        "upper_infinite_action": wall_packet["action"] + action_tail,
+        "lower_infinite_order_parameter": wall_packet["order_parameter"],
+        "upper_infinite_order_parameter": wall_packet["order_parameter"] + order_tail,
+        "lower_infinite_hessian": hessian,
+        "upper_infinite_hessian": hessian + hessian_tail,
+        "lower_infinite_stiffness": lower_stiffness,
+        "upper_infinite_stiffness": upper_stiffness,
+        "stiffness_interval_width": (upper_stiffness - lower_stiffness) if not math.isinf(upper_stiffness) else math.inf,
+        "dual_abs_error_bound": dual_error,
+        "lower_infinite_dual": wall_packet["dual"] - dual_error,
+        "upper_infinite_dual": wall_packet["dual"] + dual_error,
+    }
+
+
+def completed_defect_spectral_infinite_wall_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+) -> dict[str, list[dict[str, float]]]:
+    """Profile convergence of the completed wall packet toward its infinite-cutoff boundary object."""
+    payload: dict[str, list[dict[str, float]]] = {}
+    for s in s_values:
+        rows = []
+        previous_action = None
+        previous_order = None
+        previous_hessian = None
+        previous_stiffness = None
+        previous_width = None
+        for prime_limit in prime_limits:
+            packet = completed_defect_spectral_infinite_wall_packet(prime_limit, s)
+            rows.append(
+                {
+                    **packet,
+                    "prime_limit": float(prime_limit),
+                    "action_jump_from_previous": (packet["action"] - previous_action) if previous_action is not None else None,
+                    "order_jump_from_previous": (packet["order_parameter"] - previous_order) if previous_order is not None else None,
+                    "hessian_jump_from_previous": (packet["hessian"] - previous_hessian) if previous_hessian is not None else None,
+                    "stiffness_drop_from_previous": (previous_stiffness - packet["stiffness"]) if previous_stiffness is not None else None,
+                    "stiffness_interval_width_drop_from_previous": (previous_width - packet["stiffness_interval_width"]) if previous_width is not None else None,
+                }
+            )
+            previous_action = packet["action"]
+            previous_order = packet["order_parameter"]
+            previous_hessian = packet["hessian"]
+            previous_stiffness = packet["stiffness"]
+            previous_width = packet["stiffness_interval_width"]
+        payload[str(s)] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
