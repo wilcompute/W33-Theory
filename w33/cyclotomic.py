@@ -1945,6 +1945,184 @@ def completed_defect_spectral_infinite_wall_profile(
     return payload
 
 
+def completed_defect_spectral_infinite_compact_real_packet(
+    prime_limit: int,
+    s: float,
+    deformation: float,
+) -> dict[str, float]:
+    """Finite packet with certified infinite-cutoff enclosure on a compact real branch."""
+    if abs(deformation) >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("compact infinite packet requires |deformation| < 6")
+    packet = completed_defect_spectral_real_packet(prime_limit, s, deformation=deformation)
+    deformation_radius = abs(deformation)
+    action_tail = completed_defect_spectral_log_compact_tail_bound(prime_limit, deformation_radius)
+    order_tail = completed_defect_spectral_order_parameter_tail_bound(prime_limit, deformation_radius)
+    hessian_tail = completed_defect_spectral_hessian_tail_bound(prime_limit, deformation_radius)
+    hessian = packet["hessian"]
+    lower_stiffness = 0.0 if hessian + hessian_tail <= 0 else 1.0 / (hessian + hessian_tail)
+    upper_stiffness = math.inf if hessian <= 0 else 1.0 / hessian
+    dual_error = deformation_radius * order_tail + action_tail
+    return {
+        **packet,
+        "action_tail_bound": action_tail,
+        "relative_value_error_bound": completed_defect_spectral_relative_error_bound(prime_limit, deformation_radius),
+        "order_tail_bound": order_tail,
+        "hessian_tail_bound": hessian_tail,
+        "lower_infinite_action": packet["action"],
+        "upper_infinite_action": packet["action"] + action_tail,
+        "lower_infinite_order_parameter": packet["order_parameter"],
+        "upper_infinite_order_parameter": packet["order_parameter"] + order_tail,
+        "lower_infinite_hessian": hessian,
+        "upper_infinite_hessian": hessian + hessian_tail,
+        "lower_infinite_stiffness": lower_stiffness,
+        "upper_infinite_stiffness": upper_stiffness,
+        "stiffness_interval_width": (upper_stiffness - lower_stiffness) if not math.isinf(upper_stiffness) else math.inf,
+        "dual_abs_error_bound": dual_error,
+        "lower_infinite_dual": packet["dual"] - dual_error,
+        "upper_infinite_dual": packet["dual"] + dual_error,
+    }
+
+
+def completed_defect_spectral_infinite_boundary_corridor_packet(
+    prime_limit: int,
+    s: float,
+    interior_deformation: float = 4.0,
+    wall_deformation: float = 6.0,
+    subintervals: int = 160,
+) -> dict[str, float]:
+    """Certified infinite-cutoff corridor from a compact interior packet to the wall packet.
+
+    MCXX gives the finite-cutoff transfer across [4, 6]. MCXXI gives the infinite-cutoff wall
+    endpoint. This packet combines the compact interior enclosure with the wall enclosure, so the
+    true infinite endpoint deltas are trapped between explicit finite-cutoff bounds.
+    """
+    wall = completed_defect_spectral_uniform_radius_lower_bound()
+    if wall_deformation != wall:
+        raise ValueError("infinite boundary corridor currently uses the certified wall deformation 6")
+    if not (0 <= interior_deformation < wall_deformation):
+        raise ValueError("need 0 <= interior_deformation < wall_deformation")
+
+    interior = completed_defect_spectral_infinite_compact_real_packet(prime_limit, s, interior_deformation)
+    wall_packet = completed_defect_spectral_infinite_wall_packet(prime_limit, s)
+    transfer = completed_defect_spectral_boundary_transfer_packet(
+        prime_limit,
+        s,
+        interior_deformation=interior_deformation,
+        wall_deformation=wall_deformation,
+        subintervals=subintervals,
+    )
+
+    action_lower = wall_packet["lower_infinite_action"] - interior["upper_infinite_action"]
+    action_upper = wall_packet["upper_infinite_action"] - interior["lower_infinite_action"]
+    order_lower = wall_packet["lower_infinite_order_parameter"] - interior["upper_infinite_order_parameter"]
+    order_upper = wall_packet["upper_infinite_order_parameter"] - interior["lower_infinite_order_parameter"]
+    hessian_lower = wall_packet["lower_infinite_hessian"] - interior["upper_infinite_hessian"]
+    hessian_upper = wall_packet["upper_infinite_hessian"] - interior["lower_infinite_hessian"]
+    stiffness_lower = interior["lower_infinite_stiffness"] - wall_packet["upper_infinite_stiffness"]
+    stiffness_upper = interior["upper_infinite_stiffness"] - wall_packet["lower_infinite_stiffness"]
+    dual_lower = wall_packet["lower_infinite_dual"] - interior["upper_infinite_dual"]
+    dual_upper = wall_packet["upper_infinite_dual"] - interior["lower_infinite_dual"]
+
+    return {
+        "prime_limit": float(prime_limit),
+        "s": s,
+        "interior_deformation": interior_deformation,
+        "wall_deformation": wall_deformation,
+        "interior_action_tail_bound": interior["action_tail_bound"],
+        "wall_action_tail_bound": wall_packet["action_tail_bound"],
+        "interior_order_tail_bound": interior["order_tail_bound"],
+        "wall_order_tail_bound": wall_packet["order_tail_bound"],
+        "interior_hessian_tail_bound": interior["hessian_tail_bound"],
+        "wall_hessian_tail_bound": wall_packet["hessian_tail_bound"],
+        "finite_delta_action": transfer["delta_action"],
+        "finite_delta_order_parameter": transfer["delta_order_parameter"],
+        "finite_delta_hessian": transfer["wall_hessian"] - transfer["interior_hessian"],
+        "finite_stiffness_loss": transfer["delta_stiffness"],
+        "finite_dual_delta": wall_packet["dual"] - interior["dual"],
+        "integrated_order": transfer["integrated_order"],
+        "integrated_hessian": transfer["integrated_hessian"],
+        "integrated_dual_softening": transfer["integrated_dual_softening"],
+        "action_transfer_error": transfer["action_transfer_error"],
+        "order_transfer_error": transfer["order_transfer_error"],
+        "stiffness_transfer_error": transfer["stiffness_transfer_error"],
+        "infinite_delta_action_lower_bound": action_lower,
+        "infinite_delta_action_upper_bound": action_upper,
+        "infinite_delta_action_interval_width": action_upper - action_lower,
+        "infinite_delta_order_parameter_lower_bound": order_lower,
+        "infinite_delta_order_parameter_upper_bound": order_upper,
+        "infinite_delta_order_parameter_interval_width": order_upper - order_lower,
+        "infinite_delta_hessian_lower_bound": hessian_lower,
+        "infinite_delta_hessian_upper_bound": hessian_upper,
+        "infinite_delta_hessian_interval_width": hessian_upper - hessian_lower,
+        "infinite_stiffness_loss_lower_bound": stiffness_lower,
+        "infinite_stiffness_loss_upper_bound": stiffness_upper,
+        "infinite_stiffness_loss_interval_width": stiffness_upper - stiffness_lower,
+        "infinite_dual_delta_lower_bound": dual_lower,
+        "infinite_dual_delta_upper_bound": dual_upper,
+        "infinite_dual_delta_interval_width": dual_upper - dual_lower,
+        "finite_delta_action_in_corridor": action_lower <= transfer["delta_action"] <= action_upper,
+        "finite_delta_order_parameter_in_corridor": order_lower <= transfer["delta_order_parameter"] <= order_upper,
+        "finite_delta_hessian_in_corridor": hessian_lower <= transfer["wall_hessian"] - transfer["interior_hessian"] <= hessian_upper,
+        "finite_stiffness_loss_in_corridor": stiffness_lower <= transfer["delta_stiffness"] <= stiffness_upper,
+        "finite_dual_delta_in_corridor": dual_lower <= wall_packet["dual"] - interior["dual"] <= dual_upper,
+    }
+
+
+def completed_defect_spectral_infinite_boundary_corridor_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, list[dict[str, float]]]:
+    """Profile the contraction of the infinite-cutoff interior-to-wall corridor."""
+    payload: dict[str, list[dict[str, float]]] = {}
+    for s in s_values:
+        rows = []
+        previous_action_width = None
+        previous_order_width = None
+        previous_hessian_width = None
+        previous_stiffness_width = None
+        previous_dual_width = None
+        for prime_limit in prime_limits:
+            packet = completed_defect_spectral_infinite_boundary_corridor_packet(prime_limit, s, subintervals=subintervals)
+            rows.append(
+                {
+                    **packet,
+                    "action_corridor_width_drop_from_previous": (
+                        previous_action_width - packet["infinite_delta_action_interval_width"]
+                        if previous_action_width is not None
+                        else None
+                    ),
+                    "order_corridor_width_drop_from_previous": (
+                        previous_order_width - packet["infinite_delta_order_parameter_interval_width"]
+                        if previous_order_width is not None
+                        else None
+                    ),
+                    "hessian_corridor_width_drop_from_previous": (
+                        previous_hessian_width - packet["infinite_delta_hessian_interval_width"]
+                        if previous_hessian_width is not None
+                        else None
+                    ),
+                    "stiffness_corridor_width_drop_from_previous": (
+                        previous_stiffness_width - packet["infinite_stiffness_loss_interval_width"]
+                        if previous_stiffness_width is not None
+                        else None
+                    ),
+                    "dual_corridor_width_drop_from_previous": (
+                        previous_dual_width - packet["infinite_dual_delta_interval_width"]
+                        if previous_dual_width is not None
+                        else None
+                    ),
+                }
+            )
+            previous_action_width = packet["infinite_delta_action_interval_width"]
+            previous_order_width = packet["infinite_delta_order_parameter_interval_width"]
+            previous_hessian_width = packet["infinite_delta_hessian_interval_width"]
+            previous_stiffness_width = packet["infinite_stiffness_loss_interval_width"]
+            previous_dual_width = packet["infinite_dual_delta_interval_width"]
+        payload[str(s)] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

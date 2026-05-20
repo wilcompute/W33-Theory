@@ -67,6 +67,9 @@ from w33.cyclotomic import (
     completed_defect_spectral_wall_effective_profile,
     completed_defect_spectral_infinite_wall_packet,
     completed_defect_spectral_infinite_wall_profile,
+    completed_defect_spectral_infinite_compact_real_packet,
+    completed_defect_spectral_infinite_boundary_corridor_packet,
+    completed_defect_spectral_infinite_boundary_corridor_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -677,6 +680,68 @@ def test_completed_defect_spectral_infinite_wall_packet_package():
     assert rows_1[-1]["hessian_jump_from_previous"] is not None and rows_1[-1]["hessian_jump_from_previous"] > 0.0
     assert rows_1[-1]["stiffness_drop_from_previous"] is not None and rows_1[-1]["stiffness_drop_from_previous"] > 0.0
     assert rows_2[-1]["stiffness_interval_width_drop_from_previous"] is not None and rows_2[-1]["stiffness_interval_width_drop_from_previous"] > 0.0
+
+
+def test_completed_defect_spectral_infinite_boundary_corridor_package():
+    interior_1k = completed_defect_spectral_infinite_compact_real_packet(1000, 1.0, 4.0)
+    interior_10k = completed_defect_spectral_infinite_compact_real_packet(10000, 1.0, 4.0)
+    interior_100k = completed_defect_spectral_infinite_compact_real_packet(100000, 1.0, 4.0)
+
+    assert interior_1k["action_tail_bound"] > interior_10k["action_tail_bound"] > interior_100k["action_tail_bound"] > 0.0
+    assert interior_1k["order_tail_bound"] > interior_10k["order_tail_bound"] > interior_100k["order_tail_bound"] > 0.0
+    assert interior_1k["hessian_tail_bound"] > interior_10k["hessian_tail_bound"] > interior_100k["hessian_tail_bound"] > 0.0
+    assert interior_100k["lower_infinite_stiffness"] <= interior_100k["stiffness"] <= interior_100k["upper_infinite_stiffness"]
+    assert interior_100k["lower_infinite_dual"] <= interior_100k["dual"] <= interior_100k["upper_infinite_dual"]
+
+    corridor_1k = completed_defect_spectral_infinite_boundary_corridor_packet(1000, 1.0, subintervals=80)
+    corridor_10k = completed_defect_spectral_infinite_boundary_corridor_packet(10000, 1.0, subintervals=80)
+    corridor_100k = completed_defect_spectral_infinite_boundary_corridor_packet(100000, 1.0, subintervals=80)
+
+    assert corridor_100k["finite_delta_action_in_corridor"]
+    assert corridor_100k["finite_delta_order_parameter_in_corridor"]
+    assert corridor_100k["finite_delta_hessian_in_corridor"]
+    assert corridor_100k["finite_stiffness_loss_in_corridor"]
+    assert corridor_100k["finite_dual_delta_in_corridor"]
+    assert corridor_100k["infinite_delta_action_lower_bound"] > 0.0
+    assert corridor_100k["infinite_delta_order_parameter_lower_bound"] > 0.0
+    assert corridor_100k["infinite_delta_hessian_lower_bound"] > 0.0
+    assert corridor_100k["infinite_stiffness_loss_lower_bound"] > 0.0
+
+    assert (
+        corridor_1k["infinite_delta_action_interval_width"]
+        > corridor_10k["infinite_delta_action_interval_width"]
+        > corridor_100k["infinite_delta_action_interval_width"]
+        > 0.0
+    )
+    assert (
+        corridor_1k["infinite_delta_order_parameter_interval_width"]
+        > corridor_10k["infinite_delta_order_parameter_interval_width"]
+        > corridor_100k["infinite_delta_order_parameter_interval_width"]
+        > 0.0
+    )
+    assert (
+        corridor_1k["infinite_delta_hessian_interval_width"]
+        > corridor_10k["infinite_delta_hessian_interval_width"]
+        > corridor_100k["infinite_delta_hessian_interval_width"]
+        > 0.0
+    )
+    assert (
+        corridor_1k["infinite_stiffness_loss_interval_width"]
+        > corridor_10k["infinite_stiffness_loss_interval_width"]
+        > corridor_100k["infinite_stiffness_loss_interval_width"]
+        > 0.0
+    )
+    assert (
+        corridor_1k["infinite_dual_delta_interval_width"]
+        > corridor_10k["infinite_dual_delta_interval_width"]
+        > corridor_100k["infinite_dual_delta_interval_width"]
+        > 0.0
+    )
+
+    profile = completed_defect_spectral_infinite_boundary_corridor_profile([1000, 10000, 100000], [1.0], subintervals=60)
+    rows = profile["1.0"]
+    assert rows[-1]["action_corridor_width_drop_from_previous"] is not None and rows[-1]["action_corridor_width_drop_from_previous"] > 0.0
+    assert rows[-1]["stiffness_corridor_width_drop_from_previous"] is not None and rows[-1]["stiffness_corridor_width_drop_from_previous"] > 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
