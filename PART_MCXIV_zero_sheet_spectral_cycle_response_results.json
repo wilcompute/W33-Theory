@@ -1,0 +1,252 @@
+{
+  "interior_inverse_profile": [
+    {
+      "abs_reference_gap": -2.5481838861196593e-12,
+      "dual": 0.46183684032543676,
+      "dual_drop_from_previous": null,
+      "interval_lower_lambda": 3.982299535172933,
+      "interval_upper_lambda": 4.000000000002548,
+      "interval_width": 0.017700464829615292,
+      "lambda_drop_from_previous": null,
+      "prime_limit": 1000,
+      "recovered_lambda": 4.000000000002548,
+      "reference_deformation": 4.0,
+      "tail_bound": 0.002034811211778282,
+      "target_order_parameter": 0.1966524560875709
+    },
+    {
+      "abs_reference_gap": 0.0005162583285702738,
+      "dual": 0.46160092252966173,
+      "dual_drop_from_previous": 0.00023591779577503136,
+      "interval_lower_lambda": 3.997749891800959,
+      "interval_upper_lambda": 3.9994837416714297,
+      "interval_width": 0.0017338498704706495,
+      "lambda_drop_from_previous": 0.0005162583311184576,
+      "prime_limit": 10000,
+      "recovered_lambda": 3.9994837416714297,
+      "reference_deformation": 4.0,
+      "tail_bound": 0.00020034810012117365,
+      "target_order_parameter": 0.1966524560875709
+    },
+    {
+      "abs_reference_gap": 0.0005548430726771691,
+      "dual": 0.461583101702788,
+      "dual_drop_from_previous": 1.782082687373787e-05,
+      "interval_lower_lambda": 3.99927213167066,
+      "interval_upper_lambda": 3.999445156927323,
+      "interval_width": 0.00017302525666273993,
+      "lambda_drop_from_previous": 3.8584744106895386e-05,
+      "prime_limit": 100000,
+      "recovered_lambda": 3.999445156927323,
+      "reference_deformation": 4.0,
+      "tail_bound": 2.000348100001212e-05,
+      "target_order_parameter": 0.1966524560875709
+    }
+  ],
+  "interior_stiffness_profile": [
+    {
+      "dual": 0.4618368403254366,
+      "hessian_tail_bound": 8.000256006144131e-06,
+      "interval_lower_stiffness": 8.645371544372454,
+      "interval_upper_stiffness": 8.751043574163765,
+      "interval_width_drop_from_previous": null,
+      "lambda_interval_width": 0.017535840008349624,
+      "prime_limit": 1000,
+      "recovered_hessian": 0.11566082841925555,
+      "recovered_lambda": 3.999999999992724,
+      "recovered_stiffness": 8.64596954446089,
+      "reference_deformation": 4.0,
+      "stiffness_interval_width": 0.10567202979131096,
+      "stiffness_jump_from_previous": null,
+      "target_order_parameter": 0.1966524560875709
+    },
+    {
+      "dual": 0.46160092252966134,
+      "hessian_tail_bound": 8.000002560000614e-08,
+      "interval_lower_stiffness": 8.64900499034793,
+      "interval_upper_stiffness": 8.659356106105202,
+      "interval_width_drop_from_previous": 0.09532091403403875,
+      "lambda_interval_width": 0.0017322210333077237,
+      "prime_limit": 10000,
+      "recovered_hessian": 0.11562015621396371,
+      "recovered_lambda": 3.9994837416597875,
+      "recovered_stiffness": 8.64901097477697,
+      "reference_deformation": 4.0,
+      "stiffness_interval_width": 0.010351115757272211,
+      "stiffness_jump_from_previous": 0.003041430316081062,
+      "target_order_parameter": 0.1966524560875709
+    },
+    {
+      "dual": 0.4615831017027881,
+      "hessian_tail_bound": 8.0000000256e-10,
+      "interval_lower_stiffness": 8.649240964746069,
+      "interval_upper_stiffness": 8.650273923319952,
+      "interval_width_drop_from_previous": 0.009318157183388465,
+      "lambda_interval_width": 0.00017300898616667837,
+      "prime_limit": 100000,
+      "recovered_hessian": 0.11561708098509035,
+      "recovered_lambda": 3.9994451569218654,
+      "recovered_stiffness": 8.649241024593564,
+      "reference_deformation": 4.0,
+      "stiffness_interval_width": 0.0010329585738837466,
+      "stiffness_jump_from_previous": 0.0002300498165936915,
+      "target_order_parameter": 0.1966524560875709
+    }
+  ],
+  "summary": {
+    "all_identities_hold": true,
+    "experiment": "zero-sheet cycle response against the completed spectral equation of state",
+    "interior_cycle_deformation": 4.0,
+    "prime_limits": [
+      1000,
+      10000,
+      100000
+    ],
+    "s": 1.0,
+    "spectral_wall": 6.0,
+    "wall_probe_deformations": [
+      5.0,
+      5.5,
+      5.9
+    ],
+    "zero_sheet_cycle_lengths": [
+      4,
+      4,
+      6
+    ],
+    "zero_sheet_cycle_rank": 2
+  },
+  "terminal_wall_approach_rows": [
+    {
+      "action": 0.32502674044617785,
+      "deformation": 4.0,
+      "dual": 0.4618397303949704,
+      "hessian": 0.11566137031153868,
+      "order_parameter": 0.19671661771028706,
+      "prime_limit": 100000,
+      "stiffness": 8.645929036690976
+    },
+    {
+      "action": 0.597139841710522,
+      "deformation": 5.0,
+      "dual": 1.257539675789682,
+      "hessian": 0.2607015342649676,
+      "order_parameter": 0.3709359035000408,
+      "prime_limit": 100000,
+      "stiffness": 3.835804046260948
+    },
+    {
+      "action": 0.8217697330585122,
+      "deformation": 5.5,
+      "dual": 2.1692073066412196,
+      "hessian": 0.45865171490184814,
+      "order_parameter": 0.5438140072181331,
+      "prime_limit": 100000,
+      "stiffness": 2.1803036323847627
+    },
+    {
+      "action": 1.0840012385115567,
+      "deformation": 5.9,
+      "dual": 3.591951591183041,
+      "hessian": 0.8437738003189261,
+      "order_parameter": 0.7925343779143387,
+      "prime_limit": 100000,
+      "stiffness": 1.18515175467883
+    }
+  ],
+  "theorem": "Zero-sheet spectral cycle-response law",
+  "wall_inverse_profile": [
+    {
+      "abs_reference_gap": 6.705747068735946e-13,
+      "dual": 3.5919423167038493,
+      "dual_drop_from_previous": null,
+      "interval_lower_lambda": 5.897583219773789,
+      "interval_upper_lambda": 5.89999999999933,
+      "interval_width": 0.0024167802255403714,
+      "lambda_drop_from_previous": null,
+      "prime_limit": 1000,
+      "recovered_lambda": 5.89999999999933,
+      "reference_deformation": 5.9,
+      "tail_bound": 0.002034811211778282,
+      "target_order_parameter": 0.7924689421560998
+    },
+    {
+      "abs_reference_gap": 7.225777540131872e-05,
+      "dual": 3.591591830080186,
+      "dual_drop_from_previous": 0.00035048662366321537,
+      "interval_lower_lambda": 5.899690218101476,
+      "interval_upper_lambda": 5.899927742224599,
+      "interval_width": 0.00023752412312294524,
+      "lambda_drop_from_previous": 7.225777473074402e-05,
+      "prime_limit": 10000,
+      "recovered_lambda": 5.899927742224599,
+      "reference_deformation": 5.9,
+      "tail_bound": 0.00020034810012117365,
+      "target_order_parameter": 0.7924689421560998
+    },
+    {
+      "abs_reference_gap": 7.755668939424254e-05,
+      "dual": 3.5915655227468504,
+      "dual_drop_from_previous": 2.6307333335751082e-05,
+      "interval_lower_lambda": 5.899898732354814,
+      "interval_upper_lambda": 5.899922443310606,
+      "interval_width": 2.3710955791678145e-05,
+      "lambda_drop_from_previous": 5.298913992923815e-06,
+      "prime_limit": 100000,
+      "recovered_lambda": 5.899922443310606,
+      "reference_deformation": 5.9,
+      "tail_bound": 2.000348100001212e-05,
+      "target_order_parameter": 0.7924689421560998
+    }
+  ],
+  "wall_stiffness_profile": [
+    {
+      "dual": 3.5919423167038493,
+      "hessian_tail_bound": 1.1800821558897453e-05,
+      "interval_lower_stiffness": 1.1851363023217023,
+      "interval_upper_stiffness": 1.190286965105479,
+      "interval_width_drop_from_previous": null,
+      "lambda_interval_width": 0.0024167802255403714,
+      "prime_limit": 1000,
+      "recovered_hessian": 0.8437730010117686,
+      "recovered_lambda": 5.89999999999933,
+      "recovered_stiffness": 1.1851528773744828,
+      "reference_deformation": 5.9,
+      "stiffness_interval_width": 0.005150662783776738,
+      "stiffness_jump_from_previous": null,
+      "target_order_parameter": 0.7924689421560998
+    },
+    {
+      "dual": 3.591591830080186,
+      "hessian_tail_bound": 1.1800008215164291e-07,
+      "interval_lower_stiffness": 1.1853049418187525,
+      "interval_upper_stiffness": 1.185809246433956,
+      "interval_width_drop_from_previous": 0.0046463581685731725,
+      "lambda_interval_width": 0.00023752412312294524,
+      "prime_limit": 10000,
+      "recovered_hessian": 0.8436646341822404,
+      "recovered_lambda": 5.899927742224599,
+      "recovered_stiffness": 1.185305107602732,
+      "reference_deformation": 5.9,
+      "stiffness_interval_width": 0.0005043046152035657,
+      "stiffness_jump_from_previous": 0.00015223022824928378,
+      "target_order_parameter": 0.7924689421560998
+    },
+    {
+      "dual": 3.5915655227468504,
+      "hessian_tail_bound": 1.1800000082151602e-09,
+      "interval_lower_stiffness": 1.185316343363955,
+      "interval_upper_stiffness": 1.1853666664800833,
+      "interval_width_drop_from_previous": 0.0004539814990753843,
+      "lambda_interval_width": 2.3710955791678145e-05,
+      "prime_limit": 100000,
+      "recovered_hessian": 0.8436566358001136,
+      "recovered_lambda": 5.899922443310606,
+      "recovered_stiffness": 1.1853163450218254,
+      "reference_deformation": 5.9,
+      "stiffness_interval_width": 5.032311612818141e-05,
+      "stiffness_jump_from_previous": 1.1237419093257373e-05,
+      "target_order_parameter": 0.7924689421560998
+    }
+  ]
+}

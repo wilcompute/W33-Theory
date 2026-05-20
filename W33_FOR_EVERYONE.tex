@@ -2371,6 +2371,26 @@ That is a genuine completion of the thermodynamic side of the packet. We now kno
 \end{enumerate}
 So the completed spectral packet is not just thermodynamic in spirit. It now has a controlled response theory on both sides of the Legendre transform.
 
+At that point a very different part of the theory suddenly re-enters the picture: the Hamming/Fano zero sheet. Earlier work already showed that this zero sheet is a connected triangle-free graph with cycle rank $2$ and simple cycle lengths
+\[
+4,4,6.
+\]
+Now compare that with the completed spectral branch. Its uniform analytic wall is at
+\[
+|\lambda|=6.
+\]
+So the two independent zero-sheet cycles sit naturally at the interior deformation scale $\lambda=4$, while their dependent $6$-cycle lands exactly on the analytic boundary.
+
+That observation is not just numerology, because the spectral response behaves exactly the way this picture says it should. On the real slice $s=1$, as we move through the deformation values
+\[
+\lambda=4,\ 5,\ 5.5,\ 5.9,
+\]
+the Hessian rises steadily and the dual stiffness falls steadily. In plain language: as the zero-sheet cycle scale approaches the wall, the primal branch gets more responsive while the dual branch gets softer. And when we hold the interior scale $\lambda=4$ or the wall-approach scale $\lambda=5.9$ fixed and increase the split-prime cutoff, both the inverse-branch intervals and the dual-stiffness intervals contract.
+
+So there is now a real bridge between the coordinate side and the arithmetic-spectral side. The zero sheet behaves like a rank-two residual cycle source whose two independent cycles live inside the completed spectral branch, while the dependent cycle marks its analytic boundary.
+
+It is important to say exactly what has and has not been proved. What is proved is a rigid compatibility law between already-verified zero-sheet cycle data and already-verified completed spectral response data. What is not yet proved is that the zero sheet literally generates the deformation variable itself. But even with that honesty boundary in place, this is a major upgrade: two previously separate sectors now meet on exact cycle/wall arithmetic and on a monotone thermodynamic response law.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3642,6 +3662,7 @@ Spectral Phase Geometry & the infinite-cutoff order parameter is positive and th
 Spectral Equation of State & the order parameter determines $\lambda$ uniquely and the branch admits a Legendre dual & MCXI \\
 Infinite-Cutoff Dual Branch & the inverse branch and Legendre dual survive to infinite cutoff with certified enclosures & MCXII \\
 Dual Stiffness / Reciprocal Susceptibility & the dual curvature is exactly $1/\chi$ and survives to infinite cutoff with explicit bounds & MCXIII \\
+Zero-Sheet Cycle Response & the Hamming/Fano zero sheet has cycle scales $4,4,6$ matching the interior spectral branch and the wall $|\lambda|=6$ & MCXIV \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\
