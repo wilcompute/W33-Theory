@@ -1,0 +1,30 @@
+{
+  "theorem": "Zero-sheet canonical thermodynamic packet",
+  "cycle_lengths": [
+    4,
+    4,
+    6
+  ],
+  "interior_row": {
+    "prime_limit": 100000.0,
+    "s": 1.0,
+    "deformation": 4.0,
+    "action": 0.32502674044617763,
+    "order_parameter": 0.19671661771028706,
+    "hessian": 0.11566137031153868,
+    "stiffness": 8.645929036690976,
+    "dual": 0.4618397303949706
+  },
+  "wall_row": {
+    "prime_limit": 100000.0,
+    "s": 1.0,
+    "deformation": 6.0,
+    "action": 1.1677437832896322,
+    "order_parameter": 0.8852177341457138,
+    "hessian": 1.0181617543771315,
+    "stiffness": 0.9821622111623687,
+    "dual": 4.143562621584651,
+    "uniform_wall": 6.0
+  },
+  "all_identities_hold": true
+}

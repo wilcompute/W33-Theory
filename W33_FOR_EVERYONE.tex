@@ -2391,6 +2391,21 @@ So there is now a real bridge between the coordinate side and the arithmetic-spe
 
 It is important to say exactly what has and has not been proved. What is proved is a rigid compatibility law between already-verified zero-sheet cycle data and already-verified completed spectral response data. What is not yet proved is that the zero sheet literally generates the deformation variable itself. But even with that honesty boundary in place, this is a major upgrade: two previously separate sectors now meet on exact cycle/wall arithmetic and on a monotone thermodynamic response law.
 
+There is an extra surprise here. The wall scale $\lambda=6$ is not a physical explosion on the real spectral branch. Even though $|\lambda|<6$ is the exact uniform analytic guarantee used by the global theory, the actual positive real branch stays perfectly finite at the wall scale itself. So as $\lambda\to6^{-}$, the action, order parameter, Hessian, dual stiffness, and dual potential all approach a finite boundary packet.
+
+That matters because it changes what the zero-sheet $6$-cycle means. It does not point toward a singularity. It points toward a genuine finite wall packet. So the cycle multiset
+\[
+4,4,6
+\]
+now determines a canonical pair of thermodynamic packets:
+\begin{enumerate}
+\item the interior packet at $\lambda=4$, selected by the two independent $4$-cycles;
+\item the wall packet at $\lambda=6$, selected by the dependent $6$-cycle.
+\end{enumerate}
+And on the physical slice $s=1$, the wall packet has a larger order parameter and larger Hessian than the interior packet, while its dual stiffness is smaller. In other words: the zero sheet does not just meet the spectral branch at two scales. It picks out a canonical ordered interior/wall thermodynamic pair inside that branch.
+
+That is stronger than MCXIV. MCXIV said the zero sheet and the completed spectral branch were rigidly compatible. MCXV and MCXVI say more: the wall scale is finite, and the exact zero-sheet cycle multiset determines a distinguished two-level thermodynamic packet inside the completed spectral system.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3663,6 +3678,8 @@ Spectral Equation of State & the order parameter determines $\lambda$ uniquely a
 Infinite-Cutoff Dual Branch & the inverse branch and Legendre dual survive to infinite cutoff with certified enclosures & MCXII \\
 Dual Stiffness / Reciprocal Susceptibility & the dual curvature is exactly $1/\chi$ and survives to infinite cutoff with explicit bounds & MCXIII \\
 Zero-Sheet Cycle Response & the Hamming/Fano zero sheet has cycle scales $4,4,6$ matching the interior spectral branch and the wall $|\lambda|=6$ & MCXIV \\
+Uniform Wall Packet & the positive real spectral branch reaches a finite thermodynamic packet at $\lambda=6$ & MCXV \\
+Zero-Sheet Canonical Packet & the exact zero-sheet cycle multiset $4,4,6$ selects a canonical interior packet at $\lambda=4$ and wall packet at $\lambda=6$ & MCXVI \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

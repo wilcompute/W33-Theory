@@ -60,6 +60,9 @@ from w33.cyclotomic import (
     completed_defect_spectral_dual_stiffness,
     completed_defect_spectral_infinite_dual_stiffness_interval,
     completed_defect_spectral_infinite_dual_stiffness_profile,
+    completed_defect_spectral_real_packet,
+    completed_defect_spectral_uniform_wall_packet,
+    completed_defect_spectral_uniform_wall_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -588,6 +591,26 @@ def test_completed_defect_spectral_dual_stiffness_package():
     assert two_rows[2]["stiffness_interval_width"] < two_rows[1]["stiffness_interval_width"] < two_rows[0]["stiffness_interval_width"]
     assert one_rows[2]["interval_lower_stiffness"] <= one_rows[2]["recovered_stiffness"] <= one_rows[2]["interval_upper_stiffness"]
     assert two_rows[2]["interval_lower_stiffness"] <= two_rows[2]["recovered_stiffness"] <= two_rows[2]["interval_upper_stiffness"]
+
+
+def test_completed_defect_spectral_uniform_wall_limit_package():
+    s = 1.0
+    prime_limit = 100000
+    near = completed_defect_spectral_real_packet(prime_limit, s, deformation=5.99)
+    wall = completed_defect_spectral_uniform_wall_packet(prime_limit, s)
+    assert wall["uniform_wall"] == 6.0
+    assert wall["deformation"] == 6.0
+    assert wall["hessian"] > near["hessian"] > 0.0
+    assert wall["order_parameter"] > near["order_parameter"] > 0.0
+    assert wall["stiffness"] < near["stiffness"]
+    assert abs(wall["hessian"] - near["hessian"]) < 0.02
+
+    profile = completed_defect_spectral_uniform_wall_profile([1000, 10000, 100000], [1.0], [5.0, 5.5, 5.9, 5.99, 6.0])
+    wall_rows = [profile["1.0"][key][-1] for key in ["5.0", "5.5", "5.9", "5.99", "6.0"]]
+    assert wall_rows[-1]["uniform_wall"] == 6.0
+    assert wall_rows[-1]["wall_gap"] == 0.0
+    assert wall_rows[-1]["hessian"] > wall_rows[-2]["hessian"] > wall_rows[0]["hessian"]
+    assert wall_rows[-1]["stiffness"] < wall_rows[-2]["stiffness"] < wall_rows[0]["stiffness"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

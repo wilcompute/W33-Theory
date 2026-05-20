@@ -1625,6 +1625,71 @@ def completed_defect_spectral_infinite_dual_stiffness_profile(
     return payload
 
 
+def completed_defect_spectral_real_packet(prime_limit: int, s: float, deformation: float = 1.0) -> dict[str, float]:
+    """Thermodynamic packet of the completed spectral branch on the positive real slice."""
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    action = completed_defect_spectral_action(prime_limit, s, deformation=deformation).real
+    order_parameter = completed_defect_spectral_order_parameter_real_global(prime_limit, s, deformation=deformation)
+    hessian = completed_defect_spectral_hessian_real_global(prime_limit, s, deformation=deformation)
+    stiffness = math.inf if hessian <= 0 else 1 / hessian
+    dual = deformation * order_parameter - action
+    return {
+        "prime_limit": float(prime_limit),
+        "s": s,
+        "deformation": deformation,
+        "action": action,
+        "order_parameter": order_parameter,
+        "hessian": hessian,
+        "stiffness": stiffness,
+        "dual": dual,
+    }
+
+
+def completed_defect_spectral_uniform_wall_packet(prime_limit: int, s: float) -> dict[str, float]:
+    """Finite wall packet at the uniform deformation scale λ = 6 on the real spectral slice.
+
+    For every finite real s > 0, each local radius is strictly larger than 6, so the completed
+    spectral branch extends continuously to the uniform wall scale λ = 6 even though the global
+    compact-disk theory only guarantees analyticity on |λ| < 6.
+    """
+    wall = completed_defect_spectral_uniform_radius_lower_bound()
+    packet = completed_defect_spectral_real_packet(prime_limit, s, deformation=wall)
+    packet["uniform_wall"] = wall
+    return packet
+
+
+def completed_defect_spectral_uniform_wall_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, list[dict[str, float]]]]:
+    """Profile the finite real branch as it approaches the uniform wall scale λ = 6."""
+    payload: dict[str, dict[str, list[dict[str, float]]]] = {}
+    wall = completed_defect_spectral_uniform_radius_lower_bound()
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            previous = None
+            for prime_limit in prime_limits:
+                packet = completed_defect_spectral_real_packet(prime_limit, s, deformation=deformation)
+                row = {
+                    **packet,
+                    "uniform_wall": wall,
+                    "wall_gap": wall - deformation,
+                    "order_jump_from_previous": (packet["order_parameter"] - previous["order_parameter"]) if previous is not None else None,
+                    "hessian_jump_from_previous": (packet["hessian"] - previous["hessian"]) if previous is not None else None,
+                    "stiffness_jump_from_previous": (packet["stiffness"] - previous["stiffness"]) if previous is not None else None,
+                }
+                rows.append(row)
+                previous = packet
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

@@ -1881,6 +1881,41 @@ Thus the zero sheet behaves as a rank-two residual cycle source whose independen
 
 This is a compatibility theorem rather than a derivation that the zero sheet generates the deformation variable itself. What is exact is the cycle arithmetic, the spectral wall, and the monotone response law linking them.
 
+The wall scale itself admits a further sharpening. On the positive real spectral slice the completed branch does not blow up at the uniform scale $\lambda=6$; it approaches a finite boundary packet there. The reason is that for every finite $s>0$ each local radius is strictly larger than $6$, so the real branch extends continuously to the wall scale even though the global compact-disk theory only guarantees analyticity on $|\lambda|<6$.
+
+\begin{theorem}[Completed Spectral Uniform-Wall Limit]
+Fix finite real $s>0$ and a split-prime cutoff $X$. Then the positive real completed spectral branch admits a finite wall packet at the uniform scale
+\[
+\lambda=6.
+\]
+In particular the action, order parameter, Hessian, dual stiffness, and Legendre dual all have finite limits as $\lambda\to6^{-}$, and these limits are obtained by direct evaluation at $\lambda=6$.
+
+Thus the uniform wall scale is not a physical singularity on the real branch. It is a canonical finite boundary packet.
+\end{theorem}
+
+This matters for the zero sheet because the dependent $6$-cycle now lands on a genuine thermodynamic boundary packet rather than on a blow-up. The cycle multiset $4,4,6$ therefore determines not only an interior/wall scale pair, but a canonical interior/wall packet pair.
+
+\begin{theorem}[Zero-Sheet Canonical Thermodynamic Packet]
+The zero-sheet cycle multiset
+\[
+4,4,6
+\]
+canonically selects:
+\begin{enumerate}
+\item an interior completed-spectral packet at $\lambda=4$, corresponding to the two independent $4$-cycles;
+\item a wall completed-spectral packet at $\lambda=6$, corresponding to the dependent $6$-cycle.
+\end{enumerate}
+On the positive real slice $s=1$, the wall packet has larger order parameter and larger Hessian than the interior packet, while its dual stiffness is smaller. So the residual zero sheet determines a canonical ordered thermodynamic pair inside the completed spectral theory:
+\[
+(\lambda=4\text{ interior packet})
+\prec
+(\lambda=6\text{ wall packet})
+\]
+in primal responsiveness, with the reverse ordering on the dual stiffness side.
+\end{theorem}
+
+This still stops short of proving that the zero sheet generates the deformation variable itself. But it does show that the exact zero-sheet cycle multiset determines a distinguished two-level thermodynamic packet inside the completed spectral theory.
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[
