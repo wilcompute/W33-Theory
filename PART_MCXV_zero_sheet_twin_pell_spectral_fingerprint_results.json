@@ -1,0 +1,37 @@
+{
+  "identities": {
+    "adjacency_char_matches_twin_pell_fingerprint": true,
+    "adjacency_nullity_equals_cycle_rank": true,
+    "degree_sum_is_twice_zero_edges": true,
+    "laplacian_has_one_zero_mode": true,
+    "matrix_tree_count_is_g_multiplicity": true,
+    "squared_cubic_uses_q2_odd_instances_and_2q": true,
+    "zero_sheet_is_8_vertices_9_edges_rank2": true
+  },
+  "matrix_tree": {
+    "reading": "The zero-sheet Laplacian cofactor equals g=15, the W(3,3) -4 eigenspace multiplicity.",
+    "spanning_tree_count": 15,
+    "w33_g_multiplicity": 15
+  },
+  "summary": {
+    "adjacency_characteristic_polynomial": "x^8 - 9x^6 + 17x^4 - 8x^2",
+    "all_identities_hold": true,
+    "experiment": "zero-sheet Twin-Pell adjacency fingerprint",
+    "laplacian_characteristic_polynomial": "x^8 - 18x^7 + 129x^6 - 474x^5 + 956x^4 - 1048x^3 + 573x^2 - 120x",
+    "spanning_tree_count": 15,
+    "squared_spectral_cubic": "y^3 - 9y^2 + 17y - 8"
+  },
+  "theorem": "Zero-sheet Twin-Pell spectral fingerprint",
+  "twin_pell_dictionary": {
+    "2^q": 8,
+    "q^2": 9,
+    "q^2+2^q": 17,
+    "reading": "The nonzero squared adjacency spectrum of the zero sheet is governed by the cubic y^3 - q^2 y^2 + (q^2+2^q)y - 2^q.",
+    "squared_spectral_cubic_coefficients": [
+      1,
+      -9,
+      17,
+      -8
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "adjacency_characteristic_coefficients": [
+    1,
+    0,
+    -9,
+    0,
+    17,
+    0,
+    -8,
+    0,
+    0
+  ],
+  "adjacency_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "honesty_boundary": "This is an exact graph-spectral fingerprint of the Hamming/Fano zero sheet. It shows the Twin-Pell constants and g=15 inside the residual graph itself; it does not yet identify the graph as a canonical quotient of the full W(3,3) adjacency algebra.",
+  "identities": {
+    "adjacency_char_matches_twin_pell_fingerprint": true,
+    "adjacency_nullity_equals_cycle_rank": true,
+    "degree_sum_is_twice_zero_edges": true,
+    "laplacian_has_one_zero_mode": true,
+    "matrix_tree_count_is_g_multiplicity": true,
+    "squared_cubic_uses_q2_odd_instances_and_2q": true,
+    "zero_sheet_is_8_vertices_9_edges_rank2": true
+  },
+  "laplacian_characteristic_coefficients": [
+    1,
+    -18,
+    129,
+    -474,
+    956,
+    -1048,
+    573,
+    -120,
+    0
+  ],
+  "laplacian_matrix": [
+    [
+      3,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      4,
+      0,
+      -1,
+      -1,
+      0,
+      -1,
+      -1
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      -1,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      -1,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "matrix_tree": {
+    "reading": "The zero-sheet Laplacian cofactor equals g=15, the W(3,3) -4 eigenspace multiplicity.",
+    "spanning_tree_count": 15,
+    "w33_g_multiplicity": 15
+  },
+  "summary": {
+    "adjacency_characteristic_polynomial": "x^8 - 9x^6 + 17x^4 - 8x^2",
+    "all_identities_hold": true,
+    "experiment": "zero-sheet Twin-Pell adjacency fingerprint",
+    "laplacian_characteristic_polynomial": "x^8 - 18x^7 + 129x^6 - 474x^5 + 956x^4 - 1048x^3 + 573x^2 - 120x",
+    "spanning_tree_count": 15,
+    "squared_spectral_cubic": "y^3 - 9y^2 + 17y - 8"
+  },
+  "twin_pell_dictionary": {
+    "2^q": 8,
+    "q^2": 9,
+    "q^2+2^q": 17,
+    "reading": "The nonzero squared adjacency spectrum of the zero sheet is governed by the cubic y^3 - q^2 y^2 + (q^2+2^q)y - 2^q.",
+    "squared_spectral_cubic_coefficients": [
+      1,
+      -9,
+      17,
+      -8
+    ]
+  },
+  "zero_sheet_subgraph": {
+    "column_incidence": {
+      "0": 3,
+      "1": 5,
+      "2": 5,
+      "3": 5
+    },
+    "component_sizes": [
+      8
+    ],
+    "cycle_rank": 2,
+    "degree_histogram": {
+      "1": 2,
+      "2": 3,
+      "3": 2,
+      "4": 1
+    },
+    "degrees": {
+      "r0c0": 3,
+      "r0c1": 4,
+      "r0c2": 2,
+      "r1c2": 1,
+      "r1c3": 2,
+      "r2c1": 1,
+      "r2c2": 2,
+      "r2c3": 3
+    },
+    "edge_count": 9,
+    "edges": [
+      [
+        "r0c0",
+        "r2c1"
+      ],
+      [
+        "r0c0",
+        "r2c2"
+      ],
+      [
+        "r0c0",
+        "r2c3"
+      ],
+      [
+        "r0c1",
+        "r1c2"
+      ],
+      [
+        "r0c1",
+        "r2c2"
+      ],
+      [
+        "r0c1",
+        "r1c3"
+      ],
+      [
+        "r0c1",
+        "r2c3"
+      ],
+      [
+        "r0c2",
+        "r1c3"
+      ],
+      [
+        "r0c2",
+        "r2c3"
+      ]
+    ],
+    "reading": "The zero Hamming sheet is connected and triangle-free with cycle rank 2. Its two 4-cycles have a 6-cycle as their symmetric-difference shadow.",
+    "row_incidence": {
+      "0": 9,
+      "1": 3,
+      "2": 6
+    },
+    "simple_cycle_lengths": [
+      4,
+      4,
+      6
+    ],
+    "simple_cycles": [
+      [
+        "r0c0",
+        "r2c2",
+        "r0c1",
+        "r2c3"
+      ],
+      [
+        "r0c1",
+        "r1c3",
+        "r0c2",
+        "r2c3"
+      ],
+      [
+        "r0c0",
+        "r2c2",
+        "r0c1",
+        "r1c3",
+        "r0c2",
+        "r2c3"
+      ]
+    ],
+    "triangle_free": true,
+    "vertex_count": 8,
+    "vertices": [
+      "r0c0",
+      "r0c1",
+      "r0c2",
+      "r1c2",
+      "r1c3",
+      "r2c1",
+      "r2c2",
+      "r2c3"
+    ]
+  }
+}
