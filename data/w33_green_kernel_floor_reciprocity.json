@@ -1,0 +1,180 @@
+{
+  "theorem": "Green-kernel floor reciprocity",
+  "packet": {
+    "parameters": {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "nonneighbors": 27
+    },
+    "spectrum": {
+      "eigenvalues": {
+        "k": 12,
+        "r": 2,
+        "s": -4
+      },
+      "multiplicities": {
+        "k": 1,
+        "r": 24,
+        "s": 15
+      }
+    },
+    "inverse_coefficients": {
+      "I": {
+        "fraction": "1/4",
+        "numerator": 1,
+        "denominator": 4,
+        "float": 0.25
+      },
+      "A": {
+        "fraction": "1/8",
+        "numerator": 1,
+        "denominator": 8,
+        "float": 0.125
+      },
+      "J": {
+        "fraction": "-1/24",
+        "numerator": -1,
+        "denominator": 24,
+        "float": -0.041666666666666664
+      },
+      "formula": "A^-1 = I/4 + A/8 - J/24 = (6I + 3A - J)/24"
+    },
+    "integer_scaled_inverse": {
+      "denominator": 24,
+      "I": 6,
+      "A": 3,
+      "J": -1,
+      "formula": "24 A^-1 = 6I + 3A - J",
+      "identity": "A(6I + 3A - J) = 24I",
+      "lhs_coefficients_after_srg_reduction": {
+        "I": 24,
+        "A": 0,
+        "J": 0
+      },
+      "verified": true
+    },
+    "entry_values": {
+      "diagonal": {
+        "fraction": "5/24",
+        "numerator": 5,
+        "denominator": 24,
+        "float": 0.20833333333333334
+      },
+      "adjacent": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "nonedge": {
+        "fraction": "-1/24",
+        "numerator": -1,
+        "denominator": 24,
+        "float": -0.041666666666666664
+      }
+    },
+    "shell_contributions": {
+      "diagonal": {
+        "fraction": "5/24",
+        "numerator": 5,
+        "denominator": 24,
+        "float": 0.20833333333333334
+      },
+      "adjacent_shell": {
+        "fraction": "1",
+        "numerator": 1,
+        "denominator": 1,
+        "float": 1.0
+      },
+      "nonedge_shell": {
+        "fraction": "-9/8",
+        "numerator": -9,
+        "denominator": 8,
+        "float": -1.125
+      },
+      "row_sum": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      }
+    },
+    "floor_equalities": {
+      "mcxli_mcxlii_floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "valency_reciprocal": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "green_adjacent_entry": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "green_row_sum": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "all_equal": true
+    },
+    "reciprocity": {
+      "diagonal_over_floor": {
+        "fraction": "5/2",
+        "numerator": 5,
+        "denominator": 2,
+        "float": 2.5
+      },
+      "nonedge_over_floor": {
+        "fraction": "-1/2",
+        "numerator": -1,
+        "denominator": 2,
+        "float": -0.5
+      },
+      "diagonal_is_five_halves_floor": true,
+      "nonedge_is_minus_half_floor": true,
+      "adjacent_minus_nonedge": {
+        "fraction": "1/8",
+        "numerator": 1,
+        "denominator": 8,
+        "float": 0.125
+      },
+      "adjacent_minus_nonedge_is_1_over_2mu": true,
+      "neighbor_shell_is_unit": true,
+      "row_sum_equation": "5/24 + 12*(1/12) + 27*(-1/24) = 1/12"
+    },
+    "trace_data": {
+      "trace_A_inverse": {
+        "fraction": "25/3",
+        "numerator": 25,
+        "denominator": 3,
+        "float": 8.333333333333334
+      },
+      "total_entry_sum": {
+        "fraction": "10/3",
+        "numerator": 10,
+        "denominator": 3,
+        "float": 3.3333333333333335
+      },
+      "frobenius_square_trace_A_inverse_squared": {
+        "fraction": "125/18",
+        "numerator": 125,
+        "denominator": 18,
+        "float": 6.944444444444445
+      }
+    },
+    "claim_boundary": "finite W33 adjacency Green-kernel identity extending the corrected substrate floor; not a new continuum proof by itself",
+    "green_kernel_floor_reciprocity_detected": true
+  }
+}
