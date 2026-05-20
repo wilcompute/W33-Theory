@@ -72,6 +72,9 @@ from w33.cyclotomic import (
     completed_defect_spectral_infinite_boundary_corridor_profile,
     completed_defect_spectral_infinite_boundary_average_packet,
     completed_defect_spectral_infinite_boundary_average_profile,
+    completed_defect_spectral_third_derivative_real_global,
+    completed_defect_spectral_boundary_mean_witness_packet,
+    completed_defect_spectral_boundary_mean_witness_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -776,6 +779,34 @@ def test_completed_defect_spectral_infinite_boundary_average_density_package():
     assert rows[-1]["average_third_derivative_width_drop_from_previous"] is not None and rows[-1]["average_third_derivative_width_drop_from_previous"] > 0.0
     assert rows[-1]["average_dual_softening_width_drop_from_previous"] is not None and rows[-1]["average_dual_softening_width_drop_from_previous"] > 0.0
     assert rows[-1]["average_dual_delta_width_drop_from_previous"] is not None and rows[-1]["average_dual_delta_width_drop_from_previous"] > 0.0
+
+
+def test_completed_defect_spectral_boundary_mean_witness_ladder_package():
+    packet = completed_defect_spectral_boundary_mean_witness_packet(100000, 1.0, subintervals=80)
+
+    assert completed_defect_spectral_third_derivative_real_global(100000, 1.0, 4.0) > 0.0
+    assert packet["mean_deformation_ladder_ordered"]
+    assert packet["primal_mean_deformation_ladder_ordered"]
+    assert packet["order_mean_abs_residual"] < 1e-10
+    assert packet["hessian_mean_abs_residual"] < 1e-10
+    assert packet["third_derivative_mean_abs_residual"] < 1e-10
+    assert packet["dual_softening_mean_abs_residual"] < 1e-10
+
+    assert abs(packet["order_mean_value"] - packet["finite_average_order_parameter"]) < 1e-10
+    assert abs(packet["hessian_mean_value"] - packet["finite_average_hessian"]) < 1e-10
+    assert abs(packet["third_derivative_mean_value"] - packet["finite_average_third_derivative"]) < 1e-10
+    assert abs(packet["dual_softening_mean_value"] - packet["finite_average_dual_softening"]) < 1e-10
+
+    assert 4.0 < packet["dual_softening_mean_deformation"] < packet["order_mean_deformation"]
+    assert packet["order_mean_deformation"] < packet["hessian_mean_deformation"] < packet["third_derivative_mean_deformation"] < 6.0
+
+    profile = completed_defect_spectral_boundary_mean_witness_profile([1000, 10000, 100000], [1.0], subintervals=60)
+    rows = profile["1.0"]
+    assert rows[-1]["mean_deformation_ladder_ordered"]
+    assert rows[-1]["order_mean_deformation_jump_from_previous"] < rows[1]["order_mean_deformation_jump_from_previous"]
+    assert rows[-1]["hessian_mean_deformation_jump_from_previous"] < rows[1]["hessian_mean_deformation_jump_from_previous"]
+    assert rows[-1]["third_derivative_mean_deformation_jump_from_previous"] <= rows[1]["third_derivative_mean_deformation_jump_from_previous"]
+    assert rows[-1]["dual_softening_mean_deformation_jump_from_previous"] < rows[1]["dual_softening_mean_deformation_jump_from_previous"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

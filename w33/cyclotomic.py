@@ -2263,6 +2263,173 @@ def completed_defect_spectral_infinite_boundary_average_profile(
     return payload
 
 
+def completed_defect_spectral_third_derivative_real_global(prime_limit: int, s: float, deformation: float = 1.0) -> float:
+    """Real third λ-derivative of the completed spectral action on the positive real branch."""
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    return float(-completed_defect_spectral_log_lambda_derivative(prime_limit, s, 3, deformation=deformation).real)
+
+
+def _completed_defect_spectral_endpoint_bracket_witness(
+    target: float,
+    lower_deformation: float,
+    upper_deformation: float,
+    value_at_deformation,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> dict[str, float]:
+    """Select a deformation witness by endpoint-bracket bisection."""
+    if not lower_deformation < upper_deformation:
+        raise ValueError("need lower_deformation < upper_deformation")
+    lower_residual = value_at_deformation(lower_deformation) - target
+    upper_residual = value_at_deformation(upper_deformation) - target
+    if abs(lower_residual) <= tolerance:
+        deformation = lower_deformation
+    elif abs(upper_residual) <= tolerance:
+        deformation = upper_deformation
+    elif lower_residual * upper_residual > 0:
+        raise ValueError("target is not bracketed by endpoint values")
+    else:
+        low = lower_deformation
+        high = upper_deformation
+        low_residual = lower_residual
+        deformation = 0.5 * (low + high)
+        for _ in range(max_iterations):
+            deformation = 0.5 * (low + high)
+            residual = value_at_deformation(deformation) - target
+            if abs(residual) <= tolerance:
+                break
+            if low_residual * residual <= 0:
+                high = deformation
+            else:
+                low = deformation
+                low_residual = residual
+    value = value_at_deformation(deformation)
+    return {
+        "deformation": deformation,
+        "value": value,
+        "target": target,
+        "abs_residual": abs(value - target),
+    }
+
+
+def completed_defect_spectral_boundary_mean_witness_packet(
+    prime_limit: int,
+    s: float,
+    interior_deformation: float = 4.0,
+    wall_deformation: float = 6.0,
+    subintervals: int = 160,
+) -> dict[str, float]:
+    """Mean-density deformation witnesses inside the zero-sheet corridor [4, 6]."""
+    average = completed_defect_spectral_infinite_boundary_average_packet(
+        prime_limit,
+        s,
+        interior_deformation=interior_deformation,
+        wall_deformation=wall_deformation,
+        subintervals=subintervals,
+    )
+
+    order_witness = _completed_defect_spectral_endpoint_bracket_witness(
+        average["finite_average_order_parameter"],
+        interior_deformation,
+        wall_deformation,
+        lambda deformation: completed_defect_spectral_order_parameter_real_global(prime_limit, s, deformation=deformation),
+    )
+    hessian_witness = _completed_defect_spectral_endpoint_bracket_witness(
+        average["finite_average_hessian"],
+        interior_deformation,
+        wall_deformation,
+        lambda deformation: completed_defect_spectral_hessian_real_global(prime_limit, s, deformation=deformation),
+    )
+    third_witness = _completed_defect_spectral_endpoint_bracket_witness(
+        average["finite_average_third_derivative"],
+        interior_deformation,
+        wall_deformation,
+        lambda deformation: completed_defect_spectral_third_derivative_real_global(prime_limit, s, deformation=deformation),
+    )
+    dual_softening_witness = _completed_defect_spectral_endpoint_bracket_witness(
+        average["finite_average_dual_softening"],
+        interior_deformation,
+        wall_deformation,
+        lambda deformation: completed_defect_spectral_dual_softening_density(prime_limit, s, deformation=deformation),
+    )
+
+    return {
+        **average,
+        "order_mean_deformation": order_witness["deformation"],
+        "order_mean_value": order_witness["value"],
+        "order_mean_abs_residual": order_witness["abs_residual"],
+        "hessian_mean_deformation": hessian_witness["deformation"],
+        "hessian_mean_value": hessian_witness["value"],
+        "hessian_mean_abs_residual": hessian_witness["abs_residual"],
+        "third_derivative_mean_deformation": third_witness["deformation"],
+        "third_derivative_mean_value": third_witness["value"],
+        "third_derivative_mean_abs_residual": third_witness["abs_residual"],
+        "dual_softening_mean_deformation": dual_softening_witness["deformation"],
+        "dual_softening_mean_value": dual_softening_witness["value"],
+        "dual_softening_mean_abs_residual": dual_softening_witness["abs_residual"],
+        "mean_deformation_ladder_ordered": (
+            interior_deformation
+            < dual_softening_witness["deformation"]
+            < order_witness["deformation"]
+            < hessian_witness["deformation"]
+            < third_witness["deformation"]
+            < wall_deformation
+        ),
+        "primal_mean_deformation_ladder_ordered": (
+            interior_deformation
+            < order_witness["deformation"]
+            < hessian_witness["deformation"]
+            < third_witness["deformation"]
+            < wall_deformation
+        ),
+    }
+
+
+def completed_defect_spectral_boundary_mean_witness_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, list[dict[str, float]]]:
+    """Profile the finite mean-density witnesses selected inside the zero-sheet corridor."""
+    payload: dict[str, list[dict[str, float]]] = {}
+    for s in s_values:
+        rows = []
+        previous_order = None
+        previous_hessian = None
+        previous_third = None
+        previous_softening = None
+        for prime_limit in prime_limits:
+            packet = completed_defect_spectral_boundary_mean_witness_packet(
+                prime_limit,
+                s,
+                subintervals=subintervals,
+            )
+            rows.append(
+                {
+                    **packet,
+                    "order_mean_deformation_jump_from_previous": (
+                        abs(packet["order_mean_deformation"] - previous_order) if previous_order is not None else None
+                    ),
+                    "hessian_mean_deformation_jump_from_previous": (
+                        abs(packet["hessian_mean_deformation"] - previous_hessian) if previous_hessian is not None else None
+                    ),
+                    "third_derivative_mean_deformation_jump_from_previous": (
+                        abs(packet["third_derivative_mean_deformation"] - previous_third) if previous_third is not None else None
+                    ),
+                    "dual_softening_mean_deformation_jump_from_previous": (
+                        abs(packet["dual_softening_mean_deformation"] - previous_softening) if previous_softening is not None else None
+                    ),
+                }
+            )
+            previous_order = packet["order_mean_deformation"]
+            previous_hessian = packet["hessian_mean_deformation"]
+            previous_third = packet["third_derivative_mean_deformation"]
+            previous_softening = packet["dual_softening_mean_deformation"]
+        payload[str(s)] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
