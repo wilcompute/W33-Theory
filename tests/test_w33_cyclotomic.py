@@ -70,6 +70,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_infinite_compact_real_packet,
     completed_defect_spectral_infinite_boundary_corridor_packet,
     completed_defect_spectral_infinite_boundary_corridor_profile,
+    completed_defect_spectral_infinite_boundary_average_packet,
+    completed_defect_spectral_infinite_boundary_average_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -742,6 +744,38 @@ def test_completed_defect_spectral_infinite_boundary_corridor_package():
     rows = profile["1.0"]
     assert rows[-1]["action_corridor_width_drop_from_previous"] is not None and rows[-1]["action_corridor_width_drop_from_previous"] > 0.0
     assert rows[-1]["stiffness_corridor_width_drop_from_previous"] is not None and rows[-1]["stiffness_corridor_width_drop_from_previous"] > 0.0
+
+
+def test_completed_defect_spectral_infinite_boundary_average_density_package():
+    packet = completed_defect_spectral_infinite_boundary_average_packet(100000, 1.0, subintervals=80)
+    corridor = completed_defect_spectral_infinite_boundary_corridor_packet(100000, 1.0, subintervals=80)
+    width = packet["corridor_width"]
+
+    assert width == 2.0
+    assert packet["finite_average_order_parameter_in_corridor"]
+    assert packet["finite_average_hessian_in_corridor"]
+    assert packet["finite_average_third_derivative_in_corridor"]
+    assert packet["finite_average_dual_softening_in_corridor"]
+    assert packet["finite_average_dual_delta_density_in_corridor"]
+
+    assert packet["finite_average_order_parameter"] == corridor["finite_delta_action"] / width
+    assert packet["finite_average_hessian"] == corridor["finite_delta_order_parameter"] / width
+    assert packet["finite_average_third_derivative"] == corridor["finite_delta_hessian"] / width
+    assert packet["finite_average_dual_softening"] == corridor["finite_stiffness_loss"] / width
+    assert packet["finite_average_dual_delta_density"] == corridor["finite_dual_delta"] / width
+    assert packet["infinite_average_order_parameter_interval_width"] == corridor["infinite_delta_action_interval_width"] / width
+    assert packet["infinite_average_hessian_interval_width"] == corridor["infinite_delta_order_parameter_interval_width"] / width
+    assert packet["infinite_average_third_derivative_interval_width"] == corridor["infinite_delta_hessian_interval_width"] / width
+    assert packet["infinite_average_dual_softening_interval_width"] == corridor["infinite_stiffness_loss_interval_width"] / width
+    assert packet["infinite_average_dual_delta_density_interval_width"] == corridor["infinite_dual_delta_interval_width"] / width
+
+    profile = completed_defect_spectral_infinite_boundary_average_profile([1000, 10000, 100000], [1.0], subintervals=60)
+    rows = profile["1.0"]
+    assert rows[-1]["average_order_width_drop_from_previous"] is not None and rows[-1]["average_order_width_drop_from_previous"] > 0.0
+    assert rows[-1]["average_hessian_width_drop_from_previous"] is not None and rows[-1]["average_hessian_width_drop_from_previous"] > 0.0
+    assert rows[-1]["average_third_derivative_width_drop_from_previous"] is not None and rows[-1]["average_third_derivative_width_drop_from_previous"] > 0.0
+    assert rows[-1]["average_dual_softening_width_drop_from_previous"] is not None and rows[-1]["average_dual_softening_width_drop_from_previous"] > 0.0
+    assert rows[-1]["average_dual_delta_width_drop_from_previous"] is not None and rows[-1]["average_dual_delta_width_drop_from_previous"] > 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

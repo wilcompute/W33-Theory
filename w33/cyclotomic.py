@@ -2123,6 +2123,146 @@ def completed_defect_spectral_infinite_boundary_corridor_profile(
     return payload
 
 
+def completed_defect_spectral_infinite_boundary_average_packet(
+    prime_limit: int,
+    s: float,
+    interior_deformation: float = 4.0,
+    wall_deformation: float = 6.0,
+    subintervals: int = 160,
+) -> dict[str, float]:
+    """Average-density version of the certified infinite-cutoff boundary corridor."""
+    corridor = completed_defect_spectral_infinite_boundary_corridor_packet(
+        prime_limit,
+        s,
+        interior_deformation=interior_deformation,
+        wall_deformation=wall_deformation,
+        subintervals=subintervals,
+    )
+    width = wall_deformation - interior_deformation
+    if width <= 0:
+        raise ValueError("corridor width must be positive")
+
+    def scaled_interval(input_prefix: str, output_prefix: str) -> dict[str, float]:
+        lower = corridor[f"{input_prefix}_lower_bound"] / width
+        upper = corridor[f"{input_prefix}_upper_bound"] / width
+        return {
+            f"{output_prefix}_lower_bound": lower,
+            f"{output_prefix}_upper_bound": upper,
+            f"{output_prefix}_interval_width": upper - lower,
+        }
+
+    order_average = scaled_interval("infinite_delta_action", "infinite_average_order_parameter")
+    hessian_average = scaled_interval("infinite_delta_order_parameter", "infinite_average_hessian")
+    third_average = scaled_interval("infinite_delta_hessian", "infinite_average_third_derivative")
+    softening_average = scaled_interval("infinite_stiffness_loss", "infinite_average_dual_softening")
+    dual_average = scaled_interval("infinite_dual_delta", "infinite_average_dual_delta_density")
+
+    finite_average_order = corridor["finite_delta_action"] / width
+    finite_average_hessian = corridor["finite_delta_order_parameter"] / width
+    finite_average_third_derivative = corridor["finite_delta_hessian"] / width
+    finite_average_dual_softening = corridor["finite_stiffness_loss"] / width
+    finite_average_dual_delta_density = corridor["finite_dual_delta"] / width
+
+    return {
+        **corridor,
+        "corridor_width": width,
+        "finite_average_order_parameter": finite_average_order,
+        "finite_average_hessian": finite_average_hessian,
+        "finite_average_third_derivative": finite_average_third_derivative,
+        "finite_average_dual_softening": finite_average_dual_softening,
+        "finite_average_dual_delta_density": finite_average_dual_delta_density,
+        **order_average,
+        **hessian_average,
+        **third_average,
+        **softening_average,
+        **dual_average,
+        "finite_average_order_parameter_in_corridor": (
+            order_average["infinite_average_order_parameter_lower_bound"]
+            <= finite_average_order
+            <= order_average["infinite_average_order_parameter_upper_bound"]
+        ),
+        "finite_average_hessian_in_corridor": (
+            hessian_average["infinite_average_hessian_lower_bound"]
+            <= finite_average_hessian
+            <= hessian_average["infinite_average_hessian_upper_bound"]
+        ),
+        "finite_average_third_derivative_in_corridor": (
+            third_average["infinite_average_third_derivative_lower_bound"]
+            <= finite_average_third_derivative
+            <= third_average["infinite_average_third_derivative_upper_bound"]
+        ),
+        "finite_average_dual_softening_in_corridor": (
+            softening_average["infinite_average_dual_softening_lower_bound"]
+            <= finite_average_dual_softening
+            <= softening_average["infinite_average_dual_softening_upper_bound"]
+        ),
+        "finite_average_dual_delta_density_in_corridor": (
+            dual_average["infinite_average_dual_delta_density_lower_bound"]
+            <= finite_average_dual_delta_density
+            <= dual_average["infinite_average_dual_delta_density_upper_bound"]
+        ),
+    }
+
+
+def completed_defect_spectral_infinite_boundary_average_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, list[dict[str, float]]]:
+    """Profile contraction of average density intervals across the zero-sheet corridor."""
+    payload: dict[str, list[dict[str, float]]] = {}
+    for s in s_values:
+        rows = []
+        previous_order_width = None
+        previous_hessian_width = None
+        previous_third_width = None
+        previous_softening_width = None
+        previous_dual_width = None
+        for prime_limit in prime_limits:
+            packet = completed_defect_spectral_infinite_boundary_average_packet(
+                prime_limit,
+                s,
+                subintervals=subintervals,
+            )
+            rows.append(
+                {
+                    **packet,
+                    "average_order_width_drop_from_previous": (
+                        previous_order_width - packet["infinite_average_order_parameter_interval_width"]
+                        if previous_order_width is not None
+                        else None
+                    ),
+                    "average_hessian_width_drop_from_previous": (
+                        previous_hessian_width - packet["infinite_average_hessian_interval_width"]
+                        if previous_hessian_width is not None
+                        else None
+                    ),
+                    "average_third_derivative_width_drop_from_previous": (
+                        previous_third_width - packet["infinite_average_third_derivative_interval_width"]
+                        if previous_third_width is not None
+                        else None
+                    ),
+                    "average_dual_softening_width_drop_from_previous": (
+                        previous_softening_width - packet["infinite_average_dual_softening_interval_width"]
+                        if previous_softening_width is not None
+                        else None
+                    ),
+                    "average_dual_delta_width_drop_from_previous": (
+                        previous_dual_width - packet["infinite_average_dual_delta_density_interval_width"]
+                        if previous_dual_width is not None
+                        else None
+                    ),
+                }
+            )
+            previous_order_width = packet["infinite_average_order_parameter_interval_width"]
+            previous_hessian_width = packet["infinite_average_hessian_interval_width"]
+            previous_third_width = packet["infinite_average_third_derivative_interval_width"]
+            previous_softening_width = packet["infinite_average_dual_softening_interval_width"]
+            previous_dual_width = packet["infinite_average_dual_delta_density_interval_width"]
+        payload[str(s)] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
