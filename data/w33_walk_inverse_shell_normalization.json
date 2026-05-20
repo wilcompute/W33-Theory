@@ -1,0 +1,186 @@
+{
+  "theorem": "Walk inverse shell normalization",
+  "packet": {
+    "parameters": {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "nonneighbors": 27
+    },
+    "normalization": {
+      "transition_matrix": "P = A/12",
+      "inverse_relation": "P^-1 = 12 A^-1",
+      "integer_scaled_relation": "2 P^-1 = 6I + 3A - J",
+      "inverse_identity": "P(6I + 3A - J) = 2I",
+      "floor_recovered_as_adjacent_entry_over_k": true
+    },
+    "entry_values": {
+      "diagonal": {
+        "fraction": "5/2",
+        "numerator": 5,
+        "denominator": 2,
+        "float": 2.5
+      },
+      "adjacent": {
+        "fraction": "1",
+        "numerator": 1,
+        "denominator": 1,
+        "float": 1.0
+      },
+      "nonedge": {
+        "fraction": "-1/2",
+        "numerator": -1,
+        "denominator": 2,
+        "float": -0.5
+      },
+      "twice_diagonal": {
+        "fraction": "5",
+        "numerator": 5,
+        "denominator": 1,
+        "float": 5.0
+      },
+      "twice_adjacent": {
+        "fraction": "2",
+        "numerator": 2,
+        "denominator": 1,
+        "float": 2.0
+      },
+      "twice_nonedge": {
+        "fraction": "-1",
+        "numerator": -1,
+        "denominator": 1,
+        "float": -1.0
+      }
+    },
+    "shell_contributions": {
+      "diagonal": {
+        "fraction": "5/2",
+        "numerator": 5,
+        "denominator": 2,
+        "float": 2.5
+      },
+      "adjacent_shell": {
+        "fraction": "12",
+        "numerator": 12,
+        "denominator": 1,
+        "float": 12.0
+      },
+      "nonedge_shell": {
+        "fraction": "-27/2",
+        "numerator": -27,
+        "denominator": 2,
+        "float": -13.5
+      },
+      "row_sum": {
+        "fraction": "1",
+        "numerator": 1,
+        "denominator": 1,
+        "float": 1.0
+      },
+      "row_sum_equation": "5/2 + 12*1 + 27*(-1/2) = 1"
+    },
+    "raw_walk_inverse_moments": {
+      "total_entry_sum": {
+        "fraction": "40",
+        "numerator": 40,
+        "denominator": 1,
+        "float": 40.0
+      },
+      "trace_P_inverse": {
+        "fraction": "100",
+        "numerator": 100,
+        "denominator": 1,
+        "float": 100.0
+      },
+      "frobenius_square_P_inverse": {
+        "fraction": "1000",
+        "numerator": 1000,
+        "denominator": 1,
+        "float": 1000.0
+      },
+      "positive_integer_ladder": [
+        40,
+        100,
+        1000
+      ],
+      "equals_mcxliv_floor_scaled_ladder": true
+    },
+    "spectrum": {
+      "P_eigenvalues": {
+        "trivial": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "positive": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "negative": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        }
+      },
+      "P_inverse_eigenvalues": {
+        "trivial": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "positive": {
+          "fraction": "6",
+          "numerator": 6,
+          "denominator": 1,
+          "float": 6.0
+        },
+        "negative": {
+          "fraction": "-3",
+          "numerator": -3,
+          "denominator": 1,
+          "float": -3.0
+        }
+      },
+      "multiplicities": {
+        "trivial": 1,
+        "positive": 24,
+        "negative": 15
+      },
+      "spectral_trace": {
+        "fraction": "100",
+        "numerator": 100,
+        "denominator": 1,
+        "float": 100.0
+      },
+      "spectral_frobenius_square": {
+        "fraction": "1000",
+        "numerator": 1000,
+        "denominator": 1,
+        "float": 1000.0
+      },
+      "spectral_moments_match_shell_moments": true
+    },
+    "integer_shell_kernel": {
+      "kernel": "2P^-1",
+      "diagonal": 5,
+      "adjacent": 2,
+      "nonedge": -1,
+      "row_sum": 2,
+      "trace": 200,
+      "frobenius_square": 4000
+    },
+    "claim_boundary": "finite W33 random-walk inverse normalization; P^-1 is a signed inverse kernel, not a stochastic transition matrix",
+    "walk_inverse_shell_normalization_detected": true
+  }
+}
