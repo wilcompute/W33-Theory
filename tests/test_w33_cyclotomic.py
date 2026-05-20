@@ -80,6 +80,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_stability_packet,
     completed_defect_spectral_boundary_barycentric_wallward_flow_packet,
     completed_defect_spectral_boundary_barycentric_dispersion_turning_packet,
+    completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -916,6 +917,44 @@ def test_completed_defect_spectral_boundary_barycentric_dispersion_turning_packe
     assert rows[3]["gap_entropy"] > rows[4]["gap_entropy"] > rows[5]["gap_entropy"]
     assert rows[0]["gap_concentration"] > rows[1]["gap_concentration"] > rows[2]["gap_concentration"] > rows[3]["gap_concentration"]
     assert rows[3]["gap_concentration"] < rows[4]["gap_concentration"] < rows[5]["gap_concentration"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet(100000, s_values, subintervals=40)
+
+    assert packet["shared_resonance_detected"]
+    assert packet["shared_resonance_s"] == 2.0
+    assert packet["entropy_peak_s"] == 2.0
+    assert packet["concentration_trough_s"] == 2.0
+    assert packet["dominant_gap_all_interior_to_softening"]
+    assert packet["wall_gap_strictly_decreases"]
+    assert packet["all_coordinate_jumps_positive"]
+    assert packet["all_wall_gap_jumps_negative"]
+    assert packet["entropy_sign_pattern"] == [1, 1, 1, -1, -1]
+    assert packet["concentration_sign_pattern"] == [-1, -1, -1, 1, 1]
+
+    entropy_harmonics = packet["entropy_harmonics"]
+    concentration_harmonics = packet["concentration_harmonics"]
+    assert entropy_harmonics["dc_dominates_nonzero_harmonics"]
+    assert concentration_harmonics["dc_dominates_nonzero_harmonics"]
+    assert entropy_harmonics["dominant_nonzero_harmonic_index"] == 1
+    assert concentration_harmonics["dominant_nonzero_harmonic_index"] == 1
+    assert entropy_harmonics["conjugate_symmetric"]
+    assert concentration_harmonics["conjugate_symmetric"]
+    assert entropy_harmonics["normalized_dft_abs"][1] < 0.05
+    assert concentration_harmonics["normalized_dft_abs"][1] < 0.05
+    assert abs(entropy_harmonics["dft_abs"][1] - entropy_harmonics["dft_abs"][5]) < 1e-12
+    assert abs(concentration_harmonics["dft_abs"][1] - concentration_harmonics["dft_abs"][5]) < 1e-12
+
+    entropy_recurrence = packet["entropy_recurrence"]
+    concentration_recurrence = packet["concentration_recurrence"]
+    assert abs(entropy_recurrence["coefficients"][0] + 0.7930288200175148) < 1e-12
+    assert abs(entropy_recurrence["coefficients"][1] - 1.757925053075776) < 1e-12
+    assert abs(concentration_recurrence["coefficients"][0] + 0.7838244705015696) < 1e-12
+    assert abs(concentration_recurrence["coefficients"][1] - 1.8194198703813358) < 1e-12
+    assert entropy_recurrence["max_abs_residual"] < 0.02
+    assert concentration_recurrence["max_abs_residual"] < 0.009
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

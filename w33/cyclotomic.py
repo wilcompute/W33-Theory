@@ -2723,7 +2723,7 @@ def completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(
     """Finite turning-law packet for entropy/concentration of barycentric gap coordinates.
 
     Entropy is Shannon entropy of the five positive barycentric gaps; concentration is the
-    quadratic concentration index \sum g_i^2. This packet detects the finite turning point
+    quadratic concentration index \\sum g_i^2. This packet detects the finite turning point
     of dispersion along an s-ladder while retaining the wallward-flow diagnostics.
     """
     flow = completed_defect_spectral_boundary_barycentric_wallward_flow_packet(
@@ -2808,6 +2808,132 @@ def completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(
         "concentration_falls_then_rises": concentration_sign_pattern.count(-1) > 0
         and concentration_sign_pattern.count(1) > 0
         and concentration_sign_pattern.index(1) > concentration_sign_pattern.index(-1),
+    }
+
+
+def completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet(
+    prime_limit: int,
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite recurrence/resonance packet for barycentric dispersion data.
+
+    This upgrades the MCXXVIII turning law by analyzing the sampled entropy and
+    concentration sequences in two complementary ways:
+
+    * discrete Fourier magnitudes, to measure the spectral weight of the ladder;
+    * best-fit order-two linear recurrences, to detect short arithmetic memory.
+
+    The packet is deliberately finite and cautious: it certifies a shared
+    resonance at the same sampled s-value where entropy peaks and concentration
+    reaches its trough, together with dominant DC mass and a leading first
+    harmonic on the sampled ladder.
+    """
+    dispersion = completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(
+        prime_limit,
+        s_values,
+        subintervals=subintervals,
+    )
+    rows = dispersion["rows"]
+    entropy_values = [row["gap_entropy"] for row in rows]
+    concentration_values = [row["gap_concentration"] for row in rows]
+
+    def _dft_abs(values: list[float]) -> list[float]:
+        count = len(values)
+        return [
+            abs(
+                sum(
+                    value * cmath.exp(-2j * math.pi * harmonic * index / count)
+                    for index, value in enumerate(values)
+                )
+            )
+            for harmonic in range(count)
+        ]
+
+    def _harmonic_packet(values: list[float]) -> dict[str, object]:
+        magnitudes = _dft_abs(values)
+        dc = magnitudes[0]
+        if len(magnitudes) == 1:
+            dominant_raw_index = None
+            dominant_index = None
+            dominant_value = None
+        else:
+            dominant_value = max(magnitudes[1:])
+            dominant_raw_index = min(
+                index
+                for index, value in enumerate(magnitudes[1:], start=1)
+                if abs(value - dominant_value) < 1e-12
+            )
+            dominant_index = min(dominant_raw_index, len(magnitudes) - dominant_raw_index)
+        return {
+            "dft_abs": magnitudes,
+            "dc_component": dc,
+            "dc_dominates_nonzero_harmonics": dc > max(magnitudes[1:], default=0.0),
+            "dominant_nonzero_harmonic_raw_index": dominant_raw_index,
+            "dominant_nonzero_harmonic_index": dominant_index,
+            "dominant_nonzero_harmonic_abs": dominant_value,
+            "normalized_dft_abs": [value / dc if dc != 0.0 else math.inf for value in magnitudes],
+            "conjugate_symmetric": all(
+                abs(magnitudes[index] - magnitudes[-index]) < 1e-12
+                for index in range(1, len(magnitudes))
+            ),
+        }
+
+    def _order_two_recurrence(values: list[float]) -> dict[str, object]:
+        if len(values) < 3:
+            raise ValueError("need at least three values for an order-two recurrence fit")
+        x_prev2 = values[:-2]
+        x_prev1 = values[1:-1]
+        targets = values[2:]
+        s11 = sum(value * value for value in x_prev2)
+        s12 = sum(left * right for left, right in zip(x_prev2, x_prev1))
+        s22 = sum(value * value for value in x_prev1)
+        t1 = sum(left * target for left, target in zip(x_prev2, targets))
+        t2 = sum(right * target for right, target in zip(x_prev1, targets))
+        determinant = s11 * s22 - s12 * s12
+        if abs(determinant) < 1e-15:
+            raise ValueError("degenerate recurrence fit")
+        coefficient_prev2 = (t1 * s22 - t2 * s12) / determinant
+        coefficient_prev1 = (s11 * t2 - s12 * t1) / determinant
+        residuals = [
+            target - (coefficient_prev2 * prev2 + coefficient_prev1 * prev1)
+            for prev2, prev1, target in zip(x_prev2, x_prev1, targets)
+        ]
+        max_abs_residual = max(abs(value) for value in residuals)
+        rms_residual = math.sqrt(sum(value * value for value in residuals) / len(residuals))
+        return {
+            "coefficients": [coefficient_prev2, coefficient_prev1],
+            "residuals": residuals,
+            "max_abs_residual": max_abs_residual,
+            "rms_residual": rms_residual,
+        }
+
+    entropy_harmonics = _harmonic_packet(entropy_values)
+    concentration_harmonics = _harmonic_packet(concentration_values)
+    entropy_recurrence = _order_two_recurrence(entropy_values)
+    concentration_recurrence = _order_two_recurrence(concentration_values)
+
+    resonance_coincides = dispersion["entropy_peak_s"] == dispersion["concentration_trough_s"]
+    resonance_s = dispersion["entropy_peak_s"] if resonance_coincides else None
+
+    return {
+        "prime_limit": prime_limit,
+        "s_values": s_values,
+        "rows": rows,
+        "shared_resonance_detected": resonance_coincides,
+        "shared_resonance_s": resonance_s,
+        "entropy_peak_s": dispersion["entropy_peak_s"],
+        "concentration_trough_s": dispersion["concentration_trough_s"],
+        "entropy_sign_pattern": dispersion["entropy_sign_pattern"],
+        "concentration_sign_pattern": dispersion["concentration_sign_pattern"],
+        "dominant_gap_all_interior_to_softening": dispersion["dominant_gap_all_interior_to_softening"],
+        "wall_gap_strictly_decreases": dispersion["wall_gap_strictly_decreases"],
+        "all_coordinate_jumps_positive": dispersion["all_coordinate_jumps_positive"],
+        "all_wall_gap_jumps_negative": dispersion["all_wall_gap_jumps_negative"],
+        "entropy_harmonics": entropy_harmonics,
+        "concentration_harmonics": concentration_harmonics,
+        "entropy_recurrence": entropy_recurrence,
+        "concentration_recurrence": concentration_recurrence,
     }
 
 
