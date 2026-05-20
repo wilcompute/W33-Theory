@@ -2430,6 +2430,94 @@ def completed_defect_spectral_boundary_mean_witness_profile(
     return payload
 
 
+def completed_defect_spectral_boundary_barycentric_witness_packet(
+    prime_limit: int,
+    s: float,
+    interior_deformation: float = 4.0,
+    wall_deformation: float = 6.0,
+    subintervals: int = 160,
+) -> dict[str, float]:
+    """Barycentric coordinates of the mean-density witnesses on the zero-sheet corridor."""
+    witness = completed_defect_spectral_boundary_mean_witness_packet(
+        prime_limit,
+        s,
+        interior_deformation=interior_deformation,
+        wall_deformation=wall_deformation,
+        subintervals=subintervals,
+    )
+    width = wall_deformation - interior_deformation
+    if width <= 0:
+        raise ValueError("corridor width must be positive")
+
+    soft = (witness["dual_softening_mean_deformation"] - interior_deformation) / width
+    order = (witness["order_mean_deformation"] - interior_deformation) / width
+    hessian = (witness["hessian_mean_deformation"] - interior_deformation) / width
+    third = (witness["third_derivative_mean_deformation"] - interior_deformation) / width
+    gaps = {
+        "interior_to_softening_barycentric_gap": soft,
+        "softening_to_order_barycentric_gap": order - soft,
+        "order_to_hessian_barycentric_gap": hessian - order,
+        "hessian_to_third_derivative_barycentric_gap": third - hessian,
+        "third_derivative_to_wall_barycentric_gap": 1.0 - third,
+    }
+
+    return {
+        **witness,
+        "dual_softening_barycentric_coordinate": soft,
+        "order_barycentric_coordinate": order,
+        "hessian_barycentric_coordinate": hessian,
+        "third_derivative_barycentric_coordinate": third,
+        **gaps,
+        "barycentric_gap_sum": sum(gaps.values()),
+        "barycentric_ladder_ordered": 0.0 < soft < order < hessian < third < 1.0,
+        "primal_barycentric_ladder_ordered": 0.0 < order < hessian < third < 1.0,
+    }
+
+
+def completed_defect_spectral_boundary_barycentric_witness_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, list[dict[str, float]]]:
+    """Profile barycentric stabilization of the mean-density witness ladder."""
+    payload: dict[str, list[dict[str, float]]] = {}
+    for s in s_values:
+        rows = []
+        previous_soft = None
+        previous_order = None
+        previous_hessian = None
+        previous_third = None
+        for prime_limit in prime_limits:
+            packet = completed_defect_spectral_boundary_barycentric_witness_packet(
+                prime_limit,
+                s,
+                subintervals=subintervals,
+            )
+            rows.append(
+                {
+                    **packet,
+                    "dual_softening_barycentric_jump_from_previous": (
+                        abs(packet["dual_softening_barycentric_coordinate"] - previous_soft) if previous_soft is not None else None
+                    ),
+                    "order_barycentric_jump_from_previous": (
+                        abs(packet["order_barycentric_coordinate"] - previous_order) if previous_order is not None else None
+                    ),
+                    "hessian_barycentric_jump_from_previous": (
+                        abs(packet["hessian_barycentric_coordinate"] - previous_hessian) if previous_hessian is not None else None
+                    ),
+                    "third_derivative_barycentric_jump_from_previous": (
+                        abs(packet["third_derivative_barycentric_coordinate"] - previous_third) if previous_third is not None else None
+                    ),
+                }
+            )
+            previous_soft = packet["dual_softening_barycentric_coordinate"]
+            previous_order = packet["order_barycentric_coordinate"]
+            previous_hessian = packet["hessian_barycentric_coordinate"]
+            previous_third = packet["third_derivative_barycentric_coordinate"]
+        payload[str(s)] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

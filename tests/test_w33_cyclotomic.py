@@ -75,6 +75,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_third_derivative_real_global,
     completed_defect_spectral_boundary_mean_witness_packet,
     completed_defect_spectral_boundary_mean_witness_profile,
+    completed_defect_spectral_boundary_barycentric_witness_packet,
+    completed_defect_spectral_boundary_barycentric_witness_profile,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -807,6 +809,33 @@ def test_completed_defect_spectral_boundary_mean_witness_ladder_package():
     assert rows[-1]["hessian_mean_deformation_jump_from_previous"] < rows[1]["hessian_mean_deformation_jump_from_previous"]
     assert rows[-1]["third_derivative_mean_deformation_jump_from_previous"] <= rows[1]["third_derivative_mean_deformation_jump_from_previous"]
     assert rows[-1]["dual_softening_mean_deformation_jump_from_previous"] < rows[1]["dual_softening_mean_deformation_jump_from_previous"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_witness_package():
+    packet = completed_defect_spectral_boundary_barycentric_witness_packet(100000, 1.0, subintervals=80)
+    width = packet["corridor_width"]
+
+    assert width == 2.0
+    assert packet["barycentric_ladder_ordered"]
+    assert packet["primal_barycentric_ladder_ordered"]
+    assert abs(packet["barycentric_gap_sum"] - 1.0) < 1e-15
+    assert packet["dual_softening_barycentric_coordinate"] == (packet["dual_softening_mean_deformation"] - 4.0) / width
+    assert packet["order_barycentric_coordinate"] == (packet["order_mean_deformation"] - 4.0) / width
+    assert packet["hessian_barycentric_coordinate"] == (packet["hessian_mean_deformation"] - 4.0) / width
+    assert packet["third_derivative_barycentric_coordinate"] == (packet["third_derivative_mean_deformation"] - 4.0) / width
+    assert packet["interior_to_softening_barycentric_gap"] > 0.0
+    assert packet["softening_to_order_barycentric_gap"] > 0.0
+    assert packet["order_to_hessian_barycentric_gap"] > 0.0
+    assert packet["hessian_to_third_derivative_barycentric_gap"] > 0.0
+    assert packet["third_derivative_to_wall_barycentric_gap"] > 0.0
+
+    profile = completed_defect_spectral_boundary_barycentric_witness_profile([1000, 10000, 100000], [1.0], subintervals=60)
+    rows = profile["1.0"]
+    assert rows[-1]["barycentric_ladder_ordered"]
+    assert rows[-1]["order_barycentric_jump_from_previous"] < rows[1]["order_barycentric_jump_from_previous"]
+    assert rows[-1]["hessian_barycentric_jump_from_previous"] < rows[1]["hessian_barycentric_jump_from_previous"]
+    assert rows[-1]["third_derivative_barycentric_jump_from_previous"] <= rows[1]["third_derivative_barycentric_jump_from_previous"]
+    assert rows[-1]["dual_softening_barycentric_jump_from_previous"] < rows[1]["dual_softening_barycentric_jump_from_previous"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
