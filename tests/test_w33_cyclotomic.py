@@ -78,6 +78,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_witness_packet,
     completed_defect_spectral_boundary_barycentric_witness_profile,
     completed_defect_spectral_boundary_barycentric_stability_packet,
+    completed_defect_spectral_boundary_barycentric_wallward_flow_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -861,6 +862,35 @@ def test_completed_defect_spectral_boundary_barycentric_stability_signature():
     assert shift["coordinate_offsets"]["dual_softening"] < shift["coordinate_offsets"]["order"]
     assert shift["coordinate_offsets"]["order"] < shift["coordinate_offsets"]["hessian"]
     assert shift["coordinate_offsets"]["hessian"] < shift["coordinate_offsets"]["third_derivative"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_wallward_flow_packet():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_wallward_flow_packet(100000, s_values, subintervals=40)
+
+    assert packet["all_coordinate_jumps_positive"]
+    assert packet["all_wall_gap_jumps_negative"]
+    assert packet["all_barycentric_ladders_ordered"]
+    assert packet["wall_gap_strictly_decreases"]
+    assert packet["dual_softening_crosses_half"]
+    assert packet["dual_softening_midpoint_crossing_index"] == len(s_values) - 1
+    assert packet["dual_softening_midpoint_crossing_interval"] == {"left_s": 2.5, "right_s": 3.0}
+    assert packet["initial_wall_gap"] > packet["final_wall_gap"] > 0.0
+    assert packet["wall_gap_drop"] > 0.0
+
+    rows = packet["rows"]
+    assert len(rows) == len(s_values)
+    for row in rows:
+        assert row["barycentric_ladder_ordered"]
+        assert 0.0 < row["dual_softening_barycentric_coordinate"] < row["order_barycentric_coordinate"]
+        assert row["order_barycentric_coordinate"] < row["hessian_barycentric_coordinate"]
+        assert row["hessian_barycentric_coordinate"] < row["third_derivative_barycentric_coordinate"] < 1.0
+
+    offsets = packet["coordinate_offsets"]
+    assert offsets["dual_softening"] > 0.0
+    assert offsets["order"] > offsets["dual_softening"]
+    assert offsets["hessian"] > offsets["order"]
+    assert offsets["third_derivative"] > offsets["hessian"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

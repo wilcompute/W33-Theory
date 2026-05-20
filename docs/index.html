@@ -12774,8 +12774,10 @@
         <p>The next upgrade is global rather than local. Once the cutoff already includes the first split prime
           <code>p = 7</code>, the wall packet itself carries certified infinite-cutoff enclosures. The wall free energy,
           order parameter, and Hessian all rise monotonically toward finite limiting values as more split primes are
-          added, while the wall dual stiffness is squeezed between two explicit reciprocals coming from the finite-cutoff
-          Hessian and its wall-tail bound.</p>
+          added, while the wall dual stiffness is squeezed between two explicit reciprocals coming from the
+          finite-cutoff
+          Hessian and its wall-tail bound.
+        </p>
         <p>So the zero-sheet <code>6</code>-cycle now lands on a boundary packet that survives the full split-prime
           completion, not just on a finite-cutoff endpoint. The wall is finite, locally effective, connected to the
           interior packet by exact transport, and now globally controlled all the way to infinite cutoff.</p>
@@ -12791,7 +12793,8 @@
           <code>[0.8426370407101211, 0.8428370500434544]</code>, while the dual-stiffness loss lies in
           <code>[7.663766765726939, 7.663766826686179]</code>. The widths shrink with the split-prime cutoff, so the
           zero-sheet interval <code>[4, 6]</code> is now an infinite-cutoff renormalization corridor, not merely a
-          finite transport segment.</p>
+          finite transport segment.
+        </p>
 
         <h4>Average densities on the width-two corridor</h4>
         <p>Since the zero-sheet corridor has exact width <code>6 − 4 = 2</code>, those endpoint intervals can be
@@ -12803,39 +12806,57 @@
           <code>[0.42131852035506057, 0.4214185250217272]</code>, while the average dual-softening density lies in
           <code>[3.8318833828634693, 3.8318834133430895]</code>. The corridor therefore now has finite endpoints,
           infinite endpoint deltas, and normalized infinite average densities all living on the same canonical
-          width-two interval.</p>
+          width-two interval.
+        </p>
 
         <h4>Mean-density witnesses inside the corridor</h4>
         <p>The average densities also select finite deformation witnesses inside the same interval. On the
-          <code>s = 1</code>, cutoff <code>10<sup>5</sup></code> slice, endpoint-bracket bisection gives a stable ladder:
+          <code>s = 1</code>, cutoff <code>10<sup>5</sup></code> slice, endpoint-bracket bisection gives a stable
+          ladder:
           the dual-softening mean is realized at <code>λ = 4.970772481601671</code>, the average order parameter at
           <code>λ = 5.17660559041542</code>, the average Hessian at <code>λ = 5.263811936569255</code>, and the average
-          third derivative at <code>λ = 5.348603930606259</code>.</p>
+          third derivative at <code>λ = 5.348603930606259</code>.
+        </p>
         <p>So the corridor now has actual interior locations for the transported densities, ordered as
           <code>4 &lt; λ<sub>soft</sub> &lt; λ<sub>order</sub> &lt; λ<sub>Hessian</sub> &lt; λ<sub>third</sub> &lt; 6</code>.
           The primal witnesses move toward the wall as the response order rises, while the dual-softening witness sits
-          earlier because the dual-softening density decreases toward the wall.</p>
+          earlier because the dual-softening density decreases toward the wall.
+        </p>
 
         <h4>Barycentric witness coordinates</h4>
         <p>Normalizing those witnesses by the exact width-two corridor gives scale-free barycentric coordinates
           <code>b = (λ − 4)/2</code>. On the <code>s = 1</code>, cutoff <code>10<sup>5</sup></code> slice, the
           coordinates are <code>0.48538624080083537</code>, <code>0.58830279520771</code>,
-          <code>0.6319059682846273</code>, and <code>0.6743019653031297</code>.</p>
+          <code>0.6319059682846273</code>, and <code>0.6743019653031297</code>.
+        </p>
         <p>The corresponding positive gaps are
           <code>0.48538624080083537</code>, <code>0.10291655440687464</code>,
           <code>0.0436031730769173</code>, <code>0.042395997018502385</code>, and
           <code>0.3256980346968703</code>, summing to one. This turns the corridor into a unit-interval coordinate
-          chart for the transported density witnesses.</p>
+          chart for the transported density witnesses.
+        </p>
 
         <h4>Barycentric stability signature</h4>
         <p>The unit-interval witness coordinates are stable across the sampled cutoff ladder. Comparing the jumps
           <code>10<sup>3</sup> → 10<sup>4</sup></code> and <code>10<sup>4</sup> → 10<sup>5</sup></code>, the minimum
           finite contraction ratio across the sampled witnesses is <code>134.9984399375975</code>. This is a finite
-          stability signature, not an infinite-limit proof.</p>
+          stability signature, not an infinite-limit proof.
+        </p>
         <p>The same packet shows that moving from <code>s = 1</code> to <code>s = 2</code> pushes every witness toward
           the wall, with offsets <code>0.013534323745261645</code>, <code>0.11992149889920256</code>,
           <code>0.1727091162563852</code>, and <code>0.18953982007842995</code>. The offsets strictly increase along
-          the witness ladder, while the wall gap shrinks by the last amount.</p>
+          the witness ladder, while the wall gap shrinks by the last amount.
+        </p>
+
+        <h4>Barycentric wallward flow on the s-ladder</h4>
+        <p>The next finite upgrade treats <code>s</code> itself as a flow parameter. On the sampled ladder
+          <code>s = 0.5, 1.0, 1.5, 2.0, 2.5, 3.0</code> at cutoff <code>10<sup>5</sup></code>, all four barycentric
+          witness coordinates jump strictly upward at every step, while the wall gap
+          <code>1 - b<sub>third</sub></code> drops strictly at every step.</p>
+        <p>So the barycentric chart carries a directed wallward flow in <code>s</code>, not just isolated snapshots.
+          In the generated packet, the dual-softening coordinate crosses the midpoint <code>b = 1/2</code> between
+          <code>s = 2.5</code> and <code>s = 3.0</code>, and the cumulative wall-gap drop on the full ladder is
+          <code>0.38305552720929903</code>.</p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the

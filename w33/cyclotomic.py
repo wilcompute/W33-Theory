@@ -2613,6 +2613,108 @@ def completed_defect_spectral_boundary_barycentric_stability_packet(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_wallward_flow_packet(
+    prime_limit: int,
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite wallward-flow packet for barycentric witnesses along an s-ladder.
+
+    The packet tracks how the four barycentric witness coordinates move as s varies on the
+    positive real spectral slice, together with the companion wall gap.
+    """
+    if prime_limit < 1:
+        raise ValueError("prime_limit must be >= 1")
+    if len(s_values) < 2:
+        raise ValueError("need at least two s-values")
+    if any(s <= 0 for s in s_values):
+        raise ValueError("all s-values must be > 0 on the real spectral slice")
+    if any(s_values[index] >= s_values[index + 1] for index in range(len(s_values) - 1)):
+        raise ValueError("s_values must be strictly increasing")
+
+    rows: list[dict[str, object]] = []
+    previous = None
+    for s in s_values:
+        packet = completed_defect_spectral_boundary_barycentric_witness_packet(
+            prime_limit,
+            s,
+            subintervals=subintervals,
+        )
+        coordinate = {
+            "dual_softening": packet["dual_softening_barycentric_coordinate"],
+            "order": packet["order_barycentric_coordinate"],
+            "hessian": packet["hessian_barycentric_coordinate"],
+            "third_derivative": packet["third_derivative_barycentric_coordinate"],
+        }
+        jumps = None
+        if previous is not None:
+            jumps = {
+                name: coordinate[name] - previous["coordinate"][name]
+                for name in coordinate
+            }
+        rows.append(
+            {
+                **packet,
+                "coordinate": coordinate,
+                "coordinate_jump_from_previous": jumps,
+                "wall_gap_jump_from_previous": (
+                    packet["third_derivative_to_wall_barycentric_gap"] - previous["wall_gap"] if previous is not None else None
+                ),
+            }
+        )
+        previous = {
+            "coordinate": coordinate,
+            "wall_gap": packet["third_derivative_to_wall_barycentric_gap"],
+        }
+
+    positive_coordinate_jumps = []
+    negative_wall_gap_jumps = []
+    for row in rows[1:]:
+        jumps = row["coordinate_jump_from_previous"]
+        assert isinstance(jumps, dict)
+        positive_coordinate_jumps.append(all(value > 0.0 for value in jumps.values()))
+        wall_jump = row["wall_gap_jump_from_previous"]
+        assert isinstance(wall_jump, float)
+        negative_wall_gap_jumps.append(wall_jump < 0.0)
+
+    first_row = rows[0]
+    last_row = rows[-1]
+    midpoint_crossing_rows = [
+        index
+        for index, row in enumerate(rows)
+        if row["dual_softening_barycentric_coordinate"] >= 0.5
+    ]
+    midpoint_crossing_index = midpoint_crossing_rows[0] if midpoint_crossing_rows else None
+    midpoint_crossing_interval = None
+    if midpoint_crossing_index is not None and midpoint_crossing_index > 0:
+        midpoint_crossing_interval = {
+            "left_s": rows[midpoint_crossing_index - 1]["s"],
+            "right_s": rows[midpoint_crossing_index]["s"],
+        }
+
+    coordinate_offsets = {
+        name: last_row["coordinate"][name] - first_row["coordinate"][name]
+        for name in first_row["coordinate"]
+    }
+
+    return {
+        "prime_limit": prime_limit,
+        "s_values": s_values,
+        "rows": rows,
+        "all_coordinate_jumps_positive": all(positive_coordinate_jumps),
+        "all_wall_gap_jumps_negative": all(negative_wall_gap_jumps),
+        "all_barycentric_ladders_ordered": all(row["barycentric_ladder_ordered"] for row in rows),
+        "wall_gap_strictly_decreases": all(negative_wall_gap_jumps),
+        "coordinate_offsets": coordinate_offsets,
+        "dual_softening_crosses_half": midpoint_crossing_index is not None,
+        "dual_softening_midpoint_crossing_index": midpoint_crossing_index,
+        "dual_softening_midpoint_crossing_interval": midpoint_crossing_interval,
+        "initial_wall_gap": first_row["third_derivative_to_wall_barycentric_gap"],
+        "final_wall_gap": last_row["third_derivative_to_wall_barycentric_gap"],
+        "wall_gap_drop": first_row["third_derivative_to_wall_barycentric_gap"] - last_row["third_derivative_to_wall_barycentric_gap"],
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
