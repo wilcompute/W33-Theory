@@ -1,0 +1,116 @@
+{
+  "theorem": "Horizon parity floor duality",
+  "packet": {
+    "horizon": {
+      "total": 72,
+      "payload_edges": 66,
+      "parity_symbols": 6,
+      "parity_symbols_are_q_factorial": true,
+      "rate": {
+        "fraction": "11/12",
+        "numerator": 11,
+        "denominator": 12,
+        "float": 0.9166666666666666
+      },
+      "redundancy": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "rate_plus_redundancy": {
+        "fraction": "1",
+        "numerator": 1,
+        "denominator": 1,
+        "float": 1.0
+      },
+      "rate_is_one_minus_floor": true
+    },
+    "floor_duals": {
+      "ym_substrate_floor": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "horizon_redundancy": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "normalized_chiral_discriminant_density": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "absolute_zeta_minus_one": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "valency_reciprocal": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "all_equal": true
+    },
+    "chiral_discriminant": {
+      "value": 31104,
+      "closed_form": "72^2 * 6",
+      "normalized_by_horizon_cubed": {
+        "fraction": "1/12",
+        "numerator": 1,
+        "denominator": 12,
+        "float": 0.08333333333333333
+      },
+      "sqrt_form": "72 * sqrt(6)"
+    },
+    "grid_split": {
+      "pure_edges": 30,
+      "corrected_mixed": 42,
+      "floor_times_pure_edges": {
+        "fraction": "5/2",
+        "numerator": 5,
+        "denominator": 2,
+        "float": 2.5
+      },
+      "floor_times_corrected_mixed": {
+        "fraction": "7/2",
+        "numerator": 7,
+        "denominator": 2,
+        "float": 3.5
+      },
+      "six_floor_times_pure_edges": {
+        "fraction": "15",
+        "numerator": 15,
+        "denominator": 1,
+        "float": 15.0
+      },
+      "six_floor_times_corrected_mixed": {
+        "fraction": "21",
+        "numerator": 21,
+        "denominator": 1,
+        "float": 21.0
+      },
+      "six_floor_rescales_grid_split_integrally": true
+    },
+    "cross_branch": {
+      "ns_decay_over_floor": {
+        "fraction": "2",
+        "numerator": 2,
+        "denominator": 1,
+        "float": 2.0
+      },
+      "ns_decay_is_two_floor": true,
+      "horizon_redundancy_is_corrected_floor": true,
+      "payload_rate_is_chiral_rate": true
+    },
+    "claim_boundary": "finite arithmetic duality between the corrected substrate floor, horizon parity redundancy, normalized chiral discriminant density, and zeta(-1); not a new continuum proof",
+    "horizon_parity_floor_duality_detected": true
+  }
+}

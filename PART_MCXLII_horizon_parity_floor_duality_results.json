@@ -1,0 +1,41 @@
+{
+  "theorem": "Horizon parity floor duality",
+  "floor": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "horizon_rate": {
+    "fraction": "11/12",
+    "numerator": 11,
+    "denominator": 12,
+    "float": 0.9166666666666666
+  },
+  "horizon_redundancy": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "normalized_chiral_discriminant_density": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "absolute_zeta_minus_one": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "ns_decay_over_floor": {
+    "fraction": "2",
+    "numerator": 2,
+    "denominator": 1,
+    "float": 2.0
+  },
+  "horizon_parity_floor_duality_detected": true,
+  "claim_boundary": "finite arithmetic duality between the corrected substrate floor, horizon parity redundancy, normalized chiral discriminant density, and zeta(-1); not a new continuum proof"
+}
