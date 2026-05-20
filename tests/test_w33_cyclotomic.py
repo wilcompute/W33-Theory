@@ -84,6 +84,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_recurrence_phase_packet,
     completed_defect_spectral_boundary_barycentric_gap_handoff_packet,
     completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile,
+    completed_defect_spectral_boundary_barycentric_gap_handoff_convergence_signature,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -1083,6 +1084,33 @@ def test_completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profi
     assert all(row["wall_gap_rank_sequence"] == [2, 2, 2, 3, 4, 4] for row in per_cutoff)
     assert all(row["dominant_wall_mass_recipient"] == "softening_to_order" for row in per_cutoff)
     assert all(abs(sum(row["wall_mass_transfer_shares"].values()) - 1.0) < 1e-15 for row in per_cutoff)
+
+
+def test_completed_defect_spectral_boundary_barycentric_gap_handoff_convergence_signature():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_gap_handoff_convergence_signature(
+        [1000, 10000, 100000],
+        s_values,
+        subintervals=40,
+    )
+
+    assert packet["convergence_signature_detected"]
+    signature = packet["directional_signature"]
+    assert signature["wall_gap_drop_nondecreasing"]
+    assert signature["secondary_crossing_nondecreasing"]
+    assert signature["order_hessian_crossing_nonincreasing"]
+    assert signature["softening_share_nonincreasing"]
+    assert signature["interior_share_nondecreasing"]
+    assert signature["order_hessian_share_nondecreasing"]
+    assert signature["hessian_third_share_nonincreasing"]
+    assert signature["secondary_reference_offset_nonincreasing"]
+    assert signature["wall_reference_offset_nonincreasing"]
+
+    assert packet["wall_gap_drop_sequence"][0] < packet["wall_gap_drop_sequence"][1] <= packet["wall_gap_drop_sequence"][2]
+    assert packet["secondary_crossing_sequence"][0] < packet["secondary_crossing_sequence"][1] < packet["secondary_crossing_sequence"][2]
+    assert packet["order_hessian_crossing_sequence"][0] > packet["order_hessian_crossing_sequence"][1] > packet["order_hessian_crossing_sequence"][2]
+    assert packet["softening_share_sequence"][0] > packet["softening_share_sequence"][1] > packet["softening_share_sequence"][2]
+    assert packet["interior_share_sequence"][0] < packet["interior_share_sequence"][1] < packet["interior_share_sequence"][2]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

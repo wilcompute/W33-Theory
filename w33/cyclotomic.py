@@ -3284,6 +3284,77 @@ def completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_gap_handoff_convergence_signature(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Directional convergence signature for the cutoff profile of the gap-handoff cascade.
+
+    MCXXXII establishes cutoff robustness. This packet records the finite directional
+    pattern of convergence across the sampled cutoff ladder.
+    """
+    profile = completed_defect_spectral_boundary_barycentric_gap_handoff_cutoff_profile(
+        prime_limits,
+        s_values,
+        subintervals=subintervals,
+    )
+    rows = profile["per_cutoff"]
+
+    def _nondecreasing(values: list[float], tolerance: float = 0.0) -> bool:
+        return all(values[index] <= values[index + 1] + tolerance for index in range(len(values) - 1))
+
+    def _nonincreasing(values: list[float], tolerance: float = 0.0) -> bool:
+        return all(values[index] + tolerance >= values[index + 1] for index in range(len(values) - 1))
+
+    wall_gap_drop_sequence = [row["wall_gap_drop"] for row in rows]
+    secondary_crossing_sequence = [row["secondary_handoff_linear_crossing_s"] for row in rows]
+    order_hessian_crossing_sequence = [row["order_hessian_wall_linear_crossing_s"] for row in rows]
+
+    softening_share_sequence = [row["wall_mass_transfer_shares"]["softening_to_order"] for row in rows]
+    interior_share_sequence = [row["wall_mass_transfer_shares"]["interior_to_softening"] for row in rows]
+    order_hessian_share_sequence = [row["wall_mass_transfer_shares"]["order_to_hessian"] for row in rows]
+    hessian_third_share_sequence = [row["wall_mass_transfer_shares"]["hessian_to_third_derivative"] for row in rows]
+
+    secondary_reference_abs_offsets = [
+        abs(0.0 if row["from_reference_secondary_handoff_delta"] is None else row["from_reference_secondary_handoff_delta"])
+        for row in rows
+    ]
+    wall_reference_abs_offsets = [
+        abs(row["from_reference_wall_gap_drop_delta"])
+        for row in rows
+    ]
+
+    signature = {
+        "wall_gap_drop_nondecreasing": _nondecreasing(wall_gap_drop_sequence, tolerance=1e-15),
+        "secondary_crossing_nondecreasing": _nondecreasing(secondary_crossing_sequence, tolerance=1e-15),
+        "order_hessian_crossing_nonincreasing": _nonincreasing(order_hessian_crossing_sequence, tolerance=1e-15),
+        "softening_share_nonincreasing": _nonincreasing(softening_share_sequence, tolerance=1e-15),
+        "interior_share_nondecreasing": _nondecreasing(interior_share_sequence, tolerance=1e-15),
+        "order_hessian_share_nondecreasing": _nondecreasing(order_hessian_share_sequence, tolerance=1e-15),
+        "hessian_third_share_nonincreasing": _nonincreasing(hessian_third_share_sequence, tolerance=1e-15),
+        "secondary_reference_offset_nonincreasing": _nonincreasing(secondary_reference_abs_offsets, tolerance=1e-15),
+        "wall_reference_offset_nonincreasing": _nonincreasing(wall_reference_abs_offsets, tolerance=1e-15),
+    }
+
+    return {
+        "prime_limits": prime_limits,
+        "s_values": s_values,
+        "cutoff_profile": profile,
+        "wall_gap_drop_sequence": wall_gap_drop_sequence,
+        "secondary_crossing_sequence": secondary_crossing_sequence,
+        "order_hessian_crossing_sequence": order_hessian_crossing_sequence,
+        "softening_share_sequence": softening_share_sequence,
+        "interior_share_sequence": interior_share_sequence,
+        "order_hessian_share_sequence": order_hessian_share_sequence,
+        "hessian_third_share_sequence": hessian_third_share_sequence,
+        "secondary_reference_abs_offsets": secondary_reference_abs_offsets,
+        "wall_reference_abs_offsets": wall_reference_abs_offsets,
+        "directional_signature": signature,
+        "convergence_signature_detected": all(signature.values()),
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
