@@ -77,6 +77,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_mean_witness_profile,
     completed_defect_spectral_boundary_barycentric_witness_packet,
     completed_defect_spectral_boundary_barycentric_witness_profile,
+    completed_defect_spectral_boundary_barycentric_stability_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -836,6 +837,30 @@ def test_completed_defect_spectral_boundary_barycentric_witness_package():
     assert rows[-1]["hessian_barycentric_jump_from_previous"] < rows[1]["hessian_barycentric_jump_from_previous"]
     assert rows[-1]["third_derivative_barycentric_jump_from_previous"] <= rows[1]["third_derivative_barycentric_jump_from_previous"]
     assert rows[-1]["dual_softening_barycentric_jump_from_previous"] < rows[1]["dual_softening_barycentric_jump_from_previous"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_stability_signature():
+    packet = completed_defect_spectral_boundary_barycentric_stability_packet([1000, 10000, 100000], [1.0, 2.0], subintervals=40)
+
+    assert packet["minimum_finite_contraction_ratio"] > 100.0
+    assert packet["per_s"]["1.0"]["all_coordinate_contractions_ge_100"]
+    assert packet["per_s"]["2.0"]["all_coordinate_contractions_ge_100"]
+    assert packet["per_s"]["1.0"]["coordinate_jump_ratios"]["third_derivative"]["second_jump_zero"]
+    assert packet["per_s"]["2.0"]["coordinate_jump_ratios"]["third_derivative"]["contraction_ratio"] is None
+    assert packet["per_s"]["1.0"]["barycentric_ladder_ordered"]
+    assert packet["per_s"]["2.0"]["barycentric_ladder_ordered"]
+    assert abs(packet["per_s"]["1.0"]["final_gap_sum"] - 1.0) < 1e-15
+    assert abs(packet["per_s"]["2.0"]["final_gap_sum"] - 1.0) < 1e-15
+
+    shift = packet["cross_s_shift"]
+    assert shift["all_witnesses_shift_toward_wall"]
+    assert shift["coordinate_offsets_strictly_increase"]
+    assert shift["wall_gap_shrinks"]
+    assert abs(shift["gap_offset_sum"]) < 1e-15
+    assert shift["coordinate_offsets"]["dual_softening"] > 0.0
+    assert shift["coordinate_offsets"]["dual_softening"] < shift["coordinate_offsets"]["order"]
+    assert shift["coordinate_offsets"]["order"] < shift["coordinate_offsets"]["hessian"]
+    assert shift["coordinate_offsets"]["hessian"] < shift["coordinate_offsets"]["third_derivative"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

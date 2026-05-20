@@ -2518,6 +2518,101 @@ def completed_defect_spectral_boundary_barycentric_witness_profile(
     return payload
 
 
+def completed_defect_spectral_boundary_barycentric_stability_packet(
+    prime_limits: list[int],
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite stability signature for barycentric witness coordinates."""
+    if len(prime_limits) < 3:
+        raise ValueError("need at least three prime limits to measure two cutoff jumps")
+    if len(s_values) < 1:
+        raise ValueError("need at least one s-value")
+    profile = completed_defect_spectral_boundary_barycentric_witness_profile(
+        prime_limits,
+        s_values,
+        subintervals=subintervals,
+    )
+    coordinate_keys = {
+        "dual_softening": "dual_softening_barycentric_coordinate",
+        "order": "order_barycentric_coordinate",
+        "hessian": "hessian_barycentric_coordinate",
+        "third_derivative": "third_derivative_barycentric_coordinate",
+    }
+    gap_keys = {
+        "interior_to_softening": "interior_to_softening_barycentric_gap",
+        "softening_to_order": "softening_to_order_barycentric_gap",
+        "order_to_hessian": "order_to_hessian_barycentric_gap",
+        "hessian_to_third_derivative": "hessian_to_third_derivative_barycentric_gap",
+        "third_derivative_to_wall": "third_derivative_to_wall_barycentric_gap",
+    }
+
+    per_s: dict[str, object] = {}
+    finite_ratios = []
+    for s in s_values:
+        rows = profile[str(s)]
+        first = rows[-3]
+        middle = rows[-2]
+        final = rows[-1]
+        ratios = {}
+        for name, key in coordinate_keys.items():
+            first_jump = abs(middle[key] - first[key])
+            second_jump = abs(final[key] - middle[key])
+            ratio = None if second_jump == 0.0 else first_jump / second_jump
+            if ratio is not None:
+                finite_ratios.append(ratio)
+            ratios[name] = {
+                "first_jump": first_jump,
+                "second_jump": second_jump,
+                "contraction_ratio": ratio,
+                "second_jump_zero": second_jump == 0.0,
+            }
+        per_s[str(s)] = {
+            "coordinate_jump_ratios": ratios,
+            "final_coordinates": {name: final[key] for name, key in coordinate_keys.items()},
+            "final_gaps": {name: final[key] for name, key in gap_keys.items()},
+            "final_gap_sum": final["barycentric_gap_sum"],
+            "barycentric_ladder_ordered": final["barycentric_ladder_ordered"],
+            "all_coordinate_contractions_ge_100": all(
+                row["second_jump_zero"] or row["contraction_ratio"] >= 100.0 for row in ratios.values()
+            ),
+        }
+
+    cross_s_shift = None
+    if len(s_values) >= 2:
+        lower = profile[str(s_values[0])][-1]
+        upper = profile[str(s_values[-1])][-1]
+        coordinate_offsets = {name: upper[key] - lower[key] for name, key in coordinate_keys.items()}
+        gap_offsets = {name: upper[key] - lower[key] for name, key in gap_keys.items()}
+        ordered_offsets = [
+            coordinate_offsets["dual_softening"],
+            coordinate_offsets["order"],
+            coordinate_offsets["hessian"],
+            coordinate_offsets["third_derivative"],
+        ]
+        cross_s_shift = {
+            "from_s": s_values[0],
+            "to_s": s_values[-1],
+            "coordinate_offsets": coordinate_offsets,
+            "gap_offsets": gap_offsets,
+            "all_witnesses_shift_toward_wall": all(value > 0.0 for value in coordinate_offsets.values()),
+            "coordinate_offsets_strictly_increase": all(
+                ordered_offsets[index] < ordered_offsets[index + 1] for index in range(len(ordered_offsets) - 1)
+            ),
+            "wall_gap_shrinks": gap_offsets["third_derivative_to_wall"] < 0.0,
+            "gap_offset_sum": sum(gap_offsets.values()),
+        }
+
+    return {
+        "prime_limits": prime_limits,
+        "s_values": s_values,
+        "profile": profile,
+        "per_s": per_s,
+        "cross_s_shift": cross_s_shift,
+        "minimum_finite_contraction_ratio": min(finite_ratios) if finite_ratios else math.inf,
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

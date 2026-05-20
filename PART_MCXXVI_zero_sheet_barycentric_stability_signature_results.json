@@ -1,0 +1,115 @@
+{
+  "theorem": "Zero-sheet barycentric stability signature",
+  "minimum_finite_contraction_ratio": 134.9984399375975,
+  "per_s": {
+    "1.0": {
+      "coordinate_jump_ratios": {
+        "dual_softening": {
+          "first_jump": 4.167982297076378e-07,
+          "second_jump": 3.087279765168205e-09,
+          "contraction_ratio": 135.0050081013404,
+          "second_jump_zero": false
+        },
+        "order": {
+          "first_jump": 1.5740442904643714e-07,
+          "second_jump": 1.165972207672894e-09,
+          "contraction_ratio": 134.9984399375975,
+          "second_jump_zero": false
+        },
+        "hessian": {
+          "first_jump": 4.558205546345562e-08,
+          "second_jump": 3.3651303965598345e-10,
+          "contraction_ratio": 135.45405405405404,
+          "second_jump_zero": false
+        },
+        "third_derivative": {
+          "first_jump": 9.094947017729282e-13,
+          "second_jump": 0.0,
+          "contraction_ratio": null,
+          "second_jump_zero": true
+        }
+      },
+      "final_coordinates": {
+        "dual_softening": 0.48538624080083537,
+        "order": 0.58830279520771,
+        "hessian": 0.6319059682846273,
+        "third_derivative": 0.6743019653031297
+      },
+      "final_gaps": {
+        "interior_to_softening": 0.48538624080083537,
+        "softening_to_order": 0.10291655440687464,
+        "order_to_hessian": 0.0436031730769173,
+        "hessian_to_third_derivative": 0.042395997018502385,
+        "third_derivative_to_wall": 0.3256980346968703
+      },
+      "final_gap_sum": 1.0,
+      "barycentric_ladder_ordered": true,
+      "all_coordinate_contractions_ge_100": true
+    },
+    "2.0": {
+      "coordinate_jump_ratios": {
+        "dual_softening": {
+          "first_jump": 4.5912429413874634e-07,
+          "second_jump": 3.394234227016568e-09,
+          "contraction_ratio": 135.26594319399786,
+          "second_jump_zero": false
+        },
+        "order": {
+          "first_jump": 6.711525202263147e-08,
+          "second_jump": 4.961293598171324e-10,
+          "contraction_ratio": 135.2777268560953,
+          "second_jump_zero": false
+        },
+        "hessian": {
+          "first_jump": 2.8141471375420224e-09,
+          "second_jump": 2.0804691303055733e-11,
+          "contraction_ratio": 135.26502732240436,
+          "second_jump_zero": false
+        },
+        "third_derivative": {
+          "first_jump": 7.105427357601002e-15,
+          "second_jump": 0.0,
+          "contraction_ratio": null,
+          "second_jump_zero": true
+        }
+      },
+      "final_coordinates": {
+        "dual_softening": 0.498920564546097,
+        "order": 0.7082242941069126,
+        "hessian": 0.8046150845410125,
+        "third_derivative": 0.8638417853815596
+      },
+      "final_gaps": {
+        "interior_to_softening": 0.498920564546097,
+        "softening_to_order": 0.20930372956081555,
+        "order_to_hessian": 0.09639079043409993,
+        "hessian_to_third_derivative": 0.05922670084054715,
+        "third_derivative_to_wall": 0.13615821461844035
+      },
+      "final_gap_sum": 1.0,
+      "barycentric_ladder_ordered": true,
+      "all_coordinate_contractions_ge_100": true
+    }
+  },
+  "cross_s_shift": {
+    "from_s": 1.0,
+    "to_s": 2.0,
+    "coordinate_offsets": {
+      "dual_softening": 0.013534323745261645,
+      "order": 0.11992149889920256,
+      "hessian": 0.1727091162563852,
+      "third_derivative": 0.18953982007842995
+    },
+    "gap_offsets": {
+      "interior_to_softening": 0.013534323745261645,
+      "softening_to_order": 0.10638717515394092,
+      "order_to_hessian": 0.052787617357182626,
+      "hessian_to_third_derivative": 0.016830703822044768,
+      "third_derivative_to_wall": -0.18953982007842995
+    },
+    "all_witnesses_shift_toward_wall": true,
+    "coordinate_offsets_strictly_increase": true,
+    "wall_gap_shrinks": true,
+    "gap_offset_sum": 0.0
+  }
+}
