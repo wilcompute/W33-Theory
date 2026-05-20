@@ -1,0 +1,397 @@
+{
+  "theorem": "Zero-sheet barycentric gap-handoff cascade",
+  "prime_limit": 100000,
+  "s_values": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "packet": {
+    "prime_limit": 100000,
+    "s_values": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "s": 0.5,
+        "gaps": {
+          "interior_to_softening": 0.45811507649932537,
+          "softening_to_order": 0.08018128882531528,
+          "order_to_hessian": 0.010674879740690812,
+          "hessian_to_third_derivative": 0.023155052622314543,
+          "third_derivative_to_wall": 0.427873702312354
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.45811507649932537,
+            "rank": 1
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.427873702312354,
+            "rank": 2
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.08018128882531528,
+            "rank": 3
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.023155052622314543,
+            "rank": 4
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.010674879740690812,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "third_derivative_to_wall": 2,
+          "softening_to_order": 3,
+          "hessian_to_third_derivative": 4,
+          "order_to_hessian": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "third_derivative_to_wall",
+        "wall_gap_rank": 2,
+        "softening_to_order_gap_rank": 3,
+        "order_to_hessian_gap_rank": 5
+      },
+      {
+        "s": 1.0,
+        "gaps": {
+          "interior_to_softening": 0.48538624080083537,
+          "softening_to_order": 0.10291655440687464,
+          "order_to_hessian": 0.0436031730769173,
+          "hessian_to_third_derivative": 0.042395997018502385,
+          "third_derivative_to_wall": 0.3256980346968703
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.48538624080083537,
+            "rank": 1
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.3256980346968703,
+            "rank": 2
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.10291655440687464,
+            "rank": 3
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.0436031730769173,
+            "rank": 4
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.042395997018502385,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "third_derivative_to_wall": 2,
+          "softening_to_order": 3,
+          "order_to_hessian": 4,
+          "hessian_to_third_derivative": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "third_derivative_to_wall",
+        "wall_gap_rank": 2,
+        "softening_to_order_gap_rank": 3,
+        "order_to_hessian_gap_rank": 4
+      },
+      {
+        "s": 1.5,
+        "gaps": {
+          "interior_to_softening": 0.4961058104336189,
+          "softening_to_order": 0.15340665905205242,
+          "order_to_hessian": 0.07323575317514042,
+          "hessian_to_third_derivative": 0.05713479696169088,
+          "third_derivative_to_wall": 0.22011698037749738
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.4961058104336189,
+            "rank": 1
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.22011698037749738,
+            "rank": 2
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.15340665905205242,
+            "rank": 3
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.07323575317514042,
+            "rank": 4
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.05713479696169088,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "third_derivative_to_wall": 2,
+          "softening_to_order": 3,
+          "order_to_hessian": 4,
+          "hessian_to_third_derivative": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "third_derivative_to_wall",
+        "wall_gap_rank": 2,
+        "softening_to_order_gap_rank": 3,
+        "order_to_hessian_gap_rank": 4
+      },
+      {
+        "s": 2.0,
+        "gaps": {
+          "interior_to_softening": 0.498920564546097,
+          "softening_to_order": 0.20930372956081555,
+          "order_to_hessian": 0.09639079043409993,
+          "hessian_to_third_derivative": 0.05922670084054715,
+          "third_derivative_to_wall": 0.13615821461844035
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.498920564546097,
+            "rank": 1
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.20930372956081555,
+            "rank": 2
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.13615821461844035,
+            "rank": 3
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.09639079043409993,
+            "rank": 4
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.05922670084054715,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "softening_to_order": 2,
+          "third_derivative_to_wall": 3,
+          "order_to_hessian": 4,
+          "hessian_to_third_derivative": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "softening_to_order",
+        "wall_gap_rank": 3,
+        "softening_to_order_gap_rank": 2,
+        "order_to_hessian_gap_rank": 4
+      },
+      {
+        "s": 2.5,
+        "gaps": {
+          "interior_to_softening": 0.499735329592113,
+          "softening_to_order": 0.2581217992269558,
+          "order_to_hessian": 0.11092997195358123,
+          "hessian_to_third_derivative": 0.05167358198517569,
+          "third_derivative_to_wall": 0.07953931724217433
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.499735329592113,
+            "rank": 1
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.2581217992269558,
+            "rank": 2
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.11092997195358123,
+            "rank": 3
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.07953931724217433,
+            "rank": 4
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.05167358198517569,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "softening_to_order": 2,
+          "order_to_hessian": 3,
+          "third_derivative_to_wall": 4,
+          "hessian_to_third_derivative": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "softening_to_order",
+        "wall_gap_rank": 4,
+        "softening_to_order_gap_rank": 2,
+        "order_to_hessian_gap_rank": 3
+      },
+      {
+        "s": 3.0,
+        "gaps": {
+          "interior_to_softening": 0.5000003167392606,
+          "softening_to_order": 0.2972322640339371,
+          "order_to_hessian": 0.11745723364455074,
+          "hessian_to_third_derivative": 0.040492010479196594,
+          "third_derivative_to_wall": 0.04481817510305497
+        },
+        "gap_ranking": [
+          {
+            "gap": "interior_to_softening",
+            "value": 0.5000003167392606,
+            "rank": 1
+          },
+          {
+            "gap": "softening_to_order",
+            "value": 0.2972322640339371,
+            "rank": 2
+          },
+          {
+            "gap": "order_to_hessian",
+            "value": 0.11745723364455074,
+            "rank": 3
+          },
+          {
+            "gap": "third_derivative_to_wall",
+            "value": 0.04481817510305497,
+            "rank": 4
+          },
+          {
+            "gap": "hessian_to_third_derivative",
+            "value": 0.040492010479196594,
+            "rank": 5
+          }
+        ],
+        "gap_rank_by_name": {
+          "interior_to_softening": 1,
+          "softening_to_order": 2,
+          "order_to_hessian": 3,
+          "third_derivative_to_wall": 4,
+          "hessian_to_third_derivative": 5
+        },
+        "primary_gap": "interior_to_softening",
+        "secondary_gap": "softening_to_order",
+        "wall_gap_rank": 4,
+        "softening_to_order_gap_rank": 2,
+        "order_to_hessian_gap_rank": 3
+      }
+    ],
+    "shared_resonance_s": 2.0,
+    "entropy_peak_s": 2.0,
+    "concentration_trough_s": 2.0,
+    "primary_gap_all_interior_to_softening": true,
+    "secondary_gap_sequence": [
+      "third_derivative_to_wall",
+      "third_derivative_to_wall",
+      "third_derivative_to_wall",
+      "softening_to_order",
+      "softening_to_order",
+      "softening_to_order"
+    ],
+    "wall_gap_rank_sequence": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      4
+    ],
+    "softening_to_order_gap_rank_sequence": [
+      3,
+      3,
+      3,
+      2,
+      2,
+      2
+    ],
+    "order_to_hessian_gap_rank_sequence": [
+      5,
+      4,
+      4,
+      4,
+      3,
+      3
+    ],
+    "wall_gap_rank_monotone_nonworsening_toward_lower_priority": true,
+    "softening_to_order_rank_improves": true,
+    "secondary_handoff": {
+      "left_gap": "softening_to_order",
+      "right_gap": "third_derivative_to_wall",
+      "left_s": 1.5,
+      "right_s": 2.0,
+      "left_difference": -0.06671032132544497,
+      "right_difference": 0.0731455149423752,
+      "linear_crossing_s": 1.7384967374464677,
+      "first_sample_after_crossing_s": 2.0
+    },
+    "order_hessian_wall_handoff": {
+      "left_gap": "order_to_hessian",
+      "right_gap": "third_derivative_to_wall",
+      "left_s": 2.0,
+      "right_s": 2.5,
+      "left_difference": -0.03976742418434043,
+      "right_difference": 0.031390654711406896,
+      "linear_crossing_s": 2.279430142026481,
+      "first_sample_after_crossing_s": 2.5
+    },
+    "secondary_handoff_sample_locks_to_resonance": true,
+    "secondary_handoff_crossing_precedes_resonance": true,
+    "wall_gap_drop": 0.38305552720929903,
+    "net_gap_offsets": {
+      "interior_to_softening": 0.04188524023993523,
+      "softening_to_order": 0.21705097520862182,
+      "order_to_hessian": 0.10678235390385993,
+      "hessian_to_third_derivative": 0.01733695785688205,
+      "third_derivative_to_wall": -0.38305552720929903
+    },
+    "wall_mass_transfer_shares": {
+      "interior_to_softening": 0.10934508776073451,
+      "softening_to_order": 0.5666305790962431,
+      "order_to_hessian": 0.27876468636755825,
+      "hessian_to_third_derivative": 0.045259646775464096
+    },
+    "wall_drop_balances_interior_gains": true,
+    "dominant_wall_mass_recipient": "softening_to_order",
+    "softening_to_order_receives_majority_wall_transfer": true,
+    "handoff_cascade_detected": true
+  }
+}

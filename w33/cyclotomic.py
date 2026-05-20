@@ -3019,6 +3019,166 @@ def completed_defect_spectral_boundary_barycentric_recurrence_phase_packet(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_gap_handoff_packet(
+    prime_limit: int,
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite gap-rank handoff cascade for the zero-sheet barycentric corridor."""
+    dispersion = completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(
+        prime_limit,
+        s_values,
+        subintervals=subintervals,
+    )
+    gap_keys = {
+        "interior_to_softening": "interior_to_softening_barycentric_gap",
+        "softening_to_order": "softening_to_order_barycentric_gap",
+        "order_to_hessian": "order_to_hessian_barycentric_gap",
+        "hessian_to_third_derivative": "hessian_to_third_derivative_barycentric_gap",
+        "third_derivative_to_wall": "third_derivative_to_wall_barycentric_gap",
+    }
+
+    rows: list[dict[str, object]] = []
+    for row in dispersion["rows"]:
+        gaps = {name: row[key] for name, key in gap_keys.items()}
+        ranking = sorted(gaps.items(), key=lambda item: (-item[1], item[0]))
+        rank_by_gap = {name: index + 1 for index, (name, _) in enumerate(ranking)}
+        rows.append(
+            {
+                "s": row["s"],
+                "gaps": gaps,
+                "gap_ranking": [
+                    {
+                        "gap": name,
+                        "value": value,
+                        "rank": index + 1,
+                    }
+                    for index, (name, value) in enumerate(ranking)
+                ],
+                "gap_rank_by_name": rank_by_gap,
+                "primary_gap": ranking[0][0],
+                "secondary_gap": ranking[1][0],
+                "wall_gap_rank": rank_by_gap["third_derivative_to_wall"],
+                "softening_to_order_gap_rank": rank_by_gap["softening_to_order"],
+                "order_to_hessian_gap_rank": rank_by_gap["order_to_hessian"],
+            }
+        )
+
+    def _linear_crossing(left_gap: str, right_gap: str) -> dict[str, object] | None:
+        differences = [
+            row["gaps"][left_gap] - row["gaps"][right_gap]
+            for row in rows
+        ]
+        for index in range(1, len(rows)):
+            left_difference = differences[index - 1]
+            right_difference = differences[index]
+            if left_difference < 0.0 <= right_difference:
+                left_s = rows[index - 1]["s"]
+                right_s = rows[index]["s"]
+                denominator = right_difference - left_difference
+                crossing_s = (
+                    left_s
+                    if denominator == 0.0
+                    else left_s + (-left_difference / denominator) * (right_s - left_s)
+                )
+                return {
+                    "left_gap": left_gap,
+                    "right_gap": right_gap,
+                    "left_s": left_s,
+                    "right_s": right_s,
+                    "left_difference": left_difference,
+                    "right_difference": right_difference,
+                    "linear_crossing_s": crossing_s,
+                    "first_sample_after_crossing_s": right_s,
+                }
+        return None
+
+    secondary_handoff = _linear_crossing("softening_to_order", "third_derivative_to_wall")
+    order_hessian_wall_handoff = _linear_crossing("order_to_hessian", "third_derivative_to_wall")
+
+    first_gaps = rows[0]["gaps"]
+    last_gaps = rows[-1]["gaps"]
+    net_gap_offsets = {
+        name: last_gaps[name] - first_gaps[name]
+        for name in gap_keys
+    }
+    wall_gap_drop = -net_gap_offsets["third_derivative_to_wall"]
+    wall_mass_transfer_shares = {
+        name: offset / wall_gap_drop if wall_gap_drop != 0.0 else math.inf
+        for name, offset in net_gap_offsets.items()
+        if name != "third_derivative_to_wall"
+    }
+    dominant_wall_mass_recipient = max(
+        wall_mass_transfer_shares,
+        key=lambda name: wall_mass_transfer_shares[name],
+    )
+    wall_gap_rank_sequence = [row["wall_gap_rank"] for row in rows]
+    softening_to_order_gap_rank_sequence = [row["softening_to_order_gap_rank"] for row in rows]
+    order_to_hessian_gap_rank_sequence = [row["order_to_hessian_gap_rank"] for row in rows]
+    secondary_gap_sequence = [row["secondary_gap"] for row in rows]
+
+    return {
+        "prime_limit": prime_limit,
+        "s_values": s_values,
+        "rows": rows,
+        "shared_resonance_s": dispersion["entropy_peak_s"]
+        if dispersion["entropy_peak_s"] == dispersion["concentration_trough_s"]
+        else None,
+        "entropy_peak_s": dispersion["entropy_peak_s"],
+        "concentration_trough_s": dispersion["concentration_trough_s"],
+        "primary_gap_all_interior_to_softening": all(row["primary_gap"] == "interior_to_softening" for row in rows),
+        "secondary_gap_sequence": secondary_gap_sequence,
+        "wall_gap_rank_sequence": wall_gap_rank_sequence,
+        "softening_to_order_gap_rank_sequence": softening_to_order_gap_rank_sequence,
+        "order_to_hessian_gap_rank_sequence": order_to_hessian_gap_rank_sequence,
+        "wall_gap_rank_monotone_nonworsening_toward_lower_priority": all(
+            wall_gap_rank_sequence[index] <= wall_gap_rank_sequence[index + 1]
+            for index in range(len(wall_gap_rank_sequence) - 1)
+        ),
+        "softening_to_order_rank_improves": all(
+            softening_to_order_gap_rank_sequence[index] >= softening_to_order_gap_rank_sequence[index + 1]
+            for index in range(len(softening_to_order_gap_rank_sequence) - 1)
+        ),
+        "secondary_handoff": secondary_handoff,
+        "order_hessian_wall_handoff": order_hessian_wall_handoff,
+        "secondary_handoff_sample_locks_to_resonance": (
+            secondary_handoff is not None
+            and secondary_handoff["first_sample_after_crossing_s"] == dispersion["entropy_peak_s"]
+            and dispersion["entropy_peak_s"] == dispersion["concentration_trough_s"]
+        ),
+        "secondary_handoff_crossing_precedes_resonance": (
+            secondary_handoff is not None
+            and secondary_handoff["linear_crossing_s"] < dispersion["entropy_peak_s"]
+        ),
+        "wall_gap_drop": wall_gap_drop,
+        "net_gap_offsets": net_gap_offsets,
+        "wall_mass_transfer_shares": wall_mass_transfer_shares,
+        "wall_drop_balances_interior_gains": abs(
+            wall_gap_drop - sum(offset for name, offset in net_gap_offsets.items() if name != "third_derivative_to_wall")
+        )
+        < 1e-15,
+        "dominant_wall_mass_recipient": dominant_wall_mass_recipient,
+        "softening_to_order_receives_majority_wall_transfer": (
+            wall_mass_transfer_shares["softening_to_order"] > 0.5
+        ),
+        "handoff_cascade_detected": (
+            secondary_handoff is not None
+            and order_hessian_wall_handoff is not None
+            and secondary_gap_sequence == [
+                "third_derivative_to_wall",
+                "third_derivative_to_wall",
+                "third_derivative_to_wall",
+                "softening_to_order",
+                "softening_to_order",
+                "softening_to_order",
+            ]
+            and wall_gap_rank_sequence == [2, 2, 2, 3, 4, 4]
+            and softening_to_order_gap_rank_sequence == [3, 3, 3, 2, 2, 2]
+            and order_to_hessian_gap_rank_sequence == [5, 4, 4, 4, 3, 3]
+        ),
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

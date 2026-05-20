@@ -82,6 +82,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_dispersion_turning_packet,
     completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet,
     completed_defect_spectral_boundary_barycentric_recurrence_phase_packet,
+    completed_defect_spectral_boundary_barycentric_gap_handoff_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -982,6 +983,60 @@ def test_completed_defect_spectral_boundary_barycentric_recurrence_phase_packet(
     assert abs(concentration["spectral_radius"] - 1.11886943338041) < 1e-12
     assert abs(entropy["roots"][0]["imag"] + entropy["roots"][1]["imag"]) < 1e-15
     assert concentration["roots"][0]["imag"] == 0.0 and concentration["roots"][1]["imag"] == 0.0
+
+
+def test_completed_defect_spectral_boundary_barycentric_gap_handoff_packet():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_gap_handoff_packet(100000, s_values, subintervals=40)
+
+    assert packet["handoff_cascade_detected"]
+    assert packet["primary_gap_all_interior_to_softening"]
+    assert packet["shared_resonance_s"] == 2.0
+    assert packet["secondary_handoff_sample_locks_to_resonance"]
+    assert packet["secondary_handoff_crossing_precedes_resonance"]
+    assert packet["wall_gap_rank_monotone_nonworsening_toward_lower_priority"]
+    assert packet["softening_to_order_rank_improves"]
+    assert packet["wall_drop_balances_interior_gains"]
+    assert packet["dominant_wall_mass_recipient"] == "softening_to_order"
+    assert packet["softening_to_order_receives_majority_wall_transfer"]
+
+    assert packet["secondary_gap_sequence"] == [
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "third_derivative_to_wall",
+        "softening_to_order",
+        "softening_to_order",
+        "softening_to_order",
+    ]
+    assert packet["wall_gap_rank_sequence"] == [2, 2, 2, 3, 4, 4]
+    assert packet["softening_to_order_gap_rank_sequence"] == [3, 3, 3, 2, 2, 2]
+    assert packet["order_to_hessian_gap_rank_sequence"] == [5, 4, 4, 4, 3, 3]
+
+    secondary = packet["secondary_handoff"]
+    assert secondary == {
+        "left_gap": "softening_to_order",
+        "right_gap": "third_derivative_to_wall",
+        "left_s": 1.5,
+        "right_s": 2.0,
+        "left_difference": secondary["left_difference"],
+        "right_difference": secondary["right_difference"],
+        "linear_crossing_s": secondary["linear_crossing_s"],
+        "first_sample_after_crossing_s": 2.0,
+    }
+    assert abs(secondary["linear_crossing_s"] - 1.7384967374464677) < 1e-12
+    assert secondary["left_difference"] < 0.0 < secondary["right_difference"]
+
+    tertiary = packet["order_hessian_wall_handoff"]
+    assert tertiary["left_s"] == 2.0 and tertiary["right_s"] == 2.5
+    assert abs(tertiary["linear_crossing_s"] - 2.279430142026481) < 1e-12
+    assert tertiary["left_difference"] < 0.0 < tertiary["right_difference"]
+
+    shares = packet["wall_mass_transfer_shares"]
+    assert abs(packet["wall_gap_drop"] - 0.38305552720929903) < 1e-15
+    assert abs(sum(shares.values()) - 1.0) < 1e-15
+    assert abs(shares["softening_to_order"] - 0.5666305790962431) < 1e-12
+    assert shares["softening_to_order"] > shares["order_to_hessian"] > shares["interior_to_softening"]
+    assert shares["interior_to_softening"] > shares["hessian_to_third_derivative"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
