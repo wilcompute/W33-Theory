@@ -2308,6 +2308,27 @@ Summing over split primes preserves that positivity, and the tails are summable 
 \end{enumerate}
 This is a big conceptual upgrade. The completed packet is not balancing on some mysterious edge. It lives on a unique, smoothly rising, strictly convex branch. The physical slice $\lambda=1$ is therefore not selected by a near-critical accident; it is simply one distinguished point on a branch whose geometry is now fully controlled.
 
+And once a branch is strictly convex, a new variable becomes natural. Instead of describing the packet by the deformation knob $\lambda$, we can describe it by the resulting order parameter
+\[
+\mathcal M_X(s;\lambda)=\frac{\partial \mathcal F_X}{\partial\lambda}.
+\]
+Because the Hessian is positive, this map is strictly increasing. That means two different deformation strengths can never give the same order parameter. So the branch can be inverted:
+\[
+\lambda = \lambda_X(s;M).
+\]
+In plain language, the deformation is no longer a hidden internal parameter. It can be reconstructed uniquely from the observable spectral response.
+
+This is the thermodynamic completion of the whole story. Once the inverse branch exists, one can define the Legendre-dual potential
+\[
+\Gamma_X(s;M)=\lambda_X(s;M)\,M-\mathcal F_X\bigl(s;\lambda_X(s;M)\bigr).
+\]
+So the same completed spectral packet can now be read in two perfectly equivalent ways:
+\begin{enumerate}
+\item by its deformation coordinate $\lambda$, through the free energy $\mathcal F_X$;
+\item by its conjugate response variable $M$, through the dual potential $\Gamma_X$.
+\end{enumerate}
+That is not a cosmetic reformulation. It means the completed packet has graduated from a remarkable Euler product into a genuine one-parameter thermodynamic system with an equation of state and a dual variational description. And because the finite-cutoff branches converge monotonically with explicit derivative tail bounds, this dual description survives the infinite-cutoff limit as well.
+
 And the whole packet can finally be said in the right language: not just residues, but prime ideals in the Eisenstein integers. Each split prime $p\equiv1\pmod3$ breaks into two ideals $(p,\omega-r)$, and the $\Phi_3$ and $\Phi_6$ branches simply measure how often those ideals divide $q-\omega$ or $q+\omega$.
 The sharpened local-global criterion is exact:
 \[
@@ -3576,6 +3597,7 @@ Infinite-Cutoff Spectral Limit & the odd Taylor tower converges absolutely to a 
 Spectral Action / Free Energy & deformation cumulants, Hessian, and the free-energy functional are explicit & MCVIII \\
 Standalone Spectral $L$-Limit & the infinite-cutoff Euler product exists with certified cutoff error bounds & MCIX \\
 Spectral Phase Geometry & the infinite-cutoff order parameter is positive and the Hessian is strictly positive for $\lambda>0$ & MCX \\
+Spectral Equation of State & the order parameter determines $\lambda$ uniquely and the branch admits a Legendre dual & MCXI \\
 Screen/Bulk Split & $40 = 1 + 12 + 27$; $\mathrm{PG}(3,3)=\mathrm{PG}(2,3)+\mathrm{AG}(3,3)$ & DCMII \\
 Hidden Fourth & ternarity generates quaternarity by closure & DCCCXCIII \\
 Genus Formula & $g(K_n) = (n-q)(n-{(q+1)})/(q(q+1))$ & DCCXXIII \\

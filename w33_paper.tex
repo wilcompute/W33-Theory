@@ -1731,6 +1731,34 @@ The finite-cutoff derivatives approximate these limits monotonically from below,
 Thus the physical packet at $\lambda=1$ lies on a unique monotone convex branch rather than near a hidden phase transition.
 \end{theorem}
 
+Strict convexity immediately promotes the branch to an invertible equation of state. For each finite cutoff $X$ and real $s>0$, the map
+\[
+\lambda\longmapsto \mathcal M_X(s;\lambda)
+\]
+is strictly increasing on $0<\lambda<6$, since its derivative is precisely the positive Hessian $\chi_X(s;\lambda)$. Hence it admits a unique inverse on its image, and the deformation branch may be reconstructed from the order parameter alone.
+
+\begin{theorem}[Completed Spectral Equation of State and Legendre Duality]
+For fixed real $s>0$ and finite cutoff $X$, the completed spectral action
+\[
+\mathcal F_X(s;\lambda)=-\log \Lambda_X^{\mathrm{def}}(s;\lambda)
+\]
+defines a strict equation of state
+\[
+\mathcal M_X(s;\lambda)=\frac{\partial \mathcal F_X}{\partial\lambda},
+\]
+whose branch on $0<\lambda<6$ is injective and therefore uniquely invertible:
+\[
+\lambda_X=\lambda_X(s;M).
+\]
+Consequently the completed spectral packet admits the finite-cutoff Legendre dual potential
+\[
+\Gamma_X(s;M)=\lambda_X(s;M)\,M-\mathcal F_X\bigl(s;\lambda_X(s;M)\bigr).
+\]
+In particular the physical deformation parameter may be recovered uniquely from the order parameter, and the completed spectral branch has a dual thermodynamic description in the conjugate variable $M$.
+
+By the monotone convergence and derivative tail bounds of the previous theorem, these finite-cutoff inverses and dual potentials converge to the corresponding infinite-cutoff branch. So the global completed spectral object is not only analytic and convex; it carries a genuine thermodynamic equation of state.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

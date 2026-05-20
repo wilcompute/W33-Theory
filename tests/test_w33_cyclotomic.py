@@ -52,6 +52,9 @@ from w33.cyclotomic import (
     completed_defect_spectral_hessian_tail_bound,
     completed_defect_spectral_profile,
     completed_defect_spectral_phase_geometry_profile,
+    completed_defect_spectral_legendre_dual,
+    completed_defect_spectral_equation_of_state_inverse,
+    completed_defect_spectral_equation_of_state_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -59,6 +62,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_local_order_parameter_real,
     completed_defect_spectral_infinite_cutoff_profile,
     completed_defect_spectral_order_parameter_tail_bound,
+    completed_defect_spectral_order_parameter_real_global,
+    completed_defect_spectral_hessian_real_global,
     completed_defect_spectral_series_profile,
     completed_defect_spectral_min_radius,
     completed_defect_spectral_uniform_radius_lower_bound,
@@ -490,6 +495,35 @@ def test_completed_defect_spectral_phase_geometry_package():
     assert one_rows[-1]["hessian_tail_bound"] < one_rows[0]["hessian_tail_bound"]
     assert one_rows[-1]["order_jump_from_previous"] is not None and one_rows[-1]["order_jump_from_previous"] > 0.0
     assert one_rows[-1]["hessian_jump_from_previous"] is not None and one_rows[-1]["hessian_jump_from_previous"] > 0.0
+
+
+def test_completed_defect_spectral_equation_of_state_and_legendre_duality():
+    s = 1.0
+    prime_limit = 100000
+    m0 = completed_defect_spectral_order_parameter_real_global(prime_limit, s, 0.0)
+    m1 = completed_defect_spectral_order_parameter_real_global(prime_limit, s, 1.0)
+    m2 = completed_defect_spectral_order_parameter_real_global(prime_limit, s, 2.0)
+    assert m2 > m1 > m0 > 0.0
+    assert completed_defect_spectral_hessian_real_global(prime_limit, s, 1.0) > 0.0
+
+    recovered_1 = completed_defect_spectral_equation_of_state_inverse(prime_limit, s, m1)
+    recovered_2 = completed_defect_spectral_equation_of_state_inverse(prime_limit, s, m2)
+    assert abs(recovered_1 - 1.0) < 1e-10
+    assert abs(recovered_2 - 2.0) < 1e-10
+
+    dual_1 = completed_defect_spectral_legendre_dual(prime_limit, s, m1)
+    dual_2 = completed_defect_spectral_legendre_dual(prime_limit, s, m2)
+    assert abs(dual_1["deformation"] - 1.0) < 1e-10
+    assert abs(dual_2["deformation"] - 2.0) < 1e-10
+    assert dual_2["dual"] > dual_1["dual"]
+    assert dual_1["hessian"] > 0.0 and dual_2["hessian"] > 0.0
+
+    profile = completed_defect_spectral_equation_of_state_profile([1000, 10000, 100000], [1.0], [1.0, 2.0])
+    one_rows = profile["1.0"]["1.0"]
+    two_rows = profile["1.0"]["2.0"]
+    assert one_rows[-1]["abs_inverse_error"] < 1e-10
+    assert two_rows[-1]["abs_inverse_error"] < 1e-10
+    assert two_rows[-1]["target_order_parameter"] > one_rows[-1]["target_order_parameter"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

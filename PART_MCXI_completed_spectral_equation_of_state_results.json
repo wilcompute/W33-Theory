@@ -1,0 +1,11 @@
+{
+  "theorem": "Completed spectral equation of state and Legendre duality",
+  "sample_order_parameter": 0.04182776131853693,
+  "sample_dual_packet": {
+    "deformation": 0.999999999973807,
+    "action": 0.03692479208155711,
+    "order_parameter": 0.04182776131853693,
+    "hessian": 0.014918121699781841,
+    "dual": 0.004902969235884222
+  }
+}

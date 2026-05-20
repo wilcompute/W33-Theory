@@ -1262,6 +1262,116 @@ def completed_defect_spectral_phase_geometry_profile(
     return payload
 
 
+def completed_defect_spectral_order_parameter_real_global(prime_limit: int, s: float, deformation: float = 1.0) -> float:
+    """Real order parameter M_X(s;λ) on the positive real spectral slice."""
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    value = completed_defect_spectral_order_parameter(prime_limit, s, deformation=deformation)
+    return float(value.real)
+
+
+def completed_defect_spectral_hessian_real_global(prime_limit: int, s: float, deformation: float = 1.0) -> float:
+    """Real Hessian χ_X(s;λ) on the positive real spectral slice."""
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    value = completed_defect_spectral_hessian(prime_limit, s, deformation=deformation)
+    return float(value.real)
+
+
+def completed_defect_spectral_equation_of_state_inverse(
+    prime_limit: int,
+    s: float,
+    target_order_parameter: float,
+    deformation_max: float = 5.9,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> float:
+    """Invert λ ↦ M_X(s;λ) on the real physical branch by monotone bisection."""
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    if deformation_max <= 0 or deformation_max >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("deformation_max must satisfy 0 < deformation_max < 6")
+    if tolerance <= 0:
+        raise ValueError("tolerance must be > 0")
+    lower = 0.0
+    upper = deformation_max
+    lower_value = completed_defect_spectral_order_parameter_real_global(prime_limit, s, lower)
+    upper_value = completed_defect_spectral_order_parameter_real_global(prime_limit, s, upper)
+    if not (lower_value <= target_order_parameter <= upper_value):
+        raise ValueError("target_order_parameter must lie in the monotone branch range [M(0), M(deformation_max)]")
+    for _ in range(max_iterations):
+        midpoint = 0.5 * (lower + upper)
+        midpoint_value = completed_defect_spectral_order_parameter_real_global(prime_limit, s, midpoint)
+        if abs(midpoint_value - target_order_parameter) <= tolerance:
+            return midpoint
+        if midpoint_value < target_order_parameter:
+            lower = midpoint
+        else:
+            upper = midpoint
+    return 0.5 * (lower + upper)
+
+
+def completed_defect_spectral_legendre_dual(
+    prime_limit: int,
+    s: float,
+    target_order_parameter: float,
+    deformation_max: float = 5.9,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> dict[str, float]:
+    """Finite-cutoff Legendre dual of the completed spectral action on the monotone branch."""
+    deformation = completed_defect_spectral_equation_of_state_inverse(
+        prime_limit,
+        s,
+        target_order_parameter,
+        deformation_max=deformation_max,
+        tolerance=tolerance,
+        max_iterations=max_iterations,
+    )
+    action = completed_defect_spectral_action(prime_limit, s, deformation=deformation).real
+    hessian = completed_defect_spectral_hessian_real_global(prime_limit, s, deformation=deformation)
+    dual = deformation * target_order_parameter - action
+    return {
+        "deformation": deformation,
+        "action": action,
+        "order_parameter": target_order_parameter,
+        "hessian": hessian,
+        "dual": dual,
+    }
+
+
+def completed_defect_spectral_equation_of_state_profile(
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, list[dict[str, float | int]]]]:
+    """Profile the invertible equation of state and Legendre dual branch."""
+    payload: dict[str, dict[str, list[dict[str, float | int]]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            rows = []
+            for prime_limit in prime_limits:
+                target_order = completed_defect_spectral_order_parameter_real_global(prime_limit, s, deformation=deformation)
+                dual_packet = completed_defect_spectral_legendre_dual(prime_limit, s, target_order)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "target_deformation": deformation,
+                        "target_order_parameter": target_order,
+                        "recovered_deformation": dual_packet["deformation"],
+                        "abs_inverse_error": abs(dual_packet["deformation"] - deformation),
+                        "action": dual_packet["action"],
+                        "dual": dual_packet["dual"],
+                        "hessian": dual_packet["hessian"],
+                    }
+                )
+            payload[outer_key][inner_key] = rows
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
