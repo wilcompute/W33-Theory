@@ -2937,6 +2937,88 @@ def completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_recurrence_phase_packet(
+    prime_limit: int,
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Characteristic-root phase split of the finite recurrence/resonance packet."""
+    resonance = completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet(
+        prime_limit,
+        s_values,
+        subintervals=subintervals,
+    )
+
+    def _phase_packet(coefficients: list[float]) -> dict[str, object]:
+        coefficient_prev2, coefficient_prev1 = coefficients
+        discriminant = coefficient_prev1 * coefficient_prev1 + 4.0 * coefficient_prev2
+        if discriminant >= 0.0:
+            sqrt_discriminant = math.sqrt(discriminant)
+            roots = [
+                complex(0.5 * (coefficient_prev1 + sqrt_discriminant), 0.0),
+                complex(0.5 * (coefficient_prev1 - sqrt_discriminant), 0.0),
+            ]
+            phase_type = "real_split"
+        else:
+            sqrt_abs_discriminant = math.sqrt(-discriminant)
+            roots = [
+                complex(0.5 * coefficient_prev1, 0.5 * sqrt_abs_discriminant),
+                complex(0.5 * coefficient_prev1, -0.5 * sqrt_abs_discriminant),
+            ]
+            phase_type = "complex_conjugate"
+
+        moduli = [abs(root) for root in roots]
+        return {
+            "coefficients": coefficients,
+            "characteristic_polynomial": "r^2 - a1*r - a2",
+            "discriminant": discriminant,
+            "phase_type": phase_type,
+            "roots": [
+                {
+                    "real": root.real,
+                    "imag": root.imag,
+                    "abs": abs(root),
+                }
+                for root in roots
+            ],
+            "spectral_radius": max(moduli),
+            "root_moduli": moduli,
+            "root_sum": (roots[0] + roots[1]).real,
+            "root_product": (roots[0] * roots[1]).real,
+            "sum_matches_a1": abs((roots[0] + roots[1]).real - coefficient_prev1) < 1e-12,
+            "product_matches_minus_a2": abs((roots[0] * roots[1]).real + coefficient_prev2) < 1e-12,
+            "has_unit_exceeding_root": max(moduli) > 1.0,
+            "all_roots_inside_unit_disk": max(moduli) < 1.0,
+        }
+
+    entropy_phase = _phase_packet(resonance["entropy_recurrence"]["coefficients"])
+    concentration_phase = _phase_packet(resonance["concentration_recurrence"]["coefficients"])
+
+    return {
+        "prime_limit": prime_limit,
+        "s_values": s_values,
+        "shared_resonance_s": resonance["shared_resonance_s"],
+        "entropy_phase": entropy_phase,
+        "concentration_phase": concentration_phase,
+        "phase_split_detected": (
+            entropy_phase["phase_type"] == "complex_conjugate"
+            and concentration_phase["phase_type"] == "real_split"
+        ),
+        "entropy_damped_oscillatory": (
+            entropy_phase["phase_type"] == "complex_conjugate"
+            and entropy_phase["all_roots_inside_unit_disk"]
+        ),
+        "concentration_real_expanding_mode_detected": (
+            concentration_phase["phase_type"] == "real_split"
+            and concentration_phase["has_unit_exceeding_root"]
+        ),
+        "entropy_first_harmonic_ratio": resonance["entropy_harmonics"]["normalized_dft_abs"][1],
+        "concentration_first_harmonic_ratio": resonance["concentration_harmonics"]["normalized_dft_abs"][1],
+        "entropy_max_abs_residual": resonance["entropy_recurrence"]["max_abs_residual"],
+        "concentration_max_abs_residual": resonance["concentration_recurrence"]["max_abs_residual"],
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

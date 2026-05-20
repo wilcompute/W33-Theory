@@ -81,6 +81,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_wallward_flow_packet,
     completed_defect_spectral_boundary_barycentric_dispersion_turning_packet,
     completed_defect_spectral_boundary_barycentric_recurrence_resonance_packet,
+    completed_defect_spectral_boundary_barycentric_recurrence_phase_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -955,6 +956,32 @@ def test_completed_defect_spectral_boundary_barycentric_recurrence_resonance_pac
     assert abs(concentration_recurrence["coefficients"][1] - 1.8194198703813358) < 1e-12
     assert entropy_recurrence["max_abs_residual"] < 0.02
     assert concentration_recurrence["max_abs_residual"] < 0.009
+
+
+def test_completed_defect_spectral_boundary_barycentric_recurrence_phase_packet():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_recurrence_phase_packet(100000, s_values, subintervals=40)
+
+    assert packet["phase_split_detected"]
+    assert packet["entropy_damped_oscillatory"]
+    assert packet["concentration_real_expanding_mode_detected"]
+    assert packet["shared_resonance_s"] == 2.0
+
+    entropy = packet["entropy_phase"]
+    concentration = packet["concentration_phase"]
+    assert entropy["phase_type"] == "complex_conjugate"
+    assert concentration["phase_type"] == "real_split"
+    assert entropy["discriminant"] < 0.0
+    assert concentration["discriminant"] > 0.0
+    assert entropy["all_roots_inside_unit_disk"]
+    assert not concentration["all_roots_inside_unit_disk"]
+    assert concentration["has_unit_exceeding_root"]
+    assert entropy["sum_matches_a1"] and entropy["product_matches_minus_a2"]
+    assert concentration["sum_matches_a1"] and concentration["product_matches_minus_a2"]
+    assert abs(entropy["spectral_radius"] - 0.8905216561193539) < 1e-12
+    assert abs(concentration["spectral_radius"] - 1.11886943338041) < 1e-12
+    assert abs(entropy["roots"][0]["imag"] + entropy["roots"][1]["imag"]) < 1e-15
+    assert concentration["roots"][0]["imag"] == 0.0 and concentration["roots"][1]["imag"] == 0.0
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
