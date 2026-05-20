@@ -1,0 +1,46 @@
+{
+  "theorem": "Green moment condition ladder",
+  "floor": {
+    "fraction": "1/12",
+    "numerator": 1,
+    "denominator": 12,
+    "float": 0.08333333333333333
+  },
+  "positive_integer_ladder": [
+    40,
+    100,
+    1000
+  ],
+  "total_entry_sum": {
+    "fraction": "10/3",
+    "numerator": 10,
+    "denominator": 3,
+    "float": 3.3333333333333335
+  },
+  "trace_A_inverse": {
+    "fraction": "25/3",
+    "numerator": 25,
+    "denominator": 3,
+    "float": 8.333333333333334
+  },
+  "inverse_frobenius_square": {
+    "fraction": "125/18",
+    "numerator": 125,
+    "denominator": 18,
+    "float": 6.944444444444445
+  },
+  "spectral_condition_number": {
+    "fraction": "6",
+    "numerator": 6,
+    "denominator": 1,
+    "float": 6.0
+  },
+  "frobenius_condition_square": {
+    "fraction": "10000/3",
+    "numerator": 10000,
+    "denominator": 3,
+    "float": 3333.3333333333335
+  },
+  "green_moment_condition_ladder_detected": true,
+  "claim_boundary": "finite W33 Green-kernel moment and conditioning identity; not a continuum analytic estimate by itself"
+}
