@@ -2715,6 +2715,102 @@ def completed_defect_spectral_boundary_barycentric_wallward_flow_packet(
     }
 
 
+def completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(
+    prime_limit: int,
+    s_values: list[float],
+    subintervals: int = 160,
+) -> dict[str, object]:
+    """Finite turning-law packet for entropy/concentration of barycentric gap coordinates.
+
+    Entropy is Shannon entropy of the five positive barycentric gaps; concentration is the
+    quadratic concentration index \sum g_i^2. This packet detects the finite turning point
+    of dispersion along an s-ladder while retaining the wallward-flow diagnostics.
+    """
+    flow = completed_defect_spectral_boundary_barycentric_wallward_flow_packet(
+        prime_limit,
+        s_values,
+        subintervals=subintervals,
+    )
+    rows = flow["rows"]
+
+    decorated_rows: list[dict[str, object]] = []
+    previous_entropy = None
+    previous_concentration = None
+    for row in rows:
+        gaps = [
+            row["interior_to_softening_barycentric_gap"],
+            row["softening_to_order_barycentric_gap"],
+            row["order_to_hessian_barycentric_gap"],
+            row["hessian_to_third_derivative_barycentric_gap"],
+            row["third_derivative_to_wall_barycentric_gap"],
+        ]
+        entropy = -sum(gap * math.log(gap) for gap in gaps)
+        concentration = sum(gap * gap for gap in gaps)
+        dominant_gap = max(
+            [
+                ("interior_to_softening", row["interior_to_softening_barycentric_gap"]),
+                ("softening_to_order", row["softening_to_order_barycentric_gap"]),
+                ("order_to_hessian", row["order_to_hessian_barycentric_gap"]),
+                ("hessian_to_third_derivative", row["hessian_to_third_derivative_barycentric_gap"]),
+                ("third_derivative_to_wall", row["third_derivative_to_wall_barycentric_gap"]),
+            ],
+            key=lambda pair: pair[1],
+        )[0]
+        decorated_rows.append(
+            {
+                **row,
+                "gap_entropy": entropy,
+                "gap_concentration": concentration,
+                "dominant_gap": dominant_gap,
+                "gap_entropy_jump_from_previous": (entropy - previous_entropy) if previous_entropy is not None else None,
+                "gap_concentration_jump_from_previous": (
+                    concentration - previous_concentration if previous_concentration is not None else None
+                ),
+            }
+        )
+        previous_entropy = entropy
+        previous_concentration = concentration
+
+    entropy_values = [row["gap_entropy"] for row in decorated_rows]
+    concentration_values = [row["gap_concentration"] for row in decorated_rows]
+    entropy_peak_index = max(range(len(entropy_values)), key=lambda index: entropy_values[index])
+    concentration_trough_index = min(range(len(concentration_values)), key=lambda index: concentration_values[index])
+
+    entropy_jumps = [row["gap_entropy_jump_from_previous"] for row in decorated_rows[1:]]
+    concentration_jumps = [row["gap_concentration_jump_from_previous"] for row in decorated_rows[1:]]
+    assert all(jump is not None for jump in entropy_jumps)
+    assert all(jump is not None for jump in concentration_jumps)
+
+    entropy_sign_pattern = [1 if jump > 0 else (-1 if jump < 0 else 0) for jump in entropy_jumps]
+    concentration_sign_pattern = [1 if jump > 0 else (-1 if jump < 0 else 0) for jump in concentration_jumps]
+
+    return {
+        "prime_limit": prime_limit,
+        "s_values": s_values,
+        "rows": decorated_rows,
+        "all_coordinate_jumps_positive": flow["all_coordinate_jumps_positive"],
+        "all_wall_gap_jumps_negative": flow["all_wall_gap_jumps_negative"],
+        "wall_gap_strictly_decreases": flow["wall_gap_strictly_decreases"],
+        "dominant_gap_all_interior_to_softening": all(
+            row["dominant_gap"] == "interior_to_softening" for row in decorated_rows
+        ),
+        "entropy_peak_index": entropy_peak_index,
+        "entropy_peak_s": decorated_rows[entropy_peak_index]["s"],
+        "entropy_peak_value": entropy_values[entropy_peak_index],
+        "concentration_trough_index": concentration_trough_index,
+        "concentration_trough_s": decorated_rows[concentration_trough_index]["s"],
+        "concentration_trough_value": concentration_values[concentration_trough_index],
+        "entropy_sign_pattern": entropy_sign_pattern,
+        "concentration_sign_pattern": concentration_sign_pattern,
+        "entropy_rises_then_falls": entropy_sign_pattern.count(1) > 0
+        and entropy_sign_pattern.count(-1) > 0
+        and entropy_sign_pattern.index(-1) > entropy_sign_pattern.index(1),
+        "concentration_falls_then_rises": concentration_sign_pattern.count(-1) > 0
+        and concentration_sign_pattern.count(1) > 0
+        and concentration_sign_pattern.index(1) > concentration_sign_pattern.index(-1),
+    }
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}

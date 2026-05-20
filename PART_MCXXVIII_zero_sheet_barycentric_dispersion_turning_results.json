@@ -1,0 +1,21 @@
+{
+  "theorem": "Zero-sheet barycentric dispersion turning law",
+  "entropy_peak_s": 2.0,
+  "concentration_trough_s": 2.0,
+  "entropy_sign_pattern": [
+    1,
+    1,
+    1,
+    -1,
+    -1
+  ],
+  "concentration_sign_pattern": [
+    -1,
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "dominant_gap_all_interior_to_softening": true,
+  "wall_gap_strictly_decreases": true
+}

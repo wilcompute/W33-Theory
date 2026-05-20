@@ -79,6 +79,7 @@ from w33.cyclotomic import (
     completed_defect_spectral_boundary_barycentric_witness_profile,
     completed_defect_spectral_boundary_barycentric_stability_packet,
     completed_defect_spectral_boundary_barycentric_wallward_flow_packet,
+    completed_defect_spectral_boundary_barycentric_dispersion_turning_packet,
     completed_defect_spectral_dual_softening_density,
     completed_defect_spectral_boundary_transfer_packet,
     completed_defect_spectral_relative_error_bound,
@@ -891,6 +892,30 @@ def test_completed_defect_spectral_boundary_barycentric_wallward_flow_packet():
     assert offsets["order"] > offsets["dual_softening"]
     assert offsets["hessian"] > offsets["order"]
     assert offsets["third_derivative"] > offsets["hessian"]
+
+
+def test_completed_defect_spectral_boundary_barycentric_dispersion_turning_packet():
+    s_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    packet = completed_defect_spectral_boundary_barycentric_dispersion_turning_packet(100000, s_values, subintervals=40)
+
+    assert packet["all_coordinate_jumps_positive"]
+    assert packet["all_wall_gap_jumps_negative"]
+    assert packet["wall_gap_strictly_decreases"]
+    assert packet["dominant_gap_all_interior_to_softening"]
+
+    assert packet["entropy_peak_s"] == 2.0
+    assert packet["concentration_trough_s"] == 2.0
+    assert packet["entropy_rises_then_falls"]
+    assert packet["concentration_falls_then_rises"]
+
+    assert packet["entropy_sign_pattern"] == [1, 1, 1, -1, -1]
+    assert packet["concentration_sign_pattern"] == [-1, -1, -1, 1, 1]
+
+    rows = packet["rows"]
+    assert rows[0]["gap_entropy"] < rows[1]["gap_entropy"] < rows[2]["gap_entropy"] < rows[3]["gap_entropy"]
+    assert rows[3]["gap_entropy"] > rows[4]["gap_entropy"] > rows[5]["gap_entropy"]
+    assert rows[0]["gap_concentration"] > rows[1]["gap_concentration"] > rows[2]["gap_concentration"] > rows[3]["gap_concentration"]
+    assert rows[3]["gap_concentration"] < rows[4]["gap_concentration"] < rows[5]["gap_concentration"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():
