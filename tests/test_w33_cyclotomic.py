@@ -55,6 +55,8 @@ from w33.cyclotomic import (
     completed_defect_spectral_legendre_dual,
     completed_defect_spectral_equation_of_state_inverse,
     completed_defect_spectral_equation_of_state_profile,
+    completed_defect_spectral_infinite_equation_of_state_interval,
+    completed_defect_spectral_infinite_dual_branch_profile,
     completed_defect_spectral_relative_error_bound,
     completed_defect_spectral_reciprocity,
     completed_defect_spectral_real_local_coordinates,
@@ -524,6 +526,30 @@ def test_completed_defect_spectral_equation_of_state_and_legendre_duality():
     assert one_rows[-1]["abs_inverse_error"] < 1e-10
     assert two_rows[-1]["abs_inverse_error"] < 1e-10
     assert two_rows[-1]["target_order_parameter"] > one_rows[-1]["target_order_parameter"]
+
+
+def test_completed_defect_spectral_infinite_dual_branch_limit_package():
+    s = 1.0
+    target_order = completed_defect_spectral_order_parameter_real_global(1000, s, 1.0)
+    interval_1k = completed_defect_spectral_infinite_equation_of_state_interval(1000, s, target_order)
+    interval_10k = completed_defect_spectral_infinite_equation_of_state_interval(10000, s, target_order)
+    interval_100k = completed_defect_spectral_infinite_equation_of_state_interval(100000, s, target_order)
+    assert abs(interval_1k["upper_lambda"] - 1.0) < 1e-10
+    assert interval_100k["interval_width"] < interval_10k["interval_width"] < interval_1k["interval_width"]
+
+    recovered_10k = completed_defect_spectral_equation_of_state_inverse(10000, s, target_order)
+    recovered_100k = completed_defect_spectral_equation_of_state_inverse(100000, s, target_order)
+    assert 0.0 <= interval_10k["lower_lambda"] <= recovered_10k <= interval_10k["upper_lambda"] <= 1.0
+    assert 0.0 <= interval_100k["lower_lambda"] <= recovered_100k <= interval_100k["upper_lambda"] <= recovered_10k
+
+    profile = completed_defect_spectral_infinite_dual_branch_profile(1000, [1000, 10000, 100000], [1.0], [1.0, 2.0])
+    one_rows = profile["1.0"]["1.0"]["rows"]
+    two_rows = profile["1.0"]["2.0"]["rows"]
+    assert abs(one_rows[0]["recovered_lambda"] - 1.0) < 1e-10
+    assert abs(two_rows[0]["recovered_lambda"] - 2.0) < 1e-10
+    assert one_rows[2]["recovered_lambda"] < one_rows[1]["recovered_lambda"] < one_rows[0]["recovered_lambda"]
+    assert two_rows[2]["recovered_lambda"] < two_rows[1]["recovered_lambda"] < two_rows[0]["recovered_lambda"]
+    assert one_rows[2]["interval_width"] < one_rows[1]["interval_width"] < one_rows[0]["interval_width"]
 
 
 def test_eisenstein_exact_local_global_valuation_criterion():

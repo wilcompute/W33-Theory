@@ -12590,34 +12590,45 @@
           they come with a certified error bar. On every compact deformation disk <code>|λ| ≤ ρ &lt; 6</code>, the local
           completed logs are dominated by a summable split-prime majorant, so the global sum</p>
         <div class="math-block">
-          <span class="eq">log Λ<sub>∞</sub><sup>def</sup>(s;λ) = Σ<sub>p≡1 (3)</sub> log Λ<sub>p</sub><sup>def</sup>(s;λ)</span>
+          <span class="eq">log Λ<sub>∞</sub><sup>def</sup>(s;λ) = Σ<sub>p≡1 (3)</sub> log
+            Λ<sub>p</sub><sup>def</sup>(s;λ)</span>
         </div>
         <p>converges absolutely and uniformly. Equivalently, the completed spectral family really does exist as a true
           infinite-cutoff Euler product</p>
         <div class="math-block">
-          <span class="eq">Λ<sub>∞</sub><sup>def</sup>(s;λ) = ∏<sub>p≡1 (3)</sub> Λ<sub>p</sub><sup>def</sup>(s;λ)</span>
+          <span class="eq">Λ<sub>∞</sub><sup>def</sup>(s;λ) = ∏<sub>p≡1 (3)</sub>
+            Λ<sub>p</sub><sup>def</sup>(s;λ)</span>
         </div>
-        <p>for every positive real <code>s</code> and every <code>|λ| &lt; 6</code>. Better still, the truncations know how
+        <p>for every positive real <code>s</code> and every <code>|λ| &lt; 6</code>. Better still, the truncations know
+          how
           far they are from the true object:</p>
         <div class="math-block">
-          <span class="eq">|log Λ<sub>∞</sub><sup>def</sup> − log Λ<sub>X</sub><sup>def</sup>| ≤ B<sub>X</sub>(ρ), &ensp; |Λ<sub>∞</sub><sup>def</sup>/Λ<sub>X</sub><sup>def</sup> − 1| ≤ e<sup>B<sub>X</sub>(ρ)</sup> − 1</span>
+          <span class="eq">|log Λ<sub>∞</sub><sup>def</sup> − log Λ<sub>X</sub><sup>def</sup>| ≤ B<sub>X</sub>(ρ),
+            &ensp; |Λ<sub>∞</sub><sup>def</sup>/Λ<sub>X</sub><sup>def</sup> − 1| ≤ e<sup>B<sub>X</sub>(ρ)</sup> −
+            1</span>
         </div>
         <p>with the explicit coarse cutoff certificate</p>
         <div class="math-block">
-          <span class="eq">B<sub>X</sub>(ρ) = 2ρ/X<sub>*</sub> + ρ³ /( 3(1−(ρ/X<sub>*</sub>)²) X<sub>*</sub>² ), &ensp; X<sub>*</sub> = max(X, 6)</span>
+          <span class="eq">B<sub>X</sub>(ρ) = 2ρ/X<sub>*</sub> + ρ³ /( 3(1−(ρ/X<sub>*</sub>)²) X<sub>*</sub>² ), &ensp;
+            X<sub>*</sub> = max(X, 6)</span>
         </div>
-        <p>So the physical packet at <code>λ = 1</code> is not just numerically stable: it is a bona fide global analytic
+        <p>So the physical packet at <code>λ = 1</code> is not just numerically stable: it is a bona fide global
+          analytic
           object with explicit finite-cutoff error control. And because every truncation satisfies
-          <code>Λ<sub>X</sub><sup>def</sup>(s;λ)Λ<sub>X</sub><sup>def</sup>(s;−λ)=1</code>, the exact centered reciprocity survives
-          to the infinite-cutoff limit as well.</p>
+          <code>Λ<sub>X</sub><sup>def</sup>(s;λ)Λ<sub>X</sub><sup>def</sup>(s;−λ)=1</code>, the exact centered
+          reciprocity survives
+          to the infinite-cutoff limit as well.
+        </p>
 
         <h4>Spectral phase geometry: no hidden critical point before the wall</h4>
         <p>Once the infinite-cutoff object exists, the next question is genuinely physical: what does its deformation
           branch look like? Does the packet hide a phase transition before the analytic wall at <code>|λ| = 6</code>, or
-          does it sit on one rigid branch all the way from <code>λ = 0</code> to the physical slice <code>λ = 1</code>?</p>
+          does it sit on one rigid branch all the way from <code>λ = 0</code> to the physical slice <code>λ = 1</code>?
+        </p>
         <p>On the real slice <code>s &gt; 0</code>, define</p>
         <div class="math-block">
-          <span class="eq">y<sub>p</sub>(s) = 1 − p<sup>−s</sup>, &ensp; a<sub>p</sub>(s) = y<sub>p</sub>(s)/(p−1)</span>
+          <span class="eq">y<sub>p</sub>(s) = 1 − p<sup>−s</sup>, &ensp; a<sub>p</sub>(s) =
+            y<sub>p</sub>(s)/(p−1)</span>
         </div>
         <p>Then the local order parameter of the completed spectral action rearranges into</p>
         <div class="math-block">
@@ -12630,8 +12641,10 @@
         <div class="math-block">
           <span class="eq">χ<sub>p</sub>(s;λ) = 4λa<sub>p</sub>(s)³ / (1−λ²a<sub>p</sub>(s)²)²</span>
         </div>
-        <p>That is exactly zero at <code>λ = 0</code> and strictly positive for every <code>λ &gt; 0</code>. Summing over split
-          primes preserves the sign and still converges absolutely. So the infinite-cutoff completed spectral action is</p>
+        <p>That is exactly zero at <code>λ = 0</code> and strictly positive for every <code>λ &gt; 0</code>. Summing
+          over split
+          primes preserves the sign and still converges absolutely. So the infinite-cutoff completed spectral action is
+        </p>
         <ul>
           <li><strong>strictly increasing</strong> on the full physical branch <code>0 ≤ λ &lt; 6</code>,</li>
           <li><strong>strictly convex</strong> for every <code>λ &gt; 0</code>, and</li>
@@ -12663,8 +12676,35 @@
           <li>the deformation picture, using <code>λ</code> and the free energy <code>F</code>, and</li>
           <li>the response picture, using <code>M</code> and the dual potential <code>Γ</code>.</li>
         </ul>
-        <p>This pushes the package beyond “a nice Euler product with a few derivatives.” It becomes a genuine one-parameter
+        <p>This pushes the package beyond “a nice Euler product with a few derivatives.” It becomes a genuine
+          one-parameter
           thermodynamic system with an invertible equation of state and a dual variational description.</p>
+
+        <h4>Infinite-cutoff dual branch with certified inverse enclosures</h4>
+        <p>The next upgrade is global rather than local. The finite-cutoff inverse branches do not simply appear to be
+          converging; they come with a certified enclosure for the true infinite-cutoff inverse branch. If the
+          finite-cutoff
+          order parameter misses the true one by at most <code>T<sub>X</sub>(ρ)</code> on a compact physical branch
+          <code>0 ≤ λ ≤ ρ &lt; 6</code>, then the inverse branch satisfies
+        </p>
+        <div class="math-block">
+          <span class="eq">λ<sub>X</sub>(s; max{ M − T<sub>X</sub>(ρ), M<sub>X</sub>(s;0) }) ≤ λ<sub>∞</sub>(s;M) ≤
+            λ<sub>X</sub>(s;M)</span>
+        </div>
+        <p>So the finite-cutoff inverse branches converge from above to the true infinite-cutoff equation of state, and
+          the
+          width of the interval shrinks explicitly with the split-prime cutoff.</p>
+        <p>That means the dual thermodynamic description also survives the global limit. The finite-cutoff Legendre
+          potentials</p>
+        <div class="math-block">
+          <span class="eq">Γ<sub>X</sub>(s;M) = λ<sub>X</sub>(s;M) · M − F<sub>X</sub>(s; λ<sub>X</sub>(s;M))</span>
+        </div>
+        <p>converge to a bona fide infinite-cutoff dual branch. At that point the completed spectral packet is
+          controlled in
+          both languages all the way to infinity: by the deformation variable <code>λ</code> and by the response
+          variable
+          <code>M</code>.
+        </p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the

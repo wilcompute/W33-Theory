@@ -1759,6 +1759,55 @@ In particular the physical deformation parameter may be recovered uniquely from 
 By the monotone convergence and derivative tail bounds of the previous theorem, these finite-cutoff inverses and dual potentials converge to the corresponding infinite-cutoff branch. So the global completed spectral object is not only analytic and convex; it carries a genuine thermodynamic equation of state.
 \end{theorem}
 
+The convergence of the inverse branches may be stated with explicit enclosures. If
+\[
+0<\mathcal M_\infty(s;\lambda)-\mathcal M_X(s;\lambda)\le T_X(\rho)
+\qquad (0\le \lambda\le \rho<6),
+\]
+then monotonicity of the finite-cutoff equation of state gives the inverse bracket
+\[
+\lambda_X\bigl(s;\max\{M-T_X(\rho),\mathcal M_X(s;0)\}\bigr)
+\le
+\lambda_\infty(s;M)
+\le
+\lambda_X(s;M).
+\]
+Thus the inverse branches approach the global branch from above with a computable interval width.
+
+\begin{theorem}[Infinite-Cutoff Spectral Equation of State and Dual Branch Limit]
+Fix real $s>0$ and a compact branch interval $0\le\lambda\le\rho<6$. Then the finite-cutoff order parameters
+\[
+\mathcal M_X(s;\lambda)=\frac{\partial \mathcal F_X}{\partial\lambda}
+\]
+increase pointwise to the infinite-cutoff order parameter $\mathcal M_\infty(s;\lambda)$, and their inverse branches
+\[
+\lambda_X=\lambda_X(s;M)
+\]
+decrease pointwise to a unique limiting inverse branch
+\[
+\lambda_\infty=\lambda_\infty(s;M)
+\]
+on the common image of the compact interval. Moreover the finite-cutoff inverse branches satisfy the certified enclosure
+\[
+\lambda_X\bigl(s;\max\{M-T_X(\rho),\mathcal M_X(s;0)\}\bigr)
+\le
+\lambda_\infty(s;M)
+\le
+\lambda_X(s;M),
+\]
+so their interval width shrinks explicitly with $X$.
+
+Consequently the Legendre-dual potentials
+\[
+\Gamma_X(s;M)=\lambda_X(s;M)\,M-\mathcal F_X\bigl(s;\lambda_X(s;M)\bigr)
+\]
+converge to the corresponding infinite-cutoff dual branch
+\[
+\Gamma_\infty(s;M)=\lambda_\infty(s;M)\,M-\mathcal F_\infty\bigl(s;\lambda_\infty(s;M)\bigr).
+\]
+Thus the completed spectral packet admits a genuine infinite-cutoff equation of state and a limiting Legendre-dual thermodynamic description.
+\end{theorem}
+
 So the completed Dirichlet package is not an isolated endpoint but the $\lambda=1$ slice of a full odd spectral family.
 In Eisenstein prime-ideal language, the whole packet is the valuation packet of $q\mp\omega$ in $\mathbb Z[\omega]$: if $p\equiv1\pmod3$ and $\pi_r=(p,\omega-r)$ is one of the two primes above $p$, then
 \[

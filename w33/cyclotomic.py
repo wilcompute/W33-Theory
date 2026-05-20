@@ -1372,6 +1372,111 @@ def completed_defect_spectral_equation_of_state_profile(
     return payload
 
 
+def completed_defect_spectral_infinite_equation_of_state_interval(
+    prime_limit: int,
+    s: float,
+    target_order_parameter: float,
+    deformation_max: float = 5.9,
+    tolerance: float = 1e-12,
+    max_iterations: int = 200,
+) -> dict[str, float]:
+    """Certified enclosure for the infinite-cutoff inverse branch λ_∞(s;M).
+
+    If T_X is the order-parameter tail bound on [0, deformation_max], then
+
+        M_X(λ) <= M_∞(λ) <= M_X(λ) + T_X
+
+    and monotonicity yields the inverse enclosure
+
+        λ_X(max(M - T_X, M_X(0))) <= λ_∞(M) <= λ_X(M)
+
+    whenever the targets lie in the finite-cutoff branch range.
+    """
+    if s <= 0:
+        raise ValueError("s must be > 0 on the real spectral slice")
+    if deformation_max <= 0 or deformation_max >= completed_defect_spectral_uniform_radius_lower_bound():
+        raise ValueError("deformation_max must satisfy 0 < deformation_max < 6")
+    lower_branch_value = completed_defect_spectral_order_parameter_real_global(prime_limit, s, 0.0)
+    upper_branch_value = completed_defect_spectral_order_parameter_real_global(prime_limit, s, deformation_max)
+    tail = completed_defect_spectral_order_parameter_tail_bound(prime_limit, deformation_max)
+    if target_order_parameter < lower_branch_value or target_order_parameter > upper_branch_value + tail:
+        raise ValueError("target_order_parameter must lie in the certified infinite-cutoff branch range")
+    upper_target = min(target_order_parameter, upper_branch_value)
+    lower_target = max(target_order_parameter - tail, lower_branch_value)
+    upper_lambda = completed_defect_spectral_equation_of_state_inverse(
+        prime_limit,
+        s,
+        upper_target,
+        deformation_max=deformation_max,
+        tolerance=tolerance,
+        max_iterations=max_iterations,
+    )
+    lower_lambda = completed_defect_spectral_equation_of_state_inverse(
+        prime_limit,
+        s,
+        lower_target,
+        deformation_max=deformation_max,
+        tolerance=tolerance,
+        max_iterations=max_iterations,
+    )
+    return {
+        "lower_lambda": lower_lambda,
+        "upper_lambda": upper_lambda,
+        "interval_width": upper_lambda - lower_lambda,
+        "tail_bound": tail,
+    }
+
+
+def completed_defect_spectral_infinite_dual_branch_profile(
+    reference_prime_limit: int,
+    prime_limits: list[int],
+    s_values: list[float],
+    deformations: list[float],
+) -> dict[str, dict[str, dict[str, object]]]:
+    """Profile monotone finite-cutoff inverse branches converging to the infinite-cutoff dual branch.
+
+    Targets are fixed from the reference cutoff so that all later cutoffs lie on the same common branch.
+    """
+    payload: dict[str, dict[str, dict[str, object]]] = {}
+    for s in s_values:
+        outer_key = str(s)
+        payload[outer_key] = {}
+        for deformation in deformations:
+            inner_key = str(deformation)
+            target_order = completed_defect_spectral_order_parameter_real_global(reference_prime_limit, s, deformation=deformation)
+            rows = []
+            previous_lambda = None
+            previous_dual = None
+            for prime_limit in prime_limits:
+                recovered = completed_defect_spectral_equation_of_state_inverse(prime_limit, s, target_order)
+                dual_packet = completed_defect_spectral_legendre_dual(prime_limit, s, target_order)
+                interval = completed_defect_spectral_infinite_equation_of_state_interval(prime_limit, s, target_order)
+                rows.append(
+                    {
+                        "prime_limit": prime_limit,
+                        "target_order_parameter": target_order,
+                        "reference_deformation": deformation,
+                        "recovered_lambda": recovered,
+                        "abs_reference_gap": deformation - recovered,
+                        "lambda_drop_from_previous": (previous_lambda - recovered) if previous_lambda is not None else None,
+                        "dual": dual_packet["dual"],
+                        "dual_drop_from_previous": (previous_dual - dual_packet["dual"]) if previous_dual is not None else None,
+                        "interval_lower_lambda": interval["lower_lambda"],
+                        "interval_upper_lambda": interval["upper_lambda"],
+                        "interval_width": interval["interval_width"],
+                        "tail_bound": interval["tail_bound"],
+                    }
+                )
+                previous_lambda = recovered
+                previous_dual = dual_packet["dual"]
+            payload[outer_key][inner_key] = {
+                "reference_prime_limit": reference_prime_limit,
+                "target_order_parameter": target_order,
+                "rows": rows,
+            }
+    return payload
+
+
 def completed_defect_dirichlet_log_artanh_profile(prime_limits: list[int], s_values: list[float], max_terms: int = 8) -> dict[str, list[dict[str, object]]]:
     """Profile the closed-form and truncated artanh-series logs of the completed Dirichlet package."""
     payload: dict[str, list[dict[str, object]]] = {}
