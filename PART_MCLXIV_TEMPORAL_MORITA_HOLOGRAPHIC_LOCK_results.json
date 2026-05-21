@@ -1,0 +1,52 @@
+{
+  "part": "MCLXIV",
+  "theorem": "Temporal Morita holographic lock",
+  "temporal_shell": {
+    "q": 3,
+    "bell_line": [
+      6,
+      16,
+      27,
+      35
+    ],
+    "temporal_history_square": 9,
+    "spreads_through_bell_line": 9,
+    "spread_size": 10,
+    "context_size": 4,
+    "identity": "9 Bell-line spreads \u00d7 10 contexts \u00d7 4 rays = 360 line-spread incidences"
+  },
+  "extremal_shell": {
+    "alpha": "10",
+    "theta_G": "10",
+    "theta_Gbar": "4",
+    "omega": "4",
+    "chi_f": "4"
+  },
+  "morita_shell": {
+    "spread_kernel_dimension": 20,
+    "line_cokernel_dimension": 24,
+    "common_spine_dimension": 16,
+    "common_spine_formula": "k - s",
+    "common_spine_value": 16,
+    "obstruction_gap": 4
+  },
+  "holographic_shell": {
+    "S_holo": "20",
+    "nu_gap": "5/6",
+    "S_holo_over_nu_gap": "24",
+    "gap_multiplicity": 24
+  },
+  "claim_boundary": "finite exact bridge tying temporal Bell-line spreads, Lovasz-Hoffman extremality, the spread-line Morita operator, and the normalized-Laplacian holographic shell",
+  "checks": {
+    "bell_line_lies_in_q_squared_spreads": true,
+    "spread_size_equals_theta_and_alpha": true,
+    "context_size_equals_theta_bar_omega_chi_f": true,
+    "spread_kernel_equals_S_holo": true,
+    "line_cokernel_equals_gap_multiplicity": true,
+    "line_cokernel_equals_S_holo_over_nu_gap": true,
+    "common_spine_equals_k_minus_s": true,
+    "obstruction_gap_equals_context_size": true,
+    "incidence_counts_match_temporal_frame_shell": true
+  },
+  "n_verified": 9
+}
