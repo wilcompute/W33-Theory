@@ -1,0 +1,35 @@
+{
+  "part": "MCXCI",
+  "theorem": "Self-entangled emergence discrete-curvature inversion law",
+  "jump_packet": {
+    "delta_plus": 1568,
+    "delta_minus": 1504,
+    "sigma": 3072,
+    "kappa": 64,
+    "identity": "Sigma=3072, Kappa=64 from (1568,1504)"
+  },
+  "recovered_packets": {
+    "edge_shell": 32,
+    "seed": 24,
+    "monodromy": 18432,
+    "identity": "E=Kappa/2=32, S=Sigma/(2Kappa)=24, M=E*S^2=18432"
+  },
+  "finite_universality_surrogate": {
+    "statement": "the quantized jump pair alone determines router shell and self-entangled seed exactly",
+    "boundary": "finite discrete-curvature inversion law; not a continuum PDE inversion theorem"
+  },
+  "claim_boundary": "finite jump-pair inversion law for self-entanglement emergence packets",
+  "checks": {
+    "sigma_is_3072": true,
+    "kappa_is_64": true,
+    "kappa_is_twice_edge_shell": true,
+    "sigma_is_four_edge_seed": true,
+    "edge_shell_recovered_integral": true,
+    "seed_recovered_integral": true,
+    "seed_recovered_is_24": true,
+    "monodromy_reconstructed_from_recovered_packets": true,
+    "jump_pair_consistency_plus": true,
+    "jump_pair_consistency_minus": true
+  },
+  "n_verified": 10
+}
