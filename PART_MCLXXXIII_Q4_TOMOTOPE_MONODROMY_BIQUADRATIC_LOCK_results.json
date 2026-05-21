@@ -1,0 +1,41 @@
+{
+  "part": "MCLXXXIII",
+  "theorem": "Q4-tomotope monodromy biquadratic lock",
+  "q4_packet": {
+    "face_nodes": 24,
+    "edge_nodes": 32,
+    "incidences": 96,
+    "quotient_incidences": 48
+  },
+  "tomotope_packet": {
+    "automorphism_order": 96,
+    "flags": 192,
+    "monodromy_order": 18432,
+    "medial_incidences": 48
+  },
+  "locks": {
+    "A_times_F": 18432,
+    "2_times_I_squared": 18432,
+    "face_edge_face": 18432,
+    "quotient_times_flag_doubler": 18432,
+    "identity": "18432 = 96*192 = 2*96^2 = 24*32*24 = 48*384"
+  },
+  "finite_universality_surrogate": {
+    "statement": "monodromy is a rigid bilinear/biquadratic closure of Q4 incidence and tomotope symmetry packets",
+    "boundary": "finite combinatorial/symmetry lock; not a continuum field equation"
+  },
+  "claim_boundary": "finite monodromy-factorization law on Q4/tomotope packets",
+  "checks": {
+    "mclxxxii_invariants_present": true,
+    "automorphism_equals_q4_incidences": true,
+    "flags_are_double_incidences": true,
+    "monodromy_equals_automorphism_times_flags": true,
+    "monodromy_equals_two_times_incidence_square": true,
+    "monodromy_equals_face_edge_face_packet": true,
+    "quotient_incidences_equal_medial": true,
+    "monodromy_equals_quotient_times_flag_doubler": true,
+    "monodromy_over_automorphism_equals_flags": true,
+    "monodromy_over_flags_equals_automorphism": true
+  },
+  "n_verified": 10
+}
