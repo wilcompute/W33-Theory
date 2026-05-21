@@ -1,0 +1,33 @@
+{
+  "part": "MCLXXXVII",
+  "theorem": "Self-entangled emergence square lock",
+  "seed_packet": {
+    "directed_changes": 6,
+    "now_rays": 4,
+    "plaquette_seed": 24,
+    "identity": "24 = 6*4"
+  },
+  "emergent_router_packet": {
+    "plaquettes": 24,
+    "q4_edges": 32,
+    "monodromy": 18432,
+    "identity": "18432 = 24*32*24 = (6*4)^2*32"
+  },
+  "finite_universality_surrogate": {
+    "statement": "self-entangled temporal seed (6x4) emerges as a squared plaquette shell coupled through Q4 router edges",
+    "boundary": "finite combinatorial emergence lock; not a continuum field equation"
+  },
+  "claim_boundary": "finite self-entanglement-to-emergence factorization law",
+  "checks": {
+    "temporal_seed_is_6_times_4": true,
+    "plaquette_equals_temporal_seed": true,
+    "router_edges_are_32": true,
+    "monodromy_is_18432": true,
+    "emergence_square_lock": true,
+    "expanded_square_lock": true,
+    "router_centered_ratio": true,
+    "plaquette_centered_ratio": true,
+    "symmetric_plaquette_factors": true
+  },
+  "n_verified": 9
+}
