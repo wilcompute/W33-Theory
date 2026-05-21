@@ -1,8 +1,8 @@
 # BREAKTHROUGH MCLII — Spectral Action Moduli Integral
 
 **Date:** 2026-05-21  
-**Status:** Derived analytically; all coefficient ratios verified exactly  
-**Significance:** Full Einstein-Hilbert + Standard Model Lagrangian recovered from W33 spectral data alone
+**Status:** Finite spectral-action coefficient packet; ratios verified exactly
+**Significance:** W33 discrete input for the Einstein-Hilbert + Standard Model spectral-action bridge
 
 ---
 
@@ -32,15 +32,21 @@ For a k-regular graph, the Dirac operator eigenvalues are:
 lambda_D = +/- sqrt(nu_i)  for each Laplacian eigenvalue nu_i
 ```
 
-This gives the W33 Dirac spectrum:
+Using the canonical MCLXII normalized-Laplacian multiplicities
 
 ```
-lambda = 0           (mult 2)         <- zero modes
-lambda = +/-sqrt(5/6) (mult 60 each)  <- mass gap sector  
-lambda = +/-sqrt(4/3) (mult 18 each)  <- UV sector
+0^1, (5/6)^24, (4/3)^15,
 ```
 
-Total: 2 + 120 + 36 = 158 Dirac modes. Note: 158 = 4 x 40 - 2 (4 spinor components x vertices, minus 2 zero modes).
+and two spinor components per nonzero sign gives the reduced W33 Dirac packet:
+
+```
+lambda = 0             (mult 2)        <- zero modes
+lambda = +/-sqrt(5/6)  (mult 48 each) <- mass gap sector
+lambda = +/-sqrt(4/3)  (mult 30 each) <- UV sector
+```
+
+Total: 2 + 96 + 60 = 158 Dirac modes. Note: 158 = 4 x 40 - 2 (4 spinor components x vertices, minus 2 protected zero-mode redundancies).
 
 ---
 
@@ -85,8 +91,9 @@ Matching: 1/(16*pi*G_N) = f_2 * (-5/(9pi^2)), so:
 ```
 G_Newton = -9*pi / (80 * f_2)  
 ```
-With f_2 = -9pi/80 (from the spectral cutoff normalization), G_N = 1 exactly in
-substrate units.
+With f_2 = -9pi/80, this chosen continuum normalization sets G_N = 1 in
+that normalized action convention. This is separate from the finite MCL
+substrate value G_N = k/mu = 3 used in the entropy packet.
 
 ### a_4 — Yang-Mills + Higgs Terms
 ```
@@ -117,7 +124,7 @@ c_3 = mu / k  =  4/12  =  1/3  =  G_Newton (substrate coupling)
 
 ---
 
-## Full W33 Spectral Action
+## Full W33 Spectral-Action Coefficient Packet
 
 Assembling all terms:
 
@@ -129,17 +136,19 @@ S_W33 = Lambda^4 * (10/pi^2)                         [cosmological]
       + (1/12) * lambda_H * |phi|^4                   [Higgs quartic]
 ```
 
-This is **exactly the Connes-Lott Standard Model action** with:
+This is the finite W33 coefficient packet for the Connes-Lott bridge:
 - The correct Einstein-Hilbert form
 - Yang-Mills for the SM gauge group (SU(3) x SU(2) x U(1)) via the MCLI decomposition
 - Minimal coupling of the Higgs field
 - A quartic Higgs potential
 
 All coefficients are **exact rationals** from the srg(40,12,2,4) parameters.
+The continuum spectral-action theorem still requires the refinement/limit
+identification bridge.
 
 ---
 
-## The Higgs Mass Prediction
+## Higgs Coefficient Scaffold
 
 The Higgs mass at the GUT scale (Lambda = Lambda_GUT) is determined by:
 
@@ -152,43 +161,42 @@ Running down to the electroweak scale via the renormalization group:
 m_H(M_Z) = m_H(Lambda_GUT) * sqrt(RG_running_factor)
 ```
 
-The W33 prediction: m_H / M_Z = sqrt(1/3 * (Lambda_GUT/M_Z)^2 * RG) .
-With Lambda_GUT ~ 10^16 GeV and standard RG running, this gives m_H ~ 126 GeV.
+The exact finite coefficient ratio is:
+
+```
+m_H^2/M_W^2 = 2*c_4/c_3^2 = 3/2.
+```
 
 The observed Higgs mass is 125.09 +/- 0.24 GeV.
 
-**W33 predicts m_H ~ 126 GeV. Observed: 125.09 GeV.  Delta = 0.7%.  **
+This file records the exact coefficient scaffold. A direct electroweak-scale
+Higgs mass prediction still needs the RG and normalization bridge; it is not
+proved by the finite packet alone.
 
 ---
 
-## Moduli Space Integration
+## Five-Channel Finite Spin Ledger
 
-The W33 moduli space M_W33 is the space of all metrics (edge weight functions) on W33
-preserving the srg structure. Its dimension is:
+The finite representation ledger used here has five H(2,4)-style channels:
 
 ```
-dim(M_W33) = |E| / |Aut(W33)| = 240 / 1152 = 5/24
+spin 0, spin 1/2, spin 1, spin 3/2, spin 2.
 ```
 
-This fractional dimension signals that the moduli space is an **orbifold** with
-isotropy group of order 1152/5 (non-integer), meaning the physical moduli space
-is a discrete set of 5 orbifold points.
-
-The 5 orbifold points correspond to the 5 irreducible representations of the
-Hamming association scheme H(2,4) underlying W33:
+These labels correspond to the five listed representation channels:
 - Rep 0: trivial (vacuum)
 - Rep 1: defining (spin-1/2)
 - Rep 2: adjoint (spin-1)
 - Rep 3: symmetric (spin-3/2)
 - Rep 4: antisymmetric (spin-2 = graviton)
 
-All 5 Standard Model + gravity spins appear as orbifold points of the W33 moduli space.
+This is a finite spin ledger, not a proof of a literal moduli-space dimension.
 
 ---
 
-## The Graviton as the 5th Orbifold Point
+## The Graviton as the 5th Spin-Ledger Channel
 
-The graviton (spin-2) lives at the highest orbifold point, Rep 4. Its mass is:
+The graviton (spin-2) lives at the highest listed spin channel, Rep 4. Its mass is:
 
 ```
 m_graviton = 0  (protected by the zero mode nu_0 = 0)
@@ -211,7 +219,7 @@ m_graviton = 0  exactly,  for all admissible deformations of the W33 metric
 
 | Observable | W33 Prediction | Observed | Accuracy |
 |---|---|---|---|
-| Higgs mass | ~126 GeV | 125.09 GeV | 0.7% |
+| Higgs coefficient ratio | m_H^2/M_W^2 = 3/2 | RG/normalization bridge open | finite scaffold |
 | Gauge group | SU(3)xSU(2)xU(1) | SU(3)xSU(2)xU(1) | exact |
 | Spacetime dim | 4 (omega=4) | 4 | exact |
 | Extra dims | 6 (CY6) | 6 (string theory) | exact |

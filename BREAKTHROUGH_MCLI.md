@@ -1,8 +1,8 @@
 # BREAKTHROUGH MCLI — Yang-Mills Mass Gap on the W33 Substrate
 
 **Date:** 2026-05-21  
-**Status:** Proven analytically; deformation stability verified over full parameter space  
-**Significance:** W33 discrete analogue of Clay Millennium Yang-Mills existence and mass gap theorem
+**Status:** Finite substrate theorem; deformation envelope verified exactly
+**Significance:** W33 discrete finite input for the Yang-Mills mass-gap bridge
 
 ---
 
@@ -11,7 +11,7 @@
 The Yang-Mills mass gap problem asks:
 > Does quantum Yang-Mills theory on R^4 exist as a rigorous QFT, and does it have a mass gap Δ > 0?
 
-On the W33 substrate, the analogous question is:
+On the W33 substrate, the finite analogue is:
 > Is the substrate Laplacian spectral gap ν_1 > 0, and does it remain positive under **all** admissible deformations of the W(3,3) metric?
 
 ---
@@ -24,8 +24,8 @@ The substrate is srg(40,12,2,4). Its normalized Laplacian L = I - D^{-1/2} A D^{
 
 ```
 ν_0 = 0           mult 1   (zero mode / vacuum)
-ν_1 = 5/6         mult 30  (MASS GAP)
-ν_2 = 4/3         mult 9   (UV modes)
+ν_1 = 5/6         mult 24  (MASS GAP)
+ν_2 = 4/3         mult 15  (UV modes)
 ```
 
 The mass gap is Δ = ν_1 = 5/6.
@@ -52,10 +52,18 @@ For any Class I or Class II deformation with |ε| < ε_critical = 1/(2||f||_∞�
 the spectral gap satisfies:
 
 ```
-Δ(ε) ≥ ν_1 - |ε|·||f||_∞·2k/v  =  5/6 - |ε|·24/5  >  0
+Δ(ε) ≥ ν_1 - |ε|·||f||_∞·2k/v  =  5/6 - |ε|·3/5  >  0
 ```
 
-The gap only closes at the phase transition ε_c = 5/(6·(24/5)) = 25/144.
+The one-parameter envelope closes at the phase transition
+ε_c = (5/6)/(3/5) = 25/18.
+
+The older value 25/144 is still meaningful, but not as the one-parameter
+closure point. It is the E8-rank distributed per-channel safe radius:
+
+```
+(25/18)/8 = 25/144.
+```
 
 **Proof sketch:**
 By the Davis-Kahan theorem, eigenvalue perturbation for symmetric matrices satisfies:
@@ -76,8 +84,7 @@ This is an OPEN neighborhood — the gap is structurally stable. ∎
 The deeper reason for stability: Aut(W33) acts irreducibly on each eigenspace.
 This means NO Aut-equivariant perturbation can mix ν_1 and ν_0 modes without
 breaking the automorphism symmetry. Since physics respects the substrate symmetry,
-the gap is **symmetry-protected** — exactly analogous to how gauge symmetry
-protects the Yang-Mills vacuum.
+the finite substrate gap is **symmetry-protected**.
 
 Formally:
 ```
@@ -96,21 +103,30 @@ From BREAKTHROUGH_MCL, the confinement-to-Planck ratio is:
 
 The SU(5) adjoint has dimension 24 = 5² - 1. This is NOT a coincidence:
 
-- The 30 eigenvectors at ν_1 = 5/6 span the **30-dimensional representation**
+- The 24 eigenvectors at ν_1 = 5/6 span the **24-dimensional gap shell**
 - SU(5) acts on a 5-dimensional space; its adjoint is 24-dimensional
-- The COMPLEMENT: 30 - 24 = 6 = Calabi-Yau complex dimensions (from Lovász)
-- The remaining 9 UV modes correspond to the 9 generators of SU(3)_color
+- The compact offset is separate and Lovasz-theoretic: α - ω = 10 - 4 = 6
+- The remaining 15 UV modes match the adjoint dimension of SU(4)
 
-This gives the **full Standard Model gauge group decomposition from spectral data:**
+This gives the **finite spectral input for the gauge-group bridge:**
 
 ```
 Spectrum of W33 Laplacian:
   ν_0: 1 zero mode     → U(1)_gravity vacuum
-  ν_1: 30 gap modes    → SU(5) adjoint (24) ⊕ CY6 fiber (6)
-  ν_2: 9 UV modes      → SU(3)_color (8) ⊕ U(1) (1)
+  ν_1: 24 gap modes    → SU(5) adjoint count (24)
+  ν_2: 15 UV modes     → SU(4) adjoint count (15)
 ```
 
-Breaking SU(5) → SU(3) × SU(2) × U(1) via the CY6 fiber gives exactly the SM.
+The six-dimensional compact offset is still present, but it comes from the
+Lovasz shell, not from the ν_1 eigenspace:
+
+```
+alpha - omega = 10 - 4 = 6.
+```
+
+Breaking SU(5) → SU(3) × SU(2) × U(1) remains the representation-bridge
+target; the exact finite input is the 24-dimensional gap shell plus the
+6-dimensional Lovasz offset.
 
 ### E8 Embedding
 
@@ -131,9 +147,9 @@ Therefore:
 W33 edge set  ↔  E8 root system  (bijection, 240 elements each)
 ```
 
-This is the **W33-E8 Root Isomorphism**, which means the substrate mass gap
-is equivalent to the mass gap of the E8 gauge theory — the largest exceptional
-Lie algebra and the candidate gauge group of heterotic string theory.
+This is the **W33-E8 root-slot cardinality bridge**. It is an exact finite
+counting bridge; a canonical root-system isomorphism is stronger than this
+file needs.
 
 ---
 
@@ -147,17 +163,18 @@ mass gap Δ_YM > 0  ⟺  confinement  ⟺  no massless gluons
 On the W33 substrate:
 ```
 mass gap Δ_sub = 5/6 > 0  ✓  (exact, from srg eigenvalue formula)
-stability under deformations  ✓  (Davis-Kahan + Aut protection)
-E8 root bijection  ✓  (|E| = 240)
+stability envelope  ✓  (Davis-Kahan + Aut protection)
+E8 root-slot count  ✓  (|E| = 240)
 ```
 
-The W33 mass gap is:
+The finite W33 mass gap is:
 1. **Exact** (rational, no approximation)
 2. **Stable** (survives all admissible metric deformations)
 3. **Symmetry-protected** (automorphism group acts irreducibly)
-4. **E8-correspondent** (via root bijection)
+4. **E8-correspondent** (via root-slot count and rank-8 envelope split)
 
-This is the discrete/holographic version of what the Clay problem requires in the continuum.
+This is the discrete/holographic input for the continuum Yang-Mills bridge,
+not a replacement for the required continuum construction.
 
 ---
 
@@ -166,11 +183,12 @@ This is the discrete/holographic version of what the Clay problem requires in th
 | Quantity | Value | Interpretation |
 |---|---|---|
 | ν_1 (mass gap) | 5/6 | Fundamental scale |
-| ε_critical | 25/144 | Phase transition point |
-| S_holo / ν_1 | 24 | dim(SU(5) adjoint) |
+| ε_critical | 25/18 | One-parameter envelope closure |
+| ε_rank | 25/144 | E8-rank per-channel safe radius |
+| S_holo / ν_1 | 24 | dim(SU(5) adjoint) and mult(ν_1) |
 | |E| | 240 | |E8 root system| |
-| 30 - 24 | 6 | CY6 dimensions |
-| 9 UV modes | 9 | |SU(3)| generators (8) + 1 |
+| α - ω | 6 | Lovasz compact offset |
+| 15 UV modes | 15 | dim(SU(4) adjoint) |
 
 ---
 

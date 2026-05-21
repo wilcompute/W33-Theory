@@ -1,17 +1,15 @@
 """BREAKTHROUGH_MCLII: Spectral Action Moduli Integral
 
-Derives the full Einstein-Hilbert + Standard Model Lagrangian
-from W33 spectral data. Computes:
+Packages the finite W33 spectral-action coefficient packet. Computes:
 1. W33 Dirac spectrum (from Laplacian eigenvalues)
 2. Heat kernel / spectral action coefficients a_0, a_2, a_4
-3. Higgs mass prediction from spectral Yukawa coupling
-4. Moduli space orbifold structure (5 physical points)
+3. Tree-level Higgs ratio scaffold from spectral coefficients
+4. Five-channel finite spin ledger
 5. Graviton masslessness protection theorem
 """
 
 import numpy as np
 from fractions import Fraction
-import sympy as sp
 
 # ─── W(3,3) Parameters ──────────────────────────────────────────────────────
 v, k, lam, mu = 40, 12, 2, 4
@@ -26,20 +24,25 @@ print("=" * 65)
 
 # ─── Laplacian and Dirac Spectra ──────────────────────────────────────────
 nu_eigs = [Fraction(0), Fraction(5,6), Fraction(4,3)]
-nu_mults = [1, 30, 9]
+nu_mults = [1, 24, 15]
 
-# Dirac: lambda_D = +/- sqrt(nu), with 4 spinor components
+# Dirac: lambda_D = +/- sqrt(nu), with four total spinor components.
+# For nonzero eigenvalues this is two components per sign.
 spinor_dim = 4
-dirac_zero_mult = spinor_dim * nu_mults[0] - 2   # 2 zero modes
-dirac_gap_mult  = spinor_dim * nu_mults[1] * 2    # +/- sqrt(5/6)
-dirac_uv_mult   = spinor_dim * nu_mults[2] * 2    # +/- sqrt(4/3)
-total_dirac = dirac_zero_mult + dirac_gap_mult + dirac_uv_mult
+spinor_per_sign = spinor_dim // 2
+dirac_zero_mult = 2
+dirac_gap_mult_per_sign = spinor_per_sign * nu_mults[1]  # 48 for each sign
+dirac_uv_mult_per_sign = spinor_per_sign * nu_mults[2]   # 30 for each sign
+total_dirac = dirac_zero_mult + 2 * dirac_gap_mult_per_sign + 2 * dirac_uv_mult_per_sign
 
 print(f"\n── DIRAC SPECTRUM")
 print(f"  lambda = 0:          mult {dirac_zero_mult}  (graviton zero modes)")
-print(f"  lambda = ±sqrt(5/6): mult {dirac_gap_mult} each (mass gap sector)")
-print(f"  lambda = ±sqrt(4/3): mult {dirac_uv_mult} each  (UV sector)")
+print(f"  lambda = ±sqrt(5/6): mult {dirac_gap_mult_per_sign} each (mass gap sector)")
+print(f"  lambda = ±sqrt(4/3): mult {dirac_uv_mult_per_sign} each  (UV sector)")
 print(f"  Total Dirac modes: {total_dirac} (expected {4*v - 2} = {4*v-2})")
+assert nu_mults == [1, 24, 15]
+assert dirac_gap_mult_per_sign == 48
+assert dirac_uv_mult_per_sign == 30
 assert total_dirac == 4*v - 2
 print(f"  ✓ Total Dirac modes = 4v - 2 = {4*v-2}")
 
@@ -80,12 +83,10 @@ print(f"        + {c_higgs} * lambda_H |phi|^4  [Higgs quartic]")
 print(f"  All coefficients exact rationals from srg parameters  ✓")
 
 # ─── Higgs Mass Prediction ───────────────────────────────────────────────────
-print(f"\n── HIGGS MASS PREDICTION")
+print(f"\n── HIGGS MASS COEFFICIENT SCAFFOLD")
 Lambda_GUT = 2e16   # GeV
 M_Z        = 91.2   # GeV
-# Connes-Lott relation: m_H^2 = (c_hkin/c_higgs) * M_Z^2 * (Lambda_GUT/Lambda_EW)^2 * RG
-# In NCG: the tree-level ratio m_H/M_W is fixed by spectral data
-# m_H^2 / M_W^2 = 2 * c_higgs / c_hkin^2  (from Connes spectral relation)
+# This finite tree-level ratio is not yet a full RG prediction at M_Z.
 m_H_ratio_sq = 2 * float(c_higgs) / float(c_hkin)**2
 m_W_GeV = 80.4  # GeV
 m_H_pred = m_W_GeV * np.sqrt(m_H_ratio_sq)
@@ -95,13 +96,12 @@ print(f"  = {m_H_ratio_sq:.4f}")
 print(f"  m_W = {m_W_GeV} GeV => m_H = {m_W_GeV} * sqrt({m_H_ratio_sq:.4f}) = {m_H_pred:.2f} GeV")
 print(f"  Observed m_H = 125.09 +/- 0.24 GeV")
 print(f"  Discrepancy: {abs(m_H_pred - 125.09):.2f} GeV = {abs(m_H_pred-125.09)/125.09*100:.1f}%")
-if abs(m_H_pred - 125.09) < 5.0:
-    print(f"  ✓ W33 Higgs mass prediction within 5 GeV of observed value")
+print("  Boundary: the exact finite coefficient scaffold still needs an RG/normalization bridge.")
 
-# ─── Moduli Space Orbifold ───────────────────────────────────────────────────
-print(f"\n── MODULI SPACE ORBIFOLD STRUCTURE")
-# H(2,4) Hamming scheme has 5 irreducible representations
-orbifold_points = 5
+# ─── Five-channel spin ledger ────────────────────────────────────────────────
+print(f"\n── FIVE-CHANNEL FINITE SPIN LEDGER")
+# H(2,4) Hamming scheme has 5 irreducible representations.
+spin_channels = 5
 ham_irreds = [
     (0, "trivial",        "vacuum",     "spin-0"),
     (1, "defining",       "spin-1/2",   "fermions"),
@@ -109,11 +109,11 @@ ham_irreds = [
     (3, "symmetric",      "spin-3/2",   "gravitino"),
     (4, "antisymmetric",  "spin-2",     "graviton"),
 ]
-print(f"  W33 moduli orbifold has {orbifold_points} points (H(2,4) irreps):")
+print(f"  W33 finite spin ledger has {spin_channels} channels (H(2,4) labels):")
 for idx, rep, spin, particle in ham_irreds:
     print(f"    Point {idx}: {rep:14s}  {spin:10s}  {particle}")
 print(f"  All spins 0, 1/2, 1, 3/2, 2 present  ✓")
-print(f"  Gravity + SM particles from ONE moduli space  ✓")
+print(f"  Boundary: this is a finite representation ledger, not a moduli-dimension proof.")
 
 # ─── Graviton Masslessness ────────────────────────────────────────────────────
 print(f"\n── GRAVITON MASSLESSNESS")
@@ -142,4 +142,5 @@ for name, val, units in coeffs:
 print()
 print("  ✓ All coefficients are exact rationals from srg(40,12,2,4)")
 print("  ✓ No free parameters")
-print("  ✓ Standard Model + Gravity recovered from substrate alone")
+print("  ✓ Finite spectral-action coefficient packet assembled")
+print("  Boundary: continuum SM + gravity recovery remains the bridge theorem.")
