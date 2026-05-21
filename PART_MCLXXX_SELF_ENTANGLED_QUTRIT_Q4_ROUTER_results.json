@@ -1,0 +1,370 @@
+{
+  "part": "MCLXXX",
+  "theorem": "Self-entangled qutrit Q4 hypercube router law",
+  "source_alignment": {
+    "across_the_board_reading": "4x4 toroidal knight graph is the Q4 hypercube graph",
+    "network_theory_reading": "Q4 vertices are 4-bit strings; edges flip exactly one bit",
+    "claim_boundary": "external references motivate the graph identity; the verifier below proves the exact finite instance offline"
+  },
+  "self_entangled_qutrit_input": {
+    "q": 3,
+    "bell_state": "|Omega> = (|00> + |11> + |22>)/sqrt(3)",
+    "history_cells": 9,
+    "now_context_rays": 4,
+    "erased_single_qutrit_nonidentity_paulis": 8,
+    "w33_projective_rays": 40,
+    "w33_edges": 240,
+    "spread_contexts": 10
+  },
+  "context_square_board": {
+    "board": "Bell-now context square B x B",
+    "side_length": 4,
+    "vertices": 16,
+    "toroidal_boundary": true,
+    "interpretation": "binary control/routing square around one four-ray ternary now-context"
+  },
+  "q4_router": {
+    "vertices": 16,
+    "degree": 4,
+    "edges": 32,
+    "diameter": 4,
+    "parity_partition": {
+      "even": 8,
+      "odd": 8
+    },
+    "spectrum": {
+      "4": 1,
+      "2": 4,
+      "0": 6,
+      "-2": 4,
+      "-4": 1
+    },
+    "square_faces": 24,
+    "dimension_edge_counts": {
+      "0": 8,
+      "1": 8,
+      "2": 8,
+      "3": 8
+    },
+    "dimension_cut_identity": "each Q4 bit dimension has 8 edges, matching the 8 erased nonidentity single-qutrit Paulis"
+  },
+  "knight_to_q4_isomorphism": {
+    "mapping": {
+      "(0, 0)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(0, 1)": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "(0, 2)": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "(0, 3)": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "(1, 0)": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "(1, 1)": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "(1, 2)": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "(1, 3)": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "(2, 0)": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "(2, 1)": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "(2, 2)": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "(2, 3)": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "(3, 0)": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "(3, 1)": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "(3, 2)": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "(3, 3)": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "mapped_edges_equal_q4_edges": true
+  },
+  "gray_knight_clock": {
+    "knight_tour": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "q4_tour": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flip_sequence": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0
+    ],
+    "flip_counts": {
+      "0": 2,
+      "1": 8,
+      "2": 4,
+      "3": 2
+    },
+    "statement": "the closed toroidal knight tour is a Gray-code Hamilton cycle on Q4"
+  },
+  "ternary_binary_bridge": {
+    "payload": "self-entangled qutrit / F3^4 W33 Pauli geometry",
+    "router": "binary Q4 hypercube network on the 4x4 toroidal now-context square",
+    "key_identity": "4 now rays -> 4 Q4 dimensions; 8 erased Pauli directions -> 8 edges per dimension",
+    "boundary": "Q4 is a finite scheduler/control network for the ternary context, not a replacement for W33"
+  },
+  "checks": {
+    "bell_now_context_has_four_rays": true,
+    "context_square_is_4_by_4": true,
+    "toroidal_knight_graph_has_16_vertices": true,
+    "toroidal_knight_graph_is_4_regular": true,
+    "toroidal_knight_graph_has_32_edges": true,
+    "q4_has_16_vertices_and_32_edges": true,
+    "explicit_labeling_is_bijective": true,
+    "mapped_knight_edges_are_q4_edges": true,
+    "every_knight_edge_is_one_bit_flip": true,
+    "each_q4_dimension_has_eight_edges": true,
+    "dimension_cut_matches_erased_single_qutrit_paulis": true,
+    "q4_network_diameter_matches_now_context_size": true,
+    "q4_parity_bipartition_is_balanced": true,
+    "q4_spectrum_is_hamming_spectrum": true,
+    "q4_square_faces_match_w33_r_multiplicity": true,
+    "knight_tour_is_gray_hamilton_cycle": true,
+    "tour_flip_sequence_is_repeated_clock": true,
+    "w33_payload_remains_ternary_not_q4": true
+  },
+  "n_verified": 18
+}
