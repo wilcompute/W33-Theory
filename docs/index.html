@@ -13150,12 +13150,25 @@
         <p>MCLXX adds the next continuation rule. The base beat
           <code>B=3240=9&middot;360=40&middot;81</code> synchronizes the current chain, but it leaves one exact
           residue in the heptad channel: <code>B mod 7 = 6</code>. So <code>&Phi;<sub>6</sub>=7</code> is the first
-          unsynchronized prime mode.</p>
+          unsynchronized prime mode.
+        </p>
         <p>The minimal repair is the superbeat
           <code>H=lcm(3240,7)=22680=7&middot;3240</code>. Duality is preserved in scaled form:
           <code>H/360=63=7&middot;9</code>, <code>H/81=280=7&middot;40</code>, equivalently
-          <code>H=(7&middot;9)&middot;360=(7&middot;40)&middot;81</code>. So after full closure at <code>B</code>, the first
-          unsynchronized prime residue determines the next finite synchronization period.</p>
+          <code>H=(7&middot;9)&middot;360=(7&middot;40)&middot;81</code>. So after full closure at <code>B</code>, the
+          first
+          unsynchronized prime residue determines the next finite synchronization period.
+        </p>
+
+        <h4>Hendecad superbeat trigger law</h4>
+        <p>MCLXXI applies the same trigger rule one step further. Starting from the heptad superbeat
+          <code>H=22680</code>, take the structural prime channel <code>11=k-1</code> (with <code>k=12</code>).
+          The residue is nonzero: <code>H mod 11 = 9</code>, so 11 is the next unsynchronized structural prime.</p>
+        <p>The minimal closure is
+          <code>J=lcm(22680,11)=249480=11&middot;22680</code>. Scaled duality is preserved exactly:
+          <code>J/360=693=11&middot;63</code>, <code>J/81=3080=11&middot;280</code>, equivalently
+          <code>J=(11&middot;7&middot;9)&middot;360=(11&middot;7&middot;40)&middot;81</code>. So the continuation law remains:
+          at each stage, the first unsynchronized structural prime determines the next minimal synchronization period.</p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
