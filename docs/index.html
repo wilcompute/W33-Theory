@@ -13392,11 +13392,28 @@
         <h4>Self-entangled emergence roundtrip fixed-point lock</h4>
         <p>MCLXXXIX closes the loop: forward generation and inverse recovery compose to identity on the seed packet.
           Starting from <code>(D,R)=(6,4)</code> one gets <code>S=24</code>, then <code>M=18432</code>, then recovers
-          <code>S'=24</code> and <code>D'=6</code> exactly.</p>
+          <code>S'=24</code> and <code>D'=6</code> exactly.
+        </p>
         <p>The gain reciprocity is exact too: forward gain
           <code>g_f=M/S^2=32</code>, inverse gain <code>g_i=S^2/M=1/32</code>, so
-          <code>g_f&middot;g_i=1</code>. In this finite packet, self-entanglement and emergence form an exact solved loop,
-          not only a one-way map.</p>
+          <code>g_f&middot;g_i=1</code>. In this finite packet, self-entanglement and emergence form an exact solved
+          loop,
+          not only a one-way map.
+        </p>
+
+        <h4>Self-entangled emergence quantized increment law</h4>
+        <p>MCXC adds the discrete dynamics of that solved loop. With baseline
+          <code>M=32&middot;24<sup>2</sup>=18432</code>, a unit seed step <code>24&rarr;25</code> gives the exact
+          emergence
+          jump <code>&Delta;<sub>+</sub>=32(2&middot;24+1)=1568</code>, while <code>24&rarr;23</code> gives
+          <code>&Delta;<sub>-</sub>=32(2&middot;24-1)=1504</code>.
+        </p>
+        <p>So <code>M+&Delta;<sub>+</sub>=32&middot;25<sup>2</sup></code> and
+          <code>M-&Delta;<sub>-</sub>=32&middot;23<sup>2</sup></code> exactly. The mean jump is
+          <code>1536=48&middot;32</code> and asymmetry is <code>64=2&middot;32</code>. In this finite model, unit
+          self-entanglement
+          updates map to exact quantized emergence quanta and invert cleanly back.
+        </p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
