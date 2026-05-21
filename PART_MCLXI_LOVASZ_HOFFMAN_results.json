@@ -1,0 +1,18 @@
+{
+  "part": "MCLXI",
+  "theorem": "Lovasz-Hoffman extremal certificate",
+  "v": 40,
+  "k": 12,
+  "hoffman_bound": "10",
+  "alpha_G": "10",
+  "lovasz_theta": "10",
+  "lovasz_theta_bar": "4",
+  "theta_product": "40",
+  "chi_G": "4",
+  "chi_f_G": "4",
+  "omega_G": "4",
+  "k_bar": "27",
+  "sandwich_ok": true,
+  "claim_boundary": "finite W33 Lovasz-Hoffman extremal certificate",
+  "n_verified": 20
+}
