@@ -1,0 +1,63 @@
+{
+  "part": "MCLXXVIII",
+  "theorem": "Superbeat prime-horizon sieve law",
+  "input_clock": {
+    "A_star": 360,
+    "cloud_total": 81,
+    "base_beat": 3240,
+    "final_hentriaconta_Q": 21660532934040
+  },
+  "closed_prime_sieve": {
+    "trigger_primes": [
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31
+    ],
+    "closed_prime_product": 6685349671,
+    "primorial_31": 200560490130,
+    "substrate_lift": 108,
+    "identity": "21660532934040 = 108 * 31# = (q^2*k) * 31#",
+    "Q_over_base_beat": 6685349671,
+    "Q_over_A_star": 60168147039,
+    "Q_over_cloud": 267413986840
+  },
+  "next_horizon": {
+    "prime": 37,
+    "origin": {
+      "v_minus_q": 37,
+      "gaussian_matter_pole": "|6+i|^2 = 37",
+      "first_prime_after_31": 37
+    },
+    "Q_mod_37": 4,
+    "R": 801439718559480,
+    "identity": "801439718559480 = lcm(Q,37) = 37*Q = 108*37#",
+    "R_over_A_star": 2226221440443,
+    "R_over_cloud": 9894317513080
+  },
+  "finite_universality_surrogate": {
+    "sieve_statement": "the MCLXX-MCLXXVII tower is the q^2*k lift of the primorial closure through 31",
+    "horizon_statement": "the next open structural channel is 37=v-q=|6+i|^2, so the next minimal closure is 37*Q",
+    "boundary": "finite arithmetic synchronization/sieve law; not a continuum dynamics or formal TM-universality proof"
+  },
+  "claim_boundary": "finite superbeat-prime sieve over W33 clock packets",
+  "checks": {
+    "base_beat_is_action_cloud_lcm": true,
+    "closed_prime_product_matches_final_over_base_beat": true,
+    "final_q_closes_all_trigger_primes": true,
+    "prior_periods_close_prefix_primes": true,
+    "final_q_equals_108_times_31_primorial": true,
+    "substrate_lift_is_q_squared_times_k": true,
+    "scaled_duality_survives_horizon": true,
+    "next_prime_is_37_structural": true,
+    "final_q_does_not_close_37": true,
+    "horizon_r_is_minimal_37_closure": true,
+    "horizon_r_equals_108_times_37_primorial": true,
+    "horizon_scaled_duality": true
+  },
+  "n_verified": 12
+}
