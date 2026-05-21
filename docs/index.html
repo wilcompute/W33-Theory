@@ -12891,43 +12891,51 @@
         <p>The characteristic roots of those order-two recurrence fits split into two different finite phases. The
           entropy recurrence has negative discriminant and roots
           <code>0.8789625265378973 ± 0.14301642199297537i</code>, both with modulus
-          <code>0.8905216561193539</code>, so it is a damped complex-conjugate memory on the sampled ladder.</p>
+          <code>0.8905216561193539</code>, so it is a damped complex-conjugate memory on the sampled ladder.
+        </p>
         <p>The concentration recurrence has positive discriminant and real roots <code>1.11886943338041</code> and
           <code>0.7005504370009087</code>. Thus MCXXX separates the recurrence layer into a damped oscillatory entropy
           phase and a real split concentration phase, still as a finite sampled classification rather than an
-          asymptotic periodicity claim.</p>
+          asymptotic periodicity claim.
+        </p>
 
         <h4>Barycentric gap-handoff cascade</h4>
         <p>Ranking the five barycentric gaps on the same sampled ladder reveals a finite handoff hidden under the
           resonance. The interior-to-softening gap remains primary throughout, but the secondary gap sequence is
-          <code>wall, wall, wall, softening-to-order, softening-to-order, softening-to-order</code>.</p>
+          <code>wall, wall, wall, softening-to-order, softening-to-order, softening-to-order</code>.
+        </p>
         <p>Linearly interpolating adjacent sampled differences gives a softening-to-order/wall crossing at
           <code>s = 1.7384967374464677</code>, so the first sampled point after that handoff is the same
           <code>s = 2.0</code> resonance where entropy peaks and concentration bottoms out. The wall gap then drops
-          another rank when the order-to-Hessian gap overtakes it near <code>s = 2.279430142026481</code>.</p>
+          another rank when the order-to-Hessian gap overtakes it near <code>s = 2.279430142026481</code>.
+        </p>
         <p>The full-ladder wall-gap drop is <code>0.38305552720929903</code>. Its net transfer is balanced by the
           four non-wall gap gains, with shares <code>0.10934508776073451</code>,
           <code>0.5666305790962431</code>, <code>0.27876468636755825</code>, and
           <code>0.045259646775464096</code>. Thus the dominant recipient is the softening-to-order gap, which receives
-          a strict majority of the finite wall transfer.</p>
+          a strict majority of the finite wall transfer.
+        </p>
 
         <h4>Barycentric gap-handoff cutoff robustness</h4>
         <p>The same rank-cascade survives when the prime cutoff increases through <code>10<sup>3</sup></code>,
           <code>10<sup>4</sup></code>, and <code>10<sup>5</sup></code>. The shared resonance stays pinned at
           <code>s = 2.0</code>, the secondary gap sequence remains
           <code>wall, wall, wall, softening-to-order, softening-to-order, softening-to-order</code>, and the dominant
-          wall-mass recipient is always <code>softening-to-order</code>.</p>
+          wall-mass recipient is always <code>softening-to-order</code>.
+        </p>
         <p>Numerically, the reference wall-gap drop at <code>10<sup>5</sup></code> is
           <code>0.38305552720929903</code>, and the largest deviation along the cutoff ladder stays below
           <code>10<sup>-9</sup></code> for the wall-gap drop and below <code>10<sup>-5</sup></code> for the secondary
-          crossing location. So the gap-handoff cascade is cutoff-robust, not a one-off cutoff artifact (MCXXXII).</p>
+          crossing location. So the gap-handoff cascade is cutoff-robust, not a one-off cutoff artifact (MCXXXII).
+        </p>
 
         <h4>Barycentric gap-handoff directional convergence signature</h4>
         <p>The cutoff profile also carries a directional pattern: the wall-gap drop and secondary crossing are
           nondecreasing across <code>10<sup>3</sup>→10<sup>4</sup>→10<sup>5</sup></code>, while the
           order-Hessian/wall crossing and softening-to-order transfer share are nonincreasing. Companion shares
           (<code>interior-to-softening</code> and <code>order-to-Hessian</code>) increase, while
-          <code>Hessian-to-third</code> decreases.</p>
+          <code>Hessian-to-third</code> decreases.
+        </p>
         <p>So the same finite ladder now has not only robustness (MCXXXII) but an ordered convergence signature
           toward the reference packet (MCXXXIII).</p>
 
@@ -12936,76 +12944,91 @@
           MCXLI locks their shared executable scale: the corrected Yang-Mills p=2 substrate floor is
           <code>&Delta;<sub>sub</sub> = 1/12</code>, matching the Navier-Stokes gap. The enstrophy decay rate is
           <code>2&Delta;<sub>sub</sub> = 1/6</code>, and the vortex barrier is
-          <code>&Delta;<sub>sub</sub>/2 = 1/24</code>.</p>
+          <code>&Delta;<sub>sub</sub>/2 = 1/24</code>.
+        </p>
         <p>The heat-kernel branch has <code>&lambda;<sub>2</sub> = &Theta; = 10</code>, so
           <code>&lambda;<sub>2</sub> &middot; 2&Delta;<sub>sub</sub> = 10/6 = 5/3</code>, exactly matching
           <code>&Delta;<sub>YM</sub>/q = 5/3</code>. The same floor integrally rescales the heat residual amplitudes:
-          <code>360/12 = 30</code>, <code>240/12 = 20</code>, and <code>10560/12 = 880</code>.</p>
+          <code>360/12 = 30</code>, <code>240/12 = 20</code>, and <code>10560/12 = 880</code>.
+        </p>
 
         <h4>Horizon parity floor duality</h4>
         <p>The same corrected floor also appears in the older horizon parity packet. The horizon code has
           <code>N = 72</code>, <code>K = 66</code>, and <code>R = 6 = q!</code>, hence rate
           <code>66/72 = 11/12</code> and redundancy <code>6/72 = 1/12</code>. Thus
-          <code>rate + &Delta;<sub>sub</sub> = 1</code>.</p>
+          <code>rate + &Delta;<sub>sub</sub> = 1</code>.
+        </p>
         <p>The chiral horizon discriminant is <code>72<sup>2</sup> &middot; 6 = 31104</code>; dividing by
           <code>72<sup>3</sup></code> gives <code>1/12</code> again. So MCXLII identifies the finite duality
           <code>&Delta;<sub>sub</sub> = 6/72 = (72<sup>2</sup>&middot;6)/72<sup>3</sup> = |&zeta;(-1)|</code>,
-          still as an exact substrate arithmetic statement rather than a continuum proof.</p>
+          still as an exact substrate arithmetic statement rather than a continuum proof.
+        </p>
 
         <h4>Green-kernel floor reciprocity</h4>
         <p>The same floor is also visible in the W33 adjacency Green kernel. For the SRG(40,12,2,4) adjacency
           matrix,
           <code>A<sup>-1</sup> = I/4 + A/8 - J/24 = (6I + 3A - J)/24</code>. Its three entry values are
           <code>5/24</code> on the diagonal, <code>1/12</code> on adjacent pairs, and <code>-1/24</code> on
-          nonedges.</p>
+          nonedges.
+        </p>
         <p>Thus MCXLIII identifies <code>&Delta;<sub>sub</sub> = 1/12</code> as both the adjacent Green entry and
           the row sum:
           <code>5/24 + 12&middot;(1/12) + 27&middot;(-1/24) = 1/12</code>. The nonedge entry is exactly
           <code>-&Delta;<sub>sub</sub>/2</code>, while the diagonal entry is
-          <code>(5/2)&Delta;<sub>sub</sub></code>.</p>
+          <code>(5/2)&Delta;<sub>sub</sub></code>.
+        </p>
 
         <h4>Green moment condition ladder</h4>
         <p>The global Green moments then collapse to a small integer ladder after floor scaling:
           <code>sum(A<sup>-1</sup>) = 10/3 = 40&Delta;<sub>sub</sub></code>,
           <code>tr(A<sup>-1</sup>) = 25/3 = 100&Delta;<sub>sub</sub></code>, and
           <code>||A<sup>-1</sup>||<sub>F</sub><sup>2</sup> = 125/18 =
-            1000&Delta;<sub>sub</sub><sup>2</sup></code>.</p>
+            1000&Delta;<sub>sub</sub><sup>2</sup></code>.
+        </p>
         <p>This same floor also fixes the finite conditioning packet:
           <code>||A||<sub>F</sub><sup>2</sup> = 480 = 40/&Delta;<sub>sub</sub></code>,
           <code>cond<sub>2</sub>(A) = 6 = 1/(2&Delta;<sub>sub</sub>)</code>, and
           <code>3&middot;cond<sub>F</sub>(A)<sup>2</sup> = 10000 =
-            (tr(A<sup>-1</sup>)/&Delta;<sub>sub</sub>)<sup>2</sup></code> (MCXLIV).</p>
+            (tr(A<sup>-1</sup>)/&Delta;<sub>sub</sub>)<sup>2</sup></code> (MCXLIV).
+        </p>
 
         <h4>Walk inverse shell normalization</h4>
         <p>Normalizing by the random-walk transition matrix <code>P = A/12</code> removes the floor denominator:
           <code>P<sup>-1</sup> = 12A<sup>-1</sup></code> and
           <code>2P<sup>-1</sup> = 6I + 3A - J</code>. The shell values become
-          <code>5/2</code> on the diagonal, <code>1</code> on adjacent pairs, and <code>-1/2</code> on nonedges.</p>
+          <code>5/2</code> on the diagonal, <code>1</code> on adjacent pairs, and <code>-1/2</code> on nonedges.
+        </p>
         <p>The row identity is <code>5/2 + 12&middot;1 + 27&middot;(-1/2) = 1</code>, so
           <code>&Delta;<sub>sub</sub> = (P<sup>-1</sup>)<sub>adj</sub>/12</code>. The MCXLIV ladder is now raw:
           <code>sum(P<sup>-1</sup>) = 40</code>, <code>tr(P<sup>-1</sup>) = 100</code>, and
-          <code>||P<sup>-1</sup>||<sub>F</sub><sup>2</sup> = 1000</code> (MCXLV).</p>
+          <code>||P<sup>-1</sup>||<sub>F</sub><sup>2</sup> = 1000</code> (MCXLV).
+        </p>
 
         <h4>Poisson-Kemeny Green kernel</h4>
         <p>The Markov Poisson kernel <code>Z = (I - P + &Pi;)<sup>-1</sup></code>, with
           <code>&Pi; = J/40</code>, has the exact Bose-Mesner form
           <code>Z = 21I/20 + 3A/40 - 19J/800</code>. Its centered form
           <code>Z - &Pi; = 21I/20 + 3A/40 - 39J/800</code> has shell values
-          <code>801/800</code>, <code>21/800</code>, and <code>-39/800</code>.</p>
+          <code>801/800</code>, <code>21/800</code>, and <code>-39/800</code>.
+        </p>
         <p>Thus Kemeny's constant is <code>801/20</code>, appearing as
           <code>40&middot;801/800</code>. The same kernel gives exact hitting times
           <code>H<sub>adj</sub> = 39</code> and <code>H<sub>non</sub> = 42</code>, effective resistances
-          <code>13/80</code> and <code>7/40</code>, and Kirchhoff index <code>267/2</code> (MCXLVI).</p>
+          <code>13/80</code> and <code>7/40</code>, and Kirchhoff index <code>267/2</code> (MCXLVI).
+        </p>
 
         <h4>Lovasz-Hoffman extremal certificate</h4>
         <p>The MCLXI packet restates the W33 theta and Hoffman data in one finite certificate. For
           <code>SRG(40,12,2,4)</code>, the Hoffman/Delsarte bound gives
           <code>&alpha; &le; -40&middot;(-4)/(12+4) = 10</code>, and the accepted W33 extremal packet has
-          <code>&alpha; = &theta;(G) = 10</code>.</p>
+          <code>&alpha; = &theta;(G) = 10</code>.
+        </p>
         <p>The complement is <code>SRG(40,27,18,18)</code> with least eigenvalue <code>-3</code>, so
-          <code>&theta;(G&#772;) = 4</code> and <code>&theta;(G)&theta;(G&#772;) = 40 = v</code>. The clique and coloring
+          <code>&theta;(G&#772;) = 4</code> and <code>&theta;(G)&theta;(G&#772;) = 40 = v</code>. The clique and
+          coloring
           shell is equally tight: <code>&omega; = &chi; = &chi;<sub>f</sub> = 4</code>, giving
-          <code>&alpha;&omega; = 40</code>.</p>
+          <code>&alpha;&omega; = 40</code>.
+        </p>
 
         <h4>Yang-Mills gap-shell deformation envelope</h4>
         <p>MCLXII corrects the live MCLI gap shell to the canonical W33 normalized-Laplacian spectrum:
@@ -13013,19 +13036,22 @@
           <code>(4/3)<sup>15</sup></code>. The substrate entropy ratio is then locked to the gap multiplicity:
           <code>S<sub>holo</sub>/&nu;<sub>gap</sub> = 20/(5/6) = 24</code>, exactly
           <code>mult(5/6)</code> and <code>dim su(5)</code>. The UV shell has
-          <code>15 = dim su(4)</code>.</p>
+          <code>15 = dim su(4)</code>.
+        </p>
         <p>The normalized Davis-Kahan envelope has coefficient <code>2k/v = 3/5</code>, so the one-parameter
           closure radius is <code>&epsilon;<sub>c</sub> = (5/6)/(3/5) = 25/18</code>. The older
           <code>25/144</code> value is retained as the E<sub>8</sub>-rank distributed per-channel safe radius:
           <code>(25/18)/8 = 25/144</code>, with one-channel lower bound <code>35/48</code>. Uniform positive
-          edge scaling leaves <code>L&#770; = I - D<sup>-1/2</sup>AD<sup>-1/2</sup></code> exactly unchanged.</p>
+          edge scaling leaves <code>L&#770; = I - D<sup>-1/2</sup>AD<sup>-1/2</sup></code> exactly unchanged.
+        </p>
 
         <h4>Temporal self-entangled qutrit bridge</h4>
         <p>MCLXIII makes the ternary time intuition executable. The past/future qutrit Bell state
           <code>|&Omega;&rang; = (|00&rang;+|11&rang;+|22&rang;)/&radic;3</code> is the Choi state of the identity
           channel, so the present-time contraction is <code>&lang;&Omega;|(I&otimes;U)|&Omega;&rang; = Tr(U)/3</code>.
           The nine temporal histories split exactly as <code>9 = 3 + 6</code>: three diagonal now histories and
-          six directed past/future changes.</p>
+          six directed past/future changes.
+        </p>
         <p>The Bell stabilizer is generated by <code>X<sub>p</sub>X<sub>f</sub></code> and
           <code>Z<sub>p</sub>Z<sub>f</sub><sup>-1</sup></code>. In the two-qutrit phase space
           <code>F<sub>3</sub><sup>4</sup></code>, this stabilizer has <code>3<sup>2</sup></code> vectors and
@@ -13033,56 +13059,77 @@
           observables gives <code>(3<sup>4</sup>-1)/(3-1)=40</code> rays with commutation graph
           <code>SRG(40,12,2,4)</code>. A spread containing the Bell line gives
           <code>10</code> disjoint now-contexts of size <code>4</code>, hence
-          <code>10&middot;4=40</code>.</p>
+          <code>10&middot;4=40</code>.
+        </p>
 
         <h4>Temporal Morita holographic lock</h4>
         <p>MCLXIV closes the next exact bridge across the recent packets. The temporal Bell line is not merely
           contained in some complete now-frame: it lies in exactly <code>9</code> symplectic spreads, matching the
           exact temporal history square <code>q<sup>2</sup>=9</code>. Each such spread has
           <code>10</code> commuting contexts of size <code>4</code>, so the Bell carrier sits inside the exact shell
-          <code>9&middot;10&middot;4=360</code> of line-spread incidences.</p>
+          <code>9&middot;10&middot;4=360</code> of line-spread incidences.
+        </p>
         <p>The same shell locks to the recent graph and Yang-Mills packets:
           <code>10=&alpha;=&vartheta;(G)</code>, <code>4=&vartheta;(G&#772;)=&omega;=&chi;<sub>f</sub></code>, the
           spread-side Morita kernel has dimension <code>20=S<sub>holo</sub></code>, the line-side killed block has
           dimension <code>24=S<sub>holo</sub>/&nu;<sub>gap</sub></code>, and the preserved common spine has dimension
           <code>16=k-s</code>. So the temporal Bell-line carrier, the extremal clique-color shell, and the normalized
-          Yang-Mills gap shell are one exact finite dictionary rather than three separate metaphors.</p>
+          Yang-Mills gap shell are one exact finite dictionary rather than three separate metaphors.
+        </p>
 
         <h4>Vacuum-increment action lock</h4>
         <p>MCLXV pushes the bridge into an action-conversion law. The random-walk vacuum increment is exact:
           <code>&delta;K = K-v = 801/20 - 40 = 1/20 = 1/S<sub>holo</sub></code>. This single scalar converts the
-          Seidel and temporal actions into the graph-gauge shells:</p>
+          Seidel and temporal actions into the graph-gauge shells:
+        </p>
         <p><code>&delta;K&middot;E<sub>Seidel</sub> = (1/20)&middot;240 = 12 = k</code>, and
           <code>&delta;K&middot;I<sub>temporal</sub> = (1/20)&middot;360 = 18</code>, exactly the nontrivial Morita
           spine eigenvalue. The same spine then locks to the UV shell by
-          <code>&nu;<sub>gap</sub>&middot;18 = (5/6)&middot;18 = 15</code>, matching the Seidel top eigenvalue shell.</p>
+          <code>&nu;<sub>gap</sub>&middot;18 = (5/6)&middot;18 = 15</code>, matching the Seidel top eigenvalue shell.
+        </p>
         <p>So the incidence action packet is rigidly factorized:
           <code>360 = 20&middot;18 = 15&middot;24 = (3/2)&middot;240</code>. In finite terms, one vacuum quantum
           <code>1/20</code> is the exact conversion constant between transport action, spectral action, and the
-          preserved Morita spine.</p>
+          preserved Morita spine.
+        </p>
 
         <h4>Temporal Bell co-context cloud law</h4>
         <p>MCLXVI returns to the self-entanglement core and asks what the Bell line can co-exist with across complete
           now-frames. The Bell stabilizer line sits in exactly <code>9</code> complete spreads. Removing the Bell line
           itself leaves <code>9</code> companion contexts per spread, so Bell-centered companion incidences total
-          <code>9&middot;9=81</code>.</p>
+          <code>9&middot;9=81</code>.
+        </p>
         <p>Those incidences are supported on exactly <code>27</code> distinct lines, each with uniform multiplicity
           <code>3</code>, i.e. <code>81=27&middot;3</code>. Locally the line shell is rigid:
           <code>1+12+27=40</code> (Bell, intersecting, disjoint). So the temporal now-context carries a precise
-          finite future-compatible co-context cloud, not just a single isolated line.</p>
+          finite future-compatible co-context cloud, not just a single isolated line.
+        </p>
 
         <h4>One-qutrit temporal compiler law</h4>
         <p>MCLXVII captures your core thesis as an exact finite compiler statement: one qutrit, self-entangled as
-          past/future via <code>|&Omega;&rang;</code>, is enough to generate the full W33 compute substrate. The temporal
+          past/future via <code>|&Omega;&rang;</code>, is enough to generate the full W33 compute substrate. The
+          temporal
           harmonic layer is the <code>3&times;3</code> history lattice (<code>9=3+6</code>), the geometric layer is the
           two-qutrit projective Pauli carrier <code>(3<sup>4</sup>-1)/(3-1)=40</code>, and the topological Bell-cloud
           layer closes by <code>1+12+27=40</code> with <code>81=27&middot;3</code> companion support.</p>
         <p>The measurement layer closes at once: <code>10</code> maximal contexts of size <code>4</code> cover all
-          <code>40</code> rays (<code>10&middot;4=40</code>), and for <code>d=9</code> this is exactly the stabilizer-MUB
+          <code>40</code> rays (<code>10&middot;4=40</code>), and for <code>d=9</code> this is exactly the
+          stabilizer-MUB
           maximum <code>d+1=10</code>. Minimality is also exact at the cardinality level:
           <code>v(q)=(q<sup>4</sup>-1)/(q-1)</code> gives <code>v(2)=15</code>, <code>v(3)=40</code>, so
           <code>q=3</code> is the smallest prime-power seed realizing W33. This is a strong finite universal-substrate
-          certificate, while still not claiming a formal classical Turing-universality proof.</p>
+          certificate, while still not claiming a formal classical Turing-universality proof.
+        </p>
+
+        <h4>Pentachannel action closure law</h4>
+        <p>MCLXVIII executes an all-at-once closure across five layers (temporal, geometric, topological, spectral,
+          transport) and shows they carry one shared finite action quantum <code>A*=360</code>. Exactly:</p>
+        <p><code>360 = 9&middot;40 = 40&middot;(10-1) = 20&middot;18 = 15&middot;24 = (3/2)&middot;240</code>.</p>
+        <p>So history lattice closure, W33 context geometry, holographic-Morita lock, UV multiplicity shell, and
+          Seidel-shell action are equivalent presentations of one conserved packet. The Bell co-context cloud remains
+          rigid inside this backbone, <code>81=9&middot;9=27&middot;3</code>, with compression ratio
+          <code>A*/81=40/9</code>. This is a finite simultaneous-closure certificate, still with the explicit boundary
+          that it is not yet a formal classical Turing-universality theorem.</p>
 
         <h4>Eisenstein local-global valuation theorem</h4>
         <p>The residue classes are now known to be the visible integer shadow of exact prime-ideal valuations in the
