@@ -1,0 +1,33 @@
+{
+  "part": "MCLXXXVIII",
+  "theorem": "Self-entangled emergence inverse lock",
+  "emergent_input": {
+    "monodromy": 18432,
+    "q4_edges": 32,
+    "identity": "18432 = S^2*32"
+  },
+  "recovered_seed": {
+    "seed_square": 576,
+    "seed": 24,
+    "now_rays": 4,
+    "recovered_directed_changes": 6,
+    "identity": "S = sqrt(18432/32) = 24, D = 24/4 = 6"
+  },
+  "finite_universality_surrogate": {
+    "statement": "self-entangled temporal seed is exactly invertible from emergent monodromy and router shell",
+    "boundary": "finite inverse-factorization law; not a continuum inverse problem theorem"
+  },
+  "claim_boundary": "finite emergence-to-seed inversion law",
+  "checks": {
+    "monodromy_divides_by_q4_edges": true,
+    "seed_square_is_576": true,
+    "seed_square_is_perfect_square": true,
+    "recovered_seed_is_24": true,
+    "recovered_directed_is_integer": true,
+    "recovered_directed_is_6": true,
+    "recovered_directed_matches_mclxiii": true,
+    "inverse_forward_consistency": true,
+    "factor_identity": true
+  },
+  "n_verified": 9
+}
