@@ -1,0 +1,40 @@
+{
+  "part": "MCLXXXV",
+  "theorem": "Q4-tomotope triproduct monodromy lock",
+  "router_packet": {
+    "q4_vertices": 16,
+    "q4_faces": 24,
+    "medial_incidences": 48,
+    "triproduct": 18432,
+    "identity": "16*24*48 = 18432"
+  },
+  "tomotope_packet": {
+    "tomotope_edges": 12,
+    "tomotope_triangles": 16,
+    "tomotope_automorphism": 96,
+    "triproduct": 18432,
+    "identity": "12*16*96 = 18432"
+  },
+  "lock": {
+    "monodromy": 18432,
+    "identity": "18432 = 16*24*48 = 12*16*96"
+  },
+  "finite_universality_surrogate": {
+    "statement": "the same monodromy is fixed by both router-side and tomotope-side tri-volume packets",
+    "boundary": "finite incidence/combinatorial lock; not a continuum field equation"
+  },
+  "claim_boundary": "finite tri-product monodromy law on Q4/tomotope packets",
+  "checks": {
+    "router_triproduct_matches_monodromy": true,
+    "tomotope_triproduct_matches_monodromy": true,
+    "router_and_tomotope_triproducts_match": true,
+    "router_triproduct_identity": true,
+    "tomotope_triproduct_identity": true,
+    "monodromy_is_18432": true,
+    "monodromy_over_q4_vertices_is_face_medial_sheet": true,
+    "monodromy_over_tomotope_edges_is_triangle_aut_sheet": true,
+    "q4_face_to_tomotope_edge_ratio_is_2": true,
+    "q4_vertex_to_tomotope_triangle_ratio_is_1": true
+  },
+  "n_verified": 10
+}
