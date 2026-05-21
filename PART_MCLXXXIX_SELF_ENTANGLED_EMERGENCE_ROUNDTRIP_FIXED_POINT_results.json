@@ -1,0 +1,41 @@
+{
+  "part": "MCLXXXIX",
+  "theorem": "Self-entangled emergence roundtrip fixed-point lock",
+  "forward_packet": {
+    "directed_changes": 6,
+    "now_rays": 4,
+    "seed": 24,
+    "q4_edges": 32,
+    "monodromy": 18432,
+    "identity": "18432 = (6*4)^2*32"
+  },
+  "inverse_packet": {
+    "recovered_seed": 24,
+    "recovered_directed_changes": 6,
+    "identity": "sqrt(18432/32)=24 and 24/4=6"
+  },
+  "reciprocity": {
+    "forward_gain": "32",
+    "inverse_gain": "1/32",
+    "product": "1",
+    "identity": "32 * (1/32) = 1"
+  },
+  "finite_universality_surrogate": {
+    "statement": "self-entanglement seed is a fixed point of forward+inverse emergence composition",
+    "boundary": "finite roundtrip factorization law; not a continuum renormalization theorem"
+  },
+  "claim_boundary": "finite fixed-point roundtrip law for self-entanglement/emergence packets",
+  "checks": {
+    "forward_map_matches_mclxxxvii": true,
+    "inverse_map_matches_mclxxxviii": true,
+    "roundtrip_seed_fixed_point": true,
+    "roundtrip_directed_fixed_point": true,
+    "seed_decomposes_to_directed_and_now": true,
+    "recovered_seed_decomposes_same_way": true,
+    "forward_gain_is_q4_edge_shell": true,
+    "inverse_gain_is_shell_reciprocal": true,
+    "gain_reciprocity_closes": true,
+    "full_roundtrip_identity": true
+  },
+  "n_verified": 10
+}
