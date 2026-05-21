@@ -1,0 +1,93 @@
+{
+  "part": "MCLVIII",
+  "title": "Tensor Product Spectrum",
+  "tensor_eigenvalues": [
+    [
+      "144",
+      1
+    ],
+    [
+      "24",
+      48
+    ],
+    [
+      "16",
+      225
+    ],
+    [
+      "4",
+      576
+    ],
+    [
+      "-8",
+      720
+    ],
+    [
+      "-48",
+      30
+    ]
+  ],
+  "cartesian_eigenvalues": [
+    [
+      "24",
+      1
+    ],
+    [
+      "14",
+      48
+    ],
+    [
+      "8",
+      30
+    ],
+    [
+      "4",
+      576
+    ],
+    [
+      "-2",
+      720
+    ],
+    [
+      "-8",
+      225
+    ]
+  ],
+  "strong_eigenvalues": [
+    [
+      "168",
+      1
+    ],
+    [
+      "38",
+      48
+    ],
+    [
+      "8",
+      801
+    ],
+    [
+      "-10",
+      720
+    ],
+    [
+      "-40",
+      30
+    ]
+  ],
+  "tensor_trace": "0",
+  "tensor_max_eig": "144",
+  "tensor_min_eig": "-48",
+  "tensor_frob_sq": "230400",
+  "rr_aggregate_energy": "2304",
+  "ss_aggregate_energy": "3600",
+  "rs_aggregate_energy": "-5760",
+  "cartesian_max_eig": "24",
+  "strong_max_eig": "168",
+  "strong_mult_8": 801,
+  "kemeny_connection": "801/20",
+  "m_r_sq_plus_m_s_sq": 801,
+  "equal_energy_kemeny_theorem": true,
+  "energy_balance": "-144",
+  "n_verified": 14
+}
