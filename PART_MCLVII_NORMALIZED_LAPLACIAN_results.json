@@ -1,0 +1,53 @@
+{
+  "part": "MCLVII",
+  "title": "Normalized Laplacian and Cheeger Constant",
+  "srg": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4
+  },
+  "normalized_laplacian_eigenvalues": {
+    "mu_0": "0",
+    "mu_r": "5/6",
+    "mu_s": "4/3",
+    "multiplicities": [
+      1,
+      24,
+      15
+    ]
+  },
+  "cheeger_bounds": {
+    "lower": "5/12",
+    "upper_sq": "5/3",
+    "lower_float": 0.4166666666666667,
+    "upper_float": 1.2909944487358056
+  },
+  "spectral_moments": {
+    "0": "40",
+    "1": "40",
+    "2": "130/3",
+    "3": "445/9",
+    "4": "3185/54",
+    "5": "23605/324"
+  },
+  "kemeny_constant": "801/20",
+  "von_neumann_entropy": {
+    "p_r": "1/2",
+    "p_s": "1/2",
+    "entropy_nats": 3.6361991962850233,
+    "equal_split": true
+  },
+  "novel_identities": {
+    "spectral_gap_lhat": "5/6",
+    "mu_r_plus_mu_s": "13/6",
+    "mu_r_times_mu_s": "10/9",
+    "equal_energy": "True",
+    "m_r_mu_r": "20",
+    "m_s_mu_s": "20",
+    "cheeger_lower": "5/12",
+    "sum_mu_squared": "130/3",
+    "kemeny_from_lhat": "801/20"
+  },
+  "n_verified": 20
+}
