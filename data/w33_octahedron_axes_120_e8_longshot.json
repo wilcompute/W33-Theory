@@ -1,0 +1,36 @@
+{
+  "axis_corner_distribution": {
+    "54": 120
+  },
+  "checks": {
+    "axis_corner_double_count": true,
+    "axis_corner_uniform_54": true,
+    "axes_count_120": true,
+    "local_axes_per_point": true,
+    "local_vertices_count_240": true,
+    "quadrangles_count_1620": true,
+    "vertex_corner_uniform_27": true,
+    "w33_counts": true
+  },
+  "identities": {
+    "canonical_120_set": "40 W33 points * 3 local octahedron axes = 120.",
+    "corner_count": "120*54=1620*4=6480.",
+    "e8_longshot": "120 is the count of E8 root pairs / 600-cell vertices; this script proves the intrinsic W33 120-set but not yet an explicit E8 bijection.",
+    "physical_read": "If local octahedron axes are SU(2)-like gauge axes, the canonical 120-set is a plausible interface between W33 local gauge codec and E8/600-cell root-pair geometry.",
+    "quadrangle_axis_uniformity": "Each local axis sees 54=2*q^q quadrangle corners."
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "global_local_octahedron_axes": 120,
+    "local_axes_per_point": 3,
+    "local_octahedron_vertices": 240,
+    "ordinary_quadrangles": 1620,
+    "quadrangle_corners_per_axis": 54,
+    "total_quadrangle_corners": 6480,
+    "w33_points": 40
+  },
+  "theorem_name": "Local Octahedron Axis 120-Set Long-Shot Theorem",
+  "vertex_corner_distribution": {
+    "27": 240
+  }
+}
