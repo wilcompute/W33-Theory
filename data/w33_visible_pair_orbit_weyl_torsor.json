@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "geometry_counts": true,
+    "orbit_stabilizer": true,
+    "transvection_generated_group_order": true,
+    "visible_pairs_single_orbit": true,
+    "visible_projective_count": true,
+    "weyl_lift": true
+  },
+  "identities": {
+    "PSp_order": "25920",
+    "interpretation": "Nonzero vector-level minimal X/Z pairings are the scalar-phase lift of one homogeneous visible flag-quadrangle orbit.",
+    "projective_visible_orbit": "12960 = 25920 / 2",
+    "scalar_phase_lift": "4 * 12960 = 51840 = |W(E6)|"
+  },
+  "summary": {
+    "W_E6_order": 51840,
+    "all_checks_passed": true,
+    "flags_Xmin": 160,
+    "lines": 40,
+    "points": 40,
+    "projective_group_order": 25920,
+    "projective_stabilizer_order": 2,
+    "quadrangles_Zmin": 1620,
+    "vector_lift_count": 51840,
+    "visible_orbit_size": 12960,
+    "visible_projective_pairs": 12960
+  },
+  "theorem_name": "Visible Pair Orbit-Weyl Torsor Theorem"
+}
