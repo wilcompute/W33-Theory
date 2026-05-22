@@ -1,0 +1,62 @@
+{
+  "absolute_column_inner_product_distribution_unordered": {
+    "0": 961470,
+    "1": 233280,
+    "2": 77760,
+    "3": 25920,
+    "4": 12960
+  },
+  "checks": {
+    "column_absolute_gram_matches_unsigned": true,
+    "column_norms_8": true,
+    "column_projector_relation": true,
+    "fiber_match": true,
+    "frame_redundancy_20": true,
+    "geometry_counts": true,
+    "rank_81": true,
+    "row_norms_81": true,
+    "row_projector": true
+  },
+  "identities": {
+    "column_tight_frame": "A^T A / 8 is the Gram matrix of 1620 unit vectors spanning R^81 with frame bound 20.",
+    "fiber_identity": "20 = 1620/81 = 240/12 = n_B/h.",
+    "singular_values": "A has 81 nonzero singular values, each sqrt(160)."
+  },
+  "inferred_column_spectrum_ATA": {
+    "0": 1539,
+    "160": 81
+  },
+  "normalized_column_absolute_inner_products": [
+    "0",
+    "1/8",
+    "1/4",
+    "3/8",
+    "1/2"
+  ],
+  "row_spectrum_AAT": {
+    "-0.0": 79,
+    "160.0": 81
+  },
+  "signed_column_inner_product_distribution_unordered": {
+    "-4": 7776,
+    "-3": 6480,
+    "-2": 23976,
+    "-1": 101574,
+    "0": 961470,
+    "1": 131706,
+    "2": 53784,
+    "3": 19440,
+    "4": 5184
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "bulk_horizon_fiber": "240/12 = 20",
+    "column_norm_squared": 8,
+    "columns_quadrangles": 1620,
+    "rank": 81,
+    "row_norm_squared": 81,
+    "rows_flags": 160,
+    "unit_column_frame_bound": "1620/81 = 20"
+  },
+  "theorem_name": "Dual Quadrangle Tight-Frame and 20-Fiber Theorem"
+}
