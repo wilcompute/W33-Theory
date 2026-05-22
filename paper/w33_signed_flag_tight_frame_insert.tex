@@ -1,0 +1,69 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_signed_flag_tight_frame_insert.tex
+
+\section{The Signed $3$-adic Flag Tight-Frame Theorem}
+\label{sec:signed-flag-tight-frame}
+
+Let $A\in\{-1,0,+1\}^{160\times1620}$ be the signed projective phase matrix whose
+rows are the point-line flags of $W(3,3)$ and whose columns are the ordinary
+quadrangles.  The entry $A_{f,Q}$ records the signed $\mathbb F_3$ phase of the
+flag-quadrangle pairing, with $2\in\mathbb F_3$ represented as $-1$.  Let
+$U=|A|$ be the unsigned incidence matrix.
+
+\begin{theorem}[Signed $3$-adic Flag Tight-Frame Theorem]
+The signed Gram matrix
+\[
+        S=AA^T
+\]
+is a signed lift of the unsigned flag association Gram matrix:
+\[
+        |S|=UU^T
+        \qquad\text{entrywise.}
+\]
+Moreover,
+\[
+        S^2=160S,
+        \qquad
+        \operatorname{rank}(A)=81.
+\]
+Hence
+\[
+        \Pi={1\over160}AA^T
+\]
+is an exact rank-$81$ projector.  Equivalently,
+\[
+        {1\over81}AA^T
+\]
+is the Gram matrix of a unit-norm tight frame of $160$ vectors spanning an
+$81$-dimensional real phase space, with frame bound
+\[
+        {160\over81}.
+\]
+The off-diagonal normalized absolute inner products are exactly
+\[
+        {1\over3},\qquad {1\over9},\qquad {1\over27},\qquad {1\over81}.
+\]
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate constructs $A$ from the signed $\mathbb F_3$ pairing between minimal
+flag representatives and quadrangle representatives.  It computes
+$S=AA^T$ over the integers and checks the exact relation $S^2=160S$.  Since the row
+norms are all $81$, the normalized row Gram matrix is $S/81$.  The idempotent
+relation shows that this Gram matrix is a tight frame with frame bound $160/81$.
+Finally, the off-diagonal entries of $S$ are precisely
+\[
+        \pm1,\quad \pm3,\quad \pm9,\quad \pm27,
+\]
+so after division by the row norm $81$ the normalized absolute inner products are
+$3^{-4},3^{-3},3^{-2},3^{-1}$.
+\end{proof}
+
+\begin{corollary}[Phase protects homology]
+The unsigned flag surface has $160$ combinatorial degrees of freedom, but the signed
+phase lift destructively interferes to an exact rank-$81$ protected sector.  In this
+precise finite sense,
+\[
+        \text{phase protects homology.}
+\]
+\end{corollary}
