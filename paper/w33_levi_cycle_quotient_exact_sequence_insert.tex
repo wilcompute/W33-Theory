@@ -1,0 +1,54 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_levi_cycle_quotient_exact_sequence_insert.tex
+
+\section{The Levi Cycle Quotient Exact Sequence}
+\label{sec:levi-cycle-quotient-exact-sequence}
+
+Let $\mathcal L(W(3,3))$ be the Levi graph of $W(3,3)$: its vertices are the
+points and lines of $W(3,3)$, and its edges are point-line incidences, i.e. flags.
+Since $W(3,3)$ has $40$ points, $40$ lines, and $160$ flags, the Levi graph has
+\[
+        |V(\mathcal L)|=80,
+        \qquad
+        |E(\mathcal L)|=160.
+\]
+It is connected, so its cycle rank is
+\[
+        b_1(\mathcal L)=|E|-|V|+1=160-80+1=81.
+\]
+
+\begin{theorem}[Levi Cycle Quotient Exact Sequence]
+Let $A\in\{-1,0,+1\}^{160\times1620}$ be the signed flag-quadrangle phase matrix.
+The $79$-dimensional left kernel of $A$ is the signed cut/local-relation space of
+the Levi graph, and the $81$-dimensional image is naturally identified with the
+cycle space of the Levi graph.  Equivalently, there is an exact sequence
+\[
+        0\longrightarrow \operatorname{Cut}(\mathcal L)_{79}
+        \longrightarrow \mathbb R^{\mathrm{Flags}}_{160}
+        \longrightarrow H_1(\mathcal L;\mathbb R)_{81}
+        \longrightarrow 0.
+\]
+The signed phase matrix realizes this quotient inside the quadrangle tight frame.
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate reconstructs $W(3,3)$ and its Levi graph.  It verifies connectedness,
+so the cycle rank is $160-80+1=81$.  It also constructs the signed local point and
+line four-flag relations, checks that their span has dimension $79$, and verifies that
+this relation span equals $\ker(A^T)$.  Therefore the quotient of the $160$-dimensional
+flag module by local point/line relations has dimension $160-79=81$, matching both
+$\operatorname{rank}(A)$ and $b_1(\mathcal L)$.
+\end{proof}
+
+\begin{corollary}[Exact meaning of the protected $81$]
+The protected $81$-dimensional phase image is not only spectrally detected by
+$AA^T/160$.  It is exactly the Levi-graph cycle space of $W(3,3)$:
+\[
+        81=b_1(\mathcal L(W(3,3))).
+\]
+Thus
+\[
+        160=79+81
+\]
+is the standard cut/cycle decomposition of the point-line incidence graph.
+\end{corollary}
