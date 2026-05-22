@@ -1,0 +1,144 @@
+{
+  "part": "MCXCIII",
+  "theorem": "Reye tomotope/24-cell common spine",
+  "external_source_alignment": {
+    "tomotope_paper": "The tomotope text identifies I_{1,2}, the edge-triangle medial layer, with Reye's configuration and gives automorphism order 576.",
+    "dlib_record": "dLib provides the 2012 Ars Mathematica Contemporanea record and TXT/PDF entries for The tomotope.",
+    "24cell_references": "24-cell references describe the same Reye configuration as 12 axes and 16 hexagon planes."
+  },
+  "twenty_four_cell_model": {
+    "vertices": 24,
+    "d4_root_formula": "permutations of (+/-1,+/-1,0,0)",
+    "axes": 12,
+    "hexagon_planes": 16,
+    "axis_hexagon_incidences": 48,
+    "degree_profile": {
+      "3": 16,
+      "4": 12
+    },
+    "automorphism_count": 576,
+    "hexagon_plane_axis_triples": [
+      [
+        0,
+        1,
+        9
+      ],
+      [
+        0,
+        2,
+        8
+      ],
+      [
+        0,
+        3,
+        7
+      ],
+      [
+        0,
+        4,
+        6
+      ],
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        1,
+        3,
+        10
+      ],
+      [
+        1,
+        5,
+        6
+      ],
+      [
+        2,
+        4,
+        10
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        11
+      ],
+      [
+        3,
+        5,
+        8
+      ],
+      [
+        4,
+        5,
+        9
+      ],
+      [
+        6,
+        7,
+        11
+      ],
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        7,
+        9,
+        10
+      ],
+      [
+        8,
+        9,
+        11
+      ]
+    ]
+  },
+  "tomotope_match": {
+    "tomotope_edges": 12,
+    "tomotope_triangles": 16,
+    "tomotope_medial_incidences": 48,
+    "tomotope_automorphism_order": 96,
+    "reye_automorphism_over_tomotope_automorphism": 6
+  },
+  "symmetry_lock": {
+    "reye_automorphism_order": 576,
+    "twenty_four_cell_rotational_symmetry_order": 576,
+    "weyl_f4_order": 1152,
+    "identity": "576 = 6*96 = |W(F4)|/2"
+  },
+  "horizon_anchor": {
+    "mcxcii_k12_reye_points": 12,
+    "mcxcii_k12_reye_lines": 16,
+    "reading": "MCXCII uses this same common Reye spine as the 12-vertex, 16-triangle seed inside the K12 horizon"
+  },
+  "reading": "Reye is the exact shared spine of the tomotope and the 24-cell: tomotope edges correspond to 24-cell antipodal axes, tomotope triangles correspond to 24-cell hexagon planes, and the common Levi graph has 48 incidences and 576 automorphisms. The Q4/tomotope/K12 chain is therefore attached to the classical D4/F4 24-cell geometry through the same Reye configuration, not merely through matching counts.",
+  "claim_boundary": "finite incidence-isomorphism theorem; this identifies a common Reye spine for tomotope and 24-cell combinatorics, not a continuum dynamics proof",
+  "checks": {
+    "d4_roots_are_24cell_vertices": true,
+    "opposite_root_pairs_are_12_axes": true,
+    "central_hexagon_planes_are_16": true,
+    "axis_hexagon_incidence_is_48": true,
+    "axis_hexagon_profile_is_reye": true,
+    "each_axis_lies_on_four_hexagons": true,
+    "each_hexagon_plane_contains_three_axes": true,
+    "cell24_reye_is_cube_reye": true,
+    "reye_automorphism_order_is_576": true,
+    "tomotope_edges_match_24cell_axes": true,
+    "tomotope_triangles_match_24cell_hexagons": true,
+    "tomotope_medial_matches_24cell_reye_incidence": true,
+    "reye_automorphism_is_six_times_tomotope_automorphism": true,
+    "reye_automorphism_is_24cell_rotational_symmetry": true,
+    "weyl_f4_is_two_times_common_reye_symmetry": true,
+    "k12_horizon_uses_same_12_reye_points": true,
+    "k12_horizon_uses_same_16_reye_lines": true,
+    "common_spine_is_12_4_16_3": true
+  },
+  "n_verified": 18
+}
