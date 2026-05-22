@@ -1,0 +1,53 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_visible_pair_orbit_weyl_torsor_insert.tex
+
+\section{The Visible Pair Orbit--Weyl Torsor Theorem}
+\label{sec:visible-pair-orbit-weyl-torsor}
+
+The minimal logical dictionary gives
+\[
+        X_{\min}=\{\text{point-line flags of }W(3,3)\},
+        \qquad
+        Z_{\min}=\{\text{ordinary quadrangles of }W(3,3)\}.
+\]
+A projective $X/Z$ pair is visible precisely when the flag lies on the quadrangle's
+eight-flag boundary.  The visible incidence count is therefore
+\[
+        160\cdot81=1620\cdot8=12960.
+\]
+
+\begin{theorem}[Visible Pair Orbit--Weyl Torsor Theorem]
+Let $G=\mathrm{PSp}(4,3)$ act on the projective points of $W(3,3)$ and hence on
+flags and ordinary quadrangles.  The visible flag-quadrangle incidence set is a
+single $G$-orbit of size
+\[
+        12960={25920\over2}={|G|\over2}.
+\]
+Equivalently, the stabilizer of a visible projective pair has order $2$.
+Passing from projective rays to nonzero $\mathbb F_3$ vector representatives gives
+a fourfold scalar-phase lift, hence
+\[
+        4\cdot12960=51840=|W(E_6)|.
+\]
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate reconstructs $W(3,3)$ from the standard alternating form on
+$\mathbb F_3^4$, constructs the symplectic transvections on the $40$ projective
+points, and verifies that these transvections generate a permutation group of order
+$25920$.  It then acts with these generators on one visible flag-quadrangle pair.
+The resulting orbit has size $12960$ and equals the complete visible incidence set.
+Therefore the projective visible incidence set is homogeneous with stabilizer order
+$25920/12960=2$.  Finally, each projective visible pair has two nonzero $X$ scalar
+representatives and two nonzero $Z$ scalar representatives, so the vector-level lift
+has size $4\cdot12960=51840$.
+\end{proof}
+
+\begin{corollary}[Structural meaning of the $E_6$ Weyl count]
+The equality
+\[
+        \#\{(x,z):\langle x,z\rangle\ne0\}=51840=|W(E_6)|
+\]
+is not only an arithmetic coincidence.  It is the scalar-phase lift of one homogeneous
+visible $\mathrm{PSp}(4,3)$ orbit.
+\end{corollary}
