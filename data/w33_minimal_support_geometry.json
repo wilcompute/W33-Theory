@@ -1,0 +1,84 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "biregular": true,
+    "overlap_scheme": true,
+    "signed_rank_projector": true,
+    "srg": true,
+    "w33_size": true,
+    "x_count": true,
+    "x_supports_are_line_stars": true,
+    "z_count": true
+  },
+  "overlap_scheme": {
+    "expected_per_row": {
+      "1": 81,
+      "27": 6,
+      "3": 54,
+      "9": 18
+    },
+    "off_diagonal_distribution": {
+      "1": 6480,
+      "27": 480,
+      "3": 4320,
+      "9": 1440
+    },
+    "per_row_distribution": {
+      "((1, 81), (3, 54), (9, 18), (27, 6))": 160
+    }
+  },
+  "pairing_checks": {
+    "phase_distribution_projective": {
+      "0": 246240,
+      "1": 6534,
+      "2": 6426
+    },
+    "support_biregularity_X_degree_distribution": {
+      "81": 160
+    },
+    "support_biregularity_Z_degree_distribution": {
+      "8": 1620
+    },
+    "support_incidence_identity": "160*81 = 1620*8 = 12960",
+    "support_incidence_total": 12960
+  },
+  "signed_phase_frame": {
+    "eigenvalue_distribution": {
+      "-0.0": 79,
+      "160.0": 81
+    },
+    "idempotent_relation_holds": true,
+    "rank": 81,
+    "relation": "S = A A^T satisfies S^2 = 160 S, hence A A^T / 160 is an exact rank-81 projector."
+  },
+  "srg_checks": {
+    "degree_distribution": {
+      "12": 40
+    },
+    "lambda_distribution": {
+      "2": 240
+    },
+    "mu_distribution": {
+      "4": 540
+    }
+  },
+  "summary": {
+    "X_min_projective_rays": 160,
+    "X_support_model": "isotropic line-stars: choose an isotropic K4 line and one incident point; take the three line-edges through that point",
+    "Z_min_projective_rays": 1620,
+    "Z_support_model": "ordinary quadrangles: induced 4-cycles determined by a noncollinear diagonal pair and two of its four common neighbours",
+    "edges": 240,
+    "lines": 40,
+    "points": 40,
+    "triangular_2_cells": 160
+  },
+  "support_counts": {
+    "X_support_type_distribution": {
+      "line-star": 160
+    },
+    "X_unique_supports": 160,
+    "Z_unique_supports": 1620,
+    "ordinary_quadrangle_count_formula": "nonedges*C(mu,2)/2 = 540*6/2 = 1620"
+  },
+  "theorem_name": "Minimal Support Geometry Theorem"
+}
