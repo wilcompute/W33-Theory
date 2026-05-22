@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "aggregate_matches_chain_lift": true,
+    "each_local_pencil_is_octahedron": true,
+    "each_point_has_4_lines": true,
+    "octahedron_laplacian_spectrum": true,
+    "octahedron_tree_count_384": true,
+    "subcells_per_point_26": true,
+    "w33_counts": true
+  },
+  "identities": {
+    "codec": "The 12 local octahedron edges are the 12 W33 local channels/gauge codec slots.",
+    "construction": "For each W33 point p, the four lines through p form a K4 pencil; L(K4) is the octahedron O_p.",
+    "global_chain_lift": "40*f(O) = (240,480,320).",
+    "laplacian": "Spec(L_O)=(0,4,4,4,6,6), tau(O)=384.",
+    "local_fvector": "f(O_p) = (6,12,8)."
+  },
+  "summary": {
+    "aggregate": {
+      "40_times_octahedron_edges": 480,
+      "40_times_octahedron_faces": 320,
+      "40_times_octahedron_vertices": 240,
+      "octahedron_subcells_per_point": 26,
+      "total_octahedron_subcells": 1040
+    },
+    "all_checks_passed": true,
+    "lines": 40,
+    "lines_through_each_point": 4,
+    "local_octahedra": 40,
+    "local_octahedron_fvector": [6, 12, 8],
+    "local_octahedron_laplacian_spectrum": [0, 4, 4, 4, 6, 6],
+    "local_octahedron_spanning_trees": 384,
+    "points": 40,
+    "w33_edges": 240
+  },
+  "theorem_name": "Local W33 Pencil-Octahedron Theorem"
+}
