@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "each_quadrangle_has_8_incident_flags": true,
+    "ordered_overlap_distribution": true,
+    "per_quad_pattern": true,
+    "quadrangle_count": true,
+    "w33_geometry": true
+  },
+  "interpretation": "The Z-side distribution is the intersection distribution of 8-flag boundary sets of ordinary quadrangles.",
+  "overlap_counts_ordered": {
+    "0": 1922940,
+    "1": 466560,
+    "2": 155520,
+    "3": 51840,
+    "4": 25920
+  },
+  "overlap_counts_unordered": {
+    "0": 961470,
+    "1": 233280,
+    "2": 77760,
+    "3": 25920,
+    "4": 12960
+  },
+  "signature_by_overlap_ordered": {
+    "0": {
+      "(0, 0, 0)": 1751220,
+      "(1, 0, 0)": 168480,
+      "(2, 0, 1)": 3240
+    },
+    "1": {
+      "(1, 0, 0)": 466560
+    },
+    "2": {
+      "(1, 0, 0)": 77760,
+      "(2, 1, 0)": 77760
+    },
+    "3": {
+      "(2, 1, 0)": 51840
+    },
+    "4": {
+      "(2, 1, 0)": 12960,
+      "(3, 2, 1)": 12960
+    }
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "edges": 240,
+    "incident_flags_per_quadrangle": 8,
+    "lines": 40,
+    "per_quadrangle_overlap_pattern": {
+      "0": 1187,
+      "1": 288,
+      "2": 96,
+      "3": 32,
+      "4": 16
+    },
+    "points": 40,
+    "quadrangles": 1620
+  },
+  "theorem_name": "W33 Quadrangle Dual Visibility Theorem"
+}
