@@ -1,0 +1,49 @@
+{
+  "part": "MCXCVI",
+  "theorem": "Unified closure grammar theorem",
+  "emergence_kernel": {
+    "S": 24,
+    "E": 32,
+    "M": 18432,
+    "Delta_plus": 1568,
+    "Delta_minus": 1504,
+    "Sigma": 3072,
+    "Kappa": 64,
+    "identity": "M=E*S^2; Delta\u00b1=E(2S\u00b11); E=Kappa/2; S=Sigma/(2Kappa)"
+  },
+  "horizon_reye_kernel": {
+    "C": 8,
+    "P": 12,
+    "g": 6,
+    "N": 72,
+    "A_T": 96,
+    "A_R": 576,
+    "identity": "N=P*g; A_T=C*P; A_R=C*N=C*P*g"
+  },
+  "cross_kernel_bridges": {
+    "E_over_C": 4,
+    "S_over_P": 2,
+    "M_over_A_R": 32,
+    "identity": "E/C=4, S/P=2, M/A_R=32"
+  },
+  "finite_universality_surrogate": {
+    "statement": "existing emergence and Reye-horizon laws are coordinated instances of one multiplicative closure grammar",
+    "boundary": "finite arithmetic/combinatorial grammar; not a continuum TOE"
+  },
+  "claim_boundary": "finite unified closure grammar over established packet identities",
+  "checks": {
+    "emergence_quadratic_instance": true,
+    "emergence_jump_instance_plus": true,
+    "emergence_jump_instance_minus": true,
+    "emergence_inverse_instance_e": true,
+    "emergence_inverse_instance_s": true,
+    "horizon_payload_instance": true,
+    "tomotope_symmetry_instance": true,
+    "reye_symmetry_instance": true,
+    "reye_tomotope_ratio_instance": true,
+    "kernel_bridge_ratio_e_over_c": true,
+    "kernel_bridge_ratio_s_over_p": true,
+    "kernel_bridge_monodromy_over_reye_symmetry": true
+  },
+  "n_verified": 12
+}
