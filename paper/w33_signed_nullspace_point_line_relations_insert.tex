@@ -1,0 +1,62 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_signed_nullspace_point_line_relations_insert.tex
+
+\section{The Signed Point--Line Nullspace Theorem}
+\label{sec:signed-point-line-nullspace}
+
+Let $A\in\{-1,0,+1\}^{160\times1620}$ be the signed flag-quadrangle phase matrix.
+Rows are point-line flags of $W(3,3)$ and columns are ordinary quadrangles.  We have
+already seen that
+\[
+        \operatorname{rank}(A)=81.
+\]
+Since there are $160$ flag rows, the left nullity is
+\[
+        160-81=79.
+\]
+
+\begin{theorem}[Signed Point--Line Nullspace Theorem]
+For each point $p$ of $W(3,3)$, the four flags through $p$ satisfy a signed four-term
+relation among the rows of $A$.  For each totally isotropic line $L$, the four flags
+on $L$ satisfy a signed four-term relation among the rows of $A$.  Thus there are
+\[
+        40+40=80
+\]
+local signed point/line relations.  These relations have one global dependence, so
+that their span has dimension $79$.  Moreover,
+\[
+        \operatorname{span}\{\text{signed point/line four-flag relations}\}
+        =\ker(A^T)=\ker(AA^T).
+\]
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate constructs $A$ from the signed $\mathbb F_3$ flag-quadrangle pairing.
+For every point $p$, it searches the $2^4$ possible sign assignments on the four flags
+through $p$ and finds exactly two, differing only by global sign, that annihilate all
+columns of $A$.  The same search is performed for every line $L$.  The resulting
+$160\times80$ relation matrix has rank $79$, and direct multiplication gives
+\[
+        A^T R=0,
+        \qquad
+        AA^T R=0.
+\]
+Since $\dim\ker(A^T)=160-81=79$, these local relations span the full left nullspace.
+\end{proof}
+
+\begin{corollary}[Explicit projector decomposition]
+The signed phase projector decomposes the $160$-dimensional flag surface as
+\[
+        \mathbb R^{160}
+        =\operatorname{im}(AA^T)\oplus\ker(AA^T),
+\]
+with
+\[
+        \dim\operatorname{im}(AA^T)=81,
+        \qquad
+        \dim\ker(AA^T)=79.
+\]
+The kernel is precisely the local signed point/line relation space.  Therefore the
+phase matrix kills local gauge relations and leaves the protected $81$-dimensional
+homology image.
+\end{corollary}
