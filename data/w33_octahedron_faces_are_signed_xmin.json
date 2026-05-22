@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "codec_shape_one": true,
+    "directed_carrier_codec": true,
+    "edge_face_degrees": true,
+    "each_point_has_four_lines": true,
+    "global_nullity_40": true,
+    "global_rank_280": true,
+    "projective_face_pairs_count": true,
+    "rank_one_7": true,
+    "signed_faces_count": true,
+    "spectrum_one": true,
+    "two_faces_per_projective_flag": true,
+    "w33_counts": true
+  },
+  "identities": {
+    "directed_carrier_codec": "40*12=480 local octahedron edge slots.",
+    "local_face_relation": "rank(edge-face incidence of O)=7, so each local octahedron has one face-sum null relation.",
+    "projective_Xmin": "40*4=160 antipodal face-pairs = |X_min|.",
+    "signed_Xmin": "40*8=320 signed local octahedron faces = |X_min^{F3}|."
+  },
+  "one_octahedron_edge_face_col_degrees": {
+    "3": 8
+  },
+  "one_octahedron_edge_face_row_degrees": {
+    "2": 12
+  },
+  "one_octahedron_edge_gram_spectrum": {
+    "0": 5,
+    "2": 3,
+    "4": 3,
+    "6": 1
+  },
+  "one_octahedron_face_gram_spectrum": {
+    "0": 1,
+    "2": 3,
+    "4": 3,
+    "6": 1
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "edge_face_codec_global_shape": [480, 320],
+    "edge_face_codec_shape_per_point": [12, 8],
+    "global_nullity": 40,
+    "global_rank": 280,
+    "local_octahedra": 40,
+    "projective_antipodal_face_pairs": 160,
+    "rank_per_octahedron": 7,
+    "signed_octahedron_faces": 320
+  },
+  "theorem_name": "Local Octahedron Faces = Signed Xmin Theorem"
+}
