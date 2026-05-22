@@ -1,0 +1,85 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_flag_overlap_association_insert.tex
+
+\section{The W33 Flag Overlap Association Theorem}
+\label{sec:w33-flag-overlap-association}
+
+The minimal support theorem identifies the projective minimal $X$ supports with
+isotropic line-stars.  Equivalently,
+\[
+        X_{\min}\;\cong\;\{(p,L): p\in L,\; L\text{ a totally isotropic line of }W(3,3)\}.
+\]
+Thus $X_{\min}$ is the flag set of the generalized quadrangle $W(3,3)$.
+Since $W(3,3)$ has $40$ points, $40$ lines, and $4$ points per line, this gives
+\[
+        |X_{\min}|=40\cdot4=160.
+\]
+
+\begin{theorem}[W33 Flag Overlap Association Theorem]
+Let $f=(p,L)$ and $g=(q,M)$ be two distinct point-line flags of $W(3,3)$.
+Let $\Omega(f,g)$ denote the number of minimal $Z$-quadrangles visible from both
+minimal $X$ line-stars $f$ and $g$.  Then $\Omega(f,g)$ is determined exactly by
+the relative position of the two flags:
+\[
+\begin{array}{c|c}
+\text{relative position of }(p,L),(q,M) & \Omega(f,g)\\
+\hline
+p=q\text{ or }L=M & 27\\
+\text{exactly one cross-incidence }(p\in M\text{ or }q\in L) & 9\\
+L\cap M\ne\varnothing\text{ away from }p,q\text{, or }L,M\text{ skew and }p\sim q & 3\\
+L,M\text{ skew and }p\not\sim q & 1.
+\end{array}
+\]
+Consequently, for every fixed flag $f$, the overlap distribution over the other
+$159$ flags is
+\[
+        27^6,\qquad 9^{18},\qquad 3^{54},\qquad 1^{81}.
+\]
+Equivalently,
+\[
+        1^{81},\qquad 3^{54},\qquad 9^{18},\qquad 27^6.
+\]
+The global unordered distribution is
+\[
+        1:6480,
+        \qquad
+        3:4320,
+        \qquad
+        9:1440,
+        \qquad
+        27:480.
+\]
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate reconstructs $W(3,3)$ from the symplectic form on the projective
+points of $\mathbb F_3^4$, enumerates the $160$ flags, classifies every ordered pair
+of distinct flags by relative incidence position, and checks that each relative
+position has a single overlap value.  The ordered relation counts are
+\[
+\begin{array}{c|c|c}
+\text{relative position} & \text{ordered count} & \text{overlap}\\
+\hline
+p=q & 480 & 27\\
+L=M & 480 & 27\\
+p\in M\text{ only} & 1440 & 9\\
+q\in L\text{ only} & 1440 & 9\\
+L\cap M\ne\varnothing\text{ away from }p,q & 4320 & 3\\
+L,M\text{ skew and }p\sim q & 4320 & 3\\
+L,M\text{ skew and }p\not\sim q & 12960 & 1.
+\end{array}
+\]
+These ordered counts sum to $160\cdot159$.  Dividing by $2$ gives the unordered
+counts stated above.  Therefore the $3$-adic overlap value is a flag-distance
+invariant on $W(3,3)$.
+\end{proof}
+
+\begin{corollary}[Geometric meaning of the $3$-adic scheme]
+The unsigned minimal logical Gram matrix $UU^T$ is the adjacency algebra of a
+point-line flag association scheme.  The four off-diagonal values
+\[
+        1,3,9,27
+\]
+are not arbitrary eigenvalue artifacts: they measure the relative incidence distance
+between two local line-star defects in $W(3,3)$.
+\end{corollary}
