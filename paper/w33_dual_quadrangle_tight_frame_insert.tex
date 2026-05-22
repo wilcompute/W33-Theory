@@ -1,0 +1,60 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_dual_quadrangle_tight_frame_insert.tex
+
+\section{The Dual Quadrangle Tight-Frame and $20$-Fiber Theorem}
+\label{sec:dual-quadrangle-tight-frame}
+
+Let $A\in\{-1,0,+1\}^{160\times1620}$ be the signed flag-quadrangle phase matrix.
+Rows correspond to the $160$ point-line flags of $W(3,3)$ and columns correspond to
+the $1620$ ordinary quadrangles.
+
+\begin{theorem}[Dual Quadrangle Tight-Frame and $20$-Fiber Theorem]
+The signed matrix $A$ has rank $81$ and singular spectrum
+\[
+        A A^T: \quad 160^{81}\oplus0^{79},
+        \qquad
+        A^T A: \quad 160^{81}\oplus0^{1539}.
+\]
+Every row has squared norm $81$, and every column has squared norm $8$.
+Therefore
+\[
+        {1\over81}AA^T
+\]
+is the Gram matrix of $160$ unit flag vectors in an $81$-dimensional phase space,
+and
+\[
+        {1\over8}A^T A
+\]
+is the Gram matrix of $1620$ unit quadrangle vectors in the same $81$-dimensional
+phase space.  The column-frame bound is
+\[
+        {1620\over81}=20.
+\]
+Moreover,
+\[
+        20={1620\over81}={240\over12}={n_B\over h}.
+\]
+Thus the quadrangle-frame redundancy equals the W33 bulk-to-horizon projection fiber.
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate constructs $A$ from the signed $\mathbb F_3$ flag-quadrangle pairing.
+It verifies that $\operatorname{rank}(A)=81$, that $AA^T$ has eigenvalue $160$ with
+multiplicity $81$ and zero with multiplicity $79$, and that the nonzero spectrum of
+$A^TA$ agrees with that of $AA^T$.  Since there are $1620$ quadrangle columns and the
+rank is $81$, the normalized column frame has redundancy $1620/81=20$.  The identity
+$240/12=20$ identifies this redundancy with the bulk-to-horizon fiber.
+\end{proof}
+
+\begin{corollary}[Dual meaning of the signed phase matrix]
+The same signed phase matrix simultaneously packages:
+\[
+\begin{array}{c|c}
+\text{side} & \text{tight-frame meaning}\\
+\hline
+X\text{-flag rows} & 160\text{ local probes spanning }\mathbb R^{81}\\
+Z\text{-quadrangle columns} & 1620\text{ loop probes spanning }\mathbb R^{81}\text{ with redundancy }20.
+\end{array}
+\]
+The redundancy $20$ is the holographic fiber $n_B/h$.
+\end{corollary}
