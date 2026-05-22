@@ -1,0 +1,84 @@
+% Standalone theorem insert for W33 papers.
+% File: paper/w33_quadrangle_dual_visibility_insert.tex
+
+\section{The W33 Quadrangle Dual Visibility Theorem}
+\label{sec:w33-quadrangle-dual-visibility}
+
+The minimal support theorem identifies projective minimal $Z$ supports with ordinary
+quadrangles of the generalized quadrangle $W(3,3)$.  If $Q$ is such a quadrangle,
+then $Q$ has four cycle-edges.  Each edge lies on a unique totally isotropic line,
+and each endpoint of that edge gives one point-line flag.  Hence every quadrangle
+has an eight-flag boundary
+\[
+        F(Q)=\{(p,L):p\text{ is an endpoint of a cycle-edge }e\subset Q,
+        \; L\text{ is the unique isotropic line containing }e\}.
+\]
+Thus
+\[
+        |F(Q)|=8.
+\]
+
+\begin{theorem}[W33 Quadrangle Dual Visibility Theorem]
+For two distinct ordinary quadrangles $Q,Q'$ of $W(3,3)$, the $Z$-side overlap is
+exactly the flag-boundary intersection number
+\[
+        \Omega_Z(Q,Q')=|F(Q)\cap F(Q')|.
+\]
+For every fixed quadrangle $Q$, the distribution over the remaining $1619$ quadrangles is
+\[
+        0^{1187},\qquad 1^{288},\qquad 2^{96},\qquad 3^{32},\qquad 4^{16}.
+\]
+Equivalently, the global unordered distribution is
+\[
+        0:961470,
+        \qquad
+        1:233280,
+        \qquad
+        2:77760,
+        \qquad
+        3:25920,
+        \qquad
+        4:12960.
+\]
+\end{theorem}
+
+\begin{proof}[Finite certificate]
+The certificate reconstructs $W(3,3)$ from the alternating form on projective points
+of $\mathbb F_3^4$, enumerates all ordinary quadrangles, attaches to each quadrangle
+its eight incident endpoint-line flags, and computes all pairwise intersections.
+The row distribution is independent of the chosen quadrangle and equals
+\[
+        0^{1187},1^{288},2^{96},3^{32},4^{16}.
+\]
+The ordered counts are
+\[
+        0:1922940,
+        \quad
+        1:466560,
+        \quad
+        2:155520,
+        \quad
+        3:51840,
+        \quad
+        4:25920,
+\]
+which divide by two to give the unordered distribution.  Therefore the $Z$-side
+minimal logical overlap is exactly the intersection theory of quadrangle flag
+boundaries.
+\end{proof}
+
+\begin{corollary}[Closed minimal logical dictionary]
+The paired minimal logical surface has the following finite-geometric dictionary:
+\[
+\begin{array}{c|c}
+\text{minimal logical object} & \text{finite-geometric model}\\
+\hline
+X_{\min} & \text{point-line flags / local line-stars}\\
+Z_{\min} & \text{ordinary quadrangles / four-step exchange loops}\\
+X\text{-}X\text{ overlap} & \text{flag relative-position invariant}\\
+Z\text{-}Z\text{ overlap} & \text{intersection of eight-flag quadrangle boundaries}\\
+X\text{-}Z\text{ noncommutation} & |W(E_6)|=51840\\
+\text{signed }X\text{-}Z\text{ phase} & \text{rank-}81\text{ projector}.
+\end{array}
+\]
+\end{corollary}
