@@ -1,0 +1,38 @@
+{
+  "boundary_column_norm_distribution": {
+    "0": 1620
+  },
+  "checks": {
+    "boundary_column_norms_zero": true,
+    "boundary_zero": true,
+    "column_projector": true,
+    "geometry_counts": true,
+    "image_equals_cycle_space_by_rank": true,
+    "kernel_dim_81": true,
+    "quadrangle_columns_are_octagons": true,
+    "rank_A_81": true,
+    "rank_partial_79": true,
+    "row_projector": true
+  },
+  "column_weight_distribution": {
+    "8": 1620
+  },
+  "exact_sequence": "R^Quadrangles_1620 --A--> C1(Levi)_160 --partial--> C0(Levi)_80, with im(A)=ker(partial)",
+  "identities": {
+    "cycle_generation": "partial A = 0 and rank(A)=dim ker(partial)=81, hence im(A)=ker(partial).",
+    "interpretation": "The signed phase matrix is the oriented edge-cycle incidence matrix of the W33 Levi graph's ordinary quadrangle octagons.",
+    "octagon": "Each ordinary quadrangle of W33 becomes an 8-cycle in the Levi graph.",
+    "tight_frame": "The 1620 Levi octagons form a tight frame for the 81-dimensional Levi cycle space."
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "column_weight": 8,
+    "cycle_space_dimension": 81,
+    "levi_edges_flags": 160,
+    "levi_vertices": 80,
+    "quadrangle_octagon_columns": 1620,
+    "rank_A": 81,
+    "rank_boundary_partial": 79
+  },
+  "theorem_name": "Levi Octagon Cycle-Chain Theorem"
+}
