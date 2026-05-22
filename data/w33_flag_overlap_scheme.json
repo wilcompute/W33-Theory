@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "overlap_distribution_ordered": true,
+    "ordered_relation_total": true,
+    "per_flag_pattern": true,
+    "point_line_flag_count": true,
+    "relations_single_overlap_value": true
+  },
+  "interpretation": "The 3-adic overlap value is a flag-distance invariant on the point-line flags of the generalized quadrangle W(3,3).",
+  "overlap_counts_ordered": {
+    "1": 12960,
+    "3": 8640,
+    "9": 2880,
+    "27": 960
+  },
+  "overlap_counts_unordered": {
+    "1": 6480,
+    "3": 4320,
+    "9": 1440,
+    "27": 480
+  },
+  "per_flag_patterns": {
+    "((1, 81), (3, 54), (9, 18), (27, 6))": 160
+  },
+  "relation_counts_ordered": {
+    "lines_meet_elsewhere": 4320,
+    "p_on_M_cross_incidence": 1440,
+    "q_on_L_cross_incidence": 1440,
+    "same_line": 480,
+    "same_point": 480,
+    "skew_lines_flag_points_collinear": 4320,
+    "skew_lines_flag_points_noncollinear": 12960
+  },
+  "relation_to_overlap_ordered": {
+    "lines_meet_elsewhere": {"3": 4320},
+    "p_on_M_cross_incidence": {"9": 1440},
+    "q_on_L_cross_incidence": {"9": 1440},
+    "same_line": {"27": 480},
+    "same_point": {"27": 480},
+    "skew_lines_flag_points_collinear": {"3": 4320},
+    "skew_lines_flag_points_noncollinear": {"1": 12960}
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "flags": 160,
+    "lines": 40,
+    "per_flag_overlap_pattern": {"1": 81, "3": 54, "9": 18, "27": 6},
+    "points": 40
+  },
+  "theorem_name": "W33 Flag Overlap Association Theorem"
+}
