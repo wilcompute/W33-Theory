@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "absolute_signed_gram_equals_unsigned_gram": true,
+    "geometry_counts": true,
+    "off_absolute_values": true,
+    "rank_81": true,
+    "row_norms_81": true,
+    "signed_projector": true
+  },
+  "identities": {
+    "absolute_lift": "|A A^T| = U U^T entrywise",
+    "adic_angles": "off-diagonal normalized absolute inner products are 3^-1, 3^-2, 3^-3, 3^-4",
+    "projector": "S=A A^T satisfies S^2=160 S",
+    "unit_norm_frame": "S/81 is the Gram matrix of 160 unit vectors in R^81 with frame bound 160/81"
+  },
+  "signed_gram_off_diagonal_distribution": {
+    "-27": 648,
+    "-9": 1296,
+    "-3": 5724,
+    "-1": 5076,
+    "1": 7884,
+    "3": 2916,
+    "9": 1584,
+    "27": 312
+  },
+  "signed_gram_entry_distribution_including_diagonal": {
+    "-27": 648,
+    "-9": 1296,
+    "-3": 5724,
+    "-1": 5076,
+    "1": 7884,
+    "3": 2916,
+    "9": 1584,
+    "27": 312,
+    "81": 160
+  },
+  "spectrum_S": {
+    "-0.0": 79,
+    "160.0": 81
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "columns_quadrangles": 1620,
+    "frame_bound_normalized": "160/81",
+    "normalized_off_diagonal_absolute_inner_products": ["1/3", "1/9", "1/27", "1/81"],
+    "projector_eigenvalue": 160,
+    "rank": 81,
+    "row_norm_squared": 81,
+    "rows_flags": 160
+  },
+  "theorem_name": "Signed 3-adic Flag Tight Frame Theorem"
+}
