@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "column_weight_4": true,
+    "full_row_rank_240": true,
+    "geometry_counts": true,
+    "gram_diag_27": true,
+    "off_values_0_1_3": true,
+    "row_degree_27": true,
+    "spectrum_closed": true,
+    "total_incidence": true
+  },
+  "corner_gram_off_diagonal_distribution": {
+    "0": 23280,
+    "1": 3240,
+    "3": 2160
+  },
+  "corner_gram_spectrum": {
+    "12": 15,
+    "18": 44,
+    "20": 81,
+    "30": 60,
+    "36": 15,
+    "60": 24,
+    "108": 1
+  },
+  "identities": {
+    "incidence": "240*27 = 1620*4 = 6480",
+    "physics_long_shot": "The spectrum contains W33 adjacency multiplicities 1,24,15 and Levi-cycle multiplicity 81, suggesting a transfer layer from local gauge codec corners to protected homology.",
+    "spectrum": "Spec(BB^T)=108^1+60^24+36^15+30^60+20^81+18^44+12^15"
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "column_weight": 4,
+    "local_octahedron_corner_states": 240,
+    "matrix_shape": [240, 1620],
+    "ordinary_quadrangles": 1620,
+    "rank": 240,
+    "row_degree": 27,
+    "total_incidence": 6480
+  },
+  "theorem_name": "Octahedron Corner Hypergraph Spectrum Theorem"
+}
