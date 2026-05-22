@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "each_line_has_two_global_sign_choices": true,
+    "each_point_has_two_global_sign_choices": true,
+    "geometry_counts": true,
+    "left_nullity_79": true,
+    "rank_A_81": true,
+    "relation_span_rank_79": true,
+    "relations_annihilate_A": true,
+    "relations_annihilate_projector": true,
+    "relations_equal_full_left_kernel": true
+  },
+  "identities": {
+    "kernel_identification": "span(point/line signed four-flag relations) = ker(A^T) = ker(AA^T)",
+    "local_relations": "40 point relations + 40 line relations = 80",
+    "nullity": "160 - 81 = 79",
+    "one_global_dependence": "rank(local relation matrix) = 79"
+  },
+  "line_relation_solution_counts": {
+    "2": 40
+  },
+  "point_relation_solution_counts": {
+    "2": 40
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "flags": 160,
+    "global_dependence_count": 1,
+    "left_nullity": 79,
+    "line_relations": 40,
+    "point_relations": 40,
+    "quadrangles": 1620,
+    "rank_A": 81,
+    "relation_span_rank": 79,
+    "total_local_relations": 80
+  },
+  "theorem_name": "Signed Point-Line Nullspace Theorem"
+}
