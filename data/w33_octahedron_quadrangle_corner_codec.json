@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "all_local_octa_vertices_seen": true,
+    "corner_double_count": true,
+    "each_local_octa_vertex_has_27_quadrangle_corners": true,
+    "face_pairs_are_projective_flags": true,
+    "faces_are_signed_X_vectors": true,
+    "local_edges_match_directed_carrier": true,
+    "local_octahedron_fvector": true,
+    "local_vertices_match_w33_edges_count": true,
+    "ordinary_quadrangles": true,
+    "w33_counts": true
+  },
+  "identities": {
+    "corner_double_count": "240*27=1620*4=6480.",
+    "local_edges_to_directed_carrier": "40*12=480 directed carrier slots / local codec channels.",
+    "local_faces_to_X_vectors": "40*8=320=|X_min^{F3}|; antipodal face pairs give 40*4=160 projective flags.",
+    "local_vertices_to_quadrangle_corners": "40*6=240 local angle states, each incident with 27 quadrangle corners.",
+    "meaning": "Quadrangles glue the local pencil-octahedra through their octahedral corner states."
+  },
+  "quadrangle_corner_distribution_per_local_octa_vertex": {
+    "27": 240
+  },
+  "summary": {
+    "aggregate": {
+      "corner_count_total": 6480,
+      "local_octahedron_edges_total": 480,
+      "local_octahedron_faces_total": 320,
+      "local_octahedron_vertices_total": 240,
+      "projective_flags_total": 160,
+      "quadrangle_corner_total": 6480,
+      "signed_flag_faces_total": 320
+    },
+    "all_checks_passed": true,
+    "local_octahedra": 40,
+    "local_octahedron_face_pairs": 4,
+    "local_octahedron_fvector": [6, 12, 8],
+    "ordinary_quadrangles": 1620,
+    "points": 40,
+    "quadrangle_corners_per_quadrangle": 4,
+    "quadrangles_per_local_octahedron_vertex": 27
+  },
+  "theorem_name": "Octahedron Corner Codec Theorem"
+}
