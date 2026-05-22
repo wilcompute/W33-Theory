@@ -1,0 +1,84 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "substrate_lengths": {
+      "passed": true,
+      "values": {
+        "q": 3,
+        "g": 6,
+        "h": 12,
+        "nB": 240,
+        "nH": 72,
+        "kH": 66
+      }
+    },
+    "support_biregularity": {
+      "passed": true,
+      "values": {
+        "160*81": 12960,
+        "1620*8": 12960
+      }
+    },
+    "E6_noncommutation": {
+      "passed": true,
+      "values": {
+        "phase_counts": {
+          "0": 984960,
+          "1": 25920,
+          "2": 25920
+        },
+        "total": 1036800,
+        "nonzero": 51840
+      }
+    },
+    "X_3adic_visibility": {
+      "passed": true,
+      "values": {
+        "per_row": {
+          "1": 81,
+          "3": 54,
+          "9": 18,
+          "27": 6
+        },
+        "global_unordered": {
+          "1": 6480,
+          "3": 4320,
+          "9": 1440,
+          "27": 480
+        }
+      }
+    },
+    "Z_dual_visibility": {
+      "passed": true,
+      "values": {
+        "per_row": {
+          "0": 1187,
+          "1": 288,
+          "2": 96,
+          "3": 32,
+          "4": 16
+        },
+        "global_unordered": {
+          "0": 961470,
+          "1": 233280,
+          "2": 77760,
+          "3": 25920,
+          "4": 12960
+        }
+      }
+    },
+    "toroidal_generating_function": {
+      "passed": true,
+      "values": {
+        "P": [68, 147, 127, 86, 54, 19, 3],
+        "Q": [68, 79, 48, 38, 16, 3],
+        "P(-1)": 0,
+        "Q(-1)": 12,
+        "P(1)": 504,
+        "Q(1)": 252,
+        "P_mod_Phi3": [11, 55],
+        "Norm(11+55w)": 2541
+      }
+    }
+  }
+}
