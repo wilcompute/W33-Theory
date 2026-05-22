@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "geometry_counts": true,
+    "left_nullity_79": true,
+    "levi_connected": true,
+    "levi_cycle_rank_81": true,
+    "quotient_dimension_equals_cycle_rank": true,
+    "relation_rank_79": true,
+    "relation_space_is_kernel": true,
+    "relations_annihilate_A": true
+  },
+  "exact_sequence": "0 -> cut(Levi)_79 -> R^Flags_160 -> cycle(Levi)_81 -> 0",
+  "identities": {
+    "connected_cut_rank": "80 - 1 = 79",
+    "cycle_rank": "160 - 80 + 1 = 81",
+    "flag_count": "|Flags| = 160",
+    "interpretation": "The protected phase image is the Levi cycle space of W(3,3), and the nullspace is the Levi cut/local-relation space.",
+    "local_relation_generators": "|Points|+|Lines| = 80",
+    "projector_split": "160 = 79 + 81"
+  },
+  "summary": {
+    "all_checks_passed": true,
+    "flag_module_dimension": 160,
+    "levi_connected": true,
+    "levi_cycle_rank": 81,
+    "levi_edges_flags": 160,
+    "levi_vertices_points_plus_lines": 80,
+    "phase_matrix_rank": 81,
+    "quotient_dimension": 81,
+    "signed_relation_rank": 79
+  },
+  "theorem_name": "Levi Cycle Quotient Exact Sequence Theorem"
+}
