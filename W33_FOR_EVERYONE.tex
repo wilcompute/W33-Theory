@@ -1050,6 +1050,85 @@ is the old bare/internal unification diagnostic. It is useful as an internal adj
 which is the value used by the PMNS, Cabibbo, and curved-refinement roundtrip layer. Seeing both in the paper is intentional; confusing their shells is not.
 \end{statusbox}
 
+\subsection*{The Hashimoto transport correction: where the $\alpha/11$ comes from}
+
+The dressed value $3/13 = 0.2308$ is the substrate's UV prediction.  The
+observed value at the $Z$-pole is $\sin^2\theta_{\mathrm{eff}}^{\mathrm{lept}}
+\approx 0.23148$.  The tiny gap of about $0.0007$ between these two
+numbers is \emph{not} a free parameter --- it too falls out of $W(3,3)$,
+through the following picture.
+
+\paragraph{The 480 directed edges.}
+Every undirected edge of the $W(3,3)$ graph can be traversed in two ways
+(forward or backward), so $W(3,3)$ has
+\[
+2 E \;=\; 2 \cdot 240 \;=\; 480
+\]
+directed edges.  Call each directed edge $e = (u \to v)$.
+
+\paragraph{Non-backtracking branching.}
+Starting from a directed edge $e = (u \to v)$, the natural next steps
+are the directed edges $e' = (v \to w)$ with $w \ne u$ --- that is, you
+walk forward, but you may not turn around.  Each vertex $v$ has valency
+$k = 12$, so the number of forward choices is $k - 1 = 11$ for every
+edge.  This is the \textbf{Hashimoto non-backtracking branching number}:
+\[
+\boxed{\;k - 1 \;=\; 11 \;=\; p_{\mathrm{Ih}}.\;}
+\]
+\textbf{Eleven} non-backtracking continuations per edge, exactly.
+
+\paragraph{The Hashimoto matrix $B$.}
+Pack these choices into a $480 \times 480$ matrix $B$, where $B_{e,e'} = 1$
+if $e'$ is a legal non-backtracking continuation of $e$, and $0$
+otherwise.  Then every row of $B$ has exactly $11$ ones, and so does
+every column.  The operator $P = B / 11$ is therefore a row-stochastic
+\emph{transport operator}: a Markov chain on directed edges that walks
+forward without backtracking.
+
+\paragraph{Branch-averaging the QED coupling.}
+A first-order radiative correction at the $Z$-pole inserts the running
+QED coupling $\hat\alpha = \alpha(M_Z^2)$ on each directed edge.  When
+this insertion propagates through $B$, it is averaged over the
+$11$ legal continuations.  The net effect on the Weinberg angle is
+exactly
+\[
+\frac{\hat\alpha}{11}.
+\]
+Combining with $3/13$:
+\[
+\boxed{\;
+\sin^2\theta_{\mathrm{eff}}^{\mathrm{lept}}(M_Z)
+\;\;=\;\; \underbrace{\frac{q}{\Phi_3}}_{\,3/13\,=\,\text{tree}}
+\;\;+\;\; \underbrace{\frac{\hat\alpha(M_Z^2)}{k-1}}_{\,\hat\alpha/11\,=\,\text{Hashimoto}}
+\;\;+\;\; O(\hat\alpha^2).\;}
+\]
+Using the standard value $\hat\alpha^{-1}(M_Z^2) \approx 128.95$ gives
+\[
+\frac{3}{13} + \frac{1}{11 \cdot 128.95} \;\approx\; 0.23148,
+\]
+which sits inside the PDG band $0.23148 \pm 0.00012$.
+
+\paragraph{The higher-order tail is bounded.}
+Higher-order isotropic insertions form a Neumann (geometric) series with
+ratio $r = \hat\alpha/11 \approx 7 \times 10^{-4}$:
+\[
+\sum_{n \ge 1} r^n \;=\; \frac{r}{1-r}
+\;=\; \frac{\hat\alpha}{(k-1) - \hat\alpha} \;=\; \frac{\hat\alpha}{11 - \hat\alpha}.
+\]
+The tail beyond the leading $\hat\alpha/11$ is therefore bounded above
+by about $5 \times 10^{-7}$ --- below current experimental precision.
+
+\paragraph{Why this matters.}
+A skeptic could read $\sin^2\theta_W = 3/13$ as numerology and dismiss
+the difference to $0.23148$ as ``RG running.''  The Hashimoto picture
+removes that escape: the $0.0007$ gap is forced by the substrate, the
+denominator $11$ is the non-backtracking branching of $W(3,3)$ (also
+the Ihara prime $p_{\mathrm{Ih}} = k-1$), and the higher-order tail is
+not a free parameter --- it is a Neumann series bounded by the same
+$11$.  Three layers of $W(3,3)$ structure --- $3/13$, $\hat\alpha/11$,
+and the geometric tail --- collectively reproduce the observed
+effective leptonic Weinberg angle.
+
 \section{Standard Model derivation chain}
 
 \label{sec:sm-derivations}

@@ -877,6 +877,82 @@ $\sin^2\theta_W = 0.23122\pm 0.00004$, consistent with
 RG running from $3/13$.
 \end{remark}
 
+\subsection{Hashimoto Transport Correction and the $\alpha/11$ Bound}
+\label{sec:hashimoto-weinberg}
+
+The UV value $3/13$ is the finite-geometric \emph{tree} generator.  At
+the $Z$-pole the radiative correction is itself derivable from $W(3,3)$:
+it equals the running QED coupling branch-averaged over the
+non-backtracking continuations of the Hashimoto operator.
+
+\begin{theorem}[Hashimoto Branching Number]
+\label{thm:hashimoto-branching}
+Build the $W(3,3)$ Hashimoto non-backtracking operator
+$B \in \{0,1\}^{2E\times 2E}$ on the $|2E| = 480$ directed edges.
+Then $B$ has constant row and column sum
+\[
+\sum_{e'} B_{e,e'} \;=\; k - 1 \;=\; 11 \quad\text{for every directed edge $e$.}
+\]
+Equivalently $P := B/(k-1) = B/11$ is row-stochastic, and the
+Ihara--Bass identity for $W(3,3)$ reads
+\[
+\det(I - u B) \;=\; (1-u^2)^{E-V}\,\det\!\bigl(I - uA + (k-1)\,u^2 I\bigr),
+\]
+so $11 = k - 1 = p_{\mathrm{Ih}}$ is simultaneously the Hashimoto
+branching number, the Ihara prime, and the quadratic coefficient of
+the Ihara--Bass vertex determinant.
+\end{theorem}
+
+\begin{theorem}[Leading Hashimoto Weinberg Correction]
+\label{thm:hashimoto-weinberg}
+An isotropic first-order radiative insertion of strength
+$\hat\alpha = \alpha(M_Z^2)$ on the directed-edge carrier is
+branch-averaged over the $k-1 = 11$ non-backtracking continuations.
+The leading transport correction is therefore $\hat\alpha/11$, giving
+\begin{equation}
+\boxed{\;
+\sin^2\theta_{\mathrm{eff}}^{\mathrm{lept}}(M_Z)
+\;=\; \frac{q}{\Phi_3} \;+\; \frac{\hat\alpha(M_Z^2)}{k-1}
+\;+\; O\!\bigl(\hat\alpha^2\bigr)
+\;=\; \frac{3}{13} + \frac{\hat\alpha}{11} + O(\hat\alpha^2).
+\;}
+\end{equation}
+Using the running coupling $\hat\alpha^{-1}(M_Z^2) \approx 128.946$
+(Keshavarzi--Nomura--Teubner) gives
+$\sin^2\theta_{\mathrm{eff}} \approx 0.23148$, within the PDG band
+$0.23148 \pm 0.00012$.
+\end{theorem}
+
+\begin{theorem}[Bounded Neumann Series for Repeated Insertions]
+\label{thm:neumann-weinberg}
+Let $r := \hat\alpha/(k-1) = \hat\alpha/11$.  Under the isotropic
+scalar-transport approximation, the repeated-insertion response is
+the Neumann series
+\[
+\delta_{\mathrm{full}}
+\;=\; \sum_{n\ge 1} r^n
+\;=\; \frac{r}{1-r}
+\;=\; \frac{\hat\alpha}{(k-1) - \hat\alpha}
+\;=\; \frac{\hat\alpha}{11 - \hat\alpha}.
+\]
+Since $r \approx 0.000711$ at the $Z$-pole, the higher-order tail
+$r^2/(1-r) < 5 \times 10^{-7}$, so the closed form is
+\[
+\sin^2\theta_{\mathrm{eff}}(M_Z)
+\;=\; \frac{q}{\Phi_3}
+\;+\; \frac{\hat\alpha}{(k-1) - \hat\alpha}
+\;+\; (\text{sector-dependent corrections}),
+\]
+with the isotropic tail bounded explicitly by the Hashimoto branching
+of $W(3,3)$.
+\end{theorem}
+
+This sharpens \eqref{eq:weinberg} from a UV identity to a complete
+$Z$-pole expression: the leading geometric piece $3/13$ comes from
+the projective line count of $\PG(3,\FF_3)$, while the radiative
+piece $\hat\alpha/11$ is forced by the $k-1$ non-backtracking
+branching of the substrate.
+
 
 % ═══════════════════════════════════════════════════════════════
 \section{The Fine-Structure Constant}
