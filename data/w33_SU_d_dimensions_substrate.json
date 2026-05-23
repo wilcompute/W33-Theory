@@ -1,0 +1,111 @@
+{
+  "SU_d_substrate_rows": [
+    {
+      "d": 3,
+      "d_substrate": "q (single qutrit)",
+      "dim_su": 8,
+      "expected_substrate": 8,
+      "match": true,
+      "substrate_form": "2^q (tomotope cells)"
+    },
+    {
+      "d": 9,
+      "d_substrate": "q^2 (self-entangled qutrit = 9 history cells)",
+      "dim_su": 80,
+      "expected_substrate": 80,
+      "match": true,
+      "substrate_form": "2 v"
+    },
+    {
+      "d": 27,
+      "d_substrate": "q^q (cubic-surface lines / E_6 fund rep)",
+      "dim_su": 728,
+      "expected_substrate": 728,
+      "match": true,
+      "substrate_form": "2^q * Phi_6 * Phi_3"
+    },
+    {
+      "d": 40,
+      "d_substrate": "v (W(3,3) vertex count)",
+      "dim_su": 1599,
+      "expected_substrate": 1599,
+      "match": true,
+      "substrate_form": "q * Phi_3 * 41  (41 = Ogg prime)"
+    },
+    {
+      "d": 81,
+      "d_substrate": "q^{q+1} = H_1 (matter sector)",
+      "dim_su": 6560,
+      "expected_substrate": 6560,
+      "match": true,
+      "substrate_form": "2^{q+2} * Csaszar_count * 41 (Ogg prime)"
+    }
+  ],
+  "all_match": true,
+  "header": {
+    "substrate_constants": {
+      "Csaszar_count": 5,
+      "H_1": 81,
+      "Ogg_41": 41,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "f": 24,
+      "k": 12,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "dim SU(d) = d^2 - 1 is standard.  The substrate-primitive factorisations are exact arithmetic.  The 'photonic control parameter count' interpretation is the standard Reck/Clements decomposition language for linear-optics unitaries.  No new physical observable is derived; the new content is the unified substrate-primitive reading of the control parameter counts at the substrate's distinguished Hilbert-space dimensions.",
+  "ogg_41": {
+    "alternative": "Twin Pell sum #2 + f",
+    "appearances": [
+      "dim SU(v) = 1599 = q*Phi_3*41",
+      "dim SU(H_1) = 6560 = 2^{q+2}*Csaszar*41"
+    ],
+    "is_ogg_prime": true,
+    "monster_factor": "41 in {2,3,5,7,11,13,17,19,23,29,31,41,47,59,71}",
+    "substrate_form": "q^2 + 2^q + f = 17 + 24",
+    "value": 41,
+    "verify": true
+  },
+  "photonic_universal_control": [
+    {
+      "Hilbert_dim_d": 3,
+      "parameter_substrate_form": "2^q (tomotope cells)",
+      "physical_realisation_modes": "q (single qutrit)",
+      "universal_control_parameters": 8
+    },
+    {
+      "Hilbert_dim_d": 9,
+      "parameter_substrate_form": "2 v",
+      "physical_realisation_modes": "q^2 (self-entangled qutrit = 9 history cells)",
+      "universal_control_parameters": 80
+    },
+    {
+      "Hilbert_dim_d": 27,
+      "parameter_substrate_form": "2^q * Phi_6 * Phi_3",
+      "physical_realisation_modes": "q^q (cubic-surface lines / E_6 fund rep)",
+      "universal_control_parameters": 728
+    },
+    {
+      "Hilbert_dim_d": 40,
+      "parameter_substrate_form": "q * Phi_3 * 41  (41 = Ogg prime)",
+      "physical_realisation_modes": "v (W(3,3) vertex count)",
+      "universal_control_parameters": 1599
+    },
+    {
+      "Hilbert_dim_d": 81,
+      "parameter_substrate_form": "2^{q+2} * Csaszar_count * 41 (Ogg prime)",
+      "physical_realisation_modes": "q^{q+1} = H_1 (matter sector)",
+      "universal_control_parameters": 6560
+    }
+  ],
+  "polytope_link": {
+    "8_cell_or_16_cell_fvec_sum": 80,
+    "interpretation": "The 8-cell {4,3,3} and 16-cell {3,3,4} dual pair (commit 4065af41) each have f-vector sum 80, exactly equal to dim SU(9) -- the unitary group of the self-entangled qutrit Hilbert space.  And |W(D_4)| = 192 = f * 2^q acts on this dual pair (Klein closure, commit 2a533251).  So the 8/16-cell dual pair carries the substrate's self-entangled-qutrit control structure simultaneously at the polytope level and the photonic-computation level.",
+    "match": true,
+    "self_entangled_SU_dim": 80
+  },
+  "theorem": "W(3,3) SU(d) Substrate Theorem.  For each substrate-meaningful Hilbert-space dimension d in {q, q^2, q^q, v, q^{q+1}}, the unitary group dimension dim SU(d) = d^2 - 1 has a clean substrate-primitive factorisation.  In photonic universal computation language: the number of beam-splitter + phase-shifter parameters needed for universal SU(d) control is (in order) 2^q, 2v, 2^q*Phi_6*Phi_3, q*Phi_3*41, 2^{q+2}*Csaszar*41 -- with the Monster/Ogg supersingular prime 41 = q^2 + 2^q + f appearing in BOTH dim SU(v) and dim SU(H_1).  The self-entangled qutrit (past x future = 9 modes) has SU dimension 80 = 2v exactly matching the 8-cell / 16-cell f-vector sum (commit 4065af41).  This realises the user's single-photon temporal-triangle picture (Part MCCIII) at the universal-control-parameter level."
+}
