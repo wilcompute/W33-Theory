@@ -1,0 +1,60 @@
+{
+  "hashimoto_link": {
+    "B_eigenvalue_plus_1_multiplicity": 201,
+    "comment": "From commit 88899d6b's sector-projected Hashimoto spectrum, the +1 eigenvalue of B has multiplicity 200 (backtrack stabiliser) + 1 (Perron pair) = 201 = q * 67 = H_1(graph).",
+    "matches_H_1_graph": true
+  },
+  "header": {
+    "substrate_constants": {
+      "Heegner_67": 67,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "edges": 240,
+      "k": 12,
+      "q": 3,
+      "triangles": 160,
+      "v": 40
+    }
+  },
+  "heegner_67_substrate_appearances": [
+    {
+      "appearance": "m_tau mass identity",
+      "form": "m_tau = Phi_6 * (q^2 + 2^q) / 67 = 7 * 17 / 67",
+      "interpretation": "67 as denominator of tau lepton mass closed form",
+      "value": 1.7761194029850746
+    },
+    {
+      "appearance": "H_1(graph W(3,3)) free-group rank",
+      "form": "H_1(graph) = m - n + 1 = q * 67 = 201",
+      "interpretation": "67 as quotient of graph homology by q",
+      "value": 201
+    },
+    {
+      "appearance": "Heegner / class-number-1 imaginary quadratic",
+      "form": "Q(sqrt(-67)) has class number 1",
+      "interpretation": "67 as 8th Heegner number",
+      "value": 67
+    }
+  ],
+  "honesty_boundary": "Graph and 2-complex homology computations are standard.  The substrate-primitive identifications of rank d_1 = q * Phi_3 and rank d_2 = k * Phi_4 (= Hodge boundary) are exact arithmetic.  The Heegner-67 / m_tau-denominator coincidence is the new structural content -- the same prime 67 appearing in two distinct substrate contexts (mass identity + graph homology) at q * 67.",
+  "theorem": "W(3,3) Two-Homology / Heegner-67 Theorem.  The W(3,3) graph (as a 1-complex) has first homology H_1(graph) = |E| - (v - 1) = 201 = q * 67, where 67 is the 8th Heegner number and the denominator of the tau lepton mass identity m_tau = Phi_6 * (q^2 + 2^q) / 67 = 7 * 17 / 67. Adding the 160 substrate triangles to form the line-triangle 2-complex KILLS EXACTLY k * Phi_4 = 120 Hodge boundary modes, leaving H_1(2-complex) = 81 = q^(q+1) (matter sector).  The B-eigenvalue +1 of the Hashimoto operator has multiplicity 201 = q * 67, equal to the graph's free-group rank.  So 67 controls simultaneously: (a) the m_tau mass denominator, (b) the W(3,3) graph's first homology / pi_1 rank divided by q, and (c) the Hashimoto trivial-plus stabiliser multiplicity divided by q -- three structurally distinct substrate appearances of the same Heegner prime.",
+  "two_h1_decomposition": {
+    "C_0_vertices": 40,
+    "C_1_edges": 240,
+    "C_2_triangles": 160,
+    "H_1_2complex": 81,
+    "H_1_2complex_substrate": "q^(q+1) = H_1 = matter sector",
+    "H_1_graph": 201,
+    "H_1_graph_substrate": "m - n + 1 = q * Heegner_67 = q * (m_tau denominator)",
+    "H_2_2complex": 40,
+    "H_2_2complex_substrate": "v (top homology, commit a8cc2311)",
+    "difference": 120,
+    "difference_substrate": "k * Phi_4 = Hodge boundary mode count",
+    "rank_d_1": 39,
+    "rank_d_1_substrate": "q * Phi_3 = 3 * 13 = 39",
+    "rank_d_2": 120,
+    "rank_d_2_substrate": "k * Phi_4 = 12 * 10 = 120 (Hodge boundary)",
+    "verify_diff_eq_rank_d2": true
+  }
+}
