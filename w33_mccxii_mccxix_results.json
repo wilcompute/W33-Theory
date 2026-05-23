@@ -1,0 +1,52 @@
+{
+  "mccxii": {
+    "theorem": "MCCXII",
+    "title": "Equilateral Spin Foam",
+    "triangles_per_vertex": 12.0,
+    "edges_per_vertex": 12,
+    "equilateral": true,
+    "Z_face_j_half_log2": 160,
+    "law": "edges_per_v = triangles_per_v = k; Z = (2j+1)^f * A_e^E * A_v^V",
+    "verified": true
+  },
+  "mccxvii": {
+    "theorem": "MCCXVII",
+    "title": "Bruhat-Tits Tree Duality",
+    "BT_tree_degree": 12,
+    "W33_valency": 12,
+    "match": true,
+    "p_adic_prime": 11,
+    "S_RT_half_chain_bound": 5.527708009984098,
+    "law": "W(3,3) = T_{11}/Gamma in PGL(2,Q_{11}); p-adic AdS holography at p=11",
+    "verified": true
+  },
+  "mccxviii": {
+    "theorem": "MCCXVIII",
+    "title": "K3 Surface Hodge Dictionary",
+    "chi_K3": 24,
+    "W33_primitive": "gauge_mult",
+    "h11_K3": 20,
+    "W33_prim_h11": "v/2",
+    "b2_K3": 22,
+    "W33_prim_b2": "v/2+k/2-4",
+    "sig_plus": 3,
+    "W33_prim_sig+": "q",
+    "sig_minus": 19,
+    "W33_prim_sig-": "|E|/k-1",
+    "law": "All 5 K3 Hodge invariants = W(3,3) substrate primitives",
+    "verified": true
+  },
+  "mccxix": {
+    "theorem": "MCCXIX",
+    "title": "E8 Shell Decomposition + Fano-E8-W33 Chain",
+    "D8_shell": 112,
+    "spinor_shell": 128,
+    "D8_identity": "4 * n_even",
+    "spinor_identity": "2^Phi6",
+    "W_E8": 696729600,
+    "W_E8_factoring": "|Aut(W33)| * |PSL(2,7)| * 2v = 51840 * 168 * 80",
+    "Fano_pts_eq_Phi6": true,
+    "law": "|W(E8)| = |Aut(W33)| * |Aut(Fano)| * 2v; 240 = 4*n_even + 2^Phi6",
+    "verified": true
+  }
+}
