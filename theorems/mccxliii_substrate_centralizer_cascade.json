@@ -1,0 +1,21 @@
+{
+  "theorem_id": "MCCXLIII",
+  "title": "Substrate Centralizer Cascade: Monster Conjugacy Class Sizes via W(3,3)",
+  "status": "OPEN",
+  "substrate_primitives": {
+    "E": 240,
+    "q": 3,
+    "k": 6,
+    "gauge_mult": 27,
+    "v": 27
+  },
+  "conjecture": "For each substrate prime p in {3,7,11,13}, the Monster centralizer order |C_M(pA)| satisfies: |C_M(pA)| / |C_M(1A)|^{1/q} ≡ chi_{pA}(V_{196883}) (mod gauge_mult). Equivalently, the centralizer cascade is governed by the substrate self-similarity fixed point |Aut(W(3,3))| = 51840.",
+  "partial_evidence": [
+    "chi_{11A} = 16 = 2^(q+1): consistent with |C_M(11A)| being a 2-group extension",
+    "chi_{7A} = 50 = 2*5^2: consistent with |C_M(7A)| containing L_2(7) of order 168",
+    "chi_{3A} = 782 = 2*17*23: 23 divides |M_24|; 17 is prime above E/k! ... = 240/720 ... minimal prime above gauge_mult/2 = 13.5",
+    "Requires full centralizer order extraction from ATLAS data to close"
+  ],
+  "next_step": "Extract |C_M(pA)| from monster_atlas.json or ATLAS of Finite Groups and verify modular congruence",
+  "frontier": true
+}
