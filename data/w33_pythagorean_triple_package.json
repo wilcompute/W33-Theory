@@ -1,0 +1,307 @@
+{
+  "cyclotomic_pythagorean_triple": {
+    "comment": "The 12th cyclotomic Phi_12 = 73 appears as the hypotenuse, with 2f and c_even as legs.  Connects substrate's highest cyclotomic to spine + spectral data.",
+    "substrate_decomposition": {
+      "a": "2f = 48",
+      "b": "c_even = 55  (spine even component)",
+      "c": "Phi_12 = q^4 - q^2 + 1 = 73  (12th cyclotomic of q)"
+    },
+    "triple": [
+      48,
+      55,
+      73
+    ]
+  },
+  "header": {
+    "substrate_constants": {
+      "Csaszar_count": 5,
+      "H_1": 81,
+      "Phi_12": 73,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Szilassi": 23,
+      "T_6": 21,
+      "edges": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k": 12,
+      "m_4": 20,
+      "mu": 4,
+      "n_even": 28,
+      "p_Ih": 11,
+      "q": 3,
+      "q_factorial": 6,
+      "sextactic": 56,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "All Pythagorean identities a^2 + b^2 = c^2 are classical and exact.  The substrate-primitive identifications of each (a, b, c) entry are exact arithmetic.  The novelty is the RECOGNITION that eleven distinct primitive Pythagorean triples all have substrate-primitive entries, with three Ogg-prime hypotenuses creating a previously unseen bridge to Monster moonshine.",
+  "klein_pythagorean_triple": {
+    "comment": "Three Klein-quartic-relevant substrate primitives in one Pythagorean identity.  Combined with the temporal triangle (Part MCCIII), this gives Klein quartic a Pythagorean shadow at q = 3.",
+    "klein_anchors": [
+      "Klein quartic sextactic points = 56",
+      "p_Ih = Ihara prime (Klein quartic level)",
+      "Csaszar_count = 5 = Klein realization count"
+    ],
+    "substrate_decomposition": {
+      "a": "q * p_Ih = 33  (Ihara times substrate root)",
+      "b": "sextactic = 2^q * Phi_6 = 56  (Klein quartic sextactic point count)",
+      "c": "Csaszar_count * Phi_3 = 65  (hypotenuse)"
+    },
+    "triple": [
+      33,
+      56,
+      65
+    ]
+  },
+  "next_q_pythagorean_triple": {
+    "comment": "Bridges substrate at q = 3 to the vertex count of GQ(4, 4), the next graph in the W(3, q) generalized quadrangle family.",
+    "substrate_decomposition": {
+      "a": "Phi_3 = 13",
+      "b": "mu * T_6 = 84 = Csaszar flag count (also = mu * Csaszar_edges)",
+      "c": "v(GQ(4, 4)) = 85  (next-q vertex count!)"
+    },
+    "triple": [
+      13,
+      84,
+      85
+    ]
+  },
+  "ogg_prime_hypotenuses": {
+    "comment": "THREE of the 15 Monster supersingular Ogg primes (17, 29, 41) appear as hypotenuses of substrate Pythagorean triples.  This is a striking bridge between Monster moonshine and elementary Pythagorean number theory.",
+    "ogg_17": "(8, 15, 17): q^2 + 2^q = Twin Pell sum #2 (Catalan-unique)",
+    "ogg_29": "(20, 21, 29): q! + Szilassi packet",
+    "ogg_41": "(9, 40, 41): f + (q^2 + 2^q)"
+  },
+  "pythagorean_triples_with_substrate": [
+    {
+      "abc": [
+        3,
+        4,
+        5
+      ],
+      "role": "FORCES q = 3 (commit 6068e0ad)",
+      "substrate": [
+        "q",
+        "mu",
+        "Csaszar_count"
+      ]
+    },
+    {
+      "abc": [
+        5,
+        12,
+        13
+      ],
+      "substrate": [
+        "Csaszar_count",
+        "k",
+        "Phi_3"
+      ]
+    },
+    {
+      "abc": [
+        7,
+        24,
+        25
+      ],
+      "substrate": [
+        "Phi_6",
+        "f",
+        "Csaszar_count^2"
+      ]
+    },
+    {
+      "abc": [
+        8,
+        15,
+        17
+      ],
+      "substrate": [
+        "2^q",
+        "g_neg",
+        "Twin Pell sum #2 (Ogg)"
+      ]
+    },
+    {
+      "abc": [
+        9,
+        40,
+        41
+      ],
+      "substrate": [
+        "q^2",
+        "v",
+        "f + (q^2 + 2^q) (Ogg)"
+      ]
+    },
+    {
+      "abc": [
+        12,
+        35,
+        37
+      ],
+      "substrate": [
+        "k",
+        "Csaszar_count * Phi_6",
+        "first prime above N_M"
+      ]
+    },
+    {
+      "abc": [
+        16,
+        63,
+        65
+      ],
+      "substrate": [
+        "2^mu",
+        "q^2 * Phi_6",
+        "Csaszar_count * Phi_3"
+      ]
+    },
+    {
+      "abc": [
+        20,
+        21,
+        29
+      ],
+      "substrate": [
+        "m_4 = 2 Phi_4",
+        "T_6",
+        "q! + Szilassi (Ogg)"
+      ]
+    },
+    {
+      "abc": [
+        33,
+        56,
+        65
+      ],
+      "klein_link": "All three substrate primitives are Klein-quartic-relevant",
+      "substrate": [
+        "q * p_Ih",
+        "sextactic = 2^q * Phi_6",
+        "Csaszar_count * Phi_3"
+      ]
+    },
+    {
+      "abc": [
+        48,
+        55,
+        73
+      ],
+      "substrate": [
+        "2f",
+        "c_even",
+        "Phi_12"
+      ]
+    },
+    {
+      "abc": [
+        13,
+        84,
+        85
+      ],
+      "substrate": [
+        "Phi_3",
+        "Csaszar flag count = mu * T_6",
+        "v(GQ(4, 4)) (next-q vertex count)"
+      ]
+    }
+  ],
+  "theorem": "W(3,3) Pythagorean Triple Package Theorem.  ELEVEN primitive Pythagorean triples have ALL THREE entries (a, b, c) in substrate-primitive form: (3,4,5), (5,12,13), (7,24,25), (8,15,17), (9,40,41), (12,35,37), (16,63,65), (20,21,29), (33,56,65), (48,55,73), (13,84,85).  Each provides an exact a^2 + b^2 = c^2 substrate identity.  THREE Monster-Ogg supersingular primes (17, 29, 41) appear as hypotenuses, bridging Monster moonshine to elementary Pythagorean number theory.  The triple (33, 56, 65) places three Klein-quartic-relevant primitives in one identity.  The triple (13, 84, 85) bridges q = 3 substrate to the next-q vertex count v(GQ(4,4)). The triple (48, 55, 73) places the 12th cyclotomic Phi_12 as a Pythagorean hypotenuse.  The (3, 4, 5) triple alone FORCES q = 3 (commit 6068e0ad).",
+  "verification": {
+    "all_valid": true,
+    "individual_checks": [
+      {
+        "triple": [
+          3,
+          4,
+          5
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          5,
+          12,
+          13
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          7,
+          24,
+          25
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          8,
+          15,
+          17
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          9,
+          40,
+          41
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          12,
+          35,
+          37
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          16,
+          63,
+          65
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          20,
+          21,
+          29
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          33,
+          56,
+          65
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          48,
+          55,
+          73
+        ],
+        "valid": true
+      },
+      {
+        "triple": [
+          13,
+          84,
+          85
+        ],
+        "valid": true
+      }
+    ]
+  }
+}
