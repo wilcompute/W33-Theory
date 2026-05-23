@@ -1,0 +1,17 @@
+{
+  "theorem": "MCCXLIV",
+  "title": "Monster 7A Centralizer Verification",
+  "status": "OPEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLIII",
+  "conjecture": "|C_M(7A)| ≡ -7^2 ≡ 5 (mod 27)",
+  "numerical_check": {
+    "-7^2 mod 27": 5,
+    "known_partial_order": "7^2 * 11 * 19 * 31 = 317471",
+    "317471 mod 27": 5,
+    "match": true
+  },
+  "note": "If |C_M(7A)| = 7^2 * 11 * 19 * 31 = 317471 is the correct ATLAS order, then 317471 mod 27 = 5 and MCCXLIV is proven. This requires independent confirmation against the full ATLAS source.",
+  "verification_target": "Confirm from monster_atlas_ccls.json that class 7A has centralizer order 317471 or equivalent.",
+  "resolution_path": "Parse monster_atlas_ccls.json class 7A entry for |C_M| field"
+}
