@@ -1,0 +1,96 @@
+{
+  "all_six_match": true,
+  "e6_aut_anchor": {
+    "Weyl_order": 51840,
+    "Weyl_order_equals_Aut_W33": true,
+    "comment": "|W(E_6)| = |Aut(W(3,3))| = 51,840 was the original substrate-E_6 anchor.  The six-fold identification of dim(E_6) = 78 added here is the SECOND independent anchor, making E_6 doubly tied to the substrate's structure."
+  },
+  "e6_internal_substrate_decomposition": {
+    "check": true,
+    "decomposition": "dim E_6 = lambda_gauge + q! = 72 + 6",
+    "dim_E6": 78,
+    "rank": 6,
+    "rank_substrate": "q! = Master Equation root = 6",
+    "root_count": 72,
+    "root_count_substrate": "lambda_gauge = 2^q * q^2 = 72"
+  },
+  "header": {
+    "substrate_constants": {
+      "H_1": 81,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Szilassi_packet": 23,
+      "c_even": 55,
+      "dim_E6": 78,
+      "edges": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k": 12,
+      "lambda_gauge": 72,
+      "p_Ih": 11,
+      "q": 3,
+      "q!": 6,
+      "triangles": 160,
+      "v": 40
+    }
+  },
+  "homology_package": {
+    "C_0": 40,
+    "C_1": 240,
+    "C_2": 160,
+    "H_0": 1,
+    "H_1": 81,
+    "H_2": 40,
+    "H_2_substrate": "v (W(3,3) vertex count)",
+    "euler_characteristic": -40,
+    "euler_substrate": "-v",
+    "h_2_equals_v": true,
+    "rank_d_1": 39,
+    "rank_d_1_substrate": "d_X * Phi_3 = q * Phi_3 = 3 * 13 = 39",
+    "rank_d_2": 120,
+    "rank_d_2_substrate": "k * Phi_4 = 12 * 10 = 120",
+    "total_chain_dimension": 440,
+    "total_chain_match": true,
+    "total_chain_substrate": "2^q * c_even = 8 * 55 = 440"
+  },
+  "honesty_boundary": "Each individual reading is exact arithmetic.  The six-fold coincidence is a structural observation about how independent substrate layers converge.  The top-homology identification H_2 = v follows from the chain complex's dim C_2 = #triangles = v * k * lambda / 6 = 160 and rank(d_2) = 120: H_2 = ker(d_2) = 160 - 120 = 40 = v -- exact arithmetic.",
+  "six_readings_of_dim_E6": [
+    {
+      "match": true,
+      "name": "2(v - 1)",
+      "substrate": "combinatorial: 2 * (vertex count - 1)",
+      "value": 78
+    },
+    {
+      "match": true,
+      "name": "2(f + g)",
+      "substrate": "spectral: 2 * (SRG eigenvalue multiplicities sum)",
+      "value": 78
+    },
+    {
+      "match": true,
+      "name": "H_1 - q",
+      "substrate": "topological: H_1 minus substrate root",
+      "value": 78
+    },
+    {
+      "match": true,
+      "name": "c_even + Szilassi",
+      "substrate": "parity-sector: spine even + Szilassi packet",
+      "value": 78
+    },
+    {
+      "match": true,
+      "name": "lambda_gauge + q!",
+      "substrate": "X-scheme + Master Equation root",
+      "value": 78
+    },
+    {
+      "match": true,
+      "name": "# non-trivial Ihara zeros",
+      "substrate": "dynamical: Hashimoto complex eigenvalues on Ramanujan circle",
+      "value": 78
+    }
+  ],
+  "theorem": "W(3,3) E_6 Six-Fold Identification Theorem.  The dimension of the exceptional Lie algebra E_6 admits SIX independent substrate-primitive identifications: 2(v - 1), 2(f + g), H_1 - q, c_even + Szilassi, lambda_gauge + q!, and the count of non-trivial complex zeros of the Ihara zeta of W(3,3).  All six structural layers -- combinatorial, spectral, topological, parity-sector, X-scheme, dynamical -- converge on dim(E_6) = 78.  Combined with |W(E_6)| = |Aut W(3,3)|, the substrate is doubly anchored on E_6.  The line-triangle complex of W(3,3) has homology H_0 = 1, H_1 = q^{q+1} = 81 (matter), H_2 = v = 40 (TOP HOMOLOGY = vertex count, NEW), Euler characteristic -v, total chain dimension 2^q * c_even."
+}
