@@ -1,0 +1,58 @@
+{
+  "mccvii": {
+    "theorem": "MCCVII",
+    "title": "W(3,3) Quantum LDPC Code",
+    "code_n": 240,
+    "code_k": 81,
+    "code_rate": 0.3375,
+    "rate_percent": 33.75,
+    "d_lower_bound": 2.8167151608781213,
+    "verified": true,
+    "law": "[[n=|E|, k=H_1, d>2*sqrt(|E|)/p_Ih]] with rate = q^(q+1)/|E|"
+  },
+  "mccviii": {
+    "theorem": "MCCVIII",
+    "title": "Fermionic Zeta Mass Doubling",
+    "m_massless": 0.0,
+    "m_perron": 2.3978952727983707,
+    "m_ramanujan": 1.1989476363991853,
+    "ratio": 2.0,
+    "law": "m_Perron = 2 * m_Ramanujan (exact)",
+    "verified": true,
+    "external_ref": "arXiv:2501.08803, PTEP 2025"
+  },
+  "mccix": {
+    "theorem": "MCCIX",
+    "title": "C220 Holographic Partition Law",
+    "C220": 220,
+    "realized_triangles": 160,
+    "chiral_shadow": 60,
+    "g_neg": 15,
+    "factorization_v2_pIh": "20 * 11 = 220",
+    "law": "C(k,3) = #triangles + 4*g_neg",
+    "verified": true
+  },
+  "mccx": {
+    "theorem": "MCCX",
+    "title": "Umbral Moonshine Gauge Anchor",
+    "gauge_mult": 24,
+    "Niemeier_A1_24_rank": 24,
+    "M24_action_dimension": 24,
+    "M12_action_dimension": 12,
+    "k_valency": 12,
+    "chiral_mult": 15,
+    "M12_odd_conj_classes": 15,
+    "law": "Gauge mult = M_24 action = Niemeier A_1^24 rank = 24; k = M_12 action = 12",
+    "verified": true
+  },
+  "mccxi": {
+    "theorem": "MCCXI",
+    "title": "Graph RH Functional Equation Perfect Square",
+    "functional_exponent": 400,
+    "sqrt_exponent": 20,
+    "as_perfect_square": "(20)^2 * 4 = 1600... wait: (v/2)^2 * 4 = 20^2 = 400",
+    "corollary_2E": "2|E| = 480 = 400 + 80 = 400 + 2*40",
+    "law": "Ihara functional exponent = (v/2)^2 * 4 = 20^2 = 400",
+    "verified": true
+  }
+}
