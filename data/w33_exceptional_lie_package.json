@@ -1,0 +1,202 @@
+{
+  "coxeter_cascade": {
+    "E_6_h_is_k": true,
+    "E_7_h_is_2_q_squared": true,
+    "E_8_h_is_2_g_neg": true,
+    "E_8_h_times_rank_is_E": true,
+    "F_4_h_is_k": true,
+    "G_2_h_is_q_factorial": true
+  },
+  "e6_thirteen_fold_anchor": {
+    "dim_E6_readings_count": 6,
+    "plus_Weyl_order": "= |Aut(W(3,3))| = 51840",
+    "plus_coxeter": "= k",
+    "plus_rank": "= q!",
+    "plus_root_count": "= lambda_gauge",
+    "total_substrate_anchors_on_E_6": "13 (6 dim readings + root_count + rank + Coxeter + Weyl + cascade quotient + Ihara discriminant + Klein closure)"
+  },
+  "exceptional_groups": [
+    {
+      "Weyl_order": 12,
+      "coxeter_h": 6,
+      "coxeter_substrate": "q!",
+      "dim": 14,
+      "group": "G_2",
+      "rank": 2,
+      "root_count": 12,
+      "root_count_substrate": "k (valency of W(3,3))",
+      "substrate_dim_readings": [
+        {
+          "form": "2 Phi_6",
+          "value": 14
+        },
+        {
+          "form": "mu + Phi_4",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "Weyl_order": 1152,
+      "coxeter_h": 12,
+      "coxeter_substrate": "k",
+      "dim": 52,
+      "group": "F_4",
+      "rank": 4,
+      "root_count": 48,
+      "root_count_substrate": "2f",
+      "substrate_dim_readings": [
+        {
+          "form": "mu * Phi_3",
+          "value": 52
+        },
+        {
+          "form": "d_Z * c_odd",
+          "value": 52
+        },
+        {
+          "form": "f + n_even",
+          "value": 52
+        }
+      ]
+    },
+    {
+      "Weyl_order": 51840,
+      "Weyl_order_substrate": "|Aut(W(3,3))|",
+      "coxeter_h": 12,
+      "coxeter_substrate": "k",
+      "dim": 78,
+      "group": "E_6",
+      "rank": 6,
+      "root_count": 72,
+      "root_count_substrate": "lambda_gauge (X-scheme middle eigenvalue)",
+      "substrate_dim_readings": [
+        {
+          "form": "2(v - 1)",
+          "value": 78
+        },
+        {
+          "form": "2(f + g)",
+          "value": 78
+        },
+        {
+          "form": "H_1 - q",
+          "value": 78
+        },
+        {
+          "form": "c_even + Szilassi",
+          "value": 78
+        },
+        {
+          "form": "lambda_gauge + q!",
+          "value": 78
+        },
+        {
+          "form": "# non-trivial Ihara zeros",
+          "value": 78
+        }
+      ]
+    },
+    {
+      "Weyl_order": 2903040,
+      "coxeter_h": 18,
+      "coxeter_substrate": "2 q^2",
+      "dim": 133,
+      "group": "E_7",
+      "rank": 7,
+      "root_count": 126,
+      "root_count_substrate": "q! * T_6 (Master Eq * Csaszar edges)",
+      "substrate_dim_readings": [
+        {
+          "form": "Phi_6 * 19",
+          "value": 133
+        },
+        {
+          "form": "c_even + dim E_6",
+          "value": 133
+        },
+        {
+          "form": "p_Ih * Phi_3 - Phi_4",
+          "value": 133
+        },
+        {
+          "form": "k^2 - p_Ih",
+          "value": 133
+        },
+        {
+          "form": "Phi_3 * Phi_4 + q",
+          "value": 133
+        },
+        {
+          "form": "p_Ih^2 + k",
+          "value": 133
+        }
+      ]
+    },
+    {
+      "Weyl_order": 696729600,
+      "coxeter_h": 30,
+      "coxeter_substrate": "2 g (X-scheme gauge multiplicity)",
+      "dim": 248,
+      "group": "E_8",
+      "rank": 8,
+      "root_count": 240,
+      "root_count_substrate": "|E| (W(3,3) edge count = E_8 roots)",
+      "substrate_dim_readings": [
+        {
+          "form": "|E| + 2^q",
+          "value": 248
+        },
+        {
+          "form": "2^q * (g + 2^mu)",
+          "value": 248
+        },
+        {
+          "form": "k * m_4 + 2^q",
+          "value": 248
+        },
+        {
+          "form": "Phi_3 * 19 + 1",
+          "value": 248
+        },
+        {
+          "form": "dim E_7 + (Csaszar * Szilassi)",
+          "value": 248
+        }
+      ]
+    }
+  ],
+  "header": {
+    "substrate_constants": {
+      "H_1": 81,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "c_even": 55,
+      "edges_E8": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k": 12,
+      "lambda_gauge": 72,
+      "n_even": 28,
+      "p_Ih": 11,
+      "q": 3,
+      "q!": 6,
+      "szilassi": 23,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "Each substrate reading is an exact arithmetic identity.  The '13-fold anchor' on E_6 is a synthesis claim across distinct previously-verified breakthroughs.  This package does not derive a new physical observable; it consolidates the substrate's structural relationship to the exceptional Lie cascade in one canonical reference.",
+  "root_count_cascade": {
+    "E_6_roots_is_lambda_gauge": true,
+    "E_7_roots_is_qfact_T6": true,
+    "E_8_roots_is_edges": true,
+    "F_4_roots_is_2f": true,
+    "G_2_roots_is_k": true
+  },
+  "theorem": "W(3,3) Exceptional Lie Dimensional Package.  For each of the five exceptional simple Lie algebras G_2, F_4, E_6, E_7, E_8, the DIMENSION, COXETER NUMBER, ROOT COUNT, and RANK each admit at least one substrate-primitive identification.  In total, the dimensions {14, 52, 78, 133, 248} have 2 + 3 + 6 + 6 + 5 = 22 distinct substrate readings between them.  The Coxeter numbers (6, 12, 12, 18, 30) factor as (q!, k, k, 2q^2, 2g), with h(E_8) = 30 = 2g the X-scheme gauge multiplicity.  The root counts (12, 48, 72, 126, 240) factor as (k, 2f, lambda_gauge, q! T_6, |E|), pinning all five exceptional root systems to substrate primitives.  E_6 in particular is 13-fold anchored: 6 dim readings + root count + rank + Coxeter + Weyl order + (Weyl chain quotient) + (Ihara discriminant) + (Klein closure).",
+  "verification": {
+    "all_match": true,
+    "bad_readings": []
+  }
+}
