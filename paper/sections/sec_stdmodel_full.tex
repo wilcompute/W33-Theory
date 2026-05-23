@@ -21,19 +21,79 @@ the same integer governs graph regularity and gauge group dimension.
 
 \subsection{Weinberg Angle}
 
-\begin{theorem}[Weinberg Angle from GQ(3,3)]
-  $\sin^2\theta_W = q/\Phi_3 = 3/13 = 0.\overline{230769}$.
+The weak mixing angle has two distinct W33 normalizations which should not be
+conflated.  The first is the usual GUT-normalized hypercharge statement.  The
+second is the low-energy finite-geometric generator.
+
+\begin{theorem}[GUT-normalized weak mixing from the W33 $Q$-matrix]
+Let
+\[
+P=\begin{pmatrix}1&12&27\\ 1&2&-3\\ 1&-4&3\end{pmatrix},
+\qquad Q=40P^{-1}.
+\]
+Then
+\[
+Q_{22}=\frac53,
+\]
+so the SU(5)-normalized hypercharge factor is $\kappa_Y=5/3$ and
+\[
+\sin^2\theta_W^{\rm GUT}
+=\frac{1}{1+\kappa_Y}
+=\frac{3}{8}.
+\]
 \end{theorem}
 
 \begin{proof}
-In $GQ(q,q)$ the hypercharge $U(1)_Y$ is the $q$-fold cover of $\mathbb{F}_q^*$.
-The standard Gell-Mann--Nishijima assignment yields coupling ratio
-$g'^{\,2}/g^2 = q/(\Phi_3 - q) = 3/10$, giving
-$\sin^2\theta_W = g'^{\,2}/(g^2+g'^{\,2}) = 3/13$. \qed
+The second eigenmatrix of the $\mathrm{SRG}(40,12,2,4)$ association scheme is
+\[
+Q=40P^{-1}
+=\begin{pmatrix}
+1&24&15\\
+1&4&-5\\
+1&-8/3&5/3
+\end{pmatrix}.
+\]
+Thus $Q_{22}=5/3$, exactly the standard GUT hypercharge normalization.  At a
+unification point where the normalized electroweak couplings agree,
+$\sin^2\theta_W=1/(1+\kappa_Y)=3/8$. \qed
 \end{proof}
 
-\noindent PDG 2024: $\sin^2\theta_W^{\overline{MS}} = 0.2312\pm 0.0006$.  
-W33: $3/13 = 0.2308$.  Discrepancy: $0.4\,\sigma$.
+\begin{definition}[Finite-geometric electroweak generator]
+The W33 projective denominator is
+\[
+\Phi_3=q^2+q+1=13,
+\]
+and the finite-geometric electroweak tree generator is
+\begin{equation}
+  x_0:=\frac{q}{\Phi_3}=\frac{3}{13}.
+  \label{eq:weinberg_generator}
+\end{equation}
+This should be read as the uncorrected W33 mixing coordinate, not as the full
+measured effective angle by itself.
+\end{definition}
+
+\begin{conjecture}[Leading W33 transport correction]
+At the $Z$ pole, the effective leptonic weak mixing angle is modeled by
+\begin{equation}
+\sin^2\theta_{\rm eff}^{\rm lept}(M_Z)
+=rac{3}{13}+\frac{\widehat\alpha(M_Z)}{k-1}
++O(\widehat\alpha^2),
+\label{eq:weinberg_transport_correction}
+\end{equation}
+where $k-1=11$ is the non-backtracking outdegree in the W33 Hashimoto/Ihara
+transport layer.
+\end{conjecture}
+
+Using $\widehat\alpha(M_Z)^{-1}=127.930$ gives
+\[
+\frac{3}{13}+\frac{1}{11\cdot127.930}=0.23147985\ldots,
+\]
+which matches the current effective leptonic weak mixing average
+$\sin^2\theta_{\rm eff}^{\rm lept}\simeq 0.23148$ at the displayed precision.
+The substantive claim is therefore not that $3/13$ numerically equals the
+measured weak angle; rather, $3/13$ is the W33 finite-geometric generator and
+$\widehat\alpha/(k-1)$ is the leading transport correction to be derived from
+the W33 effective action.
 
 \subsection{Strong Coupling}
 
