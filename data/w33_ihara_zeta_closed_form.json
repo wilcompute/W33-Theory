@@ -1,0 +1,131 @@
+{
+  "closed_form": {
+    "total_degree": 480,
+    "zeta_inverse_factorization": "zeta_{W33}^{-1}(u) = (1-u^2)^{200} * (1-u)(1-11u) * (1-2u+11u^2)^{24} * (1+4u+11u^2)^{15}"
+  },
+  "header": {
+    "edges": 240,
+    "f_mult": 24,
+    "g_neg_mult": 15,
+    "k_minus_1": 11,
+    "vertices": 40
+  },
+  "honesty_boundary": "The Ihara-Bass identity is a classical theorem (Ihara 1966; Bass 1992).  The substrate-primitive identification of the discriminants (Phi_4^2, -v, -mu Phi_6) and the walk-count factorisations (mu |E|, |E| q^q n_even) are exact arithmetic consequences.  The closed form here is therefore a rigorously substantiated, NOT a conjectured, identity.",
+  "ihara_ramanujan_summary": {
+    "all_complex_zeros_on_ramanujan_circle": true,
+    "complex_zeros_per_sector": {
+      "chiral": 30,
+      "gauge": 48
+    },
+    "graph_riemann_hypothesis": "All non-trivial zeros of zeta_{W33}^{-1}(u) lie on the circle |u| = 1/sqrt(p_Ih), with W(3,3) saturating the Ihara-Ramanujan bound.",
+    "ramanujan_radius": 0.30151134457776363,
+    "ramanujan_radius_squared": 0.09090909090909091,
+    "substrate_form": "|u| = 1 / sqrt(p_Ih) = 1/sqrt(11)"
+  },
+  "non_backtracking_closed_walk_counts": [
+    {
+      "N_n": 0,
+      "n": 1
+    },
+    {
+      "N_n": 0,
+      "n": 2
+    },
+    {
+      "N_n": 960,
+      "n": 3
+    },
+    {
+      "N_n": 13920,
+      "n": 4
+    },
+    {
+      "N_n": 181440,
+      "n": 5
+    },
+    {
+      "N_n": 1818240,
+      "n": 6
+    },
+    {
+      "N_n": 19178880,
+      "n": 7
+    },
+    {
+      "N_n": 214015200,
+      "n": 8
+    }
+  ],
+  "special_values": {
+    "zeta_inv_at_0": 1,
+    "zeta_inv_at_1_over_11": "0 (Perron pair zero)",
+    "zeta_inv_at_minus_1": "0 (anti-Perron via (1-u^2)^200)",
+    "zeta_inv_at_plus_1": "0 (anti-Perron via (1-u^2)^200)"
+  },
+  "substrate_factorisations": {
+    "N_3": {
+      "factorisations": [
+        "mu * |E| = 4 * 240",
+        "q! * #triangles = 6 * 160",
+        "(q+1) * E_8 root count"
+      ],
+      "interpretation": "Each of 160 triangles yields 6 NB closed walks (3 starts * 2 directions).",
+      "value": 960
+    },
+    "N_5": {
+      "factorisations": [
+        "|E| * q^q * n_even = 240 * 27 * 28",
+        "240 * 756"
+      ],
+      "interpretation": "Substrate factor n_even = Klein bitangents in length-5 NB walk count.",
+      "value": 181440
+    }
+  },
+  "theorem": "W(3,3) Ihara Zeta Closed-Form Theorem.  The reciprocal Ihara zeta function of W(3,3) factors over Z[u] as zeta^{-1}(u) = (1-u^2)^{200} (1-u)(1-11u) (1-2u+11u^2)^{24} (1+4u+11u^2)^{15}.  The three Ihara quadratic factors have discriminants exactly (Phi_4^2, -v, -mu Phi_6) = (100, -40, -28) -- pure substrate primitives.  All complex zeros lie on |u| = 1/sqrt(p_Ih) = 1/sqrt(11), so W(3,3) saturates the Ihara-Ramanujan (graph Riemann hypothesis) bound.  The non-backtracking closed-walk counts N_n = tr(B^n) begin 0, 0, mu*|E|, ... and grow asymptotically as p_Ih^n -- the graph prime number theorem for W(3,3).",
+  "total_degree_check": {
+    "match": true,
+    "should_equal_2E": 480,
+    "total_degree": 480
+  },
+  "zeta_factors": [
+    {
+      "discriminant": 100,
+      "discriminant_substrate": "Phi_4^2 = 10^2 = 100",
+      "factors_over_Q": true,
+      "lambda_A": 12,
+      "multiplicity_in_zeta_inverse": 1,
+      "name": "Perron",
+      "polynomial": "1 - 12 u + 11 u^2 = (1 - u)(1 - 11 u)",
+      "real_zeros": [
+        1.0,
+        0.09090909090909091
+      ]
+    },
+    {
+      "complex_zeros": [
+        "(1 +/- i sqrt(10))/11"
+      ],
+      "discriminant": -40,
+      "discriminant_substrate": "-v (vertex count)",
+      "factors_over_Q": false,
+      "lambda_A": 2,
+      "modulus_of_zeros": 0.30151134457776363,
+      "multiplicity_in_zeta_inverse": 24,
+      "name": "gauge",
+      "polynomial": "1 - 2 u + 11 u^2"
+    },
+    {
+      "complex_zeros": [
+        "(-2 +/- i sqrt(7))/11"
+      ],
+      "discriminant": -28,
+      "discriminant_substrate": "-mu Phi_6 = -n_even (Klein bitangent count)",
+      "factors_over_Q": false,
+      "lambda_A": -4,
+      "modulus_of_zeros": 0.30151134457776363,
+      "multiplicity_in_zeta_inverse": 15,
+      "name": "chiral",
+      "polynomial": "1 + 4 u + 11 u^2"
+    }
+  ]
+}
