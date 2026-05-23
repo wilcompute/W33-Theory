@@ -13636,12 +13636,24 @@
         </p>
 
         <h4>Conditional horizon distance q=3 law</h4>
-        <p>MCCXI makes C346 executable with a constructive/conditional split. Constructively, the explicit full F3 parity
+        <p>MCCXI makes C346 executable with a constructive/conditional split. Constructively, the explicit full F3
+          parity
           matrix has rank <code>6</code> and no zero columns (hence no weight-1 codeword), and MCCIX already fixes
-          <code>d&le;3</code>. A triangle witness model supplies weight <code>3</code>.</p>
+          <code>d&le;3</code>. A triangle witness model supplies weight <code>3</code>.
+        </p>
         <p>Under minimal symmetric K12 embedding plus non-proportional edge columns, the packet closes as
           <code>d=q=3</code> (conditional C346c). Honest boundary is kept explicit: a fully constructive lower-bound
-          certificate independent of those assumptions remains open.</p>
+          certificate independent of those assumptions remains open.
+        </p>
+
+        <h4>Poincare dual code law</h4>
+        <p>MCCXII packages the C347-C348 dual-surface step: primal surface is
+          <code>(V,E,F)=(12,66,44)</code> with <code>g=6</code>, and Poincare dual swaps vertices/faces to
+          <code>(V',E',F')=(44,66,12)</code> while preserving genus <code>g'=6</code>.</p>
+        <p>Code packets then lock as edge <code>[72,66,*]<sub>3</sub></code> and face
+          <code>[50,44,*]<sub>3</sub></code>, with both parity ranks equal to genus:
+          <code>rank(H)=n-k=6=g</code>. Distance closure is explicit and conditional:
+          edge <code>d=3</code> from MCCXI, face <code>d=3</code> via declared Poincare-dual transfer.</p>
 
         <h4>Temporal-triangle single-photon lock</h4>
         <p>MCCIII formalizes the new temporal-triangle draft as a strict packet lock at <code>q=3</code>:
