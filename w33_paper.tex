@@ -1014,6 +1014,82 @@ are the leading non-backtracking transport phases and are in principle
 measurable as substrate-predicted interference fringes.
 \end{remark}
 
+\subsection{Closed Form of the Ihara Zeta Function}
+\label{sec:ihara-zeta}
+
+The full Ihara zeta function of $W(3,3)$ follows immediately from
+Theorem~\ref{thm:hashimoto-5} via the Ihara--Bass identity.
+
+\begin{theorem}[Closed-Form Ihara Zeta of $W(3,3)$]
+\label{thm:ihara-closed}
+\begin{equation}
+\boxed{
+\zeta_{W(3,3)}^{-1}(u)
+\;=\; (1 - u^2)^{200}\,(1 - u)(1 - 11 u)\,
+      (1 - 2 u + 11 u^2)^{24}\,(1 + 4 u + 11 u^2)^{15}.
+}
+\end{equation}
+The total degree is $2 \cdot 200 + 2 + 2 \cdot 24 + 2 \cdot 15 = 480 = 2 |E|$.
+\end{theorem}
+
+\begin{proposition}[Substrate-Primitive Discriminants]
+\label{prop:zeta-disc}
+The three Ihara quadratic factors have discriminants exactly:
+\[
+\Delta_{\mathrm{Perron}} \;=\; 12^2 - 4\!\cdot\!11 \;=\; 100 \;=\; \Phi_4^2,
+\]
+\[
+\Delta_{\mathrm{gauge}} \;=\; 2^2 - 4\!\cdot\!11 \;=\; -40 \;=\; -v,
+\]
+\[
+\Delta_{\mathrm{chiral}} \;=\; (-4)^2 - 4\!\cdot\!11 \;=\; -28 \;=\; -\mu\,\Phi_6
+                                                              \;=\; -n_{\mathrm{even}}.
+\]
+The negative gauge and chiral discriminants ($-v$ and $-n_{\mathrm{even}}$,
+the Klein bitangent count) force both factors to be irreducible over
+$\mathbb{R}$.
+\end{proposition}
+
+\begin{corollary}[Graph Riemann Hypothesis for $W(3,3)$]
+\label{cor:graph-rh}
+Every complex zero of $\zeta_{W(3,3)}^{-1}(u)$ lies on the
+\textbf{Ihara--Ramanujan circle}
+\[
+|u| \;=\; \frac{1}{\sqrt{p_{\mathrm{Ih}}}}
+\;=\; \frac{1}{\sqrt{11}}.
+\]
+$W(3,3)$ therefore satisfies the graph analogue of the Riemann
+Hypothesis with the Ihara prime $p_{\mathrm{Ih}} = 11$ serving as the
+graph's ``critical norm.''
+\end{corollary}
+
+\begin{proposition}[Non-Backtracking Closed-Walk Counts]
+\label{prop:N_n}
+Let $N_n = \Tr(B^n)$ be the count of length-$n$ non-backtracking
+closed walks in $W(3,3)$.  Then
+\begin{equation}
+N_n \;=\; \sum_i m_i\, u_i^n
+\end{equation}
+where the sum runs over the five Hashimoto sectors of
+Theorem~\ref{thm:hashimoto-5}.  The first non-zero values factor as
+\[
+N_3 \;=\; 960 \;=\; \mu\,|E| \;=\; q!\,\cdot\,(\text{\#triangles}) \;=\; 6 \cdot 160,
+\]
+\[
+N_5 \;=\; 181\,440 \;=\; |E| \cdot q^q \cdot n_{\mathrm{even}}
+       \;=\; 240 \cdot 27 \cdot 28.
+\]
+Asymptotically $N_n \sim p_{\mathrm{Ih}}^n = 11^n$ (the graph prime
+number theorem for $W(3,3)$).
+\end{proposition}
+
+The Klein bitangent count $n_{\mathrm{even}} = 28$ therefore appears
+in $W(3,3)$ in \emph{two} arithmetically distinct positions: as the
+spine--staircase even root (Theorem \ref{thm:hashimoto-weinberg}'s
+companion DCCLXXVII statement) and now as both
+$(-\Delta_{\mathrm{chiral}})$ in the Ihara zeta and the explicit
+substrate factor in $N_5$.
+
 
 % ═══════════════════════════════════════════════════════════════
 \section{The Fine-Structure Constant}

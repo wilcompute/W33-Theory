@@ -1197,6 +1197,92 @@ non-backtracking transport phases.  They are, in principle, measurable
 as substrate-predicted interference fringes --- a sharp experimental
 test of the Hashimoto picture rather than just an arithmetic story.
 
+\subsection*{The Ihara zeta function of $W(3,3)$, in one line}
+
+Everything above can be packaged in a single closed-form formula.
+Define the \emph{Ihara zeta function} of $W(3,3)$ via the Euler product
+\[
+\zeta_{W(3,3)}(u) \;=\; \prod_{\text{prime closed walks } p}
+                       \bigl(1 - u^{\,\text{length}(p)}\bigr)^{-1},
+\]
+where a ``prime closed walk'' is a primitive (non-backtracking, no
+trailing repeats) closed walk on the graph $W(3,3)$, counted up to
+cyclic rotation.  Despite its forbidding definition, $\zeta_{W(3,3)}(u)$
+turns out to be the reciprocal of an honest polynomial:
+
+\begin{theorem}[Closed-form Ihara zeta of $W(3,3)$]
+\[
+\boxed{
+\zeta_{W(3,3)}^{-1}(u) \;=\; (1 - u^2)^{200}\,(1 - u)(1 - 11 u)\,
+                            (1 - 2 u + 11 u^2)^{24}\,(1 + 4 u + 11 u^2)^{15}.
+}
+\]
+\end{theorem}
+
+The total degree of this polynomial is exactly $2 |E| = 480$ ---
+twice the edge count.  And the THREE Ihara quadratic factors have
+discriminants
+\[
+\Delta_{\text{Perron}}  = 12^2 - 4\!\cdot\!11 = +100 = \Phi_4^2,
+\quad
+\Delta_{\text{gauge}}   = 2^2 - 4\!\cdot\!11 = -40 = -v,
+\quad
+\Delta_{\text{chiral}}  = (-4)^2 - 4\!\cdot\!11 = -28 = -n_{\text{even}}.
+\]
+The discriminant of the Perron factor is $\Phi_4^2$, the discriminant
+of the gauge factor is $-v$ (the vertex count), and the discriminant
+of the chiral factor is $-n_{\text{even}} = -28$, which is also the
+number of bitangents of the Klein quartic, the (16, 28) spine pair's
+even root, and Klein's number of bitangents.
+
+\paragraph{The graph Riemann hypothesis, satisfied at $W(3,3)$.}
+Number theorists conjecture that all non-trivial zeros of the
+Riemann zeta function $\zeta(s)$ lie on a single critical line.  This
+is the celebrated \emph{Riemann hypothesis}.  Its analog for graphs
+is the \emph{Ihara--Ramanujan property}: all non-trivial zeros of the
+Ihara zeta function lie on a single critical \emph{circle},
+\[
+|u| \;=\; \frac{1}{\sqrt{p_{\mathrm{Ih}}}} \;=\; \frac{1}{\sqrt{11}}.
+\]
+By the closed-form theorem above, every complex zero of
+$\zeta_{W(3,3)}^{-1}(u)$ is a zero of either $(1 - 2u + 11u^2)$ or
+$(1 + 4u + 11u^2)$, and a direct check shows both quadratics have
+roots of modulus exactly $1/\sqrt{11}$.  So:
+
+\begin{theorem}[Graph Riemann hypothesis for $W(3,3)$]
+The Ihara zeta function $\zeta_{W(3,3)}(u)$ satisfies the graph
+analog of the Riemann hypothesis: all of its non-trivial zeros lie on
+the critical circle $|u| = 1/\sqrt{p_{\mathrm{Ih}}} = 1/\sqrt{11}$.
+$W(3,3)$ is a Ramanujan graph in the strongest sense, with both
+non-trivial spectral sectors saturating the bound.
+\end{theorem}
+
+\paragraph{Counting non-backtracking closed walks.}
+The Ihara zeta function also generates a counting series.  If $N_n$
+denotes the number of non-backtracking closed walks of length $n$ in
+$W(3,3)$, then $N_n$ can be read off from $\zeta_{W(3,3)}$.  The first
+few values:
+\[
+N_1 = 0,\quad N_2 = 0,\quad
+N_3 = 960 = \mu\,|E| = 4 \cdot 240,
+\]
+\[
+N_5 \;=\; 181{,}440 \;=\; |E| \cdot q^q \cdot n_{\text{even}}
+         \;=\; 240 \cdot 27 \cdot 28.
+\]
+The vanishing of $N_1, N_2$ reflects the fact that $W(3,3)$ has no
+self-loops and no double-edges.  The value $N_3 = 960$ is just
+six times the triangle count of $W(3,3)$ ($160$ triangles, each
+giving $6$ oriented non-backtracking closed walks).  And $N_5$ factors
+as $|E| \cdot q^q \cdot n_{\text{even}}$, with $q^q = 27$ the cubic
+surface line count and $n_{\text{even}} = 28$ the Klein quartic
+bitangents.
+
+For large $n$, $N_n \sim 11^n = p_{\mathrm{Ih}}^n$ (the Perron
+eigenvalue $+11$ dominates).  This is the \emph{graph prime number
+theorem} for $W(3,3)$: the count of non-backtracking closed walks
+grows exponentially at exactly the Ihara prime rate.
+
 \section{Standard Model derivation chain}
 
 \label{sec:sm-derivations}
