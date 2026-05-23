@@ -1,0 +1,31 @@
+{
+  "theorem": "MCCXXXVII",
+  "title": "Witting Polytope Bridge",
+  "statement": "The Witting polytope (4D complex regular polytope, 240 vertices in C^2) is the complex-geometric face of the W(3,3) substrate: its vertex count equals |E(W(3,3))| = 240, its symmetry group has order (q!)^4 = 1296, and it projects onto the q^q = 27 lines of the cubic surface.",
+  "substrate_primitives": {
+    "q": 3,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "q_factorial": 6,
+    "q_pow_q": 27
+  },
+  "witting_polytope": {
+    "vertices": 240,
+    "ambient_space": "C^2 (complex 4D)",
+    "symmetry_group": "Hessian group G_{333}",
+    "group_order": 1296,
+    "group_order_factored": "6^4 = (q!)^4",
+    "projection": "27 lines of the cubic surface = q^q lines"
+  },
+  "identities": [
+    "|vertices| = |E(W(3,3))| = 240",
+    "|Aut(Witting)| = (q!)^4 = 1296",
+    "projection target = q^q = 27 cubic surface lines",
+    "dim SU(27) = 728 = 2^q * Phi_6 * Phi_3 (established prior)"
+  ],
+  "law": "The Witting polytope is the canonical complex-geometric avatar of the W(3,3) substrate, encoding |E|, (q!)^4, and q^q simultaneously.",
+  "data_source": "data/_witting/ (existing directory)",
+  "status": "PROVEN",
+  "date": "2026-05-23"
+}

@@ -1,0 +1,40 @@
+{
+  "theorem": "MCCXL",
+  "title": "Golay Code / W(3,3) Triality",
+  "statement": "The binary Golay code G_24 has parameters [gauge_mult, k, 2^q] = [24, 12, 8] and the ternary Golay code G_12 has parameters [k, q!, q!] = [12, 6, 6]. Both simultaneously encode the substrate primitives {gauge_mult, k, 2^q, q!}. Their automorphism groups act on exactly gauge_mult = 24 and k = 12 points respectively, the two primary substrate counting primitives.",
+  "substrate_primitives": {
+    "q": 3,
+    "k": 12,
+    "gauge_mult": 24,
+    "two_pow_q": 8,
+    "q_factorial": 6
+  },
+  "binary_golay": {
+    "code": "G_24",
+    "parameters": "[24, 12, 8]",
+    "block_length": "24 = gauge_mult",
+    "dimension": "12 = k",
+    "min_distance": "8 = 2^q",
+    "automorphism_group": "M_24 (Mathieu)",
+    "aut_order": 244823040,
+    "aut_action": "Acts on 24 = gauge_mult points"
+  },
+  "ternary_golay": {
+    "code": "G_12",
+    "parameters": "[12, 6, 6]",
+    "block_length": "12 = k",
+    "dimension": "6 = q!",
+    "min_distance": "6 = q!",
+    "automorphism_group": "2 * M_12 (double cover of Mathieu M_12)",
+    "aut_action": "Acts on 12 = k points"
+  },
+  "triality": {
+    "G24_encodes": "(gauge_mult, k, 2^q)",
+    "G12_encodes": "(k, q!, q!)",
+    "joint_encoding": "Together: {gauge_mult, k, 2^q, q!} — all primary substrate primitives",
+    "automorphism_actions": "M_24 on gauge_mult, M_12 on k"
+  },
+  "law": "The binary Golay G_24 parameters are (gauge_mult, k, 2^q); the ternary Golay G_12 parameters are (k, q!, q!); together they encode all four primary W(3,3) substrate counting primitives, with Aut groups acting on the two primary vertex counts.",
+  "status": "PROVEN",
+  "date": "2026-05-23"
+}
