@@ -1,0 +1,177 @@
+{
+  "header": {
+    "substrate_constants": {
+      "Csaszar_count": 5,
+      "Phi_4": 10,
+      "edges": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k": 12,
+      "p_Ih": 11,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "hodge_boundary_link": {
+    "120_cell_vertex_count": 120,
+    "Hodge_split": "240 = 39 + 120 + 81 (W(3,3) edge carrier split)",
+    "interpretation": "The 120-cell vertex count equals the Hodge boundary mode count of the W(3,3) edge complex (commit 3891c012, w33_tqc_hodge_audit section).  Equivalently the 600-cell octahedral-cell count (= 600 = Csaszar * 120) is Csaszar_count times the Hodge boundary.",
+    "substrate_form": "k * Phi_4 = Hodge boundary mode count"
+  },
+  "honesty_boundary": "All polytope f-vectors are classical.  The substrate-primitive identifications of each entry and each sum are exact arithmetic.  The multiplicative chain through the polytope cascade and the temporal-triangle / Hodge-boundary links are structural readings tying the regular 4-polytope family to W(3,3) substrate invariants.  No new physical observable is derived here; this completes the polytope substrate package.",
+  "multiplicative_chain": {
+    "full_ratio_2640_over_30": 88,
+    "full_ratio_substrate": "2^q * p_Ih = 8 * 11",
+    "ratios_with_substrate_forms": [
+      {
+        "ratio": "80/30 = 8/3",
+        "substrate": "2^q / q"
+      },
+      {
+        "ratio": "240/80 = 3",
+        "substrate": "q"
+      },
+      {
+        "ratio": "2640/240 = 11",
+        "substrate": "p_Ih"
+      }
+    ],
+    "value_88_meaning": "g(K_36) = g(K_{N_M}) = 88 in the genus staircase at conductor",
+    "values": [
+      30,
+      80,
+      240,
+      2640
+    ]
+  },
+  "regular_4polytopes": [
+    {
+      "entry_substrate": [
+        "Csaszar_count",
+        "Phi_4",
+        "Phi_4",
+        "Csaszar_count"
+      ],
+      "fvec": [
+        5,
+        10,
+        10,
+        5
+      ],
+      "name": "5-cell",
+      "schlafli": "{3,3,3}",
+      "self_dual": true,
+      "sum": 30,
+      "sum_substrate": "2 g_neg (= 2 * 15)"
+    },
+    {
+      "entry_substrate": [
+        "2^mu",
+        "2 * 2^mu",
+        "f",
+        "2^q"
+      ],
+      "fvec": [
+        16,
+        32,
+        24,
+        8
+      ],
+      "name": "8-cell",
+      "schlafli": "{4,3,3}",
+      "self_dual": false,
+      "sum": 80,
+      "sum_substrate": "2 v"
+    },
+    {
+      "entry_substrate": [
+        "2^q",
+        "f",
+        "2 * 2^mu",
+        "2^mu"
+      ],
+      "fvec": [
+        8,
+        24,
+        32,
+        16
+      ],
+      "name": "16-cell",
+      "schlafli": "{3,3,4}",
+      "self_dual": false,
+      "sum": 80,
+      "sum_substrate": "2 v"
+    },
+    {
+      "entry_substrate": [
+        "f",
+        "mu * f",
+        "mu * f",
+        "f"
+      ],
+      "fvec": [
+        24,
+        96,
+        96,
+        24
+      ],
+      "name": "24-cell",
+      "schlafli": "{3,4,3}",
+      "self_dual": true,
+      "sum": 240,
+      "sum_substrate": "|E| (W(3,3) edges = E_8 roots)"
+    },
+    {
+      "entry_substrate": [
+        "Csaszar_count * k * Phi_4",
+        "2 g_neg * v",
+        "q * |E|",
+        "k * Phi_4 (Hodge boundary)"
+      ],
+      "fvec": [
+        600,
+        1200,
+        720,
+        120
+      ],
+      "name": "120-cell",
+      "schlafli": "{5,3,3}",
+      "self_dual": false,
+      "sum": 2640,
+      "sum_substrate": "p_Ih * |E|"
+    },
+    {
+      "entry_substrate": [
+        "k * Phi_4 (Hodge boundary)",
+        "q * |E|",
+        "2 g_neg * v",
+        "Csaszar_count * k * Phi_4"
+      ],
+      "fvec": [
+        120,
+        720,
+        1200,
+        600
+      ],
+      "name": "600-cell",
+      "schlafli": "{3,3,5}",
+      "self_dual": false,
+      "sum": 2640,
+      "sum_substrate": "p_Ih * |E|"
+    }
+  ],
+  "temporal_triangle_link": {
+    "24_cell_temporal_triangles": "24 vertices = 2^q * q = 8 triangles",
+    "600_cell_temporal_triangles": "120 vertices = v * q = 40 triangles",
+    "interpretation": "The 600-cell carries 40 = v copies of the temporal triangle (one per W(3,3) vertex).  It is the substrate's complete 'time crystal' carrier, with f-vector sum p_Ih * |E| -- Ihara prime times the W(3,3) edge count."
+  },
+  "theorem": "W(3,3) Regular 4-Polytope Complete Substrate Package.  All SIX regular 4-polytopes -- 5-cell, 8-cell (tesseract), 16-cell, 24-cell, 120-cell, 600-cell -- have f-vector entries AND f-vector sums entirely in substrate-primitive form.  The four distinct sums (30, 80, 240, 2640) factor as (2 g_neg, 2 v, |E|, p_Ih * |E|), running across the X-scheme gauge multiplicity, the vertex count, the edge count, and the Ihara prime.  The multiplicative chain through the polytope cascade has ratios (2^q/q, q, p_Ih), telescoping to 2^q * p_Ih = 88 = g(K_{N_M}) at the conductor.  The 600-cell (120 vertices = v * q = 40 temporal triangles) is the substrate's complete time crystal, with f-vector sum p_Ih * |E| = 2640.  The 120-cell vertex count (120 = k * Phi_4) equals the Hodge boundary mode count, linking the polytope vertex set to the W(3,3) edge-complex Hodge decomposition.",
+  "verify_sums": {
+    "120_cell_sum_2640": true,
+    "16_cell_sum_80": true,
+    "24_cell_sum_240": true,
+    "5_cell_sum_30": true,
+    "600_cell_sum_2640": true,
+    "8_cell_sum_80": true
+  }
+}
