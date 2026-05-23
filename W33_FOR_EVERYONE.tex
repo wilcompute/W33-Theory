@@ -1129,6 +1129,74 @@ $11$.  Three layers of $W(3,3)$ structure --- $3/13$, $\hat\alpha/11$,
 and the geometric tail --- collectively reproduce the observed
 effective leptonic Weinberg angle.
 
+\subsection*{Sector-projected Hashimoto: where $\Phi_4$ and $\Phi_6$ hide}
+
+The previous picture treated the $480$ directed edges as one big
+isotropic pool.  But the substrate's spectrum says they are not
+isotropic --- they live in three distinct sectors with multiplicities
+$\{1, 24, 15\}$, the same multiplicities $(1, f, g)$ that label the
+three adjacency eigenvalues $\{12, +2, -4\}$ of $W(3,3)$.
+
+The classical \emph{Ihara--Bass identity} translates the adjacency
+spectrum into the Hashimoto spectrum: for each eigenvalue $\lambda$
+of $A$, the matrix $B$ contributes a pair of eigenvalues from
+\[
+u^2 \;-\; \lambda u \;+\; (k-1) \;=\; 0,
+\]
+i.e.\ $u = \tfrac{\lambda}{2} \pm \tfrac{1}{2}\sqrt{\lambda^2 - 4(k-1)}$.
+Plug in $k-1 = 11$ and the three $W(3,3)$ eigenvalues:
+
+\begin{itemize}[leftmargin=2em]
+\item $\lambda = 12$ (Perron, mult $1$): $u^2 - 12u + 11 = 0 \Rightarrow u = 11$ or $u = 1$.
+\item $\lambda = 2$ (gauge, mult $24$): $u^2 - 2u + 11 = 0 \Rightarrow u = 1 \pm i\sqrt{10}$.
+\item $\lambda = -4$ (chiral, mult $15$): $u^2 + 4u + 11 = 0 \Rightarrow u = -2 \pm i\sqrt{7}$.
+\end{itemize}
+
+Plus an extra $\pm 1$ with multiplicity $m - n = |E| - v = 200$
+from the backtrack-pair stabiliser of Ihara--Bass.
+
+\paragraph{The cyclotomic surprise.}
+Look at the IMAGINARY PARTS SQUARED of the gauge and chiral sectors:
+\[
+\bigl[\Im(u_{\text{gauge}})\bigr]^2 \;=\; 10 \;=\; \Phi_4,
+\qquad
+\bigl[\Im(u_{\text{chiral}})\bigr]^2 \;=\; 7 \;=\; \Phi_6.
+\]
+These are not chosen.  They are forced by the Ihara--Bass formula and
+the $W(3,3)$ adjacency spectrum.  The two substrate cyclotomic
+primitives $\Phi_4 = q^2 + 1$ and $\Phi_6 = q^2 - q + 1$ are
+\emph{literally written into the Hashimoto transport spectrum}.
+
+\paragraph{The Ihara--Ramanujan property.}
+Both complex Hashimoto eigenvalues have the same modulus:
+\[
+|u_{\text{gauge}}|^2 \;=\; 1^2 + 10 \;=\; 11,
+\qquad
+|u_{\text{chiral}}|^2 \;=\; 2^2 + 7 \;=\; 11,
+\]
+both landing on $p_{\mathrm{Ih}} = 11$.  In number-theoretic language,
+$W(3,3)$ is therefore \emph{Ihara--Ramanujan} in the strong sense: its
+non-backtracking spectral gap saturates the optimal Ramanujan bound.
+This is the same property that makes Lubotzky--Phillips--Sarnak
+Ramanujan graphs special, and $W(3,3)$ achieves it without any
+auxiliary construction.
+
+\paragraph{Phase angles --- a falsifiable photonic prediction.}
+The two non-trivial sector eigenvalues sit at distinct angles in the
+complex plane:
+\[
+\theta_{\text{gauge}}  \;=\; \arctan\!\sqrt{\Phi_4} \;\approx\; 72.45^\circ,
+\qquad
+\theta_{\text{chiral}} \;=\; 180^\circ - \arctan\!\bigl(\sqrt{\Phi_6}/2\bigr)
+                         \;\approx\; 127.09^\circ.
+\]
+In a single-photon, dual-rail W(3,3) computation (the architecture
+discussed in the companion paper \emph{Universal Quantum Computation
+Through a Single Photon}), these two angles are the leading
+non-backtracking transport phases.  They are, in principle, measurable
+as substrate-predicted interference fringes --- a sharp experimental
+test of the Hashimoto picture rather than just an arithmetic story.
+
 \section{Standard Model derivation chain}
 
 \label{sec:sm-derivations}

@@ -953,6 +953,67 @@ the projective line count of $\PG(3,\FF_3)$, while the radiative
 piece $\hat\alpha/11$ is forced by the $k-1$ non-backtracking
 branching of the substrate.
 
+\subsection{Sector-Projected Hashimoto Spectrum}
+\label{sec:hashimoto-sector}
+
+The isotropic transport approximation can be refined to a full sector
+decomposition.  The Ihara--Bass identity
+\[
+\det(uI - B) = (u^2-1)^{m-n}\,\det\!\bigl((u^2 + (k-1))\,I - u A\bigr),
+\]
+combined with the adjacency spectrum $\{(k,1),(r,f),(s,g)\}
+= \{(12,1),(+2,24),(-4,15)\}$ of $W(3,3)$, yields five disjoint
+Hashimoto sectors:
+
+\begin{theorem}[Five-Sector Decomposition of $B$]
+\label{thm:hashimoto-5}
+The non-backtracking operator $B$ on the $2E = 480$ directed edges of
+$W(3,3)$ has spectrum
+\begin{equation}
+\spec(B) =
+\underbrace{\{+11\}^{1}}_{\text{Perron}}
+\,\cup\,
+\underbrace{\bigl\{1 \pm i\sqrt{\Phi_4}\bigr\}^{f}}_{\text{gauge sector}}
+\,\cup\,
+\underbrace{\bigl\{-2 \pm i\sqrt{\Phi_6}\bigr\}^{g}}_{\text{chiral sector}}
+\,\cup\,
+\underbrace{\{+1\}^{m-n+1}}_{\text{trivial-plus}}
+\,\cup\,
+\underbrace{\{-1\}^{m-n}}_{\text{anti-Perron}},
+\end{equation}
+with multiplicities $1+24+24+15+15+201+200 = 480$.  The imaginary parts
+of the non-trivial sectors square exactly to the cyclotomic primitives:
+\begin{equation}
+\Im(u_{\mathrm{gauge}})^2 = (k-1) - (r/2)^2 = 11 - 1 = 10 = \Phi_4,
+\qquad
+\Im(u_{\mathrm{chiral}})^2 = (k-1) - (s/2)^2 = 11 - 4 = 7 = \Phi_6.
+\end{equation}
+\end{theorem}
+
+\begin{corollary}[Ihara--Ramanujan Property of $W(3,3)$]
+\label{cor:ramanujan}
+Every complex Hashimoto eigenvalue $u$ of $W(3,3)$ satisfies
+\[
+|u|^2 \;=\; k-1 \;=\; p_{\mathrm{Ih}} \;=\; 11.
+\]
+Therefore $W(3,3)$ is strongly Ihara--Ramanujan: both the gauge and
+chiral sectors saturate the optimal non-backtracking spectral bound.
+\end{corollary}
+
+\begin{remark}[Phase angles and the photonic predictions]
+The gauge and chiral Hashimoto sectors carry distinct phase angles
+\[
+\theta_{\mathrm{gauge}} = \arctan\!\sqrt{\Phi_4} \approx 72.45^\circ,
+\qquad
+\theta_{\mathrm{chiral}} = \pi - \arctan\!\bigl(\sqrt{\Phi_6}/\lambda\bigr) \approx 127.09^\circ,
+\]
+in pure cyclotomic substrate primitives.  In any photonic
+measurement-based implementation of $W(3,3)$ (the single-photon
+dual-rail runtime of $\Sp(4,\FF_3)$ computation), these two angles
+are the leading non-backtracking transport phases and are in principle
+measurable as substrate-predicted interference fringes.
+\end{remark}
+
 
 % ═══════════════════════════════════════════════════════════════
 \section{The Fine-Structure Constant}
