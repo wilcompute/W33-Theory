@@ -1,0 +1,42 @@
+{
+  "part": "MCCIX",
+  "theorem": "Horizon code distance-three law",
+  "packet": {
+    "q": 3,
+    "n": 72,
+    "k_code": 66,
+    "redundancy": 6,
+    "q_redundancy": 729
+  },
+  "hamming_analysis": {
+    "v_t2_d5": 10369,
+    "v_t1_d4": 145,
+    "identity": "d=5 would require V2<=3^6, but 10369>729; triangle witness gives weight 3"
+  },
+  "distance_statement": {
+    "upper_bound": 3,
+    "status": "d <= 3 established (d=5 excluded; explicit weight-3 witness provided)"
+  },
+  "open_boundary": {
+    "lower_bound_status": "explicit full-kernel proof that d>=3 remains open",
+    "current_best": "conjecture d=q=3, with honest lower-bound boundary retained"
+  },
+  "finite_universality_surrogate": {
+    "statement": "distance upper bound is rigidly constrained by packet redundancy and triangle-boundary structure",
+    "boundary": "finite coding bound with explicit witness model; lower-bound proof remains open"
+  },
+  "claim_boundary": "finite d<=3 law for [72,66,*]_3 with transparent open lower-bound boundary",
+  "checks": {
+    "packet_is_72_66_q3": true,
+    "redundancy_is_6": true,
+    "q_to_redundancy_is_729": true,
+    "hamming_v_t2_is_10369": true,
+    "d5_excluded_by_hamming": true,
+    "hamming_v_t1_is_145": true,
+    "d4_not_excluded_by_hamming": true,
+    "triangle_boundary_witness_has_weight3": true,
+    "witness_implies_d_le_3": true,
+    "combined_upper_bound_is_3": true
+  },
+  "n_verified": 10
+}
