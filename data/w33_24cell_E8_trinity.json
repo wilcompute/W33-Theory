@@ -1,0 +1,75 @@
+{
+  "D_4_root_identification": {
+    "24_cell_vertices": 24,
+    "D_4_root_system_size": 24,
+    "all_three_equal_24": true,
+    "interpretation": "The 24 vertices of the 24-cell form the D_4 root system at unit norm (classical).  This is exactly the substrate's positive spectral multiplicity f, and |W(D_4)| = 192 = f * 2^q is the Klein quartic invariant sum and the substrate tomotope flag count.",
+    "klein_closure_value_W_D_4": 192,
+    "substrate_f": 24,
+    "substrate_form_Klein": "f * 2^q = 24 * 8 = 192"
+  },
+  "F_4_E_8_cascade": {
+    "WE_8": 696729600,
+    "WE_8_over_WF_4": 604800,
+    "WF_4": 1152,
+    "match": true,
+    "via_substrate_factors": "Q_count * (2^q Phi_6) * |E| = 45 * 56 * 240"
+  },
+  "header": {
+    "substrate_constants": {
+      "Csaszar_count": 5,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "edges": 240,
+      "f": 24,
+      "k": 12,
+      "mu": 4,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "The 24-cell f-vector is classical.  The substrate-primitive interpretation per entry (f, mu f, mu f, f) and the total sum identity 240 = Phi_4 * f are exact arithmetic.  The D_4 root system identification with the 24-cell vertex set is also classical.  The new content is the unified reading of the substrate primitive 240 as the simultaneous cell sum / root count / edge count of three structurally distinct objects, plus the 'time crystal' interpretation tying the 24-cell to Part MCCIII's temporal triangle.",
+  "rotation_group_f_squared": {
+    "f_squared": 576,
+    "interpretation": "The orientation-preserving symmetry group of the 24-cell has order 576 = f^2 (square of W(3,3) positive spectral multiplicity).  Including reflections gives |W(F_4)| = 1152 = q! * |W(D_4)|.",
+    "matches": true,
+    "rotation_group_order": 576
+  },
+  "temporal_triangle_8_copies": {
+    "comment": "Following Part MCCIII (temporal-triangle single-photon lock), the 24-cell can be read as 8 = 2^q independent copies of the temporal triangle (past, now, future).  Each triangle has q vertices, and 2^q (tomotope cells) copies tile the 4-polytope.",
+    "substrate_reading": "24 = 2^q * q = 8 temporal triangles each with 3 vertices",
+    "vertices_24_eq_8_times_3": true
+  },
+  "theorem": "W(3,3) / 24-Cell / E_8 Trinity Theorem.  The regular 4-polytope 24-cell {3,4,3}, the only self-dual regular 4-polytope, has f-vector (24, 96, 96, 24) = (f, mu f, mu f, f) summing to 240 = Phi_4 * f = 2f * Csaszar_count.  This is EXACTLY the W(3,3) edge count |E| and the E_8 root system size.  So the substrate primitive 240 is simultaneously a polytope cell sum, a Lie-algebra root count, and a graph edge count.  The 24-cell vertices form the D_4 root system (= 24 = f); the Klein closure value |W(D_4)| = f * 2^q = 192 also derives from this identification; and the 24-cell's rotation group order is exactly f^2 = 576.  Reading the 24-cell as 8 = 2^q copies of the (past, now, future) temporal triangle from Part MCCIII gives the substrate's 'time crystal' interpretation: eight tiled temporal triangles in 4D, with cell sum equal to the E_8 root count.",
+  "trinity_of_240": {
+    "E_8_root_count": 240,
+    "W33_edge_count": 240,
+    "all_three_equal_240": true,
+    "interpretation": "The substrate-primitive 240 is simultaneously a polytope cell sum, a Lie-algebra root count, and a graph edge count.  Three structurally distinct objects (24-cell, E_8 lattice, W(3,3) graph) all carry 240 as a fundamental invariant.",
+    "twentyfour_cell_f_vector_sum": 240
+  },
+  "twentyfour_cell_fvector": {
+    "f_vector": [
+      24,
+      96,
+      96,
+      24
+    ],
+    "matches_e8_roots": true,
+    "matches_substrate_edges": true,
+    "substrate_form_match": true,
+    "substrate_form_per_entry": [
+      "f",
+      "mu * f",
+      "mu * f",
+      "f"
+    ],
+    "sum": 240,
+    "sum_substrate_checks_all_match": true,
+    "sum_substrate_forms": [
+      "2f + 2(mu * f) = 240",
+      "2f * Csaszar_count = 240",
+      "Phi_4 * f = 240"
+    ]
+  }
+}
