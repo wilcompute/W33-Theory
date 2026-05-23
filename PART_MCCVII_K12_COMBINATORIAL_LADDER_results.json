@@ -1,0 +1,46 @@
+{
+  "part": "MCCVII",
+  "theorem": "K12 combinatorial ladder law",
+  "primitives": {
+    "q": 3,
+    "mu": 4,
+    "k": 12,
+    "Phi_6": 7,
+    "Phi_3": 13
+  },
+  "ladder": {
+    "C(12,1)": 12,
+    "C(12,2)": 66,
+    "C(12,3)": 220,
+    "C(12,4)": 495,
+    "C(12,5)": 792,
+    "C(12,6)": 924
+  },
+  "central_lock": {
+    "identity": "C(12,6)=924=mu*q*Phi_6*(k-1)=4*3*7*11"
+  },
+  "finite_universality_surrogate": {
+    "statement": "the full K12 binomial ladder is rigidly determined by the k=12 substrate and central primitive factorization",
+    "boundary": "finite combinatorial ladder theorem; not a continuum classification"
+  },
+  "claim_boundary": "finite C(12,r) ladder formalization with central primitive factor lock",
+  "checks": {
+    "k_equals_q_mu": true,
+    "ladder_r1": true,
+    "ladder_r2": true,
+    "ladder_r3": true,
+    "ladder_r4": true,
+    "ladder_r5": true,
+    "ladder_r6": true,
+    "pascal_symmetry_r1": true,
+    "pascal_symmetry_r2": true,
+    "pascal_symmetry_r3": true,
+    "pascal_symmetry_r4": true,
+    "pascal_symmetry_r5": true,
+    "central_factor_lock": true,
+    "c3_factor_lock": true,
+    "c2_matches_horizon_payload": true,
+    "phi3_is_13": true
+  },
+  "n_verified": 16
+}
