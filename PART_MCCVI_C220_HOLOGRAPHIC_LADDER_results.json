@@ -1,0 +1,42 @@
+{
+  "part": "MCCVI",
+  "theorem": "C220 holographic ladder law",
+  "packets": {
+    "q": 3,
+    "d_z": 4,
+    "k": 12,
+    "C_k_3": 220,
+    "Sym2_dim": 66,
+    "q_pow_dz": 81
+  },
+  "enhancement": {
+    "ratio": "220/81",
+    "identity": "220/81 = C(12,3)/3^4"
+  },
+  "ladder": {
+    "C(12,1)": 12,
+    "C(12,2)": 66,
+    "C(12,3)": 220,
+    "C(12,4)": 495,
+    "C(12,5)": 792,
+    "C(12,6)": 924
+  },
+  "finite_universality_surrogate": {
+    "statement": "the 220 numerator is the rank-3 combinatorial channel of k=12 and reproduces the boundary/bulk enhancement",
+    "boundary": "finite combinatorial identity and rate bridge; not a continuum holographic proof"
+  },
+  "claim_boundary": "finite C(12,r) ladder extraction with explicit enhancement lock at r=3",
+  "checks": {
+    "c220_identity": true,
+    "sym2_is_66_not_220": true,
+    "enhancement_is_220_over_81": true,
+    "enhancement_matches_mccv": true,
+    "ladder_r1": true,
+    "ladder_r2": true,
+    "ladder_r3": true,
+    "ladder_r4": true,
+    "ladder_r5": true,
+    "ladder_r6": true
+  },
+  "n_verified": 10
+}
