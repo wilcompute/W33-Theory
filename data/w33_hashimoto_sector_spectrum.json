@@ -1,0 +1,142 @@
+{
+  "cyclotomic_identification": {
+    "chiral_imag_squared": 7.0,
+    "chiral_match": true,
+    "chiral_substrate": "Phi_6 = q^2 - q + 1",
+    "gauge_imag_squared": 10.0,
+    "gauge_match": true,
+    "gauge_substrate": "Phi_4 = q^2 + 1",
+    "interpretation": "The two non-trivial cyclotomic primitives Phi_4 = 10 and Phi_6 = 7 appear DIRECTLY as the squared imaginary parts of the gauge and chiral Hashimoto sector eigenvalues.  The substrate's cyclotomic structure is written into the directed-edge transport spectrum at the smallest possible level."
+  },
+  "full_spectrum": {
+    "backtrack_multiplicity_m_minus_n": 200,
+    "edges": 240,
+    "k_minus_1": 11,
+    "sectors": [
+      {
+        "lambda_A": 12,
+        "lambda_A_mult": 1,
+        "magnitude_squared": [
+          121.0,
+          1.0
+        ],
+        "type": "real",
+        "u_eigenvalues_repr": [
+          "11.0",
+          "1.0"
+        ],
+        "u_mults": [
+          1,
+          1
+        ]
+      },
+      {
+        "imag_part_squared": 10.000000000000002,
+        "lambda_A": 2,
+        "lambda_A_mult": 24,
+        "magnitude_squared": 11.000000000000002,
+        "real_part": 1.0,
+        "type": "complex",
+        "u_eigenvalues_repr": [
+          "(1+3.1622776601683795j)",
+          "(1-3.1622776601683795j)"
+        ],
+        "u_eigenvalues_str": [
+          "1.0 + i*sqrt(10)",
+          "1.0 - i*sqrt(10)"
+        ],
+        "u_mults": [
+          24,
+          24
+        ]
+      },
+      {
+        "imag_part_squared": 7.000000000000001,
+        "lambda_A": -4,
+        "lambda_A_mult": 15,
+        "magnitude_squared": 11.0,
+        "real_part": -2.0,
+        "type": "complex",
+        "u_eigenvalues_repr": [
+          "(-2+2.6457513110645907j)",
+          "(-2-2.6457513110645907j)"
+        ],
+        "u_eigenvalues_str": [
+          "-2.0 + i*sqrt(7)",
+          "-2.0 - i*sqrt(7)"
+        ],
+        "u_mults": [
+          15,
+          15
+        ]
+      },
+      {
+        "lambda_A": null,
+        "name": "trivial_plus",
+        "type": "real_eigvalue_plus_1",
+        "u_eigenvalues_repr": [
+          "1.0"
+        ],
+        "u_mults": [
+          201
+        ]
+      },
+      {
+        "lambda_A": null,
+        "name": "anti_Perron",
+        "type": "real_eigvalue_minus_1",
+        "u_eigenvalues_repr": [
+          "-1.0"
+        ],
+        "u_mults": [
+          200
+        ]
+      }
+    ],
+    "vertices": 40
+  },
+  "hashimoto_phase_angles": {
+    "interpretation": "The two non-trivial Hashimoto sectors carry distinct phase angles in the complex plane.  In a measurement-based photonic implementation of W(3,3) (the single-photon dual-rail runtime), these angles are the leading non-backtracking transport phases and are in principle measurable as substrate-predicted interference fringes.",
+    "phase_separation_degrees": 54.63509054785614,
+    "theta_chiral_degrees": 127.08668993406384,
+    "theta_chiral_substrate": "arctan(sqrt(Phi_6)/lam_SRG) at q = 3 (second quadrant)",
+    "theta_gauge_degrees": 72.4515993862077,
+    "theta_gauge_substrate": "arctan(sqrt(Phi_4)) at q = 3"
+  },
+  "header": {
+    "substrate_constants": {
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "edges": 240,
+      "f": 24,
+      "g_neg": 15,
+      "k_codec": 12,
+      "p_Ih_k_minus_1": 11,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "All eigenvalue computations follow from the Ihara-Bass identity, which is a classical theorem.  The substrate-primitive identification of the imaginary parts squared as Phi_4 and Phi_6 is an exact arithmetic fact (since Phi_4 = (k-1) - 1 = 10 and Phi_6 = (k-1) - 4 = 7 at q=3).  The 'falsifiable photonic prediction' is a structural claim, not a fully derived experimental observable: it asserts that any W(3,3)-faithful photonic transport must exhibit these two phase angles as the leading non-backtracking spectral modes, but a concrete experimental protocol is left for future work.",
+  "ihara_ramanujan_check": {
+    "all_on_circle": true,
+    "circle_radius_squared": 11,
+    "circle_radius_squared_substrate": "p_Ih = k - 1 = 11",
+    "ihara_ramanujan": true,
+    "interpretation": "Every COMPLEX Hashimoto eigenvalue of W(3,3) lies on the Ihara-Ramanujan circle |u|^2 = p_Ih = 11.  Therefore W(3,3) saturates the optimal non-backtracking spectral gap and is Ihara-Ramanujan in the strong sense: both non-trivial sectors achieve the bound.",
+    "per_sector_check": [
+      {
+        "equals_p_Ih": true,
+        "lambda_A": 2,
+        "sector": "gauge",
+        "u_magnitude_squared": 11.000000000000002
+      },
+      {
+        "equals_p_Ih": true,
+        "lambda_A": -4,
+        "sector": "chiral",
+        "u_magnitude_squared": 11.0
+      }
+    ]
+  },
+  "theorem": "W(3,3) Hashimoto Sector-Projected Spectrum Theorem.  The non-backtracking operator B on the 480 directed edges of W(3,3) has spectrum decomposing into five sectors via Ihara-Bass: Perron (+11), gauge complex (1 +/- i sqrt(Phi_4), mult 48), chiral complex (-2 +/- i sqrt(Phi_6), mult 30), trivial-plus (+1, mult 201), and anti-Perron (-1, mult 200).  All complex eigenvalues lie on the Ihara-Ramanujan circle |u|^2 = p_Ih = 11, so W(3,3) is strongly Ihara-Ramanujan.  The imaginary parts squared are EXACTLY the cyclotomic primitives Phi_4 = 10 (gauge sector) and Phi_6 = 7 (chiral sector), so the substrate's cyclotomic structure is written into the directed-edge transport spectrum."
+}
