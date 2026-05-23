@@ -1,0 +1,92 @@
+{
+  "bruhat_tits_sphere_ball_table": [
+    {
+      "ball_B_n": 1,
+      "n": 0,
+      "sphere_S_n": 1
+    },
+    {
+      "ball_B_n": 13,
+      "n": 1,
+      "sphere_S_n": 12
+    },
+    {
+      "ball_B_n": 145,
+      "n": 2,
+      "sphere_S_n": 132
+    },
+    {
+      "ball_B_n": 1597,
+      "n": 3,
+      "sphere_S_n": 1452
+    },
+    {
+      "ball_B_n": 17569,
+      "n": 4,
+      "sphere_S_n": 15972
+    },
+    {
+      "ball_B_n": 193261,
+      "n": 5,
+      "sphere_S_n": 175692
+    },
+    {
+      "ball_B_n": 2125873,
+      "n": 6,
+      "sphere_S_n": 1932612
+    }
+  ],
+  "header": {
+    "substrate_constants": {
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "edges": 240,
+      "f": 24,
+      "k": 12,
+      "p_Ih": 11,
+      "q": 3,
+      "v": 40
+    }
+  },
+  "honesty_boundary": "Bruhat-Tits tree combinatorics are classical (Serre, Springer).  All substrate-primitive identifications are exact arithmetic.  The unified picture connecting BT sphere growth, Ihara-zeta Ramanujan circle, graph PNT, topological entropy, and Mahler measure to the same number p_Ih = 11 is the structural new content -- the underlying mathematical facts are individually well-known.",
+  "substrate_identifications": {
+    "B_1_eq_Phi_3": {
+      "match": true,
+      "substrate": "Phi_3 = c_odd = 13",
+      "value": 13
+    },
+    "S_1_eq_k": {
+      "match": true,
+      "substrate": "k (W(3,3) valency)",
+      "value": 12
+    },
+    "S_n_general_formula": {
+      "formula": "|S_n| = k * p_Ih^(n-1)",
+      "substrate": "valency times Ihara prime power"
+    },
+    "generating_function": {
+      "form": "(1 + x) / (1 - p_Ih * x)",
+      "pole_at": "x = 1 / p_Ih = Ramanujan circle radius"
+    },
+    "p_adic_unit_filtration": {
+      "comment": "|Z_p^* / U^(1)| = p - 1 at p = p_Ih equals Phi_4",
+      "match": true,
+      "substrate": "Phi_4 = 10",
+      "value": 10
+    },
+    "spectral_radius": {
+      "substrate": "p_Ih (volume growth rate)",
+      "value": 11
+    }
+  },
+  "theorem": "W(3,3) Bruhat-Tits Sphere Structure Theorem.  The bulk holographic dual T_{11} (Bruhat-Tits tree of PGL(2, Q_{11})) has sphere size |S_n| = k * p_Ih^(n-1) and unit ball |B_1| = 1 + k = Phi_3, so the substrate's valency k and third cyclotomic Phi_3 are exactly the first-shell and first-ball sizes of the holographic bulk.  The generating function (1 + x) / (1 - p_Ih * x) has its pole at x = 1/p_Ih, the Ramanujan-circle radius, and the volume growth rate p_Ih is the topological entropy base and the Mahler measure of the Ihara factors.  At the p-adic level, |Z_{p_Ih}^* / U^(1)| = p_Ih - 1 = Phi_4 (= W(3,3) Laplacian spectral gap), connecting p-adic principal-unit filtration to the substrate's discrete Laplacian gap.",
+  "unified_p_Ih_appearances": {
+    "BT_tree_sphere_growth": "|S_n(T_{p_Ih})| = k * p_Ih^(n-1)",
+    "Ihara_zeta_Ramanujan_circle": "|u|^2 = p_Ih on the critical circle",
+    "Mahler_measure_Ihara_factors": "m = log(p_Ih)",
+    "comment": "Five structurally distinct substrate quantities all equal (or take their log of) p_Ih = 11: the bulk-tree volume growth, the boundary Ihara zeta Ramanujan circle radius, the graph prime number theorem rate, the topological entropy, and the Mahler measure of every non-trivial Ihara factor.",
+    "graph_PNT_growth_rate": "pi_n ~ p_Ih^n / n",
+    "topological_entropy": "h_top = log(p_Ih)"
+  }
+}
