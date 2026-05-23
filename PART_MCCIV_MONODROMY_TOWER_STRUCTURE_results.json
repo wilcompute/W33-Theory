@@ -1,0 +1,40 @@
+{
+  "part": "MCCIV",
+  "theorem": "Monodromy tower structure law",
+  "levels": {
+    "L0_q4_faces": 24,
+    "L1_tomotope_aut": 96,
+    "L2_f4_roots": 96,
+    "L3_weyl_f4": 1152,
+    "L4_horizon_3456": 3456,
+    "L5_code_n": 72
+  },
+  "transitions": {
+    "L1_over_L0": 4,
+    "L3_over_L2": 12,
+    "L4_over_L3": 3,
+    "identity": "96/24=4, 1152/96=12, 3456/1152=3"
+  },
+  "code_link": {
+    "k": 12,
+    "identity": "n = C(k,2) + k/2 = C(12,2) + 6 = 72"
+  },
+  "finite_universality_surrogate": {
+    "statement": "tower levels and transition factors close exactly as one finite monodromy scaffold",
+    "boundary": "finite integer tower law; not a continuum RG flow"
+  },
+  "claim_boundary": "finite C333-style tower formalization over established packet counts",
+  "checks": {
+    "level0_faces_is_24": true,
+    "level1_tomotope_aut_is_96": true,
+    "level2_f4_roots_is_96": true,
+    "level3_weyl_f4_is_1152": true,
+    "level4_horizon_is_3456": true,
+    "level5_code_n_is_72": true,
+    "l1_over_l0_is_4": true,
+    "l3_over_l2_is_k": true,
+    "l4_over_l3_is_q": true,
+    "code_formula_matches_n": true
+  },
+  "n_verified": 10
+}
