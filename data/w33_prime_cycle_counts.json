@@ -1,0 +1,109 @@
+{
+  "graph_PNT": {
+    "asymptotic_data": [
+      {
+        "11^n_over_n_approx": 443.6666666666667,
+        "n": 3,
+        "pi_n_exact": 320,
+        "ratio_pi_n_to_approx": 0.7212622088655146
+      },
+      {
+        "11^n_over_n_approx": 3660.25,
+        "n": 4,
+        "pi_n_exact": 3480,
+        "ratio_pi_n_to_approx": 0.9507547298681784
+      },
+      {
+        "11^n_over_n_approx": 32210.2,
+        "n": 5,
+        "pi_n_exact": 36288,
+        "ratio_pi_n_to_approx": 1.1265996485585312
+      },
+      {
+        "11^n_over_n_approx": 295260.1666666667,
+        "n": 6,
+        "pi_n_exact": 302880,
+        "ratio_pi_n_to_approx": 1.0258071836081286
+      },
+      {
+        "11^n_over_n_approx": 2783881.5714285714,
+        "n": 7,
+        "pi_n_exact": 2739840,
+        "ratio_pi_n_to_approx": 0.9841797970572538
+      }
+    ],
+    "graph_PNT": "pi_n ~ p_Ih^n / n for large n",
+    "p_Ih": 11
+  },
+  "header": {
+    "#triangles": 160,
+    "Csaszar_count": 5,
+    "H_1": 81,
+    "f": 24,
+    "g_neg": 15,
+    "p_Ih": 11
+  },
+  "honesty_boundary": "Mobius inversion and the Ihara-Bass identity are classical theorems.  The substrate factorisations of pi_3, pi_4, pi_5 are exact arithmetic.  Higher pi_n (n >= 6) introduce primes that are not atomic substrate primitives (e.g., 631 appears in pi_6 = 302880 = 2^5 * 3 * 5 * 631), so the clean factorisation window is n in {3, 4, 5}.",
+  "ogg_prime_link": {
+    "appears_in_Monster_factor": "|M| = 2^46 * 3^20 * 5^9 * 7^6 * 11^2 * 13^3 * 17 * 19 * 23 * 29 * 31 * 41 * 47 * 59 * 71",
+    "appears_in_pi_4": true,
+    "comment": "The length-4 prime cycle count pi_4 = 3480 contains the Ogg prime 29 as a factor.  29 = q! + (f - 1) is the Master Equation root plus the Szilassi packet, and is one of the 15 supersingular primes dividing the Monster group's order.  This is a fresh Monster/W(3,3) coincidence beyond the Ihara prime p_Ih = 11.",
+    "ogg_prime_29": 29,
+    "substrate_form": "q! + (f - 1) = q! + Szilassi packet"
+  },
+  "prime_cycle_counts": {
+    "rows": [
+      {
+        "N_n": 0,
+        "n": 1,
+        "pi_n": 0,
+        "substrate_form": "(no length-n NB closed walks)"
+      },
+      {
+        "N_n": 0,
+        "n": 2,
+        "pi_n": 0,
+        "substrate_form": "(no length-n NB closed walks)"
+      },
+      {
+        "N_n": 960,
+        "n": 3,
+        "pi_n": 320,
+        "substrate_form": "2 * #triangles = 2^{2q} * Csaszar_count = 64 * 5"
+      },
+      {
+        "N_n": 13920,
+        "n": 4,
+        "pi_n": 3480,
+        "substrate_form": "2^q * q * Csaszar_count * 29  (29 = q! + (f-1) = Ogg prime)"
+      },
+      {
+        "N_n": 181440,
+        "n": 5,
+        "pi_n": 36288,
+        "substrate_form": "2^{2q} * Phi_6 * H_1 = 64 * 7 * 81"
+      },
+      {
+        "N_n": 1818240,
+        "n": 6,
+        "pi_n": 302880,
+        "substrate_form": "(no clean atomic substrate factorisation; len-6 mixed)"
+      },
+      {
+        "N_n": 19178880,
+        "n": 7,
+        "pi_n": 2739840,
+        "substrate_form": "(no clean atomic substrate factorisation; len-7 mixed)"
+      }
+    ]
+  },
+  "theorem": "W(3,3) Prime Closed-Walk Count Theorem.  Length-n prime closed walks pi_n in W(3,3) are obtained by Mobius inversion of the Hashimoto traces N_n = tr(B^n).  The first three non-zero counts factor cleanly as: pi_3 = 320 = 2^{2q} * Csaszar_count, pi_4 = 3480 = 2^q * q * Csaszar_count * 29 (with 29 an Ogg prime), and pi_5 = 36288 = 2^{2q} * Phi_6 * H_1.  All complex Hashimoto eigenvalues on the Ihara-Ramanujan circle yield the graph prime number theorem pi_n ~ p_Ih^n / n at p_Ih = 11.",
+  "verify_substrate_factorisations": {
+    "29_equals_qfact_plus_szilassi": true,
+    "29_is_Ogg_prime": true,
+    "pi_3_factor_2_times_triangles": true,
+    "pi_3_factor_2pow_2q_Csaszar": true,
+    "pi_4_factor": true,
+    "pi_5_factor": true
+  }
+}
