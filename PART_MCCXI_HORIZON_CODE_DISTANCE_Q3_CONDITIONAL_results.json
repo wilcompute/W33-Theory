@@ -1,0 +1,37 @@
+{
+  "part": "MCCXI",
+  "theorem": "Conditional horizon distance q=3 law",
+  "packet": {
+    "q": 3,
+    "n": 72,
+    "k_code": 66,
+    "rank_H": 6,
+    "zero_columns_full_H": 0
+  },
+  "assumptions": {
+    "minimal_symmetric_k12_embedding": true,
+    "no_proportional_edge_columns_under_embedding": true
+  },
+  "distance_claim": {
+    "upper_bound_constructive": "d <= 3",
+    "conditional_exact": "if minimal symmetric K12 embedding + no proportional edge columns, then d = 3 = q",
+    "identity": "d=q=3 (conditional C346c)"
+  },
+  "honesty_boundary": {
+    "statement": "exact d=3 is conditional on embedding-level non-proportionality assumption; constructive lower-bound certificate remains open"
+  },
+  "claim_boundary": "finite constructive/conditional split for [72,66,*]_3 distance law",
+  "checks": {
+    "packet_is_72_66_q3": true,
+    "full_parity_rank_is_6": true,
+    "all_columns_nonzero_constructive": true,
+    "no_weight1_constructive": true,
+    "triangle_witness_weight3": true,
+    "d_le_3_from_triangle_witness": true,
+    "d_le_3_from_mccix_upper_bound": true,
+    "assumption_minimal_embedding_declared": true,
+    "assumption_no_proportional_edge_columns_declared": true,
+    "conditional_d_eq_3": true
+  },
+  "n_verified": 10
+}

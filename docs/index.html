@@ -13600,30 +13600,48 @@
 
         <h4>r=3 face-code rate law</h4>
         <p>MCCVIII extracts the face packet from the established K12 genus-6 surface: with
-          <code>F=44</code> and <code>g=6</code>, define <code>[n<sub>face</sub>,k<sub>face</sub>,*]<sub>3</sub>=[50,44,*]<sub>3</sub></code>
+          <code>F=44</code> and <code>g=6</code>, define
+          <code>[n<sub>face</sub>,k<sub>face</sub>,*]<sub>3</sub>=[50,44,*]<sub>3</sub></code>
           via <code>n<sub>face</sub>=F+g</code>, <code>k<sub>face</sub>=F</code>. Hence the rate is
-          <code>R<sub>face</sub>=44/50=22/25</code>.</p>
+          <code>R<sub>face</sub>=44/50=22/25</code>.
+        </p>
         <p>The universal algebraic form closes exactly at <code>k=12</code>:
           <code>56=C(k,2)-k+2</code> and
-          <code>R<sub>face</sub>=(56-k)/(56-k/2)=(56-12)/(56-6)=44/50=22/25</code>.</p>
+          <code>R<sub>face</sub>=(56-k)/(56-k/2)=(56-12)/(56-6)=44/50=22/25</code>.
+        </p>
         <p>Boundary kept explicit: the rate is fixed, while an explicit constructive proof of
-          <code>d=3</code> for <code>[50,44,d]<sub>3</sub></code> remains open.</p>
+          <code>d=3</code> for <code>[50,44,d]<sub>3</sub></code> remains open.
+        </p>
 
         <h4>Horizon code distance-three law</h4>
         <p>MCCIX formalizes the distance upper-bound packet for the ternary horizon code
-          <code>[72,66,*]<sub>3</sub></code>. With redundancy <code>n-k=6</code>, one has <code>3<sup>6</sup>=729</code>.
-          Hamming sphere-packing for <code>d=5</code> gives</p>
-        <p><code>V<sub>2</sub>=1+72&middot;2+C(72,2)&middot;4=10369&gt;729</code>, so <code>d=5</code> is impossible.</p>
+          <code>[72,66,*]<sub>3</sub></code>. With redundancy <code>n-k=6</code>, one has
+          <code>3<sup>6</sup>=729</code>.
+          Hamming sphere-packing for <code>d=5</code> gives
+        </p>
+        <p><code>V<sub>2</sub>=1+72&middot;2+C(72,2)&middot;4=10369&gt;729</code>, so <code>d=5</code> is impossible.
+        </p>
         <p>A triangle-boundary witness model supplies an explicit nonzero weight-3 word, so
           <code>d&le;3</code>. Honest boundary remains explicit: a full kernel proof of <code>d&ge;3</code>
-          is still open, with conjectural closure at <code>d=q=3</code>.</p>
+          is still open, with conjectural closure at <code>d=q=3</code>.
+        </p>
 
         <h4>Genus-rank parity-check law</h4>
         <p>MCCX packages the C345 identification in executable form:
-          <code>rank(H)=n-k=72-66=6</code> and this rank equals the geometric genus <code>g=6</code>.</p>
+          <code>rank(H)=n-k=72-66=6</code> and this rank equals the geometric genus <code>g=6</code>.
+        </p>
         <p>The same value is recovered by two independent normalizations:
           <code>k<sub>val</sub>/2=12/2=6</code> and <code>N<sub>M</sub>/(2q)=36/(2&middot;3)=6</code>.
-          So parity-check rank, topology, and packet transport counts are locked to one invariant.</p>
+          So parity-check rank, topology, and packet transport counts are locked to one invariant.
+        </p>
+
+        <h4>Conditional horizon distance q=3 law</h4>
+        <p>MCCXI makes C346 executable with a constructive/conditional split. Constructively, the explicit full F3 parity
+          matrix has rank <code>6</code> and no zero columns (hence no weight-1 codeword), and MCCIX already fixes
+          <code>d&le;3</code>. A triangle witness model supplies weight <code>3</code>.</p>
+        <p>Under minimal symmetric K12 embedding plus non-proportional edge columns, the packet closes as
+          <code>d=q=3</code> (conditional C346c). Honest boundary is kept explicit: a fully constructive lower-bound
+          certificate independent of those assumptions remains open.</p>
 
         <h4>Temporal-triangle single-photon lock</h4>
         <p>MCCIII formalizes the new temporal-triangle draft as a strict packet lock at <code>q=3</code>:
