@@ -1,0 +1,100 @@
+{
+  "A_temporal_torus_S1_x_S1": {
+    "definition": "T^2 = S^1 x S^1 = past x future",
+    "self_entangled_qutrit": "lives on T^2 via Z_3 x Z_3 = 9 history cells"
+  },
+  "B_unit_circle_substrate": {
+    "S1_continuous": "unit circle U(1) = continuous time direction",
+    "Z3_three_roots": "{1, omega, omega^2} = {1, exp(2 pi i / 3), exp(4 pi i / 3)}",
+    "Zq_discrete": "Z_q = q-th roots of unity on S^1 (substrate sampling)",
+    "diagonal_now": "{i = j} = 3 diagonal cells = q now-aligned histories",
+    "directed_q_factorial": "{i != j} = 6 = q! directed past-future transitions",
+    "geometric": "three cube roots of unity = three vertices of equilateral triangle inscribed in S^1",
+    "history_cells": "Z_3 x Z_3 = 9 = q^2 history cells on the temporal torus",
+    "self_entangled_torus": "past S^1 x future S^1 = T^2 (temporal torus)",
+    "temporal_reading": "past, now, future = the three Z_3 = Z_q points on S^1"
+  },
+  "C_minimal_toroidal_triangulation": {
+    "Euler_characteristic": 0,
+    "csaszar": {
+      "E": 21,
+      "F": 14,
+      "V": 7,
+      "type": "complete vertex adjacency, K_7"
+    },
+    "csaszar_cell_sum": 42,
+    "csaszar_cell_sum_substrate": "q! * Phi_6 = 6 * 7 = 42",
+    "csaszar_substrate": {
+      "E": "T_6",
+      "F": "2 Phi_6",
+      "V": "Phi_6"
+    },
+    "interpretation": "The Csaszar/Szilassi minimal-triangulation dual pair is the past/future-swap symmetry of the self-entangled qutrit at the temporal torus T^2 = S^1 x S^1.",
+    "shared_edge_count": 21,
+    "shared_edge_substrate": "T_6 = Pascal triangular = Csaszar/Szilassi edge count",
+    "szilassi": {
+      "E": 21,
+      "F": 7,
+      "V": 14,
+      "type": "complete face adjacency, dual"
+    },
+    "szilassi_substrate": {
+      "E": "T_6",
+      "F": "Phi_6",
+      "V": "2 Phi_6"
+    },
+    "verified_torus": true
+  },
+  "D_temporal_triangle_match": {
+    "csaszar_vertices": 7,
+    "csaszar_vertices_substrate": "Phi_6",
+    "interpretation": "The temporal triangle's 7 cells (3 vertices + 3 edges + 1 face) match the Csaszar K_7's 7 vertices.  Both are Phi_6 = 7.  The temporal triangle's cell decomposition is the substrate's intrinsic decomposition of the minimal toroidal triangulation's vertex set.",
+    "match": true,
+    "temporal_triangle_cells": 7,
+    "temporal_triangle_substrate": "Phi_6"
+  },
+  "E_klein_quartic_connection": {
+    "comment": "Klein quartic Hurwitz orbits = 84 = mu * T_6 = 2 * (Csaszar cell sum).  Klein quartic is the Hurwitz-extremal Riemann surface at genus 3 = q (commit 2a533251), and the Csaszar K_7 minimal toroidal triangulation contributes EXACTLY half of Klein's Hurwitz orbits via its cell sum.",
+    "csaszar_flag_count": 84,
+    "klein_hurwitz_orbits": 84,
+    "match": true,
+    "tomotope_decomposition": {
+      "alt": "f + 2 * (Csaszar cell sum) = 24 + 168 = 192",
+      "decomposition": "24 (tetra flags) + 84 (Csaszar flags) + 84 (Szilassi flags)",
+      "klein_substrate_link": "matches Klein invariant sum 24+28+56+84",
+      "value": 192
+    }
+  },
+  "F_horizon_code_connection": {
+    "66_alt_substrate": "toroidal cell sum (42) + tetra flags (24)",
+    "66_substrate": "E_Cs + E_Sz + f = 21 + 21 + 24",
+    "72_minus_66": "6 = q! (parity budget)",
+    "72_substrate": "k * q! = 12 * 6",
+    "comment": "The substrate's [72, 66, 3]_3 toroidal horizon code decomposes through the Csaszar/Szilassi edge pair plus tetrahedron flags.  72 - 66 = q! is the qutrit parity budget closing the genus-equation horizon.",
+    "horizon_code": "[72, 66, 3]_3"
+  },
+  "header": {
+    "substrate_constants": {
+      "Csaszar_flag_count": 84,
+      "Phi_6": 7,
+      "T_6": 21,
+      "q": 3,
+      "q!": 6
+    }
+  },
+  "honesty_boundary": "Csaszar/Szilassi minimal-triangulation theory is classical.  The unit circle / Z_q identification is elementary.  The MATCHING of the temporal triangle's 7-cell count with the Csaszar K_7 vertex count is the new structural bridge in this commit.  The single-photon harmonic-oscillator reading (time bins on S^1) is a structural prescription tied to Part MCCIII's existing implementation map.",
+  "number_seven_substrate_appearances": [
+    "Phi_6 = q^2 - q + 1 = 7 (cyclotomic primitive)",
+    "Csaszar K_7 vertex count = 7 (minimal toroidal triangulation)",
+    "Szilassi face count = 7 (dual)",
+    "temporal triangle cell count = 3 + 3 + 1 = 7 (Part MCCIII)",
+    "Fano plane PG(2, F_2) size = 7 (Hamming binary shadow)",
+    "octonion imaginary unit count = 7 (=> G_2 = Aut(O))",
+    "Heawood shell d_X + d_Z = 7 (CSS distance sum)",
+    "Heegner number 7 (Q(sqrt(-7)) class number 1)",
+    "Klein quartic modular curve X(7) level = 7",
+    "Hamming [7, 4, 3] block length = 7",
+    "Sevenfold rotation symmetry of the K_7 / Csaszar"
+  ],
+  "theorem": "W(3,3) Temporal Torus / Minimal Triangulation Theorem.  Past x future = T^2 = S^1 x S^1 is the natural geometric host of the self-entangled qutrit (Part MCCIII).  At the substrate's discrete level, each S^1 carries Z_q = q-th roots of unity; at q = 3 these are the cube roots {1, omega, omega^2} which are exactly the past, now, future vertices of an equilateral triangle inscribed in the unit circle.  Past x Future = Z_3 x Z_3 = 9 = q^2 history cells splitting as q diagonal (now) + q! directed (transitions).  The MINIMAL TRIANGULATION of this temporal torus is the Csaszar polyhedron K_7 with V_Cs = 7 = Phi_6 vertices and cell sum V + E + F = q! * Phi_6 = 42.  The 7 = Phi_6 Csaszar vertices MATCH the temporal triangle's 3 + 3 + 1 = 7 cells exactly.  The Csaszar/Szilassi dual pair (sharing edge count T_6 = 21) is the past/future-swap symmetry of the self-entangled qutrit, and 2 * (Csaszar cell sum) = Klein Hurwitz orbits = 84 = mu * T_6.  The substrate horizon code [72, 66, 3]_3 has 66 = E_Cs + E_Sz + f = 21 + 21 + 24, with parity gap 72 - 66 = q!.  Seven (Phi_6) appears in ELEVEN distinct substrate identifications, all concurring on the same Heawood / Fano / Heegner / octonion / Hamming / Csaszar / Klein number."
+}
