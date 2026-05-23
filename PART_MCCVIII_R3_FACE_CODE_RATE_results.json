@@ -1,0 +1,38 @@
+{
+  "part": "MCCVIII",
+  "theorem": "r=3 face-code rate law",
+  "packet": {
+    "q": 3,
+    "k": 12,
+    "n_face": 50,
+    "k_face": 44,
+    "rate": "22/25",
+    "u56": 56
+  },
+  "universal_formula": {
+    "identity": "R_face = (56-k)/(56-k/2) = (C(k,2)-k+2-k)/(C(k,2)-k+2-k/2)",
+    "evaluated": "(56-12)/(56-6) = 44/50 = 22/25"
+  },
+  "open_boundary": {
+    "distance_status": "[50,44,d]_3 packet rate is fixed; explicit proof of d=3 remains open",
+    "reason": "rate is Euler/genus-rigid, while minimum distance still needs kernel witness"
+  },
+  "finite_universality_surrogate": {
+    "statement": "the r=3 face-code rate is algebraically forced by K12 surface counts and the universal 56-formula",
+    "boundary": "finite rate law with explicit distance boundary"
+  },
+  "claim_boundary": "finite [50,44,*]_3 rate theorem from MCXCII geometry",
+  "checks": {
+    "surface_faces_is_44": true,
+    "surface_genus_is_6": true,
+    "face_code_length_is_50": true,
+    "face_code_payload_is_44": true,
+    "face_code_rate_is_22_over_25": true,
+    "u56_formula_is_exact": true,
+    "universal_numerator_is_44": true,
+    "universal_denominator_is_50": true,
+    "universal_rate_matches_face_rate": true,
+    "open_distance_boundary_kept": true
+  },
+  "n_verified": 10
+}
