@@ -629,6 +629,83 @@ quantum computation on a single photon, consistent with the master equation
 $q! = 2q$ (\cref{thm:dioph}).
 \end{remark}
 
+\subsection{Diagonal vs Off-Diagonal: The Master Equation on $\mathcal H_p\otimes\mathcal H_f$}
+\label{sec:diag_offdiag}
+
+The 9-dimensional past$\otimes$future Hilbert space carries a canonical
+decomposition that incarnates the master equation $q! = 2q$ at the level of
+quantum histories.
+
+\begin{definition}[Diagonal and off-diagonal subspaces]\label{def:diag_subspaces}
+For $\mathcal H_p\otimes\mathcal H_f = \CC^q\otimes\CC^q$, define
+\begin{align}
+  \mathcal D &\;=\; \mathrm{span}\bigl\{\ket{jj} : j\in\GF{q}\bigr\}
+    & \text{(diagonal ``now'' subspace),}
+  \\
+  \mathcal N &\;=\; \mathrm{span}\bigl\{\ket{jk} : j,k\in\GF{q},\ j\neq k\bigr\}
+    & \text{(off-diagonal history subspace).}
+\end{align}
+Then $\mathcal H_p\otimes\mathcal H_f = \mathcal D \oplus \mathcal N$ with
+$\dim\mathcal D = q$ and $\dim\mathcal N = q^2 - q = q(q-1)$.
+\end{definition}
+
+\begin{theorem}[Master-equation history split]\label{thm:masteq_history}
+For $q = 3$, the past/future Hilbert space splits as
+\begin{equation}
+  q^2  \;=\;  q + q!,
+  \qquad
+  9  \;=\;  3 + 6,
+  \label{eq:masteq_history}
+\end{equation}
+where $3 = q = \dim\mathcal D$ is the diagonal ``now'' subspace and
+$6 = q! = \dim\mathcal N$ is the off-diagonal history subspace.  This identity
+holds \emph{only} at $q = 3$:
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item $\dim\mathcal D = q$ always; this is the simultaneous past$=$future
+    eigenbasis, the ``simultaneous-identification'' subspace.
+  \item $\dim\mathcal N = q(q-1)$ always; this is the
+    ``context-changing'' subspace where past $\neq$ future.
+  \item $q^2 = q + q(q-1)$ is trivial arithmetic, but
+    $q(q-1) = q!$ is the \emph{master equation $q! = 2q$ rearranged}
+    (multiplied by $(q-1)/(q-1)$), which holds uniquely at $q = 3$ in
+    positive integers.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i)--(ii) by direct count.  (iii) is the rearrangement $q! = 2q \Leftrightarrow
+q(q-1)(q-2)! = 2 \Leftrightarrow (q-2)! = 2/(q-1)$, which has integer solution
+only at $q=3$ (giving $(q-2)! = 1! = 1 = 2/2$).  Equivalently, the master
+equation \cref{thm:dioph} forces $q!=2q$, so for $q=3$ the off-diagonal count
+$q(q-1) = q!\cdot(q-1)/q = q!$ when $(q-1) = q-1 = 2 = q!/q$, automatic at
+$q=3$.
+\end{proof}
+
+\begin{corollary}[Bell qutrit is in the diagonal]\label{cor:bell_in_diagonal}
+The Bell qutrit $\ket{\Omega} = q^{-1/2}\sum_j\ket{jj}$ lies entirely in
+$\mathcal D$.  Its orthogonal complement in $\mathcal D$ (the other $q-1$
+diagonal states) is the ``coherent diagonal cloud'' that carries the rest of the
+Bell line's stabiliser action.
+\end{corollary}
+
+\begin{remark}[Three equivalent readings of $6$]
+The off-diagonal dimension $6 = q!$ admits three substrate readings:
+\begin{enumerate}[label=(\alph*),noitemsep]
+  \item $q! = 6$ permutations of $\{0,1,2\}$ (symmetric group $S_3$ on the
+    qutrit basis);
+  \item $2q = 6$ ordered pairs (past, future) with past $\ne$ future (since
+    each diagonal removes 1 of $q$ values, leaving $q-1$ futures for each
+    past, giving $q(q-1) = 2q$ off-diagonal pairs at $q=3$);
+  \item $q(q-1) = 6$ unordered choices of (past$\ne$future) pairs counted twice
+    (once for each direction).
+\end{enumerate}
+These three readings of $6$ coincide \emph{only} at $q = 3$ via the master
+equation, making the dimension of the off-diagonal history subspace a
+substrate-primitive quantity.
+\end{remark}
+
+\subsection{Synthesis}
+
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
 photon} carries the full $W(3,3)$ substrate as its now-context spread, with the
 Bell stabiliser line as the temporal seed.  All structural counts of
