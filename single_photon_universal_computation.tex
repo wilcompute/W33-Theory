@@ -925,6 +925,62 @@ ratio (matching $1 : (v-1)$) is the substrate measure of how much
 budget.
 \end{remark}
 
+\subsection{Decoherence Threshold: Substrate-Clean Noise Tolerance}
+\label{sec:decoherence}
+
+A realistic photonic implementation suffers depolarising noise on the
+temporal qutrit registers.  The Bell qutrit's entanglement survives noise
+up to a substrate-clean threshold.
+
+\begin{theorem}[Bell-qutrit decoherence threshold]\label{thm:noise_threshold}
+Consider the noisy temporal Bell state (isotropic Werner-like form)
+\begin{equation}
+  \rho(p) \;=\; (1-p)\,\ket{\Omega}\bra{\Omega} + \frac{p}{q^2}\, I_{q^2},
+  \qquad p \in [0, 1].
+  \label{eq:werner}
+\end{equation}
+Then $\rho(p)$ is past$\leftrightarrow$future entangled \emph{if and only if}
+\begin{equation}
+  p \;<\; \frac{q}{q+1} \;=\; \frac{q}{\mu} \;=\; \frac{3}{4}.
+  \label{eq:noise_thresh}
+\end{equation}
+The substrate noise threshold is exactly $q/\mu = 3/4$.
+\end{theorem}
+
+\begin{proof}
+Standard Werner-Holevo result: an isotropic two-qudit state
+$\rho(\lambda) = \lambda\ket{\Omega}\bra{\Omega} + (1-\lambda)/q^2 \cdot I$
+is separable iff $\lambda \le 1/(q+1)$.  Reparametrising via $\lambda = 1-p$,
+separability holds iff $1-p \le 1/(q+1)$, i.e.\ $p \ge q/(q+1) = q/\mu$.
+At $q = 3$: $p_{\text{sep}} = 3/4$.
+\end{proof}
+
+\begin{corollary}[Substrate noise readings]\label{cor:noise_readings}
+The threshold $3/4 = q/\mu$ admits four substrate-primitive readings:
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item $q/\mu$ (fundamental quantum / co-quantum),
+  \item $(q+1-1)/(q+1) = 1 - 1/\mu$ (one minus inverse co-quantum),
+  \item $(\lambda+1)/\mu = (\text{SRG }\lambda + 1)/\mu$ (SRG $\lambda$ shifted by one),
+  \item $(\mu-1)/\mu$ (co-quantum minus one over co-quantum).
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}[Comparison with two-qubit noise threshold]\label{rem:qubit_compare}
+For two-qubit ($q=2$) Werner states, the separability threshold is
+$p = q/(q+1) = 2/3$ via the same formula.  The W(3,3)-qutrit threshold
+$3/4 > 2/3$ makes the temporal Bell qutrit \emph{strictly more
+noise-tolerant} than the standard qubit Bell pair: the substrate jump from
+$q=2$ to $q=3$ buys noise tolerance from $2/3$ to $3/4$, a gain consistent
+with the substrate's master equation $q! = 2q$ activating at $q=3$.
+\end{remark}
+
+\begin{remark}[Quantum capacity below threshold]\label{rem:capacity}
+For $p < q/\mu = 3/4$, the entanglement of formation of $\rho(p)$ is positive
+and the joint state supports quantum teleportation, dense coding, and other
+entanglement-based protocols.  At $p = q/\mu$, entanglement degrades to zero
+and the joint state becomes a separable mixture of product states.
+\end{remark}
+
 \subsection{Marginal Mixedness and Mutual Information}
 \label{sec:marginal}
 
