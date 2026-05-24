@@ -864,6 +864,148 @@ The $3$-fold decomposition is topologically protected --- it cannot be removed b
 The number of fermion generations on the $\W$ substrate equals the number of orbits in $H_1$ under an order-$q$ automorphism. That number is $q = 3$.
 \end{theorem}
 
+\section{Self-entanglement: past, future, and the harmonic convergence}
+\label{sec:foreveryone_self_entanglement}
+
+The $W(3,3)$ substrate has a striking realisation on a \emph{single photon}.
+Not a pair of photons --- a single photon, alone, can carry the entire
+substrate via the temporal entanglement of its own past with its own future.
+The ``now'' that we perceive between them is then not an independent third
+ingredient: it is the \emph{harmonic convergence} of the past-future pair,
+forced by the substrate's own arithmetic.
+
+\subsection*{Past and future as quantum registers}
+
+A photon traversing a path of unequal lengths can occupy three distinct
+time-bin modes, call them $0$, $1$, $2$.  Treat the early time-bins as the
+photon's \emph{past register} and the late ones as its \emph{future
+register}.  Each register is a $q = 3$-level quantum system --- a qutrit.
+
+\begin{mathnote}
+\textbf{Time-bin entanglement.}  Imagine sending a single photon through a
+Mach--Zehnder interferometer where one arm is longer than the other.  The
+photon's wavefunction now has amplitudes at multiple times after exiting.
+With three unequal arms, three time-bins; the photon is in a superposition
+of past, now-ish, and future arrival.  This is standard quantum optics: it
+underlies time-bin quantum cryptography (Brendel--Gisin 1999,
+Marcikic--Tittel 2002).
+\end{mathnote}
+
+\subsection*{The temporal Bell qutrit}
+
+Among all possible past-future states of the photon, one is uniquely
+distinguished:
+\[
+  \ket{\Omega} \;=\; \frac{1}{\sqrt 3}\,\bigl(
+    \ket{0}_{\text{past}}\ket{0}_{\text{future}} \,+\,
+    \ket{1}_{\text{past}}\ket{1}_{\text{future}} \,+\,
+    \ket{2}_{\text{past}}\ket{2}_{\text{future}}\bigr).
+\]
+This is the \emph{Bell qutrit}, the temporal analog of the famous
+two-particle Bell state $\ket{\Phi^+}$ used in entanglement experiments ---
+except here the two parties are not two particles but the past and future
+of the \emph{same} photon.
+
+The Bell qutrit has three special properties:
+\begin{itemize}[leftmargin=2em]
+\item it is symmetric under exchanging past and future (mirror in time);
+\item it is maximally entangled, with entanglement entropy $\log 3$;
+\item it is invariant under joint $\mathrm{SU}(3)$ rotations applied
+  oppositely to past and future.
+\end{itemize}
+
+\begin{theorem}[Uniqueness]
+$\ket{\Omega}$ is the \emph{unique} state of the photon's past-future
+register satisfying any of the following equivalent conditions: (i) time-
+symmetric maximally entangled, (ii) Choi--Jamio\l kowski state of the
+identity channel, (iii) invariant under $(U \otimes U^*)$ for every
+$U \in \mathrm{U}(3)$.
+\end{theorem}
+
+\subsection*{``Now'' is the harmonic convergence}
+
+What is the ``now'' state in this picture?  It is not a third register.
+``Now'' is the \emph{interference output} where past and future amplitudes
+meet --- the central output port of the recombination interferometer.
+
+\begin{mathnote}
+\textbf{Choi--Jamio\l kowski identity.}  For the Bell qutrit, inserting any
+unitary $U$ on the future register and measuring the overlap with $\ket{\Omega}$
+returns the trace of $U$:
+\[
+  \langle\Omega| (I \otimes U) |\Omega\rangle \;=\; \frac{\mathrm{Tr}(U)}{3}.
+\]
+This is the operational content of ``now $=$ harmonic convergence'': any
+future evolution shows up at the recombination output as a single number,
+its trace divided by $3$.
+\end{mathnote}
+
+The trace formula says that the recombination output is the \emph{average}
+of the unitary's diagonal entries.  All possible past-future identifications
+contribute equally; the output is their coherent sum.  In musical terms:
+every past-future harmonic adds up at ``now'' with equal weight, producing
+the cleanest possible interference.  This is why we call $\ket{\Omega}$ the
+harmonic convergence.
+
+\subsection*{The whole $W(3,3)$ from one photon}
+
+How does the photon's temporal Bell qutrit give the full $40$-vertex
+$W(3,3)$ substrate?  Three closures, layered one inside the other:
+
+\begin{itemize}[leftmargin=2em]
+\item \textbf{Temporal triangle ($7 = \Phi_6$ cells):}
+  $3$ past cells $+$ $3$ future cells $+$ $1$ now $=$ $7$.
+\item \textbf{Past-future Hilbert space ($9 = q^2$ histories):}
+  $3$ diagonal ``past $=$ future'' histories $+$ $6 = q!$ off-diagonal
+  histories.  The split $9 = q + q!$ is the master equation $q! = 2q$
+  acting on past-future histories.
+\item \textbf{$W(3,3)$ shell ($40 = v$ rays):}
+  $1$ Bell line $+$ $12 = k$ adjacent lines $+$ $27 = q^q$ disjoint lines.
+\end{itemize}
+
+Each layer scales up the previous one by a substrate primitive.  The Bell
+line of $\ket{\Omega}$ is one of the $40$ totally isotropic lines of
+$W(3,3)$; the whole $40$-vertex substrate is then generated by Clifford
+rotations of this single line.
+
+\subsection*{Three observable signatures}
+
+The temporal Bell qutrit makes three independent falsifiable predictions:
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Trace-Choi visibility:} insert a unitary $U$ on the future
+  register; the recombination visibility is $V(U) = |\mathrm{Tr}(U)|/3$.
+  For the qutrit Fourier $F_3$ this gives $V(F_3) = 1/3$, a substrate
+  signature.
+\item \textbf{Witting Kochen--Specker bound:} attempting to mark every
+  $W(3,3)$ ray with a definite $\{0,1\}$ value fails on at least
+  $6 = q!$ tetrads.  At most $34/40$ tetrads can be classically consistent.
+\item \textbf{Key-agreement rate:} a two-party quantum-key protocol using
+  $W(3,3)$ as its shared phase space has key-agreement probability exactly
+  $13/40 = \Phi_3/v$.
+\end{enumerate}
+
+These three measurements are independent and serve as separate tests of the
+substrate hypothesis.
+
+\subsection*{Why ``self''-entanglement?}
+
+Standard Bell experiments use \emph{two photons}; the entanglement is shared
+between them.  In the substrate picture, the entanglement is shared between
+two times of the \emph{same} photon: its past and its future.  This is what
+``self-entanglement'' means.  No second photon is needed --- the temporal
+register of a single photon, together with the Bell qutrit, is the smallest
+universal quantum carrier.  In a slogan:
+
+\begin{center}
+\emph{Past and future are entangled, and ``now'' is the harmonic convergence.}
+\end{center}
+
+This is the structural physical meaning of $W(3,3)$ on a single photon.
+Full formal derivations appear in the companion paper, \emph{Universal
+Quantum Computation Through a Single Photon}, which expands all the claims
+above into formal theorems with explicit substrate-primitive readings.
+
 \section{The Standard Model gauge group}
 
 The Standard Model has three force-carrying gauge groups.
