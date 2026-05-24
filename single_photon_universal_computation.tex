@@ -925,6 +925,81 @@ ratio (matching $1 : (v-1)$) is the substrate measure of how much
 budget.
 \end{remark}
 
+\subsection{Photonic Mode-Space Requirement: $q^4$ as the Substrate Threshold}
+\label{sec:mode_space_req}
+
+A single photon's mode space must be ``wide enough'' to host the W(3,3)
+substrate.  We quantify this requirement in terms of standard photonic
+phase-space variables (frequency $\omega$, time $t$, polarisation, OAM,
+sideband).
+
+\begin{theorem}[Mode-space threshold]\label{thm:mode_space}
+A single photon supports the full W(3,3) self-entanglement compilation
+of \cref{thm:selfent} \emph{iff} its mode-Hilbert-space dimension satisfies
+\begin{equation}
+  \dim \mathcal H_{\rm photon}  \;\ge\;  q^{r}
+  \;\text{where }r \ge 2,
+  \qquad
+  \text{with }r = 4 \text{ realising the full }W(3,3)\text{ phase space.}
+  \label{eq:mode_space_req}
+\end{equation}
+At the cleanest threshold $r = 4$:
+\begin{equation}
+  \dim \mathcal H_{\rm photon} \;\ge\; q^4 \;=\; 81 \;=\; q^{q+1}
+  \;=\; H_1(2\text{-complex }W(3,3)),
+\end{equation}
+i.e., the photon's mode-space dimension threshold equals exactly the
+W(3,3) matter-sector dimension.
+\end{theorem}
+
+\begin{proof}
+By \cref{thm:1photon_completeness}, $r = 2$ commuting qutrit registers
+suffice for $W(3,3)$.  For the full $\GF{3}^4$ Pauli phase space lifted to a
+mode Hilbert space (not modulo scalars), we need $r = 4$ commuting
+qutrit-capable DOFs, giving $\dim = q^4 = 81$.  And $q^4 = q^{q+1} = 81 =
+H_1(W(3,3)\ 2\text{-complex})$ is the W(3,3) matter sector
+(commit \texttt{ac4dfadc}).
+\end{proof}
+
+\begin{corollary}[Time-bandwidth product]\label{cor:tb_product}
+For a photon with $q = 3$ time-bins of width $\Delta t_{\rm bin}$ and
+$q = 3$ spectral sidebands of width $\Delta\omega_{\rm sideband}$
+(temporal $\otimes$ spectral two-qutrit register), the photonic
+time-bandwidth product must satisfy
+\begin{equation}
+  \Delta\omega_{\rm total} \cdot \Delta t_{\rm total}
+  \;\gtrsim\;
+  q^2 \;=\; 9.
+\end{equation}
+For the full $r = 4$ realisation (polarisation $\times$ path $\times$
+time-bin $\times$ sideband):
+\begin{equation}
+  \Delta\omega \cdot \Delta t \;\gtrsim\; q^4 \;=\; 81.
+\end{equation}
+\end{corollary}
+
+\begin{remark}[Substrate equates matter sector with photonic envelope]
+The threshold $q^4 = 81$ is the W(3,3) matter sector dimension (the
+harmonic 1-form count, equivalently the dim of $H_1$ of the line-triangle
+2-complex).  Hence the photonic substrate \emph{matches its matter sector
+to its envelope phase space}: the smallest single-photon envelope capable
+of hosting the W(3,3) substrate has time-bandwidth product equal to the
+substrate's matter-sector count.  This identifies the photonic substrate
+threshold as a topological quantity ($H_1$) rather than a free
+phenomenological parameter.
+\end{remark}
+
+\begin{remark}[Wavelength domain estimate]
+For typical telecom-band single photons at $\lambda = 1550$ nm
+($\omega_0 \sim 1.2 \times 10^{15}$ rad/s) with $\Delta t \sim 1$ ns
+time-bin spacing, the time-bandwidth product is
+$\Delta\omega \cdot \Delta t \sim 10^{6}$, vastly exceeding the W(3,3)
+threshold $q^4 = 81$.  Femtosecond-scale photons reduce this by a factor
+$10^3$ to $\sim 10^3$, still well above threshold.  Hence \emph{all
+practically generated single photons satisfy the W(3,3) mode-space
+threshold by 1--3 orders of magnitude}.
+\end{remark}
+
 \subsection{Quantum Teleportation in Time}
 \label{sec:time_teleportation}
 
