@@ -863,6 +863,68 @@ These three witnesses---trace-Choi visibility, Witting non-contextuality,
 and the $13/40$ key-agreement rate---are mutually independent
 falsifiable predictions of the single-photon self-entanglement framework.
 
+\subsection{Clifford Action: Bell-Line Orbit and Stabiliser}
+\label{sec:clifford_orbit}
+
+The two-qutrit Clifford group $C_2 = \Sp(4,\GF{3})$ (of order $51840$) acts
+naturally on the 40 lines of $W(3,3)$.  The Bell-line stabiliser
+$\langle X_p X_f,\ Z_p Z_f^{-1}\rangle$ identified in \cref{thm:bellchoi} sits
+inside one specific orbit under this action; we compute the orbit and
+stabiliser structure here.
+
+\begin{theorem}[Bell-line orbit decomposition]\label{thm:orbit}
+The two-qutrit Clifford group $\Sp(4,\GF{3})$ acts transitively on the 40
+lines of $W(3,3)$, so the orbit of the Bell line is all of $W(3,3)$:
+\begin{equation}
+  |\mathrm{orbit}(\mathrm{Bell\ line})| \;=\; 40 \;=\; v.
+\end{equation}
+The stabiliser of the Bell line is the subgroup of $\Sp(4,\GF{3})$ fixing
+the totally isotropic 2-space $\langle X_p X_f,\ Z_p Z_f^{-1}\rangle$, of order
+\begin{equation}
+  |\mathrm{Stab}(\mathrm{Bell\ line})|
+  \;=\; \frac{|\Sp(4,\GF{3})|}{|\mathrm{orbit}|}
+  \;=\; \frac{51840}{40}
+  \;=\; 1296
+  \;=\; \mu^2 \cdot q^{q+1}.
+\end{equation}
+That is, the Bell-line stabiliser has order equal to $\mu^2$ times the
+matter-sector dimension $q^{q+1} = H_1(2\text{-complex})$.
+\end{theorem}
+
+\begin{proof}
+Transitivity of $\Sp(4,\GF{3})$ on isotropic 2-spaces of $\GF{3}^4$ is
+standard (the symplectic Witt extension theorem~\cite{Tits1974}).  The
+orbit-stabiliser ratio is $|G|/|\mathrm{orbit}| = 51840/40 = 1296$.
+Factoring: $1296 = 16 \cdot 81 = \mu^2 \cdot q^{q+1}$, where $\mu^2 = 16 = 2^\mu$
+and $q^{q+1} = 3^4 = 81$ is the matter sector dimension (the substrate
+$H_1$ of the W(3,3) line-triangle 2-complex, established via the Hodge
+decomposition).
+\end{proof}
+
+\begin{corollary}[Substrate factorisation of the Clifford group]\label{cor:cliff_factor}
+The two-qutrit Clifford group decomposes via the Bell-line action as
+\begin{equation}
+  |\Sp(4,\GF{3})| \;=\; |\mathrm{orbit}| \cdot |\mathrm{Stab}|
+  \;=\; v \cdot \mu^2 \cdot q^{q+1}
+  \;=\; 40 \cdot 16 \cdot 81.
+\end{equation}
+Three substrate primitives $\{v, \mu^2, q^{q+1}\}$ exactly multiplicatively
+exhaust the Clifford group order.
+\end{corollary}
+
+\begin{remark}[Operational interpretation]
+The Bell-line stabiliser of order $\mu^2 \cdot q^{q+1} = 1296$ is precisely
+the group of two-qutrit Clifford gates that preserve the temporal Bell
+qutrit's stabiliser line---i.e., the gates that respect the
+\emph{past$\leftrightarrow$future symmetry} of the temporal seed.  Outside
+the stabiliser, the remaining $51840 - 1296 = 50544$ Cliffords \emph{rotate
+the Bell line through the W(3,3) line graph}, scrambling the temporal seed
+across the 40-vertex substrate.  This $1296 : 50544 \approx 1 : 39$
+ratio (matching $1 : (v-1)$) is the substrate measure of how much
+``temporal symmetry preservation'' costs in the Clifford computational
+budget.
+\end{remark}
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
