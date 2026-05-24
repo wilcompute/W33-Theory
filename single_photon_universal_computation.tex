@@ -453,6 +453,88 @@ $\ket{\mathrm{now}_U} = (I_p\otimes U_f)\ket{\Omega}/\|\cdot\|$.  Then:
 \end{enumerate}
 \end{proposition}
 
+\subsection{Uniqueness: Now as the Forced Fixed Point}
+
+The ``harmonic convergence'' interpretation of \cref{prop:now} is not a labelling
+choice---the Bell qutrit $\ket{\Omega}$ is forced by symmetry.  The following
+characterisation gives four equivalent conditions, each of which picks out
+$\ket{\Omega}$ uniquely (up to a global phase) among all states of
+$\mathcal H_p \otimes \mathcal H_f$.
+
+\begin{theorem}[Uniqueness of the past/future Bell qutrit]\label{thm:bell_uniqueness}
+Let $\mathcal H_p = \mathcal H_f = \CC^q$ with $q = 3$, and let
+$\ket{\psi} \in \mathcal H_p \otimes \mathcal H_f$ be a normalised state.  The
+following are equivalent (and each holds for the Bell qutrit $\ket{\Omega}$ of
+\eqref{eq:bellqutrit} alone, up to a global phase):
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item \textbf{Time-reversal $+$ maximal entanglement:}
+    $S_{pf}\ket{\psi} = \ket{\psi}$ (SWAP-invariance under past$\leftrightarrow$future
+    exchange) AND the entanglement entropy is $S(\ket{\psi}) = \log q$.
+  \item \textbf{Choi--Jamio\l kowski state of the identity channel:}
+    $\ket{\psi} = (I_p\otimes I_f)\ket{\Omega}$.
+  \item \textbf{Unitary--conjugate invariance:} $(U \otimes U^*)\ket{\psi} =
+    \ket{\psi}$ for every $U \in \mathrm{U}(q)$.
+  \item \textbf{Uniform Schmidt spectrum:} the Schmidt decomposition of
+    $\ket{\psi}$ has all Schmidt coefficients equal to $1/\sqrt q$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(iv)$\Rightarrow$(ii):  A normalised state with all Schmidt coefficients equal
+to $1/\sqrt q$ can be written as $\ket{\psi} = q^{-1/2}\sum_j \ket{\alpha_j}
+\otimes\ket{\beta_j}$ for orthonormal Schmidt bases $\{\ket{\alpha_j}\},
+\{\ket{\beta_j}\}$.  Changing basis to $\{\ket j\}$ on each register is a
+unitary, so $\ket{\psi}$ and $\ket{\Omega}$ differ only by a unitary and a
+global phase.
+
+(ii)$\Rightarrow$(iii):  Direct calculation,
+\begin{equation*}
+  (U\otimes U^*)\ket{\Omega} \;=\; q^{-1/2}\sum_j U\ket{j}\otimes U^*\ket{j}
+  \;=\; q^{-1/2}\sum_{a,b}\Bigl(\sum_j U_{aj}\overline{U}_{bj}\Bigr)\ket{ab}
+  \;=\; q^{-1/2}\sum_{a,b}\delta_{ab}\ket{ab} \;=\; \ket{\Omega},
+\end{equation*}
+using $U^*\ket{j} = \sum_b\overline U_{bj}\ket{b}$ and unitarity
+$\sum_j U_{aj}\overline U_{bj} = (UU^\dagger)_{ab} = \delta_{ab}$.
+
+(iii)$\Rightarrow$(iv):  The decomposition of $\mathcal H_p\otimes\mathcal H_f$
+under the action $(U\otimes U^*)$ is into irreducibles indexed by $\mathrm{SU}(q)$
+representations; only the trivial representation contributes an invariant
+vector, and that trivial subspace is one-dimensional (the symmetric maximally
+mixed state's purification, equivalently $\ket{\Omega}$).  Hence any state fixed
+by $(U\otimes U^*)$ for all $U$ is a scalar multiple of $\ket{\Omega}$, and its
+Schmidt coefficients are uniformly $1/\sqrt q$.
+
+(i)$\Leftrightarrow$(iv):  SWAP-invariance restricts $\ket{\psi}$ to a symmetric
+tensor, $\ket{\psi} = \sum_{jk}c_{jk}\ket{jk}$ with $c_{jk}=c_{kj}$; entropy
+$S(\ket{\psi})$ is maximised at $\log q$ exactly when the singular values of the
+matrix $(c_{jk})$ are all $1/\sqrt q$, i.e.\ uniform Schmidt spectrum.
+
+This closes (i)$\Leftrightarrow$(ii)$\Leftrightarrow$(iii)$\Leftrightarrow$(iv),
+and the unique state (up to global phase) satisfying any of them is
+$\ket{\Omega}$.
+\end{proof}
+
+\begin{corollary}[``Now'' is forced]\label{cor:now_forced}
+The identification of the ``now'' state with the past/future Bell qutrit
+$\ket{\Omega}$ is forced by either of two minimal physical requirements:
+(a) time-reversal symmetry plus maximal past/future entanglement, or
+(b) unitary-conjugate invariance $(U\otimes U^*)$.  ``Now $=$ harmonic
+convergence'' is therefore not a phenomenological label but the unique fixed
+point of these symmetries on the qutrit Hilbert space.
+\end{corollary}
+
+\begin{remark}[Physical realisation of the symmetries]\label{rem:phys_sym}
+Time-reversal exchange corresponds to swapping early and late time-bins in the
+Mach--Zehnder interferometer of \cref{def:tempqutrit}.  Unitary-conjugate
+invariance corresponds to applying any $\mathrm{SU}(3)$ rotation jointly to the
+past polarisation/path mode and the complex-conjugate ($\sigma_y$-flipped)
+rotation to the future mode---the temporal analog of the spin-singlet rotation
+symmetry of two qubits.  Both symmetries are \emph{a priori} required of any
+consistent self-entangled temporal state on one photon (there is no preferred
+temporal basis at the single-photon level), so \cref{thm:bell_uniqueness} forces
+$\ket{\Omega}$ uniquely.
+\end{remark}
+
 \subsection{Spreads, Now-Contexts, and the 40-Ray Closure}
 
 The Bell line of \cref{thm:bellchoi} is one of the 40 lines of $W(3,3)$.  Each line
