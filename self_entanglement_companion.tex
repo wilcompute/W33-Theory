@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{physics}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{cleveref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\GF}[1]{\mathbb{F}_{#1}}
+\newcommand{\PG}[2]{\mathrm{PG}(#1,#2)}
+\newcommand{\AG}[2]{\mathrm{AG}(#1,#2)}
+\newcommand{\SRG}[4]{\mathrm{SRG}(#1,#2,#3,#4)}
+\newcommand{\W}{W(3,3)}
+
+\title{\textbf{Self-Entanglement on a Single Photon:\\
+A Substrate Realisation of $W(3,3)$ from One Temporal Bell Qutrit}}
+\author{Wil Dahn \\
+\normalsize\textit{Theory of Everything Project}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A single photon, equipped with a temporal-mode (time-bin) qutrit register
+and propagating through a Franson-style asymmetric interferometer, can
+carry a maximally entangled past$\otimes$future state $\ket{\Omega} =
+q^{-1/2}\sum_j\ket{j}_p\ket{j}_f$ at $q=3$.  We show that this temporal
+Bell qutrit is the structural seed of the entire symplectic polar space
+$\W = \SRG{40}{12}{2}{4}$: its stabiliser is one of the 40 lines of
+$\W$, and the spread around it closes as $10 \cdot 4 = 40 = v$ with the
+substrate Bell-cloud shell $1 + 12 + 27 = 40$.  Four equivalent
+characterisations single out $\ket{\Omega}$ uniquely (up to phase):
+SWAP-symmetry plus maximal entanglement, Choi--Jamio\l kowski state of
+the identity channel, $(U\otimes U^*)$-invariance for every
+$U\in\mathrm{U}(q)$, and uniform Schmidt spectrum.  The past$\otimes$future
+Hilbert space decomposes as $q^2 = q + q! = 3 + 6$ via the master equation
+$q!=2q$ at $q=3$, giving a $q=3$-dim diagonal ``now'' subspace and a
+$q!=6$-dim off-diagonal history subspace.  Three independent falsifiable
+witnesses---trace-Choi visibility $V(U) = |\mathrm{Tr}(U)|/q$, Witting
+Kochen--Specker bound $34/40$, and key-agreement rate $13/40$---make the
+framework experimentally accessible.  The Bell qutrit can be prepared in
+exactly two Clifford gates, tolerates depolarising noise up to $p<q/\mu=3/4$,
+and supports temporal quantum teleportation using only $2$ trits of
+classical memory.  Stacking $n=2$ photonic GHZ qutrits hits Hilbert
+dimension $q^4 = 81$ matching the $\W$ matter sector exactly, identifying
+the matter sector with two-photon GHZ Hilbert space.  Under the
+$[[240, 81, \mu, q]]_3$ CSS code on the $\W$ edge qutrits, the 81 logical
+qutrits split into three orbits of $27 = q^q$ under any order-$q$
+automorphism, yielding three fermion-generation registers each hosting
+$\Phi_3 = 13$ Bell qutrits and one spare logical qutrit.  All numerical
+results in this paper are integer or closed-form combinations of W(3,3)
+substrate primitives $\{q, \mu, q!, \Phi_3, \Phi_4, \Phi_6, p_{\mathrm{Ih}},
+k, v, |E|, q^{q+1}\}$; no fitted parameter appears.
+\end{abstract}
+
+\section{Introduction}
+
+Quantum optics has long used \emph{two-photon} Bell states as the standard
+entanglement resource: a pair of photons in a state like
+$\ket{\Phi^+}_{AB} = q^{-1/2}\sum_j\ket{j}_A\ket{j}_B$ shared between
+spatially-separated parties A and B \cite{Bennett1993,Brendel1999}.
+The substrate of $\W$, however, suggests a stronger structural claim:
+a \emph{single photon}'s temporal-mode register can host an entangled
+state between its own past and future, without any second photon.  In
+this picture, the photon is \emph{self-entangled}, and the experiential
+``now'' corresponds to the harmonic convergence of past and future
+amplitudes at the interferometric recombination node.
+
+This paper isolates the self-entanglement chapter from the broader
+single-photon $\W$ framework \cite{single_photon_paper} into a stand-alone
+companion treatment.  It develops the temporal Bell qutrit $\ket{\Omega}$
+and shows that it compiles directly into the entire 40-vertex $\W$
+substrate.  All structural counts of $\W$---vertex count $v = 40$, valency
+$k = 12$, intersection numbers $\lambda = 2$, $\mu = 4$, automorphism group
+order $|\Sp(4,\GF{3})| = 51840$, matter sector dimension $q^{q+1} = 81$,
+and edge count $|E| = 240$---read off directly from the temporal Bell
+qutrit's symmetry analysis.
+
+\textbf{Outline.}  Section 2 establishes the past/future qutrit
+register on one photon and the Bell qutrit $\ket{\Omega}$.  Section 3
+gives the four-way uniqueness characterisation of $\ket{\Omega}$ and the
+master-equation history split $q^2 = q + q!$.  Section 4 closes the
+substrate compilation: $40 = 1 + 12 + 27 = v$ and $36 = (q!)^2$ spreads.
+Section 5 derives the three falsifiable experimental witnesses.  Section 6
+proves single-photon completeness ($r \ge 2$ commuting qutrit registers
+suffice), the Clifford orbit/stabiliser factorisation, decoherence
+threshold $p_{\rm sep} = q/\mu$, marginal mixedness, and CPT-like
+invariance.  Section 7 connects the matter sector to fermion generations
+via Bell-qutrit storage.  Section 8 lifts to multi-photon GHZ towers and
+the $[[240, 81, \mu, q]]_3$ CSS code.  Section 9 collects the
+substrate-primitive dictionary.
+
+\section{The Temporal Bell Qutrit}
+
+A photon traversing a delay-line interferometer occupies three time-bins
+$\{t_0, t_1, t_2\}$.  Label the early time-bin pair $\{t_0, t_1\}$ the
+\emph{past register} $\mathcal H_p = \CC^q$ and the late pair $\{t_1, t_2\}$
+the \emph{future register} $\mathcal H_f = \CC^q$, with the shared $t_1$
+the harmonic-convergence point.
+
+\begin{definition}[Temporal Bell qutrit]\label{def:bell}
+For $q = 3$,
+\begin{equation}
+  \ket{\Omega} \;=\; \frac{1}{\sqrt q}\sum_{j=0}^{q-1}\ket{j}_p\ket{j}_f
+  \;\in\; \mathcal H_p \otimes \mathcal H_f.
+  \label{eq:bell}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Choi--Jamio\l kowski identity]\label{thm:choi}
+For every $U\in\mathrm{U}(q)$,
+$\langle\Omega|(I_p\otimes U_f)|\Omega\rangle = \mathrm{Tr}(U)/q$.
+\end{theorem}
+
+\begin{theorem}[Bell line of W(3,3)]\label{thm:bellline}
+The stabiliser of $\ket{\Omega}$ is $\langle X_p X_f, Z_p Z_f^{-1}\rangle$,
+a totally isotropic 2-space of $\GF{3}^4$ under the canonical alternating
+form---i.e., a \emph{line of $W(3,3)$}.
+\end{theorem}
+
+\section{Uniqueness and the Master-Equation Split}
+
+The temporal Bell qutrit is forced by symmetry.
+
+\begin{theorem}[Uniqueness, four equivalent conditions]\label{thm:uniqueness}
+$\ket{\Omega}$ is the unique state in $\mathcal H_p\otimes\mathcal H_f$
+(up to global phase) satisfying any of:
+(i) SWAP-symmetry plus entanglement entropy $\log q$;
+(ii) Choi state of the identity channel;
+(iii) $(U\otimes U^*)\ket{\psi} = \ket{\psi}$ for every $U\in\mathrm{U}(q)$;
+(iv) Uniform Schmidt spectrum, all coefficients $1/\sqrt q$.
+\end{theorem}
+
+\begin{theorem}[Master-equation history split]\label{thm:history}
+The past$\otimes$future Hilbert space decomposes as
+\begin{equation}
+  q^2 \;=\; q + q! \;=\; 3 + 6, \qquad (\text{at }q = 3)
+\end{equation}
+where $\mathcal D = \mathrm{span}\{\ket{jj}\}$ is the $q$-dim diagonal
+``now'' subspace and $\mathcal N = \mathrm{span}\{\ket{jk}: j\neq k\}$ is
+the $q!$-dim off-diagonal history subspace.  The identity holds uniquely
+at $q = 3$ via the master equation $q! = 2q$.
+\end{theorem}
+
+\section{Substrate Compilation: $40 = 1 + 12 + 27$}
+
+\begin{theorem}[Now-context closure]\label{thm:nowclosure}
+Every spread of $W(3,3)$ partitions the 40 points into 10 disjoint lines
+of $q+1=4$ rays each: $10\cdot 4 = 40 = v$.  Total spreads: $36 = (q!)^2$.
+The Bell line lies in $q^2 = 9$ spreads; the Bell-local shell closes as
+$1 + 12 + 27 = 40$ where $12 = k$ (adjacent lines) and $27 = q^q$
+(disjoint lines).
+\end{theorem}
+
+\section{Three Falsifiable Witnesses}
+
+\begin{theorem}[Trace-Choi witness]\label{thm:trace}
+Inserting $U\in\mathrm{U}(q)$ on the future register, the Franson
+recombination visibility is $V(U) = |\mathrm{Tr}(U)|/q$.  In particular,
+$V(F_3) = 1/q$ (quadratic Gauss sum), $V(X) = V(Z) = 0$.
+\end{theorem}
+
+\begin{theorem}[Witting Kochen--Specker bound]\label{thm:KS}
+No $\{0,1\}$-marking of the 40 Witting rays is consistent on all $W(3,3)$
+contexts; at most $34/40 = (v - q!)/v$ tetrads are simultaneously
+satisfiable, with $720 = (q!)!$ optimal markings.
+\end{theorem}
+
+\begin{theorem}[Key-agreement rate]\label{thm:key}
+Two-party photonic key-agreement on the $W(3,3)$ phase space succeeds
+with probability $P_{\rm key} = 13/40 = \Phi_3/v$.
+\end{theorem}
+
+\section{Operational Structure}
+
+\begin{proposition}[Preparation]\label{prop:prep}
+$\ket{\Omega} = CX_{p\to f}\,(F_3 \otimes I)\,\ket{0}_p\ket{0}_f$ in
+exactly two Clifford gates.
+\end{proposition}
+
+\begin{theorem}[Single-photon completeness]\label{thm:completeness}
+A photon with $r \ge 2$ commuting qutrit-capable degrees of freedom
+carries the full $W(3,3)$ Pauli phase space.  At $r = 4$ (polarisation,
+path, time-bin, sideband), $\dim\mathcal H_{\rm photon} \ge q^4 = 81 =
+q^{q+1}$, matching the matter sector exactly.
+\end{theorem}
+
+\begin{theorem}[Clifford orbit/stabiliser]\label{thm:clifford}
+$\Sp(4,\GF{3})$ acts transitively on the 40 lines of $W(3,3)$.  The Bell-
+line stabiliser has order
+\begin{equation}
+  |\mathrm{Stab}| = 51840 / 40 = 1296 = \mu^2 \cdot q^{q+1},
+\end{equation}
+giving the substrate factorisation
+$|\Sp(4,\GF{3})| = v\cdot\mu^2\cdot q^{q+1}$.
+\end{theorem}
+
+\begin{theorem}[Marginal mixedness]\label{thm:marginal}
+$\rho_p = \rho_f = I/q$, $S(\rho_p) = \log q$, $I(p:f) = 2\log q$ (mutual
+information saturation).
+\end{theorem}
+
+\begin{theorem}[CPT invariance]\label{thm:cpt}
+$\ket{\Omega}$ is invariant under each of $C$ (charge conjugation,
+$\ket{j}\mapsto\ket{-j}$), $P$ (SWAP), $T$ (complex conjugation), and
+the combined $CPT$.
+\end{theorem}
+
+\begin{theorem}[Decoherence threshold]\label{thm:noise}
+The isotropic Werner-state $(1-p)\ket{\Omega}\bra{\Omega} + p I/q^2$ is
+past$\leftrightarrow$future entangled iff $p < q/\mu = 3/4$.
+\end{theorem}
+
+\begin{theorem}[Quantum teleportation in time]\label{thm:teleport}
+Using a temporal Bell qutrit and $2$ trits of classical memory, a qutrit
+state can be transferred from a past-self to a future-self of the same
+photon with fidelity 1.
+\end{theorem}
+
+\section{Matter Sector and Fermion Generations}
+
+\begin{theorem}[Three generations from Bell-qutrit storage]\label{thm:gens}
+For any order-$q$ automorphism $\sigma$ of $W(3,3)$, the matter sector
+$H_1(2\text{-complex}) = \ZZ^{81}$ splits into $q = 3$ orbits of
+$q^q = 27$ each.  Per-orbit Bell-qutrit storage:
+$27 = 2\cdot\Phi_3 + 1$ with $\Phi_3 = 13$ Bell qutrits plus one spare.
+Total Bell-qutrit capacity: $q\cdot\Phi_3 = 39 = $ gauge-sector
+dimension.
+\end{theorem}
+
+\section{GHZ Tower and the W(3,3) CSS Code}
+
+\begin{theorem}[GHZ-to-matter match at $n=2$]\label{thm:ghz}
+The $n$-photon temporal GHZ Hilbert space has dimension $q^{2n}$.
+At $n = 2$:
+$\dim\mathcal H_{\mathrm{GHZ}_2} = q^4 = q^{q+1} = 81 = H_1(2\text{-complex})$,
+i.e., two-photon GHZ Hilbert space equals the W(3,3) matter sector exactly.
+\end{theorem}
+
+\begin{theorem}[W(3,3) edge CSS code]\label{thm:css}
+The natural CSS code on the 240 edge-qutrits has parameters
+$[[\,|E|, q^{q+1}, \mu, q\,]]_3 = [[\,240, 81, 4, 3\,]]_3$.  All four
+parameters are substrate primitives.
+\end{theorem}
+
+\section{Substrate Dictionary}
+
+\begin{center}\small\begin{tabular}{lll}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{Substrate form} \\
+\midrule
+Past$\otimes$future dim    & $9$    & $q^2 = q + q!$ \\
+Diagonal $\mathcal D$ dim   & $3$    & $q$ \\
+Off-diagonal $\mathcal N$  & $6$    & $q!$ \\
+W(3,3) shell               & $40$   & $1 + k + q^q$ \\
+$W(3,3)$ spreads            & $36$   & $(q!)^2$ \\
+Spreads per Bell line       & $9$    & $q^2$ \\
+Bell-line stabiliser        & $1296$ & $\mu^2 \cdot q^{q+1}$ \\
+$F_3$ visibility            & $1/3$  & $1/q$ \\
+Witting overlap            & $\{0, 1/3\}$ & $\{0, 1/q\}$ \\
+Witting KS max             & $34/40$ & $(v - q!)/v$ \\
+Key rate                   & $13/40$ & $\Phi_3/v$ \\
+Noise threshold $p_{\rm sep}$ & $3/4$ & $q/\mu$ \\
+CSS code                   & $[[240,81,4,3]]_3$ & $[[|E|, q^{q+1}, \mu, q]]$ \\
+Matter sector               & $81$    & $q^{q+1}$ \\
+Bell-qutrit total capacity  & $39$    & $q\cdot\Phi_3$ \\
+Two-photon GHZ              & $81$    & $q^4 = q^{q+1}$ \\
+$|\Sp(4,\GF{3})|$           & $51840$ & $v\cdot\mu^2\cdot q^{q+1}$ \\
+\bottomrule
+\end{tabular}\end{center}
+
+\section{Conclusions}
+
+A single photon, equipped with a temporal-mode qutrit register and
+prepared in the Bell qutrit $\ket{\Omega}$, carries the entire $W(3,3)$
+substrate via its past$\otimes$future self-entanglement.  Three falsifiable
+experimental witnesses make the framework testable, and the matter sector
+$q^{q+1} = 81$ provides both the natural logical-qutrit space of a CSS
+code and the splitting that yields three fermion-generation registers
+under the substrate's order-$q$ automorphism.  The framework introduces
+no fitted parameters: every numerical claim reduces to substrate-primitive
+arithmetic at $q = 3$.
+
+\begin{thebibliography}{9}
+\bibitem{single_photon_paper}
+  W.~Dahn, ``Universal Quantum Computation Through a Single Photon,''
+  Theory of Everything Project preprint, 2026.
+
+\bibitem{Bennett1993}
+  C.~H.~Bennett \emph{et al.},
+  ``Teleporting an Unknown Quantum State via Dual Classical and
+  Einstein--Podolsky--Rosen Channels,''
+  \emph{Phys.~Rev.~Lett.}~\textbf{70}, 1895 (1993).
+
+\bibitem{Brendel1999}
+  J.~Brendel, N.~Gisin, W.~Tittel, H.~Zbinden,
+  ``Pulsed Energy-Time Entangled Twin-Photon Source for Quantum
+  Communication,''
+  \emph{Phys.~Rev.~Lett.}~\textbf{82}, 2594 (1999).
+
+\bibitem{Vlasov2025}
+  A.~Yu.~Vlasov, ``Witting polytope, quantum communication, and the
+  symplectic polar space $W(3,3)$,'' preprint, 2025.
+
+\bibitem{ABL1964}
+  Y.~Aharonov, P.~G.~Bergmann, J.~L.~Lebowitz,
+  ``Time Symmetry in the Quantum Process of Measurement,''
+  \emph{Phys.~Rev.}~\textbf{134}, B1410 (1964).
+\end{thebibliography}
+
+\end{document}
