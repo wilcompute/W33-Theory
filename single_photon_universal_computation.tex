@@ -704,6 +704,66 @@ equation, making the dimension of the off-diagonal history subspace a
 substrate-primitive quantity.
 \end{remark}
 
+\subsection{One Photon vs Two Photons: Why Self-Entanglement Suffices}
+\label{sec:one_vs_two}
+
+The Bell state used in standard quantum optics is a \emph{two-photon} entangled
+pair, $\ket{\Phi}_{AB} = q^{-1/2}\sum_j\ket{j}_A\otimes\ket{j}_B$, where photons
+$A$ and $B$ are spatially separated.  The self-entangled state
+\eqref{eq:bellqutrit} is structurally identical---the same Schmidt coefficients,
+the same stabiliser group---but is implemented on \emph{one} photon, between
+its past and future temporal-mode registers.
+
+\begin{theorem}[Single-photon completeness]\label{thm:1photon_completeness}
+Let a photon carry $r$ independent (mutually commuting) qutrit-capable degrees
+of freedom---e.g.\ polarisation extended to qutrit, three-path spatial mode,
+three time-bin temporal mode, three-sideband spectral mode, OAM ladder
+$\ell\in\{-1,0,+1\}$.  Its mode Hilbert space then contains
+$\CC^q \otimes \cdots \otimes \CC^q = \CC^{q^r}$ as a subspace.
+For $r \ge 2$, the two-qutrit Pauli phase space $(\GF{q})^{2r}/\sim$ acting on
+$\CC^{q^r}$ is, at $r = 2$ and $q = 3$, exactly the $W(3,3) = \Sp(4,\GF{3})$
+substrate.  Consequently \emph{two independent qutrit registers on one photon
+are sufficient to host the full $W(3,3)$ phase space}, and the past/future
+Bell qutrit of \eqref{eq:bellqutrit} on one of those registers stabilises a
+line of $W(3,3)$ exactly as in the two-photon case.
+\end{theorem}
+
+\begin{proof}
+For $r = 2$ the symplectic Pauli phase space on $\CC^q\otimes\CC^q$ is
+$(\GF{q})^4 / (\text{centre})$, and its non-zero rays modulo scalars form
+$(3^4 - 1)/(3-1) = 40$ points with $40$ totally isotropic lines under the
+canonical alternating form---this is the polar space $W(3,3)$
+(\cref{prop:pts}).  The Bell qutrit's stabiliser is a totally isotropic
+2-space (\cref{thm:bellchoi}), and the line/spread combinatorics are
+identical regardless of whether the two qutrit registers are carried by one
+photon or two.  Hence the self-entanglement and the two-photon entanglement
+are operationally indistinguishable at the level of $W(3,3)$.
+\end{proof}
+
+\begin{corollary}[Photonic mode-DOF excess at $r \ge 2$]\label{cor:dof_excess}
+A typical photon admits $r \ge 4$ commuting qutrit-capable registers:
+polarisation$+$path (after qutrit-lifting via the vacuum mode), three time-bins,
+three sidebands, OAM ladder.  Any \emph{two} of these suffice for $W(3,3)$;
+the remaining $r - 2 \ge 2$ registers form a \emph{redundant} bookkeeping
+shell, available for error correction and protected routing.  This excess is
+the structural reason single-photon LOQC is fault-tolerant: the carrier is
+already over-determined by two factors of $\CC^q = \CC^3$ beyond what the
+W(3,3) substrate requires.
+\end{corollary}
+
+\begin{remark}[Operational meaning of past/future on one photon]
+Past and future temporal modes on one photon are accessed
+\emph{interferometrically}: the photon is split into two paths of unequal
+length, then recombined.  The early-arriving amplitude is the ``past''
+register; the late-arriving is the ``future'' register; the recombination
+node is the ``now'' operation \eqref{eq:choi}, where the Bell-Choi overlap
+$\mathrm{Tr}(U)/q$ is extracted as the interference visibility for any
+inserted unitary $U$.  This is the standard Franson-interferometer geometry
+\cite{Brendel1999,Marcikic2002}, and the substrate now provides the
+group-theoretic interpretation: each Franson visibility measurement is a
+sample of the Choi-Jamio\l kowski distribution of $\mathrm{U}(3)$.
+\end{remark}
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
