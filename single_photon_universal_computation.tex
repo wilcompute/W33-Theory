@@ -764,6 +764,105 @@ group-theoretic interpretation: each Franson visibility measurement is a
 sample of the Choi-Jamio\l kowski distribution of $\mathrm{U}(3)$.
 \end{remark}
 
+\subsection{Experimental Witness: Trace-Choi Visibility and Witting Contextuality}
+\label{sec:witness}
+
+The structure of \cref{thm:bell_uniqueness,thm:masteq_history,thm:1photon_completeness}
+makes specific, falsifiable experimental predictions for any photonic
+implementation of the temporal Bell qutrit.  We collect two independent
+witnesses here.
+
+\paragraph{Witness 1: Trace-Choi visibility.}
+Insert a unitary $U \in \mathrm{U}(3)$ on the future-mode register of a
+photon prepared in the temporal Bell qutrit $\ket{\Omega}$, then recombine
+past and future at the Franson interferometer node.  The interference
+visibility $V(U)$ between the diagonal and off-diagonal output ports is, by
+\eqref{eq:choi},
+\begin{equation}
+  V(U) \;=\; \frac{|\mathrm{Tr}(U)|}{q} \;=\; \frac{|\mathrm{Tr}(U)|}{3}.
+  \label{eq:trace_visibility}
+\end{equation}
+
+\begin{theorem}[Trace-Choi witness]\label{thm:trace_witness}
+A photon source emits the temporal Bell qutrit $\ket{\Omega}$ \emph{iff} for
+all $U \in \mathrm{U}(3)$ the Franson-output visibility satisfies
+\eqref{eq:trace_visibility}.  In particular:
+\begin{itemize}[noitemsep]
+  \item $U = I$: $V = 1$ (maximal interference).
+  \item $U = e^{i\alpha}I$: $V = 1$ (global phase preserves visibility).
+  \item $U = X$ (cyclic shift $\ket{j}\mapsto\ket{j+1}$): $\mathrm{Tr}(X) = 0$
+    so $V = 0$ (extinction).
+  \item $U = Z$ (clock $\ket{j}\mapsto\omega^j\ket{j}$):
+    $\mathrm{Tr}(Z) = 1+\omega+\omega^2 = 0$, $V = 0$.
+  \item $U = F_3$ (qutrit Fourier): $|\mathrm{Tr}(F_3)|/3$ gives a substrate-
+    specific intermediate visibility, computed in \cref{prop:F3vis}.
+\end{itemize}
+Any deviation from \eqref{eq:trace_visibility} certifies mixed-state
+corruption or decoherence of the temporal entanglement.
+\end{theorem}
+
+\begin{proposition}[Fourier-gate visibility]\label{prop:F3vis}
+For the qutrit Fourier gate $F_3$ with $F_3\ket{j} = q^{-1/2}\sum_k\omega^{jk}\ket{k}$,
+\[
+  \mathrm{Tr}(F_3) \;=\; \sum_{j=0}^{2} \frac{\omega^{j^2}}{\sqrt 3}
+  \;=\; \frac{1 + \omega + \omega^4}{\sqrt 3}
+  \;=\; \frac{1 + 2\omega}{\sqrt 3}
+\]
+since $\omega^4 = \omega$.  Hence
+$|\mathrm{Tr}(F_3)| = |1+2\omega|/\sqrt 3 = \sqrt{3}/\sqrt 3 = 1$, giving
+\begin{equation}
+  V(F_3) \;=\; \frac{1}{3} \;=\; \frac{1}{q}.
+\end{equation}
+This is the \emph{quadratic Gauss sum} at $q=3$, and it provides the
+characteristic substrate visibility for any inserted qutrit Fourier.
+\end{proposition}
+
+\paragraph{Witness 2: Witting non-contextuality.}
+The 40 points of $W(3,3)$ embed canonically as the 40 \emph{Witting rays}
+in $\CC^4$ via the (Vlasov 2025) symplectic realisation; any pair
+$\ket{\psi},\ket{\varphi}$ of Witting rays satisfies the discrete inner-product
+condition
+\begin{equation}
+  |\langle\psi | \varphi\rangle|^2 \;\in\; \{0,\ \tfrac{1}{3}\}
+  \;=\; \{0,\ 1/q\}.
+  \label{eq:witting_overlap}
+\end{equation}
+The orthogonal pairs ($|\langle\psi|\varphi\rangle|^2 = 0$) correspond to
+collinear Pauli observables on the $W(3,3)$ line structure; the
+$1/q$-overlap pairs correspond to non-collinear observables.
+
+\begin{theorem}[Witting Kochen--Specker bound]\label{thm:KSbound}
+No assignment of definite $\{0,1\}$-values to the $40$ Witting rays can be
+consistent with the orthogonality structure: every $\{0,1\}$-marking is
+\emph{Kochen--Specker contradictory} on at least $6 = q!$ tetrads.  The
+maximum number of \emph{satisfiable} mutually-exclusive Witting tetrads is
+$34/40$, and the marking optima form an orbit of size $720 = (q!)!$
+(Vlasov 2025).
+\end{theorem}
+
+In a single-photon experiment with the temporal Bell qutrit, a sequence of
+$N$ Pauli measurements drawn from a Witting tetrad covering of $W(3,3)$
+will exhibit \emph{exactly} $\le 34N/40$ classically-consistent assignments;
+any larger fraction certifies contextual (genuinely quantum) substrate
+content.  Conversely, $\ge 35N/40$ classical agreement falsifies the
+W(3,3) self-entanglement claim.
+
+\paragraph{Witness 3: Key-agreement rate.}
+A two-party photonic protocol using $W(3,3)$ as the shared Pauli phase space
+has a unique key-agreement probability per round:
+\begin{equation}
+  P_{\rm key}(W(3,3)) \;=\; \frac{13}{40} \;=\; \frac{\Phi_3}{v},
+  \label{eq:keyrate}
+\end{equation}
+matching the Vlasov 2025 Table III count of $40 = 28 + 12 = \mu\Phi_6 + k$
+basis decompositions.  A measured rate $13/40$ over many rounds is a third
+falsifiable substrate signature distinct from the trace-Choi and Witting
+witnesses.
+
+These three witnesses---trace-Choi visibility, Witting non-contextuality,
+and the $13/40$ key-agreement rate---are mutually independent
+falsifiable predictions of the single-photon self-entanglement framework.
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
