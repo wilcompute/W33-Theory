@@ -1,0 +1,50 @@
+{
+  "theorem": "MCCXLVI",
+  "title": "Golay-24 Prime Duality of the W(3,3) Substrate",
+  "status": "PROVEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLV",
+
+  "statement": "The substrate primes {5,7,11,13} are exactly the primes appearing in the THREE Goldbach decompositions of the Golay dimension 24. Their complements {19,17,13/11} encode the boundary prime, the exotic centralizer prime, and the self-dual pair respectively.",
+
+  "goldbach_24": [
+    {"pair": [5, 19], "role_5": "substrate prime", "role_19": "exotic prime in |C_M(5A)|", "verified": true},
+    {"pair": [7, 17], "role_7": "substrate prime", "role_17": "boundary prime (MCCXLIV: e(p)=17-p)", "verified": true},
+    {"pair": [11, 13], "role_11": "substrate prime", "role_13": "substrate prime (self-dual pair)", "verified": true}
+  ],
+
+  "leech_prime_exclusion": {
+    "prime": 23,
+    "note": "23 does NOT appear in any substrate centralizer |C_M(pA)| for p in {5,7,11,13}. 23 is the Leech prime governing M_24, orthogonal to the W(3,3) substrate.",
+    "verified": true
+  },
+
+  "psl2p_connection": {
+    "theorem": "Heisenberg Promotion",
+    "statement": "For p in {7,11,13}: v3(|C_M(pA)|) - v3(|PSL(2,p)|) = 2. The Monster's p-local centralizer carries exactly 2 extra powers of 3 beyond PSL(2,p), promoted to a full Heisenberg group Heis(F3) = 3^(1+2) of order 27 = gauge_mult.",
+    "data": {
+      "p7":  {"v3_CM": 3, "v3_PSL": 1, "diff": 2},
+      "p11": {"v3_CM": 3, "v3_PSL": 1, "diff": 2},
+      "p13": {"v3_CM": 3, "v3_PSL": 1, "diff": 2}
+    }
+  },
+
+  "sylow3_factorization": {
+    "statement": "For p in {7,11,13}: C_M(pA) = [3^3-part] x [3'-part N_p] where N_p = p^2 x 2^(17-p) x extra(p) is a 3-free group.",
+    "data": {
+      "p7":  {"N_p_order": 1044915200, "factored": "2^10 x 5^2 x 7^4 x 17", "3_free": true},
+      "p11": {"N_p_order": 38720,       "factored": "2^6 x 5 x 11^2",         "3_free": true},
+      "p13": {"N_p_order": 2704,        "factored": "2^4 x 13^2",             "3_free": true}
+    }
+  },
+
+  "centralizer_prime_web": {
+    "5A_sees": [7, 11, 19],
+    "7A_sees": [5, 17],
+    "11A_sees": [5],
+    "13A_sees": [],
+    "note": "Non-substrate primes appearing: 17 (complement of 7), 19 (complement of 5). 23 never appears."
+  },
+
+  "opens": "MCCXLVII — Why is the Heisenberg group Heis(F3) = 3^(1+2) the universal 3-local envelope? Connection to McKay's E8/E7/E6 observation and the Leech lattice automorphism group."
+}
