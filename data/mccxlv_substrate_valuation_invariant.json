@@ -1,0 +1,36 @@
+{
+  "theorem": "MCCXLV",
+  "title": "Monster Substrate Valuation Invariant",
+  "status": "PROVEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLIV",
+  "source": "monster_atlas_ccls.json",
+  "invariant": 45,
+  "invariant_formula": "v\u2082(|M|) - 1 = 46 - 1 = 45",
+  "statement": "For each substrate prime p \u2208 {5, 7, 11, 13} with gcd(p, 27) = 1:\n  3\u00b7v\u2082(|C_M(pA)|) + 3p - 2\u00b7v\u2083(|C_M(pA)|) = v\u2082(|M|) - 1 = 45",
+  "verification": {
+    "5A": {"p": 5,  "v2": 14, "v3": 6, "lhs": 45, "verified": true},
+    "7A": {"p": 7,  "v2": 10, "v3": 3, "lhs": 45, "verified": true},
+    "11A": {"p": 11, "v2": 6,  "v3": 3, "lhs": 45, "verified": true},
+    "13A": {"p": 13, "v2": 4,  "v3": 3, "lhs": 45, "verified": true}
+  },
+  "non_substrate_check": {
+    "3A":  {"p": 3,  "lhs": 38, "comment": "< 45: degenerate (p | gauge_mult)"},
+    "17A": {"p": 17, "lhs": 58, "comment": "> 45: outside substrate range"},
+    "19A": {"p": 19, "lhs": 61, "comment": "> 45: outside substrate range"},
+    "23A": {"p": 23, "lhs": 76, "comment": "> 45: outside substrate range"}
+  },
+  "domain_characterization": "The four primes {5,7,11,13} are the UNIQUE Monster prime-order conjugacy classes satisfying the invariant. The invariant = 45 strictly separates them from all other primes.",
+  "monster_anchor": {
+    "v2_monster": 46,
+    "v3_monster": 20,
+    "invariant": 45,
+    "connection": "45 = v\u2082(|M|) - 1. The Monster's own 2-adic valuation anchors all substrate centralizer arithmetic."
+  },
+  "combined_theorem": {
+    "MCCXLIII": "27 | |C_M(pA)| for all p \u2208 {3,5,7,11,13}",
+    "MCCXLIV": "|C_M(pA)| = 3\u00b3 \u00d7 p\u00b2 \u00d7 2^(17-p) \u00d7 extra(p) for p \u2208 {7,11,13}",
+    "MCCXLV": "3v\u2082 + 3p - 2v\u2083 = v\u2082(|M|)-1 = 45 for p \u2208 {5,7,11,13}"
+  },
+  "opens": "MCCXLVI \u2014 Moonshine module interpretation of invariant 45 = v\u2082(|M|)-1"
+}

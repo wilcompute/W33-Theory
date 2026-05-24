@@ -1,0 +1,48 @@
+{
+  "theorem": "MCCXLVII",
+  "title": "Binary Polyhedral / E-type / Golay Tower",
+  "status": "PROVEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLVI",
+
+  "core_identity": "W(E6) = Hessian x #roots(E8) = (8 x gauge_mult) x 240",
+  "verification": {
+    "W_E6": 51840,
+    "Hessian": 216,
+    "gauge_mult": 27,
+    "roots_E8": 240,
+    "check_W_E6": "216 x 240 = 51840 TRUE",
+    "check_Hessian": "8 x 27 = 216 TRUE",
+    "check_S8_PSL27": "|S_8|/|PSL(2,7)| = 40320/168 = 240 TRUE",
+    "check_S6_PSL25": "|S_6|/|PSL(2,5)| = 720/60 = 12 = h(E6) TRUE"
+  },
+
+  "binary_polyhedral_golay": {
+    "2T": {"name": "binary tetrahedral = SL(2,3)", "order": 24, "golay_factor": 1, "McKay": "E6", "h": 12},
+    "2O": {"name": "binary octahedral", "order": 48, "golay_factor": 2, "McKay": "E7", "h": 18},
+    "2I": {"name": "binary icosahedral = SL(2,5)", "order": 120, "golay_factor": 5, "McKay": "E8", "h": 30},
+    "note": "All three binary polyhedral orders are multiples of the Golay code length 24."
+  },
+
+  "coxeter_prime_flanking": {
+    "E6": {"h": 12, "h_minus_1": 11, "h_plus_1": 13, "pair": "{11,13} = substrate self-dual pair"},
+    "E7": {"h": 18, "h_minus_1": 17, "h_plus_1": 19, "pair": "{17,19} = boundary prime + Golay complement"},
+    "E8": {"h": 30, "h_minus_1": 29, "h_plus_1": 31, "pair": "{29,31} = large Moonshine primes"}
+  },
+
+  "heisenberg_chain": [
+    {"group": "Heis(F3) = 3^(1+2)", "order": 27, "description": "W(3,3) gauge group = 3-Sylow of Hessian"},
+    {"group": "Hessian",             "order": 216, "description": "= 8 x 27; automorphisms of Hessian config; sits in W(E6)"},
+    {"group": "W(E6)",               "order": 51840, "description": "= Hessian x 240 = Hessian x #roots(E8)"},
+    {"group": "W(E7)",               "order": 2903040, "description": "= W(E6) x 56 = W(E7)"},
+    {"group": "W(E8)",               "order": 696729600, "description": "= W(E7) x 240"}
+  ],
+
+  "substrate_prime_derivation": {
+    "method_1": "{5,7} = primes p where PSL(2,p) has index h(E6) or #roots(E8) in S_{p+1}",
+    "method_2": "{11,13} = {h(E6) pm 1} = primes flanking E6 Coxeter number",
+    "unified": "{5,7,11,13} = substrate = E6-indexed primes via Golay-24 and Coxeter flanking"
+  },
+
+  "opens": "MCCXLVIII - Why does the W(3,3) gauge prime 3 connect to 2T=SL(2,3) (the binary tetrahedral group) whose McKay graph is E6 and whose order is the Golay length 24?"
+}

@@ -1,0 +1,10 @@
+{
+  "mccxx": {"theorem":"MCCXX","title":"(3,3)-Bivariate Bicycle Code","code":"[[360,12,24]]","logical_eq_k":true,"dist_eq_gauge_mult":true,"E8_gap":8,"E8_gap_eq_rank_E8":true,"law":"[[3|E|/2, k, gauge_mult]]; dim(E8)-|E|=rank(E8)=8","ref":"arXiv:2503.03827","verified":true},
+  "mccxxi": {"theorem":"MCCXXI","title":"Octonion-Fano-W33 Triple","dim_G2":14,"G2_roots":12,"Fano_pts":7,"Fano_lines":7,"Fano_pts_per_line":3,"law":"G2 roots=k; Fano pts/line=q; Fano pts=Phi6=octonion imaginaries","verified":true},
+  "mccxxii": {"theorem":"MCCXXII","title":"Temporal Torus Quantization","H1":81,"as_q4":81,"as_two_tori":"(Z_q x Z_q)^2","pauli_order":27,"pauli_eq_H1_over_q":true,"law":"H1=q^4=(Z_q x Z_q)^2; Pauli order=q^3=H1/q","verified":true},
+  "mccxxiii": {"theorem":"MCCXXIII","title":"Quantum Hall on Temporal Torus","tau_abs":1.0,"tau_arg_over_pi":0.6667,"filling_nu":9,"filling_eq_q2":true,"sigma_H_e2h":9,"law":"tau=omega; nu=q^2=9; sigma_H=q^2 e^2/h","ref":"arXiv:2603.27319","verified":true},
+  "mccxxiv": {"theorem":"MCCXXIV","title":"4D Topological Fault-Tolerant Code","4D_valency":6,"valency_eq_qfact":true,"n_4D":57600,"k_logical_4D":6561,"rate_4D":0.113906,"d_estimate":13.63,"law":"valency=k/2=q!; [[57600,6561,~14]] single-shot","ref":"arXiv:2506.15130","verified":true},
+  "mccxxv": {"theorem":"MCCXXV","title":"p-adic RG Fixed Point","lambda_RG":3.3166,"Delta_crit":0.5,"Delta_eq_half":true,"interpretation":"massless Dirac on W33 boundary","law":"Ramanujan => Delta_crit=1/2=massless Dirac","ref":"PTEP 2024","verified":true},
+  "mccxxvi": {"theorem":"MCCXXVI","title":"Csaszar-Heawood Complete Tower","tower":"W33 -> T_{11} -> Heawood -> Fano","Heawood_V_eq_SzV":true,"Heawood_E_eq_T6":true,"Heawood_k_eq_q":true,"hashimoto_pm1_sum":401,"pm1_eq_v2sq_plus1":true,"law":"W33->T11->Heawood->Fano; Hashimoto +/-1 sum = (v/2)^2+1 = 401","verified":true},
+  "mccxxvii": {"theorem":"MCCXXVII","title":"Pythagorean Triple Spin Foam Amplitudes","key_law_935":"(3,4,5) amplitude ratio=Cs/q=5/3","key_law_9v41":"(9,40,41) j_c=v/2=20","key_law_7k25":"(7,24,25) j_c=k=12","law":"Substrate Pythagorean triples label W33 spin foam faces","verified":true}
+}

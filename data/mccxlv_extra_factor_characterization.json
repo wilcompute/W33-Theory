@@ -1,0 +1,24 @@
+{
+  "theorem": "MCCXLV",
+  "title": "Monster Substrate Extra Factor Characterization",
+  "status": "OPEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLIV",
+  "context": "From MCCXLIV: |C_M(pA)| = 3^3 * p^2 * 2^(17-p) * extra(p). The extra factors are:",
+  "known_extras": {
+    "extra(7)": "5^2 * 7^2 * 17 = 20825",
+    "extra(11)": "5",
+    "extra(13)": "1"
+  },
+  "observations": [
+    "extra(13) = 1: minimal — p=13 is the largest substrate prime",
+    "extra(11) = 5: single prime, 5 = (11+p_boundary)/? = 5 is adjacent to 11 in Moonshine primes",
+    "extra(7) = 5^2 * 7^2 * 17: contains p=7 itself squared, contains boundary prime 17, contains 5^2",
+    "The sequence extra: 20825, 5, 1 suggests extra(p) = product of primes q < p in substrate with multiplicity from Monster McKay",
+    "Alternatively: extra(p) = |centralizer residual group| in the Moonshine-compatible quotient"
+  ],
+  "conjecture_A": "extra(p) = 1 iff p = max(substrate primes) = 13",
+  "conjecture_B": "v_5(extra(p)) = number of substrate primes less than p that are = 5 mod 6",
+  "conjecture_C": "extra(p) is determined by the McKay E8 correspondence restricted to substrate primes < p",
+  "resolution_path": "Compute extra(p) for p=5 via |C_M(5A)| from monster_atlas_ccls.json and check if e(5) = 17-5 = 12 and reconstruct extra(5)"
+}

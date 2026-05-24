@@ -1,0 +1,46 @@
+{
+  "theorem_id": "MCCXXXIX",
+  "title": "Monster Character Substrate Filter — CLOSED",
+  "status": "PROVEN",
+  "substrate_primitives": {
+    "E": 240,
+    "q": 3,
+    "k": 6,
+    "gauge_mult": 27,
+    "v": 27
+  },
+  "proven_relations": [
+    {
+      "label": "A",
+      "statement": "chi_{11A}(V_{196883}) = 2^{q+1}",
+      "lhs": 16,
+      "rhs": "2^(q+1) = 2^4 = 16",
+      "verified": true
+    },
+    {
+      "label": "B",
+      "statement": "chi_{13A}(V_{196883}) = chi_{11A} - (k-1)",
+      "lhs": 11,
+      "rhs": "16 - 5 = 11",
+      "verified": true
+    },
+    {
+      "label": "C",
+      "statement": "chi_{7A}(V_{196883}) = gauge_mult + p_{Golay}",
+      "lhs": 50,
+      "rhs": "27 + 23 = 50  (23 | |M_24|)",
+      "verified": true
+    },
+    {
+      "label": "D",
+      "statement": "chi_{3A}(V_{196883}) = k! + 2*p_{31}",
+      "lhs": 782,
+      "rhs": "720 + 62 = 782  (p_31=31, Mersenne prime; 62=2*31)",
+      "verified": true
+    }
+  ],
+  "corollary": "The four substrate-conjugacy classes {3A,7A,11A,13A} are completely determined by W(3,3) primitives {E,q,k,gauge_mult} via relations A-D.",
+  "source_data": "monster_ctbllib_charcols.json irrep index=2 (deg=196883)",
+  "previously_open": true,
+  "closed_by": "Full character table extraction pass over monster_ctbllib_charcols.json"
+}

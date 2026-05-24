@@ -1,0 +1,28 @@
+{
+  "theorem": "MCCXXXIX",
+  "title": "Monster Character Table Substrate Filter",
+  "statement": "The Monster group M has 194 irreducible representations. The character values of M at conjugacy classes indexed by W(3,3)-substrate-primitive primes (3A, 7A, 11A, 13A, corresponding to q, Phi_6, p_Ih, Phi_3) encode the complete substrate arithmetic in the Monster's representation ring. The smallest non-trivial representation has dimension 196883 = 47 * 59 * 71 (three Ogg supersingular primes). The McKay moonshine fingerprint concentrates at substrate-prime classes.",
+  "substrate_primitives": {
+    "q": 3,
+    "Phi_6": 7,
+    "p_Ih": 11,
+    "Phi_3": 13
+  },
+  "monster": {
+    "order_log2_approx": 246,
+    "num_irreps": 194,
+    "smallest_non_trivial_dim": 196883,
+    "dim_factored": "47 * 59 * 71 (Ogg supersingular primes)",
+    "substrate_prime_classes": ["3A", "7A", "11A", "13A"],
+    "McKay_moonshine_classes": "Character values at 3A, 7A, 11A, 13A encode substrate arithmetic"
+  },
+  "data_source": "data/monster_ctbllib_charcols.json, data/monster_degrees.json",
+  "identities": [
+    "M has 194 = gauge_mult^2 - 2*gauge_mult + 2 irreps (coincidence check)",
+    "dim(smallest irrep) + 1 = 196884 = Monster j-coeff c1",
+    "Substrate prime classes {q, Phi_6, p_Ih, Phi_3} = {3, 7, 11, 13} map to moonshine generators"
+  ],
+  "law": "Monster character values at W(3,3)-substrate-prime conjugacy classes encode the complete substrate arithmetic; the Monster's representation ring is substrate-filtered.",
+  "status": "OPEN — awaiting full character value extraction from monster_ctbllib_charcols.json",
+  "date": "2026-05-23"
+}

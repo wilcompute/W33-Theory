@@ -1,0 +1,50 @@
+{
+  "theorem": "MCCXLIV",
+  "title": "Monster Substrate Centralizer 2-Adic Structure: e(p) = 17-p",
+  "status": "PROVEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLIII",
+  "source": "monster_atlas_ccls.json",
+  "atlas_orders": {
+    "7A":  28212710400,
+    "11A": 1045440,
+    "13A": 73008
+  },
+  "theorem_statement": "For each substrate prime p in {7, 11, 13}: |C_M(pA)| = 3^3 * p^2 * 2^(17-p) * extra(p)",
+  "verified": {
+    "7A": {
+      "p": 7,
+      "formula": "3^3 * 7^2 * 2^10 * 20825",
+      "e_p": 10,
+      "17_minus_p": 10,
+      "extra": 20825,
+      "extra_factored": "5^2 * 7^2 * 17",
+      "product": 28212710400,
+      "matches_atlas": true
+    },
+    "11A": {
+      "p": 11,
+      "formula": "3^3 * 11^2 * 2^6 * 5",
+      "e_p": 6,
+      "17_minus_p": 6,
+      "extra": 5,
+      "extra_factored": "5",
+      "product": 1045440,
+      "matches_atlas": true
+    },
+    "13A": {
+      "p": 13,
+      "formula": "3^3 * 13^2 * 2^4 * 1",
+      "e_p": 4,
+      "17_minus_p": 4,
+      "extra": 1,
+      "extra_factored": "1",
+      "product": 73008,
+      "matches_atlas": true
+    }
+  },
+  "key_insight": "The 2-adic valuation of |C_M(pA)| / (27 * p^2) equals 17 - p for all three non-degenerate substrate primes. The constant 17 is the boundary prime of the substrate range and appears explicitly as a factor in extra(7) = 5^2 * 7^2 * 17.",
+  "boundary_prime": 17,
+  "exponent_law": "e(p) = 17 - p",
+  "opens": "MCCXLV — Characterize extra(p) for all substrate primes"
+}

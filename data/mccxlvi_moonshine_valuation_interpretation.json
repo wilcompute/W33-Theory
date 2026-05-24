@@ -1,0 +1,19 @@
+{
+  "theorem": "MCCXLVI",
+  "title": "Moonshine Module Interpretation of the Substrate Valuation Invariant",
+  "status": "OPEN",
+  "timestamp": "2026-05-23",
+  "parent": "MCCXLV",
+  "conjecture": "The invariant 45 = v\u2082(|M|)-1 has a natural interpretation in terms of the graded dimensions of the Moonshine module V\u266e = \u2295_n V\u266e_n",
+  "known_facts": [
+    "dim(V\u266e_1) = 0 (no weight-1 states)",
+    "dim(V\u266e_2) = 196884 (the famous coefficient)",
+    "v\u2082(196884) = 2 (since 196884 = 4 \u00d7 49221 = 2^2 \u00d7 3 \u00d7 7 \u00d7 2344 + ...)",
+    "v\u2082(|M|) = 46 = 2 \u00d7 23 = 2 \u00d7 (largest Monster prime)"
+  ],
+  "approach_A": "Check if 45 = sum of v\u2082(dim V\u266e_n) for n in substrate prime range",
+  "approach_B": "Check if 45 appears as a graded 2-adic dimension in the McKay-Thompson series for substrate classes",
+  "approach_C": "The linear form 3v\u2082 + 3p - 2v\u2083 = 45 may arise from the (2,3)-bigraded structure of the Monster Lie algebra",
+  "key_question": "Is there a natural Monster module M_p for each substrate prime p such that |M_p| encodes the valuation invariant?",
+  "v2_factoid": "v\u2082(|M|) = 46 = 2 \u00d7 23. Note 23 is the largest prime in the Baby Monster but not in the substrate. The -1 shift to get 45 may reflect the weight-0 vs weight-1 vacuum distinction in V\u266e."
+}
