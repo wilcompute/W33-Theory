@@ -1580,6 +1580,100 @@ logical register: the two-photon GHZ at $n = 2$ has $q^{q+1}$ dimensions,
 matching the code's logical capacity exactly.
 \end{remark}
 
+\subsection{Matter Sector and the Three Fermion Generations}
+\label{sec:generations}
+
+The W(3,3) matter sector $H_1(2\text{-complex}) = \ZZ^{81}$ decomposes
+canonically under any order-$q$ automorphism of the substrate, yielding
+exactly three fermion generations as Bell-qutrit subregisters.
+
+\begin{theorem}[Three generations from Bell-qutrit storage]\label{thm:three_gens}
+Let $\sigma \in \mathrm{Aut}(W(3,3))$ be any element of order $q$ (e.g.\
+a triality-class outer automorphism, or an order-$q$ Clifford acting on the
+matter sector via the QECC encoding).  Then $\sigma$ splits the matter
+sector
+\begin{equation}
+  H_1  \;=\;  \ZZ^{q^{q+1}}
+        \;=\;  \ZZ^{27} \oplus \ZZ^{27} \oplus \ZZ^{27}
+\end{equation}
+into $q = 3$ orbits of $27 = q^q$ each.  Each orbit hosts
+$\lfloor q^q/2 \rfloor = 13 = \Phi_3$ temporal Bell qutrits plus one spare
+logical qutrit:
+\begin{equation}
+  27 \;=\; 2 \cdot \Phi_3 + 1.
+\end{equation}
+The three orbits realise three fermion generations, each with $\Phi_3 = 13$
+Bell-qutrit substates and one spare.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The $\sigma$-orbit decomposition follows from cyclic group action on a
+$q$-cubic algebra (commit W33\_FOR\_EVERYONE.tex line 851: $\ZZ^{81} =
+\ZZ^{27} \oplus \ZZ^{27} \oplus \ZZ^{27}$).  Per-orbit Bell-qutrit count:
+each Bell qutrit consumes $2$ logical qutrits (past, future), so $27/2 =
+13.5$ rounds to $13$ Bell qutrits with $1$ spare.  Total across three
+orbits: $3 \cdot 13 = 39$ Bell qutrits and $3$ spares.
+\end{proof}
+
+\begin{corollary}[Bell-qutrit capacity equals gauge dimension]\label{cor:bell_gauge}
+The total Bell-qutrit storage capacity of the W(3,3) matter sector,
+counted in Bell pairs, is
+\begin{equation}
+  3 \cdot \Phi_3  \;=\;  39  \;=\;  q \cdot \Phi_3  \;=\;  \dim(\operatorname{im} d_0)
+  \;=\; v - 1.
+\end{equation}
+This matches the W(3,3) Hodge decomposition's \emph{gauge sector}
+(commit \texttt{5e32a884} and \cref{sec:qecc}).
+\end{corollary}
+
+\begin{remark}[Three-generation reading]
+The classical fact ``three fermion generations'' becomes, in the
+substrate picture, the count of $\sigma$-orbits on the matter sector
+$\ZZ^{81}$.  Each generation is a $27 = q^q$-dim logical sub-register
+hosting $\Phi_3 = 13$ Bell qutrits plus one spare, with the substrate's
+order-$q$ automorphism cyclically permuting the three.  In particular,
+the often-quoted ``why three?'' question for fermion generations becomes
+the question of $\sigma$-orbits on the matter sector, with answer fixed
+by the master equation $q! = 2q$ at $q = 3$.
+\end{remark}
+
+\subsection{Bell Qutrit and Hashimoto Dynamics}
+\label{sec:bell_hashimoto}
+
+The Bell qutrit is a \emph{static} structural state on past$\otimes$future;
+the Hashimoto operator $B$ governs the \emph{dynamical} evolution of the
+directed-edge carrier.  We connect them via the QECC encoding.
+
+\begin{proposition}[Encoded Bell qutrit transports through Hashimoto sectors]\label{prop:bell_hashimoto}
+Let $\ket{\Omega}$ be a temporal Bell qutrit on a single photon, encoded
+via the $[[240, 81, \mu, q]]_3$ CSS code (\cref{thm:edge_css}) as a
+logical state in the W(3,3) matter sector.  Under one Hashimoto step
+(i.e.\ propagation by one tick of non-backtracking transport), the encoded
+Bell qutrit accumulates phases from the two non-trivial Hashimoto sectors:
+\begin{align}
+  \theta_{\mathrm{gauge}}   &\;=\; \arctan\sqrt{\Phi_4}
+    \;\approx\; 72.45^{\circ}, \\
+  \theta_{\mathrm{chiral}}  &\;=\; \pi - \arctan(\sqrt{\Phi_6}/\lambda)
+    \;\approx\; 127.09^{\circ}.
+\end{align}
+The cyclotomic primitives $\Phi_4 = q^2 + 1$ and $\Phi_6 = q^2 - q + 1$
+of the substrate appear as the squared imaginary parts of the gauge and
+chiral Hashimoto eigenvalues respectively, so transport of the Bell qutrit
+through one Hashimoto tick is a direct cyclotomic-phase signature.
+\end{proposition}
+
+\begin{remark}[Bell-Hashimoto interplay]
+The Bell qutrit's \emph{static} content ($q^2 = 9$ past$\otimes$future
+histories, $\ket{\Omega}$ stabilising a W(3,3) line) and the Hashimoto
+operator's \emph{dynamic} content (transport phases $\theta_{\mathrm{gauge}}$
+and $\theta_{\mathrm{chiral}}$ per tick) are complementary: the Bell
+qutrit provides the temporal seed (a frozen instant), while Hashimoto
+transports it forward in non-backtracking steps.  The substrate's
+falsifiable photonic-runtime predictions
+(\cref{sec:hashimoto-phases}) thus pertain directly to the
+Bell-qutrit-encoded photonic carrier.
+\end{remark}
+
 \subsection{Substrate Dictionary: Self-Entanglement at a Glance}
 \label{sec:dictionary}
 
