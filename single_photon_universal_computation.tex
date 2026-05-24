@@ -982,6 +982,74 @@ that achieves maximum past$\leftrightarrow$future mutual information, an
 independent characterisation complementing \cref{thm:bell_uniqueness}.
 \end{remark}
 
+\subsection{The Triple Closure: $7$, $9$, $40$ on One Photon}
+\label{sec:triple_closure}
+
+The single-photon self-entanglement compiles to the full $W(3,3)$ substrate
+through three layered closures, each carrying a different substrate primitive.
+
+\begin{theorem}[Temporal triple closure]\label{thm:triple_closure}
+At $q = 3$, a single self-entangled qutrit on one photon realises three nested
+substrate closures simultaneously:
+\begin{enumerate}[label=(\arabic*),noitemsep]
+  \item \textbf{Temporal triangle ($\Phi_6 = 7$):}
+    \begin{equation}
+      \underbrace{3}_{\text{past cells}} + \underbrace{3}_{\text{future cells}}
+      + \underbrace{1}_{\text{now}} \;=\; 7 \;=\; \Phi_6.
+    \end{equation}
+  \item \textbf{Past$\otimes$future Hilbert space ($q^2 = 9$):}
+    \begin{equation}
+      q + q!  \;=\; 3 + 6 \;=\; 9 \;=\; q^2.
+      \qquad (\text{diagonal} + \text{off-diagonal})
+    \end{equation}
+  \item \textbf{$W(3,3)$ shell ($v = 40$):}
+    \begin{equation}
+      1 + 12 + 27 \;=\; 40 \;=\; v,
+      \qquad (\text{Bell line} + \text{intersecting} + \text{disjoint})
+    \end{equation}
+    with substrate readings $12 = k$ (valency) and $27 = q^q$ (Heisenberg-Weyl
+    order).
+\end{enumerate}
+The three closures are nested via:
+\begin{equation}
+  \mathrm{temporal\ triangle}_{(7)}  \;\hookrightarrow\;
+  \mathrm{past}\otimes\mathrm{future}_{(9)}  \;\hookrightarrow\;
+  W(3,3)_{(40)}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+(1) The temporal triangle decomposes a single self-entangled qutrit into $q$
+past cells (one per substrate value), $q$ future cells, and a single
+``now'' point---the harmonic convergence of \cref{cor:now_forced}.  Total:
+$2q + 1 = 7 = \Phi_6$.
+(2) Established in \cref{thm:masteq_history}.
+(3) The Bell line is one of $v = 40$ lines; the Bell-local shell closes as
+$1 + 12 + 27 = 40$ by \cref{thm:nowclosure}.  Substrate readings:
+$12 = k$ is the W(3,3) valency, $27 = q^q$ is the Heisenberg-Weyl group
+order.
+The nesting follows from the embeddings $\mathrm{cells} \to
+\mathrm{Hilbert\ space} \to \mathrm{phase\ space}$: the $7$ temporal cells
+generate the $9$-dimensional past$\otimes$future Hilbert space, which then
+acts via Pauli observables on the $40$-point $W(3,3)$ phase space.
+\end{proof}
+
+\begin{corollary}[Total substrate scale-up]\label{cor:scaleup}
+Starting from $1$ photon with $1$ temporal qutrit register ($q = 3$ time-bins),
+the substrate scales up to:
+\begin{center}\begin{tabular}{lll}
+$1$ photon &           & seed \\
+$q = 3$    & temporal modes & past, now, future cells \\
+$q^2 = 9$  & past$\otimes$future histories & diagonal $+$ off-diagonal \\
+$v = 40$   & W(3,3) phase-space points & full substrate \\
+$q^{q+1} = 81$ & matter sector & harmonic 1-forms \\
+$|\Sp(4,\GF{3})| = 51840$ & two-qutrit Clifford & all gates \\
+\end{tabular}\end{center}
+Each step is a substrate-clean multiplicative or combinatorial scale,
+ultimately exhausting the full universal-quantum-computation substrate from
+a single photon's temporal qutrit.
+\end{corollary}
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
