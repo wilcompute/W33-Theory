@@ -925,6 +925,60 @@ ratio (matching $1 : (v-1)$) is the substrate measure of how much
 budget.
 \end{remark}
 
+\subsection{Quantum Teleportation in Time}
+\label{sec:time_teleportation}
+
+The most operational use of the temporal Bell qutrit is to transmit a qutrit
+state from a past-self to a future-self on a single photon---a temporal
+analog of standard quantum teleportation.
+
+\begin{theorem}[Single-photon temporal teleportation]\label{thm:temporal_teleport}
+Let a single photon carry the temporal Bell qutrit $\ket{\Omega}$ on
+its past$\otimes$future registers, and let $\ket{\psi} \in \CC^q$ be an
+arbitrary qutrit state encoded on an auxiliary qutrit register.  Then
+$\ket{\psi}$ can be teleported from the past-self's accessible region to
+the future-self's accessible region with fidelity $1$, via the protocol:
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item Past-self performs a qutrit Bell-basis measurement on
+    $\ket{\psi}_{\rm aux}\otimes\ket{\Omega_p}$ (the auxiliary qutrit jointly
+    with the past register of the Bell qutrit).
+  \item Past-self stores the $2$-trit measurement outcome in classical
+    memory.
+  \item At a later time, future-self reads the classical memory and applies
+    the corresponding Pauli correction
+    $X^a Z^b$ to the future register of the Bell qutrit, where $(a,b)$ is the
+    measurement outcome.
+  \item The future register now carries $\ket{\psi}$ exactly.
+\end{enumerate}
+The protocol consumes one temporal Bell qutrit and $2 \log_q q = 2$ classical
+trits ($= 2 \log_2 3 \approx 3.17$ bits) of memory.
+\end{theorem}
+
+\begin{proof}
+Standard quantum teleportation theorem~\cite{Bennett1993}, adapted to qutrits
+and to the temporal-Bell setting.  The classical channel from past-self to
+future-self is realised by classical memory (records persisting in time)
+rather than spatial communication; the rest of the protocol is identical.
+\end{proof}
+
+\begin{corollary}[Single-photon memory protocol]\label{cor:memory_protocol}
+A photon source preparing temporal Bell qutrits, together with a Bell-basis
+detector, a $2$-trit classical memory, and a qutrit Pauli-correction unit,
+implements a faithful qutrit quantum memory: any qutrit state encoded at
+time $t_0$ can be retrieved at time $t_1 > t_0$ on the same photon, with no
+additional photons required.  The classical-memory overhead per stored qutrit
+is $2$ trits, independent of storage time.
+\end{corollary}
+
+\begin{remark}[No retrocausation]
+The protocol does \emph{not} require backwards-in-time signalling: classical
+information flows forward (past stores, future reads), and the quantum state
+is transmitted via the pre-existing past$\otimes$future entanglement.  This
+is consistent with standard quantum-information no-signalling.  The temporal
+Bell qutrit's ``self-entanglement'' is a static structural property of the
+photon's temporal-mode register, not a dynamical signal.
+\end{remark}
+
 \subsection{Decoherence Threshold: Substrate-Clean Noise Tolerance}
 \label{sec:decoherence}
 
@@ -1678,6 +1732,13 @@ $W(2n-1, p)$ for prime $p > 3$.
   \textit{Time-bin entangled qubits for quantum communication created by
   femtosecond pulses},
   Phys.\ Rev.\ A \textbf{66}, 062308 (2002).
+
+\bibitem{Bennett1993}
+  C.~H.~Bennett, G.~Brassard, C.~Cr\'epeau, R.~Jozsa, A.~Peres, and
+  W.~K.~Wootters,
+  \textit{Teleporting an Unknown Quantum State via Dual Classical and
+  Einstein--Podolsky--Rosen Channels},
+  Phys.\ Rev.\ Lett.\ \textbf{70}, 1895 (1993).
 
 \bibitem{Vlasov2025}
   A.~Yu.~Vlasov,
