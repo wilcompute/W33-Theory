@@ -925,6 +925,63 @@ ratio (matching $1 : (v-1)$) is the substrate measure of how much
 budget.
 \end{remark}
 
+\subsection{Marginal Mixedness and Mutual Information}
+\label{sec:marginal}
+
+The temporal Bell qutrit hides all its information in the correlations between
+past and future, leaving the individual marginal states maximally mixed.
+
+\begin{theorem}[Marginal mixedness]\label{thm:marginal}
+For the temporal Bell qutrit $\ket{\Omega} = q^{-1/2}\sum_j\ket{jj}$:
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item $\rho_p = \mathrm{Tr}_f\bigl(\ket{\Omega}\bra{\Omega}\bigr)
+    = \frac{1}{q}\,I_q$, the maximally mixed qutrit state on the past register;
+  \item $\rho_f = \mathrm{Tr}_p\bigl(\ket{\Omega}\bra{\Omega}\bigr) = \frac{1}{q}\,I_q$
+    on the future register;
+  \item von Neumann entropy $S(\rho_p) = S(\rho_f) = \log q = \log 3$;
+  \item entropy of the joint state $S(\ket{\Omega}\bra{\Omega}) = 0$ (pure);
+  \item quantum mutual information $I(p:f) = 2 \log q = 2 \log 3$;
+  \item coherent information $I_c(p \rightarrow f) = \log q$ (entanglement
+    entropy).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+$\rho_p = \mathrm{Tr}_f(\frac{1}{q}\sum_{j,k}\ket{jj}\bra{kk})
+= \frac{1}{q}\sum_{j,k}\delta_{jk}\ket{j}\bra{k}
+= \frac{1}{q}\sum_j\ket{j}\bra{j} = I_q/q$.  Similarly $\rho_f = I_q/q$.
+The von Neumann entropy of the maximally mixed qutrit is $\log q$, and
+$S(\ket{\Omega}) = 0$ since $\ket{\Omega}$ is pure.  Mutual information
+$I(p:f) = S(\rho_p) + S(\rho_f) - S(\ket{\Omega}\bra{\Omega}) = 2 \log q$,
+and coherent information for pure states equals $S(\rho_p)$.
+\end{proof}
+
+\begin{corollary}[All information is in correlations]\label{cor:correl}
+A single-time measurement of either the past or the future register alone
+returns a uniformly random outcome in $\GF{q}$.  The temporal Bell qutrit's
+\emph{entire} information content lives in the past-future correlation; no
+single-time observer can recover it.
+\end{corollary}
+
+\begin{remark}[Substrate principle: ``past alone is noise'']
+The marginal-mixedness theorem encodes a deep substrate principle: at the
+single-photon temporal level, past-alone-measurements and
+future-alone-measurements are individually \emph{maximally noisy}.  The
+information is reconstructed only by measuring the joint past$\otimes$future
+state---equivalently, by the Franson-recombination geometry of
+\cref{rem:phys_sym}.  This is the operational meaning of ``now is the
+harmonic convergence'': only at the convergence point (where past and
+future are read together) does the substrate's information become accessible.
+\end{remark}
+
+\begin{remark}[Mutual information bound: $I(p:f) = 2 \log q$]
+For any qutrit-qutrit state, the quantum mutual information $I(p:f)$ is
+bounded above by $2 \log q$; the temporal Bell qutrit saturates this bound.
+This makes $\ket{\Omega}$ \emph{the unique state} (up to local unitaries)
+that achieves maximum past$\leftrightarrow$future mutual information, an
+independent characterisation complementing \cref{thm:bell_uniqueness}.
+\end{remark}
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
