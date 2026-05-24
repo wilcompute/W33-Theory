@@ -1295,6 +1295,61 @@ ultimately exhausting the full universal-quantum-computation substrate from
 a single photon's temporal qutrit.
 \end{corollary}
 
+\subsection{Substrate CPT Theorem on the Bell Qutrit}
+\label{sec:cpt}
+
+The temporal Bell qutrit is invariant under a discrete CPT-like
+symmetry, which combines complex conjugation, past$\leftrightarrow$future
+parity exchange, and unitary time reversal.
+
+\begin{theorem}[Substrate discrete CPT]\label{thm:cpt}
+Define the three discrete symmetries on $\mathcal H_p\otimes\mathcal H_f$:
+\begin{itemize}[noitemsep]
+  \item $C$ (charge conjugation):  $\ket{j} \mapsto \ket{(-j)\bmod q}$ on
+    each register, equivalently $\omega \mapsto \overline\omega$.
+  \item $P$ (parity / past$\leftrightarrow$future):
+    $\mathrm{SWAP}_{pf}$, exchanging the two registers.
+  \item $T$ (time reversal):  complex conjugation
+    $\ket{\psi} \mapsto \overline{\ket{\psi}}$ on coefficients (with $T^2 = I$
+    on a qutrit-tensor system).
+\end{itemize}
+Then the temporal Bell qutrit is preserved by each of $C$, $P$, $T$
+individually, and \emph{a fortiori} by the combined $CPT$:
+\begin{equation}
+  C\ket{\Omega} = P\ket{\Omega} = T\ket{\Omega} = CPT\ket{\Omega} = \ket{\Omega}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$C\ket{\Omega} = q^{-1/2}\sum_j\ket{-j,-j} = q^{-1/2}\sum_j\ket{j,j} =
+\ket{\Omega}$ by reindexing $j' = -j$.
+$P\ket{\Omega} = q^{-1/2}\sum_j\ket{j,j} = \ket{\Omega}$ since $\ket{j,j}$
+is SWAP-symmetric.
+$T\ket{\Omega} = q^{-1/2}\overline{\sum_j\ket{j,j}} = \ket{\Omega}$ since
+$\ket{j,j}$ has real computational-basis coefficients.
+Hence $CPT$ also fixes $\ket{\Omega}$.
+\end{proof}
+
+\begin{corollary}[$(U\otimes U^*)$ invariance as $CPT$]\label{cor:uust_cpt}
+The unitary-conjugate invariance $(U\otimes U^*)\ket{\Omega} = \ket{\Omega}$
+of \cref{thm:bell_uniqueness}(iii) is equivalent to the statement:
+\emph{any forward evolution $U$ on the future register is matched by the
+$C$-conjugate (= time-reversed) evolution $U^*$ on the past register.}
+In particular, the temporal Bell qutrit cannot distinguish
+``future evolving forward'' from ``past evolving backward''---the
+substrate is $CPT$-symmetric at the single-photon level.
+\end{corollary}
+
+\begin{remark}[Lüders--Pauli analog]
+\cref{thm:cpt} is the substrate's discrete-field analog of the
+Lüders--Pauli CPT theorem of relativistic QFT: any consistent
+self-entangled temporal state on a single photon is automatically
+$CPT$-invariant.  This is forced by the (U$\otimes$U$^*$) characterisation
+(\cref{thm:bell_uniqueness}) and does not require any continuum spacetime
+input.  The temporal Bell qutrit thus realises a \emph{discrete-substrate
+CPT symmetry} purely on photonic mode space.
+\end{remark}
+
 \subsection{Synthesis}
 
 This establishes the physical thesis: \emph{one self-entangled qutrit on one single
