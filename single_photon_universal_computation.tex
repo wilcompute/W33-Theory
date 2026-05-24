@@ -1295,6 +1295,72 @@ ultimately exhausting the full universal-quantum-computation substrate from
 a single photon's temporal qutrit.
 \end{corollary}
 
+\subsection{Two-State Vector Formalism: Bell Qutrit as Uniform Post-Selection}
+\label{sec:tsvf}
+
+The Aharonov--Bergmann--Lebowitz \emph{Two-State Vector Formalism} (TSVF)
+\cite{ABL1964,AharonovVaidman1991} treats a quantum system between two
+measurement times via a pair $(\ket{\psi_p}, \ket{\psi_f})$ of past
+(pre-selected) and future (post-selected) state vectors.  The temporal
+Bell qutrit on a single photon corresponds canonically to the
+\emph{trivial} (uniform) post-selection in TSVF.
+
+\begin{theorem}[Bell qutrit $\equiv$ uniform TSVF post-selection]\label{thm:tsvf}
+Let the temporal Bell qutrit $\ket{\Omega}$ on the past$\otimes$future
+registers of a single photon be interpreted via TSVF.  Then:
+\begin{enumerate}[label=(\roman*),noitemsep]
+  \item The past marginal $\rho_p = I_q / q$ equals the Haar-uniform
+    average over all future post-selections:
+    \begin{equation}
+      \int_{\mathrm{SU}(q)} d\psi_f\;\ket{\psi_f}\bra{\psi_f}
+      \;=\; I_q / q,
+    \end{equation}
+    so $\rho_p$ represents the system's state with no information about
+    the future selection.
+  \item For any future post-selection $\ket{\psi_f}$, the conditional past
+    state is the rank-1 projection
+    $\ket{\psi_f^*}\bra{\psi_f^*}$ (complex conjugate in computational basis),
+    i.e.\ the Bell qutrit \emph{steers} the past to the conjugate of
+    whatever future is selected.
+  \item The weak value of any past observable $A$ given uniform future
+    post-selection is its expectation in the maximally mixed state:
+    $\langle A\rangle_{\text{TSVF, uniform}} = \mathrm{Tr}(A)/q$, recovering
+    the Choi-trace identity \eqref{eq:choi}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) $\int d\psi_f |\psi_f\rangle\langle\psi_f| = I_q / q$ by Schur's lemma
+on $\mathrm{SU}(q)$.  Together with marginal mixedness
+(\cref{thm:marginal}) this gives $\rho_p = $ uniform mixture.
+(ii) For Bell qutrit $\ket{\Omega} = q^{-1/2}\sum_j\ket{jj}$,
+$(\bra{\psi_f}\otimes I_p)\ket{\Omega} = q^{-1/2}\sum_j\overline{(\psi_f)_j}
+\ket{j}_p = \ket{\psi_f^*}_p / \sqrt q$ up to normalisation, so post-selecting
+on $\ket{\psi_f}$ steers past to $\ket{\psi_f^*}$ (= complex-conjugate).
+(iii) The weak value $\langle A\rangle = \mathrm{Tr}(A\rho_p)$ when past
+is mixed; for $\rho_p = I/q$, this gives $\mathrm{Tr}(A)/q$.
+\end{proof}
+
+\begin{corollary}[Self-entanglement $=$ no future bias]\label{cor:no_bias}
+The temporal Bell qutrit represents the substrate's \emph{symmetric, no-
+information} temporal state: every possible future is weighted equally,
+and the past is steered correspondingly by post-selection.  Any deviation
+from uniform post-selection corresponds to a definite future condition,
+breaking the past$\leftrightarrow$future symmetry.  The Bell qutrit is
+thus the \emph{only} state consistent with maximal temporal ignorance, a
+condition the substrate uniquely realises.
+\end{corollary}
+
+\begin{remark}[Bell qutrit as ``unmarked'' history]
+\cref{thm:tsvf}(i) gives a deep interpretation of the temporal Bell qutrit:
+it is the photon's \emph{unmarked} (history-symmetric) state, before any
+post-selection ``marks'' a particular future trajectory.  Conversely, any
+future measurement collapses the Bell qutrit into a definite history,
+breaking self-entanglement.  This is consistent with the substrate's CPT
+symmetry (\cref{thm:cpt}): the no-bias state is the only $CPT$-symmetric
+state, and post-selection breaks $CPT$ by selecting a temporal direction.
+\end{remark}
+
 \subsection{Substrate CPT Theorem on the Bell Qutrit}
 \label{sec:cpt}
 
@@ -2081,6 +2147,17 @@ $W(2n-1, p)$ for prime $p > 3$.
   \textit{Time-bin entangled qubits for quantum communication created by
   femtosecond pulses},
   Phys.\ Rev.\ A \textbf{66}, 062308 (2002).
+
+\bibitem{ABL1964}
+  Y.~Aharonov, P.~G.~Bergmann, and J.~L.~Lebowitz,
+  \textit{Time Symmetry in the Quantum Process of Measurement},
+  Phys.\ Rev.\ \textbf{134}, B1410 (1964).
+
+\bibitem{AharonovVaidman1991}
+  Y.~Aharonov and L.~Vaidman,
+  \textit{Properties of a quantum system during the time interval between
+  two measurements},
+  Phys.\ Rev.\ A \textbf{41}, 11 (1990).
 
 \bibitem{Bennett1993}
   C.~H.~Bennett, G.~Brassard, C.~Cr\'epeau, R.~Jozsa, A.~Peres, and
