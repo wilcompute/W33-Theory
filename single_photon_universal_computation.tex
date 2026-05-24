@@ -555,7 +555,7 @@ line) closes as $1 + 12 + 27 = 40$ (Bell + intersecting + disjoint).
 \end{theorem}
 
 \begin{proof}[Proof sketch]
-$W(3,3)$ admits $36 = q^2(q^2+1)$ spreads total; each line is in $q^2 = 9$ of them
+$W(3,3)$ admits $36 = (q!)^2 = \mu\cdot q^2$ spreads total; each line is in $q^2 = 9$ of them
 (see~\cite{Vlasov2025}).  Within a spread, the lines are pairwise disjoint
 maximal isotropic 2-spaces, so they form a partition of $40$ into $10$ blocks of
 $4$ points each.  The Bell-local shell counts: $1$ (Bell line itself) +
@@ -585,7 +585,7 @@ plane at infinity) form the \emph{compute layer}.  These add to $13 + 27 = 40 =
 |W(3,3)|$, recovering the full vertex count.
 \end{proposition}
 
-The $36 = q^2(q^2+1)$ complete two-qutrit measurement programs are exactly the
+The $36 = (q!)^2$ complete two-qutrit measurement programs are exactly the
 spreads of \cref{thm:nowclosure}, so every program in the temporal--spectral
 photonic computer corresponds to a spread of $W(3,3)$.
 
@@ -981,6 +981,66 @@ This makes $\ket{\Omega}$ \emph{the unique state} (up to local unitaries)
 that achieves maximum past$\leftrightarrow$future mutual information, an
 independent characterisation complementing \cref{thm:bell_uniqueness}.
 \end{remark}
+
+\subsection{Preparation Protocol: From $\ket{00}$ to $\ket{\Omega}$ in Two Cliffords}
+\label{sec:prep_protocol}
+
+The temporal Bell qutrit \eqref{eq:bellqutrit} is prepared from the trivial
+product state $\ket{0}_p \ket{0}_f$ by a depth-2 two-qutrit Clifford circuit
+consisting of one qutrit Hadamard $F_3$ on the past register followed by a
+controlled cyclic shift between past and future.
+
+\begin{proposition}[Bell qutrit preparation]\label{prop:prep}
+Define the qutrit Hadamard and controlled-shift gates by
+\begin{align}
+  F_3\ket{j} &\;=\; q^{-1/2}\sum_k \omega^{jk}\ket{k},
+  &\omega &= e^{2\pi i / q},
+  \\
+  CX_{p\to f}\ket{j}_p\ket{k}_f &\;=\; \ket{j}_p\ket{k + j \bmod q}_f.
+\end{align}
+Then
+\begin{equation}
+  CX_{p\to f} \,\bigl(F_3 \otimes I\bigr)\,\ket{0}_p\ket{0}_f
+  \;=\; \frac{1}{\sqrt q}\sum_{j=0}^{q-1}\ket{j}_p\ket{j}_f
+  \;=\; \ket{\Omega}.
+  \label{eq:prep_recipe}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Direct computation: $F_3\ket{0}_p\ket{0}_f =
+q^{-1/2}\sum_j\omega^{0\cdot j}\ket{j}_p\ket{0}_f = q^{-1/2}\sum_j\ket{j}_p\ket{0}_f$.
+Then $CX_{p\to f}$ takes $\ket{j}_p\ket{0}_f \mapsto \ket{j}_p\ket{j}_f$, giving
+\eqref{eq:prep_recipe}.
+\end{proof}
+
+\begin{remark}[Photonic time-bin implementation]\label{rem:photonic_prep}
+For a single photon with three time-bin modes:
+\begin{enumerate}[label=(\alph*),noitemsep]
+  \item Initial state: photon in time-bin $0$ on both past and future
+    registers (e.g.\ via electro-optic preselection).
+  \item Past Hadamard ($F_3$): pass the past register through a 3-port
+    tritter (e.g.\ a balanced fiber-optic tritter or a three-prism beam
+    splitter), creating a uniform superposition of past-bins.
+  \item Controlled-shift ($CX_{p\to f}$): use a phase modulator triggered by
+    the past time-bin to cyclically permute the future time-bin (e.g.\ via
+    electro-optic modulation conditioned on detection of past-bin tag).
+  \item Output state: the temporal Bell qutrit $\ket{\Omega}$.
+\end{enumerate}
+The preparation is fully linear-optical (no measurement-induced
+nonlinearity), requires only one tritter and one conditional phase modulator,
+and is depth-$q$ in time-bin operations.
+\end{remark}
+
+\begin{corollary}[Two-Clifford depth complexity]\label{cor:depth2}
+The temporal Bell qutrit is prepared in \emph{exactly two} Clifford
+operations from the trivial state.  This matches the qutrit-Bell-state
+preparation complexity ($F + CX$) and is the minimum for a maximally
+entangled state on $\CC^q \otimes \CC^q$: any preparation requires at least
+$O(\log q)$ depth on a fully connected register, achieved here at $O(1)$
+because $F_3$ creates the diagonal cloud and $CX$ folds it into the Bell
+basis.
+\end{corollary}
 
 \subsection{The Triple Closure: $7$, $9$, $40$ on One Photon}
 \label{sec:triple_closure}
