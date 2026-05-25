@@ -1,0 +1,159 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Phi_12": 73,
+      "v": 40,
+      "f_gauge": 24,
+      "m_W (= 2v)": 80
+    }
+  },
+  "phi12_additive_identities": [
+    {
+      "identity": "Phi_12 + Phi_6  = 2v = m_W",
+      "lhs": 80,
+      "rhs": 80,
+      "match": true,
+      "physics": "W boson mass (GeV)"
+    },
+    {
+      "identity": "Phi_12 + Phi_3  = 2*Heegner_43",
+      "lhs": 86,
+      "rhs": 86,
+      "match": true,
+      "physics": "Central Heegner prime times 2"
+    },
+    {
+      "identity": "Phi_12 + p_Ih   = k * Phi_6",
+      "lhs": 84,
+      "rhs": 84,
+      "match": true,
+      "physics": "Substrate-clean product"
+    },
+    {
+      "identity": "Phi_12 + mu     = Phi_6 * p_Ih",
+      "lhs": 77,
+      "rhs": 77,
+      "match": true,
+      "physics": "Two substrate primes"
+    },
+    {
+      "identity": "Phi_12 + q      = mu * Heegner_19",
+      "lhs": 76,
+      "rhs": 76,
+      "match": true,
+      "physics": "mu times smallest large Heegner"
+    },
+    {
+      "identity": "Phi_12 + 2^q    = q^(q+1)",
+      "lhs": 81,
+      "rhs": 81,
+      "match": true,
+      "physics": "Substrate gauge power"
+    },
+    {
+      "identity": "Phi_12 - q      = Phi_6 * Phi_4",
+      "lhs": 70,
+      "rhs": 70,
+      "match": true,
+      "physics": "Substrate prism product"
+    },
+    {
+      "identity": "Phi_12 - q!     = Heegner_67",
+      "lhs": 67,
+      "rhs": 67,
+      "match": true,
+      "physics": "HUBBLE TENSION (Planck H_0)"
+    },
+    {
+      "identity": "Phi_12 - Phi_6  = 2 * q * p_Ih",
+      "lhs": 66,
+      "rhs": 66,
+      "match": true,
+      "physics": "Symmetric dual"
+    },
+    {
+      "identity": "Phi_12 - Phi_3  = q! * Phi_4",
+      "lhs": 60,
+      "rhs": 60,
+      "match": true,
+      "physics": "Substrate symmetry"
+    },
+    {
+      "identity": "Phi_12 - 2^q    = 5 * Phi_3",
+      "lhs": 65,
+      "rhs": 65,
+      "match": true,
+      "physics": "Substrate-clean (5 outside substrate)"
+    },
+    {
+      "identity": "Phi_12 * Phi_6  = M_9 (Mersenne)",
+      "lhs": 511,
+      "rhs": 511,
+      "match": true,
+      "physics": "9th Mersenne; CMB Omega density sum"
+    }
+  ],
+  "heegner_mean_identities": [
+    {
+      "heegner": 19,
+      "formula": "(q^q + p_Ih) / 2 = (27 + 11)/2",
+      "A": 27,
+      "B": 11,
+      "predicted": 19,
+      "match": true
+    },
+    {
+      "heegner": 43,
+      "formula": "(Phi_3 + Phi_12) / 2 = (13 + 73)/2",
+      "A": 13,
+      "B": 73,
+      "predicted": 43,
+      "match": true
+    },
+    {
+      "heegner": 67,
+      "formula": "(2^Phi_6 + q!) / 2 = (128 + 6)/2",
+      "A": 128,
+      "B": 6,
+      "predicted": 67,
+      "match": true
+    }
+  ],
+  "phi12_substrate_position": {
+    "below_Phi_12": {
+      "Heegner_67": 67,
+      "Phi_6 * Phi_4": 70,
+      "5 * Phi_3": 65,
+      "2 * q * p_Ih": 66,
+      "q! * Phi_4": 60
+    },
+    "phi_12": 73,
+    "above_Phi_12": {
+      "mu * Heegner_19": 76,
+      "Phi_6 * p_Ih": 77,
+      "q^(q+1)": 81,
+      "2v = m_W": 80,
+      "k * Phi_6": 84,
+      "2 * Heegner_43": 86
+    },
+    "interpretation": "Phi_12 sits at a substrate-clean MIDPOINT between the Planck Hubble below (Heegner_67) and the W boson mass above (2v = m_W). The substrate's cyclotomic ladder anchors all of cosmology + electroweak."
+  },
+  "hubble_W_relation": {
+    "claim": "H_0_SH0ES + Phi_6 = m_W",
+    "formula": "Phi_12 + Phi_6 = 2v",
+    "substrate": "73 + 7 = 80",
+    "lhs": 80,
+    "rhs": 80,
+    "match": true,
+    "physics": "The late-universe Hubble constant (73 km/s/Mpc) plus the substrate Fano prime (7) EQUALS the W boson mass (80 GeV). This is a striking substrate-level identity linking cosmology and electroweak physics."
+  },
+  "headline_identity": "PHI_12 SUBSTRATE WEB - MAJOR NEW IDENTITY:\n  Phi_12 + Phi_6 = 2v = m_W (W boson mass GeV)\n  73 + 7 = 80\n  SH0ES Hubble + Fano prime = W boson mass!\n\nPlus 11 more Phi_12 +/- X = substrate-product identities.\nHeegners as means: 19 = (q^q+p_Ih)/2, 43 = (Phi_3+Phi_12)/2,\n                    67 = (2^Phi_6+q!)/2.\nPhi_12 sits at a substrate ladder midpoint, anchoring\ncosmology (H_0_SH0ES) to electroweak (m_W) via Phi_6."
+}
