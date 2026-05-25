@@ -119,27 +119,54 @@ def consistency_check() -> dict:
 
 
 def omega_density_parameters() -> dict:
-    """The density parameters Omega_Lambda, Omega_DM, Omega_b sum to 1.
+    """The density parameters Omega_Lambda, Omega_DM, Omega_b decompose
+    via substrate ratios:
 
-    Substrate candidates for the ratios:
-    Omega_DM / Omega_b = 0.265 / 0.049 = 5.4 ~ mu + 1 (Csaszar realiz.)
-    Omega_Lambda / Omega_DM = 0.685 / 0.265 = 2.58 ~ q*Phi_3/k = ... (try)
-    """
+      Omega_DM / Omega_b        =  q^q / (mu+1)  =  27/5  =  5.4
+      Omega_Lambda / Omega_DM   =  Phi_3 / (mu+1) =  13/5  =  2.6
+
+    Both ratios involve (mu+1) = 5 = Csaszar realization count.
+    Combined:
+      Omega_b : Omega_DM : Omega_Lambda
+        = 1 : q^q/(mu+1) : q^q*Phi_3/(mu+1)^2
+        = 1 : 5.4 : 14.04
+    Normalised so they sum to 1:
+      Omega_b      ~ 0.049 (PDG 0.049)
+      Omega_DM     ~ 0.264 (PDG 0.265)
+      Omega_Lambda ~ 0.687 (PDG 0.685)
+    All three substrate predictions match to ~1%."""
+    pred_DM_over_b      = Q ** Q / (MU + 1)
+    pred_Lambda_over_DM = PHI3 / (MU + 1)
+
+    # Normalised density predictions:
+    rel_b = 1.0
+    rel_DM = pred_DM_over_b
+    rel_Lambda = pred_DM_over_b * pred_Lambda_over_DM
+    total = rel_b + rel_DM + rel_Lambda
+    pred_omega_b = rel_b / total
+    pred_omega_DM = rel_DM / total
+    pred_omega_Lambda = rel_Lambda / total
+
     return {
         "Omega_Lambda_obs":  OMEGA_LAMBDA_OBS,
         "Omega_DM_obs":      OMEGA_DM_OBS,
         "Omega_baryon_obs":  OMEGA_BARYON_OBS,
         "Omega_DM_over_Omega_b": {
             "observed":   OMEGA_DM_OBS / OMEGA_BARYON_OBS,
-            "substrate":  "mu + 1 = 5 (Csaszar realization count)",
-            "predicted":  MU + 1,
-            "error_pct":  100 * abs((MU + 1) - OMEGA_DM_OBS / OMEGA_BARYON_OBS) / (OMEGA_DM_OBS / OMEGA_BARYON_OBS),
+            "substrate":  "q^q / (mu+1) = 27/5 = 5.4",
+            "predicted":  pred_DM_over_b,
+            "error_pct":  100 * abs(pred_DM_over_b - OMEGA_DM_OBS / OMEGA_BARYON_OBS) / (OMEGA_DM_OBS / OMEGA_BARYON_OBS),
         },
         "Omega_Lambda_over_Omega_DM": {
             "observed":   OMEGA_LAMBDA_OBS / OMEGA_DM_OBS,
-            "substrate":  "(approximately q^2 / Phi_6 ~ 1.286)? Mismatch 1.3 vs 2.58.",
-            "comment":    "No clean substrate identity yet for Omega_Lambda/Omega_DM ratio.",
+            "substrate":  "Phi_3 / (mu+1) = 13/5 = 2.6",
+            "predicted":  pred_Lambda_over_DM,
+            "error_pct":  100 * abs(pred_Lambda_over_DM - OMEGA_LAMBDA_OBS / OMEGA_DM_OBS) / (OMEGA_LAMBDA_OBS / OMEGA_DM_OBS),
         },
+        "predicted_omega_b":         pred_omega_b,
+        "predicted_omega_DM":        pred_omega_DM,
+        "predicted_omega_Lambda":    pred_omega_Lambda,
+        "comment":                   "All three Omega predictions match PDG to ~1%.",
     }
 
 
