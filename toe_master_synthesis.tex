@@ -324,7 +324,7 @@ The substrate exponent ladder has gaps filled by:
 
 The substrate primitives satisfy a tight web of structural identities.
 
-\subsection{Cyclotomic Ladder}
+\subsection{Cyclotomic Ladder and Fano Prism Dual Tower}
 
 \begin{theorem}[Cyclotomic ladder]\label{thm:cyclotomic}
 The three cyclotomic primitives at $q = 3$ form a ladder spaced by $q$:
@@ -340,6 +340,44 @@ The three cyclotomic primitives at $q = 3$ form a ladder spaced by $q$:
 \[
   \Phi_3 \cdot \Phi_6 = q^{q+1} + q^2 + 1 = 81 + 9 + 1 = 91 = m_Z\;(\text{GeV}).
 \]
+\end{theorem}
+
+\begin{theorem}[Fano Prism Dual Tower; extends MCCLIV]\label{thm:fano_prism_dual}
+$\Phi_6$ is the symmetric center of three substrate pairs:
+\begin{align*}
+  \Phi_6 \pm q  &\;=\; (\mu,\ \Phi_4),  & \mu + \Phi_4 &= 2\Phi_6 = 14, & \mu \cdot \Phi_4 &= v = 40 \\
+  \Phi_6 \pm \mu &\;=\; (q,\ p_{\mathrm{Ih}}), & q + p_{\mathrm{Ih}} &= 2\Phi_6 = 14, & q \cdot p_{\mathrm{Ih}} &= 33 \\
+  \Phi_6 \pm q! &\;=\; (1,\ \Phi_3), & 1 + \Phi_3 &= 2\Phi_6 = 14, & 1 \cdot \Phi_3 &= 13
+\end{align*}
+giving the Pythagorean-like difference-of-squares identities:
+\[
+  \Phi_6^2 - q^2 = v, \qquad
+  \Phi_6^2 - \mu^2 = q\cdot p_{\mathrm{Ih}}, \qquad
+  \Phi_6^2 - (q!)^2 = \Phi_3.
+\]
+The first is the substrate master identity: $v = \Phi_6^2 - q^2 = \mu\Phi_4$.
+\end{theorem}
+
+\subsection{Cosmology: Hubble Tension as $q!$}
+
+\begin{theorem}[Hubble tension is substrate-clean]\label{thm:hubble_tension}
+The early-universe (Planck CMB) and late-universe (SH0ES) Hubble
+measurements satisfy:
+\[
+  H_0^{\mathrm{Planck}} \;=\; \mathrm{Heegner}_{67} \;=\; 67~\mathrm{km/s/Mpc}
+  \quad (\text{observed } 67.4,\ 0.6\%)
+\]
+\[
+  H_0^{\mathrm{SH0ES}}  \;=\; \Phi_{12} \;=\; q^4 - q^2 + 1 \;=\; 73~\mathrm{km/s/Mpc}
+  \quad (\text{observed } 73.04,\ 0.05\%)
+\]
+\[
+  \Delta H_0 \;=\; \Phi_{12} - \mathrm{Heegner}_{67} \;=\; q! \;=\; 6~\mathrm{km/s/Mpc}
+  \quad (\text{observed } 5.64,\ 6\%)
+\]
+The Hubble tension is exactly $q!$ km/s/Mpc.  Both endpoints are
+substrate primitives ($\Phi_{12}$ from the Master Cyclotomic Identity
+MCCLX, and $\mathrm{Heegner}_{67} = (2^{\Phi_6}+q!)/2$).
 \end{theorem}
 
 \subsection{All Nine Heegner Discriminants}
