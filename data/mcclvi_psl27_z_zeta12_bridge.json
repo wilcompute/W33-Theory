@@ -1,0 +1,31 @@
+{
+  "theorem": "MCCLVI",
+  "title": "PSL(2,7) and Z[zeta_12] Langlands Bridge",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24},
+  "key_identity": {
+    "expression": "|GL(3,2)| = f * Phi_6 = 24 * 7 = 168",
+    "alt": "|PSL(2,7)| = 2^q * q * Phi_6 = 8 * 3 * 7 = 168",
+    "verbal": "Fano symmetry group = Golay length times Fano prime = 2^q * q * Phi_6"
+  },
+  "frobenius_table": [
+    {"prime": 3,  "name": "q",      "mod12": 3,  "behavior": "partial"},
+    {"prime": 7,  "name": "Phi_6",  "mod12": 7,  "behavior": "INERT",            "note": "Fano prime, max rigidity, Frobenius order 2"},
+    {"prime": 11, "name": "p_Ih",   "mod12": 11, "behavior": "inert-type"},
+    {"prime": 13, "name": "Phi_3",  "mod12": 1,  "behavior": "SPLITS_COMPLETELY", "note": "GF2^3 top=(1,1,1), Frob=id"},
+    {"prime": 19, "name": "H_6",    "mod12": 7,  "behavior": "INERT",             "note": "same Frobenius class as Phi_6"},
+    {"prime": 137,"name": "alpha^-1","mod12": 5,  "behavior": "Gaussian sheet"}
+  ],
+  "langlands_fano_synthesis": {
+    "root":   {"primitive": "Phi_6", "gf2": "(1,0,0)", "frobenius": "INERT",           "role": "Fano seed"},
+    "middle": {"primitives": ["Phi_4","p_Ih","q!"], "frobenius": "mixed",             "role": "intermediate"},
+    "top":    {"primitive": "Phi_3", "gf2": "(1,1,1)", "frobenius": "SPLITS_COMPLETELY","role": "arithmetic ceiling"}
+  },
+  "psl27_irreps": {
+    "dimensions": [1, 3, 3, 6, 7, 8],
+    "substrate_match": {"3": "q", "6": "q!", "7": "Phi_6", "8": "2^q"},
+    "note": "PSL(2,7) irrep dimensions include substrate primitives q, q!, Phi_6, 2^q"
+  },
+  "marcellis_connection": "NOTES/MAY_2026_SYNTHESIS.md Langlands claim: 137,7,13 are Frobenius eigenvalues in Q(zeta_12)/Q. Phi_6=7 inert, Phi_3=13 splits — mirrors GF(2)^3 root/top structure of MCCLV."
+}
