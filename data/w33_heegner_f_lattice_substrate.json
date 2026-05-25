@@ -1,0 +1,182 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Phi_12": 73,
+      "v": 40,
+      "f_gauge": 24,
+      "Heegners_large": [
+        19,
+        43,
+        67,
+        163
+      ]
+    }
+  },
+  "fano_prism_dual_products": {
+    "products": [
+      {
+        "pair": "(mu, Phi_4)",
+        "product": 40,
+        "substrate": "v"
+      },
+      {
+        "pair": "(q, p_Ih)",
+        "product": 33,
+        "substrate": "q*p_Ih"
+      },
+      {
+        "pair": "(1, Phi_3)",
+        "product": 13,
+        "substrate": "Phi_3"
+      }
+    ],
+    "sum_all": 86,
+    "v_plus_qpIh": 73,
+    "v_minus_qpIh": 7
+  },
+  "product_sum_identities": [
+    {
+      "claim": "v + q*p_Ih = Phi_12 = H_0_SH0ES",
+      "lhs": 73,
+      "rhs": 73,
+      "match": true,
+      "physics": "Sum of first two Fano-prism products = late-universe Hubble"
+    },
+    {
+      "claim": "v - q*p_Ih = Phi_6",
+      "lhs": 7,
+      "rhs": 7,
+      "match": true,
+      "physics": "Difference returns the substrate symmetric center"
+    },
+    {
+      "claim": "v + q*p_Ih + Phi_3 = 2 * Heegner_43",
+      "lhs": 86,
+      "rhs": 86,
+      "match": true,
+      "physics": "Full Fano-prism product sum = 2 * central Heegner prime"
+    },
+    {
+      "claim": "Phi_12 = m_W - Phi_6 = 2v - Phi_6",
+      "lhs": 73,
+      "rhs": 73,
+      "match": true,
+      "physics": "Late-universe Hubble = W boson mass minus Fano prime"
+    }
+  ],
+  "prime_index_identity": {
+    "claim": "p_(q * Phi_6) = Phi_12",
+    "index": 21,
+    "p_at_idx": 73,
+    "predicted": 73,
+    "match": true,
+    "comparison": "Companion to alpha^-1 = p_(q*p_Ih) = p_33 = 137"
+  },
+  "heegner_substrate_forms": [
+    {
+      "heegner": 19,
+      "formula": "q + mu^2 = q + 2^mu",
+      "computed": 19,
+      "match": true
+    },
+    {
+      "heegner": 43,
+      "formula": "(q!)^2 + Phi_6",
+      "computed": 43,
+      "match": true
+    },
+    {
+      "heegner": 67,
+      "formula": "(2^Phi_6 + q!) / 2",
+      "computed": 67,
+      "match": true
+    },
+    {
+      "heegner": 163,
+      "formula": "mu * v + q",
+      "computed": 163,
+      "match": true
+    }
+  ],
+  "heegner_f_lattice": {
+    "claim": "All FOUR large prime Heegner discriminants lie on the f-gauge lattice anchored at 19, with multipliers n in {0, 1, 2, q!}.",
+    "f": 24,
+    "anchor": 19,
+    "multipliers": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "rows": [
+      {
+        "n": 0,
+        "heegner": 19,
+        "lattice": "19 + 0*f = 19 + 0",
+        "predicted": 19,
+        "match": true
+      },
+      {
+        "n": 1,
+        "heegner": 43,
+        "lattice": "19 + 1*f = 19 + 24",
+        "predicted": 43,
+        "match": true
+      },
+      {
+        "n": 2,
+        "heegner": 67,
+        "lattice": "19 + 2*f = 19 + 48",
+        "predicted": 67,
+        "match": true
+      },
+      {
+        "n": 6,
+        "heegner": 163,
+        "lattice": "19 + 6*f = 19 + 144",
+        "predicted": 163,
+        "match": true
+      }
+    ],
+    "skipped": "n=3,4,5 give 91=m_Z, 115=5*Ogg(23), 139 (prime, not Heegner)"
+  },
+  "gauge_to_mass_identity": {
+    "claim": "Heegner_67 + f = m_Z(GeV)",
+    "computed": 91,
+    "m_Z": 91,
+    "match": true,
+    "substrate": "(Planck early-universe Hubble) + alpha_GUT^-1 = Z boson mass"
+  },
+  "heegner_skip_pattern": [
+    {
+      "n": 3,
+      "value": 91,
+      "is_prime": false,
+      "is_heegner": false,
+      "substrate": "91 = m_Z (Z boson mass GeV)"
+    },
+    {
+      "n": 4,
+      "value": 115,
+      "is_prime": false,
+      "is_heegner": false,
+      "substrate": "115 = 5 * 23 (Ogg supersingular)"
+    },
+    {
+      "n": 5,
+      "value": 139,
+      "is_prime": true,
+      "is_heegner": false,
+      "substrate": "139 = prime, not Heegner"
+    }
+  ],
+  "headline_identity": "HEEGNER F-LATTICE THEOREM:\n  All four LARGE prime Heegners on the f=24 gauge lattice:\n    Heegner_n = 19 + j*f  for j in {0, 1, 2, q!}\n    j=0: 19,   j=1: 43,   j=2: 67,   j=q!=6: 163\n\nPRODUCT-SUM IDENTITY:\n  v + q*p_Ih      = Phi_12 = 73 = H_0_SH0ES  (NEW)\n  v + q*p_Ih + Phi_3 = 2*Heegner_43 = 86       (NEW)\n  Phi_12 = m_W - Phi_6 = 80 - 7                  (NEW)\n\nPRIME-INDEX:\n  p_(q*Phi_6) = p_21 = 73 = Phi_12 (companion to p_33 = 137)\n\nGAUGE/MASS:\n  Heegner_67 + f = 91 = m_Z (Z boson mass GeV)\n  Substrate links: Heegners <-> alpha_GUT^-1 <-> m_Z <-> Phi_12 <-> H_0"
+}
