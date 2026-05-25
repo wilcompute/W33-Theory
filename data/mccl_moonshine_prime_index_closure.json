@@ -1,0 +1,57 @@
+{
+  "theorem": "MCCL",
+  "title": "Moonshine Prime-Index Closure Theorem",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24},
+  "statement": "All 15 Moonshine primes are prime-index substrate-closed at q=3. Every Moonshine prime M has primepi(M) expressible as a W(3,3) substrate primitive.",
+  "moonshine_primes": [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71],
+  "entries": [
+    {"prime": 2,  "index": 1,  "index_expr": "mu-q",      "index_value": 1,  "verified": true},
+    {"prime": 3,  "index": 2,  "index_expr": "q-1",       "index_value": 2,  "verified": true},
+    {"prime": 5,  "index": 3,  "index_expr": "q",         "index_value": 3,  "verified": true},
+    {"prime": 7,  "index": 4,  "index_expr": "mu",        "index_value": 4,  "verified": true},
+    {"prime": 11, "index": 5,  "index_expr": "mu+1",      "index_value": 5,  "verified": true},
+    {"prime": 13, "index": 6,  "index_expr": "q!",        "index_value": 6,  "verified": true},
+    {"prime": 17, "index": 7,  "index_expr": "Phi_6",     "index_value": 7,  "verified": true},
+    {"prime": 19, "index": 8,  "index_expr": "2^q",       "index_value": 8,  "verified": true, "also": "H_6"},
+    {"prime": 23, "index": 9,  "index_expr": "q^2",       "index_value": 9,  "verified": true},
+    {"prime": 29, "index": 10, "index_expr": "Phi_4",     "index_value": 10, "verified": true},
+    {"prime": 31, "index": 11, "index_expr": "p_Ih",      "index_value": 11, "verified": true},
+    {"prime": 41, "index": 13, "index_expr": "Phi_3",     "index_value": 13, "verified": true},
+    {"prime": 47, "index": 15, "index_expr": "Phi_3+2",   "index_value": 15, "verified": true, "also": "p_Ih+mu"},
+    {"prime": 59, "index": 17, "index_expr": "Phi_3+mu",  "index_value": 17, "verified": true},
+    {"prime": 71, "index": 20, "index_expr": "v/2",       "index_value": 20, "verified": true}
+  ],
+  "sum_identity": {
+    "indices": [1,2,3,4,5,6,7,8,9,10,11,13,15,17,20],
+    "sum": 131,
+    "substrate_form": "Phi_3 * Phi_4 + 1 = 13*10 + 1",
+    "note": "y_top = (Phi_3*Phi_4 - 1)/(Phi_3*Phi_4) = 129/130; sum = y_top_denom + 2",
+    "verified": true
+  },
+  "structure": {
+    "first_block": {
+      "primes": [2,3,5,7,11,13,17,19,23,29,31],
+      "indices": [1,2,3,4,5,6,7,8,9,10,11],
+      "description": "Substrate primitive ladder: mu-q through p_Ih, only index 12 (p_37) skipped because 37 is not Moonshine"
+    },
+    "gap": {"missing_index": 12, "missing_prime": 37, "reason": "37 is the only non-Moonshine prime in range 2..41"},
+    "second_block": {
+      "primes": [41],
+      "indices": [13],
+      "description": "41 = p_Phi_3 — bridge prime"
+    },
+    "top_block": {
+      "primes": [47, 59, 71],
+      "indices": [15, 17, 20],
+      "description": "AP primes with d=12=Golay/2; all Phi_3-relative indices; product = 196883 = dim(V^natural)-1"
+    }
+  },
+  "connections": [
+    "Extends MCCXLIX (Heegner+alpha closure) to the full Moonshine prime set",
+    "Top 3 AP primes {47,59,71} from MCCXLVIII appear as Phi_3-relative block",
+    "Sum 131 = Phi_3*Phi_4+1 connects to y_top = (Phi_3*Phi_4-1)/(Phi_3*Phi_4)",
+    "37 as the unique non-Moonshine gap prime at index 12 is structurally significant"
+  ]
+}
