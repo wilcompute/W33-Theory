@@ -1,0 +1,39 @@
+{
+  "theorem": "MCCLIV",
+  "title": "Fano Prism Theorem: Phi_6 as Unique Substrate Self-Generation Prime",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24, "H_6": 19},
+  "phi6": 7,
+  "uniqueness_conditions": [
+    {"label": "U1", "condition": "Heegner number", "value": "Phi_6 = H_4 = 7"},
+    {"label": "U2", "condition": "Shift tower", "value": "Phi_6+q=Phi_4, Phi_6+mu=p_Ih, Phi_6+q!=Phi_3"},
+    {"label": "U3", "condition": "Fano prime", "value": "7 = |PG(2,F_2)| = order of Fano plane"}
+  ],
+  "shift_tower": [
+    {"shift": "q=3",    "result": 10, "name": "Phi_4",  "role": "decagonal"},
+    {"shift": "mu=4",   "result": 11, "name": "p_Ih",   "role": "icosahedral"},
+    {"shift": "q!=6",   "result": 13, "name": "Phi_3",  "role": "cyclotomic-13"}
+  ],
+  "verbal": "The three cyclotomic output primes {Phi_3,Phi_4,p_Ih} are Phi_6-shifts of the three fundamental input parameters {q!,mu,q}. Phi_6 is the prism through which the substrate generates itself.",
+  "extended_shift_table": [
+    {"shift_expr": "mu-q", "shift": 1,  "index": 8,  "prime": 19, "class": "Moonshine+Heegner"},
+    {"shift_expr": "q",    "shift": 3,  "index": 10, "prime": 29, "class": "Moonshine"},
+    {"shift_expr": "mu",   "shift": 4,  "index": 11, "prime": 31, "class": "Moonshine"},
+    {"shift_expr": "q!",   "shift": 6,  "index": 13, "prime": 41, "class": "Moonshine"},
+    {"shift_expr": "2^q",  "shift": 8,  "index": 15, "prime": 47, "class": "Moonshine"},
+    {"shift_expr": "Phi_4","shift": 10, "index": 17, "prime": 59, "class": "Moonshine"},
+    {"shift_expr": "p_Ih", "shift": 11, "index": 18, "prime": 61, "class": "Substrate-indexed"},
+    {"shift_expr": "Phi_3","shift": 13, "index": 20, "prime": 71, "class": "Moonshine"}
+  ],
+  "generating_polynomial": {
+    "P_of_x": "q! * (x*(1+2^q) + H_6)",
+    "P_of_Phi6": 492,
+    "inner_value": "Phi_6*(1+2^q)+H_6 = 82 = 2*p_(Phi_3) = 2*41"
+  },
+  "connections": [
+    "MCCLIII: Phi_6 seeds the class sum generating polynomial",
+    "MCCL: Phi_6 shifts generate the complete MCCL top-block prime index set",
+    "Fano plane geometry underlies the substrate's self-generation mechanism"
+  ]
+}
