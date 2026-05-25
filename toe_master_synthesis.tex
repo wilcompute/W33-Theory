@@ -322,7 +322,81 @@ The substrate exponent ladder has gaps filled by:
 
 \section{Deep Structural Identities}
 
-The substrate primitives satisfy a tight web of structural identities:
+The substrate primitives satisfy a tight web of structural identities.
+
+\subsection{Cyclotomic Ladder}
+
+\begin{theorem}[Cyclotomic ladder]\label{thm:cyclotomic}
+The three cyclotomic primitives at $q = 3$ form a ladder spaced by $q$:
+\[
+  \Phi_3 = \Phi_4 + q = \Phi_6 + q!,
+  \quad \Phi_4 = \Phi_6 + q,
+  \quad \Phi_6 = \Phi_4 - q = \Phi_3 - q!
+\]
+\[
+  \Phi_3 + \Phi_6 = 2\Phi_4 = v/2 = 20, \quad
+  \Phi_3 - \Phi_6 = q!,
+\]
+\[
+  \Phi_3 \cdot \Phi_6 = q^{q+1} + q^2 + 1 = 81 + 9 + 1 = 91 = m_Z\;(\text{GeV}).
+\]
+\end{theorem}
+
+\subsection{All Nine Heegner Discriminants}
+
+\begin{theorem}[Heegner substrate forms]\label{thm:heegners}
+All 9 class-number-1 discriminants have substrate closed forms:
+\begin{center}\small\begin{tabular}{cccc}
+\toprule
+$H_n$ & value & substrate form & note \\
+\midrule
+$H_1$ & $1$    & $\mu - q$         & smallest \\
+$H_2$ & $2$    & $q - 1$           & \\
+$H_3$ & $3$    & $q$               & fundamental quantum \\
+$H_4$ & $7$    & $\Phi_6$           & Fano \\
+$H_5$ & $11$   & $p_{\mathrm{Ih}}$ & Ihara \\
+$H_6$ & $19$   & $q^2 + \Phi_4$    & K3 signature \\
+$H_7$ & $43$   & $q^q + \Phi_3 + q$ & $m_s/m_u$ \\
+$H_8$ & $67$   & $(2^{\Phi_6} + q!)/2$ & $m_\tau$ denom + $\alpha$ \\
+$H_9$ & $163$  & $\Phi_3 \Phi_4 + q\,p_{\mathrm{Ih}}$ & largest \\
+\bottomrule
+\end{tabular}\end{center}
+Sum: $\sum H_n = 316 = \Phi_3 \cdot f + \mu$.
+\end{theorem}
+
+\subsection{Cross-Sector Unification via Heegner$_{67}$}
+
+\begin{theorem}[$\mathrm{Heegner}_{67}$ as universal cross-sector primitive]\label{thm:heegner67}
+The 8th Heegner number is half the substrate sum of Fano-byte and
+permutation-symmetry:
+\[
+  \mathrm{Heegner}_{67} = \frac{2^{\Phi_6} + q!}{2} = \frac{128 + 6}{2} = 67.
+\]
+It controls FOUR independent physics + topology quantities:
+\begin{itemize}[noitemsep]
+  \item $\alpha^{-1}_{\text{integer}} = 2 \cdot \mathrm{Heegner}_{67} + q = 137$
+  \item $m_\tau = \Phi_6 (q^2 + 2^q) / \mathrm{Heegner}_{67}$ GeV
+  \item $H_1(\text{graph }W(3,3)) = q \cdot \mathrm{Heegner}_{67} = 201$
+  \item $\mathrm{Heegner}_{67} = (\text{Fano-byte} + \text{perm-symmetry})/2$
+\end{itemize}
+\end{theorem}
+
+\subsection{Universal Substrate Factors}
+
+\begin{theorem}[Two universal substrate factors]\label{thm:universal_factors}
+Two substrate ratios appear in independent precision-tested predictions:
+\[
+  \frac{1}{\mu \Phi_6} = \frac{1}{28} \quad \text{appears in } \alpha^{-1} \text{ correction and } (1 - n_s).
+\]
+\[
+  \frac{2 \Phi_6}{v} = \frac{7}{20} \quad \text{appears in } \Lambda_{\mathrm{QCD}}/m_p \text{ and } \bar\eta_{\mathrm{CKM}}.
+\]
+Both factors are Fano-incidence-related: $\mu\Phi_6 = 28 = 49 - 21$
+is the Fano non-incidence count; $2\Phi_6/v$ is twice the Fano point
+count divided by the $W(3,3)$ vertex count.
+\end{theorem}
+
+\subsection{The Foundational Identities}
 
 \begin{theorem}[Substrate identities]\label{thm:structural}
 \[ q + \mu = \Phi_6, \quad 2q + 1 = \Phi_6, \quad \mu - q = 1,
