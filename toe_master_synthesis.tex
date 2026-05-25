@@ -125,9 +125,20 @@ primitives with PDG agreement at the precision listed.
 
 \subsection{Gauge Couplings}
 
-\begin{theorem}[Fine-structure constant]\label{thm:alpha}
-$\alpha^{-1} = 2^{\Phi_6} + q^2 + 1/(\mu\Phi_6) = 137.0357$
-(PDG $137.0360$, 4 ppm).
+\begin{theorem}[Fine-structure constant with running]\label{thm:alpha}
+At low energy and at $m_Z$:
+\begin{align*}
+  \alpha^{-1}(\text{low}) &\;=\; 2^{\Phi_6} + q^2 + 1/(\mu\Phi_6)
+    \;=\; 128 + 9 + 1/28 \;=\; 137.036
+    & \text{(PDG 137.036, 4 ppm)} \\
+  \alpha^{-1}(m_Z)        &\;=\; 2^{\Phi_6}
+    \;=\; 128
+    & \text{(PDG 127.94, 0.05\%)}
+\end{align*}
+\textbf{Substrate-level RG running:}
+$\Delta\alpha^{-1} = \alpha^{-1}(0) - \alpha^{-1}(m_Z) = q^2 + 1/(\mu\Phi_6)
+\approx q^2 = 9$, the substrate fundamental quantum squared.  The
+running from Thomson to electroweak scale is a single substrate factor.
 \end{theorem}
 
 \begin{theorem}[Strong coupling at $m_Z$]\label{thm:alpha_s}
