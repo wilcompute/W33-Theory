@@ -1,0 +1,39 @@
+{
+  "theorem": "MCCLIII",
+  "title": "Class Sum Theorem",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24, "H_6": 19},
+  "class_sums": [
+    {"class": "C1", "name": "Moonshine_Heegner",   "members": [2,3,7,11,19],                  "sum": 42,  "expr": "q! * Phi_6",       "factors": "6*7"},
+    {"class": "C2", "name": "Moonshine_only",      "members": [5,13,17,23,29,31,41,47,59,71], "sum": 336, "expr": "2^q * q! * Phi_6", "factors": "8*6*7"},
+    {"class": "C3", "name": "Heegner_exclusive",   "members": [43,67],                        "sum": 110, "expr": "Phi_4 * p_Ih = (Phi_6+q)*(Phi_6+mu)", "factors": "10*11"},
+    {"class": "C4", "name": "Shadow",              "members": [37],                           "sum": 37,  "expr": "v - q",            "factors": "40-3"},
+    {"class": "C5", "name": "Substrate_indexed",   "members": [53,61],                        "sum": 114, "expr": "q! * H_6",         "factors": "6*19"}
+  ],
+  "grand_sum": {
+    "value": 639,
+    "expr": "q^2 * p_(v/2) = q^2 * 71",
+    "verbal": "generator-squared times largest Moonshine prime"
+  },
+  "generating_structure": {
+    "multiplication_family": {
+      "seed": "Phi_6",
+      "C1": "q! * Phi_6",
+      "C2": "2^q * C1  (byte-index doubling)",
+      "C5": "C1 * H_6/Phi_6  (Heegner-6 lifting)"
+    },
+    "shift_family": {
+      "C3": "(Phi_6+q) * (Phi_6+mu) = Phi_4 * p_Ih"
+    },
+    "boundary": {
+      "C4": "v - q"
+    }
+  },
+  "key_ratios": {
+    "C2_over_C1": "2^q = 8",
+    "C5_over_C1": "H_6/Phi_6 = 19/7",
+    "C3_shift_q": "Phi_6 + q = Phi_4",
+    "C3_shift_mu": "Phi_6 + mu = p_Ih"
+  }
+}
