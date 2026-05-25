@@ -1,0 +1,64 @@
+{
+  "theorem": "MCCLII",
+  "title": "Complete Prime Partition in [2,71]",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24},
+  "range": [2, 71],
+  "total_primes": 20,
+  "total_substrate_form": "v/2 = 40/2 = 20",
+  "classes": {
+    "moonshine_heegner": {
+      "members": [2, 3, 7, 11, 19],
+      "count": 5,
+      "count_expr": "mu+1",
+      "definition": "p divides |Monster| AND p is a Heegner discriminant"
+    },
+    "moonshine_only": {
+      "members": [5, 13, 17, 23, 29, 31, 41, 47, 59, 71],
+      "count": 10,
+      "count_expr": "Phi_4",
+      "definition": "p divides |Monster|, p is not a Heegner number"
+    },
+    "heegner_exclusive": {
+      "members": [43, 67],
+      "count": 2,
+      "count_expr": "q-1",
+      "definition": "p is a Heegner number, p does not divide |Monster|",
+      "prime_indices": {"43": "2*Phi_6", "67": "H_6"},
+      "note": "Both have MCCXLIX prime-index substrate expressions"
+    },
+    "shadow": {
+      "members": [37],
+      "count": 1,
+      "count_expr": "mu-q",
+      "definition": "p = v-q; substrate-expressible but neither Moonshine nor Heegner",
+      "prime_index": 12,
+      "prime_index_expr": "f/2",
+      "substrate_forms": ["v-q", "q^q+Phi_4", "f+Phi_3", "mu*Phi_6+q^2", "q*p_Ih+mu", "2^Phi_6-Phi_3*Phi_6"]
+    },
+    "substrate_indexed": {
+      "members": [53, 61],
+      "count": 2,
+      "count_expr": "q-1",
+      "definition": "prime-indexed at substrate position; p above v; not Moonshine or Heegner",
+      "entries": [
+        {"prime": 53, "expr": "v+Phi_3", "index": 16, "index_expr": "2^mu"},
+        {"prime": 61, "expr": "v+p_Ih+Phi_4", "index": 18, "index_expr": "2*q^2"}
+      ]
+    }
+  },
+  "class_size_identity": {
+    "sizes": [5, 10, 2, 1, 2],
+    "exprs": ["mu+1", "Phi_4", "q-1", "mu-q", "q-1"],
+    "sum": 20,
+    "sum_expr": "v/2"
+  },
+  "zero_unclassified": true,
+  "connections": [
+    "MCCXLIX: Heegner prime-index closure (H_7=p_14, H_8=p_19)",
+    "MCCL: Moonshine prime-index closure (all 15 Moonshine primes)",
+    "MCCLI: Shadow prime 37=v-q at Golay-half index",
+    "The 20 primes in [2,71] = v/2 is itself a substrate identity"
+  ]
+}
