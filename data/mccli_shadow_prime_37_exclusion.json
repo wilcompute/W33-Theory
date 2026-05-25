@@ -1,0 +1,47 @@
+{
+  "theorem": "MCCLI",
+  "title": "Shadow Prime Theorem: 37 = v-q and Heegner/Moonshine Complementarity",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11, "f": 24},
+  "shadow_prime": 37,
+  "substrate_expressions": [
+    {"expr": "v - q",              "value": 37, "label": "volume minus generator",  "elegant": true},
+    {"expr": "q^q + Phi_4",        "value": 37, "label": "cubed generator + decagonal"},
+    {"expr": "f + Phi_3",          "value": 37, "label": "Golay + cyclotomic-13"},
+    {"expr": "mu*Phi_6 + q^2",     "value": 37, "label": "perfect-Fano + square"},
+    {"expr": "q*p_Ih + mu",        "value": 37, "label": "alpha-index + chiral"},
+    {"expr": "2^Phi_6 - Phi_3*Phi_6", "value": 37, "label": "byte minus Z-mass"}
+  ],
+  "prime_index": 12,
+  "prime_index_expr": "f/2 = Golay/2",
+  "gap_window": {
+    "below": {"prime": 31, "index": 11, "expr": "p_Ih", "moonshine": true},
+    "gap":   {"prime": 37, "index": 12, "expr": "f/2",  "moonshine": false},
+    "above": {"prime": 41, "index": 13, "expr": "Phi_3","moonshine": true}
+  },
+  "smallest_non_moonshine_prime": true,
+  "heegner_moonshine_complementarity": {
+    "range": [41, 71],
+    "moonshine_in_range": [41, 47, 59, 71],
+    "non_moonshine_in_range": [
+      {"prime": 43, "index": 14, "index_expr": "2*Phi_6", "heegner": "H_7"},
+      {"prime": 53, "index": 16, "index_expr": "2^mu",    "heegner": null},
+      {"prime": 61, "index": 18, "index_expr": "2*q^2",   "heegner": null},
+      {"prime": 67, "index": 19, "index_expr": "H_6",     "heegner": "H_8"}
+    ],
+    "description": "In [41,71], H_7=43 and H_8=67 are the non-Moonshine primes with MCCXLIX substrate-prime-indices. Moonshine and Heegner are disjoint in this range but both substrate-closed."
+  },
+  "partition_of_substrate_primes_in_2_71": {
+    "moonshine": [2,3,5,7,11,13,17,19,23,29,31,41,47,59,71],
+    "heegner_exclusive": [43, 67],
+    "heegner_moonshine_overlap": [19],
+    "shadow": [37]
+  },
+  "corollaries": [
+    "37 = v-q is the substrate's self-exclusion boundary",
+    "The Monster's prime alphabet avoids index 12 = Golay/2",
+    "H_7=43 and H_8=67 fill the Moonshine gaps in [41,71] as Heegner numbers",
+    "MCCLII: Full Heegner/Moonshine partition theorem in [2, 71]"
+  ]
+}
