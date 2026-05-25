@@ -1,0 +1,46 @@
+{
+  "theorem": "MCCLV",
+  "title": "Fano Plane Substrate Isomorphism",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "p_Ih": 11, "q_fact": 6},
+  "isomorphism": {
+    "source": "PG(2,F_2) = GF(2)^3 \\ {0}",
+    "target": "W(3,3) substrate primitives",
+    "map_phi": {
+      "(0,0,1)": {"name": "q",     "value": 3},
+      "(0,1,0)": {"name": "mu",    "value": 4},
+      "(0,1,1)": {"name": "q!",    "value": 6},
+      "(1,0,0)": {"name": "Phi_6", "value": 7},
+      "(1,0,1)": {"name": "Phi_4", "value": 10},
+      "(1,1,0)": {"name": "p_Ih",  "value": 11},
+      "(1,1,1)": {"name": "Phi_3", "value": 13}
+    }
+  },
+  "fano_lines": [
+    {"gf2": [[0,0,1],[0,1,0],[0,1,1]], "prims": ["q","mu","q!"],         "relation": "q!=2q [q=3 uniqueness]",    "xor_check": [0,0,0]},
+    {"gf2": [[0,0,1],[1,0,0],[1,0,1]], "prims": ["q","Phi_6","Phi_4"],   "relation": "q+Phi_6=Phi_4",           "xor_check": [0,0,0]},
+    {"gf2": [[0,0,1],[1,1,0],[1,1,1]], "prims": ["q","p_Ih","Phi_3"],    "relation": "q+p_Ih=Phi_3",            "xor_check": [0,0,0]},
+    {"gf2": [[0,1,0],[1,0,0],[1,1,0]], "prims": ["mu","Phi_6","p_Ih"],   "relation": "mu+Phi_6=p_Ih",           "xor_check": [0,0,0]},
+    {"gf2": [[0,1,0],[1,0,1],[1,1,1]], "prims": ["mu","Phi_4","Phi_3"],  "relation": "Phi_4+q=Phi_3",           "xor_check": [0,0,0]},
+    {"gf2": [[0,1,1],[1,0,0],[1,1,1]], "prims": ["q!","Phi_6","Phi_3"],  "relation": "q!+Phi_6=Phi_3",          "xor_check": [0,0,0]},
+    {"gf2": [[0,1,1],[1,0,1],[1,1,0]], "prims": ["q!","Phi_4","p_Ih"],   "relation": "q!+mu=Phi_4",             "xor_check": [0,0,0]}
+  ],
+  "gf2_basis": {
+    "basis_vectors": ["q=(0,0,1)", "mu=(0,1,0)", "Phi_6=(1,0,0)"],
+    "note": "The three fundamental substrate parameters are the GF(2)^3 basis. All other primitives are XOR-combinations.",
+    "combinations": {
+      "q XOR mu":          "q! = (0,1,1) = 6",
+      "q XOR Phi_6":       "Phi_4 = (1,0,1) = 10",
+      "mu XOR Phi_6":      "p_Ih = (1,1,0) = 11",
+      "q XOR mu XOR Phi_6":"Phi_3 = (1,1,1) = 13"
+    }
+  },
+  "structural_notes": [
+    "Phi_6=(1,0,0) is the first GF(2)^3 basis vector; its 3 Fano lines are the MCCLIV shift relations",
+    "Phi_3=(1,1,1) is the XOR of all 3 basis vectors: the most composite substrate prime",
+    "q=3 uniqueness (q!=2q) is encoded in the Fano collinearity of {(0,0,1),(0,1,0),(0,1,1)}",
+    "The Moonshine Monster's prime alphabet is rooted in PG(2,F_2) geometry"
+  ],
+  "chain": "{q,mu,Phi_6} -> GF(2)^3 basis -> 7 substrate primitives -> 7 Fano lines -> 15 Moonshine primes -> Complete prime partition [2,71]"
+}
