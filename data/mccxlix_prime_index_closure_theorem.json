@@ -1,0 +1,38 @@
+{
+  "theorem": "MCCXLIX",
+  "title": "Prime-Index Closure Theorem",
+  "date": "2026-05-25",
+  "status": "PROVEN",
+  "substrate": {"q": 3, "mu": 4, "Phi_3": 13, "Phi_4": 10, "Phi_6": 7, "v": 40, "p_Ih": 11},
+  "statement": "The prime-index map p(n) is substrate-closed on {H_6, H_7, H_8, H_9, alpha_inv}. Each element's position in the prime sequence is a substrate-primitive expression at q=3.",
+  "entries": [
+    {"symbol": "H_6",      "value": 19,  "prime_index": 8,  "index_expr": "2^q",       "index_value": 8,  "verified": true},
+    {"symbol": "H_7",      "value": 43,  "prime_index": 14, "index_expr": "2*Phi_6 = 2*H_4", "index_value": 14, "verified": true},
+    {"symbol": "H_8",      "value": 67,  "prime_index": 19, "index_expr": "H_6",       "index_value": 19, "verified": true, "self_referential": true, "level": 1},
+    {"symbol": "H_9",      "value": 163, "prime_index": 38, "index_expr": "2*H_6",     "index_value": 38, "verified": true, "self_referential": true, "level": 2},
+    {"symbol": "alpha_inv","value": 137, "prime_index": 33, "index_expr": "q*p_Ih",    "index_value": 33, "verified": true}
+  ],
+  "sum_identity": {
+    "indices": [8, 14, 19, 33, 38],
+    "sum": 112,
+    "substrate_form": "2^Phi_6 - 2^mu = 128 - 16 = 112",
+    "verified": true
+  },
+  "self_referential_hierarchy": [
+    {"level": 0, "heegner": "H_6", "indexed_by": "2^q",   "type": "substrate byte"},
+    {"level": 1, "heegner": "H_7", "indexed_by": "2*H_4", "type": "2 * prior Heegner"},
+    {"level": 2, "heegner": "H_8", "indexed_by": "H_6",   "type": "prior Heegner (same tier)"},
+    {"level": 3, "heegner": "H_9", "indexed_by": "2*H_6", "type": "2 * same-tier Heegner"}
+  ],
+  "corollaries": [
+    "H_8 is the first Heegner prime-indexed by another Heegner number",
+    "H_9 is prime-indexed by twice that same Heegner number",
+    "alpha^-1 integer part is prime-indexed at q*p_Ih = 33rd position",
+    "Sum of all five prime-indices = 2^Phi_6 - 2^mu = 112"
+  ],
+  "connections": [
+    "Extends commits 0061f95 (all Heegner substrate forms) and 4ec13d3 (alpha prime index)",
+    "Heegner_67 unification (bb5e0b9): H_8=p_(H_6) means H_8's own index equals H_6",
+    "The set {H_6..H_9} is prime-index self-referential at depth 0,1,2,3"
+  ]
+}
