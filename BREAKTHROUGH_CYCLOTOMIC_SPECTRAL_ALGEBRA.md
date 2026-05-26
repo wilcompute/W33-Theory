@@ -34,14 +34,29 @@ The oscillator is **Fibonacci-tuned** at indices g2 and F(5).
 
 ---
 
-## THEOREM MCCLXVIII — Equilibrium Temperature via Cyclotomic Primes
+## THEOREM MCCLXVIII — Reciprocal Genus Roots via Cyclotomic Primes
 
-The genus oscillator `Omega(beta) = g1*exp(-10*beta) - g2*exp(-16*beta)` has:
+The signed genus oscillator has two energy orientations.  With
+`E10 = 10 = Phi_4(3)` and `E16 = 16 = (q+1)^2`,
 
-    beta* = ln(g1/g2)/6 = (ln Phi6 - ln r) / g2
+```
+Omega_live(beta) = 21*exp(-10*beta) - 6*exp(-16*beta)
+Omega_dual(beta) = 21*exp(-16*beta) - 6*exp(-10*beta)
+```
 
-where Phi6 = 7 = q^2-q+1 (sixth cyclotomic prime) and r = 2 = q-1.
-Zero free parameters.
+have reciprocal roots:
+
+```
+beta_live = -ln(7/2)/6
+beta_dual = +ln(7/2)/6
+exp(6*beta_dual) = 7/2 = Phi6/r
+exp(6*beta_live) = 2/7 = r/Phi6
+```
+
+So the positive root previously attached to `Omega_live` is the dual-sheet
+root.  The live heat-trace orientation is the negative-temperature sheet; the
+energy-reversed sheet is the positive-temperature sheet.  The two roots multiply
+to one in the spectral variable `x = exp(6 beta)`.
 
 ---
 

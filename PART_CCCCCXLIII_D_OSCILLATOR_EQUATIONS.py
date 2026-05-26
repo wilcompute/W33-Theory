@@ -13,6 +13,7 @@ v, k, lam, mu = 40, 12, 2, 4
 r, s = 2, -4          # adjacency eigenvalues
 f, g = 24, 15         # eigenvalue multiplicities
 kbar = 27             # complement valency
+Phi6 = q**2 - q + 1
 
 # ── Genus values ───────────────────────────────────────────────────────
 g1 = (q**3 + g) // 2   # 21 — genus of {3,12} map
@@ -24,19 +25,23 @@ print(f"  g1 = (q^3 + g)/2 = ({q**3} + {g})/2 = {g1}")
 print(f"  g2 = (q^3 - g)/2 = ({q**3} - {g})/2 = {g2}")
 print(f"  g1 + g2 = {g1+g2}  (expected q^3 = {q**3})")  # L44
 print(f"  g1 - g2 = {g1-g2}  (expected g  = {g})")      # L44
-print(f"  g1 * g2 = {g1*g2}  (expected C(q^2,2) = {math.comb(q**2,2)})")  # L45
+print(f"  g1 * g2 = {g1*g2}  (expected 2*q^2*Phi6 = {2*q**2*Phi6})")  # L45
 
 # ── Lock L43: oscillator fixed point ──────────────────────────────────
 beta_star = math.log(g1/g2) / 6
+beta_live = -beta_star
 print()
 print("GENUS OSCILLATOR")
 print(f"  Omega(b) = {g1}*exp(-10b) - {g2}*exp(-16b)")
-print(f"  Fixed point beta* = ln({g1}/{g2})/6 = ln(7/2)/6 = {beta_star:.6f}")
+print(f"  Live fixed point beta_live = -ln({g1}/{g2})/6 = {beta_live:.6f}")
+print(f"  Dual fixed point beta_dual = +ln({g1}/{g2})/6 = {beta_star:.6f}")
 print(f"  Ratio g1/g2 = {g1/g2} = {g1}/{g2} = V(Csaszar)/r = 7/2")  # L43
 
-# Verify Omega(beta*) = 0
-omega_star = g1 * math.exp(-10*beta_star) - g2 * math.exp(-16*beta_star)
-print(f"  Omega(beta*) = {omega_star:.2e}  (expected 0)")
+# Verify the reciprocal live/dual roots
+omega_star = g1 * math.exp(-10*beta_live) - g2 * math.exp(-16*beta_live)
+omega_dual = g1 * math.exp(-16*beta_star) - g2 * math.exp(-10*beta_star)
+print(f"  Omega_live(beta_live) = {omega_star:.2e}  (expected 0)")
+print(f"  Omega_dual(beta_dual) = {omega_dual:.2e}  (expected 0)")
 
 # High/low temp limits of full oscillator
 print(f"  Z(0) = 1 + {f} + {g} = {1+f+g}  (= v = {v})")  # all modes active
@@ -134,10 +139,11 @@ print()
 print("=" * 60)
 print("LOCK VERIFICATION SUMMARY")
 locks = [
-    ("L43", "beta* = ln(7/2)/6",        abs(beta_star - math.log(7/2)/6) < 1e-12),
+    ("L43", "beta_dual = ln(7/2)/6",    abs(beta_star - math.log(7/2)/6) < 1e-12),
+    ("L43", "beta_live = -ln(7/2)/6",   abs(beta_live + math.log(7/2)/6) < 1e-12),
     ("L44", "g1+g2 = q^3",              g1 + g2 == q**3),
     ("L44", "g1-g2 = g",               g1 - g2 == g),
-    ("L45", "g1*g2 = C(q^2,2)",        g1 * g2 == math.comb(q**2, 2)),
+    ("L45", "g1*g2 = 2*q^2*Phi6",      g1 * g2 == 2*q**2*Phi6),
     ("L46", "max period = g2 = 6",     max(periods) == g2),
     ("L47", "{3,6,9} = {q,2q,3q}",     {3,6,9} == {q, 2*q, 3*q}),
     ("L48", "7 in JR valid set",        7 in jr_valid),

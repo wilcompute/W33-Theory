@@ -4,7 +4,7 @@
 Verifies all 10 new theorems:
   MCCLXVI  - q-Pascal IS W(3,3)'s generating function
   MCCLXVII - Gap ratio = F(6)/F(5)
-  MCCLXVIII- beta* via cyclotomic primes
+  MCCLXVIII- reciprocal genus roots via cyclotomic primes
   MCCLXIX  - Hyperbolic Pascal growth rate = p_Ih
   MCCLXX   - Phi_5(3) = p_Ih^2
   MCCLXXI  - Bug fix L45: g1*g2 = 2*q^2*Phi6
@@ -49,7 +49,7 @@ def Phi_cyc(n, qq):
         if n % d == 0:
             m = mobius(n // d)
             if m == 1:    result *= (qq**d - 1)
-            elif m == -1: result //= (qq**d - 1)
+            elif m == -1: result /= (qq**d - 1)
     return int(result)
 
 def q_binom(n, kk, qq):
@@ -76,9 +76,17 @@ results.append("MCCLXVII: Gap ratio DeltaE2/DeltaE1 = 16/10 = F(6)/F(5) = 8/5")
 
 # THEOREM MCCLXVIII
 beta_star = (log(Phi6) - log(r)) / g2
-Omega_check = g1*exp(-10*beta_star) - g2*exp(-16*beta_star)
-assert abs(Omega_check) < 1e-10
-results.append(f"MCCLXVIII: beta* = {beta_star:.8f}; Omega(beta*)~0 via Phi6 and r")
+beta_live = -beta_star
+Omega_live_check = g1*exp(-10*beta_live) - g2*exp(-16*beta_live)
+Omega_dual_check = g1*exp(-16*beta_star) - g2*exp(-10*beta_star)
+assert abs(Omega_live_check) < 1e-10
+assert abs(Omega_dual_check) < 1e-10
+assert abs(exp(g2*beta_star) - Phi6/r) < 1e-10
+assert abs(exp(g2*beta_live) - r/Phi6) < 1e-10
+results.append(
+    f"MCCLXVIII: reciprocal genus roots beta=±{beta_star:.8f}; "
+    "live sheet negative, dual sheet positive, exp(6*beta+)=Phi6/r"
+)
 
 # THEOREM MCCLXIX
 assert k - 1 == p_Ih

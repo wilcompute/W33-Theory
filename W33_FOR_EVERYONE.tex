@@ -1682,7 +1682,7 @@ where $15$ is precisely the multiplicity of the negative adjacency eigenvalue of
 \[
 g_1 \;=\; \frac{q^3 + 15}{2}, \qquad g_2 \;=\; \frac{q^3 - 15}{2}.
 \]
-The product $g_1 \cdot g_2 = 21 \cdot 6 = 126 = \binom{q^2}{2}$.
+The product $g_1 \cdot g_2 = 21 \cdot 6 = 126 = 2q^2\Phi_6(3)$.
 
 \subsection*{The genus oscillator}
 
@@ -1690,11 +1690,12 @@ Treat the two genera as eigenvalues of a two-level system with Hamiltonian
 \[
 \hat H_{\text{genus}} \;=\; \tfrac{q^3}{2}\,\mathbf{1} + \tfrac{15}{2}\,\sigma_z.
 \]
-Combined with the heat-trace decomposition $Z(\beta) = 1 + 24\,e^{-10\beta} + 15\,e^{-16\beta}$, the oscillator $\Omega(\beta) = 21\,e^{-10\beta} - 6\,e^{-16\beta}$ has a unique equilibrium temperature
+Combined with the heat-trace decomposition $Z(\beta) = 1 + 24\,e^{-10\beta} + 15\,e^{-16\beta}$, the live oscillator $\Omega_-(\beta) = 21\,e^{-10\beta} - 6\,e^{-16\beta}$ and its dual energy-reversed sheet $\Omega_+(\beta) = 21\,e^{-16\beta} - 6\,e^{-10\beta}$ have reciprocal equilibrium temperatures
 \[
-\boxed{\;\beta^* \;=\; \tfrac{1}{6}\ln\!\tfrac{7}{2}.\;}
+\boxed{\;\beta_- \;=\; -\tfrac{1}{6}\ln\!\tfrac{7}{2},\qquad
+\beta_+ \;=\; \tfrac{1}{6}\ln\!\tfrac{7}{2}.\;}
 \]
-The prefactor $1/6$ equals the reciprocal of the decimal-period of $1/7$, and the ratio $7/2$ is simultaneously $g_1/g_2$, $V(\text{Csász\'ar})/r$ (where $r = 2$ is the positive adjacency eigenvalue), and the bound responsible for the seven-colour theorem on the torus. Below $\beta^*$ the genus-$21$ map dominates; above it, the genus-$6$ map does. The \textbf{seven-colour theorem on the torus is the integer part of $g_1/g_2$.}
+The prefactor $1/6$ equals the reciprocal of the decimal-period of $1/7$, and the ratio $7/2$ is simultaneously $g_1/g_2$, $\Phi_6(3)/r$, $V(\text{Csász\'ar})/r$ (where $r = 2$ is the positive adjacency eigenvalue), and the bound responsible for the seven-colour theorem on the torus. The live sheet is the negative-temperature root and the dual sheet is the positive-temperature root, so the spectral variable $x=e^{6\beta}$ has reciprocal roots $2/7$ and $7/2$. The \textbf{seven-colour theorem on the torus is the integer part of $g_1/g_2$.}
 
 \subsection*{Percolation and photonic fusion}
 
@@ -4326,6 +4327,7 @@ Reye-K12 Orientable Horizon Completion & the $12$ Reye points from the $Q_4$/tom
 Reye Tomotope/24-Cell Common Spine & building the $24$-cell from D4 roots gives $12$ antipodal axes and $16$ hexagonal central planes with Levi graph Reye $(12_4,16_3)$; this is isomorphic to the tomotope edge-triangle medial layer, so tomotope edges match $24$-cell axes, tomotope triangles match hexagon planes, and $|\mathrm{Aut}(\mathrm{Reye})|=576=6\cdot96=|W(F_4)|/2$ & MCXCIII \\
 Flag A2/E6 Matter Chart Bridge & every W33 point-line flag refines the spectral split $240=6+72+81+81$ into six A2 root corners, $24$ adjacent-point triples, and two $27\cdot3=81$ matter sectors; each 81-sector is an exact coordinate chart for the $\lambda=-2$ eigenspace, has the $3^4$ vertex/edge budget of $H(4,3)$, but is spectrally twisted rather than the plain Hamming graph; naive A2 triplet summation keeps rank $24$, so rank $8$ still needs a triality identification & MCCXLV \\
 Toroidal Dual Symmetry Stratification & the Csaszar/Szilassi coordinate realizations keep only geometric $C_2$, while the abstract toroidal maps have automorphism group $C_7\rtimes C_6$ of order $42$ and two flag orbits since $84=2\cdot42$; forgetting the Szilassi faces gives the bare Heawood graph symmetry $336=8\cdot42$, and the dual pair gives $168=4\cdot42=|\mathrm{Aut}(\mathrm{Fano})|$, with $168+24=192$ matching the tomotope flag carrier & MCCXLVII \\
+Cyclotomic Genus Reciprocal Sheets & the corrected genus oscillator is a live/dual reciprocal pair: $\Omega_-(\beta)=21e^{-10\beta}-6e^{-16\beta}$ has root $\beta_-=-\log(7/2)/6$, while $\Omega_+(\beta)=21e^{-16\beta}-6e^{-10\beta}$ has root $\beta_+=+\log(7/2)/6$; in $x=e^{6\beta}$ the roots are $2/7$ and $7/2$, the lock $g_1/g_2=\Phi_6/r$ is forced only at $q=3$ by numerator $q^3(3-q)$, and $d\Omega_+/d\beta|_0=-276=-\pi(137)$ & MCCLXXVI \\
 Reye Horizon Symmetry-Genus Reciprocity Lock & the same integer closes symmetry, topology, and coding: $|\mathrm{Aut}(\mathrm{Reye})|/|\mathrm{Aut}(T)|=576/96=6=g=r$, and horizon closure is $72=66+6=66+g$, so redundancy equals both genus and common-spine symmetry lift factor & MCXCIV \\
 Reye Horizon Octet-Factor Lock & with tomotope cells $C=8$, horizon total $N=72$, Reye points $P=12$, and genus/parity $g=r=6$, one has $|\mathrm{Aut}(\mathrm{Reye})|=576=C\cdot N=C\cdot P\cdot g=8\cdot72=8\cdot12\cdot6$, so $N/C=9$ symbols per cell and $576/72=8$ symmetry units per horizon symbol & MCXCV \\
 Unified Closure Grammar Theorem & unifies emergence kernel $M=E\cdot S^2$, $\Delta_{\pm}=E(2S\pm1)$, $E=\Kappa/2$, $S=\Sigma/(2\Kappa)$ with horizon kernel $N=P\cdot g$, $A_T=C\cdot P$, $A_R=C\cdot N$; bridge ratios close as $E/C=4$, $S/P=2$, $M/A_R=32$ & MCXCVI \\
