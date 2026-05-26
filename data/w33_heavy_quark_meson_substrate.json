@@ -1,0 +1,134 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Phi_12": 73,
+      "v": 40,
+      "f": 24,
+      "C(k,3)": 220,
+      "Ogg_9": 23,
+      "Heegner_19": 19,
+      "Heegner_43": 43,
+      "Heegner_67": 67,
+      "m_p": 938,
+      "m_K0": 498
+    }
+  },
+  "quarkonium": [
+    {
+      "particle": "J/psi (charmonium 1S)",
+      "substrate": "q^2 * 2^q * Heegner_43 = 9 * 8 * 43",
+      "predicted": 3096,
+      "observed": 3096.9,
+      "err_pct": 0.029061319383902964
+    },
+    {
+      "particle": "Upsilon (bottomonium 1S)",
+      "substrate": "C(k,3) * Heegner_43 = 220 * 43",
+      "predicted": 9460,
+      "observed": 9460.3,
+      "err_pct": 0.003171146792377329
+    }
+  ],
+  "heavy_mesons": [
+    {
+      "particle": "D0 (open charm)",
+      "substrate": "2 * m_p - k = 2*938 - 12",
+      "predicted": 1864,
+      "observed": 1864.83,
+      "err_pct": 0.04450807848436197
+    },
+    {
+      "particle": "B0 (open bottom)",
+      "substrate": "2 * f * p_Ih * Phi_4 = 2*24*11*10",
+      "predicted": 5280,
+      "observed": 5279.65,
+      "err_pct": 0.006629227316211564
+    },
+    {
+      "particle": "phi (s-sbar)",
+      "substrate": "2 * m_K0 + Ogg_9 = 2*498 + 23",
+      "predicted": 1019,
+      "observed": 1019.46,
+      "err_pct": 0.04512192729484593
+    }
+  ],
+  "heavy_ratios": [
+    {
+      "ratio": "m_Upsilon / m_b",
+      "substrate": "Heegner_43 / Heegner_19 = 43/19",
+      "predicted": 2.263157894736842,
+      "observed": 2.26160650251016,
+      "err_pct": 0.06859691219316835
+    },
+    {
+      "ratio": "m_Upsilon / m_J/psi",
+      "substrate": "C(k,3) / (q^2 * 2^q) = 220 / 72 = 55/18",
+      "predicted": 3.0555555555555554,
+      "observed": 3.0547644418612157,
+      "err_pct": 0.025897698804484406
+    },
+    {
+      "ratio": "m_J/psi / m_b",
+      "substrate": "(q^2 * 2^q * Heegner_43) / (C(k,3) * Heegner_19)",
+      "predicted": 0.7406698564593301,
+      "observed": 0.7403538130528329,
+      "err_pct": 0.042688158138075936
+    }
+  ],
+  "heegner_43_universal": {
+    "claim": "Heegner_43 is the substrate's HEAVY QUARK MASS UNIT",
+    "appearances": [
+      {
+        "observable": "m_J/psi",
+        "form": "q^2 * 2^q * Heegner_43",
+        "value": 3096
+      },
+      {
+        "observable": "m_Upsilon",
+        "form": "C(k,3) * Heegner_43",
+        "value": 9460
+      },
+      {
+        "observable": "m_s/m_u",
+        "form": "Heegner_43 (PDG 43.3)",
+        "value": 43
+      },
+      {
+        "observable": "Phi_12 + Phi_3",
+        "form": "2 * Heegner_43 = 86",
+        "value": 86
+      }
+    ],
+    "interpretation": "Heegner_43 = (Phi_3 + Phi_12)/2 = (q!)^2 + Phi_6 is the substrate's heavy-quark mass unit, simultaneously appearing in the J/psi (charm), Upsilon (bottom), and m_s/m_u (strange) mass identities, as well as the Fano Prism Dual Tower sum."
+  },
+  "c_k_3_universal": {
+    "claim": "C(k,3) = 220 is the substrate's HEAVY-BOTTOM PREFACTOR",
+    "appearances": [
+      {
+        "observable": "m_b",
+        "form": "C(k,3) * Heegner_19",
+        "value": 4180
+      },
+      {
+        "observable": "m_Upsilon",
+        "form": "C(k,3) * Heegner_43",
+        "value": 9460
+      },
+      {
+        "observable": "mu^4",
+        "form": "(q!)^2 + C(k,3) = 36+220 = 256",
+        "value": 256
+      }
+    ],
+    "interpretation": "C(k,3) = 220 (12 choose 3, the substrate edge-triangle count) appears in m_b, m_Upsilon, and the substrate identity mu^4 = (q!)^2 + C(k,3) = 256, tying the heavy-quark sector to the cosmological constant exponent (Lambda/m_Pl^4 ~ q^(-mu^4))."
+  },
+  "headline": "HEAVY QUARK + QUARKONIUM SUBSTRATE IDENTITIES:\n\nQUARKONIUM (Heegner_43 = heavy mass unit):\n  m_J/psi   = q^2 * 2^q * Heegner_43  = 3096 MeV  (PDG 3096.9, 0.03%)\n  m_Upsilon = C(k,3) * Heegner_43     = 9460 MeV  (PDG 9460.3, 0.003%)\n\nHEAVY MESONS:\n  m_D0    = 2*m_p - k                  = 1864 MeV (PDG 1864.83, 0.04%)\n  m_B0    = 2*f*p_Ih*Phi_4             = 5280 MeV (PDG 5279.65, 0.007%)\n  m_phi   = 2*m_K0 + Ogg_9             = 1019 MeV (PDG 1019.5, 0.05%)\n\nQUARKONIUM RATIOS:\n  m_Upsilon/m_b      = Heegner_43/Heegner_19 = 43/19 = 2.263\n  m_Upsilon/m_J/psi  = C(k,3)/(q^2*2^q)      = 220/72 = 3.056\n\nSTRUCTURAL: Heegner_43 is the HEAVY QUARK MASS UNIT, appearing\nin m_J/psi (charm), m_Upsilon (bottom), m_s/m_u (strange), and\n2 * Heegner_43 = Phi_3 + Phi_12 (Fano prism sum).\n\nC(k,3) = 220 is the HEAVY-BOTTOM PREFACTOR, appearing in m_b,\nm_Upsilon, and mu^4 = (q!)^2 + C(k,3) (cosmology exponent)."
+}
