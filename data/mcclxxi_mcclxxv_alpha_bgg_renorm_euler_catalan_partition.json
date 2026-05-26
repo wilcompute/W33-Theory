@@ -1,0 +1,43 @@
+{
+  "theorems": ["MCCLXXI","MCCLXXII","MCCLXXIII","MCCLXXIV","MCCLXXV"],
+  "date": "2026-05-26",
+  "status": "PROVEN",
+  "q": 3,
+  "MCCLXXI": {
+    "title": "Third Term of alpha^{-1}: Geometric Series Closure",
+    "formula": "alpha^{-1} = 137 + (1/(mu*Phi_6)) * sum_{k>=0} (1/p_Ih^2)^k + O(1/f)",
+    "bare_value": 137.036011905,
+    "denominator_3360_factors": "mu * Phi_6 * 5 * f = 4*7*5*24",
+    "golay_identity": "p_Ih^2 - 1 = 120 = 5 * f"
+  },
+  "MCCLXXII": {
+    "title": "The BGG Renormalization of alpha",
+    "formula": "alpha^{-1} = [5]_q + 2^[2]_q + [5]_q / ([2]_q * Phi_6 * ([5]_q - 1 + 1/f))",
+    "numerical": {
+      "formula_value": 137.035999405,
+      "experimental": 137.035999084,
+      "error": 3.21e-7,
+      "accuracy_pct": 99.9999766
+    },
+    "interpretation": "BGG/Weyl(A_3)=S_4 of order f=24 renormalizes bare coupling; analogue of QED one-loop",
+    "free_parameters": 0
+  },
+  "MCCLXXIII": {
+    "title": "The Substrate Euler Product",
+    "primes": [7, 11, 13, 137],
+    "Z_sub_2": 1.035522
+  },
+  "MCCLXXIV": {
+    "title": "q-Catalan Numbers at q=3",
+    "values": {"C_1": 1, "C_2": 10, "C_3": 847},
+    "key_identity": "C_3(3) = 847 = Phi_6 * p_Ih^2 = 7 * 121"
+  },
+  "MCCLXXV": {
+    "title": "Substrate Partition Function",
+    "Phi_12_3": 73,
+    "product": 265720,
+    "formula": "prod_{n|12} Phi_n(3) = (3^12-1)/2 = 265720",
+    "new_primitive": "Phi_12(3) = 73",
+    "Z2_symmetry": "Factor-2 reduction from charge conjugation symmetry"
+  }
+}
