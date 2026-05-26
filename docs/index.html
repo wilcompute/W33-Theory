@@ -13455,6 +13455,38 @@
           connecting tomotope, 24-cell, and the K<sub>12</sub> horizon seed.
         </p>
 
+        <h4>Flag A<sub>2</sub>/E<sub>6</sub> matter chart bridge</h4>
+        <p>MCCXLV turns the spectral bridge count <code>240=6+72+81+81</code> into an explicit
+          flag-anchored decomposition. For any W(3,3) point-line flag, the 240 local corners split as
+          <code>6</code> same-point A<sub>2</sub> root corners, <code>24</code> adjacent-point triples, and two
+          matter sectors of <code>27&middot;3=81</code> corners each.
+        </p>
+        <p>Each 81-sector is an exact coordinate chart for the <code>&lambda;=-2</code> eigenspace:
+          over <code>GF(7)</code>, <code>rank(A<sub>3</sub>+2I)=159</code>, so the nullity is <code>81</code>, and
+          constraining either 81-sector to zero raises the rank to <code>240</code>. The sector has the same
+          <code>3<sup>4</sup></code> vertex/edge budget as the ternary hypercube <code>H(4,3)</code>
+          (<code>81</code> vertices, degree <code>8</code>, <code>324</code> edges), but a different spectrum, so it is a
+          twisted ternary hypercube rather than the plain Hamming network.
+        </p>
+        <p>The verifier also rules out the naive rank-8 collapse: summing the A<sub>2</sub> triples in the
+          golden 24D tight-frame space still has rank <code>24</code>. The next exact target is therefore an
+          additional triality identification, not simple fiber summation.
+        </p>
+
+        <h4>Cs&aacute;sz&aacute;r/Szilassi toroidal symmetry stratification</h4>
+        <p>MCCXLVII separates the symmetry groups of the dual toroidal pair. The repo realization data gives
+          <code>5</code> Cs&aacute;sz&aacute;r and <code>2</code> Szilassi coordinate models, all with geometric
+          <code>C<sub>2</sub></code> symmetry. But the abstract toroidal maps have
+          <code>|Aut|=42</code>, with group shape <code>C<sub>7</sub>&rtimes;C<sub>6</sub></code> and element-order
+          profile <code>{1:1,2:7,3:14,6:14,7:6}</code>.
+        </p>
+        <p>This keeps the Heawood layer honest: the bare Szilassi skeleton has Heawood-graph symmetry
+          <code>336=8&middot;42</code>, but remembering the seven hexagonal faces cuts the symmetry back to the
+          chiral toroidal-map group <code>42</code>. Hence each toroidal map has <code>84=2&middot;42</code> flags,
+          the dual pair has <code>168=4&middot;42=|Aut(Fano)|</code>, and adding the tetrahedral
+          <code>24</code>-flag carrier recovers the tomotope scale <code>192</code>.
+        </p>
+
         <h4>Reye horizon symmetry-genus reciprocity lock</h4>
         <p>MCXCIV fuses the two prior packets into one exact reciprocity. From MCXCII,
           <code>[72,66]<sub>3</sub></code> has redundancy <code>6</code> and surface genus <code>g=6</code>. From
