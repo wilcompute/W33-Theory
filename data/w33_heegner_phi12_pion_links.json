@@ -1,0 +1,121 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Phi_12": 73,
+      "v": 40,
+      "Heegners": [
+        19,
+        43,
+        67,
+        163
+      ]
+    }
+  },
+  "pion_cyclotomic_heegner": {
+    "claim": "Phi_12 + Heegner_67 = m_pi+ (MeV) = 2 * Phi_4 * Phi_6",
+    "lhs_phi_heeg": 140,
+    "lhs_pi_phi_phi": 140,
+    "rhs": 140,
+    "observed_MeV": 139.57,
+    "match_substrate": true,
+    "match_pion": true,
+    "err_pct": 0.3080891309020612,
+    "substrate": "Sum of two Hubble values (Phi_12=H_0_SH0ES + Heegner_67=H_0_Planck) as substrate integers equals the charged pion mass in MeV.  The cyclotomic-Heegner identity Phi_12 + Heegner_67 = 2 Phi_4 Phi_6 is exact at q=3."
+  },
+  "prime_index_heegner_19": {
+    "claim": "p_{Heegner_19} = Heegner_67",
+    "predicted": 67,
+    "computed": 67,
+    "match": true,
+    "interpretation": "The 19th prime IS the 8th Heegner discriminant.  Together with p_(q*Phi_6) = Phi_12 and p_(q*p_Ih) = alpha^-1 = 137, this is the third substrate-clean prime-index identity tying substrate primitives to prime values."
+  },
+  "heegner_prime_index_family": [
+    {
+      "label": "p_{q*Phi_6}",
+      "index": 21,
+      "p_at_idx": 73,
+      "expected": 73,
+      "match": true,
+      "physics": "Phi_12 = H_0_SH0ES"
+    },
+    {
+      "label": "p_{Heegner_19}",
+      "index": 19,
+      "p_at_idx": 67,
+      "expected": 67,
+      "match": true,
+      "physics": "Heegner_67 = H_0_Planck"
+    },
+    {
+      "label": "p_{q*p_Ih}",
+      "index": 33,
+      "p_at_idx": 137,
+      "expected": 137,
+      "match": true,
+      "physics": "alpha^-1 integer"
+    }
+  ],
+  "heegner_pair_sums": [
+    {
+      "pair": "Heegner_67 + Heegner_19",
+      "sum": 86,
+      "substrate": "2 * Heegner_43 = 86 (f-lattice arithmetic mean)",
+      "match": true
+    },
+    {
+      "pair": "Heegner_67 - Heegner_19",
+      "diff": 48,
+      "substrate": "2 * f = 48 (f-lattice spacing)",
+      "match": true
+    },
+    {
+      "pair": "Heegner_43 + Heegner_163",
+      "sum": 206,
+      "substrate": "(mu+1)*v + q! = 206 = m_mu/m_e ratio (in m_e units)",
+      "match": true
+    },
+    {
+      "pair": "Heegner_67 + Heegner_43",
+      "sum": 110,
+      "substrate": "110 = alpha_s^-1 * Phi_3 = (2^q+q!/Phi_3) * Phi_3",
+      "match": true
+    },
+    {
+      "pair": "Phi_12 + Heegner_67",
+      "sum": 140,
+      "substrate": "2 * Phi_4 * Phi_6 = m_pi+ (MeV) = 140",
+      "match": true
+    }
+  ],
+  "heegner_physics_map": [
+    {
+      "heegner": 19,
+      "substrate": "H(q) (qth centered hexagonal); = q + mu^2",
+      "physics": "f-lattice anchor (smallest large Heegner)"
+    },
+    {
+      "heegner": 43,
+      "substrate": "(Phi_3 + Phi_12)/2; = (q!)^2 + Phi_6",
+      "physics": "m_s/m_u quark mass ratio; central f-lattice point"
+    },
+    {
+      "heegner": 67,
+      "substrate": "(2^Phi_6 + q!)/2 = Phi_12 - q!",
+      "physics": "H_0_Planck (km/s/Mpc); m_p factor; alpha^-1 building block; m_tau formula"
+    },
+    {
+      "heegner": 163,
+      "substrate": "mu * v + q",
+      "physics": "m_t = Heegner_163 + Phi_4 (top quark mass in GeV)"
+    }
+  ],
+  "headline": "TWO NEW SUBSTRATE IDENTITIES:\n\n(1) Pion-cyclotomic-Heegner:\n    Phi_12 + Heegner_67 = 2 * Phi_4 * Phi_6\n    73 + 67 = 140 = 2 * 10 * 7 = m_pi+ (MeV; PDG 139.57, 0.31%)\n\n(2) Prime-index of Heegner:\n    p_{Heegner_19} = Heegner_67\n    p_19 = 67  (the 19th prime IS the 8th Heegner discriminant)\n\nSubstrate prime-index family (all three):\n    p_{q*Phi_6}   = Phi_12      = 73   (H_0_SH0ES)\n    p_{Heegner_19} = Heegner_67  = 67   (H_0_Planck)\n    p_{q*p_Ih}    = 137         (alpha^-1)\n\nHeegner pair sums:\n    Heegner_67 + Heegner_19 = 2 * Heegner_43 = 86\n    Heegner_43 + Heegner_163 = (mu+1)*v+q! = 206 = m_mu/m_e ratio\n    Phi_12 + Heegner_67 = 2*Phi_4*Phi_6 = m_pi+ (MeV)\n\nHeegner physics map: each large Heegner controls a distinct sector\n    19  -> f-lattice anchor (smallest Heegner)\n    43  -> m_s/m_u (light quark ratio)\n    67  -> H_0_Planck + alpha^-1 + m_p factor\n    163 -> m_t = Heegner_163 + Phi_4 (top quark mass)"
+}
