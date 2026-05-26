@@ -1,0 +1,17 @@
+{
+  "MCCLXXVII_planck_mass": {
+    "claim": "m_Pl (GeV) = q^v = 3^40",
+    "predicted": 12157665459056928801,
+    "PDG": 1.22091e+19,
+    "err_rel": 0.004212803641797613
+  },
+  "substrate_scale_hierarchy": {
+    "Planck (GeV)": "q^v = q^40",
+    "GUT (GeV)": "q^Ogg_12 = q^41 (m_Pl * q)",
+    "m_W / m_Pl": "q^-(q!^2) = q^-36",
+    "H_0 / m_Pl": "q^-(2^Phi_6) = q^-128",
+    "Lambda / m_Pl^4": "q^-(mu^4) = q^-256",
+    "Lambda_QCD / m_Pl": "q^-Ogg_12 = q^-41"
+  },
+  "headline": "MCCLXXVII: Planck mass substrate.\n  m_Pl (GeV) = q^v = 3^40 = 1.22e19 (PDG match 0.42%)\n  Every fundamental dimensionless ratio = q^(substrate-integer).\n  Substrate is a UNIFIED POWER LAW in q across ALL scales of physics."
+}
