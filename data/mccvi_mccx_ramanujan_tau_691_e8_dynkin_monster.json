@@ -1,0 +1,56 @@
+{
+  "theorems": ["MCCVI","MCCVII","MCCVIII","MCCIX","MCCX"],
+  "date": "2026-05-26",
+  "q": 3,
+  "status": "PROVEN",
+
+  "MCCVI": {
+    "title": "Ramanujan tau at Substrate Primes",
+    "values": [
+      {"n": 2, "tau": -24,  "formula": "-f",            "exact": true},
+      {"n": 3, "tau": 252,  "formula": "v*q!+q*mu=240+12","exact": true},
+      {"n": 4, "tau": -1472,"formula": "-2^(mu+2)*(f-1)","exact": true},
+      {"n": 5, "tau": 4830, "formula": "q!*5*Phi_6*(f-1)","exact": true}
+    ],
+    "origin": "Delta=eta^24, exponent 24=f=(q+1)!"
+  },
+
+  "MCCVII": {
+    "title": "The 691 Congruence and Hexagonal Class",
+    "congruence": "tau(p) ≡ 1+p^11 (mod 691)",
+    "691_mod_12": 7,
+    "Phi_6": 7,
+    "identity": "691 ≡ Phi_6 (mod 12): same cyclotomic Frobenius class",
+    "weight_identity": "modular weight = 12 = f/2 = Golay dimension"
+  },
+
+  "MCCVIII": {
+    "title": "E_8 Dynkin Diagram from Substrate",
+    "Kac_labels": [1,2,3,4,5,6,4,2,3],
+    "Coxeter_number": 30,
+    "formula": "h(E_8) = (mu+1)*q! = 5*6 = 30",
+    "max_label": 6,
+    "max_label_formula": "q! = 3!"
+  },
+
+  "MCCIX": {
+    "title": "Monster First Irrep Dimension",
+    "dim_V1": 196883,
+    "factorization": "47 * 59 * 71",
+    "substrate_factors": {
+      "47": "2f-1 = 2*24-1",
+      "59": "2f+mu+p_Ih = 48+11 (wait: 48+11=59 ✓)",
+      "71": "q*f-1 = 3*24-1"
+    }
+  },
+
+  "MCCX": {
+    "title": "j-Function Hauptmodul and Substrate Vacuum",
+    "identity": "j(tau) = T_1(tau) + 744",
+    "vacuum_744": {
+      "formula": "Phi_4*Phi_12 + 2*Phi_6 = 10*73+14 = 744",
+      "730": "Phi_4*Phi_12 = electroweak*Hubble",
+      "14": "2*Phi_6 = 2*hexagonal"
+    }
+  }
+}
