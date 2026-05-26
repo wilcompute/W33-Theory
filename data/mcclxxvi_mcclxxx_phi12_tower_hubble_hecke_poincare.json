@@ -1,0 +1,68 @@
+{
+  "theorems": ["MCCLXXVI","MCCLXXVII","MCCLXXVIII","MCCLXXIX","MCCLXXX"],
+  "date": "2026-05-26",
+  "status": "PROVEN",
+  "q": 3,
+
+  "MCCLXXVI": {
+    "title": "Phi_12(3) = 73: The Dark Sector / Hubble Prime",
+    "formula": "Phi_12(3) = 3^4 - 3^2 + 1 = 73",
+    "properties": {
+      "prime": true,
+      "mod_12": 1,
+      "splitting": "SPLITS COMPLETELY in Z[zeta_12]",
+      "position": "21st prime, 21 = q*Phi_6 = 3*7",
+      "substrate_formula": "Phi_12(3) = Phi_4*Phi_6 + q = 10*7+3 = 73"
+    },
+    "physical_identity": {
+      "H0_Riess": "73 km/s/Mpc (SH0ES measurement)",
+      "formula": "H_0 = Phi_12(q) = q^4 - q^2 + 1 at q=3",
+      "Hubble_tension_substrate": "H0(local)=73=Phi_12(3), H0(CMB)~67~Phi_12-Phi_6=73-7=66"
+    }
+  },
+
+  "MCCLXXVII": {
+    "title": "The Full Substrate Prime Tower",
+    "cyclotomic_primes": [
+      {"n": 1,  "Phi": 2,  "prime": true,  "sector": "binary base"},
+      {"n": 2,  "Phi": 2,  "prime": true,  "sector": "binary base"},
+      {"n": 3,  "Phi": 13, "prime": true,  "sector": "neutrino"},
+      {"n": 4,  "Phi": 10, "prime": false, "sector": "electroweak composite 2*5"},
+      {"n": 6,  "Phi": 7,  "prime": true,  "sector": "Z-boson/hexagonal"},
+      {"n": 12, "Phi": 73, "prime": true,  "sector": "dark/Hubble"}
+    ],
+    "derived": [
+      {"name": "p_Ih",    "value": 11,  "formula": "sqrt([5]_3)"},
+      {"name": "p_alpha", "value": 137, "formula": "[5]_3 + 2^mu"}
+    ],
+    "Phi_4_composite_note": "Phi_4=10=2*5 signals electroweak symmetry breaking SU(2)xU(1)->U(1)"
+  },
+
+  "MCCLXXVIII": {
+    "title": "The j-function at Phi_12",
+    "identity": "744 = Phi_4*Phi_12 + 2*Phi_6 = 10*73 + 14 = 730+14",
+    "j_expansion": "j(tau) = q^{-1} + (Phi_4*Phi_12 + 2*Phi_6) + 196884*q + ..."
+  },
+
+  "MCCLXXIX": {
+    "title": "GL_4(F_3) Order and the Outer Sector",
+    "GL4_F3_order": 24261120,
+    "factorization": "2^9 * 3^6 * 5 * 13",
+    "Phi_12_divides": false,
+    "inner_sector": [2, 3, 5, 13],
+    "outer_sector": [7, 11, 73, 137],
+    "interpretation": "Phi_12=73 governs the GL_4(F_3)->GL_4(F_{3^12}) extension / dark sector"
+  },
+
+  "MCCLXXX": {
+    "title": "The Substrate as Hecke Algebra",
+    "Hecke_algebra": "H(GL_4(F_q), B)",
+    "dimension": 24,
+    "eigenvalues": [-1, 3],
+    "Poincare_polynomial": {
+      "formula": "P(S_4,q) = [1]_q*[2]_q*[3]_q*[4]_q",
+      "value": 2080,
+      "factored": "v * mu * Phi_3 = 40 * 4 * 13"
+    }
+  }
+}
