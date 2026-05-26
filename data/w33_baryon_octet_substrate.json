@@ -1,0 +1,86 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Phi_12": 73,
+      "v": 40,
+      "alpha_inv_int": 137,
+      "Heegner_19": 19,
+      "Heegner_67": 67
+    }
+  },
+  "baryon_octet": [
+    {
+      "particle": "proton",
+      "substrate": "2 * Phi_6 * Heegner_67",
+      "predicted": 938,
+      "observed": 938.272,
+      "err_pct": 0.02898946147812662
+    },
+    {
+      "particle": "Lambda",
+      "substrate": "m_p + m_pi+ + 2*Heegner_19 = 938+140+38",
+      "predicted": 1116,
+      "observed": 1115.683,
+      "err_pct": 0.028413088664074587
+    },
+    {
+      "particle": "Sigma+",
+      "substrate": "m_Lambda + Phi_12 = 1116+73",
+      "predicted": 1189,
+      "observed": 1189.37,
+      "err_pct": 0.031108906395813825
+    },
+    {
+      "particle": "Xi0",
+      "substrate": "m_Sigma + (2^Phi_6 - q) = 1189+125",
+      "predicted": 1314,
+      "observed": 1314.86,
+      "err_pct": 0.06540620294175045
+    }
+  ],
+  "baryon_increments": [
+    {
+      "transition": "p -> Lambda",
+      "increment": 178,
+      "substrate": "m_pi+ + 2*Heegner_19 = 2*(Phi_4*Phi_6 + Heegner_19) = 178 MeV"
+    },
+    {
+      "transition": "Lambda -> Sigma",
+      "increment": 73,
+      "substrate": "Phi_12 = 73 MeV (= H_0_SH0ES numerical km/s/Mpc)"
+    },
+    {
+      "transition": "Sigma -> Xi",
+      "increment": 125,
+      "substrate": "2^Phi_6 - q = 125 MeV (= m_H numerical GeV)"
+    }
+  ],
+  "eta_prime_identity": {
+    "claim": "m_eta' = Phi_6 * alpha^-1_int - 1 (MeV)",
+    "predicted": 958,
+    "observed": 957.78,
+    "err_pct": 0.02296978429284672,
+    "companion": "m_eta = mu * alpha^-1_int = 548 MeV; m_eta'/m_eta ~ Phi_6/mu = 7/4"
+  },
+  "eta_eta_prime_ratio": {
+    "claim": "m_eta' / m_eta ~ Phi_6 / mu = 7/4 = 1.75",
+    "predicted": 1.75,
+    "observed": 1.748220348264155,
+    "err_pct": 0.10179790766147406
+  },
+  "neutrino_sum_speculation": {
+    "claim": "sum m_nu (meV) = Phi_4^2 = 100",
+    "predicted_meV": 100,
+    "PDG_bound_meV": 120,
+    "interpretation": "The unique substrate prediction within the current cosmological bound (sum m_nu < 120 meV from Planck+BAO).  Phi_4^2 = (q^2+1)^2 = 100 meV is squarely in the allowed range."
+  },
+  "headline": "BARYON OCTET + ETA' + NEUTRINO SUBSTRATE IDENTITIES:\n\nBARYON OCTET MASSES (MeV):\n  m_p       =  2*Phi_6*Heegner_67  =  938     (PDG 938.27, 0.03%)\n  m_Lambda  =  m_p + m_pi+ + 2*Heegner_19  =  1116  (PDG 1115.7, 0.03%)\n  m_Sigma+  =  m_Lambda + Phi_12  =  1189     (PDG 1189.4, 0.03%)\n  m_Xi0     =  m_Sigma + (2^Phi_6 - q)  =  1314  (PDG 1314.9, 0.07%)\n\nMASS INCREMENTS (consecutive baryons):\n  p -> Lambda :  m_pi+ + 2*Heegner_19  =  178 MeV\n  Lambda -> Sigma :  Phi_12 = 73 MeV  (= H_0_SH0ES NUMERICALLY)\n  Sigma -> Xi :  2^Phi_6 - q = 125 MeV  (= m_H NUMERICALLY)\n\nETA-PRIME:\n  m_eta'  =  Phi_6 * alpha^-1_int - 1  =  958 MeV  (PDG 957.78, 0.02%)\n  m_eta'/m_eta  =  Phi_6/mu  =  7/4  =  1.75\n\nNEUTRINO MASS SUM (within current PDG bound):\n  sum m_nu  ~  Phi_4^2  =  100 meV  (bound < 120 meV)"
+}
