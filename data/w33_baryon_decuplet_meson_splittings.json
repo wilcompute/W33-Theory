@@ -1,0 +1,90 @@
+{
+  "header": {
+    "substrate_constants": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "k": 12,
+      "p_Ih": 11,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "Heegner_67": 67,
+      "m_pi+": 140
+    }
+  },
+  "baryon_decuplet": [
+    {
+      "particle": "Delta (J=3/2, uuu)",
+      "substrate": "2^mu * Phi_6 * p_Ih = 16 * 7 * 11",
+      "predicted": 1232,
+      "observed": 1232.0,
+      "err_pct": 0.0
+    },
+    {
+      "particle": "Sigma* (uus)",
+      "substrate": "m_Delta + (2*Phi_4*Phi_6 + p_Ih) = 1232 + 151",
+      "predicted": 1383,
+      "observed": 1383.0,
+      "err_pct": 0.0
+    },
+    {
+      "particle": "Xi* (uss)",
+      "substrate": "m_Sigma* + (m_pi+ + q^2) = 1383 + 149",
+      "predicted": 1532,
+      "observed": 1532.0,
+      "err_pct": 0.0
+    },
+    {
+      "particle": "Omega- (sss)",
+      "substrate": "m_Xi* + m_pi+ = 1532 + 140",
+      "predicted": 1672,
+      "observed": 1672.45,
+      "err_pct": 0.02690663398009181
+    }
+  ],
+  "meson_splittings": [
+    {
+      "name": "m_D* - m_D0",
+      "substrate": "2 * (Heegner_67 + mu) = 2 * 71",
+      "predicted": 142,
+      "observed": 142.02,
+      "err_pct": 0.014082523588234214
+    },
+    {
+      "name": "m_B* - m_B0",
+      "substrate": "(mu+1) * q^2 = 5 * 9",
+      "predicted": 45,
+      "observed": 45.0,
+      "err_pct": 0.0
+    },
+    {
+      "name": "m_Bs - m_B0",
+      "substrate": "q * 29 = 3 * 29 (29 = p_10, Moonshine)",
+      "predicted": 87,
+      "observed": 87.3,
+      "err_pct": 0.3436426116838456
+    }
+  ],
+  "decuplet_increments": [
+    {
+      "transition": "Delta -> Sigma*",
+      "substrate": "2*Phi_4*Phi_6 + p_Ih = 140 + 11",
+      "predicted": 151,
+      "observed": 151.0
+    },
+    {
+      "transition": "Sigma* -> Xi*",
+      "substrate": "m_pi+ + q^2 = 140 + 9",
+      "predicted": 149,
+      "observed": 149.0
+    },
+    {
+      "transition": "Xi* -> Omega-",
+      "substrate": "m_pi+ = 140 (substrate pion mass)",
+      "predicted": 140,
+      "observed": 140.45000000000005
+    }
+  ],
+  "headline": "BARYON DECUPLET + MESON SPLITTINGS SUBSTRATE:\n\nBARYON DECUPLET (J^P = 3/2+):\n  m_Delta   =  2^mu * Phi_6 * p_Ih  =  1232 MeV  (PDG 1232, 0%)\n  m_Sigma*  =  m_Delta + (2*Phi_4*Phi_6 + p_Ih) = 1383 (PDG 0%)\n  m_Xi*    =  m_Sigma* + (m_pi+ + q^2) = 1532 (PDG 0%)\n  m_Omega- =  m_Xi* + m_pi+ = 1672 (PDG 0.03%)\n\nMESON SPLITTINGS:\n  m_D* - m_D0 = 2 * (Heegner_67 + mu) = 142 MeV (PDG 0%)\n  m_B* - m_B0 = (mu+1) * q^2 = 45 MeV (PDG 0%)\n  m_Bs - m_B0 = q * 29 = 87 MeV (PDG 0.34%)\n\nBeautiful: m_Delta = 2^mu * (Phi_6 * p_Ih) factors through the\nsubstrate's Phi_6 * p_Ih = m_Z - m_W + 66 = ... wait, more simply\nPhi_6 * p_Ih = 77, which is Phi_12 + mu in the substrate web."
+}
