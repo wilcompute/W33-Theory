@@ -20,6 +20,7 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{microtype}
+\setlength{\emergencystretch}{3em}
 \usepackage{bm}
 \usepackage{longtable}
 \usepackage{calc}
@@ -986,9 +987,12 @@ $W(3,3)$ has spectrum
 with multiplicities $1+24+24+15+15+201+200 = 480$.  The imaginary parts
 of the non-trivial sectors square exactly to the cyclotomic primitives:
 \begin{equation}
-\Im(u_{\mathrm{gauge}})^2 = (k-1) - (r/2)^2 = 11 - 1 = 10 = \Phi_4,
-\qquad
-\Im(u_{\mathrm{chiral}})^2 = (k-1) - (s/2)^2 = 11 - 4 = 7 = \Phi_6.
+\begin{aligned}
+\Im(u_{\mathrm{gauge}})^2
+  &= (k-1) - (r/2)^2 = 11 - 1 = 10 = \Phi_4,\\
+\Im(u_{\mathrm{chiral}})^2
+  &= (k-1) - (s/2)^2 = 11 - 4 = 7 = \Phi_6.
+\end{aligned}
 \end{equation}
 \end{theorem}
 
@@ -1642,8 +1646,11 @@ G_X(t)=\prod_{\substack{p\le X\\ p\equiv1\ (3)}}\frac{p-2+t}{p-t}
 \]
 decays like $(\log X)^{-(1-t)}$. Numerically at $X=10^6$ one finds
 \[
-G_X(0)\log X\approx1.88745,\qquad G_X(1/2)\sqrt{\log X}\approx1.37576,
-\qquad G_X(3/4)(\log X)^{1/4}\approx1.17313,
+\begin{gathered}
+G_X(0)\log X\approx1.88745,\qquad
+G_X(1/2)\sqrt{\log X}\approx1.37576,\\
+G_X(3/4)(\log X)^{1/4}\approx1.17313,
+\end{gathered}
 \]
 so the exponent is not heuristic: it interpolates exactly as $1-t$.
 There is now a sharper global object underneath this decay law. If
@@ -2956,8 +2963,10 @@ The $E_7$/$E_8$ pair recovers $\mathrm{PSL}(2,7) = \mathrm{PSL}(2,\Phi_6)$:
 The transport numerator $T=217$ is anchored at two further locations in the
 McKay-E lattice:
 \begin{equation}
-T = h(E_7)\cdot k + 1 = 18\cdot 12 + 1 = 217,\qquad
-T = |W(D_4)| + |\text{McKay-}E_6| + 1 = 192+24+1 = 217.
+\begin{aligned}
+T &= h(E_7)\cdot k + 1 = 18\cdot 12 + 1 = 217,\\
+T &= |W(D_4)| + |\text{McKay-}E_6| + 1 = 192+24+1 = 217.
+\end{aligned}
 \label{eq:T-mckay}
 \end{equation}
 Equivalently, $T-1 = 216 = (q!)^3 = h(E_6)\cdot h(E_7) = 12\cdot 18$.
@@ -9401,5 +9410,155 @@ So the Leech kissing number sits exactly one cyclotomic step above the common
 \hfill$\varepsilon\quad\zeta\quad\eta\quad\theta\quad\iota\quad\kappa\quad\lambda\quad\nu\quad\xi\quad o\quad\rho\quad\sigma\quad\tau\quad\upsilon\quad\chi\quad\psi\quad\omega\quad\aleph\quad\beth\quad\gimel\quad\daleth\quad\Omega$
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
+% ═══════════════════════════════════════════════════════════════
+%  ADDENDUM --- SELF-ENTANGLED Q4 ROUTER AND UNIT-GAUGE BOUNDARY
+% ═══════════════════════════════════════════════════════════════
+\clearpage
+\part*{Addendum --- The Self-Entangled $Q_4$ Router and the Unit-Gauge Boundary}
+\addcontentsline{toc}{part}{Addendum --- Self-Entangled Q4 Router and Unit-Gauge Boundary}
+
+\section*{The Four-Ray Now Context Has a Finite Router}
+
+The single-photon self-entanglement companion identifies the temporal Bell
+qutrit
+\[
+  \ket{\Omega}=q^{-1/2}\sum_{j\in\FF_3}\ket{j}_{\rm past}\ket{j}_{\rm future}
+\]
+as the past/future seed of the $W_{3,3}$ substrate.  A Bell context has
+$q+1=4$ rays.  Placing the past context on one axis and the future context on
+another gives a $4\times4$ toroidal context square.  The toroidal knight graph
+on this board is the hypercube $Q_4$:
+\[
+  |V(Q_4)|=16,\qquad |E(Q_4)|=32,\qquad \deg(Q_4)=4,\qquad \mathrm{diam}(Q_4)=4.
+\]
+Thus the photonic ``now'' context has a binary router wrapped around a ternary
+payload.  The router changes one control bit at a time; the payload remains
+the $q=3$ symplectic/Pauli geometry.
+
+\subsection*{The plaquette seed is $q!(q+1)$}
+
+The $4$-cube has
+\[
+  \binom{4}{2}2^{4-2}=6\cdot4=24
+\]
+square faces.  In substrate language this is
+\[
+  24=q!(q+1),
+\]
+where $q!=6$ is the directed off-diagonal past/future history count and
+$q+1=4$ is the number of surviving now-context rays.  This gives a useful
+new reading of the recurring integer $24$: it is simultaneously the positive
+eigenspace multiplicity $f$, the Leech rank, the $D_4$ root count, and the
+face count of the self-entangled now-router.
+
+\subsection*{The antipodal quotient is Reye}
+
+The face-edge incidence graph of $Q_4$ has
+\[
+  24\cdot4=32\cdot3=96
+\]
+incidences.  Quotient by the antipodal bit-complement map on $Q_4$.  The
+quotient has
+\[
+  12\ \text{face-orbits},\qquad 16\ \text{edge-orbits},\qquad 48\ \text{incidences},
+\]
+so it is the Reye configuration
+\[
+  (12_4,16_3),\qquad 12\cdot4=16\cdot3=48.
+\]
+This same Levi graph is the tomotope edge-triangle medial layer, and it is
+also the $24$-cell incidence graph between the $12$ antipodal root axes and
+the $16$ central hexagon planes.  Hence the finite spine is exact:
+\[
+  Q_4\ \mathrm{router}
+  \longrightarrow
+  \mathrm{Reye}\ (12_4,16_3)
+  \longleftrightarrow
+  \mathrm{tomotope}
+  \longleftrightarrow
+  24\text{-cell}.
+\]
+
+\subsection*{Monodromy is the squared self-entanglement seed}
+
+The lifted incidence count $96$ equals the tomotope automorphism order, and
+$192=2\cdot96$ is the tomotope flag count.  Therefore the monodromy packet
+closes as
+\[
+  18432=96\cdot192=2\cdot96^2=32\cdot24^2.
+\]
+Equivalently,
+\[
+  18432 = |E(Q_4)|\cdot(q!(q+1))^2.
+\]
+So the emergence monodromy is not an additional large free integer.  It is the
+squared temporal self-entanglement seed $24=q!(q+1)$ transported through the
+$32$-edge router shell.
+
+\section*{The Measured-Constant Layer is Unit-Gauge Only}
+
+The latest measured/derived constant packet is deliberately not a new
+dimensionless-prediction theorem.  It is a metrology theorem: once SI or
+conventional units have fixed a display convention, six nearby mantissas have
+substrate-clean factorizations:
+\begin{center}\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\linewidth}
+                >{\raggedright\arraybackslash}p{0.45\linewidth}
+                >{\raggedright\arraybackslash}p{0.27\linewidth}}
+\toprule
+Witness & Unit-scaled integer & Status \\
+\midrule
+$G$ & $667430=2\cdot5\cdot31(73\cdot29+36)$ & CODATA rounded mantissa \\
+$g_0$ & $980665$ & conventional exact \\
+$1\,\mathrm{atm}$ & $101325$ & conventional exact \\
+$m_pc^2$ in rounded keV & $938272=2^5(10^2+3^2)(4^4+13)$ & CODATA rounded mantissa \\
+Faraday $F$ & $9648533=31(4\cdot137-1)(4\cdot137+3\cdot7)$ & SI-derived rounded display \\
+$R\cdot10^6$ & $8314463=(5\cdot13+2\cdot7\cdot73)(7\cdot1111-128)$ & SI-derived rounded display \\
+\bottomrule
+\end{tabular}
+\end{center}
+The strict status split is
+\[
+  2\ \mathrm{measured\ rounded}
+  +2\ \mathrm{conventional\ exact}
+  +2\ \mathrm{SI\!-\!derived\ rounded}.
+\]
+Thus
+\[
+  \mathrm{unit\!-\!scaled\ decimal\ witness}=\mathrm{true},\qquad
+  \mathrm{dimensionless\ prediction}=\mathrm{false}.
+\]
+This boundary preserves the arithmetic while avoiding a category error:
+dimensionful mantissas depend on unit gauge unless a separate dimensionless
+ratio or scale map has been supplied.
+
+\section*{The Decisive Addendum Identity}
+
+\[
+\boxed{\;
+18432
+=|E(Q_4)|\cdot\big(q!(q+1)\big)^2
+=32\cdot24^2
+=96\cdot192,
+\;}
+\]
+and
+\[
+\boxed{\;
+\begin{gathered}
+\mathrm{SI\ mantissa\ arithmetic}
+\subset
+\mathrm{unit\!-\!gauge\ witness\ layer},\\
+\mathrm{SI\ mantissa\ arithmetic}
+\not\subset
+\mathrm{dimensionless\ prediction\ layer}.
+\end{gathered}
+\;}
+\]
+The self-entangled qutrit now has a precise finite router, and the constants
+packet now has a precise metrology boundary.
 
 \end{document}

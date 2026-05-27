@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{microtype}
+\setlength{\emergencystretch}{3em}
 
 %--- Theorem environments ---
 \newtheorem{theorem}{Theorem}[section]
@@ -67,7 +68,12 @@ photonic qutrit, and that the twelve-element valency $k=12$ captures the generat
 count of the two-qutrit Clifford group $\Sp(4,\FF_3)$.  Combined with the
 Knill--Laflamme--Milburn (KLM) protocol and measurement-based quantum computing
 (MBQC), we obtain a complete framework in which all cardinal numbers of photonic
-universality are read directly from the $W(3,3)$ parameter table.
+universality are read directly from the $W(3,3)$ parameter table.  The temporal
+self-entanglement layer adds a finite router: the four-ray Bell now-context
+squares to a $4\times4$ toroidal knight board whose graph is $Q_4$, whose
+$24=q!(q+1)$ square plaquettes quotient antipodally to the Reye
+$(12_4,16_3)$ configuration, and whose lifted incidence shell is the
+tomotope/$24$-cell common spine.
 \end{abstract}
 
 %----------------------------------------------------------------------
@@ -234,11 +240,13 @@ $E_6$, of order $25920$.  The full automorphism group $\Sp(4,\FF_3)$ of order
 $51840 = 2 \cdot 25920$ is the full Weyl group $W(E_6)$.  The same $q=3$ seed also
 generates the exceptional Lie series arithmetically:
 \begin{equation}
-  G_2 = k + \lambda = 14, \quad
-  F_4 = \mu\,\Phi_3 = 52, \quad
-  E_6 = \lambda\,q\,\Phi_3 = 78, \quad
-  E_7 = \Phi_3\Phi_4 + q = 133, \quad
-  E_8 = E + \lambda^q = 248,
+\begin{aligned}
+  G_2 &= k + \lambda = 14, &
+  F_4 &= \mu\,\Phi_3 = 52, &
+  E_6 &= \lambda\,q\,\Phi_3 = 78,\\
+  E_7 &= \Phi_3\Phi_4 + q = 133, &
+  E_8 &= E + \lambda^q = 248.
+\end{aligned}
 \end{equation}
 where $\Phi_3 = 13$ and $\Phi_4 = 10$ are cyclotomic-polynomial values at $q=3$.
 
@@ -490,9 +498,13 @@ global phase.
 
 (ii)$\Rightarrow$(iii):  Direct calculation,
 \begin{equation*}
-  (U\otimes U^*)\ket{\Omega} \;=\; q^{-1/2}\sum_j U\ket{j}\otimes U^*\ket{j}
-  \;=\; q^{-1/2}\sum_{a,b}\Bigl(\sum_j U_{aj}\overline{U}_{bj}\Bigr)\ket{ab}
-  \;=\; q^{-1/2}\sum_{a,b}\delta_{ab}\ket{ab} \;=\; \ket{\Omega},
+\begin{aligned}
+  (U\otimes U^*)\ket{\Omega}
+  &= q^{-1/2}\sum_j U\ket{j}\otimes U^*\ket{j}\\
+  &= q^{-1/2}\sum_{a,b}\Bigl(\sum_j U_{aj}\overline{U}_{bj}\Bigr)\ket{ab}\\
+  &= q^{-1/2}\sum_{a,b}\delta_{ab}\ket{ab}
+   = \ket{\Omega},
+\end{aligned}
 \end{equation*}
 using $U^*\ket{j} = \sum_b\overline U_{bj}\ket{b}$ and unitarity
 $\sum_j U_{aj}\overline U_{bj} = (UU^\dagger)_{ab} = \delta_{ab}$.
@@ -1675,6 +1687,59 @@ falsifiable photonic-runtime predictions
 Bell-qutrit-encoded photonic carrier.
 \end{remark}
 
+\subsection{The $Q_4$ Router and Tomotope/Reye Quotient}
+\label{sec:q4-router}
+
+The temporal Bell qutrit has $q+1=4$ rays in each now-context.  If these
+four rays are used once for the past choice and once for the future
+choice, the now-context becomes a $4\times4$ toroidal context square.  The
+toroidal knight graph on that board is exactly the hypercube network
+$Q_4$:
+\[
+  |V(Q_4)|=16,\qquad |E(Q_4)|=32,\qquad \deg(Q_4)=4.
+\]
+A closed toroidal knight tour is then a Gray-code Hamilton cycle.  In the
+photonic implementation this is a routing/control overlay for temporal and
+synthetic-mode labels.  It does not replace the ternary $W(3,3)$ payload;
+it schedules how the four Bell rays are revisited.
+
+\begin{theorem}[$Q_4$ plaquettes are temporal Bell histories]\label{thm:q4_plaquettes}
+The $4$-cube has
+\[
+  \binom{4}{2}2^{2}=24=q!(q+1)
+\]
+square plaquettes.  The factor $q!=6$ is the directed off-diagonal
+past/future history count, while $q+1=4$ is the Bell now-context ray
+count.  Hence the same integer $24$ simultaneously records the photonic
+router plaquettes and the positive $W(3,3)$ multiplicity.
+\end{theorem}
+
+\begin{theorem}[Reye quotient and tomotope spine]\label{thm:q4_tomotope_reye}
+The $Q_4$ face-edge incidence graph has
+\[
+  24\cdot4=32\cdot3=96
+\]
+incidences.  Quotienting by the antipodal bit-complement map gives
+$12$ face-orbits, $16$ edge-orbits, and $48$ incidences:
+\[
+  12\cdot4=16\cdot3=48.
+\]
+This quotient is the Reye $(12_4,16_3)$ configuration.  The same Levi
+graph is the tomotope edge-triangle medial layer and the $24$-cell
+axis/central-hexagon incidence graph.
+\end{theorem}
+
+\begin{corollary}[Router monodromy]\label{cor:q4_router_monodromy}
+The lifted incidence count $96$ is the tomotope automorphism order and
+$192=2\cdot96$ is the tomotope flag count.  Thus the finite monodromy
+packet closes as
+\[
+  18432 = 96\cdot192 = 32\cdot24^2.
+\]
+So the emergence shell is the squared temporal seed $24=q!(q+1)$ routed
+through the $32$ hypercube edges.
+\end{corollary}
+
 \subsection{Substrate Dictionary: Self-Entanglement at a Glance}
 \label{sec:dictionary}
 
@@ -1723,6 +1788,12 @@ Mode-space threshold              & $81$      & $q^{q+1}$                 & \cre
 QECC parameters $[[n,k,d_Z,d_X]]$ & $[[240,81,4,3]]_3$ & $[[|E|,q^{q+1},\mu,q]]$ & \cref{thm:edge_css} \\
 GHZ-2 matches matter              & $81$      & $q^4 = q^{q+1}$           & \cref{thm:two_photon_matter} \\
 Bell-cloud shell                  & $1+12+27$ & $1+k+q^q$                 & \cref{thm:nowclosure} \\
+$Q_4$ router vertices             & $16$      & $(q+1)^2$                 & \cref{sec:q4-router} \\
+$Q_4$ router edges                & $32$      & $2(q+1)^2$                & \cref{sec:q4-router} \\
+$Q_4$ square plaquettes           & $24$      & $q!(q+1)$                 & \cref{thm:q4_plaquettes} \\
+$Q_4$/tomotope incidences         & $96$      & $4q!(q+1)$                & \cref{thm:q4_tomotope_reye} \\
+Tomotope flags                    & $192$     & $2\cdot96$                & \cref{cor:q4_router_monodromy} \\
+Emergence monodromy               & $18432$   & $32\cdot24^2$             & \cref{cor:q4_router_monodromy} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1736,7 +1807,10 @@ This establishes the physical thesis: \emph{one self-entangled qutrit on one sin
 photon} carries the full $W(3,3)$ substrate as its now-context spread, with the
 Bell stabiliser line as the temporal seed.  All structural counts of
 \cref{sec:w33}---$v=40$, $\lambda=2$, $\mu=4$, $q+1=4$ rays per line, $36$ complete
-programs---read off directly from this self-entangled photonic carrier.
+programs---read off directly from this self-entangled photonic carrier.  The
+$Q_4$ router explains how that same four-ray now-context acquires a finite
+scheduling and monodromy shadow: $24=q!(q+1)$ plaquettes, a Reye
+$(12_4,16_3)$ antipodal quotient, and the tomotope/$24$-cell common spine.
 
 %======================================================================
 \section{Universal Gate Sets}

@@ -84,7 +84,14 @@ Write-Host "Using mpm:      $mpm"
 $escapedMpm = '"' + $mpm + '"'
 & cmd.exe /d /c "$escapedMpm --find-updates 1>nul 2>nul"
 
-$targets = @('w33_paper', 'W33_FOR_EVERYONE')
+$targets = @(
+    'w33_paper',
+    'W33_FOR_EVERYONE',
+    'single_photon_universal_computation',
+    'toe_constants_companion',
+    'self_entanglement_companion',
+    'toe_master_synthesis'
+)
 if ($IncludeLegacyW36) {
     $targets += 'W36_PAPER'
 }

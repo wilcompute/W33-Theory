@@ -52,7 +52,11 @@ the identity channel, $(U\otimes U^*)$-invariance for every
 $U\in\mathrm{U}(q)$, and uniform Schmidt spectrum.  The past$\otimes$future
 Hilbert space decomposes as $q^2 = q + q! = 3 + 6$ via the master equation
 $q!=2q$ at $q=3$, giving a $q=3$-dim diagonal ``now'' subspace and a
-$q!=6$-dim off-diagonal history subspace.  Three independent falsifiable
+$q!=6$-dim off-diagonal history subspace.  Squaring the four-ray now
+context gives a $4\times4$ toroidal router whose knight graph is the
+hypercube $Q_4$; its $24=q!(q+1)$ square faces quotient antipodally to
+the Reye $(12_4,16_3)$ configuration, the common finite spine of the
+tomotope and the $24$-cell axis/hexagon incidence layer.  Three independent falsifiable
 witnesses---trace-Choi visibility $V(U) = |\mathrm{Tr}(U)|/q$, Witting
 Kochen--Specker bound $34/40$, and key-agreement rate $13/40$---make the
 framework experimentally accessible.  The Bell qutrit can be prepared in
@@ -169,6 +173,58 @@ $1 + 12 + 27 = 40$ where $12 = k$ (adjacent lines) and $27 = q^q$
 (disjoint lines).
 \end{theorem}
 
+\section{The $Q_4$ Router and Tomotope/Reye Quotient}
+
+The diagonal present context has $q+1=4$ rays.  If one axis records the
+past choice and the other records the future choice, this produces a
+$4\times4$ toroidal context square.  The legal knight moves on that
+toroidal square form the four-dimensional hypercube graph $Q_4$:
+\[
+  |V(Q_4)|=16,\qquad |E(Q_4)|=32,\qquad \deg(Q_4)=4,\qquad \mathrm{diam}(Q_4)=4.
+\]
+The closed toroidal knight tour is a Gray-code Hamilton clock on this
+router.  This is a binary routing/control layer around the ternary
+self-entangled qutrit payload, not a replacement for $W(3,3)$.
+
+\begin{theorem}[$Q_4$ plaquettes are the temporal seed]\label{thm:q4_seed}
+The square faces of $Q_4$ are
+\[
+  \binom{4}{2}2^{4-2}=6\cdot4=24=q!(q+1).
+\]
+The factor $q!=6$ is the directed off-diagonal past/future history count,
+and the factor $q+1=4$ is the number of surviving Bell now-context rays.
+Thus the same $24$ which appears as the positive $W(3,3)$ multiplicity
+is also the exact face count of the now-router.
+\end{theorem}
+
+\begin{theorem}[Antipodal Reye quotient]\label{thm:q4_reye}
+The face-edge incidence graph of $Q_4$ has
+\[
+  24\cdot4=32\cdot3=96
+\]
+incidences.  Quotient by the antipodal map on $Q_4$ vertices.  The
+quotient has $12$ face-orbits, $16$ edge-orbits, and $48$ incidences,
+hence is the Reye configuration
+\[
+  (12_4,16_3),\qquad 12\cdot4=16\cdot3=48.
+\]
+This is the same Levi graph as the tomotope edge-triangle medial layer
+and the same incidence graph as the $24$-cell's $12$ antipodal axes
+against its $16$ central hexagon planes.
+\end{theorem}
+
+\begin{corollary}[Emergence monodromy from self-entanglement]\label{cor:q4_monodromy}
+The lifted $Q_4$ incidence count $96$ is also the tomotope automorphism
+order, while $192=2\cdot96$ is the tomotope flag count.  The emergence
+monodromy packet is therefore
+\[
+  18432 = 96\cdot192 = 32\cdot24^2.
+\]
+Equivalently, it is the squared temporal seed $24=q!(q+1)$ routed
+through the $32$ edges of $Q_4$.  In this finite model, emergence is the
+router lift of self-entanglement.
+\end{corollary}
+
 \section{Three Falsifiable Witnesses}
 
 \begin{theorem}[Trace-Choi witness]\label{thm:trace}
@@ -282,6 +338,12 @@ CSS code                   & $[[240,81,4,3]]_3$ & $[[|E|, q^{q+1}, \mu, q]]$ \\
 Matter sector               & $81$    & $q^{q+1}$ \\
 Bell-qutrit total capacity  & $39$    & $q\cdot\Phi_3$ \\
 Two-photon GHZ              & $81$    & $q^4 = q^{q+1}$ \\
+$Q_4$ router vertices       & $16$    & $(q+1)^2$ \\
+$Q_4$ router edges          & $32$    & $2(q+1)^2$ \\
+$Q_4$ square faces          & $24$    & $q!(q+1)$ \\
+$Q_4$/tomotope incidences   & $96$    & $4q!(q+1)$ \\
+Tomotope flags              & $192$   & $2\cdot96$ \\
+Emergence monodromy         & $18432$ & $32\cdot24^2$ \\
 $|\Sp(4,\GF{3})|$           & $51840$ & $v\cdot\mu^2\cdot q^{q+1}$ \\
 \bottomrule
 \end{tabular}\end{center}
@@ -294,8 +356,12 @@ substrate via its past$\otimes$future self-entanglement.  Three falsifiable
 experimental witnesses make the framework testable, and the matter sector
 $q^{q+1} = 81$ provides both the natural logical-qutrit space of a CSS
 code and the splitting that yields three fermion-generation registers
-under the substrate's order-$q$ automorphism.  The framework introduces
-no fitted parameters: every numerical claim reduces to substrate-primitive
+under the substrate's order-$q$ automorphism.  The $Q_4$ router sharpens
+the temporal picture: the four-ray present context has a concrete
+toroidal/hypercube routing shadow, its $24$ faces are exactly
+$q!(q+1)$, and its antipodal incidence quotient is the Reye spine shared
+by the tomotope and the $24$-cell.  The framework introduces no fitted
+parameters: every numerical claim reduces to substrate-primitive
 arithmetic at $q = 3$.
 
 \begin{thebibliography}{9}

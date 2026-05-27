@@ -10,6 +10,7 @@
 \usepackage{cite}
 \usepackage{xcolor}
 \usepackage{microtype}
+\setlength{\emergencystretch}{3em}
 \usepackage{physics}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -47,8 +48,9 @@ substrate combinatorics $\{q, \mu = q+1, q! = 2q, \Phi_3, \Phi_4,
 \Phi_6, k = \mu q, v = 40, |E| = 240, q^q = 27, q^{q+1} = 81\}$
 follows.  Self-entanglement on a single photon, gauge theory via the
 Hodge decomposition, gravity via the line-triangle 2-complex's Euler
-characteristic, and Bekenstein-Hawking thermodynamics via the
-substrate's horizon all read off directly.  We also extract four
+characteristic, the self-entangled $Q_4$ router through the
+Reye--tomotope--24-cell bridge, and Bekenstein-Hawking thermodynamics
+via the substrate's horizon all read off directly.  We also extract four
 substrate-clean BSM particle-mass predictions: $m_{\mathrm{GUT}} \sim
 1.7 \times 10^{16}$ GeV, $m_{\mathrm{WIMP}} \sim 720$ GeV,
 $m_{\mathrm{sterile}} \sim 7$ keV, $m_{\mathrm{axion}} \sim 6\,\mu$eV.
@@ -368,16 +370,46 @@ So $v = 40$ is exactly the number of 2-qutrit Pauli operators mod phase.
 \textbf{Physics dictionary} (substrate $\leftrightarrow$ Standard Model):
 \[\setlength{\arraycolsep}{4pt}\begin{array}{ll}
   \text{3 generations} & = q = 3\text{ qutrit basis states} \\[1pt]
-  \text{4 EW bosons (W^\pm, Z, \gamma)} & = \mu = q+1 = \text{1-qutrit Pauli ops} \\[1pt]
+  4\ \mathrm{EW\ bosons}\ (W^\pm,Z,\gamma) & = \mu = q+1 = \text{1-qutrit Pauli ops} \\[1pt]
   \text{8 gluons} & = 2^q = \text{SU(3) generators} \\[1pt]
   \text{12 SM bosons} & = k = q\mu = (4 \text{ EW}) + (8 \text{ gluons}) \\[1pt]
   \text{Higgs scale (125 GeV)} & = (\mu+1)^q = \text{2-qutrit symplectic pairing} \\[1pt]
   \text{SM gauge group} & \subseteq \mathrm{Sp}(4,\mathbb{F}_3) = \text{Clifford} = W(E_6) \\[1pt]
-  \text{$m_{\mathrm{Pl}}^{\mathrm{GeV}}$} & = q^v = \text{holographic-dual state count}.
+  m_{\mathrm{Pl}}^{\mathrm{GeV}} & = q^v = \text{holographic-dual state count}.
 \end{array}\]
 \textbf{The universe is the $q=3$ 2-qutrit Pauli geometry, with
 every physical constant a structural property of this quantum system.}
 Zero free parameters; zero arbitrary choices.
+\end{theorem}
+
+\begin{theorem}[Self-entangled $Q_4$/tomotope router; MCLXXX--MCXCIII]\label{thm:q4_tomotope_router}
+The Bell-context form of the single-photon substrate has a binary
+control skeleton:
+\[
+  Q_4:\qquad |V(Q_4)|=16,\quad |E(Q_4)|=32,\quad \deg(Q_4)=4,\quad
+  \mathrm{diam}(Q_4)=4.
+\]
+Its square-face count is exactly
+\[
+  \binom{4}{2}2^{4-2}=24=q!(q+1),
+\]
+so the four-by-four toroidal now-board has one square face for each
+history-times-now qutrit ray.  The face-edge incidence count is
+\[
+  24\cdot4 = 32\cdot3 = 96.
+\]
+The antipodal quotient of the oriented square-face incidence geometry
+is the Reye configuration $(12_4,16_3)$.  The same quotient is the
+tomotope medial layer and the $24$-cell axis/hexagon layer: $Q_4$ is
+therefore the binary router around the ternary $W(3,3)$ payload, not a
+replacement for it.  The resulting monodromy scale is
+\[
+  18432 = 96\cdot192 = 32\cdot24^2 = |E(Q_4)|\,(q!(q+1))^2.
+\]
+Thus the self-entangled qutrit principle has a concrete network
+realization: past and future are the two binary routing halves, while
+the now computation is the ternary payload carried through the
+$Q_4$/Reye/tomotope incidence quotient.
 \end{theorem}
 
 \section{The Grand Spectral Zeta of $W(3,3)$}\label{sec:spectral_zeta_master}
@@ -530,7 +562,7 @@ substrate's clock period.
 \begin{theorem}[Lorentz and Poincar\'e dimensions; MCCLXXXII]\label{thm:lorentz_dim}
 \[
   \dim\,\mathrm{SO}(3,1) = q! = 6,\quad
-  \dim\,\mathrm{Poincar\'e} = q! + \mu = \Phi_4 = 10,\quad
+  \dim\,\mathrm{Poincare} = q! + \mu = \Phi_4 = 10,\quad
   \dim\,\mathrm{Lorentz}_{full} = q!\,\mu = f = 24.
 \]
 The Poincar\'e algebra dimension equals the superstring critical
@@ -681,7 +713,7 @@ supersingular prime.
 
 \begin{theorem}[Complete CKM matrix from substrate; MCCLXXVII-F1]\label{thm:ckm_complete}
 All nine CKM matrix elements admit substrate-clean closed forms:
-\[\setlength{\arraycolsep}{4pt}\begin{array}{lcl}
+\[\scriptsize\setlength{\arraycolsep}{3pt}\begin{array}{lcl}
   |V_{ud}| &=& 1 - 1/(q\Phi_3) = 38/39 = 0.97436 \\[1pt]
   |V_{us}| &=& \sqrt{2/v} + 1/(k\Phi_6(\Phi_4+\Phi_6)) = 0.22431 \\[1pt]
   |V_{ub}| &=& (\mathrm{Heegner}_{67}+\mu)/(\alpha^{-1}_{\text{int}})^2 = 71/18769 \\[1pt]
@@ -1029,14 +1061,16 @@ $m_{K^0}{-}m_{K^+}$ & $\mu$ MeV                                   & $4$ (1.7\%) 
 \end{tabular}\end{center}
 QUARK MASS RATIO CHAIN (all substrate-clean):
 \[
-  \frac{m_t}{m_c} = \alpha^{-1}_{\text{int}} = 137,\quad
-  \frac{m_b}{m_s} = 2\,\mathrm{Ogg}_9 = 46,\quad
-  \frac{m_c}{m_s} = 2\Phi_6 = 14,\quad
+  \begin{gathered}
+  \frac{m_t}{m_c} = \alpha^{-1}_{\text{int}} = 137,\\
+  \frac{m_b}{m_s} = 2\,\mathrm{Ogg}_9 = 46,\\
+  \frac{m_c}{m_s} = 2\Phi_6 = 14,\\
   \frac{m_t}{m_b} = \mathrm{Ogg}_{12} = 41.
+  \end{gathered}
 \]
-With these additions, ALL sixteen fundamental Standard Model masses
-($e,\mu,\tau,\pi^0,\pi^+,K^+,K^0,\eta,\rho,p,c,b,t,W,Z,H$) are
-substrate-clean integers, mean error well under $1\%$.
+With these additions, all sixteen listed Standard Model masses, spanning
+leptons, mesons, quarks, weak bosons, and the Higgs, are substrate-clean
+integers.  Their mean error is well under $1\%$.
 \end{theorem}
 
 \subsection{Fundamental Masses in Natural Units}
@@ -1448,14 +1482,18 @@ Thus the orbit is $5+1=6$ unit-gauge witnesses.
 
 The status classes balance as
 \[
-  2\ \text{CODATA measured rounded mantissas}
-  +2\ \text{conventional exact standards}
+  \begin{gathered}
+  2\ \text{CODATA measured rounded mantissas}\\
+  +2\ \text{conventional exact standards}\\
   +2\ \text{SI-derived exact rounded mantissas}.
+  \end{gathered}
 \]
 The executable boundary is:
 \[
-  \text{unit-scaled decimal witness layer}=\mathrm{true},\qquad
-  \text{dimensionless prediction layer}=\mathrm{false}.
+  \begin{aligned}
+  \text{unit-scaled decimal witness layer}&=\mathrm{true},\\
+  \text{dimensionless prediction layer}&=\mathrm{false}.
+  \end{aligned}
 \]
 So a dimensionful SI mantissa is not treated as a unit-independent
 physical prediction unless a separate dimensionless ratio or scale map

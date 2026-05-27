@@ -9,6 +9,7 @@
 \usepackage{cite}
 \usepackage{xcolor}
 \usepackage{microtype}
+\setlength{\emergencystretch}{3em}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -38,6 +39,12 @@ $\Phi_6 = q^2-q+1$, $k = \mu q$, $v = 40$, $|E| = 240$, $q^q = 27$,
 $q^{q+1} = 81$, plus the Heegner and Ogg primes that appear in
 substrate-Pythagorean and Monster-supersingular bridges.  No fitted
 parameters appear anywhere.
+
+The dimensionless predictions are the core claims of this companion.
+The newer measured/SI constant arithmetic is included only as a
+\emph{unit-gauge witness} layer: it records exact substrate factorizations
+of conventional or rounded decimal mantissas after a unit convention is
+chosen, but it is not promoted as a unit-independent physical prediction.
 
 The leading predictions, with PDG-2024 agreement:
 \[
@@ -393,7 +400,7 @@ The top quark mass equals the largest Heegner discriminant plus the
 4th cyclotomic value.
 \end{theorem}
 
-\begin{theorem}[Electroweak mass tower]\label{thm:ew_masses}
+\begin{theorem}[Electroweak mass tower]\label{thm:ew_mass_tower}
 The four electroweak masses + Higgs VEV form a substrate ladder:
 \[
   m_W = 2v = \Phi_{12} + \Phi_6 = 80, \qquad
@@ -517,6 +524,69 @@ The RG running between Thomson and electroweak is
 $\Delta\alpha^{-1} = q^2 + 1/(\mu\Phi_6) \approx q^2 = 9$.
 \end{theorem}
 
+\section{Unit-Gauge Witness Layer}\label{sec:unit_gauge_witness_layer}
+
+The constants above are dimensionless predictions or dimensionless mass
+ratios.  MCCCLXXXIV--MCCCLXXXV add a different, stricter layer:
+dimensionful SI or conventional constants may have substrate-clean
+\emph{unit-scaled display integers}, but those integers depend on the
+chosen unit gauge.  They are evidence of compatibility with the SI/CODATA
+metrology layer, not replacements for dimensionless predictions.
+
+\begin{theorem}[Measured and derived constants as unit-gauge witnesses]\label{thm:unit_gauge_witnesses}
+The verified six-witness orbit is:
+\begin{center}\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.14\linewidth}
+                >{\raggedright\arraybackslash}p{0.23\linewidth}
+                >{\raggedright\arraybackslash}p{0.13\linewidth}
+                >{\raggedright\arraybackslash}p{0.38\linewidth}}
+\toprule
+Constant & Status & Unit-scaled integer & Substrate form \\
+\midrule
+$G$ & CODATA rounded mantissa & $667430$ &
+$2\cdot5\cdot31(73\cdot29+36)$ \\
+$g_0$ & conventional exact & $980665$ &
+$5\cdot7(73(27\cdot13+32)+6\cdot10)$ \\
+$1\,\mathrm{atm}$ & conventional exact & $101325$ &
+$3\cdot5^2\cdot7(2^7+5\cdot13)$ \\
+$m_pc^2$ in rounded keV & CODATA rounded mantissa & $938272$ &
+$2^5(10^2+3^2)(4^4+13)$ \\
+Faraday $F$ & SI-derived, rounded display & $9648533$ &
+$31(4\cdot137-1)(4\cdot137+3\cdot7)$ \\
+$R\cdot10^6$ & SI-derived, rounded display & $8314463$ &
+$(5\cdot13+2\cdot7\cdot73)(7\cdot1111-128)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The molar-gas lock uses
+\[
+  L_{\mathrm{eff}}=p_{\mathrm{Ih}}\big((k-\lambda)^2+1\big)=11\cdot101=1111.
+\]
+\end{theorem}
+
+\begin{corollary}[MCCCLXXXV boundary]\label{cor:unit_gauge_boundary}
+The six witnesses split as
+\[
+  \begin{gathered}
+  2\ \text{CODATA measured rounded mantissas}\\
+  +2\ \text{conventional exact standards}\\
+  +2\ \text{SI-derived exact rounded mantissas}.
+  \end{gathered}
+\]
+Thus
+\[
+  \begin{aligned}
+  \text{unit-scaled decimal witness layer}&=\mathrm{true},\\
+  \text{dimensionless prediction layer}&=\mathrm{false}.
+  \end{aligned}
+\]
+This preserves all verified arithmetic while preventing the category
+error of treating a dimensionful decimal mantissa as a unit-independent
+prediction.
+\end{corollary}
+
 \section{Headline Agreement Table}
 
 \begin{center}\small\begin{tabular}{llrrr}
@@ -576,6 +646,11 @@ scale and EW / cosmological scales are substrate-primitive integer
 powers of $q$, with the dS substrate identity $\mu^4 = 2^{\Phi_6+1}$
 relating the $\Lambda$ exponent ($\mu^4 = 256$) to the doubled Hubble
 exponent ($2 \cdot 2^{\Phi_6} = 256$).
+
+The companion therefore has two layers.  Dimensionless constants and
+ratios are the prediction layer.  SI, conventional, and derived
+dimensionful constants form a unit-gauge witness layer only after the
+metrology convention has fixed the display integer.
 
 \begin{thebibliography}{9}
 \bibitem{w33_paper}
