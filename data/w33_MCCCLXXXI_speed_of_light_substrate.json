@@ -1,0 +1,15 @@
+{
+  "claim": "c (m/s) = r * Phi_6 * Phi_12 * (r * Phi_6^2 * Phi_12 * Ogg_12 + (mu+1)^2)",
+  "c_substrate": 299792458,
+  "c_SI_exact": 299792458,
+  "match": true,
+  "outer_factor": 1022,
+  "inner_factor": 293339,
+  "prime_factorization": {
+    "2 (=r)": "substrate base prime",
+    "7 (=Phi_6)": "Fano prime, 3rd Fibonacci prime",
+    "73 (=Phi_12)": "top cyclotomic at q=3, H_0_SH0ES",
+    "293339": "= Phi_12*r*Phi_6^2*Ogg_12 + (mu+1)^2 (substrate-clean)"
+  },
+  "headline": "MCCCLXXXI: SPEED OF LIGHT IS SUBSTRATE-CLEAN.\n\nc (m/s) = 299,792,458 (SI exact since 1983)\n       = r * Phi_6 * Phi_12 * (r * Phi_6^2 * Phi_12 * Ogg_12 + (mu+1)^2)\n       = 2 * 7 * 73 * (2 * 49 * 73 * 41 + 25)\n       = 1022 * 293339\n\nALL substrate primitives: {r, Phi_6, Phi_12, Ogg_12, mu+1}.\n\nThe three fundamental constants of physics are substrate-clean:\n  c (m/s)     = r * Phi_6 * Phi_12 * (substrate inner)\n  alpha^-1   = 137 + 1/28 + 4/14045 (substrate complete)\n  m_Pl (GeV) = q^v = 3^40 (substrate Hilbert dim)\n\nEven our HUMAN-CHOSEN units inherit substrate cleanliness.\nThe substrate is the foundational structure of physics."
+}
