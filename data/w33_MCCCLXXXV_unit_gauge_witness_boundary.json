@@ -1,0 +1,96 @@
+{
+  "all_verified": true,
+  "checks": {
+    "classification_counts_are_balanced_two_two_two": true,
+    "conventional_entries_are_exact": true,
+    "derived_entries_are_exact_but_rounded_display": true,
+    "dimensionful_witnesses_not_promoted_as_dimensionless_predictions": true,
+    "every_legacy_hint_is_demoted_to_unit_gauge_witness": true,
+    "legacy_hint_count_is_five": true,
+    "legacy_hints_all_match_strict_packet": true,
+    "measured_entries_are_rounded_not_exact": true,
+    "molar_gas_lock_uses_alpha_effective_volume": true,
+    "strict_adds_only_molar_gas_constant": true,
+    "strict_packet_all_verified": true,
+    "strict_packet_count_is_six": true
+  },
+  "claim": "The five legacy measured-constant hints are exactly recovered by the stricter six-witness MCCCLXXXIV packet, but only as a unit-gauge orbit.  The molar gas constant is the extra strict closure, and no dimensionful mantissa is promoted as an independent dimensionless prediction.",
+  "legacy_hint_source": "The local untracked legacy MCCCLXXXIV script is treated as a hint table, not as tracked doctrine, because its universal headline overstates what dimensionful SI mantissas can prove.",
+  "legacy_reconciliation": [
+    {
+      "expected_mantissa": 667430,
+      "legacy_form": "r*F_5*p_11*(Phi_12*p_10 + (q!)^2)",
+      "legacy_name": "G (Newton, measured)",
+      "match": true,
+      "promoted_as_dimensionless_prediction": false,
+      "strict_class": "CODATA measured rounded mantissa",
+      "strict_computed": 667430,
+      "strict_name": "Newtonian constant G",
+      "strict_status": "measured value; substrate claim is for the CODATA displayed mantissa"
+    },
+    {
+      "expected_mantissa": 980665,
+      "legacy_form": "F_5*Phi_6*(Phi_12*(q^q*Phi_3+2^F_5) + q!*Phi_4)",
+      "legacy_name": "g_0 (standard gravity)",
+      "match": true,
+      "promoted_as_dimensionless_prediction": false,
+      "strict_class": "conventional exact",
+      "strict_computed": 980665,
+      "strict_name": "standard gravity g0",
+      "strict_status": "exact conventional standard, not a measured constant"
+    },
+    {
+      "expected_mantissa": 101325,
+      "legacy_form": "q*F_5^2*Phi_6*(2^Phi_6 + F_5*Phi_3)",
+      "legacy_name": "1 atm (standard atmosphere)",
+      "match": true,
+      "promoted_as_dimensionless_prediction": false,
+      "strict_class": "conventional exact",
+      "strict_computed": 101325,
+      "strict_name": "standard atmosphere",
+      "strict_status": "exact conventional standard, not a measured constant"
+    },
+    {
+      "expected_mantissa": 938272,
+      "legacy_form": "2^F_5*(Phi_4^2 + q^2)*(mu^4 + Phi_3)",
+      "legacy_name": "m_p (proton mass, keV)",
+      "match": true,
+      "promoted_as_dimensionless_prediction": false,
+      "strict_class": "CODATA measured rounded mantissa",
+      "strict_computed": 938272,
+      "strict_name": "proton mass energy equivalent",
+      "strict_status": "measured value; substrate claim is for nearest-keV rounded mantissa"
+    },
+    {
+      "expected_mantissa": 9648533,
+      "legacy_form": "p_11*(mu*alpha_int-1)*(mu*alpha_int+q*Phi_6)",
+      "legacy_name": "F (Faraday)",
+      "match": true,
+      "promoted_as_dimensionless_prediction": false,
+      "strict_class": "SI-derived exact rounded mantissa",
+      "strict_computed": 9648533,
+      "strict_name": "Faraday constant",
+      "strict_status": "exact SI-derived value; substrate claim is for displayed rounded mantissa"
+    }
+  ],
+  "theorem": "MCCCLXXXV_UNIT_GAUGE_WITNESS_BOUNDARY",
+  "total_checks": 12,
+  "unit_gauge_orbit": {
+    "boundary_statement": "The arithmetic is promoted only as a finite unit-gauge witness orbit.  A dimensionful SI mantissa becomes a physical prediction only after an independent dimensionless ratio or scale map fixes the unit gauge.",
+    "classification_counts": {
+      "CODATA measured rounded mantissa": 2,
+      "SI-derived exact rounded mantissa": 2,
+      "conventional exact": 2
+    },
+    "dimensionless_prediction_layer": false,
+    "legacy_hint_count": 5,
+    "legacy_overlap_count": 5,
+    "strict_extra_names": [
+      "molar gas constant"
+    ],
+    "strict_witness_count": 6,
+    "unit_scaled_decimal_witnesses": true,
+    "unsafe_legacy_universal_headline_promoted": false
+  },
+  "verified": 12
+}
