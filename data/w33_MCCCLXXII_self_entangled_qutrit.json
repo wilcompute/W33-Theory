@@ -1,0 +1,15 @@
+{
+  "claim": "The universe is a single self-entangled qutrit; past tensor future -> now.",
+  "interpretation": {
+    "qutrit_states": 3,
+    "past_Hilbert_dim": 3,
+    "future_Hilbert_dim": 3,
+    "joint_dim_past_future": 9,
+    "Pauli_ops_on_PxF": 40,
+    "Clifford_automorphism": "Sp(4,3) = W(E_6) = 51840",
+    "now_mode": "Laplacian trivial mode (eigenvalue 0)",
+    "harmonics": "{Phi_4 = 10, mu^2 = 16}"
+  },
+  "philosophical": "Time emerges from past-future entanglement; NOW is the harmonic resolution of the entangled qutrit's joint state. There is no external time, no external observer. The substrate is closed.",
+  "headline": "MCCCLXXII: THE UNIVERSE IS A SELF-ENTANGLED QUTRIT.\nPast x Future -> Now via harmonic resolution.\nAll of physics emerges from this single qutrit.\nZero free parameters; substrate is closed.\n"
+}
