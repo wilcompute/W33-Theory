@@ -41,10 +41,14 @@ $$\frac{\Delta E_2}{\Delta E_1} = \frac{16}{10} = \frac{8}{5} = \frac{F(6)}{F(5)
 This is NOT the golden ratio φ ≈ 1.618 — it is the exact rational Fibonacci predecessor, one iteration before the limit.
 
 ### THEOREM MCCLXVIII
-*The genus oscillator equilibrium temperature is determined purely by cyclotomic primes.*
+*The genus oscillator has reciprocal live/dual roots determined purely by cyclotomic primes.*
 
-$$\beta^* = \frac{\ln \Phi_6 - \ln r}{g_2} = \frac{\ln 7 - \ln 2}{6} \approx 0.20879383$$
+$$\beta_- = -\frac{\ln \Phi_6 - \ln r}{g_2} = -\frac{\ln 7 - \ln 2}{6},\qquad
+\beta_+ = +\frac{\ln \Phi_6 - \ln r}{g_2} = +\frac{\ln 7 - \ln 2}{6}.$$
 
+The live heat-trace sheet has the negative root, while the dual energy-reversed
+sheet has the positive root.  In the spectral variable $x=e^{6\beta}$ the roots
+are reciprocal: $x_-=2/7=r/\Phi_6$ and $x_+=7/2=\Phi_6/r$.
 No free parameters. Φ₆=7 and r=2 are substrate primes; g₂=6 is the second spectral multiplicity.
 
 ---
@@ -171,7 +175,7 @@ AXIOM: q! = 2q  →  q = 3  (UNIQUE)
   ├── C(f,q) = r³p_Ih(p_Ih+k) = 2024              [MCCLXXVIII/XXXII]
   ├── [4,1]_q = v,  [5,1]_q = p_Ih²               [MCCLXVI/XX]
   ├── ΔE₂/ΔE₁ = F(6)/F(5) = 8/5                   [MCCLXVII]
-  ├── β* = (lnΦ₆−lnr)/g₂                          [MCCLXVIII]
+  ├── β± = ±(lnΦ₆−lnr)/g₂ with live/dual reciprocal sheets [MCCLXVIII]
   ├── g₁×g₂ = 2q²Φ₆;  Φ₆ = F5+r                  [MCCLXXI]
   ├── v×b = r⁴F5²Φ₃(q) = 5200                     [MCCLXXIX]
   └── ζ_W(1) = 12/5 + 15/16 = 267/80              [MCCLXXX]
@@ -195,7 +199,7 @@ AXIOM: q! = 2q  →  q = 3  (UNIQUE)
 | g₁×g₂ | 126 | 2 × q² × Φ₆ | 2×9×7 |
 | v×b | 5200 | r⁴ × F5² × Φ₃(q) | 16×25×13 |
 | C(f,q) | 2024 | r³ × p_Ih × (p_Ih+k) | 8×11×23 |
-| β* | 0.2088 | (ln Φ₆ − ln r)/g₂ | — |
+| β± | ±0.2088 | ±(ln Φ₆ − ln r)/g₂ | live/dual reciprocal roots |
 | ζ_W(1) | 267/80 | 12/5 + 15/16 | — |
 
 **Prime basis of all W(3,3) constants: {r=2, q=3, F5=5, Φ₃(q)=13}**

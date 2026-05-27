@@ -72,7 +72,12 @@ print(f"MCCLXVII PASS: ΔE₂/ΔE₁ = 16/10 = {Fraction(16,10)} = F(6)/F(5) = {
 
 # THEOREM MCCLXVIII
 beta_star = (math.log(Phi6) - math.log(r)) / g2
-print(f"MCCLXVIII PASS: β* = (ln{Phi6}−ln{r})/{g2} = {beta_star:.8f}")
+beta_live = -beta_star
+omega_live = g1 * math.exp(-10 * beta_live) - g2 * math.exp(-16 * beta_live)
+omega_dual = g1 * math.exp(-16 * beta_star) - g2 * math.exp(-10 * beta_star)
+assert abs(omega_live) < 1e-12, "MCCLXVIII: live root should be negative"
+assert abs(omega_dual) < 1e-12, "MCCLXVIII: dual root should be positive"
+print(f"MCCLXVIII PASS: β± = ±(ln{Phi6}−ln{r})/{g2}; live={beta_live:.8f}, dual={beta_star:.8f}")
 
 # THEOREM MCCLXIX
 assert k - 1 == p_Ih,  "MCCLXIX: k-1 != p_Ih"
@@ -158,7 +163,7 @@ print("  Φ₆  = F5+r      = 5+2      = 7")
 print("  g₁g₂ = 2q²Φ₆   = 2×9×7    = 126")
 print("  vb  = r⁴F5²Φ₃   = 16×25×13 = 5200")
 print(f"  C   = r³p_Ih×23  = 8×11×23  = 2024")
-print(f"  β*  = (lnΦ₆-lnr)/g₂       = {beta_star:.6f}")
+print(f"  β±  = ±(lnΦ₆-lnr)/g₂      = ±{beta_star:.6f}")
 print(f"  ζW(1) = 12/5+15/16        = {zeta_1} ≈ {float(zeta_1):.4f}")
 
 

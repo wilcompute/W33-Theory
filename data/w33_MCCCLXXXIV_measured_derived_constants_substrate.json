@@ -1,0 +1,134 @@
+{
+  "all_verified": true,
+  "boundary": "This is a decimal unit-system witness layer, not a dimensionless prediction layer.  G and proton mass use rounded CODATA mantissas; g0 and atm are conventional exact values; Faraday and R are exact SI-derived constants but the promoted integers are rounded display mantissas.",
+  "checks": {
+    "all_scaled_integers_match": true,
+    "classification_boundary_present": true,
+    "exact_or_derived_entries_present": true,
+    "faraday_rounded": true,
+    "gas_constant_factorization": true,
+    "gas_factor_a": true,
+    "gas_factor_b": true,
+    "leff_alpha": true,
+    "molar_gas_rounded": true,
+    "newton_G_mantissa": true,
+    "not_all_entries_are_measured": true,
+    "proton_keV_rounded": true,
+    "rounded_boundary_present": true,
+    "standard_atmosphere_exact": true,
+    "standard_gravity_exact": true
+  },
+  "claim": "Six non-SI-defining or derived constants have substrate-clean unit-scaled decimal witnesses when their exact/conventional/measured status is kept explicit.",
+  "sources": {
+    "CODATA": "NIST CODATA 2022 values; G=6.67430(15)e-11, proton mass energy equivalent=938.27208943(29) MeV, Faraday=96485.33212..., R=8.314462618...",
+    "SI": "NIST SI 2019 for exact defining constants; standard gravity and standard atmosphere are conventional exact standards."
+  },
+  "theorem": "MCCCLXXXIV_MEASURED_DERIVED_CONSTANTS_SUBSTRATE_WITNESSES",
+  "total_checks": 15,
+  "verified": 15,
+  "witnesses": [
+    {
+      "class": "CODATA measured rounded mantissa",
+      "computed": 667430,
+      "decimal_reading": "6.67430e-11 = 667430e-16",
+      "exponent_witness": "scientific exponent -11 = -p_Ih; integer scale -16 = -mu^2",
+      "factorization": {
+        "2": 1,
+        "5": 1,
+        "31": 1,
+        "2153": 1
+      },
+      "match": true,
+      "name": "Newtonian constant G",
+      "scaled_integer": 667430,
+      "source_value": "G = 6.67430(15)e-11 m^3 kg^-1 s^-2",
+      "status": "measured value; substrate claim is for the CODATA displayed mantissa",
+      "substrate_form": "r*F5*p11*(Phi12*p10+(q!)^2)"
+    },
+    {
+      "class": "conventional exact",
+      "computed": 980665,
+      "decimal_reading": "9.80665 = 980665e-5",
+      "exponent_witness": "integer scale -5 = -F5",
+      "factorization": {
+        "5": 1,
+        "7": 1,
+        "28019": 1
+      },
+      "match": true,
+      "name": "standard gravity g0",
+      "scaled_integer": 980665,
+      "source_value": "g0 = 9.80665 m s^-2 exactly",
+      "status": "exact conventional standard, not a measured constant",
+      "substrate_form": "F5*Phi6*(Phi12*(q^q*Phi3+2^F5)+q!*Phi4)"
+    },
+    {
+      "class": "conventional exact",
+      "computed": 101325,
+      "decimal_reading": "101325 Pa",
+      "exponent_witness": "integer exponent 0 = now",
+      "factorization": {
+        "3": 1,
+        "5": 2,
+        "7": 1,
+        "193": 1
+      },
+      "match": true,
+      "name": "standard atmosphere",
+      "scaled_integer": 101325,
+      "source_value": "1 atm = 101325 Pa exactly",
+      "status": "exact conventional standard, not a measured constant",
+      "substrate_form": "q*F5^2*Phi6*(2^Phi6+F5*Phi3)"
+    },
+    {
+      "class": "CODATA measured rounded mantissa",
+      "computed": 938272,
+      "decimal_reading": "938.27208943 MeV rounds to 938272 keV = 9.38272e5 keV",
+      "exponent_witness": "keV scientific exponent 5 = F5; MeV scale -3 = -q",
+      "factorization": {
+        "2": 5,
+        "109": 1,
+        "269": 1
+      },
+      "match": true,
+      "name": "proton mass energy equivalent",
+      "scaled_integer": 938272,
+      "source_value": "m_p c^2 = 938.27208943(29) MeV",
+      "status": "measured value; substrate claim is for nearest-keV rounded mantissa",
+      "substrate_form": "2^F5*(Phi4^2+q^2)*(mu^4+Phi3)"
+    },
+    {
+      "class": "SI-derived exact rounded mantissa",
+      "computed": 9648533,
+      "decimal_reading": "96485.33212... rounds to 9648533e-2 = 9.648533e4",
+      "exponent_witness": "scientific exponent 4 = mu; rounded-integer scale -2 = -r",
+      "factorization": {
+        "31": 1,
+        "547": 1,
+        "569": 1
+      },
+      "match": true,
+      "name": "Faraday constant",
+      "scaled_integer": 9648533,
+      "source_value": "F = N_A e = 96485.33212... C mol^-1",
+      "status": "exact SI-derived value; substrate claim is for displayed rounded mantissa",
+      "substrate_form": "p11*(mu*alpha_int-1)*(mu*alpha_int+q*Phi6)"
+    },
+    {
+      "class": "SI-derived exact rounded mantissa",
+      "computed": 8314463,
+      "decimal_reading": "8.314462618... rounds to 8314463e-6",
+      "exponent_witness": "micro-scale exponent -6 = -q!",
+      "factorization": {
+        "1087": 1,
+        "7649": 1
+      },
+      "match": true,
+      "name": "molar gas constant",
+      "scaled_integer": 8314463,
+      "source_value": "R = N_A k_B = 8.314462618... J mol^-1 K^-1",
+      "status": "exact SI-derived value; substrate claim is for 1e6-rounded mantissa",
+      "substrate_form": "(F5*Phi3+r*Phi6*Phi12)*(Phi6*L_eff-2^Phi6)"
+    }
+  ]
+}

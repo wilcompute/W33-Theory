@@ -38,7 +38,7 @@ where r=2 is the base prime, q=3 is the unique solution to q!=2q, F₅=5 is the 
 | ΔE₁ | 10 | — | 1st energy gap |
 | ΔE₂ | 16 | — | 2nd energy gap |
 | ΔE₂/ΔE₁ | 8/5 | F(6)/F(5) | Fibonacci-tuned |
-| β* | 0.2088 | (ln Φ₆−ln r)/g₂ | Equilibrium temperature |
+| β± | ±0.2088 | ±(ln Φ₆−ln r)/g₂ | Reciprocal live/dual roots |
 | ζ_W(1) | 267/80 | 12/5 + 15/16 | Spectral zeta at s=1 |
 
 ## Products and Composites
