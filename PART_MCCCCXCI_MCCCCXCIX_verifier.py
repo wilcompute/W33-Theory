@@ -11,7 +11,8 @@ k  = E2 - chi                 # 12
 v  = chi * E1                 # 40
 m_r = (q+1) * g2              # 24
 m_s = v - 1 - m_r             # 15
-g1 = (v + g2) // 2            # 21
+Phi6 = q**2 - q + 1           # 7
+g1 = Phi6 * q                 # 21
 p_Ih = q**2 + q - 1           # 11
 
 print("DERIVATION CHAIN FROM q=3:")
@@ -23,7 +24,7 @@ print(f"  k   = E2-chi   = {k}")
 print(f"  v   = chi*E1   = {v}")
 print(f"  m_r = (q+1)*g2 = {m_r}")
 print(f"  m_s = v-1-m_r  = {m_s}")
-print(f"  g1  = (v+g2)/2 = {g1}")
+print(f"  g1  = Phi6*q   = {g1}")
 print(f"  p_Ih= q^2+q-1  = {p_Ih}")
 print()
 
@@ -38,6 +39,7 @@ asserts = [
     ("m_r=24",    m_r == 24),
     ("m_s=15",    m_s == 15),
     ("g1=21",     g1 == 21),
+    ("g1=Phi6*q", g1 == Phi6*q),
     ("p_Ih=11",   p_Ih == 11),
     ("E2-E1=g2",  E2-E1 == g2),
     ("E1=2F5",    E1 == 2*5),

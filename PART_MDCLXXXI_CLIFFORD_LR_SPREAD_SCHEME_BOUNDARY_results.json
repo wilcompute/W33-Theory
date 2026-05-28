@@ -1,0 +1,184 @@
+{
+  "part": "MDCLXXXI",
+  "theorem": "Clifford L/R grid vs W33 spread scheme boundary",
+  "input_bridge": "MCCCCXVII-MCCCCXXXII Clifford fibration selector",
+  "boundary_identity": "36 Clifford L/R pairs are count-equal to 36 W33 spreads, but their natural schemes differ",
+  "clifford_lr_report": {
+    "lr_pair_count": 36,
+    "shared_decagon_count_profile": {
+      "2": 36
+    },
+    "vertex_union_size_profile": {
+      "20": 36
+    },
+    "decagon_overlap_profile": {
+      "0": 630
+    },
+    "vertex_overlap_profile": {
+      "0": 180,
+      "4": 450
+    },
+    "row_column_profile": {
+      "(0, True)": 180,
+      "(4, False)": 450
+    },
+    "overlap_0_graph": {
+      "vertices": 36,
+      "overlap_value": 0,
+      "degree_profile": {
+        "10": 36
+      },
+      "edge_count": 180,
+      "adjacent_common_neighbor_profile": {
+        "4": 180
+      },
+      "nonadjacent_common_neighbor_profile": {
+        "2": 450
+      }
+    },
+    "overlap_4_graph": {
+      "vertices": 36,
+      "overlap_value": 4,
+      "degree_profile": {
+        "25": 36
+      },
+      "edge_count": 450,
+      "adjacent_common_neighbor_profile": {
+        "16": 450
+      },
+      "nonadjacent_common_neighbor_profile": {
+        "20": 180
+      }
+    },
+    "sample_lr_pairs": [
+      {
+        "address": [
+          0,
+          0
+        ],
+        "shared_decagons": [
+          6,
+          48
+        ],
+        "vertex_union_size": 20
+      },
+      {
+        "address": [
+          0,
+          1
+        ],
+        "shared_decagons": [
+          11,
+          65
+        ],
+        "vertex_union_size": 20
+      },
+      {
+        "address": [
+          0,
+          2
+        ],
+        "shared_decagons": [
+          19,
+          52
+        ],
+        "vertex_union_size": 20
+      },
+      {
+        "address": [
+          0,
+          3
+        ],
+        "shared_decagons": [
+          22,
+          36
+        ],
+        "vertex_union_size": 20
+      },
+      {
+        "address": [
+          0,
+          4
+        ],
+        "shared_decagons": [
+          41,
+          53
+        ],
+        "vertex_union_size": 20
+      },
+      {
+        "address": [
+          0,
+          5
+        ],
+        "shared_decagons": [
+          3,
+          26
+        ],
+        "vertex_union_size": 20
+      }
+    ],
+    "checks": {
+      "lr_pair_count_is_36": true,
+      "each_lr_pair_has_two_shared_decagons": true,
+      "each_lr_pair_has_twenty_vertices": true,
+      "distinct_lr_pairs_share_no_decagons": true,
+      "vertex_overlap_profile_is_180_and_450": true,
+      "zero_overlap_is_same_row_or_column": true,
+      "zero_overlap_graph_is_rook_6_by_6": true,
+      "four_overlap_graph_is_complement": true
+    },
+    "n_verified": 8
+  },
+  "w33_spread_report": {
+    "spread_count": 36,
+    "spread_overlap_profile": {
+      "1": 360,
+      "4": 270
+    },
+    "overlap_4_graph": {
+      "vertices": 36,
+      "overlap_value": 4,
+      "degree_profile": {
+        "15": 36
+      },
+      "edge_count": 270,
+      "adjacent_common_neighbor_profile": {
+        "6": 270
+      },
+      "nonadjacent_common_neighbor_profile": {
+        "6": 360
+      }
+    },
+    "overlap_1_graph": {
+      "vertices": 36,
+      "overlap_value": 1,
+      "degree_profile": {
+        "20": 36
+      },
+      "edge_count": 360,
+      "adjacent_common_neighbor_profile": {
+        "10": 360
+      },
+      "nonadjacent_common_neighbor_profile": {
+        "12": 270
+      }
+    },
+    "checks": {
+      "spread_count_is_36": true,
+      "spread_overlap_profile_is_270_and_360": true,
+      "overlap_4_graph_is_srg_36_15_6_6": true,
+      "overlap_1_graph_is_srg_36_20_10_12": true
+    },
+    "n_verified": 4
+  },
+  "claim_boundary": "count-level correspondence only; the raw L/R Clifford grid is the 6x6 rook scheme, not the W33 spread association scheme",
+  "reading": "The 600-cell special Clifford fibrations give 36 L/R cross-pairs. Each cross-pair is two shared great decagons with 20 vertices. Natural vertex-overlap relations split as 180 pairs with overlap 0 and 450 pairs with overlap 4, exactly the same-row/same-column and different-row/different-column relations of a 6x6 grid. The zero-overlap graph is srg(36,10,4,2). W33 spreads instead have overlap profile 270/360 and graphs srg(36,15,6,6) and srg(36,20,10,12). Therefore the raw Clifford L/R count does not supply a canonical spread labeling. The missing object is an extra symplectic selector that twists the 6x6 grid into the W33 spread scheme.",
+  "checks": {
+    "both_object_counts_are_36": true,
+    "lr_zero_overlap_graph_not_spread_overlap_4_graph": true,
+    "lr_four_overlap_graph_not_spread_overlap_1_graph": true,
+    "natural_schemes_are_not_isomorphic_by_degree": true
+  },
+  "n_verified": 4
+}

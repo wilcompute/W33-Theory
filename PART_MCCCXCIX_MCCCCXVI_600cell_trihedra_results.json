@@ -12,7 +12,12 @@
     "line_graph_triangles": 160,
     "partial_spreads_size3": 3240,
     "schlaefli_degree": 8,
-    "schlaefli_eigenvalues": {"8": 1, "2": 12, "-1": 8, "-4": 6},
+    "schlaefli_eigenvalues": {
+      "8": 1,
+      "2": 12,
+      "-1": 8,
+      "-4": 6
+    },
     "schlaefli_identity": "Paley_graph_GF(27)"
   },
   "cell600": {

@@ -1,5 +1,5 @@
 """MCCCCLXXI-MCCCCLXXX: Sp(4,3) + Motive + Factorial Tower verification."""
-import math, sympy as sp
+import math
 
 q = 3
 g1, g2 = 21, 6

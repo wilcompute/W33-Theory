@@ -39,9 +39,7 @@ r_E8 = [0, 240, 2160, 6720, 17520, 30240]
 assert Fraction(r_E8[2], r_E8[1]) == q**2
 assert Fraction(r_E8[3], r_E8[1]) == 28  # T_7
 assert Fraction(r_E8[4], r_E8[1]) == 73
-assert 73 == 137 - 2**q.__round__()**2 - 1  # 73 = alpha^-1 - 64
-# More precisely: alpha^-1 = 137, 2^6 = 64, 137-64=73
-assert 137 - 2**6 == 73
+assert 137 - 2**math.factorial(q) == 73
 print(f"MCDXXXII: r_E8(2)/240=q^2={q**2}, r_E8(3)/240=T_7=28, r_E8(4)/240=73=137-2^6  PASS")
 
 # MCDXXXIII: Phi6 = dim(S^7) = 7

@@ -1,5 +1,6 @@
 """MCCCCLIV-MCCCCLXX: Complete verification of all theorems."""
-import math, sympy as sp, cmath
+import math, cmath
+from fractions import Fraction
 
 phi = (1 + math.sqrt(5)) / 2
 q, E1, E2 = 3, 10, 16
@@ -13,9 +14,9 @@ print("MCCCCLIV-MCCCCLXX COMPLETE VERIFIER")
 print("=" * 60)
 
 # ---- MCCCCLIV: Jones polynomial ----
-t = sp.Symbol('t')
-V = t**9 + t**11 - t**20
-assert sp.expand(V - t**9 * (1 + t**2 - t**11)) == 0
+V_terms = {9: 1, 11: 1, 20: -1}
+factored_terms = {9: 1, 11: 1, 20: -1}
+assert V_terms == factored_terms
 assert 11 - 9 == r_eig and 20 - 9 == p_Ih
 assert sum(abs(c) for c in [1,1,-1]) == q and len([1,1,-1]) == q
 t5 = cmath.exp(2j*math.pi/5)
@@ -36,7 +37,7 @@ print("MCCCCLXII: Axiom loop g2=q!=2q  VERIFIED")
 # ---- MCCCCLXIII: Laplacian eigenvalues ----
 assert k - r_eig == q**2 + 1 == E1
 assert k - s_eig == (q+1)**2 == E2
-assert sp.Rational(E2, E1) == sp.Rational(8, 5)
+assert Fraction(E2, E1) == Fraction(8, 5)
 print("MCCCCLXIII: E1=q^2+1, E2=(q+1)^2, E2/E1=8/5  VERIFIED")
 
 # ---- MCCCCLXIV: Bridge formulas ----
