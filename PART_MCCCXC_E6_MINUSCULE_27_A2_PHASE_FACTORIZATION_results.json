@@ -1,0 +1,1050 @@
+{
+  "part": "MCCCXC",
+  "theorem": "E6 minuscule 27 x A2 phase factorization",
+  "input_bridge": "MCCCLXXXIX E8 -> E6 x A2 coordinate decomposition",
+  "factorization_identity": "81 = 27_E6 * 3_A2",
+  "matter_sector_reports": [
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_1",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-1, 3), Fraction(-2, 3)), (Fraction(-1, 3), Fraction(1, 3)), (Fraction(2, 3), Fraction(1, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_2",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-2, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(2, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "-1/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "2/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-2/3",
+          "-1/3"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "1/3",
+          "-1/3"
+        ],
+        [
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "1/3",
+          "2/3"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_1",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-1, 3), Fraction(-2, 3)), (Fraction(-1, 3), Fraction(1, 3)), (Fraction(2, 3), Fraction(1, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2/3",
+          "-1/3"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "-1/3"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "2/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_2",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-2, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(2, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_1",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-1, 3), Fraction(-2, 3)), (Fraction(-1, 3), Fraction(1, 3)), (Fraction(2, 3), Fraction(1, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2/3",
+          "-1/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "-1/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "2/3"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_2",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-2, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(2, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/3",
+          "1/3"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2/3",
+          "1/3"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_1",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-1, 3), Fraction(-2, 3)), (Fraction(-1, 3), Fraction(1, 3)), (Fraction(2, 3), Fraction(1, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "1/3",
+          "-1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "1/3",
+          "2/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "-2/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "1/3",
+          "2/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_2",
+      "matter_root_count": 81,
+      "projected_weight_count": 27,
+      "multiplicity_profile": {
+        "3": 27
+      },
+      "a2_phase_set_profile": {
+        "((Fraction(-2, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(-1, 3)), (Fraction(1, 3), Fraction(2, 3)))": 27
+      },
+      "projected_weight_rank": 6,
+      "projected_weight_norm_profile": {
+        "4/3": 27
+      },
+      "projected_weight_local_profile": {
+        "((Fraction(-2, 3), 10), (Fraction(1, 3), 16), (Fraction(4, 3), 1))": 27
+      },
+      "projected_weight_sum_zero": true,
+      "projected_weight_gram_square_minus_6_gram_max_residual": "0",
+      "e6_reflection_closure_failures": 0,
+      "e6_root_pairing_profile": {
+        "-1": 432,
+        "0": 1080,
+        "1": 432
+      },
+      "schlaefli_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "16": 27
+        },
+        "edge_count": 216,
+        "adjacent_common_neighbor_profile": {
+          "10": 216
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "8": 135
+        }
+      },
+      "complement_graph": {
+        "vertices": 27,
+        "degree_profile": {
+          "10": 27
+        },
+        "edge_count": 135,
+        "adjacent_common_neighbor_profile": {
+          "1": 135
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "5": 216
+        }
+      },
+      "sample_projected_weights": [
+        [
+          "-2/3",
+          "-1/3",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "-1/3",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2/3",
+          "-1/3",
+          "2/3",
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "-2/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "-1/3",
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "-1/3",
+          "-2/3",
+          "0",
+          "0",
+          "2/3",
+          "1/3",
+          "0",
+          "0"
+        ]
+      ],
+      "checks": {
+        "sector_has_81_roots": true,
+        "projection_has_27_weights": true,
+        "each_weight_has_three_a2_phases": true,
+        "projected_weight_rank_is_6": true,
+        "projected_weight_norm_profile_is_4_over_3": true,
+        "projected_weights_have_zero_barycenter": true,
+        "projected_weight_gram_is_6_scaled_projector": true,
+        "e6_root_reflections_preserve_27_weights": true,
+        "e6_root_pairing_profile_is_minuscule": true,
+        "schlaefli_graph_is_srg_27_16_10_8": true,
+        "complement_graph_is_srg_27_10_1_5": true
+      },
+      "n_verified": 11
+    }
+  ],
+  "claim_boundary": "finite representation-geometry theorem; it identifies the exact E6 minuscule weight and A2 phase factorization inside the W33-derived E8 roots, without asserting a continuum particle spectrum by itself",
+  "reading": "Each 81-root matter sector in the exact W33-derived E8 -> E6 x A2 split factors as 27 E6 projected weights times three A2 phase lifts. The 27 weights are rank 6, norm 4/3, have zero barycenter, satisfy G^2=6G, are closed under the E6 root reflections, and carry the Schlaefli graph srg(27,16,10,8). This upgrades the matter-sector count into the finite E6 minuscule representation geometry.",
+  "checks": {
+    "all_eight_matter_sectors_verify_11_checks": true,
+    "all_eight_matter_sectors_are_27_times_3": true,
+    "all_eight_projected_weight_sets_have_rank_6": true,
+    "all_eight_schlaefli_graphs_are_srg_27_16_10_8": true,
+    "all_eight_weight_sets_are_e6_reflection_closed": true
+  },
+  "n_verified": 5
+}
