@@ -1,0 +1,140 @@
+{
+  "part": "MDCLXXXIII",
+  "theorem": "Clifford antipodal A5 selector group",
+  "input_bridge": "MDCLXXXII Clifford antipodal / W33 spread incidence bridge",
+  "selector_group_identity": "60 antipodal Clifford addresses = A5 in its degree-six action",
+  "permutation_count": 60,
+  "order_profile": {
+    "1": 1,
+    "2": 15,
+    "3": 20,
+    "5": 24
+  },
+  "parity_profile": {
+    "0": 60
+  },
+  "fixed_point_profile": {
+    "0": 20,
+    "1": 24,
+    "2": 15,
+    "6": 1
+  },
+  "two_transitivity_profile": {
+    "2": 900
+  },
+  "cell_preimage_profile": {
+    "10": 36
+  },
+  "sample_address_permutations": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "1": [
+      3,
+      4,
+      2,
+      0,
+      1,
+      5
+    ],
+    "2": [
+      3,
+      1,
+      5,
+      0,
+      4,
+      2
+    ],
+    "3": [
+      0,
+      4,
+      5,
+      3,
+      1,
+      2
+    ],
+    "4": [
+      2,
+      3,
+      4,
+      5,
+      0,
+      1
+    ],
+    "5": [
+      1,
+      5,
+      3,
+      4,
+      2,
+      0
+    ],
+    "6": [
+      1,
+      2,
+      0,
+      4,
+      5,
+      3
+    ],
+    "7": [
+      5,
+      3,
+      1,
+      2,
+      0,
+      4
+    ],
+    "8": [
+      4,
+      2,
+      3,
+      1,
+      5,
+      0
+    ],
+    "9": [
+      2,
+      0,
+      1,
+      5,
+      3,
+      4
+    ],
+    "10": [
+      5,
+      0,
+      4,
+      2,
+      3,
+      1
+    ],
+    "11": [
+      4,
+      5,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "claim_boundary": "identifies the raw Clifford antipodal selector as an A5 torsor; it does not yet construct the W33 spread selector",
+  "reading": "Every antipodal 600-cell address chooses one R-fibration in each of the six L rows, and every R-fibration is chosen once. Hence each address is a permutation of six letters. The 60 permutations close under composition, are all even, and have order profile 1,15,20,24 for orders 1,2,3,5, exactly the icosahedral rotation group A5. The L/R cells are the 36 action fibers i -> j, each containing 10 group elements. The raw Clifford selector is therefore an A5 degree-six torsor. The remaining selector problem is to twist this A5 torsor into the W33 spread association scheme.",
+  "checks": {
+    "there_are_60_distinct_permutations": true,
+    "identity_is_present": true,
+    "closed_under_composition": true,
+    "closed_under_inverse": true,
+    "all_permutations_are_even": true,
+    "order_profile_is_a5": true,
+    "fixed_point_profile_matches_degree_6_a5": true,
+    "action_is_two_transitive_with_two_lifts": true,
+    "each_lr_cell_has_10_group_elements": true
+  },
+  "n_verified": 9
+}
