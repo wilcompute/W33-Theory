@@ -1,0 +1,569 @@
+{
+  "part": "MCCCXCI",
+  "theorem": "E6 45 tritangent zero-sum bridge",
+  "input_bridge": "MCCCXC E6 minuscule 27 x A2 phase factorization",
+  "tritangent_identity": "27 E6 weights -> 45 zero-sum triples",
+  "matter_sector_reports": [
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_1",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          11,
+          26
+        ],
+        [
+          0,
+          14,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          10,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          16,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_2",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          15,
+          26
+        ],
+        [
+          0,
+          16,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          12,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_1",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          11,
+          26
+        ],
+        [
+          0,
+          14,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          10,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          16,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_2",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          15,
+          26
+        ],
+        [
+          0,
+          16,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          12,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_1",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          15,
+          26
+        ],
+        [
+          0,
+          16,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          12,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_2",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          11,
+          26
+        ],
+        [
+          0,
+          14,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          10,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          16,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_1",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          11,
+          26
+        ],
+        [
+          0,
+          14,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          10,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          16,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_2",
+      "weight_count": 27,
+      "edge_count": 135,
+      "triangle_count": 45,
+      "zero_sum_triangle_count": 45,
+      "edge_triangle_multiplicity_profile": {
+        "1": 135
+      },
+      "vertex_triangle_multiplicity_profile": {
+        "5": 27
+      },
+      "triangle_inner_product_profile": {
+        "(Fraction(-2, 3), Fraction(-2, 3), Fraction(-2, 3))": 45
+      },
+      "sample_triangles": [
+        [
+          0,
+          15,
+          26
+        ],
+        [
+          0,
+          16,
+          25
+        ],
+        [
+          0,
+          17,
+          24
+        ],
+        [
+          0,
+          19,
+          23
+        ],
+        [
+          0,
+          20,
+          22
+        ],
+        [
+          1,
+          12,
+          26
+        ],
+        [
+          1,
+          13,
+          25
+        ],
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      "checks": {
+        "weight_count_is_27": true,
+        "edge_count_is_135": true,
+        "triangle_count_is_45": true,
+        "each_edge_lies_in_one_triangle": true,
+        "each_weight_lies_in_five_triangles": true,
+        "all_triangles_are_zero_sum": true,
+        "all_triangle_edges_have_inner_minus_2_over_3": true
+      },
+      "n_verified": 7
+    }
+  ],
+  "claim_boundary": "finite E6 minuscule incidence theorem; it identifies the zero-sum triple/tritangent layer inside the W33-derived matter weights, without asserting a continuum Yukawa model by itself",
+  "reading": "The complement Schlaefli graph on each 27-weight E6 minuscule matter chart has 135 edges and 45 triangles. Every edge lies in exactly one triangle, every weight lies in five triangles, and every triangle is a zero-sum triple of projected E6 weights. This is the finite cubic incidence layer: the 27 matter weights carry exactly 45 tritangent zero-sum triples.",
+  "checks": {
+    "all_eight_reports_verify_7_checks": true,
+    "all_eight_reports_have_45_zero_sum_triangles": true,
+    "all_eight_reports_have_edge_unique_triangle_property": true,
+    "all_eight_reports_have_five_triangles_per_weight": true
+  },
+  "n_verified": 4
+}
