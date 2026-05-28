@@ -1,0 +1,239 @@
+{
+  "part": "MCCCLXXXIX",
+  "theorem": "E8 -> E6 x A2 coordinate decomposition from W33 tetracode roots",
+  "input_bridge": "MCCCLXXXVIII exact tetracode E8 root-system bridge",
+  "coordinate_reading": "The four A2 coordinates are the four W33 anchor-line coordinates used to read the affine tetracode. Choosing any one coordinate splits the exact E8 roots into E6 roots, A2 roots, and two conjugate 81-root matter sectors.",
+  "decomposition_identity": "240 = 72_E6 + 6_A2 + 81 + 81",
+  "coordinate_reports": [
+    {
+      "coordinate": 0,
+      "sector_counts": {
+        "E6_zero_coordinate_roots": 72,
+        "A2_coordinate_roots": 6,
+        "matter_81_coset_1": 81,
+        "matter_81_coset_2": 81
+      },
+      "sector_ranks": {
+        "E6_zero_coordinate_roots": 6,
+        "A2_coordinate_roots": 2,
+        "matter_81_coset_1": 8,
+        "matter_81_coset_2": 8
+      },
+      "E6_zero_coordinate": {
+        "norm_profile": {
+          "2": 72
+        },
+        "representative_local_profile": {
+          "-1": 20,
+          "-2": 1,
+          "0": 30,
+          "1": 20,
+          "2": 1
+        },
+        "unique_local_profile_count": 1,
+        "reflection_closure_failures": 0
+      },
+      "A2_coordinate": {
+        "norm_profile": {
+          "2": 6
+        },
+        "orthogonality_to_E6_max": "0"
+      },
+      "matter": {
+        "coset_1_count": 81,
+        "coset_2_count": 81,
+        "coset_1_rank": 8,
+        "coset_2_rank": 8,
+        "coset_2_is_negative_of_coset_1": true
+      },
+      "checks": {
+        "sector_counts_are_72_6_81_81": true,
+        "e6_rank_is_6": true,
+        "a2_rank_is_2": true,
+        "e6_norm_profile_is_72_norm2": true,
+        "a2_norm_profile_is_6_norm2": true,
+        "e6_local_profile_matches_e6": true,
+        "e6_reflection_closure_holds": true,
+        "a2_is_orthogonal_to_e6": true,
+        "matter_sectors_are_negatives": true,
+        "matter_sectors_have_rank_8": true
+      },
+      "n_verified": 10
+    },
+    {
+      "coordinate": 1,
+      "sector_counts": {
+        "E6_zero_coordinate_roots": 72,
+        "A2_coordinate_roots": 6,
+        "matter_81_coset_1": 81,
+        "matter_81_coset_2": 81
+      },
+      "sector_ranks": {
+        "E6_zero_coordinate_roots": 6,
+        "A2_coordinate_roots": 2,
+        "matter_81_coset_1": 8,
+        "matter_81_coset_2": 8
+      },
+      "E6_zero_coordinate": {
+        "norm_profile": {
+          "2": 72
+        },
+        "representative_local_profile": {
+          "-1": 20,
+          "-2": 1,
+          "0": 30,
+          "1": 20,
+          "2": 1
+        },
+        "unique_local_profile_count": 1,
+        "reflection_closure_failures": 0
+      },
+      "A2_coordinate": {
+        "norm_profile": {
+          "2": 6
+        },
+        "orthogonality_to_E6_max": "0"
+      },
+      "matter": {
+        "coset_1_count": 81,
+        "coset_2_count": 81,
+        "coset_1_rank": 8,
+        "coset_2_rank": 8,
+        "coset_2_is_negative_of_coset_1": true
+      },
+      "checks": {
+        "sector_counts_are_72_6_81_81": true,
+        "e6_rank_is_6": true,
+        "a2_rank_is_2": true,
+        "e6_norm_profile_is_72_norm2": true,
+        "a2_norm_profile_is_6_norm2": true,
+        "e6_local_profile_matches_e6": true,
+        "e6_reflection_closure_holds": true,
+        "a2_is_orthogonal_to_e6": true,
+        "matter_sectors_are_negatives": true,
+        "matter_sectors_have_rank_8": true
+      },
+      "n_verified": 10
+    },
+    {
+      "coordinate": 2,
+      "sector_counts": {
+        "E6_zero_coordinate_roots": 72,
+        "A2_coordinate_roots": 6,
+        "matter_81_coset_1": 81,
+        "matter_81_coset_2": 81
+      },
+      "sector_ranks": {
+        "E6_zero_coordinate_roots": 6,
+        "A2_coordinate_roots": 2,
+        "matter_81_coset_1": 8,
+        "matter_81_coset_2": 8
+      },
+      "E6_zero_coordinate": {
+        "norm_profile": {
+          "2": 72
+        },
+        "representative_local_profile": {
+          "-1": 20,
+          "-2": 1,
+          "0": 30,
+          "1": 20,
+          "2": 1
+        },
+        "unique_local_profile_count": 1,
+        "reflection_closure_failures": 0
+      },
+      "A2_coordinate": {
+        "norm_profile": {
+          "2": 6
+        },
+        "orthogonality_to_E6_max": "0"
+      },
+      "matter": {
+        "coset_1_count": 81,
+        "coset_2_count": 81,
+        "coset_1_rank": 8,
+        "coset_2_rank": 8,
+        "coset_2_is_negative_of_coset_1": true
+      },
+      "checks": {
+        "sector_counts_are_72_6_81_81": true,
+        "e6_rank_is_6": true,
+        "a2_rank_is_2": true,
+        "e6_norm_profile_is_72_norm2": true,
+        "a2_norm_profile_is_6_norm2": true,
+        "e6_local_profile_matches_e6": true,
+        "e6_reflection_closure_holds": true,
+        "a2_is_orthogonal_to_e6": true,
+        "matter_sectors_are_negatives": true,
+        "matter_sectors_have_rank_8": true
+      },
+      "n_verified": 10
+    },
+    {
+      "coordinate": 3,
+      "sector_counts": {
+        "E6_zero_coordinate_roots": 72,
+        "A2_coordinate_roots": 6,
+        "matter_81_coset_1": 81,
+        "matter_81_coset_2": 81
+      },
+      "sector_ranks": {
+        "E6_zero_coordinate_roots": 6,
+        "A2_coordinate_roots": 2,
+        "matter_81_coset_1": 8,
+        "matter_81_coset_2": 8
+      },
+      "E6_zero_coordinate": {
+        "norm_profile": {
+          "2": 72
+        },
+        "representative_local_profile": {
+          "-1": 20,
+          "-2": 1,
+          "0": 30,
+          "1": 20,
+          "2": 1
+        },
+        "unique_local_profile_count": 1,
+        "reflection_closure_failures": 0
+      },
+      "A2_coordinate": {
+        "norm_profile": {
+          "2": 6
+        },
+        "orthogonality_to_E6_max": "0"
+      },
+      "matter": {
+        "coset_1_count": 81,
+        "coset_2_count": 81,
+        "coset_1_rank": 8,
+        "coset_2_rank": 8,
+        "coset_2_is_negative_of_coset_1": true
+      },
+      "checks": {
+        "sector_counts_are_72_6_81_81": true,
+        "e6_rank_is_6": true,
+        "a2_rank_is_2": true,
+        "e6_norm_profile_is_72_norm2": true,
+        "a2_norm_profile_is_6_norm2": true,
+        "e6_local_profile_matches_e6": true,
+        "e6_reflection_closure_holds": true,
+        "a2_is_orthogonal_to_e6": true,
+        "matter_sectors_are_negatives": true,
+        "matter_sectors_have_rank_8": true
+      },
+      "n_verified": 10
+    }
+  ],
+  "claim_boundary": "finite root-system decomposition theorem; it verifies the E8 -> E6 x A2 branching at the root-set level and does not by itself choose a physical compactification or gauge-breaking dynamics",
+  "reading": "The exact E8 roots built from the W33 tetracode do not merely have the right total count. Each of the four W33 anchor-line coordinates gives the canonical E8 -> E6 x A2 split: 72 rank-6 E6 roots orthogonal to 6 rank-2 A2 roots, plus two conjugate 81-root matter sectors. This turns the earlier symbolic 72+6+81+81 match into an exact coordinate decomposition.",
+  "checks": {
+    "all_four_coordinates_verify_10_checks": true,
+    "all_four_coordinates_have_same_sector_counts": true,
+    "all_four_coordinates_have_e6_rank_6_a2_rank_2": true,
+    "all_four_coordinates_have_orthogonal_e6_a2": true,
+    "all_four_coordinates_have_conjugate_81_sectors": true
+  },
+  "n_verified": 5
+}
