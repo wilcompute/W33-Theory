@@ -1,0 +1,463 @@
+{
+  "part": "MCCCLXXXVIII",
+  "theorem": "Exact E8 root system from the W33 tetracode",
+  "input_bridge": "MCCCLXXXVII affine tetracode E8 glue bridge",
+  "w33_tetracode": {
+    "words": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "standard_generators": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ]
+    ],
+    "equals_standard_tetracode": true
+  },
+  "root_system": {
+    "count": 240,
+    "rank": 8,
+    "source_profile": {
+      "A2": 24,
+      "tetracode_glue": 216
+    },
+    "norm_profile": {
+      "2": 240
+    },
+    "ordered_pair_inner_product_profile": {
+      "-1": 13440,
+      "-2": 240,
+      "0": 30240,
+      "1": 13440,
+      "2": 240
+    },
+    "representative_local_inner_product_profile": {
+      "-1": 56,
+      "-2": 1,
+      "0": 126,
+      "1": 56,
+      "2": 1
+    },
+    "unique_local_profile_count": 1,
+    "reflection_closure_failures": 0,
+    "sample_a2_roots": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "sample_glue_roots": [
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "2/3",
+        "1/3",
+        "-1/3",
+        "-2/3"
+      ],
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "2/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "0",
+        "2/3",
+        "1/3",
+        "-1/3",
+        "1/3",
+        "-1/3",
+        "-2/3"
+      ]
+    ]
+  },
+  "simple_root_system": {
+    "chamber_vector": [
+      "1",
+      "3",
+      "9",
+      "27",
+      "2",
+      "6",
+      "18",
+      "54"
+    ],
+    "simple_root_count": 8,
+    "simple_roots": [
+      [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1/3",
+        "-2/3",
+        "-2/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      [
+        "-1/3",
+        "-2/3",
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "-2/3",
+        "-1/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1/3",
+        "2/3",
+        "-1/3",
+        "1/3",
+        "0",
+        "0",
+        "-2/3",
+        "-1/3"
+      ],
+      [
+        "2/3",
+        "1/3",
+        "1/3",
+        "-1/3",
+        "0",
+        "0",
+        "2/3",
+        "1/3"
+      ]
+    ],
+    "gram_matrix": [
+      [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2",
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0",
+        "2",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1",
+        "-1",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "2",
+        "-1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "2"
+      ]
+    ],
+    "gram_determinant": "1",
+    "dynkin_edges": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "dynkin_edge_count": 7,
+    "dynkin_degree_profile": {
+      "1": 3,
+      "2": 4,
+      "3": 1
+    },
+    "dynkin_connected": true
+  },
+  "claim_boundary": "exact finite root-system theorem: W33 supplies the tetracode, and the standard A2/Eisenstein lift supplies the metric root coordinates; this does not assert a continuum physical gauge group without the separate identification bridge",
+  "reading": "MCCCLXXXVII gave the W33-native tetracode glue code. Lifting that code over four A2 coordinate planes produces an exact rank-8, 240-root, reflection-closed simply-laced root system with determinant-1 simple root Gram matrix and E8 Dynkin degree profile. This upgrades the prior count identity to an exact finite E8 root-system witness.",
+  "checks": {
+    "w33_code_equals_standard_tetracode": true,
+    "root_count_is_240": true,
+    "roots_are_unique": true,
+    "source_decomposition_is_24_plus_216": true,
+    "rank_is_8": true,
+    "all_roots_have_norm_2": true,
+    "ordered_inner_products_are_e8_values": true,
+    "all_roots_have_e8_local_profile": true,
+    "reflection_closure_holds": true,
+    "simple_root_count_is_8": true,
+    "simple_gram_determinant_is_1": true,
+    "simple_off_diagonal_values_are_0_or_minus_1": true,
+    "dynkin_graph_is_connected_tree": true,
+    "dynkin_degree_profile_is_e8": true
+  },
+  "n_verified": 14
+}
