@@ -1,0 +1,733 @@
+{
+  "part": "MCCCLXXXVII",
+  "theorem": "Affine tetracode E8 glue bridge",
+  "input_bridge": "MCCCLXXXVI E6 triality contrast rank-8 bridge",
+  "representative_point": {
+    "point": 0,
+    "point_vector": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "anchor_lines": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "words_with_multiplicity": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ]
+    ],
+    "witnesses": [
+      {
+        "nonneighbor": 4,
+        "word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          13,
+          16,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 5,
+        "word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          13,
+          16,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 6,
+        "word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          13,
+          16,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 7,
+        "word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 8,
+        "word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 9,
+        "word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          14,
+          17,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 10,
+        "word": [
+          0,
+          2,
+          2,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 11,
+        "word": [
+          0,
+          2,
+          2,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 12,
+        "word": [
+          0,
+          2,
+          2,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          1,
+          15,
+          18,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 22,
+        "word": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          13,
+          18,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 23,
+        "word": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          13,
+          18,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 24,
+        "word": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          13,
+          18,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 25,
+        "word": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          14,
+          16,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 26,
+        "word": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          14,
+          16,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 27,
+        "word": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          14,
+          16,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 28,
+        "word": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          15,
+          17,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 29,
+        "word": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          15,
+          17,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 30,
+        "word": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          3,
+          15,
+          17,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 31,
+        "word": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          13,
+          17,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 32,
+        "word": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          13,
+          17,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 33,
+        "word": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          13,
+          17,
+          21
+        ]
+      },
+      {
+        "nonneighbor": 34,
+        "word": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          15,
+          16,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 35,
+        "word": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          15,
+          16,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 36,
+        "word": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          15,
+          16,
+          20
+        ]
+      },
+      {
+        "nonneighbor": 37,
+        "word": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          14,
+          18,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 38,
+        "word": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          14,
+          18,
+          19
+        ]
+      },
+      {
+        "nonneighbor": 39,
+        "word": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "common_neighbors_on_anchor_lines": [
+          2,
+          14,
+          18,
+          19
+        ]
+      }
+    ],
+    "unique_words": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "multiplicity_profile": {
+      "3": 9
+    },
+    "basis": [
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "rank": 2,
+    "is_linear": true,
+    "is_self_dual_tetracode": true,
+    "weight_profile": {
+      "0": 1,
+      "3": 8
+    },
+    "standard_tetracode_generators": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ]
+    ],
+    "matches_standard_tetracode_exactly": true
+  },
+  "all_point_profiles": {
+    "rank": {
+      "2": 40
+    },
+    "multiplicity_profile": {
+      "{'3': 9}": 40
+    },
+    "basis_profile": {
+      "((1, 0, 1, 2), (0, 1, 1, 1))": 24,
+      "((1, 0, 2, 1), (0, 1, 1, 1))": 16
+    },
+    "standard_tetracode_exact_match": {
+      "False": 16,
+      "True": 24
+    },
+    "self_dual_tetracode": {
+      "True": 40
+    },
+    "weight_profile": {
+      "{'0': 1, '3': 8}": 40
+    }
+  },
+  "e8_glue_count": {
+    "a2_four_root_subsystem": 24,
+    "nonzero_tetracode_words": 8,
+    "phase_lifts_per_nonzero_word": 27,
+    "tetracode_glue_roots": 216,
+    "total": 240,
+    "identity": "240 = 4*6 + 8*27"
+  },
+  "claim_boundary": "finite tetracode glue theorem for the W33 incidence map; it identifies the E8 Construction-A/Eisenstein glue pattern but does not by itself choose metric scale in the continuum",
+  "reading": "For each W33 anchor point, the 27 nonneighbors do not form an arbitrary 3^3 cloud when read through the four lines through the anchor. They collapse to the ternary tetracode [4,2,3]_3, each codeword appearing three times. Combined with MCCCLXXXVI's A2^4 rank-8 contrast quotient, this recovers the standard E8 pattern: four A2 coordinate planes plus tetracode glue, with root count 24 + 8*27 = 240.",
+  "checks": {
+    "representative_has_27_nonneighbor_words": true,
+    "representative_has_9_unique_words": true,
+    "representative_each_codeword_has_multiplicity_3": true,
+    "representative_rank_is_2": true,
+    "representative_is_linear": true,
+    "representative_is_self_dual_tetracode": true,
+    "representative_matches_standard_tetracode": true,
+    "all_40_points_have_rank_2": true,
+    "all_40_points_have_3fold_multiplicity_profile": true,
+    "all_40_points_are_self_dual_tetracodes": true,
+    "all_40_points_have_weight_profile_0_1_3_8": true,
+    "e8_root_count_from_a2_four_plus_tetracode_glue": true
+  },
+  "n_verified": 12
+}
