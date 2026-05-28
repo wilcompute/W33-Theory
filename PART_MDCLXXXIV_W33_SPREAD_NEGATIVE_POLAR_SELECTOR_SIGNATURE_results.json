@@ -1,0 +1,201 @@
+{
+  "part": "MDCLXXXIV",
+  "theorem": "W33 spread negative-polar selector signature",
+  "input_bridge": "MDCLXXXIII Clifford antipodal A5 selector group",
+  "selector_signature": "W33 spreads form NO^-(6,2), not a Latin-square third direction on the 6x6 Clifford grid",
+  "w33_spread_graph_parameters": {
+    "vertices": 36,
+    "degree_profile": {
+      "15": 36
+    },
+    "edge_count": 270,
+    "adjacent_common_neighbor_profile": {
+      "6": 270
+    },
+    "nonadjacent_common_neighbor_profile": {
+      "6": 360
+    }
+  },
+  "negative_polar_graph_parameters": {
+    "vertices": 36,
+    "degree_profile": {
+      "15": 36
+    },
+    "edge_count": 270,
+    "adjacent_common_neighbor_profile": {
+      "6": 270
+    },
+    "nonadjacent_common_neighbor_profile": {
+      "6": 360
+    }
+  },
+  "raw_rook_graph_parameters": {
+    "vertices": 36,
+    "degree_profile": {
+      "10": 36
+    },
+    "edge_count": 180,
+    "adjacent_common_neighbor_profile": {
+      "4": 180
+    },
+    "nonadjacent_common_neighbor_profile": {
+      "2": 450
+    }
+  },
+  "w33_spread_clique_number": 4,
+  "w33_spread_independence_number": 5,
+  "raw_rook_clique_number": 6,
+  "negative_polar_quadratic_form": "Q=x0*x1+x2*x3+x4+x4*x5+x5 over F2",
+  "negative_polar_vertex_count": 36,
+  "w33_to_negative_polar_isomorphism": [
+    0,
+    3,
+    10,
+    20,
+    6,
+    34,
+    35,
+    9,
+    30,
+    13,
+    22,
+    25,
+    26,
+    17,
+    11,
+    33,
+    5,
+    7,
+    18,
+    29,
+    14,
+    4,
+    31,
+    1,
+    21,
+    16,
+    27,
+    8,
+    2,
+    32,
+    24,
+    28,
+    19,
+    12,
+    15,
+    23
+  ],
+  "sample_spread_to_vector_map": {
+    "0": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "1": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "2": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "4": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "5": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "6": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "7": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "8": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "9": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "10": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "11": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  "o_minus_6_2_order": 51840,
+  "claim_boundary": "constructs an explicit W33 spread graph isomorphism to NO^-(6,2) and rules out a Latin-square/K6 selector; it does not yet lift the A5 antipodal torsor to a canonical 60-to-40 incidence transport",
+  "reading": "The raw Clifford antipodal selector supplies a 6x6 rook grid. A first guess is that the W33 spread graph adds a third Latin direction, but that would force K6 row, column, and symbol cliques. The W33 spread overlap-4 graph has clique number 4 and independence number 5, so the Latin/Euler direction is impossible. The verifier constructs the minus-type quadratic form Q over F2, takes its 36 nonsingular vectors, joins orthogonal pairs under the polar form, and finds an explicit isomorphism from the W33 spread graph to this NO^-(6,2) graph. The selector twist is therefore negative-polar / W(E6), not Latin-square.",
+  "checks": {
+    "w33_spread_graph_is_srg_36_15_6_6": true,
+    "no_minus_graph_has_36_nonsingular_vectors": true,
+    "no_minus_graph_is_srg_36_15_6_6": true,
+    "explicit_w33_to_no_minus_isomorphism_verifies": true,
+    "w33_spread_clique_number_is_4": true,
+    "w33_spread_independence_number_is_5": true,
+    "raw_rook_graph_has_k6_rows_and_columns": true,
+    "latin_square_third_direction_is_obstructed": true,
+    "orthogonal_group_order_is_we6": true
+  },
+  "n_verified": 9
+}
