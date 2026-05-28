@@ -1,0 +1,1397 @@
+{
+  "part": "MCCCXCVIII",
+  "theorem": "Boerdijk/gamma-brass Steiner return graph",
+  "input_bridge": "MCCCXCVII E6 240 Steiner trihedra / E8 count resonance",
+  "return_identity": "240 Steiner trihedra -> 40 components x 6 trihedra -> srg(40,12,2,4)",
+  "matter_sector_reports": [
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_1",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            42
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            43
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 0,
+      "sector": "matter_81_coset_2",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            43
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            42
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_1",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            42
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            43
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 1,
+      "sector": "matter_81_coset_2",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            43
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            42
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_1",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            43
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            42
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 2,
+      "sector": "matter_81_coset_2",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            42
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            43
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_1",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            42
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            43
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    },
+    {
+      "coordinate": 3,
+      "sector": "matter_81_coset_2",
+      "trihedron_count": 240,
+      "disjoint_cover_edge_count": 480,
+      "component_count": 40,
+      "component_profiles": {
+        "component_size_profile": {
+          "6": 40
+        },
+        "cover_group_count_profile": {
+          "3": 40
+        },
+        "cover_group_size_profile_profile": {
+          "(('2', 3),)": 40
+        },
+        "cover_union_size_profile": {
+          "27": 40
+        },
+        "cover_pair_intersection_profile_profile": {
+          "(('0', 3),)": 40
+        },
+        "component_tritangent_count_profile": {
+          "18": 40
+        },
+        "component_weight_participation_profile_profile": {
+          "(('2', 27),)": 40
+        }
+      },
+      "intersection_9_graph": {
+        "relation": "component_tritangent_intersection_9",
+        "vertices": 40,
+        "degree_profile": {
+          "12": 40
+        },
+        "edge_count": 240,
+        "adjacent_common_neighbor_profile": {
+          "2": 240
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "4": 540
+        }
+      },
+      "intersection_6_graph": {
+        "relation": "component_tritangent_intersection_6",
+        "vertices": 40,
+        "degree_profile": {
+          "27": 40
+        },
+        "edge_count": 540,
+        "adjacent_common_neighbor_profile": {
+          "18": 540
+        },
+        "nonadjacent_common_neighbor_profile": {
+          "18": 240
+        }
+      },
+      "sample_components": [
+        [
+          [
+            0,
+            6,
+            43
+          ],
+          [
+            1,
+            5,
+            44
+          ],
+          [
+            13,
+            19,
+            31
+          ],
+          [
+            14,
+            18,
+            32
+          ],
+          [
+            21,
+            27,
+            33
+          ],
+          [
+            22,
+            26,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            41
+          ],
+          [
+            2,
+            5,
+            42
+          ],
+          [
+            13,
+            24,
+            34
+          ],
+          [
+            14,
+            23,
+            35
+          ],
+          [
+            16,
+            27,
+            30
+          ],
+          [
+            17,
+            25,
+            36
+          ]
+        ],
+        [
+          [
+            0,
+            8,
+            37
+          ],
+          [
+            3,
+            5,
+            38
+          ],
+          [
+            11,
+            26,
+            30
+          ],
+          [
+            12,
+            25,
+            33
+          ],
+          [
+            18,
+            24,
+            39
+          ],
+          [
+            19,
+            23,
+            40
+          ]
+        ]
+      ],
+      "checks": {
+        "trihedra_split_as_40_times_6": true,
+        "disjoint_cover_graph_has_degree_4_and_480_edges": true,
+        "each_component_has_three_partner_covers_of_two_trihedra": true,
+        "each_component_cover_triple_partitions_27_weights": true,
+        "each_component_uses_18_distinct_tritangents": true,
+        "each_component_hits_every_weight_twice": true,
+        "intersection_9_graph_is_srg_40_12_2_4": true,
+        "intersection_6_graph_is_srg_40_27_18_18": true
+      },
+      "n_verified": 8
+    }
+  ],
+  "external_count_dictionary": {
+    "source_facts": {
+      "gamma_brass_2004": {
+        "title": "The gamma-brass structure and the Boerdijk-Coxeter helix",
+        "doi": "10.1016/j.jnoncrysol.2003.11.069",
+        "counts": {
+          "unit_cell_sites": 52,
+          "cluster_atoms": 26,
+          "augmented_cluster_atoms": 38,
+          "augmented_cluster_tetrahedra": 81,
+          "original_helix_local_neighbors": 12,
+          "initial_tetrahedron_shared_icosahedra": 4
+        }
+      },
+      "regular_600_cell": {
+        "schlafli": "{3,3,5}",
+        "counts": {
+          "vertices": 120,
+          "edges": 720,
+          "triangular_faces": 1200,
+          "tetrahedral_cells": 600,
+          "boerdijk_coxeter_ring_count": 20,
+          "tetrahedra_per_ring": 30,
+          "cells_around_each_vertex": 20,
+          "cells_around_each_edge": 5
+        }
+      }
+    },
+    "checks": {
+      "gamma_26_is_affine_27_minus_origin": true,
+      "gamma_52_is_two_affine_26_clusters": true,
+      "gamma_38_is_w33_minus_symplectic_pair": true,
+      "gamma_81_is_q_four": true,
+      "gamma_local_12_is_w33_degree": true,
+      "gamma_shared_4_is_mu": true,
+      "six_hundred_vertices_match_steiner_pair_count": true,
+      "six_hundred_edges_match_trihedron_tritangent_incidence": true,
+      "six_hundred_cells_are_twenty_bc_rings_of_thirty": true,
+      "thirty_per_bc_ring_is_five_times_q_factorial": true,
+      "forty_return_components_are_two_chiralities_times_twenty_bc_rings": true,
+      "six_hundred_cells_are_five_times_steiner_pair_count": true
+    },
+    "n_verified": 12
+  },
+  "claim_boundary": "finite incidence theorem plus source-count dictionary; the component graph has W33 strongly regular parameters, but no canonical isomorphism to the original W33 point graph is asserted",
+  "reading": "The 240 Steiner trihedra do not stay as a loose E8-count shell. Under the disjoint-cover relation they split into 40 six-trihedron components. Inside each component, three 9-weight covers partition the 27 E6 weights and each cover carries its two partner trihedra. The quotient graph on the 40 components, adjacent by 9 shared tritangents, has exactly the W33 SRG parameters (40,12,2,4). The gamma-brass and 600-cell counts then line up as a source-count dictionary: 26=27-1, 38=40-2, 81=3^4, local coordination 12=k, shared 4=mu, 120 Steiner pairs=600-cell vertices, 720 trihedron-tritangent incidences=600-cell edges, and 40=2x20 chiral lifts of the 20 Boerdijk-Coxeter rings.",
+  "checks": {
+    "all_eight_reports_verify_8_checks": true,
+    "all_eight_reports_split_240_as_40_times_6": true,
+    "all_eight_reports_have_srg_40_12_2_4_return_graph": true,
+    "all_external_count_checks_verify": true
+  },
+  "n_verified": 4
+}
