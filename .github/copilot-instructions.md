@@ -5,52 +5,53 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 1055
-- **Known Topics:** auto-draft, needs-review, why, w33, testing, photonic, docs, architecture, css, qec, holonomy, toe, tqc, cct, audit
+- **Total Decisions:** 1553
+- **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, photonic, audit, toe, architecture, qec, css, holonomy, tqc, github
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
-**Branch:** unknown
+**Branch:** master
+**Tracking:** ahead 0, behind 6
 
 **Recent Commits:**
-- `097777b3 Part DCCLVI: The W(3,3) Sphere-Packing Density Tower`
-- `447b75b0 Part DCCLV: The W(3,3) Kissing-Number Tower`
-- `e44c7e90 Part DCCLV: lift Frobenius carrier to octahedral phases`
-- `c904b907 Part DCCLIV: Frobenius Selection Principle and Ouroboros Loop`
-- `ca1489ff Part DCCLIII: Monster Moonshine W(3,3) Bridge`
+- `21aaf67 Part MCCI: Add post-monodromy octet lift law`
+- `f24aac9 Part MCC: Add shell-operator identification law`
+- `dffd1a9 Part MCXCIX: Add commuting lift operators law`
+- `e1a4205 Part MCXCVIII: Add forecast-emergence ratio bridge law`
+- `a797f13 Part MCXCVI/MCXCVII: Add unified closure grammar and octet lift forecast`
 
 **Working Tree:**
 - M .cursorrules
 - M .github/copilot-instructions.md
 - M AGENTS.md
+- M BREAKTHROUGH_MCXLIX.md
 - M CLAUDE.md
 - M GEMINI.md
-- M data/dccl_pascal_synergetics_clifford_hierarchy.json
-- M data/dccli_pascal_diagonal_w33_generator.json
-- M data/dcclii_hyperbolic_pascal_600cell_e8.json
-- M data/dccliii_monster_moonshine_w33_bridge.json
-- M data/dccliv_frobenius_selection_and_ouroboros.json
-- M data/dccxix_self_closure_theorem.json
-- M data/dccxlix_octahedron_closure_phase_space.json
-- M data/dccxvii_master_equation_codec_bridge.json
-- M data/dccxviii_pincer_bound_theorem.json
-- M data/dccxx_universal_computer_of_life.json
+- M PART_MCLVI_EQUITABLE_PARTITION.md
+- M PART_MCLV_LAPLACIAN_SPECTRAL_ZETA.md
+- M PART_MCLXI_LOVASZ_HOFFMAN_results.json
+- M PART_MCLX_CLIQUE_COMPLEX_results.json
+- M PART_MCXLVII_CTQW_REVIVAL_SPECTRUM.md
+- M analysis/w33_ihara_zeta.py
+- ?? PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json
+- ?? PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json
+- ?? PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-05-16T08:17:54.431Z
-**Startup Summary:** mode=degraded-fallback | decisions=1055 | lastTask=Recent commits: | next=Recent commits: | branch=unknown | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 270 uncovered commits in last 7 days (auto-drafted 0)
-[MCP] Background init completed in 27ms | fallback-files=12
-**Decision Count:** 1055
+**Generated At:** 2026-05-22T14:58:42.535Z
+**Startup Summary:** mode=degraded-fallback | decisions=1553 | lastTask=Recent commits: | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 135 uncovered commits in last 7 days (auto-drafted 4)
+[MCP] Background init completed in 23ms | fallback-files=12
+**Decision Count:** 1553
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Resume Snapshot
 **Last Task:** Recent commits:
-**Last Completed Milestone:** Auto-saved at 2026-05-16T08:01:48.521Z (reason: timer)
+**Last Completed Milestone:** Auto-saved at 2026-05-22T14:28:40.879Z (reason: timer)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** search_decisions @ 2026-05-01T15:06:07.971Z
-**Relevant Files:** PART_DCCLXV_RUNNING_RECIPROCITY_INVARIANT_BRIDGE.md, tests\test_dcclxv_running_reciprocity_invariant_bridge.py, verify_dcclxv_running_reciprocity_invariant_bridge.py, deep-research-report2.md, deep-research-report.md, .vscode\mcp.json
+**Relevant Files:** .cursorrules, .github/copilot-instructions.md, AGENTS.md, BREAKTHROUGH_MCXLIX.md, CLAUDE.md, GEMINI.md
 
 ## Workflow
 
@@ -69,7 +70,7 @@ Use the repo-local artifacts directly — these are always available:
 
 
 ## Decision Freshness
-**0 stale decisions** · 655 need review · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 750 need review · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
 1. **1777318403161-pu8p9x** (score 36) — "Why: theory: add Witting packet ternary transport bridge?" — status: superseded
@@ -177,17 +178,17 @@ Describe how this repository prefers to work with AI assistants.
 ---
 
 ## Recent Decisions
-1. **decision-50c43202** (5/16/2026) [why, architecture]
-   - Q: Why push DCCLV Frobenius-octahedral edge-phase lift to master?
-   - A: Commit e44c7e904 passed the DCCLV verifier, the DCCLV/runner regression slice...
+1. **decision-a47e1282** (5/22/2026) [why]
+   - Q: Why push Part MCXCIII Reye tomotope/24-cell common spine to master?
+   - A: Pushed c12b7f4 to origin/master after verifier, focused pytest, py_compile, a...
 
-2. **decision-17787656** (5/13/2026) [auto-draft, needs-review]
-   - Q: Why: Add GitHub Actions CI, full spectral verifier, and expanded SM LaTeX sec...
-   - A: (Auto-drafted from commit 77c9ec2 on 2026-05-13.) Please review and expand wi...
+2. **decision-17794511** (5/21/2026) [auto-draft, needs-review]
+   - Q: Why: Add universal oscillator stack report?
+   - A: (Auto-drafted from commit df1b4e3 on 2026-05-21.) Please review and expand wi...
 
-3. **decision-17785096** (5/11/2026) [architecture, e8]
-   - Q: Why add CCCCXLVI E8 inner-product rescue trichotomy?
-   - A: After reviewing recent CCCCXL–CCCCXLV changes, we found third-reference rescu...
+3. **decision-4a150b07** (5/17/2026) [architecture, qec]
+   - Q: What are the next major derivations to tackle after the w33_for_everyone synt...
+   - A: 1. QCD Confinement and Baryon Mass Gap. 2. Macroscopic Gravity & de Sitter En...
 
 4. **decision-mohlhmfy** (4/27/2026) [auto-scanned, configuration]
    - Q: Why use GitHub Actions for CI/CD?
@@ -215,6 +216,6 @@ Describe how this repository prefers to work with AI assistants.
 
 ---
 
-*Auto-generated by Continuity v2.3+ | Updated: 2026-05-16*
+*Auto-generated by Continuity v2.3+ | Updated: 2026-05-23*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

@@ -9,6 +9,7 @@ Three theorems (MCXLVII–MCXLIX) together prove a web of exact identities linki
 $$K - v = \frac{1}{S_\text{holo}} = \frac{r}{v}$$
 
 where:
+
 - K = 801/20 = Kemeny constant of the W(3,3) random walk
 - v = 40 = vertex count
 - r = 2 = secondary eigenvalue = SRG parameter λ
@@ -48,6 +49,7 @@ The Bekenstein-Hawking formula S = A/(4G) was derived for black holes. Here we f
 ## Verified Identities (28 Tests, All Passing)
 
 All identities were verified to arbitrary precision using Python's `fractions.Fraction` exact arithmetic. See test files:
+
 - `tests/test_w33_ctqw_revival_spectrum.py` (8 tests — MCXLVII)
 - `tests/test_w33_lovasz_independence_clique.py` (10 tests — MCXLVIII)
 - `tests/test_w33_kemeny_spectral_excess.py` (10 tests — MCXLIX)
