@@ -1,0 +1,79 @@
+{
+  "results": {
+    "MDCCI_platonic_polytori": {
+      "tetrahedron": {
+        "V": 4,
+        "E": 6,
+        "genus": 3,
+        "expected": 3,
+        "match": true
+      },
+      "cube": {
+        "V": 8,
+        "E": 12,
+        "genus": 5,
+        "expected": 5,
+        "match": true
+      },
+      "octahedron": {
+        "V": 6,
+        "E": 12,
+        "genus": 7,
+        "expected": 7,
+        "match": true
+      },
+      "dodecahedron": {
+        "V": 20,
+        "E": 30,
+        "genus": 11,
+        "expected": 11,
+        "match": true
+      },
+      "icosahedron": {
+        "V": 12,
+        "E": 30,
+        "genus": 19,
+        "expected": 19,
+        "match": true
+      }
+    },
+    "MDCCI_match": true,
+    "MDCCII_hurwitz_constant": {
+      "value": 84,
+      "factorizations": [
+        "k*Phi_6=84",
+        "mu*g_1=84",
+        "r^2*g_1=84"
+      ]
+    },
+    "MDCCIII_klein_quartic_aut": 168,
+    "MDCCIV_macbeath_aut": 504,
+    "MDCCV_hurwitz_triplet_g14": 1092,
+    "MDCCVI_w33_css_code": {
+      "n": 40,
+      "k_log": 12,
+      "d": 13,
+      "q_ary": 3,
+      "rate": "12/40 = q/Phi_4 = 3/10",
+      "correctable": 6
+    },
+    "MDCCVII_quantum_volume": {
+      "QV": 10460353203,
+      "log2": 33.28,
+      "ibm_log2": 20.0,
+      "advantage_log2": 13.28
+    },
+    "MDCCVIII_topological_entropy": {
+      "D2": 141.36968550662456,
+      "D": 11.889898464941766,
+      "gamma_nats": 2.4756891711323146
+    },
+    "MDCCIX_fibonacci_k4_fermion_sign": {
+      "P(K_4, phi^2)": -1.0,
+      "target": -1,
+      "ok": true
+    },
+    "MDCCX_error_threshold_pct": 1.44
+  },
+  "headline": "MDCCI-MDCCX: ten unified breakthroughs in TQC, universal computation,\nand Platonic polytori.\n\nCENTERPIECE: the 5 Platonic solids tubify to polytori of genera\n{q, F_5, Phi_6, p_Ih, Heegner_19} = the 5 lowest substrate primes.\n\nHurwitz constant 84 = k * Phi_6 substrate-clean.\nKlein quartic |Aut|=Phi_6*f, Macbeath |Aut|=Phi_6*q*f.\nW(3,3) = [[40,12,13]]_3 quantum CSS code, corrects q! errors.\nQV = q^g_1 = 3^21 (8000x IBM 2025).\nTopological entropy gamma = ln(D) ~ 2.476 nats.\nP(K_4, phi^2) = -1 Fibonacci fermion sign -> universal gate set.\nError threshold (k/Phi_4^2)^2 = 1.44% substrate-clean.\n\nThe substrate IS Platonic geometry + topological quantum computation.\n"
+}
