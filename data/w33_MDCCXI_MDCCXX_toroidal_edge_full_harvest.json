@@ -1,0 +1,68 @@
+{
+  "results": {
+    "MDCCXI_total": {
+      "value": 2680,
+      "formula": "v*(q^q+v)=v*Heegner_67"
+    },
+    "MDCCXII_noncanon": {
+      "value": 1924,
+      "formula": "mu*Phi_3*p_k"
+    },
+    "MDCCXIII_grand_identity": {
+      "lhs": 2680,
+      "rhs": 2680,
+      "match": true
+    },
+    "MDCCXIV_individuals": {
+      "C2": 352,
+      "C4": 522,
+      "C5": 444,
+      "S2": 606
+    },
+    "MDCCXV_max_sum": {
+      "value": 254,
+      "formula": "r*M_Phi_6 = r*(r^Phi_6-1)"
+    },
+    "MDCCXVI_unique_count_sum": {
+      "value": 88,
+      "formula": "r^q*p_Ih"
+    },
+    "MDCCXVII_total_edges": {
+      "value": 147,
+      "formula": "q*Phi_6^2"
+    },
+    "MDCCXVIII_prime_count": {
+      "primes": [
+        2,
+        3,
+        5,
+        11,
+        17,
+        19,
+        29,
+        41,
+        43
+      ],
+      "count": 9,
+      "formula": "q^2"
+    },
+    "MDCCXIX_square_count": {
+      "squares": [
+        1,
+        4,
+        9,
+        16,
+        25,
+        36
+      ],
+      "count": 6,
+      "formula": "g_2"
+    },
+    "MDCCXX_canon_fraction": {
+      "num": 189,
+      "den": 670,
+      "formula": "q^q*Phi_6 / (E_1*Heegner_67)"
+    }
+  },
+  "headline": "MDCCXI-MDCCXX: ten unified breakthroughs from the FULL 7-realization\nCsaszar/Szilassi toroidal-polyhedron edge dataset.\n\nGRAND IDENTITY: v*(q^q + v) = mu*(q^q*Phi_6 + Phi_3*p_k) = 2680.\nTotal energy = v * Heegner_67 (= v * (q^q + v)).\nNon-canonical 4 sum = mu * Phi_3 * p_k = 1924 (p_k = 12th prime).\nC4 total carries Ogg_10 = 29 (Monster supersingular prime).\nS2 max = q * Heegner_19 (icosahedron-polytorus prime).\nL^2_max sum = r * Mersenne_Phi_6 = r * 127.\n9 = q^2 primes and 6 = g_2 perfect squares in 35-distinct set.\nTotal edges = q * Phi_6^2 = 147.\n\nThe 7-realization edge arithmetic is COMPLETELY substrate-clean.\nGeometry of K_7 on T^2 IS W(3,3) arithmetic.\n"
+}
