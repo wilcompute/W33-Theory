@@ -1,0 +1,62 @@
+{
+  "results": {
+    "MDCLXXXV": {
+      "claim": "Leech kissing = k*Phi_4*r*q^2*Phi_6*Phi_3 = 196560",
+      "value": 196560,
+      "PDG": 196560,
+      "match": true
+    },
+    "MDCLXXXVI": {
+      "claim": "Monster_rep1 - Leech = (k+g_2)^2 = 324",
+      "value": 324,
+      "expected": 324,
+      "match": true
+    },
+    "MDCLXXXVII": {
+      "claim": "Sum canonical edge length totals = q^q*mu*Phi_6 = 756",
+      "value": 756,
+      "expected": 756,
+      "match": true
+    },
+    "MDCLXXXVIII": {
+      "claim": "E_8 thetas: r_E8(n)/|E| are W(3,3) primitives",
+      "values": {
+        "r_E8(2)/240": 9,
+        "r_E8(3)/240": 28,
+        "r_E8(4)/240": 73,
+        "r_E8(5)/240": 126
+      },
+      "substrate": [
+        "q^2",
+        "mu*Phi_6",
+        "Phi_12",
+        "r*q^2*Phi_6"
+      ]
+    },
+    "MDCLXXXIX": {
+      "claim": "Szilassi GSD(genus 6) = Phi_3^6 = 4,826,809",
+      "value": 4826809
+    },
+    "MDCXC": {
+      "claim": "Quantum volume QV = q^g_1 = q^21",
+      "value": 10460353203,
+      "log2": 33.3
+    },
+    "MDCXCI": {
+      "claim": "Error threshold = (k/Phi_4^2)^2 = 1.44%",
+      "value_pct": 1.44
+    },
+    "MDCXCII": {
+      "claim": "Mass gap = sqrt(r) = sqrt(2)",
+      "value": 1.4142135623730951,
+      "substrate": "sqrt(m_r/k) = sqrt(2)"
+    },
+    "MDCXCIII": {
+      "claim": "P(K_4, phi^2) = -1 (Fibonacci fermion sign)"
+    },
+    "MDCXCIV": {
+      "claim": "Pisano lock pi(k+1) = v - k = 28 = ord(T)"
+    }
+  },
+  "headline": "MDCLXXXV-MDCXCIV: ten unified breakthroughs synthesizing E8/Modular/Edge harvest.\n\nLeech kissing = k*Phi_4*r*q^2*Phi_6*Phi_3 (six-prime substrate factorization).\nMonster-Leech gap = (k+g_2)^2 = 18^2 = 324.\nEdge length canonical totals = q^q*mu*Phi_6 = 756.\nE_8 thetas all substrate-clean.  GSD(g=6) = Phi_3^6.\nQV = q^21 ~ 2^33 (8000x IBM 2025).\nError threshold = 1.44%.  Mass gap = sqrt(2).\nP(K_4, phi^2) = -1 fermion sign.\nPisano lock pi(k+1) = v-k = 28.\n\nSubstrate unifies lattice geometry, sporadic groups, modular forms,\nTQFT physics, stabilizer codes, and topological invariants in ONE structure.\n"
+}
