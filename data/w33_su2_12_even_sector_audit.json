@@ -1,0 +1,243 @@
+{
+  "all_identities_hold": true,
+  "bridge_to_existing_minimal_logical_results": {
+    "X_rays": 160,
+    "X_rays_factorization": "160 = v * rank(H7) = 40 * 4",
+    "X_vectors": 320,
+    "X_vectors_factorization": "320 = 2v * rank(H7) = 80 * 4",
+    "Z_rays": 1620,
+    "Z_vectors": 3240,
+    "distance_recovery": "The corrected H7 block recovers the CSS distance pair directly: nullity=d_X=3, rank=d_Z=4.",
+    "phase_frame_rank": "The minimal signed logical phase frame has rank H1=81=3^4; H7 supplies the outer 3+4 distance split feeding that frame.",
+    "prior_code_parameters": "[[240,81,3]]_3 with d_X=3 and d_Z=4"
+  },
+  "constants": {
+    "H1": 81,
+    "Phi6": 7,
+    "WE6": 51840,
+    "chi": 4,
+    "dX": 3,
+    "dZ": 4,
+    "k": 12,
+    "k_plus_2": 14,
+    "q": 3,
+    "r": 2,
+    "v": 40
+  },
+  "fusion_audit": {
+    "important_correction": "Fusion by spin 1 on the even sector is a 7-node path-with-loops operator that splits into 4 palindromic channels and 3 radical channels; it is not the W(3,3) 40-vertex adjacency matrix.",
+    "palindromic_quotient_matrix_rank4": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        1
+      ]
+    ],
+    "radical_quotient_matrix_rank3": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "row_sums": [
+      1,
+      3,
+      3,
+      3,
+      3,
+      3,
+      1
+    ],
+    "spin1_integer_fusion_matrix_on_7_even_labels": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "honesty_boundary": "The 7x7 matrix in the uploaded TQC note is not the full SU(2)_12 modular S-matrix, and its singularity means the naive 7-object Verlinde-adjacency claim is not valid as stated. The corrected invariant is stronger and testable: the even block is an exact palindromic projector whose rank/nullity are the W(3,3) CSS distances d_Z=4 and d_X=3.",
+  "identities": {
+    "full_su2_12_rank_is_13": true,
+    "gram_is_palindromic_projector": true,
+    "h1_still_known_signed_phase_rank": true,
+    "h7_even_block_nullity_is_q_and_dX": true,
+    "h7_even_block_rank_is_chi_and_dZ": true,
+    "projector_idempotent": true,
+    "radical_projector_complement": true,
+    "rank_plus_nullity_is_Phi6": true,
+    "rank_times_nullity_is_k": true,
+    "spin1_fusion_commutes_with_reversal": true,
+    "uploaded_formula_equals_even_block": true,
+    "we6_pairing_still_known_nonzero_vector_count": true,
+    "x_rays_equal_v_times_rank": true,
+    "x_vectors_equal_2v_times_rank": true
+  },
+  "matrix_audit": {
+    "H7_even_block_shape": [
+      7,
+      7
+    ],
+    "H7_gram_eigenvalues_rounded": [
+      -0.0,
+      -0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "H7_gram_identity": "H H^T = (I + R)/2, where R(j)=6-j.",
+    "H7_nullity": 3,
+    "H7_rank": 4,
+    "H7_singular_values_rounded": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "full_SU2_12_S_shape": [
+      13,
+      13
+    ],
+    "full_SU2_12_rank": 13,
+    "rank_nullity_distance_split": "rank(H)=4=d_Z, nullity(H)=3=d_X, rank+nullity=7=Phi6, rank*nullity=12=k."
+  },
+  "theorem": "H7 Even-Sector Distance-Splitting / Projector Audit Theorem",
+  "twist_audit": {
+    "distinct_twists_mod_1": [
+      "0",
+      "1/7",
+      "3/7",
+      "6/7"
+    ],
+    "h_j_mod_1": [
+      "0",
+      "1/7",
+      "3/7",
+      "6/7",
+      "3/7",
+      "1/7",
+      "0"
+    ],
+    "h_j_raw": [
+      "0",
+      "1/7",
+      "3/7",
+      "6/7",
+      "10/7",
+      "15/7",
+      "3"
+    ],
+    "interpretation": "The T phases collapse to four distinct values on the same palindromic quotient seen by H H^T.",
+    "number_of_distinct_twists": 4,
+    "simple_current_orbit_twists": {
+      "0~6": [
+        "0",
+        "0"
+      ],
+      "1~5": [
+        "1/7",
+        "1/7"
+      ],
+      "2~4": [
+        "3/7",
+        "3/7"
+      ],
+      "3": [
+        "6/7"
+      ]
+    }
+  }
+}
