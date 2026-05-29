@@ -1,0 +1,130 @@
+{
+  "grand_table": {
+    "Pascal_row7_sum": [
+      128,
+      "r^Phi_6 (Mersenne+1)"
+    ],
+    "Cl7_trivectors": [
+      35,
+      "Phi_6 * F_5"
+    ],
+    "Cl7_bivectors": [
+      21,
+      "g_1"
+    ],
+    "Cl7_vectors": [
+      7,
+      "Phi_6"
+    ],
+    "octonion_nonassoc": [
+      28,
+      "mu * Phi_6 = ord(T) = pi(Phi_3)"
+    ],
+    "octonion_assoc": [
+      7,
+      "Phi_6"
+    ],
+    "octonion_reps": [
+      480,
+      "k * v = 2|E_8 roots|"
+    ],
+    "wilmot_simplex_aut": [
+      168,
+      "Phi_6 * f"
+    ],
+    "S_7_order": [
+      5040,
+      "k * Phi_6 * g_2 * E_1"
+    ],
+    "Klein_aut": [
+      168,
+      "Phi_6 * f"
+    ],
+    "Macbeath_aut": [
+      504,
+      "Phi_6 * q * f"
+    ],
+    "Hurwitz_triplet_aut": [
+      1092,
+      "k * Phi_6 * Phi_3"
+    ],
+    "Csaszar_V": [
+      7,
+      "Phi_6"
+    ],
+    "Csaszar_E": [
+      21,
+      "g_1"
+    ],
+    "Csaszar_F": [
+      14,
+      "dim(G_2) = lambda * Phi_6"
+    ],
+    "toroidal_distinct_L2": [
+      35,
+      "Phi_6 * F_5"
+    ],
+    "wilmot_Pk": [
+      [
+        4,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "mu, r*mu, E_1, k, dim(G_2), E_2"
+    ],
+    "pascal_vertex_ladder": [
+      [
+        4,
+        7,
+        10
+      ],
+      "mu, Phi_6, E_1"
+    ],
+    "pascal_face_ladder": [
+      [
+        4,
+        14,
+        24
+      ],
+      "mu, dim(G_2), m_r"
+    ]
+  },
+  "pascal_row_7": [
+    1,
+    7,
+    21,
+    35,
+    35,
+    21,
+    7,
+    1
+  ],
+  "wilmot_Pk_dims": [
+    4,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "pascal_vertex_ladder": [
+    4,
+    7,
+    10
+  ],
+  "pascal_face_ladder": [
+    4,
+    14,
+    24
+  ],
+  "pascal_edge_ladder": [
+    6,
+    21,
+    36
+  ],
+  "edge_sum_substrate": 63,
+  "headline": "MDCCXXXI-MDCCXL: ten unified breakthroughs unifying Wilmot's Cl(7)\nconstruction of G_2/octonions, the Csaszar/Szilassi toroidal\npolyhedra, the Bokowski-Pisanski Hurwitz embeddings, and the\nW(3,3) Pascal oscillator stack.\n\nTRIPLE-EQUALITY 35 = Phi_6 * F_5:\n  Cl(7) trivectors = octonion triples = distinct toroidal L^2 values.\nCombinatorics = Algebra = Geometry = substrate Phi_6 * F_5.\n\nCl(7) k-grades = Pascal row 7 = {1, Phi_6, g_1, 35, 35, g_1, Phi_6, 1}\nevery grade a substrate primitive.\n\nWilmot's 480 octonion reps = k*v = W(3,3) master energy scale.\nWilmot's 6 power-associative P_k dims {4,8,10,12,14,16} are exactly\n(mu, r*mu, E_1, k, dim(G_2), E_2) -- six substrate dimensions.\n(28 non-assoc, 7 assoc) octonion triples = (ord(T)=pi(Phi_3)=v-k, Phi_6).\n\n168 = Wilmot 6-simplex Aut = Klein Aut = PSL(2,7) = Phi_6*f.\n5040 = 7! = k*Phi_6*g_2*E_1 = Hurwitz_const * |A_5|.\n\nPascal oscillator vertex/face ladders nest inside Wilmot's P_k set.\nClifford -> torus chain: Spin(7) -> S^7 -> T^q -> Csaszar polyhedron.\n\nClifford = Octonions = Polyhedra = Hurwitz = Pascal = W(3,3).\n"
+}
