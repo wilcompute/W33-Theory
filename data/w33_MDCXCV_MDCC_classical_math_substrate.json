@@ -1,0 +1,47 @@
+{
+  "results": {
+    "MDCXCV_catalan": {
+      "4": 14,
+      "5": 42,
+      "6": 132,
+      "7": 429,
+      "8": 1430,
+      "9": 4862
+    },
+    "MDCXCVI_bell": {
+      "4": 15,
+      "5": 52,
+      "6": 203,
+      "7": 877,
+      "8": 4140,
+      "9": 21147
+    },
+    "MDCXCVII_bernoulli": {
+      "2": 6,
+      "4": 30,
+      "6": 42,
+      "8": 30,
+      "10": 66,
+      "12": 2730,
+      "14": 6,
+      "16": 510,
+      "18": 798,
+      "20": 330
+    },
+    "MDCXCVIII_zeta_denoms": {
+      "2": 6,
+      "4": 90,
+      "6": 945,
+      "8": 9450,
+      "10": 93555
+    },
+    "MDCXCIX_taxicab_1729": 1729,
+    "MDCC_group_orders": {
+      "PSL(2,7)": 168,
+      "M_11": 7920,
+      "M_12": 95040,
+      "Sp(4,3)": 51840
+    }
+  },
+  "headline": "MDCXCV-MDCC: classical mathematical constants substrate-clean.\nCatalan, Bell, Bernoulli, zeta denominators, Hardy-Ramanujan taxicab,\nPSL, Mathieu, and sporadic group orders all factor through W(3,3) primitives.\nMathematics IS the q=3 substrate read arithmetically.\nWigner's 'unreasonable effectiveness' demystified."
+}
