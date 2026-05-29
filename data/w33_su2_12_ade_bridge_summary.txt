@@ -1,0 +1,8 @@
+SU2 level 12 ADE bridge result
+all identities hold: true
+level 12 ADE type: D8
+projector result: H7 rank 4, nullity 3
+W33 distance split: dZ=4, dX=3
+D8 graph: vertices 8, edges 7, degree sum 14, degree square sum 28
+modular invariant matrix: rank 4, trace 8, entry sum 14, Frobenius square sum 16, minimal identity M squared equals 2M
+interpretation: the corrected seven-sector lead is the even block of the level 12 D8 invariant; its rank-nullity recovers the W33 CSS split, and the D8 Dynkin skeleton recovers Phi6, k plus 2, and mu.
