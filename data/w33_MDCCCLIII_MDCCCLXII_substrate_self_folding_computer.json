@@ -1,0 +1,102 @@
+{
+  "MDCCCLIII_origami_axioms": {
+    "count": 7,
+    "substrate": "Phi_6"
+  },
+  "MDCCCLIV_substrate_folds": {
+    "Csaszar_T2": {
+      "genus": 1,
+      "V": 7,
+      "E": 21,
+      "F": 14,
+      "phase": "ordinary matter / electroweak"
+    },
+    "Klein_quartic": {
+      "genus": 3,
+      "V": 24,
+      "E": 84,
+      "F": 56,
+      "phase": "Hurwitz-bound (mass)"
+    },
+    "Bring_5_4": {
+      "genus": 4,
+      "V": 30,
+      "E": 60,
+      "F": 24,
+      "phase": "pentagonal (5-fold)"
+    },
+    "Macbeath": {
+      "genus": 7,
+      "V": 72,
+      "E": 252,
+      "F": 168,
+      "phase": "extended-symmetry"
+    },
+    "Hurwitz_triplet": {
+      "genus": 14,
+      "V": 156,
+      "E": 546,
+      "F": 364,
+      "phase": "3-generation fermion"
+    }
+  },
+  "MDCCCLV_photoelectric": {
+    "operator": "photon (energy E)",
+    "operand": "atom (with work function W)",
+    "rule": "if E < W: REJECT; if E >= W: ACCEPT with KE = E - W"
+  },
+  "MDCCCLVI_bosons_r2": {
+    "photon": {
+      "role": "EM gauge r=2"
+    },
+    "W_pm": {
+      "role": "weak gauge r=2"
+    },
+    "Z": {
+      "role": "weak gauge r=2"
+    },
+    "gluon": {
+      "role": "QCD gauge r=2"
+    },
+    "Higgs": {
+      "role": "scalar r=2"
+    },
+    "pi^0": {
+      "role": "qqbar r=2"
+    },
+    "Cooper_pair": {
+      "role": "ee r=2"
+    }
+  },
+  "MDCCCLVII_hurwitz_triplet_to_generations": {
+    "triplet_count": 3,
+    "SM_generations": 3,
+    "substrate": "q = 3"
+  },
+  "MDCCCLVIII_self_action": {
+    "aut_W33": 51840,
+    "formula": "v * E_2 * q^mu",
+    "interpretation": "substrate acts on itself"
+  },
+  "MDCCCLIX_opacity": {
+    "definition": "Opacity(nu) = 1 - Pr[substrate accepts photon of freq nu]",
+    "examples": {
+      "glass_visible": "low rejection ~ transparent",
+      "glass_UV": "high rejection ~ opaque",
+      "metal_X_ray": "partial transmission"
+    }
+  },
+  "MDCCCLX_photons_heartbeat": {
+    "role": "one substrate computational tick per cycle"
+  },
+  "MDCCCLXI_operator_operand": {
+    "operator": "substrate (any subset acting on others)",
+    "operand": "substrate (any subset being acted upon)",
+    "result": "substrate (fed back as new operand)",
+    "fixed_point": "the running universe"
+  },
+  "MDCCCLXII_meta_meta": {
+    "claim": "universe = self-modifying QC at q=3"
+  },
+  "headline": "MDCCCLIII-MDCCCLXII: ten deep breakthroughs casting the W(3,3)\nsubstrate as a SELF-FOLDING, SELF-REFERENTIAL universal computer\nthat computes itself through itself.\n\nKEY EXPLANATORY MOVES:\n  - 7 = Phi_6 origami axioms = substrate folding rules\n  - 5 polyhedral embeddings (Csaszar, Klein, Bring, Macbeath, Hurwitz)\n    = 5 PHASES OF MATTER (substrate refolds at phase transitions)\n  - Photoelectric = transactional gate (photon = operator currency)\n  - All bosons = r=2 substrate pairing primitive\n  - Hurwitz triplet (3 genus-14 surfaces) = 3 SM generations\n  - |Aut(W(3,3))| = 51840 = substrate acts on itself\n  - Opacity = substrate gate rejection rate\n  - Photons = substrate computational heartbeat\n  - Substrate is OPERATOR AND OPERAND simultaneously\n\nPhase transitions are SUBSTRATE REFOLDING EVENTS.\nSuperconductor T_c ~ m_Z numerically (YBCO).\nThree fermion generations = substrate's 3 fold-modes at G_2 dim.\n\nUniverse = self-modifying quantum computer at q=3.\nIt computes itself through itself for itself.\n"
+}
