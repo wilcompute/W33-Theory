@@ -1,0 +1,54 @@
+{
+  "MDCCCCXXXIII_minimal_models": {
+    "2": "0",
+    "3": "1/2",
+    "4": "7/10",
+    "5": "4/5",
+    "6": "6/7",
+    "7": "25/28"
+  },
+  "MDCCCCXXXIV_SU2_12_WZW": {
+    "c": "18/7",
+    "formula": "(k+g_2)/Phi_6"
+  },
+  "MDCCCCXXXV_knot_counts": {
+    "3": 1,
+    "4": 1,
+    "5": 2,
+    "6": 3,
+    "7": 7,
+    "8": 21,
+    "9": 49,
+    "10": 165,
+    "11": 552,
+    "12": 2176
+  },
+  "MDCCCCXXXVI_LQG": {
+    "area_min": "sqrt(q)/r * Planck^2"
+  },
+  "MDCCCCXXXVII_tropical": {
+    "claim": "substrate primes = tropical primes"
+  },
+  "MDCCCCXXXVIII_quantum_group": {
+    "k": 12,
+    "n_irreps": 13,
+    "q_quantum": "exp(pi*i/Phi_6)"
+  },
+  "MDCCCCXXXIX_conformal_dim": {
+    "total": 91,
+    "formula": "Phi_6 * Phi_3 = (k+1)(k+2)/2"
+  },
+  "MDCCCCXL_j_function": {
+    "j(i)": "k^3 = 1728",
+    "Heegner_163": "-640320^3"
+  },
+  "MDCCCCXLI_91_triple": {
+    "CFT": 91,
+    "Pascal_C14_2": 91,
+    "D_7_dim": 91
+  },
+  "MDCCCCXLII_meta": {
+    "claim": "CFT+knots+QG=substrate weave"
+  },
+  "headline": "MDCCCCXXXIII-MDCCCCXLII: chain extends through CFT, knot theory,\nquantum groups, conformal blocks, LQG -- all substrate.\n\nNEW SUBSTRATE IDENTITIES:\n  - CFT minimal models M(m, m+1) at m={r,q,mu,F_5,g_2,Phi_6}\n    give c={0, 1/r, Phi_6/E_1, mu/F_5, g_2/Phi_6, (k+Phi_3)/ord(T)}\n    = first 6 unitary minimal models (Ising, TIM, 3-Potts, ...)\n  - SU(2)_12 WZW c = 18/7 = (k+g_2)/Phi_6 = c_W33\n  - Prime knot counts:\n    7 crossings -> Phi_6 = 7 prime knots\n    8 crossings -> g_1 = 21 prime knots (= Csaszar EDGES!)\n    9 crossings -> Phi_6^2 = 49 prime knots\n    12 crossings -> r^Phi_6 * Hurwitz_g_4 = 2176\n  - U_q(sl_2) at k=12 root of unity: Phi_3 irreps, q_quantum=exp(pi*i/Phi_6)\n  - Conformal block dim sum = Phi_6 * Phi_3 = 91 = C(14,2)\n  - 91 TRIPLE coincidence: CFT dim = Pascal C(dim G_2, 2) = dim D_7\n  - LQG fundamental area quantum = sqrt(q)/r in Planck units\n  - j-function at all Heegner-tau values substrate-cubic\n\nThe substrate weaves TQFT (Atiyah-Witten-RT), conformal field theory,\nknot invariants (Jones polynomial), quantum groups, and loop quantum\ngravity into ONE substrate fabric.\n"
+}
