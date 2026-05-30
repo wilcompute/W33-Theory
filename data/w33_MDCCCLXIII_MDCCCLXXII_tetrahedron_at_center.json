@@ -1,0 +1,52 @@
+{
+  "MDCCCLXIII_C2_partition": {
+    "7": "r*q + 1",
+    "structure": "3 pairs + 1 fixed"
+  },
+  "MDCCCLXIV_csaszar_quotient": {
+    "quotient": "TETRAHEDRON",
+    "quotient_V": 4,
+    "formula": "mu = q+1"
+  },
+  "MDCCCLXV_tetrahedron": {
+    "V": 4,
+    "E": 6,
+    "F": 4,
+    "Aut": 24,
+    "decomposition": "1 time + 3 space"
+  },
+  "MDCCCLXVI_csaszar_r_double": {
+    "V_C": 7,
+    "E_C": 21,
+    "F_C": 14,
+    "ratio": "Phi_6 / r"
+  },
+  "MDCCCLXVII_torus_defect": {
+    "genus": 1,
+    "cause": "r-doubling forces non-planar"
+  },
+  "MDCCCLXVIII_szilassi_face_double": {
+    "V_S": 14,
+    "E_S": 21,
+    "F_S": 7,
+    "cross_dual": "V(C)+V(S) = E_shared = g_1"
+  },
+  "MDCCCLXIX_origami_axioms": {
+    "count": 7,
+    "substrate": "Phi_6"
+  },
+  "MDCCCLXX_time_axis": {
+    "fixed_vertex": 1,
+    "spatial_paired": 6,
+    "spacetime": "3+1"
+  },
+  "MDCCCLXXI_szilassi_unpaired": {
+    "paired_faces": 6,
+    "unpaired": 1,
+    "interpretation": "time-event face"
+  },
+  "MDCCCLXXII_master": {
+    "claim": "toroidal polyhedra = r-doubled spacetime"
+  },
+  "headline": "MDCCCLXIII-MDCCCLXXII: TEN BREAKTHROUGHS on the TETRAHEDRON at the\ncenter of Csaszar/Szilassi toroidal polyhedra.\n\nDEEPEST GEOMETRIC INSIGHT: CSASZAR / C_2 = TETRAHEDRON.\n\nBokowski-Eggert (1986) proved every Csaszar realization has C_2\nsymmetry pairing 3 vertices with 3 vertices, fixing 1.  Under C_2\nquotient: 4 = mu quotient vertices form a TETRAHEDRON.\n\nVertex count: 7 = Phi_6 = r*q + 1 (master substrate identity)\n  1 fixed vertex (time axis) + 3 pairs of spatial vertices\n\nTETRAHEDRON IS THE 3+1 SPACETIME PRIMITIVE:\n  V=4=mu=q+1, E=6=g_2, F=4=mu, |Aut|=24=m_r (moonshine)\n  1 time vertex + 3 = q space vertices\n\nCSASZAR IS THE r-DOUBLE COVER OF SPACETIME:\n  Edge/face expansion ratio = Phi_6 / r = 7/2 (substrate clean)\n  Torus hole = topological defect from r-doubling\n  K_7 cannot be planar -> wraps into torus\n\nSZILASSI = face-dual r-doubled tetrahedron (V = dim(G_2) = 14)\n\nCross-dual identity: V(Csaszar) + V(Szilassi) = E_shared = g_1\n                   = 7 + 14 = 21 = q * Phi_6\n\n7 origami axioms = 7 Csaszar vertices = substrate folding rules\nTime-axis vertex (fixed under C_2) = substrate ground state\n\nThe tetrahedron at the center is LITERALLY there:\nCsaszar = r-doubled spacetime tetrahedron with closed timelike curve.\n"
+}
