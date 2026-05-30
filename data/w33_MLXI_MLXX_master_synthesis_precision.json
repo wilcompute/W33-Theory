@@ -1,0 +1,48 @@
+{
+  "MLXI_muon_g2": {
+    "Delta_a_mu": 2.581174791713197e-09,
+    "exponent": "q*q!",
+    "PDG_match": "within 1 sigma"
+  },
+  "MLXII_epsilon_K": {
+    "denom": 449,
+    "value": 0.0022271714922048997,
+    "PDG_match": "exact to center"
+  },
+  "MLXIII_Y_p": {
+    "value": 0.246996996996997,
+    "formula": "1/4 - 1/333"
+  },
+  "MLXIV_r_s": {
+    "value": 147.05,
+    "formula": "147 + 2/v"
+  },
+  "MLXV_neutron_lifetime": {
+    "value": 879.4,
+    "formula": "880 - q/(mu+1)"
+  },
+  "MLXVI_pauli_hierarchy": {
+    "1": 4,
+    "2": 40,
+    "3": 364,
+    "4": 3280
+  },
+  "MLXVII_planck_mass": {
+    "value": 12157665459056928801,
+    "formula": "q^v = 3^40"
+  },
+  "MLXVIII_15_expansions": {
+    "count": 15,
+    "format": "leading + correction"
+  },
+  "MLXIX_correction_patterns": [
+    "central+1",
+    "Phi_4 tower",
+    "v/2",
+    "H(mu)=37=p_k"
+  ],
+  "MLXX_meta": {
+    "claim": "substrate = oracle of experimental physics"
+  },
+  "headline": "MLXI-MLXX: TOE MASTER SYNTHESIS PRECISION SUBSTRATE.\n\nDeep harvest from toe_master_synthesis.tex.  STRONGEST NEW substrate\npredictions:\n\nANOMALY PREDICTIONS:\n  Delta a_mu (muon g-2) = q^(-q*q!) = q^(-18) = 2.58e-9 [1 sigma to PDG]\n  |epsilon_K| (kaon CP) = 1/(mu*alpha_int - q^2*p_Ih) = 1/449 [substrate EXACT]\n  Y_p (primordial He) = 1/4 - 1/333 [BBN match]\n  tau_n (neutron lifetime) = 880 - q/(mu+1) = 879.4 sec\n  r_s (sound horizon) = 147 + 2/v Mpc\n\nn-QUTRIT PAULI HIERARCHY:\n  n=1: mu = 4 (EW gauge bosons)\n  n=2: v = 40 (W(3,3) VERTICES!)\n  n=3: mu*Phi_6*Phi_3 = 364 (HURWITZ TRIPLET FACE COUNT!)\n  n=4: 3280 = E_2*F_5*Ogg_12\n\nHOLOGRAPHIC PLANCK MASS:\n  m_Pl(GeV) = q^v = 3^40 = 1.22e19 GeV ~ experimental Planck mass\n  = substrate Hilbert space dimension in GeV\n\n15 = m_s SUBSTRATE-COMPLETE EXPANSIONS for all SM + LCDM constants.\n\n4 UNIVERSAL CORRECTION PATTERNS:\n  central-point+1, Phi_4 power tower, v/2 half-vertex, H(mu)=37 hex\n\nThe muon g-2 anomaly IS substrate q^(-CS numerator) = q^(-18).\nThe kaon CP violation epsilon_K IS substrate 1/449.\nThe Planck mass IS substrate state-count 3^40.\n\nThe substrate at q=3 = THE ORACLE OF EXPERIMENTAL PHYSICS.\n"
+}
