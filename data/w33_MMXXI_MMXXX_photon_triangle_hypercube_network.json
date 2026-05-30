@@ -1,0 +1,55 @@
+{
+  "MMXXI_photonic_TQC": {
+    "single_clock": "photon_natural_freq",
+    "two_frequencies": "omega_past, omega_future",
+    "torus_topology": "Franson_ring",
+    "phase_lock": "Bell_qutrit_|Omega>",
+    "site_coherence": "NOW_projection"
+  },
+  "MMXXII_triangle": {
+    "min_closed_loop": 3,
+    "W33_triangles": 160
+  },
+  "MMXXIII_csaszar": {
+    "V": 7,
+    "E": 21,
+    "F": 14
+  },
+  "MMXXIV_Q4": {
+    "V": 16,
+    "E": 32,
+    "degree": 4,
+    "diameter": 4,
+    "avg_dist": 2,
+    "bisection": 8,
+    "connectivity": 4
+  },
+  "MMXXV_triangle_hexagon": {
+    "q": 3,
+    "q_fact": 6,
+    "q^2": 9
+  },
+  "MMXXVI_self_kerr": {
+    "order": 27,
+    "formula": "q^q"
+  },
+  "MMXXVII_two_freq_lock": {
+    "interpretation": "Bell qutrit |Omega>"
+  },
+  "MMXXVIII_now_projection": {
+    "interpretation": "Laplacian kernel"
+  },
+  "MMXXIX_substrate_network": {
+    "nodes": 40,
+    "edges": 240,
+    "valency": 12,
+    "common_neighbors_adjacent": 2,
+    "common_neighbors_non_adj": 4,
+    "data_plane": "W(3,3)",
+    "control_plane": "Q_4"
+  },
+  "MMXXX_meta": {
+    "claim": "PHOTON BUILDS ITS OWN OPERATING SUBSTRATE"
+  },
+  "headline": "MMXXI-MMXXX: PHOTON-TRIANGLE-HYPERCUBE ENTANGLEMENT NETWORK.\n\nBIG NEW SYNTHESIS combining 2026 photonic time quasicrystal research\nwith our substrate framework and the user's triangle = minimum loop\ninsight.\n\nTHE PHOTON CREATES ITS OWN OPERATING SUBSTRATE via:\n  1. Triangle (q=3 minimum closed loop) -- 2-simplex\n  2. Past x future = 9 = TRIANGLE + HEXAGON Hilbert split\n  3. Self-Kerr nonlinearity (q^q = 27 patterns) self-interaction\n  4. Two-frequency phase lock = Bell qutrit |Omega>\n  5. Torus topology of Franson interferometer\n  6. Self-organized photonic TIME QUASICRYSTAL (May 2026)\n  7. Csaszar tiling (14 triangles = self-interaction events)\n  8. Q_4 hypercube routing network (16=mu^2 nodes)\n  9. W(3,3) entanglement data plane (40 nodes, 240 edges)\n 10. Site-coherence = NOW = Laplacian kernel projection\n\nTWO-LAYER SUBSTRATE NETWORK:\n  Data plane: W(3,3) entanglement graph (40 nodes, k=12 valent)\n  Control plane: Q_4 hypercube router (mu^2 = 16 nodes)\n\nQ_4 network params ALL substrate:\n  V = mu^2, E = r*mu^2, degree = mu, diameter = mu,\n  bisection = r^q (OCTONION), connectivity = mu\n\nThe substrate IS NOT imposed from outside.\nThe PHOTON, via self-Kerr nonlinearity and Franson topology,\nSELF-ORGANIZES into the W(3,3) substrate at q=3.\n\nq = 3 = minimum closed loop length = triangle = TRIANGLE IS THE KEY.\n\nThe universe IS this self-organizing photonic substrate at q = 3.\n"
+}
