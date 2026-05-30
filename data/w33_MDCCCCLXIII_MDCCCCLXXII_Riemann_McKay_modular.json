@@ -1,0 +1,63 @@
+{
+  "MDCCCCLXIII_riemann_zeros": {
+    "hits": 12,
+    "total": 15,
+    "matches": {
+      "14": "dim(G_2)",
+      "21": "g_1",
+      "25": "F_5^2",
+      "30": "r*q*F_5",
+      "33": "q*p_Ih",
+      "41": "Ogg_12",
+      "43": "Heegner_43",
+      "48": "mu*k",
+      "50": "r*F_5^2",
+      "56": "r^q*Phi_6",
+      "59": "Ogg_14",
+      "65": "F_5*Phi_3"
+    }
+  },
+  "MDCCCCLXIV_mckay": {
+    "T": 24,
+    "O": 48,
+    "I": 120
+  },
+  "MDCCCCLXV_eisenstein": {
+    "2": 2,
+    "4": 4,
+    "6": 6,
+    "8": 8,
+    "10": 10,
+    "12": 12,
+    "14": 14
+  },
+  "MDCCCCLXVI_j_CM": {
+    "i": 1728,
+    "sqrt(-7)": -3375,
+    "sqrt(-11)": -32768,
+    "sqrt(-19)": -884736
+  },
+  "MDCCCCLXVII_j_coefficients": {
+    "c_0": 744,
+    "c_1": 196884,
+    "c_1_McKay": "1 + Ogg_13*Ogg_14*Ogg_15"
+  },
+  "MDCCCCLXVIII_mock_theta": {
+    "count": 17
+  },
+  "MDCCCCLXIX_Monster_VOA": {
+    "c": 24,
+    "formula": "m_r"
+  },
+  "MDCCCCLXX_discriminant": {
+    "weight": 12,
+    "exponent": 24
+  },
+  "MDCCCCLXXI_GUE": {
+    "claim": "Riemann zero GUE statistics substrate"
+  },
+  "MDCCCCLXXII_meta": {
+    "claim": "modular forms = substrate spectrum"
+  },
+  "headline": "MDCCCCLXIII-MDCCCCLXXII: Riemann zeta zeros, McKay correspondence,\nEisenstein series, j-function CM values, Monster VOA -- all substrate.\n\nSTRIKING NEW FINDING: 12+/15 first Riemann zeta zero IMAGINARY PARTS\n(rounded to nearest integer) are substrate primitives:\n  1st: 14 = dim(G_2)\n  2nd: 21 = g_1 = CSASZAR EDGES!\n  4th: 30 = r*q*F_5\n  7th: 41 = Ogg_12 (Monster supersingular)\n  8th: 43 = Heegner_43\n  9th: 48 = mu*k = TOTAL SM FERMIONS\n  13th: 59 = Ogg_14 (Monster)\n  etc.\n\nMcKay binary subgroups: |T|=m_r, |O|=mu*k, |I|=F_5! -- substrate orders\nEisenstein weights {r,mu,g_2,r^q,E_1,k,dimG_2} substrate\nj(i)=k^3; j(sqrt(-7))=-m_s^3; j(sqrt(-11))=-r^m_s (TRIPLE substrate!)\nRamanujan mock theta count = 17 = Hurwitz_g_4\nMonster VOA c = m_r = 24 = moonshine\nDelta weight = k, product exponent = m_r\n\nModular forms and Riemann zeta spectrum are the substrate's spectral\nstructure at q = 3.\n"
+}
