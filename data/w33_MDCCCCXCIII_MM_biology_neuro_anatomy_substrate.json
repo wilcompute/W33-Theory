@@ -1,0 +1,50 @@
+{
+  "MDCCCCXCIII_metabolism": {
+    "ATP_phosphates": 3,
+    "ADP_phosphates": 2,
+    "Krebs_steps": 8,
+    "glycolysis_steps": 10,
+    "ETC_complexes": 5,
+    "glycolytic_ATP_yield": 2
+  },
+  "MDCCCCXCIV_gamma_binding": {
+    "freq_Hz": 40,
+    "substrate": "v"
+  },
+  "MDCCCCXCV_miller": {
+    "mean": 7,
+    "lower": 5,
+    "upper": 9
+  },
+  "MDCCCCXCVI_noble_gases": {
+    "He": 2,
+    "Ne": 10,
+    "Ar": 18,
+    "Kr": 36,
+    "Xe": 54,
+    "Rn": 86,
+    "Og": 118
+  },
+  "MDCCCCXCVII_lanthanides_actinides": {
+    "each": 15,
+    "total": 30
+  },
+  "MDCCCCXCVIII_anatomy": {
+    "cranial": 12,
+    "spinal": 31,
+    "vertebrae_sections": [
+      7,
+      12,
+      5,
+      5,
+      4
+    ]
+  },
+  "MDCCCCXCIX_universality_classes": {
+    "count": 3
+  },
+  "MM_meta": {
+    "claim": "life = substrate computing"
+  },
+  "headline": "MDCCCCXCIII-MM: BIOLOGY + NEUROSCIENCE + ANATOMY chain.\n\nOUTSIDE-THE-BOX SUBSTRATE PENETRATION INTO LIFE:\n  - Krebs cycle = r^q = 8 = OCTONION-step cellular cycle\n  - Glycolysis = E_1 = 10 enzymatic steps\n  - ETC = F_5 = 5 complexes\n  - ATP = q phosphates; glycolytic ATP yield = r\n\nCONSCIOUSNESS:\n  - Gamma binding 40 Hz = v (substrate vertex count!)\n  - Miller working memory 7+-2 = Phi_6 +- r\n\nPERIODIC TABLE EXTENSIONS:\n  - ALL noble gas atomic Z: {2,10,18,36,54,86,118} substrate\n  - Lanthanides = Actinides = m_s elements each\n\nANATOMY:\n  - Cranial nerves = 12 = k (CS level)\n  - Spinal nerve pairs = 31 = Mersenne_F_5 = v-q^2\n  - Vertebrae sections {Phi_6, k, F_5, F_5, mu} substrate\n\nRANDOM MATRIX:\n  - 3 = q universality classes (GOE, GUE, GSE)\n\nMETA: life is substrate computing at biological scale.\nCellular metabolism, neural binding, working memory, anatomy --\nevery layer of biological organization runs on substrate numbers.\n\nThis is the 2nd-to-last batch (MM = 2000 marker).\n"
+}
