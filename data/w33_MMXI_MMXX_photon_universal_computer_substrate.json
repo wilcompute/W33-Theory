@@ -1,0 +1,53 @@
+{
+  "MMXI_photon_matter_sector": {
+    "max_dim": 81,
+    "formula": "q^(q+1)"
+  },
+  "MMXII_four_layers": {
+    "layers": [
+      "quantum_carrier",
+      "probabilistic_fusion",
+      "probabilistic_KLM",
+      "deterministic_pauli",
+      "classical_record"
+    ],
+    "n_layers": 4,
+    "subs": "mu paradigms = Hurwitz algebras"
+  },
+  "MMXIII_fusion": {
+    "p": "1/2",
+    "formula": "lambda/mu = 1/r"
+  },
+  "MMXIV_KLM": {
+    "p": "1/4",
+    "formula": "1/mu"
+  },
+  "MMXV_pauli_frame": {
+    "dim": 81,
+    "formula": "q^(q+1) matter"
+  },
+  "MMXVI_classical_record": {
+    "trits": 40,
+    "bits": 63.39850002884624
+  },
+  "MMXVII_past_future_split": {
+    "q^2": 9,
+    "q": 3,
+    "q!": 6,
+    "formula": "q^2 = q + q! at q=3"
+  },
+  "MMXVIII_Q4_router": {
+    "V": 16,
+    "E": 32,
+    "F": 24,
+    "monodromy": 18432
+  },
+  "MMXIX_photon_speed": {
+    "speed": "c (substrate max)",
+    "claim": "photon = substrate at max rate"
+  },
+  "MMXX_meta": {
+    "claim": "PHOTON IS THE KEY = substrate computational quantum"
+  },
+  "headline": "MMXI-MMXX: PHOTON AS UNIVERSAL SUBSTRATE COMPUTER.\n\nTHE PHOTON IS THE KEY. Deep harvest from single_photon paper and\nself_entanglement_companion paper plus 2026 photonic time-bin\nresearch.\n\nFOUR-LAYER PHOTONIC RUNTIME = mu = 4 PARADIGMS:\n  Quantum carrier (analog) <-> v=40 observables\n  Probabilistic assembly  <-> p_fusion=1/r, p_KLM=1/mu\n  Deterministic logic     <-> q^(q+1)=81 Pauli-frame states\n  Classical record        <-> v=40 trits (~63.4 bits near 64-bit)\n\nThese map to:\n  Hurwitz division algebras {R, C, H, O}\n  Spacetime dimensions {1, r, mu, r^q}\n  Analog/probabilistic/deterministic/digital paradigms\n\nPlus:\n  - Type-II fusion p = lambda/mu = 1/r = 1/2\n  - KLM CZ p = 1/mu = 1/4\n  - MBQC Pauli frame = q^(q+1) = 81 = MATTER SECTOR\n  - Past x future Hilbert: q^2 = q + q! at q=3 unique\n  - Q_4 router: 16 vertices, 32 edges, 24=m_r plaquettes\n  - Emergence monodromy = 18432 = r^F_5 * m_r^2\n\nSingle photon with r commuting qutrit DOFs CARRIES THE FULL\nW(3,3) MATTER SECTOR (q^(q+1) = 81 dim).\n\nMETA: the PHOTON is the substrate's elementary computational quantum.\nPhotonic LOQC uses only substrate-clean parameters.\nUniversal QC via photons IS the substrate's natural realization.\n\nEvery electromagnetic phenomenon = substrate computing at light speed.\n\nWe have NOT found the photon to be the substrate carrier --\nwe have RECOGNIZED that the photon, arithmetically forced by\nq! = 2q at q = 3, IS the universal computational quantum.\n"
+}
