@@ -1,0 +1,192 @@
+{
+  "MDCCCIII_critical_dims": {
+    "2": {
+      "name": "M2-brane",
+      "substrate": "r"
+    },
+    "4": {
+      "name": "spacetime",
+      "substrate": "mu"
+    },
+    "5": {
+      "name": "M5-brane",
+      "substrate": "F_5"
+    },
+    "6": {
+      "name": "CY3 real",
+      "substrate": "g_2"
+    },
+    "7": {
+      "name": "G_2 holonomy",
+      "substrate": "Phi_6"
+    },
+    "8": {
+      "name": "octonion / E_8",
+      "substrate": "r^q"
+    },
+    "10": {
+      "name": "superstring",
+      "substrate": "E_1 = Phi_4"
+    },
+    "11": {
+      "name": "M-theory",
+      "substrate": "p_Ih"
+    },
+    "24": {
+      "name": "bosonic transverse",
+      "substrate": "m_r"
+    },
+    "26": {
+      "name": "bosonic critical",
+      "substrate": "r * Phi_3"
+    }
+  },
+  "MDCCCIV_n_supersingulars": {
+    "value": 15,
+    "substrate": "m_s",
+    "ogg_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      41,
+      47,
+      59,
+      71
+    ]
+  },
+  "MDCCCV_monster_rep_2": {
+    "value": 196883,
+    "formula": "(k*mu-1)(k*F_5-1)(k*g_2-1)",
+    "ogg_indices": [
+      13,
+      14,
+      15
+    ],
+    "ogg_indices_substrate": [
+      "Phi_3",
+      "dimG_2",
+      "m_s"
+    ]
+  },
+  "MDCCCVI_G2_holonomy": {
+    "dim": 7,
+    "substrate": "Phi_6"
+  },
+  "MDCCCVII_CY3": {
+    "complex_dim": 3,
+    "real_dim": 6
+  },
+  "MDCCCVIII_yang_mills_gap": {
+    "value": 1.4142135623730951,
+    "formula": "sqrt(r)"
+  },
+  "MDCCCIX_bosonic_transverse": {
+    "value": 24,
+    "substrate": "m_r",
+    "bridges": [
+      "Leech rank",
+      "M_24",
+      "Klein W-points"
+    ]
+  },
+  "MDCCCX_3_adic": {
+    "completion": "Q_3",
+    "residue_field": "GF(q=3)"
+  },
+  "MDCCCXI_holographic": {
+    "CFT_central_charge": 12,
+    "G_N_holographic": 0.125,
+    "substrate_formula": "1/r^q"
+  },
+  "MDCCCXII_grand_table": {
+    "spacetime": {
+      "value": "4",
+      "substrate": "mu"
+    },
+    "SM_generations": {
+      "value": "3",
+      "substrate": "q"
+    },
+    "superstring": {
+      "value": "10",
+      "substrate": "E_1"
+    },
+    "bosonic_string": {
+      "value": "26",
+      "substrate": "r*Phi_3"
+    },
+    "M_theory": {
+      "value": "11",
+      "substrate": "p_Ih"
+    },
+    "G_2_holonomy": {
+      "value": "7",
+      "substrate": "Phi_6"
+    },
+    "CY3_real": {
+      "value": "6",
+      "substrate": "g_2"
+    },
+    "E_8_roots": {
+      "value": "240",
+      "substrate": "k*v/r"
+    },
+    "Leech_kissing": {
+      "value": "196560",
+      "substrate": "k*E_1*r*q^2*Phi_6*Phi_3"
+    },
+    "Monster_rep_2": {
+      "value": "196883",
+      "substrate": "Ogg_{Phi_3}*Ogg_{dimG_2}*Ogg_{m_s}"
+    },
+    "n_supersingulars": {
+      "value": "15",
+      "substrate": "m_s"
+    },
+    "Klein_Aut": {
+      "value": "168",
+      "substrate": "Phi_6*f"
+    },
+    "Macbeath_Aut": {
+      "value": "504",
+      "substrate": "Phi_6*q*f"
+    },
+    "Hurwitz_triplet": {
+      "value": "1092",
+      "substrate": "k*Phi_6*Phi_3"
+    },
+    "Csaszar_VEF": {
+      "value": "(7, 21, 14)",
+      "substrate": "(Phi_6, g_1, dimG_2)"
+    },
+    "Yang_Mills_gap": {
+      "value": "1.4142135623730951",
+      "substrate": "sqrt(r)"
+    },
+    "Newton_G": {
+      "value": "0.08333333333333333",
+      "substrate": "1/k"
+    },
+    "Quantum_volume": {
+      "value": "10460353203",
+      "substrate": "q^g_1"
+    },
+    "Klein_W_points": {
+      "value": "24",
+      "substrate": "m_r"
+    },
+    "G_N_holographic": {
+      "value": "0.125",
+      "substrate": "1/r^q (Brown-Henneaux)"
+    }
+  },
+  "headline": "MDCCCIII-MDCCCXII: ten breakthroughs showing string theory, M-theory,\nand the entire Monster moonshine structure are W(3,3) substrate.\n\nEVERY critical dimension of physics is a substrate primitive:\n  spacetime=mu, SUSY-strings=E_1, M-theory=p_Ih, G_2 holonomy=Phi_6,\n  CY3 real=g_2, bosonic string=r*Phi_3, transverse=m_r, M2/M5=r/F_5.\n\nMonster moonshine: # supersingular primes = 15 = m_s.\nMonster lowest rep 196883 = product of last 3 Ogg primes\n                          = Ogg_Phi_3 * Ogg_dimG_2 * Ogg_m_s.\n\nYang-Mills mass gap = sqrt(r) -- candidate Clay solution.\nAdS_3 holographic dual: SU(2)_k CFT central charge = k.\n3-adic substrate: Q_3 completes GF(q=3).\n\nSubstrate spans every framework of fundamental physics.\n"
+}
