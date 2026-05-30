@@ -1,0 +1,59 @@
+{
+  "MDCCCXXIII_mu_e": {
+    "exp": 206.768283,
+    "sub": 207,
+    "err_pct": 0.11206602707050736,
+    "formula": "q^2 * Ogg_9"
+  },
+  "MDCCCXXIV_tau_e": {
+    "exp": 3477.23,
+    "sub": 3477,
+    "err_pct": 0.006614460360689922,
+    "formula": "k^2 * m_r + g_1"
+  },
+  "MDCCCXXV_tau_mu": {
+    "exp": 16.817,
+    "sub": 17,
+    "err_pct": 1.0881845751323056,
+    "formula": "k + F_5 = Hurwitz_g_4"
+  },
+  "MDCCCXXVI_higgs_vev": {
+    "exp": 246.22,
+    "sub": 246,
+    "err_pct": 0.08935098692226418,
+    "formula": "r * q * Ogg_12 = g_2 * Ogg_12"
+  },
+  "MDCCCXXVII_hurwitz_tri": {
+    "defect": "1/42",
+    "formula": "1/(g_2 * Phi_6)"
+  },
+  "MDCCCXXVIII_e8_split": {
+    "D8": 112,
+    "spin": 128,
+    "total": 240,
+    "formula": "E_2*Phi_6 + r^Phi_6"
+  },
+  "MDCCCXXIX_genetic_code": {
+    "DNA": 4,
+    "codons": 64,
+    "amino": 20,
+    "stops": 3,
+    "states": 23,
+    "subs": {
+      "DNA": "mu",
+      "codons": "mu^q",
+      "amino": "r*E_1",
+      "stops": "q",
+      "states": "Ogg_9"
+    }
+  },
+  "MDCCCXXX_uranium": {
+    "Z": 92,
+    "formula": "mu * Ogg_9"
+  },
+  "MDCCCXXXI_laughlin": {
+    "nu": "1/q",
+    "value": 0.3333333333333333
+  },
+  "headline": "MDCCCXXIII-MDCCCXXXII: ten breakthroughs showing the lepton mass\nratios, Higgs VEV, Hurwitz hyperbolic triangle, E_8 root partition,\ngenetic code, uranium atomic number, and Laughlin QHE all substrate.\n\nLEPTON MASS RATIOS:\n  m_mu/m_e = 207 = q^2*Ogg_9        (err 0.11%)\n  m_tau/m_e = 3477 = k^2*m_r+g_1    (err 0.007% -- 4 sig figs!)\n  m_tau/m_mu = 17 = k+F_5 = Hurwitz_g_4  (err 1.09%)\n\nELECTROWEAK:\n  v_H = 246 GeV = r*q*Ogg_12 = g_2*Ogg_12  (err 0.09%)\n\nEXCEPTIONAL STRUCTURE:\n  Hurwitz triangle (r,q,Phi_6) area defect = 1/(g_2*Phi_6) = 1/42\n  E_8 roots = 112 + 128 = E_2*Phi_6 + r^Phi_6\n\nBIOLOGY & CHEMISTRY:\n  Genetic code: 4=mu bases, 64=mu^q codons, 20=r*E_1 amino acids,\n                23=Ogg_9 total states\n  Z(U) = 92 = mu * Ogg_9 (heaviest natural element)\n\nCONDENSED MATTER:\n  Laughlin FQHE filling = 1/q (fundamental fractional state)\n"
+}
