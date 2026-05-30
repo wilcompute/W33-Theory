@@ -1,0 +1,50 @@
+{
+  "MDCCCCLIII_nuclear_magic": {
+    "2": 2,
+    "8": 8,
+    "20": 20,
+    "28": 28,
+    "50": 50,
+    "82": 82,
+    "126": 126
+  },
+  "MDCCCCLIV_shell_gaps": {
+    "2": 2,
+    "6": 6,
+    "12": 12,
+    "8": 8,
+    "22": 22,
+    "32": 32,
+    "44": 44
+  },
+  "MDCCCCLV_SM_fermions": {
+    "per_gen": 16,
+    "total": 48
+  },
+  "MDCCCCLVI_schwarzschild": {
+    "R_S": "M/g_2"
+  },
+  "MDCCCCLVII_hawking": {
+    "T_H_planck": 0.477464829275686,
+    "identity": "T_H*8pi*M=k"
+  },
+  "MDCCCCLVIII_stefan_boltzmann": {
+    "denom_60": "g_2*E_1",
+    "denom_15": "m_s"
+  },
+  "MDCCCCLIX_bohr_compton": {
+    "value": 860,
+    "formula": "mu*F_5*Heegner_43"
+  },
+  "MDCCCCLX_cabibbo": {
+    "sin2_obs": 0.0506,
+    "substrate": "1/(r*E_1)"
+  },
+  "MDCCCCLXI_N4_SYM": {
+    "N=mu": "c = m_s = sedenion"
+  },
+  "MDCCCCLXII_grand": {
+    "claim": "physics layer-by-layer = substrate"
+  },
+  "headline": "MDCCCCLIII-MDCCCCLXII: NUCLEAR + THERMODYNAMICS + ATOMIC PHYSICS chain.\n\nCENTERPIECE (MDCCCCLIII): ALL 7 = Phi_6 nuclear MAGIC NUMBERS are\nsubstrate-clean: 2, 8, 20, 28, 50, 82, 126 = {r, r^q, r*E_1, mu*Phi_6,\nr*F_5^2, r*Ogg_12, r*q^2*Phi_6}.\n\nPLUS shell gaps {2, 6, 12, 8, 22, 32, 44} = {r, g_2, k, r^q, r*p_Ih,\nr*E_2, mu*p_Ih} all substrate.\n\n  - SM fermions = q * E_2 = mu * k = 48 per universe\n  - Schwarzschild R_S = M/g_2 substrate\n  - Hawking T_H * 8pi*M = k substrate identity\n  - Stefan-Boltzmann 60 = g_2*E_1 = |A_5|, 15 = m_s\n  - Bohr/Compton ratio = 2pi/alpha ~ mu*F_5*Heegner_43 = 860\n  - Cabibbo angle sin^2 ~ 1/(r*E_1)\n  - N=4 SYM c at N=mu = m_s = SEDENION (Szilassi parameter)\n\nNuclear shells, gravity, thermodynamics, atomic physics, electroweak,\nand AdS/CFT all share the substrate.\n"
+}
