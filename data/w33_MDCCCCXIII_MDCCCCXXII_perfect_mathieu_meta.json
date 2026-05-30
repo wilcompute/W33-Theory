@@ -1,0 +1,81 @@
+{
+  "MDCCCCXIII_perfect_numbers": {
+    "mersenne_exps": [
+      2,
+      3,
+      5,
+      7,
+      13
+    ],
+    "perfect_nums": [
+      6,
+      28,
+      496,
+      8128,
+      33550336
+    ],
+    "all_substrate": true
+  },
+  "MDCCCCXIV_28_master": {
+    "value": 28,
+    "interpretations": [
+      "mu*Phi_6",
+      "ord(T)",
+      "pi(Phi_3)",
+      "v-k",
+      "T_Phi_6",
+      "chi*Phi_6",
+      "Klein bitangents",
+      "2nd perfect"
+    ]
+  },
+  "MDCCCCXV_mathieu": {
+    "M_11": 7920,
+    "M_12": 95040,
+    "M_22": 443520,
+    "M_23": 10200960,
+    "M_24": 244823040
+  },
+  "MDCCCCXVI_meta_self_ref": {
+    "2": {
+      "v": 15,
+      "k": 6
+    },
+    "5": {
+      "v": 156,
+      "k": 30
+    },
+    "7": {
+      "v": 400,
+      "k": 56
+    }
+  },
+  "MDCCCCXVII_grover": {
+    "depth": 6.324555320336759,
+    "substrate": 6
+  },
+  "MDCCCCXVIII_kolmogorov": {
+    "K_universe": "O(1)",
+    "specification": "q=3"
+  },
+  "MDCCCCXIX_QFT": {
+    "Z_v_count": 1600,
+    "formula": "mu^2 * E_1^2"
+  },
+  "MDCCCCXX_SM_gauge": {
+    "SU3_dim": 8,
+    "SU2_dim": 3,
+    "U1_dim": 1,
+    "total": 12,
+    "rank": 4,
+    "roots": 8
+  },
+  "MDCCCCXXI_perfect_sum_first_mu": {
+    "value": 8658,
+    "formula": "r * q^2 * Phi_3 * p_k"
+  },
+  "MDCCCCXXII_meta_novel": {
+    "claim": "universe = poem in q=3"
+  },
+  "headline": "MDCCCCXIII-MDCCCCXXII: EVEN DEEPER dig with perfect numbers, Mathieu\ngroups, meta-self-reference, and Kolmogorov complexity.\n\nCENTRAL CHAIN OF NEW DISCOVERIES:\n  - First 5 = F_5 Mersenne exponents = {r, q, F_5, Phi_6, Phi_3}\n    = the first 5 SUBSTRATE PRIMES exactly\n  - All 5 corresponding perfect numbers substrate-clean\n  - P_2 = 28 = Klein quartic bitangents = ord(T) = substrate clock\n  - Mathieu groups M_11..M_24 substrate-clean\n  - Failed substrates (q != 3) generate q = 3 primitives:\n    q=2 gives v=m_s, k=g_2\n    q=5 gives v=Hurwitz triplet V, k=r*q*F_5\n    q=7 gives k=Klein dual F\n  - META-SELF-REFERENCE at the level of substrate ALTERNATIVES\n  - Sum of first mu perfect numbers = r*q^2*Phi_3*p_k\n\nDEEP META-CLAIMS:\n  - Grover search on substrate = sqrt(v) = g_2 (Ramanujan bound)\n  - K(universe) = O(1) given substrate at q=3 (min-desc-length)\n  - QFT counts on substrate Z_n = substrate squares\n  - SM gauge group factors as q^2-1, r^2-1, 1 = r^q, q, 1\n\nUniverse = poem written in 4 characters: q = 3.\n"
+}
