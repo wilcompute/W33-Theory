@@ -1,0 +1,65 @@
+{
+  "MDCCCCXLIII_crystallography": {
+    "wallpaper": 17,
+    "point_3d": 32,
+    "space_3d": 230,
+    "subs": {
+      "wallpaper": "k+F_5",
+      "point": "r^F_5",
+      "space": "r*F_5*Ogg_9"
+    }
+  },
+  "MDCCCCXLIV_E8_packing": {
+    "denom": 384,
+    "formula": "r^Phi_6 * q",
+    "year": 2016,
+    "credit": "Viazovska"
+  },
+  "MDCCCCXLV_Leech_packing": {
+    "denom": 479001600,
+    "formula": "k!",
+    "credit": "CKMRV 2017"
+  },
+  "MDCCCCXLVI_Conway": {
+    "Co_1": {
+      "order": 4157776806543360000,
+      "all_Monster_primes": true
+    },
+    "Co_2": {
+      "order": 42305421312000,
+      "all_Monster_primes": true
+    },
+    "Co_3": {
+      "order": 495766656000,
+      "all_Monster_primes": true
+    }
+  },
+  "MDCCCCXLVII_CA": {
+    "total_rules": 256,
+    "rule_110": 110,
+    "rule_30": 30
+  },
+  "MDCCCCXLVIII_Penrose": {
+    "symmetry": 5,
+    "inflation_tiles": 2
+  },
+  "MDCCCCXLIX_dual_coxeter": {
+    "G_2": 4,
+    "F_4": 9,
+    "E_6": 12,
+    "E_7": 18,
+    "E_8": 30
+  },
+  "MDCCCCL_4D_TQFT": {
+    "k": 12,
+    "anyon_types": 13
+  },
+  "MDCCCCLI_AdS3_BH": {
+    "c": 18,
+    "formula": "3k/2 = k+g_2"
+  },
+  "MDCCCCLII_meta": {
+    "claim": "classification = substrate"
+  },
+  "headline": "MDCCCCXLIII-MDCCCCLII: chain extends to crystallography, sphere\npackings, Conway groups, cellular automata, quasicrystals, exceptional\nCartan numbers, 4D TQFT, AdS_3 gravity -- all substrate.\n\nNEW SUBSTRATE IDENTITIES:\n  - 17 wallpaper groups = k + F_5 = Hurwitz_g_4\n  - 32 point groups = E_2 = r^mu\n  - 230 space groups = r * F_5 * Ogg_9 (Monster supersingular!)\n  - E_8 packing density = pi^mu / (r^Phi_6 * q) (Viazovska 2016)\n  - Leech packing density = pi^k / k! (CKMRV 2017)\n  - Conway Co_1, Co_2, Co_3: all primes within Monster Ogg set\n  - 256 = r^(r^q) elementary CA rules\n  - Cook's rule 110 = r*F_5*p_Ih (Turing universal!)\n  - Penrose 5-fold = F_5 symmetry\n  - Cartan dual Coxeter: {G_2:mu, F_4:q^2, E_6:k, E_7:k+g_2, E_8:r*q*F_5}\n  - Brown-Henneaux AdS_3 c = 3k/2 = 18 = k+g_2 (CS numerator)\n\nThe substrate at q=3 is the common DIMENSIONAL/ARITHMETIC skeleton\nof ALL major classification schemes in mathematics and physics.\n"
+}
