@@ -1,0 +1,68 @@
+{
+  "MCI_runtime": {
+    "carrier": 40,
+    "p_fusion": "1/2",
+    "p_KLM": "1/4",
+    "frame_states": 81,
+    "classical_trits": 40
+  },
+  "MCII_64bit_envelope": {
+    "pow2_63": 9223372036854775808,
+    "pow3_40": 12157665459056928801,
+    "pow2_64": 18446744073709551616,
+    "slack_bits": 0.6014999711537499
+  },
+  "MCIII_toric": {
+    "genus": 1,
+    "logical": 2,
+    "GSD": 4
+  },
+  "MCIV_hashimoto_phases": {
+    "theta_gauge_deg": 72.4515993862077,
+    "theta_chiral_deg": 127.08668993406383,
+    "|u|^2": 11,
+    "p_Ih": 11
+  },
+  "MCV_e8_z3": {
+    "g_0": 86,
+    "g_1": 81,
+    "g_2": 81,
+    "sum": 248,
+    "g1xg2": 6561,
+    "g1xg1": 810
+  },
+  "MCVI_8_ticks": {
+    "ticks": 8,
+    "formula": "2^q"
+  },
+  "MCVII_concatenated_steane": {
+    "bare": [
+      240,
+      81,
+      3
+    ],
+    "concat": [
+      82320,
+      81,
+      81
+    ],
+    "ratio": 343
+  },
+  "MCVIII_g1_self_brackets": {
+    "brackets": 810,
+    "formula": "Phi_4 * q^(q+1)"
+  },
+  "MCIX_complete_graph_genus": {
+    "K_3": 0,
+    "K_4": 0,
+    "K_7": 1,
+    "K_12": 6,
+    "K_40": 111
+  },
+  "MCX_kolmogorov_compression": {
+    "K_W33_bits": 64,
+    "SM_QO_bits": 260,
+    "factor": 4.0625
+  },
+  "headline": "MCI-MCX: FOUR-LAYER PHOTONIC RUNTIME + W(3,3) STRUCTURAL ENCODING.\n\nFOUR-LAYER RUNTIME on a single photon:\n  (1) quantum carrier  = v = 40\n  (2) probabilistic    = p_fusion = lambda/mu = 1/2, p_KLM = 1/mu = 1/4\n  (3) deterministic    = q^(q+1) = 81 Pauli frame states\n  (4) classical record = 40 trits in 64-bit envelope (2^63 < 3^40 < 2^64)\n\nTORIC CODE on Heawood torus:\n  logical = 2g = lambda = 2; GSD = 2^(2g) = mu = 4\n\nHASHIMOTO SECTOR PHASES (FALSIFIABLE PREDICTIONS):\n  theta_gauge  ~ 72.45 deg = arctan(sqrt(Phi_4))\n  theta_chiral ~ 127.09 deg = pi - arctan(sqrt(Phi_6)/2)\n  |u|^2 = p_Ih = 11 (Ihara prime) for both sectors\n\nE_8 Z_3 GRADING: g_0(86) (+) g_1(81) (+) g_2(81) = 248\n  g_1 = g_2 = q^(q+1) = matter sector\n  g_1 x g_1 = 810 = Phi_4 * matter (pure substrate)\n  g_1 x g_2 = q^8 = matter^2\n\n8-TICK PROTECTED SCHEDULER = 2^q = octahedron count\nCONCATENATED STEANE: [[240, 81, 3]] -> [[82320, 81, >= 81]]\n  82320 = |E| * Phi_6^q (Phi_6 = 7 Steane block, triple iteration)\n\nSTRUCTURAL ENCODING THEOREM:\n  Every cardinal in single-photon universal QC = closed arithmetic\n  expression in W(3,3) parameters.\n  K(W(3,3)) < 64 bits vs ~260 bits SM+QO => 6.5x compression\n"
+}
