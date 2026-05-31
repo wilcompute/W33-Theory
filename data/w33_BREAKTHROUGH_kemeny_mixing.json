@@ -1,0 +1,14 @@
+{
+  "kemeny_constant": "801/20",
+  "kemeny_decimal": 40.05,
+  "kemeny_substrate_form": "v + lambda/v = (v^2 + lambda)/v",
+  "kemeny_numerator_factored": "q^2 * F_11 = 801 (F_11 = Fib(p_Ih))",
+  "kemeny_denominator": "v / lambda = 20",
+  "gap_abs": "2/3",
+  "gap_abs_form": "lambda / q",
+  "mixing_time": "3/2",
+  "mixing_time_form": "q / lambda",
+  "k_times_v": 1602,
+  "k_times_v_form": "v^2 + lambda",
+  "quantum_classical_product": "pi * (q/lambda) = 3pi/2"
+}

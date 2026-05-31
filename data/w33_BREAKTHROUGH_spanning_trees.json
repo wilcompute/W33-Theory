@@ -1,0 +1,16 @@
+{
+  "tau": "28823037615171174400000000000000000000000",
+  "tau_decimal_log": 40.45973974851091,
+  "substrate_form": "lambda^matter * F_5^(2k-1) = 2^(q^(q+1)) * F_5^(2k-1)",
+  "two_exponent": 81,
+  "two_exponent_form": "matter = q^(q+1)",
+  "five_exponent": 23,
+  "five_exponent_form": "2k - 1 = umbral moonshine count",
+  "log_2_tau": 134.40434618240934,
+  "log_2_floor": 134,
+  "log_2_floor_form": "Phi_3 * Phi_4 + mu = master_sum + spacetime",
+  "exp_sum": 104,
+  "exp_sum_form": "2^q * Phi_3",
+  "exp_diff": 58,
+  "exp_diff_form": "lambda * (h_E_8 - 1)"
+}

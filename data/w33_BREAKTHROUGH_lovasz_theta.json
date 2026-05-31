@@ -1,0 +1,14 @@
+{
+  "theta_W33": 10,
+  "theta_complement": 4,
+  "product_identity": "theta(G) * theta(bar G) = 40 = v",
+  "product_substrate_form": "Phi_4 * mu = (q^4-1)/(q-1) = v",
+  "alpha": 4,
+  "SDP_gap": 6,
+  "SDP_gap_substrate_form": "theta - alpha = q! (master eq value)",
+  "complement_spectrum": [
+    27,
+    3,
+    -3
+  ]
+}
