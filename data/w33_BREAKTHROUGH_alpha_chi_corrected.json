@@ -1,0 +1,17 @@
+{
+  "alpha_W33": 7,
+  "alpha_substrate": "Phi_6 = q^2 - q + 1 = 7 (Heawood prime)",
+  "omega_W33": 4,
+  "theta_W33": 10,
+  "theta_minus_alpha": 3,
+  "sdp_gap_substrate": "q",
+  "phi4_minus_mu": 6,
+  "cobound_substrate": "q!",
+  "omega_times_alpha": 28,
+  "omega_alpha_substrate": "v - k = T_7 = 28",
+  "chi_upper_bound": 7,
+  "chi_upper_substrate": "Phi_6 (Heawood)",
+  "chi_complement": 10,
+  "chi_complement_substrate": "Phi_4 (theta of W)",
+  "correction_history": "Breakthrough 4 originally claimed alpha = mu = 4 (wrong: that's omega). Breakthrough 11 claimed alpha = Phi_4 = 10 (wrong: that's Lov\u00e1sz UPPER bound). TRUE value via direct search: alpha = Phi_6 = 7 (Heawood prime)."
+}
