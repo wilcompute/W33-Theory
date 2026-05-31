@@ -1,0 +1,12 @@
+{
+  "Tr_A": 0,
+  "Tr_L": 480,
+  "vacuum_contribution": 12,
+  "boson_contribution": 48,
+  "fermion_contribution": -60,
+  "excited_sum": -12,
+  "cancellation": "vacuum (+k) exactly cancels excited (-k)",
+  "substrate_form": "k = -(r*f + s*g) (SRG trace identity)",
+  "implication": "Substrate vacuum/Casimir energy is identically zero. The cosmological constant Lambda contribution from substrate-field fluctuations is 0, not Lambda_Planck. Observed nonzero Lambda must arise from secondary sources (AdS-to-dS shift, matter, boundary).",
+  "boson_fermion_cancellation_mechanism": "Not supersymmetric. Forced by SRG axiom k + r*f + s*g = 0."
+}
