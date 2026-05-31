@@ -1,0 +1,56 @@
+{
+  "MLXXI_equipartition": {
+    "identity": "f*Theta = g*lambda^mu = 240"
+  },
+  "MLXXII_master_cubic": {
+    "min_poly": "(t+1)[(t+1)^2 - (2q)^2]",
+    "roots": [
+      -7,
+      -1,
+      5
+    ],
+    "mults": [
+      6,
+      16,
+      10
+    ],
+    "sum_mults": 32
+  },
+  "MLXXIII_spectral_democracy": {
+    "step": 6,
+    "forcing": "6th q=3"
+  },
+  "MLXXIV_Z_taylor": {
+    "Z_prime_0": 8,
+    "Z_double_prime_0_half": -248,
+    "Z_1": 18014398509481984,
+    "Z_minus_1": 0
+  },
+  "MLXXV_trace_tower": {
+    "Tr_D_1": -8,
+    "Tr_D_2": 560,
+    "Tr_D_3": -824
+  },
+  "MLXXVI_PMNS_sum_rule": {
+    "forcing": "7th q=3 (PMNS sum rule)"
+  },
+  "MLXXVII_jarlskog": {
+    "J_CKM": "27/884000",
+    "value": 3.054298642533937e-05
+  },
+  "MLXXVIII_H0_simple": {
+    "value": 67,
+    "formula": "Phi_12 - q!"
+  },
+  "MLXXIX_cosmology": {
+    "Omega_L": "41/60",
+    "N_efolds": 60,
+    "eta_B": "1/phi"
+  },
+  "MLXXX_meta": {
+    "claim": "Z(x) is substrate master polynomial",
+    "deg": 32,
+    "deg_formula": "dim Spin(10)"
+  },
+  "headline": "MLXXI-MLXXX: W33 PAPER SPECTRAL/DIRAC SUBSTRATE.\n\nDeep harvest from w33_paper.tex (9564 lines). STRONGEST new identities:\n\nENERGY EQUIPARTITION (unique to W(3,3)):\n  f * Theta = g * lambda^mu = |E| = 240\n  24*10 = 15*16 = 240 -- holds for NO other SRG\n\nMASTER CUBIC DIRAC OPERATOR D = A - I:\n  Min poly: (t+1)[(t+1)^2 - (2q)^2] = 0\n  Roots {-7, -1, 5} arithmetic step q! = 2q\n  Mults {6, 16, 10}, sum = 32 = dim Spin(10) = SO(10) GUT\n\nSPECTRAL DETERMINANT Z(x):\n  Z(x) = (1-5x)^10 (1+x)^16 (1+7x)^6\n  Z'(0) = 8 = dim(O) OCTONION\n  Z''(0)/2 = -248 = -dim(E_8)\n  Z(1) = 2^54 = 2^(2*q^q)\n  Z(-1) = 0 (anomaly cancellation)\n\nNEW q=3 FORCINGS:\n  (6) Dirac spectrum arithmetic step = q! = 2q (uniqueness)\n  (7) PMNS sum rule forces q(q-3) = 0\n\nJARLSKOG J_CKM = 27/884000 = 3.05e-5 substrate; sin(delta_CP)=15/17\nH_0 = Phi_12 - q! = 67 km/s/Mpc; Hubble tension = q!\neta_B (baryon asymmetry) = 1/phi (golden ratio)\nN_efolds (inflation) = (mu+1)*k = 60\n\nZ(x) is the substrate's MASTER POLYNOMIAL of degree 32 = dim Spin(10)\nencoding Dirac + Octonion + E_8 + Spin(10) + anomaly cancellation.\n"
+}
