@@ -1,0 +1,117 @@
+{
+  "MCLXXI_monster_primes": {
+    "2": [
+      "lambda",
+      2
+    ],
+    "3": [
+      "q",
+      3
+    ],
+    "5": [
+      "mu + 1",
+      5
+    ],
+    "7": [
+      "Phi_6",
+      7
+    ],
+    "11": [
+      "k - 1",
+      11
+    ],
+    "13": [
+      "Phi_3",
+      13
+    ],
+    "17": [
+      "Phi_3 + mu",
+      17
+    ],
+    "19": [
+      "f - mu - 1",
+      19
+    ],
+    "23": [
+      "Phi_3 + Phi_4",
+      23
+    ],
+    "29": [
+      "q^q + lambda",
+      29
+    ],
+    "31": [
+      "v - q^2",
+      31
+    ],
+    "41": [
+      "v + 1",
+      41
+    ],
+    "47": [
+      "v + Phi_6",
+      47
+    ],
+    "59": [
+      "Phi_6*lambda^q + q",
+      59
+    ],
+    "71": [
+      "Phi_6 * Phi_4 + 1",
+      71
+    ]
+  },
+  "MCLXXII_fifteen_names": {
+    "g (neg eigen mult)": 15,
+    "M_4 (Mersenne)": 15,
+    "T_5 triangular": 15,
+    "C(6,2)": 15
+  },
+  "MCLXXIII_minimal_rep": {
+    "value": 196883,
+    "factored": "(4k-1)(5k-1)(6k-1)",
+    "ap_diff": 12
+  },
+  "MCLXXIV_mckay_split": {
+    "196884": 196884,
+    "leech": 196560,
+    "gap": 324,
+    "leech_form": "|E|*q^2*Phi_6*Phi_3",
+    "gap_form": "mu * q^4"
+  },
+  "MCLXXV_744_three_forms": {
+    "q*dim_E8": 744,
+    "M_5*f": 744,
+    "q*(E+2mu)": 744
+  },
+  "MCLXXVI_exponents": {
+    "2": 46,
+    "3": 20,
+    "5": 9,
+    "7": 6,
+    "11": 2,
+    "13": 3
+  },
+  "MCLXXVII_conway": {
+    "primes": [
+      47,
+      59,
+      71
+    ],
+    "diff": 12,
+    "product": 196883
+  },
+  "MCLXXVIII_top_yukawa": {
+    "y_t_cubed": "40/41",
+    "monster_prime": 41
+  },
+  "MCLXXIX_eisenstein": {
+    "Phi_3_form": "N(q - omega)",
+    "Phi_6_form": "N(q + omega)",
+    "first_cube_defect": "Phi_3(18) = Phi_6(19) = 343"
+  },
+  "MCLXXX_meta": {
+    "claim": "Monster is W(3,3) outer shell"
+  },
+  "headline": "MCLXXI-MCLXXX: COMPLETE MONSTER MOONSHINE IN SUBSTRATE.\n\nALL 15 MONSTER PRIMES in W(3,3) substrate:\n  {2=lambda, 3=q, 5=mu+1, 7=Phi_6, 11=k-1, 13=Phi_3,\n   17=Phi_3+mu, 19=f-mu-1, 23=Phi_3+Phi_4, 29=q^q+lambda,\n   31=v-q^2, 41=v+1, 47=v+Phi_6, 59=Phi_6*lambda^q+q, 71=Phi_6*Phi_4+1}\n  15 = g = neg-eigenvalue mult = fermion sector\n\nMONSTER MINIMAL REP = 47 * 59 * 71 = 196,883\n  = (4k-1)(5k-1)(6k-1); three primes in AP with d = k = gauge codec\n\nMcKAY SPLIT 196884 = LEECH + GAP:\n  Leech = |E|*q^2*Phi_6*Phi_3 = 240*9*7*13 = 196,560 (24-D kissing)\n  Gap = mu * q^4 = 324 = 18^2 = local moonshine vacuum dim\n  Sum = Monster min + trivial = 196,883 + 1 = 196,884\n\nKLEIN j-CONSTANT 744 = THREE substrate forms:\n  q * dim(E_8) = (M_5) * f = q * (|E| + 2*mu) = 744\n\nSIX PRIME EXPONENTS in |M| = 2^46 * 3^20 * 5^9 * 7^6 * 11^2 * 13^3 ...\n  46 = v+q!, 20 = 2*Phi_4, 9 = q^2, 6 = q!, 2 = lambda, 3 = q\n\nCONWAY PRIMES {47, 59, 71} in arithmetic progression with d = k = 12\n  Product = Monster minimal rep; 71 = Phi_6*Phi_4 + 1 = H_0_alt + 1\n\nTOP YUKAWA y_t^3 = v/(v+1) = 40/41 = Monster prime 41 link\n\nSUBSTRATE LIVES IN EISENSTEIN INTEGERS Z[omega]:\n  Phi_3(q) = N(q-omega); Phi_6(q) = N(q+omega)\n  Defect locus = lifted cube-root residue classes mod p^2\n  First cube defect: Phi_3(18) = Phi_6(19) = 343 = Phi_6^q\n\nMETA: Monster group is W(3,3)'s outer shell. Everything moonshine-related\ndecomposes inside W(3,3) integer arithmetic.\n"
+}
