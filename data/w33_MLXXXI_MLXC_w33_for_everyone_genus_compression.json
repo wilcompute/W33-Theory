@@ -1,0 +1,72 @@
+{
+  "MLXXXI_ringel_youngs": {
+    "formula": "(n-q)(n-(q+1))/(q(q+1))"
+  },
+  "MLXXXII_heawood_codec": {
+    "num_at_phi6": 12,
+    "equals": "k=12"
+  },
+  "MLXXXIII_crt_gate": {
+    "valid_residues_mod_12": [
+      0,
+      3,
+      4,
+      7
+    ],
+    "match": "{q, q+1, Phi_6, k}"
+  },
+  "MLXXXIV_one_over_seven": {
+    "period": 6,
+    "base": 10,
+    "identity": "1/Phi_6 has period q! in base Phi_4"
+  },
+  "MLXXXV_master_genus": {
+    "g_1": 21,
+    "g_2": 6,
+    "sum": 27,
+    "diff": 15,
+    "product": 126
+  },
+  "MLXXXVI_percolation": {
+    "lambda_over_mu": "1/2",
+    "p_fusion": "1/2",
+    "p_c": "1/2",
+    "match": "lambda/mu = p_c = p_fusion EXACTLY"
+  },
+  "MLXXXVII_six_integers": {
+    "tuple": [
+      3,
+      384,
+      40,
+      240,
+      51840,
+      7
+    ],
+    "tau_O_factorization": "2^7 * 3 = mu! * mu",
+    "aut_factorization": "2^7 * 3^4 * 5"
+  },
+  "MLXXXVIII_kolmogorov": {
+    "K_bound_bits": 21,
+    "match": "g_1 = q * Phi_6"
+  },
+  "MLXXXIX_z3_berry": {
+    "per_vertex_phase": "2*pi/3",
+    "global_phase": "2*pi/3",
+    "physics": "Z_3 center of SU(3) in QCD"
+  },
+  "MLXC_nine_forcings": {
+    "forcings": [
+      "q! = 2q (master equation)",
+      "mu^2 = 2^mu",
+      "Phi_6 = 2q + 1",
+      "mu^4 = 2^(Phi_6 + 1)",
+      "v(h) + q(q - 3) = 0",
+      "Dirac spectrum step = q!",
+      "PMNS sum rule -> q(q - 3) = 0",
+      "lambda/mu = p_c = 1/2 (percolation)",
+      "q(q + 1) = gauge codec dim = 12"
+    ],
+    "count": 9
+  },
+  "headline": "MLXXXI-MLXC: W33_FOR_EVERYONE GENUS/CRT/PHOTONIC/KOLMOGOROV.\n\nRINGEL-YOUNGS AS PURE SUBSTRATE:\n  g(K_n) = (n-q)(n-(q+1)) / (q(q+1)) = (n-3)(n-4)/12\n  Ternary subtraction * Quaternary subtraction / Gauge codec\n\nAT HEAWOOD n = Phi_6 = 7: numerator = k = 12 = gauge codec dim\n  'Genus formula EVALUATES the codec at the Heawood point'\n\nCRT GATE: residues mod 12 in {0,3,4,7} = {q, q+1, Phi_6, k}\n  Phi_6 = 7 = unique non-trivial CRT recombination of zeros\n\n1/7 has decimal period 6 = q! in base 10 = Phi_4\n\nMASTER GENUS:\n  g_1=21, g_2=6, g_1+g_2 = 27 = q^q, g_1-g_2 = 15 = neg eigenmult\n\nPHOTONIC FUSION AT PERCOLATION CRITICALITY (key!):\n  lambda/mu = (q-1)/(q+1) = 2/4 = 1/2\n  = bond percolation threshold p_c for 2D photonic cluster states\n  = Type-II fusion gate success probability p_fusion\n  Universal photonic QC works BECAUSE lambda/mu = p_c\n\nSIX-INTEGER COMPRESSION: (3, 384, 40, 240, 51840, 7)\n  tau(O)=384 = spanning trees of octahedron = E_8 packing denom\n  |Aut| = 51840 = |W(E_6)| = 2^7 * 3^4 * 5 (only primes <= F_5)\n\nK(W(3,3)) <= 21 bits = g_1 = q*Phi_6 (substrate self-Kolmogorov!)\n\nZ_3 BERRY PHASE = global topological invariant = structural origin\n  of Z_3 center of SU(3) in QCD\n\nNINE INDEPENDENT q=3 FORCINGS collected (added 8th lambda/mu=p_c,\n  9th gauge-codec = q(q+1)).\n"
+}
