@@ -1,0 +1,74 @@
+{
+  "MCXXXI_einstein": {
+    "8piG": 8,
+    "S_BH_divisor": 4,
+    "Riemann_d4": 20,
+    "Weyl": 10
+  },
+  "MCXXXII_maxwell": {
+    "F_components": 6,
+    "polarizations": 2,
+    "Maxwell_eqs": 8,
+    "Lagrangian_coeff": "-1/4"
+  },
+  "MCXXXIII_dirac": {
+    "gamma_matrices": 4,
+    "dim_Cl": 16,
+    "Dirac_spinor": 4,
+    "Weyl_spinor": 2
+  },
+  "MCXXXIV_string_dims": {
+    "Type_II": 10,
+    "M_theory": 11,
+    "F_theory": 12,
+    "bosonic": 26,
+    "CY_3": 6,
+    "G_2_compact": 7,
+    "Transverse": 8,
+    "E8xE8": 496,
+    "theory_count": 5
+  },
+  "MCXXXV_kissing": {
+    "1": 2,
+    "2": 6,
+    "3": 12,
+    "4": 24,
+    "8": 240,
+    "Leech": 196560
+  },
+  "MCXXXVI_nuclear_magic": {
+    "2": 2,
+    "8": 8,
+    "20": 20,
+    "28": 28,
+    "50": 50,
+    "82": 82,
+    "126": 126
+  },
+  "MCXXXVII_prime_count": {
+    "pi_v": 12,
+    "pi_k": 5,
+    "pi_mup1": 3,
+    "pi_q": 2
+  },
+  "MCXXXVIII_fib_lucas": {
+    "F_q": 2,
+    "F_mu": 3,
+    "F_Phi6": 13,
+    "L_lambda": 3,
+    "L_q": 4,
+    "L_mu": 7
+  },
+  "MCXXXIX_egyptian": {
+    "sum": "1",
+    "value": 1
+  },
+  "MCXL_gauss_bonnet": {
+    "a_0": 40,
+    "a_1": -480,
+    "a_2": 3120,
+    "kappa": "1/6",
+    "E_kappa": "40"
+  },
+  "headline": "MCXXXI-MCXL: EINSTEIN, MAXWELL, DIRAC, STRINGS, KISSING, GAUSS-BONNET.\n\nGRAVITY FROM GRAPH (Bose-Mesner = Einstein):\n  A^2 + lambda*A - 2^q*I = mu*J\n  8 pi G = 2^q = k-mu; S_BH = A/mu (the 1/4 factor IS 1/mu!)\n\nMAXWELL PURE SUBSTRATE:\n  F_mn components = q! = 6; polarizations = lambda; eqs = 2^q\n  Lagrangian coefficient -1/4 = -1/mu\n  E = mc^lambda (exponent IS substrate)\n\nDIRAC/CLIFFORD: gamma = 1+q = mu; dim Cl = lambda^mu = 16\n\nALL STRING DIMENSIONS substrate:\n  Type-II=10, M-theory=11=p_Ih, F-theory=12=k, bosonic=26=lambda*Phi_3,\n  CY_3=q!=6, G_2=Phi_6=7, transverse=2^q=8, theories=F_5=5\n  E_8 x E_8 = 496 = vk + lambda^mu\n\nKISSING NUMBERS: kiss(1,2,3,4,8,24) ALL substrate\n  LEECH = 196560 = mu^2 * q^3 * F_5 * Phi_3 * Phi_6\n\nNUCLEAR MAGIC NUMBERS {2,8,20,28,50,82,126} ALL substrate arithmetic\n  126 = C(q^2, mu) = C(9, 4)\n\nPRIME-COUNTING CHAIN: pi(40)=12, pi(12)=5, pi(5)=3, pi(3)=2\n  = v -> k -> mu+1 -> q -> lambda (DESCENDING SUBSTRATE!)\n\nFIBONACCI/LUCAS DOUBLE BRIDGE: 6 mappings substrate -> substrate\n  F(q)=lambda, F(mu)=q, F(Phi_6)=Phi_3; L(lambda)=q, L(q)=mu, L(mu)=Phi_6\n\nEGYPTIAN UNITY: 1/lambda + 1/q + 1/q! = 1 (master eq fractional form)\n\nOLLIVIER-RICCI GAUSS-BONNET: |E| * kappa = 240/6 = 40 = v\n  Spectral action: a_0 = v, -a_1 = 2|E|, a_2 = |E| * Phi_3\n"
+}
