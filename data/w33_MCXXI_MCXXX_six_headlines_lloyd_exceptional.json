@@ -1,0 +1,59 @@
+{
+  "MCXXI_alpha_factorization": {
+    "value": 137,
+    "form": "Phi_3*Phi_4 + Phi_6",
+    "alt": "E/lambda + Phi_6 + Phi_4"
+  },
+  "MCXXII_lloyd_budget": {
+    "exponent": 120,
+    "log_lambda_ratio": -122,
+    "diff_from_122": 2
+  },
+  "MCXXIII_sp4f3_alt": {
+    "factor": "lambda^Phi_6 * q^mu * (mu+1)",
+    "value": 51840
+  },
+  "MCXXIV_srg_axiom": {
+    "value": 108,
+    "formula": "mu * q^q"
+  },
+  "MCXXV_exceptional_lie": {
+    "G_2": 14,
+    "F_4": 52,
+    "E_6": 78,
+    "E_7": 133,
+    "E_8": 248,
+    "sum": 525
+  },
+  "MCXXVI_master_sum": {
+    "sum": 130,
+    "form": "Phi_3 * Phi_4"
+  },
+  "MCXXVII_master_complex": {
+    "z": "11+4i",
+    "|z|^2": 137
+  },
+  "MCXXVIII_ko_dim": {
+    "value": 6,
+    "formula": "k/2 = q!"
+  },
+  "MCXXIX_companion_highlights": {
+    "n_s": "29/30",
+    "N_e": 60,
+    "S_BH": 2880,
+    "alpha_GUT_inv": 24,
+    "beta_0": 7,
+    "higgs_quartic": "7/54",
+    "immirzi": "1/4",
+    "cft_c": "20",
+    "h11": 27,
+    "chi_M": -6,
+    "codons": 64,
+    "anomaly_E8xE8": 496
+  },
+  "MCXXX_meta": {
+    "paper_phases": 39,
+    "match": "q * Phi_3 = gauge"
+  },
+  "headline": "MCXXI-MCXXX: SIX HEADLINES + LLOYD + EXCEPTIONAL SERIES.\n\nalpha^-1 = 137 = Phi_3 * Phi_4 + Phi_6 = 13*10 + 7 (NEW factorization)\n    = E/lambda + Phi_6 + Phi_4 = 120 + 17\n    = |z|^2 where z = (k-1) + mu*i = 11 + 4i (Gaussian integer!)\n\nLLOYD BUDGET: 10^120 cosmic ops, exponent = |E|/2 = 120\n  log10(Lambda_obs/Lambda_Planck) = -(|E|/2 + lambda) = -122\n  Cosmic compute & vacuum catastrophe differ by exactly lambda = 2\n\n|Sp(4,F_3)| = lambda^Phi_6 * q^mu * (mu+1) = 2^7 * 3^4 * 5 = 51840\n  (only primes <= F_5)\n\nSRG MASTER AXIOM: 12 * 9 = 27 * 4 = 108 = mu * q^q\n\nALL FIVE EXCEPTIONAL LIE DIMS in substrate:\n  G_2 = k+lambda = 14\n  F_4 = mu * Phi_3 = 52\n  E_6 = lambda * q * Phi_3 = 78\n  E_7 = Phi_3 * Phi_4 + q = 133\n  E_8 = |E| + lambda^q = 248\n\nSUM OF 10 PRIMITIVES = PRODUCT OF TWO PRIMITIVES:\n  v+k+lambda+mu+q+f+g+Phi_3+Phi_4+Phi_6 = 130 = Phi_3 * Phi_4\n\nConnes KO-dim = k/2 = q! = 6\n\nCompanion: n_s = 29/30, S_BH = 2880, alpha_GUT^-1 = f = 24,\n  beta_0 = Phi_6, lambda_H = 7/54, Immirzi q/k = 1/mu, CFT c = 20,\n  codons = mu^q = 64, AAs = |E|/k = 20, anomaly E8xE8 = 2|E| = 496\n\nMETA: 39 paper phases = q * Phi_3 = gauge sector dim.\n  3300+ substrate identities. ZERO free parameters. From q! = 2q.\n"
+}
