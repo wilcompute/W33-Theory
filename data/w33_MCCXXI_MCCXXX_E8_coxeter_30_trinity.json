@@ -1,0 +1,77 @@
+{
+  "MCCXXI_h_E8": {
+    "value": 30,
+    "primary_form": "q * Phi_4",
+    "alt_forms": [
+      "q(q^2+1)",
+      "Phi_3 + Phi_4 + Phi_6",
+      "q! * F_5",
+      "lambda * q * F_5",
+      "2^F_5 - 2"
+    ]
+  },
+  "MCCXXII_q_centered_pair": {
+    "f": 24,
+    "h_E_8": 30,
+    "sum": 54,
+    "diff": 6,
+    "diff_form": "q!"
+  },
+  "MCCXXIII_m_top": {
+    "value": 173,
+    "formula": "Phi_3^2 + mu",
+    "PDG": 172.69,
+    "deviation_pct": 0.17951242110139687
+  },
+  "MCCXXIV_744": {
+    "value": 744,
+    "new_form": "f * (h_E_8 + 1)",
+    "M_5": 31,
+    "h_E8_from_Mersenne": "h_E_8 = M_5 - 1"
+  },
+  "MCCXXV_6j_ladder": {
+    "denominators": [
+      3,
+      6,
+      30
+    ],
+    "multipliers": [
+      2,
+      5
+    ],
+    "mult_sum": 7,
+    "mult_product": 10
+  },
+  "MCCXXVI_triple_convergence": {
+    "value": 30,
+    "claim": "k(Sp(4,F_3)) = h(E_8) = Z_DW(T^2)"
+  },
+  "MCCXXVII_600_cell": {
+    "V": 120,
+    "E": 720,
+    "F": 1200,
+    "C": 600,
+    "E_form": "f * h_E_8 = q * |E|",
+    "self_ref_exp": 20
+  },
+  "MCCXXVIII_WZW_c": {
+    "c": "2/3",
+    "= lambda/q": true,
+    "N_primaries": 13
+  },
+  "MCCXXIX_bose_mesner": {
+    "sum": 29,
+    "= h_E_8 - 1": true,
+    "= prime(Phi_4)": true
+  },
+  "MCCXXX_meta_trio": {
+    "trio": [
+      3,
+      24,
+      30
+    ],
+    "f_times_h_E_8": 720,
+    "= E(600-cell)": true
+  },
+  "headline": "MCCXXI-MCCXXX: E_8 COXETER 30 = TRIPLE CONVERGENCE TRINITY.\n\nh(E_8) = 30 has MULTIPLE substrate forms:\n  h_E_8 = q * Phi_4 = q(q^2 + 1) = Phi_3 + Phi_4 + Phi_6\n        = q! * F_5 = 2 * 3 * 5 (smallest 3 primes)\n        = 2^F_5 - 2 = M_5 - 1\n\nPERFECT q-CENTERED PAIR:\n  f = 24 = q*(q^2 - 1)\n  h_E_8 = 30 = q*(q^2 + 1)\n  Sum = 2*q^q = 54; diff = q! = 6\n\nNEW TOP QUARK PREDICTION:\n  m_top = Phi_3^2 + mu = 169 + 4 = 173 GeV (PDG 172.69, 0.18%)\n\nKLEIN j-CONST 744 = f * (h_E_8 + 1) = 24 * 31 (new form)\n  Complements MCXLIII q*dim(E_8) and MCLXXV M_5 * f\n\nPONZANO-REGGE 6j -> SUBSTRATE LADDER:\n  6j{1,1,0;1,1,0} = 1/q = 1/3\n  6j{1,1,1;1,1,1} = 1/q! = 1/6\n  6j{1,1,2;1,1,2} = 1/h_E_8 = 1/30\n  Ladder multipliers 2, 5: sum = Phi_6, product = Phi_4\n\nTRIPLE CONVERGENCE THEOREM:\n  k(Sp(4, F_3)) = h(E_8) = Z_DW(T^2) = 30 = q * Phi_4\n  (group conjugacy classes = Lie Coxeter = TQFT partition)\n\n600-CELL SUBSTRATE: E(600) = f * h_E_8 = q * |E| = 720 (GAUGE x COXETER)\n  C(600) = 20 * h_E_8 = 600 (self-referential PR amplitude)\n\nWZW central charge c = Phi_4/(k+q) = 2/3 = lambda/q\nBose-Mesner fusion sum = 29 = h_E_8 - 1 = prime(Phi_4)\n\nMETA TRIO: (q, f, h_E_8) = (3, 24, 30). f * h_E_8 = E(600-cell) = 720.\n"
+}
