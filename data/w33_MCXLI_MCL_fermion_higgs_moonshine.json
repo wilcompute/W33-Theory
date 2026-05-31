@@ -1,0 +1,62 @@
+{
+  "MCXLI_proton_electron": {
+    "value": 1836,
+    "form1": "(T_7+v)*q^q",
+    "form2": "v(v+lambda+mu)-mu"
+  },
+  "MCXLII_klein_1728": {
+    "value": 1728,
+    "k_cubed": 1728,
+    "alt": "lambda^(q!) * q^q"
+  },
+  "MCXLIII_klein_744": {
+    "value": 744,
+    "sig_1_E": 744,
+    "q_dim_E8": "q * dim(E_8)"
+  },
+  "MCXLIV_ramanujan_tau": {
+    "tau_2": -24,
+    "tau_3": 252
+  },
+  "MCXLV_arithmetic": {
+    "sigma_k": 28,
+    "sigma_f": 60,
+    "sigma_qq": 40,
+    "sigma_81": 121,
+    "phi_Phi_3": 12,
+    "phi_Phi_6": 6,
+    "d_E": 20,
+    "d_v": 8
+  },
+  "MCXLVI_higgs": {
+    "forms": [
+      125,
+      125,
+      125
+    ],
+    "v_EW": 246
+  },
+  "MCXLVII_quark_ratios": {
+    "m_t_m_c": 136,
+    "m_t_m_b": 41,
+    "m_mu_m_e": 208,
+    "z_mod_sq": 137
+  },
+  "MCXLVIII_pmns_proof": {
+    "forcing": "Phi_6 = q + mu => q^2 - 3q = 0",
+    "nu_ratio": 33
+  },
+  "MCXLIX_cosmology": {
+    "Omega_L": "41/60",
+    "Omega_DM_b": "16/3",
+    "N_e": 60,
+    "n_s": "29/30",
+    "H_0": 67,
+    "log_lambda_ratio": -122
+  },
+  "MCL_meta": {
+    "sm_total": 23,
+    "match": "Phi_3 + Phi_4 = 23"
+  },
+  "headline": "MCXLI-MCL: FERMION MASSES + HIGGS TRIPLE + MOONSHINE + COSMOLOGY.\n\nm_p/m_e = 1836 = (T_7 + v) * q^q = 68 * 27 (substrate-exact, 0.008%)\n        = v(v+lambda+mu) - mu (second substrate form)\n\nj-INVARIANT 1728 = k^3 = lambda^(q!) * q^q = 2^6 * 3^3\n\nj-CONSTANT 744 = sigma_1(|E|) = q * dim(E_8) = 3 * 248\n\nRAMANUJAN tau IN SUBSTRATE:\n  tau(2) = -f = -24\n  tau(3) = C(Theta, mu+1) = C(10, 5) = 252\n\nARITHMETIC FUNCTIONS CLOSE ON SUBSTRATE:\n  sigma_1(k) = 28, sigma_1(f) = 60, sigma_1(q^q) = v, sigma_1(81) = p_Ih^2\n  phi(Phi_3) = k, phi(Phi_6) = q!\n  d(|E|) = 20 = |E|/k, d(v) = 2^q\n\nHIGGS THREE EQUIVALENT FORMS (125 GeV, 0.2%):\n  m_H = (mu+1)^q = q^mu+v+mu = vq+mu+1 = 125\n  v_EW = |E| + q! = 246 GeV (0.09%)\n  V = -mu^2|phi|^lambda + lambda|phi|^mu (exponents = SRG params)\n\nQUARK RATIOS via MASTER COMPLEX:\n  m_t/m_c = |z|^2 - 1 = 136 (z = (k-1)+mu*i, |z|^2 = alpha^-1)\n  m_t/m_b = v + 1 = 41 = Ogg_12\n  m_mu/m_e = mu^2 * Phi_3 = 208 (obs 206.8)\n\nPMNS SUM RULE -> Phi_6 = q + mu -> q(q-3) = 0\n  Neutrino mass splitting Delta m^2 ratio = 2*Phi_3 + Phi_6 = 33\n\nALL COSMOLOGY substrate: Omega_L=41/60, Omega_DM/b=16/3, N_e=60,\n  n_s=29/30, H_0=67, log10(L_obs/L_Planck)=-122\n\nMETA: 23 = Phi_3 + Phi_4 SM/cosmology measurements, ALL substrate.\n"
+}
