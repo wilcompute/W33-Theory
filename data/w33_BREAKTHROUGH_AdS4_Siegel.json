@@ -1,0 +1,19 @@
+{
+  "dim_Sp4_R": 10,
+  "dim_SO_3_2": 10,
+  "isomorphism": "Sp(4, R) ~ SO(3, 2) at Lie algebra level",
+  "dim_AdS_4": 4,
+  "dim_boundary_CFT_3": 3,
+  "dim_U2_max_compact": 4,
+  "dim_H2_Siegel": 6,
+  "Lambda_AdS_substrate_units": -3,
+  "substrate_to_AdS_dictionary": {
+    "mu = q + 1 = 4": "bulk spacetime dim of AdS_4",
+    "q = 3": "boundary CFT_3 dim",
+    "Phi_4 = 10": "isometry algebra dim",
+    "q! = 6": "Siegel H_2 dim",
+    "Sp(4, F_3) = 51840": "discrete subgroup of Sp(4, R) = SO(3,2)",
+    "Lambda_AdS = -q": "natural AdS curvature in substrate units"
+  },
+  "breakthrough": "The W(3,3) substrate is the DISCRETE GENERATOR of AdS_4 / CFT_3 holography. Substrate primitives correspond to bulk-boundary-symmetry dimensions of the natural anti-de-Sitter host."
+}
