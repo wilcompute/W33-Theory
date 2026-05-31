@@ -1,0 +1,63 @@
+{
+  "new_identities": {
+    "f = q*(q+1)^2/2": 24,
+    "g = q*(q^2+1)/2": 15,
+    "f - g = q^2": 9,
+    "f + g = q * Phi_3": 39,
+    "k = q * lambda^2 (NEW Casimir-derived)": 12
+  },
+  "10th_q3_forcing": {
+    "equation": "2^q + q + 1 = q * (q - 1)^2",
+    "unique_solution": 3,
+    "verification_table": {
+      "1": {
+        "SM_form": 4,
+        "Casimir_form": 0
+      },
+      "2": {
+        "SM_form": 7,
+        "Casimir_form": 2
+      },
+      "3": {
+        "SM_form": 12,
+        "Casimir_form": 12
+      },
+      "4": {
+        "SM_form": 21,
+        "Casimir_form": 36
+      },
+      "5": {
+        "SM_form": 38,
+        "Casimir_form": 80
+      },
+      "6": {
+        "SM_form": 71,
+        "Casimir_form": 150
+      },
+      "7": {
+        "SM_form": 136,
+        "Casimir_form": 252
+      }
+    }
+  },
+  "trace_moments": {
+    "Tr(A^0)": 40,
+    "Tr(A^1)": 0,
+    "Tr(A^2)": 480,
+    "Tr(A^3)": 960,
+    "Tr(A^4)": 24960
+  },
+  "complete_substrate_algebra": {
+    "k": "q * lambda^2 = 2^q + q + 1",
+    "v": "mu * Phi_4 = (q+1)(q^2+1)",
+    "vk": "q*(q-1)*(q^4-1)",
+    "f": "q*mu^2/2",
+    "g": "q*Phi_4/2",
+    "f+g": "q*Phi_3 (gauge sector)",
+    "f-g": "q^2",
+    "(k-r)(k-s)": "T = 160 = vk*lambda/6",
+    "Casimir": "k + r*f + s*g = 0 (= Tr A)",
+    "Lovasz theta": "Phi_4",
+    "theta(G)*theta(bar G)": "v"
+  }
+}
