@@ -1,0 +1,30 @@
+{
+  "bell_line_stab": 1296,
+  "siegel_parabolic_structure": "GL(2, F_3) x_| Sym^2(F_3^2)",
+  "factorizations_of_1296": {
+    "(q!)^4": 1296,
+    "mu^2 * matter": 1296,
+    "k * mu * q^q": 1296,
+    "|GL(2,F_3)| * q^q": 1296,
+    "lambda^mu * matter": 1296
+  },
+  "v_identity": "v = q*Phi_3 + 1",
+  "11th_q3_forcing": "|Sp(4, F_q)| = |W(E_6)| only at q = 3",
+  "orbit_stabilizer_table": {
+    "Bell_lines_vertices": {
+      "orbit": 40,
+      "stab": 1296,
+      "form": "mu^2 * matter"
+    },
+    "Triangles": {
+      "orbit": 160,
+      "stab": 324,
+      "form": "q^q * mu = matter * mu"
+    },
+    "Edges": {
+      "orbit": 240,
+      "stab": 216,
+      "form": "q^q * 2^q = (q!)^q"
+    }
+  }
+}
