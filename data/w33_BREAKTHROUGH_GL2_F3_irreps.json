@@ -1,0 +1,36 @@
+{
+  "GL2_F3_order": 48,
+  "GL2_F3_iso": "Binary octahedral group 2.S_4",
+  "n_irreps": 8,
+  "n_irreps_form": "2^q",
+  "irrep_dims": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    4
+  ],
+  "irrep_dim_set": "{1, lambda, q, mu} = substrate primitives <= mu",
+  "max_dim": 4,
+  "max_dim_form": "mu",
+  "sum_of_squares": 48,
+  "sum_of_squares_form": "|G| = k * mu",
+  "sum_of_dimensions": 18,
+  "sum_of_dimensions_form": "lambda * q^2",
+  "multiplicities": {
+    "1": 2,
+    "2": 3,
+    "3": 2,
+    "4": 1
+  },
+  "multiplicities_substrate": {
+    "dim 1": "lambda copies",
+    "dim 2 (= lambda)": "q copies (three generations!)",
+    "dim 3 (= q)": "lambda copies",
+    "dim 4 (= mu)": "1 copy (Steinberg envelope)"
+  },
+  "key_physics_finding": "The triplication of dim-2 (= lambda = SU(2)) representations in GL(2, F_3) is exactly q = 3 copies. This realizes the SM's THREE FERMION GENERATIONS as SU(2)-doublets at the Bell-line external-rotation level."
+}
