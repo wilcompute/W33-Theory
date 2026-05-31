@@ -1,0 +1,62 @@
+{
+  "MCXI_witting_ks": {
+    "optimal_markings": 720,
+    "formula": "(q!)!",
+    "ks_max": "17/20"
+  },
+  "MCXII_three_generations": {
+    "per_orbit": 27,
+    "decomposition": "2 * Phi_3 + 1",
+    "total_capacity": 39
+  },
+  "MCXIII_E_split": {
+    "E_count": 240,
+    "split": "q*Phi_3 + q^(q+1) + 120",
+    "values": [
+      39,
+      81,
+      120
+    ]
+  },
+  "MCXIV_choi": {
+    "identity": "<Omega|(I (x) U)|Omega> = Tr(U)/q"
+  },
+  "MCXV_r_registers": {
+    "r_min": 2,
+    "r_for_matter": 4,
+    "matter_at_r4": 81
+  },
+  "MCXVI_temporal_teleport": {
+    "trits_memory": 2
+  },
+  "MCXVII_witting_overlap": {
+    "values": [
+      "0",
+      "1/q"
+    ]
+  },
+  "MCXVIII_werner": {
+    "threshold": "3/4"
+  },
+  "MCXIX_preparation": {
+    "cliffords": 2
+  },
+  "MCXX_primitives": {
+    "count": 11,
+    "count_match_p_Ih": true,
+    "primitives": {
+      "q": 3,
+      "mu": 4,
+      "q!": 6,
+      "Phi_3": 13,
+      "Phi_4": 10,
+      "Phi_6": 7,
+      "p_Ih": 11,
+      "k": 12,
+      "v": 40,
+      "|E|": 240,
+      "q^(q+1)": 81
+    }
+  },
+  "headline": "MCXI-MCXX: SELF-ENTANGLEMENT COMPANION FINAL HARVEST.\n\nWITTING KS: (q!)! = 6! = 720 optimal markings; KS max (v-q!)/v = 34/40\n\nTHREE GENERATIONS FROM BELL-QUTRIT STORAGE:\n  per orbit: 27 = 2 * Phi_3 + 1 = 26 Bell qutrits + 1 spare\n  total Bell capacity: q * Phi_3 = 39 = gauge sector dim\n  |E| = 240 = 39 + 81 + 120 = (q*Phi_3) + matter + triangle ranks\n\nCHOI-JAMIOLKOWSKI: <Omega|(I (x) U)|Omega> = Tr(U)/q\n  fundamental identity linking optics to substrate\n\nr = 2 commuting qutrits suffice; r = mu = 4 hits matter sector\nTemporal teleport with q - 1 = 2 trits memory\nWitting overlap: ONLY {0, 1/q} = {0, 1/3} - 2-design structure\nWerner threshold p < q/mu = 3/4\n|Omega> in EXACTLY q - 1 = 2 Cliffords\n\nMETA: 11 = p_Ih (Ihara prime) substrate primitives generate ALL\nBell-qutrit observables in the companion paper:\n  {q, mu, q!, Phi_3, Phi_4, Phi_6, p_Ih, k, v, |E|, q^(q+1)}\n  = {3, 4, 6, 13, 10, 7, 11, 12, 40, 240, 81}\n\nThe self-entangled photon is the complete W(3,3) substrate carrier.\n"
+}
