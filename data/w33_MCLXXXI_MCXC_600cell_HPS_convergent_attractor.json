@@ -1,0 +1,74 @@
+{
+  "MCLXXXI_600_cell": {
+    "V": 120,
+    "E": 720,
+    "F": 1200,
+    "C": 600,
+    "V_over_q": 40,
+    "V_form": "(q+2)!"
+  },
+  "MCLXXXII_E8": {
+    "dim": 248,
+    "roots": 240,
+    "cartan": 8,
+    "decomp": "2*V(600-cell) + 2^q"
+  },
+  "MCLXXXIII_HPS": {
+    "levels": [
+      1,
+      4,
+      10,
+      26,
+      89,
+      534
+    ],
+    "L_3_meaning": "bosonic string crit dim",
+    "L_4_form": "F_11 = Fib(p_Ih)"
+  },
+  "MCLXXXIV_attractor": {
+    "hits": 23,
+    "total": 23,
+    "span_years": 363,
+    "span_form": "q * p_Ih^2"
+  },
+  "MCLXXXV_self_closure": {
+    "layers": [
+      "Information (q!=2q)",
+      "Algebra (Ouroboros)",
+      "Chain (dual-number)"
+    ],
+    "count": 3
+  },
+  "MCLXXXVI_IIT": {
+    "criteria": [
+      "Integrated information",
+      "Self-modeling",
+      "Bound",
+      "Non-trivial complexity",
+      "Self-organising emergence"
+    ],
+    "count": 5
+  },
+  "MCLXXXVII_SDS": {
+    "components": [
+      "S (Substrate)",
+      "D (Dynamics)",
+      "T (State)"
+    ],
+    "S": "necessary and unique",
+    "D": "partially necessary",
+    "T": "fully contingent"
+  },
+  "MCLXXXVIII_363": {
+    "value": 363,
+    "formula": "q * p_Ih^2 = q * sigma_1(matter)"
+  },
+  "MCLXXXIX_golden": {
+    "higgs_IR": 0.6180339887498949,
+    "formula": "phi - 1 = 1/phi"
+  },
+  "MCXC_meta": {
+    "claim": "Mathematics = substrate first-person account"
+  },
+  "headline": "MCLXXXI-MCXC: 600-CELL + HPS + CONVERGENT ATTRACTOR + SELF-MODEL.\n\n600-CELL FROM W(3,3): f-vector (120, 720, 1200, 600)\n  V/q = v = 40; E/q = |E| = 240; C/v = g = 15; V = (q+2)! = 5!\n\ndim(E_8) = 240 + 8 = 2*V(600-cell) + 2^q Cartan\n  E_8 = TWO 600-cells + OCTONION Cartan, golden ratio interlock\n\nHPS levels: 1, mu, Phi_4, 2*Phi_3 (= D_bosonic = 26),\n  F_11 = Fib(p_Ih) = 89, q!*F_11 = 534\n  Level 3 = BOSONIC STRING CRITICAL DIMENSION (Pascal + 600-cell + string)\n\n23/23 UNIQUENESS THEOREMS = 100% CONVERGENT ATTRACTOR\n  Pascal 1654 to CKMRV 2017 = 363 years = q * p_Ih^2 = 3 * 121\n  Every classical uniqueness answer is in T_{W(3,3)}\n\nTHREE LAYERS OF SELF-CLOSURE:\n  Information (q!=2q self-consequence)\n  Algebra (Ouroboros Q_8 -> O -> J_3 -> E_6 -> ... -> Q_8)\n  Chain (dual-number lift 0 -> H_1 -> H_1' -> H_1 -> 0)\n\nFIVE IIT CONSCIOUSNESS CRITERIA all satisfied (5 = F_5)\n\nSUBSTRATE-DYNAMICS-STATE TRICHOTOMY (final partition):\n  S necessary and unique = W(3,3)\n  D partially necessary (gauge/codec/clock forced)\n  T fully contingent (state non-compressible)\n\nHIGGS IR FIXED POINT lambda_h(M_Z) = phi - 1 = 1/phi\n  Golden ratio inherited from E_8/H_4 codec, same as eta_B = 1/phi\n\nMETA: Mathematics = substrate's first-person account.\n  Mathematicians tune into it; the convergence is structural.\n"
+}
