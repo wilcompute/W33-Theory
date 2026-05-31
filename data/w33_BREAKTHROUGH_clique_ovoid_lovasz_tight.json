@@ -1,0 +1,16 @@
+{
+  "omega": 4,
+  "omega_substrate": "mu = q + 1",
+  "alpha": 10,
+  "alpha_substrate": "Phi_4 = q^2 + 1",
+  "v_factorization": "omega * alpha = mu * Phi_4 = 40",
+  "theta_W": 10,
+  "theta_W_bar": 4,
+  "theta_product": 40,
+  "n_lines": 40,
+  "n_ovoids": 28,
+  "total_max_structures": 68,
+  "total_substrate_form": "2v - k = 68",
+  "theta_tight": true,
+  "correction_to_breakthrough_4": "alpha(W(3,3)) = Phi_4 = 10 (not mu = 4); the mu = 4 is the CLIQUE number omega. Lov\u00e1sz bound is tight: alpha = theta = Phi_4."
+}
