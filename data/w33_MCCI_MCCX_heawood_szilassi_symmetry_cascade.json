@@ -1,0 +1,75 @@
+{
+  "MCCI_336": {
+    "value": 336,
+    "primary_form": "lambda * 168",
+    "alt_forms": [
+      "2^q * (q!*Phi_6)",
+      "(q+1)*(Phi_6*k)",
+      "2^mu * g_1",
+      "q! * 56"
+    ]
+  },
+  "MCCII_168": {
+    "value": 168,
+    "formula": "2^q * q * Phi_6",
+    "names": [
+      "PSL(2,7)",
+      "GL(3,2)",
+      "Aut(Klein quartic)"
+    ]
+  },
+  "MCCIII_42": {
+    "value": 42,
+    "formula": "q! * Phi_6",
+    "chiral": true,
+    "orient_pres": 42,
+    "orient_rev": 0
+  },
+  "MCCIV_coset_index": {
+    "value": 8,
+    "formula": "2^q = octonion dim",
+    "split": [
+      4,
+      4
+    ]
+  },
+  "MCCV_szilassi_flags": {
+    "value": 84,
+    "form": "Phi_6 * k = lambda * 42"
+  },
+  "MCCVI_heawood_graph": {
+    "V": 14,
+    "E": 21,
+    "degree": 3,
+    "girth": 6,
+    "bipartition": [
+      7,
+      7
+    ]
+  },
+  "MCCVII_cascade": {
+    "Heawood + polarity": 336,
+    "Fano collineations": 168,
+    "Szilassi toroidal": 42,
+    "Coset index": 8
+  },
+  "MCCVIII_84_forms": {
+    "value": 84,
+    "forms": [
+      "Phi_6*k",
+      "lambda*42",
+      "q*28"
+    ]
+  },
+  "MCCIX_chirality": {
+    "orient_pres": 42,
+    "orient_rev": 0,
+    "physical_meaning": "origin of SM CP violation"
+  },
+  "MCCX_klein_hurwitz": {
+    "hurwitz_bound": 168,
+    "genus": 3,
+    "formula": "84(g-1) = q! * (g-1) * Phi_6 * lambda"
+  },
+  "headline": "MCCI-MCCX: HEAWOOD-SZILASSI SYMMETRY CASCADE.\n\nAut(Heawood) = 336 = 2 * 168 = lambda * |Aut(Fano)|\n  Multiple substrate forms: 8*42, 4*84, 16*21, 6*56, etc.\n\n|Aut(Fano)| = 168 = 2^q * q * Phi_6 = OCTONION * FIELD * HEAWOOD trinity\n\nSzilassi toroidal map Aut = 42 = q! * Phi_6 (= 6 * 7)\n  CHIRAL: 42 orient-pres + 0 orient-rev\n  42 = sigma_1(20) = sigma_1(|E|/k)\n\nCoset index 336/42 = 8 = 2^q = OCTONION DIM\n  = number of distinct toroidal face systems\n  splits as 4 + 4 = mu + mu (collineation + polarity images)\n\nSzilassi flag count 84 = Phi_6 * k = lambda * 42 = q * 28\n\nHeawood graph: V=14=lambda*Phi_6, E=21=q*Phi_6=g_1, cubic=q, girth=q!\n  UNIQUE (3,6)-Moore cage, bipartite (Phi_6, Phi_6) = 7+7\n\nSUBSTRATE CHIRALITY ANCHOR:\n  Csaszar/Szilassi toroidal pair is FIRST intrinsic substrate chirality\n  -- origin of CP violation (sin delta_CP = 15/17, J_CKM = 27/884000)\n\nKlein quartic Hurwitz bound 84(g-1) = 168 at g = q = 3\n  Substrate chain: Fano -> Heawood -> Klein -> PSL(2,7) -> M_21 -> M_24\n"
+}
