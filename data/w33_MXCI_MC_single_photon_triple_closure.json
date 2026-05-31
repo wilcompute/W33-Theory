@@ -1,0 +1,57 @@
+{
+  "MXCI_triple_closure": {
+    "7": 7,
+    "9": 9,
+    "40": 40,
+    "nesting": "7 -> 9 -> 40"
+  },
+  "MXCII_scale_tower": {
+    "tower": [
+      1,
+      3,
+      9,
+      40,
+      81,
+      51840
+    ]
+  },
+  "MXCIII_tsvf": {
+    "Bell": "uniform TSVF post-selection",
+    "marginal": "I/q"
+  },
+  "MXCIV_substrate_cpt": {
+    "theorem": "C|Omega> = P|Omega> = T|Omega> = |Omega>",
+    "n_photons": 1
+  },
+  "MXCV_ghz_matter": {
+    "n": 2,
+    "dim": 81,
+    "matter_sector": 81
+  },
+  "MXCVI_q4_router": {
+    "Q4_V": 16,
+    "Q4_E": 32,
+    "Q4_plaq": 24,
+    "reye_12_4_16_3": true,
+    "monodromy": 18432
+  },
+  "MXCVII_substrate_dict": {
+    "bell_line_stab": 1296,
+    "key_rate": "13/40",
+    "QECC": "[[240, 81, 4, 3]]_3",
+    "noise_threshold": "3/4"
+  },
+  "MXCVIII_sp4f3": {
+    "|Sp(4,F_3)|": 51840,
+    "factorization": "v * mu^2 * q^(q+1) = 40 * 16 * 81"
+  },
+  "MXCIX_bell_stab": {
+    "stabilizer": 1296,
+    "orbit": 40,
+    "G_over_stab": 40
+  },
+  "MC_meta": {
+    "claim": "one photon -> universal 51840 substrate carrier"
+  },
+  "headline": "MXCI-MC: SINGLE-PHOTON TRIPLE CLOSURE AND SUBSTRATE DICTIONARY.\n\nTRIPLE CLOSURE 7-9-40 on ONE PHOTON:\n  Temporal triangle (Phi_6=7) c Past x Future (q^2=9) c W(3,3) (v=40)\n\nScale-up tower from one photon:\n  1 -> 3 -> 9 -> 40 -> 81 -> 51840 = |Sp(4, F_3)|\n  ONE photon -> universal 51840-Clifford via self-entanglement\n\nBELL QUTRIT = UNIFORM TSVF POST-SELECTION (Aharonov-Vaidman)\n  Haar avg of |psi_f><psi_f| = I/q = past marginal\n\nDISCRETE SUBSTRATE CPT THEOREM on |Omega> on one photon\n  C, P, T each fix |Omega> individually -- NO continuum needed\n\nGHZ_2 = MATTER SECTOR: q^(2*2) = q^(q+1) = 81 = H_1(W33 2-complex)\n  Two photons = one matter fermion H_1 EXACTLY\n\nQ_4 ROUTER UNIFIES tomotope+Reye+24-cell:\n  Q_4 V=16=mu^2, E=32=2mu^2, plaquettes=24=q!(q+1)=m_r\n  Antipodal quotient = Reye(12_4,16_3) = tomotope = 24-cell incidence\n  Monodromy 18432 = 32 * 24^2 = 96 * 192\n\n|Sp(4,F_3)| = 51840 = v * mu^2 * q^(q+1) = 40 * 16 * 81\nBell-line stab = 1296 = mu^2 * q^(q+1); orbit = v = 40\n\n30+ substrate-clean quantities with ZERO fitted parameters.\n\nMETA: ONE photon = universal substrate carrier.\n  The photon, by self-entanglement, IS the W(3,3) universe.\n"
+}
