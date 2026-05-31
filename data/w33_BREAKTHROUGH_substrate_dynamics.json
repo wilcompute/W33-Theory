@@ -1,0 +1,48 @@
+{
+  "vertices": 40,
+  "edges": 240,
+  "spectrum": {
+    "-4": 15,
+    "2": 24,
+    "12": 1
+  },
+  "SRG_params": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "eigenvalue_differences": [
+    10,
+    16,
+    6
+  ],
+  "GCD_of_differences": 2,
+  "revival_period": 3.141592653589793,
+  "P_return_at_pi": 0.9999695620207039,
+  "max_spread_count": 13,
+  "max_ipr": 34.09066377532181,
+  "recurrence_peaks_top5": [
+    [
+      9.425,
+      0.9999994083831738
+    ],
+    [
+      18.85,
+      0.9999976335352647
+    ],
+    [
+      12.565,
+      0.9999774573058956
+    ],
+    [
+      3.14,
+      0.9999695620207039
+    ],
+    [
+      6.285,
+      0.9999604836339142
+    ]
+  ],
+  "interpretation": "W(3,3) quantum walk has PERIOD = pi in graph time. This is because all adjacency eigenvalues are even (mod 2), giving GCD of differences = lambda = 2."
+}

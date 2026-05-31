@@ -1,0 +1,141 @@
+{
+  "method": "Symbolic C(t) * conj(C(t)) at rational t/pi",
+  "C_t_formula": "(1/v)(exp(-12it) + f*exp(-2it) + g*exp(4it))",
+  "spectrum": {
+    "12 (mult 1)": "trivial",
+    "2 (mult 24)": "bosonic",
+    "-4 (mult 15)": "fermionic"
+  },
+  "period": "pi",
+  "fractional_revival_table": [
+    {
+      "t_over_pi": "0/1",
+      "P_exact": "1/1",
+      "P_decimal": 1.0,
+      "substrate": "1/1  =  1/1"
+    },
+    {
+      "t_over_pi": "1/12",
+      "P_exact": "0.465894",
+      "P_decimal": 0.46589423788646683,
+      "substrate": "(numerical 0.465894)"
+    },
+    {
+      "t_over_pi": "1/8",
+      "P_exact": "0.180589",
+      "P_decimal": 0.1805887450304572,
+      "substrate": "(numerical 0.180589)"
+    },
+    {
+      "t_over_pi": "1/6",
+      "P_exact": "91/1600",
+      "P_decimal": 0.056875,
+      "substrate": "Phi_6*Phi_3/v^2  =  91/1600"
+    },
+    {
+      "t_over_pi": "1/5",
+      "P_exact": "0.152023",
+      "P_decimal": 0.15202328388674338,
+      "substrate": "(numerical 0.152023)"
+    },
+    {
+      "t_over_pi": "1/4",
+      "P_exact": "13/25",
+      "P_decimal": 0.52,
+      "substrate": "Phi_3/F_5^2  =  13/25"
+    },
+    {
+      "t_over_pi": "1/3",
+      "P_exact": "1483/1600",
+      "P_decimal": 0.926875,
+      "substrate": "1483/v^2  =  1483/1600"
+    },
+    {
+      "t_over_pi": "1/2",
+      "P_exact": "1/25",
+      "P_decimal": 0.04,
+      "substrate": "1/F_5^2  =  1/25"
+    },
+    {
+      "t_over_pi": "2/3",
+      "P_exact": "1483/1600",
+      "P_decimal": 0.926875,
+      "substrate": "1483/v^2  =  1483/1600"
+    },
+    {
+      "t_over_pi": "3/4",
+      "P_exact": "13/25",
+      "P_decimal": 0.52,
+      "substrate": "Phi_3/F_5^2  =  13/25"
+    },
+    {
+      "t_over_pi": "5/6",
+      "P_exact": "91/1600",
+      "P_decimal": 0.056875,
+      "substrate": "Phi_6*Phi_3/v^2  =  91/1600"
+    },
+    {
+      "t_over_pi": "1/1",
+      "P_exact": "1/1",
+      "P_decimal": 1.0,
+      "substrate": "1/1  =  1/1"
+    }
+  ],
+  "clean_substrate_values": [
+    {
+      "t_over_pi": "0/1",
+      "P": "1/1",
+      "decimal": 1.0,
+      "substrate": "1/1  =  1/1"
+    },
+    {
+      "t_over_pi": "1/6",
+      "P": "91/1600",
+      "decimal": 0.056875,
+      "substrate": "Phi_6*Phi_3/v^2  =  91/1600"
+    },
+    {
+      "t_over_pi": "1/4",
+      "P": "13/25",
+      "decimal": 0.52,
+      "substrate": "Phi_3/F_5^2  =  13/25"
+    },
+    {
+      "t_over_pi": "1/3",
+      "P": "1483/1600",
+      "decimal": 0.926875,
+      "substrate": "1483/v^2  =  1483/1600"
+    },
+    {
+      "t_over_pi": "1/2",
+      "P": "1/25",
+      "decimal": 0.04,
+      "substrate": "1/F_5^2  =  1/25"
+    },
+    {
+      "t_over_pi": "2/3",
+      "P": "1483/1600",
+      "decimal": 0.926875,
+      "substrate": "1483/v^2  =  1483/1600"
+    },
+    {
+      "t_over_pi": "3/4",
+      "P": "13/25",
+      "decimal": 0.52,
+      "substrate": "Phi_3/F_5^2  =  13/25"
+    },
+    {
+      "t_over_pi": "5/6",
+      "P": "91/1600",
+      "decimal": 0.056875,
+      "substrate": "Phi_6*Phi_3/v^2  =  91/1600"
+    },
+    {
+      "t_over_pi": "1/1",
+      "P": "1/1",
+      "decimal": 1.0,
+      "substrate": "1/1  =  1/1"
+    }
+  ],
+  "theorem": "F(p/q) := P_return(pi*p/q) is the substrate's quantum fingerprint, taking rational values for many small p/q, with denominators dividing v^2 = 1600."
+}
