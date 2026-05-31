@@ -1,0 +1,59 @@
+{
+  "MCCXI_pgl_2_3": {
+    "value": 24,
+    "name": "PGL(2,3) = S_4",
+    "= f": true
+  },
+  "MCCXII_psl_2_3": {
+    "value": 12,
+    "name": "PSL(2,3) = A_4",
+    "= k": true
+  },
+  "MCCXIII_borel": {
+    "value": 12,
+    "name": "Borel of GL(2,3)",
+    "center": 2
+  },
+  "MCCXIV_fano_affine": {
+    "fano_points": 7,
+    "affine": 4,
+    "infinity": 3,
+    "decomp": "mu + q = Phi_6"
+  },
+  "MCCXV_84": {
+    "chart_codec": 84,
+    "formula": "Phi_6 * mu * q"
+  },
+  "MCCXVI_C3_overlap": {
+    "order": 3,
+    "name": "A_4 intersect S_3 inside S_4"
+  },
+  "MCCXVII_C6_lift": {
+    "order": 6,
+    "line_codec": 12
+  },
+  "MCCXVIII_4_to_7": {
+    "PG_1_3": 4,
+    "AG_2_2": 4,
+    "Fano": 7,
+    "Hidden_Fourth": true
+  },
+  "MCCXIX_stabilizers": {
+    "aut_fano": 168,
+    "point_stab": 24,
+    "pair_stab": 8
+  },
+  "MCCXX_fano_summary": {
+    "points": 7,
+    "lines": 7,
+    "incidences": 21,
+    "aut": 168,
+    "chart_codec": 84,
+    "local_states_per_chart": 12,
+    "affine_anchors": 4,
+    "infinity_directions": 3,
+    "point_stab": 24,
+    "pair_stab": 8
+  },
+  "headline": "MCCXI-MCCXX: FANO-PGL(2,3)-S_4-QUTRIT BRIDGE.\n\nPGL(2, F_3) = S_4 with |PGL(2,3)| = 4! = 24 = f (positive eigen mult)\nPSL(2, F_3) = A_4 with |PSL(2,3)| = 12 = k (gauge codec)\nBorel(GL(2,3)) line-codec also has order 12 = k\n\nFano plane = AG(2, F_2) + 3 line-at-infinity directions\n  7 points = 4 affine + 3 infinity = mu + q = Phi_6\n  Tetrahedron (4) -> Fano (7) via Hidden Fourth closure\n\n84 chart-codec = Phi_6 * mu * q = 7 * 4 * 3\n  (chart) * (anchor) * (direction); also = Phi_6 * k\n\nC_3 = A_4 intersect S_3 inside S_4 = PGL(2,3) is the QUTRIT TRIANGLE\nBorel C_3 lifts to C_6 via central -I, acting on 6 signed b choices\nLine-codec 12 = lambda * (C_3 triangle + central sign lift)\n\nFano stabilizers: point = f = 24 = |S_4|; pair = 2^q = 8 = octonion dim\nAut(Fano) = 168 = 2^q * q * Phi_6 (octonion-field-Heawood trinity)\n\nMETA: Fano is W(3,3)'s fundamental chart\n  EVERY Fano count is a W(3,3) primitive (Phi_6, mu, q, k, 2^q, 84, 168)\n"
+}
