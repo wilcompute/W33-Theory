@@ -1,0 +1,43 @@
+{
+  "part": "MMCCCLXXXIII",
+  "theorem": "S6 duad-syntheme-pentad bridge",
+  "counts": {
+    "duads": 15,
+    "synthemes": 15,
+    "pentads": 6,
+    "duad_syntheme_incidences": 45,
+    "syntheme_pentad_incidences": 30
+  },
+  "groups": {
+    "S6": 720,
+    "duad_stabilizer": 48,
+    "syntheme_stabilizer": 48,
+    "pentad_stabilizer": 120,
+    "faithful_actions": ["duads", "synthemes", "pentads"]
+  },
+  "outer_automorphism_shadow": "The six pentads form a second six-set. Pairs of pentads label the 15 synthemes, while pairs of original letters label the 15 duads. This exchanges the two 15-state carriers in the classical S6 outer-automorphism construction.",
+  "checks": {
+    "inherits_operation_weld": true,
+    "duads_15": true,
+    "synthemes_15": true,
+    "pentads_6": true,
+    "each_syntheme_three_duads": true,
+    "each_pentad_five_synthemes": true,
+    "each_duad_in_three_synthemes": true,
+    "each_syntheme_in_two_pentads": true,
+    "pentad_pairs_label_all_synthemes": true,
+    "duad_syntheme_incidence_45": true,
+    "syntheme_pentad_incidence_30": true,
+    "s6_order_720": true,
+    "s6_duad_action_faithful": true,
+    "s6_syntheme_action_faithful": true,
+    "s6_pentad_action_faithful": true,
+    "duad_stabilizer_48": true,
+    "syntheme_stabilizer_48": true,
+    "pentad_stabilizer_120": true,
+    "orbit_stabilizer_identities": true,
+    "outer_shadow_pair_of_pentads_to_syntheme": true
+  },
+  "n_verified": 20,
+  "n_checks": 20
+}
