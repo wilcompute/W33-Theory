@@ -1,0 +1,32 @@
+{
+  "positive_even_zeta": [
+    {
+      "2k": 2,
+      "D": 6,
+      "substrate": "q! (master eq value)"
+    },
+    {
+      "2k": 4,
+      "D": 90,
+      "substrate": "q^2 * Phi_4"
+    },
+    {
+      "2k": 6,
+      "D": 945,
+      "substrate": "q^q * F_5 * Phi_6"
+    },
+    {
+      "2k": 8,
+      "D": 9450,
+      "substrate": "q^2 * h_E_8 * F_5 * Phi_6"
+    },
+    {
+      "2k": 10,
+      "D": 93555,
+      "substrate": "q^5 * F_5 * Phi_6 * p_Ih"
+    }
+  ],
+  "F_5_Phi_6_shell": "35 divides D for zeta(6), zeta(8), zeta(10)",
+  "basel": "zeta(2) = pi^2 / q! (Euler 1735)",
+  "complete_substrate_zeta_count": 11
+}
