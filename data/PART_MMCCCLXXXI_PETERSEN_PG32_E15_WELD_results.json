@@ -1,0 +1,36 @@
+{
+  "part": "MMCCCLXXXI",
+  "theorem": "Petersen/PG(3,2)/E15 weld",
+  "counts": {
+    "petersen_disjoint_pair_states": 15,
+    "pg32_points": 15,
+    "pg32_lines": 35,
+    "pg32_planes": 15,
+    "E15_rank": 15,
+    "tomotope_packet_flags": 192,
+    "packets_total": 2880
+  },
+  "pg32_incidence": {"NNt": "4I+3J", "spectrum": {"49": 1, "4": 14}},
+  "petersen_profiles": {"missing_k5_vertex_each": 3, "k5_edge_use_each": 3},
+  "checks": {
+    "inherits_petersen_bridge": true,
+    "petersen_state_count_15": true,
+    "pg32_point_count_15": true,
+    "pg32_plane_count_15": true,
+    "pg32_line_count_35": true,
+    "canonical_weld_is_bijection": true,
+    "pg32_each_line_size_3": true,
+    "pg32_each_point_on_7_lines": true,
+    "pg32_each_pair_one_line": true,
+    "pg32_planes_7_points_each": true,
+    "pg32_incidence_gram": true,
+    "pg32_incidence_spectrum_49_4x14": true,
+    "e15_rank_15": true,
+    "packet_identity_15x192_2880": true,
+    "petersen_missing_vertex_profile_3_each": true,
+    "petersen_k5_edge_use_profile_3_each": true,
+    "petersen_15_equals_pg32_15_equals_e15_rank": true
+  },
+  "n_verified": 17,
+  "n_checks": 17
+}
