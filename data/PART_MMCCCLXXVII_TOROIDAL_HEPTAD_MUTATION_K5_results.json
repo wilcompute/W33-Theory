@@ -1,0 +1,28 @@
+{
+  "part": "MMCCCLXXVII",
+  "theorem": "Toroidal heptad mutation K5 bridge",
+  "repo_edge_type_counts": [10, 9, 9, 8, 9, 12, 11],
+  "orbit_count": 5,
+  "orbit_size_profile": {"168": 5},
+  "mutation_graph": {"vertices": 5, "nonself_edges": 10, "type": "complete graph K5"},
+  "weights": {"directed_offdiag": 504, "undirected_offdiag": 1008, "loop": 1008, "directed_total_per_orbit": 3024},
+  "local_transition_profile_per_assignment": {"self": 6, "to_each_other_orbit": 3, "total_nontrivial_swaps": 18},
+  "factorizations": {"504": "3*168", "1008": "6*168", "3024": "18*168", "840": "5*168"},
+  "checks": {
+    "uses_repo_counts": true,
+    "five_orbits": true,
+    "each_orbit_size_168": true,
+    "unique_assignments_840": true,
+    "gl32_order_168": true,
+    "mutation_graph_is_K5": true,
+    "all_directed_offdiag_weights_504": true,
+    "all_undirected_offdiag_weights_1008": true,
+    "all_loop_weights_1008": true,
+    "per_assignment_profile_uniform": true,
+    "per_orbit_directed_total_3024": true,
+    "numbers_factor_by_168": true,
+    "k5_edge_count_matches_first_csaszar_count": true
+  },
+  "n_verified": 13,
+  "n_checks": 13
+}
