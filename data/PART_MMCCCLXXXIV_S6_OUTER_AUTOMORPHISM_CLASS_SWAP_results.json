@@ -1,0 +1,33 @@
+{
+  "part": "MMCCCLXXXIV",
+  "theorem": "S6 outer automorphism class-swap certificate",
+  "key_class_swaps": {
+    "transpositions_to_triple_transpositions": 15,
+    "triple_transpositions_to_transpositions": 15
+  },
+  "groups": {
+    "domain_S6": 720,
+    "image_on_pentads": 720,
+    "pentad_stabilizer": 120
+  },
+  "interpretation": "The six pentads form a second six-set. The induced action phi:S6->S6 is a bijective homomorphism. It maps the 15 original transpositions to the 15 triple-transpositions on the pentad six-set and maps triple-transpositions back to transpositions. Since inner automorphisms of S6 preserve cycle type, this is an explicit outer automorphism certificate for the duad-syntheme-pentad bridge.",
+  "checks": {
+    "inherits_duad_syntheme_pentad": true,
+    "six_pentads": true,
+    "phi_image_size_720": true,
+    "homomorphism": true,
+    "inverse_respected": true,
+    "automorphism_bijective": true,
+    "transpositions_15": true,
+    "triple_transpositions_15": true,
+    "transpositions_map_to_triple_transpositions": true,
+    "triple_transpositions_map_to_transpositions": true,
+    "not_inner_cycle_type_not_preserved": true,
+    "class_table_preserved_as_counts": true,
+    "class_pair_transposition_certificate": true,
+    "pentad_stabilizer_120": true,
+    "orbit_stabilizer_6x120": true
+  },
+  "n_verified": 15,
+  "n_checks": 15
+}
