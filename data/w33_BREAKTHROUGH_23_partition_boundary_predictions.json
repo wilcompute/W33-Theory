@@ -1,0 +1,12 @@
+{
+  "Pv_substrate": "P(40) = lambda * q * Phi_6^2 * M_7 = 37338",
+  "M_7": "2^Phi_6 - 1 = 127 = 4th Mersenne prime",
+  "boundary_n": 40,
+  "predictions": {
+    "axion_mass_microeV": 4.9,
+    "sterile_mass_keV": 7.0,
+    "WIMP_mass_GeV": 720,
+    "GUT_scale_GeV": 1.7e+16
+  },
+  "substrate_horizon_theorem": "The substrate v = 40 is the natural arithmetic horizon: all standard number-theoretic operations preserve substrate closure below v and exhibit gradual leakage above v."
+}
