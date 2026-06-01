@@ -1,0 +1,32 @@
+{
+  "results_by_q": {
+    "2": {
+      "v": 15,
+      "k": 6,
+      "lambda": 1,
+      "mu": 3,
+      "alpha": 5,
+      "chi_exact": 4,
+      "chi_lower": 3,
+      "q_factorial": 2,
+      "two_q": 4,
+      "matches_q_factorial": false,
+      "matches_two_q": true
+    },
+    "3": {
+      "v": 40,
+      "k": 12,
+      "lambda": 2,
+      "mu": 4,
+      "alpha": 7,
+      "chi_exact": 6,
+      "chi_lower": 6,
+      "q_factorial": 6,
+      "two_q": 6,
+      "matches_q_factorial": true,
+      "matches_two_q": true
+    }
+  },
+  "12th_q3_forcing": "chi(W(3, q)) = q! only at q = 3",
+  "interpretation": "The substrate's chromatic = master-eq-value identity is specific to q = 3, the field order where q! = 2q (the master equation itself). This makes the chromatic identity a consequence of the master equation, not an independent coincidence."
+}
