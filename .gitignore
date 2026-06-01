@@ -132,6 +132,7 @@ data/*
 !data/atlas/**
 !data/w33_e8_mapping.json
 !data/w33_selector_decimal_toroidal_jacobi_bridge_summary.json
+!data/w33_dual_selector_orientation_sign_bridge_summary.json
 !data/w33_transport_ternary_cocycle_bridge_summary.json
 !data/w33_yukawa_unipotent_reduction_bridge_summary.json
 

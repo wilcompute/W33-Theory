@@ -1,0 +1,189 @@
+{
+  "status": "ok",
+  "local_selector_packet": {
+    "selector_order": 6,
+    "average_weight": "1/6",
+    "trivial_projector": {
+      "matrix": [
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      ],
+      "rational_matrix": [
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ]
+      ],
+      "rank": 1
+    },
+    "sign_projector": {
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rational_matrix": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "rank": 0
+    },
+    "theorem": {
+      "plus_one_sixth_is_exact_local_selector_average": true,
+      "sign_projector_vanishes_on_the_local_permutation_rep": true
+    }
+  },
+  "dual_scale_packet": {
+    "fixed_scale_sl3": 0.16666666666666666,
+    "expected_scale_g2g2": -0.16666666666666666,
+    "canonical_tuned_scale_g2g2": -0.16666666666666663,
+    "sign_flipped_tuned_scale_g2g2": -0.16666666666666663,
+    "artifact_scale_g2g2": -0.16666666666666666,
+    "absolute_errors": {
+      "canonical_to_expected": 2.7755575615628914e-17,
+      "sign_flipped_to_expected": 2.7755575615628914e-17
+    },
+    "theorem": {
+      "canonical_tunes_to_exact_minus_one_sixth": true,
+      "sign_flipped_variant_also_tunes_to_exact_minus_one_sixth": true,
+      "artifact_and_tuned_scale_agree": true
+    }
+  },
+  "mixed_jacobi_pattern_packet": {
+    "fixed_exact_rational_scales": {
+      "scale_sl3": 0.16666666666666666,
+      "scale_g2g2": -0.16666666666666666
+    },
+    "canonical": {
+      "patterns": {
+        "g0_g1_g2": {
+          "grading_pattern": [
+            0,
+            1,
+            2
+          ],
+          "max_residual": 3.6415315207705135e-14
+        },
+        "g1_g1_g2": {
+          "grading_pattern": [
+            1,
+            1,
+            2
+          ],
+          "max_residual": 1.7763568394002505e-14
+        },
+        "g1_g2_g2": {
+          "grading_pattern": [
+            1,
+            2,
+            2
+          ],
+          "max_residual": 1.0658141036401503e-14
+        }
+      },
+      "max_residual": 3.6415315207705135e-14
+    },
+    "sign_flipped": {
+      "patterns": {
+        "g0_g1_g2": {
+          "grading_pattern": [
+            0,
+            1,
+            2
+          ],
+          "max_residual": 72.22222222222221
+        },
+        "g1_g1_g2": {
+          "grading_pattern": [
+            1,
+            1,
+            2
+          ],
+          "max_residual": 1.7763568394002505e-14
+        },
+        "g1_g2_g2": {
+          "grading_pattern": [
+            1,
+            2,
+            2
+          ],
+          "max_residual": 68.0
+        }
+      },
+      "max_residual": 72.22222222222221
+    },
+    "theorem": {
+      "canonical_closes_all_mixed_patterns_at_exact_rational_scales": true,
+      "sign_flipped_breaks_g0_g1_g2_badly": true,
+      "sign_flipped_breaks_g1_g2_g2_badly": true,
+      "sign_flipped_leaves_g1_g1_g2_small": true
+    }
+  },
+  "frontier_packet": {
+    "exact_read": "The positive coefficient +1/6 is explained exactly by the normalized local S3 selector average, and the local sign projector still vanishes exactly on the 3-point permutation representation.",
+    "unresolved_read": "The negative coefficient -1/6 is therefore not a literal local sign projection, and this bridge now shows it is not recovered by a naive overall sign flip of the g0 action on g2 either. The remaining problem is deeper dual/oriented structure."
+  },
+  "bridge_theorem": {
+    "plus_one_sixth_is_exact_local_selector_average": true,
+    "local_sign_projector_vanishes_exactly": true,
+    "canonical_and_sign_flipped_variants_both_tune_to_minus_one_sixth": true,
+    "canonical_bracket_closes_mixed_jacobi_at_exact_rational_scales": true,
+    "naive_sign_flipped_dual_action_breaks_mixed_jacobi": true,
+    "minus_one_sixth_is_not_a_simple_local_sign_or_dual_flip": true
+  },
+  "bridge_verdict": "The next wall is now cleaner. The negative Jacobi coefficient -1/6 is not a literal local sign projector, because the exact local sign projector vanishes. And it is not explained by the most naive global dual/orientation fix either, because flipping only the overall g0 action on g2 leaves the tuned scale at -1/6 but breaks mixed Jacobi badly on (g0,g1,g2) and (g1,g2,g2). So the minus sign is real, exact, and deeper than a simple local sign or simple contragredient sign flip.",
+  "source_files": [
+    "exploration/w33_selector_decimal_toroidal_jacobi_bridge.py",
+    "tools/toe_e8_z3graded_bracket_jacobi.py",
+    "artifacts/toe_e8_z3graded_jacobi.json"
+  ]
+}
