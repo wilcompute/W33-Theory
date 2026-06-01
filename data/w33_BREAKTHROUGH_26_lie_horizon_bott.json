@@ -1,0 +1,26 @@
+{
+  "extended_A_series_n_max": 34,
+  "extended_D_series_n_max": 16,
+  "SO_32_heterotic": "dim SO(32) = 496 = 2 * dim E_8 = Heterotic anomaly",
+  "bott_periods": {
+    "O": 8,
+    "U": 2,
+    "Sp": 8
+  },
+  "bott_substrate": {
+    "O": "2^q",
+    "U": "lambda",
+    "Sp": "2^q"
+  },
+  "bott_song_pi_O": [
+    "Z/2",
+    "Z/2",
+    "0",
+    "Z",
+    "0",
+    "0",
+    "0",
+    "Z"
+  ],
+  "conclusion": "The substrate grounds the ENTIRE Lie theory + homotopy theory of classical groups at small ranks. Bott periodicity 8 = 2^q is the substrate's octonion-dim periodicity in stable homotopy."
+}
