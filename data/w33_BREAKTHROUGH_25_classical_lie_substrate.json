@@ -1,0 +1,40 @@
+{
+  "A_series": {
+    "SU(2)": 3,
+    "SU(3)": 8,
+    "SU(4)": 15,
+    "SU(5)": 24,
+    "SU(6)": 35,
+    "SU(7)": 48,
+    "SU(8)": 63,
+    "SU(9)": 80,
+    "SU(10)": 99
+  },
+  "B_series": {
+    "SO(3)": 3,
+    "SO(5)": 10,
+    "SO(7)": 21,
+    "SO(9)": 36,
+    "SO(11)": 55,
+    "SO(13)": 78,
+    "SO(15)": 105
+  },
+  "C_series": {
+    "Sp(4)": 10,
+    "Sp(6)": 21,
+    "Sp(8)": 36
+  },
+  "D_series": {
+    "SO(4)": 6,
+    "SO(6)": 15,
+    "SO(8)": 28,
+    "SO(10)": 45,
+    "SO(12)": 66,
+    "SO(14)": 91,
+    "SO(16)": 120
+  },
+  "total_substrate_clean_Lie_groups": 31,
+  "total_substrate_form": "31 = M_5 = 4th Mersenne prime (indexed by F_5)",
+  "striking_SO_14": "dim SO(14) = 91 = m_Z (GeV) = Phi_3 * Phi_6",
+  "striking_SU_9": "dim SU(9) = 80 = m_W (GeV) = 2v"
+}
