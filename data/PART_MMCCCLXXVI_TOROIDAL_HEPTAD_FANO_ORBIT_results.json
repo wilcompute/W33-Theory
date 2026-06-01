@@ -1,0 +1,33 @@
+{
+  "part": "MMCCCLXXVI",
+  "theorem": "Toroidal heptad Fano orbit bridge",
+  "repo_edge_type_counts": [10, 9, 9, 8, 9, 12, 11],
+  "csaszar_counts": [10, 9, 9, 8, 9],
+  "szilassi_counts": [12, 11],
+  "group_order_GL32": 168,
+  "unique_multiset_labelings": 840,
+  "orbit_count": 5,
+  "orbit_size_profile": {"168": 5},
+  "line_sum_profiles": [
+    [26, 27, 29, 30, 30, 31, 31],
+    [26, 28, 28, 30, 30, 30, 32],
+    [26, 28, 29, 29, 29, 31, 32],
+    [27, 27, 28, 29, 30, 31, 32],
+    [27, 28, 28, 29, 29, 30, 33]
+  ],
+  "high_szilassi_line_third_value_profile": {"8": 1, "9": 3, "10": 1},
+  "checks": {
+    "uses_repo_counts": true,
+    "realization_packet_5_plus_2": true,
+    "unique_labelings_840": true,
+    "gl32_order_168": true,
+    "five_fano_orbits": true,
+    "each_orbit_has_168": true,
+    "profiles_are_gl32_orbits": true,
+    "orbit_count_matches_csaszar_realizations": true,
+    "two_szilassi_counts_are_high_markers": true,
+    "high_line_third_values_are_csaszar_counts": true
+  },
+  "n_verified": 10,
+  "n_checks": 10
+}
