@@ -1,0 +1,34 @@
+{
+  "part": "MMCCCLXXXII",
+  "theorem": "Petersen/K6/PG(3,2) operation weld",
+  "counts": {
+    "petersen_vertices": 10,
+    "petersen_edges": 15,
+    "petersen_perfect_matchings": 6,
+    "k6_edges": 15,
+    "k6_triangles": 20,
+    "k6_onefactors": 15,
+    "sts_blocks": 35,
+    "pg32_lines": 35
+  },
+  "construction": "Petersen edge -> pair of perfect matchings containing it -> K6 duad. PG(3,2) lines are exactly K6 triangles plus K6 one-factors under the F2^4 duad labeling u_i+u_j.",
+  "checks": {
+    "inherits_weld_result": true,
+    "petersen_vertices_10_edges_15": true,
+    "petersen_perfect_matchings_6": true,
+    "each_petersen_edge_in_two_matchings": true,
+    "duads_are_k6_edges": true,
+    "k6_triangles_20_onefactors_15": true,
+    "sts_blocks_35": true,
+    "sts_each_point_degree_7": true,
+    "sts_each_pair_once": true,
+    "f2_vertex_sum_zero": true,
+    "duad_labels_all_15_nonzero": true,
+    "k6_blocks_equal_zero_sum_triples": true,
+    "zero_sum_triples_35": true,
+    "zero_sum_triples_equal_pg32_lines": true,
+    "operation_weld_petersen_to_pg32": true
+  },
+  "n_verified": 15,
+  "n_checks": 15
+}
