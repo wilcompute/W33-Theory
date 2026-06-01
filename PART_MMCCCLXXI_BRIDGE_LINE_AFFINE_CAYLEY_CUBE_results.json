@@ -1,0 +1,308 @@
+{
+  "part": "MMCCCLXXI",
+  "theorem": "Bridge-line affine Cayley cube",
+  "input_packet": "MMCCCLXX golden failure K2,2 x F3^3 carrier",
+  "anchor_line": 0,
+  "anchor_points": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "endpoint_lines_by_anchor_point": {
+    "0": [
+      1,
+      2,
+      3
+    ],
+    "1": [
+      4,
+      5,
+      6
+    ],
+    "2": [
+      7,
+      8,
+      9
+    ],
+    "3": [
+      10,
+      11,
+      12
+    ]
+  },
+  "bridge_line_count": 27,
+  "sample_bridge_words": {
+    "13": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "14": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "15": [
+      2,
+      0,
+      1,
+      2
+    ],
+    "16": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "17": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "18": [
+      2,
+      1,
+      0,
+      0
+    ],
+    "19": [
+      0,
+      2,
+      1,
+      2
+    ],
+    "20": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "21": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "22": [
+      0,
+      0,
+      2,
+      2
+    ],
+    "23": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "24": [
+      2,
+      0,
+      0,
+      1
+    ]
+  },
+  "linear_relation": "x0 + x1 + 2*x2 + x3 = 0 over F3",
+  "projection_profiles": {
+    "omit_0": {
+      "1": 27
+    },
+    "omit_1": {
+      "1": 27
+    },
+    "omit_2": {
+      "1": 27
+    },
+    "omit_3": {
+      "1": 27
+    }
+  },
+  "intersection_graph": {
+    "degree_profile": {
+      "8": 27
+    },
+    "edge_count": 108,
+    "common_neighbor_profiles": {
+      "adjacent": {
+        "1": 108
+      },
+      "nonadjacent": {
+        "2": 162,
+        "4": 81
+      }
+    }
+  },
+  "cayley_model": {
+    "coordinate_choice": "first three bridge-word coordinates",
+    "generators": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        1
+      ]
+    ],
+    "standard_generators": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "standardizing_gl3_matrix": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "standardized_generator_images": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "spectrum": {
+      "-4": 6,
+      "-1": 8,
+      "2": 12,
+      "8": 1
+    }
+  },
+  "reading": "The 27 bridge lines are the actual affine qutrit cube hidden inside the golden-selector failure carrier. Each bridge line is coordinatized by which off-anchor line it meets above each of the four anchor points. Those four coordinates obey one F3-linear relation, so any three coordinates give F3^3. Bridge-line intersection is exactly the corrected CDIV 8-generator Cayley graph after a GL(3,3) change of basis.",
+  "claim_boundary": "This identifies the 27-line bridge carrier and its spectrum. It still does not identify the four K2,2 cross-pair copies with explicit O^-(6,2)/A5 cosets.",
+  "checks": {
+    "bridge_line_count_is_27": true,
+    "bridge_words_are_unique": true,
+    "bridge_words_satisfy_linear_relation": true,
+    "every_three_coordinate_projection_is_bijection": true,
+    "first_three_coordinates_are_f3_cubical": true,
+    "intersection_graph_is_8_regular": true,
+    "intersection_graph_has_108_edges": true,
+    "intersection_generators_have_size_8": true,
+    "cayley_graph_matches_bridge_graph": true,
+    "generators_gl3_equivalent_to_cdiv_standard": true,
+    "character_spectrum_is_corrected_cdiv": true,
+    "common_neighbor_profile_matches_affine_cube": true
+  },
+  "n_verified": 12
+}
