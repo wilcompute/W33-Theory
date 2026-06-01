@@ -1,0 +1,72 @@
+{
+  "n_forcings_diophantine": 8,
+  "forcing_table": {
+    "1": {
+      "satisfies": [
+        "F4: mu^2 = 2^mu"
+      ],
+      "true_count": 1
+    },
+    "2": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "3": {
+      "satisfies": [
+        "F1: q! = 2q",
+        "F2: (q-1)/(q+1) = 1/2",
+        "F3: Phi_6 = 2q + 1",
+        "F4: mu^2 = 2^mu",
+        "F5: mu^4 = 2^(Phi_6 + 1)",
+        "F6: 2^q + q + 1 = q(q+1)",
+        "F7: 2^q = q^2 - 1",
+        "F8: q(q-3) = 0"
+      ],
+      "true_count": 8
+    },
+    "4": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "5": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "6": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "7": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "8": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "9": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "10": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "11": {
+      "satisfies": [],
+      "true_count": 0
+    },
+    "12": {
+      "satisfies": [],
+      "true_count": 0
+    }
+  },
+  "q_satisfying_all": [
+    3
+  ],
+  "max_count": 8,
+  "q_at_max": [
+    3
+  ],
+  "theorem": "The unique positive integer q satisfying the substrate's Diophantine forcing conditions F1-F8 simultaneously is q = 3."
+}
