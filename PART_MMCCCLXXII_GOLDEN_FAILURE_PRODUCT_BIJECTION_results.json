@@ -1,0 +1,390 @@
+{
+  "part": "MMCCCLXXII",
+  "theorem": "Golden failure product bijection",
+  "input_packets": [
+    "MMCCCLXX golden failure K2,2 x F3^3 carrier",
+    "MMCCCLXXI bridge-line affine Cayley cube"
+  ],
+  "anchor_line": 0,
+  "anchor_points": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "active_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "inactive_matching_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "bridge_line_count": 27,
+  "unique_failure_count": 108,
+  "ordered_failure_count": 864,
+  "product_identity": {
+    "unique": "|K2,2_edges| * |B27| = 4*27 = 108",
+    "ordered": "2^q * 4*27 = 8*108 = 864",
+    "forced_quadrangle": "{anchor, endpoint_line(a,B), B, endpoint_line(b,B)}"
+  },
+  "pair_count_profile": {
+    "27": 4
+  },
+  "bridge_count_profile": {
+    "4": 27
+  },
+  "pair_projection_profiles": {
+    "0-2": {
+      "3": 9
+    },
+    "0-3": {
+      "3": 9
+    },
+    "1-2": {
+      "3": 9
+    },
+    "1-3": {
+      "3": 9
+    }
+  },
+  "sample_product_records": [
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 13,
+      "bridge_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "quadrangle_lines": [
+        0,
+        1,
+        13,
+        7
+      ],
+      "quadrangle_points": [
+        0,
+        13,
+        31,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 14,
+      "bridge_word": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "quadrangle_lines": [
+        0,
+        2,
+        14,
+        9
+      ],
+      "quadrangle_points": [
+        0,
+        16,
+        34,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 15,
+      "bridge_word": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "quadrangle_lines": [
+        0,
+        3,
+        15,
+        8
+      ],
+      "quadrangle_points": [
+        0,
+        19,
+        37,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 16,
+      "bridge_word": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "quadrangle_lines": [
+        0,
+        1,
+        16,
+        9
+      ],
+      "quadrangle_points": [
+        0,
+        13,
+        33,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 17,
+      "bridge_word": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "quadrangle_lines": [
+        0,
+        2,
+        17,
+        8
+      ],
+      "quadrangle_points": [
+        0,
+        16,
+        36,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 18,
+      "bridge_word": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "quadrangle_lines": [
+        0,
+        3,
+        18,
+        7
+      ],
+      "quadrangle_points": [
+        0,
+        19,
+        39,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 19,
+      "bridge_word": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "quadrangle_lines": [
+        0,
+        1,
+        19,
+        8
+      ],
+      "quadrangle_points": [
+        0,
+        13,
+        32,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 20,
+      "bridge_word": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "quadrangle_lines": [
+        0,
+        2,
+        20,
+        7
+      ],
+      "quadrangle_points": [
+        0,
+        16,
+        35,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 21,
+      "bridge_word": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "quadrangle_lines": [
+        0,
+        3,
+        21,
+        9
+      ],
+      "quadrangle_points": [
+        0,
+        19,
+        38,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 22,
+      "bridge_word": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "quadrangle_lines": [
+        0,
+        1,
+        22,
+        9
+      ],
+      "quadrangle_points": [
+        0,
+        14,
+        38,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 23,
+      "bridge_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "quadrangle_lines": [
+        0,
+        2,
+        23,
+        8
+      ],
+      "quadrangle_points": [
+        0,
+        17,
+        32,
+        2
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "bridge_line": 24,
+      "bridge_word": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "quadrangle_lines": [
+        0,
+        3,
+        24,
+        7
+      ],
+      "quadrangle_points": [
+        0,
+        20,
+        35,
+        2
+      ]
+    }
+  ],
+  "reading": "The 108 unique failures are a genuine product, not four unrelated 27-counts. A bridge line B already contains all ternary data. Once an active anchor cross-pair (a,b) is chosen, the GQ incidence axiom forces the two endpoint lines meeting B, and therefore forces the failed quadrangle. The four K2,2 edges reuse the same 27-point bridge-line affine cube.",
+  "claim_boundary": "This is a canonical bijection inside the draft golden-selector failure carrier. It still does not identify the product coordinates with explicit O^-(6,2)/A5 cosets.",
+  "checks": {
+    "unique_failure_count_is_108": true,
+    "active_pairs_are_k22": true,
+    "bridge_cube_has_27_lines": true,
+    "pair_bridge_keys_have_no_duplicates": true,
+    "pair_bridge_keys_cover_complete_product": true,
+    "each_active_pair_has_all_27_bridges": true,
+    "each_bridge_has_all_4_active_pairs": true,
+    "no_unexpected_bridge_or_pair_counts": true,
+    "line_set_is_forced_by_pair_and_bridge": true,
+    "point_set_is_forced_by_pair_and_bridge": true,
+    "pair_coordinate_projections_are_3_to_1": true,
+    "ordered_failures_are_8_times_product": true
+  },
+  "n_verified": 12
+}
