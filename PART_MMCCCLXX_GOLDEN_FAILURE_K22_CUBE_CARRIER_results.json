@@ -1,0 +1,199 @@
+{
+  "part": "MMCCCLXX",
+  "theorem": "Golden failure K2,2 x F3^3 carrier",
+  "input_packet": "MCCXLVI golden selector Z20 cochain lift",
+  "unique_failure_count": 108,
+  "ordered_failure_count": 864,
+  "anchor_line": 0,
+  "anchor_points": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "active_anchor_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "inactive_matching_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "base_pair_failure_counts": {
+    "0-2": 27,
+    "0-3": 27,
+    "1-2": 27,
+    "1-3": 27
+  },
+  "line_incidence_profiles": {
+    "anchor_line": {
+      "0": 108
+    },
+    "endpoint_lines": {
+      "18": 12
+    },
+    "bridge_lines": {
+      "4": 27
+    }
+  },
+  "point_incidence_profiles": {
+    "anchor_points": {
+      "54": 4
+    },
+    "nonanchor_points": {
+      "6": 36
+    }
+  },
+  "pair_summaries": {
+    "0-2": {
+      "failure_count": 27,
+      "endpoint_lines": {
+        "0": [
+          1,
+          2,
+          3
+        ],
+        "2": [
+          7,
+          8,
+          9
+        ]
+      },
+      "endpoint_line_pair_count": 9,
+      "endpoint_line_pair_multiplicity_profile": {
+        "3": 9
+      },
+      "bridge_line_count": 27,
+      "bridge_line_multiplicity_profile": {
+        "1": 27
+      },
+      "nonanchor_point_pair_count": 27,
+      "nonanchor_point_pair_multiplicity_profile": {
+        "1": 27
+      }
+    },
+    "0-3": {
+      "failure_count": 27,
+      "endpoint_lines": {
+        "0": [
+          1,
+          2,
+          3
+        ],
+        "3": [
+          10,
+          11,
+          12
+        ]
+      },
+      "endpoint_line_pair_count": 9,
+      "endpoint_line_pair_multiplicity_profile": {
+        "3": 9
+      },
+      "bridge_line_count": 27,
+      "bridge_line_multiplicity_profile": {
+        "1": 27
+      },
+      "nonanchor_point_pair_count": 27,
+      "nonanchor_point_pair_multiplicity_profile": {
+        "1": 27
+      }
+    },
+    "1-2": {
+      "failure_count": 27,
+      "endpoint_lines": {
+        "1": [
+          4,
+          5,
+          6
+        ],
+        "2": [
+          7,
+          8,
+          9
+        ]
+      },
+      "endpoint_line_pair_count": 9,
+      "endpoint_line_pair_multiplicity_profile": {
+        "3": 9
+      },
+      "bridge_line_count": 27,
+      "bridge_line_multiplicity_profile": {
+        "1": 27
+      },
+      "nonanchor_point_pair_count": 27,
+      "nonanchor_point_pair_multiplicity_profile": {
+        "1": 27
+      }
+    },
+    "1-3": {
+      "failure_count": 27,
+      "endpoint_lines": {
+        "1": [
+          4,
+          5,
+          6
+        ],
+        "3": [
+          10,
+          11,
+          12
+        ]
+      },
+      "endpoint_line_pair_count": 9,
+      "endpoint_line_pair_multiplicity_profile": {
+        "3": 9
+      },
+      "bridge_line_count": 27,
+      "bridge_line_multiplicity_profile": {
+        "1": 27
+      },
+      "nonanchor_point_pair_count": 27,
+      "nonanchor_point_pair_multiplicity_profile": {
+        "1": 27
+      }
+    }
+  },
+  "carrier_identity": {
+    "unique": "K2,2 x F3^3 = 4*27 = 108 = mu*q^3",
+    "ordered": "2^q * K2,2 * F3^3 = 8*108 = 864",
+    "endpoint_cube": "for each active anchor pair: 3 endpoint lines x 3 endpoint lines x 3 bridge choices"
+  },
+  "reading": "The golden-selector obstruction is an anchor-line, cross-pair cube. The anchor line splits into two inactive matched pairs; only the four cross-pairs fail. Each cross-pair carries a full ternary cube of 27 failures. This refines the 864 count into a self-dual binary cut on the anchor line times a ternary F3^3 transport volume.",
+  "claim_boundary": "The decomposition is gauge-local to the draft selector's chosen anchor line. It explains the 108 unique failures and their 864 ordered orientations, but it does not yet identify these cubes with specific O^-(6,2)/A5 cosets.",
+  "checks": {
+    "unique_failure_count_is_mu_q3": true,
+    "single_anchor_line_supports_all_failures": true,
+    "anchor_line_has_q_plus_one_points": true,
+    "active_anchor_pairs_are_k22_edges": true,
+    "inactive_anchor_pairs_are_a_matching": true,
+    "each_active_pair_carries_q3_failures": true,
+    "each_active_pair_is_3_by_3_by_3": true,
+    "bridge_lines_are_27_and_each_seen_mu_times": true,
+    "endpoint_lines_are_12_and_each_seen_18_times": true,
+    "anchor_points_are_each_seen_54_times": true,
+    "nonanchor_points_are_each_seen_q_factorial_times": true,
+    "ordered_failures_are_2q_times_unique": true
+  },
+  "n_verified": 12
+}
