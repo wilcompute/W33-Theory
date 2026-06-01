@@ -1,0 +1,22 @@
+{
+  "part": "MMCCCLXXV",
+  "theorem": "AG(3,2)/RM(1,3) automorphism bridge",
+  "objects": {"points": 8, "affine_planes": 14, "parallel_classes": 7, "sqs_triples": 56},
+  "groups": {"GL(3,2)": 168, "AGL(3,2)": 1344, "full_SQS8_automorphism_group": 1344},
+  "identities": {"AGL=8*168": 1344, "AGL=7*192": 1344, "AGL=14*96": 1344},
+  "checks": {
+    "plane_count_14": true,
+    "parallel_classes_7": true,
+    "sqs8": true,
+    "gl32_order_168": true,
+    "agl32_order_1344": true,
+    "full_aut_equals_agl32": true,
+    "translation_factor_8": true,
+    "fano_normals": true,
+    "order_identity_8x168": true,
+    "order_identity_7x192": true,
+    "order_identity_14x96": true
+  },
+  "n_verified": 11,
+  "n_checks": 11
+}
