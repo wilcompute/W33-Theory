@@ -1,0 +1,58 @@
+{
+  "division_algebras": {
+    "R": 1,
+    "C": 2,
+    "H": 4,
+    "O": 8
+  },
+  "division_substrate": [
+    "1",
+    "lambda",
+    "mu",
+    "2^q"
+  ],
+  "hopf_invariant_one_dims": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "hopf_substrate": [
+    "1",
+    "lambda",
+    "mu",
+    "2^q"
+  ],
+  "parallelizable_spheres": [
+    1,
+    3,
+    7
+  ],
+  "parallelizable_substrate": [
+    "1",
+    "q",
+    "Phi_6"
+  ],
+  "perfect_numbers": [
+    6,
+    28,
+    496,
+    8128
+  ],
+  "perfect_substrate": [
+    "lambda * q",
+    "mu * Phi_6",
+    "lambda^mu * M_5 = 2 * dim E_8 (Heterotic!)",
+    "2^q * 2^q * M_7"
+  ],
+  "octonion_dim_2q_appearances": [
+    "Hurwitz",
+    "Bott",
+    "E_8 rank",
+    "Viazovska",
+    "Hopf top",
+    "Symplectic",
+    "Y_555 Bimonster"
+  ],
+  "conclusion": "The substrate's primitives are the 'magic numbers' of deep math: division algebras, Hopf, parallelizable spheres, perfect numbers all match substrate primitives or products. P_3 = 496 = 2*dim(E_8) connects perfect numbers to the Heterotic anomaly."
+}
