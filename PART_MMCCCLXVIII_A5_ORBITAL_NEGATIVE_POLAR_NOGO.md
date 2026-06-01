@@ -1,8 +1,8 @@
-# Part MDCLXXXV: A5 Orbital Negative-Polar No-Go
+# Part MMCCCLXVIII: A5 Orbital Negative-Polar No-Go
 
 ## Claim Boundary
 
-MDCLXXXV rules out one precise candidate for the missing selector:
+MMCCCLXVIII rules out one precise candidate for the missing selector:
 
 ```text
 diagonal A5 orbital selection on the raw 6 x 6 Clifford L/R grid
@@ -125,4 +125,4 @@ a genuine negative-polar/symplectic twist of the cell labels.
 
 - Analysis: `analysis/w33_a5_orbital_negative_polar_nogo.py`
 - Tests: `tests/test_w33_a5_orbital_negative_polar_nogo.py`
-- Result: `PART_MDCLXXXV_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json`
+- Result: `PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json`

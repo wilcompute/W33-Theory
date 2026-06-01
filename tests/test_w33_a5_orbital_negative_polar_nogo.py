@@ -9,7 +9,7 @@ PACKET = a5_orbital_negative_polar_nogo_packet()
 
 
 def test_mdclxxxv_global_orbital_nogo() -> None:
-    assert PACKET["part"] == "MDCLXXXV"
+    assert PACKET["part"] == "MMCCCLXVIII"
     assert PACKET["n_pair_orbitals"] == 16
     assert PACKET["n_verified"] == 10
     assert all(PACKET["checks"].values())

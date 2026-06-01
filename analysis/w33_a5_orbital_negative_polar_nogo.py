@@ -1,4 +1,4 @@
-"""Part MDCLXXXV: A5 orbital selector no-go.
+"""Part MMCCCLXVIII: A5 orbital selector no-go.
 
 MDCLXXXIII showed that the 60 Clifford antipodal addresses form A5 in its
 degree-six action, and that the 36 raw L/R cells are the fibers g(i)=j.
@@ -49,7 +49,7 @@ from analysis.w33_spread_negative_polar_selector_signature import (  # noqa: E40
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MDCLXXXV_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json"
+OUTPUT_PATH = ROOT / "PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json"
 EXPECTED_SRG_36_15_6_6 = {
     "vertices": 36,
     "degree_profile": {"15": 36},
@@ -205,7 +205,7 @@ def a5_orbital_negative_polar_nogo_packet() -> dict[str, Any]:
     }
 
     return {
-        "part": "MDCLXXXV",
+        "part": "MMCCCLXVIII",
         "theorem": "A5 orbital selector no-go",
         "input_bridge": "MDCLXXXIII A5 torsor + MDCLXXXIV NO^-(6,2) W33 spread selector",
         "n_pair_orbitals": len(orbits),
@@ -251,7 +251,7 @@ def main() -> None:
     with open(OUTPUT_PATH, "w", encoding="utf-8") as handle:
         json.dump(packet, handle, indent=2)
 
-    print("=== Part MDCLXXXV: A5 Orbital Negative-Polar No-Go ===")
+    print("=== Part MMCCCLXVIII: A5 Orbital Negative-Polar No-Go ===")
     print("pair orbitals:", packet["n_pair_orbitals"])
     print("rook orbitals:", packet["raw_rook_orbit_indices"])
     print("unique A5 SRG solution:", packet["a5_orbital_srg_solution_indices"])
