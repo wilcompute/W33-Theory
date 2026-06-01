@@ -1,0 +1,72 @@
+{
+  "chi_W33": 6,
+  "chi_substrate": "q! = master equation value",
+  "lower_bound": 6,
+  "lower_bound_form": "ceil(v/alpha) = ceil(40/Phi_6)",
+  "n_ovoids": 2880,
+  "n_ovoids_form": "q! * 2|E| = mu * (q!)!",
+  "explicit_6_coloring_class_sizes": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    5
+  ],
+  "class_sizes_substrate": "5*Phi_6 + F_5 = F_5*(Phi_6 + 1) = F_5 * 2^q = 40 = v",
+  "exact_proof": "Lower bound from fractional chromatic: chi >= ceil(v/alpha) = 6. Upper bound by explicit construction: 5 disjoint size-Phi_6 ovoids + 1 size-F_5 remainder = 6-coloring. Therefore chi = 6 = q!.",
+  "first_6_coloring": {
+    "class_1": [
+      0,
+      4,
+      5,
+      9,
+      24,
+      27,
+      30
+    ],
+    "class_2": [
+      1,
+      13,
+      16,
+      20,
+      28,
+      29,
+      38
+    ],
+    "class_3": [
+      2,
+      6,
+      7,
+      8,
+      15,
+      18,
+      21
+    ],
+    "class_4": [
+      10,
+      17,
+      22,
+      25,
+      26,
+      35,
+      37
+    ],
+    "class_5": [
+      11,
+      14,
+      19,
+      23,
+      31,
+      34,
+      36
+    ],
+    "class_6_remainder": [
+      3,
+      12,
+      32,
+      33,
+      39
+    ]
+  }
+}
