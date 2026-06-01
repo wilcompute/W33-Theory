@@ -1,0 +1,302 @@
+{
+  "status": "ok",
+  "base10_qutrit_shadow": {
+    "q": 3,
+    "phi3": 13,
+    "phi4": 10,
+    "phi6": 7,
+    "rank_seed_2q": 6,
+    "readable_shadow": "Base 10 is treated here as the readable shadow Phi4 = q^2 + 1 = 10 at q = 3, not as the fundamental ontology. The underlying identities remain qutrit-native."
+  },
+  "local_selector_packet": {
+    "selector_order": 6,
+    "local_bulk": 27,
+    "ordered_adjacent_pairs": 60,
+    "global_selector_carrier": 1620,
+    "global_qutrit_fiber_count": 540,
+    "elements": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "parities": [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "average_weight": "1/6",
+    "trivial_projector": {
+      "matrix": [
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      ],
+      "rational_matrix": [
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ]
+      ],
+      "rank": 1
+    },
+    "sign_projector": {
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rational_matrix": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "rank": 0
+    },
+    "standard_projector": {
+      "matrix": [
+        [
+          0.6666666666666667,
+          -0.3333333333333333,
+          -0.3333333333333333
+        ],
+        [
+          -0.3333333333333333,
+          0.6666666666666667,
+          -0.3333333333333333
+        ],
+        [
+          -0.3333333333333333,
+          -0.3333333333333333,
+          0.6666666666666667
+        ]
+      ],
+      "rational_matrix": [
+        [
+          "2/3",
+          "-1/3",
+          "-1/3"
+        ],
+        [
+          "-1/3",
+          "2/3",
+          "-1/3"
+        ],
+        [
+          "-1/3",
+          "-1/3",
+          "2/3"
+        ]
+      ],
+      "rank": 2
+    },
+    "theorem": {
+      "selector_order_is_exactly_six": true,
+      "global_scaling_is_exactly_60_times_27_equals_1620": true,
+      "plus_one_sixth_is_exact_local_selector_average": true,
+      "sign_projector_vanishes_on_the_three_branch_permutation_rep": true,
+      "standard_projector_has_rank_two": true
+    }
+  },
+  "decimal_toroidal_shell_packet": {
+    "decimal_period": 6,
+    "heawood_shell": 7,
+    "genus_denominator": 12,
+    "heawood_vertices": 14,
+    "heawood_edges": 21,
+    "tetra_fixed_point": 4,
+    "single_surface_flags": 84,
+    "fraction_dictionary": {
+      "1_over_6": "1/6",
+      "1_over_7": "1/7",
+      "1_over_12": "1/12"
+    },
+    "reptend": "142857",
+    "q_axis_missing_denominators": [
+      3,
+      6,
+      9
+    ],
+    "theorem": {
+      "decimal_period_equals_local_selector_order": true,
+      "shell_84_factorization_holds": true,
+      "one_over_six_is_heawood_vertices_over_shell_84": true,
+      "one_over_seven_is_genus_denominator_over_shell_84": true,
+      "one_over_twelve_is_heawood_shell_over_shell_84": true
+    }
+  },
+  "common_packet_packet": {
+    "common_packet": 162,
+    "deterministic_frame_size": 81,
+    "host_support_total": 162,
+    "host_support_split": [
+      81,
+      81
+    ],
+    "q_cubic_identity": {
+      "q_cubic": 27,
+      "phi3_plus_two_phi6": 27,
+      "splice_defect": 0,
+      "splice_rhs": 0,
+      "formula": "q^3 - (Phi3 + 2 Phi6) = (q - 3) Phi4"
+    },
+    "exact_splices": {
+      "27_equals_13_plus_14": [
+        27,
+        13,
+        14
+      ],
+      "81_equals_39_plus_42": [
+        81,
+        39,
+        42
+      ],
+      "162_equals_78_plus_84": [
+        162,
+        78,
+        84
+      ]
+    },
+    "theorem": {
+      "common_packet_is_exactly_6_times_27": true,
+      "common_packet_is_exactly_2_times_81": true,
+      "common_packet_is_exactly_81_plus_81": true,
+      "q_cubic_splits_exactly_as_phi3_plus_two_phi6_at_q3": true,
+      "protected_81_sector_splits_as_39_plus_42": true,
+      "common_162_packet_splits_as_78_plus_84": true
+    }
+  },
+  "jacobi_packet": {
+    "artifact_path": "C:\\Repos\\Theory of Everything\\artifacts\\toe_e8_z3graded_jacobi.json",
+    "status": "ok",
+    "scales": {
+      "scale_e6": 1.0,
+      "scale_g1g1": 1.0,
+      "scale_g2g2": -0.16666666666666666,
+      "scale_sl3": 0.16666666666666666
+    },
+    "jacobi": {
+      "g1_g1_g1": {
+        "max_residual": 4.263256414560601e-14,
+        "trials": 24
+      },
+      "g1_g1_g2": {
+        "max_residual": 3.552713678800501e-14,
+        "trials": 24
+      },
+      "g2_g2_g2": {
+        "max_residual": 6.217248937900877e-15,
+        "trials": 24
+      },
+      "mixed_all": {
+        "max_residual": 2.2737367544323206e-13,
+        "trials": 24
+      }
+    },
+    "theorem": {
+      "artifact_status_is_ok": true,
+      "scale_sl3_is_exact_plus_one_sixth": true,
+      "scale_g2g2_is_exact_minus_one_sixth": true,
+      "jacobi_closes_at_exact_plus_minus_one_sixth": true
+    }
+  },
+  "frontier_packet": {
+    "exact_read": "+1/6 is now explained by exact local selector averaging on the 3-branch qutrit fiber, and the same q=3 shell also supports the exact arithmetic splices 27=13+14, 81=39+42, and 162=78+84.",
+    "unresolved_read": "The local 3-point permutation representation has zero sign projector, so the negative Jacobi coefficient -1/6 is not explained by a literal local sign-projection. The remaining problem is to derive that minus sign from the dual/oriented g2 sector."
+  },
+  "bridge_theorem": {
+    "local_selector_average_explains_plus_one_sixth": true,
+    "decimal_period_matches_selector_order": true,
+    "shell_84_is_exactly_12_times_7_equals_14_times_6": true,
+    "q_cubic_identity_specializes_exactly_at_q3": true,
+    "protected_81_packet_splits_as_39_plus_42": true,
+    "common_162_packet_splits_as_78_plus_84": true,
+    "jacobi_closes_at_exact_plus_minus_one_sixth": true,
+    "minus_one_sixth_remains_dual_orientation_frontier": true
+  },
+  "bridge_verdict": "The decimal/toroidal hints are not a distraction from the selector frontier. They sharpen it. At q=3, base 10 is the readable shadow Phi4=q^2+1, the local qutrit selector has exact average weight 1/6, the decimal/toroidal shell is the exact packet 84=12*7=14*6=21*4, and the exact common selector/host packet admits the arithmetic splice 162=78+84. The positive Jacobi coefficient +1/6 is therefore explained by the exact local selector average, while the negative coefficient -1/6 remains the dual/oriented-sector problem.",
+  "source_files": [
+    "verify_dclxiv_holonomy_qutrit_transvection_bridge.py",
+    "scripts/w33_h4_s3_selector_holonomy_audit.py",
+    "exploration/w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge.py",
+    "PART_CLXIII_DECIMAL_REPTEND_COMPILER.py",
+    "verify_dccxxii_mod12_toroidal_synthesis.py",
+    "artifacts/toe_e8_z3graded_jacobi.json"
+  ]
+}
