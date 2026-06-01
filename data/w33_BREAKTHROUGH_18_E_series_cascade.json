@@ -1,0 +1,16 @@
+{
+  "identity_A_E6_roots": "2^q * q^2 = 72",
+  "identity_B_v_decomposition": "v = |E_6+ roots| + mu",
+  "identity_C_dim_E8": "q! * v + 2^q = |E| + 2^q = 248",
+  "identity_D_W_E8": "2 * |E| * |Sp(6, F_2)|",
+  "identity_E_Y_system_period": "E_8 Y-system period = h(E_8) = 30",
+  "Sp6_F2_factorization": "2^9 * q^4 * F_5 * Phi_6 = 1,451,520",
+  "W_E8_substrate_decomp": "2 * v * k * 2^9 * q^4 * F_5 * Phi_6",
+  "h_E8_five_manifestations": [
+    "q * Phi_4 (substrate)",
+    "Coxeter number of E_8",
+    "Y-system period",
+    "Conjugacy classes of Sp(4, F_3)",
+    "DW-TQFT partition function on T^2"
+  ]
+}
