@@ -1,0 +1,35 @@
+{
+  "part": "MMCCCLXXVIII",
+  "theorem": "Toroidal heptad Markov spectrum",
+  "transition_matrix": "T = 504*(I_5 + J_5)",
+  "integer_spectrum": {"3024": 1, "504": 4},
+  "reduced_by_168": "T/168 = 3*(I_5 + J_5)",
+  "reduced_spectrum": {"18": 1, "3": 4},
+  "markov_matrix": {"diagonal": "1/3", "off_diagonal": "1/6", "formula": "P=(I_5+J_5)/6"},
+  "markov_spectrum": {"1": 1, "1/6": 4},
+  "spectral_gap": "5/6",
+  "minimal_polynomials": {
+    "integer": "(x-3024)(x-504)",
+    "reduced": "(x-18)(x-3)",
+    "markov": "(x-1)(x-1/6)"
+  },
+  "checks": {
+    "inherits_k5_result": true,
+    "matrix_is_504_I_plus_J": true,
+    "row_sum_3024": true,
+    "reduced_by_168_is_3_I_plus_J": true,
+    "reduced_row_sum_18": true,
+    "markov_entries": true,
+    "stationary_uniform": true,
+    "integer_minpoly": true,
+    "reduced_minpoly": true,
+    "markov_minpoly": true,
+    "spectrum_integer_3024_504x4": true,
+    "spectrum_reduced_18_3x4": true,
+    "spectrum_markov_1_one_sixth_x4": true,
+    "gap_five_sixths": true,
+    "w33_eigen_reading": true
+  },
+  "n_verified": 15,
+  "n_checks": 15
+}
