@@ -1,0 +1,33 @@
+{
+  "part": "MMCCCLXXX",
+  "theorem": "Symmetry closure GL(4,2)/A8 bridge",
+  "orders": {
+    "S5_mutation_shell": 120,
+    "GL(3,2)_Fano": 168,
+    "product": 20160,
+    "GL(4,2)": 20160,
+    "A8": 20160,
+    "AGL(3,2)_point_stabilizer": 1344
+  },
+  "orbit_stabilizer": {"nonzero_F2_4_points": 15, "stabilizer": 1344, "product": 20160},
+  "prior_layers": {"mutation_edge_vertices": 10, "petersen_negative_edges": 15, "ag32_full_aut": 1344},
+  "checks": {
+    "inherits_petersen_result": true,
+    "inherits_ag32_result": true,
+    "s5_order_120": true,
+    "s5_edge_action_faithful_120": true,
+    "gl32_order_168": true,
+    "gl42_formula_order_20160": true,
+    "gl42_enumerated_order_20160": true,
+    "a8_order_20160": true,
+    "product_120_168": true,
+    "point_stabilizer_1344": true,
+    "previous_agl32_is_point_stabilizer_order": true,
+    "projective_point_count_15": true,
+    "orbit_stabilizer_15x1344": true,
+    "edge_count_10_plus_projective_15_equals_25": true,
+    "gl42_action_on_15_points_even": true
+  },
+  "n_verified": 15,
+  "n_checks": 15
+}
