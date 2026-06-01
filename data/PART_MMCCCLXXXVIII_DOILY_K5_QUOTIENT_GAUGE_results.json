@@ -1,0 +1,29 @@
+{
+  "part": "MMCCCLXXXVIII",
+  "theorem": "Doily K5 quotient gauge",
+  "objects": {"K6_duads": 15, "vertex_gauge_dimension": 5, "K5_quotient_edges": 10, "synthemes": 15},
+  "ranks": {"rank_D": 10, "rank_vertex_gauge": 5, "rank_F": 10, "rank_rowspan_D_plus_F": 10},
+  "gauge_fixing": "F fixes the zero-sum K6 vertex-potential gauge by setting all five spoke edges i5 to zero; the remaining ten coordinates are the edges of K5.",
+  "symmetry": {"stabilizer_of_gauge_vertex": "S5", "order": 120, "carrier": "ten K5 quotient edges"},
+  "compression_identity": "K6 duad space / vertex-potential gauge = 15 - 5 = 10 = K5 edge carrier",
+  "checks": {
+    "inherits_nullspace_bridge": true,
+    "duad_count_15": true,
+    "k5_edge_count_10": true,
+    "syntheme_count_15": true,
+    "D_rank_10": true,
+    "G_rank_5": true,
+    "F_rank_10": true,
+    "F_kills_vertex_gauge": true,
+    "D_kills_vertex_gauge": true,
+    "F_kernel_is_vertex_gauge": true,
+    "D_kernel_is_vertex_gauge": true,
+    "D_and_F_have_same_rowspace": true,
+    "quotient_identity_15_minus_5_equals_10": true,
+    "s5_stabilizer_order_120": true,
+    "gauge_fix_row_profile_uniform": true,
+    "incidence_sum_45": true
+  },
+  "n_verified": 16,
+  "n_checks": 16
+}
