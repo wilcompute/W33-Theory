@@ -1,0 +1,25 @@
+{
+  "part": "MMCCCLXXIV",
+  "theorem": "Q4/RM13 tomotope bridge",
+  "weight_enumerator": {"0": 1, "4": 14, "8": 1},
+  "q4_quotient": {"vertices": 16, "edges": 32, "axes": 8, "quotient_edges": 16, "is_K44": true},
+  "tomotope": {"V": 4, "E": 12, "F": 16, "C": 8, "sum": 40},
+  "flag_identity": "16*12=24+168=192",
+  "checks": {
+    "sixteen_words": true,
+    "weight_profile": true,
+    "distance_four": true,
+    "complements": true,
+    "one_plus_seven_axes": true,
+    "seven_44_axes": true,
+    "q4_counts": true,
+    "quotient_counts": true,
+    "k44": true,
+    "tomo_vector": true,
+    "tomo_sum": true,
+    "fano": true,
+    "sqs8": true
+  },
+  "n_verified": 13,
+  "n_checks": 13
+}
