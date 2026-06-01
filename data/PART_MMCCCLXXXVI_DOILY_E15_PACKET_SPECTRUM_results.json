@@ -1,0 +1,47 @@
+{
+  "part": "MMCCCLXXXVI",
+  "theorem": "Doily/E15 packet spectrum",
+  "coordinate_gauge": {"identity": "X X^T = 24 E15", "column_gram": "X^T X = 24 I15"},
+  "doily_packets": {
+    "lines": 15,
+    "line_size": 3,
+    "incidences": 45,
+    "skew_line_pairs": 60,
+    "intersecting_line_pairs": 45,
+    "packet_rank": 10,
+    "packet_gram_spectrum": {"216": 1, "96": 9, "0": 5}
+  },
+  "nonisotropic_packets": {
+    "lines": 20,
+    "line_size": 3,
+    "incidences": 60,
+    "packet_rank": 15,
+    "packet_gram_spectrum": {"288": 1, "144": 5, "48": 9}
+  },
+  "checks": {
+    "inherits_doily_closure": true,
+    "coordinate_gauge_xxt": true,
+    "coordinate_gauge_xtx": true,
+    "line_split_15_20": true,
+    "doily_incidence_shape": true,
+    "noniso_incidence_shape": true,
+    "doily_lines_size_3": true,
+    "noniso_lines_size_3": true,
+    "doily_points_on_3_lines": true,
+    "noniso_points_on_4_lines": true,
+    "doily_line_intersections_45_60": true,
+    "doily_srg_15_6_1_3": true,
+    "doily_incidence_gram_spectrum_9_4x9_0x5": true,
+    "doily_packet_gram_spectrum_216_96x9_0x5": true,
+    "doily_packet_rank_10": true,
+    "noniso_triangle_intersections": true,
+    "noniso_srg_20_9_4_6": true,
+    "noniso_incidence_gram_spectrum_12_6x5_2x9": true,
+    "noniso_packet_gram_spectrum_288_144x5_48x9": true,
+    "noniso_packet_rank_15": true,
+    "packet_45_matches_csaszar_sum": true,
+    "packet_60_skew_matches_15x4": true
+  },
+  "n_verified": 22,
+  "n_checks": 22
+}
