@@ -1,0 +1,34 @@
+{
+  "part": "MMCCCLXXXV",
+  "theorem": "Sp(4,2)/doily S6 closure",
+  "symplectic_form": [[0,1,1,1],[1,0,1,1],[1,1,0,1],[1,1,1,0]],
+  "orders": {"S6_duad_action": 720, "Sp(4,2)": 720, "GL(4,2)": 20160},
+  "line_split": {
+    "PG(3,2)_lines": 35,
+    "symplectic_doily_lines_onefactors": 15,
+    "nonisotropic_triangle_lines": 20
+  },
+  "doily": {"points": 15, "lines": 15, "line_size": 3, "lines_per_point": 3, "collinear_pairs": 45, "GQ_order": "(2,2)"},
+  "checks": {
+    "inherits_outer_automorphism": true,
+    "b_alternating_zero_diagonal": true,
+    "b_nondegenerate_rank_4": true,
+    "duad_labels_all_15_nonzero": true,
+    "s6_duad_action_linear_720": true,
+    "gl4_order_20160": true,
+    "sp42_order_720": true,
+    "s6_equals_sp42": true,
+    "all_s6_preserve_b": true,
+    "pg32_lines_split_15_20": true,
+    "onefactors_are_isotropic_lines": true,
+    "triangles_are_nonisotropic_lines": true,
+    "doily_points_15_lines_15": true,
+    "doily_line_size_3": true,
+    "doily_each_point_on_3_lines": true,
+    "doily_collinear_pairs_45": true,
+    "doily_gq_2_2_property": true,
+    "sp42_s6_order_identity": true
+  },
+  "n_verified": 18,
+  "n_checks": 18
+}
