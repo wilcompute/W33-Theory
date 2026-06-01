@@ -1,0 +1,27 @@
+{
+  "E_8": {
+    "dim": 8,
+    "dim_substrate": "2^q",
+    "kissing": 240,
+    "kissing_substrate": "|E|",
+    "min_norm_sq": 2,
+    "min_norm_sq_substrate": "lambda",
+    "viazovska_2016": "UNIQUE optimal packing in dim 2^q"
+  },
+  "Leech": {
+    "dim": 24,
+    "dim_substrate": "f",
+    "kissing": 196560,
+    "kissing_substrate": "lambda^mu * q^q * F_5 * Phi_6 * Phi_3",
+    "min_norm_sq": 4,
+    "min_norm_sq_substrate": "mu",
+    "CKMRV_2017": "UNIQUE optimal packing in dim f"
+  },
+  "Niemeier": {
+    "count": 24,
+    "count_substrate": "f"
+  },
+  "Co_0_order": 8315553613086720000,
+  "Co_0_prime_substrate": "lambda^22 * q^9 * F_5^mu * Phi_6^lambda * p_Ih * Phi_3 * M_23",
+  "conclusion": "The substrate's two operational dimensions (2^q=8, f=24) are exactly the two dimensions where sphere packing achieves provable maximal density. The substrate inhabits geometry's densest ground states."
+}
