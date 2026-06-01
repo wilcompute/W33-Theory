@@ -1,0 +1,128 @@
+{
+  "partition_table": [
+    {
+      "n": 1,
+      "P_n": 1,
+      "n_meaning": "1",
+      "P_substrate": "1"
+    },
+    {
+      "n": 2,
+      "P_n": 2,
+      "n_meaning": "lambda",
+      "P_substrate": "lambda"
+    },
+    {
+      "n": 3,
+      "P_n": 3,
+      "n_meaning": "q",
+      "P_substrate": "q (FIXED POINT!)"
+    },
+    {
+      "n": 4,
+      "P_n": 5,
+      "n_meaning": "mu",
+      "P_substrate": "F_5 = mu + 1"
+    },
+    {
+      "n": 5,
+      "P_n": 7,
+      "n_meaning": "F_5",
+      "P_substrate": "Phi_6 (Heawood!)"
+    },
+    {
+      "n": 6,
+      "P_n": 11,
+      "n_meaning": "q!",
+      "P_substrate": "p_Ih (Ihara!)"
+    },
+    {
+      "n": 7,
+      "P_n": 15,
+      "n_meaning": "Phi_6",
+      "P_substrate": "g (chiral mult)"
+    },
+    {
+      "n": 8,
+      "P_n": 22,
+      "n_meaning": "2^q",
+      "P_substrate": "lambda * p_Ih"
+    },
+    {
+      "n": 9,
+      "P_n": 30,
+      "n_meaning": "q^2",
+      "P_substrate": "h(E_8) = q * Phi_4 (E_8 Coxeter!)"
+    },
+    {
+      "n": 10,
+      "P_n": 42,
+      "n_meaning": "Phi_4",
+      "P_substrate": "(V+E+F)_Csaszar (toroidal!)"
+    },
+    {
+      "n": 11,
+      "P_n": 56,
+      "n_meaning": "p_Ih",
+      "P_substrate": "lambda * (v-k) = 2 * 28"
+    },
+    {
+      "n": 12,
+      "P_n": 77,
+      "n_meaning": "k",
+      "P_substrate": "Phi_6 * p_Ih"
+    },
+    {
+      "n": 13,
+      "P_n": 101,
+      "n_meaning": "Phi_3",
+      "P_substrate": "bosonic string dim (MCCCLVII)"
+    },
+    {
+      "n": 14,
+      "P_n": 135,
+      "n_meaning": "dim(G_2)",
+      "P_substrate": "q^q * F_5 = matter/q"
+    },
+    {
+      "n": 15,
+      "P_n": 176,
+      "n_meaning": "g",
+      "P_substrate": "lambda^mu * p_Ih"
+    },
+    {
+      "n": 16,
+      "P_n": 231,
+      "n_meaning": "lambda^mu",
+      "P_substrate": "q * Phi_6 * p_Ih"
+    },
+    {
+      "n": 17,
+      "P_n": 297,
+      "n_meaning": "(Monster prime)",
+      "P_substrate": "q^q * p_Ih"
+    },
+    {
+      "n": 18,
+      "P_n": 385,
+      "n_meaning": "lambda*q^2",
+      "P_substrate": "F_5 * Phi_6 * p_Ih"
+    },
+    {
+      "n": 19,
+      "P_n": 490,
+      "n_meaning": "Heegner_6",
+      "P_substrate": "2 * F_5 * Phi_6^2"
+    },
+    {
+      "n": 20,
+      "P_n": 627,
+      "n_meaning": "|E|/k",
+      "P_substrate": "q * p_Ih * Heegner_19"
+    }
+  ],
+  "striking_P_q2_h_E_8": "P(q^2) = P(9) = 30 = h(E_8) (Coxeter number)",
+  "fixed_point": "P(q) = q = 3",
+  "iteration_chain": "mu -> F_5 -> Phi_6 -> g (4 -> 5 -> 7 -> 15)",
+  "substrate_closure": "P maps substrate primitives to substrate primitives"
+}
