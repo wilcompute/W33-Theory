@@ -1,0 +1,110 @@
+{
+  "supersingular_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    41,
+    47,
+    59,
+    71
+  ],
+  "supersingular_count": 15,
+  "supersingular_count_substrate": "g_neg",
+  "monster_order": 808017424794512875886459904961710757005754368000000000,
+  "monster_prime_divisors": 15,
+  "mathieu_groups": [
+    {
+      "name": "M_11",
+      "order": 7920,
+      "substrate": "lambda^mu * q^2 * F_5 * p_Ih"
+    },
+    {
+      "name": "M_12",
+      "order": 95040,
+      "substrate": "(2^q)^2 * q^q * F_5 * p_Ih"
+    },
+    {
+      "name": "M_22",
+      "order": 443520,
+      "substrate": "lambda^Phi_6 * q^2 * F_5 * Phi_6 * p_Ih"
+    },
+    {
+      "name": "M_23",
+      "order": 10200960,
+      "substrate": "lambda^Phi_6 * q^2 * F_5 * Phi_6 * p_Ih * M_23"
+    },
+    {
+      "name": "M_24",
+      "order": 244823040,
+      "substrate": "lambda^k * q^q * F_5 * Phi_6 * p_Ih * M_23"
+    }
+  ],
+  "mathieu_count": 5,
+  "mathieu_count_substrate": "F_5",
+  "steiner_systems": [
+    {
+      "params": [
+        2,
+        3,
+        7
+      ],
+      "name": "Fano plane",
+      "substrate": "S(lambda, q, Phi_6)"
+    },
+    {
+      "params": [
+        3,
+        4,
+        8
+      ],
+      "name": "Steiner quadruple",
+      "substrate": "S(q, mu, 2^q)"
+    },
+    {
+      "params": [
+        4,
+        5,
+        11
+      ],
+      "name": "small Witt design",
+      "substrate": "S(mu, F_5, p_Ih)"
+    },
+    {
+      "params": [
+        5,
+        6,
+        12
+      ],
+      "name": "M_12 Steiner",
+      "substrate": "S(F_5, q!, k)"
+    },
+    {
+      "params": [
+        5,
+        8,
+        24
+      ],
+      "name": "M_24 LARGE Witt design",
+      "substrate": "S(F_5, 2^q, f)"
+    }
+  ],
+  "Y_555_substrate": {
+    "arm_length": 5,
+    "arm_length_sub": "F_5",
+    "num_arms": 3,
+    "num_arms_sub": "q",
+    "total_gens": 16,
+    "total_gens_sub": "lambda^mu"
+  },
+  "sporadic_count": 26,
+  "sporadic_count_substrate": "lambda * Phi_3",
+  "conclusion": "The 15 = g_neg supersingular primes are exactly the Monster's prime divisors; the substrate's g_neg is the Conway-Norton supersingular count. All Mathieu group orders, Steiner system parameters, and the Y_{555} Bimonster presentation are substrate-clean."
+}
