@@ -1,0 +1,16 @@
+{
+  "identity_A_q5_forcing": "q^5 - q = |E| only at q = 3",
+  "identity_B_ljunggren_phi3": "4 * Phi_3 - 3 = (2q+1)^2 = Phi_6^2 at q = 3",
+  "identity_C_ljunggren_phi6": "4 * Phi_6 - 3 = (2q-1)^2 = F_5^2 at q = 3",
+  "identity_D_egyptian_11_18": "1/q + 1/q! + 1/q^2 = 11/18",
+  "split_primes": [
+    7,
+    13,
+    19
+  ],
+  "egyptian_sum_decimal": 0.6111111111111112,
+  "14th_q3_forcing": "q^5 - q = |E|",
+  "15th_q3_forcing": "Both Ljunggren reductions yield substrate squares at q = 3",
+  "ljunggren_classical_result": "x^2 + 3 = 4y^n; only Phi_3(18) = Phi_6(19) = 7^3 are nontrivial perfect-power cyclotomic values.",
+  "total_q3_forcings_now": 15
+}
