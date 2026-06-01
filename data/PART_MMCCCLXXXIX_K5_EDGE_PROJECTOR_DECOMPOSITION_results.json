@@ -1,0 +1,38 @@
+{
+  "part": "MMCCCLXXXIX",
+  "theorem": "K5 edge projector decomposition",
+  "carrier": "ten K5 quotient edges from the doily/K6 gauge quotient",
+  "graphs": {
+    "T5": "line graph of K5, spectrum 6^1 + 1^4 + (-2)^5",
+    "Petersen": "complement, spectrum 3^1 + 1^5 + (-2)^4"
+  },
+  "projectors": {
+    "P1": "J10/10",
+    "P4": "-((A-6I)(A+2I))/15",
+    "P5": "((A-6I)(A-I))/24",
+    "traces": [1, 4, 5],
+    "ranks": [1, 4, 5]
+  },
+  "symmetry": {"S5_order": 120, "action": "faithful edge action preserving T5, Petersen, and all three projectors"},
+  "checks": {
+    "inherits_quotient_gauge": true,
+    "k5_edge_space_10": true,
+    "T5_degree_6": true,
+    "Petersen_degree_3": true,
+    "complement_relation": true,
+    "T5_minpoly": true,
+    "Petersen_minpoly": true,
+    "projectors_idempotent": true,
+    "projectors_orthogonal": true,
+    "projectors_sum_identity": true,
+    "projector_traces_1_4_5": true,
+    "projector_ranks_1_4_5": true,
+    "S5_order_120": true,
+    "S5_commutes_with_T5": true,
+    "S5_preserves_projectors": true,
+    "dimension_split_10_equals_1_4_5": true,
+    "links_to_previous_markov_modes": true
+  },
+  "n_verified": 17,
+  "n_checks": 17
+}
