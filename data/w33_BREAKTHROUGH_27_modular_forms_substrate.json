@@ -1,0 +1,45 @@
+{
+  "eisenstein_coefficients": {
+    "E_4": {
+      "coef": 240,
+      "substrate": "|E|"
+    },
+    "E_6": {
+      "coef": -504,
+      "substrate": "-2^q * q^2 * Phi_6"
+    },
+    "E_8": {
+      "coef": 480,
+      "substrate": "lambda * |E|"
+    },
+    "E_10": {
+      "coef": -264,
+      "substrate": "-2^q * q * p_Ih"
+    },
+    "E_14": {
+      "coef": -24,
+      "substrate": "-f"
+    }
+  },
+  "discriminant": {
+    "weight": 12,
+    "weight_substrate": "k",
+    "eta_exponent": 24,
+    "eta_exponent_substrate": "f",
+    "tau_2": -24,
+    "tau_3": 252,
+    "tau_3_substrate": "mu * q^2 * Phi_6"
+  },
+  "j_invariant": {
+    "constant": 744,
+    "constant_substrate": "f * M_5",
+    "q_coefficient": 196884,
+    "q_coef_substrate": "1 + 196883 (Monster moonshine)"
+  },
+  "tmf": {
+    "period": 576,
+    "period_substrate": "f^2"
+  },
+  "E_8_theta_series": "theta_{E_8} = E_4 (substrate edges as modular form)",
+  "conclusion": "The substrate's footprint spans number theory, Lie theory, homotopy theory, and modular forms. Every major invariant at small scales is substrate-clean."
+}
