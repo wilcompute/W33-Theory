@@ -1,0 +1,33 @@
+{
+  "part": "MMCCCLXXXVII",
+  "theorem": "Doily nullspace gauge bridge",
+  "matrix": "D = syntheme/one-factor by duad incidence, shape 15 x 15",
+  "ranks": {"rank_D": 10, "right_nullity": 5, "left_nullity": 5, "row_space_mutation_edge_dimension": 10},
+  "right_kernel": "zero-sum original K6 vertex-potential gauge w_ij=a_i+a_j, dim 5",
+  "left_kernel": "zero-sum pentad-potential gauge from the second six-set, dim 5",
+  "spectra": {"D_Dt": "9^1 + 4^9 + 0^5", "Dt_D": "9^1 + 4^9 + 0^5"},
+  "compression_identity": "15 E15/duad directions - 5 vertex/pentad gauge directions = 10 K5 mutation-edge directions",
+  "checks": {
+    "inherits_spectrum": true,
+    "syntheme_duad_matrix_15x15": true,
+    "rank_D_10": true,
+    "right_nullity_5": true,
+    "left_nullity_5": true,
+    "vertex_potential_rank_5": true,
+    "vertex_potential_in_right_kernel": true,
+    "right_kernel_exhausted_by_vertex_potentials": true,
+    "pentads_6": true,
+    "each_pentad_partitions_all_duads": true,
+    "pentad_difference_rank_5": true,
+    "pentad_differences_in_left_kernel": true,
+    "left_kernel_exhausted_by_pentad_differences": true,
+    "dd_spectrum_9_4x9_0x5": true,
+    "dtd_spectrum_9_4x9_0x5": true,
+    "row_space_dimension_10_mutation_edge": true,
+    "outer_sixset_pair_original_and_pentad": true,
+    "incidence_sum_45": true,
+    "quotient_15_minus_5_equals_10": true
+  },
+  "n_verified": 19,
+  "n_checks": 19
+}
