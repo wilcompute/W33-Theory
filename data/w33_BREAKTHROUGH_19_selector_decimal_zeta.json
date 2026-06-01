@@ -1,0 +1,21 @@
+{
+  "identity_A_q3_forcing": "q^3 - (Phi_3 + 2*Phi_6) = (q-3)*Phi_4",
+  "identity_B_zeta_gauge": "k = -1/zeta(-1) = 12",
+  "identity_C_decimal_period": "ord_7(10) = q! = 6",
+  "identity_D_162_quadruple": [
+    162,
+    "6*27",
+    "2*81",
+    "81+81",
+    "78+84"
+  ],
+  "identity_E_84_triple": [
+    "Phi_6*k",
+    "G_2_dim*q!",
+    "g_1*mu"
+  ],
+  "identity_F_q_cube": "27 = Phi_3 + 2*Phi_6",
+  "identity_G_matter_decomp": "81 = q*Phi_3 + V+E+F_Csaszar = 39 + 42",
+  "16th_q3_forcing": "q^3 = Phi_3 + 2*Phi_6 only at q = 3",
+  "total_q3_forcings": 16
+}
