@@ -1,0 +1,29 @@
+{
+  "part": "MMCCCLXXIX",
+  "theorem": "Toroidal mutation-edge Petersen bridge",
+  "objects": {"k5_mutation_edges": 10, "triangular_graph": "T(5)=L(K5)", "petersen_graph": "complement of T(5)"},
+  "pair_split": {"incident_pairs_T5": 30, "disjoint_pairs_Petersen": 15, "total_pairs_on_10_edges": 45, "csaszar_edge_type_sum": 45},
+  "srg_parameters": {"T5": [10, 6, 3, 4], "Petersen": [10, 3, 0, 1]},
+  "spectra": {"T5": {"6": 1, "1": 4, "-2": 5}, "Petersen": {"3": 1, "1": 5, "-2": 4}},
+  "minimal_polynomials": {"T5": "(x-6)(x-1)(x+2)", "Petersen": "(x-3)(x-1)(x+2)"},
+  "checks": {
+    "inherits_markov_result": true,
+    "k5_edge_vertices_10": true,
+    "triangular_edges_30": true,
+    "petersen_edges_15": true,
+    "pair_split_30_plus_15_is_45": true,
+    "triangular_degree_6": true,
+    "petersen_degree_3": true,
+    "complement_relation": true,
+    "triangular_srg_identity": true,
+    "petersen_srg_identity": true,
+    "triangular_minpoly": true,
+    "petersen_minpoly": true,
+    "triangular_spectrum_reading": true,
+    "petersen_spectrum_reading": true,
+    "dimension_split_1_4_5": true,
+    "negative_sector_15_is_petersen_edges": true
+  },
+  "n_verified": 16,
+  "n_checks": 16
+}
