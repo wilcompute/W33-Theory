@@ -1,0 +1,59 @@
+{
+  "rank_ladder": {
+    "G_2": 2,
+    "F_4": 4,
+    "E_6": 6,
+    "E_7": 7,
+    "E_8": 8
+  },
+  "rank_substrate": [
+    "lambda",
+    "mu",
+    "q!",
+    "Phi_6",
+    "2^q"
+  ],
+  "dim_over_rank": {
+    "G_2": 7,
+    "F_4": 13,
+    "E_6": 13,
+    "E_7": 19,
+    "E_8": 31
+  },
+  "ratio_substrate": [
+    "Phi_6",
+    "Phi_3",
+    "Phi_3",
+    "Heegner_6",
+    "M_5"
+  ],
+  "coxeter_numbers": {
+    "G_2": 6,
+    "F_4": 12,
+    "E_6": 12,
+    "E_7": 18,
+    "E_8": 30
+  },
+  "coxeter_substrate": [
+    "q!",
+    "k",
+    "k",
+    "q*q!",
+    "q*Phi_4"
+  ],
+  "dim_minus_mu_rank": {
+    "G_2": 6,
+    "F_4": 36,
+    "E_6": 54,
+    "E_7": 105,
+    "E_8": 216
+  },
+  "excess_substrate": [
+    "q!",
+    "(q!)^2",
+    "2*q^q",
+    "q*F_5*Phi_6",
+    "(q!)^3"
+  ],
+  "triple_correspondence": "Every exceptional Lie group has rank, dim/rank, Coxeter, AND dim-mu*rank substrate-clean. The substrate-exceptional Lie correspondence is structural at every invariant level."
+}
