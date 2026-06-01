@@ -1,0 +1,44 @@
+{
+  "zeta_table": [
+    {
+      "n": 1,
+      "zeta_neg_n": "-1/12",
+      "denominator": 12,
+      "substrate_form": "k (gauge codec)"
+    },
+    {
+      "n": 3,
+      "zeta_neg_n": "1/120",
+      "denominator": 120,
+      "substrate_form": "F_5 * f (= (q+2)! = (mu+1)!)"
+    },
+    {
+      "n": 5,
+      "zeta_neg_n": "-1/252",
+      "denominator": 252,
+      "substrate_form": "mu * Phi_6 * q^2 (= Ramanujan tau(3))"
+    },
+    {
+      "n": 7,
+      "zeta_neg_n": "1/240",
+      "denominator": 240,
+      "substrate_form": "|E| = W(3,3) edge count"
+    },
+    {
+      "n": 9,
+      "zeta_neg_n": "-1/132",
+      "denominator": 132,
+      "substrate_form": "k * p_Ih (gauge * Ihara prime)"
+    },
+    {
+      "n": 11,
+      "zeta_neg_n": "691/32760",
+      "denominator": 32760,
+      "substrate_form": "lambda^q * q^2 * F_5 * Phi_6 * Phi_3"
+    }
+  ],
+  "striking_identity": "zeta(-7) = 1/240 = 1/|E|",
+  "tau_link": "zeta(-5) = -1/Ramanujan_tau(3) = -1/252",
+  "trivial_zeros": "at negatives of substrate primitives {lambda, mu, q!, 2^q, ...}",
+  "all_denominators_substrate_clean_through": 11
+}
