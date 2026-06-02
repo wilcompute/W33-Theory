@@ -1,0 +1,34 @@
+{
+  "discrete_Dirac": {
+    "spec": "{0, sqrt(Phi_4), mu} = {0, sqrt(10), 4}",
+    "mass_classes": "3 = q (qutrit alphabet)",
+    "heavy_light_ratio": "sqrt(lambda^mu/Phi_4) = sqrt(8/5) = 1.265 (MSSM y_b/y_tau)"
+  },
+  "fermion_content_24": "q * lambda^q = 3 generations x 8 species",
+  "fermion_24_alt": "lambda^mu + lambda^q = E_6 -> SO(10) spinor 16+8",
+  "trace_L": "Phi_4*f + lambda^mu*g_neg = 2|E| = 480",
+  "walk_generating_function": "(1/v)[1/(1-kt) + f/(1-rt) + g/(1-st)] rational with 3 poles",
+  "transport_constant_anatomy": {
+    "T": 217,
+    "T_substrate": "(q!)^3 + 1 = Phi_6 * (h(E_8)+1) = Phi_6 * M_5",
+    "Delta_C": 14105,
+    "Delta_C_substrate": "Phi_3 * (mu+1) * T = 13 * 5 * 217",
+    "non_adj_pairs": 540,
+    "non_adj_substrate": "v(v-k-1)/2",
+    "4320": "2*|W(E_6)|/|W(A_3)|"
+  },
+  "Wheeler_DeWitt": {
+    "Psi_space": "C^40 = 1 + Pi_24 + Pi_15",
+    "Pi_24_role": "quark sector (CKM, SU(5))",
+    "Pi_15_role": "lepton sector (PMNS, SU(4)_R)",
+    "phase_manifold": "CP^39 with 39 = q*Phi_3 real params"
+  },
+  "5_research_frontiers": [
+    "Formal verification in Lean/Coq",
+    "Explicit W(3,3)-derived CY3",
+    "Sp(4,F_3) cellular automaton",
+    "Higher-rank q^q = q^n",
+    "Wheeler-DeWitt realization"
+  ],
+  "conclusion": "Discrete Dirac D^2 = L gives 3 = q mass classes {0, sqrt(Phi_4), mu}. Heavy/light ratio sqrt(8/5) = MSSM y_b/y_tau unification. Walk generating function Z(t) = rational with 3 poles. Transport T = (q!)^3+1 = Phi_6*M_5 = 217. Delta C = 13*5*T = 14105. Wheeler-DeWitt wave function in C^40 = 1+Pi_24+Pi_15 with 39 = q*Phi_3 observer phase dims. 5 = mu+1 research frontiers."
+}
