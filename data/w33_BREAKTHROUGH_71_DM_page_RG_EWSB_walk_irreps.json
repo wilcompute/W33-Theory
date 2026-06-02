@@ -1,0 +1,68 @@
+{
+  "dark_matter": {
+    "Omega_DM": 0.27,
+    "DM_baryon_ratio": "lambda^mu/q = 16/3",
+    "log_sigma_SI": -23,
+    "sigma_SI_substrate": "Phi_3 + Phi_4"
+  },
+  "page_curve": {
+    "S_BH": 2880,
+    "S_BH_substrate": "k * |E|",
+    "S_Page": 1440,
+    "t_Page": "v/(lambda*k) = 5/3",
+    "t_evap": "v/k = 10/3",
+    "S_scaling": "M^lambda = M^2",
+    "t_scaling": "M^q = M^3"
+  },
+  "RG_flow": {
+    "alpha_em_inv_IR": 137,
+    "alpha_em_inv_MZ": 128,
+    "alpha_em_inv_MX": 24,
+    "drop_IR_to_MZ": 9,
+    "drop_MZ_to_MX": 104,
+    "beta0_QCD": 7,
+    "sin2_theta_W": "q/Phi_3 = 3/13"
+  },
+  "EWSB": {
+    "v_EW": 246,
+    "lambda_H": "Phi_6/(2*q^3) = 7/54",
+    "m_H_predicted": 125.25706899545963,
+    "m_H_observed": 125.2,
+    "cos2_theta_W": "Phi_4/Phi_3 = 10/13",
+    "Higgs_decay_channels": 7
+  },
+  "defects": {
+    "winding_classes": 3,
+    "f_axion_GeV": 9840,
+    "wall_tension_exponent": 23,
+    "monopole_mass_GeV": "f * M_X ~ 10^16",
+    "cross_link": "23 = Phi_3+Phi_4 also = electron-Planck hierarchy"
+  },
+  "quantum_walk": {
+    "dim_H": 480,
+    "T_hit_quantum": 4,
+    "T_hit_substrate": "v/Phi_4 = mu = spacetime dim",
+    "tetrahedral_angle_deg": 109.47122063449069,
+    "cos_theta_minus": -0.3333333333333333
+  },
+  "Sp4F3_irreps": {
+    "count": 30,
+    "count_substrate": "q*Phi_4 = h(E_8)",
+    "selected_dims": [
+      1,
+      5,
+      6,
+      10,
+      15,
+      20,
+      24,
+      27,
+      30,
+      40,
+      45,
+      81
+    ],
+    "FS_indicators_all_plus_one": true
+  },
+  "conclusion": "Seven supplements compressed: DM ratio (E_6 27 branching), Page curve (Hawking exponents = lambda,q alphabets), RG flow (137->128->24 stairs in substrate), EWSB (m_H to 0.1%), defects (23 cross-link), quantum walk (109.47 deg tetrahedral!), Sp(4,3) irreps (all substrate). Many cross-links surface: h(E_8) = #irreps; bond angle = walk angle; wall exp = lightest fermion exp."
+}
