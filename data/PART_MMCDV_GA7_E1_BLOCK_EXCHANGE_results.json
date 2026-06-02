@@ -1,0 +1,31 @@
+{
+  "part": "MMCDV",
+  "theorem": "GA7 E1 block exchange theorem",
+  "counts": {
+    "E1_blocks": 10,
+    "primaries_per_block": 21,
+    "signed_forms_per_block": 2688,
+    "octonions_per_block": 336,
+    "pseudo_per_block": 2352,
+    "x_supports_per_block": 16,
+    "global_signed_forms": 26880,
+    "global_octonions": 3360,
+    "global_pseudo": 23520
+  },
+  "block_identities": {
+    "primary_block": "21 primary overlays per E1 block = g1",
+    "signed_block": "21*128 = 2688 = 16*168 = E2*PSL27",
+    "octonion_block": "336 = 2*168 = r*PSL27",
+    "pseudo_block": "2352 = 14*168 = dimG2*PSL27",
+    "sector_split": "2 + 14 = 16 = E2",
+    "global_lift": "26880 = 10*16*168 = E1*E2*PSL27"
+  },
+  "block_vector": {
+    "octonion_psl_copies": 2,
+    "pseudo_psl_copies": 14,
+    "total_psl_copies": 16
+  },
+  "honesty_boundary": "This is a block-level count theorem. It does not yet choose a canonical bijection between individual signed calibrations and individual minimal logical X-support/Fano-group elements.",
+  "n_verified": 25,
+  "n_checks": 25
+}
