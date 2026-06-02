@@ -1,0 +1,81 @@
+{
+  "heegner_discriminants": [
+    1,
+    2,
+    3,
+    7,
+    11,
+    19,
+    43,
+    67,
+    163
+  ],
+  "count": 9,
+  "count_substrate": "q^2",
+  "roles": {
+    "1": {
+      "substrate": "identity",
+      "role": "trivial"
+    },
+    "2": {
+      "substrate": "lambda",
+      "role": "SRG / dim C / Bott U-period"
+    },
+    "3": {
+      "substrate": "q",
+      "role": "master root / SRG / characteristic"
+    },
+    "7": {
+      "substrate": "Phi_6",
+      "role": "Heawood / E_7 rank / parallelizable S^7"
+    },
+    "11": {
+      "substrate": "p_Ih",
+      "role": "icosahedral / Mathieu / supersingular"
+    },
+    "19": {
+      "substrate": "Heegner_6",
+      "role": "E_7 dim/rank / packet H gap (BT33)"
+    },
+    "43": {
+      "substrate": "Heegner_7",
+      "role": "E_7 link"
+    },
+    "67": {
+      "substrate": "Heegner_8",
+      "role": "CM j-invariant base"
+    },
+    "163": {
+      "substrate": "Heegner_9",
+      "role": "Ramanujan constant / j(-163)"
+    }
+  },
+  "j_invariant_at_heegners": {
+    "j(-1)": {
+      "value": 1728,
+      "substrate": "k^q = 12^3"
+    },
+    "j(-2)": {
+      "value": 8000,
+      "substrate": "lambda^6 * F_5^q"
+    },
+    "j(-7)": {
+      "value": -3375,
+      "substrate": "-q^q * F_5^q"
+    },
+    "j(-11)": {
+      "value": -32768,
+      "substrate": "-lambda^g_neg"
+    },
+    "j(-19)": {
+      "value": -884736,
+      "substrate": "-lambda^15 * q^q"
+    },
+    "j(-163)": {
+      "value": -262537412640768000,
+      "substrate": "-(640320)^3 (Ramanujan)"
+    }
+  },
+  "ramanujan_640320_substrate": "(2^q)^2 * q * F_5 * M_23 * (q^q + lambda)",
+  "conclusion": "All 9 = q^2 Heegner discriminants are substrate-clean with specific substrate roles. j-invariant at Heegner points factorizes through substrate primitives. Ramanujan constant base 640320 = substrate-product. The Heegner cascade completes the substrate's number-theoretic spectrum coverage."
+}
