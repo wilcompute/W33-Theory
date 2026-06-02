@@ -1,0 +1,254 @@
+{
+  "total_codes_checked": 22,
+  "all_substrate_clean": true,
+  "code_grid": [
+    {
+      "l": 1,
+      "m": 2,
+      "n": 3,
+      "k": 2,
+      "d": 2,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 3,
+      "n": 7,
+      "k": 3,
+      "d": 4,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 4,
+      "n": 15,
+      "k": 4,
+      "d": 8,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 5,
+      "n": 31,
+      "k": 5,
+      "d": 16,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 6,
+      "n": 63,
+      "k": 6,
+      "d": 32,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 7,
+      "n": 127,
+      "k": 7,
+      "d": 64,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 1,
+      "m": 8,
+      "n": 255,
+      "k": 8,
+      "d": 128,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 3,
+      "n": 7,
+      "k": 3,
+      "d": 4,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 4,
+      "n": 35,
+      "k": 6,
+      "d": 16,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 5,
+      "n": 155,
+      "k": 10,
+      "d": 64,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 6,
+      "n": 651,
+      "k": 15,
+      "d": 256,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 7,
+      "n": 2667,
+      "k": 21,
+      "d": 1024,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 2,
+      "m": 8,
+      "n": 10795,
+      "k": 28,
+      "d": 4096,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 3,
+      "m": 4,
+      "n": 15,
+      "k": 4,
+      "d": 8,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 3,
+      "m": 5,
+      "n": 155,
+      "k": 10,
+      "d": 64,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 3,
+      "m": 6,
+      "n": 1395,
+      "k": 20,
+      "d": 512,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 3,
+      "m": 7,
+      "n": 11811,
+      "k": 35,
+      "d": 4096,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 3,
+      "m": 8,
+      "n": 97155,
+      "k": 56,
+      "d": 32768,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 4,
+      "m": 5,
+      "n": 31,
+      "k": 5,
+      "d": 16,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 4,
+      "m": 6,
+      "n": 651,
+      "k": 15,
+      "d": 256,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 4,
+      "m": 7,
+      "n": 11811,
+      "k": 35,
+      "d": 4096,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "l": 4,
+      "m": 8,
+      "n": 200787,
+      "k": 70,
+      "d": 65536,
+      "n_clean": true,
+      "k_clean": true,
+      "d_clean": true
+    }
+  ],
+  "notable_codes": {
+    "Hamming_C_2_3": {
+      "params": [
+        7,
+        3,
+        4
+      ],
+      "substrate": "[Phi_6, q, mu]"
+    },
+    "Klein_quadric_C_2_4": {
+      "params": [
+        35,
+        6,
+        16
+      ],
+      "substrate": "[F_5*Phi_6, q!, lambda^mu]"
+    },
+    "Schubert_C_3_4": {
+      "params": [
+        15,
+        4,
+        8
+      ],
+      "substrate": "[g_neg, mu, 2^q]"
+    },
+    "Simplex_family_C_1_m": "[2^m - 1, m, 2^(m-1)]"
+  },
+  "conclusion": "All 22 Grassmann codes C(l, m)/F_2 for l in [1,4], m in [l+1,8] have substrate-clean [n, k, d]. Notable: C(2,4) = Klein quadric code, C(3,4) = Schubert variety code, C(1,m) = simplex. Grassmann duality preserves substrate cleanness."
+}
