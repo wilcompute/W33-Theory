@@ -1,0 +1,57 @@
+{
+  "binary_code_C2W": "[v, lambda^4, lambda^q] = [40, 16, 8]",
+  "Golay_blocks": "|E|/f = Phi_4 = 10 blocks of [24, 12, 8]",
+  "Steiner_lift": "S(lambda, lambda^q, v) = S(2, 8, 40)",
+  "Penrose_spin_network": {
+    "Immirzi_gamma": "q/k = 1/mu = 1/4",
+    "total_area": "h(E_8)*sqrt(3) = 30*sqrt(3)",
+    "Wigner_6j_half": "+/- 1/lambda"
+  },
+  "discrete_twistor": {
+    "PG_3_F3": "= W(3,3) at q=3, |PG(3,F_3)|=40",
+    "self_dual": "f = 24",
+    "anti_self_dual": "g_neg = 15 = dim SU(4)_R = N=4 SYM R-symm",
+    "amplituhedron": "|P^5(F_3)| = 364 = Phi_3 * dim(D_4)"
+  },
+  "cosmic_neutrino": {
+    "T_ratio_cubed": "mu/(k-1) = 4/11",
+    "N_eff": "q + q*lambda/v = 3.15",
+    "Y_p": "1/mu = 0.25",
+    "z_rec": "mu*Phi_6*Phi_3 = 364",
+    "tau_reion": "lambda/(2v) = 0.025",
+    "T_BBN_keV": "q*v = 120 = |E|/2"
+  },
+  "quark_mass_hierarchy": [
+    {
+      "ratio": "m_d/m_u",
+      "substrate": "lambda",
+      "value": 2,
+      "deviation_pct": -8
+    },
+    {
+      "ratio": "m_s/m_d",
+      "substrate": "|E|/k",
+      "value": 20,
+      "deviation_pct": 1
+    },
+    {
+      "ratio": "m_c/m_s",
+      "substrate": "Phi_3",
+      "value": 13,
+      "deviation_pct": -5
+    },
+    {
+      "ratio": "m_b/m_c",
+      "substrate": "q",
+      "value": 3,
+      "deviation_pct": -9
+    },
+    {
+      "ratio": "m_t/m_b",
+      "substrate": "v+1 = Ogg_12",
+      "value": 41,
+      "deviation_pct": -1
+    }
+  ],
+  "conclusion": "Binary code [40,16,8], Golay blocks, Steiner lift, Penrose spin network with Immirzi q/k=1/mu, discrete twistor PG(3,F_3)=W(3,3), anti-self-dual g_neg = dim SU(4)_R (N=4 SYM), T_C_nu_B^3/T_CMB^3 = 4/11 = mu/(k-1), all 5 quark mass ratios single substrate primitives within 9%."
+}
