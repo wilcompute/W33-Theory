@@ -1,0 +1,53 @@
+{
+  "packet_hamiltonian_K_eigenvalues": {
+    "216": {
+      "mult": 1,
+      "substrate": "(q!)^q"
+    },
+    "256": {
+      "mult": 4,
+      "substrate": "lambda^(2^q)"
+    },
+    "64": {
+      "mult": 5,
+      "substrate": "(2^q)^lambda"
+    }
+  },
+  "packet_hamiltonian_gaps": {
+    "256-216": {
+      "value": 40,
+      "substrate": "v"
+    },
+    "256-64": {
+      "value": 192,
+      "substrate": "lambda^6 * q (tomotope)"
+    },
+    "216-64": {
+      "value": 152,
+      "substrate": "2^q * Heegner_6 (NEW)"
+    }
+  },
+  "new_substrate_identity": "152 = 2^q * Heegner_6 = 8 * 19",
+  "Tr_K": 1560,
+  "Tr_K_substrate": "2^q * q * F_5 * Phi_3",
+  "K44_G2_selector": {
+    "Aut_K44": 1152,
+    "Aut_K44_substrate": "lambda * f^2",
+    "Stab_canonical": 192,
+    "Stab_canonical_substrate": "lambda^6 * q",
+    "orbit_length": 6,
+    "orbit_substrate": "q!",
+    "G2_oriented_roots": 12,
+    "G2_oriented_substrate": "k (CS level)"
+  },
+  "192_readings": {
+    "primitive": "lambda^6 * q",
+    "fano_hinge": "2^q * f",
+    "codec_flag": "lambda^mu * k",
+    "PSL27_S4": "168 + 24",
+    "K44_G2": "|Aut(K44)| / |G_2 frames| = 1152/6",
+    "packet_H": "256 - 64",
+    "weyl": "|W(D_4)|"
+  },
+  "conclusion": "The recent pillar work (Parts MMCCCXCV, MMCCCXCVIII, MMCCCXCIX) is substrate-native at every level. Packet Hamiltonian spectrum, gaps, and trace are substrate. K_{4,4} G_2 selector orders are substrate. NEW: 152 = 2^q * Heegner_6 substrate identity. 192 = lambda^6 * q reads as W(D_4), K_{4,4} stab, packet gap, Fano-hinge affine -- four geometric pictures, one substrate number."
+}
