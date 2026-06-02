@@ -1,0 +1,64 @@
+{
+  "part": "MMCDI",
+  "theorem": "Clifford-octonion G2 projection theorem",
+  "construction": {
+    "clifford_layer": "Gamma_i = L_{e_i}; seven generators satisfy Cl(0,7)",
+    "so7_layer": "21 bivectors [Gamma_i,Gamma_j] span so(7)",
+    "g2_projection": "D_ij = [L_i,L_j] + [L_i,R_j] + [R_i,R_j] spans derivations of the octonions",
+    "rank_law": "21 bivectors - 7 Fano translation relations = 14 derivations"
+  },
+  "ranks": {
+    "clifford_generators": 7,
+    "bivectors_so7": 21,
+    "derivation_generators": 21,
+    "g2_rank": 14,
+    "kernel_rank": 7,
+    "bracket_closure_rank": 14
+  },
+  "associator_geometry": {
+    "associative_count": 7,
+    "nonassociative_count": 28,
+    "total_imaginary_triples": 35
+  },
+  "w33_reading": {
+    "21": "g1 = C(7,2), Clifford bivectors / imaginary pairs",
+    "7": "Phi6, Fano translation kernel relations",
+    "14": "dim(G2)=k+2, derivation rank",
+    "28": "v-k=chi*Phi6, non-associative imaginary triples",
+    "35": "Phi6*F5, all imaginary triples"
+  },
+  "checks": {
+    "inherits_frame_action_g2_weyl_quotient": true,
+    "octonion_table_complete_8x8": true,
+    "fano_lines_7": true,
+    "fano_lines_xor_zero": true,
+    "clifford_generators_7": true,
+    "clifford_square_minus_identity": true,
+    "clifford_anticommutation": true,
+    "bivectors_21": true,
+    "bivectors_span_so7_rank_21": true,
+    "derivation_generators_21": true,
+    "derivations_are_derivations": true,
+    "derivations_kill_identity": true,
+    "derivation_span_rank_14": true,
+    "derivation_bracket_closure_rank_14": true,
+    "kernel_dimension_7": true,
+    "seven_fano_translation_relations": true,
+    "relation_rank_7": true,
+    "relation_annihilation": true,
+    "relation_supports_partition_21_pairs": true,
+    "relation_supports_are_three_pair_matchings": true,
+    "rank_formula_21_minus_7_equals_14": true,
+    "associative_triples_are_exactly_fano_lines": true,
+    "associative_triple_count_7": true,
+    "nonassociative_triple_count_28": true,
+    "all_imaginary_triples_35_equals_phi6_times_F5": true,
+    "w33_dictionary_14_equals_k_plus_2": true,
+    "w33_dictionary_28_equals_v_minus_k": true,
+    "w33_dictionary_28_equals_chi_times_phi6": true,
+    "w33_dictionary_21_equals_g1": true,
+    "w33_dictionary_7_equals_phi6": true
+  },
+  "n_verified": 30,
+  "n_checks": 30
+}
