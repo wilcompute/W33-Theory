@@ -1,0 +1,23 @@
+{
+  "part": "MMCDIII",
+  "theorem": "GA7 toroidal realization bridge theorem",
+  "counts": {
+    "realizations": 7,
+    "csaszar": 5,
+    "szilassi": 2,
+    "edges_per_realization": 21,
+    "fano_primaries": 30,
+    "signings_per_primary": 128,
+    "signed_landscape": 3840,
+    "octonion_representations": 480
+  },
+  "core": {
+    "edge_carrier": "each toroidal realization has 21 K7 edges",
+    "calibration_overlay": "each GA7 primary Fano calibration partitions those 21 edges into seven triples",
+    "bucket_law": "fixing one reference edge splits the 30 primaries into five buckets of six",
+    "candidate_bridge": "five buckets match the five Csaszar realizations; two zero-remainder primaries are a candidate anchor for the two Szilassi realizations"
+  },
+  "honesty_boundary": "The 30->5x6 bucket law is proved by enumeration. The realization assignment is a candidate metric bridge, not yet a final metric-derived labeling.",
+  "n_verified": 20,
+  "n_checks": 20
+}
