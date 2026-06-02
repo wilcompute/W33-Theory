@@ -1,0 +1,34 @@
+{
+  "value": 51840,
+  "prime_factorization": "2^7 * 3^4 * 5",
+  "substrate_prime_factorization": "lambda^6 * q^mu * F_5",
+  "identifications": [
+    "|W(E_6)| (Lie theory)",
+    "|Sp(4, F_3)| = |Aut(W(3,3))| (BT12)",
+    "|Aut(27 lines on cubic surface)| (Cayley 1849, BT55)"
+  ],
+  "substrate_decompositions": [
+    "lambda^6 * q^4 * F_5",
+    "v * lambda^mu * matter (vertex * codecs * matter)",
+    "2^Phi_6 * matter * F_5",
+    "(q!)^4 * v",
+    "(q^q * Phi_4) * (lambda^6 * q) = 270 * 192",
+    "(q!)^q * |E| = 216 * 240",
+    "matter * lambda^6 * Phi_4 = 81 * 640",
+    "Sp(4, F_3) order = |Aut(W(3,3))|",
+    "Aut(27 lines on cubic surface)",
+    "|W(E_6)|",
+    "Weyl quotient W(E_6)/W(D_4) * |W(D_4)|"
+  ],
+  "duality_270": {
+    "value": 270,
+    "formula": "|W(E_6)| / |W(D_4)| = q^q * Phi_4",
+    "interpretation": "Substrate Weyl ladder from E_6 to D_4"
+  },
+  "braid_extended": {
+    "value": 1451520,
+    "formula": "28 * 51840 = P_2 * |W(E_6)| = mu * Phi_6 * |W(E_6)|",
+    "interpretation": "Two substrate core numbers (P_2, |W(E_6)|) combine"
+  },
+  "conclusion": "51840 = |W(E_6)| = |Aut(W(3,3))| = |Aut(27 lines on cubic surface)|. Eleven independent substrate factorizations. The substrate's automorphism group IS the E_6 Weyl group IS the cubic surface 27-line symmetry. Extended braid order = P_2 * |W(E_6)| combines BT46 and BT56 substrate core numbers."
+}
