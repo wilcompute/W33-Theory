@@ -1,0 +1,72 @@
+{
+  "hidden_sylow_bijection": {
+    "n_3": 40,
+    "v": 40,
+    "identity": "n_3(Sp(4,F_3)) = v(W(3,3)) = 40",
+    "n_2": 45,
+    "n_5": 1296,
+    "Sylow_orders": [
+      128,
+      81,
+      5
+    ]
+  },
+  "dual_27_40": {
+    "decomp": "|W(E_6)| = 27 * 40 * 48",
+    "bridge_48": "q * lambda^mu = q! * 2^q",
+    "edge_reciprocity": "240 * 216 = |W(E_6)|",
+    "Schlaefli_SRG": [
+      27,
+      16,
+      10,
+      8
+    ]
+  },
+  "burkhardt": {
+    "v_factored": "(q+1)(q^2+1)",
+    "aut_B": 25920,
+    "qv": 120,
+    "Hesse_aut": 432
+  },
+  "del_pezzo_7th_face": {
+    "decomp": "27 = k + g_neg = 6 + 15 + 6",
+    "picard_rank": 7,
+    "E_6_root_rank": 6
+  },
+  "CM_j_tower": {
+    "j_i": 1728,
+    "j_m7": -3375,
+    "j_m8": 8000,
+    "j_m11": -32768,
+    "cube_exponent": "k/mu = q"
+  },
+  "leech_2160_shell": {
+    "forms": [
+      "lambda^mu * q^q * (mu+1)",
+      "E * q^2",
+      "2 * v * q^q",
+      "|W(E_6)| / f"
+    ],
+    "K_leech": 196560,
+    "K_form": "2160 * Phi_6 * Phi_3 = 16*27*5*7*13",
+    "prime_packet": [
+      2,
+      3,
+      5,
+      7,
+      13
+    ],
+    "moonshine_gap": 324,
+    "monster_smallest": 196883
+  },
+  "Q4_router": {
+    "twenty_four_factorization": "q! * (q+1)",
+    "monodromy": 18432,
+    "monodromy_form": "32 * 24^2 = |E(Q_4)| * (q!(q+1))^2",
+    "Reye_config": [
+      12,
+      16
+    ]
+  },
+  "conclusion": "Deepest hidden identity: n_3 = v = 40 (vertex/Sylow bijection). Dual Weyl 27/40 gives |W(E_6)| = 27*40*48 = 240*216. Burkhardt realizes the 40-shell as nodes/j-planes/Steiner primes. Del Pezzo gives 7th face: 27 = k+g_neg. CM j-tower cubes substrate. Leech kissing = 2160 * Phi_6 * Phi_3 with primes {lambda,q,mu+1,Phi_6,Phi_3}. Q_4 router: 24 = q!(q+1). 8 supplements compressed."
+}
