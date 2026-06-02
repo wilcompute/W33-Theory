@@ -1,0 +1,44 @@
+{
+  "part": "MMCCCXCIII",
+  "theorem": "Branching packet energy renormalization",
+  "formula": "Dq^T Dq = F D^T D F^T = 9 F P1 F^T + 4 F P9 F^T",
+  "abstract_branching_spectra": {
+    "F_P1_Ft": {"3/2": 1, "0": 9},
+    "F_P5_Ft": {"0": 10},
+    "F_P9_Ft": {"4": 4, "1": 5, "0": 1}
+  },
+  "renormalized_packet_spectra": {
+    "Q1_uniform": "27/2^1",
+    "Q4_vertex": "16^4",
+    "Q5_petersen": "4^5"
+  },
+  "full_packet_energy_spectrum": {"27/2": 1, "16": 4, "4": 5},
+  "energy_weights": {
+    "S6_uniform_weight": 9,
+    "S6_observable_weight": 4,
+    "Q1_effective": "9*(3/2)=27/2",
+    "Q4_effective": "4*4=16",
+    "Q5_effective": "4*1=4"
+  },
+  "ranks": {"Dq": 10, "Q1_block": 1, "Q4_block": 4, "Q5_block": 5},
+  "checks": {
+    "inherits_branching_gauge": true,
+    "inherits_projector_modes": true,
+    "Dq_rank_10": true,
+    "abstract_branch_spectra": true,
+    "energy_reconstruction_formula": true,
+    "renormalization_P1_9_times_3_over_2": true,
+    "renormalization_Q4_4_times_4": true,
+    "renormalization_Q5_4_times_1": true,
+    "renormalization_Q1_block": true,
+    "full_packet_energy_spectrum": true,
+    "mode_ranks_1_4_5": true,
+    "trace_total_97_over_2": true,
+    "trace_decomposes": true,
+    "kernel_removed_no_zero_eigenvalues": true,
+    "renormalization_law_matches_previous_mode_spectra": true,
+    "integer_energy_factors_9_and_4_from_s6_incidence": true
+  },
+  "n_verified": 16,
+  "n_checks": 16
+}
