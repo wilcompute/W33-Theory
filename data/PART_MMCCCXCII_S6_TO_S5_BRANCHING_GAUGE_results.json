@@ -1,0 +1,37 @@
+{
+  "part": "MMCCCXCII",
+  "theorem": "S6 to S5 branching gauge",
+  "map": "F: 15-dimensional K6 duad carrier -> 10-dimensional K5 edge quotient carrier",
+  "branching": {
+    "S6_P1": "maps to (3/2) times S5_Q1",
+    "S6_P5": "killed by F",
+    "S6_P9": "branches as 4*S5_Q4 plus 1*S5_Q5 with no S5 uniform component"
+  },
+  "spectra": {
+    "F_S6_P1_Ft": {"0": 9, "3/2": 1},
+    "F_S6_P5_Ft": {"0": 10},
+    "F_S6_P9_Ft": {"0": 1, "1": 5, "4": 4},
+    "full_observable_quotient": {"1": 5, "3/2": 1, "4": 4}
+  },
+  "ranks": {"F": 10, "S6_P1_image": 1, "S6_P5_image": 0, "S6_P9_image": 9, "Q4_block": 4, "Q5_block": 5},
+  "checks": {
+    "inherits_s6_decomposition": true,
+    "F_rank_10": true,
+    "S6_projectors_ranks_1_5_9": true,
+    "S5_projectors_ranks_1_4_5": true,
+    "S6_uniform_branches_to_scaled_S5_uniform": true,
+    "S6_gauge_sector_killed_by_F": true,
+    "S6_observable_rank_9_after_F": true,
+    "S6_observable_spectrum_after_F": true,
+    "S6_observable_no_S5_uniform_block": true,
+    "S6_observable_Q4_block_is_4Q4": true,
+    "S6_observable_Q5_block_is_Q5": true,
+    "S5_cross_blocks_zero": true,
+    "branching_9_to_4_plus_5": true,
+    "full_quotient_spectrum_1_4_5": true,
+    "trace_accounting": true,
+    "dimension_accounting": true
+  },
+  "n_verified": 16,
+  "n_checks": 16
+}
