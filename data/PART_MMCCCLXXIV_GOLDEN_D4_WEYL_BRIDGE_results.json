@@ -1,0 +1,26 @@
+{
+  "part": "MMCCCLXXIV",
+  "theorem": "Golden D4 Weyl bridge theorem",
+  "counts": {
+    "unique_failures": 108,
+    "ordered_failures": 864,
+    "K2_2_edges": 4,
+    "bridge_cube": 27,
+    "D4_orientations": 8,
+    "Q4_edges": 32,
+    "Aut_K33": 72,
+    "Weyl_G2": 12,
+    "positive_G2_roots": 6
+  },
+  "identities": {
+    "golden_product": "864 = 4*27*8 = K2,2_edges * F3^3 * D4",
+    "Q4_edge_lift": "864 = 27*32 = F3^3 * |E(Q4)|, because 4*8 = 32",
+    "G2_Weyl_shell": "864 = 72*12 = |Aut(K3,3)| * |W(G2)|",
+    "root_sector_shell": "864 = 6*12^2 = positive_G2_roots * Weyl(G2)^2",
+    "energy_shell": "864 = 4*6^3 = chi*g2^3",
+    "qutrit_block": "864 = 2*16*27 = r*E2*q^3"
+  },
+  "honesty_boundary": "This proves the count and profile bridge. It does not yet construct a pointwise equivariant bijection between ordered golden quadrangles and explicit Aut(K3,3) x W(G2) elements.",
+  "n_verified": 25,
+  "n_checks": 25
+}
