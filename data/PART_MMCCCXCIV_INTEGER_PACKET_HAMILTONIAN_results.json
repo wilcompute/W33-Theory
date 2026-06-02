@@ -1,0 +1,41 @@
+{
+  "part": "MMCCCXCIV",
+  "theorem": "Integer packet Hamiltonian theorem",
+  "operator": "K = 16 Dq^T Dq on the 10-dimensional K5 quotient-edge carrier",
+  "polynomial_T5": "K = -9 A_T5^2 + 55 A_T5 + 210 I",
+  "polynomial_Petersen": "K = -9 A_Pet^2 - 37 A_Pet + 222 I",
+  "projector_formula": "K = 216 Q1 + 256 Q4 + 64 Q5",
+  "spectrum": {"216": 1, "256": 4, "64": 5},
+  "eigenvalue_reading": {
+    "216": "6^3 = g2^3, matching the Lenz-symmetric Csaszar total squared edge length",
+    "256": "16^2 = E2^2, the 4-dimensional vertex-standard packet mode",
+    "64": "8^2 = (r*chi)^2 = dim(su3)^2, the 5-dimensional Petersen packet mode"
+  },
+  "invariants": {
+    "trace": 1560,
+    "determinant": "216 * 256^4 * 64^5",
+    "minimal_polynomial": "(x-216)(x-256)(x-64)"
+  },
+  "checks": {
+    "inherits_energy_renormalization": true,
+    "Dq_rank_10": true,
+    "H_full_rank_10": true,
+    "H_spectrum_27_over_2_16x4_4x5": true,
+    "K_integer_matrix": true,
+    "K_spectrum_216_256x4_64x5": true,
+    "K_trace_1560": true,
+    "K_determinant_from_spectrum": true,
+    "T5_polynomial_formula": true,
+    "Petersen_polynomial_formula": true,
+    "projector_formula_216_256_64": true,
+    "K_minimal_polynomial": true,
+    "H_minimal_polynomial": true,
+    "eigenvalue_216_equals_g2_cubed": true,
+    "eigenvalue_256_equals_E2_squared": true,
+    "eigenvalue_64_equals_discriminant_su3_square": true,
+    "trace_decomposition_216_plus_4x256_plus_5x64": true,
+    "dimension_decomposition_1_4_5": true
+  },
+  "n_verified": 18,
+  "n_checks": 18
+}
