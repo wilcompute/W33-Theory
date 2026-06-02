@@ -1,0 +1,45 @@
+{
+  "part": "MMCCCXCV",
+  "theorem": "Packet Hamiltonian gap tomography",
+  "operator": "K = 216Q1 + 256Q4 + 64Q5 on the K5 quotient-edge carrier",
+  "spectral_projectors_from_K": {
+    "Q1": "((K-256I)(K-64I))/((216-256)(216-64))",
+    "Q4": "((K-216I)(K-64I))/((256-216)(256-64))",
+    "Q5": "((K-216I)(K-256I))/((64-216)(64-256))"
+  },
+  "gap_identities": {
+    "256-64": "192 = 16*12 = tomotope total flag count",
+    "256-216": "40 = W33 vertex count",
+    "216-64": "152 = 192-40"
+  },
+  "block_identities": {
+    "K-64I": "152Q1 + 192Q4",
+    "K-64I-152Q1": "192Q4, rank 4",
+    "256I-K": "40Q1 + 192Q5",
+    "256I-K-40Q1": "192Q5, rank 5"
+  },
+  "checks": {
+    "inherits_integer_hamiltonian": true,
+    "spectral_projector_P216_equals_Q1": true,
+    "spectral_projector_P256_equals_Q4": true,
+    "spectral_projector_P64_equals_Q5": true,
+    "projectors_recovered_from_K_sum_identity": true,
+    "gap_256_minus_64_is_tomotope_192": true,
+    "gap_256_minus_216_is_w33_40": true,
+    "gap_216_minus_64_is_152_equals_192_minus_40": true,
+    "K_minus_64I_decomposes_152Q1_plus_192Q4": true,
+    "pure_Q4_tomotope_block_192Q4": true,
+    "rank_pure_Q4_block_4": true,
+    "trace_pure_Q4_block_768": true,
+    "256I_minus_K_decomposes_40Q1_plus_192Q5": true,
+    "pure_Q5_tomotope_block_192Q5": true,
+    "rank_pure_Q5_block_5": true,
+    "trace_pure_Q5_block_960": true,
+    "uniform_vertex_gap_40Q1": true,
+    "uniform_residual_gap_152Q1": true,
+    "three_gaps_sum_relation_192_equals_40_plus_152": true,
+    "hamiltonian_reconstruction_from_gap_law": true
+  },
+  "n_verified": 20,
+  "n_checks": 20
+}
