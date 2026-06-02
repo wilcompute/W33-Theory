@@ -1,0 +1,27 @@
+{
+  "part": "MMCCCLXXXII",
+  "theorem": "Prime cube unit convolution theorem",
+  "profiles": {
+    "completed_convolution": {"1": 161, "5": 156, "7": 152, "11": 156},
+    "substrate_convolution": {"1": 103, "5": 90, "7": 78, "11": 90},
+    "first_leak_convolution": {"1": 12, "5": 8, "7": 8, "11": 8},
+    "transition_convolution": {"1": 26, "5": 24, "7": 24, "11": 26},
+    "substrate_leak_cross_terms": {"1": 46, "5": 58, "7": 66, "11": 58}
+  },
+  "moments": {
+    "completed": {"principal": 25, "chi4": -3, "chi3": 1, "chi12": -3},
+    "completed_convolution": {"principal": 625, "chi4": 9, "chi3": 1, "chi12": 9}
+  },
+  "identities": {
+    "completed_product": "(5,6,8,6)*(5,6,8,6) = (161,156,152,156)",
+    "identity_class": "161 = 160 + 1 = X_min_supports + 1",
+    "side_classes": "156 = 12*13 = k*Phi3 for both 5 and 11 classes",
+    "class_7": "152 = 19*8 = Heegner6*D4 = packet residual gap",
+    "gap": "161 - 152 = 9 = q^2",
+    "leak_product": "(3,1,1,1)^2 = (12,8,8,8) = (k,D4,D4,D4)",
+    "fourier_rule": "Hadamard moments of a convolution are pointwise squares of Hadamard moments"
+  },
+  "claim_boundary": "This is a finite convolution theorem in the unit group modulo 12. It is not a proof of multiplicative closure of the prime set itself.",
+  "n_verified": 23,
+  "n_checks": 23
+}
