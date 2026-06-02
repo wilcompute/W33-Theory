@@ -1,0 +1,56 @@
+{
+  "value": 270,
+  "substrate": "q^q * Phi_4 = matter cube * spectral gap",
+  "seven_270_objects": [
+    {
+      "name": "q^q * Phi_4 (substrate)",
+      "reference": "BT24/BT32",
+      "role": "matter cube * spectral gap"
+    },
+    {
+      "name": "|W(E_6)| / |W(D_4)| = 51840 / 192",
+      "reference": "BT56",
+      "role": "E_6/D_4 Weyl ladder"
+    },
+    {
+      "name": "Schreier coset count for W(3,3) voltage",
+      "reference": "Pillar 86",
+      "role": "tomotope local-weld 270 edges"
+    },
+    {
+      "name": "W boson decay: Gamma_W/m_W = 7/270",
+      "reference": "Part MCLXV",
+      "role": "PHYSICS! PDG match - W decay at substrate bottleneck"
+    },
+    {
+      "name": "K_5 quotient-graph spread intersection",
+      "reference": "clifford_antipodal",
+      "role": "(1, 360, 270) intersection profile"
+    },
+    {
+      "name": "A_5 orbital negative-polar edge count",
+      "reference": "a5_orbital",
+      "role": "SRG(36, 15, 6, 6) variant"
+    },
+    {
+      "name": "SRG(36, 15, 6, 6) common-neighbor",
+      "reference": "clifford_lr",
+      "role": "270 + 360 = 630 profile splits"
+    }
+  ],
+  "W_boson_physics": {
+    "formula": "Gamma_W / m_W = Phi_6 / (Phi_4 * q^q) = 7/270",
+    "substrate_value": 0.025925925925925925,
+    "PDG_ratio": 0.02594283865669599,
+    "deviation_pct": 0.06519229061195321,
+    "interpretation": "W boson decays at substrate 270-transport layer"
+  },
+  "matter_triple": {
+    "27 = q^q": "matter cube (BT55 seven 27s)",
+    "28 = mu*Phi_6": "matter tetrahedron (BT46 seven 28s)",
+    "270 = q^q*Phi_4": "matter * spectral gap (BT57 seven 270s)"
+  },
+  "substrate_ladder": "51840 / 192 / 30 / 3 / 3 = 1 (5 substrate divisions)",
+  "new_identity": "270 - 27 = q^F_5 = 243 (substrate subtraction)",
+  "conclusion": "Seven 270's coincidence with PHYSICS prediction: W boson decay width/mass = Phi_6/(Phi_4*q^q) = 7/270 matching PDG. The W boson decays at the substrate's 270-transport layer. The substrate's three matter cores (27, 28, 270) each have 7-fold coincidence theorems (BT46, BT55, BT57)."
+}
