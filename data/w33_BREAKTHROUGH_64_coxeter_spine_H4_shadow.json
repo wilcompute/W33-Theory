@@ -1,0 +1,74 @@
+{
+  "common_Coxeter_spine": "h = q * Phi_4 = 30",
+  "E_8_degrees": [
+    2,
+    8,
+    12,
+    14,
+    18,
+    20,
+    24,
+    30
+  ],
+  "E_8_substrate": "(lambda, k-mu, k, Phi_3+1, k+mu+lambda, |E|/k, f, q*Phi_4)",
+  "H_4_degrees": [
+    2,
+    12,
+    20,
+    30
+  ],
+  "H_4_substrate": "(lambda, k, |E|/k, q*Phi_4) = subsequence of E_8",
+  "Weyl_quotient": {
+    "value": 48384,
+    "substrate": "lambda^(k-mu) * q^q * Phi_6",
+    "decomp": "2^8 * 3^3 * 7"
+  },
+  "M_120": {
+    "size": 120,
+    "structure": "40 lines * 3 matchings per line",
+    "edge_2_cover": "E(W(3,3)) -> M_120 with 2:1 quotient"
+  },
+  "orbital_obstruction": {
+    "n_invariant_relations": 4,
+    "degrees": [
+      2,
+      27,
+      36,
+      54
+    ],
+    "sizes": [
+      120,
+      2160,
+      1620,
+      3240
+    ],
+    "subset_sums": [
+      0,
+      2,
+      27,
+      29,
+      36,
+      38,
+      54,
+      56,
+      63,
+      65,
+      81,
+      83,
+      90,
+      92,
+      117,
+      119
+    ],
+    "k_not_in_subsets": true,
+    "consequence": "Symmetry breaking PSp(4,3) -> icosahedral required"
+  },
+  "1740_4_cycles": {
+    "local": 120,
+    "nonlocal": 1620,
+    "nonlocal_substrate": "q^q * N_efolds = matter cube * 60",
+    "quad_stabilizer": "lambda^mu = 16",
+    "anchor_stabilizer": "2*q^q = 54"
+  },
+  "conclusion": "Common Coxeter spine h = q*Phi_4 = 30 for E_8 and H_4. E_8 degrees all substrate; H_4 = subsequence. Weyl quotient = lambda^(k-mu)*q^q*Phi_6 = 48384. Internal H_4 shadow M_120 exists canonically. 600-cell skeleton requires SYMMETRY BREAKING (12 not in {2,27,36,54} subset sums). 1740 4-cycles split 120+1620 = local + nonlocal holonomy carrier."
+}
