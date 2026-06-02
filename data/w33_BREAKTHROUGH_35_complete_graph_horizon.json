@@ -1,0 +1,69 @@
+{
+  "horizon_n": 52,
+  "horizon_substrate": "mu * Phi_3 = dim(F_4)",
+  "breaking_prime": 53,
+  "substrate_primes_below_horizon": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47
+  ],
+  "notable_K_nn_orders": {
+    "K_4_4": {
+      "order": 1152,
+      "substrate": "lambda * f^2 (tmf period! BT34)"
+    },
+    "K_5_5": {
+      "order": 28800,
+      "substrate": "lambda^7 * q^2 * F_5^2"
+    },
+    "K_12_12": {
+      "order": 458885065605120000,
+      "substrate": "lambda * (k!)^2"
+    },
+    "K_24_24": {
+      "order": "huge",
+      "substrate": "lambda * (f!)^2"
+    },
+    "K_40_40": {
+      "order": "huge",
+      "substrate": "lambda * (v!)^2"
+    },
+    "K_52_52": {
+      "order": "huge",
+      "substrate": "lambda * (dim(F_4)!)^2 LAST"
+    }
+  },
+  "horizons_comparison": [
+    {
+      "BT": 23,
+      "object": "partition P(n)",
+      "horizon": 40,
+      "substrate": "v"
+    },
+    {
+      "BT": 25,
+      "object": "Lie group dim n(n+2)",
+      "horizon": 50,
+      "substrate": "~50"
+    },
+    {
+      "BT": 35,
+      "object": "graph |Aut(K_n)| = n!",
+      "horizon": 52,
+      "substrate": "mu*Phi_3 = dim(F_4)"
+    }
+  ],
+  "conclusion": "Aut(K_n) and Aut(K_{n,n}) substrate-clean iff n <= 52. The horizon n = 52 = mu * Phi_3 = dim(F_4) ties graph automorphisms to F_4 Lie group dimension. Substrate's arithmetic capacity firmly sits in [40, 52] range across all three horizons (partition, Lie dim, graph Aut)."
+}
