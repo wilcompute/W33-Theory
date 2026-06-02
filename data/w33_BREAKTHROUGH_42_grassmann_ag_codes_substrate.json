@@ -1,0 +1,86 @@
+{
+  "Grassmann_code_family_C_2_m_over_F2": [
+    {
+      "m": 3,
+      "n": 7,
+      "k": 3,
+      "d": 4,
+      "substrate": "[Phi_6, q, mu] = Hamming code!"
+    },
+    {
+      "m": 4,
+      "n": 35,
+      "k": 6,
+      "d": 16,
+      "substrate": "[F_5*Phi_6, q!, lambda^mu] = KLEIN QUADRIC!"
+    },
+    {
+      "m": 5,
+      "n": 155,
+      "k": 10,
+      "d": 64,
+      "substrate": "[F_5*M_5, Phi_4, lambda^6]"
+    },
+    {
+      "m": 6,
+      "n": 651,
+      "k": 15,
+      "d": 256,
+      "substrate": "[q*Phi_6*M_5, g_neg, lambda^(2^q)]"
+    },
+    {
+      "m": 7,
+      "n": 2667,
+      "k": 21,
+      "d": 1024,
+      "substrate": "[q*Phi_6*M_7, q*Phi_6, lambda^10]"
+    },
+    {
+      "m": 8,
+      "n": 10795,
+      "k": 28,
+      "d": 4096,
+      "substrate": "[10795, mu*Phi_6, lambda^12]"
+    }
+  ],
+  "Hamming_code_C_2_3": {
+    "params": [
+      7,
+      3,
+      4
+    ],
+    "substrate": "[Phi_6, q, mu]"
+  },
+  "Klein_quadric_code_C_2_4": {
+    "params": [
+      35,
+      6,
+      16
+    ],
+    "substrate": "[F_5*Phi_6, q!, lambda^mu]",
+    "see_BT": 41
+  },
+  "Klein_quartic": {
+    "type": "algebraic curve (distinct from Klein quadric)",
+    "equation": "x^q*y + y^q*z + z^q*x = 0",
+    "genus": 3,
+    "genus_substrate": "q",
+    "Aut_order": 168,
+    "Aut_substrate": "2^q * q * Phi_6 = |PSL(2,7)|",
+    "Hurwitz_bound": "|Aut| <= 84(g-1) = lambda^lambda * q * Phi_6 * (g-1)",
+    "rational_points_F8": 24,
+    "rational_points_substrate": "f"
+  },
+  "Hurwitz_bound_constant": {
+    "value": 84,
+    "substrate": "lambda^lambda * q * Phi_6"
+  },
+  "Hermitian_curve_at_q_3": {
+    "field": "F_9 = F_(q^2)",
+    "rational_points": 28,
+    "rational_points_substrate": "mu * Phi_6 = P_2 (2nd perfect!)",
+    "genus": 3,
+    "genus_substrate": "q"
+  },
+  "conclusion": "Grassmann codes C(2, m) over F_2 form an infinite family of substrate-clean codes. C(2, 4) = Klein quadric code [35, 6, 16] from BT41 is just the 2nd member. Klein quartic algebraic curve has genus q, |Aut|=2^q*q*Phi_6 (Hurwitz bound at genus q). Hermitian curve at substrate q=3 has 28=P_2 rational points over F_9 -- the substrate's master root saturates the perfect-number structure in coding theory."
+}
