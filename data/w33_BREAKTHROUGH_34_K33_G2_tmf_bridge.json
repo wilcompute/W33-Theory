@@ -1,0 +1,31 @@
+{
+  "Aut_K44": 1152,
+  "decompositions_1152": {
+    "lambda*f^2": "lambda * f^2 (parity * tmf-period)",
+    "lambda^mu*Aut_K33": "lambda^mu * |Aut(K_{3,3})| = 16*72",
+    "q!*k*lambda^mu": "q! * k * lambda^mu = 6*12*16",
+    "2^q*f*q!": "2^q * f * q! = 8*24*6",
+    "lambda*576_tmf": "lambda * 576 (tmf periodicity)"
+  },
+  "key_bridge": "1152 = lambda * f^2 = lambda * Period(tmf) -- BT27 bridge",
+  "K33_G2_root_graph": {
+    "vertices_G2_positive": 6,
+    "vertices_substrate": "q!",
+    "edges": 9,
+    "edges_substrate": "q^2",
+    "degree": 3,
+    "degree_substrate": "q",
+    "bipartition_short_long_roots": [
+      3,
+      3
+    ],
+    "bipartition_substrate": "(q, q)",
+    "Aut_K33": 72,
+    "Aut_K33_substrate": "lambda^q * q^2"
+  },
+  "Weyl_G2_stabilizer": 12,
+  "Weyl_G2_substrate": "k (CS level)",
+  "identity_fiber_order": 16,
+  "identity_fiber_substrate": "lambda^mu = |F_2^mu| = codec count",
+  "conclusion": "|Aut(K_{4,4})| = lambda * f^2 = 1152. The substrate's f^2 appears BOTH as tmf periodicity (BT27) AND as K_{4,4}/parity automorphism quotient (BT34/MMCD). This bridges topological modular forms to graph automorphisms via the substrate's f. G_2 root graph is K_{3,3} with q!/q^2/q bipartition; W(G_2) = k stabilizes each frame."
+}
