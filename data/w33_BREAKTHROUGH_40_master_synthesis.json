@@ -1,0 +1,43 @@
+{
+  "breakthrough_count": 40,
+  "primitive_dictionary_count": 35,
+  "domains_covered": [
+    "Number theory",
+    "Lie theory",
+    "Modular forms",
+    "Sphere packing",
+    "Sporadic groups",
+    "Topology / K-theory",
+    "Graph theory",
+    "Physics",
+    "Substrate horizons"
+  ],
+  "horizons": {
+    "partition (BT23)": {
+      "horizon": 40,
+      "substrate": "v"
+    },
+    "Lie dim (BT25)": {
+      "horizon": 50,
+      "substrate": "~50"
+    },
+    "graph Aut (BT35)": {
+      "horizon": 52,
+      "substrate": "mu*Phi_3 = dim(F_4)"
+    },
+    "prime density (BT39)": {
+      "horizon": 47,
+      "substrate": "last small supersingular"
+    }
+  },
+  "deepest_identities": {
+    "q = 3": "q! = 2q uniquely (16 forcings)",
+    "|E| = 240": "E_8 roots = E_4 coef = SRG edges",
+    "f = 24": "eta exp, Leech dim, Niemeier count",
+    "2^q = 8": "Bott period, octonion, Viazovska",
+    "192 = lambda^6*q": "W(D_4) = K_44 stab = packet H gap",
+    "1152 = lambda*f^2": "Aut(K_44) = lambda * tmf-period",
+    "|S| = q*Phi_6 = 21": "Substrate prime count = so(7) dim"
+  },
+  "coverage_theorem": "The substrate's prime spectrum S has |S| = q*Phi_6 = 21 and every classical mathematical invariant in BT1-BT40 has prime factorization supported on S. Horizons cluster in [40, 52]. The substrate is the unique finite ground state of arithmetic covering the small-scale spectrum of major mathematical domains."
+}

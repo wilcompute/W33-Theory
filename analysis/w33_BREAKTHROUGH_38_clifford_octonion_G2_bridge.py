@@ -66,9 +66,16 @@ TOTAL TRIPLES = F_5 * Phi_6 = 35
 
 C(7, 3) = 35 = F_5 * Phi_6
 
-This is the substrate's reading of the 3-subset count of Phi_6.
+ALSO: 35 = NUMBER OF LINES IN PG(3, 2)
+    PG(3, 2) has:
+      - (2^4 - 1)/(2-1) = 15 = g_neg points
+      - 35 lines (= the Klein-quadric line count)
+      - 15 = g_neg planes (point/plane dual)
+    The substrate's Phi_6-imaginary-triples = PG(3,2)-line-count = 35.
 
-Also: 35 = Stirling S(7, 4)? No, S(7,4) = 350. 35 = (7 choose 3).
+This identifies the imaginary octonion triples WITH the line space of
+PG(3,2) -- the standard projective space that hosts the Klein quadric
+Q(4,2) and the W(3,3) substrate's projective bedrock.
 
 ==============================================================
 14 = lambda * Phi_6 = dim(G_2): MULTIPLE READINGS
