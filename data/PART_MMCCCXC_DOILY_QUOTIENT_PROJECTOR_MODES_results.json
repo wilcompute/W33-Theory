@@ -1,0 +1,33 @@
+{
+  "part": "MMCCCXC",
+  "theorem": "Doily quotient projector modes",
+  "carrier": "doily syntheme rows expressed in the explicit K5 quotient-edge gauge",
+  "quotient_matrix": "Dq = D F^T, shape 15 x 10, rank 10",
+  "mode_ranks": {"P1_uniform": 1, "P4_vertex": 4, "P5_petersen": 5},
+  "mode_spectra": {
+    "P1_uniform": {"0": 14, "27/2": 1},
+    "P4_vertex": {"0": 11, "16": 4},
+    "P5_petersen": {"0": 10, "4": 5}
+  },
+  "total_quotient_spectrum": {"0": 5, "4": 5, "16": 4, "27/2": 1},
+  "checks": {
+    "inherits_quotient_gauge": true,
+    "inherits_k5_projectors": true,
+    "D_rank_10": true,
+    "F_rank_10": true,
+    "Dq_rank_10": true,
+    "projector_ranks_1_4_5": true,
+    "mode_ranks_1_4_5": true,
+    "mode_spectrum_uniform": true,
+    "mode_spectrum_vertex": true,
+    "mode_spectrum_petersen": true,
+    "mode_sum_is_total_quotient_gram": true,
+    "total_rank_10": true,
+    "total_spectrum_split": true,
+    "trace_additivity": true,
+    "dimension_split_1_4_5": true,
+    "refines_rank10_carrier": true
+  },
+  "n_verified": 16,
+  "n_checks": 16
+}
