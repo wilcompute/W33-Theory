@@ -1,0 +1,37 @@
+{
+  "part": "MMCDIV",
+  "theorem": "GA7 heptad calibration lift theorem",
+  "counts": {
+    "toroidal_realizations": 7,
+    "edges_per_realization": 21,
+    "ga7_primaries_per_carrier": 30,
+    "signings_per_primary": 128,
+    "signed_forms_per_carrier": 3840,
+    "octonions_per_carrier": 480,
+    "pseudo_per_carrier": 3360,
+    "heptad_primary_overlays": 210,
+    "heptad_line_overlays": 1470,
+    "heptad_edge_line_incidences": 4410,
+    "heptad_signed_forms": 26880,
+    "heptad_octonions": 3360,
+    "heptad_pseudo": 23520
+  },
+  "identities": {
+    "heptad_primary_overlays": "7*30 = 210 = E1*g1 = 10*21 = m_s*dimG2 = 15*14",
+    "heptad_signed_forms": "7*3840 = 26880 = 160*168 = X_min_supports*PSL27",
+    "heptad_octonions": "7*480 = 3360 = pseudo-octonions of one GA7 carrier = 20*168",
+    "heptad_pseudo": "7*3360 = 23520 = 140*168",
+    "line_overlay": "7 realizations * 30 primaries * 7 Fano lines = 1470"
+  },
+  "ratios": {
+    "heptad_signed_over_psl27": 160,
+    "heptad_oct_over_psl27": 20,
+    "heptad_pseudo_over_psl27": 140,
+    "heptad_signed_over_primary_overlays": 128,
+    "heptad_oct_over_primary_overlays": 16,
+    "heptad_pseudo_over_primary_overlays": 112
+  },
+  "honesty_boundary": "This proves calibration-count identities and their match to existing W33 constants. It does not yet assign a specific Wilmot primary or signing to a specific metric edge class of a particular realization.",
+  "n_verified": 29,
+  "n_checks": 29
+}
