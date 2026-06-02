@@ -1,0 +1,72 @@
+{
+  "PG_3_2": {
+    "points": 15,
+    "lines": 35,
+    "planes": 15,
+    "points_substrate": "g_neg",
+    "lines_substrate": "F_5 * Phi_6",
+    "PSL_4_2_order": 20160,
+    "PSL_4_2_substrate": "(2^q)^2 * q^2 * F_5 * Phi_6 = 8!/2 = |A_8|"
+  },
+  "Klein_quadric_Q_5_2": {
+    "points": 35,
+    "points_substrate": "F_5 * Phi_6",
+    "lines": 105,
+    "lines_substrate": "q * F_5 * Phi_6 (Cullinane 105 partitions)",
+    "external_points": 28,
+    "external_substrate": "mu * Phi_6 = P_2 perfect",
+    "skew_lines": 56,
+    "skew_substrate": "2^q * Phi_6",
+    "Latin_planes": 15,
+    "Greek_planes": 15,
+    "total_planes": 30,
+    "total_planes_substrate": "h_E_8",
+    "PG52_total_points": 63,
+    "PG52_pts_substrate": "q^2 * Phi_6",
+    "PG52_total_lines": 651,
+    "PG52_lines_substrate": "q * Phi_6 * M_5"
+  },
+  "Grassmannian_G2_8": {
+    "config": "(28_6, 56_3)",
+    "points": 28,
+    "points_substrate": "C(8,2) = mu*Phi_6 = P_2 perfect",
+    "lines": 56,
+    "lines_substrate": "C(8,3) = 2^q*Phi_6",
+    "incidences": 168,
+    "incidences_substrate": "2^q * q * Phi_6 = |PSL(2,7)|"
+  },
+  "Conwell_heptads": {
+    "count": 8,
+    "count_substrate": "2^q",
+    "points_per_heptad": 7,
+    "ppts_substrate": "Phi_6"
+  },
+  "Klein_quadric_binary_code": {
+    "name": "C(v(KQ)) (Kroll-Vincenti 2008)",
+    "n": 35,
+    "k": 6,
+    "d": 16,
+    "n_substrate": "F_5 * Phi_6",
+    "k_substrate": "q!",
+    "d_substrate": "lambda^mu",
+    "remark": "Every code parameter is a single substrate primitive"
+  },
+  "AG_3_2_9set_partitions": {
+    "Type_I_count": 240,
+    "Type_I_substrate": "|E| (E_8 root count!)",
+    "Type_II_count": 1680,
+    "Type_II_substrate": "lambda^mu*q*F_5*Phi_6",
+    "total": 1920,
+    "PGammaL_2_8_order": 1512,
+    "PGammaL_substrate": "2^q*q^q*Phi_6",
+    "ASL_2_3_order": 216,
+    "ASL_substrate": "(q!)^q (BT24!)"
+  },
+  "famous_isomorphisms": {
+    "O_plus_6_2": "S_8, order 8! = 40320",
+    "PSL_4_2": "A_8, order 8!/2 = 20160",
+    "Sp_4_2": "S_6, order 720 = 6!",
+    "GL_3_2": "PSL(2,7), order 168 = 2^q*q*Phi_6"
+  },
+  "conclusion": "PG(3,2) and Klein quadric Q+(5,2) are saturated substrate objects. The Kroll-Vincenti binary code C(v(KQ)) has parameters [35, 6, 16] = [F_5*Phi_6, q!, lambda^mu] -- every parameter is a single substrate primitive. The 240 Type-I AG(3,2) partitions of a 9-set match |E| = E_8 roots, providing a new combinatorial incarnation of the substrate's deepest constant."
+}
