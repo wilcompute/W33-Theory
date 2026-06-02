@@ -1,0 +1,100 @@
+{
+  "monster_primes_as_W33_expressions": [
+    {
+      "prime": 2,
+      "expression": "lambda"
+    },
+    {
+      "prime": 3,
+      "expression": "q"
+    },
+    {
+      "prime": 5,
+      "expression": "mu - lambda + q"
+    },
+    {
+      "prime": 7,
+      "expression": "Phi_6"
+    },
+    {
+      "prime": 11,
+      "expression": "k - 1"
+    },
+    {
+      "prime": 13,
+      "expression": "Phi_3"
+    },
+    {
+      "prime": 17,
+      "expression": "Phi_3 + Phi_6 - q"
+    },
+    {
+      "prime": 19,
+      "expression": "k + Phi_6"
+    },
+    {
+      "prime": 23,
+      "expression": "Phi_3 + k - lambda"
+    },
+    {
+      "prime": 29,
+      "expression": "k + mu + Phi_3"
+    },
+    {
+      "prime": 31,
+      "expression": "k + mu + lambda + Phi_3"
+    },
+    {
+      "prime": 41,
+      "expression": "v + 1"
+    },
+    {
+      "prime": 47,
+      "expression": "v + Phi_6"
+    },
+    {
+      "prime": 59,
+      "expression": "v + k + Phi_6"
+    },
+    {
+      "prime": 71,
+      "expression": "Phi_12 - lambda"
+    }
+  ],
+  "196883_factorization": {
+    "value": 196883,
+    "substrate": "(v+Phi_6)*(v+k+Phi_6)*(Phi_12-lambda)",
+    "primes": [
+      47,
+      59,
+      71
+    ]
+  },
+  "McKay_identity": "196884 = K(Leech) + mu*q^4 = 196560 + 324",
+  "emergence_chain": "W(3,3) -> E_8 -> H_4 -> R^(3+1)",
+  "exceptional_Lie_cascade": {
+    "D_4": "k + mu^2 = 28 = P_2",
+    "E_6": "lambda*q*Phi_3 = 78",
+    "E_7": "Phi_3*Phi_4 + q = 133",
+    "E_8": "|E| + 2^q = 248",
+    "gaps": {
+      "E_6_minus_D_4": "Phi_4*(mu+1) = 50",
+      "E_7_minus_E_6": "C(k-1, 2) = 55",
+      "E_8_minus_E_7": "2*56 + q = 115"
+    }
+  },
+  "Graph_RH_zeros": {
+    "non_trivial_pairs": 39,
+    "non_trivial_zeros": 78,
+    "trivial_zeros": 2,
+    "functorial_zeros": 400,
+    "cycle_rank": 201
+  },
+  "McKay_Thompson_3B": {
+    "T_3B": "1/q - 12 + 54q - 88q^2 + ...",
+    "constant_term": "-k",
+    "linear_coef": "2*q^q"
+  },
+  "Kolmogorov_byte_universe": "200 bytes (40x40 adjacency)",
+  "conclusion": "15 Monster supersingular primes = W(3,3) linear expressions. 196883 = (v+Phi_6)(v+k+Phi_6)(Phi_12-lambda) = 47*59*71. McKay 196884 = K(Leech) + mu*q^4. Emergence W(3,3)->E_8->H_4->R^4. Exceptional Lie cascade: D_4 = P_2, gaps 50/55/115 substrate. T_3B coefficients land on -k, 2*q^q. The 200-byte universe."
+}
