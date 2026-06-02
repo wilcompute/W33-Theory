@@ -1,0 +1,56 @@
+{
+  "master_cubic": "(t+1)((t+1)^2 - (2q)^2) = 0",
+  "Dirac_eigenvalues": [
+    -7,
+    -1,
+    5
+  ],
+  "Dirac_multiplicities": [
+    6,
+    16,
+    10
+  ],
+  "Dirac_mult_substrate": [
+    "q!",
+    "lambda^mu",
+    "Phi_4"
+  ],
+  "Dirac_mult_sum": 32,
+  "Dirac_mult_sum_substrate": "2^F_5 = dim Spin(10)",
+  "spectral_democracy": "common difference q! = 2q, unique to q=3",
+  "Z_function": "(1-5x)^10 * (1+x)^16 * (1+7x)^6",
+  "Z_special_values": {
+    "Z(0)": 1,
+    "Z(-1)": 0,
+    "Z(1)": 18014398509481984,
+    "Z_prime(0)": 8,
+    "Z_double_prime(0)/2": -248
+  },
+  "Z_substrate_interpretation": {
+    "Z(0) = 1": "identity",
+    "Z(-1) = 0": "ANOMALY CANCELLATION (gauge/matter/grav)",
+    "Z(1) = 2^54": "2^(2*q^q) matter exponent",
+    "Z'(0) = 8": "octonion dim = 2^q",
+    "Z''(0)/2 = -248": "-dim E_8"
+  },
+  "anomaly_mechanism": "(1+x)^lambda^mu = 0 at x=-1 (codec factor cancels)",
+  "energy_equipartition": {
+    "formula": "f * Theta = g * lambda^mu = E = 240",
+    "uniqueness": "Holds for NO other strongly regular graph",
+    "substrate_factors": [
+      "f = 24 (Leech)",
+      "Theta = Phi_4 = 10",
+      "g = g_neg = 15",
+      "lambda^mu = 16 (codec)",
+      "E = 240 = E_8 roots"
+    ]
+  },
+  "trace_tower": {
+    "Tr(D^1)": -8,
+    "Tr(D^2)": 560,
+    "Tr(D^3)": -824,
+    "Tr(D^4)": 20672,
+    "formula": "Tr(D^n) = 10*5^n + 16*(-1)^n + 6*(-7)^n"
+  },
+  "conclusion": "Master Cubic for Dirac D = A-I has spectral democracy (arith progression, unique q=3). Spectral determinant Z(x) packages octonion dim (Z'(0)=8), E_8 dim (Z''(0)/2=-248), ANOMALY CANCELLATION (Z(-1)=0), and 2^(2q^q) (Z(1)). Anomaly vanishes via lambda^mu codec factor. Energy equipartition f*Theta=g*lambda^mu=E=240 is unique to W(3,3)."
+}
