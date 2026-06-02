@@ -1,0 +1,59 @@
+{
+  "part": "MMCD",
+  "theorem": "Frame action / G2 Weyl quotient theorem",
+  "carrier": "six one-factorization frames of K4,4 from the Fano hinge chart",
+  "sequence": "Aut(K4,4) acts on six frames with size-16 identity fiber and image Aut(K3,3)",
+  "groups": {
+    "Aut_K44_order": 1152,
+    "frame_action_order": 72,
+    "identity_fiber_order": 16,
+    "identity_fiber_structure": "elementary abelian 2^4",
+    "frame_action_group": "Aut(K3,3), order 72",
+    "frame_vertex_stabilizer_order": 12,
+    "Weyl_G2_order": 12
+  },
+  "root_graph": {
+    "vertices": "six K4,4 one-factorization frames = six positive G2 root sectors",
+    "bipartition": [[0, 3, 4], [1, 2, 5]],
+    "reading": "3 short positive roots + 3 long positive roots",
+    "edges": 9,
+    "degree": 3,
+    "graph": "K3,3"
+  },
+  "decompositions_of_1152": {
+    "aut_k44": 1152,
+    "identity_fiber_16_times_frame_action_72": 1152,
+    "codec_count_16_times_positive_roots_6_times_weyl_12": 1152,
+    "tomotope_axes_8_times_affine_stabilizer_24_times_root_selector_6": 1152,
+    "two_parities_times_576": 1152
+  },
+  "interpretation": "The full K4,4 automorphism group induces Aut(K3,3) on the six one-factorization frames.  The identity fiber has order 16 and elementary 2^4 structure.  Therefore 1152 = 16*72 and 72 = 6*12, so the six frames form positive G2 root sectors and each frame has a 12-element Weyl stabilizer.  The six frames carry a canonical K3,3 short/long-root graph with 9=q^2 cross-relations.",
+  "checks": {
+    "inherits_g2_root_selector": true,
+    "aut_k44_order_1152": true,
+    "factorization_frame_count_6": true,
+    "frame_action_order_72": true,
+    "identity_fiber_order_16": true,
+    "orbit_fiber_identity_1152_equals_16_times_72": true,
+    "identity_fiber_is_elementary_abelian_2_4": true,
+    "identity_fiber_axis_orbits_two_parity_halves": true,
+    "stabilizer_orbit_pattern_1_2_3": true,
+    "recovered_frame_bipartition_3_plus_3": true,
+    "frame_root_graph_k33_edge_count_9": true,
+    "frame_root_graph_degree_3": true,
+    "frame_action_preserves_k33_bipartition_or_swaps": true,
+    "frame_action_equals_aut_k33": true,
+    "aut_k33_order_72": true,
+    "frame_action_order_profile_matches_aut_k33": true,
+    "frame_vertex_stabilizer_order_12": true,
+    "vertex_stabilizer_is_weyl_g2_order_12": true,
+    "positive_g2_root_count_6": true,
+    "oriented_g2_root_count_12": true,
+    "root_graph_edges_q_squared": true,
+    "root_graph_bipartition_as_short_long_3_3": true,
+    "all_decompositions_1152": true,
+    "frame_action_72_equals_6_times_weyl_12": true
+  },
+  "n_verified": 24,
+  "n_checks": 24
+}
