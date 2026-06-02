@@ -1,0 +1,59 @@
+{
+  "part": "MMCCCXCIX",
+  "theorem": "K4,4 one-factorization / G2 root selector theorem",
+  "carrier": "Q4 antipodal quotient K4,4 with F2^3 Fano axis labels",
+  "canonical_factorization": {
+    "generators": ["001", "010", "100", "111"],
+    "description": "four odd-generator perfect matchings p -> p+s from even axes to odd axes",
+    "matchings": 4,
+    "edges_per_matching": 4
+  },
+  "groups": {
+    "Aut_K44_order": 1152,
+    "affine_hinge_group_order": 192,
+    "stabilizer_of_canonical_factorization": 192,
+    "orbit_size": 6,
+    "index": 6
+  },
+  "factorization_orbit": {
+    "one_factorizations": 6,
+    "perfect_matchings_total": 24,
+    "partition": "the six one-factorizations are pairwise disjoint at the matching level and partition all 24 perfect matchings of K4,4",
+    "oriented_root_sectors": 12
+  },
+  "decompositions_of_1152": {
+    "full_K44_auto": 1152,
+    "affine_hinge_stabilizer_times_six_frames": 1152,
+    "six_positive_g2_root_sectors_times_192": 1152,
+    "twelve_oriented_g2_roots_times_96": 1152,
+    "twentyfour_matchings_times_48": 1152
+  },
+  "interpretation": "The previous 192-element affine Fano-hinge symmetry is exactly the stabilizer of one affine generator one-factorization of K4,4.  The full K4,4 automorphism group has order 1152 and moves this frame through six disjoint one-factorization frames.  Those six frames partition all 24 perfect matchings, giving a six-sector selector naturally read as the six positive G2 roots; orienting each frame gives 12 root sectors, matching the full G2 root count and the CS level k=12.",
+  "checks": {
+    "inherits_affine_symmetry": true,
+    "k44_edges_16": true,
+    "canonical_factorization_4_matchings": true,
+    "canonical_matchings_are_perfect_size_4": true,
+    "canonical_factorization_partitions_edges": true,
+    "all_perfect_matchings_24": true,
+    "full_k44_aut_order_1152": true,
+    "affine_hinge_group_order_192": true,
+    "affine_group_is_factorization_stabilizer": true,
+    "orbit_has_six_factorizations": true,
+    "orbit_stabilizer_index_6": true,
+    "each_factorization_partitions_k44": true,
+    "distinct_factorizations_share_no_perfect_matching": true,
+    "six_factorizations_partition_all_24_matchings": true,
+    "total_orbit_matching_count_6_times_4_24": true,
+    "each_k44_edge_occurs_in_each_factorization_once": true,
+    "oriented_root_sectors_12": true,
+    "g2_positive_root_count_6": true,
+    "g2_total_root_count_12": true,
+    "conjugate_stabilizers_all_192": true,
+    "decompositions_all_1152": true,
+    "tomotope_scale_192_times_g2_6": true,
+    "fano_24_matchings_as_6_frames_of_4": true
+  },
+  "n_verified": 23,
+  "n_checks": 23
+}
