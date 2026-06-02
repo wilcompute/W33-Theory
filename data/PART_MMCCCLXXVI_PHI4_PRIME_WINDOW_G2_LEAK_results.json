@@ -1,0 +1,31 @@
+{
+  "part": "MMCCCLXXVI",
+  "theorem": "Phi4 prime window G2 leak theorem",
+  "counts": {
+    "window": 100,
+    "all_primes_to_window": 25,
+    "substrate_primes_in_window": 19,
+    "leak_primes_in_window": 6,
+    "substrate_primes_total": 21,
+    "substrate_primes_outside_window": 2,
+    "substrate_plus_first_leak": 27,
+    "L_S_2": 1.6400997481761965,
+    "zeta_2": 1.6449340668482264,
+    "L_S_2_over_zeta_2": 0.997061086660274
+  },
+  "sets": {
+    "leak_primes_in_window": [53, 61, 73, 79, 83, 97],
+    "substrate_primes_outside_window": [127, 163]
+  },
+  "identities": {
+    "prime_window": "pi(100)=25=F5^2",
+    "window_split": "25=19+6=Heegner6+positive_G2_roots",
+    "substrate_completion": "|S|=21=19+2=Heegner6+lambda",
+    "first_leak_completion": "|S|+6=27=q^3",
+    "packet_gap": "152=2^q*19",
+    "analytic_signal": "L_S(2)/zeta(2) ~= 0.997061"
+  },
+  "claim_boundary": "This is a prime-window and count theorem. It does not by itself prove that the six leak primes are individually roots of a canonical G2 representation.",
+  "n_verified": 15,
+  "n_checks": 15
+}
