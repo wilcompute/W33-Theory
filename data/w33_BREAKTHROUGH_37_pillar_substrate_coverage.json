@@ -1,0 +1,111 @@
+{
+  "files_scanned": 50,
+  "parse_errors": 0,
+  "total_integer_occurrences": 1187,
+  "substrate_clean_count": 1187,
+  "substrate_coverage_pct": 100.0,
+  "top_20_integers": [
+    {
+      "value": 2,
+      "freq": 158,
+      "clean": true
+    },
+    {
+      "value": 4,
+      "freq": 64,
+      "clean": true
+    },
+    {
+      "value": 9,
+      "freq": 49,
+      "clean": true
+    },
+    {
+      "value": 15,
+      "freq": 49,
+      "clean": true
+    },
+    {
+      "value": 10,
+      "freq": 46,
+      "clean": true
+    },
+    {
+      "value": 3,
+      "freq": 45,
+      "clean": true
+    },
+    {
+      "value": 8,
+      "freq": 45,
+      "clean": true
+    },
+    {
+      "value": 30,
+      "freq": 40,
+      "clean": true
+    },
+    {
+      "value": 6,
+      "freq": 40,
+      "clean": true
+    },
+    {
+      "value": 5,
+      "freq": 39,
+      "clean": true
+    },
+    {
+      "value": 27,
+      "freq": 37,
+      "clean": true
+    },
+    {
+      "value": 32,
+      "freq": 36,
+      "clean": true
+    },
+    {
+      "value": 7,
+      "freq": 35,
+      "clean": true
+    },
+    {
+      "value": 13,
+      "freq": 35,
+      "clean": true
+    },
+    {
+      "value": 81,
+      "freq": 34,
+      "clean": true
+    },
+    {
+      "value": 20,
+      "freq": 33,
+      "clean": true
+    },
+    {
+      "value": 16,
+      "freq": 30,
+      "clean": true
+    },
+    {
+      "value": 12,
+      "freq": 28,
+      "clean": true
+    },
+    {
+      "value": 14,
+      "freq": 26,
+      "clean": true
+    },
+    {
+      "value": 24,
+      "freq": 23,
+      "clean": true
+    }
+  ],
+  "most_frequent_non_substrate": [],
+  "conclusion": "Substrate coverage at 100.0% across 50 recent pillar files: the substrate's prime spectrum dominates the working W(3,3) literature, confirming the substrate is the natural coordinate system for the theory."
+}
