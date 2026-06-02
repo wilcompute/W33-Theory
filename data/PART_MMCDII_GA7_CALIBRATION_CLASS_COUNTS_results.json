@@ -1,0 +1,10 @@
+{
+  "part": "MMCDII",
+  "theorem": "GA7 calibration class count theorem",
+  "counts": {"primaries": 30, "signings_per_primary": 128, "total": 3840},
+  "class_distribution": {"4": 192, "8": 192, "10": 512, "12": 928, "14": 1408, "16": 128, "28": 480},
+  "weighted_laws": {"all": 53760, "pseudo": 40320, "all_average": 14, "pseudo_average": 12},
+  "dictionary": {"21-7": "14", "28": "v-k", "35": "7*5", "480": "30*16"},
+  "n_verified": 19,
+  "n_checks": 19
+}
