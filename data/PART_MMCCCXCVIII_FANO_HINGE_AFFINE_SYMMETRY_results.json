@@ -1,0 +1,53 @@
+{
+  "part": "MMCCCXCVIII",
+  "theorem": "Fano hinge affine symmetry theorem",
+  "objects": {
+    "axis_space": "F2^3, eight antipodal Q4 axes",
+    "hinge_axis": "000",
+    "toroidal_axes": "seven nonzero Fano points",
+    "k44_edges": "Cay(F2^3, odd-weight generators)",
+    "fano_lines": 7
+  },
+  "groups": {
+    "GL_3_2_order": 168,
+    "linear_fano_group": "GL(3,2) ≅ PSL(2,7), order 168",
+    "odd_hyperplane_stabilizer_order": 24,
+    "odd_hyperplane_stabilizer_reading": "S4 on the four hinge-adjacent axes, inducing S3 on the three nonadjacent axes",
+    "affine_chart_symmetry_order": 192,
+    "full_K44_automorphism_order": 1152,
+    "index_in_full_K44_auto": 6
+  },
+  "decompositions_of_192": {
+    "8_axes_times_24_local_fano_stabilizer": 192,
+    "16_codecs_times_12_flags": 192,
+    "24_tetrahedral_plus_168_toroidal": 192,
+    "7_toroidal_axes_times_24_plus_24_tetrahedral": 192,
+    "psl27_plus_tetrahedral_24": 192
+  },
+  "affine_symmetry_reading": "The 192 tomotope flag scale is exactly the affine Fano-hinge chart symmetry: 8 possible hinge axes times the 24-element linear stabilizer of the odd Fano hyperplane.  Equivalently, it is 24 tetrahedral flags plus the 168 PSL(2,7) toroidal flags.",
+  "checks": {
+    "inherits_fano_axis_transition": true,
+    "gl32_order_168": true,
+    "gl32_fano_line_action_order_168": true,
+    "linear_stabilizer_of_odd_hyperplane_order_24": true,
+    "functional_stabilizer_order_24": true,
+    "linear_stabilizer_preserves_fano_lines": true,
+    "linear_stabilizer_preserves_odd_even_split": true,
+    "linear_stabilizer_is_S4_on_odd_points": true,
+    "linear_stabilizer_induces_S3_on_even_points": true,
+    "cayley_edge_count_16": true,
+    "affine_stabilizer_order_192": true,
+    "affine_stabilizer_preserves_k44_edges": true,
+    "each_hinge_image_has_24_symmetries": true,
+    "each_local_hinge_stabilizer_order_24": true,
+    "translation_parity_half_preserve_half_swap": true,
+    "full_k44_auto_group_larger_1152": true,
+    "tomotope_flag_scale_192": true,
+    "psl27_localized_inside_192_as_168_plus_24": true,
+    "fano_boundary_line_count_7": true,
+    "axis_count_8_and_toroidal_count_7": true,
+    "odd_even_axis_split_4_4_total_with_hinge": true
+  },
+  "n_verified": 21,
+  "n_checks": 21
+}
