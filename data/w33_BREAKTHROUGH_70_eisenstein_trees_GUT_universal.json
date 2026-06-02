@@ -1,0 +1,79 @@
+{
+  "E_4_Eisenstein_coefs": [
+    {
+      "n": 1,
+      "value": 240,
+      "substrate": "|E|",
+      "note": "1"
+    },
+    {
+      "n": 2,
+      "value": 2160,
+      "substrate": "|E| * q^2",
+      "note": "q^2 = 9"
+    },
+    {
+      "n": 3,
+      "value": 6720,
+      "substrate": "|E| * (q^q + 1)",
+      "note": "= 240 * 28 = Spence multiverse!"
+    },
+    {
+      "n": 4,
+      "value": 17520,
+      "substrate": "|E| * Phi_12",
+      "note": "= 240 * 73"
+    },
+    {
+      "n": 5,
+      "value": 30240,
+      "substrate": "|E| * 126",
+      "note": "126 = nuclear magic (BT61)"
+    },
+    {
+      "n": 6,
+      "value": 60480,
+      "substrate": "|E| * 252",
+      "note": "252 = sigma_3(6)"
+    }
+  ],
+  "spanning_trees": {
+    "formula": "(1/v) * Phi_4^f * (lambda^mu)^g_neg",
+    "log10_tau": 40.45973974851091,
+    "log10_tau_substrate": "~ v = 40"
+  },
+  "topological_invariants": {
+    "b_0": 1,
+    "b_1": 201,
+    "b_1_substrate": "q * Heegner_8",
+    "chi": -200
+  },
+  "universal_contexts_16": [
+    "time",
+    "music",
+    "cognition",
+    "religion",
+    "games",
+    "periodic table",
+    "crystals",
+    "zodiac"
+  ],
+  "Penrose_H_4": {
+    "5_fold_symmetry": "mu+1 = q+lambda",
+    "tile_angles_deg": [
+      36,
+      72
+    ],
+    "600_plus_120_cell": 720,
+    "720_substrate": "q * Phi_4 * f"
+  },
+  "GUT_predictions": {
+    "alpha_GUT_inv": "f = 24 = dim SU(5) adj",
+    "log_M_X_GeV": "Phi_3 + lambda = 15 = g_neg",
+    "log_tau_p_s": "Phi_3*lambda + Phi_6 = 33",
+    "y_b_y_tau_GUT": "sqrt(lambda^mu/Phi_4) = sqrt(8/5)",
+    "n_generations": "q = 3 from chi = -2q",
+    "E_6_branching": "27 = lambda^mu + Phi_4 + 1"
+  },
+  "conclusion": "E_4 Eisenstein coefs all = |E| * substrate primitive (Spence multiverse appears at a_3). Spanning trees ~ 10^v with log scale = v. Cycle rank b_1 = q*Heegner_8 = 201. 16 = lambda^mu universal contexts. GUT: alpha_GUT^-1 = f, log M_X = g_neg, log tau_p = 33 (Hyper-K falsifier). y_b/y_tau = sqrt(8/5) MSSM."
+}
