@@ -1,0 +1,30 @@
+{
+  "cascade": {
+    "Cl(0,7)_generators": 7,
+    "so(7)_bivectors": 21,
+    "Fano_relations": 7,
+    "G_2_derivations": 14,
+    "associative_triples": 7,
+    "non_associative_triples": 28,
+    "all_imaginary_triples": 35
+  },
+  "substrate_factorizations": {
+    "7": "Phi_6 (Fano / Cl(0,7) gens / associative triples)",
+    "21": "q * Phi_6 (so(7) bivectors / Spin(7) dim)",
+    "14": "lambda * Phi_6 = k + lambda = dim(G_2)",
+    "28": "mu * Phi_6 = P_2 = non-associative triples",
+    "35": "F_5 * Phi_6 = all imaginary triples"
+  },
+  "rank_formula": "21 - 7 = (q-1)*Phi_6 = lambda*Phi_6 = 14 = dim(G_2)",
+  "new_interpretation": "P_2 perfect number = non-associative octonion triples",
+  "octonion_circle_closure": [
+    "BT24 (G_2 dim)",
+    "BT26 (Bott)",
+    "BT28 (Viazovska)",
+    "BT30 (Hurwitz/Hopf)",
+    "BT31 (Spin/Cl)",
+    "BT34 (G_2 K33)",
+    "BT38 (Cl->G_2 derivation)"
+  ],
+  "conclusion": "G_2 = Cl(0,7)/Fano-relations construction is substrate-native: 21 - 7 = lambda*Phi_6 = dim(G_2). Non-associative octonion triples = P_2 = mu*Phi_6 perfect number. Closes the full G_2-octonion-Clifford-Spin substrate circle (BT24, 26, 28, 30, 31, 34, 38)."
+}
