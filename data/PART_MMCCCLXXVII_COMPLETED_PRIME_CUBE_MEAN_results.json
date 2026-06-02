@@ -1,0 +1,30 @@
+{
+  "part": "MMCCCLXXVII",
+  "theorem": "Completed prime cube mean theorem",
+  "counts": {
+    "dense_shell_primes_to_47": 15,
+    "transition_shell_primes_48_to_100": 10,
+    "transition_substrate": 4,
+    "transition_leak": 6,
+    "outside_substrate": 2,
+    "completed_cube_size": 27,
+    "completed_cube_sum": 1350,
+    "completed_cube_mean": 50
+  },
+  "sets": {
+    "transition_substrate": [59, 67, 71, 89],
+    "transition_leak": [53, 61, 73, 79, 83, 97],
+    "outside_substrate": [127, 163]
+  },
+  "identities": {
+    "count_decomposition": "27 = 15 + 10 + 2 = g_neg + Phi4 + lambda",
+    "transition_split": "10 = 4 + 6 = chi + positive_G2_roots",
+    "substrate_plus_leak": "27 = |S| + 6 = 21 + positive_G2_roots",
+    "mean_law": "sum(C)=1350 and |C|=27, so mean(C)=50=E1*F5=v+E1",
+    "sum_factorization": "1350 = 2*3^3*5^2 = lambda*q^q*F5^2",
+    "shell_sums": "328 + 732 + 290 = 1350"
+  },
+  "claim_boundary": "This proves a finite prime-window cube and mean law. It does not make the completed set into a field or prove a multiplicative group law on the 27 primes.",
+  "n_verified": 24,
+  "n_checks": 24
+}
