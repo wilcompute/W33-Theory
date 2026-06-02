@@ -1,0 +1,59 @@
+{
+  "part": "MMCCCXCVII",
+  "theorem": "Fano axis codec transition theorem",
+  "axis_labeling": "axis(p) = {(0,p), (1,1-p)} for p in F2^3; hinge axis is p=000; seven toroidal axes are nonzero Fano points",
+  "quotient_graph": {
+    "description": "Q4/{±} on axis labels is Cay(F2^3, odd-weight generators)",
+    "generators": ["001", "010", "100", "111"],
+    "edge_count": 16,
+    "generator_matching_sizes": {"001": 4, "010": 4, "100": 4, "111": 4},
+    "graph": "K4,4 with parity bipartition of F2^3"
+  },
+  "codec_transition_lifts": {
+    "same_family_last_bit_flips": 24,
+    "cs_duality_first_bit_flips": 8,
+    "reading": "last three bit flips translate C_p to C_{p+e_i} and S_p to S_{p+e_i}; first bit flip sends C_p to S_{1-p}"
+  },
+  "fano_split": {
+    "odd_adjacent_axes": ["001", "010", "100", "111"],
+    "even_nonadjacent_axes": ["011", "101", "110"],
+    "mixed_lines_from_odd_pairs": [["001", "010", "011"], ["001", "100", "101"], ["001", "110", "111"], ["010", "100", "110"], ["010", "101", "111"], ["011", "100", "111"]],
+    "even_line": ["011", "101", "110"],
+    "line_count": 7,
+    "incidence_count": 21
+  },
+  "internal_k4_to_nonadjacent_axes": {
+    "011": [["001", "010"], ["100", "111"]],
+    "101": [["001", "100"], ["010", "111"]],
+    "110": [["001", "111"], ["010", "100"]]
+  },
+  "checks": {
+    "inherits_hinge_weld": true,
+    "axis_label_bijection_8": true,
+    "hinge_is_zero_axis": true,
+    "toroidal_axes_are_nonzero_fano_points": true,
+    "odd_adjacent_axes_4": true,
+    "even_nonadjacent_axes_3": true,
+    "q4_quotient_edge_count_16": true,
+    "quotient_edges_lift_twice": true,
+    "quotient_is_cayley_f2_3_odd_generators": true,
+    "quotient_adjacency_iff_odd_difference": true,
+    "generator_matchings_partition_edges": true,
+    "four_generators_are_hinge_adjacent_axes": true,
+    "codec_edge_lift_decomposition_8_first_24_same_family": true,
+    "fano_line_count_7": true,
+    "mixed_lines_from_odd_pairs_6": true,
+    "even_line_is_seventh_line": true,
+    "split_lines_equal_fano_lines": true,
+    "internal_k4_edges_6": true,
+    "internal_k4_edges_pair_to_three_even_axes": true,
+    "odd_pair_sum_profile_two_per_even_axis": true,
+    "fano_incidence_total_21": true,
+    "mixed_plus_even_incidence_18_plus_3": true,
+    "fano_points_match_toroidal_axes": true,
+    "psl27_flag_localization_still_7x2x12": true,
+    "tomotope_flags_still_16x12": true
+  },
+  "n_verified": 25,
+  "n_checks": 25
+}
