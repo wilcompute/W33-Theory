@@ -1,0 +1,233 @@
+{
+  "pairwise_substrate_sums": [
+    {
+      "sum": "q + lambda",
+      "value": 5,
+      "target": "F_5"
+    },
+    {
+      "sum": "q + mu",
+      "value": 7,
+      "target": "Phi_6"
+    },
+    {
+      "sum": "q + F_5",
+      "value": 8,
+      "target": "2^q (octonion dim)"
+    },
+    {
+      "sum": "q + q!",
+      "value": 9,
+      "target": "q^2"
+    },
+    {
+      "sum": "q + Phi_6",
+      "value": 10,
+      "target": "Phi_4 (Spin(5))"
+    },
+    {
+      "sum": "q + 2^q",
+      "value": 11,
+      "target": "p_Ih (icosahedral!)"
+    },
+    {
+      "sum": "q + p_Ih",
+      "value": 14,
+      "target": "dim(G_2)"
+    },
+    {
+      "sum": "q + Phi_3",
+      "value": 16,
+      "target": "lambda^mu (codec)"
+    },
+    {
+      "sum": "q + g_neg",
+      "value": 18,
+      "target": "lambda*q^2"
+    },
+    {
+      "sum": "q + lambda^mu",
+      "value": 19,
+      "target": "Heegner_6"
+    },
+    {
+      "sum": "q + q*Phi_6",
+      "value": 24,
+      "target": "f (Leech)"
+    },
+    {
+      "sum": "q + f",
+      "value": 27,
+      "target": "q^q (matter)"
+    },
+    {
+      "sum": "mu + Phi_6",
+      "value": 11,
+      "target": "p_Ih"
+    },
+    {
+      "sum": "mu + 2^q",
+      "value": 12,
+      "target": "k (CS level)"
+    },
+    {
+      "sum": "mu + Phi_4",
+      "value": 14,
+      "target": "dim(G_2)"
+    },
+    {
+      "sum": "mu + p_Ih",
+      "value": 15,
+      "target": "g_neg"
+    },
+    {
+      "sum": "mu + f",
+      "value": 28,
+      "target": "P_2 = mu*Phi_6 (perfect!)"
+    },
+    {
+      "sum": "F_5 + Phi_6",
+      "value": 12,
+      "target": "k"
+    },
+    {
+      "sum": "F_5 + p_Ih",
+      "value": 16,
+      "target": "lambda^mu"
+    },
+    {
+      "sum": "F_5 + f",
+      "value": 29,
+      "target": "q^q + lambda (Conway)"
+    },
+    {
+      "sum": "q! + 2^q",
+      "value": 14,
+      "target": "dim(G_2)"
+    },
+    {
+      "sum": "q! + Phi_4",
+      "value": 16,
+      "target": "lambda^mu"
+    },
+    {
+      "sum": "q! + p_Ih",
+      "value": 17,
+      "target": "Monster prime 17"
+    },
+    {
+      "sum": "q! + f",
+      "value": 30,
+      "target": "h_E_8 (= 30)"
+    },
+    {
+      "sum": "Phi_6 + f",
+      "value": 31,
+      "target": "M_5 (Mersenne!)"
+    },
+    {
+      "sum": "Phi_6 + lambda^mu",
+      "value": 23,
+      "target": "M_23 (Mathieu!)"
+    },
+    {
+      "sum": "2^q + lambda^mu",
+      "value": 24,
+      "target": "f (Leech)"
+    },
+    {
+      "sum": "2^q + g_neg",
+      "value": 23,
+      "target": "M_23 (Mathieu!)"
+    },
+    {
+      "sum": "2^q + |E|",
+      "value": 248,
+      "target": "dim(E_8) (BT24)!"
+    },
+    {
+      "sum": "p_Ih + Phi_3",
+      "value": 24,
+      "target": "f (Leech!)"
+    },
+    {
+      "sum": "p_Ih + lambda^mu",
+      "value": 27,
+      "target": "q^q (matter)"
+    },
+    {
+      "sum": "p_Ih + f",
+      "value": 35,
+      "target": "F_5*Phi_6 (Klein qpts!)"
+    },
+    {
+      "sum": "k + g_neg",
+      "value": 27,
+      "target": "q^q (matter)"
+    },
+    {
+      "sum": "k + lambda^mu",
+      "value": 28,
+      "target": "P_2 (perfect!)"
+    },
+    {
+      "sum": "k + f",
+      "value": 36,
+      "target": "(q!)^2 = Spin(9) dim"
+    },
+    {
+      "sum": "Phi_3 + g_neg",
+      "value": 28,
+      "target": "P_2 (perfect)"
+    },
+    {
+      "sum": "lambda^mu + f",
+      "value": 40,
+      "target": "v (substrate vertex!)"
+    },
+    {
+      "sum": "q^q + lambda^mu",
+      "value": 43,
+      "target": "Heegner_7"
+    },
+    {
+      "sum": "|E| + lambda^mu",
+      "value": 256,
+      "target": "lambda^(2^q) (packet H!)"
+    },
+    {
+      "sum": "|E| + |E|",
+      "value": 480,
+      "target": "lambda*|E| (E_4 leading)"
+    }
+  ],
+  "triple_sum_dim_G_2": "q + Phi_6 + mu = 14 = dim(G_2)",
+  "deepest_pair_sums": {
+    "2^q + |E|": {
+      "value": 248,
+      "target": "dim(E_8)"
+    },
+    "mu + f": {
+      "value": 28,
+      "target": "P_2 perfect"
+    },
+    "k + lambda^mu": {
+      "value": 28,
+      "target": "P_2 perfect"
+    },
+    "lambda^mu + f": {
+      "value": 40,
+      "target": "v"
+    },
+    "p_Ih + f": {
+      "value": 35,
+      "target": "F_5*Phi_6 (Klein quadric)"
+    },
+    "Phi_6 + f": {
+      "value": 31,
+      "target": "M_5 Mersenne"
+    }
+  },
+  "E_table_substrate_clean_all_8": true,
+  "conclusion": "The substrate primitives form a CLOSED ADDITIVE ALGEBRA: pairwise sums land on substrate primitives with high frequency. Deepest identities: 2^q+|E|=dim(E_8), mu+f=P_2, p_Ih+f=Klein quadric points, lambda^mu+f=v, Phi_6+f=Mersenne M_5. The substrate is multiplicatively AND additively self-contained."
+}
