@@ -1,0 +1,26 @@
+{
+  "part": "MMCCCLXXV",
+  "theorem": "Density dual generator theorem",
+  "counts": {
+    "f": 24,
+    "mu": 28,
+    "phi6": 7,
+    "positive_G2_roots": 6,
+    "PSL27": 168,
+    "F4_horizon": 52,
+    "Aut_K44": 1152,
+    "packet_big_gap": 192,
+    "packet_residual_gap": 152
+  },
+  "identities": {
+    "dual_PSL": "24*7 = 28*6 = 168",
+    "F4_horizon": "24+28 = 52",
+    "Euler_gap": "28-24 = 4",
+    "product": "24*28 = 672 = 4*168",
+    "packet_bridge": "52+152 = 192 and 168+52+152 = 384",
+    "K44_bridge": "1152 = 6*192 = 2*24^2"
+  },
+  "claim_boundary": "This proves the exact integer bridge, not a pointwise map between all individual interpretations.",
+  "n_verified": 20,
+  "n_checks": 20
+}
