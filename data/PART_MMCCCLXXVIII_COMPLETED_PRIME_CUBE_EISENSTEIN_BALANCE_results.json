@@ -1,0 +1,29 @@
+{
+  "part": "MMCCCLXXVIII",
+  "theorem": "Completed prime cube Eisenstein balance theorem",
+  "counts": {
+    "completed_size": 27,
+    "split_mod_3": 13,
+    "inert_mod_3": 13,
+    "ramified_mod_3": 1,
+    "substrate_profile": {"0": 1, "1": 9, "2": 11},
+    "first_leak_profile": {"1": 4, "2": 2},
+    "transition_profile": {"1": 5, "2": 5}
+  },
+  "sets": {
+    "ramified_mod_3_primes": [3],
+    "first_leak_split_primes": [61, 73, 79, 97],
+    "first_leak_inert_primes": [53, 83]
+  },
+  "identities": {
+    "cube_balance": "27 = 13 split + 13 inert + 1 ramified = 2*Phi3 + 1",
+    "substrate_imbalance": "substrate has inert excess lambda=2",
+    "leak_correction": "first leak has split excess lambda=2",
+    "completed_balance": "(9+4) split = (11+2) inert = 13 = Phi3",
+    "transition_balance": "48<p<=100 has 5 split and 5 inert primes",
+    "G2_leak": "six first leaks carry the positive G2-root count and repair Eisenstein balance"
+  },
+  "claim_boundary": "This proves residue-class balance in the Eisenstein prime split/inert sense. It does not assign the six leak primes to individual G2 roots.",
+  "n_verified": 22,
+  "n_checks": 22
+}
