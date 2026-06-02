@@ -1,0 +1,48 @@
+{
+  "part": "MMCCCXCVI",
+  "theorem": "Hinge K5 axis / tomotope weld",
+  "q4_quotient": {"Q4_vertices": 16, "Q4_edges": 32, "antipodal_axes": 8, "quotient_edges": 16, "quotient_graph": "K4,4"},
+  "hinge_split": {"hinge_axis": 1, "adjacent_axes": 4, "nonadjacent_toroidal_axes": 3, "tomotope_f_vector": [4, 12, 16, 8], "sum": 40},
+  "k5_axis_model": {
+    "K5_vertices": "hinge + four adjacent axes",
+    "K5_edges": 10,
+    "hinge_spokes": 4,
+    "adjacent_axis_pair_edges": 6,
+    "six_internal_edges_pair_to_nonadjacent_axes": 3
+  },
+  "axis_incidence": {
+    "matrix_shape": "8 x 10",
+    "rank": 7,
+    "row_sum_profile": {"2": 3, "4": 5},
+    "column_sum_profile": {"2": 4, "3": 6},
+    "linear_relation": "H - A0 - A1 - A2 - A3 + 2N0 + 2N1 + 2N2 = 0"
+  },
+  "flag_accounting": {"16_codecs_x_12_flags": 192, "tetrahedral_flags": 24, "toroidal_flags": 168, "PSL_2_7": 168},
+  "checks": {
+    "inherits_gap_tomography": true,
+    "q4_vertices_16": true,
+    "q4_edges_32": true,
+    "antipodal_axes_8": true,
+    "axis_parities_4_even_4_odd": true,
+    "quotient_edges_16": true,
+    "each_quotient_edge_lifts_twice": true,
+    "quotient_is_k44": true,
+    "hinge_adjacent_4_nonadjacent_3": true,
+    "tomotope_f_vector_from_hinge": true,
+    "tomotope_sum_40": true,
+    "k5_vertices_hinge_plus_adjacent_axes": true,
+    "k5_edge_count_10": true,
+    "k5_edges_split_4_spokes_6_internal": true,
+    "internal_six_edges_pair_to_three_nonadj_axes": true,
+    "axis_incidence_shape_8x10": true,
+    "axis_incidence_rank_7": true,
+    "axis_incidence_relation_H_minus_As_plus_2Ns": true,
+    "axis_row_sum_profile": true,
+    "edge_column_support_profile": true,
+    "flag_accounting_16x12_192": true,
+    "flag_accounting_24_plus_168": true,
+    "psl27_localized_as_toroidal_flags": true
+  },
+  "n_verified": 23,
+  "n_checks": 23
+}
