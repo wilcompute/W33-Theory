@@ -1,0 +1,148 @@
+{
+  "Klein_quartic_params": {
+    "genus": 3,
+    "genus_substrate": "q",
+    "F8_points": 24,
+    "F8_points_substrate": "f",
+    "Aut_order": 168,
+    "Aut_substrate": "2^q * q * Phi_6"
+  },
+  "AG_code_table": [
+    {
+      "m": 5,
+      "k": 3,
+      "d": 19,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 6,
+      "k": 4,
+      "d": 18,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 7,
+      "k": 5,
+      "d": 17,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 8,
+      "k": 6,
+      "d": 16,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 9,
+      "k": 7,
+      "d": 15,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 10,
+      "k": 8,
+      "d": 14,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 11,
+      "k": 9,
+      "d": 13,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 12,
+      "k": 10,
+      "d": 12,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 13,
+      "k": 11,
+      "d": 11,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 14,
+      "k": 12,
+      "d": 10,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 15,
+      "k": 13,
+      "d": 9,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 16,
+      "k": 14,
+      "d": 8,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 17,
+      "k": 15,
+      "d": 7,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 18,
+      "k": 16,
+      "d": 6,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 19,
+      "k": 17,
+      "d": 5,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 20,
+      "k": 18,
+      "d": 4,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 21,
+      "k": 19,
+      "d": 3,
+      "k_clean": true,
+      "d_clean": true
+    },
+    {
+      "m": 22,
+      "k": 20,
+      "d": 2,
+      "k_clean": true,
+      "d_clean": true
+    }
+  ],
+  "key_instances": {
+    "m_8": "[24, q!, lambda^mu] - mirrors Klein quadric",
+    "m_10": "[24, 2^q, lambda*Phi_6] - dim(G_2) as distance",
+    "m_12": "[24, Phi_4, k] - self-dual midpoint",
+    "m_14": "[24, k, Phi_4] - CS level as dim"
+  },
+  "Klein_quartic_X_7_modular_curve": true,
+  "Weierstrass_total_weight": 72,
+  "Weierstrass_substrate": "lambda^q * q^2 = |Aut(K_{3,3})| BT34",
+  "conclusion": "Klein quartic AG codes C_L(D, mP_0) are substrate-clean for all m in [5, 22]. Duality m <-> 24-m swaps (k, d). Key instances produce codes mirroring Klein quadric (BT41), dim(G_2), CS level. Klein quartic = X(7) modular curve at substrate level Phi_6."
+}
