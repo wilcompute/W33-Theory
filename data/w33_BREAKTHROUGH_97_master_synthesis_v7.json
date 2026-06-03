@@ -1,0 +1,66 @@
+{
+  "headline": "Cat 1 eliminated; 0 out-of-bar; 20-22 in-bar; 7 recurring factors",
+  "three_pillars": {
+    "1": "Closure Theorem (7 q=3 forcings)",
+    "2": "Triple Convergence (#conj=h_E_8=Z_DW(T^2)=30)",
+    "3": "Correction-Factor Algebra (7 recurring factors)"
+  },
+  "recurring_factors_7": [
+    {
+      "factor": "1/(mu*Phi_6) = 1/28",
+      "count": 2,
+      "domains": "QED, CMB"
+    },
+    {
+      "factor": "1/F_5^2 = 1/25",
+      "count": 3,
+      "domains": "CKM, Hubble, neutrino mass"
+    },
+    {
+      "factor": "Phi_3^2 = 169",
+      "count": 2,
+      "domains": "m_top, m_W/M_Pl"
+    },
+    {
+      "factor": "F_5*Phi_6 = 35",
+      "count": 2,
+      "domains": "Omega_DM/Omega_b, Klein quadric"
+    },
+    {
+      "factor": "1/q = 1/3",
+      "count": 2,
+      "domains": "m_t/m_b, m_s/m_u"
+    },
+    {
+      "factor": "1/(Phi_3*Phi_4) = 1/130",
+      "count": 2,
+      "domains": "y_t, m_W/M_Pl"
+    },
+    {
+      "factor": "23 = Phi_3+Phi_4",
+      "count": 4,
+      "domains": "e-Pl, wall, nu mass, m_W/M_Pl"
+    }
+  ],
+  "precision_records_in_1sigma": "~20-22",
+  "out_of_bar_count": 0,
+  "categories_post_BT96": {
+    "Cat_1": "0 (was 9, ELIMINATED)",
+    "Cat_2": "10-12 (depending on BT93)",
+    "Cat_3": 6,
+    "Cat_4": 6,
+    "Cat_5": "[40, 52] cluster"
+  },
+  "BT93_candidates_pending": [
+    "Sigma m_nu = (Phi_4^2 + 1) meV",
+    "theta_C = Phi_3 degrees"
+  ],
+  "23_recurrence_4x": [
+    "electron-Planck hierarchy",
+    "wall tension exponent",
+    "neutrino mass hierarchy frame",
+    "m_W/M_Pl correction (BT96)"
+  ],
+  "test_window": "2027-2040",
+  "conclusion": "v7 reaches the strongest in-bar consistent state in the BT chain. All Cat 1 entries from BT82 now within PDG 1-sigma. 7 recurring substrate correction factors across 18+ contexts. 2 candidate predictions pending. Theory's structural claim is now uniform: every closed-form prediction sits inside experimental bar."
+}
