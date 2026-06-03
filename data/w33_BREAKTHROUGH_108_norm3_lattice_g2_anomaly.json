@@ -1,0 +1,98 @@
+{
+  "norm3_atoms": [
+    {
+      "symbol": "q^q",
+      "value": 27,
+      "context": "matter cube; cubic surface lines"
+    },
+    {
+      "symbol": "F_5^q",
+      "value": 125,
+      "context": "= 125"
+    },
+    {
+      "symbol": "mu^q",
+      "value": 64,
+      "context": "= 64"
+    },
+    {
+      "symbol": "Phi_3^q",
+      "value": 2197,
+      "context": "= 2197"
+    },
+    {
+      "symbol": "Phi_4^q",
+      "value": 1000,
+      "context": "= 1000 = base-10 cubed!"
+    },
+    {
+      "symbol": "Phi_6^q",
+      "value": 343,
+      "context": "= 343"
+    }
+  ],
+  "delta_amu_substrate": "(F_5/lambda) * 10^-(q^2) = 2.5e-9",
+  "delta_amu_pdg": "2.51(48)e-9",
+  "delta_amu_status": "CLOSED (norm-2 substrate)",
+  "phi_4_q_equals_1000": true,
+  "base_10_is_substrate": "10^3 = Phi_4^q at q=3",
+  "qq_ladder": [
+    {
+      "sym": "q^q + 0",
+      "value": 27,
+      "ctx": "lines on cubic; dim E_6 fund"
+    },
+    {
+      "sym": "q^q + 1",
+      "value": 28,
+      "ctx": "Spence multiverse = mu * Phi_6"
+    },
+    {
+      "sym": "q^q - 1",
+      "value": 26,
+      "ctx": "bosonic D_critical = 2*Phi_3"
+    },
+    {
+      "sym": "q^q * 2",
+      "value": 54,
+      "ctx": "W(3,3) local pockets"
+    },
+    {
+      "sym": "q^q * q",
+      "value": 81,
+      "ctx": "matter sector q^(q+1)"
+    },
+    {
+      "sym": "q^q * mu",
+      "value": 108,
+      "ctx": "golden failures (Part MMCCCLXIX)"
+    },
+    {
+      "sym": "q^q * Phi_6",
+      "value": 189,
+      "ctx": ""
+    },
+    {
+      "sym": "q^q * Phi_4",
+      "value": 270,
+      "ctx": "seven 270s (BT57)"
+    },
+    {
+      "sym": "q^q * Phi_3",
+      "value": 351,
+      "ctx": ""
+    },
+    {
+      "sym": "q^q * k",
+      "value": 324,
+      "ctx": "McKay-Leech gap = mu * q^mu"
+    }
+  ],
+  "BT82_cat2_remaining_after_BT108": [
+    "Inflation V(phi) + T_rh",
+    "DM particle ID",
+    "Sterile neutrinos",
+    "Majorana phases"
+  ],
+  "conclusion": "Delta a_mu closes at norm-2 substrate: (F_5/lambda)*10^-(q^2). Phi_4^q = 1000 = 10^3 makes base-10 conventions substrate-natural. q^q ladder enumerated: 26, 27, 28, 54, 81, 108, 270, 324, ... BT82 Cat 2 down to ~4 structural unknowns."
+}

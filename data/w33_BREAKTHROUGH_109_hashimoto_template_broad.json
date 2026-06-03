@@ -1,0 +1,38 @@
+{
+  "hashimoto_template": "Observable = tree + alpha_hat/p_Ih + O(alpha^2)",
+  "k_minus_1_equals_p_Ih": true,
+  "applications": [
+    {
+      "observable": "sin^2 theta_W",
+      "tree": "q/Phi_3 = 3/13",
+      "hashimoto": "+ 1/(p_Ih * alpha^-1)"
+    },
+    {
+      "observable": "a_lepton leading",
+      "tree": "-",
+      "hashimoto": "1/(q!*Phi_3*p_Ih) = 1/858"
+    },
+    {
+      "observable": "Hadronic a_mu",
+      "tree": "-",
+      "hashimoto": "~ Phi_6 * 10^-8"
+    },
+    {
+      "observable": "alpha_em^-1 IR -> M_Z",
+      "tree": "137",
+      "hashimoto": "- q^2 (= -9)"
+    },
+    {
+      "observable": "Higgs trilinear",
+      "tree": "3*lambda_H*v_EW",
+      "hashimoto": "+ Hashimoto refine"
+    },
+    {
+      "observable": "Yukawa b/tau",
+      "tree": "Phi_6/q",
+      "hashimoto": "+ 1/(F_5*Phi_4)"
+    }
+  ],
+  "universal_divisor": "p_Ih = 11 = k - 1 = non-backtracking branching",
+  "conclusion": "Hashimoto template applies to 4+ observables involving 1-loop RG corrections on the W(3,3) edge bus. Universal divisor p_Ih = 11 is the substrate's non-backtracking branching. Mass ratios and tree integers don't need Hashimoto; only RG-radiative observables fit the alpha_hat/p_Ih pattern."
+}
