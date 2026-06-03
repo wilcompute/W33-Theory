@@ -1,0 +1,59 @@
+{
+  "test_results": [
+    {
+      "prediction": "P1 scalar 3.215 TeV",
+      "substrate_form": "Phi_3 * v_EW",
+      "status": "sub-1% off"
+    },
+    {
+      "prediction": "P2 DM mass 2143 GeV",
+      "substrate_form": "lambda * q^2 * Phi_6 * Ogg_7",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P2' sigma_SI 2.4e-48",
+      "substrate_form": "(k/F_5) * 10^-(q!*2^q)",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P3 tau_p 1.4e36 yr",
+      "substrate_form": "(Phi_6/F_5) * 10^((q!)^2)",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P4 r = 0.0222",
+      "substrate_form": "lambda / (q^2 * Phi_4) = 2/90",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P5 m_a = pi * 10^-14 eV",
+      "substrate_form": "pi * 10^-(2*Phi_6)",
+      "status": "pi prefactor"
+    },
+    {
+      "prediction": "P6 CTA gamma 2.142 TeV",
+      "substrate_form": "same as P2",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P7 GW 22 GHz",
+      "substrate_form": "lambda * p_Ih",
+      "status": "CLEAN"
+    },
+    {
+      "prediction": "P8 M_W/sin^2 corr ~1e-4",
+      "substrate_form": "10^-mu",
+      "status": "CLEAN"
+    }
+  ],
+  "clean_count": 7,
+  "total": 9,
+  "new_substrate_factorizations": {
+    "2143_GeV": "lambda * q^2 * Phi_6 * Ogg_7",
+    "22_GHz": "lambda * p_Ih",
+    "tensor_scalar_r": "lambda / (q^2 * Phi_4) = 2/90",
+    "tau_p_prefactor": "Phi_6/F_5 = 7/5",
+    "sigma_SI_prefactor": "k/F_5 = 12/5"
+  },
+  "conclusion": "7 of 9 BT99 predictions factor cleanly through the BT92 8-generator correction lattice. Only pi (in axion mass) and ~0.5% deviation in P1 escape pure substrate primitives. BT99 predictions are NOT independent of the BT85 correction algebra -- they live in the same arithmetic universe."
+}

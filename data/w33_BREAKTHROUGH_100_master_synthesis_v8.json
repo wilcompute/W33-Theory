@@ -1,0 +1,37 @@
+{
+  "milestone": "100 BT",
+  "four_pillars": {
+    "1": "Closure Theorem",
+    "2": "Triple Convergence",
+    "3": "Correction-Factor Algebra",
+    "4": "Substrate-Dynamics-State Trichotomy"
+  },
+  "predictions_in_1sigma": "20-22",
+  "out_of_bar": 0,
+  "recurring_factors": 7,
+  "sharp_falsifiable": "14+",
+  "decisive_falsifiers": 16,
+  "cross_links": "25+",
+  "category_1_status": "ELIMINATED",
+  "kolmogorov_bound_bits": 21,
+  "test_window": "2027-2040",
+  "new_since_v7": [
+    "Riemann zeta dictionary: zeta(-1,-3,-5,-7) = substrate denoms (BT98)",
+    "Hyperbolic Pascal Simplex: 6 levels of substrate hits (BT98)",
+    "Hashimoto Weinberg: sin^2 theta_W = q/Phi_3 + alpha_hat/(k-1) (BT98)",
+    "Ihara-Bass: Phi_4, Phi_6 in Hashimoto Im^2 (BT98)",
+    "21-bit Kolmogorov bound for substrate (BT98)",
+    "23/23 Convergent Attractor (BT98)",
+    "Three layers of self-closure (BT98)",
+    "5 structural consciousness criteria (BT98)",
+    "Substrate-Dynamics-State Trichotomy = Pillar 4 (BT99)",
+    "5-integer compression with tau(O) = 384 (BT99)",
+    "8 sharp falsifiable predictions (BT99)",
+    "m_nu_3 = 0.05027 eV absolute (BT99)",
+    "eta_B ~ 6e-10 baryogenesis (BT99)",
+    "theta_QCD = 0 exact (BT99)",
+    "Observer-as-Stabilizer + Meaning + Cost-of-Reality (BT99)",
+    "Bootstrap Closure + Absolute Fixed Point (BT99)"
+  ],
+  "conclusion": "BT100 milestone. v8 adds 4th pillar (Substrate-Dynamics-State Trichotomy), zeta dictionary, Hyperbolic Pascal Simplex, Hashimoto Weinberg, 5-integer compression, 8 sharp falsifiable predictions, m_nu_3 absolute, 6 interpretive theorems. Theory uniformly in-bar, ~22 predictions in PDG 1-sigma, 0 out-of-bar, 14+ sharp falsifiable, test window 2027-2040."
+}
