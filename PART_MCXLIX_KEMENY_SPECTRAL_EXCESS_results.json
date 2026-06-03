@@ -1,0 +1,135 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "lam": 2,
+    "mu": 4,
+    "f": 24,
+    "g": 15
+  },
+  "kemeny_constant": {
+    "K": {
+      "fraction": "801/20",
+      "numerator": 801,
+      "denominator": 20,
+      "float": 40.05
+    },
+    "formula": "K = 24*(12/10) + 15*(12/16) = 144/5 + 45/4 = 801/20"
+  },
+  "kemeny_spectral_identity": {
+    "K_equals_v_plus_r_over_v": true,
+    "formula_K": {
+      "fraction": "801/20",
+      "numerator": 801,
+      "denominator": 20,
+      "float": 40.05
+    },
+    "Kv": 1602,
+    "Kv_equals_v2_plus_r": true,
+    "Kv_formula": 1602,
+    "K_minus_v": {
+      "fraction": "1/20",
+      "numerator": 1,
+      "denominator": 20,
+      "float": 0.05
+    },
+    "r_over_v": {
+      "fraction": "1/20",
+      "numerator": 1,
+      "denominator": 20,
+      "float": 0.05
+    },
+    "kemeny_excess_identity": true,
+    "statement": "K = v + r/v  where r = 2 (secondary eigenvalue = SRG lambda param)"
+  },
+  "spectral_product_identity": {
+    "k_minus_r": 10,
+    "k_minus_s": 16,
+    "product": 160,
+    "four_v": 160,
+    "identity": "(k-r)*(k-s) = 4*v",
+    "verified": true
+  },
+  "holographic_entropy": {
+    "S_from_alpha_r": {
+      "fraction": "20",
+      "numerator": 20,
+      "denominator": 1,
+      "float": 20.0
+    },
+    "S_from_v_half": {
+      "fraction": "20",
+      "numerator": 20,
+      "denominator": 1,
+      "float": 20.0
+    },
+    "S_from_BH": {
+      "fraction": "20",
+      "numerator": 20,
+      "denominator": 1,
+      "float": 20.0
+    },
+    "formula_alpha_r": "S = alpha * r = 10 * 2 = 20",
+    "formula_v_half": "S = v/2 = 40/2 = 20",
+    "formula_BH": "S = v*k/(8*q) = 480/24 = 20  [Bekenstein-Hawking form]",
+    "identity_v_half": true,
+    "identity_BH": true
+  },
+  "bekenstein_hawking": {
+    "edges": 240,
+    "S_holo": 20,
+    "G_newton": {
+      "fraction": "3",
+      "numerator": 3,
+      "denominator": 1,
+      "float": 3.0
+    },
+    "G_equals_q": true,
+    "formula": "S = |E|/(4*G) with G=q=3",
+    "interpretation": "The Newton constant of the W(3,3) holographic screen equals q = 3, the order of the finite field GF(q) defining W(3,3)."
+  },
+  "kemeny_holographic_bridge": {
+    "K_minus_v": {
+      "fraction": "1/20",
+      "numerator": 1,
+      "denominator": 20,
+      "float": 0.05
+    },
+    "one_over_S": {
+      "fraction": "1/20",
+      "numerator": 1,
+      "denominator": 20,
+      "float": 0.05
+    },
+    "identity": "K - v = 1/S_holo",
+    "verified": true,
+    "statement": "Kemeny constant exceeds v by exactly the inverse holographic entropy: K - v = 1/S = 1/20"
+  },
+  "algebraic_proof": {
+    "numerator": 8,
+    "denominator": 160,
+    "K_excess_algebraic": {
+      "fraction": "1/20",
+      "numerator": 1,
+      "denominator": 20,
+      "float": 0.05
+    },
+    "algebraic_check": true,
+    "numerator_formula": "k*(v+lam-mu-2k) - v*mu",
+    "numerator_from_delta_ym": 8,
+    "num_physics_check": true,
+    "delta_ym": 5,
+    "note": "numerator = v/Delta_YM = 40/5 = 8"
+  },
+  "master_identities_summary": {
+    "K_equals_v_plus_r_over_v": true,
+    "Kv_equals_v2_plus_r": true,
+    "K_excess_equals_1_over_S": true,
+    "spectral_product_equals_4v": true,
+    "S_equals_v_over_2": true,
+    "G_newton_equals_q": true
+  }
+}
