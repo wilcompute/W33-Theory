@@ -1,0 +1,49 @@
+{
+  "sylow_7_in_GL_3_2": {
+    "n_7": 8,
+    "substrate": "2^q",
+    "order_profile": {
+      "1": 1,
+      "2": 21,
+      "3": 56,
+      "4": 42,
+      "7": 48
+    },
+    "sylow_normalizer": "C_7 rtimes C_3 = 7:3 = q*Phi_6 = 21"
+  },
+  "eight_systems_bijection": {
+    "systems": 8,
+    "sylow_7s": 8,
+    "coset_index_Fano": "168/21 = 8",
+    "coset_index_Heawood": "336/42 = 8"
+  },
+  "singer_cycle_3_layers": [
+    "7 Fano points",
+    "7 Fano lines",
+    "7 Szilassi hexagonal faces"
+  ],
+  "84_codec_dynamic": {
+    "static_readings": [
+      "84 = 7 Fano chart axes * 12 local",
+      "84 = 7 Csaszar vertex * 12 vertex flags",
+      "84 = 7 Szilassi face * 12 face flags"
+    ],
+    "dynamic_reading": "84 = 12 LOCAL PHASES * 7 SINGER STEPS",
+    "substrate": "k * Phi_6"
+  },
+  "singer_normalizer_C3_action": "x -> 2x or 4x mod 7",
+  "affine_atlas_8_systems": {
+    "per_chart_points": 4,
+    "charts_per_system": 7,
+    "per_system_anchors": 28,
+    "total_anchors": 224,
+    "total_substrate": "2^q * mu * Phi_6 = 224"
+  },
+  "hierarchy": [
+    "8 Singer/Sylow choices",
+    "7 hexagons per system",
+    "AG(2,2) completion per hexagon",
+    "84 = 12 local phases * 7 Singer steps"
+  ],
+  "conclusion": "Singer cycle/Sylow-7/8-toroidal-system unification. 8 = 2^q Heawood toroidal systems ARE 8 Sylow-7 subgroups of GL(3,2). Singer C_7 simultaneously phases 7 points + 7 lines + 7 faces. 84-codec gets dynamic reading: 12 local flag phases * 7 Singer steps = k * Phi_6. Singer normalizer 7:3 = q*Phi_6. Each system has 28 = mu*Phi_6 affine anchors; all 8 give 224 = 2^q * mu * Phi_6 total atlas anchors."
+}
