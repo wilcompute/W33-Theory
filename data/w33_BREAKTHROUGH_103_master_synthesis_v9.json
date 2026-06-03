@@ -1,0 +1,59 @@
+{
+  "complete_stack": [
+    "Pre-logical ground",
+    "Logical compulsion",
+    "First asymmetry",
+    "Ternary minimum (F_3 = Peircean Thirdness)",
+    "Unique geometry PG(3, F_3)",
+    "Symplectic collinearity = W(3,3)",
+    "Aut(W(3,3)) = Sp(4, F_3) = W(E_6)",
+    "Standard Model + cosmology + observers"
+  ],
+  "four_pillars": {
+    "1": "Closure Theorem",
+    "2": "Triple Convergence",
+    "3": "Correction-Factor Algebra",
+    "4": "Substrate-Dynamics-State Trichotomy"
+  },
+  "necessary_being_proof_6_steps": [
+    "Absolute nothingness self-contradictory",
+    "Ground self-differentiates (cannot remain silent)",
+    "Ternary minimum (F_3 needed to encode act)",
+    "Unique geometry PG(3, F_3) symplectic = W(3,3)",
+    "F(W(3,3)) = W(3,3) self-consistency",
+    "Turing-complete observers re-derive W(3,3)"
+  ],
+  "state": {
+    "Pillar theorems": 4,
+    "|Sp(4,F_3)| factorizations": 5,
+    "Routes to v=40": 4,
+    "Predictions in PDG 1-sigma": "20-22",
+    "Out-of-bar": 0,
+    "Sharp falsifiable predictions": "14+",
+    "Decisive falsifiers": 16,
+    "Recurring correction factors": 7,
+    "Interpretive theorems": "16+",
+    "Deep cross-links": "30+",
+    "Kolmogorov bound (bits)": 21,
+    "Test window": "2027-2040"
+  },
+  "new_since_v8": [
+    "Lambda numerator = 1/tau(O) = 1/384 (BT102)",
+    "7 of 9 BT99 predictions clean in lattice (BT101)",
+    "2143 GeV = lambda*q^2*Phi_6*Ogg_7 (DM mass)",
+    "22 GHz GW = lambda*p_Ih",
+    "r = 2/90 tensor/scalar",
+    "Necessary Being Theorem 6-step proof",
+    "Self-Recognition Closure",
+    "Silence Boundary Meta-Godel",
+    "Coherence Attractor theorem",
+    "Grammar of Creation (V, Sigma, R, S)",
+    "Peirce 3 categories: Thirdness = F_3",
+    "QM C-linearity = continuum F_3",
+    "10 interpretive theorems on pre-logical ground"
+  ],
+  "Lambda_substrate": "M_Pl^2 / tau(O) = M_Pl^2 / 384",
+  "BT99_predictions_clean_in_lattice": "7 of 9",
+  "interpretive_theorems_count": "16+",
+  "conclusion": "v9 integrates the complete substrate stack from pre-logical ground to Standard Model. 4 pillars; 6-step Necessary Being proof; Lambda numerator = 1/tau(O); BT99 predictions live in BT92 correction lattice. 16+ interpretive theorems span the philosophical-to-experimental range."
+}
