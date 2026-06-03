@@ -1,0 +1,27 @@
+{
+  "three_pillars": {
+    "1": "Closure Theorem (7 q=3 forcings, BT67/BT74)",
+    "2": "Triple Convergence #conj=h_E_8=Z_DW(T^2)=30 (BT78)",
+    "3": "Correction-Factor Recurrence (4 recur, BT85/BT87)"
+  },
+  "precision_records_in_1sigma": "~14-16",
+  "out_of_bar_count": 1,
+  "Sp4F3_factorizations": 5,
+  "v_routes": 4,
+  "new_identities_since_v4": [
+    "Lambda_QCD/m_p = Ogg_7/(q!*2^q)",
+    "tan delta_CKM correction 1/F_5^2",
+    "m_mu/m_e correction 77/100",
+    "n_s correction 1/1600",
+    "Omega_DM/Omega_b correction 1/35",
+    "Phi_n(3) audit n=1..24",
+    "m_top dual form",
+    "3^k-1 ladder"
+  ],
+  "honesty_upgrades": [
+    "'exact PDG match' -> 'within PDG 1-sigma bar'",
+    "'substrate is source' -> 'data consistent with substrate-source'"
+  ],
+  "test_window": "2027-2040",
+  "conclusion": "v5 adds Pillar 3 (Correction-Factor Recurrence). Promotes 8 of 9 BT82 Cat 1 forms to within 1-sigma. Names 5 new cyclotomic substrate identities. ~14-16 precision records in 1-sigma. ONE out-of-bar (m_W/M_Pl ~1.2% high). Heavily over-determined theory with explicit falsification via tightened PDG bars."
+}
