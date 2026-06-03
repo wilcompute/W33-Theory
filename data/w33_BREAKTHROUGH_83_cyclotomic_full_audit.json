@@ -1,0 +1,51 @@
+{
+  "Phi_n_table": {
+    "1": 2,
+    "2": 4,
+    "3": 13,
+    "4": 10,
+    "5": 121,
+    "6": 7,
+    "7": 1093,
+    "8": 82,
+    "9": 757,
+    "10": 61,
+    "11": 88573,
+    "12": 73,
+    "13": 797161,
+    "14": 547,
+    "15": 4561,
+    "16": 6562,
+    "17": 64570081,
+    "18": 703,
+    "19": 581130733,
+    "20": 5905,
+    "21": 368089,
+    "22": 44287,
+    "23": 47071589413,
+    "24": 6481
+  },
+  "new_substrate_identities": {
+    "Phi_1(3) = lambda": true,
+    "Phi_2(3) = mu": true,
+    "Phi_5(3) = p_Ih^2": 121,
+    "Phi_8(3) = lambda * Ogg_12": 82,
+    "Phi_18(3) = Heegner_19 * 37": 703
+  },
+  "cyclotomic_product": {
+    "3^4 - 1 = 2v = m_W = 80": true,
+    "Three substrate forms": [
+      "3^4 - 1",
+      "Phi_12 + Phi_6",
+      "lambda * mu * Phi_4"
+    ]
+  },
+  "sum_identities": {
+    "Phi_1 + Phi_2 = q!": true,
+    "Phi_3 + Phi_4 + Phi_6 = h_E_8 = 30": true,
+    "Phi_3 * Phi_6 = m_Z": true,
+    "Phi_4 * Phi_6 = Phi_12 - q": true
+  },
+  "wieferich_bridge": "Phi_7(3) = 1093 = Wieferich prime",
+  "conclusion": "Full Phi_n(3) audit reveals 5 previously unnamed substrate cyclotomic identities including Phi_5(3) = p_Ih^2 and Phi_8(3) = lambda * Ogg_12. The cyclotomic product identity gives 3^4 - 1 = 80 = 2v = m_W with 3 independent substrate forms. The Triple Convergence h_E_8 = Phi_3 + Phi_4 + Phi_6 is the sum of the 3 core cyclotomic primitives. First W(3,3)-Wieferich link via Phi_7(3) = 1093."
+}
