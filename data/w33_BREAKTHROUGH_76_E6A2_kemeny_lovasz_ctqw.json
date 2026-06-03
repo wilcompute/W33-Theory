@@ -1,0 +1,37 @@
+{
+  "E8_E6_A2_decomp": {
+    "identity": "240 = 72_E6 + 6_A2 + 81 + 81",
+    "72_substrate": "k * q!",
+    "6_substrate": "q!",
+    "81_substrate": "q^(q+1) = matter sector",
+    "lifted_dims": {
+      "adjoint": 86,
+      "matter": 162,
+      "total": 248
+    },
+    "interpretation": "E_8 -> E_6 x SU(3) GUT split at exact root level"
+  },
+  "kemeny": {
+    "K": "v + r/v",
+    "K_value": "801/20 = 40.05",
+    "K_times_v": "v^2 + r = 1602",
+    "spectral_product": "(k-r)(k-s) = mu*v = 160"
+  },
+  "lovasz": {
+    "theta_G": "Phi_4 = 10",
+    "theta_Gbar": "mu = 4",
+    "product": "v = 40 (perfect)",
+    "alpha": "Phi_4 = 10",
+    "omega": "mu = 4",
+    "alpha_omega_product": "v = 40 (perfect graph)",
+    "chi_f": "omega (Lovasz-perfect)"
+  },
+  "ctqw_revival": {
+    "T_star": "pi (exact)",
+    "gcd_diffs": "2 = r = lambda",
+    "spectral_triple": "r = lambda = log_2(omega) = gcd(diffs)",
+    "clique_power": "omega = 2^r = 2^lambda = mu",
+    "partial_revival": "T*/2 = pi/2; r eigenspace gets -1 phase"
+  },
+  "conclusion": "4 recent Part-file results integrated. E_8 -> E_6xA_2 gives the canonical GUT decomp 240 = 72+6+81+81 at exact root-set level (72 = k*q!, 81 = matter sector). Kemeny = v+r/v is a substrate random-walk identity. W(3,3) is alpha-omega-perfect with theta = Phi_4 and Lovasz product = v. CTQW has exact revival period pi; spectral triple unifies r = lambda = log_2(omega) = gcd."
+}
