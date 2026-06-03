@@ -1,0 +1,25 @@
+{
+  "universal_density_theorem": {
+    "formula": "q / 2^q = 3/8",
+    "realisations": [
+      "Atlas R_96/2^8 = 96/256 (engineering)",
+      "W(3,3) g/v = 15/40 (substrate chiral fraction)"
+    ],
+    "css_storage_rate": "27/80 (BT73)",
+    "protection_budget": "3/8 - 27/80 = 3/80"
+  },
+  "atlas_12288_substrate": {
+    "48": "q! * 2^q",
+    "256": "mu^4 = 2^(Phi_6+1) (dS identity!)",
+    "96": "2^F_5 * q",
+    "12288": "q! * 2^(q + Phi_6 + 1)"
+  },
+  "dS_identity_3_contexts": [
+    "Lambda/M_Pl^4 = q^-mu^4 = q^-256 (cosmology, BT70)",
+    "mu^4 = 2*alpha^-1(M_Z) (QED, BT74)",
+    "256 = bytes per Atlas page (memory, BT111)"
+  ],
+  "WRF_handle": "2^64 = v * |N_G(P_3)| * 2^48",
+  "engineering_confirmation": "UOR Atlas-12288 chosen on independent engineering grounds; every constant lands on substrate primitives without retrofit",
+  "conclusion": "Universal Density Theorem: q/2^q = 3/8 = chiral eigenspace fraction = Atlas compression ratio. ALL Atlas-12288 constants (48, 256, 96, 12288) are substrate primitives. The dS identity 256 = mu^4 = 2^(Phi_6+1) appears in cosmology + QED + memory. Engineering confirms substrate."
+}

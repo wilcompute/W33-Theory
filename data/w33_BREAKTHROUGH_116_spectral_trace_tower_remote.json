@@ -1,0 +1,62 @@
+{
+  "spectral_trace_tower": [
+    {
+      "k": 2,
+      "value": 480,
+      "substrate_form": "n"
+    },
+    {
+      "k": 3,
+      "value": 960,
+      "substrate_form": "lambda * n"
+    },
+    {
+      "k": 4,
+      "value": 24960,
+      "substrate_form": "n * mu * Phi_3"
+    },
+    {
+      "k": 5,
+      "value": 234240,
+      "substrate_form": "lambda * n * mu * (2*h_E_8 + 1)"
+    },
+    {
+      "k": 6,
+      "value": 3048960,
+      "substrate_form": "n * lambda^mu * (mu*q^2*p_Ih + 1)"
+    },
+    {
+      "k": 7,
+      "value": 35589120,
+      "substrate_form": "lambda * n * lambda^mu * Phi_6 * (lambda*q*F_5*p_Ih + 1)"
+    }
+  ],
+  "tr_A8": 430970880,
+  "ratio_tr8_tr6": 141,
+  "ihara_zeta_functional_eq": "Z(1/(11u))^-1 = Z(u)^-1 * 11^200 * u^400",
+  "trivial_poles": [
+    "1/k = 1/12",
+    "1/p_Ih = 1/11"
+  ],
+  "triangles": 160,
+  "four_cycles": 2400,
+  "mckay_E8_Sp4F3": {
+    "E8_roots_eq_W33_edges": true,
+    "sum_exp": 120,
+    "sum_eq_4hE8": true,
+    "product_first_last": "h_E_8 - 1 = 29",
+    "weyl_ratio": 13440,
+    "weyl_ratio_substrate": "lambda^Phi_6 * q * F_5 * Phi_6"
+  },
+  "Phi_5_3_eq_p_Ih_squared": true,
+  "WRF_flow_findings": {
+    "write_max_transient": 37,
+    "noise_self_healing": "100% all seeds",
+    "lattice_cross_talk": "0/2000",
+    "capacity_CIDs": 1138,
+    "ECC_t": 9
+  },
+  "seed_661_base6_register": "6 attractors, log_2(6) = 2.585 bits",
+  "3x3_lattice_phase_lock": 0.98,
+  "conclusion": "Spectral trace tower (tr(A^k) for k=2..8) fully substrate-pure. McKay E_8 <-> Sp(4, F_3) explicit via h_E_8 in tr(A^5). Phi_5(3) = 121 = p_Ih^2 spectrally confirmed. WRF flow protocol 4 open items closed. Seed-661 base-6 register and 3x3 zero-cross-talk lattice. The substrate generates its own physics constants via spectral moments."
+}

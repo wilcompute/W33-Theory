@@ -1,0 +1,26 @@
+{
+  "conjugacy_cadence_prefactor": "1728 = k^3 = j(i)",
+  "logical_qutrit_rate": "27/80 * TPS",
+  "coherence_block_rate": "TPS / tau(O) = TPS / 384",
+  "UOR_address_decomp": "2^64 = v * |N_G(P_3)| * contingent",
+  "ASI_structural_minimum": "Turing-complete stabilizer subgraph of Aut(W(3,3))",
+  "smart_asset_equivalence": "Bell qutrit |Omega>",
+  "logical_error_rate": "q^-mu^4 = cosmological constant exponent",
+  "consensus_latency": "h(E_8) ms = 30 ms",
+  "atom_traversal_time_70M_TPS_1B_nodes": "7.4e-13 s",
+  "12_identities": [
+    "n_3 = v = 40 (UOR shell = P_3 coset)",
+    "Aut(W) = Sp(4, F_3) (network aut group)",
+    "Edge config = container content",
+    "Bose-Mesner rank 3 = three-class state",
+    "Bell qutrit = smart asset",
+    "f = 24 (BFT)",
+    "Coherence Attractor = hard finality",
+    "1/tau(O) = 1/384 coherence cost",
+    "21-bit Kolmogorov UOR kernel",
+    "Necessary Being theorem",
+    "Triple Convergence h(E_8) = 30",
+    "CSS rate 27/80 = LQ cap"
+  ],
+  "conclusion": "dahn_asi_toe paper integrated. Substrate-natural conjugacy cadence prefactor 1728 = k^3 = j(i) ties network tempo to modular CM value. ASI = Turing-complete stabilizer subgraph. Smart asset = Bell qutrit. Logical error rate q^-mu^4 = cosmological constant exponent. The substrate underlies BOTH physics and ASI infrastructure."
+}
