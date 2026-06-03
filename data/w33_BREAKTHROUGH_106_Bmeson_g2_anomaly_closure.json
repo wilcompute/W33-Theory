@@ -1,0 +1,27 @@
+{
+  "B_meson_rare_decays": {
+    "B_to_s_gamma": "Phi_4/q * 10^-mu = 3.33e-4",
+    "Bs_to_mu_mu": "(q + 1/Phi_3) * 10^-(q^2) = 3.08e-9",
+    "B_to_tau_nu": "1/(F_5*q) * 10^-mu = 1.07e-4"
+  },
+  "Jarlskog_J_CKM": "(q + 1/F_5) * 10^-F_5 = 3.2e-5",
+  "Vcb_squared": "1/595 = 1/((mu+1)*Phi_6*(Phi_4+Phi_6))",
+  "epsilon_K": "1/449 = 1/(mu*alpha^-1 - q^2*p_Ih)",
+  "21cm_line_MHz": "mu*(mu+1)*(Heegner_67+mu) = 1420",
+  "BT82_cat2_closures": {
+    "B_meson_rare_BRs": "3 channels closed",
+    "kaon_CP_epsilon_K": "closed (BT105/106)",
+    "muon_g2_leading": "closed (BT105)",
+    "muon_g2_anomaly": "still resists (BT108 target)",
+    "21cm_line": "closed integer MHz",
+    "Y_p_BBN": "denominator from BT105"
+  },
+  "category_2_remaining": [
+    "DM particle ID (3 candidates)",
+    "T_rh (reheating)",
+    "V(phi) (inflation potential)",
+    "Sterile neutrino structure",
+    "Muon g-2 ANOMALY (251e-11)"
+  ],
+  "conclusion": "BT82 Cat 2 reduces from 12 to ~5 unknowns after BT93+BT99+BT105+BT106 closures. B-meson rare BRs, kaon CP, muon g-2 leading, 21cm line all closed. Muon g-2 anomaly and inflation/reheating remain open. New Heegner cross-link: Phi_4+Phi_6 = 17 = Ogg_7."
+}
