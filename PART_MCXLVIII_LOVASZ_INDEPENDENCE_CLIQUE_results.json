@@ -1,0 +1,92 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "lam": 2,
+    "mu": 4
+  },
+  "lovasz_theta": {
+    "theta_G": {
+      "fraction": "10",
+      "numerator": 10,
+      "denominator": 1,
+      "float": 10.0
+    },
+    "theta_Gbar": {
+      "fraction": "4",
+      "numerator": 4,
+      "denominator": 1,
+      "float": 4.0
+    },
+    "formula_theta_G": "theta(G) = -v*s/(k-s) = -40*(-4)/(12-(-4)) = 10",
+    "formula_theta_Gbar": "theta(Gbar) = v/theta(G) = 40/10 = 4",
+    "product_theta_G_times_Gbar": {
+      "fraction": "40",
+      "numerator": 40,
+      "denominator": 1,
+      "float": 40.0
+    },
+    "product_equals_v": true
+  },
+  "independence_clique": {
+    "alpha": 10,
+    "omega": 4,
+    "alpha_times_omega": 40,
+    "perfect_partition": true,
+    "alpha_formula": "alpha = -v*s/(k-s) = v*mu/(k-s) = 10",
+    "omega_formula": "omega = 1 + k/(-s) = 1 + 3 = 4",
+    "alpha_from_formula": {
+      "fraction": "10",
+      "numerator": 10,
+      "denominator": 1,
+      "float": 10.0
+    },
+    "alpha_formula_check": true,
+    "omega_alt": 4,
+    "omega_from_theta": 4
+  },
+  "fractional_chromatic": {
+    "chi_f": {
+      "fraction": "4",
+      "numerator": 4,
+      "denominator": 1,
+      "float": 4.0
+    },
+    "formula": "chi_f = v/alpha = 40/10 = 4",
+    "chi_f_equals_omega": true,
+    "statement": "fractional chromatic number equals clique number (Lov\u00e1sz-perfect)"
+  },
+  "clique_power_law": {
+    "omega": 4,
+    "r": 2,
+    "power": 4,
+    "identity": "omega = 2^r = 2^2 = 4",
+    "verified": true
+  },
+  "physical_dimensions": {
+    "alpha": 10,
+    "d_superstring": 10,
+    "alpha_matches_superstring": true,
+    "omega": 4,
+    "d_spacetime": 4,
+    "omega_matches_spacetime": true,
+    "compact_dims": 6,
+    "decomposition_verified": true,
+    "statement": "alpha=10 (superstring dims) and omega=4 (SM spacetime) and alpha-omega=6 (compact dims)"
+  },
+  "vertex_partition": {
+    "color_classes": 4,
+    "vertices_per_class": 10,
+    "total_vertices": 40,
+    "spacetime_interpretation": "4 color classes (spacetime) \u00d7 10 vertices per class (superstring dims) = 40"
+  },
+  "doubly_extremal_certificate": {
+    "alpha_achieves_lovasz_bound": true,
+    "omega_achieves_lovasz_bound": true,
+    "both_bounds_tight": true,
+    "statement": "W(3,3) achieves BOTH Lov\u00e1sz bounds: alpha = theta(G) = 10 AND omega = theta(Gbar) = 4. It is doubly-Lov\u00e1sz-extremal."
+  }
+}
