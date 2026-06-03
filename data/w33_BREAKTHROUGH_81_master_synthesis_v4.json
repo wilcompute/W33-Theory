@@ -1,0 +1,64 @@
+{
+  "pillar_1_closure_theorem": "7 independent q=3 forcings (BT67)",
+  "pillar_2_triple_convergence": "#conj Sp(4,F_3) = h(E_8) = Z_DW(T^2) = 30 (BT78)",
+  "Sp4F3_factorizations_5": [
+    "prime",
+    "Sylow",
+    "Dual Weyl 27/40",
+    "edge reciprocity",
+    "Bell stab"
+  ],
+  "v_routes_4": [
+    "(q^4-1)/(q-1)",
+    "1+k+q^q",
+    "10*(q+1)",
+    "Phi_3 + q^q"
+  ],
+  "E8_E6_A2_decomp": "240 = 72_E6 + 6_A2 + 81 + 81 (BT76)",
+  "Lie_exceptional": [
+    14,
+    52,
+    78,
+    133,
+    248
+  ],
+  "Phi_12_web_count": 9,
+  "Heegner_f_lattice": [
+    19,
+    43,
+    67,
+    163
+  ],
+  "hidden_sylow": {
+    "n_3": "= v = 40 (BT72)",
+    "n_7": "= 8 = 2^q (BT80)"
+  },
+  "dynamic_84_codec": "12 local phases * 7 Singer steps (BT80)",
+  "chirality_anchor": "Szilassi 42+/0- = CP origin (BT79)",
+  "ramanujan_tau": [
+    "tau(2)=-f",
+    "tau(3)=mu*q^2*Phi_6",
+    "tau(4)=-2^(2q)(q^q-mu)"
+  ],
+  "precision_records_under_0.1pct": 10,
+  "CSS_code": "[[240, 81, 4, 3]]_3 rate 27/80",
+  "experimental_witnesses": 6,
+  "decisive_falsifiers": 8,
+  "deep_cross_links": 16,
+  "new_since_v3": [
+    "E_8 -> E_6 x A_2 (BT76)",
+    "Kemeny K = v + r/v (BT76)",
+    "Lovasz alpha-omega-perfect (BT76)",
+    "CTQW exact revival pi (BT76)",
+    "Ramanujan tau bridge (BT78)",
+    "Triple Convergence (BT78)",
+    "6j -> h_E_8 (BT78)",
+    "WZW c = 2/3 (BT78)",
+    "Heawood-Szilassi-Fano cascade (BT79)",
+    "Substrate chirality 42+/0- (BT79)",
+    "168*240 = 8! (BT79)",
+    "8 = Sylow-7 count (BT80)",
+    "Dynamic 84-codec (BT80)"
+  ],
+  "conclusion": "Master Synthesis v4 (BT41-BT80). Two pillars: Closure Theorem (7 independent q=3 forcings) and Triple Convergence (#conj=h(E_8)=Z_DW(T^2)=30). 5 factorizations of |Sp(4,F_3)|. 4 routes to v=40. 10 precision records < 0.1%. 6 falsifiable witnesses. 8 decisive falsifiers. Theory is heavily over-determined: every substrate primitive appears in many independent contexts."
+}
