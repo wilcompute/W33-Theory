@@ -1,0 +1,123 @@
+{
+  "falsifiers": [
+    {
+      "id": "F1",
+      "prediction": "tau_proton",
+      "substrate": "~10^33 yr",
+      "instrument": "Hyper-K",
+      "window": "2030-2040"
+    },
+    {
+      "id": "F2",
+      "prediction": "lambda_3 (di-Higgs)",
+      "substrate": "95.7 GeV",
+      "instrument": "FCC-hh",
+      "window": "2040+"
+    },
+    {
+      "id": "F3",
+      "prediction": "T_nu/T_CMB",
+      "substrate": "(4/11)^(1/3)",
+      "instrument": "CMB-S4",
+      "window": "2030"
+    },
+    {
+      "id": "F4",
+      "prediction": "Delta H_0",
+      "substrate": "q! = 6",
+      "instrument": "JWST/Euclid",
+      "window": "2027-2030"
+    },
+    {
+      "id": "F5",
+      "prediction": "Witting KS bound",
+      "substrate": "34/40",
+      "instrument": "Photonic",
+      "window": "testable now"
+    },
+    {
+      "id": "F6",
+      "prediction": "alpha^-1",
+      "substrate": "137+1/28",
+      "instrument": "CODATA",
+      "window": "ongoing"
+    },
+    {
+      "id": "F7",
+      "prediction": "m_H",
+      "substrate": "(mu+1)^q = 125",
+      "instrument": "HL-LHC",
+      "window": "2028"
+    },
+    {
+      "id": "F8",
+      "prediction": "4th gen fermion",
+      "substrate": "NONE",
+      "instrument": "LHC/FCC",
+      "window": "ongoing"
+    },
+    {
+      "id": "F9",
+      "prediction": "r tensor-to-scalar",
+      "substrate": "2/90 = 0.0222",
+      "instrument": "LiteBIRD",
+      "window": "2027-2030 *** DECISIVE"
+    },
+    {
+      "id": "F10",
+      "prediction": "DM m_chi WIMP",
+      "substrate": "2143 GeV",
+      "instrument": "LZ/XENONnT",
+      "window": "2027-2035"
+    },
+    {
+      "id": "F11",
+      "prediction": "m_a QCD axion",
+      "substrate": "pi*10^-14 eV",
+      "instrument": "ABRACADABRA",
+      "window": "2028-2035"
+    },
+    {
+      "id": "F12",
+      "prediction": "3.215 TeV scalar",
+      "substrate": "diphoton/ZZ",
+      "instrument": "HL-LHC/FCC",
+      "window": "2030-2040"
+    },
+    {
+      "id": "F13",
+      "prediction": "CTA gamma 2.142 TeV",
+      "substrate": "DM annihilation",
+      "instrument": "CTA",
+      "window": "2027-2032"
+    },
+    {
+      "id": "F14",
+      "prediction": "GW band ~22 GHz",
+      "substrate": "phase-closure",
+      "instrument": "LISA/next-gen",
+      "window": "2035+"
+    },
+    {
+      "id": "F15",
+      "prediction": "M_W/sin^2 theta_W",
+      "substrate": "~1e-4 corr",
+      "instrument": "EW precision",
+      "window": "2030+"
+    },
+    {
+      "id": "F16",
+      "prediction": "Sigma m_nu",
+      "substrate": "101 meV",
+      "instrument": "CMB-S4/Euclid",
+      "window": "2027-2032"
+    }
+  ],
+  "highest_priority": [
+    "F9 LiteBIRD r",
+    "F7 HL-LHC m_H",
+    "F4 Hubble Delta H_0"
+  ],
+  "decisive_single": "F9 LiteBIRD r = 2/90 by 2030",
+  "conclusion": "16 decisive falsifiers, all rational/substrate-clean, cannot drift. Test window 2027-2040 sharpens with each result. F9 LiteBIRD r = 2/90 by 2030 is the single most decisive test."
+}

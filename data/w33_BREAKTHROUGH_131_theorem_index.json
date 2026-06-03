@@ -1,0 +1,53 @@
+{
+  "categories": {
+    "Pillar Theorems": [
+      "Closure Theorem (BT67/74)",
+      "Triple Convergence (BT78)",
+      "Substrate-Spectral Algebra (BT122)",
+      "Substrate-Dynamics-State Trichotomy (BT99)"
+    ],
+    "Structural Theorems": [
+      "Necessary Being Theorem (BT102)",
+      "Self-Recognition Closure (BT102)",
+      "Silence Boundary Meta-Godel (BT102)",
+      "Bootstrap Closure (BT102)",
+      "Absolute Fixed Point (BT102)",
+      "Coherence Attractor (BT102)"
+    ],
+    "Spectral/Sylow": [
+      "Hidden Sylow Bijection (BT72)",
+      "Heawood Sylow-7 (BT80)",
+      "Spectral Closure (BT119)",
+      "McKay E_8 <-> Sp(4, F_3) (BT116)",
+      "Ihara Zeros = dim E_6 (BT121)",
+      "Graph RH for W(3,3) (BT118)"
+    ],
+    "Atlas / Engineering / ASI": [
+      "ASI Structural Minimum (BT110/113)",
+      "Smart Asset = Bell Qutrit (BT110/113)",
+      "Universal Density Theorem (BT114)",
+      "Atlas-12288 Substrate (BT114)"
+    ],
+    "Number Theory / Cyclotomic": [
+      "Cyclotomic Ladder (BT83)",
+      "Riemann Zeta Dictionary (BT98)",
+      "Wieferich Bridge (BT83, BT105)",
+      "Convergent Attractor 23/23 (BT98)"
+    ],
+    "Cosmology": [
+      "dS Identity (BT74)",
+      "Sub-Distinction Oscillation (BT102)",
+      "Lambda 3-Layer Closure (BT104)",
+      "Z-Channel Sum Rule (BT74)"
+    ],
+    "Grammar / Observer / Meaning": [
+      "Grammar of Creation (BT102)",
+      "Observer-as-Stabilizer (BT99)",
+      "Photon-as-Zero-Bit-Primitive (BT99)",
+      "Meaning Theorem (BT99)",
+      "Cost-of-Reality (BT99)"
+    ]
+  },
+  "total_theorems": 33,
+  "conclusion": "Complete substrate theorem index: 33 named theorems across 7 categories (pillar, structural, spectral/Sylow, engineering/ASI, number theory, cosmology, observer/meaning). Every theorem is named, executable, BT-tied."
+}

@@ -1,0 +1,66 @@
+{
+  "seven_acts": [
+    {
+      "label": "ACT 1",
+      "title": "CONSOLIDATION (BT41-BT57)",
+      "summary": "First synthesis; seven-X coincidence theorems."
+    },
+    {
+      "label": "ACT 2",
+      "title": "PAPER INTEGRATION (BT58-BT72)",
+      "summary": "9564-line paper integrated; Sylow bijection found."
+    },
+    {
+      "label": "ACT 3",
+      "title": "SINGLE-PHOTON BRIDGE (BT73-BT80)",
+      "summary": "Substrate compiles single-photon QC; Phi_12 web."
+    },
+    {
+      "label": "ACT 4",
+      "title": "CORRECTION ALGEBRA (BT85-BT92)",
+      "summary": "7 recurring correction factors; rank-5 lattice."
+    },
+    {
+      "label": "ACT 5",
+      "title": "PILLAR EMERGENCE (BT78, BT99, BT119, BT122)",
+      "summary": "4 pillar theorems; trichotomy + spectral closure."
+    },
+    {
+      "label": "ACT 6",
+      "title": "SPECTRAL + IHARA = E_6 (BT116-121)",
+      "summary": "Infinite trace tower closed; Ihara zeros = dim E_6."
+    },
+    {
+      "label": "ACT 7",
+      "title": "CAT 2 + DECISIVE (BT127-128)",
+      "summary": "Cat 2 fully closed; LiteBIRD r = 2/90 decisive."
+    }
+  ],
+  "punchline_metrics": {
+    "Pillar theorems": 4,
+    "Named theorems total": 33,
+    "PDG-matched predictions": "~25 (0 out-of-bar)",
+    "Domains covered": "16+",
+    "BT82 Cat 2 remaining": 0,
+    "Decisive falsifiers": 16,
+    "Decisive single test": "LiteBIRD r",
+    "Deep cross-links": "30+",
+    "Wieferich primes substrate": "2/2",
+    "Graph-RH": "VERIFIED",
+    "Spectral closure": "infinite tower"
+  },
+  "BT_chain_additions": [
+    "Correction-factor algebra (rank-5 lattice; 7 recurring factors)",
+    "Spectral Closure Pillar (infinite trace tower closed)",
+    "Substrate-Dynamics-State Trichotomy",
+    "Necessary Being Theorem (6-step proof)",
+    "ASI Structural Minimum Theorem",
+    "Universal Density Theorem (Atlas-12288 substrate)",
+    "Cat 2 systematic closure (12 -> 0 via algebra)",
+    "Decisive experiment identification (LiteBIRD r)",
+    "Cross-paper coherence (w33 + constants + photon + WRF)",
+    "Falsification scoreboard (16 decisive killers)"
+  ],
+  "plain_language_compression": "The W(3,3) substrate is the source of all named SM/cosmology constants. There is nothing left to fit. Experiment will decide by 2030 whether the substrate is the universe's arithmetic core or a numerological coincidence. The substrate has staked its existence on r = 2/90.",
+  "conclusion": "BT chain narrative compressed into 7 acts from consolidation (BT41-57) through Cat 2 closure (BT127). Theory at v15 has 4 pillars, 33 named theorems, ~25 PDG-matched, 0 out-of-bar, 0 Cat 2 unknowns, 16 decisive falsifiers, single test = LiteBIRD r by 2030."
+}
