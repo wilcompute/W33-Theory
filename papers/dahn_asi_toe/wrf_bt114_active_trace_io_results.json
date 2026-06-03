@@ -1,0 +1,422 @@
+{
+  "bt114_summary": {
+    "best_global_ports": [
+      0,
+      5,
+      6
+    ],
+    "claim_boundary": "BT114 replaces ideal 11-way local choice with a finite 3-port abstract actuator and replaces whole-cycle reads with short trace windows. Physical pin mapping, joules, latency, and device noise remain hardware work.",
+    "exact_read_window_states": 2,
+    "limited_actuator_max_repair_steps": 7,
+    "limited_actuator_max_write_steps": 7,
+    "minimal_global_port_count": 3,
+    "one_erasure_read_window_states": 3,
+    "one_substitution_read_window_states": 4
+  },
+  "bt114a_limited_actuator_contract": {
+    "best": {
+      "all_target_writes_reachable": true,
+      "binary_command_bits_per_step": 2,
+      "global_max_repair_steps_from_off_rule_jump": 7,
+      "global_max_target_write_steps": 7,
+      "global_mean_repair_steps_from_off_rule_jump": 3.3985,
+      "global_mean_target_write_steps": 3.3532,
+      "global_p95_repair_steps_from_off_rule_jump": 5,
+      "global_p95_target_write_steps": 5,
+      "per_register_symbols": [
+        {
+          "seed": 661,
+          "symbols": [
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.2,
+              "mean_write_steps": 3.1104,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 0
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 4,
+              "max_write_steps": 4,
+              "mean_repair_steps_from_off_rule_jump": 2.925,
+              "mean_write_steps": 2.6938,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 1
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 4,
+              "max_write_steps": 4,
+              "mean_repair_steps_from_off_rule_jump": 3.48,
+              "mean_write_steps": 3.3958,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 2
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.1143,
+              "mean_write_steps": 2.9583,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 3
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 6,
+              "mean_repair_steps_from_off_rule_jump": 3.84,
+              "mean_write_steps": 3.8813,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 5,
+              "symbol": 4
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.42,
+              "mean_write_steps": 3.2958,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 4,
+              "symbol": 5
+            }
+          ]
+        },
+        {
+          "seed": 693,
+          "symbols": [
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.32,
+              "mean_write_steps": 3.1354,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 0
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 2.7222,
+              "mean_write_steps": 2.6854,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 1
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 6,
+              "max_write_steps": 6,
+              "mean_repair_steps_from_off_rule_jump": 4.24,
+              "mean_write_steps": 4.1708,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 5,
+              "symbol": 2
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 2.8375,
+              "mean_write_steps": 2.6688,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 3
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 4,
+              "max_write_steps": 4,
+              "mean_repair_steps_from_off_rule_jump": 3.025,
+              "mean_write_steps": 2.6125,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 4
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 6,
+              "max_write_steps": 6,
+              "mean_repair_steps_from_off_rule_jump": 4.6667,
+              "mean_write_steps": 4.5542,
+              "p95_repair_steps_from_off_rule_jump": 6,
+              "p95_write_steps": 6,
+              "symbol": 5
+            }
+          ]
+        },
+        {
+          "seed": 878,
+          "symbols": [
+            {
+              "max_repair_steps_from_off_rule_jump": 7,
+              "max_write_steps": 7,
+              "mean_repair_steps_from_off_rule_jump": 4.9143,
+              "mean_write_steps": 4.7958,
+              "p95_repair_steps_from_off_rule_jump": 7,
+              "p95_write_steps": 7,
+              "symbol": 0
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 4,
+              "max_write_steps": 4,
+              "mean_repair_steps_from_off_rule_jump": 3.1,
+              "mean_write_steps": 3.0125,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 1
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.8,
+              "mean_write_steps": 3.6604,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 5,
+              "symbol": 2
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 4,
+              "max_write_steps": 4,
+              "mean_repair_steps_from_off_rule_jump": 3.05,
+              "mean_write_steps": 2.6604,
+              "p95_repair_steps_from_off_rule_jump": 4,
+              "p95_write_steps": 4,
+              "symbol": 3
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.7286,
+              "mean_write_steps": 3.7062,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 5,
+              "symbol": 4
+            },
+            {
+              "max_repair_steps_from_off_rule_jump": 5,
+              "max_write_steps": 5,
+              "mean_repair_steps_from_off_rule_jump": 3.5,
+              "mean_write_steps": 3.3604,
+              "p95_repair_steps_from_off_rule_jump": 5,
+              "p95_write_steps": 5,
+              "symbol": 5
+            }
+          ]
+        }
+      ],
+      "port_count": 3,
+      "ports": [
+        0,
+        5,
+        6
+      ],
+      "worst_case_binary_command_bits": 14
+    },
+    "best_global_ports": [
+      0,
+      5,
+      6
+    ],
+    "best_global_ports_interpretation": "Ports are canonical neighbor-rank selectors in the finite W33 carrier; they are not yet physical pins or voltages.",
+    "carrier": {
+      "directed_states": 480,
+      "full_legal_successors_per_state": 11,
+      "points": 40,
+      "undirected_edges": 240
+    },
+    "minimal_global_port_count": 3,
+    "normalized_control_cost": "One abstract actuator token per restricted non-backtracking transition; binary command bits use ceil(log2(port_count)). No joule-scale device energy is claimed.",
+    "register_seeds": [
+      661,
+      693,
+      878
+    ],
+    "valid_minimal_subset_count": 4,
+    "valid_subsets_by_port_count_until_minimum": {
+      "1": 0,
+      "2": 0,
+      "3": 4
+    }
+  },
+  "bt114b_finite_read_window_contract": {
+    "bounded_timing_gap_reads": {
+      "1": {
+        "max_missed_between_samples": 1,
+        "min_window": 2,
+        "total_patterns": 270,
+        "unique_patterns": 270
+      },
+      "2": {
+        "max_missed_between_samples": 2,
+        "min_window": 2,
+        "total_patterns": 405,
+        "unique_patterns": 405
+      }
+    },
+    "cycle_phase_window_count": 135,
+    "erasure_robust_reads": {
+      "1": {
+        "max_erasures": 1,
+        "min_window": 3,
+        "total_patterns": 540,
+        "unique_patterns": 540
+      },
+      "2": {
+        "max_erasures": 2,
+        "min_window": 4,
+        "total_patterns": 1485,
+        "unique_patterns": 1485
+      },
+      "3": {
+        "max_erasures": 3,
+        "min_window": 6,
+        "total_patterns": 5670,
+        "unique_patterns": 5670
+      }
+    },
+    "exact_unique_read": {
+      "min_window": 2,
+      "total_windows": 135,
+      "unique_patterns": 135
+    },
+    "interpretation": "For the 18-symbol BT113 register bank, a short directed-state trace window identifies the register-symbol owner; the full attractor cycle is not needed for ordinary reads.",
+    "phase_window_bits": 7.0768,
+    "raw_two_state_window_bits": 17.8138,
+    "register_symbol_count": 18,
+    "substitution_robust_reads": {
+      "1": {
+        "example_pairs": [
+          {
+            "distance": 3,
+            "left": {
+              "seed": 661,
+              "symbol": 0
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 4
+            }
+          },
+          {
+            "distance": 3,
+            "left": {
+              "seed": 661,
+              "symbol": 0
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 5
+            }
+          },
+          {
+            "distance": 3,
+            "left": {
+              "seed": 661,
+              "symbol": 0
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 5
+            }
+          },
+          {
+            "distance": 3,
+            "left": {
+              "seed": 661,
+              "symbol": 0
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 0
+            }
+          }
+        ],
+        "min_cross_hamming": 3,
+        "min_window": 4,
+        "required_min_hamming": 3,
+        "substitutions": 1
+      },
+      "2": {
+        "example_pairs": [
+          {
+            "distance": 5,
+            "left": {
+              "seed": 693,
+              "symbol": 2
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 5
+            }
+          },
+          {
+            "distance": 5,
+            "left": {
+              "seed": 693,
+              "symbol": 2
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 5
+            }
+          },
+          {
+            "distance": 5,
+            "left": {
+              "seed": 693,
+              "symbol": 4
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 3
+            }
+          },
+          {
+            "distance": 5,
+            "left": {
+              "seed": 693,
+              "symbol": 4
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 3
+            }
+          }
+        ],
+        "min_cross_hamming": 5,
+        "min_window": 7,
+        "required_min_hamming": 5,
+        "substitutions": 2
+      },
+      "3": {
+        "example_pairs": [
+          {
+            "distance": 7,
+            "left": {
+              "seed": 693,
+              "symbol": 4
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 3
+            }
+          },
+          {
+            "distance": 7,
+            "left": {
+              "seed": 693,
+              "symbol": 4
+            },
+            "right": {
+              "seed": 878,
+              "symbol": 3
+            }
+          }
+        ],
+        "min_cross_hamming": 7,
+        "min_window": 10,
+        "required_min_hamming": 7,
+        "substitutions": 3
+      }
+    },
+    "symbol_payload_bits": 4.1699
+  }
+}

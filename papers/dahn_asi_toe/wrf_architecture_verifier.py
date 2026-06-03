@@ -87,6 +87,7 @@ def main() -> None:
     bt110 = json.loads(here.joinpath("wrf_bt110_bt111_results.json").read_text(encoding="utf-8"))
     bt112 = json.loads(here.joinpath("wrf_bt112_results.json").read_text(encoding="utf-8"))
     bt113 = json.loads(here.joinpath("wrf_bt113_flow_registers_results.json").read_text(encoding="utf-8"))
+    bt114 = json.loads(here.joinpath("wrf_bt114_active_trace_io_results.json").read_text(encoding="utf-8"))
 
     assert max(row["max"] for row in bt110["write_protocol"].values()) == 37
     assert all(row["forward_preserve_500trials"] == 1.0 for row in bt110["noise_model"].values())
@@ -116,6 +117,19 @@ def main() -> None:
     assert bt113["bt113_summary"]["passive_off_rule_preserve_rates"] == [0.175926, 0.286957, 0.188571]
     assert bt113["bt113c_three_register_composition"]["all_18_symbol_cids_distinct"] is True
     assert bt113["bt113c_three_register_composition"]["min_24hex_distance_across_18_symbols"] == 19
+    assert bt114["bt114_summary"]["minimal_global_port_count"] == 3
+    assert bt114["bt114_summary"]["best_global_ports"] == [0, 5, 6]
+    assert bt114["bt114_summary"]["limited_actuator_max_write_steps"] == 7
+    assert bt114["bt114_summary"]["limited_actuator_max_repair_steps"] == 7
+    assert bt114["bt114_summary"]["exact_read_window_states"] == 2
+    assert bt114["bt114_summary"]["one_erasure_read_window_states"] == 3
+    assert bt114["bt114_summary"]["one_substitution_read_window_states"] == 4
+    assert bt114["bt114a_limited_actuator_contract"]["valid_subsets_by_port_count_until_minimum"] == {
+        "1": 0,
+        "2": 0,
+        "3": 4,
+    }
+    assert bt114["bt114b_finite_read_window_contract"]["bounded_timing_gap_reads"]["2"]["min_window"] == 2
 
     required_phrases = [
         "The Witting Reference Fabric",
@@ -127,6 +141,9 @@ def main() -> None:
         "$37$ deterministic steps",
         "$3$ legal",
         "$24$-hex-character distance $19$",
+        "$\\{0,5,6\\}$",
+        "two consecutive directed-state samples",
+        "L_{\\rm read}^{\\rm exact}&=2",
         "$(1-u^2)^{200}(1-12u+11u^2)(1-2u+11u^2)^{24}(1+4u+11u^2)^{15}",
         "$1{,}138$ distinct $24$-hex-character flow CIDs",
         "not a ToE paper",
@@ -184,6 +201,9 @@ def main() -> None:
             "bt113_target_write_steps": bt113["bt113_summary"]["global_max_target_write_steps"],
             "bt113_controlled_repair_steps": bt113["bt113_summary"]["global_max_controlled_repair_steps"],
             "bt113_three_register_min_cid_distance": bt113["bt113c_three_register_composition"]["min_24hex_distance_across_18_symbols"],
+            "bt114_minimal_global_port_count": bt114["bt114_summary"]["minimal_global_port_count"],
+            "bt114_limited_actuator_write_steps": bt114["bt114_summary"]["limited_actuator_max_write_steps"],
+            "bt114_exact_read_window_states": bt114["bt114_summary"]["exact_read_window_states"],
         },
         "latex_scan": "passed",
     }

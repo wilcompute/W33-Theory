@@ -747,13 +747,13 @@ $k = 12, r = 2, s = -4$.
   0.7/$B_1$ gauge/24/3.5/working set,
   -0.6/$B_2$ chiral/15/2.5/CSS-encoded persistent}
 {
-  \draw[fill=violet!15,draw=violet!60!black] (0,\y) rectangle (\width,\y+0.5);
-  \node[anchor=west] at (0.1,\y+0.25) {\scriptsize\bfseries \name};
-  \node[anchor=west,align=left] at (\width+0.2,\y+0.25) {\scriptsize rank \rank, $\role$};
+  \draw[fill=violet!15,draw=violet!60!black] (1.65,\y) rectangle (1.65+\width,\y+0.5);
+  \node[anchor=east] at (1.5,\y+0.25) {\scriptsize\bfseries \name};
+  \node[anchor=west,align=left] at (5.55,\y+0.25) {\scriptsize rank \rank, $\role$};
 }
 % labels
-\node[align=left,font=\small] at (1,3.0) {Bose--Mesner three-channel bus};
-\node[align=left,font=\scriptsize] at (1,-1.6) {bus width $\propto$ projector rank};
+\node[align=left,font=\small] at (3.35,3.0) {Bose--Mesner three-channel bus};
+\node[align=left,font=\scriptsize] at (3.35,-1.6) {bus width $\propto$ projector rank};
 \end{tikzpicture}
 \caption{The on-tile bus is three physical channels with widths proportional to the
 Bose--Mesner projector ranks $\{1, 24, 15\}$. Each channel routes traffic in one
@@ -855,7 +855,7 @@ $P$, not any one instantaneous $x_t$.
 
 The W33 non-backtracking carrier gives a finite software model of this cell. It has
 $480=2|E|$ directed states and exactly $p_{\mathrm{Ih}}=11$ legal continuations from each
-state. The BT110--BT113 WRF harnesses \cite{wrf-bt110-bt111,wrf-bt112,wrf-bt113} test the first
+state. The BT110--BT114 WRF harnesses \cite{wrf-bt110-bt111,wrf-bt112,wrf-bt113,wrf-bt114} test the first
 engineering questions without claiming device physics:
 
 \begin{center}
@@ -874,6 +874,13 @@ $878$) are target-writeable from every one of the $480$ directed states using on
 non-backtracking controls; the worst target-write path is $3$ steps. Reads are
 phase-invariant because every symbol is the canonical CID of its attractor cycle, not a
 single phase point.\\
+Limited control and short reads &
+BT114 replaces the ideal $11$-choice controller with a global three-port abstract
+actuator. No one- or two-port subset reaches all register targets, but ports
+$\{0,5,6\}$ do; the price is a worst-case write/repair bound of $7$ steps. It also
+shows that two consecutive directed-state samples identify all $18$ register-symbol
+traces exactly; $3$ samples tolerate one erasure and $4$ samples tolerate one
+substitution.\\
 Controlled repair &
 Under the cell's own transition rule, forward perturbations remain in the same attractor
 basin in the tested harness. BT113 then tests harder off-rule legal jumps: passive
@@ -905,8 +912,8 @@ the projection that maintains or transforms it, Oko finalises the transition, Sm
 Assets meter the sustained work, and the CSS/Ouroboros return channel repairs deviations.
 
 The unresolved work is also clear: a production flow cell still needs a calibrated device
-noise model, a physical write-injection circuit, a physical coupling layer for interacting
-cells, and capacity accounting under real read windows. The paper therefore uses
+noise model, a physical pin/actuator map for the abstract ports, a physical coupling layer
+for interacting cells, and capacity accounting under real read windows. The paper therefore uses
 referenceable flow cells as the architecture's next primitive, not as a completed silicon
 claim.
 
@@ -1278,8 +1285,11 @@ symbolic distance, and inter-cell isolation:
 \[
 \begin{aligned}
 T_{\rm lock}&\leq 37\ \text{steps in the four-seed harness},&
-T_{\rm write}^{\rm ctrl}&\leq 3,&
-T_{\rm repair}^{\rm ctrl}&\leq 3,\\
+T_{\rm write}^{11{\rm p}}&\leq 3,&
+T_{\rm write}^{3{\rm p}}&\leq 7,\\
+T_{\rm repair}^{3{\rm p}}&\leq 7,&
+L_{\rm read}^{\rm exact}&=2,&
+L_{\rm read}^{1{\rm sub}}&=4,\\
 d_{\rm CID}^{18\ \rm symbols}&=19,&
 \mathrm{crossTalk}_{3\times3}&=0/24{,}000.
 \end{aligned}
@@ -1290,7 +1300,9 @@ can be specified by \emph{how quickly it locks, how far its trace identifier is 
 neighbouring identifiers, and how cleanly it composes in a lattice}, rather than by a
 static bit-cell layout alone. BT113 adds one constraint that should shape hardware:
 off-rule passive jumps are often symbol-changing, so a real flow cell needs an active
-return path whose control word is itself receipt-bearing.
+return path whose control word is itself receipt-bearing. BT114 adds the next one:
+the return path need not expose all $11$ legal continuations to hardware, but it cannot
+collapse below three abstract ports in the tested register bank.
 
 % ===========================================================================
 \section{Security, Identity, and Provenance}
@@ -1677,6 +1689,10 @@ Local WRF harness, \emph{BT112 corrected tr(A\^{}8), Ihara, McKay E8, Shannon, a
 \bibitem{wrf-bt113}
 Local WRF harness, \emph{BT113 controlled flow-register contract},
 \texttt{wrf\_bt113\_flow\_registers.py} with result JSON, generated June 3, 2026.
+
+\bibitem{wrf-bt114}
+Local WRF harness, \emph{BT114 active trace I/O: limited actuator and finite read windows},
+\texttt{wrf\_bt114\_active\_trace\_io.py} with result JSON, generated June 3, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

@@ -1,12 +1,12 @@
-# WRF Flow Pattern Findings -- BT110/BT111/BT112/BT113
+# WRF Flow Pattern Findings -- BT110/BT111/BT112/BT113/BT114
 ## Calibrated W(3,3) Architecture-Suite Notes
 
 **Updated:** 2026-06-03  
 **Graph:** W(3,3) = Cayley graph of Sp(4, F3)  
 **Parameters:** 40 vertices, 240 edges, 480 directed states, k=12-regular  
 **Property:** Ramanujan graph (all nontrivial eigenvalues <= 2*sqrt(11) ~= 6.633)  
-**Scripts:** `wrf_full_suite_bt110_bt111.py`, `wrf_bt112_suite.py`, `wrf_bt113_flow_registers.py`
-**Results:** `wrf_bt110_bt111_results.json`, `wrf_bt112_results.json`, `wrf_bt113_flow_registers_results.json`
+**Scripts:** `wrf_full_suite_bt110_bt111.py`, `wrf_bt112_suite.py`, `wrf_bt113_flow_registers.py`, `wrf_bt114_active_trace_io.py`
+**Results:** `wrf_bt110_bt111_results.json`, `wrf_bt112_results.json`, `wrf_bt113_flow_registers_results.json`, `wrf_bt114_active_trace_io_results.json`
 
 ---
 
@@ -193,7 +193,59 @@ channel whose control path is receipt-bearing.
 
 ---
 
-## 8 Harness-Supported Architecture Targets
+## BT114: Active Trace I/O
+
+BT114 tightens the BT113 contract in two directions: less idealized control and shorter
+reads.
+
+### BT114-A: Limited Abstract Actuator
+
+BT113 allowed the controller to choose any of the 11 legal non-backtracking successors.
+BT114 searches for a smaller global control alphabet that still reaches every target
+symbol in seeds 661, 693, and 878.
+
+| Port count | Valid global subsets |
+|------------|----------------------|
+| 1 | 0 |
+| 2 | 0 |
+| 3 | 4 |
+
+The best 3-port subset is **[0, 5, 6]**. Under that restricted actuator:
+
+- Every target write remains reachable from all 480 directed states
+- Worst target-write distance: **7** abstract port steps
+- Mean target-write distance: **3.3532** steps
+- Worst off-rule repair distance to the original symbol: **7** steps
+- P95 off-rule repair distance: **5** steps
+- Binary command budget: **2 bits/step**, **14 bits worst-case** for a write
+
+This is not a physical pinout. The ports are canonical neighbor-rank selectors in the W33
+carrier. The result says the hardware control path does not need to expose all 11 legal
+continuations, but it cannot collapse below three global ports for this register bank.
+
+### BT114-B: Finite Read Windows
+
+BT113 used full canonical cycle CIDs. BT114 asks how much of the moving trace a reader
+must actually observe.
+
+| Read condition | Minimum directed-state samples |
+|----------------|--------------------------------|
+| Exact symbol read across all 18 register-symbol traces | 2 |
+| One erasure | 3 |
+| Two erasures | 4 |
+| Three erasures | 6 |
+| One substituted state | 4 |
+| Two substituted states | 7 |
+| Three substituted states | 10 |
+| Up to two missed states between samples | 2 |
+
+The 18-symbol bank has 135 total cycle-phase windows. A two-state trace window identifies
+the register-symbol owner exactly; the full attractor cycle is still the canonical receipt,
+but ordinary reads can be short-window reads.
+
+---
+
+## 11 Harness-Supported Architecture Targets
 
 1. **WRITE-BOUNDED:** In the four primary rules, every directed state reaches an attractor in <= 37 deterministic steps.
 2. **FORWARD-STABLE:** Advancing along a cell's own transition preserves the attractor basin in the tested harness.
@@ -204,15 +256,18 @@ channel whose control path is receipt-bearing.
 6. **TARGET-WRITEABLE:** Three six-symbol registers support target writes from all 480 directed states in <= 3 legal non-backtracking controls.
 7. **PHASE-READABLE:** Symbol identity is a canonical cycle CID, invariant under phase rotation and reversal.
 8. **ACTIVELY REPAIRABLE:** Off-rule legal perturbations are not passively safe, but controlled repair to the original symbol is <= 3 legal controls in the BT113 registers.
+9. **ACTUATOR-LIMITED:** A 3-port abstract actuator [0,5,6] keeps all BT113 target writes and repairs reachable within <= 7 steps; no 1- or 2-port global subset works.
+10. **SHORT-WINDOW READABLE:** Two directed-state samples identify all 18 register-symbol traces exactly in the tested bank.
+11. **WINDOW-ROBUST:** Short reads tolerate bounded damage: 3 samples for one erasure, 4 for one substitution, and 2 for up to two missed states between samples.
 
 ---
 
-## BT114 Targets
+## BT115 Targets
 
-1. **Physical control abstraction:** Replace "choose any legal successor" with a bounded
-   actuator model: limited fanout, latency, energy, and syndrome feedback.
-2. **Read-window capacity:** Move from cycle CIDs to finite observation windows under
-   timing jitter and partial trace capture.
+1. **Physical pin mapping:** Map abstract ports [0,5,6] to a device-level actuator model
+   with latency, energy, fanout, and syndrome feedback.
+2. **Larger-bank read-window capacity:** Repeat BT114 read-window checks beyond the
+   18-symbol BT113 bank and under probabilistic timing jitter.
 3. **Coupled-cell dynamics:** Build a real interacting-cell harness instead of a
    read-compute-write software composition contract.
 4. **Substrate explanation for 25:** Explain `Product(3-Cartan_eig)=25` as a WRF-side
