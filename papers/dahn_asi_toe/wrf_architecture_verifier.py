@@ -3,7 +3,8 @@
 
 The script intentionally checks only architecture-paper claims: Atlas density,
 CSS storage budget, WRF control-plane constants, 70M TPS throughput identities,
-and the 70B model frame estimate.
+the 70B model frame estimate, and the bounded flow-cell harness claims cited
+in the architecture edition.
 """
 
 from __future__ import annotations
@@ -81,13 +82,38 @@ def main() -> None:
     assert css_frames_4bit == 8_439_430
     assert css_frames_8bit == 16_878_859
 
-    paper = Path(__file__).with_name("witting_architecture_v2.tex").read_text(encoding="utf-8")
+    here = Path(__file__).resolve().parent
+    paper = here.joinpath("witting_architecture_v2.tex").read_text(encoding="utf-8")
+    bt110 = json.loads(here.joinpath("wrf_bt110_bt111_results.json").read_text(encoding="utf-8"))
+    bt112 = json.loads(here.joinpath("wrf_bt112_results.json").read_text(encoding="utf-8"))
+
+    assert max(row["max"] for row in bt110["write_protocol"].values()) == 37
+    assert all(row["forward_preserve_500trials"] == 1.0 for row in bt110["noise_model"].values())
+    assert bt110["lattice_4cell"]["zero_cross_talk"] is True
+    assert bt110["capacity"]["total_distinct_cids"] == 1_138
+    assert len(bt110["capacity"]["six_attractor_seeds"]) == 3
+    assert bt110["hamming"]["min"] == 18
+    assert bt110["hamming"]["error_correction_t"] == 9
+    assert all(row["verified"] is True for row in bt110["spectral_trace_tower"].values())
+
+    assert bt112["bt112a_tr_A8"]["tr_A8"] == 430_970_880
+    assert bt112["bt112a_tr_A8"]["verified"] is True
+    assert bt112["bt112a_tr_A8"]["residual_value"] == 1_067_520
+    assert bt112["bt112d_shannon"]["M_observed"] == 1_138
+    assert bt112["bt112e_seed661_base6"]["num_symbols"] == 6
+    assert bt112["bt112e_seed661_base6"]["all_write_latencies_under_7"] is True
+    assert bt112["bt112f_3x3_lattice"]["cross_talk_events"] == 0
+    assert bt112["bt112f_3x3_lattice"]["center_to_center_lock_prob"] == 0.98
+
     required_phrases = [
         "The Witting Reference Fabric",
         "$81/240 = 27/80$",
         "$3/80$ gap",
         "$82{,}320$",
         "$8.44\\times 10^6$ CSS-budgeted Atlas frames",
+        "referenceable flow cell",
+        "$37$ deterministic steps",
+        "$1{,}138$ distinct $24$-hex-character flow CIDs",
         "not a ToE paper",
     ]
     forbidden_phrases = [
@@ -131,6 +157,15 @@ def main() -> None:
             "four_bit_raw_atlas_frames": raw_frames_4bit,
             "four_bit_css_budgeted_frames": css_frames_4bit,
             "eight_bit_css_budgeted_frames": css_frames_8bit,
+        },
+        "flow_cell_harness": {
+            "global_max_transient_steps": max(row["max"] for row in bt110["write_protocol"].values()),
+            "distinct_cids_500_seed_survey": bt110["capacity"]["total_distinct_cids"],
+            "six_attractor_seed_count": len(bt110["capacity"]["six_attractor_seeds"]),
+            "sampled_min_24hex_hamming": bt110["hamming"]["min"],
+            "sampled_symbolic_correction_t": bt110["hamming"]["error_correction_t"],
+            "bt112_tr_A8": bt112["bt112a_tr_A8"]["tr_A8"],
+            "bt112_3x3_cross_talk_events": bt112["bt112f_3x3_lattice"]["cross_talk_events"],
         },
         "latex_scan": "passed",
     }

@@ -185,7 +185,10 @@ fabric: UOR supplies typed content addresses; HLIX supplies projection-native sc
 Oko supplies hard-final network consensus; Smart Assets supply programmable economics;
 and the W(3,3) / Witting finite geometry supplies a compact coordination lattice with
 $40$ address classes, $240$ carrier links, $480$ directed routes, $51{,}840$ finite
-control symmetries, and an $11$-branch non-backtracking transport rule.
+control symmetries, and an $11$-branch non-backtracking transport rule. The architecture
+also admits a stronger memory primitive: a \emph{referenceable flow cell}, where the
+stored object is not a resting byte pattern but the canonical invariant of a bounded
+repeatable trace.
 
 The architecture's natural information density is $\boxed{3/8 = q/2^q}$, appearing
 exactly as the $R_{96}/256$ Atlas compression ratio and the W(3,3) chiral eigenspace
@@ -213,7 +216,8 @@ This is an architecture and strategy paper, not a claim that ternary Witting sil
 Bell-qutrit storage already exists as production hardware. The near-term path is to use
 the Witting finite geometry as coordination and verification mathematics for
 HLIX/UOR/Oko software systems, then progressively harden the same invariants into
-accelerators, storage, and fabric.
+accelerators, storage, and fabric. The flow-cell experiments cited below are finite
+software harnesses over W(3,3), not measured device noise results.
 \end{guardrail}
 
 \tableofcontents
@@ -514,11 +518,12 @@ $\{1, 24, 15\}$ acting as three native cache levels. Cache replacement is
 substrate-forced, not heuristic.
 \end{designprinciple}
 
-\begin{designprinciple}[A4: Bell-Qutrit Storage Cell]
-Each storage cell holds the temporal Bell qutrit
-$\ket{\Omega} = q^{-1/2}\sum_j \ket{j}_p \ket{j}_f$ across past and future temporal
-registers. Read is the Choi--Jamio\l{}kowski overlap; write is projection onto the future
-register.
+\begin{designprinciple}[A4: Storage Is Trace-Locked]
+Static objects are content-addressed by UOR CIDs. Active memory cells are
+trace-addressed: the physical state keeps moving, while the stored datum is
+$\mathrm{CID}_{\rm flow}=H(\mathrm{canon}(x_0,x_1,\ldots,x_T))$, the canonical invariant
+of a bounded repeatable trace. A temporal Bell qutrit is the far-horizon physical storage
+cell; a W33 non-backtracking flow cell is the software-first primitive.
 \end{designprinciple}
 
 \begin{designprinciple}[A5: BIER Multicast Is the Fabric]
@@ -543,8 +548,8 @@ configuration. Provenance is the orbit history; trust is the orbit signature.
 work because the group acts on \emph{content}, not locations. A2 makes A3 (spectral
 cache) work because the spectral decomposition is a property of the group action. A3
 makes A4 (Bell-qutrit storage) practical because the spectrum exactly matches the
-single-qutrit state space. A4 makes A6 (CSS code) trivial because Bell qutrits are
-natively CSS-encoded. A5 (BIER multicast) makes A2 work at scale because group action
+single-qutrit state space. A4 makes A6 (CSS code) practical because persistent state has
+a canonical trace witness that can be syndromically repaired. A5 (BIER multicast) makes A2 work at scale because group action
 must be broadcast. A7 (stabiliser identity) makes A1 trustworthy because identity is
 substrate-coherent. Every axiom supports every other; none is layered on.
 \end{connection}
@@ -825,6 +830,74 @@ length $240\cdot 7^3 = 82{,}320$ with an architecture target of distance $\geq 8
 There is no separate ECC philosophy: the base carrier, protected lift, decoder, and
 storage controller are one design surface. Device-level error rates remain empirical.
 
+\subsection{Referenceable flow cells}
+
+\begin{plainenglish}[Plain-English summary]
+Traditional memory pretends information is still: bits sit at an address until the CPU
+asks for them. WRF can make the opposite choice. The substrate may keep moving, while the
+information is the stable pattern traced by that motion. Reading means recovering the
+canonical pattern; writing means steering the local flow until it locks to the desired
+pattern.
+\end{plainenglish}
+
+\begin{definition}[Referenceable flow cell]
+A referenceable flow cell is a bounded dynamical register
+\[
+x_{t+1}=F_\theta(x_t,u_t,s_t),\qquad
+P=\mathrm{canon}(x_0,x_1,\ldots,x_T),\qquad
+\mathrm{CID}_{\rm flow}=H(P),
+\]
+where $x_t$ is the moving local state, $\theta$ is the tile-local routing rule, $u_t$ is
+input, $s_t$ is syndrome/receipt feedback, $P$ is a canonical trace invariant, and
+$\mathrm{CID}_{\rm flow}$ is the UOR-addressable name of the pattern. The datum is
+$P$, not any one instantaneous $x_t$.
+\end{definition}
+
+The W33 non-backtracking carrier gives a finite software model of this cell. It has
+$480=2|E|$ directed states and exactly $p_{\mathrm{Ih}}=11$ legal continuations from each
+state. The BT110--BT112 WRF harnesses \cite{wrf-bt110-bt111,wrf-bt112} test the first
+engineering questions without claiming device physics:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth}X}
+\toprule
+\textbf{Question} & \textbf{Finite harness result} \\
+\midrule
+Write locking &
+Across four primary seed rules, every directed state enters an attractor within at most
+$37$ deterministic steps. A seed-$661$ six-symbol register has mean symbol write
+latencies from $5.5$ to $6.2$ steps.\\
+Forward repair &
+Under the cell's own transition rule, forward perturbations remain in the same attractor
+basin in the tested harness. This is trajectory stability, not a physical noise model.\\
+Register isolation &
+A $3\times3$ independent-flow lattice reported $0$ cross-talk events in $24{,}000$
+one-step trials.\\
+Capacity headroom &
+The $500$-seed survey found $1{,}138$ distinct $24$-hex-character flow CIDs and three
+six-attractor seed rules. A sampled character-distance check found minimum distance
+$18$, corresponding to a $t=9$ symbolic correction budget in that sample.\\
+Spectral audit &
+The adjacency trace tower verifies exact substrate identities through $A^8$, including
+$\mathrm{tr}(A^8)=\mathrm{tr}(A^6)q(4k-1)+480\cdot16(q(4k-1)-\lambda)
+=430{,}970{,}880$.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The hardware interpretation is simple: WRF storage is not limited to passive cells. A
+cell can be a photonic loop, RF ring, memristive reservoir, packet loop, or software
+flow whose address is the canonical trace it sustains. UOR names the trace, HLIX schedules
+the projection that maintains or transforms it, Oko finalises the transition, Smart
+Assets meter the sustained work, and the CSS/Ouroboros return channel repairs deviations.
+
+The unresolved work is also clear: a production flow cell still needs a calibrated device
+noise model, a physical write-injection circuit, a coupling algebra for interacting
+cells, and capacity accounting under real read windows. The paper therefore uses
+referenceable flow cells as the architecture's next primitive, not as a completed silicon
+claim.
+
 \subsection{The Bell-qutrit storage cell}
 
 In the far-horizon physical design, each WRF storage cell is a temporal Bell qutrit:
@@ -1060,6 +1133,22 @@ tiles, gathers the inputs, runs the group action, and produces the output. There
 run in parallel by default.
 \end{intuition}
 
+\subsection{Trace objects}
+
+The Projection Engine treats a flow cell as a first-class object. A trace object records
+the carrier, local rule seed, canonical trace witness, current receipt chain, and repair
+policy:
+\[
+\text{TraceObject}
+=
+(\text{carrier CID},\,\theta,\,\mathrm{CID}_{\rm flow},\,\text{receipt CID},\,\text{syndrome policy}).
+\]
+This is the software bridge from ordinary UOR objects to active WRF memory. A static file
+is addressed by its canonical bytes; a live register, model shard, or agent-memory loop is
+addressed by the canonical invariant of the trace it emits. The operating system does
+not need a separate distinction between memory, process, and log: all three are reference
+objects with different trace policies.
+
 \subsection{Smart Asset workloads}
 
 User programs are \emph{smart assets}---self-funding, self-billing, tradeable workloads
@@ -1168,6 +1257,22 @@ light-speed, not by protocol).
 Aggregate projector coverage is \textbf{complete by construction}; physical miss behavior
 is a capacity and placement question for the implementation, not an undefined cache-policy
 guess.
+
+\subsection{Flow-cell budgets}
+
+The new flow-cell harnesses add a second performance surface beside throughput. A WRF
+implementation must budget not only transactions per second, but trace-lock time,
+symbolic distance, and inter-cell isolation:
+\[
+T_{\rm lock}\leq 37\ \text{steps in the four-seed harness},\qquad
+d_{\rm CID}^{\rm sample}=18,\qquad
+\mathrm{crossTalk}_{3\times3}=0/24{,}000.
+\]
+These are not universal limits; they are software-harness targets that make the next
+hardware experiments falsifiable. The important point is architectural: a WRF register
+can be specified by \emph{how quickly it locks, how far its trace identifier is from
+neighbouring identifiers, and how cleanly it composes in a lattice}, rather than by a
+static bit-cell layout alone.
 
 % ===========================================================================
 \section{Security, Identity, and Provenance}
@@ -1350,12 +1455,12 @@ and laptops contribute tile-equivalent capacity to the planetary mesh.
 \toprule
 \textbf{Window} & \textbf{Milestone} \\
 \midrule
-$2026$ & Software reference fabric: UOR-ADDR CIDs, Atlas-$12288$ frame tests, HLIX/HCP
-projection containers, Smart Asset workload envelopes, and Oko BLA simulation wired into
-one reproducible benchmark harness.\\
+$2026$ & Software reference fabric: UOR-ADDR CIDs, Atlas-$12288$ frame tests, trace-object
+flow-cell harnesses, HLIX/HCP projection containers, Smart Asset workload envelopes, and
+Oko BLA simulation wired into one reproducible benchmark harness.\\
 $2027$ & FPGA Witting tile prototype with $40$ trit/logical cores, three-channel
-Bose--Mesner routing emulator, hardware hash path, CSS syndrome path, and BIER multicast
-testbed.\\
+Bose--Mesner routing emulator, hardware hash path, CSS syndrome path, referenceable
+flow-cell emulator, and BIER multicast testbed.\\
 $2028$ & Multi-tile board with $1{,}600$ logical cores, Oko committee finality over WRF
 projection receipts, and demonstrated $10$\,M~TPS class benchmark under fixed committee
 size.\\
@@ -1386,8 +1491,9 @@ one substrate.
 
 That point is the $40$-vertex symplectic polar space $\W$, with $\Aut$ group of order
 $51{,}840$ and conjugacy cardinality $30$. Every subsystem of WRF---the Atlas-$12288$
-memory frame, the Bose--Mesner three-channel bus, the spectral cache, the Bell-qutrit
-storage cell, the CSS code, the group-action ISA, the BIER fabric, the projection
+memory frame, the Bose--Mesner three-channel bus, the spectral cache, the referenceable
+flow cell, the Bell-qutrit far-horizon storage cell, the CSS code, the group-action ISA,
+the BIER fabric, the projection
 engine---is forced by the same substrate. No subsystem is engineered ad hoc; no
 subsystem is layered on top of another; no subsystem is in tension with any other.
 
@@ -1399,6 +1505,9 @@ factor is $p_{\mathrm{Ih}} = k - 1 = 11$. The natural address-space partition is
 $40 \cdot 1{,}296 = 51{,}840$ orbit cells. The base finite-code marker is $d_Z=\mu=4$,
 and the protected runtime target is the $82{,}320$-length Steane/$\Phi_6$ lift. At
 $70$\,M~TPS the substrate completes $1.21 \times 10^{11}$ orbit cycles per second.
+The additional step is that memory can now be treated as a receipt-bearing trace: a
+flow-pattern CID names the invariant of an active process just as a UOR CID names the
+canonical bytes of a static object.
 
 \begin{thesis}
 \textit{Final statement.} The Witting Reference Fabric is the architecture that emerges when
@@ -1440,6 +1549,8 @@ $\Aut(\W)$ has $30$ conjugacy classes.
 for UOR.
 \item[Oko] The network-fabric consensus protocol underlying the WRF fabric.
 \item[Projection] A declarative description of work; the only operation in HCP/WRF.
+\item[Referenceable flow cell] A bounded active memory/compute cell whose datum is the
+canonical invariant of its trace and whose address is $H(\mathrm{canon}(\mathrm{trace}))$.
 \item[Pauli group, two-qutrit] The group generated by $X_3, Z_3$ acting on
 $\CC^3 \otimes \CC^3$; phase-space identical to $\W$.
 \item[$R_{96}$] UOR's resonance classification: a fixed mapping from $256$ byte values
@@ -1534,6 +1645,14 @@ provided PDF, October 21, 2025.
 
 \bibitem{smart-assets-image}
 Smart Assets source pack, \emph{SA Attributes}, provided PNG.
+
+\bibitem{wrf-bt110-bt111}
+Local WRF harness, \emph{BT110/BT111 Full Architecture Suite and Spectral Trace Tower},
+\texttt{wrf\_full\_suite\_bt110\_bt111.py} with result JSON, generated June 3, 2026.
+
+\bibitem{wrf-bt112}
+Local WRF harness, \emph{BT112 corrected tr(A\^{}8), Ihara, McKay E8, Shannon, and 3x3 flow lattice},
+\texttt{wrf\_bt112\_suite.py} with result JSON, generated June 3, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

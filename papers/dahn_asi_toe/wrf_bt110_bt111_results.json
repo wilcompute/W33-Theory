@@ -1,60 +1,196 @@
 {
-  "summary": "BT110/BT111 Full WRF Architecture Suite Results",
-  "date": "2026-06-03",
-  "graph": "W(3,3) = Cayley(Sp(4,F3)), 40V 240E 480 directed states, k=12-regular, Ramanujan",
   "write_protocol": {
-    "1728": {"max": 32, "mean": 9.53, "p95": 20, "p99": 29},
-    "2401": {"max": 37, "mean": 13.07, "p95": 31, "p99": 35},
-    "3125": {"max": 32, "mean": 12.68, "p95": 27, "p99": 31},
-    "4096": {"max": 26, "mean": 10.15, "p95": 22, "p99": 25},
-    "global_max_transient": 37,
-    "injection_cost_steps": 1
+    "1728": {
+      "max": 32,
+      "mean": 9.53,
+      "p95": 20,
+      "p99": 29
+    },
+    "2401": {
+      "max": 37,
+      "mean": 13.07,
+      "p95": 31,
+      "p99": 35
+    },
+    "3125": {
+      "max": 32,
+      "mean": 12.68,
+      "p95": 27,
+      "p99": 31
+    },
+    "4096": {
+      "max": 26,
+      "mean": 10.15,
+      "p95": 22,
+      "p99": 25
+    }
   },
   "noise_model": {
-    "1728": {"random_preserve": 0.592, "forward_preserve_500trials": 1.0},
-    "2401": {"random_preserve": 0.505, "forward_preserve_500trials": 1.0},
-    "3125": {"random_preserve": 0.970, "forward_preserve_500trials": 1.0},
-    "4096": {"random_preserve": 0.695, "forward_preserve_500trials": 1.0},
-    "forward_flow_self_healing": "UNCONDITIONAL 100% all seeds"
+    "1728": {
+      "random_preserve": 0.5917,
+      "forward_preserve_500trials": 1.0
+    },
+    "2401": {
+      "random_preserve": 0.504,
+      "forward_preserve_500trials": 1.0
+    },
+    "3125": {
+      "random_preserve": 0.9725,
+      "forward_preserve_500trials": 1.0
+    },
+    "4096": {
+      "random_preserve": 0.6857,
+      "forward_preserve_500trials": 1.0
+    }
   },
   "lattice_4cell": {
-    "cross_talk": {"B": 0, "C": 0, "D": 0, "trials": 2000},
+    "cross_talk": {
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "trials": 2000
+    },
     "zero_cross_talk": true,
-    "pairwise_lock": {"AB": 0.477, "CD": 0.805, "AC": 0.315, "AD": 0.345},
-    "all4_random_lock_prob": 0.116,
-    "AND_prob": 0.504,
-    "XOR_prob": 0.496
+    "pairwise_lock": {
+      "AB": 0.51,
+      "CD": 0.802,
+      "AC": 0.27,
+      "AD": 0.376
+    },
+    "AND_prob": 0.4925,
+    "XOR_prob": 0.5075
   },
   "capacity": {
     "seeds_tested": 500,
     "total_distinct_cids": 1138,
     "mean_attractors": 2.346,
-    "attractor_distribution": {"1": 126, "2": 166, "3": 133, "4": 62, "5": 10, "6": 3},
-    "six_attractor_seeds": [112, 226, 315, 661, 693]
+    "attractor_distribution": {
+      "1": 126,
+      "2": 166,
+      "3": 133,
+      "4": 62,
+      "5": 10,
+      "6": 3
+    },
+    "six_attractor_seeds": [
+      {
+        "seed": 112,
+        "cycle_lengths": [
+          3,
+          5,
+          5,
+          5,
+          5,
+          15
+        ],
+        "basin_sizes": [
+          240,
+          119,
+          76,
+          28,
+          12,
+          5
+        ]
+      },
+      {
+        "seed": 226,
+        "cycle_lengths": [
+          6,
+          8,
+          9,
+          9,
+          12,
+          13
+        ],
+        "basin_sizes": [
+          172,
+          150,
+          89,
+          28,
+          24,
+          17
+        ]
+      },
+      {
+        "seed": 315,
+        "cycle_lengths": [
+          4,
+          4,
+          6,
+          10,
+          13,
+          26
+        ],
+        "basin_sizes": [
+          223,
+          137,
+          80,
+          21,
+          12,
+          7
+        ]
+      }
+    ]
   },
   "hamming": {
-    "global_min_24char_hex": 18,
-    "global_mean": 22.52,
-    "error_correction_t": 9,
-    "per_seed_min": {"1728": 19, "2401": 24, "3125": 21, "4096": 24}
+    "min": 18,
+    "mean": 22.5,
+    "max": 24,
+    "error_correction_t": 9
   },
   "spectral_trace_tower": {
-    "tr_A2": {"formula": "n", "substrate": 480, "actual": 480, "verified": true},
-    "tr_A3": {"formula": "lam*n", "substrate": 960, "actual": 960, "verified": true},
-    "tr_A4": {"formula": "n*mu*Phi3", "substrate": 24960, "actual": 24960, "verified": true},
-    "tr_A5": {"formula": "lam*n*mu*(2*h_E8+1)", "substrate": 234240, "actual": 234240, "verified": true},
-    "tr_A6": {"formula": "n*16*(mu*q^2*p_Ih+1)", "substrate": 3048960, "actual": 3048960, "verified": true},
-    "tr_A7": {"formula": "lam*n*16*Phi6*(lam*q*F5*p_Ih+1)", "substrate": 35589120, "actual": 35589120, "verified": true},
-    "all_verified": true
+    "tr_A2": {
+      "formula": "n",
+      "substrate": 480,
+      "actual": 480,
+      "verified": true
+    },
+    "tr_A3": {
+      "formula": "lam * n",
+      "substrate": 960,
+      "actual": 960,
+      "verified": true
+    },
+    "tr_A4": {
+      "formula": "n * mu * Phi3",
+      "substrate": 24960,
+      "actual": 24960,
+      "verified": true
+    },
+    "tr_A5": {
+      "formula": "lam*n * mu * (2*h_E8 + 1)",
+      "substrate": 234240,
+      "actual": 234240,
+      "verified": true
+    },
+    "tr_A6": {
+      "formula": "n * 16 * (mu*q^2*p_Ih + 1)",
+      "substrate": 3048960,
+      "actual": 3048960,
+      "verified": true
+    },
+    "tr_A7": {
+      "formula": "lam*n * 16 * Phi6 * (lam*q*F5*p_Ih + 1)",
+      "substrate": 35589120,
+      "actual": 35589120,
+      "verified": true
+    }
   },
   "cyclotomic_cross_links": {
-    "Phi5_eq_p_Ih_squared": {"Phi5_3": 121, "p_Ih_sq": 121, "match": true},
-    "euler_product_Phi1248": {"value": 6560, "q8_minus_1": 6560, "match": true},
-    "triangles_eq_mu_V": {"triangles": 160, "mu_V": 160, "match": true}
-  },
-  "substrate_constants": {
-    "lam": 2, "mu": 4, "Phi3": 13, "Phi4": 10, "Phi5": 121,
-    "Phi6": 7, "Phi7": 1093, "Phi8": 82, "p_Ih": 11,
-    "F5": 5, "h_E8": 30, "q": 3, "V": 40, "E": 240, "n": 480
+    "Phi5_eq_p_Ih_squared": {
+      "Phi5": 121,
+      "p_Ih_sq": 121,
+      "match": true
+    },
+    "euler_product_Phi1248": {
+      "value": 6560,
+      "q8_minus_1": 6560,
+      "match": true
+    },
+    "triangles_eq_mu_V": {
+      "triangles": 160,
+      "mu_V": 160,
+      "match": true
+    }
   }
 }

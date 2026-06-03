@@ -1,75 +1,154 @@
 {
-  "summary": "BT112 Full Suite Results -- All BT111 TODO targets completed",
-  "date": "2026-06-03",
   "bt112a_tr_A8": {
     "tr_A8": 430970880,
     "ratio_tr8_tr6": 141,
-    "ratio_factored": "3 * 47",
-    "substrate_formula": "tr(A^6) * q * (4k-1)",
+    "ratio_tr8_tr6_exact": "56116/397",
+    "substrate_formula": "tr(A^6)*q*(4k-1) + n*16*(q*(4k-1)-lambda)",
+    "floor_ladder_value": 429903360,
+    "residual_value": 1067520,
     "formula_value": 430970880,
     "verified": true,
-    "note": "47 = 4k-1 encodes graph degree k=12; ratio ladder = q*(4k-1) per even step"
+    "note": "The tempting ratio ladder needs the residual term; 47=4k-1 and lambda=2 both enter."
   },
   "bt112b_ihara": {
-    "V": 40, "E": 240, "chi": -200,
+    "V": 40,
+    "E": 240,
+    "chi": -200,
     "elementary_sym_polys": {
-      "e_0": 1, "e_1": 0, "e_2": -240, "e_3": 320,
-      "e_4": 22560, "e_5": -29952, "e_6": -1263360, "e_7": 1059840
+      "e_0": 1,
+      "e_1": 0,
+      "e_2": -240,
+      "e_3": 320,
+      "e_4": 22560,
+      "e_5": -29952,
+      "e_6": -1263360,
+      "e_7": 0,
+      "e_8": 0
     },
-    "e2_eq_neg_E": true,
     "triangles": 160,
     "four_cycles": 2400,
-    "trivial_poles": ["u=1/12", "u=1/11"],
-    "functional_eq": "Z(1/11u)^{-1} = Z(u)^{-1} * 11^200 * u^400"
+    "e2_eq_neg_E": true,
+    "functional_eq": "Z(1/(k-1)u)^{-1} = Z(u)^{-1} * 11^200 * u^400"
   },
   "bt112c_mckay_e8": {
     "E8_roots_eq_W33_edges": true,
     "sum_E8_exponents": 120,
-    "equals_4h_E8": true,
-    "product_first_last_exp_eq_h_minus_1": true,
+    "4h_E8": 120,
+    "product_first_last_exp": 29,
+    "h_E8_minus_1": 29,
     "|Sp4_F3|": 51840,
     "|W_E8|": 696729600,
     "ratio": 13440,
     "ratio_factored": "2^7 * 3 * 5 * 7",
     "product_3_minus_cartan_eig": 25.0,
-    "key_link": "tr(A^5) = lam*n*mu*(2*h_E8+1), h_E8=30 encodes E8 Coxeter number"
+    "tr_A5_encodes_h_E8": "tr(A^5) = lam*n*mu*(2*h_E8+1), h_E8=30 appears as factor"
   },
   "bt112d_shannon": {
-    "n_code": 24, "d_min": 18, "t": 9, "M_observed": 1138,
-    "alphabet": "hex-16",
+    "n": 24,
+    "d_min": 18,
+    "t": 9,
+    "M_observed": 1138,
     "singleton_bound": 268435456,
-    "hamming_bound_approx": 1516800000000,
-    "info_bits_per_CID": 10.152,
+    "hamming_bound": 1517476263412,
+    "info_bits_per_CID": 10.1523,
     "rate": 0.1058,
-    "BSC_capacity_bits_per_CID": 1.094,
-    "conclusion": "WRF CID space is far below capacity limits; room for 2e8+ distinct patterns"
+    "BSC_capacity_bits_per_CID": 1.094
   },
   "bt112e_seed661_base6": {
     "seed": 661,
     "num_symbols": 6,
+    "base": 6,
     "log2_6_bits": 2.585,
-    "all_write_latencies_under_7_steps": true,
     "symbols": [
-      {"symbol": 0, "cycle_length": 16, "basin_size": 127, "avg_transient": 5.7},
-      {"symbol": 1, "cycle_length": 4,  "basin_size": 33,  "avg_transient": 5.9},
-      {"symbol": 2, "cycle_length": 10, "basin_size": 68,  "avg_transient": 5.6},
-      {"symbol": 3, "cycle_length": 14, "basin_size": 107, "avg_transient": 5.5},
-      {"symbol": 4, "cycle_length": 5,  "basin_size": 106, "avg_transient": 6.1},
-      {"symbol": 5, "cycle_length": 5,  "basin_size": 39,  "avg_transient": 6.2}
-    ]
+      {
+        "symbol": 0,
+        "cycle_length": 16,
+        "basin_size": 127,
+        "avg_transient": 5.66,
+        "CID": "9cd3a1c913bd84934a904129"
+      },
+      {
+        "symbol": 1,
+        "cycle_length": 4,
+        "basin_size": 33,
+        "avg_transient": 5.89,
+        "CID": "4378449cd3ac069c4afe991d"
+      },
+      {
+        "symbol": 2,
+        "cycle_length": 10,
+        "basin_size": 68,
+        "avg_transient": 5.6,
+        "CID": "d995f4f3d1f89bceea7b82de"
+      },
+      {
+        "symbol": 3,
+        "cycle_length": 14,
+        "basin_size": 107,
+        "avg_transient": 5.54,
+        "CID": "573c8b23cb2750492df13489"
+      },
+      {
+        "symbol": 4,
+        "cycle_length": 5,
+        "basin_size": 106,
+        "avg_transient": 6.12,
+        "CID": "10189ca1cc2123c31b91fbb3"
+      },
+      {
+        "symbol": 5,
+        "cycle_length": 5,
+        "basin_size": 39,
+        "avg_transient": 6.2,
+        "CID": "bbc409971770cea2f2bb4b32"
+      }
+    ],
+    "all_write_latencies_under_7": true
   },
   "bt112f_3x3_lattice": {
-    "seeds": [61, 161, 261, 361, 461, 561, 661, 761, 861],
-    "attractor_counts": [4, 3, 4, 3, 2, 3, 6, 3, 3],
+    "seeds": [
+      61,
+      161,
+      261,
+      361,
+      461,
+      561,
+      661,
+      761,
+      861
+    ],
+    "attractor_counts": [
+      4,
+      3,
+      4,
+      3,
+      2,
+      3,
+      6,
+      3,
+      3
+    ],
     "cross_talk_trials": 24000,
     "cross_talk_events": 0,
     "zero_cross_talk": true,
     "phase_lock_matrix": [
-      [0.728, 0.802, 0.298],
-      [0.612, 0.980, 0.900],
-      [0.292, 0.388, 0.700]
+      [
+        0.728,
+        0.802,
+        0.298
+      ],
+      [
+        0.612,
+        0.98,
+        0.9
+      ],
+      [
+        0.292,
+        0.388,
+        0.7
+      ]
     ],
-    "center_to_center_lock_prob": 0.980,
-    "seed_661_in_lattice": "position (row=2,col=0) -- 6-attractor base-6 register embeds cleanly in 3x3"
+    "center_to_center_lock_prob": 0.98,
+    "seed_661_position": "(row=2, col=0) -- 6 attractors in lattice"
   }
 }

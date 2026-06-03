@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
 WRF Full Architecture Suite + Spectral Trace Tower -- BT110/BT111
-Closes all open items from wrf_flow_pattern_findings.md.
+Tests the first bounded-flow-cell questions from wrf_flow_pattern_findings.md.
 Discovers exact substrate trace identities in W(3,3) adjacency moments.
 
 Run: python wrf_full_suite_bt110_bt111.py
 
 Verified results:
   - Write Protocol: max transient 37 steps, injection cost 1 step
-  - Noise Model: forward-flow 100% self-healing all seeds
-  - 4-Cell Lattice: ZERO cross-talk 0/2000 trials
-  - Capacity: 1138 distinct CIDs from 500 seeds, 7 six-attractor seeds
+  - Noise Model: forward-flow same-basin preservation across tested seeds
+  - 4-Cell Lattice: zero one-step cross-talk in 0/2000 trials
+  - Capacity: 1138 distinct CIDs from 500 seeds, 3 six-attractor seeds
   - ECC: min Hamming 18, t=9 error-correction capacity
   - Spectral Trace Tower: 6 exact substrate identities, ALL verified
 """
@@ -18,6 +18,10 @@ Verified results:
 import hashlib, json, random, math
 from collections import Counter
 from itertools import product
+from pathlib import Path
+
+
+OUT = Path(__file__).with_name("wrf_bt110_bt111_results.json")
 
 
 # ---- W(3,3) graph construction --------------------------------------------
@@ -440,10 +444,9 @@ def main():
     print()
 
     # ---- Save results -------------------------------------------------------
-    outfile = "wrf_bt110_bt111_results.json"
-    with open(outfile, "w") as f:
+    with OUT.open("w") as f:
         json.dump(results, f, indent=2)
-    print(f"Results saved to {outfile}")
+    print(f"Results saved to {OUT}")
     return results
 
 

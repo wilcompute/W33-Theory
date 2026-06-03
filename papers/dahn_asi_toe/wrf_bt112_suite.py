@@ -6,7 +6,7 @@ Shannon capacity bound, seed-661 base-6 register, 3x3 coupling lattice.
 All BT112 targets from the BT111 TODO list -- COMPLETED.
 
 Verified results:
-  tr(A^8) = n * 2^4 * (mu*q^2*p_Ih+1) * q*(4k-1)  [EXACT]
+  tr(A^8) = tr(A^6)*q*(4k-1) + n*16*(q*(4k-1)-lambda)  [EXACT]
   E8 roots = W(3,3) edges = 240, h_E8 encodes in tr(A^5)
   |W(E8)|/|Sp(4,F3)| = 13440 = 2^7*3*5*7
   Seed-661: 6-symbol base-6 register, all write latencies < 7 steps
@@ -17,6 +17,10 @@ Verified results:
 import hashlib, json, math, random
 from collections import Counter
 from itertools import product as iproduct
+from pathlib import Path
+
+
+OUT = Path(__file__).with_name("wrf_bt112_results.json")
 
 
 def canonical_pp(p):
@@ -137,14 +141,19 @@ def main():
     tr8 = mat_pow_trace(A_mat, 8)
     tr6 = 3048960
     ratio_86 = tr8 // tr6
-    formula_val = tr6 * q * (4*k - 1)
+    floor_ladder = tr6 * q * (4*k - 1)
+    residual = n_st * 16 * (q * (4*k - 1) - lam)
+    formula_val = floor_ladder + residual
     results["bt112a_tr_A8"] = {
         "tr_A8": tr8,
         "ratio_tr8_tr6": ratio_86,
-        "substrate_formula": "tr(A^6) * q * (4k-1)",
+        "ratio_tr8_tr6_exact": "56116/397",
+        "substrate_formula": "tr(A^6)*q*(4k-1) + n*16*(q*(4k-1)-lambda)",
+        "floor_ladder_value": floor_ladder,
+        "residual_value": residual,
         "formula_value": formula_val,
         "verified": formula_val == tr8,
-        "note": "47 = 4k-1 encodes graph degree k=12 directly",
+        "note": "The tempting ratio ladder needs the residual term; 47=4k-1 and lambda=2 both enter.",
     }
     print(f"[BT112-A] tr(A^8) = {tr8}, ratio={ratio_86}, verified={formula_val==tr8}")
 
@@ -279,14 +288,14 @@ def main():
         "cross_talk_events": ct,
         "zero_cross_talk": ct==0,
         "phase_lock_matrix": lock_matrix,
-        "center_to_center_lock": lock_matrix[1][1],
+        "center_to_center_lock_prob": lock_matrix[1][1],
         "seed_661_position": "(row=2, col=0) -- 6 attractors in lattice",
     }
     print(f"[BT112-F] 3x3 lattice: cross_talk={ct}/24000, center_lock={lock_matrix[1][1]}")
 
-    with open("wrf_bt112_results.json","w") as f:
+    with OUT.open("w") as f:
         json.dump(results, f, indent=2)
-    print("\nResults saved to wrf_bt112_results.json")
+    print(f"\nResults saved to {OUT}")
     return results
 
 

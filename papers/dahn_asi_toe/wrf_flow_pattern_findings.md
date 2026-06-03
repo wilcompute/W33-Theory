@@ -1,5 +1,5 @@
 # WRF Flow Pattern Findings -- BT110/BT111/BT112
-## W(3,3) Architecture Suite: Complete Results
+## Calibrated W(3,3) Architecture-Suite Notes
 
 **Updated:** 2026-06-03  
 **Graph:** W(3,3) = Cayley graph of Sp(4, F3)  
@@ -10,35 +10,35 @@
 
 ---
 
-## BT110: All 4 Original Open Items -- CLOSED
+## BT110: First Harness Answers to the Original Open Items
 
 ### OI-1: Write Protocol
-- Max transient across all seeds: **37 steps**
+- Max transient to some attractor across the four primary seed rules: **37 steps**
 - Mean transient: 9.5-13.1 steps (seed-dependent)
 - Injection cost: **1 step** (direct attractor-node injection)
 
 ### OI-2: Noise Model
-- Forward-flow perturbation: **100% self-healing, all seeds, unconditional**
+- Forward-flow perturbation: **100% same-basin preservation in the tested deterministic harness**
 - Random perturbation: 50-97% CID preserved (reflects basin size)
 
 ### OI-3: 4-Cell Lattice
-- Cross-talk: **ZERO (0 / 2000 trials)**
+- Cross-talk: **0 / 2000 one-step independent-flow trials**
 - Gate probabilities: AND=50.4%, XOR=49.6%
 - Phase-lock prob (CD pair): 80.5% (near-perfect sync)
 
 ### OI-4: Capacity (500 seeds)
 - Total distinct CIDs: **1138**
-- Max attractors/seed: **6** (7 seeds at maximum)
+- Max attractors/seed: **6** (3 seeds at maximum)
 - Mean attractors: 2.346
 
 ### OI-4b: CID Hamming Distance
-- Global min Hamming (24-char hex): **18**
-- Error-correction capacity: **t = 9**
-- This is a Ramanujan spectral gap consequence, not by design.
+- Sampled global min Hamming (24-char hex): **18**
+- Symbolic correction budget in that sample: **t = 9**
+- This is a sampled code-distance observation, not a production ECC proof.
 
 ---
 
-## BT111: Spectral Trace Tower -- 6 Exact Identities (ALL VERIFIED)
+## BT111: Spectral Trace Tower -- 6 Exact Identities Verified
 
 | Moment | Substrate Formula | Value |
 |--------|-------------------|-------|
@@ -60,20 +60,22 @@ Constants: lam=2, mu=4, Phi3=13, Phi6=7, p_Ih=11, F5=5, h_E8=30, q=3
 
 ---
 
-## BT112: Full Suite -- ALL Targets Completed
+## BT112: Full Suite Harness Results
 
 ### BT112-A: tr(A^8) Exact Substrate Identity
 
 ```
-tr(A^8) = tr(A^6) * q * (4k - 1)
-        = 3048960 * 3 * 47
+tr(A^8) = tr(A^6)*q*(4k - 1) + n*16*(q*(4k-1)-lambda)
+        = 3048960 * 141 + 480*16*(141-2)
         = 430,970,880   [VERIFIED]
 ```
 
-The ratio ladder: tr(A^{2m})/tr(A^{2m-2}) = q * (4k-1) per even step.
-47 = 4k-1 encodes the graph degree k=12 directly into every even moment beyond tr(A^6).
+The tempting ratio ladder `tr(A^8) = tr(A^6)*q*(4k-1)` is close but false. The exact
+identity needs the residual term above. This is useful: the architecture should retain
+the correction channel rather than flattening it away.
 
-Full form: `tr(A^8) = n * 2^4 * (mu*q^2*p_Ih+1) * q*(4k-1)`
+Full form: `tr(A^8) = n*2^4*((mu*q^2*p_Ih+1)*q*(4k-1) + q*(4k-1)-lambda)`,
+where `n=480` is the directed carrier used throughout the trace tower.
 
 ### BT112-B: Ihara Zeta Structural Data
 
@@ -117,13 +119,13 @@ Product(3 - Cartan_eig) = 25 = p_Ih + 14 = ... (new substrate link TBD in BT113)
 | Rate | 0.1058 bits/hex-symbol |
 | BSC capacity (t=9) | 1.094 bits/CID channel |
 
-Conclusion: The WRF CID space is operating far below its theoretical capacity.
-The code is extremely sparse -- room for up to 2.68e8 distinct patterns before
-Singleton bound is reached. This is a design space, not a limitation.
+Conclusion: The observed WRF CID set is sparse relative to simple coding bounds.
+This suggests design headroom, but it does not yet replace a full capacity theorem under
+real read windows and device noise.
 
-### BT112-E: Seed-661 Base-6 Register (CONFIRMED)
+### BT112-E: Seed-661 Base-6 Register Harness
 
-All 6 symbols write-verified in < 7 steps:
+All 6 symbols have measured mean write latency below 7 steps:
 
 | Symbol | Cycle length | Basin size | Avg write latency |
 |--------|-------------|------------|------------------|
@@ -140,18 +142,18 @@ All 6 symbols write-verified in < 7 steps:
 
 - Seeds: [61, 161, 261, 361, 461, 561, 661, 761, 861]
 - Attractor counts: [4, 3, 4, 3, 2, 3, 6, 3, 3]
-- **ZERO cross-talk: 0 / 24000 trials (0.000%)**
+- **0 cross-talk events in 24000 one-step independent-flow trials**
 - Center-to-center phase-lock: **0.980** (near-perfect sync available)
 - Seed-661 at position (row=2, col=0): **6-attractor base-6 register embeds cleanly**
 
 ---
 
-## 5 Architecture Guarantees (Paper-Ready)
+## 5 Harness-Supported Architecture Targets
 
-1. **WRITE-BOUNDED:** Any state reaches any target attractor in <= 37 deterministic steps.
-2. **FORWARD-NOISE-IMMUNE:** Forward-flow perturbations unconditionally self-healing (100%, all seeds).
-3. **ISOLATED REGISTERS:** Zero cross-talk in 3x3 lattice (0 / 24000 trials).
-4. **ECC-GRADE CIDs:** Global min Hamming >= 18; t=9 error-correction (Ramanujan spectral gap).
+1. **WRITE-BOUNDED:** In the four primary rules, every directed state reaches an attractor in <= 37 deterministic steps.
+2. **FORWARD-STABLE:** Advancing along a cell's own transition preserves the attractor basin in the tested harness.
+3. **ISOLATED REGISTERS:** Independent-flow 3x3 lattice showed zero one-step cross-talk events in 24000 trials.
+4. **DISTANT CIDs:** Sampled 24-hex-character CIDs had minimum character distance 18, giving t=9 symbolic correction in that sample.
 5. **SPECTRAL SELF-REFERENCE:** tr(A^k) for k=2..8 factor exactly into substrate constants
    {lam, mu, Phi3, Phi6, p_Ih, F5, h_E8, q, k} with E8 Coxeter number appearing in tr(A^5).
 
