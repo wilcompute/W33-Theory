@@ -1,0 +1,100 @@
+{
+  "checks": {
+    "closure_clock_is_nilpotent_at_6": true,
+    "flow_pattern_cid_is_reverse_invariant": true,
+    "flow_pattern_cid_is_rotation_invariant": true,
+    "markov_chain_has_uniform_stationary_measure": true,
+    "nonbacktracking_outdegree_is_11": true,
+    "w33_has_240_edges": true,
+    "w33_has_40_vertices": true,
+    "w33_has_480_directed_edges": true,
+    "w33_is_srg_40_12_2_4": true
+  },
+  "closure_clock": {
+    "dimension": 6,
+    "finite_impulse_response_depth": 5,
+    "generator": "G=(1/2)S on a 6-state closure clock",
+    "nilpotence_index": 6,
+    "nonzero_powers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "functional_flow_cell": {
+    "component_count": 2,
+    "cycle_length_histogram": {
+      "15": 1,
+      "16": 1
+    },
+    "largest_basin_fraction": 0.70625,
+    "largest_basin_size": 339,
+    "max_transient_steps": 18,
+    "reverse_invariant_cid": true,
+    "rotation_invariant_cid": true,
+    "selected_cycle_cid": "8cbe04bd8b7107facc8d1f4b",
+    "selected_cycle_length": 16,
+    "selected_cycle_prefix": [
+      325,
+      155,
+      158,
+      253,
+      191,
+      208,
+      419,
+      179,
+      188,
+      263,
+      248,
+      336
+    ]
+  },
+  "interpretation": [
+    "A WRF flow datum can be modeled as the canonical orbit of a closed or attracting trace.",
+    "The addressable object is the invariant pattern, while the hardware state keeps moving.",
+    "UOR can reference the canonical witness; HLIX can schedule/receipt projections; Oko can finalize pattern transitions; Smart Assets can meter sustained flow.",
+    "This is promising as an architecture primitive, but it still needs a noise model, write protocol, and coupling algebra before entering the paper."
+  ],
+  "module": "wrf_flow_pattern_probe",
+  "status": "exploratory_not_paper_claim",
+  "toroidal_markov_relaxation": {
+    "active_count_horizon": 4,
+    "active_states": 7,
+    "ground_states": 1,
+    "probability_packet_horizon": 7,
+    "row_stochastic": true,
+    "spectral_radius_bound": 0.592617351,
+    "states": 8,
+    "stationary_active_mass": "7/8",
+    "stationary_ground_mass": "1/8",
+    "uniform_stationary": true
+  },
+  "uor_framework_local_anchor": {
+    "available": true,
+    "classes": 218,
+    "named_individuals": 846,
+    "namespaces": 16,
+    "parsed": true,
+    "properties": 446,
+    "version": "6.3.0"
+  },
+  "verified": true,
+  "w33_carrier": {
+    "directed_edges": 480,
+    "edges": 240,
+    "nonbacktracking_outdegree_histogram": {
+      "11": 480
+    },
+    "srg": {
+      "degree": 12,
+      "lambda": 2,
+      "lambda_single": true,
+      "mu": 4,
+      "mu_single": true,
+      "regular": true
+    },
+    "vertices": 40
+  }
+}
