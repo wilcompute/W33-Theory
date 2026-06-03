@@ -1,0 +1,62 @@
+{
+  "heawood_szilassi_cascade": {
+    "Aut_Heawood": 336,
+    "Aut_Fano": 168,
+    "Aut_Szilassi_chiral": 42,
+    "coset_index": 8,
+    "Szilassi_flags": 84,
+    "Hurwitz_at_g3": 168
+  },
+  "csaszar_szilassi_fvector": {
+    "Csaszar_fvector": [
+      7,
+      21,
+      14
+    ],
+    "Szilassi_fvector": [
+      14,
+      21,
+      7
+    ],
+    "Csaszar_ternary": [
+      1,
+      3,
+      2
+    ],
+    "Szilassi_ternary": [
+      2,
+      3,
+      1
+    ],
+    "reverse_duality": true,
+    "F_Csaszar_equals_dim_G2": true
+  },
+  "fano_PGL_S4_qutrit": {
+    "PGL_2_3": 24,
+    "PSL_2_3": 12,
+    "fano_decomp": "mu + q = Phi_6",
+    "code_84": 84,
+    "fano_pair_stab_octonion": 8
+  },
+  "fano_hamming_horizon": {
+    "binary_Hamming": [
+      7,
+      4,
+      3
+    ],
+    "qutrit_horizon": [
+      72,
+      66,
+      6
+    ],
+    "heptad_closure": 128,
+    "striking_identity": "|Aut(Fano)| * |E(W33)| = 168 * 240 = 8!"
+  },
+  "chirality": {
+    "Szilassi_orientation_pres": 42,
+    "Szilassi_orientation_rev": 0,
+    "interpretation": "substrate's intrinsic CHIRALITY = origin of CP violation"
+  },
+  "mathieu_chain": "Fano -> Heawood -> Klein -> PSL(2,7) -> M_21 -> M_24",
+  "conclusion": "MCCI-MCCXX cascade integrated: Heawood-Szilassi-Fano-PGL/S_4 symmetry trinity. Aut(Fano) = 2^q*q*Phi_6 = octonion-field-Heawood. Szilassi 42+/0- is the substrate's intrinsic chirality, origin of CP violation. Csaszar/Szilassi f-vectors are substrate ternary reverses; F_Csaszar = dim(G_2). 168*240 = 8! striking identity. Hamming [7,4,3]_2 lifts to qutrit horizon [72,66,6]_3."
+}
