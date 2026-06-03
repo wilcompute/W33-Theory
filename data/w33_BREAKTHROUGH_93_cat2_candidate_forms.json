@@ -1,0 +1,38 @@
+{
+  "candidate_proposals": [
+    {
+      "observable": "Sigma m_nu",
+      "substrate_form": "(Phi_4^2 + 1) meV",
+      "value": 0.101,
+      "unit": "eV",
+      "status": "conjectural; within cosmological bound",
+      "falsifier": "Euclid/CMB-S4 outside [98, 105] meV"
+    },
+    {
+      "observable": "theta_Cabibbo",
+      "substrate_form": "Phi_3 degrees",
+      "value": 13.0,
+      "unit": "degrees",
+      "status": "conjectural; matches PDG 0.3%",
+      "note": "360 = q^2*Phi_4*mu = substrate factorization",
+      "falsifier": "Tightened |V_us| measurement"
+    }
+  ],
+  "resists_closed_form": [
+    "Lambda absolute / m_e^4 (off by 45 orders)",
+    "T_CMB absolute (needs photon decoupling)",
+    "Delta a_mu (SM tension open)"
+  ],
+  "untested": [
+    "B-meson rare BRs",
+    "PMNS Majorana phases",
+    "Sterile neutrino masses",
+    "Dark matter particle ID",
+    "T_rh reheating",
+    "Inflation V(phi)",
+    "theta_QCD"
+  ],
+  "cat_2_reduction": "12 -> 10 unknowns IF candidates confirmed",
+  "honesty": "These are CANDIDATE substrate forms, not derived. Predictions are explicit and falsifiable by future experiments.",
+  "conclusion": "Applied BT92 correction-lattice toolkit to BT82 Cat 2. 2 candidate substrate forms: Sigma m_nu = (Phi_4^2+1) meV and theta_C = Phi_3 degrees. 3 resist closed form. 7 untested. Both candidates are falsifiable by tightening Planck/Euclid/V_us measurements; if confirmed, Cat 2 reduces from 12 to 10 unknowns."
+}
