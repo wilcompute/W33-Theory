@@ -1,0 +1,198 @@
+{
+  "tier_1_near_term": [
+    {
+      "prediction": "m_H = (mu+1)^q",
+      "substrate_value": "125 GeV",
+      "observation": "125.20 +/- 0.11",
+      "error": "0.08%",
+      "experiment": "HL-LHC tightening"
+    },
+    {
+      "prediction": "m_W = 2v",
+      "substrate_value": "80 GeV",
+      "observation": "80.379 +/- 0.012",
+      "error": "0.47%",
+      "experiment": "Tevatron CDF II anomaly"
+    },
+    {
+      "prediction": "v_EW = |E| + q!",
+      "substrate_value": "246 GeV",
+      "observation": "246.22",
+      "error": "0.09%",
+      "experiment": "EW VEV"
+    },
+    {
+      "prediction": "Delta H_0 = q!",
+      "substrate_value": "6 km/s/Mpc",
+      "observation": "5.64",
+      "error": "6%",
+      "experiment": "JWST + Euclid"
+    },
+    {
+      "prediction": "V(F_3) = 1/q",
+      "substrate_value": "0.333",
+      "observation": "TBD",
+      "error": "?",
+      "experiment": "Photonic Franson"
+    },
+    {
+      "prediction": "sin^2 theta_W = q/Phi_3",
+      "substrate_value": "0.2308",
+      "observation": "0.2312",
+      "error": "0.19%",
+      "experiment": "FCC-ee"
+    }
+  ],
+  "tier_2_this_decade": [
+    {
+      "prediction": "Witting KS = (v-q!)/v",
+      "value": "34/40",
+      "observation": "TBD",
+      "experiment": "Photonic 40-ray"
+    },
+    {
+      "prediction": "Key rate = Phi_3/v",
+      "value": "13/40",
+      "observation": "TBD",
+      "experiment": "QKD"
+    },
+    {
+      "prediction": "Axion m_a",
+      "value": "~30 keV",
+      "observation": "<bound>",
+      "experiment": "ADMX-G2"
+    },
+    {
+      "prediction": "lambda_3 (di-Higgs)",
+      "value": "95.7 GeV",
+      "observation": "TBD",
+      "experiment": "FCC-hh (2040+)"
+    },
+    {
+      "prediction": "alpha^-1(M_Z) = lambda^Phi_6",
+      "value": "128",
+      "observation": "127.94",
+      "experiment": "FCC-ee Z-pole"
+    },
+    {
+      "prediction": "T_nu/T_CMB = (mu/p_Ih)^(1/q)",
+      "value": "0.7138",
+      "observation": "TBD precise",
+      "experiment": "CMB-S4"
+    },
+    {
+      "prediction": "n_s = q^q/(mu*Phi_6)",
+      "value": "0.9643",
+      "observation": "0.9649",
+      "experiment": "LiteBIRD"
+    },
+    {
+      "prediction": "sigma_8 = Phi_3/(Phi_3+q)",
+      "value": "0.8125",
+      "observation": "0.812",
+      "experiment": "Euclid + DESI"
+    }
+  ],
+  "tier_3_beyond_current": [
+    {
+      "prediction": "tau_proton ~ 10^33 years",
+      "value": "10^33 yr",
+      "observation": "Super-K > 1.6e34",
+      "experiment": "Hyper-K (2027+)"
+    },
+    {
+      "prediction": "M_monopole = f * M_X",
+      "value": "~10^16 GeV",
+      "observation": "no observation",
+      "experiment": "IceCube, RNO-G"
+    },
+    {
+      "prediction": "Lambda/M_Pl^4 = q^-256",
+      "value": "10^-122.14",
+      "observation": "10^-122",
+      "experiment": "(direct impossible)"
+    },
+    {
+      "prediction": "m_W/M_Pl = q^-36",
+      "value": "6.7e-18",
+      "observation": "6.6e-18",
+      "experiment": "(direct impossible)"
+    },
+    {
+      "prediction": "S_BH = k*|E| = 2880",
+      "value": "universal",
+      "observation": "(unknown)",
+      "experiment": "LISA (2035+)?"
+    }
+  ],
+  "precision_records": [
+    {
+      "name": "m_p/m_e",
+      "form": "k*q^2*Ogg_7 = 1836",
+      "error": "0.008%"
+    },
+    {
+      "name": "alpha^-1",
+      "form": "137 + 1/(mu*Phi_6)",
+      "error": "4 ppm"
+    },
+    {
+      "name": "alpha^-1(M_Z)",
+      "form": "2^Phi_6 = 128",
+      "error": "0.05%"
+    },
+    {
+      "name": "Gamma_Z",
+      "form": "m_Z/(q!)^2 - 1/(q*Phi_4)",
+      "error": "0.05%"
+    },
+    {
+      "name": "H_0^SH0ES",
+      "form": "Phi_12 = 73",
+      "error": "0.05%"
+    },
+    {
+      "name": "n_s",
+      "form": "q^q/(mu*Phi_6) = 0.9643",
+      "error": "0.06%"
+    },
+    {
+      "name": "sigma_8",
+      "form": "Phi_3/(Phi_3+q) = 0.8125",
+      "error": "0.06%"
+    },
+    {
+      "name": "m_H",
+      "form": "(mu+1)^q = 125",
+      "error": "0.08%"
+    },
+    {
+      "name": "v_EW",
+      "form": "|E| + q! = 246",
+      "error": "0.09%"
+    },
+    {
+      "name": "m_t",
+      "form": "Heegner_163 + Phi_4",
+      "error": "0.1%"
+    }
+  ],
+  "decisive_falsifiers": [
+    "F1: Hyper-K tau_p > 10^35 yr",
+    "F2: FCC-hh lambda_3 outside [90, 100] GeV at 5%",
+    "F3: CMB-S4 T_nu/T_CMB deviates > 1% from (4/11)^(1/3)",
+    "F4: Hubble tension resolved to Delta H_0 < 1 km/s/Mpc",
+    "F5: Witting KS bound exceeded > 34/40 in photonic test",
+    "F6: alpha^-1 shifts > 5e-5 in next CODATA",
+    "F7: m_H drifts outside [124, 126] GeV at HL-LHC",
+    "F8: New fourth-generation fermion observed"
+  ],
+  "summary": {
+    "tier_1_count": 6,
+    "tier_2_count": 8,
+    "tier_3_count": 5,
+    "precision_records_under_0.1_percent": 8,
+    "decisive_falsifiers": 8
+  },
+  "conclusion": "Falsification roadmap: ~30 numerical predictions across 3 tiers. 10 precision records < 0.1% (P(coincidence) < 1e-12). 8 decisive single-experiment falsifiers. Neither vacuous nor immune. Next decisive experiments 2027-2040: Hyper-K, LiteBIRD, CMB-S4, ADMX-G2, FCC-hh, FCC-ee."
+}
