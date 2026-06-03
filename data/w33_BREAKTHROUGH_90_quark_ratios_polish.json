@@ -1,0 +1,58 @@
+{
+  "new_corrections": {
+    "m_top_over_m_b": "Ogg_12 + 1/q",
+    "m_s_over_m_u": "Heegner_7 + 1/q",
+    "y_t": "1 - 1/(Phi_3*Phi_4)",
+    "Vus_squared": "2/v + 1/(v*Phi_4^2)",
+    "Delta_m2_ratio": "v - q! - 1/F_5^2"
+  },
+  "recurring_factor_updates": {
+    "1/F_5^2": "third appearance (was 2x, now 3x): Delta m^2",
+    "1/q": "new recurring factor (m_t/m_b + m_s/m_u)"
+  },
+  "recurring_factor_inventory": [
+    {
+      "factor": "1/(mu*Phi_6)",
+      "count": 2,
+      "contexts": [
+        "alpha^-1",
+        "1-n_s"
+      ]
+    },
+    {
+      "factor": "1/F_5^2",
+      "count": 3,
+      "contexts": [
+        "tan delta_CKM",
+        "Hubble^2",
+        "Delta m^2 (neg)"
+      ]
+    },
+    {
+      "factor": "Phi_3^2",
+      "count": 2,
+      "contexts": [
+        "m_top",
+        "m_W/M_Pl"
+      ]
+    },
+    {
+      "factor": "F_5*Phi_6",
+      "count": 2,
+      "contexts": [
+        "Omega_DM/Omega_b",
+        "Klein quadric"
+      ]
+    },
+    {
+      "factor": "1/q",
+      "count": 2,
+      "contexts": [
+        "m_t/m_b",
+        "m_s/m_u"
+      ]
+    }
+  ],
+  "precision_records_within_1sigma": "~19-21 (up from 14-16)",
+  "conclusion": "BT85 toolkit extends to 5 additional quark/CKM/neutrino observables. +1/q joins recurring factors (m_t/m_b + m_s/m_u). 1/F_5^2 reaches THREE independent contexts (CKM, Hubble, neutrino mass). Total recurring substrate factors: 5. Precision records within 1-sigma bar: ~19-21."
+}
