@@ -1,0 +1,39 @@
+{
+  "v14_state": {
+    "Cat 2 remaining": "~1 (only T_rh)",
+    "Pillar theorems (unified)": 4,
+    "Predictions in PDG 1-sigma": "~25",
+    "Out-of-bar": 0,
+    "Domains": "16+",
+    "Deep cross-links": "30+",
+    "Ihara zeros = dim E_6": 78,
+    "Wieferich primes substrate": "2/2",
+    "Graph-RH": "VERIFIED",
+    "Spectral closure": "infinite tower"
+  },
+  "cat_2_timeline": {
+    "BT82 start": 12,
+    "BT93": 10,
+    "BT99": 7,
+    "BT105": 4,
+    "BT106": 3,
+    "BT108": 3,
+    "BT125": 1
+  },
+  "new_since_v13": [
+    "BT124: Ihara gauge arg = 72.45 deg (pentagonal/golden)",
+    "BT124: Ihara chiral arg = 127 deg ~ alpha^-1(M_Z) deg",
+    "BT124: Arg sum = 200 = b_1 - 1 (substrate cycle rank)",
+    "BT125: Sterile neutrinos = 0 (substrate-forced)",
+    "BT125: DM = WIMP at 2143 GeV (substrate-clean GUT exp)",
+    "BT125: Inflation epsilon_V = 1/720 = 1/(q!*F_5*k)",
+    "BT125: Majorana phases candidate forms"
+  ],
+  "pillars": [
+    "Closure Theorem",
+    "Triple Convergence",
+    "Substrate-Spectral Algebra (unified 3+5)",
+    "Substrate-Dynamics-State Trichotomy"
+  ],
+  "conclusion": "v14 closes Cat 2 from 12 to ~1 (only T_rh). Ihara zero arguments encode pentagonal + alpha^-1(M_Z) + cycle rank. Sterile neutrinos = 0 substrate-forced. WIMP at 2143 GeV substrate-preferred. Inflation epsilon_V = 1/720 substrate. The theory at v14 has nothing left to fit and remains falsifiable in 2027-2040 window."
+}

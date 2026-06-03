@@ -1,0 +1,12 @@
+{
+  "sterile_neutrinos": "0 (substrate-forced by Necessary Being)",
+  "DM_preferred": "WIMP at 2143 GeV (substrate-clean GUT exponent)",
+  "inflation_epsilon_V": "1/720 = 1/(q!*F_5*k)",
+  "inflation_r": "lambda/(q^2*Phi_4) = 2/90 = 0.0222",
+  "majorana_phases_candidate": {
+    "alpha_21": "q*pi/Phi_3",
+    "alpha_31": "mu*pi/Phi_6"
+  },
+  "cat_2_remaining_after_BT125": "T_rh (reheating)",
+  "conclusion": "Substrate-Spectral Algebra closes 3 more Cat 2 unknowns: sterile neutrinos = 0 (forced), DM = WIMP (substrate-clean exponent), inflation epsilon_V = 1/720 (substrate). Majorana phases get candidate substrate forms. Cat 2 down from 12 to ~1."
+}

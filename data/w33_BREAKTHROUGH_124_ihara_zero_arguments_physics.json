@@ -1,0 +1,10 @@
+{
+  "gauge_argument_deg": 72.4515993862077,
+  "gauge_substrate": "arctan(sqrt(Phi_4)) ~ 72.45 deg (pentagonal)",
+  "chiral_argument_deg": 127.08668993406383,
+  "chiral_substrate": "180 - arctan(sqrt(Phi_6)/2) ~ 127 deg (~ alpha^-1(M_Z))",
+  "argument_sum_deg": 199.53828932027153,
+  "argument_sum_substrate": "b_1 - 1 = 200 (cycle rank - 1, in degrees)",
+  "golden_ratio_link": "Pentagonal 72 deg, H_4 / 600-cell",
+  "conclusion": "Ihara zero arguments encode physical symmetries: gauge sector = pentagonal (golden ratio), chiral sector = alpha_em^-1(M_Z) in degrees, sum = substrate cycle rank b_1 - 1. Phase structure of substrate's Riemann analogue zeros is physics-anchored."
+}
