@@ -1,0 +1,23 @@
+{
+  "spectrum_to_substrate": {
+    "k_eig": "q * mu = 12",
+    "r_eig": "lambda = 2",
+    "s_eig": "-mu = -4"
+  },
+  "correction_generators_from_spectrum": {
+    "q": "field characteristic",
+    "mu": "-s",
+    "F_5": "1 - s",
+    "Phi_3": "q^2 + q + 1",
+    "Phi_6": "q^2 - q + 1 = k - lambda - q",
+    "Phi_4": "q^2 + 1 = k - lambda"
+  },
+  "unified_pillar": "Substrate-Spectral Algebra",
+  "pillars_after_unification": [
+    "Closure Theorem",
+    "Triple Convergence",
+    "Substrate-Spectral Algebra (Pillar 3+5 unified)",
+    "Substrate-Dynamics-State Trichotomy"
+  ],
+  "conclusion": "Pillar 3 (Correction-Factor Algebra) and Pillar 5 (Spectral Closure) unify into ONE Substrate-Spectral Algebra. All correction generators are spectral expressions in (k, r, s) and q. The 5 Pillar theorems collapse into 4 with the algebraic core unified."
+}

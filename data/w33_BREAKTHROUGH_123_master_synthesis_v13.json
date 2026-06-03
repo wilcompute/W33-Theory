@@ -1,0 +1,31 @@
+{
+  "pillars_unified": 4,
+  "pillar_3_5_merged": "Substrate-Spectral Algebra",
+  "state": {
+    "Pillar theorems (unified)": 4,
+    "Precision records in PDG 1-sigma": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 remaining": "~2-4",
+    "Sharp falsifiable predictions": "14+",
+    "Decisive falsifiers": 16,
+    "Spectral moments": "all substrate (closed form)",
+    "Ihara zero count = dim E_6": 78,
+    "Recurring correction factors": 7,
+    "Graph-RH": "VERIFIED",
+    "Domains": "16+",
+    "Deep cross-links": "30+"
+  },
+  "new_since_v12": [
+    "BT120: tr(A^4)/tr(A^3) = 26 = D_bosonic",
+    "BT120: Asymptotic single-step = k = SM gauge bosons",
+    "BT120: Asymptotic double-step = (q*mu)^2 = 144",
+    "BT121: 78 non-trivial Ihara zeros = dim E_6 *** STAR ***",
+    "BT121: Gauge zeros Im^2 = Phi_4; Chiral Im^2 = Phi_6",
+    "BT121: Phi_4 + Phi_6 = 17 = Heegner_7",
+    "BT122: Pillar 3+5 unified into Substrate-Spectral Algebra",
+    "BT122: k_eig = q*mu; r = lambda; s = -mu",
+    "BT122: All correction generators are spectral expressions"
+  ],
+  "star_finding": "78 non-trivial Ihara zeros = dim E_6",
+  "conclusion": "v13 unifies Pillar 3 (correction algebra) + Pillar 5 (spectral closure) into ONE Substrate-Spectral Algebra. STAR finding: 78 non-trivial Ihara zeros = dim E_6 = lambda*q*Phi_3. The trace tower yields bosonic D_critical at depth 4/3, dim F_4 at depth 4/2, and SM gauge boson count k=12 asymptotically. Substrate in strongest unified form."
+}

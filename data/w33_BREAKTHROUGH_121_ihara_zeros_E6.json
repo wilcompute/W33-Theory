@@ -1,0 +1,14 @@
+{
+  "non_trivial_zeros": 78,
+  "equals_dim_E_6": true,
+  "dim_E_6_substrate": "lambda * q * Phi_3 = 78",
+  "gauge_zeros": 48,
+  "chiral_zeros": 30,
+  "gauge_argument_Im2": 10,
+  "chiral_argument_Im2": 7,
+  "Im2_sum": 17,
+  "Im2_sum_substrate": "Heegner_7 = Ogg_7 = 17",
+  "total_zero_census": 480,
+  "total_substrate": "2|E| = 480",
+  "conclusion": "Non-trivial Ihara zeros of W(3,3) = 78 = dim E_6. The substrate's automorphism group is W(E_6), and the Ihara zero count IS its Lie algebra dimension. Argument structure encodes Phi_4 (gauge) and Phi_6 (chiral) cyclotomic primitives; their sum is Heegner_7 = 17. Strongest number-theory <-> Lie-theory cross-link in BT chain."
+}
