@@ -1,0 +1,71 @@
+{
+  "phi12_web_9_identities": {
+    "Phi_12 + Phi_6": 80,
+    "Phi_12 - q!": 67,
+    "Phi_12 * Phi_6": 511,
+    "Phi_12 + p_Ih": 84,
+    "Phi_12 + mu": 77,
+    "Phi_12 + 2^q": 81,
+    "Phi_12 - q": 70,
+    "Phi_12 - Phi_3": 60,
+    "Phi_12_prime_index": "p_21 = p_(q*Phi_6)"
+  },
+  "heegner_f_lattice": {
+    "discriminants": [
+      19,
+      43,
+      67,
+      163
+    ],
+    "spacing": 24,
+    "spacing_substrate": "f = 24 = alpha_GUT^-1",
+    "j_indices": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "Heegner_67_plus_f": 91,
+    "consequence": "= m_Z (Z boson mass)"
+  },
+  "fano_28": {
+    "value": 28,
+    "form": "mu * Phi_6 = 49 - 21 = Fano non-incidences",
+    "appears_in": [
+      "alpha^-1 = 137 + 1/28",
+      "1 - n_s = 1/28"
+    ]
+  },
+  "EW_mass_tower": {
+    "m_W": 80,
+    "m_Z": 91,
+    "m_H": 125,
+    "v_EW": 246,
+    "m_t": 173,
+    "all_substrate_GeV_integers": true
+  },
+  "Z_sum_rule": {
+    "BR_ll_per_gen": "1/(q*Phi_4) = 1/30",
+    "BR_nu_nu": "1/(mu+1) = 1/5",
+    "BR_hadrons": "Phi_6/Phi_4 = 7/10",
+    "sum": "exactly 1"
+  },
+  "nucleon_magnetic": {
+    "mu_p": "2*Phi_6/(mu+1) = 14/5",
+    "mu_n_over_mu_p": "-p_Ih/mu^2 = -11/16"
+  },
+  "T_nu_T_CMB": "(mu/p_Ih)^(1/q) EXACT",
+  "hierarchies": {
+    "m_W_MPl": "q^(-(q!)^2) = q^-36",
+    "Lambda_MPl4": "q^(-mu^4) = q^-256",
+    "dS": "mu^4 = 256 = 2^(Phi_6+1)"
+  },
+  "mp_me": 1836,
+  "metrology": {
+    "L_eff": 1111,
+    "string_dim_sum": 47,
+    "z_rec": 1100,
+    "d_LSS": 14000
+  },
+  "conclusion": "Second-pass surfaces Phi_12 web (9 ids bind 73 to substrate), Heegner f-lattice (19+f*j for j in {0,1,2,q!}), universal Fano 1/28 in TWO precision tests, EW tower as 5 substrate GeV integers, Z branching sum rule exact 1, T_nu/T_CMB qutrit cube root, m_p/m_e to 0.008% (tightest match), dS identity mu^4 = 2^(Phi_6+1) makes Lambda exponent = 2 * Hubble exponent."
+}
