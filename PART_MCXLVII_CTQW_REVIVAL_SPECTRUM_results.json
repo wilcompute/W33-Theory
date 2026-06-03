@@ -1,0 +1,67 @@
+{
+  "parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "lam": 2,
+    "mu": 4,
+    "mult_r": 24,
+    "mult_s": 15
+  },
+  "eigenvalue_differences": {
+    "k_minus_r": 10,
+    "r_minus_s": 6,
+    "k_minus_s": 16,
+    "gcd": 2
+  },
+  "gcd_triple_coincidence": {
+    "gcd_equals_r": true,
+    "gcd_equals_lam": true,
+    "statement": "gcd(k-r, r-s, k-s) = r = lambda = 2"
+  },
+  "quantum_revival": {
+    "revival_period_T_star": "pi  (= 2*pi / gcd = 2*pi / 2)",
+    "revival_period_rational_pi_coeff": {
+      "fraction": "1",
+      "numerator": 1,
+      "denominator": 1,
+      "float": 1.0
+    },
+    "exact_revival_verified": true,
+    "condition": "all adj eigenvalues are even integers => lambda_j * pi is a multiple of 2*pi",
+    "check_k": true,
+    "check_r": true,
+    "check_s": true
+  },
+  "partial_revival": {
+    "half_period": "pi/2",
+    "phase_k_eigenspace": "+1  (k=12, 12*(pi/2)/pi = 6, even)",
+    "phase_r_eigenspace": "-1  (r=2, 2*(pi/2)/pi = 1, odd) [mult 24]",
+    "phase_s_eigenspace": "+1  (s=-4, |-4|*(pi/2)/pi = 2, even)",
+    "partial_revival_verified": true,
+    "physics": "at T*/2, the SL(2,3)-eigenspace (24-dim) acquires a global pi phase"
+  },
+  "clique_power_identity": {
+    "omega": 4,
+    "r": 2,
+    "identity": "omega = 2^r = 2^2 = 4",
+    "log2_omega": 2,
+    "log2_omega_equals_r": true,
+    "clique_power_verified": true
+  },
+  "spectral_triple_coincidence": {
+    "r_equals_lambda": true,
+    "r_equals_log2_omega": true,
+    "r_equals_gcd_diffs": true,
+    "triple_verified": true,
+    "statement": "r = lambda = log_2(omega) = gcd(eigenvalue differences) = 2"
+  },
+  "physics_bridge": {
+    "mult_r": 24,
+    "sl23_order": 24,
+    "binary_tetrahedral_match": true,
+    "interpretation": "The r=2 eigenspace has multiplicity 24 = |SL(2,3)|. At T*=pi/2 this sector acquires a global pi phase, implementing the SL(2,3) parity flip."
+  }
+}
