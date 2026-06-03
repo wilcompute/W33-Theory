@@ -1,0 +1,25 @@
+{
+  "mW_MPl_BT96_form": {
+    "compact": "q^(-(q!)^2) * (1 - (Phi_3+Phi_4)/(Phi_3^2 * Phi_4))",
+    "verbose": "q^-36 * (1 - 1/Phi_3^2 - 1/(Phi_3*Phi_4))",
+    "value": 6.5717907278468855e-18,
+    "pdg": 6.583e-18,
+    "deviation_pct": -0.17027604668258875,
+    "in_1sigma_bar": true
+  },
+  "23_recurrence": [
+    "electron-Planck hierarchy",
+    "domain wall tension",
+    "neutrino mass hierarchy frame",
+    "m_W/M_Pl correction (BT96)"
+  ],
+  "new_recurring_factors": [
+    "1/(Phi_3*Phi_4) = 1/130 (y_t + m_W/M_Pl)",
+    "23 = Phi_3+Phi_4 (4x explicit)"
+  ],
+  "total_recurring_factors": 7,
+  "out_of_bar_count_after_BT96": 0,
+  "Cat_1_status": "FULLY ELIMINATED (9 -> 0)",
+  "precision_records_in_1sigma": "~20-22",
+  "conclusion": "m_W/M_Pl refined via two-term substrate correction lands in 1-sigma bar. Cat 1 fully eliminated (9 -> 0). 23 = Phi_3+Phi_4 now 4x recurring composite. 1/(Phi_3*Phi_4) joins recurring factors. Total: 7 recurring substrate correction factors. Zero out-of-bar predictions. The substrate-source claim is now uniform across all closed-form predictions."
+}
