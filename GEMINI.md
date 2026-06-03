@@ -5,46 +5,53 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 2055
-- **Known Topics:** needs-review, auto-draft, why, w33, testing, docs, toe, photonic, audit, architecture, qec, css, holonomy, e8, github
+- **Total Decisions:** 1553
+- **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, photonic, audit, toe, architecture, qec, css, holonomy, tqc, github
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
+**Tracking:** ahead 0, behind 6
 
 **Recent Commits:**
-- `d606330 BREAKTHROUGH 97: Master Synthesis v7 (BT41 -> BT96)`
-- `31db68c BREAKTHROUGH 96: m_W/M_Pl refinement -- last out-of-bar -> in-bar`
-- `247638d BREAKTHROUGH 94: Master Synthesis v6 (BT41 -> BT93)`
-- `2914770 BREAKTHROUGH 93: Candidate substrate forms for BT82 Category 2`
-- `ac4ce8c BREAKTHROUGH 92: Correction-lattice minimal generators`
+- `21aaf67 Part MCCI: Add post-monodromy octet lift law`
+- `f24aac9 Part MCC: Add shell-operator identification law`
+- `dffd1a9 Part MCXCIX: Add commuting lift operators law`
+- `e1a4205 Part MCXCVIII: Add forecast-emergence ratio bridge law`
+- `a797f13 Part MCXCVI/MCXCVII: Add unified closure grammar and octet lift forecast`
 
 **Working Tree:**
 - M .cursorrules
 - M .github/copilot-instructions.md
 - M AGENTS.md
+- M BREAKTHROUGH_MCXLIX.md
 - M CLAUDE.md
 - M GEMINI.md
-- ?? PART_MCCCLXXXIX_E8_E6_A2_COORDINATE_DECOMPOSITION_results.json
+- M PART_MCLVI_EQUITABLE_PARTITION.md
+- M PART_MCLV_LAPLACIAN_SPECTRAL_ZETA.md
+- M PART_MCLXI_LOVASZ_HOFFMAN_results.json
+- M PART_MCLX_CLIQUE_COMPLEX_results.json
+- M PART_MCXLVII_CTQW_REVIVAL_SPECTRUM.md
+- M analysis/w33_ihara_zeta.py
 - ?? PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json
 - ?? PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json
 - ?? PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-06-03T06:00:12.763Z
-**Startup Summary:** mode=degraded-fallback | decisions=2055 | lastTask=Recent commits: | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 103 uncovered commits in last 7 days (auto-drafted 0)
-[MCP] Background init completed in 20ms | fallback-files=12
-**Decision Count:** 2055
+**Generated At:** 2026-05-22T14:58:42.535Z
+**Startup Summary:** mode=degraded-fallback | decisions=1553 | lastTask=Recent commits: | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 135 uncovered commits in last 7 days (auto-drafted 4)
+[MCP] Background init completed in 23ms | fallback-files=12
+**Decision Count:** 1553
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Resume Snapshot
 **Last Task:** Recent commits:
-**Last Completed Milestone:** Auto-saved at 2026-06-03T05:32:41.826Z (reason: timer)
+**Last Completed Milestone:** Auto-saved at 2026-05-22T14:28:40.879Z (reason: timer)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** search_decisions @ 2026-05-01T15:06:07.971Z
-**Relevant Files:** W33_FOR_EVERYONE.tex, analysis\w33_BREAKTHROUGH_88_PDG_bar_verification.py, analysis\w33_BREAKTHROUGH_81_master_synthesis_v4.py, analysis\w33_BREAKTHROUGH_80_singer_sylow7_eight_systems.py, analysis\2026-05-31_eight_system_affine_completion_atlas.md, analysis\2026-05-31_heawood_eight_systems_singer_sylow.md
+**Relevant Files:** .cursorrules, .github/copilot-instructions.md, AGENTS.md, BREAKTHROUGH_MCXLIX.md, CLAUDE.md, GEMINI.md
 
 ## Workflow
 
@@ -63,14 +70,14 @@ Use the repo-local artifacts directly — these are always available:
 
 
 ## Decision Freshness
-**0 stale decisions** · 1034 need review · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 750 need review · Oldest unreviewed: 2026-04-20
 
 Stale decisions requiring attention:
-1. **1777318403161-pu8p9x** (score 37) — "Why: theory: add Witting packet ternary transport bridge?" — 6 weeks old, status: superseded
-2. **1777755243730-5k8xdt** (score 37) — "Why: Add Part CXCIV: Regular polytopes bridge for W(3,3)?" — 5 weeks old, status: superseded
-3. **1777755243730-8swlgh** (score 37) — "Why: Add Part CXCIII: Exceptional Lie algebra bridge for W(3,3)?" — 5 weeks old, status: superseded
-4. **1777755243731-ypks6z** (score 37) — "Why: Add Part CXCII: Ramanujan modular forms bridge for W(3,3)?" — 5 weeks old, status: superseded
-5. **1777755243731-ckwdm2** (score 37) — "Why: Add Part CXCI regression tests: 92 tests pass?" — 5 weeks old, status: superseded
+1. **1777318403161-pu8p9x** (score 36) — "Why: theory: add Witting packet ternary transport bridge?" — status: superseded
+2. **1777755243730-5k8xdt** (score 36) — "Why: Add Part CXCIV: Regular polytopes bridge for W(3,3)?" — status: superseded
+3. **1777755243730-8swlgh** (score 36) — "Why: Add Part CXCIII: Exceptional Lie algebra bridge for W(3,3)?" — status: superseded
+4. **1777755243731-ypks6z** (score 36) — "Why: Add Part CXCII: Ramanujan modular forms bridge for W(3,3)?" — status: superseded
+5. **1777755243731-ckwdm2** (score 36) — "Why: Add Part CXCI regression tests: 92 tests pass?" — status: superseded
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
@@ -171,13 +178,13 @@ Describe how this repository prefers to work with AI assistants.
 ---
 
 ## Recent Decisions
-1. **decision-17804165** (6/2/2026) [auto-draft, needs-review]
-   - Q: Why: Add completed prime cube mean result data?
-   - A: (Auto-drafted from commit 86694a2 on 2026-06-02.) Please review and expand wi...
+1. **decision-a47e1282** (5/22/2026) [why]
+   - Q: Why push Part MCXCIII Reye tomotope/24-cell common spine to master?
+   - A: Pushed c12b7f4 to origin/master after verifier, focused pytest, py_compile, a...
 
-2. **decision-b01d1dec** (6/1/2026) [why, w33]
-   - Q: Why push MMCCCLXXIII golden ordered D4 torsor?
-   - A: Pushed fac376d7 to origin/master and verified local and remote master match w...
+2. **decision-17794511** (5/21/2026) [auto-draft, needs-review]
+   - Q: Why: Add universal oscillator stack report?
+   - A: (Auto-drafted from commit df1b4e3 on 2026-05-21.) Please review and expand wi...
 
 3. **decision-4a150b07** (5/17/2026) [architecture, qec]
    - Q: What are the next major derivations to tackle after the w33_for_everyone synt...
@@ -209,6 +216,6 @@ Describe how this repository prefers to work with AI assistants.
 
 ---
 
-*Auto-generated by Continuity v2.3+ | Updated: 2026-06-03*
+*Auto-generated by Continuity v2.3+ | Updated: 2026-05-23*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

@@ -33,6 +33,7 @@ $$B_3 = \begin{pmatrix} 0 & 12 & 0 \\ 1 & 2 & 9 \\ 0 & 4 & 8 \end{pmatrix}$$
 Row sums all equal k = 12 (regularity check ✓).
 
 Equitability checks:
+
 - C_0 ↔ C_1: n_0 · B[0][1] = 1·12 = 12 = 12·1 = n_1 · B[1][0] ✓
 - C_1 ↔ C_2: n_1 · B[1][2] = 12·9 = 108 = 27·4 = n_2 · B[2][1] ✓
 
@@ -41,6 +42,7 @@ Equitability checks:
 $$\det(B_3 - xI) = -(x-12)(x-2)(x+4) = -(x^3 - 10x^2 - 32x + 96)$$
 
 Coefficients:
+
 - tr(B_3) = 0 + 2 + 8 = **10** = k + r + s
 - sum of 2×2 principal minors = **−32**
 - det(B_3) = **−96** = k · r · s = 12 · 2 · (−4)

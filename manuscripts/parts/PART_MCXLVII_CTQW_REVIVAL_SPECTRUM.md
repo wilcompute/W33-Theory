@@ -15,6 +15,7 @@ This forces an exact quantum revival at T* = 2π/r = π.
 ## Theorem MCXLVII: CTQW Revival Spectrum
 
 **Setup:** W(3,3) is SRG(40,12,2,4) with adjacency eigenvalues:
+
 - k = 12 (multiplicity 1)
 - r = 2 (multiplicity 24 = |SL(2,3)|)
 - s = −4 (multiplicity 15)
@@ -24,6 +25,7 @@ This forces an exact quantum revival at T* = 2π/r = π.
 ### Part 1: GCD Triple Coincidence
 
 The pairwise eigenvalue differences are:
+
 - k − r = 10
 - r − s = 6  
 - k − s = 16
@@ -49,6 +51,7 @@ The quantum walker returns to its initial state with unit fidelity after elapsed
 ### Part 3: Partial Revival at T*/2 = π/2
 
 At half the revival period, the phase acquired by each eigenspace is:
+
 - k = 12: e^{−i·12·π/2} = e^{−6iπ} = **+1** (eigenspace dimension 1)
 - r = 2: e^{−i·2·π/2} = e^{−iπ} = **−1** (eigenspace dimension 24)
 - s = −4: e^{+i·4·π/2} = e^{2iπ} = **+1** (eigenspace dimension 15)
@@ -68,6 +71,7 @@ Equivalently: log₂(ω) = r = 2. This means the clique number is a power of the
 $$r = \lambda = \log_2(\omega) = \gcd(k-r,\; r-s,\; k-s) = 2$$
 
 where:
+
 - r = 2: smaller positive eigenvalue of A
 - λ = 2: SRG intersection number (adjacent pairs)
 - log₂(ω) = 2: logarithm of the clique number

@@ -9,9 +9,10 @@ split" property. All special values at integers are exact rational numbers.
 
 ## Definition
 
-$$\zeta_L(s) = \sum_{\lambda_i > 0} \lambda_i^{-s} = m_r (k-r)^{-s} + m_s (k-s)^{-s} = 24 \\cdot 10^{-s} + 15 \\cdot 16^{-s}$$
+$$\zeta_L(s) = \sum_{\lambda_i > 0} \lambda_i^{-s} = m_r (k-r)^{-s} + m_s (k-s)^{-s} = 24 \cdot 10^{-s} + 15 \cdot 16^{-s}$$
 
 The sum is over the v−1 = 39 non-zero Laplacian eigenvalues:
+
 - k − r = 12 − 2 = **10** with multiplicity m_r = 24
 - k − s = 12 − (−4) = **16** with multiplicity m_s = 15
 

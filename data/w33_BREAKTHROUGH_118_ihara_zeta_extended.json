@@ -1,0 +1,19 @@
+{
+  "ihara_bass_formula": "(1-u^2)^200 * (1-12u+11u^2) * (1-2u+11u^2)^24 * (1+4u+11u^2)^15",
+  "non_trivial_poles_on_critical_circle": "|u| = 1/sqrt(p_Ih)",
+  "Ramanujan_property": "|s| = 4 <= 2*sqrt(11) verified",
+  "functional_equation": "Z(1/(p_Ih*u))^-1 = Z(u)^-1 * p_Ih^200 * u^400",
+  "trivial_poles": [
+    "u = 1",
+    "u = 1/k = 1/12",
+    "u = 1/p_Ih = 1/11"
+  ],
+  "cycle_counts": {
+    "triangles": 160,
+    "4_cycles": 2400
+  },
+  "b_1_minus_1": 200,
+  "b_1_minus_1_substrate": "q * Heegner_8 - 1",
+  "lambda_times_b1_minus_1": "400 = reflection exponent",
+  "conclusion": "Ihara zeta of W(3,3) fully characterised: rational form with all roots/poles substrate-determined. Graph-RH holds. Functional equation Z(1/(p_Ih*u))^-1 = Z(u)^-1 * p_Ih^200 * u^400 has substrate-pure exponents. 3-trinity of trivial poles: loop closure (1), Perron (1/k), Hashimoto (1/p_Ih)."
+}

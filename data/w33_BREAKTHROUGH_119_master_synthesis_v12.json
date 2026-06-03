@@ -1,0 +1,31 @@
+{
+  "five_pillars": [
+    "Closure Theorem (7 q=3 forcings)",
+    "Triple Convergence (#conj=h_E_8=Z_DW(T^2)=30)",
+    "Correction-Factor Algebra (rank-5 lattice, 7 recurring)",
+    "Substrate-Dynamics-State Trichotomy",
+    "Spectral Closure (NEW v12: all tr(A^k) substrate-pure)"
+  ],
+  "pillar_5_new": "Spectral Closure: all tr(A^k) substrate-pure",
+  "state": {
+    "Pillar theorems": 5,
+    "Precision records in 1-sigma": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 remaining": "~2-4",
+    "Sharp falsifiable predictions": "14+",
+    "Decisive falsifiers": 16,
+    "Recurring correction factors": 7,
+    "Domains covered": "16+",
+    "Spectral moments": "infinite tower (all k)",
+    "Graph-RH verified": "YES (Ramanujan)",
+    "Both Wieferich primes substrate-linked": "YES"
+  },
+  "new_since_v11": [
+    "BT113: dahn_asi_toe paper integration (1728 = k^3 = j(i))",
+    "BT114: WRF Atlas Universal Density (q/2^q = 3/8 = g/v)",
+    "BT116: Spectral trace tower from remote BT110/111/112",
+    "BT117: tr(A^k) closed form; tr(A^4)/tr(A^2) = dim F_4 = 52",
+    "BT118: Ihara zeta rational form, Graph-RH verified"
+  ],
+  "conclusion": "v12 adds Pillar 5 (Spectral Closure). All spectral moments tr(A^k) substrate-pure via closed form. Ihara zeta rational, Graph-RH verified. tr(A^4)/tr(A^2) = dim F_4. Asymptotic ratio -> k^2 = 144. The substrate has reached spectral closure: infinite tower fully substrate-determined."
+}

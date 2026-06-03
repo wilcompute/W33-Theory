@@ -1,0 +1,26 @@
+{
+  "closed_form": "tr(A^k) = 12^k + 24*2^k + 15*(-4)^k",
+  "extended_values": {
+    "2": 480,
+    "3": 960,
+    "4": 24960,
+    "5": 234240,
+    "6": 3048960,
+    "7": 35589120,
+    "8": 430970880,
+    "9": 5155860480,
+    "10": 61933117440,
+    "11": 742945505280,
+    "12": 8916352204800
+  },
+  "asymptotic_even_ratio": "k^2 = 144 = (q*mu)^2",
+  "correction_rate": "q^-k",
+  "F4_surprise": "tr(A^4)/tr(A^2) = 52 = dim F_4",
+  "chirality_link": "odd-k via s = -4 eigenvalue (BT79 Szilassi 42+/0-)",
+  "new_substrate_identities": [
+    "tr(A^4)/tr(A^2) = dim F_4 (exceptional Lie)",
+    "even-step ratio asymptote = k^2 = (q*mu)^2 = 144",
+    "correction rate = q^-k (qutrit base)"
+  ],
+  "conclusion": "Trace tower extended to k=12. All tr(A^k) substrate-determined via closed form 12^k + 24*2^k + 15*(-4)^k. tr(A^4)/tr(A^2) = 52 = dim F_4 is a striking new substrate identity. Asymptotic even ratio = k^2 = 144 = (q*mu)^2. Chirality propagates from s = -4 to odd-k trace terms."
+}
