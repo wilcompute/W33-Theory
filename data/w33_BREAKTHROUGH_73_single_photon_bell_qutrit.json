@@ -1,0 +1,63 @@
+{
+  "diophantine_master_eq": "q! = 2q unique at q=3",
+  "bell_qutrit": {
+    "definition": "q^(-1/2) sum_j |j>_p |j>_f",
+    "uniqueness_4_conditions": [
+      "SWAP + S=log(q)",
+      "Choi-J of identity",
+      "(U x U*) invariance",
+      "uniform Schmidt 1/sqrt(q)"
+    ],
+    "choi_identity": "<Omega|(I x U)|Omega> = Tr(U)/q"
+  },
+  "vertex_count_routes": {
+    "trit_savings": "(q^4-1)/(q-1)/2",
+    "bell_shell": "1 + k + q^q",
+    "spread_frame": "10 * (q+1)",
+    "3x3_torus": "Phi_3 + q^q",
+    "value": 40
+  },
+  "history_split": {
+    "formula": "q^2 = q + q!",
+    "diag": 3,
+    "offdiag": 6,
+    "unique_at_q3": true
+  },
+  "bell_line_orbit_stabilizer": {
+    "Sp4F3_factorization": "v * mu^2 * q^(q+1)",
+    "orbit_size": 40,
+    "stabilizer": 1296,
+    "stab_substrate": "mu^2 * q^(q+1) = 16 * 81 = 1296"
+  },
+  "CSS_code": {
+    "params": [
+      240,
+      81,
+      4,
+      3
+    ],
+    "substrate": "[[|E|, q^(q+1), mu, q]]_3",
+    "physical_qutrits": 240,
+    "logical_qutrits": 81,
+    "distance": 4,
+    "base": 3
+  },
+  "three_witnesses": {
+    "trace_Choi": "V(U) = |Tr(U)|/q; V(F_3) = 1/q",
+    "Witting_KS": "(v - q!)/v = 34/40",
+    "key_rate": "Phi_3/v = 13/40"
+  },
+  "decoherence_threshold": "q/mu = 3/4",
+  "single_photon_completeness": "r >= 2 commuting qutrit registers",
+  "GHZ_match": "n=2 photon GHZ: q^4 = q^(q+1) = matter sector",
+  "Lie_series": {
+    "G_2": 14,
+    "F_4": 52,
+    "E_6": 78,
+    "E_7": 133,
+    "E_8": 248
+  },
+  "spreads_total": 36,
+  "spreads_per_bell_line": 9,
+  "conclusion": "Single-photon temporal Bell qutrit |Omega> compiles to the entire W(3,3) substrate. NEW factorization: |Sp(4,F_3)| = v*mu^2*q^(q+1) via Bell-line orbit-stabilizer. W(3,3) CSS code [[240,81,4,3]]_3 all substrate. Three falsifiable witnesses (trace-Choi, Witting KS 34/40, key rate 13/40). Master eq history split q^2 = q+q! unique at q=3. r=2 qutrit registers suffice; photon has r=4 with 2 redundant. All 5 exceptional Lie dimensions G_2..E_8 substrate."
+}
