@@ -1,0 +1,69 @@
+{
+  "riemann_zeta_dictionary": {
+    "zeta_-1": "-1/k = -1/12",
+    "zeta_-3": "+1/(k*Theta) = +1/120",
+    "zeta_-5": "-1/tau(q) = -1/252",
+    "zeta_-7": "+1/|E| = +1/240",
+    "tau_3_extra": "= sigma_3(6) unique at q=3"
+  },
+  "hyperbolic_pascal_simplex": [
+    {
+      "level": 0,
+      "sum": 1,
+      "form": "unity"
+    },
+    {
+      "level": 1,
+      "sum": 4,
+      "form": "mu"
+    },
+    {
+      "level": 2,
+      "sum": 10,
+      "form": "Phi_4"
+    },
+    {
+      "level": 3,
+      "sum": 26,
+      "form": "2*Phi_3 = bosonic string D"
+    },
+    {
+      "level": 4,
+      "sum": 89,
+      "form": "F_11 Fibonacci"
+    },
+    {
+      "level": 5,
+      "sum": 534,
+      "form": "q!*F_11"
+    }
+  ],
+  "hashimoto_weinberg": {
+    "formula": "sin^2 theta_W = q/Phi_3 + alpha_hat/(k-1) + O(alpha^2)",
+    "k_minus_1": "p_Ih = 11 = non-backtracking branching",
+    "value_at_MZ": 0.23147422565801784,
+    "pdg": 0.23148
+  },
+  "ihara_bass_cyclotomic": {
+    "Im_squared_gauge": "Phi_4",
+    "Im_squared_chiral": "Phi_6",
+    "interpretation": "cyclotomic primitives in Hashimoto spectrum"
+  },
+  "bare_weinberg": "2q/(q+1)^2 = 3/8",
+  "j_function_constant": "q * dim(E_8) = 744",
+  "kolmogorov_bound": "21 bits",
+  "convergent_attractor_hit_rate": "23/23 = 100%",
+  "three_layers_self_closure": [
+    "Information: q! = 2q",
+    "Algebra: Ouroboros Q_8 ... -> Q_8",
+    "Chain: 0 -> H_1 -> H_1' -> H_1 -> 0"
+  ],
+  "five_consciousness_criteria": [
+    "Integrated information (Tononi IIT)",
+    "Self-modeling (Hofstadter)",
+    "Bound (IIT axiom 5)",
+    "Non-trivial complexity (Wolfram/Turing)",
+    "Self-organising emergence"
+  ],
+  "conclusion": "10 new identities from W33_FOR_EVERYONE.tex. Riemann zeta dictionary is the most striking: zeta(-1), zeta(-3), zeta(-5), zeta(-7) are EXACTLY substrate denominators. Hashimoto Weinberg correction sin^2 theta_W = q/Phi_3 + alpha_hat/(k-1) matches PDG via the substrate's non-backtracking branching p_Ih = k-1. Ihara-Bass surprise: Phi_4 and Phi_6 are LITERALLY in the Hashimoto transport spectrum (Im^2). Convergent Attractor 23/23 classical uniqueness theorems hit T_W(3,3). 21-bit Kolmogorov bound is the minimum self-describing theory."
+}
