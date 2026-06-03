@@ -1,0 +1,45 @@
+{
+  "three_pillars": {
+    "1": "Closure Theorem (7 q=3 forcings)",
+    "2": "Triple Convergence (#conj=h_E_8=Z_DW(T^2)=30)",
+    "3": "Correction-Factor Algebra (rank-5 lattice, BT85-BT92)"
+  },
+  "precision_records_in_1sigma": "~19-21",
+  "out_of_bar": [
+    "m_W/M_Pl"
+  ],
+  "BT93_candidate_forms": [
+    "Sigma m_nu = (Phi_4^2 + 1) meV = 101 meV",
+    "theta_C = Phi_3 degrees = 13 deg"
+  ],
+  "rank_5_lattice_generators": [
+    "q",
+    "mu",
+    "F_5",
+    "Phi_3",
+    "Phi_6"
+  ],
+  "max_lattice_norm": 2,
+  "recurring_factor_count": 5,
+  "since_v5_additions": [
+    "m_top/m_b = Ogg_12 + 1/q = 41.333 (BT90)",
+    "m_s/m_u = Heegner_7 + 1/q = 43.333 (BT90)",
+    "y_t = 1 - 1/(Phi_3*Phi_4) = 0.9923 (BT90)",
+    "|V_us|^2 = 2/v + 1/(v*Phi_4^2) (BT90)",
+    "Delta m^2_31/Delta m^2_21 = v - q! - 1/F_5^2 (BT90)",
+    "+1/q joins recurring factors (BT90, 2x m_t/m_b + m_s/m_u)",
+    "1/F_5^2 to 3x recurrence (BT90: CKM + Hubble + neutrino)",
+    "Rank-5 correction lattice with 5 generators (BT92)",
+    "Sigma m_nu = (Phi_4^2 + 1) meV candidate (BT93)",
+    "theta_C = Phi_3 degrees candidate (BT93)",
+    "360 = q^2 * Phi_4 * mu = substrate degree factorization (BT93)"
+  ],
+  "categories": {
+    "cat_1": "9 -> 1",
+    "cat_2": "12 -> 10 if BT93 confirms",
+    "cat_3": "6",
+    "cat_4": "6",
+    "cat_5": "[40, 52]"
+  },
+  "conclusion": "v6 sharpens Pillar 3 to a rank-5 correction-factor lattice. Precision count rises to ~19-21 within PDG 1-sigma. Categories 1 and 2 from BT82 contract (1->1, 12->10 conjectural). Theory is heavily over-determined with explicit 2027-2040 falsification window."
+}
