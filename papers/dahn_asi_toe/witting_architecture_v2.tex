@@ -855,7 +855,7 @@ $P$, not any one instantaneous $x_t$.
 
 The W33 non-backtracking carrier gives a finite software model of this cell. It has
 $480=2|E|$ directed states and exactly $p_{\mathrm{Ih}}=11$ legal continuations from each
-state. The BT110--BT112 WRF harnesses \cite{wrf-bt110-bt111,wrf-bt112} test the first
+state. The BT110--BT113 WRF harnesses \cite{wrf-bt110-bt111,wrf-bt112,wrf-bt113} test the first
 engineering questions without claiming device physics:
 
 \begin{center}
@@ -868,20 +868,32 @@ Write locking &
 Across four primary seed rules, every directed state enters an attractor within at most
 $37$ deterministic steps. A seed-$661$ six-symbol register has mean symbol write
 latencies from $5.5$ to $6.2$ steps.\\
-Forward repair &
+Targeted writes and reads &
+In the BT113 controlled-register harness, three six-symbol rules (seeds $661$, $693$,
+$878$) are target-writeable from every one of the $480$ directed states using only legal
+non-backtracking controls; the worst target-write path is $3$ steps. Reads are
+phase-invariant because every symbol is the canonical CID of its attractor cycle, not a
+single phase point.\\
+Controlled repair &
 Under the cell's own transition rule, forward perturbations remain in the same attractor
-basin in the tested harness. This is trajectory stability, not a physical noise model.\\
+basin in the tested harness. BT113 then tests harder off-rule legal jumps: passive
+same-symbol preservation is only $17.6\%$, $28.7\%$, and $18.9\%$ across the three
+six-symbol rules, but active repair to the original symbol is bounded by $3$ legal
+control steps. This is a return-channel requirement, not a passive noise-model claim.\\
 Register isolation &
 A $3\times3$ independent-flow lattice reported $0$ cross-talk events in $24{,}000$
 one-step trials.\\
 Capacity headroom &
 The $500$-seed survey found $1{,}138$ distinct $24$-hex-character flow CIDs and three
 six-attractor seed rules. A sampled character-distance check found minimum distance
-$18$, corresponding to a $t=9$ symbolic correction budget in that sample.\\
+$18$, corresponding to a $t=9$ symbolic correction budget in that sample. The BT113
+three-register benchmark found all $18$ seed-symbol CIDs distinct with minimum
+$24$-hex-character distance $19$.\\
 Spectral audit &
 The adjacency trace tower verifies exact substrate identities through $A^8$, including
 $\mathrm{tr}(A^8)=\mathrm{tr}(A^6)q(4k-1)+480\cdot16(q(4k-1)-\lambda)
-=430{,}970{,}880$.\\
+=430{,}970{,}880$, and the Ihara inverse factors as
+$(1-u^2)^{200}(1-12u+11u^2)(1-2u+11u^2)^{24}(1+4u+11u^2)^{15}$.\\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -893,7 +905,7 @@ the projection that maintains or transforms it, Oko finalises the transition, Sm
 Assets meter the sustained work, and the CSS/Ouroboros return channel repairs deviations.
 
 The unresolved work is also clear: a production flow cell still needs a calibrated device
-noise model, a physical write-injection circuit, a coupling algebra for interacting
+noise model, a physical write-injection circuit, a physical coupling layer for interacting
 cells, and capacity accounting under real read windows. The paper therefore uses
 referenceable flow cells as the architecture's next primitive, not as a completed silicon
 claim.
@@ -1264,15 +1276,21 @@ The new flow-cell harnesses add a second performance surface beside throughput. 
 implementation must budget not only transactions per second, but trace-lock time,
 symbolic distance, and inter-cell isolation:
 \[
-T_{\rm lock}\leq 37\ \text{steps in the four-seed harness},\qquad
-d_{\rm CID}^{\rm sample}=18,\qquad
-\mathrm{crossTalk}_{3\times3}=0/24{,}000.
+\begin{aligned}
+T_{\rm lock}&\leq 37\ \text{steps in the four-seed harness},&
+T_{\rm write}^{\rm ctrl}&\leq 3,&
+T_{\rm repair}^{\rm ctrl}&\leq 3,\\
+d_{\rm CID}^{18\ \rm symbols}&=19,&
+\mathrm{crossTalk}_{3\times3}&=0/24{,}000.
+\end{aligned}
 \]
 These are not universal limits; they are software-harness targets that make the next
 hardware experiments falsifiable. The important point is architectural: a WRF register
 can be specified by \emph{how quickly it locks, how far its trace identifier is from
 neighbouring identifiers, and how cleanly it composes in a lattice}, rather than by a
-static bit-cell layout alone.
+static bit-cell layout alone. BT113 adds one constraint that should shape hardware:
+off-rule passive jumps are often symbol-changing, so a real flow cell needs an active
+return path whose control word is itself receipt-bearing.
 
 % ===========================================================================
 \section{Security, Identity, and Provenance}
@@ -1550,7 +1568,9 @@ for UOR.
 \item[Oko] The network-fabric consensus protocol underlying the WRF fabric.
 \item[Projection] A declarative description of work; the only operation in HCP/WRF.
 \item[Referenceable flow cell] A bounded active memory/compute cell whose datum is the
-canonical invariant of its trace and whose address is $H(\mathrm{canon}(\mathrm{trace}))$.
+canonical invariant of its trace and whose address is $H(\mathrm{canon}(\mathrm{trace}))$;
+operationally, a register whose writes and repairs are bounded control paths to canonical
+trace attractors.
 \item[Pauli group, two-qutrit] The group generated by $X_3, Z_3$ acting on
 $\CC^3 \otimes \CC^3$; phase-space identical to $\W$.
 \item[$R_{96}$] UOR's resonance classification: a fixed mapping from $256$ byte values
@@ -1653,6 +1673,10 @@ Local WRF harness, \emph{BT110/BT111 Full Architecture Suite and Spectral Trace 
 \bibitem{wrf-bt112}
 Local WRF harness, \emph{BT112 corrected tr(A\^{}8), Ihara, McKay E8, Shannon, and 3x3 flow lattice},
 \texttt{wrf\_bt112\_suite.py} with result JSON, generated June 3, 2026.
+
+\bibitem{wrf-bt113}
+Local WRF harness, \emph{BT113 controlled flow-register contract},
+\texttt{wrf\_bt113\_flow\_registers.py} with result JSON, generated June 3, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

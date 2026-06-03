@@ -86,6 +86,7 @@ def main() -> None:
     paper = here.joinpath("witting_architecture_v2.tex").read_text(encoding="utf-8")
     bt110 = json.loads(here.joinpath("wrf_bt110_bt111_results.json").read_text(encoding="utf-8"))
     bt112 = json.loads(here.joinpath("wrf_bt112_results.json").read_text(encoding="utf-8"))
+    bt113 = json.loads(here.joinpath("wrf_bt113_flow_registers_results.json").read_text(encoding="utf-8"))
 
     assert max(row["max"] for row in bt110["write_protocol"].values()) == 37
     assert all(row["forward_preserve_500trials"] == 1.0 for row in bt110["noise_model"].values())
@@ -104,6 +105,17 @@ def main() -> None:
     assert bt112["bt112e_seed661_base6"]["all_write_latencies_under_7"] is True
     assert bt112["bt112f_3x3_lattice"]["cross_talk_events"] == 0
     assert bt112["bt112f_3x3_lattice"]["center_to_center_lock_prob"] == 0.98
+    assert bt113["bt113a_ihara_and_spectral_identities"]["ihara_inverse_degree"] == 480
+    assert bt113["bt113a_ihara_and_spectral_identities"]["newton_e2_equals_negative_edges"] is True
+    assert bt113["bt113a_ihara_and_spectral_identities"]["product_3_minus_E8_cartan_equals_25"] is True
+    assert bt113["bt113_summary"]["all_registers_are_base6"] is True
+    assert bt113["bt113_summary"]["all_target_writes_reachable"] is True
+    assert bt113["bt113_summary"]["global_max_target_write_steps"] == 3
+    assert bt113["bt113_summary"]["all_phase_reads_invariant"] is True
+    assert bt113["bt113_summary"]["global_max_controlled_repair_steps"] == 3
+    assert bt113["bt113_summary"]["passive_off_rule_preserve_rates"] == [0.175926, 0.286957, 0.188571]
+    assert bt113["bt113c_three_register_composition"]["all_18_symbol_cids_distinct"] is True
+    assert bt113["bt113c_three_register_composition"]["min_24hex_distance_across_18_symbols"] == 19
 
     required_phrases = [
         "The Witting Reference Fabric",
@@ -113,6 +125,9 @@ def main() -> None:
         "$8.44\\times 10^6$ CSS-budgeted Atlas frames",
         "referenceable flow cell",
         "$37$ deterministic steps",
+        "$3$ legal",
+        "$24$-hex-character distance $19$",
+        "$(1-u^2)^{200}(1-12u+11u^2)(1-2u+11u^2)^{24}(1+4u+11u^2)^{15}",
         "$1{,}138$ distinct $24$-hex-character flow CIDs",
         "not a ToE paper",
     ]
@@ -166,6 +181,9 @@ def main() -> None:
             "sampled_symbolic_correction_t": bt110["hamming"]["error_correction_t"],
             "bt112_tr_A8": bt112["bt112a_tr_A8"]["tr_A8"],
             "bt112_3x3_cross_talk_events": bt112["bt112f_3x3_lattice"]["cross_talk_events"],
+            "bt113_target_write_steps": bt113["bt113_summary"]["global_max_target_write_steps"],
+            "bt113_controlled_repair_steps": bt113["bt113_summary"]["global_max_controlled_repair_steps"],
+            "bt113_three_register_min_cid_distance": bt113["bt113c_three_register_composition"]["min_24hex_distance_across_18_symbols"],
         },
         "latex_scan": "passed",
     }

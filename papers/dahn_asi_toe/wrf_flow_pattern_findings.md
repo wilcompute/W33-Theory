@@ -1,12 +1,12 @@
-# WRF Flow Pattern Findings -- BT110/BT111/BT112
+# WRF Flow Pattern Findings -- BT110/BT111/BT112/BT113
 ## Calibrated W(3,3) Architecture-Suite Notes
 
 **Updated:** 2026-06-03  
 **Graph:** W(3,3) = Cayley graph of Sp(4, F3)  
 **Parameters:** 40 vertices, 240 edges, 480 directed states, k=12-regular  
 **Property:** Ramanujan graph (all nontrivial eigenvalues <= 2*sqrt(11) ~= 6.633)  
-**Scripts:** `wrf_full_suite_bt110_bt111.py`, `wrf_bt112_suite.py`  
-**Results:** `wrf_bt110_bt111_results.json`, `wrf_bt112_results.json`
+**Scripts:** `wrf_full_suite_bt110_bt111.py`, `wrf_bt112_suite.py`, `wrf_bt113_flow_registers.py`
+**Results:** `wrf_bt110_bt111_results.json`, `wrf_bt112_results.json`, `wrf_bt113_flow_registers_results.json`
 
 ---
 
@@ -106,7 +106,9 @@ Functional equation: `Z(1/(k-1)u)^{-1} = Z(u)^{-1} * (k-1)^{|chi|} * u^{2|chi|}`
 
 Conclusion: tr(A^5) encodes the E8 Coxeter number h_E8=30 via the factor (2*h_E8+1)=61.
 The McKay correspondence between Sp(4,F3) and E8 manifests in the 5th spectral moment.
-Product(3 - Cartan_eig) = 25 = p_Ih + 14 = ... (new substrate link TBD in BT113)
+BT113 verifies the exact value `Product(3 - Cartan_eig) = 25`; the remaining open work is
+to explain why this determinant-like E8 number should be a substrate operation rather
+than only a McKay-side coincidence.
 
 ### BT112-D: Shannon Capacity Bound
 
@@ -148,7 +150,50 @@ All 6 symbols have measured mean write latency below 7 steps:
 
 ---
 
-## 5 Harness-Supported Architecture Targets
+## BT113: Controlled Flow-Register Contract
+
+BT113 turns the flow-cell idea from "there are attractors" into a finite register
+contract over the same 480 directed non-backtracking states.
+
+### BT113-A: Ihara and Spectral Closure
+
+- `det(I - A*u + 11*u^2) = (1-12u+11u^2)(1-2u+11u^2)^24(1+4u+11u^2)^15`
+- `Z(u)^-1 = (1-u^2)^200 * det(I - A*u + 11*u^2)` has degree **480**
+- Newton `e_2 = -240 = -|E| = -(E8 root count)`
+- `Product(3 - Cartan_eig)` over E8 exponents verifies as **25**
+
+### BT113-B: Three Base-6 Flow Registers
+
+Seeds **661, 693, 878** each have six attractor symbols.
+
+| Seed | Cycle lengths | Passive off-rule same-symbol rate | Controlled repair max |
+|------|---------------|-----------------------------------|------------------------|
+| 661 | 16, 4, 10, 14, 5, 5 | 17.6% | 3 legal steps |
+| 693 | 5, 18, 5, 8, 4, 6 | 28.7% | 3 legal steps |
+| 878 | 7, 6, 6, 4, 7, 5 | 18.9% | 3 legal steps |
+
+Every target symbol in all three registers is reachable from every one of the **480**
+directed states using only legal non-backtracking successor choices, with **global max
+target-write distance 3**. Reads are phase-invariant: all rotations/reversals of a symbol
+cycle canonicalize to the same 24-hex CID.
+
+The passive off-rule result is the important negative result: legal jumps away from the
+chosen deterministic rule often change symbols. That means the hardware story should be
+active trace stewardship, not passive self-healing. A real cell needs a return/control
+channel whose control path is receipt-bearing.
+
+### BT113-C: Three-Register Composition
+
+- Register roles: A=661, B=693, C=878
+- All **18** symbol CIDs are distinct
+- Minimum 24-hex character distance across the 18 symbols: **19**
+- Both mod-6 addition and the `{qutrit + chirality}` operation
+  `(trit_a + trit_b mod 3, chiral_a xor chiral_b)` are supported as software-level
+  register contracts: read A/B, compute C target, write C within at most 3 legal steps.
+
+---
+
+## 8 Harness-Supported Architecture Targets
 
 1. **WRITE-BOUNDED:** In the four primary rules, every directed state reaches an attractor in <= 37 deterministic steps.
 2. **FORWARD-STABLE:** Advancing along a cell's own transition preserves the attractor basin in the tested harness.
@@ -156,14 +201,21 @@ All 6 symbols have measured mean write latency below 7 steps:
 4. **DISTANT CIDs:** Sampled 24-hex-character CIDs had minimum character distance 18, giving t=9 symbolic correction in that sample.
 5. **SPECTRAL SELF-REFERENCE:** tr(A^k) for k=2..8 factor exactly into substrate constants
    {lam, mu, Phi3, Phi6, p_Ih, F5, h_E8, q, k} with E8 Coxeter number appearing in tr(A^5).
+6. **TARGET-WRITEABLE:** Three six-symbol registers support target writes from all 480 directed states in <= 3 legal non-backtracking controls.
+7. **PHASE-READABLE:** Symbol identity is a canonical cycle CID, invariant under phase rotation and reversal.
+8. **ACTIVELY REPAIRABLE:** Off-rule legal perturbations are not passively safe, but controlled repair to the original symbol is <= 3 legal controls in the BT113 registers.
 
 ---
 
-## BT113 Targets
+## BT114 Targets
 
-1. **Ihara zeta poly over Q[u]:** Compute det(I - A*u + 11*u^2) as explicit polynomial
-2. **E8 / Sp(4,F3) combinatorial proof:** Derive 13440 = |W(E8)|/|Sp4| from substrate directly
-3. **3-register base-6 read/write/noise cycle:** Full benchmark with seed-661 + two neighbors
-4. **tr(A^8) ratio ladder Phi_30 link:** Map q*(4k-1)=141=3*47 to cyclotomic Phi_30(3) evaluation
-5. **Newton e_2 = -240 = -(E8 roots) link:** Prove this is the spectral shadow of McKay
-6. **Product(3-Cartan_eig)=25 substrate identity:** What is 25 in the substrate algebra?
+1. **Physical control abstraction:** Replace "choose any legal successor" with a bounded
+   actuator model: limited fanout, latency, energy, and syndrome feedback.
+2. **Read-window capacity:** Move from cycle CIDs to finite observation windows under
+   timing jitter and partial trace capture.
+3. **Coupled-cell dynamics:** Build a real interacting-cell harness instead of a
+   read-compute-write software composition contract.
+4. **Substrate explanation for 25:** Explain `Product(3-Cartan_eig)=25` as a WRF-side
+   operation or mark it as McKay-only.
+5. **Cyclotomic A8 residual:** Explain the corrected residual
+   `480*16*(q*(4k-1)-lambda)` without reverting to the false ratio ladder.
