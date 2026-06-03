@@ -1,0 +1,13 @@
+{
+  "decisive_experiment": "LiteBIRD r measurement",
+  "substrate_prediction": "r = 2/90 = 0.0222",
+  "substrate_form": "lambda / (q^2 * Phi_4)",
+  "experimental_sensitivity": "~1e-3 by 2030",
+  "falsification_criterion": "r outside [0.020, 0.025] at 1-sigma",
+  "alternative_candidates": [
+    "Hyper-K proton decay (10^33 yr)",
+    "HL-LHC m_H = 125 exact",
+    "CMB-S4 T_nu/T_CMB"
+  ],
+  "conclusion": "LiteBIRD r measurement is the single most decisive substrate experiment: substrate predicts r = 2/90 = 0.0222 specifically; LiteBIRD ~1e-3 sensitivity by 2030; substrate has zero adjustable freedom on this prediction."
+}

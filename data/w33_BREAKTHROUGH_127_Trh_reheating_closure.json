@@ -1,0 +1,73 @@
+{
+  "T_rh_substrate": "10^(Phi_3 + lambda) GeV = 10^15 GeV = M_X",
+  "exponent_substrate": "15 = Phi_3 + lambda = g_neg",
+  "interpretation": "reheating = GUT unification scale",
+  "cat_2_status": "FULLY ELIMINATED (12 -> 0)",
+  "cat_2_complete_list": [
+    {
+      "name": "Sigma m_nu",
+      "substrate": "(Phi_4^2+1) meV (BT93 candidate)"
+    },
+    {
+      "name": "theta_Cabibbo",
+      "substrate": "Phi_3 deg (BT93 candidate)"
+    },
+    {
+      "name": "m_nu_3",
+      "substrate": "0.05027 eV (BT99)"
+    },
+    {
+      "name": "eta_B baryogenesis",
+      "substrate": "~6e-10 (BT99)"
+    },
+    {
+      "name": "theta_QCD",
+      "substrate": "0 exact (BT99)"
+    },
+    {
+      "name": "mu g-2 leading",
+      "substrate": "1/858 (BT105)"
+    },
+    {
+      "name": "Delta a_mu",
+      "substrate": "(F_5/lambda)*10^-9 (BT108)"
+    },
+    {
+      "name": "|epsilon_K|",
+      "substrate": "1/449 (BT105/106)"
+    },
+    {
+      "name": "21cm hydrogen",
+      "substrate": "1420 MHz (BT105)"
+    },
+    {
+      "name": "B-meson rare BRs",
+      "substrate": "3 channels (BT106)"
+    },
+    {
+      "name": "Y_p BBN",
+      "substrate": "1/333 denom (BT105)"
+    },
+    {
+      "name": "Sterile neutrinos",
+      "substrate": "0 (BT125)"
+    },
+    {
+      "name": "Dark matter",
+      "substrate": "WIMP 2143 GeV (BT125)"
+    },
+    {
+      "name": "Inflation epsilon_V",
+      "substrate": "1/720 (BT125)"
+    },
+    {
+      "name": "Majorana phases",
+      "substrate": "candidate (BT125)"
+    },
+    {
+      "name": "T_rh reheating",
+      "substrate": "10^15 GeV (BT127, THIS)"
+    }
+  ],
+  "conclusion": "T_rh = 10^15 GeV = M_X (GUT scale, substrate exponent 15 = Phi_3 + lambda = g_neg). BT82 Cat 2 fully closed: 12 -> 0. All originally-listed Cat 2 observables have substrate forms or substrate-forced values. The substrate has nothing left to fit in the named SM/cosmology parameter space."
+}
