@@ -1,0 +1,168 @@
+{
+  "category_1_degraded_precision": [
+    {
+      "name": "m_s",
+      "form": "Phi_3 * Phi_6",
+      "value_obs": "91 MeV vs 93.5",
+      "error": "2.7%"
+    },
+    {
+      "name": "Delta H_0",
+      "form": "q!",
+      "value_obs": "6 vs 5.64",
+      "error": "6%"
+    },
+    {
+      "name": "Lambda_QCD/m_p",
+      "form": "1/q",
+      "value_obs": "0.333 vs 0.354",
+      "error": "6%"
+    },
+    {
+      "name": "tan delta_CKM",
+      "form": "Phi_4/mu",
+      "value_obs": "2.5 vs 2.54",
+      "error": "1.4%"
+    },
+    {
+      "name": "m_W/M_Pl",
+      "form": "q^-((q!)^2)",
+      "value_obs": "6.7e-18 vs 6.6",
+      "error": "1.3%"
+    },
+    {
+      "name": "Omega_b * h^2",
+      "form": "q^(-q-2)",
+      "value_obs": "0.0123",
+      "error": "1%"
+    },
+    {
+      "name": "tan theta_Cab",
+      "form": "1/sqrt(Heegner_6)",
+      "value_obs": "0.2294 vs 0.2317",
+      "error": "1%"
+    },
+    {
+      "name": "m_mu/m_e",
+      "form": "(mu+1)*v + q!",
+      "value_obs": "206 vs 206.77",
+      "error": "0.37%"
+    },
+    {
+      "name": "y_b/y_tau",
+      "form": "Phi_6/q",
+      "value_obs": "2.33 vs 2.35",
+      "error": "1.0%"
+    }
+  ],
+  "category_2_no_closed_form": [
+    "Sigma m_nu (absolute neutrino mass scale)",
+    "Individual CKM elements |V_ub|, |V_cd|, |V_ts| (beyond Cabibbo)",
+    "PMNS Majorana phases alpha_21, alpha_31",
+    "Sterile neutrino masses (if they exist)",
+    "Dark matter PARTICLE identity (3 W(3,3) candidates, no choice)",
+    "Reheating temperature T_rh",
+    "Inflation potential V(phi)",
+    "theta_QCD strong-CP angle (zero by Peccei-Quinn?)",
+    "B-meson rare decay BR(B -> s gamma) etc.",
+    "Vacuum energy Lambda ABSOLUTE (only ratio derived)",
+    "CMB T_CMB = 2.725 K (only T_nu/T_CMB ratio derived)",
+    "Specific hadronic resonance masses beyond magic numbers"
+  ],
+  "category_3_unit_gauge_witnesses": [
+    {
+      "name": "G (Newton)",
+      "mantissa": "667430 (mantissa)",
+      "gauge": "CODATA SI"
+    },
+    {
+      "name": "g_0",
+      "mantissa": "980665",
+      "gauge": "conventional"
+    },
+    {
+      "name": "1 atm (Pa)",
+      "mantissa": "101325",
+      "gauge": "conventional"
+    },
+    {
+      "name": "m_p c^2 (keV)",
+      "mantissa": "938272",
+      "gauge": "depends on keV"
+    },
+    {
+      "name": "Faraday F",
+      "mantissa": "96485.3",
+      "gauge": "depends on C"
+    },
+    {
+      "name": "R molar gas",
+      "mantissa": "8.314463",
+      "gauge": "depends on J, K"
+    }
+  ],
+  "category_4_structural_unknowns": [
+    "WHY a substrate at all? (7 forcings constrain WHICH q, not THAT a substrate exists)",
+    "WHY Sp(4, F_3) gauge symmetry? (Triple Convergence striking but not derivative)",
+    "WHY W(3,3) specifically? (input choice of 'smallest non-trivial SRG over GF(3)')",
+    "WHY 4D macroscopic spacetime? (mu=4 forced but not its observability)",
+    "ORIGIN of quantum mechanics (Bell qutrit |Omega> primitive, not derived)",
+    "GRAVITY (Page-curve scaling exists, Einstein eqs not derived)"
+  ],
+  "category_5_arithmetic_horizons": [
+    {
+      "what": "Partition function P(n)",
+      "horizon": "n ~ v = 40"
+    },
+    {
+      "what": "Classical Lie group n(n+2)",
+      "horizon": "n ~ 50"
+    },
+    {
+      "what": "Graph |Aut(K_n)| = n!",
+      "horizon": "n = 52 = dim(F_4)"
+    },
+    {
+      "what": "Hermitian curve q^3+1",
+      "horizon": "first leak at q = 9"
+    },
+    {
+      "what": "Prime spectrum density",
+      "horizon": "drops at p = 47"
+    }
+  ],
+  "horizons_cluster_in": "[40, 52]",
+  "strengthening_targets": [
+    "Absolute neutrino mass scale from substrate",
+    "B-meson rare decay BRs from W(3,3) CKM/PMNS",
+    "Dark matter particle ID from 3 W(3,3) candidates",
+    "Derive Sp(4, F_3) from a deeper principle",
+    "Show substrate emerges as low-energy limit of M-theory",
+    "Connect Triple Convergence to Hawking radiation",
+    "Compute substrate Majorana phases"
+  ],
+  "anti_predictions_would_falsify": [
+    "4th-gen fermion observed",
+    "Hubble tension resolved to Delta H_0 = 0",
+    "alpha^-1 shifts > 5e-5 in CODATA",
+    "Hyper-K excludes tau_p < 10^35 yr",
+    "di-Higgs lambda_3 outside [90, 100] GeV"
+  ],
+  "summary": {
+    "proven_strong_counts": {
+      "precision_records_under_0.1%": 10,
+      "SM_params_closed_form": 19,
+      "q3_forcings": 7,
+      "Sp4F3_factorizations": 5,
+      "experimental_witnesses": 6
+    },
+    "left_open_counts": {
+      "degraded_precision": 9,
+      "no_closed_form": 12,
+      "unit_gauge_only": 6,
+      "structural_unknowns": 6,
+      "horizons": 5
+    }
+  },
+  "conclusion": "Theory-edge audit. ~10 degraded-precision closed forms (need correction terms), ~12 observables without closed form, 6 unit-gauge witnesses (not predictions), 6 structural unknowns, arithmetic horizons at n~40-52. The theory has clear edges. 7 strengthening targets identified. NOT a complete theory of everything in the structural sense; IS a heavily over-determined parameter-prediction theory with explicit falsifiers."
+}
