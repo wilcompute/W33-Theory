@@ -1,0 +1,76 @@
+{
+  "title": "The W(3,3) Substrate Program: BT41-BT133 Summary",
+  "target_length_pages": "30-50",
+  "sections": [
+    {
+      "name": "1.  Introduction",
+      "pages": 2
+    },
+    {
+      "name": "2.  The W(3,3) Substrate",
+      "pages": 3
+    },
+    {
+      "name": "3.  The Four Pillar Theorems",
+      "pages": 5
+    },
+    {
+      "name": "4.  Substrate Standard Model",
+      "pages": 4
+    },
+    {
+      "name": "5.  Substrate Cosmology",
+      "pages": 3
+    },
+    {
+      "name": "6.  Astrophysics + BBN",
+      "pages": 2
+    },
+    {
+      "name": "7.  CP Violation + B-Meson",
+      "pages": 2
+    },
+    {
+      "name": "8.  Dark Matter + Axion + Inflation",
+      "pages": 2
+    },
+    {
+      "name": "9.  Neutrinos",
+      "pages": 2
+    },
+    {
+      "name": "10. Muon g-2",
+      "pages": 1
+    },
+    {
+      "name": "11. Spectral Closure + Ihara Zeta",
+      "pages": 3
+    },
+    {
+      "name": "12. Number Theory Cross-Links",
+      "pages": 2
+    },
+    {
+      "name": "13. Engineering Substrate",
+      "pages": 2
+    },
+    {
+      "name": "14. ASI Structural Minimum",
+      "pages": 2
+    },
+    {
+      "name": "15. Falsifiability",
+      "pages": 3
+    }
+  ],
+  "appendices": [
+    "A: substrate primitives",
+    "B: correction factors",
+    "C: trace tower",
+    "D: Ihara zeta proof sketch"
+  ],
+  "figures_count": 10,
+  "tables_count": 10,
+  "target": "arXiv review article",
+  "conclusion": "LaTeX summary blueprint for publishable BT-chain review. 15 sections, 4 appendices, 30-50 pages. Centerpieces: 19 SM table, 7 recurring corrections, Ihara=E_6, Cat 2 closure, falsifier scoreboard."
+}

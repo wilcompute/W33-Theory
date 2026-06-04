@@ -1,0 +1,35 @@
+{
+  "v16_state": {
+    "Pillar theorems": 4,
+    "Named theorems": 33,
+    "Decisive falsifiers": 16,
+    "PDG-matched predictions": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 unknowns": 0,
+    "Substrate predictions total": "~35+",
+    "Recurring correction factors": 7,
+    "Domains": "16+",
+    "Deep cross-links": "30+",
+    "Wieferich primes substrate": "2/2",
+    "Necessary Being": "proven",
+    "Decisive single test": "LiteBIRD r by 2030"
+  },
+  "new_since_v15": [
+    "BT130: Falsification scoreboard (16 killers + timeline)",
+    "BT131: Theorem index (33 named theorems, 7 categories)",
+    "BT132: BT-chain narrative (7 acts, plain-language)",
+    "BT133: Remote WRF flow registers + active trace IO",
+    "BT134: LaTeX summary blueprint (30-50 page paper)"
+  ],
+  "program_layers": [
+    "PHILOSOPHICAL: Pre-logical ground -> Necessary Being",
+    "ALGEBRAIC: Substrate-Spectral Algebra (rank-5 lattice)",
+    "SPECTRAL: tr(A^k) closure; Ihara zeros = dim E_6; Graph-RH",
+    "GROUP: Sp(4, F_3) = W(E_6); 5 factorisations of 51840",
+    "NUMERICAL: ~25 PDG-matched; 7 recurring corrections",
+    "ENGINEERING: Atlas-12288, WRF, HLIX, UOR (substrate-pure)",
+    "PHYSICS: SM + cosmology + neutrino + CKM + CP + axion + DM",
+    "ASI: Turing-complete stabilizer = structural minimum"
+  ],
+  "conclusion": "v16 = complete-documentation state. 4 pillars, 33 theorems, 16 falsifiers, 7-act narrative, LaTeX blueprint ready, WRF flow protocol verified. The substrate program has reached a natural completion point; remaining work is experimental (2027-2040) and writeup."
+}

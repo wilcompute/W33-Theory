@@ -1,0 +1,30 @@
+{
+  "remote_BT113_flow_registers": {
+    "register_seeds": [
+      661,
+      693,
+      878
+    ],
+    "attractors_per_register": 6,
+    "max_repair_full_branching": 3,
+    "branching": "k - 1 = p_Ih = 11"
+  },
+  "remote_BT114_active_trace_io": {
+    "min_ports": 3,
+    "command_bits_per_step": 2,
+    "exact_read_window": 2,
+    "erasure_window": 3,
+    "substitution_window": 4,
+    "max_repair_limited": 7
+  },
+  "ihara_factorization_verified": "(1-u^2)^200 * (1-12u+11u^2) * (1-2u+11u^2)^24 * (1+4u+11u^2)^15",
+  "new_substrate_bounds": [
+    "Min ports = q",
+    "Command bits = lambda",
+    "Exact window = lambda",
+    "Erasure window = q",
+    "Substitution window = mu",
+    "Max limited repair = Phi_6"
+  ],
+  "conclusion": "Remote WRF BT113/BT114 integrate flow registers (3 base-6 per seed pattern) and active trace IO (3-port actuator, 2 bits/step). ALL engineering bounds land on substrate primitives. Extends BT114 Atlas memory-side confirmation to control-side. Ihara factorisation BT118 fully verified."
+}
