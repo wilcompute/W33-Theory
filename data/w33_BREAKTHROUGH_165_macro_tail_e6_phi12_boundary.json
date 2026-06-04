@@ -1,0 +1,2679 @@
+{
+  "architectural_reading": "The q! compiler-restoring freedom is not merely a 143-element sieve. The distance-7 tail has an exact normalizer wall: the 78 elements outside the F4/24-cell normalizer are a mixed E6-dimensional admissible shell, while the 73 elements inside the normalizer are a Phi_12 anti-polarization shell whose octonion-sized 8-element cap is precisely the forbidden pocket. The outside E6 shell further splits by trace into 28+26+24, matching the D4 root count, bosonic string dimension, and f.",
+  "boundary_decomposition": {
+    "inside_f4_normalizer": {
+      "admissible": 65,
+      "admissible_reading": "65 = v + f + 1 = 40 + 24 + 1",
+      "count": 73,
+      "forbidden": 8,
+      "forbidden_reading": "8 = 2^q = octonion dimension",
+      "reading": "73 = Phi_12 anti-polarization shell"
+    },
+    "outside_f4_normalizer": {
+      "all_admissible": true,
+      "count": 78,
+      "reading": "78 = dim(E6) = q! * Phi_3"
+    }
+  },
+  "breakthrough": 165,
+  "checks": {
+    "admissible_total_is_pih_phi3": true,
+    "anti_admissible_is_v_plus_f_plus_one": true,
+    "anti_shell_splits_65_plus_8": true,
+    "anti_tail_equals_f4_intersection": true,
+    "f4_normalizer_order_is_1152": true,
+    "forbidden_count_is_octonion_dim": true,
+    "inside_order_distribution_matches": true,
+    "inside_trace_distribution_is_phi12_trace_zero": true,
+    "mixed_shell_all_admissible": true,
+    "no_block_tail": true,
+    "normalizer_distance_profile_matches": true,
+    "normalizer_tail_is_pure_anti": true,
+    "outside_order_distribution_matches": true,
+    "outside_trace_distribution_is_28_26_24": true,
+    "outside_trace_sectors_sum_to_dim_e6": true,
+    "tail_decomposition_is_e6_plus_65_plus_octonion": true,
+    "tail_intersection_f4_is_phi12": true,
+    "tail_outside_f4_is_dim_e6": true,
+    "tail_size_is_151": true
+  },
+  "f4_normalizer_order": 1152,
+  "inside_order_distribution": {
+    "2": 5,
+    "4": 6,
+    "6": 32,
+    "8": 6,
+    "12": 24
+  },
+  "inside_trace_distribution": {
+    "0": 73
+  },
+  "n_verified": 19,
+  "normalizer_class_distance_profile": {
+    "(0, 'block')": 1,
+    "(1, 'block')": 10,
+    "(2, 'block')": 46,
+    "(3, 'block')": 117,
+    "(4, 'anti')": 1,
+    "(4, 'block')": 191,
+    "(5, 'anti')": 64,
+    "(5, 'block')": 186,
+    "(6, 'anti')": 438,
+    "(6, 'block')": 25,
+    "(7, 'anti')": 73
+  },
+  "normalizer_distance_profile": {
+    "0": 1,
+    "1": 10,
+    "2": 46,
+    "3": 117,
+    "4": 192,
+    "5": 250,
+    "6": 463,
+    "7": 73
+  },
+  "outside_order_distribution": {
+    "5": 6,
+    "6": 20,
+    "8": 8,
+    "9": 14,
+    "10": 6,
+    "12": 22,
+    "18": 2
+  },
+  "outside_trace_distribution": {
+    "0": 28,
+    "1": 26,
+    "2": 24
+  },
+  "outside_trace_reading": {
+    "trace_0": "28 = D4 root count",
+    "trace_1": "26 = bosonic string dimension",
+    "trace_2": "24 = f"
+  },
+  "tail_by_f4_boundary_and_diameter": {
+    "('inside', 6)": 65,
+    "('inside', 7)": 8,
+    "('outside', 6)": 78
+  },
+  "tail_by_polarization": {
+    "anti": 73,
+    "mixed": 78
+  },
+  "tail_by_polarization_and_diameter": {
+    "('anti', 6)": 65,
+    "('anti', 7)": 8,
+    "('mixed', 6)": 78
+  },
+  "tail_size": 151,
+  "tail_summary": [
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51689,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T1^2",
+        "T6^1",
+        "T4^2",
+        "T5^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51690,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T1^2",
+        "T6^2",
+        "T7^2",
+        "T3^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51691,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^1",
+        "T5^1",
+        "T7^2",
+        "T3^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51692,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^1",
+        "T7^1",
+        "T6^1",
+        "T2^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51693,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^1",
+        "T8^2",
+        "T3^1",
+        "T8^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51694,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^1",
+        "T8^2",
+        "T3^2",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51695,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T6^1",
+        "T2^1",
+        "T4^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51696,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T6^1",
+        "T2^2",
+        "T7^1",
+        "T3^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51697,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51698,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T6^1",
+        "T7^2",
+        "T8^1",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51699,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T7^2",
+        "T3^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51700,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T3^2",
+        "T8^2",
+        "T3^2",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51701,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T4^2",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51702,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T4^2",
+        "T6^2",
+        "T2^2",
+        "T4^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51703,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T4^2",
+        "T6^2",
+        "T8^2",
+        "T5^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51704,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51705,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T2^1",
+        "T8^2",
+        "T7^1",
+        "T3^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51706,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T1^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51707,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T5^1",
+        "T7^1",
+        "T6^2",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51708,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T5^1",
+        "T7^1",
+        "T6^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51709,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T5^2",
+        "T6^1",
+        "T7^1",
+        "T3^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51710,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T5^2",
+        "T6^1",
+        "T7^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51711,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T5^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51712,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T8^2",
+        "T7^2",
+        "T6^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51713,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^2",
+        "T2^1",
+        "T7^2",
+        "T6^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51714,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^2",
+        "T5^1",
+        "T1^1",
+        "T7^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51715,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^2",
+        "T8^2",
+        "T2^2",
+        "T6^1",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51716,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T7^1",
+        "T3^2",
+        "T5^1",
+        "T7^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51717,
+      "order": 2,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T7^1",
+        "T6^1",
+        "T2^1",
+        "T8^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51718,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T7^2",
+        "T1^2",
+        "T3^1",
+        "T4^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51719,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T7^2",
+        "T3^1",
+        "T6^2",
+        "T7^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51720,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T7^2",
+        "T6^1",
+        "T4^1",
+        "T7^2",
+        "T3^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51721,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T8^1",
+        "T6^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51722,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T4^2",
+        "T7^2",
+        "T3^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51723,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T6^2",
+        "T2^1",
+        "T7^2",
+        "T1^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51724,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T6^2",
+        "T8^1",
+        "T2^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51725,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T7^1",
+        "T6^1",
+        "T4^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51726,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T7^1",
+        "T6^1",
+        "T8^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51727,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T7^2",
+        "T5^1",
+        "T6^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51728,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^1",
+        "T8^1",
+        "T3^1",
+        "T5^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51729,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51730,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^2",
+        "T7^2",
+        "T3^2",
+        "T6^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51731,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T3^2",
+        "T8^1",
+        "T2^1",
+        "T3^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51732,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T4^1",
+        "T6^2",
+        "T4^1",
+        "T5^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51733,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^1",
+        "T2^2",
+        "T4^1",
+        "T8^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51734,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T6^2",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51735,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T5^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51736,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^2",
+        "T4^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51737,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^2",
+        "T4^2",
+        "T7^2",
+        "T3^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51738,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^2",
+        "T7^2",
+        "T3^2",
+        "T8^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51739,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^2",
+        "T7^2",
+        "T3^2",
+        "T8^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51740,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T6^2",
+        "T8^2",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51741,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T5^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51742,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T7^1",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51743,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T7^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51744,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T7^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51745,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^1",
+        "T8^2",
+        "T3^1",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51746,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^2",
+        "T3^1",
+        "T6^2",
+        "T5^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51747,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^2",
+        "T3^2",
+        "T8^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51748,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T8^1",
+        "T3^1",
+        "T5^1",
+        "T6^2",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51749,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T8^2",
+        "T3^2",
+        "T7^1",
+        "T1^1",
+        "T3^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51750,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T4^1",
+        "T3^1",
+        "T7^1",
+        "T6^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51751,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T4^1",
+        "T7^1",
+        "T6^2",
+        "T8^2",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51752,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T4^2",
+        "T6^1",
+        "T5^1",
+        "T7^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51753,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T5^1",
+        "T8^2",
+        "T3^2",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51754,
+      "order": 18,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T5^2",
+        "T8^1",
+        "T5^2",
+        "T6^1",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51755,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T6^1",
+        "T2^2",
+        "T4^2",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51756,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T6^2",
+        "T2^2",
+        "T7^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51757,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T6^2",
+        "T7^2",
+        "T5^1",
+        "T8^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51758,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T6^2",
+        "T8^1",
+        "T2^2",
+        "T6^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51759,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T6^2",
+        "T8^2",
+        "T2^2",
+        "T6^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51760,
+      "order": 8,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T7^1",
+        "T1^1",
+        "T6^1",
+        "T2^2",
+        "T4^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51761,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T7^1",
+        "T8^2",
+        "T3^1",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51762,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T8^1",
+        "T3^1",
+        "T5^1",
+        "T6^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51763,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^1",
+        "T8^2",
+        "T3^2",
+        "T6^2",
+        "T8^2",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51764,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T4^2",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51765,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T4^2",
+        "T6^2",
+        "T2^1",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51766,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T4^2",
+        "T7^1",
+        "T1^1",
+        "T6^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51767,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51768,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T5^2",
+        "T7^2",
+        "T6^2",
+        "T2^2",
+        "T1^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51769,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T5^2",
+        "T7^2",
+        "T6^2",
+        "T2^2",
+        "T4^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51770,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T5^2",
+        "T7^2",
+        "T6^2",
+        "T4^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51771,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T6^1",
+        "T2^2",
+        "T7^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51772,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T6^2",
+        "T7^1",
+        "T8^1",
+        "T5^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51773,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T6^2",
+        "T8^2",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51774,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T7^1",
+        "T8^1",
+        "T3^1",
+        "T5^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51775,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T7^2",
+        "T6^2",
+        "T4^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51776,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T7^2",
+        "T6^2",
+        "T5^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51777,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T8^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51778,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T8^2",
+        "T5^1",
+        "T6^2",
+        "T7^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51779,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51780,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T6^1",
+        "T2^2",
+        "T7^1",
+        "T3^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51781,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T6^1",
+        "T2^2",
+        "T8^2",
+        "T3^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51782,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T6^2",
+        "T4^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51783,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T7^1",
+        "T6^2",
+        "T7^1",
+        "T8^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51784,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T5^2",
+        "T7^2",
+        "T3^1",
+        "T6^2",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51785,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T6^1",
+        "T7^1",
+        "T1^1",
+        "T3^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51786,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T7^1",
+        "T6^2",
+        "T7^1",
+        "T8^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51787,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T7^2",
+        "T6^2",
+        "T5^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51788,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T8^1",
+        "T2^2",
+        "T3^2",
+        "T6^1",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51789,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T4^2",
+        "T8^2",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51790,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^1",
+        "T2^2",
+        "T8^2",
+        "T3^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51791,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^1",
+        "T7^1",
+        "T3^1",
+        "T8^1",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51792,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T7^2",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51793,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^2",
+        "T4^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51794,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^2",
+        "T4^2",
+        "T7^1",
+        "T1^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51795,
+      "order": 2,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^2",
+        "T7^1",
+        "T6^2",
+        "T5^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51796,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^2",
+        "T7^1",
+        "T8^1",
+        "T5^2",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51797,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T8^1",
+        "T6^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51798,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^2",
+        "T8^1",
+        "T6^2",
+        "T2^2",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51799,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T2^1",
+        "T4^1",
+        "T8^1",
+        "T3^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51800,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T4^1",
+        "T5^1",
+        "T6^1",
+        "T2^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51801,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T4^1",
+        "T7^2",
+        "T1^1",
+        "T6^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51802,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T4^2",
+        "T3^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51803,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T5^2",
+        "T8^2",
+        "T2^1",
+        "T3^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51804,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T7^1",
+        "T3^1",
+        "T4^2",
+        "T5^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51805,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^1",
+        "T7^2",
+        "T1^1",
+        "T8^1",
+        "T3^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51806,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^2",
+        "T2^1",
+        "T8^1",
+        "T3^2",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51807,
+      "order": 18,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T6^2",
+        "T2^2",
+        "T7^2",
+        "T3^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51808,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^2",
+        "T4^2",
+        "T7^1",
+        "T6^1",
+        "T8^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51809,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^2",
+        "T7^2",
+        "T3^2",
+        "T8^1",
+        "T7^2",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51810,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T6^2",
+        "T8^2",
+        "T2^2",
+        "T6^1",
+        "T5^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51811,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T7^1",
+        "T1^1",
+        "T3^1",
+        "T4^2",
+        "T7^1",
+        "T3^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51812,
+      "order": 8,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T7^1",
+        "T1^1",
+        "T6^1",
+        "T2^2",
+        "T6^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51813,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T7^1",
+        "T3^1",
+        "T4^2",
+        "T5^1",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51814,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T7^1",
+        "T3^1",
+        "T5^1",
+        "T6^2",
+        "T2^1",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51815,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T7^1",
+        "T3^2",
+        "T4^1",
+        "T6^2",
+        "T2^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51816,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^1",
+        "T7^2",
+        "T1^1",
+        "T8^1",
+        "T3^2",
+        "T7^1",
+        "T3^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51817,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T8^1",
+        "T3^2",
+        "T7^2",
+        "T6^2",
+        "T5^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51818,
+      "order": 12,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T8^1",
+        "T6^1",
+        "T7^2",
+        "T6^1",
+        "T8^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51819,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T8^2",
+        "T5^1",
+        "T6^2",
+        "T7^1",
+        "T6^2",
+        "T5^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51820,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T2^1",
+        "T6^2",
+        "T8^2",
+        "T2^2",
+        "T6^1",
+        "T2^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51821,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T2^2",
+        "T6^2",
+        "T8^2",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51822,
+      "order": 6,
+      "polarization": "mixed",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T2^2",
+        "T7^1",
+        "T3^2",
+        "T6^1",
+        "T5^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51823,
+      "order": 10,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^2",
+        "T3^1",
+        "T4^1",
+        "T3^1",
+        "T7^1",
+        "T6^2",
+        "T7^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": false,
+      "index": 51824,
+      "order": 5,
+      "polarization": "mixed",
+      "trace_mod3": 2,
+      "word": [
+        "T1^2",
+        "T3^1",
+        "T4^1",
+        "T7^1",
+        "T6^2",
+        "T8^2",
+        "T5^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51825,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^1",
+        "T7^1",
+        "T8^2",
+        "T3^1",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51826,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^2",
+        "T6^1",
+        "T2^2",
+        "T7^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51827,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^2",
+        "T7^2",
+        "T6^2",
+        "T4^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51828,
+      "order": 2,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^2",
+        "T8^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51829,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T6^1",
+        "T2^1",
+        "T4^1",
+        "T8^1",
+        "T3^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51830,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T8^1",
+        "T3^2",
+        "T7^2",
+        "T6^2",
+        "T5^1",
+        "T6^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51831,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T5^2",
+        "T6^1",
+        "T8^1",
+        "T7^2",
+        "T6^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51832,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T5^2",
+        "T6^2",
+        "T7^1",
+        "T6^2",
+        "T5^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51833,
+      "order": 2,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T6^1",
+        "T5^1",
+        "T7^1",
+        "T6^2",
+        "T2^2",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51834,
+      "order": 4,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T6^2",
+        "T8^2",
+        "T2^2",
+        "T6^1",
+        "T5^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51835,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T8^1",
+        "T6^2",
+        "T2^1",
+        "T1^2",
+        "T6^2",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 7,
+      "in_f4_normalizer": true,
+      "index": 51836,
+      "order": 2,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T8^2",
+        "T7^1",
+        "T3^1",
+        "T6^2",
+        "T2^1",
+        "T7^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51837,
+      "order": 12,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^2",
+        "T1^2",
+        "T6^2",
+        "T7^1",
+        "T6^2",
+        "T5^2",
+        "T8^2"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51838,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^2",
+        "T6^1",
+        "T4^1",
+        "T5^1",
+        "T6^1",
+        "T2^1",
+        "T8^1"
+      ]
+    },
+    {
+      "diameter": 6,
+      "in_f4_normalizer": true,
+      "index": 51839,
+      "order": 6,
+      "polarization": "anti",
+      "trace_mod3": 0,
+      "word": [
+        "T2^2",
+        "T6^2",
+        "T7^2",
+        "T1^2",
+        "T3^2",
+        "T7^2",
+        "T5^1"
+      ]
+    }
+  ],
+  "title": "Macro-tail E6/Phi12 boundary"
+}
