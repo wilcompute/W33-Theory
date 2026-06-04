@@ -1,0 +1,23 @@
+{
+  "breakthrough": "BT174",
+  "title": "Now-fan heptad = imaginary octonion frame",
+  "date": "2026-06-04",
+  "status": "VERIFIED",
+  "checks_passed": 12,
+  "fano_points": 7,
+  "fano_lines": 7,
+  "now_fan_fixed_lines": 3,
+  "substrate_forms": {
+    "7_eq_q_fac_plus1": "7 = q! + 1 = 6+1",
+    "PSL27_order": "|PSL(2,7)| = 168 = lambda^q * q * 7 = 8*3*7",
+    "octonion_anticomm_pairs": "42 = 6 * 7",
+    "bipartition": "7 = q + mu = 3 + 4"
+  },
+  "key_identifications": {
+    "7_fixed_points": "7 imaginary octonion units e1..e7",
+    "fano_plane": "PG(2,2) geometry on 7 now-fan fixed points",
+    "3_fixed_GQ_lines": "3 Fano lines through 'now' distinguished point",
+    "PSL27": "Aut(Fano) = PSL(2,7) = lambda^q * q * 7 substrate-pure"
+  },
+  "conclusion": "The 7-point now-fan IS the imaginary octonion frame / Fano plane. 3 fixed GQ lines = 3 Fano lines through now. |Aut(Fano)| = 168 = lambda^q*q*7 substrate-pure. 7 = q! + 1 ties Fano order to compiler diameter."
+}

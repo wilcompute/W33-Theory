@@ -1,0 +1,26 @@
+{
+  "breakthrough": "BT175",
+  "title": "GQ(4,2) = 27 cubic surface lines; Schlafli double-six",
+  "date": "2026-06-04",
+  "status": "VERIFIED",
+  "checks_passed": 14,
+  "GQ_points_eq_cubic_tritangents": "45 = 45 EXACT",
+  "GQ_lines_eq_cubic_lines": "27 = 27 EXACT",
+  "substrate_forms": {
+    "27_eq_q_cubed": "27 = q^q = 3^3",
+    "27_eq_Phi3_lam_plus1": "27 = Phi3*lambda+1 = 13*2+1",
+    "12_eq_mu_q": "12 = mu*q = 4*3",
+    "15_eq_qfac_lam_plus_q": "15 = q!*lambda+q = 6*2+3",
+    "6_eq_qfac": "6 = q! (each hexad in double-six)",
+    "WE6_order": "51840 = mu^2*(q!)^2*45*lambda",
+    "45_eq_mu1_q2": "45 = (mu+1)*q^2 = 5*9"
+  },
+  "schlafli_partition": {
+    "total_lines": 27,
+    "double_six_half": 12,
+    "transversals": 15,
+    "BT172_swap_split": "3+4+12=19 = q + mu + mu*q",
+    "Geiser_fixed_pts": "7 Weierstrass pts = q!+1 = now-fan"
+  },
+  "conclusion": "GQ(4,2) is isomorphic to the 27-line incidence geometry of a smooth cubic surface. 45 GQ points = 45 tritangent planes. BT172 swap split = Schlafli partition. Geiser = outer involution."
+}

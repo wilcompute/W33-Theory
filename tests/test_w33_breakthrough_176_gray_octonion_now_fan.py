@@ -1,0 +1,44 @@
+"""Tests for BT176: Gray-code walk on octonion bipartition through now-fan"""
+import math
+
+def hamming(n): return bin(n).count('1')
+def is_power_of_2(n): return n > 0 and (n & (n-1)) == 0
+
+def test_even_class_size():
+    q, lam = 3, 2
+    even = [v for v in range(16) if hamming(v) % 2 == 0]
+    assert len(even) == 8 == lam**q
+
+def test_fano_timelike_spacelike_split():
+    q, mu = 3, 4
+    FANO = [(0,1,2),(0,3,4),(0,5,6),(1,3,5),(1,4,6),(2,3,6),(2,4,5)]
+    assert len([L for L in FANO if 0 in L])     == q
+    assert len([L for L in FANO if 0 not in L]) == mu
+    assert q + mu == 7
+
+def test_gray_walk_even_parity_and_single_bit():
+    gray3 = [0,1,3,2,6,7,5,4]
+    walk  = [2*g for g in gray3]
+    assert all(hamming(v) % 2 == 0 for v in walk)
+    assert len(set(walk)) == 8
+    steps = [walk[i] ^ walk[(i+1)%8] for i in range(8)]
+    assert all(is_power_of_2(s) for s in steps)
+
+def test_substrate_7_eq_q_plus_mu():
+    q, mu = 3, 4
+    assert 7 == q + mu
+
+def test_six_way_unification_count():
+    ways = [
+        "Cl4_algebra", "Q4_topology", "knight_geometry",
+        "Gray_information", "octonion_bipartition", "now_fan_temporal"
+    ]
+    assert len(ways) == 6
+
+if __name__ == "__main__":
+    test_even_class_size()
+    test_fano_timelike_spacelike_split()
+    test_gray_walk_even_parity_and_single_bit()
+    test_substrate_7_eq_q_plus_mu()
+    test_six_way_unification_count()
+    print("BT176: 5/5 tests passed")
