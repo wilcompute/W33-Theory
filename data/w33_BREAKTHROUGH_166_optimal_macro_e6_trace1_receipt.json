@@ -1,0 +1,205 @@
+{
+  "admissible_count": 143,
+  "architectural_reading": "The canonical q!-restoring macro receipt is the unique inverse pair minimizing the depth-6 shell. Both optimal macros are outside the F4/24-cell normalizer, mixed rather than anti-polarization, trace 1 mod 3, and order 9. Thus the compiler's best receipt comes from the E6-dimensional outside shell, not the Phi_12 normalizer shell.",
+  "best_depth_6_count": 890,
+  "best_macros": [
+    {
+      "boundary": "outside",
+      "depth_6_count": 890,
+      "index": 51706,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T1^2",
+        "T6^2"
+      ]
+    },
+    {
+      "boundary": "outside",
+      "depth_6_count": 890,
+      "index": 51765,
+      "order": 9,
+      "polarization": "mixed",
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T4^2",
+        "T6^2",
+        "T2^1",
+        "T7^2",
+        "T6^1"
+      ]
+    }
+  ],
+  "best_pair_inverse": true,
+  "breakthrough": 166,
+  "checks": {
+    "admissible_count_is_143": true,
+    "best_count_is_unique_inverse_pair": true,
+    "best_depth_is_890": true,
+    "best_indices_are_stable": true,
+    "best_pair_is_mixed": true,
+    "best_pair_is_order9": true,
+    "best_pair_is_outside_f4": true,
+    "best_pair_is_trace1": true,
+    "inside_min_is_worse_than_best": true,
+    "outside_admissible_count_is_dim_e6": true,
+    "outside_trace0_min_is_worse_than_best": true,
+    "outside_trace1_count_is_26": true,
+    "outside_trace1_depths_are_inverse_paired": true,
+    "outside_trace1_order9_count_is_14": true,
+    "outside_trace1_order9_depth_profile_matches": true,
+    "outside_trace2_min_is_worse_than_best": true
+  },
+  "n_verified": 16,
+  "outside_trace1_count": 26,
+  "outside_trace1_depth_distribution": {
+    "890": 2,
+    "1217": 2,
+    "1330": 2,
+    "1448": 2,
+    "1572": 2,
+    "1711": 2,
+    "1915": 2,
+    "2319": 2,
+    "2340": 2,
+    "2360": 2,
+    "2655": 2,
+    "3373": 2,
+    "3375": 2
+  },
+  "outside_trace1_order9_count": 14,
+  "outside_trace1_order9_depth_distribution": {
+    "890": 2,
+    "1217": 2,
+    "1448": 2,
+    "1572": 2,
+    "1915": 2,
+    "2360": 2,
+    "3375": 2
+  },
+  "quality_by_boundary_order": {
+    "('inside', 12)": {
+      "average_fraction": "57326/20",
+      "count": 20,
+      "max": 4015,
+      "min": 1751,
+      "sum": 57326
+    },
+    "('inside', 2)": {
+      "average_fraction": "5011/1",
+      "count": 1,
+      "max": 5011,
+      "min": 5011,
+      "sum": 5011
+    },
+    "('inside', 4)": {
+      "average_fraction": "18290/6",
+      "count": 6,
+      "max": 4658,
+      "min": 2238,
+      "sum": 18290
+    },
+    "('inside', 6)": {
+      "average_fraction": "87874/32",
+      "count": 32,
+      "max": 4194,
+      "min": 1570,
+      "sum": 87874
+    },
+    "('inside', 8)": {
+      "average_fraction": "10676/6",
+      "count": 6,
+      "max": 1795,
+      "min": 1760,
+      "sum": 10676
+    },
+    "('outside', 10)": {
+      "average_fraction": "14806/6",
+      "count": 6,
+      "max": 3373,
+      "min": 1711,
+      "sum": 14806
+    },
+    "('outside', 12)": {
+      "average_fraction": "48568/22",
+      "count": 22,
+      "max": 2662,
+      "min": 1330,
+      "sum": 48568
+    },
+    "('outside', 18)": {
+      "average_fraction": "4932/2",
+      "count": 2,
+      "max": 2466,
+      "min": 2466,
+      "sum": 4932
+    },
+    "('outside', 5)": {
+      "average_fraction": "10666/6",
+      "count": 6,
+      "max": 1970,
+      "min": 1493,
+      "sum": 10666
+    },
+    "('outside', 6)": {
+      "average_fraction": "62472/20",
+      "count": 20,
+      "max": 5104,
+      "min": 1582,
+      "sum": 62472
+    },
+    "('outside', 8)": {
+      "average_fraction": "9614/8",
+      "count": 8,
+      "max": 1500,
+      "min": 1000,
+      "sum": 9614
+    },
+    "('outside', 9)": {
+      "average_fraction": "25554/14",
+      "count": 14,
+      "max": 3375,
+      "min": 890,
+      "sum": 25554
+    }
+  },
+  "quality_by_boundary_trace": {
+    "('inside', 0)": {
+      "average_fraction": "179177/65",
+      "count": 65,
+      "max": 5011,
+      "min": 1570,
+      "sum": 179177
+    },
+    "('outside', 0)": {
+      "average_fraction": "70918/28",
+      "count": 28,
+      "max": 5104,
+      "min": 1000,
+      "sum": 70918
+    },
+    "('outside', 1)": {
+      "average_fraction": "53010/26",
+      "count": 26,
+      "max": 3375,
+      "min": 890,
+      "sum": 53010
+    },
+    "('outside', 2)": {
+      "average_fraction": "52684/24",
+      "count": 24,
+      "max": 2662,
+      "min": 1470,
+      "sum": 52684
+    }
+  },
+  "title": "Optimal macro E6 trace-1 receipt pair"
+}
