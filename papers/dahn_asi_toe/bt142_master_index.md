@@ -1,4 +1,4 @@
-# BT Master Index: BT1–BT142
+# BT Master Index: BT1-BT155
 
 **W33 Theory of Everything — Breakthrough Theorem Chain**  
 **Last updated:** June 4, 2026  
@@ -65,7 +65,7 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 
 ---
 
-## BT136–BT142: Cyclotomic–Wieferich–WRF Closure
+## BT136-BT155: Cyclotomic-Wieferich-WRF Closure
 
 | BT | Cat | Status | Summary | Depends |
 |----|-----|--------|---------|--------|
@@ -80,7 +80,13 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 | BT141-D | W | ✅ 📄 | **Orthogonal WRF Families**: A/B/C, spacing≥100, cross-isolated | BT136 |
 | BT142-A | A | 📄 | Paper expansion: new §5a + §6 LaTeX for dahn_asi_toe.tex | BT141 |
 | BT142-B | W | ✅ | **4-Cell Lattice**: AND/XOR/OR gate-set, 2×2 tile, no cross-talk | BT141-D |
-| BT142-C | A | 📄 | This master index | BT1–142 |
+| BT142-C | A | 📄 | This master index | BT1-BT142 |
+| BT150 | N | ✅ | Wieferich extrapolation: the natural next-gap successor is `(Phi_6 p_Ih)^2=5929`, so the immediate W3 progression is composite | BT141-A |
+| BT151 | N | ✅ | `Phi_60(3)` is the first higher-cyclotomic horizon; the `Phi_30` bridge does not extend blindly | BT140 |
+| BT152 | N | ✅ | `Phi_12(3)=73` is a live BT74/cyclotomic value but not an adjacency trace-tower value through the checked range | BT138 |
+| BT153 | A | ✅ | Master synthesis v18: separates trace tower, BT74 cyclotomic web, Ihara zeta, Pillar-3, and Wieferich bridge sub-algebras | BT150-BT152 |
+| BT154 | W | ✅ 📄 | **4x4 Clifford Frame**: `16=2^mu=mu^2=dim Cl_4`, grade `1+4+6+4+1`, spacing>=100, `7680` directed states; control frame, not full 81-cell spacetime | BT141-D,BT142-B |
+| BT155 | N | ✅ | **W3 Candidate Shell**: 15 substrate-natural candidates checked directly; new primes `311` and `1951` are not base-2 Wieferich; no new W in this shell, not a global no-W3 proof | BT150 |
 
 ---
 
@@ -148,7 +154,8 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 | Item | Description | Priority |
 |------|-------------|----------|
 | BT143 | Local merge + pdflatex compile → push PDF | HIGH |
-| BT144 | W₃ search: third Wieferich prime in Z[Φₙ(3), h_E₈, Mₖ] | MEDIUM |
-| BT145 | 4-cell lattice n=4 generalization (BT142-B extension) | MEDIUM |
-| BT146 | Spectral-Cyclotomic: does Φ₁₂(3)=73 encode tr(A^k) for some k? | MEDIUM |
+| BT144 | W3 search in the first substrate-natural shell | CLOSED by BT155 |
+| BT145 | 4-cell lattice n=4 generalization (BT142-B extension) | CLOSED by BT154 |
+| BT146 | Spectral-Cyclotomic: does Phi_12(3)=73 encode tr(A^k) for some k? | CLOSED by BT152 |
+| BT156 | Promote the BT154/BT155 closure into the compiled paper bundle after the larger six-paper pass | HIGH |
 | BT147 | Submit to arXiv (math-ph + hep-th cross-list) | HIGH |

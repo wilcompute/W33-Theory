@@ -1304,6 +1304,22 @@ return path whose control word is itself receipt-bearing. BT114 adds the next on
 the return path need not expose all $11$ legal continuations to hardware, but it cannot
 collapse below three abstract ports in the tested register bank.
 
+BT154 adds the first clean $4\times4$ lattice reading \cite{wrf-bt154}. The important
+point is not that a $16$-cell patch is the whole spacetime carrier. It is the opposite:
+the $4\times4$ patch is the exact $\mathrm{Cl}_4$ control frame around the flow-cell
+carrier,
+\[
+16 = 2^\mu = \mu^2 = \dim \mathrm{Cl}_4
+    = \sum_{r=0}^4 {4\choose r},
+\qquad
+1+4+6+4+1,
+\]
+with an even/odd split $8+8=2^q+2^q$. The BT141-D spacing rule gives a deterministic
+seed grid with minimum spacing $100$ and predicted zero cross-talk, so the directed state
+budget is $16\cdot480=7680$ states. The boundary is explicit: $16$ cells are a
+Clifford/Dirac operator-basis frame for control and register composition, while the full
+matter-sector toric carrier remains the $q^{q+1}=81$-cell side.
+
 % ===========================================================================
 \section{Security, Identity, and Provenance}
 % ===========================================================================
@@ -1693,6 +1709,11 @@ Local WRF harness, \emph{BT113 controlled flow-register contract},
 \bibitem{wrf-bt114}
 Local WRF harness, \emph{BT114 active trace I/O: limited actuator and finite read windows},
 \texttt{wrf\_bt114\_active\_trace\_io.py} with result JSON, generated June 3, 2026.
+
+\bibitem{wrf-bt154}
+Local WRF harness, \emph{BT154 4x4 lattice Clifford-frame generalization},
+\texttt{analysis/w33\_BREAKTHROUGH\_154\_4x4\_lattice\_n4\_generalization.py}
+with result JSON, generated June 4, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

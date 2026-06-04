@@ -1,0 +1,70 @@
+{
+  "breakthrough": 154,
+  "title": "4x4 lattice Clifford-frame generalization",
+  "n_cells": 16,
+  "seed_grid": [
+    [
+      61,
+      161,
+      261,
+      361
+    ],
+    [
+      461,
+      561,
+      661,
+      761
+    ],
+    [
+      861,
+      961,
+      1061,
+      1161
+    ],
+    [
+      1261,
+      1361,
+      1461,
+      1561
+    ]
+  ],
+  "min_seed_spacing": 100,
+  "expected_cross_talk": 0,
+  "clifford_grade_profile": [
+    1,
+    4,
+    6,
+    4,
+    1
+  ],
+  "grade_labels": [
+    "scalar",
+    "vector",
+    "bivector",
+    "pseudovector",
+    "pseudoscalar"
+  ],
+  "even_grade_count": 8,
+  "odd_grade_count": 8,
+  "directed_state_total": 7680,
+  "typical_cids_per_cell": 100,
+  "joint_address_bits": 106.30169903639559,
+  "full_4d_toric_cells": 81,
+  "reading": "A 4x4 WRF lattice is exactly a 16-cell Cl_4 operator-basis frame: 1 scalar, 4 vectors, 6 bivectors, 4 pseudovectors, and 1 pseudoscalar. It is a Clifford/Dirac control frame around Bell-qutrit cells, not a claim that a conventional complex Dirac spinor has 16 components.",
+  "boundary": "This verifies the finite lattice and seed-spacing theorem. It does not run a live WRF cross-talk experiment; it applies the already committed BT141-D spacing rule.",
+  "checks": {
+    "cell_count_is_mu_squared": true,
+    "cell_count_is_lambda_to_mu": true,
+    "cell_count_is_clifford_dimension": true,
+    "grade_profile_is_cl4": true,
+    "even_odd_clifford_split_is_balanced": true,
+    "seed_count_is_16": true,
+    "seed_spacing_rule_holds": true,
+    "base_6_register_seed_is_present": true,
+    "directed_state_total_is_7680": true,
+    "full_4d_toric_cells_are_q4": true,
+    "spinor_frame_is_subregion_not_full_spacetime": true,
+    "joint_address_bits_round_to_106": true
+  },
+  "n_verified": 12
+}
