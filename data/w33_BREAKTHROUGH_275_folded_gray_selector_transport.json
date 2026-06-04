@@ -1,0 +1,147 @@
+{
+  "architectural_reading": "BT274's selector choice is promoted to a full transport law. The BT176 even Gray projection is exactly selector 7's q!-cycle folded through the fixed caps 0 and 15 with a q+1 by q-1 split. The full reflected-Gray two-step word [3,5,3,9]^2 is recovered by exactly the base-14 inverse pair: selector 7 forward and selector 6 reversed. Thus the physical now-clock is a folded, orientation-resolved q!-cycle, not an arbitrary traversal of the octonion frame.",
+  "boundary": "This theorem is internal to the F2^4/Gray/selector carrier. The next target is to identify which W(3,3) now-fan labels realize the two fixed caps and the q+1|q-1 fold.",
+  "breakthrough": 275,
+  "bt176_even_projection": [
+    0,
+    3,
+    6,
+    5,
+    12,
+    15,
+    10,
+    9
+  ],
+  "cap_directions": {
+    "head_to_all_ones_cap": 3,
+    "real_cap_to_head": 3
+  },
+  "cap_splice_search_space": 960,
+  "checks": {
+    "all_step_matches_equal_bt176_projection": true,
+    "both_caps_use_same_direction_3": true,
+    "bt176_projection_is_folded_selector_7": true,
+    "cap_splice_search_space_is_960": true,
+    "exact_projection_has_two_representations": true,
+    "exact_step_word_has_two_representations": true,
+    "fold_split_is_q_plus_1_by_q_minus_1": true,
+    "forward_representation_is_selector_7": true,
+    "inverse_representation_is_selector_6_reverse": true,
+    "selected_cycle_has_selector_word_repeated": true,
+    "target_step_word_is_reflected_gray_period_squared": true,
+    "target_steps_are_two_bit_internal_moves": true,
+    "two_representations_are_base_14_pair": true
+  },
+  "exact_projection_match_count": 2,
+  "exact_step_match_count": 2,
+  "exact_step_matches": [
+    {
+      "base_direction": 14,
+      "head_length": 4,
+      "orientation": "atlas_reverse",
+      "projection": [
+        0,
+        3,
+        6,
+        5,
+        12,
+        15,
+        10,
+        9
+      ],
+      "rotation_index": 5,
+      "selector_index": 6,
+      "split_index": 4,
+      "step_word": [
+        3,
+        5,
+        3,
+        9,
+        3,
+        5,
+        3,
+        9
+      ],
+      "tail_length": 2,
+      "tail_mode": "reverse"
+    },
+    {
+      "base_direction": 14,
+      "head_length": 4,
+      "orientation": "atlas_forward",
+      "projection": [
+        0,
+        3,
+        6,
+        5,
+        12,
+        15,
+        10,
+        9
+      ],
+      "rotation_index": 0,
+      "selector_index": 7,
+      "split_index": 4,
+      "step_word": [
+        3,
+        5,
+        3,
+        9,
+        3,
+        5,
+        3,
+        9
+      ],
+      "tail_length": 2,
+      "tail_mode": "reverse"
+    }
+  ],
+  "fold_split": {
+    "head": 4,
+    "tail": 2
+  },
+  "folded_from_selector_7": [
+    0,
+    3,
+    6,
+    5,
+    12,
+    15,
+    10,
+    9
+  ],
+  "n_verified": 13,
+  "reflected_gray_period": [
+    3,
+    5,
+    3,
+    9
+  ],
+  "selected_cycle_step_word": [
+    5,
+    3,
+    9,
+    5,
+    3,
+    9
+  ],
+  "selected_selector_7_cycle": [
+    3,
+    6,
+    5,
+    12,
+    9,
+    10
+  ],
+  "target_step_word": [
+    3,
+    5,
+    3,
+    9,
+    3,
+    5,
+    3,
+    9
+  ],
+  "title": "Folded Gray selector transport"
+}
