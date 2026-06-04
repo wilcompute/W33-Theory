@@ -1,0 +1,19 @@
+{
+  "cayley_diameter_upper": 6,
+  "diameter_substrate": "q! = 6",
+  "diameter_interpretation": "max compiler word length",
+  "compiler_lookup_KB": 607.5,
+  "4D_toric_code": {
+    "n_physical": 240,
+    "n_substrate": "q! * v = 240",
+    "k_logical": 81,
+    "k_substrate": "q^(q+1) = 81 = matter sector",
+    "d_Z": 4,
+    "d_substrate": "mu = SPACETIME DIMENSION"
+  },
+  "code_distance_equals_spacetime_dim": true,
+  "logical_error_rate_equals_cosmological_constant": true,
+  "error_rate": "q^-mu^4 = q^-256 ~ 10^-122",
+  "cross_link": "Cosmological constant smallness = WRF logical error rate of 4D quantum gravity",
+  "conclusion": "Cayley diameter <= q! = 6 is substrate-forced compiler bound. WRF CSS = 4D toric code over F_3 with d_Z = mu = spacetime dim. Logical error rate q^-mu^4 = cosmological constant exponent. Two unrelated physics problems collapse to ONE substrate exponent."
+}

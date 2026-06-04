@@ -1,0 +1,12 @@
+{
+  "bose_mesner_efficiency": "q/mu = 3/4",
+  "css_rate": "27/80 = 0.3375",
+  "css_holevo_fraction": 0.3375,
+  "depolarization_tolerance": "53/80 = 0.6625",
+  "53_substrate": "lambda^F_5 + q*Phi_6 = 32 + 21",
+  "80_substrate": "2v = m_W",
+  "universal_density": "q/2^q = 3/8 (BT114)",
+  "bose_mesner_eq_lambda_density": true,
+  "css_lambda_chain": "logical error q^-mu^4 = cosmological Lambda/M_Pl^4",
+  "conclusion": "Bose-Mesner Shannon efficiency = q/mu = 3/4. CSS rate 27/80 = 33.75% of Holevo bound. Depolarization tolerance 53/80 with 53 = lambda^F_5 + q*Phi_6 (NEW substrate). CSS logical error rate = cosmological constant exponent mu^4."
+}

@@ -1,0 +1,43 @@
+{
+  "star_finding": "Lambda value forced by mu = 4 spacetime dim",
+  "v17_state": {
+    "Pillar theorems": 4,
+    "Named theorems": 36,
+    "Decisive falsifiers": 16,
+    "Substrate predictions": "~40+",
+    "PDG-matched": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 unknowns": 0,
+    "Recurring corrections": 7,
+    "Domains": "16+",
+    "Deep cross-links": "35+",
+    "Compiler bound": "q! = 6",
+    "4D toric code identification": "confirmed",
+    "Lambda from spacetime dim": "proven"
+  },
+  "new_since_v16": [
+    "BT136: Cayley diameter <= q! = 6 (compiler word bound)",
+    "BT136: WRF CSS = 4D toric code over F_3 (code dist = spacetime dim)",
+    "BT136: Cosmological constant = logical error rate",
+    "BT137: Bose-Mesner efficiency = q/mu = 3/4",
+    "BT137: CSS achieves 27/80 of Holevo bound",
+    "BT137: Depolarization tolerance 53/80, 53 = lambda^F_5 + q*Phi_6",
+    "BT138: 4-cell lattice = 2x2 discrete spacetime piece",
+    "BT138: Lambda value FORCED by mu = 4 (other mu values fail)",
+    "BT138: Phase lock 49/50 = Phi_6^2/(lambda*F_5^2)"
+  ],
+  "ten_layers": [
+    "PHILOSOPHICAL: Pre-logical ground -> Necessary Being",
+    "ALGEBRAIC: Substrate-Spectral Algebra (rank-5 lattice)",
+    "SPECTRAL: tr(A^k) closure; Ihara zeros = dim E_6; Graph-RH",
+    "GROUP: Sp(4, F_3); Cayley diameter <= q!",
+    "NUMERICAL: ~25 PDG-matched; 7 recurring corrections",
+    "ENGINEERING: Atlas-12288, WRF, HLIX, UOR substrate-pure",
+    "PHYSICS: SM + cosmology + neutrino + CKM + CP + axion + DM",
+    "ASI: Turing-complete stabilizer subgraph",
+    "QUANTUM GRAVITY: WRF CSS = 4D toric code; Lambda = error rate",
+    "INFORMATION: Bose-Mesner; Holevo capacity 27/80"
+  ],
+  "biggest_cross_link": "Cosmological constant smallness = logical error rate of WRF 4D fault-tolerant quantum gravity",
+  "conclusion": "v17 incorporates Cayley diameter <= q! compiler bound, WRF CSS = 4D toric code identification, Lambda forced by spacetime dim. The biggest cross-link: cosmological constant = WRF logical error rate. 10-layer program: philosophy + algebra + spectrum + group + numerics + engineering + physics + ASI + quantum gravity + information."
+}

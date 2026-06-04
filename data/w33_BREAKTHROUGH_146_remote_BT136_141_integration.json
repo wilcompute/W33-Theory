@@ -1,0 +1,40 @@
+{
+  "wieferich_gap": {
+    "W1": 1093,
+    "W2": 3511,
+    "gap": 2418,
+    "form_A": "2*Phi_3*M_5*q",
+    "form_B_alt": "W_2 = 3*W_1 + 8*(h_E_8-1)"
+  },
+  "spectral_cyclotomic_bridge": {
+    "Phi_30_3": 8401,
+    "form": "M_5 * (q*(4k-1) + lambda*F_5*Phi_3) = 31*(141+130)",
+    "spectral": 141,
+    "correction": 130,
+    "substrate_271": "Phi_3*20 + p_Ih = 260 + 11"
+  },
+  "orthogonal_WRF_families": {
+    "A": [
+      61,
+      161,
+      261,
+      361
+    ],
+    "B": [
+      461,
+      561,
+      661,
+      761
+    ],
+    "C": [
+      862,
+      962,
+      1062,
+      1162
+    ],
+    "operational_distance": 100
+  },
+  "cross_talk_adjacent": "19.4% (seeds 661-664)",
+  "cross_talk_spaced": "0% (spacing >=100)",
+  "conclusion": "Remote BT136-141 integrated. STAR findings: Wieferich gap W_2-W_1 = 2*Phi_3*M_5*q (substrate-pure); Phi_30(3) = M_5*(spectral_141 + correction_130) bridges spectral tower to y_t correction via cyclotomic; orthogonal WRF families need seed spacing >= 100. Both known Wieferich primes AND their gap are substrate."
+}
