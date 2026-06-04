@@ -1,0 +1,319 @@
+{
+  "affine_coordinate_automorphism_order": 384,
+  "all_matching_orbit_sizes": [
+    4,
+    8,
+    12,
+    24,
+    32,
+    48,
+    48,
+    96
+  ],
+  "architectural_reading": "The BT271 decomposition is one member of a complete selector system. The Q4 weight-3 complement has 272 perfect matchings, but exactly 8 = 2^q of them select a Mobius-Kantor cubic complement. These 8 identity matchings form one orbit under the 384-element affine coordinate symmetry of F_2^4, with stabilizer 48 = mu*k. The octonion-sized selector orbit is therefore intrinsic to the 16-point past/future carrier, not an arbitrary embedding.",
+  "boundary": "This classifies selectors under the natural affine coordinate symmetry of the F_2^4 model. It does not yet identify which of the 8 selectors is chosen by a W(3,3) now-fan or physical clock phase.",
+  "breakthrough": 272,
+  "checks": {
+    "affine_coordinate_automorphism_order_is_384": true,
+    "all_matching_orbit_sizes_are_substrate_clean": true,
+    "all_selectors_have_balanced_xor_profile": true,
+    "mk_selector_count_is_2_to_q": true,
+    "mk_selector_stabilizer_is_mu_k": true,
+    "mk_selectors_form_one_orbit": true,
+    "orbit_size_sum_is_272": true,
+    "perfect_matching_count_is_272": true,
+    "profile_split_is_4_260_8": true,
+    "weight3_complement_has_32_edges": true
+  },
+  "mobius_kantor_selector_count": 8,
+  "n_verified": 10,
+  "perfect_matching_count": 272,
+  "profile_counts": {
+    "(16, 4)": 260,
+    "(16, 6)": 8,
+    "(8, 4)": 4
+  },
+  "selector_matchings": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        8,
+        15
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        8,
+        15
+      ]
+    ],
+    [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        9,
+        14
+      ]
+    ],
+    [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        10,
+        13
+      ]
+    ],
+    [
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    [
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        9,
+        14
+      ]
+    ],
+    [
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    [
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        10,
+        13
+      ]
+    ]
+  ],
+  "selector_orbit_sizes": [
+    8
+  ],
+  "selector_stabilizer_order": 48,
+  "selector_xor_profiles": {
+    "((7, 2), (11, 2), (13, 2), (14, 2))": 8
+  },
+  "title": "Mobius-Kantor selector classification",
+  "weight3_complement_edge_count": 32
+}
