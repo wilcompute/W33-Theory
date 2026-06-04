@@ -1,0 +1,21 @@
+{
+  "four_way_equivalence": {
+    "Cl_4_Clifford_frame": "grade profile 1+4+6+4+1 = 16",
+    "Q_4_hypercube": "|V|=16, |E|=32, deg=4, diam=4",
+    "toroidal_knight_tour": "closed Hamilton cycle length 16",
+    "gray_code": "4-bit reflected, Hamming-1 adjacency"
+  },
+  "substrate_identities": {
+    "16": "lambda^mu = mu^2 = 2^mu = (q+1)^2",
+    "32": "lambda^(mu+1) = 2^F_5",
+    "24": "q!*(q+1) = f",
+    "18432": "|E(Q_4)| * (q!(q+1))^2 = 32 * 24^2"
+  },
+  "new_identities": {
+    "knight_tour_energy": "2^mu = 16",
+    "gray_code_diameter": "mu = spacetime dim"
+  },
+  "antipodal_quotient": "Reye (12_4, 16_3) = tomotope",
+  "pillar_claim": "4x4 substrate object simultaneously algebraic (Cl_4) + topological (Q_4) + dynamical (knight) + informational (Gray)",
+  "conclusion": "4-way unification: Cl_4 = Q_4 = knight tour = Gray code describe the SAME 16-vertex substrate object. New identities: knight-tour energy = 2^mu, Gray-code diameter = mu = spacetime dim. Connects BT154 Clifford frame to existing BT72 Addendum Q_4 work; closes the algebra/topology/dynamics/information loop on the 4x4 substrate."
+}

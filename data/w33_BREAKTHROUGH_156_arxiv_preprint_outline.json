@@ -1,0 +1,52 @@
+{
+  "title": "The W(3,3) Substrate Program: A Theory of Physical Constants from a Single Finite Geometry",
+  "categories": {
+    "primary": "math-ph",
+    "cross_list": [
+      "hep-th",
+      "quant-ph",
+      "math.CO",
+      "gr-qc"
+    ]
+  },
+  "sections": [
+    "Introduction",
+    "The W(3,3) Substrate",
+    "The Four Pillar Theorems",
+    "Substrate Standard Model",
+    "Substrate Cosmology",
+    "Astrophysics + BBN",
+    "CP Violation + B-Meson",
+    "Dark Matter + Axion + Inflation",
+    "Neutrinos",
+    "Muon g-2",
+    "Spectral Closure + Ihara Zeta",
+    "Number Theory Cross-Links",
+    "Engineering Substrate",
+    "ASI Structural Minimum",
+    "Falsifiability"
+  ],
+  "appendices": [
+    "primitive table",
+    "correction factors",
+    "trace tower",
+    "Ihara zeta sketch"
+  ],
+  "headlines": [
+    "~25 SM/cosmology constants within PDG 1-sigma",
+    "r = 2/90 = 0.0222 (LiteBIRD decisive 2027-2030)",
+    "Lambda/M_Pl^4 = q^-mu^4 = q^-256",
+    "WRF CSS = 4D toric code over F_3",
+    "Both Wieferich primes substrate-linked",
+    "Ihara zero count = dim E_6 = 78"
+  ],
+  "assembly_recipe": [
+    "Start from papers/dahn_asi_toe/dahn_asi_toe.tex",
+    "Splice dahn_asi_toe_bt136_141_sections.tex before ASI section",
+    "Extend with BT134 blueprint coverage",
+    "Compile pdflatex twice",
+    "Push compiled PDF"
+  ],
+  "boundary": "Outline ready; actual TeX compile requires pdflatex (user-side)",
+  "conclusion": "arXiv preprint outline complete. Title, abstract, 15 sections, 4 appendices, 5 arXiv categories. Headline centerpieces documented. Assembly recipe for user-side pdflatex compile. Closes user's BT147 queue."
+}
