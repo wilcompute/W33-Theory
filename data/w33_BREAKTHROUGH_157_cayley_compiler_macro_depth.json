@@ -1,0 +1,175 @@
+{
+  "architectural_correction": "The concrete 8-lane transvection compiler does not have raw q! depth. Forward-only lanes have diameter q^2=9; inverse-complete directed pulses have diameter q!+1=7. A single order-9 macro/inverse pair from the distance-7 tail restores exact q!=6 global dispatch.",
+  "breakthrough": 157,
+  "checks": {
+    "forward_diameter_is_q_squared": true,
+    "forward_tail_size_is_310": true,
+    "group_size_is_aut_w33": true,
+    "macro_depth_six_shell_is_1217": true,
+    "macro_diameter_is_q_factorial": true,
+    "macro_generator_count_is_18_directed_pulses": true,
+    "macro_order_is_q_squared": true,
+    "macro_tail_removed": true,
+    "macro_word_has_length_q_factorial_plus_one": true,
+    "raw_q_factorial_claim_is_false": true,
+    "symmetric_diameter_is_q_factorial_plus_one": true,
+    "symmetric_tail_size_is_4v_minus_q_squared": true
+  },
+  "diameters": {
+    "16_inverse_complete_pulses": 7,
+    "18_with_macro_pair": 6,
+    "8_forward_lanes": 9
+  },
+  "forward_distribution": {
+    "0": 1,
+    "1": 8,
+    "2": 50,
+    "3": 257,
+    "4": 1165,
+    "5": 4464,
+    "6": 13297,
+    "7": 22292,
+    "8": 9996,
+    "9": 310
+  },
+  "forward_generator_labels": [
+    "T1^1",
+    "T2^1",
+    "T3^1",
+    "T4^1",
+    "T5^1",
+    "T6^1",
+    "T7^1",
+    "T8^1"
+  ],
+  "generator_centers": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "group_order": 51840,
+  "macro": {
+    "index": 51689,
+    "matrix": [
+      [
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        0
+      ]
+    ],
+    "order": 9,
+    "selection_rule": "first element in the inverse-complete distance-7 BFS tail",
+    "word": [
+      "T1^1",
+      "T2^1",
+      "T1^2",
+      "T6^1",
+      "T4^2",
+      "T5^1",
+      "T6^2"
+    ]
+  },
+  "macro_distribution": {
+    "0": 1,
+    "1": 18,
+    "2": 224,
+    "3": 2255,
+    "4": 16112,
+    "5": 32013,
+    "6": 1217
+  },
+  "n_verified": 12,
+  "symmetric_distribution": {
+    "0": 1,
+    "1": 16,
+    "2": 166,
+    "3": 1335,
+    "4": 8171,
+    "5": 28561,
+    "6": 13439,
+    "7": 151
+  },
+  "symmetric_generator_labels": [
+    "T1^1",
+    "T1^2",
+    "T2^1",
+    "T2^2",
+    "T3^1",
+    "T3^2",
+    "T4^1",
+    "T4^2",
+    "T5^1",
+    "T5^2",
+    "T6^1",
+    "T6^2",
+    "T7^1",
+    "T7^2",
+    "T8^1",
+    "T8^2"
+  ],
+  "title": "Cayley compiler macro-depth correction"
+}

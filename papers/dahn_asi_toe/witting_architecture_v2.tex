@@ -1059,8 +1059,26 @@ realisation. A microarchitectural decoder needs only:
 \item a $30$-slot $E_8$ Coxeter cadence table for epoch-level scheduling,
 \item $34$ lifted Clifford-cover refinements when qutrit phase information is kept,
 \item $8$ generator decoder lanes (each generator is a small fixed circuit),
+\item one receipt-bearing macro/inverse pair for the measured diameter tail,
 \item Cayley-graph distance lookup for compiler scheduling.
 \end{itemize}
+
+BT157 then stress-tests the word metric instead of assuming it \cite{wrf-bt157}. For the
+eight transvection centers used in the local qutrit realisation, the exact all-element BFS
+over $51{,}840$ elements gives:
+\[
+\operatorname{diam}_{8{\rm fwd}}=9=q^2,\qquad
+\operatorname{diam}_{16{\rm inv}}=7=q!+1,\qquad
+\operatorname{diam}_{16{\rm inv}+M^{\pm1}}=6=q!.
+\]
+The macro $M$ is an order-$9$ element from the inverse-complete distance-$7$ tail, with
+one verified word
+\[
+M=T_1T_2T_1^{-1}T_6T_4^{-1}T_5T_6^{-1}.
+\]
+Thus the raw $8$-lane compiler does \emph{not} have $q!$ depth. The exact architecture is
+more specific: $8$ physical lanes, $16$ directed elementary pulses, and one
+receipt-bearing macro pair collapse global dispatch to the master-equation depth $q!=6$.
 
 \subsection{Programs as Cayley walks}
 
@@ -1075,6 +1093,13 @@ of lookup tables. Compiling becomes an $O(1)$ database query: for the target
 automorphism, look up the shortest generator-word. No NP-hard register allocation, no
 heuristic instruction scheduling.
 \end{intuition}
+
+The measured BT157 distance table also makes the compiler boundary explicit. With only
+forward elementary lanes the distance distribution ends at $9$; with inverse-complete
+directed pulses it ends at $7$ with a $151=4v-q^2$ element tail; adding the macro pair
+removes that tail and leaves only $1217$ elements at depth $6$. So the compiler is not
+``magically'' shallow; it is shallow because the finite table identifies and packages the
+tail.
 
 \subsection{Two-qutrit Pauli phase space (the register file)}
 
@@ -1741,6 +1766,11 @@ with result JSON, generated June 4, 2026.
 Local WRF harness, \emph{BT156 ISA conjugacy ladder correction},
 \texttt{analysis/w33\_BREAKTHROUGH\_156\_isa\_conjugacy\_ladder.py}
 with GAP-backed result JSON, generated June 4, 2026.
+
+\bibitem{wrf-bt157}
+Local WRF harness, \emph{BT157 Cayley compiler macro-depth correction},
+\texttt{analysis/w33\_BREAKTHROUGH\_157\_cayley\_compiler\_macro\_depth.py}
+with result JSON, generated June 4, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

@@ -88,6 +88,7 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 | BT154 | W | ✅ 📄 | **4x4 Clifford Frame**: `16=2^mu=mu^2=dim Cl_4`, grade `1+4+6+4+1`, spacing>=100, `7680` directed states; control frame, not full 81-cell spacetime | BT141-D,BT142-B |
 | BT155 | N | ✅ | **W3 Candidate Shell**: 15 substrate-natural candidates checked directly; new primes `311` and `1951` are not base-2 Wieferich; no new W in this shell, not a global no-W3 proof | BT150 |
 | BT156 | W | ✅ 📄 | **ISA Conjugacy Ladder**: ordinary classes/cadence split `20 -> 25 -> 30 -> 34`; WRF dispatch is 25 W(E6) classes, 30 Coxeter slots, 34 Clifford refinements | BT154 |
+| BT157 | W | ✅ 📄 | **Cayley Compiler Macro-Depth**: 8 forward lanes diameter `9`, 16 directed pulses diameter `7`, one order-9 macro pair restores exact `q! = 6` dispatch | BT156 |
 
 ---
 
@@ -158,5 +159,5 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 | BT144 | W3 search in the first substrate-natural shell | CLOSED by BT155 |
 | BT145 | 4-cell lattice n=4 generalization (BT142-B extension) | CLOSED by BT154 |
 | BT146 | Spectral-Cyclotomic: does Phi_12(3)=73 encode tr(A^k) for some k? | CLOSED by BT152 |
-| BT157 | Promote the BT154-BT156 closure into the compiled paper bundle after the larger six-paper pass | HIGH |
+| BT158 | Promote the BT154-BT157 closure into the compiled paper bundle after the larger six-paper pass | HIGH |
 | BT147 | Submit to arXiv (math-ph + hep-th cross-list) | HIGH |
