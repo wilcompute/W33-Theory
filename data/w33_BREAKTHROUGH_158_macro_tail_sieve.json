@@ -1,0 +1,471 @@
+{
+  "admissible_macro_count": 143,
+  "architectural_reading": "The BT157 macro is a choice from a 143-element admissible microcode sieve, not a unique accident. The remaining 8 distance-tail elements are a binary obstruction pocket that preserves diameter 7.",
+  "best_depth_6_count": 890,
+  "best_macros": [
+    {
+      "depth_6_count": 890,
+      "diameter": 6,
+      "index": 51706,
+      "matrix": [
+        [
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          2
+        ]
+      ],
+      "order": 9,
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T2^1",
+        "T6^1",
+        "T4^2",
+        "T7^1",
+        "T1^2",
+        "T6^2"
+      ]
+    },
+    {
+      "depth_6_count": 890,
+      "diameter": 6,
+      "index": 51765,
+      "matrix": [
+        [
+          0,
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "order": 9,
+      "trace_mod3": 1,
+      "word": [
+        "T1^1",
+        "T3^2",
+        "T4^2",
+        "T6^2",
+        "T2^1",
+        "T7^2",
+        "T6^1"
+      ]
+    }
+  ],
+  "breakthrough": 158,
+  "checks": {
+    "admissible_macro_count_is_pih_phi3": true,
+    "admissible_order_distribution_matches_audit": true,
+    "admissible_plus_forbidden_is_tail": true,
+    "all_forbidden_have_trace_zero": true,
+    "all_order_9_tail_macros_are_admissible": true,
+    "best_depth_six_count_is_890": true,
+    "best_macro_count_is_two": true,
+    "best_macros_have_order_9_trace_1": true,
+    "forbidden_macro_count_is_two_to_q": true,
+    "forbidden_orders_are_binary_pocket": true,
+    "group_size_is_aut_w33": true,
+    "tail_size_is_4v_minus_q_squared": true
+  },
+  "failure_order_distribution": {
+    "2": 4,
+    "12": 4
+  },
+  "failure_trace_distribution": {
+    "0": 8
+  },
+  "forbidden_macro_count": 8,
+  "forbidden_macros": [
+    {
+      "depth_6_count": 3630,
+      "diameter": 7,
+      "index": 51747,
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "order": 12,
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T2^2",
+        "T7^2",
+        "T3^2",
+        "T8^2",
+        "T5^1",
+        "T6^1"
+      ]
+    },
+    {
+      "depth_6_count": 2776,
+      "diameter": 7,
+      "index": 51782,
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "order": 12,
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T4^1",
+        "T6^2",
+        "T4^1",
+        "T5^2",
+        "T6^1",
+        "T7^1"
+      ]
+    },
+    {
+      "depth_6_count": 6611,
+      "diameter": 7,
+      "index": 51795,
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "order": 2,
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^1",
+        "T6^2",
+        "T7^1",
+        "T6^2",
+        "T5^2",
+        "T8^2"
+      ]
+    },
+    {
+      "depth_6_count": 2776,
+      "diameter": 7,
+      "index": 51798,
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "order": 12,
+      "trace_mod3": 0,
+      "word": [
+        "T1^1",
+        "T5^2",
+        "T8^1",
+        "T6^2",
+        "T2^2",
+        "T7^1",
+        "T6^1"
+      ]
+    },
+    {
+      "depth_6_count": 3630,
+      "diameter": 7,
+      "index": 51826,
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "order": 12,
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^2",
+        "T6^1",
+        "T2^2",
+        "T7^1",
+        "T6^2",
+        "T8^2"
+      ]
+    },
+    {
+      "depth_6_count": 5756,
+      "diameter": 7,
+      "index": 51828,
+      "matrix": [
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ]
+      ],
+      "order": 2,
+      "trace_mod3": 0,
+      "word": [
+        "T1^2",
+        "T3^2",
+        "T8^1",
+        "T5^1",
+        "T6^1",
+        "T7^2",
+        "T6^1"
+      ]
+    },
+    {
+      "depth_6_count": 6338,
+      "diameter": 7,
+      "index": 51833,
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "order": 2,
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T6^1",
+        "T5^1",
+        "T7^1",
+        "T6^2",
+        "T2^2",
+        "T8^1"
+      ]
+    },
+    {
+      "depth_6_count": 5654,
+      "diameter": 7,
+      "index": 51836,
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "order": 2,
+      "trace_mod3": 0,
+      "word": [
+        "T2^1",
+        "T8^2",
+        "T7^1",
+        "T3^1",
+        "T6^2",
+        "T2^1",
+        "T7^2"
+      ]
+    }
+  ],
+  "n_verified": 12,
+  "success_order_distribution": {
+    "2": 1,
+    "4": 6,
+    "5": 6,
+    "6": 52,
+    "8": 14,
+    "9": 14,
+    "10": 6,
+    "12": 42,
+    "18": 2
+  },
+  "success_trace_distribution": {
+    "0": 93,
+    "1": 26,
+    "2": 24
+  },
+  "tail_size": 151,
+  "title": "Macro-tail sieve"
+}

@@ -13720,6 +13720,18 @@
           <code>8</code> physical lanes, <code>16</code> directed elementary pulses, and one macro pair to restore
           master-equation depth.</p>
 
+        <h4>Macro-tail microcode sieve</h4>
+        <p>BT158 audits the entire distance-<code>7</code> macro tail. The tail has
+          <code>151=4v-q<sup>2</sup></code> candidates, and it splits cleanly:
+          <code>143=11&middot;13=p<sub>Ih</sub>&Phi;<sub>3</sub></code> admissible q!-restoring macros plus
+          <code>8=2<sup>q</sup></code> forbidden macros that preserve diameter <code>7</code>. The forbidden pocket is
+          binary: four involutions and four order-<code>12</code> elements, all trace <code>0</code> modulo
+          <code>3</code>.</p>
+        <p>The best admissible macros are not the first arbitrary tail element; there are two order-<code>9</code>,
+          trace-<code>1</code> macros that leave only <code>890</code> symmetries at depth <code>6</code>. So WRF
+          microcode has finite design freedom: pick a macro from a <code>143</code>-element admissible sieve while
+          avoiding the <code>8</code>-element binary obstruction pocket.</p>
+
         <h4>Reye-K<sub>12</sub> orientable horizon completion</h4>
         <p>MCXCII closes the Q<sub>4</sub>/tomotope/Reye thread into the new horizon-code layer. Use the
           <code>12</code> Reye points from the antipodal Q<sub>4</sub> quotient as the vertices of
