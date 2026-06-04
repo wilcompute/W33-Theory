@@ -1,0 +1,60 @@
+{
+  "BT136": {
+    "seeds": [661, 662, 663, 664],
+    "N_trials": 1500,
+    "cross_talk_rate": 0.194,
+    "phase_lock_all_pairs": 1.000,
+    "cell_attractor_counts": {"661": 37, "662": 37, "663": 37, "664": 37},
+    "conclusion": "Adjacent seeds are NOT orthogonal. Spacing >100 required.",
+    "gate_set": {"AND": "phase-lock", "XOR": "distinct-attractor-family injection", "OR": "basin union"}
+  },
+  "BT137": {
+    "cyclotomic_Phi_n_at_3": {
+      "1": 2, "2": 4, "3": 13, "4": 10, "5": 121, "6": 7,
+      "7": 1093, "8": 82, "9": 757, "10": 61, "12": 73, "14": 547,
+      "15": 4561, "18": 703, "20": 5905, "24": 6481, "30": 8401
+    },
+    "tr_A8": 429903360,
+    "tr_A6": 3048960,
+    "ratio_q_4k_minus1": 141,
+    "4k_minus1": 47,
+    "47_divides_Phi30": false,
+    "Phi30_factors": [31, 271],
+    "Phi30_mod_h_E8": 1,
+    "Phi30_mod_E_count": 1
+  },
+  "BT138": {
+    "spectrum": [[12, 1], [2, 24], [-4, 15]],
+    "tr_A1": 0,
+    "tr_A2": 480,
+    "e2_newton": -240,
+    "neg_E8_roots": -240,
+    "neg_E_graph": -240,
+    "three_way_identity": "e2(W33) = -|E(W33)| = -|E8 roots| = -240",
+    "verified": true,
+    "h_E8": 30,
+    "E8_exponents": [1, 7, 11, 13, 17, 19, 23, 29],
+    "sum_E8_exp": 120,
+    "tr_A5_substrate": 234240
+  },
+  "BT139": {
+    "Phi7_at_3": 1093,
+    "W1": 1093,
+    "W2": 3511,
+    "Phi7_equals_W1": true,
+    "W1_wieferich_verified": true,
+    "W2_wieferich_verified": true,
+    "W2_is_cyclotomic": false,
+    "geometric_sum_check": 1093,
+    "1093_mod_6": 1
+  },
+  "BT140": {
+    "Phi30_at_3": 8401,
+    "factors": [31, 271],
+    "31_is_Mersenne_M5": true,
+    "271_substrate_form": "Phi3 x 20 + p_Ih = 260 + 11",
+    "8401_mod_h_E8": 1,
+    "8401_mod_E_count": 1,
+    "8400_factored": "2^4 * 3 * 5^2 * 7 = h_E8 x 280 = E_count x 35"
+  }
+}
