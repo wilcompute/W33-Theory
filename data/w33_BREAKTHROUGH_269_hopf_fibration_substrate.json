@@ -1,0 +1,47 @@
+{
+  "quaternion_hopf": {
+    "bundle": "S^3 -> S^7 -> S^4",
+    "fiber_dim": 3,
+    "total_dim": 7,
+    "base_dim": 4
+  },
+  "substrate_identity": "Phi_6 = mu + q",
+  "all_three_dims_in_substrate": true,
+  "adams_hopfs": [
+    {
+      "name": "Complex",
+      "bundle": "S^1 -> S^3 -> S^2",
+      "dims": [
+        1,
+        3,
+        2
+      ],
+      "all_match": false
+    },
+    {
+      "name": "Quaternion",
+      "bundle": "S^3 -> S^7 -> S^4",
+      "dims": [
+        3,
+        7,
+        4
+      ],
+      "all_match": true
+    },
+    {
+      "name": "Octonion",
+      "bundle": "S^7 -> S^15 -> S^8",
+      "dims": [
+        7,
+        15,
+        8
+      ],
+      "all_match": false
+    }
+  ],
+  "parallelizable_spheres_gt_1": [
+    3,
+    7
+  ],
+  "conclusion": "The quaternion Hopf fibration S^3 -> S^7 -> S^4 is the UNIQUE Hopf bundle whose three sphere dimensions all live in the substrate primitive set {q, mu, Phi_6}. NEW EXACT IDENTITY: Phi_6 = mu + q (toroidal = spacetime + color). Parallelizable S^n with n > 1 are exactly S^q and S^Phi_6."
+}

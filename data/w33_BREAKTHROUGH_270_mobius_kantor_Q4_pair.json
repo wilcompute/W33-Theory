@@ -1,0 +1,56 @@
+{
+  "mobius_kantor": {
+    "V": 16,
+    "E": 24,
+    "deg": 3,
+    "girth": 6,
+    "diameter": 4,
+    "V_substrate": "lambda^mu",
+    "E_substrate": "f",
+    "type": "GP(8, 3) = Levi of (8_3) MK config"
+  },
+  "Q_4": {
+    "V": 16,
+    "E": 32,
+    "deg": 4,
+    "girth": 4,
+    "diameter": 4,
+    "V_substrate": "lambda^mu",
+    "E_substrate": "lambda^F_5",
+    "type": "4-cube = knight graph on 4x4 torus"
+  },
+  "complementary_identities": {
+    "degree_sum": "q + mu = Phi_6 (Hopf)",
+    "edge_sum": "lambda^q * Phi_6 = 56 = E_7 rep dim",
+    "vertex_count_match": "both 16 = lambda^mu"
+  },
+  "heawood_pairing": {
+    "Heawood_plus_MK": 30,
+    "Heawood_plus_Q4": 30,
+    "common_value": "h(E_8) = 30"
+  },
+  "three_cubic_bipartite_graphs": [
+    {
+      "name": "Heawood",
+      "V": 14,
+      "E": 21,
+      "V_sub": "lambda*Phi_6",
+      "E_sub": "T_6"
+    },
+    {
+      "name": "Mobius-Kantor",
+      "V": 16,
+      "E": 24,
+      "V_sub": "lambda^mu",
+      "E_sub": "f"
+    },
+    {
+      "name": "Q_3 (cube)",
+      "V": 8,
+      "E": 12,
+      "V_sub": "2^q",
+      "E_sub": "k"
+    }
+  ],
+  "conclusion": "Mobius-Kantor (cubic) and Q_4 (quartic) form a complementary 16-vertex pair. deg(MK) + deg(Q_4) = Phi_6 (Hopf, BT269). |E(MK)| + |E(Q_4)| = lambda^q * Phi_6 = 56 (E_7 rep dim). |E(MK)| = 24 = f. Both pair with Heawood to give h(E_8) = 30. The 16-vertex substrate layer has cubic + quartic dual realizations."
+}
