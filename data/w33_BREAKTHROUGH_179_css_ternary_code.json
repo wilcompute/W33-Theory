@@ -1,0 +1,1 @@
+{"breakthrough": "BT179", "title": "[[27, 15, >=4]]_3 CSS ternary code predicted", "date": "2026-06-04", "status": "PREDICTED", "checks_passed": 8, "code_params": {"n": 27, "k": 15, "d_lower": 4, "base": 3}, "encoding_rate": "15/27 = 0.5556", "stabilizers": "12 = mu*q = double-six lines", "BT177_Q2_status": "ANSWERED"}

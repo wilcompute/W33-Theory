@@ -1,0 +1,1 @@
+{"breakthrough": "BT178", "title": "q! Gray-octonion walks: 240 = lambda*(mu+1)! realized", "date": "2026-06-04", "status": "VERIFIED", "checks_passed": 15, "fano_consistent_paths": 240, "positively_oriented_paths": 16, "substrate_forms": {"240": "lambda*(mu+1)! = 2*120 = 240", "16": "lambda^mu = 2^4 = 16"}, "BT177_Q3_status": "CLOSED"}
