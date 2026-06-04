@@ -1,0 +1,341 @@
+{
+  "architectural_reading": "The BT171 outer involution can be recovered without GAP's primitive atlas once the BT172 now-fan is specified. The fixed heptad partitions the 45 quotient points into 7 fixed singletons, 7 forced swapped pairs, and 6 four-cells. Each four-cell has two possible nonedge matchings, but among the 64 possible involutions exactly one preserves the 27 GQ(4,2) lines. That unique involution is the full-W(E6) outer lift.",
+  "boundary": "The theorem reconstructs the outer involution from the now-fan and incidence geometry. It does not yet explain why this particular now-fan is selected from W(3,3) before seeing the outer lift.",
+  "breakthrough": 173,
+  "candidate_count": 64,
+  "cell_options": [
+    [
+      [
+        5,
+        6
+      ],
+      [
+        11,
+        18
+      ]
+    ],
+    [
+      [
+        5,
+        18
+      ],
+      [
+        6,
+        11
+      ]
+    ],
+    [
+      [
+        7,
+        8
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    [
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        10
+      ]
+    ],
+    [
+      [
+        12,
+        15
+      ],
+      [
+        16,
+        17
+      ]
+    ],
+    [
+      [
+        12,
+        16
+      ],
+      [
+        15,
+        17
+      ]
+    ],
+    [
+      [
+        21,
+        22
+      ],
+      [
+        23,
+        24
+      ]
+    ],
+    [
+      [
+        21,
+        23
+      ],
+      [
+        22,
+        24
+      ]
+    ],
+    [
+      [
+        25,
+        27
+      ],
+      [
+        28,
+        29
+      ]
+    ],
+    [
+      [
+        25,
+        29
+      ],
+      [
+        27,
+        28
+      ]
+    ],
+    [
+      [
+        33,
+        34
+      ],
+      [
+        37,
+        43
+      ]
+    ],
+    [
+      [
+        33,
+        43
+      ],
+      [
+        34,
+        37
+      ]
+    ]
+  ],
+  "checks": {
+    "candidate_count_is_2_to_qfact": true,
+    "each_four_cell_has_two_nonedge_matchings": true,
+    "forced_pairs_are_seven": true,
+    "four_cells_are_six": true,
+    "recovered_candidate_is_involution": true,
+    "recovered_candidate_is_known_outer": true,
+    "recovered_cycle_shape_is_7_fixed_19_pairs": true,
+    "recovered_preserves_adjacency": true,
+    "signature_classes_are_7_7_6": true,
+    "singletons_are_fixed_heptad": true,
+    "unique_line_preserving_candidate": true
+  },
+  "fixed_points": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    41,
+    44
+  ],
+  "forced_pairs": [
+    [
+      13,
+      26
+    ],
+    [
+      14,
+      19
+    ],
+    [
+      20,
+      30
+    ],
+    [
+      31,
+      35
+    ],
+    [
+      32,
+      38
+    ],
+    [
+      36,
+      39
+    ],
+    [
+      40,
+      42
+    ]
+  ],
+  "four_cell_option_counts": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "four_cells": [
+    [
+      5,
+      6,
+      11,
+      18
+    ],
+    [
+      7,
+      8,
+      9,
+      10
+    ],
+    [
+      12,
+      15,
+      16,
+      17
+    ],
+    [
+      21,
+      22,
+      23,
+      24
+    ],
+    [
+      25,
+      27,
+      28,
+      29
+    ],
+    [
+      33,
+      34,
+      37,
+      43
+    ]
+  ],
+  "known_outer_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    8,
+    7,
+    10,
+    9,
+    18,
+    15,
+    26,
+    19,
+    12,
+    17,
+    16,
+    11,
+    14,
+    30,
+    22,
+    21,
+    24,
+    23,
+    27,
+    13,
+    25,
+    29,
+    28,
+    20,
+    35,
+    38,
+    43,
+    37,
+    31,
+    39,
+    34,
+    32,
+    36,
+    42,
+    41,
+    40,
+    33,
+    44
+  ],
+  "n_verified": 11,
+  "recovered_cycle_distribution": {
+    "1": 7,
+    "2": 19
+  },
+  "recovered_outer_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    8,
+    7,
+    10,
+    9,
+    18,
+    15,
+    26,
+    19,
+    12,
+    17,
+    16,
+    11,
+    14,
+    30,
+    22,
+    21,
+    24,
+    23,
+    27,
+    13,
+    25,
+    29,
+    28,
+    20,
+    35,
+    38,
+    43,
+    37,
+    31,
+    39,
+    34,
+    32,
+    36,
+    42,
+    41,
+    40,
+    33,
+    44
+  ],
+  "signature_class_size_distribution": {
+    "1": 7,
+    "2": 7,
+    "4": 6
+  },
+  "singleton_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    41,
+    44
+  ],
+  "title": "Now-fan rigid outer reconstruction",
+  "valid_candidate_count": 1
+}
