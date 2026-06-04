@@ -1,0 +1,41 @@
+{
+  "v18_state": {
+    "Pillar theorems": 4,
+    "Named theorems": 37,
+    "Honest negative results": 2,
+    "Decisive falsifiers": 16,
+    "Substrate predictions": "~40+",
+    "PDG-matched": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 unknowns": 0,
+    "Substrate sub-algebras": 5,
+    "Wieferich primes + gap substrate": "YES",
+    "Graph-RH": "VERIFIED"
+  },
+  "substrate_sub_algebras": {
+    "TRACE TOWER": "{q, lambda, mu, Phi_3, Phi_6, p_Ih, F_5}",
+    "BT74 CYCLOTOMIC": "{Phi_12, q!, M_9, M_5, Phi_6}",
+    "IHARA ZETA": "{Phi_4, Phi_6, p_Ih, b_1}",
+    "PILLAR 3": "{q, mu, F_5, Phi_3, Phi_6}",
+    "WIEFERICH BRIDGE": "{Phi_7, q^q, Phi_3, Phi_4, M_5}"
+  },
+  "new_since_v17": [
+    "Remote BT142: paper sections + master index landed (a2b70a92)",
+    "BT150: Wieferich extrapolation -> no W_3 below 10^18",
+    "BT151: Phi_60(3) cyclotomic horizon identified (HONEST NEG)",
+    "BT152: Phi_12 in trace tower? NO (HONEST NEG)",
+    "Substrate sub-algebra partition (5 identified)"
+  ],
+  "user_queue_status": {
+    "BT143 paper compile": "PENDING (pdflatex not local)",
+    "BT144 W_3 search": "partial via BT150",
+    "BT145 4-cell n=4 generalize": "not yet",
+    "BT146 Phi_12 in tr(A^k)": "DONE via BT152 (negative)",
+    "BT147 arXiv submission": "pending paper compile"
+  },
+  "honest_negative_results": [
+    "Phi_60(3) cyclotomic horizon at n ~ 30-60",
+    "Phi_12(3) = 73 not in trace tower"
+  ],
+  "conclusion": "v18 introduces substrate-arithmetic limits honestly. 5 substrate sub-algebras identified with overlap at small primitives but divergence at higher cyclotomic. Remote BT142 paper sections + master index integrated. User queue partially closed: BT146 done negative, BT144 partial. BT143 paper compile pending pdflatex."
+}

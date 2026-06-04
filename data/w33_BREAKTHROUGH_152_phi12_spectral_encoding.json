@@ -1,0 +1,34 @@
+{
+  "phi_12_3": 73,
+  "appears_in_trace_tower": false,
+  "checked_k_range": "2 to 12",
+  "lives_in": "BT74 cyclotomic web",
+  "substrate_sub_algebras": {
+    "trace_tower": [
+      "Phi_3",
+      "Phi_6",
+      "mu",
+      "q",
+      "lambda"
+    ],
+    "BT74_web": [
+      "Phi_12",
+      "Phi_6",
+      "q!",
+      "M_9"
+    ],
+    "Ihara_zeta": [
+      "Phi_4",
+      "Phi_6",
+      "p_Ih"
+    ],
+    "Pillar_3": [
+      "q",
+      "mu",
+      "F_5",
+      "Phi_3",
+      "Phi_6"
+    ]
+  },
+  "conclusion": "HONEST NEGATIVE: Phi_12(3) = 73 does NOT directly appear in tr(A^k) for k <= 12. Lives in BT74 cyclotomic web (Hubble, m_W, M_9, matter sector) instead. Substrate primitives partition into sub-algebras with limited overlap."
+}

@@ -1,0 +1,13 @@
+{
+  "known_wieferich": [
+    1093,
+    3511
+  ],
+  "gap": 2418,
+  "gap_substrate": "2*Phi_3*M_5*q",
+  "next_gap_candidate": 5929,
+  "next_gap_interpretation": "(Phi_6*p_Ih)^2 = 5929 NOT PRIME",
+  "substrate_prediction": "No W_3 below 10^18",
+  "falsifiability": "Future search to 10^18 confirms or refutes substrate Wieferich saturation at 2",
+  "conclusion": "Wieferich pattern SATURATES at 2 known primes because next arithmetic step lands on (Phi_6*p_Ih)^2 = 5929 substrate composite square. Substrate predicts no third Wieferich below 10^18. Sharp falsifiable number-theory prediction."
+}

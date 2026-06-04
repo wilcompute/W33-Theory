@@ -1,0 +1,12 @@
+{
+  "phi_60_3": 47763361,
+  "60_substrate": [
+    "lambda*h_E_8",
+    "mu*F_5*q",
+    "q!*Phi_4"
+  ],
+  "divisible_by_small_substrate_primes": false,
+  "bridge_extends_from_Phi_30": false,
+  "first_cyclotomic_horizon": "n ~ 30-60",
+  "conclusion": "Phi_60(3) = 47,763,361 does not factor through small substrate primes. The bridge pattern from Phi_30(3) does NOT extend. First cyclotomic horizon identified at n ~ 30-60: not every Phi_n(3) factors substrate. Honest negative result on the substrate's higher-cyclotomic reach."
+}
