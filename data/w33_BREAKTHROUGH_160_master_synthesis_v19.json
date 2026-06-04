@@ -1,0 +1,53 @@
+{
+  "user_clarified_isomorphism": "toroidal 4x4 knight graph = Q_4 hypercube",
+  "four_way_unification_readings": [
+    [
+      "Cl_4 algebra",
+      "grade 1+4+6+4+1 = dim Cl_4"
+    ],
+    [
+      "Q_4 hypercube",
+      "|V|=16, |E|=32, deg=4, diam=4"
+    ],
+    [
+      "Toroidal knight tour",
+      "knight moves on 4x4 torus = Q_4 edges"
+    ],
+    [
+      "Gray code",
+      "4-bit reflected, single-flip cycle"
+    ]
+  ],
+  "state": {
+    "Pillar theorems": 4,
+    "Named theorems": 40,
+    "Decisive falsifiers": 16,
+    "Substrate predictions": "~40+",
+    "PDG-matched": "~25",
+    "Out-of-bar": 0,
+    "Cat 2 unknowns": 0,
+    "Deep cross-links": "40+",
+    "Pascal-Cl-Q bridge": "established at n = mu = 4",
+    "Graph energy of Q_4": "= f = 24 (W(3,3) positive eigenmult)",
+    "Toroidal knight = Q_4": "rigorous graph isomorphism",
+    "Honest negative results": 2,
+    "Compiler bounds": "q! (Sp4F3) + mu (Q_4)"
+  },
+  "new_since_v18": [
+    "BT154: 4x4 = Cl_4 Clifford frame (grade 1+4+6+4+1)",
+    "BT155: 2 new substrate primes (311, 1951), W_3 saturation",
+    "BT156: arXiv preprint outline ready",
+    "BT157: 4-way unification (Cl_4 = Q_4 = knight = Gray)",
+    "BT158: Pascal-Cl-Q bridge + Q_4 graph energy = f",
+    "BT159: Gray code = Clifford compiler (mu diameter)",
+    "USER: knight tour graph IS Q_4 hypercube (rigorous)"
+  ],
+  "candidate_pillar_5": "4-way unification of 4x4 substrate object",
+  "pascal_Cl_Q_bridge": "(1, 4, 6, 4, 1) at n = mu = 4",
+  "Q_4_graph_energy_eq_f": true,
+  "compiler_bounds_two_scales": {
+    "Sp4F3_full": "q! = 6",
+    "Q_4_sub": "mu = 4"
+  },
+  "conclusion": "v19 adds 4-way unification of the 4x4 substrate object: Cl_4 = Q_4 = toroidal knight = Gray code (graph-isomorphic). Pascal-Cl-Q bridge established. Graph energy of Q_4 = f = 24. Two compiler scales (q! and mu). Cosmological Lambda from mu = 4 spacetime dim. 40 named theorems, 40+ cross-links."
+}

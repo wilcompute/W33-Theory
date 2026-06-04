@@ -1,0 +1,22 @@
+{
+  "gray_code_step": "single bit flip = single Pauli-X gate",
+  "gray_code_diameter": 4,
+  "gray_code_diameter_substrate": "mu = spacetime dim",
+  "gray_code_traversal_energy": 16,
+  "compiler_scales": {
+    "full_Sp4F3": {
+      "order": 51840,
+      "gens": 8,
+      "diameter": 6
+    },
+    "sub_Q4": {
+      "order": 16,
+      "gens": 4,
+      "diameter": 4
+    }
+  },
+  "hamilton_equals_gray_for_Q_n": true,
+  "Q_4_is_qubit_shell_in_qutrit_substrate": true,
+  "bell_context_traversal": "Gray code = past x future Bell-context traversal on photonic substrate",
+  "conclusion": "Gray code on Q_4 = Clifford compiler trajectory of single-X gates. Diameter = mu = spacetime dim. Energy = 2^mu = 16. Nested compiler algebra: Q_4 sub-compiler (single-X) inside full Sp(4, F_3) Clifford. Every Hamilton cycle of Q_4 is a Gray code. Connects 4-way unification (BT157) to compiler bound (BT136) and Bell context (BT72 Addendum)."
+}

@@ -1,0 +1,45 @@
+{
+  "Q_4_spectrum": {
+    "eigenvalues": [
+      4,
+      2,
+      0,
+      -2,
+      -4
+    ],
+    "multiplicities": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ]
+  },
+  "pascal_row_4": [
+    1,
+    4,
+    6,
+    4,
+    1
+  ],
+  "Cl_4_grades": [
+    1,
+    4,
+    6,
+    4,
+    1
+  ],
+  "three_structures_identical": true,
+  "graph_energy": 24,
+  "graph_energy_equals_f": true,
+  "graph_energy_substrate": "f = 24 = positive eigenmult of W(3,3)",
+  "spectral_invariants": {
+    "sum_m": 16,
+    "sum_m_squared": 70,
+    "sum_m_squared_substrate": "Phi_6 * Phi_4 = 70",
+    "trace_A_squared": 64,
+    "trace_substrate": "mu^q = 64",
+    "spectral_radius": 4
+  },
+  "conclusion": "Pascal row 4 = Cl_4 grades = Q_4 multiplicities at n = mu = 4. Graph energy of Q_4 = sum |lambda_i|*m_i = 24 = f (W(3,3) positive eigenmult). Q_4 spectral invariants all substrate. Adds new 'mu=4 is special' identity to substrate chain."
+}

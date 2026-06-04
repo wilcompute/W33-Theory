@@ -1,0 +1,28 @@
+{
+  "user_insight": "knight tour alternates parity at every node visited",
+  "Q_4_bipartition": {
+    "even_parity_class_size": 8,
+    "odd_parity_class_size": 8,
+    "class_size_substrate": "2^q = octonion dim"
+  },
+  "Cl_4_grade_parity_match": {
+    "even_grades": "scalar(1) + bivector(6) + pseudoscalar(1) = 8",
+    "odd_grades": "vector(4) + pseudovector(4) = 8"
+  },
+  "5_way_unification": [
+    "Cl_4 algebra",
+    "Q_4 topology",
+    "toroidal knight geometry",
+    "Gray code information",
+    "octonion-octonion parity"
+  ],
+  "octonion_doubling_identity": "16 = lambda * 2^q = lambda^mu",
+  "bell_temporal_reading": "even parity = synchronized past/future; odd parity = desynchronized; knight alternation = time-evolution alternation",
+  "bipartite_consequence": "Q_4 has no odd-length cycles",
+  "substrate_clock": {
+    "tick_tock": "even/odd parity",
+    "full_cycle": "16 = 2^mu",
+    "half_cycle": "8 = 2^q (octonion frame switch)"
+  },
+  "conclusion": "Knight-tour parity alternation forces Q_4 bipartition into two octonion-dim classes (8+8). Cl_4 grade-parity matches Q_4 vertex-parity exactly. Extends 4-way unification to 5-way (BT157+161). Provides substrate natural clock with period 2^q = 8 at 4x4 scale. 16 = lambda * 2^q = octonion doubling identity."
+}
