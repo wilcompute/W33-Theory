@@ -1,0 +1,93 @@
+{
+  "architectural_reading": "The forbidden-pocket F4 normalizer is an index-45 subgroup of the full compiler group. Its action on the 45 cosets has rank 3 with suborbits 1, 12, and 32; the valency-12 orbital graph is srg(45,12,3,3), the GQ(4,2) parameter profile. The macro tail lands on this quotient as Phi_12 in the identity/F4 cell, four mixed admissibles in the 12-cell, and Phi_12+1 mixed admissibles in the 32-cell. This proves the quotient structure while leaving canonical tritangent-plane labeling as a separate target.",
+  "boundary": "Finite rank-3 coset quotient and SRG parameters are proved. No canonical identification with a named tritangent labeling is asserted here.",
+  "breakthrough": 167,
+  "checks": {
+    "double_coset_suborbits_are_1_12_32": true,
+    "group_order_is_51840": true,
+    "identity_orbit_tail_is_phi12": true,
+    "index_is_45": true,
+    "normalizer_order_is_f4": true,
+    "orbital_12_edge_count_is_270": true,
+    "orbital_12_is_regular_degree_12": true,
+    "orbital_12_is_srg_45_12_3_3": true,
+    "orbital_32_is_complement_srg": true,
+    "orbital_32_is_complementary_regular": true,
+    "outside_tail_still_dim_e6": true,
+    "suborbit_sum_is_45": true,
+    "tail_distribution_matches_rank3_split": true
+  },
+  "double_coset_suborbit_sizes": [
+    1,
+    12,
+    32
+  ],
+  "group_distance_by_orbit_size": {
+    "1": {
+      "0": 1,
+      "1": 10,
+      "2": 46,
+      "3": 117,
+      "4": 192,
+      "5": 250,
+      "6": 463,
+      "7": 73
+    },
+    "12": {
+      "2": 4,
+      "3": 126,
+      "4": 1698,
+      "5": 8404,
+      "6": 3588,
+      "7": 4
+    },
+    "32": {
+      "1": 6,
+      "2": 116,
+      "3": 1092,
+      "4": 6281,
+      "5": 19907,
+      "6": 9388,
+      "7": 74
+    }
+  },
+  "group_order": 51840,
+  "index": 45,
+  "n_verified": 13,
+  "normalizer_order": 1152,
+  "orbital_12_graph": {
+    "degree_distribution": {
+      "12": 45
+    },
+    "edge_count": 270,
+    "lambda_distribution": {
+      "3": 270
+    },
+    "mu_distribution": {
+      "3": 720
+    },
+    "symmetric": true,
+    "v": 45
+  },
+  "orbital_32_graph": {
+    "degree_distribution": {
+      "32": 45
+    },
+    "edge_count": 720,
+    "lambda_distribution": {
+      "22": 720
+    },
+    "mu_distribution": {
+      "24": 270
+    },
+    "symmetric": true,
+    "v": 45
+  },
+  "tail_by_orbit_size_polarization_diameter": {
+    "(1, 'anti', 6)": 65,
+    "(1, 'anti', 7)": 8,
+    "(12, 'mixed', 6)": 4,
+    "(32, 'mixed', 6)": 74
+  },
+  "title": "F4 to E6 rank-3 coset quotient"
+}
