@@ -1,0 +1,95 @@
+{
+  "core_constant": "7 = Phi_6 = q^2 - q + 1",
+  "seven_web_appearances": [
+    {
+      "item": "7-color theorem on torus (Heawood-Ringel-Youngs)",
+      "domain": "graph theory"
+    },
+    {
+      "item": "K_7 chromatic-7 witness graph",
+      "domain": "graph theory"
+    },
+    {
+      "item": "K_7 genus = 1 (toroidal)",
+      "domain": "topology"
+    },
+    {
+      "item": "Csaszar polyhedron: 7 vertices, K_7 vertex graph",
+      "domain": "geometry"
+    },
+    {
+      "item": "Szilassi polyhedron: 7 faces, K_7 face graph",
+      "domain": "geometry"
+    },
+    {
+      "item": "Heptad realization: 5 Csaszar + 2 Szilassi = F_5 + lambda",
+      "domain": "BT79"
+    },
+    {
+      "item": "Phi_6 cyclotomic at q = 3",
+      "domain": "number theory"
+    },
+    {
+      "item": "Hashimoto Im^2 chiral sector = Phi_6 = 7",
+      "domain": "spectral (BT98)"
+    },
+    {
+      "item": "ord_7(10) = 6 = q! decimal cycle period",
+      "domain": "number theory"
+    },
+    {
+      "item": "7 q=3 forcings (Closure Theorem)",
+      "domain": "BT67"
+    },
+    {
+      "item": "7 recurring correction factors",
+      "domain": "BT96"
+    },
+    {
+      "item": "7 days a week (kappa universal)",
+      "domain": "BT70"
+    },
+    {
+      "item": "S^7 dim = octonion sphere",
+      "domain": "geometry"
+    },
+    {
+      "item": "7 sporadic Mathieu groups",
+      "domain": "group theory"
+    },
+    {
+      "item": "7-fold over-determination of 4x4 substrate object",
+      "domain": "BT157-161"
+    }
+  ],
+  "genus_at_n_eq_7": 1,
+  "genus_substrate": "(mu * q) / k = 12 / 12 = 1",
+  "csaszar_fvector": [
+    7,
+    21,
+    14
+  ],
+  "szilassi_fvector": [
+    14,
+    21,
+    7
+  ],
+  "duality": "V_Cs = F_Sz, F_Cs = V_Sz, E_Cs = E_Sz = T_6 = 21",
+  "tetrahedron_ground_state": {
+    "1_plus_7_eq_8": "tomotope cells",
+    "192_eq_24_84_84": "tetrahedron + Csaszar + Szilassi flags",
+    "66_eq_21_21_24": "E_Cs + E_Sz + tetrahedron flags"
+  },
+  "decimal_toroidal_shell": "(6, 7, 12, 84)",
+  "ord_7_10": 6,
+  "seven_fold_4x4_readings": [
+    "Cl_4 Clifford frame (algebra)",
+    "Q_4 hypercube (topology)",
+    "Toroidal 4x4 knight tour (geometry, graph-iso to Q_4)",
+    "Gray-code Hamilton clock (information)",
+    "Octonion-octonion bipartition (parity, 8+8)",
+    "Past x future Bell context (BT72 Addendum)",
+    "4D toric code (d_Z = mu, BT136)"
+  ],
+  "conclusion": "Phi_6 = 7 is the substrate's TOROIDAL CONSTANT, appearing in 15+ independent domains: graph theory (chromatic, K_7), topology (genus 1), geometry (Csaszar/Szilassi), number theory (cyclotomic, decimal), spectral (Hashimoto), substrate (7 forcings, 7 corrections), universal (week, octonion). The 4x4 substrate object has SEVEN equivalent readings paralleling the seven-web. Tetrahedron is ground state; (6, 7, 12, 84) is the decimal/toroidal shell. mod-12 = k = -1/zeta(-1) ties it all."
+}

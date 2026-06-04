@@ -1,0 +1,17 @@
+{
+  "HLIX_TPS": 70000000,
+  "HLIX_cadence_Hz": 120960000000,
+  "prefactor_1728": "k^3 = j(i)",
+  "sub_frequencies_GHz": {
+    "bell_qutrit_clock": 7.56,
+    "octonion_frame": 15.12,
+    "heptad": 17.28,
+    "spacetime_tick": 30.24,
+    "qutrit_base": 40.32
+  },
+  "bell_period_ticks": 144,
+  "bell_period_substrate": "k^2 = (q*mu)^2 = 144",
+  "bell_period_us": 2.0571428571428574,
+  "spatial_temporal_commensurability": "spatial Lambda exponent mu^4 and temporal Bell clock k^2 both involve mu and q",
+  "conclusion": "Bell temporal clock at HLIX scale: ~7.56 GHz period, ~15 GHz octonion frame switch, 144-tick Bell traversal (~2 us). Substrate frequency comb derived from HLIX cadence prefactor 1728 = k^3 = j(i). Spatial/temporal scales commensurate via mu and q."
+}

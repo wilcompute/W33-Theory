@@ -1,0 +1,52 @@
+{
+  "heawood_structure": {
+    "V": 14,
+    "V_substrate": "lambda * Phi_6",
+    "E": 21,
+    "E_substrate": "T_6 = C(Phi_6, 2)",
+    "degree": 3,
+    "girth": 6,
+    "bipartite": [
+      7,
+      7
+    ]
+  },
+  "heawood_eq_fano_levi": true,
+  "heawood_genus": 1,
+  "heawood_spectrum": "{3, +/-sqrt(2), -3}",
+  "heawood_multiplicities": [
+    1,
+    6,
+    6,
+    1
+  ],
+  "heawood_plus_Q4_sum": 30,
+  "heawood_plus_Q4_substrate": "30 = h(E_8) = Triple Convergence",
+  "toroidal_substrate_web": [
+    {
+      "name": "Heawood graph (3,6)-cage",
+      "desc": "14 vertices, toroidal"
+    },
+    {
+      "name": "Fano plane PG(2, F_2)",
+      "desc": "7 points, 7 lines, Heawood = Levi graph"
+    },
+    {
+      "name": "Csaszar polyhedron",
+      "desc": "(7, 21, 14), K_7 vertex graph, toroidal"
+    },
+    {
+      "name": "Szilassi polyhedron",
+      "desc": "(14, 21, 7), K_7 face graph, toroidal"
+    },
+    {
+      "name": "Q_4 hypercube / 4x4 knight tour",
+      "desc": "16 vertices, toroidal, BT157"
+    },
+    {
+      "name": "8 Sylow-7 subgroups of GL(3,2)",
+      "desc": "8 toroidal face systems of Heawood (BT80)"
+    }
+  ],
+  "conclusion": "Heawood graph (3,6)-cage = substrate's toroidal spine. |V|=14=lambda*Phi_6, |E|=21=T_6, deg=q, girth=q!, toroidal. Heawood = Levi graph of Fano. STAR: |V(Heawood)| + |V(Q_4)| = 30 = h(E_8) = Triple Convergence. Toroidal Phi_6 + spacetime mu^2 shells sum to the substrate's Coxeter number."
+}

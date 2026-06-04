@@ -1,0 +1,10 @@
+{
+  "directed_from_fixed_start": 2688,
+  "directed_substrate": "2^Phi_6 * q * Phi_6 = 128 * 21",
+  "undirected_cycles": 1344,
+  "undirected_substrate": "mu^q * q * Phi_6 = 64 * 21",
+  "rotational_equivalence_classes": 84,
+  "rotational_substrate": "k * Phi_6 = 84 = E_Csaszar = E_Szilassi",
+  "directed_to_rotational_quotient": "2^F_5 = 32",
+  "conclusion": "Q_4 has 2688 directed Hamilton cycles from fixed start, 1344 undirected, 84 up to rotation. 84 = k*Phi_6 = E_Csaszar = E_Szilassi = Fano flag-codec. The knight-tour count lands EXACTLY on the toroidal-polyhedron edge count. Substrate provides 84 closed compiler programs at Q_4 scale."
+}

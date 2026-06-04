@@ -1,0 +1,48 @@
+{
+  "three_level_tower": {
+    "n_eq_q": {
+      "pascal": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "sum": 8,
+      "Q_edges": 12,
+      "name": "octonion"
+    },
+    "n_eq_mu": {
+      "pascal": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "sum": 16,
+      "Q_edges": 32,
+      "name": "spinor frame"
+    },
+    "n_eq_Phi_6": {
+      "pascal": [
+        1,
+        7,
+        21,
+        35,
+        35,
+        21,
+        7,
+        1
+      ],
+      "sum": 128,
+      "Q_edges": 448,
+      "name": "heptad / 2-Sylow"
+    }
+  },
+  "Q_3_edges_eq_k": true,
+  "Cl_7_dim_eq_2_sylow_of_Sp4F3": true,
+  "Q_7_graph_energy": 280,
+  "Q_7_energy_substrate": "lambda^q * F_5 * Phi_6 = 280",
+  "edge_formula": "|E(Q_n)| = n * 2^(n-1)",
+  "conclusion": "Pascal-Cl-Q triple bridge has 3 substrate-natural anchors at n = q (octonion 8), n = mu (spinor 16), n = Phi_6 (heptad 128). Q_3 edges = 12 = substrate valency k. Cl_7 dim = 128 = 2-Sylow of |Sp(4, F_3)|. Q_7 graph energy = lambda^q * F_5 * Phi_6 = 280. The substrate's 2-Sylow shell IS the Cl_7 algebra."
+}

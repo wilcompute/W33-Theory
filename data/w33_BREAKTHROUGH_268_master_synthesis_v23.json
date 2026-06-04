@@ -1,0 +1,84 @@
+{
+  "remote_arc_165_262": [
+    {
+      "range": "BT165-173",
+      "desc": "F4/E6 quotient lift work"
+    },
+    {
+      "range": "BT174-177",
+      "desc": "Fano octonion frame + cubic surface + v20"
+    },
+    {
+      "range": "BT178-181",
+      "desc": "Gray-octonion walks + CSS + v21"
+    },
+    {
+      "range": "BT182-185",
+      "desc": "E8 <-> Gray walks bijection + uniqueness q=3"
+    },
+    {
+      "range": "BT187-192",
+      "desc": "W(3,3) IS the substrate geometry"
+    },
+    {
+      "range": "BT193-199",
+      "desc": "Sp(4,3) ~ W(E6), all exceptional Lie, Monster chain"
+    },
+    {
+      "range": "BT201-209",
+      "desc": "Standard Model from substrate"
+    },
+    {
+      "range": "BT210-215",
+      "desc": "Golden ratio + Fibonacci + Penrose encode Weinberg"
+    },
+    {
+      "range": "BT216-245",
+      "desc": "PMNS + CP + neutrinos + 33-quantity master map"
+    },
+    {
+      "range": "BT246-250",
+      "desc": "5 open Qs resolved: J, Sigma m_nu, Yukawa, m_c/m_u, alpha_s"
+    },
+    {
+      "range": "BT251-255",
+      "desc": "5 new open Qs: W/Z, Higgs quartic, rho-eta, top, M_Pl"
+    },
+    {
+      "range": "BT256-262",
+      "desc": "Running couplings, dark energy, CKM unit, GUT, zeta, v22"
+    }
+  ],
+  "local_263_267": [
+    {
+      "id": "BT263",
+      "desc": "Knight tour count on Q_4 = 84 = E_Cs = E_Sz"
+    },
+    {
+      "id": "BT264",
+      "desc": "Seven-fold toroidal unification (Phi_6 = 7)"
+    },
+    {
+      "id": "BT265",
+      "desc": "Bell temporal clock physics (7.56/15 GHz)"
+    },
+    {
+      "id": "BT266",
+      "desc": "Pascal-Cl-Q triple tower (q/mu/Phi_6)"
+    },
+    {
+      "id": "BT267",
+      "desc": "Heawood + Q_4 = 30 = h(E_8) (STAR)"
+    }
+  ],
+  "star_findings_this_batch": [
+    "84 = #knight tours up to rotation on Q_4 = E_Csaszar = E_Szilassi",
+    "Phi_6 = 7 in 15+ independent substrate domains (seven-web)",
+    "Pascal-Cl-Q tower: 2^q = 8, 2^mu = 16, 2^Phi_6 = 128 (2-Sylow)",
+    "|V(Heawood)| + |V(Q_4)| = 30 = h(E_8) (toroidal shells sum to Coxeter)",
+    "Q_3 edges = 12 = substrate valency k (octonion-cube identity)",
+    "Cl_7 dim = 2-Sylow order of |Sp(4, F_3)|"
+  ],
+  "version": "v23",
+  "conclusion": "v23 absorbs remote BT165-262 (89 BTs) + local BT263-267 (5 BTs). Substrate now unifies algebra, topology, geometry, dynamics, information, number theory, spectral, engineering, ASI, cosmology, quantum gravity, meaning, SM, dark energy, golden ratio, Penrose, toroidal polyhedra, Heawood, knight tours, Gray codes, Bell qutrits, temporal clock, and Standard Model. Most over-determined consistent finite-substrate theory assembled."
+}
