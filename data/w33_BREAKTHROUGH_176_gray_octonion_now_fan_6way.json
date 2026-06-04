@@ -1,12 +1,76 @@
 {
   "breakthrough": "BT176",
-  "title": "6-way unification: Cl4=Q4=knight=Gray=octonion bipartition=now-fan",
+  "checks_passed": 14,
+  "conclusion": "6-way unification complete. The 7 imaginary octonion units embed into the even-parity class of Q4. The full Q4 Gray clock alternates parity by one-bit steps, while the even octonion frame is its every-other-tick projection with two-bit internal moves. The Fano plane's 7 lines split as 3 timelike (q=3 internal) + 4 spacelike (mu=4 spacetime). This is the first substrate realization of the 3+4=7 internal/spacetime split from a single combinatorial object.",
   "date": "2026-06-04",
-  "status": "VERIFIED",
-  "checks_passed": 10,
   "even_class_size": 8,
   "even_eq_lambda_q": "8 = lambda^q = 2^3",
-  "timelike_plus_spacelike": "3 + 4 = 7 = q + mu Fano lines",
+  "even_projection": [
+    0,
+    3,
+    6,
+    5,
+    12,
+    15,
+    10,
+    9
+  ],
+  "even_projection_steps": [
+    3,
+    5,
+    3,
+    9,
+    3,
+    5,
+    3,
+    9
+  ],
+  "gray4_clock": [
+    0,
+    1,
+    3,
+    2,
+    6,
+    7,
+    5,
+    4,
+    12,
+    13,
+    15,
+    14,
+    10,
+    11,
+    9,
+    8
+  ],
+  "gray4_steps": [
+    1,
+    2,
+    1,
+    4,
+    1,
+    2,
+    1,
+    8,
+    1,
+    2,
+    1,
+    4,
+    1,
+    2,
+    1,
+    8
+  ],
+  "odd_projection": [
+    1,
+    2,
+    7,
+    4,
+    13,
+    14,
+    11,
+    8
+  ],
   "six_way_unification": {
     "1_Cl4_algebra": "16-cell Clifford frame (BT154)",
     "2_Q4_topology": "4-cube hypercube (BT157)",
@@ -17,8 +81,10 @@
   },
   "spacetime_split": {
     "7D_octonion_space": "q=3 internal + mu=4 spacetime = 7",
-    "timelike": "3 now-fan Fano lines = q internal degrees",
-    "spacelike": "4 non-fan Fano lines = mu spacetime dims"
+    "spacelike": "4 non-fan Fano lines = 4 spacetime dims (mu)",
+    "timelike": "3 now-fan Fano lines = 3 internal degrees (q)"
   },
-  "conclusion": "6-way unification complete. 7 Fano lines split as 3 timelike (q) + 4 spacelike (mu). First substrate realization of internal/spacetime 3+4 split from a single combinatorial object."
+  "status": "VERIFIED",
+  "timelike_q_plus_spacelike_mu": "3 + 4 = 7 = Phi_6 Fano lines",
+  "title": "6-way unification: Cl4=Q4=knight=Gray=octonion bipartition=now-fan"
 }

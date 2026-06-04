@@ -1,10 +1,13 @@
 """
-BT176: Gray-code walk on octonion bipartition through the now-fan
+BT176: Gray-code clock on octonion bipartition through the now-fan
        6-WAY UNIFICATION: Cl4 = Q4 = knight = Gray = octonion = now-fan
 
 Crosses BT157/159/161 (Gray=Q4=Cl4=octonion) with BT174/175 (now-fan=Fano).
 The 7 imaginary octonion units sit inside the 8-vertex even-parity class
-of Q4.  The 7 Fano lines split as 3 timelike (q, now-fan) + 4 spacelike (mu).
+of Q4.  The full Q4 Gray clock alternates even/odd parity every single-bit
+tick; the octonion frame is the every-other-tick even projection, whose
+internal moves are two-bit Q4 moves.  The 7 Fano lines split as 3 timelike
+(q, now-fan) + 4 spacelike (mu).
 This is the first substrate realization of the internal/spacetime 3+4 split
 from a single combinatorial object (the Fano plane).
 
@@ -16,7 +19,7 @@ Substrate identities:
 """
 
 import json, math
-from itertools import permutations
+from pathlib import Path
 
 q, mu, lam = 3, 4, 2
 q_fac = math.factorial(q)  # 6
@@ -26,6 +29,9 @@ def hamming(n):
 
 def is_power_of_2(n):
     return n > 0 and (n & (n-1)) == 0
+
+def is_two_bit(n):
+    return hamming(n) == 2
 
 # Q4 parity classes
 Q4_VERTS  = list(range(16))
@@ -46,15 +52,26 @@ assert len(now_fan_lines)    == q,  "3 timelike lines = q"
 assert len(space_like_lines) == mu, "4 spacelike lines = mu"
 assert len(FANO_LINES) == q + mu == 7, "7 = q + mu"
 
-# Gray-code walk through even-parity Q4 vertices
-gray3 = [0,1,3,2,6,7,5,4]          # standard 3-bit Gray code
-gray_walk = [2*g for g in gray3]    # scale to even-parity vertices of Q4
-assert all(hamming(v) % 2 == 0 for v in gray_walk), "all even parity"
-assert len(set(gray_walk)) == 8, "visits all 8 even-parity vertices"
+# Full Gray-code clock through all Q4 vertices.  Single-bit steps must
+# alternate parity, so the octonion frame is the every-other-tick projection.
+gray4_clock = [0, 1, 3, 2, 6, 7, 5, 4, 12, 13, 15, 14, 10, 11, 9, 8]
+assert len(set(gray4_clock)) == 16, "visits all 16 Q4 vertices"
+gray4_steps = [gray4_clock[i] ^ gray4_clock[(i+1) % 16] for i in range(16)]
+assert all(is_power_of_2(step) for step in gray4_steps), "all Q4 Gray steps are single-bit"
+assert all(
+    hamming(gray4_clock[i]) % 2 != hamming(gray4_clock[(i+1) % 16]) % 2
+    for i in range(16)
+), "single-bit Q4 Gray clock alternates parity"
 
-# Verify single-bit steps in Gray walk
-steps = [gray_walk[i] ^ gray_walk[(i+1) % 8] for i in range(8)]
-assert all(is_power_of_2(s) for s in steps), "all Gray steps are single-bit"
+even_projection = gray4_clock[::2]
+odd_projection = gray4_clock[1::2]
+assert sorted(even_projection) == even_class, "every-other tick visits even octonion frame"
+assert sorted(odd_projection) == odd_class, "interleaved ticks visit odd octonion frame"
+
+even_projection_steps = [
+    even_projection[i] ^ even_projection[(i+1) % 8] for i in range(8)
+]
+assert all(is_two_bit(step) for step in even_projection_steps), "same-parity projection uses two-bit moves"
 
 # Substrate checks
 assert 7 == q + mu,  "7 = q + mu (total Fano lines)"
@@ -75,10 +92,15 @@ result = {
     "title": "6-way unification: Cl4=Q4=knight=Gray=octonion bipartition=now-fan",
     "date": "2026-06-04",
     "status": "VERIFIED",
-    "checks_passed": 10,
+    "checks_passed": 14,
     "even_class_size": len(even_class),
     "even_eq_lambda_q": f"8 = lambda^q = {lam}^{q}",
-    "timelike_q_plus_spacelike_mu": f"{q} + {mu} = {q+mu} = 7 Fano lines",
+    "gray4_clock": gray4_clock,
+    "gray4_steps": gray4_steps,
+    "even_projection": even_projection,
+    "odd_projection": odd_projection,
+    "even_projection_steps": even_projection_steps,
+    "timelike_q_plus_spacelike_mu": f"{q} + {mu} = {q+mu} = Phi_6 Fano lines",
     "six_way_unification": six_way,
     "spacetime_split": {
         "7D_octonion_space": f"q={q} internal + mu={mu} spacetime = 7",
@@ -87,8 +109,10 @@ result = {
     },
     "conclusion": (
         "6-way unification complete. The 7 imaginary octonion units embed into "
-        "the even-parity class of Q4. The Fano plane's 7 lines split as "
-        "3 timelike (q=3 internal) + 4 spacelike (mu=4 spacetime). "
+        "the even-parity class of Q4. The full Q4 Gray clock alternates parity "
+        "by one-bit steps, while the even octonion frame is its every-other-tick "
+        "projection with two-bit internal moves. The Fano plane's 7 lines split "
+        "as 3 timelike (q=3 internal) + 4 spacelike (mu=4 spacetime). "
         "This is the first substrate realization of the 3+4=7 internal/spacetime "
         "split from a single combinatorial object."
     ),
@@ -96,4 +120,8 @@ result = {
 
 if __name__ == "__main__":
     print(json.dumps(result, indent=2))
+    out = Path("data") / "w33_BREAKTHROUGH_176_gray_octonion_now_fan_6way.json"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"wrote {out}")
     print("BT176: all checks passed")
