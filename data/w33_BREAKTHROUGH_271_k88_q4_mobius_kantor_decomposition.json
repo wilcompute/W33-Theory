@@ -1,0 +1,344 @@
+{
+  "architectural_reading": "On the parity bipartition of F_2^4, the full octonion cross-space K8,8 splits into three disjoint layers: Q4 contributes degree mu=4, Mobius-Kantor contributes degree q=3, and the residual perfect matching contributes the identity degree. Thus 8 = mu + q + 1 and the heptad layer Phi_6 = mu + q is the Q4+MK edge carrier of size 56 = 2^q * Phi_6. This makes BT269/270's Hopf identity edge-level and explicit.",
+  "boundary": "This packet proves one explicit F_2^4 labeling of the decomposition. It does not yet classify all such Mobius-Kantor embeddings in the weight-3 complement.",
+  "breakthrough": 271,
+  "checks": {
+    "cross_complement_has_32_weight3_edges": true,
+    "degree_split_is_mu_q_1": true,
+    "edge_split_is_32_24_8": true,
+    "heptad_layer_edges_are_56": true,
+    "k88_has_64_edges": true,
+    "mobius_kantor_girth_is_q_factorial": true,
+    "mobius_kantor_has_24_edges": true,
+    "mobius_kantor_is_cubic": true,
+    "mobius_kantor_lies_in_weight3_complement": true,
+    "parts_are_disjoint": true,
+    "parts_union_to_k88": true,
+    "q4_has_32_weight1_edges": true,
+    "residual_has_8_edges": true,
+    "residual_is_perfect_matching": true,
+    "residual_xor_directions_are_balanced": true
+  },
+  "degree_split": {
+    "M8_matching": 1,
+    "Mobius_Kantor": 3,
+    "Q4": 4,
+    "total": 8
+  },
+  "edge_counts": {
+    "K8_8": 64,
+    "M8_matching": 8,
+    "Mobius_Kantor": 24,
+    "Q4": 32,
+    "Q4_plus_MK": 56
+  },
+  "edge_parts": {
+    "M8_matching": [
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        10,
+        13
+      ]
+    ],
+    "Mobius_Kantor": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "Q4": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        15
+      ]
+    ]
+  },
+  "girths": {
+    "Mobius_Kantor": 6,
+    "Q4": 4
+  },
+  "mobius_kantor_embedding": {
+    "0": 0,
+    "1": 7,
+    "2": 9,
+    "3": 2,
+    "4": 15,
+    "5": 8,
+    "6": 6,
+    "7": 13,
+    "8": 11,
+    "9": 10,
+    "10": 14,
+    "11": 12,
+    "12": 4,
+    "13": 5,
+    "14": 1,
+    "15": 3
+  },
+  "n_verified": 15,
+  "residual_xor_direction_counts": {
+    "7": 2,
+    "11": 2,
+    "13": 2,
+    "14": 2
+  },
+  "title": "K8,8 decomposes as Q4 plus Mobius-Kantor plus matching",
+  "vertex_model": "F_2^4 labels 0..15, even/odd parity bipartition",
+  "xor_weight_distributions": {
+    "M8_matching": {
+      "3": 8
+    },
+    "Mobius_Kantor": {
+      "3": 24
+    },
+    "Q4": {
+      "1": 32
+    },
+    "cross_complement": {
+      "3": 32
+    }
+  }
+}
