@@ -1,0 +1,243 @@
+{
+  "architectural_reading": "The F4-normalizer quotient of the full compiler group realizes GQ(4,2) internally: 45 coset-points, 27 five-point lines, three lines through every point, and the full point-not-on-line GQ axiom. This is dual in incidence profile to the E6 matter-chart stack with 27 weights and 45 tritangent triples, but no canonical cross-labeling is asserted in this packet.",
+  "boundary": "Finite GQ(4,2) incidence is proved for the quotient graph. Canonical identification with the older E6 tritangent labels remains open.",
+  "breakthrough": 168,
+  "checks": {
+    "degree_distribution_is_12": true,
+    "dual_e6_tritangent_incidence_profile": true,
+    "each_edge_on_unique_line": true,
+    "edge_count_is_270": true,
+    "gq_axiom_holds": true,
+    "gq_parameters_are_4_2": true,
+    "incidence_count_is_135": true,
+    "line_count_is_27": true,
+    "line_intersections_are_0_or_1": true,
+    "line_size_is_5": true,
+    "no_nonedge_on_line": true,
+    "point_count_is_45": true,
+    "point_line_incidence_is_3_each": true
+  },
+  "degree_distribution": {
+    "12": 45
+  },
+  "edge_count": 270,
+  "edge_line_incidence_distribution": {
+    "1": 270
+  },
+  "gq_axiom_holds": true,
+  "gq_parameters": {
+    "lines": 27,
+    "points": 45,
+    "s": 4,
+    "t": 2
+  },
+  "incidence_count": 135,
+  "line_count": 27,
+  "line_intersection_distribution": {
+    "0": 216,
+    "1": 135
+  },
+  "line_size_distribution": {
+    "5": 27
+  },
+  "lines": [
+    [
+      0,
+      14,
+      19,
+      41,
+      44
+    ],
+    [
+      0,
+      33,
+      37,
+      39,
+      42
+    ],
+    [
+      0,
+      34,
+      36,
+      40,
+      43
+    ],
+    [
+      1,
+      3,
+      20,
+      30,
+      44
+    ],
+    [
+      1,
+      21,
+      24,
+      38,
+      39
+    ],
+    [
+      1,
+      22,
+      23,
+      32,
+      36
+    ],
+    [
+      2,
+      4,
+      13,
+      26,
+      44
+    ],
+    [
+      2,
+      25,
+      28,
+      35,
+      36
+    ],
+    [
+      2,
+      27,
+      29,
+      31,
+      39
+    ],
+    [
+      3,
+      7,
+      10,
+      35,
+      42
+    ],
+    [
+      3,
+      8,
+      9,
+      31,
+      40
+    ],
+    [
+      4,
+      12,
+      17,
+      32,
+      42
+    ],
+    [
+      4,
+      15,
+      16,
+      38,
+      40
+    ],
+    [
+      5,
+      7,
+      24,
+      26,
+      43
+    ],
+    [
+      5,
+      11,
+      31,
+      32,
+      41
+    ],
+    [
+      5,
+      15,
+      28,
+      30,
+      33
+    ],
+    [
+      6,
+      8,
+      13,
+      23,
+      33
+    ],
+    [
+      6,
+      12,
+      20,
+      29,
+      43
+    ],
+    [
+      6,
+      18,
+      35,
+      38,
+      41
+    ],
+    [
+      7,
+      14,
+      16,
+      23,
+      27
+    ],
+    [
+      8,
+      17,
+      19,
+      24,
+      25
+    ],
+    [
+      9,
+      12,
+      14,
+      21,
+      28
+    ],
+    [
+      9,
+      18,
+      22,
+      26,
+      37
+    ],
+    [
+      10,
+      11,
+      13,
+      21,
+      34
+    ],
+    [
+      10,
+      15,
+      19,
+      22,
+      29
+    ],
+    [
+      11,
+      16,
+      20,
+      25,
+      37
+    ],
+    [
+      17,
+      18,
+      27,
+      30,
+      34
+    ]
+  ],
+  "n_verified": 13,
+  "nonedge_line_incidence_distribution": {
+    "0": 720
+  },
+  "point_count": 45,
+  "point_line_incidence_distribution": {
+    "3": 45
+  },
+  "title": "F4/E6 quotient GQ(4,2) line geometry"
+}
