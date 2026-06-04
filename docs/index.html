@@ -13732,6 +13732,17 @@
           microcode has finite design freedom: pick a macro from a <code>143</code>-element admissible sieve while
           avoiding the <code>8</code>-element binary obstruction pocket.</p>
 
+        <h4>Forbidden pocket F<sub>4</sub> normalizer</h4>
+        <p>BT159 explains why the forbidden pocket exists. The eight forbidden macros are all anti-diagonal
+          polarization-swappers, but together they generate a <code>1152</code>-element group:
+          <code>1152=|W(F<sub>4</sub>)|</code>, the full 24-cell Weyl order. The generated group splits exactly as
+          <code>576+576</code>: block-diagonal maps preserving the <code>2+2</code> Lagrangian split, plus
+          anti-diagonal maps swapping it.</p>
+        <p>So the “bad” compiler macros are not failed design noise. They are the finite
+          <code>F<sub>4</sub></code>/24-cell/tomotope control normalizer. They fail as single global
+          q!-restoring macros because they stay inside that polarization normalizer; as a generated pocket, they
+          recover the local 24-cell symmetry the rest of the theory kept hinting at.</p>
+
         <h4>Reye-K<sub>12</sub> orientable horizon completion</h4>
         <p>MCXCII closes the Q<sub>4</sub>/tomotope/Reye thread into the new horizon-code layer. Use the
           <code>12</code> Reye points from the antipodal Q<sub>4</sub> quotient as the vertices of

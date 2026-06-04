@@ -1109,6 +1109,14 @@ efficient admissible macros are both order-$9$ trace-$1$ elements and leave only
 symmetries at depth $6$. Thus WRF microcode has genuine finite design freedom: the macro
 pair is chosen from a $143$-element admissible sieve, not from a single accidental element.
 
+BT159 explains the forbidden pocket rather than discarding it \cite{wrf-bt159}. The eight
+forbidden macros generate a $1{,}152$-element group, exactly the order of $W(F_4)$, split as
+$576$ block-diagonal maps preserving the $2+2$ Lagrangian polarization and $576$
+anti-diagonal maps swapping it. The obstruction pocket is therefore the finite
+F4/24-cell/tomotope control normalizer. It fails as a single global diameter-collapse
+macro because it remains inside the polarization normalizer, but it is precisely the
+local control group for the 24-cell side of the architecture.
+
 \subsection{Two-qutrit Pauli phase space (the register file)}
 
 The substrate is also the two-qutrit Pauli commutation geometry: every non-zero Pauli
@@ -1783,6 +1791,11 @@ with result JSON, generated June 4, 2026.
 \bibitem{wrf-bt158}
 Local WRF harness, \emph{BT158 macro-tail sieve},
 \texttt{analysis/w33\_BREAKTHROUGH\_158\_macro\_tail\_sieve.py}
+with result JSON, generated June 4, 2026.
+
+\bibitem{wrf-bt159}
+Local WRF harness, \emph{BT159 forbidden pocket F4 normalizer},
+\texttt{analysis/w33\_BREAKTHROUGH\_159\_forbidden\_pocket\_f4\_normalizer.py}
 with result JSON, generated June 4, 2026.
 \end{thebibliography}
 

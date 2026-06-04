@@ -1,0 +1,44 @@
+{
+  "architectural_reading": "The eight BT158 forbidden macros are not failed design noise. They generate the F4-sized polarization normalizer: 576 maps preserving the 2+2 Lagrangian split and 576 maps swapping it. They fail as single q!-restoring macros because they stay inside this normalizer, but they are exactly the 24-cell/tomotope control pocket.",
+  "breakthrough": 159,
+  "checks": {
+    "f4_order_is_24cell_weyl": true,
+    "forbidden_are_all_anti_diagonal": true,
+    "forbidden_generates_f4_order": true,
+    "forbidden_inverse_closed": true,
+    "forbidden_order_distribution_is_binary_twelve": true,
+    "forbidden_pair_products_are_identity_or_normalizer": true,
+    "forbidden_pocket_size_is_2_to_q": true,
+    "generated_has_only_block_or_anti": true,
+    "generated_split_is_576_plus_576": true,
+    "negative_identity_in_generated_group": true,
+    "order_distribution_matches_closure": true,
+    "order_distribution_sums_to_1152": true
+  },
+  "forbidden_order_distribution": {
+    "2": 4,
+    "12": 4
+  },
+  "forbidden_pair_products": {
+    "identity": 8,
+    "normalizer_other": 56
+  },
+  "forbidden_pocket_size": 8,
+  "generated_order": 1152,
+  "generated_order_distribution": {
+    "1": 1,
+    "2": 27,
+    "3": 80,
+    "4": 84,
+    "6": 432,
+    "8": 144,
+    "12": 384
+  },
+  "generated_order_reading": "1152 = |W(F4)| = full 24-cell Weyl group order",
+  "n_verified": 12,
+  "polarization_split": {
+    "anti_diagonal_swapping": 576,
+    "block_diagonal_preserving": 576
+  },
+  "title": "Forbidden pocket F4 normalizer"
+}
