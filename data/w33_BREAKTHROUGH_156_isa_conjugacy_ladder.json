@@ -1,0 +1,46 @@
+{
+  "architectural_correction": "Ordinary conjugacy dispatch should use 25 W(E6) geometric classes. The number 30 is the E8 Coxeter cadence/epoch count, not the ordinary conjugacy-class count. The lifted Clifford cover has 34 classes and supplies q^2=9 phase refinements beyond W(E6).",
+  "breakthrough": 156,
+  "checks": {
+    "architecture_uses_25_not_30_conjugacy_fast_paths": true,
+    "cadence_over_projective_is_phi4": true,
+    "coxeter_slack_over_we6_is_F5": true,
+    "e8_cadence_is_q_phi4": true,
+    "ladder_is_strict": true,
+    "lift_over_cadence_is_mu": true,
+    "lift_over_geometry_is_q_squared": true,
+    "outer_extension_gap_is_F5": true,
+    "psp_classes_are_v_over_2": true,
+    "sp43_classes_are_v_minus_qfact": true,
+    "thirty_remains_cadence_not_class_count": true,
+    "we6_classes_are_F5_squared": true
+  },
+  "class_ladder": {
+    "E8_Coxeter_cadence": 30,
+    "PSp(4,3)_projective": 20,
+    "Sp(4,3)_Clifford_lift": 34,
+    "W(E6)_geometric": 25
+  },
+  "dispatch_model": {
+    "coxeter_epoch_slots": 30,
+    "generator_lanes": 8,
+    "geometric_fast_paths": 25,
+    "lifted_clifford_refinements": 34,
+    "projective_matter_classes": 20
+  },
+  "gap_probe": {
+    "available": true,
+    "counts": {
+      "e8_coxeter_cadence": 30,
+      "psp43_order": 25920,
+      "psp43_projective_classes": 20,
+      "sp43_clifford_lift_classes": 34,
+      "sp43_order": 51840,
+      "we6_geometric_classes": 25,
+      "we6_order": 51840
+    },
+    "source": "gap_runtime_probe"
+  },
+  "n_verified": 12,
+  "title": "ISA conjugacy ladder correction"
+}

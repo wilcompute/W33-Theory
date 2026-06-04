@@ -701,12 +701,12 @@ rack, all the way up. The same architecture serves a smartwatch and a planet.
 \node[align=left,anchor=west] at (4.4,-0.3) {\scriptsize $\mu = 4$ shared per non-edge};
 \node[align=left,anchor=west] at (4.4,-0.9) {\scriptsize $|E| = 240$ on-tile links};
 \node[align=left,anchor=west] at (4.4,-1.5) {\scriptsize $|\Aut| = 51{,}840$};
-\node[align=left,anchor=west] at (4.4,-1.9) {\scriptsize $30$ conjugacy classes (ISA families)};
+\node[align=left,anchor=west] at (4.4,-1.9) {\scriptsize $25$ classes; $30$ Coxeter slots};
 \end{tikzpicture}
 \caption{The Witting tile. Inner ring (12 nodes): $k$-eigenspace neighbours. Outer ring
 (27 nodes): disjoint matter shell. Centre: self vertex. Together, $1 + 12 + 27 = 40 = v$.
 The graph is the unique strongly regular graph SRG$(40, 12, 2, 4)$, with $|E| = 240$
-edges and automorphism group $\Sp(4,\FF_3)$ of order $51{,}840$.}\label{fig:tile}
+edges and full geometric automorphism group $W(E_6)$ of order $51{,}840$.}\label{fig:tile}
 \end{figure}
 
 A Witting tile holds $40$ trit-native cores wired in the collinearity-graph topology of
@@ -1027,21 +1027,37 @@ $51{,}840$ symmetries; the compiler's job is finding the shortest path.
 
 \subsection{\texorpdfstring{$\Aut(\W) = W(E_6)$ as the ISA}{Aut(W(3,3)) = W(E6) as the ISA}}
 
-The WRF ISA is the group $G = \Aut(\W) = \Sp(4, \FF_3) \cong W(E_6)$, of order
-$|G| = 51{,}840$. Every instruction is an element $\sigma \in G$ that acts on an
+The WRF ISA is the full geometric automorphism group
+$G_{\rm geo} = \Aut(\W) \cong W(E_6)$, of order $|G_{\rm geo}| = 51{,}840$.
+Equivalently this is the projective similitude/Weyl-side action on the Witting geometry;
+the lifted two-qutrit Clifford/symplectic cover $\Sp(4,\FF_3)$ also has order
+$51{,}840$ but is a different central cover. Every instruction is an element
+$\sigma \in G_{\rm geo}$ that acts on an
 edge-mode configuration $\mathcal{C} \subseteq E(\W)$, producing the new configuration
-$\sigma(\mathcal{C})$. By the Triple Convergence theorem
-$\#\mathrm{conj}\,G = h(E_8) = Z_{\mathrm{DW}}(\Sp(4,\FF_3); T^2) = 30$, so the ISA has
-\emph{exactly} $30$ conjugacy classes---instruction \emph{families} at the
-microarchitectural level number $30$, not $51{,}840$.
+$\sigma(\mathcal{C})$.
 
-\subsection{\texorpdfstring{Microarchitecture: $30$ families, $8$ generators}{Microarchitecture: 30 families, 8 generators}}
+BT156 corrects the conjugacy bookkeeping \cite{wrf-bt156}. Ordinary conjugacy dispatch
+has $25$ geometric $W(E_6)$ classes, not $30$. The number
+$30 = h(E_8) = q\Phi_4$ remains architecture-native, but as a Coxeter cadence/epoch
+count rather than as ordinary conjugacy cardinality. The exact finite ladder is
+\[
+\#\mathrm{conj}\,\PSp(4,3)=20,\qquad
+\#\mathrm{conj}\,W(E_6)=25,\qquad
+h(E_8)=30,\qquad
+\#\mathrm{conj}\,\Sp(4,3)=34.
+\]
+Thus the ISA dispatch table has $25$ geometric fast paths inside a $30$-slot Coxeter
+epoch, while the lifted Clifford implementation has $34$ phase-refined classes.
+
+\subsection{\texorpdfstring{Microarchitecture: $25$ classes, $30$ slots, $8$ generators}{Microarchitecture: 25 classes, 30 slots, 8 generators}}
 
 The Coxeter system of $W(E_6)$ has $6$ simple generators; with the Bell-line involutions
 the full $\Aut(\W)$ requires $8$ Hadamard-type generators in the qutrit Clifford
 realisation. A microarchitectural decoder needs only:
 \begin{itemize}[leftmargin=2em,nosep]
-\item $30$ conjugacy-class fast paths (single-cycle dispatch),
+\item $25$ $W(E_6)$ conjugacy-class fast paths (single-cycle geometric dispatch),
+\item a $30$-slot $E_8$ Coxeter cadence table for epoch-level scheduling,
+\item $34$ lifted Clifford-cover refinements when qutrit phase information is kept,
 \item $8$ generator decoder lanes (each generator is a small fixed circuit),
 \item Cayley-graph distance lookup for compiler scheduling.
 \end{itemize}
@@ -1215,7 +1231,7 @@ primitives plus the throughput target.
 
 At $\TPS = 7 \times 10^7$ transactions per second aggregate over the network:
 \begin{align}
-\text{Conjugacy cadence} \quad &=\ \TPS \cdot \frac{|G|}{h(E_8)}
+\text{Coxeter cadence} \quad &=\ \TPS \cdot \frac{|G_{\rm geo}|}{h(E_8)}
 \ =\ 70\text{M}\cdot 1728\ =\ 1.21 \times 10^{11}\ \text{cycles/s},\\
 \text{Logical-qutrit ops} \quad &=\ \TPS \cdot \frac{q^{q+1}}{|E|}
 \ =\ 70\text{M}\cdot \frac{27}{80}\ =\ 2.36 \times 10^7\ \text{LQ-ops/s},\\
@@ -1226,7 +1242,7 @@ At $\TPS = 7 \times 10^7$ transactions per second aggregate over the network:
 \text{ECC syndromes/s}    \quad &=\ \TPS \cdot |E| / \mu
 \ =\ 70\text{M} \cdot 60\ =\ 4.20 \times 10^9\ \text{syndromes/s}.
 \end{align}
-The conjugacy multiplier $1728 = k^3 = j(i)$ is the modular $j$-invariant at $\tau = i$---a
+The Coxeter multiplier $1728 = k^3 = j(i)$ is the modular $j$-invariant at $\tau = i$---a
 deep connection to the arithmetic of elliptic curves which we do not exploit further
 here but note as a substrate-level cross-link.
 
@@ -1536,7 +1552,8 @@ recent stacks (Oko, UOR, HLIX/HCP, and Smart Assets) seriously enough to make th
 one substrate.
 
 That point is the $40$-vertex symplectic polar space $\W$, with $\Aut$ group of order
-$51{,}840$ and conjugacy cardinality $30$. Every subsystem of WRF---the Atlas-$12288$
+$51{,}840$, $25$ ordinary geometric conjugacy classes, and a $30$-slot Coxeter cadence.
+Every subsystem of WRF---the Atlas-$12288$
 memory frame, the Bose--Mesner three-channel bus, the spectral cache, the referenceable
 flow cell, the Bell-qutrit far-horizon storage cell, the CSS code, the group-action ISA,
 the BIER fabric, the projection
@@ -1571,8 +1588,10 @@ need only to recognise it and build it.
 % ===========================================================================
 
 \begin{description}[leftmargin=10em,style=nextline,nosep]
-\item[Aut$(W(3,3))$] The full automorphism group of the W(3,3) symplectic polar space;
-isomorphic to $\Sp(4,\FF_3) \cong W(E_6)$; order $51{,}840$.
+\item[Aut$(W(3,3))$] The full geometric automorphism group of the W(3,3) symplectic
+polar space; isomorphic to $W(E_6)$; order $51{,}840$; $25$ ordinary conjugacy classes.
+The lifted Clifford/symplectic cover $\Sp(4,\FF_3)$ also has order $51{,}840$ and has
+$34$ conjugacy classes, while the projective quotient has $20$.
 \item[Atlas-12288] UOR's memory-frame structure: $48$ pages of $256$ bytes each,
 totalling $12288$ bytes, with $R_{96}$ resonance classification.
 \item[Bell qutrit] The maximally entangled past-future qutrit state $\ket{\Omega}$;
@@ -1589,7 +1608,8 @@ canonical encoding.
 \item[CSS code] Calderbank--Shor--Steane quantum error-correcting code; in this paper,
 the WRF base carrier is $[[240, 81, d_Z=4]]_3$.
 \item[Conjugacy class] An equivalence class of group elements under $g \sim hgh^{-1}$.
-$\Aut(\W)$ has $30$ conjugacy classes.
+$\Aut(\W)\cong W(E_6)$ has $25$ ordinary conjugacy classes. The substrate number $30$
+is the $E_8$ Coxeter cadence, not this ordinary class count.
 \item[HCP] Hologram Container Platform; HLIX's projection engine.
 \item[HLIX] Hybrid Linked Infrastructure Xchange; the Hologram-based implementation path
 for UOR.
@@ -1634,8 +1654,10 @@ $256$   & $\mu^4 = 2^{\Phi_6 + 1}$         & bytes per page (dS identity) \\
 $96$    & $2^{F_5} \cdot q$                & $R_{96}$ resonance classes \\
 $12288$ & $q! \cdot 2^{q + \Phi_6 + 1}$    & Atlas frame size \\
 $3/8$   & $q / 2^q$                        & Universal Density \\
-$1728$  & $k^3 = j(i)$                     & $|\Aut|/h(E_8)$, conjugacy multiplier \\
-$30$    & $q\Phi_4 = h(E_8)$               & Triple Convergence (ISA family count) \\
+$25$    & $F_5^2$                           & $W(E_6)$ conjugacy-class fast paths \\
+$30$    & $q\Phi_4 = h(E_8)$               & Coxeter cadence / epoch slots \\
+$34$    & $v-q!$                            & lifted $\Sp(4,3)$ Clifford-cover classes \\
+$1728$  & $k^3 = j(i)$                     & $|\Aut|/h(E_8)$, Coxeter multiplier \\
 $11$    & $k - 1 = p_{\mathrm{Ih}}$        & BIER branching factor \\
 \bottomrule
 \end{tabular}
@@ -1714,6 +1736,11 @@ Local WRF harness, \emph{BT114 active trace I/O: limited actuator and finite rea
 Local WRF harness, \emph{BT154 4x4 lattice Clifford-frame generalization},
 \texttt{analysis/w33\_BREAKTHROUGH\_154\_4x4\_lattice\_n4\_generalization.py}
 with result JSON, generated June 4, 2026.
+
+\bibitem{wrf-bt156}
+Local WRF harness, \emph{BT156 ISA conjugacy ladder correction},
+\texttt{analysis/w33\_BREAKTHROUGH\_156\_isa\_conjugacy\_ladder.py}
+with GAP-backed result JSON, generated June 4, 2026.
 \end{thebibliography}
 
 \section*{Acknowledgements}

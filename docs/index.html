@@ -13696,6 +13696,19 @@
           no new Wieferich prime appears in this 15-candidate substrate shell; it is not a global no-W<sub>3</sub>
           proof.</p>
 
+        <h4>WRF ISA conjugacy ladder correction</h4>
+        <p>BT156 fixes the architecture point that was bugging the compiler story. The ordinary class counts are not
+          <code>30</code>; the exact ladder is
+          <code>PSp(4,3)=20</code>, <code>W(E<sub>6</sub>)=25</code>,
+          <code>h(E<sub>8</sub>)=30</code>, and <code>Sp(4,3)=34</code>. So WRF instruction dispatch should use
+          <code>25</code> geometric <code>W(E<sub>6</sub>)</code> fast paths, a <code>30</code>-slot Coxeter cadence,
+          and <code>34</code> lifted Clifford-cover refinements.</p>
+        <p>The gaps are substrate-clean rather than accidental:
+          <code>25-20=5=F<sub>5</sub></code>, <code>30-25=5=F<sub>5</sub></code>,
+          <code>34-30=4=&mu;</code>, and <code>34-25=9=q<sup>2</sup></code>. This keeps the old
+          <code>30</code> in the architecture, but in the right role: cadence/epoch clock, not ordinary conjugacy
+          family count.</p>
+
         <h4>Reye-K<sub>12</sub> orientable horizon completion</h4>
         <p>MCXCII closes the Q<sub>4</sub>/tomotope/Reye thread into the new horizon-code layer. Use the
           <code>12</code> Reye points from the antipodal Q<sub>4</sub> quotient as the vertices of
