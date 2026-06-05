@@ -1,0 +1,86 @@
+{
+  "hadamard_tower": [
+    {
+      "n": 2,
+      "substrate": "lambda",
+      "construction": "Walsh trivial"
+    },
+    {
+      "n": 4,
+      "substrate": "mu",
+      "construction": "Paley (p=q=3 ~ 3 mod 4)"
+    },
+    {
+      "n": 8,
+      "substrate": "2^q (octonion)",
+      "construction": "H_2 tensor H_4 = H_mu tensor H_lambda"
+    },
+    {
+      "n": 12,
+      "substrate": "k (valency)",
+      "construction": "cyclic difference set"
+    },
+    {
+      "n": 16,
+      "substrate": "lambda^mu (spacetime hyp.)",
+      "construction": "H_mu tensor H_mu = Pascal-Cl-Q (BT158)"
+    },
+    {
+      "n": 20,
+      "substrate": "lambda * Phi_4",
+      "construction": "Paley (p=19)"
+    },
+    {
+      "n": 24,
+      "substrate": "f (pos eigenmult W(3,3))",
+      "construction": "Paley (p=23)"
+    },
+    {
+      "n": 32,
+      "substrate": "lambda^F_5 (Q_mu edges)",
+      "construction": "Paley (p = M_5 = 31)"
+    },
+    {
+      "n": 56,
+      "substrate": "lambda^q*Phi_6 = V(Klein)",
+      "construction": "Paley type II (p = 55 prime power)"
+    }
+  ],
+  "paley_primes_3_mod_4": [
+    {
+      "p": 3,
+      "Hn": 4,
+      "substrate": "mu",
+      "role": "spacetime"
+    },
+    {
+      "p": 7,
+      "Hn": 8,
+      "substrate": "2^q",
+      "role": "octonion"
+    },
+    {
+      "p": 11,
+      "Hn": 12,
+      "substrate": "k",
+      "role": "valency"
+    },
+    {
+      "p": 31,
+      "Hn": 32,
+      "substrate": "lambda^F_5",
+      "role": "Q_mu edges"
+    }
+  ],
+  "reed_muller_at_mu": {
+    "code": "RM(1, mu)",
+    "params": "[lambda^mu, F_5, 2^q]_2",
+    "explicit": [
+      16,
+      5,
+      8
+    ]
+  },
+  "diagonalizes_Q_mu_adjacency": true,
+  "conclusion": "Hadamard matrices exist at every substrate-natural order: lambda, mu, 2^q, k, lambda^mu, f, lambda^F_5, lambda^q*Phi_6. Four substrate primitives (q, Phi_6, p_Ih, M_5) all == 3 mod 4 and generate Paley Hadamards at substrate-clean orders. RM(1, mu) = [lambda^mu, F_5, 2^q]_2 (length=spacetime, dim=F_5, distance=octonion). H_(lambda^mu) diagonalizes Q_mu adjacency."
+}

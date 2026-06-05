@@ -1,0 +1,70 @@
+{
+  "g2_parameters": [
+    {
+      "name": "rank",
+      "value": 2,
+      "substrate": "lambda"
+    },
+    {
+      "name": "dim",
+      "value": 14,
+      "substrate": "lambda * Phi_6 = |V(Heawood)|"
+    },
+    {
+      "name": "Weyl order",
+      "value": 12,
+      "substrate": "k (substrate valency!)"
+    },
+    {
+      "name": "total roots",
+      "value": 12,
+      "substrate": "k"
+    },
+    {
+      "name": "long roots",
+      "value": 6,
+      "substrate": "q!"
+    },
+    {
+      "name": "short roots",
+      "value": 6,
+      "substrate": "q!"
+    },
+    {
+      "name": "Coxeter num.",
+      "value": 6,
+      "substrate": "q!"
+    },
+    {
+      "name": "fund. rep dim",
+      "value": 7,
+      "substrate": "Phi_6 (octonion imag part)"
+    },
+    {
+      "name": "adjoint rep",
+      "value": 14,
+      "substrate": "lambda*Phi_6"
+    }
+  ],
+  "star_identities": [
+    "dim G_2 = lambda * Phi_6 = |V(Heawood)| = 14",
+    "|Weyl(G_2)| = k = 12 (substrate valency)"
+  ],
+  "heawood_eq_octonion_levi": true,
+  "octonion_chain": [
+    "Octonion dim = 2^q = 8",
+    "Octonion imag count = Fano lines = Phi_6 = 7",
+    "Heawood = Levi(Fano), V = lambda*Phi_6, E = T_6 (BT267)",
+    "Aut(O) = G_2, dim = |V(Heawood)|, Weyl = k",
+    "Aut(Fano) = PSL(3, F_2) = Aut(Klein quartic) (BT285)"
+  ],
+  "g2_embeddings": [
+    "B_3=so(7)",
+    "D_4=so(8)",
+    "F_4",
+    "E_6",
+    "E_7",
+    "E_8"
+  ],
+  "conclusion": "Octonion + G_2 substrate spine: every parameter substrate-clean. dim G_2 = lambda*Phi_6 = |V(Heawood)| = 14 (NEW STAR). |Weyl(G_2)| = k = 12 (substrate valency). Heawood IS the octonion multiplication Levi graph (bipartite imag units vs product triples). 5-link chain from 2^q to Klein quartic via Fano/Heawood/G_2."
+}

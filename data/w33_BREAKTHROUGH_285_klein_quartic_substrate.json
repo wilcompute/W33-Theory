@@ -1,0 +1,63 @@
+{
+  "klein_quartic_parameters": [
+    {
+      "name": "V",
+      "value": 56,
+      "substrate": "lambda^q * Phi_6 = E_7 rep dim = |E(MK)|+|E(Q_mu)|"
+    },
+    {
+      "name": "E",
+      "value": 84,
+      "substrate": "k * Phi_6 = E_Csaszar = E_Szilassi = #knightHC/rot"
+    },
+    {
+      "name": "F",
+      "value": 24,
+      "substrate": "f = positive eigenmult W(3, 3) = Leech rank"
+    },
+    {
+      "name": "g",
+      "value": 3,
+      "substrate": "q (substrate color)"
+    },
+    {
+      "name": "|Aut|",
+      "value": 168,
+      "substrate": "lambda^q*q*Phi_6 = |PSL(2,7)| = |Aut(Fano)|"
+    }
+  ],
+  "euler_check": {
+    "chi": -4,
+    "expected_2_minus_2g": -4,
+    "substrate": "lambda*(1-q) = -4"
+  },
+  "psl27_iso": "Aut(KQ) = PSL(2,7) = PSL(3,F_2) = GL(3,F_2) = Aut(Fano)",
+  "hurwitz_saturation": {
+    "bound": 168,
+    "actual": 168,
+    "saturated_at_g_eq_q": true
+  },
+  "five_BT_chain_intersections": [
+    {
+      "object": "knight tours on Q_mu (BT263)",
+      "identity": "84 = #HC/rot = E(KQ)"
+    },
+    {
+      "object": "Csaszar/Szilassi toroidal (BT79)",
+      "identity": "84 = E_Cs = E_Sz = E(KQ)"
+    },
+    {
+      "object": "E_7 / MK+Q_mu (BT270)",
+      "identity": "56 = |E(MK)|+|E(Q_mu)| = V(KQ)"
+    },
+    {
+      "object": "Fano / Heawood (BT79, BT267)",
+      "identity": "168 = |Aut(Fano)| = |Aut(KQ)|"
+    },
+    {
+      "object": "D_4 roots / Leech (BT79, BT158)",
+      "identity": "24 = f = F(KQ)"
+    }
+  ],
+  "conclusion": "Klein quartic (genus 3 = q Riemann surface, saturating Hurwitz bound) has ALL five parameters substrate-clean. V=56=lambda^q*Phi_6 (=E_7 rep, BT270), E=84=k*Phi_6 (=E_Csaszar=knight tours/rot, BT263), F=24=f (W(3,3) pos eigenmult), g=q, |Aut|=168=Aut(Fano)=PSL(2,7). FIVE independent BT-chain objects intersect in this single Riemann surface. Deepest classical-object substrate match in the chain."
+}
