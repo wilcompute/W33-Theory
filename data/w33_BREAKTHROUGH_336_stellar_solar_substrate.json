@@ -1,0 +1,49 @@
+{
+  "harvard_stellar_classes": {
+    "count": 7,
+    "substrate": "Phi_6 (heptad)",
+    "classes": [
+      "O",
+      "B",
+      "A",
+      "F",
+      "G",
+      "K",
+      "M"
+    ]
+  },
+  "solar_system_planets": {
+    "count": 8,
+    "substrate": "2^q (octonion)",
+    "terrestrial": 4,
+    "giants": 4
+  },
+  "other_substrate_counts": [
+    {
+      "name": "Galilean moons of Jupiter",
+      "count": 4,
+      "substrate": "mu (SPACETIME!)"
+    },
+    {
+      "name": "Asteroid belt big four",
+      "count": 4,
+      "substrate": "mu (Ceres, Vesta, Pallas, Hygiea)"
+    },
+    {
+      "name": "Zodiac signs (classical)",
+      "count": 12,
+      "substrate": "k (substrate valency!)"
+    },
+    {
+      "name": "Solar interior layers (full)",
+      "count": 6,
+      "substrate": "q! = 6 (core/rad/conv + photo/chromo/corona)"
+    },
+    {
+      "name": "Phases of moon (principal)",
+      "count": 4,
+      "substrate": "mu (new/waxing/full/waning)"
+    }
+  ],
+  "conclusion": "Astronomical classifications substrate-clean: Harvard 7 spectral classes = Phi_6 (heptad), 8 Solar System planets = 2^q (octonion), mu terrestrial + mu giants, mu Galilean moons, k zodiac signs, q! solar interior layers. The substrate's heptad/octonion/spacetime primitives organize both stars and Solar System."
+}

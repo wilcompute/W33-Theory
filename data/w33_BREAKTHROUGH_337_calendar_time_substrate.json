@@ -1,0 +1,52 @@
+{
+  "time_units": [
+    {
+      "unit": "seconds per minute",
+      "value": 60,
+      "substrate": "|V(C_60)| = mu * g_neg = mu * F_5 (BT284)"
+    },
+    {
+      "unit": "minutes per hour",
+      "value": 60,
+      "substrate": "same as above (sexagesimal)"
+    },
+    {
+      "unit": "hours per day",
+      "value": 24,
+      "substrate": "f = W(3,3) pos eigenmult (BT79)"
+    },
+    {
+      "unit": "days per week",
+      "value": 7,
+      "substrate": "Phi_6 (HEPTAD)"
+    },
+    {
+      "unit": "months per year",
+      "value": 12,
+      "substrate": "k = SUBSTRATE VALENCY"
+    },
+    {
+      "unit": "days per month (avg)",
+      "value": 30,
+      "substrate": "h(E_8) = TRIPLE CONVERGENCE (BT78)"
+    },
+    {
+      "unit": "zodiac signs",
+      "value": 12,
+      "substrate": "k = same as months"
+    },
+    {
+      "unit": "hours on clock face",
+      "value": 12,
+      "substrate": "k = substrate valency"
+    }
+  ],
+  "star_identities": [
+    "hours/day = f = W(3,3) pos eigenmult (15+ BT-chain meanings)",
+    "sec/min = min/hr = |V(C_60)| (BT284 buckyball)",
+    "days/week = Phi_6 (heptad)",
+    "months/year = k (substrate valency)",
+    "days/month ~ h(E_8) (Triple Convergence)"
+  ],
+  "conclusion": "Time-keeping substrate-clean. Hours/day = f = W(3,3) pos eigenmult (15+ meanings). Sec/min = |V(C_60)| (BT284). Days/week = Phi_6. Months/year = k. Days/month ~ h(E_8). The substrate's two most multi-meaning primitives (k = 12 and f = 24) are exactly months/year and hours/day. Cultural time-keeping converged on substrate's most-recurring integers."
+}

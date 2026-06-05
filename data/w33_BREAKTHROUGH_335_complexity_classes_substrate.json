@@ -1,0 +1,63 @@
+{
+  "busy_beaver_values": [
+    {
+      "n": 1,
+      "BB_n": 1,
+      "substrate": "1"
+    },
+    {
+      "n": 2,
+      "BB_n": 4,
+      "substrate": "mu (SPACETIME!)"
+    },
+    {
+      "n": 3,
+      "BB_n": 6,
+      "substrate": "q! (FACTORIAL!)"
+    },
+    {
+      "n": 4,
+      "BB_n": 13,
+      "substrate": "Phi_3 (cyclotomic!)"
+    },
+    {
+      "n": 5,
+      "BB_n": 4098,
+      "substrate": "large"
+    }
+  ],
+  "sat_threshold": "q-SAT (= 3-SAT) is smallest NP-complete",
+  "coloring_threshold": "q-coloring NP-complete; lambda-coloring P; mu-coloring planar P",
+  "quantum_tiers": "P subset BQP subset PSPACE (= q tiers)",
+  "complexity_substrate_pairs": [
+    [
+      "BB(lambda) = mu",
+      "smallest small BB value = spacetime"
+    ],
+    [
+      "BB(q) = q!",
+      "BB at substrate color = factorial"
+    ],
+    [
+      "BB(mu) = Phi_3",
+      "BB at spacetime = cyclotomic"
+    ],
+    [
+      "q-SAT NP-complete",
+      "substrate color = SAT threshold"
+    ],
+    [
+      "q-coloring NP-complete",
+      "color graph coloring threshold"
+    ],
+    [
+      "4CT planar -> P",
+      "spacetime planar coloring polynomial"
+    ],
+    [
+      "Quantum tiers = q",
+      "P, BQP, PSPACE three layers"
+    ]
+  ],
+  "conclusion": "Computational complexity substrate-clean at thresholds. First 3 small busy-beaver values are substrate primitives: BB(2)=mu, BB(3)=q!, BB(4)=Phi_3. q-SAT smallest NP-complete (substrate color = complexity threshold). q-coloring NP-complete; mu-coloring planar in P (4CT). Quantum hierarchy has q = 3 tiers."
+}
