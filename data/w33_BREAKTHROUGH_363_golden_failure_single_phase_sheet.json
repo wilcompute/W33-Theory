@@ -1,0 +1,51 @@
+{
+  "honesty_boundary": "This identifies exactly where the draft selector fails.  It does not yet construct the edge-level corrected selector.",
+  "identities": {
+    "draft_unique_failures_equal_failure_sheet": true,
+    "failure_rate_is_one_sheet_over_zmin": true,
+    "failure_sheet_has_108_supports": true,
+    "failure_sheet_is_one_of_120_sheets": true,
+    "failure_sheet_is_subset_of_zmin": true,
+    "global_sheet_intersection_profile_matches_bt360": true,
+    "ordered_failure_rate_is_one_sheet_with_d4": true,
+    "ordered_failures_are_failure_sheet_times_d4": true,
+    "same_anchor_phase_intersections_are_108_and_two_54s": true,
+    "selected_anchor_has_three_phase_sheets": true,
+    "selected_anchor_line_is_draft_anchor_line": true
+  },
+  "next_frontier": "A flat correction should first be searched as a sheet-level 2-cochain that flips the selected line-phase sheet.  Only after that succeeds should it be lifted to an edge-level transport 1-cochain with locality constraints.",
+  "part": "BT363",
+  "profiles": {
+    "global_sheet_intersections": {
+      "108": 1,
+      "12": 36,
+      "2": 54,
+      "4": 27,
+      "54": 2
+    },
+    "ordered_support_profile": {
+      "8": 108
+    },
+    "same_anchor_intersections": {
+      "108": 1,
+      "54": 2
+    }
+  },
+  "single_sheet_law": {
+    "ordered_failures": "864 = 108 * |D4|",
+    "rate": "108/1620 = 1/15",
+    "same_anchor_fiber": "three phase sheets over the selected line; intersections 108,54,54",
+    "selected_sheet": "one of 120 = 40 lines * 3 phases",
+    "unique_failures": "108 = one selector sheet"
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "ordered_failures": 864,
+    "selected_anchor_line": 0,
+    "selected_sheet_supports": 108,
+    "sheet_count": 120,
+    "z_min_supports": 1620
+  },
+  "theorem": "Golden Failure Single Phase-Sheet Theorem.  In the BT361 qutrit phase bundle, the draft golden-selector failure set is exactly one selected line-phase sheet: 108 minimal Z supports over the draft anchor line.  The 864 ordered failures are precisely those 108 supports times the D4 ordering torsor.  The obstruction rate 108/1620=1/15 is therefore one sheet of the 120-sheet selector design.",
+  "title": "The golden obstruction is one selected qutrit phase sheet"
+}

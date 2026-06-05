@@ -1,0 +1,56 @@
+{
+  "design_parameters": {
+    "base_sheet": "108 minimal Z supports",
+    "incidence_identity": "120 * 108 = 1620 * 8 = 12960",
+    "setwise_stabilizer": "216 = 8 * 27",
+    "sheet_orbit": "120 = 5! sheets",
+    "z_min_sheet_multiplicity": "8 = |D4|",
+    "z_min_universe": "1620 supports"
+  },
+  "honesty_boundary": "This proves the finite sheet design and incidence multiplicities.  It does not yet produce a corrected flat selector cochain.",
+  "identities": {
+    "all_sheets_have_108_supports": true,
+    "base_intersection_profile_matches_selector_scheme": true,
+    "base_sheet_has_108_supports": true,
+    "base_sheet_is_subset_of_zmin": true,
+    "each_zmin_support_lies_in_8_sheets": true,
+    "edge_profiles_are_sheet_invariant": true,
+    "failure_rate_is_one_g_sheet": true,
+    "ordered_failures_are_d4_over_base_sheet": true,
+    "point_profiles_are_sheet_invariant": true,
+    "psp_group_order_is_25920": true,
+    "setwise_stabilizer_is_216": true,
+    "sheet_incidence_covers_all_zmin": true,
+    "sheet_orbit_has_120_sheets": true,
+    "sheet_orbit_stabilizer_identity": true,
+    "single_failed_support_orbit_is_all_zmin": true,
+    "total_incidence_is_flatness_loop_carrier": true
+  },
+  "next_frontier": "Search for the hidden association scheme on the 120 selector sheets. The base-intersection profile {108,54,12,4,2} is structured enough to support a signed section or character twist, which is the likely route to canceling the golden holonomy obstruction.",
+  "part": "BT360",
+  "profiles": {
+    "base_sheet_intersections": {
+      "108": 1,
+      "12": 36,
+      "2": 54,
+      "4": 27,
+      "54": 2
+    },
+    "edge_profile": "108 edges used once, 36 edges used six times, 4 edges used 27 times",
+    "ordered_failure_support_profile": {
+      "8": 108
+    },
+    "point_profile": "36 points used 12 times, 4 anchor points used 108 times"
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "base_sheet_supports": 108,
+    "incidence_total": 12960,
+    "projective_group_order": 25920,
+    "setwise_stabilizer": 216,
+    "sheet_count": 120,
+    "z_min_supports": 1620
+  },
+  "theorem": "Selector Z-Min Sheet Design Theorem.  The 108 unique golden-selector failure supports are actual minimal Z logical supports.  Their orbit under PSp(4,3) is a 120-sheet design with sheet stabilizer 216=8*27.  Every one of the 1620 minimal Z supports lies in exactly eight sheets, so 120*108 = 1620*8 = 12960.  The square D4 factor is therefore both the ordering torsor of one failed quadrangle and the incidence multiplicity of the global selector-sheet design.",
+  "title": "Golden selector failures form a 120-sheet Z-min design"
+}

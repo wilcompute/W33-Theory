@@ -1,0 +1,133 @@
+{
+  "bt353_all_plus_line_hamiltonian": {
+    "HX": "all-plus vertex stars",
+    "HZ": "all-plus K4 line edge-products",
+    "X_distance_witness": {
+      "distance": 2,
+      "lower_bound_reason": "each edge is in exactly one line, so no nonzero weight-1 vector is in ker(H_Z_line)",
+      "witness": [
+        {
+          "coeff": 1,
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0
+        },
+        {
+          "coeff": 2,
+          "edge": [
+            0,
+            2
+          ],
+          "edge_index": 1
+        }
+      ]
+    },
+    "Z_distance_witness": {
+      "distance": 4,
+      "lower_bound_reason": "no weight<4 all-plus Eulerian support exists over F_3; triangles are odd cycles and have zero nullity",
+      "triangles_checked_for_no_weight3": 160,
+      "witness": [
+        {
+          "coeff": 1,
+          "edge": [
+            0,
+            1
+          ],
+          "edge_index": 0
+        },
+        {
+          "coeff": 2,
+          "edge": [
+            1,
+            4
+          ],
+          "edge_index": 14
+        },
+        {
+          "coeff": 1,
+          "edge": [
+            4,
+            13
+          ],
+          "edge_index": 44
+        },
+        {
+          "coeff": 2,
+          "edge": [
+            0,
+            13
+          ],
+          "edge_index": 3
+        }
+      ]
+    },
+    "commutes": true,
+    "field": "F_3",
+    "logical_qutrits": 160,
+    "name": "BT353_all_plus_vertex_line_hamiltonian",
+    "parameters": "[[240,160,2]]_3, asymmetric d_X=2,d_Z=4",
+    "physical_edge_qutrits": 240,
+    "rank_HX": 40,
+    "rank_HZ": 40
+  },
+  "canonical_clique_chain_css": {
+    "HX": "oriented d1: C1 -> C0",
+    "HZ": "oriented d2^T: C1 -> C2, using 160 line triangles",
+    "commutes": true,
+    "distances_from_exact_audit": {
+      "d_X": 3,
+      "d_Z": 4,
+      "symmetric": 3
+    },
+    "field": "F_3",
+    "logical_qutrits": 81,
+    "name": "canonical_clique_chain_css",
+    "parameters": "[[240,81,3]]_3, asymmetric d_X=3,d_Z=4",
+    "physical_edge_qutrits": 240,
+    "rank_HX": 39,
+    "rank_HZ": 120
+  },
+  "gap_spacetime_bridge": {
+    "Omega_5_3_order": 25920,
+    "PSp_4_3_isomorphic_to_Omega_5_3": true,
+    "PSp_4_3_order": 25920,
+    "Sp_4_3_order": 51840,
+    "available": true,
+    "center_order": 2,
+    "continuum_analogue": "Sp(4,R) is the double cover Spin(2,3) of SO(2,3); Lorentz SO(1,3) is a stabilizer/boundary subgroup, not the finite graph itself."
+  },
+  "hodge_spine": {
+    "exact_gradient_rank": 39,
+    "formula": "240 = 39 + 120 + 81",
+    "harmonic_H1_rank": 81,
+    "interpretation": {
+      "120": "triangle-boundary curvature sector",
+      "160": "all-plus line Hamiltonian envelope = 39+120+1 after changing local check convention",
+      "39": "oriented exact/gauge-gradient sector",
+      "81": "protected harmonic H_1 matter/memory sector"
+    },
+    "sum": 240,
+    "triangle_boundary_rank": 120
+  },
+  "honesty_boundary": "This proves finite-field ranks, commutation, line-code witnesses, and the GAP projective symplectic/orthogonal bridge.  The continuum Sp(4,R)/SO(2,3) statement is used as the real-form analogue; it is not a derivation of empirical gravity or Standard Model dynamics.",
+  "identities": {
+    "canonical_commutes": true,
+    "canonical_rank_39_120_81": true,
+    "gap_projective_sp_orthogonal_bridge": true,
+    "hodge_sum_edges": true,
+    "line_code_commutes": true,
+    "line_code_rank_40_40_160": true,
+    "line_distances": true,
+    "w33_counts": true
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "canonical_code": "[[240,81,3]]_3, asymmetric d_X=3,d_Z=4",
+    "gap_bridge_available": true,
+    "hodge_split": "240 = 39 + 120 + 81",
+    "line_hamiltonian_code": "[[240,160,2]]_3, asymmetric d_X=2,d_Z=4"
+  },
+  "theorem": "BT354-BT355 synthesis.  The W(3,3) architecture has two distinct commuting qutrit Hamiltonian layers on the same 240 edge carrier.  The canonical oriented clique-chain CSS code is the protected [[240,81,3]]_3 homology/matter sector with d_X=3,d_Z=4.  The BT353 all-plus vertex/line Hamiltonian is a valid [[240,160,2]]_3 gauge/string-net envelope with d_X=2,d_Z=4.  Therefore 81 should not be revised to 162: the exact architecture is the Hodge split 240=39+120+81 plus a separate all-plus 160 line envelope.  GAP verifies the finite spacetime bridge PSp(4,3) ~= Omega(5,3); the continuum analogue is Sp(4,R) as Spin(2,3), with 1+3 Lorentz physics arising from stabilizer/boundary reduction rather than from W(3,3) alone."
+}

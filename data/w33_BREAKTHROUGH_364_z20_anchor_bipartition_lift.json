@@ -1,0 +1,55 @@
+{
+  "edge_lift_law": {
+    "active_pairs": "K2,2 cross-pairs between the two sides",
+    "anchor_split": "{0,1} | {2,3}",
+    "correction_phase": "Z20 half-period 10 on selected edges, 0 elsewhere",
+    "parity": "failed quadrangles have one selected edge; passing quadrangles have 0, 2, or 4",
+    "selected_edges": "54 = 2 * 27 bridge-to-endpoint transport edges"
+  },
+  "honesty_boundary": "This identifies one deterministic gauge-fixed edge lift of the single-sheet correction.  The GF(2) solution space has 40 line-phase gauge freedoms, so this is a canonical displayed representative, not a uniqueness theorem for all cochain lifts.",
+  "identities": {
+    "active_pairs_are_exactly_cross_pairs": true,
+    "every_failure_has_one_selected_edge": true,
+    "expected_anchor_bipartition_edge_count_is_2q3": true,
+    "failing_quadrangles_have_odd_selected_edge_count": true,
+    "full_selected_count_profile_matches_solver": true,
+    "gf2_solution_is_consistent": true,
+    "inactive_pairs_are_exactly_same_side_pairs": true,
+    "no_failure_product_parity_errors": true,
+    "passing_quadrangles_have_even_selected_edge_count": true,
+    "selected_edge_count_is_2q3": true,
+    "selected_edges_equal_anchor_bipartition_edges": true
+  },
+  "part": "BT364",
+  "profiles": {
+    "failure_pair_parity": {
+      "('cross', 1)": 108
+    },
+    "selected_count_by_holonomy": {
+      "(-1, 1)": 108,
+      "(1, 0)": 864,
+      "(1, 2)": 621,
+      "(1, 4)": 27
+    },
+    "selected_sigma_profile": {
+      "-1": 27,
+      "1": 27
+    }
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "bridge_line_count": 27,
+    "selected_edge_count": 54,
+    "selected_side": [
+      2,
+      3
+    ],
+    "unique_failures": 108,
+    "unselected_side": [
+      0,
+      1
+    ]
+  },
+  "theorem": "Z20 Anchor-Bipartition Lift Theorem.  The deterministic gauge-fixed MCCXLVI correction is exactly the 54-edge set obtained by choosing one side {2,3} of the anchor-line K4 and selecting, for every bridge line, the two bridge-to-endpoint transport edges on that side.  The golden failure pairs are precisely the K2,2 cross-pairs between {0,1} and {2,3}, so each failed quadrangle receives odd Z20 half-period parity and every passing quadrangle receives even parity.",
+  "title": "The Z20 correction is an anchor-bipartition edge lift"
+}

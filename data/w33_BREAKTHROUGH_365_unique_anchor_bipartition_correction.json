@@ -1,0 +1,208 @@
+{
+  "bipartitions": [
+    {
+      "cross_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "cross_pairs_are_active": true,
+      "left": [
+        0,
+        1
+      ],
+      "left_profile": {
+        "(-1, 1, 1)": 108,
+        "(1, 0, 0)": 864,
+        "(1, 0, 2)": 621,
+        "(1, 0, 4)": 27
+      },
+      "left_side_corrected_failures": 0,
+      "right": [
+        2,
+        3
+      ],
+      "right_profile": {
+        "(-1, 1, 1)": 108,
+        "(1, 0, 0)": 864,
+        "(1, 0, 2)": 621,
+        "(1, 0, 4)": 27
+      },
+      "right_side_corrected_failures": 0,
+      "same_side_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "same_side_pairs_are_inactive": true
+    },
+    {
+      "cross_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cross_pairs_are_active": false,
+      "left": [
+        0,
+        2
+      ],
+      "left_profile": {
+        "(-1, 0, 0)": 27,
+        "(-1, 0, 2)": 27,
+        "(-1, 1, 1)": 54,
+        "(1, 0, 0)": 837,
+        "(1, 0, 2)": 594,
+        "(1, 0, 4)": 27,
+        "(1, 1, 1)": 54
+      },
+      "left_side_corrected_failures": 108,
+      "right": [
+        1,
+        3
+      ],
+      "right_profile": {
+        "(-1, 0, 0)": 27,
+        "(-1, 0, 2)": 27,
+        "(-1, 1, 1)": 54,
+        "(1, 0, 0)": 837,
+        "(1, 0, 2)": 594,
+        "(1, 0, 4)": 27,
+        "(1, 1, 1)": 54
+      },
+      "right_side_corrected_failures": 108,
+      "same_side_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "same_side_pairs_are_inactive": false
+    },
+    {
+      "cross_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cross_pairs_are_active": false,
+      "left": [
+        0,
+        3
+      ],
+      "left_profile": {
+        "(-1, 0, 0)": 27,
+        "(-1, 0, 2)": 27,
+        "(-1, 1, 1)": 54,
+        "(1, 0, 0)": 837,
+        "(1, 0, 2)": 594,
+        "(1, 0, 4)": 27,
+        "(1, 1, 1)": 54
+      },
+      "left_side_corrected_failures": 108,
+      "right": [
+        1,
+        2
+      ],
+      "right_profile": {
+        "(-1, 0, 0)": 27,
+        "(-1, 0, 2)": 27,
+        "(-1, 1, 1)": 54,
+        "(1, 0, 0)": 837,
+        "(1, 0, 2)": 594,
+        "(1, 0, 4)": 27,
+        "(1, 1, 1)": 54
+      },
+      "right_side_corrected_failures": 108,
+      "same_side_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "same_side_pairs_are_inactive": false
+    }
+  ],
+  "correction_law": {
+    "active_failure_pairs": "cross-pairs",
+    "inactive_pairs": "same-side pairs",
+    "side_orientation": "choosing either side gives a valid gauge representative",
+    "ternary_reading": "the three K4 bipartitions are the ternary alternatives; one is selected by the golden sheet",
+    "unique_split": "{0,1} | {2,3} up to side orientation"
+  },
+  "honesty_boundary": "This proves uniqueness among anchor K4 bipartition lifts for the current selected golden sheet.  It does not prove a canonical global rule selecting the working split before the sheet is known.",
+  "identities": {
+    "anchor_k4_has_three_bipartitions": true,
+    "both_sides_of_working_split_are_valid": true,
+    "each_side_selects_2q3_edges": true,
+    "exactly_one_bipartition_works": true,
+    "nonworking_bipartitions_leave_108_failures": true,
+    "working_cross_pairs_are_active": true,
+    "working_same_side_pairs_are_inactive": true,
+    "working_side_complements_differ_by_4q3_edges": true
+  },
+  "part": "BT365",
+  "summary": {
+    "all_identities_hold": true,
+    "anchor_bipartitions": 3,
+    "side_corrected_failure_profile": {
+      "0": 2,
+      "108": 4
+    },
+    "working_bipartitions": 1
+  },
+  "theorem": "Unique Anchor-Bipartition Correction Theorem.  Among the three 2+2 bipartitions of the anchor K4, exactly one split corrects the golden selector obstruction: the split whose same-side pairs are the inactive pairs and whose cross-pairs are the K2,2 failure carrier.  Either side choice of that split is a valid gauge representative; the other two bipartitions leave 108 failures.",
+  "title": "The anchor K4 has a unique bipartition correction"
+}

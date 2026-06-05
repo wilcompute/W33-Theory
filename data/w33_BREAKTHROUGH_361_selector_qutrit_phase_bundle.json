@@ -1,0 +1,128 @@
+{
+  "bundle_law": {
+    "intersecting_lines": "complete K3,3 phase coupling, all 9 pairs overlap 12",
+    "quotient": "W(3,3) dual line-intersection graph SRG(40,12,2,4)",
+    "same_line": "K3 phase fiber, pair overlap 54",
+    "skew_lines": "one perfect matching of 3 phase pairs at overlap 4; six remaining pairs overlap 2",
+    "total_space": "120 selector sheets = 40 W(3,3) lines * 3 qutrit phases"
+  },
+  "honesty_boundary": "This identifies the finite qutrit phase-bundle structure.  It does not yet choose global phase labels or construct the correcting selector cochain.",
+  "identities": {
+    "intersecting_line_fibers_are_complete_k33_at_overlap_12": true,
+    "line_quotient_is_srg_40_12_2_4_dual": true,
+    "quotient_intersection_graph_has_w33_line_counts": true,
+    "r54_components_are_40_triangles": true,
+    "r54_components_equal_anchor_line_fibers": true,
+    "same_line_relation_is_k3": true,
+    "sheet_count_is_40_times_q": true,
+    "skew_line_fibers_have_r4_perfect_matching": true
+  },
+  "next_frontier": "The skew-line perfect matchings are now the concrete relative-phase transport candidates.  The next test is whether their product around selector quadrangles gives the observed holonomy and whether a character twist on this qutrit bundle cancels it.",
+  "part": "BT361",
+  "profiles": {
+    "line_fiber_size_profile": {
+      "3": 40
+    },
+    "quotient_adjacent_r12_profile": {
+      "9": 240
+    },
+    "quotient_skew_r12_profile": {
+      "0": 540
+    },
+    "r54_component_size_profile": {
+      "3": 40
+    }
+  },
+  "sample_relation_profiles": {
+    "0-1": {
+      "line_relation": "intersecting",
+      "overlap_counts": {
+        "12": 9
+      }
+    },
+    "0-10": {
+      "line_relation": "intersecting",
+      "overlap_counts": {
+        "12": 9
+      }
+    },
+    "0-11": {
+      "line_relation": "intersecting",
+      "overlap_counts": {
+        "12": 9
+      }
+    },
+    "0-12": {
+      "line_relation": "intersecting",
+      "overlap_counts": {
+        "12": 9
+      }
+    },
+    "0-13": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-14": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-15": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-16": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-17": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-18": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-19": {
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      }
+    },
+    "0-2": {
+      "line_relation": "intersecting",
+      "overlap_counts": {
+        "12": 9
+      }
+    }
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "base_line_count": 40,
+    "intersecting_line_pairs": 240,
+    "phase_fiber_size": 3,
+    "r54_triangle_components": 40,
+    "sheet_count": 120,
+    "skew_line_pairs": 540
+  },
+  "theorem": "Selector Qutrit Phase Bundle Theorem.  The 120 BT360 selector sheets are exactly a 3-sheet qutrit phase fiber over the 40 lines of W(3,3).  The 54-overlap relation gives the same-line K3 fibers.  Collapsing those fibers recovers the W(3,3) line-intersection SRG.  Intersecting base lines have full K3,3 phase coupling at overlap 12; skew base lines carry a canonical relative-phase perfect matching at overlap 4 with the other six phase pairs at overlap 2.",
+  "title": "Selector sheets are a qutrit phase bundle over W(3,3) lines"
+}

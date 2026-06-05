@@ -1,0 +1,46 @@
+{
+  "honesty_boundary": "This proves the local incidence and missing-phase law.  It does not yet identify the cyclic binary invariant that separates the 108 failing quadrangles from the 1512 flat quadrangles.",
+  "identities": {
+    "every_zmin_support_has_8_incident_sheets": true,
+    "incident_sheet_supports_cover_all_zmin": true,
+    "local_lift_is_four_lines_times_two_phases": true,
+    "no_incident_sheets_off_boundary_lines": true,
+    "one_missing_phase_per_boundary_line": true,
+    "opposite_missing_phases_are_skew_matched_for_all_quadrangles": true,
+    "phase_fibers_are_qutrits": true,
+    "selector_quadrangle_count_and_holonomy_profile": true
+  },
+  "local_lift": {
+    "holonomy_boundary": "this local law is common to 1512 flat and 108 failing selector quadrangles",
+    "incident_sheet_law": "8 = 4 boundary lines * 2 present qutrit phases",
+    "missing_phase_law": "one missing phase over each boundary line",
+    "opposite_pair_law": "opposite missing phases are overlap-4 matched for all quadrangles"
+  },
+  "next_frontier": "Because the opposite missing-phase rule is shared by good and bad quadrangles, the golden obstruction must live in the cyclic order of the four binary phase choices around the support, not in a single opposite-pair mismatch.",
+  "part": "BT362",
+  "profiles": {
+    "local_anchor_count_profile": {
+      "((2, 4),)": 1620
+    },
+    "missing_phase_count_profile": {
+      "4": 1620
+    },
+    "off_boundary_count_profile": {
+      "0": 1620
+    },
+    "opposite_missing_match_profile": {
+      "(-1, 4, 4)": 108,
+      "(1, 4, 4)": 1512
+    }
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "boundary_lines_per_support": 4,
+    "incident_sheets_per_support": 8,
+    "phases_present_per_boundary_line": 2,
+    "selector_quadrangles": 1620,
+    "z_min_supports": 1620
+  },
+  "theorem": "Z-Min Local D4 Phase-Lift Theorem.  Every minimal Z logical support is incident with exactly eight selector sheets, and those eight are precisely two qutrit phases over each of the four boundary lines.  No off-boundary sheet occurs.  The one missing phase over each boundary line is paired with the opposite missing phase by the BT361 skew-line matching for both flat and failing golden-selector quadrangles.",
+  "title": "Every Z-min support has a local 4-lines times 2-phases lift"
+}

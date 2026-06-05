@@ -1,0 +1,75 @@
+{
+  "common_readout_gauge": {
+    "closure_order": 3,
+    "interpretation": "C3 ternary readout/clock symmetry survives the orientation/support clash.",
+    "surviving_transvection_indices": [
+      0
+    ]
+  },
+  "constraint_layer": {
+    "constraints": "stacked oriented d1 and all-plus Hx_plus",
+    "kernel_dim": 165,
+    "rank": 75
+  },
+  "honesty_boundary": "This is a generator-level obstruction for the canonical transvection generating set.  It proves the full symplectic action is not compatible with the chosen cross-layer coefficient gauge, and it identifies the surviving transvection-generated readout symmetry.",
+  "identities": {
+    "both_survivors": true,
+    "common_kernel_dim": true,
+    "rank_constraints": true,
+    "signed_rank_distribution": true,
+    "signed_survivors": true,
+    "survivor_order": true,
+    "transvection_count": true,
+    "unsigned_rank_distribution": true,
+    "unsigned_survivors": true
+  },
+  "signed_chain_action": {
+    "combined_rank_distribution": {
+      "105": 6,
+      "107": 12,
+      "109": 3,
+      "110": 12,
+      "75": 1,
+      "84": 1,
+      "90": 1,
+      "93": 1,
+      "98": 3
+    },
+    "surviving_transvection_indices": [
+      0
+    ]
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "both_survivors": [
+      0
+    ],
+    "common_kernel_dim": 165,
+    "rank_constraints": 75,
+    "signed_survivors": [
+      0
+    ],
+    "survivor_closure_order": 3,
+    "transvections": 40,
+    "unsigned_survivors": [
+      0
+    ]
+  },
+  "theorem": "Orientation-Twist Readout Gauge Theorem.  The cross-layer common kernel K=ker(d1)\u2229ker(Hx_plus) has dimension 165, but it is not a full PSp(4,3)-module because the signed chain action and unsigned line-product action use incompatible coefficient conventions.  Among the 40 projective symplectic transvections, exactly one preserves K under both conventions.  Its closure has order 3.  Thus the 61-core from BT356 is a ternary readout-gauge-fixed overlap, not an unbroken symplectic representation.",
+  "unsigned_support_action": {
+    "combined_rank_distribution": {
+      "103": 6,
+      "106": 12,
+      "108": 3,
+      "109": 12,
+      "75": 1,
+      "84": 1,
+      "90": 1,
+      "93": 1,
+      "97": 3
+    },
+    "surviving_transvection_indices": [
+      0
+    ]
+  }
+}

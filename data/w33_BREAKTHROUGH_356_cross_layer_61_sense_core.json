@@ -1,0 +1,69 @@
+{
+  "biology_bridge": {
+    "amino_readout_alphabet": 20,
+    "codons": 64,
+    "formula": "shared_core = 64 - 3 = 81 - 20",
+    "interpretation": "The common Hamiltonian core has the same count as sense codons. The 20-dimensional complement to H1 is the amino/dodecahedral readout alphabet used elsewhere in the repo.",
+    "sense_codons": 61,
+    "stop_codons": 3
+  },
+  "closed_forms": {
+    "canonical_boundary_in_common": "88 = 2^q * p_Ih = 8 * 11",
+    "canonical_only_common_quotient": "77 = Phi6 * p_Ih = 7 * 11",
+    "common_kernel_dim": "165 = g_neg * p_Ih = 15 * 11",
+    "line_stabilizer_in_common": "16 = 2^mu",
+    "shared_core": "61 = q^mu - lambda*Phi4 = mu^q - q",
+    "shared_stabilizers_in_common": "104 = 2^q * Phi3 = 8 * 13"
+  },
+  "honesty_boundary": "This proves finite F_3 rank identities for the two W33 edge Hamiltonian layers.  The genetic-code interpretation is a finite dictionary bridge, not a biochemical derivation.",
+  "identities": {
+    "basis_rank_cross_check": true,
+    "canonical_boundary_in_common": true,
+    "canonical_only_common_quotient": true,
+    "common_kernel_dim": true,
+    "common_kernel_rank": true,
+    "line_stabilizer_in_common": true,
+    "shared_core_61": true,
+    "shared_core_as_H1_minus_amino": true,
+    "shared_core_as_centered_hexagonal_H5": true,
+    "shared_core_as_sense_codons": true,
+    "shared_core_as_substrate_indexed_prime": true,
+    "shared_core_prime": true,
+    "shared_stabilizers_in_common": true,
+    "w33_counts": true
+  },
+  "input_layers": {
+    "canonical": {
+      "H1": 81,
+      "code": "[[240,81,3]]_3",
+      "constraints": "d1 cycles modulo d2 triangle boundaries"
+    },
+    "line_hamiltonian": {
+      "code": "[[240,160,2]]_3",
+      "constraints": "all-plus vertex stars modulo all-plus K4 line checks"
+    }
+  },
+  "rank_ledger": {
+    "canonical_boundary_in_common": 88,
+    "canonical_only_common_quotient": 77,
+    "common_kernel_dim": 165,
+    "line_only_common_quotient": 149,
+    "line_stabilizer_in_common": 16,
+    "rank_common_constraints": 75,
+    "shared_core": 61,
+    "shared_stabilizers_in_common": 104
+  },
+  "summary": {
+    "all_identities_hold": true,
+    "common_kernel_dim": 165,
+    "shared_core": 61,
+    "shared_core_formulas": [
+      "165 - 104",
+      "81 - 20",
+      "64 - 3",
+      "40 + 11 + 10"
+    ],
+    "shared_stabilizers_in_common": 104
+  },
+  "theorem": "Cross-layer 61-Core Theorem.  Let K=ker(d1)\u2229ker(Hx_plus) in the 240-edge F_3 carrier.  Then dim K=165=15*11.  The triangle-boundary stabilizers contribute 88=2^3*11 dimensions inside K, the line stabilizers contribute 16=2^4, and together they contribute 104=2^3*13.  The shared logical quotient therefore has dimension 61.  Equivalently, 61=q^mu-lambda*Phi4=81-20 and also 61=mu^q-q=64-3, the sense-codon count.  Thus the overlap of the homological physics layer and the all-plus line/readout layer is a prime core whose size is the same finite rank used by the genetic-code dictionary."
+}

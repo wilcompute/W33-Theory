@@ -1,0 +1,61 @@
+{
+  "factorizations": {
+    "bridge_line_fiber": "32 = K2,2_edges * D4 = 4 * 8 = 2^(mu+1)",
+    "ordered_product": "864 = K2,2_edges * B27 * D4 = 4 * 27 * 8",
+    "selector_obstruction": "864 = q^3 * 32 = 27 * |Stab_Sp(Z_min)|",
+    "spectral_sheet_rate": "864 / 12960 = 1/15",
+    "zmin_ordered_carrier": "12960 = 1620 * 8 = |Z_min| * |D4|"
+  },
+  "honesty_boundary": "This proves the exact finite carrier and stabilizer arithmetic.  It does not yet construct the correcting cochain or prove a flat global golden selector.",
+  "identities": {
+    "bridge_line_fiber_is_z_double_stabilizer": true,
+    "draft_audit_failure_count_is_864": true,
+    "draft_audit_is_all_nonlocal": true,
+    "draft_audit_total_is_12960": true,
+    "failure_count_is_q3_times_z_double_stabilizer": true,
+    "failure_rate_is_one_over_gneg": true,
+    "full_carrier_is_15_obstruction_sheets": true,
+    "full_loop_carrier_is_zmin_times_d4": true,
+    "ordered_failures_are_b27_times_bridge_line_fiber": true,
+    "ordered_failures_are_unique_supports_times_d4": true,
+    "ordered_torsor_failure_count_is_864": true,
+    "unique_failure_supports_are_108": true,
+    "unique_supports_are_k22_times_b27": true,
+    "z_double_stabilizer_is_32": true,
+    "z_min_support_count_is_1620": true,
+    "z_projective_stabilizer_is_16": true
+  },
+  "input_packets": {
+    "minimal_logical_orbits": {
+      "projective_group_order": 25920,
+      "source": "analysis/w33_BREAKTHROUGH_357_minimal_logical_orbit_stabilizers.py",
+      "z_double_cover_stabilizer": 32,
+      "z_orbit_size": 1620,
+      "z_projective_stabilizer": 16
+    },
+    "ordered_d4_torsor": {
+      "checks_passed": 12,
+      "ordered_failure_count": 864,
+      "source": "analysis/w33_golden_ordered_d4_torsor.py",
+      "unique_support_count": 108
+    },
+    "selector_audit": {
+      "failure_message": "Flatness FAILED: 864 violations in 12960 quads",
+      "source": "scripts/w33_golden_selector_draft_audit.py",
+      "transport_edges": 480
+    }
+  },
+  "next_frontier": "The natural next experiment is a stabilizer-character twist: search for a C2 or C3 character on the 32-element Z-min stabilizer fiber whose pullback cancels the golden selector holonomy on the single active spectral sheet without breaking the 81-dimensional CSS homology sector.",
+  "part": "BT359",
+  "summary": {
+    "all_identities_hold": true,
+    "selector_failures": 864,
+    "selector_total_loops": 12960,
+    "unique_failure_supports": 108,
+    "z_double_cover_stabilizer": 32,
+    "z_min_supports": 1620,
+    "z_projective_stabilizer": 16
+  },
+  "theorem": "Selector Obstruction / Z-Min Stabilizer Theorem.  The draft golden selector flatness obstruction is the product of the 27 bridge-cube choices with the 32-element double-cover stabilizer of a minimal Z logical quadrangle.  Equivalently, 864=q^3*|Stab_Sp(Z_min)|.  The entire 12960-loop flatness carrier is the 1620 minimal Z supports times their D4 ordering torsor, and the obstruction occupies exactly one of the g=15 spectral sheets.",
+  "title": "Selector obstruction equals the Z-min stabilizer fiber"
+}
