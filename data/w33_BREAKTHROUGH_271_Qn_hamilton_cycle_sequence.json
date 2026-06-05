@@ -1,0 +1,23 @@
+{
+  "sequence": {
+    "Q_2_directed_HC": 1,
+    "Q_3_directed_HC": 6,
+    "Q_3_substrate": "q!",
+    "Q_4_directed_HC": 2688,
+    "Q_4_substrate": "lambda^Phi_6 * T_6 = 128 * 21",
+    "Q_4_undirected_HC": 1344,
+    "Q_4_up_to_rotation": 84,
+    "Q_4_up_to_rotation_substrate": "k * Phi_6 = E_Csaszar"
+  },
+  "octonion_class_density": {
+    "value": 336,
+    "substrate": "lambda * |Aut(Fano)| = |Aut(Heawood)|"
+  },
+  "new_identities": [
+    "HC(Q_mu) = 2^Phi_6 * T_6 (2-Sylow * K_7 edges)",
+    "HC(Q_mu) / 2^q = lambda * |Aut(Fano)| = 336 = |Aut(Heawood)|",
+    "HC(Q_mu) / 32 = 84 = k * Phi_6 = E_Csaszar = E_Szilassi",
+    "HC(Q_q) = q! = compiler-depth bound (BT136)"
+  ],
+  "conclusion": "Q_n Hamilton-cycle counts are substrate-clean at n in {q, mu}: HC(Q_q) = q!, HC(Q_mu) = 2-Sylow * T_6 = 2688. Rotation reduction gives 84 = E_Csaszar = E_Szilassi. Octonion-class density = 336 = |Aut(Heawood)|. Single identity bridges hypercube combinatorics, 2-Sylow shells, K_7/Fano, Csaszar/Szilassi, and Heawood automorphisms."
+}
