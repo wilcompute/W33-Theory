@@ -1,0 +1,63 @@
+{
+  "hurwitz_triangle_group": {
+    "p_q_r": [
+      2,
+      3,
+      7
+    ],
+    "p_q_r_substrate": "(lambda, q, Phi_6) -- first three primitives",
+    "curvature": "-1/42",
+    "reciprocal_abs_chi": 42,
+    "reciprocal_substrate": "lambda * q * Phi_6"
+  },
+  "hurwitz_constant": {
+    "value": 84,
+    "substrate": "lambda^lambda * q * Phi_6 = k * Phi_6",
+    "five_meanings": [
+      "knight tour rotation classes Q_mu (BT263)",
+      "Csaszar / Szilassi polyhedron edges (BT79)",
+      "Klein quartic edges (BT285)",
+      "Hurwitz constant",
+      "k * Phi_6 (substrate)"
+    ]
+  },
+  "hurwitz_curves_tower": [
+    {
+      "genus": 3,
+      "Aut": 168,
+      "substrate": "lambda^q*q*Phi_6 = PSL(2,7) = Aut(Fano) (Klein quartic, BT285)"
+    },
+    {
+      "genus": 7,
+      "Aut": 504,
+      "substrate": "lambda^q*q^lambda*Phi_6 = PSL(2,8) (Macbeath surface)"
+    },
+    {
+      "genus": 14,
+      "Aut": 1092,
+      "substrate": "lambda^lambda*q*Phi_6*Phi_3 = PSL(2,13)"
+    },
+    {
+      "genus": 17,
+      "Aut": 1344,
+      "substrate": "lambda^6*q*Phi_6 (first Hurwitz triplet)"
+    }
+  ],
+  "star_504": {
+    "value": 504,
+    "substrate": "lambda^q * q^lambda * Phi_6",
+    "meanings": [
+      "Eisenstein E_6 first coefficient",
+      "|Aut(Macbeath surface)|",
+      "|PSL(2, 8)|"
+    ]
+  },
+  "substrate_triple_chain": [
+    "Substrate primitive triple (lambda, q, Phi_6) = (2, 3, 7)",
+    "Hurwitz triangle group Delta(2, 3, 7) -- hyperbolic, |chi|=1/(lambda*q*Phi_6)",
+    "PSL(2, F_7) of order lambda^q*q*Phi_6 = 168",
+    "Klein quartic (genus q, |Aut| Hurwitz-saturated, BT285)",
+    "Aut(Fano) = collineations of PG(2, F_2)"
+  ],
+  "conclusion": "Hurwitz triangle group (2,3,7) = substrate primitive triple (lambda, q, Phi_6). Curvature reciprocal = 42 = product of the three. Hurwitz constant 84 = k*Phi_6 has 5 BT-chain meanings. STAR-504 = lambda^q*q^lambda*Phi_6 = E_6 first coeff = Macbeath Aut = PSL(2,8). Hurwitz curves tower at g=3,7,14,17 all substrate-clean. Klein quartic saturates at g = q."
+}

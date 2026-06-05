@@ -1,0 +1,95 @@
+{
+  "lie_dim_table_at_substrate_ranks": [
+    {
+      "n": 2,
+      "name": "lambda",
+      "A_n": 8,
+      "B_n": 10,
+      "D_n": 6,
+      "note": "2^q oct"
+    },
+    {
+      "n": 3,
+      "name": "q",
+      "A_n": 15,
+      "B_n": 21,
+      "D_n": 15,
+      "note": "g_neg / T_6 / g_neg"
+    },
+    {
+      "n": 4,
+      "name": "mu",
+      "A_n": 24,
+      "B_n": 36,
+      "D_n": 28,
+      "note": "f / 36 / mu*Phi_6"
+    },
+    {
+      "n": 5,
+      "name": "F_5",
+      "A_n": 35,
+      "B_n": 55,
+      "D_n": 45,
+      "note": "F_5*Phi_6 / 55 / q^2*F_5"
+    }
+  ],
+  "star_identities": [
+    "dim A_mu = f = 24 (sl(5) = SU(5) GUT adjoint)",
+    "dim B_q = T_6 = 21 (so(7) on octonion-imag)",
+    "dim D_mu = mu * Phi_6 = 28 (so(8) triality)"
+  ],
+  "su5_gut_identity": {
+    "rank": 4,
+    "dim": 24,
+    "group": "SU(F_5) = SU(5) Georgi-Glashow GUT",
+    "contains": "SU(q) x SU(lambda) x U(1) = SU(3) x SU(2) x U(1)"
+  },
+  "full_substrate_table": [
+    {
+      "name": "A_lambda=su(3)",
+      "dim": 8,
+      "substrate": "2^q (octonion dim)"
+    },
+    {
+      "name": "A_q=su(4)",
+      "dim": 15,
+      "substrate": "g_neg (substrate primitive)"
+    },
+    {
+      "name": "A_mu=su(5)",
+      "dim": 24,
+      "substrate": "f = W(3,3) pos eigenmult = SU(5) GUT"
+    },
+    {
+      "name": "B_lambda=so(5)",
+      "dim": 10,
+      "substrate": "Phi_4 = |V(Petersen)|"
+    },
+    {
+      "name": "B_q=so(7)",
+      "dim": 21,
+      "substrate": "T_6 = |E(Heawood)| = octonion triples"
+    },
+    {
+      "name": "B_mu=so(9)",
+      "dim": 36,
+      "substrate": "36 = q^lambda * mu"
+    },
+    {
+      "name": "D_q=so(6)~A_3",
+      "dim": 15,
+      "substrate": "g_neg"
+    },
+    {
+      "name": "D_mu=so(8)",
+      "dim": 28,
+      "substrate": "mu * Phi_6 (TRIALITY)"
+    },
+    {
+      "name": "D_F_5=so(10)",
+      "dim": 45,
+      "substrate": "q^lambda * F_5 = 45 (next-GUT)"
+    }
+  ],
+  "conclusion": "Classical Lie algebra dims at substrate-primitive ranks are substrate-clean. STAR: A_mu = sl(5) has dim f = 24 = adjoint of SU(5) GUT with rank mu (spacetime!). B_q = so(7) has dim T_6 = Heawood E. D_mu = so(8) has dim mu*Phi_6 with triality (BT280). The substrate equips its rank-mu Lie algebra with adjoint dim = W(3,3) pos eigenmult, doubling as Georgi-Glashow GUT. SO(10) GUT at rank F_5 has dim q^lambda*F_5 = 45."
+}

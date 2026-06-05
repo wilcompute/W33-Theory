@@ -1,0 +1,119 @@
+{
+  "quaternion_algebra": {
+    "dim_R": 4,
+    "dim_substrate": "mu = spacetime",
+    "imag_dim": 3,
+    "imag_substrate": "q = color"
+  },
+  "SU2_parameters": [
+    {
+      "name": "dim",
+      "value": 3,
+      "substrate": "q (color)"
+    },
+    {
+      "name": "rank",
+      "value": 1,
+      "substrate": "1"
+    },
+    {
+      "name": "Weyl order",
+      "value": 2,
+      "substrate": "lambda (sign primitive!)"
+    },
+    {
+      "name": "roots",
+      "value": 2,
+      "substrate": "lambda"
+    },
+    {
+      "name": "fund rep dim",
+      "value": 2,
+      "substrate": "lambda (spin-1/2)"
+    },
+    {
+      "name": "adjoint dim",
+      "value": 3,
+      "substrate": "q"
+    },
+    {
+      "name": "Coxeter num",
+      "value": 2,
+      "substrate": "lambda"
+    },
+    {
+      "name": "center",
+      "value": 2,
+      "substrate": "Z/lambda"
+    }
+  ],
+  "star_identities": [
+    "dim SU(2) = q = 3",
+    "|Weyl(SU(2))| = lambda = 2",
+    "dim H = mu = spacetime",
+    "spin-1/2 rep dim = lambda = fundamental fermion DOF"
+  ],
+  "hypercomplex_table": [
+    {
+      "alg": "R",
+      "dim": 1,
+      "Lie": "trivial",
+      "Lie_dim": 0,
+      "imag": 0
+    },
+    {
+      "alg": "C",
+      "dim": 2,
+      "Lie": "U(1)",
+      "Lie_dim": 1,
+      "imag": 1
+    },
+    {
+      "alg": "H",
+      "dim": 4,
+      "Lie": "SU(2)",
+      "Lie_dim": 3,
+      "imag": 3
+    },
+    {
+      "alg": "O",
+      "dim": 8,
+      "Lie": "G_2",
+      "Lie_dim": 14,
+      "imag": 7
+    }
+  ],
+  "lie_spine_tower": [
+    {
+      "name": "SU(2)",
+      "dim": 3,
+      "substrate": "q (color)"
+    },
+    {
+      "name": "G_2",
+      "dim": 14,
+      "substrate": "lambda*Phi_6 (BT287)"
+    },
+    {
+      "name": "F_4",
+      "dim": 52,
+      "substrate": "(24-cell symmetry, BT280)"
+    },
+    {
+      "name": "E_6",
+      "dim": 78,
+      "substrate": "Sp(4, F_3) = W(E_6)"
+    },
+    {
+      "name": "E_7",
+      "dim": 133,
+      "substrate": "fund rep dim = 56 = V(KQ), BT285"
+    },
+    {
+      "name": "E_8",
+      "dim": 248,
+      "substrate": "248 roots = 240 = E_8 roots + 8"
+    }
+  ],
+  "conclusion": "SU(2)/quaternion substrate spine mirrors BT287 G_2/octonion. Quaternion algebra H has dim mu = SPACETIME and imag dim q = COLOR. SU(2) = Aut(imag H) has dim q, |Weyl| = lambda, spin-1/2 rep dim = lambda. Lie-spine tower SU(2) -> G_2 -> F_4 -> E_6 -> E_7 -> E_8 has each step at substrate-natural scale. Fundamental fermion DOF count = lambda."
+}
