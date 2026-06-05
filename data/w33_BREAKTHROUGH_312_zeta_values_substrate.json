@@ -1,0 +1,71 @@
+{
+  "positive_even_zeta": [
+    {
+      "n": 2,
+      "formula": "pi^2 / 6",
+      "denom": 6,
+      "substrate": "q!"
+    },
+    {
+      "n": 4,
+      "formula": "pi^4 / 90",
+      "denom": 90,
+      "substrate": "lambda * q^lambda * F_5"
+    },
+    {
+      "n": 6,
+      "formula": "pi^6 / 945",
+      "denom": 945,
+      "substrate": "q^q * F_5 * Phi_6  (3 substrate primitives)"
+    },
+    {
+      "n": 8,
+      "formula": "pi^8 / 9450",
+      "denom": 9450,
+      "substrate": "lambda * q^q * F_5^lambda * Phi_6"
+    }
+  ],
+  "negative_odd_zeta": [
+    {
+      "n": -1,
+      "denom": 12,
+      "substrate": "k = substrate valency"
+    },
+    {
+      "n": -3,
+      "denom": 120,
+      "substrate": "F_5! (substrate factorial)"
+    },
+    {
+      "n": -5,
+      "denom": 252,
+      "substrate": "tau(q) = Ramanujan tau (BT295)"
+    },
+    {
+      "n": -7,
+      "denom": 240,
+      "substrate": "|E_8 root| (6th substrate-240 occurrence)"
+    },
+    {
+      "n": -9,
+      "denom": 132,
+      "substrate": "|blocks S(5,6,12)| (BT304)"
+    }
+  ],
+  "star_identities": [
+    "zeta(2) = pi^2 / q!",
+    "zeta(6) = pi^6 / (q^q * F_5 * Phi_6)",
+    "zeta(-1) = -1/k (substrate valency)",
+    "zeta(-7) = 1/|E_8 root| (6th substrate-240)"
+  ],
+  "six_substrate_240_occurrences": [
+    "|E_8 root system| (BT79)",
+    "J-homomorphism image at pi_(2^q-1)^S (BT291)",
+    "AAPC total messages on Q_mu (BT283)",
+    "E_4 modular form first coefficient (BT295)",
+    "K_(2^q-1)(Z) torsion order (BT311)",
+    "zeta(-7) denominator (BT312)"
+  ],
+  "apery_remark": "zeta(q) = Apery's irrational; boundary at substrate color",
+  "conclusion": "Riemann zeta values are substrate-clean: zeta(2) = pi^2/q!, zeta(6) = pi^6/(q^q*F_5*Phi_6), zeta(-1) = -1/k (substrate valency), zeta(-5) = -1/tau(q), zeta(-7) = 1/|E_8 root| (6th substrate-240). Famous sum 1+2+3+... = -1/k by Ramanujan summation."
+}

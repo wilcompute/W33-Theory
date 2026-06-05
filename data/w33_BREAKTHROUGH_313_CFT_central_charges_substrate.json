@@ -1,0 +1,55 @@
+{
+  "minimal_model_tower": [
+    {
+      "p": 2,
+      "name": "lambda",
+      "model": "trivial",
+      "c": "0",
+      "substrate": "0 = lambda^0"
+    },
+    {
+      "p": 3,
+      "name": "q",
+      "model": "ISING",
+      "c": "1/2",
+      "substrate": "1/lambda"
+    },
+    {
+      "p": 4,
+      "name": "mu",
+      "model": "tri-Ising",
+      "c": "7/10",
+      "substrate": "Phi_6 / Phi_4"
+    },
+    {
+      "p": 5,
+      "name": "F_5",
+      "model": "3-state Potts",
+      "c": "4/5",
+      "substrate": "mu / F_5"
+    },
+    {
+      "p": 6,
+      "name": "q!",
+      "model": "tetracritical",
+      "c": "6/7",
+      "substrate": "q! / Phi_6"
+    },
+    {
+      "p": 7,
+      "name": "Phi_6",
+      "model": "pentacritical",
+      "c": "25/28",
+      "substrate": "25/28 = F_5^2 / (lambda*lambda*Phi_6)"
+    }
+  ],
+  "star_identities": [
+    "c(Ising at p=q) = 1/lambda",
+    "c(tri-Ising at p=mu) = Phi_6/Phi_4",
+    "c(3-Potts at p=F_5) = mu/F_5",
+    "c(SUSY at p=q) = Phi_6/Phi_4 (= tri-Ising)",
+    "c(SU(2)_q WZW) = q^lambda/F_5"
+  ],
+  "ising_indices": "Ising = M(q, mu) with c = 1/lambda",
+  "conclusion": "CFT minimal-model central charges at substrate p = q, mu, F_5, q!, Phi_6 give substrate-primitive ratios (1/lambda, Phi_6/Phi_4, mu/F_5, q!/Phi_6). Ising = M(q, mu) at substrate color, central charge = 1/lambda. SUSY at p = q matches bosonic tri-critical. WZW SU(2)_q = q^lambda/F_5."
+}

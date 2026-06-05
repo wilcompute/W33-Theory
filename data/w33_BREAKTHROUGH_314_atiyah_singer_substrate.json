@@ -1,0 +1,23 @@
+{
+  "a_roof_genus_at_dim_mu": "-p_1 / f (where f = 24 = W(3,3) pos eigenmult)",
+  "f_24_occurrences_count": 14,
+  "f_24_occurrences": [
+    "Bose-Mesner positive eigenmult of W(3,3) (BT79, BT158)",
+    "Leech lattice rank (BT296)",
+    "D_4 root count (BT79)",
+    "24-cell vertex count (BT280)",
+    "F_4 long/short root count each (BT293)",
+    "dim sl(F_5) = SU(5) GUT adjoint (BT290)",
+    "Klein quartic face count (BT285)",
+    "Delta = q * eta^24 exponent (BT295)",
+    "Niemeier lattice count (BT296)",
+    "binary Golay G_24 length (BT303)",
+    "A-roof genus denominator at dim mu (BT314 here)",
+    "Dedekind eta shift exponent q^(1/24)",
+    "Rokhlin sign (sign mod 16 -> mod lambda^mu related)",
+    "1+2+3+... = -1/12 -> doubled to f"
+  ],
+  "rokhlin_substrate": "Spin 4-mfd signature == 0 mod lambda^mu",
+  "gauss_bonnet_substrate": "Normalizations involve lambda, pi, 2^q at substrate dims",
+  "conclusion": "Atiyah-Singer index theorem at substrate spacetime dim mu = 4 has A-roof genus coefficient -p_1/f, where f = 24 = W(3,3) positive eigenmult. This is the 14th BT-chain occurrence of f. Rokhlin mod-16 = mod-|V(Q_mu)|. Gauss-Bonnet normalizations substrate-clean at substrate dims."
+}
