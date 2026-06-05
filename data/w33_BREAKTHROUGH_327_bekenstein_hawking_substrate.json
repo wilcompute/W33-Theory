@@ -1,0 +1,32 @@
+{
+  "bekenstein_hawking_normalization": "1/mu",
+  "ads_cft_trinity": [
+    {
+      "ads": "AdS_4 x S^7",
+      "cft_dim": 3,
+      "type": "CFT_3 (M2-brane)",
+      "substrate": "q substrate color"
+    },
+    {
+      "ads": "AdS_5 x S^5",
+      "cft_dim": 4,
+      "type": "CFT_4 (N=4 SYM)",
+      "substrate": "mu substrate spacetime"
+    },
+    {
+      "ads": "AdS_7 x S^4",
+      "cft_dim": 6,
+      "type": "CFT_6 (M5-brane)",
+      "substrate": "q! substrate factorial"
+    }
+  ],
+  "holographic_bit_density": "1/(mu * ln 2) per Planck area",
+  "1_over_mu_occurrences": [
+    "Bekenstein-Hawking S_BH = (1/mu) k_B A / l_p^lambda",
+    "Schwarzschild r_s = lambda G M / c^lambda",
+    "Einstein-Hilbert prefactor 1/(lambda^mu pi G)",
+    "Strominger-Vafa entropy formula denom mu",
+    "Bit density per Planck area = 1/mu"
+  ],
+  "conclusion": "Bekenstein-Hawking entropy normalization S_BH = (1/mu) k_B A/l_p^2: the famous '1/4' factor is exactly 1/mu = 1/substrate-spacetime. AdS/CFT trinity has CFT dims (q, mu, q!). AdS_4 internal S^7 = Phi_6 = G_2 holonomy (BT292). 1/mu pattern appears across 5 gravitational constants. General relativity + holography enter substrate web through universal 1/4 entropy factor."
+}

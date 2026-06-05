@@ -1,0 +1,58 @@
+{
+  "dyson_3_fold_way": [
+    {
+      "ensemble": "GOE",
+      "beta": 1,
+      "algebra": "R (real symmetric)",
+      "group": "O(N) orthogonal"
+    },
+    {
+      "ensemble": "GUE",
+      "beta": 2,
+      "algebra": "C (complex Hermitian)",
+      "group": "U(N) unitary"
+    },
+    {
+      "ensemble": "GSE",
+      "beta": 4,
+      "algebra": "H (quaternion self-dual)",
+      "group": "Sp(N) symplectic"
+    }
+  ],
+  "altland_zirnbauer_count": 10,
+  "altland_zirnbauer_substrate": "Phi_4 = |V(Petersen)|",
+  "gue_moments_catalan": [
+    {
+      "M_2k": 2,
+      "k": 1,
+      "C_k": 1,
+      "substrate": "1"
+    },
+    {
+      "M_2k": 4,
+      "k": 2,
+      "C_k": 2,
+      "substrate": "lambda"
+    },
+    {
+      "M_2k": 6,
+      "k": 3,
+      "C_k": 5,
+      "substrate": "F_5"
+    },
+    {
+      "M_2k": 8,
+      "k": 4,
+      "C_k": 14,
+      "substrate": "lambda*Phi_6 = |V(Heawood)|"
+    },
+    {
+      "M_2k": 10,
+      "k": 5,
+      "C_k": 42,
+      "substrate": "lambda*q*Phi_6 = HURWITZ RECIP"
+    }
+  ],
+  "riemann_zeta_zeros": "GUE statistics (Montgomery-Odlyzko)",
+  "conclusion": "RMT substrate-clean: Dyson 3-fold way at beta in {1, lambda, mu} = q ensembles. AZ 10-fold = Phi_4 = |V(Petersen)|. GUE 2k-th moment = Catalan C_k (BT306 link). Riemann zeta zeros statistics = GUE (substrate's second Dyson ensemble). Beta = dim of associative normed division algebra (R, C, H)."
+}

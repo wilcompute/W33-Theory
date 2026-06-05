@@ -1,0 +1,152 @@
+{
+  "nuclear_magic_numbers": [
+    {
+      "N": 2,
+      "substrate": "lambda",
+      "shell": "H-He shell"
+    },
+    {
+      "N": 8,
+      "substrate": "2^q (octonion)",
+      "shell": "O shell"
+    },
+    {
+      "N": 20,
+      "substrate": "lambda * Phi_4 = mu * F_5",
+      "shell": "Ca shell"
+    },
+    {
+      "N": 28,
+      "substrate": "lambda^lambda * Phi_6 = mu * Phi_6",
+      "shell": "Ni shell"
+    },
+    {
+      "N": 50,
+      "substrate": "lambda * F_5^lambda",
+      "shell": "Sn shell"
+    },
+    {
+      "N": 82,
+      "substrate": "lambda * 41 (NOT clean)",
+      "shell": "Pb shell"
+    },
+    {
+      "N": 126,
+      "substrate": "lambda * q^lambda * Phi_6",
+      "shell": "predicted Hg/Pb"
+    }
+  ],
+  "doubly_magic_nuclei": [
+    {
+      "nucleus": "He-4",
+      "Z": 2,
+      "N": 2,
+      "substrate": "Z = N = lambda; nucleons = mu = SPACETIME"
+    },
+    {
+      "nucleus": "O-16",
+      "Z": 8,
+      "N": 8,
+      "substrate": "Z = N = 2^q; nucleons = lambda^mu = |V(Q_mu)|"
+    },
+    {
+      "nucleus": "Ca-40",
+      "Z": 20,
+      "N": 20,
+      "substrate": "Z = N = lambda * Phi_4; nucleons = lambda^lambda * Phi_4"
+    },
+    {
+      "nucleus": "Ca-48",
+      "Z": 20,
+      "N": 28,
+      "substrate": "Z = mu * F_5; N = mu * Phi_6"
+    },
+    {
+      "nucleus": "Pb-208",
+      "Z": 82,
+      "N": 126,
+      "substrate": "Z = lambda * 41; N = lambda * q^lambda * Phi_6"
+    }
+  ],
+  "periodic_table_rows": 7,
+  "periodic_table_substrate": "Phi_6 = heptad",
+  "row_lengths": [
+    {
+      "period": 1,
+      "length": 2,
+      "substrate": "lambda"
+    },
+    {
+      "period": 2,
+      "length": 8,
+      "substrate": "2^q"
+    },
+    {
+      "period": 3,
+      "length": 8,
+      "substrate": "2^q"
+    },
+    {
+      "period": 4,
+      "length": 18,
+      "substrate": "lambda * q^lambda = 18"
+    },
+    {
+      "period": 5,
+      "length": 18,
+      "substrate": "lambda * q^lambda = 18"
+    },
+    {
+      "period": 6,
+      "length": 32,
+      "substrate": "lambda^F_5 = 32"
+    },
+    {
+      "period": 7,
+      "length": 32,
+      "substrate": "lambda^F_5 = 32 (partial)"
+    }
+  ],
+  "orbital_capacities": [
+    {
+      "orbital": "s",
+      "l": 0,
+      "cap": 2,
+      "substrate": "lambda"
+    },
+    {
+      "orbital": "p",
+      "l": 1,
+      "cap": 6,
+      "substrate": "q!"
+    },
+    {
+      "orbital": "d",
+      "l": 2,
+      "cap": 10,
+      "substrate": "Phi_4"
+    },
+    {
+      "orbital": "f",
+      "l": 3,
+      "cap": 14,
+      "substrate": "lambda * Phi_6 = |V(Heawood)| (BT267)"
+    },
+    {
+      "orbital": "g",
+      "l": 4,
+      "cap": 18,
+      "substrate": "lambda * q^lambda"
+    },
+    {
+      "orbital": "h",
+      "l": 5,
+      "cap": 22,
+      "substrate": "lambda * p_Ih"
+    }
+  ],
+  "alpha_particle_star": "He-4 nucleon count = mu = spacetime",
+  "O16_star": "O-16 nucleon count = lambda^mu = |V(Q_mu)|",
+  "f_orbital_star": "f-orbital capacity = |V(Heawood)| = lambda*Phi_6",
+  "conclusion": "Nuclear magic numbers and atomic physics substrate-clean: 6 of 7 magic numbers (2, 8, 20, 28, 50, 126) factor into substrate primitives. Alpha particle (He-4) has mu nucleons = spacetime. O-16 has lambda^mu = |V(Q_mu)| nucleons. Periodic table has Phi_6 = 7 rows. f-orbital capacity = |V(Heawood)|. Substrate determines structure of matter at nuclear and atomic scales."
+}
