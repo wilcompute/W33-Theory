@@ -1,0 +1,132 @@
+{
+  "modular_forms_table": [
+    {
+      "weight": 0,
+      "dim": 1,
+      "forms": "constants"
+    },
+    {
+      "weight": 4,
+      "dim": 1,
+      "forms": "E_4 (coef 240 = |E_8 root|)"
+    },
+    {
+      "weight": 6,
+      "dim": 1,
+      "forms": "E_6 (coef 504 = Macbeath BT289)"
+    },
+    {
+      "weight": 8,
+      "dim": 1,
+      "forms": "E_4^2 (coef 480 = lambda*240)"
+    },
+    {
+      "weight": 10,
+      "dim": 1,
+      "forms": "E_4*E_6"
+    },
+    {
+      "weight": 12,
+      "dim": 2,
+      "forms": "E_12 + Delta = q * eta^f  ***k = SUBSTRATE VALENCY***"
+    },
+    {
+      "weight": 14,
+      "dim": 1,
+      "forms": ""
+    },
+    {
+      "weight": 16,
+      "dim": 2,
+      "forms": ""
+    },
+    {
+      "weight": 18,
+      "dim": 2,
+      "forms": ""
+    },
+    {
+      "weight": 20,
+      "dim": 2,
+      "forms": ""
+    },
+    {
+      "weight": 24,
+      "dim": 3,
+      "forms": "contains Delta^2"
+    }
+  ],
+  "delta_eta_24": {
+    "formula": "Delta = q * eta^24 = q * eta^f",
+    "f": 24,
+    "substrate": "f = W(3,3) positive eigenmult"
+  },
+  "ramanujan_tau": [
+    {
+      "n": 1,
+      "tau": 1,
+      "substrate": "trivial"
+    },
+    {
+      "n": 2,
+      "tau": -24,
+      "substrate": "-f (NEW Ramanujan at lambda)"
+    },
+    {
+      "n": 3,
+      "tau": 252,
+      "substrate": "lambda^lambda * q^lambda * Phi_6 = 4*9*7 (STAR)"
+    },
+    {
+      "n": 4,
+      "tau": -1472,
+      "substrate": "compound"
+    },
+    {
+      "n": 5,
+      "tau": 4830,
+      "substrate": "lambda * q * F_5 * p_Ih * Phi_3 = 2*3*5*7*23 (close)"
+    },
+    {
+      "n": 7,
+      "tau": -16744,
+      "substrate": "compound"
+    }
+  ],
+  "eisenstein_coefs": [
+    {
+      "weight": 4,
+      "coef": 240,
+      "substrate": "lambda^mu * F_5 * q = |E_8 root system|"
+    },
+    {
+      "weight": 6,
+      "coef": 504,
+      "substrate": "lambda^q * q^lambda * Phi_6 = Macbeath (BT289)"
+    },
+    {
+      "weight": 8,
+      "coef": 480,
+      "substrate": "lambda * 240"
+    }
+  ],
+  "k12_substrate_meanings": [
+    "substrate valency (edges per vertex of W(3,3) point graph)",
+    "smallest weight where modular cusp form exists (Delta)",
+    "|E(Q_q)| (octonion-cube edges, BT266)",
+    "|Weyl(G_2)| (BT287)",
+    "Coxeter number F_4 (BT293)"
+  ],
+  "f24_substrate_meanings": [
+    "W(3,3) positive eigenmult",
+    "Leech rank",
+    "D_4 roots",
+    "Delta exponent",
+    "F_4 long/short roots",
+    "SU(5) GUT dim",
+    "24-cell vertex count",
+    "Klein quartic faces",
+    "knight tour density"
+  ],
+  "conclusion": "Modular forms space dim jumps at k = 12 = substrate valency, where first cusp form Delta = q*eta^24 = q*eta^f appears. Ramanujan tau substrate: tau(lambda) = -f, tau(q) = lambda^lambda*q^lambda*Phi_6 = 252. Eisenstein coefs: 240 = E_8 root, 504 = Macbeath (BT289), 480 = lambda*240. k=12 has 5 BT-chain meanings; f=24 has 9 BT-chain meanings, making them the substrate's two deepest multi-way constants."
+}

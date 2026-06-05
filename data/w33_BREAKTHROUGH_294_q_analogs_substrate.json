@@ -1,0 +1,56 @@
+{
+  "q_analog_tower_at_q_eq_3": [
+    {
+      "n": 1,
+      "value": 1,
+      "substrate": "1 (trivial)"
+    },
+    {
+      "n": 2,
+      "value": 4,
+      "substrate": "4 = mu (SPACETIME)"
+    },
+    {
+      "n": 3,
+      "value": 13,
+      "substrate": "13 = Phi_3"
+    },
+    {
+      "n": 4,
+      "value": 40,
+      "substrate": "40 = |V(W(3,3))| (STAR!)"
+    },
+    {
+      "n": 5,
+      "value": 121,
+      "substrate": "121 = p_Ih^2 (icosahedron prime squared)"
+    },
+    {
+      "n": 6,
+      "value": 364,
+      "substrate": "364 = lambda^lambda * Phi_6 * Phi_3"
+    },
+    {
+      "n": 7,
+      "value": 1093,
+      "substrate": "1093 = W_1 (FIRST WIEFERICH!)"
+    },
+    {
+      "n": 8,
+      "value": 3280,
+      "substrate": "3280 (compound substrate)"
+    }
+  ],
+  "star_identities": [
+    "[mu]_q = |V(W(3,3))| = 40 = |PG(mu-1, q)|",
+    "[Phi_6]_q = W_1 = 1093 = first Wieferich prime",
+    "[F_5]_q = p_Ih^2 = 121"
+  ],
+  "W33_as_projective_GQ": {
+    "points": 40,
+    "lines": 40,
+    "per_line": 4,
+    "self_dual": true
+  },
+  "conclusion": "q-analog [n]_q at q = substrate q yields substrate-clean integers. STAR: [mu]_q = |V(W(3,3))| = 40 = |PG(mu-1, q)| -- the substrate's point set is the q-analog of spacetime at color. STAR2: [Phi_6]_q = W_1 = 1093 = first Wieferich prime. [F_5]_q = p_Ih^2. The substrate's underlying GQ is the projective q-space at q-dim with mu cells per line."
+}

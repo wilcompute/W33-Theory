@@ -1,0 +1,88 @@
+{
+  "niemeier_count": {
+    "value": 24,
+    "substrate": "f = W(3,3) pos eigenmult"
+  },
+  "highlight_niemeiers": [
+    {
+      "root_system": "D_16 + E_8",
+      "roots": 480,
+      "substrate_note": "240 = lambda * E_8 root"
+    },
+    {
+      "root_system": "A_11+D_7+E_6",
+      "roots": 288,
+      "substrate_note": "84 = k*Phi_6 = Klein quartic (BT285)"
+    },
+    {
+      "root_system": "A_9^2 + D_6",
+      "roots": 240,
+      "substrate_note": "60 = mu*g_neg = C_60 V (BT284)"
+    },
+    {
+      "root_system": "A_6^4",
+      "roots": 168,
+      "substrate_note": "= Aut(Fano) = Aut(KQ) (BT285)"
+    },
+    {
+      "root_system": "A_5^4 + D_4",
+      "roots": 144,
+      "substrate_note": "120 = F_5! = Aut(Petersen) (BT279) + 24 = f"
+    },
+    {
+      "root_system": "A_1^24",
+      "roots": 48,
+      "substrate_note": "48 = lambda * f, 24 = f"
+    },
+    {
+      "root_system": "(no roots) = LEECH",
+      "roots": 0,
+      "substrate_note": "kissing # = mu*q^q*F_5*Phi_6*Phi_3"
+    }
+  ],
+  "leech_parameters": {
+    "rank": 24,
+    "min_norm_sq": 4,
+    "kissing_number": 196560,
+    "kissing_substrate": "2^mu * q^q * F_5 * Phi_6 * Phi_3 = 16 * 27 * 5 * 7 * 13",
+    "five_substrate_primes": [
+      "2^mu",
+      "q^q",
+      "F_5",
+      "Phi_6",
+      "Phi_3"
+    ]
+  },
+  "co_0_exponent_pattern": {
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      23
+    ],
+    "exponents": [
+      22,
+      9,
+      4,
+      2,
+      1,
+      1,
+      1
+    ],
+    "substrate": [
+      "lambda*p_Ih",
+      "q^lambda",
+      "mu",
+      "lambda",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "theta_leech_modular_weight": 12,
+  "leech_unique_no_root_niemeier": true,
+  "conclusion": "Niemeier lattice count = ambient rank = f = 24. Leech kissing # = 2^mu * q^q * F_5 * Phi_6 * Phi_3 = 196560 (five substrate primes). Theta_Leech is weight-k = 12 modular form, matching BT295's Delta. |Co_0| exponent vector (22,9,4,2,1,1,1) = substrate exponents. Several Niemeiers have BT-chain cross-links: A_6^4 = Aut(Fano), A_9^2+D_6 = C_60, A_11+D_7+E_6 = Klein quartic edges."
+}
