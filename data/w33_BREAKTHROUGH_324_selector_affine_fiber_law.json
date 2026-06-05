@@ -1,0 +1,1642 @@
+{
+  "architectural_reading": "BT323's two four-state selector fibers are the two linear projections from the even Q4 half F2^3 onto the direction plane F2^2.  The four members inside each fiber are the four translations.  All eight maps factor through the same diagonal kernel <111>, so the live route state is the quotient F2^3/<111>, not the raw eight even vertices.",
+  "boundary": "This is a finite Q4/K8,8 selector theorem derived from BT323.  The external prime-router and AI-router repositories remain heuristic language sources only; no external result is used as a proof input.",
+  "breakthrough": 324,
+  "checks": {
+    "all_affine_maps_have_common_diagonal_kernel": true,
+    "all_affine_maps_have_rank_2": true,
+    "all_selector_direction_maps_are_affine": true,
+    "all_selector_outputs_cover_even_subspace": true,
+    "bt323_disjointness_graph_is_equal_linear_part_graph": true,
+    "bt323_selector_count_is_8": true,
+    "bt323_two_overlap_graph_is_different_linear_part_graph": true,
+    "diagonal_kernel_has_size_2": true,
+    "different_linear_part_pairs_are_exactly_16": true,
+    "different_linear_part_pairs_have_two_edges": true,
+    "direction_labeling_is_F2_square": true,
+    "each_linear_part_has_four_translations": true,
+    "each_selector_hits_all_four_coordinate_directions_on_quotient": true,
+    "each_selector_is_constant_on_kernel_cosets": true,
+    "equal_linear_part_pairs_are_disjoint": true,
+    "equal_linear_part_pairs_are_exactly_12": true,
+    "even_basis_spans_the_even_Q4_half": true,
+    "kernel_quotient_has_four_cosets": true,
+    "linear_part_fibers_match_BT323_disjointness_components": true,
+    "selector_orbit_is_two_linear_parts_times_four_translations": true,
+    "there_are_exactly_two_linear_parts": true
+  },
+  "direction_plane": {
+    "1": [
+      0,
+      0
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "4": [
+      0,
+      1
+    ],
+    "8": [
+      1,
+      1
+    ]
+  },
+  "even_subspace_model": {
+    "basis_words": [
+      3,
+      5,
+      9
+    ],
+    "common_kernel": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "kernel_cosets": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    ],
+    "word_to_coord": {
+      "0": [
+        0,
+        0,
+        0
+      ],
+      "10": [
+        1,
+        0,
+        1
+      ],
+      "12": [
+        0,
+        1,
+        1
+      ],
+      "15": [
+        1,
+        1,
+        1
+      ],
+      "3": [
+        1,
+        0,
+        0
+      ],
+      "5": [
+        0,
+        1,
+        0
+      ],
+      "6": [
+        1,
+        1,
+        0
+      ],
+      "9": [
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "linear_part_fibers": {
+    "linear_0": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "linear_1": [
+      1,
+      2,
+      4,
+      7
+    ]
+  },
+  "n_verified": 21,
+  "pair_intersection_explanation": {
+    "different_linear_part_intersection_size": 2,
+    "different_linear_part_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "disjointness_graph_from_linear_parts": {
+      "0": [
+        3,
+        5,
+        6
+      ],
+      "1": [
+        2,
+        4,
+        7
+      ],
+      "2": [
+        1,
+        4,
+        7
+      ],
+      "3": [
+        0,
+        5,
+        6
+      ],
+      "4": [
+        1,
+        2,
+        7
+      ],
+      "5": [
+        0,
+        3,
+        6
+      ],
+      "6": [
+        0,
+        3,
+        5
+      ],
+      "7": [
+        1,
+        2,
+        4
+      ]
+    },
+    "equal_linear_part_intersection_size": 0,
+    "equal_linear_part_pairs": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "two_overlap_graph_from_linear_parts": {
+      "0": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "1": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "2": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "3": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "4": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "5": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "6": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "7": [
+        0,
+        3,
+        5,
+        6
+      ]
+    }
+  },
+  "selector_rows": [
+    {
+      "bt323_disjointness_fiber": 0,
+      "direction_outputs": {
+        "000": [
+          1,
+          1
+        ],
+        "001": [
+          1,
+          0
+        ],
+        "010": [
+          0,
+          1
+        ],
+        "011": [
+          0,
+          0
+        ],
+        "100": [
+          0,
+          0
+        ],
+        "101": [
+          0,
+          1
+        ],
+        "110": [
+          1,
+          0
+        ],
+        "111": [
+          1,
+          1
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "linear_part_id": "linear_0",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        }
+      ],
+      "rank": 2,
+      "selector_index": 0,
+      "translation": [
+        1,
+        1
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 1,
+      "direction_outputs": {
+        "000": [
+          1,
+          1
+        ],
+        "001": [
+          0,
+          1
+        ],
+        "010": [
+          0,
+          0
+        ],
+        "011": [
+          1,
+          0
+        ],
+        "100": [
+          1,
+          0
+        ],
+        "101": [
+          0,
+          0
+        ],
+        "110": [
+          0,
+          1
+        ],
+        "111": [
+          1,
+          1
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "linear_part_id": "linear_1",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        }
+      ],
+      "rank": 2,
+      "selector_index": 1,
+      "translation": [
+        1,
+        1
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 1,
+      "direction_outputs": {
+        "000": [
+          0,
+          1
+        ],
+        "001": [
+          1,
+          1
+        ],
+        "010": [
+          1,
+          0
+        ],
+        "011": [
+          0,
+          0
+        ],
+        "100": [
+          0,
+          0
+        ],
+        "101": [
+          1,
+          0
+        ],
+        "110": [
+          1,
+          1
+        ],
+        "111": [
+          0,
+          1
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "linear_part_id": "linear_1",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        }
+      ],
+      "rank": 2,
+      "selector_index": 2,
+      "translation": [
+        0,
+        1
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 0,
+      "direction_outputs": {
+        "000": [
+          0,
+          1
+        ],
+        "001": [
+          0,
+          0
+        ],
+        "010": [
+          1,
+          1
+        ],
+        "011": [
+          1,
+          0
+        ],
+        "100": [
+          1,
+          0
+        ],
+        "101": [
+          1,
+          1
+        ],
+        "110": [
+          0,
+          0
+        ],
+        "111": [
+          0,
+          1
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "linear_part_id": "linear_0",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        }
+      ],
+      "rank": 2,
+      "selector_index": 3,
+      "translation": [
+        0,
+        1
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 1,
+      "direction_outputs": {
+        "000": [
+          1,
+          0
+        ],
+        "001": [
+          0,
+          0
+        ],
+        "010": [
+          0,
+          1
+        ],
+        "011": [
+          1,
+          1
+        ],
+        "100": [
+          1,
+          1
+        ],
+        "101": [
+          0,
+          1
+        ],
+        "110": [
+          0,
+          0
+        ],
+        "111": [
+          1,
+          0
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "linear_part_id": "linear_1",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        }
+      ],
+      "rank": 2,
+      "selector_index": 4,
+      "translation": [
+        1,
+        0
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 0,
+      "direction_outputs": {
+        "000": [
+          1,
+          0
+        ],
+        "001": [
+          1,
+          1
+        ],
+        "010": [
+          0,
+          0
+        ],
+        "011": [
+          0,
+          1
+        ],
+        "100": [
+          0,
+          1
+        ],
+        "101": [
+          0,
+          0
+        ],
+        "110": [
+          1,
+          1
+        ],
+        "111": [
+          1,
+          0
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "linear_part_id": "linear_0",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        }
+      ],
+      "rank": 2,
+      "selector_index": 5,
+      "translation": [
+        1,
+        0
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 0,
+      "direction_outputs": {
+        "000": [
+          0,
+          0
+        ],
+        "001": [
+          0,
+          1
+        ],
+        "010": [
+          1,
+          0
+        ],
+        "011": [
+          1,
+          1
+        ],
+        "100": [
+          1,
+          1
+        ],
+        "101": [
+          1,
+          0
+        ],
+        "110": [
+          0,
+          1
+        ],
+        "111": [
+          0,
+          0
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "linear_part_id": "linear_0",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        }
+      ],
+      "rank": 2,
+      "selector_index": 6,
+      "translation": [
+        0,
+        0
+      ]
+    },
+    {
+      "bt323_disjointness_fiber": 1,
+      "direction_outputs": {
+        "000": [
+          0,
+          0
+        ],
+        "001": [
+          1,
+          0
+        ],
+        "010": [
+          1,
+          1
+        ],
+        "011": [
+          0,
+          1
+        ],
+        "100": [
+          0,
+          1
+        ],
+        "101": [
+          1,
+          1
+        ],
+        "110": [
+          1,
+          0
+        ],
+        "111": [
+          0,
+          0
+        ]
+      },
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "linear_columns": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "linear_part_id": "linear_1",
+      "quotient_routes": [
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "direction_label": [
+            0,
+            0
+          ],
+          "direction_word": 1
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "direction_label": [
+            1,
+            0
+          ],
+          "direction_word": 2
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "direction_label": [
+            1,
+            1
+          ],
+          "direction_word": 8
+        },
+        {
+          "constant_on_coset": true,
+          "coset": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "direction_label": [
+            0,
+            1
+          ],
+          "direction_word": 4
+        }
+      ],
+      "rank": 2,
+      "selector_index": 7,
+      "translation": [
+        0,
+        0
+      ]
+    }
+  ],
+  "source": "Derived from BT323 q4_pullback_matching rows",
+  "title": "Selector affine fiber law",
+  "translations_by_linear_part": {
+    "linear_0": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "linear_1": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  }
+}
