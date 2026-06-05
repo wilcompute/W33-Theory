@@ -1,0 +1,403 @@
+{
+  "architectural_reading": "The missing BT276 orientation is a real finite gauge, not a loose label choice. Fixing the now cap and the three temporal axes leaves two Fano completions and 24 now-fixing isomorphisms for each, hence 48 = mu*k total lifts. This is exactly the BT272 selector stabilizer. Under every lift, the BT275 q!-cycle traverses the three temporal axes twice, (a,b,c,a,b,c), so the self-entangled qutrit clock is a two-lap q-axis sweep modulo a 48-element Fano/octonion gauge.",
+  "axis_sequence_distribution": [
+    {
+      "axis_sequence": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        2,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "count": 8
+    }
+  ],
+  "boundary": "This identifies the residual orientation gauge. It does not yet pick one lift from the 48; that should require an additional sign, holonomy, or octonion multiplication convention.",
+  "breakthrough": 277,
+  "checks": {
+    "axis_sequence_orbit_has_qfactorial_patterns": true,
+    "axis_sequences_are_double_q_laps": true,
+    "bt172_has_q_now_axes": true,
+    "bt275_cycle_is_the_moving_cycle": true,
+    "completion_count_is_lambda": true,
+    "each_axis_sequence_has_two_to_q_lifts": true,
+    "each_completion_has_seven_lines": true,
+    "each_now_axis_has_now_plus_two_peripheral_points": true,
+    "maps_per_completion_are_24": true,
+    "peripheral_points_are_six": true,
+    "total_orientation_gauge_is_mu_k": true,
+    "total_orientation_gauge_matches_bt272_stabilizer": true,
+    "unit_fano_has_seven_lines": true
+  },
+  "completion_count": 2,
+  "completions": [
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        41,
+        44
+      ],
+      [
+        1,
+        3,
+        44
+      ],
+      [
+        1,
+        4,
+        41
+      ],
+      [
+        2,
+        3,
+        41
+      ],
+      [
+        2,
+        4,
+        44
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        41,
+        44
+      ],
+      [
+        1,
+        2,
+        41
+      ],
+      [
+        1,
+        3,
+        44
+      ],
+      [
+        2,
+        4,
+        44
+      ],
+      [
+        3,
+        4,
+        41
+      ]
+    ]
+  ],
+  "maps_by_completion": {
+    "0": 24,
+    "1": 24
+  },
+  "n_verified": 13,
+  "now_axes": [
+    [
+      0,
+      41,
+      44
+    ],
+    [
+      1,
+      3,
+      44
+    ],
+    [
+      2,
+      4,
+      44
+    ]
+  ],
+  "now_point": 44,
+  "orientation_gauge_size": 48,
+  "peripheral_pairs": [
+    [
+      0,
+      41
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "sample_maps": [
+    {
+      "axis_sequence": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 4,
+        "12": 41,
+        "15": 44,
+        "3": 0,
+        "5": 2,
+        "6": 1,
+        "9": 3
+      }
+    },
+    {
+      "axis_sequence": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 3,
+        "12": 41,
+        "15": 44,
+        "3": 0,
+        "5": 1,
+        "6": 2,
+        "9": 4
+      }
+    },
+    {
+      "axis_sequence": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 2,
+        "12": 41,
+        "15": 44,
+        "3": 0,
+        "5": 4,
+        "6": 3,
+        "9": 1
+      }
+    },
+    {
+      "axis_sequence": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 1,
+        "12": 41,
+        "15": 44,
+        "3": 0,
+        "5": 3,
+        "6": 4,
+        "9": 2
+      }
+    },
+    {
+      "axis_sequence": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 4,
+        "12": 3,
+        "15": 44,
+        "3": 1,
+        "5": 2,
+        "6": 0,
+        "9": 41
+      }
+    },
+    {
+      "axis_sequence": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 41,
+        "12": 3,
+        "15": 44,
+        "3": 1,
+        "5": 0,
+        "6": 2,
+        "9": 4
+      }
+    },
+    {
+      "axis_sequence": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 0,
+        "12": 3,
+        "15": 44,
+        "3": 1,
+        "5": 41,
+        "6": 4,
+        "9": 2
+      }
+    },
+    {
+      "axis_sequence": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "completion_index": 0,
+      "mapping": {
+        "10": 2,
+        "12": 3,
+        "15": 44,
+        "3": 1,
+        "5": 4,
+        "6": 41,
+        "9": 0
+      }
+    }
+  ],
+  "title": "Fano orientation gauge stabilizer",
+  "unit_fano_lines": [
+    [
+      3,
+      5,
+      6
+    ],
+    [
+      3,
+      9,
+      10
+    ],
+    [
+      3,
+      12,
+      15
+    ],
+    [
+      5,
+      9,
+      12
+    ],
+    [
+      5,
+      10,
+      15
+    ],
+    [
+      6,
+      9,
+      15
+    ],
+    [
+      6,
+      10,
+      12
+    ]
+  ]
+}
