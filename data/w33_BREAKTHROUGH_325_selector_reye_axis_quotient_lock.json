@@ -1,0 +1,507 @@
+{
+  "architectural_reading": "The selector sheets are the Reye axis parity sheets.  BT324's common <111> kernel quotient is exactly the four pointwise-fixed even axes from BT321, while the BT323 cross-fiber K4,4 is the BT321 Reye quotient graph.  Pairing selectors with the same BT324 translation selects the coordinate-1 perfect matching in that K4,4; in the BT324 direction plane this is the zero label 00.  This is the exact finite now-pivot statement, not a continuum retrocausality claim.",
+  "axis_model": {
+    "axes": [
+      [
+        0,
+        15
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "axis_label_coords": {
+      "0": [
+        0,
+        0,
+        0
+      ],
+      "1": [
+        1,
+        0,
+        0
+      ],
+      "2": [
+        0,
+        1,
+        0
+      ],
+      "3": [
+        1,
+        1,
+        0
+      ],
+      "4": [
+        0,
+        0,
+        1
+      ],
+      "5": [
+        1,
+        0,
+        1
+      ],
+      "6": [
+        0,
+        1,
+        1
+      ],
+      "7": [
+        1,
+        1,
+        1
+      ]
+    },
+    "even_pointwise_fixed_axes": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "odd_endpoint_swapped_axes": [
+      1,
+      2,
+      4,
+      7
+    ]
+  },
+  "boundary": "This packet identifies finite selector/axis/quotient structure.  It does not assert a physical arrow of time; it only proves which Q4 coordinate matching synchronizes the two selector sheets.",
+  "breakthrough": 325,
+  "checks": {
+    "bt321_and_bt324_checks_pass": true,
+    "bt321_axis_parity_matches_endpoint_action": true,
+    "bt323_disjoint_graph_is_axis_parity_clique_complement": true,
+    "bt323_two_overlap_graph_is_bt321_reye_quotient_graph": true,
+    "bt324_kernel_cosets_are_bt321_even_axes": true,
+    "bt324_linear_fibers_are_bt321_axis_parity_sheets": true,
+    "coordinate_1_now_matching_has_zero_direction_label": true,
+    "cross_fiber_edges_split_into_four_perfect_matchings": true,
+    "eight_antipodal_axes_label_F2_3": true,
+    "now_matching_is_perfect_between_axis_sheets": true,
+    "q4_lift_bits_match_axis_xor_generators": true,
+    "reye_quotient_is_K4_4_between_even_and_odd_axes": true,
+    "same_translation_pairs_are_coordinate_1_now_matching": true,
+    "translation_groups_pair_even_and_odd_axes": true
+  },
+  "coordinate_matching_decomposition": {
+    "axis_xor_to_edges": {
+      "1": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "2": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "4": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "7": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "axis_xor_to_q4_lift_bit": {
+      "1": [
+        1
+      ],
+      "2": [
+        2
+      ],
+      "4": [
+        4
+      ],
+      "7": [
+        8
+      ]
+    },
+    "now_axis_xor": 1,
+    "now_direction_label": [
+      0,
+      0
+    ],
+    "now_q4_lift_bit": 1,
+    "same_translation_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "translation_groups": {
+      "00": [
+        6,
+        7
+      ],
+      "01": [
+        2,
+        3
+      ],
+      "10": [
+        4,
+        5
+      ],
+      "11": [
+        0,
+        1
+      ]
+    }
+  },
+  "graph_lock": {
+    "bt324_disjoint_edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "bt324_two_overlap_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "reye_quotient_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "reye_quotient_graph": {
+      "0": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "1": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "2": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "3": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "4": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "5": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "6": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "7": [
+        0,
+        3,
+        5,
+        6
+      ]
+    }
+  },
+  "n_verified": 14,
+  "selector_axis_lock": {
+    "kernel_coset_axis_indices": [
+      0,
+      6,
+      5,
+      3
+    ],
+    "kernel_cosets_are_even_axes": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "linear_part_fibers": {
+      "linear_0": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "linear_1": [
+        1,
+        2,
+        4,
+        7
+      ]
+    }
+  },
+  "title": "Selector/Reye axis quotient lock"
+}
