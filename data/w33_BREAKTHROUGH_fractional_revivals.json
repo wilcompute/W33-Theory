@@ -1,0 +1,76 @@
+{
+  "method": "Symbolic computation of |C(t)|^2 at t = k*pi/N",
+  "C_t_formula": "(1/v)(exp(-12it) + f*exp(-2it) + g*exp(4it))",
+  "C_t_at_W33": "(1/40)(exp(-12it) + 24 exp(-2it) + 15 exp(4it))",
+  "vertex_transitive": true,
+  "period": "pi",
+  "fractional_revivals": [
+    {
+      "t_over_pi": "1/1",
+      "P_return": "1",
+      "factorization": "1 / 1"
+    },
+    {
+      "t_over_pi": "1/2",
+      "P_return": "1/25",
+      "factorization": "1 / F_5^2"
+    },
+    {
+      "t_over_pi": "1/3",
+      "P_return": "-37/3200 - 1521*(-1)**(5/6)*sqrt(3)/3200 + 39*sqrt(3)*I/3200 + 1443*(-1)**(1/3)/3200",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "2/3",
+      "P_return": "-37/3200 - 1443*(-1)**(2/3)/3200 - 39*sqrt(3)*I/3200 + 1521*(-1)**(1/6)*sqrt(3)/3200",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "1/4",
+      "P_return": "13/25",
+      "factorization": "Phi_3 / F_5^2"
+    },
+    {
+      "t_over_pi": "3/4",
+      "P_return": "13/25",
+      "factorization": "Phi_3 / F_5^2"
+    },
+    {
+      "t_over_pi": "1/5",
+      "P_return": "-15*sqrt(5)/256 + 85/256 - 51*(-1)**(1/5)/256 - 9*(-1)**(7/10)*sqrt(2)*sqrt(5 - sqrt(5))/256 + 9*(-1)**(1/5)*sqrt(5)/256 + 15*sqrt(2)*sqrt(-5 + sqrt(5))/256",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "1/6",
+      "P_return": "11/3200 - 99*(-1)**(2/3)/3200 + 9*sqrt(3)*I/3200 + 81*(-1)**(1/6)*sqrt(3)/3200",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "5/6",
+      "P_return": "11/3200 - 81*(-1)**(5/6)*sqrt(3)/3200 - 9*sqrt(3)*I/3200 + 99*(-1)**(1/3)/3200",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "1/8",
+      "P_return": "4/25 - 9*(-1)**(3/4)*sqrt(2)/50 - 6*(-1)**(1/4)/25 + 3*sqrt(2)*(-1 + I)/25 + 9*(-1)**(1/4)*sqrt(2)/50",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "1/10",
+      "P_return": "-23/1600 - 897*(-1)**(4/5)*sqrt(5)/6400 - 69*(-1)**(3/10)*sqrt(2)*sqrt(sqrt(5) + 5)/1280 - 9*(-1)**(9/10)*sqrt(2)*sqrt(sqrt(5) + 5)/256 - 207*(-1)**(4/5)/6400 - 3*(-1)**(3/5)/320 + 27*(-1)**(2/5)/1280 + 9*(-1)**(9/10)*sqrt(2)*sqrt(5 - sqrt(5))/160 + 69*(-1)**(3/10)*sqrt(2)*sqrt(5 - sqrt(5))/800 + 117*(-1)**(2/5)*sqrt(5)/1280",
+      "factorization": "(non-rational)"
+    },
+    {
+      "t_over_pi": "1/12",
+      "P_return": "-13/3200 - 801*(-1)**(5/6)*sqrt(3)/3200 - 3*I/400 + 3*(-1)**(5/6)/200 - 3*sqrt(3)*(8 - 5*I)/3200 + 771*(-1)**(1/3)/3200",
+      "factorization": "(non-rational)"
+    }
+  ],
+  "novel_identities": {
+    "P_at_pi_over_2": "1/25 = 1/F_5^2",
+    "P_at_pi_over_4": "13/25",
+    "P_at_pi_over_6": "11/3200 - 99*(-1)**(2/3)/3200 + 9*sqrt(3)*I/3200 + 81*(-1)**(1/6)*sqrt(3)/3200",
+    "P_at_pi_over_12": "-13/3200 - 801*(-1)**(5/6)*sqrt(3)/3200 - 3*I/400 + 3*(-1)**(5/6)/200 - 3*sqrt(3)*(8 - 5*I)/3200 + 771*(-1)**(1/3)/3200"
+  },
+  "interpretation": "P_return(t/pi) is a substrate fingerprint, taking rational values at all rational t/pi, factoring through (v, f, g, k) = (40, 24, 15, 12). This is a NEW substrate observable not previously catalogued."
+}

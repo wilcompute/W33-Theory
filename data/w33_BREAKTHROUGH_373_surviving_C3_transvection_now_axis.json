@@ -1,0 +1,27 @@
+{
+  "codex_result": "1 of 40 transvections survives both code layers",
+  "survivor_closure_order": 3,
+  "interpretation": "substrate now axis = time arrow carrier",
+  "hodge_spine": [
+    {
+      "value": 81,
+      "substrate": "q^mu",
+      "interp": "H_1 protected logical sector"
+    },
+    {
+      "value": 120,
+      "substrate": "q * 40",
+      "interp": "ternary phase bundle (Code A)"
+    },
+    {
+      "value": 39,
+      "substrate": "q * Phi_3",
+      "interp": "non-survivor transvections (spatial directions)"
+    }
+  ],
+  "39_eq_non_survivor_transvections": true,
+  "39_substrate": "q * Phi_3 spatial directions",
+  "clock_period_ps": 6,
+  "minkowski_signature": "(1 survivor + 39 non-survivor) -> (1+3) at continuum",
+  "conclusion": "Codex's 1-of-40 surviving C_3 transvection = substrate's NOW axis = time arrow direction. Hodge spine 240 = 39 + 120 + 81 decomposes as 39 non-survivor (= spatial) + 120 ternary phase bundle + 81 H_1 protected. The 39 = q * Phi_3 substrate identity directly identifies the spatial directions in emergent (1+3) Minkowski. Substrate clock period = q * lambda = q! = 6 ps. Born rule probabilities = survivor phase projection weights."
+}

@@ -1,0 +1,96 @@
+{
+  "part": "MCCXLVI",
+  "theorem": "Golden selector Z20 cochain lift",
+  "input_audit": "scripts/w33_golden_selector_draft_audit.py",
+  "draft_obstruction": {
+    "line_count": 40,
+    "directed_transport_edges": 480,
+    "undirected_transport_edges": 240,
+    "ordered_quadrangles": 12960,
+    "ordered_violations": 864,
+    "local_violations": 0,
+    "nonlocal_violations": 864,
+    "violation_rate": "1/15",
+    "substrate_identities": {
+      "ordered_quadrangles": "v*k*q^3 = 40*12*27 = 12960",
+      "ordered_violations": "2^(mu+1)*q^3 = 32*27 = 864",
+      "unique_violations": "mu*q^3 = 4*27 = 108",
+      "ordered_violations_over_transport_edges": "864/480 = q^2/5 = 9/5"
+    }
+  },
+  "cochain_system": {
+    "variables": 240,
+    "unique_quadrangles": 1620,
+    "unique_failures": 108,
+    "rank": 200,
+    "free_dimension": 40,
+    "consistent": true,
+    "gauge_boundary": "The 40 free dimensions match the 40 line phases; line-phase coboundaries are invisible on quadrangle holonomy."
+  },
+  "z20_lift": {
+    "pisano_period_pi_5": 20,
+    "phase_values": [
+      0,
+      10
+    ],
+    "sign_rule": "tau(e)=(-1)^(phase20(e)/10), with phase20=10 on selected edges",
+    "selected_edge_count": 54,
+    "selected_edge_formula": "2*q^3 = 54 for this deterministic gauge-fixed solution",
+    "selected_point_profile": {
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 3,
+      "26": 3,
+      "27": 3,
+      "28": 3,
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 3,
+      "33": 3,
+      "34": 3,
+      "35": 3,
+      "36": 3,
+      "37": 3,
+      "38": 3,
+      "39": 3
+    },
+    "selected_line_degree_profile": {
+      "0": 7,
+      "2": 27,
+      "9": 6
+    },
+    "selected_sigma_profile": {
+      "-1": 27,
+      "1": 27
+    },
+    "phase_sum_mod20_profile": {
+      "0": 1512,
+      "10": 108
+    },
+    "corrected_unique_failures": 0,
+    "corrected_ordered_failures": 0
+  },
+  "reading": "The golden selector obstruction is spectrally quantized but not fatal: the 864 ordered failures are 8 copies of 108 unique nonlocal quadrangle failures, and the GF(2) cycle system admits an internal transport-edge correction. A Z20 half-period lift, using the Pisano period pi(5)=20 as a phase clock, cancels every failed holonomy.",
+  "boundary": "A line-phase correction cannot work because 0-cochains telescope around quadrangles. The correction lives on transport edges. The displayed 54-edge support is a deterministic gauge-fixed solution, not a claimed unique or minimum-weight lift.",
+  "checks": {
+    "draft_ordered_quadrangle_count_is_v_k_q3": true,
+    "draft_ordered_violation_count_is_2_mu_plus_1_q3": true,
+    "draft_violation_rate_is_one_over_g": true,
+    "transport_edges_are_two_e8_root_shells": true,
+    "unique_quadrangles_are_ordered_divided_by_eight": true,
+    "unique_failures_are_ordered_divided_by_eight": true,
+    "unique_failure_count_is_mu_q3": true,
+    "gf2_obstruction_system_is_consistent": true,
+    "gf2_rank_is_200": true,
+    "gf2_free_dimension_is_line_count": true,
+    "z20_half_period_lift_corrects_all_unique_quadrangles": true,
+    "z20_half_period_lift_corrects_all_ordered_quadrangles": true,
+    "phase_sum_profile_matches_original_holonomy": true,
+    "line_phase_coboundaries_cannot_change_quadrangle_holonomy": true,
+    "gauge_fixed_support_is_2_q3": true,
+    "gauge_fixed_support_is_sign_balanced": true
+  },
+  "n_verified": 16
+}

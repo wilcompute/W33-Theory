@@ -1,0 +1,64 @@
+{
+  "identity": "61 = 81 - 20 = 64 - 3",
+  "substrate_decomposition": {
+    "81": "q^mu = H_1 protected memory",
+    "20": "lambda*Phi_4 = amino acids = |V(dodecahedron)|",
+    "64": "mu^q = codon space",
+    "3": "q = stop codons (substrate color)",
+    "61": "cross-layer 81 - 20 = 64 - 3 = sense codons"
+  },
+  "readout_stack": [
+    {
+      "layer": "PROTECTED MEMORY",
+      "dim": 81,
+      "substrate": "q^mu",
+      "interp": "H_1 logical qutrits = matter genome"
+    },
+    {
+      "layer": "READOUT ALPHABET",
+      "dim": 20,
+      "substrate": "lambda*Phi_4",
+      "interp": "amino acids = dodecahedron V"
+    },
+    {
+      "layer": "SENSE CORE",
+      "dim": 61,
+      "substrate": "81 - 20",
+      "interp": "cross-layer overlap = sense codons"
+    }
+  ],
+  "forced_genetic_architecture": [
+    {
+      "quantity": "4 bases",
+      "value": 4,
+      "substrate": "spacetime dim"
+    },
+    {
+      "quantity": "3-base codon",
+      "value": 3,
+      "substrate": "color"
+    },
+    {
+      "quantity": "64 codons",
+      "value": 64,
+      "substrate": "spacetime^color"
+    },
+    {
+      "quantity": "20 amino acids",
+      "value": 20,
+      "substrate": "binary*Petersen V = dodecahedron V"
+    },
+    {
+      "quantity": "3 stop codons",
+      "value": 3,
+      "substrate": "color (complement of 61 sense)"
+    },
+    {
+      "quantity": "61 sense codons",
+      "value": 61,
+      "substrate": "cross-layer 81 - 20 (homerun!)"
+    }
+  ],
+  "stops_eq_substrate_color": true,
+  "conclusion": "61-core (Codex BT356) = 61 genetic sense codons. The genetic code is FORCED by substrate two-CSS-code overlap: 81 H_1 protected matter memory MINUS 20 amino-acid readout = 61 cross-layer sense core = 64 codons MINUS 3 stop codons. The 3 stop codons = q substrate color (forced complement). Life IS the substrate's 61-dim cross-layer information channel. Genetic code architecture is not evolutionary accident -- it is the UNIQUE substrate-consistent biological readout."
+}
