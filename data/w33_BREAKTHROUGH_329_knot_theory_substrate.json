@@ -1,0 +1,54 @@
+{
+  "smallest_knots": [
+    {
+      "crossings": 0,
+      "count": 1,
+      "substrate": "unknot (trivial)"
+    },
+    {
+      "crossings": 3,
+      "count": 1,
+      "substrate": "trefoil 3_1 (substrate COLOR crossings!)"
+    },
+    {
+      "crossings": 4,
+      "count": 1,
+      "substrate": "figure-eight 4_1 (substrate SPACETIME crossings!)"
+    },
+    {
+      "crossings": 5,
+      "count": 2,
+      "substrate": "5_1, 5_2 (substrate NEXT PRIME crossings)"
+    },
+    {
+      "crossings": 6,
+      "count": 3,
+      "substrate": "6_1, 6_2, 6_3 (substrate FACTORIAL crossings)"
+    },
+    {
+      "crossings": 7,
+      "count": 7,
+      "substrate": "seven knots = Phi_6 (substrate HEPTAD!)"
+    },
+    {
+      "crossings": 8,
+      "count": 21,
+      "substrate": "21 = T_6 knots (substrate triples)"
+    }
+  ],
+  "trefoil": {
+    "crossings": 3,
+    "braid": "(sigma_1)^q in B_lambda",
+    "jones": "-q^mu + q^q + q",
+    "coloring": 3,
+    "torus": "T(lambda, q)"
+  },
+  "figure_eight": {
+    "crossings": 4,
+    "braid": "(sigma_1 sigma_2^-1)^lambda in B_q",
+    "coloring": 5,
+    "amphichiral": true
+  },
+  "phi_6_knots_at_phi_6_crossings": true,
+  "conclusion": "Knot theory substrate-clean: trefoil = q-crossing, figure-eight = mu-crossing knot. Jones polynomial of trefoil has substrate-primitive coefficient degrees (mu, q, 1). Trefoil q-colorable, figure-eight F_5-colorable. Knot counts at substrate crossings = substrate primitives (Phi_6 knots at Phi_6 crossings, T_6 at 2^q). Trefoil = T(lambda, q) torus knot."
+}

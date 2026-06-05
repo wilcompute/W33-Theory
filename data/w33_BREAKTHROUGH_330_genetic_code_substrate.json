@@ -1,0 +1,75 @@
+{
+  "genetic_parameters": [
+    {
+      "name": "Nucleotide bases",
+      "value": 4,
+      "substrate": "mu (SPACETIME!)"
+    },
+    {
+      "name": "Codon length",
+      "value": 3,
+      "substrate": "q (COLOR!)"
+    },
+    {
+      "name": "Total codons",
+      "value": 64,
+      "substrate": "mu^q = 4^3 = 64"
+    },
+    {
+      "name": "Standard amino acids",
+      "value": 20,
+      "substrate": "lambda * Phi_4 = mu * F_5 = 20"
+    },
+    {
+      "name": "Stop codons",
+      "value": 3,
+      "substrate": "q = 3"
+    },
+    {
+      "name": "Start codons",
+      "value": 1,
+      "substrate": "1 = lambda^0 (AUG)"
+    },
+    {
+      "name": "Encoded AA total (Sec, Pyl)",
+      "value": 22,
+      "substrate": "lambda * p_Ih = 22"
+    }
+  ],
+  "star_identities": [
+    "Bases = mu (spacetime)",
+    "Codon length = q (color)",
+    "Codons = mu^q = 64",
+    "Amino acids = lambda * Phi_4 = 20 = |V(dodecahedron)|",
+    "Stop codons = q"
+  ],
+  "codon_degeneracies": [
+    {
+      "codons_per_AA": 1,
+      "num_AAs": 2,
+      "examples": "Met, Trp"
+    },
+    {
+      "codons_per_AA": 2,
+      "num_AAs": 9,
+      "examples": "Phe, Tyr, His, etc."
+    },
+    {
+      "codons_per_AA": 3,
+      "num_AAs": 1,
+      "examples": "Ile"
+    },
+    {
+      "codons_per_AA": 4,
+      "num_AAs": 5,
+      "examples": "Pro, Thr, Ala, Val, Gly"
+    },
+    {
+      "codons_per_AA": 6,
+      "num_AAs": 3,
+      "examples": "Leu, Ser, Arg"
+    }
+  ],
+  "platonic_cross_link": "20 amino acids = |V(dodecahedron)| (BT318)",
+  "conclusion": "Genetic code substrate-clean: 4 bases = mu (spacetime), 3-base codons = q (color), 64 codons = mu^q, 20 amino acids = lambda*Phi_4 = |V(dodecahedron)|. Codon degeneracies cover first 5 substrate primitives. The fundamental constants of life are substrate primitives -- the substrate may be the alphabet for both physical and biological structure."
+}

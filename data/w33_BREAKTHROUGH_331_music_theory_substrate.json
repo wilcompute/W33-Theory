@@ -1,0 +1,81 @@
+{
+  "12_tet_parameters": {
+    "semitones": 12,
+    "semitones_substrate": "k = substrate valency",
+    "white_keys": 7,
+    "black_keys": 5,
+    "k_equals_phi6_plus_F5": true
+  },
+  "pure_intervals": [
+    {
+      "name": "Octave",
+      "ratio": "lambda",
+      "substrate": "substrate sign"
+    },
+    {
+      "name": "Fifth",
+      "ratio": "q / lambda",
+      "substrate": "color / sign"
+    },
+    {
+      "name": "Fourth",
+      "ratio": "mu / q",
+      "substrate": "spacetime / color"
+    },
+    {
+      "name": "Major 3rd",
+      "ratio": "F_5 / mu",
+      "substrate": "next prime / spacetime"
+    },
+    {
+      "name": "Minor 3rd",
+      "ratio": "q! / F_5",
+      "substrate": "factorial / next prime"
+    },
+    {
+      "name": "Major 2nd",
+      "ratio": "q^lambda / 2^q",
+      "substrate": "color^lambda / octonion"
+    }
+  ],
+  "scale_sizes": [
+    {
+      "scale": "triad",
+      "notes": 3,
+      "substrate": "q = color"
+    },
+    {
+      "scale": "tetrad",
+      "notes": 4,
+      "substrate": "mu = spacetime"
+    },
+    {
+      "scale": "pentatonic",
+      "notes": 5,
+      "substrate": "F_5 = next prime"
+    },
+    {
+      "scale": "hexatonic",
+      "notes": 6,
+      "substrate": "q! = factorial"
+    },
+    {
+      "scale": "heptatonic",
+      "notes": 7,
+      "substrate": "Phi_6 = heptad"
+    },
+    {
+      "scale": "octatonic",
+      "notes": 8,
+      "substrate": "2^q = octonion"
+    },
+    {
+      "scale": "chromatic",
+      "notes": 12,
+      "substrate": "k = valency"
+    }
+  ],
+  "modes_count": 7,
+  "solfege_count": 7,
+  "conclusion": "Music theory 12-TET substrate-clean: 12 semitones = k (valency), 7 white = Phi_6, 5 black = F_5, k = Phi_6 + F_5. Pure intervals are ratios of consecutive substrate primitives (octave=lambda, fifth=q/lambda, fourth=mu/q, major 3rd=F_5/mu). Standard scale sizes (triad=q, tetrad=mu, pentatonic=F_5, ..., chromatic=k) ALL substrate primitives. Diatonic modes = Phi_6. The harmonic series IS the substrate primitive ladder."
+}
