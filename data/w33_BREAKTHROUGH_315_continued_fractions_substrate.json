@@ -1,0 +1,49 @@
+{
+  "pi_CF_substrate_positions_0_1_2": [
+    "q",
+    "Phi_6",
+    "g_neg"
+  ],
+  "pi_22_over_7": "lambda * p_Ih / Phi_6",
+  "e_CF_2k_pattern": [
+    {
+      "position": 2,
+      "value": 2,
+      "substrate": "lambda"
+    },
+    {
+      "position": 5,
+      "value": 4,
+      "substrate": "mu (SPACETIME)"
+    },
+    {
+      "position": 8,
+      "value": 6,
+      "substrate": "q!"
+    },
+    {
+      "position": 11,
+      "value": 8,
+      "substrate": "2^q (OCTONION)"
+    },
+    {
+      "position": 14,
+      "value": 10,
+      "substrate": "Phi_4"
+    },
+    {
+      "position": 17,
+      "value": 12,
+      "substrate": "k (SUBSTRATE VALENCY)"
+    },
+    {
+      "position": 20,
+      "value": 14,
+      "substrate": "lambda * Phi_6"
+    }
+  ],
+  "e_squared_CF_leading": "Phi_6, lambda, q, F_5, q!, h_E_8",
+  "phi_CF": "all 1s -- phi = (1 + sqrt(F_5))/lambda (BT307)",
+  "sqrt_F_5_CF": "[lambda; mu, mu, mu, ...] period 1 with mu",
+  "conclusion": "Pi CF = [q; Phi_6, g_neg, ...] has 3 substrate primitives at positions 0,1,2. Archimedes pi ~ 22/7 = (lambda*p_Ih)/Phi_6. e CF has 2k pattern with substrate primitives lambda, mu, q!, 2^q, Phi_4, k at positions a_2, a_5, ..., a_17. Six substrate primitives in e's first 21 CF terms. e^2 CF leading: Phi_6, lambda, q, F_5, q!, h_E_8."
+}

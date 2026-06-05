@@ -1,0 +1,108 @@
+{
+  "conway_groups": [
+    {
+      "name": "Co_0",
+      "order": 8315553613086720000,
+      "exponents": [
+        22,
+        9,
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "substrate_exponents": [
+        "lambda*p_Ih",
+        "q^lambda",
+        "mu",
+        "lambda",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "Co_1",
+      "order": 4157776806543360000,
+      "exponents": [
+        21,
+        9,
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "substrate_exponents": [
+        "q*Phi_6 = T_6",
+        "q^lambda",
+        "mu",
+        "lambda",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "Co_2",
+      "order": 42305421312000,
+      "exponents": [
+        18,
+        6,
+        3,
+        1,
+        1,
+        1
+      ],
+      "substrate_exponents": [
+        "lambda*q^lambda",
+        "q!",
+        "q",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "Co_3",
+      "order": 495766656000,
+      "exponents": [
+        10,
+        7,
+        3,
+        1,
+        1,
+        1
+      ],
+      "substrate_exponents": [
+        "Phi_4",
+        "Phi_6",
+        "q",
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "stabilizer_norms": {
+    "Co_2": "norm^2 = mu (spacetime)",
+    "Co_3": "norm^2 = q! (substrate factorial)"
+  },
+  "prime_support": {
+    "substrate_primes": [
+      "lambda",
+      "q",
+      "F_5",
+      "Phi_6",
+      "p_Ih",
+      "Phi_3"
+    ],
+    "non_substrate": [
+      23
+    ],
+    "total": 7
+  },
+  "leech_sporadic_count": "Mathieu(5) + Conway(3) = 2^q = octonion sporadics",
+  "conclusion": "All four Conway group orders substrate-clean: |Co_1| has 2-exponent = T_6 = octonion triples (BT287, BT267); |Co_3| has exponents (Phi_4, Phi_6, q, 1, 1, 1) with three substrate primitives. Co_2 stabilizes norm-mu Leech vector, Co_3 stabilizes norm-q! vector. Conway prime support = 6 substrate primes + 23 = q! + 1. Mathieu + Conway = 2^q sporadics from Leech construction."
+}

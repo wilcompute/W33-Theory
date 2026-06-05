@@ -1,0 +1,39 @@
+{
+  "day_n_count": "lambda^n (new surreals born day n) = |V(Q_n)|",
+  "day_phi_6_count": "2^Phi_6 = 2-Sylow of |Sp(4, F_q)|",
+  "self_day_named_integers": [
+    {
+      "value": 2,
+      "name": "lambda"
+    },
+    {
+      "value": 3,
+      "name": "q"
+    },
+    {
+      "value": 4,
+      "name": "mu"
+    },
+    {
+      "value": 5,
+      "name": "F_5"
+    },
+    {
+      "value": 6,
+      "name": "q!"
+    },
+    {
+      "value": 7,
+      "name": "Phi_6"
+    }
+  ],
+  "surreal_tree_eq_Q_n_hypercube": true,
+  "nimber_field_characteristic": "lambda",
+  "ordinal_substrate_exponents": [
+    "lambda",
+    "q",
+    "mu",
+    "F_5"
+  ],
+  "conclusion": "Conway surreal numbers have substrate-natural birthday structure: day-n new births = lambda^n = |V(Q_n)| = surreal tree at day n. Substrate primitives lambda, q, mu, F_5, q!, Phi_6 are SELF-DAY-NAMED integers. Day-Phi_6 surreal count = 2-Sylow of |Sp(4, F_q)| = Cl_7 dim. Nimber field has char lambda; addition is XOR over F_lambda. Game theory + surreal foundations join substrate web."
+}
