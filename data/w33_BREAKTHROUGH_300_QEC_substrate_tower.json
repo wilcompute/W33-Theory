@@ -1,0 +1,55 @@
+{
+  "qec_codes": [
+    {
+      "code": "5-qubit (LMPZ)",
+      "n": 5,
+      "k": 1,
+      "d": 3,
+      "stab_count": 4,
+      "note": "minimum perfect QEC"
+    },
+    {
+      "code": "Steane",
+      "n": 7,
+      "k": 1,
+      "d": 3,
+      "stab_count": 6,
+      "note": "CSS from Hamming (BT299)"
+    },
+    {
+      "code": "Shor",
+      "n": 9,
+      "k": 1,
+      "d": 3,
+      "stab_count": 8,
+      "note": "q-fold concatenation"
+    }
+  ],
+  "substrate_lengths": {
+    "5_qubit": "F_5",
+    "steane": "Phi_6 (heptad)",
+    "shor": "q^lambda (qutrit pair)"
+  },
+  "star_identities": [
+    "Three smallest [[n,1,3]] QEC lengths = F_5, Phi_6, q^lambda",
+    "Steane stabilizer count = q!",
+    "Shor = q-fold concatenation of q-qubit repetition",
+    "All three encode k = 1 = lambda^0 logical qubit"
+  ],
+  "qec_embedding_graphs": [
+    {
+      "code": "5-qubit",
+      "graph": "F_5-cycle (pentagon)"
+    },
+    {
+      "code": "Steane",
+      "graph": "Q_q = octonion cube (BT266)"
+    },
+    {
+      "code": "Shor",
+      "graph": "K_q x K_q (qutrit pair)"
+    }
+  ],
+  "milestone": "BT300 -- 300 breakthroughs in the chain",
+  "conclusion": "QEC substrate tower: 5-qubit [[F_5,1,q]], Steane [[Phi_6,1,q]], Shor [[q^lambda,1,q]]. All three smallest [[n,1,3]] quantum codes have length at substrate primitives. Steane stab count = q!. Shor = q-fold concat of q-qubit code. All encode k = lambda^0 logical qubit. QEC qubit graphs are substrate-natural (F_5-cycle, Q_q octonion cube, q x q grid)."
+}

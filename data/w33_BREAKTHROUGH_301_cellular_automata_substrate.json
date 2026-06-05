@@ -1,0 +1,61 @@
+{
+  "eca_parameters": {
+    "neighbourhood": 3,
+    "states": 2,
+    "pattern_space": 8,
+    "rule_space": 256,
+    "wolfram_classes": 4
+  },
+  "interesting_rules": [
+    {
+      "rule": 30,
+      "factor": "lambda * q * F_5 = 2 * 3 * 5",
+      "role": "Wolfram RNG / chaotic"
+    },
+    {
+      "rule": 90,
+      "factor": "lambda * q^lambda * F_5 = 2 * 9 * 5",
+      "role": "Pascal mod 2 (Sierpinski)"
+    },
+    {
+      "rule": 110,
+      "factor": "lambda * F_5 * p_Ih = 2 * 5 * 11",
+      "role": "TURING-COMPLETE (Cook 2004) *** STAR ***"
+    },
+    {
+      "rule": 22,
+      "factor": "lambda * p_Ih = 2 * 11",
+      "role": "Sierpinski variant"
+    },
+    {
+      "rule": 184,
+      "factor": "lambda^q * 23 = 8 * 23",
+      "role": "traffic flow / ASEP"
+    }
+  ],
+  "star_identities": [
+    "Rule 110 (Turing-complete) = lambda * F_5 * p_Ih",
+    "Rule 30 (RNG) = lambda * q * F_5",
+    "Rule 90 (Pascal mod 2) = lambda * q^lambda * F_5"
+  ],
+  "wolfram_classes": [
+    {
+      "class": "I",
+      "desc": "eventually constant"
+    },
+    {
+      "class": "II",
+      "desc": "eventually periodic"
+    },
+    {
+      "class": "III",
+      "desc": "chaotic (rules 30, 90)"
+    },
+    {
+      "class": "IV",
+      "desc": "complex / edge of chaos (rule 110)"
+    }
+  ],
+  "wolfram_class_count_eq_mu": true,
+  "conclusion": "Elementary cellular automata are substrate-natural: q cells, lambda states, lambda^q pattern space, lambda^(2^q) = 256 rules, mu Wolfram behavior classes. Five interesting rules (30, 90, 110, 22, 184) factor in substrate primes. Turing-universal rule 110 = lambda*F_5*p_Ih substrate-clean. ECA is shift dynamics on octonion state space."
+}

@@ -1,0 +1,68 @@
+{
+  "arc_bt269_301_count": 33,
+  "domain_arcs": [
+    {
+      "label": "Geometric / topological",
+      "range": "BT269-271, 282-283"
+    },
+    {
+      "label": "Classical objects",
+      "range": "BT279-281, 284-288, 293"
+    },
+    {
+      "label": "Number theory / modular",
+      "range": "BT289, 294-298"
+    },
+    {
+      "label": "Computational / interconnect",
+      "range": "BT282-283, 286, 299-301"
+    },
+    {
+      "label": "Physics / Lie",
+      "range": "BT290-293"
+    }
+  ],
+  "deepest_constants": {
+    "k_eq_12": "6 BT-chain meanings",
+    "f_eq_24": "11 BT-chain meanings"
+  },
+  "seven_tier_unification": [
+    {
+      "tier": 1,
+      "domain": "Foundational",
+      "examples": "W(3,3), Cl_n, octonion, quaternion, Lie alg"
+    },
+    {
+      "tier": 2,
+      "domain": "Geometric",
+      "examples": "Klein, Cayley, 24-cell, Heawood, Petersen, MK, Q_n, C_60"
+    },
+    {
+      "tier": 3,
+      "domain": "Number-theoretic",
+      "examples": "Hurwitz, Heegner, Wieferich, modular, q-analogs"
+    },
+    {
+      "tier": 4,
+      "domain": "Homotopy / K-theory",
+      "examples": "Bott, parallelizable spheres, J-hom"
+    },
+    {
+      "tier": 5,
+      "domain": "Lie groups",
+      "examples": "SU(2)..E_8, F_4, G_2"
+    },
+    {
+      "tier": 6,
+      "domain": "Computational",
+      "examples": "Hadamard, Hamming, RM, hypercube, QEC, CA"
+    },
+    {
+      "tier": 7,
+      "domain": "Physics",
+      "examples": "SM, GUT, string/M/F, G_2 holonomy, toric code"
+    }
+  ],
+  "version": "v24",
+  "conclusion": "v24 absorbs 33 BTs (269-301) since v23. New star identities include Phi_6=mu+q (Hopf), Klein quartic 5-id at g=q, dim G_2 = |V(Heawood)|, dim H = mu = spacetime, [mu]_q = |V(W(3,3))|, Hamming [Phi_6,mu,q], three QEC at F_5/Phi_6/q^lambda, D_M-mu = Phi_6 G_2 holonomy, Leech kissing = 5 substrate primes, Bott KU=lambda + KO=2^q. The substrate now unifies 7 tiers from foundational algebra through physics, with f and k having 11 and 6 BT-chain meanings respectively."
+}
