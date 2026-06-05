@@ -1,0 +1,842 @@
+{
+  "axis_action": {
+    "axes": [
+      [
+        0,
+        15
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "even_axes_pointwise_fixed": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "odd_axes_endpoint_swapped": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "quotient_action": "identity on all 8 antipodal axes"
+  },
+  "boundary": "This identifies the BT320 complement C2 as a Q4/Reye lift-duality. It does not claim this map alone is the full tomotope automorphism group or the full 24-cell/Reye common-spine symmetry.",
+  "breakthrough": 321,
+  "checks": {
+    "antipodal_axes_count_8": true,
+    "cubical_3faces_count_8": true,
+    "cubical_body_diagonals_are_distance3_pairs": true,
+    "direction_axes_are_even_nonhinge_axes": true,
+    "distance3_pairs_count_32": true,
+    "each_distance3_pair_lies_in_one_cubical_3face": true,
+    "each_quotient_edge_has_four_cross_pairs": true,
+    "each_quotient_edge_has_two_distance3_lifts": true,
+    "each_quotient_edge_has_two_q4_edge_lifts": true,
+    "even_axes_pointwise_fixed_count_4": true,
+    "hinge_neighbors_are_odd_affine_axes": true,
+    "kappa_fixes_every_axis_setwise": true,
+    "kappa_fixes_exactly_even_words": true,
+    "kappa_is_involution_on_vertices": true,
+    "kappa_maps_distance3_diagonals_to_q4_edges": true,
+    "kappa_maps_q4_edges_to_distance3_diagonals": true,
+    "kappa_moves_exactly_odd_words": true,
+    "kappa_preserves_quotient_edge_while_swapping_lift_species": true,
+    "kappa_row_masks_are_bt320_complement": true,
+    "odd_axes_endpoint_swapped_count_4": true,
+    "q4_edges_count_32": true,
+    "quotient_edges_count_16": true,
+    "tomotope_fvector_from_q4_reye_split": true,
+    "vertex_orbit_split_8_fixed_4_pairs": true
+  },
+  "cubical_cell_layer": {
+    "body_diagonals_per_face": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "body_diagonals_total": 32,
+    "cubical_3faces": 8
+  },
+  "kappa": {
+    "formula": "x -> x if wt(x) is even, else 15 xor x",
+    "matrix_description": "J + I over F2",
+    "row_masks": [
+      14,
+      13,
+      11,
+      7
+    ]
+  },
+  "lift_duality": {
+    "distance3_body_diagonals": 32,
+    "per_quotient_edge": "2 Q4 edge lifts + 2 distance-3 cubical body-diagonal lifts",
+    "profiles": {
+      "0-1": {
+        "all_cross_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            1,
+            15
+          ],
+          [
+            14,
+            15
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            0,
+            14
+          ],
+          [
+            1,
+            15
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            0,
+            1
+          ],
+          [
+            14,
+            15
+          ]
+        ]
+      },
+      "0-2": {
+        "all_cross_pairs": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            2,
+            15
+          ],
+          [
+            13,
+            15
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            0,
+            13
+          ],
+          [
+            2,
+            15
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            0,
+            2
+          ],
+          [
+            13,
+            15
+          ]
+        ]
+      },
+      "0-4": {
+        "all_cross_pairs": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            4,
+            15
+          ],
+          [
+            11,
+            15
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            0,
+            11
+          ],
+          [
+            4,
+            15
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            0,
+            4
+          ],
+          [
+            11,
+            15
+          ]
+        ]
+      },
+      "0-7": {
+        "all_cross_pairs": [
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            7,
+            15
+          ],
+          [
+            8,
+            15
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            0,
+            7
+          ],
+          [
+            8,
+            15
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            0,
+            8
+          ],
+          [
+            7,
+            15
+          ]
+        ]
+      },
+      "1-3": {
+        "all_cross_pairs": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            3,
+            14
+          ],
+          [
+            12,
+            14
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            1,
+            12
+          ],
+          [
+            3,
+            14
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            1,
+            3
+          ],
+          [
+            12,
+            14
+          ]
+        ]
+      },
+      "1-5": {
+        "all_cross_pairs": [
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            5,
+            14
+          ],
+          [
+            10,
+            14
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            1,
+            10
+          ],
+          [
+            5,
+            14
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            1,
+            5
+          ],
+          [
+            10,
+            14
+          ]
+        ]
+      },
+      "1-6": {
+        "all_cross_pairs": [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            6,
+            14
+          ],
+          [
+            9,
+            14
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            1,
+            6
+          ],
+          [
+            9,
+            14
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            1,
+            9
+          ],
+          [
+            6,
+            14
+          ]
+        ]
+      },
+      "2-3": {
+        "all_cross_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            13
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            2,
+            3
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      "2-5": {
+        "all_cross_pairs": [
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            10,
+            13
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            2,
+            5
+          ],
+          [
+            10,
+            13
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            2,
+            10
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      "2-6": {
+        "all_cross_pairs": [
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            9,
+            13
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            2,
+            6
+          ],
+          [
+            9,
+            13
+          ]
+        ]
+      },
+      "3-4": {
+        "all_cross_pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            3,
+            4
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            12
+          ]
+        ]
+      },
+      "3-7": {
+        "all_cross_pairs": [
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            3,
+            8
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            3,
+            7
+          ],
+          [
+            8,
+            12
+          ]
+        ]
+      },
+      "4-5": {
+        "all_cross_pairs": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            4,
+            5
+          ],
+          [
+            10,
+            11
+          ]
+        ]
+      },
+      "4-6": {
+        "all_cross_pairs": [
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            4,
+            6
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      },
+      "5-7": {
+        "all_cross_pairs": [
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            5,
+            7
+          ],
+          [
+            8,
+            10
+          ]
+        ]
+      },
+      "6-7": {
+        "all_cross_pairs": [
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "distance3_diagonal_lifts": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "q4_edge_lifts": [
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      }
+    },
+    "q4_edges": 32,
+    "quotient_edges": 16
+  },
+  "n_verified": 24,
+  "title": "Q4/Reye complement lift duality",
+  "tomotope_reye_reading": {
+    "affine_point_axes": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "direction_axes": [
+      3,
+      5,
+      6
+    ],
+    "f_vector": [
+      4,
+      12,
+      16,
+      8
+    ],
+    "hinge_axis": 0,
+    "reading": "The complement involution is invisible on the Reye quotient but nontrivial on the Q4 two-sheet lift: it toggles the four affine point axes and swaps edge lifts with cubical cell-diagonal lifts."
+  },
+  "vertex_action": {
+    "fixed_vertices": [
+      0,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12,
+      15
+    ],
+    "moved_vertices": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      11,
+      13,
+      14
+    ],
+    "orbit_size_distribution": {
+      "1": 8,
+      "2": 4
+    },
+    "orbits": [
+      [
+        0
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        3
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        12
+      ],
+      [
+        15
+      ]
+    ]
+  }
+}
