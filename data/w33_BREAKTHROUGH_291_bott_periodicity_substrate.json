@@ -1,0 +1,88 @@
+{
+  "complex_bott_period": {
+    "value": 2,
+    "substrate": "lambda"
+  },
+  "real_bott_period": {
+    "value": 8,
+    "substrate": "2^q = octonion"
+  },
+  "nonzero_pi_n_O": [
+    0,
+    1,
+    3,
+    7
+  ],
+  "nonzero_eq_parallelizable_dims": true,
+  "stable_homotopy_small_n": [
+    {
+      "group": "pi_0^S",
+      "value": "Z",
+      "substrate": "scalar"
+    },
+    {
+      "group": "pi_1^S",
+      "value": "Z/lambda",
+      "substrate": "sign"
+    },
+    {
+      "group": "pi_2^S",
+      "value": "Z/lambda",
+      "substrate": "sign"
+    },
+    {
+      "group": "pi_3^S",
+      "value": "Z/f",
+      "substrate": "f = W(3,3) pos eigenmult = Leech rank"
+    },
+    {
+      "group": "pi_4^S",
+      "value": "0",
+      "substrate": "vanishing"
+    },
+    {
+      "group": "pi_5^S",
+      "value": "0",
+      "substrate": "vanishing"
+    },
+    {
+      "group": "pi_6^S",
+      "value": "Z/lambda",
+      "substrate": "sign"
+    },
+    {
+      "group": "pi_7^S",
+      "value": "Z/240",
+      "substrate": "240 = |E_8 root system| = J-hom image"
+    }
+  ],
+  "star_identities": [
+    "PERIOD(KU) = lambda",
+    "PERIOD(KO) = 2^q (octonion)",
+    "pi_3^S = Z/f",
+    "pi_(2^q-1)^S = Z/240 = Z/|E_8 root|"
+  ],
+  "four_level_tower": [
+    {
+      "level": "Complex K-theory (KU)",
+      "period": 2,
+      "substrate": "lambda"
+    },
+    {
+      "level": "Real K-theory (KO)",
+      "period": 8,
+      "substrate": "2^q (octonion)"
+    },
+    {
+      "level": "KO of OP^2 (Cayley)",
+      "period": 16,
+      "substrate": "lambda^mu (Cayley plane dim R)"
+    },
+    {
+      "level": "E_8 lattice / J-image",
+      "period": 240,
+      "substrate": "lambda^mu * F_5 * q"
+    }
+  ],
+  "conclusion": "Bott periodicity periods are substrate primitives: KU has period lambda, KO has period 2^q (octonion). pi_3^S = Z/f (Bose-Mesner pos eigenmult); pi_(2^q-1)^S = Z/240 (E_8 root). Nonzero pi_n(O) positions = {0, 1, q, Phi_6} = parallelizable sphere dims. Four-level periodicity tower lambda->2^q->lambda^mu->lambda^mu*F_5*q each multiplies by substrate."
+}

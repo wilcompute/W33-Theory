@@ -1,0 +1,87 @@
+{
+  "cayley_plane_OP2": {
+    "dim_R": 16,
+    "dim_R_substrate": "lambda^mu = |V(Q_mu)|",
+    "dim_O": 2,
+    "euler_char": 3
+  },
+  "F4_parameters": [
+    {
+      "name": "dim",
+      "value": 52,
+      "substrate": "52 = mu * Phi_3"
+    },
+    {
+      "name": "rank",
+      "value": 4,
+      "substrate": "mu (SPACETIME!)"
+    },
+    {
+      "name": "Weyl order",
+      "value": 1152,
+      "substrate": "1152 = 24-cell symmetry (BT280)"
+    },
+    {
+      "name": "long roots",
+      "value": 24,
+      "substrate": "f = W(3,3) pos eigenmult"
+    },
+    {
+      "name": "short roots",
+      "value": 24,
+      "substrate": "f (same)"
+    },
+    {
+      "name": "total roots",
+      "value": 48,
+      "substrate": "lambda * f"
+    },
+    {
+      "name": "Coxeter num.",
+      "value": 12,
+      "substrate": "k = substrate valency"
+    },
+    {
+      "name": "fund rep dim",
+      "value": 26,
+      "substrate": "lambda * Phi_3 = BOSONIC STRING DIM"
+    }
+  ],
+  "star_identities": [
+    "dim OP^2 / R = lambda^mu = |V(Q_mu)|",
+    "rank F_4 = mu (spacetime)",
+    "F_4 long roots = F_4 short roots = f",
+    "Coxeter F_4 = k = Weyl(G_2)",
+    "F_4 fund rep dim = lambda * Phi_3 = bosonic string critical dim"
+  ],
+  "exceptional_ranks_substrate": [
+    {
+      "group": "G_2",
+      "rank": 2,
+      "substrate": "lambda"
+    },
+    {
+      "group": "F_4",
+      "rank": 4,
+      "substrate": "mu (spacetime)"
+    },
+    {
+      "group": "E_6",
+      "rank": 6,
+      "substrate": "= q + q (= lambda*q)"
+    },
+    {
+      "group": "E_7",
+      "rank": 7,
+      "substrate": "Phi_6 (heptad)"
+    },
+    {
+      "group": "E_8",
+      "rank": 8,
+      "substrate": "2^q (octonion!)"
+    }
+  ],
+  "E8_dim_substrate": "248 = 2^q * M_5 (octonion * Mersenne-5)",
+  "octonion_lie_spine_pair": "(G_2 = Aut(O), F_4 = Aut(J_3(O)))",
+  "conclusion": "Cayley plane OP^2 + F_4 complete the octonion Lie spine. dim OP^2/R = lambda^mu = |V(Q_mu)|. F_4 has rank mu (spacetime), long roots = short roots = f, Coxeter = k = Weyl(G_2), fund rep dim = lambda*Phi_3 = bosonic string critical dim (BT292). Exceptional Lie ranks (F_4, E_6, E_7, E_8) = consecutive substrate primitives (mu, 6, Phi_6, 2^q). E_8 dim = 2^q * M_5."
+}

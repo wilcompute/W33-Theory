@@ -1,0 +1,94 @@
+{
+  "critical_dimensions": [
+    {
+      "theory": "Bosonic string",
+      "D": 26,
+      "substrate": "lambda * Phi_3 = 2 * 13"
+    },
+    {
+      "theory": "Superstring",
+      "D": 10,
+      "substrate": "Phi_4 = |V(Petersen)| = dim so(F_5)"
+    },
+    {
+      "theory": "M-theory",
+      "D": 11,
+      "substrate": "p_Ih = icosahedron prime"
+    },
+    {
+      "theory": "F-theory",
+      "D": 12,
+      "substrate": "k = substrate valency = |E(Q_q)| = |Weyl(G_2)|"
+    }
+  ],
+  "differences_substrate": [
+    {
+      "difference": 16,
+      "substrate": "lambda^mu = |V(Q_mu)| (spacetime hypercube)"
+    },
+    {
+      "difference": 15,
+      "substrate": "g_neg = |E(Petersen)| = dim sl(mu)"
+    },
+    {
+      "difference": 7,
+      "substrate": "Phi_6 = G_2 HOLONOMY COMPACTIFICATION (STAR)"
+    },
+    {
+      "difference": 8,
+      "substrate": "2^q = octonion compactification"
+    },
+    {
+      "difference": 6,
+      "substrate": "q! = girth of Heawood (Calabi-Yau-like)"
+    },
+    {
+      "difference": 22,
+      "substrate": "lambda * p_Ih (= 22 = lambda * M-extra)"
+    }
+  ],
+  "star_identities": [
+    "D_M - mu = Phi_6 = G_2 holonomy compactification",
+    "D_bosonic - D_super = lambda^mu",
+    "D_bosonic - D_M = g_neg",
+    "D_F = k = substrate valency"
+  ],
+  "extra_dims_table": [
+    {
+      "theory": "4D physics",
+      "D": 4,
+      "sub_D": "mu (spacetime)",
+      "extra": 0,
+      "sub_extra": ""
+    },
+    {
+      "theory": "Superstring",
+      "D": 10,
+      "sub_D": "Phi_4",
+      "extra": 6,
+      "sub_extra": "q! = girth(Heawood)"
+    },
+    {
+      "theory": "M-theory",
+      "D": 11,
+      "sub_D": "p_Ih",
+      "extra": 7,
+      "sub_extra": "Phi_6 = G_2 holonomy"
+    },
+    {
+      "theory": "F-theory",
+      "D": 12,
+      "sub_D": "k (valency)",
+      "extra": 8,
+      "sub_extra": "2^q (octonion)"
+    },
+    {
+      "theory": "Bosonic",
+      "D": 26,
+      "sub_D": "lambda * Phi_3",
+      "extra": 22,
+      "sub_extra": "lambda * p_Ih"
+    }
+  ],
+  "conclusion": "All four string/M/F/bosonic critical dimensions are substrate primitives: 10=Phi_4, 11=p_Ih, 12=k, 26=lambda*Phi_3. M-theory extra dim = D_M - mu = Phi_6 = G_2 holonomy = octonion-imag (BT287). Extra-dim compactifications all substrate-clean. The substrate's top-tier primitives ARE the critical dimensions of every known unified-theory proposal."
+}
