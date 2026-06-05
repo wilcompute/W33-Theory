@@ -1,0 +1,164 @@
+{
+  "architectural_reading": "BT277's residual 48-element Fano/octonion gauge factors as the six possible q-axis orderings times eight lifts per ordering. Choosing an oriented temporal qutrit frame, e.g. (0,1,2,0,1,2), leaves exactly 8 = 2^q lifts, matching the BT272 Mobius-Kantor selector atlas. The selector atlas is therefore the residual octonion lift set after now cap, axes, and qutrit orientation are fixed.",
+  "axis_sequence_distribution": [
+    {
+      "axis_sequence": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        2,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "count": 8
+    },
+    {
+      "axis_sequence": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "count": 8
+    }
+  ],
+  "boundary": "This reduces 48 to the eight selector lifts. It does not yet choose one selector from those eight; that remaining choice should be a sign, holonomy, or composition-factor condition.",
+  "breakthrough": 278,
+  "bt272_selector_count": 8,
+  "checks": {
+    "axis_sequence_patterns_are_qfactorial": true,
+    "bt272_selector_count_is_2_to_q": true,
+    "bt277_orientation_gauge_is_48": true,
+    "each_axis_sequence_has_2_to_q_lifts": true,
+    "fixing_start_axis_and_negative_orientation_leaves_8": true,
+    "fixing_start_axis_and_positive_orientation_leaves_8": true,
+    "negative_orientation_total_is_24": true,
+    "negative_reversal_orientations_are_three": true,
+    "positive_and_negative_partition_six_sequences": true,
+    "positive_c3_orientations_are_three": true,
+    "positive_orientation_total_is_24": true,
+    "selected_oriented_frame_count_matches_bt272_selectors": true,
+    "selector_stabilizer_factorization_is_qfactorial_times_selectors": true
+  },
+  "factorization": "48 = q! * 2^q = 6 axis orderings * 8 selector lifts",
+  "n_verified": 13,
+  "negative_orientation_lift_count": 24,
+  "negative_reversal_sequences": [
+    [
+      0,
+      2,
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      1,
+      0,
+      2,
+      1,
+      0
+    ]
+  ],
+  "positive_c3_sequences": [
+    [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1,
+      2,
+      0,
+      1
+    ]
+  ],
+  "positive_orientation_lift_count": 24,
+  "selected_negative_axis_sequence": [
+    0,
+    2,
+    1,
+    0,
+    2,
+    1
+  ],
+  "selected_negative_lift_count": 8,
+  "selected_positive_axis_sequence": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    2
+  ],
+  "selected_positive_lift_count": 8,
+  "title": "Oriented qutrit frame selector reduction"
+}
