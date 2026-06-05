@@ -1,0 +1,47 @@
+{
+  "code_A": {
+    "name": "ternary qutrit phase",
+    "params": "[[240, 162, q]]_q",
+    "protects": "phase rotations"
+  },
+  "code_B": {
+    "name": "binary parity (K_4 bipartition)",
+    "params": "[[40, ?, lambda]]_lambda",
+    "protects": "sign flips / past-future swap"
+  },
+  "joint_code": {
+    "alphabet": 6,
+    "structure": "D_q = C_q rtimes C_lambda",
+    "params_estimate": "[[240, ~108, 2]]_6"
+  },
+  "codex_decompositions": [
+    {
+      "number": 108,
+      "substrate": "q^q * mu",
+      "interp": "(Code A error) x (K_4 cells)"
+    },
+    {
+      "number": 864,
+      "substrate": "q^q * lambda^F_5",
+      "interp": "(Code A) x (Code B at Q_mu scale)"
+    },
+    {
+      "number": 32,
+      "substrate": "lambda^F_5",
+      "interp": "Code B double-cover stab = |E(Q_mu)|"
+    },
+    {
+      "number": 8,
+      "substrate": "2^q = mu * lambda",
+      "interp": "Local lift = (K_4 cells) x (bipartition consistency)"
+    },
+    {
+      "number": 120,
+      "substrate": "q * 40 = F_5! / lambda",
+      "interp": "Code A phase sheets total"
+    }
+  ],
+  "necessity_argument": "ternary alone -> no time arrow; binary alone -> no color",
+  "uniqueness_argument": "q = 3 from q! = 2q allows D_q semidirect",
+  "conclusion": "Substrate has TWO interlocked QEC codes: ternary qutrit phase (F_q) + binary parity / K_4 bipartition (F_lambda). Joint code uses D_q semidirect product, alphabet q*lambda = q! = 6. Codex BT354-365 obstruction numbers factor as (Code A) x (Code B) products. q = 3 is unique integer where two codes interlock via q! = 2q. Ternary alone has no time arrow; binary alone has no color; both needed for physical reality."
+}

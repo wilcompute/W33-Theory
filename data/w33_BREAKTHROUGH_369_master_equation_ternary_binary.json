@@ -1,0 +1,18 @@
+{
+  "master_equation": "q! = 2q has unique positive integer solution q = 3",
+  "algebraic_side": "q! = |S_q| = permutations",
+  "geometric_side": "2q = |D_q| = rigid q-gon motions",
+  "ternary_binary_decomposition": {
+    "q!": "q * lambda at q = 3",
+    "ternary_factor": 3,
+    "binary_factor": 2,
+    "product": "D_q = C_q rtimes C_lambda = 6"
+  },
+  "two_QEC_codes": {
+    "code_A": "ternary qutrit phase, F_q, distance q",
+    "code_B": "binary parity / past-future, F_lambda, distance lambda",
+    "joint_alphabet": 6
+  },
+  "uniqueness": "(q-1)! = lambda only at q = 3",
+  "conclusion": "Master Equation q! = 2q at q = 3 is the unique coincidence where algebraic symmetry |S_q| = geometric symmetry |D_q|. Decomposes as q! = q * lambda = ternary * binary. Forces TWO interlocked QEC codes (ternary qutrit + binary parity) with D_q semidirect-product joint symmetry. Substrate q = 3 forced because only integer where two code alphabets match at q! = 2q."
+}

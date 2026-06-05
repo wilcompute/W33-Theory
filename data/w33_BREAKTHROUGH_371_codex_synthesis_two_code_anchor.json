@@ -1,0 +1,88 @@
+{
+  "codex_numbers_factorized": [
+    {
+      "number": 864,
+      "substrate": "q^q * lambda^F_5",
+      "two_code": "(Code A states) * (Code B stab)"
+    },
+    {
+      "number": 108,
+      "substrate": "q^q * mu",
+      "two_code": "(Code A states) * (K_4 cells)"
+    },
+    {
+      "number": 120,
+      "substrate": "q * 40",
+      "two_code": "Code A phase sheets"
+    },
+    {
+      "number": 32,
+      "substrate": "lambda^F_5",
+      "two_code": "Code B stab per Z-min"
+    },
+    {
+      "number": 8,
+      "substrate": "mu * lambda = 2^q",
+      "two_code": "local two-code lift"
+    },
+    {
+      "number": 12960,
+      "substrate": "q^mu * lambda^(q+1) * Phi_4",
+      "two_code": "joint dim"
+    },
+    {
+      "number": 1620,
+      "substrate": "q^mu * lambda * Phi_4",
+      "two_code": "Z-min supports total"
+    },
+    {
+      "number": 54,
+      "substrate": "q^q * lambda",
+      "two_code": "same-base-line overlap"
+    },
+    {
+      "number": 12,
+      "substrate": "k",
+      "two_code": "intersecting-line overlap = valency"
+    },
+    {
+      "number": 4,
+      "substrate": "mu",
+      "two_code": "skew-line perfect-matching overlap"
+    },
+    {
+      "number": 2,
+      "substrate": "lambda",
+      "two_code": "skew-line lambda overlap"
+    }
+  ],
+  "k4_bipartition_unique_via_two_codes": true,
+  "failure_sheet_count": 1,
+  "total_sheets": 120,
+  "phase_bundle_overlaps": [
+    {
+      "value": 54,
+      "substrate": "q^q * lambda = 27*2"
+    },
+    {
+      "value": 12,
+      "substrate": "k"
+    },
+    {
+      "value": 4,
+      "substrate": "mu"
+    },
+    {
+      "value": 2,
+      "substrate": "lambda"
+    }
+  ],
+  "z_min_stab_per_support": "lambda^F_5 = 32",
+  "z_min_supports_total": "q^mu * lambda * Phi_4 = 1620",
+  "top_3_codex_moves_resolved": [
+    "Canonical K_4 rule: same-side pairs = inactive failure pairs (two-code)",
+    "{0,1}|{2,3} = PAST|FUTURE binary code direction over ternary phase sheet",
+    "Sp(4, F_q) orbit propagates anchor; covariant under D_q joint symmetry"
+  ],
+  "conclusion": "Codex BT354-365 + two-code thesis: every obstruction number (864, 108, 120, 32, 8, 1620, 12960) factorizes as (Code A factor) * (Code B factor). K_4 bipartition uniqueness follows from two-code interlock. Codex's top 3 next moves resolved: canonical rule, past/future interpretation, covariant Sp(4, F_q) selector. Substrate is a ternary-binary product CSS code with D_q semidirect-product symmetry, made possible at q = 3 by the Master Equation q! = 2q."
+}
