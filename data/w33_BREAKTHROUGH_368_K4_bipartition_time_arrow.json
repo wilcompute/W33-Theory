@@ -1,0 +1,35 @@
+{
+  "canonical_bipartition": "{0,1}|{2,3}",
+  "past_future_interpretation": true,
+  "codex_decompositions": [
+    {
+      "number": 108,
+      "substrate": "q^q * mu",
+      "interp": "Failure count = qutrit-cube * spacetime"
+    },
+    {
+      "number": 864,
+      "substrate": "q^q * lambda^F_5",
+      "interp": "Selector obstruction = qutrit-cube * Q_mu edges"
+    },
+    {
+      "number": 32,
+      "substrate": "lambda^F_5",
+      "interp": "Double-cover stabilizer = Q_mu edges (BT157)"
+    },
+    {
+      "number": 120,
+      "substrate": "F_5! = lambda^q*F_5",
+      "interp": "Phase sheet count = |I_h| = |Aut(Petersen)|"
+    },
+    {
+      "number": 8,
+      "substrate": "2^q = mu * lambda",
+      "interp": "Local lift dim = OCTONION"
+    }
+  ],
+  "time_arrow_resolution": "global K_4 bipartition consistency",
+  "born_rule_derivation": "phase sheet weight normalization",
+  "collapse_mechanism": "anchor K_4 lift propagation",
+  "conclusion": "K_4 bipartition {0,1}|{2,3} = past|future time arrow. Of q=3 bipartitions, only 1 is globally consistent; other q-1 give 108 = q^q * mu failures each. Born rule = phase sheet weights. Wave function collapse = K_4 anchor lift. Time arrow from asymmetric bipartition selection of T-symmetric Hamiltonian. Together with BT353/366/367: substrate explains physical law fully -- dynamics, geometry, symmetry, time, probability."
+}

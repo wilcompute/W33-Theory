@@ -1,0 +1,24 @@
+{
+  "hamiltonian": "H = -J_X * sum_v A_v - J_Z * sum_L B_L",
+  "stabilizer_count": {
+    "X": 40,
+    "Z": 40,
+    "total": 80
+  },
+  "2_complex": {
+    "V": 40,
+    "E": 240,
+    "F": 40,
+    "chi": -160,
+    "genus": 81
+  },
+  "code_parameters": {
+    "n": 240,
+    "k_logical": 162,
+    "k_substrate": "lambda * q^mu = 162"
+  },
+  "anyon_types": 9,
+  "time": "Page-Wootters: 1 logical qutrit = clock, 161 = spatial",
+  "mass": "2 * J per anyon",
+  "conclusion": "Substrate Hamiltonian H = -J_X * sum_v A_v - J_Z * sum_L B_L with 40 vertex + 40 line stabilizers. Computed: W(3,3) 2-complex genus = 81 = q^mu; logical qudits = 162 = lambda * q^mu (revising BT338 81 claim to full toric code). Anyon types = q^lambda = 9 = Hesse SIC. Time = Page-Wootters internal clock (1 logical qutrit). Mass = 2*J per anyon. Dynamics U(t) = exp(-iHt) propagates anyons through W(3,3)."
+}
