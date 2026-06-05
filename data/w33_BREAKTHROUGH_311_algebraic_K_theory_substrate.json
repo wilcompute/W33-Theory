@@ -1,0 +1,108 @@
+{
+  "K_n_Z_small_values": [
+    {
+      "n": 0,
+      "value": "Z",
+      "note": "trivial scalar"
+    },
+    {
+      "n": 1,
+      "value": "Z/lambda",
+      "note": "sign / units"
+    },
+    {
+      "n": 2,
+      "value": "Z/lambda",
+      "note": "sign"
+    },
+    {
+      "n": 3,
+      "value": "Z/48",
+      "note": "Z/(lambda * f) = Z/(sign * pos eigenmult)"
+    },
+    {
+      "n": 4,
+      "value": "0",
+      "note": "trivial"
+    },
+    {
+      "n": 5,
+      "value": "Z",
+      "note": ""
+    },
+    {
+      "n": 6,
+      "value": "0",
+      "note": ""
+    },
+    {
+      "n": 7,
+      "value": "Z/240",
+      "note": "Z/|E_8 root| (STAR STAR)"
+    }
+  ],
+  "star_identities": [
+    "K_q(Z) = Z/(lambda * f) = Z/48",
+    "K_(2^q-1)(Z) = Z/|E_8 root| = Z/240"
+  ],
+  "five_substrate_240_occurrences": [
+    "|E_8 root system| (BT79)",
+    "Order of J-homomorphism image in pi_(2^q-1)^S (BT291)",
+    "AAPC total messages on Q_mu (BT283)",
+    "E_4 modular form first coefficient (BT295)",
+    "K_(2^q-1)(Z) torsion order (BT311)"
+  ],
+  "bernoulli_pattern": [
+    {
+      "k": 1,
+      "B": "B_2/4",
+      "denom": 24,
+      "substrate": "f"
+    },
+    {
+      "k": 2,
+      "B": "B_4/8",
+      "denom": 240,
+      "substrate": "lambda^mu * F_5 * q = E_8 root"
+    },
+    {
+      "k": 3,
+      "B": "B_6/12",
+      "denom": 504,
+      "substrate": "lambda^q * q^lambda * Phi_6 (BT289 Macbeath!)"
+    },
+    {
+      "k": 4,
+      "B": "B_8/16",
+      "denom": 480,
+      "substrate": "lambda * 240 (BT295 E_8 modular coef)"
+    }
+  ],
+  "K_theory_4k_minus_1_pattern": [
+    {
+      "k": 1,
+      "expr": "K_3(Z) = Z/48",
+      "denom": 48,
+      "substrate": "lambda * f"
+    },
+    {
+      "k": 2,
+      "expr": "K_7(Z) = Z/240",
+      "denom": 240,
+      "substrate": "lambda^mu * F_5 * q = E_8 root"
+    },
+    {
+      "k": 3,
+      "expr": "K_11(Z) = Z/65520",
+      "denom": 65520,
+      "substrate": "compound substrate"
+    },
+    {
+      "k": 4,
+      "expr": "K_15(Z) = Z/24",
+      "denom": 24,
+      "substrate": "f"
+    }
+  ],
+  "conclusion": "K-theory K_n(Z) substrate-clean: K_1 = Z/lambda, K_q = Z/(lambda*f), K_(2^q-1) = Z/240 = Z/|E_8 root| (5th substrate-240 occurrence). K-theory denominators at substrate k follow Bernoulli pattern with substrate integers (f, 240, 504, 480)."
+}

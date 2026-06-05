@@ -1,0 +1,74 @@
+{
+  "proven_optimal_dims": [
+    1,
+    2,
+    3,
+    8,
+    24
+  ],
+  "packings_table": [
+    {
+      "dim": 1,
+      "lattice": "Z",
+      "density": "1 (trivial)",
+      "proof": "trivial"
+    },
+    {
+      "dim": 2,
+      "lattice": "A_2 hex",
+      "density": "pi/(lambda * sqrt(q))",
+      "proof": "hexagonal (Thue 1890)"
+    },
+    {
+      "dim": 3,
+      "lattice": "A_3 FCC",
+      "density": "pi/(q * sqrt(lambda))",
+      "proof": "FCC (Hales 1998)"
+    },
+    {
+      "dim": 8,
+      "lattice": "E_8",
+      "density": "pi^mu / 384",
+      "proof": "E_8 *Viazovska 2016*"
+    },
+    {
+      "dim": 24,
+      "lattice": "Leech",
+      "density": "pi^k / k!",
+      "proof": "Leech *CKMRV 2017*"
+    }
+  ],
+  "kissing_numbers": [
+    {
+      "dim": 1,
+      "kiss": 2,
+      "substrate": "lambda (trivial)"
+    },
+    {
+      "dim": 2,
+      "kiss": 6,
+      "substrate": "q!"
+    },
+    {
+      "dim": 3,
+      "kiss": 12,
+      "substrate": "k (substrate valency!)"
+    },
+    {
+      "dim": 8,
+      "kiss": 240,
+      "substrate": "lambda^mu * F_5 * q = |E_8 root|"
+    },
+    {
+      "dim": 24,
+      "kiss": 196560,
+      "substrate": "2^mu * q^q * F_5 * Phi_6 * Phi_3 (BT296)"
+    }
+  ],
+  "pi_exponents": {
+    "E_8": "mu (= spacetime)",
+    "Leech": "k (= substrate valency)"
+  },
+  "leech_3_e8_identity": "f = q * 2^q (color * octonion)",
+  "conclusion": "Five proven-optimal sphere-packing dimensions = {1, lambda, q, 2^q, f} are all substrate primitives. E_8 at 2^q and Leech at f are the recent miracle proofs (Viazovska 2016, CKMRV 2017). E_8 density pi^mu/384, Leech pi^k/k! -- pi-exponents = spacetime and valency. f = q * 2^q (Leech = 3 E_8 dims)."
+}

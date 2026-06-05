@@ -1,0 +1,115 @@
+{
+  "berger_list": [
+    {
+      "group": "SO(n)",
+      "manifold_dim": "every n",
+      "type": "generic"
+    },
+    {
+      "group": "U(k)",
+      "manifold_dim": "n = 2k",
+      "type": "K\u00e4hler"
+    },
+    {
+      "group": "SU(k)",
+      "manifold_dim": "n = 2k",
+      "type": "Calabi-Yau"
+    },
+    {
+      "group": "Sp(k)",
+      "manifold_dim": "n = 4k",
+      "type": "hyperk\u00e4hler"
+    },
+    {
+      "group": "Sp(k)*Sp(1)",
+      "manifold_dim": "n = 4k",
+      "type": "quaternionic-K\u00e4hler"
+    },
+    {
+      "group": "G_2",
+      "manifold_dim": "n = Phi_6 = 7",
+      "type": "*** EXCEPTIONAL ***"
+    },
+    {
+      "group": "Spin(7)",
+      "manifold_dim": "n = 2^q = 8",
+      "type": "*** EXCEPTIONAL ***"
+    }
+  ],
+  "exceptional_holonomies": [
+    {
+      "name": "G_2",
+      "manifold_dim": 7,
+      "substrate": "Phi_6"
+    },
+    {
+      "name": "Spin(7)",
+      "manifold_dim": 8,
+      "substrate": "2^q (octonion)"
+    }
+  ],
+  "holonomy_lie_dims": [
+    {
+      "group": "G_2",
+      "dim": 14,
+      "substrate": "lambda * Phi_6 = |V(Heawood)| (BT287)"
+    },
+    {
+      "group": "Spin(7)",
+      "dim": 21,
+      "substrate": "T_6 = octonion triples (BT287, BT290)"
+    },
+    {
+      "group": "SO(8) = D_4",
+      "dim": 28,
+      "substrate": "mu * Phi_6 (triality, BT280)"
+    },
+    {
+      "group": "SO(7) = B_3",
+      "dim": 21,
+      "substrate": "T_6 = |E(Heawood)|"
+    },
+    {
+      "group": "U(4)",
+      "dim": 16,
+      "substrate": "lambda^mu = |V(Q_mu)|"
+    },
+    {
+      "group": "SU(4)",
+      "dim": 15,
+      "substrate": "g_neg"
+    },
+    {
+      "group": "Sp(2)",
+      "dim": 10,
+      "substrate": "Phi_4 = |V(Petersen)| (BT279)"
+    }
+  ],
+  "octonion_layer_six_holonomies": [
+    {
+      "group": "SO(8)",
+      "type": "generic"
+    },
+    {
+      "group": "U(4)",
+      "type": "K\u00e4hler"
+    },
+    {
+      "group": "SU(4)",
+      "type": "Calabi-Yau"
+    },
+    {
+      "group": "Sp(2)",
+      "type": "hyperk\u00e4hler"
+    },
+    {
+      "group": "Sp(2)*Sp(1)",
+      "type": "quaternionic-K\u00e4hler"
+    },
+    {
+      "group": "Spin(7)",
+      "type": "EXCEPTIONAL"
+    }
+  ],
+  "conclusion": "Two exceptional Berger holonomies (G_2 at Phi_6, Spin(7) at 2^q) are at substrate primitives. G_2 = M-theory compactification dim (BT292) = octonion-imag dim (BT287). Spin(7) Lie dim = T_6. The 2^q layer hosts six distinct Berger holonomies. Unifies Riemannian geometry, M-theory, octonion algebra, Hopf bundles at substrate Phi_6 + 2^q scales."
+}
