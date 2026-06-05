@@ -1,0 +1,65 @@
+{
+  "log_bases": [
+    {
+      "unit": "BITS",
+      "base": "2",
+      "substrate": "lambda (substrate sign)"
+    },
+    {
+      "unit": "NATS",
+      "base": "e",
+      "substrate": "e (transcendental, substrate CF BT315)"
+    },
+    {
+      "unit": "TRITS",
+      "base": "3",
+      "substrate": "q (substrate color)"
+    }
+  ],
+  "substrate_entropy_identities": [
+    {
+      "size": 8,
+      "H_bits": 3,
+      "substrate": "octonion = q bits"
+    },
+    {
+      "size": 16,
+      "H_bits": 4,
+      "substrate": "spacetime hypercube = mu bits"
+    },
+    {
+      "size": 128,
+      "H_bits": 7,
+      "substrate": "2-Sylow shell = Phi_6 bits (BT266)"
+    },
+    {
+      "size": 32,
+      "H_bits": 5,
+      "substrate": "lambda^F_5 = F_5 bits (M_5 + 1 = Q_mu edges)"
+    }
+  ],
+  "hamming_rate": "mu / Phi_6 = substrate spacetime / heptad",
+  "q_n_channel_capacities": [
+    {
+      "channel": "Q_3",
+      "capacity_bits": 3,
+      "substrate": "color hypercube = q bits"
+    },
+    {
+      "channel": "Q_4",
+      "capacity_bits": 4,
+      "substrate": "spacetime hypercube = mu bits"
+    },
+    {
+      "channel": "Q_7",
+      "capacity_bits": 7,
+      "substrate": "heptad hypercube = Phi_6 bits"
+    },
+    {
+      "channel": "Q_8",
+      "capacity_bits": 8,
+      "substrate": "octonion-cube hypercube = 2^q bits"
+    }
+  ],
+  "conclusion": "Shannon information theory substrate-clean. Three log bases = substrate primitives (bits=lambda, nats=e, trits=q). Substrate powers yield primitive entropies: H(2^q) = q bits (octonion), H(lambda^mu) = mu bits (spacetime), H(lambda^Phi_6) = Phi_6 bits (2-Sylow). Hamming rate = mu/Phi_6. Q_n channel capacity = n bits."
+}

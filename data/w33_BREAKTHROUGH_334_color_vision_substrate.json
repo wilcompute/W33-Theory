@@ -1,0 +1,79 @@
+{
+  "color_parameters": [
+    {
+      "name": "human cone types",
+      "value": 3,
+      "substrate": "q = COLOR (literal!)"
+    },
+    {
+      "name": "primary colors (RGB)",
+      "value": 3,
+      "substrate": "q = color"
+    },
+    {
+      "name": "color wheel divisions",
+      "value": 12,
+      "substrate": "k = substrate valency"
+    },
+    {
+      "name": "rainbow colors (Newton)",
+      "value": 7,
+      "substrate": "Phi_6 = heptad"
+    },
+    {
+      "name": "RGB bit depth/channel",
+      "value": 8,
+      "substrate": "2^q = octonion"
+    },
+    {
+      "name": "RGB total bits",
+      "value": 24,
+      "substrate": "f = W(3,3) pos eigenmult"
+    },
+    {
+      "name": "sphere chromatic (4CT)",
+      "value": 4,
+      "substrate": "mu = SPACETIME"
+    },
+    {
+      "name": "torus chromatic (Heawood)",
+      "value": 7,
+      "substrate": "Phi_6 = HEPTAD"
+    },
+    {
+      "name": "LMS color space dim",
+      "value": 3,
+      "substrate": "q = color"
+    },
+    {
+      "name": "opponent channels",
+      "value": 3,
+      "substrate": "q = color"
+    },
+    {
+      "name": "CMYK channels",
+      "value": 4,
+      "substrate": "mu = spacetime"
+    }
+  ],
+  "chromatic_by_genus": [
+    {
+      "genus": 0,
+      "chromatic": 4,
+      "name": "4-color theorem (Appel-Haken 1976)"
+    },
+    {
+      "genus": 1,
+      "chromatic": 7,
+      "name": "Heawood number (toroidal chromatic, BT264)"
+    },
+    {
+      "genus": 2,
+      "chromatic": "g+...",
+      "name": "Heawood-Ringel-Youngs general formula"
+    }
+  ],
+  "rgb_cube_eq_Q_q": true,
+  "rgb_cube_substrate": "2^q corners, k edges, q! faces -- octonion-cube (BT266)",
+  "conclusion": "Color theory + human vision substrate-clean. Cone types = q (LITERAL substrate color). Color wheel = k. Rainbow = Phi_6. RGB bit depth = 2^q; total = f bits. 4-color theorem bound = mu (spacetime). Toroidal chromatic = Phi_6 (Heawood). RGB cube = Q_q octonion hypercube. Substrate color charge = literally the human cone count."
+}

@@ -1,0 +1,39 @@
+{
+  "crystallographic_counts": [
+    {
+      "count": 7,
+      "name": "crystal systems",
+      "substrate": "Phi_6 (heptad!)"
+    },
+    {
+      "count": 14,
+      "name": "Bravais lattices",
+      "substrate": "lambda*Phi_6 = |V(Heawood)| (BT267)"
+    },
+    {
+      "count": 32,
+      "name": "point groups",
+      "substrate": "lambda^F_5 = |E(Q_mu)| (BT157)"
+    },
+    {
+      "count": 230,
+      "name": "space groups",
+      "substrate": "lambda * F_5 * 23 (adjacent)"
+    }
+  ],
+  "allowed_rotations": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "allowed_rotations_substrate": "first F_5 = 5 substrate primitives",
+  "cubic_family": {
+    "bravais": 3,
+    "point_groups": 5,
+    "space_groups": 36
+  },
+  "quasicrystal_extension": "F_5-fold symmetry (Penrose, BT215)",
+  "conclusion": "Crystallography substrate-clean: 7 systems = Phi_6, 14 Bravais = lambda*Phi_6 = |V(Heawood)|, 32 point groups = lambda^F_5 = |E(Q_mu)|. Crystallographic Restriction Theorem allows only {1, 2, 3, 4, 6}-fold rotations = first F_5 substrate primitives. Cubic family has q Bravais lattices, F_5 point groups. Quasicrystals extend to F_5-fold (Penrose, BT215)."
+}
