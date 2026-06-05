@@ -1,0 +1,788 @@
+{
+  "architectural_reading": "The remaining eight e-cube selector schedules form the exact D4 coordinate symmetry of the {{1,2},{4,8}} fast/slow recursion square. BT285 picks one phase, BT286 classifies the eight phases, BT287 derives the pair split, and BT319 proves the atlas has the square group law.",
+  "boundary": "This is a finite coordinate-symmetry theorem for the e-cube selector atlas. It does not claim a new physical gauge group or replace the larger affine/Fano/octet selector gauges already tracked in earlier packets.",
+  "breakthrough": 319,
+  "center": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ]
+  ],
+  "checks": {
+    "bt286_selector_match_count_is_8": true,
+    "bt286_selector_set_equals_pair_stabilizer": true,
+    "center_has_two_elements": true,
+    "central_involution_is_double_pair_swap": true,
+    "composition_table_stays_in_selector_set": true,
+    "every_element_has_inverse_in_group": true,
+    "group_closed_under_composition": true,
+    "group_order_is_2_to_q": true,
+    "hadamard_diagonalizes_Q4_adjacency": true,
+    "hadamard_rm_mu_bridge_present": true,
+    "identity_present": true,
+    "nonabelian": true,
+    "order_distribution_is_D4": true,
+    "pair_stabilizer_count_is_wreath_product": true,
+    "r_has_order_4": true,
+    "rs_generate_all_eight": true,
+    "s_has_order_2": true,
+    "selector_rows_hit_all_eight_once": true,
+    "srs_is_r_inverse": true
+  },
+  "closure_table": {
+    "1248": {
+      "1248": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "1284": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "2148": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "2184": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "4812": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "4821": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "8412": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "8421": [
+        8,
+        4,
+        2,
+        1
+      ]
+    },
+    "1284": {
+      "1248": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "1284": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "2148": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "2184": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "4812": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "4821": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "8412": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "8421": [
+        4,
+        8,
+        2,
+        1
+      ]
+    },
+    "2148": {
+      "1248": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "1284": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "2148": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "2184": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "4812": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "4821": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "8412": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "8421": [
+        8,
+        4,
+        1,
+        2
+      ]
+    },
+    "2184": {
+      "1248": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "1284": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "2148": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "2184": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "4812": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "4821": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "8412": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "8421": [
+        4,
+        8,
+        1,
+        2
+      ]
+    },
+    "4812": {
+      "1248": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "1284": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "2148": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "2184": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "4812": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "4821": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "8412": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "8421": [
+        2,
+        1,
+        8,
+        4
+      ]
+    },
+    "4821": {
+      "1248": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "1284": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "2148": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "2184": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "4812": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "4821": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "8412": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "8421": [
+        1,
+        2,
+        8,
+        4
+      ]
+    },
+    "8412": {
+      "1248": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "1284": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "2148": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "2184": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "4812": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "4821": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "8412": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "8421": [
+        2,
+        1,
+        4,
+        8
+      ]
+    },
+    "8421": {
+      "1248": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "1284": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "2148": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "2184": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "4812": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "4821": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "8412": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "8421": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  },
+  "coordinate_bits": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "element_rows": [
+    {
+      "coordinate_permutation": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "inverse": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "is_central": true,
+      "order": 1,
+      "selector_index": 7
+    },
+    {
+      "coordinate_permutation": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "inverse": [
+        1,
+        2,
+        8,
+        4
+      ],
+      "is_central": false,
+      "order": 2,
+      "selector_index": 6
+    },
+    {
+      "coordinate_permutation": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "inverse": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "is_central": false,
+      "order": 2,
+      "selector_index": 5
+    },
+    {
+      "coordinate_permutation": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "inverse": [
+        2,
+        1,
+        8,
+        4
+      ],
+      "is_central": true,
+      "order": 2,
+      "selector_index": 4
+    },
+    {
+      "coordinate_permutation": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "inverse": [
+        4,
+        8,
+        1,
+        2
+      ],
+      "is_central": false,
+      "order": 2,
+      "selector_index": 2
+    },
+    {
+      "coordinate_permutation": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "inverse": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "is_central": false,
+      "order": 4,
+      "selector_index": 3
+    },
+    {
+      "coordinate_permutation": [
+        8,
+        4,
+        1,
+        2
+      ],
+      "inverse": [
+        4,
+        8,
+        2,
+        1
+      ],
+      "is_central": false,
+      "order": 4,
+      "selector_index": 0
+    },
+    {
+      "coordinate_permutation": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "inverse": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "is_central": false,
+      "order": 2,
+      "selector_index": 1
+    }
+  ],
+  "elements": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      1,
+      2,
+      8,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      4,
+      8,
+      1,
+      2
+    ],
+    [
+      4,
+      8,
+      2,
+      1
+    ],
+    [
+      8,
+      4,
+      1,
+      2
+    ],
+    [
+      8,
+      4,
+      2,
+      1
+    ]
+  ],
+  "generators": {
+    "r_inverse": [
+      8,
+      4,
+      1,
+      2
+    ],
+    "r_order_4": [
+      4,
+      8,
+      2,
+      1
+    ],
+    "relation": "r^4 = s^2 = 1 and s*r*s = r^-1",
+    "s_order_2": [
+      1,
+      2,
+      8,
+      4
+    ],
+    "srs": [
+      8,
+      4,
+      1,
+      2
+    ]
+  },
+  "group_identification": "D4, the order-8 square symmetry group",
+  "group_order": 8,
+  "group_order_substrate_form": "2^q = 8",
+  "hadamard_q4_link": {
+    "diagonalizes_Q_mu_adjacency": true,
+    "reading": "BT319 supplies the D4 square symmetry of the fast/slow Q2 recursion split, while the Hadamard packet supplies the H16 Fourier basis diagonalizing the full Q4 adjacency operator.",
+    "reed_muller_at_mu": {
+      "code": "RM(1, mu)",
+      "explicit": [
+        16,
+        5,
+        8
+      ],
+      "params": "[lambda^mu, F_5, 2^q]_2"
+    },
+    "source_breakthrough": 286
+  },
+  "n_verified": 19,
+  "noncommuting_witness": {
+    "left": [
+      1,
+      2,
+      8,
+      4
+    ],
+    "left_after_right": [
+      8,
+      4,
+      1,
+      2
+    ],
+    "right": [
+      4,
+      8,
+      1,
+      2
+    ],
+    "right_after_left": [
+      4,
+      8,
+      2,
+      1
+    ]
+  },
+  "order_distribution": {
+    "1": 1,
+    "2": 5,
+    "4": 2
+  },
+  "pair_partition": [
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "selector_atlas_link": {
+    "selector_distribution": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1
+    },
+    "selector_match_count": 8,
+    "selector_permutations": [
+      [
+        1,
+        2,
+        4,
+        8
+      ],
+      [
+        1,
+        2,
+        8,
+        4
+      ],
+      [
+        2,
+        1,
+        4,
+        8
+      ],
+      [
+        2,
+        1,
+        8,
+        4
+      ],
+      [
+        4,
+        8,
+        1,
+        2
+      ],
+      [
+        4,
+        8,
+        2,
+        1
+      ],
+      [
+        8,
+        4,
+        1,
+        2
+      ],
+      [
+        8,
+        4,
+        2,
+        1
+      ]
+    ],
+    "source_breakthrough": 286
+  },
+  "title": "E-cube selector D4 group",
+  "wreath_product_form": "(S2 x S2) semidirect S2"
+}
