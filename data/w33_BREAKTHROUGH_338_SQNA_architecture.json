@@ -1,0 +1,53 @@
+{
+  "layer_0_substrate": {
+    "graph": "W(3, 3) = SRG(40, 12, 2, 4) = GQ(3, 3)",
+    "V": 40,
+    "E": 240,
+    "degree": 12,
+    "diameter": 2,
+    "spectrum": [
+      12,
+      2,
+      -4
+    ],
+    "multiplicities": [
+      1,
+      24,
+      15
+    ],
+    "Aut_order": 51840
+  },
+  "layer_1_hardware": {
+    "node_register_dim": 3,
+    "interfaces_per_node": 4,
+    "gate_set": "Cl_mu Clifford"
+  },
+  "layer_2_coding": {
+    "code": "[[240, 81, 4, 3]]_q 4D toric",
+    "n": 240,
+    "k": 81,
+    "d_X": 4,
+    "d_Z": 3,
+    "rate": "81/240 = 27/80",
+    "stabilizers_per_line": 6
+  },
+  "layer_3_entanglement": {
+    "epr_pairs": 240,
+    "per_node": 12,
+    "adjacent_paths": 3,
+    "non_adjacent_paths": 4
+  },
+  "layer_4_routing": {
+    "table_size": 1600,
+    "lookup": "O(1) symplectic inner product",
+    "diameter": 2
+  },
+  "forcing_constraints": [
+    "Encode q^mu = 81 logical qutrits",
+    "CSS distance (mu, q)",
+    "Diameter <= 2",
+    "Sp(4, F_q) = 51840 symmetry invariant",
+    "Exactly mu interfaces per node"
+  ],
+  "conclusion": "Substrate Quantum Network Architecture (SQNA): 40-node, 12-regular W(3,3) topology with [[240, 81, 4, 3]]_q CSS toric code, 240 Bell pairs on edges, q or mu path-redundancy via common-neighbor swapping, diameter-2 symplectic routing, full Sp(4, F_q) = 51840 symmetry. Five engineering constraints (encoding, distance, diameter, symmetry, interfaces) uniquely force W(3,3) as substrate graph."
+}

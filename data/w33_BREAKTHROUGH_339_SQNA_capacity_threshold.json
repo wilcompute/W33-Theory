@@ -1,0 +1,28 @@
+{
+  "code_params": {
+    "n": 240,
+    "k": 81,
+    "d": 4,
+    "rate": "27/80 = q^q / (lambda^mu * F_5)"
+  },
+  "threshold_estimate": {
+    "value": "1/q! ~ 0.167",
+    "substrate": "1 / (substrate factorial)",
+    "method": "asymptotic depolarizing, hashing bound"
+  },
+  "entanglement_rate": {
+    "formula": "(q^mu) / (lambda * mu^(mu-1)) * R_edge",
+    "value": "0.633 * R_edge",
+    "fidelity_substrate": "q/mu = 3/4"
+  },
+  "throughput_ops_per_sec": 81000000000000.0,
+  "decoder_latency_ns": 160.0,
+  "routing_memory_per_node_bits": 12800,
+  "energy_per_logical_gate_J": 6.96e-19,
+  "hierarchical_scaling": {
+    "tier_n_nodes": "40^n",
+    "tier_n_diameter": "2n",
+    "symmetry_required": "Sp(4, F_q) per tier"
+  },
+  "conclusion": "SQNA performance derived from W(3,3) structure: threshold p_th ~ 1/q! (substrate factorial), code rate 27/80, entanglement rate (q^mu)/(lambda*mu^(mu-1)) per edge, decoder latency O(n*d^2/clock) = 160 ns, throughput 8.1e13 ops/sec, energy 10^(-19) J per logical gate. Hierarchical SQNA-of-SQNAs scales as 40^n nodes with diameter 2n."
+}

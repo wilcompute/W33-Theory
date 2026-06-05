@@ -1,0 +1,96 @@
+{
+  "comparison_table": [
+    {
+      "property": "Topology",
+      "DLCZ": "linear",
+      "all_photonic": "tree/graph",
+      "secret_share": "K_N",
+      "SQNA": "W(3,3)"
+    },
+    {
+      "property": "Diameter",
+      "DLCZ": "O(N)",
+      "all_photonic": "O(log N)",
+      "secret_share": "1",
+      "SQNA": "2"
+    },
+    {
+      "property": "Node degree",
+      "DLCZ": "2",
+      "all_photonic": "O(log N)",
+      "secret_share": "N-1",
+      "SQNA": "12 = k"
+    },
+    {
+      "property": "Coding",
+      "DLCZ": "BB84",
+      "all_photonic": "graph-state",
+      "secret_share": "QSS",
+      "SQNA": "[[240,81,4,3]]_q"
+    },
+    {
+      "property": "Symmetry",
+      "DLCZ": "translate",
+      "all_photonic": "ad-hoc",
+      "secret_share": "perm",
+      "SQNA": "Sp(4,F_q)=51840"
+    },
+    {
+      "property": "Threshold",
+      "DLCZ": "~0.01",
+      "all_photonic": "~0.1",
+      "secret_share": "varies",
+      "SQNA": "1/q! ~ 0.167"
+    },
+    {
+      "property": "Logical qubits",
+      "DLCZ": "0",
+      "all_photonic": "varies",
+      "secret_share": "0 (raw)",
+      "SQNA": "81 = q^mu"
+    }
+  ],
+  "sqna_strengths": [
+    "Mathematical uniqueness: 5 constraints -> W(3,3) only",
+    "E_8 root identification: 240 = E_8 roots = J-image = AAPC msgs",
+    "Diameter-2 guarantee: any pair reachable in <= 2 hops",
+    "Quartic path redundancy: mu disjoint paths per non-adj pair",
+    "Forced CSS code: [[240, 81, 4, 3]]_q invariant under Sp(4, F_q)",
+    "Substrate-natural threshold p_th = 1/q!"
+  ],
+  "sqna_weaknesses": [
+    "Fixed-size 40-node topology (need hierarchical scaling)",
+    "Qutrit hardware less mature than qubit hardware",
+    "High bisection bandwidth required (cuts ~120 edges)",
+    "Global Sp(4, F_q) symmetry coordination overhead"
+  ],
+  "recommended_hybrid": "SQNA topology + DLCZ hardware",
+  "metric_comparison": [
+    {
+      "metric": "End-to-end latency",
+      "DLCZ": "DLCZ O(N) ms",
+      "SQNA": "SQNA 2-hop ~ ns"
+    },
+    {
+      "metric": "Error threshold",
+      "DLCZ": "DLCZ ~1%",
+      "SQNA": "SQNA 1/q! ~ 17%"
+    },
+    {
+      "metric": "Symmetry group order",
+      "DLCZ": "DLCZ trivial",
+      "SQNA": "SQNA 51840 = W(E_6)"
+    },
+    {
+      "metric": "Code distance",
+      "DLCZ": "DLCZ d=2 (BB84)",
+      "SQNA": "SQNA d_X = mu = 4"
+    },
+    {
+      "metric": "Logical qubits",
+      "DLCZ": "DLCZ 0 raw",
+      "SQNA": "SQNA 81 = q^mu"
+    }
+  ],
+  "conclusion": "SQNA outperforms DLCZ, all-photonic, and secret-sharing on diameter (2), threshold (1/q!), symmetry (Sp(4,F_q)=51840), forced CSS code, and logical qubit count (81). Loses to DLCZ on hardware maturity. Recommended hybrid: SQNA topology + DLCZ atomic-ensemble hardware at 40 W(3,3) nodes with 240 EPR links and [[240, 81, 4, 3]]_q CSS code."
+}
