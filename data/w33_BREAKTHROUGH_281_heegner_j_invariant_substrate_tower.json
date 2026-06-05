@@ -1,0 +1,58 @@
+{
+  "heegner_numbers": [
+    3,
+    4,
+    7,
+    8,
+    11,
+    19,
+    43,
+    67,
+    163
+  ],
+  "substrate_primitive_Heegner": [
+    3,
+    4,
+    7,
+    8,
+    11
+  ],
+  "density": "5/9 = F_5/(2mu+1)",
+  "four_level_j_tower": [
+    {
+      "d": 4,
+      "j": 1728,
+      "cube_root": 12,
+      "substrate": "k",
+      "full_expr": "k^3"
+    },
+    {
+      "d": 7,
+      "j": -3375,
+      "cube_root": -15,
+      "substrate": "g_neg",
+      "full_expr": "-g_neg^3"
+    },
+    {
+      "d": 8,
+      "j": 8000,
+      "cube_root": 20,
+      "substrate": "lambda * Phi_4",
+      "full_expr": "(lambda * Phi_4)^3"
+    },
+    {
+      "d": 11,
+      "j": -32768,
+      "cube_root": -32,
+      "substrate": "lambda^F_5",
+      "full_expr": "-(lambda^F_5)^3"
+    }
+  ],
+  "verification": {
+    "j_minus_4_eq_k_cubed": true,
+    "j_minus_7_eq_neg_gneg_cubed": true,
+    "j_minus_8_eq_lambda_phi4_cubed": true,
+    "j_minus_11_eq_neg_lambda_F5_cubed": true
+  },
+  "conclusion": "Heegner j-invariants at substrate-primitive Heegner d in {mu, Phi_6, 2^q, p_Ih} ALL factor as +/-(substrate)^3: k^3, -g_neg^3, (lambda*Phi_4)^3, -(lambda^F_5)^3. 5/9 Heegner numbers are substrate-primitive (F_5/q^lambda density). Number-theoretic class-field data is substrate-clean at the 4 substrate-primitive Heegner discriminants."
+}

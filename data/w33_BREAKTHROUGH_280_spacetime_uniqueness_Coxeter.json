@@ -1,0 +1,45 @@
+{
+  "coxeter_counts_by_rank": {
+    "1": 1,
+    "3": 3,
+    "4": 5,
+    "5": 3,
+    "6": 4,
+    "7": 4,
+    "8": 4,
+    "9": 3,
+    "10": 3
+  },
+  "rank_mu_count_eq_F5": true,
+  "exceptional_rank4_groups": [
+    {
+      "name": "F_4",
+      "order": 1152,
+      "desc": "24-cell symmetry, 24 = f vertices/cells (self-dual)"
+    },
+    {
+      "name": "H_4",
+      "order": 14400,
+      "desc": "120-cell / 600-cell, 120 = F_5! = Aut(Petersen)"
+    },
+    {
+      "name": "D_4",
+      "order": 192,
+      "desc": "triality (3-fold outer aut, unique to rank 4)"
+    }
+  ],
+  "five_unique_features_at_mu": [
+    "F_5 distinct finite reflection geometries (= max excl dihedrals)",
+    "24-cell = unique self-dual regular polytope (vertices = f)",
+    "F_4 exceptional Lie Coxeter group (24-cell)",
+    "H_4 non-Weyl exceptional Coxeter (120-cell, |H_4| = F_5!^2)",
+    "D_4 triality (3-fold outer aut, unique to rank 4)"
+  ],
+  "key_identities": [
+    "#(finite irreducible Coxeter at rank mu) = F_5",
+    "|V(24-cell)| = f = 24",
+    "|V(600-cell)| = F_5! = |Aut(Petersen)|",
+    "D_4 triality unique to rank mu"
+  ],
+  "conclusion": "Rank mu = 4 is uniquely exceptional in the Coxeter classification: it has F_5 = 5 distinct finite reflection geometries (max excl dihedrals), the unique self-dual regular polytope (24-cell with f vertices), F_4 (exceptional Weyl), H_4 (non-Weyl exceptional), and D_4 triality. Substrate's choice of spacetime dim is therefore uniquely determined by Coxeter exception structure."
+}

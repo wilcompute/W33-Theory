@@ -1,0 +1,61 @@
+{
+  "petersen_structure": {
+    "V": 10,
+    "V_substrate": "Phi_4",
+    "E": 15,
+    "E_substrate": "g_neg",
+    "deg": 3,
+    "girth": 5,
+    "diameter": 2,
+    "Aut": 120,
+    "Aut_substrate": "F_5!",
+    "type": "K(5, 2) Kneser, unique (3, 5)-cage"
+  },
+  "petersen_plus_heawood_eq_f": true,
+  "petersen_spectrum": {
+    "eigenvalues": [
+      3,
+      1,
+      -2
+    ],
+    "multiplicities": [
+      1,
+      5,
+      4
+    ]
+  },
+  "petersen_graph_energy": 16,
+  "petersen_graph_energy_eq_V_Q4": true,
+  "heawood_pairings": [
+    {
+      "partner": "Petersen",
+      "Vp": 10,
+      "total": 24,
+      "meaning": "f (positive eigenmult)"
+    },
+    {
+      "partner": "Q_4",
+      "Vp": 16,
+      "total": 30,
+      "meaning": "h(E_8) (Triple Convergence)"
+    },
+    {
+      "partner": "Mobius-Kantor",
+      "Vp": 16,
+      "total": 30,
+      "meaning": "h(E_8) (BT270)"
+    },
+    {
+      "partner": "Q_3",
+      "Vp": 8,
+      "total": 22,
+      "meaning": "lambda * p_Ih (icosahedron prime)"
+    }
+  ],
+  "three_spectral_bridges": [
+    "E(Q_4) = f = pos eigenmult W(3,3) (BT158)",
+    "E(Heawood) rational = q! (BT267)",
+    "E(Petersen) = lambda^mu = |V(Q_4)| (BT279)"
+  ],
+  "conclusion": "Petersen graph (unique (3,5)-cage = K(5,2)) is substrate-clean: |V|=Phi_4, |E|=g_neg, girth=F_5, |Aut|=F_5!. NEW STAR: Petersen + Heawood vertex sum = 24 = f (positive eigenmult). NEW SPECTRAL: E(Petersen) = lambda^mu = |V(Q_4)| = 16. Heawood pairs with Petersen->f, Q_4/MK->h_E_8, Q_3->lambda*p_Ih."
+}
