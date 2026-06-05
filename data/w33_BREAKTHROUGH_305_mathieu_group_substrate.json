@@ -1,0 +1,53 @@
+{
+  "mathieu_groups": [
+    {
+      "name": "M_11",
+      "order": 7920,
+      "substrate": "lambda^mu * q^lambda * F_5 * p_Ih",
+      "transitivity": 4,
+      "domain": 11
+    },
+    {
+      "name": "M_12",
+      "order": 95040,
+      "substrate": "lambda^q! * q^q * F_5 * p_Ih",
+      "transitivity": 5,
+      "domain": 12
+    },
+    {
+      "name": "M_22",
+      "order": 443520,
+      "substrate": "lambda^Phi_6 * q^lambda * F_5 * Phi_6 * p_Ih",
+      "transitivity": 3,
+      "domain": 22
+    },
+    {
+      "name": "M_23",
+      "order": 10200960,
+      "substrate": "lambda^Phi_6 * q^lambda * F_5 * Phi_6 * p_Ih * 23",
+      "transitivity": 4,
+      "domain": 23
+    },
+    {
+      "name": "M_24",
+      "order": 244823040,
+      "substrate": "lambda^Phi_4 * q^q * F_5 * Phi_6 * p_Ih * 23",
+      "transitivity": 5,
+      "domain": 24
+    }
+  ],
+  "transitivity_coverage": [
+    3,
+    4,
+    5
+  ],
+  "acting_domains": {
+    "M_11": 11,
+    "M_12": 12,
+    "M_22": 22,
+    "M_23": 23,
+    "M_24": 24
+  },
+  "exceptional_5_transitive_observation": "M_12 and M_24 are only 5-transitive groups other than A_n, S_n. Both have acting domain at substrate primitive (k, f) and transitivity = F_5.",
+  "conclusion": "All 5 Mathieu sporadic group orders substrate-clean: M_11 = lambda^mu*q^lambda*F_5*p_Ih, M_12 = lambda^q!*q^q*F_5*p_Ih, M_22 = lambda^Phi_6*q^lambda*F_5*Phi_6*p_Ih, M_23 = M_22*23, M_24 = lambda^Phi_4*q^q*F_5*Phi_6*p_Ih*23. Transitivity degrees in {q, mu, F_5}. M_12 and M_24 (the only sporadic 5-transitive groups) act on substrate-primitive domains k and f with transitivity degree F_5."
+}

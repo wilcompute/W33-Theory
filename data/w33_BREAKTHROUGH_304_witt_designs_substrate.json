@@ -1,0 +1,60 @@
+{
+  "four_substrate_steiner_systems": [
+    {
+      "design": "S(2, 3, 7)",
+      "t": 2,
+      "k": 3,
+      "v": 7,
+      "substrate": "(lambda, q, Phi_6) = FANO plane",
+      "blocks": 7
+    },
+    {
+      "design": "S(2, 3, 9)",
+      "t": 2,
+      "k": 3,
+      "v": 9,
+      "substrate": "(lambda, q, q^lambda) = AG(2, F_q)",
+      "blocks": 12
+    },
+    {
+      "design": "S(5, 6, 12)",
+      "t": 5,
+      "k": 6,
+      "v": 12,
+      "substrate": "(F_5, q!, k) = Witt-12",
+      "blocks": 132
+    },
+    {
+      "design": "S(5, 8, 24)",
+      "t": 5,
+      "k": 8,
+      "v": 24,
+      "substrate": "(F_5, 2^q, f) = Witt-24",
+      "blocks": 759
+    }
+  ],
+  "M_12_order_factorization": {
+    "value": 95040,
+    "substrate": "lambda^q! * q^q * F_5 * p_Ih",
+    "exponents": [
+      6,
+      3,
+      1,
+      1
+    ]
+  },
+  "M_24_order_factorization": {
+    "value": 244823040,
+    "substrate": "lambda^Phi_4 * q^q * F_5 * Phi_6 * p_Ih * 23",
+    "exponents": [
+      10,
+      3,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "F_5_transitivity": "Both M_12, M_24 are 5-transitive (degree = F_5)",
+  "conclusion": "Four substrate Steiner systems span Fano S(lambda, q, Phi_6), AG(2, F_q) S(lambda, q, q^lambda), Witt-12 S(F_5, q!, k), and Witt-24 S(F_5, 2^q, f). All parameter triples in substrate primitives. Mathieu group orders M_12 = lambda^q!*q^q*F_5*p_Ih, M_24 = lambda^Phi_4*q^q*F_5*Phi_6*p_Ih*23 have substrate-clean exponents. F_5-transitivity is the substrate's exceptional 5-transitive degree."
+}

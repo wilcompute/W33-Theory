@@ -1,0 +1,56 @@
+{
+  "binary_golay_G_24": {
+    "params": [
+      24,
+      12,
+      8
+    ],
+    "params_substrate": "[f, k, 2^q] -- length=pos eigenmult, dim=valency, dist=octonion"
+  },
+  "ternary_golay_G_12": {
+    "params": [
+      12,
+      6,
+      6
+    ],
+    "params_substrate": "[k, q!, q!] over F_q"
+  },
+  "M_24_order_factorization": {
+    "value": 244823040,
+    "exponents": [
+      10,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "exponents_substrate": [
+      "Phi_4",
+      "q",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      23
+    ]
+  },
+  "M_24_transitivity": 5,
+  "perfect_golay_G_23": {
+    "params": [
+      23,
+      12,
+      7
+    ],
+    "correctable_errors": 3
+  },
+  "golay_leech_bridge": "Leech = G_24 + lambda * Z^f (lambda-construction)",
+  "conclusion": "Binary Golay G_24 = [f, k, 2^q]_lambda and Ternary Golay G_12 = [k, q!, q!]_q each carry three substrate primitives, paralleling Hamming [Phi_6, mu, q]_2 (BT299). G_24 generates Leech (BT296). |M_24| has substrate-clean exponents and is 5-transitive on f points. f = 24 now has 12 BT-chain meanings."
+}
