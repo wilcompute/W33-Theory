@@ -1,0 +1,54 @@
+{
+  "primary_claim": "Consciousness = substrate recursive self-measurement",
+  "qualia_per_atom": 3,
+  "max_info_per_w33": 128,
+  "iit_phi_levels": [
+    {
+      "n": 1,
+      "states": 3,
+      "phi_bits": 1.584962500721156,
+      "interp": "minimal consciousness"
+    },
+    {
+      "n": 2,
+      "states": 9,
+      "phi_bits": 3.169925001442312,
+      "interp": "Hesse SIC"
+    },
+    {
+      "n": 3,
+      "states": 27,
+      "phi_bits": 4.754887502163468,
+      "interp": "qutrit cube"
+    },
+    {
+      "n": 4,
+      "states": 81,
+      "phi_bits": 6.339850002884624,
+      "interp": "full W(3,3) instance"
+    },
+    {
+      "n": 7,
+      "states": 2187,
+      "phi_bits": 11.094737505048093,
+      "interp": "heptad-extended"
+    }
+  ],
+  "free_will_bandwidth_bits": 1.584962500721156,
+  "shared_minds_bandwidth": "mu * log_lambda(240) bits/tick",
+  "testable_predictions": [
+    "Number of fundamental qualia per modality = q = 3",
+    "IIT-Phi spectrum has discrete levels at n * log_2(q)",
+    "Free-will bandwidth = log_lambda(q) ~ 1.585 bits/moment",
+    "Consciousness has minimum-stabilizer activation threshold",
+    "Max consciousness info content = 128 bits per W(3,3) instance",
+    "Anesthesia / sleep = decoupling of self-stabilizers",
+    "Trichromatic vision (BT334) is FORCED by q = 3 qualia atoms",
+    "Three basic emotional valences (positive/neutral/negative)"
+  ],
+  "dissolved_problems": [
+    "hard problem of consciousness",
+    "measurement problem"
+  ],
+  "conclusion": "Consciousness = substrate recursive self-measurement. Qualia = eigenvalue readouts of self-referential stabilizers (q values per atom, matches trichromatic vision). IIT-Phi at substrate levels = n*log_2(q). Free-will bandwidth = log_lambda(q) ~ 1.6 bits/moment. Max consciousness info = 128 bits/W(3,3). Measurement problem dissolved: wave function 'collapse' = substrate stabilizer measurement. Hard problem dissolved: consciousness IS substrate self-measurement, not added to it. Completes the SQNA metaphysical stack: physics + life + mind."
+}

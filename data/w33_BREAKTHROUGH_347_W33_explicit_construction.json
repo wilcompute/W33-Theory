@@ -1,0 +1,31 @@
+{
+  "construction": "Symplectic GQ over F_q^mu",
+  "verified_parameters": {
+    "V": 40,
+    "E": 240,
+    "degree": 12,
+    "lambda": [
+      2
+    ],
+    "mu": [
+      4
+    ],
+    "spectrum": [
+      [
+        -4,
+        15
+      ],
+      [
+        2,
+        24
+      ],
+      [
+        12,
+        1
+      ]
+    ],
+    "diameter": 2
+  },
+  "matches_predictions": true,
+  "conclusion": "W(3,3) explicitly constructed from symplectic form on F_3^4. All substrate parameters verified computationally: |V|=40, |E|=240, degree=12=k, lambda=2, mu=4, spectrum {12, 2, -4} with mults {1, 24=f, 15=g_neg}, diameter=2. The substrate is a real mathematical object."
+}

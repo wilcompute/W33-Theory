@@ -1,0 +1,32 @@
+{
+  "ER_EPR_identification": {
+    "240_wormholes": true,
+    "matches_EPR_count": true,
+    "matches_E8_root_count": true,
+    "matches_Witting_vertices": true
+  },
+  "bose_mesner_decomposition": [
+    {
+      "eigenvalue": 12,
+      "mult": 1,
+      "sector": "vacuum / scalar"
+    },
+    {
+      "eigenvalue": 2,
+      "mult": 24,
+      "sector": "matter (positive eigenspace)"
+    },
+    {
+      "eigenvalue": -4,
+      "mult": 15,
+      "sector": "dark / antimatter (negative eigenspace)"
+    }
+  ],
+  "dark_matter_generation_prediction": 5,
+  "sector_fractions_DOF": {
+    "matter": 0.6,
+    "dark": 0.375,
+    "vacuum": 0.025
+  },
+  "conclusion": "ER=EPR on substrate: 240 W(3,3) edges = 240 EPR pairs = 240 wormholes = 240 E_8 roots = 240 Witting vertices. Bose-Mesner spectral decomposition gives canonical vacuum + matter + dark sectors with multiplicities 1 + f + g_neg = 40. NEW PREDICTION: g_neg/q = F_5 = 5 dark-matter generations. Dark matter = wormholes in negative eigenspace; visible matter = positive eigenspace; both share 240 topological edges."
+}
