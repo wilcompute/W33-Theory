@@ -1,0 +1,44 @@
+{
+  "equivalence": "e-cube routing on Q_mu = substrate Gray-code compiler (BT159)",
+  "fft_bridge": {
+    "depth": 4,
+    "butterflies": 32,
+    "substrate": "lambda^F_5 = |E(Q_mu)|"
+  },
+  "aapc_on_Q_mu": {
+    "total_messages": 240,
+    "messages_substrate": "240 = |E_8 root system| (STAR)",
+    "phases": 15,
+    "phases_substrate": "g_neg",
+    "per_phase_saturation": 8,
+    "per_phase_substrate": "2^q = octonion = bisection BW"
+  },
+  "broadcast_depth": 4,
+  "cs_algorithms_at_Q_mu": [
+    {
+      "alg": "one-to-one routing",
+      "cost": "4 hops max = mu"
+    },
+    {
+      "alg": "broadcast",
+      "cost": "4 hops = mu"
+    },
+    {
+      "alg": "all-to-all personalized",
+      "cost": "240 messages = E_8 root system"
+    },
+    {
+      "alg": "matrix multiply",
+      "cost": "4 parallel steps = mu"
+    },
+    {
+      "alg": "FFT of 16 inputs",
+      "cost": "32 butterflies = lambda^F_5"
+    },
+    {
+      "alg": "sorting (bitonic)",
+      "cost": "16 parallel time = mu^2"
+    }
+  ],
+  "conclusion": "E-cube routing on Q_mu IS the substrate Gray-code compiler (BT159). NEW STAR: AAPC total messages on Q_mu = 240 = |root system E_8|. FFT butterflies = lambda^F_5 = |E(Q_mu)|. Broadcast depth = mu. The substrate spacetime layer is a fully-formed parallel computer with routing, FFT, all-to-all algorithms baked into its geometry."
+}

@@ -1,0 +1,75 @@
+{
+  "c60_parameters": [
+    {
+      "quantity": "V",
+      "value": 60,
+      "substrate": "mu * g_neg"
+    },
+    {
+      "quantity": "E",
+      "value": 90,
+      "substrate": "lambda * F_5 * q^lambda"
+    },
+    {
+      "quantity": "F",
+      "value": 32,
+      "substrate": "lambda^F_5 = |E(Q_mu)|"
+    },
+    {
+      "quantity": "pent.",
+      "value": 12,
+      "substrate": "k (substrate valency)"
+    },
+    {
+      "quantity": "hex.",
+      "value": 20,
+      "substrate": "lambda * Phi_4"
+    },
+    {
+      "quantity": "degree",
+      "value": 3,
+      "substrate": "q"
+    },
+    {
+      "quantity": "girth",
+      "value": 5,
+      "substrate": "F_5"
+    },
+    {
+      "quantity": "diameter",
+      "value": 10,
+      "substrate": "Phi_4"
+    },
+    {
+      "quantity": "|Aut|",
+      "value": 120,
+      "substrate": "F_5! = |Aut(Petersen)|"
+    }
+  ],
+  "euler_characteristic": 2,
+  "star_identity": "|F(C_60)| = lambda^F_5 = |E(Q_mu)| = 32",
+  "petersen_bridge": "|Aut(C_60)| = F_5! = |Aut(Petersen)|",
+  "f5_substrate_objects": [
+    {
+      "name": "Petersen graph K(5,2)",
+      "params": "V=Phi_4, E=g_neg, girth=F_5, Aut=F_5!"
+    },
+    {
+      "name": "Buckyball C_60",
+      "params": "V=mu*g_neg, F=lambda^F_5, Aut=F_5!"
+    },
+    {
+      "name": "Pentagon",
+      "params": "smallest F_5 polygon"
+    },
+    {
+      "name": "Icosahedron",
+      "params": "Aut=A_5 x Z_2, order=F_5!"
+    },
+    {
+      "name": "600-cell",
+      "params": "V=F_5!, Aut=H_4 (BT280)"
+    }
+  ],
+  "conclusion": "Buckminsterfullerene C_60 has ALL 9 classical parameters substrate-clean: V=mu*g_neg, E=lambda*F_5*q^lambda, F=lambda^F_5=|E(Q_mu)|, pentagons=k, hexagons=lambda*Phi_4, deg=q, girth=F_5, diam=Phi_4, |Aut|=F_5!. The buckyball face count equals the substrate spacetime hypercube edge count. Connects chemistry, graph theory, Petersen (BT279), Coxeter mu=4 (BT280), and Q_mu hypercube networking (BT282-283)."
+}

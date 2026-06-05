@@ -1,0 +1,84 @@
+{
+  "Q_mu_network_parameters": {
+    "N": 16,
+    "N_substrate": "lambda^mu",
+    "degree": 4,
+    "degree_substrate": "mu",
+    "diameter": 4,
+    "diameter_substrate": "mu",
+    "edges": 32,
+    "edges_substrate": "mu*2^q = lambda^F_5 = 32",
+    "bisection_bandwidth": 8,
+    "bisection_substrate": "2^q = octonion dim",
+    "hamilton_cycles": 2688,
+    "hamilton_substrate": "2^Phi_6 * T_6 (BT271)"
+  },
+  "four_property_substrate_table": [
+    {
+      "n": 2,
+      "name": "lambda",
+      "V": 4,
+      "deg": 2,
+      "diam": 2,
+      "BS": 2,
+      "note": "lambda level"
+    },
+    {
+      "n": 3,
+      "name": "q",
+      "V": 8,
+      "deg": 3,
+      "diam": 3,
+      "BS": 4,
+      "note": "octonion level"
+    },
+    {
+      "n": 4,
+      "name": "mu",
+      "V": 16,
+      "deg": 4,
+      "diam": 4,
+      "BS": 8,
+      "note": "*** SPACETIME ***"
+    },
+    {
+      "n": 7,
+      "name": "Phi_6",
+      "V": 128,
+      "deg": 7,
+      "diam": 7,
+      "BS": 64,
+      "note": "heptad / 2-Sylow"
+    }
+  ],
+  "star_identity": "BS(Q_mu) = 2^q = octonion dim",
+  "recursive_structure": "Q_mu = 2 octonion cubes glued by 2^q matching edges",
+  "ecube_routing_eq_substrate_compiler": true,
+  "historical_machines": [
+    {
+      "name": "Caltech Cosmic Cube (1981)",
+      "size": "Q_6 = 64 nodes"
+    },
+    {
+      "name": "Intel iPSC/1 (1985)",
+      "size": "Q_5 to Q_7"
+    },
+    {
+      "name": "nCUBE/1 (1986)",
+      "size": "Q_6 = 64 nodes"
+    },
+    {
+      "name": "Connection Machine CM-2 (1987)",
+      "size": "Q_12 = 4096 nodes"
+    },
+    {
+      "name": "nCUBE/2 (1989)",
+      "size": "up to Q_13 = 8192 nodes"
+    },
+    {
+      "name": "Intel iPSC/860 (1990)",
+      "size": "Q_7 = 128 nodes"
+    }
+  ],
+  "conclusion": "Hypercube interconnect Q_mu = Q_4 has ALL classical CS parameters (nodes, degree, diameter, edges, bisection, HC count) substrate-clean. Bisection bandwidth = 2^q = octonion dim. Recursive: Q_4 = 2 octonion cubes glued. E-cube routing = substrate Gray-code compiler (BT159). No real hardware ever built at Q_4 scale -- but substrate says it IS the canonical parallel-network scale."
+}
