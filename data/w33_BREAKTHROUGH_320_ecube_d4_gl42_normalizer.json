@@ -1,0 +1,377 @@
+{
+  "architectural_reading": "The selector D4 is rigid inside coordinate permutations but gains one central complement bit in the full linear Q4 carrier.  This makes the BT319 atlas a square coordinate face with a single non-coordinate complement lift, exactly the kind of local square-plus-complement structure expected in the hypercube/tomotope control layer.",
+  "boundary": "This identifies a finite GL(4,2) normalizer of the BT319 selector D4. It does not yet identify the complement involution with a physical time-reversal, Reye configuration, or tomotope map.",
+  "breakthrough": 320,
+  "checks": {
+    "all_normalizer_orders_divide_4": true,
+    "centralizer_in_gl42_has_order_mu": true,
+    "centralizer_is_center_d4_times_complement": true,
+    "complement_involution_centralizes_d4": true,
+    "complement_involution_has_order_2": true,
+    "complement_involution_is_not_coordinate_permutation": true,
+    "complement_involution_maps_bits_to_complements": true,
+    "coordinate_group_size_is_24": true,
+    "d4_order_distribution_matches_bt319": true,
+    "d4_size_is_8": true,
+    "double_pair_swap_survives_as_central_d4_element": true,
+    "gl42_normalizer_index_is_1260": true,
+    "gl42_size_is_20160": true,
+    "index_has_substrate_factorization": true,
+    "nonpermutation_part_has_8_elements": true,
+    "normalizer_center_has_order_mu": true,
+    "normalizer_in_gl42_has_order_16": true,
+    "normalizer_in_s4_index_is_q": true,
+    "normalizer_in_s4_is_self": true,
+    "normalizer_is_d4_times_complement_c2": true,
+    "normalizer_order_distribution_is_c2_times_d4": true,
+    "normalizer_quotient_over_d4_has_size_lambda": true,
+    "permutation_part_of_normalizer_is_d4": true
+  },
+  "complement_involution": {
+    "formula": "bit -> 15 xor bit",
+    "matrix_description": "J + I over F2",
+    "order": 2,
+    "row_masks": [
+      14,
+      13,
+      11,
+      7
+    ]
+  },
+  "coordinate_s4_order": 24,
+  "d4_elements": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      1,
+      2,
+      8,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      4,
+      8,
+      1,
+      2
+    ],
+    [
+      4,
+      8,
+      2,
+      1
+    ],
+    [
+      8,
+      4,
+      1,
+      2
+    ],
+    [
+      8,
+      4,
+      2,
+      1
+    ]
+  ],
+  "d4_order": 8,
+  "gap_crosscheck": {
+    "GL42": "Normalizer(GL(4,2),D4) has size 16, structure C2 x D8, index 1260",
+    "S4": "Normalizer(S4,D4) has size 8, structure D8, index 3",
+    "centralizer": "Centralizer(GL(4,2),D4) has size 4, structure C2 x C2"
+  },
+  "gl42_centralizer_elements": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      13,
+      14,
+      7,
+      11
+    ],
+    [
+      14,
+      13,
+      11,
+      7
+    ]
+  ],
+  "gl42_centralizer_order": 4,
+  "gl42_normalizer_elements": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      1,
+      2,
+      8,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      4,
+      8,
+      1,
+      2
+    ],
+    [
+      4,
+      8,
+      2,
+      1
+    ],
+    [
+      7,
+      11,
+      13,
+      14
+    ],
+    [
+      7,
+      11,
+      14,
+      13
+    ],
+    [
+      8,
+      4,
+      1,
+      2
+    ],
+    [
+      8,
+      4,
+      2,
+      1
+    ],
+    [
+      11,
+      7,
+      13,
+      14
+    ],
+    [
+      11,
+      7,
+      14,
+      13
+    ],
+    [
+      13,
+      14,
+      7,
+      11
+    ],
+    [
+      13,
+      14,
+      11,
+      7
+    ],
+    [
+      14,
+      13,
+      7,
+      11
+    ],
+    [
+      14,
+      13,
+      11,
+      7
+    ]
+  ],
+  "gl42_normalizer_index": 1260,
+  "gl42_normalizer_order": 16,
+  "gl42_order": 20160,
+  "group_identification": {
+    "centralizer_in_gl42": "C2 x C2",
+    "normalizer_in_gl42": "D4 x C2",
+    "normalizer_in_s4": "D4, self-normalizing Sylow-2 subgroup of S4"
+  },
+  "index_factorization": {
+    "expanded": [
+      4,
+      9,
+      5,
+      7
+    ],
+    "substrate_form": "2^2 * q^2 * F5 * Phi6",
+    "value": 1260
+  },
+  "n_verified": 23,
+  "nonpermutation_part": [
+    [
+      7,
+      11,
+      13,
+      14
+    ],
+    [
+      7,
+      11,
+      14,
+      13
+    ],
+    [
+      11,
+      7,
+      13,
+      14
+    ],
+    [
+      11,
+      7,
+      14,
+      13
+    ],
+    [
+      13,
+      14,
+      7,
+      11
+    ],
+    [
+      13,
+      14,
+      11,
+      7
+    ],
+    [
+      14,
+      13,
+      7,
+      11
+    ],
+    [
+      14,
+      13,
+      11,
+      7
+    ]
+  ],
+  "normalizer_center": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      13,
+      14,
+      7,
+      11
+    ],
+    [
+      14,
+      13,
+      11,
+      7
+    ]
+  ],
+  "normalizer_order_distribution": {
+    "1": 1,
+    "2": 11,
+    "4": 4
+  },
+  "normalizer_quotient_over_d4": 2,
+  "permutation_part": [
+    [
+      1,
+      2,
+      4,
+      8
+    ],
+    [
+      1,
+      2,
+      8,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      8
+    ],
+    [
+      2,
+      1,
+      8,
+      4
+    ],
+    [
+      4,
+      8,
+      1,
+      2
+    ],
+    [
+      4,
+      8,
+      2,
+      1
+    ],
+    [
+      8,
+      4,
+      1,
+      2
+    ],
+    [
+      8,
+      4,
+      2,
+      1
+    ]
+  ],
+  "s4_normalizer_index": 3,
+  "s4_normalizer_order": 8,
+  "title": "E-cube D4 normalizer in GL(4,2)"
+}
