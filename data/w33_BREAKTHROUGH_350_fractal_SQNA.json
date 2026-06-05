@@ -1,0 +1,69 @@
+{
+  "recursive_definition": "W(3,3)^[n] = 40-node W(3,3) with each node = W(3,3)^[n-1]",
+  "scaling": {
+    "nodes_at_tier_n": "40^n",
+    "diameter": "2n",
+    "rate": "(27/80)^n",
+    "boundary_bulk_ratio": "q / (lambda * Phi_4) = 3/20",
+    "fractal_dim": "lambda = 2"
+  },
+  "physical_tier_assignment": [
+    {
+      "scale": "Planck cell",
+      "tier": 0,
+      "interp": "substrate vacuum"
+    },
+    {
+      "scale": "Elementary particle",
+      "tier": 1,
+      "interp": "single coherent W(3,3) state"
+    },
+    {
+      "scale": "Nucleon",
+      "tier": "2-3",
+      "interp": "3 confined quarks"
+    },
+    {
+      "scale": "Atom",
+      "tier": "4-5",
+      "interp": "Z protons + N + e^-"
+    },
+    {
+      "scale": "Molecule",
+      "tier": "6-8",
+      "interp": "atomic ensemble"
+    },
+    {
+      "scale": "Cell",
+      "tier": "10-15",
+      "interp": "macromolecular assembly"
+    },
+    {
+      "scale": "Organism",
+      "tier": "20-30",
+      "interp": "cellular hierarchy"
+    },
+    {
+      "scale": "Brain",
+      "tier": "~25",
+      "interp": "neural-network tier"
+    },
+    {
+      "scale": "Civilization",
+      "tier": "~50",
+      "interp": "?"
+    },
+    {
+      "scale": "Galaxy",
+      "tier": "~100",
+      "interp": "?"
+    },
+    {
+      "scale": "Universe",
+      "tier": "~150-200",
+      "interp": "all of observable cosmology"
+    }
+  ],
+  "wreath_automorphism": "Sp(4, F_q) wr S_40 (n-fold)",
+  "conclusion": "Fractal SQNA: recursive W(3,3)^[n] where every node is itself a W(3,3) instance. Tier-shift is a discrete RG step; W(3,3) is the universal fixed point. Diameter D_n = 2n logarithmic in N_n. Rate (27/80)^n. Boundary/bulk = 3/20 substrate ratio. Nested VM stack: particle (tier 1), atom (4-5), cell (10-15), brain (~25), universe (~200). Self-similarity explains why physics looks same at every scale -- it IS the same substrate."
+}

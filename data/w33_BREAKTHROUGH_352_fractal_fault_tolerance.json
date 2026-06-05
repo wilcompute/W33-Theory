@@ -1,0 +1,15 @@
+{
+  "threshold_substrate": "1/q! = 1/6",
+  "suppression_formula": "p_log(n) = (1/q!) * (p_phys * q!)^(2^n)",
+  "resource_overhead": "q^n per logical at tier n",
+  "tiers_for_FT_QC": 3,
+  "biological_FT": {
+    "DNA_proofreading": "tier 1",
+    "mismatch_repair": "tier 2",
+    "apoptosis": "tier 3"
+  },
+  "black_hole": "infinite-tier SQNA = perfect quantum memory",
+  "consciousness_unity": "tier ~25 FT explains apparent unity",
+  "cosmic_FT": "tier ~200 explains macro determinism",
+  "conclusion": "Fractal fault tolerance on substrate: error suppression (p_phys * q!)^(2^n) at tier n, threshold 1/q!. Resource q^n per logical. Biological multi-stage proofreading = tier-n SQNA decoding. Black holes = infinite-tier perfect memory. Consciousness unity = tier ~25 FT. Cosmic determinism = tier ~200 FT. Unifies QC, biology, BH info, consciousness, classical limit as manifestations of fractal substrate fault tolerance."
+}

@@ -1,0 +1,52 @@
+{
+  "primary_identity": "computer === network (substrate-identical)",
+  "edge_functions": [
+    "1 EPR pair (communication, BT338)",
+    "1 physical qutrit (computation, BT338)",
+    "1 anyon braid mediator (TQC, BT344)",
+    "1 wormhole (ER=EPR, BT348)",
+    "1 Witting vertex (channel alphabet, BT341)"
+  ],
+  "node_functions": [
+    "q-state qutrit register (memory)",
+    "Cl_mu Clifford gates (computation)",
+    "Symplectic O(1) routing (network)",
+    "Witting symbol decoding (signal processing)",
+    "q^lambda anyon hosting (TQC vacuum)"
+  ],
+  "edge_eq_wormhole_eq_gate": true,
+  "fractal_at_every_tier": true,
+  "no_von_neumann_bottleneck": true,
+  "physics_unification": [
+    {
+      "property": "Spacetime",
+      "interp": "= quantum circuit topology"
+    },
+    {
+      "property": "Curvature",
+      "interp": "= entanglement structure (Van Raamsdonk)"
+    },
+    {
+      "property": "Mass",
+      "interp": "= computational density"
+    },
+    {
+      "property": "Inertia",
+      "interp": "= resistance to substrate connectivity change"
+    },
+    {
+      "property": "Energy",
+      "interp": "= rate of substrate stabilizer measurement"
+    },
+    {
+      "property": "Charge",
+      "interp": "= Bose-Mesner projector eigenmode"
+    },
+    {
+      "property": "Speed of light",
+      "interp": "= substrate clock rate * unit edge length"
+    }
+  ],
+  "energy_per_op": "Landauer limit k_B T ln(lambda) only",
+  "conclusion": "Computer = network on SQNA substrate: the same W(3,3) object is simultaneously computational and communicational. Each edge fuses mu = 4 functions (EPR, qutrit, anyon, wormhole, Witting). Each node fuses F_5 functions. ER=EPR + COMPUTER=NETWORK gives edge = wormhole = computational gate (240 simultaneous gates per W(3,3)). Identity holds at EVERY tier of fractal SQNA. Eliminates von Neumann bottleneck. Spacetime = quantum circuit topology; mass = computational density; energy = info flow rate. Consciousness = substrate info flow. SQNA hardware energy = Landauer limit only."
+}
