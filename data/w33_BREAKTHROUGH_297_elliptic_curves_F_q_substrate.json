@@ -1,0 +1,79 @@
+{
+  "hasse_weil_at_q_eq_3": {
+    "low": 0.5358983848622456,
+    "high": 7.464101615137754,
+    "integer_range": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "max": 7,
+    "max_substrate": "Phi_6"
+  },
+  "frobenius_traces": {
+    "count": 7,
+    "substrate": "Phi_6 (heptad)"
+  },
+  "possible_group_orders": [
+    {
+      "order": 1,
+      "note": "trivial (supersingular)"
+    },
+    {
+      "order": 2,
+      "note": "lambda"
+    },
+    {
+      "order": 3,
+      "note": "q"
+    },
+    {
+      "order": 4,
+      "note": "mu (spacetime)"
+    },
+    {
+      "order": 5,
+      "note": "F_5"
+    },
+    {
+      "order": 6,
+      "note": "q!"
+    },
+    {
+      "order": 7,
+      "note": "Phi_6 (MAX, heptad)"
+    }
+  ],
+  "cm_heegner_link": [
+    {
+      "d": -4,
+      "j": 1728,
+      "substrate": "k^3"
+    },
+    {
+      "d": -7,
+      "j": -3375,
+      "substrate": "-g_neg^3"
+    },
+    {
+      "d": -8,
+      "j": 8000,
+      "substrate": "(lambda*Phi_4)^3"
+    },
+    {
+      "d": -11,
+      "j": -32768,
+      "substrate": "-(lambda^F_5)^3"
+    }
+  ],
+  "smallest_E_Q_conductor": {
+    "value": 11,
+    "substrate": "p_Ih"
+  },
+  "substrate_natural_example": "E: y^2 = x^3 + 1 / F_3, |E| = mu",
+  "conclusion": "Elliptic curves E(F_q) at substrate q = 3: max point count = Phi_6 = 7 (Hasse-Weil); possible group orders cover all 7 substrate primitives. CM curves at Heegner d in {mu, Phi_6, 2^q, p_Ih} give substrate-cube j-invariants (BT281). Smallest conductor E/Q = p_Ih = 11. Substrate's color and heptad ARE the two key elliptic-curve thresholds."
+}

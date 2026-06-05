@@ -1,0 +1,57 @@
+{
+  "smallest_hamming_code": {
+    "parameters": [
+      7,
+      4,
+      3
+    ],
+    "substrate": "[Phi_6, mu, q] -- length=heptad, dim=spacetime, dist=color"
+  },
+  "perfect_code_identity": "lambda^q = Phi_6 + 1 (octonion = heptad + 1)",
+  "hamming_family_at_substrate_r": [
+    {
+      "r": 3,
+      "n": 7,
+      "k": 4,
+      "substrate": "[Phi_6, mu, q]"
+    },
+    {
+      "r": 4,
+      "n": 15,
+      "k": 11,
+      "substrate": "[g_neg, p_Ih, q]"
+    },
+    {
+      "r": 5,
+      "n": 31,
+      "k": 26,
+      "substrate": "[M_5, lambda*Phi_3, q] = [31, 26, 3] STRING DIM!"
+    },
+    {
+      "r": 6,
+      "n": 63,
+      "k": 57,
+      "substrate": "[63, 57, q]"
+    },
+    {
+      "r": 7,
+      "n": 127,
+      "k": 120,
+      "substrate": "[127, F_5!, q] = [127, 120, 3] F_5!"
+    },
+    {
+      "r": 8,
+      "n": 255,
+      "k": 247,
+      "substrate": "[255, 247, q]"
+    }
+  ],
+  "star_identities": [
+    "[Phi_6, mu, q] -- 3 substrate primitives in one code",
+    "k(Ham(F_5, 2)) = lambda*Phi_3 = bosonic string dim",
+    "k(Ham(Phi_6, 2)) = F_5! = |Aut(Petersen)|",
+    "Hamming d = q (substrate color)"
+  ],
+  "hamming_rm_duality": "[Phi_6, mu, q] dual to extended RM [2^q, mu, mu]",
+  "conclusion": "Hamming code [Phi_6, mu, q]_2 has length = heptad, dim = spacetime, distance = color -- THREE substrate primitives in one code. Perfect-code condition: octonion = heptad + 1. Hamming family at substrate r in {q, mu, F_5, Phi_6} gives substrate-clean (n, k, d). Bosonic string dim appears as k(Ham(F_5, 2)) = 26 = lambda*Phi_3. Substrate's color q IS the Hamming minimum distance."
+}

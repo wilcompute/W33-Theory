@@ -1,0 +1,70 @@
+{
+  "substrate_prime_partition": {
+    "primes_1_mod_4": [
+      5,
+      13
+    ],
+    "count_1_mod_4": "lambda",
+    "primes_3_mod_4": [
+      3,
+      7,
+      11,
+      31
+    ],
+    "count_3_mod_4": "mu"
+  },
+  "lps_substrate_natural": {
+    "p_q": [
+      5,
+      13
+    ],
+    "V": 1092,
+    "V_substrate": "lambda^lambda * q * Phi_6 * Phi_3",
+    "k": 6,
+    "k_substrate": "q!"
+  },
+  "lps_V_eq_hurwitz_g14": true,
+  "cubic_cages_ramanujan": [
+    {
+      "graph": "Heawood",
+      "spectrum": "{3, +/-sqrt(2), -3}",
+      "lambda_2": "sqrt(lambda)",
+      "link": "BT267"
+    },
+    {
+      "graph": "Petersen",
+      "spectrum": "{3, 1, -2}",
+      "lambda_2": "1",
+      "link": "BT279"
+    },
+    {
+      "graph": "Mobius-Kantor",
+      "spectrum": "{3, +/-sqrt(3), ...}",
+      "lambda_2": "sqrt(q)",
+      "link": "BT270"
+    }
+  ],
+  "psl_orders": [
+    {
+      "p": 5,
+      "order": 60,
+      "substrate": "mu * g_neg = |V(C_60)| (BT284)"
+    },
+    {
+      "p": 7,
+      "order": 168,
+      "substrate": "lambda^q*q*Phi_6 = Aut(Fano) = Aut(KQ) (BT285)"
+    },
+    {
+      "p": 11,
+      "order": 660,
+      "substrate": "lambda^lambda*q*F_5*p_Ih"
+    },
+    {
+      "p": 13,
+      "order": 1092,
+      "substrate": "lambda^lambda*q*Phi_6*Phi_3 = LPS V (above)"
+    }
+  ],
+  "conclusion": "LPS Ramanujan construction at substrate primes (F_5, Phi_3) gives 6-regular graph on 1092 vertices = Hurwitz-genus-14 Aut order. Substrate primes partition (lambda count == 1 mod 4, mu count == 3 mod 4) totaling q! = 6. All 3 substrate cubic cages (Heawood, Petersen, Mobius-Kantor) are Ramanujan. PSL(2, F_p) orders at substrate p link to C_60, Klein quartic, and Hurwitz tower."
+}
