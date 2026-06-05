@@ -1,0 +1,115 @@
+{
+  "hesse_sic_at_q": {
+    "vector_count": 9,
+    "overlap": "1/mu",
+    "configuration": "(q^lambda, k, q, mu)",
+    "is_AG_2_q": true
+  },
+  "hoggar_sic_at_2_q": {
+    "vector_count": 64,
+    "construction": "octonion-based"
+  },
+  "sic_substrate_dims": [
+    {
+      "d": 2,
+      "d_substrate": "lambda",
+      "sic_size": 4,
+      "note": "trivial MUB"
+    },
+    {
+      "d": 3,
+      "d_substrate": "q",
+      "sic_size": 9,
+      "note": "Hesse / AG(2, F_q)"
+    },
+    {
+      "d": 4,
+      "d_substrate": "mu",
+      "sic_size": 16,
+      "note": "known SIC"
+    },
+    {
+      "d": 5,
+      "d_substrate": "F_5",
+      "sic_size": 25,
+      "note": "known"
+    },
+    {
+      "d": 6,
+      "d_substrate": "q!",
+      "sic_size": 36,
+      "note": "known"
+    },
+    {
+      "d": 7,
+      "d_substrate": "Phi_6",
+      "sic_size": 49,
+      "note": "known"
+    },
+    {
+      "d": 8,
+      "d_substrate": "2^q",
+      "sic_size": 64,
+      "note": "Hoggar (octonion-based)"
+    },
+    {
+      "d": 10,
+      "d_substrate": "Phi_4",
+      "sic_size": 100,
+      "note": "known"
+    },
+    {
+      "d": 16,
+      "d_substrate": "lambda^mu",
+      "sic_size": 256,
+      "note": "known SIC"
+    },
+    {
+      "d": 24,
+      "d_substrate": "f",
+      "sic_size": 576,
+      "note": "solved (Klein quartic dim)"
+    },
+    {
+      "d": 128,
+      "d_substrate": "lambda^Phi_6",
+      "sic_size": 16384,
+      "note": "known (2-Sylow!)"
+    }
+  ],
+  "mub_substrate": [
+    {
+      "d": 3,
+      "max_mubs": 4,
+      "substrate": "mu = SPACETIME"
+    },
+    {
+      "d": 4,
+      "max_mubs": 5,
+      "substrate": "F_5 = next prime"
+    },
+    {
+      "d": 5,
+      "max_mubs": 6,
+      "substrate": "q! = factorial"
+    },
+    {
+      "d": 7,
+      "max_mubs": 8,
+      "substrate": "2^q = OCTONION!"
+    },
+    {
+      "d": 8,
+      "max_mubs": 9,
+      "substrate": "q^lambda = 9"
+    },
+    {
+      "d": 16,
+      "max_mubs": 17,
+      "substrate": "F_5! / lambda = 17"
+    }
+  ],
+  "heisenberg_weyl_at_d": "|H_d| = d^q",
+  "frame_hierarchy": "Hesse(q) -> SIC(mu) -> Hoggar(2^q) -> Witting(C^mu, 240)",
+  "conclusion": "SIC-POVMs exist at substrate-primitive dims with substrate-clean parameters. Hesse SIC at q = 9 = (q^lambda, k, q, mu) configuration = AG(2, F_q). Hoggar SIC at 2^q = 64 octonion-based. MUBs at Phi_6 = 2^q (octonion). Heisenberg-Weyl |H_d| = d^q. Frame hierarchy peaks at Witting 240 vectors in C^mu (SQNA channel alphabet, BT341)."
+}

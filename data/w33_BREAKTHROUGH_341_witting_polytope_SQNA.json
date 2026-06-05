@@ -1,0 +1,44 @@
+{
+  "witting_parameters": [
+    {
+      "name": "Vertices",
+      "value": "240",
+      "substrate": "|E_8 root system| = |E(W(3,3))|"
+    },
+    {
+      "name": "Real dim",
+      "value": "8",
+      "substrate": "lambda^q = 8 (E_8 ambient)"
+    },
+    {
+      "name": "Complex dim",
+      "value": "4",
+      "substrate": "mu = 4 (C^mu)"
+    },
+    {
+      "name": "Symmetry order",
+      "value": "155520",
+      "substrate": "q * |Sp(4, F_q)| = q * W(E_6)"
+    },
+    {
+      "name": "Schlafli symbol",
+      "value": "3{3}3{3}3{3}3",
+      "substrate": "complex regular polytope"
+    }
+  ],
+  "triple_identification": "Witting V = SQNA E = E_8 roots (240)",
+  "hilbert_embedding": {
+    "complex_dim": 4,
+    "q_ary_dim": 81,
+    "matches_sqna_logical": true
+  },
+  "shephard_todd_order": {
+    "value": 155520,
+    "substrate": "q * |Sp(4, F_q)| = q * W(E_6)"
+  },
+  "channel_protocol": {
+    "alphabet": 240,
+    "bits_per_use": "log_lambda(240) ~ 8 = 2^q"
+  },
+  "conclusion": "Witting polytope (Coxeter 1974) bridges to SQNA: 240 vertices = 240 SQNA edges = 240 E_8 roots in C^mu ambient. Its q-ary dim q^mu = 81 = SQNA logical qubit count. Aut group = q * |Sp(4, F_q)|. Provides natural quantum-state alphabet for SQNA channel: log_lambda(240) ~ 8 bits per use, with overlap values in substrate fractions {0, 1/mu, 1/lambda, q/mu, 1}."
+}

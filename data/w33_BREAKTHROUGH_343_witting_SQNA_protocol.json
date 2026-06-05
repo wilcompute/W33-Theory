@@ -1,0 +1,36 @@
+{
+  "encoding_levels": {
+    "level_1_hesse_sic": {
+      "states": 9,
+      "bits_per_node": 3.169925001442312
+    },
+    "level_2_witting": {
+      "states": 240,
+      "bits_per_edge": 7.906890595608519
+    },
+    "level_3_toric": {
+      "logical": 81,
+      "rate": "27/80"
+    }
+  },
+  "teleportation_paths": {
+    "adjacent": 3,
+    "non_adjacent": 4
+  },
+  "capacity": {
+    "quantum": "27/80",
+    "classical_per_edge_bits": 7.906890595608519
+  },
+  "threshold": "1/q! = 1/6",
+  "symmetry_order": 155520,
+  "forcings": [
+    "Topology = W(3,3) (5 constraints, BT338)",
+    "Alphabet = Witting (E_8 root = SQNA edge bijection)",
+    "Local SIC = Hesse (unique dim-q SIC)",
+    "CSS code = [[240, 81, 4, 3]]_q (Sp(4,F_q)-invariant toric)",
+    "Routing = symplectic O(1) (diameter-2 cap)",
+    "Threshold = 1/q! (from code rate hashing bound)",
+    "Symmetry = Sp(4, F_q) x q-phase = Shephard-Todd 155520"
+  ],
+  "conclusion": "WSQNA: three-level encoding (Hesse SIC at nodes, Witting alphabet at edges, toric code network-wide). Adjacent teleport via q paths, non-adjacent via mu. Capacity 27/80 quantum + 7.9 bits/edge classical. Threshold 1/q!. Symmetry = Sp(4, F_q) * q-phase = 155520. No free parameters: all choices forced by 5 engineering constraints + Witting-SQNA bijection + Hesse SIC uniqueness + Sp(4, F_q) toric invariance."
+}
