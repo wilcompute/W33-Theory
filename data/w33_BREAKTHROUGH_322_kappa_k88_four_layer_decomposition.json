@@ -1,0 +1,663 @@
+{
+  "architectural_reading": "Kappa does not merely map Q4 to an undifferentiated weight-3 shell. It pulls the BT271 selector back through the lift, splitting Q4 itself into a Mobius-Kantor cubic plus a perfect matching. The full K8,8 cross-space is therefore two kappa-swapped sheets, each with a 24-edge cubic layer and an 8-edge identity layer.",
+  "boundary": "This uses the explicit BT271 selector. BT272 proves there are eight Mobius-Kantor selectors in one affine orbit; this packet does not yet classify the kappa pullbacks of all eight selectors.",
+  "breakthrough": 322,
+  "checks": {
+    "all_layers_sum_to_k88": true,
+    "bt271_original_counts_hold": true,
+    "four_layer_counts_are_24_8_24_8": true,
+    "four_layers_are_disjoint": true,
+    "four_layers_union_to_k88": true,
+    "kappa_edge_orbits_count_32": true,
+    "kappa_edge_orbits_have_size_2": true,
+    "kappa_maps_q4_to_weight3": true,
+    "kappa_maps_weight3_to_q4": true,
+    "kappa_swaps_matching_layers": true,
+    "kappa_swaps_mk_layers": true,
+    "m8_q4_balanced_coordinate_directions": true,
+    "m8_q4_has_8_edges": true,
+    "m8_q4_is_perfect_matching": true,
+    "m8_q4_uses_weight1_edges": true,
+    "m8_weight3_uses_weight3_edges": true,
+    "mk_q4_has_24_edges": true,
+    "mk_q4_has_girth_6": true,
+    "mk_q4_is_connected_cubic": true,
+    "mk_q4_uses_weight1_edges": true,
+    "mk_weight3_uses_weight3_edges": true,
+    "orbit_quotient_splits_24_plus_8": true,
+    "q4_splits_as_mk_q4_plus_m8_q4": true,
+    "two_matching_layers_total_16": true,
+    "two_mobius_kantor_layers_total_48": true
+  },
+  "kappa_orbit_quotient": {
+    "edge_orbits": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          13
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          9
+        ],
+        [
+          9,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          10
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          12
+        ],
+        [
+          12,
+          14
+        ]
+      ],
+      [
+        [
+          1,
+          15
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          6
+        ],
+        [
+          6,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          9
+        ],
+        [
+          9,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          10
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          12
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      [
+        [
+          2,
+          15
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      [
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          9
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          12
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      [
+        [
+          4,
+          15
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      [
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      [
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      [
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      [
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          12
+        ]
+      ],
+      [
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ]
+      ]
+    ],
+    "matching_orbits": 8,
+    "mk_orbits": 24,
+    "orbit_count": 32,
+    "quotient_split": "24 Mobius-Kantor orbits + 8 matching orbits"
+  },
+  "layer_counts": {
+    "M8_Q4": 8,
+    "M8_weight3": 8,
+    "MK_Q4": 24,
+    "MK_weight3": 24,
+    "total": 64
+  },
+  "layer_xor_weight_distributions": {
+    "M8_Q4": {
+      "1": 8
+    },
+    "M8_weight3": {
+      "3": 8
+    },
+    "MK_Q4": {
+      "1": 24
+    },
+    "MK_weight3": {
+      "3": 24
+    }
+  },
+  "layers": {
+    "M8_Q4": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "M8_weight3": [
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        10,
+        13
+      ]
+    ],
+    "MK_Q4": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        15
+      ]
+    ],
+    "MK_weight3": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        11,
+        12
+      ]
+    ]
+  },
+  "matching_direction_counts": {
+    "M8_Q4": {
+      "1": 2,
+      "2": 2,
+      "4": 2,
+      "8": 2
+    },
+    "M8_weight3": {
+      "7": 2,
+      "11": 2,
+      "13": 2,
+      "14": 2
+    }
+  },
+  "n_verified": 25,
+  "title": "Kappa K8,8 four-layer decomposition"
+}
