@@ -1,0 +1,99 @@
+{
+  "engineering_candidates": [
+    {
+      "name": "1. Superconducting qubits",
+      "TRL": "4-5",
+      "qudit": "qubit",
+      "topology": "W(3,3) hard",
+      "speed": "10 GHz",
+      "horizon": "5-10 yr"
+    },
+    {
+      "name": "2. Trapped ions (qutrit)",
+      "TRL": "3-4",
+      "qudit": "qutrit*",
+      "topology": "photonic",
+      "speed": "1 MHz",
+      "horizon": "5-15 yr"
+    },
+    {
+      "name": "3. Photonic integrated",
+      "TRL": "3",
+      "qudit": "photon",
+      "topology": "waveguide",
+      "speed": "10 GHz",
+      "horizon": "5-15 yr"
+    },
+    {
+      "name": "4. Quantum spin liquid",
+      "TRL": "2",
+      "qudit": "anyon*",
+      "topology": "lattice",
+      "speed": "?",
+      "horizon": "20+ yr"
+    },
+    {
+      "name": "5. BEC optical lattice",
+      "TRL": "2-3",
+      "qudit": "boson",
+      "topology": "optical",
+      "speed": "?",
+      "horizon": "20+ yr"
+    },
+    {
+      "name": "6. NV-center network",
+      "TRL": "4",
+      "qudit": "qubit",
+      "topology": "photonic",
+      "speed": "1 kHz",
+      "horizon": "5-10 yr"
+    },
+    {
+      "name": "7. VACUUM SUBSTRATE",
+      "TRL": "0",
+      "qudit": "qutrit*",
+      "topology": "spacetime IS",
+      "speed": "Planck",
+      "horizon": "discover"
+    }
+  ],
+  "vacuum_substrate_hypothesis": {
+    "claim": "W(3,3) is the structure of spacetime at Planck scale",
+    "anyons_eq_particles": true,
+    "gauge_symmetry": "local Sp(4, F_q)",
+    "code": "4D toric [[240, 81, 4, 3]]_q is physical-law error correction"
+  },
+  "testable_predictions": [
+    "Particle generation count = q (substrate color)",
+    "Standard Model gauge group from local Sp(4, F_q)",
+    "Bekenstein-Hawking 1/4 = 1/mu (substrate spacetime, BT327)",
+    "Cosmological constant from substrate Lambda parameter",
+    "PMNS/CKM mixing from Sp(4, F_q) representation theory",
+    "Discrete allowed spacetime dimensions = substrate primitives",
+    "Black holes = topological W(3,3) substrate defects",
+    "Holographic principle from W(3,3) boundary conditions"
+  ],
+  "recommended_phases": [
+    {
+      "phase": "Phase I",
+      "candidate": "40-SC qubit chip with W(3,3) coupling (Candidate 1)"
+    },
+    {
+      "phase": "Phase II",
+      "candidate": "40-NV-center photonic network (Candidate 6)"
+    },
+    {
+      "phase": "Phase III",
+      "candidate": "40-trapped-ion qutrit network (Candidate 2)"
+    },
+    {
+      "phase": "Phase IV",
+      "candidate": "All-photonic chip (Candidate 3)"
+    },
+    {
+      "phase": "Long-term",
+      "candidate": "Engineered spin liquid TQC (Candidate 4)"
+    }
+  ],
+  "conclusion": "Six engineering hardware candidates for SQNA (SC qubits, trapped ions, photonic, spin liquid, BEC, NV-center network) with TRL ratings. Radical Candidate 7 = vacuum substrate hypothesis: W(3,3) IS spacetime at Planck scale; anyons = particles; Sp(4, F_q) = local gauge symmetry; 4D toric code = physical-law error correction. Testable: particle generation count = q = 3 (observed), BH entropy 1/4 = 1/mu, SM gauge from Sp(4, F_q). Recommended hardware path: SC->NV->ion->photonic->spin-liquid."
+}

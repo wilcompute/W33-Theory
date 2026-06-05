@@ -1,0 +1,52 @@
+{
+  "anyon_types": {
+    "total": 9,
+    "substrate": "q^lambda = 9 = Hesse SIC (BT342)",
+    "breakdown": "q point + q loop + (q-1)^2 dyons"
+  },
+  "braiding_phase": "omega^lambda where omega = exp(2 pi i / q)",
+  "su2k_primary_ladder": [
+    {
+      "k": 2,
+      "primaries": 3,
+      "substrate": "q = 3 (Ising at lambda level)"
+    },
+    {
+      "k": 3,
+      "primaries": 4,
+      "substrate": "mu (spacetime types)"
+    },
+    {
+      "k": 4,
+      "primaries": 5,
+      "substrate": "F_5 (next prime)"
+    },
+    {
+      "k": 5,
+      "primaries": 6,
+      "substrate": "q! (factorial)"
+    },
+    {
+      "k": 6,
+      "primaries": 7,
+      "substrate": "Phi_6 (heptad)"
+    },
+    {
+      "k": 7,
+      "primaries": 8,
+      "substrate": "2^q (OCTONION!)"
+    }
+  ],
+  "fibonacci_universal_QC": true,
+  "kitaev_honeycomb_bond_types": 3,
+  "protocols": [
+    "Per node: host q^lambda = 9 anyons (one per anyon type)",
+    "Local Clifford: Ising sigma braiding",
+    "Non-Clifford T: Hesse SIC measurement (BT342)",
+    "Network entanglement: Witting alphabet (BT341)",
+    "Per edge: 1 Bell pair via Fibonacci anyon braiding",
+    "Toric flux loops carry logical operators",
+    "Substrate-symmetric braids: Sp(4, F_q) action"
+  ],
+  "conclusion": "SQNA hosts topological quantum computing via q^lambda = 9 anyon types (= Hesse SIC vectors). Braiding phase = omega^lambda where omega is substrate q-th root of unity. SU(2)_k WZW primary count at substrate k = next substrate primitive (k=Phi_6 gives 2^q octonion-many primaries). Fibonacci anyon types = lambda (substrate sign, gives universal QC). Local Clifford via Ising braiding, non-Clifford via Hesse SIC, network entanglement via Witting alphabet."
+}

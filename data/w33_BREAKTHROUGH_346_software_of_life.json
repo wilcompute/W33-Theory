@@ -1,0 +1,70 @@
+{
+  "big_idea": "Life = substrate stabilizer-state pattern on SQNA toric code",
+  "substrate_life_bridges": [
+    {
+      "biological": "nucleotide bases",
+      "value": "4",
+      "interpretation": "substrate SPACETIME"
+    },
+    {
+      "biological": "codon length",
+      "value": "3",
+      "interpretation": "substrate COLOR"
+    },
+    {
+      "biological": "codons total",
+      "value": "64",
+      "interpretation": "mu^q = 64 substrate addresses"
+    },
+    {
+      "biological": "amino acids",
+      "value": "20",
+      "interpretation": "lambda*Phi_4 = |V(dodecahedron)|"
+    },
+    {
+      "biological": "stop codons",
+      "value": "3",
+      "interpretation": "q (substrate color)"
+    },
+    {
+      "biological": "DNA strands",
+      "value": "2",
+      "interpretation": "lambda (sign primitive)"
+    },
+    {
+      "biological": "helix linking",
+      "value": "topological",
+      "interpretation": "TQC-style protection (BT344)"
+    },
+    {
+      "biological": "AA chemical classes",
+      "value": "12",
+      "interpretation": "k = #(dodecahedron faces)"
+    },
+    {
+      "biological": "AAs per class",
+      "value": "3",
+      "interpretation": "q = pentagonal triplets"
+    },
+    {
+      "biological": "AA similarity edges",
+      "value": "30",
+      "interpretation": "h(E_8) = dodecahedron edges"
+    }
+  ],
+  "star_interpretations": [
+    "Genetic code = substrate address-decoding table",
+    "Cell = local stabilizer state of substrate toric code",
+    "DNA = topologically protected stabilizer storage",
+    "Ribosome = substrate gate compiler",
+    "Evolution = genetic-algorithm search over CSS codewords"
+  ],
+  "testable_predictions": [
+    "AA chemical-class partition = dodecahedron face structure (k classes of q AAs)",
+    "Genetic-code mutation rate floor = 1/q! (substrate CSS threshold)",
+    "Cell division time floor = SQNA propagation latency",
+    "Codon-degeneracy structure = CSS error-correcting properties",
+    "20-AA set is UNIQUE: no other amino-acid set supports substrate stabilizer storage"
+  ],
+  "conclusion": "Software of life = substrate computation. Living cell = self-replicating stabilizer state on SQNA's [[240, 81, 4, 3]]_q toric code. DNA = topologically-protected stabilizer storage. Genetic code = substrate address-decoding (64 codons = mu^q, 20 AAs = lambda*Phi_4 = dodecahedron vertices). Cell division = SQNA hierarchical propagation. Ribosome = substrate gate compiler. Evolution = genetic-algorithm search over CSS codewords. Hardware (BT345 vacuum substrate) + Software (BT346) jointly specify what life IS and how it works."
+}
