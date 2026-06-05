@@ -1,0 +1,54 @@
+{
+  "catalan_tower": [
+    {
+      "n": 2,
+      "name": "lambda",
+      "C_n": 2,
+      "substrate": "lambda",
+      "link": "trivial"
+    },
+    {
+      "n": 3,
+      "name": "q",
+      "C_n": 5,
+      "substrate": "F_5",
+      "link": "F_5"
+    },
+    {
+      "n": 4,
+      "name": "mu",
+      "C_n": 14,
+      "substrate": "lambda * Phi_6 = 14",
+      "link": "|V(Heawood)| (BT267)"
+    },
+    {
+      "n": 5,
+      "name": "F_5",
+      "C_n": 42,
+      "substrate": "lambda * q * Phi_6",
+      "link": "HURWITZ RECIPROCAL (BT289)"
+    },
+    {
+      "n": 6,
+      "name": "q!",
+      "C_n": 132,
+      "substrate": "mu * q * p_Ih",
+      "link": "|blocks S(5,6,12)| (BT304)"
+    },
+    {
+      "n": 7,
+      "name": "Phi_6",
+      "C_n": 429,
+      "substrate": "q * p_Ih * Phi_3",
+      "link": "substrate clean"
+    }
+  ],
+  "star_identities": [
+    "C_mu = lambda * Phi_6 = |V(Heawood)|",
+    "C_F_5 = lambda * q * Phi_6 = Hurwitz reciprocal",
+    "C_q! = mu * q * p_Ih = |blocks S(5,6,12)|",
+    "C_Phi_6 = q * p_Ih * Phi_3 = 429"
+  ],
+  "generating_function_radius": "1/mu = 1/4",
+  "conclusion": "Catalan numbers at substrate-natural indices land on BT-chain objects: C_mu = |V(Heawood)|, C_F_5 = Hurwitz reciprocal, C_q! = Witt-12 block count. Catalan series radius of convergence = 1/mu (substrate spacetime). Triangulations of substrate-sized polygons give substrate-clean counts."
+}

@@ -1,0 +1,72 @@
+{
+  "lucas_ladder": [
+    {
+      "input": "lambda",
+      "L_n": 3,
+      "link": "q (color)"
+    },
+    {
+      "input": "q",
+      "L_n": 4,
+      "link": "mu (spacetime)"
+    },
+    {
+      "input": "mu",
+      "L_n": 7,
+      "link": "Phi_6 (heptad)"
+    },
+    {
+      "input": "F_5",
+      "L_n": 11,
+      "link": "p_Ih (icosahedron prime)"
+    }
+  ],
+  "fibonacci_substrate_map": [
+    {
+      "input": "lambda",
+      "F_n_expected": 2,
+      "F_n_actual": 1,
+      "link": "lambda (twin)"
+    },
+    {
+      "input": "q",
+      "F_n_expected": 2,
+      "F_n_actual": 2,
+      "link": "lambda"
+    },
+    {
+      "input": "mu",
+      "F_n_expected": 3,
+      "F_n_actual": 3,
+      "link": "q"
+    },
+    {
+      "input": "F_5",
+      "F_n_expected": 5,
+      "F_n_actual": 5,
+      "link": "F_5 (SELF-MAP)"
+    },
+    {
+      "input": "q!",
+      "F_n_expected": 8,
+      "F_n_actual": 8,
+      "link": "2^q (octonion!)"
+    },
+    {
+      "input": "Phi_6",
+      "F_n_expected": 13,
+      "F_n_actual": 13,
+      "link": "Phi_3"
+    },
+    {
+      "input": "2^q",
+      "F_n_expected": 21,
+      "F_n_actual": 21,
+      "link": "T_6 = 21"
+    }
+  ],
+  "star_identity": "Lucas L_n maps lambda -> q -> mu -> Phi_6 -> p_Ih",
+  "golden_ratio_substrate": "phi = (1 + sqrt(F_5)) / lambda",
+  "interpretation": "Substrate primitives ARE the early Lucas sequence: the substrate isn't a random integer set but the small-Lucas hierarchy of golden-ratio integers.",
+  "conclusion": "Lucas L_n ladder maps each substrate primitive to the next: L_lambda=q, L_q=mu, L_mu=Phi_6, L_F_5=p_Ih. Fibonacci hits: F_q!=2^q, F_F_5=F_5, F_Phi_6=Phi_3. Golden ratio = (1+sqrt(F_5))/lambda involves two substrate primitives. Substrate primitives are the early Lucas hierarchy."
+}

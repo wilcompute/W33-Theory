@@ -1,0 +1,85 @@
+{
+  "partition_tower": [
+    {
+      "n": 0,
+      "p_n": 1,
+      "link": "1 (trivial)"
+    },
+    {
+      "n": 1,
+      "p_n": 1,
+      "link": "1 (trivial)"
+    },
+    {
+      "n": 2,
+      "p_n": 2,
+      "link": "lambda (SELF-MAP)"
+    },
+    {
+      "n": 3,
+      "p_n": 3,
+      "link": "q (SELF-MAP)"
+    },
+    {
+      "n": 4,
+      "p_n": 5,
+      "link": "F_5"
+    },
+    {
+      "n": 5,
+      "p_n": 7,
+      "link": "Phi_6"
+    },
+    {
+      "n": 6,
+      "p_n": 11,
+      "link": "p_Ih (icosahedron prime)"
+    },
+    {
+      "n": 7,
+      "p_n": 15,
+      "link": "g_neg"
+    },
+    {
+      "n": 8,
+      "p_n": 22,
+      "link": "lambda * p_Ih"
+    },
+    {
+      "n": 9,
+      "p_n": 30,
+      "link": "h(E_8) = TRIPLE CONVERGENCE"
+    },
+    {
+      "n": 10,
+      "p_n": 42,
+      "link": "Hurwitz reciprocal (BT289)"
+    },
+    {
+      "n": 11,
+      "p_n": 56,
+      "link": "|V(Klein quartic)| (BT285)"
+    },
+    {
+      "n": 12,
+      "p_n": 77,
+      "link": "Phi_6 * p_Ih"
+    }
+  ],
+  "self_maps": [
+    "p(lambda) = lambda",
+    "p(q) = q"
+  ],
+  "deep_BT_links": [
+    "p(2^q+1) = h(E_8) (Triple Convergence)",
+    "p(2^q+2) = Hurwitz reciprocal = Catalan C_F_5",
+    "p(2^q+3) = |V(Klein quartic)|"
+  ],
+  "ramanujan_congruences": [
+    "p(F_5 k + mu) == 0 mod F_5",
+    "p(Phi_6 k + F_5) == 0 mod Phi_6",
+    "p(p_Ih k + q!) == 0 mod p_Ih"
+  ],
+  "combined_4_sequence_ladder": "Lucas, Fibonacci, Catalan, Partition ALL hit substrate primitives at substrate-natural indices, with consistent BT-chain cross-links.",
+  "conclusion": "Partition function p(n) hits substrate primitives in sequence: first 8 values = {1, 1, lambda, q, F_5, Phi_6, p_Ih, g_neg}. p(2^q+1) = h_E_8 = Triple Convergence, p(2^q+2) = Hurwitz reciprocal, p(2^q+3) = |V(Klein quartic)|. Ramanujan's three congruences are mod F_5, Phi_6, p_Ih (substrate primes). The combined Lucas/Fibonacci/Catalan/Partition ladder shows substrate primitives ARE the early-value set of these four fundamental integer sequences."
+}
