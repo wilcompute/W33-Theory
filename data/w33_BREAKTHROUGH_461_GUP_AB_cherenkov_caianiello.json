@@ -1,0 +1,15 @@
+{
+  "statistical_identity": "Mean = Variance = k = 12 (Poisson-like)",
+  "theorem_1_GUP": "Delta_x * Delta_p >= (hbar/2)(1 + k Delta_p^2/(m_P c)^2)",
+  "theorem_2_Caianiello": "a_max = sqrt(lambda_n) c^3/(hbar a); anti-matter mu*a_P EXACT",
+  "theorem_3_AB": "Phi_0 = h/(qe); phase 2pi/q",
+  "theorem_4_Cherenkov": "cos(theta_C) = 1/(beta_v sqrt(1 - omega_n^2/omega^2))",
+  "theorem_5_Larmor": "P = P_classical/(1 - (a/a_max)^2)",
+  "theorem_6_optical": "sigma_tot enhancement = v = 40 low-energy",
+  "theorem_7_WKB": "Three branches: 1, exp(-sqrt(Phi_4)L/a), exp(-mu L/a)",
+  "theorem_8_trace": "Tr(L_W33) = 480 = 2|E| = lambda * |E_8 roots|",
+  "theorem_9_microscope": "Delta_x_min = a/2 (Planck/2)",
+  "substrate_GUP_beta": 12,
+  "substrate_min_length_in_l_P": 3.4641016151377544,
+  "conclusion": "Nine NEW derived physics equations: GUP with beta = k (substrate valency); Caianiello max acceleration = mu * a_P EXACT for anti-matter mode; AB flux quantum h/(qe) and phase 2pi/q; Cherenkov angle from substrate refractive index forbidding below substrate cutoffs; modified Larmor diverges at substrate acceleration limits; optical theorem enhancement = v = 40; WKB tunneling with three substrate branches; trace identity Tr(L_W33) = 2|E| = lambda*|E_8 roots|; Heisenberg microscope limit a/2. Underlying statistical identity: substrate Laplacian has Mean = Variance = k (Poisson-like distribution)."
+}
