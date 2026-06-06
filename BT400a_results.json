@@ -1,0 +1,14 @@
+{
+  "BT": "400a",
+  "title": "CMB Power Spectrum Acoustic Peaks from Substrate",
+  "predictions": {
+    "l_1":    {"substrate": 213.9,  "pdg": 220.0,  "err_pct": 2.8},
+    "l_2":    {"substrate": 559.4,  "pdg": 540.0,  "err_pct": 3.6},
+    "l_3":    {"substrate": 839.1,  "pdg": 810.0,  "err_pct": 3.6},
+    "n_s":    {"substrate": 0.9577, "pdg": 0.9649, "err_pct": 0.75},
+    "r_ts":   {"substrate": 0.6761, "bound": 0.036, "status": "NOTE: exceeds BICEP/Keck"},
+    "r_s_Mpc":{"substrate": 148.3,  "pdg": 147.0,  "err_pct": 0.9}
+  },
+  "note_r_ts": "r_ts=16*epsilon > BICEP bound; slow-roll formula may over-estimate for substrate inflation",
+  "status": "CMB peaks l_1,l_2,l_3 within 4%. n_s 0.75%. r_s sound horizon 0.9%. r_ts needs multi-field inflation correction."
+}

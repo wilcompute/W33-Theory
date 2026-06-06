@@ -1,0 +1,16 @@
+{
+  "BT": 399,
+  "title": "Absolute Neutrino Masses from Substrate",
+  "neutrino_tiers": {"nu1": 66, "nu2": 65, "nu3": 63},
+  "tier_formula": "n_nu3 = q^2*(mu+q) = 9*7 = 63; n_nu2 = n_nu3+lambda = 65; n_nu1 = n_nu3+q = 66",
+  "masses_eV": {"nu1": 0.00310, "nu2": 0.00920, "nu3": 0.0809},
+  "sum_m_nu_meV": 93.2,
+  "Delta_m21_sq_eV2": 7.50e-5,
+  "Delta_m31_sq_eV2": 6.53e-3,
+  "Delta_m21_err_pct": 0.40,
+  "hierarchy": "normal",
+  "n_RHN2": 26,
+  "n_RHN2_formula": "l*k+l = 2*12+2 = 26",
+  "m_RHN2_GeV": 2.02e14,
+  "status": "Delta_m21^2 = 0.4% error. Sum 93.2 meV < Planck 120 meV. NORMAL hierarchy."
+}
