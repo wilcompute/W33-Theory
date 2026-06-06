@@ -1,0 +1,12 @@
+{
+  "endofunctor_F": "F(X) = W(3,3) with each vertex replaced by X",
+  "fixed_point_equation": "S = F(S)",
+  "terminal_coalgebra_existence": "Smyth-Plotkin 1982",
+  "inverse_limit_construction": "S = lim F^n(*)",
+  "cardinality": "40^omega = aleph_continuum",
+  "topology": "profinite Cantor-like",
+  "ultrametric": "d(x,y) = 40^(-n) at first disagreement tier",
+  "computer_eq_network_algebraic": "C = F(C); unique solution C = S",
+  "Y_combinator_structure": "S = Y(F)",
+  "conclusion": "Substrate S algebraically defined as terminal F-coalgebra where F(X) = W(3,3) with each vertex replaced by X. Unique fixed point S = F(S) by Smyth-Plotkin. Built as inverse limit S = lim F^n(*). Cardinality continuum; topology profinite Cantor-like with ultrametric. 'Computer = network of computers' formalized as C = F(C); substrate is the unique algebraic solution via Y-combinator fixed point."
+}

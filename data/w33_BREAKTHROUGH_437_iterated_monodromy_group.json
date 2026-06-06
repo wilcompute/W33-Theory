@@ -1,0 +1,10 @@
+{
+  "base_group": "Sp(4, F_3) = W(E_6) = 51840",
+  "recursive_definition": "G_(n+1) = G_n wr S_40",
+  "order_growth": "log |G_n| ~ 40^n * log |G_0|",
+  "growth_type": "doubly exponential",
+  "topology": "profinite",
+  "IMG_family": "Nekrashevych 2005",
+  "new_object": "symplectic-base IMG (substrate-specific)",
+  "conclusion": "Aut(S) is a profinite Iterated Monodromy Group with base Sp(4, F_3) and branch index 40. Order log |G_n| ~ 40^n * log 51840 grows doubly exponentially. New mathematical object: symplectic-base IMG (vs. standard cyclic-base). Conjecturally amenable, intermediate growth. Universal symmetry group of fractal substrate."
+}

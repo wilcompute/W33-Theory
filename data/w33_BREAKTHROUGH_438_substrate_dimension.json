@@ -1,0 +1,12 @@
+{
+  "topological_dim": 0,
+  "hausdorff_dim": 1,
+  "spacetime_dim_emergent": 4,
+  "fractal_dim": 2,
+  "hilbert_dim_log": "q^240",
+  "AF_algebra": true,
+  "K_0": "Z[40]/(substrate relations)",
+  "noncommutative_geometry": true,
+  "groupoid_C_star": "substrate quantum mechanics",
+  "conclusion": "Substrate algebraically classified: profinite Cantor space with Hausdorff dim 1 (ultrametric); AF-algebra A_S = lim A_n with Bratteli diagram = recursive W(3,3) inclusion; K_0(A_S) = dimension group; substrate = noncommutative Cantor space in Connes' framework; quantum mechanics = C*(G_S) groupoid C*-algebra of Aut(S) acting on S. Multiple dimensional notions: Hausdorff=1, spacetime=mu=4, fractal scaling=lambda=2, Hilbert=q^240. All derived algebraically from S = F(S) fixed point (BT436) and IMG structure (BT437)."
+}
