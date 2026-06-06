@@ -1,0 +1,10 @@
+{
+  "BT": 405,
+  "title": "Electroweak Precision S, T, U Parameters",
+  "S": {"substrate": -0.0217, "LEP": 0.05, "err": 0.11, "pull_sigma": -0.65, "status": "PASSES"},
+  "T": {"substrate":  0.162,  "LEP": 0.09, "err": 0.13, "pull_sigma":  0.55, "status": "PASSES"},
+  "U": {"substrate":  0.00,   "LEP": 0.01, "err": 0.11, "pull_sigma": -0.09, "status": "PASSES"},
+  "rho_substrate": 1.001179,
+  "W_mass_vs_CDF": {"M_W_sub": 80.41, "M_W_CDF": 80.4335, "diff_GeV": 0.0235},
+  "status": "All S,T,U within 1 sigma of LEP precision fit. W(3,3) is EW precision consistent. M_W_sub between PDG and CDF."
+}
