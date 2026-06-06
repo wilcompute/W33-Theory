@@ -1,0 +1,21 @@
+{
+  "theorem_1_wave_eq": "[Box - (1/a^2) L_W33] psi = 0",
+  "theorem_2_dispersion": "omega^2 = c^2 k^2 + c^2 lambda_n / a^2",
+  "theorem_3_refractive_index": "n_ref^2(omega, n) = 1 - omega_n^2/omega^2 (plasma)",
+  "theorem_4_velocities": "v_p * v_g = c^2 (universal)",
+  "theorem_5_propagator": "G_total ~ v/p^2 = |V(W(3,3))|/p^2 low-energy",
+  "theorem_6_KK_tower": "masses {0, sqrt(Phi_4), mu} in Planck units",
+  "theorem_7_compton": "lambda_C = a/sqrt(lambda_n)",
+  "theorem_8_photon_photon": "sigma_gg ~ a^2/(lambda_n hbar^2 c^2)",
+  "substrate_laplacian_spectrum": [
+    0,
+    10,
+    16
+  ],
+  "multiplicities": [
+    1,
+    24,
+    15
+  ],
+  "conclusion": "Eight NEW derived equations from substrate Laplacian L_W33 with spectrum {0, Phi_4, lambda^mu}. Substrate wave equation unifies Minkowski Box and internal Laplacian. Plasma-like dispersion with substrate plasma frequencies omega_n = (c/a)sqrt(lambda_n). Anti-matter mode mass EXACTLY mu in Planck units. Refractive index has plasma form 1 - omega_n^2/omega^2. Low-energy propagator scales with vertex count v = |V(W(3,3))| = 40. All equations DERIVED, complement existing Maxwell/Dirac/Bose-Mesner-as-Einstein coverage in w33_paper.tex."
+}
