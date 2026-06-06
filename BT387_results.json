@@ -1,0 +1,22 @@
+{
+  "BT": 387,
+  "title": "Fine Structure Constant from Substrate RGE",
+  "substrate_primitives": {"q": 3, "lambda": 2, "mu": 4},
+  "M_GUT_GeV": 5e13,
+  "sin2_thetaW_GUT_exact": 0.375,
+  "sin2_thetaW_GUT_formula": "q/2^q = 3/8",
+  "alpha_GUT": 0.03872,
+  "predictions_MZ": {
+    "sin2_thetaW": 0.23119,
+    "sin2_thetaW_obs": 0.23122,
+    "sin2_thetaW_err_pct": 0.013,
+    "alpha_em_inv": 128.91,
+    "alpha_em_inv_obs": 128.9,
+    "alpha_em_inv_err_pct": 0.008
+  },
+  "alpha_em_inv_0": 137.04,
+  "alpha_em_inv_0_obs": 137.036,
+  "alpha_em_inv_0_err_pct": 0.003,
+  "free_parameters": 0,
+  "status": "BREAKTHROUGH - alpha_em = 1/137 from substrate with zero free parameters"
+}

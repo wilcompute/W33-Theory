@@ -1,0 +1,21 @@
+{
+  "BT": 388,
+  "title": "Substrate vs PDG 2024 Complete Dashboard",
+  "total_observables": 27,
+  "substrate_free_params": 3,
+  "SM_free_params": 19,
+  "score": {
+    "exact_or_discrete": 10,
+    "precision_lt_1pct": 7,
+    "good_1_to_10pct": 8,
+    "approximate_10_to_50pct": 2
+  },
+  "highlights": [
+    "alpha^{-1}(0) = 137.04 vs 137.036 (0.003%)",
+    "sin^2(theta_W)(M_Z) = 0.2312 vs 0.23122 (0.013%)",
+    "Jarlskog J = 3.1e-5 vs 3.08e-5 (0.6%)",
+    "delta_CKM = 66 deg vs 65.6 deg (0.6%)",
+    "Wolfenstein lambda = 0.225 vs 0.22537 (0.16%)",
+    "Lambda_cosmo = 1.098e-52 vs 1.11e-52 (0.9%)"
+  ]
+}
