@@ -1,0 +1,14 @@
+{
+  "BT": 411,
+  "title": "Baryon Asymmetry from Substrate CP Violation",
+  "J_CP_substrate": 2.988e-5,
+  "J_CP_PDG": 3.08e-5,
+  "J_CP_err_pct": 2.99,
+  "eta_b_EW_baryogenesis": "~1e-16 (suppressed ~1e6x below observed; EW baryogenesis not the mechanism)",
+  "eta_b_GUT_leptogenesis": "order-of-magnitude match pending full Yukawa texture from W(3,3)",
+  "eta_b_observed": 6.1e-10,
+  "m_RHN_seesaw_GeV": 7.49e14,
+  "Davidson_Ibarra_bound": "PASSES: m_RHN = 7.49e14 GeV >> 10^9 GeV",
+  "baryogenesis_mechanism": "GUT-scale thermal leptogenesis via tier-26 right-handed neutrino",
+  "status": "J_CP = 2.988e-5 [PDG: 3.08e-5] 2.9% error. CP violation substrate-derived. Full leptogenesis = future BT."
+}
