@@ -1,0 +1,42 @@
+{
+  "radix_economy": {
+    "function": "E(b) = b/ln(b)",
+    "continuous_min": "e = 2.718",
+    "integer_min": "q = 3",
+    "values": {
+      "E(2)": 2.8853900817779268,
+      "E(3)": 2.730717679880512,
+      "E(4)": 2.8853900817779268,
+      "E(10)": 4.3429448190325175
+    }
+  },
+  "klee_irwin_qutrit_savings": "log_3(2) = 0.6309 = 37% storage savings",
+  "hermitian_curve": {
+    "equation": "y^q + y = x^mu (ternary-quaternary substrate)",
+    "genus": 3,
+    "points": 28,
+    "points_substrate": "lambda^lambda * Phi_6 (D_4 roots)",
+    "code_length": 27,
+    "code_length_substrate": "Jordan h_3(O) dim"
+  },
+  "klein_quartic": {
+    "genus": 3,
+    "aut_order": 168,
+    "aut_substrate": "lambda^q * q * Phi_6 = N* * T_6",
+    "hurwitz_bound": "84*(g-1) achieved",
+    "hurwitz_multiplier": "84 = q!*Phi_6 = BT454 GB constant",
+    "triangulation": "56 triangles + 24 heptagons = 80",
+    "triangulation_substrate": "|chi(W(3,3))| = lambda^mu * F_5"
+  },
+  "hyperbolic_schlafli": "F_5 > lambda^lambda by unit (just barely hyperbolic)",
+  "pascal_q_simplex_layers": {
+    "layer 2": 9,
+    "layer 3": 27,
+    "layer 4": 81,
+    "layer 5": 243,
+    "layer 6": 729,
+    "layer 8": 6561
+  },
+  "girth_eq_q": "W(3,3) Tanner girth = q = minimum loop closure",
+  "conclusion": "Substrate forced by RADIX ECONOMY MINIMUM at q = 3 (Klee Irwin qutrit savings = optimal radix). Hermitian curve y^q + y = x^mu is substrate's ternary-quaternary algebraic equation with genus q, q^q + 1 = D_4 root count points, code length q^q = Jordan dim. Klein quartic genus q, |Aut| = lambda^q*q*Phi_6 = N**T_6, Hurwitz multiplier 84 = q!*Phi_6 = BT454 GB constant. Klein triangulation total = 80 = |chi(W(3,3))|. Pascal q-simplex layer mu = q^mu = H_1 protected memory. Girth q = minimum loop. All substrate structure forced by ternary being radix-economy optimal integer base."
+}
