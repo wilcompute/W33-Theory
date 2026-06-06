@@ -1,0 +1,9 @@
+{
+  "sin2_theta_W": 0.23076923076923078,
+  "sin2_theta_W_exp": 0.23122,
+  "error_pct": 0.195,
+  "sin2_theta_W_GUT": 0.4,
+  "formula": "q/(q + 3*mu - lam) = 3/13",
+  "derivation": "q=3 colour DOF / (q + 3*(mu-1) + 1) total substrate gauge DOF = 3/13",
+  "status": "0.195% error — SUB-PERCENT PRECISION"
+}

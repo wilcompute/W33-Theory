@@ -1,0 +1,9 @@
+{
+  "r": 0.075,
+  "r_squared": 0.005625,
+  "m_e_over_m_mu_sub": 0.005625,
+  "m_e_over_m_mu_exp": 0.004836,
+  "error_pct": 14.0,
+  "note": "Leading order; PMNS theta_12 mixing correction needed for exact match",
+  "formula": "r = q/V = 3/40, m_n/m_{n+2} = r^2"
+}

@@ -1,0 +1,10 @@
+{
+  "m_H_sub_GeV": 128.9587,
+  "m_H_exp_GeV": 125.25,
+  "error_pct": 2.96,
+  "m_H_over_m_Z": 1.414214,
+  "lambda_H_sub": 0.13636,
+  "lambda_H_exp": 0.12938,
+  "formula": "m_H = m_Z * sqrt(lambda),  lambda_H = q*lam/(V+mu)",
+  "physical": "Higgs = Z-boson scaled by substrate fractal tier ratio sqrt(lambda=2)"
+}

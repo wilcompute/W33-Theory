@@ -1,0 +1,9 @@
+{
+  "r_p_fm": 0.9045,
+  "r_p_exp_fm": 0.8414,
+  "error_pct": 7.5,
+  "D_dressing": 5.19615,
+  "alpha_s_used": 0.35,
+  "dressing_physical": "3 quarks x sqrt(E/V) = sqrt(3) colour flux per quark",
+  "formula": "r_p = sqrt(q)/mu * hbar_c/Lambda_QCD * (1 + C_F*alpha_s/pi)"
+}
