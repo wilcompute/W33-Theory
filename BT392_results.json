@@ -1,0 +1,21 @@
+{
+  "BT": 392,
+  "title": "Substrate PTA / NANOGrav GW Spectrum Prediction",
+  "r": 0.3375,
+  "f_Planck_Hz": 1.855e43,
+  "n_PTA_tier": 236,
+  "predictions": {
+    "f_peak_Hz":    {"substrate": 3.07e-9, "nanograv": 3.0e-9, "err_pct": 2.3},
+    "n_T_spectral": {"substrate": 0.3333,  "nanograv": 0.35,  "err_pct": 4.6},
+    "h_c_at_f_yr":  {"substrate": 2.21e-15, "nanograv": 2.4e-15, "err_pct": 7.9}
+  },
+  "tier_map": {
+    "0":   "Planck",
+    "43":  "Electron mass (BT390)",
+    "127": "Electroweak M_Z (BT387)",
+    "200": "Inflationary GW (BT383)",
+    "236": "PTA NANOGrav nHz band",
+    "280": "Hubble horizon"
+  },
+  "status": "FIRST FALSIFIABLE PTA PREDICTION - all from substrate with zero free parameters"
+}
