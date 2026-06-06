@@ -1,0 +1,21 @@
+{
+  "casimir_240": "F/A = -pi^2 hbar c / (240 d^4); 240 = |E(W(3,3))| = |E_8 roots|",
+  "stefan_boltzmann": "sigma_SB = zeta(lambda)/Phi_4 * k^4/(hbar^3 c^2)",
+  "bec_critical": "n*lambda_dB^3 = zeta(q/lambda) = zeta(3/2) (Viazovska weight)",
+  "planck_integral": "8 pi^5 / g_neg coefficient",
+  "wien_constant": "x_W = F_5 * (1 - exp(-x_W))",
+  "zeta_regularization": {
+    "zeta(-1)": "-1/k (substrate valency reciprocal)",
+    "zeta(-3)": "1/F_5! (substrate factorial)",
+    "zeta(2)": "pi^lambda/q!",
+    "zeta(4)": "pi^mu/(lambda*q*F_5*q)"
+  },
+  "fqhe_substrate": {
+    "filling_nu": "1/q",
+    "fractional_charge": "e/q",
+    "anyonic_phase": "pi/q",
+    "fluxes_per_fermion": "lambda"
+  },
+  "landauer_substrate": "bit/qutrit cost ratio = log_q(lambda) = BT457 radix economy",
+  "conclusion": "NEW physics-only substrate identities (uncovered in existing TeX/index.html): Casimir force factor 1/240 = 1/|E(W(3,3))| = 1/|E_8 roots|; Stefan-Boltzmann sigma_SB = zeta(lambda)/Phi_4 * substrate factor; BEC critical density coefficient = zeta(q/lambda) = E_8 Viazovska modular weight (BT458); Planck spectrum has g_neg in denominator; Wien constant has F_5 prefactor; zeta regularization universally substrate-clean (zeta(-1) = -1/k etc.); Landauer cost ratio bit/qutrit = BT457 radix economy; FQHE filling nu = 1/q with all substrate fractional units."
+}
