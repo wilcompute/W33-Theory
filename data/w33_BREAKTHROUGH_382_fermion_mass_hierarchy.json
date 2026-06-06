@@ -1,0 +1,36 @@
+{
+  "observed_masses_GeV": {
+    "up": 0.0022,
+    "down": 0.0047,
+    "strange": 0.095,
+    "charm": 1.27,
+    "bottom": 4.18,
+    "top": 173.0,
+    "electron": 0.000511,
+    "muon": 0.1057,
+    "tau": 1.777
+  },
+  "yukawa_couplings": {
+    "up": 8.94308943089431e-06,
+    "down": 1.910569105691057e-05,
+    "strange": 0.0003861788617886179,
+    "charm": 0.00516260162601626,
+    "bottom": 0.016991869918699186,
+    "top": 0.7032520325203252,
+    "electron": 2.0772357723577236e-06,
+    "muon": 0.00042967479674796747,
+    "tau": 0.0072235772357723575
+  },
+  "substrate_rate_per_gen": 0.3375,
+  "wolfenstein_substrate": 0.2222222222222222,
+  "lepton_ratios_observed": {
+    "m_mu/m_e": 206.84931506849315,
+    "m_tau/m_mu": 16.81173131504257
+  },
+  "quark_ratios_observed": {
+    "m_top/m_bot": 41.387559808612444,
+    "m_bot/m_str": 44.0,
+    "m_charm/m_up": 577.2727272727273
+  },
+  "conclusion": "Fermion mass hierarchy approximately follows substrate fractal rate 27/80 = q^q/(lambda^mu*F_5) per generation step. Lepton tau/mu ratio matches lambda^mu = 16 (vs 16.8 obs). Wolfenstein parameter ~ 2/9 = lambda/q^lambda substrate. Quark ratios approximate but with factor-2 discrepancies. Substrate sets GENERATION HIERARCHY but specific masses need higher-tier corrections in fractal SQNA. Weakest substrate result so far."
+}

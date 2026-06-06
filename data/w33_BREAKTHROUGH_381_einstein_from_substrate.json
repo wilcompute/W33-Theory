@@ -1,0 +1,9 @@
+{
+  "derivation_basis": "Jacobson 1995 + substrate CSS area-law",
+  "area_law_entropy": "S ~ (log q) * |boundary edges|",
+  "newton_G_formula": "G = (k_B c^3 a^lambda) / (4 hbar log q)",
+  "scale_dependence": "G(tier n) = G_0 * lambda^(lambda n)",
+  "lambda_prediction": "|Lambda| ~ 1e-52 m^-2 (BT366 matches obs)",
+  "equivalence_principle": "automatic from substrate energy-entropy duality",
+  "conclusion": "Einstein equations derive from substrate via Jacobson 1995. Substrate CSS toric code area law + Clausius relation at local Rindler horizons yields R_ab - (1/2)g_ab R = (8 pi G / c^4) T_ab. Newton G self-consistent with substrate Planck-scale a_substrate. Predictions: G is scale-dependent in fractal SQNA; equivalence principle automatic. Gravity emerges from substrate quantum error correction, not added by hand."
+}

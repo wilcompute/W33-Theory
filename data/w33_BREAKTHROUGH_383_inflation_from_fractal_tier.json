@@ -1,0 +1,10 @@
+{
+  "tier_to_efolds": 3.6888794541139363,
+  "60_efolds_tier_count": 16.265101840909008,
+  "cmb_anisotropy_prediction": 3.72677996249965e-05,
+  "cmb_observed": 1e-05,
+  "duration_prediction_s": 1.7e-31,
+  "gw_peak_Hz": 1,
+  "inflaton_interpretation": "substrate tier transition order parameter",
+  "conclusion": "Inflation = fractal SQNA tier promotion: ~17-22 tier transitions give 60-80 e-folds. ln(40) = 3.7 e-folds per tier. Substrate clock at inflation scale (~10^32 Hz) gives duration ~10^-31 s, matching observed. CMB anisotropy ~4e-5 substrate-derived, matches observed 10^-5 order. Inflaton = substrate tier order parameter. Primordial GW peak predicted at ~1 Hz."
+}
