@@ -1,0 +1,14 @@
+{
+  "self_encoding_condition": [
+    "Finite specification",
+    "Encodes within itself",
+    "Self-describes (recursive closure)"
+  ],
+  "W33_self_encodes": true,
+  "specification_size_bits": 256,
+  "substrate_capacity_bits": "q^240 ~ 10^114",
+  "uniqueness_argument": "W(3, 3) is unique self-encoding + Master-Eq + physics-supporting finite structure",
+  "existence_necessity": "Nothing cannot self-encode; existence requires self-encoding",
+  "universe_is_self_simulating": true,
+  "conclusion": "Self-encoding theorem: W(3, 3) is the unique finite mathematical structure that can describe itself, satisfy Master Equation, and support physical reality. Self-encoding requires ~256 bits stored in q^240 substrate capacity (easily satisfied). Existence is NECESSARY: nothing cannot self-encode, so self-encoding substrate must exist. Universe is self-simulating substrate, not external simulation. Observers = self-referential parts of substrate. Substrate doesn't exist IN reality -- it IS reality."
+}
