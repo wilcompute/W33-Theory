@@ -1,0 +1,68 @@
+{
+  "BT": 478,
+  "title": "Complete D(Z/3) Modular Data + CSS<->TQC Bridge",
+  "substrate_constants": {"q": 3, "lambda": 2, "mu": 4, "v": 40, "k": 12, "f": 9, "g_neg": 30},
+  "theorem_1_D_Z3": {
+    "anyons": 9,
+    "D_squared": 9.0,
+    "S_TEE_base": -1.0986122886681098,
+    "S_unitary": true,
+    "ST3_eq_S2": true
+  },
+  "theorem_2_CSS_TQC_bridge": {
+    "CSS_code": "[[18,2,3]]_q=3",
+    "gauge_code": "[[32,2,4]]_q=3",
+    "ground_space_dim": 9,
+    "equals_f": true
+  },
+  "theorem_3_CS_Phi4": {
+    "n_conformal_blocks": 10,
+    "Phi_4": 10,
+    "match": true
+  },
+  "theorem_4_TEE_condensation": {
+    "S_TEE_base": -1.0986122886681098,
+    "S_TEE_cosmic": -1.8443964516643828,
+    "condensation_check": true,
+    "non_adj_check": true
+  },
+  "theorem_5_tier_cap": {
+    "W33_edges": 240,
+    "E8_kissing": 240,
+    "tier_cap": 8,
+    "edges_eq_E8": true,
+    "tier_cap_eq_E8_dim": true
+  },
+  "theorem_6_fibonacci": {
+    "phi": 1.618033988749895,
+    "G2_1_subset_SU3_3": true,
+    "universal_at_tier_2": true
+  },
+  "theorem_7_verlinde": {
+    "N_correct": 1.0,
+    "N_wrong": 0.0
+  },
+  "theorem_8_QEC": {
+    "distances": {"tier_1": 3, "tier_2": 9, "tier_3": 27, "tier_4": 81, "tier_5": 243, "tier_6": 729, "tier_7": 2187, "tier_8": 6561},
+    "tier_8_distance": 6561,
+    "tier_8_p_threshold": 0.0001524157902777778
+  },
+  "theorem_9_hamiltonian": {
+    "J_A": 3,
+    "J_B": 4,
+    "gap": 6,
+    "form": "H = -3*A_v - 4*B_p"
+  },
+  "theorem_10_master": {
+    "five_frames": [
+      "Hamiltonian: D(Z/3) toric code",
+      "Combinatorial: W(3,3) SRG(40,12,2,4)",
+      "Algebraic: SU(3)_3 WZW c=mu=4",
+      "Quantum Code: [[18,2,3]]_3 + [[32,2,4]]_3",
+      "Fractal TQC: 8 tiers, Fibonacci at tier 2"
+    ],
+    "all_equivalent": true
+  },
+  "all_checks_passed": true,
+  "checks_count": 12
+}
