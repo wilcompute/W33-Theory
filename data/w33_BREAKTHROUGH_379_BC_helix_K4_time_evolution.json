@@ -1,0 +1,12 @@
+{
+  "BC_helix_angle_rad": 2.300523983021863,
+  "BC_helix_angle_deg": 131.81031489577862,
+  "BC_helix_fraction_of_turn": 0.36613976359938505,
+  "BC_helix_irrational": true,
+  "K4_eq_tetrahedron": true,
+  "substrate_lines_eq_BC_stacks": 40,
+  "golden_ratio_phi": 1.618033988749895,
+  "full_circuit_rad": 92.02095932087452,
+  "full_circuit_turns": 14.645590543975402,
+  "conclusion": "BC helix (Boerdijk 1952, Coxeter 1973) = substrate K_4 time evolution. K_4 (4 points per W(3,3) line) = regular tetrahedron. Substrate clock tick rotates K_4 by arccos(-2/3) = 131.81 deg = irrational fraction of 2 pi. Never repeats -> arrow of time forced by BC helix geometry. Golden ratio phi enters via icosahedral aperiodicity shared with BC helix. Substrate 2nd law of thermodynamics: irrational K_4 rotations cannot reverse."
+}

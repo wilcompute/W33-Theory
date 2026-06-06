@@ -1,0 +1,9 @@
+{
+  "gamma_matrices_verified": true,
+  "spinor_dim": 4,
+  "spinor_dim_substrate": "2g = mu where g = lambda (symplectic rank)",
+  "mass_from_J": "m c^2 = substrate stabilizer coupling J",
+  "anyon_dispersion": "Dirac equation in mu-dim spinor space",
+  "clifford_pairs_verified": 16,
+  "conclusion": "Dirac spinor explicitly constructed: 4 gamma matrices (4x4) for Cl(1, 3) verified to satisfy Clifford anti-commutation. Dirac dim mu = 4 forced by Sp(4, R) fundamental rep (2g = mu for substrate symplectic rank g = lambda). Fermion mass m c^2 = substrate stabilizer coupling J. Anyon dispersion is the Dirac equation in mu-component spinor space."
+}

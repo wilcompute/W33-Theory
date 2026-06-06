@@ -1,0 +1,20 @@
+{
+  "decomposition": "61 = 1 + 30 + 30 under C_3",
+  "trivial_multiplicity": 1,
+  "omega_multiplicity": 30,
+  "omega_bar_multiplicity": 30,
+  "30_substrate": "h(E_8) Triple Convergence = q * Phi_4",
+  "interpretation": {
+    "1": "NOW (fixed under clock tick)",
+    "30 (omega)": "FUTURE (advancing)",
+    "30 (omega^bar)": "PAST (retreating)"
+  },
+  "character_verification": {
+    "Tr_e": 61,
+    "Tr_g": -29,
+    "Tr_g2": -29,
+    "trivial_mult_computed": 1,
+    "omega_mult_computed": 30
+  },
+  "conclusion": "Codex 'top 1' open question (61-core representation) resolved: under C_3 survivor symmetry, 61 = 1 (trivial NOW) + 30 (omega FUTURE) + 30 (omega^bar PAST). The 30 = h(E_8) Triple Convergence integer. Derived from character orthogonality with a_0 = 1 forced by BT373 NOW-axis identification. Verified: Tr(g) = Tr(g^2) = -29, consistent with this decomposition."
+}

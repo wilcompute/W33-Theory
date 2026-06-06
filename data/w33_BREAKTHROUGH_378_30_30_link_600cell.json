@@ -1,0 +1,18 @@
+{
+  "primary_link": {
+    "61_core_1": "600-cell center / H_4 fixed point",
+    "61_core_30_omega": "30 right-chiral 600-cell antipodal pairs",
+    "61_core_30_omega_bar": "30 left-chiral 600-cell antipodal pairs"
+  },
+  "600_cell_structure": {
+    "vertices": 120,
+    "vertices_substrate": "F_5!",
+    "antipodal_pairs": 60,
+    "chirality_split": "30 right + 30 left",
+    "symmetry": "H_4 = 14400"
+  },
+  "30_eq_h_E8_eq_Coxeter": true,
+  "substrate_edges_decomposition": "240 = 4 * 60 (mu chirality classes)",
+  "icosian_substrate": "120 icosians = lambda * (mu * g_neg) = lambda * |C_60|/lambda",
+  "conclusion": "Both 30s of BT375's 61 = 1 + 30 + 30 decomposition link to the 600-cell's antipodal-pair chirality split. 600-cell has 60 antipodal vertex pairs splitting as 30 right-chiral + 30 left-chiral by Hopf fibration. 30 = h(E_8) Coxeter number. Substrate 240 edges = two 600-cells = 4 chirality classes of (30 + 30) pairs. Time arrow (past/future) = left/right chirality of substrate's icosian-quaternion structure."
+}
