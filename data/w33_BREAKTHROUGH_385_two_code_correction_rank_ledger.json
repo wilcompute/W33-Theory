@@ -1,0 +1,38 @@
+{
+  "correction": "Both codes are ternary (F_3), not ternary x binary",
+  "code_A": "[[240, 81, 3]]_3 canonical homology, d_X=3 d_Z=4",
+  "code_B": "[[240, 160, 2]]_3 all-plus line Ham, d_X=2 d_Z=4",
+  "rank_ledger": [
+    {
+      "value": 165,
+      "factor": "g_neg * p_Ih",
+      "interp": "common kernel"
+    },
+    {
+      "value": 88,
+      "factor": "2^q * p_Ih",
+      "interp": "triangle boundaries in common"
+    },
+    {
+      "value": 16,
+      "factor": "lambda^mu",
+      "interp": "line stabilizers in common"
+    },
+    {
+      "value": 104,
+      "factor": "2^q * Phi_3",
+      "interp": "shared stabilizers total"
+    },
+    {
+      "value": 61,
+      "factor": "165 - 104 = prime",
+      "interp": "shared quotient (sense core)"
+    }
+  ],
+  "61_is_prime": true,
+  "asymmetric_distances": {
+    "d_X": 3,
+    "d_Z": 4
+  },
+  "conclusion": "Critical correction acknowledged: substrate's two CSS codes are BOTH ternary (F_3), differing in orientation convention (signed homology vs unsigned line bundle), with asymmetric distances d_X=q d_Z=mu. Rank ledger from Codex BT356 verified: 165=g_neg*p_Ih (common kernel), 88=2^q*p_Ih, 16=lambda^mu, 104=2^q*Phi_3, 61=prime sense core. 61 is the unique prime quotient = irreducible substrate emergence (= genetic code sense alphabet, BT372)."
+}
