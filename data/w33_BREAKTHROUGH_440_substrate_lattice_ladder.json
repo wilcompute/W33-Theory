@@ -1,0 +1,85 @@
+{
+  "lattice_ladder": [
+    {
+      "dim": 3,
+      "lattice": "FCC=A_3",
+      "kissing": 12,
+      "substrate": "k",
+      "proven": true
+    },
+    {
+      "dim": 4,
+      "lattice": "D_4",
+      "kissing": 24,
+      "substrate": "f",
+      "proven": false
+    },
+    {
+      "dim": 5,
+      "lattice": "D_5",
+      "kissing": 40,
+      "substrate": "|V(W(3,3))|",
+      "proven": false
+    },
+    {
+      "dim": 6,
+      "lattice": "E_6",
+      "kissing": 72,
+      "substrate": "lambda^q*q^lambda",
+      "proven": false
+    },
+    {
+      "dim": 7,
+      "lattice": "E_7",
+      "kissing": 126,
+      "substrate": "lambda*q^lambda*Phi_6",
+      "proven": false
+    },
+    {
+      "dim": 8,
+      "lattice": "E_8",
+      "kissing": 240,
+      "substrate": "|E(W(3,3))|",
+      "proven": true
+    },
+    {
+      "dim": 12,
+      "lattice": "K_12",
+      "kissing": 756,
+      "substrate": "q^q * 7 * 4",
+      "proven": false
+    },
+    {
+      "dim": 16,
+      "lattice": "BW_16",
+      "kissing": 4320,
+      "substrate": "lambda^F_5*q^q*F_5",
+      "proven": false
+    },
+    {
+      "dim": 24,
+      "lattice": "Leech",
+      "kissing": 196560,
+      "substrate": "2^mu*q^q*F_5*Phi_6*Phi_3 (BT296)",
+      "proven": true
+    }
+  ],
+  "key_identities": [
+    "D_5 kissing 40 = |V(W(3,3))|",
+    "E_8 kissing 240 = |E(W(3,3))|",
+    "Per-edge stabilizer = lambda^q * q^q = 216",
+    "W(E_6) cosets in W(E_8) = lambda^Phi_6 * q * F_5 * Phi_6 = 13440"
+  ],
+  "E8_root_decomposition": {
+    "D_8_sublattice": 112,
+    "spinor_half": 128,
+    "total": 240
+  },
+  "proven_optimal_count": 3,
+  "proven_optimal_packings": [
+    "FCC",
+    "E_8",
+    "Leech"
+  ],
+  "conclusion": "Substrate lattice ladder fully computed. Key new identities: D_5 kissing = |V(W(3,3))| = 40, E_8 kissing = |E(W(3,3))| = 240 (substrate edges = E_8 root system), per-edge stabilizer = lambda^q * q^q = 216, W(E_6) cosets in W(E_8) = 13440. Substrate has 9 lattice levels in substrate-primitive dims; three PROVEN OPTIMAL packings (FCC, E_8, Leech) match q = 3 = substrate color = fermion generation count."
+}
