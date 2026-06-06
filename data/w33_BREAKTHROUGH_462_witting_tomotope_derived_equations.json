@@ -1,0 +1,22 @@
+{
+  "theorem_1_witting_frame": "sum |psi_i><psi_i| = Phi_4 * I_mu",
+  "theorem_2_pair_count": {
+    "total": 780,
+    "1_over_q_overlap": 240,
+    "1_over_q_overlap_substrate": "|E(W(3,3))|",
+    "orthogonal": 540,
+    "orthogonal_substrate": "lambda^2 * q^q * F_5"
+  },
+  "theorem_3_welch_bound": "q/Phi_3 (substrate)",
+  "theorem_4_projector_distances": [
+    1.3333333333333333,
+    2
+  ],
+  "theorem_5_aut_ratio": 540,
+  "theorem_5_aut_substrate": "lambda^2 * q^q * F_5",
+  "theorem_6_tomotope_UTM": "Wolfram 2-state 3-color UTM (Smith 2007 proof)",
+  "theorem_7_universal_cover": "infinite hyperbolic Coxeter; minimal covers 96*n",
+  "theorem_8_binary_grading": "192 = lambda*96 = lambda^2*48",
+  "theorem_9_trace_ratio": "192/40 = f/F_5",
+  "conclusion": "Nine derived equations from Witting polytope frame theory + tomotope abstract polytope geometry. Witting tight frame sum = Phi_4 I_mu; pair count 780 = 240 (=|E|) + 540 (=lambda^2 q^q F_5); Welch bound q/Phi_3; projector distances {2lambda/q, lambda}; Aut ratio 540 (matches orthogonal pair count); tomotope = Wolfram 2-3 UTM with (lambda, q) = (states, colors) Master Equation; infinite hyperbolic universal cover with 96*n minimal covers; binary grading 192 = lambda*96. Substrate's geometry (Witting) + computation (tomotope) linked by these equations."
+}
