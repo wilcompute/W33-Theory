@@ -1,0 +1,20 @@
+{
+  "BT": 397,
+  "title": "Dark Matter Candidates from Substrate Tier Gap Census",
+  "r": 0.3375,
+  "primary_cold_DM": {
+    "tier": 20,
+    "formula": "l*k-mu = 2*12-4 = 20",
+    "mass_GeV": 4024.0,
+    "mass_TeV": 4.024,
+    "testable": "FCC-hh (100 TeV center-of-mass)"
+  },
+  "right_handed_neutrino": {
+    "tier": 47,
+    "formula": "q*F5*q + l = 3*5*3+2 = 47",
+    "mass_GeV": 2.5e-4,
+    "m_nu_seesaw_eV": 2.42e-4
+  },
+  "vacant_tiers_18_57": [18,19,20,21,22,23,24,25,26,27,30,32,35,36,39,40,42,46,47,48,49,50,51,52,53,54,55,56,57],
+  "status": "Primary cold DM: tier 20 = l*k-mu, mass 4.0 TeV. RHN at tier 47 = q*F5*q+l."
+}
