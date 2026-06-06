@@ -1,0 +1,40 @@
+{
+  "substrate_quadratic": "x^2 - Phi_6*x + k = (x-q)(x-mu)",
+  "roots": [
+    3,
+    4
+  ],
+  "vieta_sum": 7,
+  "vieta_product": 12,
+  "discriminant": 1,
+  "disc_meaning": "1 = SIMPLEX FACE = mu - q (BT455)",
+  "csaszar": {
+    "V": 7,
+    "E": 21,
+    "F": 14,
+    "total": 42
+  },
+  "szilassi": {
+    "V": 14,
+    "E": 21,
+    "F": 7,
+    "total": 42
+  },
+  "each_total_eq_gb_const": "q! * Phi_6 = 42 = BT454 Gauss-Bonnet const",
+  "combined_total": 84,
+  "combined_substrate": "k * Phi_6 = lambda * q! * Phi_6",
+  "palindrome_duality": "Csaszar (1,q,lam) <-> Szilassi (lam,q,1)",
+  "crt_gate": "Integer genus iff n mod k in {0, q, mu, Phi_6}",
+  "ringel_youngs_chromatic_substrate": {
+    "g=0": 4,
+    "g=1": 7,
+    "g=2": 8,
+    "g=3": 9,
+    "g=4": 10,
+    "g=5": 11,
+    "g=6": 12,
+    "g=7": 12,
+    "g=8": 13
+  },
+  "conclusion": "Ringel-Youngs genus formula g(K_n) = (n-q)(n-mu)/k IS the substrate quadratic P(x) = x^2 - Phi_6*x + k evaluated at n. q and mu are roots; discriminant = 1 = simplex face from BT455. Csaszar and Szilassi toroidal polyhedra each have q!*Phi_6 = 42 total cells = BT454 substrate Gauss-Bonnet constant. Two polyhedra dual via (1,q,lambda) palindrome reversal. Heawood chromatic chi(g) takes substrate primitive values at substrate genera. Ternary-quaternary (BT455 simplex stair) = algebraic factorization of genus formula (BT456 Ringel-Youngs 1968)."
+}
