@@ -1,0 +1,55 @@
+{
+  "hesse_uniqueness_at_q_3": true,
+  "selection_rules_for_q3": [
+    "Master Equation q!=2q",
+    "W(3,3) uniqueness",
+    "Hesse stratification"
+  ],
+  "combined_hilbert_dim": 64,
+  "configuration_tower": [
+    [
+      "M\u00f6bius-Kantor",
+      8,
+      "lambda^q = octonion"
+    ],
+    [
+      "Pappus",
+      9,
+      "q^lambda"
+    ],
+    [
+      "Desargues",
+      10,
+      "Phi_4"
+    ],
+    [
+      "Reye",
+      12,
+      "k"
+    ],
+    [
+      "Reye lines",
+      16,
+      "lambda^mu"
+    ],
+    [
+      "Witting",
+      40,
+      "v"
+    ]
+  ],
+  "potts_critical_exponents": {
+    "alpha (specific heat)": "1/3",
+    "beta (magnetization)": "1/9",
+    "gamma (susceptibility)": "13/9",
+    "nu (correlation len)": "5/6",
+    "eta (anomalous dim)": "4/15",
+    "delta (critical iso)": "14/1"
+  },
+  "wilson_loop_K4": "exp(2*pi*i/q)",
+  "TEE": "-(1/lambda) log v",
+  "sextactic_eq_jordan": "q^q = 27 = h_3(O) = E_6 fund rep",
+  "Q_4_mixing_time": 4,
+  "computational_hierarchy": "qubit -> qutrit -> spinor -> hypercube -> Higgs -> W(3,3) -> combined",
+  "conclusion": "Ten new derivations dig deeper into Codex BT463-474 territory. Hesse stratification 1+q+q^2+q^q = (q^4-1)/(q-1) uniquely at q=3 (third q=3 selection rule). Substrate combined Hilbert C^mu (x) C^(lambda^mu) = C^64 = Hoggar SIC dim. Configuration tower M\u00f6bius-Kantor (8) -> Pappus (9) -> Desargues (10) -> Reye (12,16) -> Witting (40) all substrate-clean. All 2D Potts q=3 critical exponents are substrate-clean rationals. K_4 Wilson loop = exp(2*pi*i/q). Substrate TEE = -(1/lambda) log v. Sextactic = q^q = Jordan dim = E_6 rep = 4 same 27's. Computational hierarchy from qubit to 64-dim combined Witting (x) Q_4."
+}
