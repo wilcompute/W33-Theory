@@ -1,0 +1,18 @@
+{
+  "N_star": 8,
+  "description": "Tiers 1-8 NESTING (E8 saturated), Tiers >8 EMBEDDING regime",
+  "tiers": [
+    {"tier": 1, "mode": "NESTING", "dim": 2, "sphere_packing_density": 1.0144, "info_capacity_bits": 18.0},
+    {"tier": 2, "mode": "NESTING", "dim": 4, "sphere_packing_density": 0.5072, "info_capacity_bits": 36.0},
+    {"tier": 3, "mode": "NESTING", "dim": 8, "sphere_packing_density": 0.2536, "info_capacity_bits": 72.0},
+    {"tier": 4, "mode": "NESTING", "dim": 16, "sphere_packing_density": 0.001929, "info_capacity_bits": 144.0},
+    {"tier": 5, "mode": "NESTING", "dim": 32, "sphere_packing_density": 0.0634, "info_capacity_bits": 288.0},
+    {"tier": 6, "mode": "NESTING", "dim": 64, "sphere_packing_density": 0.0317, "info_capacity_bits": 576.0},
+    {"tier": 7, "mode": "NESTING", "dim": 128, "sphere_packing_density": 0.015850, "info_capacity_bits": 1152.0},
+    {"tier": 8, "mode": "NESTING", "dim": 256, "sphere_packing_density": 0.007925, "info_capacity_bits": 2304.0},
+    {"tier": 9, "mode": "EMBEDDING", "dim": 512, "sphere_packing_density": 0.158321, "info_capacity_bits": 20736.0},
+    {"tier": 10, "mode": "EMBEDDING", "dim": 1024, "sphere_packing_density": 0.103875, "info_capacity_bits": 23040.0},
+    {"tier": 11, "mode": "EMBEDDING", "dim": 2048, "sphere_packing_density": 0.070948, "info_capacity_bits": 25344.0},
+    {"tier": 12, "mode": "EMBEDDING", "dim": 4096, "sphere_packing_density": 0.050094, "info_capacity_bits": 27648.0}
+  ]
+}

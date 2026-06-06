@@ -1,0 +1,17 @@
+{
+  "our_universe": "W(3,3)",
+  "self_dual_unique": true,
+  "generations_all": 3,
+  "spacetime_dims_all": 4,
+  "self_encoding": "S=F(S), terminal F-coalgebra (Smyth-Plotkin 1982)",
+  "bekenstein_nats_per_planck_area": 18.8496,
+  "universes": [
+    {"name": "W(3,2)", "s": 2, "V": 15, "E": 30, "self_dual": false, "mass_ladder_r": 0.15, "generations": 3},
+    {"name": "W(3,3)", "s": 3, "V": 40, "E": 120, "self_dual": true, "mass_ladder_r": 0.025, "generations": 3},
+    {"name": "W(3,4)", "s": 4, "V": 85, "E": 340, "self_dual": false, "mass_ladder_r": 0.006618, "generations": 3},
+    {"name": "W(3,5)", "s": 5, "V": 156, "E": 780, "self_dual": false, "mass_ladder_r": 0.002308, "generations": 3},
+    {"name": "W(3,7)", "s": 7, "V": 400, "E": 2800, "self_dual": false, "mass_ladder_r": 0.000459, "generations": 3},
+    {"name": "W(3,8)", "s": 8, "V": 585, "E": 4680, "self_dual": false, "mass_ladder_r": 0.00024, "generations": 3},
+    {"name": "W(3,9)", "s": 9, "V": 820, "E": 7380, "self_dual": false, "mass_ladder_r": 0.000136, "generations": 3}
+  ]
+}

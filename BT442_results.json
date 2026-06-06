@@ -1,0 +1,21 @@
+{
+  "G0": "Sp(4,F_3)",
+  "G0_order": 51840,
+  "V": 40,
+  "hausdorff_dim": 1.0,
+  "description": "Symplectic-base IMG, NEW mathematical object (Nekrashevych 2005 extended)",
+  "ultrametric": "d(x,y) = 40^{-n}",
+  "AF_algebra": "Bratteli = recursive W(3,3) inclusion lattice",
+  "K0": "ordered abelian dimension group",
+  "tower": [
+    {"level": 0, "log2_order": 15.66},
+    {"level": 1, "log2_order": 785.63},
+    {"level": 2, "log2_order": 31584.37},
+    {"level": 3, "log2_order": 1263533.78},
+    {"level": 4, "log2_order": 50541510.46},
+    {"level": 5, "log2_order": 2021660577.69},
+    {"level": 6, "log2_order": 80866423266.95},
+    {"level": 7, "log2_order": 3234656930837.28},
+    {"level": 8, "log2_order": 129386277233650.25}
+  ]
+}

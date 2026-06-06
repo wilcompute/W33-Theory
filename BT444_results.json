@@ -1,0 +1,13 @@
+{
+  "proton_radius_fm": 0.1516,
+  "r_p_exp_fm": 0.8414,
+  "r_p_error_pct": 82.0,
+  "r_p_note": "QCD non-pert dressing ~5.5x needed beyond substrate algebra",
+  "delta_CP_substrate_deg": 60.0,
+  "delta_CP_physical_deg": 240.0,
+  "delta_CP_exp_deg": 230,
+  "delta_CP_1sigma": 53,
+  "delta_CP_within_1sigma": true,
+  "delta_CP_diff_deg": 10.0,
+  "delta_CP_status": "PREDICTION CONFIRMED within 1-sigma (diff=10 deg, exp=230+/-53)"
+}
