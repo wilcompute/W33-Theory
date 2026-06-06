@@ -1,0 +1,14 @@
+{
+  "BT": 403,
+  "title": "Proton Charge Radius from Substrate",
+  "Lambda_QCD_MeV": 217.0,
+  "r_p_leading_fm":  0.9092,
+  "r_p_simplex_fm":  0.7871,
+  "r_p_EW_fm":       0.7268,
+  "r_p_pdg_fm":      0.8414,
+  "r_p_muonic_fm":   0.84087,
+  "err_leading_pct": 8.1,
+  "note": "Leading QCD term 8.1%. Simplex + EW corrections overcorrect. Best current result: 8.1% from Lambda_QCD alone. Full non-perturbative quark model needed.",
+  "formula": "r_p ~ hbar*c / Lambda_QCD (leading); full formula requires non-perturbative quark confinement geometry",
+  "status": "Proton radius: substrate sets correct energy scale (Lambda_QCD exact, 0%). Radius itself at 8.1%."
+}
