@@ -1,0 +1,13 @@
+{
+  "tier_caps": {
+    "Bekenstein_info": 75.53452119697722,
+    "Genus_oscillator": 31.699250014423125,
+    "Leech_packing": 24,
+    "E_8_packing": 8
+  },
+  "N_star_max_depth": 8,
+  "substrate_S_correction": "S = F^(2^q)(*) (finite, not lim F^n)",
+  "physical_interpretation": "8 tiers correspond to E_8 sphere-packing levels",
+  "BT436_correction": "infinite limit was wrong; depth is finite = 2^q",
+  "conclusion": "Substrate fractal depth is FINITE = 2^q = 8 tiers, set by E_8 sphere packing optimality (tightest constraint). Bekenstein info cap allows ~74 tiers; genus oscillator caps ~31; Leech packing caps f = 24; E_8 packing caps 2^q = 8 (tightest). Substrate S = F^(2^q)(*) finite iteration, not the infinite limit of BT436. Each tier corresponds to one octonion-dim sphere-packing level. Beyond 8 tiers, additional structure comes from embedding, not nesting."
+}
