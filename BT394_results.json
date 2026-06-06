@@ -1,0 +1,12 @@
+{
+  "BT": 394,
+  "title": "Higgs Mass from Substrate Vacuum Condensate",
+  "v_GeV": 246.22,
+  "lambda_W": 0.22361,
+  "phi": 1.61803,
+  "lambda_H": 0.02713,
+  "m_H_formula": {"value": 121.1, "formula": "v*lambda_W*sqrt(q*phi/2)", "err_pct": 3.31},
+  "m_H_tier":   {"value": 129.4, "formula": "m_Planck*r^(n_top+mu-lambda)=r^30", "err_pct": 3.32},
+  "best_prediction": {"value": 121.1, "pdg": 125.25, "err_pct": 3.31},
+  "status": "Higgs mass substrate-derived to 3.3%. Electroweak sector complete."
+}
