@@ -1,0 +1,60 @@
+{
+  "BT": 400,
+  "title": "Threshold Reciprocity Bridge for Gauge Running and the Higgs Quartic",
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "F5": 5,
+    "v_w33": 40
+  },
+  "gauge_side_from_BT413": {
+    "target_gauge_weight": 0.8,
+    "observed_gauge_weight": 0.8014422062455102,
+    "relative_error_to_BT413_target_scale": 0.0018027578068876462,
+    "meaning": "M_W33 is approximately (mu/F5)*sqrt(M12*M13)"
+  },
+  "scalar_side": {
+    "lambda_H_seed_GUT": 0.025,
+    "lambda_H_seed_formula": "1/v(W33) = 1/40",
+    "scalar_lift": 5,
+    "scalar_lift_formula": "F5",
+    "lambda_H_EW": 0.125,
+    "lambda_H_EW_formula": "F5/v = 5/40 = 1/8 = 2^-q",
+    "lambda_H_obs_from_mH_and_vev": 0.1293838555258301,
+    "lambda_H_error_pct": 3.3882554419279183
+  },
+  "higgs_mass": {
+    "Higgs_VEV_GeV_input": 246.21964023926205,
+    "m_H_pred_GeV": 123.10982011963102,
+    "m_H_pred_formula": "sqrt(2*(1/8))*v_H = v_H/2",
+    "m_H_obs_GeV": 125.25,
+    "m_H_error_pct": 1.7087264513923957,
+    "BT394_best_error_pct": 31.519107831297212,
+    "improvement_over_BT394_executable": 18.44596471577597
+  },
+  "reciprocity": {
+    "gauge_weight": 0.8,
+    "scalar_lift": 5,
+    "product": 4.0,
+    "target": 4,
+    "identity": "(mu/F5)*F5 = mu",
+    "interpretation": "the same finite threshold bridge lowers the gauge crossing center by 4/5 and raises the scalar vertex coupling by 5"
+  },
+  "boundary": {
+    "complete_Higgs_theorem": false,
+    "reason": "the electroweak VEV is still an external input",
+    "next_target": "derive the W33 threshold vector that simultaneously fixes BT387 alpha and the Higgs quartic running"
+  },
+  "checks": {
+    "scalar_seed_is_vertex_reciprocal": true,
+    "scalar_lift_is_F5": true,
+    "lambda_H_EW_is_binary_volume": true,
+    "higgs_mass_is_vev_over_two": true,
+    "gauge_scalar_reciprocity_product_is_mu": true,
+    "higgs_mass_error_under_2pct": true,
+    "higgs_quartic_error_under_4pct": true,
+    "bt399_gauge_weight_error_under_0p2pct": true,
+    "improves_BT394_executable_mass_error_by_10x": true
+  }
+}

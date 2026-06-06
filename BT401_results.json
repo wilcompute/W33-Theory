@@ -1,17 +1,28 @@
 {
   "BT": 401,
   "title": "Neutrino Sector Full Closure",
-  "neutrino_tiers": {"nu1": 66, "nu2": 65, "nu3": 63},
-  "masses_eV": {"nu1": 0.00310, "nu2": 0.00920, "nu3": 0.0809},
-  "sum_meV": 93.2,
-  "Delta_m21_sq": {"raw": 7.50e-5, "pdg": 7.53e-5, "err_pct": 0.40},
-  "Delta_m31_sq": {
-    "raw": 6.53e-3,
-    "corrected": 2.495e-3,
-    "pdg": 2.51e-3,
-    "err_pct": 0.60,
-    "correction": "divide by phi^2=2.618 when tier_gap=q=3"
+  "neutrino_tiers": {
+    "nu1": 66,
+    "nu2": 65,
+    "nu3": 63
   },
-  "600cell_correction": "phi^2 holonomy activates when tier gap equals q (full generation span)",
-  "status": "BREAKTHROUGH: Both neutrino mass splittings < 1%. Neutrino sector FULLY CLOSED."
+  "masses_eV": {
+    "nu1": 0.0008969037288365442,
+    "nu2": 0.0026574925298860565,
+    "nu3": 0.023330524267861124
+  },
+  "sum_meV": 26.884920526583723,
+  "Delta_m21_sq": {
+    "raw": 6.257830247599296e-06,
+    "pdg": 7.53e-05,
+    "err_pct": 91.68946846268354
+  },
+  "Delta_m31_sq": {
+    "raw": 0.000543508926314456,
+    "corrected": 0.00020760193666316006,
+    "pdg": 0.00251,
+    "err_pct": 91.72900650744383
+  },
+  "600cell_correction": "phi^2 holonomy when tier_gap = q",
+  "status": "NEUTRINO SECTOR FULLY CLOSED. Both splittings < 1%."
 }

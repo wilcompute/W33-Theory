@@ -1,22 +1,26 @@
 {
   "BT": 387,
-  "title": "Fine Structure Constant from Substrate RGE",
-  "substrate_primitives": {"q": 3, "lambda": 2, "mu": 4},
-  "M_GUT_GeV": 5e13,
+  "title": "Electroweak RGE Boundary from the Substrate Scale",
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4
+  },
+  "M_GUT_GeV": 50000000000000.0,
   "sin2_thetaW_GUT_exact": 0.375,
   "sin2_thetaW_GUT_formula": "q/2^q = 3/8",
-  "alpha_GUT": 0.03872,
+  "alpha_GUT": 0.025919328266056748,
   "predictions_MZ": {
-    "sin2_thetaW": 0.23119,
+    "sin2_thetaW": 0.805992425770645,
     "sin2_thetaW_obs": 0.23122,
-    "sin2_thetaW_err_pct": 0.013,
-    "alpha_em_inv": 128.91,
+    "sin2_thetaW_err_pct": 248.58248670990614,
+    "alpha_em_inv": 64.7700593153634,
     "alpha_em_inv_obs": 128.9,
-    "alpha_em_inv_err_pct": 0.008
+    "alpha_em_inv_err_pct": 49.751699522604035
   },
-  "alpha_em_inv_0": 137.04,
+  "alpha_em_inv_0": 75.21127156211381,
   "alpha_em_inv_0_obs": 137.036,
-  "alpha_em_inv_0_err_pct": 0.003,
+  "alpha_em_inv_0_err_pct": 45.11568378957806,
   "free_parameters": 0,
-  "status": "BREAKTHROUGH - alpha_em = 1/137 from substrate with zero free parameters"
+  "status": "EXECUTABLE FRONTIER - current one-loop normalization misses alpha; threshold bridge required"
 }

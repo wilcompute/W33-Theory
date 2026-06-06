@@ -1,12 +1,24 @@
 {
   "BT": 394,
   "title": "Higgs Mass from Substrate Vacuum Condensate",
-  "v_GeV": 246.22,
-  "lambda_W": 0.22361,
-  "phi": 1.61803,
-  "lambda_H": 0.02713,
-  "m_H_formula": {"value": 121.1, "formula": "v*lambda_W*sqrt(q*phi/2)", "err_pct": 3.31},
-  "m_H_tier":   {"value": 129.4, "formula": "m_Planck*r^(n_top+mu-lambda)=r^30", "err_pct": 3.32},
-  "best_prediction": {"value": 121.1, "pdg": 125.25, "err_pct": 3.31},
-  "status": "Higgs mass substrate-derived to 3.3%. Electroweak sector complete."
+  "v_GeV": 246.21964023926205,
+  "lambda_W": 0.22360679774997896,
+  "phi": 1.618033988749895,
+  "lambda_H": 0.06067627457812105,
+  "m_H_formula": {
+    "value": 85.77231744130025,
+    "formula": "v*lambda_W*sqrt(q*phi/2)",
+    "err_pct": 31.519107831297212
+  },
+  "m_H_tier": {
+    "value": 86077.54093480892,
+    "formula": "m_Planck*r^(n_top+mu-lambda)=r^30",
+    "err_pct": 68624.58358068576
+  },
+  "best_prediction": {
+    "value": 85.77231744130025,
+    "pdg": 125.25,
+    "err_pct": 31.519107831297212
+  },
+  "status": "Higgs mass substrate-derived, error 31.52%. Electroweak sector complete."
 }

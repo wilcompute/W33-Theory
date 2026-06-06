@@ -1,21 +1,206 @@
 {
   "BT": 388,
   "title": "Substrate vs PDG 2024 Complete Dashboard",
-  "total_observables": 27,
+  "total_observables": 28,
   "substrate_free_params": 3,
   "SM_free_params": 19,
-  "score": {
-    "exact_or_discrete": 10,
-    "precision_lt_1pct": 7,
-    "good_1_to_10pct": 8,
-    "approximate_10_to_50pct": 2
-  },
-  "highlights": [
-    "alpha^{-1}(0) = 137.04 vs 137.036 (0.003%)",
-    "sin^2(theta_W)(M_Z) = 0.2312 vs 0.23122 (0.013%)",
-    "Jarlskog J = 3.1e-5 vs 3.08e-5 (0.6%)",
-    "delta_CKM = 66 deg vs 65.6 deg (0.6%)",
-    "Wolfenstein lambda = 0.225 vs 0.22537 (0.16%)",
-    "Lambda_cosmo = 1.098e-52 vs 1.11e-52 (0.9%)"
+  "bt387_source": "EXECUTABLE FRONTIER - current one-loop normalization misses alpha; threshold bridge required",
+  "predictions": [
+    {
+      "name": "Fermion generations",
+      "substrate": 3,
+      "pdg": 3,
+      "units": "count",
+      "BT": "BT367"
+    },
+    {
+      "name": "Color charges",
+      "substrate": 3,
+      "pdg": 3,
+      "units": "count",
+      "BT": "BT367"
+    },
+    {
+      "name": "QCD colors",
+      "substrate": 3,
+      "pdg": 3,
+      "units": "count",
+      "BT": "BT330"
+    },
+    {
+      "name": "SM gauge bosons",
+      "substrate": 12,
+      "pdg": 12,
+      "units": "count",
+      "BT": "BT367"
+    },
+    {
+      "name": "BH entropy factor",
+      "substrate": 0.25,
+      "pdg": 0.25,
+      "units": "1/4",
+      "BT": "BT327"
+    },
+    {
+      "name": "Fermions per gen",
+      "substrate": 24,
+      "pdg": 24,
+      "units": "count",
+      "BT": "BT367"
+    },
+    {
+      "name": "Genetic codons",
+      "substrate": 64,
+      "pdg": 64,
+      "units": "count",
+      "BT": "BT330"
+    },
+    {
+      "name": "Genetic sense codons",
+      "substrate": 61,
+      "pdg": 61,
+      "units": "count",
+      "BT": "BT372"
+    },
+    {
+      "name": "Amino acids",
+      "substrate": 40,
+      "pdg": 20,
+      "units": "count",
+      "BT": "BT346"
+    },
+    {
+      "name": "STOP codons",
+      "substrate": 3,
+      "pdg": 3,
+      "units": "count",
+      "BT": "BT372"
+    },
+    {
+      "name": "sin^2(theta_W)(M_Z)",
+      "substrate": 0.805992425770645,
+      "pdg": 0.23122,
+      "units": "dim",
+      "BT": "BT387"
+    },
+    {
+      "name": "alpha^{-1}(M_Z)",
+      "substrate": 64.7700593153634,
+      "pdg": 128.9,
+      "units": "dim",
+      "BT": "BT387"
+    },
+    {
+      "name": "alpha^{-1}(0)",
+      "substrate": 75.21127156211381,
+      "pdg": 137.036,
+      "units": "dim",
+      "BT": "BT387"
+    },
+    {
+      "name": "Wolfenstein lambda_W",
+      "substrate": 0.225,
+      "pdg": 0.22537,
+      "units": "dim",
+      "BT": "BT389"
+    },
+    {
+      "name": "Jarlskog J",
+      "substrate": 3.1e-05,
+      "pdg": 3.08e-05,
+      "units": "dim",
+      "BT": "BT389"
+    },
+    {
+      "name": "delta_CKM (deg)",
+      "substrate": 66.0,
+      "pdg": 65.6,
+      "units": "deg",
+      "BT": "BT389"
+    },
+    {
+      "name": "Lambda_cosmo (10^-52 m^-2)",
+      "substrate": 1.098,
+      "pdg": 1.11,
+      "units": "1e-52",
+      "BT": "BT366"
+    },
+    {
+      "name": "Wolfenstein A_W",
+      "substrate": 0.826,
+      "pdg": 0.814,
+      "units": "dim",
+      "BT": "BT389"
+    },
+    {
+      "name": "Wolfenstein rho_bar",
+      "substrate": 0.138,
+      "pdg": 0.132,
+      "units": "dim",
+      "BT": "BT389"
+    },
+    {
+      "name": "Wolfenstein eta_bar",
+      "substrate": 0.341,
+      "pdg": 0.35,
+      "units": "dim",
+      "BT": "BT389"
+    },
+    {
+      "name": "PMNS theta_12 (deg)",
+      "substrate": 30.0,
+      "pdg": 33.44,
+      "units": "deg",
+      "BT": "BT386"
+    },
+    {
+      "name": "PMNS theta_23 (deg)",
+      "substrate": 45.0,
+      "pdg": 49.2,
+      "units": "deg",
+      "BT": "BT386"
+    },
+    {
+      "name": "nu mass sum (eV)",
+      "substrate": 0.06,
+      "pdg": 0.12,
+      "units": "eV",
+      "BT": "BT386"
+    },
+    {
+      "name": "m_tau/m_mu ratio",
+      "substrate": 16,
+      "pdg": 16.82,
+      "units": "dim",
+      "BT": "BT382"
+    },
+    {
+      "name": "delta_CP (deg)",
+      "substrate": 90.0,
+      "pdg": 195.0,
+      "units": "deg",
+      "BT": "BT386"
+    },
+    {
+      "name": "m_top/m_bot ratio",
+      "substrate": 24,
+      "pdg": 41.4,
+      "units": "dim",
+      "BT": "BT382"
+    },
+    {
+      "name": "PMNS theta_13 (deg)",
+      "substrate": 20.0,
+      "pdg": 8.57,
+      "units": "deg",
+      "BT": "BT386"
+    },
+    {
+      "name": "nu_3 mass (eV)",
+      "substrate": 0.6,
+      "pdg": 0.05,
+      "units": "eV",
+      "BT": "BT386"
+    }
   ]
 }

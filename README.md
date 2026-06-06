@@ -73,6 +73,7 @@ BT101–BT200   Gauge sector (alpha, sin2tW, alpha_s, W/Z/H masses)
 BT201–BT300   Fermion masses, CKM/PMNS mixing, neutrino masses
 BT301–BT400   Hadronic sector, QCD, cosmology, Lambda_cosmo, H0
 BT401–BT412   Neutrino closure, hadron spectroscopy, EW precision, arXiv paper
+BT413–BT420   Electroweak crossing lattice, finite threshold vector, alpha(0)
 BT407_PAPER.tex     arXiv-ready LaTeX manuscript (PRL format)
 BT408_BIBLIOGRAPHY.bib  Complete bibliography (30 references)
 ```

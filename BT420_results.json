@@ -1,0 +1,35 @@
+{
+  "BT": 406,
+  "title": "Low-Energy 80/9 Threshold Carrier",
+  "carrier": {
+    "line_stabilizers": 16,
+    "line_stabilizers_source": "BT385 rank ledger",
+    "line_stabilizers_formula": "lambda^mu",
+    "closure_count": 5,
+    "closure_count_source": "BT416 qutrit-sheet closure",
+    "closure_count_formula": "F5",
+    "color_generation_grid": 9,
+    "color_generation_grid_formula": "q^2",
+    "threshold_value": 8.88888888888889,
+    "threshold_formula": "lambda^mu * F5 / q^2 = 80/9"
+  },
+  "bridge_to_BT419": {
+    "BT419_delta_alpha_inv": 8.88888888888889,
+    "BT419_alpha_inv_0_pred": 137.03619108402788,
+    "BT419_alpha_inv_0_relative_error_pct": 0.00013944075124447348
+  },
+  "boundary": {
+    "finite_threshold_carrier_identified": true,
+    "continuum_decoupling_integral_derived": false,
+    "next_target": "realize the 16*5/q^2 carrier as the charged-sector MZ-to-zero decoupling operator"
+  },
+  "checks": {
+    "BT416_checks_hold": true,
+    "BT419_checks_hold": true,
+    "line_stabilizers_are_lambda_mu": true,
+    "closure_count_is_F5": true,
+    "color_generation_grid_is_q_squared": true,
+    "threshold_value_is_80_over_9": true,
+    "threshold_matches_BT419_delta": true
+  }
+}

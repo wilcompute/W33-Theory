@@ -5,166 +5,59 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 1553
-- **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, photonic, audit, toe, architecture, qec, css, holonomy, tqc, github
+- **Total Decisions:** 2290
+- **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, architecture, toe, audit, photonic, qec, github, selector, css, holonomy
 
 ## Current State
 **Repository:** Theory of Everything
 **Project Type:** Python Project | Python
 **Branch:** master
-**Tracking:** ahead 0, behind 6
 
 **Recent Commits:**
-- `21aaf67 Part MCCI: Add post-monodromy octet lift law`
-- `f24aac9 Part MCC: Add shell-operator identification law`
-- `dffd1a9 Part MCXCIX: Add commuting lift operators law`
-- `e1a4205 Part MCXCVIII: Add forecast-emergence ratio bridge law`
-- `a797f13 Part MCXCVI/MCXCVII: Add unified closure grammar and octet lift forecast`
+- `170a9a0 BREAKTHROUGH 354-365: CSS qutrit selector correction`
+- `666bab0 BREAKTHROUGH 350/351/352: fractal SQNA + computer=network + fractal FT`
+- `2497410 BREAKTHROUGH 347/348/349: W(3,3) computational verification + ER=EPR + consciousness`
+- `79865b1 BREAKTHROUGH 344/345/346: TQC + hardware + software of life on SQNA`
+- `29732a6 BREAKTHROUGH 341/342/343: Witting polytope + SIC-POVM + WSQNA unified protocol`
 
 **Working Tree:**
 - M .cursorrules
 - M .github/copilot-instructions.md
 - M AGENTS.md
-- M BREAKTHROUGH_MCXLIX.md
 - M CLAUDE.md
 - M GEMINI.md
-- M PART_MCLVI_EQUITABLE_PARTITION.md
-- M PART_MCLV_LAPLACIAN_SPECTRAL_ZETA.md
-- M PART_MCLXI_LOVASZ_HOFFMAN_results.json
-- M PART_MCLX_CLIQUE_COMPLEX_results.json
-- M PART_MCXLVII_CTQW_REVIVAL_SPECTRUM.md
-- M analysis/w33_ihara_zeta.py
-- ?? PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json
-- ?? PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json
-- ?? PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json
+- M data/w33_css_exact_audit.json
+- M data/w33_minimal_logical_witness_census.json
+- M data/w33_minimal_support_geometry.json
+- M data/w33_octahedron_faces_are_signed_xmin.json
+- ?? PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json
+- ?? analysis/w33_BREAKTHROUGH_353_substrate_hamiltonian.py
 
-## Working Memory Snapshot
-**Mode:** degraded-fallback
-**Generated At:** 2026-05-22T14:58:42.535Z
-**Startup Summary:** mode=degraded-fallback | decisions=1553 | lastTask=Recent commits: | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 135 uncovered commits in last 7 days (auto-drafted 4)
-[MCP] Background init completed in 23ms | fallback-files=12
-**Decision Count:** 1553
-**Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
-
-## Resume Snapshot
-**Last Task:** Recent commits:
-**Last Completed Milestone:** Auto-saved at 2026-05-22T14:28:40.879Z (reason: timer)
-**Next Expected Step:** Recent commits:
-**Last Successful Tool Call:** search_decisions @ 2026-05-01T15:06:07.971Z
-**Relevant Files:** .cursorrules, .github/copilot-instructions.md, AGENTS.md, BREAKTHROUGH_MCXLIX.md, CLAUDE.md, GEMINI.md
-
-## Workflow
-
-Use the repo-local artifacts directly — these are always available:
-
-| Action | How |
-|--------|-----|
-| Load context | Read this file plus `.continuity/SESSION_NOTES.md`, `.continuity/working-memory.json`, and `.continuity/unfinished-task.json` |
-| Search decisions | `grep -i "<topic>" .continuity/decisions.json` |
-| Log a decision | `continuity log "question" "answer"` |
-| Update session notes | Edit `.continuity/SESSION_NOTES.md` directly |
-| Check resume state | Read `.continuity/unfinished-task.json` |
-
-**Decision logging path:** use the Continuity CLI first: `continuity log "question" "answer"`. Do not treat `.continuity/SESSION_NOTES.md` or manual `.continuity/decisions.json` edits as the logging sink.
-**Search-before-log still applies.** Check `.continuity/decisions.json` before recording a new rationale.
+## Session Context
+**Goals:**
+- 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
 
 
 ## Decision Freshness
-**0 stale decisions** · 750 need review · Oldest unreviewed: 2026-04-20
+**0 stale decisions** · 1 need review · 416 superseded ready to archive · Oldest unreviewed: 2026-05-16
 
 Stale decisions requiring attention:
-1. **1777318403161-pu8p9x** (score 36) — "Why: theory: add Witting packet ternary transport bridge?" — status: superseded
-2. **1777755243730-5k8xdt** (score 36) — "Why: Add Part CXCIV: Regular polytopes bridge for W(3,3)?" — status: superseded
-3. **1777755243730-8swlgh** (score 36) — "Why: Add Part CXCIII: Exceptional Lie algebra bridge for W(3,3)?" — status: superseded
-4. **1777755243731-ypks6z** (score 36) — "Why: Add Part CXCII: Ramanujan modular forms bridge for W(3,3)?" — status: superseded
-5. **1777755243731-ckwdm2** (score 36) — "Why: Add Part CXCI regression tests: 92 tests pass?" — status: superseded
+1. **d1a5364d-fc0b-4955-8076-561b9b9acb5b** (score 35) — "Why leave the local DCCLIX 24-cell/D4 triality draft unpromoted?"
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-## Engineering Guardrails
+416 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
-**Real-time decision logging is MANDATORY.** Log each decision IMMEDIATELY after the code change — not batched at the end of a session. The trigger is the change, not the commit. If you edited a file, log the decision. Period.
+## Operating Contract
+1. **Search before you change.** `grep -i "<topic>" .continuity/decisions.json` (or `search_decisions`) before answering architectural questions or proposing changes. Name any conflict with a prior decision and let the user choose.
+2. **Log every deliberate change, immediately.** After each change — not batched — `continuity log "question" "answer" --tags ...`. The trigger is the change, not the commit; include the commit hash in both fields when one exists. Don't ask permission; installing Continuity is the opt-in. Tell the user you logged it.
+3. **Track session state.** Edit `.continuity/SESSION_NOTES.md` for goals/blockers and an end-of-session summary.
+4. **Recover & be transparent.** If you notice unlogged earlier changes, pause, log them retroactively, and say so.
 
-**Search before you change.** Always search `.continuity/decisions.json` (via MCP `search_decisions`, CLI, or `grep`) before proposing architectural changes to check for prior decisions.
-
-**Recovery.** If you realize earlier decisions were not logged, pause, log retroactively, and inform the user.
-
-**Transparency.** Inform the user when you log decisions, recover missed decisions, detect drift, or find conflicts with past decisions.
-
-**Anti-pattern to avoid:** "Let me implement all 3 fixes, then log them" — WRONG. Correct: Fix 1 done, log decision, Fix 2 done, log decision, Fix 3 done, log decision.
-
-
-## OPERATING RULES
-
-1. **LOG DECISIONS PROACTIVELY.** Any time the user explains a choice or makes an architectural decision, log it without asking — via CLI or file edit.
-2. **CONTEXT FIRST.** Read this file and `.continuity/SESSION_NOTES.md` for context.
-3. **BE CONCISE.** After logging, give a short summary. Do not narrate your reasoning process.
-
----
-
-
-## WHEN TO USE CONTINUITY (MCP or CLI)
-
-## ON EVERY SESSION START
-
-Context is available in this file. Read it along with `.continuity/SESSION_NOTES.md` for full project context.
-
-After loading context, mention the most relevant recent decisions to the user.
-
-### When User Asks Architectural Questions
-**ALWAYS** search `.continuity/decisions.json` for the relevant topic BEFORE answering (`grep -i "<topic>" .continuity/decisions.json`). Do NOT answer from memory alone.
-Share what you found: "I found decision-X about this topic..."
-Base your recommendation on existing decisions when relevant.
-
-### When User Explains a Choice
-When the user says "let's use X because Y" or explains their reasoning:
-**IMMEDIATELY** log the decision using the CLI: `node continuity-cli/bin/continuity.js log "question" "answer" --tags tag1,tag2`
-Do NOT ask "want me to log this?" — the user has already opted into decision logging by installing Continuity.
-After logging, tell the user: "Logged decision for future sessions."
-
-### When Suggesting Changes
-**ALWAYS** search `.continuity/decisions.json` for existing decisions on the topic BEFORE recommending changes.
-If conflicts exist, mention them: "This would conflict with decision-X where you chose..."
-Let the user decide whether to proceed or update the old decision.
-
-### When User Mentions Blockers
-Edit `.continuity/SESSION_NOTES.md` to track the blocker under the "Blockers" section.
-Then search `.continuity/decisions.json` to see if related decisions might help.
-
-### When User Ends Session
-Edit `.continuity/SESSION_NOTES.md` with progress summary and next steps.
-Give the user a concise summary. Do NOT ask — just do it.
-
----
-
-## OPTIONAL MCP TOOLS
-
-If Continuity MCP tools are connected, the following commands are available:
-
-### Search for decisions
-```
-search_decisions query="authentication"
-```
-
-### Log a new decision
-```
-log_decision
-question="Why did we choose X?"
-answer="Because Y. We considered Z but rejected it due to..."
-tags=["topic1", "topic2"]
-```
-
-### Get project context
-```
-get_quick_context
-```
-
-### Update session notes
-```
-update_session_notes
-section="blockers"
-content="Description of the issue"
-```
+## Logging paths
+- Canonical: `continuity log "question" "answer" --tags a,b` (works even when MCP is down).
+- MCP (if connected): `log_decision` / `search_decisions` / `get_quick_context` / `update_session_notes`.
+- Forward work → `continuity task ...` (new ticket); in-flight note → `continuity note ...` (comment on current ticket). Don't cross-pollute.
 
 ---
 
@@ -178,44 +71,30 @@ Describe how this repository prefers to work with AI assistants.
 ---
 
 ## Recent Decisions
-1. **decision-a47e1282** (5/22/2026) [why]
-   - Q: Why push Part MCXCIII Reye tomotope/24-cell common spine to master?
-   - A: Pushed c12b7f4 to origin/master after verifier, focused pytest, py_compile, a...
+1. **decision-7dff514c** (6/5/2026) [why, w33]
+   - Q: Why push BT354-BT365 CSS qutrit selector correction to GitHub?
+   - A: Pushed 170a9a08 to origin/master so GitHub now contains the BT354-BT365 CSS/qutrit/selector correction theorem scripts and forced JSON artifacts, including the single qutrit phase-sheet obstruction, the 120-sheet design, and the unique anchor K4 bipartition Z20 lift.
 
-2. **decision-17794511** (5/21/2026) [auto-draft, needs-review]
-   - Q: Why: Add universal oscillator stack report?
-   - A: (Auto-drafted from commit df1b4e3 on 2026-05-21.) Please review and expand wi...
+2. **decision-5696ccc3** (6/5/2026) [why, w33]
+   - Q: Why commit BT354-BT365 CSS qutrit selector correction?
+   - A: Committed 170a9a08 after direct verifier sweep passed for BT354/355 through BT365, py_compile passed for all new scripts, JSON validation passed for all forced data artifacts, and the staged diff contained only the 11 theorem scripts plus 11 generated JSON outputs. The bundle proves the CSS correction chain through the qutrit phase-sheet selector and unique K4 bipartition Z20 lift.
 
-3. **decision-4a150b07** (5/17/2026) [architecture, qec]
-   - Q: What are the next major derivations to tackle after the w33_for_everyone synt...
-   - A: 1. QCD Confinement and Baryon Mass Gap. 2. Macroscopic Gravity & de Sitter En...
+3. **decision-3e8b4e38** (6/5/2026) [why, w33]
+   - Q: Why update session notes with BT365?
+   - A: Updated .continuity/SESSION_NOTES.md with BT365, its verification commands, and the synthesis target: one ternary phase sheet plus a unique K4 binary split and two side orientations as the self-entangled qutrit correction mechanism.
 
-4. **decision-mohlhmfy** (4/27/2026) [auto-scanned, configuration]
-   - Q: Why use GitHub Actions for CI/CD?
-   - A: Detected .github/workflows/ directory. GitHub Actions automates testing, buil...
+4. **decision-268adfb8** (6/5/2026) [why, w33]
+   - Q: Why add BT365 unique anchor-bipartition correction?
+   - A: Created analysis/w33_BREAKTHROUGH_365_unique_anchor_bipartition_correction.py to test all three 2+2 bipartitions of the anchor K4. Exactly one split, {0,1}|{2,3}, corrects the golden selector obstruction; its same-side pairs are the inactive pairs and its cross-pairs are the K2,2 failure carrier. Either side orientation works, while the other four side choices leave 108 failures.
 
-5. **decision-mohlhk1j** (4/27/2026)
-   - Q: Why: Sharpen tail wall to coordinate witness?
-   - A: Commit f3a26e8f on 2026-04-27. (Auto-seeded from git history — edit to add yo...
+5. **decision-7a4e50a9** (6/5/2026) [why, w33]
+   - Q: Why generate BT364 Z20 anchor-bipartition lift JSON?
+   - A: The direct BT364 verifier passed all identities and wrote data/w33_BREAKTHROUGH_364_z20_anchor_bipartition_lift.json, recording selected_edge_count=54, bridge_line_count=27, selected_side={2,3}, unselected_side={0,1}, unique_failures=108, and the selected-count-by-holonomy profile.
 
----
-
-## BEHAVIOR EXAMPLES
-
-**User:** "Should we use Redis or Memcached for caching?"
-**You:** *[Search: grep -i "caching" .continuity/decisions.json]*
-"Found decision-12 about caching strategy. Based on that, here's my recommendation..."
-
-**User:** "Let's go with PostgreSQL because we need ACID transactions for the payment system."
-**You:** *[Log via CLI: continuity log "Why PostgreSQL?" "ACID transactions for payment system"]*
-"Logged decision for future sessions."
-
-**User:** "I'm thinking of switching to MongoDB."
-**You:** *[Search: grep -i "database" .continuity/decisions.json]*
-"Decision-12 chose PostgreSQL for ACID transactions. Switching to MongoDB would conflict. Want to proceed or keep PostgreSQL?"
+*771 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity v2.3+ | Updated: 2026-05-23*
+*Auto-generated by Continuity | Updated: 2026-06-05*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->

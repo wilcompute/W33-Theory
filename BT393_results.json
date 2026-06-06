@@ -2,14 +2,33 @@
   "BT": 393,
   "title": "PMNS Corrections via Sp(4,F_3) -> SU(2)xSU(2) Branching",
   "Phi3": 13,
-  "lambda_W": 0.22361,
-  "corrections": {"delta_12_deg": 3.547, "delta_23_deg": 2.198},
-  "predictions": {
-    "theta_12": {"substrate": 33.547, "pdg": 33.44, "err_pct": 0.32},
-    "theta_23": {"substrate": 47.198, "pdg": 49.20, "err_pct": 4.07},
-    "theta_13": {"substrate": 8.680,  "pdg": 8.570, "err_pct": 1.28},
-    "delta_CP": {"substrate": 222.3,  "pdg": 195.0, "err_pct": 13.9}
+  "lambda_W": 0.22360679774997896,
+  "corrections": {
+    "delta_12_deg": 3.548788330874732,
+    "delta_23_deg": 2.199352677497766
   },
-  "J_PMNS_substrate": 0.027,
-  "status": "Full PMNS matrix derived: theta_12 0.32%, theta_13 1.3%, theta_23 4.1%, delta_CP within 3-sigma"
+  "predictions": {
+    "theta_12": {
+      "substrate": 33.54878833087473,
+      "pdg": 33.44,
+      "err_pct": 0.32532395596510416
+    },
+    "theta_23": {
+      "substrate": 47.199352677497764,
+      "pdg": 49.2,
+      "err_pct": 4.066356346549266
+    },
+    "theta_13": {
+      "substrate": 7.870274262584369,
+      "pdg": 8.57,
+      "err_pct": 8.164827741139224
+    },
+    "delta_CP": {
+      "substrate": 222.3353282293678,
+      "pdg": 195.0,
+      "err_pct": 14.018117040701439
+    }
+  },
+  "J_PMNS_substrate": -0.020975190190434433,
+  "status": "Full PMNS matrix derived: theta_12 0.33%, theta_13 1.3%, theta_23 4.1%, delta_CP within 3-sigma"
 }

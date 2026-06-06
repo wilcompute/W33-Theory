@@ -9,12 +9,35 @@ Produces scored residuals table and assessment.
 
 import math
 import json
+from pathlib import Path
 
 # ============================================================
 # SUBSTRATE PRIMITIVES
 # ============================================================
 q = 3; l = 2; mu = 4; F5 = 5; k = 12; f = 24
 phi = (1 + math.sqrt(5)) / 2  # golden ratio
+
+def load_bt387_predictions():
+    """Use the executable BT387 output if present; fall back to the frontier values."""
+    fallback = {
+        "sin2_thetaW": 0.805992425770645,
+        "alpha_em_inv_MZ": 64.7700593153634,
+        "alpha_em_inv_0": 75.21127156211381,
+        "source": "BT387 executable fallback",
+    }
+    path = Path("BT387_results.json")
+    if not path.exists():
+        return fallback
+    with path.open() as f:
+        data = json.load(f)
+    return {
+        "sin2_thetaW": data["predictions_MZ"]["sin2_thetaW"],
+        "alpha_em_inv_MZ": data["predictions_MZ"]["alpha_em_inv"],
+        "alpha_em_inv_0": data["alpha_em_inv_0"],
+        "source": data.get("status", "BT387 results"),
+    }
+
+bt387 = load_bt387_predictions()
 
 # ============================================================
 # PREDICTIONS TABLE
@@ -34,9 +57,9 @@ predictions = [
     ("STOP codons",                  q,         3,          0,        "count",  "BT372"),
     
     # PRECISION MATCHES (< 1%)
-    ("sin^2(theta_W)(M_Z)",          0.2312,    0.23122,    0.00003,  "dim",    "BT387"),
-    ("alpha^{-1}(M_Z)",              128.91,    128.9,      0.01,     "dim",    "BT387"),
-    ("alpha^{-1}(0)",                137.04,    137.036,    0.0001,   "dim",    "BT387"),
+    ("sin^2(theta_W)(M_Z)",          bt387["sin2_thetaW"],        0.23122,    0.00003,  "dim",    "BT387"),
+    ("alpha^{-1}(M_Z)",              bt387["alpha_em_inv_MZ"],    128.9,      0.01,     "dim",    "BT387"),
+    ("alpha^{-1}(0)",                bt387["alpha_em_inv_0"],     137.036,    0.0001,   "dim",    "BT387"),
     ("Wolfenstein lambda_W",         0.225,     0.22537,    0.00061,  "dim",    "BT389"),
     ("Jarlskog J",                   3.1e-5,    3.08e-5,    0.15e-5,  "dim",    "BT389"),
     ("delta_CKM (deg)",              66.0,      65.6,       1.5,      "deg",    "BT389"),
@@ -82,13 +105,13 @@ for name, sub_val, pdg_val, pdg_unc, units, bt in predictions:
         if pct < 0.01:
             status = "EXACT"
         elif pct < 1.0:
-            status = "< 1%"
+            status = "<1%"
         elif pct < 10.0:
             status = "1-10%"
         elif pct < 50.0:
             status = "10-50%"
         else:
-            status = "> 50%"
+            status = ">50%"
     
     # Format values nicely
     if abs(sub_val) < 1e-3 or abs(sub_val) > 1e5:
@@ -100,7 +123,10 @@ for name, sub_val, pdg_val, pdg_unc, units, bt in predictions:
     
     print(f"{name:<35} {sv:>12} {pv:>12} {pct:>9.2f}%  {status:<15} {bt}")
     
-    key = status if status in categories else "> 50%"
+    if status.startswith("BOUND"):
+        key = "BOUND"
+    else:
+        key = status if status in categories else ">50%"
     categories[key].append((name, pct))
 
 print("=" * 90)
@@ -109,8 +135,8 @@ print("=" * 90)
 # SCORE SUMMARY
 # ============================================================
 total = len(predictions)
-exact = sum(1 for n,p,_,_,_,_ in predictions if p==0 or abs(p)<0.01) 
-lt1 = sum(1 for n,s,p,_,_,_ in predictions if p!=0 and abs(s-p)/abs(p)*100 < 1.0 and name!="nu mass sum (eV)")
+exact = len(categories["EXACT"])
+lt1 = len(categories["<1%"])
 
 print(f"\nSCORE SUMMARY ({total} observables):")
 for cat, items in categories.items():
@@ -131,6 +157,7 @@ results = {
     "total_observables": total,
     "substrate_free_params": 3,
     "SM_free_params": 19,
+    "bt387_source": bt387["source"],
     "predictions": [
         {"name": n, "substrate": s, "pdg": p, "units": u, "BT": bt}
         for n, s, p, pu, u, bt in predictions

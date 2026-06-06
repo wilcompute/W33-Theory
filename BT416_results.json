@@ -1,0 +1,67 @@
+{
+  "BT": 402,
+  "title": "Qutrit Sheet Threshold Carrier",
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "F5": 5,
+    "q_cubed": 27
+  },
+  "carrier_derivation": {
+    "selected_qutrit_phase_sheet": 1,
+    "boundary_lines_per_support": 4,
+    "closure_count": 5,
+    "closure_formula": "1 + mu = F5",
+    "carrier_vector": [
+      1,
+      4,
+      -5
+    ],
+    "carrier_formula": "(1, mu, -F5)",
+    "trace": 0,
+    "matches_BT415_threshold_direction": true
+  },
+  "finite_support_arithmetic": {
+    "selected_sheet_supports": 108,
+    "selected_sheet_supports_formula": "mu*q^3",
+    "ordered_failures": 864,
+    "ordered_failures_formula": "mu*q^3*2^q",
+    "incident_sheets_per_support": 8,
+    "incident_sheets_formula": "mu*lambda = 2^q",
+    "selected_z20_edges": 54,
+    "selected_z20_edges_formula": "lambda*q^3",
+    "active_cross_pairs": 4,
+    "active_cross_pairs_formula": "mu",
+    "inactive_same_side_pairs": 2,
+    "inactive_same_side_pairs_formula": "lambda"
+  },
+  "bridge_to_BT415": {
+    "BT415_exact_trace_scale_GeV": 50275065851198.8,
+    "BT415_relative_error_to_W33": 0.005501317023975938,
+    "BT415_exp_qfactorial_c": 25.239150306658576,
+    "BT415_exp_qfactorial_c_target": 25,
+    "interpretation": "BT416 supplies the finite carrier; BT415 supplies the observed electroweak coefficient on that carrier"
+  },
+  "boundary": {
+    "closed_alpha_proof": false,
+    "closed_threshold_coefficient_proof": false,
+    "next_target": "derive BT415 coefficient c from a representation character on the BT416 carrier"
+  },
+  "checks": {
+    "BT362_identities_hold": true,
+    "BT363_identities_hold": true,
+    "BT364_identities_hold": true,
+    "BT365_identities_hold": true,
+    "BT415_identities_hold": true,
+    "one_selected_sheet_plus_mu_boundary_lines_closes_to_F5": true,
+    "carrier_vector_matches_BT415_threshold_direction": true,
+    "carrier_vector_is_trace_zero": true,
+    "selected_sheet_supports_are_mu_q3": true,
+    "ordered_failures_are_selected_sheet_times_2q": true,
+    "local_incident_sheets_are_mu_times_lambda_and_2q": true,
+    "selected_z20_edges_are_lambda_q3": true,
+    "working_cross_pairs_are_mu": true,
+    "working_same_side_pairs_are_lambda": true
+  }
+}

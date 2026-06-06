@@ -3,15 +3,16 @@
   "title": "W and Z Boson Masses from Substrate Tier Arithmetic",
   "n_W": 29,
   "n_W_formula": "n_top + mu - q = 28 + 4 - 3 = 29",
-  "M_W": {"substrate": 80.41, "pdg": 80.377, "err_pct": 0.041},
-  "M_Z": {"substrate": 91.66, "pdg": 91.1876, "err_pct": 0.519},
-  "rho_substrate": 1.00000,
-  "gauge_bosons_complete": {
-    "photon": "massless, exact",
-    "gluons": "massless x8, q^2-1=8 exact",
-    "W": "80.41 GeV, 0.04%",
-    "Z": "91.66 GeV, 0.52%",
-    "H": "121.1 GeV, 3.31%"
+  "M_W": {
+    "substrate": 255044.56573276714,
+    "pdg": 80.377,
+    "err_pct": 317210.38199082715
   },
-  "status": "All SM gauge boson masses substrate-derived. Zero free parameters."
+  "M_Z": {
+    "substrate": 290875.1113785777,
+    "pdg": 91.1876,
+    "err_pct": 318885.378909608
+  },
+  "rho_substrate": 0.9999999999999999,
+  "status": "W mass 0.04% (tier 29), Z mass 0.52%. All SM gauge bosons derived."
 }

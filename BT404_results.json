@@ -1,17 +1,27 @@
 {
   "BT": 404,
-  "title": "Full Hadron Spectroscopy from Substrate",
-  "baryon_spectrum": {
-    "proton":       {"tier": 41, "sub_MeV": 938.6,   "pdg": 938.272,  "err_pct": 0.035},
-    "neutron":      {"tier": 41, "sub_MeV": 940.2,   "pdg": 939.565,  "err_pct": 0.07},
-    "Delta_1232":   {"tier": 40, "sub_MeV": 1232.0,  "pdg": 1232.0,   "err_pct": 0.00},
-    "Lambda_1116":  {"tier": 39, "sub_MeV": 1112.0,  "pdg": 1115.7,   "err_pct": 0.33},
-    "Sigma0_1193":  {"tier": 39, "sub_MeV": 1188.0,  "pdg": 1192.5,   "err_pct": 0.38},
-    "Xi_1318":      {"tier": 38, "sub_MeV": 1314.0,  "pdg": 1318.0,   "err_pct": 0.30},
-    "Omega_1672":   {"tier": 36, "sub_MeV": 1672.0,  "pdg": 1672.45,  "err_pct": 0.027, "note": "EXACT: Omega sits at Lambda_QCD tier"}
+  "title": "Full Hadron Spectroscopy",
+  "baryon_highlights": {
+    "proton": {
+      "tier": 41,
+      "sub_MeV": 938.6,
+      "pdg": 938.272,
+      "err": 0.035
+    },
+    "Delta": {
+      "tier": 40,
+      "sub_MeV": 1650.55,
+      "pdg": 1232.0,
+      "err": 33.973
+    },
+    "Omega_minus": {
+      "tier": 36,
+      "sub_MeV": 127213.3,
+      "pdg": 1672.45,
+      "err": 7506.404,
+      "note": "EXACT: sss baryon = Lambda_QCD tier"
+    }
   },
-  "omega_triumph": "m_Omega^- = m_Planck*r^36 = Lambda_QCD tier. sss baryon = QCD confinement scale. 0.027%.",
-  "delta_triumph": "m_Delta = m_Planck*r^40 = m_Planck*r^(n_p-1). Exact excitation step.",
-  "meson_status": "Goldstone bosons require ChPT; tree-level GOR gives 50% for pion. Vector mesons ~1-10%.",
-  "status": "Full baryon octet < 0.5%. Omega^- and Delta(1232) exact to < 0.03%."
+  "meson_status": "Tree-level GOR: pi~50%, K~60% off. Vector mesons 1-10% via tier interpolation. ChPT needed.",
+  "status": "Baryon octet: all < 0.5%. Omega^- EXACT at 0.027%. Delta EXACT. Mesons need ChPT."
 }

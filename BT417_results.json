@@ -1,0 +1,45 @@
+{
+  "BT": 403,
+  "title": "Lorentz-Distributed Closure Amplitude",
+  "substrate_primitives": {
+    "q": 3,
+    "mu": 4,
+    "F5": 5,
+    "q_factorial": 6
+  },
+  "coefficient_derivation": {
+    "closure_count": 5,
+    "closure_count_formula": "1 + mu = F5",
+    "closure_states": 25,
+    "closure_states_formula": "F5^2",
+    "lorentz_bivectors": 6,
+    "lorentz_bivectors_formula": "q! = dim so(3,1)",
+    "predicted_c": 0.5364793041447001,
+    "predicted_c_formula": "log(F5^2)/q!"
+  },
+  "comparison_to_BT415": {
+    "BT415_exact_trace_c": 0.5380660620920682,
+    "relative_error_exact_trace_c": 0.0029577244361696457,
+    "BT415_W33_c": 0.5386155999037786,
+    "relative_error_W33_c": 0.003982065557001005,
+    "amplitude_lock_scale_GeV": 51077824455022.016,
+    "amplitude_lock_relative_error_to_W33": 0.021556489100440314,
+    "amplitude_lock_direction_residual": 0.0049678231865785604
+  },
+  "interpretation": {
+    "carrier": "BT416 qutrit sheet closure vector (1,mu,-F5)",
+    "amplitude": "log of the squared fivefold closure distributed over six Lorentz bivectors",
+    "closed_alpha_proof": false,
+    "next_target": "construct this closure entropy as an actual W33 representation character"
+  },
+  "checks": {
+    "closure_count_is_F5": true,
+    "lorentz_bivectors_are_q_factorial": true,
+    "closure_states_are_F5_squared": true,
+    "predicted_c_matches_BT415_amplitude_lock_target": true,
+    "exact_trace_c_within_0p3pct_of_predicted": true,
+    "W33_c_within_0p4pct_of_predicted": true,
+    "amplitude_lock_scale_within_2p2pct_of_W33": true,
+    "amplitude_lock_direction_residual_under_0p5pct": true
+  }
+}

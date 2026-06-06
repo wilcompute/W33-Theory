@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-BT387: Fine Structure Constant alpha = 1/137 from Substrate One-Loop RGE
+BT387: Electroweak RGE Boundary from the Substrate Scale
 
 Substrate boundary conditions at M_GUT ~ 5e13 GeV (BT367):
   sin^2(theta_W)_GUT = q/2^q = 3/8  (exact substrate)
   All three gauge couplings unified at alpha_GUT
 
-One-loop RGE running to M_Z and m_e gives alpha_em(0) ~ 1/137
-with ZERO free parameters beyond substrate primitives.
+The executable one-loop calculation is intentionally kept literal. In its
+current normalization it does not yet reproduce alpha_em(0) = 1/137.036;
+that mismatch is the boundary condition that the next threshold/normalization
+bridge must solve.
 """
 
 import math
@@ -204,7 +206,8 @@ print(f"=== FINAL SUBSTRATE PREDICTION ===")
 print(f"  alpha^{{-1}}(0) substrate     = {alpha_em_0_inv:.4f}")
 print(f"  alpha^{{-1}}(0) observed      = 137.036")
 print(f"  Difference                  = {abs(alpha_em_0_inv - 137.036):.4f}")
-print(f"  Relative error              = {abs(alpha_em_0_inv - 137.036)/137.036*100:.3f}%")
+alpha_em_0_err_pct = abs(alpha_em_0_inv - 137.036)/137.036*100
+print(f"  Relative error              = {alpha_em_0_err_pct:.3f}%")
 print(f"")
 print(f"  alpha(0) substrate          = 1/{alpha_em_0_inv:.3f} = {1/alpha_em_0_inv:.6f}")
 print(f"  alpha(0) observed           = 1/137.036 = {1/137.036:.6f}")
@@ -220,8 +223,8 @@ print(f"  3. sin^2(theta_W)_GUT = q/2^q = {q}/{2**q} = {sin2_thetaW_GUT} (exact)
 print(f"  4. M_GUT = {M_GUT:.2e} GeV from substrate E_6 seesaw (BT367/BT386)")
 print(f"  5. One-loop RGE gives alpha^{{-1}}(0) = {alpha_em_0_inv:.2f}")
 print(f"  6. PDG observed: 137.036")
-print(f"  7. Match: {abs(alpha_em_0_inv - 137.036)/137.036*100:.2f}% error")
-print("  ZERO free parameters. Alpha emerges from substrate geometry.")
+print(f"  7. Executable miss: {alpha_em_0_err_pct:.2f}% error")
+print("  The current script locates the electroweak boundary, not a closed alpha proof.")
 print("="*60)
 
 # ============================================================
@@ -229,7 +232,7 @@ print("="*60)
 # ============================================================
 results = {
     "BT": 387,
-    "title": "Fine Structure Constant from Substrate RGE",
+    "title": "Electroweak RGE Boundary from the Substrate Scale",
     "substrate_primitives": {"q": q, "lambda": lambda_, "mu": mu},
     "M_GUT_GeV": M_GUT,
     "sin2_thetaW_GUT_exact": sin2_thetaW_GUT,
@@ -245,9 +248,9 @@ results = {
     },
     "alpha_em_inv_0": alpha_em_0_inv,
     "alpha_em_inv_0_obs": 137.036,
-    "alpha_em_inv_0_err_pct": abs(alpha_em_0_inv - 137.036)/137.036*100,
+    "alpha_em_inv_0_err_pct": alpha_em_0_err_pct,
     "free_parameters": 0,
-    "status": "BREAKTHROUGH - alpha_em = 1/137 from substrate with zero free parameters"
+    "status": "EXECUTABLE FRONTIER - current one-loop normalization misses alpha; threshold bridge required"
 }
 
 import json

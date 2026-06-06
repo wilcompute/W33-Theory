@@ -1,0 +1,101 @@
+{
+  "BT": 399,
+  "title": "Electroweak Pairwise-Crossing Lattice at the W33 Scale",
+  "inputs": {
+    "M_Z_GeV": 91.1876,
+    "M_W33_GeV": 50000000000000.0,
+    "alpha_em_inv_MZ_obs": 128.9,
+    "sin2_thetaW_MZ_obs": 0.23122,
+    "alpha_s_MZ_obs": 0.1181,
+    "beta_coefficients": {
+      "b1": 4.1,
+      "b2": -3.1666666666666665,
+      "b3": -7.0
+    }
+  },
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "F5": 5,
+    "f": 24,
+    "q_factorial": 6
+  },
+  "couplings_at_MZ": {
+    "alpha1_inv": 59.457445199999995,
+    "alpha2_inv": 29.804258,
+    "alpha3_inv": 8.467400508044031,
+    "alphaY_inv": 99.095742
+  },
+  "pairwise_crossings": {
+    "M12_alpha1_alpha2": {
+      "ln_mu_over_MZ": 25.6398812100118,
+      "scale_GeV": 12450727027727.963,
+      "alpha_inv": 42.72651847706422
+    },
+    "M13_alpha1_alpha3": {
+      "ln_mu_over_MZ": 28.86305401990344,
+      "scale_GeV": 312608568143141.94,
+      "alpha_inv": 40.62328454801626
+    },
+    "M23_alpha2_alpha3": {
+      "ln_mu_over_MZ": 34.973068563871934,
+      "scale_GeV": 1.4078178843897811e+17,
+      "alpha_inv": 47.43035766726797
+    }
+  },
+  "crossing_ladder": {
+    "M13_over_M12": 25.107655757527876,
+    "target_M13_over_M12": 25,
+    "relative_error_M13_over_M12": 0.004306230301115051,
+    "M23_over_M13": 450.345264927335,
+    "target_M23_over_M13": 450,
+    "relative_error_M23_over_M13": 0.0007672553940777663,
+    "M23_over_M12": 11307.11388382822,
+    "target_M23_over_M12": 11250,
+    "relative_error_M23_over_M12": 0.005076789673619593
+  },
+  "w33_scale_center": {
+    "geometric_center_M12_M13_GeV": 62387530392532.414,
+    "M_W33_over_geometric_center": 0.8014422062455102,
+    "target_mu_over_F5": 0.8,
+    "target_scale_GeV": 49910024314025.94,
+    "relative_error_to_target_scale": 0.0018027578068876462
+  },
+  "couplings_at_W33_scale": {
+    "alpha_inv_values": {
+      "alpha1_inv": 41.81933524533417,
+      "alpha2_inv": 43.42718845279067,
+      "alpha3_inv": 38.58124677210763
+    },
+    "mean_alpha_inv": 41.275923490077496,
+    "threshold_vector_to_mean": {
+      "alpha1_inv": 0.5434117552566775,
+      "alpha2_inv": 2.151264962713178,
+      "alpha3_inv": -2.6946767179698625
+    },
+    "spread": 4.84594168068304,
+    "rms_spread": 2.0153179972332986
+  },
+  "BT387_frontier": {
+    "available": true,
+    "alpha_em_inv_0": 75.21127156211381,
+    "alpha_em_inv_0_err_pct": 45.11568378957806,
+    "sin2_thetaW_MZ": 0.805992425770645,
+    "sin2_thetaW_MZ_err_pct": 248.58248670990614,
+    "status": "EXECUTABLE FRONTIER - current one-loop normalization misses alpha; threshold bridge required"
+  },
+  "interpretation": {
+    "closed_alpha_proof": false,
+    "triple_unification_claim": false,
+    "new_bridge_target": "derive the finite W33 threshold/normalization vector at M_W33",
+    "core_result": "M_W33 is the mu/F5 weighted geometric center of the alpha1-alpha2 and alpha1-alpha3 pairwise crossings"
+  },
+  "checks": {
+    "m13_over_m12_is_F5_squared_within_0p5pct": true,
+    "m23_over_m13_is_18_F5_squared_within_0p1pct": true,
+    "m23_over_m12_is_product_ladder_within_0p6pct": true,
+    "w33_is_four_fifths_geometric_center_within_0p2pct": true,
+    "no_exact_triple_unification_at_w33": true
+  }
+}

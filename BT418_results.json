@@ -1,0 +1,64 @@
+{
+  "BT": 404,
+  "title": "Finite Electroweak Boundary Prediction",
+  "substrate_boundary": {
+    "mean_inverse_coupling": 41,
+    "mean_formula": "q*k + F5",
+    "threshold_direction": [
+      1.0,
+      4.0,
+      -5.0
+    ],
+    "threshold_direction_formula": "(1, mu, -F5)",
+    "threshold_coefficient": 0.5364793041447001,
+    "threshold_coefficient_formula": "log(F5^2)/q!",
+    "M_W33_GeV": 50000000000000.0,
+    "high_scale_inverse_couplings": {
+      "alpha1_inv": 41.5364793041447,
+      "alpha2_inv": 43.1459172165788,
+      "alpha3_inv": 38.3176034792765
+    }
+  },
+  "prediction_at_MZ": {
+    "alpha1_inv_GUT_normalized": 59.17458925881052,
+    "alpha2_inv": 29.522986763788126,
+    "alpha3_inv": 8.203757215212896,
+    "alphaY_inv": 98.62431543135087,
+    "alpha_em_inv": 128.147302195139,
+    "sin2_thetaW": 0.23038320946336724,
+    "alpha_s": 0.12189536742330923
+  },
+  "comparison_targets": {
+    "alpha1_inv_GUT_normalized": 59.457445199999995,
+    "alpha2_inv": 29.804258,
+    "alpha3_inv": 8.467400508044031,
+    "alpha_em_inv": 128.9,
+    "sin2_thetaW": 0.23122,
+    "alpha_s": 0.1181
+  },
+  "relative_errors": {
+    "alpha1_inv_GUT_normalized": 0.004757283805888694,
+    "alpha2_inv": 0.009437283632824384,
+    "alpha3_inv": 0.03113627288335709,
+    "alpha_em_inv": 0.005839393365872883,
+    "sin2_thetaW": 0.003619023166822809,
+    "alpha_s": 0.03213689604834233
+  },
+  "boundary": {
+    "uses_observed_couplings_as_boundary_inputs": false,
+    "uses_observed_couplings_for_comparison_only": true,
+    "closed_alpha_zero_momentum_proof": false,
+    "next_target": "derive M_Z-to-zero QED/hadronic threshold and improve the SU(3) residual"
+  },
+  "checks": {
+    "mean_inverse_coupling_is_qk_plus_F5": true,
+    "threshold_direction_is_trace_zero": true,
+    "threshold_coefficient_is_log_F5_squared_over_qfactorial": true,
+    "alpha_em_inv_MZ_error_under_0p6pct": true,
+    "sin2_thetaW_MZ_error_under_0p5pct": true,
+    "alpha_s_MZ_error_under_3p6pct": true,
+    "alpha1_inv_error_under_0p6pct": true,
+    "alpha2_inv_error_under_1pct": true,
+    "alpha3_inv_error_under_3p2pct": true
+  }
+}

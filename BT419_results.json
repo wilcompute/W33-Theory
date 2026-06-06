@@ -1,0 +1,33 @@
+{
+  "BT": 405,
+  "title": "Low-Energy Alpha from the Finite Boundary",
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "F5": 5
+  },
+  "prediction": {
+    "alpha_inv_MZ_from_BT418": 128.147302195139,
+    "delta_alpha_inv_MZ_to_0": 8.88888888888889,
+    "delta_formula": "lambda^mu * F5 / q^2 = 80/9",
+    "alpha_inv_0_pred": 137.03619108402788,
+    "alpha_inv_0_target": 137.036,
+    "absolute_error": 0.0001910840278753767,
+    "relative_error": 1.394407512444735e-06,
+    "relative_error_pct": 0.00013944075124447348
+  },
+  "boundary": {
+    "closed_alpha_zero_numerical_prediction": true,
+    "closed_QED_hadronic_threshold_derivation": false,
+    "reason": "80/9 is identified as the finite threshold value but not yet derived as the continuum decoupling integral",
+    "next_target": "derive lambda^mu*F5/q^2 from charged-sector decoupling over the W33 two-code carrier"
+  },
+  "checks": {
+    "BT418_checks_hold": true,
+    "delta_formula_is_80_over_9": true,
+    "delta_formula_is_lambda_mu_F5_over_q2": true,
+    "alpha_zero_error_under_0p001pct": true,
+    "alpha_zero_uses_BT418_finite_boundary": true
+  }
+}

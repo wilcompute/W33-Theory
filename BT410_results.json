@@ -3,14 +3,11 @@
   "title": "Dark Matter Relic Density",
   "m_DM_TeV": 4.0,
   "tier_DM": 20,
-  "DM_type": "SU(2)_L wino-like triplet (W(3,3) SU(2) arm)",
-  "sigma_v_GeV2": 1.761e-9,
-  "sigma_v_cm3s": 2.057e-26,
-  "WIMP_miracle_cm3s": 3.0e-26,
-  "ratio_to_WIMP_miracle": 0.686,
-  "Omega_DM_h2_substrate": 0.146,
-  "Omega_DM_h2_Planck": 0.1200,
-  "err_pct": 21.5,
-  "Sommerfeld_note": "Non-perturbative Sommerfeld enhancement at 4 TeV required for precise relic density.",
-  "status": "Omega_DM h^2 = 0.146 [0.1200] 21.5%. Tier-20 wino-like DM naturally in WIMP miracle regime. Full Sommerfeld calc = future BT."
+  "DM_type": "SU(2)_L wino-like triplet",
+  "sigma_v_GeV2": 1.7605145131152503e-09,
+  "sigma_v_cm3s": 2.05459112885736e-26,
+  "Omega_DM_h2_substrate": 0.14601445308821223,
+  "Omega_DM_h2_Planck": 0.12,
+  "err_pct": 21.67871090684353,
+  "status": "Omega_DM h^2 = 0.146 [Planck: 0.12] 21.7%. WIMP miracle: factor 1.46 off. Sommerfeld correction needed for precise value."
 }

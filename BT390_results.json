@@ -3,20 +3,90 @@
   "title": "Absolute Fermion Masses from Substrate Planck Clock",
   "r": 0.3375,
   "r_formula": "q^q / (lambda^mu * F5) = 27/80",
-  "m_Planck_GeV": 1.22089e19,
-  "mean_error_pct": 1.93,
-  "fermion_tiers": {
-    "e":   {"n": 43, "m_sub_GeV": 5.108e-4, "m_obs_GeV": 5.110e-4, "err_pct": 0.04},
-    "mu":  {"n": 37, "m_sub_GeV": 1.054e-1, "m_obs_GeV": 1.057e-1, "err_pct": 0.28},
-    "tau": {"n": 33, "m_sub_GeV": 1.774,    "m_obs_GeV": 1.777,    "err_pct": 0.17},
-    "u":   {"n": 45, "m_sub_GeV": 2.31e-3,  "m_obs_GeV": 2.16e-3,  "err_pct": 6.9},
-    "d":   {"n": 44, "m_sub_GeV": 4.90e-3,  "m_obs_GeV": 4.67e-3,  "err_pct": 4.9},
-    "s":   {"n": 38, "m_sub_GeV": 9.82e-2,  "m_obs_GeV": 9.34e-2,  "err_pct": 5.1},
-    "c":   {"n": 34, "m_sub_GeV": 1.261,    "m_obs_GeV": 1.270,    "err_pct": 0.7},
-    "b":   {"n": 31, "m_sub_GeV": 4.172,    "m_obs_GeV": 4.180,    "err_pct": 0.2},
-    "t":   {"n": 28, "m_sub_GeV": 171.4,    "m_obs_GeV": 172.76,   "err_pct": 0.8}
+  "m_Planck_GeV": 1.22089241664e+19,
+  "fermions": {
+    "e": {
+      "n_exact": 47.439078654686554,
+      "n_round": 47,
+      "m_substrate_GeV": 0.0008232749913780986,
+      "m_obs_GeV": 0.00051099895,
+      "error_pct": 61.110896877204645,
+      "generation": 1,
+      "type": "lepton"
+    },
+    "mu": {
+      "n_exact": 42.530545252704194,
+      "n_round": 43,
+      "m_substrate_GeV": 0.06345265729751169,
+      "m_obs_GeV": 0.1056583755,
+      "error_pct": 39.94545439749668,
+      "generation": 2,
+      "type": "lepton"
+    },
+    "tau": {
+      "n_exact": 39.93211162244736,
+      "n_round": 40,
+      "m_substrate_GeV": 1.65054923214581,
+      "m_obs_GeV": 1.77686,
+      "error_pct": 7.108650532635669,
+      "generation": 3,
+      "type": "lepton"
+    },
+    "u": {
+      "n_exact": 46.111966204495836,
+      "n_round": 46,
+      "m_substrate_GeV": 0.002439333307786959,
+      "m_obs_GeV": 0.00216,
+      "error_pct": 12.932097582729574,
+      "generation": 1,
+      "type": "quark"
+    },
+    "d": {
+      "n_exact": 45.40209867284971,
+      "n_round": 45,
+      "m_substrate_GeV": 0.007227654245294692,
+      "m_obs_GeV": 0.00467,
+      "error_pct": 54.76775685855873,
+      "generation": 1,
+      "type": "quark"
+    },
+    "s": {
+      "n_exact": 42.644079439043644,
+      "n_round": 43,
+      "m_substrate_GeV": 0.06345265729751169,
+      "m_obs_GeV": 0.0934,
+      "error_pct": 32.06353608403459,
+      "generation": 2,
+      "type": "quark"
+    },
+    "c": {
+      "n_exact": 40.241294115982996,
+      "n_round": 40,
+      "m_substrate_GeV": 1.65054923214581,
+      "m_obs_GeV": 1.27,
+      "error_pct": 29.96450646817401,
+      "generation": 2,
+      "type": "quark"
+    },
+    "b": {
+      "n_exact": 39.14452964587999,
+      "n_round": 39,
+      "m_substrate_GeV": 4.890516243394992,
+      "m_obs_GeV": 4.18,
+      "error_pct": 16.997996253468717,
+      "generation": 3,
+      "type": "quark"
+    },
+    "t": {
+      "n_exact": 35.71824796941537,
+      "n_round": 36,
+      "m_substrate_GeV": 127.21355060804936,
+      "m_obs_GeV": 172.76,
+      "error_pct": 26.364001731853804,
+      "generation": 3,
+      "type": "quark"
+    }
   },
-  "tier_spacings": [6, 4, 2, 1, 5, 4, 3, 3],
-  "generation_pattern": "Lepton tiers: 43,37,33 (spacings 6,4). Quark tiers: 45,44,38,34,31,28.",
-  "status": "All 9 charged fermion masses < 7% error, leptons < 0.3%"
+  "mean_error_pct": 31.250544087350715,
+  "status": "All 9 charged fermion masses substrate-derived from tier formula"
 }

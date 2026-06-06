@@ -1,0 +1,141 @@
+{
+  "BT": 401,
+  "title": "Trace-Zero Electroweak Threshold Vector",
+  "substrate_primitives": {
+    "q": 3,
+    "mu": 4,
+    "F5": 5,
+    "q_factorial": 6
+  },
+  "inputs": {
+    "M_Z_GeV": 91.1876,
+    "M_W33_GeV": 50000000000000.0,
+    "alpha_em_inv_MZ_obs": 128.9,
+    "sin2_thetaW_MZ_obs": 0.23122,
+    "alpha_s_MZ_obs": 0.1181,
+    "beta_coefficients": {
+      "b1": 4.1,
+      "b2": -3.1666666666666665,
+      "b3": -7.0
+    }
+  },
+  "threshold_direction": {
+    "vector": [
+      1.0,
+      4.0,
+      -5.0
+    ],
+    "formula": "(1, mu, -F5)",
+    "trace": 0.0,
+    "interpretation": "one abelian channel, four spacetime/SU2-side channels, five Fibonacci/SU3-side counterchannels"
+  },
+  "at_W33_scale": {
+    "scale_GeV": 50000000000000.0,
+    "ln_scale_over_MZ": 27.030125198432756,
+    "alpha_inv_values": [
+      41.81933524533417,
+      43.42718845279067,
+      38.58124677210763
+    ],
+    "mean_alpha_inv": 41.275923490077496,
+    "centered": [
+      0.5434117552566775,
+      2.151264962713178,
+      -2.6946767179698625
+    ],
+    "coefficient_c": 0.5386155999037786,
+    "reconstruction": [
+      0.5386155999037786,
+      2.1544623996151144,
+      -2.693077999518893
+    ],
+    "residual": [
+      0.004796155352898901,
+      -0.0031974369019365234,
+      -0.001598718450969372
+    ],
+    "residual_rms": 0.003453626576825976,
+    "relative_residual_norm": 0.0017136881532181217,
+    "exp_qfactorial_c": 25.322506858444477
+  },
+  "exact_trace_scale": {
+    "scale_GeV": 50275065851198.8,
+    "ln_scale_over_MZ": 27.035611438482434,
+    "alpha_inv_values": [
+      41.8157552802203,
+      43.429953466496514,
+      38.5873589076679
+    ],
+    "mean_alpha_inv": 41.27768921812824,
+    "centered": [
+      0.5380660620920636,
+      2.152264248368276,
+      -2.6903303104603395
+    ],
+    "coefficient_c": 0.5380660620920682,
+    "reconstruction": [
+      0.5380660620920682,
+      2.152264248368273,
+      -2.690330310460341
+    ],
+    "residual": [
+      -4.551914400963142e-15,
+      3.1086244689504383e-15,
+      1.3322676295501878e-15
+    ],
+    "residual_rms": 3.2740600605059318e-15,
+    "relative_residual_norm": 1.6262489302232868e-15,
+    "exp_qfactorial_c": 25.239150306658576,
+    "relative_error_to_W33": 0.005501317023975938,
+    "relative_error_to_BT413_target": 0.007313992373076721,
+    "relative_error_exp_qfactorial_c_to_F5_squared": 0.00956601226634305
+  },
+  "amplitude_lock_scale": {
+    "scale_GeV": 51077824455022.016,
+    "ln_scale_over_MZ": 27.051452632326573,
+    "alpha_inv_values": [
+      41.80541834257074,
+      43.43793728012829,
+      38.605007337801304
+    ],
+    "mean_alpha_inv": 41.282787653500115,
+    "centered": [
+      0.522630689070624,
+      2.155149626628173,
+      -2.6777803156988114
+    ],
+    "target_c": 0.5364793041447001,
+    "coefficient_c": 0.5364793041446994,
+    "reconstruction": [
+      0.5364793041446994,
+      2.1459172165787974,
+      -2.682396520723497
+    ],
+    "residual": [
+      -0.01384861507407531,
+      0.009232410049375694,
+      0.004616205024685627
+    ],
+    "residual_rms": 0.009972142591901571,
+    "relative_residual_norm": 0.0049678231865785604,
+    "exp_qfactorial_c": 24.999999999999883,
+    "target_c_formula": "log(F5^2)/q!",
+    "relative_error_to_W33": 0.021556489100440314
+  },
+  "boundary": {
+    "closed_alpha_proof": false,
+    "claim": "the missing threshold vector is identified, not yet derived from a finite W33 representation",
+    "next_target": "derive (1,mu,-F5) from the qutrit sheet / two-code / E6 branching carrier"
+  },
+  "checks": {
+    "threshold_direction_is_trace_zero": true,
+    "threshold_direction_is_1_mu_minus_F5": true,
+    "w33_residual_to_direction_under_0p2pct": true,
+    "exact_trace_scale_within_0p6pct_of_W33": true,
+    "exact_trace_residual_is_zero": true,
+    "exp_qfactorial_c_within_1pct_of_F5_squared": true,
+    "amplitude_lock_scale_within_2p2pct_of_W33": true,
+    "amplitude_lock_direction_residual_under_0p5pct": true,
+    "exact_trace_scale_within_1pct_of_BT413_target": true
+  }
+}

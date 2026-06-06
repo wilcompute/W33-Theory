@@ -1,14 +1,42 @@
 {
   "BT": 389,
   "title": "CKM Wolfenstein from Sp(4,F_3) Representation Theory",
-  "substrate_primitives": {"q": 3, "lambda": 2, "mu": 4, "Phi4": 10, "phi": 1.6180},
+  "substrate_primitives": {
+    "q": 3,
+    "lambda": 2,
+    "mu": 4,
+    "Phi4": 10,
+    "phi": 1.618033988749895
+  },
   "predictions": {
-    "lambda_W": {"substrate": 0.22361, "pdg": 0.22537, "error_pct": 0.78, "formula": "1/sqrt(lambda*Phi4) = 1/sqrt(20)"},
-    "A_W": {"substrate": 0.85, "pdg": 0.814, "error_pct": 4.42, "formula": "(lambda*Phi4-q)/(lambda*Phi4) = 17/20"},
-    "rho_bar": {"substrate": 0.14286, "pdg": 0.132, "error_pct": 8.2, "formula": "1/(lambda*q+1) = 1/7"},
-    "eta_bar": {"substrate": 0.36180, "pdg": 0.350, "error_pct": 3.4, "formula": "phi * lambda_W = phi/sqrt(20)"},
-    "J": {"substrate": 3.06e-5, "pdg": 3.08e-5, "error_pct": 0.65},
-    "delta_CKM_deg": {"substrate": 68.5, "pdg": 65.6, "error_pct": 4.4}
+    "lambda_W": {
+      "substrate": 0.22360679774997896,
+      "pdg": 0.22537,
+      "formula": "1/sqrt(lambda*Phi4)"
+    },
+    "A_W": {
+      "substrate": 0.85,
+      "pdg": 0.814,
+      "formula": "(lambda*Phi4-q)/(lambda*Phi4)"
+    },
+    "rho_bar": {
+      "substrate": 0.14285714285714285,
+      "pdg": 0.132,
+      "formula": "1/(lambda*q+1)"
+    },
+    "eta_bar": {
+      "substrate": 0.36180339887498947,
+      "pdg": 0.35,
+      "formula": "phi*lambda_W"
+    },
+    "J": {
+      "substrate": 3.267536946089747e-05,
+      "pdg": 3.08e-05
+    },
+    "delta_CKM_deg": {
+      "substrate": 68.4535421741466,
+      "pdg": 65.6
+    }
   },
   "free_parameters": 0,
   "status": "All 4 Wolfenstein parameters substrate-derived to < 10% with zero free params"

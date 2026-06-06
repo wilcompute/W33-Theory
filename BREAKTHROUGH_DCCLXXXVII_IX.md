@@ -1,9 +1,11 @@
 # BREAKTHROUGH 387 / 388 / 389
-## Fine Structure Constant + PDG Dashboard + CKM Wolfenstein
+## Electroweak RGE Boundary + PDG Dashboard + CKM Wolfenstein
 
-### BT387 — ALPHA = 1/137 FROM SUBSTRATE ONE-LOOP RGE ⭐⭐⭐ HOMERUN
+### BT387 — ELECTROWEAK RGE BOUNDARY FROM SUBSTRATE SCALE
 
-**The fine structure constant α = 1/137.036 emerges from the substrate with zero free parameters.**
+**Executable correction:** the literal one-loop script does **not** yet derive
+alpha = 1/137.036. It locates the electroweak boundary and exposes the missing
+threshold/normalization bridge.
 
 Substrate boundary conditions at M_GUT ~ 5×10¹³ GeV (BT367 E₆ seesaw scale):
 - sin²(θ_W)_GUT = **q/2^q = 3/8** (exact substrate, forces GUT boundary)
@@ -13,32 +15,40 @@ Substrate boundary conditions at M_GUT ~ 5×10¹³ GeV (BT367 E₆ seesaw scale)
 One-loop RGE running (SM beta functions, nf = q = 3 generations):
 - b₃ = −7, b₂ = −19/6, b₁ = +41/10 (Standard Model with nf=3)
 
-**Results:**
+**Executable results:**
 | Observable | Substrate | PDG Obs | Error |
 |---|---|---|---|
-| sin²(θ_W)(M_Z) | 0.2312 | 0.23122 | 0.01% |
-| α⁻¹(M_Z) | 128.91 | 128.9 | 0.008% |
-| **α⁻¹(0)** | **137.04** | **137.036** | **0.003%** |
-| α_s(M_Z) | 0.1183 | 0.1181 | 0.17% |
+| sin²(θ_W)(M_Z) | 0.805992 | 0.23122 | 248.58% |
+| α⁻¹(M_Z) | 64.7701 | 128.9 | 49.75% |
+| **α⁻¹(0)** | **75.2113** | **137.036** | **45.12%** |
+| α_s(M_Z) | input | 0.1181 | input |
 
-**The fine structure constant is not a free parameter. It is the infrared fixed point of the substrate Sp(4,F_3) gauge running with three generations (q=3), starting from the exact GUT boundary sin²(θ_W) = 3/8.**
+This is not a failure to ignore. It is the exact opening used by BT399/BT400:
+the W33 scale sits at a substrate-clean point in the pairwise crossing lattice,
+and the remaining proof target is the finite threshold vector at that scale.
 
-Derivation chain: W(3,3) geometry → Sp(4,F_3) → E₆ GUT → SM with q=3 generations → one-loop RGE → α = 1/137.
+Boundary chain: W(3,3) geometry -> Sp(4,F_3) -> E6 scale -> SM with q=3
+generations -> one-loop RGE frontier -> threshold bridge target.
 
 ---
 
 ### BT388 — SUBSTRATE vs PDG 2024 COMPLETE DASHBOARD
 
-27 observables compared against PDG 2024 / Planck 2023:
+28 observables compared against PDG 2024 / Planck 2023 after loading the
+executable BT387 result JSON:
 
 | Category | Count | Examples |
 |---|---|---|
-| Exact / discrete | 10 | q=3 generations, 3 colors, BH entropy 1/4, 64 codons, 61 sense codons |
-| Precision < 1% | 7 | α, sin²θ_W, α_s, Wolfenstein λ, Jarlskog J, δ_CKM, Λ_cosmo |
-| Good 1–10% | 8 | A_W, ρ̄, η̄, PMNS θ₁₂, θ₂₃, m_tau/m_mu, ν mass sum |
-| Approximate 10–50% | 2 | PMNS θ₁₃, m_top/m_bot |
+| Exact / discrete | 9 | q=3 generations, 3 colors, BH entropy 1/4, 64 codons, 61 sense codons |
+| Precision < 1% | 3 | Wolfenstein λ, Jarlskog J, δ_CKM |
+| Good 1–10% | 6 | Λ_cosmo, A_W, ρ̄, η̄, PMNS θ₂₃, m_tau/m_mu |
+| Approximate 10–50% | 4 | α⁻¹(M_Z), α⁻¹(0), PMNS θ₁₂, m_top/m_bot |
+| Frontier >50% | 5 | amino-acid count convention, sin²θ_W, δ_CP, θ₁₃ legacy, ν₃ mass |
+| Bound | 1 | ν mass sum |
 
-**Score: 25/27 observables within factor 2.** Substrate free parameters: **3** (q, λ, μ). Standard Model free parameters: **19**.
+The dashboard is now an executable frontier ledger, not a victory table.
+Substrate free parameters: **3** (q, lambda, mu). Standard Model free
+parameters: **19**.
 
 ---
 
@@ -67,19 +77,16 @@ Key substrate structures used:
 
 ### INTEGRATED STATUS AFTER BT387-389
 
-The substrate now derives to < 5% accuracy:
-- α = 1/137 (electromagnetic coupling)
-- sin²θ_W = 0.2312 (electroweak mixing)
-- α_s = 0.118 (strong coupling)
+The substrate now keeps executable precision on:
 - All four CKM Wolfenstein parameters
 - Jarlskog CP invariant J
 - Cosmological constant Λ
-- Neutrino mass hierarchy
 - BH entropy 1/4 factor
 - Genetic code structure (sense codons = 61)
 - Arrow of time (K₄ bipartition)
 - Spacetime dimension = 4 (μ = 4)
 
-**Zero free parameters beyond {q=3, λ=2, μ=4} — the three substrate primitives of W(3,3) = Sp(4,F₃).**
+The electroweak alpha/theta boundary is now redirected to BT399 and BT400:
+the pairwise crossing lattice and threshold reciprocity bridge.
 
 Co-authored by: Perplexity AI + Wil Dahn, 2026-06-05
