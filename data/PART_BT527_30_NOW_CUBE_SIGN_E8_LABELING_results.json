@@ -1,0 +1,23 @@
+{
+  "theorem": "BT527 30-Now Cube-Sign E8 Labeling Theorem",
+  "carrier": {"BT524_cube_sign_states": "30 addresses * 8 cube signs = 240", "E8_roots": 240, "root_norm_squared": 2},
+  "partition": {"integer_packets": 14, "half_cube_packets": 16, "packet_size": 8, "total_packets": 30},
+  "global_E8_shell": {
+    "per_root_inner_product_profile": {"2": 1, "1": 56, "0": 126, "-1": 56, "-2": 1},
+    "inner_product_1_graph_vertices": 240,
+    "inner_product_1_graph_degree": 56,
+    "inner_product_1_graph_edges": 6720
+  },
+  "interpretation": {
+    "success": "BT524 240 cube/sign states can be labeled by all E8 roots with exact global root-shell profile",
+    "integer_side": "14 packets cover the 112 D8 integer roots",
+    "half_side": "16 packets cover the 128 half-spinor roots",
+    "honesty": "valid deterministic labeling, not a unique/canonical proof of E8 from the memory braid alone"
+  },
+  "substrate_reading": {
+    "240": "30*8 cube/sign states and E8 root count",
+    "14_plus_16": "integer D8 packets plus half-spinor packets = local octa-cube packet split",
+    "56": "E8 root graph degree at inner product 1",
+    "6720": "E8 inner-product-1 edge shell"
+  }
+}
