@@ -1,0 +1,35 @@
+{
+  "theorem": "BT497 Heawood CSS Phase-Shell Theorem",
+  "graph": "Heawood graph = corrected Szilassi carrier",
+  "local_distance_shell_profile": {"d0": 1, "d1": 3, "d2": 6, "d3": 4},
+  "global_unordered_distance_pair_profile": {"1": 21, "2": 42, "3": 28},
+  "css_genus_hinge_recovery": {
+    "d_X": 3,
+    "d_Z": 4,
+    "d_X_plus_d_Z": 7,
+    "d_X_times_d_Z": 12,
+    "G2_positive_shell": 6,
+    "Phi3_off_center_shell": 13
+  },
+  "phase_superperiod_recovery": {
+    "unordered_distance3_pairs": 28,
+    "oriented_distance3_pairs": 56,
+    "phase_superperiod": 28,
+    "euler_drift_magnitude": 56,
+    "identity": "oriented distance-3 pairs = 2 * unordered distance-3 pairs = 56"
+  },
+  "nested_shell_sums": {
+    "center_only": 1,
+    "through_d1": 4,
+    "through_d2": 10,
+    "through_d3_full": 14,
+    "off_center_total": 13
+  },
+  "percolation_reading": {
+    "p_X_shell": "first Heawood shell has size 3=d_X",
+    "p_Z_shell": "outer Heawood shell has size 4=d_Z",
+    "p_T_shell": "inner+outer shell 3+4=7 is Fano/toroidal threshold",
+    "p_C_clock": "3*4=12 is local codec/genus denominator",
+    "p_full_local": "full local Heawood ball has 14 vertices = dim(G2)"
+  }
+}
