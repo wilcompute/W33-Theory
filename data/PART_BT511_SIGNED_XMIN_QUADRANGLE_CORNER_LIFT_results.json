@@ -1,0 +1,34 @@
+{
+  "theorem": "BT511 Signed-Xmin Quadrangle-Corner Lift Theorem",
+  "summary": {
+    "local_octahedron_corner_states": 240,
+    "ordinary_quadrangles": 1620,
+    "signed_Xmin_faces": 320,
+    "projective_Xmin_pairs": 160,
+    "lift_matrix_shape": [320, 1620],
+    "all_checks_passed": true
+  },
+  "degree_identities": {
+    "corner_layer": "240*27 = 1620*4 = 6480",
+    "signed_face_lift": "320*81 = 6480*4 = 25920",
+    "projective_pair_lift": "160*162 = 25920",
+    "column_weight": "each quadrangle has 4 corners, each corner touches 4 signed faces, so column weight 16"
+  },
+  "lift_distributions": {
+    "corner_hits": {"27": 240},
+    "signed_face_hits": {"81": 320},
+    "projective_pair_hits": {"162": 160}
+  },
+  "interpretation": {
+    "BT509": "signed local octahedron faces are signed Xmin states",
+    "BT511": "quadrangle corners lift uniformly to signed Xmin faces with degree 81",
+    "homology_bridge": "the recurring Levi H1 multiplicity 81 is the signed-face lift degree of the local octahedral corner hypergraph"
+  },
+  "substrate_reading": {
+    "27": "q^3 quadrangle corners per local octahedron vertex",
+    "4": "four signed faces incident to each octahedron vertex",
+    "81": "3*27 signed-face lift degree; Levi homology multiplicity",
+    "162": "projective face-pair lift degree = 2*81",
+    "25920": "total signed quadrangle-corner lift incidences"
+  }
+}
