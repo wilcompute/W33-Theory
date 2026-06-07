@@ -1,0 +1,28 @@
+{
+  "theorem": "BT494 Heawood Square Recovers Csaszar K7 Theorem",
+  "matrix_identity": "A_H^2 = diag(2I+J, 2I+J)",
+  "distance2_identity": "A_H^2 - 3I on either bipartition = J-I = A(K7)",
+  "heawood_carrier": {
+    "vertices": 14,
+    "edges": 21,
+    "spectrum": "(x-3)(x+3)(x^2-2)^6"
+  },
+  "distance2_graph": {
+    "structure": "K7 disjoint union K7",
+    "components": [7, 7],
+    "edge_count": 42,
+    "component_edge_count": 21,
+    "component_spectrum": "(x-6)(x+1)^6"
+  },
+  "interpretation": {
+    "Szilassi": "Heawood/Fano incidence graph, face-complete torus carrier",
+    "Csaszar": "K7 complete vertex-adjacency torus carrier",
+    "bridge": "two-step motion in Szilassi/Heawood equals one complete Csaszar adjacency layer",
+    "duality": "point and line bipartitions each recover a K7 carrier"
+  },
+  "substrate_reading": {
+    "21": "each recovered K7 has 21 edges",
+    "42": "total distance-2 edges = two K7 shells = flag-orbit resonance",
+    "spectrum_square": "Heawood sqrt(2) modes square to the K7 -1 modes after loop subtraction"
+  }
+}
