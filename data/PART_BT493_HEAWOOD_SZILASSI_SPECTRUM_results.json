@@ -1,0 +1,36 @@
+{
+  "theorem": "BT493 Heawood / Szilassi Spectral Split Theorem",
+  "incidence_identity": "B B^T = 2I + J",
+  "heawood_adjacency_block_form": "A=[[0,B],[B^T,0]]",
+  "characteristic_polynomial": "(x-3)(x+3)(x^2-2)^6",
+  "spectrum": {
+    "3": 1,
+    "sqrt(2)": 6,
+    "-sqrt(2)": 6,
+    "-3": 1
+  },
+  "point_side_operator_spectrum_BBt": {
+    "9": 1,
+    "2": 6
+  },
+  "graph_certificates": {
+    "is_heawood": true,
+    "vertices": 14,
+    "edges": 21,
+    "degree": 3,
+    "diameter": 3,
+    "distance_pair_profile": {"1": 21, "2": 42, "3": 28}
+  },
+  "spectral_energy_split": {
+    "trace_A2": 42,
+    "macro_squared_contribution": 18,
+    "root_squared_contribution": 24,
+    "reading": "42=18+24, so after the ±3 macro modes the sqrt(2) root shell contributes 24=f"
+  },
+  "substrate_reading": {
+    "spectral_radius_3": "q=3",
+    "sqrt2_shell_multiplicity_12": "six positive plus six negative root modes",
+    "root_squared_contribution_24": "matter eigenmultiplicity f=24",
+    "distance_profile_21_42_28": "edge/flag/defect profile of corrected Szilassi carrier"
+  }
+}
