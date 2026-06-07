@@ -1,0 +1,27 @@
+{
+  "theorem": "BT504 Tetrahelix Axis Endpoint Hodge-Square Theorem",
+  "endpoint_graph": {
+    "vertices": 12,
+    "edges": 12,
+    "degree": 2,
+    "decomposition": "3 disjoint C4 cycles",
+    "component_sizes": [4, 4, 4]
+  },
+  "hodge_channels": {
+    "reading": "three C4 endpoint cycles = three opposite-edge/Hodge-star channels of K4",
+    "axis_count_per_channel": 4
+  },
+  "face_coverage": {
+    "reading": "four faces each carry three (7,3) points"
+  },
+  "chirality_balance": {
+    "per_square": "2 even + 2 odd axes",
+    "global": "6 even + 6 odd axes"
+  },
+  "substrate_reading": {
+    "3": "three opposite-edge bivector/Hodge channels",
+    "4": "each channel is a C4 square",
+    "12": "three C4 cycles = local BC-axis codec",
+    "24": "oriented axis-endpoint incidences = tetrahedron flags"
+  }
+}
