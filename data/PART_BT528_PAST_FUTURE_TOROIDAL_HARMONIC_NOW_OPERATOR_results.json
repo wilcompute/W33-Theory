@@ -1,0 +1,20 @@
+{
+  "theorem": "BT528 Past/Future Toroidal Harmonic-Now Operator Theorem",
+  "toroidal_operator": {
+    "past": "Csaszar K7 adjacency A_C",
+    "future": "Szilassi/Heawood squared operator A_H^2-3I on one bipartition",
+    "identity": "A_C = A_H^2 - 3I = harmonic now operator",
+    "commutator": "0",
+    "anticommutator": "2 A(K7)^2",
+    "K7_spectrum": "6^1, (-1)^6"
+  },
+  "reservoir_model": {"BC_helices": 20, "addresses_per_helix": 30, "ejected_now_cells": 600, "vertices": 1200, "edges": 3000, "triangles": 2400, "euler_characteristic_3_complex": 0},
+  "quotient_30_now_braid": {"interpretation": "collapse helix index h; this recovers BT501/BT524 one-track 30-now braid", "now_cells": 30, "vertices": 60, "edges": 150, "triangles": 120, "euler_characteristic": 0},
+  "past_future_reading": {
+    "past": "accumulated Csaszar vertex-complete memory rail",
+    "future": "counter-rotating Szilassi/Heawood face-complete possibility rail",
+    "now": "tetrahedron ejected by the equality of the two K7 adjacency observables",
+    "becomes_past": "after ejection, the now-cell boundary is available as the next past rail state in the reservoir"
+  },
+  "substrate_reading": {"600": "20*30 tetrahedral now ejections / 600-cell tetrahedra", "30": "BC address period", "20": "number of BC helix tracks in the 600-cell", "K7": "common harmonic adjacency recovered from past and future toroidal memories"}
+}
