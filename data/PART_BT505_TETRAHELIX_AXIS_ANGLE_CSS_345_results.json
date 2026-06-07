@@ -1,0 +1,31 @@
+{
+  "theorem": "BT505 Tetrahelix Axis Angle CSS 3-4-5 Theorem",
+  "axis_geometry": {
+    "axis_count": 12,
+    "axis_segment_length": "2/sqrt(5)",
+    "small_red_triangle_edge": "EL/10 = sqrt(2)/5",
+    "half_crossing_sine": "1/sqrt(10)",
+    "crossing_angle_beta": "2*asin(1/sqrt(10))",
+    "crossing_angle_degrees": 36.869897645844
+  },
+  "css_345_identity": {
+    "sin_beta": "3/5",
+    "cos_beta": "4/5",
+    "triangle": "3-4-5",
+    "reading": "d_X=3 and d_Z=4 appear as the exact sine/cosine legs of the tetrahelix-axis crossing angle"
+  },
+  "table_slope_split": {
+    "cosine_profile_against_fixed_face_normal": {"sqrt(15)/5": 6, "sqrt(15)/15": 6},
+    "high_angle": "asin(sqrt(3/5))",
+    "high_angle_degrees": 50.7684795164077,
+    "low_angle": "asin(1/sqrt(15))",
+    "low_angle_degrees": 14.9632174333077,
+    "reading": "the 12 axes split 6+6 into the two slope classes recorded by R. Gray"
+  },
+  "substrate_reading": {
+    "7_3": "10-frequency face coordinate gate",
+    "12": "tetrahelix axes through one tetrahedron",
+    "3_4_5": "CSS/percolation roots embedded as axis crossing trigonometry",
+    "6_plus_6": "two slope/chirality sheets of the local BC-axis codec"
+  }
+}
