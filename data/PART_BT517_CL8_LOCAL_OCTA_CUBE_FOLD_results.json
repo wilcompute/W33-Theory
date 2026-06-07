@@ -1,0 +1,22 @@
+{
+  "theorem": "BT517 Cl8 Local Octa-Cube Fold Theorem",
+  "local_states": {"octahedron_side": 6, "cube_dual_side": 8, "total": 14},
+  "fold_matrix": {"shape": [6, 8], "row_degree": 4, "column_degree": 3, "total_flags": 24, "rank": 4},
+  "spectra": {
+    "BBt": {"12": 1, "4": 3, "0": 2},
+    "BtB": {"12": 1, "4": 3, "0": 4},
+    "bipartite_fold": "(+/-2sqrt(3))^1, (+/-2)^3, 0^6"
+  },
+  "graph": {"vertices": 14, "edges": 24, "degree_profile": {"3": 8, "4": 6}, "bipartite": true},
+  "interpretation": {
+    "Cl8_style": "8 cube-sign states folded against 6 octahedral axis signs",
+    "G2_packet": "6+8=14 local states",
+    "S4_flags": "24 incidences are tetrahedral flag count"
+  },
+  "substrate_reading": {
+    "14": "dim(G2) local octa-cube state count",
+    "24": "|S4| flags / fold incidences",
+    "4": "fold rank and tetrahedron vertex count",
+    "8": "cube signed face states / Cl8 sign layer"
+  }
+}
