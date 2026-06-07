@@ -1,0 +1,17 @@
+{
+  "theorem": "BT519 Exact Intertwiner Projector Identity Theorem",
+  "identity": "C C^T = 324 * S (12I-A)(A+4I) S^T = 77760 * ((1/4) S P2 S^T)",
+  "objects": {
+    "A": "W33 collinearity matrix",
+    "C": "Qplus Qminus^T even/odd coupling",
+    "S": "160x40 projective-pair-to-point lift",
+    "P2": "W33 lambda=2 spectral projector"
+  },
+  "checks": {"exact_integer_identity": true, "rank_C": 24, "CCt_spectrum": {"77760": 24, "0": 136}},
+  "substrate_reading": {
+    "24": "coupling bridge equals W33 +2 projector",
+    "324": "integer normalization 77760/(4*60)",
+    "77760": "coupling-square eigenvalue",
+    "160": "projective Xmin-pair space"
+  }
+}
