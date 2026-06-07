@@ -1,0 +1,50 @@
+{
+  "theorem": "BT498 TXT Realization Corrected Szilassi Parser Theorem",
+  "source": "data/Toroidal-Polyhedra-Realizations.txt Szilassi face cycles",
+  "incidence": {
+    "hexagonal_faces": 7,
+    "face_edge_incidences": 42,
+    "unique_edges": 21,
+    "edge_incidence_profile": {"2": 21},
+    "closed_szilassi_condition": true
+  },
+  "graph": {
+    "is_heawood": true,
+    "vertices": 14,
+    "edges": 21,
+    "degree_profile": {"3": 14},
+    "diameter": 3,
+    "distance_pair_profile": {"1": 21, "2": 42, "3": 28}
+  },
+  "metric_packets": [
+    {
+      "name": "Szilassi TXT v1",
+      "edge_count": 21,
+      "distinct_squared_lengths": 12,
+      "sum_squared_lengths": 4209.58,
+      "squared_metric_norm2": 1731937.4995,
+      "min_squared_length": 6.25,
+      "max_squared_length": 635.04
+    },
+    {
+      "name": "Szilassi TXT v2",
+      "edge_count": 21,
+      "distinct_squared_lengths": 11,
+      "sum_squared_lengths": 4459.5416666667,
+      "squared_metric_norm2": 1937926.9424189816,
+      "min_squared_length": 4.0,
+      "max_squared_length": 578.8125
+    }
+  ],
+  "repair_reading": {
+    "BT490": "old EDGE_LENGTH_ANALYSIS.py parser used wrong Szilassi face cycles and gave 31 edges",
+    "BT498": "TXT realization data gives the correct 21-edge closed Heawood/Szilassi carrier",
+    "next_step": "replace metric analysis Szilassi S_FACES with the TXT FACES list before promoting seven-realization edge spectra"
+  },
+  "substrate_reading": {
+    "21": "correct Szilassi edge shell",
+    "42": "face-edge incidences and Heawood distance-2 pairs",
+    "28": "Heawood distance-3 unordered pairs / phase superperiod",
+    "12_and_11": "distinct Szilassi v1/v2 edge-length types match TXT counts"
+  }
+}
