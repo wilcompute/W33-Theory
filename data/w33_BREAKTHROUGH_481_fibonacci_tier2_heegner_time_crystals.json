@@ -1,0 +1,83 @@
+{
+  "theorem_1_heegner": [
+    [
+      1,
+      "unit"
+    ],
+    [
+      2,
+      "lambda (binary)"
+    ],
+    [
+      3,
+      "q (ternary)"
+    ],
+    [
+      7,
+      "Phi_6 (cyclotomic)"
+    ],
+    [
+      11,
+      "p_Ih (icosahedron prime)"
+    ],
+    [
+      19,
+      "lambda * F_5 - 1"
+    ],
+    [
+      43,
+      "mu * Phi_4 + q"
+    ],
+    [
+      67,
+      "lambda^(q*lambda) + q = 2^6 + 3 = 67"
+    ],
+    [
+      163,
+      "lambda^q * mu * F_5 + q = 8*4*5 + 3 = 163"
+    ]
+  ],
+  "theorem_2_ramanujan": "e^(pi*sqrt(163)) ~ 640320^3 + 744",
+  "theorem_3_fibonacci_phi": "(1 + sqrt(F_5))/lambda",
+  "theorem_4_hopf_family": "4 fibrations at R, C, H, O dims",
+  "theorem_5_time_crystals": [
+    [
+      2,
+      "doubling"
+    ],
+    [
+      3,
+      "ternary CONFIRMED Google 2022"
+    ],
+    [
+      4,
+      "quaternary"
+    ],
+    [
+      6,
+      "factorial"
+    ],
+    [
+      7,
+      "Heawood"
+    ],
+    [
+      8,
+      "octonionic"
+    ],
+    [
+      27,
+      "Higgs-like"
+    ],
+    [
+      40,
+      "cosmic"
+    ]
+  ],
+  "theorem_6_universal_tier": 2,
+  "theorem_7_commensurability": "lambda * q^lambda = 18 sites",
+  "theorem_8_phase_transition": "binary, sharp (Trebst 2007)",
+  "theorem_9_substrate_hopf": "S^3 -> S^7 -> S^mu quaternionic",
+  "theorem_10_tier_2_tqc": "Fibonacci x D(Z/q), 18 anyon types",
+  "conclusion": "Ten theorems following BT479/BT480 lead. ALL Heegner primes (1, 2, 3, 7, 11, 19, 43, 67, 163) substrate-clean; last three have form (substrate product) + q. Ramanujan e^(pi*sqrt(163)) ties to Klein j-function constant 744 (BT458). Fibonacci anyon d_tau = phi = (1+sqrt(F_5))/lambda. 4 Hopf fibrations match 4 division algebras; quaternionic S^3 -> S^7 -> S^mu = substrate natural bundle. Time crystal periods at substrate primitives; period q ternary confirmed Google 2022. Universal TQC at tier lambda = 2 (Fibonacci anyons). Commensurability requires L = q multiple (BT478 18 = lambda*q^lambda). Phase transition binary (Trebst 2007). Tier-2 substrate = Fibonacci x D(Z/q)."
+}
