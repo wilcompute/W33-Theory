@@ -1,0 +1,34 @@
+{
+  "theorem": "BT491 Dual Szilassi from Cyclic Csaszar Theorem",
+  "primal_csaszar": {
+    "vertices": 7,
+    "edges": 21,
+    "faces": 14,
+    "one_skeleton": "K7",
+    "euler_characteristic": 0,
+    "automorphism_order": 42
+  },
+  "dual_szilassi": {
+    "vertices": 14,
+    "edges": 21,
+    "faces": 7,
+    "euler_characteristic": 0,
+    "vertex_degree_profile": {"3": 14},
+    "face_size_profile": {"6": 7},
+    "face_adjacency_graph": "K7",
+    "automorphism_order": 42
+  },
+  "incidence_certificates": {
+    "primal_edge_face_profile": {"2": 21},
+    "dual_edge_face_profile": {"2": 21},
+    "every_pair_of_dual_faces_shares_one_edge": true,
+    "closed_szilassi_condition": true
+  },
+  "BT490_resolution": "A correct 21-edge abstract Szilassi carrier is obtained as the dual of the cyclic Csaszar torus triangulation. This should replace the 31-edge cyclic S_FACES parser for combinatorial Szilassi tests.",
+  "substrate_reading": {
+    "7_faces": "Fano heptad / complete face-adjacency observable",
+    "14_vertices": "dim(G2) dual vertex shell",
+    "21_edges": "K7 duads / g1 shell",
+    "42_automorphisms": "g2*Phi6 flag-orbit resonance"
+  }
+}
