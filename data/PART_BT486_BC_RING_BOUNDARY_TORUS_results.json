@@ -1,0 +1,50 @@
+{
+  "theorem": "BT486 BC Ring Boundary Torus Theorem",
+  "model": "30 tetrahedra T_i={i,i+1,i+2,i+3} on Z/30Z",
+  "one_skeleton": "Circ(30; ±1, ±2, ±3) = C_30^3",
+  "step_decomposition": {
+    "1": {"components": 1, "cycle_length": 30, "notation": "1C_30", "edges": 30},
+    "2": {"components": 2, "cycle_length": 15, "notation": "2C_15", "edges": 30},
+    "3": {"components": 3, "cycle_length": 10, "notation": "3C_10", "edges": 30}
+  },
+  "cycle_components": 6,
+  "oriented_cycle_sectors": 12,
+  "graph_parameters": {
+    "vertices": 30,
+    "edges": 90,
+    "degree": 6,
+    "automorphism_order": 60
+  },
+  "tetrahedra": {
+    "maximal_K4_count": 30,
+    "cell_adjacency": "C30"
+  },
+  "incidence": {
+    "edge_tetrahedron_total": 180,
+    "edge_tetrahedron_by_step": {
+      "1": {"3": 30},
+      "2": {"2": 30},
+      "3": {"1": 30}
+    },
+    "triangle_tetrahedron_profile": {"1": 60, "2": 30},
+    "shared_internal_faces": 30,
+    "boundary_faces": 60,
+    "boundary_edge_face_profile": {"2": 90}
+  },
+  "boundary_complex": {
+    "V": 30,
+    "E": 90,
+    "F": 60,
+    "euler_characteristic": 0,
+    "rank_d1": 29,
+    "rank_d2": 59,
+    "betti_Q": {"H0": 1, "H1": 2, "H2": 1}
+  },
+  "substrate_reading": {
+    "six_cycle_components": "positive G2 root selector",
+    "twelve_oriented_cycle_sectors": "G2 root count / CS level k=12",
+    "boundary_torus": "literal genus-one carrier from the 600-cell/BC ring layer",
+    "triangulated_torus_law": "V=30, E=3V=90, F=2V=60, chi=0",
+    "cell_cycle": "30 tetrahedra close as C30 in the 600-cell ring"
+  }
+}
