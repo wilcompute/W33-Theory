@@ -1,0 +1,40 @@
+{
+  "theorem": "BT508 Richter-Pencil Octahedron Bridge Theorem",
+  "bridge_statement": "BT507 BC/Richter crossing octahedron and W33 local pencil-octahedron are the same object L(K4)",
+  "local_model": {
+    "line_graph": "L(K4)",
+    "octahedron_f_vector": [6, 12, 8],
+    "degree": 4,
+    "BT507_scale_to_midpoint_octahedron": "multiply ±(2/5)e_i by 5/2 to get ±e_i"
+  },
+  "face_codec": {
+    "star_faces": 4,
+    "opposite_faces": 4,
+    "edge_face_matrix_shape": [12, 8],
+    "rank": 7,
+    "nullity": 1,
+    "row_degree": {"2": 12},
+    "col_degree": {"3": 8}
+  },
+  "W33_global_lift": {
+    "local_octahedra": 40,
+    "global_vertices": 240,
+    "global_edges": 480,
+    "global_faces": 320,
+    "global_edge_face_rank": 280,
+    "global_face_nullity": 40
+  },
+  "interpretation": {
+    "Richter_kernel": "physical BC-axis crossing octahedron inside one tetrahedral now",
+    "pencil_codec": "algebraic W33 local pencil octahedron at one point",
+    "identity": "both are L(K4), so the local memory now and local W33 gauge codec share the same octahedral carrier"
+  },
+  "substrate_reading": {
+    "6": "K4 edges / octahedron vertices / local axis-pair crossings",
+    "12": "octahedron edges / local BC axis codec / W33 valency",
+    "8": "signed local faces / X_min signs per W33 point",
+    "7": "rank of one octahedral edge-face codec",
+    "40": "one octahedral codec at every W33 point",
+    "240_480_320": "global vertices/edges/faces of the 40-octahedron lift"
+  }
+}
