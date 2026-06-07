@@ -1,0 +1,29 @@
+{
+  "theorem": "BT496 Heawood-Square Johnson Metric Bridge Theorem",
+  "pipeline": [
+    "Heawood/Szilassi adjacency A_H",
+    "A_H^2-3I on bipartitions = K7 disjoint union K7",
+    "line graph of recovered K7 = T(7)",
+    "T(7) metric projector split = 1+6+14"
+  ],
+  "certificates": {
+    "heawood_vertices_edges": [14, 21],
+    "distance2_components": [7, 7],
+    "distance2_total_edges": 42,
+    "T7_nodes_edges_degree": [21, 105, 10],
+    "T7_spectrum": "10^1, 3^6, (-2)^14",
+    "projector_ranks": {"scalar": 1, "vertex_potential": 6, "G2_residual": 14},
+    "line_graph_union_nodes_edges": [42, 210]
+  },
+  "interpretation": {
+    "BT494": "Szilassi/Heawood squared recovers Csaszar K7",
+    "BT495": "Csaszar K7 metrics decompose by Johnson T(7)",
+    "BT496": "Metric decomposition is induced by the squared Szilassi carrier"
+  },
+  "substrate_reading": {
+    "A_H": "face-complete Szilassi observable",
+    "A_H_squared": "vertex-complete Csaszar observable",
+    "T7": "edge-metric operator with eigenvalues E1,q,-r",
+    "1+6+14": "scalar + G2-positive selector + dim(G2) residual"
+  }
+}
