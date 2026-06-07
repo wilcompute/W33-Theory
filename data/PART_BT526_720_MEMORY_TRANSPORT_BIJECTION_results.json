@@ -1,0 +1,29 @@
+{
+  "theorem": "BT526 720 Memory/Transport Bijection Theorem",
+  "memory_side": {"addresses": 30, "flags_per_address": 24, "total_fold_edges": 720},
+  "transport_side": {
+    "transport_vertices": 45,
+    "transport_edges": 720,
+    "srg": "SRG(45,32,22,24)",
+    "local_s3_permutation_counts": "six permutations, 120 edges each",
+    "parity_counts": {"0": 360, "1": 360}
+  },
+  "bijection": {
+    "canonical_rule": "sort transport edges by S3 permutation then edge label; sort memory edges by address then S4 flag index",
+    "addresses_per_s3_permutation": 5,
+    "flags_per_address": 24,
+    "transport_edges_per_s3_permutation": 120,
+    "bijection_size": 720
+  },
+  "interpretation": {
+    "count_match_upgraded": "720 memory fold edges are deterministically crosswalked to 720 W33 transport-complement edges",
+    "30x24_vs_6x120": "six S3 transport classes each receive five 24-flag memory addresses",
+    "honesty": "bijection is canonical by chosen order, not yet a unique natural isomorphism"
+  },
+  "substrate_reading": {
+    "720": "30*24 memory fold = 6*120 transport S3 shell",
+    "24": "local tetrahedral flag packet",
+    "6": "S3 permutations / G2 positive-root selector",
+    "120": "transport edges per S3 class / E8 root-pair count"
+  }
+}
