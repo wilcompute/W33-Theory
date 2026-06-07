@@ -1,0 +1,18 @@
+{
+  "theorem": "BT520 Global Cl8 Fold Factorization Theorem",
+  "global_fold": {"F_shape": [240, 320], "rank": 160, "row_degree": 4, "column_degree": 3, "total_flags": 960},
+  "factorization": "F M = 4 R",
+  "matrices": {
+    "R": "240x1620 octahedron-corner/quadrangle incidence",
+    "M": "320x1620 signed-Xmin/quadrangle lift",
+    "F": "240x320 global octa-cube fold"
+  },
+  "ranks": {"rank_R": 240, "rank_M": 160, "rank_F": 160},
+  "reading": "signed Xmin lift is a fourfold face refinement of the old corner hypergraph through the global Cl8 fold",
+  "substrate_reading": {
+    "240": "octahedron corner states / E8 roots",
+    "320": "signed Xmin faces",
+    "960": "40*24 global Cl8 fold flags",
+    "4": "each octa vertex sees four signed faces and fold factor"
+  }
+}
