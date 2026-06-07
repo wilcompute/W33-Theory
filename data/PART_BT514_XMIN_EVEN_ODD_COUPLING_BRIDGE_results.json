@@ -1,0 +1,42 @@
+{
+  "theorem": "BT514 Xmin Even/Odd Coupling Bridge Theorem",
+  "summary": {
+    "signed_faces": 320,
+    "antipodal_pairs": 160,
+    "quadrangles": 1620,
+    "rank_signed": 160,
+    "rank_even_projective": 40,
+    "rank_odd_chiral": 120,
+    "rank_even_odd_coupling": 24,
+    "all_checks_passed": true
+  },
+  "spectra": {
+    "signed_MMt": {"0": 160, "80": 81, "112": 24, "144": 30, "464": 24, "1296": 1},
+    "even_Qplus_QplusT": {"0": 120, "288": 15, "792": 24, "2592": 1},
+    "odd_Qminus_QminusT": {"0": 40, "160": 81, "288": 15, "360": 24},
+    "coupling_CCt": {"0": 136, "77760": 24}
+  },
+  "coupling_bridge": {
+    "C": "Qplus Qminus^T",
+    "entry_distribution": {"-9": 5760, "0": 17920, "27": 1920},
+    "row_sums": "all zero",
+    "column_sums": "all zero",
+    "rank": 24,
+    "singular_value": "72*sqrt(15)",
+    "multiplicity": 24,
+    "reading": "even/projective and odd/chiral sectors communicate only through a 24-dimensional W33 matter sector"
+  },
+  "correction_to_BT513": {
+    "BT513_overstrong_claim": "even and odd sectors were asserted orthogonal",
+    "correct_statement": "Qplus Qminus^T is nonzero of rank 24; the split is coupled, not orthogonal",
+    "what_survives": "the 81-sector remains in the odd/chiral Qminus spectrum; projective Qplus still carries 1,24,15"
+  },
+  "substrate_reading": {
+    "40": "even/projective rank = W33 point/line count",
+    "120": "odd/chiral rank and projective nullity = E8 root-pair count",
+    "81": "odd/chiral protected homology multiplicity",
+    "24": "rank of even-odd coupling bridge and W33 matter multiplicity",
+    "72sqrt15": "single nonzero coupling singular value scale",
+    "77760": "72^2*15 coupling-square eigenvalue"
+  }
+}
