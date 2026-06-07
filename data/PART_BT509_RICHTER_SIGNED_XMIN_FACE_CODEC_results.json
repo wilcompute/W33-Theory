@@ -1,0 +1,38 @@
+{
+  "theorem": "BT509 Richter Signed-Xmin Face Codec Theorem",
+  "local_Richter_octahedron": {
+    "signed_faces": 8,
+    "projective_face_pairs": 4,
+    "octahedron_face_adjacency": "cube graph Q3",
+    "face_pair_quotient": "K4",
+    "signed_sheet_vertex_set": "K4 vertices x C2 signs",
+    "rank_from_existing_codec": 7,
+    "nullity_from_existing_codec": 1
+  },
+  "face_adjacency": {
+    "graph": "cube graph",
+    "vertices": 8,
+    "edges": 12,
+    "degree": 3,
+    "quotient_by_antipodal_pairs": "K4"
+  },
+  "global_W33_lift": {
+    "signed_Xmin_faces": 320,
+    "projective_Xmin_pairs": 160,
+    "edge_face_codec_rank": 280,
+    "edge_face_codec_nullity": 40
+  },
+  "interpretation": {
+    "BT507": "Richter axis intersections produce octahedron vertices",
+    "BT508": "that octahedron is L(K4), the W33 pencil-octahedron",
+    "BT509": "its 8 triangular faces are the local signed X_min sheet; antipodal pairs are projective X_min flags"
+  },
+  "substrate_reading": {
+    "8": "signed local face states of one Richter/W33 octahedron",
+    "4": "projective face-pair quotient / K4 vertices / pencil lines",
+    "cube": "face-adjacency of the signed octahedron sheet",
+    "320": "40*8 signed X_min faces",
+    "160": "40*4 projective X_min pairs",
+    "280": "40*7 edge-face rank"
+  }
+}
