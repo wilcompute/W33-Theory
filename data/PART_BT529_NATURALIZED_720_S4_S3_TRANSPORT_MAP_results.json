@@ -1,0 +1,12 @@
+{
+  "theorem": "BT529 Naturalized 720 S4/S3 Transport Map Theorem",
+  "local_group_map": {"S4_flags": 24, "S3_matchings": 6, "map": "S4 flag -> S3 order after deleting one distinguished vertex", "lifts_per_S3_for_each_deletion": 4},
+  "address_factorization": {"addresses": 30, "factorization": "30=5*6", "rule": "five cycles through the six S3 permutations", "flags_per_address": 24},
+  "transport_factorization": {"S3_classes": 6, "transport_edges_per_class": 120, "parity_split": {"even": 360, "odd": 360}},
+  "bijection": {"size": 720, "structural_upgrade": "local S4->S3 quotient replaces BT526 pure ordering rule"},
+  "past_future_reading": {
+    "past_future_wheels": "S3 transport matching records how a future packet-line triad is matched to a past packet-line triad",
+    "ejected_now": "S4 flag is the tetrahedral now with one vertex forgotten to expose the S3 transport interface"
+  },
+  "substrate_reading": {"720": "30*24=5*6*24=6*120", "S4_to_S3": "tetrahedral flag to transport matching", "5": "five address repeats per S3 class", "6": "S3/G2 positive selector"}
+}
