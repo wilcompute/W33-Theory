@@ -1,0 +1,18 @@
+{
+  "theorem": "BT525 Mod-2 Cl8 Parity Homology Theorem",
+  "complex": "F2^1620 --M--> F2^320 --F--> F2^240",
+  "chain_condition": "F M = 0 over F2 because integer F M = 4 R",
+  "ranks_over_F2": {"rank_M": 120, "rank_F": 160, "rank_R": 200, "rank_FM": 0},
+  "homology_dimensions": {"H2_ker_M": 1500, "H1_kerF_mod_imM": 40, "H0_coker_F": 80},
+  "interpretation": {
+    "H1_40": "the parity-protected first homology is exactly one W33 point/line carrier",
+    "H0_80": "two W33 carriers survive as fold cokernel",
+    "H2_1500": "large quadrangle parity-cycle reservoir"
+  },
+  "substrate_reading": {
+    "40": "mod-2 protected W33 carrier",
+    "80": "two 40-carrier parity boundary residues",
+    "120": "rank of M over F2 equals E8 root-pair count",
+    "160": "ker F over F2 and signed/projective rank scale"
+  }
+}
