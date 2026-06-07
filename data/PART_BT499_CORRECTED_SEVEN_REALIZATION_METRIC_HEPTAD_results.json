@@ -1,0 +1,30 @@
+{
+  "theorem": "BT499 Corrected Seven-Realization Metric Heptad Theorem",
+  "source": "data/Toroidal-Polyhedra-Realizations.txt coordinates and face cycles",
+  "correction": "Uses TXT Szilassi faces, not the old 31-edge EDGE_LENGTH_ANALYSIS.py S_FACES parser",
+  "heptad_counts": {
+    "realizations": 7,
+    "edge_instances": 147,
+    "all_edge_counts_are_21": true,
+    "Csaszar_carrier": "K7",
+    "Szilassi_carrier": "Heawood"
+  },
+  "metric_summary": [
+    {"name": "Csaszar TXT v1", "sum_L2": 2510.0, "distinct_L2_count": 10},
+    {"name": "Csaszar TXT v2", "sum_L2": 9598.0, "distinct_L2_count": 9},
+    {"name": "Csaszar TXT v3", "sum_L2": 6048.0, "distinct_L2_count": 9},
+    {"name": "Csaszar TXT v4", "sum_L2": 6468.0, "distinct_L2_count": 8},
+    {"name": "Csaszar TXT v5", "sum_L2": 6768.0, "distinct_L2_count": 9},
+    {"name": "Szilassi TXT v1", "sum_L2": 4209.58, "distinct_L2_count": 12},
+    {"name": "Szilassi TXT v2", "sum_L2": 4459.5416666667, "distinct_L2_count": 11}
+  ],
+  "comparison_to_old_claims": {
+    "old_35_distinct_integer_L2_claim": "parser-dependent; old Szilassi parser was not closed",
+    "safe_core": "all seven corrected carriers have 21 edges; Csaszar=K7, Szilassi=Heawood"
+  },
+  "substrate_reading": {
+    "147": "7 corrected realizations times 21 edges",
+    "5_plus_2": "five Csaszar K7 metrics plus two Szilassi Heawood metrics",
+    "metric_heptad": "coordinate spectra now separated from incidence repair artifacts"
+  }
+}
