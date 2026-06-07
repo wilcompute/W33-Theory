@@ -1,0 +1,12 @@
+{
+  "theorem": "BT530 E8 Harmonic-Now Subframe Test Theorem",
+  "packet_split": {"integer_pair_packets": 14, "half_spinor_cube_packets": 16, "packet_size": 8, "total_roots": 240},
+  "spinor_packet_result": {"D4_packets": 16, "D4_roots_per_packet": 24, "opposite_pairs_forming_F4": 8, "F4_roots_per_opposite_pair": 48},
+  "integer_packet_result": {"integer_packets": 14, "differences_per_packet": 4, "interpretation": "integer packets are toroidal coordinate-pair sign squares rather than D4 frames"},
+  "past_future_harmonic_reading": {
+    "future_spinor_cube": "one 8-sign now packet carries D4 by pairwise differences",
+    "past_opposite_spinor_cube": "opposite packet supplies the reflected half of an F4 frame",
+    "harmonic_now": "paired past/future spinor cubes close to F4; integer packets remain K7/toroidal edge-pair memory channels"
+  },
+  "substrate_reading": {"16": "spinor cube packets", "8": "opposite spinor pairs / F4 frames", "48": "F4 roots per past-future spinor pair", "14": "integer/toroidal packet count matching dim(G2)", "24": "D4 roots and tetrahedral flag count"}
+}
