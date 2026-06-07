@@ -1,0 +1,26 @@
+{
+  "theorem": "BT521 Eisenstein-Hurwitz 144 Filter Theorem",
+  "pre_fold_shell": {"Eisenstein_vertices": 6, "Hurwitz_vertices": 24, "product_states": 144},
+  "radial_balance_filter": {
+    "bridge_projector": "J6 tensor I24",
+    "balanced_projector": "(I6-J6) tensor I24",
+    "bridge_rank": 24,
+    "balanced_rank": 120,
+    "identity": "144 = 24 + 120"
+  },
+  "invariance": {
+    "cartesian_product_dynamics_preserves_filter": true,
+    "tensor_product_dynamics_preserves_filter": true
+  },
+  "comparison_to_BT514": {
+    "balanced_rank_120": "matches odd/chiral rank",
+    "bridge_rank_24": "matches even-odd coupling rank",
+    "negative_control": "filter gives dimensions only; W33 quadrangle incidence supplies actual spectra"
+  },
+  "substrate_reading": {
+    "144": "Eisenstein x Hurwitz pre-fold shell",
+    "24": "Eisenstein-radial constant bridge / tetra flags",
+    "120": "Eisenstein-balanced shell / odd chiral rank",
+    "6_minus_1": "five nonconstant Eisenstein modes times 24 Hurwitz states"
+  }
+}
