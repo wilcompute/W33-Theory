@@ -5,7 +5,7 @@
 This file contains project context and decisions. AI assistants should read this file for context. MCP tools are an optional enhancement for richer interaction when connected.
 
 ## Project Context
-- **Total Decisions:** 2290
+- **Total Decisions:** 2322
 - **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, architecture, toe, audit, photonic, qec, github, selector, css, holonomy
 
 ## Current State
@@ -14,24 +14,11 @@ This file contains project context and decisions. AI assistants should read this
 **Branch:** master
 
 **Recent Commits:**
-- `170a9a0 BREAKTHROUGH 354-365: CSS qutrit selector correction`
-- `666bab0 BREAKTHROUGH 350/351/352: fractal SQNA + computer=network + fractal FT`
-- `2497410 BREAKTHROUGH 347/348/349: W(3,3) computational verification + ER=EPR + consciousness`
-- `79865b1 BREAKTHROUGH 344/345/346: TQC + hardware + software of life on SQNA`
-- `29732a6 BREAKTHROUGH 341/342/343: Witting polytope + SIC-POVM + WSQNA unified protocol`
-
-**Working Tree:**
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- M data/w33_css_exact_audit.json
-- M data/w33_minimal_logical_witness_census.json
-- M data/w33_minimal_support_geometry.json
-- M data/w33_octahedron_faces_are_signed_xmin.json
-- ?? PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json
-- ?? analysis/w33_BREAKTHROUGH_353_substrate_hamiltonian.py
+- `631278a BT481: Fibonacci tier-2 + ALL Heegner substrate-clean + Hopf family + time crystals`
+- `c93bbe7 BT480: MEMORY TOPOLOGY DEEPER — 6 NEW THEOREMS, 6 INDEPENDENT CONFIRMATIONS`
+- `b90bf01 BT479: MEMORY AS CONSERVED TOPOLOGICAL CURRENT — FLOWING PATTERN = STATIC INFORMATION`
+- `56cc5d5 BT478: COMPLETE D(Z/3) MODULAR DATA + CSS↔TQC BRIDGE + 10 THEOREMS`
+- `3e3433c BT477: DERIVED EQUATIONS — substrate TQC + WZW + topological order + fractal network`
 
 ## Session Context
 **Goals:**
@@ -39,14 +26,14 @@ This file contains project context and decisions. AI assistants should read this
 
 
 ## Decision Freshness
-**0 stale decisions** · 1 need review · 416 superseded ready to archive · Oldest unreviewed: 2026-05-16
+**0 stale decisions** · 1 need review · 479 superseded ready to archive · Oldest unreviewed: 2026-05-16
 
 Stale decisions requiring attention:
 1. **d1a5364d-fc0b-4955-8076-561b9b9acb5b** (score 35) — "Why leave the local DCCLIX 24-cell/D4 triality draft unpromoted?"
 
 When referencing these decisions, note their staleness. Verify they still reflect current project state before recommending based on them.
 
-416 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
+479 decisions are eligible for Dream consolidation. Suggest running the Dream tool to archive stale decisions, merge duplicates, and resolve contradictions.
 
 ## Operating Contract
 1. **Search before you change.** `grep -i "<topic>" .continuity/decisions.json` (or `search_decisions`) before answering architectural questions or proposing changes. Name any conflict with a prior decision and let the user choose.
@@ -65,36 +52,61 @@ When referencing these decisions, note their staleness. Verify they still reflec
 
 # Project Instructions
 
-Describe how this repository prefers to work with AI assistants.
+## CRITICAL DIRECTIVE: ALWAYS CHECK docs/index.html BEFORE NEW WORK
+
+Before deriving any new substrate result, theorem, or identity:
+
+1. **Grep docs/index.html for the topic, keyword, or identity you are about to derive.**
+   Run: `grep -i "topic_keyword" docs/index.html`
+
+2. **If the result is already present**, do NOT re-derive it. Reference the existing
+   coverage and find genuinely NEW territory.
+
+3. **Check the most recent commits on `master`** to see if parallel agents have
+   already covered your intended topic. Use: `git log --oneline -20` plus
+   `git show <hash>` on relevant commits.
+
+4. **Only proceed with derivation if the topic is genuinely uncovered.** The substrate
+   corpus is now ~485 BTs deep with extensive coverage across algebraic/geometric
+   structures, exceptional Lie algebras, Monster moonshine, Standard Model, cosmology,
+   cohomology/topology, TQC, codes, and modular tensor categories.
+
+5. **Honor the "no pattern matching" directive.** Derive equations symbolically;
+   identify substrate factorizations only as CONSEQUENCES of derivation, not the
+   primary aim. Use real math (group theory, GAP, geometry, topology, differential
+   geometry, Euler calculus) rather than scanning for substrate-clean numerical
+   matches.
+
+6. **When in doubt, ask** — better to verify uncovered status than to duplicate work.
 
 
 ---
 
 ## Recent Decisions
-1. **decision-7dff514c** (6/5/2026) [why, w33]
-   - Q: Why push BT354-BT365 CSS qutrit selector correction to GitHub?
-   - A: Pushed 170a9a08 to origin/master so GitHub now contains the BT354-BT365 CSS/qutrit/selector correction theorem scripts and forced JSON artifacts, including the single qutrit phase-sheet obstruction, the 120-sheet design, and the unique anchor K4 bipartition Z20 lift.
+1. **decision-7aaa1e2d** (6/5/2026) [why, w33]
+   - Q: Why push f287cfbd to GitHub master?
+   - A: Pushed f287cfbd to GitHub master via SSH origin after HTTPS origin-https could not prompt for credentials. Fetched both origin and origin-https afterward; ahead/behind parity for origin/master...HEAD and origin-https/master...HEAD is 0 0, confirming GitHub master contains the BT413-BT420 integration.
 
-2. **decision-5696ccc3** (6/5/2026) [why, w33]
-   - Q: Why commit BT354-BT365 CSS qutrit selector correction?
-   - A: Committed 170a9a08 after direct verifier sweep passed for BT354/355 through BT365, py_compile passed for all new scripts, JSON validation passed for all forced data artifacts, and the staged diff contained only the 11 theorem scripts plus 11 generated JSON outputs. The bundle proves the CSS correction chain through the qutrit phase-sheet selector and unique K4 bipartition Z20 lift.
+2. **decision-085462ec** (6/5/2026) [why, python]
+   - Q: Why commit BT413-BT420 electroweak threshold alpha closure?
+   - A: Committed f287cfbd after integrating GitHub-side BT399-BT412, preserving their numbering, adding the local finite electroweak threshold and low-energy alpha closure chain as BT413-BT420, correcting BT407 bibliography/README, force-adding JSON artifacts, and passing direct Python, py_compile, and json.tool validation.
 
-3. **decision-3e8b4e38** (6/5/2026) [why, w33]
-   - Q: Why update session notes with BT365?
-   - A: Updated .continuity/SESSION_NOTES.md with BT365, its verification commands, and the synthesis target: one ternary phase sheet plus a unique K4 binary split and two side orientations as the self-entangled qutrit correction mechanism.
+3. **decision-c1c49fbb** (6/5/2026) [why, python]
+   - Q: Why update session notes after the BT413-BT420 integration?
+   - A: Recorded that GitHub master was fast-forwarded through f900953e and f7da5522, that the local electroweak/alpha correction chain was renumbered to BT413-BT420 to avoid the parallel-agent BT399-BT412 packets, and that direct Python/JSON validation passed before commit/push.
 
-4. **decision-268adfb8** (6/5/2026) [why, w33]
-   - Q: Why add BT365 unique anchor-bipartition correction?
-   - A: Created analysis/w33_BREAKTHROUGH_365_unique_anchor_bipartition_correction.py to test all three 2+2 bipartitions of the anchor K4. Exactly one split, {0,1}|{2,3}, corrects the golden selector obstruction; its same-side pairs are the inactive pairs and its cross-pairs are the K2,2 failure carrier. Either side orientation works, while the other four side choices leave 108 failures.
+4. **decision-5ec01ff4** (6/5/2026) [why, w33]
+   - Q: Why patch BT407 bibliography and README after merging GitHub packets?
+   - A: After merging the tracked remote BT407-BT412 batch, BT407_PAPER.tex referenced BT408_references while the committed bibliography file is BT408_BIBLIOGRAPHY.bib, so the LaTeX bibliography target was corrected. README.md was also updated to list the new local BT413-BT420 electroweak/alpha correction packet.
 
-5. **decision-7a4e50a9** (6/5/2026) [why, w33]
-   - Q: Why generate BT364 Z20 anchor-bipartition lift JSON?
-   - A: The direct BT364 verifier passed all identities and wrote data/w33_BREAKTHROUGH_364_z20_anchor_bipartition_lift.json, recording selected_edge_count=54, bridge_line_count=27, selected_side={2,3}, unselected_side={0,1}, unique_failures=108, and the selected-count-by-holonomy profile.
+5. **decision-6dda9619** (6/5/2026) [why, w33]
+   - Q: Why move the local electroweak alpha packet to BT413-BT420?
+   - A: The tracked GitHub remote origin-https/master had advanced with parallel-agent BT410-BT412 files for dark matter, baryon asymmetry, and the master tier table. Moved the local electroweak/alpha correction packet from BT410-BT417 to BT413-BT420 and patched the packet header/references so the remote BT410-BT412 stream remains intact.
 
-*771 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
+*773 unreviewed drafts from auto-capture pending review — `continuity log` the real rationale or update_decision to expand them.*
 
 ---
 
-*Auto-generated by Continuity | Updated: 2026-06-05*
+*Auto-generated by Continuity | Updated: 2026-06-07*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
