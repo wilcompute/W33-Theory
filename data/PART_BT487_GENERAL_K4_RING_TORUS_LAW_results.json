@@ -1,0 +1,52 @@
+{
+  "theorem": "BT487 General Consecutive K4 Ring Torus Law",
+  "construction": "T_i={i,i+1,i+2,i+3} on Z/nZ, n>=7",
+  "general_formula": {
+    "one_skeleton": "C_n^3 = Circ(n; ±1, ±2, ±3)",
+    "boundary_f_vector": "(n, 3n, 2n)",
+    "euler_characteristic": "n - 3n + 2n = 0",
+    "rational_betti": "(1,2,1)",
+    "rank_d1": "n-1",
+    "rank_d2": "2n-1"
+  },
+  "specializations": {
+    "n=7": "C_7^3=K_7 and boundary f-vector=(7,21,14), the Csaszar torus carrier",
+    "n=30": "BC/600-cell ring carrier with boundary f-vector=(30,90,60)"
+  },
+  "sample_highlights": {
+    "7": {
+      "one_skeleton_edges": 21,
+      "one_skeleton_degree": 6,
+      "is_complete_graph": true,
+      "f_vector_boundary": [7, 21, 14],
+      "euler_characteristic": 0,
+      "rank_d1": 6,
+      "rank_d2": 13,
+      "betti_Q": {"H0": 1, "H1": 2, "H2": 1}
+    },
+    "30": {
+      "one_skeleton_edges": 90,
+      "one_skeleton_degree": 6,
+      "is_complete_graph": false,
+      "f_vector_boundary": [30, 90, 60],
+      "euler_characteristic": 0,
+      "rank_d1": 29,
+      "rank_d2": 59,
+      "betti_Q": {"H0": 1, "H1": 2, "H2": 1},
+      "step_component_total": 6,
+      "oriented_step_sector_total": 12,
+      "step_decomposition": {
+        "1": {"components": 1, "cycle_length": 30, "notation": "1C_30"},
+        "2": {"components": 2, "cycle_length": 15, "notation": "2C_15"},
+        "3": {"components": 3, "cycle_length": 10, "notation": "3C_10"}
+      }
+    }
+  },
+  "sweep_range": "7<=n<=60 all verified with betti_Q=(1,2,1)",
+  "substrate_reading": {
+    "n=7": "minimal toroidal K7/Csaszar carrier",
+    "n=30": "E8 Coxeter-number/BC-ring carrier",
+    "lift": "Csaszar genus-one carrier lifts to the 30-cell BC ring by the same consecutive-K4 law",
+    "step_rule": "step s gives gcd(n,s) cycles of length n/gcd(n,s)"
+  }
+}
