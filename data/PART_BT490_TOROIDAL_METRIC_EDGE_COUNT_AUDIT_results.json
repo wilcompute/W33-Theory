@@ -1,0 +1,30 @@
+{
+  "theorem": "BT490 Toroidal Metric Edge-Count Audit",
+  "source_files": [
+    "visualizations/w33-toroidal-triad.html states Szilassi E=21",
+    "EDGE_LENGTH_ANALYSIS.py derives S_edges from cyclic S_FACES"
+  ],
+  "expected_szilassi_closed_polyhedron": {
+    "V": 14,
+    "E": 21,
+    "F": 7,
+    "face_degree": 6,
+    "face_edge_incidences": 42,
+    "required_edge_incidence_profile": {"2": 21},
+    "euler_characteristic": 0
+  },
+  "current_parser_output": {
+    "unique_edges": 31,
+    "face_edge_incidences": 42,
+    "edge_incidence_profile": {"1": 20, "2": 11},
+    "singleton_edge_count": 20,
+    "double_edge_count": 11,
+    "parsed_euler_characteristic_with_F7": -10,
+    "closed_szilassi_condition": false
+  },
+  "audit_conclusion": "The current S_FACES cyclic parser produces 31 unique edges, not 21. It is not a closed Szilassi incidence structure. Metric identities depending on these Szilassi edges are parser-dependent and need a restored 21-edge Szilassi graph before being promoted as polyhedral facts.",
+  "safe_result": {
+    "csaszar_K7_edge_count": 21,
+    "toroidal_triad_symbolic_ladder": "unaffected; it uses Euler/completeness equations rather than S_FACES parser"
+  }
+}
