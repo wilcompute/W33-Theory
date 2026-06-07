@@ -1,0 +1,27 @@
+{
+  "theorem": "BT516 Admissible Inversion Coupling Operator Theorem",
+  "local_radial_inversion": {
+    "octahedron_radius": "2/5",
+    "polar_face_center_radius": "5/2",
+    "operator": "x -> x/(x·x)",
+    "preserves_channel_graph": "L(K4)"
+  },
+  "global_coupling": {
+    "C": "Qplus Qminus^T",
+    "rank": 24,
+    "CCt_spectrum": {"77760": 24, "0": 136},
+    "singular_value": "72*sqrt(15)"
+  },
+  "eigenspace_match": {
+    "W33_collinearity_eigenspace": "lambda=2 multiplicity 24",
+    "lift": "projective pair space via (p,L)->p",
+    "projector_error": "<1e-10",
+    "match": true
+  },
+  "substrate_reading": {
+    "24": "radial-dual even/odd coupling is exactly the lifted W33 +2 sector",
+    "40": "base W33 point carrier",
+    "160": "projective Xmin pair space",
+    "77760": "72^2*15 coupling-square eigenvalue"
+  }
+}
