@@ -1,0 +1,22 @@
+{
+  "theorem": "BT495 Csaszar Johnson Metric Decomposition Theorem",
+  "carrier": "K7 edge space, dimension 21",
+  "triangular_graph": "T(7)=line graph L(K7)",
+  "incidence_identity": "B^T B = 5I + J and A_T = B B^T - 2I",
+  "T7_spectrum": "10^1, 3^6, (-2)^14",
+  "projector_decomposition": "R^21 = scalar(1) ⊕ vertex-potential(6) ⊕ cycle/G2-residual(14)",
+  "projector_ranks": {"scalar": 1, "vertex_potential": 6, "G2_residual": 14},
+  "metric_packets_summary": [
+    {"name": "Csaszar-1", "sum": 200.0, "norm2": 2408.0, "G2_residual_energy": 305.0666666667, "G2_residual_fraction": 0.1266888151},
+    {"name": "Csaszar-2", "sum": 352.0, "norm2": 7284.0, "G2_residual_energy": 1077.8666666667, "G2_residual_fraction": 0.1479773018},
+    {"name": "Csaszar-3", "sum": 240.0, "norm2": 3401.1487483156, "G2_residual_energy": 453.9405006738, "G2_residual_fraction": 0.1334668179},
+    {"name": "Csaszar-4", "sum": 522.0, "norm2": 16182.0, "G2_residual_energy": 2358.4, "G2_residual_fraction": 0.1457421827},
+    {"name": "Csaszar-5", "sum": 444.0, "norm2": 11914.0, "G2_residual_energy": 1521.6, "G2_residual_fraction": 0.1277152929}
+  ],
+  "substrate_reading": {
+    "21": "K7 edge shell / g1",
+    "1+6+14": "scalar + positive-G2-root selector + dim(G2) residual",
+    "T7_eigenvalues": "10=E1, 3=q, -2=-r",
+    "G2_residual": "the part of Csaszar metric data invisible to vertex-star potentials"
+  }
+}
