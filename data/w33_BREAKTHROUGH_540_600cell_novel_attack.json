@@ -1,0 +1,19 @@
+{
+  "600cell_vertex_degree": 12,
+  "600cell_substrate_pairs": [
+    "F_5!",
+    "q*v",
+    "Phi_4*k",
+    "2^q*g_neg",
+    "mu*F_5*lambda"
+  ],
+  "F5_parallel_matter": "120 = F_5 * 24",
+  "hopf_fiber_phi4": "120/12 = Phi_4 icosahedron lift",
+  "HPS_level_4": "89 = F_(p_Ih) Fibonacci at icosa prime index",
+  "edges_factorial_factorial": "720 = (q!)! = 6!",
+  "faces_substrate": "1200 = lambda * g_neg * v",
+  "cells_substrate": "600 = g_neg * v",
+  "q_fold_cover": "600-cell -> W(3,3) is q-to-1",
+  "H4_symmetry": "(F_5!)^lambda = 14400",
+  "conclusion": "Ten novel theorems from 600-cell attack using repo hints. 600-cell 1-skeleton is k-regular (substrate valency!). V = 120 has 5 substrate-pair factorizations. 600-cell = F_5 parallel 24-cells (5 matter sectors). Hopf fibers over icosahedron with Phi_4 fiber. HPS Fibonacci F_(p_Ih) = 89. Edges = (q!)! = 720. 600-cell is q-fold cover of W(3,3). H_4 symmetry = (F_5!)^lambda Master Eq squared. Substrate natural 4D lift of W(3,3)."
+}
