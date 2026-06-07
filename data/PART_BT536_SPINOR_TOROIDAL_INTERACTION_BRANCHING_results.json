@@ -1,0 +1,9 @@
+{
+  "theorem": "BT536 Spinor-vs-Toroidal Interaction Branching Theorem",
+  "raw_counterphase": {"map": "t -> -t mod 30", "type_transition_counts": "toroidal->toroidal:14, spinor->spinor:12, spinor->toroidal:4", "obstruction": "raw BT527 packet order mixes four spinor addresses into the toroidal band"},
+  "harmonic_type_sorted_involution": {"type_transition_counts": "toroidal->toroidal:14, spinor->spinor:16", "toroidal_pairs": 7, "spinor_F4_pairs": 8},
+  "branch_counts": {"toroidal_packets": 14, "spinor_packets": 16, "toroidal_pairs": 7, "spinor_F4_pairs": 8, "E8_roots": 240, "toroidal_roots": 112, "spinor_roots": 128},
+  "interpretation": {"raw_BC_phase": "detects that the initial E8 packet ordering is not the natural past/future branch order", "harmonic_order": "sort by packet type, then pair spinors by root negation and toroidal packets internally", "branching": "30 = 14 toroidal/G2 packets + 16 spinor packets = 14 + 8 F4-pair channels"},
+  "past_future_reading": {"toroidal": "past/future toroidal memory channels pair inside the 14-packet G2 band", "spinor": "past/future opposite spinor cubes close to F4 frames", "E8": "the combined 14+16 packet branch still labels all 240 roots"},
+  "substrate_reading": {"14": "toroidal/G2 integer packet band", "16": "spinor cube packet band", "8": "spinor F4 past/future pairs", "7": "toroidal packet pairs", "30": "harmonic branch total"}
+}
