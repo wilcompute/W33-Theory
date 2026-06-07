@@ -1,0 +1,23 @@
+{
+  "theorem": "BT522 Projector Arithmetic Eigenvalue Derivation Theorem",
+  "method": "integer trace moments + annihilator polynomials; no numeric eigensolver used for multiplicities",
+  "annihilators": {
+    "even": "x(x-288)(x-792)(x-2592)=0",
+    "odd": "x(x-160)(x-288)(x-360)=0",
+    "coupling": "x(x-77760)=0"
+  },
+  "spectra_from_trace_moments": {
+    "signed_MMt": {"1296": 1, "464": 24, "144": 30, "112": 24, "80": 81, "0": 160},
+    "even_Qplus": {"2592": 1, "792": 24, "288": 15, "0": 120},
+    "odd_Qminus": {"360": 24, "288": 15, "160": 81, "0": 40},
+    "coupling_CCt": {"77760": 24, "0": 136}
+  },
+  "projector_arithmetic": {"P2num": "(12I-A)(A+4I)", "P2num_squared": "P2num^2=60 P2num", "trace_P2num_over_60": 24},
+  "substrate_reading": {
+    "1296": "16*81 signed top degree",
+    "2592": "16*162 projective top degree",
+    "77760": "324*60*4 coupling scale",
+    "81": "trace-derived odd/signed protected multiplicity",
+    "24": "W33 +2 projector rank and coupling multiplicity"
+  }
+}
