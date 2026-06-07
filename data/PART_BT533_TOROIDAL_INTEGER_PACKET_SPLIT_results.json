@@ -1,0 +1,12 @@
+{
+  "theorem": "BT533 Toroidal Integer-Packet Split Theorem",
+  "packet_identity": "14 E8 integer packets = 14 Csaszar faces = 14 Szilassi vertices",
+  "counts": {"integer_packets": 14, "roots_per_packet": 8, "total_integer_roots": 112, "csaszar_faces": 14, "csaszar_edges": 21, "szilassi_vertices": 14, "dual_edges": 21},
+  "incidence": {"edge_face_profile": "each of 21 Csaszar edges lies in exactly two faces", "edge_to_packet_pairs": "21 shared pairs define the Szilassi edge skeleton"},
+  "past_future_reading": {
+    "past_Csaszar": "integer packets attach to triangular face memory",
+    "future_Szilassi": "same 14 packets are dual vertices in the face-complete future carrier",
+    "harmonic_now": "tetrahedral now reads the packet either as a Csaszar face or Szilassi vertex depending on past/future orientation"
+  },
+  "substrate_reading": {"14": "G2 adjoint dimension and toroidal packet count", "21": "shared edge incidence / K7 edge shell", "112": "14*8 integer E8 roots", "dual_read": "Csaszar face memory equals Szilassi vertex memory"}
+}
