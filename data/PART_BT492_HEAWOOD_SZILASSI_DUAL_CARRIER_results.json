@@ -1,0 +1,33 @@
+{
+  "theorem": "BT492 Heawood / Szilassi Dual Carrier Theorem",
+  "csaszar_primal": {
+    "vertices": 7,
+    "edges": 21,
+    "triangular_faces": 14
+  },
+  "dual_szilassi_carrier": {
+    "graph": "Heawood graph",
+    "vertices": 14,
+    "edges": 21,
+    "degree_profile": {"3": 14},
+    "is_bipartite": true,
+    "diameter": 3,
+    "distance_pair_profile": {"1": 21, "2": 42, "3": 28}
+  },
+  "szilassi_faces": {
+    "count": 7,
+    "size_profile": {"6": 7},
+    "face_adjacency": "K7"
+  },
+  "incidence_correspondence": {
+    "Szilassi vertices": "14 Csaszar triangular faces",
+    "Szilassi edges": "21 Csaszar K7 edges",
+    "Szilassi faces": "7 Csaszar vertices"
+  },
+  "substrate_reading": {
+    "21_distance1_pairs": "edge shell / K7 duads",
+    "42_distance2_pairs": "flag-orbit resonance 6*7",
+    "28_distance3_pairs": "v-k / nonassociative octonion triples",
+    "Heawood": "canonical Fano incidence graph; exact Szilassi skeleton carrier"
+  }
+}
