@@ -1,0 +1,30 @@
+{
+  "theorem": "BT513 Xmin Even/Odd Chiral Spectrum Split Theorem",
+  "summary": {
+    "signed_faces": 320,
+    "antipodal_pairs": 160,
+    "quadrangles": 1620,
+    "rank_signed": 160,
+    "rank_even_projective": 40,
+    "rank_odd_chiral": 144,
+    "all_checks_passed": true
+  },
+  "spectra": {
+    "signed_MMt": {"0": 160, "80": 81, "112": 24, "144": 30, "464": 24, "1296": 1},
+    "even_half_normalized": {"0": 120, "144": 15, "396": 24, "1296": 1},
+    "odd_half_normalized": {"0": 16, "68": 24, "80": 81, "112": 24, "144": 15}
+  },
+  "decomposition_identity": {
+    "signed_spectrum": "even_half_normalized + odd_half_normalized",
+    "even_sector": "projective antipodal pair quotient; W33 SRG multiplicities 1,24,15 plus nullity 120",
+    "odd_sector": "chiral signed difference sector; contains 81 protected homology multiplicity and nullity 16"
+  },
+  "substrate_reading": {
+    "160": "signed rank and projective pair count",
+    "40": "even/projective rank = W33 point/line count",
+    "144": "odd/chiral rank = 12^2 local-axis square",
+    "81": "odd sector protected homology/generation multiplicity",
+    "16": "odd nullity = 4x4 tetrahedral square residue",
+    "68": "odd 24-sector eigenvalue = 2*34, a chiral correction below the projective 396/464 shell"
+  }
+}
