@@ -1,0 +1,10 @@
+{
+  "theorem": "BT534 600-Reservoir E8 Lift Theorem",
+  "base_track": {"addresses": 30, "cube_signs_per_address": 8, "E8_roots": 240, "root_shell_profile": "2^1, 1^56, 0^126, -1^56, -2^1"},
+  "reservoir_lift": {"helices": 20, "addresses_per_helix": 30, "cube_signs_per_address": 8, "total_cube_sign_states": 4800, "E8_copies": 20, "roots_per_E8_copy": 240, "integer_toroidal_packets": 280, "integer_toroidal_roots": 2240, "half_spinor_packets": 320, "half_spinor_roots": 2560, "F4_frames_from_spinor_opposite_pairs": 160},
+  "opposite_helix_pair_lift": {"opposite_helix_pairs": 10, "E8_copies_per_pair": 2, "roots_per_pair": 480, "F4_frames_per_pair": 16},
+  "packet_split_per_helix": {"integer_toroidal_packets": 14, "half_spinor_packets": 16, "F4_frames_from_spinor_pairs": 8},
+  "honesty_boundary": "This is a synchronized E8 labeling over the 20x30 reservoir, not a claim that the geometric 600-cell is literally 20 disjoint E8 root systems.",
+  "past_future_reading": {"full_reservoir": "20 BC helices of 30 tetrahedra", "emitted_track": "one 30-address quotient carries one E8 shell", "opposite_wheels": "each opposite helix pair carries two E8 shells and 16 spinor F4 frames"},
+  "substrate_reading": {"4800": "20*30*8 cube/sign reservoir states", "20": "BC helix tracks / E8 copies", "280": "20*14 toroidal integer packets", "320": "20*16 spinor packets", "160": "20*8 spinor F4 frames"}
+}
