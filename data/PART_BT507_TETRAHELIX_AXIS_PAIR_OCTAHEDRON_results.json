@@ -1,0 +1,29 @@
+{
+  "theorem": "BT507 Tetrahelix Axis-Pair Octahedron Theorem",
+  "input_geometry": {
+    "tetrahedron_edge_length": "2*sqrt(2)",
+    "face_coordinate": "(7,3) = barycentric weights (3,4,3)/10",
+    "axis_count": 12,
+    "axis_pairing": "two chirality axes over each of the six K4 middle edges"
+  },
+  "intersection_octahedron": {
+    "point_set": ["(-2/5, 0, 0)", "(0, -2/5, 0)", "(0, 0, -2/5)", "(0, 0, 2/5)", "(0, 2/5, 0)", "(2/5, 0, 0)"],
+    "radius": "2/5",
+    "radius_identity": "sqrt(2)/10 * EL = 2/5",
+    "edge_length": "2*sqrt(2)/5 = EL/5",
+    "f_vector": [6, 12, 8],
+    "euler_characteristic": 2
+  },
+  "codec_reading": {
+    "6": "six K4 edges / six axis-pair intersections / octahedron vertices",
+    "12": "twelve tetrahelix axes / octahedron edges",
+    "8": "octahedron triangular faces",
+    "2/5": "axis tangent-sphere radius from the paper",
+    "chirality_pairing": "each K4 edge carries one even and one odd tetrahelix axis that cross at one octahedron vertex"
+  },
+  "substrate_reading": {
+    "Richter_kernel": "the local 12-axis BC switchboard has an octahedral intersection core",
+    "K4_to_O6": "tetrahedral axis codec collapses to the octahedron vertices at radius 2/5",
+    "memory_now": "each tetrahedral now contains an internal octahedral crossing kernel for possible axis exchange"
+  }
+}
