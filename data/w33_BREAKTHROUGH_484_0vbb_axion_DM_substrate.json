@@ -1,0 +1,12 @@
+{
+  "m_bb_eV": 0.01632993161855452,
+  "T_half_0v_years": 2.424043994665092e+28,
+  "axion_g_agg_GeV_inv": 1.3936916701470734e-13,
+  "DM_sigma_v_cm3_s": 4.0018554421617504e-28,
+  "experimental_predictions": {
+    "LEGEND-1000": "T_{1/2} ~ 10^28 yr by 2030s",
+    "ADMX": "g ~ 10^-13 GeV^-1 in window",
+    "DM-direct": "m_DM 2143 GeV, sigma_v 4e-28"
+  },
+  "conclusion": "Three sector NEW physics derivations from substrate (NOT in index.html): 0vbb m_bb = sqrt(dm_atm^2)/q ~ 0.016 eV, T_half ~ 10^28 years (LEGEND-1000 detectable). Axion g_agg ~ 10^-13 GeV^-1 (ADMX detectable). DM <sigma v> ~ 4e-28 cm^3/s for m_DM = 2143 GeV. Three independent sectors with experimental falsifiability by 2035."
+}
