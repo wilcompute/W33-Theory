@@ -1,0 +1,36 @@
+{
+  "theorem": "BT515 Richter Radial-Dual Polar Cube Theorem",
+  "honesty_boundary": "The uploaded file was a ResearchGate security-check HTML page, not a readable PDF; this theorem is a new repo-tested radial-dual construction inspired by the paper title, not a claim about the unread paper body.",
+  "local_radial_dual_geometry": {
+    "octahedron_radius": "2/5",
+    "polar_cube_half_side": "5/2",
+    "radius_halfside_product": "1",
+    "radial_inversion": "x -> x/(x·x)",
+    "octahedron_f_vector": [6, 12, 8],
+    "polar_cube_f_vector": [8, 12, 6],
+    "combined_f_vector": [14, 24, 14]
+  },
+  "graph_certificates": {
+    "octahedron_graph_edges": 12,
+    "cube_face_adjacency_edges": 12,
+    "octahedron_equals_cube_face_graph": true,
+    "cube_vertex_graph_edges": 12,
+    "cube_vertex_graph": "Q3"
+  },
+  "global_W33_lift": {
+    "octahedron_side": [240, 480, 320],
+    "polar_cube_side": [320, 480, 240],
+    "combined_side": [560, 960, 560]
+  },
+  "interpretation": {
+    "BT507": "Richter axis intersections give the radius-2/5 octahedron",
+    "BT510": "the octahedron/cube packet has f-vector (14,24,14)",
+    "BT515": "the cube is the strict polar/radial-dual of the Richter octahedron"
+  },
+  "substrate_reading": {
+    "2/5": "Richter tangent-sphere / octahedron radius from the BC-axis construction",
+    "5/2": "polar cube half-side and radial-inverted face-center radius",
+    "14_24_14": "local radial-dual memory packet: G2, S4 flags, G2",
+    "560_960_560": "40-point W33 lift of the radial-dual packet"
+  }
+}
