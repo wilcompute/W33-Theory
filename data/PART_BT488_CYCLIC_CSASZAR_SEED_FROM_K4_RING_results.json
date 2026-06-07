@@ -1,0 +1,38 @@
+{
+  "theorem": "BT488 Cyclic Csaszar Seed from Consecutive K4 Ring",
+  "construction": "n=7 endpoint of T_i={i,i+1,i+2,i+3} on Z/nZ",
+  "n7_csaszar_seed": {
+    "one_skeleton": "C_7^3 = K_7",
+    "f_vector": [7, 21, 14],
+    "euler_characteristic": 0,
+    "rank_d1": 6,
+    "rank_d2": 13,
+    "betti_Q": {"H0": 1, "H1": 2, "H2": 1},
+    "tetrahedra": 7,
+    "total_tetrahedron_face_incidences": 28,
+    "boundary_faces": 14,
+    "internal_shared_faces": 7,
+    "face_preserving_automorphism_order": 42,
+    "automorphism_factorization": "42 = 6*7 = g2*Phi6"
+  },
+  "n30_bc_ring_endpoint": {
+    "one_skeleton": "C_30^3 = Circ(30; ±1, ±2, ±3)",
+    "f_vector": [30, 90, 60],
+    "euler_characteristic": 0,
+    "betti_Q": {"H0": 1, "H1": 2, "H2": 1},
+    "face_preserving_automorphism_order": 60,
+    "automorphism_factorization": "60 = 2*30 = 2*h(E8)"
+  },
+  "bridge": {
+    "same_law": "T_i={i,i+1,i+2,i+3}",
+    "minimal_endpoint": "n=7 gives Csaszar/K7 torus carrier",
+    "E8_endpoint": "n=30 gives 600-cell BC ring torus carrier",
+    "torus_preserved": "both endpoints have betti_Q=(1,2,1)"
+  },
+  "substrate_reading": {
+    "42": "g2*Phi6 = positive/negative G2 half-cycle times Fano heptad",
+    "28": "seven K4 face packets = 7*4 = v-k",
+    "14": "boundary face shell = dim(G2)",
+    "21": "K7 edge shell = g1"
+  }
+}
