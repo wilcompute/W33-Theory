@@ -1,0 +1,9 @@
+{
+  "theorem": "BT535 Toroidal Packet Update Holonomy Theorem",
+  "packet_clock": "packet(t)=t mod 14, reading Csaszar face / Szilassi dual vertex",
+  "one_30_step_orbit": {"visit_profile": "two packets visited 3 times, twelve packets visited 2 times", "holonomy_mod14": 2, "meaning": "one address period advances the toroidal packet clock by +2"},
+  "combined_period": {"lcm_30_14": 210, "address_periods": 7, "toroidal_periods": 15, "uniform_packet_visits": 15},
+  "past_future_pairing": {"rule": "past packet a plus future packet b satisfies a+b=0 mod 14", "distinct_packet_pairs": 14, "visits_per_pair": 15},
+  "interpretation": {"now_becomes_past": "the reversible update advances the past toroidal packet and retreats the future packet", "holonomy": "the 30-address now braid carries a residual +2 toroidal drift", "closure": "full closure needs 210 steps, not 30"},
+  "substrate_reading": {"14": "toroidal integer packets / Csaszar faces / Szilassi vertices", "30": "BC address period", "2": "toroidal holonomy per address cycle", "210": "joint address-toroid closure period"}
+}
