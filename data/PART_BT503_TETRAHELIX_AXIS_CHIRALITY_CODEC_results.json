@@ -1,0 +1,28 @@
+{
+  "theorem": "BT503 Tetrahelix Axis Chirality Codec Theorem",
+  "axis_count": {
+    "ordered_vertex_paths": 24,
+    "reversal_classes": 12,
+    "clockwise_counterclockwise_split": {"even": 6, "odd": 6}
+  },
+  "codec_structure": {
+    "middle_edge_profile": "each of the six K4 edges carries one even and one odd axis",
+    "reading": "12 axes = two chirality sheets over the six K4 edges"
+  },
+  "face_coordinate_structure": {
+    "face_point_count": 12,
+    "endpoint_incidence_count": 24,
+    "face_point_profile": "four faces times three (7,3) points per face"
+  },
+  "tetrahedron_flag_identity": {
+    "axis_endpoint_incidences": 24,
+    "tetrahedron_flags": 24,
+    "identity": "12 axes * 2 endpoints = 24 = |S4|"
+  },
+  "substrate_reading": {
+    "12": "local BC-axis codec / d_X*d_Z / W33 valency",
+    "6_plus_6": "two chirality sheets over K4 edges",
+    "24": "ordered vertex paths / tetrahedron flags / S4",
+    "7_3": "face-coordinate gate: 7+3=10-frequency triangular address"
+  }
+}
