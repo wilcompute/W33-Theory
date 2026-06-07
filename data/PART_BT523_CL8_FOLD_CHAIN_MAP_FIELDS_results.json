@@ -1,0 +1,18 @@
+{
+  "theorem": "BT523 Cl8 Fold Chain-Map Field Kernel Theorem",
+  "integer_factorization": "F M = 4 R",
+  "field_results": {
+    "Q": {"rank_F": 160, "ker_F": 160, "coker_F": 80, "rank_M": 160, "ker_M": 1460, "coker_M": 160, "rank_R": 240, "ker_R": 1380, "coker_R": 0},
+    "F2": {"rank_FM": 0, "FM_zero": true},
+    "F3": {"FM_zero": false, "rank_FM_equals_rank_R": true}
+  },
+  "mod2_chain_condition": "over F2, 4=0 so F M=0; M maps quadrangles into ker(F)",
+  "mod3_nonzero_refinement": "over F3, 4=1 so F M=R; signed lift refines the old corner map without collapse",
+  "substrate_reading": {
+    "F2": "true chain complex parity shadow",
+    "F3": "ternary W33 geometry stays active",
+    "ker_F_over_Q": 160,
+    "coker_M_over_Q": 160,
+    "coker_R_over_Q": 0
+  }
+}
