@@ -1,0 +1,8 @@
+{
+  "theorem": "BT532 Now-Becomes-Past Reversible Update Theorem",
+  "update": "U(p,f)=(p+1,f-1) on Z30 x Z30",
+  "certificates": {"invertible": true, "period": 30, "conserved_quantity": "p+f mod 30", "relative_phase_step": "+2 mod 30", "relative_phase_values_per_orbit": 15, "symplectic_affine_update": true},
+  "reservoir_schedule": {"opposite_helix_pairs": 10, "events_per_pair": 30, "total_unoriented_events": 300, "directed_events_with_orientation": 600},
+  "past_future_reading": {"now_event": "uses current pair (past pointer p, future pointer f)", "becomes_past": "after ejection p advances by +1, so the emitted now is behind the next past pointer", "future_retreats": "f advances by -1, modeling counter-rotation", "conservative": "p+f is conserved, so the update is reversible rather than destructive"},
+  "substrate_reading": {"30": "period of reversible now-update", "15": "relative phase cycle under +2 step", "300": "10 opposite helix-pairs times 30 events", "600": "directed orientation double of 300"}
+}
