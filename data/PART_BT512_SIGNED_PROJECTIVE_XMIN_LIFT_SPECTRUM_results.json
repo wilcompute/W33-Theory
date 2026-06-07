@@ -1,0 +1,38 @@
+{
+  "theorem": "BT512 Signed/Projective Xmin Lift Spectrum Theorem",
+  "summary": {
+    "ordinary_quadrangles": 1620,
+    "signed_faces": 320,
+    "projective_pairs": 160,
+    "signed_matrix_shape": [320, 1620],
+    "projective_matrix_shape": [160, 1620],
+    "signed_rank": 160,
+    "projective_rank": 40,
+    "all_checks_passed": true
+  },
+  "degree_data": {
+    "signed_row_degree": 81,
+    "signed_column_weight": 16,
+    "projective_row_degree": 162,
+    "projective_column_weight": 16,
+    "signed_total_incidence": 25920,
+    "projective_total_incidence": 25920
+  },
+  "spectra": {
+    "signed_MMt": {"0": 160, "80": 81, "112": 24, "144": 30, "464": 24, "1296": 1},
+    "projective_QQt": {"0": 120, "288": 15, "792": 24, "2592": 1}
+  },
+  "multiplicity_reading": {
+    "projective_nonzero_multiplicities": "1,24,15 recover W33 SRG spectral multiplicities",
+    "signed_extra_sector": "signed lift adds 81 plus a 30-dimensional split sector and another 24-dimensional sector",
+    "nullities": "signed nullity 160 equals projective pair count; projective nullity 120 equals E8 root-pair count"
+  },
+  "substrate_reading": {
+    "81": "signed Xmin lift degree and protected Levi/W33 H1 multiplicity",
+    "160": "rank of signed lift and count of projective Xmin pairs",
+    "40": "rank of projective quotient and count of W33 points/lines",
+    "120": "projective nullity and E8 root-pair / 600-cell vertex count",
+    "1296": "16*81 top signed eigenvalue = column weight times signed row degree",
+    "2592": "16*162 top projective eigenvalue = column weight times projective row degree"
+  }
+}
