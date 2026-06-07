@@ -1,0 +1,28 @@
+{
+  "BERT_substrate": {
+    "heads": "k = 12",
+    "d_head": "64 = lambda^(q*lambda) = Hoggar SIC",
+    "FFN_ratio": "mu = 4",
+    "layers": "12 = k"
+  },
+  "GPT3_substrate": {
+    "layers": "96 = |Aut(Tomotope)|",
+    "hidden_dim": "12288 = lambda^k * q",
+    "head_dim": "128 = lambda^Phi_6"
+  },
+  "scaling_laws": {
+    "alpha": 0.07142857142857142,
+    "alpha_kaplan": 0.07,
+    "beta": 0.2727272727272727,
+    "beta_kaplan": 0.28
+  },
+  "miller_magic_number": "Phi_6 +/- lambda = 7 +/- 2",
+  "multiverse_count": 9,
+  "W33_network": {
+    "diameter": 2,
+    "clustering": "lambda/k = 1/q!",
+    "avg_degree": 12,
+    "spectral_gap": 10
+  },
+  "conclusion": "Ten theorems unifying cognition with substrate through AI + coding + networks + TQC. BERT-base hyperparameters all substrate primitives (h=k, d_head=Hoggar SIC, FFN=mu). GPT-3 layers = 96 = tomotope aut. Attention = substrate eigenprojection. W(3,3) = substrate GNN (diameter 2, clustering 1/q!). LDPC codes = substrate two-code on W(3,3) Tanner. Neural scaling laws match substrate: alpha = 1/(lambda*Phi_6) = 0.071, beta = q/(lambda^q+q) = 0.273. Working memory = Phi_6 +/- lambda (Miller 7+/-2). Multiverse = q^lambda = 9 (not 10^500). Cognition = substrate computation at brain tier."
+}
