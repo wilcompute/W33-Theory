@@ -1,0 +1,61 @@
+{
+  "F4_G2_dual_pair_E8": {
+    "F4_roots": 48,
+    "G2_roots": 12,
+    "sum": 60,
+    "sum_substrate": "mu * F_5 * q",
+    "centralizers": "Z_E8(F4)=G2, Z_E8(G2)=F4"
+  },
+  "BT536_14_16_substrate": {
+    "14": "lambda * Phi_6 = dim(G_2)",
+    "16": "lambda^mu (hypercube)",
+    "30": "h(E_8)"
+  },
+  "five_level_heawood": [
+    {
+      "n": 4,
+      "primitive": "mu",
+      "genus": 0,
+      "chi": 2,
+      "edges": 6
+    },
+    {
+      "n": 7,
+      "primitive": "Phi_6",
+      "genus": 1,
+      "chi": 0,
+      "edges": 21
+    },
+    {
+      "n": 12,
+      "primitive": "k",
+      "genus": 6,
+      "chi": -10,
+      "edges": 66
+    },
+    {
+      "n": 19,
+      "primitive": "Heegner",
+      "genus": 20,
+      "chi": -38,
+      "edges": 171
+    },
+    {
+      "n": 24,
+      "primitive": "2k=f",
+      "genus": 35,
+      "chi": -68,
+      "edges": 276
+    }
+  ],
+  "five_level_total_edges": 540,
+  "five_level_substrate": "lambda^2 * q^q * F_5 = Witting orthogonal pairs",
+  "210_holonomy": "lambda*q*F_5*Phi_6",
+  "4200_reservoir": "lambda^q * q * F_5^2 * Phi_6",
+  "F4_short_split": "q * 2^q = 24",
+  "two_hierarchies": [
+    "Fractal tier 0..8",
+    "Heawood lattice n in {4,7,12,19,24}"
+  ],
+  "conclusion": "Ten GAP-verified theorems linking Codex BT534-536 reservoir lift with toroidal HTML 5-level self-Heawood lattice through F_4 x G_2 dual pair in E_8. Codex's 14+16 packet split = G_2 gauge band + lambda^mu hypercube. 30 = h(E_8) decomposes as G_2 (14) + lambda^mu (16). 5-level Heawood total edges 540 = orthogonal Witting pairs (BT462). Heegner prime 19 licenses n=19 coda. Full closure 4200 = lambda^q*q*F_5^2*Phi_6 substrate. F_4 short roots split as q*2^q = 24 substrate. Resolves Codex top-3 ideas."
+}
