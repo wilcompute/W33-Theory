@@ -1,0 +1,8 @@
+{
+  "theorem": "BT531 20-Helix Past/Future Selection Law Theorem",
+  "selection_law": "J(h,t)=(h+10,-t) on Z20 x Z30",
+  "certificates": {"fixed_point_free_involution": true, "directed_ejections": 600, "unoriented_pairs": 300, "past_count_per_helix": 30, "future_count_per_helix": 30, "ejections_per_address": 20},
+  "quotients": {"by_helix_index": "30-address now braid", "by_past_future_involution": "300 unoriented interaction pairs", "by_opposite_helix_pair": "10 helix pairs, 60 directed events each"},
+  "interpretation": {"past": "helix h at phase t", "future": "opposite helix h+10 at counter-phase -t", "ejected_now": "tetrahedron emitted by the directed interaction (h,t)->J(h,t)", "old_30_braid": "address quotient of the 20-helix reservoir, not the whole reservoir"},
+  "substrate_reading": {"600": "20*30 full tetrahedral reservoir", "20": "BC helix tracks", "30": "BC phase/address period", "10": "opposite helix pairs", "300": "unoriented past/future interaction pairs"}
+}
