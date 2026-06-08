@@ -1,0 +1,33 @@
+{
+  "theorem": "BT550 W33 Levi Flag Association-Scheme Theorem",
+  "levi_flags": 160,
+  "classes": 4,
+  "line_graph_degree": 6,
+  "diameter": 4,
+  "valencies": [1, 6, 18, 54, 81],
+  "multiplicities": [1, 24, 30, 24, 81],
+  "intersection_array": {
+    "b": [6, 3, 3, 3],
+    "c": [1, 1, 1, 2],
+    "a": [0, 2, 2, 2, 4]
+  },
+  "distance_polynomials": {
+    "A0": "I",
+    "A1": "A",
+    "A2": "A^2 - 2A - 6I",
+    "A3": "A^3 - 4A^2 - 5A + 12I",
+    "A4": "(A^4 - 6A^3 + 28A - 6I)/2"
+  },
+  "first_eigenmatrix_rows": [
+    ["1", "6", "18", "54", "81"],
+    ["1", "2+sqrt6", "2sqrt6", "6-3sqrt6", "-9"],
+    ["1", "2", "-6", "-6", "9"],
+    ["1", "2-sqrt6", "-2sqrt6", "6+3sqrt6", "-9"],
+    ["1", "-2", "2", "-2", "1"]
+  ],
+  "signed_kernel": "81A0 - 27A1 + 9A2 - 3A3 + A4",
+  "signed_kernel_eigenvalues": ["0", "0", "0", "0", "160"],
+  "unsigned_kernel": "81A0 + 27A1 + 9A2 + 3A3 + A4",
+  "unsigned_kernel_eigenvalues": ["648", "144+36sqrt6", "72", "144-36sqrt6", "40"],
+  "all_identities_hold": true
+}
