@@ -1,0 +1,76 @@
+{
+  "all_identities": {
+    "cycle_edge_biregularity_81": true,
+    "cycle_vertex_biregularity_162": true,
+    "each_line_is_K4": true,
+    "each_w33_edge_in_unique_line": true,
+    "levi_beta1_is_81": true,
+    "levi_has_160_flag_edges": true,
+    "levi_has_80_vertices": true,
+    "levi_is_4_regular": true,
+    "levi_is_connected": true,
+    "levi_simple_8_cycles_are_1620": true,
+    "support_incidence_identity": true,
+    "vector_level_162_identity": true,
+    "w33_has_240_edges": true,
+    "w33_has_40_lines": true,
+    "w33_has_40_points": true,
+    "w33_is_12_regular": true,
+    "w33_srg_common_neighbors": true
+  },
+  "all_identities_hold": true,
+  "levi_graph": {
+    "adjacency_spectrum": {
+      "-4": 1,
+      "-sqrt6": 24,
+      "0": 30,
+      "4": 1,
+      "sqrt6": 24
+    },
+    "connected_components": 1,
+    "cycle_rank_beta1": 81,
+    "degree_profile": {
+      "4": 80
+    },
+    "flag_edges": 160,
+    "spectrum_formula": "(-4)^1 + (-sqrt(6))^24 + 0^30 + (sqrt(6))^24 + 4^1",
+    "symbolic_beta1": "160 - 80 + 1 = 81",
+    "vertices": 80
+  },
+  "minimal_logical_interpretation": {
+    "H1_reading": "cycle rank of the Levi graph and flag-edge 8-cycle degree",
+    "X_min_support_reading": "Levi flag edges = point-line flags = W33 line-triangles by flag complement",
+    "X_min_supports": 160,
+    "Z_min_support_reading": "simple 8-cycles of the point-line Levi graph = GQ quadrangles",
+    "Z_min_supports": 1620,
+    "edge_cycle_degree_profile": {
+      "81": 160
+    },
+    "new_structural_reading": "The previous minimal logical 160/1620/81 counts are exactly the flag-edge / 8-cycle / cycle-rank data of the W33 point-line Levi graph.",
+    "simple_8_cycles": 1620,
+    "support_identity": "160*81 = 1620*8 = 12960",
+    "total_cycle_edge_incidence": 12960,
+    "vector_identity": "320*162 = 51840 = |W(E6)|",
+    "vertex_cycle_degree_profile": {
+      "162": 80
+    }
+  },
+  "theorem": "BT545 W33 Levi Minimal Logical Cycle Theorem",
+  "w33_point_graph": {
+    "construction": "projective points of F_3^4 adjacent when symplectically orthogonal",
+    "degree_profile": {
+      "12": 40
+    },
+    "edge_to_line_profile": {
+      "1": 240
+    },
+    "edges": 240,
+    "maximal_K4_lines": 40,
+    "srg_parameters": "SRG(40,12,2,4)",
+    "srg_profile": {
+      "(False, 4)": 540,
+      "(True, 2)": 240
+    },
+    "vertices": 40
+  }
+}
