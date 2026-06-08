@@ -1,0 +1,54 @@
+{
+  "theorem": "BT543 H4 / Sp(4,3) Common Stabilizer Core Theorem",
+  "inputs_from_latest_commits": {
+    "BT541": {
+      "H4_order": 14400,
+      "tetrahedron_stabilizer_600_cell": 24,
+      "dodecahedron_stabilizer_120_cell": 120
+    },
+    "BT542": {
+      "Sp4_3_order": 51840,
+      "PSp4_3_order": 25920,
+      "Sylow_2": 128,
+      "Sylow_3_H1": 81,
+      "Sylow_5": 5
+    }
+  },
+  "core_identity": {
+    "gcd_H4_Sp4_3": 2880,
+    "tetra_stabilizer_times_dodeca_stabilizer": 2880,
+    "formula": "gcd(|H4|, |Sp(4,3)|)=24*120=2880"
+  },
+  "quotient_laws": {
+    "H4_over_core": 5,
+    "Sp4_3_over_core": 18,
+    "H4_over_core_reading": "F5 pentagonal/Fibonacci excess",
+    "Sp_over_core_reading": "2*q^2 ternary-binary excess"
+  },
+  "lcm_closure": {
+    "lcm_H4_Sp4_3": 259200,
+    "as_core_times_extensions": "2880 * 5 * 18",
+    "as_E1_times_PSp": 259200,
+    "as_F5_times_Sp": 259200,
+    "as_18_times_H4": 259200
+  },
+  "prime_factorizations": {
+    "H4": {"2": 6, "3": 2, "5": 2},
+    "Sp4_3": {"2": 7, "3": 4, "5": 1},
+    "common_core": {"2": 6, "3": 2, "5": 1},
+    "lcm": {"2": 7, "3": 4, "5": 2}
+  },
+  "q_power_reading": {
+    "H4_q_power": 9,
+    "Sp_q_power": 81,
+    "common_q_power": 9,
+    "extra_Sp_q_power_beyond_core": 9,
+    "interpretation": "H4 shares only q^2 of the Sp q^4 protected-memory Sylow exponent; the extra q^2 is the W33 ternary memory extension."
+  },
+  "substrate_reading": {
+    "2880": "dual local stabilizer core = tetrahedral 24 times dodecahedral 120",
+    "5": "H4 pentagonal/dodecahedral excess beyond common core",
+    "18": "Sp binary-ternary q^2 excess beyond common core",
+    "259200": "joint closure = E1 * PSp(4,3) = F5*Sp(4,3) = 18*H4"
+  }
+}
