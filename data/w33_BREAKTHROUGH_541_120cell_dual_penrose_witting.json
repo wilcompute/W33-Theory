@@ -1,0 +1,25 @@
+{
+  "120cell_f_vector": [
+    600,
+    1200,
+    720,
+    120
+  ],
+  "f_vector_substrate": [
+    "g_neg * v",
+    "lambda*g_neg*v",
+    "(q!)!",
+    "F_5!"
+  ],
+  "each_cell_dodecahedron_Witting": true,
+  "H4_tetra_stabilizer": 24,
+  "H4_tetra_substrate": "f matter eigenmult",
+  "H4_dodec_stabilizer": 120,
+  "H4_dodec_substrate": "F_5! Fibonacci factorial",
+  "cell_ratio": "600/120 = F_5",
+  "dodec_per_BC_ring": "30 = h(E_8)",
+  "vertex_sum_dual_pair": "120+600 = 720 = E(600-cell)",
+  "H4_order": "14400 = (F_5!)^lambda",
+  "dual_pair_meaning": "600-cell matter, 120-cell Penrose-Witting cosmic",
+  "conclusion": "120-cell DUAL of 600-cell is substrate's cosmic Penrose-Witting sector. f-vector (600, 1200, 720, 120) all substrate-clean. Each cell = dodecahedron = Witting polytope (Penrose-Waegell-Aravind 2017). H_4 stabilizer of tetra cell = f = 24 (substrate matter eigenmult). H_4 stabilizer of dodec cell = F_5! = 120. Substrate has DUAL 4D STRUCTURE: 600-cell matter (BC helices) + 120-cell cosmic (Penrose-Witting). Same H_4 = (F_5!)^lambda symmetry acts on both."
+}
