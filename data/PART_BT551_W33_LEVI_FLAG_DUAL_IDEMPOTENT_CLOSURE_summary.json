@@ -1,0 +1,26 @@
+{
+  "theorem": "BT551 W33 Levi Flag Dual-Idempotent Closure Theorem",
+  "scheme_vertices": 160,
+  "classes": 4,
+  "valencies": [1, 6, 18, 54, 81],
+  "multiplicities": [1, 24, 30, 24, 81],
+  "orthogonality": ["P Q = 160 I_5", "Q P = 160 I_5"],
+  "second_eigenmatrix_Q_rows": [
+    ["1", "24", "30", "24", "81"],
+    ["1", "8+4sqrt6", "10", "8-4sqrt6", "-27"],
+    ["1", "8sqrt6/3", "-10", "-8sqrt6/3", "9"],
+    ["1", "(8-4sqrt6)/3", "-10/3", "(8+4sqrt6)/3", "-3"],
+    ["1", "-8/3", "10/3", "-8/3", "1"]
+  ],
+  "primitive_idempotents": {
+    "definition": "E_i=(1/160) sum_d Q_{d,i} A_d",
+    "E0": "J/160",
+    "E4": "(1/160)(81A0 - 27A1 + 9A2 - 3A3 + A4)",
+    "E4_trace_rank": 81
+  },
+  "protected_Q_column": ["81", "-27", "9", "-3", "1"],
+  "signed_kernel_eigenvalues": ["0", "0", "0", "0", "160"],
+  "unsigned_kernel_eigenvalues": ["648", "144+36sqrt6", "72", "144-36sqrt6", "40"],
+  "compressed_statement": "The second eigenmatrix exposes the signed 3-adic radial law as the Q-column of the protected primitive idempotent E4=(1/160)CC^T.",
+  "all_identities_hold": true
+}
