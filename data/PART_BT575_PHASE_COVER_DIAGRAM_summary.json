@@ -1,0 +1,9 @@
+{
+  "bt": 575,
+  "title": "Phase cover diagram",
+  "base": 12960,
+  "positive_sheet": 25920,
+  "negative_sheet": 25920,
+  "total_nonzero_cover": 51840,
+  "boundary": "51840 is a phase cover; 25920 is the q=3 Levi flag-frame symmetry scale."
+}
