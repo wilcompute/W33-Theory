@@ -1,0 +1,7 @@
+{
+  "bt": 570,
+  "title": "Renormalized cubic flow",
+  "result": "The protected Gram G=(160/81)E4 is returned exactly by the repaired cubic map after centering and normalization.",
+  "companion_sectors_removed": true,
+  "all_identities_hold": true
+}
