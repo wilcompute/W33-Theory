@@ -1,0 +1,8 @@
+{
+  "bt": 573,
+  "title": "Fixed-point stability spectrum",
+  "raw_derivative": "only E4 amplitude survives after repair and centering",
+  "normalized_repaired_derivative_spectrum": "0^5",
+  "interpretation": "The protected Gram shape is first-order super-attracting after diagonal renormalization.",
+  "all_identities_hold": true
+}
