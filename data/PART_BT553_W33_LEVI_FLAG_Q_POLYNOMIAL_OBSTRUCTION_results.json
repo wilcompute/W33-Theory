@@ -1,0 +1,16 @@
+{
+  "theorem": "BT553 W33 Levi Flag Q-Polynomial Obstruction Theorem",
+  "tested_orderings": 24,
+  "q_polynomial_order_exists": false,
+  "minimum_forbidden_nonzero_entries": 6,
+  "representative_best_ordering": [0, 1, 2, 3, 4],
+  "representative_violations": [
+    "q_{1,1}^{3} nonzero",
+    "q_{1,1}^{4} nonzero",
+    "q_{1,2}^{4} nonzero",
+    "q_{1,3}^{1} nonzero",
+    "q_{1,4}^{1} nonzero"
+  ],
+  "interpretation": "The Levi flag scheme is P-polynomial/distance-regular but not Q-polynomial; H1=81 is a terminal primitive idempotent, not a dual-distance endpoint of a Q-polynomial ladder.",
+  "all_identities_hold": true
+}
