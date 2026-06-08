@@ -1,0 +1,12 @@
+{
+  "bt": 569,
+  "title": "244 spectral moment section",
+  "spectrum": "12^1 + 2^24 + (-4)^15",
+  "M3": 960,
+  "M5": 234240,
+  "M5_over_M3": 244,
+  "substrate_formula": "244=40*7-4*9=v*Phi6-chi*q^2",
+  "ihara_square": "121=11^2",
+  "resonance": "244/121=(M5/M3)/p_Ih^2",
+  "deviation_from_2": "2/121"
+}
