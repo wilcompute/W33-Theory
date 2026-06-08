@@ -1,0 +1,42 @@
+{
+  "theorem": "BT539 W33 Markov Hitting / Resistance Correction Theorem",
+  "construction": "symplectic polar graph on projective points of F_3^4",
+  "graph_certificates": {
+    "vertices": 40,
+    "edges": 240,
+    "degree": 12,
+    "diameter": 2,
+    "srg_parameters": [40, 12, 2, 4],
+    "adjacency_spectrum": {"12": 1, "2": 24, "-4": 15},
+    "laplacian_spectrum": {"0": 1, "10": 24, "16": 15}
+  },
+  "BT538_correction": {
+    "spectral_gap": 10,
+    "v_over_gap": "4",
+    "correct_reading": "v/Phi4=4 is a spectral diffusion scale, not the Markov hitting time"
+  },
+  "hitting_times": {
+    "from_adjacent_vertex_to_target": "39",
+    "from_nonadjacent_vertex_to_target": "42",
+    "difference": "3",
+    "shell_average_over_non_target_starts": "534/13"
+  },
+  "kemeny_constant": {
+    "exact": "801/20",
+    "decimal": 40.05,
+    "formula": "24/(1-2/12)+15/(1+4/12)"
+  },
+  "effective_resistance": {
+    "adjacent": "13/80",
+    "nonadjacent": "7/40",
+    "gap": "1/80",
+    "commute_relation": "C_uv=2|E| R_uv with 2|E|=480"
+  },
+  "substrate_reading": {
+    "H_adjacent_39": "v-1, complete reachable memory excluding target",
+    "H_nonadjacent_42": "g2*Phi6 flag-orbit resonance",
+    "hitting_gap_3": "q, field-order penalty for starting outside the target neighborhood",
+    "kemeny_801_20": "40 + 1/20, near the W33 vertex count with finite spectral correction",
+    "resistance_gap_1_80": "one inverse lambda^mu*F5 resistance quantum"
+  }
+}
