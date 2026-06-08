@@ -1,0 +1,110 @@
+\section{Symmetry, Phase, and Cubic Leakage}
+\label{sec:symmetry-phase-cubic-leakage}
+
+The Levi flag geometry of $W(3,3)$ separates three structures which are easily
+confused if only their orders are compared: the true incidence symmetry, the
+nonzero phase double, and the nonlinear cubic leakage stack.
+
+\begin{theorem}[Levi symmetry/phase split]
+For the $q=3$ point-line Levi frame of $W(3,3)$,
+\[
+\operatorname{Aut}_{\rm flag}=\mathrm{PSp}(4,3),
+\qquad
+|\operatorname{Aut}_{\rm flag}|=25920.
+\]
+The Weyl-group scale
+\[
+51840=2\cdot25920
+\]
+is not an extra point-line duality of the $q=3$ incidence geometry.  It is the
+balanced nonzero $\mathbb F_3$ phase double
+\[
++1:25920,
+\qquad
+-1:25920.
+\]
+\end{theorem}
+
+\begin{proof}
+The Levi flag set has $160$ flags and flag stabilizer $162$, hence
+\[
+160\cdot162=25920.
+\]
+The minimal logical vector pairing has
+\[
+320\cdot3240=1036800
+\]
+vector pairs with phase distribution
+\[
+0:984960,\qquad +1:25920,\qquad -1:25920.
+\]
+Thus the nonzero phase sector has size
+\[
+25920+25920=51840,
+\]
+while each nonzero sheet separately has the true flag-frame symmetry order.
+\end{proof}
+
+The projective support incidence count is
+\[
+160\cdot81=12960.
+\]
+Lifting by the two nonzero scalars on the $X$ side and the two nonzero scalars
+on the $Z$ side gives the scalar factor $4$:
+\[
+4\cdot12960=51840.
+\]
+The deck involution
+\[
+\tau(a,b)=(-a,b),\qquad a,b\in\mathbb F_3^*,
+\]
+swaps the two nonzero phase sheets.
+
+\begin{theorem}[Cubic leakage resonance]
+Let the nontrivial W33 SRG spectrum be
+\[
+12^1+2^{24}+(-4)^{15}.
+\]
+Then
+\[
+\frac{\sum m_\lambda\lambda^5}{\sum m_\lambda\lambda^3}=244.
+\]
+Moreover
+\[
+244=40\cdot7-4\cdot9=v\Phi_6-\chi q^2.
+\]
+Since the Ihara non-backtracking outdegree is $p_{\rm Ih}=11$, the cubic leakage
+ratio is
+\[
+\boxed{
+\frac{244}{121}=
+\frac{\left(\sum m_\lambda\lambda^5\right)/\left(\sum m_\lambda\lambda^3\right)}{p_{\rm Ih}^2}.
+}
+\]
+\end{theorem}
+
+Finally, let $A$ be the Levi flag adjacency operator.  Its eigenvalues are
+\[
+6,\quad 2+\sqrt6,\quad 2,\quad 2-\sqrt6,\quad -2
+\]
+with multiplicities
+\[
+1,\quad24,\quad30,\quad24,\quad81.
+\]
+The protected $H_1=81$ sector is the $-2$ eigenspace.  Its projector is
+\[
+P_{E_4}(A)=
+\frac{(A-6I)(A-2I)(A^2-4A-2I)}{320}.
+\]
+The leakage-killer retaining only the uniform and protected sectors is
+\[
+P_{E_0+E_4}(A)=
+\frac{(A-2I)(A^2-4A-2I)(A^2-4A-6I)}{320}.
+\]
+For the cubic Gegenbauer Hamiltonian
+\[
+H_3=C_3(G),\qquad G=\frac1{81}CC^T=\frac{160}{81}E_4,
+\]
+this filter kills the entire companion stack $E_1+E_2+E_3$.  After subtracting
+the uniform component and renormalizing the diagonal, the repaired cubic flow
+returns exactly to the protected Gram matrix $G$.
