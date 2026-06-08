@@ -1,0 +1,11 @@
+{
+  "bt": 566,
+  "title": "Allowed evolution algebra",
+  "eigenvalues": ["6", "2+sqrt(6)", "2", "2-sqrt(6)", "-2"],
+  "protected_sector": "E4_H1_81",
+  "protected_E4_projector": "(x - 6)*(x - 2)*(x**2 - 4*x - 2)/320",
+  "companion_24_30_24_projector": "-(x - 6)*(x + 2)*(x**2 - 4*x - 14)/96",
+  "leakage_killer_keep_uniform_and_E4": "(x - 2)*(x**2 - 4*x - 2)*(x**2 - 4*x - 6)/320",
+  "classification": "Bose-Mesner filters are degree <=4 polynomials in A; exact E4 isolation is the protected projector, while companion leakage can be annihilated by the listed leakage-killer filter.",
+  "all_identities_hold": true
+}
