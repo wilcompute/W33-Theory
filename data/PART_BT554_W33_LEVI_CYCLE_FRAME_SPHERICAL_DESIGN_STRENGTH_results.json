@@ -1,0 +1,23 @@
+{
+  "theorem": "BT554 W33 Levi Cycle Frame Spherical Design Strength Theorem",
+  "frame": {
+    "vectors": 160,
+    "ambient_dimension": 81,
+    "inner_product_profile_per_vector": {"1": 1, "-1/3": 6, "1/9": 18, "-1/27": 54, "1/81": 81}
+  },
+  "gegenbauer_parameter_alpha": "79/2",
+  "gegenbauer_moments_degrees_1_to_7": {
+    "1": "0",
+    "2": "0",
+    "3": "17205568/243",
+    "4": "37229034400/19683",
+    "5": "15370647677920/531441",
+    "6": "52326611835263680/129140163",
+    "7": "51659974412660450176/10460353203"
+  },
+  "design_strength": 2,
+  "first_failure_degree": 3,
+  "first_failure_moment": "17205568/243",
+  "interpretation": "The protected H1=81 cycle frame is exactly a centered unit-norm tight frame / spherical 2-design, but not a 3-design; the first obstruction occurs at cubic moment level.",
+  "all_identities_hold": true
+}
