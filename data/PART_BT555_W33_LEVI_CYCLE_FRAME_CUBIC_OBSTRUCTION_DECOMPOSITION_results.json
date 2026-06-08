@@ -1,0 +1,17 @@
+{
+  "theorem": "BT555 W33 Levi Cycle Frame Cubic Obstruction Decomposition",
+  "frame": {"vectors": 160, "ambient_dimension": 81, "alpha": "79/2"},
+  "gegenbauer_C3": "177039*x**3/2 - 6399*x/2",
+  "G_expansion": ["0", "0", "0", "0", "160/81"],
+  "C3_of_G_primitive_expansion": [
+    "17205568/243",
+    "179189696/2187 - 734384*sqrt(6)/243",
+    "177720928/2187",
+    "734384*sqrt(6)/243 + 179189696/2187",
+    "1751954560/19683"
+  ],
+  "cubic_obstruction_sector": "E0=J/160",
+  "cubic_obstruction_value": "17205568/243",
+  "interpretation": "The first spherical-design failure is exactly the E0 row-sum component of C_3(G); the cubic Schur/Krein transform is nonzero in all five primitive sectors, but only E0 contributes to the global design obstruction.",
+  "all_identities_hold": true
+}
