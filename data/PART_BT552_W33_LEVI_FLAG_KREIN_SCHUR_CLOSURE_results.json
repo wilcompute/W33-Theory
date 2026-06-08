@@ -1,0 +1,11 @@
+{
+  "theorem": "BT552 W33 Levi Flag Krein / Schur Closure Theorem",
+  "scheme": {"vertices": 160, "classes": 4, "multiplicities": [1, 24, 30, 24, 81]},
+  "protected_idempotent": "E4=(1/160)(81A0-27A1+9A2-3A3+A4)",
+  "q44_coefficients": ["81", "252/5 + 27*sqrt(6)/5", "234/5", "252/5 - 27*sqrt(6)/5", "164/5"],
+  "q44_support": [0, 1, 2, 3, 4],
+  "q44_sum": "1307/5",
+  "schur_square_law": "E4 o E4 = (1/160) sum_k q_44^k E_k, with all five primitive sectors present",
+  "interpretation": "H1=81 is a primitive spectral/Hodge sector, but its pointwise square repopulates the full dual Bose--Mesner stack.",
+  "all_identities_hold": true
+}
