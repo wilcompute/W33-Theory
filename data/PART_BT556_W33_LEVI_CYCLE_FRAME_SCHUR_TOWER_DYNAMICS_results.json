@@ -1,0 +1,15 @@
+{
+  "theorem": "BT556 W33 Levi Cycle Frame Schur Tower Dynamics",
+  "start": "G=(160/81)E4",
+  "limit": "I=E0+E1+E2+E3+E4",
+  "radial_shell_values": {
+    "n=1": ["1", "-1/3", "1/9", "-1/27", "1/81"],
+    "n=2": ["1", "1/9", "1/81", "1/729", "1/6561"],
+    "n=3": ["1", "-1/27", "1/729", "-1/19683", "1/531441"],
+    "n=4": ["1", "1/81", "1/6561", "1/531441", "1/43046721"]
+  },
+  "max_offdiag_abs_decay": "(1/3)^n",
+  "max_offdiag_abs_n12": "1/531441",
+  "interpretation": "The protected sector E4 is not Schur-closed; G^{circ 2} spreads across all five primitive sectors.  The Schur tower converges entrywise and in the Krein algebra to I, with decay controlled by the nearest-shell factor 1/3.",
+  "all_identities_hold": true
+}
