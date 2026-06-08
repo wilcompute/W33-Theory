@@ -1,0 +1,11 @@
+{
+  "bt": 564,
+  "title": "W33 Levi 25920/51840 symmetry-phase split",
+  "true_flag_frame_symmetry_order": 25920,
+  "group": "PSp(4,3)",
+  "orbit_stabilizer": "160*162=25920",
+  "phase_double": "25920+25920=51840",
+  "vector_noncommutation_count": "320*162=51840",
+  "boundary": "51840 is the signed nonzero phase/noncommutation double, not the q=3 Levi flag-frame automorphism order.",
+  "all_identities_hold": true
+}
