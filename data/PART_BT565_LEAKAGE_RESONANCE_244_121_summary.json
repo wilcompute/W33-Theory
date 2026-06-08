@@ -1,0 +1,11 @@
+{
+  "bt": 565,
+  "title": "Leakage resonance 244/121",
+  "spectral_ratio": "sum(lambda^5)/sum(lambda^3)=244",
+  "substrate_formula_244": "40*7 - 4*9",
+  "denominator_121": "11^2 = p_Ih^2",
+  "cubic_leakage_ratio": "244/121",
+  "deviation_from_2": "2/121",
+  "interpretation": "The BT562 leakage ratio is the W33 fifth/third spectral moment ratio divided by the square of the Ihara nonbacktracking outdegree.",
+  "all_identities_hold": true
+}
