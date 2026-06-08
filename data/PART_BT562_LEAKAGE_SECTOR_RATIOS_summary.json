@@ -1,0 +1,9 @@
+{
+  "bt": 562,
+  "title": "Levi cubic leakage sector ratios",
+  "ratio_E1_plus_E3_over_E2": "244/121",
+  "trace_ratio_E1_plus_E3_over_E2": "976/605",
+  "pair_diff_E3_minus_E1": "1468768*sqrt(6)/243",
+  "total_trace": "13651200",
+  "all_identities_hold": true
+}
