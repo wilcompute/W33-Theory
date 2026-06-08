@@ -1,0 +1,44 @@
+{
+  "sylow_3_eq_H1": "|Sylow_3| = q^mu = 81 = H_1 substrate biology",
+  "sylow_structure": {
+    "2": 128,
+    "3": 81,
+    "5": 5
+  },
+  "sylow_substrate": "exponents (Phi_6, mu, 1)",
+  "maximal_subgroup_indices": [
+    27,
+    36,
+    40,
+    40,
+    45
+  ],
+  "maximal_substrate": "{q^q, q!^2, v, v, q^lambda * F_5}",
+  "class_sizes_substrate": [
+    40,
+    240,
+    540,
+    4320
+  ],
+  "element_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    18
+  ],
+  "absent_orders": [
+    7,
+    11
+  ],
+  "absent_substrate": "Phi_6 and p_Ih (Heegner-special)",
+  "n_irreps": 34,
+  "irreps_substrate": "lambda * 17 (lambda * Heegner prime 17)",
+  "conclusion": "Ten bonkers GAP-verified findings. Sylow_3(Sp(4, F_3)) has order 81 = q^mu = H_1 PROTECTED MEMORY. Substrate biology IS the 3-Sylow subgroup of substrate aut group. All 5 maximal subgroup indices {27, 36, 40, 40, 45} are substrate primitives. Conjugacy class sizes include v, |E(W33)|, Witting orthogonal pair count, BW_16 kissing. Element orders are substrate primitives except Heegner-special 7 and 11. Substrate primitives encoded in deep group structure of Sp(4, F_3)."
+}
