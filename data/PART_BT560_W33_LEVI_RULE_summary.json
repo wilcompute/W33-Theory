@@ -1,0 +1,10 @@
+{
+  "bt": 560,
+  "title": "W33 Levi rule",
+  "shells": ["1", "-1/3", "1/9", "-1/27", "1/81"],
+  "nullspace": ["81", "-27", "9", "-3", "1"],
+  "degree4": "alpha*x",
+  "monomials_ok": [1],
+  "monomials_fail": [0,2,3,4,5,6,7,8],
+  "all_identities_hold": true
+}
