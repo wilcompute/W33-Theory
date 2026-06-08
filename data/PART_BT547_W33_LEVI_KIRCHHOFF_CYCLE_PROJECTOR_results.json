@@ -1,0 +1,84 @@
+{
+  "theorem": "BT547 W33 Levi Kirchhoff Cycle Projector Theorem",
+  "objects": {
+    "levi_vertices": 80,
+    "levi_edges_flags": 160,
+    "levi_degree": 4,
+    "cycle_rank_beta1": 81,
+    "cut_rank": 79,
+    "simple_8_cycles": 1620
+  },
+  "chain_complex": {
+    "D": "oriented vertex-edge incidence matrix, point -> line orientation",
+    "C": "oriented edge-by-simple-8-cycle incidence matrix from BT546",
+    "boundary_identity": "D C = 0",
+    "rank_D": 79,
+    "rank_C": 81,
+    "rank_sum": "79+81=160=|E(L)|"
+  },
+  "projector_identities": {
+    "signed_frame": "C C^T",
+    "integer_idempotent": "(C C^T)^2 = 160 C C^T",
+    "cycle_projector": "P_cyc = (1/160) C C^T",
+    "cut_projector": "P_cut = D^T (D D^T)^+ D",
+    "hodge_decomposition": "P_cyc + P_cut = I_160",
+    "verified_identity": "(1/160) C C^T = I - D^T L^+ D"
+  },
+  "diagonal_probabilities": {
+    "P_cyc_edge_diagonal": "81/160",
+    "P_cut_edge_diagonal": "79/160",
+    "uniform_spanning_tree_edge_absence_probability": "81/160",
+    "uniform_spanning_tree_edge_inclusion_probability": "79/160",
+    "foster_sum": "160*(79/160)=79=|V|-1"
+  },
+  "laplacian_spectrum": {
+    "0": 1,
+    "4": 30,
+    "4+sqrt6": 24,
+    "4-sqrt6": 24,
+    "8": 1
+  },
+  "spanning_tree_complexity": {
+    "tau": "2^83 * 5^23",
+    "tau_integer": 115292150460684697600000000000000000000000,
+    "derivation": "tau=(1/80)*8*(4-sqrt6)^24*(4+sqrt6)^24*4^30=(1/80)*8*10^24*4^30",
+    "edge_deleted_tau": "81/160 * tau",
+    "edge_deleted_tau_integer": 58366651170721628160000000000000000000000,
+    "edge_contracted_tau": "79/160 * tau",
+    "edge_contracted_tau_integer": 56925499289963069440000000000000000000000
+  },
+  "signed_frame_profile": {
+    "diagonal": 81,
+    "per_row_offdiag": {
+      "-27": 6,
+      "-3": 54,
+      "1": 81,
+      "9": 18
+    },
+    "reading": "the signs refine the 3-adic overlap profile into the Hodge cycle projector kernel"
+  },
+  "compressed_statement": "The BT546 signed phase frame is exactly the canonical Hodge/Kirchhoff cycle-space projector of the W33 Levi graph; its complementary cut projector is the uniform-spanning-tree effective-resistance kernel.",
+  "all_identities": {
+    "w33_srg_size": true,
+    "w33_lines_40": true,
+    "levi_size": true,
+    "levi_regular_4": true,
+    "levi_beta1_81": true,
+    "cycles8_1620": true,
+    "D_shape_80_by_160": true,
+    "C_shape_160_by_1620": true,
+    "cycle_boundary_zero": true,
+    "cycle_rank_81": true,
+    "cut_rank_79": true,
+    "cycle_frame_idempotent": true,
+    "cycle_projector_matches_hodge": true,
+    "cut_projector_diagonal": true,
+    "cycle_projector_diagonal": true,
+    "foster_sum": true,
+    "tau_formula_integer": true,
+    "tau_deletion_contraction_sum": true,
+    "signed_profile": true,
+    "laplacian_spectrum": true
+  },
+  "all_identities_hold": true
+}
