@@ -1,0 +1,28 @@
+{
+  "theorem": "BT540 Counterphase G2 Cartan Addressing Theorem",
+  "BT536_obstruction_resolution": {
+    "raw_negation_cycle_type": {"fixed_points": 2, "two_cycles": 14},
+    "harmonic_involution_cycle_type": {"fixed_points": 0, "two_cycles": 15},
+    "exact_conjugacy_possible": false,
+    "repair": "use raw fixed points as the two G2 Cartan directions"
+  },
+  "raw_counterphase_after_readdressing": {
+    "map": "t -> -t mod 30",
+    "type_transition_counts": {"('toroidal', 'toroidal')": 14, "('spinor', 'spinor')": 16},
+    "fixed_new_addresses": [0, 15],
+    "toroidal_G2_root_pair_count": 6,
+    "spinor_F4_pair_count": 8
+  },
+  "branch_law": {
+    "total": "30",
+    "toroidal_G2": "14 = 2 Cartan fixed addresses + 12 roots = 2 + 6 opposite root pairs",
+    "spinor_F4": "16 = 8 opposite spinor/F4 pairs",
+    "raw_negation_orbits": "1^2 + 2^14 = (2 Cartan) + (6 G2 root pairs) + (8 F4 pairs)"
+  },
+  "substrate_reading": {
+    "2_fixed_points": "rank(G2)=2 Cartan directions",
+    "six_toroidal_pairs": "six positive G2 roots with opposite partners",
+    "eight_spinor_pairs": "eight F4 spinor channels",
+    "30": "h(E8)=14+16 branch total"
+  }
+}
