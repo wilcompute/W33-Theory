@@ -1,0 +1,12 @@
+{
+  "bt": 568,
+  "title": "Phase-sheet representation",
+  "base_projective_support_pairs": 12960,
+  "vector_pairs": 1036800,
+  "phase_counts": {"0": 984960, "+1": 25920, "-1": 25920},
+  "nonzero_phase_total": 51840,
+  "true_flag_group_order": 25920,
+  "sheet_model": "two balanced nonzero F3 phase sheets, each of size 25920",
+  "boundary": "phase double, not point-line duality",
+  "all_identities_hold": true
+}
