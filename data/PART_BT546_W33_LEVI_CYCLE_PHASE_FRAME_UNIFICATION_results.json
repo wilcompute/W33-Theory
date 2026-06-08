@@ -1,0 +1,92 @@
+{
+  "theorem": "BT546 W33 Levi Cycle Phase-Frame Unification Theorem",
+  "construction": {
+    "W33": "symplectic polar graph on projective points of F_3^4",
+    "Levi_graph": "point-line incidence graph of W(3,3)",
+    "B": "unsigned edge-by-8-cycle incidence matrix",
+    "C": "oriented edge-by-8-cycle incidence matrix"
+  },
+  "objects": {
+    "w33_vertices": 40,
+    "w33_edges": 240,
+    "w33_lines": 40,
+    "levi_vertices": 80,
+    "levi_edges_flags": 160,
+    "levi_beta1": 81,
+    "simple_8_cycles": 1620
+  },
+  "unsigned_X_side": {
+    "matrix": "B B^T",
+    "diagonal": 81,
+    "offdiag_global_profile": {
+      "1": 6480,
+      "3": 4320,
+      "9": 1440,
+      "27": 480
+    },
+    "per_row_profile": {
+      "1": 81,
+      "3": 54,
+      "9": 18,
+      "27": 6
+    },
+    "spectrum": {
+      "648": 1,
+      "144+36sqrt6": 24,
+      "72": 30,
+      "144-36sqrt6": 24,
+      "40": 81
+    },
+    "reading": "The previous 3-adic minimal-X overlap scheme is the unsigned overlap of Levi flag-edges through simple 8-cycles."
+  },
+  "signed_phase_frame": {
+    "matrix": "C C^T",
+    "diagonal": 81,
+    "offdiag_global_profile": {
+      "-27": 480,
+      "-3": 4320,
+      "1": 6480,
+      "9": 1440
+    },
+    "per_row_profile": {
+      "-27": 6,
+      "-3": 54,
+      "1": 81,
+      "9": 18
+    },
+    "spectrum": {
+      "160": 81,
+      "0": 79
+    },
+    "rank": 81,
+    "projector_identity": "(C C^T)^2 = 160 C C^T",
+    "projector": "(1/160) C C^T is an exact rank-81 projector",
+    "reading": "The previous signed phase-frame theorem is the oriented cycle-space frame of the W33 Levi graph."
+  },
+  "cycle_Z_side": {
+    "matrix": "B^T B",
+    "diagonal": 8,
+    "per_cycle_overlap_profile": {
+      "0": 1187,
+      "1": 288,
+      "2": 96,
+      "3": 32,
+      "4": 16
+    },
+    "global_unordered_pair_profile": {
+      "0": 961470,
+      "1": 233280,
+      "2": 77760,
+      "3": 25920,
+      "4": 12960
+    },
+    "reading": "The previous dual Z-visibility scheme is the cycle-intersection profile of Levi simple 8-cycles."
+  },
+  "unification": {
+    "support_identity": "160*81 = 1620*8 = 12960",
+    "phase_projector_identity": "spec(C C^T)=160^81 + 0^79",
+    "E6_vector_identity": "320*162 = 51840 = |W(E6)|",
+    "compressed_statement": "Minimal logical support incidence, 3-adic overlap, dual Z-visibility, and signed H1 phase frame are all shadows of the same W33 Levi edge-cycle incidence geometry."
+  },
+  "all_identities_hold": true
+}
