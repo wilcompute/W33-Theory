@@ -1,0 +1,10 @@
+{
+  "theorem": "BT558 W33 Levi Cubic Leakage Hamiltonian",
+  "input": "G=(1/81)CC^T=(160/81)E4",
+  "gegenbauer_C3": "177039*x**3/2 - 6399*x/2",
+  "uniform_obstruction_h0": "17205568/243",
+  "centered_leakage_support": ["E1_24_plus", "E2_30_middle", "E3_24_minus", "E4_H1_81"],
+  "support_statement": "H3=C3(G) has all five primitive sectors; subtracting the uniform E0 obstruction leaves cubic leakage on E1+E2+E3+E4.",
+  "physical_reading": "The cycle frame is linearly/Hodge protected and second-order isotropic, but the first cubic nonlinearity leaks from H1=81 into the 24+30+24 companion stack.",
+  "all_identities_hold": true
+}
