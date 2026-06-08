@@ -1,0 +1,10 @@
+{
+  "bt": 571,
+  "title": "Phase double-cover algebra",
+  "base_support_incidences": 12960,
+  "plus_sheet_size": 25920,
+  "minus_sheet_size": 25920,
+  "total_nonzero_phase_cover": 51840,
+  "deck_involution": "tau(a,b)=(-a,b) swaps the two nonzero phase sheets",
+  "all_identities_hold": true
+}
