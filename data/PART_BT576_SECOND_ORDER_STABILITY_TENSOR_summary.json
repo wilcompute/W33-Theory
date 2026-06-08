@@ -1,0 +1,8 @@
+{
+  "bt": 576,
+  "title": "Second-order stability tensor",
+  "result": "normalized repaired shape Hessian vanishes",
+  "pre_normalization_residue": "E4 amplitude Hessian only",
+  "normalized_shape_second_order_spectrum": "0^5",
+  "all_identities_hold": true
+}
