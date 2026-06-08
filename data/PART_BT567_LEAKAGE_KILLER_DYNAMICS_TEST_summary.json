@@ -1,0 +1,9 @@
+{
+  "bt": 567,
+  "title": "Leakage-killer dynamics test",
+  "filter": "P_{E0+E4}",
+  "result": "kills E1+E2+E3 exactly",
+  "centered_result": "on L3=H3-h0E0, only E4/H1 self-feedback survives",
+  "total_trace_H3": "13651200",
+  "all_identities_hold": true
+}
