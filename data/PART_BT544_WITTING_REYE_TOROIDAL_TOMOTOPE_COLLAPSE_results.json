@@ -1,0 +1,62 @@
+{
+  "theorem": "BT544 Witting-Reye-Toroidal Tomotope Collapse Theorem",
+  "reye_model": {
+    "points": 12,
+    "lines": 16,
+    "incidences": 48,
+    "point_degree_profile": {"4": 12},
+    "line_degree_profile": {"3": 16},
+    "line_kind_profile": {"intra_triad": 4, "cross_triad": 12},
+    "pair_linearity_profile": {"1": 48},
+    "levi_graph_nodes": 28,
+    "levi_graph_edges": 48,
+    "levi_graph_connected": true,
+    "levi_graph_cycle_rank": 21,
+    "cycle_rank_reading": "21 = C(7,2), the K7 edge carrier shared by the Csaszar/Szilassi toroidal pair"
+  },
+  "collapse_law": {
+    "one_reye_incidence_packet": 48,
+    "tomotope_flags": 192,
+    "tomotope_as_reye_packets": "192 = 4 * 48",
+    "witting_local_reye_stack": 1920,
+    "witting_frame_constant": 10,
+    "witting_stack_as_tomotope_packets": "40 * 48 = 10 * 192"
+  },
+  "tomotope_flag_split": {
+    "one_packet_total": 192,
+    "tetrahedral_axis_flags": 24,
+    "toroidal_axis_flags_total": 168,
+    "one_toroidal_axis_flags": 24,
+    "formula": "192 = 24 + 168 = 24 + 7*(2*12)"
+  },
+  "ten_frame_lift": {
+    "ten_tetrahedral_flags": 240,
+    "ten_tetrahedral_reading": "240 = E8 roots = Witting vertices = W33 edges",
+    "ten_toroidal_flags": 1680,
+    "ten_toroidal_reading": "1680 = 7 * 240, one full 240-shell per toroidal Csaszar/Szilassi axis",
+    "per_toroidal_axis_across_ten": 240,
+    "per_endpoint_across_ten": 120,
+    "cs_endpoint_total": 840,
+    "sz_endpoint_total": 840,
+    "reye_cycle_rank_stack": 840,
+    "half_shell_reading": "40 local Reye Levi cycle ranks give 840, exactly the Cs half and exactly the Sz half of the ten-frame toroidal shell"
+  },
+  "all_identities": {
+    "reye_points_12": true,
+    "reye_lines_16": true,
+    "reye_incidences_48": true,
+    "reye_degrees_12_4_16_3": true,
+    "reye_line_split_4_plus_12": true,
+    "reye_pair_linearity": true,
+    "reye_levi_connected": true,
+    "reye_cycle_rank_is_K7_edges": true,
+    "tomotope_flags_are_four_reye_incidence_packets": true,
+    "witting_local_reye_stack_is_ten_tomotopes": true,
+    "ten_tetra_axis_slices_are_E8_roots": true,
+    "ten_toroidal_slices_are_seven_E8_shells": true,
+    "one_toroidal_axis_across_ten_is_one_E8_shell": true,
+    "cs_half_equals_reye_cycle_stack": true,
+    "sz_half_equals_reye_cycle_stack": true
+  },
+  "all_identities_hold": true
+}
