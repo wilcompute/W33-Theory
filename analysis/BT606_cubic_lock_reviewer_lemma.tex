@@ -1,0 +1,79 @@
+% BT606 -- Cubic Lock Reviewer Lemma
+% Compact proof note explaining why M5/M3, not the higher odd tower, is the cubic leakage numerator.
+
+\subsection{Reviewer Lemma: why the cubic lock is $M_5/M_3$}\label{subsec:cubic-lock-reviewer-lemma}
+
+The cubic leakage numerator is not chosen from an arbitrary higher-walk tower.  It is forced by the first meaningful odd spectral transport above the triangle substrate.
+
+Let $A$ be the W33 collinearity adjacency matrix.  Its spectrum is
+\[
+12^1,\qquad 2^{24},\qquad (-4)^{15}.
+\]
+Therefore the odd trace moments are
+\[
+M_r=\operatorname{Tr}(A^r)=12^r+24\cdot 2^r+15\cdot(-4)^r.
+\]
+Since $A$ is loopless,
+\[
+M_1=0.
+\]
+The first nonzero odd closed-walk substrate is thus the triangle moment
+\[
+M_3=12^3+24\cdot2^3+15\cdot(-4)^3=960.
+\]
+Equivalently,
+\[
+\frac{M_3}{6}=160,
+\]
+recovering the $160$ W33 triangles.  The first nonlinear odd correction above this triangle substrate is
+\[
+M_5=12^5+24\cdot2^5+15\cdot(-4)^5=234240.
+\]
+Hence
+\[
+\boxed{
+\frac{M_5}{M_3}=244.
+}
+\]
+This is the unique adjacent odd-moment ratio at the first nonlinear level.  It is also exactly the W33 substrate number
+\[
+\boxed{
+244=40\cdot7-4\cdot9=v\Phi_6-\chi q^2.
+}
+\]
+The Ihara/nonbacktracking scale is
+\[
+\boxed{
+p_{\rm Ih}=k-1=12-1=11,
+}
+\]
+so the normalized cubic transport is
+\[
+\boxed{
+\frac{M_5/M_3}{p_{\rm Ih}^2}
+=
+\frac{244}{121}.
+}
+\]
+This is precisely the raw cubic leakage ratio
+\[
+\boxed{
+\frac{c_1+c_3}{c_2}=\frac{244}{121}.
+}
+\]
+The higher odd-walk tower is real, but it is not the cubic leakage numerator.  The subsequent adjacent ratios
+\[
+\frac{M_7}{M_5},\quad \frac{M_9}{M_7},\quad \dots
+\]
+are already higher propagation levels and drift toward the Perron-dominated limit
+\[
+\boxed{
+\frac{12^2}{11^2}=\frac{144}{121}
+}
+\]
+after normalization by $(k-1)^2$.  Thus the cubic claim is local in odd-walk order:
+\[
+\boxed{
+\text{cubic leakage}=	ext{normalized }M_5/M_3\text{ transport, not an all-orders constant.}
+}
+\]
