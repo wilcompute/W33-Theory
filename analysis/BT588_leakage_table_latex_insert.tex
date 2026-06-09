@@ -1,0 +1,55 @@
+% BT588 -- Leakage Table LaTeX Insert
+% Standalone manuscript-ready insert for the W33 preprint.
+
+\subsection{Raw Cubic Leakage Ratios}\label{subsec:raw-cubic-leakage-ratios}
+
+Let
+\[
+G=\frac{1}{81}CC^T=\frac{160}{81}E_4
+\]
+be the normalized Gram operator of the W33 Levi cycle frame.  In dimension
+$d=81$, the cubic Gegenbauer transform is
+\[
+C_3^{79/2}(x)=\frac{177039}{2}x^3-\frac{6399}{2}x.
+\]
+Writing
+\[
+C_3(G)=c_0E_0+c_1E_1+c_2E_2+c_3E_3+c_4E_4,
+\]
+the non-uniform leakage coefficients satisfy
+\[
+c_1=-\frac{734384}{2187}(-244+9\sqrt6),\qquad
+c_2=\frac{177720928}{2187},
+\]
+\[
+c_3=\frac{734384}{2187}(244+9\sqrt6),\qquad
+c_4=\frac{1751954560}{19683}.
+\]
+The conjugate $24+24$ leakage pair is locked to the $30$-sector by
+\[
+\boxed{\frac{c_1+c_3}{c_2}=\frac{244}{121}.}
+\]
+After weighting by primitive multiplicities $24,30,24$, this becomes
+\[
+\boxed{\frac{24c_1+24c_3}{30c_2}=\frac{976}{605}.}
+\]
+The total trace of the raw cubic leakage operator is
+\[
+\boxed{\operatorname{tr}(C_3(G))=13651200.}
+\]
+
+\begin{center}
+\begin{tabular}{c|c|c}
+Sector & multiplicity & leakage coefficient \\
+\hline
+$E_0$ & $1$ & $17205568/243$ \\
+$E_1$ & $24$ & $-\frac{734384}{2187}(-244+9\sqrt6)$ \\
+$E_2$ & $30$ & $177720928/2187$ \\
+$E_3$ & $24$ & $\frac{734384}{2187}(244+9\sqrt6)$ \\
+$E_4$ & $81$ & $1751954560/19683$
+\end{tabular}
+\end{center}
+
+Thus the raw cubic flow is structured leakage, not random noise: the companion
+$24+30+24$ stack carries a rigid W33 spectral ratio, while the repaired flow
+removes $E_1+E_2+E_3$ before centering and renormalization.
