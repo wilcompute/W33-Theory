@@ -1,0 +1,108 @@
+% BT613 -- Folded Hashimoto / Hodge Flow Insert
+% Manuscript-ready insert tying BT605--BT612 to the Master Evolution Axiom.
+
+\subsection{Folded Hashimoto propagation and the protected Hodge endpoint}\label{subsec:folded-hashimoto-hodge-flow}
+
+The directed nonbacktracking carrier of the W33 collinearity graph has a canonical fold onto the W33 point-line Levi flag carrier.  If
+\[
+B\in\{0,1\}^{480\times480}
+\]
+is the directed Hashimoto operator on directed W33 edges, define
+\[
+T:\mathbb R^{480}\longrightarrow \mathbb R^{160}
+\]
+by
+\[
+\boxed{
+T(p\to q)=(p,\ell(p,q)),
+}
+\]
+where \(\ell(p,q)\) is the unique W33 generalized-quadrangle line through the adjacent points \(p,q\).  Every directed edge has exactly one image, while every Levi flag has exactly three directed-edge preimages.  Hence
+\[
+\boxed{
+TT^T=3I_{160}.
+}
+\]
+Since W33 has valency \(k=12\), the Hashimoto outdegree is
+\[
+\boxed{
+k-1=11.
+}
+\]
+Therefore the folded powers
+\[
+\boxed{
+F_n=TB^nT^T
+}
+\]
+have row sum
+\[
+\boxed{
+3\cdot 11^n.
+}
+\]
+Thus the Ihara scale survives the directed-edge to Levi-flag fold.
+
+Let \(A_0,A_1,A_2,A_3,A_4\) be the distance relations of the Levi flag association scheme.  The cubic folded operator has radial Bose--Mesner projection
+\[
+\boxed{
+\mathcal R(F_3)
+=
+12A_0+11A_1+\frac{33}{2}A_2+25A_3+28A_4.
+}
+\]
+The lower shells are not fully radial before projection.  Their orientation residuals split as follows:
+\[
+A_1:\quad 4\;\text{on same-line pairs},\qquad 18\;\text{on same-point pairs},
+\]
+\[
+A_2:\quad 27\;\text{on forward cross-incidences},\qquad 6\;\text{on backward cross-incidences},
+\]
+\[
+A_3:\quad 24\;\text{when the source points are collinear},\qquad 26\;\text{when they are noncollinear}.
+\]
+But the terminal protected shell has no orientation residual:
+\[
+\boxed{
+F_3\circ A_4=28A_4.
+}
+\]
+Here
+\[
+\boxed{
+28=v-k=40-12=\mu.
+}
+\]
+The distance-four shell has
+\[
+\boxed{
+12960=160\cdot81=1620\cdot8
+}
+\]
+ordered flag pairs, so the cubic folded endpoint has total mass
+\[
+\boxed{
+12960\cdot 28.
+}
+\]
+
+This gives the finite geometric mechanism behind the evolution axiom.  Raw propagation is the folded Hashimoto process \(F_n=TB^nT^T\).  Physical propagation is obtained by passing this raw nonbacktracking transport through the Hodge/Bose--Mesner projector onto the protected Levi cycle sector
+\[
+\boxed{
+E_4=\frac1{160}CC^T
+=I-D^T(DD^T)^+D.
+}
+\]
+Therefore the slogan
+\[
+\boxed{
+\textbf{physical evolution = Hodge projection of Ihara/nonbacktracking propagation}
+}
+\]
+now has a concrete finite operator model:
+\[
+\boxed{
+B\quad\xrightarrow{\;T(-)T^T\;}\quad F_n\quad\xrightarrow{\;\text{Bose--Mesner/Hodge projection}\;}\quad E_4.
+}
+\]
+The important boundary is that the fold is not an unrepaired adjacency intertwiner on all shells.  It is an exact nonbacktracking transfer whose protected endpoint shell is already radial, while lower-shell orientation data must be projected before it becomes physical Hodge data.
