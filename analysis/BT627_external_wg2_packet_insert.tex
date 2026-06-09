@@ -1,0 +1,45 @@
+\subsection{External \texorpdfstring{$W(G_2)$}{W(G2)} packet action and the folded-cubic obstruction}
+\label{subsec:bt627-external-wg2-packet}
+
+The folded-cubic sector calculation isolates a persistent conjugate channel
+\[
+E_1\leftrightarrow E_3,
+\]
+where the two primitive sectors have dimensions \(24\) and \(24\).  The arithmetic factorization
+\[
+24+24=48=4\cdot |W(G_2)|
+\]
+is suggestive, but the folded-cubic operator \(F_3=TB^3T^\top\) does not by itself provide a real Weyl reflection action.  Indeed, if
+\[
+M_{13}=E_1F_3E_3,\qquad M_{31}=E_3F_3E_1,
+\]
+then the verified block products are
+\[
+M_{13}M_{31}=-6455E_1,\qquad M_{31}M_{13}=-6455E_3.
+\]
+Thus, after normalization, the cross-channel squares to \(-I\), not \(+I\).  The folded-cubic channel is therefore a quadratic or complex conjugate transport channel, not a Weyl reflection.
+
+The correct positive statement is obtained by constructing an external packet action.  Let
+\[
+W(G_2)\cong D_6
+\]
+act on the twelve roots of \(G_2\).  The action has two orbits of size six: the short roots and the long roots.  Taking four copies gives a \(48\)-dimensional permutation carrier
+\[
+4\cdot(6_{\rm short}+6_{\rm long})=24+24.
+\]
+This carrier matches the \(E_1+E_3\) dimension split while preserving the obstruction above: the \(W(G_2)\) action is external to the folded-cubic operator.
+
+Equivalently, if \(r\) is rotation by one sixth-turn and \(s\) is reflection, then
+\[
+r^6=s^2=1,\qquad srs=r^{-1},
+\]
+and the \(48\)-carrier decomposes into eight orbits of size six.  Four of these orbits are short-root copies and four are long-root copies.  The external Weyl packet therefore supplies the clean representation-theoretic reading
+\[
+\boxed{E_1+E_3\quad\leadsto\quad 4(G_2^{\rm short})\oplus4(G_2^{\rm long}),}
+\]
+but it does not erase the folded-cubic fact
+\[
+\boxed{F_3\text{ produces a normalized square-}\!-1\text{ conjugate channel.}}
+\]
+
+This distinction is useful: it keeps the \(48=4\cdot12\) \(G_2\)-packet interpretation while preventing the stronger, false claim that \(F_3\) itself is a Weyl group action.  The physical \(E_4\) sector remains isolated, while \(E_1+E_3\) is a lower-shell conjugate packet admitting an external \(W(G_2)\) symmetry model.
