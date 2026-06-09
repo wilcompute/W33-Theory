@@ -1,0 +1,60 @@
+% BT589 -- Homology Separation LaTeX Insert
+% Standalone manuscript-ready insert for the W33 preprint.
+
+\subsection{Levi Homology versus Phase-Cover Fiber Homology}\label{subsec:levi-vs-fiber-homology}
+
+There are two natural homological objects in the phase-cover construction, and
+it is important not to identify them.  The protected W33 homology comes from the
+point-line Levi graph of $W(3,3)$, not from the scalar fiber of the phase cover.
+
+Let $L$ denote the W33 point-line Levi graph.  It has
+\[
+|V(L)|=80,\qquad |E(L)|=160,
+\]
+and hence
+\[
+\boxed{\beta_1(L)=160-80+1=81.}
+\]
+This is the protected cycle rank:
+\[
+\boxed{H_1=81.}
+\]
+The same Levi graph has $1620$ simple $8$-cycles, and the flag-edge incidence
+count satisfies
+\[
+\boxed{160\cdot81=1620\cdot8=12960.}
+\]
+Thus $12960$ is a Levi support-incidence count derived from the $H_1=81$ cycle
+geometry.
+
+The scalar phase cover begins from this $12960$-element support base.  Each base
+incidence has four nonzero ternary scalar lifts.  As a minimal fiber graph, those
+four lifts form a square, so for one fiber
+\[
+V_{\rm fiber}=4,\qquad E_{\rm fiber}=4,\qquad \beta_1^{\rm fiber}=1.
+\]
+Across all base incidences this gives
+\[
+V=12960\cdot4=51840,\qquad E=12960\cdot4=51840,
+\]
+with $12960$ connected fiber components.  Therefore
+\[
+\boxed{\beta_1^{\rm fiber}=51840-51840+12960=12960.}
+\]
+Consequently
+\[
+\boxed{81\ne12960.}
+\]
+The correct relationship is layering rather than equality:
+\[
+\boxed{
+H_1(L)=81
+\quad\leadsto\quad
+12960\text{ Levi support incidences}
+\quad\leadsto\quad
+51840\text{ phase-cover lifts}.
+}
+\]
+The scalar cover doubles the nonzero phase sheets, but it does not replace the
+Levi cycle homology.  The former is a fiber square over each support incidence;
+the latter is the genuine incidence homology of the W33 point-line geometry.
