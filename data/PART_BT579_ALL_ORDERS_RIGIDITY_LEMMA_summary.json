@@ -1,0 +1,8 @@
+{
+  "bt": 579,
+  "title": "All-orders rigidity lemma",
+  "result": "on nonzero E4 amplitude, repaired-center-normalize maps zE4 to (160/81)E4",
+  "derivatives": "all positive-order shape derivatives vanish",
+  "boundary": "local on z != 0",
+  "all_identities_hold": true
+}
