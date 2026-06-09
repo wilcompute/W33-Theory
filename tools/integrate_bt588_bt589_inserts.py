@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""BT591: idempotent integrator for BT588/BT589 paper inserts.
+"""BT591/BT604: idempotent integrator for current paper inserts.
 
-This script copies the standalone LaTeX inserts from analysis/ into paper/sections/
-and inserts the corresponding \input lines into paper/w33_preprint.tex exactly once.
+This script copies standalone LaTeX inserts from analysis/ into paper/sections/
+and inserts the corresponding \input lines into paper/w33_preprint.tex exactly
+once.
+
+Current insert set:
+- BT588 raw cubic leakage ratios;
+- BT589 Levi versus phase-cover homology;
+- BT597 cubic leakage as an Ihara shadow;
+- BT601 master evolution axiom.
 
 It is intentionally conservative:
 - it never duplicates an existing input line;
@@ -26,6 +33,16 @@ SOURCES = [
         ROOT / "analysis" / "BT589_homology_separation_latex_insert.tex",
         SECTION_DIR / "sec_bt589_levi_vs_fiber_homology.tex",
         r"\input{sections/sec_bt589_levi_vs_fiber_homology}",
+    ),
+    (
+        ROOT / "analysis" / "BT597_cubic_leakage_as_ihara_shadow_insert.tex",
+        SECTION_DIR / "sec_bt597_cubic_leakage_ihara_shadow.tex",
+        r"\input{sections/sec_bt597_cubic_leakage_ihara_shadow}",
+    ),
+    (
+        ROOT / "analysis" / "BT601_master_evolution_axiom_insert.tex",
+        SECTION_DIR / "sec_bt601_master_evolution_axiom.tex",
+        r"\input{sections/sec_bt601_master_evolution_axiom}",
     ),
 ]
 
@@ -54,19 +71,15 @@ def copy_section_files() -> list[str]:
 
 
 def find_insert_position(text: str) -> int:
-    # Prefer after the symmetry-phase-cubic section marker.
-    best = -1
     for marker in PRIMARY_MARKERS:
         pos = text.find(marker)
         if pos != -1:
             line_end = text.find("\n", pos)
             return len(text) if line_end == -1 else line_end + 1
-    # Otherwise insert before TOE Singularity.
     for marker in FALLBACK_MARKERS:
         pos = text.find(marker)
         if pos != -1:
             return pos
-    # Last safe fallback: before \end{document}.
     pos = text.rfind(r"\end{document}")
     return len(text) if pos == -1 else pos
 
@@ -92,11 +105,12 @@ def main() -> int:
         copied = copy_section_files()
         preprint_changed = integrate_preprint()
     except Exception as exc:  # noqa: BLE001 - command-line reporting
-        print(f"BT591 integration failed: {exc}", file=sys.stderr)
+        print(f"paper insert integration failed: {exc}", file=sys.stderr)
         return 2
-    print("BT591 integration complete")
+    print("paper insert integration complete")
     print(f"section files copied/updated: {copied if copied else 'none'}")
     print(f"preprint changed: {preprint_changed}")
+    print("managed inserts: BT588, BT589, BT597, BT601")
     return 0
 
 
