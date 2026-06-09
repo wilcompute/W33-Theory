@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""BT591/BT604: idempotent integrator for current paper inserts.
+"""BT591/BT604/BT610: idempotent integrator for current paper inserts.
 
 This script copies standalone LaTeX inserts from analysis/ into paper/sections/
 and inserts the corresponding \input lines into paper/w33_preprint.tex exactly
@@ -9,7 +9,8 @@ Current insert set:
 - BT588 raw cubic leakage ratios;
 - BT589 Levi versus phase-cover homology;
 - BT597 cubic leakage as an Ihara shadow;
-- BT601 master evolution axiom.
+- BT601 master evolution axiom;
+- BT606 cubic lock reviewer lemma.
 
 It is intentionally conservative:
 - it never duplicates an existing input line;
@@ -43,6 +44,11 @@ SOURCES = [
         ROOT / "analysis" / "BT601_master_evolution_axiom_insert.tex",
         SECTION_DIR / "sec_bt601_master_evolution_axiom.tex",
         r"\input{sections/sec_bt601_master_evolution_axiom}",
+    ),
+    (
+        ROOT / "analysis" / "BT606_cubic_lock_reviewer_lemma.tex",
+        SECTION_DIR / "sec_bt606_cubic_lock_reviewer_lemma.tex",
+        r"\input{sections/sec_bt606_cubic_lock_reviewer_lemma}",
     ),
 ]
 
@@ -110,7 +116,7 @@ def main() -> int:
     print("paper insert integration complete")
     print(f"section files copied/updated: {copied if copied else 'none'}")
     print(f"preprint changed: {preprint_changed}")
-    print("managed inserts: BT588, BT589, BT597, BT601")
+    print("managed inserts: BT588, BT589, BT597, BT601, BT606")
     return 0
 
 
