@@ -1,0 +1,11 @@
+{
+  "bt": 580,
+  "title": "Phase-cover chain complex",
+  "base": 12960,
+  "cover": 51840,
+  "plus_sheet": 25920,
+  "minus_sheet": 25920,
+  "deck_orbits": 25920,
+  "scalar_orbits": 12960,
+  "all_identities_hold": true
+}
