@@ -1,0 +1,72 @@
+% BT601 -- Master Evolution Axiom Insert
+% Manuscript-ready theorem statement.
+
+\subsection{Master Evolution Axiom: Hodge Projection of Ihara Propagation}\label{subsec:master-evolution-axiom}
+
+The preceding computations suggest the following structural axiom for the W33
+substrate.
+
+\begin{quote}
+\textbf{Master Evolution Axiom.}
+Physical evolution on the protected W33 cycle frame is not raw entrywise
+nonlinear propagation.  It is Hodge projection of Ihara/nonbacktracking
+propagation back onto the protected Levi cycle idempotent.
+\end{quote}
+
+The ingredients are as follows.  The W33 point-line Levi graph has
+\[
+|V(L)|=80,\qquad |E(L)|=160,\qquad \beta_1(L)=81,
+\]
+and its oriented simple-$8$-cycle incidence matrix satisfies
+\[
+\frac1{160}CC^T=E_4,
+\]
+so the protected Gram is
+\[
+G=\frac1{81}CC^T=\frac{160}{81}E_4.
+\]
+The raw cubic transform detects an Ihara/nonbacktracking shadow.  For the W33
+collinearity spectrum
+\[
+12^1,\qquad 2^{24},\qquad (-4)^{15},
+\]
+the odd closed-walk moments obey
+\[
+M_3=\operatorname{Tr}(A^3)=960,\qquad
+M_5=\operatorname{Tr}(A^5)=234240,
+\]
+so
+\[
+\frac{M_5}{M_3}=244.
+\]
+The nonbacktracking outdegree is
+\[
+p_{\rm Ih}=12-1=11,
+\]
+and hence
+\[
+\boxed{
+\frac{M_5/M_3}{p_{\rm Ih}^2}=\frac{244}{121}.
+}
+\]
+This is precisely the raw cubic leakage ratio into the companion sectors.
+
+Thus the raw cubic transform has the sector flow
+\[
+E_4\longrightarrow E_0+E_1+E_2+E_3+E_4,
+\]
+where
+\[
+E_1+E_2+E_3
+\]
+is the nonbacktracking companion shadow.  The physical/repaired evolution applies
+the minimal sector filter
+\[
+P_{E_0+E_4},
+\]
+then removes $E_0$ and renormalizes.  Consequently
+\[
+G\longmapsto G.
+\]
+In this form, the repair is not ad hoc: it is the Hodge selection rule removing
+the Ihara shadow while preserving the protected W33 Levi cycle idempotent.
