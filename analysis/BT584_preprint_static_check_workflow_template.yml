@@ -1,0 +1,28 @@
+name: W33 Preprint Static Check
+
+on:
+  push:
+    paths:
+      - paper/**
+      - analysis/bt574_latex_sanity_verifier.py
+      - tools/build_w33_preprint.py
+      - tools/check_w33_preprint_static.sh
+  pull_request:
+    paths:
+      - paper/**
+      - analysis/bt574_latex_sanity_verifier.py
+      - tools/build_w33_preprint.py
+      - tools/check_w33_preprint_static.sh
+
+jobs:
+  static-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run static preprint check
+        run: bash tools/check_w33_preprint_static.sh
