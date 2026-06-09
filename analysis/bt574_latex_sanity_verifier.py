@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""BT574/BT607: LaTeX sanity verifier for the W33 preprint inserts.
+"""BT574/BT607/BT610: LaTeX sanity verifier for W33 preprint inserts.
 
 This is a lightweight repository-local verifier.  It does not require a TeX
 installation; it checks the structural conditions that the symmetry/phase,
-cubic-leakage, Ihara-shadow, and master-evolution inserts should satisfy before
-a full compile:
+cubic-leakage, Ihara-shadow, master-evolution, and cubic-lock-reviewer inserts
+should satisfy before a full compile:
 
   * the active preprint exists,
   * the symmetry/phase/cubic-leakage section is present exactly once,
   * theorem/proof/display environments introduced by the patch are balanced,
   * local \input files referenced by the managed insert pipeline exist,
-  * the BT588/BT589/BT597/BT601 snippets are visible either directly in the
-    section or through its managed \input files.
+  * the BT588/BT589/BT597/BT601/BT606 snippets are visible either directly in
+    the section or through its managed \input files.
 """
 import json
 import re
@@ -29,12 +29,14 @@ MANAGED_INSERT_INPUTS = [
     ROOT / "paper" / "sections" / "sec_bt589_levi_vs_fiber_homology.tex",
     ROOT / "paper" / "sections" / "sec_bt597_cubic_leakage_ihara_shadow.tex",
     ROOT / "paper" / "sections" / "sec_bt601_master_evolution_axiom.tex",
+    ROOT / "paper" / "sections" / "sec_bt606_cubic_lock_reviewer_lemma.tex",
 ]
 REQUIRED_INPUT_LINES = [
     r"\input{sections/sec_bt588_raw_cubic_leakage_ratios}",
     r"\input{sections/sec_bt589_levi_vs_fiber_homology}",
     r"\input{sections/sec_bt597_cubic_leakage_ihara_shadow}",
     r"\input{sections/sec_bt601_master_evolution_axiom}",
+    r"\input{sections/sec_bt606_cubic_lock_reviewer_lemma}",
 ]
 SECTION_LABEL = r"\label{sec:symmetry-phase-cubic-leakage}"
 SECTION_TITLE = r"\section{Symmetry, Phase, and Cubic Leakage}"
@@ -59,13 +61,19 @@ REQUIRED_SNIPPETS = [
     r"Master Evolution Axiom",
     r"Physical evolution on the protected W33 cycle frame",
     r"Hodge projection of Ihara/nonbacktracking propagation",
+    # BT606 insert snippets.
+    r"Reviewer Lemma: why the cubic lock is $M_5/M_3$",
+    r"M_1=0",
+    r"\frac{M_3}{6}=160",
+    r"M_5=234240",
+    r"\text{cubic leakage}=\text{normalized }M_5/M_3",
 ]
 SUPPORTED_PATCH_MACROS = {
     "operatorname", "rm", "mathrm", "mathbb", "cdot", "qquad", "sqrt",
     "frac", "sum", "lambda", "Phi", "chi", "boxed", "text", "textbf",
     "left", "right", "begin", "end", "label", "section", "subsection",
     "item", "beta", "leadsto", "longmapsto", "mapsto", "to", "neq", "in",
-    "operatorname", "Tr", "rm", "mid", "times", "quad",
+    "operatorname", "Tr", "rm", "mid", "times", "quad", "dots",
 }
 
 
@@ -128,7 +136,7 @@ def main() -> None:
         "document_ends": content.rstrip().endswith(r"\end{document}"),
     }
     result = {
-        "bt": 607,
+        "bt": 610,
         "title": "LaTeX sanity verifier for W33 preprint insert pipeline",
         "target": str(TEX.relative_to(ROOT)),
         "new_section_label": "sec:symmetry-phase-cubic-leakage",
@@ -140,7 +148,7 @@ def main() -> None:
         "all_identities_hold": all(checks.values()),
         "interpretation": "The W33 manuscript insert pipeline is structurally present and LaTeX-sane under static checks; full PDF compilation remains a separate environment-dependent check.",
     }
-    out = ROOT / "data" / "PART_BT607_LATEX_SANITY_VERIFIER_results.json"
+    out = ROOT / "data" / "PART_BT610_LATEX_SANITY_VERIFIER_results.json"
     out.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(json.dumps(result, indent=2))
 
