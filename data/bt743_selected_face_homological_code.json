@@ -1,0 +1,86 @@
+{
+  "theorem": "BT743 homological code from selected Levi faces",
+  "levi": {
+    "vertices": 80,
+    "edges": 160,
+    "beta1": 81
+  },
+  "all 1620 Levi 8-cycles": {
+    "faces": 1620,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1539
+  },
+  "mask 1110 bundle (BT741 flat)": {
+    "faces": 1306,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1225
+  },
+  "BT718 sheet (1110, ch0)": {
+    "faces": 710,
+    "rank": 81,
+    "H1": 0,
+    "H2": 629
+  },
+  "sheet (1110, ch1)": {
+    "faces": 673,
+    "rank": 81,
+    "H1": 0,
+    "H2": 592
+  },
+  "sheet (1110, ch2)": {
+    "faces": 670,
+    "rank": 81,
+    "H1": 0,
+    "H2": 589
+  },
+  "mask 1110 bundle": {
+    "faces": 1306,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1225
+  },
+  "mask 1101 bundle": {
+    "faces": 1458,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1377
+  },
+  "mask 1011 bundle": {
+    "faces": 1320,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1239
+  },
+  "mask 0111 bundle": {
+    "faces": 1290,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1209
+  },
+  "mask 1100 bundle": {
+    "faces": 1495,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1414
+  },
+  "mask 1001 bundle": {
+    "faces": 1318,
+    "rank": 76,
+    "H1": 5,
+    "H2": 1242
+  },
+  "mask 0110 bundle": {
+    "faces": 1490,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1409
+  },
+  "mask 0011 bundle": {
+    "faces": 1535,
+    "rank": 81,
+    "H1": 0,
+    "H2": 1454
+  }
+}
