@@ -1,0 +1,21 @@
+{
+  "part": "BT691",
+  "title": "K33 Classical-vs-Quantum Code Boundary",
+  "status": "pushed",
+  "script": "analysis/bt691_k33_classical_vs_quantum_code_boundary.py",
+  "parallel_hints": ["BT686 Fibonacci braid / K33 code", "BT688 HP(K_{m,m}) rate formula"],
+  "verified_classical_code": "binary cycle code of K_{3,3} has parameters [9,4,4]",
+  "facts": {
+    "vertices": 6,
+    "edges": 9,
+    "incidence_rank_F2": 5,
+    "cycle_dimension": 4,
+    "cycle_distance": 4,
+    "nonzero_cycle_codewords": 15
+  },
+  "standard_HGP_boundary": {
+    "full_6x9_incidence_self_product": {"n": 117, "k": 8},
+    "reduced_5x9_incidence_self_product": {"n": 106, "k": 0}
+  },
+  "conclusion": "[9,4,4] is the clean classical graph-cycle/homology code. Calling it [[9,4,4]] requires an additional nonstandard quantum construction."
+}
