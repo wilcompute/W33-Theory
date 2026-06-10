@@ -1,0 +1,31 @@
+% BT676 -- Compilable K44/K33 frame-chain insert.
+% This is the LaTeX-safe version of BT670.
+
+\subsection{Codec cube to six-frame Weyl quotient}
+\label{subsec:bt676-k44-k33-frame-chain}
+
+The raw sixteen-flag complement is not a hypercube under Levi-flag adjacency.  The verified raw graph is
+\[
+C_{16}^{\rm raw}\cong K_4\sqcup K_4\sqcup K_4\sqcup K_4.
+\]
+The hypercube enters only after choosing the secondary product-codec relation
+\[
+4K_4\longrightarrow Q_4\longrightarrow Q_4/\{\pm\}\cong K_{4,4}.
+\]
+On the quotient graph \(K_{4,4}\), the perfect matchings are naturally indexed by \(S_4\).  The canonical one-factorization is the Klein four subgroup
+\[
+V_4=\{(),(12)(34),(13)(24),(14)(23)\}\subset S_4.
+\]
+Thus the six one-factorization frames are
+\[
+S_4/V_4\cong S_3.
+\]
+Equipping these six frames with the transposition Cayley relation gives
+\[
+\operatorname{Cay}(S_3,\{\hbox{transpositions}\})\cong K_{3,3}.
+\]
+Finally, the metric matching on the three far/middle/active pairs has stabilizer
+\[
+\operatorname{Aut}(K_{3,3},M_{\rm metric})\cong D_6\cong W(G_2),
+\]
+with order \(12\).  This is a secondary frame quotient, not a flag-level Weyl action on all \(160\) Levi flags.
