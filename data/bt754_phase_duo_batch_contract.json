@@ -1,0 +1,37 @@
+{
+  "theorem": "BT754 phase-duo batch-test contract",
+  "source_enumerator": "analysis/bt753_phase_duo_candidate_enumerator.py",
+  "candidate_space": {
+    "chirality": [0, 1],
+    "phase": [0, 1, 2, 3, 4, 5],
+    "duo": [0, 1],
+    "total_candidates": 24
+  },
+  "required_full_run_tests": {
+    "T1_one_lift_per_rectangle": {
+      "expected": 2160,
+      "field": "selected_rows"
+    },
+    "T2_selector_rank": {
+      "expected": 81,
+      "field": "rank_mod_1000003"
+    },
+    "T3_root_uniformity": {
+      "expected": {"4": 540},
+      "field": "root_hit_distribution"
+    },
+    "T4_root_triples_hit": {
+      "expected": 540,
+      "field": "root_triples_hit"
+    },
+    "T5_global_register_flatness": {
+      "expected": "connected quotient with global dimension 4 over F2",
+      "field": "not yet implemented in BT753"
+    }
+  },
+  "known_correction_from_BT750": {
+    "phase_only_is_not_enough": true,
+    "reason": "Each D12 reflection/phase fixes two central-half-turn duo partners, and BT750 shows those partners are different Levi octagons."
+  },
+  "execution_boundary": "This file is the batch-test contract. The actual full data table is produced by running python analysis/bt753_phase_duo_candidate_enumerator.py --out data/bt753_phase_duo_candidate_enumerator.json. Connector-side execution was not available in this pass, so no pass/fail claims are made here beyond the contract and the pushed enumerator logic."
+}
