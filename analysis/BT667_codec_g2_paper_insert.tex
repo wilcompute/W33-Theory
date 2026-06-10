@@ -1,0 +1,68 @@
+\subsection{The Fano--Tomotope Codec Chart and the Six-Carrier Weyl Quotient}
+
+The verified raw complement to the six regular \(S_4\)-carriers is
+\[
+C_{16}^{\rm raw}\cong K_4\sqcup K_4\sqcup K_4\sqcup K_4.
+\]
+The hypercube \(Q_4\) is therefore not a raw Levi-flag adjacency graph.  It enters only after choosing a secondary product-codec chart
+\[
+C_{16}=A\times B,
+\qquad A\cong B\cong\mathbb F_2^2.
+\]
+A square structure on a four-point factor is determined by the omitted perfect matching, equivalently by a nonzero direction in \(\mathbb F_2^2\).  Hence each factor has three square structures, and the product chart has
+\[
+3\cdot3=9
+\]
+codec gauges.  Every one of these gauges produces a graph isomorphic to \(Q_4\), and hence an antipodal quotient isomorphic to \(K_{4,4}\).  Thus graph isomorphism alone does not select the physical chart.
+
+The Fano--tomotope chart fixes this ambiguity.  Let the tetrahedral hinge axis be \(000\in\mathbb F_2^3\).  The four hinge-adjacent odd axes are
+\[
+\{001,010,100,111\},
+\]
+while the three nonadjacent even toroidal axes are
+\[
+\{011,101,110\}.
+\]
+Identify the three nonzero directions in \(\mathbb F_2^2\) with these even axes:
+\[
+01\leftrightarrow011,\qquad
+10\leftrightarrow101,\qquad
+11\leftrightarrow110.
+\]
+The Fano-compatible gauges are exactly the diagonal ones,
+\[
+(01,01),\qquad(10,10),\qquad(11,11),
+\]
+so the codec ambiguity reduces as
+\[
+\boxed{9\longrightarrow3\longrightarrow1,}
+\]
+where the final reduction is a choice of tomotope hinge/orientation.
+
+The same three diagonal directions match the three metric carrier-pair channels:
+\[
+011\leftrightarrow\mathrm{far},\qquad
+101\leftrightarrow\mathrm{middle},\qquad
+110\leftrightarrow\mathrm{active}.
+\]
+Thus the six regular carriers split as
+\[
+6=2_{\rm far}+2_{\rm middle}+2_{\rm active}.
+\]
+Writing the paired carriers as
+\[
+F_+,F_-,M_+,M_-,A_+,A_-,
+\]
+define the secondary carrier graph by connecting every plus carrier to every minus carrier.  This gives
+\[
+\{F_+,M_+,A_+\}\;--\;\{F_-,M_-,A_-\}\cong K_{3,3}.
+\]
+The verified metric pairing
+\[
+\{F_+F_-,M_+M_-,A_+A_-\}
+\]
+has stabilizer of order \(12\) inside \(\operatorname{Aut}(K_{3,3})\).  Therefore
+\[
+\operatorname{Aut}(K_{3,3},M_{\rm metric})\cong D_6\cong W(G_2).
+\]
+This is the precise secondary \(G_2\)-sized quotient associated with the codec chart.  It is not yet a full Weyl action on the \(160\) Levi flags.
