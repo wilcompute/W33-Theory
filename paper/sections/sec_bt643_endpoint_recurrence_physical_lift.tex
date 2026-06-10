@@ -1,0 +1,79 @@
+\subsection{Endpoint Recurrence, Physical Lift, and Tetrahedral Parity Sheet}
+\label{subsec:bt643-endpoint-physical-lift}
+
+The folded Hashimoto endpoint theorem can now be separated into three layers.
+First, the terminal distance-four endpoint sequence
+\[
+(F_n)_{fg}=e_n,\qquad \rho(f,g)=4,
+\]
+is governed by the full W33 Hashimoto polynomial
+\[
+P(x)=(x-11)(x-1)(x+1)(x^2-2x+11)(x^2+4x+11).
+\]
+The initial values are
+\[
+(e_0,\ldots,e_{10})=(0,0,3,28,268,3000,33195,365480,4020568,44210368,486310803),
+\]
+so the cubic endpoint is
+\[
+e_3=28=\mu=v-k.
+\]
+The full recurrence residual vanishes identically for the tested endpoint range,
+while deleting the \((x+1)\)-factor leaves
+\[
+\boxed{24(-1)^n.}
+\]
+Equivalently,
+\[
+\frac{P(x)}{x+1}\bigg|_{x=-1}=2688=16\cdot168,
+\qquad
+\frac{24}{2688}=\frac1{112}.
+\]
+Thus the omitted sheet is not arbitrary: it is a normalized sign component of the
+endpoint quotient.
+
+Second, the Hodge-protected physical block compresses the endpoint dynamics to
+\[
+\boxed{
+E_4F_nE_4=3E_4\quad(n\;\mathrm{even}),
+\qquad
+E_4F_nE_4=E_4\quad(n\;\mathrm{odd}).
+}
+\]
+Consequently the protected trace clock is
+\[
+243,81,243,81,\ldots
+\]
+while the full terminal endpoint grows by the Ihara recurrence.  At the cubic
+step the endpoint mass is
+\[
+\boxed{
+160\cdot81\cdot28=12960\cdot28=362880=9!.
+}
+\]
+This is the precise lift: the full folded Hashimoto endpoint carries the large
+Ihara recurrence, and the physical Hodge block sees its protected parity clock.
+
+Third, the residual \(24(-1)^n\) has an explicit tetrahedral carrier.  Let
+\(S_4\) act regularly on the \(24\) labelings of a tetrahedron.  The even subgroup
+\(A_4\) has order \(12\), the odd coset has order \(12\), and
+\[
+S_4/A_4\cong C_2.
+\]
+The sign scalar on this regular \(24\)-dimensional carrier has trace powers
+\[
+\boxed{
+\operatorname{tr}((-I_{24})^n)=24(-1)^n.
+}
+\]
+Therefore the endpoint recurrence, physical Hodge clock, and tetrahedral parity
+packet fit into one exact stack:
+\[
+\boxed{
+\text{full Ihara endpoint recurrence}
+\longrightarrow
+\text{Hodge }E_4\text{ clock}
+\oplus
+\text{tetrahedral }24(-1)^n\text{ sign sheet}.
+}
+\]
