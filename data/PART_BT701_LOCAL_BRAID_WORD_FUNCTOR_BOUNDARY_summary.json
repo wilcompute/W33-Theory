@@ -1,0 +1,29 @@
+{
+  "part": "BT701-local",
+  "title": "Braid-Word Functor Boundary",
+  "status": "pushed",
+  "script": "analysis/bt701_local_braid_word_functor_boundary.py",
+  "cycle_code": {
+    "graph": "K_{3,3}",
+    "edges": 9,
+    "vertices": 6,
+    "beta_1": 4,
+    "minimum_distance": 4,
+    "classical_code": "[9,4,4]",
+    "code_states": 16
+  },
+  "fibonacci_register": {
+    "fixed_total_charge_block_dimension": 2,
+    "blocks_required_for_full_code": 4,
+    "full_tensor_dimension": 16,
+    "two_block_dimension": 4,
+    "two_block_status": "rank-2 quotient only"
+  },
+  "basis": {
+    "spanning_tree": ["(0,0)", "(0,1)", "(0,2)", "(1,0)", "(2,0)"],
+    "chords": ["(1,1)", "(1,2)", "(2,1)", "(2,2)"],
+    "basis_cycles": 4
+  },
+  "interpretation": "A full braid-word functor for the local K33 cycle code must use four two-state Fibonacci fusion blocks, one per independent rectangle-cycle bit. Any two-block construction is a quotient of H1(K33;F2), not the full [9,4,4] code.",
+  "boundary": "This is a register/braid-module boundary theorem. The next missing object is an explicit generator-respecting map from K33 rectangle moves or lift-selector moves to Fibonacci braid words."
+}
