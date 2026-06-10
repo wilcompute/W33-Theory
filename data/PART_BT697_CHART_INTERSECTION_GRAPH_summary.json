@@ -1,0 +1,20 @@
+{
+  "part": "BT697",
+  "title": "Chart-Intersection Graph Theorem",
+  "status": "pushed",
+  "script": "analysis/bt697_chart_intersection_graph_theorem.py",
+  "graph": "Gamma_K on 240 local K33 charts, adjacent iff charts share one W33 nonedge",
+  "results": {
+    "vertices": 240,
+    "degree": 27,
+    "edges": 3240,
+    "diameter": 4,
+    "shell_profile": [1, 27, 144, 67, 1],
+    "adjacent_common_neighbors": {"2": 3240},
+    "nonadjacent_common_neighbors": {"0": 8160, "4": 12960, "6": 4320},
+    "strongly_regular": false,
+    "spectrum": {"27": 1, "9": 24, "3": 75, "-1": 81, "-3": 24, "-9": 35}
+  },
+  "interpretation": "The 240-chart overlap graph is not SRG, but it has a rigid integral spectrum containing the protected 81 multiplicity at eigenvalue -1 and a W33-like 24+24 conjugate pair at +/-9 and -3.",
+  "boundary": "Adjacency is chart overlap by one nonedge only; this is not the Levi flag line graph."
+}
