@@ -1,0 +1,20 @@
+{
+  "part": "BT683",
+  "title": "S4 Carrier Restriction Packet Test",
+  "status": "pushed",
+  "script": "analysis/bt683_s4_carrier_restriction_packet_test.py",
+  "six_regular_carriers": "6*24=144",
+  "raw_complement": "4*K4=16",
+  "metric_type_split": {
+    "A": {"multiplicity": 2, "profile": "d1=36,d3=60,d4=180"},
+    "B": {"multiplicity": 2, "profile": "d2=24,d3=120,d4=132"},
+    "C": {"multiplicity": 2, "profile": "d1=24,d3=84,d4=168"}
+  },
+  "carrier_complement_incidence_vector": [0, 0, 24, 0, 24, 0],
+  "active_pair_total_dimension": 48,
+  "per_carrier_split": "24 = 4 complement cells * 6 Fano/D6 hexagon positions",
+  "per_active_pair_split": "48 = 2 carriers * 4 cells * 3 gauges * 2 signs",
+  "result": "Carrier restriction supplies the desired packet coordinates at representation level.",
+  "numeric_E1_E3_projection_extracted": false,
+  "boundary": "Still not a canonical numeric eigenspace embedding of E1+E3; requires explicit projection/intertwiner."
+}
