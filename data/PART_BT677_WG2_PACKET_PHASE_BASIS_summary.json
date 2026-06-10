@@ -1,0 +1,20 @@
+{
+  "part": "BT677",
+  "title": "W(G2) Packet Phase-Basis Model",
+  "status": "pushed",
+  "script": "analysis/bt677_wg2_packet_phase_basis_model.py",
+  "carrier": "4 tensor (6_short + 6_long)",
+  "packet_dimension": 48,
+  "external_wg2_group": "D6",
+  "external_wg2_order": 12,
+  "root_orbits": "6_short + 6_long",
+  "copies": 4,
+  "real_length_exchange": "J",
+  "J_square": "-I",
+  "phase_lift": "iJ",
+  "phase_lift_square": "+I",
+  "commutes_with_external_wg2": true,
+  "real_reflection_embedding": false,
+  "complex_projective_packet_embedding": true,
+  "boundary": "Symbolic external packet representation, not a canonical numeric eigenspace intertwiner extracted from F3."
+}
