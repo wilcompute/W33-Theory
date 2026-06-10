@@ -1,0 +1,24 @@
+{
+  "part": "BT700",
+  "title": "Chart-Overlap Idempotent Extraction",
+  "status": "pushed",
+  "script": "analysis/bt700_chart_overlap_idempotent_extraction.py",
+  "objects": {
+    "charts": 240,
+    "w33_nonedges": 540,
+    "incidence_matrix": "H in {0,1}^{240 x 540}",
+    "row_weight": 9,
+    "column_weight": 4
+  },
+  "identity": "H H^T = 9 I + A_Gamma",
+  "rank_data": {
+    "rank_H": 159,
+    "left_nullity": 81
+  },
+  "spectra": {
+    "A_Gamma": "27^1, 9^24, 3^75, (-1)^81, (-3)^24, (-9)^35",
+    "HHT": "36^1, 18^24, 12^75, 8^35, 6^24, 0^81"
+  },
+  "interpretation": "The (-1)^81 chart-overlap eigenspace is exactly the left-nullspace of the chart/nonedge incidence matrix H. This is a genuine local K33 chart-balance 81-sector.",
+  "boundary": "This 81-sector is not automatically the Levi Hodge idempotent E4. A BT699 lift selector/intertwiner is required to compare it to the 160-flag Levi cycle sector."
+}
