@@ -1,0 +1,19 @@
+{
+  "part": "BT679",
+  "title": "Preprint Static Sanity Checker for BT676",
+  "status": "pushed",
+  "script": "analysis/bt679_preprint_bt676_sanity_checker.py",
+  "checked_source": "analysis/BT676_k44_k33_frame_chain_insert.tex",
+  "checked_paper_section": "paper/sections/sec_bt676_k44_k33_frame_chain.tex",
+  "checked_preprint": "paper/w33_preprint.tex",
+  "assertions": [
+    "BT676 input line appears at most once in preprint",
+    "raw complement warning C16_raw = 4K4 appears exactly once in source",
+    "secondary Q4-to-K44 chain is present",
+    "S4/V4 ~= S3 frame quotient is present",
+    "Cay(S3, transpositions) ~= K3,3 is present",
+    "Aut(K3,3, M_metric) ~= D6 ~= W(G2) is present",
+    "not a flag-level Weyl action boundary is present"
+  ],
+  "boundary": "Static checker only; it does not compile LaTeX."
+}
