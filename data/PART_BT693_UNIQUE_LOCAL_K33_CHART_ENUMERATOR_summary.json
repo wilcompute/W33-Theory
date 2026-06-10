@@ -1,0 +1,22 @@
+{
+  "part": "BT693",
+  "title": "Unique Local K33 Chart Enumerator",
+  "status": "pushed",
+  "script": "analysis/bt693_unique_local_k33_chart_enumerator.py",
+  "builds_on": ["BT690"],
+  "results": {
+    "centers": 40,
+    "charts_per_center": 6,
+    "centered_charts": 240,
+    "unique_chart_edge_sets": 240,
+    "edges_per_chart": 9,
+    "total_chart_edge_incidences": 2160,
+    "w33_nonedges": 540,
+    "nonedge_chart_multiplicity": 4,
+    "chart_intersection_sizes": [0, 1],
+    "per_chart_meets_one_edge": 27,
+    "per_chart_disjoint": 212
+  },
+  "identity": "240*9 = 2160 = 4*540",
+  "conclusion": "The corrected local K33 charts are all distinct as W33 nonedge sets. Their overlap design is 0/1-intersecting, and every W33 nonedge is covered exactly mu=4 times."
+}
