@@ -1,0 +1,15 @@
+{
+  "part": "BT675",
+  "title": "K3,3 Metric-Matching Automorphism Verifier",
+  "status": "pushed",
+  "script": "analysis/bt675_k33_metric_automorphism_verifier.py",
+  "graph": "secondary six-frame graph K3,3",
+  "vertices": 6,
+  "edges": 9,
+  "degree": 3,
+  "full_automorphism_order": 72,
+  "metric_matching_edges": 3,
+  "metric_matching_stabilizer_order": 12,
+  "identification": "Aut(K3,3, M_metric) ~= D6 ~= W(G2)",
+  "boundary": "This acts on the secondary six-frame quotient, not on the raw 160 Levi flags."
+}
