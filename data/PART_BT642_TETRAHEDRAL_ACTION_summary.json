@@ -1,0 +1,20 @@
+{
+  "bt": 642,
+  "title": "Tetrahedral action summary",
+  "carrier": "S4 regular carrier on 24 tetrahedral labelings",
+  "S4_order": 24,
+  "A4_order": 12,
+  "odd_coset_order": 12,
+  "quotient": "S4/A4=C2",
+  "trace_sequence_n0_to_n10": [24, -24, 24, -24, 24, -24, 24, -24, 24, -24, 24],
+  "reading": "BT640 residual equals the trace sequence of the sign scalar on the 24-dimensional tetrahedral carrier.",
+  "checks": {
+    "S4_order_24": true,
+    "A4_even_order_12": true,
+    "odd_coset_order_12": true,
+    "regular_action_closes": true,
+    "quotient_by_A4_is_C2": true,
+    "trace_sequence_matches_BT640": true
+  },
+  "all_identities_hold": true
+}
