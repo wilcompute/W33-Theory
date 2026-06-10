@@ -1,0 +1,25 @@
+{
+  "theorem": "BT748 fiber torsor + sheet uniformity",
+  "centralizer_order": 96,
+  "fiber_size": 96,
+  "fiber_is_C_torsor": false,
+  "inner_centralizer_orbit": 48,
+  "inner_orbit_parity": {
+    "1": 48
+  },
+  "sheet_per_fiber_distribution": {
+    "0": 75,
+    "1": 44,
+    "2": 64,
+    "3": 56,
+    "4": 64,
+    "5": 60,
+    "6": 72,
+    "7": 52,
+    "8": 23,
+    "9": 18,
+    "10": 10,
+    "11": 2
+  },
+  "sheet_uniform_4": false
+}
