@@ -1,0 +1,12 @@
+{
+  "part": "BT676",
+  "title": "Compilable K44-to-K33 Frame Chain Insert",
+  "status": "pushed",
+  "tex_source": "analysis/BT676_k44_k33_frame_chain_insert.tex",
+  "integrator": "tools/integrate_bt676_insert.py",
+  "paper_target": "paper/sections/sec_bt676_k44_k33_frame_chain.tex",
+  "paper_input": "\\input{sections/sec_bt676_k44_k33_frame_chain}",
+  "core_chain": "4K4 -> Q4 -> K44 -> Match(K44) -> S4/V4 ~= S3 -> Cay(S3, transpositions) ~= K33",
+  "weyl_quotient": "Aut(K3,3, M_metric) ~= D6 ~= W(G2)",
+  "boundary": "This is a secondary codec/frame quotient, not raw Levi complement adjacency."
+}
