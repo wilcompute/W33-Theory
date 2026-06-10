@@ -1,0 +1,88 @@
+% BT682 — Secondary G2 synthesis insert
+% Manuscript-ready subsection.
+
+\subsection{Secondary codec-to-$G_2$ quotient and the packet-basis boundary}
+\label{sec:bt682-secondary-g2-synthesis}
+
+The corrected finite-geometric chain begins with the raw $S_4$ complement in the Levi flag graph.  The induced raw complement is not a hypercube.  It is
+\[
+C_{16}^{\rm raw}\cong K_4\sqcup K_4\sqcup K_4\sqcup K_4.
+\]
+Thus $Q_4$ is not a raw Levi-adjacency claim.  It enters only after choosing the secondary product-codec relation on the four-by-four complement chart:
+\[
+4K_4
+\longrightarrow
+Q_4
+\longrightarrow
+Q_4/\{\pm\}\cong K_{4,4}.
+\]
+The next quotient is the frame quotient of the $K_{4,4}$ perfect matchings.  The $24$ perfect matchings split into six one-factorization frames of size four:
+\[
+\operatorname{Match}(K_{4,4})/V_4
+\cong
+S_4/V_4
+\cong S_3,
+\]
+where
+\[
+V_4=\{(),(12)(34),(13)(24),(14)(23)\}\subset S_4.
+\]
+The transposition Cayley graph of $S_3$ is $K_{3,3}$, so the secondary chain is
+\[
+4K_4
+\to Q_4
+\to K_{4,4}
+\to \operatorname{Match}(K_{4,4})
+\to S_4/V_4
+\to K_{3,3}.
+\]
+
+The three diagonal Fano gauges are
+\[
+011,\qquad 101,\qquad 110.
+\]
+They are identified with the three carrier-pair channels
+\[
+011\leftrightarrow F,\qquad
+101\leftrightarrow M,\qquad
+110\leftrightarrow A.
+\]
+Adding the two sign sheets gives six carrier labels
+\[
+F_+,F_-,M_+,M_-,A_+,A_-.
+\]
+The metric matching is
+\[
+M_{\rm metric}=\{F_+F_-,\;M_+M_-,\;A_+A_-\}.
+\]
+The stabilizer of this matching inside $\operatorname{Aut}(K_{3,3})$ is
+\[
+\operatorname{Aut}(K_{3,3},M_{\rm metric})
+\cong
+S_3\times C_2
+\cong D_6
+\cong W(G_2).
+\]
+This gives the secondary $G_2$ Weyl quotient.  It is a quotient of codec/frame labels, not a raw flag-level Weyl action on the $160$ Levi flags.
+
+The same boundary appears in the $E_1+E_3$ packet.  Dimensionally,
+\[
+E_1+E_3=24+24=48=4(6_{\rm short}+6_{\rm long}),
+\]
+so the external $W(G_2)$ packet model is dimensionally correct.  The folded-cubic cross-channel, however, is not a real Weyl reflection: after normalization it has
+\[
+J^2=-I,
+\]
+whereas a real reflection requires square $+I$.  Only the phase lift repairs this:
+\[
+(iJ)^2=+I.
+\]
+Consequently, a canonical numeric packet basis requires an additional flag-level selector that splits each $24$-sector as
+\[
+24=4\cdot6.
+\]
+The Fano/$D_6$ selector candidate supplies the representation-level algebra
+\[
+24=4_{\rm copies}\cdot 3_{\rm Fano\ gauges}\cdot2_{\rm signs},
+\]
+but the four-copy label is imported from the raw $4K_4$ complement cells rather than selected by the Bose--Mesner algebra alone.
