@@ -1,0 +1,26 @@
+{
+  "bt": 640,
+  "title": "Symbolic endpoint recurrence quotient theorem",
+  "hashimoto_polynomial": "(x-11)(x-1)(x+1)(x^2-2x+11)(x^2+4x+11)",
+  "P_coefficients_desc": [1, -9, -9, -123, -113, -1199, 121, 1331],
+  "quotient_without_minus_one_coefficients_desc": [1, -10, 1, -124, 11, -1210, 1331],
+  "endpoint_initial_conditions_e0_to_e6": [0, 0, 3, 28, 268, 3000, 33195],
+  "endpoint_values_e0_to_e10": [0, 0, 3, 28, 268, 3000, 33195, 365480, 4020568, 44210368, 486310803],
+  "full_recurrence_residuals_n7_to_n12": [0, 0, 0, 0, 0, 0],
+  "no_minus_residuals_n6_to_n12": [24, -24, 24, -24, 24, -24, 24],
+  "no_minus_residual_formula": "24*(-1)^n",
+  "Q_no_minus_evaluated_at_minus_one": 2688,
+  "minus_one_mode_amplitude": "1/112",
+  "ordinary_generating_function": "z^2(3+z-11z^2-33z^3)/((1-z^2)(1-11z)(1-2z+11z^2)(1+4z+11z^2))",
+  "interpretation": "The distance-4 endpoint sequence is the cyclic Hashimoto quotient; removing the -1 sheet leaves exactly the tetrahedral-sized alternating residue 24(-1)^n.",
+  "checks": {
+    "P_polynomial_correct": true,
+    "Q_no_minus_correct": true,
+    "endpoint_sequence_matches_BT638": true,
+    "full_recurrence_residual_zero": true,
+    "no_minus_residual_is_24_alternating": true,
+    "Q_minus_one_2688": true,
+    "sign_amplitude_1_over_112": true
+  },
+  "all_identities_hold": true
+}
