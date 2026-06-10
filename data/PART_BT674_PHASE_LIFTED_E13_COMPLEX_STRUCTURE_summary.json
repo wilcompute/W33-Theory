@@ -1,0 +1,23 @@
+{
+  "part": "BT674",
+  "title": "Phase-Lifted E1+E3 Complex Structure Test",
+  "status": "pushed",
+  "script": "analysis/bt674_phase_lifted_e13_complex_structure_test.py",
+  "dimension": "E1+E3 = 24+24 = 48 = 4*(6_short+6_long)",
+  "real_channel": {
+    "operator": "J = [[0,-I],[I,0]]",
+    "square": "J^2 = -I",
+    "interpretation": "real complex structure, not a reflection"
+  },
+  "phase_lift": {
+    "operator": "s = iJ",
+    "square": "s^2 = +I",
+    "interpretation": "complex/projective reflection surrogate"
+  },
+  "grading_check": "J anti-commutes with E1-E3, so it exchanges the two 24-dimensional halves.",
+  "verdict": {
+    "real_reflection_embedding": "FAIL",
+    "complex_projective_packet_embedding": "PASS"
+  },
+  "boundary": "This is an exact algebra model of the obstruction/repair, not a canonical numeric eigenspace basis extraction."
+}
