@@ -1,0 +1,11 @@
+{
+  "part": "BT707",
+  "title": "Selector to Fibonacci Braid Functor",
+  "local_code": "K33 classical [9,4,4] with beta1=4",
+  "register": "four Fibonacci two-state blocks, dimension 16",
+  "selector_chain": "24 valid Levi presentations -> 3 Fano channels -> 1 tomotope-hinge-selected presentation",
+  "block_rule": "each of the four K33 cycle-basis blocks carries one two-dimensional Fibonacci braid representation",
+  "braid_relation": "sigma1_i sigma2_i sigma1_i = sigma2_i sigma1_i sigma2_i on every block",
+  "commutation": "operators on distinct blocks commute",
+  "boundary": "This is a functor architecture; the final generator-respecting test must still compare local rectangle moves to selected Levi-lift braid words."
+}
