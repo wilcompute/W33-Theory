@@ -1,0 +1,13 @@
+{
+  "theorem": "BT747 E6 root map test",
+  "classA_psp": 540,
+  "classA_pgsp": 540,
+  "classB_psp": 540,
+  "same_class_AB": true,
+  "pairs_fixed_by_t0_typeA": 48,
+  "pairs_fixed_by_t0_typeB": 48,
+  "t0_fixed_points": 8,
+  "t0_fixed_lines": 6,
+  "reflection_class_size": 36,
+  "is_reflection": false
+}
