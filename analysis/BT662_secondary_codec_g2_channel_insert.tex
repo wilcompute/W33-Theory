@@ -1,0 +1,57 @@
+\subsection{Secondary Codec Relation and the Three-Pair Carrier Channel}
+
+The \(16\)-flag complement to the six regular \(S_4\) carriers has two distinct structures.  The first is the raw Levi-flag adjacency structure.  The verifier-level result is
+\[
+C_{16}^{\rm raw}\cong K_4\sqcup K_4\sqcup K_4\sqcup K_4,
+\]
+so the raw complement is not \(Q_4\).  Equivalently,
+\[
+160=6\cdot24+4\cdot4.
+\]
+This is the graph-theoretic statement inside the Levi flag graph.
+
+The second structure is a secondary codec structure.  Label the complement as a product
+\[
+C_{16}=A\times B,
+\qquad |A|=|B|=4,
+\qquad A\cong B\cong\mathbb F_2^2.
+\]
+The raw Levi relation is the within-cell relation
+\[
+(a,b)\sim_{\rm raw}(a,b'),\qquad b\ne b',
+\]
+which produces four copies of \(K_4\).  If one chooses square bases on both \(A\) and \(B\), the secondary product-codec relation is
+\[
+(a,b)\sim_{\rm codec}(a+\alpha,b),\qquad
+(a,b)\sim_{\rm codec}(a,b+\beta),
+\]
+for two basis directions \(\alpha\) in \(A\) and two basis directions \(\beta\) in \(B\).  This secondary graph is
+\[
+C_{16}^{\rm codec}\cong Q_4.
+\]
+Its antipodal quotient is
+\[
+Q_4/\{\pm\}\cong K_{4,4}.
+\]
+Thus the corrected chain is
+\[
+\boxed{4K_4\;\xrightarrow{\rm secondary\ codec}\;Q_4\;\xrightarrow{\rm antipodal}\;K_{4,4}.}
+\]
+
+The same correction clarifies the possible \(G_2\) channel.  The six regular \(24\)-flag \(S_4\) carriers split around the \(4K_4\) complement into three metric pairs:
+\[
+6=2_{\rm far}+2_{\rm middle}+2_{\rm active}.
+\]
+Aggregated over the \(16\)-flag complement, the distance profiles are
+\[
+\begin{array}{c|cccc}
+\text{carrier pair} & d_1 & d_2 & d_3 & d_4\\
+\hline
+\text{far} & 0 & 0 & 96 & 288\\
+\text{middle} & 0 & 48 & 192 & 144\\
+\text{active} & 24 & 96 & 120 & 144.
+\end{array}
+\]
+The cardinality matches a six-direction positive \(G_2\)-root packet, but the verified statement is only the metric split.  No Weyl-equivariant action on the six carriers is claimed at this stage.
+
+This separation is important: \(Q_4\) is a secondary codec relation, while \(4K_4\) is the raw Levi adjacency.  Likewise, the three-pair \(G_2\) reading is a candidate channel structure, while the proven theorem is the \(2+2+2\) metric decomposition.
