@@ -1,0 +1,19 @@
+{
+  "part": "BT672",
+  "title": "Executable K44 to K33 Frame Quotient Verifier",
+  "status": "pushed",
+  "script": "analysis/bt672_k44_frame_quotient_verifier.py",
+  "checks": {
+    "perfect_matchings_of_K44": 24,
+    "canonical_frame": "V4 subgroup of S4",
+    "frames": "six cosets S4/V4",
+    "frame_size": 4,
+    "each_frame_partitions_K44_edges": true,
+    "quotient_labels": "S4/V4 identified with S3 by conjugation on nontrivial V4 elements",
+    "frame_graph": "Cay(S3, transpositions) = K3,3",
+    "frame_graph_edges": 9,
+    "bipartition": "3+3",
+    "metric_matching_edges": 3
+  },
+  "boundary": "The verifier concerns the secondary frame quotient of K44, not raw Levi complement adjacency."
+}
