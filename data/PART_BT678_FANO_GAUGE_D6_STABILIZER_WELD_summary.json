@@ -1,0 +1,21 @@
+{
+  "part": "BT678",
+  "title": "Fano Gauge to D6 Stabilizer Weld",
+  "status": "pushed",
+  "script": "analysis/bt678_fano_gauge_d6_stabilizer_weld.py",
+  "diagonal_fano_gauges": ["011", "101", "110"],
+  "channels": ["far", "middle", "active"],
+  "gauge_channel_map": {
+    "011": "far",
+    "101": "middle",
+    "110": "active"
+  },
+  "k33_vertices": 6,
+  "k33_edges": 9,
+  "metric_matching_size": 3,
+  "s3_gauge_permutation_order": 6,
+  "global_side_flip_order": 2,
+  "stabilizer_order": 12,
+  "identification": "S3 x C2 = D6 = W(G2)",
+  "boundary": "Secondary carrier-label/frame quotient only; not raw 160-flag Levi action."
+}
