@@ -1,0 +1,33 @@
+{
+  "theorem": "BT739 Parity-Aggregate Bridge: canonical rank vs gauge defect",
+  "prime": 1000003,
+  "rectangles": 2160,
+  "unique_levi_8_cycles": 1620,
+  "levi_beta1": 81,
+  "chart81_dim": 81,
+  "R1": 239,
+  "R2": 81,
+  "R3": 81,
+  "R4": 77,
+  "R5_gauge_sweep": [
+    81,
+    81,
+    81,
+    81,
+    81
+  ],
+  "R6_per_channel": [
+    78,
+    78,
+    78
+  ],
+  "R7_per_parity": {
+    "w3": 77,
+    "w2": 77
+  },
+  "R8_unsigned_cycle": 81,
+  "R8_unsigned_flag": 77,
+  "verdict": "gauge_artifact",
+  "float_pilot_rank": 78,
+  "rep_theory_constraint": "PSp(4,3)=U4(2) minimal nontrivial irrep dim is 5; chart action transitive => no trivial subrep in chart81 => no equivariant 3-dim kernel possible"
+}
