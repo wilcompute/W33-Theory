@@ -1,0 +1,22 @@
+{
+  "bt": 644,
+  "title": "Internal S4 Levi flag action theorem",
+  "ambient_group": "PSp(4,3) on W33 Levi flags",
+  "ambient_order": 25920,
+  "subgroup": "S4",
+  "subgroup_order": 24,
+  "subgroup_class_signature": {"1": 1, "2": 9, "3": 8, "4": 6},
+  "levi_flag_orbit_profile": [8, 8, 24, 24, 24, 24, 24, 24],
+  "internal_regular_S4_carriers": 6,
+  "interpretation": "The tetrahedral 24-dimensional parity carrier is not merely external: six regular S4 carriers occur as actual orbits inside the 160 Levi flags.",
+  "checks": {
+    "ambient_projective_symplectic_order": true,
+    "s4_order": true,
+    "s4_class_signature": true,
+    "flag_total_160": true,
+    "six_regular_24_orbits": true,
+    "two_8_orbits": true,
+    "regular_orbit_carrier_dimension_24": true
+  },
+  "all_identities_hold": true
+}
