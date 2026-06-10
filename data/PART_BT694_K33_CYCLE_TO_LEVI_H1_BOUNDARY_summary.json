@@ -1,0 +1,18 @@
+{
+  "part": "BT694",
+  "title": "K33 Cycle Basis to Levi H1 Boundary",
+  "status": "pushed",
+  "script": "analysis/bt694_k33_cycle_to_levi_h1_boundary.py",
+  "planned_goal": "Map local [9,4,4] K33 cycle bases into Levi H1=81 and compute E4 overlap.",
+  "corrected_result": "No canonical map exists from K33 chart cycles into the 160-edge point-line Levi graph using only the chart data.",
+  "verified": {
+    "local_cycle_code": "[9,4,4]",
+    "rectangles_per_chart": 9,
+    "centered_charts": 240,
+    "centered_rectangles": 2160,
+    "rectangle_weight": 4,
+    "nonedge_multiplicity": "4=mu"
+  },
+  "reason": "K33 chart edges are W33 nonedges, not Levi flag-edges. A nonedge has mu=4 possible center/lift gauges, so an H1(Levi) embedding requires extra connector data.",
+  "boundary": "K33 cycle homology is a local nonedge-cycle layer. Levi H1=81 remains the point-line incidence cycle layer."
+}
