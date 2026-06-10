@@ -1,0 +1,43 @@
+\subsection{The Six-Carrier/Four-Cell Boundary Split}
+
+The internal tetrahedral trace carriers admit a sharper boundary decomposition than the first count-level statement.  The six regular internal \(S_4\)-orbits occupy \(6\cdot 24=144\) Levi flags, leaving a \(16\)-flag complement.  The corrected verifier-level statement is
+\[
+160=6\cdot 24+4\cdot 4.
+\]
+Here the \(6\cdot 24\) term is the union of six regular \(S_4\) sign carriers, while the \(4\cdot4\) term is not a raw \(Q_4\) under Levi-flag adjacency.  Instead, the induced complement graph is
+\[
+K_4\sqcup K_4\sqcup K_4\sqcup K_4.
+\]
+Equivalently, the complement consists of four complete W33 line fibers, each carrying four flags.
+
+This corrects the count-level \(Q_4\)-codec reading.  The number \(16\) still matches the codec-boundary scale used elsewhere in the tomotope/Fano layer, but the raw Levi flag graph does not realize that \(16\)-set as the \(4\)-cube.  Any \(Q_4\) relation must therefore be a secondary codec relation, not the Levi flag adjacency relation.
+
+The incidence of the four \(K_4\) complement cells against the six regular \(24\)-flag carriers is also rigid.  With respect to raw Levi flag adjacency, the four cells have the same carrier-incidence vector
+\[
+(0,0,6,0,6,0),
+\]
+so all distance-one contact is concentrated in one active pair of regular carriers.  The full distance profile recovers a three-pair structure:
+\[
+6=2_{\mathrm{far}}+2_{\mathrm{middle}}+2_{\mathrm{active}}.
+\]
+Aggregated over the \(16\)-flag complement, the three paired distance profiles are
+\[
+\begin{array}{c|cccc}
+\text{carrier pair} & d_1 & d_2 & d_3 & d_4\\
+\hline
+\text{far} & 0 & 0 & 96 & 288\\
+\text{middle} & 0 & 48 & 192 & 144\\
+\text{active} & 24 & 96 & 120 & 144
+\end{array}
+\]
+with each row occurring for two carriers.
+
+Thus the honest Levi-flag statement is not
+\[
+160=6\cdot24+16_{Q_4},
+\]
+but rather
+\[
+\boxed{160=6\cdot24+4\cdot4.}
+\]
+The remaining \(Q_4/K_{4,4}\) codec story, if used, must be stated as a secondary tomotope/Fano boundary labeling rather than as the induced Levi-flag complement graph.
