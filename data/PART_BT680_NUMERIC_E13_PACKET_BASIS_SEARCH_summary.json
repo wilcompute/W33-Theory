@@ -1,0 +1,19 @@
+{
+  "part": "BT680",
+  "title": "Numeric E1+E3 Packet-Basis Search Boundary",
+  "status": "pushed",
+  "script": "analysis/bt680_numeric_e13_packet_basis_search.py",
+  "sector_dimensions": {
+    "E1": 24,
+    "E3": 24,
+    "E1_plus_E3": 48
+  },
+  "target_packet_model": "4*(6_short+6_long)",
+  "dimension_match": true,
+  "canonical_numeric_packet_basis_found": false,
+  "obstruction": "Bose-Mesner sector data determines only 24+24 and the cross-channel complex structure J^2=-I; it does not canonically split each 24-sector as 4x6. A real W(G2) reflection requires square +I.",
+  "phase_lift_available": true,
+  "phase_lift": "iJ has square +I",
+  "next_needed_operator": "Explicit flag-level Fano-gauge/D6 selector or subgroup action splitting each 24-sector into four canonical hexagons.",
+  "boundary": "Necessary-condition / obstruction search; not a full numeric eigenspace extraction from the 160-flag matrices."
+}
