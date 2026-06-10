@@ -1,0 +1,21 @@
+{
+  "part": "BT690",
+  "title": "W33 Local K33 Chart Correction",
+  "status": "pushed",
+  "script": "analysis/bt690_w33_local_k33_chart_correction.py",
+  "parallel_hint": "BT689 claimed W(3,3) -> AG(2,3) -> K33 via point perp-planes.",
+  "correction": "For a point P in W(3,3), P^perp has 13 projective points, not 9: P plus four punctured lines of size 3.",
+  "repaired_chain": "W33 point -> perp pencil of 4 punctured lines -> choose 2 directions -> K33 virtual affine chart",
+  "counts": {
+    "points": 40,
+    "lines_through_point": 4,
+    "k33_charts_per_point": 6,
+    "centered_k33_charts": 240,
+    "edges_per_chart": 9,
+    "chart_edge_total": 2160,
+    "w33_nonedges": 540,
+    "centers_per_nonedge": 4
+  },
+  "identity": "40*C(4,2)*9 = 2160 = 4*540",
+  "boundary": "K33 is a local virtual affine chart from a pair of punctured perp-lines, not the whole P^perp set."
+}
