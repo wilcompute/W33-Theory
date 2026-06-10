@@ -1,0 +1,72 @@
+\subsection{Distance-4 Hashimoto Endpoint Recurrence}
+\label{subsec:bt639-distance4-hashimoto-endpoint-recurrence}
+
+Let \(B\) be the directed Hashimoto operator on the \(480\) oriented edges of the
+\(12\)-regular W33 collinearity graph, and let
+\[
+T:(p\to q)\longmapsto (p,\ell(p,q))
+\]
+be the natural fold from directed W33 edges to the \(160\) Levi flags.  Set
+\[
+F_n=TB^nT^{\top}.
+\]
+The fold satisfies
+\[
+TT^{\top}=3I_{160},
+\]
+so each Levi flag receives exactly three directed W33 edges.
+
+BT638 verifies that the terminal shell of the Levi flag graph is radial for every
+computed step \(0\le n\le 10\).  If \(\rho(f,g)=4\), then
+\[
+(F_n)_{fg}=e_n,
+\]
+where
+\[
+(e_0,e_1,e_2,e_3,e_4,e_5,e_6,e_7,e_8,e_9,e_{10})
+=
+(0,0,3,28,268,3000,33195,365480,4020568,44210368,486310803).
+\]
+The earlier cubic endpoint result appears as
+\[
+e_3=28=\mu=v-k.
+\]
+
+The new point is that this endpoint sequence is not an isolated numerology.  It
+is governed by the full W33 Hashimoto/Ihara characteristic polynomial
+\[
+\boxed{
+(x-11)(x-1)(x+1)(x^2-2x+11)(x^2+4x+11).
+}
+\]
+Equivalently, for \(n\ge7\),
+\[
+\boxed{
+\begin{aligned}
+&e_n-9e_{n-1}-9e_{n-2}-123e_{n-3}-113e_{n-4}\\
+&\qquad -1199e_{n-5}+121e_{n-6}+1331e_{n-7}=0.
+\end{aligned}
+}
+\]
+The ordinary generating function is
+\[
+\boxed{
+\sum_{n\ge0}e_nz^n
+=\frac{z^2(3+z-11z^2-33z^3)}{(1-z^2)(1-11z)(1-2z+11z^2)(1+4z+11z^2)}.
+}
+\]
+
+If the \(-1\) trivial Hashimoto sheet is omitted, the same endpoint sequence
+leaves the alternating residual
+\[
+\boxed{24,-24,24,-24,24,\ldots}
+\]
+in the tested range.  Thus the terminal distance-4 shell retains the full
+Ihara spectrum, while the remaining obstruction before Hodge projection is a
+single parity sheet.  This explains why the protected Hodge block later reduces
+the folded flow to the small parity clock
+\[
+E_4F_nE_4=E_4\quad(n\;\mathrm{odd}),
+\qquad
+E_4F_nE_4=3E_4\quad(n\;\mathrm{even}).
+\]
