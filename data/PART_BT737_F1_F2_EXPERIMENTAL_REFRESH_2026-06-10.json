@@ -1,0 +1,79 @@
+{
+  "theorem": "BT737 F1/F2 Experimental Refresh",
+  "retrieval_date": "2026-06-10",
+  "policy": "This file is a dated external refresh artifact. It records source classes, conventions, values, uncertainties, comparison formulae, verdicts, and caveats. It does not promote repo-internal claims to established experimental agreement unless the comparison convention is explicit.",
+  "rows": [
+    {
+      "id": "F1",
+      "observable": "weak mixing angle",
+      "project_formula": "sin^2(theta_W)=3/13",
+      "project_value": 0.23076923076923078,
+      "external_source_class": "Z-pole effective leptonic weak mixing angle measurements and reviews",
+      "external_refresh_sources": [
+        {
+          "source": "CMS Drell-Yan forward-backward asymmetry, arXiv:2405.11484",
+          "convention": "effective leptonic weak mixing angle sin^2(theta_eff^ell)",
+          "value": 0.23157,
+          "uncertainty": 0.00031,
+          "note": "Hadron-collider Z-pole effective-leptonic extraction."
+        },
+        {
+          "source": "Bodek/Seo/Yang 2025 review/extraction, arXiv:2508.18022",
+          "convention": "effective leptonic weak mixing angle sin^2(theta_eff^ell)",
+          "value": 0.23153,
+          "uncertainty": 0.00023,
+          "standard_model_prediction_reported": 0.23161,
+          "standard_model_prediction_uncertainty_reported": 0.00004,
+          "note": "Review and updated extraction using CMS A_FB plus PDF profiling."
+        }
+      ],
+      "comparison": {
+        "against_value": 0.23153,
+        "difference_project_minus_external": -0.0007607692307692304,
+        "absolute_difference": 0.0007607692307692304,
+        "sigma_using_external_uncertainty_only": 3.3076923076926105
+      },
+      "verdict": "not_agreement_under_effective_leptonic_z_pole_convention",
+      "caveat": "Weak mixing angle comparisons are convention and scale sensitive. The project value 3/13 may still be intended as a different scheme/normalization, but under sin^2(theta_eff^ell) at the Z pole it is outside the quoted current uncertainties."
+    },
+    {
+      "id": "F2",
+      "observable": "strong coupling alpha_s",
+      "project_formula": "alpha_s=20/169",
+      "project_value": 0.11834319526627218,
+      "external_source_class": "strong coupling alpha_s(m_Z) determinations, including global PDF/lattice/world-average references",
+      "external_refresh_sources": [
+        {
+          "source": "NNPDF 2025 global PDF determination, arXiv:2506.13871",
+          "convention": "alpha_s(m_Z) at approximate N3LO_QCD x NLO_QED accuracy",
+          "value": 0.1194,
+          "uncertainty_plus": 0.0007,
+          "uncertainty_minus": 0.0014,
+          "note": "Recent global-PDF extraction, stated to be consistent with latest PDG average and recent lattice results."
+        },
+        {
+          "source": "FLAG Review 2024, arXiv:2411.04268",
+          "convention": "lattice determinations review of alpha_s",
+          "note": "Used here as source-class confirmation for lattice alpha_s refresh, not as a single quoted world-average value in this compact artifact."
+        },
+        {
+          "source": "d'Enterria alpha_s review 2016, arXiv:1606.04772",
+          "convention": "world average alpha_s(m_Z^2)",
+          "value": 0.1181,
+          "uncertainty": 0.0013,
+          "note": "Older review value retained as a broad historical cross-check, not as the current controlling datum."
+        }
+      ],
+      "comparison": {
+        "against_value": 0.1194,
+        "difference_project_minus_external": -0.0010568047337278126,
+        "absolute_difference": 0.0010568047337278126,
+        "within_asymmetric_nnpdf_interval": true,
+        "against_historical_world_average": 0.1181,
+        "historical_difference_project_minus_external": 0.00024319526627218008
+      },
+      "verdict": "plausibly_consistent_under_alpha_s_mZ_convention_but_needs_PDG_or_lattice_average_refresh",
+      "caveat": "The 20/169 value is close to alpha_s(m_Z)-scale determinations. A final public claim should refresh directly against the latest PDG QCD review and a current lattice average table with the same running convention."
+    }
+  ]
+}
