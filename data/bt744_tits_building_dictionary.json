@@ -1,0 +1,21 @@
+{
+  "theorem": "BT744 Tits building dictionary",
+  "dictionary": {
+    "Levi graph": "Tits building of Sp(4,3), type C2 = GQ(3,3)",
+    "flags": "chambers (160)",
+    "Levi 8-cycles": "apartments (1620 = 51840/32)",
+    "Hodge E4 / chart81": "Solomon-Tits Steinberg module (dim 81)",
+    "selector sheets": "apartment systems",
+    "BT718 hinge rule": "canonical apartment choice"
+  },
+  "octagons": 1620,
+  "transitive": true,
+  "stabilizer_order_psp": 16,
+  "apartments_per_chamber": 81,
+  "solomon_tits_span_rank_f2": 81,
+  "solomon_tits_span_rank_modp": 81,
+  "steinberg_vanishing_violations": 0,
+  "three_singular_elements": 16640,
+  "three_regular_elements": 9280,
+  "regular_module_corollary": "St|Sylow3 = F[U] regular, U = Sylow-3 of order 81 = q^mu"
+}
