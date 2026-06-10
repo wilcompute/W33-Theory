@@ -1,0 +1,143 @@
+{
+  "theorem": "BT741 Selector-glued global register",
+  "ambient_dim": 960,
+  "bt718_sheet": {
+    "records": 2160,
+    "distinct_cycles": 710,
+    "multiplicity": {
+      "1": 181,
+      "2": 255,
+      "3": 30,
+      "4": 111,
+      "5": 12,
+      "6": 59,
+      "7": 2,
+      "8": 50,
+      "10": 3,
+      "11": 7
+    },
+    "relation_rank": 858,
+    "global_dim": 102,
+    "components": 56,
+    "component_dims": {
+      "1": 42,
+      "2": 11,
+      "3": 2,
+      "32": 1
+    }
+  },
+  "mask_1110_bundle": {
+    "records": 6480,
+    "distinct_cycles": 1306,
+    "multiplicity": {
+      "1": 79,
+      "2": 258,
+      "3": 96,
+      "4": 261,
+      "5": 120,
+      "6": 151,
+      "7": 41,
+      "8": 153,
+      "9": 30,
+      "10": 54,
+      "11": 33,
+      "12": 27,
+      "13": 3
+    },
+    "relation_rank": 956,
+    "global_dim": 4,
+    "components": 1,
+    "component_dims": {
+      "4": 1
+    }
+  },
+  "type_a_bundle": {
+    "records": 25920,
+    "distinct_cycles": 1620,
+    "multiplicity": {
+      "16": 1620
+    },
+    "relation_rank": 960,
+    "global_dim": 0,
+    "components": 1,
+    "component_dims": {
+      "0": 1
+    }
+  },
+  "type_b_bundle": {
+    "records": 25920,
+    "distinct_cycles": 1620,
+    "multiplicity": {
+      "16": 1620
+    },
+    "relation_rank": 960,
+    "global_dim": 0,
+    "components": 1,
+    "component_dims": {
+      "0": 1
+    }
+  },
+  "per_mask_bundles": {
+    "1110": {
+      "distinct_cycles": 1306,
+      "relation_rank": 956,
+      "global_dim": 4,
+      "components": 1
+    },
+    "1101": {
+      "distinct_cycles": 1458,
+      "relation_rank": 945,
+      "global_dim": 15,
+      "components": 11
+    },
+    "1011": {
+      "distinct_cycles": 1320,
+      "relation_rank": 950,
+      "global_dim": 10,
+      "components": 11
+    },
+    "0111": {
+      "distinct_cycles": 1290,
+      "relation_rank": 952,
+      "global_dim": 8,
+      "components": 1
+    },
+    "1100": {
+      "distinct_cycles": 1495,
+      "relation_rank": 960,
+      "global_dim": 0,
+      "components": 1
+    },
+    "1001": {
+      "distinct_cycles": 1318,
+      "relation_rank": 956,
+      "global_dim": 4,
+      "components": 2
+    },
+    "0110": {
+      "distinct_cycles": 1490,
+      "relation_rank": 958,
+      "global_dim": 2,
+      "components": 1
+    },
+    "0011": {
+      "distinct_cycles": 1535,
+      "relation_rank": 960,
+      "global_dim": 0,
+      "components": 1
+    }
+  },
+  "all_24_sheets": {
+    "records": 51840,
+    "distinct_cycles": 1620,
+    "multiplicity": {
+      "32": 1620
+    },
+    "relation_rank": 960,
+    "global_dim": 0,
+    "components": 1,
+    "component_dims": {
+      "0": 1
+    }
+  }
+}
