@@ -1,0 +1,37 @@
+\subsection{Ihara--Bose--Mesner--Fano Synthesis Bridge}
+\label{subsec:bt647-synthesis-bridge}
+
+The current stack has a single descent chain:
+\[
+\boxed{
+W33\text{ incidence}
+\to
+480\text{ directed arcs}
+\to
+160\text{ Levi flags}
+\to
+E_4\text{ Hodge idempotent}
+\to
+\text{period-two clock plus internal }S_4\text{ sign packets.}
+}
+\]
+The directed nonbacktracking carrier has outdegree \(11\), while the natural fold
+maps those arcs to the \(160\) Levi flags.  The Levi flag graph is a four-class
+Bose--Mesner scheme, and its protected idempotent \(E_4\) has rank \(81\).
+
+The endpoint recurrence has polynomial
+\[
+P(x)=(x-11)(x-1)(x+1)(x^2-2x+11)(x^2+4x+11).
+\]
+Removing the minus sheet leaves the residual trace
+\[
+\boxed{24(-1)^n.}
+\]
+The internal \(S_4\)-carrier realizes this trace inside the Levi flag module,
+while the Hodge projection records the protected clock
+\[
+\boxed{E_4F_nE_4=(2+(-1)^n)E_4.}
+\]
+Thus Ihara growth folds to Bose--Mesner flag geometry, Bose--Mesner geometry
+projects to Hodge \(H_1\), and the remaining sign sheet is carried internally by
+tetrahedral \(S_4\) parity.
