@@ -1,0 +1,23 @@
+{
+  "bt": 641,
+  "title": "Endpoint recurrence to E4 clock lift",
+  "endpoint_sequence": [0, 0, 3, 28, 268, 3000, 33195, 365480, 4020568, 44210368, 486310803],
+  "E4_scalar_sequence": [3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3],
+  "E4_trace_sequence": [243, 81, 243, 81, 243, 81, 243, 81, 243, 81, 243],
+  "distance4_ordered_pairs": 12960,
+  "endpoint_mass_n3": 362880,
+  "endpoint_mass_n3_reading": "12960*28=362880=9!",
+  "alternating_24_sheet": [24, -24, 24, -24, 24, -24, 24, -24, 24, -24, 24],
+  "alternating_24_E4_component": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "interpretation": "The full endpoint recurrence is large, while the E4 block records only the 3/1 clock; the alternating 24 sheet is external to E4.",
+  "checks": {
+    "distance4_pairs": true,
+    "endpoint_n3": true,
+    "endpoint_mass_n3": true,
+    "e4_scalar_pattern": true,
+    "e4_trace_n3": true,
+    "alt24_pattern": true,
+    "alt24_e4_zero": true
+  },
+  "all_identities_hold": true
+}
