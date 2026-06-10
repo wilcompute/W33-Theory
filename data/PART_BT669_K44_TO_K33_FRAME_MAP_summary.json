@@ -1,0 +1,40 @@
+{
+  "part": "BT669",
+  "title": "Explicit K44 to K33 Frame Map",
+  "status": "pushed",
+  "raw_boundary": "The raw 16-flag complement remains 4K4, not Q4.",
+  "chain": [
+    "4K4 raw complement",
+    "secondary Q4 product codec",
+    "antipodal K44 quotient",
+    "24 perfect matchings of K44",
+    "6 one-factorization frames S4/V4",
+    "K33 = Cay(S3, transpositions)",
+    "Aut(K33, metric matching) ~= D6 ~= W(G2)"
+  ],
+  "fano_chart": {
+    "odd_generators": ["001", "010", "100", "111"],
+    "even_side": ["000", "011", "101", "110"],
+    "diagonal_axis_to_channel": {
+      "011": "far",
+      "101": "middle",
+      "110": "active"
+    }
+  },
+  "matching_model": {
+    "perfect_matchings": 24,
+    "perfect_matching_group_model": "S4 after choosing an origin and identifying sides",
+    "canonical_frame": "V4 = {(), (12)(34), (13)(24), (14)(23)}",
+    "frames": 6,
+    "frame_quotient": "S4/V4 ~= S3"
+  },
+  "k33_model": {
+    "vertices": "six elements of S3",
+    "edges": "g--h iff g^{-1}h is a transposition",
+    "graph": "K3,3",
+    "bipartition": "even S3 elements | odd S3 elements",
+    "metric_matching": ["F+--F-", "M+--M-", "A+--A-"],
+    "matching_stabilizer": "D6 ~= W(G2), order 12"
+  },
+  "honesty_boundary": "This is a secondary codec/frame quotient, not a raw Levi-flag Q4 and not a real W(G2) action on all 160 Levi flags."
+}
