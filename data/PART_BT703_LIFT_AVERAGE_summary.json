@@ -1,0 +1,12 @@
+{
+  "part": "BT703",
+  "title": "Lift Average Balance",
+  "rows": 2160,
+  "columns": 1620,
+  "row_sum": 24,
+  "column_sum": 32,
+  "total": 51840,
+  "identity": "2160*24=51840=1620*32",
+  "result": "The all-lift correspondence is balanced, while BT702 coordinate selection is not balanced.",
+  "boundary": "This is an averaged correspondence. The BT699 24-to-3-to-1 geometric selector is still required for a one-lift map."
+}
