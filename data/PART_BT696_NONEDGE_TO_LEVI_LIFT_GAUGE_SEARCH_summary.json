@@ -1,0 +1,17 @@
+{
+  "part": "BT696",
+  "title": "Nonedge-to-Levi Lift Gauge Search",
+  "status": "pushed",
+  "script": "analysis/bt696_nonedge_to_levi_lift_gauge_search.py",
+  "parallel_hints": ["BT701-BT712 exact q=3 frontier constants", "BT690-BT694 K33 local chart correction"],
+  "result": {
+    "centered_k33_rectangles": 2160,
+    "valid_lifts_per_rectangle": 24,
+    "valid_lift_presentations": 51840,
+    "unique_levi_8_cycles": 1620,
+    "presentations_per_levi_8_cycle": 32
+  },
+  "identity": "2160*24 = 51840 = 1620*32",
+  "interpretation": "Every local K33 rectangle admits 24 center-gauge lifts to a simple Levi 8-cycle; all lifts collapse exactly onto the known 1620 Levi 8-cycles.",
+  "boundary": "This is a presentation-level lift functor; it does not choose a unique canonical lift for each K33 rectangle."
+}
