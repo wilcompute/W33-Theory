@@ -1,0 +1,1 @@
+{"theorem":"BT725 BT719 Preprint Integration Sanity","source_exists":true,"section_exists":true,"integrator_exists":true,"preprint_marker_exists":true,"safe_to_run_integrator":true,"run_command":"python tools/integrate_bt719.py","postcondition":"BT719 section is inserted before TOE Singularity exactly once."}
