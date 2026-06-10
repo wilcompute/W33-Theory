@@ -1,0 +1,17 @@
+{
+  "part": "BT682",
+  "title": "Secondary G2 Synthesis Insert",
+  "status": "pushed",
+  "insert": "analysis/BT682_secondary_g2_synthesis_insert.tex",
+  "integrator": "tools/integrate_bt682_insert.py",
+  "canonical_chain": "4K4 -> Q4 -> K44 -> Match(K44) -> S4/V4 -> K33 -> D6 ~= W(G2)",
+  "raw_boundary": "C16_raw = K4 disjoint union K4 disjoint union K4 disjoint union K4; Q4 is secondary, not raw Levi adjacency.",
+  "fano_gauge_weld": {
+    "011": "far",
+    "101": "middle",
+    "110": "active"
+  },
+  "metric_matching_stabilizer": "Aut(K3,3, M_metric) ~= S3 x C2 ~= D6 ~= W(G2)",
+  "packet_boundary": "E1+E3 = 48 = 4*(6_short+6_long) dimensionally, but J^2=-I obstructs a real Weyl reflection; phase lift iJ repairs square only projectively.",
+  "selector_boundary": "BT681 supplies representation-level 24=4*3*2 selector algebra; numeric eigenspace intertwiner remains open."
+}
