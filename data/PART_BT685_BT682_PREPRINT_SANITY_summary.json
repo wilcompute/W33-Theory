@@ -1,0 +1,17 @@
+{
+  "part": "BT685",
+  "title": "BT682 Preprint Sanity Checker",
+  "status": "pushed",
+  "script": "analysis/bt685_bt682_preprint_sanity_checker.py",
+  "checks": [
+    "BT682 source insert exists",
+    "BT682 integrator exists",
+    "raw 4K4 correction present",
+    "secondary Q4/K44/K33/D6/W(G2) chain present",
+    "J^2=-I obstruction present",
+    "phase lift (iJ)^2=+I present",
+    "preprint input line count is 0 or 1; never duplicated"
+  ],
+  "current_preprint_observation": "paper/w33_preprint.tex on master did not yet show BT682 input in the fetched content; checker reports if integrator still needs to be run.",
+  "boundary": "Static checker only; does not compile LaTeX."
+}
