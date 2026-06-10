@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BT700 — Chart-overlap idempotent extraction.
+BT700 — Chart-overlap idempotent extraction, corrected.
 
 BT697 built the 240-vertex graph Gamma_K on local K33 charts, with adjacency
 when two charts share one W33 nonedge.  Its spectrum contains (-1)^81.
@@ -12,14 +12,16 @@ Let H be the 240 x 540 chart/nonedge incidence matrix:
 Then:
     H H^T = 9 I + A_Gamma.
 
-Therefore the (-1)-eigenspace of A_Gamma is exactly the zero eigenspace of
-H H^T, i.e. the left-nullspace of H.  This gives an intrinsic 81-dimensional
-chart-balance sector.
+Corrected interpretation:
+  The (-1)-eigenspace of A_Gamma is the 8-eigenspace of H H^T, not the
+  zero-eigenspace.  The zero eigenspace of H H^T has dimension 35, coming from
+  the (-9)-eigenspace of A_Gamma.  Thus the 81-dimensional chart sector is a
+  real positive-energy incidence sector, not a left-nullspace.
 
 Result:
-    rank(H)=159,
-    dim ker(H^T)=240-159=81,
-    spec(HH^T)=36^1, 18^24, 12^75, 8^35, 6^24, 0^81.
+    rank(H)=205,
+    dim ker(H^T)=240-205=35,
+    spec(HH^T)=36^1, 18^24, 12^75, 8^81, 6^24, 0^35.
 
 Boundary:
     This is a real 81-sector in the local K33 chart-overlap layer. It is not
@@ -102,27 +104,28 @@ def main() -> None:
     assert set(A[np.triu_indices(240,1)]) <= {0,1}
 
     rankH = np.linalg.matrix_rank(H)
-    assert rankH == 159
-    assert 240-rankH == 81
+    assert rankH == 205
+    assert 240-rankH == 35
 
     eval_A = Counter(round(float(x), 8) for x in np.linalg.eigvalsh(A))
     expected_A = Counter({27.0:1, 9.0:24, 3.0:75, -1.0:81, -3.0:24, -9.0:35})
     assert eval_A == expected_A
 
     eval_G = Counter(round(float(x), 8) for x in np.linalg.eigvalsh(G))
-    expected_G = Counter({36.0:1, 18.0:24, 12.0:75, 8.0:35, 6.0:24, 0.0:81})
+    expected_G = Counter({36.0:1, 18.0:24, 12.0:75, 8.0:81, 6.0:24, 0.0:35})
     assert eval_G == expected_G
 
-    print("BT700 chart-overlap idempotent extraction: PASS")
+    print("BT700 chart-overlap idempotent extraction, corrected: PASS")
     print("charts=240")
     print("nonedges=540")
     print("row_weight=9")
     print("column_weight=4")
     print("identity=HHT=9I+A_Gamma")
-    print("rank_H=159")
-    print("left_nullity=81")
+    print("rank_H=205")
+    print("left_nullity=35")
+    print("chart_81_sector=A_Gamma eigenvalue -1 = HHT eigenvalue 8")
     print("chart_spectrum_A=27^1,9^24,3^75,-1^81,-3^24,-9^35")
-    print("chart_incidence_spectrum_HHT=36^1,18^24,12^75,8^35,6^24,0^81")
+    print("chart_incidence_spectrum_HHT=36^1,18^24,12^75,8^81,6^24,0^35")
     print("boundary=chart 81-sector is not automatically Levi E4 without a lift selector")
 
 
