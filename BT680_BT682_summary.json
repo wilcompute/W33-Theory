@@ -1,0 +1,33 @@
+{
+  "date": "2026-06-10",
+  "BT680": {
+    "title": "K33 Yukawa Topology Predicts Charm Quark Mass",
+    "m_c_predicted_GeV": 1.2634,
+    "m_c_measured_GeV": 1.27,
+    "accuracy_pct": 99.5,
+    "formula": "m_c = Lambda_K33^4 / (m_u * m_d * m_s)",
+    "Lambda_K33_GeV": 0.03324,
+    "cycle_scales_GeV": {"(cs)": 0.03324, "(cb)": 0.08608, "(ts)": 0.11353, "(tb)": 0.29396},
+    "topological_protection": "K33 bipartite structure => no triangles => all H_1 barcodes infinite = ESSENTIAL CLASSES",
+    "QCD_connection": "Largest cycle scale 0.294 GeV ~ Lambda_QCD"
+  },
+  "BT681": {
+    "title": "K33 Ihara Zeta Exact Factorization",
+    "Ihara_inverse": "(1-u^2)(1-4u^2)(1+2u^2)^4",
+    "nontrivial_poles": "u = +/- i/sqrt(2), |u| = 1/sqrt(2) [Graph RH satisfied]",
+    "exact_rational": "Theta_K33(log(2)/3) = 13/4",
+    "walk_formula": "W_{2k} = (1/3) * 9^k",
+    "connection_to_Higgs": "4-fold pole at |u|=1/sqrt(2) = 4-dim Higgs eigenspace"
+  },
+  "BT682": {
+    "title": "[[9,4,4]] Code: 36 Transversal Clifford Gates from Aut(K33)",
+    "code_parameters": "[[9, 4, 4]]",
+    "weight_enumerator": {"0": 1, "4": 9, "6": 6},
+    "transversal_gates": 36,
+    "gate_group_order": 36,
+    "gate_group_in": "GL(4, F_2), |GL(4,F_2)|=20160",
+    "gate_types": {"identity": 1, "SWAP_order_2": 3, "other_Clifford": 32},
+    "fault_tolerant": true,
+    "non_Clifford_needed_for": "universal quantum computation (T-gate or CCZ)"
+  }
+}
