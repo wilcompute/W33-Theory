@@ -1,0 +1,22 @@
+{
+  "part": "BT698",
+  "title": "Fibonacci Functor Prototype",
+  "status": "pushed",
+  "script": "analysis/bt698_fibonacci_functor_prototype.py",
+  "input": "H1(K33;F2) with K33 cycle code [9,4,4]",
+  "construction": {
+    "spanning_tree": "row-0 star plus column-0 spine",
+    "cycle_basis_chords": [[1,1], [1,2], [2,1], [2,2]],
+    "basis_cycles": "four rectangles",
+    "cycle_code_dimension": 4,
+    "cycle_code_states": 16,
+    "minimum_cycle_weight": 4
+  },
+  "fibonacci_register": {
+    "fixed_total_four_anyon_block_dimension": 2,
+    "blocks_for_full_cycle_code": 4,
+    "tensor_hilbert_dimension": 16
+  },
+  "prototype_functor": "F2^4 cycle bits -> computational basis of (C^2_Fib)^tensor4",
+  "boundary": "Register functor only. A braid-word/representation functor from K33 moves or automorphisms into Fibonacci braid matrices remains open."
+}
