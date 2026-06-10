@@ -1,0 +1,53 @@
+{
+  "contract": {
+    "theorem": "BT751 root-natural selector harness",
+    "total_rectangles": 2160,
+    "root_triples": 540,
+    "chiralities": 2,
+    "inner_centralizer_half_fiber": 48,
+    "local_lifts_per_rectangle": 24,
+    "chiral_lifts_per_rectangle": 12,
+    "dihedral_phases_per_chirality": 6,
+    "duo_bits_per_phase": 2,
+    "expected_selected_rows": 2160,
+    "expected_rank_mod_1000003": 81,
+    "expected_hits_per_root_triple": 4,
+    "expected_global_register_dim": 4
+  },
+  "candidate_parameters": {
+    "chirality": "Type-A or Type-B",
+    "dihedral_phase": "0..5 within the selected reflection class",
+    "duo_bit": "0 or 1, the r^6 central-half-turn coordinate",
+    "base_pair": "presentation-pair key used to trivialize torsor coordinates"
+  },
+  "required_tests": {
+    "T1_one_lift_per_rectangle": {
+      "expected_selected_rows": 2160,
+      "pass_condition": "exactly one selected lift for each of 2160 rectangles"
+    },
+    "T2_rank": {
+      "expected_rank_mod_1000003": 81,
+      "pass_condition": "signed selector matrix has rank 81 over GF(1000003)"
+    },
+    "T3_root_uniformity": {
+      "expected_distribution": {"4": 540},
+      "pass_condition": "every one of 540 root-triple fibers is hit exactly 4 times"
+    },
+    "T4_gluing_flatness": {
+      "expected_global_register_dim": 4,
+      "pass_condition": "BT741-style gluing quotient is connected and leaves F2^4"
+    },
+    "T5_chirality_stability": {
+      "pass_condition": "all selected lifts lie in one absolute chirality torsor"
+    },
+    "T6_apartment_noncollapse": {
+      "pass_condition": "central half-turn duo partners are not identified as the same octagon"
+    }
+  },
+  "necessary_local_choice": {
+    "phase_only_choices_per_rectangle": 2,
+    "phase_plus_duo_choices_per_rectangle": 1,
+    "reason": "BT750 shows the two phase-duo partners are r^6-related but present different Levi octagons; selecting a reflection/phase leaves two apartments unless the duo bit is also fixed."
+  },
+  "boundary": "This is a verifier harness/specification. It does not assert that a candidate already passes T1--T6; it pins down what the next heavy coordinate enumerator must prove."
+}
