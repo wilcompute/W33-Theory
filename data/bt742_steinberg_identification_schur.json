@@ -1,0 +1,73 @@
+{
+  "theorem": "BT742 chart81 = LeviE4 = Steinberg; uniqueness = Schur",
+  "group_order_psp43": 25920,
+  "gap_character_degrees_u42": [
+    [
+      1,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      15,
+      2
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      24,
+      1
+    ],
+    [
+      30,
+      3
+    ],
+    [
+      40,
+      2
+    ],
+    [
+      45,
+      2
+    ],
+    [
+      60,
+      1
+    ],
+    [
+      64,
+      1
+    ],
+    [
+      81,
+      1
+    ]
+  ],
+  "chi_E4_degree": 81,
+  "norm_chi_E4": 1,
+  "trivial_in_E4": 0,
+  "mult_St_in_chart_module": 1,
+  "commutant_dim_chart_module": 12,
+  "orbits_on_charts": 1,
+  "commutant_dim_flag_module": 8,
+  "orbits_on_flags": 1,
+  "w33_scheme_rank": 3,
+  "consequences": [
+    "LeviE4 = Steinberg (unique deg-81 irrep of U4(2))",
+    "chart81 = Steinberg (multiplicity one + eigenspace dims)",
+    "BT720 uniqueness = Schur's lemma",
+    "BT739 full rank = Schur's lemma"
+  ]
+}
