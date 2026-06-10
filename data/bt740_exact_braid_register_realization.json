@@ -1,0 +1,28 @@
+{
+  "theorem": "BT740 Exact braid realization of K33 register moves",
+  "field": "Q(zeta_10), exact polynomial arithmetic mod Phi_10",
+  "gauge": "diag(1, sqrt(phi)) conjugation removes sqrt(phi); F' rational in phi",
+  "sigma1": "diag(zeta^4, -zeta^2)",
+  "sigma1_pow5": "Z exactly",
+  "sigma1_pow10": "I exactly",
+  "sigma2_pow5": "F' Z F' exactly",
+  "one_block_exact_gate_group": "infinite dihedral <Z, F'ZF'>",
+  "rotation_trace": "6 - 4*phi",
+  "rotation_cos": "3 - 2*phi = -phi^-3, not a rational-pi cosine in Q(sqrt5)",
+  "register_hom": "(Z2)^4 -> U(16), faithful, exact",
+  "rectangle_class_weights": {
+    "1": 4,
+    "2": 4,
+    "4": 1
+  },
+  "braid_word_lengths": [
+    5,
+    10,
+    20
+  ],
+  "x_nogo_max_word_length": 10,
+  "x_nogo_min_projective_distance": 0.15947537891139818,
+  "x_nogo_words_searched": 6172,
+  "closes": "BT707 generator-respecting boundary",
+  "mechanism": "dual encoding makes Z (= sigma^5, exact) the bit flip"
+}
