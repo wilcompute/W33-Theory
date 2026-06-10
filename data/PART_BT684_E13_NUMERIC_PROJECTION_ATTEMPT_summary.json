@@ -1,0 +1,22 @@
+{
+  "part": "BT684",
+  "title": "E1+E3 Numeric Projection / Intertwiner Attempt",
+  "status": "pushed",
+  "script": "analysis/bt684_e13_numeric_projection_intertwiner_attempt.py",
+  "builds": [
+    "W(3,3) as symplectic polar graph on PG(3,3)",
+    "40 GQ lines as K4 cliques",
+    "160 Levi flags and their line graph",
+    "primitive eigenspaces of Levi flag adjacency"
+  ],
+  "expected_levi_flag_multiplicities": [1, 24, 30, 24, 81],
+  "carrier": "BT648 canonical O0 24-flag S4 carrier",
+  "packet_blocks": "O0 split into four 6-flag blocks",
+  "diagnostics": [
+    "project carrier indicator into both 24-dimensional sectors",
+    "project four 6-block indicators into both 24-dimensional sectors",
+    "project 24 singleton indicators into both 24-dimensional sectors"
+  ],
+  "canonical_intertwiner_found": false,
+  "boundary": "Executable numeric projection-rank diagnostic only. It depends on matching the BT648 flag order to the rebuilt Levi flag order and does not yet identify a canonical E1/E3 packet basis."
+}
