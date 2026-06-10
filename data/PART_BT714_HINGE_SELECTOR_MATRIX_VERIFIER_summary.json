@@ -1,0 +1,16 @@
+{
+  "theorem": "BT714 Hinge Selector Matrix Verifier",
+  "hinge_mask": "1110",
+  "hinge_residual_channel": 0,
+  "centered_k33_rectangles": 2160,
+  "local_k33_charts": 240,
+  "levi_flag_columns": 160,
+  "levi_beta1": 81,
+  "selected_sheet_rank": 81,
+  "selected_chart_row_rank": 81,
+  "levi_incidence_rank": 79,
+  "rank_sum_incidence_plus_selector": 160,
+  "boundary_defective_rows": 0,
+  "interpretation": "The chosen hinge selector sheet spans the full Levi cycle space, hence the E4/H1 sector.",
+  "boundary": "This is a rank-complete executable hinge representative, not a uniqueness theorem."
+}
