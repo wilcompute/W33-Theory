@@ -1,0 +1,24 @@
+{
+  "part": "BT671",
+  "title": "Phase-Lifted W(G2) Packet Embedding into E1+E3",
+  "status": "pushed",
+  "dimension_check": "E1+E3 = 24+24 = 48 = 4*(6_short+6_long)",
+  "obstruction": {
+    "real_reflection_requires": "s^2 = +I",
+    "folded_cubic_channel": "J^2 = -I",
+    "real_embedding": "fails"
+  },
+  "phase_lift": {
+    "definition": "s = iJ",
+    "result": "(iJ)^2 = +I",
+    "embedding_type": "complex/projective"
+  },
+  "packet_model": "(E1+E3) tensor C ~= C^4 tensor (C^6_short direct_sum C^6_long)",
+  "wg2_action": "External W(G2) ~= D6 acts on the G2 root packet factor and trivially on C^4.",
+  "compatibility": "The six-frame K33 quotient has metric-matching stabilizer D6 ~= W(G2), matching the external packet after the phase lift.",
+  "verdict": {
+    "real_flag_level_embedding": "FAIL",
+    "complex_projective_packet_embedding": "PASS"
+  },
+  "boundary": "Not a canonical numeric eigenspace intertwiner and not a real W(G2) action contained inside F3."
+}
