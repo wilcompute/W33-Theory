@@ -1,0 +1,15 @@
+{
+  "theorem": "BT715 Chart-81 / Levi-E4 Comparison",
+  "chart_sector_dimension": 81,
+  "chart_sector_source": "HH^T eigenvalue 8, inherited from A_Gamma eigenvalue -1",
+  "levi_e4_dimension": 81,
+  "levi_e4_source": "rank(CC^T/160)=beta_1(Levi)=81",
+  "selector_sheet": "BT714 hinge mask 1110 residual 0",
+  "rank_s_hinge": 81,
+  "rank_d_levi": 79,
+  "boundary_condition": "D_Levi S_hinge^T = 0",
+  "rank_sum": 160,
+  "comparison_rank": 81,
+  "conclusion": "The selected chart-81 sector maps onto the full Levi E4/H1 Hodge sector.",
+  "boundary": "Sector equality is proven for the rank-complete hinge representative, not uniqueness among all full-rank selector sheets."
+}
