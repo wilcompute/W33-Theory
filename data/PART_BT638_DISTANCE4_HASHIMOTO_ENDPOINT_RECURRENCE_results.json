@@ -1,0 +1,54 @@
+{
+  "bt": 638,
+  "title": "Distance-4 Hashimoto endpoint recurrence theorem",
+  "endpoint_values_n0_to_n10": [
+    0,
+    0,
+    3,
+    28,
+    268,
+    3000,
+    33195,
+    365480,
+    4020568,
+    44210368,
+    486310803
+  ],
+  "full_hashimoto_polynomial": "(x-11)(x-1)(x+1)(x^2-2x+11)(x^2+4x+11)",
+  "full_coefficients": [
+    1,
+    -9,
+    -9,
+    -123,
+    -113,
+    -1199,
+    121,
+    1331
+  ],
+  "full_residuals_n7_to_n10": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "without_minus_one_residuals_n6_to_n10": [
+    24,
+    -24,
+    24,
+    -24,
+    24
+  ],
+  "generating_function": "z^2(3+z-11z^2-33z^3)/((1-z^2)(1-11z)(1-2z+11z^2)(1+4z+11z^2))",
+  "key_interpretation": "Terminal distance-4 folded-Hashimoto endpoints carry the full Ihara recurrence; the omitted -1 sheet is exactly an alternating +/-24 parity residue.",
+  "checks": {
+    "W33_40_240_12": true,
+    "lines_40_partition_edges_240": true,
+    "flag_graph_160_480_6_diam4": true,
+    "hashimoto_480_fold_TTt_3I": true,
+    "terminal_uniform_0_to_10": true,
+    "full_recurrence_zero": true,
+    "minus_one_omission_residue_pm24": true,
+    "cubic_endpoint_mu28": true
+  },
+  "all_identities_hold": true
+}
