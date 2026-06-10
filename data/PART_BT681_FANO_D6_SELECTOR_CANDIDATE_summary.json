@@ -1,0 +1,25 @@
+{
+  "part": "BT681",
+  "title": "Fano/D6 Selector Candidate",
+  "status": "pushed",
+  "script": "analysis/bt681_fano_d6_selector_candidate.py",
+  "sector_dimensions": {
+    "E1_short": 24,
+    "E3_long": 24,
+    "total": 48
+  },
+  "sector_split": "24 = 4 copies * 3 Fano gauges * 2 signs = 4 hexagons",
+  "fano_gauges": ["011", "101", "110"],
+  "channel_map": {
+    "011": "far",
+    "101": "middle",
+    "110": "active"
+  },
+  "d6_order": 12,
+  "copy_projector_rank": 6,
+  "gauge_projector_rank": 8,
+  "sign_projector_rank": 12,
+  "selector_candidate_passes_representation_tests": true,
+  "numeric_eigenspace_intertwiner_extracted": false,
+  "boundary": "Copy labels are imported from raw 4K4 complement cells; this is not selected by Bose-Mesner data alone."
+}
