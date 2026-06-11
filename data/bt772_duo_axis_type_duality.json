@@ -1,0 +1,10 @@
+{
+  "theorem": "BT772 duo axis-type duality",
+  "duo_pairs_tested": 12,
+  "patterns": {
+    "chir0_['L-axis']_sameaxisFalse": 6,
+    "chir1_['P-axis']_sameaxisFalse": 6
+  },
+  "all_duo_pairs_P_L_swapped": false,
+  "resolves": "refutation - see patterns"
+}
