@@ -1,0 +1,19 @@
+{
+  "theorem": "BT773 involution cube",
+  "fixed_points": 8,
+  "fixed_lines": 6,
+  "cube_incidence": false,
+  "collinearity_degrees": {
+    "4": 8
+  },
+  "disjoint_line_pairs": 7,
+  "non_collinearity_is_cube_graph": true,
+  "centralizer_order": 48,
+  "centralizer_image_on_cube": 48,
+  "p_anchor_count": 12,
+  "l_anchor_count": 12,
+  "pair_shared_line_profile": {
+    "0": 12,
+    "1": 16
+  }
+}
