@@ -1,0 +1,34 @@
+{
+  "theorem": "BT777 hypercube chart layer + cube web",
+  "skew_pairs": 540,
+  "transversals_per_pair": {
+    "4": 540
+  },
+  "disjoint_transversal_pairs": {
+    "6": 540
+  },
+  "web_edges": 1620,
+  "web_degrees": {
+    "6": 540
+  },
+  "web_connected": true,
+  "web_diameter": 5,
+  "web_spectrum": {
+    "6.0": 1,
+    "4.162278": 24,
+    "3.772002": 15,
+    "3.0": 60,
+    "2.0": 84,
+    "1.0": 81,
+    "-1.0": 120,
+    "-2.162278": 24,
+    "-3.0": 116,
+    "-4.772002": 15
+  },
+  "web_srg": null,
+  "gray_addressing_valid": true,
+  "antipode_is_complement": true,
+  "cubes_through_point": [
+    108
+  ]
+}
