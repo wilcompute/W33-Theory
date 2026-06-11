@@ -1,0 +1,83 @@
+{
+  "theorem": "BT807 q=3 anti-flag + two clocks",
+  "singer_cubic": [
+    2,
+    2,
+    0
+  ],
+  "f39_point_orbits": [
+    1,
+    13,
+    13,
+    13
+  ],
+  "f39_line_orbits": [
+    13,
+    13,
+    13,
+    13,
+    39,
+    39
+  ],
+  "f39_plane_orbits": [
+    1,
+    13,
+    13,
+    13
+  ],
+  "antiflag_q3": true,
+  "isotropic_lines": 40,
+  "c13_isotropic_profile": [
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    7
+  ],
+  "f39_line_iso_counts": [
+    [
+      13,
+      4
+    ],
+    [
+      13,
+      3
+    ],
+    [
+      39,
+      9
+    ],
+    [
+      39,
+      15
+    ],
+    [
+      13,
+      5
+    ],
+    [
+      13,
+      4
+    ]
+  ],
+  "q2_f21_line_iso_counts": [
+    [
+      21,
+      9
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      3
+    ]
+  ],
+  "two_clock_statement": "40 = 1+13+13+13 (Singer) vs 40 = 1+12+27 (symplectic); 13 does not divide |PSp(4,3)| so the clocks are incompatible"
+}
