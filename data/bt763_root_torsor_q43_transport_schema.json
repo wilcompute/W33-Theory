@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wilcompute/W33-Theory/data/bt763_root_torsor_q43_transport_schema.json",
+  "title": "BT763 Root-Torsor to Q43 Transport Table Schema",
+  "description": "Fail-closed schema for the table required to promote BT750's duo bit r^6 to a Q(4,3) / Pluecker oriented-apartment mirror. This is a schema only; it is not evidence that the transport has been constructed.",
+  "type": "object",
+  "required": [
+    "bt763_schema_version",
+    "source_stack",
+    "target_stack",
+    "rows",
+    "metadata"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "bt763_schema_version": {
+      "const": "1.0"
+    },
+    "source_stack": {
+      "type": "object",
+      "required": ["torsor_source", "duo_source", "expected_root_triples", "expected_chiralities", "expected_inner_centralizer_order"],
+      "additionalProperties": false,
+      "properties": {
+        "torsor_source": {"const": "BT748"},
+        "duo_source": {"const": "BT750"},
+        "expected_root_triples": {"const": 540},
+        "expected_chiralities": {"const": 2},
+        "expected_inner_centralizer_order": {"const": 48}
+      }
+    },
+    "target_stack": {
+      "type": "object",
+      "required": ["q43_source", "mirror_source", "expected_points", "expected_lines"],
+      "additionalProperties": false,
+      "properties": {
+        "q43_source": {"const": "BT758"},
+        "mirror_source": {"const": "BT760"},
+        "expected_points": {"const": 40},
+        "expected_lines": {"const": 40}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_by", "status", "boundary"],
+      "additionalProperties": true,
+      "properties": {
+        "created_by": {"type": "string"},
+        "status": {"enum": ["schema_only", "candidate_transport", "verified_transport"]},
+        "boundary": {"type": "string"}
+      }
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": [
+          "row_id",
+          "root_triple_id",
+          "chirality",
+          "inner_coordinate",
+          "phase",
+          "duo",
+          "r6_partner_row_id",
+          "q43_apartment_id",
+          "q43_oriented_frame",
+          "q43_mirror_frame",
+          "claims"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "row_id": {"type": "string", "pattern": "^tau_[0-9]{3}_[01]_[0-9]{2}$"},
+          "root_triple_id": {"type": "integer", "minimum": 0, "maximum": 539},
+          "chirality": {"type": "integer", "enum": [0, 1]},
+          "inner_coordinate": {"type": "integer", "minimum": 0, "maximum": 47},
+          "phase": {"type": "integer", "minimum": 0, "maximum": 5},
+          "duo": {"type": "integer", "enum": [0, 1]},
+          "r6_partner_row_id": {"type": "string", "pattern": "^tau_[0-9]{3}_[01]_[0-9]{2}$"},
+          "q43_apartment_id": {"type": "string", "pattern": "^q43_apartment_[0-9]+$"},
+          "q43_oriented_frame": {
+            "type": "array",
+            "minItems": 8,
+            "maxItems": 8,
+            "items": {"type": "string", "pattern": "^[pl][0-9]+$"}
+          },
+          "q43_mirror_frame": {
+            "type": "array",
+            "minItems": 8,
+            "maxItems": 8,
+            "items": {"type": "string", "pattern": "^[pl][0-9]+$"}
+          },
+          "claims": {
+            "type": "object",
+            "required": ["same_apartment", "mirror_is_order_two", "r6_matches_mirror", "no_fixed_oriented_frame"],
+            "additionalProperties": false,
+            "properties": {
+              "same_apartment": {"type": "boolean"},
+              "mirror_is_order_two": {"type": "boolean"},
+              "r6_matches_mirror": {"type": "boolean"},
+              "no_fixed_oriented_frame": {"type": "boolean"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "bt763_required_transport_tests": {
+    "T6a": "tau(r^6 x) is defined for every local lift coordinate x.",
+    "T6b": "tau(r^6 x) has the same underlying Q(4,3) apartment as tau(x).",
+    "T6c": "tau(r^6 x) reverses the dual-apartment orientation or applies the declared Pluecker polarity.",
+    "T6d": "the transported r^6 action has order two and no fixed oriented frame."
+  },
+  "honest_boundary": "This schema defines the evidence required for the Pluecker-duo claim. It does not itself supply that evidence."
+}
