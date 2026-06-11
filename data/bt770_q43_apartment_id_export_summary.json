@@ -1,0 +1,19 @@
+{
+  "boundary": "Materialized target-side certificate only. These stable Q(4,3) apartment IDs do not yet identify BT750 r^6 with Pluecker orientation reversal.",
+  "checks": {
+    "orientation_reversal_fixed_point_free": true,
+    "q43_lines_40": true,
+    "q43_points_40": true,
+    "unoriented_apartments_1620": true,
+    "oriented_apartment_frames_3240": true
+  },
+  "lines": 40,
+  "mirror_fixed_oriented_frames": 0,
+  "oriented_apartment_frames": 3240,
+  "points": 40,
+  "sample_export_ref": "data/bt770_q43_apartment_id_export_sample.json",
+  "source_script": "analysis/bt767_q43_apartment_id_exporter.py",
+  "status": "target_side_q43_export_materialized_compact",
+  "theorem": "BT770 materialized Q(4,3) apartment ID export",
+  "unoriented_apartments": 1620
+}
