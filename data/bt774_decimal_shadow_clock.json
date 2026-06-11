@@ -1,0 +1,41 @@
+{
+  "theorem": "BT774 decimal shadow of the rectangle clock",
+  "ord_7_10": 6,
+  "reptend": 142857,
+  "midy_pairs_sum": 9,
+  "repunit_factorization": "3^3 * 7 * 11 * 13 * 37",
+  "digit_sum": 27,
+  "genus_marks_mod12": [
+    0,
+    3,
+    4,
+    7
+  ],
+  "crt_sumset": [
+    0,
+    3,
+    4,
+    7
+  ],
+  "quarter_marks_subgroup": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "units_mod_12": [
+    1,
+    5,
+    7,
+    11
+  ],
+  "double_speed_law_verified": true,
+  "dictionary": {
+    "decimal digit clock Z6": "Z12 / <r^6> (rectangle clock mod duo)",
+    "duo bit r^6": "invisible to decimal shadow AND to phase clock",
+    "Midy 9-complement": "quarter-turn r^3",
+    "user 3-6-9": "Midy shift / duo bit / digit-complement",
+    "7 the cyclic one": "generator of Z12 (unit), ord_7(10)=6 full",
+    "6 the middle": "unique central involution of Z12"
+  }
+}
