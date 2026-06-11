@@ -1,0 +1,26 @@
+{
+  "theorem": "BT805 PG(3,2) tetrahedron model",
+  "line_census": {
+    "E+F+V": 12,
+    "E+F+F": 6,
+    "B+E+E": 3,
+    "E+E+E": 4,
+    "E+V+V": 6,
+    "B+F+V": 4
+  },
+  "eee_split": [
+    4,
+    0
+  ],
+  "planes": 15,
+  "sts7_total": 30,
+  "sts7_z7_invariant": 2,
+  "double_fano_completeness": true,
+  "identities": {
+    "e+f": 35,
+    "v+e": 28,
+    "v+e+f": 42,
+    "tetra_cells": 15,
+    "tetra_flags": 24
+  }
+}
