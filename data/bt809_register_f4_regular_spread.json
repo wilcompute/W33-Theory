@@ -1,0 +1,36 @@
+{
+  "theorem": "BT809 F4^2 register + regular spread",
+  "geography": {
+    "27": [
+      "2^4 : A5",
+      960,
+      "F4^2 register : icosahedron (BT808/809)"
+    ],
+    "36": [
+      "S6 = PSigmaL(2,9)",
+      720,
+      "regular spread stabilizer (BT809)"
+    ],
+    "40": [
+      "parabolic P1",
+      648,
+      "point stabilizer (building)"
+    ],
+    "45": [
+      "2^(1+4)-type",
+      576,
+      "open: edge-family stabilizer"
+    ]
+  },
+  "gap_witness": {
+    "register_elementary_abelian": true,
+    "register_quotient": "A5",
+    "register_module": "irreducible, dim 4 over GF(2) = SL(2,4) natural = F4^2",
+    "spread_stab_order_sp": 1440,
+    "spread_stab_structure": "SL(2,9):2",
+    "spread_orbit_size": 36,
+    "fiber_split": "each point-20-orbit meets each spread line in 2"
+  },
+  "chain": "SL(2,5) < SL(2,9) < SL(2,9):2 = Stab(spread)",
+  "regular_spreads": 36
+}
