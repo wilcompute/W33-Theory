@@ -1,0 +1,28 @@
+{
+  "theorem": "BT803 seven realizations census",
+  "realizations": "5 Csaszar + 2 Szilassi = 7",
+  "aut_order": 42,
+  "aut_structure": "Frobenius Z7:Z6 = lambda*q*Phi6",
+  "geometric_symmetry": "C2 for all 7 (index 21 = edges)",
+  "volumes_verified": {
+    "C1": 125.0,
+    "C2": 1269.322404325692,
+    "C3": 588.3532470182744,
+    "C4": 1246.393552971488,
+    "C5": 1153.9982668964456,
+    "S1": 1045.2,
+    "S2": 886.2222222222222
+  },
+  "vol_C1": "125 = F_5^3 exact",
+  "volume_fields": "Q, Q(sqrt15), Q(sqrt2), Q(sqrt2), Q(sqrt2), Q, Q",
+  "distinct_edge_lengths": {
+    "C1": 10,
+    "C2": 9,
+    "C3": 9,
+    "C4": 8,
+    "C5": 9,
+    "S1": 12,
+    "S2": 11
+  },
+  "szilassi_hexagons_exactly_planar": true
+}
