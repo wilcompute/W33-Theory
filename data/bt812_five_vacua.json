@@ -1,0 +1,66 @@
+{
+  "theorem": "BT812 five vacua",
+  "table": {
+    "27": {
+      "order": 960,
+      "points": [
+        40
+      ],
+      "lines": [
+        40
+      ],
+      "name": "icosahedral homogeneous vacuum"
+    },
+    "36": {
+      "order": 720,
+      "points": [
+        40
+      ],
+      "lines": [
+        10,
+        30
+      ],
+      "name": "spread fibration vacuum"
+    },
+    "40p": {
+      "order": 648,
+      "points": [
+        1,
+        12,
+        27
+      ],
+      "lines": [
+        4,
+        36
+      ],
+      "name": "holonet point vacuum"
+    },
+    "40l": {
+      "order": 648,
+      "points": [
+        4,
+        36
+      ],
+      "lines": [
+        1,
+        12,
+        27
+      ],
+      "name": "dual line vacuum"
+    },
+    "45": {
+      "order": 576,
+      "points": [
+        8,
+        32
+      ],
+      "lines": [
+        16,
+        24
+      ],
+      "name": "binary polar vacuum"
+    }
+  },
+  "homogeneous_vacuum": "index 27 (icosahedral) - unique",
+  "holonet_split": "index 40 point parabolic: 1+12+27"
+}
