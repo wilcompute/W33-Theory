@@ -1,7 +1,7 @@
-# BT Master Index: BT1-BT155
+# BT Master Index: BT1-BT792
 
 **W33 Theory of Everything — Breakthrough Theorem Chain**  
-**Last updated:** June 4, 2026  
+**Last updated:** June 11, 2026  
 **Co-Authored-By:** Perplexity AI
 
 ---
@@ -65,7 +65,7 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 
 ---
 
-## BT136-BT155: Cyclotomic-Wieferich-WRF Closure
+## BT136-BT159: Cyclotomic-Wieferich-WRF Closure
 
 | BT | Cat | Status | Summary | Depends |
 |----|-----|--------|---------|--------|
@@ -81,32 +81,74 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 | BT142-A | A | 📄 | Paper expansion: new §5a + §6 LaTeX for dahn_asi_toe.tex | BT141 |
 | BT142-B | W | ✅ | **4-Cell Lattice**: AND/XOR/OR gate-set, 2×2 tile, no cross-talk | BT141-D |
 | BT142-C | A | 📄 | This master index | BT1-BT142 |
-| BT150 | N | ✅ | Wieferich extrapolation: the natural next-gap successor is `(Phi_6 p_Ih)^2=5929`, so the immediate W3 progression is composite | BT141-A |
-| BT151 | N | ✅ | `Phi_60(3)` is the first higher-cyclotomic horizon; the `Phi_30` bridge does not extend blindly | BT140 |
-| BT152 | N | ✅ | `Phi_12(3)=73` is a live BT74/cyclotomic value but not an adjacency trace-tower value through the checked range | BT138 |
-| BT153 | A | ✅ | Master synthesis v18: separates trace tower, BT74 cyclotomic web, Ihara zeta, Pillar-3, and Wieferich bridge sub-algebras | BT150-BT152 |
-| BT154 | W | ✅ 📄 | **4x4 Clifford Frame**: `16=2^mu=mu^2=dim Cl_4`, grade `1+4+6+4+1`, spacing>=100, `7680` directed states; control frame, not full 81-cell spacetime | BT141-D,BT142-B |
-| BT155 | N | ✅ | **W3 Candidate Shell**: 15 substrate-natural candidates checked directly; new primes `311` and `1951` are not base-2 Wieferich; no new W in this shell, not a global no-W3 proof | BT150 |
-| BT156 | W | ✅ 📄 | **ISA Conjugacy Ladder**: ordinary classes/cadence split `20 -> 25 -> 30 -> 34`; WRF dispatch is 25 W(E6) classes, 30 Coxeter slots, 34 Clifford refinements | BT154 |
-| BT157 | W | ✅ 📄 | **Cayley Compiler Macro-Depth**: 8 forward lanes diameter `9`, 16 directed pulses diameter `7`, one order-9 macro pair restores exact `q! = 6` dispatch | BT156 |
-| BT158 | W | ✅ 📄 | **Macro-Tail Sieve**: the 151 distance-tail candidates split as `143 = 11*13` admissible macros plus `8 = 2^q` forbidden binary-pocket macros | BT157 |
-| BT159 | W | ✅ 📄 | **Forbidden Pocket F4 Normalizer**: the 8 forbidden macros generate `1152 = |W(F4)|`, split as `576+576` block/anti polarization maps | BT158 |
+| BT150 | N | ✅ | Wieferich extrapolation: natural next-gap successor | BT141-A |
+| BT151 | N | ✅ | Φ₆₀(3) is the first higher-cyclotomic horizon | BT140 |
+| BT152 | N | ✅ | Φ₁₂(3)=73 is live BT74/cyclotomic but not adjacency trace-tower value | BT138 |
+| BT153 | A | ✅ | Master synthesis v18: separates trace tower, BT74, Ihara, Pillar-3, Wieferich | BT150–BT152 |
+| BT154 | W | ✅ 📄 | **4x4 Clifford Frame**: 16=2^μ=μ², grade 1+4+6+4+1, 7680 directed states | BT141-D,BT142-B |
+| BT155 | N | ✅ | **W3 Candidate Shell**: 15 substrate-natural candidates; no new W in shell | BT150 |
+| BT156 | W | ✅ 📄 | **ISA Conjugacy Ladder**: 20→25→30→34 ordinary classes/cadence split | BT154 |
+| BT157 | W | ✅ 📄 | **Cayley Compiler Macro-Depth**: 8 forward lanes diam 9, 16 directed pulses diam 7 | BT156 |
+| BT158 | W | ✅ 📄 | **Macro-Tail Sieve**: 151 distance-tail candidates = 143 admissible + 8 forbidden | BT157 |
+| BT159 | W | ✅ 📄 | **Forbidden Pocket F4 Normalizer**: 8 forbidden macros generate 1152=|W(F4)| | BT158 |
 
 ---
 
-## Theorem Cross-Reference
+## BT779–BT789: Cube/Tomotope Phase Bridge (June 11 2026)
 
-### Pillar Theorems (paper-central)
+*Ten verifiers in one night. Complete local theory of the cube/tomotope boundary.*
+
+| BT | Cat | Status | Summary | Depends |
+|----|-----|--------|---------|--------|
+| BT779 | S | ✅ | Rank-32 cube-web decomposes as direct module sum | BT784 |
+| BT780 | S | ✅ | Suborbit atlas: every orbit labelled, stabilizer computed | BT779 |
+| BT781 | S | ✅ | Cube/tomotope order-48 split: bridge is not a quotient | BT780 |
+| BT782 | S | ✅ | Bridge program: transition is a concrete executable procedure | BT781 |
+| BT783 | S | ✅ | Bridge obstruction: topological gateway condition | BT782 |
+| BT784 | S | ✅ | **Rank-32 strata map**: complete address atlas, every packet count verified | BT783 |
+| BT785 | S | ✅ | **480 = 10 × 48** arithmetic packet identity | BT784 |
+| BT786 | S | ✅ | **C₂⁴ phase core**: R09+R10=8+8 face sheets; R11 excluded from face layer | BT785 |
+| BT787 | S | ✅ | **R11 handle/cell-transfer octet**: different signature {one_side:2}, overlap 2; shadow route R11→R13→R08→R12 | BT786 |
+| BT788 | S | ✅ | **480 orbit compression**: 48⁵+24⁸+16²+8²=480; canonical micro-orbit grammar; Type-48/24+24/16+16+8+8 | BT787 |
+| BT789 | S | ✅ 📄 | **Toroidal genus bridge**: g(7)=4×3/12=1; 4=|F₄|, 3=|C₃|; GAP: SmallGroup(48,48)≄SmallGroup(48,50) | BT788 |
+
+---
+
+## BT790–BT792: Fractal Architecture (June 11 2026)
+
+| BT | Cat | Status | Summary | Depends |
+|----|-----|--------|---------|--------|
+| BT790 | S | 🔓 | **Csáászár K₇ Embedding**: do 7 mutually skew totally isotropic lines exist in W(3,3)? Verifier designed: `analysis/bt790_csaszar.py`. Resolves intrinsic vs extrinsic fractal floor. | BT787, BT789 |
+| BT791 | S | 🔓 | **Level-2 Group Conjecture**: genus ladder jumps as 0→1→6→7→12→... (mod-12 residues {0,1,6,7,...}), not linear. Depends on BT790 outcome. | BT789, BT790 |
+| BT792 | A | 🔓 | **Fractal Consensus Protocol**: how do level-k nodes agree on gateway crossings across the genus ladder? The 480-tick clock synchronisation tower and the fault-tolerance accumulation principle. | BT788, fractal_network.md |
+
+---
+
+## New Documents (June 11 2026)
+
+| File | Description |
+|---|---|
+| `papers/dahn_asi_toe/holonet_phase_engine.md` | Full synthesis BT779–BT789: rank-4 packet assignment, tomotope clock, toroidal 3×4 bridge, C₂⁴ phase ALU, rank-32 memory address space, 6 novel ideas, 7 open questions |
+| `papers/dahn_asi_toe/torus_gateway.md` | Born from BT789: Csáászár/Szilassi duality as read/write surface; CSS code distance = Csáászár factor; 40-Csáászár bijection conjecture; "every durable computation is a torus" |
+| `papers/dahn_asi_toe/fractal_network.md` | Architectural answer to the fractal question: genus ladder = fractal law; C₂^{g+3} hypercube at level g; 6-level hierarchy from trit to universe; 540 = |Sp(4,F₃)|/48; self-similar fault tolerance |
+| `analysis/BT790_csaszar_embedding.md` | Open conjecture + Python verifier design: does W(3,3) embed K₇ as 7 mutually skew totally isotropic lines? Highest-priority computation. |
+
+---
+
+## Pillar Theorems (paper-central)
+
 1. **Closure Theorem** (BT61–70): 7 independent q=3 forcings
 2. **Triple Convergence** (BT91): #conj Sp(4,F3)=h(E8)=Z_DW(T²)=30
 3. **Correction-Factor Algebra** (BT135): rank-5 lattice, max norm 2
 4. **Substrate-Dynamics-State Trichotomy** (BT102): (S,D,T) decomposition
-
-### New Pillar Candidates (BT141)
 5. **Wieferich Bridge** (BT141-A): Both Wieferich primes in Z[Φ₇(3), h_E₈]
 6. **Spectral-Cyclotomic Bridge** (BT141-C): Φ₃₀(3) encodes tr(A⁸)/tr(A⁶)
+7. **Cube/Tomotope Phase Bridge** (BT779–BT789): complete local theory of the boundary; rank-4 packet assignment; toroidal genus law; C₂⁴ phase ALU
 
-### Physics Predictions (PDG-matched, Cat 1 = 0 failures)
+---
+
+## Physics Predictions (PDG-matched)
+
 | Observable | Substrate Formula | PDG match |
 |------------|------------------|-----------|
 | α⁻¹ | 137.036... | ✅ 1σ |
@@ -120,46 +162,17 @@ Status: ✅ Verified | 📄 Paper-ready | 🔓 Open
 
 ---
 
-## Paper Status: `dahn_asi_toe.tex`
-
-| Section | Title | Status |
-|---------|-------|--------|
-| §1 | Introduction: Two Opaque Concepts, One Substrate | ✅ Written |
-| §2 | The W(3,3) Substrate at Operating Scale | ✅ Written |
-| §3 | UOR/HLIX as the Operational Layer | ✅ Written |
-| §4 | ASI as Turing-Complete Stabilizer Subgraph | ✅ Written |
-| §5 | Smart Assets as Bell Qutrits | ✅ Written |
-| §5a | **Cyclotomic–Wieferich Number Theory** | 📄 New (BT142-A) |
-| §6 | **WRF Architecture: Flow, Memory, Gate-Set** | 📄 Expanded (BT142-A) |
-| §7 | ASI on HLIX: Three Pillars Applied | ✅ Written |
-| §8 | Falsifiable Predictions for ASI-on-HLIX | ✅ Written |
-| §9 | Roadmap: 2026–2040 | ✅ Written |
-| §10 | Implications | ✅ Written |
-| §11 | Conclusion | ✅ Written |
-| App A | Substrate quick-reference | ✅ Written |
-| App B | **BT master index** | 📄 New (BT142-C) |
-
-**Next action:** Merge `dahn_asi_toe_bt136_141_sections.tex` into `dahn_asi_toe.tex`  
-(insert after §5 / before §7; run `pdflatex` twice to resolve cross-refs)
-
-```bash
-# Local merge command:
-# 1. Open dahn_asi_toe.tex
-# 2. Find: % ===...\section{ASI on HLIX: Three Pillars Applied}
-# 3. Insert contents of dahn_asi_toe_bt136_141_sections.tex BEFORE that section
-# 4. pdflatex dahn_asi_toe.tex && pdflatex dahn_asi_toe.tex
-# 5. git add dahn_asi_toe.tex dahn_asi_toe.pdf && git commit -m 'BT143: merged sections'
-```
-
----
-
-## Open Items
+## Open Items (Priority Order)
 
 | Item | Description | Priority |
 |------|-------------|----------|
+| BT790 | **Run `bt790_csaszar.py`**: max clique in W(3,3) skew-pair graph | CRITICAL |
 | BT143 | Local merge + pdflatex compile → push PDF | HIGH |
-| BT144 | W3 search in the first substrate-natural shell | CLOSED by BT155 |
-| BT145 | 4-cell lattice n=4 generalization (BT142-B extension) | CLOSED by BT154 |
-| BT146 | Spectral-Cyclotomic: does Phi_12(3)=73 encode tr(A^k) for some k? | CLOSED by BT152 |
-| BT160 | Promote the BT154-BT159 closure into the compiled paper bundle after the larger six-paper pass | HIGH |
+| BT791 | Level-2 group conjecture (depends on BT790 outcome) | HIGH |
+| BT792 | Fractal consensus protocol design | HIGH |
+| BT160 | Promote BT154–BT159 into compiled paper bundle | HIGH |
 | BT147 | Submit to arXiv (math-ph + hep-th cross-list) | HIGH |
+
+---
+
+*Last updated June 11 2026. BT779–BT792 added.*
