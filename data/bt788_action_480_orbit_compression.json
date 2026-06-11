@@ -1,0 +1,520 @@
+{
+  "theorem": "BT788 480 action carriers compress to ten local 48 packets",
+  "stabilizer_order": 48,
+  "expected_micro_profile": {
+    "8": 2,
+    "16": 2,
+    "24": 8,
+    "48": 5
+  },
+  "expected_compression_signature": [
+    [
+      48
+    ],
+    [
+      48
+    ],
+    [
+      48
+    ],
+    [
+      48
+    ],
+    [
+      48
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      16,
+      16,
+      8,
+      8
+    ]
+  ],
+  "five_derivations": {
+    "directed_edges_2E": {
+      "name": "directed_edges",
+      "item_count": 480,
+      "micro_orbit_sizes": [
+        24,
+        8,
+        16,
+        24,
+        24,
+        24,
+        48,
+        24,
+        24,
+        24,
+        48,
+        48,
+        48,
+        16,
+        8,
+        24,
+        48
+      ],
+      "micro_orbit_profile": {
+        "8": 2,
+        "16": 2,
+        "24": 8,
+        "48": 5
+      },
+      "compressed_48_packets": [
+        {
+          "micro_orbits": [
+            6
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            10
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            11
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            12
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            16
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            0,
+            3
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            4,
+            5
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            7,
+            8
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            9,
+            15
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            2,
+            13,
+            1,
+            14
+          ],
+          "sizes": [
+            16,
+            16,
+            8,
+            8
+          ]
+        }
+      ],
+      "compression_signature": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          16,
+          16,
+          8,
+          8
+        ]
+      ]
+    },
+    "oriented_triangles_3T": {
+      "name": "oriented_triangle_corners",
+      "item_count": 480,
+      "micro_orbit_sizes": [
+        24,
+        16,
+        8,
+        8,
+        16,
+        24,
+        48,
+        24,
+        48,
+        24,
+        48,
+        24,
+        48,
+        24,
+        24,
+        24,
+        48
+      ],
+      "micro_orbit_profile": {
+        "8": 2,
+        "16": 2,
+        "24": 8,
+        "48": 5
+      },
+      "compressed_48_packets": [
+        {
+          "micro_orbits": [
+            6
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            8
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            10
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            12
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            16
+          ],
+          "sizes": [
+            48
+          ]
+        },
+        {
+          "micro_orbits": [
+            0,
+            5
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            7,
+            9
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            11,
+            13
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            14,
+            15
+          ],
+          "sizes": [
+            24,
+            24
+          ]
+        },
+        {
+          "micro_orbits": [
+            1,
+            4,
+            2,
+            3
+          ],
+          "sizes": [
+            16,
+            16,
+            8,
+            8
+          ]
+        }
+      ],
+      "compression_signature": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          16,
+          16,
+          8,
+          8
+        ]
+      ]
+    },
+    "closed_2_walks_trace_A2": {
+      "same_carrier_as": "directed_edges_2E",
+      "reason": "each closed 2-walk (a,b,a) is indexed by one directed adjacent pair (a,b)",
+      "compression_signature": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          16,
+          16,
+          8,
+          8
+        ]
+      ]
+    },
+    "vertex_laplacian_trace_L0": {
+      "same_carrier_as": "directed_edges_2E",
+      "reason": "the degree trace has one slot for each directed incidence at a vertex",
+      "compression_signature": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          16,
+          16,
+          8,
+          8
+        ]
+      ]
+    },
+    "curvature_integral_6_times_80": {
+      "carrier": "ten spectral-gap channels, each carrying one local cube/tomotope 48-unit",
+      "reason": "BT785 identifies the scalar curvature total 80 and Lorentz factor 6 as 480 = (k-r)*48",
+      "compression_signature": [
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          48
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          16,
+          16,
+          8,
+          8
+        ]
+      ]
+    }
+  },
+  "interpretation": {
+    "not_raw_ten_orbits": "The stabilizer has 17 micro-orbits, not ten.",
+    "actual_law": "48^5 + 24^8 + 16^2 + 8^2 compresses to 10 packets of size 48.",
+    "BT785_refinement": "BT785's arithmetic packetization is now an orbit-compression theorem on the real action carriers."
+  },
+  "checks": {
+    "directed_edges_profile": true,
+    "triangle_corners_profile": true,
+    "directed_edges_compress_to_ten_48": true,
+    "triangle_corners_compress_to_ten_48": true,
+    "same_signature_for_two_real_carriers": true
+  }
+}

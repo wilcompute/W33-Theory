@@ -1,0 +1,200 @@
+{
+  "theorem": "BT787 rank-4 incidence revision and R11 handle octet",
+  "rank32_suborbit_sizes": [
+    1,
+    6,
+    6,
+    24,
+    3,
+    24,
+    24,
+    24,
+    24,
+    8,
+    8,
+    8,
+    12,
+    12,
+    12,
+    12,
+    12,
+    48,
+    48,
+    48,
+    4,
+    4,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    24,
+    24,
+    24,
+    24
+  ],
+  "size8_orbits": [
+    9,
+    10,
+    11
+  ],
+  "rank4_revision": {
+    "faces": {
+      "orbits": [
+        9,
+        10
+      ],
+      "sizes": [
+        8,
+        8
+      ],
+      "count": 16,
+      "signature": "anchored phase sheets: {equal:1, one_side:1}, overlap 5"
+    },
+    "cell_or_handle_octet": {
+      "orbits": [
+        11
+      ],
+      "sizes": [
+        8
+      ],
+      "count": 8,
+      "signature": "off-base transfer: {one_side:2}, overlap 2"
+    },
+    "vertices": {
+      "orbits": [
+        20,
+        21
+      ],
+      "interpretation": "two chiral vertex sheets; choose one sheet for a 4-vertex local chart"
+    },
+    "edges": {
+      "live_edge_packet": 12,
+      "shadow_edge_packet_for_R11": 13,
+      "all_primitive_size12_orbits": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  },
+  "quotient_paths": {
+    "R11_to_R09_face_sheet": [
+      11,
+      7,
+      18,
+      5,
+      9
+    ],
+    "R11_to_R10_face_sheet": [
+      11,
+      7,
+      17,
+      6,
+      10
+    ],
+    "R11_to_live_edge_R12": [
+      11,
+      13,
+      8,
+      12
+    ],
+    "R09_to_live_edge_R12": [
+      9,
+      24,
+      12
+    ],
+    "R10_to_live_edge_R12": [
+      10,
+      26,
+      12
+    ]
+  },
+  "rows_for_octets": {
+    "R09": {
+      "orbit": 9,
+      "size": 8,
+      "representative_skew_pair": [
+        0,
+        14
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 1,
+        "one_side": 1
+      },
+      "base_target_point_overlap": 5,
+      "web_neighbor_counts_to_orbits": {
+        "5": 3,
+        "24": 3
+      }
+    },
+    "R10": {
+      "orbit": 10,
+      "size": 8,
+      "representative_skew_pair": [
+        0,
+        15
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 1,
+        "one_side": 1
+      },
+      "base_target_point_overlap": 5,
+      "web_neighbor_counts_to_orbits": {
+        "6": 3,
+        "26": 3
+      }
+    },
+    "R11": {
+      "orbit": 11,
+      "size": 8,
+      "representative_skew_pair": [
+        2,
+        16
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "one_side": 2
+      },
+      "base_target_point_overlap": 2,
+      "web_neighbor_counts_to_orbits": {
+        "7": 3,
+        "13": 3
+      }
+    }
+  },
+  "interpretation": {
+    "BT784_status": "BT784's cell=R09 choice was count-level only; BT786/BT787 refines R09+R10 into faces.",
+    "R11_status": "R11 is the forced primitive octet left after the face layer; it is best read as the handle/cell transfer packet.",
+    "incidence_boundary": "This reconstructs the rank-4 packet assignment and connector routes, not a full geometric tomotope realization."
+  },
+  "checks": {
+    "three_primitive_octets": true,
+    "face_layer_is_R09_plus_R10": true,
+    "R11_is_only_remaining_primitive_octet": true,
+    "R11_has_handle_relation_profile": true,
+    "R11_has_overlap_two": true,
+    "face_octets_have_overlap_five": true,
+    "no_primitive_16_face_orbit": true,
+    "vertex_sheets_are_two_chiral_size4_packets": true,
+    "R11_reaches_live_edge_through_shadow_edge_route": true,
+    "faces_reach_live_edge_through_R24_R26": true
+  }
+}

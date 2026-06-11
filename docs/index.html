@@ -23032,6 +23032,51 @@
         </div>
       </section>
 
+      <section id="cube-tomotope-phase-bridge">
+        <h2><span class="icon">◇</span> Cube/Tomotope Phase Bridge</h2>
+        <p>BT787&ndash;BT789 sharpen the current hypercube/tomotope frontier into three executable statements. The
+          important correction is structural: the order-48 coincidence is not an isomorphism. It is a bridge between
+          two different local machines,</p>
+        <p><code>cube: C2<sup>3</sup>:S3</code> and <code>tomotope: C2<sup>4</sup>:C3</code>, with the binary
+          module replacement <code>C2<sup>3</sup> = 1+2</code> becoming
+          <code>C2<sup>4</sup> = 2+2</code>.</p>
+
+        <h4>BT787: R11 is the handle/cell octet</h4>
+        <p><a href="../analysis/BT787_rank4_incidence_r11_handle.md">BT787</a> recomputes the rank-32 cube-web
+          quotient without external graph packages. The face layer is exactly
+          <code>R09+R10=8+8=16</code>; the remaining primitive octet <code>R11</code> has the different signature
+          <code>{one_side:2}</code> with overlap <code>2</code>. Therefore <code>R11</code> is not a third face
+          sheet. It is the forced handle/cell-transfer octet left after the two face sheets are consumed.</p>
+        <p>The connector routes separate the live face route from the handle route:
+          <code>R09&rarr;R24&rarr;R12</code>, <code>R10&rarr;R26&rarr;R12</code>, but
+          <code>R11&rarr;R13&rarr;R08&rarr;R12</code>. This revises the older count-level
+          "one size-8 cell packet" wording into a packet assignment with a live edge packet and a shadow handle
+          route.</p>
+
+        <h4>BT788: 480 is ten compressed 48-packets</h4>
+        <p><a href="../analysis/BT788_action_480_orbit_compression.md">BT788</a> tests BT785 against the actual
+          48-element cube-chart stabilizer. The raw action on directed W33 edges and oriented triangle-corners is not
+          ten free 48-orbits. The verified micro-orbit profile is
+          <code>48<sup>5</sup> + 24<sup>8</sup> + 16<sup>2</sup> + 8<sup>2</sup> = 480</code>.</p>
+        <p>That profile compresses canonically into ten local 48-packets:
+          five <code>[48]</code> packets, four <code>[24+24]</code> packets, and one
+          <code>[16+16+8+8]</code> packet. So the corrected action theorem is not just
+          <code>480=10&times;48</code>; it is a stabilizer micro-orbit compression theorem on the real finite carriers
+          behind <code>2E</code>, <code>3T</code>, <code>Tr(A<sup>2</sup>)</code>,
+          <code>Tr(L0)</code>, and <code>6&times;80</code>.</p>
+
+        <h4>BT789: the toroidal 3-by-4 bridge</h4>
+        <p><a href="../analysis/BT789_toroidal_genus_phase_bridge.md">BT789</a> connects the same
+          module replacement to the Csaszar/Szilassi toroidal genus law. At the first positive toroidal value
+          <code>n=f=7</code>, both dual formulas give
+          <code>1=(7-3)(7-4)/12=4&times;3/12</code>, with integral residues
+          <code>0,3,4,7 mod 12</code>.</p>
+        <p>The finite-module reading is exact: <code>4</code> is the cardinality of one irreducible
+          <code>F4</code> phase plane and <code>3</code> is the <code>C3</code> phase clock. GAP confirms the two
+          order-48 groups are not isomorphic: the cube wreath product has a fixed diagonal center, while the tomotope
+          candidate has no fixed nonidentity bit.</p>
+      </section>
+
       <section id="open">
         <h2><span class="icon">?</span> Open Problems and Exact Boundaries</h2>
         <p>The strongest current statement is not “nothing works yet”; it is that a large exact finite kernel is already

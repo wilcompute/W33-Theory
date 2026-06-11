@@ -1,0 +1,88 @@
+{
+  "theorem": "BT789 toroidal genus bridge for C2^3:S3 to C2^4:C3",
+  "module_repair": {
+    "cube": {
+      "group": "C2^3:S3",
+      "order": 48,
+      "C3_binary_profile": {
+        "profile": {
+          "1": 1,
+          "3": 2
+        },
+        "fixed_nonidentity_bits": 1,
+        "nonzero_count": 7,
+        "nonzero_orbit_count": 3
+      },
+      "decomposition": "1 + 2 over F2"
+    },
+    "quotient": {
+      "operation": "kill diagonal <111>",
+      "profile": {
+        "profile": {
+          "3": 1
+        },
+        "fixed_nonidentity_bits": 0,
+        "nonzero_count": 3,
+        "nonzero_orbit_count": 1
+      }
+    },
+    "tomotope": {
+      "group": "C2^4:C3",
+      "order": 48,
+      "C3_binary_profile": {
+        "profile": {
+          "3": 5
+        },
+        "fixed_nonidentity_bits": 0,
+        "nonzero_count": 15,
+        "nonzero_orbit_count": 5
+      },
+      "decomposition": "2 + 2 over F2"
+    }
+  },
+  "toroidal_genus_bridge": {
+    "neighborly_formula": "g(n)=(n-3)(n-4)/12",
+    "complete_face_dual_formula": "h(f)=(f-4)(f-3)/12",
+    "mod12_integral_residues": [
+      0,
+      3,
+      4,
+      7
+    ],
+    "Csaszar_value_n_7": "1",
+    "Szilassi_dual_value_f_7": "1",
+    "factors_at_7": {
+      "seven_minus_4": 3,
+      "seven_minus_3": 4,
+      "product": 12
+    },
+    "phase_identity": "C3_order * |F4_plane| = 3 * 4 = 12",
+    "interpretation": "The torus unit is the normalized product of the C3 phase clock and one F4 plane."
+  },
+  "gap_witness": {
+    "cube_id": "48-48",
+    "cube_size": "48",
+    "cube_center": "2",
+    "cube_derived": "12",
+    "tomo_id": "48-50",
+    "tomo_size": "48",
+    "tomo_center": "1",
+    "tomo_derived": "16",
+    "isomorphic": "false"
+  },
+  "checks": {
+    "cube_C3_profile_is_1_plus_2": true,
+    "cube_has_one_fixed_nonidentity_bit": true,
+    "quotient_is_one_F4_plane": true,
+    "added_plane_is_one_F4_plane": true,
+    "lift_is_two_F4_planes": true,
+    "lift_has_no_fixed_nonidentity_bits": true,
+    "genus_residues_are_0_3_4_7": true,
+    "Csaszar_unit_torus_is_4_times_3_over_12": true,
+    "Szilassi_dual_unit_torus_is_3_times_4_over_12": true,
+    "module_orders_match": true,
+    "gap_cube_is_wreath_candidate": true,
+    "gap_tomotope_is_no_fixed_bit_candidate": true,
+    "gap_groups_not_isomorphic": true
+  }
+}
