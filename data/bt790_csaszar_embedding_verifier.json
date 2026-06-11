@@ -1,0 +1,14 @@
+{
+  "theorem": "BT790 Csaszar embedding verifier",
+  "points": 40,
+  "isotropic_lines": 40,
+  "disjoint_line_graph_edges": 540,
+  "disjoint_line_graph_degree_profile": {"27": 40},
+  "maximum_mutually_disjoint_isotropic_lines": 10,
+  "csaszar_K7_embedding_exists": true,
+  "seven_line_subcell_count": 5400,
+  "spread_count_size10": 36,
+  "example_spread_line_indices": [0, 13, 15, 21, 24, 27, 31, 33, 35, 37],
+  "example_spread_point_partition": [[0, 1, 3, 5], [2, 10, 24, 30], [4, 15, 22, 33], [6, 18, 26, 38], [7, 14, 28, 35], [8, 16, 29, 39], [9, 20, 23, 32], [11, 17, 25, 36], [12, 19, 27, 34], [13, 21, 31, 37]],
+  "interpretation": "The seven-line torus layer is internal. The finite W33 line system has full 10-line spreads, and seven-line Csaszar cells occur as subcells."
+}
