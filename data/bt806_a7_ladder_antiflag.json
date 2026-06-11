@@ -1,0 +1,36 @@
+{
+  "theorem": "BT806 A7 ladder + anti-flag",
+  "gap_witness": {
+    "A7_transitive": {
+      "points": 15,
+      "lines": 35,
+      "planes": 15
+    },
+    "A7_line_stabilizer": 72,
+    "normalizer": "C7:C3 order 21"
+  },
+  "f21_orbits": {
+    "points": [
+      1,
+      7,
+      7
+    ],
+    "lines": [
+      7,
+      7,
+      21
+    ],
+    "planes": [
+      1,
+      7,
+      7
+    ]
+  },
+  "antiflag": true,
+  "csaszar_dictionary": {
+    "faces_14": "star(p0) u lines(pi0)",
+    "edges_21": "generic line orbit",
+    "vertices_7": "heptad point orbit"
+  },
+  "vacuum_decomposition_q2": "15 = 1 + 7 + 7 (cf. q=3: 40 = 1+12+27)"
+}
