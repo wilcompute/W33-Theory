@@ -1,0 +1,83 @@
+{
+  "theorem": "BT815 global 2160 chart-transversal G-set",
+  "group": "PSp(4,3)",
+  "slot_counts": {
+    "chart_transversal_slots": 2160,
+    "chart_antipode_slots": 2160,
+    "charts": 540,
+    "slots_per_chart": [
+      4
+    ],
+    "transversal_slots_per_line": {
+      "54": 40
+    }
+  },
+  "equivariant_bijection": {
+    "map": "(chart, common transversal line) -> (chart, transversal intersection with base chart)",
+    "base_slot": [
+      0,
+      1
+    ],
+    "base_antipode_slot": [
+      0,
+      [
+        0,
+        13
+      ]
+    ],
+    "checked_on_generators": 8,
+    "failures": []
+  },
+  "stabilizer": {
+    "order": 12,
+    "order_profile": {
+      "1": 1,
+      "2": 7,
+      "3": 2,
+      "6": 2
+    },
+    "gap_witness": {
+      "size": "12",
+      "id": "12-4",
+      "structure": "D12",
+      "is_cyclic": "false",
+      "isomorphic_to_C12": "false",
+      "isomorphic_to_D12": "true"
+    },
+    "local_transversal_orbit_profile": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "meaning": "D12 mirror/antipode stabilizer, not C12 rectangle-clock stabilizer"
+  },
+  "comparison": {
+    "BT778_antipode_slots": "same G-set, via the explicit equivariant bijection verified here",
+    "BT778_rectangle_slots": "same cardinality 2160 but cyclic C12 stabilizer; not this D12 slot space",
+    "Witting_packet_holonomy": "existing Witting local-system audit records 2160 transposition holonomies; BT815 identifies the W33 atlas-side D12 mirror carrier at the same cardinality",
+    "BT813_geography": "slot stabilizer order 12 sits below the chart O_h group from BT811, while the 2160 total is 48 chart group packets times 45 polar-pair geography"
+  },
+  "factorizations": {
+    "540_times_4": 2160,
+    "40_times_54": 2160,
+    "45_times_48": 2160,
+    "240_times_9": 2160
+  },
+  "checks": {
+    "transversal_slots_are_2160": true,
+    "antipode_slots_are_2160": true,
+    "transversal_to_antipode_is_bijection": true,
+    "equivariance_holds_for_generators": true,
+    "transversal_slot_space_is_transitive": true,
+    "antipode_slot_space_is_transitive": true,
+    "each_chart_has_four_slots": true,
+    "each_line_occurs_54_times": true,
+    "transversal_and_antipode_stabilizers_are_identical": true,
+    "slot_stabilizer_has_order_12": true,
+    "slot_stabilizer_order_profile_is_D12": true,
+    "gap_identifies_D12_not_C12": true,
+    "local_stabilizer_orbits_are_fixed_plus_three": true,
+    "witting_transposition_holonomy_reference_matches": true
+  }
+}

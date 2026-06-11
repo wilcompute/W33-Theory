@@ -1,0 +1,37 @@
+{
+  "theorem": "BT826 photonic mirror middleware",
+  "factorization": {
+    "sp_order": 51840,
+    "psp_order": 25920,
+    "mirror_slots": 2160,
+    "projective_slot_stabilizer": 12,
+    "full_slot_stabilizer": 24,
+    "polar_pair_geography": 45,
+    "tomotope_middle_blocks": 48,
+    "tomotope_flags": 192,
+    "sp_as_full_stabilizer_times_bus": 51840,
+    "bus_as_polar_pairs_times_middle_blocks": 2160,
+    "sp_as_runtime_product": 51840
+  },
+  "interpretation": {
+    "runtime_factorization": "|Sp(4,3)| = 24 * 2160 = 24 * 45 * 48",
+    "24": "full Sp lift of the D12 projective mirror-slot stabilizer; equals f",
+    "45": "hyperbolic polar-pair / tritangent geography from BT810-BT813",
+    "48": "local tomotope edge-face middle layer from BT814; also the chart O_h order",
+    "2160": "global D12 mirror bus: chart-transversal slots = antipode slots, distinct from the C12 rectangle clock",
+    "architecture": "the universal optical Clifford group acts through a mirror middleware: stabilizer lift x polar vacuum x local tomotope middle carrier"
+  },
+  "paper_sentence": "The photonic holonet is not only clocked by a cyclic C12 selector; it is routed by a D12 mirror bus whose full Clifford lift factors as 24 x 45 x 48 = |Sp(4,3)|.",
+  "checks": {
+    "BT825_optical_closure_is_full_Sp43": true,
+    "projective_order_is_half_full_order": true,
+    "BT815_bus_has_2160_slots": true,
+    "BT815_projective_stabilizer_is_D12": true,
+    "full_lift_of_slot_stabilizer_has_order_f": true,
+    "BT814_local_middle_has_48_blocks": true,
+    "BT814_local_middle_restores_192_flags": true,
+    "mirror_bus_is_polar_pair_geography_times_tomotope_middle": true,
+    "full_clifford_is_slot_lift_times_mirror_bus": true,
+    "full_clifford_runtime_product": true
+  }
+}

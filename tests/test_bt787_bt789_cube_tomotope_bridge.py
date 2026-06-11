@@ -97,6 +97,33 @@ def test_bt801_global_transversal_repair_atlas():
     assert data["checks"]["all_shadow_splits_are_4_4"]
 
 
+def test_bt814_tomotope_middle_layer_from_residual_tetrahedra():
+    run_script("analysis/bt814_tomotope_middle_layer_from_residual_tetrahedra.py")
+    data = load_json("data/bt814_tomotope_middle_layer_from_residual_tetrahedra.json")
+    assert data["f_vector_from_transversal_tetrahedra"] == {
+        "vertices": 4,
+        "edges": 12,
+        "faces": 16,
+        "cells": 8,
+        "middle_blocks": 48,
+        "flags_if_each_block_has_2x2_fiber": 192,
+    }
+    assert data["profiles"]["blocks_per_edge"] == {"4": 12}
+    assert data["profiles"]["blocks_per_face"] == {"3": 16}
+    assert data["tomotope_reference"]["blocks48"]["count"] == 48
+
+
+def test_bt815_global_2160_transversal_gset():
+    run_script("analysis/bt815_global_2160_transversal_gset.py")
+    data = load_json("data/bt815_global_2160_transversal_gset.json")
+    assert data["slot_counts"]["chart_transversal_slots"] == 2160
+    assert data["slot_counts"]["chart_antipode_slots"] == 2160
+    assert data["equivariant_bijection"]["failures"] == []
+    assert data["stabilizer"]["gap_witness"]["structure"] == "D12"
+    assert data["stabilizer"]["gap_witness"]["isomorphic_to_C12"] == "false"
+    assert data["stabilizer"]["gap_witness"]["isomorphic_to_D12"] == "true"
+
+
 if __name__ == "__main__":
     test_bt787_r11_is_handle_octet()
     test_bt788_480_compresses_to_ten_packets()
@@ -105,4 +132,6 @@ if __name__ == "__main__":
     test_bt799_transversal_incidence_grammar()
     test_bt800_diagonal_quotient_shadow_plane()
     test_bt801_global_transversal_repair_atlas()
-    print("BT787-BT801 focused tests passed")
+    test_bt814_tomotope_middle_layer_from_residual_tetrahedra()
+    test_bt815_global_2160_transversal_gset()
+    print("BT787-BT815 focused tests passed")

@@ -1,0 +1,732 @@
+{
+  "theorem": "BT814 tomotope middle layer from residual transversal tetrahedra",
+  "base_skew_pair": [
+    0,
+    13
+  ],
+  "f_vector_from_transversal_tetrahedra": {
+    "vertices": 4,
+    "edges": 12,
+    "faces": 16,
+    "cells": 8,
+    "middle_blocks": 48,
+    "flags_if_each_block_has_2x2_fiber": 192
+  },
+  "vertices": [
+    {
+      "vertex_label": "T0",
+      "transversal_line_id": 1,
+      "points": [
+        0,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "vertex_label": "T1",
+      "transversal_line_id": 4,
+      "points": [
+        1,
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "vertex_label": "T2",
+      "transversal_line_id": 7,
+      "points": [
+        2,
+        31,
+        35,
+        39
+      ]
+    },
+    {
+      "vertex_label": "T3",
+      "transversal_line_id": 10,
+      "points": [
+        3,
+        22,
+        27,
+        29
+      ]
+    }
+  ],
+  "cells": [
+    {
+      "cell_label": "T0:base",
+      "vertex_label": "T0",
+      "sheet": "base",
+      "antipode_pair": [
+        0,
+        13
+      ]
+    },
+    {
+      "cell_label": "T0:shadow",
+      "vertex_label": "T0",
+      "sheet": "shadow",
+      "antipode_pair": [
+        14,
+        15
+      ]
+    },
+    {
+      "cell_label": "T1:base",
+      "vertex_label": "T1",
+      "sheet": "base",
+      "antipode_pair": [
+        1,
+        4
+      ]
+    },
+    {
+      "cell_label": "T1:shadow",
+      "vertex_label": "T1",
+      "sheet": "shadow",
+      "antipode_pair": [
+        7,
+        10
+      ]
+    },
+    {
+      "cell_label": "T2:base",
+      "vertex_label": "T2",
+      "sheet": "base",
+      "antipode_pair": [
+        2,
+        31
+      ]
+    },
+    {
+      "cell_label": "T2:shadow",
+      "vertex_label": "T2",
+      "sheet": "shadow",
+      "antipode_pair": [
+        35,
+        39
+      ]
+    },
+    {
+      "cell_label": "T3:base",
+      "vertex_label": "T3",
+      "sheet": "base",
+      "antipode_pair": [
+        3,
+        22
+      ]
+    },
+    {
+      "cell_label": "T3:shadow",
+      "vertex_label": "T3",
+      "sheet": "shadow",
+      "antipode_pair": [
+        27,
+        29
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_label": "T0:axis0",
+      "vertex_label": "T0",
+      "axis_edges": [
+        [
+          0,
+          13
+        ],
+        [
+          14,
+          15
+        ]
+      ]
+    },
+    {
+      "edge_label": "T0:axis1",
+      "vertex_label": "T0",
+      "axis_edges": [
+        [
+          0,
+          14
+        ],
+        [
+          13,
+          15
+        ]
+      ]
+    },
+    {
+      "edge_label": "T0:axis2",
+      "vertex_label": "T0",
+      "axis_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "edge_label": "T1:axis0",
+      "vertex_label": "T1",
+      "axis_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          10
+        ]
+      ]
+    },
+    {
+      "edge_label": "T1:axis1",
+      "vertex_label": "T1",
+      "axis_edges": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "edge_label": "T1:axis2",
+      "vertex_label": "T1",
+      "axis_edges": [
+        [
+          1,
+          10
+        ],
+        [
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "edge_label": "T2:axis0",
+      "vertex_label": "T2",
+      "axis_edges": [
+        [
+          2,
+          31
+        ],
+        [
+          35,
+          39
+        ]
+      ]
+    },
+    {
+      "edge_label": "T2:axis1",
+      "vertex_label": "T2",
+      "axis_edges": [
+        [
+          2,
+          35
+        ],
+        [
+          31,
+          39
+        ]
+      ]
+    },
+    {
+      "edge_label": "T2:axis2",
+      "vertex_label": "T2",
+      "axis_edges": [
+        [
+          2,
+          39
+        ],
+        [
+          31,
+          35
+        ]
+      ]
+    },
+    {
+      "edge_label": "T3:axis0",
+      "vertex_label": "T3",
+      "axis_edges": [
+        [
+          3,
+          22
+        ],
+        [
+          27,
+          29
+        ]
+      ]
+    },
+    {
+      "edge_label": "T3:axis1",
+      "vertex_label": "T3",
+      "axis_edges": [
+        [
+          3,
+          27
+        ],
+        [
+          22,
+          29
+        ]
+      ]
+    },
+    {
+      "edge_label": "T3:axis2",
+      "vertex_label": "T3",
+      "axis_edges": [
+        [
+          3,
+          29
+        ],
+        [
+          22,
+          27
+        ]
+      ]
+    }
+  ],
+  "faces": [
+    {
+      "face_label": "T0:face0",
+      "vertex_label": "T0",
+      "face_vertices": [
+        0,
+        13,
+        14
+      ]
+    },
+    {
+      "face_label": "T0:face1",
+      "vertex_label": "T0",
+      "face_vertices": [
+        0,
+        13,
+        15
+      ]
+    },
+    {
+      "face_label": "T0:face2",
+      "vertex_label": "T0",
+      "face_vertices": [
+        0,
+        14,
+        15
+      ]
+    },
+    {
+      "face_label": "T0:face3",
+      "vertex_label": "T0",
+      "face_vertices": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "face_label": "T1:face0",
+      "vertex_label": "T1",
+      "face_vertices": [
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "face_label": "T1:face1",
+      "vertex_label": "T1",
+      "face_vertices": [
+        1,
+        4,
+        10
+      ]
+    },
+    {
+      "face_label": "T1:face2",
+      "vertex_label": "T1",
+      "face_vertices": [
+        1,
+        7,
+        10
+      ]
+    },
+    {
+      "face_label": "T1:face3",
+      "vertex_label": "T1",
+      "face_vertices": [
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "face_label": "T2:face0",
+      "vertex_label": "T2",
+      "face_vertices": [
+        2,
+        31,
+        35
+      ]
+    },
+    {
+      "face_label": "T2:face1",
+      "vertex_label": "T2",
+      "face_vertices": [
+        2,
+        31,
+        39
+      ]
+    },
+    {
+      "face_label": "T2:face2",
+      "vertex_label": "T2",
+      "face_vertices": [
+        2,
+        35,
+        39
+      ]
+    },
+    {
+      "face_label": "T2:face3",
+      "vertex_label": "T2",
+      "face_vertices": [
+        31,
+        35,
+        39
+      ]
+    },
+    {
+      "face_label": "T3:face0",
+      "vertex_label": "T3",
+      "face_vertices": [
+        3,
+        22,
+        27
+      ]
+    },
+    {
+      "face_label": "T3:face1",
+      "vertex_label": "T3",
+      "face_vertices": [
+        3,
+        22,
+        29
+      ]
+    },
+    {
+      "face_label": "T3:face2",
+      "vertex_label": "T3",
+      "face_vertices": [
+        3,
+        27,
+        29
+      ]
+    },
+    {
+      "face_label": "T3:face3",
+      "vertex_label": "T3",
+      "face_vertices": [
+        22,
+        27,
+        29
+      ]
+    }
+  ],
+  "middle_blocks_sample": [
+    {
+      "block_label": "T0:axis0|T0:face0",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis0",
+      "face_label": "T0:face0",
+      "contained_axis_edge": [
+        0,
+        13
+      ],
+      "opposite_axis_edge": [
+        14,
+        15
+      ]
+    },
+    {
+      "block_label": "T0:axis0|T0:face1",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis0",
+      "face_label": "T0:face1",
+      "contained_axis_edge": [
+        0,
+        13
+      ],
+      "opposite_axis_edge": [
+        14,
+        15
+      ]
+    },
+    {
+      "block_label": "T0:axis0|T0:face2",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis0",
+      "face_label": "T0:face2",
+      "contained_axis_edge": [
+        14,
+        15
+      ],
+      "opposite_axis_edge": [
+        0,
+        13
+      ]
+    },
+    {
+      "block_label": "T0:axis0|T0:face3",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis0",
+      "face_label": "T0:face3",
+      "contained_axis_edge": [
+        14,
+        15
+      ],
+      "opposite_axis_edge": [
+        0,
+        13
+      ]
+    },
+    {
+      "block_label": "T0:axis1|T0:face0",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis1",
+      "face_label": "T0:face0",
+      "contained_axis_edge": [
+        0,
+        14
+      ],
+      "opposite_axis_edge": [
+        13,
+        15
+      ]
+    },
+    {
+      "block_label": "T0:axis1|T0:face1",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis1",
+      "face_label": "T0:face1",
+      "contained_axis_edge": [
+        13,
+        15
+      ],
+      "opposite_axis_edge": [
+        0,
+        14
+      ]
+    },
+    {
+      "block_label": "T0:axis1|T0:face2",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis1",
+      "face_label": "T0:face2",
+      "contained_axis_edge": [
+        0,
+        14
+      ],
+      "opposite_axis_edge": [
+        13,
+        15
+      ]
+    },
+    {
+      "block_label": "T0:axis1|T0:face3",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis1",
+      "face_label": "T0:face3",
+      "contained_axis_edge": [
+        13,
+        15
+      ],
+      "opposite_axis_edge": [
+        0,
+        14
+      ]
+    },
+    {
+      "block_label": "T0:axis2|T0:face0",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis2",
+      "face_label": "T0:face0",
+      "contained_axis_edge": [
+        13,
+        14
+      ],
+      "opposite_axis_edge": [
+        0,
+        15
+      ]
+    },
+    {
+      "block_label": "T0:axis2|T0:face1",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis2",
+      "face_label": "T0:face1",
+      "contained_axis_edge": [
+        0,
+        15
+      ],
+      "opposite_axis_edge": [
+        13,
+        14
+      ]
+    },
+    {
+      "block_label": "T0:axis2|T0:face2",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis2",
+      "face_label": "T0:face2",
+      "contained_axis_edge": [
+        0,
+        15
+      ],
+      "opposite_axis_edge": [
+        13,
+        14
+      ]
+    },
+    {
+      "block_label": "T0:axis2|T0:face3",
+      "vertex_label": "T0",
+      "edge_label": "T0:axis2",
+      "face_label": "T0:face3",
+      "contained_axis_edge": [
+        13,
+        14
+      ],
+      "opposite_axis_edge": [
+        0,
+        15
+      ]
+    },
+    {
+      "block_label": "T1:axis0|T1:face0",
+      "vertex_label": "T1",
+      "edge_label": "T1:axis0",
+      "face_label": "T1:face0",
+      "contained_axis_edge": [
+        1,
+        4
+      ],
+      "opposite_axis_edge": [
+        7,
+        10
+      ]
+    },
+    {
+      "block_label": "T1:axis0|T1:face1",
+      "vertex_label": "T1",
+      "edge_label": "T1:axis0",
+      "face_label": "T1:face1",
+      "contained_axis_edge": [
+        1,
+        4
+      ],
+      "opposite_axis_edge": [
+        7,
+        10
+      ]
+    },
+    {
+      "block_label": "T1:axis0|T1:face2",
+      "vertex_label": "T1",
+      "edge_label": "T1:axis0",
+      "face_label": "T1:face2",
+      "contained_axis_edge": [
+        7,
+        10
+      ],
+      "opposite_axis_edge": [
+        1,
+        4
+      ]
+    },
+    {
+      "block_label": "T1:axis0|T1:face3",
+      "vertex_label": "T1",
+      "edge_label": "T1:axis0",
+      "face_label": "T1:face3",
+      "contained_axis_edge": [
+        7,
+        10
+      ],
+      "opposite_axis_edge": [
+        1,
+        4
+      ]
+    }
+  ],
+  "profiles": {
+    "blocks_per_edge": {
+      "4": 12
+    },
+    "blocks_per_face": {
+      "3": 16
+    },
+    "blocks_per_transversal_vertex": {
+      "12": 4
+    }
+  },
+  "tomotope_reference": {
+    "source": "axis_bundle_content/TOE_tomotope_axis_block_twist_v02_20260228/SUMMARY.json",
+    "counts": {
+      "V": 4,
+      "E": 12,
+      "F": 16,
+      "C": 8,
+      "flags": 192
+    },
+    "blocks48": {
+      "count": 48,
+      "meaning": "<r0,r3> orbits, coincide with (tomotope edge, tomotope face) incidence pairs; each block has 4 flags",
+      "blocks_per_tomotope_edge_sizes": [
+        4
+      ],
+      "blocks_per_tomotope_face_sizes": [
+        3
+      ],
+      "blocks_per_axis_edge_sizes": [
+        3
+      ],
+      "blocks_per_axis_face_sizes": [
+        4
+      ]
+    }
+  },
+  "interpretation": {
+    "middle_layer": "BT798's four transversal K4s realize the tomotope edge-face middle layer objectwise",
+    "edge_labels": "each transversal K4 contributes its three opposite-edge axes",
+    "face_labels": "each transversal K4 contributes its four triangular faces",
+    "cell_labels": "the base/shadow antipode pairs give the eight local tomotope cells",
+    "boundary": "this identifies the 48 middle blocks; the full 2x2 flag fiber is inherited from the tomotope block model"
+  },
+  "checks": {
+    "four_transversal_vertices": true,
+    "twelve_local_tomotope_edges": true,
+    "sixteen_local_tomotope_faces": true,
+    "eight_base_shadow_cells": true,
+    "forty_eight_middle_blocks": true,
+    "middle_blocks_give_192_flags_with_2x2_fiber": true,
+    "each_local_edge_has_four_blocks": true,
+    "each_local_face_has_three_blocks": true,
+    "each_transversal_vertex_has_twelve_blocks": true,
+    "tomotope_reference_has_48_blocks": true,
+    "tomotope_reference_edge_profile_matches": true,
+    "tomotope_reference_face_profile_matches": true,
+    "tomotope_f_vector_matches_reference": true
+  }
+}

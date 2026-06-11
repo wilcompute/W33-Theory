@@ -1,0 +1,677 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\urlstyle{same}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{principle}[theorem]{Principle}
+
+\newcommand{\W}{W(3,3)}
+\newcommand{\GF}[1]{\mathbb{F}_{#1}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+
+\title{\textbf{The Photonic Holonet}\\[4pt]
+\large A Single Self-Entangled Photon as Universal Computer,
+Universal Network, and Clock\\ on the $\W$ Substrate}
+\author{W.~Dahn \and the Theory of Everything Project}
+\date{June 2026 --- machine-verified edition}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a complete, machine-verified architecture in which one
+self-entangled photon, traversing one finite geometry, is
+simultaneously the hardware, the software, and the network of a
+universal quantum computer.  The geometry is the symplectic generalized
+quadrangle $\W$: forty points, forty lines, automorphism group
+$\Sp(4,\GF3)$ of order $51840$.  The photon carries $\W$ twice over ---
+once as the forty Witting rays of its path--polarization space
+$\mathbb{C}^4$ (states), once as the forty Pauli displacement classes of
+its past--future time-bin space $\mathbb{C}^9$ (operators) --- and the
+two carriers realize the same incidence geometry, making the machine's
+states and gates one set of objects.  Every architectural layer is a
+theorem with an executable witness: the preparation circuit (two
+Clifford gates of tabletop optics), the routing fabric (an atlas of
+$540$ hypercube charts glued along the $1620$ apartments of the Tits
+building), the protected memory (the Steinberg module of dimension
+$81$), the mirror middleware (a $2160$-slot $D_{12}$ transport bus whose
+full Clifford lift factors as $24\cdot45\cdot48=51840$), the fuel (the
+matter shell is exactly the magic sector, with exact Kochen--Specker
+budget $36/40$ and contextual fraction $1/10$), the clock (an internal
+$\mathbb{Z}_{12}$ gauge clock, two external references
+$\mathbb{Z}_7,\mathbb{Z}_{13}$, and an irrational Boerdijk--Coxeter
+drive realizing a discrete time quasicrystal), and universality (the
+photon's own tritter, phase plate, and modulator generate the complete
+Clifford group; the matter shell supplies the magic).  No fitted
+parameters appear anywhere: every constant is substrate arithmetic at
+$q=3$.
+\end{abstract}
+
+\tableofcontents
+
+%======================================================================
+\section{Overture: the machine is the geometry is the carrier}
+
+Classical architecture separates three things: the processor that acts,
+the program that directs, and the network that connects.  The thesis of
+this paper is that at the level of a single photon on a finite
+symplectic geometry the three are one object, and that this is not a
+metaphor but a chain of theorems.
+
+\begin{principle}[Identity of the three layers]
+Transporting the photon through the mesh \emph{is} applying a gate
+\emph{is} routing a packet.  One physical process; three descriptions.
+\end{principle}
+
+The identification rests on three exact pillars, each proved by
+explicit computation in the project repository (every theorem below
+carries its witness script):
+
+\begin{enumerate}
+\item \textbf{Operator--operand duality} (\S\ref{sec:duality}): the
+  same $\W$ is drawn by the photon's \emph{states} (orthogonality of
+  the $40$ Witting rays in $\mathbb{C}^4$) and by its \emph{operators}
+  (commutation of the $40$ two-qutrit Pauli classes on
+  $\mathbb{C}^9$).
+\item \textbf{Routing--gate identity} (\S\ref{sec:network}): the mesh
+  is an atlas of $540$ three-dimensional hypercube charts whose native
+  XOR routing moves are exactly the register operations, glued along
+  the $1620$ apartments of the Tits building of $\Sp(4,\GF3)$.
+\item \textbf{Mirror middleware} (\S\ref{sec:middleware}): the cyclic
+  selector clock and the mirror transport bus are different $2160$
+  worlds.  The photon is clocked by the $C_{12}$ side but routed by the
+  $D_{12}$ side, whose full Clifford lift is the exact product
+  $24\cdot45\cdot48$.
+\item \textbf{Universality from optics} (\S\ref{sec:universality}):
+  the photon's own beam-splitting elements generate the complete
+  Clifford group (symplectic closure $=51840$, exact), and its matter
+  shell is precisely its magic supply.
+\end{enumerate}
+
+%======================================================================
+\section{The substrate}
+
+\begin{definition}[$\W$]
+Let $V=\GF3^4$ with the alternating form
+$\langle u,v\rangle = u_1v_3-u_3v_1+u_2v_4-u_4v_2$.  The points of
+$\W$ are the $40$ projective points of $V$; the lines are the $40$
+totally isotropic projective lines.  Each point lies on $4$ lines and
+each line carries $4$ points; collinearity defines the strongly regular
+graph $\mathrm{SRG}(40,12,2,4)$.
+\end{definition}
+
+The full automorphism group is $\Sp(4,\GF3)$, of order
+$51840 = |W(E_6)|$, acting with permutation rank $3$.  The substrate
+primitives are
+\[
+q=3,\quad \lambda=2,\quad \mu=4,\quad k=12,\quad f=24,\quad g=15,\quad
+\Phi_6=7,\quad \Phi_4=10,\quad \Phi_3=13,
+\]
+and every numerical claim in this paper reduces to arithmetic in these.
+
+\subsection{The two carriers and the operator--operand duality}
+\label{sec:duality}
+
+\begin{theorem}[Two realizations, one geometry]
+\label{thm:duality}
+\textup{(i)} The $40$ Witting rays in $\mathbb{C}^4$ (the photon's
+path$\,\otimes\,$polarization space) have orthogonality graph
+isomorphic to the collinearity graph of $\W$.
+\textup{(ii)} The $40$ projective classes of two-qutrit Pauli
+displacements $D(v)=X^{a}Z^{b}\!\otimes\!X^{c}Z^{d}$ on $\mathbb{C}^9$
+(the photon's past$\,\otimes\,$future time-bin space) have commutation
+graph equal to the same $\W$, via
+$D(u)D(v)=\omega^{\langle u,v\rangle}D(v)D(u)$.
+\emph{Witnesses: \path{bt817_self_entangled_photon_atlas.py},
+\path{bt821_operator_operand_duality.py}.}
+\end{theorem}
+
+Thus a point of the substrate is simultaneously a pure state the photon
+can occupy and a unitary the photon can enact; a line is simultaneously
+a measurement context (orthonormal tetrad) and a stabilizer group
+(maximal commuting Pauli set with its $9$-state joint eigenbasis).  The
+$360 = 40\times 9 = f\cdot g$ two-qutrit stabilizer states are the
+joint eigenbases of the forty lines.
+
+\subsection{The five vacua and the Schl\"afli geography}
+
+Every maximal subgroup class of $\PSp(4,3)$ decomposes the substrate
+in its own canonical way; the maximal indices are the classical
+inventory of the $27$ lines on a cubic surface.
+
+\begin{center}\small
+\begin{tabular}{llllll}
+\toprule
+index & subgroup & points & lines & vacuum & cubic surface\\
+\midrule
+27 & $2^4{:}A_5$ & $[40]$ & $[40]$ & homogeneous (icosahedral) & 27 lines\\
+36 & $S_6$ & $[40]$ & $[10,30]$ & spread fibration & 36 double-sixes\\
+40 & parabolic & $[1,12,27]$ & $[4,36]$ & holonet point vacuum & trihedra I\\
+40 & parabolic & $[4,36]$ & $[1,12,27]$ & dual line vacuum & trihedra II\\
+45 & $(2T{\times}2T){:}2$ & $[8,32]$ & $[16,24]$ & binary polar & 45 tritangents\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The physical decomposition $40=1+12+27$ (self + gauge shell + matter
+shell) is the \emph{choice of the point-parabolic vacuum} among five
+inequivalent readings; the icosahedral vacuum sees a featureless
+substrate.  The platonic ladder threads the table: the binary
+tetrahedral group $2T$ (the $24$-cell) lives in every polar-pair
+stabilizer, the real octahedral group $O_h$ ($=S_4\times\mathbb Z_2$,
+order $48$) is the chart symmetry of \S\ref{sec:network}, and the
+binary icosahedral group $2I=\mathrm{SL}(2,5)$ (the $600$-cell) is the
+core of every spread stabilizer, with point orbits $[20,20]$ and line
+orbits $[10,30]$ echoing the Boerdijk--Coxeter decomposition
+$600=20\times 30$.
+\emph{Witnesses: \texttt{bt808--bt813}.}
+
+%======================================================================
+\section{The carrier: how to self-entangle a photon}
+\label{sec:carrier}
+
+Entanglement is a relation between tensor factors; nothing requires
+the factors to be distinct particles.  Self-entanglement is
+entanglement between one photon's own registers.
+
+\subsection{Stage A: spatial (one element)}
+A diagonal photon meets a polarizing beam splitter:
+$\tfrac1{\sqrt2}(\ket{H}+\ket{V})\ \mapsto\
+\tfrac1{\sqrt2}(\ket{H,a}+\ket{V,b})$.
+Path and polarization are now maximally entangled \emph{within} the
+photon; this two-qubit $\mathbb{C}^4$ is the Witting carrier of
+Theorem~\ref{thm:duality}(i).
+
+\subsection{Stage B: temporal (two Clifford gates)}
+A tritter (symmetric $3$-port coupler) \emph{is} the qutrit Fourier
+gate $F_3$; a three-bin delay ladder ($0,\tau,2\tau$) defines past and
+future registers; one electro-optic modulator applies
+$\mathrm{CX}_{p\to f}$ conditioned on bin index.  The temporal Bell
+qutrit
+\[
+\ket{\Omega}\;=\;\mathrm{CX}_{p\to f}\,(F_3\otimes I)\ket{0}_p\ket{0}_f
+\;=\;\frac1{\sqrt3}\sum_{j=0}^{2}\ket{j}_p\ket{j}_f
+\]
+is verified exactly; the photon is entangled with its own future.
+Inserting any $U$ in the future arm, the recombination visibility is
+the \emph{trace--Choi witness}
+\[
+V(U)\;=\;\frac{|\mathrm{Tr}\,U|}{3},\qquad
+V(F_3)=\tfrac13,\quad V(X)=V(Z)=0,
+\]
+so the photon implements the Choi--Jamio{\l}kowski isomorphism on
+itself: it measures channels against its own past.
+\emph{Witness: \path{bt820_self_entanglement_protocol.py}.}
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[scale=0.92, every node/.style={font=\small}]
+  % source
+  \node[draw,rounded corners,fill=blue!8] (src) at (0,0) {single photon};
+  % PBS
+  \node[draw,fill=gray!15,minimum size=8mm,rotate=45] (pbs) at (2.6,0) {};
+  \node at (2.6,-0.85) {PBS};
+  \draw[-{Stealth}] (src) -- (pbs);
+  % two paths
+  \draw[-{Stealth}] (pbs) -- (4.6,0.9) node[midway,above]{$\ket{H,a}$};
+  \draw[-{Stealth}] (pbs) -- (4.6,-0.9) node[midway,below]{$\ket{V,b}$};
+  % tritter
+  \node[draw,fill=green!12,minimum height=18mm] (tri) at (5.6,0) {tritter $F_3$};
+  \draw[-{Stealth}] (4.6,0.9) -- (tri.west |- 4.6,0.9);
+  \draw[-{Stealth}] (4.6,-0.9) -- (tri.west |- 4.6,-0.9);
+  % delay ladder
+  \node[draw,fill=yellow!18,minimum height=18mm] (del) at (8.0,0)
+    {\begin{tabular}{c}delays\\ $0/\tau/2\tau$\end{tabular}};
+  \draw[-{Stealth}] (tri) -- (del);
+  % EOM
+  \node[draw,fill=red!12,minimum height=18mm] (eom) at (10.4,0)
+    {\begin{tabular}{c}EOM\\ $\mathrm{CX}_{p\to f}$\end{tabular}};
+  \draw[-{Stealth}] (del) -- (eom);
+  % recombination
+  \node[draw,rounded corners,fill=blue!8] (out) at (13.0,0)
+    {\begin{tabular}{c}recombine\\ $V(U)=|\mathrm{Tr}U|/3$\end{tabular}};
+  \draw[-{Stealth}] (eom) -- (out) node[midway,above]{$\ket{\Omega}$};
+  % BC drive loop
+  \draw[-{Stealth},dashed] (out.north) .. controls (12,1.8) and (9,1.8) ..
+    (del.north) node[midway,above]
+    {BC drive: rotate $\arccos(-2/3)$ per loop};
+\end{tikzpicture}
+\caption{Preparation schematic.  One photon, four registers.  The PBS
+entangles path with polarization (Stage A); the tritter--delay--EOM
+chain prepares the temporal Bell qutrit $\ket{\Omega}$ (Stage B); the
+dashed loop is the irrational Boerdijk--Coxeter drive of
+\S\ref{sec:time}.}
+\end{figure}
+
+%======================================================================
+\section{The network: atlas, building, and routing}
+\label{sec:network}
+
+\begin{theorem}[The hypercube atlas]
+$\W$ contains exactly $540$ skew line pairs.  For each pair the
+non-collinearity graph on its $8$ points is the cube graph $Q_3$, with
+full symmetry group $O_h$ of order $48$ (these are the only
+order-$48$ stabilizers; the binary $2O$ does not occur).  Each chart
+admits an exact $\GF2^3$ Gray-code addressing in which chart edges are
+unit XOR moves and the antipode of a vertex is its unique collinear
+partner.  Every $\W$ nonedge is a chart edge in exactly $12=k$ charts;
+every edge is an antipode pair in exactly $9=q^2$.
+\emph{Witnesses: \texttt{bt773}, \texttt{bt777}, \texttt{bt778}.}
+\end{theorem}
+
+\begin{theorem}[The fabric is the building]
+The chart-adjacency web ($540$ nodes, two charts adjacent when one's
+axis is a disjoint transversal pair of the other) is $6$-regular with
+exactly $1620$ edges, and these edges are in canonical bijection with
+the $1620$ apartments of the Tits building of $\Sp(4,\GF3)$.  The web
+has diameter $5$; its adjacency module contains the Steinberg
+representation twice and presses against the Ramanujan bound only on a
+$15$-dimensional sentinel eigenspace.
+\emph{Witnesses: \texttt{bt777}, \texttt{bt779}, \texttt{bt744}.}
+\end{theorem}
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[scale=0.8, every node/.style={font=\scriptsize}]
+  % one chart cube
+  \foreach \x/\y/\n/\l in {0/0/000/000, 2/0/100/100, 0/2/010/010,
+    2/2/110/110, 0.9/0.9/001/001, 2.9/0.9/101/101, 0.9/2.9/011/011,
+    2.9/2.9/111/111}{
+    \node[circle,draw,fill=blue!12,inner sep=1.5pt] (\n) at (\x,\y) {\l};}
+  \foreach \a/\b in {000/100,000/010,000/001,100/110,100/101,010/110,
+    010/011,001/101,001/011,110/111,101/111,011/111}{
+    \draw (\a) -- (\b);}
+  \node at (1.45,-0.8) {\textbf{one chart}: $Q_3$, XOR routing,};
+  \node at (1.45,-1.25) {antipode $=$ collinear partner};
+  % web
+  \begin{scope}[xshift=7.2cm,yshift=1.2cm]
+    \foreach \i in {0,...,8}{
+      \node[circle,draw,fill=green!14,inner sep=2.5pt]
+        (w\i) at ({360/9*\i}:2.0) {};}
+    \foreach \i in {0,...,8}{
+      \pgfmathtruncatemacro{\j}{mod(\i+1,9)}
+      \pgfmathtruncatemacro{\k}{mod(\i+3,9)}
+      \draw[green!50!black] (w\i) -- (w\j);
+      \draw[green!50!black] (w\i) -- (w\k);}
+    \node at (0,-2.8) {\textbf{the web} (sketch): $540$ charts,};
+    \node at (0,-3.25) {$6$-regular, $1620$ links $=$ apartments,};
+    \node at (0,-3.7) {diameter $5$};
+  \end{scope}
+  % layer ladder
+  \begin{scope}[xshift=12.8cm,yshift=-0.4cm]
+    \node[draw,fill=gray!10,minimum width=34mm] (l1) at (0,0)
+      {in-chart XOR hop};
+    \node[draw,fill=gray!16,minimum width=34mm] (l2) at (0,1.0)
+      {apartment hop};
+    \node[draw,fill=gray!22,minimum width=34mm] (l3) at (0,2.0)
+      {$\le 5$ hops globally};
+    \draw[-{Stealth}] (l1) -- (l2);
+    \draw[-{Stealth}] (l2) -- (l3);
+    \node at (0,3.0) {\textbf{routing stack}};
+  \end{scope}
+\end{tikzpicture}
+\caption{Network schematics.  Left: a single chart with its
+$\GF2^3$ addressing (XOR routing native).  Center: the $540$-chart
+web whose links are the apartments of the Tits building (sketched as a
+circulant fragment).  Right: the two-level routing stack.}
+\end{figure}
+
+Routing a packet means choosing XOR moves inside charts and apartment
+hops between them; since chart moves \emph{are} register operations
+(\S\ref{sec:software}), routing is computation.  At scale the
+recursion is the holonet ladder: $40^n$ cores at level $n$, the same
+$\mathrm{SRG}(40,12,2,4)$ at every level, with the level-$0$ chart's
+$1+12+27$ degree split realized as self pole, gauge shell, and matter
+shell of each node.
+
+%======================================================================
+\section{The middleware: tomotope mirrors and the runtime bus}
+\label{sec:middleware}
+
+The atlas contains two different $2160$-element boundary worlds.  They
+must not be collapsed.  The rectangle side is cyclic: its stabilizer is
+$C_{12}$ and it supplies the selector's phase clock.  The
+chart-transversal side is dihedral: its stabilizer is $D_{12}$ and it
+supplies the mirror transport bus.  Equal cardinality is the red
+herring; different stabilizer structure is the theorem.
+
+\begin{theorem}[The $D_{12}$ mirror bus]
+The $540$ cube charts carry exactly four common-transversal slots each,
+so the global chart-transversal space has $540\cdot4=2160$ slots.  The
+map
+\[
+(\hbox{chart},\hbox{ common transversal line})
+\longmapsto
+(\hbox{chart},\hbox{ antipode pair cut out by that transversal})
+\]
+is an equivariant bijection onto the atlas antipode-slot space.  Its
+projective stabilizer has order $12$ and GAP identifies it as $D_{12}$,
+not $C_{12}$.
+\emph{Witness: \path{bt815_global_2160_transversal_gset.py}.}
+\end{theorem}
+
+Locally, a skew-line chart has four common isotropic transversals.  Read
+those four transversals as the four vertex carriers of the tomotope
+middle layer.  Each transversal is a $K_4$, and each $K_4$ has three
+opposite-edge axes and four triangular faces.  Thus the chart carries
+\[
+4 \hbox{ vertices},\qquad 4\cdot3=12 \hbox{ edge labels},\qquad
+4\cdot4=16 \hbox{ face labels},
+\]
+and the middle incidence packet has
+\[
+4\cdot3\cdot4=48
+\]
+edge--face blocks, with the doubled base/shadow fiber restoring $192$
+flags.  This is the local $\langle r_0,r_3\rangle$ tomotope block layer,
+not an analogy to a toroidal polyhedron.
+\emph{Witness: \path{bt814_tomotope_middle_layer_from_residual_tetrahedra.py}.}
+
+\begin{theorem}[Photonic mirror middleware]
+The full optical Clifford runtime factors as
+\[
+|\Sp(4,\GF3)| = 51840
+              = 24\cdot2160
+              = 24\cdot45\cdot48.
+\]
+Here $24=f$ is the full $\Sp(4,3)$ lift of the projective $D_{12}$
+mirror-slot stabilizer, $45$ is the hyperbolic polar-pair/tritangent
+geography, and $48$ is the local tomotope edge--face middle layer
+(also the order of the chart group $O_h$).  Equivalently, the photon is
+clocked by the cyclic selector side and routed by the dihedral mirror
+side; the complete Clifford group is the lift of that mirror bus through
+the tomotope middle carrier.
+\emph{Witness: \path{bt826_photonic_mirror_middleware.py}.}
+\end{theorem}
+
+This is the architectural closure missing from a bare universality
+claim.  The tritter, phase plate, and controlled delay generate the
+whole Clifford group, but the group is \emph{organized} as a middleware
+stack: full slot stabilizer, global mirror bus, polar vacuum geography,
+and tomotope local block.  In software terms, $C_{12}$ is the clock
+interrupt, $D_{12}$ is the mirror router, $48$ is the local packet
+format, and $24\cdot45\cdot48$ is the finite runtime.
+
+%======================================================================
+\section{The software: braids, teleported gates, universality}
+\label{sec:software}
+
+\subsection{Exact braid words}
+In the anyonic Fibonacci representation
+$\sigma_1=\mathrm{diag}(\zeta^4,-\zeta^2)$ ($\zeta=e^{i\pi/5}$) one has
+\emph{exactly} $\sigma_1^5=Z$ and $\sigma_1^{10}=I$ --- not merely
+projectively (verified in the cyclotomic ring
+$\mathbb{Z}[\zeta_{10}]$).  In the dual ($\pm$) encoding of the local
+$K_{3,3}$ cycle code $\GF2^4$ this makes every register bit-flip an
+exact five-letter braid word, and the flat global register (the unique
+connected gluing with trivial holonomy across the atlas) carries the
+action coherently: a zero-Berry-phase memory.
+\emph{Witnesses: \texttt{bt740}, \texttt{bt741}.}
+
+\subsection{The photon is its own gate}
+A gate $U$ is stored as the self-entangled state $(I\otimes
+U)\ket{\Omega}$; Bell-projecting an input register against the photon's
+\emph{past} register outputs $U$ (times a known Pauli correction) on
+the \emph{future} register --- verified for all nine outcomes.  The
+machine's gate library is a library of self-entangled states; executing
+software means interfering the photon with its own history.
+\emph{Witness: \texttt{bt821}.}
+
+\subsection{The Universality Theorem}
+\label{sec:universality}
+
+\begin{theorem}[Clifford completeness from optics]
+The symplectic images of the photon's physical elements --- the tritter
+$F_3$ on either register, the quadratic phase plate $S$, and the
+delay-conditioned $\mathrm{CX}$ --- generate all of $\Sp(4,\GF3)$
+(closure of order $51840$, exact).  Hence tabletop optics realize the
+complete two-qutrit Clifford group modulo Paulis and phases.
+\emph{Witness: \path{bt825_universality_theorem.py}.}
+\end{theorem}
+
+\begin{theorem}[Universality]
+Clifford completeness, together with the machine's intrinsic magic
+supply (\S\ref{sec:fuel}) and the strict positivity of its contextual
+fraction ($1/10$, exact), implies universal quantum computation by
+magic-state injection; for qutrits, contextuality is necessary and
+sufficient for magic distillation (Howard--Wallman--Veitch--Emerson).
+One self-entangled photon on the $\W$ mesh is a universal quantum
+computer whose transport is its gate action.
+\end{theorem}
+
+%======================================================================
+\section[The fuel: matter equals magic]{The fuel: matter $=$ magic}
+\label{sec:fuel}
+
+\begin{theorem}[The triality]
+In the photon's two-qubit reading, exactly the $4$ basis rays are
+stabilizer states and all $36$ $\omega$-rays are magic (no stabilizer
+state has support $3$).  Consequently three classifications coincide
+exactly, on rays $[4,36]$ and on contexts $\{4{:}1,\,1{:}12,\,0{:}27\}$:
+the holonet vacuum split, the Schmidt (self-entanglement) strata, and
+the magic strata.  \emph{The matter shell is the machine's
+non-classical resource sector.}
+\emph{Witness: \texttt{bt822}.}
+\end{theorem}
+
+\begin{theorem}[Three grades and the cube inside]
+Stabilizer fidelity splits the $36$ magic rays into grades
+\[
+\underbrace{8}_{2^q}\ \text{deep}\ \Bigl(F=\tfrac{2+\sqrt3}{6}\Bigr),
+\qquad
+\underbrace{24}_{f}\ \text{mid}\ \Bigl(F=\tfrac{5+2\sqrt3}{12}\Bigr),
+\qquad
+\underbrace{4}_{\mu}\ \text{shallow}\ \Bigl(F=\tfrac34=\tfrac q\mu\Bigr),
+\]
+the shallow grade sitting exactly at the Werner decoherence threshold.
+The $8$ deep rays are precisely the point set of a hyperbolic polar
+pair (the $24$-cell vacuum axis), and the $27$ fully-magic contexts
+stratify by grade signature as $1+8+12+6$ --- the cell census of the
+cube.  \emph{Witnesses: \texttt{bt822}, \texttt{bt823}.}
+\end{theorem}
+
+\begin{theorem}[Exact contextuality budget]
+The maximum number of contexts a classical $\{0,1\}$ valuation can
+satisfy exactly-once is exactly $36=(q!)^2$ (complete branch-and-bound
+over all $2^{40}$ markings): classicality saturates at the spread
+count, the deficit is exactly $\mu=4$, and the contextual fraction is
+exactly $1/10=1/\Phi_4$.  A perfect valuation would be an ovoid, and
+$\W$ has none: the true independence number is $\alpha=7=\Phi_6$,
+attained only by the beacon heptads of \S\ref{sec:sync}, against the
+Lov\'asz bound $\vartheta=10$ --- the $\vartheta-\alpha$ gap $3=q$ is
+the combinatorial face of Kochen--Specker.
+\emph{Witnesses: \texttt{bt818}, \texttt{bt823}.}
+\end{theorem}
+
+%======================================================================
+\section{Memory, protection, and the immune system}
+
+\begin{theorem}[Steinberg memory]
+The Levi-graph cycle space and the chart-overlap $81$-sector are both
+irreducible and equal to the Steinberg representation of
+$\PSp(4,3)$ --- the Solomon--Tits homology of the building, whose
+canonical basis is the $81$ apartments through any chamber.  Schur's
+lemma then forces the uniqueness of the chart--cycle bridge.  Restricted
+to a Sylow $3$-subgroup the module is free of rank one: the protected
+memory is one free generator over the substrate's ternary symmetry.
+\emph{Witnesses: \texttt{bt742}, \texttt{bt744}.}
+\end{theorem}
+
+The error layer is native: the $[[240,81,4,3]]_3$ CSS code on the edge
+qutrits has all four parameters substrate-primitive; the dual
+Cs\'asz\'ar/Szilassi cross-check supplies parity-free error detection;
+and the web's unique non-Ramanujan eigenspace --- dimension $15=g$ ---
+is the spectral sentinel where drift appears first.
+
+%======================================================================
+\section{Time: three clocks and a quasicrystal}
+\label{sec:time}
+
+\begin{theorem}[Clock trichotomy]
+Of the program's three natural clocks, exactly one is internal:
+$\mathbb{Z}_{12}$ (the rectangle clock, $12\mid 51840$) runs the
+selector and duo machinery, while $\mathbb{Z}_7$ (Cs\'asz\'ar) and
+$\mathbb{Z}_{13}$ (Singer) do not divide the group order and act as
+external references --- both with decimal period $6=q!$, so the digit
+expansion of $1/7$ is literally the internal clock's shadow modulo its
+duo bit.
+\emph{Witnesses: \texttt{bt774}, \texttt{bt803}, \texttt{bt807},
+\texttt{bt819}.}
+\end{theorem}
+
+\begin{theorem}[The Boerdijk--Coxeter time quasicrystal]
+Driving the loop by the BC twist $\theta=\arccos(-2/3)$ per round trip
+yields a stroboscopic orbit that provably never repeats (Niven), with
+the Steinhaus three-distance signature at all substrate step counts and
+--- the substrate's signature moment --- exactly \emph{two} gap lengths
+at $n=30=h(E_8)$, the BC ring length, where closure happens in $S^3$
+(the $600$-cell) rather than the phase circle (deficit $0.0158$).
+This is the photonic sibling of the Fibonacci-drive dynamical
+topological phase.
+\emph{Witness: \texttt{bt820}.}
+\end{theorem}
+
+\begin{theorem}[The arrow of time]
+Without its two-trit feedforward record, the photon's
+self-configuration loop is the completely depolarizing channel with
+unique fixed point $I/q$ --- exactly the Bell marginal; with the
+record it is unitary.  Decoherence is self-forgetting, priced at
+$\log_3 q^2 = 2$ trits per cycle.
+\emph{Witness: \texttt{bt823}.}
+\end{theorem}
+
+%======================================================================
+\section{Synchronization: beacons and schedules}
+\label{sec:sync}
+
+The maximum classically coherent constellations are the
+\emph{beacon heptads}: seven states with all pairwise overlaps exactly
+$1/3=1/q$ --- a complete $K_7$ interference mesh, the Cs\'asz\'ar
+toroidal node realized in light.  There are exactly $2880$ heptads in
+a single transitive family; each has a $\mathbb{Z}_3\times\mathbb{Z}_3$
+symmetry fixing a unique \emph{master beacon} and cycling two triads
+($7=1+3+3$), and single-beacon swaps connect the family into its own
+exchange network: the reference frames of the network form a network.
+The measurement timetable is rigid: there exist exactly $36$ complete
+schedules (partitions of the $40$ states into $10$ contexts) --- an
+exhaustive result that simultaneously proves every spread of $\W$ is
+regular --- with each context appearing in exactly $9$ schedules.
+\emph{Witnesses: \texttt{bt817}, \texttt{bt819}.}
+
+%======================================================================
+\section{Build sheet and falsifiable witnesses}
+
+\textbf{Components} (all standard quantum optics): one heralded
+single-photon source; one polarizing beam splitter; one symmetric
+$3$-port coupler (tritter); a $0/\tau/2\tau$ delay ladder; one
+bin-synchronous electro-optic modulator; one polarization rotator set
+to $\arccos(-2/3)$ in the recirculation loop; single-photon detectors.
+
+\textbf{Witnesses} (kill criteria, all parameter-free):
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+witness & predicted value & substrate form\\
+\midrule
+trace--Choi visibility of $F_3$ & $1/3$ & $1/q$\\
+trace--Choi visibility of $X,Z$ & $0$ & ---\\
+Kochen--Specker classical budget & $36/40$ & $(q!)^2/v$\\
+beacon-mesh pair visibility & $1/3$ (all $21$ pairs) & $1/q$\\
+Werner separability threshold & $3/4$ & $q/\mu$\\
+BC-drive gap census at $n{=}30$ & $2$ gap lengths & $h(E_8)$ ring\\
+$D_{12}$ mirror-slot stabilizer & order $12$ & projective bus\\
+runtime factorization & $24\cdot45\cdot48$ & $|\Sp(4,\GF3)|$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A measured deviation in any row falsifies the corresponding layer.
+
+%======================================================================
+\section{Implications, corrections, and the ethos}
+
+\textbf{Physics.}  The vacuum is five-fold degenerate, indexed by the
+Schl\"afli inventory; the choice $1+12+27$ is a parabolic gauge choice,
+not a necessity.  The generation triples of the matter shell are the
+tritangent triangles of the $27$-line configuration, reconstructed here
+purely from double cosets.  Matter and magic coincide: the
+non-classical resource of the machine \emph{is} its matter sector, with
+the cube's cell census $1+8+12+6$ grading the fuel.
+
+\textbf{Computing.}  Universality requires no exotic hardware: the
+Clifford layer is three optical elements, the magic layer is the
+photon's own matter shell, and the topological layer rides the exact
+$\sigma^5=Z$ braid identity.  The network-is-computer thesis is not an
+analogy but the statement that the atlas's transport groupoid and the
+register's gate groupoid are the same groupoid.  The middleware theorem
+adds the missing operating-system layer: the cyclic $C_{12}$ clock
+orders phase, the dihedral $D_{12}$ mirror bus routes state, the
+tomotope $48$-packet supplies local edge--face incidence, and the full
+runtime is exactly $24\cdot45\cdot48=51840$.
+
+\textbf{The ethos.}  Two pre-existing corpus claims failed under exact
+computation and were corrected at their sources during this program:
+the independence number of $\W$ is $7$, not $10$ (no ovoid exists, the
+``perfect graph'' block is withdrawn), and the Kochen--Specker optimum
+is $36/40$, not $34/40$.  In both cases the corrected values are
+\emph{more} substrate-natural than the claims they replaced
+($\alpha=\Phi_6$; budget $=(q!)^2/v$) --- the pattern a real structure
+shows when probed honestly.
+
+%======================================================================
+\appendix
+\section{Verification ledger}
+
+Every theorem above is backed by an executable script in
+\texttt{analysis/} with results in \texttt{data/}; the chain
+BT739--BT826 was developed and pushed incrementally with exact
+arithmetic (GF($p$) elimination, cyclotomic integers, complete
+branch-and-bound, GAP witnesses for group-theoretic facts).
+
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+layer & primary witnesses\\
+\midrule
+duality / carriers & bt817, bt820, bt821\\
+atlas / building / web & bt773, bt777, bt744, bt779\\
+mirror middleware / tomotope runtime & bt814, bt815, bt826\\
+braids / registers & bt740, bt741\\
+vacua / geography / transitions & bt808--bt813, bt816\\
+fuel / contextuality & bt818, bt822, bt823\\
+memory / Steinberg & bt742, bt744\\
+clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
+sync / schedules & bt817, bt819\\
+universality & bt825\\
+corpus corrections & bt818, bt823, bt824\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{companion} W.~Dahn, \emph{Self-Entanglement Companion},
+  Theory of Everything Project preprint (2026).
+\bibitem{howard} M.~Howard, J.~Wallman, V.~Veitch, J.~Emerson,
+  Contextuality supplies the `magic' for quantum computation,
+  \emph{Nature} \textbf{510}, 351 (2014).
+\bibitem{dumitrescu} P.~T.~Dumitrescu \emph{et al.},
+  Dynamical topological phase realized in a trapped-ion quantum
+  simulator, \emph{Nature} \textbf{607}, 463 (2022).
+\bibitem{gottesman} D.~Gottesman, I.~Chuang,
+  Demonstrating the viability of universal quantum computation using
+  teleportation, \emph{Nature} \textbf{402}, 390 (1999).
+\bibitem{niven} I.~Niven, \emph{Irrational Numbers}, MAA (1956).
+\bibitem{thas} J.~A.~Thas, Ovoids and spreads of finite classical
+  polar spaces, \emph{Geom.~Dedicata} \textbf{10}, 135 (1981).
+\end{thebibliography}
+
+\end{document}
