@@ -1,0 +1,84 @@
+{
+  "theorem": "BT781 cube/tomotope order-48 split",
+  "cube_chart_half": {
+    "interpretation": "Aut(Q3) = 2^3:S3",
+    "order": 48,
+    "base_skew_pair": [0, 13],
+    "element_order_distribution": {
+      "1": 1,
+      "2": 19,
+      "3": 8,
+      "4": 12,
+      "6": 8
+    },
+    "binary_kernel_order": 8,
+    "binary_kernel_structure": "C2^3",
+    "binary_kernel_order_distribution": {
+      "1": 1,
+      "2": 7
+    },
+    "dimension_quotient_order": 6,
+    "dimension_quotient_structure": "S3",
+    "dimension_quotient_order_distribution": {
+      "1": 1,
+      "2": 3,
+      "3": 2
+    },
+    "derived_order": 12,
+    "derived_structure": "A4",
+    "derived_order_distribution": {
+      "1": 1,
+      "2": 3,
+      "3": 8
+    }
+  },
+  "tomotope_half": {
+    "interpretation": "Gamma(T)' = 2^4:C3 inside Gamma(T)=2^4:S3",
+    "tomotope_edge_group_order": 96,
+    "tomotope_edge_group_order_distribution": {
+      "1": 1,
+      "2": 27,
+      "3": 32,
+      "4": 36
+    },
+    "derived_order": 48,
+    "derived_order_distribution": {
+      "1": 1,
+      "2": 15,
+      "3": 32
+    },
+    "derived_2core_order": 16,
+    "derived_2core_structure": "C2^4",
+    "derived_2core_order_distribution": {
+      "1": 1,
+      "2": 15
+    },
+    "derived_quotient_order": 3,
+    "derived_quotient_structure": "C3"
+  },
+  "split_identity": {
+    "cube": "2^3 * |S3| = 8 * 6 = 48",
+    "tomotope_derived": "2^4 * |C3| = 16 * 3 = 48",
+    "trade": "chart transport trades one tomotope binary bit for one reflection bit",
+    "not_isomorphic": true,
+    "cube_vs_tomotope_derived_distributions": [
+      {
+        "1": 1,
+        "2": 19,
+        "3": 8,
+        "4": 12,
+        "6": 8
+      },
+      {
+        "1": 1,
+        "2": 15,
+        "3": 32
+      }
+    ]
+  },
+  "normalizations": {
+    "tomotope_flags": "192 = 4 * 48",
+    "tomotope_edge_symmetry": "96 = 2 * 48",
+    "w33_directed_edges_and_EH_action": "480 = 10 * 48"
+  }
+}
