@@ -1,0 +1,28 @@
+{
+  "theorem": "BT822 magic census: matter = magic",
+  "stabilizer_states": 60,
+  "stabilizer_rays": 4,
+  "magic_rays": 36,
+  "stab_supports": [
+    1,
+    2,
+    4
+  ],
+  "magic_grades": {
+    "deep_(2+sqrt3)/6": 8,
+    "mid_(5+2sqrt3)/12": 24,
+    "shallow_3/4_werner": 4
+  },
+  "cube_census_27": [
+    1,
+    8,
+    12,
+    6
+  ],
+  "context_magic_strata": {
+    "4": 1,
+    "1": 12,
+    "0": 27
+  },
+  "triality": "holonet = entanglement = magic (rays and contexts)"
+}
