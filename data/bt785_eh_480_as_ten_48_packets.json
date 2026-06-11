@@ -1,0 +1,39 @@
+{
+  "theorem": "BT785 EH action 480 equals ten local 48 packets",
+  "W33_parameters": {"q": 3, "v": 40, "k": 12, "lambda": 2, "mu": 4, "r": 2, "s": -4},
+  "five_480_derivations": {
+    "directed_edges": 480,
+    "oriented_triangles": 480,
+    "closed_2_walks_trace_A2": 480,
+    "vertex_laplacian_trace_L0": 480,
+    "curvature_integral": 480
+  },
+  "local_packet_48": {
+    "value": 48,
+    "cube_chart_stabilizer": "BT781 Aut(Q3)=C2^3:S3 has order 48",
+    "tomotope_derived_half": "BT781 Gamma(T)'=C2^4:C3 has order 48",
+    "factorizations": {
+      "4*k": 48,
+      "2*24": 48,
+      "12*mu": 48,
+      "16*q": 48,
+      "(q+1)*k": 48
+    }
+  },
+  "packetization": {
+    "spectral_gap_k_minus_r": 10,
+    "identity": "480 = (k-r) * 48 = 10 * 48",
+    "packets_per_derivation": {
+      "directed_edges": 10,
+      "oriented_triangles": 10,
+      "closed_2_walks_trace_A2": 10,
+      "vertex_laplacian_trace_L0": 10,
+      "curvature_integral": 10
+    }
+  },
+  "interpretation": {
+    "short": "The W33 action quantum is ten copies of the cube/tomotope 48-unit.",
+    "why_10": "10 = k-r is the W33 spectral gap and the repo SO(10)-vector slot.",
+    "why_48": "48 is the local exchange unit between cube transport and tomotope orientation."
+  }
+}
