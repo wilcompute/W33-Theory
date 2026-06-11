@@ -1,0 +1,676 @@
+{
+  "theorem": "BT799 four-transversal incidence grammar",
+  "base_skew_pair": [
+    0,
+    13
+  ],
+  "transversal_lines": [
+    {
+      "line_id": 1,
+      "points": [
+        0,
+        13,
+        14,
+        15
+      ],
+      "base_points": [
+        0,
+        13
+      ],
+      "shadow_points": [
+        14,
+        15
+      ]
+    },
+    {
+      "line_id": 4,
+      "points": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "base_points": [
+        1,
+        4
+      ],
+      "shadow_points": [
+        7,
+        10
+      ]
+    },
+    {
+      "line_id": 7,
+      "points": [
+        2,
+        31,
+        35,
+        39
+      ],
+      "base_points": [
+        2,
+        31
+      ],
+      "shadow_points": [
+        35,
+        39
+      ]
+    },
+    {
+      "line_id": 10,
+      "points": [
+        3,
+        22,
+        27,
+        29
+      ],
+      "base_points": [
+        3,
+        22
+      ],
+      "shadow_points": [
+        27,
+        29
+      ]
+    }
+  ],
+  "symbol_legend": {
+    "00": "target pair misses this transversal",
+    "10": "first target line meets this transversal",
+    "01": "second target line meets this transversal",
+    "11": "both target lines meet this transversal"
+  },
+  "orbit_grammar": {
+    "R09": {
+      "orbit": 9,
+      "size": 8,
+      "profile": {
+        "((0, 1), (0, 1), (0, 1), (1, 1))": 4,
+        "((1, 0), (1, 0), (1, 0), (1, 1))": 4
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            0,
+            14
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            16
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            26
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "face_sheet: anchored side meets all four transversals, other side meets one"
+    },
+    "R10": {
+      "orbit": 10,
+      "size": 8,
+      "profile": {
+        "((0, 1), (0, 1), (0, 1), (1, 1))": 4,
+        "((1, 0), (1, 0), (1, 0), (1, 1))": 4
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            0,
+            15
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            19
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            30
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "face_sheet: anchored side meets all four transversals, other side meets one"
+    },
+    "R11": {
+      "orbit": 11,
+      "size": 8,
+      "profile": {
+        "((0, 0), (0, 0), (0, 0), (1, 1))": 8
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            2,
+            16
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            3,
+            19
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            5,
+            14
+          ],
+          "signature_by_transversal": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "handle: one transversal bridges both target lines"
+    },
+    "R12": {
+      "orbit": 12,
+      "size": 12,
+      "profile": {
+        "((1, 0), (1, 0), (1, 0), (1, 0))": 12
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            0,
+            17
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            21
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            0,
+            27
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "live_edge: one target line is the base-side anchor"
+    },
+    "R13": {
+      "orbit": 13,
+      "size": 12,
+      "profile": {
+        "((0, 0), (0, 0), (0, 0), (0, 0))": 12
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            17,
+            27
+          ],
+          "signature_by_transversal": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            17,
+            29
+          ],
+          "signature_by_transversal": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            17,
+            36
+          ],
+          "signature_by_transversal": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "shadow_edge: both target lines miss the transversal tetrad"
+    },
+    "R24": {
+      "orbit": 24,
+      "size": 12,
+      "profile": {
+        "((0, 0), (0, 0), (0, 1), (1, 0))": 12
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            2,
+            5
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            2,
+            9
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            2,
+            11
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "face_connector: two separate one-sided transversal hits"
+    },
+    "R26": {
+      "orbit": 26,
+      "size": 12,
+      "profile": {
+        "((0, 0), (0, 0), (0, 1), (1, 0))": 12
+      },
+      "examples": [
+        {
+          "target_skew_pair": [
+            3,
+            6
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            3,
+            8
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "target_skew_pair": [
+            3,
+            12
+          ],
+          "signature_by_transversal": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "grammar_role": "face_connector: two separate one-sided transversal hits"
+    }
+  },
+  "interpretation": {
+    "R11": "the handle octet is exactly the one-transversal double-hit packet",
+    "faces": "R09/R10 are anchored face sheets: one side sees all transversals and the other side selects one",
+    "edges": "R12 is live anchored edge; R13 is shadow edge; R24/R26 are split one-sided connectors"
+  },
+  "checks": {
+    "four_common_transversals": true,
+    "R11_is_one_11_three_00": true,
+    "R12_is_four_10": true,
+    "R13_is_four_00": true,
+    "R24_is_split_one_sided_connector": true,
+    "R26_is_split_one_sided_connector": true,
+    "R09_face_sheet_has_two_mirrors": true,
+    "R10_face_sheet_has_two_mirrors": true
+  }
+}

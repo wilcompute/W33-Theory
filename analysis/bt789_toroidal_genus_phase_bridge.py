@@ -131,14 +131,21 @@ Print("tomo_derived=", Size(DerivedSubgroup(H)), "\n");
 Print("isomorphic=", IsomorphismGroups(G,H) <> fail, "\n");
 QUIT;
 """
-    proc = subprocess.run(
-        ["gap", "-q"],
-        input=script,
-        text=True,
-        capture_output=True,
-        check=True,
-        timeout=20,
-    )
+    import shutil
+    from pathlib import Path as _P
+    win_bash = _P("C:/Program Files/GAP-4.15.1/runtime/bin/bash.exe")
+    run_kwargs = dict(input=script, text=True, capture_output=True,
+                      check=True, timeout=60)
+    if shutil.which("gap"):
+        cmd = ["gap", "-q"]
+    elif win_bash.exists():
+        # Windows install: GAP runs inside its own cygwin runtime; bash must
+        # start from its bin directory for the /opt mount to resolve.
+        cmd = [str(win_bash), "--norc", "-c", "/opt/gap-4.15.1/gap.exe -q"]
+        run_kwargs["cwd"] = str(win_bash.parent)
+    else:
+        raise FileNotFoundError("gap executable not found (PATH or Windows runtime)")
+    proc = subprocess.run(cmd, **run_kwargs)
     out = {}
     for line in proc.stdout.splitlines():
         if "=" in line:

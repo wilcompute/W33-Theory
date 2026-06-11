@@ -1,0 +1,438 @@
+{
+  "theorem": "BT798 residual 48-packet is four tetrahedra",
+  "base_skew_pair": [
+    0,
+    13
+  ],
+  "base_union": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    13,
+    22,
+    31
+  ],
+  "residual_edge_micro_orbits": [
+    1,
+    2,
+    13,
+    14
+  ],
+  "residual_triangle_micro_orbits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "edge_micro_orbit_classes": {
+    "base_antipode_matching_directed": {
+      "micro_orbit": 1,
+      "size": 8,
+      "representative": [
+        0,
+        13
+      ]
+    },
+    "base_to_shadow_cross_edges": {
+      "micro_orbit": 2,
+      "size": 16,
+      "representative": [
+        0,
+        14
+      ]
+    },
+    "shadow_to_base_cross_edges": {
+      "micro_orbit": 13,
+      "size": 16,
+      "representative": [
+        7,
+        1
+      ]
+    },
+    "shadow_antipode_matching_directed": {
+      "micro_orbit": 14,
+      "size": 8,
+      "representative": [
+        7,
+        10
+      ]
+    }
+  },
+  "component_rows": [
+    {
+      "component": 0,
+      "vertices": [
+        0,
+        13,
+        14,
+        15
+      ],
+      "base_vertices": [
+        0,
+        13
+      ],
+      "shadow_vertices": [
+        14,
+        15
+      ],
+      "undirected_edges": [
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "directed_edge_count": 12,
+      "triangle_corner_count": 12
+    },
+    {
+      "component": 1,
+      "vertices": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "base_vertices": [
+        1,
+        4
+      ],
+      "shadow_vertices": [
+        7,
+        10
+      ],
+      "undirected_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "directed_edge_count": 12,
+      "triangle_corner_count": 12
+    },
+    {
+      "component": 2,
+      "vertices": [
+        2,
+        31,
+        35,
+        39
+      ],
+      "base_vertices": [
+        2,
+        31
+      ],
+      "shadow_vertices": [
+        35,
+        39
+      ],
+      "undirected_edges": [
+        [
+          2,
+          31
+        ],
+        [
+          2,
+          35
+        ],
+        [
+          2,
+          39
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          31,
+          39
+        ],
+        [
+          35,
+          39
+        ]
+      ],
+      "directed_edge_count": 12,
+      "triangle_corner_count": 12
+    },
+    {
+      "component": 3,
+      "vertices": [
+        3,
+        22,
+        27,
+        29
+      ],
+      "base_vertices": [
+        3,
+        22
+      ],
+      "shadow_vertices": [
+        27,
+        29
+      ],
+      "undirected_edges": [
+        [
+          3,
+          22
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          3,
+          29
+        ],
+        [
+          22,
+          27
+        ],
+        [
+          22,
+          29
+        ],
+        [
+          27,
+          29
+        ]
+      ],
+      "directed_edge_count": 12,
+      "triangle_corner_count": 12
+    }
+  ],
+  "common_transversal_lines": [
+    {
+      "line_id": 1,
+      "points": [
+        0,
+        13,
+        14,
+        15
+      ],
+      "base_points": [
+        0,
+        13
+      ],
+      "shadow_points": [
+        14,
+        15
+      ]
+    },
+    {
+      "line_id": 4,
+      "points": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "base_points": [
+        1,
+        4
+      ],
+      "shadow_points": [
+        7,
+        10
+      ]
+    },
+    {
+      "line_id": 7,
+      "points": [
+        2,
+        31,
+        35,
+        39
+      ],
+      "base_points": [
+        2,
+        31
+      ],
+      "shadow_points": [
+        35,
+        39
+      ]
+    },
+    {
+      "line_id": 10,
+      "points": [
+        3,
+        22,
+        27,
+        29
+      ],
+      "base_points": [
+        3,
+        22
+      ],
+      "shadow_points": [
+        27,
+        29
+      ]
+    }
+  ],
+  "triangle_micro_orbit_classes": {
+    "1": {
+      "size": 16,
+      "representative": [
+        [
+          0,
+          13,
+          14
+        ],
+        0
+      ],
+      "base_vertices_in_triangle_profile": {
+        "2": 16
+      },
+      "marked_vertex_profile": {
+        "base": 16
+      },
+      "component_profile": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "classification_key": "(16, ((2, 16),), (('base', 16),))"
+    },
+    "2": {
+      "size": 8,
+      "representative": [
+        [
+          0,
+          13,
+          14
+        ],
+        14
+      ],
+      "base_vertices_in_triangle_profile": {
+        "2": 8
+      },
+      "marked_vertex_profile": {
+        "shadow": 8
+      },
+      "component_profile": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      },
+      "classification_key": "(8, ((2, 8),), (('shadow', 8),))"
+    },
+    "3": {
+      "size": 8,
+      "representative": [
+        [
+          0,
+          14,
+          15
+        ],
+        0
+      ],
+      "base_vertices_in_triangle_profile": {
+        "1": 8
+      },
+      "marked_vertex_profile": {
+        "base": 8
+      },
+      "component_profile": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      },
+      "classification_key": "(8, ((1, 8),), (('base', 8),))"
+    },
+    "4": {
+      "size": 16,
+      "representative": [
+        [
+          0,
+          14,
+          15
+        ],
+        14
+      ],
+      "base_vertices_in_triangle_profile": {
+        "1": 16
+      },
+      "marked_vertex_profile": {
+        "shadow": 16
+      },
+      "component_profile": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "classification_key": "(16, ((1, 16),), (('shadow', 16),))"
+    }
+  },
+  "carrier_identities": {
+    "directed_edges": "4 * |E_dir(K4)| = 4 * 12 = 48",
+    "triangle_corners": "4 * C(4,3) * 3 = 4 * 4 * 3 = 48",
+    "transversal_lines": "the four K4 components are the four common transversals of the base skew pair",
+    "torus_unit": "each K4 contributes 4 vertices * 3 outgoing directions = 12"
+  },
+  "interpretation": {
+    "diagonal_kill": "the cube antipode bit is completed into the four common transversal lines",
+    "BT788_refinement": "the unique 16+16+8+8 residual compressed packet is a four-tetrahedra carrier",
+    "BT789_link": "one K4 is the local 4*3 toroidal unit before normalization by 12"
+  },
+  "checks": {
+    "residual_edge_micro_orbits_are_16_16_8_8": true,
+    "residual_triangle_micro_orbits_are_16_16_8_8": true,
+    "directed_residual_count_is_48": true,
+    "undirected_residual_edges_are_24": true,
+    "residual_vertices_are_16": true,
+    "four_components": true,
+    "every_component_is_K4": true,
+    "components_are_common_transversal_lines": true,
+    "there_are_four_common_transversals": true,
+    "each_component_has_two_base_two_shadow": true,
+    "triangle_residual_is_same_four_K4_corner_set": true,
+    "edge_classes_complete": true
+  }
+}

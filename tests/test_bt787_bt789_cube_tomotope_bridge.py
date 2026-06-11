@@ -48,8 +48,61 @@ def test_bt789_toroidal_genus_module_bridge():
     assert data["gap_witness"]["isomorphic"] == "false"
 
 
+def test_bt798_residual_tetrahedral_carrier():
+    run_script("analysis/bt798_residual_tetrahedral_carrier.py")
+    data = load_json("data/bt798_residual_tetrahedral_carrier.json")
+    assert data["residual_edge_micro_orbits"] == [1, 2, 13, 14]
+    assert data["residual_triangle_micro_orbits"] == [1, 2, 3, 4]
+    assert len(data["component_rows"]) == 4
+    assert len(data["common_transversal_lines"]) == 4
+    assert [row["points"] for row in data["common_transversal_lines"]] == [
+        [0, 13, 14, 15],
+        [1, 4, 7, 10],
+        [2, 31, 35, 39],
+        [3, 22, 27, 29],
+    ]
+    assert all(row["directed_edge_count"] == 12 for row in data["component_rows"])
+    assert all(row["triangle_corner_count"] == 12 for row in data["component_rows"])
+
+
+def test_bt799_transversal_incidence_grammar():
+    run_script("analysis/bt799_transversal_incidence_grammar.py")
+    data = load_json("data/bt799_transversal_incidence_grammar.json")
+    assert data["orbit_grammar"]["R11"]["profile"] == {
+        "((0, 0), (0, 0), (0, 0), (1, 1))": 8
+    }
+    assert data["orbit_grammar"]["R12"]["profile"] == {
+        "((1, 0), (1, 0), (1, 0), (1, 0))": 12
+    }
+    assert data["orbit_grammar"]["R13"]["profile"] == {
+        "((0, 0), (0, 0), (0, 0), (0, 0))": 12
+    }
+
+
+def test_bt800_diagonal_quotient_shadow_plane():
+    run_script("analysis/bt800_diagonal_quotient_shadow_plane.py")
+    data = load_json("data/bt800_diagonal_quotient_shadow_plane.json")
+    assert all(row["xor"] == [1, 1, 1] for row in data["quotient_rows"])
+    assert len(data["quotient_rows"]) == 4
+    assert data["shadow_plane"]["collinearity_structure"] == "K4,4 across the two noncollinearity K4 sheets"
+    assert len(data["shadow_plane"]["noncollinearity_components"]) == 2
+
+
+def test_bt801_global_transversal_repair_atlas():
+    run_script("analysis/bt801_global_transversal_repair_atlas.py")
+    data = load_json("data/bt801_global_transversal_repair_atlas.json")
+    assert data["chart_count"] == 540
+    assert data["global_chart_transversal_slots"] == 2160
+    assert data["transversal_slot_count_per_line_profile"] == {"54": 40}
+    assert data["checks"]["all_shadow_splits_are_4_4"]
+
+
 if __name__ == "__main__":
     test_bt787_r11_is_handle_octet()
     test_bt788_480_compresses_to_ten_packets()
     test_bt789_toroidal_genus_module_bridge()
-    print("BT787-BT789 focused tests passed")
+    test_bt798_residual_tetrahedral_carrier()
+    test_bt799_transversal_incidence_grammar()
+    test_bt800_diagonal_quotient_shadow_plane()
+    test_bt801_global_transversal_repair_atlas()
+    print("BT787-BT801 focused tests passed")
