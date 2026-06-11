@@ -1,0 +1,7 @@
+{
+  "theorem": "BT823 the closure",
+  "ks_exact_max": 36,
+  "contextual_deficit": 4,
+  "deep8_is_polar_pair": true,
+  "selfloop_fixed_point": "I/3 (depolarizing without feedforward)"
+}
