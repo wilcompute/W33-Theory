@@ -1,0 +1,19 @@
+{
+  "theorem": "BT817 self-entangled photon atlas",
+  "orthogonality_iso_W33": true,
+  "contexts": 40,
+  "ray_split_product_entangled": [
+    4,
+    36
+  ],
+  "context_entanglement_strata": {
+    "1": 12,
+    "4": 1,
+    "0": 27
+  },
+  "measurement_schedules": 36,
+  "context_in_schedules": [
+    9
+  ],
+  "statement": "qubit factorization of the photon = parabolic vacuum; 1+12+27 = entanglement stratification of contexts; spreads = complete single-photon measurement schedules"
+}
