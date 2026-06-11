@@ -1,0 +1,19 @@
+{
+  "theorem": "BT811 platonic fine print",
+  "chart_group_orders": {
+    "1": 1,
+    "2": 19,
+    "3": 8,
+    "4": 12,
+    "6": 8
+  },
+  "chart_group": "O_h = S4 x Z2 (no order-8: not 2O)",
+  "index45_point_orbits": [
+    8,
+    32
+  ],
+  "index45_isoline_orbits": [
+    16,
+    24
+  ]
+}
