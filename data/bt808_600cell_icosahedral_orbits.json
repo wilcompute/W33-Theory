@@ -1,0 +1,23 @@
+{
+  "theorem": "BT808 600-cell icosahedral orbits + polarity resolution",
+  "isotropic_per_plane": {
+    "4": 40
+  },
+  "polarity_theorem": "isotropic lines in p^perp = pencil of p (4)",
+  "gap_witness": {
+    "psp43_maximal_index27": "(C2xC2xC2xC2):A5  order 960",
+    "sl25_embeds_in_sp43": true,
+    "sl25_point_orbits": [
+      20,
+      20
+    ],
+    "sl25_isotropic_line_orbits": [
+      10,
+      30
+    ]
+  },
+  "bc_link": "20 rings x 30 tetrahedra = 600-cell (BT485 T3)",
+  "user_hint_verdict": "3-vs-5 in the shatter profile is Singer-generic, NOT Schlaefli; but {3,3,5} genuinely enters via SL(2,5) < Sp(4,3) with orbits [20,20]/[10,30] and the 2^4:A5 index-27 maximal",
+  "spread_theorem": "icosahedral 10-orbit = SPREAD (10 disjoint lines cover 40 points, GAP-verified)",
+  "user_960_identity": "960 = 2*(600-120) = lambda*480 = lambda*Tr(L0) (EH action)"
+}
