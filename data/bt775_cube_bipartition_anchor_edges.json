@@ -1,0 +1,10 @@
+{
+  "theorem": "BT775 cube bipartition + anchor edges",
+  "special_lines_disjoint_cover_pointwise": true,
+  "transversal_cross": 4,
+  "cube_edges": 12,
+  "anchors_are_cube_edges": 12,
+  "duo_anchor_distance_profiles": {
+    "(0, 1, 1, 2)": 6
+  }
+}
