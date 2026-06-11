@@ -1,0 +1,94 @@
+{
+  "theorem": "BT786 face-layer phase lift",
+  "inputs": {
+    "BT780_size8_orbits": [
+      9,
+      10,
+      11
+    ],
+    "BT783_cube_module": "1 + 2",
+    "BT783_tomotope_module": "2 + 2",
+    "BT784_faces": 16,
+    "BT785_local_packet": 48
+  },
+  "rank32_face_layer": {
+    "face_orbits": [
+      9,
+      10
+    ],
+    "face_orbit_sizes": [
+      8,
+      8
+    ],
+    "excluded_size8_orbits": [
+      11
+    ],
+    "excluded_reason": {
+      "11": {
+        "relation": {
+          "one_side": 2
+        },
+        "overlap": 2
+      }
+    },
+    "face_layer_count": 16,
+    "primitive_16_orbit_exists": false,
+    "interpretation": "16 faces are a two-sheet 8+8 phase lift, not one primitive rank-32 orbit"
+  },
+  "module_lift": {
+    "cube_C2_3_profile": {
+      "profile": {
+        "1": 1,
+        "3": 2
+      },
+      "fixed_nonidentity_bits": 1,
+      "nonzero_orbit_count": 3,
+      "nonzero_count": 7
+    },
+    "kill_diagonal_quotient_profile": {
+      "profile": {
+        "3": 1
+      },
+      "fixed_nonidentity_bits": 0,
+      "nonzero_orbit_count": 1,
+      "nonzero_count": 3
+    },
+    "added_F4_plane_profile": {
+      "profile": {
+        "3": 1
+      },
+      "fixed_nonidentity_bits": 0,
+      "nonzero_orbit_count": 1,
+      "nonzero_count": 3
+    },
+    "lifted_C2_4_profile": {
+      "profile": {
+        "3": 5
+      },
+      "fixed_nonidentity_bits": 0,
+      "nonzero_orbit_count": 5,
+      "nonzero_count": 15
+    },
+    "short_law": "C2^3=(1+2) -> C2^3/<111> + F4 = 2+2"
+  },
+  "packet_identity": {
+    "cube_side": "8 cube binary bits * |S3| = 8*6 = 48",
+    "tomotope_side": "16 face-layer bits * |C3| = 16*3 = 48",
+    "W33_action": "480 = (k-r) * (16 faces * C3) = 10 * 48"
+  },
+  "checks": {
+    "rank32_has_three_size8_packets": true,
+    "face_layer_is_exactly_two_size8_packets": true,
+    "third_size8_packet_is_not_face_layer": true,
+    "face_layer_count_is_tomotope_faces": true,
+    "face_layer_has_no_primitive_16_orbit": true,
+    "cube_profile_matches_BT783": true,
+    "cube_has_one_fixed_nonidentity_bit": true,
+    "quotient_kills_diagonal_to_one_F4_plane": true,
+    "new_plane_is_one_F4_plane": true,
+    "lift_profile_matches_tomotope_BT783": true,
+    "lift_has_no_fixed_nonidentity_bits": true,
+    "face_layer_times_C3_is_local_48": true,
+    "cube_core_times_S3_is_local_48": true
+  }
+}

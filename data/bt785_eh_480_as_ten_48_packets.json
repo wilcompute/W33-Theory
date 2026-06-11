@@ -1,6 +1,14 @@
 {
   "theorem": "BT785 EH action 480 equals ten local 48 packets",
-  "W33_parameters": {"q": 3, "v": 40, "k": 12, "lambda": 2, "mu": 4, "r": 2, "s": -4},
+  "W33_parameters": {
+    "q": 3,
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "r": 2,
+    "s": -4
+  },
   "five_480_derivations": {
     "directed_edges": 480,
     "oriented_triangles": 480,
@@ -22,7 +30,7 @@
   },
   "packetization": {
     "spectral_gap_k_minus_r": 10,
-    "identity": "480 = (k-r) * 48 = 10 * 48",
+    "480_as_gap_times_packet": "480 = (k-r) * 48 = 10 * 48",
     "packets_per_derivation": {
       "directed_edges": 10,
       "oriented_triangles": 10,
