@@ -1,0 +1,26 @@
+{
+  "theorem": "BT778 atlas double-counts + Ramanujan + percolation",
+  "nonedge_chart_multiplicity": 12,
+  "edge_antipode_multiplicity": 9,
+  "antipode_slots": 2160,
+  "antipode_slot_stabilizer": {
+    "1": 1,
+    "2": 7,
+    "3": 2,
+    "6": 2
+  },
+  "antipode_slot_stab_is_Z12": false,
+  "ramanujan_bound": 4.47213595499958,
+  "ramanujan_violator_multiplicity": 15,
+  "percolation_curve": {
+    "0.1": 0.0187,
+    "0.15": 0.0426,
+    "0.18": 0.0892,
+    "0.2": 0.1402,
+    "0.22": 0.2655,
+    "0.25": 0.4935,
+    "0.3": 0.7483,
+    "0.4": 0.9253
+  },
+  "mean_field_pc": 0.2
+}
