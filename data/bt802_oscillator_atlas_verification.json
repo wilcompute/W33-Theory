@@ -1,0 +1,63 @@
+{
+  "theorem": "BT802 oscillator atlas verification",
+  "T1": {
+    "spectrum": [
+      -0.0,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "aut": 24,
+    "cycle_dim": 3
+  },
+  "T2": {
+    "marks": [
+      0,
+      3,
+      4,
+      7
+    ],
+    "ladder": {
+      "4": 0,
+      "7": 1,
+      "12": 6,
+      "27": 46,
+      "40": 111
+    }
+  },
+  "T3": {
+    "discriminant": 145,
+    "attainable_start": [
+      0,
+      1,
+      6,
+      11,
+      13,
+      20
+    ]
+  },
+  "T4": {
+    "edges": 21,
+    "loop_states": 9
+  },
+  "T5": {
+    "q3_charts": 540
+  },
+  "T6": {
+    "double_edges": 480,
+    "packets": 10,
+    "carrier": 6
+  },
+  "module_corrections": [
+    "h=2 (v=10 JR double torus) lies OUTSIDE the neighborly ladder",
+    "hypercube backbone is INTRINSIC (540 Q3 charts, BT777), not external",
+    "forbidden genus h=q=3 proven exactly (disc 145 non-square)"
+  ],
+  "dictionary": {
+    "Module 1 K4 microkernel": "lines of W33 are K4s; BT798 carrier",
+    "Module 2 Csaszar torus": "BT790 executed embedding",
+    "Module 3 dual boundary ops": "BT742/744 Hodge = Steinberg",
+    "Module 4 hypercube routing": "BT777 atlas, XOR native",
+    "Module 5 oscillator stack": "genus ladder + BT774 clock marks"
+  }
+}
