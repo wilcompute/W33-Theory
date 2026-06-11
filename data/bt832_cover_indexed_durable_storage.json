@@ -1,0 +1,1362 @@
+{
+  "theorem": "BT832 cover-indexed durable storage simulator",
+  "storage_rule": {
+    "local_abi": "48 tomotope middle blocks",
+    "cover_fiber": "Z_k^3 over each block",
+    "lifted_capacity": "48*k^3 durable packet slots",
+    "kernel_order": "k^6 = (k^3)^2",
+    "architectural_meaning": "k changes durable storage gauge; base route ABI is unchanged"
+  },
+  "cover_lifts": [
+    {
+      "cover_index": 3,
+      "cover_counts": {
+        "vertices": 108,
+        "edges": 648,
+        "triangles": 864,
+        "tetrahedra": 216,
+        "octahedra": 108,
+        "lifted_packet_slots": 1296,
+        "kernel_order_to_Q1": 729
+      },
+      "program_lifts": [
+        {
+          "program": "local_flip",
+          "level": 1,
+          "base_abi_blocks": [
+            7
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 7,
+              "cover_coordinate": [
+                0,
+                2,
+                2
+              ],
+              "fiber_id": 8,
+              "lifted_slot": 197,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 1296,
+          "load_fraction": "1/1296",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "single_digit_far",
+          "level": 1,
+          "base_abi_blocks": [
+            39
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                0,
+                2
+              ],
+              "fiber_id": 2,
+              "lifted_slot": 1055,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 1296,
+          "load_fraction": "1/1296",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "two_digit_cross",
+          "level": 2,
+          "base_abi_blocks": [
+            39,
+            43
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                0,
+                2
+              ],
+              "fiber_id": 2,
+              "lifted_slot": 1055,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 43,
+              "cover_coordinate": [
+                0,
+                0,
+                1
+              ],
+              "fiber_id": 1,
+              "lifted_slot": 1162,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 2,
+          "lifted_slot_capacity": 1296,
+          "load_fraction": "2/1296",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "three_digit_far",
+          "level": 3,
+          "base_abi_blocks": [
+            39,
+            9,
+            27
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                0,
+                2
+              ],
+              "fiber_id": 2,
+              "lifted_slot": 1055,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 9,
+              "cover_coordinate": [
+                1,
+                2,
+                2
+              ],
+              "fiber_id": 17,
+              "lifted_slot": 260,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 27,
+              "cover_coordinate": [
+                2,
+                0,
+                0
+              ],
+              "fiber_id": 18,
+              "lifted_slot": 747,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 3,
+          "lifted_slot_capacity": 1296,
+          "load_fraction": "3/1296",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "six_digit_stress",
+          "level": 6,
+          "base_abi_blocks": [
+            39,
+            21,
+            3,
+            33,
+            15,
+            45
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                0,
+                2
+              ],
+              "fiber_id": 2,
+              "lifted_slot": 1055,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 21,
+              "cover_coordinate": [
+                1,
+                2,
+                1
+              ],
+              "fiber_id": 16,
+              "lifted_slot": 583,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 3,
+              "cover_coordinate": [
+                2,
+                0,
+                2
+              ],
+              "fiber_id": 20,
+              "lifted_slot": 101,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 3,
+              "base_block": 33,
+              "cover_coordinate": [
+                0,
+                2,
+                0
+              ],
+              "fiber_id": 6,
+              "lifted_slot": 897,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 4,
+              "base_block": 15,
+              "cover_coordinate": [
+                1,
+                0,
+                2
+              ],
+              "fiber_id": 11,
+              "lifted_slot": 416,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 5,
+              "base_block": 45,
+              "cover_coordinate": [
+                2,
+                2,
+                0
+              ],
+              "fiber_id": 24,
+              "lifted_slot": 1239,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 6,
+          "lifted_slot_capacity": 1296,
+          "load_fraction": "6/1296",
+          "all_lifts_reduce_to_base_abi": true
+        }
+      ],
+      "base_abi_by_program": {
+        "local_flip": [
+          7
+        ],
+        "single_digit_far": [
+          39
+        ],
+        "two_digit_cross": [
+          39,
+          43
+        ],
+        "three_digit_far": [
+          39,
+          9,
+          27
+        ],
+        "six_digit_stress": [
+          39,
+          21,
+          3,
+          33,
+          15,
+          45
+        ]
+      }
+    },
+    {
+      "cover_index": 5,
+      "cover_counts": {
+        "vertices": 500,
+        "edges": 3000,
+        "triangles": 4000,
+        "tetrahedra": 1000,
+        "octahedra": 500,
+        "lifted_packet_slots": 6000,
+        "kernel_order_to_Q1": 15625
+      },
+      "program_lifts": [
+        {
+          "program": "local_flip",
+          "level": 1,
+          "base_abi_blocks": [
+            7
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 7,
+              "cover_coordinate": [
+                4,
+                3,
+                1
+              ],
+              "fiber_id": 116,
+              "lifted_slot": 991,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 6000,
+          "load_fraction": "1/6000",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "single_digit_far",
+          "level": 1,
+          "base_abi_blocks": [
+            39
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                3,
+                4
+              ],
+              "fiber_id": 19,
+              "lifted_slot": 4894,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 6000,
+          "load_fraction": "1/6000",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "two_digit_cross",
+          "level": 2,
+          "base_abi_blocks": [
+            39,
+            43
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                3,
+                4
+              ],
+              "fiber_id": 19,
+              "lifted_slot": 4894,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 43,
+              "cover_coordinate": [
+                1,
+                2,
+                1
+              ],
+              "fiber_id": 36,
+              "lifted_slot": 5411,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 2,
+          "lifted_slot_capacity": 6000,
+          "load_fraction": "2/6000",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "three_digit_far",
+          "level": 3,
+          "base_abi_blocks": [
+            39,
+            9,
+            27
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                3,
+                4
+              ],
+              "fiber_id": 19,
+              "lifted_slot": 4894,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 9,
+              "cover_coordinate": [
+                2,
+                1,
+                2
+              ],
+              "fiber_id": 57,
+              "lifted_slot": 1182,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 27,
+              "cover_coordinate": [
+                4,
+                0,
+                0
+              ],
+              "fiber_id": 100,
+              "lifted_slot": 3475,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 3,
+          "lifted_slot_capacity": 6000,
+          "load_fraction": "3/6000",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "six_digit_stress",
+          "level": 6,
+          "base_abi_blocks": [
+            39,
+            21,
+            3,
+            33,
+            15,
+            45
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                0,
+                3,
+                4
+              ],
+              "fiber_id": 19,
+              "lifted_slot": 4894,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 21,
+              "cover_coordinate": [
+                2,
+                4,
+                3
+              ],
+              "fiber_id": 73,
+              "lifted_slot": 2698,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 3,
+              "cover_coordinate": [
+                2,
+                4,
+                1
+              ],
+              "fiber_id": 71,
+              "lifted_slot": 446,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 3,
+              "base_block": 33,
+              "cover_coordinate": [
+                4,
+                2,
+                4
+              ],
+              "fiber_id": 114,
+              "lifted_slot": 4239,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 4,
+              "base_block": 15,
+              "cover_coordinate": [
+                1,
+                2,
+                3
+              ],
+              "fiber_id": 38,
+              "lifted_slot": 1913,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 5,
+              "base_block": 45,
+              "cover_coordinate": [
+                3,
+                0,
+                1
+              ],
+              "fiber_id": 76,
+              "lifted_slot": 5701,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 6,
+          "lifted_slot_capacity": 6000,
+          "load_fraction": "6/6000",
+          "all_lifts_reduce_to_base_abi": true
+        }
+      ],
+      "base_abi_by_program": {
+        "local_flip": [
+          7
+        ],
+        "single_digit_far": [
+          39
+        ],
+        "two_digit_cross": [
+          39,
+          43
+        ],
+        "three_digit_far": [
+          39,
+          9,
+          27
+        ],
+        "six_digit_stress": [
+          39,
+          21,
+          3,
+          33,
+          15,
+          45
+        ]
+      }
+    },
+    {
+      "cover_index": 7,
+      "cover_counts": {
+        "vertices": 1372,
+        "edges": 8232,
+        "triangles": 10976,
+        "tetrahedra": 2744,
+        "octahedra": 1372,
+        "lifted_packet_slots": 16464,
+        "kernel_order_to_Q1": 117649
+      },
+      "program_lifts": [
+        {
+          "program": "local_flip",
+          "level": 1,
+          "base_abi_blocks": [
+            7
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 7,
+              "cover_coordinate": [
+                2,
+                1,
+                4
+              ],
+              "fiber_id": 109,
+              "lifted_slot": 2510,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 16464,
+          "load_fraction": "1/16464",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "single_digit_far",
+          "level": 1,
+          "base_abi_blocks": [
+            39
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                3,
+                6,
+                0
+              ],
+              "fiber_id": 189,
+              "lifted_slot": 13566,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 16464,
+          "load_fraction": "1/16464",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "two_digit_cross",
+          "level": 2,
+          "base_abi_blocks": [
+            39,
+            43
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                3,
+                6,
+                0
+              ],
+              "fiber_id": 189,
+              "lifted_slot": 13566,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 43,
+              "cover_coordinate": [
+                1,
+                6,
+                2
+              ],
+              "fiber_id": 93,
+              "lifted_slot": 14842,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 2,
+          "lifted_slot_capacity": 16464,
+          "load_fraction": "2/16464",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "three_digit_far",
+          "level": 3,
+          "base_abi_blocks": [
+            39,
+            9,
+            27
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                3,
+                6,
+                0
+              ],
+              "fiber_id": 189,
+              "lifted_slot": 13566,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 9,
+              "cover_coordinate": [
+                0,
+                6,
+                3
+              ],
+              "fiber_id": 45,
+              "lifted_slot": 3132,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 27,
+              "cover_coordinate": [
+                4,
+                3,
+                1
+              ],
+              "fiber_id": 218,
+              "lifted_slot": 9479,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 3,
+          "lifted_slot_capacity": 16464,
+          "load_fraction": "3/16464",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "six_digit_stress",
+          "level": 6,
+          "base_abi_blocks": [
+            39,
+            21,
+            3,
+            33,
+            15,
+            45
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                3,
+                6,
+                0
+              ],
+              "fiber_id": 189,
+              "lifted_slot": 13566,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 21,
+              "cover_coordinate": [
+                2,
+                2,
+                6
+              ],
+              "fiber_id": 118,
+              "lifted_slot": 7321,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 3,
+              "cover_coordinate": [
+                6,
+                4,
+                4
+              ],
+              "fiber_id": 326,
+              "lifted_slot": 1355,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 3,
+              "base_block": 33,
+              "cover_coordinate": [
+                5,
+                5,
+                2
+              ],
+              "fiber_id": 282,
+              "lifted_slot": 11601,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 4,
+              "base_block": 15,
+              "cover_coordinate": [
+                0,
+                0,
+                2
+              ],
+              "fiber_id": 2,
+              "lifted_slot": 5147,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 5,
+              "base_block": 45,
+              "cover_coordinate": [
+                6,
+                1,
+                0
+              ],
+              "fiber_id": 301,
+              "lifted_slot": 15736,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 6,
+          "lifted_slot_capacity": 16464,
+          "load_fraction": "6/16464",
+          "all_lifts_reduce_to_base_abi": true
+        }
+      ],
+      "base_abi_by_program": {
+        "local_flip": [
+          7
+        ],
+        "single_digit_far": [
+          39
+        ],
+        "two_digit_cross": [
+          39,
+          43
+        ],
+        "three_digit_far": [
+          39,
+          9,
+          27
+        ],
+        "six_digit_stress": [
+          39,
+          21,
+          3,
+          33,
+          15,
+          45
+        ]
+      }
+    },
+    {
+      "cover_index": 11,
+      "cover_counts": {
+        "vertices": 5324,
+        "edges": 31944,
+        "triangles": 42592,
+        "tetrahedra": 10648,
+        "octahedra": 5324,
+        "lifted_packet_slots": 63888,
+        "kernel_order_to_Q1": 1771561
+      },
+      "program_lifts": [
+        {
+          "program": "local_flip",
+          "level": 1,
+          "base_abi_blocks": [
+            7
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 7,
+              "cover_coordinate": [
+                9,
+                8,
+                0
+              ],
+              "fiber_id": 1177,
+              "lifted_slot": 10494,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 63888,
+          "load_fraction": "1/63888",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "single_digit_far",
+          "level": 1,
+          "base_abi_blocks": [
+            39
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                1,
+                4,
+                3
+              ],
+              "fiber_id": 168,
+              "lifted_slot": 52077,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 63888,
+          "load_fraction": "1/63888",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "two_digit_cross",
+          "level": 2,
+          "base_abi_blocks": [
+            39,
+            43
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                1,
+                4,
+                3
+              ],
+              "fiber_id": 168,
+              "lifted_slot": 52077,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 43,
+              "cover_coordinate": [
+                5,
+                5,
+                5
+              ],
+              "fiber_id": 665,
+              "lifted_slot": 57898,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 2,
+          "lifted_slot_capacity": 63888,
+          "load_fraction": "2/63888",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "three_digit_far",
+          "level": 3,
+          "base_abi_blocks": [
+            39,
+            9,
+            27
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                1,
+                4,
+                3
+              ],
+              "fiber_id": 168,
+              "lifted_slot": 52077,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 9,
+              "cover_coordinate": [
+                3,
+                8,
+                6
+              ],
+              "fiber_id": 457,
+              "lifted_slot": 12436,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 27,
+              "cover_coordinate": [
+                5,
+                1,
+                4
+              ],
+              "fiber_id": 620,
+              "lifted_slot": 36557,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 3,
+          "lifted_slot_capacity": 63888,
+          "load_fraction": "3/63888",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "six_digit_stress",
+          "level": 6,
+          "base_abi_blocks": [
+            39,
+            21,
+            3,
+            33,
+            15,
+            45
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                1,
+                4,
+                3
+              ],
+              "fiber_id": 168,
+              "lifted_slot": 52077,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 21,
+              "cover_coordinate": [
+                1,
+                0,
+                2
+              ],
+              "fiber_id": 123,
+              "lifted_slot": 28074,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 3,
+              "cover_coordinate": [
+                4,
+                6,
+                0
+              ],
+              "fiber_id": 550,
+              "lifted_slot": 4543,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 3,
+              "base_block": 33,
+              "cover_coordinate": [
+                4,
+                3,
+                9
+              ],
+              "fiber_id": 526,
+              "lifted_slot": 44449,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 4,
+              "base_block": 15,
+              "cover_coordinate": [
+                8,
+                9,
+                1
+              ],
+              "fiber_id": 1068,
+              "lifted_slot": 21033,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 5,
+              "base_block": 45,
+              "cover_coordinate": [
+                8,
+                6,
+                10
+              ],
+              "fiber_id": 1044,
+              "lifted_slot": 60939,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 6,
+          "lifted_slot_capacity": 63888,
+          "load_fraction": "6/63888",
+          "all_lifts_reduce_to_base_abi": true
+        }
+      ],
+      "base_abi_by_program": {
+        "local_flip": [
+          7
+        ],
+        "single_digit_far": [
+          39
+        ],
+        "two_digit_cross": [
+          39,
+          43
+        ],
+        "three_digit_far": [
+          39,
+          9,
+          27
+        ],
+        "six_digit_stress": [
+          39,
+          21,
+          3,
+          33,
+          15,
+          45
+        ]
+      }
+    },
+    {
+      "cover_index": 13,
+      "cover_counts": {
+        "vertices": 8788,
+        "edges": 52728,
+        "triangles": 70304,
+        "tetrahedra": 17576,
+        "octahedra": 8788,
+        "lifted_packet_slots": 105456,
+        "kernel_order_to_Q1": 4826809
+      },
+      "program_lifts": [
+        {
+          "program": "local_flip",
+          "level": 1,
+          "base_abi_blocks": [
+            7
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 7,
+              "cover_coordinate": [
+                9,
+                8,
+                11
+              ],
+              "fiber_id": 1636,
+              "lifted_slot": 17015,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 105456,
+          "load_fraction": "1/105456",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "single_digit_far",
+          "level": 1,
+          "base_abi_blocks": [
+            39
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                6,
+                9,
+                1
+              ],
+              "fiber_id": 1132,
+              "lifted_slot": 86815,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 1,
+          "lifted_slot_capacity": 105456,
+          "load_fraction": "1/105456",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "two_digit_cross",
+          "level": 2,
+          "base_abi_blocks": [
+            39,
+            43
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                6,
+                9,
+                1
+              ],
+              "fiber_id": 1132,
+              "lifted_slot": 86815,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 43,
+              "cover_coordinate": [
+                1,
+                1,
+                3
+              ],
+              "fiber_id": 185,
+              "lifted_slot": 94656,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 2,
+          "lifted_slot_capacity": 105456,
+          "load_fraction": "2/105456",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "three_digit_far",
+          "level": 3,
+          "base_abi_blocks": [
+            39,
+            9,
+            27
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                6,
+                9,
+                1
+              ],
+              "fiber_id": 1132,
+              "lifted_slot": 86815,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 9,
+              "cover_coordinate": [
+                10,
+                2,
+                4
+              ],
+              "fiber_id": 1720,
+              "lifted_slot": 21493,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 27,
+              "cover_coordinate": [
+                1,
+                6,
+                2
+              ],
+              "fiber_id": 249,
+              "lifted_slot": 59568,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 3,
+          "lifted_slot_capacity": 105456,
+          "load_fraction": "3/105456",
+          "all_lifts_reduce_to_base_abi": true
+        },
+        {
+          "program": "six_digit_stress",
+          "level": 6,
+          "base_abi_blocks": [
+            39,
+            21,
+            3,
+            33,
+            15,
+            45
+          ],
+          "lifted_packets": [
+            {
+              "depth": 0,
+              "base_block": 39,
+              "cover_coordinate": [
+                6,
+                9,
+                1
+              ],
+              "fiber_id": 1132,
+              "lifted_slot": 86815,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 1,
+              "base_block": 21,
+              "cover_coordinate": [
+                3,
+                5,
+                0
+              ],
+              "fiber_id": 572,
+              "lifted_slot": 46709,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 2,
+              "base_block": 3,
+              "cover_coordinate": [
+                2,
+                0,
+                11
+              ],
+              "fiber_id": 349,
+              "lifted_slot": 6940,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 3,
+              "base_block": 33,
+              "cover_coordinate": [
+                12,
+                8,
+                9
+              ],
+              "fiber_id": 2141,
+              "lifted_slot": 74642,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 4,
+              "base_block": 15,
+              "cover_coordinate": [
+                10,
+                3,
+                10
+              ],
+              "fiber_id": 1739,
+              "lifted_slot": 34694,
+              "reduces_to_base_block": true
+            },
+            {
+              "depth": 5,
+              "base_block": 45,
+              "cover_coordinate": [
+                7,
+                11,
+                8
+              ],
+              "fiber_id": 1334,
+              "lifted_slot": 100199,
+              "reduces_to_base_block": true
+            }
+          ],
+          "distinct_lifted_slots_used": 6,
+          "lifted_slot_capacity": 105456,
+          "load_fraction": "6/105456",
+          "all_lifts_reduce_to_base_abi": true
+        }
+      ],
+      "base_abi_by_program": {
+        "local_flip": [
+          7
+        ],
+        "single_digit_far": [
+          39
+        ],
+        "two_digit_cross": [
+          39,
+          43
+        ],
+        "three_digit_far": [
+          39,
+          9,
+          27
+        ],
+        "six_digit_stress": [
+          39,
+          21,
+          3,
+          33,
+          15,
+          45
+        ]
+      }
+    }
+  ],
+  "checks": {
+    "bt831_boundary_loaded": true,
+    "cover_indices_are_supported": true,
+    "kernel_order_is_square_of_fiber": true,
+    "lifted_capacity_scales_as_48k3": true,
+    "qk_counts_match_bt831_formula": true,
+    "base_abi_invariant_across_covers": true,
+    "all_lifts_reduce_to_base_abi": true,
+    "larger_cover_reduces_load_fraction_for_stress": true
+  }
+}

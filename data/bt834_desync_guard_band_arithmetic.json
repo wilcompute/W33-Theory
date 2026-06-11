@@ -1,0 +1,1570 @@
+{
+  "theorem": "BT834 desync guard-band arithmetic",
+  "criterion": {
+    "full_sync": "8n divides T(n)=4(7^n-1)",
+    "equivalent_condition": "2n divides 7^n-1",
+    "odd_prime_power_rule": "for p^a | n and p != 7, ord_{p^a}(7) must divide n; if 7 | n, sync is impossible"
+  },
+  "levels_1_to_60": [
+    {
+      "level": 1,
+      "factorization": {},
+      "route_epoch": 8,
+      "commit_ticks": 24,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 2,
+      "factorization": {
+        "2": 1
+      },
+      "route_epoch": 16,
+      "commit_ticks": 192,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 3,
+      "factorization": {
+        "3": 1
+      },
+      "route_epoch": 24,
+      "commit_ticks": 1368,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "factorization": {
+        "2": 2
+      },
+      "route_epoch": 32,
+      "commit_ticks": 9600,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 5,
+      "factorization": {
+        "5": 1
+      },
+      "route_epoch": 40,
+      "commit_ticks": 67224,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "factorization": {
+        "2": 1,
+        "3": 1
+      },
+      "route_epoch": 48,
+      "commit_ticks": 470592,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "factorization": {
+        "7": 1
+      },
+      "route_epoch": 56,
+      "commit_ticks": 3294168,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "factorization": {
+        "2": 3
+      },
+      "route_epoch": 64,
+      "commit_ticks": 23059200,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 9,
+      "factorization": {
+        "3": 2
+      },
+      "route_epoch": 72,
+      "commit_ticks": 161414424,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 9,
+          "order_of_7": 3,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "factorization": {
+        "2": 1,
+        "5": 1
+      },
+      "route_epoch": 80,
+      "commit_ticks": 1129900992,
+      "remainder": 32,
+      "sync": false,
+      "remainder_over_4": 8,
+      "condition_remainder_mod_2n": 8,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "factorization": {
+        "11": 1
+      },
+      "route_epoch": 88,
+      "commit_ticks": 7909306968,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 12,
+      "factorization": {
+        "2": 2,
+        "3": 1
+      },
+      "route_epoch": 96,
+      "commit_ticks": 55365148800,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "factorization": {
+        "13": 1
+      },
+      "route_epoch": 104,
+      "commit_ticks": 387556041624,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 13,
+          "power": 13,
+          "order_of_7": 12,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "factorization": {
+        "2": 1,
+        "7": 1
+      },
+      "route_epoch": 112,
+      "commit_ticks": 2712892291392,
+      "remainder": 80,
+      "sync": false,
+      "remainder_over_4": 20,
+      "condition_remainder_mod_2n": 20,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "factorization": {
+        "3": 1,
+        "5": 1
+      },
+      "route_epoch": 120,
+      "commit_ticks": 18990246039768,
+      "remainder": 48,
+      "sync": false,
+      "remainder_over_4": 12,
+      "condition_remainder_mod_2n": 12,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 16,
+      "factorization": {
+        "2": 4
+      },
+      "route_epoch": 128,
+      "commit_ticks": 132931722278400,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 17,
+      "factorization": {
+        "17": 1
+      },
+      "route_epoch": 136,
+      "commit_ticks": 930522055948824,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 17,
+          "power": 17,
+          "order_of_7": 16,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "factorization": {
+        "2": 1,
+        "3": 2
+      },
+      "route_epoch": 144,
+      "commit_ticks": 6513654391641792,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 9,
+          "order_of_7": 3,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 19,
+      "factorization": {
+        "19": 1
+      },
+      "route_epoch": 152,
+      "commit_ticks": 45595580741492568,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 19,
+          "power": 19,
+          "order_of_7": 3,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "factorization": {
+        "2": 2,
+        "5": 1
+      },
+      "route_epoch": 160,
+      "commit_ticks": 319169065190448000,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 21,
+      "factorization": {
+        "3": 1,
+        "7": 1
+      },
+      "route_epoch": 168,
+      "commit_ticks": 2234183456333136024,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 22,
+      "factorization": {
+        "2": 1,
+        "11": 1
+      },
+      "route_epoch": 176,
+      "commit_ticks": 15639284194331952192,
+      "remainder": 16,
+      "sync": false,
+      "remainder_over_4": 4,
+      "condition_remainder_mod_2n": 4,
+      "blockers": [
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 23,
+      "factorization": {
+        "23": 1
+      },
+      "route_epoch": 184,
+      "commit_ticks": 109474989360323665368,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 23,
+          "power": 23,
+          "order_of_7": 22,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 24,
+      "factorization": {
+        "2": 3,
+        "3": 1
+      },
+      "route_epoch": 192,
+      "commit_ticks": 766324925522265657600,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 25,
+      "factorization": {
+        "5": 2
+      },
+      "route_epoch": 200,
+      "commit_ticks": 5364274478655859603224,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 25,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 26,
+      "factorization": {
+        "2": 1,
+        "13": 1
+      },
+      "route_epoch": 208,
+      "commit_ticks": 37549921350591017222592,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 13,
+          "power": 13,
+          "order_of_7": 12,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 27,
+      "factorization": {
+        "3": 3
+      },
+      "route_epoch": 216,
+      "commit_ticks": 262849449454137120558168,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 27,
+          "order_of_7": 9,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 28,
+      "factorization": {
+        "2": 2,
+        "7": 1
+      },
+      "route_epoch": 224,
+      "commit_ticks": 1839946146178959843907200,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 29,
+      "factorization": {
+        "29": 1
+      },
+      "route_epoch": 232,
+      "commit_ticks": 12879623023252718907350424,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 29,
+          "power": 29,
+          "order_of_7": 7,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "factorization": {
+        "2": 1,
+        "3": 1,
+        "5": 1
+      },
+      "route_epoch": 240,
+      "commit_ticks": 90157361162769032351452992,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 31,
+      "factorization": {
+        "31": 1
+      },
+      "route_epoch": 248,
+      "commit_ticks": 631101528139383226460170968,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 31,
+          "power": 31,
+          "order_of_7": 15,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 32,
+      "factorization": {
+        "2": 5
+      },
+      "route_epoch": 256,
+      "commit_ticks": 4417710696975682585221196800,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": []
+    },
+    {
+      "level": 33,
+      "factorization": {
+        "3": 1,
+        "11": 1
+      },
+      "route_epoch": 264,
+      "commit_ticks": 30923974878829778096548377624,
+      "remainder": 48,
+      "sync": false,
+      "remainder_over_4": 12,
+      "condition_remainder_mod_2n": 12,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 34,
+      "factorization": {
+        "2": 1,
+        "17": 1
+      },
+      "route_epoch": 272,
+      "commit_ticks": 216467824151808446675838643392,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 17,
+          "power": 17,
+          "order_of_7": 16,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 35,
+      "factorization": {
+        "5": 1,
+        "7": 1
+      },
+      "route_epoch": 280,
+      "commit_ticks": 1515274769062659126730870503768,
+      "remainder": 248,
+      "sync": false,
+      "remainder_over_4": 62,
+      "condition_remainder_mod_2n": 62,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        },
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 36,
+      "factorization": {
+        "2": 2,
+        "3": 2
+      },
+      "route_epoch": 288,
+      "commit_ticks": 10606923383438613887116093526400,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 9,
+          "order_of_7": 3,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 37,
+      "factorization": {
+        "37": 1
+      },
+      "route_epoch": 296,
+      "commit_ticks": 74248463684070297209812654684824,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 37,
+          "power": 37,
+          "order_of_7": 9,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 38,
+      "factorization": {
+        "2": 1,
+        "19": 1
+      },
+      "route_epoch": 304,
+      "commit_ticks": 519739245788492080468688582793792,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 19,
+          "power": 19,
+          "order_of_7": 3,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 39,
+      "factorization": {
+        "3": 1,
+        "13": 1
+      },
+      "route_epoch": 312,
+      "commit_ticks": 3638174720519444563280820079556568,
+      "remainder": 120,
+      "sync": false,
+      "remainder_over_4": 30,
+      "condition_remainder_mod_2n": 30,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 13,
+          "power": 13,
+          "order_of_7": 12,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 40,
+      "factorization": {
+        "2": 3,
+        "5": 1
+      },
+      "route_epoch": 320,
+      "commit_ticks": 25467223043636111942965740556896000,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 41,
+      "factorization": {
+        "41": 1
+      },
+      "route_epoch": 328,
+      "commit_ticks": 178270561305452783600760183898272024,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 41,
+          "power": 41,
+          "order_of_7": 40,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 42,
+      "factorization": {
+        "2": 1,
+        "3": 1,
+        "7": 1
+      },
+      "route_epoch": 336,
+      "commit_ticks": 1247893929138169485205321287287904192,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 43,
+      "factorization": {
+        "43": 1
+      },
+      "route_epoch": 344,
+      "commit_ticks": 8735257503967186396437249011015329368,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 43,
+          "power": 43,
+          "order_of_7": 6,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 44,
+      "factorization": {
+        "2": 2,
+        "11": 1
+      },
+      "route_epoch": 352,
+      "commit_ticks": 61146802527770304775060743077107305600,
+      "remainder": 96,
+      "sync": false,
+      "remainder_over_4": 24,
+      "condition_remainder_mod_2n": 24,
+      "blockers": [
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 45,
+      "factorization": {
+        "3": 2,
+        "5": 1
+      },
+      "route_epoch": 360,
+      "commit_ticks": 428027617694392133425425201539751139224,
+      "remainder": 144,
+      "sync": false,
+      "remainder_over_4": 36,
+      "condition_remainder_mod_2n": 36,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 9,
+          "order_of_7": 3,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 46,
+      "factorization": {
+        "2": 1,
+        "23": 1
+      },
+      "route_epoch": 368,
+      "commit_ticks": 2996193323860744933977976410778257974592,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 23,
+          "power": 23,
+          "order_of_7": 22,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 47,
+      "factorization": {
+        "47": 1
+      },
+      "route_epoch": 376,
+      "commit_ticks": 20973353267025214537845834875447805822168,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 47,
+          "power": 47,
+          "order_of_7": 23,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 48,
+      "factorization": {
+        "2": 4,
+        "3": 1
+      },
+      "route_epoch": 384,
+      "commit_ticks": 146813472869176501764920844128134640755200,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 49,
+      "factorization": {
+        "7": 2
+      },
+      "route_epoch": 392,
+      "commit_ticks": 1027694310084235512354445908896942485286424,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 49,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 50,
+      "factorization": {
+        "2": 1,
+        "5": 2
+      },
+      "route_epoch": 400,
+      "commit_ticks": 7193860170589648586481121362278597397004992,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 25,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 51,
+      "factorization": {
+        "3": 1,
+        "17": 1
+      },
+      "route_epoch": 408,
+      "commit_ticks": 50357021194127540105367849535950181779034968,
+      "remainder": 144,
+      "sync": false,
+      "remainder_over_4": 36,
+      "condition_remainder_mod_2n": 36,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 17,
+          "power": 17,
+          "order_of_7": 16,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 52,
+      "factorization": {
+        "2": 2,
+        "13": 1
+      },
+      "route_epoch": 416,
+      "commit_ticks": 352499148358892780737574946751651272453244800,
+      "remainder": 32,
+      "sync": false,
+      "remainder_over_4": 8,
+      "condition_remainder_mod_2n": 8,
+      "blockers": [
+        {
+          "prime": 13,
+          "power": 13,
+          "order_of_7": 12,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 53,
+      "factorization": {
+        "53": 1
+      },
+      "route_epoch": 424,
+      "commit_ticks": 2467494038512249465163024627261558907172713624,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 53,
+          "power": 53,
+          "order_of_7": 26,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 54,
+      "factorization": {
+        "2": 1,
+        "3": 3
+      },
+      "route_epoch": 432,
+      "commit_ticks": 17272458269585746256141172390830912350208995392,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 27,
+          "order_of_7": 9,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 55,
+      "factorization": {
+        "5": 1,
+        "11": 1
+      },
+      "route_epoch": 440,
+      "commit_ticks": 120907207887100223792988206735816386451462967768,
+      "remainder": 168,
+      "sync": false,
+      "remainder_over_4": 42,
+      "condition_remainder_mod_2n": 42,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        },
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 56,
+      "factorization": {
+        "2": 3,
+        "7": 1
+      },
+      "route_epoch": 448,
+      "commit_ticks": 846350455209701566550917447150714705160240774400,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 57,
+      "factorization": {
+        "3": 1,
+        "19": 1
+      },
+      "route_epoch": 456,
+      "commit_ticks": 5924453186467910965856422130055002936121685420824,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 19,
+          "power": 19,
+          "order_of_7": 3,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 58,
+      "factorization": {
+        "2": 1,
+        "29": 1
+      },
+      "route_epoch": 464,
+      "commit_ticks": 41471172305275376760994954910385020552851797945792,
+      "remainder": 192,
+      "sync": false,
+      "remainder_over_4": 48,
+      "condition_remainder_mod_2n": 48,
+      "blockers": [
+        {
+          "prime": 29,
+          "power": 29,
+          "order_of_7": 7,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 59,
+      "factorization": {
+        "59": 1
+      },
+      "route_epoch": 472,
+      "commit_ticks": 290298206136927637326964684372695143869962585620568,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 59,
+          "power": 59,
+          "order_of_7": 29,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 60,
+      "factorization": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "route_epoch": 480,
+      "commit_ticks": 2032087442958493461288752790608866007089738099344000,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        },
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    }
+  ],
+  "sync_levels_1_to_60": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    12,
+    16,
+    18,
+    20,
+    24,
+    27,
+    32,
+    36,
+    40,
+    48,
+    54,
+    57,
+    60
+  ],
+  "desync_levels_1_to_60": [
+    5,
+    7,
+    10,
+    11,
+    13,
+    14,
+    15,
+    17,
+    19,
+    21,
+    22,
+    23,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    35,
+    37,
+    38,
+    39,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    55,
+    56,
+    58,
+    59
+  ],
+  "cover_prime_rows": [
+    {
+      "level": 3,
+      "factorization": {
+        "3": 1
+      },
+      "route_epoch": 24,
+      "commit_ticks": 1368,
+      "remainder": 0,
+      "sync": true,
+      "remainder_over_4": 0,
+      "condition_remainder_mod_2n": 0,
+      "blockers": [
+        {
+          "prime": 3,
+          "power": 3,
+          "order_of_7": 1,
+          "order_divides_n": true,
+          "blocks_sync": false
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "factorization": {
+        "5": 1
+      },
+      "route_epoch": 40,
+      "commit_ticks": 67224,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 5,
+          "power": 5,
+          "order_of_7": 4,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "factorization": {
+        "7": 1
+      },
+      "route_epoch": 56,
+      "commit_ticks": 3294168,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 7,
+          "power": 7,
+          "order_of_7": null,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "factorization": {
+        "11": 1
+      },
+      "route_epoch": 88,
+      "commit_ticks": 7909306968,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 11,
+          "power": 11,
+          "order_of_7": 10,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "factorization": {
+        "13": 1
+      },
+      "route_epoch": 104,
+      "commit_ticks": 387556041624,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 13,
+          "power": 13,
+          "order_of_7": 12,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "factorization": {
+        "17": 1
+      },
+      "route_epoch": 136,
+      "commit_ticks": 930522055948824,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 17,
+          "power": 17,
+          "order_of_7": 16,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    },
+    {
+      "level": 19,
+      "factorization": {
+        "19": 1
+      },
+      "route_epoch": 152,
+      "commit_ticks": 45595580741492568,
+      "remainder": 24,
+      "sync": false,
+      "remainder_over_4": 6,
+      "condition_remainder_mod_2n": 6,
+      "blockers": [
+        {
+          "prime": 19,
+          "power": 19,
+          "order_of_7": 3,
+          "order_divides_n": false,
+          "blocks_sync": true
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "first_guard_band": "n=5 is the first cover index where the durable tomotope clock and the full route epoch separate",
+    "remainder": "24=f, the local slot-stabilizer/runtime-lift size",
+    "architecture": "cover-indexed storage begins to require a real guard band before the q=7 external tomotope clock appears"
+  },
+  "checks": {
+    "sync_equivalence_holds": true,
+    "first_desync_is_5": true,
+    "first_desync_remainder_is_24": true,
+    "first_desync_blocker_is_prime_5_order_4": true,
+    "levels_1_to_4_sync": true,
+    "cover_prime_3_syncs": true,
+    "cover_prime_5_is_first_guard_band": true,
+    "cover_prime_7_blocks_by_non_coprime_base": true,
+    "all_desync_rows_have_blockers": true
+  }
+}

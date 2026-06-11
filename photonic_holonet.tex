@@ -58,8 +58,14 @@ Clifford group; the matter shell supplies the magic).  We also give the
 recursive engineering law: a level-$n$ holonet has $40^n$ photonic
 leaves, $(40^n-1)/39$ $\W$ instances, and reversible routing diameter
 bounded by $8n=8\log_{40}N$, while durable commits use a separate
-Cs\'asz\'ar/tomotope clock $T(g)=4(7^g-1)$.  No fitted parameters appear
-anywhere: every constant is substrate arithmetic at $q=3$.
+Cs\'asz\'ar/tomotope clock $T(n)=4(7^n-1)$.  The newest runtime layer
+turns the tomotope cover pathology into an engineering feature: durable
+storage is cover-indexed by a $\mathbb{Z}_k^3$ fiber over the stable
+$48$-block packet ABI, sentinel-aware compilation can trade commit-time
+slack for lower $g=15$ fault energy, and the first exact guard band is
+the arithmetically forced desynchronization at $n=5$ with remainder
+$24=f$.  No fitted parameters appear anywhere: every constant is
+substrate arithmetic at $q=3$.
 \end{abstract}
 
 \tableofcontents
@@ -817,6 +823,77 @@ same invariant packet, while persistent storage may choose one minimal
 cover family without invalidating the other non-comparable families.
 \emph{Witness: \path{bt831_tomotope_minimal_cover_architecture.py}.}
 
+\subsection{Cover-indexed storage, rerouting, and guard bands}
+
+The infinite-cover warning would be useless as engineering unless it
+changed the runtime.  BT832--BT834 make it operational.  The principle
+is that the local tomotope packet is the ABI and the chosen regular
+cover is the storage backend.
+
+\begin{theorem}[BT832 cover-indexed durable storage]
+For every supported cover index $k$, durable storage is the lifted
+packet space
+\[
+\{0,\ldots,47\}\times \mathbb{Z}_k^3,
+\qquad
+|\hbox{slots}|=48k^3,
+\]
+with projection back to the fast-route ABI by forgetting the
+$\mathbb{Z}_k^3$ coordinate.  The kernel to the base tomotope packet has
+order
+\[
+k^6=(k^3)^2,
+\]
+matching the Monson--Pellicer--Williams toroidal cover law
+$|{\rm Mon}(Q_k)|=36864k^6$.  Changing $k$ changes durable capacity and
+kernel size, but not the packet program seen by the compiler.  Tested
+cover gauges $k=3,5,7,11,13$ all reduce exactly to the same $48$-block
+ABI, and larger $k$ reduces the load fraction of the same stress
+program.
+\emph{Witness: \path{bt832_cover_indexed_durable_storage.py}.}
+\end{theorem}
+
+\begin{theorem}[BT833 sentinel-aware packet rerouting]
+The BT829 projector supplies a compiler-visible cost function.  Before
+the durable commit, each digit route may insert up to two W33 waypoint
+points and minimize
+\[
+\hbox{sentinel energy first, reversible move count second}.
+\]
+The extra reversible moves are charged to the slower BT830 commit
+phase, not to the BT827 fast $8n$ route bound.  In the level-six stress
+program the direct route uses $47$ moves and total sentinel energy $4$;
+the sentinel-aware route uses $58$ moves, still far below the
+$470592$-tick commit window, and lowers the total sentinel energy to
+$2$.  Each tested digit route strictly lowers its own $g=15$ energy;
+adjacent endpoints can be context-completed to zero, and nonedge mirror
+pairs drop below their direct $5/6$ activation.
+\emph{Witness: \path{bt833_sentinel_aware_packet_rerouter.py}.}
+\end{theorem}
+
+\begin{theorem}[BT834 desynchronization guard-band arithmetic]
+The two-phase clock has an exact number-theoretic boundary.  Full
+route-epoch synchronization is
+\[
+8n\mid T(n)=4(7^n-1),
+\]
+equivalently
+\[
+2n\mid 7^n-1.
+\]
+For every odd prime power $p^a\mid n$ with $p\ne7$, this requires
+$\operatorname{ord}_{p^a}(7)\mid n$; if $7\mid n$, synchronization is
+impossible because the base is not coprime.  The first failure is
+$n=5$: $\operatorname{ord}_5(7)=4\nmid5$, and the remainder is
+\[
+T(5)\bmod 40=24=f.
+\]
+Thus the first cover-index where durable storage and the full route
+epoch separate is not empirical drift; it is the $f=24$ guard band of
+the tomotope-backed runtime.
+\emph{Witness: \path{bt834_desync_guard_band_arithmetic.py}.}
+\end{theorem}
+
 %======================================================================
 \section[The fuel: matter equals magic]{The fuel: matter $=$ magic}
 \label{sec:fuel}
@@ -964,6 +1041,9 @@ level-$n$ leaves & $40^n$ & $v^n$\\
 level-$n$ $\W$ instances & $(40^n-1)/39$ & geometric tower\\
 durable commit clock & $4(7^g-1)$ ticks & tomotope/Csaszar\\
 compiled stress route & $47<48$ moves & BT828 level six\\
+cover-lifted packet capacity & $48k^3$ slots & BT832 storage gauge\\
+sentinel-aware stress energy & $4\to2$ & BT833 reroute\\
+full route sync criterion & $2n\mid7^n-1$ & BT834 guard band\\
 sentinel projector trace & $15$ & $g$ sector\\
 first full-route desync & $n=5$ remainder $24$ & $f$ guard band\\
 tomotope cover ABI & $48$ blocks / $192$ flags & cover-invariant\\
@@ -1030,7 +1110,7 @@ shows when probed honestly.
 
 Every theorem above is backed by an executable script in
 \texttt{analysis/} with results in \texttt{data/}; the chain
-BT739--BT831 was developed and pushed incrementally with exact
+BT739--BT834 was developed and pushed incrementally with exact
 arithmetic (GF($p$) elimination, cyclotomic integers, complete
 branch-and-bound, GAP witnesses for group-theoretic facts).
 
@@ -1050,7 +1130,7 @@ clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules & bt817, bt819\\
 universality & bt825\\
 fractal computer/network & bt827\\
-runtime compiler / sentinel / commit / cover boundary & bt828--bt831\\
+runtime compiler / sentinel / commit / cover boundary & bt828--bt834\\
 corpus corrections & bt818, bt823, bt824\\
 \bottomrule
 \end{tabular}
