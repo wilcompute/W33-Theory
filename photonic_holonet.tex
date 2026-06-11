@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,calc}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
@@ -23,7 +24,7 @@
 \title{\textbf{The Photonic Holonet}\\[4pt]
 \large A Single Self-Entangled Photon as Universal Computer,
 Universal Network, and Clock\\ on the $\W$ Substrate}
-\author{W.~Dahn \and the Theory of Everything Project}
+\author{Wil Dahn}
 \date{June 2026 --- machine-verified edition}
 
 \begin{document}
@@ -53,9 +54,12 @@ $\mathbb{Z}_{12}$ gauge clock, two external references
 $\mathbb{Z}_7,\mathbb{Z}_{13}$, and an irrational Boerdijk--Coxeter
 drive realizing a discrete time quasicrystal), and universality (the
 photon's own tritter, phase plate, and modulator generate the complete
-Clifford group; the matter shell supplies the magic).  No fitted
-parameters appear anywhere: every constant is substrate arithmetic at
-$q=3$.
+Clifford group; the matter shell supplies the magic).  We also give the
+recursive engineering law: a level-$n$ holonet has $40^n$ photonic
+leaves, $(40^n-1)/39$ $\W$ instances, and reversible routing diameter
+bounded by $8n=8\log_{40}N$, while durable commits use a separate
+Cs\'asz\'ar/tomotope clock $T(g)=4(7^g-1)$.  No fitted parameters appear
+anywhere: every constant is substrate arithmetic at $q=3$.
 \end{abstract}
 
 \tableofcontents
@@ -74,7 +78,7 @@ Transporting the photon through the mesh \emph{is} applying a gate
 \emph{is} routing a packet.  One physical process; three descriptions.
 \end{principle}
 
-The identification rests on three exact pillars, each proved by
+The identification rests on five exact pillars, each proved by
 explicit computation in the project repository (every theorem below
 carries its witness script):
 
@@ -97,7 +101,41 @@ carries its witness script):
   the photon's own beam-splitting elements generate the complete
   Clifford group (symplectic closure $=51840$, exact), and its matter
   shell is precisely its magic supply.
+\item \textbf{Fractal holonet scaling} (\S\ref{sec:fractal}):
+  recursively replacing every site by a fresh $\W$ core gives a
+  universal computer/network with exact $40^n$ leaves and
+  logarithmic reversible routing.
 \end{enumerate}
+
+\begin{figure}[ht]\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  layer/.style={draw,rounded corners,align=center,minimum width=42mm,minimum height=9mm},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[layer,fill=blue!9] (l0) at (0,0) {L0 photon\\ self-entangled qutrit};
+  \node[layer,fill=green!10] (l1) at (4.9,0) {L1 $\W$ data plane\\ 40 states, 240 edges};
+  \node[layer,fill=yellow!16] (l2) at (9.8,0) {L2 $Q_3$ chart routers\\ 540 XOR cubes};
+  \node[layer,fill=orange!14] (l3) at (14.7,0) {L3 building fabric\\ 1620 apartments};
+  \node[layer,fill=red!10] (l4) at (2.45,-1.55) {L4 mirror bus\\ 2160 $D_{12}$ slots};
+  \node[layer,fill=purple!10] (l5) at (7.35,-1.55) {L5 tomotope packet\\ 48 blocks, 192 flags};
+  \node[layer,fill=gray!14] (l6) at (12.25,-1.55) {L6 Clifford runtime\\ $24\cdot45\cdot48$};
+  \draw[arrow] (l0) -- (l1);
+  \draw[arrow] (l1) -- (l2);
+  \draw[arrow] (l2) -- (l3);
+  \draw[arrow] (l3.south) .. controls (14.2,-1.0) and (12.6,-1.0) .. (l6.north);
+  \draw[arrow] (l6) -- (l5);
+  \draw[arrow] (l5) -- (l4);
+  \draw[arrow] (l4.west) .. controls (-0.2,-1.1) and (-0.2,-0.4) .. (l0.south);
+  \node[align=center,font=\small] at (7.35,-2.65)
+    {One loop: carrier $\rightarrow$ data plane $\rightarrow$ router $\rightarrow$ building
+    $\rightarrow$ runtime $\rightarrow$ tomotope packet $\rightarrow$ mirror bus $\rightarrow$ carrier.};
+\end{tikzpicture}}
+\caption{The photonic holonet as an engineering stack.  The same photon
+is data, instruction, and packet; the same finite geometry supplies the
+network, middleware, and runtime.}
+\end{figure}
 
 %======================================================================
 \section{The substrate}
@@ -215,37 +253,37 @@ itself: it measures channels against its own past.
 \emph{Witness: \path{bt820_self_entanglement_protocol.py}.}
 
 \begin{figure}[ht]\centering
-\begin{tikzpicture}[scale=0.92, every node/.style={font=\small}]
-  % source
-  \node[draw,rounded corners,fill=blue!8] (src) at (0,0) {single photon};
-  % PBS
-  \node[draw,fill=gray!15,minimum size=8mm,rotate=45] (pbs) at (2.6,0) {};
-  \node at (2.6,-0.85) {PBS};
-  \draw[-{Stealth}] (src) -- (pbs);
-  % two paths
-  \draw[-{Stealth}] (pbs) -- (4.6,0.9) node[midway,above]{$\ket{H,a}$};
-  \draw[-{Stealth}] (pbs) -- (4.6,-0.9) node[midway,below]{$\ket{V,b}$};
-  % tritter
-  \node[draw,fill=green!12,minimum height=18mm] (tri) at (5.6,0) {tritter $F_3$};
-  \draw[-{Stealth}] (4.6,0.9) -- (tri.west |- 4.6,0.9);
-  \draw[-{Stealth}] (4.6,-0.9) -- (tri.west |- 4.6,-0.9);
-  % delay ladder
-  \node[draw,fill=yellow!18,minimum height=18mm] (del) at (8.0,0)
-    {\begin{tabular}{c}delays\\ $0/\tau/2\tau$\end{tabular}};
-  \draw[-{Stealth}] (tri) -- (del);
-  % EOM
-  \node[draw,fill=red!12,minimum height=18mm] (eom) at (10.4,0)
-    {\begin{tabular}{c}EOM\\ $\mathrm{CX}_{p\to f}$\end{tabular}};
-  \draw[-{Stealth}] (del) -- (eom);
-  % recombination
-  \node[draw,rounded corners,fill=blue!8] (out) at (13.0,0)
-    {\begin{tabular}{c}recombine\\ $V(U)=|\mathrm{Tr}U|/3$\end{tabular}};
-  \draw[-{Stealth}] (eom) -- (out) node[midway,above]{$\ket{\Omega}$};
-  % BC drive loop
-  \draw[-{Stealth},dashed] (out.north) .. controls (12,1.8) and (9,1.8) ..
-    (del.north) node[midway,above]
-    {BC drive: rotate $\arccos(-2/3)$ per loop};
-\end{tikzpicture}
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  block/.style={draw,rounded corners,align=center,minimum width=25mm,minimum height=10mm},
+  optic/.style={draw,align=center,fill=gray!15,minimum width=16mm,minimum height=10mm},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[block,fill=blue!8] (src) at (0,0) {single\\photon};
+  \node[optic,rotate=45] (pbs) at (2.4,0) {};
+  \node at (2.4,-0.85) {PBS};
+  \node[block,fill=blue!6] (spatial) at (4.9,0)
+    {spatial carrier\\ $\ket{H,a}+\ket{V,b}$};
+  \node[block,fill=green!12] (tri) at (0,-1.9) {tritter\\ $F_3$};
+  \node[block,fill=yellow!18] (delay) at (3.0,-1.9) {delay ladder\\ $0,\tau,2\tau$};
+  \node[block,fill=red!12] (eom) at (6.2,-1.9) {EOM\\ $\mathrm{CX}_{p\to f}$};
+  \node[block,fill=blue!8,minimum width=30mm] (out) at (9.8,-1.9)
+    {recombine\\ $V(U)=|\mathrm{Tr}U|/3$};
+  \node[block,fill=purple!10,minimum width=33mm] (choi) at (13.1,-1.9)
+    {Choi state\\ $(I\otimes U)\ket{\Omega}$};
+  \draw[arrow] (src) -- (pbs);
+  \draw[arrow] (pbs) -- (spatial);
+  \draw[arrow] (spatial.south) .. controls (4.9,-1.05) and (0,-1.05) .. (tri.north);
+  \draw[arrow] (tri) -- (delay);
+  \draw[arrow] (delay) -- (eom);
+  \draw[arrow] (eom) -- (out) node[midway,above]{$\ket{\Omega}$};
+  \draw[arrow] (out) -- (choi);
+  \draw[-{Stealth},dashed,thick] (out.north) .. controls (8.8,-0.85) and (4.0,-0.85) ..
+    (delay.north);
+  \node[fill=white,inner sep=1pt] at (6.8,-0.68)
+    {BC loop: rotate $\arccos(-2/3)$};
+\end{tikzpicture}}
 \caption{Preparation schematic.  One photon, four registers.  The PBS
 entangles path with polarization (Stage A); the tritter--delay--EOM
 chain prepares the temporal Bell qutrit $\ket{\Omega}$ (Stage B); the
@@ -268,6 +306,46 @@ partner.  Every $\W$ nonedge is a chart edge in exactly $12=k$ charts;
 every edge is an antipode pair in exactly $9=q^2$.
 \emph{Witnesses: \texttt{bt773}, \texttt{bt777}, \texttt{bt778}.}
 \end{theorem}
+
+\subsection{Hypercube networking, not hypercube decoration}
+
+The cube is not only a picture for one chart.  It is the local
+interconnect primitive.  A chart gives eight simultaneously valid
+addresses
+\[
+000,\ 001,\ 010,\ 011,\ 100,\ 101,\ 110,\ 111\in\GF2^3,
+\]
+and the elementary network instruction is the dimension-order
+hypercube hop
+\[
+a\longmapsto a\oplus e_i,\qquad i\in\{1,2,3\}.
+\]
+This is the standard e-cube rule of hypercube networks: compare source
+and target, flip one differing coordinate at a time, and finish in at
+most three local hops \cite{saadschultz}.  In the holonet that same XOR flip is also a
+register operation, because the chart address is a finite
+``which-register'' word on the photon's self-entangled carrier.  The
+local routing primitive is therefore simultaneously
+\[
+\hbox{bit flip}\quad=\quad\hbox{qutrit-frame update}\quad=\quad
+\hbox{optical path choice}.
+\]
+
+A packet in the photonic holonet is not merely a payload.  The natural
+packet header is
+\[
+\mathcal{P}=(\hbox{payload},\ \hbox{Pauli frame},\ \hbox{chart word},
+\ \hbox{apartment hop},\ \hbox{mirror slot},\ \hbox{clock phase}).
+\]
+The payload is the quantum state or teleported gate; the Pauli frame is
+the two-trit feedforward record; the chart word is the $\GF2^3$ route
+inside the current cube; the apartment hop selects the next chart; the
+mirror slot chooses the $D_{12}$ transport bus of
+\S\ref{sec:middleware}; and the clock phase is the cyclic $C_{12}$
+interrupt that keeps the selector coherent.  This is why the same
+object can be called a computer architecture and a network
+architecture.  A node never sends data to a processor: the act of
+transport is the processor's gate action.
 
 \begin{theorem}[The fabric is the building]
 The chart-adjacency web ($540$ nodes, two charts adjacent when one's
@@ -333,9 +411,33 @@ $\mathrm{SRG}(40,12,2,4)$ at every level, with the level-$0$ chart's
 $1+12+27$ degree split realized as self pole, gauge shell, and matter
 shell of each node.
 
+\begin{corollary}[Two-plane routing bound]
+Inside a chart the worst route length is $3$, the diameter of $Q_3$.
+Between charts the worst route length is $5$, the diameter of the
+apartment web.  One recursive digit of a holonet address therefore
+costs at most
+\[
+3+5=8
+\]
+reversible transport moves.  BT827 globalizes this to
+$8n=8\log_{40}N$ for $N=40^n$ photonic leaves.
+\end{corollary}
+
 %======================================================================
 \section{The middleware: tomotope mirrors and the runtime bus}
 \label{sec:middleware}
+
+\begin{definition}[Tomotope packet]
+In this paper the tomotope is used in the only way the finite
+calculation currently justifies: as a local middle-layer incidence
+packet.  A tomotope packet has four vertex carriers, twelve local edge
+axes, sixteen triangular face labels, and forty-eight edge--face
+incidence blocks.  The doubled base/shadow fiber gives $192$ flags.
+Thus the tomotope is the durable packet format sitting between the
+fast cube router and the global mirror bus; it is not introduced as an
+ambient continuous torus, and it is not identified with the rectangle
+clock.
+\end{definition}
 
 The atlas contains two different $2160$-element boundary worlds.  They
 must not be collapsed.  The rectangle side is cyclic: its stabilizer is
@@ -401,6 +503,28 @@ and tomotope local block.  In software terms, $C_{12}$ is the clock
 interrupt, $D_{12}$ is the mirror router, $48$ is the local packet
 format, and $24\cdot45\cdot48$ is the finite runtime.
 
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  block/.style={draw,rounded corners,align=center,minimum width=32mm,minimum height=9mm},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[block,fill=yellow!16] (cube) at (0,0) {$Q_3$ chart\\ 8 local addresses};
+  \node[block,fill=purple!12] (tomo) at (4.7,0) {tomotope packet\\ $4,12,16,48$};
+  \node[block,fill=red!10] (mirror) at (9.4,0) {$D_{12}$ mirror bus\\ 2160 slots};
+  \node[block,fill=green!12] (runtime) at (4.7,-1.55) {runtime lift\\ $24\cdot45\cdot48$};
+  \draw[arrow] (cube) -- node[above]{local route} (tomo);
+  \draw[arrow] (tomo) -- node[above]{durable slot} (mirror);
+  \draw[arrow] (mirror.south) .. controls (8.0,-1.55) and (6.4,-1.55) .. (runtime.east);
+  \draw[arrow] (runtime.west) .. controls (3.0,-1.55) and (1.4,-1.2) .. (cube.south);
+  \node[align=center,font=\small] at (4.7,-2.45)
+    {fast XOR routing is committed through the tomotope middle layer and reflected by the mirror bus.};
+\end{tikzpicture}
+\caption{Middleware schematic.  The cube is the reversible local router;
+the tomotope is the edge--face packet format; the $D_{12}$ bus is the
+global mirror transport object.}
+\end{figure}
+
 %======================================================================
 \section{The software: braids, teleported gates, universality}
 \label{sec:software}
@@ -426,6 +550,42 @@ machine's gate library is a library of self-entangled states; executing
 software means interfering the photon with its own history.
 \emph{Witness: \texttt{bt821}.}
 
+\subsection{Instruction set architecture}
+
+The practical instruction set is finite:
+\[
+\mathcal{I}_{\rm holo}=
+\{F_p,F_f,\ S_p,S_f,\ \mathrm{CX}_{p\to f},\
+\sigma^5=Z,\ D_{12}\hbox{-mirror},\ M_{36}\hbox{-magic}\}.
+\]
+$F$ and $S$ generate single-qutrit Clifford frame changes; CX couples
+past to future; $\sigma^5=Z$ gives exact braid-register flips; the
+$D_{12}$ mirror operation moves a packet through the atlas without
+confusing it with the cyclic selector clock; and $M_{36}$ denotes
+injection from the thirty-six magic rays of \S\ref{sec:fuel}.  The
+Clifford part normalizes Pauli frames and is efficiently classically
+trackable; it is not universal by itself.  Universality starts only
+when the Clifford runtime can consume the intrinsic magic sector.  This
+is the engineering meaning of ``matter equals magic'': the same
+thirty-six rays that appear as the matter shell are the non-Clifford
+fuel for the processor.
+
+\subsection{The minimal classical shadow}
+
+The smallest classical headline compatible with the substrate is the
+pair
+\[
+(\lambda,q)=(2,3).
+\]
+This is the same two-state, three-symbol signature made famous by the
+Wolfram--Smith weakly universal Turing machine.  The present paper does
+not use that result as the proof of quantum universality; the proof is
+the Clifford closure plus magic/contextuality \cite{wolfram23,smith}.  The point is sharper:
+the classical shadow of the photonic holonet lands on the same
+minimality boundary.  The quantum machine has forty rays and an
+$81=q^4$ protected register, but its smallest visible finite-state
+control alphabet is already the substrate pair $2,3$.
+
 \subsection{The Universality Theorem}
 \label{sec:universality}
 
@@ -443,10 +603,121 @@ Clifford completeness, together with the machine's intrinsic magic
 supply (\S\ref{sec:fuel}) and the strict positivity of its contextual
 fraction ($1/10$, exact), implies universal quantum computation by
 magic-state injection; for qutrits, contextuality is necessary and
-sufficient for magic distillation (Howard--Wallman--Veitch--Emerson).
+sufficient for magic distillation (Howard--Wallman--Veitch--Emerson)
+\cite{howard}.
 One self-entangled photon on the $\W$ mesh is a universal quantum
 computer whose transport is its gate action.
 \end{theorem}
+
+%======================================================================
+\section{Fractal scaling: the computer is the network}
+\label{sec:fractal}
+
+The single-core theorem is not the end of the architecture.  The
+substrate is self-similar: any node may be replaced by a fresh copy of
+the same forty-node holonet, with the parent line/point incidence
+becoming the routing grammar for the child layer.
+
+\begin{definition}[Recursive holonet]
+Let $\mathcal{H}_0$ be one self-entangled photonic qutrit.  Define
+$\mathcal{H}_n$ recursively by replacing each point of one copy of
+$\W$ with a copy of $\mathcal{H}_{n-1}$.  Thus $\mathcal{H}_1$ is the
+single-core machine of this paper and $\mathcal{H}_n$ is a
+$40$-ary fractal computer/network.
+\end{definition}
+
+\begin{theorem}[BT827 holonet scaling law]
+A level-$n$ holonet has
+\[
+N_n=40^n
+\]
+photonic leaf cores and
+\[
+I_n=1+40+\cdots+40^{n-1}=\frac{40^n-1}{39}
+\]
+total $\W$ instances.  Its total edge-qutrit slots are $240I_n$, its
+directed transport slots are $480I_n$, its chart routers are
+$540I_n$, its apartment links are $1620I_n$, its mirror slots are
+$2160I_n$, and its local Clifford runtime atoms are $51840I_n$.
+Worst-case reversible routing across the recursive address uses at
+most
+\[
+8n=8\log_{40}N_n
+\]
+moves, where $8=3+5$ is one in-chart hypercube diameter plus one
+chart-web apartment diameter.  Durable commits use the distinct
+Cs\'asz\'ar/tomotope clock
+\[
+T(0)=1,\qquad T(g)=4(7^g-1)\quad(g\ge1).
+\]
+\emph{Witness: \path{bt827_holonet_fractal_architecture.py}.}
+\end{theorem}
+
+\begin{center}\small
+\begin{tabular}{rrrrrr}
+\toprule
+level $n$ & leaves $40^n$ & $\W$ instances & mirror slots & runtime atoms & route bound\\
+\midrule
+1 & 40 & 1 & 2160 & 51840 & 8\\
+2 & 1600 & 41 & 88560 & 2125440 & 16\\
+3 & 64000 & 1641 & 3544560 & 85069440 & 24\\
+4 & 2560000 & 65641 & 141784560 & 3402829440 & 32\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  core/.style={circle,draw,fill=blue!10,minimum size=9mm},
+  sub/.style={circle,draw,fill=green!12,minimum size=6mm},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[core] (h1) at (0,0) {$\W$};
+  \node[font=\scriptsize,fill=white,inner sep=1pt] at (0,-1.95) {$\mathcal{H}_1$: 40 leaves};
+  \foreach \i in {0,...,5}{
+    \node[sub] (a\i) at ({60*\i}:1.4) {};
+    \draw (h1) -- (a\i);
+  }
+  \node[core] (h2) at (4.5,0) {$\W$};
+  \foreach \i in {0,...,5}{
+    \node[sub] (b\i) at ($(h2)+({60*\i}:1.35)$) {};
+    \foreach \j in {0,1,2}{
+      \node[circle,draw,fill=green!8,inner sep=0.8pt]
+        at ($(b\i)+({120*\j}:0.38)$) {};
+    }
+    \draw (h2) -- (b\i);
+  }
+  \node[font=\scriptsize,fill=white,inner sep=1pt] at (4.5,-1.95) {$\mathcal{H}_2$: 40 cores of 40 leaves};
+  \node[core] (h3) at (9.2,0) {$\W$};
+  \foreach \i in {0,...,5}{
+    \node[sub] (c\i) at ($(h3)+({60*\i}:1.35)$) {};
+    \foreach \j in {0,1,2}{
+      \node[circle,draw,fill=purple!10,inner sep=0.7pt]
+        at ($(c\i)+({120*\j}:0.38)$) {};
+    }
+    \draw (h3) -- (c\i);
+  }
+  \node[font=\scriptsize,fill=white,inner sep=1pt] at (9.2,-1.95) {$\mathcal{H}_n$: repeat the same grammar};
+  \draw[arrow] (1.8,0) -- node[above]{substitute} (2.8,0);
+  \draw[arrow] (6.4,0) -- node[above]{substitute} (7.4,0);
+\end{tikzpicture}
+\caption{Fractal scaling schematic.  The drawn fans show only a few
+children; the rule is exact substitution of forty child holonets at
+each substrate point.  Routing grows logarithmically in the number of
+photonic leaves because each recursive digit costs at most eight
+reversible moves.}
+\end{figure}
+
+This resolves the computer-engineering question.  A conventional
+machine grows by adding processors connected by a separate network.
+The holonet grows by adding copies of the same object; each copy
+contains its own processor, router, memory, clock, and packet format.
+There is no von Neumann bus to saturate.  At every scale, the edge set
+is both communication bandwidth and entangling-gate availability, the
+chart atlas is both routing table and instruction decoder, and the
+Steinberg $81$-sector is both protected memory and fault-tolerant
+logical space.
 
 %======================================================================
 \section[The fuel: matter equals magic]{The fuel: matter $=$ magic}
@@ -590,6 +861,10 @@ Werner separability threshold & $3/4$ & $q/\mu$\\
 BC-drive gap census at $n{=}30$ & $2$ gap lengths & $h(E_8)$ ring\\
 $D_{12}$ mirror-slot stabilizer & order $12$ & projective bus\\
 runtime factorization & $24\cdot45\cdot48$ & $|\Sp(4,\GF3)|$\\
+one recursive route digit & $\le 8$ reversible hops & $3+5$\\
+level-$n$ leaves & $40^n$ & $v^n$\\
+level-$n$ $\W$ instances & $(40^n-1)/39$ & geometric tower\\
+durable commit clock & $4(7^g-1)$ ticks & tomotope/Csaszar\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -618,6 +893,26 @@ orders phase, the dihedral $D_{12}$ mirror bus routes state, the
 tomotope $48$-packet supplies local edge--face incidence, and the full
 runtime is exactly $24\cdot45\cdot48=51840$.
 
+\textbf{Networking.}  The holonet is a universal network because it has
+addresses, routers, routes, packets, clocks, and error signals at the
+same level as it has gates.  The $Q_3$ charts give local e-cube
+routing; the Tits-building apartments give inter-chart routing; the
+$D_{12}$ mirror slots give transport identity; and the tomotope gives a
+durable packet shape.  Recursive substitution gives $40^n$ photonic
+leaves with $O(\log N)$ reversible diameter.  The network scales
+because every child core inherits the same finite protocol rather than
+depending on a separate global controller.
+
+\textbf{Physics-to-architecture dictionary.}  The point-parabolic split
+$1+12+27$ is the processor's local I/O anatomy: self pole, gauge
+neighbors, matter/magic non-neighbors.  The edge code on $240$ qutrits
+is bandwidth and memory at once.  The $81=q^4$ Steinberg sector is the
+protected logical register.  The thirty-six spread schedules are the
+measurement operating system.  The five vacua are boot modes.  The
+Boerdijk--Coxeter irrational loop is the watchdog clock that refuses to
+fall into a finite phase-cycle trap.  These are engineering claims only
+because they are first incidence claims.
+
 \textbf{The ethos.}  Two pre-existing corpus claims failed under exact
 computation and were corrected at their sources during this program:
 the independence number of $\W$ is $7$, not $10$ (no ovoid exists, the
@@ -633,7 +928,7 @@ shows when probed honestly.
 
 Every theorem above is backed by an executable script in
 \texttt{analysis/} with results in \texttt{data/}; the chain
-BT739--BT826 was developed and pushed incrementally with exact
+BT739--BT827 was developed and pushed incrementally with exact
 arithmetic (GF($p$) elimination, cyclotomic integers, complete
 branch-and-bound, GAP witnesses for group-theoretic facts).
 
@@ -652,6 +947,7 @@ memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules & bt817, bt819\\
 universality & bt825\\
+fractal computer/network & bt827\\
 corpus corrections & bt818, bt823, bt824\\
 \bottomrule
 \end{tabular}
@@ -669,6 +965,15 @@ corpus corrections & bt818, bt823, bt824\\
 \bibitem{gottesman} D.~Gottesman, I.~Chuang,
   Demonstrating the viability of universal quantum computation using
   teleportation, \emph{Nature} \textbf{402}, 390 (1999).
+\bibitem{saadschultz} Y.~Saad and M.~H.~Schultz,
+  Topological properties of hypercubes,
+  \emph{IEEE Transactions on Computers} \textbf{37}, 867 (1988).
+\bibitem{smith} A.~Smith,
+  Universality of Wolfram's 2, 3 Turing machine,
+  \emph{Complex Systems} \textbf{29}, 1 (2020).
+\bibitem{wolfram23} S.~Wolfram,
+  The Wolfram 2,3 Turing Machine Research Prize,
+  \url{https://www.wolframscience.com/prizes/tm23/}.
 \bibitem{niven} I.~Niven, \emph{Irrational Numbers}, MAA (1956).
 \bibitem{thas} J.~A.~Thas, Ovoids and spreads of finite classical
   polar spaces, \emph{Geom.~Dedicata} \textbf{10}, 135 (1981).

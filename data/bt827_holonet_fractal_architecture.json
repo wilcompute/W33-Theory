@@ -1,0 +1,184 @@
+{
+  "theorem": "BT827 photonic holonet fractal architecture",
+  "single_core": {
+    "w33_points": 40,
+    "w33_edges": 240,
+    "directed_edges": 480,
+    "contexts": 40,
+    "steinberg_slots": 81,
+    "edge_code_rate": "27/80",
+    "magic_rays": 36,
+    "charts": 540,
+    "apartments": 1620,
+    "mirror_slots": 2160,
+    "tomotope_middle_blocks": 48,
+    "runtime_order": 51840,
+    "runtime_factorization": "24 * 2160 = 24 * 45 * 48"
+  },
+  "architecture_layers": [
+    {
+      "layer": "L0 photonic carrier",
+      "object": "one self-entangled qutrit photon",
+      "function": "operand state, Choi gate state, two-trit feedforward record"
+    },
+    {
+      "layer": "L1 W33 data plane",
+      "object": "40 points, 240 edges, 40 contexts",
+      "function": "state/operator geometry; edge-code memory and entanglement links"
+    },
+    {
+      "layer": "L2 Q3 chart routers",
+      "object": "540 cube charts with 3-bit XOR addresses",
+      "function": "local dimension-order routing and register moves"
+    },
+    {
+      "layer": "L3 building fabric",
+      "object": "1620 apartment links, chart-web diameter 5",
+      "function": "global inter-chart routing"
+    },
+    {
+      "layer": "L4 mirror middleware",
+      "object": "2160 D12 chart-transversal/antipode slots",
+      "function": "transport bus distinct from the C12 phase clock"
+    },
+    {
+      "layer": "L5 tomotope packet",
+      "object": "48 local edge-face blocks, 192 flags",
+      "function": "local packet format for durable mirror transport"
+    },
+    {
+      "layer": "L6 Clifford runtime",
+      "object": "24 x 45 x 48 = 51840",
+      "function": "complete optical two-qutrit Clifford control"
+    }
+  ],
+  "fractal_scaling": {
+    "definition": "W^[0]=photon qutrit; W^[n]=W(3,3) with 40 copies of W^[n-1]",
+    "leaf_cores": "40^n",
+    "w33_instances_total": "(40^n - 1) / 39",
+    "reversible_route_bound": "8n = 8 log_40(N)",
+    "digit_route_bound_components": {
+      "Q3_xor_diameter": 3,
+      "chart_web_apartment_diameter": 5,
+      "sum": 8
+    },
+    "persistent_commit_ticks": "T(0)=1, T(g)=4(7^g-1) for g>=1",
+    "levels": [
+      {
+        "level": 1,
+        "leaf_photonic_cores": 40,
+        "w33_instances_total": 1,
+        "edge_qutrit_slots_total": 240,
+        "directed_transport_slots_total": 480,
+        "chart_routers_total": 540,
+        "apartment_links_total": 1620,
+        "mirror_slots_total": 2160,
+        "local_clifford_runtime_atoms_total": 51840,
+        "magic_rays_at_leaves": 1440,
+        "contexts_at_leaves": 1600,
+        "reversible_route_hops_bound": 8,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 24
+      },
+      {
+        "level": 2,
+        "leaf_photonic_cores": 1600,
+        "w33_instances_total": 41,
+        "edge_qutrit_slots_total": 9840,
+        "directed_transport_slots_total": 19680,
+        "chart_routers_total": 22140,
+        "apartment_links_total": 66420,
+        "mirror_slots_total": 88560,
+        "local_clifford_runtime_atoms_total": 2125440,
+        "magic_rays_at_leaves": 57600,
+        "contexts_at_leaves": 64000,
+        "reversible_route_hops_bound": 16,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 192
+      },
+      {
+        "level": 3,
+        "leaf_photonic_cores": 64000,
+        "w33_instances_total": 1641,
+        "edge_qutrit_slots_total": 393840,
+        "directed_transport_slots_total": 787680,
+        "chart_routers_total": 886140,
+        "apartment_links_total": 2658420,
+        "mirror_slots_total": 3544560,
+        "local_clifford_runtime_atoms_total": 85069440,
+        "magic_rays_at_leaves": 2304000,
+        "contexts_at_leaves": 2560000,
+        "reversible_route_hops_bound": 24,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 1368
+      },
+      {
+        "level": 4,
+        "leaf_photonic_cores": 2560000,
+        "w33_instances_total": 65641,
+        "edge_qutrit_slots_total": 15753840,
+        "directed_transport_slots_total": 31507680,
+        "chart_routers_total": 35446140,
+        "apartment_links_total": 106338420,
+        "mirror_slots_total": 141784560,
+        "local_clifford_runtime_atoms_total": 3402829440,
+        "magic_rays_at_leaves": 92160000,
+        "contexts_at_leaves": 102400000,
+        "reversible_route_hops_bound": 32,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 9600
+      },
+      {
+        "level": 5,
+        "leaf_photonic_cores": 102400000,
+        "w33_instances_total": 2625641,
+        "edge_qutrit_slots_total": 630153840,
+        "directed_transport_slots_total": 1260307680,
+        "chart_routers_total": 1417846140,
+        "apartment_links_total": 4253538420,
+        "mirror_slots_total": 5671384560,
+        "local_clifford_runtime_atoms_total": 136113229440,
+        "magic_rays_at_leaves": 3686400000,
+        "contexts_at_leaves": 4096000000,
+        "reversible_route_hops_bound": 40,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 67224
+      },
+      {
+        "level": 6,
+        "leaf_photonic_cores": 4096000000,
+        "w33_instances_total": 105025641,
+        "edge_qutrit_slots_total": 25206153840,
+        "directed_transport_slots_total": 50412307680,
+        "chart_routers_total": 56713846140,
+        "apartment_links_total": 170141538420,
+        "mirror_slots_total": 226855384560,
+        "local_clifford_runtime_atoms_total": 5444529229440,
+        "magic_rays_at_leaves": 147456000000,
+        "contexts_at_leaves": 163840000000,
+        "reversible_route_hops_bound": 48,
+        "reversible_route_bound_formula": "8*n = 8*log_40(N)",
+        "persistent_commit_ticks": 470592
+      }
+    ]
+  },
+  "universal_computation": {
+    "minimal_classical_signature": "lambda states, q symbols = (2,3)",
+    "boundary": "Wolfram-Smith (2,3) machine is a weak-universality/minimality benchmark, not the paper's only universality proof",
+    "quantum_universality": "BT825 Clifford completeness + BT822/BT823 magic/contextuality",
+    "network_universality": "routing words are Clifford/control words because chart XOR moves and mirror slots are register operations",
+    "classical_record_bits": 63.39850002884624
+  },
+  "checks": {
+    "w33_edges_are_240": true,
+    "directed_edges_are_480": true,
+    "steinberg_slots_are_q4": true,
+    "mirror_bus_factorizations": true,
+    "runtime_factorization": true,
+    "bt826_factors_match": true,
+    "digit_route_bound_is_cube_plus_chart": true,
+    "minimal_turing_signature_is_substrate": true,
+    "classical_record_near_64_bits": true,
+    "edge_code_rate": true
+  }
+}
