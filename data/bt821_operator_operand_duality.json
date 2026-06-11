@@ -1,0 +1,8 @@
+{
+  "theorem": "BT821 operator-operand duality",
+  "pauli_classes": 40,
+  "commutation_graph_is_W33": true,
+  "stabilizer_states": 360,
+  "fg_identity": "360 = f*g = 24*15",
+  "gate_teleportation_all_outcomes": true
+}
