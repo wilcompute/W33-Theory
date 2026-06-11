@@ -3675,7 +3675,7 @@
               energy=K²=144; 47 tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Laplacian Spectrum &amp;
                 Algebraic Connectivity (CLXXXVII)</strong> &mdash;
-              Fiedler=K-r=&Theta;=10=&alpha;=Shannon=Lovász&vartheta; (ALL FIVE EQUAL!); &mu;₁·&mu;₂=V·MU=160;
+              Fiedler=K-r=Lovász&vartheta;=10 [CORRECTED BT818: &alpha;=7=&Phi;&#8326; (heptads), &Theta;&isin;[7,10] &mdash; theta bound not attained]; &mu;₁·&mu;₂=V·MU=160;
               &mu;₁·f=&mu;₂·g=240 (symmetric split); walk radius=1/Q=1/3; normalized split: (5/6)·24=(4/3)·15=20=V/2;
               tr(L²)=V·K·(K+1)=6240; 49 tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>GQ Axiom Translations &amp;
@@ -14483,7 +14483,7 @@
           which forces the eigenvalues to equal the overlap parameters: &lambda; = r = 2 and &mu; = &minus;s = 4.
           Spectral and combinatorial information are <em>locked together</em>.</p>
 
-        <h4>Perfect Graph Partition</h4>
+        <h4>Independence, Heptads &amp; the Theta Gap (CORRECTED by BT818/BT823)</h4>
         <table>
           <tr>
             <th>Invariant</th>
@@ -14493,31 +14493,41 @@
           </tr>
           <tr>
             <td>&alpha; (independence)</td>
+            <td>7</td>
+            <td>&Phi;&#8326;</td>
+            <td>Beacon heptads: 7 equiangular rays, overlaps 1/q (BT818/819)</td>
+          </tr>
+          <tr>
+            <td>Lov&aacute;sz &vartheta;</td>
             <td>10</td>
             <td>k &minus; r</td>
-            <td>Ovoids of GQ(3,3)</td>
+            <td>Upper bound NOT attained; &vartheta; &minus; &alpha; = 3 = q gap</td>
           </tr>
           <tr>
             <td>&chi; (chromatic)</td>
-            <td>4</td>
-            <td>&omega; = &mu;</td>
-            <td>Spacetime dimension</td>
-          </tr>
-          <tr>
-            <td>&chi; &times; &alpha;</td>
-            <td>40</td>
-            <td>v</td>
-            <td>Perfect graph!</td>
+            <td>&ge; 6</td>
+            <td>&ge; &lceil;v/&alpha;&rceil;</td>
+            <td>4-coloring impossible (would need &alpha; &ge; 10)</td>
           </tr>
           <tr>
             <td>&Theta; (Shannon)</td>
-            <td>10</td>
-            <td>&alpha;</td>
-            <td>Zero-error channel capacity</td>
+            <td>&isin; [7, 10]</td>
+            <td>[&alpha;, &vartheta;]</td>
+            <td>Exact value open</td>
+          </tr>
+          <tr>
+            <td>KS classical max</td>
+            <td>36/40</td>
+            <td>(q!)&sup2;/v</td>
+            <td>Exact (BT823 branch-and-bound); deficit 4 = &mu;</td>
           </tr>
         </table>
-        <p>Both Lov&aacute;sz theta bounds are <strong>tight</strong>: &vartheta;(G) = 10 = &alpha;,
-          &vartheta;(&#x1D43E;) = 4 = &chi;, and &vartheta;(G)&middot;&vartheta;(&#x1D43E;) = 40 = v.</p>
+        <p><strong>Correction (BT818, two independent exact computations):</strong> W(3,3) has
+          <em>no ovoid</em> (Thas: W(q) has ovoids iff q is even); the former claims
+          &alpha; = 10, &chi; = 4, "perfect graph", and &Theta; = 10 are withdrawn.  The maximum
+          partial ovoid is the <em>equiangular heptad</em> (all pair overlaps 1/3 = 1/q), the
+          &vartheta;&ndash;&alpha; gap 10 &minus; 7 = 3 = q is the combinatorial face of
+          Kochen&ndash;Specker, and the exact contextual fraction is 4/40 = 1/&Phi;&#8324; (BT823).</p>
 
         <h4>Seidel Matrix &amp; E&#8328; (Again!)</h4>
         <p>The Seidel matrix S = J &minus; I &minus; 2A (governing equiangular lines and two-graphs)
@@ -23034,7 +23044,7 @@
 
       <section id="cube-tomotope-phase-bridge">
         <h2><span class="icon">◇</span> Cube/Tomotope Phase Bridge</h2>
-        <p>BT787&ndash;BT789 sharpen the current hypercube/tomotope frontier into three executable statements. The
+        <p>BT787&ndash;BT815 sharpen the current hypercube/tomotope frontier into an object-level bridge. The
           important correction is structural: the order-48 coincidence is not an isomorphism. It is a bridge between
           two different local machines,</p>
         <p><code>cube: C2<sup>3</sup>:S3</code> and <code>tomotope: C2<sup>4</sup>:C3</code>, with the binary
@@ -23075,6 +23085,40 @@
           <code>F4</code> phase plane and <code>3</code> is the <code>C3</code> phase clock. GAP confirms the two
           order-48 groups are not isomorphic: the cube wreath product has a fixed diagonal center, while the tomotope
           candidate has no fixed nonidentity bit.</p>
+
+        <h4>BT794 and BT798&ndash;BT801: the regulus shadow and repair atlas</h4>
+        <p><a href="../analysis/BT794_klein_regulus_transversal_lift.md">BT794</a> proves that every skew-line chart is
+          a Klein/regulus shadow: each base pair has four common isotropic transversals, while the two same-ruling
+          completion lines exist only outside the totally isotropic line set. The honest boundary is therefore:
+          W33 sees the isotropic shadow of a <code>Q+(3,3)</code> grid, not a full isotropic grid.</p>
+        <p><a href="../analysis/BT798_residual_tetrahedral_carrier.md">BT798</a>&ndash;<a
+            href="../analysis/BT801_global_transversal_repair_atlas.md">BT801</a> identify the residual
+          <code>16+16+8+8=48</code> packet as the four common transversal <code>K4</code>s. The base
+          <code>Q3</code> quotient kills the diagonal <code>111</code> bit and lands on those four transversals; the
+          shadow endpoints form <code>K4,4</code> in collinearity and <code>K4+K4</code> in non-collinearity. Globally
+          this gives <code>540&times;4=2160</code> chart-transversal slots, with every W33 line appearing exactly
+          <code>54</code> times.</p>
+
+        <h4>BT814: the tomotope middle layer lives on the four tetrahedra</h4>
+        <p><a href="../analysis/BT814_tomotope_middle_layer_from_residual_tetrahedra.md">BT814</a> reads the four
+          transversal <code>K4</code>s as the local tomotope middle layer. Each tetrahedron contributes three
+          opposite-edge axes and four triangular faces, so the carrier is
+          <code>V,E,F,C=(4,12,16,8)</code> with
+          <code>4&times;3&times;4=48</code> edge-face middle blocks. This matches the true tomotope
+          <code>&lt;r0,r3&gt;</code> block data: <code>48</code> blocks, four blocks per tomotope edge, three per
+          tomotope face, and <code>48&times;4=192</code> flags after the existing <code>2&times;2</code> flag fiber is
+          restored.</p>
+
+        <h4>BT815: the 2160-space is the D12 antipode G-set</h4>
+        <p><a href="../analysis/BT815_global_2160_transversal_gset.md">BT815</a> identifies the global slot space. The
+          map <code>(chart, transversal) &rarr; (chart, transversal &cap; base chart)</code> is a
+          <code>PSp(4,3)</code>-equivariant bijection from chart-transversal slots to the antipode-slot space. GAP
+          classifies the stabilizer as <code>D12</code> with order profile
+          <code>{1:1,2:7,3:2,6:2}</code>, not cyclic <code>C12</code>. So the repair atlas lands on the mirror
+          antipode side of the <code>2160</code> boundary, not the cyclic rectangle-clock side.</p>
+        <p>The same carrier now has four exact readings:
+          <code>2160=540&times;4=40&times;54=240&times;9=45&times;48</code>. The last factorization ties the atlas to
+          the BT810&ndash;BT813 Schläfli geography: polar-pair geography times the chart group order.</p>
       </section>
 
       <section id="open">

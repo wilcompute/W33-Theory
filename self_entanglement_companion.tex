@@ -58,7 +58,7 @@ hypercube $Q_4$; its $24=q!(q+1)$ square faces quotient antipodally to
 the Reye $(12_4,16_3)$ configuration, the common finite spine of the
 tomotope and the $24$-cell axis/hexagon incidence layer.  Three independent falsifiable
 witnesses---trace-Choi visibility $V(U) = |\mathrm{Tr}(U)|/q$, Witting
-Kochen--Specker bound $34/40$, and key-agreement rate $13/40$---make the
+Kochen--Specker bound $36/40 = (q!)^2/v$ (exact; BT823), and key-agreement rate $13/40$---make the
 framework experimentally accessible.  The Bell qutrit can be prepared in
 exactly two Clifford gates, tolerates depolarising noise up to $p<q/\mu=3/4$,
 and supports temporal quantum teleportation using only $2$ trits of
@@ -235,8 +235,11 @@ $V(F_3) = 1/q$ (quadratic Gauss sum), $V(X) = V(Z) = 0$.
 
 \begin{theorem}[Witting Kochen--Specker bound]\label{thm:KS}
 No $\{0,1\}$-marking of the 40 Witting rays is consistent on all $W(3,3)$
-contexts; at most $34/40 = (v - q!)/v$ tetrads are simultaneously
-satisfiable, with $720 = (q!)!$ optimal markings.
+contexts; the exact maximum (complete branch-and-bound, BT823) is
+$36/40 = (q!)^2/v$ tetrads simultaneously satisfiable---the spread count
+$(q!)^2 = 36$---with deficit exactly $\mu = 4$ contexts and contextual
+fraction $\mu/v = 1/\Phi_4 = 1/10$.  [Corrected from the earlier
+$34/40$ claim; see analysis/bt823\_the\_closure.py.]
 \end{theorem}
 
 \begin{theorem}[Key-agreement rate]\label{thm:key}
@@ -331,7 +334,7 @@ Spreads per Bell line       & $9$    & $q^2$ \\
 Bell-line stabiliser        & $1296$ & $\mu^2 \cdot q^{q+1}$ \\
 $F_3$ visibility            & $1/3$  & $1/q$ \\
 Witting overlap            & $\{0, 1/3\}$ & $\{0, 1/q\}$ \\
-Witting KS max             & $34/40$ & $(v - q!)/v$ \\
+Witting KS max (exact)     & $36/40$ & $(q!)^2/v$ \\
 Key rate                   & $13/40$ & $\Phi_3/v$ \\
 Noise threshold $p_{\rm sep}$ & $3/4$ & $q/\mu$ \\
 CSS code                   & $[[240,81,4,3]]_3$ & $[[|E|, q^{q+1}, \mu, q]]$ \\
