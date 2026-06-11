@@ -1,0 +1,17 @@
+{
+  "theorem": "BT794 Klein regulus transversal lift",
+  "charts": 540,
+  "uniform_result": {
+    "common_isotropic_transversals_per_chart": 4,
+    "same_ruling_completion_lines_per_chart_in_PG3_3": 2,
+    "isotropic_completion_lines_per_chart": 0,
+    "grid_cross_incidence_verified": true,
+    "two_rulings_pairwise_skew_verified": true
+  },
+  "examples": [
+    {"chart": [0, 13], "isotropic_transversals": [5, 22, 27, 38], "nonisotropic_completion_pg_line_indices": [1, 78]},
+    {"chart": [0, 14], "isotropic_transversals": [4, 20, 30, 37], "nonisotropic_completion_pg_line_indices": [10, 41]},
+    {"chart": [0, 15], "isotropic_transversals": [7, 19, 26, 34], "nonisotropic_completion_pg_line_indices": [2, 85]}
+  ],
+  "interpretation": "Each W33 skew chart is a regulus shadow: W33 contains the base pair and four opposite-ruling isotropic transversals; the two same-ruling completion lines exist only outside the isotropic line set."
+}
