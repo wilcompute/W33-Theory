@@ -720,6 +720,104 @@ Steinberg $81$-sector is both protected memory and fault-tolerant
 logical space.
 
 %======================================================================
+\section{Runtime closure: compile, monitor, commit}
+\label{sec:runtimeclosure}
+
+The architecture now has an executable operating-system loop.
+\[
+\hbox{address word}\ \longrightarrow\
+\hbox{packet route}\ \longrightarrow\
+\hbox{sentinel monitor}\ \longrightarrow\
+\hbox{durable tomotope commit}.
+\]
+BT828--BT831 make each arrow finite and testable.
+
+\begin{theorem}[BT828 packet compiler]
+A recursive address word with digits in $\{0,\ldots,39\}$ compiles to
+a sequence of digit packets
+\[
+(Q_3\hbox{-XOR hops},\ \hbox{apartment hops},\ D_{12}\hbox{ mirror slot},
+\ C_{12}\hbox{ phase},\ \hbox{tomotope block}).
+\]
+Each digit uses at most three XOR hops and at most five apartment hops,
+hence at most eight reversible moves.  The stress route
+\[
+(0,7,14,21,28,35)\longrightarrow(39,32,25,18,11,4)
+\]
+compiles to $47$ reversible moves, below the level-six bound $48$.
+\emph{Witness: \path{bt828_holonet_packet_compiler.py}.}
+\end{theorem}
+
+\begin{theorem}[BT829 sentinel monitor]
+The projector onto the $g=15$ adjacency sector of $\W$ has exact
+entry profile
+\[
+P_{-4}(x,x)=\frac38,\qquad
+P_{-4}(x,y)=
+\begin{cases}
+-\frac18,&x\sim y,\\[2pt]
+\frac1{24},&x\nsim y.
+\end{cases}
+\]
+Consequently a full context line $K_4$ is sentinel-invisible, while
+localized, mirror, and shell faults activate the sentinel with exact
+energies:
+\[
+\begin{array}{c|c|c}
+\hbox{fault} & \hbox{energy} & \hbox{normalized fraction}\\
+\hline
+\hbox{single point} & 3/8 & 5/13\\
+\hbox{adjacent edge} & 1/2 & 5/19\\
+\hbox{nonedge mirror pair} & 5/6 & 25/57\\
+\hbox{gauge shell }N(x) & 6 & 5/7\\
+\hbox{matter shell} & 27/8 & 5/13
+\end{array}
+\]
+The immune system is therefore not generic noise detection: it is
+blind to legal context-line traffic and tuned to off-context routing
+and shell congestion.
+\emph{Witness: \path{bt829_fault_sentinel_monitor.py}.}
+\end{theorem}
+
+\begin{theorem}[BT830 two-phase commit clock]
+The runtime has two clocks.  The reversible prepare phase finishes in
+at most $8n$ moves.  The durable commit phase waits for
+\[
+T(n)=4(7^n-1).
+\]
+For $1\le n\le24$, $T(n)$ is always divisible by $24$ and by $8$,
+so it is aligned with both the local runtime stabilizer and the
+single-digit route window.  But it is not always divisible by the full
+$8n$ route epoch: the first desynchronization is $n=5$, with remainder
+$24=f$.  Thus the commit layer is deliberately slower and cover-like;
+it is not merely the route clock renamed.
+\emph{Witness: \path{bt830_two_phase_commit_clock.py}.}
+\end{theorem}
+
+\subsection{The infinite-cover warning}
+
+The tomotope contributes a harder boundary than the earlier packet
+picture showed.  Monson, Pellicer, and Williams prove that the
+tomotope has infinitely many distinct minimal regular covers; for
+coprime odd $p,q>1$ there are minimal covers $R_p,R_q$ of the
+tomotope such that neither covers the other, and neither covers the
+special $R_2$ cover \cite{tomotope}.  They also record the toroidal
+cover arithmetic
+\[
+|{\rm Mon}(Q_k)|=36864\,k^6,\qquad
+Q_k:\ (4,24,32,8,4)k^3
+\]
+for vertices, edges, triangles, tetrahedra, and octahedra.
+
+Architecturally this is a big correction.  The $48$-block tomotope
+middle layer is a stable local ABI, but the global regular cover is
+not unique.  Durable storage must therefore carry a \emph{cover
+index} $k$ as an implementation gauge.  Fast routes compile to the
+same invariant packet, while persistent storage may choose one minimal
+cover family without invalidating the other non-comparable families.
+\emph{Witness: \path{bt831_tomotope_minimal_cover_architecture.py}.}
+
+%======================================================================
 \section[The fuel: matter equals magic]{The fuel: matter $=$ magic}
 \label{sec:fuel}
 
@@ -865,6 +963,10 @@ one recursive route digit & $\le 8$ reversible hops & $3+5$\\
 level-$n$ leaves & $40^n$ & $v^n$\\
 level-$n$ $\W$ instances & $(40^n-1)/39$ & geometric tower\\
 durable commit clock & $4(7^g-1)$ ticks & tomotope/Csaszar\\
+compiled stress route & $47<48$ moves & BT828 level six\\
+sentinel projector trace & $15$ & $g$ sector\\
+first full-route desync & $n=5$ remainder $24$ & $f$ guard band\\
+tomotope cover ABI & $48$ blocks / $192$ flags & cover-invariant\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -928,7 +1030,7 @@ shows when probed honestly.
 
 Every theorem above is backed by an executable script in
 \texttt{analysis/} with results in \texttt{data/}; the chain
-BT739--BT827 was developed and pushed incrementally with exact
+BT739--BT831 was developed and pushed incrementally with exact
 arithmetic (GF($p$) elimination, cyclotomic integers, complete
 branch-and-bound, GAP witnesses for group-theoretic facts).
 
@@ -948,6 +1050,7 @@ clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules & bt817, bt819\\
 universality & bt825\\
 fractal computer/network & bt827\\
+runtime compiler / sentinel / commit / cover boundary & bt828--bt831\\
 corpus corrections & bt818, bt823, bt824\\
 \bottomrule
 \end{tabular}
@@ -977,6 +1080,9 @@ corpus corrections & bt818, bt823, bt824\\
 \bibitem{niven} I.~Niven, \emph{Irrational Numbers}, MAA (1956).
 \bibitem{thas} J.~A.~Thas, Ovoids and spreads of finite classical
   polar spaces, \emph{Geom.~Dedicata} \textbf{10}, 135 (1981).
+\bibitem{tomotope} B.~Monson, D.~Pellicer, G.~I.~Williams,
+  The tomotope, \emph{Ars Mathematica Contemporanea} \textbf{5},
+  355--370 (2012).
 \end{thebibliography}
 
 \end{document}

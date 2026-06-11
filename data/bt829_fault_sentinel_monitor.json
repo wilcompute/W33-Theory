@@ -1,0 +1,165 @@
+{
+  "theorem": "BT829 g=15 fault sentinel monitor",
+  "projector_profile": {
+    "diagonal": "3/8",
+    "adjacent": "-1/8",
+    "nonadjacent": "1/24",
+    "trace": "15",
+    "eigen_sector": "adjacency eigenvalue -4, multiplicity g=15"
+  },
+  "fault_signatures": [
+    {
+      "fault": "uniform_all_points",
+      "support_size": 40,
+      "sentinel_energy": "0",
+      "centered_norm": "0",
+      "sentinel_fraction": null,
+      "activates_sentinel": false
+    },
+    {
+      "fault": "context_line_K4",
+      "support_size": 4,
+      "sentinel_energy": "0",
+      "centered_norm": "18/5",
+      "sentinel_fraction": "0",
+      "activates_sentinel": false
+    },
+    {
+      "fault": "single_point_impulse",
+      "support_size": 1,
+      "sentinel_energy": "3/8",
+      "centered_norm": "39/40",
+      "sentinel_fraction": "5/13",
+      "activates_sentinel": true
+    },
+    {
+      "fault": "adjacent_edge_congestion",
+      "support_size": 2,
+      "sentinel_energy": "1/2",
+      "centered_norm": "19/10",
+      "sentinel_fraction": "5/19",
+      "activates_sentinel": true
+    },
+    {
+      "fault": "nonedge_mirror_congestion",
+      "support_size": 2,
+      "sentinel_energy": "5/6",
+      "centered_norm": "19/10",
+      "sentinel_fraction": "25/57",
+      "activates_sentinel": true
+    },
+    {
+      "fault": "gauge_neighbor_shell_12",
+      "support_size": 12,
+      "sentinel_energy": "6",
+      "centered_norm": "42/5",
+      "sentinel_fraction": "5/7",
+      "activates_sentinel": true
+    },
+    {
+      "fault": "matter_nonneighbor_shell_27",
+      "support_size": 27,
+      "sentinel_energy": "27/8",
+      "centered_norm": "351/40",
+      "sentinel_fraction": "5/13",
+      "activates_sentinel": true
+    }
+  ],
+  "compiled_route_fault_signatures": [
+    {
+      "fault": "compiled:local_flip",
+      "support_size": 2,
+      "sentinel_energy": "5/6",
+      "centered_norm": "19/10",
+      "sentinel_fraction": "25/57",
+      "activates_sentinel": true,
+      "program_level": 1,
+      "reversible_moves": 4
+    },
+    {
+      "fault": "compiled:single_digit_far",
+      "support_size": 2,
+      "sentinel_energy": "5/6",
+      "centered_norm": "19/10",
+      "sentinel_fraction": "25/57",
+      "activates_sentinel": true,
+      "program_level": 1,
+      "reversible_moves": 7
+    },
+    {
+      "fault": "compiled:two_digit_cross",
+      "support_size": 4,
+      "sentinel_energy": "5/3",
+      "centered_norm": "18/5",
+      "sentinel_fraction": "25/54",
+      "activates_sentinel": true,
+      "program_level": 2,
+      "reversible_moves": 12
+    },
+    {
+      "fault": "compiled:three_digit_far",
+      "support_size": 6,
+      "sentinel_energy": "3/2",
+      "centered_norm": "51/10",
+      "sentinel_fraction": "5/17",
+      "activates_sentinel": true,
+      "program_level": 3,
+      "reversible_moves": 19
+    },
+    {
+      "fault": "compiled:six_digit_stress",
+      "support_size": 12,
+      "sentinel_energy": "2",
+      "centered_norm": "42/5",
+      "sentinel_fraction": "5/21",
+      "activates_sentinel": true,
+      "program_level": 6,
+      "reversible_moves": 47
+    }
+  ],
+  "recursive_scenarios": [
+    {
+      "level": 1,
+      "w33_instances": 1,
+      "one_point_fault_per_instance_total_energy": "3/8",
+      "one_gauge_shell_per_instance_total_energy": "6",
+      "sentinel_dimension_per_instance": 15,
+      "total_sentinel_channels": 15
+    },
+    {
+      "level": 2,
+      "w33_instances": 41,
+      "one_point_fault_per_instance_total_energy": "123/8",
+      "one_gauge_shell_per_instance_total_energy": "246",
+      "sentinel_dimension_per_instance": 15,
+      "total_sentinel_channels": 615
+    },
+    {
+      "level": 3,
+      "w33_instances": 1641,
+      "one_point_fault_per_instance_total_energy": "4923/8",
+      "one_gauge_shell_per_instance_total_energy": "9846",
+      "sentinel_dimension_per_instance": 15,
+      "total_sentinel_channels": 24615
+    },
+    {
+      "level": 4,
+      "w33_instances": 65641,
+      "one_point_fault_per_instance_total_energy": "196923/8",
+      "one_gauge_shell_per_instance_total_energy": "393846",
+      "sentinel_dimension_per_instance": 15,
+      "total_sentinel_channels": 984615
+    }
+  ],
+  "checks": {
+    "projector_is_idempotent": true,
+    "projector_trace_is_g_15": true,
+    "projector_entry_profile": true,
+    "uniform_load_is_sentinel_invisible": true,
+    "context_line_is_sentinel_invisible": true,
+    "point_impulse_activates_sentinel": true,
+    "nonedge_fault_stronger_than_adjacent_fault": true,
+    "gauge_shell_is_strongest_tested_fault": true,
+    "compiled_routes_have_sentinel_signatures": true
+  }
+}

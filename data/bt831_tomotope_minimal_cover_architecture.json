@@ -1,0 +1,240 @@
+{
+  "theorem": "BT831 tomotope minimal-cover architecture boundary",
+  "source_facts": {
+    "paper": "Barry Monson, Daniel Pellicer, Gordon Williams, The Tomotope, Ars Math. Contemp. 5 (2012), 355-370",
+    "tomotope_counts": {
+      "vertices": 4,
+      "edges": 12,
+      "triangles": 16,
+      "tetrahedra": 4,
+      "hemioctahedra": 4
+    },
+    "monodromy_order": 18432,
+    "monodromy_type": "{3,12,4}",
+    "monodromy_boundary": "Mon(T) is not a string C-group; the intersection condition fails",
+    "infinite_cover_fact": "for coprime odd p,q>1, T has minimal regular covers Rp,Rq, neither covering the other nor R2",
+    "qk_cover_arithmetic": "Qk has counts (4,24,32,8,4)*k^3 and |Mon(Qk)|=36864*k^6"
+  },
+  "architecture_interpretation": {
+    "abi": "BT814 48-block / 192-flag tomotope middle packet is the cover-invariant local ABI",
+    "implementation_gauge": "regular cover index k is a pluggable durable-commit implementation parameter",
+    "boundary": "do not assert a unique global tomotope regularization unless a cover index is pinned",
+    "new_design_rule": "fast routes compile to invariant packets; durable storage may choose one cover family without invalidating other minimal covers"
+  },
+  "cover_indices_tested": [
+    {
+      "k": 3,
+      "vertices": 108,
+      "edges": 648,
+      "triangles": 864,
+      "tetrahedra": 216,
+      "octahedra": 108,
+      "Wk_order": 5184,
+      "MonQk_order": 26873856,
+      "kernel_order_to_Q1": 729
+    },
+    {
+      "k": 5,
+      "vertices": 500,
+      "edges": 3000,
+      "triangles": 4000,
+      "tetrahedra": 1000,
+      "octahedra": 500,
+      "Wk_order": 24000,
+      "MonQk_order": 576000000,
+      "kernel_order_to_Q1": 15625
+    },
+    {
+      "k": 7,
+      "vertices": 1372,
+      "edges": 8232,
+      "triangles": 10976,
+      "tetrahedra": 2744,
+      "octahedra": 1372,
+      "Wk_order": 65856,
+      "MonQk_order": 4337012736,
+      "kernel_order_to_Q1": 117649
+    },
+    {
+      "k": 11,
+      "vertices": 5324,
+      "edges": 31944,
+      "triangles": 42592,
+      "tetrahedra": 10648,
+      "octahedra": 5324,
+      "Wk_order": 255552,
+      "MonQk_order": 65306824704,
+      "kernel_order_to_Q1": 1771561
+    },
+    {
+      "k": 13,
+      "vertices": 8788,
+      "edges": 52728,
+      "triangles": 70304,
+      "tetrahedra": 17576,
+      "octahedra": 8788,
+      "Wk_order": 421824,
+      "MonQk_order": 177935486976,
+      "kernel_order_to_Q1": 4826809
+    },
+    {
+      "k": 17,
+      "vertices": 19652,
+      "edges": 117912,
+      "triangles": 157216,
+      "tetrahedra": 39304,
+      "octahedra": 19652,
+      "Wk_order": 943296,
+      "MonQk_order": 889807343616,
+      "kernel_order_to_Q1": 24137569
+    },
+    {
+      "k": 19,
+      "vertices": 27436,
+      "edges": 164616,
+      "triangles": 219488,
+      "tetrahedra": 54872,
+      "octahedra": 27436,
+      "Wk_order": 1316928,
+      "MonQk_order": 1734299357184,
+      "kernel_order_to_Q1": 47045881
+    }
+  ],
+  "pairwise_noncomparability_tests": [
+    {
+      "p": 3,
+      "q": 5,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 3,
+      "q": 7,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 3,
+      "q": 11,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 3,
+      "q": 13,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 3,
+      "q": 17,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 3,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 5,
+      "q": 7,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 5,
+      "q": 11,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 5,
+      "q": 13,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 5,
+      "q": 17,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 5,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 7,
+      "q": 11,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 7,
+      "q": 13,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 7,
+      "q": 17,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 7,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 11,
+      "q": 13,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 11,
+      "q": 17,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 11,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 13,
+      "q": 17,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 13,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    },
+    {
+      "p": 17,
+      "q": 19,
+      "gcd": 1,
+      "noncomparable_by_theorem_5_9": true
+    }
+  ],
+  "checks": {
+    "bt814_local_packet_is_48": true,
+    "bt814_local_flags_are_192": true,
+    "cover_indices_are_pairwise_coprime_odd": true,
+    "cover_orders_scale_as_k6": true,
+    "qk_counts_scale_as_k3": true,
+    "local_packet_independent_of_cover_index": true,
+    "first_three_cover_indices_match_substrate_primes": true
+  }
+}

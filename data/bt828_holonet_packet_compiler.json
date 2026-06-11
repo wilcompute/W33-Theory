@@ -1,0 +1,616 @@
+{
+  "theorem": "BT828 holonet packet compiler",
+  "compiler_contract": {
+    "input": "recursive W33 address words with digits 0..39",
+    "output": "Q3 XOR hops + apartment hops + D12 mirror slot + C12 phase + tomotope block",
+    "per_digit_bound": "xor_hops <= 3 and apartment_hops <= 5, hence reversible_moves <= 8",
+    "level_bound": "sum reversible_moves <= 8n"
+  },
+  "compiled_programs": [
+    {
+      "program": "local_flip",
+      "level": 1,
+      "source": [
+        0
+      ],
+      "target": [
+        7
+      ],
+      "digit_packets": [
+        {
+          "depth": 0,
+          "source_digit": 0,
+          "target_digit": 7,
+          "source_bits": [
+            0,
+            0,
+            0
+          ],
+          "target_bits": [
+            1,
+            1,
+            1
+          ],
+          "source_chart": 0,
+          "target_chart": 259,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 1,
+          "reversible_moves": 4,
+          "mirror_slot": 7,
+          "mirror_stabilizer_phase_mod_12": 7,
+          "mirror_reflection_bit": 0,
+          "tomotope_block": 7,
+          "tomotope_edge_label": 1,
+          "tomotope_face_label": 7,
+          "clock_phase_c12": 2,
+          "within_digit_bound": true
+        }
+      ],
+      "reversible_moves": 4,
+      "route_bound": 8,
+      "slack_to_bound": 4,
+      "mirror_slots": [
+        7
+      ],
+      "tomotope_blocks": [
+        7
+      ],
+      "clock_phases": [
+        2
+      ],
+      "fits_bt827_bound": true
+    },
+    {
+      "program": "single_digit_far",
+      "level": 1,
+      "source": [
+        0
+      ],
+      "target": [
+        39
+      ],
+      "digit_packets": [
+        {
+          "depth": 0,
+          "source_digit": 0,
+          "target_digit": 39,
+          "source_bits": [
+            0,
+            0,
+            0
+          ],
+          "target_bits": [
+            1,
+            1,
+            1
+          ],
+          "source_chart": 0,
+          "target_chart": 415,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 4,
+          "reversible_moves": 7,
+          "mirror_slot": 39,
+          "mirror_stabilizer_phase_mod_12": 3,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 39,
+          "tomotope_edge_label": 9,
+          "tomotope_face_label": 7,
+          "clock_phase_c12": 6,
+          "within_digit_bound": true
+        }
+      ],
+      "reversible_moves": 7,
+      "route_bound": 8,
+      "slack_to_bound": 1,
+      "mirror_slots": [
+        39
+      ],
+      "tomotope_blocks": [
+        39
+      ],
+      "clock_phases": [
+        6
+      ],
+      "fits_bt827_bound": true
+    },
+    {
+      "program": "two_digit_cross",
+      "level": 2,
+      "source": [
+        0,
+        5
+      ],
+      "target": [
+        39,
+        12
+      ],
+      "digit_packets": [
+        {
+          "depth": 0,
+          "source_digit": 0,
+          "target_digit": 39,
+          "source_bits": [
+            0,
+            0,
+            0
+          ],
+          "target_bits": [
+            1,
+            1,
+            1
+          ],
+          "source_chart": 0,
+          "target_chart": 415,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 4,
+          "reversible_moves": 7,
+          "mirror_slot": 39,
+          "mirror_stabilizer_phase_mod_12": 3,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 39,
+          "tomotope_edge_label": 9,
+          "tomotope_face_label": 7,
+          "clock_phase_c12": 6,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 1,
+          "source_digit": 5,
+          "target_digit": 12,
+          "source_bits": [
+            1,
+            0,
+            1
+          ],
+          "target_bits": [
+            1,
+            0,
+            0
+          ],
+          "source_chart": 276,
+          "target_chart": 8,
+          "xor_axes": [
+            2
+          ],
+          "xor_hops": 1,
+          "apartment_hops": 4,
+          "reversible_moves": 5,
+          "mirror_slot": 452,
+          "mirror_stabilizer_phase_mod_12": 8,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 43,
+          "tomotope_edge_label": 10,
+          "tomotope_face_label": 11,
+          "clock_phase_c12": 3,
+          "within_digit_bound": true
+        }
+      ],
+      "reversible_moves": 12,
+      "route_bound": 16,
+      "slack_to_bound": 4,
+      "mirror_slots": [
+        39,
+        452
+      ],
+      "tomotope_blocks": [
+        39,
+        43
+      ],
+      "clock_phases": [
+        6,
+        3
+      ],
+      "fits_bt827_bound": true
+    },
+    {
+      "program": "three_digit_far",
+      "level": 3,
+      "source": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        39,
+        38,
+        37
+      ],
+      "digit_packets": [
+        {
+          "depth": 0,
+          "source_digit": 0,
+          "target_digit": 39,
+          "source_bits": [
+            0,
+            0,
+            0
+          ],
+          "target_bits": [
+            1,
+            1,
+            1
+          ],
+          "source_chart": 0,
+          "target_chart": 415,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 4,
+          "reversible_moves": 7,
+          "mirror_slot": 39,
+          "mirror_stabilizer_phase_mod_12": 3,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 39,
+          "tomotope_edge_label": 9,
+          "tomotope_face_label": 7,
+          "clock_phase_c12": 6,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 1,
+          "source_digit": 1,
+          "target_digit": 38,
+          "source_bits": [
+            0,
+            0,
+            1
+          ],
+          "target_bits": [
+            1,
+            1,
+            0
+          ],
+          "source_chart": 128,
+          "target_chart": 469,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 318,
+          "mirror_stabilizer_phase_mod_12": 6,
+          "mirror_reflection_bit": 0,
+          "tomotope_block": 9,
+          "tomotope_edge_label": 2,
+          "tomotope_face_label": 9,
+          "clock_phase_c12": 3,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 2,
+          "source_digit": 2,
+          "target_digit": 37,
+          "source_bits": [
+            0,
+            1,
+            0
+          ],
+          "target_bits": [
+            1,
+            0,
+            1
+          ],
+          "source_chart": 256,
+          "target_chart": 523,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 1,
+          "reversible_moves": 4,
+          "mirror_slot": 597,
+          "mirror_stabilizer_phase_mod_12": 9,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 27,
+          "tomotope_edge_label": 6,
+          "tomotope_face_label": 11,
+          "clock_phase_c12": 0,
+          "within_digit_bound": true
+        }
+      ],
+      "reversible_moves": 19,
+      "route_bound": 24,
+      "slack_to_bound": 5,
+      "mirror_slots": [
+        39,
+        318,
+        597
+      ],
+      "tomotope_blocks": [
+        39,
+        9,
+        27
+      ],
+      "clock_phases": [
+        6,
+        3,
+        0
+      ],
+      "fits_bt827_bound": true
+    },
+    {
+      "program": "six_digit_stress",
+      "level": 6,
+      "source": [
+        0,
+        7,
+        14,
+        21,
+        28,
+        35
+      ],
+      "target": [
+        39,
+        32,
+        25,
+        18,
+        11,
+        4
+      ],
+      "digit_packets": [
+        {
+          "depth": 0,
+          "source_digit": 0,
+          "target_digit": 39,
+          "source_bits": [
+            0,
+            0,
+            0
+          ],
+          "target_bits": [
+            1,
+            1,
+            1
+          ],
+          "source_chart": 0,
+          "target_chart": 415,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 4,
+          "reversible_moves": 7,
+          "mirror_slot": 39,
+          "mirror_stabilizer_phase_mod_12": 3,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 39,
+          "tomotope_edge_label": 9,
+          "tomotope_face_label": 7,
+          "clock_phase_c12": 6,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 1,
+          "source_digit": 7,
+          "target_digit": 32,
+          "source_bits": [
+            1,
+            1,
+            1
+          ],
+          "target_bits": [
+            0,
+            0,
+            0
+          ],
+          "source_chart": 350,
+          "target_chart": 247,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 552,
+          "mirror_stabilizer_phase_mod_12": 0,
+          "mirror_reflection_bit": 0,
+          "tomotope_block": 21,
+          "tomotope_edge_label": 5,
+          "tomotope_face_label": 5,
+          "clock_phase_c12": 9,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 2,
+          "source_digit": 14,
+          "target_digit": 25,
+          "source_bits": [
+            1,
+            1,
+            0
+          ],
+          "target_bits": [
+            0,
+            0,
+            1
+          ],
+          "source_chart": 173,
+          "target_chart": 66,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 585,
+          "mirror_stabilizer_phase_mod_12": 9,
+          "mirror_reflection_bit": 0,
+          "tomotope_block": 3,
+          "tomotope_edge_label": 0,
+          "tomotope_face_label": 3,
+          "clock_phase_c12": 0,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 3,
+          "source_digit": 21,
+          "target_digit": 18,
+          "source_bits": [
+            1,
+            0,
+            1
+          ],
+          "target_bits": [
+            0,
+            1,
+            0
+          ],
+          "source_chart": 536,
+          "target_chart": 425,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 1098,
+          "mirror_stabilizer_phase_mod_12": 6,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 33,
+          "tomotope_edge_label": 8,
+          "tomotope_face_label": 1,
+          "clock_phase_c12": 3,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 4,
+          "source_digit": 28,
+          "target_digit": 11,
+          "source_bits": [
+            1,
+            0,
+            0
+          ],
+          "target_bits": [
+            0,
+            1,
+            1
+          ],
+          "source_chart": 359,
+          "target_chart": 244,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 1131,
+          "mirror_stabilizer_phase_mod_12": 3,
+          "mirror_reflection_bit": 0,
+          "tomotope_block": 15,
+          "tomotope_edge_label": 3,
+          "tomotope_face_label": 15,
+          "clock_phase_c12": 6,
+          "within_digit_bound": true
+        },
+        {
+          "depth": 5,
+          "source_digit": 35,
+          "target_digit": 4,
+          "source_bits": [
+            0,
+            1,
+            1
+          ],
+          "target_bits": [
+            1,
+            0,
+            0
+          ],
+          "source_chart": 182,
+          "target_chart": 63,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ],
+          "xor_hops": 3,
+          "apartment_hops": 5,
+          "reversible_moves": 8,
+          "mirror_slot": 1644,
+          "mirror_stabilizer_phase_mod_12": 0,
+          "mirror_reflection_bit": 1,
+          "tomotope_block": 45,
+          "tomotope_edge_label": 11,
+          "tomotope_face_label": 13,
+          "clock_phase_c12": 9,
+          "within_digit_bound": true
+        }
+      ],
+      "reversible_moves": 47,
+      "route_bound": 48,
+      "slack_to_bound": 1,
+      "mirror_slots": [
+        39,
+        552,
+        585,
+        1098,
+        1131,
+        1644
+      ],
+      "tomotope_blocks": [
+        39,
+        21,
+        3,
+        33,
+        15,
+        45
+      ],
+      "clock_phases": [
+        6,
+        9,
+        0,
+        3,
+        6,
+        9
+      ],
+      "fits_bt827_bound": true
+    }
+  ],
+  "checks": {
+    "bt827_route_bound_loaded": true,
+    "all_programs_fit_bt827_bound": true,
+    "each_digit_has_at_most_three_xor_hops": true,
+    "each_digit_has_at_most_five_apartment_hops": true,
+    "each_digit_has_at_most_eight_reversible_moves": true,
+    "mirror_slots_live_in_bt815_space": true,
+    "tomotope_blocks_live_in_bt814_space": true,
+    "clock_phases_live_in_c12": true,
+    "compiler_uses_all_runtime_headers": true,
+    "stress_program_is_level_six": true,
+    "stress_program_bound_is_48": true
+  }
+}
