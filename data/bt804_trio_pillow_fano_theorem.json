@@ -1,0 +1,104 @@
+{
+  "theorem": "BT804 trio pillow + Fano/QR",
+  "pillow": {
+    "C1": {
+      "fix_v": 1,
+      "fix_e": 3,
+      "fix_f": 0,
+      "total_fix": 4,
+      "quotient": [
+        7,
+        12,
+        7
+      ],
+      "chi": 2
+    },
+    "C2": {
+      "fix_v": 1,
+      "fix_e": 3,
+      "fix_f": 0,
+      "total_fix": 4,
+      "quotient": [
+        7,
+        12,
+        7
+      ],
+      "chi": 2
+    },
+    "C3": {
+      "fix_v": 1,
+      "fix_e": 3,
+      "fix_f": 0,
+      "total_fix": 4,
+      "quotient": [
+        7,
+        12,
+        7
+      ],
+      "chi": 2
+    },
+    "C4": {
+      "fix_v": 1,
+      "fix_e": 3,
+      "fix_f": 0,
+      "total_fix": 4,
+      "quotient": [
+        7,
+        12,
+        7
+      ],
+      "chi": 2
+    },
+    "C5": {
+      "fix_v": 1,
+      "fix_e": 3,
+      "fix_f": 0,
+      "total_fix": 4,
+      "quotient": [
+        7,
+        12,
+        7
+      ],
+      "chi": 2
+    },
+    "S1": {
+      "fix_v": 0,
+      "fix_e": 3,
+      "fix_f": 1,
+      "total_fix": 4,
+      "quotient": [
+        11,
+        15,
+        6
+      ],
+      "chi": 2
+    },
+    "S2": {
+      "fix_v": 0,
+      "fix_e": 3,
+      "fix_f": 1,
+      "total_fix": 4,
+      "quotient": [
+        11,
+        15,
+        6
+      ],
+      "chi": 2
+    }
+  },
+  "face_gap_classes": {
+    "(1, 2, 4)": 14
+  },
+  "all_classes": {
+    "(1, 1, 5)": 7,
+    "(1, 2, 4)": 14,
+    "(1, 3, 3)": 7,
+    "(2, 2, 3)": 7
+  },
+  "fano_is_face": 7,
+  "fano_edge_partition": {
+    "1": 21
+  },
+  "mirror_equals_fano": false,
+  "qr_link": "Fano difference gaps {1,2,4} = QR mod 7 = BT774 reptend even-position residues"
+}
