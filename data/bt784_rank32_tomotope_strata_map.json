@@ -1,0 +1,876 @@
+{
+  "theorem": "BT784 rank-32/tomotope strata map",
+  "tomotope_input": {
+    "rank": 4,
+    "vertices": 4,
+    "edges": 12,
+    "faces_triangles": 16,
+    "cells": 8,
+    "tetrahedra": 4,
+    "hemioctahedra": 4,
+    "flag_count": 192,
+    "symmetry_order": 96,
+    "flag_orbits": 2,
+    "flag_orbit_size": 96
+  },
+  "rank32_suborbit_count": 32,
+  "rank32_total_charts": 540,
+  "suborbit_size_profile": {
+    "1": 1,
+    "3": 1,
+    "4": 2,
+    "6": 2,
+    "8": 3,
+    "12": 11,
+    "24": 9,
+    "48": 3
+  },
+  "strata_targets": {
+    "vertices_4": {
+      "target": 4,
+      "sample_exact_packets_max4": [
+        {
+          "orbits": [
+            20
+          ],
+          "sizes": [
+            4
+          ]
+        },
+        {
+          "orbits": [
+            21
+          ],
+          "sizes": [
+            4
+          ]
+        },
+        {
+          "orbits": [
+            0,
+            4
+          ],
+          "sizes": [
+            1,
+            3
+          ]
+        }
+      ],
+      "packet_count_by_length_max6": {
+        "1": 2,
+        "2": 1
+      }
+    },
+    "cells_8": {
+      "target": 8,
+      "sample_exact_packets_max4": [
+        {
+          "orbits": [
+            9
+          ],
+          "sizes": [
+            8
+          ]
+        },
+        {
+          "orbits": [
+            10
+          ],
+          "sizes": [
+            8
+          ]
+        },
+        {
+          "orbits": [
+            11
+          ],
+          "sizes": [
+            8
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            21
+          ],
+          "sizes": [
+            4,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            0,
+            4,
+            20
+          ],
+          "sizes": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            0,
+            4,
+            21
+          ],
+          "sizes": [
+            1,
+            3,
+            4
+          ]
+        }
+      ],
+      "packet_count_by_length_max6": {
+        "1": 3,
+        "2": 1,
+        "3": 2
+      }
+    },
+    "edges_12": {
+      "target": 12,
+      "sample_exact_packets_max4": [
+        {
+          "orbits": [
+            12
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            13
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            14
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            15
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            16
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            22
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            23
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            24
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            25
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            26
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            27
+          ],
+          "sizes": [
+            12
+          ]
+        },
+        {
+          "orbits": [
+            1,
+            2
+          ],
+          "sizes": [
+            6,
+            6
+          ]
+        },
+        {
+          "orbits": [
+            9,
+            20
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            9,
+            21
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            10,
+            20
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            10,
+            21
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            11,
+            20
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            11,
+            21
+          ],
+          "sizes": [
+            8,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            0,
+            4,
+            9
+          ],
+          "sizes": [
+            1,
+            3,
+            8
+          ]
+        },
+        {
+          "orbits": [
+            0,
+            4,
+            10
+          ],
+          "sizes": [
+            1,
+            3,
+            8
+          ]
+        }
+      ],
+      "packet_count_by_length_max6": {
+        "1": 11,
+        "2": 7,
+        "3": 3,
+        "4": 1
+      }
+    },
+    "faces_16": {
+      "target": 16,
+      "sample_exact_packets_max4": [
+        {
+          "orbits": [
+            9,
+            10
+          ],
+          "sizes": [
+            8,
+            8
+          ]
+        },
+        {
+          "orbits": [
+            9,
+            11
+          ],
+          "sizes": [
+            8,
+            8
+          ]
+        },
+        {
+          "orbits": [
+            10,
+            11
+          ],
+          "sizes": [
+            8,
+            8
+          ]
+        },
+        {
+          "orbits": [
+            12,
+            20
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            12,
+            21
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            13,
+            20
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            13,
+            21
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            14,
+            20
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            14,
+            21
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            15,
+            20
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            15,
+            21
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            16,
+            20
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            16,
+            21
+          ],
+          "sizes": [
+            12,
+            4
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            22
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            23
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            24
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            25
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            26
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            20,
+            27
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        },
+        {
+          "orbits": [
+            21,
+            22
+          ],
+          "sizes": [
+            4,
+            12
+          ]
+        }
+      ],
+      "packet_count_by_length_max6": {
+        "2": 25,
+        "3": 16,
+        "4": 7
+      }
+    },
+    "symmetry_96": {
+      "target": 96,
+      "sample_exact_packets_max4": [
+        {
+          "orbits": [
+            17,
+            18
+          ],
+          "sizes": [
+            48,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            17,
+            19
+          ],
+          "sizes": [
+            48,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            18,
+            19
+          ],
+          "sizes": [
+            48,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            5,
+            17
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            5,
+            18
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            5,
+            19
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            6,
+            17
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            6,
+            18
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            6,
+            19
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            7,
+            17
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            7,
+            18
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            7,
+            19
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            8,
+            17
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            8,
+            18
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            8,
+            19
+          ],
+          "sizes": [
+            24,
+            24,
+            48
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            17,
+            28
+          ],
+          "sizes": [
+            24,
+            48,
+            24
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            17,
+            29
+          ],
+          "sizes": [
+            24,
+            48,
+            24
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            17,
+            30
+          ],
+          "sizes": [
+            24,
+            48,
+            24
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            17,
+            31
+          ],
+          "sizes": [
+            24,
+            48,
+            24
+          ]
+        },
+        {
+          "orbits": [
+            3,
+            18,
+            28
+          ],
+          "sizes": [
+            24,
+            48,
+            24
+          ]
+        }
+      ],
+      "packet_count_by_length_max6": {
+        "2": 3,
+        "3": 108,
+        "4": 1611,
+        "5": 7716,
+        "6": 23196
+      }
+    },
+    "flags_192": {
+      "target": 192,
+      "sample_exact_packets_max4": [],
+      "packet_count_by_length_max6": {
+        "5": 36,
+        "6": 873
+      }
+    }
+  },
+  "canonical_packets": {
+    "vertices": {
+      "target": 4,
+      "orbits": [
+        20
+      ],
+      "sizes": [
+        4
+      ]
+    },
+    "cells": {
+      "target": 8,
+      "orbits": [
+        9
+      ],
+      "sizes": [
+        8
+      ]
+    },
+    "edges": {
+      "target": 12,
+      "orbits": [
+        12
+      ],
+      "sizes": [
+        12
+      ]
+    },
+    "faces": {
+      "target": 16,
+      "orbits": [
+        9,
+        10
+      ],
+      "sizes": [
+        8,
+        8
+      ]
+    },
+    "tetrahedra_plus_hemioctahedra": {
+      "target": 8,
+      "orbits": [
+        9
+      ],
+      "sizes": [
+        8
+      ],
+      "split": "4 tetrahedra + 4 hemioctahedra = one 8-cell packet"
+    },
+    "one_flag_orbit": {
+      "target": 96,
+      "orbits": [
+        17,
+        18
+      ],
+      "sizes": [
+        48,
+        48
+      ]
+    },
+    "two_flag_orbits": {
+      "target": 192,
+      "orbits": [
+        17,
+        18,
+        19,
+        "external/base-chirality-copy"
+      ],
+      "sizes": [
+        48,
+        48,
+        48,
+        48
+      ]
+    }
+  },
+  "structural_observations": {
+    "primitive_tomotope_vertices_visible": "4 appears as a rank-32 orbit size",
+    "primitive_tomotope_cells_visible": "8 appears as a rank-32 orbit size",
+    "primitive_tomotope_edges_visible": "12 appears as a rank-32 orbit size",
+    "faces_are_composite": "16 does not appear; faces are 8+8 or 4+4+4+4 packets",
+    "flag_orbit_is_two_48_halves": "96 = 48+48 matches tomotope two flag orbits of size 96",
+    "flag_count_is_four_48_halves": "192 = 4*48, matching tomotope flag count",
+    "nonorientability_signature": "two flag orbits plus no primitive 16-face orbit"
+  },
+  "interpretation": "The BT780 rank-32 cube-web alphabet already contains tomotope-rank packet sizes; the only composite stratum is the 16 triangular faces, matching the non-C-group/intersection-condition pathology."
+}
