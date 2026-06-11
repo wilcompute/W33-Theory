@@ -1,0 +1,36 @@
+{
+  "theorem": "BT810 completed geography + Schlafli dictionary",
+  "line_split": {
+    "isotropic": 40,
+    "hyperbolic": 90
+  },
+  "polar_pairs": 45,
+  "index45_structure": "(SL(2,3) x SL(2,3)) : C2 order 1152 (GAP)",
+  "geography": {
+    "27": [
+      "2^4 : A5",
+      "F4^2 register : icosahedron",
+      "lines on the cubic surface"
+    ],
+    "36": [
+      "S6",
+      "regular spread stabilizer (36 spreads)",
+      "double-sixes"
+    ],
+    "40": [
+      "parabolics x2",
+      "W33 points / lines (building)",
+      "Steiner trihedral triads (two families)"
+    ],
+    "45": [
+      "(SL(2,3) x SL(2,3)) : 2",
+      "hyperbolic polar pairs",
+      "tritangent planes"
+    ]
+  },
+  "platonic_ladder": {
+    "2T (24-cell)": "Sp(2,3) in polar-pair stabilizers (index 45)",
+    "order-48 cube": "skew-pair chart group O_h (BT773, 540 cubes)",
+    "2I (600-cell)": "SL(2,5) in spread stabilizers (index 36 chain)"
+  }
+}
