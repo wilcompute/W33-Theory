@@ -1,0 +1,22 @@
+{
+  "theorem": "BT819 beacon heptads + clock trichotomy",
+  "heptad_count": 2880,
+  "orbit_sizes": [
+    2880
+  ],
+  "stabilizer_orders": [
+    9
+  ],
+  "frame_spectrum": [
+    0.697224,
+    1.0,
+    1.0,
+    4.302776
+  ],
+  "tight": false,
+  "clock_trichotomy": {
+    "12": "internal",
+    "7": "external",
+    "13": "external"
+  }
+}
