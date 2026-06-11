@@ -1,0 +1,13 @@
+{
+  "theorem": "BT776 corner center + octahedron mirror + slot count",
+  "corner_is_chart_center": "6/6",
+  "L_anchor_composition": {
+    "TT": 12
+  },
+  "L_anchor_intersection": {
+    "disjoint": 12
+  },
+  "slot_orbit": 6480,
+  "slots_transitive": true,
+  "anchors_per_cube_edge": 4
+}
