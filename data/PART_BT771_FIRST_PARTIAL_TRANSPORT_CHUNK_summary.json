@@ -1,0 +1,14 @@
+{
+  "accepted_plucker_duo_claim": false,
+  "all_tests_pass_for_partial_contract": true,
+  "boundary": "BT771 is not a BT763/BT764 transport proof: all Q(4,3) apartment/frame targets remain unresolved. It confirms only the first root-triple/chirality block obeys the BT766 r6 source involution and the BT768 partial-contract shape.",
+  "checked_partner_directions": 48,
+  "errors": [],
+  "partial_input": "data/bt760_root_torsor_to_q43_transport.partial.json",
+  "resolved_q43_partner_directions": 0,
+  "rows_seen": 48,
+  "status": "partial_source_consistency_pass_target_unresolved",
+  "theorem": "BT771 first partial transport chunk",
+  "unique_row_ids": 48,
+  "unresolved_partner_references": 0
+}
