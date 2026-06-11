@@ -1,0 +1,21 @@
+{
+  "boundary": "Materialized compact certificate/sample only. Full 51,840-row unresolved scaffold is reproducible via --emit-full and remains not a verified BT763 transport table.",
+  "branches_per_phase_duo_coordinate": 4,
+  "checks": {
+    "row_count_expected_51840": true,
+    "sample_fixed_phase": true,
+    "sample_flips_duo": true,
+    "sample_partner_involution": true
+  },
+  "chiralities": 2,
+  "duos": 2,
+  "inner_centralizer_order": 48,
+  "phases": 6,
+  "r6_source_action": "tau, chirality, branch, and phase fixed; duo flipped",
+  "root_triples": 540,
+  "sample_rows": 24,
+  "source_script": "analysis/bt766_transport_table_seed_generator.py",
+  "status": "source_side_seed_only_materialized",
+  "theorem": "BT769 materialized BT766 transport seed scaffold",
+  "total_rows": 51840
+}
