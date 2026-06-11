@@ -1,0 +1,339 @@
+{
+  "theorem": "BT780 rank-32 cube-web suborbit atlas",
+  "group_order": 25920,
+  "base_chart": 0,
+  "base_skew_pair": [
+    0,
+    13
+  ],
+  "base_stabilizer_order": 48,
+  "suborbit_count": 32,
+  "suborbit_sizes": [
+    1,
+    6,
+    6,
+    24,
+    3,
+    24,
+    24,
+    24,
+    24,
+    8,
+    8,
+    8,
+    12,
+    12,
+    12,
+    12,
+    12,
+    48,
+    48,
+    48,
+    4,
+    4,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    24,
+    24,
+    24,
+    24
+  ],
+  "orbit_size_profile": {
+    "1": 1,
+    "3": 1,
+    "4": 2,
+    "6": 2,
+    "8": 3,
+    "12": 11,
+    "24": 9,
+    "48": 3
+  },
+  "web_distance_shells_from_base": {
+    "0": 1,
+    "1": 6,
+    "2": 30,
+    "3": 99,
+    "4": 228,
+    "5": 176
+  },
+  "web_adjacency_orbit": 1,
+  "base_web_adjacency_row": {
+    "1": 6
+  },
+  "first_12_orbits": [
+    {
+      "orbit": 0,
+      "size": 1,
+      "representative_skew_pair": [
+        0,
+        13
+      ],
+      "web_distance_profile_from_base": {
+        "0": 1
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 2
+      },
+      "base_target_point_overlap": 8,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "1": 6
+      }
+    },
+    {
+      "orbit": 1,
+      "size": 6,
+      "representative_skew_pair": [
+        1,
+        4
+      ],
+      "web_distance_profile_from_base": {
+        "1": 6
+      },
+      "line_relation_multiset_to_base": {
+        "transversal2": 2
+      },
+      "base_target_point_overlap": 4,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "0": 1,
+        "2": 1,
+        "3": 4
+      }
+    },
+    {
+      "orbit": 2,
+      "size": 6,
+      "representative_skew_pair": [
+        18,
+        20
+      ],
+      "web_distance_profile_from_base": {
+        "2": 6
+      },
+      "line_relation_multiset_to_base": {
+        "zero_side": 2
+      },
+      "base_target_point_overlap": 0,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "1": 1,
+        "4": 1,
+        "7": 4
+      }
+    },
+    {
+      "orbit": 3,
+      "size": 24,
+      "representative_skew_pair": [
+        0,
+        18
+      ],
+      "web_distance_profile_from_base": {
+        "2": 24
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 1,
+        "zero_side": 1
+      },
+      "base_target_point_overlap": 4,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "1": 1,
+        "5": 2,
+        "6": 2,
+        "8": 1
+      }
+    },
+    {
+      "orbit": 4,
+      "size": 3,
+      "representative_skew_pair": [
+        17,
+        21
+      ],
+      "web_distance_profile_from_base": {
+        "3": 3
+      },
+      "line_relation_multiset_to_base": {
+        "zero_side": 2
+      },
+      "base_target_point_overlap": 0,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "2": 2,
+        "14": 4
+      }
+    },
+    {
+      "orbit": 5,
+      "size": 24,
+      "representative_skew_pair": [
+        1,
+        5
+      ],
+      "web_distance_profile_from_base": {
+        "3": 24
+      },
+      "line_relation_multiset_to_base": {
+        "one_side": 1,
+        "transversal2": 1
+      },
+      "base_target_point_overlap": 3,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "3": 2,
+        "9": 1,
+        "16": 1,
+        "18": 2
+      }
+    },
+    {
+      "orbit": 6,
+      "size": 24,
+      "representative_skew_pair": [
+        1,
+        6
+      ],
+      "web_distance_profile_from_base": {
+        "3": 24
+      },
+      "line_relation_multiset_to_base": {
+        "one_side": 1,
+        "transversal2": 1
+      },
+      "base_target_point_overlap": 3,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "3": 2,
+        "10": 1,
+        "15": 1,
+        "17": 2
+      }
+    },
+    {
+      "orbit": 7,
+      "size": 24,
+      "representative_skew_pair": [
+        1,
+        17
+      ],
+      "web_distance_profile_from_base": {
+        "3": 24
+      },
+      "line_relation_multiset_to_base": {
+        "transversal2": 1,
+        "zero_side": 1
+      },
+      "base_target_point_overlap": 2,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "2": 1,
+        "11": 1,
+        "17": 2,
+        "18": 2
+      }
+    },
+    {
+      "orbit": 8,
+      "size": 24,
+      "representative_skew_pair": [
+        2,
+        6
+      ],
+      "web_distance_profile_from_base": {
+        "3": 24
+      },
+      "line_relation_multiset_to_base": {
+        "one_side": 2
+      },
+      "base_target_point_overlap": 2,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "3": 1,
+        "12": 2,
+        "13": 1,
+        "19": 2
+      }
+    },
+    {
+      "orbit": 9,
+      "size": 8,
+      "representative_skew_pair": [
+        0,
+        14
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 1,
+        "one_side": 1
+      },
+      "base_target_point_overlap": 5,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "5": 3,
+        "24": 3
+      }
+    },
+    {
+      "orbit": 10,
+      "size": 8,
+      "representative_skew_pair": [
+        0,
+        15
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "equal": 1,
+        "one_side": 1
+      },
+      "base_target_point_overlap": 5,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "6": 3,
+        "26": 3
+      }
+    },
+    {
+      "orbit": 11,
+      "size": 8,
+      "representative_skew_pair": [
+        2,
+        16
+      ],
+      "web_distance_profile_from_base": {
+        "4": 8
+      },
+      "line_relation_multiset_to_base": {
+        "one_side": 2
+      },
+      "base_target_point_overlap": 2,
+      "target_union_size": 8,
+      "base_union_size": 8,
+      "web_neighbor_counts_to_orbits": {
+        "7": 3,
+        "13": 3
+      }
+    }
+  ],
+  "note": "Full 32-orbit table and 32x32 web quotient matrix are regenerated by analysis/bt780_rank32_suborbit_atlas.py."
+}
