@@ -1,0 +1,23 @@
+{
+  "theorem": "BT854 dark chart-tetrad transversal duality",
+  "t1": {
+    "where": {
+      "schedule": 10
+    },
+    "tetrad_hits": {
+      "false": 10
+    }
+  },
+  "t1b": {
+    "same_shadow": true,
+    "patterns": {
+      "edge+opposite_triangle": 10
+    },
+    "distinct_edges": 10
+  },
+  "t2": {
+    "tetrad_pair_transversal_locations": {
+      "mixed": 6
+    }
+  }
+}
