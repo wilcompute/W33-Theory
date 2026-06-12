@@ -1,0 +1,46 @@
+{
+  "theorem": "BT855 dark sector K5-complete",
+  "t1": {
+    "tetrads(30)": [
+      {
+        "adjacent": 30
+      },
+      {
+        "adjacent": 30
+      }
+    ],
+    "dodecahedron(30)": [
+      {
+        "disjoint": 30
+      },
+      {
+        "disjoint": 30
+      }
+    ],
+    "matching(10)": [
+      {
+        "same": 10
+      }
+    ],
+    "meeting(60)": [
+      {
+        "adjacent": 60
+      }
+    ]
+  },
+  "t2": [
+    {
+      "antipode_is_partner": true,
+      "quotient_edges": 15,
+      "kneser": true
+    },
+    {
+      "antipode_is_partner": true,
+      "quotient_edges": 15,
+      "kneser": true
+    }
+  ],
+  "t3": {
+    "('adjacent', 2)": 30
+  }
+}
