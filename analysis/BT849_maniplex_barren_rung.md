@@ -2,11 +2,14 @@
 
 **Status: PROVEN (GAP + independent python, `analysis/bt849_maniplex_barren_rung.py`, GAP witnesses `.tmp/gap_bt849*.g`, data `data/bt849_maniplex_barren_rung.json`)**
 
-The tomotope — this project's runtime middleware since Pillar 70 — is
-classified as a **maniplex**: the canonical rank-4 maniplex that is *not* a
-polytope (Monson–Pellicer–Williams), whose minimal regular cover fails the
-intersection property. Its monodromy order **18432 = 96 × 192 is exactly what
-Pillar 70 measured**. BT849 brings the maniplex literature to bear on the
+The tomotope — this project's runtime middleware since Pillar 70 — lives in
+the **maniplex** world: it is an abstract *uniform* 4-polytope (hence a rank-4
+maniplex) famous for having **infinitely many distinct minimal regular
+covers** (Monson–Pellicer–Williams 2012; in rank 3 the minimal regular cover
+is unique). The pathology is driven by its monodromy group — order
+**18432 = 96 × 192, exactly what Pillar 70 measured** — failing the
+intersection condition, so its regular covers leave the polytope world and
+land in maniplexes. BT849 brings the maniplex literature to bear on the
 BT848 amalgamation ladder, with one validated search and three sharp zeros.
 
 ## The search and its controls
@@ -41,12 +44,14 @@ has a single facet/vertex; **none exist at rank > 4**.
    The ladder reads: **q = 9 barren (substrate folds into schedules), q = 11
    the 11-cell, q = 19 the 57-cell**, infinitely many degenerate rungs, and
    J₁ × L₂(19) above.
-3. **The tomotope is the workaround.** Where rank-4 polytopality and even
-   5-type maniplexity fail, the substrate's actual middleware is the
-   tomotope — a *non-polytopal maniplex with no 5 in its type*
-   ({3,12,4}-flavored Coxeter data, 192 flags, cover monodromy 18432). The
-   machine's flag-level runtime is exactly the structure that survives the
-   obstruction.
+3. **The tomotope is the workaround.** Where rank-4 GC-type closure fails,
+   the substrate's actual middleware is the tomotope — a uniform 4-polytope
+   *with no 5 in its type* (monodromy orders (3,12,4), 192 flags, cover
+   monodromy 18432 failing the C-group condition, infinitely many minimal
+   regular covers). The machine's flag-level runtime is exactly the
+   structure that survives the obstruction — at the price of the cover
+   pathology the runtime layer already engineers around (the BT828–834
+   "infinite-cover warning").
 
 ## Why the GC content is delocalized (the physics reading)
 

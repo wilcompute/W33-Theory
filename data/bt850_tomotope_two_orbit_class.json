@@ -1,0 +1,17 @@
+{
+  "theorem": "BT850 tomotope two-orbit class",
+  "aut_order": 96,
+  "flag_orbits": [
+    96,
+    96
+  ],
+  "class_I": [
+    0,
+    1,
+    2
+  ],
+  "links": [
+    3
+  ],
+  "context": "Mochan 2024 polytopality of 2-orbit maniplexes"
+}

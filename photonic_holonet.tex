@@ -1208,9 +1208,10 @@ Hartley--Leemans on $\{5,3,5\}$.}
 
 \paragraph{The barren rung and the maniplex workaround.}
 Relaxing polytopes to \emph{maniplexes} (flag graphs without the
-intersection property; the tomotope middleware of this machine is the
-canonical non-polytopal rank-$4$ maniplex, with minimal-cover
-monodromy $18432=96\times192$ failing that property) does not lift
+intersection property; the tomotope middleware of this machine is a
+uniform $4$-polytope whose monodromy $18432=96\times192$ fails that
+property, giving it \emph{infinitely many} distinct minimal regular
+covers --- the canonical rank-$4$ cover pathology) does not lift
 the obstruction: exhaustive search shows $U_4(2)$ admits \emph{no}
 rank-$4$ regular maniplex with a $5$ in its type, and the amalgam
 closure $A_6=L_2(9)$ admits no regular maniplex at any rank ---
@@ -1224,7 +1225,16 @@ over the $36$ schedules --- Petersen splits, chiral pentads, chart
 covers, dark dodecahedra --- rather than crystallized in one flag
 object, and why the machine's runtime uses the tomotope: it is the
 flag structure that survives the obstruction.
+The tomotope's symmetry type is now exact: $|\mathrm{Aut}|=96$
+(independent centralizer computation on the $192$ flags), two flag
+orbits $[96,96]$, \textbf{class $2_{\{0,1,2\}}$} --- only the
+cell-color crosses orbits, and the orbits are precisely
+``flag in a tetrahedron'' vs ``flag in a hemioctahedron'': the
+middleware \emph{alternates spherical and projective cells}, the
+exact situation the classical ``locally $X$'' taxonomy cannot name,
+and the setting of Moch\'an's $2$-orbit polytopality theory.
 \emph{Witnesses: \texttt{bt849\_maniplex\_barren\_rung.py},
+\texttt{bt850\_tomotope\_two\_orbit\_class.py},
 \texttt{.tmp/gap\_bt849*.g}.}
 
 \paragraph{Reconstruction, the chart $K_5$, and the dark dodecahedra.}
@@ -1479,7 +1489,7 @@ Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
 two compasses / $4\cdot K_{10}=12$ Petersens / chart double cover & bt843--bt845\\
 pentad anatomy / schedule reconstruction / dark dodecahedra & bt846, bt847\\
 amalgamation ladder / universality / $J_1$ & bt848\\
-maniplex barren rung / tomotope workaround & bt849\\
+maniplex barren rung / tomotope workaround / class $2_{\{0,1,2\}}$ & bt849, bt850\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\
