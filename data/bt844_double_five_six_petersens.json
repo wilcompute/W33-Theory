@@ -1,0 +1,27 @@
+{
+  "theorem": "BT844 double-five and six Petersens",
+  "refuted": "pentads bisect the spread - FALSE; pentads live on the 30 lines outside",
+  "t2": {
+    "a5_in_stab": 12,
+    "duad": 6,
+    "pentad": 6,
+    "total_cores": 432
+  },
+  "t1": {
+    "pentad_meet_profile": {
+      "0": 120
+    },
+    "pentad_point_coverage": [
+      20
+    ]
+  },
+  "t3": "2.K10 = 6 Petersens (each pair covered exactly 2x)",
+  "t4": {
+    "pair_orbit_signatures": {
+      "(15, 30)": 6
+    },
+    "pentad_orbit": 216,
+    "pentad_pair_orbit": 216,
+    "distinct_pairs_per_spread": 6
+  }
+}
