@@ -36,7 +36,11 @@ self-entangled photon, traversing one finite geometry, is
 simultaneously the hardware, the software, and the network of a
 universal quantum computer.  The geometry is the symplectic generalized
 quadrangle $\W$: forty points, forty lines, automorphism group
-$\Sp(4,\GF3)$ of order $51840$.  The photon carries $\W$ twice over ---
+with faithful projective subgroup $\PSp(4,\GF3)$ of order $25920$ and
+full Weyl extension $W(E_6)\cong\PSp(4,3){:}2$ of order $51840$.
+The symplectic double cover $\Sp(4,3)$ also has order $51840$, but its
+central involution is invisible on projective objects; the two
+extensions must not be conflated.  The photon carries $\W$ twice over ---
 once as the forty Witting rays of its path--polarization space
 $\mathbb{C}^4$ (states), once as the forty Pauli displacement classes of
 its past--future time-bin space $\mathbb{C}^9$ (operators) --- and the
@@ -58,7 +62,12 @@ Clifford group; the matter shell supplies the magic).  We also give the
 recursive engineering law: a level-$n$ holonet has $40^n$ photonic
 leaves, $(40^n-1)/39$ $\W$ instances, and reversible routing diameter
 bounded by $8n=8\log_{40}N$, while durable commits use a separate
-Cs\'asz\'ar/tomotope clock $T(n)=4(7^n-1)$.  The newest runtime layer
+Cs\'asz\'ar/tomotope clock $T(n)=4(7^n-1)$.  The runtime contains an
+exact parabolic packet decoder: the Bell-line stabilizer splits the
+$1296$ compass incidences into $648+324+162+162$, giving the complete
+binary prefix code $\{0,10,110,111\}$ for mirror, schedule, and two
+chiral caches, while the dual point stabilizer supplies two persistent
+$648$-slot address sheets.  The newest storage layer
 turns the tomotope cover pathology into an engineering feature: durable
 storage is cover-indexed by a $\mathbb{Z}_k^3$ fiber over the stable
 $48$-block packet ABI, sentinel-aware compilation can trade commit-time
@@ -100,6 +109,11 @@ carries its witness script):
   is an atlas of $540$ three-dimensional hypercube charts whose native
   XOR routing moves are exactly the register operations, glued along
   the $1620$ apartments of the Tits building of $\Sp(4,\GF3)$.
+\item \textbf{Parabolic address--route duality}
+  (\S\ref{sec:parabolic-router}): the point parabolic supplies two
+  $648$-slot address sheets, whereas the Bell-line parabolic decodes
+  the compass fabric by the complete prefix code $0,10,110,111$.
+  Address and route are the two nodes of the same $C_2$ building.
 \item \textbf{Mirror middleware} (\S\ref{sec:middleware}): the cyclic
   selector clock and the mirror transport bus are different $2160$
   worlds.  The photon is clocked by the $C_{12}$ side but routed by the
@@ -157,8 +171,20 @@ each line carries $4$ points; collinearity defines the strongly regular
 graph $\mathrm{SRG}(40,12,2,4)$.
 \end{definition}
 
-The full automorphism group is $\Sp(4,\GF3)$, of order
-$51840 = |W(E_6)|$, acting with permutation rank $3$.  The substrate
+Three related symmetry groups occur, and their roles are different:
+\[
+\underbrace{\Sp(4,3)}_{2\cdot\PSp(4,3)\text{, Clifford double cover}},
+\qquad
+\underbrace{\PSp(4,3)}_{25920\text{, faithful projective action}},
+\qquad
+\underbrace{W(E_6)\cong\PSp(4,3){:}2}_{51840\text{, outer Weyl extension}}.
+\]
+The first and third groups both have order $51840$ but are not the
+same extension: the center of $\Sp(4,3)$ acts trivially on projective
+points and lines, while the outer involution in $W(E_6)$ acts
+nontrivially.  The projective group acts with permutation rank $3$.
+The ATLAS index-$40$ subgroups are the two building parabolics
+$3^{1+2}{:}2A_4$ and $3^3{:}S_4$ \cite{atlasu42}.  The substrate
 primitives are
 \[
 q=3,\quad \lambda=2,\quad \mu=4,\quad k=12,\quad f=24,\quad g=15,\quad
@@ -236,6 +262,118 @@ core of every spread stabilizer, with point orbits $[20,20]$ and line
 orbits $[10,30]$ echoing the Boerdijk--Coxeter decomposition
 $600=20\times 30$.
 \emph{Witnesses: \texttt{bt808--bt813}.}
+
+\subsection{The parabolic router: address and route are dual}
+\label{sec:parabolic-router}
+
+The two index-$40$ parabolics are not duplicate descriptions of one
+local neighborhood.  They execute different halves of a packet
+protocol.  This becomes visible only after the compass census: there
+are two $216$-element classes of icosahedral $A_5$ cores, and exactly
+$1296=216\cdot6$ cross-class pairs meet in $D_{10}$.
+
+\begin{theorem}[Bell--compass parabolic router]
+\label{thm:parabolic-router}
+Fix an isotropic Bell line.  Its projective Siegel parabolic
+$3^3{:}S_4$ has four orbits on the $1296$ incident compass pairs:
+\[
+162_L+162_R+324+648.
+\]
+They are distinguished objectwise by the Bell line lying in the
+pentad core's $5_L$, $5_R$, $10$, or $20$ line orbit.  The normalized
+orbit sizes satisfy the Kraft equality
+\[
+2^{-3}+2^{-3}+2^{-2}+2^{-1}=1,
+\]
+so they admit the complete prefix decoder
+\[
+110\mapsto\text{left cache},\quad
+111\mapsto\text{right cache},\quad
+10\mapsto\text{schedule},\quad
+0\mapsto\text{dark mirror}.
+\]
+The outer Weyl involution fuses exactly the two $162$ cache orbits,
+leaving $324_{\rm cache}+324_{\rm schedule}+648_{\rm mirror}$.
+By contrast, the dual point parabolic has two regular projective
+orbits of size $648$; the outer extension preserves rather than fuses
+these address sheets.
+\emph{Witness: \path{bt859_bell_compass_parabolic_router.py}.}
+\end{theorem}
+
+The equality case of Kraft--McMillan means the routing words fill a
+binary decision tree with no unused branch \cite{mcmillan}.  Here the
+code lengths were not optimized from assumed traffic probabilities:
+they were read from exact group orbits.  A packet first asks whether
+its Bell line is in the dark mirror half; if not, whether it is in the
+common schedule quarter; only the remaining cache quarter needs the
+third, chiral bit.  The decoder is self-delimiting and constant-depth,
+with expected word length
+\[
+\frac12(1)+\frac14(2)+2\cdot\frac18(3)=\frac74
+\]
+under the invariant uniform measure on the $1296$ compass pairs.
+
+\begin{center}\small
+\begin{tabular}{rlll}
+\toprule
+orbit & Bell-line position & prefix & engineering action\\
+\midrule
+$648$ & dark $20$-orbit & $0$ & enter mirror bus\\
+$324$ & common schedule $10$-orbit & $10$ & timetable-local route\\
+$162$ & absolute pentad $5_L$ & $110$ & left cache\\
+$162$ & absolute pentad $5_R$ & $111$ & right cache\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figure}[ht]\centering
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small,align=center},
+  box/.style={draw,rounded corners,minimum width=31mm,minimum height=9mm},
+  leaf/.style={draw,minimum width=29mm,minimum height=8mm},
+  arr/.style={-{Stealth},thick}
+]
+  \node[box,fill=blue!9] (point) at (-0.5,2.0)
+    {point parabolic\\address stage};
+  \node[leaf,fill=blue!5] (pa) at (-2.5,0.5) {$648_A$\\regular sheet};
+  \node[leaf,fill=blue!5] (pb) at (1.5,0.5) {$648_B$\\regular sheet};
+  \draw[arr] (point) -- node[left] {sheet bit $0$} (pa);
+  \draw[arr] (point) -- node[right] {sheet bit $1$} (pb);
+  \node[font=\scriptsize] at (-0.5,-0.55)
+    {outer symmetry preserves both sheets};
+
+  \node[box,fill=orange!13] (line) at (7.4,2.0)
+    {Bell-line parabolic\\route stage};
+  \node[leaf,fill=gray!15] (mirror) at (4.9,0.5) {$648$ mirror\\word $0$};
+  \node[box,fill=yellow!15,minimum width=24mm] (rest) at (8.5,0.5)
+    {non-mirror\\prefix $1$};
+  \node[leaf,fill=green!12] (sched) at (6.8,-1.0) {$324$ schedule\\word $10$};
+  \node[box,fill=purple!10,minimum width=24mm] (cache) at (10.3,-1.0)
+    {$324$ cache\\prefix $11$};
+  \node[leaf,fill=purple!6] (left) at (8.6,-2.5) {$162_L$\\word $110$};
+  \node[leaf,fill=purple!6] (right) at (12.0,-2.5) {$162_R$\\word $111$};
+  \draw[arr] (line) -- node[left] {$0$} (mirror);
+  \draw[arr] (line) -- node[right] {$1$} (rest);
+  \draw[arr] (rest) -- node[left] {$0$} (sched);
+  \draw[arr] (rest) -- node[right] {$1$} (cache);
+  \draw[arr] (cache) -- node[left] {$0$} (left);
+  \draw[arr] (cache) -- node[right] {$1$} (right);
+  \node[font=\scriptsize] at (9.6,-3.25)
+    {$W(E_6)$ fuses $162_L,162_R$; $\PSp(4,3)$ resolves chirality};
+\end{tikzpicture}}
+\caption{The two $C_2$ parabolics implement a dual protocol.  Point
+localization selects one of two address torsors; Bell-line localization
+decodes a complete variable-length route word.}
+\label{fig:parabolic-router}
+\end{figure}
+
+This theorem also closes an honesty boundary.  The Bell stabilizer and
+the compass incidence set both have cardinality $1296$, but they are
+not a regular $G$-set identification.  Projectively, the Bell
+stabilizer has order $648$ and the orbit stabilizers are $1,2,4$.
+The useful result is stronger than the count: a hierarchical decoder
+and a persistent address bit are forced by the two parabolic actions.
 
 %======================================================================
 \section{The carrier: how to self-entangle a photon}
@@ -1158,9 +1296,9 @@ Schwenk's classical obstruction (no edge-partition of $K_{10}$ into
 $3$ Petersen graphs) dissolves at the substrate multiplicity $\mu$.
 The numerical coincidence $3240=\#\{\text{triangles of }Q\}$ is
 refuted at the $G$-set level (orbits $[360,2880]$ vs transitive).
-\emph{Witnesses: \texttt{bt843\_icosahedral\_compass.py},
-\texttt{bt844\_double\_five\_and\_six\_petersens.py},
-\texttt{bt845\_pentad\_exchange\_and\_chart\_double\_cover.py}.}
+\emph{Witnesses: \path{bt843_icosahedral_compass.py},
+\path{bt844_double_five_and_six_petersens.py},
+\path{bt845_pentad_exchange_and_chart_double_cover.py}.}
 \end{theorem}
 
 \begin{theorem}[The amalgamation ladder]
@@ -1251,8 +1389,8 @@ needle's dark chart.
 \texttt{bt854\_dark\_chart\_transversal\_duality.py},
 \texttt{bt855\_dark\_sector\_k5\_complete.py}.}
 \end{theorem}
-\emph{Witnesses: \texttt{bt848\_universal\_amalgam\_ladder.py},
-\texttt{.tmp/gap\_bt848*.g}; cf.\ Hartley's classification ($17$
+\emph{Witnesses: \path{bt848_universal_amalgam_ladder.py},
+\path{.tmp/gap_bt848*.g}; cf.\ Hartley's classification ($17$
 universal rank-$4$ locally projective polytopes, $441$ quotients) and
 Hartley--Leemans on $\{5,3,5\}$.}
 \end{theorem}
@@ -1306,11 +1444,11 @@ $\{\{4,3\},\{3,5\}_5\}=2^{\mathcal I}$ (cube facets $=$ $Q_3$
 charts, hemi-icosahedral vertex figures $=$ compass cells, vertices
 $=\GF2^{\,6}$ on the hidden $6$-set) has order $3840\nmid25920$:
 blocked like the rest of the ladder.
-\emph{Witnesses: \texttt{bt849\_maniplex\_barren\_rung.py},
-\texttt{bt850\_tomotope\_two\_orbit\_class.py},
-\texttt{bt851\_tomotope\_cayley\_test.py},
-\texttt{bt852\_seventeen\_universals.py},
-\texttt{.tmp/gap\_bt849*.g}, \texttt{.tmp/gap\_bt852*.g}.}
+\emph{Witnesses: \path{bt849_maniplex_barren_rung.py},
+\path{bt850_tomotope_two_orbit_class.py},
+\path{bt851_tomotope_cayley_test.py},
+\path{bt852_seventeen_universals.py},
+\path{.tmp/gap_bt849*.g}, \path{.tmp/gap_bt852*.g}.}
 
 \paragraph{Reconstruction, the chart $K_5$, and the dark dodecahedra.}
 The pentad core's full signature $[5,5,10,20]$ (lines), $[20,20]$
@@ -1438,9 +1576,8 @@ these $240$ duad slots is
 \]
 namely live $24$-cell edges, mirror pairs, and repeated opposite-axis
 Reye incidences.
-\emph{Witnesses: \texttt{bt840\_clifford\_rook\_sentinel\_sheet.py},
-\texttt{bt841\_eleven\_cell\_a5\_boundary\_carrier.py},
-\texttt{bt842\_tomotope\_24cell\_half\_flag\_edge\_lift.py}.}
+\emph{Witnesses: BT840, BT841, and BT842; executable scripts are in
+\path{analysis/}.}
 \end{theorem}
 
 %======================================================================
@@ -1474,6 +1611,7 @@ level-$n$ $\W$ instances & $(40^n-1)/39$ & geometric tower\\
 durable commit clock & $4(7^g-1)$ ticks & tomotope/Csaszar\\
 compiled stress route & $47<48$ moves & BT828 level six\\
 cover-lifted packet capacity & $48k^3$ slots & BT832 storage gauge\\
+Bell--compass prefix router & $648+324+162+162$ & code $0,10,110,111$\\
 sentinel-aware stress energy & $4\to2$ & BT833 reroute\\
 full route sync criterion & $2n\mid7^n-1$ & BT834 guard band\\
 tomotope Wythoff runtime ladder & $4,12,24,48,96$ & BT838 packet growth\\
@@ -1743,7 +1881,12 @@ own now-context: \emph{self $=$ the seed of self-entanglement}.  The
 Bell-line stabilizer has order $51840/40=1296=\mu^2 q^{q+1}$ --- the
 same $1296=6^4$ that counts the compass $D_{10}$-incidence pairs of
 Theorem~\ref{thm:amalgam} ($36$ schedules $\times\,36$ core pairs),
-a coincidence queued for identification.  The companion also supplies
+but Theorem~\ref{thm:parabolic-router} proves that this is not a
+regular-action identification.  Instead, the projective Bell
+stabilizer resolves the incidence carrier as
+$648+324+162+162$, the exact mirror/schedule/left-cache/right-cache
+prefix decoder, while the point parabolic supplies two persistent
+$648$ address sheets.  The companion also supplies
 the master equation at Hilbert-space level ($q^2=q+q!$: the
 $9$-dimensional past$\otimes$future space splits into $3$ diagonal
 ``now'' histories and $6=q!$ context-changing ones), and a ledger
@@ -1879,6 +2022,7 @@ maniplex barren rung / class $2_{\{0,1,2\}}$ / Cayley over $V_4$ & bt849--bt851\
 seventeen universals / $\mathrm{Aut}(\text{tomotope})$ universal & bt852\\
 dark orbit zoo / shadow bijection / $K_5$-complete dark sector & bt853--bt855\\
 dark charts $=$ mirror bus ($G$-set iso) & bt856\\
+chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\
@@ -1918,6 +2062,13 @@ corpus corrections & bt818, bt823, bt824\\
 \bibitem{tomotope} B.~Monson, D.~Pellicer, G.~I.~Williams,
   The tomotope, \emph{Ars Mathematica Contemporanea} \textbf{5},
   355--370 (2012).
+\bibitem{atlasu42} T.~Breuer, \emph{GAP Character Table Library:
+  $U_4(2)\cong\PSp(4,3)$}, ATLAS-derived maximal-subgroup data,
+  \href{https://www.math.rwth-aachen.de/homes/sam/ctbllib/ctbltoc/data/U4%282%29.html}{online ATLAS table}.
+\bibitem{mcmillan} B.~McMillan, Two inequalities implied by unique
+  decipherability, \emph{IRE Transactions on Information Theory}
+  \textbf{2}(4), 115--116 (1956),
+  \href{https://doi.org/10.1109/TIT.1956.1056818}{doi:10.1109/TIT.1956.1056818}.
 \end{thebibliography}
 
 \end{document}

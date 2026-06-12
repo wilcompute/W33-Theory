@@ -1,0 +1,144 @@
+{
+  "theorem": "BT859 Bell-compass parabolic router",
+  "gap": {
+    "group_order": 25920,
+    "aut_order": 51840,
+    "incidences": 1296,
+    "line_structure": "(C3 x C3 x C3) : S4",
+    "point_structure": "((C3 x C3) : C3) : SL(2,3)",
+    "line_on_points": [
+      4,
+      36
+    ],
+    "line_on_lines": [
+      1,
+      12,
+      27
+    ],
+    "point_on_points": [
+      1,
+      12,
+      27
+    ],
+    "point_on_lines": [
+      4,
+      36
+    ],
+    "line_projective_order": 648,
+    "line_projective_orbits": [
+      162,
+      162,
+      324,
+      648
+    ],
+    "line_rows": [
+      [
+        162,
+        12,
+        2,
+        2,
+        5,
+        30
+      ],
+      [
+        162,
+        12,
+        2,
+        2,
+        5,
+        30
+      ],
+      [
+        324,
+        6,
+        6,
+        2,
+        10,
+        10
+      ],
+      [
+        648,
+        3,
+        2,
+        1,
+        20,
+        30
+      ]
+    ],
+    "line_full_order": 1296,
+    "line_full_orbits": [
+      324,
+      324,
+      648
+    ],
+    "line_fusion": [
+      [
+        162,
+        162
+      ],
+      [
+        324
+      ],
+      [
+        648
+      ]
+    ],
+    "point_projective_order": 648,
+    "point_projective_orbits": [
+      648,
+      648
+    ],
+    "point_full_order": 1296,
+    "point_full_orbits": [
+      648,
+      648
+    ],
+    "point_fusion": [
+      [
+        648
+      ],
+      [
+        648
+      ]
+    ]
+  },
+  "prefix_decoder": {
+    "mirror_dark20": {
+      "orbit": 648,
+      "weight": "1/2",
+      "word": "0"
+    },
+    "schedule10": {
+      "orbit": 324,
+      "weight": "1/4",
+      "word": "10"
+    },
+    "cache5_left": {
+      "orbit": 162,
+      "weight": "1/8",
+      "word": "110"
+    },
+    "cache5_right": {
+      "orbit": 162,
+      "weight": "1/8",
+      "word": "111"
+    }
+  },
+  "kraft_sum": "1",
+  "interpretation": {
+    "projective_line_router": "0=dark mirror, 10=schedule, 110/111=left/right pentad cache",
+    "full_line_router": "outer W(E6) gauges cache chirality: 11 is one cache class",
+    "point_addressing": "two 648 address sheets remain distinct; each is a PSp-parabolic torsor",
+    "boundary": "1296 count equality is not a regular G-set identification"
+  },
+  "checks": {
+    "compass_incidence_count": true,
+    "two_parabolics_are_dual": true,
+    "line_projective_prefix_orbits": true,
+    "line_orbits_have_objectwise_signatures": true,
+    "prefix_code_is_complete": true,
+    "outer_fuses_only_cache_chirality": true,
+    "point_projective_sheets_are_regular": true,
+    "point_sheets_survive_outer_extension": true
+  }
+}
