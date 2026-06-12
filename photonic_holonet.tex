@@ -1131,6 +1131,23 @@ the combinatorial face of Kochen--Specker.
 %======================================================================
 \section{Memory, protection, and the immune system}
 
+\begin{theorem}[The code register is the Steinberg module]
+The companion paper's CSS code $[[240,81,4,3]]_3$ stores its $81$
+logical qutrits in $H_1$ of the $\W$ $2$-complex ($40$ vertices,
+$240$ edges, $160$ in-line triangles).  Complete character
+computation over all $25920$ group elements gives
+$\langle\chi_{H_1},\chi_{H_1}\rangle=1$: $H_1\otimes\mathbb{C}$ is
+\emph{irreducible} of dimension $81$, hence equal to the unique
+$81$-dimensional irreducible --- \textbf{the Steinberg module} ---
+with $\chi_{H_1}(g)=\#\mathrm{fixflags}-\#\mathrm{fixpoints}
+-\#\mathrm{fixlines}+1$ (the Solomon--Tits alternating sum) verified
+for every $g$.  The QECC logical space and the Schur-protected
+register below are one object: any equivariant logical error is a
+scalar, so only symmetry-breaking noise can touch the code, and the
+sentinel/clock layers are exactly the symmetry monitors.
+\emph{Witness: \texttt{bt861\_code\_register\_is\_steinberg.py}.}
+\end{theorem}
+
 \begin{theorem}[Steinberg memory]
 The Levi-graph cycle space and the chart-overlap $81$-sector are both
 irreducible and equal to the Steinberg representation of
@@ -2045,6 +2062,7 @@ dark orbit zoo / shadow bijection / $K_5$-complete dark sector & bt853--bt855\\
 dark charts $=$ mirror bus ($G$-set iso) & bt856\\
 Heisenberg/$\GF3^3$ shell torsors, Schl\"afli decoding & bt858\\
 Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
+code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\

@@ -1,0 +1,19 @@
+{
+  "theorem": "BT861 code register is Steinberg",
+  "dims": {
+    "H1": 81,
+    "H2": 40,
+    "rank_d0": 39,
+    "rank_d1": 120
+  },
+  "norm": 1.0,
+  "flag_formula_match": true,
+  "character_value_distribution": {
+    "-3": 810,
+    "-1": 3240,
+    "0": 16640,
+    "1": 5184,
+    "9": 45,
+    "81": 1
+  }
+}
