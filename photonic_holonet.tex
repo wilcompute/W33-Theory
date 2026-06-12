@@ -1013,6 +1013,19 @@ exhaustive result that simultaneously proves every spread of $\W$ is
 regular --- with each context appearing in exactly $9$ schedules.
 \emph{Witnesses: \texttt{bt817}, \texttt{bt819}.}
 
+\begin{theorem}[Schedule-overlap law]
+Two distinct schedules share exactly $1$ or exactly $4=\mu$ contexts:
+each schedule has $15$ \emph{near} partners (overlap $4$) and $20$
+\emph{far} partners (overlap $1$), the two relation classes of the
+double-six diagonal $[1,15,20]$, with the exact counting identity
+$1\cdot 20 + 4\cdot 15 = 80 = 10\times(9-1)$.  Operationally: a cheap
+timetable switch preserves $4$ of $10$ calibrated contexts and a far
+switch only $1$, so a controller hopping among near partners
+re-calibrates $6$ contexts per hop --- the timetable library is itself
+a metric space whose geometry is the double-six relation.
+\emph{Witness: \texttt{bt835\_schedule\_overlap\_theorem.py}.}
+\end{theorem}
+
 %======================================================================
 \section{Build sheet and falsifiable witnesses}
 
@@ -1127,7 +1140,7 @@ vacua / geography / transitions & bt808--bt813, bt816\\
 fuel / contextuality & bt818, bt822, bt823\\
 memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
-sync / schedules & bt817, bt819\\
+sync / schedules / overlap law & bt817, bt819, bt835\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834\\

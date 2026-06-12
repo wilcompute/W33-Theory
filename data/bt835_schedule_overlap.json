@@ -1,0 +1,13 @@
+{
+  "theorem": "BT835 schedule overlap",
+  "overlap_spectrum": {
+    "1": 360,
+    "4": 270
+  },
+  "per_schedule": {
+    "1": 20,
+    "4": 15
+  },
+  "double_count": 1440,
+  "bt813_match": "[1, 20, 15]"
+}
