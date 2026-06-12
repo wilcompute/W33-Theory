@@ -1618,8 +1618,10 @@
       <strong>W(3,3) = SRG(40,12,2,4)</strong> is the projective commutation geometry of the
       <strong>40 non-identity two-qutrit Pauli observables</strong>. Around each vertex, the
       <strong>12 neighbours split into four qutrit MUB triangles</strong> and the
-      <strong>27 non-neighbours form an F<sub>3</sub><sup>3</sup> Heisenberg shell</strong> whose
-      derived graph is the Schl&auml;fli graph, giving an exact local
+      <strong>27 non-neighbours form a torsor for the nonabelian Heisenberg group
+        3<sup>1+2</sup></strong>. Their induced collinearity graph is 8-regular; adjoining the canonical
+      nine-triangle central-fibre relation gives <code>GQ(2,4)</code>, whose complement is the
+      Schl&auml;fli graph, giving an exact local
       <strong>E<sub>6</sub></strong> bridge. The promoted spectral-closure layer then builds on
       that kernel to connect to electroweak, flavour, curvature, and moonshine data.
       Use <a href="qutrit_foundation.html">Exact Qutrit Foundation</a> for the theorem boundary,
@@ -23331,6 +23333,27 @@
           extension preserves them. Thus the two nodes of the <code>C2</code> building implement a protocol:
           <strong>point localization selects an address sheet; Bell-line localization decodes a route word</strong>.
           The equal counts were not a regular G-set isomorphism; they were the shadow of this address-route duality.</p>
+
+        <h4>BT858&ndash;BT865: the protected register is the state/program compiler</h4>
+        <p><a href="../analysis/BT858_heisenberg_shell_torsors.md">BT858</a> and
+          <a href="../analysis/BT860_bell_shell_register_arithmetic.md">BT860</a> split the local
+          <code>27</code> correctly: the non-collinear point shell is a torsor for the extraspecial
+          Heisenberg group <code>H27=3<sup>1+2</sup></code>, while the disjoint-line Bell shell is a flat
+          <code>F3<sup>3</sup></code> program register whose <code>[4,4,6,12]</code> relations are exact
+          difference-vector classes. BT861&ndash;BT863 identify the code space with the Steinberg module and
+          force every order-3 split to be <code>27+27+27</code>.
+          <a href="../analysis/BT865_dual_torsor_steinberg_compiler.md">BT865</a> closes the chain at module
+          level: over both <code>C</code> and the native code field, the same protected memory restricts as
+          <strong>three regular copies of either torsor</strong>,
+          <code>H1(F3)|H27 = F3[H27]<sup>3</sup></code> and
+          <code>H1(F3)|F3<sup>3</sup> = F3[F3<sup>3</sup>]<sup>3</sup></code>, with explicit
+          <code>27+27+27</code> orbit bases modulo boundaries. The unique Heisenberg center selects the
+          canonical triality axis: over <code>C</code> it gives the three phase sectors
+          <code>1,&omega;,&omega;<sup>2</sup></code>; over <code>F3</code> it gives the exact Jordan filtration
+          <strong><code>27 &sub; 54 &sub; 81</code></strong>, because
+          <code>rank(z-I), rank((z-I)<sup>2</sup>), rank((z-I)<sup>3</sup>) = 54,27,0</code>.
+          Program addressing and quantum-state phasing are therefore two exact coordinate systems on one
+          Steinberg-protected qutrit register, while the nonisomorphic groups remain honestly distinct.</p>
       </section>
 
       <section id="open">
@@ -23356,8 +23379,11 @@
             <td>2</td>
             <td><strong>Exact Heisenberg/MUB shell</strong></td>
             <td>✅ <strong>CLOSED</strong> — for each base point, the 12 neighbours split into four triangles and the 27
-              non-neighbours form an <code>F<sub>3</sub><sup>3</sup></code> shell with 9 fibres of size 3; the derived
-              27-vertex graph is the Schl&auml;fli graph.</td>
+              non-neighbours form a regular torsor for the extraspecial Heisenberg group
+              <code>3<sup>1+2</sup></code>. The induced W33 relation is 8-regular, not strongly regular; its union with
+              the canonical nine-triangle central-fibre relation is <code>GQ(2,4)=SRG(27,10,1,5)</code>, whose
+              complement is the Schl&auml;fli graph. The dual 27-line Bell shell, not this point shell, carries the flat
+              <code>F<sub>3</sub><sup>3</sup></code> translation action.</td>
           </tr>
           <tr>
             <td>3</td>

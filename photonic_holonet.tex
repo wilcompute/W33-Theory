@@ -50,7 +50,10 @@ theorem with an executable witness: the preparation circuit (two
 Clifford gates of tabletop optics), the routing fabric (an atlas of
 $540$ hypercube charts glued along the $1620$ apartments of the Tits
 building), the protected memory (the Steinberg module of dimension
-$81$), the mirror middleware (a $2160$-slot $D_{12}$ transport bus whose
+$81$), the dual-torsor compiler (three regular copies of both the flat
+$\GF3^3$ program shell and the noncommutative Heisenberg state shell,
+with canonical $27+27+27$ triality selected by the Heisenberg center),
+the mirror middleware (a $2160$-slot $D_{12}$ transport bus whose
 full Clifford lift factors as $24\cdot45\cdot48=51840$), the fuel (the
 matter shell is exactly the magic sector, with exact Kochen--Specker
 budget $36/40$ and contextual fraction $1/10$), the clock (an internal
@@ -95,7 +98,7 @@ Transporting the photon through the mesh \emph{is} applying a gate
 \emph{is} routing a packet.  One physical process; three descriptions.
 \end{principle}
 
-The identification rests on five exact pillars, each proved by
+The identification rests on seven exact pillars, each proved by
 explicit computation in the project repository (every theorem below
 carries its witness script):
 
@@ -114,6 +117,11 @@ carries its witness script):
   $648$-slot address sheets, whereas the Bell-line parabolic decodes
   the compass fabric by the complete prefix code $0,10,110,111$.
   Address and route are the two nodes of the same $C_2$ building.
+\item \textbf{Dual-torsor state--program compilation}: the Steinberg
+  memory restricts to both canonical order-$27$ shell groups as three
+  regular copies.  Bell-shell programs use commuting $\GF3^3$
+  coordinates; point-shell states use Heisenberg $3^{1+2}$
+  coordinates; both compile into the same $81$ logical qutrits.
 \item \textbf{Mirror middleware} (\S\ref{sec:middleware}): the cyclic
   selector clock and the mirror transport bus are different $2160$
   worlds.  The photon is clocked by the $C_{12}$ side but routed by the
@@ -1136,7 +1144,10 @@ The companion paper's CSS code $[[240,81,4,3]]_3$ stores its $81$
 logical qutrits in $H_1$ of the $\W$ $2$-complex ($40$ vertices,
 $240$ edges, $160$ in-line triangles).  Complete character
 computation over all $25920$ group elements gives
-$\langle\chi_{H_1},\chi_{H_1}\rangle=1$: $H_1\otimes\mathbb{C}$ is
+\[
+\langle\chi_{H_1},\chi_{H_1}\rangle=1.
+\]
+Therefore $H_1\otimes\mathbb{C}$ is
 \emph{irreducible} of dimension $81$, hence equal to the unique
 $81$-dimensional irreducible --- \textbf{the Steinberg module} ---
 with $\chi_{H_1}(g)=\#\mathrm{fixflags}-\#\mathrm{fixpoints}
@@ -1173,6 +1184,104 @@ protected register.
 \emph{Witness:
 \texttt{bt863\_generations\_from\_steinberg\_vanishing.py}.}
 \end{corollary}
+
+\begin{theorem}[The dual-torsor Steinberg compiler]
+Let $H_{27}=3^{1+2}_{+}$ be the canonical Heisenberg $O_3$ of the
+point parabolic and let $A_{27}=\GF3^3$ be the canonical translation
+$O_3$ of the Bell-line parabolic.  Their $27$-point and $27$-line
+shells are regular torsors (BT858).  On the protected register,
+\[
+ \mathrm{St}\!\downarrow_{H_{27}}=3\,\mathbb{C}[H_{27}],
+ \qquad
+ \mathrm{St}\!\downarrow_{A_{27}}=3\,\mathbb{C}[A_{27}],
+\]
+because both restricted characters are exactly
+$\{81^1,0^{26}\}$.  The statement survives in the code's own field
+and is constructive:
+\[
+ H_1(\W;\GF3)\!\downarrow_{H_{27}}
+   \cong \GF3[H_{27}]^{\oplus3},
+ \qquad
+ H_1(\W;\GF3)\!\downarrow_{A_{27}}
+   \cong \GF3[A_{27}]^{\oplus3}.
+\]
+For each torsor the verifier finds three cycle seeds whose $27$ group
+translates add $27+27+27$ independent classes modulo the
+$120$-dimensional boundary space.  Thus the same logical memory has a
+flat program basis and a curved state basis: $A_{27}$ is the
+commuting three-trit address compiler, while $H_{27}$ is the
+noncommuting qutrit-phase compiler.
+
+The center $Z(H_{27})=\langle z\rangle\cong C_3$ selects a canonical
+triality.  Over $\mathbb{C}$ its central-character blocks are
+\[
+ H_1=H_{1,1}\oplus H_{1,\omega}\oplus H_{1,\omega^2},
+ \qquad \dim H_{1,j}=27.
+\]
+The trivial block contains the nine linear characters with
+multiplicity $3$; the two nontrivial blocks contain the conjugate
+$3$-dimensional Schr\"odinger representations with multiplicity $9$.
+Over $\GF3$, where $x^3-1=(x-1)^3$, the phases coalesce into a
+canonical unipotent flag.  With $N=z-I$,
+\[
+ (\operatorname{rank}N,\operatorname{rank}N^2,
+   \operatorname{rank}N^3)=(54,27,0),
+\]
+so
+\[
+ 0\subset\ker N\subset\ker N^2\subset H_1,
+ \qquad \dim=(0,27,54,81),
+\]
+has three successive quotients of dimension $27$.  Equivalently,
+$z$ acts by $27$ Jordan blocks of length $3$.  Complex generations
+are phase sectors; native qutrit generations are the three layers of
+one depth-$3$ memory stack.
+
+The freeness is canonical, but the displayed orbit bases are not:
+$H_{27}$ and $A_{27}$ are nonisomorphic, and a basis-to-basis matrix
+still requires a chosen point, line, shell origin, and cycle seeds.
+No canonical intertwiner is claimed.
+\emph{Witness:
+\texttt{bt865\_dual\_torsor\_steinberg\_compiler.py}.}
+\end{theorem}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw,rounded corners,align=center,minimum width=39mm,
+              minimum height=12mm,font=\small},
+  core/.style={draw,very thick,rounded corners,align=center,
+               minimum width=45mm,minimum height=15mm,font=\small},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[box,fill=blue!9] (program) at (-4.8,0)
+    {program shell\\$A_{27}=\GF3^3$\\flat three-trit addresses};
+  \node[core,fill=purple!10] (memory) at (0,0)
+    {$H_1(\W;\GF3)$\\$81=3\times27$ protected qutrits};
+  \node[box,fill=red!9] (state) at (4.8,0)
+    {state shell\\$H_{27}=3^{1+2}$\\Heisenberg phases};
+  \node[box,fill=green!10] (complex) at (-2.55,-2.0)
+    {$\mathbb C$: $27_1\oplus27_\omega\oplus27_{\omega^2}$\\
+     central-character sectors};
+  \node[box,fill=yellow!18] (native) at (2.55,-2.0)
+    {$\GF3$: $27\subset54\subset81$\\Jordan memory flag};
+  \draw[arrow] (program) -- node[above,font=\scriptsize]
+    {$3\,\mathrm{Reg}(A_{27})$} (memory);
+  \draw[arrow] (state) -- node[above,font=\scriptsize]
+    {$3\,\mathrm{Reg}(H_{27})$} (memory);
+  \draw[arrow] (memory) -- (complex);
+  \draw[arrow] (memory) -- (native);
+  \draw[<->,thick,dashed] (complex.east) -- (native.west);
+  \node[font=\scriptsize,align=center] at (0,-2.85)
+    {same triality\\different characteristic};
+\end{tikzpicture}
+\caption{The dual-torsor compiler.  Flat program translations and
+noncommutative state translations give two free rank-$3$ module
+coordinates on one Steinberg-protected register.  The Heisenberg
+center reads as three phase sectors over $\mathbb C$ and as a
+three-step unipotent memory flag over $\GF3$.}
+\label{fig:dual-torsor-compiler}
+\end{figure}
 
 \begin{theorem}[Steinberg memory]
 The Levi-graph cycle space and the chart-overlap $81$-sector are both
@@ -1787,7 +1896,11 @@ synchronization is the beacon-heptad mesh ($2880$ frames, themselves
 forming an exchange network); memory protection is the Steinberg
 sector ($81=q^4$, a single irreducible --- protected by Schur's
 lemma, the strongest no-leakage statement representation theory can
-make); the watchdog is the BC loop.  Each layer is a theorem; the
+make).  The state/program compiler makes that register directly
+addressable: $\GF3^3$ supplies three commuting copies of the
+$27$-slot program shell, $H_{27}$ supplies three noncommuting copies
+of the state shell, and its center supplies the native generation
+flag $27\subset54\subset81$.  The watchdog is the BC loop.  Each layer is a theorem; the
 stack compiles because double cosets compose.
 
 \paragraph{Redundancy is built in, not bolted on.}  The newest
@@ -1892,6 +2005,7 @@ object & physics reading & architecture reading\\
 $1+12+27$ split & Bell line $+$ meeting $+$ disjoint & pole / I-O ports / fuel+store\\
 $240$ edges & interaction qutrits & bandwidth = memory\\
 $81=q^4$ Steinberg & protected sector (Schur) & logical register\\
+dual $O_3$ restrictions & Heisenberg state phases & state/program compiler\\
 $36$ spreads & measurement bases & timetable OS\\
 $\mathrm{SRG}(36,15,6,6)$ & basis-overlap law & control-plane fabric\\
 five vacua & phases of the theory & boot modes\\
@@ -2091,6 +2205,7 @@ Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
 code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
+dual-torsor Steinberg compiler / native generation flag & bt865\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\
