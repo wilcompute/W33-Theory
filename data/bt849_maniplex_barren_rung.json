@@ -1,0 +1,18 @@
+{
+  "theorem": "BT849 maniplex barren rung",
+  "python_A6": {
+    "involutions": 45,
+    "rank3_sggi": 0,
+    "rank4_sggi": 0
+  },
+  "gap_controls": {
+    "L2(11)": "type {3,5,3} F=11 V=11 IP=true  (THE 11-CELL)",
+    "L2(19)": [
+      "type {5,3,5} F=57 V=57 IP=true (THE 57-CELL)",
+      "type {5,5,5} F=1 V=57 IP=false (degenerate)",
+      "type {5,5,5} F=57 V=1 IP=false (degenerate)"
+    ]
+  },
+  "gap_U4_2": "zero rank-4 sggi with a 5 in the type",
+  "tomotope": "rank-4 maniplex middleware; minimal regular cover monodromy 18432 = 96 x 192 fails IP (Monson-Pellicer-Williams; Pillar 70)"
+}

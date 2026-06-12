@@ -1206,6 +1206,27 @@ universal rank-$4$ locally projective polytopes, $441$ quotients) and
 Hartley--Leemans on $\{5,3,5\}$.}
 \end{theorem}
 
+\paragraph{The barren rung and the maniplex workaround.}
+Relaxing polytopes to \emph{maniplexes} (flag graphs without the
+intersection property; the tomotope middleware of this machine is the
+canonical non-polytopal rank-$4$ maniplex, with minimal-cover
+monodromy $18432=96\times192$ failing that property) does not lift
+the obstruction: exhaustive search shows $U_4(2)$ admits \emph{no}
+rank-$4$ regular maniplex with a $5$ in its type, and the amalgam
+closure $A_6=L_2(9)$ admits no regular maniplex at any rank ---
+it is the \emph{barren rung} of the $\mathrm{PSL}(2)$ ladder, whose
+populated rungs are exactly the $11$-cell ($q{=}11$), the $57$-cell
+($q{=}19$), and Leemans--Toledo's degenerate single-facet
+$\{5,5,5\}$ family (our control search rediscovers all of them,
+including both exceptional polytopes).  This is why the
+Gr\"unbaum--Coxeter content of the substrate is \emph{delocalized}
+over the $36$ schedules --- Petersen splits, chiral pentads, chart
+covers, dark dodecahedra --- rather than crystallized in one flag
+object, and why the machine's runtime uses the tomotope: it is the
+flag structure that survives the obstruction.
+\emph{Witnesses: \texttt{bt849\_maniplex\_barren\_rung.py},
+\texttt{.tmp/gap\_bt849*.g}.}
+
 \paragraph{Reconstruction, the chart $K_5$, and the dark dodecahedra.}
 The pentad core's full signature $[5,5,10,20]$ (lines), $[20,20]$
 (points) is rigid: both chiral pentads cover the \emph{same}
@@ -1458,6 +1479,7 @@ Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
 two compasses / $4\cdot K_{10}=12$ Petersens / chart double cover & bt843--bt845\\
 pentad anatomy / schedule reconstruction / dark dodecahedra & bt846, bt847\\
 amalgamation ladder / universality / $J_1$ & bt848\\
+maniplex barren rung / tomotope workaround & bt849\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\
