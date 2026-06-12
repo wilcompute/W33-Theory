@@ -1,0 +1,31 @@
+{
+  "theorem": "BT845 pentad exchange and chart double cover",
+  "corrected": "BT844's 'each pentad serves 2 cores' is FALSE: 432 distinct pentads in two chiral orbits of 216, each serving exactly 1 core",
+  "t1": {
+    "distinct_pentads": 432,
+    "serves_each": 1,
+    "chiral_orbits": [
+      216,
+      216
+    ],
+    "core_pairs_left_right": true
+  },
+  "t2": {
+    "exchange_graph": "perfect matching (216 left-right edges)"
+  },
+  "t3": {
+    "coverage": {
+      "2": 540
+    },
+    "never": 0,
+    "matching_sizes": [
+      1
+    ]
+  },
+  "t4": {
+    "completions": [
+      0
+    ],
+    "meaning": "pentads are MAXIMAL partial spreads"
+  }
+}

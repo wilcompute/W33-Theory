@@ -1137,13 +1137,20 @@ it).  The two $216$-sets are non-isomorphic $G$-sets (rank $10$
 suborbits $[1,5,10,10,20,20,20,30,40,60]$ vs
 $[1,5,10,10,20,20,30,30,30,60]$); the Petersen flags form the coset
 geometry $\PSp(4,\GF3)/D_4$ ($3240$ flags, dihedral stabilizer).
-There are only $216$ distinct pentads (stabilizer $S_5$), each
-serving exactly $2$ cores, and the two pentads of one core interlock
-as $K_{5,5}$ minus a perfect matching --- mutual disjointness is
-\emph{forbidden} by the overlap law (it would create a $0$-overlap
-schedule).  Finally, \emph{all twelve} cores split the $45$ internal
-pairs as Petersen $15$-orbits, and the twelve Petersen edge-sets
-cover every pair exactly $\mu=4$ times:
+There are $432$ distinct pentads in \emph{two chiral orbits} of
+$216$ (stabilizer order $120$); every core pairs one LEFT with one
+RIGHT pentad, and each pentad serves exactly one core.  Pentads are
+\emph{maximal partial spreads}: no schedule contains one.  The two
+pentads of one core interlock as $K_{5,5}$ minus a perfect matching
+--- mutual disjointness is \emph{forbidden} by the overlap law (it
+would create a $0$-overlap schedule) --- and the deleted matching
+consists of $5$ \emph{skew} pairs, i.e.\ five hypercube charts; over
+the $216$ cores these matchings cover the $540$-chart atlas
+\textbf{exactly twice} ($1080=540\times2$): the routing fabric is
+readable off the pentad compasses, five charts per needle.  Finally,
+\emph{all twelve} cores split the $45$ internal pairs as Petersen
+$15$-orbits, and the twelve Petersen edge-sets cover every pair
+exactly $\mu=4$ times:
 \[
 4\cdot K_{10} \;=\; 12\ \text{Petersens}.
 \]
@@ -1152,7 +1159,8 @@ $3$ Petersen graphs) dissolves at the substrate multiplicity $\mu$.
 The numerical coincidence $3240=\#\{\text{triangles of }Q\}$ is
 refuted at the $G$-set level (orbits $[360,2880]$ vs transitive).
 \emph{Witnesses: \texttt{bt843\_icosahedral\_compass.py},
-\texttt{bt844\_double\_five\_and\_six\_petersens.py}.}
+\texttt{bt844\_double\_five\_and\_six\_petersens.py},
+\texttt{bt845\_pentad\_exchange\_and\_chart\_double\_cover.py}.}
 \end{theorem}
 
 \begin{theorem}[BT839 GC operation Euler/flag audit]
@@ -1386,7 +1394,7 @@ memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
 Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
-two compasses / $4\cdot K_{10}=12$ Petersens & bt843, bt844\\
+two compasses / $4\cdot K_{10}=12$ Petersens / chart double cover & bt843--bt845\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\

@@ -31,8 +31,12 @@ quotient to the same library.
 
 Each pentad is **5 pairwise-disjoint lines covering 20 points** — a
 half-spread constellation outside the schedule. Pentad orbit: **216, with
-stabilizer of order 120 (S₅)**. Since 216 cores × 2 pentads = 432 slots but
-only 216 distinct pentads, **every pentad serves exactly 2 cores**.
+stabilizer of order 120 (S₅)**. ~~Since 216 cores × 2 pentads = 432 slots but
+only 216 distinct pentads, every pentad serves exactly 2 cores.~~
+**[CORRECTED by BT845: there are 432 distinct pentads in TWO chiral orbits
+of 216; each pentad serves exactly ONE core, and every core pairs one LEFT
+with one RIGHT pentad. Pentads are also maximal partial spreads — contained
+in zero schedules.]**
 
 **T1b — the interlock:** the two pentads of one core can *not* be mutually
 disjoint (P₁ ∪ P₂ would be a 10-line spread sharing 0 lines with the marked
@@ -49,7 +53,7 @@ pairing.
   are **also Petersen graphs** (SRG(10,3,0,1) verified).
 - All 12 together: every pair covered **exactly μ = 4 times**:
 
-```
+```text
 4·K₁₀ = 12 Petersens          (multiplicity = μ, the substrate primitive)
 ```
 
