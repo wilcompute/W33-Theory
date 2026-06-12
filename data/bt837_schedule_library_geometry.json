@@ -1,0 +1,30 @@
+{
+  "theorem": "BT837 schedule library geometry",
+  "t1": {
+    "skew_pairs": 540,
+    "per_pair_schedules": 3,
+    "flags": 1620,
+    "apartments": 1620
+  },
+  "t2": {
+    "srg": [
+      36,
+      15,
+      6,
+      6
+    ]
+  },
+  "t3": {
+    "cores_per_spread": [
+      6
+    ],
+    "splits_per_spread": [
+      6
+    ],
+    "home_census": {
+      "6": 540
+    },
+    "never_petersen": 0,
+    "total_flags": 3240
+  }
+}
