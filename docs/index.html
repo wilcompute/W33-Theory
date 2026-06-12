@@ -23167,6 +23167,45 @@
           matching the W33 edge count and the E8 root count. Their dot profile is
           <code>96</code> live 24-cell edges, <code>96</code> mirror pairs, and <code>48</code> repeated
           opposite-axis incidences.</p>
+
+        <h4>BT836&ndash;BT837: the Gr&uuml;nbaum-Coxeter cells live inside every schedule</h4>
+        <p><a href="../analysis/BT836_gc_hemicells_in_spreads.md">BT836</a> cracks the 11-cell/57-cell mystery at the
+          cell level: the full spread stabilizer <code>S6</code> is 2-homogeneous on the 10 lines (first guess
+          refuted), but its icosahedral core <code>A5 = Aut(hemi-dodecahedron)</code> splits the 45 line pairs
+          <code>[15,30]</code> and the 15-orbit graph is the <strong>Petersen graph</strong> &mdash; the
+          hemi-dodecahedron skeleton, the 57-cell&rsquo;s cell. The hidden 6-set carries <code>K6</code> with
+          incidence <code>(6,15,10)</code> &mdash; the hemi-icosahedron, the 11-cell&rsquo;s cell. Numerology seals:
+          <code>660=k&times;N_eff</code>, <code>3420=k&times;g&times;19</code>, <code>H(19)=20</code> = BC rings.</p>
+        <p><a href="../analysis/BT837_schedule_library_geometry.md">BT837</a> zooms out: every skew pair lies in
+          exactly <code>3</code> schedules (<code>36&times;45=1620</code> flags = the apartment count); the
+          near-partner graph on the 36 schedules is <code>SRG(36,15,6,6)</code> &mdash; the <em>other</em> classical
+          rank-3 geometry of <code>U4(2)</code>, so control plane and data plane are the two rank-3 geometries of one
+          group; <code>216=6&sup3;</code> icosahedral cores give 6 Petersen splits per schedule and every skew pair
+          has exactly <code>6=3&times;2</code> Petersen homes (<code>3240</code> flags).</p>
+
+        <h4>BT843&ndash;BT845: two compasses, twelve Petersens, and the chart double cover</h4>
+        <p><a href="../analysis/BT843_icosahedral_compass.md">BT843</a> (GAP): <code>PSp(4,3)</code> has exactly two
+          unfused <code>A5</code> classes, both with normalizer <code>S5</code> and 216 conjugates &mdash; the
+          <em>spread compass</em> (lines <code>[10,30]</code>) and the <em>pentad compass</em>
+          (lines <code>[5,5,10,20]</code>, an <code>F5</code> echo). Both 216-sets are transitive of rank 10 with
+          unique 6-blocks but are <strong>non-isomorphic G-sets</strong> (suborbits
+          <code>[1,5,10,10,20,20,20,30,40,60]</code> vs <code>[1,5,10,10,20,20,30,30,30,60]</code>). The 3240
+          Petersen flags form the coset geometry <code>PSp/D4</code>; the numerical match with the 3240
+          Q-triangles is refuted at the G-set level (orbits <code>[360,2880]</code>).</p>
+        <p><a href="../analysis/BT844_double_five_and_six_petersens.md">BT844</a>: each schedule stabilizer holds
+          <code>12=6+6</code> cores from the two classes, all transitive on the spread; the pentad core&rsquo;s
+          pentads are 5 disjoint lines <em>outside</em> the schedule, interlocking as <code>K5,5</code> minus a
+          perfect matching (mutual disjointness forbidden by the overlap law). All 12 cores carry Petersen
+          15-orbits and the twelve edge-sets cover every pair exactly <code>&mu;=4</code> times:
+          <strong><code>4&middot;K10 = 12</code> Petersens</strong> &mdash; Schwenk&rsquo;s 3-Petersen
+          impossibility dissolves at substrate multiplicity.</p>
+        <p><a href="../analysis/BT845_pentad_exchange_and_chart_double_cover.md">BT845</a> (corrects BT844&rsquo;s
+          pentad-sharing guess): there are <code>432</code> distinct pentads in <strong>two chiral orbits of
+          216</strong>; every core pairs one LEFT with one RIGHT; pentads are <strong>maximal partial
+          spreads</strong> (contained in zero schedules). The deleted matchings are 5 <em>skew</em> pairs = 5
+          hypercube charts per core, and over the 216 cores they cover the <code>540</code>-chart atlas
+          <strong>exactly twice</strong> (<code>1080=540&times;2</code>): the routing fabric is readable off the
+          pentad compasses.</p>
       </section>
 
       <section id="open">
