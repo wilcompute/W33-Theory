@@ -1,0 +1,66 @@
+{
+  "all_checks_pass": true,
+  "boundary": "This is an incidence/projector theorem for the 45 intrinsic octets from BT766. It is not a claim that the octet incidence is the Levi H1/E4 sector; it is the complementary 1+24 filter.",
+  "checks": {
+    "MMt_formula_8I_plus_J_plus_2A": true,
+    "MMt_spectrum_72_12_0": true,
+    "MtM_formula_8I_plus_2A_octet": true,
+    "MtM_spectrum_72_12_0": true,
+    "adjacent_pairs_share_3_octets": true,
+    "incidence_shape_40_by_45": true,
+    "nonadjacent_pairs_share_1_octet": true,
+    "octet_complement_SRG_45_12_3_3": true,
+    "octet_graph_SRG_45_32_22_24": true,
+    "rank_25_equals_1_plus_24": true,
+    "row_sum_9_col_sum_8": true
+  },
+  "formulas": {
+    "MMt": "8I_40 + J_40 + 2A_W33",
+    "MtM": "8I_45 + 2A_octet",
+    "interpretation": "The octet incidence layer preserves the 1+24 W33 spectral sector and kills the 15-dimensional (-4)-sector."
+  },
+  "incidence_matrix": {
+    "column_sum_distribution": {
+      "8": 45
+    },
+    "rank": 25,
+    "row_sum_distribution": {
+      "9": 40
+    },
+    "shape": [
+      40,
+      45
+    ]
+  },
+  "pair_weights": {
+    "W33_adjacent_pair_shared_octets": {
+      "3": 240
+    },
+    "W33_nonadjacent_pair_shared_octets": {
+      "1": 540
+    }
+  },
+  "spectra": {
+    "A_octet_disjointness_complement": {
+      "-3": 24,
+      "12": 1,
+      "3": 20
+    },
+    "A_octet_intersection": {
+      "-4": 20,
+      "2": 24,
+      "32": 1
+    },
+    "MMt": {
+      "0": 15,
+      "12": 24,
+      "72": 1
+    },
+    "MtM": {
+      "0": 20,
+      "12": 24,
+      "72": 1
+    }
+  },
+  "theorem": "BT767 K4,4 Octet Incidence Projector Theorem"
+}
