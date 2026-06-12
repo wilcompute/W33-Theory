@@ -1,0 +1,59 @@
+{
+  "theorem": "BT843 icosahedral compass",
+  "gap": {
+    "a5_classes": 2,
+    "normalizer": "S5",
+    "conjugates_each": 216,
+    "spread_class_line_orbits": [
+      10,
+      30
+    ],
+    "pentad_class_line_orbits": [
+      5,
+      5,
+      10,
+      20
+    ],
+    "core216_rank": 10,
+    "spread_class_216_suborbits": [
+      1,
+      5,
+      10,
+      10,
+      20,
+      20,
+      20,
+      30,
+      40,
+      60
+    ],
+    "pentad_class_216_suborbits": [
+      1,
+      5,
+      10,
+      10,
+      20,
+      20,
+      30,
+      30,
+      30,
+      60
+    ],
+    "core216_blocks": [
+      6
+    ],
+    "two_compasses_isomorphic": false
+  },
+  "t1": {
+    "flag_orbit": 3240,
+    "stab_order": 8,
+    "stab_type": "D4"
+  },
+  "t2": {
+    "q_triangle_orbits": [
+      360,
+      2880
+    ],
+    "iso": false
+  }
+}
