@@ -47,11 +47,31 @@ pentad core stores its timetable three ways: as transversals of its lit
 charts (BT846 reconstruction), as the K₅ edge set (BT847), and as the
 shadow-paired dark matching (new).
 
+## T3 — The tetrads are the K₅ vertices (twice, chirally)
+
+A tetrad contains **no** matching pair (second refutation): its 4 lines lie
+in 4 distinct shadow classes. Their distinguished K₅ edges form a **star at
+one common vertex**, and the 5 tetrads of each chiral partition mark all 5
+vertices exactly once:
+
+```text
+5 lit charts        = K5 vertices
+10 schedule lines   = K5 edges       (BT847)
+10 dark charts      = K5 edges again (shadow bijection)
+5 + 5 chiral tetrads = K5 vertices again, twice (star centers)
+```
+
+**Every A₅-orbit structure of the pentad core is a K₅ element.** The
+vertices are stored three ways (lit charts, left tetrads, right tetrads),
+the edges two ways (schedule lines, dark charts) — the dodecahedra and the
+meeting frame are the only non-K₅ residents of the dark sector.
+
 ## Open
 
-- The chiral 5×K₄ partitions in K₅ terms: the 5 tetrads of one partition vs
-  the 5 K₅ vertices (each tetrad ↔ a lit chart?) — compute the tetrad
-  shadows.
 - Redundancy budget: the timetable is recoverable from lit charts, dark
-  matching, or shadows — quantify the machine's erasure tolerance (how many
-  dark/lit lines can be lost while the schedule reconstructs).
+  matching, shadows, or tetrad stars — quantify the machine's erasure
+  tolerance (how many dark/lit lines can be lost while the schedule
+  reconstructs).
+- The dodecahedra vs the K₅ calculus: the dodecahedron is the order-5
+  Cayley-ish object the K₅ misses — relate its pentagon faces to the K₅
+  5-cycles.

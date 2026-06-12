@@ -1,5 +1,8 @@
 {
   "theorem": "BT854 dark chart-tetrad transversal duality",
+  "t3": {
+    "tetrads_are_k5_vertices": true
+  },
   "t1": {
     "where": {
       "schedule": 10

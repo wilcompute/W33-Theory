@@ -305,8 +305,46 @@ def main():
         locs[loc] += 1
     print(f"T2 transversals of one tetrad's 6 internal pairs: {dict(locs)}")
 
+    # ----- T3: tetrads <-> K5 vertices (lit charts) -----
+    # A tetrad contains NO matching pair (first guess refuted): its 4
+    # lines lie in 4 DISTINCT shadow classes.  Conjecture: the 4
+    # distinguished K5 edges form a STAR - all through one common
+    # vertex - so each tetrad marks one lit chart, and the 5 tetrads
+    # of each chiral partition mark all 5 exactly once.
+    def distinguished_edge(li):
+        sh = shadow(li)
+        edges = [line_to_k5edge[m] for m in sh]
+        for e in edges:
+            others = [f for f in edges if f != e]
+            comp = frozenset(range(5)) - e
+            if all(f <= comp for f in others):
+                return e
+        raise AssertionError
+
+    ok3 = True
+    vertex_maps = []
+    for pi, comps in enumerate(k4_orbs):
+        seen_v = []
+        for t in comps:
+            edges = [distinguished_edge(li) for li in sorted(t)]
+            common = frozenset(range(5))
+            for e in edges:
+                common = common & e
+            if len(set(edges)) == 4 and len(common) == 1:
+                seen_v.append(next(iter(common)))
+            else:
+                ok3 = False
+        print(f"T3 partition {pi}: tetrad star-centers {sorted(seen_v)}")
+        if sorted(seen_v) != [0, 1, 2, 3, 4]:
+            ok3 = False
+        vertex_maps.append(sorted(seen_v))
+    print(f"T3 each tetrad's 4 distinguished edges = K5 STAR at one vertex;")
+    print(f"   tetrads <-> K5 vertices (lit charts), both chiralities: {ok3}")
+    assert ok3
+
     out = {
         "theorem": "BT854 dark chart-tetrad transversal duality",
+        "t3": {"tetrads_are_k5_vertices": ok3},
         "t1": {"where": dict(where), "tetrad_hits": dict(hits)},
         "t1b": {"same_shadow": same_shadow,
                 "patterns": dict(patterns),
