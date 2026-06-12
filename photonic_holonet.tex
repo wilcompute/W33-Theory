@@ -1163,6 +1163,49 @@ refuted at the $G$-set level (orbits $[360,2880]$ vs transitive).
 \texttt{bt845\_pentad\_exchange\_and\_chart\_double\_cover.py}.}
 \end{theorem}
 
+\begin{theorem}[The amalgamation ladder]
+\label{thm:amalgam}
+The $11$-cell and $57$-cell are \emph{universal} abstract polytopes:
+the unique ones with hemi-icosahedral facets and hemi-dodecahedral
+vertex figures (group $L_2(11)$, no proper quotients) and vice versa
+($L_2(19)$).  Their incidence is icosahedral-subgroup geometry: each
+of $L_2(11)$, $L_2(19)$, $U_4(2)$ has exactly two conjugacy classes
+of $A_5$, and in all three the distinguished incidence is
+\emph{intersection in $D_{10}$} with valency $6$ --- the $11$-cell's
+vertex--facet relation, the $57$-cell's facet adjacency (the Perkel
+graph), and the substrate's compass incidence ($216+216$, bipartite
+$6$-regular, $216\times6=1296=6^4$ incident pairs $=36$ schedules
+$\times\,36$ core pairs).  The closures of one amalgam
+$A_5\ast_{D_{10}}A_5$ (GAP):
+\[
+\langle A,B\rangle=
+\begin{cases}
+L_2(9)\cong A_6\ (360) & \text{in } U_4(2)\text{: inside exactly one
+schedule stabilizer,}\\
+L_2(11)\ (660) & \text{the }11\text{-cell},\\
+L_2(19)\ (3420) & \text{the }57\text{-cell}.
+\end{cases}
+\]
+One local icosahedral amalgam, a $\mathrm{PSL}(2)$-ladder of
+completions over $9=q^2$, $11=k-1$ (the Ihara prime), $19$ (Heawood,
+$H(19)=20$).  Universality plus Lagrange ($11,19\nmid25920$) shows the
+substrate carries the \emph{complete local data} of both exceptional
+polytopes while their rank-$4$ amalgamation is arithmetically
+forbidden inside $\Sp(4,\GF3)$: the GC polytopes are the substrate's
+sibling completions, not subobjects.  One step up the universal
+ladder ($\{\{5,3\},\{3,5\}_5\}$, $10006920$ facets) the completion
+group is $J_1\times L_2(19)$ --- the first sporadic Janko group,
+whose involution centralizer $2\times A_5$ \emph{is} the compass
+datum.  Finally, the compass Petersen $15$-orbit carries exactly $12$
+pentagons splitting under the compass into two $6$-orbits, each
+covering every edge exactly twice: two \emph{chiral fully-faced}
+hemi-dodecahedra per needle, not merely skeletons.
+\emph{Witnesses: \texttt{bt848\_universal\_amalgam\_ladder.py},
+\texttt{.tmp/gap\_bt848*.g}; cf.\ Hartley's classification ($17$
+universal rank-$4$ locally projective polytopes, $441$ quotients) and
+Hartley--Leemans on $\{5,3,5\}$.}
+\end{theorem}
+
 \paragraph{Reconstruction, the chart $K_5$, and the dark dodecahedra.}
 The pentad core's full signature $[5,5,10,20]$ (lines), $[20,20]$
 (points) is rigid: both chiral pentads cover the \emph{same}
@@ -1414,6 +1457,7 @@ sync / schedules / overlap law & bt817, bt819, bt835\\
 Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
 two compasses / $4\cdot K_{10}=12$ Petersens / chart double cover & bt843--bt845\\
 pentad anatomy / schedule reconstruction / dark dodecahedra & bt846, bt847\\
+amalgamation ladder / universality / $J_1$ & bt848\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\

@@ -1,0 +1,42 @@
+{
+  "theorem": "BT848 universal amalgam ladder",
+  "research": {
+    "universal_rank4_locally_projective": 17,
+    "quotients_total": 441,
+    "eleven_cell": "universal, no proper quotients, L2(11)",
+    "fifty_seven_cell": "universal, L2(19); skeleton = Perkel",
+    "mixed_universal_group": "J1 x L2(19), order 600415200",
+    "mixed_facets": 10006920,
+    "J1_involution_centralizer": "2 x A5"
+  },
+  "gap": {
+    "L2_11_cross_profile": {
+      "10": 6,
+      "12": 5
+    },
+    "L2_19_within_profile": {
+      "2": 30,
+      "3": 20,
+      "10": 6
+    },
+    "U4_2_cross_profile": {
+      "1": 60,
+      "2": 150,
+      "10": 6
+    },
+    "closures": {
+      "L2(11) cross D10": 660,
+      "L2(19) within D10 (Perkel)": 3420,
+      "U4(2) cross D10": 360
+    },
+    "U4_2_closure_in_spread_stabs": 1
+  },
+  "python": {
+    "pentagons": 12,
+    "a5_orbits": [
+      6,
+      6
+    ],
+    "chiral_face_sets": true
+  }
+}
