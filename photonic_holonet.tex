@@ -1166,6 +1166,76 @@ a lower-scoring dual/vertex-figure hook, not discarded.
 \emph{Witness: \texttt{bt839\_gc\_operation\_euler\_flag\_audit.py}.}
 \end{theorem}
 
+\begin{theorem}[BT840--BT842 carrier closure]
+The three unresolved carriers in the Gr\"unbaum--Coxeter paragraph are
+now explicit objects.
+
+\textbf{(i) The $180$ sentinel sheet.}  The verified Clifford $L/R$
+boundary has $36$ cells arranged as a $6\times6$ rook grid.  Its
+zero-overlap relation is not a numerical afterthought: it is the union
+of the $6$ row fibres and $6$ column fibres, each fibre carrying the
+duads of a six-set.  Hence
+\[
+12\cdot \binom62 = 12\cdot15 = k\cdot g = 180.
+\]
+This is exactly the sheet missing from BT837:
+\[
+3240+180=3420=|\mathrm{PSL}(2,19)|.
+\]
+Equivalently, the timetable library gives $216$ Petersen cores
+($216\cdot15=3240$), and the rook boundary supplies the missing $12$
+six-set fibres ($12\cdot15=180$).
+
+\textbf{(ii) The $660$ carrier.}  At an apex cell $(r,c)$ of the same
+$6\times6$ grid, remove the incident row and column.  The apex plus the
+five nonincident rows and five nonincident columns gives
+\[
+11=1+5+5.
+\]
+Crossing these eleven labels with the verified $60$-element Clifford
+$A_5$ selector gives
+\[
+11\cdot A_5=11\cdot60=660=kN_{\rm eff}.
+\]
+This is a carrier theorem only: it does not assert an internal
+$\mathrm{PSL}(2,11)$ action on $\W$.
+
+\textbf{(iii) The $96$ tomotope half-flags.}  In the $D_4$-root model
+of the $24$-cell, every edge lies in a unique central hexagon plane.
+The two endpoint axes determine the third, missing axis in that plane,
+so each edge maps to a Reye incidence
+$(\hbox{missing axis},\hbox{hexagon plane})$.  Each of the $48$ Reye
+incidences has exactly two edge lifts:
+\[
+96=2\cdot48.
+\]
+Thus the tomotope omnitruncated half-flag count is literally the
+$24$-cell edge lift of the common tomotope/Reye spine.
+
+The hexagon clue supplies the conceptual bridge to the $11$-cell.  Each
+central $24$-cell hexagon is a six-root cycle $C_6$.  Completing that
+cycle to a full $K_6$ gives $15$ duads, exactly the hemi-icosahedral
+skeleton count of the $11$-cell cell.  Across the $16$ central
+hexagons,
+\[
+16\binom62=16\cdot15=240,
+\]
+the W33 edge count and the $E_8$ root count.  The tested dot profile of
+these $240$ duad slots is
+\[
+96_{\langle x,y\rangle=1}
+\;+\;
+96_{\langle x,y\rangle=-1}
+\;+\;
+48_{\langle x,y\rangle=-2},
+\]
+namely live $24$-cell edges, mirror pairs, and repeated opposite-axis
+Reye incidences.
+\emph{Witnesses: \texttt{bt840\_clifford\_rook\_sentinel\_sheet.py},
+\texttt{bt841\_eleven\_cell\_a5\_boundary\_carrier.py},
+\texttt{bt842\_tomotope\_24cell\_half\_flag\_edge\_lift.py}.}
+\end{theorem}
+
 %======================================================================
 \section{Build sheet and falsifiable witnesses}
 

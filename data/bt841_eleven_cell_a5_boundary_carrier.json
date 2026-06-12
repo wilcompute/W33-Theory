@@ -1,0 +1,404 @@
+{
+  "theorem": "BT841 eleven-cell A5 boundary carrier",
+  "a5_selector": {
+    "source": "Clifford antipodal A5 degree-six selector",
+    "element_count": 60,
+    "order_profile": {
+      "1": 1,
+      "2": 15,
+      "3": 20,
+      "5": 24
+    },
+    "parity_profile": {
+      "0": 60
+    },
+    "sample_permutations": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        4,
+        5,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        1,
+        4,
+        3,
+        5
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        1,
+        4
+      ],
+      [
+        0,
+        3,
+        2,
+        1,
+        5,
+        4
+      ],
+      [
+        0,
+        3,
+        5,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        4,
+        1,
+        2,
+        5,
+        3
+      ],
+      [
+        0,
+        4,
+        5,
+        3,
+        1,
+        2
+      ],
+      [
+        0,
+        5,
+        3,
+        2,
+        4,
+        1
+      ],
+      [
+        0,
+        5,
+        4,
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        0,
+        2,
+        5,
+        4,
+        3
+      ],
+      [
+        1,
+        0,
+        4,
+        3,
+        2,
+        5
+      ]
+    ]
+  },
+  "eleven_label_carriers": {
+    "carrier_count": 36,
+    "carrier_rule": "apex cell + five nonincident L fibers + five nonincident R fibers",
+    "flag_count_per_carrier": 660,
+    "factorizations": {
+      "11_times_A5": 660,
+      "k_times_Neff": 660,
+      "Neff": 55
+    },
+    "sample_carriers": [
+      {
+        "apex": [
+          0,
+          0
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C00",
+            "address": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      },
+      {
+        "apex": [
+          0,
+          1
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C01",
+            "address": [
+              0,
+              1
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      },
+      {
+        "apex": [
+          0,
+          2
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C02",
+            "address": [
+              0,
+              2
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      },
+      {
+        "apex": [
+          0,
+          3
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C03",
+            "address": [
+              0,
+              3
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      },
+      {
+        "apex": [
+          0,
+          4
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C04",
+            "address": [
+              0,
+              4
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      },
+      {
+        "apex": [
+          0,
+          5
+        ],
+        "label_count": 11,
+        "label_kind_profile": {
+          "apex_cell": 1,
+          "nonincident_L_fiber": 5,
+          "nonincident_R_fiber": 5
+        },
+        "flag_count": 660,
+        "sample_labels": [
+          {
+            "kind": "apex_cell",
+            "label": "C05",
+            "address": [
+              0,
+              5
+            ]
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L1"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L2"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L3"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L4"
+          },
+          {
+            "kind": "nonincident_L_fiber",
+            "label": "L5"
+          }
+        ]
+      }
+    ],
+    "fiber_usage_profile": {
+      "30": 12
+    },
+    "apex_usage_profile": {
+      "1": 36
+    }
+  },
+  "claim_boundary": "This is an explicit 660-slot carrier at the Clifford/schedule boundary; it does not claim a PSL(2,11) action or identify the full 11-cell automorphism group inside W33.",
+  "checks": {
+    "a5_selector_has_60_elements": true,
+    "a5_order_profile": true,
+    "a5_all_even": true,
+    "there_are_36_apex_carriers": true,
+    "each_carrier_has_eleven_labels": true,
+    "eleven_decomposes_as_1_plus_5_plus_5": true,
+    "each_carrier_has_660_flags": true,
+    "fiber_labels_each_appear_in_30_carriers": true,
+    "apex_cells_each_appear_once": true,
+    "flag_count_is_11_times_A5": true,
+    "flag_count_is_k_times_Neff": true
+  }
+}

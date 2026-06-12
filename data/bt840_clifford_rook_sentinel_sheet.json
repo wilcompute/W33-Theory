@@ -1,0 +1,221 @@
+{
+  "theorem": "BT840 Clifford rook sentinel sheet",
+  "sentinel_sheet": {
+    "source": "Clifford L/R zero-overlap rook graph",
+    "cells": 36,
+    "fibers": 12,
+    "fiber_labels": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "R0",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5"
+    ],
+    "duads_per_fiber": {
+      "15": 12
+    },
+    "edge_count": 180,
+    "factorization": "180 = 12*C(6,2) = k*g",
+    "row_column_split": {
+      "L": 90,
+      "R": 90
+    },
+    "sample_edges": [
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "fiber": "L0",
+        "duad": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "gc_completion": {
+    "w33_petersen_home_flags": 3240,
+    "sentinel_edges": 180,
+    "completed_flags": 3420,
+    "psl2_19_order": 3420,
+    "core_count_reading": {
+      "w33_cores": 216,
+      "sentinel_fibers": 12,
+      "completed_cores": 228,
+      "edge_or_duad_count_per_core": 15
+    }
+  },
+  "hexagon_11cell_hint": {
+    "six_object_fiber": "each rook row/column is a six-object carrier",
+    "duads": "C(6,2)=15 is the hemi-icosahedral K6 edge count of the 11-cell cell",
+    "boundary": "this supplies the missing k*g sheet; it does not assert PSL(2,19) acts on the W33 carrier"
+  },
+  "checks": {
+    "rook_has_36_cells": true,
+    "twelve_row_column_fibers": true,
+    "each_fiber_has_six_cells": true,
+    "each_fiber_has_fifteen_duads": true,
+    "sentinel_sheet_has_180_edges": true,
+    "rook_degree_is_ten": true,
+    "row_column_split_is_90_90": true,
+    "matches_clifford_zero_overlap_edge_count": true,
+    "matches_clifford_zero_overlap_profile": true,
+    "bt837_petersen_flags_are_3240": true,
+    "petersen_home_cores_are_216": true,
+    "sentinel_sheet_is_twelve_extra_petersen_duad_fibers": true,
+    "completed_count_is_57_cell_flags": true
+  }
+}
