@@ -1103,6 +1103,7 @@ group instead of $\mathrm{PSL}(2,p)$.
 \emph{Witness: \texttt{bt836\_gc\_hemicells\_in\_spreads.py}.}
 
 \begin{theorem}[The library is a classical geometry]
+\label{thm:library}
 The timetable library carries its own rank-3 geometry, and the
 hemicell structure fibers over it with perfect uniformity:
 (i) every skew line pair lies in exactly $3$ schedules, so the
@@ -1121,6 +1122,37 @@ internal pair is a Petersen edge under exactly $2$ of the $6$ cores,
 hence every skew pair of $\W$ has exactly $6=3\times2$
 hemi-dodecahedral homes ($3240=540\times6$ Petersen flags).
 \emph{Witness: \texttt{bt837\_schedule\_library\_geometry.py}.}
+\end{theorem}
+
+\begin{theorem}[Two compasses, twelve Petersens, $4\cdot K_{10}$]
+$\PSp(4,\GF3)$ has exactly two conjugacy classes of $A_5$, both with
+normalizer $S_5$ and $216$ conjugates, unfused by the outer
+automorphism, and \emph{both fiber over the same $36$ schedules}:
+every schedule stabilizer contains $12=6+6$ icosahedral cores ---
+$6$ \emph{duad} cores (line signature $[10,30]$, the
+Theorem-\ref{thm:library}(iii) cores) and $6$ \emph{pentad} cores
+(signature $[5,5,10,20]$: transitive on the schedule, plus two
+distinguished \emph{pentads} of $5$ pairwise-disjoint lines outside
+it).  The two $216$-sets are non-isomorphic $G$-sets (rank $10$
+suborbits $[1,5,10,10,20,20,20,30,40,60]$ vs
+$[1,5,10,10,20,20,30,30,30,60]$); the Petersen flags form the coset
+geometry $\PSp(4,\GF3)/D_4$ ($3240$ flags, dihedral stabilizer).
+There are only $216$ distinct pentads (stabilizer $S_5$), each
+serving exactly $2$ cores, and the two pentads of one core interlock
+as $K_{5,5}$ minus a perfect matching --- mutual disjointness is
+\emph{forbidden} by the overlap law (it would create a $0$-overlap
+schedule).  Finally, \emph{all twelve} cores split the $45$ internal
+pairs as Petersen $15$-orbits, and the twelve Petersen edge-sets
+cover every pair exactly $\mu=4$ times:
+\[
+4\cdot K_{10} \;=\; 12\ \text{Petersens}.
+\]
+Schwenk's classical obstruction (no edge-partition of $K_{10}$ into
+$3$ Petersen graphs) dissolves at the substrate multiplicity $\mu$.
+The numerical coincidence $3240=\#\{\text{triangles of }Q\}$ is
+refuted at the $G$-set level (orbits $[360,2880]$ vs transitive).
+\emph{Witnesses: \texttt{bt843\_icosahedral\_compass.py},
+\texttt{bt844\_double\_five\_and\_six\_petersens.py}.}
 \end{theorem}
 
 \begin{theorem}[BT839 GC operation Euler/flag audit]
@@ -1354,6 +1386,7 @@ memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
 Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
+two compasses / $4\cdot K_{10}=12$ Petersens & bt843, bt844\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\
