@@ -1,0 +1,106 @@
+{
+  "theorem": "BT838 tomotope Wythoff runtime ladder",
+  "source": "Grunbaum-Coxeter/tomotope operation tables: original, rectified, truncated, maximal expanded, omnitruncated tomotope",
+  "source_operation_vertices": {
+    "original_tomotope": 4,
+    "rectified_tomotope": 12,
+    "truncated_tomotope": 24,
+    "maximal_expanded_tomotope": 48,
+    "omnitruncated_tomotope": 96
+  },
+  "runtime_ladder": [
+    {
+      "operation": "original_tomotope",
+      "vertices": 4,
+      "runtime_layer": "four transversal vertex carriers",
+      "substrate_identity": "mu"
+    },
+    {
+      "operation": "rectified_tomotope",
+      "vertices": 12,
+      "runtime_layer": "local tomotope edge axes",
+      "substrate_identity": "k"
+    },
+    {
+      "operation": "truncated_tomotope",
+      "vertices": 24,
+      "runtime_layer": "full lift of the D12 mirror-slot stabilizer",
+      "substrate_identity": "f"
+    },
+    {
+      "operation": "maximal_expanded_tomotope",
+      "vertices": 48,
+      "runtime_layer": "BT814 cover-invariant packet ABI",
+      "substrate_identity": "2*f = four tetrahedra x three axes x four faces"
+    },
+    {
+      "operation": "omnitruncated_tomotope",
+      "vertices": 96,
+      "runtime_layer": "half-flag packet boundary",
+      "substrate_identity": "4*f = 192/2"
+    }
+  ],
+  "cover_scaled_ladder": [
+    {
+      "k": 3,
+      "expanded_packet_slots": 1296,
+      "bt832_lifted_capacity": 1296,
+      "omnitruncated_half_flags": 2592,
+      "full_flags": 5184,
+      "bt831_Wk_order": 5184
+    },
+    {
+      "k": 5,
+      "expanded_packet_slots": 6000,
+      "bt832_lifted_capacity": 6000,
+      "omnitruncated_half_flags": 12000,
+      "full_flags": 24000,
+      "bt831_Wk_order": 24000
+    },
+    {
+      "k": 7,
+      "expanded_packet_slots": 16464,
+      "bt832_lifted_capacity": 16464,
+      "omnitruncated_half_flags": 32928,
+      "full_flags": 65856,
+      "bt831_Wk_order": 65856
+    },
+    {
+      "k": 11,
+      "expanded_packet_slots": 63888,
+      "bt832_lifted_capacity": 63888,
+      "omnitruncated_half_flags": 127776,
+      "full_flags": 255552,
+      "bt831_Wk_order": 255552
+    },
+    {
+      "k": 13,
+      "expanded_packet_slots": 105456,
+      "bt832_lifted_capacity": 105456,
+      "omnitruncated_half_flags": 210912,
+      "full_flags": 421824,
+      "bt831_Wk_order": 421824
+    }
+  ],
+  "interpretation": {
+    "expanded_tomotope": "the maximal expanded tomotope is the BT814 48-block packet ABI",
+    "omnitruncated_tomotope": "the omnitruncated tomotope is the 96-element half-flag boundary; base/shadow doubling gives 192 flags",
+    "cover_order": "after cover lift, the full flag count 192*k^3 equals BT831's W_k order",
+    "architecture": "Wythoff operations are packet expansion stages, not only geometric variants"
+  },
+  "checks": {
+    "bt814_original_tomotope_counts_match": true,
+    "bt831_source_counts_match_original": true,
+    "operation_vertex_ladder_is_mu_k_f_2f_4f": true,
+    "rectified_vertices_are_edge_axes": true,
+    "truncated_vertices_are_clifford_lift": true,
+    "expanded_vertices_are_bt814_packet_blocks": true,
+    "omnitruncated_vertices_are_half_flags": true,
+    "full_flags_are_twice_omnitruncated": true,
+    "post_rectification_doubles_three_times": true,
+    "first_jump_is_q": true,
+    "cover_scaled_expanded_matches_bt832_capacity": true,
+    "cover_scaled_full_flags_double_half_flags": true,
+    "cover_scaled_full_flags_equal_Wk_order": true
+  }
+}

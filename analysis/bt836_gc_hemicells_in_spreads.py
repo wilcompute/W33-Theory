@@ -36,8 +36,6 @@ from __future__ import annotations
 from itertools import combinations, product
 import json
 
-import networkx as nx
-
 
 def canon(v):
     for x in v:
@@ -184,14 +182,26 @@ def main():
     print(f"T2 A5 orbits on the 45 line pairs: {sizes}")
     assert sizes == [15, 30]
 
-    # the 15-orbit graph = Petersen?
+    # the 15-orbit graph = Petersen.  Avoid an external networkx dependency:
+    # the Petersen graph is the unique SRG(10,3,0,1), so verify that profile.
     o15 = next(o for o in orbits if len(o) == 15)
-    G15 = nx.Graph()
-    G15.add_nodes_from(spread)
+    G15 = {li: set() for li in spread}
     for pr in o15:
         a, b = tuple(pr)
-        G15.add_edge(a, b)
-    pet = nx.is_isomorphic(G15, nx.petersen_graph())
+        G15[a].add(b)
+        G15[b].add(a)
+    pet_degrees = {len(G15[v]) for v in spread}
+    pet_lambda = {
+        len(G15[a] & G15[b])
+        for a, b in combinations(spread, 2)
+        if b in G15[a]
+    }
+    pet_mu = {
+        len(G15[a] & G15[b])
+        for a, b in combinations(spread, 2)
+        if b not in G15[a]
+    }
+    pet = pet_degrees == {3} and pet_lambda == {0} and pet_mu == {1}
     print(f"T2 the 15-orbit graph on the 10 spread lines is the PETERSEN")
     print(f"   graph (hemi-dodecahedron skeleton): {pet}")
     assert pet

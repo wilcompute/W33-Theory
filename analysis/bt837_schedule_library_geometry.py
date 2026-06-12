@@ -25,8 +25,6 @@ from collections import Counter, defaultdict
 import json
 import random
 
-import networkx as nx
-
 
 def canon(v):
     for x in v:
@@ -87,18 +85,22 @@ def main():
     print("   36 x 45 = 1620 (schedule,pair) flags = #apartments = 540 x 3")
 
     # ----- T2: near-partner graph is SRG(36,15,6,6) -----
-    G = nx.Graph()
-    G.add_nodes_from(range(36))
+    G = {i: set() for i in range(36)}
     for a, b in combinations(range(36), 2):
         ov = len(spreads[a] & spreads[b])
         assert ov in (1, 4)
         if ov == 4:
-            G.add_edge(a, b)
-    degs = {G.degree(v) for v in G}
+            G[a].add(b)
+            G[b].add(a)
+    degs = {len(G[v]) for v in G}
     assert degs == {15}
-    lam = {len(set(G[u]) & set(G[v])) for u, v in G.edges()}
+    lam = {
+        len(G[u] & G[v])
+        for u, v in combinations(range(36), 2)
+        if v in G[u]
+    }
     mu_ = {len(set(G[u]) & set(G[v]))
-           for u, v in combinations(range(36), 2) if not G.has_edge(u, v)}
+           for u, v in combinations(range(36), 2) if v not in G[u]}
     print(f"T2 near-graph: 36 vertices, 15-regular, lambda={lam}, mu={mu_}")
     assert lam == {6} and mu_ == {6}
     print("   => SRG(36,15,6,6): the U4(2) rank-3 graph - the timetable")
