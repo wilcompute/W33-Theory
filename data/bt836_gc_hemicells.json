@@ -1,0 +1,19 @@
+{
+  "theorem": "BT836 GC hemicells in spreads",
+  "numerology": {
+    "11": "k-1 Ihara prime",
+    "55": "N_eff",
+    "660": "k*N_eff",
+    "3420": "k*g*19",
+    "H(19)": 20
+  },
+  "stab_order": 720,
+  "s6_pair_orbits": [
+    45
+  ],
+  "a5_pair_orbits": [
+    15,
+    30
+  ],
+  "petersen": true
+}
