@@ -1,0 +1,25 @@
+{
+  "theorem": "BT852 seventeen universals vs substrate",
+  "t1": {
+    "aut_tomotope_is_case11_group": true,
+    "structure": "((C2x C2 x C2 x C2):C3):C2",
+    "case10_group": "C2 x Aut(tomotope), order 192",
+    "profile": {
+      "1": 1,
+      "2": 27,
+      "3": 32,
+      "4": 36
+    }
+  },
+  "t2": "profile re-verified from flag model",
+  "t3": {
+    "2^I_order": 3840,
+    "blocked": true
+  },
+  "classification_facts": {
+    "mixed_353_exists": false,
+    "mixed_535_group": "J1 x L2(19)",
+    "case11_no_proper_quotients": true,
+    "case13": "2^6:A5, 80 cubes, 64 vertices, 70 quotients"
+  }
+}
