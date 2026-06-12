@@ -1,0 +1,35 @@
+{
+  "theorem": "BT846 pentad core anatomy",
+  "t1": {
+    "cover_p1": 20,
+    "same_cover": true,
+    "point_orbits": [
+      20,
+      20
+    ],
+    "cover_is_orbit": true
+  },
+  "t2": {
+    "per_chart_transversals": [
+      4
+    ],
+    "distinct_transversals": 10,
+    "equals_20_orbit": false,
+    "equals_marked_schedule": true,
+    "charts_per_schedule_line": 2
+  },
+  "t3": {
+    "P1": {
+      "0": 5
+    },
+    "P2": {
+      "0": 5
+    },
+    "spread": {
+      "2": 10
+    },
+    "orbit20": {
+      "3": 20
+    }
+  }
+}
