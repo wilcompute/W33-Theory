@@ -53,6 +53,9 @@ building), the protected memory (the Steinberg module of dimension
 $81$), the dual-torsor compiler (three regular copies of both the flat
 $\GF3^3$ program shell and the noncommutative Heisenberg state shell,
 with canonical $27+27+27$ triality selected by the Heisenberg center),
+the oriented control plane (top homology
+$H_2=5_{\omega}\oplus5_{\omega^2}\oplus30$, whose conjugate
+5-sectors fuse to one Weyl-visible 10-channel),
 the mirror middleware (a $2160$-slot $D_{12}$ transport bus whose
 full Clifford lift factors as $24\cdot45\cdot48=51840$), the fuel (the
 matter shell is exactly the magic sector, with exact Kochen--Specker
@@ -1294,6 +1297,41 @@ memory is one free generator over the substrate's ternary symmetry.
 \emph{Witnesses: \texttt{bt742}, \texttt{bt744}.}
 \end{theorem}
 
+\begin{corollary}[The oriented timetable spectrum]
+Let $P=3^3{:}S_4$ be the index-$40$ line parabolic.  The ordinary
+line permutation module and the oriented top-homology module are the
+two inductions of its two linear characters:
+\[
+ \operatorname{Ind}_P^{\PSp(4,3)}(1)=1\oplus15\oplus24,
+ \qquad
+ H_2=\operatorname{Ind}_P^{\PSp(4,3)}(\operatorname{sign}_{S_4})
+   =5_{\omega}\oplus5_{\omega^2}\oplus30.
+\]
+The two 5-dimensional characters are complex conjugates over
+$\mathbb Q(\zeta_3)$; the 30 is rational.  Under the outer extension
+$W(E_6)=U_4(2){:}2$, the conjugate pair is the restriction of one
+irreducible 10-dimensional representation, whereas the 30 has two
+inequivalent extensions.  Thus the oriented timetable header reads
+as a Weyl-visible chiral channel $10$ plus a payload $30^{\pm}$ whose
+outer parity is not fixed by the projective module alone.
+
+The completed homology spectrum is
+\[
+ H_0=1,\qquad H_1=\mathrm{St}_{81},\qquad
+ H_2=5_{\omega}\oplus5_{\omega^2}\oplus30,
+\]
+and resolves the Euler charge representation by representation:
+\[
+ 1-81+(5+5+30)=-40=-v.
+\]
+The $5+\bar5$ outer-fusion pattern matches BT859's two chiral cache
+branches, and the two 30-extensions have the form required for an
+outer gauge bit, but the objectwise intertwiners to BT859 and BT857
+remain open.
+\emph{Witness:
+\texttt{bt866\_h2\_oriented\_irreducible\_decomposition.py}.}
+\end{corollary}
+
 The error layer is native: the $[[240,81,4,3]]_3$ CSS code on the edge
 qutrits has all four parameters substrate-primitive; the dual
 Cs\'asz\'ar/Szilassi cross-check supplies parity-free error detection;
@@ -1900,7 +1938,11 @@ make).  The state/program compiler makes that register directly
 addressable: $\GF3^3$ supplies three commuting copies of the
 $27$-slot program shell, $H_{27}$ supplies three noncommuting copies
 of the state shell, and its center supplies the native generation
-flag $27\subset54\subset81$.  The watchdog is the BC loop.  Each layer is a theorem; the
+flag $27\subset54\subset81$.  The oriented timetable header above
+that memory splits as $5_{\omega}+5_{\omega^2}+30$: the full Weyl
+runtime fuses the handed pair into a 10-channel and leaves one
+30-channel with an outer parity choice.  The watchdog is the BC loop.
+Each layer is a theorem; the
 stack compiles because double cosets compose.
 
 \paragraph{Redundancy is built in, not bolted on.}  The newest
@@ -2006,6 +2048,7 @@ $1+12+27$ split & Bell line $+$ meeting $+$ disjoint & pole / I-O ports / fuel+s
 $240$ edges & interaction qutrits & bandwidth = memory\\
 $81=q^4$ Steinberg & protected sector (Schur) & logical register\\
 dual $O_3$ restrictions & Heisenberg state phases & state/program compiler\\
+$H_2=5+\bar5+30$ & oriented context chirality & timetable header $10+30^\pm$\\
 $36$ spreads & measurement bases & timetable OS\\
 $\mathrm{SRG}(36,15,6,6)$ & basis-overlap law & control-plane fabric\\
 five vacua & phases of the theory & boot modes\\
@@ -2206,6 +2249,7 @@ code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
+oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\

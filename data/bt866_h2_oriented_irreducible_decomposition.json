@@ -1,0 +1,70 @@
+{
+  "theorem": "BT866 H2 oriented irreducible decomposition",
+  "group": {
+    "projective": "PSp(4,3) = U4(2)",
+    "order": 25920,
+    "outer_extension": "U4(2).2 = W(E6)"
+  },
+  "line_parabolic": {
+    "structure": "(C3 x C3 x C3) : S4",
+    "order": 648,
+    "index": 40,
+    "linear_characters": 2
+  },
+  "plain_line_module": {
+    "construction": "Ind_P^G(1)",
+    "decomposition_degrees": [
+      1,
+      15,
+      24
+    ],
+    "formula": "1 + 15 + 24",
+    "degree": 40,
+    "character_norm": 3
+  },
+  "oriented_h2_module": {
+    "construction": "Ind_P^G(sign_S4)",
+    "decomposition_degrees": [
+      5,
+      5,
+      30
+    ],
+    "formula": "5_omega + 5_omega2 + 30",
+    "degree": 40,
+    "character_norm": 3,
+    "constituent_fields": [
+      "CF(3)",
+      "CF(3)",
+      "Rationals"
+    ],
+    "five_pair_complex_conjugate": true
+  },
+  "outer_weyl_extension": {
+    "five_pair": "5_omega + 5_omega2 restricts from one irreducible 10",
+    "degree_10_extensions_found": [
+      10
+    ],
+    "thirty_sector": "the rational 30 has two inequivalent extensions",
+    "degree_30_extensions_found": [
+      30,
+      30
+    ]
+  },
+  "homology_dictionary": {
+    "H0": "1",
+    "H1": "Steinberg 81",
+    "H2": "5_omega + 5_omega2 + 30",
+    "euler_dimension": "1 - 81 + 40 = -40"
+  },
+  "boundary": "The 5+5bar pair has the same outer-fusion pattern as the two BT859 chiral cache branches, but an objectwise intertwiner is not yet proved. The two extensions of the 30-sector expose an outer parity choice; identifying it with the BT857 local gauge bit remains open.",
+  "checks": {
+    "psp_order": true,
+    "line_parabolic": true,
+    "unique_nontrivial_linear_character": true,
+    "plain_line_module_1_15_24": true,
+    "oriented_h2_5_5_30": true,
+    "five_pair_is_eisenstein_conjugate": true,
+    "outer_weyl_fuses_fives_to_ten": true,
+    "thirty_has_two_outer_extensions": true
+  }
+}
