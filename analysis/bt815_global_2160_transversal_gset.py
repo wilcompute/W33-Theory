@@ -65,16 +65,44 @@ Print("isomorphic_to_C12=", IsomorphismGroups(G, C) <> fail, "\\n");
 Print("isomorphic_to_D12=", IsomorphismGroups(G, D) <> fail, "\\n");
 QUIT;
 """
-    proc = subprocess.run(
-        ["gap", "-q"],
-        input=script,
-        text=True,
-        capture_output=True,
-        check=True,
-        timeout=20,
-    )
+    try:
+        proc = subprocess.run(
+            ["gap", "-q"],
+            input=script,
+            text=True,
+            capture_output=True,
+            check=True,
+            timeout=20,
+        )
+        stdout = proc.stdout
+    except FileNotFoundError:
+        # Windows fallback: GAP lives behind its cygwin runtime (no
+        # `gap` on PATH).  Heredoc/stdin newline mangling makes piping
+        # unreliable there, so write a .g file and pass its cygdrive
+        # path (pattern documented in BT813/BT843 GAP witnesses).
+        from pathlib import Path
+        gap_bash = Path("C:/Program Files/GAP-4.15.1/runtime/bin/bash.exe")
+        if not gap_bash.exists():
+            raise
+        root = Path(__file__).resolve().parents[1]
+        tmp = root / ".tmp"
+        tmp.mkdir(exist_ok=True)
+        gfile = tmp / "bt815_witness.g"
+        gfile.write_text(script, newline="\n")
+        drive, rest = str(gfile)[0].lower(), str(gfile)[2:].replace("\\", "/")
+        cyg = f"/cygdrive/{drive}{rest}"
+        proc = subprocess.run(
+            [str(gap_bash), "--norc", "-c",
+             f"/opt/gap-4.15.1/gap.exe -q -b '{cyg}'"],
+            cwd=str(gap_bash.parent),
+            text=True,
+            capture_output=True,
+            check=True,
+            timeout=120,
+        )
+        stdout = proc.stdout
     out: dict[str, str] = {}
-    for line in proc.stdout.splitlines():
+    for line in stdout.splitlines():
         if "=" in line:
             key, value = line.strip().split("=", 1)
             out[key] = value
