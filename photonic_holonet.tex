@@ -1157,6 +1157,23 @@ ledger.
 \texttt{bt862\_h2\_is\_the\_line\_module.py}.}
 \end{theorem}
 
+\begin{corollary}[Three generations from Steinberg vanishing]
+$\chi_{\mathrm{St}}(g)=0$ iff $3\mid\mathrm{ord}(g)$ (verified for
+all $25920$ elements).  Hence \emph{any} order-$3$ symmetry of the
+substrate splits the matter register into eigenspaces of exactly
+$27+27+27$ --- the three-generation decomposition is forced for
+every choice of triality element, not selected --- and every
+order-$9$ element ($5760$ of them) refines it into nine
+$9$-dimensional sub-generations.  In the code's own characteristic
+the parameters survive: $\mathrm{rank}_3\partial_0=39$,
+$\mathrm{rank}_3\partial_1=120$, $\dim H_1(\GF3)=81$, so
+$[[240,81,4,3]]_3$ is exact over $\GF3$.  The number of fermion
+generations is the defining-characteristic degeneracy of the
+protected register.
+\emph{Witness:
+\texttt{bt863\_generations\_from\_steinberg\_vanishing.py}.}
+\end{corollary}
+
 \begin{theorem}[Steinberg memory]
 The Levi-graph cycle space and the chart-overlap $81$-sector are both
 irreducible and equal to the Steinberg representation of
@@ -2073,6 +2090,7 @@ Heisenberg/$\GF3^3$ shell torsors, Schl\"afli decoding & bt858\\
 Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
 code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
+three generations $=$ Steinberg vanishing & bt863\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\

@@ -1,0 +1,26 @@
+{
+  "theorem": "BT863 generations from Steinberg vanishing",
+  "t1_vanishing_iff_3singular": true,
+  "t2_generations": [
+    27,
+    27,
+    27
+  ],
+  "t3_subgenerations": [
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "t4_mod3_ranks": [
+    39,
+    120
+  ],
+  "order3_count": 800,
+  "order9_count": 5760
+}
