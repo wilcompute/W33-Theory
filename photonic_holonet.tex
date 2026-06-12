@@ -164,6 +164,20 @@ q=3,\quad \lambda=2,\quad \mu=4,\quad k=12,\quad f=24,\quad g=15,\quad
 \]
 and every numerical claim in this paper reduces to arithmetic in these.
 
+\paragraph{Formal grounding (the master formalism).}
+In the master manuscript \cite{w33paper} the whole structure is forced
+by one Diophantine seed: the \emph{master equation} $q! = 2q$ has the
+unique positive-integer solution $q=3$, and the SRG quadratic
+$x^2 - q!\,x + 2^q = (x-2)(x-4)$ then delivers $\lambda=2$, $\mu=4$ and
+the full parameter closure ($k=2^q+q+1$, $v=40$, multiplicities $f=24$,
+$g=15$, cyclotomic ladder $\Phi_3=13$, $\Phi_6=7$, $\Phi_{12}=q^4-q^2+1=73$,
+$\Theta=q^2+1=10$).  Two of those closure constants reappear in this
+paper as \emph{spectral field discriminants}: the chart-web's irrational
+eigenvalue pairs $1\pm\sqrt{10}$ and $(-1\pm\sqrt{73})/2$
+(\S\ref{sec:network}) live precisely in $\mathbb{Q}(\sqrt{\Theta})$ and
+$\mathbb{Q}(\sqrt{\Phi_{12}})$ --- the machine's transport spectrum
+speaks the same cyclotomic dialect as the physics tier ladder.
+
 \subsection{The two carriers and the operator--operand duality}
 \label{sec:duality}
 
@@ -267,9 +281,10 @@ itself: it measures channels against its own past.
   arrow/.style={-{Stealth},thick}
 ]
   \node[block,fill=blue!8] (src) at (0,0) {single\\photon};
-  \node[optic,rotate=45] (pbs) at (2.4,0) {};
-  \node at (2.4,-0.85) {PBS};
-  \node[block,fill=blue!6] (spatial) at (4.9,0)
+  \node[draw,fill=gray!15,minimum width=7mm,minimum height=7mm,
+        rotate=45,inner sep=0pt] (pbs) at (2.4,0) {};
+  \node[font=\small] at (2.4,0.85) {PBS};
+  \node[block,fill=blue!6] (spatial) at (5.2,0)
     {spatial carrier\\ $\ket{H,a}+\ket{V,b}$};
   \node[block,fill=green!12] (tri) at (0,-1.9) {tritter\\ $F_3$};
   \node[block,fill=yellow!18] (delay) at (3.0,-1.9) {delay ladder\\ $0,\tau,2\tau$};
@@ -280,15 +295,15 @@ itself: it measures channels against its own past.
     {Choi state\\ $(I\otimes U)\ket{\Omega}$};
   \draw[arrow] (src) -- (pbs);
   \draw[arrow] (pbs) -- (spatial);
-  \draw[arrow] (spatial.south) .. controls (4.9,-1.05) and (0,-1.05) .. (tri.north);
+  \draw[arrow] (spatial.south) .. controls (5.2,-1.25) and (0,-1.25) .. (tri.north);
   \draw[arrow] (tri) -- (delay);
   \draw[arrow] (delay) -- (eom);
   \draw[arrow] (eom) -- (out) node[midway,above]{$\ket{\Omega}$};
   \draw[arrow] (out) -- (choi);
-  \draw[-{Stealth},dashed,thick] (out.north) .. controls (8.8,-0.85) and (4.0,-0.85) ..
+  \draw[-{Stealth},dashed,thick] (out.north) .. controls (9.4,-0.55) and (4.4,-0.55) ..
     (delay.north);
-  \node[fill=white,inner sep=1pt] at (6.8,-0.68)
-    {BC loop: rotate $\arccos(-2/3)$};
+  \node[fill=white,inner sep=1.5pt,font=\small] at (7.2,-0.32)
+    {BC loop: rotate $\arccos(-2/3)$ per pass};
 \end{tikzpicture}}
 \caption{Preparation schematic.  One photon, four registers.  The PBS
 entangles path with polarization (Stage A); the tritter--delay--EOM
@@ -705,8 +720,8 @@ level $n$ & leaves $40^n$ & $\W$ instances & mirror slots & runtime atoms & rout
     \draw (h3) -- (c\i);
   }
   \node[font=\scriptsize,fill=white,inner sep=1pt] at (9.2,-1.95) {$\mathcal{H}_n$: repeat the same grammar};
-  \draw[arrow] (1.8,0) -- node[above]{substitute} (2.8,0);
-  \draw[arrow] (6.4,0) -- node[above]{substitute} (7.4,0);
+  \draw[arrow] (1.4,2.0) -- node[above]{substitute} (3.1,2.0);
+  \draw[arrow] (6.0,2.0) -- node[above]{substitute} (7.8,2.0);
 \end{tikzpicture}
 \caption{Fractal scaling schematic.  The drawn fans show only a few
 children; the rule is exact substitution of forty child holonets at
@@ -1150,6 +1165,10 @@ corpus corrections & bt818, bt823, bt824\\
 \end{center}
 
 \begin{thebibliography}{9}
+\bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
+  Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
+  (2026) --- master equation $q!=2q$, parameter closure, Bose--Mesner
+  field equations, and the full observable derivation chain.
 \bibitem{companion} W.~Dahn, \emph{Self-Entanglement Companion},
   Theory of Everything Project preprint (2026).
 \bibitem{howard} M.~Howard, J.~Wallman, V.~Veitch, J.~Emerson,
