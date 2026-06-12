@@ -1,0 +1,8 @@
+{
+  "theorem": "BT851 tomotope Cayley test",
+  "vertex_image_order": 24,
+  "vertex_kernel_order": 4,
+  "transitive": true,
+  "cayley": true,
+  "regular_subgroup": "Z2xZ2"
+}
