@@ -1041,6 +1041,30 @@ a metric space whose geometry is the double-six relation.
 \emph{Witness: \texttt{bt835\_schedule\_overlap\_theorem.py}.}
 \end{theorem}
 
+\paragraph{The Gr\"unbaum--Coxeter cells.}
+Each schedule also has an internal shape.  The full schedule
+stabilizer $S_6$ is $2$-homogeneous on the $10$ contexts, but its
+icosahedral core $A_5$ --- the $600$-cell level of the platonic
+ladder, and \emph{exactly} the automorphism group of the
+hemi-dodecahedron $\{5,3\}_5$ --- splits the $\binom{10}{2}=45$
+context pairs as $45=15+30$, and the $15$-orbit graph on the $10$
+contexts is the \textbf{Petersen graph}: the edge skeleton of the
+hemi-dodecahedron, the cell of Coxeter's exceptional $57$-cell.
+Dually, the hidden $6$-set of the $S_6$ action realizes the
+hemi-icosahedron $\{3,5\}_5$ --- the cell of Gr\"unbaum's $11$-cell
+--- with incidence count $(6,15,10)$: six hidden points, fifteen
+duads, ten triple-splits $=$ the contexts themselves.  The exceptional
+polytopes' groups do not embed in $\Sp(4,\GF3)$, but they are
+substrate arithmetic
+($|\mathrm{PSL}(2,11)|=660=k\cdot N_{\mathrm{eff}}$,
+$|\mathrm{PSL}(2,19)|=3420=k\cdot g\cdot 19$, Heawood genus
+$H(19)=20=$ the BC ring count, and $11=k-1$ is the Ihara prime of the
+zeta critical circle $|u|=1/\sqrt{11}$): the full $11$-cell and
+$57$-cell live elsewhere, yet their \emph{cells} are carried by every
+measurement timetable of this machine, glued by the substrate's own
+group instead of $\mathrm{PSL}(2,p)$.
+\emph{Witness: \texttt{bt836\_gc\_hemicells\_in\_spreads.py}.}
+
 %======================================================================
 \section{Build sheet and falsifiable witnesses}
 
@@ -1156,6 +1180,7 @@ fuel / contextuality & bt818, bt822, bt823\\
 memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
+Gr\"unbaum--Coxeter hemicells in schedules & bt836\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834\\
