@@ -844,21 +844,28 @@ The orthogonal pairs ($|\langle\psi|\varphi\rangle|^2 = 0$) correspond to
 collinear Pauli observables on the $W(3,3)$ line structure; the
 $1/q$-overlap pairs correspond to non-collinear observables.
 
-\begin{theorem}[Witting Kochen--Specker bound]\label{thm:KSbound}
+\begin{theorem}[Witting Kochen--Specker bound; corrected June 2026]\label{thm:KSbound}
 No assignment of definite $\{0,1\}$-values to the $40$ Witting rays can be
 consistent with the orthogonality structure: every $\{0,1\}$-marking is
-\emph{Kochen--Specker contradictory} on at least $6 = q!$ tetrads.  The
-maximum number of \emph{satisfiable} mutually-exclusive Witting tetrads is
-$34/40$, and the marking optima form an orbit of size $720 = (q!)!$
-(Vlasov 2025).
+\emph{Kochen--Specker contradictory} on at least $\mu = 4$ tetrads.  The
+exact maximum number of \emph{satisfiable} mutually-exclusive Witting
+tetrads is
+\begin{equation}
+  \frac{36}{40} \;=\; \frac{(q!)^2}{v},
+\end{equation}
+with deficit exactly $\mu = 4$ and contextual fraction exactly
+$1/10 = 1/\Phi_4$.  [Correction note: an earlier version of this theorem
+quoted $34/40$ following Vlasov 2025; the exact optimum $36/40$ was
+established by complete branch-and-bound in the corpus packet BT823 and
+propagated here per the corrections ethos.]
 \end{theorem}
 
 In a single-photon experiment with the temporal Bell qutrit, a sequence of
 $N$ Pauli measurements drawn from a Witting tetrad covering of $W(3,3)$
-will exhibit \emph{exactly} $\le 34N/40$ classically-consistent assignments;
-any larger fraction certifies contextual (genuinely quantum) substrate
-content.  Conversely, $\ge 35N/40$ classical agreement falsifies the
-W(3,3) self-entanglement claim.
+will exhibit at most $36N/40$ classically-consistent assignments;
+any larger fraction falsifies the W(3,3) self-entanglement claim, and any
+strictly smaller asymptotic fraction certifies residual experimental
+noise rather than substrate structure.
 
 \paragraph{Witness 3: Key-agreement rate.}
 A two-party photonic protocol using $W(3,3)$ as the shared Pauli phase space
@@ -1780,7 +1787,7 @@ Temporal triangle cells           & $7$       & $\Phi_6 = 3+3+1$          & \cre
 $F_3$-gate visibility             & $1/3$     & $1/q$                     & \cref{prop:F3vis} \\
 Witting overlap                   & $\{0,1/3\}$ & $\{0,1/q\}$             & \cref{prop:witting_overlap} \\
 Key-agreement rate                & $13/40$   & $\Phi_3/v$                & \eqref{eq:keyrate} \\
-Witting KS max                    & $34/40$   & $(v-q!)/v$                & \cref{thm:KSbound} \\
+Witting KS max (exact, BT823)     & $36/40$   & $(q!)^2/v$                & \cref{thm:KSbound} \\
 Noise threshold $p_{\rm sep}$     & $3/4$     & $q/\mu$                   & \cref{thm:noise_threshold} \\
 Preparation depth                 & $2$       & $\log_q q^q = q-1$        & \cref{prop:prep} \\
 Memory overhead per teleport      & $2$ trits & $2\log_q q$               & \cref{thm:temporal_teleport} \\
@@ -2237,7 +2244,8 @@ Key findings:
     realises the $[[240,81,4,3]]_3$ CSS code's 81 logical qutrits as a
     multi-Bell-qutrit storage.
   \item \textbf{Falsifiable witnesses:} trace-Choi visibility $V(U) =
-    |\mathrm{Tr}(U)|/q$, Witting Kochen--Specker bound $34/40$, and
+    |\mathrm{Tr}(U)|/q$, the exact Witting Kochen--Specker bound
+    $36/40 = (q!)^2/v$ (corrected from $34/40$ per packet BT823), and
     key-agreement rate $13/40 = \Phi_3/v$ are mutually independent and
     falsifiable predictions of the framework.
 \end{itemize}
