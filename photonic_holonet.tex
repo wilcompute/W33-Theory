@@ -1123,6 +1123,49 @@ hemi-dodecahedral homes ($3240=540\times6$ Petersen flags).
 \emph{Witness: \texttt{bt837\_schedule\_library\_geometry.py}.}
 \end{theorem}
 
+\begin{theorem}[BT839 GC operation Euler/flag audit]
+Treating the full Gr\"unbaum--Coxeter note as a data table gives a
+second invariant.  The base tables for the $11$-cell, $57$-cell,
+tomotope partial $a$, and tomotope partial $b$ are all Euler-neutral:
+\[
+V-E+F-C=0.
+\]
+But every Wythoff operation table has a fixed family charge:
+\[
+\chi_{\rm op}(11\hbox{-cell})=-11,\qquad
+\chi_{\rm op}(57\hbox{-cell})=-57,\qquad
+\chi_{\rm op}(\hbox{tomotope})=-4.
+\]
+The omnitruncated rows are full-flag carriers:
+\[
+660=|\mathrm{PSL}(2,11)|=11\cdot A_5=kN_{\rm eff},
+\]
+\[
+3420=|\mathrm{PSL}(2,19)|=57\cdot A_5=k\cdot g\cdot19,
+\]
+and the tomotope has $96$ half-flags, whose double is the verified
+$192$-flag BT814 packet.  The $57$-cell also locks to the W33 timetable
+library: BT837 gives $3240$ Petersen homes, and
+\[
+3240+k\cdot g = 3240+180=3420.
+\]
+Thus one $k\cdot g$ sentinel sheet completes the W33 Petersen-home carrier
+to the $57$-cell flag count.
+
+The regular-polychoron alignment supported by the cell/symmetry data is
+\[
+11\hbox{-cell}\to600\hbox{-cell},\qquad
+\hbox{tomotope}\to24\hbox{-cell},\qquad
+57\hbox{-cell}\to120\hbox{-cell}.
+\]
+The $57\to120$ link is direct at the dodecahedral cell level; the
+$11\to600$ link is weaker but real, through hemi-icosahedral local
+structure and the quotient $2I\to A_5$ rather than through a direct
+tetrahedral-cell match.  The swapped $11/57$ orientation is recorded as
+a lower-scoring dual/vertex-figure hook, not discarded.
+\emph{Witness: \texttt{bt839\_gc\_operation\_euler\_flag\_audit.py}.}
+\end{theorem}
+
 %======================================================================
 \section{Build sheet and falsifiable witnesses}
 
@@ -1155,6 +1198,7 @@ cover-lifted packet capacity & $48k^3$ slots & BT832 storage gauge\\
 sentinel-aware stress energy & $4\to2$ & BT833 reroute\\
 full route sync criterion & $2n\mid7^n-1$ & BT834 guard band\\
 tomotope Wythoff runtime ladder & $4,12,24,48,96$ & BT838 packet growth\\
+GC operation Euler charges & $-11,-57,-4$ & BT839 table audit\\
 sentinel projector trace & $15$ & $g$ sector\\
 first full-route desync & $n=5$ remainder $24$ & $f$ guard band\\
 tomotope cover ABI & $48$ blocks / $192$ flags & cover-invariant\\
@@ -1221,7 +1265,7 @@ shows when probed honestly.
 
 Every theorem above is backed by an executable script in
 \texttt{analysis/} with results in \texttt{data/}; the chain
-BT739--BT838 was developed and pushed incrementally with exact
+BT739--BT839 was developed and pushed incrementally with exact
 arithmetic (GF($p$) elimination, cyclotomic integers, complete
 branch-and-bound, GAP witnesses for group-theoretic facts).
 
@@ -1239,7 +1283,7 @@ fuel / contextuality & bt818, bt822, bt823\\
 memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
-Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837\\
+Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\

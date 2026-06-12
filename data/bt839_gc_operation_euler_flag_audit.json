@@ -1,0 +1,580 @@
+{
+  "theorem": "BT839 Grunbaum-Coxeter operation Euler/flag audit",
+  "base_tables": {
+    "11_cell": {
+      "rank_totals": [
+        11,
+        55,
+        55,
+        11
+      ],
+      "euler": 0,
+      "rank_classes": [
+        [
+          11
+        ],
+        [
+          55
+        ],
+        [
+          55
+        ],
+        [
+          11
+        ]
+      ]
+    },
+    "57_cell": {
+      "rank_totals": [
+        57,
+        171,
+        171,
+        57
+      ],
+      "euler": 0,
+      "rank_classes": [
+        [
+          57
+        ],
+        [
+          171
+        ],
+        [
+          171
+        ],
+        [
+          57
+        ]
+      ]
+    },
+    "tomotope_partial_a": {
+      "rank_totals": [
+        8,
+        24,
+        32,
+        16
+      ],
+      "euler": 0,
+      "rank_classes": [
+        [
+          8
+        ],
+        [
+          24
+        ],
+        [
+          32
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    "tomotope_partial_b": {
+      "rank_totals": [
+        4,
+        12,
+        16,
+        8
+      ],
+      "euler": 0,
+      "rank_classes": [
+        [
+          4
+        ],
+        [
+          12
+        ],
+        [
+          16
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  },
+  "operation_tables": {
+    "11_cell": {
+      "rectified": {
+        "rank_totals": [
+          55,
+          165,
+          121,
+          22
+        ],
+        "euler": -11,
+        "rank_classes": [
+          [
+            55
+          ],
+          [
+            165
+          ],
+          [
+            55,
+            66
+          ],
+          [
+            11,
+            11
+          ]
+        ]
+      },
+      "truncated": {
+        "rank_totals": [
+          110,
+          220,
+          121,
+          22
+        ],
+        "euler": -11,
+        "rank_classes": [
+          [
+            110
+          ],
+          [
+            55,
+            165
+          ],
+          [
+            55,
+            66
+          ],
+          [
+            11,
+            11
+          ]
+        ]
+      },
+      "expanded": {
+        "rank_totals": [
+          66,
+          330,
+          385,
+          132
+        ],
+        "euler": -11,
+        "rank_classes": [
+          [
+            66
+          ],
+          [
+            165,
+            165
+          ],
+          [
+            110,
+            165,
+            110
+          ],
+          [
+            11,
+            55,
+            55,
+            11
+          ]
+        ]
+      },
+      "omnitruncated": {
+        "rank_totals": [
+          660,
+          1320,
+          781,
+          132
+        ],
+        "euler": -11,
+        "rank_classes": [
+          [
+            660
+          ],
+          [
+            330,
+            330,
+            330,
+            330
+          ],
+          [
+            110,
+            165,
+            165,
+            66,
+            165,
+            110
+          ],
+          [
+            11,
+            55,
+            55,
+            11
+          ]
+        ]
+      }
+    },
+    "57_cell": {
+      "rectified": {
+        "rank_totals": [
+          171,
+          855,
+          741,
+          114
+        ],
+        "euler": -57,
+        "rank_classes": [
+          [
+            171
+          ],
+          [
+            855
+          ],
+          [
+            171,
+            570
+          ],
+          [
+            57,
+            57
+          ]
+        ]
+      },
+      "truncated": {
+        "rank_totals": [
+          342,
+          1026,
+          741,
+          114
+        ],
+        "euler": -57,
+        "rank_classes": [
+          [
+            342
+          ],
+          [
+            171,
+            855
+          ],
+          [
+            171,
+            570
+          ],
+          [
+            57,
+            57
+          ]
+        ]
+      },
+      "expanded": {
+        "rank_totals": [
+          570,
+          1710,
+          1539,
+          456
+        ],
+        "euler": -57,
+        "rank_classes": [
+          [
+            570
+          ],
+          [
+            855,
+            855
+          ],
+          [
+            342,
+            855,
+            342
+          ],
+          [
+            57,
+            171,
+            171,
+            57
+          ]
+        ]
+      },
+      "omnitruncated": {
+        "rank_totals": [
+          3420,
+          6840,
+          3819,
+          456
+        ],
+        "euler": -57,
+        "rank_classes": [
+          [
+            3420
+          ],
+          [
+            1710,
+            1710,
+            1710,
+            1710
+          ],
+          [
+            342,
+            855,
+            855,
+            570,
+            855,
+            342
+          ],
+          [
+            57,
+            171,
+            171,
+            57
+          ]
+        ]
+      }
+    },
+    "tomotope_partial_b": {
+      "rectified": {
+        "rank_totals": [
+          12,
+          48,
+          44,
+          12
+        ],
+        "euler": -4,
+        "rank_classes": [
+          [
+            12
+          ],
+          [
+            48
+          ],
+          [
+            16,
+            16,
+            12
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ]
+      },
+      "truncated": {
+        "rank_totals": [
+          24,
+          60,
+          44,
+          12
+        ],
+        "euler": -4,
+        "rank_classes": [
+          [
+            24
+          ],
+          [
+            12,
+            48
+          ],
+          [
+            16,
+            16,
+            12
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ]
+      },
+      "expanded": {
+        "rank_totals": [
+          48,
+          144,
+          116,
+          24
+        ],
+        "euler": -4,
+        "rank_classes": [
+          [
+            48
+          ],
+          [
+            48,
+            48,
+            48
+          ],
+          [
+            16,
+            24,
+            24,
+            16,
+            12,
+            24
+          ],
+          [
+            4,
+            4,
+            12,
+            4
+          ]
+        ]
+      },
+      "omnitruncated": {
+        "rank_totals": [
+          96,
+          192,
+          116,
+          24
+        ],
+        "euler": -4,
+        "rank_classes": [
+          [
+            96
+          ],
+          [
+            48,
+            48,
+            48,
+            48
+          ],
+          [
+            16,
+            24,
+            24,
+            16,
+            12,
+            24
+          ],
+          [
+            4,
+            4,
+            12,
+            4
+          ]
+        ]
+      }
+    }
+  },
+  "euler_charge": {
+    "11_cell": [
+      -11
+    ],
+    "57_cell": [
+      -57
+    ],
+    "tomotope_partial_b": [
+      -4
+    ]
+  },
+  "flag_bridge": {
+    "11_cell": {
+      "omnitruncated_vertices": 660,
+      "psl2_order": 660,
+      "substrate_identity": 660,
+      "cell_automorphism_product": 660,
+      "cell_type": "hemi-icosahedron",
+      "vertex_figure_type": "hemi-dodecahedron"
+    },
+    "57_cell": {
+      "omnitruncated_vertices": 3420,
+      "psl2_order": 3420,
+      "substrate_identity": 3420,
+      "cell_automorphism_product": 3420,
+      "w33_petersen_home_flags": 3240,
+      "petersen_home_plus_sentinel_sheet": 3420,
+      "cell_type": "hemi-dodecahedron",
+      "vertex_figure_type": "hemi-icosahedron"
+    },
+    "tomotope_partial_b": {
+      "omnitruncated_vertices": 96,
+      "bt814_full_flags": 192,
+      "doubled_omnitruncated": 192,
+      "bt831_W3_order": 5184,
+      "W3_from_flags": 5184,
+      "cellular_family": "24-cell/toroidal tomotope middle-layer bridge"
+    }
+  },
+  "regular_polychoron_bridge": {
+    "primary_pairing": {
+      "11_cell_to_600_cell": {
+        "reason": "icosahedral/hemi-icosahedral local structure; 600-cell vertices form 2I, whose projective quotient is A5",
+        "direct_cell_match": false,
+        "vertex_or_symmetry_match": true,
+        "score": 2
+      },
+      "tomotope_to_24_cell": {
+        "reason": "24-cell/D4/24-stabilizer layer already appears as the tomotope runtime lift f=24",
+        "direct_cell_match": false,
+        "runtime_stabilizer_match": true,
+        "score": 2
+      },
+      "57_cell_to_120_cell": {
+        "reason": "57-cell cells are hemi-dodecahedra and the 120-cell cells are dodecahedra",
+        "direct_cell_match": true,
+        "vertex_or_symmetry_match": true,
+        "score": 3
+      }
+    },
+    "alternate_pairing": {
+      "11_cell_to_120_cell": {
+        "reason": "11-cell vertex figure is hemi-dodecahedron, so it has a weaker dual/vertex-figure dodecahedral hook",
+        "direct_cell_match": false,
+        "vertex_or_symmetry_match": true,
+        "score": 1
+      },
+      "57_cell_to_600_cell": {
+        "reason": "57-cell vertex figure is hemi-icosahedron, so it has a weaker dual/vertex-figure icosahedral hook",
+        "direct_cell_match": false,
+        "vertex_or_symmetry_match": true,
+        "score": 1
+      }
+    },
+    "regular_polychoron_counts": {
+      "600_cell": {
+        "vertices": 120,
+        "edges": 720,
+        "faces": 1200,
+        "cells": 600
+      },
+      "24_cell": {
+        "vertices": 24,
+        "edges": 96,
+        "faces": 96,
+        "cells": 24
+      },
+      "120_cell": {
+        "vertices": 600,
+        "edges": 1200,
+        "faces": 720,
+        "cells": 120
+      }
+    },
+    "boundary": "The 11/57 pairing is not asserted as an embedding of full regular polychora; it is a cell/vertex-figure/symmetry alignment."
+  },
+  "interpretation": {
+    "base_tables": "all four base GC/tomotope tables are Euler-neutral; tomotope partial a is exactly the double cover of partial b",
+    "operation_tables": "Wythoff operations turn neutrality into fixed charges -11, -57, and -4",
+    "eleven_cell": "the 11-cell full flag count 660 is PSL(2,11), 11*A5, and k*N_eff",
+    "fiftyseven_cell": "the 57-cell full flag count 3420 is PSL(2,19), 57*A5, and k*g*19; W33's 3240 Petersen homes need exactly k*g=180 sentinel slots to complete it",
+    "tomotope": "the tomotope omnitruncation has 96 half-flags; doubling gives BT814's 192 full flags and cover-lifting gives BT831's W_k order",
+    "regular_polychora": "the best-supported orientation is 11-cell -> 600-cell, tomotope -> 24-cell, 57-cell -> 120-cell, with 11/57 kept as a scored alignment rather than a full embedding claim"
+  },
+  "checks": {
+    "all_base_tables_have_euler_zero": true,
+    "partial_a_is_double_partial_b": true,
+    "eleven_and_fiftyseven_swap_cell_and_vertex_figure": true,
+    "operation_euler_charges_are_constant": true,
+    "rectified_vertices_equal_base_edges": true,
+    "truncated_vertices_equal_twice_base_edges": true,
+    "expanded_11_uses_11_hemi_icosahedra": true,
+    "expanded_57_uses_57_hemi_dodecahedra": true,
+    "expanded_tomotope_is_bt814_packet": true,
+    "omnitruncated_11_is_psl2_11_and_k_neff": true,
+    "omnitruncated_57_is_psl2_19_and_k_g_19": true,
+    "w33_petersen_flags_complete_to_57_flags_by_kg": true,
+    "tomotope_omni_is_half_bt814_flags": true,
+    "tomotope_W3_order_is_cover_lifted_full_flags": true,
+    "primary_pairing_scores_above_swapped": true,
+    "twenty_four_cell_count_hits_runtime_lift": true,
+    "one_twenty_cell_and_six_hundred_cell_are_dual_count_swap": true
+  }
+}
