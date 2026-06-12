@@ -1228,9 +1228,29 @@ the dark sector is the canonical $2{:}1$ cover of the $K_5$
 edge-world, with the Petersen graph appearing three ways in one
 needle (schedule skeleton, dark Kneser quotient, doubled chiral
 covers).
-\emph{Further witnesses: \texttt{bt853\_dark\_orbit\_zoo.py},
+
+\begin{theorem}[The dark charts are the mirror bus]
+The $(\mathrm{core},\mathrm{dark\ chart})$ slot space --- $216$
+pentad cores $\times\,10$ dark charts $=2160$ slots, with every skew
+pair occurring as a dark chart in exactly $4$ cores
+($2160=540\times4$, the repair-atlas factorization) --- is
+\textbf{$G$-set isomorphic to the $2160$-slot $D_{12}$ mirror bus}
+of the middleware: the slot stabilizer has order $12$ with the
+$D_{12}$ profile $\{1{:}1,2{:}7,3{:}2,6{:}2\}$ and is
+\emph{conjugate in $\PSp(4,\GF3)$} to the antipode-slot stabilizer
+(direct search over all $25920$ elements).  The multiplicity-$4$
+agreement is canonical: a dark chart's transversal tetrad is its
+schedule shadow, so the $4$ host cores' schedules all contain the
+pair's $4$ transversals.  Hence the compass layer \emph{generates}
+the middleware --- timetables from its lit side
+(reconstruction), the transport bus from its dark side --- and the
+mirror bus acquires a hardware identification: one slot $=$ one
+needle's dark chart.
+\emph{Witnesses: \texttt{bt856\_dark\_mirror\_bus.py}; further:
+\texttt{bt853\_dark\_orbit\_zoo.py},
 \texttt{bt854\_dark\_chart\_transversal\_duality.py},
 \texttt{bt855\_dark\_sector\_k5\_complete.py}.}
+\end{theorem}
 \emph{Witnesses: \texttt{bt848\_universal\_amalgam\_ladder.py},
 \texttt{.tmp/gap\_bt848*.g}; cf.\ Hartley's classification ($17$
 universal rank-$4$ locally projective polytopes, $441$ quotients) and
@@ -1832,6 +1852,7 @@ amalgamation ladder / universality / $J_1$ & bt848\\
 maniplex barren rung / class $2_{\{0,1,2\}}$ / Cayley over $V_4$ & bt849--bt851\\
 seventeen universals / $\mathrm{Aut}(\text{tomotope})$ universal & bt852\\
 dark orbit zoo / shadow bijection / $K_5$-complete dark sector & bt853--bt855\\
+dark charts $=$ mirror bus ($G$-set iso) & bt856\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\

@@ -1,0 +1,21 @@
+{
+  "theorem": "BT856 dark mirror bus",
+  "t1": {
+    "slots": 2160,
+    "census": {
+      "4": 540
+    }
+  },
+  "t2": {
+    "stab_order": 12,
+    "profile": {
+      "1": 1,
+      "2": 7,
+      "3": 2,
+      "6": 2
+    }
+  },
+  "t3": {
+    "conjugate": true
+  }
+}
