@@ -1065,6 +1065,27 @@ measurement timetable of this machine, glued by the substrate's own
 group instead of $\mathrm{PSL}(2,p)$.
 \emph{Witness: \texttt{bt836\_gc\_hemicells\_in\_spreads.py}.}
 
+\begin{theorem}[The library is a classical geometry]
+The timetable library carries its own rank-3 geometry, and the
+hemicell structure fibers over it with perfect uniformity:
+(i) every skew line pair lies in exactly $3$ schedules, so the
+$(\mathrm{schedule}\supset\mathrm{pair})$ flag count is
+$36\times45=1620$ --- the apartment count of the Tits building ---
+and $540\times3$;
+(ii) the near-partner graph on the $36$ schedules is strongly regular
+$\mathrm{SRG}(36,15,6,6)$, the \emph{other} classical rank-3 graph of
+$U_4(2)\cong\PSp(4,\GF3)$, so the control plane (timetables) and the
+data plane ($\W=\mathrm{SRG}(40,12,2,4)$) are the two rank-3
+geometries of one group;
+(iii) each schedule stabilizer contains exactly $6$ icosahedral
+$A_5$ cores ($216=6^3$ in all, each marking its unique schedule via
+its $[10,30]$ line orbits) giving $6$ distinct Petersen splits; each
+internal pair is a Petersen edge under exactly $2$ of the $6$ cores,
+hence every skew pair of $\W$ has exactly $6=3\times2$
+hemi-dodecahedral homes ($3240=540\times6$ Petersen flags).
+\emph{Witness: \texttt{bt837\_schedule\_library\_geometry.py}.}
+\end{theorem}
+
 %======================================================================
 \section{Build sheet and falsifiable witnesses}
 
@@ -1180,7 +1201,7 @@ fuel / contextuality & bt818, bt822, bt823\\
 memory / Steinberg & bt742, bt744\\
 clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
-Gr\"unbaum--Coxeter hemicells in schedules & bt836\\
+Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834\\
