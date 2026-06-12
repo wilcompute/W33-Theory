@@ -1,0 +1,77 @@
+{
+  "theorem": "BT853 dark orbit zoo",
+  "orbits": [
+    {
+      "size": 10,
+      "degrees": [
+        1
+      ],
+      "components": {
+        "K2": 10
+      },
+      "line_meets": {
+        "0": 10
+      }
+    },
+    {
+      "size": 30,
+      "degrees": [
+        3
+      ],
+      "components": {
+        "K4": 5
+      },
+      "line_meets": {
+        "0": 30
+      }
+    },
+    {
+      "size": 30,
+      "degrees": [
+        3
+      ],
+      "components": {
+        "K4": 5
+      },
+      "line_meets": {
+        "0": 30
+      }
+    },
+    {
+      "size": 30,
+      "degrees": [
+        3
+      ],
+      "components": {
+        "(20v,30e)": 1
+      },
+      "line_meets": {
+        "0": 30
+      }
+    },
+    {
+      "size": 30,
+      "degrees": [
+        3
+      ],
+      "components": {
+        "(20v,30e)": 1
+      },
+      "line_meets": {
+        "0": 30
+      }
+    },
+    {
+      "size": 60,
+      "degrees": [
+        6
+      ],
+      "components": {
+        "(20v,60e)": 1
+      },
+      "line_meets": {
+        "1": 60
+      }
+    }
+  ]
+}
