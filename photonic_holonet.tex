@@ -304,7 +304,7 @@ itself: it measures channels against its own past.
   \draw[arrow] (out) -- (choi);
   \draw[-{Stealth},dashed,thick] (out.north) .. controls (9.4,-0.55) and (4.4,-0.55) ..
     (delay.north);
-  \node[fill=white,inner sep=1.5pt,font=\small] at (7.2,-0.32)
+  \node[fill=white,inner sep=1.5pt,font=\small] at (7.7,-0.95)
     {BC loop: rotate $\arccos(-2/3)$ per pass};
 \end{tikzpicture}}
 \caption{Preparation schematic.  One photon, four registers.  The PBS
@@ -533,14 +533,14 @@ format, and $24\cdot45\cdot48$ is the finite runtime.
   arrow/.style={-{Stealth},thick}
 ]
   \node[block,fill=yellow!16] (cube) at (0,0) {$Q_3$ chart\\ 8 local addresses};
-  \node[block,fill=purple!12] (tomo) at (4.7,0) {tomotope packet\\ $4,12,16,48$};
-  \node[block,fill=red!10] (mirror) at (9.4,0) {$D_{12}$ mirror bus\\ 2160 slots};
-  \node[block,fill=green!12] (runtime) at (4.7,-1.55) {runtime lift\\ $24\cdot45\cdot48$};
-  \draw[arrow] (cube) -- node[above]{local route} (tomo);
-  \draw[arrow] (tomo) -- node[above]{durable slot} (mirror);
-  \draw[arrow] (mirror.south) .. controls (8.0,-1.55) and (6.4,-1.55) .. (runtime.east);
-  \draw[arrow] (runtime.west) .. controls (3.0,-1.55) and (1.4,-1.2) .. (cube.south);
-  \node[align=center,font=\small] at (4.7,-2.45)
+  \node[block,fill=purple!12] (tomo) at (5.1,0) {tomotope packet\\ $4,12,16,48$};
+  \node[block,fill=red!10] (mirror) at (10.2,0) {$D_{12}$ mirror bus\\ 2160 slots};
+  \node[block,fill=green!12] (runtime) at (5.1,-1.55) {runtime lift\\ $24\cdot45\cdot48$};
+  \draw[arrow] (cube) -- node[above,font=\scriptsize,fill=white,inner sep=1pt]{local route} (tomo);
+  \draw[arrow] (tomo) -- node[above,font=\scriptsize,fill=white,inner sep=1pt]{durable slot} (mirror);
+  \draw[arrow] (mirror.south) .. controls (8.6,-1.55) and (6.8,-1.55) .. (runtime.east);
+  \draw[arrow] (runtime.west) .. controls (3.2,-1.55) and (1.4,-1.2) .. (cube.south);
+  \node[align=center,font=\small] at (5.1,-2.45)
     {fast XOR routing is committed through the tomotope middle layer and reflected by the mirror bus.};
 \end{tikzpicture}
 \caption{Middleware schematic.  The cube is the reversible local router;
@@ -1456,54 +1456,339 @@ A measured deviation in any row falsifies the corresponding layer.
 
 %======================================================================
 \section{Implications, corrections, and the ethos}
+\label{sec:implications}
 
-\textbf{Physics.}  The vacuum is five-fold degenerate, indexed by the
-Schl\"afli inventory; the choice $1+12+27$ is a parabolic gauge choice,
-not a necessity.  The generation triples of the matter shell are the
-tritangent triangles of the $27$-line configuration, reconstructed here
-purely from double cosets.  Matter and magic coincide: the
-non-classical resource of the machine \emph{is} its matter sector, with
-the cube's cell census $1+8+12+6$ grading the fuel.
+This section states what the architecture means --- for physics, for
+computing, for networking, and beyond the laboratory.  Every claim
+below is either (i) a theorem with an executable witness in this
+paper's ledger, or (ii) an implication of such a theorem, flagged as
+such.  Nothing here floats free of the verification chain.
 
-\textbf{Computing.}  Universality requires no exotic hardware: the
-Clifford layer is three optical elements, the magic layer is the
-photon's own matter shell, and the topological layer rides the exact
-$\sigma^5=Z$ braid identity.  The network-is-computer thesis is not an
-analogy but the statement that the atlas's transport groupoid and the
-register's gate groupoid are the same groupoid.  The middleware theorem
-adds the missing operating-system layer: the cyclic $C_{12}$ clock
-orders phase, the dihedral $D_{12}$ mirror bus routes state, the
-tomotope $48$-packet supplies local edge--face incidence, and the full
-runtime is exactly $24\cdot45\cdot48=51840$.
+\subsection{Physics}
 
-\textbf{Networking.}  The holonet is a universal network because it has
-addresses, routers, routes, packets, clocks, and error signals at the
-same level as it has gates.  The $Q_3$ charts give local e-cube
-routing; the Tits-building apartments give inter-chart routing; the
-$D_{12}$ mirror slots give transport identity; and the tomotope gives a
-durable packet shape.  Recursive substitution gives $40^n$ photonic
-leaves with $O(\log N)$ reversible diameter.  The network scales
-because every child core inherits the same finite protocol rather than
-depending on a separate global controller.
+\paragraph{The vacuum is a gauge choice among five.}
+The decomposition $40=1+12+27$ (self, gauge, matter) that organizes
+the entire Standard-Model derivation is \emph{one of five} maximal
+decompositions, indexed by the Schl\"afli inventory of the cubic
+surface: $27$ registers, $36$ schedules, $40+40$ building parabolics,
+$45$ polar pairs.  The five vacua are connected by an explicit $5
+\times 5$ double-coset transition matrix.  Physically: what looks
+like ``the'' vacuum is a parabolic gauge choice, and the theory knows
+its own alternative phases and the exact combinatorial cost of moving
+between them.  No continuum field theory has this property; here it
+is finite, exact, and enumerated.
 
-\textbf{Physics-to-architecture dictionary.}  The point-parabolic split
-$1+12+27$ is the processor's local I/O anatomy: self pole, gauge
-neighbors, matter/magic non-neighbors.  The edge code on $240$ qutrits
-is bandwidth and memory at once.  The $81=q^4$ Steinberg sector is the
-protected logical register.  The thirty-six spread schedules are the
-measurement operating system.  The five vacua are boot modes.  The
-Boerdijk--Coxeter irrational loop is the watchdog clock that refuses to
-fall into a finite phase-cycle trap.  These are engineering claims only
-because they are first incidence claims.
+\paragraph{Matter is magic, with three octane grades.}
+The machine's non-classical resource (magic, in the resource-theoretic
+sense) coincides \emph{exactly} with its matter sector: the $36$
+entangled Witting rays are the matter shell, and the $27$ matter
+contexts stratify $[1,8,12,6]$ --- the cube's cell census.  The three
+magic grades --- deep $(2+\sqrt3)/6$ on $8=2^q$ rays, mid
+$(5+2\sqrt3)/12$ on $24=f$, shallow $3/4=q/\mu$ (the Werner
+threshold) on $4=\mu$ --- mean that ``what matter is'' and ``what
+fuels quantum advantage'' are one census.  A physicist reads this as
+a structural identification of the fermionic sector with the
+non-stabilizer sector; an engineer reads the same integers as a fuel
+gauge.  Both readings are forced by the same double cosets.
 
-\textbf{The ethos.}  Two pre-existing corpus claims failed under exact
-computation and were corrected at their sources during this program:
-the independence number of $\W$ is $7$, not $10$ (no ovoid exists, the
-``perfect graph'' block is withdrawn), and the Kochen--Specker optimum
-is $36/40$, not $34/40$.  In both cases the corrected values are
-\emph{more} substrate-natural than the claims they replaced
-($\alpha=\Phi_6$; budget $=(q!)^2/v$) --- the pattern a real structure
-shows when probed honestly.
+\paragraph{Time has three hands and an irrational escapement.}
+The internal $\mathbb{Z}_{12}$ rectangle clock, the external
+$\mathbb{Z}_7$ (Cs\'asz\'ar) and $\mathbb{Z}_{13}$ (Singer)
+references, and the Boerdijk--Coxeter drive $\arccos(-2/3)$ together
+realize a discrete time quasicrystal: a drive that never repeats yet
+has exactly bounded gap structure (two gap lengths at $n=30=h(E_8)$).
+The arrow of time appears as the unique self-loop fixed point $I/q$
+with its two-trit forgetting cost: irreversibility is priced, not
+postulated.  Implication: any laboratory system realizing this
+architecture is also a clock whose long-term stability is protected
+by a number-theoretic irrationality rather than by feedback.
+
+\paragraph{The exceptional polytopes are the theory's siblings, not
+its parts.}  The Gr\"unbaum--Coxeter arc
+(Theorems~\ref{thm:library}--\ref{thm:amalgam}) shows the substrate
+carries the complete local geometry of the $11$-cell and $57$-cell
+--- hemi-icosahedra and hemi-dodecahedra in every schedule, with
+exact incidence --- while universality plus Lagrange forbid their
+global crystallization inside $\Sp(4,\GF3)$.  The same local amalgam
+$A_5\ast_{D_{10}}A_5$ closes as $L_2(9)$ (the substrate's schedule
+core), $L_2(11)$ (the $11$-cell), $L_2(19)$ (the $57$-cell), with
+$J_1\times L_2(19)$ --- a sporadic group --- atop the universal
+ladder.  The physical moral is delocalization: the substrate
+\emph{cannot} host a ``GC condensate,'' so the icosahedral order is
+necessarily spread over the $36$ schedules as compass structure.
+This is the same mathematical mechanism by which frustrated phases in
+condensed matter refuse local order parameters --- realized here
+exactly, with the obstruction an integer ($11,19\nmid 25920$).
+
+\paragraph{Spectral ghosts.}  The primes that refuse to divide the
+group still govern its analysis: $11=k-1$ is the Ihara prime of the
+zeta critical circle $|u|=1/\sqrt{11}$, $19$ enters through the
+Heawood genus $H(19)=20=$ the BC ring count, and the chart-web
+eigenvalue fields are $\mathbb{Q}(\sqrt{\Theta})$ and
+$\mathbb{Q}(\sqrt{\Phi_{12}})$ ($\Theta=10$, $\Phi_{12}=73$, both
+parameter-closure constants).  A spectroscopist's summary: the
+machine's transport spectrum speaks the tier-ladder dialect of the
+physics paper, and the forbidden primes appear as poles of the zeta
+function rather than as symmetries.
+
+\paragraph{Falsifiability is retail, not wholesale.}  Each physics
+reading above is pinned to a tabletop witness with an exact rational
+value: trace--Choi visibility $1/3=1/q$ exactly (not approximately);
+Kochen--Specker budget $36/40=(q!)^2/v$ exactly, with deficit $\mu$;
+contextual fraction $1/10=1/\Phi_4$; Werner threshold $3/4=q/\mu$;
+two gap lengths --- not three --- at drive step $30$.  A single wrong
+integer kills the corresponding layer.  This is a stronger
+falsifiability posture than parameter-fitting physics can offer,
+because there are no parameters to refit.
+
+\subsection{Computing}
+
+\paragraph{What the machine is.}  One photon carries a $4$-dimensional
+path--polarization register (states) and a $9$-dimensional
+past--future time-bin register (operators), realizing the same
+$\W$ geometry twice; the operator--operand duality makes program and
+data literally the same incidence object.  Universality is a
+two-ingredient theorem: three passive optical elements (tritter,
+phase plate, EOM) generate the full $51840$-element Clifford
+symplectic closure --- \emph{exactly}, not approximately --- and the
+matter shell supplies the magic states that promote Clifford to
+universal.  There is no cryostat, no vacuum chamber, no trapped ion:
+the exotic resource is geometry.
+
+\paragraph{What it costs.}  The build sheet is a heralded
+single-photon source, one polarizing beam splitter, one symmetric
+tritter, a three-rail delay ladder, one electro-optic modulator, one
+recirculation loop with a fixed irrational rotation, and
+single-photon detectors.  Every component is catalog optics.  The
+machine's benchmarks are integer-valued: a laboratory can certify the
+Clifford layer by counting to $51840$ and certify the fuel by hitting
+$36/40$.  Self-testing is native because the specification is
+arithmetic.
+
+\paragraph{The software stack exists and is finite.}  Programs are
+braid words (with $\sigma^5=Z$ exact); the instruction set is the
+BT828 compiler ABI; the operating system is the timetable library
+(36 schedules; overlap law $1$-or-$4$ with switching cost $6$);
+synchronization is the beacon-heptad mesh ($2880$ frames, themselves
+forming an exchange network); memory protection is the Steinberg
+sector ($81=q^4$, a single irreducible --- protected by Schur's
+lemma, the strongest no-leakage statement representation theory can
+make); the watchdog is the BC loop.  Each layer is a theorem; the
+stack compiles because double cosets compose.
+
+\paragraph{Redundancy is built in, not bolted on.}  The newest
+results sharpen the fault story: each pentad core stores its
+timetable \emph{three independent ways} (lit-chart transversals, the
+$K_5$ edge labeling, dark-sector shadows), every skew pair has six
+Petersen homes and two matching covers, and the dark sector carries
+its own chart matching and two chiral tetrad partitions
+(Theorem~\ref{thm:amalgam} block).  Erasure of any single
+description leaves the schedule reconstructible --- redundancy
+appears as a counting identity, not as an engineering allowance.
+The middleware's two packet phases (tetrahedral/hemioctahedral, the
+tomotope's $2_{\{0,1,2\}}$ class) confine phase changes to cell
+hops, which is where the commit boundaries already sit, and the
+runtime's vertex layer is a free $\GF2^{\,2}$-torsor (the Cayley
+structure), so address arithmetic is XOR end to end.
+
+\paragraph{What it is not.}  No claim is made here of asymptotic
+speedups over error-corrected gate-model machines, of fault-tolerance
+thresholds, or of scalability beyond the fractal substitution rule
+($40^n$ leaves, diameter $8n$, commit clock $T(n)=4(7^n-1)$) ---
+those are stated as exact combinatorial scaling laws, and their
+physical realization at depth $n>2$ is an open engineering problem
+with its first hard boundary already computed (the $n=5$
+desynchronization with remainder $24=f$).  The honest claim is
+narrower and stranger: a complete, finite, self-verifying
+computational architecture exists inside one photon's worth of
+quantum optics, with zero adjustable parameters.
+
+\subsection{Networking}
+
+\paragraph{The network is the computer, twice over.}  The thesis is
+not rhetorical: the atlas's transport groupoid and the register's
+gate groupoid are the same groupoid, so moving a packet and applying
+a gate are one operation.  The new library-geometry theorem
+(Theorem~\ref{thm:library}) doubles the statement at the control
+plane: the $36$ timetables form $\mathrm{SRG}(36,15,6,6)$, the
+\emph{other} rank-3 geometry of the same group, so the control plane
+and the data plane ($\mathrm{SRG}(40,12,2,4)$) are the two classical
+geometries of one symmetry.  Configuration management inherits
+strongly-regular guarantees: any two timetables, near or far, have
+exactly six common near-neighbors --- worst-case reconfiguration
+paths are bounded by the geometry itself.
+
+\paragraph{Routing, addressing, switching.}  Local routing is e-cube
+XOR on $Q_3$ charts ($540$ of them; the atlas is glued along the
+$1620$ apartments of the Tits building, diameter $5$).  Addresses
+are Gray-coded $\GF2^3$ words; the antipode map is bit complement.
+Timetable switching obeys the overlap law: cheap hops preserve
+$4=\mu$ of $10$ calibrated contexts, the switch graph is the
+$U_4(2)$ rank-3 geometry, and every skew pair lies in exactly $3$
+schedules, $6$ Petersen homes, and $2$ pentad-matching covers ---
+the router's spare-path inventory is an exact census, not a
+provisioning estimate.
+
+\paragraph{Synchronization without a master.}  The beacon heptads
+($2880$ complete $K_7$ interference meshes, all pairwise overlaps
+$1/3$) are reference frames that form their own exchange network ---
+the network's clock distribution is itself a network, with no
+distinguished master node.  External discipline comes from the
+$\mathbb{Z}_7/\mathbb{Z}_{13}$ clocks (both decimal period $6$) and
+the BC quasicrystal drive; internal phase order from $C_{12}$.  A
+distributed-systems reader will recognize the structure: consensus
+by geometry, where the ``leader election'' problem dissolves because
+the frame family is a single transitive orbit.
+
+\paragraph{Security posture (implication, flagged).}  Three
+structural facts have security readings, stated here as directions
+rather than theorems.  (i) Contextuality is tamper-evidence: the KS
+budget $36/40$ is exact, so any channel intervention that classicalizes
+measurement statistics moves an integer and is detectable in
+principle.  (ii) Gate teleportation stores a unitary in the photon's
+self-entanglement and applies it by Bell projection against its own
+past --- a store-and-forward primitive for quantum repeaters that
+never exposes the gate classically.  (iii) The timetable redundancy
+(three independent reconstructions) is an erasure-code posture
+against denial: losing a description class does not lose the
+schedule.  Turning these into security proofs requires adversary
+models this paper does not supply.
+
+\paragraph{Scaling.}  The fractal holonet substitutes a full
+$40$-node substrate for each leaf: $40^n$ leaves, $(40^n-1)/39$
+substrate instances, reversible diameter $\le 8n = 8\log_{40}N$,
+durable commit clock $T(n)=4(7^n-1)$, with the first guard band an
+arithmetic necessity at $n=5$.  Because every child inherits the
+same finite protocol, scaling adds no new control logic --- the
+protocol stack is depth-invariant.  This is the architectural
+property that datacenter fabrics approximate statistically and this
+geometry has exactly.
+
+\subsection{The physics-to-architecture dictionary}
+
+The dictionary is the deepest implication: one set of integers reads
+simultaneously as physics and as engineering, because both readings
+are projections of the same incidence theorems.
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+object & physics reading & architecture reading\\
+\midrule
+$1+12+27$ split & self / gauge / matter & pole / I-O ports / fuel+store\\
+$240$ edges & interaction qutrits & bandwidth = memory\\
+$81=q^4$ Steinberg & protected sector (Schur) & logical register\\
+$36$ spreads & measurement bases & timetable OS\\
+$\mathrm{SRG}(36,15,6,6)$ & basis-overlap law & control-plane fabric\\
+five vacua & phases of the theory & boot modes\\
+magic strata $8{+}24{+}4$ & fermion shell grading & fuel octanes\\
+$540$ skew pairs & two-fold null systems & hypercube charts\\
+$1620$ apartments & Weyl frames & inter-chart trunks\\
+$2880$ heptads & equiangular frames & sync beacons\\
+BC drive $\arccos(-2/3)$ & quasicrystal time & watchdog clock\\
+compasses ($216{+}216$) & icosahedral order, delocalized & needle registers\\
+pentads (chiral $216{+}216$) & maximal partial spreads & F$_5$ chart caches\\
+dark sector zoo & hidden-half structure & erasure store\\
+tomotope ($2_{\{0,1,2\}}$, Cayley/$V_4$) & sphere/projective alternation & packet middleware\\
+$11$-cell, $57$-cell, $J_1$ & universal completions (blocked) & the covers the\\
+ & & hardware refuses\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Three rows deserve emphasis.  The \emph{Steinberg row} is the
+strongest protection statement available: the register is one
+irreducible representation, so \emph{any} equivariant leakage
+operator is zero by Schur's lemma --- protection by symmetry, not by
+redundancy.  The \emph{compass rows} say that what physics sees as
+delocalized icosahedral order, engineering sees as a navigation
+instrument: $12$ needles per schedule, each carrying Petersen
+addressing, five-chart caches, and a dark-sector mirror.  The
+\emph{universal-polytope row} states the program's sharpest
+structural lesson: the hardware keeps the local physics of the
+exceptional objects and refuses their global rigidity; the refusal
+(an integer non-divisibility) is precisely why the architecture is
+distributed.
+
+\subsection{Beyond the laboratory}
+
+\paragraph{A different contract between theory and experiment.}
+Every layer of this machine is specified by integers and verified by
+scripts that re-derive those integers from first principles in
+seconds.  The cultural implication is a publishing model in which
+papers \emph{run}: a claim is not a sentence but a reproducible
+computation, and a correction is a commit.  This program has already
+operated under that contract (see the ethos below) --- twice it
+corrected its own published claims at the source, and the corrected
+values were more natural than the originals.  If the broader physics
+literature adopted executable claims at even a small scale, entire
+classes of irreproducibility would become type errors.
+
+\paragraph{Quantum hardware without a building.}  Architectures that
+need millikelvin cryostats centralize by economics: only
+institutions can own them.  A universal architecture whose parts
+list is catalog optics --- source, splitters, delay fiber, modulator,
+detectors --- decentralizes by the same economics.  The realistic
+near-term role is not supremacy-class computation but
+\emph{certified} small-scale quantum information: teaching
+laboratories that can verify $51840$ and $36/40$ on a bench;
+metrology nodes whose clock is protected by an irrational rotation;
+network testbeds where gates and routes are the same hardware.  A
+machine whose benchmarks are exact integers is also the natural
+pedagogical machine: a student can check the whole specification.
+
+\paragraph{Communication and computation stop being separate
+utilities.}  In this architecture there is no boundary at which
+computation hands off to networking --- the gate groupoid and the
+transport groupoid coincide, and the fractal substitution makes the
+computer/network identity scale-invariant.  The long-run implication,
+if any physical system realizes this pattern at depth, is
+infrastructural: bandwidth and compute become one provisioned
+quantity, scheduling becomes group theory, and the spectrum-allocation
+problem for the network's measurement contexts is solved by a
+finite library ($36$ timetables with a known switching metric)
+rather than by auction or contention.
+
+\paragraph{Society-scale stakes of a zero-parameter physics.}
+Separately from the machine, the substrate program's physics claims
+--- $54+$ observables, $14$ falsifiable predictions, no adjustable
+parameters --- carry a specific societal meaning: they are maximally
+exposed.  A theory with no dials cannot retreat; the $2027$
+neutrino-hierarchy determination, the proton-decay window, the CMB
+measurements will each either hit the predicted integers or end the
+corresponding pillar.  Public trust in fundamental science is built
+by exactly this posture --- predictions that can die --- and the
+machine half of the program extends the posture to hardware: the
+device specification is its own audit.
+
+\paragraph{What could go wrong, said plainly.}  The architecture is
+exact; its physical realization is not yet demonstrated beyond the
+component level.  The fractal scaling laws are combinatorial
+theorems, not engineering schedules.  The security readings are
+directions, not proofs.  And the identification of the substrate with
+fundamental physics stands or falls with the prediction table, not
+with the elegance of the mathematics.  This paragraph exists because
+the program's ethos (below) requires the failure modes to be listed
+next to the claims.
+
+\subsection{The ethos}
+
+Several pre-existing corpus claims failed under exact computation
+and were corrected at their sources during this program: the
+independence number of $\W$ is $7$, not $10$ (no ovoid exists; the
+``perfect graph'' block is withdrawn); the Kochen--Specker optimum is
+$36/40$, not $34/40$; the pentad-sharing count of BT844 was corrected
+by the chiral-orbit census of BT845 within one working session; and
+the tomotope's framing was corrected from ``non-polytopal maniplex''
+to ``uniform polytope with non-polytopal minimal covers'' when the
+literature was read precisely.  In every case the corrected value is
+\emph{more} substrate-natural than the claim it replaced
+($\alpha=\Phi_6$; budget $=(q!)^2/v$; $432=216+216$ chiral;
+infinitely many covers as the actual pathology) --- the pattern a
+real structure shows when probed honestly.  The program treats
+corrections as first-class results: they are committed, logged, and
+cited like theorems, because a corpus that cannot heal is a corpus
+that cannot be trusted.
 
 %======================================================================
 \appendix
