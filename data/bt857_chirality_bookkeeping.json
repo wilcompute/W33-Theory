@@ -1,0 +1,12 @@
+{
+  "theorem": "BT857 chirality bookkeeping",
+  "normalizer": 120,
+  "pentads_fixed": true,
+  "dodeca_swapped": true,
+  "tetrads_swapped": false,
+  "verdicts": {
+    "pentads": "absolute (two PSp-orbits, N-fixed)",
+    "dodecahedra": "relative (N-swapped): no PSp-invariant label",
+    "tetrads": "absolute"
+  }
+}
