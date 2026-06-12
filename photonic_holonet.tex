@@ -1144,8 +1144,17 @@ with $\chi_{H_1}(g)=\#\mathrm{fixflags}-\#\mathrm{fixpoints}
 for every $g$.  The QECC logical space and the Schur-protected
 register below are one object: any equivariant logical error is a
 scalar, so only symmetry-breaking noise can touch the code, and the
-sentinel/clock layers are exactly the symmetry monitors.
-\emph{Witness: \texttt{bt861\_code\_register\_is\_steinberg.py}.}
+sentinel/clock layers are exactly the symmetry monitors.  The
+homological dictionary then completes: $H_0$ is trivial (the vacuum
+pole), $H_1$ is Steinberg (the register), and $H_2$ (dim $40$, one
+tetrahedron-boundary $2$-cycle per line) is the \emph{sign-twisted}
+line module --- a fixing symmetry acts on a line's $2$-cycle by the
+parity of its induced $S_4$ action (verified for all $25920$
+elements; \emph{not} the plain permutation module): the top homology
+is the \emph{oriented} timetable carrier, feeding the chirality
+ledger.
+\emph{Witnesses: \texttt{bt861\_code\_register\_is\_steinberg.py},
+\texttt{bt862\_h2\_is\_the\_line\_module.py}.}
 \end{theorem}
 
 \begin{theorem}[Steinberg memory]
@@ -2063,6 +2072,7 @@ dark charts $=$ mirror bus ($G$-set iso) & bt856\\
 Heisenberg/$\GF3^3$ shell torsors, Schl\"afli decoding & bt858\\
 Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
 code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
+$H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\
