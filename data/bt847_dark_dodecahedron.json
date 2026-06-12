@@ -1,0 +1,22 @@
+{
+  "theorem": "BT847 dark dodecahedron and chart pentagon",
+  "t1": {
+    "pair_orbit_sizes": [
+      10,
+      30,
+      30,
+      30,
+      30,
+      60
+    ],
+    "dodecahedra": 2,
+    "thirty_orbits": 4
+  },
+  "t2": {
+    "distinct_chart_pairs": 10,
+    "multiplicities": {
+      "1": 10
+    },
+    "verdict": "K5 exactly: schedule lines <-> chart pairs bijectively (10 lines = C(5,2) pairs)"
+  }
+}

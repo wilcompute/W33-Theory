@@ -1163,6 +1163,24 @@ refuted at the $G$-set level (orbits $[360,2880]$ vs transitive).
 \texttt{bt845\_pentad\_exchange\_and\_chart\_double\_cover.py}.}
 \end{theorem}
 
+\paragraph{Reconstruction, the chart $K_5$, and the dark dodecahedra.}
+The pentad core's full signature $[5,5,10,20]$ (lines), $[20,20]$
+(points) is rigid: both chiral pentads cover the \emph{same}
+$20$-point orbit (lit/dark halves of the substrate), the five
+matching charts' common-transversal bundles overlap to exactly the
+$10$ schedule lines --- \textbf{a pentad pair generates its
+timetable} --- and the line $\to$ chart-pair map is a bijection onto
+the $\binom52=10$ edges of $K_5$: the schedule \emph{is} a $K_5$ on
+its own charts ($4$ transversals per chart, $2$ charts per line).
+The $20$ dark lines complete the $\{5,3\}$ family: their $190$ pairs
+split $[10,30,30,30,30,60]$ under the core, and exactly two of the
+$30$-orbits are \textbf{dodecahedron skeletons} ($3$-regular, girth
+$5$, diameter $5$) --- a chiral pair of genuine dodecahedra beneath
+every compass needle, one level under the hemi-dodecahedral Petersen
+splits of the schedule itself.
+\emph{Witnesses: \texttt{bt846\_pentad\_core\_anatomy.py},
+\texttt{bt847\_dark\_dodecahedron.py}.}
+
 \begin{theorem}[BT839 GC operation Euler/flag audit]
 Treating the full Gr\"unbaum--Coxeter note as a data table gives a
 second invariant.  The base tables for the $11$-cell, $57$-cell,
@@ -1395,6 +1413,7 @@ clocks / quasicrystal / arrow & bt774, bt819, bt820, bt823\\
 sync / schedules / overlap law & bt817, bt819, bt835\\
 Gr\"unbaum--Coxeter hemicells / library geometry & bt836, bt837, bt839\\
 two compasses / $4\cdot K_{10}=12$ Petersens / chart double cover & bt843--bt845\\
+pentad anatomy / schedule reconstruction / dark dodecahedra & bt846, bt847\\
 universality & bt825\\
 fractal computer/network & bt827\\
 runtime compiler / sentinel / commit / cover boundary & bt828--bt834, bt838\\
