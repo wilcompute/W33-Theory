@@ -1906,8 +1906,16 @@ elementary $\GF3^{\,3}$ (the line parabolic's $O_3$), a flat
 $3$-trit register cube carrying \emph{no} invariant strongly regular
 graph.  Curvature for states, flatness for programs: the matter
 sector is a Heisenberg manifold on the state side and a ternary
-address space on the operational side.
-\emph{Witness: \texttt{bt858\_heisenberg\_shell\_torsors.py}.}
+address space on the operational side.  The register reading is
+exact: assigning each Bell-shell context its $3$-trit address, the
+four pair relations $[4,4,6,12]$ are the difference-vector classes,
+and the geometry is a function of register arithmetic alone ---
+meeting contexts ($\pm$-paired $4$-classes) share exactly $1$
+transversal onto the Bell line, near-skew ($12$) exactly $2$,
+far-skew ($6$) exactly $0$: base-$3$ register incidence for matter
+contexts, twin to the charts' base-$2$ Gray arithmetic.
+\emph{Witnesses: \texttt{bt858\_heisenberg\_shell\_torsors.py},
+\texttt{bt860\_bell\_shell\_register\_arithmetic.py}.}
 
 Three rows deserve emphasis.  The \emph{Steinberg row} is the
 strongest protection statement available: the register is one
@@ -2036,6 +2044,7 @@ seventeen universals / $\mathrm{Aut}(\text{tomotope})$ universal & bt852\\
 dark orbit zoo / shadow bijection / $K_5$-complete dark sector & bt853--bt855\\
 dark charts $=$ mirror bus ($G$-set iso) & bt856\\
 Heisenberg/$\GF3^3$ shell torsors, Schl\"afli decoding & bt858\\
+Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\

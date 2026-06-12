@@ -1,0 +1,24 @@
+{
+  "theorem": "BT860 Bell-shell register arithmetic",
+  "suborbit_sizes": [
+    4,
+    4,
+    6,
+    12
+  ],
+  "geometry_uniform_per_class": true,
+  "census": {
+    "class_4_0": {
+      "(True, 1)": 45
+    },
+    "class_4_1": {
+      "(True, 1)": 63
+    },
+    "class_6_2": {
+      "(False, 0)": 81
+    },
+    "class_12_3": {
+      "(False, 2)": 162
+    }
+  }
+}
