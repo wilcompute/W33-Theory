@@ -1,0 +1,16 @@
+{
+  "theorem": "BT931 canonicality stress test",
+  "trials": 512,
+  "seed": 1,
+  "all_trials_mod2_isometry_unimodular_positive": true,
+  "determinant_counts": {"-1": 265, "1": 247},
+  "support_sum_min": 76,
+  "support_sum_max": 116,
+  "support_sum_mean": 96.3984375,
+  "spread_min": 8,
+  "spread_max": 24,
+  "best_seen_key_support_spread_sorted_profile": [76, 8, [6, 6, 6, 10, 10, 10, 14, 14]],
+  "best_seen_raw_profile": [6, 6, 6, 14, 14, 10, 10, 10],
+  "conclusion": "Across random valid homology bases the mod-2 maps stay in the same isometry class and lift unimodularly/positively, but support profiles vary. Positivity alone is not a canonical selector; a support/balance criterion is needed.",
+  "checks": {"T1_all_maps_are_mod2_isometries": true, "T2_integral_lifts_unimodular_in_sample": true, "T3_support_energy_varies": true, "T4_single_orbit_mod2_behavior": true, "T5_canonicality_not_forced_by_positivity": true}
+}
