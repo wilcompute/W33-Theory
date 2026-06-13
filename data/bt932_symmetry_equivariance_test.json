@@ -1,0 +1,10 @@
+{
+  "theorem": "BT932 symmetry equivariance test",
+  "vertex_subset": [0, 1, 4, 22, 27, 35, 23, 34],
+  "w33_self_maps_preserving_subset": 1,
+  "nontrivial_preserving_maps": 0,
+  "e8_diagram_self_maps": 1,
+  "equivariance_result": "The BT926 vertex E8 witness is isolated by this symmetry test. Equivariance under the vertex witness is therefore vacuous and cannot choose a unique chain-to-E8 map.",
+  "next_target": "Use the tetracode A2^4 block structure or a larger chain-complex symmetry if a nontrivial equivariant selector is desired.",
+  "checks": {"T1_subset_preserving_maps_counted": true, "T2_vertex_preserving_symmetry_trivial": true, "T3_e8_diagram_symmetry_trivial": true, "T4_equivariance_not_overclaimed": true, "T5_next_nontrivial_target_identified": true}
+}
