@@ -1,0 +1,28 @@
+{
+  "theorem": "BT897 q^2=9 within-grade profile eigen-scan",
+  "holonet_target": "photonic_holonet.tex, not a standalone transvection paper",
+  "input_boundary": "BT894: grade skeleton is angle-blind; angles live in q^2=9 profiles",
+  "primitive_constants": {"lambda": 2, "q": 3, "mu": 4, "Phi6": 7, "Phi4": 10, "k": 12, "Phi3": 13, "g": 15, "f": 24},
+  "target_cabibbo_plane": {
+    "a": 13,
+    "b": 3,
+    "denom2": 178,
+    "sin": 0.22485950669875843,
+    "cos": 0.9743911956946198,
+    "sin2": 0.05056179775280899,
+    "tan": 0.23076923076923078,
+    "a_name": "Phi3",
+    "b_name": "q",
+    "exact_sin": "3/sqrt(178)",
+    "exact_cos": "13/sqrt(178)",
+    "exact_tan": "3/13",
+    "commutator_norm2_diag_1_2": 0.09601060472162604
+  },
+  "three_profile_scaffold": [
+    {"grade": 0, "plane": [0, 1], "driver": "Cabibbo", "sin": "q/sqrt(Phi3^2+q^2) = 3/sqrt(178)"},
+    {"grade": 1, "plane": [2, 3], "driver": "solar-style", "sin2": "mu/Phi3 = 4/13"},
+    {"grade": 2, "plane": [4, 5], "driver": "atmospheric-style", "sin2": "Phi6/Phi3 = 7/13"}
+  ],
+  "exact_conclusion": "The smallest substrate-native Cabibbo-shaped one-plane profile uses the (Phi3,q) plane, giving sin(theta)=q/sqrt(Phi3^2+q^2)=3/sqrt(178). It is an internal profile mixer: the global Z3 reflection skeleton is untouched, but the within-grade Gram profiles fail to commute.",
+  "checks": {"T1_target_denominator_178": true, "T2_target_sin_3_over_sqrt178": true, "T3_target_tan_3_over_13": true, "T4_commutator_nonzero": true, "T5_profile_scaffold_preserves_three_grade_blocks": true}
+}
