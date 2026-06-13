@@ -1,0 +1,16 @@
+{
+  "theorem": "BT871 where the Z3 lives (Berry-phase correction)",
+  "F3_betti": [
+    1,
+    81,
+    40
+  ],
+  "omega_pairings": {
+    "0": 40
+  },
+  "uniform_berry_cochain_exact": true,
+  "berry_class_nonzero": false,
+  "per_vertex_mod3": 1,
+  "global_mod3": 1,
+  "correction": "uniform Berry phase is a coboundary; the physical Z3 is the order-3 action on Steinberg H1 (BT863)"
+}
