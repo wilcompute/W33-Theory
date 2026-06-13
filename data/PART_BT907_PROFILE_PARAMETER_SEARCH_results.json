@@ -1,0 +1,22 @@
+{
+  "theorem": "BT907 profile-parameter search beyond scaffold",
+  "status": "exact rational profile inventory search, not measured-data fit",
+  "primitive_constants": {"lambda": 2, "q": 3, "mu": 4, "Phi6": 7, "Phi4": 10, "k": 12, "Phi3": 13, "g": 15, "f": 24},
+  "generated_denominators_containing_targets": [13, 91, 178],
+  "target_hits": {
+    "Cabibbo": {"sin2": "9/178", "formula": "q^2/(Phi3^2+q^2)=9/178", "candidate_score": 12},
+    "PMNS_solar": {"sin2": "4/13", "formula": "mu/Phi3=4/13", "candidate_score": 7},
+    "PMNS_reactor": {"sin2": "2/91", "formula": "lambda/(Phi6*Phi3)=2/91", "candidate_score": 9},
+    "PMNS_atmospheric": {"sin2": "7/13", "formula": "Phi6/Phi3=7/13", "candidate_score": 7}
+  },
+  "package_planes": [
+    {"name": "Cabibbo", "plane": [0, 1], "sin2": "9/178", "formula": "q^2/(Phi3^2+q^2)=9/178", "sin_numeric": 0.22485950669875843, "cos_numeric": 0.9743911956946198, "candidate_score": 12},
+    {"name": "PMNS_solar", "plane": [2, 3], "sin2": "4/13", "formula": "mu/Phi3=4/13", "sin_numeric": 0.5547001962252291, "cos_numeric": 0.8320502943378437, "candidate_score": 7},
+    {"name": "PMNS_reactor", "plane": [4, 5], "sin2": "2/91", "formula": "lambda/(Phi6*Phi3)=2/91", "sin_numeric": 0.14824986333222023, "cos_numeric": 0.9889499370655614, "candidate_score": 9},
+    {"name": "PMNS_atmospheric", "plane": [6, 7], "sin2": "7/13", "formula": "Phi6/Phi3=7/13", "sin_numeric": 0.7337993857053428, "cos_numeric": 0.6793662204867574, "candidate_score": 7}
+  ],
+  "neutral_coordinates": [8],
+  "candidate_count": 3576,
+  "exact_conclusion": "The Cabibbo/PMNS archive scaffold is recovered by a substrate-generated rational angle inventory: denominators Phi3=13, Phi6*Phi3=91, and Phi3^2+q^2=178. Four disjoint two-planes consume eight of the nine q^2 profile coordinates, leaving one neutral/sentinel coordinate.",
+  "checks": {"T1_all_four_targets_found_by_search": true, "T2_denominators_substrate_generated": true, "T3_four_disjoint_planes_fit_C9": true, "T4_one_neutral_coordinate_remaining": true, "T5_no_grade_skeleton_mutation": true}
+}
