@@ -1,0 +1,9 @@
+{
+  "theorem": "BT877 gauge parity is duality",
+  "PGSp_order": 51840,
+  "PSp_4line_image": 12,
+  "PGSp_4line_image": 24,
+  "odd_in_PSp": 0,
+  "odd_in_PGSp": 12,
+  "duality_gives_odd": true
+}
