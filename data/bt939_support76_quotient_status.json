@@ -1,0 +1,12 @@
+{
+  "theorem": "BT939 quotient status for support-76 selector candidates",
+  "status": "partial quotient: current certificate under transported C3 only; full many-or-one unresolved",
+  "current_best_profile": [6, 6, 6, 10, 10, 10, 14, 14],
+  "transported_group_used": "coordinate C3 subgroup from BT937",
+  "group_size_used": 3,
+  "current_certificate_orbit_size_under_C3": 3,
+  "canonical_representative_under_C3": [6, 6, 6, 10, 10, 10, 14, 14],
+  "unresolved_requirements": ["enumerate all support-sum-76 hyperbolic decompositions", "construct full order-48 signed monomial action on chain H", "quotient the full candidate set by the full action"],
+  "orbit_conclusion": "The single current certificate has a C3 orbit of size 3 under the transported coordinate action. This does not resolve one-orbit uniqueness because the full support-76 candidate set and full order-48 chain action are still missing.",
+  "checks": {"T1_current_certificate_quotiented_by_C3": true, "T2_C3_orbit_size_recorded": true, "T3_full_support76_set_not_assumed": true, "T4_full_order48_action_not_assumed": true, "T5_many_or_one_remains_unresolved": true}
+}
