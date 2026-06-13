@@ -1,0 +1,16 @@
+{
+  "theorem": "BT935 tetracode A2^4 block symmetry test",
+  "code_size": 9,
+  "coordinate_permutation_symmetry_count": 3,
+  "coordinate_permutation_symmetries": [[0,1,2,3], [0,2,3,1], [0,3,1,2]],
+  "signed_monomial_symmetry_count": 48,
+  "sample_signed_monomial_symmetries": [
+    {"perm": [0,1,2,3], "scalars": [1,1,1,1]},
+    {"perm": [0,1,2,3], "scalars": [2,2,2,2]},
+    {"perm": [0,1,3,2], "scalars": [1,2,2,2]},
+    {"perm": [0,1,3,2], "scalars": [2,1,1,1]}
+  ],
+  "reading": "Unlike the isolated BT926 vertex witness, the tetracode glue has a nontrivial signed monomial symmetry group of order 48. This is the correct next equivariance target for the chain-to-E8 selector.",
+  "equivariance_status": "nontrivial target identified; a chain action compatible with this monomial group is not yet constructed, so equivariant chain-to-tetracode uniqueness is not claimed.",
+  "checks": {"T1_standard_tetracode_size_9": true, "T2_coordinate_permutation_group_nontrivial": true, "T3_signed_monomial_group_order_48": true, "T4_vertex_equivariance_replaced_by_tetracode_target": true, "T5_equivariance_uniqueness_not_overclaimed": true}
+}
