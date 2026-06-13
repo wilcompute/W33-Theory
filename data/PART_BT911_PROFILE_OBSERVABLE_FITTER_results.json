@@ -1,0 +1,19 @@
+{
+  "theorem": "BT911 profile-to-observable fitter with guardrails",
+  "status": "guarded exact inventory fitter; no continuous tuning",
+  "candidate_count": 3656,
+  "observables": [
+    {"observable": "Cabibbo_sin2_archive", "target": "9/178", "status": "exact", "formula": "q^2/(Phi3^2+q^2)"},
+    {"observable": "PMNS_solar_sin2_archive", "target": "4/13", "status": "exact", "formula": "mu/Phi3"},
+    {"observable": "PMNS_reactor_sin2_archive", "target": "2/91", "status": "exact", "formula": "lambda/(Phi6*Phi3)"},
+    {"observable": "PMNS_atmospheric_sin2_archive", "target": "7/13", "status": "exact", "formula": "Phi6/Phi3"},
+    {"observable": "Koide_Q_archive", "target": "2/3", "status": "exact", "formula": "equal S3 singlet/doublet norm -> Koide Q=2/3"},
+    {"observable": "contextual_fraction", "target": "1/10", "status": "exact", "formula": "1/Phi4"},
+    {"observable": "KS_budget", "target": "9/10", "status": "exact", "formula": "(q!)^2/v = 36/40"}
+  ],
+  "exact_matches": 7,
+  "misses": [],
+  "guardrails": ["no fitted real parameters", "only substrate-generated fractions", "report misses instead of forcing matches", "profile layer separate from shifted-reflection support skeleton", "do not use the +1 sentinel as an extra generation"],
+  "exact_conclusion": "The current substrate inventory exactly covers the archived Cabibbo/PMNS scaffold, Koide Q=2/3, contextual fraction 1/Phi4, and KS budget 36/40. This is a profile-coordinate match, not a measured-data derivation.",
+  "checks": {"T1_no_continuous_parameters": true, "T2_exact_matches_reported": true, "T3_misses_reported_if_any": true, "T4_profile_support_boundary_preserved": true, "T5_no_sterile_overclaim": true}
+}
