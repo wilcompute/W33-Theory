@@ -1979,6 +1979,18 @@ couplings (the Yukawa/mass structure), here the eigenvalue
 degeneracy of an order-$3$ symmetry rather than a modeling input.
 \emph{Witnesses: \texttt{bt863\_generations\_from\_steinberg\_vanishing.py},
 \texttt{bt864\_triality\_census.py}.}
+Order-$6$ symmetries see \emph{both} internal gradings at once: an
+order-$6$ element factors as $g^2$ (generation, order $3$) times
+$g^3$ (chirality, order $2$ --- the sign-twisted carrier of
+$H_2$), and since $\chi_{\mathrm{St}}$ vanishes on every $3$-singular
+power, its $\mathbb{Z}_6=\mathbb{Z}_3\times\mathbb{Z}_2$ eigengrading
+factors cleanly: each chirality half $(81\pm\chi(g^3))/2$ carries $3$
+equal generations.  For the dominant involution type
+($\chi(g^3)=q^2$) the chirality split is $\mathbf{45+36}$ --- the
+substrate's own tritangent and double-six counts --- so the
+left/right matter split is tied to Schl\"afli geometry; the other
+type gives $39+42$.  Generation $\times$ chirality $=3\times2=6=q!$.
+\emph{Witness: \texttt{bt868\_joint\_generation\_chirality\_grading.py}.}
 
 \paragraph{Time has three hands and an irrational escapement.}
 The internal $\mathbb{Z}_{12}$ rectangle clock, the external
@@ -2391,6 +2403,7 @@ code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
 triality census (matter-blind, gauge-visible) & bt864\\
+joint generation $\times$ chirality grading & bt868\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\

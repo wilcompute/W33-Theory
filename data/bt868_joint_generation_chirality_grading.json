@@ -1,0 +1,150 @@
+{
+  "theorem": "BT868 joint generation x chirality grading",
+  "order6_count": 5760,
+  "classes": [
+    {
+      "size": 360,
+      "chi": [
+        81,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "mult": [
+        15,
+        12,
+        15,
+        12,
+        15,
+        12
+      ],
+      "chirality": [
+        45,
+        36
+      ],
+      "gen_degenerate": true
+    },
+    {
+      "size": 360,
+      "chi": [
+        81,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "mult": [
+        15,
+        12,
+        15,
+        12,
+        15,
+        12
+      ],
+      "chirality": [
+        45,
+        36
+      ],
+      "gen_degenerate": true
+    },
+    {
+      "size": 720,
+      "chi": [
+        81,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "mult": [
+        15,
+        12,
+        15,
+        12,
+        15,
+        12
+      ],
+      "chirality": [
+        45,
+        36
+      ],
+      "gen_degenerate": true
+    },
+    {
+      "size": 720,
+      "chi": [
+        81,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "mult": [
+        15,
+        12,
+        15,
+        12,
+        15,
+        12
+      ],
+      "chirality": [
+        45,
+        36
+      ],
+      "gen_degenerate": true
+    },
+    {
+      "size": 1440,
+      "chi": [
+        81,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      "mult": [
+        15,
+        12,
+        15,
+        12,
+        15,
+        12
+      ],
+      "chirality": [
+        45,
+        36
+      ],
+      "gen_degenerate": true
+    },
+    {
+      "size": 2160,
+      "chi": [
+        81,
+        0,
+        0,
+        -3,
+        0,
+        0
+      ],
+      "mult": [
+        13,
+        14,
+        13,
+        14,
+        13,
+        14
+      ],
+      "chirality": [
+        39,
+        42
+      ],
+      "gen_degenerate": true
+    }
+  ]
+}
