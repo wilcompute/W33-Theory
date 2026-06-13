@@ -1,0 +1,22 @@
+{
+  "theorem": "BT889 fermion content of the 27",
+  "transitive": true,
+  "point_stabiliser_order": 24,
+  "homogeneous_space": "C(R)/SL(2,3) = 648/24 = 27",
+  "rank": 6,
+  "suborbits": [
+    1,
+    1,
+    1,
+    8,
+    8,
+    8
+  ],
+  "isotypic_dims": [
+    1,
+    6,
+    8,
+    12
+  ],
+  "electroweak_fixed_set": 3
+}
