@@ -1,9 +1,19 @@
-# BT923 — The Hodge–Dirac Index = Euler Characteristic = −v (hard open #2)
+# BT923 — Reconciling the two Euler/index pictures of the W(3,3) complex
 
 **Status: PROVEN (`analysis/bt923_dirac_index_euler.py`, data `data/bt923_dirac_index_euler.json`)**
 
-Certifying the BT921 finite spectral triple as an *even* spectral triple and
-computing its index — a genuine NCG advance on the continuum open.
+> **Not a new breakthrough — a reconciliation.** The repo already documents
+> (index.html) the Euler characteristics χ = −40 = −v (truncated shell) and
+> χ = −80 = −2v (full clique complex), a 480-dim Dirac/Hodge operator with
+> chirality + index theorem + McKean–Singer supertrace −80, and the
+> generation index ind(D)=q=3. BT923 adds **one** genuinely-new thing: the
+> explicit bridge between the truncated 2-complex (BT921) and the documented
+> full clique complex, identifying the b₂ = 40 obstruction with the BT862
+> line module. Everything else below is a rederivation kept for the spectral
+> triple's self-containedness.
+
+Equipping the BT921 finite spectral triple with the chirality grading and
+computing its index — and reconciling it with the existing 480-dim picture.
 
 ## The theorems
 
@@ -13,39 +23,50 @@ computing its index — a genuine NCG advance on the continuum open.
   Hodge–Dirac is an even, Z₂-graded operator — a genuine even spectral triple.
 - **T2 — index = Euler characteristic = −v.** By McKean–Singer the index is
   the γ-trace over the harmonic forms (the homology, BT921):
+
   ```text
   ind(D) = (b₀ + b₂) − b₁ = (1 + 40) − 81 = −40
          = χ = 40 − 240 + 160 = −v.
   ```
+
   The Dirac index equals the Euler characteristic of the W(3,3) 2-complex,
-  which is exactly **−v = −40**.
+  which is exactly **−v = −40** (already in index.html as the truncated-shell χ).
 - **T3** — so the substrate vertex count v = 40 is *minus the index* of its
   Hodge–Dirac operator; the odd sector b₁ = 81 (the Steinberg matter register)
   dominates, so the matter register drives the index.
 
-## Reading
+## The genuinely-new piece: reconciling the two complexes
 
-This certifies the W(3,3) spectral triple as a genuine even (γ-graded)
-spectral triple and ties its topological index to the substrate's defining
-integer v = 40 via the index theorem: **ind(D) = χ = −v.** The
-generation/matter content sits in the index: χ = b₀ − b₁ + b₂ with b₁ = 81 the
-Steinberg register, and χ = −2q·(generation factor) — indeed χ = −40 = −v, and
-the standard string-GUT relation #generations = |χ|/2 would read 40/2 = 20
-for the *full* complex, while the matter-register reduction (the 81 = 27·3)
-gives the physical three (BT863). The clean fact here is the index identity
-ind(D) = χ = −v, a topological invariant of the spectral triple equal to
-minus the substrate size.
+The repo carries two Euler/Dirac pictures of W(3,3) that were never explicitly
+bridged:
 
-## What this adds to hard open #2
+| complex | f-vector | homology b | χ | Dirac |
+| --- | --- | --- | --- | --- |
+| truncated 2-complex (BT921/923) | (40, 240, 160) | (1, **81**, **40**) | −v = −40 | 440-dim |
+| full clique complex (index.html) | (40, 240, 160, 40) | (1, 81, 0, 0) | −2v = −80 | 480-dim, supertrace −80 |
 
-With BT892 (Laplacian moments → spectral-action a₀ = gravity τ), BT921 (the
-full Hodge–Dirac, spectrum {0¹²², 4²⁴⁰, 10⁴⁸, 16³⁰}, zero modes = homology),
-and now BT923 (even grading + index = −v), the finite spectral triple is
-**fully characterized**: its algebra acts on a 440-dim graded Hilbert space,
-its Dirac is even with index −v, and its spectral data feed the spectral
-action exactly. The one remaining piece is the genuinely analytic open
-theorem — the curved-4D Einstein–Hilbert asymptotic — which no finite
-computation settles.
+The bridge (verified in the script): the 40 lines, taken as K₄-tetrahedra
+(3-cells), give a boundary D₃ of **rank 40 — all 40 independent**. Adding them
+to the 2-complex therefore:
+
+- **kills b₂ exactly: 40 → 0**, and
+- **doubles |χ|: −v → −2v.**
+
+And the b₂ = 40 that the tetrahedra fill is precisely the **BT862 line module**
+(H₂ = the sign-twisted 40-dim line module). So the two documented Euler numbers
+are one complex with/without its 40 line-cells, and the 40-cell jump is the
+line module getting filled. The truncated picture (−v, b₂ = 40 = line module)
+exposes the matter/line content as homology; the clique picture (−2v, b₂ = 0)
+fills it. This is the only new content here; the chirality/index-theorem/
+McKean–Singer machinery itself is already in the repo.
+
+## Rederived (for the spectral triple's self-containedness)
+
+The even grading γ (γ²=1, γD=−Dγ) and the McKean–Singer identity
+ind(D) = (b₀+b₂)−b₁ = χ = −v are recomputed here on the BT921 2-complex Dirac
+so the spectral triple (BT892 spectral action, BT921 spectrum, this grading) is
+self-contained; these facts already appear in index.html for the 480-dim
+clique-complex Dirac (supertrace −80) and as ind(D)=q=3 (generation index).
 
 ## Open
 

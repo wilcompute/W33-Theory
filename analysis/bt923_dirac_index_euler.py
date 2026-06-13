@@ -112,16 +112,38 @@ def main():
     assert index == euler == -40
     print(f"   ind(D) = chi = -40 = -v  [index theorem]")
 
-    # T3
-    print(f"T3 the substrate vertex count v = {nv} is MINUS the index of")
-    print(f"   its Hodge-Dirac operator; the odd (b1=81=Steinberg) sector")
-    print(f"   dominates, so the matter register drives the index.")
+    # T3 (the genuinely-new piece): reconcile the truncated 2-complex with the
+    # documented full clique complex by adding the 40 lines as K4-tetrahedra.
+    tidx = {t: i for i, t in enumerate(tris)}
+    lines_sorted = [tuple(sorted(l)) for l in lines]
+    nT = len(lines_sorted)
+    D3 = np.zeros((nt, nT))     # C3 (tetrahedra) -> C2 (triangles)
+    for j, (a, b, c, d) in enumerate(lines_sorted):
+        faces = [(b, c, d), (a, c, d), (a, b, d), (a, b, c)]
+        for k, f in enumerate(faces):
+            D3[tidx[f], j] = (-1) ** k
+    r3 = int(np.linalg.matrix_rank(D3))
+    # full clique-complex betti (with tetrahedra filling)
+    r1 = int(np.linalg.matrix_rank(D1))
+    r2 = int(np.linalg.matrix_rank(D2))
+    b2_full = nt - r2 - r3
+    b3_full = nT - r3
+    euler_full = nv - ne + nt - nT
+    print(f"T3 add 40 lines as K4-tetrahedra: rank(D3)={r3} (all independent)")
+    print(f"   -> kills b2 exactly {b2} -> {b2_full}; b3={b3_full}")
+    print(f"   -> Euler chi {euler} (-v) -> {euler_full} (-2v); the filled")
+    print(f"      b2={b2} IS the BT862 line module. (chirality/index/McKean-")
+    print(f"      Singer themselves are already in index.html.)")
+    assert r3 == 40 and b2_full == 0 and euler_full == -80
 
     out = {
-        "theorem": "BT923 Hodge-Dirac index = Euler char = -v",
+        "theorem": "BT923 reconcile truncated(-v) vs clique(-2v) complex",
         "graded": bool(anti),
-        "betti": [b0, b1, b2],
-        "index": index, "euler": euler, "minus_v": -nv,
+        "betti_truncated": [b0, b1, b2], "index": index, "euler": euler,
+        "minus_v": -nv,
+        "rank_D3": r3, "betti2_full": b2_full, "euler_full": euler_full,
+        "note": "core (gamma,index,McKean-Singer) already in index.html; "
+                "new piece is the 40-tetrahedra bridge filling b2=line module",
     }
     with open("data/bt923_dirac_index_euler.json", "w") as fj:
         json.dump(out, fj, indent=2)
