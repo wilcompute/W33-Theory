@@ -1,0 +1,35 @@
+{
+  "theorem": "BT899 Photonic Holonet static guard",
+  "target": "photonic_holonet.tex",
+  "title_ok": true,
+  "required_hits": {
+    "\\\\title\\{\\\\textbf\\{The Photonic Holonet\\}": true,
+    "BT893--BT898": true,
+    "shifted reflection": true,
+    "b\\\\equiv -a-g_H\\\\pmod3": true,
+    "within-grade \\$q\\^2=9\\$ profile": true,
+    "\\$9\\\\cdot\\\\mathbf2\\$ flavor multiplicity": true,
+    "3/\\\\sqrt\\{178\\}": true,
+    "Koide": true,
+    "Yukawa reflection/profile layer": true
+  },
+  "forbidden_hits": {
+    "transvection paper": false,
+    "pure cyclic shift but not": false,
+    "pure circulant Yukawa texture": false,
+    "gives a circulant Yukawa texture": false
+  },
+  "transvection_count_allowed_inside_physics_section": 9,
+  "section_hits": {
+    "Overture: the machine is the geometry is the carrier": true,
+    "The substrate": true,
+    "The carrier: how to self-entangle a photon": true,
+    "The network: atlas, building, and routing": true,
+    "The middleware: tomotope mirrors and the runtime bus": true,
+    "The software: braids, teleported gates, universality": true,
+    "Fractal scaling: the computer is the network": true,
+    "Build sheet and falsifiable witnesses": true
+  },
+  "guard_conclusion": "photonic_holonet.tex is guarded as the Photonic Holonet architecture paper. The Standard-Model transvection theorem may appear as an internal physics implication, but the paper is not labeled or guarded as a transvection paper. The Yukawa layer must state the BT893--BT898 shifted-reflection / q^2=9 profile boundary.",
+  "checks": {"T1_title_is_photonic_holonet": true, "T2_BT893_BT898_reflection_profile_patch_present": true, "T3_no_forbidden_circulant_yukawa_overclaim": true, "T4_transvection_allowed_only_as_internal_physics_theorem": true, "T5_core_holonet_sections_present": true}
+}
