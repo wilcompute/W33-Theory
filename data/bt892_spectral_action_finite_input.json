@@ -1,0 +1,17 @@
+{
+  "theorem": "BT892 finite spectral input to continuum bridge",
+  "laplacian_spectrum": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "heat_moments": {
+    "0": 40,
+    "1": 480,
+    "2": 6240,
+    "3": 85440
+  },
+  "logdet_eq_log_v_tau": true,
+  "v_tau": "40 * 2^81 * 5^23 = 10^24 * 16^15",
+  "product_factorization": true
+}
