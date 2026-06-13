@@ -1,0 +1,15 @@
+{
+  "theorem": "BT912 measured-data comparison layer",
+  "status": "external comparison only; no fitted parameters",
+  "external_reference_date": "2026-06-13 run; public-source anchors checked for CKM scale, NuFIT-6.0 neutrino context, and charged-lepton mass/Koide context",
+  "comparisons": [
+    {"observable": "Cabibbo_sin", "internal": 0.22485950669875843, "internal_exact": "3/sqrt(178)", "external_reference": 0.22484, "external_uncertainty": 0.00044, "residual_internal_minus_external": 0.00001950669875843362, "pull_sigma": 0.04433340626916732, "status": "inside_1sigma", "source_note": "CKM/Wolfenstein lambda scale, PDG-style anchor"},
+    {"observable": "PMNS_solar_sin2", "internal": 0.3076923076923077, "internal_exact": "4/13", "external_reference": 0.308, "external_uncertainty": 0.012, "residual_internal_minus_external": -0.0003076923076922862, "pull_sigma": -0.02564102564102385, "status": "inside_1sigma", "source_note": "NuFIT-6.0-style 2024 global oscillation anchor"},
+    {"observable": "PMNS_reactor_sin2", "internal": 0.02197802197802198, "internal_exact": "2/91", "external_reference": 0.02215, "external_uncertainty": 0.0006, "residual_internal_minus_external": -0.00017197802197802235, "pull_sigma": -0.28663003663003724, "status": "inside_1sigma", "source_note": "NuFIT-6.0-style 2024 global oscillation anchor"},
+    {"observable": "PMNS_atmospheric_sin2", "internal": 0.5384615384615384, "internal_exact": "7/13", "external_reference": 0.55, "external_uncertainty": 0.06, "residual_internal_minus_external": -0.011538461538461608, "pull_sigma": -0.19230769230769348, "status": "inside_1sigma", "source_note": "theta23 octant-ambiguous broad NuFIT-style anchor"},
+    {"observable": "Koide_Q", "internal": 0.6666666666666666, "internal_exact": "2/3", "external_reference_from_charged_lepton_masses": 0.6666613458946631, "residual_internal_minus_external": 0.000005320772003518786, "source_note": "PDG-style charged-lepton pole masses"}
+  ],
+  "charged_lepton_masses_MeV_used": {"electron": 0.51099895, "muon": 105.6583755, "tau": 1776.86},
+  "honesty_boundary": "The internal profile fractions are exact substrate coordinates; the external anchors are approximate comparison defaults and should be updated when a formal PDG/NuFIT table is imported.",
+  "checks": {"T1_no_fit_performed": true, "T2_external_values_separated_from_internal_values": true, "T3_residuals_reported": true, "T4_theta23_octant_ambiguity_noted": true, "T5_koide_recomputed_from_masses": true}
+}
