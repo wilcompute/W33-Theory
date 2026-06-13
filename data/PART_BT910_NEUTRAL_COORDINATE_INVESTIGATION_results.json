@@ -1,0 +1,28 @@
+{
+  "theorem": "BT910 neutral coordinate investigation",
+  "input_decomposition": "C^9 = (2+2+2+2)+1 from BT907",
+  "winner": "sentinel",
+  "ranking": [
+    {
+      "interpretation": "sentinel",
+      "matches": ["BT829 g=15 sentinel layer", "BT907 neutral coordinate remains after four profile planes", "BT908 anti-stale/release guard is a neutral monitor"],
+      "tensions": ["sentinel is a monitor, not a dynamical flavor state"],
+      "score": 5
+    },
+    {
+      "interpretation": "clock",
+      "matches": ["Holonet has internal Z12 clock and external Z7/Z13 references", "neutral coordinate can store phase/provenance of the profile package"],
+      "tensions": ["clock sectors are already explicit; forcing the +1 to be time would duplicate clock architecture"],
+      "score": 3
+    },
+    {
+      "interpretation": "sterile",
+      "matches": ["one leftover profile coordinate resembles a nonmixing state"],
+      "tensions": ["Holonet has no extra generation or extra fermion asserted", "BT901 says q^2=9 is multiplicity, not new matter"],
+      "score": 2
+    }
+  ],
+  "exact_conclusion": "The leftover +1 coordinate is best treated as a sentinel/provenance coordinate for the profile package, not as a sterile generation. A clock reading remains possible only as metadata attached to the sentinel, because the Holonet already has explicit Z12/Z7/Z13/BC clock layers.",
+  "profile_policy": "Do not count the +1 as a new fermion. Use it as the neutral monitor coordinate recording profile validity, release provenance, or g=15 sentinel response.",
+  "checks": {"T1_leftover_coordinate_identified": true, "T2_sterile_overclaim_rejected": true, "T3_clock_duplicate_marked_secondary": true, "T4_sentinel_interpretation_selected": true, "T5_no_extra_generation_claim": true}
+}
