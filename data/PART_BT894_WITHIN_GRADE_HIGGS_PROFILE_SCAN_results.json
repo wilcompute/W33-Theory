@@ -1,0 +1,26 @@
+{
+  "theorem": "BT894 Within-grade Higgs Profile Scan",
+  "grade_skeleton": "BT893 shifted reflections b=-a-g_H mod 3",
+  "total_dimension": 27,
+  "grade_count": 3,
+  "within_grade_dimension": 9,
+  "flat_profile_mass_operator": "I_27",
+  "mass_operators_block_diagonal_by_grade": true,
+  "ckm_factorization": "V_CKM = direct_sum_g (U_u,g^T U_d,g) after resolving within-grade blocks",
+  "minimal_nontrivial_profile": {
+    "active_grade": 0,
+    "active_internal_plane": [0, 1],
+    "rotation": [["3/5", "4/5"], ["-4/5", "3/5"]],
+    "active_offdiagonal_entries": 2,
+    "offdiagonal_frobenius_norm_squared": "32/25",
+    "minimal_active_plane_dimension": 2
+  },
+  "structural_conclusion": "The 3-grade Yukawa skeleton fixes support and S3 reflection geometry, but it is angle-blind. Nonzero CKM/PMNS mixing first appears when two within-grade q^2=9 Gram profiles fail to commute; a single two-plane rotation is the minimal witness.",
+  "checks": {
+    "T1_shifted_reflection_support_preserved": true,
+    "T2_YYt_is_grade_block_diagonal": true,
+    "T3_flat_profile_gives_I27": true,
+    "T4_minimal_two_plane_rotation_is_orthogonal": true,
+    "T5_nonzero_mixing_requires_within_grade_noncommutation": true
+  }
+}
