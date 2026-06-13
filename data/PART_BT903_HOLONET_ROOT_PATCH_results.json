@@ -1,0 +1,23 @@
+{
+  "theorem": "BT903 root Holonet patch runner",
+  "target": "photonic_holonet.tex",
+  "document_identity": "The Photonic Holonet",
+  "status": "operational root patch runner added; direct root-source overwrite not claimed in this connector pass",
+  "runner": "tools/apply_bt903_holonet_root_patch.py",
+  "integrator": "tools/integrate_bt897_bt899_photonic_holonet_patch.py",
+  "guard": "analysis/bt899_photonic_holonet_static_guard.py",
+  "local_compile_prior": {
+    "source": "/mnt/data/photonic_holonet.tex patched locally",
+    "pdf": "/mnt/data/photonic_holonet_BT900_patched.pdf",
+    "pages": 35,
+    "sha256": "eee60ad8be7510c2fe52d215a6af0ac40b6e1489163a776eb12b3e5e38b8de0f"
+  },
+  "run_command": "python tools/apply_bt903_holonet_root_patch.py --compile",
+  "checks": {
+    "T1_runner_added": true,
+    "T2_integrator_reused": true,
+    "T3_static_guard_reused": true,
+    "T4_document_identity_guarded": true,
+    "T5_local_compile_artifact_exists": true
+  }
+}
