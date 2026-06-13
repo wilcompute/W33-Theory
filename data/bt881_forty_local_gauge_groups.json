@@ -1,0 +1,7 @@
+{
+  "theorem": "BT881 forty local gauge groups",
+  "long_root_subgroups": 40,
+  "transvection_elements": 80,
+  "single_conjugacy_class": true,
+  "generate_PSp": true
+}
