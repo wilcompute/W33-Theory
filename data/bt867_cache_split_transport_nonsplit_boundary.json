@@ -1,0 +1,131 @@
+{
+  "theorem": "BT867 cache split cover and transport non-split boundary",
+  "parabolic": {
+    "H": "(C3 x C3 x C3) : S4",
+    "order": 648,
+    "cache_gsets": [
+      "H/C4",
+      "H/C4"
+    ],
+    "cache_sizes": [
+      162,
+      162
+    ],
+    "stabilizers_conjugate": true
+  },
+  "cache_spectral_refutation": {
+    "bt866_degrees_tested": [
+      5,
+      5,
+      30
+    ],
+    "multiplicities_in_each_cache": [
+      [
+        1,
+        1,
+        8
+      ],
+      [
+        1,
+        1,
+        8
+      ]
+    ],
+    "conclusion": "Neither cache is one BT866 chiral 5-sector; each cache contains both conjugate 5s with equal multiplicity. Chirality is a copy label."
+  },
+  "shared_81_base": {
+    "object": "the single H-conjugacy class of cyclic C4 stabilizers",
+    "base_gset": "H/N_H(C4) = H/D8",
+    "base_size": 81,
+    "normalizer": "D8",
+    "normalizer_order": 8,
+    "each_cache_map": "H/C4 -> H/D8 is a free two-sheet cover",
+    "fiber_size": 2,
+    "same_base_for_both_caches": true
+  },
+  "cache_union_commutant": {
+    "carrier_size": 324,
+    "group": "D8",
+    "order": 8,
+    "base_orbits": 81,
+    "fiber_orbit_size": 4,
+    "formula": "324 = 81 x 4 = 81 x 2_deck x 2_cache",
+    "meaning": "The full H-equivariant address symmetry is the square symmetry D8, not merely a numerical product of two bits."
+  },
+  "f3_operator_boundary": {
+    "cache_deck": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "cache_deck_order": 2,
+    "cache_difference": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "cache_difference_relation": "(D-I)^2 = D-I (rank 1)",
+    "cache_projectors": {
+      "plus": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "minus": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "cache_module": "F3^162 = V_plus(81) direct_sum V_minus(81)",
+    "transport_shift": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "transport_shift_relation": "N^2 = 0 (rank 1)",
+    "transport_unipotent_order": 3,
+    "transport_module": "0 -> 81 -> 162 -> 81 -> 0 is non-split",
+    "no_go": "The cache deck and transport shift cannot be conjugate: one is semisimple/idempotent after subtracting identity, the other nilpotent."
+  },
+  "architecture": {
+    "cache_layer": "split address selection over a shared 81-route base",
+    "transport_layer": "non-split ternary state propagation with memory",
+    "combined_cell": "A 324-slot local cell has 81 base routes and a D8 four-state address fiber; its independent 162-dimensional transport fiber carries the square-zero temporal update."
+  },
+  "checks": {
+    "two_cache_orbits_are_isomorphic_h_over_c4": true,
+    "each_cache_contains_both_fives_not_one_chiral_five": true,
+    "both_caches_double_cover_the_same_81_c4_base": true,
+    "cache_union_has_exact_d8_over_81_fibration": true,
+    "outer_weyl_fuses_exactly_the_two_cache_copies": true,
+    "cache_deck_is_semisimple_over_f3": true,
+    "transport_extension_is_nonsplit_unipotent_over_f3": true,
+    "equal_162_dimensions_do_not_define_equivalent_extensions": true
+  }
+}

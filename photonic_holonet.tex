@@ -70,10 +70,16 @@ leaves, $(40^n-1)/39$ $\W$ instances, and reversible routing diameter
 bounded by $8n=8\log_{40}N$, while durable commits use a separate
 Cs\'asz\'ar/tomotope clock $T(n)=4(7^n-1)$.  The runtime contains an
 exact parabolic packet decoder: the Bell-line stabilizer splits the
-$1296$ compass incidences into $648+324+162+162$, giving the complete
-binary prefix code $\{0,10,110,111\}$ for mirror, schedule, and two
-chiral caches, while the dual point stabilizer supplies two persistent
-$648$-slot address sheets.  The newest storage layer
+    $1296$ compass incidences into $648+324+162+162$, giving the complete
+    binary prefix code $\{0,10,110,111\}$ for mirror, schedule, and two
+    chiral caches, while the dual point stabilizer supplies two persistent
+    $648$-slot address sheets.  The two cache branches are now resolved
+    internally: each is the same homogeneous space $H/C_4$, each is a
+    two-sheet cover of one canonical $81$-route base $H/D_8$, and their
+    $324$-slot union has full equivariant commutant $D_8$ acting in $81$
+    four-state fibers.  This split address bus is provably distinct from
+    the older non-split ternary $81\to162\to81$ transport memory.  The
+    newest storage layer
 turns the tomotope cover pathology into an engineering feature: durable
 storage is cover-indexed by a $\mathbb{Z}_k^3$ fiber over the stable
 $48$-block packet ABI, sentinel-aware compilation can trade commit-time
@@ -118,8 +124,10 @@ carries its witness script):
 \item \textbf{Parabolic address--route duality}
   (\S\ref{sec:parabolic-router}): the point parabolic supplies two
   $648$-slot address sheets, whereas the Bell-line parabolic decodes
-  the compass fabric by the complete prefix code $0,10,110,111$.
-  Address and route are the two nodes of the same $C_2$ building.
+  the compass fabric by the complete prefix code $0,10,110,111$; its
+  cache quarter is an exact $D_8$-over-$81$ four-state address fiber.
+  Address and route are the two nodes of the same $C_2$ building, while
+  the separate ternary transport extension carries temporal state.
 \item \textbf{Dual-torsor state--program compilation}: the Steinberg
   memory restricts to both canonical order-$27$ shell groups as three
   regular copies.  Bell-shell programs use commuting $\GF3^3$
@@ -1324,13 +1332,111 @@ and resolves the Euler charge representation by representation:
 \[
  1-81+(5+5+30)=-40=-v.
 \]
-The $5+\bar5$ outer-fusion pattern matches BT859's two chiral cache
-branches, and the two 30-extensions have the form required for an
-outer gauge bit, but the objectwise intertwiners to BT859 and BT857
-remain open.
+BT867 resolves the tempting cache comparison negatively: neither
+$162$-cache branch is one of the two 5-dimensional sectors.  The
+branches are isomorphic copies with identical character overlaps; the
+outer involution acts on their multiplicity label.  The possible
+identification of the two 30-extensions with BT857's local gauge bit
+remains open.
 \emph{Witness:
-\texttt{bt866\_h2\_oriented\_irreducible\_decomposition.py}.}
+\path{analysis/bt866_h2_oriented_irreducible_decomposition.py}.}
 \end{corollary}
+
+\begin{theorem}[The cache/transport extension boundary]
+\label{thm:cache-transport-boundary}
+Let $H=3^3{:}S_4$ be the order-$648$ Bell-line parabolic.  The two
+$162$-slot BT859 cache branches have conjugate cyclic stabilizers and
+are therefore isomorphic transitive $H$-sets,
+\[
+  \mathcal C_L\cong H/C_4\cong\mathcal C_R.
+\]
+Their permutation characters are equal.  In particular, their scalar
+products with the restrictions of the three BT866 characters
+$(5_\omega,5_{\omega^2},30)$ are both $(1,1,8)$: each cache sees both
+conjugate 5-sectors equally.  ``Left'' and ``right'' are copy labels,
+not internal spectral chiralities.
+
+The parabolic contains one conjugacy class of $81$ cyclic $C_4$
+subgroups, and
+\[
+ N_H(C_4)=D_8,
+ \qquad
+ H/C_4\longrightarrow H/D_8,
+ \qquad
+ 162\longrightarrow81
+\]
+is the canonical free two-sheet cache cover.  Both copies cover this
+same stabilizer base.  On their union GAP computes
+\[
+ C_{\operatorname{Sym}(324)}(H)\cong D_8,
+ \qquad
+ 324=81\times4=81\times2_{\rm deck}\times2_{\rm cache},
+\]
+with exactly $81$ commutant orbits of size four.  Thus the four-state
+fiber carries the symmetry of a square, not merely a numerical pair of
+bits.
+
+This cache carrier is not the older ternary $162$-sector.  On one
+cache fiber the deck swap and its two projectors are
+\[
+ D=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad
+ P_\pm=\frac{I\pm D}{2},
+ \qquad
+ \GF3^2=\operatorname{im}P_+\oplus\operatorname{im}P_-.
+\]
+Since $2$ is invertible in $\GF3$, the cache splits; indeed
+$(D-I)^2=D-I$.  By contrast, packet transport uses
+\[
+ N=\begin{pmatrix}0&1\\0&0\end{pmatrix},
+ \qquad N^2=0,
+ \qquad (I+N)^3=I,
+\]
+and tensors this indecomposable fiber with the $81$-register to obtain
+the non-split sequence $0\to81\to162\to81\to0$.  No change of basis
+can identify the idempotent cache difference with the nilpotent
+transport shift.  The architecture therefore separates a reversible
+\emph{address/control plane} from a memory-bearing ternary
+\emph{temporal data plane} by extension class, not by convention.
+\emph{Witness:
+\path{analysis/bt867_cache_split_transport_nonsplit_boundary.py}.}
+\end{theorem}
+
+\begin{figure}[ht]\centering
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  box/.style={draw,rounded corners,align=center,minimum width=35mm,minimum height=10mm},
+  arr/.style={-{Stealth},thick}
+]
+  \node[box,fill=green!10] (base) at (0,0)
+    {shared route base\\$H/D_8$: $81$ cyclic-$C_4$ stabilizers};
+  \node[box,fill=blue!9] (left) at (-3.3,2.0)
+    {cache copy $L$\\$H/C_4$: $162=81\times2$};
+  \node[box,fill=blue!9] (right) at (3.3,2.0)
+    {cache copy $R$\\$H/C_4$: $162=81\times2$};
+  \node[box,fill=purple!10,minimum width=48mm] (union) at (0,4.0)
+    {$324$-slot address cell\\commutant $D_8$, $81$ square fibers};
+  \draw[arr] (left) -- node[left,font=\scriptsize] {$2{:}1$} (base);
+  \draw[arr] (right) -- node[right,font=\scriptsize] {$2{:}1$} (base);
+  \draw[arr] (union) -- (left);
+  \draw[arr] (union) -- (right);
+
+  \node[box,fill=yellow!18,minimum width=43mm] (split) at (8.0,3.15)
+    {cache address operator\\$D^2=I$, $(D-I)^2=D-I$\\split $81\oplus81$};
+  \node[box,fill=red!8,minimum width=43mm] (nonsplit) at (8.0,0.85)
+    {transport state operator\\$N^2=0$, $(I+N)^3=I$\\non-split $81\to162\to81$};
+  \draw[<->,thick,dashed] (union.east) -- node[above,font=\scriptsize]
+    {address selection} (split.west);
+  \draw[arr] (split) -- node[right,font=\scriptsize]
+    {separate extension class} (nonsplit);
+\end{tikzpicture}}
+\caption{The local cache cell and the split/non-split boundary.  The
+$D_8$ square fiber chooses a reversible address over one of $81$ routes;
+the independent ternary nilpotent updates state while retaining temporal
+memory.  Equal 162-dimensional counts do not imply equivalent modules.}
+\label{fig:cache-transport-boundary}
+\end{figure}
 
 The error layer is native: the $[[240,81,4,3]]_3$ CSS code on the edge
 qutrits has all four parameters substrate-primitive; the dual
@@ -1941,7 +2047,12 @@ of the state shell, and its center supplies the native generation
 flag $27\subset54\subset81$.  The oriented timetable header above
 that memory splits as $5_{\omega}+5_{\omega^2}+30$: the full Weyl
 runtime fuses the handed pair into a 10-channel and leaves one
-30-channel with an outer parity choice.  The watchdog is the BC loop.
+30-channel with an outer parity choice.  Cache lookup is a distinct
+split layer: two copies of $H/C_4$ share an $81$-route $H/D_8$ base,
+and their $324$ slots form $81$ four-state $D_8$ address fibers.  The
+non-split ternary transport operator then updates the selected state;
+address choice and temporal memory cannot alias because their minimal
+polynomials differ.  The watchdog is the BC loop.
 Each layer is a theorem; the
 stack compiles because double cosets compose.
 
@@ -2049,6 +2160,8 @@ $240$ edges & interaction qutrits & bandwidth = memory\\
 $81=q^4$ Steinberg & protected sector (Schur) & logical register\\
 dual $O_3$ restrictions & Heisenberg state phases & state/program compiler\\
 $H_2=5+\bar5+30$ & oriented context chirality & timetable header $10+30^\pm$\\
+$324=81\times4$, commutant $D_8$ & split cache multiplicity & four-state address fiber\\
+$0\to81\to162\to81\to0$ & ternary temporal extension & non-split state update\\
 $36$ spreads & measurement bases & timetable OS\\
 $\mathrm{SRG}(36,15,6,6)$ & basis-overlap law & control-plane fabric\\
 five vacua & phases of the theory & boot modes\\
@@ -2086,7 +2199,14 @@ regular-action identification.  Instead, the projective Bell
 stabilizer resolves the incidence carrier as
 $648+324+162+162$, the exact mirror/schedule/left-cache/right-cache
 prefix decoder, while the point parabolic supplies two persistent
-$648$ address sheets.  The companion also supplies
+$648$ address sheets.  The two cache words $110$ and $111$ are now
+resolved more finely by Theorem~\ref{thm:cache-transport-boundary}:
+they name two copies of the same $H/C_4$ cache, not two inequivalent
+internal chiral modules.  Both double-cover one canonical $H/D_8$
+base of $81$ routes, and the complete cache quarter is an exact
+$D_8$-over-$81$ square bundle.  This reversible address plane is
+provably not the non-split $81\to162\to81$ transport plane, despite
+their common $162$ count.  The companion also supplies
 the master equation at Hilbert-space level ($q^2=q+q!$: the
 $9$-dimensional past$\otimes$future space splits into $3$ diagonal
 ``now'' histories and $6=q!$ context-changing ones), and a ledger
@@ -2250,6 +2370,7 @@ $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
+cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\
 chirality bookkeeping / Bell--compass parabolic router & bt857, bt859\\
 universality & bt825\\
 fractal computer/network & bt827\\
