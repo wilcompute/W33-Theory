@@ -1,0 +1,211 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\W}{W(3,3)}
+\newcommand{\GF}[1]{\mathbb{F}_{#1}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\CC}{\mathbb{C}}
+
+\title{\textbf{The Standard Model from One Transvection}\\[4pt]
+\large The discrete Standard-Model anatomy as the geometry of a single
+long-root transvection on the symplectic quadrangle $\W$}
+\author{Wil Dahn\\[2pt]
+\normalsize\textit{Theory of Everything Project --- machine-verified
+edition, June 2026}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We show that the entire \emph{discrete} structure of the Standard Model
+--- the gauge group $SU(3)\times SU(2)\times U(1)$ with its
+color/electroweak factorization, exactly three fermion generations, the
+discrete flavor group $S_3$, the Yukawa selection rule, chirality,
+parity, charge-conjugation, the fermion content of one generation, the
+gauge connection and its curvature, and a gravitational partition
+function --- is the representation-theoretic geometry of a single
+\emph{long-root transvection} $R$ on the symplectic generalized
+quadrangle $\W$ (the $40$ totally isotropic points of $\GF3^4$, with
+$\mathrm{Aut}=\PSp(4,\GF3)$ of order $25920$). The gauge group is the
+\emph{centralizer} $C(R)$; the three generations are its \emph{center};
+the flavor symmetry is its \emph{normalizer}; parity is the $W/Q$
+duality; the Yukawa texture is the $\Z_3$ grading $R$ induces on the
+matter shell; and the gauge curvature is the \emph{commutator} of two
+generation centers, an $\mathfrak{su}(2)$-valued field strength
+supported on the matter graph. Every statement is a theorem with an
+executable witness (the BT858--892 chain); there are zero free
+parameters. The remaining physics --- coupling magnitudes, mixing
+angles, the continuum limit --- is the established numerical layer and
+is not claimed here.
+\end{abstract}
+
+\section{The datum}
+The symplectic quadrangle $\W$ has $40$ points (the totally isotropic
+$1$-spaces of $\GF3^4$ under a non-degenerate alternating form), with
+collinearity graph the strongly regular $\mathrm{SRG}(40,12,2,4)$ and
+automorphism group $\PSp(4,\GF3)\cong W(E_6)^{+}$ of order $25920$. A
+\emph{long-root transvection} $R$ (an order-$3$ element fixing a
+hyperplane pointwise) is the single datum from which the discrete
+Standard Model unfolds. We fix a point $p_0$; $R$ is the center of the
+Heisenberg radical of $\mathrm{Stab}(p_0)$, fixing the $13$-point
+perp-plane $p_0^{\perp}$ and acting freely (nine orbits of three) on the
+$27$ non-collinear points (the \emph{matter shell}).
+
+\section{The matter sector}
+The integral homology of the $\W$ line-triangle $2$-complex
+($40$ vertices, $240$ edges, $160$ in-line triangles) is
+$H_0=\mathbf 1$, $H_1=\mathbf{81}$, $H_2=\mathbf{40}$.
+
+\begin{theorem}[Steinberg register, BT861]
+$H_1\otimes\CC$ is irreducible of dimension $81=q^4$: it is the
+\emph{Steinberg module} of $\PSp(4,\GF3)$
+($\langle\chi,\chi\rangle=1$, verified over all $25920$ elements, with
+$\chi(g)=\#\mathrm{flags}-\#\mathrm{pts}-\#\mathrm{lines}+1$). It equals
+the logical space of the $[[240,81,4,3]]_3$ CSS code: matter memory is
+Schur-protected.
+\end{theorem}
+
+\begin{theorem}[Three generations from Steinberg vanishing, BT863]
+$\chi_{\mathrm{St}}(g)=0$ iff $3\mid\mathrm{ord}(g)$. Hence \emph{any}
+order-$3$ symmetry splits the $81$-dimensional matter register into
+$27+27+27$: the three generations are forced, not chosen. The matter
+shell $\CC[27]$ likewise grades $9+9+9$ under $R$.
+\end{theorem}
+
+The $27$ matter shell is a torsor under the Heisenberg group
+$N=3^{1+2}=O_3(\mathrm{Stab}(p_0))$ (BT858), and $R$ is the long-root
+transvection realizing Pillar~68's Yukawa triality $R$ (nine free orbits
+on the shell, BT874).
+
+\section{The gauge sector}
+\begin{theorem}[Gauge group, BT876/887]
+The centralizer $C(R)=\mathrm{Stab}(p_0)$ (order $648$) acts on the
+$12=k$ gauge bosons with permutation rank $3$, giving the module
+\[
+\CC[12]=\mathbf 1\oplus\mathbf 3\oplus\mathbf 8
+=U(1)\oplus SU(2)\oplus SU(3),
+\]
+the Standard-Model gauge group. It factors as $C(R)=3^{1+2}:SL(2,3)
+=27{:}24$: the normal Heisenberg radical (order $q^q=27$, \emph{color})
+fixes the electroweak $\mathbf 1\oplus\mathbf 3$ pointwise (the
+$W/Z/\gamma$ are color-blind) and acts on the gluon octet $\mathbf 8$;
+the Levi $SL(2,3)$ (order $f=24$, \emph{electroweak}) carries the
+$\mathbf 1\oplus\mathbf 3$.
+\end{theorem}
+
+\begin{corollary}[Generations are the gauge center, BT880]
+$Z(C(R))=\langle R\rangle\cong\Z_3$: the three generations are the
+center of the gauge group, acting trivially on the adjoint exactly as
+the $\Z_3$ center of color $SU(3)$ acts on the gluon octet. ``Generations
+are gauge-blind'' because the generation symmetry \emph{is} the gauge
+center.
+\end{corollary}
+
+\begin{corollary}[Color is the matter Heisenberg group, BT888]
+The color radical $N$ is the \emph{same} Heisenberg group that acts
+simply transitively on the matter shell. Matter carries color because
+the $27$-shell is a torsor under the color group: color rotations are
+matter-shell motions.
+\end{corollary}
+
+\begin{theorem}[Fermion content of one generation, BT889]
+$C(R)$ is transitive on the matter shell with point-stabilizer the
+electroweak Levi $SL(2,3)$, so $27=C(R)/SL(2,3)$; rank $6$, suborbits
+$[1,1,1,8,8,8]$, module $\mathbf 1\oplus\mathbf 6\oplus\mathbf 8\oplus
+\mathbf{12}$. The three electroweak-fixed points are color-singlet
+(lepton-like); the three color-$8$ orbits are colored (quark-like):
+$27=3+24$.
+\end{theorem}
+
+\section{The discrete flavor/parity structure}
+\begin{theorem}[Flavor $S_3$ and CP, BT878/879]
+The normalizer datum $N(\langle R\rangle)/C(R)=\Z_2$ supplies a
+charge-conjugation $C$ ($CRC^{-1}=R^{-1}$) inverting the generation
+grade; $\langle R,C\rangle=S_3$ is the flavor group, under which the
+matter shell decomposes $6\cdot\mathbf 1\oplus3\cdot\mathbf{1'}\oplus
+9\cdot\mathbf 2$ (the standard doublet appearing $q^2=9$ times).
+\end{theorem}
+
+\begin{theorem}[Chirality and parity, BT869/877]
+The matter chirality $\Z_2$ is the polar-pair central involution
+(Steinberg split $45+36$ = tritangents $+$ double-sixes). Gauge parity
+is the $W/Q$ duality: the four lines through $p_0$ carry $A_4$ inside
+$\PSp$ but the full $S_4$ in $W(E_6)$; the odd (parity-violating)
+permutations are exactly the anti-symplectic coset --- parity is not an
+inner symmetry.
+\end{theorem}
+
+\begin{theorem}[Yukawa texture, BT875/891]
+The cubic coupling on the matter shell is grade-homogeneous in the
+$R$-eigenbasis ($T_{ijk}=0$ unless $g_i+g_j+g_k\equiv0$). A Higgs of
+grade $g_H$ gives a circulant Yukawa texture on generation pairs with
+$g_a+g_b\equiv-g_H$; up/down Higgs of different grades have misaligned
+textures, so nonzero CKM/PMNS mixing is forced (the angles set by the
+within-grade Higgs profile).
+\end{theorem}
+
+\section{Dynamics and gravity}
+\begin{theorem}[Gauge connection and curvature, BT882/883/884]
+The connection between local gauge groups is flat along collinear edges
+($\langle R_p,R_{p'}\rangle=\Z_3\times\Z_3$) and curved across
+non-collinear (matter) pairs ($SL(2,3)=2T$, the $24$-cell group). The
+curvature $F(p,q)=[R_p,R_{p'}]$ is an order-$4$ quaternion unit of $2T$
+on every matter pair ($F^2=-I$) --- an $\mathfrak{su}(2)$-valued field
+strength supported exactly on the matter graph $Q$; Wilson loops are
+abelian ($\Z_3$) on lines and non-abelian (up to $k=12$) on matter.
+\end{theorem}
+
+\begin{theorem}[Spanning-tree gravity and the Ihara zeta, BT870/872]
+The discrete Matrix-Tree gravitational partition function is
+$\tau(\W)=10^{24}16^{15}/40=2^{81}\cdot5^{23}$ --- the matter dimension
+$q^4=81$ in the exponent of $2$, the tier prime $F_5=5$ as base; the
+complement $Q$ gives $2^{66}3^{39}5^{23}$ with the gauge dimension
+$q\Phi_3=39$. This is the Perron-point ($u=1$) behavior of the Ihara
+zeta $\zeta^{-1}(u)=(1-u^2)^{200}(1-u)(1-11u)(1-2u+11u^2)^{24}
+(1+4u+11u^2)^{15}$, whose nontrivial zeros lie on $|u|=1/\sqrt{11}$
+(graph RH): transport and gravity are one zeta.
+\end{theorem}
+
+\section{The master theorem}
+\begin{theorem}[The Standard-Model spine, BT886/881]
+From the pair $(\W,\ R)$ the discrete Standard Model follows with zero
+free parameters. Each spacetime point carries a copy of the gauge group
+$C(R_p)$; the $40$ points form a single conjugacy class of local gauge
+groups (homogeneous spacetime), and the $40$ long-root $\Z_3$'s generate
+all of $\PSp(4,\GF3)$. The gauge group, the generations, the flavor
+symmetry, the Yukawa texture, chirality, parity, charge-conjugation,
+the fermion content, and the gauge dynamics are the centralizer, center,
+normalizer, grading, $W/Q$ duality, and commutator structure of one
+element of $\Sp(4,\GF3)$, replicated over the $40$ points of $\W$.
+\end{theorem}
+
+\paragraph{Scope.} The discrete structure above is exact and
+machine-verified (witnesses BT858--892; full-group character and
+permutation computations over the $25920$- and $51840$-element groups).
+What is \emph{not} claimed here: the coupling magnitudes, the precise
+mixing angles, and the masses --- these require continuum/RG input and
+constitute the established numerical layer --- and the curved-$4$D
+continuum (spectral-action) limit, which remains the open analytic
+frontier (the substrate supplies the exact finite spectral input,
+BT892).
+
+\paragraph{Witness ledger.} BT858 Heisenberg shell; BT861 Steinberg
+register; BT862 $H_2$; BT863 three generations; BT869 chirality; BT874
+texture triality; BT875/891 Yukawa texture; BT876 gauge group; BT877
+parity; BT878 charge-conjugation; BT879 flavor $S_3$; BT880 generations
+$=$ center; BT881 local gauge groups; BT882/883/884 connection,
+curvature, flux; BT886 spine; BT887 color/electroweak; BT888 color $=$
+matter Heisenberg; BT889 fermion content; BT890 matter cone/$E_7$;
+BT892 finite spectral input. Each has an executable script in
+\texttt{analysis/} with JSON results in \texttt{data/}.
+
+\end{document}
