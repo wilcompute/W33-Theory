@@ -1,0 +1,282 @@
+{
+  "theorem": "BT893 Grade Yukawa Reflection Degeneracy Theorem",
+  "input_selection_rule": "g_a + g_b + g_H = 0 mod 3",
+  "corrected_support_law": "b = -a - g_H mod 3",
+  "not_pure_shift": true,
+  "masks": {
+    "0": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "1": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "2": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "support_maps_row_to_column": {
+    "0": [
+      0,
+      2,
+      1
+    ],
+    "1": [
+      2,
+      1,
+      0
+    ],
+    "2": [
+      1,
+      0,
+      2
+    ]
+  },
+  "singular_values_by_higgs_grade": {
+    "0": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "1": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "2": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "product_law": "Y_gu Y_gd = rotation(gu-gd)",
+  "product_table": {
+    "0,0": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "0,1": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "0,2": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "1,0": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "1,1": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "1,2": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "2,0": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "2,1": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "2,2": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "commutator_frobenius_norm_squared": {
+    "0,0": 0,
+    "0,1": 6,
+    "0,2": 6,
+    "1,0": 6,
+    "1,1": 0,
+    "1,2": 6,
+    "2,0": 6,
+    "2,1": 6,
+    "2,2": 0
+  },
+  "generated_group": "S3 ~= D3",
+  "generated_group_order": 6,
+  "generated_group_order_histogram": {
+    "2": 3,
+    "3": 2,
+    "1": 1
+  },
+  "grade_mass_eigenvalues": [
+    1,
+    1,
+    1
+  ],
+  "within_grade_dimension": 9,
+  "physical_interpretation": "The derived Z3 grade skeleton fixes the Yukawa support as the three S3 reflection axes. At grade level all singular values are degenerate, so numerical CKM/PMNS angles are not determined by the 3x3 grade skeleton alone. Observable hierarchy and mixing must be produced by the q^2=9 within-grade Higgs profiles.",
+  "checks": {
+    "T1_shifted_reflection_support": true,
+    "T2_symmetric_involutions_degenerate_singular_values": true,
+    "T3_reflection_products_are_Z3_rotations": true,
+    "T4_Higgs_grade_reflections_generate_S3": true,
+    "T5_distinct_grade_reflections_do_not_commute": true,
+    "T6_grade_mass_operator_is_identity_degenerate": true
+  }
+}
