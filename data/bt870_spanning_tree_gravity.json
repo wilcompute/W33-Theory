@@ -1,0 +1,21 @@
+{
+  "theorem": "BT870 spanning-tree gravity",
+  "tau_W33": {
+    "2": 81,
+    "5": 23,
+    "readings": {
+      "81": "q^4 = matter/Steinberg dim",
+      "5": "F_5",
+      "23": "f-1"
+    }
+  },
+  "tau_Q": {
+    "2": 66,
+    "3": 39,
+    "5": 23,
+    "readings": {
+      "39": "q*Phi_3 = gauge dim = rank(d0)"
+    }
+  },
+  "action_lnTau_W33": 93.16199361133988
+}
