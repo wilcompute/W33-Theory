@@ -1,0 +1,12 @@
+{
+  "theorem": "BT874 texture triality is Heisenberg centre",
+  "shell_orbits": {
+    "3": 9
+  },
+  "shell_fixed": 0,
+  "is_pillar68_R": true,
+  "global_fixed_points": 13,
+  "fixed_lines": 4,
+  "ambient_class": "transvection-type (40-class, fixes a PG(2,3) plane)",
+  "fixed_neighbours_of_p0": 12
+}
