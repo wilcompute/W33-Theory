@@ -1,0 +1,14 @@
+{
+  "theorem": "BT927 E8 lift artifact reconciliation",
+  "artifact_count": 5,
+  "artifacts": [
+    {"name": "BT924_SNF_shadow", "kind": "integral invariant-factor location", "object": "SNF_Z(A)=diag(1^16,2^8,8^15,24)", "rank_8_role": "the eight d_i=2 valuation-1 factors locate the E8 shadow in coker(A)", "metric_status": "rank/location only; no positive-definite Gram chosen"},
+    {"name": "BT925_mod2_form", "kind": "canonical mod-2 bilinear form", "object": "H=ker(A2)/im(A2) with B=(x^T A y)/2 mod 2", "rank_8_role": "nondegenerate alternating F2 form of rank 8 = E8/2E8 bilinear form", "metric_status": "2-adic consistency only; no definiteness information"},
+    {"name": "BT926_vertex_E8", "kind": "positive-definite vertex Cartan witness", "object": "G=2I-A_sub for subset [0,1,4,22,27,35,23,34]", "rank_8_role": "explicit positive-definite even unimodular rank-8 Cartan form", "metric_status": "definite E8 certified, but not canonically linked to chain H"},
+    {"name": "MCCCLXXXVIII_tetracode_E8", "kind": "tetracode/A2 glue root-system witness", "object": "four A2 planes + W33-derived ternary tetracode glue -> 240 roots", "rank_8_role": "full rank-8 E8 root system with reflection closure", "metric_status": "metric root coordinates certified; bridge to chain H not yet canonical"},
+    {"name": "MCCCLXXXIX_E8_E6_A2_decomposition", "kind": "coordinate branching witness", "object": "E8 -> E6 x A2, 240 = 72 + 6 + 81 + 81", "rank_8_role": "connects E8 coordinates to W33/Steinberg matter-sector split", "metric_status": "branching coordinates useful for map search, not proof of chain lift alone"}
+  ],
+  "equivalence_status": "not yet proved: all witnesses are E8-consistent, but no canonical isometry from the BT924/BT925 chain shadow to the BT926 vertex or tetracode metric witnesses has been constructed.",
+  "reconciliation": {"same_rank": true, "same_mod2_bilinear_type": true, "positive_definite_witness_exists": true, "canonical_chain_to_metric_map_exists": false, "next_map_target": "construct an explicit symplectic basis of H and lift it into either the BT926 vertex Gram or MCCCLXXXVIII tetracode coordinates, then certify integral even-unimodular positivity."},
+  "checks": {"T1_chain_shadow_catalogued": true, "T2_mod2_form_catalogued": true, "T3_vertex_E8_catalogued": true, "T4_tetracode_E8_catalogued": true, "T5_equivalence_not_overclaimed": true}
+}
