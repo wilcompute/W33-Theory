@@ -1,0 +1,33 @@
+{
+  "schema": "external_flavor_anchors/v1",
+  "version_date": "2026-06-13",
+  "purpose": "External comparison anchors for the Holonet profile scaffold. These are not fitted inputs.",
+  "sources": [
+    {
+      "key": "NuFIT_6_0_2024",
+      "description": "NuFIT 6.0 updated global analysis of three-flavor neutrino oscillations, data as of September 2024; theta23 octant ambiguity remains.",
+      "url": "https://arxiv.org/abs/2410.05380"
+    },
+    {
+      "key": "PDG_style_CKM_2024",
+      "description": "PDG-style CKM/Wolfenstein lambda comparison anchor for Cabibbo scale.",
+      "url": "https://pdg.lbl.gov/"
+    },
+    {
+      "key": "PDG_style_lepton_masses_2024",
+      "description": "PDG-style charged-lepton pole masses used for Koide comparison.",
+      "url": "https://pdg.lbl.gov/"
+    }
+  ],
+  "mixing_anchors": {
+    "Cabibbo_sin": {"value": 0.22484, "uncertainty": 0.00044, "source_key": "PDG_style_CKM_2024"},
+    "PMNS_solar_sin2": {"value": 0.308, "uncertainty": 0.012, "source_key": "NuFIT_6_0_2024"},
+    "PMNS_reactor_sin2": {"value": 0.02215, "uncertainty": 0.00060, "source_key": "NuFIT_6_0_2024"},
+    "PMNS_atmospheric_sin2": {"value": 0.55, "uncertainty": 0.06, "source_key": "NuFIT_6_0_2024", "note": "Broad anchor because theta23 remains octant-ambiguous."}
+  },
+  "charged_lepton_masses_MeV": {
+    "electron": {"value": 0.51099895, "source_key": "PDG_style_lepton_masses_2024"},
+    "muon": {"value": 105.6583755, "source_key": "PDG_style_lepton_masses_2024"},
+    "tau": {"value": 1776.86, "source_key": "PDG_style_lepton_masses_2024"}
+  }
+}
