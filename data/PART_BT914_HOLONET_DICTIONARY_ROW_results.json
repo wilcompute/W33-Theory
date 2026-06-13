@@ -1,0 +1,18 @@
+{
+  "theorem": "BT914 Holonet dictionary profile row integration",
+  "target": "photonic_holonet.tex Section 14.4 physics-to-architecture dictionary",
+  "integrator": "tools/integrate_bt914_holonet_dictionary_row.py",
+  "row": {
+    "object": "profile multiplicity 9*2",
+    "physics_reading": "CKM/PMNS/Koide coordinate layer",
+    "architecture_reading": "four profile planes plus sentinel"
+  },
+  "paragraph_summary": "C^9=(2+2+2+2)+1; four two-planes carry 9/178, 4/13, 2/91, 7/13; final +1 is sentinel/provenance, not sterile generation.",
+  "checks": {
+    "T1_integrator_added": true,
+    "T2_dictionary_row_specified": true,
+    "T3_sentinel_boundary_specified": true,
+    "T4_no_sterile_generation_overclaim": true,
+    "T5_BT897_BT914_package_anchored": true
+  }
+}
