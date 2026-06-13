@@ -1,0 +1,18 @@
+{
+  "theorem": "BT917 sentinel stress suite",
+  "target_profile_fractions": {"Cabibbo": "9/178", "solar": "4/13", "reactor": "2/91", "atmospheric": "7/13"},
+  "perturbation_steps": ["1/178", "1/91", "1/13"],
+  "case_count": 33,
+  "positive_response_count": 32,
+  "minimum_nonzero_energy": 0.00003155406514835409,
+  "maximum_energy": 1.375,
+  "representative_cases": [
+    {"case": "baseline", "energy": 0.0, "positive_response": false},
+    {"case": "Cabibbo_minus_1_over_178", "plane": "Cabibbo", "step": "-1/178", "energy": 0.00003155406514835409, "positive_response": true},
+    {"case": "Cabibbo_plus_1_over_178", "plane": "Cabibbo", "step": "1/178", "energy": 0.00003155406514835409, "positive_response": true},
+    {"case": "reactor_plus_1_over_91", "plane": "reactor", "step": "1/91", "energy": 0.0001207583628352859, "positive_response": true},
+    {"case": "release_flag_true_g15_15_over_40", "release_flag": true, "g15": "15/40", "energy": 1.375, "positive_response": true}
+  ],
+  "exact_conclusion": "The sentinel has zero energy only on the exact clean profile. Every tested one-step rational profile perturbation, release flag, or positive g=15 channel gives positive energy.",
+  "checks": {"T1_baseline_zero": true, "T2_all_profile_perturbations_positive": true, "T3_release_flag_positive": true, "T4_positive_g15_channel_positive": true, "T5_thresholds_recorded": true}
+}
