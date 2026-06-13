@@ -1,0 +1,43 @@
+{
+  "theorem": "BT895 S3 Reflection to Fermion Multiplet Map",
+  "S3_classes": ["e", "reflection", "rotation3"],
+  "class_sizes": {"e": 1, "reflection": 3, "rotation3": 2},
+  "matter_character": {"e": 27, "reflection": 3, "rotation3": 0},
+  "irreducible_characters": {
+    "trivial_1": {"e": 1, "reflection": 1, "rotation3": 1},
+    "sign_1prime": {"e": 1, "reflection": -1, "rotation3": 1},
+    "standard_2": {"e": 2, "reflection": 0, "rotation3": -1}
+  },
+  "decomposition": "C[27] = 6*1 + 3*1' + 9*2",
+  "multiplicities": {"trivial_1": 6, "sign_1prime": 3, "standard_2": 9},
+  "dimension_check": 27,
+  "BT893_reflection_skeletons": {
+    "Y0": [0, 2, 1],
+    "Y1": [2, 1, 0],
+    "Y2": [1, 0, 2]
+  },
+  "reflection_grade_traces": {"Y0": 1, "Y1": 1, "Y2": 1},
+  "matter_reflection_trace": 3,
+  "standard_doublet_multiplicity": 9,
+  "q_squared": 9,
+  "BT894_match": "standard doublet multiplicity 9 equals q^2 within-grade profile dimension",
+  "product_types": {
+    "Y0Y0": "identity",
+    "Y0Y1": "rotation3",
+    "Y0Y2": "rotation3",
+    "Y1Y0": "rotation3",
+    "Y1Y1": "identity",
+    "Y1Y2": "rotation3",
+    "Y2Y0": "rotation3",
+    "Y2Y1": "rotation3",
+    "Y2Y2": "identity"
+  },
+  "structural_conclusion": "The three BT893 Higgs-grade Yukawa skeletons are the reflection class of the same S3 flavor action whose matter character decomposes as 6*1 + 3*1' + 9*2. The nine standard doublets are the exact representation-theoretic home of the BT894 within-grade profile layer.",
+  "checks": {
+    "T1_character_inner_products_give_6_3_9": true,
+    "T2_dimension_sums_to_27": true,
+    "T3_BT893_skeletons_are_reflections": true,
+    "T4_distinct_reflection_products_are_3cycles": true,
+    "T5_standard_doublet_multiplicity_equals_q_squared": true
+  }
+}
