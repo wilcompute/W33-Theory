@@ -1,0 +1,13 @@
+{
+  "theorem": "BT938 low-support branch-and-bound enumerator scaffold",
+  "status": "bounded certificate scaffold; exhaustive support<76 proof not yet complete",
+  "support_distribution": {"6": 10, "8": 20, "10": 52, "12": 85, "14": 54, "16": 29, "18": 4, "20": 1},
+  "raw_weight_lower_bound_for_8_vectors": 48,
+  "current_best_support_profile": [6, 6, 6, 10, 10, 10, 14, 14],
+  "current_best_support_sum": 76,
+  "gap_between_raw_bound_and_best": 28,
+  "implemented_search_rules": ["sort H classes by support", "maintain symplectic-rank feasibility", "lower-bound partial support before continuing", "require B(e_i,f_i)=1 and orthogonality to earlier pairs"],
+  "honest_boundary": "The raw lower bound is 48, far below 76, so support distribution alone cannot prove optimality. A full recursive symplectic feasibility search is still needed for a no-support-below-76 theorem.",
+  "next_run": "Implement compiled memoized recursion over symplectic subspaces and emit a certificate for all branches below 76.",
+  "checks": {"T1_support_distribution_loaded": true, "T2_current_best_loaded": true, "T3_raw_lower_bound_computed": true, "T4_gap_recorded": true, "T5_no_false_exhaustive_claim": true}
+}
