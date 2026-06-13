@@ -1,0 +1,16 @@
+{
+  "theorem": "BT908 Holonet PDF release artifact protocol",
+  "release_pdf": "photonic_holonet_BT906_clean_context.pdf",
+  "pdf_path": "/mnt/data/photonic_holonet_BT906_clean_context.pdf",
+  "tex_path": "/mnt/data/bt906_clean_context/photonic_holonet.tex",
+  "pdf_sha256": "e934160ca0742c4aaf012e3ad3dd3e789f7abc27531e9d732b49da9c3b7050b6",
+  "tex_sha256": "bb6f678632950e6d619085a8a9cd9683bf3d6863d37965cf2bf01187cb4fcae5",
+  "pdf_size_bytes": 744754,
+  "page_count": 35,
+  "render_check": {"pages_rendered": 35, "dpi": 120, "out_dir": "/mnt/data/bt906_render"},
+  "stale_pdf_guard": {
+    "protocol": "release script must run BT905 --compile before hashing or fail if PDF older than TeX",
+    "local_status": "fresh from BT906 clean-context compile"
+  },
+  "checks": {"T1_pdf_exists": true, "T2_page_count_35": true, "T3_rendered_35_pages": true, "T4_sha256_recorded": true, "T5_source_sha256_recorded": true}
+}
