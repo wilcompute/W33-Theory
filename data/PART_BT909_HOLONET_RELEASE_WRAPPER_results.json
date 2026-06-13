@@ -1,0 +1,22 @@
+{
+  "theorem": "BT909 human-facing Holonet release wrapper",
+  "status": "Makefile targets and release wrapper committed",
+  "wrapper": "tools/release_holonet.py",
+  "make_targets": {
+    "holonet-ci": "python tools/run_bt905_holonet_profile_ci.py --compile",
+    "holonet-release": "python tools/release_holonet.py"
+  },
+  "release_chain": [
+    "make holonet-release",
+    "tools/release_holonet.py",
+    "tools/release_bt908_photonic_holonet_pdf.py",
+    "tools/run_bt905_holonet_profile_ci.py --compile"
+  ],
+  "checks": {
+    "T1_wrapper_added": true,
+    "T2_make_holonet_release_added": true,
+    "T3_make_holonet_ci_added": true,
+    "T4_BT908_protocol_reused": true,
+    "T5_release_path_human_facing": true
+  }
+}
