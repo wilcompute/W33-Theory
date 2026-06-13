@@ -1,0 +1,36 @@
+{
+  "theorem": "BT900 Holonet patch and compile ledger",
+  "target": "photonic_holonet.tex",
+  "document_identity": "The Photonic Holonet, not a standalone transvection paper",
+  "local_source_used": "/mnt/data/photonic_holonet.tex uploaded by user, then patched with BT899 integrator logic",
+  "patch_patterns_verified": {
+    "BT893--BT898": true,
+    "shifted reflection": true,
+    "3/sqrt(178)": true,
+    "Yukawa reflection/profile layer": true
+  },
+  "compile": {
+    "engine": "pdflatex",
+    "passes": 2,
+    "status": "success",
+    "pages": 35,
+    "render_verification": "rendered with PDF skill render_pdf.py at 120 dpi"
+  },
+  "artifacts": {
+    "patched_pdf_local_path": "/mnt/data/photonic_holonet_BT900_patched.pdf",
+    "patched_pdf_sha256": "eee60ad8be7510c2fe52d215a6af0ac40b6e1489163a776eb12b3e5e38b8de0f",
+    "patched_tex_sha256": "bb6f678632950e6d619085a8a9cd9683bf3d6863d37965cf2bf01187cb4fcae5"
+  },
+  "repo_integration": {
+    "integrator": "tools/integrate_bt897_bt899_photonic_holonet_patch.py",
+    "guard": "analysis/bt899_photonic_holonet_static_guard.py",
+    "note": "The full patched PDF was compiled from the local uploaded tex. The repo contains the deterministic patcher and guard; apply the integrator before compiling in-repo."
+  },
+  "checks": {
+    "T1_target_is_photonic_holonet": true,
+    "T2_patch_patterns_present": true,
+    "T3_pdf_compiles": true,
+    "T4_pdf_renders": true,
+    "T5_static_guard_path_exists": true
+  }
+}
