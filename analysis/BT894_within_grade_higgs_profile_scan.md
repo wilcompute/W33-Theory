@@ -27,7 +27,7 @@ is block diagonal by grade for every choice of within-grade profiles.
 Consequently the grade skeleton alone is angle-blind:
 
 \[
-Y_{m flat}Y_{m flat}^T=I_{27}.
+Y_{\mathrm{flat}}Y_{\mathrm{flat}}^T=I_{27}.
 \]
 
 The physical mixing matrix factors as
