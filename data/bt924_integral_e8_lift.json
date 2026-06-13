@@ -1,0 +1,21 @@
+{
+  "theorem": "BT924 integral E8 shadow in SNF(A) (open frontier #5)",
+  "smith_normal_form": "{1: 16, 2: 8, 8: 15, 24: 1}",
+  "det_A_factorization": "{2: 56, 3: 1}",
+  "dim_H": 8,
+  "rank8_is_num_divisors_equal_2": 8,
+  "dynkin_subset": [
+    0,
+    1,
+    4,
+    22,
+    27,
+    35,
+    23,
+    34
+  ],
+  "dynkin_is_E8": true,
+  "naive_lift_det": 507465,
+  "naive_lift_det_factorization": "{3: 4, 5: 1, 7: 1, 179: 1}",
+  "status": "advance not closure; rank+2-adic location pinned, definite form open"
+}

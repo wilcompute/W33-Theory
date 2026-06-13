@@ -61,6 +61,13 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   integral Cartan pairing and a canonical root-lattice lift have NOT been
   reconstructed directly from the chain complex. (Finite, computational —
   the most tractable genuine open.)
+  ADVANCED by BT924 (`analysis/bt924*integral_e8_lift*`): SNF_Z(A) =
+  diag(1¹⁶,2⁸,8¹⁵,24¹); the E8 rank 8 = #(elementary divisors = 2) =
+  #(2-adic valuation exactly 1) — rank+2-adic location now pinned over Z.
+  Vertex 8-subset certified genuine E8 (even+unimodular+posdef, spectrum =
+  E8 Cartan). OBSTRUCTION: naive support-lift has det 3⁴·5·7·179 ≠ ±1, so
+  the canonical FORM is the residual open core (extract via SNF transforms
+  U A V = S on the eight dᵢ=2 directions). STILL OPEN: the definite form.
 - (6) MOONSHINE MODULE BOUNDARY — low-order transport exact through the
   quartic package, but the naive quintic V₅ lift fails on anchored classes
   2A, 2B; needs genuine character-theoretic input. (Hard, rep-theoretic.)
