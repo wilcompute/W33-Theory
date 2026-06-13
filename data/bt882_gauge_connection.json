@@ -1,0 +1,16 @@
+{
+  "theorem": "BT882 gauge connection flat on edges",
+  "collinear_holonomy": {
+    "order": 9,
+    "type": "Z3xZ3",
+    "flat": true,
+    "count": 12
+  },
+  "noncollinear_holonomy": {
+    "order": 24,
+    "type": "SL(2,3)=2T",
+    "curved": true,
+    "count": 27
+  },
+  "curvature_lives_on": "matter graph Q (non-collinearity)"
+}
