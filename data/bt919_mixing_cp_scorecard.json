@@ -1,0 +1,90 @@
+{
+  "theorem": "BT919 mixing+CP falsifiability scorecard",
+  "predictions": [
+    {
+      "quantity": "|V_us| Cabibbo",
+      "form": "(lam+Phi6)/v",
+      "value": 0.225,
+      "pdg": 0.22501,
+      "err": 0.00068,
+      "dev_pct": 0.004444246922351116,
+      "sigma": 0.014705882352915065
+    },
+    {
+      "quantity": "|V_cb|",
+      "form": "mu/Theta^2",
+      "value": 0.04,
+      "pdg": 0.04053,
+      "err": 0.00072,
+      "dev_pct": 1.3076733283987068,
+      "sigma": 0.7361111111111052
+    },
+    {
+      "quantity": "|V_ub|",
+      "form": "lam/(v*Phi3)",
+      "value": 0.0038461538461538464,
+      "pdg": 0.00382,
+      "err": 0.0002,
+      "dev_pct": 0.6846556584776524,
+      "sigma": 0.1307692307692316
+    },
+    {
+      "quantity": "sin2_th12 solar",
+      "form": "mu/Phi3",
+      "value": 0.3076923076923077,
+      "pdg": 0.307,
+      "err": 0.012,
+      "dev_pct": 0.22550739163117728,
+      "sigma": 0.05769230769230952
+    },
+    {
+      "quantity": "sin2_th23 atmos",
+      "form": "Phi6/Phi3",
+      "value": 0.5384615384615384,
+      "pdg": 0.546,
+      "err": 0.021,
+      "dev_pct": 1.3806706114398544,
+      "sigma": 0.35897435897436214
+    },
+    {
+      "quantity": "sin2_th13 reactor",
+      "form": "lam/(Phi6*Phi3)",
+      "value": 0.02197802197802198,
+      "pdg": 0.02203,
+      "err": 0.0007,
+      "dev_pct": 0.23594199717667375,
+      "sigma": 0.0742543171114589
+    },
+    {
+      "quantity": "sin delta_CP",
+      "form": "(mu^2-1)/(mu^2+1)",
+      "value": 0.8823529411764706,
+      "pdg": 0.911,
+      "err": 0.03,
+      "dev_pct": 3.1445728675663522,
+      "sigma": 0.9549019607843157
+    },
+    {
+      "quantity": "J_CKM Jarlskog",
+      "form": "27/884000",
+      "value": 3.054298642533937e-05,
+      "pdg": 3.08e-05,
+      "err": 1.3e-06,
+      "dev_pct": 0.8344596579890787,
+      "sigma": 0.197702749738951
+    },
+    {
+      "quantity": "A Wolfenstein",
+      "form": "mu/(q+lam)",
+      "value": 0.8,
+      "pdg": 0.826,
+      "err": 0.015,
+      "dev_pct": 3.147699757869239,
+      "sigma": 1.7333333333333276
+    }
+  ],
+  "within_1sigma": 8,
+  "total": 9,
+  "outlier": "A = mu/(q+lambda) = 4/5 at 1.7 sigma",
+  "boundary": "structure derived (BT858-892); mixing/CP ratios validated phenomenology, within-grade derivation open"
+}
