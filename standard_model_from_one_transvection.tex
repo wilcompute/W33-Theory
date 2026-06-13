@@ -42,10 +42,10 @@ duality; the Yukawa texture is the $\Z_3$ grading $R$ induces on the
 matter shell; and the gauge curvature is the \emph{commutator} of two
 generation centers, an $\mathfrak{su}(2)$-valued field strength
 supported on the matter graph. Every statement is a theorem with an
-executable witness (the BT858--892 chain); there are zero free
+executable witness (the BT858--895 chain); there are zero free
 parameters. The remaining physics --- coupling magnitudes, mixing
-angles, the continuum limit --- is the established numerical layer and
-is not claimed here.
+angles, masses, the continuum limit --- is the established numerical
+layer and is not claimed here.
 \end{abstract}
 
 \section{The datum}
@@ -144,13 +144,30 @@ permutations are exactly the anti-symplectic coset --- parity is not an
 inner symmetry.
 \end{theorem}
 
-\begin{theorem}[Yukawa texture, BT875/891]
+\begin{theorem}[Yukawa texture and flavor reflections, BT875/891/893--895]
 The cubic coupling on the matter shell is grade-homogeneous in the
-$R$-eigenbasis ($T_{ijk}=0$ unless $g_i+g_j+g_k\equiv0$). A Higgs of
-grade $g_H$ gives a circulant Yukawa texture on generation pairs with
-$g_a+g_b\equiv-g_H$; up/down Higgs of different grades have misaligned
-textures, so nonzero CKM/PMNS mixing is forced (the angles set by the
-within-grade Higgs profile).
+$R$-eigenbasis:
+\[
+T_{ijk}=0\qquad\text{unless}\qquad g_i+g_j+g_k\equiv0\pmod 3.
+\]
+For a Higgs of grade $g_H$, the grade-level support on generation pairs is
+not a pure cyclic shift but the shifted reflection
+\[
+Y_{g_H}[a,b]=1
+\quad\Longleftrightarrow\quad
+b\equiv -a-g_H\pmod 3.
+\]
+The three Higgs-grade skeletons are the three reflections of
+$D_3\cong S_3$; their products are generation rotations. Hence the exact
+$\Z_3$ grade law fixes the allowed Yukawa support and the flavor
+reflection axes. Since each grade skeleton satisfies
+\[
+Y_{g_H}Y_{g_H}^{T}=I_3,
+\]
+the grade-level mass operator is triply degenerate and angle-blind. The
+observable CKM/PMNS angles therefore live in the within-grade
+$q^2=9$ Higgs profile layer, matching the $9\cdot\mathbf 2$ standard
+-doublet multiplicity in the $S_3$ matter-shell decomposition.
 \end{theorem}
 
 \section{Dynamics and gravity}
@@ -189,7 +206,7 @@ element of $\Sp(4,\GF3)$, replicated over the $40$ points of $\W$.
 \end{theorem}
 
 \paragraph{Scope.} The discrete structure above is exact and
-machine-verified (witnesses BT858--892; full-group character and
+machine-verified (witnesses BT858--895; full-group character and
 permutation computations over the $25920$- and $51840$-element groups).
 What is \emph{not} claimed here: the coupling magnitudes, the precise
 mixing angles, and the masses --- these require continuum/RG input and
@@ -200,12 +217,14 @@ BT892).
 
 \paragraph{Witness ledger.} BT858 Heisenberg shell; BT861 Steinberg
 register; BT862 $H_2$; BT863 three generations; BT869 chirality; BT874
-texture triality; BT875/891 Yukawa texture; BT876 gauge group; BT877
-parity; BT878 charge-conjugation; BT879 flavor $S_3$; BT880 generations
-$=$ center; BT881 local gauge groups; BT882/883/884 connection,
-curvature, flux; BT886 spine; BT887 color/electroweak; BT888 color $=$
-matter Heisenberg; BT889 fermion content; BT890 matter cone/$E_7$;
-BT892 finite spectral input. Each has an executable script in
-\texttt{analysis/} with JSON results in \texttt{data/}.
+texture triality; BT875/891 Yukawa selection; BT893 shifted-reflection
+Yukawa skeleton; BT894 within-grade Higgs profile scan; BT895 flavor
+reflection/multiplet map; BT876 gauge group; BT877 parity; BT878
+charge-conjugation; BT879 flavor $S_3$; BT880 generations $=$ center;
+BT881 local gauge groups; BT882/883/884 connection, curvature, flux;
+BT886 spine; BT887 color/electroweak; BT888 color $=$ matter Heisenberg;
+BT889 fermion content; BT890 matter cone/$E_7$; BT892 finite spectral
+input. Each has an executable script in \texttt{analysis/} with JSON
+results in \texttt{data/}.
 
 \end{document}
