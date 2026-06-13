@@ -1,0 +1,43 @@
+{
+  "theorem": "BT918 mixing-angle falsifiability cross-check",
+  "angles": [
+    {
+      "quantity": "sin2_theta12_solar",
+      "substrate_form": "mu/Phi3",
+      "value": 0.3076923076923077,
+      "pdg": 0.307,
+      "dev_pct": 0.22550739163117728,
+      "sigma": 0.05769230769230952
+    },
+    {
+      "quantity": "sin2_theta23_atmos",
+      "substrate_form": "Phi6/Phi3",
+      "value": 0.5384615384615384,
+      "pdg": 0.546,
+      "dev_pct": 1.3806706114398544,
+      "sigma": 0.3426573426573457
+    },
+    {
+      "quantity": "sin2_theta13_reactor",
+      "substrate_form": "lambda/(Phi6*Phi3)",
+      "value": 0.02197802197802198,
+      "pdg": 0.02203,
+      "dev_pct": 0.23594199717667375,
+      "sigma": 0.0742543171114589
+    },
+    {
+      "quantity": "sin_thetaC_Cabibbo",
+      "substrate_form": "q/sqrt(Phi3^2+q^2)",
+      "value": 0.22485950669875843,
+      "pdg": 0.225,
+      "dev_pct": 0.06244146721847945,
+      "sigma": 0.20070471605939824
+    }
+  ],
+  "all_within_1sigma": true,
+  "structural": {
+    "th12+th23": "11/13 (11=k-1 Ihara)",
+    "cabibbo_radicand": 178
+  },
+  "boundary": "ratios empirically excellent; first-principles derivation from within-grade q^2=9 profile open"
+}
