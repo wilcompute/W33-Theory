@@ -1,0 +1,12 @@
+{
+  "theorem": "BT923 Hodge-Dirac index = Euler char = -v",
+  "graded": true,
+  "betti": [
+    1,
+    81,
+    40
+  ],
+  "index": -40,
+  "euler": -40,
+  "minus_v": -40
+}
