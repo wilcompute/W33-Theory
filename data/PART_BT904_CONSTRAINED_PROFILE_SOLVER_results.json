@@ -1,0 +1,17 @@
+{
+  "theorem": "BT904 constrained 9x9 profile solver",
+  "status": "constructive scaffold, not empirical mass fit",
+  "profile_space": "C^9 multiplicity factor in C^9 tensor Std(S3)",
+  "rotation_planes": [
+    {"name": "Cabibbo", "plane": [0, 1], "sin_exact": "3/sqrt(178)", "sin2": 0.05056179775280899},
+    {"name": "PMNS_solar", "plane": [2, 3], "sin_exact": "sqrt(4/13)", "sin2": 0.3076923076923077},
+    {"name": "PMNS_reactor", "plane": [4, 5], "sin_exact": "sqrt(2/91)", "sin2": 0.02197802197802198},
+    {"name": "PMNS_atmospheric", "plane": [6, 7], "sin_exact": "sqrt(7/13)", "sin2": 0.5384615384615384}
+  ],
+  "unitarity_error": 2.238838883811746e-16,
+  "profile_commutator_frobenius_norm": 17.095258627377825,
+  "s3_equivariance_errors": {"A_rot": 0.0, "B_rot": 0.0, "A_ref": 0.0, "B_ref": 0.0},
+  "koide_condition": {"ratio": 0.6666666666666666, "condition": "equal S3 singlet and standard-doublet norm in signed sqrt-mass space"},
+  "exact_conclusion": "A single 9x9 multiplicity-space profile can house Cabibbo plus the PMNS archive scaffold on disjoint internal planes while lifting S3-equivariantly as profile tensor I_2. The numerical layer can therefore be searched without altering the shifted-reflection support skeleton.",
+  "checks": {"T1_9x9_unitary_profile_built": true, "T2_four_disjoint_rotation_planes": true, "T3_up_down_profiles_noncommute": true, "T4_lift_commutes_with_S3": true, "T5_koide_equal_norm_condition_verified": true}
+}
