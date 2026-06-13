@@ -1,0 +1,14 @@
+{
+  "theorem": "BT928 symplectic basis extractor for BT925 homology form",
+  "rank_H": 8,
+  "source_gram_rank": 8,
+  "source_gram": [[0,1,0,0,1,0,0,1],[1,0,0,0,1,1,1,1],[0,0,0,1,1,0,0,1],[0,0,1,0,1,1,1,1],[1,1,1,1,0,1,0,1],[0,1,0,1,1,0,1,1],[0,1,0,1,0,1,0,0],[1,1,1,1,1,1,0,0]],
+  "symplectic_change_matrix_columns_e1f1_e2f2_e3f3_e4f4": [[1,0,1,0,1,0,0,0],[0,1,0,1,0,1,0,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,1],[0,0,0,0,1,0,1,0],[0,0,0,0,0,1,0,1],[0,0,1,1,1,0,0,1],[0,0,0,1,1,1,1,0]],
+  "pairs": [
+    {"pair":0,"e_coeff":[1,0,0,0,0,0,0,0],"f_coeff":[0,1,0,0,0,0,0,0],"e_support_size":6,"f_support_size":6,"B_e_f":1},
+    {"pair":1,"e_coeff":[1,0,0,0,0,0,1,0],"f_coeff":[0,1,0,0,0,0,1,1],"e_support_size":6,"f_support_size":14,"B_e_f":1},
+    {"pair":2,"e_coeff":[1,0,0,0,1,0,1,1],"f_coeff":[0,1,0,0,0,1,0,1],"e_support_size":14,"f_support_size":10,"B_e_f":1},
+    {"pair":3,"e_coeff":[0,0,1,0,1,0,0,1],"f_coeff":[0,0,0,1,0,1,1,0],"e_support_size":10,"f_support_size":10,"B_e_f":1}
+  ],
+  "checks": {"T1_rank_H_8": true, "T2_source_form_rank_8": true, "T3_four_hyperbolic_pairs": true, "T4_normal_form_is_standard": true, "T5_supports_recorded": true}
+}
