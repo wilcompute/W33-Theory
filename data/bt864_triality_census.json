@@ -1,0 +1,55 @@
+{
+  "theorem": "BT864 triality census",
+  "order3_total": 800,
+  "classes": [
+    {
+      "size": 40,
+      "fixpts": 13,
+      "fixlines": 4,
+      "fixschedules": 0,
+      "gauge_split": [
+        22,
+        9,
+        9
+      ],
+      "tag": "TRANSVECTION (fixes hyperplane, 13 = Phi_3)"
+    },
+    {
+      "size": 40,
+      "fixpts": 13,
+      "fixlines": 4,
+      "fixschedules": 0,
+      "gauge_split": [
+        22,
+        9,
+        9
+      ],
+      "tag": "TRANSVECTION (fixes hyperplane, 13 = Phi_3)"
+    },
+    {
+      "size": 240,
+      "fixpts": 4,
+      "fixlines": 1,
+      "fixschedules": 6,
+      "gauge_split": [
+        16,
+        12,
+        12
+      ],
+      "tag": ""
+    },
+    {
+      "size": 480,
+      "fixpts": 4,
+      "fixlines": 7,
+      "fixschedules": 3,
+      "gauge_split": [
+        16,
+        12,
+        12
+      ],
+      "tag": ""
+    }
+  ],
+  "matter_blind": "all classes split Steinberg 27+27+27 (BT863)"
+}

@@ -1149,6 +1149,7 @@ the combinatorial face of Kochen--Specker.
 
 %======================================================================
 \section{Memory, protection, and the immune system}
+\label{sec:memory}
 
 \begin{theorem}[The code register is the Steinberg module]
 The companion paper's CSS code $[[240,81,4,3]]_3$ stores its $81$
@@ -1958,6 +1959,27 @@ a structural identification of the fermionic sector with the
 non-stabilizer sector; an engineer reads the same integers as a fuel
 gauge.  Both readings are forced by the same double cosets.
 
+\paragraph{Three generations, matter-blind and gauge-visible.}
+Because the matter register is the Steinberg module
+(Corollary, \S\ref{sec:memory}) and the Steinberg character vanishes
+on every $3$-singular element, \emph{any} order-$3$ symmetry of the
+substrate splits matter into exactly $27+27+27$: the three
+generations carry identical matter/Steinberg structure --- they are
+indistinguishable to the protected register, which is why generations
+share gauge charges.  Yet the four order-$3$ conjugacy classes
+\emph{are} distinguished in the gauge ($40$-point) sector: the
+transvections grade it $22+9+9$ and fix a whole $\mathrm{PG}(2,3)$
+plane of $13=\Phi_3$ points, while the regular classes grade it
+$16+12+12$ and fix only $\mu=4$ points (the $240$-class fixing
+$6=q!$ complete schedules --- the operational home of generation
+cycling).  This is the Standard-Model pattern as a representation-
+theoretic theorem: generations are identical in gauge charge
+(matter-blind) and differ only through gauge-sector--visible
+couplings (the Yukawa/mass structure), here the eigenvalue
+degeneracy of an order-$3$ symmetry rather than a modeling input.
+\emph{Witnesses: \texttt{bt863\_generations\_from\_steinberg\_vanishing.py},
+\texttt{bt864\_triality\_census.py}.}
+
 \paragraph{Time has three hands and an irrational escapement.}
 The internal $\mathbb{Z}_{12}$ rectangle clock, the external
 $\mathbb{Z}_7$ (Cs\'asz\'ar) and $\mathbb{Z}_{13}$ (Singer)
@@ -2368,6 +2390,7 @@ Bell-shell register arithmetic ($[4,4,6,12]$ named) & bt860\\
 code register $=$ Steinberg ($[[240,81,4,3]]_3$) & bt861\\
 $H_2=$ sign-twisted lines (homological dictionary) & bt862\\
 three generations $=$ Steinberg vanishing & bt863\\
+triality census (matter-blind, gauge-visible) & bt864\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\
