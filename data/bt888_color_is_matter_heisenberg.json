@@ -1,0 +1,8 @@
+{
+  "theorem": "BT888 color is matter-shell Heisenberg",
+  "N_order": 27,
+  "N_heisenberg": true,
+  "regular_on_matter_shell": true,
+  "color_radical_electroweak_invariant_dim": 4,
+  "gluon_octet_dim": 8
+}
