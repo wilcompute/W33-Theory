@@ -42,10 +42,14 @@ duality; the Yukawa texture is the $\Z_3$ grading $R$ induces on the
 matter shell; and the gauge curvature is the \emph{commutator} of two
 generation centers, an $\mathfrak{su}(2)$-valued field strength
 supported on the matter graph. Every statement is a theorem with an
-executable witness (the BT858--895 chain); there are zero free
-parameters. The remaining physics --- coupling magnitudes, mixing
-angles, masses, the continuum limit --- is the established numerical
-layer and is not claimed here.
+executable witness (the BT858--922 chain); there are zero free
+parameters. The mixing angles are fixed in structure to the single
+scale $\Phi_3$ (the PMNS is tribimaximal $\pm 1/\Phi_3$; the Cabibbo
+angle is the $q/\Phi_3$ rotation), matching all nine flavor
+observables within $1\sigma$ bar one. The remaining physics --- the
+coupling magnitudes, the masses, and the curved-$4$D continuum limit
+--- is the established numerical/analytic layer and is not claimed
+here.
 \end{abstract}
 
 \section{The datum}
@@ -170,6 +174,33 @@ $q^2=9$ Higgs profile layer, matching the $9\cdot\mathbf 2$ standard
 -doublet multiplicity in the $S_3$ matter-shell decomposition.
 \end{theorem}
 
+\section{Flavor mixing: one scale $\Phi_3$}
+The texture skeleton above fixes the \emph{structure} of the mixing
+matrices; their angles are governed by the single substrate scale
+$\Phi_3=q^2+q+1=13$ (the points of $\mathrm{PG}(2,\GF3)$, the Singer
+$C_{13}$ clock).
+
+\begin{theorem}[Unified $\Phi_3$ mixing scale, BT918/920/922]
+Both fermion-mixing sectors are deformations at the scale $1/\Phi_3$:
+the lepton (PMNS) matrix is tribimaximal --- the $S_3$-symmetric point
+--- deformed by $1/\Phi_3$,
+\[
+\sin^2\theta_{12}=\tfrac13\bigl(1-\tfrac1{\Phi_3}\bigr)=\tfrac4{13},
+\quad
+\sin^2\theta_{23}=\tfrac12\bigl(1+\tfrac1{\Phi_3}\bigr)=\tfrac7{13},
+\quad
+\sin^2\theta_{13}=\tfrac{\lambda}{\Phi_6\Phi_3}=\tfrac2{91},
+\]
+while the quark (CKM) Cabibbo angle is the $q/\Phi_3$ rotation off the
+identity, $\tan\theta_C=q/\Phi_3=3/13$. The quark/lepton dichotomy is
+one scale, two regimes: a small rotation off the identity (quarks)
+versus a deformation off tribimaximal (leptons). All nine flavor
+observables (three CKM elements, three PMNS angles, the CP phase, the
+Jarlskog $J=27/884000$, and the Wolfenstein $A=4/5$) match PDG within
+$1\sigma$ except $A$ at $1.7\sigma$; the two large PMNS angles sum to
+$4/13+7/13=11/13$ (numerator $11=k-1$, the Ihara prime).
+\end{theorem}
+
 \section{Dynamics and gravity}
 \begin{theorem}[Gauge connection and curvature, BT882/883/884]
 The connection between local gauge groups is flat along collinear edges
@@ -190,6 +221,18 @@ $q\Phi_3=39$. This is the Perron-point ($u=1$) behavior of the Ihara
 zeta $\zeta^{-1}(u)=(1-u^2)^{200}(1-u)(1-11u)(1-2u+11u^2)^{24}
 (1+4u+11u^2)^{15}$, whose nontrivial zeros lie on $|u|=1/\sqrt{11}$
 (graph RH): transport and gravity are one zeta.
+\end{theorem}
+
+\begin{theorem}[The finite spectral triple, BT892/921]
+The finite Dirac operator $D=d+d^*$ on the $\W$ $2$-complex has
+$D^2=\Delta_0\oplus\Delta_1\oplus\Delta_2$ with spectrum
+$\{0^{122},4^{240},10^{48},16^{30}\}$; its harmonic modes are the
+homology $b_0{=}1$, $b_1{=}81$ (Steinberg), $b_2{=}40$, and its
+matter eigenvalue is $\mu=4$ (multiplicity $|E|=240$). The spectral
+action's log-determinant is exactly the gravity $\tau$ above. This
+pins the finite/internal input to the Connes spectral action; the
+curved-$4$D continuum (Einstein--Hilbert) limit is the open analytic
+frontier.
 \end{theorem}
 
 \section{The master theorem}
@@ -224,7 +267,9 @@ charge-conjugation; BT879 flavor $S_3$; BT880 generations $=$ center;
 BT881 local gauge groups; BT882/883/884 connection, curvature, flux;
 BT886 spine; BT887 color/electroweak; BT888 color $=$ matter Heisenberg;
 BT889 fermion content; BT890 matter cone/$E_7$; BT892 finite spectral
-input. Each has an executable script in \texttt{analysis/} with JSON
-results in \texttt{data/}.
+input; BT918/919 mixing-angle falsifiability scorecard; BT920 PMNS $=$
+tribimaximal $\pm 1/\Phi_3$; BT921 Hodge--Dirac spectral triple;
+BT922 unified $\Phi_3$ mixing scale. Each has an executable script in
+\texttt{analysis/} with JSON results in \texttt{data/}.
 
 \end{document}
