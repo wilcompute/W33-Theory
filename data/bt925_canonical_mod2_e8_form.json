@@ -1,0 +1,19 @@
+{
+  "theorem": "BT925 canonical mod-2 form on homology",
+  "homology_rank": 8,
+  "well_defined_on_H": true,
+  "rank_B": 8,
+  "zero_diagonal_gram": true,
+  "B_xx_zero_for_all_256_classes": true,
+  "q_zero_on_H": true,
+  "false_polarization_count": 24,
+  "corrected_claim": "B=(x^T A y)/2 mod 2 is the canonical nondegenerate alternating F2 form on H, matching the bilinear form of E8/2E8; q=(x^T A x)/2 mod 2 is a vanishing Wu functional on H, not the quadratic refinement of B.",
+  "residual": "No mod-2/mod-4 invariant separates E8 from II_{4,4}; the remaining open content is a positive-definite integral lift.",
+  "checks": {
+    "T1_B_descends_to_H": true,
+    "T2_B_non_degenerate_rank_8": true,
+    "T3_B_alternating": true,
+    "T4_q_vanishes_on_H": true,
+    "T5_invalid_Arf_refinement_rejected": true
+  }
+}
