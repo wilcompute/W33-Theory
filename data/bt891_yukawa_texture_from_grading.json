@@ -1,0 +1,54 @@
+{
+  "theorem": "BT891 Yukawa texture from derived grading",
+  "cubic_triples": 36,
+  "grade_distribution": {
+    "1": 9,
+    "2": 9,
+    "0": 9
+  },
+  "grade_violating_entries": 0,
+  "texture": {
+    "0": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "1": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "2": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  }
+}
