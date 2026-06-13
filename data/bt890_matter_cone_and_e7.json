@@ -1,0 +1,14 @@
+{
+  "theorem": "BT890 matter cone 28 and E7/56 bridge",
+  "matter_cone": 28,
+  "three_readings": {
+    "1+27": 28,
+    "mu*Phi6=n_even": 28,
+    "C(8,2) cube pairs": 28
+  },
+  "e7_56": {
+    "2*28": 56,
+    "CY3_Hodge_1+27+27+1": 56,
+    "reading": "E6 fundamental 27 + conjugate 27bar + 2 singlets = E7 minuscule"
+  }
+}
