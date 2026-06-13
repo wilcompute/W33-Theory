@@ -1,0 +1,26 @@
+{
+  "theorem": "BT926 bounded positive-definite integral E8 form extractor",
+  "status": "partial extractor; vertex-sector definite E8 witnesses found, canonical chain lift still open",
+  "base_subset": [0, 1, 4, 22, 27, 35, 23, 34],
+  "base_certificate": {
+    "det": 1,
+    "positive_definite": true,
+    "smallest_eigenvalue": 0.011015369984850486,
+    "largest_eigenvalue": 3.801937735804838,
+    "even_diagonal_2": true,
+    "offdiag_values": [-1, 0],
+    "is_e8_cartan_type": true
+  },
+  "single_swap_search_space": 256,
+  "single_swap_e8_witness_count": 0,
+  "sample_single_swap_witnesses": [],
+  "chain_lift_boundary": "This extractor operates in the W33 vertex Cartan sector G=2I-A_sub. It certifies definite E8 forms in the ambient graph, but it does not yet choose the canonical coset representative in the BT924 valuation-1 chain sector.",
+  "residual": "Find an explicit map from the canonical H=(Z/2)^8 valuation-1/SNF sector with BT925 symplectic form into one of these positive-definite E8 vertex/tetracode forms.",
+  "checks": {
+    "T1_base_vertex_subset_is_E8": true,
+    "T2_single_swap_search_executed": true,
+    "T3_positive_definite_form_available": true,
+    "T4_canonical_chain_lift_not_claimed": true,
+    "T5_residual_map_precisely_stated": true
+  }
+}
