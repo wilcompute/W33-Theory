@@ -1,0 +1,29 @@
+{
+  "theorem": "BT906 clean-context BT905 run",
+  "workspace": "/mnt/data/bt906_clean_context",
+  "status": "passed",
+  "command": "python tools/run_bt905_holonet_profile_ci.py --compile",
+  "stdout": "BT905 passed\n",
+  "stderr": "",
+  "pdf_exists": true,
+  "pdf_size": 744754,
+  "pdf_sha256": "e934160ca0742c4aaf012e3ad3dd3e789f7abc27531e9d732b49da9c3b7050b6",
+  "tex_sha256": "bb6f678632950e6d619085a8a9cd9683bf3d6863d37965cf2bf01187cb4fcae5",
+  "tex_patch_present": true,
+  "produced_jsons": [
+    "data/PART_BT899_PHOTONIC_HOLONET_STATIC_GUARD_results.json",
+    "data/PART_BT901_S3_PROFILE_BASIS_SEARCH_results.json",
+    "data/PART_BT902_HOLONET_PROFILE_CROSS_INDEX_results.json",
+    "data/PART_BT903_HOLONET_ROOT_PATCH_results.json",
+    "data/PART_BT904_CONSTRAINED_PROFILE_SOLVER_results.json",
+    "data/PART_BT905_HOLONET_PROFILE_CI_results.json"
+  ],
+  "render_verification": {
+    "tool": "/home/oai/skills/pdfs/scripts/render_pdf.py",
+    "dpi": 120,
+    "pages_rendered": 35,
+    "out_dir": "/mnt/data/bt906_render"
+  },
+  "artifact_link_path": "/mnt/data/photonic_holonet_BT906_clean_context.pdf",
+  "artifact_sha256": "e934160ca0742c4aaf012e3ad3dd3e789f7abc27531e9d732b49da9c3b7050b6"
+}
