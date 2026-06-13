@@ -1,0 +1,15 @@
+{
+  "theorem": "BT885 Yang-Mills Steinberg coupling",
+  "collinear_chi": {
+    "0": 160
+  },
+  "matter_flux_orders": {
+    "2": 180,
+    "4": 180,
+    "6": 1440,
+    "12": 1440
+  },
+  "nonzero_chi_triangles": 360,
+  "three_singular_invisible": 3040,
+  "YM_action": 3226.666666666647
+}
