@@ -2,13 +2,14 @@
 # Usage: make        -> build PDF
 #        make clean  -> remove auxiliary files
 #        make arxiv  -> create arXiv submission tarball
+#        make holonet-release -> guarded Photonic Holonet PDF release
 
 TEX    = W36_PAPER
 FIGS   = figures/fig1_spectral_diagram.pdf \
           figures/fig2_predictions_timeline.pdf \
           figures/fig3_spectral_decomposition.pdf
 
-.PHONY: all clean arxiv figures focused-tests
+.PHONY: all clean arxiv figures focused-tests holonet-release holonet-ci
 
 all: $(TEX).pdf
 
@@ -44,6 +45,13 @@ FOCUS ?= photonic-qec
 
 focused-tests:
 	$(PYTHON) scripts/run_focused_bridge_tests.py $(FOCUS)
+
+## ── Photonic Holonet guarded release ────────────────────────────────────
+holonet-ci:
+	$(PYTHON) tools/run_bt905_holonet_profile_ci.py --compile
+
+holonet-release:
+	$(PYTHON) tools/release_holonet.py
 
 ## ── Clean ───────────────────────────────────────────────────────────────
 clean:
