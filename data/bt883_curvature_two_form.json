@@ -1,0 +1,12 @@
+{
+  "theorem": "BT883 curvature 2-form",
+  "collinear_F_orders": {
+    "1": 12
+  },
+  "noncollinear_F_orders": {
+    "4": 27
+  },
+  "F_squared_central": true,
+  "field_strength": "order-4 quaternion units of 2T (24-cell), F^2 = centre, supported on Q",
+  "line_gauge_flat": true
+}
