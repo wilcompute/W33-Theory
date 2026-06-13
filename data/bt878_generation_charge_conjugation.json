@@ -1,0 +1,9 @@
+{
+  "theorem": "BT878 generation charge-conjugation",
+  "C_R": 648,
+  "N_R": 1296,
+  "N_over_C": 2,
+  "C_inverts_R": true,
+  "C_swaps_generation_grades": true,
+  "flavor_structure": "Z3 (gen) x C2 (gen-C) ; chirality Z2 ; gauge-parity Z2"
+}
