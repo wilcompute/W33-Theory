@@ -1,0 +1,20 @@
+{
+  "theorem": "BT933 selector theorem candidate",
+  "status": "candidate selector, not proven unique",
+  "selector_rule": [
+    "minimize total support of the four hyperbolic pairs in the chain representatives",
+    "tie-break by minimizing support spread",
+    "require determinant-1 positive-definite lift into the BT926 vertex E8 witness",
+    "require determinant-1 positive-definite lift into the MCCCLXXXVIII tetracode E8 witness",
+    "do not use vertex equivariance as a selector because BT932 found the vertex witness symmetry-isolated"
+  ],
+  "candidate_energy": {"support_sum": 76, "support_spread": 8, "vertex_metric_penalty": 0, "tetracode_metric_penalty": 0, "equivariance_penalty": 0},
+  "candidate_total_score": 84,
+  "best_seen_sorted_support_profile": [6, 6, 6, 10, 10, 10, 14, 14],
+  "basis_profile_raw": [6, 6, 6, 14, 14, 10, 10, 10],
+  "stress_context": {"trials": 512, "support_sum_min": 76, "support_sum_max": 116, "all_trials_valid_lifts": true},
+  "equivariance_context": {"w33_self_maps_preserving_subset": 1, "nontrivial_preserving_maps": 0, "e8_diagram_self_maps": 1},
+  "exact_conclusion": "The best current selector candidate is not pure positivity or pure equivariance. It is support-minimal/balance-minimal among chain symplectic bases, with mandatory compatibility with both metric E8 witnesses. This is a concrete theorem candidate, not a proved canonical theorem.",
+  "next_proof_obligation": "Exhaustively classify support-minimal symplectic bases, then test whether the dual vertex+tetracode compatibility leaves a single orbit under the remaining chain symmetries.",
+  "checks": {"T1_selector_rule_defined": true, "T2_uses_BT931_stress_data": true, "T3_uses_BT932_equivariance_negative": true, "T4_requires_dual_metric_compatibility": true, "T5_uniqueness_not_claimed": true}
+}
