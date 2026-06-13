@@ -2071,9 +2071,20 @@ so the Matrix-Tree leading coefficient $10^{24}16^{15}=2^{84}5^{24}
 =v\cdot\tau$ recovers exactly the gravity count.  Transport and
 gravity are the off-critical and critical behavior of one zeta:
 the prime $11$ is the transport critical norm, the matter dimension
-$q^4=81$ is the gravity entropy.
+$q^4=81$ is the gravity entropy.  The substrate is in fact a
+\emph{pair} of zetas: the complement matter graph
+$Q=\mathrm{SRG}(40,27,18,18)$ has its own Ihara prime $26=2\Phi_3$
+(Hashimoto Perron, all complex eigenvalues on $|u|=1/\sqrt{26}$) and
+its Perron-point gravity $\tau(Q)=2^{66}3^{39}5^{23}$ puts the
+\emph{gauge} dimension $39=q\Phi_3$ where $\W$ puts the matter
+dimension --- complementation (collinearity $\leftrightarrow$
+non-collinearity) swaps the matter and gauge entropies, with the
+cosmological charge $5^{23}$ shared.  The non-backtracking walk
+census confirms the dynamics: $N_3=\mu|E|=960$,
+$N_5=|E|\,q^q\,n_{\mathrm{even}}=181440$, $N_n\sim11^n$.
 \emph{Witnesses: \texttt{bt870\_spanning\_tree\_gravity.py},
-\texttt{bt872\_ihara\_zeta\_spanning\_bridge.py}.}
+\texttt{bt872\_ihara\_zeta\_spanning\_bridge.py},
+\texttt{bt873\_dual\_zeta\_walk\_census.py}.}
 
 \paragraph{Falsifiability is retail, not wholesale.}  Each physics
 reading above is pinned to a tabletop witness with an exact rational
@@ -2456,6 +2467,7 @@ chirality $=$ polar-pair involution ($45+36$) & bt869\\
 spanning-tree gravity $\tau=2^{81}5^{23}$ & bt870\\
 Berry-phase correction ($\mathbb{Z}_3$ is the Steinberg action) & bt871\\
 Ihara zeta $=$ spanning-tree gravity bridge & bt872\\
+two-zeta duality / walk census & bt873\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\

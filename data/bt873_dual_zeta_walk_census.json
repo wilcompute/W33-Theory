@@ -1,0 +1,22 @@
+{
+  "theorem": "BT873 dual zeta + walk census",
+  "walk_census": {
+    "1": 0,
+    "2": 0,
+    "3": 960,
+    "4": 13920,
+    "5": 181440,
+    "6": 1818240,
+    "7": 19178880
+  },
+  "N3": "960 = mu|E|",
+  "N5": "181440 = |E|.q^q.n_even",
+  "Q_perron": 26,
+  "Q_complex_norm2": 26,
+  "tau_Q": {
+    "2": 66,
+    "3": 39,
+    "5": 23
+  },
+  "duality": "W33 gravity exponent 81=matter dim; Q gravity exponent 39=gauge dim; shared 5^23"
+}
