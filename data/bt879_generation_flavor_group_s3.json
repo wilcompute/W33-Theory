@@ -1,0 +1,17 @@
+{
+  "theorem": "BT879 generation flavor group is S3",
+  "flavor_group_order": 6,
+  "is_S3": true,
+  "grade_dims": {
+    "0": 9,
+    "1": 9,
+    "2": 9
+  },
+  "C_fixes_grade0": true,
+  "C_swaps_grade12": true,
+  "S3_decomp_C27": {
+    "trivial": 6,
+    "sign": 3,
+    "standard2d": 9
+  }
+}
