@@ -1,0 +1,8 @@
+{
+  "theorem": "BT880 generation = gauge centre",
+  "gauge_order": 648,
+  "R_central": true,
+  "Z_gauge_order": 3,
+  "Z_equals_R_Z3": true,
+  "R_trivial_on_gauge_bosons": true
+}
