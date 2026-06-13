@@ -1,0 +1,15 @@
+{
+  "theorem": "BT913 sentinel-coordinate dynamics",
+  "coordinate": "the +1 in C^9=(2+2+2+2)+1",
+  "interpretation": "neutral monitor/provenance coordinate, not sterile generation",
+  "target_profile_fractions": {"Cabibbo": "9/178", "solar": "4/13", "reactor": "2/91", "atmospheric": "7/13"},
+  "cases": {
+    "exact_profile_clean_release": {"profile_drift_energy": 0.0, "stale_release_energy": 0.0, "g15_fault_energy": 0.0, "total_sentinel_energy": 0.0},
+    "reactor_plane_one_unit_drift": {"profile_drift_energy": 0.0001207583628352859, "stale_release_energy": 0.0, "g15_fault_energy": 0.0, "total_sentinel_energy": 0.0001207583628352859},
+    "stale_release_artifact": {"profile_drift_energy": 0.0, "stale_release_energy": 1.0, "g15_fault_energy": 0.0, "total_sentinel_energy": 1.0},
+    "external_g15_fault": {"profile_drift_energy": 0.0, "stale_release_energy": 0.0, "g15_fault_energy": 0.375, "total_sentinel_energy": 0.375}
+  },
+  "dynamics_law": "E_sentinel = sum_i (s_i - s_i^*)^2 + 1_{stale_release} + E_{g15}",
+  "exact_conclusion": "The sentinel coordinate is dynamically useful: it is zero on the exact clean profile, rises under profile drift, records stale release artifacts, and can absorb the existing g=15 fault monitor without becoming matter content.",
+  "checks": {"T1_exact_profile_zero_energy": true, "T2_profile_drift_detected": true, "T3_stale_release_detected": true, "T4_g15_fault_channel_available": true, "T5_no_sterile_state_claim": true}
+}
