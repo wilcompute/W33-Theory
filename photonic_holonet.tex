@@ -2060,8 +2060,20 @@ partition function carries the Standard-Model sector sizes as its
 prime-exponent charges --- matter ($q^4$) in the power of $2$, gauge
 ($q\Phi_3$) in the power of $3$, cosmological ($F_5$) shared --- and
 the entropy of the spanning-tree ensemble \emph{counts the
-registers}.
-\emph{Witness: \texttt{bt870\_spanning\_tree\_gravity.py}.}
+registers}.  This is not a separate fact from the transport
+spectrum: the Ihara zeta
+$\zeta^{-1}(u)=(1-u^2)^{200}(1-u)(1-11u)(1-2u+11u^2)^{24}(1+4u+11u^2)^{15}$
+(verified directly by the $480\times480$ Hashimoto operator) has its
+non-trivial zeros on the graph-RH circle $|u|=1/\sqrt{11}$ (the
+transport sector, $p_{\mathrm{Ih}}=k-1=11$) and its Perron zero at
+$u=1$, where the Bass matrix $I-A+11I=12I-A$ \emph{is} the Laplacian,
+so the Matrix-Tree leading coefficient $10^{24}16^{15}=2^{84}5^{24}
+=v\cdot\tau$ recovers exactly the gravity count.  Transport and
+gravity are the off-critical and critical behavior of one zeta:
+the prime $11$ is the transport critical norm, the matter dimension
+$q^4=81$ is the gravity entropy.
+\emph{Witnesses: \texttt{bt870\_spanning\_tree\_gravity.py},
+\texttt{bt872\_ihara\_zeta\_spanning\_bridge.py}.}
 
 \paragraph{Falsifiability is retail, not wholesale.}  Each physics
 reading above is pinned to a tabletop witness with an exact rational
@@ -2443,6 +2455,7 @@ joint generation $\times$ chirality grading & bt868\\
 chirality $=$ polar-pair involution ($45+36$) & bt869\\
 spanning-tree gravity $\tau=2^{81}5^{23}$ & bt870\\
 Berry-phase correction ($\mathbb{Z}_3$ is the Steinberg action) & bt871\\
+Ihara zeta $=$ spanning-tree gravity bridge & bt872\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\

@@ -1,0 +1,19 @@
+{
+  "theorem": "BT872 Ihara zeta + spanning-tree bridge",
+  "B_real_spectrum": {
+    "11": 1,
+    "1": 201,
+    "-1": 200
+  },
+  "B_nontrivial_norm2": [
+    11.0
+  ],
+  "n_complex": 78,
+  "discriminants": {
+    "Perron": 100,
+    "gauge": -40,
+    "chiral": -28
+  },
+  "u1_is_laplacian": true,
+  "matrix_tree_bridge": "v*tau = 10^24*16^15 = 2^84*5^24"
+}
