@@ -1,0 +1,11 @@
+{
+  "theorem": "BT875 Yukawa selection from transvection",
+  "C27_grades": {
+    "0": 9,
+    "1": 9,
+    "2": 9
+  },
+  "allowed_grade_triples": 9,
+  "selection_rule": "g1+g2+g3 = 0 mod 3 (Z3 Clebsch-Gordan)",
+  "within_shell_triples": 36
+}
