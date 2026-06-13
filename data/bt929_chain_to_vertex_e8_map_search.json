@@ -1,0 +1,14 @@
+{
+  "theorem": "BT929 chain-to-vertex E8 map search",
+  "vertex_subset": [0, 1, 4, 22, 27, 35, 23, 34],
+  "mod2_isometry_matrix_M_chain_to_vertex": [[1,0,0,0,0,0,0,0],[0,1,0,0,1,0,0,1],[0,0,0,0,1,1,1,1],[0,0,1,0,1,0,0,1],[0,0,1,0,1,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,1,1,0,1,0,0]],
+  "check_Mt_Gvertex_M_equals_Bchain_mod2": true,
+  "integer_lift_det_M": 1,
+  "lifted_gram": [[2,-1,0,0,-1,0,0,-1],[-1,2,0,0,1,-1,-1,1],[0,0,4,1,-1,0,-2,-1],[0,0,1,4,-1,1,-1,-1],[-1,1,-1,-1,2,-1,0,1],[0,-1,0,1,-1,2,1,-1],[0,-1,-2,-1,0,1,2,0],[-1,1,-1,-1,1,-1,0,2]],
+  "lifted_gram_det": 1,
+  "lifted_gram_positive_definite": true,
+  "lifted_gram_min_eigenvalue": 0.026512767609722727,
+  "lifted_gram_even_diagonal": true,
+  "status": "explicit mod-2 chain-to-vertex isometry with unimodular 0/1 integral lift; basis-dependent, not canonical",
+  "checks": {"T1_mod2_isometry_found": true, "T2_integral_lift_unimodular_det_1": true, "T3_lifted_gram_even_unimodular": true, "T4_lifted_gram_positive_definite": true, "T5_canonicality_not_claimed": true}
+}
