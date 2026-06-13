@@ -1,0 +1,20 @@
+{
+  "theorem": "BT916 release CI applies Holonet dictionary row",
+  "status": "tools/run_bt905_holonet_profile_ci.py updated",
+  "updated_ci_order": [
+    "BT903 root Holonet patch",
+    "BT914 profile dictionary row patch",
+    "BT901 profile-basis witness",
+    "BT904 constrained solver witness",
+    "BT902 cross-index witness",
+    "optional pdflatex twice"
+  ],
+  "release_effect": "BT908 and make holonet-release inherit the BT914 dictionary patch because they call BT905 --compile before hashing.",
+  "checks": {
+    "T1_BT914_before_compile": true,
+    "T2_BT908_inherits_BT914": true,
+    "T3_make_holonet_release_inherits_BT914": true,
+    "T4_profile_dictionary_row_not_stale": true,
+    "T5_release_hash_after_all_patches": true
+  }
+}
