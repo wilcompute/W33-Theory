@@ -1959,6 +1959,27 @@ a structural identification of the fermionic sector with the
 non-stabilizer sector; an engineer reads the same integers as a fuel
 gauge.  Both readings are forced by the same double cosets.
 
+\paragraph{The Standard-Model spine: one transvection.}
+The preceding paragraphs assemble into a single statement, verified
+end-to-end in one pass (\texttt{bt886\_standard\_model\_spine.py}):
+\emph{from the pair $(\W,\ R)$ --- the symplectic quadrangle and one
+long-root transvection --- the discrete Standard Model follows with
+zero free parameters.} The transvection $R$ fixes the $13$-point
+gauge perp-plane and acts freely (nine orbits) on the $27$ matter
+shell; its centralizer $C(R)$ (order $648$) is the gauge group, with
+module $\mathbf{1}\oplus\mathbf{3}\oplus\mathbf{8}=
+U(1)\times SU(2)\times SU(3)$; its centre $Z(C(R))=\langle R\rangle
+=\mathbb{Z}_3$ is the three generations; its normalizer gives the
+flavor group $S_3$ and charge-conjugation; the $W/Q$ duality gives
+parity; the matter shell grades $9{+}9{+}9$ with the $\mathbb{Z}_3$
+Yukawa rule; and the connection is flat ($\mathbb{Z}_3^2$) along
+collinear edges, $2T$-curved on the matter graph $Q$ with a
+quaternionic field strength.  The gauge group, the generations, the
+flavor symmetry, the Yukawa texture, chirality, parity, and the gauge
+dynamics are not separate inputs --- they are the centralizer,
+centre, normalizer, duality, grading, and commutator structure of one
+element of $\Sp(4,\GF3)$, replicated over the $40$ points.
+
 \paragraph{Three generations, matter-blind and gauge-visible.}
 Because the matter register is the Steinberg module
 (Corollary, \S\ref{sec:memory}) and the Steinberg character vanishes
@@ -2567,6 +2588,7 @@ gauge connection flat on edges, $2T$-curved on $Q$ & bt882\\
 curvature $2$-form (quaternionic, on $Q$) & bt883\\
 gauge flux (Wilson loops, $\mathbb{Z}_3$/lines, ${\le}12$/$Q$) & bt884\\
 YM--matter coupling $\sum\chi_{\mathrm{St}}=1080$ & bt885\\
+SM spine (one transvection, master theorem) & bt886\\
 dual-torsor Steinberg compiler / native generation flag & bt865\\
 oriented $H_2$ irreducible spectrum / outer lift & bt866\\
 cache $D_8$-over-$81$ fibration / split--non-split boundary & bt867\\

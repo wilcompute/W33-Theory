@@ -1,0 +1,17 @@
+{
+  "theorem": "BT886 Standard-Model spine",
+  "PSp": 25920,
+  "R_fixed": 13,
+  "R_shell_orbits": 9,
+  "gauge_order": 648,
+  "gauge_rank": 3,
+  "gauge_module": "1+3+8",
+  "generations_eq_center": true,
+  "matter_grading": [
+    9,
+    9,
+    9
+  ],
+  "flat_holonomy": 9,
+  "curved_holonomy": 24
+}
