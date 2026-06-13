@@ -1,0 +1,14 @@
+{
+  "theorem": "BT930 chain-to-tetracode E8 map search",
+  "tetracode_root_count": 240,
+  "tetracode_rank": 8,
+  "tetracode_source_profile": {"A2": 24, "tetracode_glue": 216},
+  "tetracode_simple_gram_determinant": "1",
+  "mod2_isometry_status": "found by importing MCCCLXXXVIII tetracode simple-root Gram and matching its mod-2 symplectic form to the BT928 chain basis",
+  "check_Mt_Gtetracode_M_equals_Bchain_mod2": true,
+  "integer_lift_det_M": 1,
+  "lifted_gram_det": 1,
+  "lifted_gram_positive_definite": true,
+  "status": "explicit mod-2 chain-to-tetracode isometry; integral lift is an E8 basis in tetracode metric coordinates, but still basis-dependent",
+  "checks": {"T1_tetracode_packet_imported": true, "T2_tetracode_is_240_root_E8": true, "T3_mod2_isometry_found": true, "T4_integral_lift_positive_definite": true, "T5_canonicality_not_claimed": true}
+}
