@@ -1,0 +1,13 @@
+{
+  "theorem": "BT884 gauge flux Wilson loops",
+  "collinear": {
+    "3": 160
+  },
+  "matter_triangles": {
+    "2": 180,
+    "4": 180,
+    "6": 1440,
+    "12": 1440
+  },
+  "q_triangle_count": 3240
+}
