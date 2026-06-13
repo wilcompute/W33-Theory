@@ -6,6 +6,76 @@ W33 repository and the paper (solvable computational tasks, verification
 targets, and experimental priorities). Use this as the single short index
 for active work.
 
+================================================================================
+SATURATION MAP — CHECK THIS (and `docs/index.html`) BEFORE DERIVING ANYTHING
+(updated 2026-06-13)
+================================================================================
+
+The physics/NCG breakthrough frontier of this corpus is SATURATED: BT1–923,
+~260 phases, ~1100 test files. The "Continue -> one more breakthrough" loop
+repeatedly REDERIVES documented results.
+
+THE COMPREHENSIVE SEARCHABLE CORPUS IS: the `.tex` files + `docs/index.html`.
+Those two are the closest thing to a complete, searchable record (the BT*.md
+notes and Continuity decisions are partial). Before writing ANY new script,
+grep BOTH:
+  - `docs/index.html` (the live master ledger), and
+  - the `.tex` papers: `w33_paper.tex`, `w33_for_everyone.tex`,
+    `universal_computation_single_photon*.tex`, `photonic_holonet.tex`,
+    `standard_model_from_one_transvection.tex`
+for the key quantity/term, and scan recent `git log`. Anchor on the grep
+TERMS below (line numbers drift). Example:
+  `grep -rio "<term>" docs/index.html *.tex | sort | uniq -c`
+
+ALREADY DONE — DO NOT RE-DERIVE (grep terms -> result):
+
+- Fermion MIXING SCALE Φ₃=13 (BT894–898/918–922; index.html):
+  - PMNS angles: `4/13` `7/13` `2/91` — sin²θ₁₂=μ/Φ₃, sin²θ₂₃=Φ₆/Φ₃,
+    sin²θ₁₃=λ/(Φ₆Φ₃); also framed as tribimaximal ± 1/Φ₃ (BT920).
+  - PMNS CP PHASE: `CP phase` `194` — δ_CP = 2πΦ₆/Φ₃ = 194° (obs 197°±25°,
+    0.13σ). Oscillation ratio R_ν = 2Φ₃+Φ₆ = 33.
+  - CKM: `Cabibbo` `3/13` — tan θ_C = q/Φ₃ = 3/13; CP δ_CKM = arctan(Φ₆/q)
+    = arctan(7/3); Jarlskog done. Wolfenstein A=μ/(q+λ)=4/5 (the 1.7σ outlier).
+- NCG / spectral triple (index.html "Five Connes Axioms — All Verified";
+  Phase LXXXVI `tests/test_ko_dimension_real_spectral.py`, 55 tests):
+  - `first-order condition` (gauge–matter split, Hodge C¹=39+120+81=240),
+    `orientability` (chirality/Z₃-grading), `Poincaré duality` (nondeg.
+    intersection form), `reality` (KO-dim = 2q = 6: J²=+1, JD=+DJ, Jγ=−γJ),
+    compact resolvent. The real spectral triple is CERTIFIED.
+- Hodge/Dirac spectrum + topology (BT892/921/923; index.html):
+  - `10^48` `16^30` — D² spectrum {0¹²²,4²⁴⁰,10⁴⁸,16³⁰}; harmonic=homology
+    b=(1,81,40); `McKean` supertrace −80; `ind(D)` = q = 3 (generation index);
+    Euler `χ = −40 = −v` (2-complex) and `−80 = −2v` (clique complex).
+    BT923 bridge: the 40 lines-as-K₄-tetrahedra (rank 40) fill b₂=40 = the
+    BT862 line module, taking −v → −2v.
+- SM anatomy from one transvection R (BT858–888): gauge group C(R)=648=
+  3^{1+2}:SL(2,3)=1⊕3⊕8, generations=Z(C(R))=Z₃, flavor S₃=⟨R,C⟩, color=
+  matter-Heisenberg, chirality/parity/charge-conj, connection flat/curved
+  (2T=24-cell group), curvature F=[R_p,R_q]. See
+  `standard_model_from_one_transvection.tex`.
+
+GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
+5–7 — these are the ONLY curated opens; everything 1–4 is CLOSED):
+
+- (5) INTEGRAL E8 LIFT — mod-2 homology gives the rank-8 shadow, but the
+  integral Cartan pairing and a canonical root-lattice lift have NOT been
+  reconstructed directly from the chain complex. (Finite, computational —
+  the most tractable genuine open.)
+- (6) MOONSHINE MODULE BOUNDARY — low-order transport exact through the
+  quartic package, but the naive quintic V₅ lift fails on anchored classes
+  2A, 2B; needs genuine character-theoretic input. (Hard, rep-theoretic.)
+- (7) DYNAMICAL / CONTINUUM ORIGIN — needs an action principle / scaling
+  limit / continuum theorem explaining why the universe selects W(3,3) and
+  turns the finite package into QFT/GR dynamics. (= "hard open #2"; the
+  curved-4D Einstein–Hilbert coefficient. Pure analysis, not a finite calc.)
+
+Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
+the α formula; gravity from graph curvature (a narrowed-bridge program). The
+explicit equivariant E6 bijection is PROVED IMPOSSIBLE (representation-
+theoretic), not open.
+
+================================================================================
+
 Recent upstream breakthroughs
 ----------------------------
 
