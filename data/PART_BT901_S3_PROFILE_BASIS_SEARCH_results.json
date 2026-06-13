@@ -1,0 +1,31 @@
+{
+  "theorem": "BT901 S3 profile-basis search",
+  "representation_home": "V_profile = C^9 tensor Std(S3), the 9*2 sector of C[27]",
+  "multiplicity_dimension": 9,
+  "standard_doublet_dimension": 2,
+  "full_profile_sector_dimension": 18,
+  "profile_basis_labels": ["m0", "m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8"],
+  "cabibbo_plane": {
+    "multiplicity_indices": [0, 1],
+    "cos": "Phi3/sqrt(Phi3^2+q^2)=13/sqrt(178)",
+    "sin": "q/sqrt(Phi3^2+q^2)=3/sqrt(178)",
+    "numeric_sin": 0.22485950669875843,
+    "numeric_cos": 0.9743911956946198
+  },
+  "commutator_frobenius_norm": 0.43820223840449095,
+  "s3_equivariance_errors": {
+    "up_rotation": 0.0,
+    "down_rotation": 0.0,
+    "up_reflection": 0.0,
+    "down_reflection": 0.0
+  },
+  "profile_principle": "Allowed numerical profiles are 9x9 multiplicity-space operators tensored with I_2 on the S3 standard doublet. This preserves flavor equivariance while allowing noncommuting up/down Gram profiles.",
+  "exact_conclusion": "The q^2=9 profile layer is not nine extra generations; it is the multiplicity space of the 9 copies of the S3 standard doublet. CKM/PMNS profile rotations act on that multiplicity space and commute with flavor S3.",
+  "checks": {
+    "T1_full_sector_dimension_18": true,
+    "T2_cabibbo_plane_embedded_in_C9": true,
+    "T3_profile_lifts_commute_with_S3": true,
+    "T4_up_down_profiles_noncommute": true,
+    "T5_CKM_rotation_is_unitary_on_multiplicity_space": true
+  }
+}
