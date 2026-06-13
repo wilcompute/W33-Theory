@@ -1,0 +1,29 @@
+{
+  "theorem": "BT936 selector uniqueness/orbit classifier",
+  "status": "many-or-one unresolved",
+  "classifier": {
+    "support_layer": {
+      "best_support_sum": 76,
+      "best_support_spread": 8,
+      "best_profile": [6, 6, 6, 10, 10, 10, 14, 14],
+      "global_minimality_proved": false,
+      "reason": "BT934 records the branch-and-bound scaffold and current certificate but does not yet complete exhaustive enumeration."
+    },
+    "metric_layer": {
+      "vertex_metric_required": true,
+      "tetracode_metric_required": true,
+      "dual_metric_compatibility_known": true,
+      "reason": "BT929 and BT930 give determinant-1 positive-definite lifts into both metric E8 witnesses."
+    },
+    "symmetry_layer": {
+      "vertex_symmetry_useful": false,
+      "tetracode_signed_monomial_group_order": 48,
+      "chain_action_constructed": false,
+      "reason": "BT932 killed vertex equivariance as a selector; BT935 identified nontrivial tetracode symmetry but did not construct its action on chain H."
+    }
+  },
+  "current_candidate_score": 84,
+  "orbit_conclusion": "The current data do not justify a one-orbit uniqueness claim. The selector is metric-compatible and has a best support certificate, but uniqueness waits on exhaustive support classification plus a chain action of the tetracode signed monomial group.",
+  "next_exact_test": "Enumerate all support-sum-76 hyperbolic decompositions and quotient them by the tetracode monomial group once its chain action is built.",
+  "checks": {"T1_support_layer_classified": true, "T2_metric_layer_classified": true, "T3_symmetry_layer_classified": true, "T4_one_orbit_uniqueness_not_overclaimed": true, "T5_next_orbit_test_stated": true}
+}
