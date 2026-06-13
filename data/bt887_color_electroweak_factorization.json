@@ -1,0 +1,14 @@
+{
+  "theorem": "BT887 colour-electroweak factorization",
+  "gauge_order": 648,
+  "colour_radical_order": 27,
+  "electroweak_levi_order": 24,
+  "N_orbit_sizes": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "electroweak_invariant_dim": 4,
+  "gluon_octet_dim": 8
+}
