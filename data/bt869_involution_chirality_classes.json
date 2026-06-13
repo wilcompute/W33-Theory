@@ -1,0 +1,28 @@
+{
+  "theorem": "BT869 involution chirality classes",
+  "involution_count": 315,
+  "classes": [
+    {
+      "size": 45,
+      "fixpts": 8,
+      "fixlines": 16,
+      "chi_St": 9,
+      "steinberg_split": [
+        45,
+        36
+      ],
+      "type": "3A1 skew-pair (8 fixed pts = cube Q3, BT773)"
+    },
+    {
+      "size": 270,
+      "fixpts": 0,
+      "fixlines": 4,
+      "chi_St": -3,
+      "steinberg_split": [
+        39,
+        42
+      ],
+      "type": ""
+    }
+  ]
+}
