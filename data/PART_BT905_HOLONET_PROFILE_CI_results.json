@@ -1,0 +1,22 @@
+{
+  "theorem": "BT905 Holonet profile CI guard",
+  "target": "photonic_holonet.tex",
+  "one_command": "python tools/run_bt905_holonet_profile_ci.py --compile",
+  "status": "CI guard script committed; local smoke path represented by BT900 compile and BT901/BT904 exact checks",
+  "steps_guarded": [
+    "BT903 root patch runner",
+    "BT899 static Holonet document guard",
+    "BT901 S3 profile-basis search",
+    "BT904 constrained 9x9 profile solver",
+    "BT902 Holonet cross-index regeneration",
+    "optional pdflatex compile"
+  ],
+  "guard_conclusion": "BT905 ties together root Holonet patching, static document identity guard, S3 profile equivariance, constrained 9x9 numerical scaffold, and cross-index regeneration.",
+  "checks": {
+    "T1_BT903_patch_runner_included": true,
+    "T2_BT901_profile_basis_included": true,
+    "T3_BT904_constrained_solver_included": true,
+    "T4_BT902_cross_index_included": true,
+    "T5_one_command_CI_available": true
+  }
+}
