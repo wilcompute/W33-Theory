@@ -1,0 +1,14 @@
+{
+  "theorem": "BT997 K3_16 middle-degree heat trace estimator",
+  "laplacian": {"degree": 2, "shape": [9440, 9440], "nnz": 182368, "harmonic_nullity": 22},
+  "method": "random sign trace estimator with scipy expm_multiply",
+  "random_seed": 997,
+  "num_samples": 8,
+  "estimates": {
+    "0.01": {"estimate": 8730.448450900843, "standard_error": 2.8812050282392105},
+    "0.05": {"estimate": 6517.153579984, "standard_error": 6.451863462045166},
+    "0.1": {"estimate": 4689.188846613879, "standard_error": 8.478521475667293},
+    "1.0": {"estimate": 315.2835608902251, "standard_error": 4.826383697654219}
+  },
+  "reading": "The K3_16 middle-degree heat trace is now a sparse computation on the actual level-1 edgewise L2. The estimates include the 22 zero modes and the nonzero contribution."
+}
