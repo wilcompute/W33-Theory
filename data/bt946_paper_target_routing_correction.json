@@ -1,0 +1,10 @@
+{
+  "theorem": "BT946 paper target routing correction",
+  "correction": "Heavy mathematical insertions belong in w33_paper.tex. photonic_holonet.tex is the current main narrative/architecture paper.",
+  "wrong_prior_target": "W36_PAPER.tex was used for the BT942 appendix helper, but it is not the requested heavy-math target.",
+  "correct_heavy_math_target": "w33_paper.tex",
+  "correct_main_narrative_target": "photonic_holonet.tex",
+  "new_integrator": "tools/integrate_bt942_selector_appendix_w33.py",
+  "appendix_source": "paper/BT942_e8_selector_appendix.tex",
+  "checks": {"T1_w33_paper_target_recorded": true, "T2_photonic_holonet_main_recorded": true, "T3_w36_prior_target_marked_wrong_for_this_context": true, "T4_w33_integrator_committed": true, "T5_future_heavy_math_routing_explicit": true}
+}
