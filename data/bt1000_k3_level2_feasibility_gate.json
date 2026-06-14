@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1000 K3_16 level-2 feasibility gate",
+  "k3_level2_predicted_f_vector": [2776, 45120, 152960, 184320, 73728],
+  "cp2_level2_completed_f_vector": [459, 5976, 19344, 23040, 9216],
+  "k3_to_cp2_level2_face_ratios": [6.0479302832244, 7.550200803212851, 7.907361456782465, 8.0, 8.0],
+  "k3_level2_boundary_nnz_exact_by_counting": [90240, 458880, 737280, 368640],
+  "k3_level2_boundary_storage_mib_rule16": [1.376953125, 7.001953125, 11.25, 5.625],
+  "k3_level2_laplacian_nnz_planning_estimate": [110488, 2835035, 2956737, 1773920, 442368],
+  "k3_level2_laplacian_storage_mib_rule16": [1.6851806640625, 43.25920104980469, 45.11671447753906, 27.06787109375, 6.75],
+  "policy": {
+    "rank_pipeline": "blockwise sparse mod-2 elimination",
+    "heat_trace": "sparse expm_multiply trace estimator",
+    "first_direct_target": "degree 0/4 and boundary maps, then degree 2 estimator",
+    "ci_target": "smoke tests and marker/build checks"
+  },
+  "verdict": "K3_16 level 2 is feasible as a staged sparse computation, not as a monolithic dense job."
+}
