@@ -1,0 +1,12 @@
+{
+  "theorem": "BT990 R3 fat-tower paper patch packet",
+  "w33_insert": "paper/BT990_r3_fat_tower_insert.tex",
+  "holonet_pointer": "paper/BT990_holonet_r3_fat_tower_pointer.tex",
+  "integrators": [
+    "tools/integrate_bt990_r3_fat_tower_w33.py",
+    "tools/integrate_bt990_r3_fat_tower_holonet.py",
+    "tools/integrate_bt990_open_frontiers.py"
+  ],
+  "summary": "R3 is now patched as an edgewise/fat-tower route: BT984-BT985 spectral checks, BT986 Regge check, BT988 explicit CP2_9/K3_16 facets, BT989 edgewise top constants. Remaining technical item is the local 4-simplex edgewise facet template for full lower-incidence density constants.",
+  "boundary": "Connector committed inserts and idempotent integration helpers; it did not directly rewrite the large TeX papers in this step."
+}
