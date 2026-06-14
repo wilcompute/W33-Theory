@@ -1,0 +1,8 @@
+{
+  "theorem": "BT948 route split cleanup",
+  "status": "stale W36-heavy-math wording cleaned in BT942 and BT945 notes",
+  "correct_split": {"photonic_holonet.tex": "current main narrative / architecture paper", "w33_paper.tex": "heavy-math manuscript target"},
+  "updated_notes": ["analysis/BT942_selector_paper_patch.md", "analysis/BT945_selector_appendix_compile_record.md"],
+  "deprecated_for_this_context": "W36_PAPER.tex as the heavy-math E8 selector target",
+  "checks": {"T1_BT942_note_corrected": true, "T2_BT945_note_corrected": true, "T3_w33_target_recorded": true, "T4_holonet_main_recorded": true, "T5_W36_deprecated_for_heavy_math_context": true}
+}
