@@ -1,0 +1,55 @@
+% BT952 -- exact E8 selector theorem insert for w33_paper.tex
+
+\subsection{Exact support-minimal E8 selector update (BT950--BT952)}\label{subsec:bt952-exact-e8-selector}
+
+The earlier support-76 selector candidate is superseded.  Let
+\(H=\ker(A_2)/\operatorname{im}(A_2)\) be the rank-eight mod-2 chain shadow and
+let
+\[
+  B(x,y)=\frac{x^T A y}{2}\pmod 2
+\]
+be the canonical divided alternating form.  The support of a class is measured
+by the Hamming support of its chosen chain representative in the fixed BT925
+coordinate gauge.
+
+\begin{theorem}[Exact support-minimal hyperbolic selector]
+Among all hyperbolic decompositions
+\[
+  H = \langle e_1,f_1\rangle \perp \cdots \perp \langle e_4,f_4\rangle,
+  \qquad B(e_i,f_i)=1,
+\]
+the minimum total support is
+\[
+  \sum_{i=1}^4 \bigl(|e_i|+|f_i|\bigr)=60.
+\]
+There are exactly six unordered minimizing decompositions in the BT925 gauge,
+and every minimizer has sorted support profile
+\[
+  [6,6,6,6,6,8,10,12].
+\]
+In particular, the previous profile
+\([6,6,6,10,10,10,14,14]\) of total support 76 is not minimal.
+\end{theorem}
+
+\begin{proof}[Machine certificate]
+BT951 performs Bellman recursion over symplectic subspaces of \(H\).  Each
+state is encoded as a subspace of the 8-bit vector space.  At a state \(W\), the
+verifier enumerates unordered hyperbolic pairs \((e,f)\subset W\) with
+\(B(e,f)=1\), then recurses on the symplectic orthogonal quotient
+\(W\cap e^\perp\cap f^\perp\).  The recursion memoizes subspaces and minimizes
+support exactly.  The completed run explores 5914 subspace states and returns
+minimum 60 with six unordered minimizers.  The six certificates are recorded in
+\texttt{data/bt951\_exact\_support\_minimal\_selector.json}.
+\end{proof}
+
+The Smith-normal-form extractor BT950 also corrects the integral routing.  For
+\(UAV=D\), the eight \(d_i=2\) torsion directions live on the left/codomain
+basis and therefore pull back by columns of \(U^{-1}\).  These columns carry a
+rank-eight hyperbolic divided form modulo two, but their raw divided integral
+form is indefinite.  Hence the positive \(E_8\) metric is not the raw SNF
+pullback; it requires the exact support-minimal selector above together with the
+vertex/tetracode metric compatibility of BT929--BT930.
+
+The remaining orbit problem is now sharply finite: classify the six support-60
+minimizers under the transported tetracode stabilizer.  The full stabilizer
+quotient is not asserted here; it is the next theorem obligation.
