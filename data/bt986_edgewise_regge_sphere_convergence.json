@@ -1,0 +1,25 @@
+{
+  "theorem": "BT986 edgewise Regge curvature convergence proxy on S2",
+  "smooth_targets": {
+    "area": 12.566370614359172,
+    "total_deficit": 12.566370614359172,
+    "scalar_curvature_integral": 25.132741228718345
+  },
+  "levels": [
+    {"level": 0, "num_vertices": 6, "num_triangles": 8, "min_angle_deg": 60.00000000000001, "area": 6.928203230275508, "area_rel_error_vs_4pi": 0.448671104578208, "total_deficit": 12.566370614359169, "scalar_regge_integral": 25.132741228718338, "scalar_regge_rel_error_vs_8pi": 2.8271597168564594e-16, "max_abs_deficit": 2.094395102393195},
+    {"level": 1, "num_vertices": 18, "num_triangles": 32, "min_angle_deg": 49.21052905907471, "area": 10.417751521357818, "area_rel_error_vs_4pi": 0.17098167473639517, "total_deficit": 12.566370614359164, "scalar_regge_integral": 25.132741228718327, "scalar_regge_rel_error_vs_8pi": 7.067899292141149e-16, "max_abs_deficit": 0.7532471698695868},
+    {"level": 2, "num_vertices": 66, "num_triangles": 128, "min_angle_deg": 46.09060879450047, "area": 11.954891630762756, "area_rel_error_vs_4pi": 0.048659951418088855, "total_deficit": 12.566370614359185, "scalar_regge_integral": 25.13274122871837, "scalar_regge_rel_error_vs_8pi": 9.894059008997609e-16, "max_abs_deficit": 0.22327579426069022},
+    {"level": 3, "num_vertices": 258, "num_triangles": 512, "min_angle_deg": 45.275234818557735, "area": 12.408183787583217, "area_rel_error_vs_4pi": 0.01258810770670731, "total_deficit": 12.5663706143591, "scalar_regge_integral": 25.1327412287182, "scalar_regge_rel_error_vs_8pi": 5.795676, "max_abs_deficit": 0.07174236516604005},
+    {"level": 4, "num_vertices": 1026, "num_triangles": 2048, "min_angle_deg": 45.06897377635825, "area": 12.526479868698964, "area_rel_error_vs_4pi": 0.0031744046777219086, "total_deficit": 12.56637061435897, "scalar_regge_integral": 25.13274122871794, "scalar_regge_rel_error_vs_8pi": 1.612e-14, "max_abs_deficit": 0.019608086791140344},
+    {"level": 5, "num_vertices": 4098, "num_triangles": 8192, "min_angle_deg": 45.01725381996366, "area": 12.556376237202528, "area_rel_error_vs_4pi": 0.0007953272638023406, "total_deficit": 12.566370614358156, "scalar_regge_integral": 25.13274122871631, "scalar_regge_rel_error_vs_8pi": 8.09e-14, "max_abs_deficit": 0.005029261442398791},
+    {"level": 6, "num_vertices": 16386, "num_triangles": 32768, "min_angle_deg": 45.00431410441024, "area": 12.56387066143576, "area_rel_error_vs_4pi": 0.000198939932629132, "total_deficit": 12.566370614355534, "scalar_regge_integral": 25.13274122871107, "scalar_regge_rel_error_vs_8pi": 2.8950115500610145e-13, "max_abs_deficit": 0.001265738656563542}
+  ],
+  "verdict": {
+    "edgewise_fat": true,
+    "min_angle_level6_deg": 45.00431410441024,
+    "area_level6_rel_error_vs_4pi": 0.000198939932629132,
+    "regge_scalar_level6_rel_error_vs_8pi": 2.8950115500610145e-13,
+    "max_abs_deficit_decay": "2.094395102393195 -> 0.001265738656563542",
+    "reading": "The Regge scalar-curvature integral is already topologically exact on the closed sphere, while the area and local deficit concentration converge under projected edgewise refinement. This is a curved geometric witness for the CMS/Regge side of R3."
+  }
+}
