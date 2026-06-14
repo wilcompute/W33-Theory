@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1023 rank smoke workflow status probe",
+  "workflow": ".github/workflows/k3-middle-rank-smoke.yml",
+  "checked_commit": "69e18e352e1204f448d777d34666471a40e60bd0",
+  "status_count": 0,
+  "workflow_run_count": 0,
+  "expected_artifact_count": 3,
+  "new_shard_count": 2,
+  "reading": "The workflow is committed, but the connector surfaced no run for the checked commit. Add the two new shard scripts to the workflow after a checkout timing pass."
+}
