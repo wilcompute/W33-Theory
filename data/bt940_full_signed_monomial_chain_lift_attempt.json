@@ -1,0 +1,13 @@
+{
+  "theorem": "BT940 full signed monomial chain-lift attempt",
+  "tetracode_code_size": 9,
+  "signed_monomial_group_order": 48,
+  "distinct_block_permutation_count": 24,
+  "block_permutation_order_profile": {"1": 1, "2": 9, "3": 8, "4": 6},
+  "sign_kernel_size_over_block_permutations": 2,
+  "sample_kernel_scalars": [[1,1,1,1], [2,2,2,2]],
+  "chain_side_effective_action": "The block-permutation quotient S4 (order 24) can be transported to chain H through the BT930 chain-to-tetracode map. The sign kernel collapses on the mod-2 chain shadow unless an explicit A2-plane/Weyl lift is chosen.",
+  "full_lift_status": "partial: S4 block action transported in principle; full signed order-48 action not yet a chain-complex action",
+  "next_exact_step": "Construct A2-plane Weyl generators on the tetracode E8 coordinates and test which are compatible with chain representatives, not only with mod-2 H.",
+  "checks": {"T1_signed_monomial_order_48": true, "T2_block_quotient_order_24": true, "T3_block_quotient_order_profile_S4": true, "T4_sign_kernel_identified": true, "T5_full_order48_chain_lift_not_overclaimed": true}
+}
