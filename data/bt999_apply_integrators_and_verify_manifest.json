@@ -1,0 +1,15 @@
+{
+  "theorem": "BT999 apply R3 edgewise/fat-tower integrators and verify build packet",
+  "script": "tools/bt999_apply_integrators_and_verify.sh",
+  "integrators_applied_by_script": [
+    "tools/integrate_bt990_r3_fat_tower_w33.py",
+    "tools/integrate_bt990_r3_fat_tower_holonet.py",
+    "tools/integrate_bt990_open_frontiers.py",
+    "tools/integrate_bt996_r3_edgewise_hodge_stack_w33.py",
+    "tools/integrate_bt996_holonet_edgewise_hodge.py"
+  ],
+  "marker_outputs": "data/bt999_integrator_marker_check.json",
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error w33_paper.tex && latexmk -pdf -interaction=nonstopmode -halt-on-error photonic_holonet.tex",
+  "connector_boundary": "The GitHub connector committed the apply-and-verify script and manifest. It does not provide a full checkout/LaTeX runtime, so the actual compile must be run by this script in a checkout or CI job.",
+  "reading": "BT999 turns the paper integration step into one reproducible command with marker checks and optional latexmk builds."
+}
