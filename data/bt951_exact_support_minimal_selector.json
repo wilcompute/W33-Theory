@@ -1,0 +1,21 @@
+{
+  "theorem": "BT951 exact support-minimal selector theorem",
+  "status": "support-76 selector candidate superseded",
+  "minimum_support_sum": 60,
+  "minimizer_count_unordered_in_BT925_gauge": 6,
+  "minimizer_sorted_support_profiles": [[6, 6, 6, 6, 6, 8, 10, 12]],
+  "minimizer_decompositions_masks": [
+    [[1, 42], [12, 65], [41, 68], [90, 144]],
+    [[1, 42], [12, 65], [68, 109], [90, 144]],
+    [[3, 68], [4, 42], [38, 65], [90, 144]],
+    [[3, 68], [12, 65], [42, 69], [90, 144]],
+    [[3, 68], [12, 65], [42, 111], [90, 144]],
+    [[3, 68], [12, 89], [42, 111], [90, 144]]
+  ],
+  "support_distribution": {"6": 10, "8": 20, "10": 52, "12": 85, "14": 54, "16": 29, "18": 4, "20": 1},
+  "states_explored": 5914,
+  "elapsed_seconds_reference_run": 10.482054,
+  "old_candidate_76_status": "disproved: exact minimum is 60",
+  "certificate_method": "Bellman recursion over symplectic subspaces; each step chooses an unordered hyperbolic pair B(e,f)=1 and recurses on its symplectic orthogonal quotient.",
+  "checks": {"T1_minimum_is_60": true, "T2_six_minimizers": true, "T3_profile_unique": true, "T4_old_76_superseded": true, "T5_exact_recursion_completed": true}
+}
