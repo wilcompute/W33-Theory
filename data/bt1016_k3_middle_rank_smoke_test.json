@@ -1,0 +1,7 @@
+{
+  "theorem": "BT1016 K3 middle-rank row-format smoke test",
+  "degree_2_window": {"degree": 2, "sample_rows": 16, "sample_cols": 64, "expected_row_weight": 3, "rank": 16},
+  "degree_3_window": {"degree": 3, "sample_rows": 16, "sample_cols": 80, "expected_row_weight": 4, "rank": 16},
+  "pass": true,
+  "reading": "The deterministic row windows satisfy the expected bitset row weights and reduce through the exact F2 rank core. This validates row-format plumbing before full K3 level-2 rank runs."
+}
