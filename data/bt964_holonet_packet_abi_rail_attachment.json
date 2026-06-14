@@ -1,0 +1,15 @@
+{
+  "theorem": "BT964 Holonet packet ABI rail attachment",
+  "status": "selector rail attachment table committed; later dynamics tests pending",
+  "assignment_rule": "sort rails by BT963 phase_score, then support_sum, then xor_mask; assign to prefixes [0,10,110,111]",
+  "final_selector": [[3,68], [4,42], [38,65], [90,144]],
+  "lanes": [
+    {"slot":0, "prefix":"0", "role":"mirror", "rail":1, "pair":[4,42], "support_sum":12, "xor_mask":46, "phase_score":16},
+    {"slot":1, "prefix":"10", "role":"schedule", "rail":0, "pair":[3,68], "support_sum":12, "xor_mask":71, "phase_score":16},
+    {"slot":2, "prefix":"110", "role":"cache_A", "rail":2, "pair":[38,65], "support_sum":14, "xor_mask":91, "phase_score":19},
+    {"slot":3, "prefix":"111", "role":"cache_B", "rail":3, "pair":[90,144], "support_sum":22, "xor_mask":234, "phase_score":27}
+  ],
+  "reading": "The final E8 selector supplies concrete rail lanes for the Holonet prefix table: the two light rails feed mirror/schedule, and the heavier rails feed the two cache slots.",
+  "boundary": "This is a selector-backed ABI attachment convention. It is not yet a proof that all packet operations preserve the assigned lanes.",
+  "checks": {"T1_four_lanes_assigned": true, "T2_prefixes_recorded": true, "T3_light_lanes_first": true, "T4_heavy_lanes_last": true, "T5_boundary_explicit": true}
+}
