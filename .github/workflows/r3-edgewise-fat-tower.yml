@@ -30,6 +30,9 @@ jobs:
           python analysis/bt993_edgewise_density_recurrences.py
           python analysis/bt1000_k3_level2_feasibility_gate.py
           python analysis/bt1001_full_heat_supertrace_estimator_stack.py
+          python analysis/bt1003_ci_status_probe.py
+          python analysis/bt1006_k3_level2_endpoint_ranks.py
+          python analysis/bt1007_k3_heat_16probe_checkpoint.py
 
       - name: Apply paper integrators and verify markers
         run: |
@@ -45,5 +48,8 @@ jobs:
             data/bt999_integrator_marker_check.json
             data/bt1000_k3_level2_feasibility_gate.json
             data/bt1001_full_heat_supertrace_estimator_stack.json
+            data/bt1003_ci_status_probe.json
+            data/bt1006_k3_level2_endpoint_ranks.json
+            data/bt1007_k3_heat_16probe_checkpoint.json
             *.pdf
           if-no-files-found: warn
