@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# w33_paper.tex pulls in \input{partN_*} files that live in manuscripts/tex/.
+# Expose that directory to kpathsea so the master manuscript resolves its
+# includes (trailing ':' keeps the default search paths). Without this,
+# pdflatex halts at "part5_unified_breakthrough.tex not found".
+export TEXINPUTS=".:./manuscripts/tex:${TEXINPUTS:-}:"
+
 python tools/integrate_bt942_selector_appendix_w33.py
 python tools/integrate_bt952_exact_selector_w33.py
 python tools/integrate_bt957_final_selector_w33.py
