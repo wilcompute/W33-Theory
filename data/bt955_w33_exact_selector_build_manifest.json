@@ -1,0 +1,13 @@
+{
+  "theorem": "BT955 w33 exact selector build manifest",
+  "status": "build helper committed; full root compile deferred to full local checkout",
+  "target": "w33_paper.tex",
+  "integrators": ["tools/integrate_bt942_selector_appendix_w33.py", "tools/integrate_bt952_exact_selector_w33.py"],
+  "build_helper": "tools/bt955_w33_exact_selector_build.py",
+  "expected_pdf": "w33_paper.pdf",
+  "included_theorems": ["BT942 E8 selector status appendix", "BT952 exact support-60 selector theorem"],
+  "support_minimum": 60,
+  "metric_winner_from_BT954": [[3,68], [4,42], [38,65], [90,144]],
+  "boundary": "The connector pass did not directly overwrite w33_paper.tex or compile the full PDF. Use the build helper in a full checkout to patch and compile.",
+  "checks": {"T1_w33_target_recorded": true, "T2_BT942_integrator_included": true, "T3_BT952_integrator_included": true, "T4_support60_recorded": true, "T5_full_compile_boundary_explicit": true}
+}
