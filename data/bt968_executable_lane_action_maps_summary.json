@@ -1,0 +1,13 @@
+{
+  "theorem": "BT968 executable ABI lane action maps summary",
+  "status": "ABI lane preservation verified for committed maps; full optical dynamics not claimed",
+  "script": "analysis/bt968_executable_lane_action_maps.py",
+  "prefix_free": true,
+  "roles": ["mirror", "schedule", "cache_A", "cache_B"],
+  "assigned_lanes": {"mirror":1, "schedule":0, "cache_A":2, "cache_B":3},
+  "role_preservation_results": {"mirror":true, "schedule":true, "cache_A":true, "cache_B":true},
+  "all_roles_preserve_assigned_lanes": true,
+  "reading": "The Holonet prefix table now has executable role-to-lane maps satisfying BT965's preservation contract. These are minimal selector-backed ABI maps.",
+  "boundary": "Preservation is proved for committed ABI maps only; independently implemented dynamics must be encoded and tested separately.",
+  "checks": {"T1_prefix_free": true, "T2_four_roles_encoded": true, "T3_all_roles_preserve": true, "T4_contract_from_BT965_satisfied": true, "T5_dynamic_boundary_explicit": true}
+}
