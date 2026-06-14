@@ -1,0 +1,30 @@
+{
+  "theorem": "BT985 edgewise heat-trace convergence on the fat tower",
+  "domain": "unit square, Dirichlet boundary",
+  "exact_spectrum": "lambda_{m,n}=pi^2(m^2+n^2)",
+  "t_values": [0.01, 0.02, 0.05, 0.1],
+  "levels": [
+    {"level": 2, "vertices": 25, "triangles": 32, "interior_vertices": 9, "min_angle_deg": 45.0, "num_eigs": 7,
+     "heat_errors": {"0.01": 0.3089831563, "0.02": 0.3771290365, "0.05": 0.3843336965, "0.1": 0.2906854311}},
+    {"level": 3, "vertices": 81, "triangles": 128, "interior_vertices": 49, "min_angle_deg": 45.0, "num_eigs": 47,
+     "heat_errors": {"0.01": 0.2038883877, "0.02": 0.1309665537, "0.05": 0.1018715717, "0.1": 0.0903156021}},
+    {"level": 4, "vertices": 289, "triangles": 512, "interior_vertices": 225, "min_angle_deg": 45.0, "num_eigs": 80,
+     "heat_errors": {"0.01": 0.0875209968, "0.02": 0.0549072842, "0.05": 0.0323495609, "0.1": 0.0272288273}},
+    {"level": 5, "vertices": 1089, "triangles": 2048, "interior_vertices": 961, "min_angle_deg": 45.0, "num_eigs": 80,
+     "heat_errors": {"0.01": 0.0252880657, "0.02": 0.0149165290, "0.05": 0.0083982535, "0.1": 0.0069483756}},
+    {"level": 6, "vertices": 4225, "triangles": 8192, "interior_vertices": 3969, "min_angle_deg": 45.0, "num_eigs": 80,
+     "lambda1": 19.751100837039957,
+     "heat": {
+       "0.01": {"fem": 5.3511347298559775, "exact_same_truncation": 5.3867128980322585, "relative_error_same_truncation": 0.006604801267444112},
+       "0.02": {"fem": 2.225634206821513, "exact_same_truncation": 2.234162174792857, "relative_error_same_truncation": 0.003817076516450557},
+       "0.05": {"fem": 0.578753309700355, "exact_same_truncation": 0.5799831778300211, "relative_error_same_truncation": 0.0021205237956514024},
+       "0.1": {"fem": 0.15350764104806086, "exact_same_truncation": 0.15377617729914048, "relative_error_same_truncation": 0.001746279923171924}
+     }}
+  ],
+  "verdict": {
+    "shape_regular": true,
+    "fixed_min_angle_deg": 45.0,
+    "level_6_heat_trace_errors": {"0.01": 0.006604801267444112, "0.02": 0.003817076516450557, "0.05": 0.0021205237956514024, "0.1": 0.001746279923171924},
+    "reading": "The edgewise fat tower stabilizes the spectral-action observable H_N(t). This is a heat-trace/spectral witness for R3; the curvature/EH coefficient still needs the curved Regge seed test and CP2_9/K3_16 application."
+  }
+}
