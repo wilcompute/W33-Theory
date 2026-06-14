@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1007 K3_16 all-degree 16-probe heat checkpoint",
+  "complex": "K3_16 level-1 edgewise Hodge stack",
+  "method": "random sign trace estimation with scipy expm_multiply",
+  "probes_per_degree": 16,
+  "alternating_supertrace_check": {
+    "0.01": {"estimate": 22.35281745377688, "standard_error": 1.7016019876069775, "target": 24, "z_error": -0.9680187013295697},
+    "0.05": {"estimate": 18.637021322370856, "standard_error": 6.563902732103608, "target": 24, "z_error": -0.8170411562315169},
+    "0.1": {"estimate": 17.56392077911096, "standard_error": 8.464846593889778, "target": 24, "z_error": -0.7603302847253993},
+    "1.0": {"estimate": 11.073289410256422, "standard_error": 4.570024711847879, "target": 24, "z_error": -2.828586584276191}
+  },
+  "target_chi": 24,
+  "boundary": "A 64-probe all-degree pass exceeded the interactive execution window; run this estimator in CI or a checkout for publication-grade bars.",
+  "reading": "The 16-probe checkpoint improves the 4-probe BT1004 run. Three sampled t-values are within 1 sigma of chi=24; t=1 remains a higher-variance cancellation point and needs the longer 64-probe run."
+}
