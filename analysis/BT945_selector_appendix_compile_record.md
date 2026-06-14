@@ -1,6 +1,6 @@
 # BT945 — Selector appendix compile record
 
-BT945 verifies the BT942 selector appendix at the TeX/PDF layer and commits a helper for a full W36 build in a local checkout.
+BT945 verified the BT942 selector appendix at the standalone TeX/PDF layer. Its original helper targeted `W36_PAPER.tex`; that routing is superseded by BT946/BT947.
 
 ## Runtime check
 
@@ -16,20 +16,21 @@ tex_sha256 = 92c19d9bf016c8af0946f423ee0c327b065b9b5ed533859677ecc91720486e3c
 
 The PDF was inspected and rendered successfully.
 
-## Repo helper
+## Correct routing after BT946/BT947
 
 ```text
-tools/bt945_selector_appendix_verify.py
+photonic_holonet.tex = current main narrative / architecture paper
+w33_paper.tex       = heavy-math manuscript target
 ```
 
-This helper applies `tools/integrate_bt942_selector_appendix.py` and then builds `W36_PAPER.tex` twice with pdflatex when run in a full local checkout.
+Use the corrected helper:
+
+```text
+tools/bt947_w33_selector_appendix_verify.py
+```
+
+It applies `tools/integrate_bt942_selector_appendix_w33.py` and then builds `w33_paper.tex` twice with pdflatex in a full local checkout.
 
 ## Boundary
 
-The full root `W36_PAPER.tex` build was not performed inside the connector because a complete local checkout was unavailable. The appendix source itself was compiled and rendered successfully, and the full-build helper is now committed.
-
-## Local artifact
-
-```text
-/mnt/data/w36_bt945/BT945_e8_selector_appendix_check.pdf
-```
+The BT945 standalone appendix compile remains valid. The W36 helper path is deprecated for this context; heavy E8/SNF selector math belongs in `w33_paper.tex`.
