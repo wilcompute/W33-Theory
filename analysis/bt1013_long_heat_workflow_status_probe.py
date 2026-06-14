@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+"""BT1013: status probe for the K3 long heat workflow."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+def main() -> None:
+    out = {
+        "theorem": "BT1013 K3 long heat workflow status probe",
+        "workflow": ".github/workflows/r3-k3-long-heat.yml",
+        "checked_commit": "62d59c00459abcd916bf84a5ea4111046558f733",
+        "connector_combined_status_count": 0,
+        "connector_workflow_run_count": 0,
+        "trigger_status": "not triggered through connector; use manual dispatch in the Actions UI",
+        "expected_artifacts": [
+            "data/bt1010_k3_64probe_heat_driver.json",
+            "data/bt1007_k3_heat_16probe_checkpoint.json"
+        ],
+        "reading": "The long heat workflow is committed and separated from smoke tests, but no run or status is surfaced by the connector for the checked commit."
+    }
+    Path("data").mkdir(exist_ok=True)
+    Path("data/bt1013_long_heat_workflow_status_probe.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(json.dumps(out, indent=2))
+
+
+if __name__ == "__main__":
+    main()
