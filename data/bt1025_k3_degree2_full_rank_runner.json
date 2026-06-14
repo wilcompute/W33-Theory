@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1025 K3 level-2 degree-2 full rank runner",
+  "map": "degree_2",
+  "shape": [45120, 152960],
+  "nnz": 458880,
+  "target_rank": 42345,
+  "block_size": 512,
+  "manual_command": "python analysis/bt1025_k3_degree2_full_rank_runner.py --run-full --block-size 512",
+  "workflow": ".github/workflows/k3-degree2-full-rank.yml",
+  "boundary": "Manifest mode committed. Full rank execution requires manual workflow dispatch or checkout run; no full-rank result is claimed here."
+}
