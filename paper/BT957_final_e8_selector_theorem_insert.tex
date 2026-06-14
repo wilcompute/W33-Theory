@@ -1,0 +1,54 @@
+% BT957 -- final combined E8 selector theorem insert for w33_paper.tex
+
+\subsection{The combined support--metric E8 selector (BT951--BT957)}\label{subsec:bt957-final-e8-selector}
+
+The support-minimal selector is now exact, and the residual metric ambiguity is
+resolved in both independent E8 gauges currently available in the repository.
+
+\begin{theorem}[Support--metric E8 selector]
+Let \(H=\ker(A_2)/\operatorname{im}(A_2)\) carry the divided alternating form
+\[
+  B(x,y)=\frac{x^T A y}{2}\pmod 2.
+\]
+Among all hyperbolic decompositions of \(H\), the exact minimum total support is
+\(60\).  There are six unordered support-minimal decompositions in the BT925
+coordinate gauge, all with sorted support profile
+\[
+  [6,6,6,6,6,8,10,12].
+\]
+All six share the hyperbolic pair \((90,144)\).  Testing these six minimizers in
+the vertex E8 metric gauge and independently in the tetracode E8 metric gauge
+selects the same minimizer:
+\[
+  \boxed{\bigl[(3,68),(4,42),(38,65),(90,144)\bigr].}
+\]
+In the vertex gauge this minimizer has score
+\[
+  \operatorname{tr}=38,\qquad \|G\|_F^2=444,\qquad \max |G_{ij}|=8,
+\]
+and in the tetracode gauge it has score
+\[
+  \operatorname{tr}=56,\qquad \|G\|_F^2=1320,\qquad \max |G_{ij}|=16.
+\]
+It is therefore the unique currently verified support-minimal and dual-metric
+preferred selector.
+\end{theorem}
+
+\begin{proof}[Machine proof]
+BT951 proves support minimality by Bellman recursion over symplectic subspaces of
+\(H\), exploring 5914 memoized states and returning exactly six unordered
+minimizers.  BT953 classifies the intrinsic weighted-intersection certificate on
+these six and shows that support data alone does not collapse them to one orbit.
+BT954 evaluates all six in the BT929 vertex metric gauge and uniquely minimizes
+height at minimizer 2.  BT956 recovers the BT930 tetracode isometry matrix and
+repeats the metric-height test in the tetracode E8 gauge; the same minimizer 2
+wins.  The witness files are
+\texttt{data/bt951\_exact\_support\_minimal\_selector.json},
+\texttt{data/bt954\_metric\_selector\_among\_support60.json}, and
+\texttt{data/bt956\_tetracode\_metric\_selector\_summary.json}.
+\end{proof}
+
+This theorem replaces the earlier support-76 selector candidate.  The remaining
+mathematical refinement is to identify the full transported tetracode stabilizer
+orbit of this selector, but the selector itself is already fixed by the combined
+support and dual-metric rule above.
