@@ -1,0 +1,11 @@
+{
+  "theorem": "BT970 final stack update",
+  "status": "production wrapper updated to include BT967 selector rail theorem and Holonet pointer",
+  "updated_wrapper": "tools/bt960_execute_final_selector_stack.py",
+  "new_manifest_output": "data/bt970_final_selector_stack_execution_manifest.json",
+  "w33_integrators": ["tools/integrate_bt942_selector_appendix_w33.py", "tools/integrate_bt952_exact_selector_w33.py", "tools/integrate_bt957_final_selector_w33.py", "tools/integrate_bt967_selector_rails_w33.py"],
+  "holonet_integrators": ["tools/integrate_bt949_holonet_w33_crossref.py", "tools/integrate_bt958_holonet_final_selector_pointer.py", "tools/integrate_bt967_holonet_selector_rails.py"],
+  "papers": ["w33_paper.tex", "photonic_holonet.tex"],
+  "boundary": "Connector updated the wrapper only. Full source patch and PDF compile should be run in a full checkout.",
+  "checks": {"T1_wrapper_updated": true, "T2_BT967_w33_integrator_included": true, "T3_BT967_holonet_integrator_included": true, "T4_manifest_target_updated": true, "T5_boundary_explicit": true}
+}
