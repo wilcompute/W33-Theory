@@ -1,0 +1,14 @@
+{
+  "theorem": "BT998 CP2_9 level-2 edgewise rank/Hodge pipeline",
+  "level": 2,
+  "f_vector": [459, 5976, 19344, 23040, 9216],
+  "boundary_ranks_mod2": [458, 5518, 13825, 9215],
+  "betti_mod2": [1, 0, 1, 0, 1],
+  "euler_characteristic": 3,
+  "checks": {
+    "matches_BT993_recurrence": true,
+    "topology_preserved": true,
+    "top_4simplex_count": 9216
+  },
+  "reading": "CP2_9 level-2 edgewise refinement matches the BT993 recurrence and preserves topology. This is the memory-safe rank pipeline checkpoint before attempting K3_16 level 2."
+}
