@@ -1,0 +1,20 @@
+{
+  "theorem": "BT954 metric selector among support-60 minimizers",
+  "metric_gauge": "BT929 vertex E8 gauge; M = M0 P; G = M^T G_vertex M",
+  "candidate_rows": [
+    {"minimizer": 0, "det_integer_lift_M": 1, "lifted_gram_det": 1, "positive_definite": true, "min_eigenvalue": 0.01375484341198298, "trace": 48, "frobenius_squared": 848, "max_abs_entry": 10, "diagonal": [2,8,10,4,10,2,6,6]},
+    {"minimizer": 1, "det_integer_lift_M": -1, "lifted_gram_det": 1, "positive_definite": true, "min_eigenvalue": 0.013501548575751228, "trace": 52, "frobenius_squared": 1080, "max_abs_entry": 14, "diagonal": [2,8,10,4,2,14,6,6]},
+    {"minimizer": 2, "det_integer_lift_M": 1, "lifted_gram_det": 1, "positive_definite": true, "min_eigenvalue": 0.010596380201028571, "trace": 38, "frobenius_squared": 444, "max_abs_entry": 8, "diagonal": [2,2,4,8,6,4,6,6]},
+    {"minimizer": 3, "det_integer_lift_M": 1, "lifted_gram_det": 1, "positive_definite": true, "min_eigenvalue": 0.005067502531403188, "trace": 42, "frobenius_squared": 596, "max_abs_entry": 10, "diagonal": [2,2,10,4,8,4,6,6]},
+    {"minimizer": 4, "det_integer_lift_M": 1, "lifted_gram_det": 1, "positive_definite": true, "min_eigenvalue": 0.0040456912249052035, "trace": 48, "frobenius_squared": 896, "max_abs_entry": 10, "diagonal": [2,2,10,4,8,10,6,6]},
+    {"minimizer": 5, "det_integer_lift_M": 0, "lifted_gram_det": 0, "positive_definite": false, "min_eigenvalue": 4.1960915848448927e-16, "trace": 48, "frobenius_squared": 882, "max_abs_entry": 10, "diagonal": [2,2,10,4,8,10,6,6]}
+  ],
+  "valid_positive_unimodular_lifts": [0, 1, 2, 3, 4],
+  "metric_winner": 2,
+  "winner_decomposition": [[3,68], [4,42], [38,65], [90,144]],
+  "winner_score": {"trace": 38, "frobenius_squared": 444, "max_abs_entry": 8, "min_eigenvalue": 0.010596380201028571},
+  "singular_or_invalid_candidates": [5],
+  "conclusion": "Within the BT929 vertex metric gauge, minimizer 2 is the unique lowest-height positive unimodular support-60 lift. This upgrades the selector from six support-minimal candidates to one metric-preferred candidate in the vertex gauge.",
+  "boundary": "The tetracode metric gauge should still be evaluated with an explicit stored BT930 tetracode isometry matrix; BT930's current JSON records existence but not the full matrix.",
+  "checks": {"T1_six_candidates_tested": true, "T2_valid_lifts_identified": true, "T3_candidate_2_wins_vertex_metric": true, "T4_candidate_5_singular_in_vertex_lift": true, "T5_tetracode_boundary_explicit": true}
+}
