@@ -1,0 +1,77 @@
+{
+  "theorem": "(R3) leading physical spectral action converges geometrically term-by-term on the fat tower",
+  "w33_moments": {
+    "Tr1_dimHF": 440,
+    "TrDF2": 1920,
+    "TrDF4": 16320
+  },
+  "terms": [
+    {
+      "scale": "Lambda^4",
+      "physical": "cosmological constant",
+      "w33_coeff": "Tr_F(1)=440",
+      "geometric": "vol = intrinsic volume R_0",
+      "theorem": "CMS R_0 (mesh->0)",
+      "status": "converges"
+    },
+    {
+      "scale": "Lambda^2 (a)",
+      "physical": "Einstein-Hilbert (Newton G)",
+      "w33_coeff": "Tr_F(1)=440",
+      "geometric": "int R = Regge deficit (Lipschitz-Killing R_2)",
+      "theorem": "Cheeger-Mueller-Schrader",
+      "status": "VERIFIED (BT986, sphere)"
+    },
+    {
+      "scale": "Lambda^2 (b)",
+      "physical": "Higgs mass term",
+      "w33_coeff": "Tr_F(D_F^2)=1920",
+      "geometric": "int sqrt(g)",
+      "theorem": "CMS R_0 x finite moment",
+      "status": "converges"
+    },
+    {
+      "scale": "Lambda^0 (a)",
+      "physical": "Yang-Mills gauge kinetic",
+      "w33_coeff": "Tr_F(D_F^2)=1920",
+      "geometric": "int F^2 (gauge field strength)",
+      "theorem": "lattice/Wilson plaquette -> F^2 (classical)",
+      "status": "converges (classical)"
+    },
+    {
+      "scale": "Lambda^0 (b)",
+      "physical": "Higgs kinetic",
+      "w33_coeff": "Tr_F(D_F^2)=1920",
+      "geometric": "int |D phi|^2",
+      "theorem": "FEEC/Whitney gradient convergence",
+      "status": "converges"
+    },
+    {
+      "scale": "Lambda^0 (c)",
+      "physical": "Higgs quartic / potential",
+      "w33_coeff": "Tr_F(D_F^4)=16320",
+      "geometric": "V(phi) coefficients",
+      "theorem": "exact finite moment (no limit)",
+      "status": "exact"
+    },
+    {
+      "scale": "Lambda^0 (d)",
+      "physical": "Gauss-Bonnet (topological)",
+      "w33_coeff": "Tr_F(1)=440",
+      "geometric": "chi = int Pfaffian",
+      "theorem": "discrete Gauss-Bonnet-Chern",
+      "status": "EXACT (chi)"
+    },
+    {
+      "scale": "Lambda^0 (e)",
+      "physical": "Weyl^2 (conformal, higher-deriv.)",
+      "w33_coeff": "Tr_F(1)=440",
+      "geometric": "int C^2 (Weyl tensor squared)",
+      "theorem": "NOT a Lipschitz-Killing curvature",
+      "status": "OPEN (spectral basket)"
+    }
+  ],
+  "leading_physical_converges": true,
+  "residual": "Weyl^2 conformal higher-derivative term (spectral basket)",
+  "reading": "every Seeley-DeWitt coefficient is a local curvature integral (Gilkey); on a shape-regular tower each leading physical term converges via its geometric realization (CMS curvature / lattice gauge / exact finite moment), bypassing the n<->Lambda interchange. EH verified BT986."
+}
