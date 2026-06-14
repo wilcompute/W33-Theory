@@ -1,0 +1,17 @@
+{
+  "theorem": "BT976 selector-face representation label scaffold",
+  "status": "stable labels attached; charges/field assignments not asserted",
+  "final_selector": [[3,68], [4,42], [38,65], [90,144]],
+  "face_labels": [
+    {"face": [0,1,3], "label": "GenRail_A", "size": 27},
+    {"face": [0,2,3], "label": "GenRail_B", "size": 27},
+    {"face": [1,2,3], "label": "GenRail_C", "size": 27},
+    {"face": [0,1,2], "label": "CompRail_0", "size": 27}
+  ],
+  "generation_slot_total": 81,
+  "complement_slot_total": 27,
+  "phase_slots": {"rail0":16, "rail1":16, "rail2":19, "rail3":27},
+  "representation_contract": "map each 27-slot face to representation/charge labels from existing W33 generation machinery; require counts and phase-slot placements to remain invariant under selected ABI subgroup",
+  "reading": "The selector-fixed 27+27+27 split now has stable face labels GenRail_A/B/C plus complementary CompRail_0. This prepares the representation-label test without claiming the charge map yet.",
+  "checks": {"T1_three_generation_faces": true, "T2_generation_total_81": true, "T3_one_complement_face": true, "T4_phase_slots_recorded": true, "T5_no_charge_overclaim": true}
+}
