@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1005 K3_16 level-2 sparse rank pilot",
+  "level": 2,
+  "f_vector": [2776, 45120, 152960, 184320, 73728],
+  "betti_target": [1, 0, 22, 0, 1],
+  "boundary_rank_targets": [2775, 42345, 110593, 73727],
+  "euler_characteristic": 24,
+  "stage_plan": [
+    "compute rank d1 by vertex-edge connectivity; target 2775",
+    "compute rank d4 by top-boundary sparse elimination or dual connectivity; target 73727",
+    "compute d2 and d3 blockwise; targets 42345 and 110593",
+    "verify recovered Betti profile [1,0,22,0,1]"
+  ],
+  "boundary_nnz_exact_by_counting": [90240, 458880, 737280, 368640],
+  "reading": "K3_16 level-2 rank verification now has exact sparse targets. The pilot reduces the next computation to staged rank recovery rather than exploratory dense linear algebra."
+}
