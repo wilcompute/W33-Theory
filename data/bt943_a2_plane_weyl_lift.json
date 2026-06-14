@@ -1,0 +1,15 @@
+{
+  "theorem": "BT943 A2-plane Weyl lift attempt",
+  "A2_gram": [[2, -1], [-1, 2]],
+  "simple_reflections": {"s1": [[-1, 1], [0, 1]], "s2": [[1, 0], [1, -1]]},
+  "integral_WA2_order": 6,
+  "integral_WA2_preserves_gram": true,
+  "mod2_WA2_order": 6,
+  "mod2_WA2_preserves_A2_form": true,
+  "four_plane_local_order": 1296,
+  "tetracode_monomial_order_from_BT940": 48,
+  "survives_to_chain_H": "After choosing the BT930 tetracode gauge, the local A2 Weyl generators reduce to GL(2,2) actions on each 2-coordinate plane. They act on H as gauge-dependent block operations; they are not yet canonical chain-complex maps on representatives.",
+  "exact_boundary": "BT943 constructs the A2-plane Weyl lift in tetracode metric coordinates. It does not prove that all local Weyl choices preserve the ternary tetracode glue or define canonical chain-complex automorphisms.",
+  "next_test": "Intersect the four-plane W(A2)^4 action with the tetracode code-glue stabilizer and then transport that stabilizer through BT930 to H.",
+  "checks": {"T1_integral_WA2_order_6": true, "T2_integral_gram_preserved": true, "T3_mod2_GL22_order_6": true, "T4_four_plane_local_order_recorded": true, "T5_chain_canonicality_not_overclaimed": true}
+}
