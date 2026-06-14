@@ -1,0 +1,17 @@
+{
+  "theorem": "BT957 final combined E8 selector theorem summary",
+  "support_minimum": 60,
+  "support_minimizer_count": 6,
+  "support_profile": [6, 6, 6, 6, 6, 8, 10, 12],
+  "shared_pair": [90, 144],
+  "selected_minimizer_index": 2,
+  "selected_decomposition": "[(3,68),(4,42),(38,65),(90,144)]",
+  "vertex_metric_score": "trace 38; Frobenius^2 444; max entry 8; min eigenvalue 0.010596380201028571",
+  "tetracode_metric_score": "trace 56; Frobenius^2 1320; max entry 16; min eigenvalue 0.004850303102819915",
+  "theorem_insert": "paper/BT957_final_e8_selector_theorem_insert.tex",
+  "integrator": "tools/integrate_bt957_final_selector_w33.py",
+  "target": "w33_paper.tex",
+  "conclusion": "The selector is fixed by exact support minimality plus agreement of the vertex and tetracode metric gauges.",
+  "remaining_refinement": "Identify the full transported tetracode stabilizer orbit of the selected minimizer.",
+  "checks": {"T1_support_minimum_60": true, "T2_six_support_minimizers": true, "T3_vertex_metric_selects_2": true, "T4_tetracode_metric_selects_2": true, "T5_w33_theorem_insert_committed": true}
+}
