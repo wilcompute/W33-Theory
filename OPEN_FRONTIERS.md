@@ -121,11 +121,18 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   ∝ dim H_F = 440; Yang-Mills/Higgs ∝ Tr D_F^2,Tr D_F^4 = 1920,16320. The AC
   bridge to curved-4D seeds (CP2_9 sig +1, K3_16 sig -16) + barycentric
   towers (modes 1,6,120; chain density→120/19, first moment→860/19) is
-  explicit in the corpus. IRREDUCIBLE RESIDUAL: prove the refinement-tower
-  spectral action converges to the continuum Einstein-Hilbert action — a
-  discrete→continuum LIMIT THEOREM, genuinely analytic, NOT a finite
-  computation (so NOT closable by the methods that cracked R1/R2). Do not
-  fabricate a continuum proof.
+  explicit in the corpus. IRREDUCIBLE RESIDUAL (named by
+  docs/STATUS_AND_GAPS.md "Open Problem 2"): apply two well-posed
+  metric-geometry theorems — (i) Gromov-Hausdorff convergence of the
+  refinement tower to the smooth seed, and (ii) Cheeger-Mueller-Schrader /
+  Dodziuk-Patodi spectral convergence (combinatorial Hodge -> de Rham
+  Laplacian as mesh->0, supplied by barycentric refinement). All finite
+  preconditions hold (exact couplings; spectral-dimension flow d_s:4->2
+  already computed, matching CDT/Horava/asymptotic-safety; AC bridge). Open =
+  the rigorous APPLICATION, a problem in ANALYSIS not a finite computation (so
+  NOT closable by the methods that cracked R1/R2). Do not fabricate a
+  continuum proof. The finite theory is complete; this is the sole analytic
+  frontier.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
