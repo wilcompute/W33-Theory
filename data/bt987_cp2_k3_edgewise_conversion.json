@@ -1,0 +1,47 @@
+{
+  "theorem": "BT987 CP2_9/K3_16 edgewise conversion scaffold",
+  "reason": "BT983 showed barycentric refinement is not a valid CMS/DP/FEEC theorem-carrier; edgewise refinement is the fat replacement.",
+  "seeds": [
+    {
+      "name": "CP2_9",
+      "vertices": 9,
+      "f_vector": [9, 36, 84, 90, 36],
+      "euler_characteristic": 3,
+      "edgewise_top_multiplier_per_step": 16,
+      "barycentric_top_multiplier_per_step": 120,
+      "levels": [
+        {"level": 0, "edgewise_top_4simplices": 36, "barycentric_top_4simplices": 36, "barycentric_over_edgewise_ratio": 1.0},
+        {"level": 1, "edgewise_top_4simplices": 576, "barycentric_top_4simplices": 4320, "barycentric_over_edgewise_ratio": 7.5},
+        {"level": 2, "edgewise_top_4simplices": 9216, "barycentric_top_4simplices": 518400, "barycentric_over_edgewise_ratio": 56.25},
+        {"level": 3, "edgewise_top_4simplices": 147456, "barycentric_top_4simplices": 62208000, "barycentric_over_edgewise_ratio": 421.875},
+        {"level": 4, "edgewise_top_4simplices": 2359296, "barycentric_top_4simplices": 7464960000, "barycentric_over_edgewise_ratio": 3164.0625},
+        {"level": 5, "edgewise_top_4simplices": 37748736, "barycentric_top_4simplices": 895795200000, "barycentric_over_edgewise_ratio": 23730.46875},
+        {"level": 6, "edgewise_top_4simplices": 603979776, "barycentric_top_4simplices": 107495424000000, "barycentric_over_edgewise_ratio": 177978.515625}
+      ]
+    },
+    {
+      "name": "K3_16",
+      "vertices": 16,
+      "f_vector": [16, 120, 560, 720, 288],
+      "euler_characteristic": 24,
+      "edgewise_top_multiplier_per_step": 16,
+      "barycentric_top_multiplier_per_step": 120,
+      "levels": [
+        {"level": 0, "edgewise_top_4simplices": 288, "barycentric_top_4simplices": 288, "barycentric_over_edgewise_ratio": 1.0},
+        {"level": 1, "edgewise_top_4simplices": 4608, "barycentric_top_4simplices": 34560, "barycentric_over_edgewise_ratio": 7.5},
+        {"level": 2, "edgewise_top_4simplices": 73728, "barycentric_top_4simplices": 4147200, "barycentric_over_edgewise_ratio": 56.25},
+        {"level": 3, "edgewise_top_4simplices": 1179648, "barycentric_top_4simplices": 497664000, "barycentric_over_edgewise_ratio": 421.875},
+        {"level": 4, "edgewise_top_4simplices": 18874368, "barycentric_top_4simplices": 59719680000, "barycentric_over_edgewise_ratio": 3164.0625},
+        {"level": 5, "edgewise_top_4simplices": 301989888, "barycentric_top_4simplices": 7166361600000, "barycentric_over_edgewise_ratio": 23730.46875},
+        {"level": 6, "edgewise_top_4simplices": 4831838208, "barycentric_top_4simplices": 859963392000000, "barycentric_over_edgewise_ratio": 177978.515625}
+      ]
+    }
+  ],
+  "migration_patch_points": [
+    "exploration/w33_minimal_triangulation_bridge.py: replace barycentric_subdivision_f_vector with edgewise facet refinement once explicit facets are loaded",
+    "exploration/w33_curved_barycentric_density_bridge.py: do not reuse 120/19 and 860/19 density constants; rederive edgewise density constants",
+    "exploration/w33_transport_curved_dirac_refinement_bridge.py: rename barycentric tower references and route heat-density samples through the edgewise tower",
+    "w33_paper.tex / OPEN_FRONTIERS.md: state CP2_9/K3_16 R3 verification now means edgewise/fat refinement, not barycentric refinement"
+  ],
+  "boundary": "This scaffold records exact top-simplex growth and migration points. Full lower-dimensional f-vectors and incidence matrices require explicit CP2_9/K3_16 facet lists, not just neighborly f-vectors."
+}
