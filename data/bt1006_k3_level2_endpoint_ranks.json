@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1006 K3_16 level-2 endpoint rank verification",
+  "level": 2,
+  "f_vector": [2776, 45120, 152960, 184320, 73728],
+  "one_skeleton_components": 1,
+  "rank_d1": 2775,
+  "top_dual_components": 1,
+  "tetrahedron_incidence_counts": {"2": 184320},
+  "boundary_tetrahedra": 0,
+  "rank_d4": 73727,
+  "endpoint_rank_targets": {"d1": 2775, "d4": 73727},
+  "endpoint_targets_hit": true,
+  "reading": "The K3_16 level-2 endpoint ranks are directly verified: connected 1-skeleton and connected closed top-dual graph. Middle ranks remain the staged blockwise targets."
+}
