@@ -1,0 +1,13 @@
+{
+  "theorem": "BT953 support-60 orbit/invariant classifier",
+  "status": "partial quotient: intrinsic certificate graph classified; full tetracode stabilizer quotient remains open",
+  "minimizer_count": 6,
+  "common_masks_across_all_minimizers": [90, 144],
+  "weighted_intersection_matrix": [[8,6,2,4,4,2],[6,8,2,4,4,2],[2,2,8,4,4,4],[4,4,4,8,6,4],[4,4,4,6,8,6],[2,2,4,4,6,8]],
+  "certificate_graph_automorphism_count": 2,
+  "certificate_graph_automorphisms": [[0,1,2,3,4,5],[1,0,2,3,4,5]],
+  "orbits_under_certificate_graph_automorphisms": [[0,1],[2],[3],[4],[5]],
+  "reading": "The six support-60 minimizers are not one orbit under their intrinsic weighted-intersection certificate; only minimizers 0 and 1 are swapped. A larger transported tetracode action would be needed to collapse more orbits.",
+  "boundary": "This is not the final tetracode quotient. It is the strongest quotient available from the support-60 certificate alone.",
+  "checks": {"T1_six_minimizers_loaded": true, "T2_common_pair_90_144": true, "T3_certificate_aut_group_order_2": true, "T4_orbits_recorded": true, "T5_full_tetracode_quotient_not_overclaimed": true}
+}
