@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1024 add real incidence shards to K3 middle-rank smoke workflow",
+  "workflow": ".github/workflows/k3-middle-rank-smoke.yml",
+  "new_steps": [
+    "python analysis/bt1021_k3_real_degree2_incidence_shard.py --start 0 --count 8",
+    "python analysis/bt1022_k3_real_degree3_incidence_shard.py --start 0 --count 8"
+  ],
+  "new_artifacts": [
+    "data/bt1021_k3_real_degree2_incidence_shard.json",
+    "data/bt1022_k3_real_degree3_incidence_shard.json"
+  ],
+  "timeout_minutes": 30,
+  "boundary": "The workflow was updated, but connector status APIs still need a surfaced Actions run to confirm runtime success."
+}
