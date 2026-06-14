@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1020 paper and heat workflow runbook",
+  "runbook": "docs/BT1020_workflow_runbook.md",
+  "trigger_order": ["k3-middle-rank-smoke.yml", "r3-k3-long-heat.yml", "paper-build.yml"],
+  "expected_artifacts": ["k3-middle-rank-smoke-data", "k3-heat-long-run-data", "paper-build-pdfs"],
+  "expected_files": [
+    "data/bt1015_k3_middle_stream_contracts.json",
+    "data/bt1016_k3_middle_rank_smoke_test.json",
+    "data/bt1018_k3_degree2_row_shard.json",
+    "data/bt1010_k3_64probe_heat_driver.json",
+    "data/bt1007_k3_heat_16probe_checkpoint.json",
+    "w33_paper.pdf",
+    "photonic_holonet.pdf"
+  ],
+  "boundary": "The runbook does not claim the workflows have run. It is the external execution protocol for Actions UI or equivalent CLI/token access."
+}
