@@ -1,0 +1,11 @@
+{
+  "theorem": "BT971 nontrivial lane transport maps",
+  "status": "nontrivial family-preserving subgroup identified",
+  "lane_families": {"light": [0,1], "cache": [2,3]},
+  "family_preserving_ops": ["id", "light_swap", "cache_swap", "both_swap"],
+  "family_preserving_order": 4,
+  "full_square_transport_boundary": "full square D8 contains operations that cross the light/cache partition",
+  "abi_consequence": "BT968 singleton role maps prove strict role preservation. BT971 adds nontrivial family-level transport: light rails can swap and cache rails can swap, but full D8 is too large for the present ABI partition.",
+  "boundary": "This is a lane-level transport model, not a derivation of the full optical D8/D12 packet action.",
+  "checks": {"T1_family_preserving_order_4": true, "T2_light_swap_present": true, "T3_cache_swap_present": true, "T4_quarter_turn_not_family_preserving": true, "T5_boundary_explicit": true}
+}
