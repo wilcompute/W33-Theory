@@ -1,0 +1,21 @@
+{
+  "theorem": "BT1002 CI build integration for R3 edgewise fat tower",
+  "workflow": ".github/workflows/r3-edgewise-fat-tower.yml",
+  "triggers": ["push to master", "pull_request to master", "workflow_dispatch"],
+  "python_smoke_scripts": [
+    "analysis/bt991_local_4simplex_edgewise_template.py",
+    "analysis/bt993_edgewise_density_recurrences.py",
+    "analysis/bt1000_k3_level2_feasibility_gate.py",
+    "analysis/bt1001_full_heat_supertrace_estimator_stack.py"
+  ],
+  "paper_step": "bash tools/bt999_apply_integrators_and_verify.sh",
+  "artifacts": [
+    "data/bt991_local_4simplex_edgewise_template.json",
+    "data/bt993_edgewise_density_recurrences.json",
+    "data/bt999_integrator_marker_check.json",
+    "data/bt1000_k3_level2_feasibility_gate.json",
+    "data/bt1001_full_heat_supertrace_estimator_stack.json",
+    "*.pdf"
+  ],
+  "reading": "BT1002 gives the R3 edgewise/fat-tower stack a CI entrypoint that applies the paper integrators, checks markers, runs smoke scripts, and uploads data/PDF artifacts when available."
+}
