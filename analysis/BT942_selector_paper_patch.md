@@ -1,13 +1,35 @@
-# BT942 — Selector paper patch
+# BT942 — Selector appendix source
 
-BT942 adds a concise paper-facing appendix for the BT924--BT941 E8 selector thread.
+BT942 adds a concise paper-facing appendix source for the BT924--BT941 E8 selector thread.
 
 ## Files
 
 ```text
 paper/BT942_e8_selector_appendix.tex
-tools/integrate_bt942_selector_appendix.py
 data/bt942_selector_paper_patch.json
+```
+
+## Correct routing after BT946/BT947
+
+Wil corrected the manuscript split:
+
+```text
+photonic_holonet.tex = current main narrative / architecture paper
+w33_paper.tex       = heavy-math manuscript target
+```
+
+The appendix belongs in `w33_paper.tex`, not `W36_PAPER.tex`.
+
+## Current integrator
+
+```bash
+python tools/integrate_bt942_selector_appendix_w33.py
+```
+
+For verification/compile in a full checkout:
+
+```bash
+python tools/bt947_w33_selector_appendix_verify.py
 ```
 
 ## Scope
@@ -20,11 +42,5 @@ The appendix summarizes:
 - BT931--BT941: support selector candidate, tetracode symmetry, and remaining proof obligations.
 
 ## Honest boundary
-
-The root `W36_PAPER.tex` is not directly overwritten in this connector pass. The patch is available as an idempotent integrator:
-
-```bash
-python tools/integrate_bt942_selector_appendix.py
-```
 
 The appendix states that existence of compatible E8 gauges is now established, but canonical selector uniqueness remains open.
