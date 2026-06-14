@@ -87,6 +87,15 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   - BT951–957: a selector is constructed by exact support-minimality
     (support min 60, profile [6,6,6,6,6,8,10,12]) + agreement of the vertex
     and tetracode metric gauges → a specific E8 metric.
+  - CANONICAL SYMMETRY (bt980_aut_action_on_homology.py; in w33_paper.tex
+    Prop "Canonical symmetry of the homology"): Aut(W33)=PSp(4,3) acts on H
+    FAITHFULLY (order exactly 25920), IRREDUCIBLY over F2, preserving the
+    symplectic B → canonical PSp(4,3) ↪ Sp(8,2). This is the "larger
+    chain-complex symmetry" BT932 sought (the vertex witness is
+    symmetry-isolated). CONSEQUENCE: since E8⊃E6⊕A2 has odd index 3, W(E6) on
+    E8/2E8 is REDUCIBLE (6⊕2) while H is irreducible ⇒ the canonical lift is
+    NOT the naive E6⊂E8. Reduced question: does PSp(4,3) preserve an
+    irreducible even-unimodular rank-8 Z-lattice (then = E8)?
   STILL OPEN (BT927): the chain shadow (BT924/925) and the vertex/tetracode
   metric E8 are compatible but NOT YET proved to be ONE canonical lift; the
   positive-definite even-unimodular identification — and the selector's full
@@ -94,6 +103,12 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
 - (6) MOONSHINE MODULE BOUNDARY — low-order transport exact through the
   quartic package, but the naive quintic V₅ lift fails on anchored classes
   2A, 2B; needs genuine character-theoretic input. (Hard, rep-theoretic.)
+  CHARACTERIZED (in w33_paper.tex R2): the quartic package
+  χ(g)=Tr(g|V4)−Tr(g|V3)−Tr(g|V2)+1 matches Monster data; the degree-only
+  recursion fixes only dim V5, NOT the traces Tr(2A|V5),Tr(2B|V5). The exact
+  missing input is the degree-5 McKay–Thompson coefficients of T_2A,T_2B —
+  NOT in the repo (checked: no McKay/Thompson data), external Monster
+  character data required. Do NOT fabricate the coefficients from memory.
 - (7) DYNAMICAL / CONTINUUM ORIGIN — needs an action principle / scaling
   limit / continuum theorem explaining why the universe selects W(3,3) and
   turns the finite package into QFT/GR dynamics. (= "hard open #2"; the

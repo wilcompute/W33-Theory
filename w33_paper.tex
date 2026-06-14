@@ -9617,6 +9617,30 @@ factor $3=q$ is the unique odd prime, $16=\operatorname{rank}_{\mathbb F_2}A$,
 and $10=\Theta=\dim\mathrm{Sp}(4)$.
 \end{proof}
 
+The definite lift is not fixed by linear-algebraic chain data; the natural
+constraint is the substrate's own symmetry. The full automorphism group acts
+canonically on the homology, and that action is as rigid as possible.
+
+\begin{proposition}[Canonical symmetry of the homology]
+\label{prop:canonical-symmetry}
+The automorphism group $\operatorname{Aut}(W(3,3))=\mathrm{PSp}(4,3)$ (order
+$25920$), induced by the symplectic group on the $40$ points, commutes with
+$A_2$ and hence acts on $H\cong\mathbb F_2^{8}$. This action is
+\emph{faithful} (image order exactly $25920$), \emph{irreducible} over
+$\mathbb F_2$, and \emph{preserves the canonical symplectic form} $B$, giving
+a canonical embedding
+\[
+  \mathrm{PSp}(4,3)\;\hookrightarrow\;\mathrm{Sp}(8,\mathbb F_2),
+\]
+so $H$ is canonically an \emph{irreducible} symplectic $\mathrm{PSp}(4,3)$-module
+(witness: \texttt{analysis/bt980\_aut\_action\_on\_homology.py}). Consequently
+the canonical equivariant $E_8$ lift, if it exists, is \emph{not} the standard
+$E_6\subset E_8$ embedding: because $E_8\supset E_6\oplus A_2$ has odd index
+$3$, the $W(E_6)$-action on $E_8/2E_8$ is reducible ($6\oplus2$), whereas the
+substrate action on $H$ is irreducible. A canonical lift must therefore be an
+irreducible $8$-dimensional even-unimodular $\mathrm{PSp}(4,3)$-lattice.
+\end{proposition}
+
 \begin{theorem}[Completeness boundary of the substrate theory]
 \label{thm:completeness-boundary}
 The exact finite kernel of the $W(3,3)$ substrate theory --- the two-qutrit
@@ -9633,14 +9657,27 @@ precisely-classified residuals:
 \begin{enumerate}[label=(R\arabic*)]
   \item \textup{(lattice-theoretic)} the canonical positive-definite
         even-unimodular ($E_8$) lift of the rank-$8$ homology. The mod-$2$
-        datum is canonically $E_8/2E_8$ (symplectic, Wu class $=0$); the
-        definite form is not fixed by the chain and is not the eigenlattice
+        datum is canonically $E_8/2E_8$ (symplectic, Wu class $=0$, with the
+        canonical irreducible $\mathrm{PSp}(4,3)$-symmetry of
+        Proposition~\ref{prop:canonical-symmetry}); the definite form is not
+        fixed by the chain and is not the eigenlattice
         (Proposition~\ref{prop:eigenlattice-obstruction}). A basis-dependent
         unimodular embedding into a vertex $E_8$ gauge exists but is not yet
-        canonical.
+        canonical, and the canonical route cannot be the reducible
+        $E_6\subset E_8$ one. The reduced open question: does
+        $\mathrm{PSp}(4,3)$ preserve an irreducible even-unimodular rank-$8$
+        $\mathbb Z$-lattice (necessarily $E_8$)?
   \item \textup{(representation-theoretic)} the quintic moonshine lift on the
-        anchored Monster classes $2A,2B$, where the degree-only decomposition
-        first fails and genuine character-theoretic input is required.
+        anchored Monster classes $2A,2B$. The quartic package
+        $V_1\oplus\dots\oplus V_4$ closes via
+        $\chi(g)=\operatorname{Tr}(g|V_4)-\operatorname{Tr}(g|V_3)
+        -\operatorname{Tr}(g|V_2)+1$, matching the Monster data; but the
+        \emph{degree-only} recursion fixes only $\dim V_5$, not the individual
+        traces $\operatorname{Tr}(2A|V_5),\operatorname{Tr}(2B|V_5)$. The
+        required input is exactly the degree-$5$ coefficients of the
+        McKay--Thompson series $T_{2A},T_{2B}$ (Monster character data,
+        external to the finite substrate) --- a representation-theoretic, not
+        combinatorial, datum.
   \item \textup{(analytic)} the curved-$4$D continuum / Einstein--Hilbert
         coefficient in the spectral-action scaling limit; the finite spectral
         action $\mathrm{Tr}\,f(D^2)$ and its heat moments

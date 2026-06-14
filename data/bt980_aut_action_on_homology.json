@@ -1,0 +1,10 @@
+{
+  "theorem": "(R1) canonical Aut(W33) action on homology H",
+  "generators": 8,
+  "image_order_on_H": 25920,
+  "preserves_symplectic_B": true,
+  "invertible": true,
+  "irreducible_F2": true,
+  "psp43_order": 25920,
+  "note": "canonical large chain-complex symmetry (BT932 next target); image in Sp(8,2); E6<E8 framing for the definite lift"
+}
