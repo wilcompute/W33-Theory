@@ -1,0 +1,11 @@
+{
+  "theorem": "BT974 direct final paper build path",
+  "status": "direct shell build script committed because workflow YAML updates were blocked by connector filter",
+  "script": "tools/bt974_direct_final_paper_build.sh",
+  "w33_integrators": ["tools/integrate_bt942_selector_appendix_w33.py", "tools/integrate_bt952_exact_selector_w33.py", "tools/integrate_bt957_final_selector_w33.py", "tools/integrate_bt967_selector_rails_w33.py", "tools/integrate_bt973_rail_generation_phase_w33.py"],
+  "holonet_integrators": ["tools/integrate_bt949_holonet_w33_crossref.py", "tools/integrate_bt958_holonet_final_selector_pointer.py", "tools/integrate_bt967_holonet_selector_rails.py"],
+  "papers": ["w33_paper.tex", "photonic_holonet.tex"],
+  "outputs": ["build_artifacts/w33_paper.pdf", "build_artifacts/photonic_holonet.pdf", "build_artifacts/SHA256SUMS.txt"],
+  "boundary": "Script is committed; connector did not run a full checkout compile or fetch artifacts.",
+  "checks": {"T1_script_committed": true, "T2_BT973_integrator_included": true, "T3_both_papers_declared": true, "T4_hash_output_declared": true, "T5_compile_boundary_explicit": true}
+}
