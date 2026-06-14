@@ -1,0 +1,10 @@
+{
+  "theorem": "BT949 Holonet-to-w33 cross-reference",
+  "status": "idempotent Holonet cross-reference integrator committed",
+  "main_narrative_file": "photonic_holonet.tex",
+  "heavy_math_file": "w33_paper.tex",
+  "integrator": "tools/integrate_bt949_holonet_w33_crossref.py",
+  "insert_location": "after \\end{abstract} in photonic_holonet.tex",
+  "crossref_message": "photonic_holonet.tex explains the machine architecture; w33_paper.tex carries the E8/SNF/symplectic-selector algebraic load.",
+  "checks": {"T1_holonet_main_recorded": true, "T2_w33_heavy_math_recorded": true, "T3_integrator_committed": true, "T4_crossref_after_abstract": true, "T5_no_direct_root_overwrite_in_connector": true}
+}
