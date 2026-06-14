@@ -61,13 +61,26 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   integral Cartan pairing and a canonical root-lattice lift have NOT been
   reconstructed directly from the chain complex. (Finite, computational —
   the most tractable genuine open.)
-  ADVANCED by BT924 (`analysis/bt924*integral_e8_lift*`): SNF_Z(A) =
-  diag(1¹⁶,2⁸,8¹⁵,24¹); the E8 rank 8 = #(elementary divisors = 2) =
-  #(2-adic valuation exactly 1) — rank+2-adic location now pinned over Z.
-  Vertex 8-subset certified genuine E8 (even+unimodular+posdef, spectrum =
-  E8 Cartan). OBSTRUCTION: naive support-lift has det 3⁴·5·7·179 ≠ ±1, so
-  the canonical FORM is the residual open core (extract via SNF transforms
-  U A V = S on the eight dᵢ=2 directions). STILL OPEN: the definite form.
+  HEAVILY ADVANCED by the BT924–957 arc (status updated 2026-06-13;
+  notes `analysis/BT92x*.md`, `analysis/BT95x*.md`):
+  - BT924: SNF_Z(A)=diag(1¹⁶,2⁸,8¹⁵,24¹); E8 rank 8 = #(invariant factors
+    =2) = #(2-adic valuation 1) — rank + 2-adic location pinned over Z.
+    Vertex 8-subset certified genuine E8 (even+unimodular+posdef).
+  - BT925/BT950: H carries the canonical symplectic mod-2 form = E8/2E8
+    (four hyperbolic blocks, rank 8); Wu class vanishes. The SNF-transform
+    extractor (the dᵢ=2 sector via columns of U⁻¹, indices 16..23) gives an
+    indefinite, huge divided form — NOT the positive E8 Cartan. So the
+    positive metric is NOT canonical from the chain; it needs a SELECTOR.
+  - (+2-eigenlattice ruled out, `/c/tmp/my_bt926_eigenlattice/`, not yet
+    a committed BT): the natural definite candidate L2={x:Ax=2x} (rank
+    24=8×3) is even/posdef but det 2¹⁶·3¹⁰·5, rootless — NOT E8³.
+  - BT951–957: a selector is constructed by exact support-minimality
+    (support min 60, profile [6,6,6,6,6,8,10,12]) + agreement of the vertex
+    and tetracode metric gauges → a specific E8 metric.
+  STILL OPEN (BT927): the chain shadow (BT924/925) and the vertex/tetracode
+  metric E8 are compatible but NOT YET proved to be ONE canonical lift; the
+  positive-definite even-unimodular identification — and the selector's full
+  transported-tetracode stabilizer orbit (BT957) — remain.
 - (6) MOONSHINE MODULE BOUNDARY — low-order transport exact through the
   quartic package, but the naive quintic V₅ lift fails on anchored classes
   2A, 2B; needs genuine character-theoretic input. (Hard, rep-theoretic.)
