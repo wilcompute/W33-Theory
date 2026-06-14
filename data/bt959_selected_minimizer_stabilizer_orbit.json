@@ -1,0 +1,14 @@
+{
+  "theorem": "BT959 transported S4 orbit/stabilizer of final selector",
+  "transported_group": "tetracode block-permutation quotient S4 via BT956 matrix",
+  "selected_minimizer": [[3,68], [4,42], [38,65], [90,144]],
+  "group_order": 24,
+  "orbit_size": 24,
+  "stabilizer_size": 1,
+  "stabilizer_permutations": [[0,1,2,3]],
+  "orbit_intersection_with_support60_minimizers_count": 1,
+  "orbit_intersection_with_support60_minimizers": [[[3,68], [4,42], [38,65], [90,144]]],
+  "reading": "Under the strongest explicit transported quotient currently available, the final selector is S4-rigid inside the six support-60 minimizers: its S4 orbit has size 24, but only the original selected minimizer remains support-minimal.",
+  "boundary": "This is the transported block-permutation quotient. It does not yet include a fully transported local A2/Weyl glue stabilizer action.",
+  "checks": {"T1_orbit_size_24": true, "T2_stabilizer_trivial": true, "T3_support60_intersection_singleton": true, "T4_selected_in_intersection": true, "T5_full_local_A2_boundary_explicit": true}
+}
