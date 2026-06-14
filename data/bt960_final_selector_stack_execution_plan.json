@@ -1,0 +1,11 @@
+{
+  "theorem": "BT960 final selector stack execution plan",
+  "status": "production execution wrapper committed; full patch/build to be run in a full checkout",
+  "execution_wrapper": "tools/bt960_execute_final_selector_stack.py",
+  "integrators": ["tools/integrate_bt942_selector_appendix_w33.py", "tools/integrate_bt952_exact_selector_w33.py", "tools/integrate_bt957_final_selector_w33.py", "tools/integrate_bt949_holonet_w33_crossref.py", "tools/integrate_bt958_holonet_final_selector_pointer.py"],
+  "papers": ["w33_paper.tex", "photonic_holonet.tex"],
+  "expected_outputs": ["w33_paper.pdf", "photonic_holonet.pdf", "data/bt960_final_selector_stack_execution_manifest.json"],
+  "final_selector": "[(3,68),(4,42),(38,65),(90,144)]",
+  "boundary": "The connector pass commits the production execution wrapper. It does not mutate root paper sources or compile PDFs in this connector environment.",
+  "checks": {"T1_execution_wrapper_committed": true, "T2_all_w33_integrators_included": true, "T3_holonet_integrators_included": true, "T4_pdf_outputs_declared": true, "T5_boundary_explicit": true}
+}
