@@ -1,0 +1,34 @@
+{
+  "theorem": "BT989 exact edgewise top-density constants for CP2_9/K3_16",
+  "retired_barycentric_constants": ["120/19", "860/19"],
+  "retirement_reason": "BT983: barycentric tower is not shape-regular, so its density constants are not valid for the CMS/DP/FEEC R3 route.",
+  "edgewise_constants_currently_justified": {
+    "dimension": 4,
+    "k": 2,
+    "top_simplex_multiplier": 16,
+    "mesh_width_scale_per_step": "1/2",
+    "K3_to_CP2_top_count_ratio": {"exact": "8", "float": 8.0},
+    "K3_to_CP2_chi_ratio": {"exact": "8", "float": 8.0}
+  },
+  "seeds": {
+    "CP2_9": {
+      "f_vector": [9, 36, 84, 90, 36],
+      "chi": 3,
+      "edgewise_multiplier": 16,
+      "barycentric_multiplier": 120,
+      "top_counts_edgewise": [36, 576, 9216, 147456, 2359296, 37748736, 603979776],
+      "top_counts_barycentric": [36, 4320, 518400, 62208000, 7464960000, 895795200000, 107495424000000],
+      "edgewise_level1_vertex_count": 45
+    },
+    "K3_16": {
+      "f_vector": [16, 120, 560, 720, 288],
+      "chi": 24,
+      "edgewise_multiplier": 16,
+      "barycentric_multiplier": 120,
+      "top_counts_edgewise": [288, 4608, 73728, 1179648, 18874368, 301989888, 4831838208],
+      "top_counts_barycentric": [288, 34560, 4147200, 497664000, 59719680000, 7166361600000, 859963392000000],
+      "edgewise_level1_vertex_count": 136
+    }
+  },
+  "open_lower_incidence_constants": "Full edgewise chain/trace density constants require the local 4-simplex edgewise facet template; this file refuses to fake them."
+}
