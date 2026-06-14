@@ -1,0 +1,21 @@
+\subsection*{BT984: a first fat-tower spectral convergence check}
+
+BT983 replaces the non-shape-regular barycentric tower by the edgewise
+(Freudenthal--Kuhn) tower.  BT984 tests the spectral side on a seed with known
+continuum spectrum: the unit square with Dirichlet boundary, where
+\[
+  \lambda_{m,n}=\pi^2(m^2+n^2),\qquad m,n\ge 1.
+\]
+Using the Whitney--0/P1 finite-element generalized eigenproblem
+\(Ku=\lambda Mu\), the edgewise tower keeps the minimum angle fixed at
+\(45^\circ\) and drives the first eigenvalue
+\[
+  22.86577594,\ 20.50554490,\ 19.92978984,\ 19.78679229,\ 19.75110084
+\]
+toward \(2\pi^2=19.739208802\), with final relative error
+\(6.03\times10^{-4}\) at level \(6\).  The barycentric control still gives
+plausible low eigenvalues at small finite levels, but its minimum angle
+collapses from \(45^\circ\) to \(1.8003^\circ\) by level \(4\), so it is not a
+valid theorem-carrier for CMS/Dodziuk--Patodi/FEEC.  Witness:
+\texttt{analysis/bt984\_edgewise\_laplacian\_convergence.py} and
+\texttt{data/bt984\_edgewise\_laplacian\_convergence.json}.
