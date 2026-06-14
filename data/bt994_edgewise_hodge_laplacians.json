@@ -1,0 +1,39 @@
+{
+  "theorem": "BT994 edgewise level-1 Hodge/Laplacian operators",
+  "laplacian_formula": "L_k = d_k^T d_k + d_{k+1} d_{k+1}^T",
+  "profiles": [
+    {
+      "name": "CP2_9",
+      "chain_dimensions": [45, 414, 1236, 1440, 576],
+      "boundary_ranks": [44, 370, 865, 575],
+      "boundary_nnz": [828, 3708, 5760, 2880],
+      "laplacian_shapes": [[45, 45], [414, 414], [1236, 1236], [1440, 1440], [576, 576]],
+      "laplacian_nnz": [873, 9306, 15846, 12006, 3456],
+      "laplacian_ranks": [44, 414, 1235, 1440, 575],
+      "harmonic_dimensions": [1, 0, 1, 0, 1],
+      "total_harmonic_dimension": 3,
+      "euler_characteristic": 3,
+      "low_spectrum_probe": {
+        "degree_0": [-8.7e-15, 6.94102198, 6.95658186, 7.02677079, 7.04032713],
+        "degree_1": [1.73122153, 1.82237144, 1.92122272, 1.97886485, 2.0651122],
+        "degree_2": [-1.5e-15, 0.57458878, 0.61098425, 0.63620097, 0.65000931],
+        "degree_3": [0.32086539, 0.34457395, 0.34990431, 0.35734548, 0.35966705],
+        "degree_4": [3.97e-16, 0.32086539, 0.34457395, 0.34990431, 0.35734548]
+      }
+    },
+    {
+      "name": "K3_16",
+      "chain_dimensions": [136, 2640, 9440, 11520, 4608],
+      "boundary_ranks": [135, 2505, 6913, 4607],
+      "boundary_nnz": [5280, 28320, 46080, 23040],
+      "laplacian_shapes": [[136, 136], [2640, 2640], [9440, 9440], [11520, 11520], [4608, 4608]],
+      "laplacian_nnz": [5416, 165916, 182368, 110870, 27648],
+      "laplacian_ranks": [135, 2640, 9418, 11520, 4607],
+      "harmonic_dimensions": [1, 0, 22, 0, 1],
+      "total_harmonic_dimension": 24,
+      "euler_characteristic": 24,
+      "low_spectrum_probe_boundary": "degree-0 and degree-1 cheap probes succeed; middle-degree L2 is large and should use stochastic/Chebyshev estimators rather than naive eigsh."
+    }
+  ],
+  "reading": "The level-1 edgewise CP2_9/K3_16 complexes now carry sparse Hodge Laplacian certificates; nullities match the expected Betti profiles."
+}
