@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1019 K3 middle-rank CI smoke workflow",
+  "workflow": ".github/workflows/k3-middle-rank-smoke.yml",
+  "scripts": [
+    "analysis/bt1015_f2_bitset_rank_core.py",
+    "analysis/bt1015_k3_middle_stream_contracts.py",
+    "analysis/bt1016_k3_middle_rank_smoke_test.py",
+    "analysis/bt1018_k3_degree2_row_shard.py --start 0 --count 256"
+  ],
+  "artifacts": [
+    "data/bt1015_k3_middle_stream_contracts.json",
+    "data/bt1016_k3_middle_rank_smoke_test.json",
+    "data/bt1018_k3_degree2_row_shard.json"
+  ],
+  "reading": "The K3 middle-rank CI layer now has a cheap smoke workflow before any full d2/d3 rank job is attempted."
+}
