@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1010 K3_16 64-probe all-degree heat CI driver",
+  "workflow": ".github/workflows/r3-k3-long-heat.yml",
+  "requested_probes_per_degree": 64,
+  "random_seed": 1010,
+  "baseline_checkpoint": "BT1007 16-probe checkpoint",
+  "target": "all five K3_16 level-1 Hodge degrees; alternating supertrace target chi=24",
+  "production_command": "python analysis/bt1010_k3_64probe_heat_driver.py --probes 64 --seed 1010",
+  "boundary": "The long heat job is separated from the cheap R3 smoke workflow. The flexible input version was blocked by the connector, so the committed workflow is fixed to 64 probes and seed 1010."
+}
