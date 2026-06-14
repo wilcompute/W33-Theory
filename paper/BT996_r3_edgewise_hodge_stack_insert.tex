@@ -1,0 +1,48 @@
+\subsection*{BT996: the edgewise R3 Hodge stack}
+
+BT991--BT995 upgrade the corrected R3 route from a fat-tower principle to an
+actual level-1 Hodge stack on the real CP\(^2_9\) and K3\(_{16}\) seeds.  The
+local \(k=2,d=4\) Freudenthal--Kuhn template has 15 vertices, 16 top
+4-simplices, f-vector
+\[
+  (15,55,85,60,16),
+\]
+Euler characteristic 1, 40 boundary tetrahedra and 20 internal tetrahedra.  It
+is therefore a genuine subdivided 4-ball and supplies the missing local template
+for the edgewise tower.
+
+Applying this template to the explicit CP\(^2_9\)/K3\(_{16}\) facets gives true
+level-1 chain data:
+\[
+  f_1(\mathrm{CP}^2_9)=(45,414,1236,1440,576),
+\]
+with mod-2 boundary ranks \((44,370,865,575)\) and Betti profile
+\((1,0,1,0,1)\), and
+\[
+  f_1(K3_{16})=(136,2640,9440,11520,4608),
+\]
+with ranks \((135,2505,6913,4607)\) and Betti profile
+\((1,0,22,0,1)\).  The Hodge Laplacians
+\(L_k=d_k^Td_k+d_{k+1}d_{k+1}^T\) therefore have harmonic dimensions exactly
+matching the original topology.
+
+The edgewise density layer is now carrier-exact.  If rows are old carrier
+dimensions and columns are new face dimensions, the subdivision matrix is
+\[
+\begin{pmatrix}
+1&0&0&0&0\\
+1&2&0&0&0\\
+0&3&4&0&0\\
+0&1&8&8&0\\
+0&0&5&20&16
+\end{pmatrix},
+\qquad
+f'_{j}=\sum_i f_i L_{ij}.
+\]
+This replaces the old barycentric \(120/19,860/19\) layer for R3.  Finally, the
+real level-1 complexes satisfy the exact heat-supertrace identity
+\[
+  \sum_k(-1)^k\operatorname{Tr}(e^{-tL_k})=\chi
+\]
+with \(\chi=3\) for CP\(^2_9\) and \(\chi=24\) for K3\(_{16}\), and large-time
+limits given by the harmonic totals 3 and 24.
