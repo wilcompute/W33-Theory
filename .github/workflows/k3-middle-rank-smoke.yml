@@ -8,6 +8,7 @@ on:
 jobs:
   k3-middle-rank-smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -17,12 +18,22 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy
+
       - name: Run rank core smoke
         run: |
           python analysis/bt1015_f2_bitset_rank_core.py
           python analysis/bt1015_k3_middle_stream_contracts.py
           python analysis/bt1016_k3_middle_rank_smoke_test.py
           python analysis/bt1018_k3_degree2_row_shard.py --start 0 --count 256
+
+      - name: Run bounded real-incidence shards
+        run: |
+          python analysis/bt1021_k3_real_degree2_incidence_shard.py --start 0 --count 8
+          python analysis/bt1022_k3_real_degree3_incidence_shard.py --start 0 --count 8
 
       - name: Upload rank smoke artifacts
         uses: actions/upload-artifact@v4
@@ -32,4 +43,6 @@ jobs:
             data/bt1015_k3_middle_stream_contracts.json
             data/bt1016_k3_middle_rank_smoke_test.json
             data/bt1018_k3_degree2_row_shard.json
+            data/bt1021_k3_real_degree2_incidence_shard.json
+            data/bt1022_k3_real_degree3_incidence_shard.json
           if-no-files-found: error
