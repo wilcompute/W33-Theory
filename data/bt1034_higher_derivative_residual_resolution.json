@@ -1,0 +1,70 @@
+{
+  "theorem": "(R3) higher-derivative residual: naive Regge diverges, higher-order Regge / distributional curvature resolves it",
+  "series": [
+    {
+      "level": 0,
+      "verts": 6,
+      "sum_deficit": 12.566370614359169,
+      "rel_err_4pi": 2.8271597168564594e-16,
+      "smeared_quad_intK2": 22.7928750310562,
+      "quad_rel_err": 0.8137993642342161
+    },
+    {
+      "level": 1,
+      "verts": 18,
+      "sum_deficit": 12.566370614359164,
+      "rel_err_4pi": 7.067899292141149e-16,
+      "smeared_quad_intK2": 15.455022774007828,
+      "quad_rel_err": 0.2298716350405812
+    },
+    {
+      "level": 2,
+      "verts": 66,
+      "sum_deficit": 12.566370614359142,
+      "rel_err_4pi": 2.4030857593279904e-15,
+      "smeared_quad_intK2": 13.341757688341193,
+      "quad_rel_err": 0.06170334281689988
+    },
+    {
+      "level": 3,
+      "verts": 258,
+      "sum_deficit": 12.566370614359084,
+      "rel_err_4pi": 7.067899292141148e-15,
+      "smeared_quad_intK2": 12.764079053953317,
+      "quad_rel_err": 0.01573313772619676
+    },
+    {
+      "level": 4,
+      "verts": 1026,
+      "sum_deficit": 12.566370614358876,
+      "rel_err_4pi": 2.3606783635751436e-14,
+      "smeared_quad_intK2": 12.616042498062514,
+      "quad_rel_err": 0.0039527629120362905
+    },
+    {
+      "level": 5,
+      "verts": 4098,
+      "sum_deficit": 12.566370614358119,
+      "rel_err_4pi": 8.382528560479403e-14,
+      "smeared_quad_intK2": 12.578803756816392,
+      "quad_rel_err": 0.0009893980401160627
+    },
+    {
+      "level": 6,
+      "verts": 16386,
+      "sum_deficit": 12.56637061435596,
+      "rel_err_4pi": 2.5557523840382395e-13,
+      "smeared_quad_intK2": 12.569479840257785,
+      "quad_rel_err": 0.00024742433547672533
+    }
+  ],
+  "smooth_int_R2_unit_sphere": 50.26548245743669,
+  "linear_converges": true,
+  "naive_quadratic_is_symptom": true,
+  "resolution": "higher-order (piecewise-smooth) Regge metrics + lifted/distributional full Riemann curvature; convergence of curvature measures proved 2024-2026",
+  "sources": [
+    "arXiv:2401.12734 (lifted distributional Gauss curvature from Regge elements, 2024)",
+    "arXiv:2510.25027 (On the Curvature of Regge Metrics, 2025)",
+    "Regge-calculus higher-derivative reviews (int R^2 infinite for piecewise-flat)"
+  ]
+}

@@ -163,6 +163,20 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   Tools: arXiv:2504.11715 (paths of metrics), 2005.08544 (operator-system
   truncations). Also note BT1030: K3 level-2 ranks are topologically forced;
   refocus compute on the massive-sector a_2 ~ (1/6)int R, the EH coefficient.
+  MILESTONE (BT1032-1034): R3's gravity term now has TWO routes with honest
+  scope. (1) GEOMETRIC/Regge (BT1033): every Seeley-DeWitt coeff is a local
+  curvature integral (Gilkey), so the full physical spectral action converges
+  TERM-BY-TERM on the fat tower - cosmological/EH/YM/Higgs/Gauss-Bonnet via
+  CMS curvature + lattice gauge + exact W33 moments {440,1920,16320}; EH
+  verified BT986. The higher-derivative a_2 residual (int R^2/int C^2, =inf for
+  strict piecewise-flat) is RESOLVED by higher-order (piecewise-smooth) Regge /
+  distributional curvature (BT1034; convergence theorems 2024-2026,
+  arXiv:2401.12734, 2510.25027) - smeared int K^2 converges at O(h^2) (BT1034).
+  (2) SPECTRAL/propinquity (BT1031) closes the action VALUE; the asymptotic
+  COEFFICIENT needs the n<->Lambda interchange (BT1032), bypassed by the
+  geometric route. NET: R3's analytic core is dissolved into established+recent
+  convergence theorems; what remains is APPLICATION (higher-order edgewise K3
+  run), not new analysis.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
