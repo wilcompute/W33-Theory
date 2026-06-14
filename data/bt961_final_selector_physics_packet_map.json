@@ -1,0 +1,19 @@
+{
+  "theorem": "BT961 final selector physics/packet gauge map",
+  "status": "canonical downstream gauge artifact; no new physics prediction claimed",
+  "final_selector": [[3,68], [4,42], [38,65], [90,144]],
+  "support_sum": 60,
+  "rail_support_sums": [12, 12, 14, 22],
+  "rail_xor_masks": [71, 46, 91, 234],
+  "rail_table": [
+    {"rail": 0, "pair": [3,68], "e_bits": [0,1], "f_bits": [2,6], "pair_support_sum": 12, "xor_mask": 71, "xor_bits": [0,1,2,6]},
+    {"rail": 1, "pair": [4,42], "e_bits": [2], "f_bits": [1,3,5], "pair_support_sum": 12, "xor_mask": 46, "xor_bits": [1,2,3,5]},
+    {"rail": 2, "pair": [38,65], "e_bits": [1,2,5], "f_bits": [0,6], "pair_support_sum": 14, "xor_mask": 91, "xor_bits": [0,1,3,4,6]},
+    {"rail": 3, "pair": [90,144], "e_bits": [1,3,4,6], "f_bits": [4,7], "pair_support_sum": 22, "xor_mask": 234, "xor_bits": [1,3,5,6,7]}
+  ],
+  "generation_split_handle": "Use the four hyperbolic rails as selector-fixed coordinates for revisiting the 27+27+27 generation split.",
+  "phase_mixing_handle": "Score CKM/PMNS phase candidates by rail assignment and rail-pair support rather than by arbitrary symplectic gauges.",
+  "holonet_packet_handle": "Use the four rails as selector-fixed E8-compatible packet lanes.",
+  "next_tests": ["Recompute 27+27+27 generation labels in this rail basis", "Score CKM/PMNS candidates by selector rail support and xor slots", "Attach the four rails to the Holonet packet ABI and test durable packet alignment"],
+  "checks": {"T1_selector_recorded": true, "T2_support_sum_60": true, "T3_four_rails_recorded": true, "T4_no_new_prediction_overclaimed": true, "T5_downstream_tests_stated": true}
+}
