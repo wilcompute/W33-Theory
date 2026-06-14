@@ -1,0 +1,11 @@
+{
+  "theorem": "BT975 full D8 lane partition failure modes summary",
+  "script": "analysis/bt975_full_d8_failure_modes.py",
+  "current_partition": "light [0,1] versus cache [2,3]",
+  "d8_order": 8,
+  "current_partition_preserving_order": 4,
+  "current_partition_breaking_order": 4,
+  "no_2_plus_2_partition_preserved_by_full_D8": true,
+  "reading": "The present light/cache split is preserved by a four-element subgroup and broken by the other four square symmetries. No nontrivial 2+2 partition is invariant under full transitive D8.",
+  "checks": {"T1_preserving_order_4": true, "T2_breaking_order_4": true, "T3_no_full_D8_2plus2_partition": true, "T4_all_partitions_classified_in_script": true, "T5_boundary_explicit": true}
+}
