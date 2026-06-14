@@ -2627,6 +2627,51 @@ corpus corrections & bt818, bt823, bt824\\
 \end{tabular}
 \end{center}
 
+\section{Architecture Completeness and the Three Physical Residuals}
+\label{sec:architecture-completeness}
+
+The holonet machine is now specified end to end: the $40$-point substrate
+register and its $W(3,3)$ commuting-projector Hamiltonian; the $[[240,81,4]]_3$
+Steinberg code as the native error-correcting register; the local gate set
+and transversal/holonomy operations; the gauge connection (flat along the
+$240$ edges, curved on the matter graph with binary-tetrahedral $2T$
+holonomy) as the physical wiring of multi-qubit interaction; and the discrete
+dynamics, in which the physical on-shell states are exactly the harmonic
+forms $\ker D$ (vacuum $\oplus$ Steinberg matter $\oplus$ line module
+$=1\oplus81\oplus40$) --- the least-action ground space of the finite
+spectral action $\mathrm{Tr}\,f(D^2)$, whose value reproduces the
+spanning-tree gravity invariant. \emph{As a universal computer the
+architecture is complete}: universality, the code, the gate set, and the
+runtime compiler are established (cf.\ the substrate ledger above).
+
+What remains open is not computational but \emph{physical}, and reduces to the
+three residuals of the master manuscript's completeness boundary
+(\texttt{w33\_paper.tex}, Thm.\ on the completeness boundary):
+\begin{itemize}
+  \item \textbf{(R1) the gauge-lattice embedding} --- the canonical
+        positive-definite $E_8$ lift of the rank-$8$ homology. The machine's
+        symmetry register carries the canonical symplectic $E_8/2E_8$ datum
+        mod $2$; the definite $E_8$ metric is realized by a basis-dependent
+        unimodular embedding (a \emph{selector}), but not yet canonically
+        from the chain --- and provably not from the $r=2$ eigenlattice.
+  \item \textbf{(R2) the symmetry ceiling} --- the quintic moonshine lift
+        ($2A,2B$): how far the substrate's symmetry register extends toward
+        the Monster before genuine character-theoretic input is required.
+  \item \textbf{(R3) the emergent-spacetime limit} --- the curved-$4$D
+        continuum / Einstein--Hilbert coefficient: the scaling limit in which
+        the finite holonet network is seen as a smooth spacetime. The finite
+        spectral action and its heat moments $\{1920,16320,186240\}$ are
+        exact; the continuum theorem is the one genuinely analytic open.
+\end{itemize}
+None of the three is a gap in the machine's \emph{operation} --- the holonet
+runs, corrects, and computes universally as specified. They are the three
+places where the finite architecture meets continuum physics, each
+classified (R1, R3 archimedean; R2 character-theoretic) rather than open in
+an unbounded way. This is the precise sense in which the architecture is
+complete: a finite, exact, universal machine whose remaining unknowns are a
+single lattice embedding, a single representation-theoretic ceiling, and a
+single analytic scaling limit.
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project

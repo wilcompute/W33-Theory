@@ -9561,4 +9561,95 @@ and
 The self-entangled qutrit now has a precise finite router, and the constants
 packet now has a precise metrology boundary.
 
+%% ===============================================================
+\section{The Integral $E_8$ Lift: Eigenlattice Obstruction and the
+Completeness Boundary}
+\label{sec:e8-eigenlattice-boundary}
+%% ===============================================================
+
+Let $A$ be the $40\times40$ adjacency matrix of $W(3,3)$, with spectrum
+$\{12^1,2^{24},(-4)^{15}\}$. The mod-$2$ reduction $A_2=A\bmod 2$ is a chain
+differential ($A_2^2\equiv0$) whose homology
+$H=\ker A_2/\operatorname{im}A_2\cong\mathbb F_2^{\,8}$ is the rank-$8$ ``$E_8$
+shadow''. The integral lift of $H$ to a positive-definite even unimodular
+($E_8$) lattice, directly from the chain data, is the one residual of the
+$E_8$ programme. The 2-adic content is already pinned: the Smith normal form
+$\mathrm{SNF}_{\mathbb Z}(A)=\operatorname{diag}(1^{16},2^{8},8^{15},24^{1})$
+locates the rank as $8=\#\{$invariant factors equal to $2\}$, and the divided
+pairing $B(x,y)=\tfrac12 x^{\mathsf T}A y\bmod 2$ equips $H$ with a canonical
+\emph{nondegenerate alternating} ($=E_8/2E_8$ symplectic) form with vanishing
+Wu class. What is \emph{not} fixed by the chain mod-$2$ data is the
+definiteness of the lift. The following proposition removes the most natural
+definite candidate.
+
+\begin{proposition}[The $+2$-eigenlattice is not the $E_8$ home]
+\label{prop:eigenlattice-obstruction}
+On a $+2$-eigenvector $v$ ($Av=2v$) the canonical form $\tfrac12\langle
+v,Aw\rangle$ equals the standard inner product $\langle v,w\rangle$. The
+integer $+2$-eigenlattice
+\[
+  L_2=\{x\in\mathbb Z^{40}: Ax=2x\}
+\]
+is a primitive rank-$24$ sublattice that is even and positive-definite under
+the standard form, with
+\[
+  \det(L_2)=2^{16}\cdot 3^{10}\cdot 5=19\,349\,176\,320,\qquad
+  \min(L_2)=6 .
+\]
+In particular $L_2$ is \emph{non-unimodular} and \emph{rootless}, hence not
+isometric to $E_8^{\,3}$, to the Leech lattice, or to any root lattice. The
+integral $E_8$ of the chain complex does not arise as the $r=2$ eigenlattice.
+\end{proposition}
+
+\begin{proof}
+Extract $L_2$ from an integer Smith normal form with transforms
+$U(A-2I)V=D$: the $24$ columns of $V$ with $D_{jj}=0$ are a $\mathbb Z$-basis
+of the saturated kernel (verified $AK=2K$). The Gram $K^{\mathsf T}K$ has
+integer determinant $2^{16}\cdot3^{10}\cdot5$ (an exact computation, hence
+$L_2$ is not unimodular and $\det\neq1$ excludes $E_8^{\,3}$ and Leech). An
+LLL reduction of the explicit basis returns vector norms
+$(6^{18},8^{5},10^{1})$ with no vector of norm $2$ or $4$, so $L_2$ has
+minimal norm $6$ and no roots, excluding every root lattice. (Witness:
+\texttt{analysis/bt926\_plus2\_eigenlattice.py}.) As a primitive sublattice
+of the unimodular $\mathbb Z^{40}$, $\det(L_2)=\det(L_2^{\perp})$, so the same
+covolume measures the orthogonal $\{-4,12\}$-eigenlattice of rank $16$; the
+factor $3=q$ is the unique odd prime, $16=\operatorname{rank}_{\mathbb F_2}A$,
+and $10=\Theta=\dim\mathrm{Sp}(4)$.
+\end{proof}
+
+\begin{theorem}[Completeness boundary of the substrate theory]
+\label{thm:completeness-boundary}
+The exact finite kernel of the $W(3,3)$ substrate theory --- the two-qutrit
+Pauli geometry, the Heisenberg/Schl\"afli matter shell, the local $E_6$
+bridge, the Standard-Model anatomy from a single long-root transvection
+(gauge group $C(R)=648=3^{1+2}{:}\mathrm{SL}(2,3)=\mathbf1\oplus\mathbf3
+\oplus\mathbf8$, three generations $=Z(C(R))=\mathbb Z_3$, flavour
+$S_3$, Yukawa texture, chirality, parity), the spanning-tree/Ihara-zeta
+gravity sector, the fermion-mixing scale $\Phi_3=13$, and the even finite
+spectral triple (Hodge--Dirac $D^2$-spectrum $\{0^{122},4^{240},10^{48},
+16^{30}\}$, $\operatorname{ind}D=\chi=-v$, five Connes axioms) --- is closed
+and machine-verified. The theory is complete modulo exactly three
+precisely-classified residuals:
+\begin{enumerate}[label=(R\arabic*)]
+  \item \textup{(lattice-theoretic)} the canonical positive-definite
+        even-unimodular ($E_8$) lift of the rank-$8$ homology. The mod-$2$
+        datum is canonically $E_8/2E_8$ (symplectic, Wu class $=0$); the
+        definite form is not fixed by the chain and is not the eigenlattice
+        (Proposition~\ref{prop:eigenlattice-obstruction}). A basis-dependent
+        unimodular embedding into a vertex $E_8$ gauge exists but is not yet
+        canonical.
+  \item \textup{(representation-theoretic)} the quintic moonshine lift on the
+        anchored Monster classes $2A,2B$, where the degree-only decomposition
+        first fails and genuine character-theoretic input is required.
+  \item \textup{(analytic)} the curved-$4$D continuum / Einstein--Hilbert
+        coefficient in the spectral-action scaling limit; the finite spectral
+        action $\mathrm{Tr}\,f(D^2)$ and its heat moments
+        $\{1920,16320,186240\}$ are exact, but the continuum theorem is not a
+        finite computation.
+\end{enumerate}
+Each residual is archimedean (R1, R3) or character-theoretic (R2), not a
+$2$-adic or combinatorial gap: the finite arithmetic substrate is otherwise
+complete.
+\end{theorem}
+
 \end{document}

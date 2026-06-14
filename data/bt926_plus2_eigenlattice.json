@@ -1,0 +1,41 @@
+{
+  "theorem": "BT926 +2-eigenlattice of W(3,3)",
+  "rank": 24,
+  "det": 19349176320,
+  "det_factorization": {
+    "2": 16,
+    "3": 10,
+    "5": 1
+  },
+  "even": true,
+  "posdef": true,
+  "min_reduced_norm": 6,
+  "reduced_norms": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    10
+  ],
+  "unimodular": false,
+  "identification": "even posdef rank-24, NON-unimodular (det {2: 16, 3: 10, 5: 1}); NOT E8^3, NOT a root lattice => the +2-eigenlattice is NOT the definite E8 home"
+}
