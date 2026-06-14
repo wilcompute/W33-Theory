@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1009 K3_16 level-2 middle-rank block eliminator",
+  "level": 2,
+  "f_vector": [2776, 45120, 152960, 184320, 73728],
+  "middle_maps": {
+    "d2": {"shape_rows_low_cols_high": [45120, 152960], "nnz": 458880, "target_rank": 42345},
+    "d3": {"shape_rows_low_cols_high": [152960, 184320], "nnz": 737280, "target_rank": 110593}
+  },
+  "algorithm": "stream boundary rows as Python integer bitsets and reduce by sparse mod-2 Gaussian elimination",
+  "run_command_d2": "python analysis/bt1009_k3_level2_middle_rank_block_eliminator.py --degree 2 --run",
+  "run_command_d3": "python analysis/bt1009_k3_level2_middle_rank_block_eliminator.py --degree 3 --run",
+  "boundary": "The exact eliminator is implemented; the full middle-rank job is intentionally not run in this connector session because it needs checkout-scale wall-clock budget."
+}
