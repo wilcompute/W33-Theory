@@ -1,0 +1,14 @@
+{
+  "theorem": "BT952 exact E8 selector theorem w33 patch",
+  "status": "w33 theorem insert and integrator committed; support-76 candidate superseded by exact support-60 theorem",
+  "theorem_insert": "paper/BT952_exact_e8_selector_theorem_insert.tex",
+  "integrator": "tools/integrate_bt952_exact_selector_w33.py",
+  "target": "w33_paper.tex",
+  "support_minimum": 60,
+  "minimizer_count": 6,
+  "minimizer_profile": [6, 6, 6, 6, 6, 8, 10, 12],
+  "common_pair_across_minimizers": [90, 144],
+  "pairwise_intersection_matrix": [[4,3,1,2,2,1],[3,4,1,2,2,1],[1,1,4,2,2,2],[2,2,2,4,3,2],[2,2,2,3,4,3],[1,1,2,2,3,4]],
+  "orbit_boundary": "Full quotient under the transported tetracode stabilizer is not asserted yet. The new finite target is the six support-60 minimizers, not the old support-76 set.",
+  "checks": {"T1_theorem_insert_committed": true, "T2_integrator_committed": true, "T3_support_60_recorded": true, "T4_old_76_superseded": true, "T5_full_stabilizer_quotient_not_overclaimed": true}
+}
