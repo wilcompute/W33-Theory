@@ -113,10 +113,19 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   The named external input is now in hand; remaining = assemble the V5
   Monster-module decomposition from these traces. (Computed, not fabricated;
   12/12 anchored checks pass.)
-- (7) DYNAMICAL / CONTINUUM ORIGIN — needs an action principle / scaling
-  limit / continuum theorem explaining why the universe selects W(3,3) and
-  turns the finite package into QFT/GR dynamics. (= "hard open #2"; the
-  curved-4D Einstein–Hilbert coefficient. Pure analysis, not a finite calc.)
+- (7) DYNAMICAL / CONTINUUM ORIGIN — THE SOLE GENUINE OPEN (R1/R2 now
+  closed/supplied above). FINITE HALF DONE (w33_paper.tex Prop "The
+  gravitational sector is finite; the residual is analytic"): in the
+  almost-commutative product M^4 x F (F = W33 finite spectral triple), the
+  Chamseddine-Connes couplings are exact W33 invariants — cosmological & EH
+  ∝ dim H_F = 440; Yang-Mills/Higgs ∝ Tr D_F^2,Tr D_F^4 = 1920,16320. The AC
+  bridge to curved-4D seeds (CP2_9 sig +1, K3_16 sig -16) + barycentric
+  towers (modes 1,6,120; chain density→120/19, first moment→860/19) is
+  explicit in the corpus. IRREDUCIBLE RESIDUAL: prove the refinement-tower
+  spectral action converges to the continuum Einstein-Hilbert action — a
+  discrete→continuum LIMIT THEOREM, genuinely analytic, NOT a finite
+  computation (so NOT closable by the methods that cracked R1/R2). Do not
+  fabricate a continuum proof.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The

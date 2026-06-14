@@ -9684,6 +9684,32 @@ This supplies exactly the character-theoretic input the quintic lift (R2)
 required. (Witness: \texttt{analysis/bt982\_mckay\_thompson\_v5.py}.)
 \end{proposition}
 
+The third residual is of a fundamentally different character: its finite half
+is entirely determined, but its closure is an analytic limit rather than a
+finite computation.
+
+\begin{proposition}[The gravitational sector is finite; the residual is analytic]
+\label{prop:r3-residual}
+Form the almost-commutative product $M^4\times F$ with $F$ the finite $W(3,3)$
+spectral triple ($\dim H_F=440=40+240+160$, and $D_F^2$-spectrum
+$\{0^{122},4^{240},10^{48},16^{30}\}$ giving $\operatorname{Tr}D_F^2=1920$,
+$\operatorname{Tr}D_F^4=16320$). The Chamseddine--Connes spectral action
+$\operatorname{Tr}f(D^2/\Lambda^2)$, with $D^2=D_M^2\otimes1+1\otimes D_F^2$,
+expands as $S\sim \Lambda^4 f_4\,a_0+\Lambda^2 f_2\,a_2+f_0\,a_4+\cdots$ in
+which the cosmological and Einstein--Hilbert ($\int R\sqrt g$) coefficients are
+set by $\operatorname{Tr}1_F=\dim H_F=440$, and the Yang--Mills/Higgs couplings
+by $\{\operatorname{Tr}D_F^2,\operatorname{Tr}D_F^4\}=\{1920,16320\}$. Thus
+\emph{every finite ingredient of the gravity-plus-matter action is an exact
+$W(3,3)$ invariant}. What remains (R3) is the purely \emph{analytic} statement
+that the curved $M^4$ asymptotics --- realized on the minimal-triangulation
+seeds $\mathrm{CP}^2_9,\,K3_{16}$ and their barycentric refinement towers
+(surviving modes $1,6,120$; chain density $\to 120/19$, first spectral moment
+$\to 860/19$) --- converge to the continuum Einstein--Hilbert action. This is a
+discrete-to-continuum limit theorem, not a finite computation: it is a residual
+of a different kind from R1 and R2, both of which were closed by finite
+computations above.
+\end{proposition}
+
 \begin{theorem}[Completeness boundary of the substrate theory]
 \label{thm:completeness-boundary}
 The exact finite kernel of the $W(3,3)$ substrate theory --- the two-qutrit
@@ -9730,10 +9756,15 @@ continuum limit) as the sole genuine open frontier:
         required; what remains is assembling the $V_5$ Monster-module
         decomposition from them.
   \item \textup{(analytic)} the curved-$4$D continuum / Einstein--Hilbert
-        coefficient in the spectral-action scaling limit; the finite spectral
-        action $\mathrm{Tr}\,f(D^2)$ and its heat moments
-        $\{1920,16320,186240\}$ are exact, but the continuum theorem is not a
-        finite computation.
+        coefficient in the spectral-action scaling limit. By
+        Proposition~\ref{prop:r3-residual} every \emph{finite} ingredient is an
+        exact $W(3,3)$ invariant (gravity coefficient $\dim H_F=440$; matter
+        couplings $\{1920,16320\}$), and the almost-commutative bridge to
+        curved $4$D seeds ($\mathrm{CP}^2_9,K3_{16}$) is explicit; the sole
+        open is the analytic convergence of the refinement-tower spectral
+        action to the continuum Einstein--Hilbert action --- a
+        discrete-to-continuum limit theorem, not a finite computation, and the
+        one residual not closable by the methods that settled R1 and R2.
 \end{enumerate}
 With R1 resolved (the canonical lift is $E_8$) and R2's datum supplied, the
 substrate theory is complete down to a \emph{single} genuine open frontier:
