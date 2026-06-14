@@ -1,0 +1,16 @@
+{
+  "theorem": "BT966 light-rail degeneracy breaker",
+  "status": "ABI ordering fixed; structural/representation degeneracy remains open",
+  "light_rails": [
+    {"rail":0, "pair":[3,68], "support_sum":12, "xor_mask":71, "xor_weight":4, "phase_score":16, "role":"schedule", "prefix":"10"},
+    {"rail":1, "pair":[4,42], "support_sum":12, "xor_mask":46, "xor_weight":4, "phase_score":16, "role":"mirror", "prefix":"0"}
+  ],
+  "phase_support_tie": true,
+  "tied_quantities": ["support_sum", "xor_weight", "phase_score"],
+  "abi_tie_break_rule": "order tied light rails by ascending xor_mask, then assign shorter prefix first",
+  "abi_order": [1,0],
+  "abi_assignment": [{"rail":1, "prefix":"0", "role":"mirror", "xor_mask":46}, {"rail":0, "prefix":"10", "role":"schedule", "xor_mask":71}],
+  "reading": "Rail 1 precedes rail 0 for the packet ABI because xor_mask 46 < 71, giving mirror/prefix-0 to rail 1 and schedule/prefix-10 to rail 0. This breaks ABI ordering, not the deeper representation-theoretic doublet unless later dynamics distinguish them.",
+  "next_dynamic_test": "Use executable mirror/schedule lane-action maps, once committed, to test whether the light rails remain a true doublet or split dynamically.",
+  "checks": {"T1_phase_support_tie_detected": true, "T2_xor_breaks_tie": true, "T3_shorter_prefix_assigned_to_rail1": true, "T4_deeper_doublet_not_overclaimed_broken": true, "T5_dynamic_next_test_recorded": true}
+}
