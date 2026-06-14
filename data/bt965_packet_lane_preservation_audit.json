@@ -1,0 +1,17 @@
+{
+  "theorem": "BT965 packet lane preservation audit",
+  "status": "preservation theorem blocked by missing executable operation maps",
+  "prefixes": ["0", "10", "110", "111"],
+  "prefix_free": true,
+  "lane_table": [
+    {"slot":0, "prefix":"0", "role":"mirror", "rail":1},
+    {"slot":1, "prefix":"10", "role":"schedule", "rail":0},
+    {"slot":2, "prefix":"110", "role":"cache_A", "rail":2},
+    {"slot":3, "prefix":"111", "role":"cache_B", "rail":3}
+  ],
+  "identity_lane_preservation": true,
+  "mirror_schedule_cache_preservation_status": "not provable from current repository artifacts: roles exist, but lane-action maps are not yet encoded",
+  "test_harness_contract": {"operation_map_shape": "role -> {source_lane: target_lane or set[target_lanes]}", "pass_condition": "every target lane remains within the packet role's assigned allowed lane set", "required_roles": ["mirror", "schedule", "cache_A", "cache_B"]},
+  "reading": "BT964 is a selector-backed ABI convention. BT965 verifies prefix-freeness and records the missing object needed for a true preservation theorem: executable lane-action maps for mirror, schedule, cache_A, and cache_B.",
+  "checks": {"T1_prefix_code_prefix_free": true, "T2_four_lanes_present": true, "T3_roles_present": true, "T4_preservation_not_overclaimed": true, "T5_test_contract_recorded": true}
+}
