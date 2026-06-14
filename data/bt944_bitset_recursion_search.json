@@ -1,0 +1,10 @@
+{
+  "theorem": "BT944 bitset recursion search kernel",
+  "status": "bounded executable kernel; final exhaustive no-support-below-76 certificate still open",
+  "encoding": {"H_nonzero_classes": 255, "class_encoding": "8-bit masks 1..255", "pairing_table_entries": 65025, "ordered_B1_pairs": 32640, "unordered_hyperbolic_pair_slots": 16320},
+  "support_certificate": {"current_best_profile": [6, 6, 6, 10, 10, 10, 14, 14], "current_best_sum": 76, "raw_lower_bound_8_classes": 48, "gap": 28},
+  "recursion_kernel": ["choose the least unused vector in the current symplectic subspace", "enumerate partners pairing to 1", "append the hyperbolic pair", "replace the current space by its symplectic orthogonal quotient", "prune if support_so_far plus raw lower bound for remaining basis vectors is at least current best", "memoize by row-reduced subspace mask and remaining pair count"],
+  "bounded_run_certificate": {"kernel_defined": true, "naive_ordered_pair_count_reduced_from": 32640, "current_best_threshold": 76, "requires_long_compute_for_full_certificate": true},
+  "honest_boundary": "BT944 improves BT941 from table scaffold to a concrete recursion kernel, but it does not report a completed exhaustive search. The no-support-below-76 theorem is still pending a full long-budget run.",
+  "checks": {"T1_bitset_state_defined": true, "T2_pair_counts_exact": true, "T3_recursion_kernel_defined": true, "T4_best_threshold_recorded": true, "T5_no_false_exhaustive_claim": true}
+}
