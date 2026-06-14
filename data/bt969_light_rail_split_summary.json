@@ -1,0 +1,11 @@
+{
+  "theorem": "BT969 light-rail split summary",
+  "status": "ABI-level split verified; deeper representation split still open",
+  "script": "analysis/bt969_light_rail_dynamic_split_test.py",
+  "rail0": "pair [3,68]; score 16; xor 71; schedule; prefix 10",
+  "rail1": "pair [4,42]; score 16; xor 46; mirror; prefix 0",
+  "abi_split": true,
+  "split_statement": "mirror is assigned to rail 1 and schedule to rail 0 in the committed ABI actions",
+  "residual_doublet_statement": "support and phase score still tie; only the committed ABI actions split them",
+  "checks": {"T1_light_score_tie_retained": true, "T2_xor_order_rail1_first": true, "T3_abi_actions_split_domains": true, "T4_deeper_doublet_boundary_explicit": true, "T5_roles_recorded": true}
+}
