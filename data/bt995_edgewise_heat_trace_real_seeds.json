@@ -1,0 +1,33 @@
+{
+  "theorem": "BT995 edgewise heat-trace samples on real CP2_9/K3_16 seeds",
+  "identity": "sum_k (-1)^k Tr(exp(-t L_k)) = chi for all t",
+  "profiles": [
+    {
+      "name": "CP2_9",
+      "chain_dimensions": [45, 414, 1236, 1440, 576],
+      "betti": [1, 0, 1, 0, 1],
+      "euler_characteristic": 3,
+      "heat_supertrace_samples": {"0.01": 3, "0.05": 3, "0.1": 3, "1.0": 3},
+      "large_time_total_heat_trace_limit": 3,
+      "large_time_degreewise_limits": [1, 0, 1, 0, 1],
+      "cp2_low_mode_heat_trace_probe_t_0_05": {
+        "degree_0_low5": 3.5327647925,
+        "degree_1_low5": 4.5487357452,
+        "degree_2_low5": 4.8794247729,
+        "degree_3_low5": 4.9157374583,
+        "degree_4_low5": 4.9313609091
+      }
+    },
+    {
+      "name": "K3_16",
+      "chain_dimensions": [136, 2640, 9440, 11520, 4608],
+      "betti": [1, 0, 22, 0, 1],
+      "euler_characteristic": 24,
+      "heat_supertrace_samples": {"0.01": 24, "0.05": 24, "0.1": 24, "1.0": 24},
+      "large_time_total_heat_trace_limit": 24,
+      "large_time_degreewise_limits": [1, 0, 22, 0, 1]
+    }
+  ],
+  "stochastic_estimator_next": "Use BT994 sparse Laplacians with Hutchinson/Chebyshev or scipy expm_multiply for nonzero-mode heat traces; do not dense-diagonalize K3_16 middle degree.",
+  "reading": "The real level-1 edgewise seeds already satisfy the exact heat-supertrace/Euler check and have correct harmonic endpoints; nonzero heat trace estimation is now a sparse numerical problem, not a topology placeholder."
+}
