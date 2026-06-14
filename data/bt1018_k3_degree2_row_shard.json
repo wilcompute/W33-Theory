@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1018 K3 level-2 degree-2 bounded row shard",
+  "map": "degree_2",
+  "shape": [45120, 152960],
+  "global_nnz": 458880,
+  "target_rank": 42345,
+  "window": {"start": 0, "count": 256},
+  "expected_row_weight": 3,
+  "row_weight_minmax": [3, 3],
+  "window_rank": 256,
+  "status": "bounded shard API verified; replace deterministic columns with real face incidences in checkout/CI iterator"
+}
