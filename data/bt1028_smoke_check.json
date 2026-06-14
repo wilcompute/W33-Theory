@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1028 rank smoke check",
+  "checked_commit": "3c56e09c6a3b88bdba24128a13882c56cd9831b4",
+  "status_count": 0,
+  "run_count": 0,
+  "expected_real_shard_artifact_count": 2,
+  "reading": "After the real-shard update, the connector still surfaced no run for the checked commit. Runtime confirmation requires Actions UI or equivalent access."
+}
