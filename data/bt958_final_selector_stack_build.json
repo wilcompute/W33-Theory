@@ -1,0 +1,16 @@
+{
+  "theorem": "BT958 final selector stack build and Holonet pointer",
+  "status": "final selector stack helper and Holonet pointer committed",
+  "w33_target": "w33_paper.tex",
+  "holonet_target": "photonic_holonet.tex",
+  "w33_integrators": ["tools/integrate_bt942_selector_appendix_w33.py", "tools/integrate_bt952_exact_selector_w33.py", "tools/integrate_bt957_final_selector_w33.py"],
+  "holonet_integrators": ["tools/integrate_bt949_holonet_w33_crossref.py", "tools/integrate_bt958_holonet_final_selector_pointer.py"],
+  "build_helper": "tools/bt958_final_selector_stack_build.py",
+  "holonet_pointer_source": "paper/BT958_holonet_final_selector_pointer.tex",
+  "final_selector": "[(3,68),(4,42),(38,65),(90,144)]",
+  "support_minimum": 60,
+  "support_minimizer_count": 6,
+  "metric_gauge_agreement": "vertex E8 and tetracode E8 both select minimizer 2",
+  "boundary": "The connector pass committed helper/pointer files. Run the build helper in a full checkout to patch and compile both papers.",
+  "checks": {"T1_w33_stack_helper_committed": true, "T2_holonet_pointer_committed": true, "T3_final_selector_recorded": true, "T4_dual_metric_agreement_recorded": true, "T5_root_sources_not_overwritten_in_connector": true}
+}
