@@ -1,0 +1,40 @@
+\subsection*{BT990: R3 corrected to the edgewise/fat-tower program}
+
+The R3 continuum origin problem is no longer correctly formulated as a
+barycentric-refinement problem.  BT983 showed that the barycentric tower violates
+the fatness/shape-regularity hypotheses required by the Cheeger--M\"uller--
+Schrader, Dodziuk--Patodi, and FEEC convergence theorems.  The corrected tower is
+the edgewise/Freudenthal--Kuhn tower.
+
+The model checks now split the R3 route into two executable halves.  On the
+spectral side, BT984 verifies individual Whitney--0/P1 eigenvalue convergence on
+the edgewise unit-square tower, and BT985 verifies convergence of the truncated
+heat trace
+\[
+  H_N(t)=\sum_{i\le N} e^{-t\lambda_i}.
+\]
+At level 6 with 80 eigenvalues, the relative error at \(t=0.05\) is
+\(2.1205\times 10^{-3}\).  On the geometric side, BT986 uses projected edgewise
+refinement of the octahedral sphere: the minimum angle remains near
+\(45^\circ\), the area converges to \(4\pi\), and the Regge scalar integral
+\(2\sum_v \delta_v\) agrees with \(8\pi\) to roundoff while local deficits decay.
+
+For the actual curved 4D seeds, BT988 loads the explicit CP\(^2_9\) and
+K3\(_{16}\) facets already present in
+\texttt{exploration/w33\_explicit\_curved\_4d\_complexes.py}.  Their f-vectors
+are
+\[
+  f(\mathrm{CP}^2_9)=(9,36,84,90,36),\qquad
+  f(K3_{16})=(16,120,560,720,288),
+\]
+with Betti profiles \((1,0,1,0,1)\) and \((1,0,22,0,1)\).  BT989 retires the
+barycentric constants \(120/19\) and \(860/19\) for R3 and installs the justified
+edgewise top-channel constants:
+\[
+  \text{top multiplier}=2^4=16,\qquad h_r=2^{-r},\qquad
+  \frac{f_4(K3_{16})}{f_4(\mathrm{CP}^2_9)}=rac{288}{36}=8.
+\]
+The remaining technical task is not to push barycentric refinement harder; it is
+to load or derive the local 4-simplex edgewise facet template so the exact lower
+incidence and heat-density constants can be recomputed on the CP\(^2_9\)/K3\(_{16}\)
+fat tower.
