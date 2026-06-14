@@ -1,0 +1,28 @@
+{
+  "theorem": "BT992 true level-1 CP2_9/K3_16 edgewise incidence matrices",
+  "local_template": "BT991 k=2,d=4 edgewise 4-simplex template",
+  "rank_field": "F2 sparse bitset Gaussian elimination",
+  "profiles": [
+    {
+      "name": "CP2_9",
+      "level": 1,
+      "vertices": 45,
+      "top_4simplices": 576,
+      "f_vector": [45, 414, 1236, 1440, 576],
+      "boundary_ranks_mod2": [44, 370, 865, 575],
+      "betti_mod2": [1, 0, 1, 0, 1],
+      "euler_characteristic": 3
+    },
+    {
+      "name": "K3_16",
+      "level": 1,
+      "vertices": 136,
+      "top_4simplices": 4608,
+      "f_vector": [136, 2640, 9440, 11520, 4608],
+      "boundary_ranks_mod2": [135, 2505, 6913, 4607],
+      "betti_mod2": [1, 0, 22, 0, 1],
+      "euler_characteristic": 24
+    }
+  ],
+  "reading": "The explicit CP2_9/K3_16 facets now have real level-1 edgewise f-vectors, boundary ranks, and Betti checks; topology is preserved."
+}
