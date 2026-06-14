@@ -143,8 +143,14 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   (curvature) convergence on the fat tower IS the Cheeger-Mueller-Schrader
   theorem. Residual narrows to ONE analytic step: the spectral-action
   short-time<->refinement limit-interchange (bypassed by the geometric/Regge
-  route). NEXT: redo the CP2_9/K3_16 program on the edgewise (not barycentric)
-  tower.
+  route). And even THAT is within reach on the fat tower: FEEC
+  (Arnold-Falk-Winther) + Dodziuk-Patodi give combinatorial-Hodge -> de Rham
+  eigenvalue convergence UNDER SHAPE REGULARITY, so n->inf then t->0
+  reproduces the continuum heat trace + a_2. STRUCTURAL UPSHOT: the
+  obstruction to R3 was the REFINEMENT CHOICE (non-shape-regular tower), not
+  the AC framework; on a fat tower both routes are governed by established
+  convergence theorems. R3 reduces to applied verification on CP2_9/K3_16.
+  NEXT: redo that program on the edgewise (not barycentric) tower.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The

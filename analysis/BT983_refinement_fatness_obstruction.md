@@ -68,6 +68,16 @@ problem.**
   (level → ∞). The geometric/Regge route *bypasses* this interchange; the
   spectral-action route still needs it. This limit-interchange is now the
   precise, isolated analytic residual of R3.
+- **Even the spectral route is within reach on the fat tower:**
+  finite-element exterior calculus (Arnold–Falk–Winther) + Dodziuk–Patodi give
+  convergence of the combinatorial Hodge–Laplacian eigenvalues to the de Rham
+  spectrum **under shape regularity** — so on the edgewise tower, taking
+  $n\to\infty$ before $t\to0$ reproduces the continuum heat trace and its $a_2$.
+  **Structural upshot:** the obstruction to R3 was the *choice of refinement*
+  (a non-shape-regular tower), not the almost-commutative framework. On a
+  shape-regular tower, both the geometric (CMS) and spectral (FEEC/
+  Dodziuk–Patodi) routes are governed by established convergence theorems, and
+  R3 reduces to applied verification on the CP²₉/K3₁₆ seeds.
 
 ## Open (sharpened)
 
