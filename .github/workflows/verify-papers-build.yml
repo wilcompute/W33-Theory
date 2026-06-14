@@ -1,0 +1,82 @@
+name: Verify papers build
+
+# Hardened build check: compiles the committed sources of BOTH master papers
+# from a clean checkout and FAILS if either PDF is not produced (or is
+# implausibly short). This catches silent breakage such as a missing
+# manuscripts/tex include path (the w33_paper.tex \input{partN_*} files live
+# in manuscripts/tex/, so TEXINPUTS must expose that directory).
+#
+# Unlike build-final-papers.yml this does NOT run the selector-integration
+# pipeline; it verifies that the repository's tracked .tex sources compile
+# as-is, so a broken master manuscript turns CI red.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'manuscripts/tex/**'
+      - '.github/workflows/verify-papers-build.yml'
+  pull_request:
+    paths:
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'manuscripts/tex/**'
+
+jobs:
+  verify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base texlive-latex-recommended \
+            texlive-latex-extra texlive-fonts-recommended \
+            texlive-science latexmk
+
+      - name: Compile w33_paper.tex (master manuscript)
+        env:
+          # partN_* includes live in manuscripts/tex/; trailing ':' keeps defaults
+          TEXINPUTS: ".:./manuscripts/tex:"
+        run: |
+          set -e
+          for pass in 1 2 3; do
+            pdflatex -interaction=nonstopmode -halt-on-error w33_paper.tex \
+              > w33_pass${pass}.log 2>&1 || { tail -40 w33_pass${pass}.log; exit 1; }
+          done
+
+      - name: Compile photonic_holonet.tex (architecture paper)
+        run: |
+          set -e
+          for pass in 1 2; do
+            pdflatex -interaction=nonstopmode -halt-on-error photonic_holonet.tex \
+              > holonet_pass${pass}.log 2>&1 || { tail -40 holonet_pass${pass}.log; exit 1; }
+          done
+
+      - name: Assert PDFs were produced and are non-trivial
+        run: |
+          set -e
+          test -f w33_paper.pdf || { echo "FAIL: w33_paper.pdf not produced"; exit 1; }
+          test -f photonic_holonet.pdf || { echo "FAIL: photonic_holonet.pdf not produced"; exit 1; }
+          # page-count sanity from the final-pass log (master ~232pp, holonet ~36pp)
+          w33_pages=$(grep -oE 'Output written on w33_paper.pdf \(([0-9]+) page' w33_pass3.log | grep -oE '[0-9]+' | head -1)
+          hol_pages=$(grep -oE 'Output written on photonic_holonet.pdf \(([0-9]+) page' holonet_pass2.log | grep -oE '[0-9]+' | head -1)
+          echo "w33_paper pages: ${w33_pages:-unknown}; photonic_holonet pages: ${hol_pages:-unknown}"
+          test "${w33_pages:-0}" -ge 100 || { echo "FAIL: w33_paper.pdf too short (${w33_pages:-0} pages, expected >=100)"; exit 1; }
+          test "${hol_pages:-0}" -ge 20  || { echo "FAIL: photonic_holonet.pdf too short (${hol_pages:-0} pages, expected >=20)"; exit 1; }
+          echo "OK: both master papers compiled with plausible page counts."
+
+      - name: Upload built PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-papers
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+          if-no-files-found: warn
