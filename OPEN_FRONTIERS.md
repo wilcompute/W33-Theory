@@ -151,6 +151,18 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   the AC framework; on a fat tower both routes are governed by established
   convergence theorems. R3 reduces to applied verification on CP2_9/K3_16.
   NEXT: redo that program on the edgewise (not barycentric) tower.
+  NOVEL ROUTE (BT1031, internet-sourced, repo-absent): Latremoliere's SPECTRAL
+  PROPINQUITY (Math.Ann.2023, arXiv:2112.11000) is a metric on spectral
+  triples for which the spectral action Tr f(D^2/Lambda^2) is CONTINUOUS. So
+  R3's spectral-action convergence REDUCES to: does W(3,3) x (edgewise K3
+  tower) converge in the spectral propinquity? If yes, EH+matter converges by
+  the continuity theorem (the hard 'action converges' step becomes a citation,
+  not open analysis). Stronger than FEEC (per-eigenvalue): propinquity gives
+  the whole functional calculus. Verified W(3,3) is a metric spectral triple
+  (GQ resolution-0 metric) with well-defined spectral action {440,1920,16320}.
+  Tools: arXiv:2504.11715 (paths of metrics), 2005.08544 (operator-system
+  truncations). Also note BT1030: K3 level-2 ranks are topologically forced;
+  refocus compute on the massive-sector a_2 ~ (1/6)int R, the EH coefficient.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
