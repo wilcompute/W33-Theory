@@ -54,8 +54,18 @@ ALREADY DONE — DO NOT RE-DERIVE (grep terms -> result):
   (2T=24-cell group), curvature F=[R_p,R_q]. See
   `standard_model_from_one_transvection.tex`.
 
+COMPLETENESS BOUNDARY (now a theorem in BOTH papers, 2026-06-13):
+`w33_paper.tex` §"The Integral E8 Lift: Eigenlattice Obstruction and the
+Completeness Boundary" and `photonic_holonet.tex` §"Architecture Completeness
+and the Three Physical Residuals" state it: the finite substrate kernel is
+closed and machine-verified; the theory is complete modulo EXACTLY three
+classified residuals R1/R2/R3 = the three opens below. R1 also gained a new
+rigorous proposition (the +2-eigenlattice is NOT the E8 home; det 2^16·3^10·5,
+rootless — witness `analysis/bt926_plus2_eigenlattice.py`). These three are
+the irreducible frontier; nothing else in the finite kernel is open.
+
 GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
-5–7 — these are the ONLY curated opens; everything 1–4 is CLOSED):
+5–7 = R1/R2/R3 — these are the ONLY curated opens; everything 1–4 is CLOSED):
 
 - (5) INTEGRAL E8 LIFT — mod-2 homology gives the rank-8 shadow, but the
   integral Cartan pairing and a canonical root-lattice lift have NOT been
