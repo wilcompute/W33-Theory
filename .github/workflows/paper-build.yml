@@ -1,0 +1,46 @@
+name: Paper Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  paper-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Apply paper integrators
+        run: |
+          python tools/integrate_bt990_r3_fat_tower_w33.py
+          python tools/integrate_bt990_r3_fat_tower_holonet.py
+          python tools/integrate_bt996_r3_edgewise_hodge_stack_w33.py
+          python tools/integrate_bt996_holonet_edgewise_hodge.py
+
+      - name: Build W33 paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: w33_paper.tex
+
+      - name: Build Holonet paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: photonic_holonet.tex
+
+      - name: Upload paper PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-build-pdfs
+          path: |
+            w33_paper.pdf
+            photonic_holonet.pdf
+          if-no-files-found: warn
