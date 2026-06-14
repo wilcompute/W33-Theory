@@ -1,0 +1,39 @@
+{
+  "theorem": "BT993 edgewise f-vector density recurrence",
+  "local_edgewise_f_vectors_by_dimension": [
+    [1, 0, 0, 0, 0],
+    [3, 2, 0, 0, 0],
+    [6, 9, 4, 0, 0],
+    [10, 25, 24, 8, 0],
+    [15, 55, 85, 60, 16]
+  ],
+  "carrier_exact_matrix_rows_old_dim_cols_new_dim": [
+    [1, 0, 0, 0, 0],
+    [1, 2, 0, 0, 0],
+    [0, 3, 4, 0, 0],
+    [0, 1, 8, 8, 0],
+    [0, 0, 5, 20, 16]
+  ],
+  "recurrence": "f_next[j] = sum_i f_current[i] * L[i][j]",
+  "retired_barycentric_constants": ["120/19", "860/19"],
+  "seed_iterates": {
+    "CP2_9": [
+      [9, 36, 84, 90, 36],
+      [45, 414, 1236, 1440, 576],
+      [459, 5976, 19344, 23040, 9216],
+      [6435, 89094, 300996, 368640, 147456]
+    ],
+    "K3_16": [
+      [16, 120, 560, 720, 288],
+      [136, 2640, 9440, 11520, 4608],
+      [2776, 45120, 152960, 184320, 73728],
+      [47896, 696960, 2385920, 2949120, 1179648]
+    ]
+  },
+  "checks": {
+    "CP2_9_level1": [45, 414, 1236, 1440, 576],
+    "K3_16_level1": [136, 2640, 9440, 11520, 4608],
+    "top_multiplier": 16
+  },
+  "reading": "The edgewise R3 tower now has a true full f-vector recurrence. The old barycentric density constants are replaced by the carrier-exact edgewise subdivision matrix."
+}
