@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1029 shard timing recommendation parser",
+  "input": "data/bt1026_incidence_shard_timing.json",
+  "recommendations": {
+    "degree_2": {"recommended_count": 8, "reason": "no surfaced timing sample; keep conservative default"},
+    "degree_3": {"recommended_count": 8, "reason": "no surfaced timing sample; keep conservative default"}
+  },
+  "default_policy": "keep count=8 until surfaced Actions timing samples exist"
+}
