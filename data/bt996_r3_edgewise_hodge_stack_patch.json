@@ -1,0 +1,11 @@
+{
+  "theorem": "BT996 R3 edgewise Hodge stack paper patch",
+  "w33_insert": "paper/BT996_r3_edgewise_hodge_stack_insert.tex",
+  "holonet_pointer": "paper/BT996_holonet_edgewise_hodge_pointer.tex",
+  "integrators": [
+    "tools/integrate_bt996_r3_edgewise_hodge_stack_w33.py",
+    "tools/integrate_bt996_holonet_edgewise_hodge.py"
+  ],
+  "summary": "BT991-BT995 now provide an explicit local edgewise 4-simplex template, true level-1 CP2_9/K3_16 incidence matrices, sparse Hodge-Laplacian certificates, exact edgewise f-vector recurrences, and real-seed heat-supertrace samples.",
+  "boundary": "Committed inserts and idempotent integration helpers; did not directly rewrite large TeX files through the connector."
+}
