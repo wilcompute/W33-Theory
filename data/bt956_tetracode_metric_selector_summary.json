@@ -1,0 +1,14 @@
+{
+  "theorem": "BT956 recovered tetracode metric selector matrix summary",
+  "status": "full recovery script committed; compact matrix/result summary committed because dense inline matrix payload was blocked by connector filter",
+  "script": "analysis/bt956_tetracode_metric_selector_matrix.py",
+  "matrix_profile": {"shape": [8,8], "entries": "0/1", "det_abs": 1, "check_Mt_G_M_equals_B_chain_mod2": true, "base_lift_det": 1, "base_lift_positive_definite": true},
+  "candidate_count": 6,
+  "valid_positive_unimodular_lifts": [0,1,2,3,4],
+  "singular_or_invalid_candidates": [5],
+  "metric_winner": 2,
+  "winner_decomposition": [[3,68], [4,42], [38,65], [90,144]],
+  "winner_tetracode_score": {"trace": 56, "frobenius_squared": 1320, "max_abs_entry": 16, "min_eigenvalue": 0.004850303102819915},
+  "agreement": "BT956 tetracode metric winner equals BT954 vertex metric winner: minimizer 2.",
+  "checks": {"T1_recovery_script_committed": true, "T2_matrix_profile_recorded": true, "T3_candidate_2_wins_tetracode_metric": true, "T4_candidate_5_singular": true, "T5_agrees_with_vertex_metric": true}
+}
