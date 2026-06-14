@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1026 K3 incidence shard timing manifest",
+  "default_count": 8,
+  "planned_measurements": ["BT1021 degree-2 real incidence shard", "BT1022 degree-3 real incidence shard"],
+  "safe_default_windows": {"degree_2": 8, "degree_3": 8},
+  "ci_policy": "start with count=8 in smoke workflow; increase only after surfaced Actions timing data",
+  "boundary": "This instrumentation scaffold is committed; actual timing depends on checkout or Actions execution because connector sessions do not surface workflow runtime artifacts."
+}
