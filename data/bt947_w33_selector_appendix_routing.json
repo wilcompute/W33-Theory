@@ -1,0 +1,12 @@
+{
+  "theorem": "BT947 w33 selector appendix routing",
+  "status": "w33-specific verification helper committed",
+  "correct_heavy_math_target": "w33_paper.tex",
+  "main_narrative_target": "photonic_holonet.tex",
+  "appendix_source": "paper/BT942_e8_selector_appendix.tex",
+  "integrator": "tools/integrate_bt942_selector_appendix_w33.py",
+  "verify_helper": "tools/bt947_w33_selector_appendix_verify.py",
+  "compile_command": "python tools/bt947_w33_selector_appendix_verify.py",
+  "boundary": "The connector pass committed the w33-target helper. The actual root patch and full PDF compile should be run in a full checkout via the helper.",
+  "checks": {"T1_w33_target_correct": true, "T2_photonic_main_target_preserved": true, "T3_w33_integrator_available": true, "T4_w33_compile_helper_available": true, "T5_w36_not_used_for_heavy_math": true}
+}
