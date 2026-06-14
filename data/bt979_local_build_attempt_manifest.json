@@ -1,0 +1,11 @@
+{
+  "theorem": "BT979 local final paper build attempt manifest",
+  "status": "attempted real full-checkout build path in this runtime; checkout failed before build",
+  "attempted_command": "git clone --depth=1 https://github.com/wilcompute/W33-Theory.git /mnt/data/W33-Theory-build",
+  "failure": "fatal: unable to access 'https://github.com/wilcompute/W33-Theory.git/': Could not resolve host: github.com",
+  "result": "no PDF artifacts produced in this runtime",
+  "probe_script": "tools/bt979_local_build_attempt_probe.py",
+  "direct_build_script": "tools/bt974_direct_final_paper_build.sh",
+  "boundary": "Network/DNS is unavailable in this runtime, so the full checkout compile could not be executed here. The repo now contains the direct build script and a probe script for a full checkout environment.",
+  "checks": {"T1_real_checkout_attempted": true, "T2_failure_recorded": true, "T3_no_pdf_claimed": true, "T4_probe_script_committed": true, "T5_boundary_explicit": true}
+}
