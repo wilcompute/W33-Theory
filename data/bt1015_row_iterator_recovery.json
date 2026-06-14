@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1015 full row iterator recovery by module split",
+  "recovered_modules": [
+    "analysis/bt1015_f2_bitset_rank_core.py",
+    "analysis/bt1015_k3_middle_stream_contracts.py"
+  ],
+  "f_vector": [2776, 45120, 152960, 184320, 73728],
+  "middle_stream_contracts": {
+    "degree_2": {"rows": 45120, "cols": 152960, "nnz": 458880, "row_weight": 3, "target_rank": 42345},
+    "degree_3": {"rows": 152960, "cols": 184320, "nnz": 737280, "row_weight": 4, "target_rank": 110593}
+  },
+  "status": "The blocked BT1012 monolith has been split into accepted modules. Full face generation remains the next checkout/CI layer; the reducer and stream contracts are now reusable."
+}
