@@ -1,0 +1,7 @@
+{
+  "theorem": "(R3) action value vs EH coefficient; two-route synthesis",
+  "toy": "circle Laplacian truncation shows fixed-cutoff convergence != asymptotic-coefficient convergence (limits don't commute)",
+  "geometric_route": "Regge/CMS closes a_2 ~ (1/6) int R per level (no cutoff limit); BT986 verified on the sphere",
+  "spectral_route": "propinquity closes the action value at fixed cutoff (BT1031); asymptotic coefficient needs n<->Lambda interchange",
+  "honest_refinement_of_BT1031": "propinquity gives action-VALUE continuity, not the asymptotic EH COEFFICIENT; the geometric route supplies the coefficient."
+}
