@@ -1,0 +1,19 @@
+{
+  "theorem": "BT945 selector appendix compile record",
+  "status": "standalone appendix compile verified in the ChatGPT runtime; full W36 helper committed for local checkout",
+  "standalone_check": {
+    "tex_file": "/mnt/data/w36_bt945/BT945_e8_selector_appendix_check.tex",
+    "pdf_file": "/mnt/data/w36_bt945/BT945_e8_selector_appendix_check.pdf",
+    "pdflatex_returncode": 0,
+    "pdf_pages": 1,
+    "pdf_encrypted": false,
+    "pdf_page_size_pt": "612 x 792",
+    "pdf_sha256": "0f50d638832125adad50ebbb849ab91b91bec980ad869d550983afcfae7e13b9",
+    "tex_sha256": "92c19d9bf016c8af0946f423ee0c327b065b9b5ed533859677ecc91720486e3c"
+  },
+  "repo_helper": "tools/bt945_selector_appendix_verify.py",
+  "repo_appendix_source": "paper/BT942_e8_selector_appendix.tex",
+  "root_target": "W36_PAPER.tex",
+  "boundary": "The full root W36_PAPER.tex build was not performed inside the connector because a complete local checkout was unavailable. The appendix TeX was compiled standalone and rendered successfully; the repo helper performs the full integration/build in a checkout.",
+  "checks": {"T1_standalone_pdflatex_passed": true, "T2_pdf_inspected": true, "T3_pdf_rendered": true, "T4_full_build_helper_committed": true, "T5_boundary_explicit": true}
+}
