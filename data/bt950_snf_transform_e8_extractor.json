@@ -1,0 +1,27 @@
+{
+  "theorem": "BT950 Smith-transform E8 extractor protocol",
+  "snf_convention": "D = U A V; coker generators live on the left/codomain basis, so d_i=2 directions pull back by U^{-1}.",
+  "snf_diagonal_counts": {"1": 16, "2": 8, "8": 15, "24": 1},
+  "d_equals_2_indices": [16, 17, 18, 19, 20, 21, 22, 23],
+  "verify_UAV_equals_D": true,
+  "det_U": -1,
+  "det_V": 1,
+  "column_statistics_Uinv_d2_sector": [
+    {"snf_index": 16, "l1_norm": 184, "min_entry": -14, "max_entry": 10, "mod2_support": 14, "A_col_even": true},
+    {"snf_index": 17, "l1_norm": 170, "min_entry": -13, "max_entry": 9, "mod2_support": 14, "A_col_even": true},
+    {"snf_index": 18, "l1_norm": 86, "min_entry": -10, "max_entry": 6, "mod2_support": 10, "A_col_even": true},
+    {"snf_index": 19, "l1_norm": 3052, "min_entry": -315, "max_entry": 189, "mod2_support": 14, "A_col_even": true},
+    {"snf_index": 20, "l1_norm": 177490964, "min_entry": -16679724, "max_entry": 20015780, "mod2_support": 10, "A_col_even": true},
+    {"snf_index": 21, "l1_norm": 228618627148715264, "min_entry": -21484593656910276, "max_entry": 25781512388292220, "mod2_support": 10, "A_col_even": true},
+    {"snf_index": 22, "l1_norm": 733747983768, "min_entry": -82745369260, "max_entry": 68954474476, "mod2_support": 6, "A_col_even": true},
+    {"snf_index": 23, "l1_norm": 733747983504, "min_entry": -68954474476, "max_entry": 82745369260, "mod2_support": 6, "A_col_even": true}
+  ],
+  "divided_pairing_mod2": [[0,1,0,0,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,1,0]],
+  "divided_pairing_mod2_rank": 8,
+  "divided_pairing_mod2_is_standard_hyperbolic_blocks": true,
+  "half_gram_det_sign": -1,
+  "half_gram_det_abs_decimal_digits": 71,
+  "half_gram_signature_observation": "The U^{-1} d=2 sector gives the correct nondegenerate E8/2E8 mod-2 form, but the raw divided integral form is huge and indefinite, not the positive E8 Cartan form.",
+  "conclusion": "BT950 closes the SNF-transform routing error: the canonical valuation-one torsion sector is extracted from U^{-1}. This validates the mod-2 E8 shadow integrally, but it also shows that positivity still requires an additional metric selector rather than the raw SNF pullback alone.",
+  "checks": {"T1_snf_verified": true, "T2_exactly_8_d_equals_2": true, "T3_Uinv_columns_A_even": true, "T4_mod2_form_rank_8": true, "T5_raw_integral_form_not_overclaimed_as_E8": true}
+}
