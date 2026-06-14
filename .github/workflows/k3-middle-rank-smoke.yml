@@ -1,0 +1,35 @@
+name: K3 Middle Rank Smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+
+jobs:
+  k3-middle-rank-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run rank core smoke
+        run: |
+          python analysis/bt1015_f2_bitset_rank_core.py
+          python analysis/bt1015_k3_middle_stream_contracts.py
+          python analysis/bt1016_k3_middle_rank_smoke_test.py
+          python analysis/bt1018_k3_degree2_row_shard.py --start 0 --count 256
+
+      - name: Upload rank smoke artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: k3-middle-rank-smoke-data
+          path: |
+            data/bt1015_k3_middle_stream_contracts.json
+            data/bt1016_k3_middle_rank_smoke_test.json
+            data/bt1018_k3_degree2_row_shard.json
+          if-no-files-found: error
