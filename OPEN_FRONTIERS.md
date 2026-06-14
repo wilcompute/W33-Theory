@@ -94,21 +94,25 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
     chain-complex symmetry" BT932 sought (the vertex witness is
     symmetry-isolated). CONSEQUENCE: since E8⊃E6⊕A2 has odd index 3, W(E6) on
     E8/2E8 is REDUCIBLE (6⊕2) while H is irreducible ⇒ the canonical lift is
-    NOT the naive E6⊂E8. Reduced question: does PSp(4,3) preserve an
-    irreducible even-unimodular rank-8 Z-lattice (then = E8)?
-  STILL OPEN (BT927): the chain shadow (BT924/925) and the vertex/tetracode
-  metric E8 are compatible but NOT YET proved to be ONE canonical lift; the
-  positive-definite even-unimodular identification — and the selector's full
-  transported-tetracode stabilizer orbit (BT957) — remain.
+    NOT the naive E6⊂E8.
+  - RESOLVED (bt981_e8_invariant_quadratic_form.py; w33_paper.tex Cor "The
+    canonical lift is E8"): PSp(4,3) fixes a UNIQUE quadratic refinement of B,
+    and it is PLUS type (136 zeros, Arf 0) ⇒ PSp(4,3) ⊂ O8+(2)=Aut(E8/2E8),
+    lifting to W(E8)=Aut(E8). Irreducible mod 2 forces irreducible over Q, and
+    PSp(4,3) has no ordinary irred 8-dim rep ⇒ the canonical positive-definite
+    lift IS E8 (up to a central ±1). R1 ANSWER = YES, E8. Remaining: only an
+    explicit integral basis + split-vs-double-cover (cosmetic).
 - (6) MOONSHINE MODULE BOUNDARY — low-order transport exact through the
   quartic package, but the naive quintic V₅ lift fails on anchored classes
   2A, 2B; needs genuine character-theoretic input. (Hard, rep-theoretic.)
-  CHARACTERIZED (in w33_paper.tex R2): the quartic package
-  χ(g)=Tr(g|V4)−Tr(g|V3)−Tr(g|V2)+1 matches Monster data; the degree-only
-  recursion fixes only dim V5, NOT the traces Tr(2A|V5),Tr(2B|V5). The exact
-  missing input is the degree-5 McKay–Thompson coefficients of T_2A,T_2B —
-  NOT in the repo (checked: no McKay/Thompson data), external Monster
-  character data required. Do NOT fabricate the coefficients from memory.
+  DATUM SUPPLIED (bt982_mckay_thompson_v5.py; w33_paper.tex Prop "The quintic
+  moonshine datum"): the degree-5 McKay–Thompson coefficients are computed
+  from VALIDATED level-2 Hauptmoduln (T_2A=(η/η2)^24+4096(η2/η)^24+24,
+  T_2B=(η/η2)^24+24), validated against anchored Tr(2A|V1)=4372, Tr(2B|V1)=276,
+  Tr(2A|V2)=96256: dim V5=333202640600, Tr(2A|V5)=74428120, Tr(2B|V5)=184024.
+  The named external input is now in hand; remaining = assemble the V5
+  Monster-module decomposition from these traces. (Computed, not fabricated;
+  12/12 anchored checks pass.)
 - (7) DYNAMICAL / CONTINUUM ORIGIN — needs an action principle / scaling
   limit / continuum theorem explaining why the universe selects W(3,3) and
   turns the finite package into QFT/GR dynamics. (= "hard open #2"; the

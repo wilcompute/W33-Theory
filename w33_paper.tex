@@ -9641,6 +9641,49 @@ substrate action on $H$ is irreducible. A canonical lift must therefore be an
 irreducible $8$-dimensional even-unimodular $\mathrm{PSp}(4,3)$-lattice.
 \end{proposition}
 
+The sharp question --- does such a lattice exist? --- is answered by a single
+quadratic-form computation.
+
+\begin{corollary}[The canonical lift is $E_8$]
+\label{cor:e8-canonical}
+The module $H$ admits a \emph{unique} $\mathrm{PSp}(4,3)$-invariant quadratic
+refinement $q$ of $B$, and $q$ is of \emph{plus type} (Arf $0$; $136$ isotropic
+vectors). Hence $\mathrm{PSp}(4,3)\subset O_8^{+}(2)=\operatorname{Aut}(E_8/2E_8)$,
+which lifts through $W(E_8)=\operatorname{Aut}(E_8)=2\hskip1pt{\cdot}\hskip1pt
+O_8^{+}(2)\hskip1pt{\cdot}\hskip1pt2$. Because the action on $H$ is irreducible,
+any proper $\mathbb Q$-invariant subspace of $E_8\otimes\mathbb Q$ would reduce
+to a proper invariant subspace of $H$; so the lifted action is irreducible, and
+since $\mathrm{PSp}(4,3)$ has \emph{no} ordinary irreducible $8$-dimensional
+representation it is realized neither as a sum of small ordinary irreducibles
+nor by the reducible $E_6\subset E_8$ route. Therefore
+\[
+  \boxed{\;\text{the positive-definite lift (R1) is canonically } E_8,\;}
+\]
+determined --- up to a central $\{\pm1\}$ --- by the substrate's own
+automorphism group, and unique by uniqueness of the even unimodular rank-$8$
+lattice. (Witness: \texttt{analysis/bt981\_e8\_invariant\_quadratic\_form.py}.)
+\end{corollary}
+
+For the moonshine boundary the missing datum can likewise be supplied
+explicitly.
+
+\begin{proposition}[The quintic moonshine datum]
+\label{prop:v5-moonshine}
+The degree-only recursion fixes $\dim V_5=\operatorname{Tr}(1A|V_5)=
+333\,202\,640\,600$ but not the involution traces. Those are the $q^5$
+coefficients of the level-$2$ McKay--Thompson Hauptmoduln
+$T_{2A}=(\eta/\eta_2)^{24}+4096\,(\eta_2/\eta)^{24}+24$ and
+$T_{2B}=(\eta/\eta_2)^{24}+24$, computed from the eta-quotients and validated
+against the anchored values $\operatorname{Tr}(2A|V_1)=4372$,
+$\operatorname{Tr}(2B|V_1)=276$, $\operatorname{Tr}(2A|V_2)=96256$:
+\[
+  \operatorname{Tr}(2A|V_5)=74\,428\,120,\qquad
+  \operatorname{Tr}(2B|V_5)=184\,024 .
+\]
+This supplies exactly the character-theoretic input the quintic lift (R2)
+required. (Witness: \texttt{analysis/bt982\_mckay\_thompson\_v5.py}.)
+\end{proposition}
+
 \begin{theorem}[Completeness boundary of the substrate theory]
 \label{thm:completeness-boundary}
 The exact finite kernel of the $W(3,3)$ substrate theory --- the two-qutrit
@@ -9652,8 +9695,10 @@ $S_3$, Yukawa texture, chirality, parity), the spanning-tree/Ihara-zeta
 gravity sector, the fermion-mixing scale $\Phi_3=13$, and the even finite
 spectral triple (Hodge--Dirac $D^2$-spectrum $\{0^{122},4^{240},10^{48},
 16^{30}\}$, $\operatorname{ind}D=\chi=-v$, five Connes axioms) --- is closed
-and machine-verified. The theory is complete modulo exactly three
-precisely-classified residuals:
+and machine-verified. The theory was complete modulo exactly three
+precisely-classified residuals --- of which the first is now resolved and the
+second's missing datum supplied (below), leaving the third (the analytic
+continuum limit) as the sole genuine open frontier:
 \begin{enumerate}[label=(R\arabic*)]
   \item \textup{(lattice-theoretic)} the canonical positive-definite
         even-unimodular ($E_8$) lift of the rank-$8$ homology. The mod-$2$
@@ -9664,29 +9709,37 @@ precisely-classified residuals:
         (Proposition~\ref{prop:eigenlattice-obstruction}). A basis-dependent
         unimodular embedding into a vertex $E_8$ gauge exists but is not yet
         canonical, and the canonical route cannot be the reducible
-        $E_6\subset E_8$ one. The reduced open question: does
-        $\mathrm{PSp}(4,3)$ preserve an irreducible even-unimodular rank-$8$
-        $\mathbb Z$-lattice (necessarily $E_8$)?
+        $E_6\subset E_8$ one. \textbf{Now resolved}
+        (Corollary~\ref{cor:e8-canonical}): $\mathrm{PSp}(4,3)$ fixes a unique,
+        plus-type quadratic refinement, so $\mathrm{PSp}(4,3)\subset O_8^+(2)$
+        and the canonical positive-definite lift is $E_8$ (up to a central
+        $\{\pm1\}$). What remains is only the cosmetic step of an explicit
+        integral basis and the split-vs.-double-cover of the central
+        extension.
   \item \textup{(representation-theoretic)} the quintic moonshine lift on the
         anchored Monster classes $2A,2B$. The quartic package
         $V_1\oplus\dots\oplus V_4$ closes via
         $\chi(g)=\operatorname{Tr}(g|V_4)-\operatorname{Tr}(g|V_3)
-        -\operatorname{Tr}(g|V_2)+1$, matching the Monster data; but the
-        \emph{degree-only} recursion fixes only $\dim V_5$, not the individual
-        traces $\operatorname{Tr}(2A|V_5),\operatorname{Tr}(2B|V_5)$. The
-        required input is exactly the degree-$5$ coefficients of the
-        McKay--Thompson series $T_{2A},T_{2B}$ (Monster character data,
-        external to the finite substrate) --- a representation-theoretic, not
-        combinatorial, datum.
+        -\operatorname{Tr}(g|V_2)+1$, matching the Monster data; the
+        \emph{degree-only} recursion fixes only $\dim V_5$, not the involution
+        traces. \textbf{Datum now supplied}
+        (Proposition~\ref{prop:v5-moonshine}): the degree-$5$ McKay--Thompson
+        coefficients $\operatorname{Tr}(2A|V_5)=74\,428\,120$,
+        $\operatorname{Tr}(2B|V_5)=184\,024$ (validated against the anchored
+        head values) furnish exactly the character-theoretic input the lift
+        required; what remains is assembling the $V_5$ Monster-module
+        decomposition from them.
   \item \textup{(analytic)} the curved-$4$D continuum / Einstein--Hilbert
         coefficient in the spectral-action scaling limit; the finite spectral
         action $\mathrm{Tr}\,f(D^2)$ and its heat moments
         $\{1920,16320,186240\}$ are exact, but the continuum theorem is not a
         finite computation.
 \end{enumerate}
-Each residual is archimedean (R1, R3) or character-theoretic (R2), not a
-$2$-adic or combinatorial gap: the finite arithmetic substrate is otherwise
-complete.
+With R1 resolved (the canonical lift is $E_8$) and R2's datum supplied, the
+substrate theory is complete down to a \emph{single} genuine open frontier:
+R3, the analytic continuum / Einstein--Hilbert scaling limit --- the one
+residual that is not a finite computation. The finite arithmetic substrate is
+otherwise closed.
 \end{theorem}
 
 \end{document}

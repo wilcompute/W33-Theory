@@ -1,0 +1,23 @@
+{
+  "theorem": "(R1 sharp) U4(2)-invariant quadratic form on H",
+  "num_invariant_forms": 1,
+  "forms": [
+    {
+      "diag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "zeros": 136,
+      "type": "plus(O8+)",
+      "arf": 0
+    }
+  ],
+  "preserves_plus_type_O8plus": true,
+  "conclusion": "E8 is the canonical irreducible U4(2)-lattice (answer YES)"
+}

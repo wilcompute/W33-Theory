@@ -1,0 +1,31 @@
+{
+  "theorem": "(R2) degree-5 McKay-Thompson coefficients for the V5 lift",
+  "validated": true,
+  "dim_V5": 333202640600,
+  "Tr_2A_V5": 74428120,
+  "Tr_2B_V5": 184024,
+  "series_q1_to_q5": {
+    "T1A_dimV": [
+      196884,
+      21493760,
+      864299970,
+      20245856256,
+      333202640600
+    ],
+    "T2A": [
+      4372,
+      96256,
+      1240002,
+      10698752,
+      74428120
+    ],
+    "T2B": [
+      276,
+      -2048,
+      11202,
+      -49152,
+      184024
+    ]
+  },
+  "method": "j=E4^3/Delta (1A); T2A,T2B from validated eta-quotients"
+}
