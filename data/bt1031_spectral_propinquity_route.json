@@ -1,0 +1,26 @@
+{
+  "theorem": "(R3) spectral-propinquity route to the continuum limit",
+  "metric_spectral_triple": {
+    "distances": [
+      0,
+      1,
+      2
+    ],
+    "offdiag_distribution": {
+      "1": 480,
+      "2": 1080
+    },
+    "axioms_ok": true
+  },
+  "spectral_action_moments": {
+    "M0_dimHF": 440,
+    "M1_TrDF2": 1920,
+    "M2_TrDF4": 16320
+  },
+  "reduction": "spectral action is continuous for Latremoliere's spectral propinquity; R3 reduces to propinquity convergence of the edgewise tower",
+  "sources": [
+    "arXiv:2112.11000 (Latremoliere, Math. Ann. 2023)",
+    "arXiv:2005.08544 (Connes-van Suijlekom truncations)",
+    "arXiv:2504.11715 (propinquity continuity, paths of metrics, 2025)"
+  ]
+}
