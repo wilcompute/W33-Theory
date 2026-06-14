@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""BT1014: paper-build workflow verification probe."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+def main() -> None:
+    out = {
+        "theorem": "BT1014 paper-build workflow status probe",
+        "workflow": ".github/workflows/paper-build.yml",
+        "checked_commit": "148f28d81f55f567b99669830ed3610de6813a30",
+        "connector_combined_status_count": 0,
+        "connector_workflow_run_count": 0,
+        "expected_outputs": ["w33_paper.pdf", "photonic_holonet.pdf"],
+        "expected_integrators": [
+            "tools/integrate_bt990_r3_fat_tower_w33.py",
+            "tools/integrate_bt990_r3_fat_tower_holonet.py",
+            "tools/integrate_bt996_r3_edgewise_hodge_stack_w33.py",
+            "tools/integrate_bt996_holonet_edgewise_hodge.py"
+        ],
+        "reading": "The paper-build workflow is committed, but the connector surfaced no run/status for the checked commit. Build verification requires Actions UI/CLI access."
+    }
+    Path("data").mkdir(exist_ok=True)
+    Path("data/bt1014_paper_build_workflow_status_probe.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print(json.dumps(out, indent=2))
+
+
+if __name__ == "__main__":
+    main()
