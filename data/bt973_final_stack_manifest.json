@@ -1,0 +1,9 @@
+{
+  "theorem": "BT973 final stack manifest",
+  "status": "BT973 theorem insert and integrator committed; existing BT970 wrapper should be extended locally with tools/integrate_bt973_rail_generation_phase_w33.py",
+  "bt973_integrator": "tools/integrate_bt973_rail_generation_phase_w33.py",
+  "paper_target": "w33_paper.tex",
+  "compile_workflow": ".github/workflows/build-final-papers.yml",
+  "boundary": "The connector blocked direct wrapper overwrite/new-runner payloads. The theorem insert, integrator, workflow, and manifest are committed; update the local stack runner to include the BT973 integrator before final compile.",
+  "checks": {"T1_BT973_insert_committed": true, "T2_BT973_integrator_committed": true, "T3_workflow_present": true, "T4_wrapper_update_boundary_recorded": true, "T5_compile_boundary_explicit": true}
+}
