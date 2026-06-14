@@ -1,0 +1,47 @@
+name: Build final selector papers
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'paper/**'
+      - 'tools/**'
+      - '.github/workflows/build-final-papers.yml'
+
+jobs:
+  build-papers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk
+
+      - name: Apply final selector stack and compile
+        run: |
+          python tools/bt960_execute_final_selector_stack.py
+          test -f data/bt970_final_selector_stack_execution_manifest.json || test -f data/bt960_final_selector_stack_execution_manifest.json
+
+      - name: Collect build outputs
+        if: always()
+        run: |
+          mkdir -p build_artifacts
+          cp -f w33_paper.pdf build_artifacts/ 2>/dev/null || true
+          cp -f photonic_holonet.pdf build_artifacts/ 2>/dev/null || true
+          cp -f *.log build_artifacts/ 2>/dev/null || true
+          cp -f data/bt970_final_selector_stack_execution_manifest.json build_artifacts/ 2>/dev/null || true
+          cp -f data/bt960_final_selector_stack_execution_manifest.json build_artifacts/ 2>/dev/null || true
+          sha256sum build_artifacts/* > build_artifacts/SHA256SUMS.txt 2>/dev/null || true
+
+      - name: Upload paper artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-selector-papers
+          path: build_artifacts
+          if-no-files-found: warn
