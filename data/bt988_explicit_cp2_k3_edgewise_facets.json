@@ -1,0 +1,33 @@
+{
+  "theorem": "BT988 explicit CP2_9/K3_16 facets loaded into edgewise R3 path",
+  "source_module": "exploration/w33_explicit_curved_4d_complexes.py",
+  "seeds": [
+    {
+      "name": "CP2_9",
+      "explicit_facets_loaded": true,
+      "facet_count": 36,
+      "sample_facets": [[1, 2, 3, 8, 9], [1, 2, 4, 5, 6], [1, 2, 4, 5, 9], [1, 2, 4, 6, 7], [1, 2, 5, 8, 9]],
+      "f_vector": [9, 36, 84, 90, 36],
+      "betti_numbers": [1, 0, 1, 0, 1],
+      "euler_characteristic": 3,
+      "edgewise_level1_vertices": 45,
+      "edgewise_top_multiplier_per_step": 16,
+      "edgewise_top_4simplices_by_level": [36, 576, 9216, 147456, 2359296, 37748736, 603979776],
+      "barycentric_top_4simplices_by_level": [36, 4320, 518400, 62208000, 7464960000, 895795200000, 107495424000000]
+    },
+    {
+      "name": "K3_16",
+      "explicit_facets_loaded": true,
+      "facet_count": 288,
+      "sample_facets": [[1, 2, 3, 8, 12], [1, 2, 3, 9, 15], [1, 2, 3, 10, 13], [1, 2, 4, 8, 15], [1, 2, 4, 10, 12]],
+      "f_vector": [16, 120, 560, 720, 288],
+      "betti_numbers": [1, 0, 22, 0, 1],
+      "euler_characteristic": 24,
+      "edgewise_level1_vertices": 136,
+      "edgewise_top_multiplier_per_step": 16,
+      "edgewise_top_4simplices_by_level": [288, 4608, 73728, 1179648, 18874368, 301989888, 4831838208],
+      "barycentric_top_4simplices_by_level": [288, 34560, 4147200, 497664000, 59719680000, 7166361600000, 859963392000000]
+    }
+  ],
+  "boundary": "Explicit seed facets are loaded. Full edgewise lower-incidence matrices still require the local 4-simplex edgewise facet template; no incidence data is fabricated."
+}
