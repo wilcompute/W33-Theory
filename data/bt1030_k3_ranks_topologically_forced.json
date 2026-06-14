@@ -1,0 +1,53 @@
+{
+  "K3_16 level-2": {
+    "f": [
+      2776,
+      45120,
+      152960,
+      184320,
+      73728
+    ],
+    "betti": [
+      1,
+      0,
+      22,
+      0,
+      1
+    ],
+    "forced_ranks": {
+      "1": 2775,
+      "2": 42345,
+      "3": 110593,
+      "4": 73727
+    },
+    "euler": 24,
+    "euler_from_betti": 24,
+    "matches_agent_targets": true
+  },
+  "CP2_9 level-2": {
+    "f": [
+      459,
+      5976,
+      19344,
+      23040,
+      9216
+    ],
+    "betti": [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "forced_ranks": {
+      "1": 458,
+      "2": 5518,
+      "3": 13825,
+      "4": 9215
+    },
+    "euler": 3,
+    "euler_from_betti": 3,
+    "matches_agent_targets": null
+  },
+  "reading": "K3 level-2 boundary ranks are topologically forced (de Rham/Dodziuk); the exact middle-rank grind is a validity check, not convergence data. R3's quantity is the massive-spectrum Seeley-DeWitt a_2 ~ (1/6) int R."
+}
