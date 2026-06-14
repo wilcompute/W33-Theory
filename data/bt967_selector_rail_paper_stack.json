@@ -1,0 +1,14 @@
+{
+  "theorem": "BT967 selector rail theorem paper stack",
+  "status": "w33 theorem insert plus Holonet pointer committed",
+  "w33_theorem_insert": "paper/BT967_selector_rail_theorem_insert.tex",
+  "w33_integrator": "tools/integrate_bt967_selector_rails_w33.py",
+  "holonet_pointer": "paper/BT967_holonet_selector_rail_pointer.tex",
+  "holonet_integrator": "tools/integrate_bt967_holonet_selector_rails.py",
+  "final_selector": [[3,68], [4,42], [38,65], [90,144]],
+  "rail_support_sums": [12,12,14,22],
+  "phase_scores": [16,16,19,27],
+  "prefix_to_rail": {"0":1, "10":0, "110":2, "111":3},
+  "dynamic_preservation_status": "pending executable lane-action maps from BT965 contract",
+  "checks": {"T1_w33_insert_committed": true, "T2_w33_integrator_committed": true, "T3_holonet_pointer_committed": true, "T4_holonet_integrator_committed": true, "T5_dynamic_boundary_recorded": true}
+}
