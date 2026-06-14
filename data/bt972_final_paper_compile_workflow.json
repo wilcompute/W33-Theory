@@ -1,0 +1,11 @@
+{
+  "theorem": "BT972 final paper compile workflow",
+  "status": "GitHub Actions workflow committed for full selector-stack paper compilation",
+  "workflow": ".github/workflows/build-final-papers.yml",
+  "entrypoint": "tools/bt960_execute_final_selector_stack.py",
+  "papers": ["w33_paper.tex", "photonic_holonet.tex"],
+  "artifacts": ["w33_paper.pdf", "photonic_holonet.pdf", "logs", "selector stack manifest", "SHA256SUMS.txt"],
+  "trigger": ["workflow_dispatch", "push on paper/tools/workflow paths"],
+  "boundary": "Workflow is committed; this connector pass did not fetch a completed run artifact.",
+  "checks": {"T1_workflow_committed": true, "T2_w33_target_included": true, "T3_holonet_target_included": true, "T4_artifacts_declared": true, "T5_run_artifact_boundary_explicit": true}
+}
