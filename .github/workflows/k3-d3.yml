@@ -1,0 +1,25 @@
+name: K3 D3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  k3-d3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip numpy scipy
+      - name: Record manifest
+        run: python analysis/bt1027_k3_third_boundary_runner.py --block-size 512
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: k3-d3-data
+          path: data/bt1027_k3_third_boundary_runner.json
+          if-no-files-found: error
