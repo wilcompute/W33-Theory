@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1021 real K3 level-2 degree-2 incidence shard",
+  "map": "degree_2",
+  "rows": 45120,
+  "cols": 152960,
+  "nnz": 458880,
+  "target_rank": 42345,
+  "expected_f_vector": [2776, 45120, 152960, 184320, 73728],
+  "window_start": 0,
+  "window_count": 64,
+  "real_incidence": true,
+  "status": "bounded real edge-triangle incidence shard generated from the actual K3 level-2 edgewise complex"
+}
