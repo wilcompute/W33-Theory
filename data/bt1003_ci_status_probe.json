@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1003 CI status probe for R3 edgewise workflow",
+  "workflow": ".github/workflows/r3-edgewise-fat-tower.yml",
+  "checked_commit": "12cadf5d49b6bc66bc167e65c57ee42bc5804891",
+  "connector_combined_status_count": 0,
+  "connector_workflow_run_count": 0,
+  "reading": "The GitHub connector did not surface a workflow run or legacy status for the checked commit. The workflow file is committed; next verification should use the Actions UI or GitHub CLI with Actions read access."
+}
