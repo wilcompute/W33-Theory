@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1027 K3 level-2 third boundary full-rank runner",
+  "map": "third_boundary",
+  "shape": [152960, 184320],
+  "nnz": 737280,
+  "target_rank": 110593,
+  "block_size": 512,
+  "manual_command": "python analysis/bt1027_k3_third_boundary_runner.py --execute --block-size 512",
+  "workflow": ".github/workflows/k3-d3.yml",
+  "boundary": "Manifest mode committed. Full all-row execution requires manual workflow dispatch or checkout run; no full-rank result is claimed here."
+}
