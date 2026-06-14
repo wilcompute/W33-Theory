@@ -1,0 +1,9 @@
+{
+  "theorem": "BT942 selector paper patch",
+  "status": "appendix source and idempotent integrator committed; root W36_PAPER.tex not directly overwritten in this connector pass",
+  "appendix_source": "paper/BT942_e8_selector_appendix.tex",
+  "integrator": "tools/integrate_bt942_selector_appendix.py",
+  "target": "W36_PAPER.tex before end{document}",
+  "summary": "Adds a concise status appendix for BT924-BT941: SNF rank-eight sector, canonical mod-2 bilinear form, vertex and tetracode metric witnesses, basis-dependent maps, support selector candidate, tetracode monomial symmetry, and remaining canonicality proof obligations.",
+  "checks": {"T1_appendix_source_committed": true, "T2_integrator_committed": true, "T3_status_boundary_explicit": true, "T4_canonicality_not_overclaimed": true, "T5_root_patch_available_idempotently": true}
+}
