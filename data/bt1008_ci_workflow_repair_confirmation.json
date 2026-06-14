@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1008 CI workflow repair and confirmation",
+  "workflow": ".github/workflows/r3-edgewise-fat-tower.yml",
+  "updated_commit": "a2fc0b2ca7b5be846700413e81dfb5aab5df010a",
+  "repair_applied": [
+    "added BT1003 CI status probe smoke script",
+    "added BT1006 K3 level-2 endpoint rank smoke script",
+    "added BT1007 K3 heat checkpoint smoke script",
+    "added BT1003/BT1006/BT1007 JSON artifacts to upload list"
+  ],
+  "connector_status": "workflow run/status still not surfaced through the connector",
+  "boundary": "TeX package installation was not patched through the connector; the workflow retains BT999 behavior and builds PDFs only when latexmk is available.",
+  "reading": "The workflow now tracks the latest R3 edgewise artifacts and smoke scripts. Final CI success/failure still needs Actions UI or CLI confirmation."
+}
