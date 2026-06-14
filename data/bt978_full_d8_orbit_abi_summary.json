@@ -1,0 +1,10 @@
+{
+  "theorem": "BT978 full-D8-compatible orbit ABI summary",
+  "script": "analysis/bt978_full_d8_orbit_abi.py",
+  "status": "full D8 covariance recovered by orbit-valued ABI",
+  "lane_orbit": "all four lanes",
+  "full_D8_covariant": true,
+  "tradeoff": "full D8 covariance uses one four-lane orbit, not a fixed 2+2 split",
+  "operational_reading": "roles must be transported as tags; fixed lane family labels are not full-D8 invariant",
+  "checks": {"T1_single_orbit_all_four_lanes": true, "T2_each_role_orbit_all_lanes": true, "T3_full_D8_covariant": true, "T4_partition_tradeoff_recorded": true, "T5_role_tag_boundary_explicit": true}
+}
