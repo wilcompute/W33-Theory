@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "tower": "edgewise/Freudenthal-Kuhn k=2",
+  "dimension": 4,
+  "top_simplex_multiplier_per_step": 16,
+  "old_barycentric_top_multiplier_per_step": 120,
+  "shape_regular_tower": true,
+  "seeds": [
+    {
+      "name": "CP2_9",
+      "vertices": 9,
+      "f_vector": [9, 36, 84, 90, 36],
+      "euler_characteristic": 3,
+      "top_simplex_multiplier_per_step": 16,
+      "shape_regular_tower": true,
+      "levels": [
+        {"level": 0, "edgewise_top_4simplices": 36, "mesh_width_scale": "2^-0"},
+        {"level": 1, "edgewise_top_4simplices": 576, "mesh_width_scale": "2^-1"},
+        {"level": 2, "edgewise_top_4simplices": 9216, "mesh_width_scale": "2^-2"},
+        {"level": 3, "edgewise_top_4simplices": 147456, "mesh_width_scale": "2^-3"},
+        {"level": 4, "edgewise_top_4simplices": 2359296, "mesh_width_scale": "2^-4"},
+        {"level": 5, "edgewise_top_4simplices": 37748736, "mesh_width_scale": "2^-5"},
+        {"level": 6, "edgewise_top_4simplices": 603979776, "mesh_width_scale": "2^-6"}
+      ]
+    },
+    {
+      "name": "K3_16",
+      "vertices": 16,
+      "f_vector": [16, 120, 560, 720, 288],
+      "euler_characteristic": 24,
+      "top_simplex_multiplier_per_step": 16,
+      "shape_regular_tower": true,
+      "levels": [
+        {"level": 0, "edgewise_top_4simplices": 288, "mesh_width_scale": "2^-0"},
+        {"level": 1, "edgewise_top_4simplices": 4608, "mesh_width_scale": "2^-1"},
+        {"level": 2, "edgewise_top_4simplices": 73728, "mesh_width_scale": "2^-2"},
+        {"level": 3, "edgewise_top_4simplices": 1179648, "mesh_width_scale": "2^-3"},
+        {"level": 4, "edgewise_top_4simplices": 18874368, "mesh_width_scale": "2^-4"},
+        {"level": 5, "edgewise_top_4simplices": 301989888, "mesh_width_scale": "2^-5"},
+        {"level": 6, "edgewise_top_4simplices": 4831838208, "mesh_width_scale": "2^-6"}
+      ]
+    }
+  ],
+  "density_warning": "Do not reuse barycentric density constants such as 120/19 or 860/19 for R3. Edgewise top growth is 16^r and lower-dimensional incidence densities must be recomputed from explicit CP2_9/K3_16 facets.",
+  "bridge_verdict": "This is the theorem-carrier replacement for the curved external tower: edgewise refinement preserves shape-regularity, has mesh width 2^-r, and reduces top-dimensional growth by a factor (120/16)^r relative to the old barycentric tower."
+}
