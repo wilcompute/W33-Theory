@@ -1,0 +1,46 @@
+% BT942 — E8 selector appendix patch
+% Include or paste into W36_PAPER.tex near the binary-code / E8-lift discussion.
+
+\subsection{Integral E8 selector status (BT924--BT941)}\label{subsec:bt942-e8-selector}
+
+The integral E8 lift has now been separated into three layers.  First, the
+integer Smith form of the W(3,3) adjacency matrix locates the rank-eight shadow:
+\[
+  \mathrm{SNF}_{\mathbb Z}(A)=\operatorname{diag}(1^{16},2^8,8^{15},24),
+\]
+so the eight elementary divisors equal to 2 give the valuation-one E8 sector.
+Second, on
+\[
+  H=\ker(A_2)/\operatorname{im}(A_2)
+\]
+the divided form
+\[
+  B(x,y)=\frac{x^T A y}{2}\pmod 2
+\]
+is well-defined, nondegenerate, and alternating.  Thus the chain shadow is a
+rank-eight symplectic space of the same mod-2 bilinear type as E8/2E8.  The
+edge-parity expression \((x^T A x)/2\) vanishes on H; it is not a quadratic
+refinement of B and gives no Arf invariant selector.
+
+Third, two metric witnesses are now linked to this chain shadow.  A vertex
+Cartan witness has Gram \(G=2I-A_{\rm sub}\), determinant 1, even diagonal, and
+positive spectrum.  Independently, the W33 tetracode glue construction gives a
+240-root E8 system from four A2 planes plus the ternary tetracode.  Explicit
+basis-dependent maps identify the chain shadow mod 2 with both metric witnesses
+and lift to determinant-one positive-definite integral Gram matrices.
+
+The remaining selector problem is not existence but canonicality.  Random basis
+stress tests show that positivity and unimodularity are too robust to select a
+unique map.  The current candidate selector minimizes chain support and then
+support spread, while requiring compatibility with both the vertex and tetracode
+E8 witnesses.  The best certificate currently recorded is
+\[
+  [6,6,6,10,10,10,14,14],\qquad \sum=76,
+\]
+but global minimality and uniqueness are not yet proved.  The tetracode block
+symmetry contributes a nontrivial monomial group of order 48.  Its block
+permutation quotient is S4 of order 24, while the scalar/A2-plane part still
+requires a genuine chain-complex lift.  Consequently the present theorem is a
+status theorem: the integral E8 lift exists in compatible chain, vertex, and
+ternary-tetracode gauges; the canonical selector remains open pending an
+exhaustive support-minimal search and a full tetracode symmetry action on H.
