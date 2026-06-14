@@ -1,0 +1,43 @@
+{
+  "theorem": "BT1001 full-degree heat-supertrace estimator stack",
+  "method": "all-degree sparse heat trace estimation with expm_multiply and random sign probes",
+  "default_probes": 8,
+  "t_values": [0.01, 0.05, 0.1, 1.0],
+  "certified_baseline": {
+    "CP2_9": {
+      "degrees": [0, 1, 2, 3, 4],
+      "chain_dimensions": [45, 414, 1236, 1440, 576],
+      "betti": [1, 0, 1, 0, 1],
+      "chi": 3,
+      "status": "all-degree exact supertrace endpoint certified; low-mode pilot available from BT995"
+    },
+    "K3_16": {
+      "degrees": [0, 1, 2, 3, 4],
+      "chain_dimensions": [136, 2640, 9440, 11520, 4608],
+      "betti": [1, 0, 22, 0, 1],
+      "chi": 24,
+      "status": "middle-degree production estimator implemented in BT997; all-degree estimator interface added here"
+    }
+  },
+  "exact_supertrace_targets": {
+    "CP2_9": {"0.01": 3, "0.05": 3, "0.1": 3, "1.0": 3},
+    "K3_16": {"0.01": 24, "0.05": 24, "0.1": 24, "1.0": 24}
+  },
+  "large_time_degreewise_limits": {
+    "CP2_9": [1, 0, 1, 0, 1],
+    "K3_16": [1, 0, 22, 0, 1]
+  },
+  "k3_middle_degree_bt997_estimates": {
+    "0.01": 8730.448450900843,
+    "0.05": 6517.153579984,
+    "0.1": 4689.188846613879,
+    "1.0": 315.2835608902251
+  },
+  "production_plan": [
+    "run CP2_9 all degrees as a fast estimator validation",
+    "run K3_16 degrees 0,1,3,4 next",
+    "combine with BT997 degree-2 estimates",
+    "check alternating sum against chi at each t"
+  ],
+  "reading": "BT1001 promotes BT997 into an all-degree estimator stack with exact supertrace targets and large-time harmonic endpoints."
+}
