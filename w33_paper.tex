@@ -9717,6 +9717,26 @@ residual of a different kind from R1 and R2, both of which were closed by
 finite computations above: it is a problem in analysis, not a computation.
 \end{proposition}
 
+\begin{remark}[A shape-regular tower reduces the curvature half to a theorem]
+\label{rem:fat-tower}
+The convergence tools above carry a \emph{fatness} (shape-regularity)
+hypothesis, and the choice of refinement is not innocent. The
+\emph{barycentric} tower fails it: its minimal angle halves at each step
+(numerically $60^\circ\!\to\!30^\circ\!\to\!13.9^\circ\!\to\!6.3^\circ\!\to\!
+2.9^\circ\!\to\!1.3^\circ$ in two dimensions), so Cheeger--M\"uller--Schrader
+and Dodziuk--Patodi do \emph{not} apply to it. The \emph{edgewise}
+(Freudenthal--Kuhn) tower is shape-regular --- fatness bounded below
+independently of the level (minimal angle constant) --- and on it both
+theorems apply. Since the Einstein--Hilbert term is the $a_2$ coefficient
+$\propto\int R\sqrt g$ whose piecewise-flat incarnation is exactly the Regge
+deficit-angle action (the $n=2$ Lipschitz--Killing curvature), its convergence
+on the fat tower \emph{is} the Cheeger--M\"uller--Schrader theorem. The
+residual then narrows to one analytic step --- interchanging the short-time
+heat-kernel limit (which produces $a_2$) with the refinement limit, which the
+geometric/Regge route bypasses entirely. (Witness:
+\texttt{analysis/bt983\_refinement\_fatness\_obstruction.py}.)
+\end{remark}
+
 \begin{theorem}[Completeness boundary of the substrate theory]
 \label{thm:completeness-boundary}
 The exact finite kernel of the $W(3,3)$ substrate theory --- the two-qutrit
@@ -9767,11 +9787,13 @@ continuum limit) as the sole genuine open frontier:
         Proposition~\ref{prop:r3-residual} every \emph{finite} ingredient is an
         exact $W(3,3)$ invariant (gravity coefficient $\dim H_F=440$; matter
         couplings $\{1920,16320\}$), and the almost-commutative bridge to
-        curved $4$D seeds ($\mathrm{CP}^2_9,K3_{16}$) is explicit; the sole
-        open is the analytic convergence of the refinement-tower spectral
-        action to the continuum Einstein--Hilbert action --- a
-        discrete-to-continuum limit theorem, not a finite computation, and the
-        one residual not closable by the methods that settled R1 and R2.
+        curved $4$D seeds ($\mathrm{CP}^2_9,K3_{16}$) is explicit. By
+        Remark~\ref{rem:fat-tower} the gravitational (curvature) half is, on a
+        \emph{shape-regular} edgewise tower, the Cheeger--M\"uller--Schrader
+        theorem; the residual narrows to the spectral short-time
+        $\leftrightarrow$ refinement limit-interchange --- still a problem in
+        analysis, not a finite computation, and the one residual not closable
+        by the methods that settled R1 and R2.
 \end{enumerate}
 With R1 resolved (the canonical lift is $E_8$) and R2's datum supplied, the
 substrate theory is complete down to a \emph{single} genuine open frontier:

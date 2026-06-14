@@ -1,0 +1,22 @@
+{
+  "theorem": "(R3) refinement-fatness obstruction + edgewise fix",
+  "barycentric_min_angle_by_level": [
+    60.0,
+    30.0,
+    13.8979,
+    6.3088,
+    2.8512,
+    1.2874
+  ],
+  "edgewise_min_angle_by_level": [
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0
+  ],
+  "barycentric_collapses": true,
+  "edgewise_shape_regular": true,
+  "reading": "barycentric tower fails CMS/Dodziuk-Patodi fatness; edgewise/Freudenthal-Kuhn tower satisfies it, reducing the EH (a_2 ~ int R = Regge) convergence to CMS."
+}

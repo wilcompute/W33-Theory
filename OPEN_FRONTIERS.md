@@ -133,6 +133,18 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   NOT closable by the methods that cracked R1/R2). Do not fabricate a
   continuum proof. The finite theory is complete; this is the sole analytic
   frontier.
+  ADVANCE (bt983_refinement_fatness_obstruction.py; w33_paper.tex Remark "A
+  shape-regular tower..."): CORRECTION — the BARYCENTRIC tower VIOLATES the
+  fatness hypothesis of CMS/Dodziuk-Patodi (min angle collapses
+  60->30->13.9->6.3->2.9->1.3 deg in 2D, verified), so those theorems do NOT
+  apply to it. FIX: the EDGEWISE (Freudenthal-Kuhn) tower is shape-regular
+  (min angle constant 60deg, fatness bounded indep of level) -> CMS/DP DO
+  apply. Since EH = a2 ~ int R = the Regge deficit-angle action, the gravity
+  (curvature) convergence on the fat tower IS the Cheeger-Mueller-Schrader
+  theorem. Residual narrows to ONE analytic step: the spectral-action
+  short-time<->refinement limit-interchange (bypassed by the geometric/Regge
+  route). NEXT: redo the CP2_9/K3_16 program on the edgewise (not barycentric)
+  tower.
 
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
