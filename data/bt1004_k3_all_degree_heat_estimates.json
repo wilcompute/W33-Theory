@@ -1,0 +1,21 @@
+{
+  "theorem": "BT1004 K3_16 all-degree heat trace estimates",
+  "complex": "K3_16 level-1 edgewise Hodge stack",
+  "method": "random sign trace estimation with scipy expm_multiply",
+  "probes_per_degree": 4,
+  "ordinary_heat_trace_estimates_by_degree": {
+    "0": {"0.01": 93.49825997525843, "0.05": 23.828572098032808, "0.1": 8.862118256082157, "1.0": 0.6323630057508847},
+    "1": {"0.01": 2332.715712278456, "0.05": 1509.4397257089238, "0.1": 944.3979080560184, "1.0": 31.888104091591273},
+    "2": {"0.01": 8732.962310204446, "0.05": 6516.706282971161, "0.1": 4683.469829532396, "1.0": 298.585644407897},
+    "3": {"0.01": 10853.78321014873, "0.05": 8620.61047497486, "0.1": 6611.008956638205, "1.0": 472.82647830085045},
+    "4": {"0.01": 4383.753309581125, "0.05": 3611.059094255581, "0.1": 2870.4673023887685, "1.0": 225.7236956538722}
+  },
+  "alternating_supertrace_check": {
+    "0.01": {"estimate": 23.714957333644207, "standard_error": 5.642930898887824, "target": 24, "z_error": -0.05051322999754829},
+    "0.05": {"estimate": 21.54374864099198, "standard_error": 12.8475079397478, "target": 24, "z_error": -0.19118504308596976},
+    "0.1": {"estimate": 7.392385483023462, "standard_error": 13.745658784636523, "target": 24, "z_error": -1.2082079714897924},
+    "1.0": {"estimate": 20.227120675078364, "standard_error": 7.256123494496646, "target": 24, "z_error": -0.5199579813909105}
+  },
+  "target_chi": 24,
+  "reading": "All five K3_16 level-1 Hodge degrees now have sparse ordinary heat trace estimates; the alternating supertrace lands within estimator error of chi=24 at sampled t-values."
+}
