@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1121 phase-transfer Yukawa diagnostic",
+  "theta": "symbolic or numeric phase supplied by reservoir ledger",
+  "reservoir_weight_map": "w_g=1+epsilon cos(theta+2*pi*g/3)",
+  "yukawa_sqrt_map": "sqrt(y_g)=A(1+sqrt(2) cos(theta+2*pi*g/3))",
+  "koide_Q": "2/3 exactly for the phase-transfer square-root vector",
+  "avoids_BT1113_obstruction": true,
+  "fit_claim": false,
+  "boundary": "diagnostic map only; no charged-lepton mass fit"
+}
