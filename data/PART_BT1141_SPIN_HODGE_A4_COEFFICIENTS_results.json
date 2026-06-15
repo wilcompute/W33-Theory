@@ -1,0 +1,52 @@
+{
+  "bt": 1141,
+  "title": "Spin and Hodge ordinary-trace a4 coefficients on Ricci-flat K3",
+  "formula": "a4 = K_norm*(2*r + 30*omega + 180*e2)/720, K_norm=24",
+  "lanes": {
+    "corpus_curvature_norm": {
+      "rank": null,
+      "omega": null,
+      "e2": null,
+      "a4": "24",
+      "product_C4": "18720",
+      "role": "topological curvature normalization, not an operator heat coefficient"
+    },
+    "scalar_positive_laplacian": {
+      "rank": 1,
+      "omega": "0",
+      "e2": "0",
+      "a4": "1/15",
+      "product_C4": "122408/15",
+      "role": "scalar Laplace-Beltrami heat coefficient"
+    },
+    "spin_dirac_square": {
+      "rank": 4,
+      "omega": "-1/2",
+      "e2": "0",
+      "a4": "-7/30",
+      "product_C4": "24172/3",
+      "role": "complex spin bundle, Lichnerowicz E=R/4 vanishes when Ricci-flat"
+    },
+    "hodge_all_forms_ordinary_trace": {
+      "rank": 16,
+      "omega": "-4",
+      "e2": "1",
+      "a4": "46/15",
+      "product_C4": "28528/3",
+      "role": "ordinary trace over all forms; Euler supertrace deliberately excluded"
+    }
+  },
+  "substrate_closure": {
+    "corpus_C4": "18720",
+    "corpus_identity": "240*6*13=18720"
+  },
+  "checks": {
+    "scalar_a4": true,
+    "spin_a4": true,
+    "hodge_a4": true,
+    "corpus_C4": true,
+    "spin_product_C4": true,
+    "hodge_product_C4": true,
+    "all_checks_pass": true
+  }
+}
