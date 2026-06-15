@@ -1,0 +1,25 @@
+{
+  "theorem": "BT1120 K3 spectral-action result envelope",
+  "valid": true,
+  "errors": [],
+  "input_result": {
+    "operator_convention": "sample_fixture_spin_dirac_square_placeholder",
+    "metric_source": "sample_fixture_not_a_computed_k3_metric",
+    "volume_normalization": "unit_volume_placeholder",
+    "A0": {"value": 1.0, "status": "placeholder"},
+    "A2": {"value": 0.0, "status": "placeholder_ricci_flat_limit_style"},
+    "A4": {"value": null, "status": "not_computed"},
+    "curvature_convention": "must be supplied by real compute lane; placeholder fixture only",
+    "refinement_h": null,
+    "topological_checks": {"chi": 24, "signature": -16, "b2": 22, "intersection_signature": "(3,19)"},
+    "physical_claim": false
+  },
+  "finite_w33_prefactors": {
+    "mH2_over_v2": "14/55",
+    "lambda_H": "7/55",
+    "finite_a2_over_a0": "14/3",
+    "finite_a4_over_a2": "55/7"
+  },
+  "done_open_boundary": "finite ratios are seed-independent; K3 result supplies geometric multipliers for gravity scales",
+  "compile_claim": false
+}
