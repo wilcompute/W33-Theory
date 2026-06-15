@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1066 projector-family coefficient constraints",
+  "family": "Q=c0 P0 + c4 P4 + c10 P10 + c16 P16",
+  "S2": "54 c0^2 + 80 c4^2 + 16 c10^2 + 10 c16^2",
+  "S4": "54 c0^4 + 80 c4^4 + 16 c10^4 + 10 c16^4",
+  "M2": "320 c4^2 + 160 c10^2 + 160 c16^2",
+  "physical_96_support_constraint": {"S2": 64, "S4": 64},
+  "generation_fiber_constraint": "c_lambda=C_lambda(ys,yd), ys=alpha+2 beta, yd=alpha-beta",
+  "boundary": "constraints only; coefficients require explicit 96-projector or chain-map derivation"
+}
