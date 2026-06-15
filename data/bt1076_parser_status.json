@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1076 parser status",
+  "current_json_has_indices": false,
+  "current_json_summary": ["22,9,9 grades", "fixed plane size 13", "1+3+8 module profile"],
+  "script_computes_internal_objects": true,
+  "needed_exports": ["selected permutation", "fixed point indices", "neighbour indices", "shell indices", "orbit cycles", "three grade blocks"],
+  "boundary": "inspection only; old script not patched yet"
+}
