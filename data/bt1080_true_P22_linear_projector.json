@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1080 true P22 linear projector",
+  "ambient_dimension": 40,
+  "fixed_indices": [0, 1, 2, 3, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+  "shell_cycles": [[4, 6, 5], [7, 9, 8], [10, 12, 11], [22, 24, 23], [25, 27, 26], [28, 30, 29], [31, 32, 33], [34, 35, 36], [37, 38, 39]],
+  "projector_rule": "fixed indices get identity entries; each 3-cycle gets a 1/3 all-ones average block",
+  "rank": 22,
+  "complement_rank": 18,
+  "idempotent": true,
+  "boundary": "linear Fourier/eigenspace projector on C[40], not a diagonal selector of 22 points"
+}
