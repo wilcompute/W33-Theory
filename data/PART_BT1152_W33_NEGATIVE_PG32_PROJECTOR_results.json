@@ -1,0 +1,1 @@
+{"bt":1152,"w33":{"points":40,"edges":240,"negative_rank":15,"projector_trace":"15"},"pg32_support_module":{"rank":15,"negative_projection_rank":5,"naive_support_bridge_refuted":true},"character_module_refinement":{"boolean_characters_total":16,"nontrivial_characters":15,"completion":"16=1+15"},"all_checks_pass":true}
