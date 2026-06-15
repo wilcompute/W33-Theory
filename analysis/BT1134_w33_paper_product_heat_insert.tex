@@ -1,0 +1,75 @@
+% BT1134 -- Insert for w33_paper.tex near Theorem complete-spectral-action.
+% Heavy mathematical content belongs in w33_paper.tex, not w33_preprint.tex.
+
+\begin{proposition}[Ricci-flat K3 and the finite product heat slot]
+\label{prop:ricci-flat-product-heat-slot}
+Let $M$ be the curved four-dimensional seed and $F$ the finite $W(3,3)$ spectral
+triple.  Write the two heat traces in the normal product form
+\[
+  \Theta_M(t)=A_0t^{-2}+A_2t^{-1}+A_4+O(t),
+\]
+and
+\[
+  \Theta_F(t)=N-F_2t+\frac{F_4}{2}t^2+O(t^3).
+\]
+Then
+\[
+\begin{aligned}
+  \Theta_{M\times F}(t)&=\Theta_M(t)\Theta_F(t) \\
+  &= C_0t^{-2}+C_2t^{-1}+C_4+O(t),
+\end{aligned}
+\]
+with
+\[
+  C_0=A_0N,
+  \qquad
+  C_2=A_2N-A_0F_2,
+  \qquad
+  C_4=A_4N-A_2F_2+\frac{A_0F_4}{2}.
+\]
+For the verified finite $W(3,3)$ Hodge--Dirac square spectrum
+\[
+  D_F^2:\quad 0^{122},\;4^{240},\;10^{48},\;16^{30},
+\]
+one has
+\[
+  N=440,\qquad F_2=1920,\qquad F_4=16320.
+\]
+Thus the almost-commutative coefficients are
+\[
+  C_0=440A_0,\qquad
+  C_2=440A_2-1920A_0,\qquad
+  C_4=440A_4-1920A_2+8160A_0.
+\]
+In particular, for a Ricci-flat $K3$ seed the pure manifold coefficient
+$A_2$ vanishes, but the product coefficient does not:
+\[
+  A_2=0
+  \quad\Longrightarrow\quad
+  C_2=-1920A_0,\qquad C_4=440A_4+8160A_0.
+\]
+Therefore the finite $a_2/a_0$ data in the $W(3,3)$ spectral action is a
+finite-factor moment statement, not a claim that the pure $K3$ heat ratio
+$A_2/A_0$ is nonzero.
+\end{proposition}
+
+\begin{proof}
+Multiply the two asymptotic expansions term by term.  The $t^{-2}$ coefficient
+is $A_0N$.  The $t^{-1}$ coefficient receives the pure-manifold term $A_2N$ and
+the finite second-moment term $-A_0F_2$.  The constant coefficient receives
+$A_4N$, $-A_2F_2$, and $A_0F_4/2$.  The moment extraction from
+$D_F^2=0^{122}\oplus4^{240}\oplus10^{48}\oplus16^{30}$ gives
+\[
+  N=122+240+48+30=440,
+\]
+\[
+  F_2=4\cdot240+10\cdot48+16\cdot30=1920,
+\]
+and
+\[
+  F_4=4^2\cdot240+10^2\cdot48+16^2\cdot30=16320.
+\]
+Substitution gives the displayed product coefficients.  If the seed is
+Ricci-flat $K3$, then $A_2=0$, so the $\Lambda^2$ product slot is filled by the
+finite $W(3,3)$ moment $-A_0F_2$ rather than by scalar curvature of the seed.
+\end{proof}
