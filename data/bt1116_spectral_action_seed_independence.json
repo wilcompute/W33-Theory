@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1116 spectral-action seed-independence boundary",
+  "factorization": "Theta_{M x F}(t)=Theta_M(t) Theta_F(t)",
+  "finite_expansion": "Theta_F(t)=N_F - t Tr(D_F^2) + t^2/2 Tr(D_F^4)-...",
+  "seed_independent": {
+    "reason": "dimensionless ratios at the same heat-kernel order share and cancel the same manifold integral",
+    "ratios": ["m_H^2/v^2=14/55", "lambda_H=7/55", "a2/a0 finite prefactor=14/3", "a4/a2 finite prefactor=55/7"]
+  },
+  "seed_dependent": {
+    "reason": "dimensionful gravity terms carry different manifold integrals",
+    "items": ["Lambda needs a0(M)=volume", "1/G needs a2(M)=integral R"]
+  },
+  "done_open_split": "finite/F ratios are seed-independent and done; gravity scales are K3-seed-dependent and remain quantitative R3 computation",
+  "boundary": "no K3 numerical spectral-action values computed here"
+}
