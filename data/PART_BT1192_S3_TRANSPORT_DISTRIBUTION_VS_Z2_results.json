@@ -1,0 +1,1 @@
+{"bt":1192,"s3_carrier":{"pockets":54,"edges":270,"L_distribution":{"0":17,"1":11,"2":26}},"s3_cocycle":{"distribution":{"0":201,"1":33,"2":36},"nontrivial_edges":69,"unique_shift_generator":"g3"},"z2_carrier":{"vertices":45,"edges":720,"cover_vertices":90},"status":"S3/Z3 is a refinement carrier; direct 720-edge S3 table not yet present","all_checks_pass":true}
