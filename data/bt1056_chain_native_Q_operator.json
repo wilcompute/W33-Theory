@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1056 chain-native scalar slot operator Q",
+  "operator": "Q = Delta_1 / 4",
+  "sector_values": {"0": 0, "4": 1, "10": "5/2", "16": 4},
+  "amplitudes": {"A0": 0, "A4": 1, "A10": "5/2", "A16": 4},
+  "traces": {"tr_240_Phi2": "340 h2", "tr_240_Phi4": "3265 h2^2", "tr_240_Delta1_Phi2": "3880 h2"},
+  "boundary": "chain-native test operator only; not claimed as physical Yukawa/Higgs scalar"
+}
