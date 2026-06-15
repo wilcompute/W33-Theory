@@ -15,7 +15,8 @@ ROWS = [
 "\\input{paper/sections/sec_bt1110_1112_weight_closure_report}\n",
 "\\input{paper/sections/sec_bt1113_1116_weight_coupling_factorization}\n",
 "\\input{paper/sections/sec_bt1117_1119_k3_yukawa_patch_report}\n",
-"\\input{paper/sections/sec_bt1120_1122_k3_yukawa_build_path}\n"
+"\\input{paper/sections/sec_bt1120_1122_k3_yukawa_build_path}\n",
+"\\input{paper/sections/sec_bt1126_1128_mainpaper_fixture_numeric}\n"
 ]
 
 
