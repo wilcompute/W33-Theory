@@ -1,0 +1,53 @@
+{
+  "bt": 1138,
+  "title": "K3 A4 normalization lane for W33 product heat coefficient",
+  "normalization_boundary": "A4_norm is the corpus-normalized Ricci-flat curvature target Integral |Rm|^2/(8*pi^2)=chi(K3)=24, not a completed physical Seeley-DeWitt coefficient with all convention-dependent constants.",
+  "w33_constants": {
+    "q": 3,
+    "q_factorial": 6,
+    "lambda": 2,
+    "mu": 4,
+    "k": 12,
+    "v": 40,
+    "E": 240,
+    "Phi3": 13
+  },
+  "k3_topology": {
+    "chi": 24,
+    "signature": -16,
+    "b2": 22,
+    "intersection_signature": [3, 19]
+  },
+  "finite_moments": {
+    "N": 440,
+    "F2": 1920,
+    "F4_over_2": 8160
+  },
+  "ricci_flat_unit_volume_inputs": {
+    "A0": 1,
+    "A2": 0,
+    "A4_norm": 24
+  },
+  "product_coefficients_normalized": {
+    "C0": 440,
+    "C2": -1920,
+    "C4_norm": 18720
+  },
+  "integer_closure": {
+    "C4_norm": 18720,
+    "C4_norm_over_E": "78",
+    "q_factorial_times_Phi3": 78,
+    "identity": "C4_norm = E*q!*Phi3 = 240*6*13 = 18720"
+  },
+  "checks": {
+    "k3_topology_b2": true,
+    "k3_topology_signature": true,
+    "k3_euler_from_betti": true,
+    "ricci_flat_A2_zero": true,
+    "normalized_A4_equals_chi": true,
+    "C4_norm_value": true,
+    "C4_over_E_is_q_factorial_Phi3": true,
+    "C4_equals_E_qfactorial_Phi3": true,
+    "all_checks_pass": true
+  }
+}
