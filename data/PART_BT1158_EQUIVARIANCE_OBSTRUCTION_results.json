@@ -1,0 +1,1 @@
+{"bt":1158,"spanning_bridge":true,"column_level_mask_equivariance":false,"reason":"feature offsets are mask-dependent; grades are preserved but the chosen columns are not a strict mask-permutation module","grade_counts":{"1":4,"2":6,"3":4,"4":1},"status":"the projected Boolean bridge spans P_minus but equivariance is not proved and should not be claimed","all_checks_pass":true}
