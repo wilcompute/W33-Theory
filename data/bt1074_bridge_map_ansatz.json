@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1074 bridge map ansatz",
+  "slot_split": "162 equals 96 plus 66",
+  "chain_split": "240 equals 96 plus 144",
+  "map": "injective bridge from slot carrier to chain carrier",
+  "unused_chain_dimensions": 78,
+  "boundary": "ansatz only"
+}
