@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1039 one-form span harness for BT1038 candidate",
+  "gauge_route": "horizontal product one-forms [D_M,f] tensor Lie(A_F)",
+  "horizontal_gauge_span_dim": 12,
+  "horizontal_gauge_expected_profile": [1, 3, 8],
+  "horizontal_gauge_expected_total": 12,
+  "gauge_target_hit": true,
+  "finite_route": "vertical finite one-forms gamma_5 tensor [D_F,a]",
+  "higgs_scalar_real_span_dim": 4,
+  "higgs_expected_real_dim": 4,
+  "higgs_target_hit": true,
+  "important_correction": "Do not require [D_F,A_F] alone to yield 1+3+8; finite commutators produce Higgs/scalars while horizontal one-forms produce gauge fields.",
+  "status": "module-level gauge span and Higgs doublet span pass for the BT1038 block candidate; first-order condition still needs explicit J and D_F matrices"
+}
