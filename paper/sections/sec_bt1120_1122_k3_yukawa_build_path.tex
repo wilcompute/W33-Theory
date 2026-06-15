@@ -1,0 +1,12 @@
+\section{BT1120--BT1122 K3 Interface, Phase Transfer, and Build Path}
+\label{sec:bt1120-bt1122-k3-yukawa-build-path}
+
+The K3 spectral-action lane now has an explicit interface.  A valid K3 result must report the operator convention, metric source, volume normalization, $A_0$, $A_2$, $A_4$, curvature convention, refinement parameter, and the topological checks $\chi=24$, $\sigma=-16$, $b_2=22$, and intersection signature $(3,19)$.  The finite W33 prefactors $14/55$, $7/55$, $14/3$, and $55/7$ are attached as seed-independent multipliers rather than recomputed.
+
+The generation-to-Yukawa route is also separated from the reservoir projector amplitude.  The preferred diagnostic is the phase-transfer map
+\[
+\sqrt{y_g}=A\left(1+\sqrt2\cos\left(\theta+\frac{2\pi g}{3}\right)\right),
+\]
+where the reservoir weights provide the phase/order data and the Koide radius $\sqrt2$ supplies the square-root Yukawa amplitude.  This avoids the naive BT1113 obstruction.
+
+Finally, the build path now runs the small BT1119 patch helpers before sanity checks and TeX compilation.  This keeps source integration idempotent without replacing large TeX files wholesale.
