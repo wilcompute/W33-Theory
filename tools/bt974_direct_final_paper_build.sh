@@ -12,9 +12,13 @@ python tools/integrate_bt952_exact_selector_w33.py
 python tools/integrate_bt957_final_selector_w33.py
 python tools/integrate_bt967_selector_rails_w33.py
 python tools/integrate_bt973_rail_generation_phase_w33.py
+python tools/integrate_bt1134_w33_paper.py
 python tools/integrate_bt949_holonet_w33_crossref.py
 python tools/integrate_bt958_holonet_final_selector_pointer.py
 python tools/integrate_bt967_holonet_selector_rails.py
+python tools/integrate_bt1136_holonet_product_heat_pointer.py
+
+python -m pytest -q tests/test_bt1133_finite_heat_moments.py
 
 pdflatex -interaction=nonstopmode w33_paper.tex
 pdflatex -interaction=nonstopmode w33_paper.tex
