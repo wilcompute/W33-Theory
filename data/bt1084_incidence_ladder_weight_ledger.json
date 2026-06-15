@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1084 incidence ladder operator choice",
+  "chosen_operator": "line-edge adjacency on C1",
+  "projected_ranks": {"0_to_4": 31, "4_to_10": 24, "10_to_16": 15},
+  "gaps": {"0_4": 1, "4_10": "3/2", "10_16": "3/2"},
+  "oriented_gap_square_ledger": "475/2",
+  "oriented_unsigned_gap_ledger": 179,
+  "triangle_edge_gap_square_ledger": "485/2",
+  "reason": "line-edge adjacency has full last-step ranks and lower gap-square cost than triangle-edge adjacency",
+  "boundary": "operator choice by rank/cost, not physical identification"
+}
