@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""BT1126 paper build handoff.
+"""BT1128 paper build handoff.
 
 Runs the safe patch helpers, then the no-network sanity check/report, and finally
 tries to compile/check the main W33 paper and photonic holonet sources.
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def run(cmd: list[str], cwd: Path) -> None:
-    print(f"[bt1126] cwd={cwd} :: {' '.join(cmd)}")
+    print(f"[bt1128] cwd={cwd} :: {' '.join(cmd)}")
     subprocess.run(cmd, cwd=str(cwd), check=True)
 
 
@@ -31,6 +31,7 @@ def compile_tex(tex: str, cwd: Path) -> None:
 def main() -> None:
     run(["python", "tools/bt1119_patch_w33_sections.py"], ROOT)
     run(["python", "tools/bt1119_patch_holonet_sections.py"], ROOT)
+    run(["python", "tools/bt1128_patch_holonet_latest_section.py"], ROOT)
     run(["python", "tools/bt1106_emit_section_report.py"], ROOT)
     run(["python", "tools/bt1100_tex_path_sanity.py"], ROOT)
     compile_tex("w33_paper.tex", ROOT)
