@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1060 chain-native Q sanity checks",
+  "operator": "Q = Delta_1 / 4",
+  "commutes_with": ["Delta_1", "P0", "P4", "P10", "P16"],
+  "sector_values": {"0": 0, "4": 1, "10": "5/2", "16": 4},
+  "projection_average_rule": "A_lambda = lambda / 4",
+  "blocked_commutator": "[Q,rho(A_F)] is not a single-space matrix until rho(A_F) is lifted to the 240-chain carrier",
+  "verdict": "valid chain-native test operator; not yet physical scalar"
+}
