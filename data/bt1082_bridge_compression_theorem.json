@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1082 bridge compression theorem",
+  "bridge_shape": "240 x 162",
+  "slot_split": "96 + 66",
+  "chain_split": "96 + 144",
+  "preserves": ["rank-96 block", "orthogonality", "slot inner products", "E0+E16 chain support"],
+  "reservoir_dimension": 78,
+  "not_yet_preserved": ["W33 incidence naturality", "true BT876 linear P22", "finite algebra action", "physical particle labels"],
+  "boundary": "compression theorem for skeleton bridge, not final W33-natural carrier functor"
+}
