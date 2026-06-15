@@ -1,0 +1,27 @@
+{
+  "theorem": "BT1035 NCG inner-fluctuation matter-sector gap audit",
+  "finite_centralizer_route": {
+    "finite_route": "C(R) centralizer gauge module",
+    "summands": {"U1_singlet": 1, "SU2_adjoint": 3, "SU3_adjoint": 8}
+  },
+  "ncg_internal_algebra_route": {
+    "continuum_route": "unimodular unitary Lie algebra of A_F = C + H + M3(C)",
+    "summands": {"u1": 1, "su2": 3, "su3": 8}
+  },
+  "module_totals": {"finite": 12, "ncg": 12},
+  "module_match": true,
+  "shared_profile": [1, 3, 8],
+  "already_in_corpus": [
+    "centralizer C(R) derives 12 = 1+3+8 as finite gauge module",
+    "QFT extraction has external gauge connection and schematic finite scalar Phi",
+    "spectral-action term-by-term convergence covers gauge/Higgs once fields are present"
+  ],
+  "missing_connes_step": [
+    "construct finite algebra A_F acting on the W33 matter Hilbert carrier",
+    "define D_F, grading, and real structure for that A_F representation",
+    "compute inner one-forms Omega_D^1(A_F) = span a[D_F,b]",
+    "verify the self-adjoint/unimodular one-forms split as 1+3+8 plus Higgs scalar sector",
+    "identify the finite C(R) module as the discrete shadow of the A_F unitary Lie algebra"
+  ],
+  "honest_status": "module-level match is exact; full NCG inner-fluctuation construction is not yet proved"
+}
