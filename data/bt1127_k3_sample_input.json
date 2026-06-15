@@ -11,7 +11,9 @@
     "chi": 24,
     "signature": -16,
     "b2": 22,
-    "intersection_signature": "(3,19)"
+    "intersection_signature": [3, 19],
+    "ricci_flat_scalar_curvature": 0,
+    "normalized_curvature_norm": "Integral |Rm|^2/(8*pi^2)=24"
   },
   "physical_claim": false
 }
