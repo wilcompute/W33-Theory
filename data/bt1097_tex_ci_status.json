@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1097 TeX CI status",
+  "workflow": ".github/workflows/bt1094-tex-check.yml",
+  "triggers": ["workflow_dispatch", "push", "pull_request"],
+  "inspected_commit": "1f8efc6edca453777586b85b4fc0bd2a203d351a",
+  "combined_status_contexts": 0,
+  "visible_workflow_runs": 0,
+  "compile_claim": false,
+  "boundary": "workflow is ready, but no visible run was available through the connector at inspection time"
+}
