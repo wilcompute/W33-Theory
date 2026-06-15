@@ -1,0 +1,8 @@
+{
+  "name": "BT1106 section report schema",
+  "script": "tools/bt1106_emit_section_report.py",
+  "output": "data/bt1106_section_report.json",
+  "fields": ["name", "passed", "count", "missing", "note"],
+  "scope": "staged W33 and holonet section file existence only",
+  "compile_claim": false
+}
