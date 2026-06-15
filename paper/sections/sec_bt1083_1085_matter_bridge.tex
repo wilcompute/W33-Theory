@@ -1,0 +1,61 @@
+\section{BT1083--BT1085 Matter Bridge Update}
+\label{sec:bt1083-bt1085-matter-bridge}
+
+The newest matter-sector bridge replaces the earlier diagonal rank template by a linear transvection projector.  The BT876 long-root transvection has thirteen fixed basis vectors and nine shell $3$-cycles.  Its grade-zero projector on $\mathbb C[40]$ is
+\[
+P_{22}=P_{\mathrm{fixed}}+\sum_{C}\frac{1}{3}\mathbf 1_C\mathbf 1_C^{T},
+\]
+where the sum runs over the nine shell cycles.  Thus
+\[
+\operatorname{rank}P_{22}=13+9=22,
+\qquad
+P_{22}^2=P_{22}.
+\]
+This is a Fourier/eigenspace projector, not a selector of twenty-two points.
+
+The first lift into the $162$-slot matter carrier uses one $54$-dimensional block per generation,
+\[
+\mathbb C^{162}=G_0\oplus G_1\oplus G_2,
+\qquad
+G_g=\mathbb C^{40}_{\mathrm{core}}(g)\oplus R_{14}(g).
+\]
+On each generation block the lifted complement projector is
+\[
+P_{22}^{(g)}=P_{22}\oplus 0_{14},
+\]
+so the physical block is
+\[
+P_{32}^{(g)}=(I_{40}-P_{22})\oplus I_{14},
+\qquad
+\operatorname{rank}P_{32}^{(g)}=18+14=32.
+\]
+Consequently
+\[
+\operatorname{rank}P_{66}=66,
+\qquad
+\operatorname{rank}P_{96}=96.
+\]
+The corresponding chain-side rank-$96$ support remains the sector projector
+\[
+P_{96}^{\mathrm{chain}}=P_0+P_{16},
+\qquad
+81+15=96.
+\]
+A sparse bridge skeleton is a partial isometry
+\[
+F:\mathbb C^{162}\longrightarrow\mathbb C^{240}
+\]
+which maps the slot-side $96$ block onto $E_0\oplus E_{16}$ and embeds the $66$ complement into $E_4\oplus E_{10}$.  The unused reservoir has dimension
+\[
+(120+24)-66=78=66+12=6\Phi_3=2(3\Phi_3).
+\]
+The preferred reading is that the reservoir carries one additional $3\times22$ transvection-bookkeeping scale together with the $1+3+8$ gauge-adjoint profile.  This closes the rank-level matter bridge while leaving the natural incidence/gauge action on the reservoir as the next construction.
+
+For the scalar/gauge ladder, the W33-native line-edge adjacency on $C_1$ gives projected nearest-sector ranks
+\[
+0\to4:31,\qquad 4\to10:24,\qquad 10\to16:15,
+\]
+whereas the triangle-edge adjacency gives $38,22,15$.  Thus the line-edge adjacency is the current best ladder candidate: it is full rank on the last two steps and has the smaller oriented gap-square ledger
+\[
+2\left(31+24\left(\frac32\right)^2+15\left(\frac32\right)^2\right)=\frac{475}{2}.
+\]
