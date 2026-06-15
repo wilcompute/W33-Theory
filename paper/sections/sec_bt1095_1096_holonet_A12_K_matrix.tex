@@ -1,0 +1,22 @@
+\section{BT1095--BT1096 Holonet Gauge Packet Matrix}
+\label{sec:bt1095-bt1096-holonet-a12-k-matrix}
+
+The holonet reservoir now has an explicit packet target and a concrete readout matrix.  The $12$-channel gauge packet is ordered as
+\[
+(Y,W_0,W_+,W_-,C_{12},C_{21},C_{13},C_{31},C_{23},C_{32},C_0,C_8),
+\]
+realizing the runtime profile
+\[
+1+3+8.
+\]
+The reservoir readout
+\[
+K:T_{66}\to A_{12}
+\]
+reads the three generation fixed headers, removes the scalar trace in each, and averages the result.  If each generation block is ordered as $F_{13}$ followed by $D_9$, then
+\[
+K_{i,22g+i}=1/3,
+\qquad
+K_{i,22g+12}=-1/3,
+\]
+for rows $i=0,\ldots,11$ and generations $g=0,1,2$.  All $D_9$ columns vanish.  Operationally, the $D_9$ cycle-sum pieces remain matter bookkeeping, while the fixed/gauge-perp headers feed a shared gauge packet of rank $12$.
