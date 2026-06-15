@@ -2790,6 +2790,36 @@ Cliffords are teleported using the cubic resource. The logical layer of the
 holonet is thus a single coherent object, every part of it fixed by $W(3,3)$.
 (Witness: \texttt{analysis/w33\_gkp\_clifford\_coherence.py}.)
 
+\subsection{The code lattices are the moonshine ladder}
+
+The same lattices carry one last structure that ties the machine to the deepest
+arithmetic of the substrate. The holonet's modes are free bosons, and a GKP code
+is a free-boson theory compactified on its stabiliser lattice; an even lattice
+$\Lambda$ of rank $r$ is in turn the lattice vertex operator algebra (VOA)
+$V_\Lambda$ of central charge $c=r$ (Frenkel--Kac--Segal), while the
+stabiliser code itself fixes the corresponding (Narain) code
+CFT \cite{flm,dymarsky-shapere}. The holonet's GKP code lattices are the
+substrate tower $A_2,D_4,E_8$ of ranks $2,4,8$, hence the lattice VOAs of
+central charge
+\[
+  c(A_2)=2,\qquad c(D_4)=4,\qquad c(E_8)=8 .
+\]
+The top rung, the $E_8$ VOA at $c=8$, is exactly the base of the moonshine ladder
+that $W(3,3)$ already realises on the physics side,
+\[
+  V_{E_8}\;(c=8)\;\longrightarrow\;V_{\Lambda_{24}}\;(c=24)\;\longrightarrow\;
+  V^{\natural}\;(c=24,\ \mathrm{Aut}=\mathbb M),
+\]
+with $V^{\natural}$ the Frenkel--Lepowsky--Meurman Monster module ($24$ free
+bosons on the Leech torus, $\mathbb Z/2$-orbifolded), and $\Lambda_{24}\supset
+E_8^{3}$ the gauge lattice thrice. So the \emph{same} $E_8$ is the holonet's
+optimal $4$-mode GKP code, the substrate's homology/gauge lattice, and the $c=8$
+chiral VOA that begins moonshine; and the top central charge $c=24=f=\chi(K3)$ is
+the $W(3,3)$ matter count. The computer's error-correcting code and the Monster
+module are one vertex-algebra tower --- the architecture and the moonshine
+residual~(R2) are the bottom and top of a single ladder of substrate lattices.
+(Witness: \texttt{analysis/w33\_gkp\_voa\_bridge.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
@@ -2839,6 +2869,15 @@ holonet is thus a single coherent object, every part of it fixed by $W(3,3)$.
   Quantum computation over continuous variables,
   \emph{Phys.\ Rev.\ Lett.} \textbf{82}, 1784 (1999) --- Gaussians plus any
   single degree-$\ge 3$ Hamiltonian are universal on the oscillator.
+\bibitem{flm} I.~Frenkel, J.~Lepowsky, A.~Meurman,
+  \emph{Vertex Operator Algebras and the Monster}, Academic Press (1988) ---
+  the Monster module $V^{\natural}$ ($24$ free bosons on the Leech torus,
+  $\mathbb Z/2$-orbifolded), $c=24$.
+\bibitem{dymarsky-shapere} A.~Dymarsky, A.~Shapere,
+  Quantum stabilizer codes, lattices, and CFTs,
+  \emph{J.\ High Energy Phys.} \textbf{03}, 160 (2021),
+  \href{https://arxiv.org/abs/2009.01244}{arXiv:2009.01244} --- the
+  code/Narain-CFT correspondence.
 \end{thebibliography}
 
 \end{document}
