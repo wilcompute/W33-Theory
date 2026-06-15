@@ -222,9 +222,19 @@ ARCHITECTURE CLOSURE (holonet logical layer is substrate-forced; photonic_holone
     are EXACTLY deg-2 (symplectic form, Sp(4,3)->Sp(4,R) Gaussian) + deg-3 (E6
     Cartan cubic on the 27, the non-Gaussian 'magic'). Degrees {2,3} = the
     universal CV set. Witness analysis/w33_cv_universality_cubic.py.
-  So W(3,3) fixes BOTH the code and the universal gate set. RESIDUAL (genuinely
-  open, engineering/quantitative): the fault-tolerance THRESHOLD (D4-GKP code
-  distance, squeezing-dB budget) -- not claimed.
+  - COHERENCE (code+gates welded by one group): the logical Clifford group of a
+    GKP code on n qudits dim d is Sp(2n,Z/d); for the holonet (n=2,d=3) =
+    Sp(4,Z/3)=Sp(4,3), |.|=51840 = EXACTLY Aut(W(3,3)) = 2-qutrit Clifford mod
+    Pauli = the photon-realized Clifford ('symplectic closure=51840'). So
+    substrate symmetry = machine gate group = code's logical gate group = ONE
+    group; gates act on the code by construction. Code-preserving (transversal)
+    Gaussian gates = Aut(D4)=W(F4)=192*6=1152 (the S3 = D4 triality = 3
+    generations); remaining index [Sp(4,3):Aut(D4)]=45 Cliffords teleported via
+    the cubic. Witness analysis/w33_gkp_clifford_coherence.py.
+  So W(3,3) fixes BOTH the code and the universal gate set, AND they are mutually
+  coherent (one symmetry group). RESIDUAL (genuinely open, engineering/
+  quantitative): the fault-tolerance THRESHOLD (D4-GKP code distance,
+  squeezing-dB budget) -- not claimed.
   LANE NOTE: this is the architecture (holonet) lane, orthogonal to the parallel
   agent's K3-spectral (BT1116-1150) and S3-chirality (BT1151-1193) work.
 
