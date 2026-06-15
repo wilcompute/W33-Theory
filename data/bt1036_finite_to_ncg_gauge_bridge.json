@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1036 finite centralizer to NCG gauge-algebra bridge",
+  "bridge": [
+    {"finite_object": "fixed singlet in C[12]", "finite_dim": 1, "ncg_object": "u(1) unimodular hypercharge direction", "ncg_dim": 1},
+    {"finite_object": "A4 four-line quotient traceless part", "finite_dim": 3, "ncg_object": "su(2) weak adjoint", "ncg_dim": 3},
+    {"finite_object": "within-line traceless octet", "finite_dim": 8, "ncg_object": "su(3) color adjoint", "ncg_dim": 8}
+  ],
+  "dimension_check": {"finite_total": 12, "ncg_total": 12, "match": true},
+  "carrier_compatibility": {"gauge_orbit": 12, "triangle_boundary_sector": 120, "ratio_120_to_12": 10},
+  "required_next_tests": [
+    "construct explicit A_F block action on the 81 matter zero modes or the 162 doubled fermion carrier",
+    "compute commutator span [D_F, A_F] and project to self-adjoint/unimodular one-forms",
+    "verify dimension and representation split 1+3+8",
+    "identify Higgs off-diagonal scalar blocks and compute tr_F(Phi^2), tr_F(Phi^4)"
+  ],
+  "status": "bridge dictionary exact; representation-level inner fluctuation proof remains open"
+}
