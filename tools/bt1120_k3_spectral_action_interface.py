@@ -1,9 +1,23 @@
 #!/usr/bin/env python3
-"""BT1120 K3 spectral-action interface.
+"""BT1120/BT1131 K3 spectral-action interface.
 
 This is a schema/adapter skeleton, not a curvature solver. It validates that a
-K3 spectral-action result reports the convention data needed to interpret A0,
-A2, and A4, and emits a normalized JSON envelope.
+K3 spectral-action result reports the convention data needed to interpret the
+pure manifold coefficients A0, A2, and A4, then emits a normalized JSON envelope.
+
+BT1131 hardens the interface with the product-heat split from BT1129/BT1130:
+
+    Theta_M(t)=A0*t^-2 + A2*t^-1 + A4 + ...
+    Theta_F(t)=N - F2*t + (F4/2)*t^2 + ...
+
+so
+
+    C0 = A0*N
+    C2 = A2*N - A0*F2
+    C4 = A4*N - A2*F2 + A0*F4/2.
+
+For Ricci-flat K3, A2=0 but C2=-A0*F2, so the finite W33 heat moment fills the
+product Lambda^2 slot.
 """
 from __future__ import annotations
 
@@ -32,6 +46,25 @@ FINITE_PREFACTORS = {
     "finite_a4_over_a2": "55/7",
 }
 
+PRODUCT_HEAT_FORMULAS = {
+    "C0": "A0*N",
+    "C2": "A2*N - A0*F2",
+    "C4": "A4*N - A2*F2 + A0*F4/2",
+}
+
+RICCI_FLAT_K3_PRODUCT_FORMULAS = {
+    "condition": "A2=0",
+    "C0": "A0*N",
+    "C2": "-A0*F2",
+    "C4": "A4*N + A0*F4/2",
+}
+
+FINITE_RATIO_WARNING = (
+    "finite_a2_over_a0 is a finite-factor moment ratio, not the pure K3 A2/A0. "
+    "For Ricci-flat K3 the pure A2 coefficient is zero, while the product C2 "
+    "coefficient is filled by the finite moment -A0*F2."
+)
+
 
 def validate(payload: dict) -> list[str]:
     errors: list[str] = []
@@ -48,15 +81,43 @@ def validate(payload: dict) -> list[str]:
     return errors
 
 
+def k3_topology_passes(payload: dict) -> dict:
+    topo = payload.get("topological_checks", {})
+    if not isinstance(topo, dict):
+        return {"available": False}
+    chi = topo.get("chi")
+    sig = topo.get("signature")
+    b2 = topo.get("b2")
+    pair = topo.get("intersection_signature")
+    checks = {"available": True}
+    if isinstance(pair, list) and len(pair) == 2:
+        p, n = pair
+        checks.update(
+            {
+                "b2_from_intersection": p + n == b2,
+                "signature_from_intersection": p - n == sig,
+            }
+        )
+    checks["euler_from_betti_when_k3"] = (2 + b2 == chi) if isinstance(b2, int) else False
+    return checks
+
+
 def envelope(payload: dict) -> dict:
     errors = validate(payload)
     return {
-        "theorem": "BT1120 K3 spectral-action result envelope",
+        "theorem": "BT1120/BT1131 K3 spectral-action result envelope",
         "valid": not errors,
         "errors": errors,
         "input_result": payload,
         "finite_w33_prefactors": FINITE_PREFACTORS,
-        "done_open_boundary": "finite ratios are seed-independent; K3 result supplies geometric multipliers for gravity scales",
+        "product_heat_formulas": PRODUCT_HEAT_FORMULAS,
+        "ricci_flat_k3_product_formulas": RICCI_FLAT_K3_PRODUCT_FORMULAS,
+        "k3_topology_checks_evaluated": k3_topology_passes(payload),
+        "finite_ratio_warning": FINITE_RATIO_WARNING,
+        "done_open_boundary": (
+            "finite ratios are seed-independent finite-factor ratios; K3 supplies "
+            "geometric multipliers and topology/volume data for gravity scales"
+        ),
         "compile_claim": False,
     }
 
