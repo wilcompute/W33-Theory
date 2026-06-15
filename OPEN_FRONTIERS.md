@@ -209,6 +209,25 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   EXTERNAL seed (K3), while the symplectic continuum (Weil -> oscillator rep) is
   intrinsic = the photonic architecture. analysis/W33_TWO_CONTINUA_symplectic_metric.md.
 
+ARCHITECTURE CLOSURE (holonet logical layer is substrate-forced; photonic_holonet
+.tex subsections "The fault-tolerant layer is the substrate's lattice tower" +
+"The universal gate set is degree two plus degree three"):
+  - CODE: the holonet's CV fault-tolerant encoding is a lattice GKP code; the
+    optimal lattices (1 mode A2 hexagonal, 2 modes D4, 4 modes E8) ARE the
+    substrate's lattice tower A2<D4<E8 (D4 = matter shell W(D4)=192/triality;
+    E8 = R1 homology/gauge lattice; D4(+)D4<E8). The QEC code is not chosen, it
+    is the substrate. Witness analysis/w33_gkp_lattice_architecture.py.
+  - GATES: CV universality (Lloyd-Braunstein) = Gaussian (deg-2) + one deg>=3
+    generator (cubic phase gate). The substrate's two lowest matter invariants
+    are EXACTLY deg-2 (symplectic form, Sp(4,3)->Sp(4,R) Gaussian) + deg-3 (E6
+    Cartan cubic on the 27, the non-Gaussian 'magic'). Degrees {2,3} = the
+    universal CV set. Witness analysis/w33_cv_universality_cubic.py.
+  So W(3,3) fixes BOTH the code and the universal gate set. RESIDUAL (genuinely
+  open, engineering/quantitative): the fault-tolerance THRESHOLD (D4-GKP code
+  distance, squeezing-dB budget) -- not claimed.
+  LANE NOTE: this is the architecture (holonet) lane, orthogonal to the parallel
+  agent's K3-spectral (BT1116-1150) and S3-chirality (BT1151-1193) work.
+
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
 explicit equivariant E6 bijection is PROVED IMPOSSIBLE (representation-
