@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1051 fermion charge ledger",
+  "carrier_dimension": 162,
+  "multiplicity_outside_weakslot_color": 18,
+  "charges": [{"charge": "2/3", "multiplicity": 54}, {"charge": "-1/3", "multiplicity": 108}],
+  "trace_Y0": 0,
+  "trace_Y0_squared": 36,
+  "normalized_generator": "Y0 / 6",
+  "boundary": "carrier-slot charge ledger only; full particle hypercharge table requires left/right and conjugate assignments"
+}
