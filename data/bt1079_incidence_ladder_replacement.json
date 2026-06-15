@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1079 incidence ladder replacement target",
+  "old_placeholder": "nearest-sector rectangular partial identities",
+  "new_target": "projected W33 incidence blocks P_mu B P_lambda",
+  "nearest_pairs": [[0, 4], [4, 10], [10, 16]],
+  "commutator_law": "[Delta_1/4, P_mu B P_lambda]=(mu/4-lambda/4) P_mu B P_lambda when projected exactly",
+  "rank_targets_from_BT1075": {"0_4": 81, "4_10": 24, "10_16": 15},
+  "boundary": "construction target only; projected incidence ranks remain to be computed"
+}
