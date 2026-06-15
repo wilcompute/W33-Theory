@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1107 coupling normalization constraints",
+  "coupling_metric": "G_A=diag(g1^2 I1, g2^2 I3, g3^2 I8)",
+  "coupled_readout": "K_g=G_A^(1/2) K_white",
+  "row_gram": "K_g K_g^* = G_A",
+  "kinetic_metric": "G_kin=G_A^-1",
+  "projector_invariance": "K_g^* G_kin K_g = P_K",
+  "forced_constraints": ["g1>0", "g2>0", "g3>0"],
+  "optional_trace_normalization": "g1^2 + 3 g2^2 + 8 g3^2 = 12",
+  "optional_unified_solution": {"constraint": "g1=g2=g3 with trace normalization", "solution": "g1=g2=g3=1"},
+  "optional_sector_equal_energy_solution": {"constraint": "g1^2=3g2^2=8g3^2 with trace normalization", "solution": {"g1^2": "4", "g2^2": "4/3", "g3^2": "1/2"}},
+  "boundary": "geometry fixes coisometry/projector invariance, not numerical coupling ratios"
+}
