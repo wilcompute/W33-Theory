@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1108 generation-symmetry breaking ansatz",
+  "weights": "w0,w1,w2 > 0",
+  "s": "w0^2+w1^2+w2^2",
+  "weighted_readout": "K_w=(1/sqrt(s))[w0 pi12, w1 pi12, w2 pi12]",
+  "projector_blocks": "P_w(g,h)=(w_g w_h/s) P_tracefree_13",
+  "generation_matrix": "M_w=(1/s) w w^T",
+  "invariants": ["rank(P_w)=12", "P_w^2=P_w", "D9 in kernel", "trace-free quotient preserved"],
+  "symmetric_case": "w0=w1=w2",
+  "first_order": "w_g=1+epsilon a_g; if sum a_g=0 perturbation is traceless in generation space",
+  "boundary": "weights not yet derived from masses/Yukawas/W33 centralizer orbits"
+}
