@@ -1,0 +1,28 @@
+{
+  "bt": 1144,
+  "title": "finite W33 carrier alignment for the K3 corpus curvature lane",
+  "repo_anchor": "analysis/bt1033_spectral_action_term_by_term_geometric.py",
+  "finite_spectrum_DF_squared": {"0": 122, "4": 240, "10": 48, "16": 30},
+  "finite_moments": {"Tr1": 440, "TrDF2": 1920, "TrDF4": 16320, "TrDF4_half": 8160},
+  "k3_corpus_inputs": {"A0": 1, "A2": 0, "A4_corpus": 24},
+  "carrier": {
+    "continuum_metric_carrier": "K3 corpus/topological curvature functional",
+    "finite_operator_carrier": "finite W33 Hodge--Dirac square D_F^2 spectrum",
+    "product_formula": "C4 = Tr(1_F)*A4 + Tr(D_F^4)/2 when A2=0 and A0=1",
+    "not_replacements": ["scalar positive Laplacian", "spin Dirac square", "ordinary all-forms Hodge trace"]
+  },
+  "C4_corpus": 18720,
+  "substrate_identity": {
+    "C4_corpus_over_E": "78",
+    "q_factorial_Phi3": 78,
+    "identity": "C4_corpus = E*q!*Phi3 = 240*6*13 = 18720"
+  },
+  "checks": {
+    "finite_moments_match_BT1033": true,
+    "ricci_flat_A2_removed": true,
+    "C4_corpus_is_18720": true,
+    "C4_identity": true,
+    "carrier_is_product_not_single_probe": true,
+    "all_checks_pass": true
+  }
+}
