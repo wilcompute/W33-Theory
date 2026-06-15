@@ -1,0 +1,24 @@
+{
+  "theorem": "BT1061 scalar operator search space",
+  "families": [
+    "Laplacian polynomial p(Delta_1)",
+    "spectral projector sum c_lambda P_lambda",
+    "harmonic projector P0",
+    "boundary projector P4",
+    "heavy projectors P10/P16",
+    "generation/fiber projector",
+    "centralizer projector"
+  ],
+  "scoring_criteria": [
+    "W33-native definition",
+    "commutation with Delta_1",
+    "finite algebra compatibility",
+    "first-order compatibility",
+    "nonzero Tr(Delta_1 Q^2)",
+    "symbolic trace simplicity",
+    "generation/fiber relation",
+    "no empirical parameter insertion"
+  ],
+  "baseline": "Q=Delta_1/4 is computable and W33-native but not yet physical",
+  "next": "construct 240-chain finite algebra or centralizer projectors"
+}
