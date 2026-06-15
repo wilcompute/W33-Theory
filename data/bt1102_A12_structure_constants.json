@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1102 A12 structure constants",
+  "real_form": "u(1) + su(2) + su(3)",
+  "normalization": "W_a=i sigma_a/sqrt(2), C_a=i lambda_a/sqrt(2), pairing=-ReTr(XY)",
+  "u1": "central",
+  "su2_rule": "[W_a,W_b] = -sqrt(2) epsilon_abc W_c",
+  "su2_independent": {"123": "-sqrt(2)"},
+  "su3_rule": "[C_a,C_b] = -sqrt(2) f_abc C_c where [lambda_a,lambda_b]=2i f_abc lambda_c",
+  "standard_gell_mann_f": {"123": "1", "147": "1/2", "156": "-1/2", "246": "1/2", "257": "1/2", "345": "1/2", "367": "-1/2", "458": "sqrt(3)/2", "678": "sqrt(3)/2"},
+  "cross_sector_commutators": "all zero",
+  "boundary": "physical gauge couplings may rescale direct-summand brackets"
+}
