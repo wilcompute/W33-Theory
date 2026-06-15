@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1099 K spectrum",
+  "K_shape": "12 x 66",
+  "KK_star": "(1/3) I_12 + (1/3) J_12",
+  "KK_star_eigenvalues": {"13/3": 1, "1/3": 11},
+  "K_star_K_eigenvalues": {"13/3": 1, "1/3": 11, "0": 54},
+  "singular_values": {"sqrt(13/3)": 1, "1/sqrt(3)": 11, "0": 54},
+  "rank": 12,
+  "kernel_dimension": 54,
+  "whitening": "K_white=(KK*)^{-1/2}K gives K_white K_white*=I_12",
+  "boundary": "exact spectrum of prototype readout; physical treatment of enhanced direction remains open"
+}
