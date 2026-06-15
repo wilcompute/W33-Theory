@@ -1,0 +1,57 @@
+{
+  "result": "substrate GKP lattices A2/D4/E8 are isodual + densest, with nominal coding gains 0.6/1.5/3.0 dB (lattice part of the FT threshold)",
+  "coding_gains": [
+    {
+      "lattice": "Z^2 (square, baseline)",
+      "n": 2,
+      "d_min2": 1,
+      "det": 1,
+      "gamma": 1.0,
+      "dB": 0.0,
+      "isodual": true
+    },
+    {
+      "lattice": "A2 (hexagonal, 1 mode)",
+      "n": 2,
+      "d_min2": 2,
+      "det": 3,
+      "gamma": 1.1547,
+      "dB": 0.625,
+      "isodual": true
+    },
+    {
+      "lattice": "D4 (2 modes)",
+      "n": 4,
+      "d_min2": 2,
+      "det": 4,
+      "gamma": 1.4142,
+      "dB": 1.505,
+      "isodual": true
+    },
+    {
+      "lattice": "E8 (4 modes)",
+      "n": 8,
+      "d_min2": 2,
+      "det": 1,
+      "gamma": 2.0,
+      "dB": 3.01,
+      "isodual": true
+    },
+    {
+      "lattice": "Leech L24 (12 modes)",
+      "n": 24,
+      "d_min2": 4,
+      "det": 1,
+      "gamma": 4.0,
+      "dB": 6.021,
+      "isodual": true
+    }
+  ],
+  "formula": "gamma = d_min^2 / det^{1/n}; dB = 10 log10(gamma)",
+  "isodual": "all are symplectically self-dual = balanced GKP",
+  "honest_scope": "lattice contribution only; absolute fault-tolerance threshold also needs noise model + finite-squeezing GKP state quality + FT/syndrome protocol -- not claimed",
+  "sources": [
+    "Conway-Sloane, Sphere Packings, Lattices and Groups (nominal coding gains)",
+    "Conrad-Eisert-Hangleiter, GKP codes: a lattice perspective, Quantum 6, 648 (2022)"
+  ]
+}

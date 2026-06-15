@@ -2737,6 +2737,23 @@ the same lattice tower; the QEC code is not chosen, it is the substrate.
 (Witness: \texttt{analysis/w33\_gkp\_lattice\_architecture.py}, verifying the
 kissing numbers $6,24,240$ and the embedding $D_4\oplus D_4\subset E_8$.)
 
+This also fixes the lattice part of the fault-tolerance threshold. The substrate
+lattices are \emph{isodual} (symplectically self-dual --- the balanced-GKP
+condition, $\hat q$ and $\hat p$ protected equally) and densest in their
+dimensions, so they maximise the nominal coding gain
+$\gamma=d_{\min}^2/\det^{1/n}$ among symplectic lattices of that rank:
+\[
+  \gamma_{\mathrm{dB}}(A_2)=0.6,\qquad \gamma_{\mathrm{dB}}(D_4)=1.5,\qquad
+  \gamma_{\mathrm{dB}}(E_8)=3.0
+\]
+(and $6.0$ for the Leech lattice). So the holonet's two-mode code $D_4$ already
+buys $\sim 1.5$~dB, and the four-mode code $E_8$ $\sim 3$~dB, of squeezing-margin
+over the trivial square code, for free. The absolute threshold still needs the
+noise model, the finite-squeezing GKP-state quality and the syndrome-extraction
+protocol --- which we do not fix here --- but the lattice contribution, the part
+that depends only on the code, is the substrate's and is optimal. (Witness:
+\texttt{analysis/w33\_gkp\_coding\_gain.py}.)
+
 \subsection{The universal gate set is degree two plus degree three}
 
 The code fixes the fault-tolerant layer; the gate set completes the
