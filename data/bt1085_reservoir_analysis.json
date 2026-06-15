@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1085 reservoir analysis",
+  "reservoir_dimension": 78,
+  "decompositions": ["78 = 66 + 12", "78 = 6*13", "78 = 3*26", "78 = 2*39"],
+  "preferred_reading": "78 = 66 + 12",
+  "components": {"66": "3*22 transvection-grade bookkeeping scale", "12": "1+3+8 gauge adjoint profile"},
+  "hypothesis": "reservoir absorbs incidence constraints, gauge adjoint action, and second transvection bookkeeping layer",
+  "boundary": "structural interpretation only; gauge/reservoir action not yet constructed"
+}
