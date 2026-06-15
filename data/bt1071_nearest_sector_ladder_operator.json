@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1071 nearest-sector ladder operator",
+  "Q_sector_values": {"E0": 0, "E4": 1, "E10": "5/2", "E16": 4},
+  "oriented_gaps": {"E0_to_E4": 1, "E4_to_E0": -1, "E4_to_E10": "3/2", "E10_to_E4": "-3/2", "E10_to_E16": "3/2", "E16_to_E10": "-3/2"},
+  "blockwise_max_norm_for_unit_blocks": "3/2",
+  "oriented_gap_square_sum": 11,
+  "boundary": "abstract block ladder only; concrete inter-sector maps remain to be derived"
+}
