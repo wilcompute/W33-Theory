@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1086 paper source patch status",
+  "w33_section": "paper/sections/sec_bt1083_1085_matter_bridge.tex",
+  "holonet_section": "paper/sections/sec_bt1083_1085_holonet_bridge.tex",
+  "integration_helper": "tools/bt1085_integrate_latest_paper_sections.py",
+  "w33_marker": "before \\section{The TOE Singularity Theorem}",
+  "holonet_marker": "before \\subsection{The ethos}",
+  "status": "sections and idempotent helper committed; direct large-source replacement avoided to prevent truncation risk",
+  "command": "python tools/bt1085_integrate_latest_paper_sections.py"
+}
