@@ -1,0 +1,30 @@
+\section{BT1098--BT1100 Holonet Gauge Packet Spectrum and Checks}
+\label{sec:bt1098-bt1100-holonet-realform-spectrum-ci}
+
+The holonet gauge packet now has a normalized compact real form
+\[
+A_{12}=\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3),
+\]
+with trace pairing $\langle X,Y\rangle=-\operatorname{Re}\operatorname{Tr}(XY)$.  Runtime packet coordinates are normalized using anti-Hermitian Pauli and Gell--Mann generators,
+\[
+W_a=i\sigma_a/\sqrt2,
+\qquad
+C_a=i\lambda_a/\sqrt2.
+\]
+Thus the $1+3+8$ packet has an orthonormal real basis before physical coupling constants are applied.
+
+The reservoir readout matrix has exact spectrum.  For
+\[
+K:T_{66}\to A_{12},
+\]
+the row Gram matrix is
+\[
+KK^*=\frac13 I_{12}+\frac13 J_{12}.
+\]
+Thus one packet direction has strength $13/3$, while the eleven transverse packet directions have strength $1/3$.  The remaining $54$ domain directions are in the kernel.  Operationally, this says the readout has one enhanced generation-uniform header direction, eleven transverse gauge-packet directions, and a kernel consisting of matter-bookkeeping and trace redundancies.
+
+The paper/runtime source pipeline now also has a no-network sanity checker,
+\[
+\texttt{tools/bt1100\_tex\_path\_sanity.py},
+\]
+which validates input paths, section labels, insertion markers, and simple brace balance before TeX compilation.
