@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1059 physical particle-table attempt",
+  "carrier_dimension": 162,
+  "sm_three_generation_weyl_with_nuR": 48,
+  "sm_with_antiparticles": 96,
+  "direct_dimension_match": false,
+  "slot_charge_counts": {"2/3": 54, "-1/3": 108},
+  "mismatches": [
+    "no separate colorless lepton block",
+    "slot charges are not the full SM hypercharge table",
+    "particle-antiparticle conjugation not fixed",
+    "physical left/right weak representation assignment not fixed"
+  ],
+  "status": "naive direct particle-table identification fails; representation search remains open"
+}
