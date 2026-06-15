@@ -1,0 +1,28 @@
+{
+  "theorem": "BT1093 odd/even matter cube verifier",
+  "ambient": "C[F3^3]",
+  "ambient_dimension": 27,
+  "origin": [0, 0, 0],
+  "antipodal_pairs": [
+    [[0, 0, 1], [0, 0, 2]],
+    [[0, 1, 0], [0, 2, 0]],
+    [[0, 1, 1], [0, 2, 2]],
+    [[0, 1, 2], [0, 2, 1]],
+    [[1, 0, 0], [2, 0, 0]],
+    [[1, 0, 1], [2, 0, 2]],
+    [[1, 0, 2], [2, 0, 1]],
+    [[1, 1, 0], [2, 2, 0]],
+    [[1, 1, 1], [2, 2, 2]],
+    [[1, 1, 2], [2, 2, 1]],
+    [[1, 2, 0], [2, 1, 0]],
+    [[1, 2, 1], [2, 1, 2]],
+    [[1, 2, 2], [2, 1, 1]]
+  ],
+  "number_of_projective_directions": 13,
+  "odd_basis_rule": "e_x - e_-x for each antipodal pair",
+  "even_basis_rule": "e_origin plus e_x + e_-x for each antipodal pair",
+  "odd_dimension": 13,
+  "even_dimension": 14,
+  "dimension_check": "13 + 14 = 27",
+  "boundary": "canonical projective representatives use first nonzero coordinate 1"
+}
