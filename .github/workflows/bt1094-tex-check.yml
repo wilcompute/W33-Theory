@@ -2,12 +2,20 @@ name: BT1094 TeX check
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'paper/**/*.tex'
+      - 'photonic_holonet.tex'
+      - 'tools/bt1094_build_papers.py'
+      - 'tools/bt1094_integrate_all_latest_sections.py'
+      - '.github/workflows/bt1094-tex-check.yml'
   pull_request:
     paths:
       - 'paper/**/*.tex'
       - 'photonic_holonet.tex'
       - 'tools/bt1094_build_papers.py'
       - 'tools/bt1094_integrate_all_latest_sections.py'
+      - '.github/workflows/bt1094-tex-check.yml'
 
 jobs:
   tex-check:
