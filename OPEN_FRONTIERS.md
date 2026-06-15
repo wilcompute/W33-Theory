@@ -178,6 +178,27 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   convergence theorems; what remains is APPLICATION (higher-order edgewise K3
   run), not new analysis.
 
+  MILESTONE (spacetime dimension): the 4D of M^4 -- the one input the
+  almost-commutative framing took from OBSERVATION -- is now DERIVED.
+  KO-dim(F=W(3,3)) = 6 = 2q (signs (+,+,-)); Connes-Barrett total KO = 2 (mod 8)
+  + additivity => KO(M) = 4 => dim M = 4 (spin manifold). 'Why 4D' reduces to
+  'why q=3'. Witness analysis/w33_spacetime_dimension_from_KO.py; w33_paper.tex
+  Prop 'The spacetime dimension is forced to be four'; note
+  analysis/W33_SPACETIME_DIMENSION_FROM_KO.md.
+
+  MILESTONE (heterotic-on-K3 dictionary): every KINEMATIC input of an E8xE8
+  heterotic compactification on K3 is a W(3,3) invariant -- dim 4 (KO=2q), seed
+  K3 (chi=24=f, sig (3,19)=(q,g+mu)), gauge E8(-1)^2 (Laplacian E+E=480=vk; the
+  E8 = R1 homology lift), instanton number n1+n2 = c2(K3) = chi = 24 = f (NEW
+  anomaly link). w33_paper.tex Cor 'The heterotic--on--K3 kinematic dictionary';
+  analysis/W33_HETEROTIC_K3_DICTIONARY.md. Structural dictionary, NOT a dynamical
+  proof the physical string is heterotic-on-K3.
+
+  TWO-CONTINUA frame: W(3,q) arithmetic tower is spectrally rigid (always 3
+  eigenvalues, no Weyl law) => the metric/spacetime continuum genuinely needs an
+  EXTERNAL seed (K3), while the symplectic continuum (Weil -> oscillator rep) is
+  intrinsic = the photonic architecture. analysis/W33_TWO_CONTINUA_symplectic_metric.md.
+
 Also flagged open (index.html "Remaining open:"): rigorous QFT derivation of
 the α formula; gravity from graph curvature (a narrowed-bridge program). The
 explicit equivariant E6 bijection is PROVED IMPOSSIBLE (representation-
