@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1064 particle table quotient search",
+  "carrier_dimension": 162,
+  "sm_weyl_with_nuR_three_gen": 48,
+  "sm_with_antiparticles": 96,
+  "ratios": {"162_to_96": "27/16", "162_to_48": "27/8"},
+  "uniform_quotient_possible": false,
+  "single_factor_removals": {"remove_fiber": 54, "remove_weakslot": 54, "remove_color": 54, "remove_chirality": 81, "remove_generation": 54},
+  "best_hypothesis": "physical table is a selected submodule/projector, not a uniform quotient",
+  "notable_split": "162 = 96 + 66",
+  "boundary": "search clue only; no W33-native projector to 96 has been constructed yet"
+}
