@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1065 96-dimensional projector search",
+  "carrier_split": "162 = 3 * 54",
+  "target_split": "162 = 96 + 66",
+  "per_generation_split": "54 = 32 + 22",
+  "w33_source_of_22": "BT876 transvection split 22+9+9; 22 is fixed/diagonal block",
+  "candidate_projector": "P_phys(g)=I_54(g)-P_22(g)",
+  "ranks": {"P_phys_per_generation": 32, "P_phys_total": 96, "P_comp_total": 66},
+  "status": "target projector identified; explicit P_22(g) matrix remains to be built"
+}
