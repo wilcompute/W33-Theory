@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1104 P_K block formula",
+  "projector": "P_K = K^*(K K^*)^{-1}K = K_white^* K_white",
+  "KK_star_inverse": "3 I_12 - (3/13) J_12",
+  "B_definition": "B=(1/9) pi12^T (3 I_12 - (3/13) J_12) pi12",
+  "B_entries": {
+    "0_to_11_by_0_to_11": "B_ab = (1/3) delta_ab - 1/39",
+    "anchor_cross": "B_a12 = B_12a = -1/39 for a=0..11",
+    "anchor_anchor": "B_12,12 = 4/13"
+  },
+  "full_PK": "3 by 3 generation block matrix with every F13-F13 block equal to B; all D9 rows/columns zero",
+  "rank": 12,
+  "kernel_dimension": 54,
+  "idempotent": true,
+  "boundary": "exact rational projector; no physical coupling or generation breaking inserted"
+}
