@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1083 true P22 lift into 162-slot carrier",
+  "carrier_split": "C^162 = G0 + G1 + G2, dim Gg=54",
+  "generation_split": "Gg = C40_core(g) + R14(g)",
+  "P22_lift_per_generation": "P22_true_on_C40(g) plus zero on R14(g)",
+  "rank_P22_per_generation": 22,
+  "rank_physical_per_generation": 32,
+  "rank_P66_total": 66,
+  "rank_P96_total": 96,
+  "idempotent": true,
+  "boundary": "requires choosing the 40-dimensional transvection core inside each 54-dimensional generation block"
+}
