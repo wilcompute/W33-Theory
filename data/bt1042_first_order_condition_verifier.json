@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1042 first-order condition verifier",
+  "carrier": "HS(K), K=C^3_weakslot tensor C^3_color, dim HS(K)=81",
+  "generator_count": 12,
+  "pairs_tested": 144,
+  "max_commutator_norm": 0.0,
+  "tolerance": 1e-9,
+  "first_order_pass": true,
+  "identity_used": "left and right multiplication commute on HS(K)",
+  "boundary": "This verifies first-order for the block candidate generator span and sample Higgs direction; full physical Yukawa texture still requires choosing all Phi components and couplings."
+}
