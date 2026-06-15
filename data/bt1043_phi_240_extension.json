@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1043 Phi extension to the 240 cellular QFT carrier",
+  "extension": "minimal harmonic-only extension",
+  "carrier_split": {"harmonic": 81, "im_d2": 120, "r_sector": 24, "s_sector": 15, "total": 240},
+  "action": {
+    "harmonic_81": "Phi acts as left multiplication on HS(K), K=C^3_weakslot tensor C^3_color",
+    "non_harmonic_159": "Phi acts as zero until a nonzero sector action is derived"
+  },
+  "symbol": "h2 = |phi1|^2 + |phi2|^2",
+  "traces_240_minimal": {"tr_240_Phi2": "54 h2", "tr_240_Phi4": "54 h2^2", "tr_240_Delta1_Phi2": "0"},
+  "numeric_coefficients": {"Phi2": 54, "Phi4": 54, "Delta1Phi2": 0},
+  "why_nonfabricated": "the extension only acts where the BT1041 HS(K) representation is defined; it does not invent a Higgs action on im(d2)+heavy sectors",
+  "next": "derive a nonzero im(d2)+heavy action before changing tr_240(Delta_1 Phi^2) from zero"
+}
