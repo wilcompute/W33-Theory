@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
-# w33_paper.tex pulls in \input{partN_*} files that live in manuscripts/tex/.
-# Expose that directory to kpathsea so the master manuscript resolves its
-# includes (trailing ':' keeps the default search paths). Without this,
-# pdflatex halts at "part5_unified_breakthrough.tex not found".
 export TEXINPUTS=".:./manuscripts/tex:${TEXINPUTS:-}:"
 
 python tools/integrate_bt942_selector_appendix_w33.py
@@ -15,6 +10,7 @@ python tools/integrate_bt973_rail_generation_phase_w33.py
 python tools/integrate_bt1134_w33_paper.py
 python tools/integrate_bt1139_w33_paper_k3_a4.py
 python tools/integrate_bt1142_w33_paper_a4_table.py
+python tools/integrate_bt1145_w33_metric_bridge.py
 python tools/integrate_bt949_holonet_w33_crossref.py
 python tools/integrate_bt958_holonet_final_selector_pointer.py
 python tools/integrate_bt967_holonet_selector_rails.py
@@ -27,7 +23,10 @@ python -m pytest -q \
   tests/test_bt1139_k3_a4_paper_integration.py \
   tests/test_bt1140_seeley_dewitt_a4_convention_split.py \
   tests/test_bt1141_spin_hodge_a4_coefficients.py \
-  tests/test_bt1142_a4_convention_table_paper_integration.py
+  tests/test_bt1142_a4_convention_table_paper_integration.py \
+  tests/test_bt1143_curvature_matrix_verifier.py \
+  tests/test_bt1144_w33_finite_carrier_alignment.py \
+  tests/test_bt1145_metric_bridge_integration.py
 
 pdflatex -interaction=nonstopmode w33_paper.tex
 pdflatex -interaction=nonstopmode w33_paper.tex
