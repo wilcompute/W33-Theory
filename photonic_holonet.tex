@@ -2703,6 +2703,40 @@ spacetime is its metric continuum: the universal computer and the universe are
 the two faces of one finite geometry's continuum limit. (Witness:
 \texttt{analysis/w33\_two\_continua\_symplectic\_metric.py}.)
 
+\subsection{The fault-tolerant layer is the substrate's lattice tower}
+
+Because the holonet's logical layer is a continuous-variable (CV) oscillator
+computation, its canonical fault-tolerant encoding is the
+Gottesman--Kitaev--Preskill (GKP) code, which embeds a qudit in an oscillator.
+A \emph{multimode} GKP code \emph{is} a symplectic lattice in phase space:
+stabilisers are displacements by lattice vectors, and error correction is
+closest-point decoding in the symplectic dual lattice. The code quality is set
+entirely by the lattice, and the established optima are exceptional lattices:
+the \emph{hexagonal} lattice $A_2$ for one mode, the densest $4$-dimensional
+lattice $D_4$ for two modes (strictly better than any product of one-mode
+codes), and $E_8$ for four modes
+\cite{conrad-gkp-lattice,lin-gkp-decoding}.
+
+This is not a free design choice for the holonet: the substrate \emph{fixes}
+the lattice at every scale. The machine is two qutrits, hence two oscillator
+modes ($L^2(\mathbb R^2)$, phase space $\mathbb R^4$), so its optimal GKP code
+lattice is $D_4$ --- and $D_4$ is exactly the substrate's matter shell, with
+$|W(D_4)|=192$ the tomotope/flag symmetry and $D_4$ triality the
+three-generation structure. The single-mode optimum $A_2$ is the $q=3$
+(hexagonal, $SU(3)$) lattice of a single qutrit, and two modes stacked,
+$D_4\oplus D_4$, sit primitively inside $E_8$ --- the substrate's mod-$2$
+homology lift (R1), which is also the $K3$ gauge lattice. Thus the tower
+\[
+  A_2 \;\subset\; D_4 \;\subset\; E_8
+\]
+is \emph{simultaneously} the optimal $1$-, $2$-, $4$-mode GKP code lattices
+(the architecture's quantum error-correction layer) and $W(3,3)$'s physical
+lattice tower (single-qutrit $SU(3)$, matter shell, gauge $E_8$). The error
+correction of the computer and the gauge structure of the universe are one and
+the same lattice tower; the QEC code is not chosen, it is the substrate.
+(Witness: \texttt{analysis/w33\_gkp\_lattice\_architecture.py}, verifying the
+kissing numbers $6,24,240$ and the embedding $D_4\oplus D_4\subset E_8$.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
@@ -2741,6 +2775,13 @@ the two faces of one finite geometry's continuum limit. (Witness:
   decipherability, \emph{IRE Transactions on Information Theory}
   \textbf{2}(4), 115--116 (1956),
   \href{https://doi.org/10.1109/TIT.1956.1056818}{doi:10.1109/TIT.1956.1056818}.
+\bibitem{conrad-gkp-lattice} J.~Conrad, J.~Eisert, F.~Hangleiter,
+  Gottesman--Kitaev--Preskill codes: A lattice perspective,
+  \emph{Quantum} \textbf{6}, 648 (2022).
+\bibitem{lin-gkp-decoding} M.~Lin, C.~Chamberland, K.~Noh \emph{et al.},
+  Closest lattice point decoding for multimode Gottesman--Kitaev--Preskill
+  codes, \emph{PRX Quantum} \textbf{4}, 040334 (2023) --- the $D_4$ lattice is
+  optimal in the two-mode case.
 \end{thebibliography}
 
 \end{document}

@@ -1,0 +1,42 @@
+{
+  "result": "holonet CV fault-tolerant code = substrate lattice tower A2 < D4 < E8 (optimal GKP lattices)",
+  "lattices": [
+    {
+      "name": "A2",
+      "dim": 2,
+      "modes": 1,
+      "kissing": 6,
+      "det(Gram)": 3
+    },
+    {
+      "name": "D4",
+      "dim": 4,
+      "modes": 2,
+      "kissing": 24,
+      "det(Gram)": 4
+    },
+    {
+      "name": "E8",
+      "dim": 8,
+      "modes": 4,
+      "kissing": 240,
+      "det(Gram)": 1
+    }
+  ],
+  "gkp_optima": {
+    "1_mode": "A2 (hexagonal)",
+    "2_mode": "D4",
+    "4_mode": "E8"
+  },
+  "substrate_roles": {
+    "A2": "q=3 hexagonal / SU(3) (single qutrit) -- optimal 1-mode GKP",
+    "D4": "matter shell |W(D4)|=192, triality (tomotope) -- optimal 2-mode GKP",
+    "E8": "mod-2 homology lift (R1) = K3 gauge lattice -- 4-mode GKP optimum"
+  },
+  "D4xD4_in_E8": true,
+  "architecture_claim": "the 2-qutrit (Sp(4,3)) oscillator-rep CV computer has optimal 2-mode GKP lattice D4 = matter-shell W(D4); QEC tower A2<D4<E8 = physics lattice tower",
+  "sources": [
+    "Conrad, Eisert, Hangleiter, GKP codes: a lattice perspective, Quantum 6, 648 (2022)",
+    "Lin et al., Closest lattice point decoding for multimode GKP codes, PRX Quantum 4, 040334 (2023) (D4 optimal 2-mode)"
+  ]
+}
