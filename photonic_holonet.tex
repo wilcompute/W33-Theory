@@ -2770,6 +2770,26 @@ $A_2\subset D_4\subset E_8$ this closes the architecture: $W(3,3)$ fixes both th
 fault-tolerant code and the universal gate set, leaving no free choice in the
 logical layer. (Witness: \texttt{analysis/w33\_cv\_universality\_cubic.py}.)
 
+Finally, the code and the gate set are not two independent facts: they are welded
+by a single group. The logical Clifford group of a GKP code on $n$ qudits of
+dimension $d$ is the symplectic group $\mathrm{Sp}(2n,\mathbb Z/d)$ over the
+logical phase space. For the holonet ($n=2$, $d=3$) this is
+\[
+  \mathrm{Sp}(4,\mathbb Z/3)=\mathrm{Sp}(4,3),\qquad |\mathrm{Sp}(4,3)|=51840,
+\]
+which is \emph{exactly} $\mathrm{Aut}(W(3,3))$, the $2$-qutrit Clifford group mod
+Pauli, and the Clifford group the photon's own tritter, phase plate and
+modulator already generate (\S\ref{sec:universality}, ``symplectic closure
+$=51840$''). So the substrate's symmetry group, the machine's realised gate
+group, and the GKP code's logical gate group are \emph{one group}: the gates act
+on the code by construction. The code-preserving (transversal) Gaussian gates
+are the lattice automorphisms $\mathrm{Aut}(D_4)=W(F_4)$ of order
+$192\cdot 6=1152$, whose $S_3$ factor is $D_4$ triality --- the three-generation
+structure --- and the remaining $[\mathrm{Sp}(4,3):\mathrm{Aut}(D_4)]=45$ logical
+Cliffords are teleported using the cubic resource. The logical layer of the
+holonet is thus a single coherent object, every part of it fixed by $W(3,3)$.
+(Witness: \texttt{analysis/w33\_gkp\_clifford\_coherence.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project

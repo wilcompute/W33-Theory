@@ -1,0 +1,14 @@
+{
+  "result": "substrate Aut(W(3,3))=Sp(4,3) IS the 2-qutrit GKP logical Clifford group = photon gate group (architecture coherence)",
+  "Sp(2,3)_single_qutrit": 24,
+  "Sp(4,3)_two_qutrit_logical_clifford": 51840,
+  "equals_AutW33_and_photon_clifford": true,
+  "PSp(4,3)_U4_2": 25920,
+  "Aut_D4": {
+    "order": 1152,
+    "decomp": "|W(D4)|*|S3 triality| = 192*6",
+    "role": "Gaussian gates preserving the D4 GKP code lattice"
+  },
+  "index_Sp43_over_AutD4": 45,
+  "logical_clifford_law": "Clifford_logical(n qudits dim d) = Sp(2n, Z/d); n=2,d=3 -> Sp(4,3)"
+}
