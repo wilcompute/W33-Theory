@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1101 whitened reservoir readout",
+  "starting_gram": "KK* = (1/3) I_12 + (1/3) J_12",
+  "projectors": {"P_u": "J_12/12", "P_t": "I_12 - J_12/12"},
+  "spectral_decomposition": "KK* = (13/3) P_u + (1/3) P_t",
+  "whitening_operator": "W = sqrt(3/13) P_u + sqrt(3) P_t",
+  "K_white": "W K",
+  "checks": {"K_white_K_white_star": "I_12", "domain_projector": "P_K=K*(KK*)^{-1}K=K_white*K_white", "rank_P_K": 12, "kernel_dimension": 54},
+  "scales": {"uniform_mode": "sqrt(3/13)", "transverse_modes": "sqrt(3)"},
+  "boundary": "canonical whitening only; physical coupling rescaling remains open"
+}
