@@ -2,8 +2,8 @@ name: Build integrated papers
 
 # Runs the executable paper-integration pipeline from a clean checkout.  This is
 # the CI analogue of running tools/bt974_direct_final_paper_build.sh locally: it
-# applies the integrators, runs the BT1133/BT1134/BT1138 regression gates, then
-# compiles both real papers.
+# applies the integrators, runs the BT1133/BT1134/BT1138/BT1139 regression gates,
+# then compiles both real papers.
 
 on:
   workflow_dispatch:
@@ -13,14 +13,17 @@ on:
       - 'photonic_holonet.tex'
       - 'analysis/BT1134_w33_paper_product_heat_insert.tex'
       - 'analysis/BT1136_holonet_product_heat_pointer_insert.tex'
+      - 'analysis/BT1139_w33_paper_k3_a4_insert.tex'
       - 'analysis/bt1138_k3_a4_normalization_lane.py'
       - 'data/PART_BT1138_K3_A4_NORMALIZATION_results.json'
       - 'tools/bt974_direct_final_paper_build.sh'
       - 'tools/integrate_bt1134_w33_paper.py'
+      - 'tools/integrate_bt1139_w33_paper_k3_a4.py'
       - 'tools/integrate_bt1136_holonet_product_heat_pointer.py'
       - 'tests/test_bt1133_finite_heat_moments.py'
       - 'tests/test_bt1134_paper_integration.py'
       - 'tests/test_bt1138_k3_a4_normalization.py'
+      - 'tests/test_bt1139_k3_a4_paper_integration.py'
       - '.github/workflows/build-integrated-papers.yml'
 
 jobs:
@@ -42,9 +45,10 @@ jobs:
         run: |
           bash tools/bt974_direct_final_paper_build.sh
 
-      - name: Assert integrated proposition and pointer are present in logs/sources
+      - name: Assert integrated propositions and pointer are present in sources
         run: |
           grep -q 'prop:ricci-flat-product-heat-slot' w33_paper.tex
+          grep -q 'prop:k3-a4-normalized-closure' w33_paper.tex
           grep -q 'Inherited K3 product coefficient split' photonic_holonet.tex
 
       - name: Upload integrated paper artifacts
