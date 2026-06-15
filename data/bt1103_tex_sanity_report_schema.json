@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1103 TeX path sanity report schema",
+  "report_target": "data/bt1103_tex_path_sanity_report.json",
+  "existing_checker": "tools/bt1100_tex_path_sanity.py",
+  "checked_section_count_after_BT1102": 14,
+  "fields": ["passed", "checked_section_count", "missing", "duplicate_labels", "brace_balance_errors", "compile_claim"],
+  "compile_claim": false,
+  "status": "schema committed; connector blocked script patch attempt"
+}
