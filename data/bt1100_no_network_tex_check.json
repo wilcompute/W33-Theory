@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1100 no-network TeX/path sanity check",
+  "script": "tools/bt1100_tex_path_sanity.py",
+  "checks": ["W33 marker", "holonet marker", "latest integration helper", "W33 input paths", "holonet input paths", "simple brace balance", "duplicate labels"],
+  "expected_w33_sections": 5,
+  "expected_holonet_sections": 5,
+  "compile_claim": false,
+  "boundary": "structural sanity check only, not a TeX compiler"
+}
