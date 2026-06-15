@@ -1,0 +1,28 @@
+\section{BT1086--BT1088 Holonet Reservoir Runtime}
+\label{sec:bt1086-bt1088-holonet-reservoir-runtime}
+
+The bridge reservoir is now an explicit runtime object rather than unused dimension.  Per generation the $54$-slot matter bus splits into two $27$-slot chirality sheets,
+\[
+G_g=C^{27}_L(g)\oplus C^{27}_R(g).
+\]
+The W33 $40$-core is embedded as
+\[
+C^{40}_{\mathrm{core}}(g)=C^{27}_L(g)\oplus B^{13}_R(g),
+\]
+leaving a $14$-slot residual in the opposite chirality sheet.  This realizes the operational reading: one chirality sheet carries the full matter-shell address cube, while the other contributes the fixed/gauge-perp header and a residual runtime buffer.
+
+The global bridge reservoir has dimension
+\[
+78=66+12.
+\]
+The $66$ part is three copies of the true transvection grade-zero projector, and the $12$ part is the gauge packet profile
+\[
+1+3+8.
+\]
+The first runtime action is therefore
+\[
+R_{78}=T_{66}\oplus A_{12},
+\qquad
+A_{12}=A_1\oplus A_3\oplus A_8,
+\]
+with no off-diagonal coupling at prototype level.  Architecturally, this means the reservoir stores the unfinished naturality data of the bridge: transvection bookkeeping, gauge-adjoint packets, and eventually the incidence-derived coupling between them.
