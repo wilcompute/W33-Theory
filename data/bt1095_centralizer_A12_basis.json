@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1095 centralizer A12 basis",
+  "module": "A12 = A1 + A3 + A8",
+  "complexified_identification": {"A1": "C", "A3": "sl2(C)", "A8": "sl3(C)"},
+  "ordered_basis": ["Y", "W0", "Wp", "Wm", "C12", "C21", "C13", "C31", "C23", "C32", "C0", "C8"],
+  "sl2_basis": {"W0": "diag(1,-1)", "Wp": "E12", "Wm": "E21"},
+  "sl3_basis": {"C12": "E12", "C21": "E21", "C13": "E13", "C31": "E31", "C23": "E23", "C32": "E32", "C0": "diag(1,-1,0)", "C8": "diag(1,1,-2)"},
+  "dimension_check": "1+3+8=12",
+  "boundary": "complexified algebraic basis; real form and normalization remain later choices"
+}
