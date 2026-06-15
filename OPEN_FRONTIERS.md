@@ -232,9 +232,20 @@ ARCHITECTURE CLOSURE (holonet logical layer is substrate-forced; photonic_holone
     generations); remaining index [Sp(4,3):Aut(D4)]=45 Cliffords teleported via
     the cubic. Witness analysis/w33_gkp_clifford_coherence.py.
   So W(3,3) fixes BOTH the code and the universal gate set, AND they are mutually
-  coherent (one symmetry group). RESIDUAL (genuinely open, engineering/
-  quantitative): the fault-tolerance THRESHOLD (D4-GKP code distance,
-  squeezing-dB budget) -- not claimed.
+  coherent (one symmetry group).
+  - VOA/MOONSHINE BRIDGE (commit 3cab12c3): the GKP code lattices A2/D4/E8 (ranks
+    2/4/8) ARE lattice VOAs of central charge c=2/4/8 (code-CFT correspondence,
+    Dymarsky-Shapere); the top rung E8 VOA (c=8) is the base of the corpus's
+    existing ladder E8->Leech->Monster V-natural (c=24=f=chi(K3), Aut=M). Same E8
+    = GKP code = R1 gauge lattice = c=8 VOA. Architecture (bottom) & R2 moonshine
+    (top) = ONE ladder. Witness analysis/w33_gkp_voa_bridge.py.
+  - THRESHOLD, lattice part (commit a92ac048): the substrate lattices are isodual
+    (balanced GKP) + densest, max nominal coding gain gamma=d_min^2/det^{1/n}:
+    0.6/1.5/3.0/6.0 dB (A2/D4/E8/Leech). D4 buys ~1.5 dB, E8 ~3 dB of squeezing
+    margin for free. Witness analysis/w33_gkp_coding_gain.py.
+  RESIDUAL (still genuinely open, engineering): the ABSOLUTE fault-tolerance
+  threshold = lattice part (DONE above) + noise model + finite-squeezing GKP
+  state quality + syndrome/FT protocol -- the last three not claimed.
   LANE NOTE: this is the architecture (holonet) lane, orthogonal to the parallel
   agent's K3-spectral (BT1116-1150) and S3-chirality (BT1151-1193) work.
 
