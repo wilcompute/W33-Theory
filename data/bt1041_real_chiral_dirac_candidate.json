@@ -1,0 +1,22 @@
+{
+  "theorem": "BT1041 real/chiral finite Dirac candidate",
+  "carrier_model": "H = C^2_chiral tensor HS(K), K=C^3_weakslot tensor C^3_color",
+  "K_dimension": 9,
+  "HS_K_dimension": 81,
+  "carrier_dimension": 162,
+  "target_dimension": 162,
+  "dimension_hit": true,
+  "operators": {
+    "gamma": "sigma_z tensor identity",
+    "J": "sigma_x tensor star antiunitary, star(X)=X^*",
+    "D_F": "sigma_x tensor (L_Phi + R_Phi) with Phi Hermitian"
+  },
+  "ko_signs_candidate": {
+    "J_squared": "+1",
+    "J_gamma": "- gamma_J",
+    "J_D": "D_J",
+    "gamma_D": "- D_gamma"
+  },
+  "why_this_matters": "Using HS(K) gives genuine left and right actions, so the opposite algebra and first-order test can be represented without faking commutation on a single left module.",
+  "next": "BT1042 verifies the first-order commutator [[D_F,L_a],R_b]=0 on generator spans."
+}
