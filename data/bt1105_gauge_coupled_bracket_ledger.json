@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1105 gauge-coupled bracket ledger",
+  "couplings": ["g1", "g2", "g3"],
+  "scaled_basis": {"Yhat": "g1 Y", "What_a": "g2 W_a", "Chat_a": "g3 C_a"},
+  "scaled_trace_norms": {"Yhat": "g1^2", "What": "g2^2 delta_ab", "Chat": "g3^2 delta_ab"},
+  "coupled_brackets": {
+    "u1": "central",
+    "su2": "[What_a,What_b] = -sqrt(2) g2 epsilon_abc What_c",
+    "su3": "[Chat_a,Chat_b] = -sqrt(2) g3 f_abc Chat_c",
+    "cross_sector": "zero"
+  },
+  "kinetic_metric_convention": {"u1": "g1^-2", "su2": "g2^-2", "su3": "g3^-2"},
+  "boundary": "symbolic coupling slots only; no numerical W33 derivation yet"
+}
