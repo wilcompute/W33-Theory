@@ -1,0 +1,94 @@
+{
+  "result": "W(3,3) has two distinct continuum limits",
+  "arithmetic_tower": [
+    {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "lam": 2,
+      "mu": 4,
+      "r": 2,
+      "s": -4,
+      "f": 24,
+      "g": 15,
+      "L_nonzero": [
+        10,
+        16
+      ],
+      "distinct_eigs": 3
+    },
+    {
+      "q": 9,
+      "v": 820,
+      "k": 90,
+      "lam": 8,
+      "mu": 10,
+      "r": 8,
+      "s": -10,
+      "f": 450,
+      "g": 369,
+      "L_nonzero": [
+        82,
+        100
+      ],
+      "distinct_eigs": 3
+    },
+    {
+      "q": 27,
+      "v": 20440,
+      "k": 756,
+      "lam": 26,
+      "mu": 28,
+      "r": 26,
+      "s": -28,
+      "f": 10584,
+      "g": 9855,
+      "L_nonzero": [
+        730,
+        784
+      ],
+      "distinct_eigs": 3
+    },
+    {
+      "q": 81,
+      "v": 538084,
+      "k": 6642,
+      "lam": 80,
+      "mu": 82,
+      "r": 80,
+      "s": -82,
+      "f": 272322,
+      "g": 265761,
+      "L_nonzero": [
+        6562,
+        6724
+      ],
+      "distinct_eigs": 3
+    },
+    {
+      "q": 243,
+      "v": 14408200,
+      "k": 59292,
+      "lam": 242,
+      "mu": 244,
+      "r": 242,
+      "s": -244,
+      "f": 7233624,
+      "g": 7174575,
+      "L_nonzero": [
+        59050,
+        59536
+      ],
+      "distinct_eigs": 3
+    }
+  ],
+  "arithmetic_tower_is_metric_manifold": false,
+  "arithmetic_rigidity": "exactly 3 distinct eigenvalues at every q; no Weyl law; not a Riemannian limit",
+  "spacetime_continuum": "external K3 (chi=24=f) edgewise refinement (R3)",
+  "symplectic_continuum": "q->inf Weil rep of Sp(4,F_q) -> metaplectic/oscillator rep of Sp(4,R) on L^2(R^2) = photonic CV computation",
+  "unification": "architecture (symplectic/oscillator) and physics (metric/K3) are the two continuum limits of W(3,3)",
+  "sources": [
+    "Gurevich-Hadani, Quantization of symplectic vector spaces over finite fields, arXiv:0705.4556",
+    "Payne-Thas, Finite Generalized Quadrangles"
+  ]
+}
