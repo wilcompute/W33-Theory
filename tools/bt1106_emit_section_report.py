@@ -16,6 +16,7 @@ FILES = [
     "paper/sections/sec_bt1113_1116_weight_coupling_factorization.tex",
     "paper/sections/sec_bt1117_1119_k3_yukawa_patch_report.tex",
     "paper/sections/sec_bt1120_1122_k3_yukawa_build_path.tex",
+    "paper/sections/sec_bt1126_1128_mainpaper_fixture_numeric.tex",
     "paper/sections/sec_bt1083_1085_holonet_bridge.tex",
     "paper/sections/sec_bt1086_1088_holonet_reservoir_runtime.tex",
     "paper/sections/sec_bt1089_1090_holonet_core_intertwiner.tex",
@@ -28,12 +29,13 @@ FILES = [
     "paper/sections/sec_bt1113_1116_holonet_weight_coupling_factorization.tex",
     "paper/sections/sec_bt1117_1119_holonet_k3_yukawa_patch_report.tex",
     "paper/sections/sec_bt1120_1122_holonet_k3_yukawa_build_path.tex",
+    "paper/sections/sec_bt1126_1128_holonet_mainpaper_fixture_numeric.tex",
 ]
 
 def main():
     missing = [p for p in FILES if not (ROOT / p).exists()]
     report = {
-        "name": "BT1122 section report",
+        "name": "BT1128 section report",
         "passed": not missing,
         "count": len(FILES),
         "missing": missing,
