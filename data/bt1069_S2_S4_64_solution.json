@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1069 S2=S4=64 solution",
+  "weights": {"c0": 54, "c4": 80, "c10": 16, "c16": 10},
+  "constraint": {"S2": 64, "S4": 64},
+  "idempotent_solution": {"c0": 1, "c4": 0, "c10": 0, "c16": 1},
+  "projector": "Q64 = P0 + P16",
+  "support_dimension": "81 + 15 = 96",
+  "traces": {"tr_240_Phi2": "64 h2", "tr_240_Phi4": "64 h2^2", "tr_240_Delta1_Phi2": "160 h2"},
+  "boundary": "solves idempotent sector constraint on 240-chain carrier; not yet physical 162-slot projector proof"
+}
