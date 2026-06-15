@@ -1,0 +1,40 @@
+% BT1142 -- Compact convention table for w33_paper.tex after BT1139.
+
+\begin{remark}[Four distinct $A_4/a_4$ convention lanes]
+\label{rem:k3-a4-convention-table}
+The normalized identity in Proposition~\ref{prop:k3-a4-normalized-closure} uses
+the corpus curvature normalization
+\[
+  A_4^{\rm norm}=\frac{1}{8\pi^2}\int_{K3}|{\rm Rm}|^2=24.
+\]
+This is not the scalar heat coefficient, nor the spin-Dirac coefficient, nor
+the ordinary-trace Hodge coefficient.  For a Ricci-flat four-manifold and a
+Laplace-type operator with bundle rank $r$,
+\[
+  a_4(P)=24\,\frac{2r+30\omega+180e}{720},
+\]
+where $\omega$ and $e$ are defined by
+$\operatorname{tr}(\Omega_{ij}\Omega_{ij})=\omega |{\rm Rm}|^2$ and
+$\operatorname{tr}(E^2)=e |{\rm Rm}|^2$.  The four lanes are therefore:
+\[
+\begin{array}{c|c|c|c|c}
+\text{lane} & r & \omega & e & a_4\text{ or }A_4 \\
+\hline
+\text{corpus curvature norm} & - & - & - & 24 \\
+\text{scalar positive Laplacian} & 1 & 0 & 0 & 1/15 \\
+\text{spin Dirac square} & 4 & -1/2 & 0 & -7/30 \\
+\text{Hodge all forms, ordinary trace} & 16 & -4 & 1 & 46/15
+\end{array}
+\]
+Consequently the finite product slot $C_4=440a_4+8160$ has four different
+readings:
+\[
+  18720,\qquad \frac{122408}{15},\qquad \frac{24172}{3},\qquad
+  \frac{28528}{3},
+\]
+respectively.  Only the first one is the topological corpus-normalized target
+that closes as $E q!\Phi_3$; the other three are operator-specific heat-kernel
+lanes.  This table is included to prevent a convention error: the Euler
+supertrace, the ordinary Hodge trace, the spin trace, and the scalar trace are
+not interchangeable.
+\end{remark}
