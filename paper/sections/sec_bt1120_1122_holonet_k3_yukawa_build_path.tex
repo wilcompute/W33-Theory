@@ -1,0 +1,6 @@
+\section{BT1120--BT1122 Holonet K3 Interface and Build Path}
+\label{sec:bt1120-bt1122-holonet-k3-yukawa-build-path}
+
+The holonet architecture now distinguishes three runtime lanes.  The finite packet lane carries seed-independent W33 ratios.  The K3 lane supplies the dimensionful geometric multipliers $A_0$, $A_2$, and $A_4$ with explicit convention data.  The generation lane transfers phase/order data into a separate Koide-radius Yukawa map rather than equating projector weights with masses.
+
+The build path now begins by applying the small W33 and holonet patch helpers, then emits the staged section report, then runs the structural TeX/path sanity checker, and only then attempts compilation.  This makes paper integration safer while keeping compile success as a separately verified result.
