@@ -113,6 +113,16 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   The named external input is now in hand; remaining = assemble the V5
   Monster-module decomposition from these traces. (Computed, not fabricated;
   12/12 anchored checks pass.)
+  CERTIFIED GENUINE (w33_moonshine_v5_replication_certificate.py; w33_paper.tex
+  Prop "The degree-5 moonshine datum is genuine"): the three series certify the
+  datum WITHOUT the full 194-irrep table. (i) Norton n=2 replication — since
+  2A^2=2B^2=1A the degree-2 replicate is f^(2)=J, and C(1)+2f(4)=2f(3)+f(1)^2,
+  C(2)+2f(8)=2f(5)+2f(1)f(3)+f(2)^2 hold for all three (the q^4 identity ties in
+  the supplied degree-5 trace f(5)); this is the genus-zero heart of moonshine.
+  (ii) Eigenspace integrality — dim V5^{g,+/-}=(dimV5 +/- Tr(g|V5))/2 are
+  non-neg integers for 2A,2B; dim V5^{2A,+}=166638534360 is the Baby-Monster-
+  relevant fixed graded dim (C_M(2A)=2.B). STILL OPEN: the full V5=sum m_i chi_i
+  over 194 irreps (needs the complete Monster character table + all 194 Hauptmoduln).
 - (7) DYNAMICAL / CONTINUUM ORIGIN — THE SOLE GENUINE OPEN (R1/R2 now
   closed/supplied above). FINITE HALF DONE (w33_paper.tex Prop "The
   gravitational sector is finite; the residual is analytic"): in the
