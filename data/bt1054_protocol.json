@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1054 protocol",
+  "labels": [0, 4, 10, 16],
+  "dimensions": [81, 120, 24, 15],
+  "rule2": "sector average of Q squared",
+  "rule4": "sector average of Q fourth power",
+  "targets": {"a0": "A0", "a4": "A4", "a10": "A10", "a16": "A16"},
+  "boundary": "protocol only; concrete operator Q remains to be built"
+}
