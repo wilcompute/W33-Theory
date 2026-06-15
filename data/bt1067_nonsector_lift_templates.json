@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1067 non-sector-preserving lift templates",
+  "Q_sector_values": {"E0": 0, "E4": 1, "E10": "5/2", "E16": 4},
+  "commutator_rule": "[Q,X_lambda_mu]=(mu/4-lambda/4) X_lambda_mu",
+  "gaps": {"E0_E4": 1, "E4_E10": "3/2", "E10_E16": "3/2", "E0_E10": "5/2", "E4_E16": 3, "E0_E16": 4},
+  "templates": ["nearest-sector ladder", "P96-P66 mixing", "boundary-heavy mixing"],
+  "status": "templates and commutator laws only; physical off-diagonal matrices remain to be derived"
+}
