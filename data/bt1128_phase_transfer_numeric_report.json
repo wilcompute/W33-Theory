@@ -1,0 +1,26 @@
+{
+  "theorem": "BT1128 phase-transfer numeric report",
+  "theta": 0.2223,
+  "epsilon": 0.1,
+  "reservoir_weights": [
+    1.0975392940392437,
+    0.9321367784395943,
+    0.9703239275211619
+  ],
+  "reservoir_Q_if_naive_mass_map": 0.33499999999999996,
+  "yukawa_sqrt_vector_phase_transfer": [
+    2.3794139249459567,
+    0.0402691168294409,
+    0.5803169582246017
+  ],
+  "yukawa_Q": 0.6666666666666671,
+  "exact_koide_Q": 0.6666666666666666,
+  "koide_error": 4.440892098500626e-16,
+  "squared_yukawa_relative_vector": [
+    5.6616106262267225,
+    0.0016216017702231603,
+    0.33676777200305413
+  ],
+  "interpretation": "archived theta=0.2223; reservoir weights supply phase/order; Koide radius sqrt(2) supplies Yukawa amplitude",
+  "fit_claim": false
+}
