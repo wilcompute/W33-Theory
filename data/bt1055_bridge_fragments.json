@@ -1,0 +1,6 @@
+{
+  "theorem": "BT1055 bridge fragments",
+  "fragments": ["analysis/BT1055_bridge_fragment_A.md", "analysis/BT1055_bridge_fragment_B.md", "analysis/BT1055_bridge_fragment_C.md"],
+  "status": "accepted smaller fragments replacing the filtered full theorem note",
+  "boundary": "bridge-level package only; final assignment ledger remains open"
+}
