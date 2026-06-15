@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1046 controlled nonzero heavy-sector Phi ansatz",
+  "ansatz": "Phi acts on each Delta_1 eigensector with formal amplitude alpha_lambda times the normalized weakslot Higgs block",
+  "sectors": [
+    {"name": "harmonic", "lambda": 0, "dim": 81, "alpha": "a0"},
+    {"name": "boundary", "lambda": 4, "dim": 120, "alpha": "a4"},
+    {"name": "r_sector", "lambda": 10, "dim": 24, "alpha": "a10"},
+    {"name": "s_sector", "lambda": 16, "dim": 15, "alpha": "a16"}
+  ],
+  "formal_traces": {
+    "tr_240_Phi2": "54 a0^2 h2 + 80 a4^2 h2 + 16 a10^2 h2 + 10 a16^2 h2",
+    "tr_240_Phi4": "54 a0^4 h2^2 + 80 a4^4 h2^2 + 16 a10^4 h2^2 + 10 a16^4 h2^2",
+    "tr_240_Delta1_Phi2": "320 a4^2 h2 + 160 a10^2 h2 + 160 a16^2 h2"
+  },
+  "uniform_alpha_equals_1_case": {"tr_240_Phi2": "160 h2", "tr_240_Phi4": "160 h2^2", "tr_240_Delta1_Phi2": "640 h2"},
+  "minimal_BT1043_case": {"tr_240_Phi2": "54 h2", "tr_240_Phi4": "54 h2^2", "tr_240_Delta1_Phi2": "0"},
+  "boundary": "This is a controlled ansatz, not a derived physical Yukawa/heavy-sector coupling. It provides the first nonzero mixed-trace formula without inserting empirical parameters."
+}
