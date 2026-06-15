@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1044 full Higgs doublet first-order sweep",
+  "carrier": "HS(K), K=C^3_weakslot tensor C^3_color",
+  "higgs_real_components": 4,
+  "gauge_directions": 12,
+  "pairs_tested": 576,
+  "max_commutator_norm": 0.0,
+  "first_order_pass": true,
+  "reason": "for every Higgs component Phi_i, [[L_Phi_i+R_Phi_i,L_a],R_b]=0 because left and right multiplication commute on HS(K)",
+  "upgrade_over_BT1042": "BT1042 used one sample Higgs direction; BT1044 sweeps all four real components of the complex weak doublet"
+}
