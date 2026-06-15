@@ -1,0 +1,20 @@
+{
+  "bt": 1143,
+  "title": "explicit curvature-matrix verifier for spin and Hodge a4 coefficients",
+  "curvature_operator_diagonal_on_Lambda2": [1, -1, 0, 0, -1, 1],
+  "riemann_norm_squared": "16",
+  "ricci_matrix": [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+  "derived_coefficients": {
+    "omega_spin": "-1/2",
+    "omega_hodge": "-4",
+    "e2_hodge": "1"
+  },
+  "checks": {
+    "ricci_flat": true,
+    "norm_is_16": true,
+    "omega_spin_is_minus_half": true,
+    "omega_hodge_is_minus_four": true,
+    "e2_hodge_is_one": true,
+    "all_checks_pass": true
+  }
+}
