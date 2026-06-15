@@ -1,0 +1,89 @@
+{
+  "result": "degree-5 moonshine datum certified genuine via replication + eigenspace integrality",
+  "series_q1_q8": {
+    "T1A": [
+      196884,
+      21493760,
+      864299970,
+      20245856256,
+      333202640600,
+      4252023300096,
+      44656994071935,
+      401490886656000
+    ],
+    "T2A": [
+      4372,
+      96256,
+      1240002,
+      10698752,
+      74428120,
+      431529984,
+      2206741887,
+      10117578752
+    ],
+    "T2B": [
+      276,
+      -2048,
+      11202,
+      -49152,
+      184024,
+      -614400,
+      1881471,
+      -5373952
+    ]
+  },
+  "n2_replication": {
+    "1A": {
+      "q2": [
+        40491909396,
+        40491909396,
+        true
+      ],
+      "q4": [
+        802981794805760,
+        802981794805760,
+        true
+      ]
+    },
+    "2A": {
+      "q2": [
+        21594388,
+        21594388,
+        true
+      ],
+      "q4": [
+        20256651264,
+        20256651264,
+        true
+      ]
+    },
+    "2B": {
+      "q2": [
+        98580,
+        98580,
+        true
+      ],
+      "q4": [
+        10745856,
+        10745856,
+        true
+      ]
+    }
+  },
+  "deg5_eigenspaces": {
+    "2A": {
+      "plus": 166638534360,
+      "minus": 166564106240,
+      "integral": true,
+      "positive": true
+    },
+    "2B": {
+      "plus": 166601412312,
+      "minus": 166601228288,
+      "integral": true,
+      "positive": true
+    }
+  },
+  "note": "2A^2=2B^2=1A so f^(2)=J for all three; q^4 replication identity C(2)+2f(8)=2f(5)+2f(1)f(3)+f(2)^2 ties in the degree-5 trace f(5).",
+  "remaining": "full V5 = sum m_i chi_i over 194 Monster irreps needs the complete character table + all 194 McKay-Thompson series"
+}

@@ -9684,6 +9684,41 @@ This supplies exactly the character-theoretic input the quintic lift (R2)
 required. (Witness: \texttt{analysis/bt982\_mckay\_thompson\_v5.py}.)
 \end{proposition}
 
+\begin{proposition}[The degree-$5$ moonshine datum is genuine]
+\label{prop:v5-moonshine-certificate}
+The three computed series certify the degree-$5$ datum as authentic
+Monster--module / Hauptmodul data on their own, independent of the full
+character table.
+\emph{(i) Replication.} Since $2A^2=2B^2=1A$, the degree-$2$ Norton replicate of
+each of $T_{1A},T_{2A},T_{2B}$ is $f^{(2)}=J$, and Norton's $n=2$ replication
+formula $f^{(2)}(2\tau)+f(\tfrac{\tau}{2})+f(\tfrac{\tau+1}{2})=f^2-2f(1)$
+forces, on matching $q$-coefficients,
+\[
+  C(1)+2f(4)=2f(3)+f(1)^2,\qquad
+  C(2)+2f(8)=2f(5)+2f(1)f(3)+f(2)^2,
+\]
+with $C(1)=196884$, $C(2)=21493760$ (the coefficients of $J=f^{(2)}$). Both hold
+for all three series; the second identity ties in the supplied degree-$5$ trace
+$f(5)$ (e.g.\ for $1A$, $C(2)+2C(8)=802\,981\,794\,805\,760=2C(5)+2C(1)C(3)+C(2)^2$).
+This is the genus-zero (replicable) heart of moonshine, verified at the level of
+the quintic datum.
+\emph{(ii) Eigenspace integrality.} For each involution the degree-$5$ subspace
+dimensions $\dim V_5^{g,\pm}=\tfrac12\bigl(\dim V_5\pm\operatorname{Tr}(g|V_5)\bigr)$
+are non-negative integers,
+\[
+  \dim V_5^{2A,+}=166\,638\,534\,360,\quad \dim V_5^{2A,-}=166\,564\,106\,240,\quad
+  \dim V_5^{2B,\pm}=166\,601\,412\,312,\;166\,601\,228\,288,
+\]
+so $V_5$ restricts to genuine $\langle 2A\rangle$- and $\langle 2B\rangle$-modules;
+$\dim V_5^{2A,+}$ is the Baby-Monster-relevant fixed-subspace graded dimension
+($C_{\mathbb M}(2A)=2{\cdot}\mathbb B$). The full decomposition
+$V_5=\bigoplus_i m_i\,\chi_i$ over the $194$ Monster irreducibles remains a known
+(large) computation requiring the complete character table and all $194$
+Hauptmoduln; the above are the certificates the three $W(3,3)$-anchored series
+determine alone. (Witness:
+\texttt{analysis/w33\_moonshine\_v5\_replication\_certificate.py}.)
+\end{proposition}
+
 The third residual is of a fundamentally different character: its finite half
 is entirely determined, but its closure is an analytic limit rather than a
 finite computation.
