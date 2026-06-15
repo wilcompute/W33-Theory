@@ -63,6 +63,31 @@ intrinsic symplectic continuum (Weil → oscillator), and (iii) draws the
 architecture↔physics unification. The K3 spectral-action computation (the metric
 continuum's quantitative output) remains the application task.
 
+## Conjecture: the dimensional unification (a sharp "why 4D")
+
+Both continua are **four-dimensional**, and for the *same* reason: the substrate
+symplectic space is `F₃⁴`, of symplectic dimension `4 = 2n` with `n=2` qutrit
+modes. On the symplectic side this `4` is manifest — the oscillator rep lives on
+the phase space `ℝ⁴ = T*ℝ²` of the 2-mode computer. On the metric side, the
+spacetime seed `K3` is a `4`-manifold, and the IR spectral dimension of the
+substrate is `4` (flowing `4→2`). The recurrence of `4` across the GQ order
+(`q+1=4`), the matter eigenvalue (`μ=4`), the symplectic dimension, the
+computational phase space, and the spacetime is suggestive but not yet a
+theorem. We record the sharp conjecture:
+
+> **Conjecture (dimensional unification).** The spacetime dimension of the
+> almost-commutative seed is *forced* to be `4` by the substrate's symplectic
+> dimension `dim_{F₃} = 2n = 4` (`n = 2` qutrit modes); equivalently, "why is
+> spacetime four-dimensional?" has the same answer as "why two qutrits?".
+
+This would derive the one input the almost-commutative framing currently takes
+from observation (the `4` of `M⁴`) from the substrate itself, closing the last
+external choice. It is the natural next target on the continuum frontier:
+establish (or refute) that `dim M = 2n` is forced — e.g. via the dimension
+spectrum of the product spectral triple, where the symplectic `2n` and the
+metric `d` would have to coincide for the KO-dimension / first-order axioms to
+hold.
+
 ## Sources
 
 - S. Gurevich, R. Hadani, *Quantization of symplectic vector spaces over finite
