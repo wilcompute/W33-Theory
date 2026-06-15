@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1037 W33 inner-fluctuation test harness",
+  "targets": {
+    "gauge_one_form_profile": [1, 3, 8],
+    "gauge_one_form_total": 12,
+    "matter_zero_modes": 81,
+    "doubled_fermion_carrier": 162,
+    "cellular_qft_carrier": 240,
+    "higgs_trace_targets": ["tr_F(Phi^2)", "tr_F(Phi^4)", "tr_F(Delta_1 Phi^2)"]
+  },
+  "tests": [
+    {"name": "AF_representation_exists", "status": "pending matrices"},
+    {"name": "first_order_condition", "status": "pending matrices"},
+    {"name": "inner_one_form_span", "status": "target locked"},
+    {"name": "higgs_offdiagonal_sector", "status": "pending matrices"}
+  ],
+  "pass_now": false,
+  "reason": "the harness locks the tests, but explicit A_F representation matrices are not yet constructed",
+  "next_artifact": "analysis/bt1038_af_representation_candidate.py"
+}
