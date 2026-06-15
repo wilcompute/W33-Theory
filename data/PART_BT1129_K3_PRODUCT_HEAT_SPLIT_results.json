@@ -1,0 +1,44 @@
+{
+  "boundary": "Symbolic interface theorem only: no K3 metric, volume, eigenvalue list, or physical gravitational constant is computed.",
+  "bt": 1129,
+  "checks": {
+    "C2_finite_filled": true,
+    "C4_mixed_topology_finite": true,
+    "all_checks_pass": true,
+    "k3_b2_from_intersection": true,
+    "k3_euler_from_betti": true,
+    "k3_signature_from_intersection": true,
+    "ricci_flat_A2_zero": true
+  },
+  "finite_heat_expansion": "Theta_F(t)=N - F2*t + (F4/2)*t^2 + O(t^3)",
+  "finite_ratio_warnings": {
+    "finite_a2_over_a0": "This is a finite-factor moment ratio. It should not be read as the pure K3 A2/A0 ratio, since Ricci-flat K3 has A2=0.",
+    "product_C2": "When A2=0, C2=-A0*F2. Thus the finite mass moment fills the Lambda^2 slot of the product heat trace.",
+    "product_C4": "When A2=0, C4=A4*N + A0*F4/2. The Lambda^0 slot mixes the topological/curvature K3 coefficient with the finite F4 moment."
+  },
+  "k3_topology_checks": {
+    "b2": 22,
+    "chi": 24,
+    "curvature_norm": "Integral |Rm|^2=192*pi^2",
+    "intersection_signature": [
+      3,
+      19
+    ],
+    "normalized_curvature_norm": "Integral |Rm|^2/(8*pi^2)=24",
+    "ricci_flat_scalar_curvature": 0,
+    "signature": -16
+  },
+  "manifold_heat_expansion": "Theta_M(t)=A0*t^-2 + A2*t^-1 + A4 + O(t)",
+  "product_coefficients": {
+    "C0": "A0*N",
+    "C2": "A2*N - A0*F2",
+    "C4": "A4*N - A2*F2 + A0*F4/2"
+  },
+  "ricci_flat_k3_specialization": {
+    "A2": 0,
+    "C0": "A0*N",
+    "C2": "-A0*F2",
+    "C4": "A4*N + A0*F4/2"
+  },
+  "title": "Ricci-flat K3 product heat coefficient split"
+}
