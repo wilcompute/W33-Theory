@@ -82,11 +82,19 @@ theorem. We record the sharp conjecture:
 
 This would derive the one input the almost-commutative framing currently takes
 from observation (the `4` of `M⁴`) from the substrate itself, closing the last
-external choice. It is the natural next target on the continuum frontier:
-establish (or refute) that `dim M = 2n` is forced — e.g. via the dimension
-spectrum of the product spectral triple, where the symplectic `2n` and the
-metric `d` would have to coincide for the KO-dimension / first-order axioms to
-hold.
+external choice.
+
+**RESOLVED (via KO-dimension, the route this conjecture predicted)** — see
+`W33_SPACETIME_DIMENSION_FROM_KO.md` and `w33_paper.tex`, Prop. "The spacetime
+dimension is forced to be four". The KO-dimension of the finite triple is
+`KO(F)=6=2q`; the Connes–Barrett fermion-doubling constraint fixes the total
+at `2 (mod 8)`; additivity gives `KO(M)=2−6≡4`, and `dim M ≡ KO(M) ≡ 4 (mod 8)`
+for a spin manifold. So `dim M = 4` is forced — through the dimension/KO axioms,
+exactly as conjectured. (Honest nuance: the mechanism is the KO-dimension
+`6=2q`, not the symplectic dimension `2n=4` directly; for the W(3,3) substrate
+both routes land on `4`, since `2−2q ≡ 2n (mod 8)` at `q=3, n=2`.) The "why 4D"
+question thereby reduces to "why `q=3`", already answered by the master equation
+`q!=2q` and the spectral-action `(q−3)(3q−1)` selection.
 
 ## Sources
 
