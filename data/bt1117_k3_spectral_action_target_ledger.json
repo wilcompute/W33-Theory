@@ -1,0 +1,9 @@
+{
+  "name": "BT1117 K3 spectral-action target ledger",
+  "boundary": "finite ratios are seed-independent; gravity scales need K3 geometry",
+  "input": "K3 metric or discrete refinement with stated convention",
+  "outputs": ["volume A0", "scalar-curvature term A2", "curvature-square term A4", "normalization", "refinement parameter"],
+  "checks": ["chi=24", "signature=-16", "b2=22", "intersection signature (3,19)"],
+  "finite_prefactors": ["14/55", "7/55", "14/3", "55/7"],
+  "status": "target ledger only; no K3 numerical values computed"
+}
