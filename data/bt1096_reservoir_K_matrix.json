@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1096 reservoir K matrix",
+  "shape": "12 x 66",
+  "domain_order": "three generation blocks; in each block F13 columns 0..12 then D9 columns 13..21",
+  "target_order": ["Y", "W0", "Wp", "Wm", "C12", "C21", "C13", "C31", "C23", "C32", "C0", "C8"],
+  "entry_rule": "K[i,22*g+i]=1/3 and K[i,22*g+12]=-1/3 for i=0..11 and g=0..2; all D9 columns vanish",
+  "nonzero_count": 72,
+  "rank": 12,
+  "kernel_dimension": 54,
+  "ignored_subspace": "the three D9 blocks are in the kernel",
+  "boundary": "sparse rational matrix for generation-averaged trace-free quotient"
+}
