@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1048 symbolic scalar spectral coefficients",
+  "minimal_240": {"TrPhi2": "54 h2", "TrPhi4": "54 h2^2", "TrDeltaPhi2": "0"},
+  "sector_ansatz_240": {
+    "TrPhi2": "54 a0^2 h2 + 80 a4^2 h2 + 16 a10^2 h2 + 10 a16^2 h2",
+    "TrPhi4": "54 a0^4 h2^2 + 80 a4^4 h2^2 + 16 a10^4 h2^2 + 10 a16^4 h2^2",
+    "TrDeltaPhi2": "320 a4^2 h2 + 160 a10^2 h2 + 160 a16^2 h2"
+  },
+  "coefficients": {
+    "minimal_C2_core": "54 f2 Lambda^2 h2",
+    "minimal_C4_core": "54 f0 h2^2",
+    "uniform_C2_core": "160 f2 Lambda^2 h2 + 640 f0 h2",
+    "uniform_C4_core": "160 f0 h2^2"
+  },
+  "boundary": "symbolic only; cutoff moments and signs remain explicit"
+}
