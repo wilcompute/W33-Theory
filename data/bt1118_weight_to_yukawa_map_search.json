@@ -1,0 +1,9 @@
+{
+  "name": "BT1118 weight-to-Yukawa map search",
+  "rejected_naive_map": "sqrt(m_g) proportional to w_g requires epsilon^2=2 for exact Koide",
+  "candidate_A": "phase-transfer Koide map: weights supply theta, mass vector uses radius sqrt(2)",
+  "candidate_B": "exponential hierarchy map y_g=y0 exp(kappa cos(theta+2pi g/3))",
+  "candidate_C": "projector expectation map y_g=Tr(P_w E_g Y E_g)/Tr(E_g)",
+  "best_current_route": "candidate_A phase-transfer",
+  "boundary": "no mass fit; map ranking only"
+}
