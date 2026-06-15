@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1053 detailed 162-slot assignment ledger",
+  "carrier_factors": {"chirality": 2, "generation": 3, "fiber": 3, "weakslot": 3, "color": 3},
+  "total_dimension": 162,
+  "weakslot_charges": {"S": "2/3", "D1": "-1/3", "D2": "-1/3"},
+  "multiplicities": {"charge_2_over_3": 54, "charge_minus_1_over_3": 108},
+  "trace_Y0": 0,
+  "trace_Y0_squared": 36,
+  "boundary": "slot ledger only; final particle assignment table remains open"
+}
