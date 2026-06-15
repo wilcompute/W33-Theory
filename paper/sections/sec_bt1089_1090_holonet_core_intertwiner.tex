@@ -1,0 +1,22 @@
+\section{BT1089--BT1090 Holonet Core Intertwiner}
+\label{sec:bt1089-bt1090-holonet-core-intertwiner}
+
+The holonet runtime now has a natural replacement for the ordered $13$-coordinate header.  In one generation the right matter sheet is the ternary address cube
+\[
+C^{27}_R(g)=\mathbb C[\mathbb F_3^3].
+\]
+The antipodal involution $x\mapsto -x$ splits it into an odd $13$-dimensional packet header and an even $14$-dimensional residual buffer:
+\[
+C^{27}_R(g)=B^{13}_R(g)\oplus R_{14}(g).
+\]
+The odd header has one channel per projective direction of $PG(2,3)$; the even buffer is the origin plus thirteen pair-sums.  Thus the W33 $40$-core inside a $54$-slot generation block is
+\[
+C^{40}_{\mathrm{core}}(g)=C^{27}_L(g)\oplus B^{13}_R(g),
+\]
+not an arbitrary coordinate selection.
+
+The reservoir action is correspondingly upgraded.  The $78=66+12$ reservoir has a coupling
+\[
+K:T_{66}\to A_{12}
+\]
+which averages the trace-free part of the three fixed $13$-headers into the gauge packet layer $A_{12}=1\oplus3\oplus8$.  Operationally, the runtime reads the three generation headers, removes the scalar trace, and writes the shared gauge-adjoint packet.  The adjoint operation broadcasts a gauge packet back into the three generation headers.  The cycle-sum $D_9$ pieces remain matter bookkeeping.
