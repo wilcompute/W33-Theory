@@ -1,0 +1,44 @@
+\section{BT1107--BT1109 Coupling Constraints and Generation Weights}
+\label{sec:bt1107-bt1109-coupling-generation-report}
+
+Let
+\[
+G_A=\operatorname{diag}(g_1^2I_1,g_2^2I_3,g_3^2I_8)
+\]
+be the coupling-scaled packet metric and set
+\[
+K_g=G_A^{1/2}K_{\mathrm{white}}.
+\]
+Then
+\[
+K_gK_g^*=G_A.
+\]
+With kinetic metric $G_A^{-1}$ the domain projector is unchanged:
+\[
+K_g^*G_A^{-1}K_g=K_{\mathrm{white}}^*K_{\mathrm{white}}=P_K.
+\]
+Thus the reservoir geometry forces only $g_i>0$; numerical coupling ratios require an additional closure principle.  Optional closures include
+\[
+g_1^2+3g_2^2+8g_3^2=12,
+\]
+unified scale $g_1=g_2=g_3$, or sector-equal total energy $g_1^2=3g_2^2=8g_3^2$.
+
+Generation splitting is introduced by positive weights $w_0,w_1,w_2$ and
+\[
+s=w_0^2+w_1^2+w_2^2.
+\]
+Replace the symmetric readout by
+\[
+K_w=s^{-1/2}[w_0\pi_{12}\; w_1\pi_{12}\; w_2\pi_{12}].
+\]
+After whitening, the domain projector has generation blocks
+\[
+P_w(g,h)=\frac{w_gw_h}{s}P_{\mathrm{tf},13},
+\]
+where $P_{\mathrm{tf},13}=\pi_{12}^T(\pi_{12}\pi_{12}^T)^{-1}\pi_{12}$.  This preserves $\operatorname{rank}P_w=12$ and keeps every $D_9$ direction in the kernel.
+
+A minimal path report for the staged paper sections is committed at
+\[
+\texttt{data/bt1106\_section\_report.json}.
+\]
+It reports no missing staged section files, but it is not a TeX compile result.
