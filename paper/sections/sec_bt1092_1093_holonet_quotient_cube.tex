@@ -1,0 +1,22 @@
+\section{BT1092--BT1093 Holonet Quotient and Matter-Cube Header}
+\label{sec:bt1092-bt1093-holonet-quotient-cube}
+
+The reservoir header now has an explicit runtime quotient.  A fixed $13$-header
+\[
+F_{13}=\operatorname{span}(e_0,\ldots,e_{12})
+\]
+feeds the gauge packet layer through
+\[
+\pi_{12}(x_0,\ldots,x_{12})=(x_0-x_{12},\ldots,x_{11}-x_{12}).
+\]
+This removes the scalar trace and leaves a $12$-channel packet, the runtime carrier of the $1+3+8$ adjoint profile.
+
+The $13$-header itself is not an arbitrary address slice.  In the right matter sheet
+\[
+C^{27}_R=\mathbb C[\mathbb F_3^3],
+\]
+the antipodal map $x\mapsto -x$ splits the cube into an odd header and an even buffer:
+\[
+C^{27}_R=B_{13}\oplus R_{14}.
+\]
+The odd header has one channel per projective direction of $PG(2,3)$, while the even buffer is the origin plus thirteen pair-sums.  Operationally, the holonet now reads the right chirality sheet as a projective-direction header plus a parity-even residual store.
