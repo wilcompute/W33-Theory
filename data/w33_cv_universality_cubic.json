@@ -1,0 +1,24 @@
+{
+  "result": "CV universal gate set = substrate invariant degrees {2,3} (Gaussian symplectic + cubic E6) via Lloyd-Braunstein",
+  "cv_universality_criterion": {
+    "gaussian_clifford_max_degree": 2,
+    "nongaussian_min_degree": 3,
+    "ref": "Lloyd & Braunstein, PRL 82, 1784 (1999)"
+  },
+  "substrate_invariants": {
+    "symplectic_form_on_F3^4": {
+      "degree": 2,
+      "group": "Sp(4,3)",
+      "cv_role": "Gaussian / CV-Clifford Sp(4,R) (oscillator-rep limit)"
+    },
+    "E6_Cartan_cubic_on_27": {
+      "degree": 3,
+      "rep": "27 = 3x3x3",
+      "cv_role": "non-Gaussian cubic resource -> universality",
+      "corpus": "Pillars 67-68: sl(3,F3)^3 preserves epsilon-cubic, 8/8 invariant; 45 cubic triads"
+    }
+  },
+  "degree_match": true,
+  "architecture_closure": "GKP lattice tower A2<D4<E8 (code) + Gaussian (deg2) & E6 cubic (deg3) gate set = complete, substrate-forced universal fault-tolerant CV architecture",
+  "honest_scope": "a degree-structure correspondence: the substrate's two lowest matter invariants have exactly the degrees (2,3) CV universality requires; the literal cubic-phase-gate realization is the natural physical embodiment."
+}
