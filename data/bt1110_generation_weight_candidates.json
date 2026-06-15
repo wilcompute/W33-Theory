@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1110 generation weight candidates",
+  "baseline_from_27_27_27": "w=(1,1,1)",
+  "D9_status": "D9_0+D9_1+D9_2 is symmetric and lies in ker(K), so dimensions alone do not determine weights",
+  "koide_phase_family": "w_g = 1 + epsilon cos(theta + 2*pi*g/3)",
+  "traceless_condition": "sum_g cos(theta+2*pi*g/3)=0",
+  "positivity_sufficient_condition": "|epsilon|<1",
+  "symmetric_point": "epsilon=0",
+  "boundary": "no unique numerical weights without mass/Yukawa/orbit-depth/cycle-energy closure"
+}
