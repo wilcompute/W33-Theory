@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1075 ladder sparse skeleton",
+  "sector_dimensions": {"E0": 81, "E4": 120, "E10": 24, "E16": 15},
+  "block_ranks": {"X04": 81, "X40": 81, "X4_10": 24, "X10_4": 24, "X10_16": 15, "X16_10": 15},
+  "oriented_block_rank_total": 240,
+  "gaps": {"X04": 1, "X40": -1, "X4_10": "3/2", "X10_4": "-3/2", "X10_16": "3/2", "X16_10": "-3/2"},
+  "weighted_gap_square_total": "675/2",
+  "boundary": "partial-identity sparse skeleton; W33 incidence-derived ladder remains to be built"
+}
