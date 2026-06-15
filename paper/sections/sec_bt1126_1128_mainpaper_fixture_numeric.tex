@@ -1,0 +1,16 @@
+\section{BT1126--BT1128 Main Paper Target, K3 Fixture, and Numeric Phase Report}
+\label{sec:bt1126-bt1128-mainpaper-fixture-numeric}
+
+The active W33 paper target is \texttt{w33\_paper.tex}, not \texttt{paper/w33\_preprint.tex}.  The staged-section patch helper now targets \texttt{w33\_paper.tex}, inserts before \verb|\end{document}|, uses root-relative \verb|paper/sections/...| inputs, and supports \verb|--dry-run|.  The holonet patch helper also supports \verb|--dry-run|.
+
+The K3 spectral-action interface now has a sample fixture and validation envelope.  The fixture records the required keys and K3 topological checks, but its metric and curvature values are placeholders; it is an interface test, not a physical K3 computation.
+
+The phase-transfer diagnostic has also been evaluated at the archived phase $\theta=0.2223$ with reservoir amplitude $\epsilon=0.1$.  The reservoir weights are
+\[
+(1.0975392940,\;0.9321367784,\;0.9703239275),
+\]
+which would give only $Q\approx0.335$ under the rejected naive mass map.  The phase-transfer square-root Yukawa vector
+\[
+(2.3794139249,\;0.0402691168,\;0.5803169582)
+\]
+gives $Q=0.6666666666666671$, i.e. $2/3$ up to floating-point error.  This is a non-fit diagnostic: the reservoir supplies phase/order data, while the Koide radius supplies the Yukawa amplitude.
