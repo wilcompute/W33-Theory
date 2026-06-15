@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""BT1100 cumulative paper integration helper.
+"""BT1103 cumulative paper integration helper.
 
-Idempotently inserts BT1083--BT1100 paper sections into the W33 preprint and
+Idempotently inserts BT1083--BT1102 paper sections into the W33 preprint and
 photonic holonet source at stable boundaries.
 """
 from pathlib import Path
@@ -13,6 +13,7 @@ W33_INSERTS = [
     "% BT1093 explicit quotient/cube update\n\\input{sections/sec_bt1092_1093_explicit_quotient_cube}\n\n",
     "% BT1096 A12/K matrix update\n\\input{sections/sec_bt1095_1096_A12_K_matrix}\n\n",
     "% BT1100 realform/spectrum/check update\n\\input{sections/sec_bt1098_1100_realform_spectrum_ci}\n\n",
+    "% BT1102 whitening/structure update\n\\input{sections/sec_bt1101_1102_whitening_structure}\n\n",
 ]
 
 HOLONET_INSERTS = [
@@ -22,6 +23,7 @@ HOLONET_INSERTS = [
     "% BT1093 holonet quotient/cube update\n\\input{paper/sections/sec_bt1092_1093_holonet_quotient_cube}\n\n",
     "% BT1096 holonet A12/K matrix update\n\\input{paper/sections/sec_bt1095_1096_holonet_A12_K_matrix}\n\n",
     "% BT1100 holonet realform/spectrum/check update\n\\input{paper/sections/sec_bt1098_1100_holonet_realform_spectrum_ci}\n\n",
+    "% BT1102 holonet whitening/structure update\n\\input{paper/sections/sec_bt1101_1102_holonet_whitening_structure}\n\n",
 ]
 
 
