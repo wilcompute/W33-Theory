@@ -1,0 +1,14 @@
+{
+  "result": "spacetime dimension 4 derived from W(3,3) KO-dimension",
+  "ko_dim_F_W33": 6,
+  "ko_dim_F_equals_2q": true,
+  "connes_barrett_total_ko": 2,
+  "ko_dim_M_mod8": 4,
+  "spacetime_dim": 4,
+  "logic": "KO(F)=6=2q; total KO=2 (mod8, Euclidean fermion doubling); KO(M)=2-6=-4=4 (mod8); spin manifold metric dim=KO dim => dim M = 4 (minimal). The 4 of M^4 is forced, traces to q=3.",
+  "sources": [
+    "Connes, Noncommutative geometry and the SM with neutrino mixing, hep-th/0608226 (KO-dim 6 finite space)",
+    "Barrett, A Lorentzian version of the NC geometry of the SM (fermion doubling, total KO-dim)",
+    "arXiv:1903.04769 (uniqueness of Barrett's solution)"
+  ]
+}
