@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1078 bridge matrix skeleton",
+  "shape": "240 x 162",
+  "rank": 162,
+  "slot_split": "96 + 66",
+  "chain_split": "96 + 144",
+  "nonzero_entries": 162,
+  "rule": "partial identity: first 96 slots into chain 96 block; next 66 slots into first 66 dimensions of chain complement",
+  "unused_chain_dimensions": 78,
+  "checks": {"F_transpose_F": "I_162"},
+  "boundary": "ordered-basis sparse skeleton; not yet W33-incidence bridge"
+}
