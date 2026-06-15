@@ -1,7 +1,7 @@
 {
-  "name": "BT1116 section report",
+  "name": "BT1119 section report",
   "passed": true,
-  "count": 20,
+  "count": 22,
   "missing": [],
   "note": "path existence report committed from expected staged section list; not a compile result"
 }
