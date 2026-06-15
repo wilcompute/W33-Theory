@@ -1,0 +1,37 @@
+\section{BT1095--BT1096 Gauge-Packet Basis and Reservoir Matrix}
+\label{sec:bt1095-bt1096-a12-k-matrix}
+
+The target of the reservoir quotient is now fixed as an explicit complexified gauge-packet basis
+\[
+A_{12}=A_1\oplus A_3\oplus A_8\cong \mathbb C\oplus\mathfrak{sl}_2(\mathbb C)\oplus\mathfrak{sl}_3(\mathbb C).
+\]
+Use the ordered basis
+\[
+(Y,\;W_0,W_+,W_-,\;C_{12},C_{21},C_{13},C_{31},C_{23},C_{32},C_0,C_8),
+\]
+where $W_0=\mathrm{diag}(1,-1)$, $W_+=E_{12}$, $W_-=E_{21}$, and the color basis is
+\[
+E_{12},E_{21},E_{13},E_{31},E_{23},E_{32},\mathrm{diag}(1,-1,0),\mathrm{diag}(1,1,-2).
+\]
+This gives the exact dimension ledger $1+3+8=12$.
+
+With this target basis, the reservoir coupling
+\[
+K:T_{66}\to A_{12}
+\]
+has a sparse rational matrix.  Order each generation block of $T_{66}$ as $F_{13}$ followed by $D_9$, so generation $g$ begins at column $22g$.  For target row $i=0,\ldots,11$ set
+\[
+K_{i,\,22g+i}=\frac13,
+\qquad
+K_{i,\,22g+12}=-\frac13,
+\qquad g=0,1,2,
+\]
+and set all other entries to zero.  Thus
+\[
+K\in M_{12\times66}(\mathbb Q),
+\qquad
+\operatorname{rank}K=12,
+\qquad
+\dim\ker K=54.
+\]
+The three $D_9$ cycle-sum blocks lie in the kernel; the map extracts the generation-averaged trace-free fixed/gauge-perp header.
