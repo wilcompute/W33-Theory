@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1072 projector comparison",
+  "slot_projector_rank": 96,
+  "slot_complement_rank": 66,
+  "chain_projector": "P0 + P16",
+  "chain_projector_rank": 96,
+  "same_space": false,
+  "needed_next_object": "carrier bridge map between 162-slot carrier and 240-chain carrier",
+  "boundary": "rank match only; no equality before bridge map exists"
+}
