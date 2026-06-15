@@ -1,0 +1,40 @@
+\section{BT1083--BT1085 Holonet Runtime Bridge}
+\label{sec:bt1083-bt1085-holonet-bridge}
+
+The holonet runtime now has a sharper carrier bridge between the $162$-slot matter bus and the $240$-edge chain carrier.  The slot side decomposes as
+\[
+\mathbb C^{162}=S_{96}\oplus S_{66},
+\]
+while the chain side decomposes as
+\[
+\mathbb C^{240}=(E_0\oplus E_{16})\oplus(E_4\oplus E_{10})
+= C_{96}\oplus C_{144}.
+\]
+The bridge skeleton is a partial-isometry injection
+\[
+F:\mathbb C^{162}\to\mathbb C^{240},
+\qquad F^T F=I_{162},
+\]
+with
+\[
+F(S_{96})=E_0\oplus E_{16},
+\qquad
+F(S_{66})\subset E_4\oplus E_{10}.
+\]
+Thus the operational $96$-slot matter block lands exactly on the harmonic-plus-heavy chain support $81+15$, while the $66$-slot complement lands in the local-boundary/heavy reservoir.
+
+The complement reservoir has dimension
+\[
+(120+24)-66=78=66+12.
+\]
+This is architecturally meaningful: $66=3\cdot22$ is the transvection bookkeeping scale, while $12=1+3+8$ is the gauge-adjoint packet profile.  The reservoir is therefore not discarded state space; it is the unfinished runtime layer where incidence naturality, gauge action, and transvection bookkeeping must be installed.
+
+The runtime scalar/gauge ladder has also been made W33-native.  Replacing rectangular identity placeholders by projected edge-incidence operators, the line-edge adjacency on $C_1$ gives ranks
+\[
+0\to4:31,\qquad 4\to10:24,\qquad 10\to16:15.
+\]
+For $Q=\Delta_1/4$, the commutator gaps are $1,3/2,3/2$, so the oriented gap-square ledger is
+\[
+\frac{475}{2}.
+\]
+This promotes the line-edge adjacency to the current runtime ladder candidate: it is native to the $240$-edge communication carrier and reaches full rank on the last two spectral steps.
