@@ -1,0 +1,1 @@
+{"bt":1185,"base":{"v":45,"k":32,"e":720},"cover":{"v":90,"edge_slots":1440},"triangle_parity":{"triangles":5280,"parity0":3120,"parity1":2160},"switching_status":"nontrivial voltage; parity1 triangles obstruct switching all voltages to zero","all_checks_pass":true}
