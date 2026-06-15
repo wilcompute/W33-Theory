@@ -1,0 +1,26 @@
+\section{BT1117--BT1119 K3 Targets, Yukawa Map, and Patch Path}
+\label{sec:bt1117-bt1119-k3-yukawa-patch-report}
+
+The remaining K3 spectral-action task is now a precise compute ledger rather than an open phrase.  Given a metric or refined discrete metric $(K3,g_h)$, the compute target is
+\[
+A_0=\int_{K3}d\mathrm{vol},
+\qquad
+A_2=\int_{K3}R\,d\mathrm{vol},
+\qquad
+A_4=\int_{K3}Q_4(g)\,d\mathrm{vol},
+\]
+with the operator convention, curvature norm convention, volume normalization, defect terms, and refinement parameter $h$ stated explicitly.  The finite W33 ratios $14/55$, $7/55$, $14/3$, and $55/7$ are not to be recomputed by this lane; they are seed-independent finite prefactors.
+
+The reservoir generation weights should also not be naively identified with charged-lepton masses.  The preferred next map is phase transfer:
+\[
+\sqrt{y_g}=A\left(1+\sqrt2\cos\left(\theta+\frac{2\pi g}{3}\right)\right),
+\]
+where the reservoir weights provide the phase/order data and the Koide radius $\sqrt2$ belongs to the Yukawa map.  This avoids the naive BT1113 obstruction.
+
+Finally, source integration is now split into small patch helpers:
+\[
+\texttt{tools/bt1119\_patch\_w33\_sections.py},
+\qquad
+\texttt{tools/bt1119\_patch\_holonet\_sections.py}.
+\]
+These helpers insert the staged section includes without replacing the large TeX sources wholesale.
