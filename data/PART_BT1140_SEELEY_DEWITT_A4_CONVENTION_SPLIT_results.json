@@ -1,0 +1,46 @@
+{
+  "bt": 1140,
+  "title": "Seeley-DeWitt a4 convention split for Ricci-flat K3 lanes",
+  "ricci_flat_reduction_formula": {
+    "K_norm": "Integral |Rm|^2/(8*pi^2)=24",
+    "generic_laplace_type": "a4 = K_norm*(2*r + 30*omega_coeff + 180*e2_coeff)/720",
+    "coefficient_definitions": {
+      "r": "bundle rank",
+      "omega_coeff": "tr(Omega_ij Omega_ij)/|Rm|^2 in the chosen sign convention",
+      "e2_coeff": "tr(E^2)/|Rm|^2 in the chosen Laplace-type convention"
+    }
+  },
+  "lanes": {
+    "corpus_curvature_norm": {
+      "A4_norm": 24,
+      "product_C4": 18720,
+      "identity": "C4_norm = 18720 = E*q!*Phi3"
+    },
+    "scalar_positive_laplacian_gilkey": {
+      "rank": 1,
+      "omega_coeff": "0",
+      "e2_coeff": "0",
+      "a4": "1/15",
+      "product_C4": "122408/15",
+      "note": "This is the scalar heat coefficient, not the corpus curvature normalization."
+    },
+    "spin_dirac_square": {
+      "rank_complex_4d": 4,
+      "E_ricci_flat": "0 from Lichnerowicz R/4 term when R=0",
+      "a4_template": "K_norm*(8 + 30*omega_spin)/720",
+      "boundary": "omega_spin is the spin representation trace coefficient with sign convention fixed by the chosen Clifford normalization."
+    },
+    "hodge_de_rham_laplacian_all_forms": {
+      "rank_all_forms_4d": 16,
+      "a4_template": "K_norm*(32 + 30*omega_hodge + 180*e2_hodge)/720",
+      "boundary": "omega_hodge and e2_hodge are the ordinary-trace Weitzenbock coefficients; do not replace them by the Euler supertrace."
+    }
+  },
+  "checks": {
+    "scalar_a4_is_1_over_15": true,
+    "corpus_C4_is_18720": true,
+    "scalar_lane_distinct_from_corpus_lane": true,
+    "scalar_product_C4_fraction": "122408/15",
+    "all_checks_pass": true
+  }
+}
