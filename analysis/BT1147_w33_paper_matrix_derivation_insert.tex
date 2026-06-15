@@ -1,0 +1,28 @@
+% BT1147 matrix derivation insert.
+
+\begin{remark}[Matrix check for the spin and Hodge rows]
+\label{rem:k3-a4-matrix-check}
+The coefficients in Remark~\ref{rem:k3-a4-convention-table} were checked by an
+explicit four-dimensional curvature-matrix calculation.  Start with a Ricci-flat
+algebraic curvature tensor, form the spin curvature matrices
+\[
+  \Omega^{\rm spin}_{ij}=\frac14 R_{ijab}\gamma_a\gamma_b,
+\]
+and the exterior-bundle matrices induced by the natural $\mathfrak{so}(4)$
+action on $\Lambda^*T^*$.  Contracting over all $i,j$ gives
+\[
+  \frac{\operatorname{tr}(\Omega^{\rm spin}_{ij}\Omega^{\rm spin}_{ij})}
+       {|{\rm Rm}|^2}=-\frac12,
+  \qquad
+  \frac{\operatorname{tr}(\Omega^{\rm Hodge}_{ij}\Omega^{\rm Hodge}_{ij})}
+       {|{\rm Rm}|^2}=-4,
+  \qquad
+  \frac{\operatorname{tr}(E_{\rm Hodge}^2)}{|{\rm Rm}|^2}=1.
+\]
+The deterministic sample in \texttt{analysis/bt1143\_curvature\_matrix\_verifier.py}
+and the random Weyl-basis sampler in
+\texttt{analysis/bt1146\_random\_weyl\_basis\_verifier.py} both recover these
+same three ratios.  Thus the table is not merely a convention declaration: it is
+backed by explicit Clifford and exterior-matrix contractions on the Ricci-flat
+Weyl module.
+\end{remark}
