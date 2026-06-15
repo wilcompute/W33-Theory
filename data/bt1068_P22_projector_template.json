@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1068 P22 projector template",
+  "target_split": "162 = 96 + 66 = 3*(32+22)",
+  "rule": "per generation select all S weakslot entries plus four D anchors at fiber=0,color=0",
+  "rank_per_generation": 22,
+  "rank_P22_total": 66,
+  "rank_P96": 96,
+  "idempotent_checks": {"P22_squared_equals_P22": true, "P96_squared_equals_P96": true, "P22_P96_zero": true},
+  "selected_indices": {
+    "g0": [0,1,2,9,10,11,18,19,20,81,82,83,90,91,92,99,100,101,3,6,84,87],
+    "g1": [27,28,29,36,37,38,45,46,47,108,109,110,117,118,119,126,127,128,30,33,111,114],
+    "g2": [54,55,56,63,64,65,72,73,74,135,136,137,144,145,146,153,154,155,57,60,138,141]
+  },
+  "boundary": "rank/idempotent template only; not yet the true BT876 transvection projector"
+}
