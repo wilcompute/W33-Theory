@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1089 natural B13_R(g)",
+  "right_sheet": "C27_R(g)=C[F3^3]",
+  "involution": "A:x->-x",
+  "B13_R": "odd subspace f(-x)=-f(x)",
+  "basis": "e_x - e_-x for the thirteen projective directions in PG(2,3)",
+  "rank_B13_R": 13,
+  "R14": "even subspace f(-x)=f(x)",
+  "rank_R14": 14,
+  "core_inclusion": "C40_core(g)=C27_L(g)+B13_R(g)",
+  "boundary": "canonical after choosing the shell origin supplied by the parabolic torsor"
+}
