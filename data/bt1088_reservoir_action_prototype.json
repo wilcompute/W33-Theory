@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1088 reservoir action prototype",
+  "reservoir_split": "78 = 66 + 12",
+  "T66": "three copies of lifted P22 grade-zero bookkeeping",
+  "A12": "1 + 3 + 8 gauge-adjoint packet layer",
+  "prototype_action": "rho_res = rho_T66 + rho_A12 block diagonal",
+  "rho_T66": "identity on three P22 blocks",
+  "rho_A12": "rho_1 + rho_3 + rho_8",
+  "offdiag_coupling": 0,
+  "boundary": "prototype representation only; nonzero gauge/reservoir dynamics remains to be constructed"
+}
