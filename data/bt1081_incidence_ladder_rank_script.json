@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1081 incidence ladder projected ranks",
+  "counts": {"points": 40, "edges": 240, "triangles": 160},
+  "spectrum": {"0": 81, "4": 120, "10": 24, "16": 15},
+  "operators": {
+    "line_edge_adjacency": {"0->4": 31, "4->10": 24, "10->16": 15},
+    "triangle_edge_adjacency": {"0->4": 38, "4->10": 22, "10->16": 15},
+    "exact_part_d0d0T": {"0->4": 0, "4->10": 0, "10->16": 0},
+    "coexact_part_d2d2T": {"0->4": 0, "4->10": 0, "10->16": 0}
+  },
+  "boundary": "line/triangle edge-adjacency operators give nonzero incidence ladders; d0d0T and d2d2T commute with Delta_1 and give zero off-sector ranks"
+}
