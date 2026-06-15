@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1098 A12 real-form normalization",
+  "complexified_module": "C + sl2(C) + sl3(C)",
+  "real_form": "u(1) + su(2) + su(3)",
+  "pairing": "<X,Y> = -Re Tr(XY)",
+  "U1": "Y=i abstractly, or Y_n=i I_n/sqrt(n) in n-dimensional scalar embedding",
+  "su2_basis": "W_a=i sigma_a/sqrt(2), a=1,2,3",
+  "su3_basis": "C_a=i lambda_a/sqrt(2), a=1,...,8",
+  "orthonormality": "-Re Tr(T_a T_b)=delta_ab",
+  "boundary": "compact trace-normalized real form; physical coupling and hypercharge normalizations remain separate"
+}
