@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1063 scalar candidate scoring",
+  "scale": {"2": "strong/verified", "1": "partial/pending", "0": "fails/not applicable"},
+  "leader": "Q=sum c_lam P_lam",
+  "baseline": "Q=Delta_1/4",
+  "scores": {
+    "Delta_1_over_4": 8,
+    "P0": 7,
+    "P4": 9,
+    "P10": 8,
+    "P16": 8,
+    "spectral_projector_family": 10,
+    "generation_fiber_projector": 8,
+    "centralizer_projector": 8
+  },
+  "status": "heuristic search scoring only; not physical identification"
+}
