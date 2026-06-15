@@ -1,0 +1,22 @@
+{
+  "name": "BT1120 K3 spectral-action schema",
+  "required_top_level": [
+    "operator_convention",
+    "metric_source",
+    "volume_normalization",
+    "A0",
+    "A2",
+    "A4",
+    "curvature_convention",
+    "refinement_h",
+    "topological_checks"
+  ],
+  "required_topological_checks": ["chi", "signature", "b2", "intersection_signature"],
+  "finite_w33_prefactors": {
+    "mH2_over_v2": "14/55",
+    "lambda_H": "7/55",
+    "finite_a2_over_a0": "14/3",
+    "finite_a4_over_a2": "55/7"
+  },
+  "status": "schema/interface only; no K3 numerical values computed"
+}
