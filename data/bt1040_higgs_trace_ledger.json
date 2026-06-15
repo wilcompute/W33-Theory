@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1040 Higgs trace ledger for BT1038 candidate",
+  "weakslot_model": "C^3 = C_singlet + C^2_weak_doublet",
+  "higgs_matrix": "Phi = [[0, phi^*], [phi, 0]] on singlet+doublet weakslot",
+  "symbol": "h2 = |phi1|^2 + |phi2|^2",
+  "weakslot_traces": {"tr_weak_Phi2": "2 h2", "tr_weak_Phi4": "2 h2^2"},
+  "carrier_multiplicity_excluding_weakslot": 54,
+  "raw_162_carrier_traces": {"tr_F_Phi2": "108 h2", "tr_F_Phi4": "108 h2^2"},
+  "delta1_mixed_trace": {
+    "fermion_zero_mode_projection": "tr_F(Delta_1 Phi^2)=0 on the harmonic 162 carrier",
+    "cellular_240_extension": "pending extension: requires choosing how Phi acts on im(d2)+heavy sectors before computing tr_F(Delta_1 Phi^2)"
+  },
+  "no_empirical_parameters_inserted": true,
+  "next_exact_step": "extend Phi from the 162 fermion projection to the 240 cellular QFT carrier and compute mixed traces with Delta_1 spectrum 0^81,4^120,10^24,16^15"
+}
