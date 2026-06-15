@@ -1,0 +1,46 @@
+\section{BT1098--BT1100 Real Form, Reservoir Spectrum, and Paper Checks}
+\label{sec:bt1098-bt1100-realform-spectrum-ci}
+
+The gauge-packet target of the reservoir map is now normalized as a compact real form
+\[
+A_{12,\mathbb R}=\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3).
+\]
+We use the positive trace pairing
+\[
+\langle X,Y\rangle=-\operatorname{Re}\operatorname{Tr}(XY).
+\]
+The $\mathfrak u(1)$ line is represented abstractly by $Y=i$; when embedded as an $n\times n$ scalar matrix, use $Y_n=iI_n/\sqrt n$.  For $\mathfrak{su}(2)$ use
+\[
+W_a=\frac{i}{\sqrt2}\sigma_a,
+\qquad a=1,2,3,
+\]
+and for $\mathfrak{su}(3)$ use
+\[
+C_a=\frac{i}{\sqrt2}\lambda_a,
+\qquad a=1,\ldots,8,
+\]
+where $\sigma_a$ are Pauli matrices and $\lambda_a$ are Gell--Mann matrices.  This gives an orthonormal basis for $A_{12}$ under the trace pairing.
+
+The reservoir readout matrix $K:T_{66}\to A_{12}$ from BT1096 has exact row Gram matrix
+\[
+KK^*=\frac13 I_{12}+\frac13 J_{12}.
+\]
+Hence
+\[
+\operatorname{spec}(KK^*)=\left\{\frac{13}{3},\left(\frac13\right)^{11}\right\},
+\]
+and
+\[
+\operatorname{spec}(K^*K)=\left\{\frac{13}{3},\left(\frac13\right)^{11},0^{54}\right\}.
+\]
+The nonzero singular values are therefore
+\[
+\sqrt{13/3},\qquad 1/\sqrt3\quad(\text{multiplicity }11).
+\]
+A whitened readout can be defined by $K_{\mathrm{white}}=(KK^*)^{-1/2}K$.
+
+Finally, the paper integration now has a no-network structural checker.  The script
+\[
+\texttt{tools/bt1100\_tex\_path\_sanity.py}
+\]
+checks the expected section input paths, insertion markers, duplicate labels, and simple brace balance before the full TeX workflow is run.  This is not a replacement for compilation, but it catches deterministic source-integration errors without requiring TeX installation.
