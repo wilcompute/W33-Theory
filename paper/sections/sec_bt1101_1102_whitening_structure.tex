@@ -1,0 +1,52 @@
+\section{BT1101--BT1102 Whitened Reservoir Readout and Gauge Bracket}
+\label{sec:bt1101-bt1102-whitening-structure}
+
+The reservoir readout $K:T_{66}\to A_{12}$ has row Gram matrix
+\[
+KK^*=\frac13 I_{12}+\frac13 J_{12}.
+\]
+Let
+\[
+P_u=\frac1{12}J_{12},
+\qquad
+P_t=I_{12}-\frac1{12}J_{12}.
+\]
+Then
+\[
+KK^*=\frac{13}{3}P_u+\frac13P_t,
+\qquad
+(KK^*)^{-1/2}=\sqrt{\frac3{13}}P_u+\sqrt3\,P_t.
+\]
+The whitened reservoir readout is
+\[
+K_{\mathrm{white}}=(KK^*)^{-1/2}K,
+\qquad
+K_{\mathrm{white}}K_{\mathrm{white}}^*=I_{12}.
+\]
+The domain projector is
+\[
+P_K=K^*(KK^*)^{-1}K=K_{\mathrm{white}}^*K_{\mathrm{white}},
+\qquad
+\operatorname{rank}P_K=12,
+\qquad
+\dim\ker K=54.
+\]
+Thus the enhanced uniform packet mode and the eleven transverse packet modes are normalized into an orthonormal readout coordinate system.
+
+The normalized compact gauge packet has bracket
+\[
+A_{12}=\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3),
+\]
+with $\mathfrak u(1)$ central.  For the anti-Hermitian trace-normalized basis
+\[
+W_a=\frac{i}{\sqrt2}\sigma_a,
+\qquad
+C_a=\frac{i}{\sqrt2}\lambda_a,
+\]
+one has
+\[
+[W_a,W_b]=-\sqrt2\,\epsilon_{abc}W_c,
+\qquad
+[C_a,C_b]=-\sqrt2\,f_{abc}C_c,
+\]
+where $[\lambda_a,\lambda_b]=2i f_{abc}\lambda_c$.  All cross-sector brackets vanish.  Physical gauge couplings may later rescale the three direct summands, but the normalized algebraic bracket is fixed.
