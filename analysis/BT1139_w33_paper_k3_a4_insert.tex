@@ -1,0 +1,61 @@
+% BT1139 -- Insert for w33_paper.tex after BT1134.
+% Promotes the normalized K3 A4 product coefficient closure to paper math.
+
+\begin{proposition}[Normalized Ricci-flat $K3$ $A_4$ closure]
+\label{prop:k3-a4-normalized-closure}
+In the corpus-normalized Ricci-flat $K3$ lane, take
+\[
+  A_0=1,\qquad A_2=0,\qquad
+  A_4^{\rm norm}=\frac{1}{8\pi^2}\int_{K3}|{\rm Rm}|^2\,d{\rm vol}.
+\]
+For a Ricci-flat $K3$ metric, Chern--Gauss--Bonnet gives
+\[
+  \frac{1}{8\pi^2}\int_{K3}|{\rm Rm}|^2\,d{\rm vol}=\chi(K3)=24,
+\]
+so
+\[
+  A_4^{\rm norm}=24.
+\]
+Substituting into the product coefficient of
+Proposition~\ref{prop:ricci-flat-product-heat-slot} gives
+\[
+  C_4^{\rm norm}=440\cdot24+8160=18720.
+\]
+This integer is not isolated: it factorizes completely through the $W(3,3)$
+packet as
+\[
+  \boxed{
+  C_4^{\rm norm}=18720=E\,q!\,\Phi_3=240\cdot6\cdot13.
+  }
+\]
+Equivalently,
+\[
+  \frac{C_4^{\rm norm}}{E}=q!\Phi_3=78.
+\]
+Thus the first normalized metric-dependent target in the $K3$ continuum lane is
+again a pure substrate integer: the edge shell $E=240$ multiplied by the master
+permutation count $q!=6$ and the fermion-mixing cyclotomic scale
+$\Phi_3=13$.
+\end{proposition}
+
+\begin{proof}
+For Ricci-flat $K3$, $R=0$ and ${\rm Ric}=0$.  The four-dimensional
+Chern--Gauss--Bonnet identity reduces to
+\[
+  \chi(K3)=\frac{1}{8\pi^2}\int_{K3}|{\rm Rm}|^2\,d{\rm vol}.
+\]
+Since $\chi(K3)=24$, the normalized curvature slot is $A_4^{\rm norm}=24$.
+The Ricci-flat specialization of Proposition~\ref{prop:ricci-flat-product-heat-slot}
+is
+\[
+  C_4=440A_4+8160A_0.
+\]
+With $A_0=1$ and $A_4=A_4^{\rm norm}=24$ this gives
+\[
+  C_4^{\rm norm}=440\cdot24+8160=10560+8160=18720.
+\]
+Finally $E=240$, $q!=6$, and $\Phi_3=q^2+q+1=13$, hence
+\[
+  E q!\Phi_3=240\cdot6\cdot13=18720.
+\]
+\end{proof}
