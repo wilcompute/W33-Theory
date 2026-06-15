@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1070 off-diagonal lift scoring",
+  "incorporates": "BT1069 Q64=P0+P16 support",
+  "scores": {
+    "nearest_sector_ladder": 10,
+    "physical_complement_mixing_162": 8,
+    "boundary_heavy_mixing": 9,
+    "endpoint_E0_E16": 6,
+    "BT1069_support_complement": 9
+  },
+  "current_leader": "nearest-sector ladder E0<->E4<->E10<->E16",
+  "best_physical_target": "(E0+E16)<->(E4+E10)",
+  "boundary": "template scoring only; off-diagonal matrices remain to be constructed"
+}
