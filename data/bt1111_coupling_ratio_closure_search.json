@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1111 coupling ratio closure search",
+  "forced_by_geometry": "g1,g2,g3 > 0 only",
+  "closure_A_unified_packet_scale": {"constraint": "g1=g2=g3 and Tr(G_A)=12", "solution": "g1:g2:g3=1:1:1", "status": "best conservative baseline"},
+  "closure_B_sector_equal_energy": {"constraint": "g1^2=3g2^2=8g3^2 and Tr(G_A)=12", "solution": {"g1^2": "4", "g2^2": "4/3", "g3^2": "1/2"}, "status": "best exploratory sector closure"},
+  "closure_C_phi3_denominator": {"constraint": "Tr(G_A)=13", "status": "W33-denominator motivated but not packet-rank normalized"},
+  "closure_D_reservoir_split": {"constraint": "separate 66 bookkeeping from 12 gauge packet", "status": "delegates gauge packet to A or B"},
+  "boundary": "closures are normalization conventions, not derived W33 numerical coupling theorem"
+}

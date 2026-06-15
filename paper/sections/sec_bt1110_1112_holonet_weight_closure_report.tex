@@ -1,0 +1,20 @@
+\section{BT1110--BT1112 Holonet Weights and Coupling Closures}
+\label{sec:bt1110-bt1112-holonet-weight-closure-report}
+
+The runtime generation baseline is symmetric:
+\[
+w=(1,1,1).
+\]
+A controlled holonet splitting can be introduced by
+\[
+w_g=1+\epsilon\cos\left(\theta+\frac{2\pi g}{3}\right),
+\]
+which is first-order traceless across the three generation headers.  This lets the runtime perturb generation weights without destroying the shared trace-free readout packet.
+
+The gauge packet admits symbolic coupling slots $g_1,g_2,g_3$.  The reservoir geometry keeps the projector invariant under the kinetic metric convention and therefore requires only $g_i>0$.  Two useful runtime closures are the unified packet scale $1:1:1$ and the sector-equal energy closure
+\[
+g_1^2:g_2^2:g_3^2=4:\frac43:\frac12.
+\]
+These are runtime conventions to test, not final derived constants.
+
+The staged holonet/W33 section path report now checks eighteen sections and reports no missing files.  It remains a path report, not a compile proof.
