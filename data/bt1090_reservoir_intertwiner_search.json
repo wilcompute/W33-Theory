@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1090 reservoir intertwiner search",
+  "reservoir_split": "R78=T66+A12",
+  "T66": "three P22 blocks",
+  "P22_decomposition": "P22(g)=F13(g)+D9(g)",
+  "A12": "1+3+8 gauge packet layer",
+  "candidate_map": "K = average_g pi_12(g) circ pr_F13(g)",
+  "rank_K": 12,
+  "adjoint": "K^* embeds A12 diagonally into the three F13(g) blocks",
+  "ignored_blocks": "D9(g) shell-cycle-sum diagonal matter blocks",
+  "boundary": "needs explicit 13-to-12 quotient matrices and centralizer identification of A12"
+}
