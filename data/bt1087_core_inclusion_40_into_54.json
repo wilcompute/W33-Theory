@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1087 core inclusion 40 into 54",
+  "per_generation_dimension": 54,
+  "split": "G_g = C27_L(g) + C27_R(g)",
+  "core_inclusion": "C40_core(g) = C27_L(g) + B13_R(g)",
+  "residual": "R14(g) = complement of B13_R(g) inside C27_R(g)",
+  "ranks": {"C27_L": 27, "B13_R": 13, "C40_core": 40, "R14": 14},
+  "skeleton_choice": "B13_R is first 13 right-chirality coordinates in ordered basis",
+  "boundary": "dimensionally/parabolically natural skeleton; true W33-natural choice of B13_R remains to be derived"
+}
