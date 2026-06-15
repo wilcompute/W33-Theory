@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1045 KO-sign verifier for BT1041 candidate",
+  "carrier": "C^2_chiral tensor HS(K)",
+  "operators": {
+    "gamma": "sigma_z tensor identity",
+    "J": "sigma_x tensor star antiunitary",
+    "D_F": "sigma_x tensor T, T=L_Phi+R_Phi and Phi=Phi^*"
+  },
+  "checks": {
+    "J_squared": {"target": "+1", "pass": true},
+    "J_gamma": {"target": "J gamma = - gamma J", "pass": true},
+    "J_D": {"target": "J D_F = D_F J", "pass": true},
+    "gamma_D": {"target": "gamma D_F = - D_F gamma", "pass": true}
+  },
+  "max_identity_error": 0.0,
+  "reason": "sigma_x swaps chirality, sigma_z grades chirality, and star commutes with T=L_Phi+R_Phi when Phi is Hermitian",
+  "status": "KO-sign package passes for the BT1041 candidate"
+}
