@@ -1,0 +1,18 @@
+\section{BT1107--BT1109 Holonet Couplings and Generation Weights}
+\label{sec:bt1107-bt1109-holonet-coupling-generation-report}
+
+The holonet packet separates readout geometry from gauge-coupling slots.  With
+\[
+G_A=\operatorname{diag}(g_1^2I_1,g_2^2I_3,g_3^2I_8),
+\qquad
+K_g=G_A^{1/2}K_{\mathrm{white}},
+\]
+one has $K_gK_g^*=G_A$, while the kinetic metric $G_A^{-1}$ restores the same reservoir projector $P_K$.  Therefore the packet geometry requires only positive couplings; numerical ratios must come from an additional physical closure.
+
+Generation weighting is implemented by
+\[
+K_w=s^{-1/2}[w_0\pi_{12}\; w_1\pi_{12}\; w_2\pi_{12}],
+\qquad
+s=w_0^2+w_1^2+w_2^2.
+\]
+The resulting projector has generation matrix $ww^T/s$, preserves the trace-free quotient, remains rank $12$, and keeps the $D_9$ bookkeeping blocks in the kernel.  This provides the first controlled runtime ansatz for generation splitting without destroying the shared gauge-packet readout.
