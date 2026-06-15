@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1038 A_F representation candidate on W33 fermion carrier",
+  "algebra": "A_F = C + H + M3(C)",
+  "carrier_factorization": {"chiral": 2, "generation": 3, "fiber": 3, "weakslot_singlet_plus_doublet": 3, "color": 3},
+  "carrier_dimension": 162,
+  "target_carrier_dimension": 162,
+  "dimension_hit": true,
+  "weakslot_decomposition": "C^3 = C_singlet + C^2_weak_doublet",
+  "representation_blocks": {
+    "C": "acts on singlet / unimodular U(1) direction",
+    "H": "acts on weak doublet through Pauli quaternion matrices",
+    "M3C": "acts on color C^3"
+  },
+  "lie_algebra_profile": {"u1_singlet": 1, "su2_weak": 3, "su3_color": 8},
+  "lie_algebra_total": 12,
+  "expected_gauge_profile": [1, 3, 8],
+  "status": "explicit block representation candidate; first-order and inner-one-form tests remain BT1039 targets"
+}
