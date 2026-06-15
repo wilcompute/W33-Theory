@@ -1,0 +1,59 @@
+name: Build integrated papers
+
+# Runs the executable paper-integration pipeline from a clean checkout.  This is
+# the CI analogue of running tools/bt974_direct_final_paper_build.sh locally: it
+# applies the integrators, runs the BT1133/BT1134/BT1138 regression gates, then
+# compiles both real papers.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'w33_paper.tex'
+      - 'photonic_holonet.tex'
+      - 'analysis/BT1134_w33_paper_product_heat_insert.tex'
+      - 'analysis/BT1136_holonet_product_heat_pointer_insert.tex'
+      - 'analysis/bt1138_k3_a4_normalization_lane.py'
+      - 'data/PART_BT1138_K3_A4_NORMALIZATION_results.json'
+      - 'tools/bt974_direct_final_paper_build.sh'
+      - 'tools/integrate_bt1134_w33_paper.py'
+      - 'tools/integrate_bt1136_holonet_product_heat_pointer.py'
+      - 'tests/test_bt1133_finite_heat_moments.py'
+      - 'tests/test_bt1134_paper_integration.py'
+      - 'tests/test_bt1138_k3_a4_normalization.py'
+      - '.github/workflows/build-integrated-papers.yml'
+
+jobs:
+  build-integrated-papers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live and pytest
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base texlive-latex-recommended \
+            texlive-latex-extra texlive-fonts-recommended \
+            texlive-science latexmk python3-pytest
+
+      - name: Run integrated paper build
+        run: |
+          bash tools/bt974_direct_final_paper_build.sh
+
+      - name: Assert integrated proposition and pointer are present in logs/sources
+        run: |
+          grep -q 'prop:ricci-flat-product-heat-slot' w33_paper.tex
+          grep -q 'Inherited K3 product coefficient split' photonic_holonet.tex
+
+      - name: Upload integrated paper artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integrated-papers
+          path: |
+            build_artifacts/**
+            w33_paper.tex
+            photonic_holonet.tex
+          if-no-files-found: warn
