@@ -1,0 +1,23 @@
+{
+  "result": "two well-chosen switches generate all of Sp(4,3)=51840",
+  "naive_pair_F1_CZ_subgroup_order": 108,
+  "generating_pairs_found": 13,
+  "example_generating_pairs": [
+    "<F2,F1*CZ>",
+    "<F2,F1*SUM>",
+    "<S2,F1*SUM>",
+    "<CZ,F1*SUM>",
+    "<SUM,F1*CZ>",
+    "<SUM,F1*S2>",
+    "<F1*F2,F1*CZ>",
+    "<F1*F2,F1*SUM>"
+  ],
+  "minimal_activation_pair": "<F2,F1*CZ>",
+  "Sp43_order": 51840,
+  "interpretation": "a binary word in 2 well-chosen switches = a switching pattern in time reaches every gate; braids of one carrier's worldline, robust by topology; BC quasicrystal = the schedule. Validates minimal activation -- but the two switches must be a generating pair (F1+CZ is NOT).",
+  "physical_map": "single carrier (Wheeler electron / holonet photon) braiding in a topological-superconductor tiling, gate-defined by E&M switches, photoelectric matter<->light interface; braiding path-independent = holonomic FT",
+  "sources": [
+    "Majorana braiding TQC (Nature Commun. 14, 2023); worldlines of Majorana zero modes = the computational model",
+    "Sp(4,3) is 2-generated (finite group theory)"
+  ]
+}
