@@ -1,0 +1,1 @@
+{"bt":1209,"sampler":"analysis/bt1209_isomorphism_dependence_sampler.py","output":"data/PART_BT1209_ISOMORPHISM_DEPENDENCE_SAMPLE_results.json","default_max_isomorphisms":64,"status":"sampler committed; run it in repo to test table invariance over sampled graph isomorphisms","all_checks_pass":true}
