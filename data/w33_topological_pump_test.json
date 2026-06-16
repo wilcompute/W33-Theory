@@ -1,0 +1,16 @@
+{
+  "chern_vs_m": {
+    "0.0": 1,
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 0,
+    "2.5": 0
+  },
+  "chern_at_m0": 1,
+  "topological": true,
+  "theta": 2.300523983021863,
+  "mechanism": "Martin-Refael-Halperin topological frequency conversion: two incommensurate drives -> Chern number -> quantized, protected energy pump = self-protection",
+  "honest_scope": "Chern computed for the canonical two-tone qubit on T^2; substrate fixes the two frequencies (round-trip + BC twist) into the topological class; exact qutrit-device invariant needs its specific drive Hamiltonian",
+  "source": "Martin, Refael, Halperin, PRX 7, 041008 (2017)"
+}

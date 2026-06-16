@@ -2982,12 +2982,21 @@ orbit $\{n\theta \bmod 2\pi\}$ obeys the Steinhaus three-gap law at every $N$
 $(\,2\pi,\ \theta\,)$, a pure-point spectrum: the quasiperiodically-driven
 (Fibonacci-type) setting whose emergent dynamical symmetry topologically protects
 an edge mode \cite{dvp-fibonacci,dumitrescu}. The photon self-protects its logical qutrit
-through its own substrate-fixed drive --- no copies, no external apparatus.
-\emph{(Honest scope: the quasicrystal structure --- three-gap, incommensurate
-frequencies, non-recurrence --- is proven here; the topological protection is the
-Fibonacci-drive analogy, not yet a prethermal-lifetime proof for the
-$\arccos(-2/3)$ drive on the qutrit.)} (Witness:
-\texttt{analysis/w33\_self\_correction\_quasicrystal.py}.)
+through its own substrate-fixed drive --- no copies, no external apparatus. And
+the protection is concrete, not merely analogical: two incommensurate drives
+realise \emph{topological frequency conversion} \cite{mrh-pump}, and the
+two-tone driven carrier has a computed Chern number $C=+1$ at the natural
+operating point (trivialising only past the gap-closing at large longitudinal
+field), so energy is pumped between the round-trip and twist drives at a
+quantised, dissipationless, perturbation-robust rate $\dot W=(C/2\pi)\,\omega_1\omega_2$.
+The substrate fixes the two frequencies (round-trip and BC twist) squarely into
+this $C\neq0$ topological class. \emph{(The quasicrystal structure --- three-gap,
+incommensurate frequencies, non-recurrence --- and the Chern number are computed;
+the honest residual is that the invariant is evaluated for the canonical two-tone
+qubit model, while the qutrit device's exact invariant needs its specific drive
+operators.)} (Witnesses:
+\texttt{analysis/w33\_self\_correction\_quasicrystal.py},
+\texttt{analysis/w33\_topological\_pump\_test.py}.)
 
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
@@ -3007,6 +3016,9 @@ $\arccos(-2/3)$ drive on the qutrit.)} (Witness:
 \bibitem{dvp-fibonacci} P.~T.~Dumitrescu, R.~Vasseur, A.~C.~Potter,
   Logarithmically slow relaxation in quasiperiodically driven random spin
   chains, \emph{Phys.\ Rev.\ Lett.} \textbf{120}, 070602 (2018).
+\bibitem{mrh-pump} I.~Martin, G.~Refael, B.~Halperin,
+  Topological frequency conversion in strongly driven quantum systems,
+  \emph{Phys.\ Rev.\ X} \textbf{7}, 041008 (2017).
 \bibitem{dumitrescu} P.~T.~Dumitrescu \emph{et al.},
   Dynamical topological phase realized in a trapped-ion quantum
   simulator, \emph{Nature} \textbf{607}, 463 (2022).
