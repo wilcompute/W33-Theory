@@ -1,0 +1,20 @@
+{
+  "proper_time_vs_beta": {
+    "0.9": 0.4358898943540673,
+    "0.99": 0.14106735979665894,
+    "0.999": 0.04471017781221601,
+    "0.9999": 0.014141782065918275,
+    "1.0": 0.0
+  },
+  "helicity_massless": 2,
+  "helicity_massless_equals_lambda_qminus1": true,
+  "helicity_massive": 3,
+  "clock": "frequency (phi=omega t), not proper time; tau=0",
+  "summary": "one massless photon: tau=0 self-simultaneity (Wheeler improved), gauge-boson of the unbroken substrate connection (masslessness forced), 2=lambda=q-1 helicities",
+  "wheeler": "Wheeler one-electron universe (1940): the massive analog must weave through time; the massless photon is all-at-once",
+  "sources": [
+    "Wigner, Ann. Math. 40, 149 (1939) (little groups, helicity)",
+    "Wheeler-Feynman one-electron universe (1940)",
+    "gauge invariance forces masslessness + 2 transverse modes"
+  ]
+}

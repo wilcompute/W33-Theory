@@ -3007,6 +3007,46 @@ protection is generic, its strength $|C|=2$ is the rotation realisation.)}
 \texttt{analysis/w33\_topological\_pump\_test.py},
 \texttt{analysis/w33\_qutrit\_topological\_pump.py}.)
 
+\subsection{Why the primitive is one \emph{massless} photon}
+
+One more layer answers \emph{why a photon} and not some other quantum. Wheeler's
+one-electron universe (relayed to Feynman in 1940) imagined every electron as a
+single worldline weaving forward and backward through time. The holonet is the
+photonic version --- one carrier, self-entangled past$\leftrightarrow$future ---
+but masslessness makes it sharper, and the substrate \emph{forces} the
+masslessness. Three facts lock together.
+
+\emph{Null worldline, zero proper time.} A massless carrier moves on $ds^2=0$, so
+its proper time $\tau=t\sqrt{1-\beta^2}\to 0$: its entire worldline is one
+proper-time instant, and its past and future are proper-time-\emph{simultaneous}.
+That is exactly what lets a single photon entangle its past and future registers
+--- a relation at one proper-time point. Wheeler's massive electron must
+literally weave; the massless photon is all-at-once. Self-reference wants
+masslessness.
+
+\emph{Gauge invariance forces it.} The photon is the gauge boson of the substrate
+connection of \S\ref{sec:software} --- the one whose holonomy is the Clifford
+gates ($2T=\mathrm{SL}(2,3)$) and whose curvature is the gauge fields. The
+substrate gauge symmetry is unbroken (the holonomy is the full Clifford group),
+and gauge invariance forces an unbroken gauge boson to be massless, removing the
+longitudinal mode (Wigner's classification).
+
+\emph{The helicity count is the substrate's.} A massless vector has Wigner little
+group $\mathrm{ISO}(2)$ and exactly \emph{two} transverse helicities $\pm1$; a
+massive vector has $\mathrm{SO}(3)$ and \emph{three}. The carrier therefore has
+$2=\lambda=q-1$ polarisations --- precisely the paper's photon-polarisation
+count $\lambda$ --- and only a massless carrier gives it. (Its clock is then the
+optical frequency: $\tau=0$ but the phase $\phi=\omega t$ still accrues, so the
+time-bin/frequency registers --- the very degrees of freedom that self-entangle
+--- are the photon's internal clock. A testable corollary: in vacuum the
+self-entanglement carries no proper-time decoherence, i.e. its visibility is
+worldline-length independent up to lab-frame loss and dispersion.)
+
+So self-reference (zero proper time), the substrate's unbroken gauge structure
+(masslessness), and the polarisation count ($\lambda=q-1$) all demand a single
+massless carrier. The universe's primitive is one photon. (Witness:
+\texttt{analysis/w33\_why\_one\_massless\_photon.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
