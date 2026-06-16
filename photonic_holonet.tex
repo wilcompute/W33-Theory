@@ -2837,6 +2837,56 @@ module are one vertex-algebra tower --- the architecture and the moonshine
 residual~(R2) are the bottom and top of a single ladder of substrate lattices.
 (Witness: \texttt{analysis/w33\_gkp\_voa\_bridge.py}.)
 
+\subsection{What is physically needed: demonstrator versus fault-tolerant machine}
+
+It is worth being exact about what we are building, because the design is now
+complete but the \emph{physical} realisation has two genuinely different layers.
+The single self-entangled photon of the build sheet --- polarisation $+$ time-bin
+qutrits, a tritter ($F_3$), a delay ladder and an EOM, read out by
+single-photon detectors --- realises the \emph{ideal, un-encoded} logical layer:
+the $\mathrm{Sp}(4,3)$ gate set, the routing network, and every parameter-free
+witness. It is buildable with today's quantum optics and it demonstrates the
+\emph{logic}. But a single photon has fixed photon number; it cannot carry a GKP
+grid state (a many-photon quadrature lattice). So the photonic demonstrator is
+not, and cannot be, fault-tolerant.
+
+Fault tolerance is the standard two-layer continuous-variable stack --- and here
+both layers are substrate-fixed, with nothing left to choose:
+\[
+  \underbrace{240\ \text{squeezed modes}}_{\text{physical}}
+  \to \underbrace{120\ D_4\ \text{GKP pairs}}_{\substack{\text{inner: analog}\to\text{digital}\\ \text{gain }1.5\,\text{dB}}}
+  \to 240\ \text{GKP qutrits}
+  \to \underbrace{[[240,81,4]]_3}_{\text{outer: Steinberg}}
+  \to 81\ \text{logical qutrits}.
+\]
+The inner code is the GKP code on the matter-shell lattice $D_4$ (converting
+continuous displacement noise into discrete qutrit errors, with the $1.5$~dB
+coding gain that eases the squeezing budget); the outer code is the
+$[[240,81,4]]_3$ Steinberg code on the substrate's $240$ edges. What remains is
+purely physical, and it is the \emph{universal} CV fault-tolerance bottleneck,
+not a $W(3,3)$-specific one:
+\begin{enumerate}
+\item squeezed light at threshold ($\sim 10$~dB; protocol-dependent, $7\text{--}20$~dB
+  in the literature), lowered by the $D_4$/$E_8$ coding gain ($1.5$/$3.0$~dB);
+\item GKP qutrit \emph{state generation} --- measurement-based breeding from
+  squeezed/cat states with photon-number-resolving detection, or matter-assisted
+  preparation: the hard step;
+\item the cubic non-Gaussian resource --- the degree-$3$ $E_6$ ``matter-shell
+  magic'' --- via a $\chi^{(3)}$ medium or magic-state injection;
+\item a programmable beamsplitter/phase/squeeze network implementing the
+  $\mathrm{Sp}(4,3)$ Clifford (mature integrated photonics);
+\item homodyne detection for GKP and Steinberg syndrome readout.
+\end{enumerate}
+This is the precise, honest statement of what the holonet is and what it still
+needs: a concatenated $\mathrm{GKP}(D_4)\circ\text{Steinberg}\,[[240,81,4]]_3$
+continuous-variable qutrit computer in which $W(3,3)$ fixes \emph{both} code
+layers, the gate set ($\mathrm{Sp}(4,3)$ Gaussian $+$ $E_6$ cubic) and the
+network --- leaving \emph{zero design freedom above the hardware}. The only open
+problem is the same one the entire CV fault-tolerance field faces, GKP-state
+generation at threshold squeezing, and the substrate's optimal lattices ease
+rather than remove it. (Witness:
+\texttt{analysis/w33\_holonet\_physical\_stack.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project

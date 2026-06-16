@@ -1,0 +1,37 @@
+{
+  "what_it_is": "concatenated GKP(D4) inner o Steinberg[[240,81,4]]_3 outer CV qutrit computer; single self-entangled photon = ideal un-encoded logical demo (not fault-tolerant)",
+  "concatenation": {
+    "oscillator_modes": 240,
+    "D4_pairs": 120,
+    "GKP_qutrits": 240,
+    "outer_code": "[[240,81,4]]_3",
+    "logical_qutrits": 81
+  },
+  "substrate_fixed": [
+    "inner code D4 GKP",
+    "outer code Steinberg 240,81,4",
+    "gate set Sp(4,3) Gaussian + E6 cubic",
+    "network"
+  ],
+  "coding_gain_db": {
+    "D4": 1.51,
+    "E8": 3.01
+  },
+  "squeezing_threshold_db": {
+    "baseline_representative": 10.0,
+    "note": "protocol-dependent 7-20 dB; reduced by the D4/E8 coding gain"
+  },
+  "still_needed_physical": {
+    "1_squeezing": "~10 dB squeezed light (OPO/OPA), reduced by D4/E8 gain",
+    "2_gkp_states": "GKP qutrit generation -- measurement-based breeding (squeezed/cat + photon-number-resolving detection) or matter-assisted; THE hard step",
+    "3_cubic": "non-Gaussian cubic resource (= degree-3 E6 'matter magic') via chi-3 medium or magic-state injection",
+    "4_gaussian_net": "programmable beamsplitter/phase/squeeze network = the Sp(4,3) Clifford (mature integrated photonics)",
+    "5_homodyne": "homodyne detection for GKP/Steinberg syndrome readout"
+  },
+  "honest_scope": "the open part is the universal CV fault-tolerance bottleneck (GKP state generation + threshold squeezing), NOT W(3,3)-specific; the substrate removes all design freedom above the hardware and gives optimal codes",
+  "sources": [
+    "Gottesman-Kitaev-Preskill, PRA 64, 012310 (2001)",
+    "Menicucci, PRL 112, 120504 (2014) (GKP-cluster threshold)",
+    "Bourassa et al., Quantum 5, 392 (2021) (photonic FT blueprint)"
+  ]
+}
