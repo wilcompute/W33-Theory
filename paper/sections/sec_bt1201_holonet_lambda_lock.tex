@@ -1,0 +1,71 @@
+% BT1201 -- Holonet lambda-lock theorem insert
+% Generated from the page-36+ photonic-holonet consolidation pass.
+
+\subsection{The \texorpdfstring{$\lambda$}{lambda}-Lock: drive, protection, helicity}
+\label{sec:bt1201-lambda-lock}
+
+The preceding self-correction paragraph contains one of the most useful
+compression laws in the holonet: the same substrate deficit
+\[
+  \lambda=q-1
+\]
+appears in the drive, the topological protection, and the physical carrier.  The
+safe statement is not that photon helicity generalises with the qudit dimension;
+it does not.  Rather, the architecture is locked at the one substrate value for
+which the general qudit pump law and the fixed massless-vector helicity count
+coincide.
+
+\begin{theorem}[The holonet $\lambda$-Lock]
+\label{thm:bt1201-lambda-lock}
+Let the finite substrate be the $q=3$ solution of the master equation
+$q!=2q$, with $\lambda=q-1=2$.  Then three independently defined quantities
+coincide:
+\[
+  \cos\theta_{\rm BC}=-\frac{q-1}{q}=-\frac23,
+  \qquad
+  |C|_{\max}=q-1=2,
+  \qquad
+  N_{\gamma,\perp}=2=\lambda.
+\]
+Here $\theta_{\rm BC}$ is the Boerdijk--Coxeter drive angle, $|C|_{\max}$ is the
+extremal Chern protection of the spin-$(q-1)/2$ two-tone pump, and
+$N_{\gamma,\perp}$ is the number of transverse helicities of a massless photon.
+Thus
+\[
+  \boxed{
+  q=3
+  \quad\Longrightarrow\quad
+  q-1=2
+  =\text{drive deficit}
+  =\text{Chern protection}
+  =\text{photon helicity count}.
+  }
+\]
+\end{theorem}
+
+\begin{proof}[Proof and scope]
+The BC drive angle is already fixed by the regular $q$-simplex relation
+$\cos\theta_{\rm BC}=-(q-1)/q$, hence gives $-2/3$ at $q=3$.  The computed
+spin-$S$ pump law gives extremal band Chern magnitude $2S$; for a dimension-$q$
+carrier, $S=(q-1)/2$, hence $|C|_{\max}=q-1$.  The verifier checks this for
+$q=2,3,4$, giving extremal magnitudes $1,2,3$.  Independently, a massless
+spin-one gauge boson has exactly two physical transverse helicities.  The
+coincidence with $q-1$ is therefore not a variable-helicity law for arbitrary
+qudits; it is the compatibility condition that makes the $q=3$ substrate a
+photonic substrate.
+\end{proof}
+
+This sharpens the architecture claim.  The holonet does not optimise over
+qudit dimensions and then choose a photon.  It inherits $q=3$ from the substrate;
+that inheritance forces $\lambda=2$; and $\lambda=2$ is exactly the point where
+BC drive arithmetic, spin-one topological pumping, and massless-photon
+polarisation all meet.  The qutrit is not a design preference.  It is the unique
+place where the carrier and substrate agree.
+
+\paragraph{Honesty boundary.}
+The first two equalities have a natural $q$-family: the simplex drive deficit and
+the spin-$(q-1)/2$ pump law.  The third equality is physical and specific:
+ordinary photons have two transverse helicities because they are massless
+spin-one gauge quanta.  The paper should therefore use the helicity equality as
+a selection lock at $q=3$, not as a claim that a dimension-$q$ carrier possesses
+$q-1$ helicities.
