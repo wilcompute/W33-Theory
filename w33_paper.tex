@@ -811,6 +811,58 @@ The Bose--Mesner equation~\eqref{eq:bm-w33} maps to the Einstein field equation:
 \item Weyl = Riemann $-$ Ricci $= 20-10 = \Theta$ components
 \end{itemize}
 
+The correspondence above is a dimensional shadow. The genuine field equations
+are \emph{derived}, by combining the continuum limit with the variational
+principle.
+
+\begin{theorem}[Einstein field equations from the continuum spectral action]
+\label{thm:einstein-from-spectral-action}
+Let $F$ be the finite $W(3,3)$ spectral triple and let the edgewise refinement
+tower converge to the almost-commutative geometry $M^4\times F$
+(Prop.~\ref{prop:spacetime-dim-from-KO} fixes $\dim M=4$; the spectral action
+converges term-by-term to a sum of local curvature/gauge integrals weighted by
+finite $W(3,3)$ moments, each as a single mesh$\to 0$ limit on the shape-regular
+tower). Its heat expansion is
+\[
+  S[g,A,\phi]=\int_M\!\sqrt{g}\,\Big(f_4\Lambda^4 c_0\,\mathrm{Tr}_F 1
+  -f_2\Lambda^2 c_2\,\mathrm{Tr}_F 1\,\tfrac{R}{6}
+  +f_0\,\mathcal L_{a_4}\!\big(C^2,F^2,|D\phi|^2,V(\phi)\big)\Big).
+\]
+Stationarity $\delta S/\delta g^{\mu\nu}=0$, using
+$\delta\!\int\!\sqrt g=-\tfrac12\sqrt g\,g_{\mu\nu}\delta g^{\mu\nu}$,
+$\delta\!\int\!\sqrt g\,R=\sqrt g\,G_{\mu\nu}\delta g^{\mu\nu}$ and
+$\delta\!\int\!\sqrt g\,\mathcal L_m=-\tfrac12\sqrt g\,T_{\mu\nu}\delta g^{\mu\nu}$,
+yields at two-derivative order the Einstein field equations
+\[
+  \boxed{\,G_{\mu\nu}+\Lambda_{\mathrm{cc}}\,g_{\mu\nu}=8\pi G\,T_{\mu\nu}\,},
+  \qquad
+  \frac{1}{16\pi G}=\frac{f_2\Lambda^2 c_2\,\mathrm{Tr}_F 1}{6},\qquad
+  \Lambda_{\mathrm{cc}}\sim\frac{f_4\Lambda^4 c_0}{f_2\Lambda^2 c_2},
+\]
+with $T_{\mu\nu}$ the stress--energy of the $a_4$ gauge--Higgs sector. The Newton
+constant and couplings are substrate-fixed (finite $F$-moments $\times$ cutoff
+moments); by heat-kernel factorization (each $a_n=$ manifold integral $\times$
+finite $F$-moment) the dimensionless ratios are $W(3,3)$-invariant while
+$G,\Lambda_{\mathrm{cc}}$ carry the seed geometry.
+\end{theorem}
+
+\begin{remark}
+The variational core is verified in
+\texttt{analysis/w33\_einstein\_field\_equations\_from\_spectral\_action.py}: the
+Einstein tensor the variation produces vanishes on the Schwarzschild vacuum
+($G_{\mu\nu}=0$), gives $G_{00}=3(\dot a/a)^2$ on flat FRW (the Friedmann
+equation $H^2=\tfrac{8\pi G}{3}\rho$), and obeys the contracted Bianchi identity
+$\nabla^\mu G_{\mu\nu}=0$ --- the diffeomorphism invariance of the spectral
+action, i.e.\ local energy--momentum conservation. This upgrades the symbolic
+Bose--Mesner map (Thm.~``Gravity from Graph'') to a genuine derivation and
+coincides with the Jacobson thermodynamic route (area law $\Rightarrow$ Einstein
+equations) recorded in the substrate-entanglement analysis: \emph{three routes,
+one field equation}. \emph{Honest scope:} the spectral action also produces a
+Weyl$^2$ higher-derivative term and the $a_0$ cosmological term; the pure
+Einstein equation is the leading two-derivative truncation, and the value of
+$\Lambda_{\mathrm{cc}}$ (the cosmological-constant problem) is not resolved here.
+\end{remark}
+
 
 \section{Maxwell, Dirac, and Gauge Fields}
 \label{sec:fields}

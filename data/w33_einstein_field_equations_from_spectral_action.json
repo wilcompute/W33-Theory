@@ -1,0 +1,15 @@
+{
+  "schwarzschild_vacuum_G_zero": true,
+  "frw_G00": "3*Derivative(a(t), t)**2/a(t)**2",
+  "frw_is_3H2": true,
+  "bianchi_div_G_zero": true,
+  "field_equation": "G_munu + Lambda_cc g_munu = 8 pi G T_munu",
+  "newton_constant": "1/(16 pi G) = f2 Lambda^2 c2 Tr_F(1)/6",
+  "cosmological": "Lambda_cc ~ (f4 Lambda^4 c0)/(f2 Lambda^2 c2)",
+  "routes_unified": [
+    "Bose-Mesner symbolic (dimensional shadow)",
+    "Jacobson thermodynamic (BT381)",
+    "spectral-action variational (this, rigorous)"
+  ],
+  "honest_scope": "two-derivative truncation; spectral action also gives Weyl^2 higher-derivative + a0 cosmological term (cc problem not solved); continuum convergence of the action is BT1033 (edgewise tower)"
+}
