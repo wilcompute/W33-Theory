@@ -3072,9 +3072,18 @@ photon (all-at-once) or a massive electron braided through a machine's wiring.
 As literal braids the minimal hardware is tiny: a single qutrit needs three
 junctions ($B_3\twoheadrightarrow\mathrm{PSL}(2,\mathbb Z)\to\mathrm{SL}(2,3)=2T$,
 the same $2T$ as the gauge-connection holonomy), and four symplectic-transvection
-junctions already generate the full $\mathrm{Sp}(4,3)$ --- so ``runs on any
-classical machine'' means any wiring that hosts four braid junctions, with the
-hardware graph fixing only the embedding.
+junctions already generate the full $\mathrm{Sp}(4,3)$. Their interaction graph
+(an edge where two junctions braid, $\langle v_i,v_j\rangle=\pm1$; a non-edge
+where they commute) is a \emph{path} $P_4$, so the minimal hardware is four
+junctions \emph{in a line} --- consecutive braid, non-consecutive commute. To run
+the machine on a given fabric is then to place that path: any wiring containing a
+simple four-junction path hosts it, which is every grid, ring, mesh, hypercube
+and almost every random fabric. Topology does genuinely matter in the
+pathological case --- a pure star has no four-path, and the symplectic geometry
+forbids reshaping the interaction graph into a three-leaf star (mutually
+commuting junctions are isotropic, at most a Lagrangian) --- but every real fabric
+qualifies, so ``runs on any classical machine'' becomes a concrete graph search
+for a four-junction path.
 
 \emph{(ii) The carrier as its own self-contained shell.} A single carrier
 recirculating in the closed loop is the informational analogue of Wheeler's

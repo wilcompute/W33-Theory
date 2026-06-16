@@ -1,0 +1,29 @@
+{
+  "interaction_graph": {
+    "braid_edges": [
+      [
+        "f1",
+        "e1"
+      ],
+      [
+        "e1",
+        "f1f2"
+      ],
+      [
+        "f1f2",
+        "e2"
+      ]
+    ],
+    "is_path_P4": true
+  },
+  "max_mutually_commuting_independent": 2,
+  "topology_embeds": {
+    "line(4)": true,
+    "ring(5)": true,
+    "grid(3x3)": true,
+    "hypercube Q3": true,
+    "random fabric": true,
+    "pure star K(1,4)": false
+  },
+  "summary": "minimal hardware = 4-junction LINE (interaction graph P_4); compiles onto any wiring containing a simple 4-path (all grids/rings/meshes/hypercubes, almost all random); fails only for diameter-2 trees (pure star, no 4-path), and the symplectic geometry forbids a 3-leaf-star interaction graph. Placement = graph search for a 4-path."
+}
