@@ -1,0 +1,35 @@
+% BT1200 universal 2160 projection codec insert.
+
+\begin{proposition}[The $2160$ projection codec]
+\label{prop:universal-2160-projection-codec}
+The common carrier isolated in Proposition~\ref{prop:universal-2160-sheet-carrier}
+can be written as
+\[
+  \mathcal C_{2160}=\{0,\ldots,44\}\times\{0,\ldots,47\}.
+\]
+The first coordinate is the triple-$45$ object, equivalently the $D_4$-Gaussian
+coset index $[Sp(4,3):Aut(D_4)]=45$; the second is the BT748 inner half-fiber
+coordinate.  The half-fiber has three simultaneous factorizations
+\[
+  48=16\cdot3=6\cdot8=2\cdot24,
+\]
+so the same carrier projects as
+\[
+  2160=(45\cdot16)\cdot3=(45\cdot6)\cdot8=(45\cdot2)\cdot24.
+\]
+Consequently the $720$-edge transport side is the $45\cdot16$ projection with a
+three-label sheet, the $270$-edge $S_3$ side is the $45\cdot6$ projection with an
+$8$-slot support fiber, and the binary cover side is the $45\cdot2$ projection
+with a $2T$ fiber.  A bare $C_3$ label does not determine the raw $Z_2$ voltage:
+there is no nontrivial homomorphism $C_3\to C_2$, and in the codec the middle
+$C_3$ layer splits across both binary sheets.  Thus the raw $Z_2$ must be read
+from half-fiber parity/$2T$ data or from true $S_3$ parity, not from the cyclic
+selector label alone.  Finally,
+\[
+  2160=270\cdot8=54\cdot40,
+\]
+so the existing $54$-pocket $S_3$ carrier can also be read as one full W33
+$40$-slot shell over each pocket.  This gives the correct common refinement for
+the transport, chirality, and holonet hardware lanes; objectwise incidence labels
+remain a separate lookup.
+\end{proposition}
