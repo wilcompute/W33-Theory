@@ -1,0 +1,41 @@
+{
+  "v": 40,
+  "k": 12,
+  "fractal_counts": [
+    {
+      "depth": 0,
+      "leaves": 1,
+      "shells": 0
+    },
+    {
+      "depth": 1,
+      "leaves": 40,
+      "shells": 1
+    },
+    {
+      "depth": 2,
+      "leaves": 1600,
+      "shells": 41
+    },
+    {
+      "depth": 3,
+      "leaves": 64000,
+      "shells": 1641
+    },
+    {
+      "depth": 4,
+      "leaves": 2560000,
+      "shells": 65641
+    },
+    {
+      "depth": 5,
+      "leaves": 102400000,
+      "shells": 2625641
+    }
+  ],
+  "lossless_composition": true,
+  "holographic": "outer-shell code contains inner-layer logical info (boundary->bulk)",
+  "capacity_per_shell": 12,
+  "summary": "fractal holonet = self-similar tower of nested 'Dyson spheres' (each W(3,3) shell lossless+reversible+code-protected, holographically containing inner layers); whole network = one lossless computer on finite recirculated energy. Informational/holographic Dyson sphere, energy conserved.",
+  "honest": "'Dyson sphere' = conceptual (self-contained lossless computational shell + holographic containment), not a literal energy megastructure; no free energy"
+}

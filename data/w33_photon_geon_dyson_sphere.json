@@ -1,0 +1,20 @@
+{
+  "grav_geon": {
+    "r_s_over_lambda": 8.53869770839222e-57,
+    "needs": "~Planck energy",
+    "single_optical_photon_is_geon": false
+  },
+  "info_dyson_sphere": {
+    "self_contained": true,
+    "dissipationless_chern": 2,
+    "reversible_cost_per_op_J": 0.0,
+    "irreversible_erase_qutrit_J_300K": 4.551550711951978e-21,
+    "honest_infinite": "unbounded reversible computation on finite recirculated energy + eternal from tau=0 null frame; NOT free energy (conservation holds)"
+  },
+  "geon_topology": "closed toroid / counter-propagating standing wave = BC loop in S^3 (600-cell) with self-entangled past<->future modes",
+  "summary": "photon = its own Dyson sphere informationally/topologically (self-contained, dissipationless |C|=2 = 'superconducting tilings', reversible -> unbounded computation on finite energy, eternal at tau=0); NOT a gravitational geon at optical energy (~56 orders short; that is Planck-scale, where the substrate's derived gravity governs); energy conserved -- no free energy",
+  "sources": [
+    "Wheeler, Geons, Phys. Rev. 97, 511 (1955)",
+    "Landauer (1961); Bennett reversible computing (1973)"
+  ]
+}
