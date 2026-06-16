@@ -1,0 +1,1 @@
+{"bt":1198,"projection_720xC3_bijective":true,"z2_by_c3":{"0":[0],"1":[0,1],"2":[1]},"z2_is_function_of_c3_alone":false,"z2_is_function_of_edge720_and_c3":true,"homomorphism_obstruction":"C3 has no nontrivial group homomorphism to Z2","status":"raw Z2 needs half-fiber parity/2T or S3 parity; it is not a bare C3 projection","all_checks_pass":true}
