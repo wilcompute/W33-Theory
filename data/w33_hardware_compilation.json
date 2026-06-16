@@ -1,0 +1,36 @@
+{
+  "result": "minimal switching-sequence = Cayley diameter of Sp(4,3); hardware-specific (depends on the switch pair)",
+  "per_hardware": {
+    "<F2, F1.CZ>": {
+      "size": 51840,
+      "diameter": 14,
+      "mean_word_len": 10.407
+    },
+    "<SUM, F1.CZ>": {
+      "size": 51840,
+      "diameter": 14,
+      "mean_word_len": 10.596
+    },
+    "<F2, F1.SUM>": {
+      "size": 51840,
+      "diameter": 14,
+      "mean_word_len": 10.407
+    },
+    "<CZ, F1.SUM>": {
+      "size": 51840,
+      "diameter": 14,
+      "mean_word_len": 10.596
+    }
+  },
+  "best_hardware": {
+    "pair": "<F2, F1.CZ>",
+    "diameter": 14,
+    "mean_word_len": 10.407
+  },
+  "interpretation": "any gate reachable in <= diameter switch-flips; different switch pairs (machine topologies) -> different diameters -> hardware-specific compilation",
+  "photoelectric_duality": "photon (massless, all-at-once) <-> electron (braided worldline, hardware-specific) via the photoelectric effect; the hardware graph fixes the braid embedding; the switch-word is the compiled program",
+  "sources": [
+    "Cayley graph / word metric (geometric group theory)",
+    "Majorana braiding TQC (Nature Commun. 14, 2023)"
+  ]
+}
