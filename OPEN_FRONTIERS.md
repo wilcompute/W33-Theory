@@ -273,6 +273,27 @@ ARCHITECTURE CLOSURE (holonet logical layer is substrate-forced; photonic_holone
     cubic non-Gaussian resource (= E6 matter magic), the Sp(4,3) Gaussian network,
     homodyne readout. W(3,3) removes ALL design freedom above the hardware.
     Witness analysis/w33_holonet_physical_stack.py.
+  - HOLONOMIC GATES (87e1531b): gates = non-abelian holonomies of the gauge
+    connection; matter-graph holonomy 2T=SL(2,3)=Sp(2,Z/3) order 24 = single-
+    qutrit Clifford => geometric/robust gates (GATE-level FT). Same connection's
+    curvature = gauge fields. Witness w33_holonomic_gates.py.
+  - NEAR-TERM FALSIFICATION TEST (e8d74103): the buildable single-photon demo (no
+    GKP) tests the substrate via (S1) geometric-gate timing-independence, (S2)
+    2T=SL(2,3) holonomy + visibility spectrum {0,1/3,1/sqrt3,1}, (S3) BC clock
+    aperiodicity (Niven). Witness w33_near_term_falsification_test.py.
+  - SELF-CORRECTION & ONENESS (fd76beef,5a4ff352,19bddf9c,4c377bc2): WHY ONE
+    photon -- self-entanglement (2 ternary internal DOF = C^9 = 2 qutrits inside
+    one photon), no-cloning is the FEATURE (indivisible amplitude), correction
+    internal+dynamical. The BC drive is a genuine TIME QUASICRYSTAL (three-gap,
+    incommensurate freqs); its angle is SUBSTRATE-FIXED cos=-2/3=-(q-1)/q. SELF-
+    PROTECTION is TOPOLOGICAL (tested, Chern numbers): qubit C=+1, QUTRIT (spin-1
+    under the 2T rotation) band Chern {+2,0,-2} |C|=2=q-1 = DOUBLE the qubit
+    (Martin-Refael-Halperin topological frequency conversion). WHY MASSLESS: null
+    worldline -> tau=0 -> past/future proper-time-simultaneous (clean self-
+    entanglement, Wheeler one-particle improved); gauge invariance of the unbroken
+    substrate connection FORCES masslessness; massless => 2=lambda=q-1 helicities.
+    Witnesses w33_self_correction_quasicrystal / w33_topological_pump_test /
+    w33_qutrit_topological_pump / w33_why_one_massless_photon.py.
   LANE NOTE: this is the architecture (holonet) lane, orthogonal to the parallel
   agent's K3-spectral (BT1116-1150) and S3-chirality (BT1151-1193) work.
 
