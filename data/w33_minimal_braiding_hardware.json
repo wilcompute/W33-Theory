@@ -1,0 +1,51 @@
+{
+  "single_qutrit": {
+    "junctions": 3,
+    "braid": true,
+    "group_order": 24,
+    "group": "SL(2,3)=2T"
+  },
+  "two_qutrit": {
+    "junctions": 4,
+    "vectors": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "relations": {
+      "(1, 0, 0, 0)~(0, 1, 0, 0)": "commute",
+      "(1, 0, 0, 0)~(0, 0, 1, 0)": "braid",
+      "(1, 0, 0, 0)~(0, 0, 1, 1)": "braid",
+      "(0, 1, 0, 0)~(0, 0, 1, 0)": "commute",
+      "(0, 1, 0, 0)~(0, 0, 1, 1)": "braid",
+      "(0, 0, 1, 0)~(0, 0, 1, 1)": "commute"
+    },
+    "generates_Sp43": true
+  },
+  "summary": "minimal braiding hardware: 3 junctions -> single-qutrit Clifford (B_3->SL(2,3)=2T); 4 junctions -> full Sp(4,3). Transvections = elementary braids; the hardware graph must host them; photoelectric hinge gives the electron/photon carrier choice.",
+  "sources": [
+    "B_3 -> PSL(2,Z) -> SL(2,3) (mod 3)",
+    "symplectic transvections generate Sp(2n,q); braid/commute relations from the form value (Artin/Steinberg)"
+  ]
+}
