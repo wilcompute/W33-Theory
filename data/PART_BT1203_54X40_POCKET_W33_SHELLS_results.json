@@ -1,0 +1,1 @@
+{"bt":1203,"table_shape":{"pockets":54,"slots_per_pocket":40,"rows":2160},"w33_profile":{"vertices":40,"edges":240,"degree_distribution":{"12":40},"lambda_distribution":{"2":240},"mu_distribution":{"4":540}},"status":"each of the 54 pockets carries a full W(3,3) shell, graph-isomorphic to SRG(40,12,2,4)","all_checks_pass":true}
