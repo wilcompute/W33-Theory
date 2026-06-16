@@ -188,6 +188,20 @@ GENUINELY OPEN (index.html "Open Problems and Exact Boundaries" table, items
   convergence theorems; what remains is APPLICATION (higher-order edgewise K3
   run), not new analysis.
 
+  MILESTONE (FIELD EQUATIONS DERIVED -- continuum + gravity): varying the W(3,3)
+  continuum spectral action (edgewise-tower limit -> M^4 x F, action = sum of
+  curvature/gauge integrals x F-moments, BT1033) wrt the metric gives the
+  Einstein field equations G_munu + Lambda_cc g_munu = 8 pi G T_munu, with
+  1/(16 pi G)=f2 L^2 c2 TrF(1)/6, Lambda_cc ~ (f4 L^4 c0)/(f2 L^2 c2), T_munu from
+  the a4 gauge+Higgs sector. UPGRADES the symbolic Bose-Mesner analogy (w33_paper
+  Sec 'Gravity from Graph') to a genuine derivation; UNIFIES the 3 corpus routes
+  (Bose-Mesner symbolic / Jacobson thermodynamic BT381 / spectral-action
+  variational) -> one field equation. Variational core VERIFIED via sympy:
+  Schwarzschild G=0, FRW G_00=3H^2 (Friedmann), Bianchi nabla^mu G_munu=0.
+  w33_paper.tex Thm 'Einstein field equations from the continuum spectral action';
+  witness analysis/w33_einstein_field_equations_from_spectral_action.py. HONEST:
+  two-derivative truncation; action also has Weyl^2 + a0 (cc problem NOT solved).
+
   MILESTONE (spacetime dimension): the 4D of M^4 -- the one input the
   almost-commutative framing took from OBSERVATION -- is now DERIVED.
   KO-dim(F=W(3,3)) = 6 = 2q (signs (+,+,-)); Connes-Barrett total KO = 2 (mod 8)
