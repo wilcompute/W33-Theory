@@ -1,0 +1,35 @@
+{
+  "q=2": {
+    "spin": 0.5,
+    "band_chern": [
+      1,
+      -1
+    ],
+    "Cmax": 1,
+    "equals_q_minus_1": true
+  },
+  "q=3": {
+    "spin": 1.0,
+    "band_chern": [
+      2,
+      0,
+      -2
+    ],
+    "Cmax": 2,
+    "equals_q_minus_1": true
+  },
+  "q=4": {
+    "spin": 1.5,
+    "band_chern": [
+      3,
+      1,
+      -1,
+      -3
+    ],
+    "Cmax": 3,
+    "equals_q_minus_1": true
+  },
+  "law": "|C|_max = q-1 = lambda (spin-(q-1)/2 monopole, extremal band)",
+  "q3_inherited": "q=3 fixed by physics (q!=2q, spectral action, KO-dim); carrier inherits it, gets |C|=2 = double the qubit",
+  "one_number_three_faces": "q-1=lambda sets: BC drive cos=-(q-1)/q, topological protection |C|=q-1, photon transverse helicities 2=lambda=q-1"
+}
