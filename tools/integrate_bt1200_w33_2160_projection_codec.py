@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+PAPER = ROOT / "w33_paper.tex"
+INSERT = ROOT / "analysis" / "BT1200_w33_paper_2160_projection_codec_insert.tex"
+MARKER = "\\begin{theorem}[The complete spectral action of $W(3,3)$]"
+SENTINEL = "\\label{prop:universal-2160-projection-codec}"
+PREREQ = "\\label{prop:universal-2160-sheet-carrier}"
+text = PAPER.read_text(encoding="utf-8")
+if SENTINEL not in text:
+    if PREREQ not in text:
+        raise RuntimeError("BT1196 missing")
+    ins = INSERT.read_text(encoding="utf-8").strip() + "\n\n"
+    PAPER.write_text(text.replace(MARKER, ins + MARKER, 1), encoding="utf-8")
