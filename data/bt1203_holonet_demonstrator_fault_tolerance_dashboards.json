@@ -1,0 +1,96 @@
+{
+  "bt": 1203,
+  "title": "Holonet demonstrator versus fault-tolerant milestone dashboards",
+  "purpose": "Separate near-term single-photon falsifiers from long-term GKP/Steinberg fault-tolerance milestones so the architecture claim is not confused with a hardware-threshold claim.",
+  "source_boundaries": {
+    "single_photon_demonstrator": "Unencoded logical holonet: polarization/path plus time-bin qutrits, tritter F3, delay ladder, EOM, recirculation loop, and single-photon detection. Tests substrate logic, holonomy, and quasicrystal clock; it is not fault-tolerant because fixed photon number cannot carry a many-photon GKP grid state.",
+    "fault_tolerant_machine": "Concatenated CV stack: 240 squeezed modes -> 120 D4 GKP pairs -> 240 GKP qutrits -> [[240,81,4]]_3 Steinberg code -> 81 logical qutrits. Open bottleneck is GKP-state generation at threshold squeezing and associated syndrome extraction."
+  },
+  "near_term_demonstrator_falsifiers": [
+    {
+      "id": "D1",
+      "name": "Trace-Choi visibility calibration",
+      "claim": "Prepared temporal Bell qutrit gives V(U)=|Tr U|/3 with V(F3)=1/3 and V(X)=V(Z)=0.",
+      "measurement": "Single-photon interferometric process/readout visibility across inserted U.",
+      "pass_condition": "Visibility values match the exact qutrit trace law within experimental uncertainty.",
+      "falsifies_if": "Visibility spectrum cannot be fit by |Tr U|/3 for the claimed qutrit registers."
+    },
+    {
+      "id": "D2",
+      "name": "Holonomic timing-independence",
+      "claim": "Gate unitary depends on path in control space, not speed or pulse schedule.",
+      "measurement": "Reparameterize the same loop with varied timing/pulse shapes and compare gate tomography.",
+      "pass_condition": "Same path gives same unitary up to lab error and global phase.",
+      "falsifies_if": "Gate changes systematically with timing while path is held fixed."
+    },
+    {
+      "id": "D3",
+      "name": "2T/SL(2,3) holonomy fingerprint",
+      "claim": "Single-qutrit geometric gates close into 2T=SL(2,3), order 24, with element-order spectrum {1,1,8,6,8}.",
+      "measurement": "Gate-set tomography and closure table over generated single-qutrit Clifford elements.",
+      "pass_condition": "Recovered multiplication table and order spectrum match 2T modulo Pauli/global phase.",
+      "falsifies_if": "Generated holonomy group has the wrong order or order spectrum."
+    },
+    {
+      "id": "D4",
+      "name": "BC quasicrystal aperiodicity",
+      "claim": "BC twist angle arccos(-2/3) is irrational relative to pi and therefore never recurs exactly.",
+      "measurement": "Stroboscopic phase/orbit reconstruction over repeated recirculation passes.",
+      "pass_condition": "No recurrence and gap pattern consistent with the irrational BC drive, after accounting for finite coherence window.",
+      "falsifies_if": "A genuine recurrence appears at a finite pass not attributable to hardware locking or loss."
+    },
+    {
+      "id": "D5",
+      "name": "Spin-1 topological pump protection",
+      "claim": "Rotation-realized qutrit two-tone pump has extremal Chern magnitude |C|=2 over the topological regime.",
+      "measurement": "Frequency-conversion response or synthetic-parameter Berry-curvature/Chern reconstruction.",
+      "pass_condition": "Quantized transfer/protection corresponds to Chern magnitude 2 before the m=2 gap closing.",
+      "falsifies_if": "The qutrit pump is topologically trivial or has only qubit-strength |C|=1 in the claimed rotation realization."
+    }
+  ],
+  "fault_tolerant_machine_milestones": [
+    {
+      "id": "F1",
+      "name": "Threshold squeezed-light resource",
+      "target": "Protocol-dependent approximately 7-20 dB, with D4/E8 coding gains reducing the effective burden by 1.5/3.0 dB.",
+      "evidence_needed": "Mode-resolved squeezing, loss budget, and noise model sufficient for qutrit GKP decoding."
+    },
+    {
+      "id": "F2",
+      "name": "Qutrit GKP state generation",
+      "target": "Reliable finite-squeezing qutrit GKP states in the D4 two-mode lattice or equivalent measurement-based preparation.",
+      "evidence_needed": "State tomography or decoder-level evidence that prepared states support qutrit displacement-error correction."
+    },
+    {
+      "id": "F3",
+      "name": "D4 inner analog-to-digital code",
+      "target": "120 D4 GKP pairs converting continuous displacement noise into 240 discrete qutrit error channels.",
+      "evidence_needed": "Closest-lattice-point/syndrome decoding demonstration and coding-gain measurement."
+    },
+    {
+      "id": "F4",
+      "name": "Steinberg outer code",
+      "target": "[[240,81,4]]_3 outer code over the W(3,3) 240-edge carrier.",
+      "evidence_needed": "Syndrome extraction and logical-error suppression consistent with distance-4 qutrit code behavior."
+    },
+    {
+      "id": "F5",
+      "name": "Cubic non-Gaussian resource",
+      "target": "Degree-3 E6 matter-shell magic implemented by cubic phase/magic-state injection or a chi^(3) medium.",
+      "evidence_needed": "Non-Gaussian resource certification and compatibility with GKP/Steinberg Clifford layer."
+    },
+    {
+      "id": "F6",
+      "name": "Integrated Sp(4,3) Clifford network",
+      "target": "Programmable beamsplitter/phase/squeeze/modulator network realizing the two-qutrit Clifford action on encoded qutrits.",
+      "evidence_needed": "Encoded gate tomography and closure under Sp(4,3) modulo Pauli/frame conventions."
+    },
+    {
+      "id": "F7",
+      "name": "Homodyne and qutrit syndrome readout",
+      "target": "Stable readout of inner GKP shifts and outer Steinberg syndromes without collapsing the protected logical register.",
+      "evidence_needed": "Repeated syndrome extraction with tracked logical frame and below-threshold residual displacement noise."
+    }
+  ],
+  "honesty_boundary": "The near-term demonstrator can falsify the substrate-level logic, holonomy, and BC clock without proving fault tolerance. The fault-tolerant machine requires the full CV GKP/Steinberg stack and should not be claimed from a single fixed-photon-number experiment."
+}
