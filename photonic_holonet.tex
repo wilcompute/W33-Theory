@@ -2917,6 +2917,41 @@ This is the literal content of ``holo-net''. (Witness:
 verifying order $24$, symplecticity, centre $\{\pm I\}$, quotient $A_4$, and the
 order spectrum $\{1,1,8,6,8\}$ of $2T$.)
 
+\subsection{A near-term falsification test: the demonstrator as an experiment on
+the substrate}
+
+The single-photon demonstrator of the build sheet is buildable now and needs no
+GKP states or squeezing, yet the holonomic-gate and quasicrystal-clock structure
+make it a \emph{discriminating, parameter-free} test of the substrate hypothesis
+itself. Three signatures, all measurable on that machine:
+\begin{enumerate}
+\item \textbf{Geometric-gate timing-independence (the discriminator).} If the
+  gates are Wilczek--Zee holonomies (the substrate claim), the gate unitary
+  depends only on the \emph{path} traced in control space, not on the schedule.
+  Reparametrising the loop --- any speed, any pulse shape with the same path ---
+  leaves the gate, read out through the trace--Choi visibility $V(U)=|\mathrm{Tr}\,U|/3$,
+  \emph{invariant}; a generic dynamical gate would change. A measured
+  timing-dependence falsifies the holonomic claim.
+\item \textbf{Holonomy-group fingerprint.} Composing the geometric gates must
+  close into $2T=\mathrm{SL}(2,3)$: order $24$, element-order spectrum
+  $\{1,1,8,6,8\}$, and a single-qutrit Clifford visibility spectrum
+  $V\in\{0,\tfrac13,\tfrac1{\sqrt3},1\}$ (with $V(F_3)=\tfrac13$ and
+  $V(X)=V(Z)=0$). Gate-set tomography reads this out; any other group falsifies
+  the gauge-connection-holonomy identification.
+\item \textbf{Provably aperiodic clock.} The Boerdijk--Coxeter drive rotates by
+  $\theta=\arccos(-\tfrac23)\approx131.81^\circ$ per pass. By Niven's
+  theorem~\cite{niven} the only rational $\cos(r\pi)$ with $r$ rational are
+  $\{0,\pm\tfrac12,\pm1\}$, and $-\tfrac23$ is none of them, so $\theta/\pi$ is
+  irrational and the drive \emph{never recurs} --- a provably aperiodic
+  time-quasicrystal clock. A measured recurrence at any finite pass falsifies it.
+\end{enumerate}
+Each signature is fixed by the geometry with no free parameter, and each is
+within reach of the demonstrator's existing optics. Together they turn the
+buildable machine into an experiment \emph{on the substrate}: not a test of
+whether the device computes, but of whether the gauge connection, the holonomy
+group, and the quasicrystal drive are the ones $W(3,3)$ predicts. (Witness:
+\texttt{analysis/w33\_near\_term\_falsification\_test.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
