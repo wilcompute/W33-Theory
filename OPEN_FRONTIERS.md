@@ -260,6 +260,19 @@ ARCHITECTURE CLOSURE (holonet logical layer is substrate-forced; photonic_holone
   RESIDUAL (still genuinely open, engineering): the ABSOLUTE fault-tolerance
   threshold = lattice part (DONE above) + noise model + finite-squeezing GKP
   state quality + syndrome/FT protocol -- the last three not claimed.
+  - PHYSICAL REALIZATION (commit ae47df41; photonic_holonet.tex subsec 'What is
+    physically needed: demonstrator versus fault-tolerant machine'): the single
+    self-entangled photon (polarization+time-bin qutrits) is the IDEAL UN-ENCODED
+    logical demonstrator (gates/network/Sp(4,3)/witnesses, buildable now) -- NOT
+    fault-tolerant, because a single photon (fixed photon number) cannot host a
+    GKP grid state. Fault tolerance = the standard two-layer CV stack, both layers
+    substrate-fixed: 240 squeezed modes -> 120 D4 GKP pairs (INNER) -> 240 GKP
+    qutrits -> Steinberg [[240,81,4]]_3 (OUTER) -> 81=3^4 logical qutrits. STILL
+    NEEDED (universal CV-FT bottleneck, not W33-specific): squeezing ~10 dB (eased
+    to ~7-8.5 by D4/E8 gain), GKP qutrit state generation (the hard step), the
+    cubic non-Gaussian resource (= E6 matter magic), the Sp(4,3) Gaussian network,
+    homodyne readout. W(3,3) removes ALL design freedom above the hardware.
+    Witness analysis/w33_holonet_physical_stack.py.
   LANE NOTE: this is the architecture (holonet) lane, orthogonal to the parallel
   agent's K3-spectral (BT1116-1150) and S3-chirality (BT1151-1193) work.
 
