@@ -1,0 +1,25 @@
+{
+  "A_angle": {
+    "cos_bc": -0.6666666666666666,
+    "minus_(q-1)/q": -0.6666666666666666,
+    "2x_vertex_dot": -0.6666666666666666,
+    "both_match": true
+  },
+  "B_three_gap": {
+    "10": 3,
+    "30": 2,
+    "100": 3,
+    "500": 3,
+    "2000": 3
+  },
+  "B_equidistribution_residual": 7.253141687675344e-06,
+  "B_n30_gaps": 2,
+  "C_internal_dim": 9,
+  "C_drive_frequencies": {
+    "omega_round": 6.283185307179586,
+    "omega_twist": 2.300523983021863,
+    "ratio_irrational": 0.36613976359938505
+  },
+  "summary": "BC angle substrate-fixed (-(q-1)/q); genuine time quasicrystal (three-gap, two incommensurate freqs); one photon hosts 2 qutrits in internal DOF and self-corrects via the quasicrystal emergent symmetry (no-cloning = feature)",
+  "honest": "the topological-protection CLAIM is the Fibonacci-drive analogy (Dumitrescu-Vasseur-Potter 2018; trapped-ion expt Nature 2022); a full prethermal-lifetime proof for the BC drive on the qutrit is not done here -- the quasicrystal structure (three-gap, incommensurate freqs) IS proven."
+}

@@ -2952,6 +2952,43 @@ whether the device computes, but of whether the gauge connection, the holonomy
 group, and the quasicrystal drive are the ones $W(3,3)$ predicts. (Witness:
 \texttt{analysis/w33\_near\_term\_falsification\_test.py}.)
 
+\subsection{Self-error-correction and why the primitive is one}
+
+The carrier is a single photon --- not two, not a pack --- and that is structural,
+not economical. Two ingredients explain why the universe's primitive is one.
+
+\emph{Self-entanglement instead of inter-particle entanglement.} A photon carries
+several internal registers (polarization, path, time-bin, frequency, transverse
+mode), and entanglement among them needs no second particle. Two ternary internal
+registers already give $\mathbb C^3\otimes\mathbb C^3=\mathbb C^9$ --- the entire
+two-qutrit substrate register \emph{inside one photon}. The geometry is realised
+within a single indivisible quantum, which is exactly the operator--operand
+self-duality of \S\ref{sec:substrate}.
+
+\emph{Self-error-correction, and no-cloning as a feature.} A multi-photon code
+spreads one logical amplitude over many quanta that decohere \emph{independently};
+its redundancy is also its leak. A single photon cannot be cloned --- and here
+that is the asset, not the obstacle: the logical amplitude is one indivisible
+excitation, with no independent copies to dephase against each other. Correction
+is then \emph{internal} (a code among the photon's own registers) and
+\emph{dynamical}, supplied by the drive. The Boerdijk--Coxeter loop
+(\S\ref{sec:time}) is not a periodic clock but a genuine \emph{time quasicrystal}:
+its twist $\theta=\arccos(-\tfrac23)$ is substrate-fixed --- at $q=3$,
+$-\tfrac23=-(q-1)/q=2\cdot(-1/q)$, the pairwise vertex dot of the regular
+$q$-simplex (the tetrahedron $=$ the $q{=}3$ simplex) --- and the stroboscopic
+orbit $\{n\theta \bmod 2\pi\}$ obeys the Steinhaus three-gap law at every $N$
+(exactly two gaps at $n=30=h(E_8)$), is Weyl-equidistributed, and never recurs
+(Niven). It therefore carries two incommensurate frequencies
+$(\,2\pi,\ \theta\,)$, a pure-point spectrum: the quasiperiodically-driven
+(Fibonacci-type) setting whose emergent dynamical symmetry topologically protects
+an edge mode \cite{dvp-fibonacci,dumitrescu}. The photon self-protects its logical qutrit
+through its own substrate-fixed drive --- no copies, no external apparatus.
+\emph{(Honest scope: the quasicrystal structure --- three-gap, incommensurate
+frequencies, non-recurrence --- is proven here; the topological protection is the
+Fibonacci-drive analogy, not yet a prethermal-lifetime proof for the
+$\arccos(-2/3)$ drive on the qutrit.)} (Witness:
+\texttt{analysis/w33\_self\_correction\_quasicrystal.py}.)
+
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
@@ -2967,6 +3004,9 @@ group, and the quasicrystal drive are the ones $W(3,3)$ predicts. (Witness:
 \bibitem{wilczek-zee} F.~Wilczek, A.~Zee,
   Appearance of gauge structure in simple dynamical systems,
   \emph{Phys.\ Rev.\ Lett.} \textbf{52}, 2111 (1984).
+\bibitem{dvp-fibonacci} P.~T.~Dumitrescu, R.~Vasseur, A.~C.~Potter,
+  Logarithmically slow relaxation in quasiperiodically driven random spin
+  chains, \emph{Phys.\ Rev.\ Lett.} \textbf{120}, 070602 (2018).
 \bibitem{dumitrescu} P.~T.~Dumitrescu \emph{et al.},
   Dynamical topological phase realized in a trapped-ion quantum
   simulator, \emph{Nature} \textbf{607}, 463 (2022).
