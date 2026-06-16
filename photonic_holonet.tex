@@ -2984,19 +2984,28 @@ $(\,2\pi,\ \theta\,)$, a pure-point spectrum: the quasiperiodically-driven
 an edge mode \cite{dvp-fibonacci,dumitrescu}. The photon self-protects its logical qutrit
 through its own substrate-fixed drive --- no copies, no external apparatus. And
 the protection is concrete, not merely analogical: two incommensurate drives
-realise \emph{topological frequency conversion} \cite{mrh-pump}, and the
-two-tone driven carrier has a computed Chern number $C=+1$ at the natural
-operating point (trivialising only past the gap-closing at large longitudinal
-field), so energy is pumped between the round-trip and twist drives at a
-quantised, dissipationless, perturbation-robust rate $\dot W=(C/2\pi)\,\omega_1\omega_2$.
-The substrate fixes the two frequencies (round-trip and BC twist) squarely into
-this $C\neq0$ topological class. \emph{(The quasicrystal structure --- three-gap,
-incommensurate frequencies, non-recurrence --- and the Chern number are computed;
-the honest residual is that the invariant is evaluated for the canonical two-tone
-qubit model, while the qutrit device's exact invariant needs its specific drive
-operators.)} (Witnesses:
-\texttt{analysis/w33\_self\_correction\_quasicrystal.py},
-\texttt{analysis/w33\_topological\_pump\_test.py}.)
+realise \emph{topological frequency conversion} \cite{mrh-pump}, with energy
+pumped between the round-trip and twist drives at a quantised, dissipationless,
+perturbation-robust rate $\dot W=(C/2\pi)\,\omega_1\omega_2$ set by a Chern
+integer $C$. We compute it. Because the BC twist is a rotation (the holonomy
+group $2T\subset\mathrm{SU}(2)$), the qutrit carrier transforms as the spin-$1$
+representation, and the spin-$1$ two-tone pump has band Chern numbers
+\[
+  (C_-,C_0,C_+)=(+2,\,0,\,-2)
+\]
+throughout the topological regime $0<m<2$ (computed by the
+Fukui--Hatsugai--Suzuki method; trivialising past the gap-closing at $m=2$). The
+qutrit carrier therefore enjoys $|C|=2$ --- \emph{double} the protection of a
+qubit ($|C|=1$, also computed) --- and the substrate fixes the two frequencies
+(round-trip and BC twist) squarely into this topological class. \emph{(The
+quasicrystal structure --- three-gap, incommensurate frequencies, non-recurrence
+--- and the band Chern numbers are computed; the residual is only the realisation
+choice: the rotation drive gives $|C|=2$, and a Heisenberg--Weyl clock-shift
+drive re-sorts the bands but stays in the nonzero topological class --- the
+protection is generic, its strength $|C|=2$ is the rotation realisation.)}
+(Witnesses: \texttt{analysis/w33\_self\_correction\_quasicrystal.py},
+\texttt{analysis/w33\_topological\_pump\_test.py},
+\texttt{analysis/w33\_qutrit\_topological\_pump.py}.)
 
 \begin{thebibliography}{9}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
