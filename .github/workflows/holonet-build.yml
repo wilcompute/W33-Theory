@@ -1,0 +1,48 @@
+name: Holonet PDF Build
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'photonic_holonet.tex'
+      - '.github/workflows/holonet-build.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'photonic_holonet.tex'
+  workflow_dispatch:
+
+jobs:
+  build-holonet-pdf:
+    name: Compile photonic_holonet.tex → PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile PDF (pass 1)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: photonic_holonet.tex
+          latexmk_use_lualatex: false
+          latexmk_use_xelatex: false
+          extra_system_packages: "cm-super"
+          args: "-pdf -interaction=nonstopmode -halt-on-error"
+
+      - name: Compile PDF (pass 2 — cross-refs)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: photonic_holonet.tex
+          latexmk_use_lualatex: false
+          latexmk_use_xelatex: false
+          extra_system_packages: "cm-super"
+          args: "-pdf -interaction=nonstopmode -halt-on-error"
+
+      - name: Upload holonet PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: holonet-pdf
+          path: photonic_holonet.pdf
+          retention-days: 90
+          if-no-files-found: error

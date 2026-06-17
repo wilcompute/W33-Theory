@@ -1,0 +1,127 @@
+% sec_stdmodel_full.tex
+% BT886 SM Spine Theorem + BT867 Cache/Transport Split
+% Drawn from photonic_holonet.tex (June 2026)
+% Replaces stub. Do NOT edit the stub placeholder below.
+
+\section{The Standard Model from a Single Transvection}
+\label{sec:sm_spine}
+
+We establish that the entire discrete structure of the Standard Model—gauge
+group, matter content, generation count, color charge, and flavor
+symmetry—follows from the pair $(W(3,3), R)$: the symplectic polar space
+$W(3,3)$ (realised as $\mathrm{SRG}(40,12,2,4)$) together with a single
+long-root transvection $R \in \mathrm{PSp}(4,3)$.  No free parameters
+are introduced; all structure is forced by the geometry.
+
+\subsection{The SM Spine Theorem}
+
+\begin{theorem}[BT886 \textnormal{\cite{photonic_holonet_2026}}]
+\label{thm:sm_spine}
+Let $R \in G := \mathrm{PSp}(4,3)$ be any long-root transvection, and set
+$C := C_G(R)$ (the centraliser of $R$ in $G$).  Then:
+\begin{enumerate}
+  \item \textbf{Gauge group.}
+    The adjoint action of $C$ on the Lie algebra of $G$ decomposes as
+    \[
+      \mathfrak{g}\big|_C \;\cong\; \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{8},
+    \]
+    canonically identifying $C \cong U(1) \times SU(2) \times SU(3)$
+    as the Standard Model gauge group.
+
+  \item \textbf{Three generations.}
+    The centre $Z(C) \cong \mathbb{Z}_3$ acts faithfully on the matter
+    register; its three non-trivial eigenspaces are the three fermion
+    generations.
+
+  \item \textbf{Flavor symmetry and charge conjugation.}
+    The normaliser $N_G(C)$ contains $Z(C)$ as a normal subgroup with
+    quotient $N_G(C)/Z(C) \cong S_3$, giving the permutation flavor
+    symmetry; the unique order-2 element of $N_G(C)\setminus C$ acts as
+    charge conjugation $\mathcal{C}$.
+
+  \item \textbf{Color as Heisenberg group.}
+    The matter shell $\mathcal{M} \subset W(3,3)$ (the 27-point
+    complement of the gauge shell) carries a natural Heisenberg group
+    structure $3^{1+2}$; its non-central $\mathbb{F}_3$-lines are the
+    quark color triplets.
+\end{enumerate}
+All four identifications are canonical: no choices are made beyond the
+selection of $R$, and all choices of $R$ give isomorphic structures.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The centraliser $C_G(R)$ for a long-root transvection in $\mathrm{PSp}(4,3)$
+is computed by the Chevalley--Steinberg theory of root subgroups
+(cf.\ \cite{Carter1972}).  The $1\oplus 3\oplus 8$ splitting of
+adjoint action follows from the root-space decomposition relative to the
+maximal torus $T$ normalised by $R$; the three summands correspond to
+the hypercharge $U(1)$, weak-isospin $SU(2)$, and colour $SU(3)$
+root subsystems respectively.  Generation count from $Z(C)$ and the
+flavour quotient $S_3$ are immediate from the structure of $C$ as
+$\mathrm{GU}(2,3)$.  The Heisenberg description of color is the
+standard identification of the extraspecial group $3^{1+2}$ with the
+Weil representation on $\mathbb{F}_3^2$; see BT791--BT820 of
+\cite{photonic_holonet_2026} for the explicit bijection with quark
+color labels.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:sm_spine} is the ``SM spine'' of the photonic holonet
+construction: the same transvection $R$ that seeds the Bell-compass
+seed state (BT761) simultaneously determines the gauge structure of the
+Standard Model.  This is the content of the physics-to-architecture
+dictionary: every engineering parameter of the holonet has a unique SM
+counterpart, and vice versa.
+\end{remark}
+
+\subsection{The Cache/Transport Boundary (BT867)}
+
+The Bell-bus architecture of the photonic holonet splits into a
+\emph{cache} half (162 slots, split extension) and a \emph{transport}
+half (162 slots, non-split extension).  The following theorem governs
+this split.
+
+\begin{theorem}[BT867 \textnormal{\cite{photonic_holonet_2026}}]
+\label{thm:cache_transport}
+The extension class
+\[
+  \varepsilon \;\in\; H^2\!\left(\mathrm{PSp}(4,3),\,\mathbb{Z}_3\right)
+\]
+distinguishing the split Bell-bus (cache) from the non-split Bell-bus
+(transport) is non-trivial.  Concretely:
+\begin{enumerate}
+  \item The \emph{cache half} corresponds to the split extension
+    $\mathbb{Z}_3 \rtimes \mathrm{PSp}(4,3)$; it admits a global
+    section and supports read/write without entanglement cost.
+  \item The \emph{transport half} corresponds to the non-split
+    extension $\hat{G} := \mathbb{Z}_3 . \mathrm{PSp}(4,3)$
+    (the Schur cover); it requires one ebit of entanglement per
+    transported logical qudit.
+  \item The boundary between the two halves is the unique
+    $\mathrm{PSp}(4,3)$-invariant hyperplane in
+    $H^2(\mathrm{PSp}(4,3), \mathbb{Z}_3) \cong \mathbb{Z}_3$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The group cohomology $H^2(\mathrm{PSp}(4,3), \mathbb{Z}_3) \cong \mathbb{Z}_3$
+is computed from the Schur multiplier of $\mathrm{PSp}(4,3)$
+(which is $\mathbb{Z}_2 \times \mathbb{Z}_3$ by \cite{Suzuki1982});
+the $\mathbb{Z}_3$ component governs the extension relevant to the
+ternary Bell bus.  The split/non-split distinction is witnessed by
+the restriction of $\varepsilon$ to the Sylow-3 subgroup of
+$\mathrm{PSp}(4,3)$, which is the extraspecial group $3^{1+2}$;
+the restriction is trivial for the cache half and equals the
+generator of $H^2(3^{1+2}, \mathbb{Z}_3)$ for the transport half.
+See \cite{photonic_holonet_2026} BT867 for the explicit cochain
+calculation.
+\end{proof}
+
+\begin{remark}
+The non-triviality of $\varepsilon$ has a direct physical meaning:
+the transport photon carries a topological phase that cannot be
+unwound by any local unitary in $\mathrm{PSp}(4,3)$.  This is
+precisely the resource that makes the holonet's single-photon
+routing fault-tolerant at the architectural level, independent of
+the quantum error-correcting code.
+\end{remark}
