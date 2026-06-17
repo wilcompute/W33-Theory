@@ -1,0 +1,20 @@
+\subsection{Recovery packet and reproducibility artifacts}
+\label{sec:bt1282-recovery-packet-reproducibility}
+
+The finite Clifford recovery protocol is packaged as a reproducibility packet.  The packet index is
+\[
+\texttt{data/bt1279\_recovery\_packet\_index.json}.
+\]
+It points to the external candidate schema, bundled candidate fixtures, single-candidate scorer, batch scorer, aggregate batch result, strict polar-path certificate, paper sections, CI materializers, and regression tests.
+
+The strict certificate is
+\[
+\texttt{data/bt1275\_strict\_polar\_path\_recovery\_certificate.json}.
+\]
+It records the recovered target \(\operatorname{diam}=14\) polar path regime with closure order \(51840\), word diameter \(14\), edge split \(P_4/P_4\), labelled spread \(172\), score vector \((1,1,1,1,1)\), and validator band \(\mathrm{pass}\).
+
+The verifier
+\[
+\texttt{tools/bt1281\_verify\_recovery\_certificate.py}
+\]
+checks the strict certificate against the batch candidate summary and packet index.  Thus the recovery claim is not only stated as a theorem; it is also exposed as a machine-checkable packet.
