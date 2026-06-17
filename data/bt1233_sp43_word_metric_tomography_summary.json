@@ -1,0 +1,16 @@
+{
+  "bt": 1233,
+  "title": "Sp43 compressed-gate word-metric tomography protocol",
+  "field": "F3",
+  "dimension": 4,
+  "base_projective_transvections": [[0,0,0,2],[0,2,0,0],[0,0,2,2],[1,0,0,0]],
+  "symmetric_gate_count": 8,
+  "generated_order": 51840,
+  "target_order": 51840,
+  "closure_ok": true,
+  "diameter": 14,
+  "sphere_histogram": {"0":1,"1":8,"2":36,"3":126,"4":363,"5":916,"6":2052,"7":4096,"8":7396,"9":12170,"10":16916,"11":7247,"12":476,"13":36,"14":1},
+  "cumulative_balls": {"0":1,"1":9,"2":45,"3":171,"4":534,"5":1450,"6":3502,"7":7598,"8":14994,"9":27164,"10":44080,"11":51327,"12":51803,"13":51839,"14":51840},
+  "checkpoints": {"B4":534,"B8":14994,"B12":51803,"B14":51840},
+  "interpretation": "The BT1228 minimal four-transvection set is now an exact tomography target with a word-metric fingerprint."
+}
