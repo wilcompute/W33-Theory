@@ -1,0 +1,46 @@
+{
+  "bt": 1215,
+  "title": "K3 geometry compute-lane schema stub",
+  "schema": "BT1215_K3_GEOMETRY_SAMPLE_V1",
+  "sample_id": "k3_geometry_sample_stub_v1",
+  "topology": {
+    "chi": 24,
+    "signature": -16,
+    "b2": 22,
+    "intersection_signature": [3,19]
+  },
+  "required_blocks": [
+    "metric_block",
+    "operator_block",
+    "heat_block",
+    "curvature_block",
+    "refinement_block"
+  ],
+  "metric_block": {
+    "source": "placeholder_not_computed",
+    "volume_normalization": "unit_volume_target",
+    "shape_quality": null
+  },
+  "operator_block": {
+    "convention": "square_operator_sample_required",
+    "eigenvalue_sample": [],
+    "status": "not_computed"
+  },
+  "heat_block": {
+    "A0": {"value": 1.0, "status": "normalization_placeholder"},
+    "A2": {"value": 0.0, "status": "ricci_flat_target_placeholder"},
+    "A4": {"value": null, "status": "not_computed"}
+  },
+  "curvature_block": {
+    "normalized_Rm2_over_8pi2": {"value": 24.0, "status": "topology_target"},
+    "error_to_target": null
+  },
+  "refinement_block": {
+    "h": null,
+    "index": null,
+    "previous_sample_id": null
+  },
+  "claim_status": "schema_stub_only",
+  "valid": true,
+  "interpretation": "This is the non-placeholder compute-lane contract: a future R3 sample must fill these fields with actual metric/operator data before it can be promoted beyond schema_stub_only."
+}
