@@ -1,0 +1,24 @@
+{
+  "bt": 1220,
+  "title": "R3 schema-valid mock refinement sequence",
+  "refinement_indices": [8,16,32,64],
+  "schema": "BT1215_K3_GEOMETRY_SAMPLE_V1",
+  "topology": {"chi":24,"signature":-16,"b2":22,"intersection_signature":[3,19]},
+  "sample_summaries": [
+    {"sample_id":"k3_mock_refinement_n8","h":0.125,"shape_quality":0.975,"A2_mock":0.015625,"A4_mock":24.03125,"curvature_error":0.015625,"claim_status":"mock_sequence_only"},
+    {"sample_id":"k3_mock_refinement_n16","h":0.0625,"shape_quality":0.9875,"A2_mock":0.00390625,"A4_mock":24.0078125,"curvature_error":0.00390625,"claim_status":"mock_sequence_only"},
+    {"sample_id":"k3_mock_refinement_n32","h":0.03125,"shape_quality":0.99375,"A2_mock":0.0009765625,"A4_mock":24.001953125,"curvature_error":0.0009765625,"claim_status":"mock_sequence_only"},
+    {"sample_id":"k3_mock_refinement_n64","h":0.015625,"shape_quality":0.996875,"A2_mock":0.000244140625,"A4_mock":24.00048828125,"curvature_error":0.000244140625,"claim_status":"mock_sequence_only"}
+  ],
+  "checks": {
+    "all_have_nonnull_h": true,
+    "shape_quality_improves": true,
+    "A2_mock_decreases": true,
+    "A4_mock_converges_to_24": true,
+    "curvature_error_decreases": true,
+    "sequence_schema_valid": true,
+    "promotion_allowed": false
+  },
+  "promotion_blocker": "metric and operator blocks are mock-labeled, so this cannot count as physical R3 evidence",
+  "interpretation": "The sequence exercises the BT1215 schema with non-null refinement data and monotone witness behavior, while intentionally refusing promotion beyond mock status."
+}
