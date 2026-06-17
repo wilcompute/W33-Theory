@@ -1,0 +1,14 @@
+{
+  "candidate_id": "exact_polar_path",
+  "closure_order": 51840,
+  "word_diameter": 14,
+  "edge_split": {
+    "polar_graph": "P4",
+    "nonpolar_graph": "P4"
+  },
+  "diameter_endpoint_first_set_histogram": {
+    "8": 1
+  },
+  "labelled_channel_spread": 172,
+  "notes": "Reference BT1233/BT1258 polar path candidate."
+}
