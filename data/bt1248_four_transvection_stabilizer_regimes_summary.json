@@ -1,0 +1,18 @@
+{
+  "bt": 1248,
+  "title": "Four-transvection stabilizer regime classifier",
+  "acting_group_order": 51840,
+  "full_order_orbit_rows": [
+    {"name": "diam10_A", "count": 12960, "diameter": 10, "setwise_stabilizer_order": 4, "pair_orders": {"9": 1, "24": 5}, "triple_orders": {"648": 4}, "iso_pairs": 1},
+    {"name": "diam10_B", "count": 3240, "diameter": 10, "setwise_stabilizer_order": 16, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"648": 4}, "iso_pairs": 2},
+    {"name": "diam10_C", "count": 6480, "diameter": 10, "setwise_stabilizer_order": 8, "pair_orders": {"24": 6}, "triple_orders": {"648": 4}, "iso_pairs": 0},
+    {"name": "diam12", "count": 25920, "diameter": 12, "setwise_stabilizer_order": 2, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"72": 1, "648": 3}, "iso_pairs": 2},
+    {"name": "diam14_BT1228", "count": 12960, "diameter": 14, "setwise_stabilizer_order": 4, "pair_orders": {"9": 3, "24": 3}, "triple_orders": {"72": 2, "648": 2}, "iso_pairs": 3}
+  ],
+  "by_diameter": {
+    "10": {"total_sets": 22680, "orbit_count": 3, "stabilizer_orders": [4, 8, 16]},
+    "12": {"total_sets": 25920, "orbit_count": 1, "stabilizer_orders": [2]},
+    "14": {"total_sets": 12960, "orbit_count": 1, "stabilizer_orders": [4]}
+  },
+  "interpretation": "The diameter-14 BT1228 regime is not the largest-stabilizer orbit. Its distinction is balanced local closure, not maximal symmetry."
+}
