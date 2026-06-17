@@ -1,0 +1,26 @@
+name: Recovery Packet
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  recovery-packet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Materialize recovery packet paper section
+        run: |
+          python tools/integrate_bt1282_recovery_packet_insert.py
+      - name: Verify strict recovery certificate
+        run: |
+          python tools/bt1281_verify_recovery_certificate.py
+      - name: Run recovery packet tests
+        run: |
+          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py
