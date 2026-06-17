@@ -1,0 +1,46 @@
+{
+  "bt": 1208,
+  "title": "R3 architecture dependency graph theorem",
+  "nodes": [
+    "finite_w33_seed",
+    "lambda_lock",
+    "symplectic_cv_computer",
+    "single_photon_demonstrator",
+    "gkp_steinberg_fault_tolerant_stack",
+    "metric_k3_spacetime",
+    "r3_convergence_checklist",
+    "spacetime_continuum_claim"
+  ],
+  "edges": [
+    ["finite_w33_seed", "lambda_lock"],
+    ["finite_w33_seed", "symplectic_cv_computer"],
+    ["lambda_lock", "single_photon_demonstrator"],
+    ["symplectic_cv_computer", "single_photon_demonstrator"],
+    ["symplectic_cv_computer", "gkp_steinberg_fault_tolerant_stack"],
+    ["finite_w33_seed", "metric_k3_spacetime"],
+    ["metric_k3_spacetime", "r3_convergence_checklist"],
+    ["r3_convergence_checklist", "spacetime_continuum_claim"]
+  ],
+  "baseline_reachable": [
+    "finite_w33_seed",
+    "gkp_steinberg_fault_tolerant_stack",
+    "lambda_lock",
+    "metric_k3_spacetime",
+    "r3_convergence_checklist",
+    "single_photon_demonstrator",
+    "spacetime_continuum_claim",
+    "symplectic_cv_computer"
+  ],
+  "remove_metric_branch": {
+    "removed": ["metric_k3_spacetime", "r3_convergence_checklist", "spacetime_continuum_claim"],
+    "reachable": ["finite_w33_seed", "gkp_steinberg_fault_tolerant_stack", "lambda_lock", "single_photon_demonstrator", "symplectic_cv_computer"],
+    "computer_targets_still_reachable": true,
+    "spacetime_targets_reachable": false
+  },
+  "remove_symplectic_computer_branch": {
+    "removed": ["symplectic_cv_computer"],
+    "reachable": ["finite_w33_seed", "lambda_lock", "metric_k3_spacetime", "r3_convergence_checklist", "single_photon_demonstrator", "spacetime_continuum_claim"],
+    "fault_tolerant_stack_reachable": false
+  },
+  "theorem": "The metric/R3 branch is downstream of the finite seed but not upstream of the holonet computer branch. Removing R3 removes the spacetime-continuum claim while preserving reachability of both computer targets."
+}
