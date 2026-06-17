@@ -1,0 +1,44 @@
+\subsection{Minimal four-transvection Clifford target and word metric}
+\label{sec:bt1236-minimal-clifford-word-metric}
+
+The exact two-qutrit finite target is
+\[
+Sp(4,3),\qquad |Sp(4,3)|=51840.
+\]
+The compressed projective-transvection certificate uses the four vectors
+\[
+(0,0,0,2),\quad (0,2,0,0),\quad (0,0,2,2),\quad (1,0,0,0).
+\]
+BT1231 proves that this count is exact within the projective-transvection family.  The closure histograms are
+\[
+1\hbox{-generator}:\quad 3^{40},
+\]
+\[
+2\hbox{-generator}:\quad 9^{240}+24^{540},
+\]
+\[
+3\hbox{-generator}:\quad 24^{360}+27^{160}+72^{2160}+648^{7200}.
+\]
+Every closure using at most three such generators is proper, while the displayed four-set reaches \(51840\).  Therefore
+\[
+\boxed{m_{\min}=4}
+\]
+inside this generator family.
+
+Since each transvection has order three, adjoining inverses gives an eight-element symmetric alphabet.  The associated Cayley word metric has
+\[
+\boxed{|G|=51840,\qquad \operatorname{diam}=14.}
+\]
+The sphere histogram is
+\[
+\boxed{1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1.}
+\]
+The diagnostic ball checkpoints are
+\[
+\boxed{|B_4|=534,\quad |B_8|=14994,\quad |B_{12}|=51803,\quad |B_{14}|=51840.}
+\]
+
+These values define the exact finite word-metric fingerprint for later tomography checks.  A recovered finite gate model should match the local order-three law, the closure order, the diameter, and the ball-growth checkpoints before any noisy recovery claim is promoted.
+
+\paragraph{Boundary.}
+This is a finite exact target certificate.  It is not hardware data and it does not claim minimality among arbitrary non-transvection generators.
