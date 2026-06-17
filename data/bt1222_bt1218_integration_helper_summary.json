@@ -1,0 +1,16 @@
+{
+  "bt": 1222,
+  "title": "BT1218 TeX integration helper",
+  "helper": "tools/integrate_bt1218_holonet_experimental_readiness.py",
+  "target": "photonic_holonet.tex",
+  "input_line": "\\input{paper/sections/sec_bt1218_holonet_experimental_readiness}",
+  "idempotent": true,
+  "dry_run_supported": true,
+  "candidate_markers": [
+    "\\subsection{The fault-tolerant layer is the substrate's lattice tower}",
+    "\\subsection{Why the primitive is one \\emph{massless} photon}",
+    "\\section{Experimental roadmap}"
+  ],
+  "status": "helper_pushed_not_applied_by_connector",
+  "interpretation": "The helper inserts the BT1218 paper section without requiring direct large-file replacement. It can be run locally or in CI with --dry-run first."
+}
