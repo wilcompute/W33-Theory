@@ -1,0 +1,43 @@
+\subsection{Clifford tomography ladder}
+\label{sec:bt1261-clifford-tomography-ladder}
+
+The finite Clifford recovery problem now resolves into a strict ladder of increasingly sensitive invariants.
+
+\paragraph{Gate 1: closure.}
+A candidate four-transvection set must generate
+\[
+|Sp(4,3)|=51840.
+\]
+BT1231 proves four is minimal inside the projective-transvection family, but BT1242 proves closure alone is not a sufficient tomography invariant: \(61560\) four-sets generate the full group.
+
+\paragraph{Gate 2: unlabelled word metric.}
+The BT1233 symmetric Cayley sphere is
+\[
+1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1,
+\]
+with diameter \(14\).  BT1242 splits the full-order four-sets into diameter \(10,12,14\) regimes, so the diameter-14 word metric is a genuine extra constraint.
+
+\paragraph{Gate 3: polar path tetrahedron.}
+BT1255 identifies the diameter-14 regime as the unique self-complementary polar/nonpolar edge split
+\[
+K_4=P_4\sqcup P_4.
+\]
+Thus the BT1233 target is the word metric of a polar path tetrahedron.
+
+\paragraph{Gate 4: labelled geodesic tensor.}
+BT1251 shows that \(4!2^4=384\) ordered/oriented variants collapse under the unlabelled symmetric Cayley quotient.  BT1257 and BT1260 add the first labelled layer: shortest-geodesic first/last-channel tensors.  These preserve the unlabelled sphere while detecting anchored channel imbalance.
+
+\paragraph{Recovery principle.}
+A finite Clifford tomography claim should pass the ladder in order:
+\[
+\boxed{
+\text{closure}
+\;\Longrightarrow\;
+\text{unlabelled word metric}
+\;\Longrightarrow\;
+\text{polar path edge geometry}
+\;\Longrightarrow\;
+\text{labelled geodesic tensor}.
+}
+\]
+Failure at any rung blocks promotion to a recovered BT1233/BT1258 Clifford target.
