@@ -1,0 +1,46 @@
+{
+  "bt": 1275,
+  "title": "Strict polar path recovery certificate",
+  "target": "diam14_polar_path",
+  "closure": {
+    "group": "Sp(4,3)",
+    "order": 51840,
+    "minimal_projective_transvection_count": 4
+  },
+  "word_metric": {
+    "diameter": 14,
+    "sphere_histogram": [1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1],
+    "checkpoints": {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
+  },
+  "edge_geometry": {
+    "polar_graph": "P4",
+    "nonpolar_graph": "P4",
+    "self_complementary_split": "K4=P4+P4",
+    "pair_order_pattern": "9^3 24^3",
+    "triple_order_pattern": "72^2 648^2"
+  },
+  "labelled_geodesic": {
+    "channel_spread": 172,
+    "first_channel_totals": {"g1p":16197,"g1m":16197,"g2p":16025,"g2m":16025,"g3p":16025,"g3m":16025,"g4p":16197,"g4m":16197},
+    "diameter_endpoint_first_set_histogram": {"8": 1}
+  },
+  "score_vector": {
+    "components": ["closure51840", "diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"],
+    "values": [1,1,1,1,1],
+    "strict_score_out_of_5": 5
+  },
+  "candidate_schema": {
+    "candidate_id": "exact_polar_path",
+    "closure_order": 51840,
+    "word_diameter": 14,
+    "edge_split": {"polar_graph": "P4", "nonpolar_graph": "P4"},
+    "diameter_endpoint_first_set_histogram": {"8": 1},
+    "labelled_channel_spread": 172
+  },
+  "validator_result": {
+    "band": "pass",
+    "score": 5,
+    "missing_gates": []
+  },
+  "interpretation": "This certificate packages the strict recovered finite Clifford target: full closure, diameter-14 word metric, polar path P4/P4 edge geometry, labelled geodesic endpoint evidence, and a 5/5 validator pass."
+}
