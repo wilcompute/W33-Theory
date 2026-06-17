@@ -1,0 +1,49 @@
+{
+  "bt": 1240,
+  "title": "Synthetic word-metric recovery harness",
+  "reference": {
+    "order": 51840,
+    "diameter": 14,
+    "sphere": [1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1],
+    "balls": {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
+  },
+  "cases": {
+    "exact": {
+      "band": "pass",
+      "order": 51840,
+      "diameter": 14,
+      "gate_count": 8,
+      "local_order3_ok": true,
+      "checkpoint_max_rel_error": 0.0,
+      "sphere_tv": 0.0
+    },
+    "drop_last": {
+      "band": "fail",
+      "order": 648,
+      "diameter": 9,
+      "gate_count": 6,
+      "local_order3_ok": true,
+      "checkpoint_max_rel_error": 0.9875,
+      "sphere_tv": 0.49375
+    },
+    "swap_last": {
+      "band": "fail",
+      "order": 51840,
+      "diameter": 10,
+      "gate_count": 8,
+      "local_order3_ok": true,
+      "checkpoint_max_rel_error": 2.319394424436441,
+      "sphere_tv": 0.6708526234567901
+    },
+    "identity_last": {
+      "band": "fail",
+      "order": 648,
+      "diameter": 9,
+      "gate_count": 7,
+      "local_order3_ok": false,
+      "checkpoint_max_rel_error": 0.9875,
+      "sphere_tv": 0.49375
+    }
+  },
+  "interpretation": "The exact recovery passes. Missing a generator collapses to order 648. Swapping in a different transvection still reaches order 51840 but fails the word-metric fingerprint. Replacing a generator by identity fails the local order-three law and closure."
+}
