@@ -1,0 +1,14 @@
+{
+  "bt": 1272,
+  "title": "Schema-shaped candidate scoring CLI",
+  "cli": "tools/bt1272_score_candidate.py",
+  "input_schema": "schema/bt1269_tomography_candidate.schema.json",
+  "fixtures": [
+    "examples/bt1269_exact_polar_path_candidate.json",
+    "examples/bt1269_diam12_review_candidate.json",
+    "examples/bt1269_full_closure_sparse_candidate.json",
+    "examples/bt1269_not_full_order_candidate.json"
+  ],
+  "bands": ["pass", "review", "fail"],
+  "notes": "The CLI computes the same five-gate score as BT1266 on external candidate JSON input."
+}
