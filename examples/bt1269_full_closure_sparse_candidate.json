@@ -1,0 +1,12 @@
+{
+  "candidate_id": "full_closure_sparse",
+  "closure_order": 51840,
+  "word_diameter": 10,
+  "edge_split": {
+    "polar_graph": "none_recorded",
+    "nonpolar_graph": "none_recorded"
+  },
+  "diameter_endpoint_first_set_histogram": {},
+  "labelled_channel_spread": 0,
+  "notes": "Full closure with no higher ladder evidence recorded."
+}
