@@ -1,0 +1,14 @@
+{
+  "bt": 1252,
+  "title": "Polar path tetrahedron identifier",
+  "vectors": [[0,0,0,2], [0,2,0,0], [0,0,2,2], [1,0,0,0]],
+  "symplectic_zero_edges": [[0,2], [0,3], [1,3]],
+  "symplectic_nonzero_edges": [[0,1], [1,2], [2,3]],
+  "zero_edge_graph": "P4",
+  "nonzero_edge_graph": "P4",
+  "self_complementary_edge_split": true,
+  "pair_order_pattern": "9^3 24^3",
+  "triple_order_pattern": "72^2 648^2",
+  "proposed_name": "polar path tetrahedron",
+  "meaning": "The BT1228/BT1233 diameter-14 regime is a tetrahedron whose polar/commuting edges form a path P4; the nonpolar edges form the complementary path P4. This self-complementary path split realizes the balanced local closure law."
+}
