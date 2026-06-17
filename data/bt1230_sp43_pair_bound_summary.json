@@ -1,0 +1,27 @@
+{
+  "bt": 1230,
+  "title": "Sp43 pair-bound certificate",
+  "field": "F3",
+  "dimension": 4,
+  "projective_transvections": 40,
+  "expected_sp43_order": 51840,
+  "single_order_histogram": {
+    "3": 40
+  },
+  "pair_order_histogram": {
+    "9": 240,
+    "24": 540
+  },
+  "max_single_order": 3,
+  "max_pair_order": 24,
+  "pair_examples": {
+    "9": [[0,0,0,1],[0,0,1,0]],
+    "24": [[0,0,0,1],[0,1,0,0]]
+  },
+  "one_or_two_transvections_reach_full_order": false,
+  "lower_bound_transvections_at_least": 3,
+  "bt1228_four_transvection_certificate_compatible": true,
+  "three_transvection_case_resolved": false,
+  "minimality_claim": false,
+  "interpretation": "All single closures have order 3, and all pair closures have order 9 or 24. Thus BT1228's four-transvection certificate cannot be improved to one or two transvections; the remaining exact-minimality gap is the three-transvection case."
+}
