@@ -1,0 +1,20 @@
+{
+  "bt": 1281,
+  "title": "Strict recovery certificate verifier",
+  "verified": true,
+  "checks": {
+    "target_is_polar_path": true,
+    "closure_order_51840": true,
+    "word_diameter_14": true,
+    "edge_split_P4P4": true,
+    "labelled_spread_172": true,
+    "score_vector_all_ones": true,
+    "validator_pass": true,
+    "batch_counts_match": true,
+    "index_points_to_certificate": true,
+    "index_target_matches": true
+  },
+  "certificate": "data/bt1275_strict_polar_path_recovery_certificate.json",
+  "batch_summary": "data/bt1274_batch_candidate_scores_summary.json",
+  "packet_index": "data/bt1279_recovery_packet_index.json"
+}
