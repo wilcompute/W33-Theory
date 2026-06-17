@@ -67,9 +67,21 @@ def test_bt1240_synthetic_recovery_harness():
     assert d["cases"]["identity_last"]["local_order3_ok"] is False
 
 
+def test_bt1242_four_transvection_regimes():
+    run("analysis/bt1242_four_transvection_regime_classifier.py")
+    d = load("data/bt1242_four_transvection_regime_classifier_summary.json")
+    assert d["all_four_sets"] == 91390
+    assert d["stabilizer_orbit_representatives"] == 32
+    assert d["unique_word_metric_profiles"] == 16
+    assert d["global_counts_by_order"] == {"24": 90, "27": 40, "72": 1440, "576": 1620, "648": 26640, "51840": 61560}
+    assert d["global_counts_by_order_and_diameter"] == {"24:diam3": 90, "27:diam2": 40, "72:diam4": 1440, "576:diam8": 1620, "648:diam6": 11520, "648:diam7": 15120, "51840:diam10": 22680, "51840:diam12": 25920, "51840:diam14": 12960}
+    assert d["bt1228_profile_global_count"] == 12960
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
     test_bt1233_word_metric()
     test_bt1240_synthetic_recovery_harness()
-    print("BT1231-BT1240 regression tests pass")
+    test_bt1242_four_transvection_regimes()
+    print("BT1231-BT1242 regression tests pass")
