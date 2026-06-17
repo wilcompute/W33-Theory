@@ -1,0 +1,18 @@
+{
+  "bt": 1221,
+  "title": "Exact Sp43 symplectic-generator certificate",
+  "field": "F3",
+  "dimension": 4,
+  "generator_type": "nonzero-vector symplectic transvections over F3",
+  "unique_transvection_generators": 40,
+  "order": 51840,
+  "expected_order": 51840,
+  "order_ok": true,
+  "all_generated_matrices_symplectic": true,
+  "element_order_spectrum": {"1":1,"2":91,"3":800,"4":1620,"5":5184,"6":8000,"8":6480,"9":5760,"10":5184,"12":12960,"18":5760},
+  "trace_mod3_counts": {"0":18630,"1":16605,"2":16605},
+  "fixed_space_rank_counts": {"0":1,"1":80,"2":2070,"3":16560,"4":33129},
+  "max_element_order": 18,
+  "recovers_bt1214_two_qutrit_target": true,
+  "interpretation": "BT1221 upgrades the two-qutrit Clifford target from static order metadata to an exact Sp43 generation certificate over F3, with order, trace, rank, and element-order fingerprints for tomography."
+}
