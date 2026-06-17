@@ -1,0 +1,15 @@
+{
+  "bt": 1228,
+  "title": "Compressed Sp43 generator certificate",
+  "field": "F3",
+  "dimension": 4,
+  "generator_vectors": [[0,0,0,2],[0,2,0,0],[0,0,2,2],[1,0,0,0]],
+  "generator_count": 4,
+  "previous_transvection_count": 40,
+  "generated_order": 51840,
+  "expected_order": 51840,
+  "order_ok": true,
+  "compression_ratio": "4/40",
+  "minimality_claim": false,
+  "interpretation": "A concrete four-transvection set generates the full Sp43 target. This makes the two-qutrit finite gate target more implementable without claiming four is minimal."
+}
