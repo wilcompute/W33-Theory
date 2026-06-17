@@ -1,0 +1,23 @@
+{
+  "bt": 1245,
+  "title": "Four-transvection structural invariant classifier",
+  "full_order_regime_summary": {
+    "diam10": {"count": 22680, "patterns": 3},
+    "diam12": {"count": 25920, "patterns": 1},
+    "diam14": {"count": 12960, "patterns": 1}
+  },
+  "full_order_patterns": [
+    {"count": 12960, "diameter": 10, "pair_orders": {"9": 1, "24": 5}, "triple_orders": {"648": 4}, "iso_pairs": 1},
+    {"count": 3240, "diameter": 10, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"648": 4}, "iso_pairs": 2},
+    {"count": 6480, "diameter": 10, "pair_orders": {"24": 6}, "triple_orders": {"648": 4}, "iso_pairs": 0},
+    {"count": 25920, "diameter": 12, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"72": 1, "648": 3}, "iso_pairs": 2},
+    {"count": 12960, "diameter": 14, "pair_orders": {"9": 3, "24": 3}, "triple_orders": {"72": 2, "648": 2}, "iso_pairs": 3}
+  ],
+  "diagnostic_rules": [
+    "All full-order sets have span rank 4.",
+    "Diameter 10 is the full-order regime with all four triples closing to 648.",
+    "Diameter 12 has pair orders 9^2 24^4 and triple orders 72^1 648^3.",
+    "Diameter 14 has pair orders 9^3 24^3 and triple orders 72^2 648^2; this is the BT1228/BT1233 word-metric regime."
+  ],
+  "interpretation": "The full-order diameter split is explained by local pair/triple closure structure."
+}
