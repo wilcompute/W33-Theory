@@ -1,46 +1,72 @@
-name: Paper Build
+name: paper-build
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+    paths:
+      - '**.tex'
+      - '**.bib'
+      - '.github/workflows/paper-build.yml'
   pull_request:
-    branches: [ master ]
+    paths:
+      - '**.tex'
+      - '**.bib'
   workflow_dispatch:
 
 jobs:
-  paper-build:
+  build-pdf:
+    name: Compile w33_preprint.tex → PDF
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Apply paper integrators
+      - name: Install TeX Live (full)
         run: |
-          python tools/integrate_bt990_r3_fat_tower_w33.py
-          python tools/integrate_bt990_r3_fat_tower_holonet.py
-          python tools/integrate_bt996_r3_edgewise_hodge_stack_w33.py
-          python tools/integrate_bt996_holonet_edgewise_hodge.py
+          sudo apt-get update -qq
+          sudo apt-get install -y texlive-full latexmk
 
-      - name: Build W33 paper
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: w33_paper.tex
+      - name: First pdflatex pass
+        run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
+        working-directory: ${{ github.workspace }}
 
-      - name: Build Holonet paper
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: photonic_holonet.tex
+      - name: Run BibTeX
+        run: bibtex w33_preprint || true
+        working-directory: ${{ github.workspace }}
 
-      - name: Upload paper PDFs
+      - name: Second pdflatex pass
+        run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
+        working-directory: ${{ github.workspace }}
+
+      - name: Third pdflatex pass (resolve all refs)
+        run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
+        working-directory: ${{ github.workspace }}
+
+      - name: Check for undefined references / citations
+        run: |
+          if grep -q 'undefined' w33_preprint.log; then
+            echo "WARNING: Undefined references or citations found:"
+            grep 'undefined' w33_preprint.log
+          fi
+          if grep -q 'Error' w33_preprint.log; then
+            echo "FATAL: LaTeX errors found:"
+            grep 'Error' w33_preprint.log
+            exit 1
+          fi
+          echo "Clean build: no errors."
+        working-directory: ${{ github.workspace }}
+
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: paper-build-pdfs
-          path: |
-            w33_paper.pdf
-            photonic_holonet.pdf
-          if-no-files-found: warn
+          name: w33-preprint-pdf
+          path: w33_preprint.pdf
+          retention-days: 90
+
+      - name: Check PDF was produced
+        run: |
+          if [ ! -f w33_preprint.pdf ]; then
+            echo "FATAL: w33_preprint.pdf was not produced!"
+            exit 1
+          fi
+          echo "PDF produced: $(du -h w33_preprint.pdf | cut -f1)"
+        working-directory: ${{ github.workspace }}

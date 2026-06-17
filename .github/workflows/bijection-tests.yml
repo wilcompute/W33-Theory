@@ -1,0 +1,40 @@
+name: bijection-tests
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tests/test_bijection_solver_v3.py'
+      - 'BIJECTION_SOLVER_V3.py'
+      - '.github/workflows/bijection-tests.yml'
+  pull_request:
+    paths:
+      - 'tests/test_bijection_solver_v3.py'
+      - 'BIJECTION_SOLVER_V3.py'
+  workflow_dispatch:
+
+jobs:
+  bijection-pytest:
+    name: W(3,3)↔SM Bijection Verification (7 tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run bijection test suite
+        run: pytest tests/test_bijection_solver_v3.py -v --tb=short
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bijection-test-results
+          path: .pytest_cache/
+          retention-days: 30
