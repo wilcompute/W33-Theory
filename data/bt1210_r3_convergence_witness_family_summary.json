@@ -1,0 +1,32 @@
+{
+  "bt": 1210,
+  "title": "R3 finite-to-continuum witness family",
+  "honesty_boundary": "Toy convergence certificate: it tests the R3 checklist shape, not a proof that the physical K3/spacetime continuum exists.",
+  "target_limit": {
+    "curvature_energy": 24,
+    "spectral_moment_error": 0,
+    "gauge_holonomy_error": 0,
+    "operator_resolvent_error": 0,
+    "metric_propinquity_proxy": 0
+  },
+  "refinement_ladder": [
+    {"n":4,"h":0.25,"shape_quality":0.9375,"curvature_energy":24.1875,"spectral_error":0.0625,"gauge_error":0.25,"operator_error":0.0625,"metric_proxy":0.25,"scale_separation":4},
+    {"n":8,"h":0.125,"shape_quality":0.96875,"curvature_energy":24.046875,"spectral_error":0.015625,"gauge_error":0.125,"operator_error":0.015625,"metric_proxy":0.125,"scale_separation":8},
+    {"n":16,"h":0.0625,"shape_quality":0.984375,"curvature_energy":24.01171875,"spectral_error":0.00390625,"gauge_error":0.0625,"operator_error":0.00390625,"metric_proxy":0.0625,"scale_separation":16},
+    {"n":32,"h":0.03125,"shape_quality":0.9921875,"curvature_energy":24.0029296875,"spectral_error":0.0009765625,"gauge_error":0.03125,"operator_error":0.0009765625,"metric_proxy":0.03125,"scale_separation":32},
+    {"n":64,"h":0.015625,"shape_quality":0.99609375,"curvature_energy":24.000732421875,"spectral_error":0.000244140625,"gauge_error":0.015625,"operator_error":0.000244140625,"metric_proxy":0.015625,"scale_separation":64},
+    {"n":128,"h":0.0078125,"shape_quality":0.998046875,"curvature_energy":24.00018310546875,"spectral_error":0.00006103515625,"gauge_error":0.0078125,"operator_error":0.00006103515625,"metric_proxy":0.0078125,"scale_separation":128}
+  ],
+  "checks": {
+    "mesh_h_decreases": true,
+    "shape_quality_increases": true,
+    "curvature_energy_decreases_to_24": true,
+    "spectral_moment_error_decreases": true,
+    "gauge_holonomy_error_decreases": true,
+    "operator_resolvent_error_decreases": true,
+    "metric_propinquity_proxy_decreases": true,
+    "scale_separation_increases": true
+  },
+  "passes_all_monotone_witness_checks": true,
+  "interpretation": "The R3 checklist can be cast as a falsifiable refinement witness: metric quality improves, curvature energy stabilizes, spectral/gauge/operator errors shrink, and scale separation grows."
+}
