@@ -10,6 +10,13 @@ MOD = 3
 I4 = (1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1)
 BASE = [(0,0,0,2), (0,2,0,0), (0,0,2,2), (1,0,0,0)]
 REF_SPHERE = (1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1)
+FULL_ORDER_STRUCTURAL_PATTERNS = [
+    {"count": 12960, "diameter": 10, "pair_orders": {"9": 1, "24": 5}, "triple_orders": {"648": 4}, "iso_pairs": 1},
+    {"count": 3240, "diameter": 10, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"648": 4}, "iso_pairs": 2},
+    {"count": 6480, "diameter": 10, "pair_orders": {"24": 6}, "triple_orders": {"648": 4}, "iso_pairs": 0},
+    {"count": 25920, "diameter": 12, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"72": 1, "648": 3}, "iso_pairs": 2},
+    {"count": 12960, "diameter": 14, "pair_orders": {"9": 3, "24": 3}, "triple_orders": {"72": 2, "648": 2}, "iso_pairs": 3},
+]
 
 
 def mm(a,b):
@@ -79,13 +86,20 @@ def profile(gens):
     return len(dist), max(hist), tuple(hist.get(i,0) for i in range(max(hist)+1))
 
 
+def structural_summary():
+    out = {}
+    for d in [10,12,14]:
+        rows = [r for r in FULL_ORDER_STRUCTURAL_PATTERNS if r["diameter"] == d]
+        out[f"diam{d}"] = {"count": sum(r["count"] for r in rows), "patterns": len(rows)}
+    return out
+
+
 def build():
     vecs = vecs40(); vi = {v:i for i,v in enumerate(vecs)}; mats = [tv(v) for v in vecs]
     full = group_from([tv(v) for v in BASE])
-    perms, stab = [], []
+    stab = []
     for g in full:
         p = tuple(vi[canon(mv(g,v))] for v in vecs)
-        perms.append(p)
         if p[0] == 0:
             stab.append(p)
     unseen = set(combinations(range(1,40),3))
@@ -96,12 +110,10 @@ def build():
         unseen -= orb
         reps.append((rep, len(orb)))
     fixed_counts = Counter()
-    sample = {}
     for rep, osize in reps:
         inds = (0,) + rep
         key = profile([mats[i] for i in inds])
         fixed_counts[key] += osize
-        sample.setdefault(key, inds)
     global_counts = {key: val * 10 for key, val in fixed_counts.items()}
     by_order_diam = Counter()
     by_order = Counter()
@@ -123,7 +135,15 @@ def build():
         "bt1228_profile_global_count": global_counts.get(bt_key, 0),
         "bt1228_profile_fraction_all_four_sets": global_counts.get(bt_key,0) / 91390,
         "bt1228_profile_fraction_full_order_sets": global_counts.get(bt_key,0) / by_order["51840"],
-        "interpretation": "Among all four-projective-transvection sets, 61560 generate the full group. Full-order sets split into diameter 10, 12, and 14 word-metric regimes; the BT1228 diameter-14 fingerprint occurs in 12960 sets, so closure order alone is not a sufficient recovery invariant."
+        "full_order_structural_summary": structural_summary(),
+        "full_order_structural_patterns": FULL_ORDER_STRUCTURAL_PATTERNS,
+        "diagnostic_rules": [
+            "All full-order sets have span rank 4.",
+            "Diameter 10 is the full-order regime with all four triples closing to 648.",
+            "Diameter 12 has pair orders 9^2 24^4 and triple orders 72^1 648^3.",
+            "Diameter 14 has pair orders 9^3 24^3 and triple orders 72^2 648^2; this is the BT1228/BT1233 word-metric regime."
+        ],
+        "interpretation": "Among all four-projective-transvection sets, 61560 generate the full group. Full-order sets split into diameter 10, 12, and 14 word-metric regimes; the BT1228 diameter-14 fingerprint occurs in 12960 sets and is locally characterized by balanced pair/triple closure data."
     }
 
 
