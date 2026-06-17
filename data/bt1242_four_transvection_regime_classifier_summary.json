@@ -6,28 +6,29 @@
   "fixed_point_representatives": 9139,
   "stabilizer_orbit_representatives": 32,
   "unique_word_metric_profiles": 16,
-  "global_counts_by_order": {
-    "24": 90,
-    "27": 40,
-    "72": 1440,
-    "576": 1620,
-    "648": 26640,
-    "51840": 61560
-  },
-  "global_counts_by_order_and_diameter": {
-    "24:diam3": 90,
-    "27:diam2": 40,
-    "72:diam4": 1440,
-    "576:diam8": 1620,
-    "648:diam6": 11520,
-    "648:diam7": 15120,
-    "51840:diam10": 22680,
-    "51840:diam12": 25920,
-    "51840:diam14": 12960
-  },
+  "global_counts_by_order": {"24": 90, "27": 40, "72": 1440, "576": 1620, "648": 26640, "51840": 61560},
+  "global_counts_by_order_and_diameter": {"24:diam3": 90, "27:diam2": 40, "72:diam4": 1440, "576:diam8": 1620, "648:diam6": 11520, "648:diam7": 15120, "51840:diam10": 22680, "51840:diam12": 25920, "51840:diam14": 12960},
   "full_order_sets": 61560,
   "bt1228_profile_global_count": 12960,
   "bt1228_profile_fraction_all_four_sets": 0.14180982602035233,
   "bt1228_profile_fraction_full_order_sets": 0.21052631578947367,
-  "interpretation": "Among all four-projective-transvection sets, 61560 generate the full group. Full-order sets split into diameter 10, 12, and 14 word-metric regimes; the BT1228 diameter-14 fingerprint occurs in 12960 sets, so closure order alone is not a sufficient recovery invariant."
+  "full_order_structural_summary": {
+    "diam10": {"count": 22680, "patterns": 3},
+    "diam12": {"count": 25920, "patterns": 1},
+    "diam14": {"count": 12960, "patterns": 1}
+  },
+  "full_order_structural_patterns": [
+    {"count": 12960, "diameter": 10, "pair_orders": {"9": 1, "24": 5}, "triple_orders": {"648": 4}, "iso_pairs": 1},
+    {"count": 3240, "diameter": 10, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"648": 4}, "iso_pairs": 2},
+    {"count": 6480, "diameter": 10, "pair_orders": {"24": 6}, "triple_orders": {"648": 4}, "iso_pairs": 0},
+    {"count": 25920, "diameter": 12, "pair_orders": {"9": 2, "24": 4}, "triple_orders": {"72": 1, "648": 3}, "iso_pairs": 2},
+    {"count": 12960, "diameter": 14, "pair_orders": {"9": 3, "24": 3}, "triple_orders": {"72": 2, "648": 2}, "iso_pairs": 3}
+  ],
+  "diagnostic_rules": [
+    "All full-order sets have span rank 4.",
+    "Diameter 10 is the full-order regime with all four triples closing to 648.",
+    "Diameter 12 has pair orders 9^2 24^4 and triple orders 72^1 648^3.",
+    "Diameter 14 has pair orders 9^3 24^3 and triple orders 72^2 648^2; this is the BT1228/BT1233 word-metric regime."
+  ],
+  "interpretation": "Among all four-projective-transvection sets, 61560 generate the full group. Full-order sets split into diameter 10, 12, and 14 word-metric regimes; the BT1228 diameter-14 fingerprint occurs in 12960 sets and is locally characterized by balanced pair/triple closure data."
 }
