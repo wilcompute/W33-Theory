@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def run(rel):
+    subprocess.run([sys.executable, str(ROOT / rel)], cwd=ROOT, check=True)
+
+
+def load(rel):
+    with (ROOT / rel).open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def test_bt1231_min_count():
+    run("analysis/bt1231_sp43_minimal_transvection_count.py")
+    d = load("data/bt1231_sp43_minimal_transvection_count_summary.json")
+    assert d["target_order"] == 51840
+    assert d["single_order_histogram"] == {"3": 40}
+    assert d["pair_order_histogram"] == {"9": 240, "24": 540}
+    assert d["triple_order_histogram"] == {"24": 360, "27": 160, "72": 2160, "648": 7200}
+    assert d["total_triples_checked"] == 9880
+    assert d["max_order_at_most_three"] == 648
+    assert d["bt1228_four_set_order"] == 51840
+    assert d["minimal_transvection_count"] == 4
+
+
+def test_bt1232_r3_validator():
+    run("analysis/bt1232_r3_evidence_gate.py")
+    d = load("data/bt1232_r3_evidence_gate_summary.json")
+    assert d["lanes"] == ["schema_stub", "blocked", "partial", "near_candidate", "candidate"]
+    assert d["demo_counts"] == {"schema_stub": 1, "blocked": 1, "partial": 1, "near_candidate": 1, "candidate": 1}
+    assert d["near_candidate_promoted"] is False
+    assert d["certified_candidate_promoted"] is True
+    assert d["fail_closed"] is True
+
+
+def test_bt1233_word_metric():
+    run("analysis/bt1233_sp43_word_metric_tomography_protocol.py")
+    d = load("data/bt1233_sp43_word_metric_tomography_summary.json")
+    assert d["symmetric_gate_count"] == 8
+    assert d["generated_order"] == 51840
+    assert d["closure_ok"] is True
+    assert d["diameter"] == 14
+    assert d["sphere_histogram"] == {"0":1,"1":8,"2":36,"3":126,"4":363,"5":916,"6":2052,"7":4096,"8":7396,"9":12170,"10":16916,"11":7247,"12":476,"13":36,"14":1}
+    assert d["checkpoints"] == {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
+
+
+if __name__ == "__main__":
+    test_bt1231_min_count()
+    test_bt1232_r3_validator()
+    test_bt1233_word_metric()
+    print("BT1231-BT1233 regression tests pass")
