@@ -1,0 +1,27 @@
+\subsection{Tomography score vector}
+\label{sec:bt1267-tomography-score-vector}
+
+The Clifford tomography ladder can be compressed into a five-component score vector
+\[
+S=(C,D,P,E,L).
+\]
+Here \(C\) records closure to \(Sp(4,3)\), \(D\) records diameter \(14\), \(P\) records the polar path edge split \(P_4/P_4\), \(E\) records a unique all-channel diameter endpoint, and \(L\) records nonzero labelled-channel spread.
+
+The reference BT1233/BT1258 target has
+\[
+S=(1,1,1,1,1),
+\]
+so it scores \(5/5\).  The full-order regimes score as follows:
+\[
+\begin{array}{c|c|c}
+\text{regime} & S & \text{score}\\
+\hline
+\operatorname{diam}=14\text{ polar path} & (1,1,1,1,1) & 5/5\\
+\operatorname{diam}=12 & (1,0,0,0,1) & 2/5\\
+\operatorname{diam}=10_A & (1,0,0,0,1) & 2/5\\
+\operatorname{diam}=10_B & (1,0,0,0,0) & 1/5\\
+\operatorname{diam}=10_C & (1,0,0,0,0) & 1/5
+\end{array}
+\]
+
+This turns the Clifford ladder into an operational acceptance rule: all five gates select the recovered finite Clifford target; full closure alone is not enough.
