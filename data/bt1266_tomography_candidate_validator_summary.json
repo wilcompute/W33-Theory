@@ -1,0 +1,18 @@
+{
+  "bt": 1266,
+  "title": "Tomography candidate validator",
+  "gates": ["closure51840", "diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"],
+  "rules": {
+    "pass": "all five gates true",
+    "review": "full closure plus at least one additional gate, but not all gates",
+    "fail": "missing closure or score below review threshold"
+  },
+  "demo_candidates": [
+    {"name": "exact_polar_path", "band": "pass", "score": 5, "missing_gates": []},
+    {"name": "wrong_full_order_diam12", "band": "review", "score": 2, "missing_gates": ["diameter14", "polar_path_P4P4", "unique_all_channel_endpoint"]},
+    {"name": "fast_full_order_diam10_A", "band": "review", "score": 2, "missing_gates": ["diameter14", "polar_path_P4P4", "unique_all_channel_endpoint"]},
+    {"name": "closure_only", "band": "fail", "score": 1, "missing_gates": ["diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"]},
+    {"name": "not_full_order", "band": "fail", "score": 0, "missing_gates": ["closure51840", "diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"]}
+  ],
+  "interpretation": "The validator makes the ladder operational: closure-only candidates fail, full-order but wrong-regime candidates are review, and only the polar path target passes."
+}
