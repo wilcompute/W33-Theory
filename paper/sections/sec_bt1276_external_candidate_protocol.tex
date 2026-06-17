@@ -1,0 +1,33 @@
+\subsection{External candidate protocol}
+\label{sec:bt1276-external-candidate-protocol}
+
+The finite Clifford recovery ladder now admits external candidate files.  A candidate records the closure order, word diameter, polar and nonpolar edge graphs, diameter-endpoint first-channel histogram, and labelled-channel spread.  These fields determine the five score gates
+\[
+(C,D,P,E,L),
+\]
+corresponding to full closure, diameter \(14\), polar path geometry \(P_4/P_4\), unique all-channel endpoint, and nonzero labelled spread.
+
+The command-line scorer maps a candidate file to a band:
+\[
+\begin{array}{c|c}
+\text{band} & \text{rule}\\
+\hline
+\mathrm{pass} & 5/5\\
+\mathrm{review} & \text{full closure and at least one additional gate}\\
+\mathrm{fail} & \text{otherwise.}
+\end{array}
+\]
+
+The current fixture set has four cases:
+\[
+\begin{array}{c|c|c}
+\text{candidate} & \text{score} & \text{band}\\
+\hline
+\text{exact polar path} & 5/5 & \mathrm{pass}\\
+\text{diameter-12 full-order candidate} & 2/5 & \mathrm{review}\\
+\text{sparse full-closure candidate} & 1/5 & \mathrm{fail}\\
+\text{not-full-order candidate} & 0/5 & \mathrm{fail}.
+\end{array}
+\]
+
+Thus the Clifford target is no longer identified by closure alone.  A candidate must pass the full external protocol to be promoted to the recovered polar path target.
