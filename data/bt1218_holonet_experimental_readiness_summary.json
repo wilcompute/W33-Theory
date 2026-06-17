@@ -1,0 +1,41 @@
+{
+  "bt": 1218,
+  "title": "Holonet experimental readiness theorem packet",
+  "q_estimators": {
+    "drive": "q = 1/(1 + cos(theta_BC))",
+    "chern": "q = |C|max + 1",
+    "carrier": "q = N_perp + 1"
+  },
+  "holonet_values": {
+    "cos_theta_BC": "-2/3",
+    "C_abs_max": 2,
+    "N_perp": 2,
+    "q_drive": 3,
+    "q_chern": 3,
+    "q_carrier": 3
+  },
+  "adversarial_intervals": {
+    "q_drive": [2.919, 3.081],
+    "q_chern": [2.775, 3.225],
+    "q_carrier": [3.0, 3.0]
+  },
+  "encoded_invariant": {
+    "q_bare": 3,
+    "q_D4_GKP": 3,
+    "q_Steinberg": 3,
+    "outer_code": "[[240,81,4]]_3"
+  },
+  "gate_targets": {
+    "single_qutrit": "2T = SL(2,3), order 24",
+    "two_qutrit": "Sp(4,3), order 51840"
+  },
+  "k3_boundary": {
+    "chi": 24,
+    "signature": -16,
+    "b2": 22,
+    "intersection_signature": [3,19],
+    "status": "schema_stub_only"
+  },
+  "readiness_claim": "protocol_ready_not_threshold_ready",
+  "honesty_boundary": "This is a paper-ready theorem packet for falsification-roadmap readiness, not a claim of threshold hardware or completed K3 geometry."
+}
