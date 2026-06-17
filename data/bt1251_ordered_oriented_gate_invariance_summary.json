@@ -1,0 +1,14 @@
+{
+  "bt": 1251,
+  "title": "Ordered and oriented gate invariance for symmetric Cayley tomography",
+  "base_unordered_set": ["(0,0,0,2)", "(0,2,0,0)", "(0,0,2,2)", "(1,0,0,0)"],
+  "ordered_variants": 24,
+  "orientation_variants": 16,
+  "total_labeled_oriented_variants": 384,
+  "reason": "The BT1233 metric uses the symmetric alphabet {g_i, g_i^{-1}}. Permuting labels or replacing any g_i by g_i^{-1}=g_i^2 leaves the same unlabelled alphabet.",
+  "sphere_histogram_invariant": true,
+  "ball_checkpoints_invariant": true,
+  "reference_sphere": [1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1],
+  "reference_balls": {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840},
+  "tomography_consequence": "Ordered/oriented labels can matter for pulse calibration and transcript semantics, but not for the unlabelled symmetric Cayley sphere/ball fingerprint. To distinguish orientations one must add labelled-word or directed-channel observables."
+}
