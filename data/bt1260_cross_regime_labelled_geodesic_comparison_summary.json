@@ -1,0 +1,12 @@
+{
+  "bt": 1260,
+  "title": "Cross-regime labelled geodesic comparison",
+  "rows": [
+    {"name": "diam10_A", "edge_zero_graph": "K2+2I", "order": 51840, "diameter": 10, "channel_total_multiset": [15535,15535,15535,15535,15602,15602,15602,15602], "distinct_channel_totals": [15535,15602], "channel_total_spread": 67, "diameter_first_set_size_histogram": {"8": 16}},
+    {"name": "diam10_B", "edge_zero_graph": "2K2", "order": 51840, "diameter": 10, "channel_total_multiset": [15742,15742,15742,15742,15742,15742,15742,15742], "distinct_channel_totals": [15742], "channel_total_spread": 0, "diameter_first_set_size_histogram": {"6": 32, "7": 40, "8": 76}},
+    {"name": "diam10_C", "edge_zero_graph": "empty_4I", "order": 51840, "diameter": 10, "channel_total_multiset": [15253,15253,15253,15253,15253,15253,15253,15253], "distinct_channel_totals": [15253], "channel_total_spread": 0, "diameter_first_set_size_histogram": {"8": 3}},
+    {"name": "diam12", "edge_zero_graph": "P3+I", "order": 51840, "diameter": 12, "channel_total_multiset": [15590,15590,15639,15639,15639,15639,15929,15929], "distinct_channel_totals": [15590,15639,15929], "channel_total_spread": 339, "diameter_first_set_size_histogram": {"7": 4, "8": 1}},
+    {"name": "diam14_polar_path", "edge_zero_graph": "P4", "order": 51840, "diameter": 14, "channel_total_multiset": [16025,16025,16025,16025,16197,16197,16197,16197], "distinct_channel_totals": [16025,16197], "channel_total_spread": 172, "diameter_first_set_size_histogram": {"8": 1}}
+  ],
+  "interpretation": "Labelled geodesic tensors refine both the unlabelled sphere and edge graph regimes. Some fast diameter-10 regimes are total-channel balanced, diameter-12 has the largest spread, and the polar-path diameter-14 regime has a unique all-channel endpoint with nonzero total-channel imbalance."
+}
