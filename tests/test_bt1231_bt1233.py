@@ -200,6 +200,25 @@ def test_bt1264_tomography_score_vector():
     assert rows["diam10_B"]["score_vector"]["strict_score_out_of_5"] == 1
 
 
+def test_bt1266_tomography_candidate_validator():
+    run("analysis/bt1266_tomography_candidate_validator.py")
+    d = load("data/bt1266_tomography_candidate_validator_summary.json")
+    rows = {r["name"]: r for r in d["demo_candidates"]}
+    assert rows["exact_polar_path"]["band"] == "pass"
+    assert rows["wrong_full_order_diam12"]["band"] == "review"
+    assert rows["closure_only"]["band"] == "fail"
+    assert rows["not_full_order"]["score"] == 0
+
+
+def test_bt1267_score_vector_paper_section():
+    sec = ROOT / "paper" / "sections" / "sec_bt1267_tomography_score_vector.tex"
+    assert sec.exists()
+    text = sec.read_text(encoding="utf-8")
+    assert "Tomography score vector" in text
+    assert "S=(C,D,P,E,L)" in text
+    assert "5/5" in text
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -217,4 +236,6 @@ if __name__ == "__main__":
     test_bt1260_cross_regime_labelled_geodesics()
     test_bt1261_ladder_section_and_companion_integrator()
     test_bt1264_tomography_score_vector()
-    print("BT1231-BT1264 regression tests pass")
+    test_bt1266_tomography_candidate_validator()
+    test_bt1267_score_vector_paper_section()
+    print("BT1231-BT1267 regression tests pass")
