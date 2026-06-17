@@ -1,0 +1,37 @@
+{
+  "bt": 1279,
+  "title": "Finite Clifford recovery packet index",
+  "schema": "schema/bt1269_tomography_candidate.schema.json",
+  "candidate_fixtures": [
+    "examples/bt1269_exact_polar_path_candidate.json",
+    "examples/bt1269_diam12_review_candidate.json",
+    "examples/bt1269_full_closure_sparse_candidate.json",
+    "examples/bt1269_not_full_order_candidate.json"
+  ],
+  "scoring_tools": [
+    "tools/bt1272_score_candidate.py",
+    "tools/bt1274_batch_score_candidates.py"
+  ],
+  "results": [
+    "data/bt1274_batch_candidate_scores_summary.json",
+    "data/bt1275_strict_polar_path_recovery_certificate.json"
+  ],
+  "paper_sections": [
+    "paper/sections/sec_bt1261_clifford_tomography_ladder.tex",
+    "paper/sections/sec_bt1267_tomography_score_vector.tex",
+    "paper/sections/sec_bt1276_external_candidate_protocol.tex"
+  ],
+  "ci_integrators": [
+    "tools/integrate_bt1261_ladder_insert.py",
+    "tools/integrate_bt1267_score_vector_insert.py",
+    "tools/integrate_bt1276_external_protocol_insert.py"
+  ],
+  "tests": [
+    "tests/test_bt1269_bt1272_external_candidates.py",
+    "tests/test_bt1274_bt1276_recovery_packet.py"
+  ],
+  "strict_target": "diam14_polar_path",
+  "strict_certificate": "data/bt1275_strict_polar_path_recovery_certificate.json",
+  "batch_band_counts": {"pass": 1, "review": 1, "fail": 2},
+  "interpretation": "This index points to the schema, fixtures, scoring tools, aggregate results, strict certificate, paper sections, CI materializers, and tests for the finite Clifford recovery protocol."
+}
