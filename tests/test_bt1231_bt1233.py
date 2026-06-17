@@ -124,6 +124,27 @@ def test_bt1252_polar_path_tetrahedron():
     assert d["proposed_name"] == "polar path tetrahedron"
 
 
+def test_bt1254_labelled_word_observable():
+    run("analysis/bt1254_labelled_word_observable.py")
+    d = load("data/bt1254_labelled_word_observable_summary.json")
+    assert len(d["labels"]) == 8
+    assert d["orientation_flip_permutations"]["flip_g1"] == [1,0,2,3,4,5,6,7]
+    assert d["labelled_observable_changes_under_fixed_label_flip"] is True
+    assert d["unlabelled_cayley_sphere_changes_under_flip"] is False
+
+
+def test_bt1255_edge_graph_regimes():
+    run("analysis/bt1255_full_order_edge_graph_regime_classifier.py")
+    d = load("data/bt1255_full_order_edge_graph_regime_classifier_summary.json")
+    rows = {r["name"]: r for r in d["rows"]}
+    assert rows["diam10_A"]["zero_graph"] == "K2+2I"
+    assert rows["diam10_B"]["zero_graph"] == "2K2"
+    assert rows["diam10_C"]["zero_graph"] == "empty_4I"
+    assert rows["diam12"]["zero_graph"] == "P3+I"
+    assert rows["diam14_polar_path"]["zero_graph"] == "P4"
+    assert rows["diam14_polar_path"]["nonzero_graph"] == "P4"
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -134,4 +155,6 @@ if __name__ == "__main__":
     test_bt1249_paper_sections_and_integrator()
     test_bt1251_ordered_oriented_invariance()
     test_bt1252_polar_path_tetrahedron()
-    print("BT1231-BT1252 regression tests pass")
+    test_bt1254_labelled_word_observable()
+    test_bt1255_edge_graph_regimes()
+    print("BT1231-BT1255 regression tests pass")
