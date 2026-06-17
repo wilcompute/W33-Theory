@@ -1,0 +1,17 @@
+{
+  "bt": 1217,
+  "title": "Holonet lab-readiness scorecard",
+  "score": 0.9,
+  "score_percent": 90.0,
+  "components": {
+    "lambda_lock_robustness": {"weight": 0.30, "passes": true, "source": "BT1212"},
+    "clifford_tomography_signature": {"weight": 0.30, "passes": true, "source": "BT1216"},
+    "encoded_q_invariance": {"weight": 0.20, "passes": true, "source": "BT1211"},
+    "k3_schema_readiness": {"weight": 0.10, "passes": true, "source": "BT1215"},
+    "hardware_threshold_readiness": {"weight": 0.10, "passes": false, "source": "open GKP/Steinberg hardware threshold"}
+  },
+  "readiness_level": "protocol-ready_not_threshold-ready",
+  "dashboard_claim": "The holonet demonstrator protocol is ready as a falsification roadmap; the fault-tolerant GKP/Steinberg machine is not threshold-ready.",
+  "next_blocker": "physical GKP qutrit state generation, threshold squeezing, and encoded syndrome recovery",
+  "honesty_boundary": "A 90 percent score here means protocol-readiness, not hardware completion. The intentionally failed hardware-threshold component prevents overclaiming."
+}
