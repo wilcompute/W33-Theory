@@ -1,0 +1,36 @@
+{
+  "bt": 1224,
+  "title": "Exact Clifford fingerprint dashboard",
+  "single_qutrit_layer": {
+    "source": "BT1219",
+    "group": "SL(2,3)",
+    "field": "F3",
+    "order": 24,
+    "expected_order": 24,
+    "order_ok": true,
+    "closure_ok": true,
+    "element_order_spectrum": {"1":1,"2":1,"3":8,"4":6,"6":8},
+    "trace_mod3_counts": {"0":6,"1":9,"2":9}
+  },
+  "two_qutrit_layer": {
+    "source": "BT1221",
+    "group": "Sp(4,3)",
+    "field": "F3",
+    "order": 51840,
+    "expected_order": 51840,
+    "order_ok": true,
+    "all_generated_matrices_symplectic": true,
+    "element_order_spectrum": {"1":1,"2":91,"3":800,"4":1620,"5":5184,"6":8000,"8":6480,"9":5760,"10":5184,"12":12960,"18":5760},
+    "trace_mod3_counts": {"0":18630,"1":16605,"2":16605},
+    "fixed_space_rank_counts": {"0":1,"1":80,"2":2070,"3":16560,"4":33129},
+    "max_element_order": 18
+  },
+  "tomography_thresholds": {
+    "single_order_required": 24,
+    "two_qutrit_order_required": 51840,
+    "require_trace_bins": ["0","1","2"],
+    "require_fixed_space_rank_fingerprint": true
+  },
+  "dashboard_pass": true,
+  "interpretation": "The finite Clifford tomography target is exact at both layers: SL(2,3) for the single-qutrit holonomy and Sp(4,3) for the two-qutrit Clifford closure."
+}
