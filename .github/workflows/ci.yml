@@ -37,6 +37,7 @@ jobs:
           python tools/integrate_bt1236_insert.py
           python tools/integrate_bt1261_ladder_insert.py
           python tools/integrate_bt1267_score_vector_insert.py
+          python tools/integrate_bt1276_external_protocol_insert.py
           python analysis/bt1239_bt1236_integration_sanity.py
 
       - name: Run latest BT Clifford/R3/recovery regressions
