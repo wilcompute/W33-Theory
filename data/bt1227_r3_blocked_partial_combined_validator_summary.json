@@ -1,0 +1,20 @@
+{
+  "bt": 1227,
+  "title": "Combined R3 blocked/partial validator",
+  "sources": [
+    "data/bt1220_r3_schema_valid_mock_sequence.json",
+    "data/bt1226_r3_partial_sample_fixture.json"
+  ],
+  "counts": {"blocked":4,"partial":1,"candidate":0},
+  "expected_counts": {"blocked":4,"partial":1,"candidate":0},
+  "counts_match_expected": true,
+  "candidate_allowed": false,
+  "classifications": [
+    {"sample_id":"k3_mock_refinement_n8","level":"blocked"},
+    {"sample_id":"k3_mock_refinement_n16","level":"blocked"},
+    {"sample_id":"k3_mock_refinement_n32","level":"blocked"},
+    {"sample_id":"k3_mock_refinement_n64","level":"blocked"},
+    {"sample_id":"k3_partial_refinement_n32_v1","level":"partial"}
+  ],
+  "interpretation": "The R3 pipeline now exercises blocked and partial lanes together while still refusing candidate promotion."
+}
