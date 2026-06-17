@@ -145,6 +145,28 @@ def test_bt1255_edge_graph_regimes():
     assert rows["diam14_polar_path"]["nonzero_graph"] == "P4"
 
 
+def test_bt1257_labelled_geodesic_tensor():
+    run("analysis/bt1257_labelled_geodesic_tensor.py")
+    d = load("data/bt1257_labelled_geodesic_tensor_summary.json")
+    assert d["group_order"] == 51840
+    assert d["diameter"] == 14
+    assert d["label_sensitive"] is True
+    assert d["first_channel_totals"]["g1p"] == 16197
+    assert d["first_channel_totals"]["g2p"] == 16025
+    assert d["first_set_size_histogram_selected_distances"]["14"] == {"8": 1}
+
+
+def test_bt1258_polar_path_paper_theorem():
+    sec = ROOT / "paper" / "sections" / "sec_bt1258_polar_path_tetrahedron_theorem.tex"
+    integrator = ROOT / "tools" / "integrate_bt1236_insert.py"
+    assert sec.exists()
+    text = sec.read_text(encoding="utf-8")
+    assert "K_4=P_4" in text
+    assert "polar path tetrahedron" in text
+    itext = integrator.read_text(encoding="utf-8")
+    assert "sec_bt1258_polar_path_tetrahedron_theorem" in itext
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -157,4 +179,6 @@ if __name__ == "__main__":
     test_bt1252_polar_path_tetrahedron()
     test_bt1254_labelled_word_observable()
     test_bt1255_edge_graph_regimes()
-    print("BT1231-BT1255 regression tests pass")
+    test_bt1257_labelled_geodesic_tensor()
+    test_bt1258_polar_path_paper_theorem()
+    print("BT1231-BT1258 regression tests pass")
