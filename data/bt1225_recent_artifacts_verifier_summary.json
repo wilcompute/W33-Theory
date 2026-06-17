@@ -1,0 +1,16 @@
+{
+  "bt": 1225,
+  "title": "Recent BT artifact verifier",
+  "required_file_count": 8,
+  "missing_files": [],
+  "checks": {
+    "required_files_present": true,
+    "bt1218_protocol_not_threshold_ready": true,
+    "bt1219_sl23_exact": true,
+    "bt1221_sp43_exact": true,
+    "bt1223_blocks_mock_r3": true,
+    "bt1224_dashboard_pass": true
+  },
+  "passes_all_checks": true,
+  "interpretation": "The BT1218-BT1224 packet is internally consistent: all files exist, finite group orders match, mock R3 samples remain blocked, and the exact Clifford dashboard passes."
+}
