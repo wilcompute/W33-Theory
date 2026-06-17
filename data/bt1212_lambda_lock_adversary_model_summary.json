@@ -1,0 +1,28 @@
+{
+  "bt": 1212,
+  "title": "Lambda-lock adversarial uncertainty model",
+  "inputs": {
+    "cos_theta_BC": "-2/3",
+    "abs_chern": 2.0,
+    "n_transverse": 2.0,
+    "drive_systematics": {
+      "phase_lock_drift_cos": 0.0015,
+      "dispersion_bias_cos": 0.0008,
+      "recirculation_path_calibration_cos": 0.0007
+    },
+    "chern_systematics": {
+      "gap_closing_misidentification": 0.020,
+      "berry_grid_discretization": 0.025,
+      "finite_sample_transfer_bias": 0.030
+    }
+  },
+  "budgets": [
+    {"channel":"drive","nominal_q":3.0,"statistical_sigma_q":0.018,"systematic_half_width_q":0.027,"adversarial_interval":[2.919,3.081],"q3_inside_adversarial_interval":true},
+    {"channel":"chern","nominal_q":3.0,"statistical_sigma_q":0.05,"systematic_half_width_q":0.075,"adversarial_interval":[2.775,3.225],"q3_inside_adversarial_interval":true},
+    {"channel":"carrier","nominal_q":3.0,"statistical_sigma_q":0.0,"systematic_half_width_q":0.0,"adversarial_interval":[3.0,3.0],"q3_inside_adversarial_interval":true}
+  ],
+  "robust_lambda_lock_pass": true,
+  "most_dangerous_channel": "chern",
+  "drive_sensitivity_note": "dq/dcos(theta)=q^2=9 at q=3, so small BC-angle biases are amplified in the q-drive estimator.",
+  "rule": "Accept only if q=3 lies inside every adversarial interval after combining 3-sigma statistical width with worst-case systematic half-width."
+}
