@@ -104,6 +104,26 @@ def test_bt1249_paper_sections_and_integrator():
     assert "sec_bt1249_four_transvection_regime_theorem" in itext
 
 
+def test_bt1251_ordered_oriented_invariance():
+    run("analysis/bt1251_ordered_oriented_gate_invariance.py")
+    d = load("data/bt1251_ordered_oriented_gate_invariance_summary.json")
+    assert d["total_labeled_oriented_variants"] == 384
+    assert d["sphere_histogram_invariant"] is True
+    assert d["ball_checkpoints_invariant"] is True
+    assert d["reference_balls"] == {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
+
+
+def test_bt1252_polar_path_tetrahedron():
+    run("analysis/bt1252_polar_path_tetrahedron_identifier.py")
+    d = load("data/bt1252_polar_path_tetrahedron_identifier_summary.json")
+    assert d["zero_edge_graph"] == "P4"
+    assert d["nonzero_edge_graph"] == "P4"
+    assert d["self_complementary_edge_split"] is True
+    assert d["pair_order_pattern"] == "9^3 24^3"
+    assert d["triple_order_pattern"] == "72^2 648^2"
+    assert d["proposed_name"] == "polar path tetrahedron"
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -112,4 +132,6 @@ if __name__ == "__main__":
     test_bt1242_four_transvection_regimes()
     test_bt1248_stabilizer_regimes()
     test_bt1249_paper_sections_and_integrator()
-    print("BT1231-BT1249 regression tests pass")
+    test_bt1251_ordered_oriented_invariance()
+    test_bt1252_polar_path_tetrahedron()
+    print("BT1231-BT1252 regression tests pass")
