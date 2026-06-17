@@ -1,0 +1,52 @@
+\subsection{BT1218: Experimental readiness packet}
+\label{sec:bt1218-experimental-readiness}
+
+The finite demonstrator now has a three-channel substrate estimator:
+\[
+q_{\rm drive}=\frac{1}{1+\cos\theta_{\rm BC}},\qquad
+q_{\rm Chern}=|C|_{\max}+1,\qquad
+q_{\rm carrier}=N_\perp+1.
+\]
+For
+\[
+\cos\theta_{\rm BC}=-\frac23,\qquad |C|_{\max}=2,\qquad N_\perp=2,
+\]
+all three channels return \(q=3\).  The BT1212 adversarial budget gives
+\[
+q_{\rm drive}\in[2.919,3.081],\qquad
+q_{\rm Chern}\in[2.775,3.225],\qquad
+q_{\rm carrier}=3.
+\]
+Thus the finite demonstrator is protocol-ready: a calibrated run rejects the
+lock if any channel excludes \(q=3\), or if the three channel estimates become
+mutually incompatible.
+
+The encoded stack preserves the same alphabet.  The bare layer, inner \(D_4\)
+GKP layer, and outer Steinberg layer all carry the same value
+\[
+q_{\rm bare}=q_{D_4\,GKP}=q_{\rm Steinberg}=3,
+\]
+while the outer code remains
+\[
+[[240,81,4]]_3.
+\]
+The corresponding gate-tomography targets are
+\[
+2T=\mathrm{SL}(2,3),\quad |2T|=24,
+\]
+and
+\[
+\mathrm{Sp}(4,3),\quad |\mathrm{Sp}(4,3)|=51840.
+\]
+
+The metric/K3 continuum lane remains downstream.  The required K3 topology is
+\[
+\chi=24,\quad \sigma=-16,\quad b_2=22,\quad (b_2^+,b_2^-)=(3,19),
+\]
+but BT1215 still marks the geometry sample as a schema stub until actual metric,
+operator, heat-coefficient, curvature, and refinement data are computed.
+
+\paragraph{Boundary.}
+The BT1217 readiness score is a protocol-readiness score.  It does not claim
+threshold GKP hardware, encoded syndrome recovery, cubic-resource preparation,
+or a completed K3 metric/Dirac compute lane.
