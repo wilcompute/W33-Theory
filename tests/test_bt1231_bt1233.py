@@ -167,6 +167,28 @@ def test_bt1258_polar_path_paper_theorem():
     assert "sec_bt1258_polar_path_tetrahedron_theorem" in itext
 
 
+def test_bt1260_cross_regime_labelled_geodesics():
+    run("analysis/bt1260_cross_regime_labelled_geodesic_comparison.py")
+    d = load("data/bt1260_cross_regime_labelled_geodesic_comparison_summary.json")
+    rows = {r["name"]: r for r in d["rows"]}
+    assert rows["diam10_B"]["channel_total_spread"] == 0
+    assert rows["diam10_C"]["channel_total_spread"] == 0
+    assert rows["diam12"]["channel_total_spread"] == 339
+    assert rows["diam14_polar_path"]["channel_total_spread"] == 172
+    assert rows["diam14_polar_path"]["diameter_first_set_size_histogram"] == {"8": 1}
+
+
+def test_bt1261_ladder_section_and_companion_integrator():
+    sec = ROOT / "paper" / "sections" / "sec_bt1261_clifford_tomography_ladder.tex"
+    helper = ROOT / "tools" / "integrate_bt1261_ladder_insert.py"
+    assert sec.exists()
+    text = sec.read_text(encoding="utf-8")
+    assert "Clifford tomography ladder" in text
+    assert "labelled geodesic tensor" in text
+    assert helper.exists()
+    assert "sec_bt1261_clifford_tomography_ladder" in helper.read_text(encoding="utf-8")
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -181,4 +203,6 @@ if __name__ == "__main__":
     test_bt1255_edge_graph_regimes()
     test_bt1257_labelled_geodesic_tensor()
     test_bt1258_polar_path_paper_theorem()
-    print("BT1231-BT1258 regression tests pass")
+    test_bt1260_cross_regime_labelled_geodesics()
+    test_bt1261_ladder_section_and_companion_integrator()
+    print("BT1231-BT1261 regression tests pass")
