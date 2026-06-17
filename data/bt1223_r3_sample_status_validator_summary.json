@@ -1,0 +1,20 @@
+{
+  "bt": 1223,
+  "title": "R3 sample status validator",
+  "source": "data/bt1220_r3_schema_valid_mock_sequence.json",
+  "status_levels": {
+    "blocked": "contains mock, placeholder, missing, or noncomputed fields",
+    "partial": "schema-valid with partial computed data but not enough for evidence status",
+    "candidate": "no blocking labels and all required metric/operator/refinement fields present"
+  },
+  "counts": {"blocked":4,"partial":0,"candidate":0},
+  "candidate_allowed": false,
+  "sample_classifications": [
+    {"sample_id":"k3_mock_refinement_n8","level":"blocked","issues":["metric_block_has_nonphysical_label","operator_block_has_nonphysical_label","claim_status_blocks_candidate"]},
+    {"sample_id":"k3_mock_refinement_n16","level":"blocked","issues":["metric_block_has_nonphysical_label","operator_block_has_nonphysical_label","claim_status_blocks_candidate"]},
+    {"sample_id":"k3_mock_refinement_n32","level":"blocked","issues":["metric_block_has_nonphysical_label","operator_block_has_nonphysical_label","claim_status_blocks_candidate"]},
+    {"sample_id":"k3_mock_refinement_n64","level":"blocked","issues":["metric_block_has_nonphysical_label","operator_block_has_nonphysical_label","claim_status_blocks_candidate"]}
+  ],
+  "rule": "A candidate must have no blocking labels, nonempty operator data, non-null refinement h, non-null A4, and a non-blocking claim status.",
+  "interpretation": "BT1223 turns the R3 honesty boundary into an executable gate: the BT1220 mock sequence is schema-valid but correctly classified as blocked from physical-evidence status."
+}
