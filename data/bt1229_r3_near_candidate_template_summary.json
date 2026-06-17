@@ -1,0 +1,23 @@
+{
+  "bt": 1229,
+  "title": "R3 near-candidate template",
+  "sample_id": "k3_near_candidate_n64_template_v1",
+  "schema": "BT1215_K3_GEOMETRY_SAMPLE_V1",
+  "topology": {"chi":24,"signature":-16,"b2":22,"intersection_signature":[3,19]},
+  "status_check": {
+    "all_numerical_fields_present": true,
+    "independent_metric_certification": false,
+    "independent_operator_certification": false,
+    "validator_expected_level": "near_candidate_blocked_by_certification",
+    "candidate_allowed": false
+  },
+  "sample_highlights": {
+    "h": 0.015625,
+    "shape_quality": 0.996875,
+    "operator_sample_size": 8,
+    "A2": 0.000244140625,
+    "A4": 24.00048828125,
+    "curvature_error": 0.000244140625
+  },
+  "interpretation": "BT1229 tests the near-green boundary: numerical fields can be complete while candidate promotion remains blocked by missing independent metric/operator certification."
+}
