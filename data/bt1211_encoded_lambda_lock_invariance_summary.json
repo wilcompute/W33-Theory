@@ -1,0 +1,39 @@
+{
+  "bt": 1211,
+  "title": "Encoded lambda-lock invariance theorem",
+  "stack": [
+    {
+      "layer": "single_photon_demonstrator",
+      "q_drive": 3,
+      "q_chern": 3,
+      "q_logical": 3,
+      "evidence": "BC angle -2/3, qutrit spin-1 pump |C|=2, two transverse photon states"
+    },
+    {
+      "layer": "inner_D4_GKP",
+      "q_drive": 3,
+      "q_chern": 3,
+      "q_logical": 3,
+      "evidence": "D4 protects continuous displacement noise while the encoded digit remains a qutrit over Z/3"
+    },
+    {
+      "layer": "outer_Steinberg_code",
+      "q_drive": 3,
+      "q_chern": 3,
+      "q_logical": 3,
+      "evidence": "The outer code is [[240,81,4]]_3 and therefore explicitly preserves 81 logical qutrits over F3"
+    }
+  ],
+  "per_layer_lambda_lock": [true,true,true],
+  "cross_layer_q_invariant": true,
+  "physical_to_logical_rate": {
+    "physical_squeezed_modes": 240,
+    "D4_GKP_pairs": 120,
+    "GKP_qutrits": 240,
+    "outer_physical_qutrits": 240,
+    "outer_logical_qutrits": 81,
+    "logical_rate_exact": "27/80"
+  },
+  "theorem": "The q=3 inferred by drive, Chern protection, and carrier/logical alphabet is invariant across the unencoded demonstrator, the D4 GKP inner code, and the Steinberg [[240,81,4]]_3 outer code.",
+  "honesty_boundary": "Encoding preserves the qutrit alphabet and the estimator value q=3; it does not by itself prove a threshold or solve GKP-state generation."
+}
