@@ -12,9 +12,7 @@ import json
 from pathlib import Path
 from collections import deque
 
-MOD = 3
 I = (1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1)
-J = (0,0,1,0, 0,0,0,1, 2,0,0,0, 0,2,0,0)
 GENERATOR_VECTORS = [(0,0,0,2), (0,2,0,0), (0,0,2,2), (1,0,0,0)]
 EXPECTED_ORDER = 51840
 
@@ -67,7 +65,7 @@ def build_result() -> dict:
         "expected_order": EXPECTED_ORDER,
         "order_ok": len(group) == EXPECTED_ORDER,
         "compression_ratio": "4/40",
-        "minimality_claim": false,
+        "minimality_claim": False,
         "interpretation": "A concrete four-transvection set generates the full Sp43 target. This makes the two-qutrit finite gate target more implementable without claiming four is minimal.",
     }
 
