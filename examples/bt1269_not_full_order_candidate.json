@@ -1,0 +1,12 @@
+{
+  "candidate_id": "not_full_order",
+  "closure_order": 648,
+  "word_diameter": 9,
+  "edge_split": {
+    "polar_graph": "not_applicable",
+    "nonpolar_graph": "not_applicable"
+  },
+  "diameter_endpoint_first_set_histogram": {},
+  "labelled_channel_spread": 0,
+  "notes": "Candidate does not close to the full Clifford target."
+}
