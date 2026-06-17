@@ -4,13 +4,11 @@ on:
   push:
     branches: [master]
     paths:
-      - '**.tex'
-      - '**.bib'
+      - 'paper/**'
       - '.github/workflows/paper-build.yml'
   pull_request:
     paths:
-      - '**.tex'
-      - '**.bib'
+      - 'paper/**'
   workflow_dispatch:
 
 jobs:
@@ -27,46 +25,43 @@ jobs:
 
       - name: First pdflatex pass
         run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ github.workspace }}/paper
 
       - name: Run BibTeX
         run: bibtex w33_preprint || true
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ github.workspace }}/paper
 
       - name: Second pdflatex pass
         run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ github.workspace }}/paper
 
       - name: Third pdflatex pass (resolve all refs)
         run: pdflatex -interaction=nonstopmode -halt-on-error w33_preprint.tex
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ github.workspace }}/paper
 
-      - name: Check for undefined references / citations
+      - name: Check for LaTeX errors
         run: |
-          if grep -q 'undefined' w33_preprint.log; then
-            echo "WARNING: Undefined references or citations found:"
-            grep 'undefined' w33_preprint.log
-          fi
-          if grep -q 'Error' w33_preprint.log; then
+          if grep -qE '^!' w33_preprint.log; then
             echo "FATAL: LaTeX errors found:"
-            grep 'Error' w33_preprint.log
+            grep -E '^!' w33_preprint.log
             exit 1
           fi
-          echo "Clean build: no errors."
-        working-directory: ${{ github.workspace }}
+          if grep -q 'undefined' w33_preprint.log; then
+            echo "WARNING: Undefined references or citations:"
+            grep 'undefined' w33_preprint.log || true
+          fi
+          echo "Clean build confirmed."
+        working-directory: ${{ github.workspace }}/paper
+
+      - name: Verify PDF produced
+        run: |
+          ls -lh w33_preprint.pdf
+          echo "PDF produced: $(du -h w33_preprint.pdf | cut -f1)"
+        working-directory: ${{ github.workspace }}/paper
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: w33-preprint-pdf
-          path: w33_preprint.pdf
+          path: paper/w33_preprint.pdf
           retention-days: 90
-
-      - name: Check PDF was produced
-        run: |
-          if [ ! -f w33_preprint.pdf ]; then
-            echo "FATAL: w33_preprint.pdf was not produced!"
-            exit 1
-          fi
-          echo "PDF produced: $(du -h w33_preprint.pdf | cut -f1)"
-        working-directory: ${{ github.workspace }}
