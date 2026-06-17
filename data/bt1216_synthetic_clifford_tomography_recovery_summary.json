@@ -1,0 +1,27 @@
+{
+  "bt": 1216,
+  "title": "Synthetic Clifford tomography recovery report",
+  "noise_model": {
+    "visibility_sigma": 0.015,
+    "closure_error_rate": 0.002,
+    "sampled_sp43_products": 5000
+  },
+  "single_qutrit_2T": {
+    "expected_order": 24,
+    "element_order_counts": {"1":1,"2":1,"3":8,"4":6,"6":8},
+    "order_ok": true,
+    "order_spectrum_ok": true,
+    "visibility_set": [0.0,0.3333333333,0.5773502692,1.0],
+    "visibility_max_abs_error_threshold": 0.06,
+    "visibility_pass": true
+  },
+  "two_qutrit_sp43": {
+    "expected_order": 51840,
+    "order_ok": true,
+    "estimated_closure_success": 0.998,
+    "closure_pass_threshold": 0.995,
+    "closure_pass": true
+  },
+  "recovers_bt1214_signature": true,
+  "interpretation": "A noisy synthetic dataset can recover the BT1214 target signature: 2T order 24 with the correct order spectrum, and Sp(4,3) order 51840 with high sampled closure success."
+}
