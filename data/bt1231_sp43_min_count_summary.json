@@ -1,0 +1,17 @@
+{
+  "bt": 1231,
+  "title": "Sp43 min count result",
+  "field": "F3",
+  "dimension": 4,
+  "projective_transvection_count": 40,
+  "target_order": 51840,
+  "hist_1": {"3": 40},
+  "hist_2": {"9": 240, "24": 540},
+  "hist_3": {"24": 360, "27": 160, "72": 2160, "648": 7200},
+  "triples_checked": 9880,
+  "max_order_leq3": 648,
+  "four_set_order": 51840,
+  "four_set": [[0,0,0,2],[0,2,0,0],[0,0,2,2],[1,0,0,0]],
+  "exact_min_count": 4,
+  "boundary": "The count is exact inside the projective-transvection generating family."
+}
