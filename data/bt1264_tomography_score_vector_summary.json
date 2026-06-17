@@ -1,0 +1,15 @@
+{
+  "bt": 1264,
+  "title": "Tomography score vector for full-order Clifford regimes",
+  "score_components": ["closure51840", "diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"],
+  "rows": [
+    {"name":"diam10_A", "order":51840, "diameter":10, "edge":"K2+2I/K4-e", "channel_spread":67, "endpoint":"8:16", "score_vector":{"closure51840":1,"diameter14":0,"polar_path_P4P4":0,"unique_all_channel_endpoint":0,"labelled_nonzero_spread":1,"strict_score_out_of_5":2}},
+    {"name":"diam10_B", "order":51840, "diameter":10, "edge":"2K2/C4", "channel_spread":0, "endpoint":"6:32,7:40,8:76", "score_vector":{"closure51840":1,"diameter14":0,"polar_path_P4P4":0,"unique_all_channel_endpoint":0,"labelled_nonzero_spread":0,"strict_score_out_of_5":1}},
+    {"name":"diam10_C", "order":51840, "diameter":10, "edge":"empty_4I/K4", "channel_spread":0, "endpoint":"8:3", "score_vector":{"closure51840":1,"diameter14":0,"polar_path_P4P4":0,"unique_all_channel_endpoint":0,"labelled_nonzero_spread":0,"strict_score_out_of_5":1}},
+    {"name":"diam12", "order":51840, "diameter":12, "edge":"P3+I/paw", "channel_spread":339, "endpoint":"7:4,8:1", "score_vector":{"closure51840":1,"diameter14":0,"polar_path_P4P4":0,"unique_all_channel_endpoint":0,"labelled_nonzero_spread":1,"strict_score_out_of_5":2}},
+    {"name":"diam14_polar_path", "order":51840, "diameter":14, "edge":"P4/P4", "channel_spread":172, "endpoint":"8:1", "score_vector":{"closure51840":1,"diameter14":1,"polar_path_P4P4":1,"unique_all_channel_endpoint":1,"labelled_nonzero_spread":1,"strict_score_out_of_5":5}}
+  ],
+  "ranked_names": ["diam14_polar_path", "diam12", "diam10_A", "diam10_B", "diam10_C"],
+  "winner": "diam14_polar_path",
+  "interpretation": "Only the diameter-14 polar path regime satisfies all five gates. Diameter 12 has a strong labelled signal but fails the word diameter and polar path gates. Diameter-10 regimes close too fast and are rejected despite full closure."
+}
