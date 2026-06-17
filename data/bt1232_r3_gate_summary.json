@@ -1,0 +1,11 @@
+{
+  "bt": 1232,
+  "title": "R3 gate result",
+  "lanes": ["schema_stub", "blocked", "partial", "near_candidate", "candidate"],
+  "demo_counts": {"schema_stub": 1, "blocked": 1, "partial": 1, "near_candidate": 1, "candidate": 1},
+  "required_blocks": ["metric_block", "operator_block", "heat_block", "curvature_block", "refinement_block"],
+  "rule": "candidate requires numerical fields plus independent metric and operator certification",
+  "near_candidate_promoted": false,
+  "certified_candidate_promoted": true,
+  "fail_closed": true
+}
