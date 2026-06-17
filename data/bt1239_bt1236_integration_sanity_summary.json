@@ -1,0 +1,20 @@
+{
+  "bt": 1239,
+  "title": "BT1236 integration sanity",
+  "source_insert_exists": true,
+  "integrator_exists": true,
+  "paper_section_exists": false,
+  "preprint_exists": true,
+  "preprint_input_count": 0,
+  "required_snippets_present_in_source": {
+    "|Sp(4,3)|=51840": true,
+    "m_{\\min}=4": true,
+    "operatorname{diam}=14": true,
+    "|B_4|=534": true
+  },
+  "paper_section_matches_source": false,
+  "input_duplicate_free": true,
+  "status": "ready_to_integrate",
+  "run_command": "python tools/integrate_bt1236_insert.py",
+  "pass": true
+}
