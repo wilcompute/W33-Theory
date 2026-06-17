@@ -1,0 +1,28 @@
+{
+  "bt": 1257,
+  "title": "Labelled geodesic first/last channel tensor",
+  "group_order": 51840,
+  "diameter": 14,
+  "sphere_histogram": [1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1],
+  "labels": ["g1p", "g1m", "g2p", "g2m", "g3p", "g3m", "g4p", "g4m"],
+  "first_channel_counts_selected_distances": {
+    "1": {"g1p":1,"g1m":1,"g2p":1,"g2m":1,"g3p":1,"g3m":1,"g4p":1,"g4m":1},
+    "2": {"g1p":6,"g1m":6,"g2p":6,"g2m":6,"g3p":6,"g3m":6,"g4p":6,"g4m":6},
+    "4": {"g1p":77,"g1m":77,"g2p":76,"g2m":76,"g3p":76,"g3m":76,"g4p":77,"g4m":77},
+    "8": {"g1p":1903,"g1m":1903,"g2p":1897,"g2m":1897,"g3p":1897,"g3m":1897,"g4p":1903,"g4m":1903},
+    "12": {"g1p":288,"g1m":288,"g2p":321,"g2m":321,"g3p":321,"g3m":321,"g4p":288,"g4m":288},
+    "14": {"g1p":1,"g1m":1,"g2p":1,"g2m":1,"g3p":1,"g3m":1,"g4p":1,"g4m":1}
+  },
+  "first_channel_totals": {"g1p":16197,"g1m":16197,"g2p":16025,"g2m":16025,"g3p":16025,"g3m":16025,"g4p":16197,"g4m":16197},
+  "last_channel_totals": {"g1p":16197,"g1m":16197,"g2p":16025,"g2m":16025,"g3p":16025,"g3m":16025,"g4p":16197,"g4m":16197},
+  "first_set_size_histogram_selected_distances": {
+    "1": {"1":8},
+    "2": {"1":24,"2":12},
+    "4": {"1":144,"2":192,"3":24,"4":3},
+    "8": {"1":1972,"2":3534,"3":1512,"4":268,"5":108,"6":2},
+    "12": {"1":48,"2":36,"3":24,"4":52,"5":76,"6":86,"7":92,"8":62},
+    "14": {"8":1}
+  },
+  "label_sensitive": true,
+  "interpretation": "The unlabelled sphere is unchanged, but anchored shortest-geodesic first/last-channel incidences distinguish the labelled gate channels. In this BT1228 ordering, g1/g4 channels have total incidence 16197 each while g2/g3 channels have 16025 each."
+}
