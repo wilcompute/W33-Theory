@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Idempotently integrate BT1236/BT1249 into paper/w33_preprint.tex."""
+"""Idempotently integrate BT1236/BT1249/BT1258 into paper/w33_preprint.tex."""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +15,11 @@ SECTIONS = [
         "dst": ROOT / "paper" / "sections" / "sec_bt1249_four_transvection_regime_theorem.tex",
         "input": r"\input{sections/sec_bt1249_four_transvection_regime_theorem}",
     },
+    {
+        "src": ROOT / "analysis" / "BT1258_polar_path_tetrahedron_paper_theorem.tex",
+        "dst": ROOT / "paper" / "sections" / "sec_bt1258_polar_path_tetrahedron_theorem.tex",
+        "input": r"\input{sections/sec_bt1258_polar_path_tetrahedron_theorem}",
+    },
 ]
 
 
@@ -22,6 +27,8 @@ def insert_once(text: str, input_line: str) -> tuple[str, bool, str]:
     if input_line in text:
         return text, False, "already_present"
     anchors = [
+        r"\input{sections/sec_bt1258_polar_path_tetrahedron_theorem}",
+        r"\input{sections/sec_bt1249_four_transvection_regime_theorem}",
         r"\input{sections/sec_bt1236_minimal_clifford_word_metric}",
         r"\input{sections/sec_bt618_physical_propagator_normal_form}",
         r"\input{sections/sec_bt613_folded_hashimoto_hodge_flow}",
