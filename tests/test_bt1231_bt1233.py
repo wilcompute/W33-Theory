@@ -76,6 +76,32 @@ def test_bt1242_four_transvection_regimes():
     assert d["global_counts_by_order"] == {"24": 90, "27": 40, "72": 1440, "576": 1620, "648": 26640, "51840": 61560}
     assert d["global_counts_by_order_and_diameter"] == {"24:diam3": 90, "27:diam2": 40, "72:diam4": 1440, "576:diam8": 1620, "648:diam6": 11520, "648:diam7": 15120, "51840:diam10": 22680, "51840:diam12": 25920, "51840:diam14": 12960}
     assert d["bt1228_profile_global_count"] == 12960
+    assert d["full_order_structural_summary"] == {"diam10": {"count": 22680, "patterns": 3}, "diam12": {"count": 25920, "patterns": 1}, "diam14": {"count": 12960, "patterns": 1}}
+
+
+def test_bt1248_stabilizer_regimes():
+    run("analysis/bt1248_four_transvection_stabilizer_regimes.py")
+    d = load("data/bt1248_four_transvection_stabilizer_regimes_summary.json")
+    assert d["acting_group_order"] == 51840
+    assert d["by_diameter"] == {
+        "10": {"total_sets": 22680, "orbit_count": 3, "stabilizer_orders": [4, 8, 16]},
+        "12": {"total_sets": 25920, "orbit_count": 1, "stabilizer_orders": [2]},
+        "14": {"total_sets": 12960, "orbit_count": 1, "stabilizer_orders": [4]},
+    }
+
+
+def test_bt1249_paper_sections_and_integrator():
+    sec1236 = ROOT / "paper" / "sections" / "sec_bt1236_minimal_clifford_word_metric.tex"
+    sec1249 = ROOT / "paper" / "sections" / "sec_bt1249_four_transvection_regime_theorem.tex"
+    integrator = ROOT / "tools" / "integrate_bt1236_insert.py"
+    assert sec1236.exists()
+    assert sec1249.exists()
+    text = sec1249.read_text(encoding="utf-8")
+    assert "61560" in text
+    assert "51840_{\\operatorname{diam}=14}^{12960}" in text
+    itext = integrator.read_text(encoding="utf-8")
+    assert "sec_bt1236_minimal_clifford_word_metric" in itext
+    assert "sec_bt1249_four_transvection_regime_theorem" in itext
 
 
 if __name__ == "__main__":
@@ -84,4 +110,6 @@ if __name__ == "__main__":
     test_bt1233_word_metric()
     test_bt1240_synthetic_recovery_harness()
     test_bt1242_four_transvection_regimes()
-    print("BT1231-BT1242 regression tests pass")
+    test_bt1248_stabilizer_regimes()
+    test_bt1249_paper_sections_and_integrator()
+    print("BT1231-BT1249 regression tests pass")
