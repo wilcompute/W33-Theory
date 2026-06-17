@@ -1,0 +1,13 @@
+{
+  "bt": 1255,
+  "title": "Full-order edge graph regime classifier",
+  "rows": [
+    {"name": "diam10_A", "count": 12960, "diameter": 10, "zero_graph": "K2+2I", "nonzero_graph": "K4-e", "zero_edges": [[0,1]], "nonzero_edges": [[0,2],[0,3],[1,2],[1,3],[2,3]]},
+    {"name": "diam10_B", "count": 3240, "diameter": 10, "zero_graph": "2K2", "nonzero_graph": "C4", "zero_edges": [[0,1],[2,3]], "nonzero_edges": [[0,2],[0,3],[1,2],[1,3]]},
+    {"name": "diam10_C", "count": 6480, "diameter": 10, "zero_graph": "empty_4I", "nonzero_graph": "K4", "zero_edges": [], "nonzero_edges": [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]]},
+    {"name": "diam12", "count": 25920, "diameter": 12, "zero_graph": "P3+I", "nonzero_graph": "paw", "zero_edges": [[1,2],[1,3]], "nonzero_edges": [[0,1],[0,2],[0,3],[2,3]]},
+    {"name": "diam14_polar_path", "count": 12960, "diameter": 14, "zero_graph": "P4", "nonzero_graph": "P4", "zero_edges": [[0,1],[0,3],[1,2]], "nonzero_edges": [[0,2],[1,3],[2,3]]}
+  ],
+  "diameter14_globalization": "BT1248 shows diameter 14 has one full-order orbit, and its representative has zero/nonzero edge split P4/P4. Therefore every diameter-14 full-order four-set is a polar path tetrahedron up to Sp(4,3).",
+  "interpretation": "Diameter 10 has three edge-graph types, diameter 12 has a P3+I / paw split, and diameter 14 is the unique self-complementary P4/P4 polar path tetrahedron regime."
+}
