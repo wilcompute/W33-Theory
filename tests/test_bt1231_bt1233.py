@@ -189,6 +189,17 @@ def test_bt1261_ladder_section_and_companion_integrator():
     assert "sec_bt1261_clifford_tomography_ladder" in helper.read_text(encoding="utf-8")
 
 
+def test_bt1264_tomography_score_vector():
+    run("analysis/bt1264_tomography_score_vector.py")
+    d = load("data/bt1264_tomography_score_vector_summary.json")
+    assert d["winner"] == "diam14_polar_path"
+    assert d["ranked_names"] == ["diam14_polar_path", "diam12", "diam10_A", "diam10_B", "diam10_C"]
+    rows = {r["name"]: r for r in d["rows"]}
+    assert rows["diam14_polar_path"]["score_vector"]["strict_score_out_of_5"] == 5
+    assert rows["diam12"]["score_vector"]["strict_score_out_of_5"] == 2
+    assert rows["diam10_B"]["score_vector"]["strict_score_out_of_5"] == 1
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
@@ -205,4 +216,5 @@ if __name__ == "__main__":
     test_bt1258_polar_path_paper_theorem()
     test_bt1260_cross_regime_labelled_geodesics()
     test_bt1261_ladder_section_and_companion_integrator()
-    print("BT1231-BT1261 regression tests pass")
+    test_bt1264_tomography_score_vector()
+    print("BT1231-BT1264 regression tests pass")
