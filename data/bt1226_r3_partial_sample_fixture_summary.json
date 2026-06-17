@@ -1,0 +1,24 @@
+{
+  "bt": 1226,
+  "title": "R3 partial sample fixture",
+  "sample_id": "k3_partial_refinement_n32_v1",
+  "schema": "BT1215_K3_GEOMETRY_SAMPLE_V1",
+  "topology": {"chi":24,"signature":-16,"b2":22,"intersection_signature":[3,19]},
+  "status_check": {
+    "has_operator_data": true,
+    "has_refinement_h": true,
+    "has_A4": true,
+    "claim_status_partial": true,
+    "validator_expected_level": "partial",
+    "candidate_allowed": false
+  },
+  "sample_highlights": {
+    "h": 0.03125,
+    "shape_quality": 0.99375,
+    "operator_sample_size": 8,
+    "A2": 0.0009765625,
+    "A4": 24.001953125,
+    "curvature_error": 0.0009765625
+  },
+  "interpretation": "BT1226 fills the R3 middle lane: stronger than mock data, but still not final physical evidence because independent metric/operator certification is not supplied."
+}
