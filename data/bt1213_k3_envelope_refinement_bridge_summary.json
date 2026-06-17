@@ -1,0 +1,39 @@
+{
+  "bt": 1213,
+  "title": "K3 envelope-grounded R3 refinement bridge",
+  "source_envelope": "data/bt1127_k3_sample_envelope.json",
+  "honesty_boundary": "BT1127 supplies a valid K3 topology/schema envelope, not a computed metric. BT1213 is a bridge from that envelope to the BT1210 refinement-witness interface.",
+  "topology": {
+    "chi": 24,
+    "signature": -16,
+    "b2": 22,
+    "intersection_signature": [3,19],
+    "ricci_flat_scalar_curvature": 0,
+    "normalized_curvature_norm": "Integral |Rm|^2/(8*pi^2)=24"
+  },
+  "finite_w33_prefactors": {
+    "mH2_over_v2": "14/55",
+    "lambda_H": "7/55",
+    "finite_a2_over_a0": "14/3",
+    "finite_a4_over_a2": "55/7"
+  },
+  "refinement_bridge_rows": [
+    {"n":4,"h":0.25,"curvature_proxy":24.2916666667,"spectral_C2_proxy":-1.1666666667,"spectral_C4_proxy":24.2455357143,"metric_placeholder_warning":"sample_fixture_not_a_computed_k3_metric"},
+    {"n":8,"h":0.125,"curvature_proxy":24.0729166667,"spectral_C2_proxy":-0.5833333333,"spectral_C4_proxy":24.0613839286,"metric_placeholder_warning":"sample_fixture_not_a_computed_k3_metric"},
+    {"n":16,"h":0.0625,"curvature_proxy":24.0182291667,"spectral_C2_proxy":-0.2916666667,"spectral_C4_proxy":24.0153459821,"metric_placeholder_warning":"sample_fixture_not_a_computed_k3_metric"},
+    {"n":32,"h":0.03125,"curvature_proxy":24.0045572917,"spectral_C2_proxy":-0.1458333333,"spectral_C4_proxy":24.0038364955,"metric_placeholder_warning":"sample_fixture_not_a_computed_k3_metric"},
+    {"n":64,"h":0.015625,"curvature_proxy":24.0011393229,"spectral_C2_proxy":-0.0729166667,"spectral_C4_proxy":24.0009591239,"metric_placeholder_warning":"sample_fixture_not_a_computed_k3_metric"}
+  ],
+  "checks": {
+    "envelope_valid": true,
+    "chi_24": true,
+    "signature_minus_16": true,
+    "b2_22": true,
+    "intersection_signature_3_19": true,
+    "ricci_flat_A2_zero": true,
+    "curvature_proxy_converges_to_24": true,
+    "spectral_C4_proxy_converges_to_24": true
+  },
+  "passes_schema_grounded_bridge": true,
+  "interpretation": "The real repo K3 envelope already locks the topological invariants and finite W33 prefactors; what remains missing is the real metric/Dirac compute lane that turns these schema rows into physical spectral-action data."
+}
