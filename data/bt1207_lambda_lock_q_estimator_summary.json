@@ -1,0 +1,28 @@
+{
+  "bt": 1207,
+  "title": "Lambda-lock operational q-estimator theorem",
+  "estimators": {
+    "drive": "q = 1/(1 + cos(theta_BC))",
+    "chern": "q = |C|max + 1",
+    "carrier": "q = N_transverse + 1"
+  },
+  "holonet_values": {
+    "cos_theta_BC": "-2/3",
+    "C_abs": 2,
+    "N_transverse": 2,
+    "q_drive": 3,
+    "q_chern": 3,
+    "q_carrier": 3
+  },
+  "unique_full_lock_qs_in_2_to_12": [3],
+  "all_three_estimators_agree_qs_in_2_to_12": [3],
+  "bc_aperiodic_certificate_qs_in_2_to_12": [3,4,5,6,7,8,9,10,11,12],
+  "comparison_rows": [
+    {"q":2,"lambda":1,"master_seed":false,"bc_cos":"-1/2","bc_status":"periodic-compatible","chern_abs":1,"carrier_match":false,"full_lock":false},
+    {"q":3,"lambda":2,"master_seed":true,"bc_cos":"-2/3","bc_status":"aperiodic-certified","chern_abs":2,"carrier_match":true,"full_lock":true},
+    {"q":4,"lambda":3,"master_seed":false,"bc_cos":"-3/4","bc_status":"aperiodic-certified","chern_abs":3,"carrier_match":false,"full_lock":false},
+    {"q":5,"lambda":4,"master_seed":false,"bc_cos":"-4/5","bc_status":"aperiodic-certified","chern_abs":4,"carrier_match":false,"full_lock":false},
+    {"q":6,"lambda":5,"master_seed":false,"bc_cos":"-5/6","bc_status":"aperiodic-certified","chern_abs":5,"carrier_match":false,"full_lock":false}
+  ],
+  "interpretation": "The q=2 case has a rational-compatible BC angle and only unit Chern strength. The q>=4 cases are BC-aperiodic but have Chern strength above the two-transverse-state carrier. Only q=3 closes the master seed, BC drive, Chern protection, and carrier count simultaneously."
+}
