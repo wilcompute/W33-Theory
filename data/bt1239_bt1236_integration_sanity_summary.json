@@ -3,7 +3,7 @@
   "title": "BT1236 integration sanity",
   "source_insert_exists": true,
   "integrator_exists": true,
-  "paper_section_exists": false,
+  "paper_section_exists": true,
   "preprint_exists": true,
   "preprint_input_count": 0,
   "required_snippets_present_in_source": {
@@ -12,9 +12,9 @@
     "operatorname{diam}=14": true,
     "|B_4|=534": true
   },
-  "paper_section_matches_source": false,
+  "paper_section_matches_source": true,
   "input_duplicate_free": true,
-  "status": "ready_to_integrate",
+  "status": "section_materialized_preprint_input_pending",
   "run_command": "python tools/integrate_bt1236_insert.py",
   "pass": true
 }
