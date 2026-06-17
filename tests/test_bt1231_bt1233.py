@@ -52,8 +52,24 @@ def test_bt1233_word_metric():
     assert d["checkpoints"] == {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
 
 
+def test_bt1240_synthetic_recovery_harness():
+    run("analysis/bt1240_synthetic_word_metric_recovery_harness.py")
+    d = load("data/bt1240_synthetic_word_metric_recovery_harness_summary.json")
+    assert d["cases"]["exact"]["band"] == "pass"
+    assert d["cases"]["exact"]["order"] == 51840
+    assert d["cases"]["exact"]["diameter"] == 14
+    assert d["cases"]["drop_last"]["band"] == "fail"
+    assert d["cases"]["drop_last"]["order"] == 648
+    assert d["cases"]["swap_last"]["band"] == "fail"
+    assert d["cases"]["swap_last"]["order"] == 51840
+    assert d["cases"]["swap_last"]["diameter"] == 10
+    assert d["cases"]["identity_last"]["band"] == "fail"
+    assert d["cases"]["identity_last"]["local_order3_ok"] is False
+
+
 if __name__ == "__main__":
     test_bt1231_min_count()
     test_bt1232_r3_validator()
     test_bt1233_word_metric()
-    print("BT1231-BT1233 regression tests pass")
+    test_bt1240_synthetic_recovery_harness()
+    print("BT1231-BT1240 regression tests pass")
