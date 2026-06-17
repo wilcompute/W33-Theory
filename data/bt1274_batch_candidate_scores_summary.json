@@ -1,0 +1,13 @@
+{
+  "bt": 1274,
+  "title": "Batch candidate scoring",
+  "pattern": "examples/bt1269_*candidate.json",
+  "candidate_count": 4,
+  "band_counts": {"pass": 1, "review": 1, "fail": 2},
+  "rows": [
+    {"candidate_id": "exact_polar_path", "schema_ok": true, "band": "pass", "score": 5, "missing_gates": []},
+    {"candidate_id": "wrong_full_order_diam12", "schema_ok": true, "band": "review", "score": 2, "missing_gates": ["diameter14", "polar_path_P4P4", "unique_all_channel_endpoint"]},
+    {"candidate_id": "full_closure_sparse", "schema_ok": true, "band": "fail", "score": 1, "missing_gates": ["diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"]},
+    {"candidate_id": "not_full_order", "schema_ok": true, "band": "fail", "score": 0, "missing_gates": ["closure51840", "diameter14", "polar_path_P4P4", "unique_all_channel_endpoint", "labelled_nonzero_spread"]}
+  ]
+}
