@@ -1,0 +1,15 @@
+{
+  "candidate_id": "wrong_full_order_diam12",
+  "closure_order": 51840,
+  "word_diameter": 12,
+  "edge_split": {
+    "polar_graph": "P3+I",
+    "nonpolar_graph": "paw"
+  },
+  "diameter_endpoint_first_set_histogram": {
+    "7": 4,
+    "8": 1
+  },
+  "labelled_channel_spread": 339,
+  "notes": "Full order but wrong diameter and wrong edge split."
+}
