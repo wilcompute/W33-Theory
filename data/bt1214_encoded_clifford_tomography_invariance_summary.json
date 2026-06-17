@@ -1,0 +1,23 @@
+{
+  "bt": 1214,
+  "title": "Encoded Clifford/gate-tomography invariance theorem",
+  "layers": [
+    {"layer":"bare_demonstrator","q":3,"single_qutrit_holonomy_order":24,"two_qutrit_clifford_order":51840,"alphabet_preserved":true,"requires_gkp_threshold":false},
+    {"layer":"inner_D4_GKP","q":3,"single_qutrit_holonomy_order":24,"two_qutrit_clifford_order":51840,"alphabet_preserved":true,"requires_gkp_threshold":true},
+    {"layer":"outer_Steinberg_logical","q":3,"single_qutrit_holonomy_order":24,"two_qutrit_clifford_order":51840,"alphabet_preserved":true,"requires_gkp_threshold":true}
+  ],
+  "tests": [
+    {"id":"T1","name":"single-qutrit holonomy fingerprint","expected":"2T=SL(2,3), order 24, element-order spectrum {1,1,8,6,8}"},
+    {"id":"T2","name":"two-qutrit Clifford closure","expected":"Sp(4,3), order 51840 modulo Pauli/frame conventions"},
+    {"id":"T3","name":"encoded alphabet preservation","expected":"logical Paulis close over F3/qutrit displacement classes"},
+    {"id":"T4","name":"logical-code preservation","expected":"outer operations preserve the [[240,81,4]]_3 codespace and act on 81 logical qutrits"}
+  ],
+  "all_layers_preserve_static_clifford_signature": true,
+  "tomography_protocol": [
+    "Estimate single-qutrit 2T closure and order spectrum at the bare layer.",
+    "Lift to generated two-qutrit Sp(4,3) closure and check order 51840 modulo Pauli/frame conventions.",
+    "Repeat on encoded GKP qutrit displacement cosets after syndrome recovery.",
+    "Repeat on Steinberg logical operators and require preservation of the [[240,81,4]]_3 codespace."
+  ],
+  "honesty_boundary": "This is a static target-signature verifier and protocol map. It does not claim encoded hardware has achieved the closure until gate tomography/RB data populate the tests."
+}
