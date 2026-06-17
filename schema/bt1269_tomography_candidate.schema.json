@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wilcompute.github.io/W33-Theory/schema/bt1269_tomography_candidate.schema.json",
+  "title": "BT1269 Tomography Candidate",
+  "type": "object",
+  "required": ["candidate_id", "closure_order", "word_diameter", "edge_split", "diameter_endpoint_first_set_histogram", "labelled_channel_spread"],
+  "additionalProperties": false,
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "closure_order": {"type": "integer", "minimum": 0},
+    "word_diameter": {"type": "integer", "minimum": 0},
+    "edge_split": {
+      "type": "object",
+      "required": ["polar_graph", "nonpolar_graph"],
+      "additionalProperties": false,
+      "properties": {
+        "polar_graph": {"type": "string"},
+        "nonpolar_graph": {"type": "string"}
+      }
+    },
+    "diameter_endpoint_first_set_histogram": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "labelled_channel_spread": {"type": "integer", "minimum": 0},
+    "notes": {"type": "string"}
+  }
+}
