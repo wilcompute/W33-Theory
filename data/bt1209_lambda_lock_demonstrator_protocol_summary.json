@@ -1,0 +1,24 @@
+{
+  "bt": 1209,
+  "title": "Lambda-lock demonstrator inference protocol",
+  "inputs": {
+    "cos_theta_BC": "-2/3",
+    "sigma_cos_theta_BC": 0.002,
+    "abs_chern": 2.0,
+    "sigma_abs_chern": 0.05,
+    "n_transverse": 2.0,
+    "sigma_n_transverse": 0.0
+  },
+  "channel_estimates": [
+    {"channel":"drive","formula":"q=1/(1+cos(theta_BC))","q":3.0,"sigma_q":0.018,"three_sigma_interval":[2.946,3.054],"q3_inside":true},
+    {"channel":"chern","formula":"q=|C|+1","q":3.0,"sigma_q":0.05,"three_sigma_interval":[2.85,3.15],"q3_inside":true},
+    {"channel":"carrier","formula":"q=N_transverse+1","q":3.0,"sigma_q":0.0,"three_sigma_interval":[3.0,3.0],"q3_inside":true}
+  ],
+  "consensus": {
+    "q_weighted": 3.0,
+    "q3_inside_3sigma": true,
+    "max_pairwise_disagreement": 0.0
+  },
+  "passes_lambda_lock_protocol": true,
+  "falsifies_if": "Any calibrated channel excludes q=3 at 3 sigma, or the three inferred q values become mutually incompatible."
+}
