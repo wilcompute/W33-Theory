@@ -1,0 +1,18 @@
+{
+  "bt": 1237,
+  "title": "Sp43 word-metric recovery bands",
+  "target": {
+    "order": 51840,
+    "diameter": 14,
+    "sphere": [1,8,36,126,363,916,2052,4096,7396,12170,16916,7247,476,36,1],
+    "balls": {"B4": 534, "B8": 14994, "B12": 51803, "B14": 51840}
+  },
+  "pass_band": {"checkpoint_max_rel_error_lte": 0.001, "sphere_tv_lte": 0.0025},
+  "review_band": {"checkpoint_max_rel_error_lte": 0.01, "sphere_tv_lte": 0.02},
+  "examples": {
+    "exact": {"band": "pass", "checkpoint_max_rel_error": 0.0, "sphere_tv": 0.0, "diameter_ok": true},
+    "small_sphere_shift": {"band": "pass", "checkpoint_max_rel_error": 0.0, "sphere_tv": 0.00011574074074074075, "diameter_ok": true},
+    "wrong_diameter": {"band": "review", "checkpoint_max_rel_error": 0.011235955056179775, "sphere_tv": 0.0, "diameter_ok": false}
+  },
+  "rule": "pass is required for finite-target recovery; review is diagnostic; fail is rejected."
+}
