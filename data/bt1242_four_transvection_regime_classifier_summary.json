@@ -1,0 +1,33 @@
+{
+  "bt": 1242,
+  "title": "Four-transvection word-metric regime classifier",
+  "projective_transvections": 40,
+  "all_four_sets": 91390,
+  "fixed_point_representatives": 9139,
+  "stabilizer_orbit_representatives": 32,
+  "unique_word_metric_profiles": 16,
+  "global_counts_by_order": {
+    "24": 90,
+    "27": 40,
+    "72": 1440,
+    "576": 1620,
+    "648": 26640,
+    "51840": 61560
+  },
+  "global_counts_by_order_and_diameter": {
+    "24:diam3": 90,
+    "27:diam2": 40,
+    "72:diam4": 1440,
+    "576:diam8": 1620,
+    "648:diam6": 11520,
+    "648:diam7": 15120,
+    "51840:diam10": 22680,
+    "51840:diam12": 25920,
+    "51840:diam14": 12960
+  },
+  "full_order_sets": 61560,
+  "bt1228_profile_global_count": 12960,
+  "bt1228_profile_fraction_all_four_sets": 0.14180982602035233,
+  "bt1228_profile_fraction_full_order_sets": 0.21052631578947367,
+  "interpretation": "Among all four-projective-transvection sets, 61560 generate the full group. Full-order sets split into diameter 10, 12, and 14 word-metric regimes; the BT1228 diameter-14 fingerprint occurs in 12960 sets, so closure order alone is not a sufficient recovery invariant."
+}
