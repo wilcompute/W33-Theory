@@ -1,0 +1,23 @@
+{
+  "theorem": "BT1286",
+  "title": "Recovery Packet Synthesis Engine",
+  "srg_params": {"n": 40, "k": 12, "lambda": 2, "mu": 4},
+  "srg_degree_check": true,
+  "srg_lambda_check": true,
+  "srg_mu_check": true,
+  "canonical_packet": {
+    "seed_points": [0, 13, 27, 39],
+    "reachable": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39],
+    "unreachable": [],
+    "recovery_depth": 3,
+    "is_complete": true,
+    "certificate_hash": "bt1286canonical"
+  },
+  "minimal_seed": {
+    "minimal_seed_size": 4,
+    "minimal_seed": [0, 13, 27, 39],
+    "max_recovery_depth": 3
+  },
+  "psp43_order": 25920,
+  "status": "VERIFIED"
+}

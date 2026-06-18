@@ -1,0 +1,87 @@
+{
+  "theorem": "BT1287",
+  "title": "Score-Vector Aggregator — BT1267-BT1285 frontier",
+  "dimensions": [
+    "polar_path_coverage",
+    "recovery_depth",
+    "lambda_conformance",
+    "mu_conformance",
+    "generation_match",
+    "gauge_decomposition",
+    "color_heisenberg",
+    "sm_spine_completeness"
+  ],
+  "candidates": [
+    {
+      "name": "canonical_seed_BT1275",
+      "bt_range": "BT1275",
+      "composite": 0.8825,
+      "pareto_rank": 1,
+      "notes": "BT1275 strict polar path certificate - fully verified",
+      "scores": {
+        "polar_path_coverage": 1.0,
+        "recovery_depth": 0.333,
+        "lambda_conformance": 1.0,
+        "mu_conformance": 1.0,
+        "generation_match": 1.0,
+        "gauge_decomposition": 1.0,
+        "color_heisenberg": 1.0,
+        "sm_spine_completeness": 1.0
+      }
+    },
+    {
+      "name": "recovery_integrator_BT1282",
+      "bt_range": "BT1282",
+      "composite": 0.8825,
+      "pareto_rank": 1,
+      "notes": "Recovery packet companion integrator BT1282 - matches canonical",
+      "scores": {
+        "polar_path_coverage": 1.0,
+        "recovery_depth": 0.333,
+        "lambda_conformance": 1.0,
+        "mu_conformance": 1.0,
+        "generation_match": 1.0,
+        "gauge_decomposition": 1.0,
+        "color_heisenberg": 1.0,
+        "sm_spine_completeness": 1.0
+      }
+    },
+    {
+      "name": "external_protocol_BT1276",
+      "bt_range": "BT1276",
+      "composite": 0.8620,
+      "pareto_rank": 2,
+      "notes": "External candidate protocol BT1276 - near-canonical",
+      "scores": {
+        "polar_path_coverage": 0.975,
+        "recovery_depth": 0.333,
+        "lambda_conformance": 1.0,
+        "mu_conformance": 1.0,
+        "generation_match": 0.95,
+        "gauge_decomposition": 0.975,
+        "color_heisenberg": 0.975,
+        "sm_spine_completeness": 0.97
+      }
+    },
+    {
+      "name": "sparse_full_closure_BT1271",
+      "bt_range": "BT1271",
+      "composite": 0.8340,
+      "pareto_rank": 3,
+      "notes": "Sparse full-closure fixture - one extra depth layer",
+      "scores": {
+        "polar_path_coverage": 1.0,
+        "recovery_depth": 0.25,
+        "lambda_conformance": 1.0,
+        "mu_conformance": 1.0,
+        "generation_match": 0.9,
+        "gauge_decomposition": 0.95,
+        "color_heisenberg": 0.95,
+        "sm_spine_completeness": 0.94
+      }
+    }
+  ],
+  "top_candidate": "canonical_seed_BT1275",
+  "pareto_front": ["canonical_seed_BT1275", "recovery_integrator_BT1282"],
+  "status": "COMPLETE"
+}
