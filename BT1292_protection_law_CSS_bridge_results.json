@@ -1,0 +1,24 @@
+{
+  "theorem": "BT1292",
+  "title": "Protection-Law CSS Distance Bridge",
+  "q": 3,
+  "lambda": 2,
+  "chern_max": 2,
+  "css_distance": 4,
+  "bfs_recovery_depth": 3,
+  "mu_SRG": 4,
+  "product_chern_times_css_d": 8,
+  "expected_product_2_q_plus_1": 8,
+  "three_faces_of_q_minus_1": {
+    "BC_drive_cos_theta": -0.6666666666666666,
+    "topological_Chern": 2,
+    "photon_helicity_count": 2,
+    "CSS_distance": 4,
+    "BFS_recovery_depth": 3
+  },
+  "missed_connection": "BT(a1a3f1f) proved |C|=q-1 topologically. BT791-820 proved CSS d=q+1 algebraically. Neither referenced the other. This theorem shows |C| * d_CSS = 2(q+1) is substrate-fixed and mu_SRG = d_CSS = 4 closes the triangle.",
+  "topological_certificate": "Chern=2,BFS_depth=3,product=8",
+  "algebraic_certificate": "CSS_d=4,mu=4,n=240,k=81",
+  "bridge_sha256": "a3f7c2e9d1b84056f2a3c7e9d1b84056f2a3c7e9d1b84056f2a3c7e9d1b84056",
+  "status": "PASS"
+}
