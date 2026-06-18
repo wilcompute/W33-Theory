@@ -1,0 +1,251 @@
+{
+  "architecture_reading": "The holonet is a clocked oscillator network.  The 8-tick route digit is the instruction pulse, the [72,66]_3 horizon is the microframe, the 2160-slot mirror bus is a 30-frame E8 Coxeter bus, and the 51840 Clifford runtime is a 720-frame S6/Sp(4,2) supercycle.  Durable commits are always route-epoch aligned and become horizon-frame aligned exactly every q=3 levels.",
+  "checks": {
+    "all_fractal_rows_preserve_frame_identities": true,
+    "bt827_runtime_factorization_is_preserved": true,
+    "bt838_ladder_exposes_48_packet_abi": true,
+    "commit_clock_frame_lock_period_is_q": true,
+    "commit_clock_route_epoch_aligned": true,
+    "commit_mod_pattern_is_24_48_0": true,
+    "depth_q2_route_bound_is_one_horizon_frame": true,
+    "factorization_change_has_ratio_q_over_lambda": true,
+    "first_full_route_frame_depth_is_q2": true,
+    "horizon_parity_is_q_factorial": true,
+    "horizon_payload_is_K12_edges": true,
+    "horizon_total_is_k_times_q_factorial": true,
+    "mirror_bus_is_thirty_horizon_frames": true,
+    "mirror_parity_sheet_is_kg": true,
+    "mirror_payload_plus_parity": true,
+    "old_and_new_mirror_factorizations_match": true,
+    "one_horizon_frame_is_q2_route_ticks": true,
+    "oscillator_stack_is_verified": true,
+    "route_tick_is_two_power_q": true,
+    "runtime_is_horizon_times_s6": true,
+    "runtime_is_local_lift_times_clocked_horizon": true,
+    "s6_splits_as_local_lift_times_e8_coxeter": true,
+    "stress_route_bound_is_tomotope_packet": true,
+    "tomotope_to_oscillator_parity": true,
+    "tomotope_to_oscillator_payload": true,
+    "tomotope_to_oscillator_total": true
+  },
+  "commit_clock": {
+    "formula": "T(n)=4*(7^n-1)",
+    "oscillator_frame_alignment": "T(n) is divisible by 72 iff 3 divides n",
+    "route_epoch_alignment": "T(n) is divisible by 8 for all n",
+    "table": [
+      {
+        "frame_locked": false,
+        "level": 1,
+        "mod_horizon_frame": 24,
+        "oscillator_frames": null,
+        "route_epochs": 3,
+        "ticks": 24
+      },
+      {
+        "frame_locked": false,
+        "level": 2,
+        "mod_horizon_frame": 48,
+        "oscillator_frames": null,
+        "route_epochs": 24,
+        "ticks": 192
+      },
+      {
+        "frame_locked": true,
+        "level": 3,
+        "mod_horizon_frame": 0,
+        "oscillator_frames": 19,
+        "route_epochs": 171,
+        "ticks": 1368
+      },
+      {
+        "frame_locked": false,
+        "level": 4,
+        "mod_horizon_frame": 24,
+        "oscillator_frames": null,
+        "route_epochs": 1200,
+        "ticks": 9600
+      },
+      {
+        "frame_locked": false,
+        "level": 5,
+        "mod_horizon_frame": 48,
+        "oscillator_frames": null,
+        "route_epochs": 8403,
+        "ticks": 67224
+      },
+      {
+        "frame_locked": true,
+        "level": 6,
+        "mod_horizon_frame": 0,
+        "oscillator_frames": 6536,
+        "route_epochs": 58824,
+        "ticks": 470592
+      },
+      {
+        "frame_locked": false,
+        "level": 7,
+        "mod_horizon_frame": 24,
+        "oscillator_frames": null,
+        "route_epochs": 411771,
+        "ticks": 3294168
+      },
+      {
+        "frame_locked": false,
+        "level": 8,
+        "mod_horizon_frame": 48,
+        "oscillator_frames": null,
+        "route_epochs": 2882400,
+        "ticks": 23059200
+      },
+      {
+        "frame_locked": true,
+        "level": 9,
+        "mod_horizon_frame": 0,
+        "oscillator_frames": 2241867,
+        "route_epochs": 20176803,
+        "ticks": 161414424
+      },
+      {
+        "frame_locked": false,
+        "level": 10,
+        "mod_horizon_frame": 24,
+        "oscillator_frames": null,
+        "route_epochs": 141237624,
+        "ticks": 1129900992
+      },
+      {
+        "frame_locked": false,
+        "level": 11,
+        "mod_horizon_frame": 48,
+        "oscillator_frames": null,
+        "route_epochs": 988663371,
+        "ticks": 7909306968
+      },
+      {
+        "frame_locked": true,
+        "level": 12,
+        "mod_horizon_frame": 0,
+        "oscillator_frames": 768960400,
+        "route_epochs": 6920643600,
+        "ticks": 55365148800
+      }
+    ]
+  },
+  "fractal_scaling": {
+    "frame_rule": "At every recursive level, mirror slots are 30 horizon frames per W33 instance and Clifford runtime atoms are 720 horizon frames per W33 instance.",
+    "rows": [
+      {
+        "level": 1,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 30,
+        "mirror_slots_total": 2160,
+        "route_bound": 8,
+        "route_bound_as_frame_fraction": "1/9",
+        "runtime_atoms_total": 51840,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 720,
+        "w33_instances_total": 1
+      },
+      {
+        "level": 2,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 1230,
+        "mirror_slots_total": 88560,
+        "route_bound": 16,
+        "route_bound_as_frame_fraction": "2/9",
+        "runtime_atoms_total": 2125440,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 29520,
+        "w33_instances_total": 41
+      },
+      {
+        "level": 3,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 49230,
+        "mirror_slots_total": 3544560,
+        "route_bound": 24,
+        "route_bound_as_frame_fraction": "1/3",
+        "runtime_atoms_total": 85069440,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 1181520,
+        "w33_instances_total": 1641
+      },
+      {
+        "level": 4,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 1969230,
+        "mirror_slots_total": 141784560,
+        "route_bound": 32,
+        "route_bound_as_frame_fraction": "4/9",
+        "runtime_atoms_total": 3402829440,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 47261520,
+        "w33_instances_total": 65641
+      },
+      {
+        "level": 5,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 78769230,
+        "mirror_slots_total": 5671384560,
+        "route_bound": 40,
+        "route_bound_as_frame_fraction": "5/9",
+        "runtime_atoms_total": 136113229440,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 1890461520,
+        "w33_instances_total": 2625641
+      },
+      {
+        "level": 6,
+        "mirror_frame_identity_holds": true,
+        "mirror_frames_total": 3150769230,
+        "mirror_slots_total": 226855384560,
+        "route_bound": 48,
+        "route_bound_as_frame_fraction": "2/3",
+        "runtime_atoms_total": 5444529229440,
+        "runtime_frame_identity_holds": true,
+        "runtime_frames_total": 75618461520,
+        "w33_instances_total": 105025641
+      }
+    ]
+  },
+  "honesty_boundary": "This is an exact finite runtime/clock factorization across the existing oscillator, holonet, and tomotope artifacts. It does not claim a new physical hardware threshold or a new proof of the general Cayley diameter theorem.",
+  "microframe": {
+    "first_full_route_frame_depth": 9,
+    "frame_identity": "72 = 9*8 = q^2 route ticks",
+    "oscillator_horizon_parity": 6,
+    "oscillator_horizon_payload": 66,
+    "oscillator_horizon_total": 72,
+    "route_digits_per_frame": 9,
+    "route_tick": 8,
+    "route_tick_reading": "8 = 2^q = one worst-case recursive digit route"
+  },
+  "mirror_bus": {
+    "frames_per_mirror_bus": 30,
+    "identity": "2160 = 30*72",
+    "mirror_slots": 2160,
+    "parity_sheet_identity": "180 = k*g",
+    "parity_slots": 180,
+    "payload_slots": 1980
+  },
+  "runtime_supercycle": {
+    "basis_change": "45*48 = 30*72; both sides equal the 2160 mirror bus",
+    "basis_change_ratio": "45/30 = 72/48 = q/lambda = 3/2",
+    "frame_factorization": "720*72",
+    "local_lift_times_e8_coxeter": 720,
+    "new_factorization": "24*30*72",
+    "old_factorization": "24*45*48",
+    "runtime_frames": 720,
+    "runtime_order": 51840,
+    "s6_order": 720,
+    "sp4_2_order": 720
+  },
+  "theorem": "BT1299 harmonic microframe runtime theorem",
+  "tomotope_to_oscillator": {
+    "parity_completion": "72 - 66 = 6",
+    "payload_completion": "48 + 18 = 66",
+    "reading": "The tomotope packet ABI is the 48-symbol body of the frame. Adding the local Clifford lift f=24 gives the full oscillator frame, while adding the q*q!=18 active line-cone sector gives the payload.",
+    "tomotope_packet_abi": 48,
+    "total_completion": "48 + 24 = 72"
+  },
+  "verified": true
+}
