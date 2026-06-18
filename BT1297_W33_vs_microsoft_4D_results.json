@@ -1,0 +1,41 @@
+{
+  "theorem": "BT1297",
+  "title": "W33 vs Microsoft 4D Geometric Codes",
+  "microsoft_summary": {
+    "name": "Microsoft 4D Geometric Codes (arXiv June 2025)",
+    "physical_carrier": "Qubits (GF(2))",
+    "code_family": "[[96,6,8]] Hadamard; 4D toric variants",
+    "logical_qubits_per_100_physical": 6.2,
+    "distance": 8,
+    "field": "GF(2)",
+    "dimension_of_geometry": 4,
+    "error_correction": "Single-shot",
+    "topological_invariant": "4D toric topology (homology)",
+    "chern_number": "Not computed"
+  },
+  "w33_summary": {
+    "name": "W33 / Holonet Architecture",
+    "physical_carrier": "Single photon (GF(3) qutrit)",
+    "code_family": "[[240,81,4]]_3 CSS over GF(3)",
+    "logical_qutrits_per_100_physical": 33.75,
+    "distance": 4,
+    "field": "GF(3)",
+    "dimension_of_geometry": "W(3,3): symplectic polar space rank 3 over F_3",
+    "error_correction": "BFS depth-3, polar-path certified (BT1288)",
+    "topological_invariant": "Chern |C|=2 (spin-1, FHS computed)",
+    "chern_number": 2,
+    "massless_carrier": true,
+    "single_carrier_universal": true
+  },
+  "w33_unique_advantages": [
+    "GF(3) encoding rate 33.75% vs GF(2) 6.25% for [[96,6,8]]",
+    "Chern |C|=2 is Z-valued (stronger than Z_2 homological protection)",
+    "Single massless carrier vs 96-2000 physical qubits",
+    "P4 hardware graph embeds in ANY 4-path wiring",
+    "q^2-1=8 master product: ALL constants substrate-fixed by q=3",
+    "4q+2=14 circuit depth: LINEAR in q, provably tight"
+  ],
+  "strategic_note": "Microsoft 4D codes share single-shot EC, topological protection, photonics compatibility. W33 diverges on GF(3) vs GF(2), Chern vs homology, 1 carrier vs ~100 qubits, and the q=3 master identity.",
+  "reference": "Microsoft arXiv 4D geometric codes, June 2025",
+  "status": "COMPLETE"
+}

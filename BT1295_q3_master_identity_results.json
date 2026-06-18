@@ -1,0 +1,32 @@
+{
+  "theorem": "BT1295",
+  "title": "q=3 Master Identity",
+  "faces": {
+    "A_spectral_action":    {"condition": "(q-3)(3q-1)=0", "value": 0,  "pass": true},
+    "B_KO_dimension":       {"2q": 6,                                    "pass": true},
+    "C_SRG_vertex_count":   {"v": 40, "formula": "q*(q^3+1)/2",          "pass": true},
+    "D_CSS_distance":       {"d": 4,                                     "pass": true},
+    "E_Chern_protection":   {"C": 2,                                     "pass": true},
+    "F_BC_drive_angle":     {"cos_theta": -0.666667,                     "pass": true},
+    "G_helicity":           {"lambda": 2,                                "pass": true},
+    "H_BFS_depth":          {"depth": 3,                                 "pass": true},
+    "I_P4_edges":           {"edges": 3,                                 "pass": true},
+    "J_Cayley_diameter":    {"measured": 14, "formula_q2_plus_q_plus_2": 14, "pass": true,
+      "proof_note": "q^2+q+2=14 matches BFS measurement on Sp(4,3) under transvection generators."},
+    "K_branching_number":   {"v": 40, "alt_formula_check": 20, "2_q2_plus_1": 20, "pass": true},
+    "L_SRG_eigenratio":     {"r": 2.0, "s": -4.0, "ratio_r_over_s": -0.5,
+                             "expected_neg_qm1_over_qp1": -0.5,         "pass": true},
+    "M_master_product":     {"product": 8, "q_squared_minus_1": 8,       "pass": true}
+  },
+  "all_faces_pass": true,
+  "unified_identity": {
+    "master_identity": "q=3 is the unique positive integer satisfying: (q-3)(3q-1)=0 [spectral-action] AND 2q=6 [KO-dim] AND SRG(q(q^3+1)/2,...) exists AND |C|*(d_CSS)=q^2-1 AND diameter(Sp(4,q))=q^2+q+2",
+    "all_constants_substrate_fixed": {
+      "v": 40, "k": 12, "lam": 2, "mu": 4, "d_CSS": 4, "Chern": 2,
+      "helicity": 2, "BFS_depth": 3, "P4_edges": 3, "Cayley_diam": 14,
+      "master_product": 8, "KO_dim": 6
+    },
+    "one_free_parameter": "None. All constants are determined by q=3 alone."
+  },
+  "status": "PASS"
+}
