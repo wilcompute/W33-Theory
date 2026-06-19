@@ -1,0 +1,61 @@
+{
+  "bt": 1335,
+  "title": "Foundry layout feasibility gate",
+  "verified": true,
+  "interpretation": "The 4320 base-channel claim is area-plausible on a 5mm by 5mm die under explicit chart-cell assumptions, but the 70.8M concatenated-mode claim is not a single-die layout claim and requires hierarchy/time/fiber/memory multiplexing.",
+  "checks": {
+    "base_channel_count_4320": true,
+    "conservative_area_fits": true,
+    "conservative_fill_below_one": true,
+    "conservative_chart_holds_modes": true,
+    "conservative_chart_holds_bends": true,
+    "aggressive_area_fits": true
+  },
+  "scenarios": {
+    "conservative_cell": {
+      "charts": 540,
+      "modes_per_chart": 8,
+      "base_channels": 4320,
+      "die_side_mm": 5.0,
+      "die_area_um2": 25000000.0,
+      "pitch_um": 10.0,
+      "bend_radius_um": 50.0,
+      "chart_side_um": 200.0,
+      "chart_area_um2": 40000.0,
+      "total_chart_area_um2": 21600000.0,
+      "area_fill_fraction": 0.864,
+      "area_fits": true,
+      "channel_area_budget_um2": 5787.037037037037,
+      "min_parallel_bus_width_um": 43200.0,
+      "chart_linear_width_um": 80.0,
+      "chart_can_hold_modes_linearly": true,
+      "chart_can_hold_two_bends": true
+    },
+    "aggressive_cell": {
+      "charts": 540,
+      "modes_per_chart": 8,
+      "base_channels": 4320,
+      "die_side_mm": 5.0,
+      "die_area_um2": 25000000.0,
+      "pitch_um": 5.0,
+      "bend_radius_um": 20.0,
+      "chart_side_um": 120.0,
+      "chart_area_um2": 14400.0,
+      "total_chart_area_um2": 7776000.0,
+      "area_fill_fraction": 0.31104,
+      "area_fits": true,
+      "channel_area_budget_um2": 5787.037037037037,
+      "min_parallel_bus_width_um": 21600.0,
+      "chart_linear_width_um": 40.0,
+      "chart_can_hold_modes_linearly": true,
+      "chart_can_hold_two_bends": true
+    }
+  },
+  "engineering_caveats": [
+    "does not model waveguide crossings",
+    "does not model thermal phase shifter footprint",
+    "does not model grating or edge coupler fanout",
+    "does not model loss or crosstalk accumulation",
+    "does not place the 70.8M concatenated modes on one die"
+  ]
+}
