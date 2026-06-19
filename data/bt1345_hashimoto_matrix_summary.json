@@ -1,0 +1,23 @@
+{
+  "bt": 1345,
+  "verified": true,
+  "graph": {
+    "v": 40,
+    "edges": 240,
+    "directed_edges": 480
+  },
+  "adjacency_eigenvalue_set": [-4.0, 2.0, 12.0],
+  "hashimoto_phase_clusters_deg": {
+    "72.452": 48,
+    "127.087": 30
+  },
+  "matrix_derived_phases_deg": {
+    "r_2_phase_deg": 72.4515993862077,
+    "s_minus4_phase_deg": 127.08718472888098
+  },
+  "protocol_target_phases_deg": {
+    "gauge_deg": 63.43494882292201,
+    "chiral_deg": 112.20765429859648
+  },
+  "protocol_targets_match_standard_hashimoto": false
+}
