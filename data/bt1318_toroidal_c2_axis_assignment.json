@@ -1,0 +1,558 @@
+{
+  "theorem": "BT1318 toroidal C2-axis assignment",
+  "verified": true,
+  "csaszar_abstract_automorphism_group": {
+    "order": 42,
+    "order_profile": {
+      "1": 1,
+      "2": 7,
+      "3": 14,
+      "6": 14,
+      "7": 6
+    },
+    "structure_reading": "C7:C6; seven involutions, each fixing one vertex",
+    "involutions": [
+      [
+        0,
+        4,
+        6,
+        5,
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        0,
+        3,
+        6,
+        1,
+        4
+      ],
+      [
+        3,
+        6,
+        5,
+        0,
+        4,
+        2,
+        1
+      ],
+      [
+        4,
+        3,
+        2,
+        1,
+        0,
+        6,
+        5
+      ],
+      [
+        5,
+        1,
+        4,
+        6,
+        2,
+        0,
+        3
+      ],
+      [
+        6,
+        2,
+        1,
+        4,
+        3,
+        5,
+        0
+      ]
+    ],
+    "involution_fixed_vertices": [
+      [
+        0
+      ],
+      [
+        6
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        5
+      ]
+    ]
+  },
+  "metric_axis_records": {
+    "csaszar": [
+      {
+        "realization": "C1",
+        "c2_symmetric": true,
+        "fixed_vertex": [
+          6
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "realization": "C2",
+        "c2_symmetric": true,
+        "fixed_vertex": [
+          6
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "realization": "C3",
+        "c2_symmetric": true,
+        "fixed_vertex": [
+          6
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "realization": "C4",
+        "c2_symmetric": true,
+        "fixed_vertex": [
+          6
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "realization": "C5",
+        "c2_symmetric": true,
+        "fixed_vertex": [
+          6
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            10,
+            13
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      }
+    ],
+    "szilassi": [
+      {
+        "realization": "S1",
+        "c2_symmetric": true,
+        "fixed_vertices": [],
+        "fixed_faces": [
+          4
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      {
+        "realization": "S2",
+        "c2_symmetric": true,
+        "fixed_vertices": [],
+        "fixed_faces": [
+          4
+        ],
+        "vertex_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "face_orbits": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4
+          ]
+        ]
+      }
+    ],
+    "csaszar_axis_perm": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4,
+      6
+    ],
+    "csaszar_face_axis_perm": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      13,
+      12,
+      11,
+      10
+    ],
+    "szilassi_axis_perm": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4,
+      7,
+      6,
+      9,
+      8,
+      11,
+      10,
+      13,
+      12
+    ],
+    "szilassi_face_axis_perm": [
+      2,
+      5,
+      0,
+      6,
+      4,
+      1,
+      3
+    ]
+  },
+  "axis_assignment": {
+    "current_data_proves": "the five metric Csaszar realizations share the vertex-axis involution fixing vertex 6, while the two metric Szilassi realizations share the dual face-axis involution fixing face 4",
+    "not_proved": "the seven metric realizations are not currently distinguished as the seven abstract C2 involutions",
+    "realization_to_involution_bijection_status": "not_proved_current_labels"
+  },
+  "checks": {
+    "csaszar_abstract_map_aut_order_42": true,
+    "csaszar_order_profile_is_C7_semidirect_C6": true,
+    "csaszar_has_seven_involutions": true,
+    "every_csaszar_involution_fixes_one_vertex": true,
+    "csaszar_involutions_cover_all_vertices": true,
+    "published_csaszar_axis_is_one_involution": true,
+    "published_csaszar_axis_fixes_vertex_6": true,
+    "all_metric_csaszar_realizations_use_same_axis": true,
+    "published_szilassi_axis_has_no_fixed_vertices": true,
+    "published_szilassi_axis_fixes_one_face": true,
+    "all_metric_szilassi_realizations_use_same_dual_axis": true,
+    "orbit_duality_is_4_7_vs_7_4": true
+  }
+}

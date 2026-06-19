@@ -6,14 +6,17 @@ The **Császár polyhedron** and the **Szilassi polyhedron** are the only known 
 
 | Property | Császár | Szilassi | Tetrahedron |
 |----------|----------|----------|-------------|
-| Vertices V | 7 | 7 | 4 |
+| Vertices V | 7 | 14 | 4 |
 | Edges E | 21 | 21 | 6 |
-| Faces F | 14 | 14 | 4 |
+| Faces F | 14 | 7 | 4 |
 | Genus g | 1 | 1 | 0 |
 | Face type | triangles | hexagons | triangles |
 | Dual | Szilassi | Császár | tetrahedron |
 
-Note: V and E are identical for both! They are **combinatorially dual** (swap vertices and faces) but geometrically distinct.
+Correction boundary: the shared middle invariant is the edge count `E=21`. The duality swaps vertices and faces:
+`Csaszar (V,F)=(7,14)` and `Szilassi (V,F)=(14,7)`. Older notes that listed `V=7,F=14`
+for both sides were using the Csaszar row twice; the raw realization table, CCCCXXI verifier, and triad HTML use the
+correct dual data.
 
 ## The Minimal Triangulation Genus Equations
 
@@ -53,7 +56,7 @@ Alternative: n-3=8, n-4=3 ⇒ n=11 and n=7 (inconsistent). Only valid: n=9 or th
 Actual genus of K_n for relevant n:
 - K_7: g = (4)(3)/12 = 1 exactly (Császár/Szilassi)
 - K_8: g = (5)(4)/12 = 20/12 not integer
-- K_9: g = (6)(5)/12 = 30/12 not integer  
+- K_9: g = (6)(5)/12 = 30/12 not integer
 - K_10: g = (7)(6)/12 = 42/12 not integer
 - K_12: g = (9)(8)/12 = 72/12 = 6
 - K_13: g = (10)(9)/12 = 90/12 not integer

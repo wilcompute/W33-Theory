@@ -1,0 +1,103 @@
+{
+  "theorem": "BT1317 toroidal tomotope pipeline consolidator",
+  "verified": true,
+  "pipeline_chain": {
+    "raw_heptad": 7,
+    "fano_realization_count": 7,
+    "active_packet_weight": 168,
+    "tomotope_weight": 192,
+    "oriented_transports": 42,
+    "weighted_active_transport": 168,
+    "stationary_active_weight": 168,
+    "stationary_ground_weight": 24,
+    "nontrivial_second_moment": "21/16",
+    "moment_ladder": {
+      "times_16": 21,
+      "times_2": 42,
+      "times_stabilizer_4": 168
+    }
+  },
+  "raw": {
+    "total": 7,
+    "family_counts": {
+      "Csaszar": 5,
+      "Szilassi": 2
+    },
+    "edge_counts": [
+      21
+    ],
+    "euler_values": [
+      0
+    ]
+  },
+  "upstream": {
+    "ccccxxi_checks": "48/48",
+    "dual_packet_summary": {
+      "csaszar_realizations": 5,
+      "szilassi_realizations": 2,
+      "toroidal_mode_count": 7,
+      "packet_size": 24,
+      "active_toroidal_packets": 7,
+      "ground_packets": 1,
+      "total_packets": 8,
+      "active_packet_weight": 168,
+      "ground_packet_weight": 24,
+      "tomotope_weight": 192,
+      "dual_toroidal_flag_weight": 168,
+      "all_identities_hold": true
+    },
+    "step_transport_summary": {
+      "toroidal_mode_count": 7,
+      "oriented_transport_count": 42,
+      "unoriented_transport_count": 21,
+      "step_class_count": 6,
+      "per_step_transport_count": 7,
+      "slot_count": 6,
+      "slot_stabilizer_size": 4,
+      "weighted_active_transport": 168,
+      "active_packet_weight": 168,
+      "dual_toroidal_flag_weight": 168,
+      "all_identities_hold": true
+    },
+    "markov_ground_summary": {
+      "state_count": 8,
+      "active_state_count": 7,
+      "packet_total_weight": 192,
+      "stationary_active_mass_num": 7,
+      "stationary_active_mass_den": 8,
+      "stationary_ground_mass_num": 1,
+      "stationary_ground_mass_den": 8,
+      "stationary_active_weight": 168,
+      "stationary_ground_weight": 24,
+      "all_identities_hold": true
+    },
+    "markov_fourier_summary": {
+      "active_cycle_size": 7,
+      "nontrivial_mode_count": 6,
+      "affine_offset_num": 1,
+      "affine_offset_den": 8,
+      "cosine_scale_num": 3,
+      "cosine_scale_den": 4,
+      "nontrivial_sum_num": 0,
+      "nontrivial_sum_den": 1,
+      "nontrivial_square_sum_num": 21,
+      "nontrivial_square_sum_den": 16,
+      "all_identities_hold": true
+    }
+  },
+  "checks": {
+    "raw_is_five_plus_two_heptad": true,
+    "raw_all_genus_one_with_21_edges": true,
+    "fano_bridge_verified": true,
+    "packet_bridge_verified": true,
+    "active_packet_matches_dual_flags": true,
+    "tomotope_is_active_plus_ground": true,
+    "step_transport_bridge_verified": true,
+    "transport_weight_matches_packet_weight": true,
+    "markov_ground_bridge_verified": true,
+    "stationary_weights_match_packet_split": true,
+    "fourier_bridge_verified": true,
+    "moment_ladder_recovers_21_42_168": true
+  },
+  "boundary": "This consolidates existing verified carriers. It does not assert that metric realization labels are canonical Fano labels; BT1318 tests the C2-axis issue separately."
+}

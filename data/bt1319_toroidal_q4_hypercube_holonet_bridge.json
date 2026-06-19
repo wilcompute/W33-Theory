@@ -1,0 +1,108 @@
+{
+  "theorem": "BT1319 toroidal Q4 hypercube holonet bridge",
+  "verified": true,
+  "four_by_four_square": {
+    "ordinary_knight_edges": 24,
+    "ordinary_degree_profile": {
+      "2": 4,
+      "3": 8,
+      "4": 4
+    },
+    "ordinary_boundary_status": "not_Q4",
+    "toroidal_boundary_status": "Q4",
+    "why_toroidal_boundary_matters": "without wraparound the 4x4 knight graph has 24 edges and mixed degree profile 2^4,3^8,4^4; with toroidal wraparound it becomes 4-regular with 32 edges, exactly Q4"
+  },
+  "q4_packet": {
+    "verified": true,
+    "dimension_edge_counts": {
+      "0": 8,
+      "1": 8,
+      "2": 8,
+      "3": 8
+    },
+    "gray_flip_sequence": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0
+    ],
+    "axis_interpretation": {
+      "bit_0": "macro orientation/tour half axis",
+      "bit_1": "first tetrahedral chart bit",
+      "bit_2": "second tetrahedral chart bit",
+      "bit_3": "Clifford chirality/local closure bit",
+      "factorization": "Q4 bits realize 2 orientation x 2 chart-bit x 2 chart-bit x 2 chirality = 16 slots"
+    }
+  },
+  "tomotope_codec": {
+    "tetrahedron_codecs": 2,
+    "csaszar_codecs": 7,
+    "szilassi_codecs": 7,
+    "total_codecs": 16,
+    "flags_per_codec": 12,
+    "total_flags": 192,
+    "reading": "(2+7+7)*12 = 16*12 = 192"
+  },
+  "tetrahedral_clifford_scale_marker": {
+    "row": [
+      1,
+      4,
+      6,
+      4,
+      1
+    ],
+    "evaluated_at_Phi_4": 14641,
+    "expected_11_to_4": 14641,
+    "p_Ih_power_mu": 14641,
+    "reading": "14641 = (1+10)^4 = 11^4 = (k-1)^mu"
+  },
+  "holonet_interface": {
+    "local_Q4_packet_vertices": 16,
+    "local_Q4_packet_edges": 32,
+    "local_Q4_packet_square_faces": 24,
+    "local_ecube_max_hops": 4,
+    "global_chart_atlas": 540,
+    "chart_transversal_slots": 2160,
+    "mirror_slots": 2160,
+    "slot_factorization": "540*4 = 2160",
+    "layer_boundary": "Q4 is the local 16-state packet router; the photonic holonet also has a 540-chart Q3 atlas and a 2160-slot D12 mirror bus"
+  },
+  "protected_router_lift": {
+    "code": "binary extended Hamming [8,4,4], equivalently RM(1,3)",
+    "parameters": {
+      "length": 8,
+      "dimension": 4,
+      "distance": 4,
+      "codewords": 16
+    },
+    "one_bit_Q4_move_lifts_to_distance": 4
+  },
+  "boundary": "This proves the local toroidal-Q4 packet/router interface and the 14641 tetrahedral Pascal/Ihara scale marker. It does not replace the global 540-chart Q3 atlas, does not prove a new Q4 subsystem distance, and does not identify 11^4 with a complete Clifford algebra unless a future objectwise construction supplies it.",
+  "checks": {
+    "toroidal_q4_packet_verified": true,
+    "ordinary_4x4_knight_graph_is_not_q4": true,
+    "toroidal_boundary_is_required_for_q4": true,
+    "toroidal_packet_has_q4_dimension_counts": true,
+    "gray_clock_is_closed_q4_hamilton_cycle": true,
+    "flag_codec_boundary_verified": true,
+    "codec_2_plus_7_plus_7_equals_q4_vertices": true,
+    "codec_flags_equal_tomotope_flags": true,
+    "q4_square_faces_equal_tetrahedron_flags": true,
+    "gray_hamming_lift_preserves_16_states": true,
+    "tetrahedron_pascal_scale_is_14641": true,
+    "holonet_mirror_lift_matches_2160": true,
+    "local_ecube_route_bound_is_mu": true
+  }
+}
