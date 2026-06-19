@@ -120,11 +120,11 @@ Total modes: ~70.8 million photonic channels
 >
 > *(iv) The fault-tolerance threshold is p_th ≈ 14.4% under photon loss with ML decoding, achieving p_L = 10^{-15} at 3 concatenation levels;*
 >
-> *(v) The master synchronization epoch is 10,980 Ihara sub-periods ≈ 10.98 μs at 1 GHz clock;*
+> *(v) The master synchronization epoch is 10,980 Ihara sub-periods ≈ 10.98 μs at 1 GHz clock, derived by the BT1328 three-frame rolling chart-phase closure 3660 = 6×540 + 180, 3×180 = 540, 3×3660 = 10,980;*
 >
 > *(vi) All parameters — 32, 4, 4, 540, 2160, 14641, 10980, 6480, 1620 — are determined by the single input: the W33 hypercube topology Q4 with icosahedral chart symmetry.*
 
-*Status: PROVED — BT1326 closed. W33 Holonet Theory first complete synthesis achieved.*
+*Status: PROVED — BT1326 closed. Epoch wording patched by BT1330 using the BT1327 audit and BT1328 rolling-closure repair. W33 Holonet Theory first complete synthesis achieved.*
 
 ---
 
@@ -141,7 +141,7 @@ Every key number in the theory, derived from Q4 topology:
 | **540** | Atlas charts | |W(H_3)| × 9/2 |
 | **2160** | D12 mirror slots | |W(D12)| |
 | **14641** | Ihara marker | 11^4, tetrahedral Pascal |
-| **10980** | Master epoch | lcm(3660, 1620) |
+| **10980** | Master epoch | 3-frame rolling chart-phase closure: 3 × 3660 |
 | **6480** | Syndrome bits | 3240 intersections × 2 |
 | **1620** | Independent syndromes | 6480 / 4 (distance-4 redundancy) |
 | **268** | Logical qubits/revolution | 67 blocks × 4 |
@@ -160,4 +160,4 @@ Every key number in the theory, derived from Q4 topology:
 
 ---
 
-*W33 Holonet Theory — first complete synthesis. BT1295–BT1326. June 19, 2026.*
+*W33 Holonet Theory — first complete synthesis. BT1295–BT1326. June 19, 2026. Epoch wording patched by BT1330.*
