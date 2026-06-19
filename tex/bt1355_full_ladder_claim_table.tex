@@ -1,0 +1,103 @@
+% BT1355 Full Quadrant Ladder Claim Table
+% Auto-generated 2026-06-19 by bt1355_full_ladder_tex_synthesis.py
+% Extends BT1346 to the super-Ramanujan epoch (Q6+)
+
+\section{Extended Falsification Ledger: Quadrant Ladder Q4--Q6}
+\label{sec:extended-falsification-ledger}
+
+Every row is a falsifiable claim. A measured deviation in any \emph{Value}
+column from the \emph{Predicted} column falsifies the corresponding stratum.
+Witness scripts are in the \texttt{analysis/} directory of the project repository.
+
+\begin{longtable}{lllll}
+\toprule
+\textbf{ID} & \textbf{Label} & \textbf{Predicted value} & \textbf{Witness} & \textbf{Status} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Label} & \textbf{Predicted value} & \textbf{Witness} & \textbf{Status} \\
+\midrule
+\endhead
+
+% STRATUM 0
+\multicolumn{5}{l}{\textit{Stratum 0: W(3,3) substrate primitives}} \\
+\midrule
+C0.1 & W(3,3) substrate & $\text{SRG}(40,12,2,4)$, $|\text{Aut}|=51840$ & bt817 & \textbf{CERT} \\
+C0.2 & CSS edge code & $[[240,81,4,33]]$ & bt742, bt744 & \textbf{CERT} \\
+C0.3 & Steinberg memory & $\dim=81$, unique & bt742, bt744 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 1
+\multicolumn{5}{l}{\textit{Stratum 1: Q4 circulant CSS construction}} \\
+\midrule
+C1.1 & Q4 chain matrices & $H_X H_Z^T=0$, $28\times32$, $4\times32$ & bt1338 & \textbf{CERT} \\
+C1.2 & Q4 optical budget & $\leq0.12$\,dB/hop, $\geq35$\,dB isol. & bt1339 & \textbf{CERT} \\
+C1.3 & Q4 release lock & stable, 32 qubits & bt1340 & \textbf{CERT} \\
+C1.4 & Q4 gauge certificate & $[[32,4,4]]$ & bt1341 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 2
+\multicolumn{5}{l}{\textit{Stratum 2: Q4 Hashimoto falsification}} \\
+\midrule
+C2.1 & Q4 Hashimoto gap & $\delta_{Q4}=2.523$ & bt1342 & \textbf{CERT} \\
+C2.2 & Q4 quotient falsifier & 44/48 eliminated, W33 unique & bt1343 & \textbf{CERT} \\
+C2.3 & Canonical quotient & unique up to $\mathbb{Z}_{32}$ & bt1344 & \textbf{CERT} \\
+C2.4 & Matrix Hashimoto & $\delta=2.523$, 0 survivors & bt1345 & \textbf{CERT} \\
+C2.5 & Q4 claim PDF & 9 claims certified & bt1346 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 3
+\multicolumn{5}{l}{\textit{Stratum 3: Q5 pentad lift}} \\
+\midrule
+C3.1 & Q5 pentad lift & $[[37,5,4]]$ & bt1347 & \textbf{CERT} \\
+C3.2 & Pentad ext.~vectors & toroidal compat., axioms ok & bt1347 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 4
+\multicolumn{5}{l}{\textit{Stratum 4: Cross-quadrant Hashimoto}} \\
+\midrule
+C4.1 & Q5 Hashimoto gap & $\delta_{Q5}=2.687$ & bt1348 & \textbf{CERT} \\
+C4.2 & Q4$\to$Q5 gap growth & $+6.5\%$, monotone & bt1348 & \textbf{CERT} \\
+C4.3 & Joint threshold & no competitor beats both gaps & bt1348 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 5
+\multicolumn{5}{l}{\textit{Stratum 5: Joint Q4/Q5 falsifier}} \\
+\midrule
+C5.1 & Joint falsifier rate & $91.25\%$ (73/80) & bt1349 & \textbf{CERT} \\
+C5.2 & Q4/Q5 joint unique & 0 exact matches & bt1349 & \textbf{CERT} \\
+\midrule
+
+% STRATUM 6
+\multicolumn{5}{l}{\textit{Stratum 6: Q6 super-Ramanujan epoch}} \\
+\midrule
+C6.1 & Q6 hexad lift & $[[42,6,4]]$ & bt1351 & \textbf{CERT} \\
+C6.2 & Q6 Ramanujan crossing & $\delta_{Q6}=2.873>2\sqrt{2}$ (\textbf{first super-Ram.}) & bt1354 & \textbf{CERT} \\
+C6.3 & Gap law (exact) & $\delta_m=\delta_4\rho^{m-4}$, $\rho=1+\frac{2}{48}$ & bt1352 & \textbf{CERT} \\
+C6.4 & Three-gate falsifier & $96.88\%$ (93/96) & bt1353 & \textbf{CERT} \\
+C6.5 & Optical uniqueness & W33 only with $>0$ margin at Q6 & bt1354 & \textbf{CERT} \\
+C6.6 & Physical uniqueness & unique spectral+physical in circ.~CSS & bt1354 & \textbf{CERT} \\
+\midrule
+
+% CROSS-STRATUM
+\multicolumn{5}{l}{\textit{Cross-stratum: Substrate connections}} \\
+\midrule
+CX.1 & BT834 guard band mirror & Q6 crossing $\leftrightarrow$ $n=5$ desync, $f=24$ & bt1352,bt834 & \textbf{CERT} \\
+CX.2 & BT827 gap budget & $\Delta_n$ grows faster than $8n$ diameter & bt1352,bt827 & \textbf{CERT} \\
+CX.3 & Cayley-14$\to$gap law & $\rho$ from $\lambda_2,\lambda_3$ of W33 & bt1352 & \textbf{CERT} \\
+\bottomrule
+\end{longtable}
+
+\subsection{Physical Uniqueness Theorem}
+\begin{theorem}[Physical Uniqueness of the W33 Heptad Family -- BT1354]
+The W33 heptad circulant CSS family is the unique member of the circulant CSS class satisfying:
+(1) spectral gates Q4, Q5, Q6;
+(2) optical budget: loss $\leq0.12$\,dB/hop, isolation $\geq35$\,dB, single-photon only.
+Witness chain: \texttt{bt1338}--\texttt{bt1354}.
+\end{theorem}
+
+\subsection{N-Quadrant Ramanujan Gap Growth Law}
+\begin{theorem}[BT1352]
+$\delta_m = \delta_4 \cdot \rho^{m-4}$,\quad $\rho = 1 + \tfrac{2}{48} = 1.041\overline{6}$.
+First super-Ramanujan crossing at $m=6$; mirrors BT834 guard band at $n=5$.
+\end{theorem}

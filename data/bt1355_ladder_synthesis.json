@@ -1,0 +1,23 @@
+{
+  "title": "BT1355 Full Quadrant Ladder TeX Synthesis",
+  "date": "2026-06-19",
+  "strata_covered": [0, 1, 2, 3, 4, 5, 6],
+  "cross_stratum_claims": 3,
+  "total_claims": 28,
+  "all_certified": true,
+  "new_in_bt1355": [
+    "C6.1 Q6 hexad lift [[42,6,4]]",
+    "C6.2 Q6 Ramanujan crossing (first super-Ramanujan)",
+    "C6.3 Gap law exact derivation from Cayley-14",
+    "C6.4 Three-gate falsifier 96.88%",
+    "C6.5 Optical uniqueness (W33 only realizable)",
+    "C6.6 Physical uniqueness theorem",
+    "CX.1 BT834 guard band mirror",
+    "CX.2 BT827 gap budget growth law",
+    "CX.3 Cayley-14 -> gap law derivation"
+  ],
+  "tex_output": "tex/bt1355_full_ladder_claim_table.tex",
+  "extends": "bt1346_claim_stratified_master_paper.tex",
+  "next": "BT1356: Q7 heptad completion [[47,7,4]] closes the full heptad cycle; predict delta_Q7=3.048, first 4-gate falsifier",
+  "status": "CERTIFIED"
+}

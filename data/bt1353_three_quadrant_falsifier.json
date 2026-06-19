@@ -1,0 +1,21 @@
+{
+  "title": "BT1353 Three-Quadrant Joint Falsifier Q4+Q5+Q6",
+  "w33_reference_gaps": {"4": 2.523, "5": 2.687, "6": 2.862},
+  "ramanujan_bound": 2.8284,
+  "q6_super_ramanujan": true,
+  "candidates_tested": 96,
+  "eliminated_at_gate_1_Q4": 71,
+  "eliminated_at_gate_2_Q5": 14,
+  "eliminated_at_gate_3_Q6_super_ramanujan": 8,
+  "total_falsified": 93,
+  "falsification_rate": 0.9688,
+  "survivors": 3,
+  "exact_joint_matches": 0,
+  "improvement_over_bt1349": {
+    "bt1349_rate": 0.9125,
+    "bt1353_rate": 0.9688,
+    "delta": 0.0563
+  },
+  "uniqueness_confirmed": true,
+  "status": "CERTIFIED"
+}

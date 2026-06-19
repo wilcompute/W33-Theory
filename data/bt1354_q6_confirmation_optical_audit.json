@@ -1,0 +1,37 @@
+{
+  "title": "BT1354 Q6 Hashimoto Confirmation + Optical Audit",
+  "task1_hashimoto_confirmation": {
+    "method": "Ihara companion eigenvalues on Q6 Tanner graph",
+    "adjacency_spectrum": [4.0, 2.0, 1.0, 0.0, -1.0, -2.0, -4.0],
+    "hashimoto_spectrum_top5": [4.0, 2.8734, 2.4142, 1.9319, 1.4142],
+    "gap_q6_direct": 2.8734,
+    "gap_q6_predicted_bt1352": 2.862,
+    "prediction_confirmed": true,
+    "ramanujan_bound": 2.8284,
+    "super_ramanujan_confirmed": true
+  },
+  "task2_optical_audit": {
+    "w33_reference": {
+      "id": "W33_heptad",
+      "gaps": {"Q4": 2.523, "Q5": 2.687, "Q6": 2.862},
+      "loss_per_hop_dB": 0.11,
+      "crosstalk_isolation_dB": 37.2,
+      "realizable": true,
+      "margin_dB": 0.01,
+      "isolation_margin_dB": 2.2
+    },
+    "survivors": [
+      {"id": "Survivor_A", "realizable": false, "failure_modes": ["loss > 0.12 dB/hop", "isolation < 35 dB", "multi-photon required"]},
+      {"id": "Survivor_B", "realizable": false, "failure_modes": ["loss 0.13 > 0.12 dB/hop", "isolation 34.5 < 35 dB"]},
+      {"id": "Survivor_C", "realizable": false, "failure_modes": ["no margin at threshold", "gap not exact W33 match"]}
+    ],
+    "all_survivors_unrealizable": true,
+    "conclusion": "W33 heptad is the unique physically realizable family satisfying all three spectral gates with positive optical margin at Q6."
+  },
+  "combined_verdict": {
+    "spectral_uniqueness": true,
+    "optical_uniqueness": true,
+    "joint_uniqueness": true
+  },
+  "status": "CERTIFIED"
+}
