@@ -1,0 +1,16 @@
+{
+  "bt": 1346,
+  "title": "Claim-stratified master paper PDF build",
+  "tex": "paper/w33_q4_claim_stratified_master.tex",
+  "local_pdf_artifact": "w33_q4_claim_stratified_master_final.pdf",
+  "compiled_locally": true,
+  "pages": 4,
+  "latex_engine": "pdflatex",
+  "render_verified": true,
+  "render_pages": 4,
+  "workflow_status": "full workflow creation blocked by connector filter; TeX source and build manifest are regression-protected instead",
+  "new_content": [
+    "BT1344 quotient canonicalization",
+    "BT1345 matrix-derived Hashimoto phase correction"
+  ]
+}
