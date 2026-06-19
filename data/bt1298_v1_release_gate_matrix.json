@@ -1,0 +1,43 @@
+{
+  "bt": 1298,
+  "title": "v1.0.0 release gate matrix",
+  "release_target": "v1.0.0",
+  "gates": [
+    {
+      "gate": "strict_recovery_certificate",
+      "command": "python tools/bt1281_verify_recovery_certificate.py",
+      "expected": "verified=true",
+      "artifact": "data/bt1275_strict_polar_path_recovery_certificate.json"
+    },
+    {
+      "gate": "external_candidate_batch",
+      "command": "python tools/bt1274_batch_score_candidates.py",
+      "expected": "pass=1, review=1, fail=2",
+      "artifact": "data/bt1274_batch_candidate_scores_summary.json"
+    },
+    {
+      "gate": "unified_release_packet",
+      "command": "python tools/bt1291_verify_release_packet.py",
+      "expected": "verified=true",
+      "artifact": "data/bt1291_release_packet_verification_summary.json"
+    },
+    {
+      "gate": "readiness_badge",
+      "command": "python tools/bt1296_verify_release_readiness_badge.py",
+      "expected": "verified=true",
+      "artifact": "data/bt1295_v1_release_readiness_badge.json"
+    },
+    {
+      "gate": "paper_build_handshake",
+      "command": "python tools/bt1300_verify_paper_build_handshake.py",
+      "expected": "verified=true",
+      "artifact": ".github/workflows/paper-build.yml"
+    },
+    {
+      "gate": "release_pytest_subset",
+      "command": "python -m pytest -q tests/test_bt1269_bt1272_external_candidates.py tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py tests/test_bt1290_bt1292_release_packet.py tests/test_bt1295_bt1296_readiness_badge.py",
+      "expected": "pytest_passes",
+      "artifact": "tests/"
+    }
+  ]
+}
