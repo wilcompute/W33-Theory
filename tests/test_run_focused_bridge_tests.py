@@ -134,6 +134,7 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
         "tests/test_bt1363_q4_clock_tomotope_medial_descent.py"
         in SUITES["photonic-qec"]
     )
+    assert "tests/test_bt1364_bt1366_clock_lifts.py" in SUITES["photonic-qec"]
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:

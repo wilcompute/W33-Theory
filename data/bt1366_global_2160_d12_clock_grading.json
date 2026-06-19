@@ -1,0 +1,40 @@
+{
+  "bt": 1366,
+  "title": "Global 2160 D12 clock grading",
+  "verified": true,
+  "inputs": {
+    "bt1363_local_middle_blocks": 48,
+    "bt815_slots": 2160,
+    "polar_pair_geography": 45
+  },
+  "grading": {
+    "identity": "2160 = 45 * 48 = 45 * 12 * 4 = 45 * 3 * 16",
+    "chart_count_from_clock": 540,
+    "slots_per_chart_from_c4": 4,
+    "descended_global_orbits": 135,
+    "descended_global_orbit_size": 16
+  },
+  "d12_boundary": {
+    "bt815_stabilizer": {
+      "size": "12",
+      "id": "12-4",
+      "structure": "D12",
+      "is_cyclic": "false",
+      "isomorphic_to_C12": "false",
+      "isomorphic_to_D12": "true"
+    },
+    "meaning": "BT1366 grades the D12 mirror atlas; it does not replace D12 by the local C4 clock."
+  },
+  "interpretation": "The local BT1363 clock explains the BT815 global atlas factorization. The twelve local C4 four-tick cycles, crossed with the 45 polar-pair geographies, are the 540 charts; each chart contributes four D12 mirror slots.  Equivalently, the three local ternary sheets crossed with the same 45 geographies give 135 global 16-slot phase orbits.",
+  "checks": {
+    "bt815_slots_are_2160": true,
+    "global_product_is_45_times_48": true,
+    "pure_c4_cycles_make_540_charts": true,
+    "four_ticks_per_chart_match_bt815": true,
+    "chart_cycles_recover_all_slots": true,
+    "descended_clock_gives_135_sixteen_slot_orbits": true,
+    "descended_sheets_recover_all_slots": true,
+    "three_phase_geographies": true,
+    "d12_boundary_preserved": true
+  }
+}

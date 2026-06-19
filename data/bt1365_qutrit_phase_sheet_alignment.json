@@ -1,0 +1,72 @@
+{
+  "bt": 1365,
+  "title": "Qutrit phase sheet alignment",
+  "verified": true,
+  "local_bt1363_phase_bus": {
+    "phase_count": 3,
+    "middle_blocks": 48,
+    "blocks_per_phase": [
+      16,
+      16,
+      16
+    ],
+    "face_labels_per_phase": [
+      16,
+      16,
+      16
+    ]
+  },
+  "selector_bt361_phase_bundle": {
+    "base_lines": 40,
+    "phase_fiber_size": 3,
+    "selector_sheets": 120,
+    "same_line_law": "K3 phase fiber, pair overlap 54",
+    "skew_line_law": "one perfect matching of 3 phase pairs at overlap 4; six remaining pairs overlap 2"
+  },
+  "alignment": {
+    "phase_rows": [
+      {
+        "phase": 0,
+        "local_middle_blocks": 16,
+        "local_face_labels_hit": 16,
+        "selector_sheets_over_40_lines": 40,
+        "selector_sheet_range": [
+          0,
+          39
+        ]
+      },
+      {
+        "phase": 1,
+        "local_middle_blocks": 16,
+        "local_face_labels_hit": 16,
+        "selector_sheets_over_40_lines": 40,
+        "selector_sheet_range": [
+          40,
+          79
+        ]
+      },
+      {
+        "phase": 2,
+        "local_middle_blocks": 16,
+        "local_face_labels_hit": 16,
+        "selector_sheets_over_40_lines": 40,
+        "selector_sheet_range": [
+          80,
+          119
+        ]
+      }
+    ],
+    "identity": "3 local tomotope sheets * 40 W33 lines = 120 selector phase sheets"
+  },
+  "interpretation": "The three BT1363 tomotope sheets have exactly the cardinality and local incidence behavior required to be the qutrit phase labels of the BT361 selector bundle.  Each local phase is a 16-face register; globalizing over 40 W33 lines gives the existing 120 selector sheets.",
+  "boundary": "This aligns phase indices and incidence profiles.  It does not yet choose a global phase gauge for every W33 skew-line transport matching.",
+  "checks": {
+    "local_sheets_match_qutrit_phase_count": true,
+    "local_phase_sheets_hit_16_face_labels_once": true,
+    "selector_bundle_is_40_times_3": true,
+    "same_line_selector_relation_is_k3": true,
+    "skew_selector_matching_has_three_phase_pairs": true,
+    "phase_alignment_accounts_for_all_selector_sheets": true,
+    "phase_alignment_accounts_for_local_bus": true
+  }
+}
