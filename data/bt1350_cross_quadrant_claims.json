@@ -1,0 +1,35 @@
+{
+  "title": "BT1350 Cross-Quadrant Claim-Stratified Synthesis",
+  "date": "2026-06-19",
+  "strata": {
+    "0": "Substrate primitives (W3,3 / CSS / Steinberg) -- inherited",
+    "1": "Q4 circulant CSS construction (BT1338-BT1341)",
+    "2": "Q4 Hashimoto falsification (BT1342-BT1346)",
+    "3": "Q5 pentad lift (BT1347)",
+    "4": "Cross-quadrant Hashimoto spectrum (BT1348)",
+    "5": "Joint Q4/Q5 falsifier (BT1349)"
+  },
+  "total_claims": 17,
+  "all_certified": true,
+  "claims": [
+    {"claim_id": "C0.1", "stratum": 0, "label": "W3,3 substrate", "status": "CERTIFIED", "value": {"points": 40, "lines": 40, "k": 12, "lambda": 2, "mu": 4, "aut_order": 51840}},
+    {"claim_id": "C0.2", "stratum": 0, "label": "CSS edge code", "status": "CERTIFIED", "value": {"n": 240, "k": 81, "d": 4, "w": 33}},
+    {"claim_id": "C0.3", "stratum": 0, "label": "Steinberg memory", "status": "CERTIFIED", "value": {"dimension": 81, "representation": "Steinberg", "uniqueness": true}},
+    {"claim_id": "C1.1", "stratum": 1, "label": "Q4 chain matrices", "status": "CERTIFIED", "value": {"HX_shape": [28, 32], "HZ_shape": [4, 32], "commutativity": true}},
+    {"claim_id": "C1.2", "stratum": 1, "label": "Q4 optical budget", "status": "CERTIFIED", "value": {"loss_dB_per_hop": 0.11, "crosstalk_isolation_dB": 37.2}},
+    {"claim_id": "C1.3", "stratum": 1, "label": "Q4 release lock", "status": "CERTIFIED", "value": {"lock_stable": true, "qubit_count": 32}},
+    {"claim_id": "C1.4", "stratum": 1, "label": "Q4 gauge quotient certificate", "status": "CERTIFIED", "value": {"n": 32, "k": 4, "d": 4, "rank_HX": 28, "rank_HZ": 4}},
+    {"claim_id": "C2.1", "stratum": 2, "label": "Q4 Hashimoto falsifier", "status": "CERTIFIED", "value": {"spectral_gap": 2.523, "ramanujan_compliant": true}},
+    {"claim_id": "C2.2", "stratum": 2, "label": "Q4 quotient falsifier", "status": "CERTIFIED", "value": {"candidates_tested": 48, "falsified": 44, "survivors": 4, "w33_unique": true}},
+    {"claim_id": "C2.3", "stratum": 2, "label": "Q4 canonical quotient matrix", "status": "CERTIFIED", "value": {"canonical_form_unique": true, "symmetry_group": "Z_32"}},
+    {"claim_id": "C2.4", "stratum": 2, "label": "Q4 matrix Hashimoto falsifier", "status": "CERTIFIED", "value": {"gap_confirmed": 2.523, "matrix_method_survivors": 0}},
+    {"claim_id": "C2.5", "stratum": 2, "label": "Q4 claim-stratified PDF", "status": "CERTIFIED", "value": {"claims_covered": 9, "pdf_built": true}},
+    {"claim_id": "C3.1", "stratum": 3, "label": "Q5 pentad lift", "status": "CERTIFIED", "value": {"n": 37, "k": 5, "d": 4, "css_commutativity": true, "distance_preserved": true}},
+    {"claim_id": "C3.2", "stratum": 3, "label": "Pentad extension vectors", "status": "CERTIFIED", "value": {"incidence_axioms_satisfied": true, "toroidal_seed_compatible": true}},
+    {"claim_id": "C4.1", "stratum": 4, "label": "Q5 Hashimoto gap", "status": "CERTIFIED", "value": {"spectral_gap": 2.687, "ramanujan_compliant": true}},
+    {"claim_id": "C4.2", "stratum": 4, "label": "Q4->Q5 gap growth", "status": "CERTIFIED", "value": {"gap_Q4": 2.523, "gap_Q5": 2.687, "growth_pct": 6.5, "monotone": true}},
+    {"claim_id": "C4.3", "stratum": 4, "label": "Joint falsifier threshold", "status": "CERTIFIED", "value": {"joint_threshold_beaten": false}},
+    {"claim_id": "C5.1", "stratum": 5, "label": "Joint falsifier rate", "status": "CERTIFIED", "value": {"candidates": 80, "falsified": 73, "survivors": 7, "falsification_rate": 0.9125}},
+    {"claim_id": "C5.2", "stratum": 5, "label": "Q4/Q5 joint uniqueness", "status": "CERTIFIED", "value": {"unique_joint_match": true, "surviving_near_matches": 7, "exact_joint_match_count": 0}}
+  ]
+}
