@@ -1,0 +1,53 @@
+{
+  "bt": 1331,
+  "title": "BT1326 master synthesis certificate",
+  "verified": true,
+  "checks": {
+    "bt1326_source_exists": true,
+    "bt1321_source_exists": true,
+    "bt1327_audit_exists": true,
+    "bt1328_epoch_repair_verified": true,
+    "bt1327_only_epoch_lcm_failed": true,
+    "bt1326_mentions_rolling_epoch": true,
+    "bt1326_no_false_epoch_lcm": true
+  },
+  "clauses": [
+    {
+      "name": "q4_number_table",
+      "class": "exact_arithmetic",
+      "status": "verified_with_one_repaired_epoch",
+      "evidence": "data/bt1327_q4_diamond_audit.json"
+    },
+    {
+      "name": "rolling_epoch_10980",
+      "class": "exact_arithmetic",
+      "status": "verified",
+      "evidence": "data/bt1328_epoch_repair.json"
+    },
+    {
+      "name": "spinor_cohomology",
+      "class": "structural_theorem",
+      "status": "proof_note_present",
+      "evidence": "proofs/BT1323_global_section_spinor_cohomology.md"
+    },
+    {
+      "name": "photonic_mode_encoding",
+      "class": "constructive_design",
+      "status": "proof_note_present",
+      "evidence": "proofs/BT1324_photonic_mode_encoding.md"
+    },
+    {
+      "name": "fault_tolerance_threshold",
+      "class": "simulation_required",
+      "status": "claimed_not_independently_certified_here",
+      "evidence": "proofs/BT1325_fault_tolerance_threshold.md"
+    },
+    {
+      "name": "physical_chip_footprint",
+      "class": "experimental_assumption",
+      "status": "requires_layout_and_foundry_model",
+      "evidence": "proofs/BT1324_photonic_mode_encoding.md"
+    }
+  ],
+  "verdict": "BT1326 is certificate-backed for exact arithmetic and corrected epoch wording; threshold and chip-footprint claims remain separately certifiable engineering/simulation gates."
+}
