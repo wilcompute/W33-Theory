@@ -1,0 +1,51 @@
+{
+  "bt": 1303,
+  "title": "v1.0.0 release source of truth index",
+  "release_target": "v1.0.0",
+  "ready": true,
+  "root_pointer": "README.md",
+  "human_entrypoints": [
+    "docs/v1_release_readiness.md",
+    "docs/recovery_packet_landing.md",
+    "docs/recovery_packet_guide.md",
+    "docs/release_notes_v1_recovery_packet.md",
+    "docs/v1_release_command.md"
+  ],
+  "machine_entrypoints": [
+    "data/bt1295_v1_release_readiness_badge.json",
+    "data/bt1298_v1_release_gate_matrix.json",
+    "data/bt1287_recovery_packet_release_manifest.json",
+    "data/bt1279_recovery_packet_index.json",
+    "data/bt1291_release_packet_verification_summary.json"
+  ],
+  "runner": "tools/bt1299_run_v1_release_gates.sh",
+  "verifiers": [
+    "tools/bt1281_verify_recovery_certificate.py",
+    "tools/bt1291_verify_release_packet.py",
+    "tools/bt1296_verify_release_readiness_badge.py",
+    "tools/bt1300_verify_paper_build_handshake.py"
+  ],
+  "workflows": [
+    ".github/workflows/recovery-packet.yml",
+    ".github/workflows/paper-build.yml"
+  ],
+  "paper": {
+    "source": "paper/w33_preprint.tex",
+    "artifact": "paper/w33_preprint.pdf",
+    "workflow": ".github/workflows/paper-build.yml"
+  },
+  "recovery_packet": {
+    "strict_target": "diam14_polar_path",
+    "strict_certificate": "data/bt1275_strict_polar_path_recovery_certificate.json",
+    "candidate_schema": "schema/bt1269_tomography_candidate.schema.json",
+    "batch_summary": "data/bt1274_batch_candidate_scores_summary.json"
+  },
+  "expected_outputs": {
+    "release_gate_runner": "BT1299 v1 release gates passed",
+    "release_packet_verified": true,
+    "readiness_badge_verified": true,
+    "paper_build_handshake_verified": true,
+    "candidate_bands": {"pass": 1, "review": 1, "fail": 2},
+    "strict_score_out_of_5": 5
+  }
+}
