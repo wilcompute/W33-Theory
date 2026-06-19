@@ -1,0 +1,246 @@
+# BT1346 — arXiv-Style LaTeX Version of the Accessible Photonic Holonet Paper
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{physics}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{url}
+\geometry{margin=1in}
+\setstretch{1.12}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{BT1346}
+\lhead{Photonic Holonet}
+\cfoot{\thepage}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\title{\textbf{The Photonic Holonet: A Universal Quantum Computer Built From One Photon}\\
+\large An Accessible Explanation of the W33 Theory Reduced-Scale Machine}
+\author{W33 Theory Program}
+\date{June 19, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper presents an accessible explanation of the Photonic Holonet, a proposed reduced-scale universal quantum computer built from a single photon and a small optical network. The paper is written for a general audience, with every technical term defined before use. The machine's universality claim rests on four pillars: three-valued quantum encoding (qutrits), coherent routing, contextuality as the source of computational power, and an aperiodic internal clock based on the Boerdijk--Coxeter helix. All claims are backed by executable numerical witnesses in the accompanying repository. No fitting parameters are used.
+\end{abstract}
+
+\section{How to Read This Paper}
+This paper is designed to be readable by any curious reader, even without a background in quantum physics or higher mathematics. Every major term is defined in plain English the first time it appears. The goal is not only to present the result, but to explain why each part matters and how the pieces fit together.
+
+\section{What Is a Quantum Computer?}
+
+\subsection{Bits, Qubits, and Qutrits}
+A \textbf{bit} is the smallest unit of information in an ordinary computer. A bit is always either 0 or 1.
+
+A \textbf{qubit} is the quantum version of a bit. A qubit can be in state 0, state 1, or in a \textbf{superposition}, meaning a genuine combination of both at once until it is measured.
+
+A \textbf{qutrit} is the three-valued version of a qubit. Instead of two possible values, it has three: 0, 1, and 2. Before measurement, it can be in a superposition of all three. The Photonic Holonet uses qutrits rather than qubits because its underlying geometry is naturally three-dimensional.
+
+\subsection{What ``Universal'' Means}
+A \textbf{Universal Turing Machine} is a theoretical machine that can simulate any other computing machine. In quantum computing, a device is called \textbf{universal} if it can perform any quantum computation that any other quantum computer can perform, given enough time and memory.
+
+A standard route to proving universality is to show two things:
+\begin{enumerate}[leftmargin=1.5em]
+    \item the machine can perform all \textbf{Clifford operations}, and
+    \item the machine has access to a \textbf{magic state}, meaning a special non-Clifford quantum resource.
+\end{enumerate}
+The Photonic Holonet claims both.
+
+\section{The Physical Machine}
+
+\subsection{What Is a Photon?}
+A \textbf{photon} is a single particle of light. It has no rest mass and carries energy and momentum. A photon also has \textbf{polarisation}, which is the direction in which its electric field oscillates.
+
+The machine uses one photon whose internal degrees of freedom act like multiple quantum registers.
+
+\subsection{The Optical Components}
+The reduced machine uses four core devices:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{PBS (Polarising Beam Splitter):} separates light by polarisation.
+    \item \textbf{Tritter:} a three-way beam splitter that creates a three-path superposition.
+    \item \textbf{Delay loop:} an optical fibre path that delays part of the photon wavepacket.
+    \item \textbf{EOM (Electro-Optic Modulator):} changes the phase of light using an electric field.
+\end{itemize}
+Together, these elements prepare a three-valued entangled state using a single photon.
+
+\subsection{Self-Entanglement}
+\textbf{Entanglement} is a quantum correlation where two systems are linked so strongly that measuring one determines the state of the other. Normally this involves two separate particles.
+
+In this machine, the photon becomes entangled with itself across different internal degrees of freedom, such as path and time-bin. This is called \textbf{self-entanglement}. The delay loop and tritter create this effect.
+
+The target state is the qutrit Bell state
+\begin{equation}
+\ket{\Omega} = \frac{1}{\sqrt{3}}\left(\ket{0,0,0} + \ket{1,1,1} + \ket{2,2,2}\right).
+\end{equation}
+This means the photon occupies all three register values coherently and equally.
+
+\section{Routing Without Destroying the State}
+A quantum state is fragile. If it is measured too early, it collapses. The challenge is to route the photon based on its own value without measuring it.
+
+The solution is a \textbf{controlled unitary}. A \textbf{unitary operation} is a reversible quantum transformation that preserves total probability. A controlled unitary applies a different reversible transformation depending on the value of a control register, but without measuring the control.
+
+In the Holonet, the route register controls how the other photon registers are permuted. Because the route register itself is in superposition, all routes exist simultaneously until measurement.
+
+The numerical routing witnesses verify:
+\begin{itemize}[leftmargin=1.5em]
+    \item the Bell qutrit is normalised,
+    \item the routing matrix is unitary,
+    \item coherence survives the routing step,
+    \item route and packet remain entangled after routing,
+    \item the Schmidt rank is 3, which is maximal for a qutrit cut.
+\end{itemize}
+
+\section{Contextuality and Why Classical Explanations Fail}
+
+\subsection{Hidden Variables}
+A \textbf{hidden variable theory} tries to explain quantum randomness by saying the system really had a definite value all along, and we just did not know it.
+
+\subsection{The Kochen--Specker Theorem}
+The \textbf{Kochen--Specker theorem} proves that for quantum systems of dimension 3 or more, such hidden variable assignments cannot be made consistently. In other words, the outcomes do not exist in a classical pre-written table waiting to be read off.
+
+\subsection{The Geometry \texorpdfstring{$W(3,3)$}{W(3,3)}}
+The machine is built on a mathematical geometry called \(W(3,3)\), the symplectic polar space of rank 2 over the field with 3 elements. It contains 40 points and 40 lines with a highly structured incidence pattern.
+
+Its collinearity graph is a \textbf{strongly regular graph} with parameters
+\begin{equation}
+\mathrm{SRG}(40,12,2,4).
+\end{equation}
+This means every point has 12 neighbours, every adjacent pair has 2 common neighbours, and every non-adjacent pair has 4 common neighbours.
+
+\subsection{The KS Budget}
+A \textbf{KS coloring} would assign classical yes/no values to the 40 rays so that every valid measurement context behaves consistently. No such coloring exists.
+
+The numerical witnesses show that 36 of the 40 rays belong to the contextual, non-classical sector. This is called the \textbf{KS budget}:
+\begin{equation}
+\text{KS budget} = \frac{36}{40}.
+\end{equation}
+The remaining 4 rays form one locally colorable line.
+
+The 27-point \textbf{matter shell} sits entirely inside the 36 contextual rays. This is summarised as
+\begin{equation}
+\text{Matter} = \text{Magic}.
+\end{equation}
+That equality is central to the machine's universality claim.
+
+\subsection{Why Contextuality Gives Computational Power}
+Howard, Wallman, Veitch, and Emerson proved in 2014 that for qutrit systems, contextuality is exactly the resource needed for \textbf{magic state distillation}. That theorem means contextuality is not just philosophically interesting --- it is the fuel that turns Clifford computation into universal quantum computation.
+
+\section{The Clock: Aperiodic but Deterministic}
+
+\subsection{Why a Machine Needs a Clock}
+A computer advances step by step. Something must mark the next step. That something is the clock.
+
+Ordinary clocks are \textbf{periodic}: they repeat the same cycle. The Holonet instead uses an \textbf{aperiodic} internal clock: deterministic, but never exactly repeating.
+
+\subsection{The Boerdijk--Coxeter Helix}
+The \textbf{Boerdijk--Coxeter helix} is a non-closing helix formed by stacking tetrahedra face-to-face. Its key property is that each step rotates by an irrational angle, so the structure never repeats perfectly.
+
+The relevant rotation angle is
+\begin{equation}
+\theta = \arccos\left(-\frac{2}{3}\right) \approx 131.81^{\circ}.
+\end{equation}
+By \textbf{Niven's theorem}, this angle is an irrational multiple of \(\pi\), because its cosine is rational but not one of the allowed values \(0, \pm 1/2, \pm 1\).
+
+\subsection{The Three-Distance Theorem}
+If you keep rotating around a circle by the same irrational angle, the points you create split the circle into at most three distinct gap lengths. This is the \textbf{three-distance theorem}.
+
+That is exactly what the BC-drive witness checks numerically. The orbit never repeats, and its gaps have the quasicrystal signature: two or three distinct lengths only.
+
+At the special value
+\begin{equation}
+ h(E_8) = 30,
+\end{equation}
+the orbit has exactly two gap lengths. Here \(h(E_8)\) is the \textbf{Coxeter number} of the exceptional symmetry object \(E_8\).
+
+\subsection{The Golden Ratio}
+At Fibonacci-indexed orbit lengths, the ratio of the two gap lengths approaches the \textbf{golden ratio}
+\begin{equation}
+\phi = \frac{1+\sqrt{5}}{2} \approx 1.618.
+\end{equation}
+This is a standard feature of irrational rotations and near-return times.
+
+\section{Putting the Argument Together}
+The universality argument is:
+\begin{enumerate}[leftmargin=1.5em]
+    \item the photon supports qutrit encoding,
+    \item routing preserves coherence and entanglement,
+    \item the Clifford structure is complete on the substrate,
+    \item the matter shell is the magic sector,
+    \item contextuality supplies the magic resource,
+    \item the aperiodic BC clock advances the machine without periodic lock-in.
+\end{enumerate}
+Therefore the Photonic Holonet is proposed as a universal quantum computer built from a single photon and a structured optical loop.
+
+\section{Executable Witnesses}
+Every main claim is paired with a numerical script in the repository:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Witness file & Topic & Core claim \\
+\midrule
+BT1340 & Routing & Coherent qutrit routing survives \\
+BT1341 & Contextuality & KS budget = 36/40, Matter = Magic \\
+BT1342 & Clock & BC orbit is a quasicrystal \\
+BT1343 & Unified runner & All witnesses pass together \\
+BT1344 & Lab README & Maps witnesses to physical tests \\
+BT1345 & Accessible markdown & General-audience explanation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The unified runner is executed with:
+\begin{verbatim}
+python proofs/bt1343_unified_witness_runner.py
+\end{verbatim}
+
+\section{Glossary of Core Terms}
+\begin{description}[leftmargin=2.2cm, style=nextline]
+    \item[Bit] A 0-or-1 unit of classical information.
+    \item[Qubit] A two-state quantum information carrier.
+    \item[Qutrit] A three-state quantum information carrier.
+    \item[Photon] A single particle of light.
+    \item[Entanglement] A quantum correlation stronger than any classical one.
+    \item[Self-entanglement] Entanglement between different internal degrees of freedom of one particle.
+    \item[Unitary] A reversible probability-preserving quantum operation.
+    \item[Contextuality] The impossibility of explaining outcomes by non-contextual hidden variables.
+    \item[Magic state] A non-Clifford quantum resource enabling universality.
+    \item[Quasicrystal] Ordered but non-periodic structure.
+    \item[BC helix] The non-periodic Boerdijk--Coxeter tetrahedral helix.
+    \item[Niven's theorem] A theorem restricting rational cosine values of rational multiples of \(\pi\).
+    \item[Three-distance theorem] A theorem stating irrational circle rotations create at most three gap lengths.
+\end{description}
+
+\section{Conclusion}
+The Photonic Holonet is presented as a compact, conceptually unified quantum architecture in which one photon carries, routes, times, and powers its own computation. The reduced-scale witness chain does not merely assert the architecture --- it provides executable checks for each major layer. Whether nature ultimately realises the full proposal at scale remains an experimental question, but the repository now contains a complete chain of mathematical, numerical, and laboratory-facing documentation.
+
+\section*{References}
+\begin{enumerate}[leftmargin=1.5em]
+    \item S. Kochen and E. P. Specker, ``The Problem of Hidden Variables in Quantum Mechanics,'' \textit{Journal of Mathematics and Mechanics}, 1967.
+    \item M. Howard, J. Wallman, V. Veitch, and J. Emerson, ``Contextuality supplies the `magic' for quantum computation,'' \textit{Nature}, 2014.
+    \item I. Niven, \textit{Irrational Numbers}, MAA, 1956.
+    \item A. E. Brouwer and W. H. Haemers, \textit{Spectra of Graphs}, Springer, 2012.
+    \item W33 Theory Repository: \url{https://github.com/wilcompute/W33-Theory}
+\end{enumerate}
+
+\end{document}
