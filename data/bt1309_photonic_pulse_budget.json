@@ -1,0 +1,85 @@
+{
+  "architecture_reading": "The holonet reserves a 3:5 word because a route digit has three ternary qutrit axes and five apartment-hop slots. The full atlas then activates those physical families in exact balance: 1620 qutrit-axis pulses and 1620 delay-hop pulses. The mean apartment hop count is q=3, so the network control load self-balances against the qutrit-axis load.",
+  "checks": {
+    "apartment_hops_have_mean_q": true,
+    "bt1301_verified": true,
+    "bt1306_verified": true,
+    "full_atlas_active_delay_hops_is_1620": true,
+    "full_atlas_active_families_balance": true,
+    "full_atlas_active_qutrit_axis_is_1620": true,
+    "full_atlas_active_total_is_3240": true,
+    "full_atlas_idle_total_is_1080": true,
+    "microframe_has_27_plus_45_windows": true,
+    "mirror_epoch_has_2160_windows": true,
+    "parity_lanes_are_one_axis_plus_five_delay": true,
+    "physical_stack_has_single_photon_demo": true,
+    "scheduled_word_is_three_plus_five": true,
+    "supercycle_has_51840_windows": true
+  },
+  "full_atlas_active_budget": {
+    "active_delay_hop_pulses": 1620,
+    "active_family_ratio": "1620:1620 = 1:1",
+    "active_qutrit_axis_pulses": 1620,
+    "active_total_pulses": 3240,
+    "apartment_hop_histogram": {
+      "1": 108,
+      "2": 108,
+      "3": 108,
+      "4": 108,
+      "5": 108
+    },
+    "idle_windows": 1080,
+    "reserved_total_windows": 4320,
+    "routes": 540
+  },
+  "honesty_boundary": "BT1309 is a symbolic pulse-count budget derived from verified routing data and the existing build sheet. It does not choose photonic component bandwidths, losses, jitter tolerances, or GKP thresholds.",
+  "physical_control_families": {
+    "delay_hop": "delay-line switch pulse on ticks 3..7",
+    "hardware_boundary": "Counts are symbolic control windows/pulses. They are not a clock speed, optical loss budget, or detector timing budget.",
+    "parity_lane_family_count": {
+      "delay_hop": 5,
+      "qutrit_axis": 1
+    },
+    "qutrit_axis": "tritter/EOM phase-address pulse on ticks 0..2"
+  },
+  "scheduled_window_hierarchy": {
+    "clifford_supercycle": {
+      "delay_hop_windows": 32400,
+      "qutrit_axis_windows": 19440,
+      "total_windows": 51840,
+      "words": 6480
+    },
+    "microframe": {
+      "delay_hop_windows": 45,
+      "qutrit_axis_windows": 27,
+      "total_windows": 72,
+      "words": 9
+    },
+    "mirror_epoch": {
+      "delay_hop_windows": 1350,
+      "qutrit_axis_windows": 810,
+      "total_windows": 2160,
+      "words": 270
+    },
+    "parity_epilogue": {
+      "delay_hop_windows": 15,
+      "qutrit_axis_windows": 9,
+      "total_windows": 24,
+      "words": 3
+    },
+    "tomotope_body": {
+      "delay_hop_windows": 30,
+      "qutrit_axis_windows": 18,
+      "total_windows": 48,
+      "words": 6
+    },
+    "word": {
+      "delay_hop_windows": 5,
+      "qutrit_axis_windows": 3,
+      "total_windows": 8,
+      "words": 1
+    }
+  },
+  "theorem": "BT1309 photonic pulse budget",
+  "verified": true
+}

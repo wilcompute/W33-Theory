@@ -20779,6 +20779,20 @@
                 <code>66..71</code>. All durations remain in hardware ticks <code>&tau;</code>:
                 <code>8 &rarr; 48 &rarr; 24 &rarr; 72 &rarr; 2160 &rarr; 51840</code>.</div>
             </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">BT1307&ndash;BT1309 latency and pulse budget</div>
+              <div class="detail">The runtime now has stress-tested operating laws. BT1307 proves the atlas
+                completion classes are <code>4,5,6,7,8</code> ticks, each with <code>108</code> routes, so the
+                mean completion is <code>6&tau;</code>. Across all routes the 8-tick word is
+                <code>3240/(540&times;8)=3/4</code> active and <code>1/4</code> idle, exactly dual to the
+                mirror-bus utilization: <code>3/4</code> compute + <code>1/4</code> mirror = <code>1</code>.
+                BT1308 proves global averages are insufficient: a balanced <code>540</code>-packet atlas takes
+                one epoch, while the same <code>540</code> packets aimed at one chart still use only
+                <code>1/4</code> of the bus globally but require <code>135</code> epochs locally. BT1309 counts the
+                photonic controls: the scheduled word is <code>3</code> qutrit-axis windows plus <code>5</code>
+                delay-hop windows, but the active full-atlas pulse budget balances exactly,
+                <code>1620:1620=1:1</code>, because the mean apartment-hop count is <code>q=3</code>.</div>
+            </div>
           </div>
 
           <h3>The &Delta;<sub>27</sub> Connection (SymTFT, 2026)</h3>

@@ -1,0 +1,67 @@
+{
+  "architecture_reading": "The atlas burst completes in five equally populated latency classes, 4..8 tau, with mean 6 tau. Across all 540 routes, the 8-tick word is 3/4 active and 1/4 idle. This is exactly dual to the BT1304 mirror-bus reading: the same burst uses only 1/4 of the transport bus. The holonet therefore keeps local compute dense while reserving global bus headroom.",
+  "checks": {
+    "bt1301_verified": true,
+    "bt1304_verified": true,
+    "bt1305_verified": true,
+    "bt1306_verified": true,
+    "completion_ticks_equal_active_tick_counts": true,
+    "compute_plus_transport_utilizations_sum_to_one": true,
+    "compute_utilization_is_three_quarters": true,
+    "idle_classes_are_0_through_4": true,
+    "instruction_slack_is_one_quarter": true,
+    "latency_classes_are_4_through_8": true,
+    "mean_completion_is_six_ticks": true,
+    "mirror_transport_utilization_is_one_quarter": true,
+    "q_packet_queue_mode_matches_compute_utilization": true
+  },
+  "honesty_boundary": "BT1307 is deterministic schedule latency in tick units. It does not model analog propagation delay, switch settling time, loss, or detector jitter.",
+  "latency_classes": [
+    {
+      "class_fraction": "1/5",
+      "completion_tick_tau": 4,
+      "idle_ticks_after_completion": 4,
+      "route_count": 108
+    },
+    {
+      "class_fraction": "1/5",
+      "completion_tick_tau": 5,
+      "idle_ticks_after_completion": 3,
+      "route_count": 108
+    },
+    {
+      "class_fraction": "1/5",
+      "completion_tick_tau": 6,
+      "idle_ticks_after_completion": 2,
+      "route_count": 108
+    },
+    {
+      "class_fraction": "1/5",
+      "completion_tick_tau": 7,
+      "idle_ticks_after_completion": 1,
+      "route_count": 108
+    },
+    {
+      "class_fraction": "1/5",
+      "completion_tick_tau": 8,
+      "idle_ticks_after_completion": 0,
+      "route_count": 108
+    }
+  ],
+  "latency_summary": {
+    "compute_utilization": "3/4",
+    "dual_utilization_identity": "3/4 compute + 1/4 mirror = 1",
+    "instruction_slack": "1/4",
+    "max_completion_tau": 8,
+    "mean_completion_tau": 6,
+    "min_completion_tau": 4,
+    "mirror_transport_utilization": "1/4",
+    "routes": 540,
+    "total_active_ticks": 3240,
+    "total_idle_ticks": 1080,
+    "total_reserved_ticks": 4320,
+    "word_ticks_tau": 8
+  },
+  "theorem": "BT1307 holonet latency classes",
+  "verified": true
+}

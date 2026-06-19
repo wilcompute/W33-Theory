@@ -1,0 +1,117 @@
+{
+  "architecture_reading": "BT1308 turns the queue law into a network design constraint. The balanced atlas is not merely pretty symmetry; it is the condition that keeps the mirror bus low-latency. Local chart multiplicity, not global packet count, controls queueing.",
+  "checks": {
+    "all_to_one_needs_135_epochs": true,
+    "all_to_one_same_global_utilization_as_balanced": true,
+    "balanced_matches_bt1304": true,
+    "bt1304_verified": true,
+    "bt1305_verified": true,
+    "five_per_chart_backlogs_one_atlas": true,
+    "global_average_does_not_determine_latency": true,
+    "q_per_chart_has_no_backlog": true,
+    "q_plus_1_saturates_without_backlog": true,
+    "single_hot_chart_backlogs_below_one_third_global_utilization": true
+  },
+  "design_rule": {
+    "global_average_warning": "Two traffic patterns can have identical global utilization and radically different latency if their chart multiplicity profiles differ.",
+    "local_service_capacity": "4 packets per chart per mirror epoch",
+    "routing_requirement": "The holonet must preserve chart-entropy/load spreading; otherwise a 1/4-full bus can still queue for 135 epochs."
+  },
+  "honesty_boundary": "BT1308 is worst-case deterministic traffic accounting. It does not model stochastic arrivals, analog loss, or adaptive online routing beyond the fixed mirror service law.",
+  "stress_cases": [
+    {
+      "architecture_reading": "BT1304 baseline: one packet per chart, zero output contention.",
+      "backlog_after_one_epoch": 0,
+      "case": "balanced_atlas",
+      "epochs_needed": 1,
+      "global_utilization": "1/4",
+      "hot_charts_over_capacity": 0,
+      "max_packets_on_one_chart": 1,
+      "multiplicity_histogram": {
+        "1": 540
+      },
+      "output_conflicts": 0,
+      "stable_after_one_epoch": true,
+      "total_packets": 540
+    },
+    {
+      "architecture_reading": "Ternary load: three packets per chart uses 3/4 of the bus and queues nowhere.",
+      "backlog_after_one_epoch": 0,
+      "case": "q_per_chart",
+      "epochs_needed": 1,
+      "global_utilization": "3/4",
+      "hot_charts_over_capacity": 0,
+      "max_packets_on_one_chart": 3,
+      "multiplicity_histogram": {
+        "3": 540
+      },
+      "output_conflicts": 1080,
+      "stable_after_one_epoch": true,
+      "total_packets": 1620
+    },
+    {
+      "architecture_reading": "Four packets per chart saturates the local mirror service without backlog.",
+      "backlog_after_one_epoch": 0,
+      "case": "saturated_q_plus_1",
+      "epochs_needed": 1,
+      "global_utilization": "1/1",
+      "hot_charts_over_capacity": 0,
+      "max_packets_on_one_chart": 4,
+      "multiplicity_histogram": {
+        "4": 540
+      },
+      "output_conflicts": 1620,
+      "stable_after_one_epoch": true,
+      "total_packets": 2160
+    },
+    {
+      "architecture_reading": "Five packets per chart creates one full-atlas backlog after one epoch.",
+      "backlog_after_one_epoch": 540,
+      "case": "first_global_overflow",
+      "epochs_needed": 2,
+      "global_utilization": "5/4",
+      "hot_charts_over_capacity": 540,
+      "max_packets_on_one_chart": 5,
+      "multiplicity_histogram": {
+        "5": 540
+      },
+      "output_conflicts": 2160,
+      "stable_after_one_epoch": false,
+      "total_packets": 2700
+    },
+    {
+      "architecture_reading": "Four extra packets aimed at one chart create backlog although global utilization is near 1/4.",
+      "backlog_after_one_epoch": 1,
+      "case": "single_hot_chart_boundary",
+      "epochs_needed": 2,
+      "global_utilization": "34/135",
+      "hot_charts_over_capacity": 1,
+      "max_packets_on_one_chart": 5,
+      "multiplicity_histogram": {
+        "1": 539,
+        "5": 1
+      },
+      "output_conflicts": 4,
+      "stable_after_one_epoch": false,
+      "total_packets": 544
+    },
+    {
+      "architecture_reading": "Same packet count as the balanced atlas, but address entropy collapses to one chart.",
+      "backlog_after_one_epoch": 536,
+      "case": "all_to_one_collapse",
+      "epochs_needed": 135,
+      "global_utilization": "1/4",
+      "hot_charts_over_capacity": 1,
+      "max_packets_on_one_chart": 540,
+      "multiplicity_histogram": {
+        "0": 539,
+        "540": 1
+      },
+      "output_conflicts": 539,
+      "stable_after_one_epoch": false,
+      "total_packets": 540
+    }
+  ],
+  "theorem": "BT1308 adversarial collision stress",
+  "verified": true
+}
