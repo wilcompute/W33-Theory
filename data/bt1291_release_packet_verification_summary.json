@@ -1,0 +1,23 @@
+{
+  "bt": 1291,
+  "title": "Unified v1 release packet verifier",
+  "verified": true,
+  "checks": {
+    "zenodo_json_exists": true,
+    "zenodo_license_cc_by": true,
+    "paper_build_workflow_exists": true,
+    "release_instructions_exist": true,
+    "release_addendum_exists": true,
+    "readme_points_to_packet": true,
+    "recovery_workflow_exists": true,
+    "packet_index_exists": true,
+    "strict_certificate_exists": true,
+    "strict_certificate_target": true,
+    "strict_certificate_score": true,
+    "certificate_verification_true": true,
+    "release_manifest_exists": true,
+    "release_manifest_v1": true
+  },
+  "release_target": "v1.0.0",
+  "strict_target": "diam14_polar_path"
+}
