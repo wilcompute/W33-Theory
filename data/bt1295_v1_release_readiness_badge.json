@@ -1,0 +1,64 @@
+{
+  "bt": 1295,
+  "title": "v1.0.0 release readiness badge",
+  "ready": true,
+  "release_target": "v1.0.0",
+  "strict_target": "diam14_polar_path",
+  "badge": "v1-release-ready",
+  "gates": {
+    "zenodo_metadata": {
+      "ready": true,
+      "artifact": ".zenodo.json"
+    },
+    "paper_build_workflow": {
+      "ready": true,
+      "artifact": ".github/workflows/paper-build.yml"
+    },
+    "release_instructions": {
+      "ready": true,
+      "artifact": "analysis/BT1259_v1_release_instructions.md"
+    },
+    "recovery_release_addendum": {
+      "ready": true,
+      "artifact": "analysis/BT1290_v1_release_recovery_packet_addendum.md"
+    },
+    "recovery_packet_workflow": {
+      "ready": true,
+      "artifact": ".github/workflows/recovery-packet.yml"
+    },
+    "strict_certificate": {
+      "ready": true,
+      "artifact": "data/bt1275_strict_polar_path_recovery_certificate.json"
+    },
+    "unified_release_verifier": {
+      "ready": true,
+      "artifact": "data/bt1291_release_packet_verification_summary.json"
+    },
+    "readme_pointer": {
+      "ready": true,
+      "artifact": "README.md"
+    },
+    "release_note_block": {
+      "ready": true,
+      "artifact": "docs/release_notes_v1_recovery_packet.md"
+    }
+  },
+  "human_entrypoints": [
+    "README.md",
+    "docs/recovery_packet_landing.md",
+    "docs/recovery_packet_guide.md",
+    "docs/release_notes_v1_recovery_packet.md"
+  ],
+  "machine_entrypoints": [
+    "data/bt1279_recovery_packet_index.json",
+    "data/bt1287_recovery_packet_release_manifest.json",
+    "data/bt1291_release_packet_verification_summary.json",
+    "tools/bt1291_verify_release_packet.py"
+  ],
+  "expected_outputs": {
+    "release_packet_verified": true,
+    "certificate_verified": true,
+    "candidate_bands": {"pass": 1, "review": 1, "fail": 2},
+    "strict_score_out_of_5": 5
+  }
+}
