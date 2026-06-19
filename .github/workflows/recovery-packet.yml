@@ -21,6 +21,9 @@ jobs:
       - name: Verify strict recovery certificate
         run: |
           python tools/bt1281_verify_recovery_certificate.py
+      - name: Verify unified release packet
+        run: |
+          python tools/bt1291_verify_release_packet.py
       - name: Run recovery packet tests
         run: |
-          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py
+          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py
