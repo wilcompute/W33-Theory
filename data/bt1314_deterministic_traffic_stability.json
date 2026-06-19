@@ -1,0 +1,448 @@
+{
+  "architecture_reading": "BT1314 shows why the entropy router is an architectural layer, not cosmetic symmetry. Raw randomized arrivals produce local hot charts and backlog even when global utilization is only one quarter. The BT1310 router removes all backlog for every admitted burst up to 2160 packets and turns overflow into exact admission control.",
+  "cases": {
+    "one_packet_per_chart_randomized": {
+      "case": "one_packet_per_chart_randomized",
+      "global_utilization": "540/2160",
+      "packets_per_epoch": 540,
+      "raw": {
+        "backlog_after_one_epoch_max": 9,
+        "backlog_after_one_epoch_mean": 2.716666666666667,
+        "backlog_after_one_epoch_min": 0,
+        "hot_charts_max": 7,
+        "hot_charts_mean": 2.2666666666666666,
+        "hot_charts_min": 0,
+        "max_chart_load_max": 7,
+        "max_chart_load_mean": 5.233333333333333,
+        "max_chart_load_min": 4,
+        "trials": 60
+      },
+      "routed": {
+        "accepted_max": 540,
+        "accepted_mean": 540,
+        "accepted_min": 540,
+        "backlog_after_one_epoch_max": 0,
+        "backlog_after_one_epoch_mean": 0,
+        "backlog_after_one_epoch_min": 0,
+        "max_chart_load_max": 4,
+        "max_chart_load_mean": 4,
+        "max_chart_load_min": 4,
+        "rejected_max": 0,
+        "rejected_mean": 0,
+        "rejected_min": 0,
+        "trials": 60
+      },
+      "sample_raw": [
+        {
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "hot_charts": 0,
+          "max_chart_load": 4
+        },
+        {
+          "backlog_after_one_epoch": 6,
+          "epochs_needed": 2,
+          "hot_charts": 4,
+          "max_chart_load": 6
+        },
+        {
+          "backlog_after_one_epoch": 4,
+          "epochs_needed": 2,
+          "hot_charts": 4,
+          "max_chart_load": 5
+        },
+        {
+          "backlog_after_one_epoch": 6,
+          "epochs_needed": 2,
+          "hot_charts": 4,
+          "max_chart_load": 7
+        },
+        {
+          "backlog_after_one_epoch": 2,
+          "epochs_needed": 2,
+          "hot_charts": 2,
+          "max_chart_load": 5
+        }
+      ],
+      "sample_routed": [
+        {
+          "accepted": 540,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 351,
+          "rejected": 0
+        },
+        {
+          "accepted": 540,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 344,
+          "rejected": 0
+        },
+        {
+          "accepted": 540,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 339,
+          "rejected": 0
+        },
+        {
+          "accepted": 540,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 344,
+          "rejected": 0
+        },
+        {
+          "accepted": 540,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 347,
+          "rejected": 0
+        }
+      ]
+    },
+    "overflow_randomized": {
+      "case": "overflow_randomized",
+      "global_utilization": "2160/2160",
+      "packets_per_epoch": 2700,
+      "raw": {
+        "backlog_after_one_epoch_max": 811,
+        "backlog_after_one_epoch_mean": 773.3833333333333,
+        "backlog_after_one_epoch_min": 740,
+        "hot_charts_max": 321,
+        "hot_charts_mean": 301.71666666666664,
+        "hot_charts_min": 281,
+        "max_chart_load_max": 16,
+        "max_chart_load_mean": 13.166666666666666,
+        "max_chart_load_min": 11,
+        "trials": 60
+      },
+      "routed": {
+        "accepted_max": 2160,
+        "accepted_mean": 2160,
+        "accepted_min": 2160,
+        "backlog_after_one_epoch_max": 0,
+        "backlog_after_one_epoch_mean": 0,
+        "backlog_after_one_epoch_min": 0,
+        "max_chart_load_max": 4,
+        "max_chart_load_mean": 4,
+        "max_chart_load_min": 4,
+        "rejected_max": 540,
+        "rejected_mean": 540,
+        "rejected_min": 540,
+        "trials": 60
+      },
+      "sample_raw": [
+        {
+          "backlog_after_one_epoch": 785,
+          "epochs_needed": 4,
+          "hot_charts": 297,
+          "max_chart_load": 13
+        },
+        {
+          "backlog_after_one_epoch": 771,
+          "epochs_needed": 4,
+          "hot_charts": 313,
+          "max_chart_load": 14
+        },
+        {
+          "backlog_after_one_epoch": 796,
+          "epochs_needed": 3,
+          "hot_charts": 309,
+          "max_chart_load": 12
+        },
+        {
+          "backlog_after_one_epoch": 776,
+          "epochs_needed": 4,
+          "hot_charts": 292,
+          "max_chart_load": 13
+        },
+        {
+          "backlog_after_one_epoch": 771,
+          "epochs_needed": 3,
+          "hot_charts": 321,
+          "max_chart_load": 11
+        }
+      ],
+      "sample_routed": [
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 540
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 540
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 540
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 540
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 540
+        }
+      ]
+    },
+    "q_packets_per_chart_randomized": {
+      "case": "q_packets_per_chart_randomized",
+      "global_utilization": "1620/2160",
+      "packets_per_epoch": 1620,
+      "raw": {
+        "backlog_after_one_epoch_max": 187,
+        "backlog_after_one_epoch_mean": 168.5,
+        "backlog_after_one_epoch_min": 143,
+        "hot_charts_max": 112,
+        "hot_charts_mean": 97.26666666666667,
+        "hot_charts_min": 83,
+        "max_chart_load_max": 15,
+        "max_chart_load_mean": 9.45,
+        "max_chart_load_min": 8,
+        "trials": 60
+      },
+      "routed": {
+        "accepted_max": 1620,
+        "accepted_mean": 1620,
+        "accepted_min": 1620,
+        "backlog_after_one_epoch_max": 0,
+        "backlog_after_one_epoch_mean": 0,
+        "backlog_after_one_epoch_min": 0,
+        "max_chart_load_max": 4,
+        "max_chart_load_mean": 4,
+        "max_chart_load_min": 4,
+        "rejected_max": 0,
+        "rejected_mean": 0,
+        "rejected_min": 0,
+        "trials": 60
+      },
+      "sample_raw": [
+        {
+          "backlog_after_one_epoch": 147,
+          "epochs_needed": 3,
+          "hot_charts": 87,
+          "max_chart_load": 9
+        },
+        {
+          "backlog_after_one_epoch": 161,
+          "epochs_needed": 3,
+          "hot_charts": 83,
+          "max_chart_load": 10
+        },
+        {
+          "backlog_after_one_epoch": 173,
+          "epochs_needed": 3,
+          "hot_charts": 95,
+          "max_chart_load": 11
+        },
+        {
+          "backlog_after_one_epoch": 169,
+          "epochs_needed": 3,
+          "hot_charts": 90,
+          "max_chart_load": 9
+        },
+        {
+          "backlog_after_one_epoch": 180,
+          "epochs_needed": 3,
+          "hot_charts": 100,
+          "max_chart_load": 9
+        }
+      ],
+      "sample_routed": [
+        {
+          "accepted": 1620,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 518,
+          "rejected": 0
+        },
+        {
+          "accepted": 1620,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 523,
+          "rejected": 0
+        },
+        {
+          "accepted": 1620,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 524,
+          "rejected": 0
+        },
+        {
+          "accepted": 1620,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 524,
+          "rejected": 0
+        },
+        {
+          "accepted": 1620,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 523,
+          "rejected": 0
+        }
+      ]
+    },
+    "saturated_randomized": {
+      "case": "saturated_randomized",
+      "global_utilization": "2160/2160",
+      "packets_per_epoch": 2160,
+      "raw": {
+        "backlog_after_one_epoch_max": 457,
+        "backlog_after_one_epoch_mean": 420.5,
+        "backlog_after_one_epoch_min": 390,
+        "hot_charts_max": 216,
+        "hot_charts_mean": 199.16666666666666,
+        "hot_charts_min": 181,
+        "max_chart_load_max": 13,
+        "max_chart_load_mean": 11.166666666666666,
+        "max_chart_load_min": 10,
+        "trials": 60
+      },
+      "routed": {
+        "accepted_max": 2160,
+        "accepted_mean": 2160,
+        "accepted_min": 2160,
+        "backlog_after_one_epoch_max": 0,
+        "backlog_after_one_epoch_mean": 0,
+        "backlog_after_one_epoch_min": 0,
+        "max_chart_load_max": 4,
+        "max_chart_load_mean": 4,
+        "max_chart_load_min": 4,
+        "rejected_max": 0,
+        "rejected_mean": 0,
+        "rejected_min": 0,
+        "trials": 60
+      },
+      "sample_raw": [
+        {
+          "backlog_after_one_epoch": 434,
+          "epochs_needed": 4,
+          "hot_charts": 195,
+          "max_chart_load": 13
+        },
+        {
+          "backlog_after_one_epoch": 421,
+          "epochs_needed": 3,
+          "hot_charts": 207,
+          "max_chart_load": 10
+        },
+        {
+          "backlog_after_one_epoch": 430,
+          "epochs_needed": 3,
+          "hot_charts": 203,
+          "max_chart_load": 10
+        },
+        {
+          "backlog_after_one_epoch": 409,
+          "epochs_needed": 3,
+          "hot_charts": 203,
+          "max_chart_load": 10
+        },
+        {
+          "backlog_after_one_epoch": 421,
+          "epochs_needed": 3,
+          "hot_charts": 207,
+          "max_chart_load": 11
+        }
+      ],
+      "sample_routed": [
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 0
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 0
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 0
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 0
+        },
+        {
+          "accepted": 2160,
+          "backlog_after_one_epoch": 0,
+          "epochs_needed": 1,
+          "max_chart_load": 4,
+          "nonempty_charts": 540,
+          "rejected": 0
+        }
+      ]
+    }
+  },
+  "checks": {
+    "bt1310_verified": true,
+    "overflow_rejects_exact_capacity_excess": true,
+    "raw_1620_random_traffic_has_backlog": true,
+    "raw_2160_random_traffic_has_backlog": true,
+    "raw_540_random_traffic_has_backlog": true,
+    "routed_admitted_cases_have_no_backlog": true,
+    "routed_admitted_cases_need_one_epoch": true,
+    "trial_count_is_substrate_multiple": true
+  },
+  "honesty_boundary": "This is a deterministic stress harness. It does not estimate a real deployment distribution, optical jitter, packet loss, or QoS fairness policy.",
+  "theorem": "BT1314 deterministic traffic stability",
+  "traffic_source": {
+    "kind": "LCG modulo 540",
+    "note": "The source is deterministic, offline, and reproducible. It is used as a pseudo-random stress distribution, not as a model of real optical traffic statistics.",
+    "seed": 1314,
+    "trials": 60
+  },
+  "verified": true
+}

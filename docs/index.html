@@ -20810,6 +20810,23 @@
                 <code>3/4</code> compute, <code>1/4</code> transport, and <code>1:1</code> qutrit/delay balance at
                 every shell depth.</div>
             </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">BT1313&ndash;BT1315 optimality and physical budget</div>
+              <div class="detail">The network-control layer now has engineering certificates. BT1313 proves the
+                entropy router saturates the exact hot-spot lower bounds: a one-chart burst of <code>N</code> packets
+                needs at least <code>ceil(N/4)</code> charts and max cyclic displacement
+                <code>ceil(N/4)-1</code>; for <code>N=540</code> this is <code>135</code> charts, displacement
+                <code>134</code>, and mean displacement <code>67</code>, exactly achieved. BT1314 runs a deterministic
+                traffic harness: raw <code>540</code>-packet randomized traffic has positive mean backlog even at
+                <code>1/4</code> global utilization, while routed admitted bursts at <code>540</code>,
+                <code>1620</code>, and <code>2160</code> packets have zero backlog; <code>2700</code> packets become
+                exact admission, <code>2160</code> accepted and <code>540</code> rejected. BT1315 gives the physical
+                resource interface:
+                <code>C<sub>n</sub>=1620I<sub>n</sub>e<sub>q</sub>+1620I<sub>n</sub>e<sub>d</sub>+1080I<sub>n</sub>e<sub>idle</sub></code>,
+                with detector windows <code>540I<sub>n</sub></code> and mirror slots
+                <code>2160I<sub>n</sub></code>. The substrate fixes the multiplicities; the lab supplies the optical
+                costs.</div>
+            </div>
           </div>
 
           <h3>The &Delta;<sub>27</sub> Connection (SymTFT, 2026)</h3>

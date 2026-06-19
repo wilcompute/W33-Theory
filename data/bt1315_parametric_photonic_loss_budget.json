@@ -1,0 +1,289 @@
+{
+  "architecture_reading": "BT1315 is the physical-budget interface. The substrate fixes the multiplicities, while the lab supplies the calibrated costs. If qutrit-axis and delay-hop pulses are equal-cost, active loss is balanced 1:1 at every depth. If delay hops are more expensive, the formula shows exactly how much compensation the optical layout must provide.",
+  "checks": {
+    "all_levels_detector_to_mirror_is_one_quarter": true,
+    "bt1312_verified": true,
+    "delay_double_base_cost_is_4860": true,
+    "equal_active_base_cost_is_3240": true,
+    "equal_active_cost_keeps_one_to_one_shares": true,
+    "idle_tenth_base_cost_is_3348": true,
+    "level6_detector_windows_match_shell_wave": true,
+    "level6_equal_active_cost_matches_bt1312_active_total": true,
+    "scenario_count_is_three": true
+  },
+  "honesty_boundary": "No optical dB, clock rate, detector efficiency, or GKP threshold is asserted here. Those are experimental inputs to the parametric ledger, not mathematical outputs of W33.",
+  "level_rows": [
+    {
+      "active_total_pulses": 3240,
+      "delay_hop_pulses": 1620,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 540,
+      "idle_windows": 1080,
+      "level": 1,
+      "mirror_slots": 2160,
+      "qutrit_axis_pulses": 1620,
+      "reserved_windows": 4320,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "3240/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "1620/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "4860/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "1620/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "108/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "1620/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "3348/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "1620/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "1620/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "3240/1"
+        }
+      },
+      "w33_instances": 1
+    },
+    {
+      "active_total_pulses": 132840,
+      "delay_hop_pulses": 66420,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 22140,
+      "idle_windows": 44280,
+      "level": 2,
+      "mirror_slots": 88560,
+      "qutrit_axis_pulses": 66420,
+      "reserved_windows": 177120,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "132840/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "66420/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "199260/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "66420/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "4428/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "66420/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "137268/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "66420/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "66420/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "132840/1"
+        }
+      },
+      "w33_instances": 41
+    },
+    {
+      "active_total_pulses": 5316840,
+      "delay_hop_pulses": 2658420,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 886140,
+      "idle_windows": 1772280,
+      "level": 3,
+      "mirror_slots": 3544560,
+      "qutrit_axis_pulses": 2658420,
+      "reserved_windows": 7089120,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "5316840/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "2658420/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "7975260/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "2658420/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "177228/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "2658420/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "5494068/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "2658420/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "2658420/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "5316840/1"
+        }
+      },
+      "w33_instances": 1641
+    },
+    {
+      "active_total_pulses": 212676840,
+      "delay_hop_pulses": 106338420,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 35446140,
+      "idle_windows": 70892280,
+      "level": 4,
+      "mirror_slots": 141784560,
+      "qutrit_axis_pulses": 106338420,
+      "reserved_windows": 283569120,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "212676840/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "106338420/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "319015260/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "106338420/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "7089228/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "106338420/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "219766068/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "106338420/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "106338420/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "212676840/1"
+        }
+      },
+      "w33_instances": 65641
+    },
+    {
+      "active_total_pulses": 8507076840,
+      "delay_hop_pulses": 4253538420,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 1417846140,
+      "idle_windows": 2835692280,
+      "level": 5,
+      "mirror_slots": 5671384560,
+      "qutrit_axis_pulses": 4253538420,
+      "reserved_windows": 11342769120,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "8507076840/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "4253538420/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "12760615260/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "4253538420/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "283569228/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "4253538420/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "8790646068/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "4253538420/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "4253538420/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "8507076840/1"
+        }
+      },
+      "w33_instances": 2625641
+    },
+    {
+      "active_total_pulses": 340283076840,
+      "delay_hop_pulses": 170141538420,
+      "detector_to_mirror_ratio": "1/4",
+      "detector_windows": 56713846140,
+      "idle_windows": 113427692280,
+      "level": 6,
+      "mirror_slots": 226855384560,
+      "qutrit_axis_pulses": 170141538420,
+      "reserved_windows": 453710769120,
+      "scenario_costs": {
+        "delay_double_cost": {
+          "delay_hop_cost": "340283076840/1",
+          "delay_hop_share": "2/3",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "170141538420/1",
+          "qutrit_axis_share": "1/3",
+          "total_first_order_cost": "510424615260/1"
+        },
+        "equal_active_plus_idle_tenth": {
+          "delay_hop_cost": "170141538420/1",
+          "delay_hop_share": "15/31",
+          "idle_cost": "11342769228/1",
+          "idle_share": "1/31",
+          "qutrit_axis_cost": "170141538420/1",
+          "qutrit_axis_share": "15/31",
+          "total_first_order_cost": "351625846068/1"
+        },
+        "equal_active_pulse_cost": {
+          "delay_hop_cost": "170141538420/1",
+          "delay_hop_share": "1/2",
+          "idle_cost": "0/1",
+          "idle_share": "0/1",
+          "qutrit_axis_cost": "170141538420/1",
+          "qutrit_axis_share": "1/2",
+          "total_first_order_cost": "340283076840/1"
+        }
+      },
+      "w33_instances": 105025641
+    }
+  ],
+  "parametric_law": {
+    "detector_windows": "540 I_n",
+    "first_order_cost": "C_n = 1620 I_n e_q + 1620 I_n e_d + 1080 I_n e_idle",
+    "instances": "I_n = (40^n - 1) / 39",
+    "interpretation": "e_q, e_d, and e_idle are device-calibrated costs per qutrit-axis pulse, delay-hop pulse, and idle window.",
+    "mirror_slots": "2160 I_n"
+  },
+  "scenarios": {
+    "delay_double_cost": {
+      "delay_hop_weight": "2/1",
+      "idle_weight": "0/1",
+      "qutrit_axis_weight": "1/1"
+    },
+    "equal_active_plus_idle_tenth": {
+      "delay_hop_weight": "1/1",
+      "idle_weight": "1/10",
+      "qutrit_axis_weight": "1/1"
+    },
+    "equal_active_pulse_cost": {
+      "delay_hop_weight": "1/1",
+      "idle_weight": "0/1",
+      "qutrit_axis_weight": "1/1"
+    }
+  },
+  "theorem": "BT1315 parametric photonic loss budget",
+  "verified": true
+}
