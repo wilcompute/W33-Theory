@@ -1,0 +1,15 @@
+{
+  "bt": 1343,
+  "title": "W33/Q4 claim-stratified master paper",
+  "tex": "paper/w33_q4_claim_stratified_master.tex",
+  "merged_sources": [
+    "paper/w33_q4_diamond_machine_audited_synthesis.tex",
+    "papers/Q4_diamond_machine.tex"
+  ],
+  "claim_classes": ["EXACT", "CERT", "STRUCT", "SIM", "ENG", "SPEC"],
+  "new_certificates_used": [
+    "data/bt1341_q4_gauge_quotient_3244.json",
+    "data/bt1342_hashimoto_falsifier_simulation.json"
+  ],
+  "purpose": "Use the audited Q4 paper as the spine while importing the broader W(3,3)/E8/heptad/Kagome/experimental content as explicitly labeled claim classes."
+}
