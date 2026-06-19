@@ -1,0 +1,38 @@
+{
+  "bt": 1327,
+  "all_exact_checks_pass": false,
+  "failed": [
+    "epoch_lcm_10980"
+  ],
+  "checks": {
+    "q4_vertices_16": true,
+    "q4_edges_32": true,
+    "atlas_540": true,
+    "slots_2160": true,
+    "marker_14641": true,
+    "intersections_3240": true,
+    "syndrome_bits_6480": true,
+    "independent_syndromes_1620": true,
+    "logical_per_revolution_268": true,
+    "spinor_modes_8": true,
+    "waveguide_channels_4320": true,
+    "concat_modes_near_70p8m": true,
+    "epoch_lcm_10980": false
+  },
+  "values": {
+    "q4_vertices": 16,
+    "q4_edges": 32,
+    "atlas_charts": 540,
+    "slots": 2160,
+    "marker_11_to_4": 14641,
+    "intersections": 3240,
+    "syndrome_bits": 6480,
+    "independent_syndromes": 1620,
+    "logical_per_revolution": 268,
+    "spinor_modes": 8,
+    "waveguide_channels": 4320,
+    "concat_modes": 70778880,
+    "literal_lcm_3660_1620": 98820,
+    "claimed_epoch": 10980
+  }
+}
