@@ -20793,6 +20793,23 @@
                 delay-hop windows, but the active full-atlas pulse budget balances exactly,
                 <code>1620:1620=1:1</code>, because the mean apartment-hop count is <code>q=3</code>.</div>
             </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">BT1310&ndash;BT1312 entropy router and recursive ABI</div>
+              <div class="detail">The holonet now has a deterministic network-control law. BT1310 repairs the
+                BT1308 all-to-one collapse by cyclic entropy routing: the same <code>540</code> hot packets that
+                previously required <code>135</code> local epochs are spread across <code>135</code> charts at load
+                <code>4</code>, so they finish in one epoch, while balanced traffic is left at zero displacement.
+                BT1311 makes the admission boundary exact:
+                <code>admitted=min(total,2160)</code> and <code>spill=max(0,total-2160)</code> per W33 instance.
+                A depth-6 shell wave has <code>105025641&times;540</code> packets; serialized through one bus this is
+                <code>26256411</code> epochs, but with recursive capacity
+                <code>2160&times;105025641</code> it is admitted in one epoch at <code>1/4</code> utilization.
+                BT1312 proves the pulse vector is a recursive ABI:
+                <code>(1620I<sub>n</sub>,1620I<sub>n</sub>)</code> with
+                <code>I<sub>n</sub>=(40<sup>n</sup>-1)/39</code>, preserving
+                <code>3/4</code> compute, <code>1/4</code> transport, and <code>1:1</code> qutrit/delay balance at
+                every shell depth.</div>
+            </div>
           </div>
 
           <h3>The &Delta;<sub>27</sub> Connection (SymTFT, 2026)</h3>

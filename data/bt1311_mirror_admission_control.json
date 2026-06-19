@@ -1,0 +1,93 @@
+{
+  "admission_cases": {
+    "balanced_atlas": {
+      "admitted_epoch_0": 540,
+      "arrival_packets": 540,
+      "epochs_needed": 1,
+      "final_epoch_packets": 540,
+      "first_epoch_utilization": "1/4",
+      "spill_after_epoch_0": 0
+    },
+    "double_epoch": {
+      "admitted_epoch_0": 2160,
+      "arrival_packets": 4320,
+      "epochs_needed": 2,
+      "final_epoch_packets": 2160,
+      "first_epoch_utilization": "1/1",
+      "spill_after_epoch_0": 2160
+    },
+    "double_plus_one": {
+      "admitted_epoch_0": 2160,
+      "arrival_packets": 4321,
+      "epochs_needed": 3,
+      "final_epoch_packets": 1,
+      "first_epoch_utilization": "1/1",
+      "spill_after_epoch_0": 2161
+    },
+    "first_overflow": {
+      "admitted_epoch_0": 2160,
+      "arrival_packets": 2700,
+      "epochs_needed": 2,
+      "final_epoch_packets": 540,
+      "first_epoch_utilization": "1/1",
+      "spill_after_epoch_0": 540
+    },
+    "level6_one_packet_per_chart_serialized": {
+      "admitted_epoch_0": 2160,
+      "arrival_packets": 56713846140,
+      "epochs_needed": 26256411,
+      "final_epoch_packets": 540,
+      "first_epoch_utilization": "1/1",
+      "spill_after_epoch_0": 56713843980
+    },
+    "q_per_chart": {
+      "admitted_epoch_0": 1620,
+      "arrival_packets": 1620,
+      "epochs_needed": 1,
+      "final_epoch_packets": 1620,
+      "first_epoch_utilization": "3/4",
+      "spill_after_epoch_0": 0
+    },
+    "saturated": {
+      "admitted_epoch_0": 2160,
+      "arrival_packets": 2160,
+      "epochs_needed": 1,
+      "final_epoch_packets": 2160,
+      "first_epoch_utilization": "1/1",
+      "spill_after_epoch_0": 0
+    }
+  },
+  "admission_law": {
+    "admitted_per_epoch": "min(backlog + arrivals, 2160)",
+    "capacity_per_instance_per_epoch": 2160,
+    "epochs_needed": "ceil(total_packets / 2160)",
+    "parallel_scaling_note": "A recursive holonet does not have to serialize all instances through one bus. With I_n instances, capacity is 2160 I_n.",
+    "spill": "max(0, backlog + arrivals - 2160)"
+  },
+  "architecture_reading": "BT1311 separates local admission from global serialization. One W33 instance admits at most 2160 packets per mirror epoch; a recursive shell admits 2160 times its W33 instance count in parallel. The controller therefore rejects or defers overflow without changing the BT1310 in-epoch router.",
+  "checks": {
+    "balanced_admits_one_quarter": true,
+    "bt1310_verified": true,
+    "double_epoch_has_no_final_spill": true,
+    "double_plus_one_needs_third_epoch": true,
+    "first_overflow_spills_one_atlas": true,
+    "level6_parallel_shell_admits_in_one_epoch": true,
+    "level6_serialization_cost_is_exact": true,
+    "q_per_chart_admits_three_quarters": true,
+    "saturated_admits_full_epoch": true
+  },
+  "honesty_boundary": "BT1311 is deterministic admission arithmetic. It does not model random arrivals, QoS policy, physical buffering, or packet loss.",
+  "parallel_admission_cases": {
+    "level6_one_packet_per_chart_parallel": {
+      "admitted_epoch_0": 56713846140,
+      "arrival_packets": 56713846140,
+      "epochs_needed": 1,
+      "first_epoch_utilization": "1/4",
+      "parallel_capacity": 226855384560,
+      "spill_after_epoch_0": 0,
+      "w33_instances": 105025641
+    }
+  },
+  "theorem": "BT1311 mirror admission-control law",
+  "verified": true
+}

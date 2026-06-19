@@ -1,0 +1,694 @@
+{
+  "architecture_reading": "BT1310 repairs the BT1308 all-to-one failure without disturbing balanced traffic. The router preserves chart entropy when it is already present, and injects entropy only when a hot spot would exceed local four-slot mirror service.",
+  "checks": {
+    "admitted_cases_never_exceed_service": true,
+    "all_to_one_540_packets_repaired_to_one_epoch": true,
+    "balanced_traffic_unchanged": true,
+    "bt1308_verified": true,
+    "over_capacity_rejects_exactly_one_per_chart": true,
+    "q_per_chart_traffic_unchanged": true,
+    "router_capacity_is_2160": true,
+    "saturated_traffic_unchanged": true,
+    "single_hot_boundary_admitted_in_one_epoch": true
+  },
+  "honesty_boundary": "BT1310 is deterministic slot routing. It does not model online arrival races, analog switching time, packet loss, or adaptive path choice inside the optical fabric.",
+  "routed_cases": {
+    "all_to_one_collapse": {
+      "accepted": 540,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 4,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 5,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 6,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 7,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 2,
+          "packet_id": 8,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 2,
+          "packet_id": 9,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 2,
+          "packet_id": 10,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 2,
+          "packet_id": 11,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 3,
+          "packet_id": 12,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 3,
+          "packet_id": 13,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 3,
+          "packet_id": 14,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 3,
+          "packet_id": 15,
+          "requested_chart": 0
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "0": 405,
+        "4": 135
+      },
+      "max_chart_load": 4,
+      "max_displacement": 134,
+      "mean_displacement": 67,
+      "nonempty_charts": 135,
+      "rejected": 0,
+      "zero_displacement_packets": 4
+    },
+    "balanced_atlas": {
+      "accepted": 540,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 4,
+          "cyclic_displacement": 0,
+          "packet_id": 4,
+          "requested_chart": 4
+        },
+        {
+          "assigned_chart": 5,
+          "cyclic_displacement": 0,
+          "packet_id": 5,
+          "requested_chart": 5
+        },
+        {
+          "assigned_chart": 6,
+          "cyclic_displacement": 0,
+          "packet_id": 6,
+          "requested_chart": 6
+        },
+        {
+          "assigned_chart": 7,
+          "cyclic_displacement": 0,
+          "packet_id": 7,
+          "requested_chart": 7
+        },
+        {
+          "assigned_chart": 8,
+          "cyclic_displacement": 0,
+          "packet_id": 8,
+          "requested_chart": 8
+        },
+        {
+          "assigned_chart": 9,
+          "cyclic_displacement": 0,
+          "packet_id": 9,
+          "requested_chart": 9
+        },
+        {
+          "assigned_chart": 10,
+          "cyclic_displacement": 0,
+          "packet_id": 10,
+          "requested_chart": 10
+        },
+        {
+          "assigned_chart": 11,
+          "cyclic_displacement": 0,
+          "packet_id": 11,
+          "requested_chart": 11
+        },
+        {
+          "assigned_chart": 12,
+          "cyclic_displacement": 0,
+          "packet_id": 12,
+          "requested_chart": 12
+        },
+        {
+          "assigned_chart": 13,
+          "cyclic_displacement": 0,
+          "packet_id": 13,
+          "requested_chart": 13
+        },
+        {
+          "assigned_chart": 14,
+          "cyclic_displacement": 0,
+          "packet_id": 14,
+          "requested_chart": 14
+        },
+        {
+          "assigned_chart": 15,
+          "cyclic_displacement": 0,
+          "packet_id": 15,
+          "requested_chart": 15
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "1": 540
+      },
+      "max_chart_load": 1,
+      "max_displacement": 0,
+      "mean_displacement": 0,
+      "nonempty_charts": 540,
+      "rejected": 0,
+      "zero_displacement_packets": 540
+    },
+    "over_capacity_five_per_chart": {
+      "accepted": 2160,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 4,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 5,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 6,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 7,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 1,
+          "packet_id": 8,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 1,
+          "packet_id": 9,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 10,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 11,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 1,
+          "packet_id": 12,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 1,
+          "packet_id": 13,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 1,
+          "packet_id": 14,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 15,
+          "requested_chart": 3
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "4": 540
+      },
+      "max_chart_load": 4,
+      "max_displacement": 108,
+      "mean_displacement": 54,
+      "nonempty_charts": 540,
+      "rejected": 540,
+      "zero_displacement_packets": 10
+    },
+    "q_per_chart": {
+      "accepted": 1620,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 4,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 5,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 6,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 7,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 8,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 9,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 10,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 11,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 4,
+          "cyclic_displacement": 0,
+          "packet_id": 12,
+          "requested_chart": 4
+        },
+        {
+          "assigned_chart": 4,
+          "cyclic_displacement": 0,
+          "packet_id": 13,
+          "requested_chart": 4
+        },
+        {
+          "assigned_chart": 4,
+          "cyclic_displacement": 0,
+          "packet_id": 14,
+          "requested_chart": 4
+        },
+        {
+          "assigned_chart": 5,
+          "cyclic_displacement": 0,
+          "packet_id": 15,
+          "requested_chart": 5
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "3": 540
+      },
+      "max_chart_load": 3,
+      "max_displacement": 0,
+      "mean_displacement": 0,
+      "nonempty_charts": 540,
+      "rejected": 0,
+      "zero_displacement_packets": 1620
+    },
+    "saturated_q_plus_1": {
+      "accepted": 2160,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 4,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 5,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 6,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 7,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 8,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 9,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 10,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 11,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 12,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 13,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 14,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 15,
+          "requested_chart": 3
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "4": 540
+      },
+      "max_chart_load": 4,
+      "max_displacement": 0,
+      "mean_displacement": 0,
+      "nonempty_charts": 540,
+      "rejected": 0,
+      "zero_displacement_packets": 2160
+    },
+    "single_hot_chart_boundary": {
+      "accepted": 544,
+      "assignments_sample": [
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 0,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 1,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 2,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 0,
+          "cyclic_displacement": 0,
+          "packet_id": 3,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 1,
+          "packet_id": 4,
+          "requested_chart": 0
+        },
+        {
+          "assigned_chart": 1,
+          "cyclic_displacement": 0,
+          "packet_id": 5,
+          "requested_chart": 1
+        },
+        {
+          "assigned_chart": 2,
+          "cyclic_displacement": 0,
+          "packet_id": 6,
+          "requested_chart": 2
+        },
+        {
+          "assigned_chart": 3,
+          "cyclic_displacement": 0,
+          "packet_id": 7,
+          "requested_chart": 3
+        },
+        {
+          "assigned_chart": 4,
+          "cyclic_displacement": 0,
+          "packet_id": 8,
+          "requested_chart": 4
+        },
+        {
+          "assigned_chart": 5,
+          "cyclic_displacement": 0,
+          "packet_id": 9,
+          "requested_chart": 5
+        },
+        {
+          "assigned_chart": 6,
+          "cyclic_displacement": 0,
+          "packet_id": 10,
+          "requested_chart": 6
+        },
+        {
+          "assigned_chart": 7,
+          "cyclic_displacement": 0,
+          "packet_id": 11,
+          "requested_chart": 7
+        },
+        {
+          "assigned_chart": 8,
+          "cyclic_displacement": 0,
+          "packet_id": 12,
+          "requested_chart": 8
+        },
+        {
+          "assigned_chart": 9,
+          "cyclic_displacement": 0,
+          "packet_id": 13,
+          "requested_chart": 9
+        },
+        {
+          "assigned_chart": 10,
+          "cyclic_displacement": 0,
+          "packet_id": 14,
+          "requested_chart": 10
+        },
+        {
+          "assigned_chart": 11,
+          "cyclic_displacement": 0,
+          "packet_id": 15,
+          "requested_chart": 11
+        }
+      ],
+      "epochs_needed": 1,
+      "load_histogram": {
+        "1": 538,
+        "2": 1,
+        "4": 1
+      },
+      "max_chart_load": 4,
+      "max_displacement": 1,
+      "mean_displacement": 0.001838235294117647,
+      "nonempty_charts": 540,
+      "rejected": 0,
+      "zero_displacement_packets": 543
+    }
+  },
+  "router": {
+    "capacity": 2160,
+    "charts": 540,
+    "rule": "For each requested chart c, assign the packet to the first cyclic chart c+d with load below 4. Reject only when all 2160 local slots are occupied.",
+    "service_slots_per_chart": 4
+  },
+  "theorem": "BT1310 entropy-preserving mirror router",
+  "verified": true
+}

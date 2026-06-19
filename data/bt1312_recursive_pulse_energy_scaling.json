@@ -1,0 +1,97 @@
+{
+  "architecture_reading": "BT1312 proves the pulse budget is a true recursive ABI. The holonet can grow by W33 shell substitution without changing the active qutrit-axis/delay-hop balance or the 3/4 compute, 1/4 transport utilization pattern.",
+  "checks": {
+    "all_levels_keep_one_quarter_idle": true,
+    "all_levels_keep_one_to_one_active_balance": true,
+    "all_levels_keep_three_quarter_compute": true,
+    "base_active_families_balanced": true,
+    "bt1309_verified": true,
+    "bt1311_verified": true,
+    "level6_instance_count_matches_bt1305": true,
+    "level6_pulse_vector_is_scaled_base": true
+  },
+  "honesty_boundary": "BT1312 counts symbolic control pulses. Equal pulse counts are not a claim of equal optical energy, equal loss, or thermodynamic zero cost in a physical device.",
+  "scale_law": {
+    "active_pulse_vector": "(1620 I_n, 1620 I_n)",
+    "idle_windows": "1080 I_n",
+    "interpretation": "Recursive growth multiplies the balanced local control vector without changing its ratios.",
+    "reserved_windows": "4320 I_n",
+    "w33_instances": "I_n = (40^n - 1) / 39"
+  },
+  "scaling_rows": [
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 3240,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 1620,
+      "idle_windows": 1080,
+      "level": 1,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 1620,
+      "reserved_windows": 4320,
+      "w33_instances": 1
+    },
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 132840,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 66420,
+      "idle_windows": 44280,
+      "level": 2,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 66420,
+      "reserved_windows": 177120,
+      "w33_instances": 41
+    },
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 5316840,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 2658420,
+      "idle_windows": 1772280,
+      "level": 3,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 2658420,
+      "reserved_windows": 7089120,
+      "w33_instances": 1641
+    },
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 212676840,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 106338420,
+      "idle_windows": 70892280,
+      "level": 4,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 106338420,
+      "reserved_windows": 283569120,
+      "w33_instances": 65641
+    },
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 8507076840,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 4253538420,
+      "idle_windows": 2835692280,
+      "level": 5,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 4253538420,
+      "reserved_windows": 11342769120,
+      "w33_instances": 2625641
+    },
+    {
+      "active_family_ratio": "1:1",
+      "active_total_pulses": 340283076840,
+      "compute_utilization": "3/4",
+      "delay_hop_pulses": 170141538420,
+      "idle_windows": 113427692280,
+      "level": 6,
+      "mirror_transport_utilization": "1/4",
+      "qutrit_axis_pulses": 170141538420,
+      "reserved_windows": 453710769120,
+      "w33_instances": 105025641
+    }
+  ],
+  "theorem": "BT1312 recursive pulse-energy scaling",
+  "verified": true
+}
