@@ -1,0 +1,35 @@
+{
+  "bt": 1287,
+  "title": "Recovery packet release manifest",
+  "release_target": "v1.0.0",
+  "recent_release_prep_commit": "6319e97866726d11db4670466c9574538477045c",
+  "strict_target": "diam14_polar_path",
+  "strict_certificate": "data/bt1275_strict_polar_path_recovery_certificate.json",
+  "verification_summary": "data/bt1281_recovery_certificate_verification_summary.json",
+  "packet_index": "data/bt1279_recovery_packet_index.json",
+  "schema": "schema/bt1269_tomography_candidate.schema.json",
+  "docs": [
+    "docs/recovery_packet_landing.md",
+    "docs/recovery_packet_guide.md"
+  ],
+  "tools": [
+    "tools/bt1272_score_candidate.py",
+    "tools/bt1274_batch_score_candidates.py",
+    "tools/bt1281_verify_recovery_certificate.py",
+    "tools/integrate_bt1282_recovery_packet_insert.py"
+  ],
+  "tests": [
+    "tests/test_bt1269_bt1272_external_candidates.py",
+    "tests/test_bt1274_bt1276_recovery_packet.py",
+    "tests/test_bt1280_bt1282_recovery_docs.py"
+  ],
+  "workflows": [
+    ".github/workflows/recovery-packet.yml"
+  ],
+  "expected_outputs": {
+    "certificate_verified": true,
+    "batch_band_counts": {"pass": 1, "review": 1, "fail": 2},
+    "strict_score_out_of_5": 5
+  },
+  "release_note": "For v1.0.0, include the recovery packet as a reproducibility artifact alongside the paper-build and Zenodo metadata."
+}
