@@ -97,7 +97,7 @@ One photon carries W(3,3) twice — as the 40 Witting rays of its path⊗polariz
 **Physics** (from BT407):
 
 | # | Prediction | Value | Experiment | Timeline |
-|---|---|---|---|
+|---|---|---|---|---|
 | 1 | Dark matter mass | **4.0 TeV** | FCC-hh | 2040s |
 | 2 | Right-handed neutrino | **0.25 MeV** | 0νββ | 2030s |
 | 3 | Neutrino hierarchy | **NORMAL** | JUNO/KATRIN | **2027** |
@@ -110,7 +110,7 @@ One photon carries W(3,3) twice — as the 40 Witting rays of its path⊗polariz
 **Machine** (tabletop quantum optics, from the Holonet paper — every row a kill criterion):
 
 | # | Witness | Predicted value | Substrate form |
-|---|---|---|
+|---|---|---|---|
 | 9 | Trace–Choi visibility of F₃ | 1/3 | 1/q |
 | 10 | Trace–Choi visibility of X, Z | 0 | — |
 | 11 | Kochen–Specker classical budget | 36/40 (exact) | (q!)²/v |
@@ -139,3 +139,48 @@ self_entanglement_companion.tex   temporal Bell qutrit companion
 W33_FOR_EVERYONE.tex     accessible exposition
 w33_paper.tex            master manuscript
 ```
+
+**Verification:** every claim has an executable witness. Run any packet directly, e.g.
+
+```bash
+python analysis/bt825_universality_theorem.py   # Clifford closure = 51840
+python analysis/bt823_the_closure.py            # exact KS max = 36/40
+python -m pytest tests/                         # focused suites
+```
+
+Group-theoretic facts carry GAP witnesses (`.tmp/gap_*.g` patterns documented in the scripts).
+
+---
+
+## The Corrections Ethos
+
+This corpus heals itself. Two long-standing claims failed under exact computation and were **corrected at their sources** (BT818/BT823/BT824): the independence number of W(3,3) is **7 = Φ₆** (beacon heptads; no ovoid exists — the former "perfect graph" block is withdrawn), and the Witting Kochen–Specker optimum is **36/40**, not 34/40. In both cases the corrected values are *more* substrate-natural than the claims they replaced — the signature of a real structure probed honestly.
+
+---
+
+## Citation
+
+```bibtex
+@misc{Dahn2026W33,
+  author = {Dahn, Wil},
+  title  = {Deriving the Standard Model from the W(3,3) Substrate:
+             45+ Observables from Three Primitives},
+  year   = {2026},
+  url    = {https://github.com/wilcompute/W33-Theory},
+  note   = {arXiv submission in preparation}
+}
+
+@misc{Dahn2026Holonet,
+  author = {Dahn, Wil},
+  title  = {The Photonic Holonet: A Single Self-Entangled Photon as
+             Universal Computer, Universal Network, and Clock},
+  year   = {2026},
+  url    = {https://github.com/wilcompute/W33-Theory},
+  note   = {machine-verified edition; see photonic\_holonet.pdf}
+}
+```
+
+---
+
+*Developed by Wil Dahn with AI research agents (Claude, Perplexity, Codex), 2026.*
+*All code open source. Repository: https://github.com/wilcompute/W33-Theory*
