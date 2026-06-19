@@ -1,0 +1,63 @@
+{
+  "bt": 1339,
+  "title": "Optical loss and crosstalk budget simulator",
+  "verified": true,
+  "checks": {
+    "conservative_loss_passes": true,
+    "conservative_crosstalk_passes": true,
+    "aggressive_loss_passes": true,
+    "aggressive_crosstalk_passes": true,
+    "base_channels_4320_inherited": true
+  },
+  "scenarios": {
+    "conservative": {
+      "name": "conservative",
+      "parameters": {
+        "path_length_cm": 1.0,
+        "prop_loss_db_per_cm": 1.0,
+        "bends": 16,
+        "bend_loss_db": 0.02,
+        "crossings": 20,
+        "crossing_loss_db": 0.01,
+        "phase_shifters": 8,
+        "phase_shifter_loss_db": 0.1,
+        "splitters": 4,
+        "splitter_excess_loss_db": 0.05,
+        "pair_crosstalk_db": -35.0,
+        "crosstalk_neighbors": 12,
+        "loss_budget_db": 3.0,
+        "aggregate_crosstalk_budget_db": -20.0
+      },
+      "total_loss_db": 2.52,
+      "transmission": 0.5592822938771623,
+      "aggregate_crosstalk_db": -24.208187539523752,
+      "passes_loss_budget": true,
+      "passes_crosstalk_budget": true
+    },
+    "aggressive": {
+      "name": "aggressive",
+      "parameters": {
+        "path_length_cm": 0.6,
+        "prop_loss_db_per_cm": 0.3,
+        "bends": 8,
+        "bend_loss_db": 0.005,
+        "crossings": 8,
+        "crossing_loss_db": 0.002,
+        "phase_shifters": 4,
+        "phase_shifter_loss_db": 0.03,
+        "splitters": 4,
+        "splitter_excess_loss_db": 0.02,
+        "pair_crosstalk_db": -45.0,
+        "crosstalk_neighbors": 12,
+        "loss_budget_db": 1.0,
+        "aggregate_crosstalk_budget_db": -25.0
+      },
+      "total_loss_db": 0.436,
+      "transmission": 0.9045144176490208,
+      "aggregate_crosstalk_db": -34.20818753952375,
+      "passes_loss_budget": true,
+      "passes_crosstalk_budget": true
+    }
+  },
+  "boundary": "This is a parametric budget gate, not a PDK simulation. A foundry-ready result needs routed layout extraction and wavelength-dependent S-parameter simulation."
+}
