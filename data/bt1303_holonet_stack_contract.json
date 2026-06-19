@@ -1,0 +1,180 @@
+{
+  "architecture_reading": "The holonet is now a stack machine. A single carrier executes 8-tick words; six words form the tomotope body; three more words close the local-lift parity epilogue; thirty 72-tick frames form the 2160-slot mirror bus; twenty-four bus epochs form the 51840 Clifford supercycle; recursive W33 shells scale routing as 8n.",
+  "checks": {
+    "atlas_table_matches_stack_chart_layer": true,
+    "body_epilogue_frame_identity": true,
+    "bt1299_verified": true,
+    "bt1300_verified": true,
+    "bt1301_verified": true,
+    "bt1302_verified": true,
+    "bt827_loaded": true,
+    "level_6_fills_tomotope_body": true,
+    "level_9_fills_microframe": true,
+    "mirror_bus_is_30_frames": true,
+    "mirror_bus_is_540_by_4": true,
+    "parity_table_matches_stack_recovery_layer": true,
+    "stack_layer_sizes_are_ordered": true,
+    "supercycle_is_24_mirror_epochs": true,
+    "supercycle_is_720_frames": true
+  },
+  "exact_handoffs": {
+    "fractal_route": "level n route bound = 8n; level 6 fills the body, level 9 fills the frame",
+    "microframe": "72 = q^2 * 2^q = 48 + 24",
+    "mirror_bus": "2160 = 30 * 72 = 540 * 4",
+    "parity_epilogue": "24 = q * 2^q = 3 route words = 18 payload + 6 parity",
+    "route_word": "8 = 2^q ticks",
+    "supercycle": "51840 = 24 * 2160 = 720 * 72",
+    "tomotope_body": "48 = q! * 2^q = 6 route words"
+  },
+  "fractal_route_table": [
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "8/72",
+      "leaf_cores": 40,
+      "level": 1,
+      "route_ticks": 8,
+      "words": 1
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "16/72",
+      "leaf_cores": 1600,
+      "level": 2,
+      "route_ticks": 16,
+      "words": 2
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "24/72",
+      "leaf_cores": 64000,
+      "level": 3,
+      "route_ticks": 24,
+      "words": 3
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "32/72",
+      "leaf_cores": 2560000,
+      "level": 4,
+      "route_ticks": 32,
+      "words": 4
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "40/72",
+      "leaf_cores": 102400000,
+      "level": 5,
+      "route_ticks": 40,
+      "words": 5
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": true,
+      "frame_fraction": "48/72",
+      "leaf_cores": 4096000000,
+      "level": 6,
+      "route_ticks": 48,
+      "words": 6
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": false,
+      "frame_fraction": "56/72",
+      "leaf_cores": 163840000000,
+      "level": 7,
+      "route_ticks": 56,
+      "words": 7
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": false,
+      "frame_fraction": "64/72",
+      "leaf_cores": 6553600000000,
+      "level": 8,
+      "route_ticks": 64,
+      "words": 8
+    },
+    {
+      "fits_microframe": true,
+      "fits_tomotope_body": false,
+      "frame_fraction": "72/72",
+      "leaf_cores": 262144000000000,
+      "level": 9,
+      "route_ticks": 72,
+      "words": 9
+    }
+  ],
+  "honesty_boundary": "BT1303 is a finite stack contract and scaling law. It does not yet model queueing, simultaneous packet contention, analog GKP noise, or hardware loss.",
+  "stack_layers": [
+    {
+      "layer": 0,
+      "name": "carrier",
+      "role": "physical operand and holonomic carrier",
+      "size": 1,
+      "unit": "one self-entangled qutrit photon"
+    },
+    {
+      "layer": 1,
+      "name": "micro_op_word",
+      "role": "3 ternary XOR ticks plus 5 apartment-hop ticks",
+      "size": 8,
+      "unit": "route digit"
+    },
+    {
+      "layer": 2,
+      "name": "atlas_ingress",
+      "role": "one compiled ingress word for every chart",
+      "size": 540,
+      "unit": "full chart-atlas route table"
+    },
+    {
+      "layer": 3,
+      "name": "tomotope_packet_body",
+      "role": "executable tomotope packet body",
+      "size": 48,
+      "unit": "six route digits"
+    },
+    {
+      "layer": 4,
+      "name": "parity_epilogue",
+      "role": "18 residual payload ticks plus 6 parity reroute lanes",
+      "size": 24,
+      "unit": "three route digits"
+    },
+    {
+      "layer": 5,
+      "name": "oscillator_microframe",
+      "role": "one [72,66]_3 instruction frame",
+      "size": 72,
+      "unit": "nine route digits"
+    },
+    {
+      "layer": 6,
+      "name": "mirror_bus_epoch",
+      "role": "D12 mirror-bus epoch, also 540 charts times four transversals",
+      "size": 2160,
+      "unit": "thirty microframes"
+    },
+    {
+      "layer": 7,
+      "name": "clifford_supercycle",
+      "role": "complete Sp(4,3) two-qutrit Clifford runtime",
+      "size": 51840,
+      "unit": "twenty-four mirror epochs"
+    },
+    {
+      "layer": 8,
+      "name": "fractal_shell",
+      "role": "universal network scaling with route bound 8n",
+      "size": "40^n leaves",
+      "unit": "recursive W33 shell"
+    }
+  ],
+  "theorem": "BT1303 holonet stack contract",
+  "verified": true
+}
