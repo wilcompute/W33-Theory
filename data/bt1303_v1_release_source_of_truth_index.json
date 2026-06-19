@@ -16,23 +16,36 @@
     "data/bt1298_v1_release_gate_matrix.json",
     "data/bt1287_recovery_packet_release_manifest.json",
     "data/bt1279_recovery_packet_index.json",
-    "data/bt1291_release_packet_verification_summary.json"
+    "data/bt1291_release_packet_verification_summary.json",
+    "data/bt1332_paper_build_manifest.json",
+    "data/bt1334_gk_threshold_capacity_gate.json",
+    "data/bt1335_foundry_layout_feasibility_gate.json",
+    "data/bt1336_erasure_distance_benchmark.json"
   ],
   "runner": "tools/bt1299_run_v1_release_gates.sh",
   "verifiers": [
     "tools/bt1281_verify_recovery_certificate.py",
     "tools/bt1291_verify_release_packet.py",
     "tools/bt1296_verify_release_readiness_badge.py",
-    "tools/bt1300_verify_paper_build_handshake.py"
+    "tools/bt1300_verify_paper_build_handshake.py",
+    "tools/bt1334_gk_threshold_capacity_gate.py",
+    "tools/bt1335_foundry_layout_feasibility_gate.py",
+    "tools/bt1336_erasure_distance_benchmark.py"
   ],
   "workflows": [
     ".github/workflows/recovery-packet.yml",
-    ".github/workflows/paper-build.yml"
+    ".github/workflows/paper-build.yml",
+    ".github/workflows/q4-diamond-paper.yml"
   ],
   "paper": {
     "source": "paper/w33_preprint.tex",
     "artifact": "paper/w33_preprint.pdf",
     "workflow": ".github/workflows/paper-build.yml"
+  },
+  "q4_diamond_paper": {
+    "source": "paper/w33_q4_diamond_machine_audited_synthesis.tex",
+    "workflow": ".github/workflows/q4-diamond-paper.yml",
+    "manifest": "data/bt1332_paper_build_manifest.json"
   },
   "recovery_packet": {
     "strict_target": "diam14_polar_path",
@@ -46,6 +59,9 @@
     "readiness_badge_verified": true,
     "paper_build_handshake_verified": true,
     "candidate_bands": {"pass": 1, "review": 1, "fail": 2},
-    "strict_score_out_of_5": 5
+    "strict_score_out_of_5": 5,
+    "q4_diamond_paper_compiled": true,
+    "threshold_capacity_gate_verified": true,
+    "foundry_layout_gate_verified": true
   }
 }
