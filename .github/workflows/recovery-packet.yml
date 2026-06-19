@@ -24,6 +24,9 @@ jobs:
       - name: Verify unified release packet
         run: |
           python tools/bt1291_verify_release_packet.py
+      - name: Verify release readiness badge
+        run: |
+          python tools/bt1296_verify_release_readiness_badge.py
       - name: Run recovery packet tests
         run: |
-          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py
+          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py tests/test_bt1295_bt1296_readiness_badge.py
