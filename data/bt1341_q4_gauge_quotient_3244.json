@@ -1,0 +1,29 @@
+{
+  "bt": 1341,
+  "title": "Q4 gauge quotient certificate for [[32,4,4]]",
+  "verified": true,
+  "n": 32,
+  "rank_hx": 15,
+  "rank_hz": 13,
+  "k": 4,
+  "dx": 4,
+  "dz": 4,
+  "checks": {
+    "raw_cycle_rank_17": true,
+    "hx_rank_15": true,
+    "hz_rank_13": true,
+    "commutes": true,
+    "quotient_rank_4": true,
+    "quotient_avoids_all_weight_lt4_dual_logicals": true,
+    "k_is_4": true,
+    "x_distance_4": true,
+    "z_distance_4": true
+  },
+  "quotient_functionals_hex": ["0x79b8", "0x7a2e", "0x9ea1", "0xada0"],
+  "kernel_coordinate_basis_hex": ["0xe001", "0xe202", "0xe204", "0x4008", "0xa210", "0xc020", "0x40", "0x2280", "0xc300", "0x8400", "0xc800", "0xb000", "0x10000"],
+  "hz_rows_hex": ["0x700b624c", "0x710b4556", "0x710b247a", "0x2001d860", "0x510fbf50", "0x60194003", "0x200085", "0x11423449", "0x6189d460", "0x420b8180", "0x64095680", "0x5803bc00", "0x800e0000"],
+  "x_weight4_witness_edges": [6, 8, 13, 15],
+  "z_weight4_witness_edges": [0, 1, 12, 20],
+  "bad_weight_lt4_dual_functional_count": 4032,
+  "interpretation": "A four-functional gauge quotient of the Q4 cycle space yields 13 independent Z checks. Together with the 15 vertex/star X checks this gives [[32,4,4]]. This is a gauge quotient certificate; a geometric torus drawing is a further interpretation layer."
+}
