@@ -25,13 +25,26 @@ stabilizer size = 1
 
 So the quotient is valid but generic under the full Q4 cube symmetry.
 
-Canonical orbit representative:
+Canonical orbit representative, recorded as the full 16-element quotient span
+rather than a noncanonical choice of four basis rows:
 
 ```text
+0x0
 0x23
 0x1ec9
+0x1eea
 0x2c96
-0x4974
+0x2cb5
+0x325f
+0x327c
+0x4984
+0x49a7
+0x574d
+0x576e
+0x6512
+0x6531
+0x7bdb
+0x7bf8
 ```
 
 ## Interpretation

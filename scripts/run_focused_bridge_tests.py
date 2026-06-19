@@ -13,7 +13,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 SUITES: dict[str, list[str]] = {
@@ -28,6 +27,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_qec_ouroboros_stabilizer_loop_ccccxvii.py",
         "tests/test_fusion_control_scheduler_splice_ccccxxvi.py",
         "tests/test_photonic_harmonic_tqc_bus_ccccxviii.py",
+        "tests/test_bt1362_symmetric_q4_gauge_quotient.py",
         "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "dcc-weld": [
@@ -157,7 +157,9 @@ def expand_suites(names: list[str]) -> list[str]:
             continue
         if name not in SUITES:
             known = sorted([*SUITES, *ALIASES])
-            raise SystemExit(f"Unknown suite {name!r}. Known suites: {', '.join(known)}")
+            raise SystemExit(
+                f"Unknown suite {name!r}. Known suites: {', '.join(known)}"
+            )
         selected.extend(SUITES[name])
 
     deduped: list[str] = []
@@ -214,7 +216,9 @@ def main(argv: list[str] | None = None) -> int:
     paths = expand_suites(args.suite)
     missing = [path for path in paths if not (ROOT / path).exists()]
     if missing:
-        raise SystemExit("Missing test files:\n" + "\n".join(f"  {path}" for path in missing))
+        raise SystemExit(
+            "Missing test files:\n" + "\n".join(f"  {path}" for path in missing)
+        )
 
     command = build_pytest_command(paths, extra_pytest_args)
     print("Running:", " ".join(command), flush=True)

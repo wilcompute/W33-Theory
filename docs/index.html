@@ -23247,6 +23247,19 @@
           protected <code>[8,4,4]</code> Hamming router; globally it plugs into the
           <code>540&times;4=2160</code> D12 mirror bus rather than replacing the 540-chart Q3 atlas.</p>
 
+        <h4>BT1362: the Q4 quotient can carry a cyclic axis clock</h4>
+        <p><a href="../analysis/BT1362_symmetric_q4_gauge_quotient.md">BT1362</a> upgrades the local
+          <code>[[32,4,4]]</code> Q4 gauge certificate. The original BT1341 quotient remains valid, but its active
+          Q4 automorphism stabilizer is trivial. The new quotient keeps the same ranks and distances while preserving
+          <code>C2<sup>4</sup> : C4</code>: all sixteen Q4 translations together with a cyclic order-four rotation of
+          the coordinate axes.</p>
+        <p>This turns the 4-by-4 toroidal-square router into a clocked object instead of a generic quotient. The full
+          Q4 automorphism group has order <code>384</code>; the symmetric quotient has stabilizer
+          <code>64</code> and orbit <code>6</code>, so the six residual choices are exactly the six cyclic orderings of
+          the four hypercube axes. The boundary is explicit: this proves a finite binary Q4 quotient clock, while the
+          objectwise lift into the Q6 tomotope flag bus and the <code>2160</code> D12 G-set remains the next
+          intertwiner.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

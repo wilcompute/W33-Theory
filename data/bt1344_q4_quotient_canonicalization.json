@@ -8,9 +8,51 @@
     "trivial_stabilizer": true,
     "full_orbit_384": true
   },
-  "original_subspace_key_hex": ["0x396", "0x3301", "0x4ab9", "0x9ea1"],
-  "canonical_orbit_key_hex": ["0x23", "0x1ec9", "0x2c96", "0x4974"],
-  "canonical_automorphism": {"perm": [3, 1, 2, 0], "flip": 1},
+  "original_subspace_key_hex": [
+    "0x0",
+    "0x396",
+    "0x3097",
+    "0x3301",
+    "0x492f",
+    "0x4ab9",
+    "0x79b8",
+    "0x7a2e",
+    "0x9d37",
+    "0x9ea1",
+    "0xada0",
+    "0xae36",
+    "0xd418",
+    "0xd78e",
+    "0xe48f",
+    "0xe719"
+  ],
+  "canonical_orbit_key_hex": [
+    "0x0",
+    "0x23",
+    "0x1ec9",
+    "0x1eea",
+    "0x2c96",
+    "0x2cb5",
+    "0x325f",
+    "0x327c",
+    "0x4984",
+    "0x49a7",
+    "0x574d",
+    "0x576e",
+    "0x6512",
+    "0x6531",
+    "0x7bdb",
+    "0x7bf8"
+  ],
+  "canonical_automorphism": {
+    "perm": [
+      3,
+      1,
+      2,
+      0
+    ],
+    "flip": 1
+  },
   "orbit_size": 384,
   "stabilizer_size": 1,
   "interpretation": "The BT1341 quotient is valid but generic under the full Q4 cube automorphism group: its stabilizer is trivial and its orbit has size 384. A more geometric quotient should search for additional symmetry or W(3,3)-compatibility."

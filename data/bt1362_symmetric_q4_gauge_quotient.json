@@ -1,0 +1,687 @@
+{
+  "bt": 1362,
+  "title": "Symmetric Q4 gauge quotient and cyclic-axis holonet clock",
+  "verified": true,
+  "code": {
+    "n": 32,
+    "rank_hx": 15,
+    "rank_hz": 13,
+    "k": 4,
+    "dx": 4,
+    "dz": 4
+  },
+  "quotient": {
+    "symmetric_functionals_hex": [
+      "0x24a",
+      "0x4805",
+      "0xbdbe",
+      "0x11d31"
+    ],
+    "generic_bt1341_functionals_hex": [
+      "0x79b8",
+      "0x7a2e",
+      "0x9ea1",
+      "0xada0"
+    ],
+    "kernel_coordinate_basis_hex": [
+      "0x14001",
+      "0x8202",
+      "0xc004",
+      "0x8208",
+      "0x18010",
+      "0x18020",
+      "0x240",
+      "0x8080",
+      "0x18100",
+      "0x18400",
+      "0x1c800",
+      "0x19000",
+      "0xa000"
+    ],
+    "hz_rows_hex": [
+      "0xa00a9b2a",
+      "0x4108ad36",
+      "0x60085860",
+      "0x41098450",
+      "0xc0068860",
+      "0xc012912f",
+      "0x12004d5",
+      "0x40488879",
+      "0xc082011c",
+      "0xc20080ac",
+      "0xe40215ca",
+      "0xc80a8d2c",
+      "0x500a9966"
+    ],
+    "x_weight4_witness_edges": [
+      0,
+      10,
+      12,
+      19
+    ],
+    "z_weight4_witness_edges": [
+      0,
+      1,
+      12,
+      20
+    ],
+    "bad_weight_lt4_dual_functional_count": 4032
+  },
+  "symmetry": {
+    "cube_automorphism_group_order": 384,
+    "generic_bt1341_active_orbit_size": 384,
+    "generic_bt1341_active_stabilizer_size": 1,
+    "symmetric_active_orbit_size": 6,
+    "symmetric_active_stabilizer_size": 64,
+    "hz_rowspace_stabilizer_size": 64,
+    "stabilizer_structure": "C2^4 : C4",
+    "stabilizer_generators": {
+      "translations": "all 16 Q4 bit flips",
+      "axis_cycle": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    "stabilizer_elements": [
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 0
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 1
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 2
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 3
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 4
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 5
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 6
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 7
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 8
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 9
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 10
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 11
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 12
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 13
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 14
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 15
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 0
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 1
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 2
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 3
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 4
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 5
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 6
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 7
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 8
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 9
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 10
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 11
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 12
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 13
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 14
+      },
+      {
+        "perm": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "flip": 15
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 0
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 1
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 2
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 3
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 4
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 5
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 6
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 7
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 8
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 9
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 10
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 11
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 12
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 13
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 14
+      },
+      {
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "flip": 15
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 0
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 1
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 2
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 3
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 4
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 5
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 6
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 7
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 8
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 9
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 10
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 11
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 12
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 13
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 14
+      },
+      {
+        "perm": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "flip": 15
+      }
+    ],
+    "cyclic_axis_order_count": 6
+  },
+  "checks": {
+    "raw_cycle_rank_17": true,
+    "hx_rank_15": true,
+    "quotient_rank_4": true,
+    "quotient_avoids_weight_lt4_dual_obstructions": true,
+    "hz_rank_13": true,
+    "commutes": true,
+    "k_is_4": true,
+    "x_distance_4": true,
+    "z_distance_4": true,
+    "generic_bt1341_stabilizer_is_1": true,
+    "symmetric_stabilizer_order_64": true,
+    "symmetric_orbit_size_6": true,
+    "orbit_stabilizer_384": true,
+    "stabilizer_is_all_translations_times_c4_axis_cycle": true,
+    "hz_rowspace_has_same_64_stabilizer": true,
+    "stabilizer_preserves_hz_rowspace": true
+  },
+  "interpretation": "BT1341's original [[32,4,4]] quotient is valid but generic.  The BT1362 quotient proves the same code parameters while keeping a 64-element affine cyclic stabilizer C2^4:C4.  Architecturally, the Q4 packet router can be gauge-fixed to a cyclic four-axis clock; the remaining six-element orbit is exactly the choice of cyclic ordering of the four hypercube axes.",
+  "boundary": "This is a finite binary Q4 gauge-quotient theorem.  It does not by itself identify the quotient with the full W33, tomotope, or Clifford algebra action; those are the next objectwise intertwiners."
+}

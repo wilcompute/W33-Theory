@@ -129,7 +129,8 @@ def transform_functional(f: int, inv_cols: list[int]) -> int:
 
 
 def subspace_key(rows: list[int], n: int) -> tuple[int, ...]:
-    return tuple(sorted(basis_list(rows, n)))
+    basis = basis_list(rows, n)
+    return tuple(sorted(mat_vec(basis, mask) for mask in range(1 << len(basis))))
 
 
 def build_cube():
@@ -139,7 +140,9 @@ def build_cube():
     for v in verts:
         for d in range(4):
             if v[d] == 0:
-                w = list(v); w[d] = 1; w = tuple(w)
+                w = list(v)
+                w[d] = 1
+                w = tuple(w)
                 edges.append((vid[v], vid[w], d))
     emap = {frozenset((a, b)): i for i, (a, b, _d) in enumerate(edges)}
     faces = []
@@ -148,10 +151,22 @@ def build_cube():
             for v in verts:
                 if v[i] == 0 and v[j] == 0:
                     v00 = v
-                    v10 = list(v); v10[i] = 1; v10 = tuple(v10)
-                    v01 = list(v); v01[j] = 1; v01 = tuple(v01)
-                    v11 = list(v); v11[i] = 1; v11[j] = 1; v11 = tuple(v11)
-                    support = [emap[frozenset((vid[v00], vid[v10]))], emap[frozenset((vid[v10], vid[v11]))], emap[frozenset((vid[v01], vid[v11]))], emap[frozenset((vid[v00], vid[v01]))]]
+                    v10 = list(v)
+                    v10[i] = 1
+                    v10 = tuple(v10)
+                    v01 = list(v)
+                    v01[j] = 1
+                    v01 = tuple(v01)
+                    v11 = list(v)
+                    v11[i] = 1
+                    v11[j] = 1
+                    v11 = tuple(v11)
+                    support = [
+                        emap[frozenset((vid[v00], vid[v10]))],
+                        emap[frozenset((vid[v10], vid[v11]))],
+                        emap[frozenset((vid[v01], vid[v11]))],
+                        emap[frozenset((vid[v00], vid[v01]))],
+                    ]
                     faces.append(sum(1 << e for e in support))
     edge_key = {frozenset((a, b)): i for i, (a, b, _d) in enumerate(edges)}
     return verts, edges, edge_key, faces
@@ -181,7 +196,11 @@ def permute_mask(mask: int, ep: list[int]) -> int:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", type=Path, default=ROOT / "data" / "bt1344_q4_quotient_canonicalization.json")
+    ap.add_argument(
+        "--out",
+        type=Path,
+        default=ROOT / "data" / "bt1344_q4_quotient_canonicalization.json",
+    )
     ns = ap.parse_args()
     verts, edges, edge_key, faces = build_cube()
     cycle_basis = basis_list(faces, N)
@@ -194,9 +213,13 @@ def main() -> None:
     for perm in itertools.permutations(range(4)):
         for flip in range(16):
             ep = edge_perm(verts, edges, edge_key, perm, flip)
-            cols = [coords_in_basis(permute_mask(b, ep), cycle_basis) for b in cycle_basis]
+            cols = [
+                coords_in_basis(permute_mask(b, ep), cycle_basis) for b in cycle_basis
+            ]
             inv_cols = invert_matrix_cols(cols, len(cycle_basis))
-            key = subspace_key([transform_functional(f, inv_cols) for f in q_rows], len(cycle_basis))
+            key = subspace_key(
+                [transform_functional(f, inv_cols) for f in q_rows], len(cycle_basis)
+            )
             orbit.add(key)
             if key == original_key:
                 stabilizer += 1
@@ -204,7 +227,9 @@ def main() -> None:
                 min_key = key
                 min_auto = {"perm": list(perm), "flip": flip}
     checks = {
-        "cube_automorphism_group_order_384": len(list(itertools.permutations(range(4)))) * 16 == 384,
+        "cube_automorphism_group_order_384": len(list(itertools.permutations(range(4))))
+        * 16
+        == 384,
         "orbit_stabilizer": len(orbit) * stabilizer == 384,
         "trivial_stabilizer": stabilizer == 1,
         "full_orbit_384": len(orbit) == 384,
@@ -219,11 +244,21 @@ def main() -> None:
         "canonical_automorphism": min_auto,
         "orbit_size": len(orbit),
         "stabilizer_size": stabilizer,
-        "interpretation": "The BT1341 quotient is valid but generic under the full Q4 cube automorphism group: its stabilizer is trivial and its orbit has size 384. A more geometric quotient should search for additional symmetry or W(3,3)-compatibility."
+        "interpretation": "The BT1341 quotient is valid but generic under the full Q4 cube automorphism group: its stabilizer is trivial and its orbit has size 384. A more geometric quotient should search for additional symmetry or W(3,3)-compatibility.",
     }
     ns.out.parent.mkdir(parents=True, exist_ok=True)
     ns.out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"bt": 1344, "verified": result["verified"], "orbit_size": len(orbit), "stabilizer_size": stabilizer}, indent=2))
+    print(
+        json.dumps(
+            {
+                "bt": 1344,
+                "verified": result["verified"],
+                "orbit_size": len(orbit),
+                "stabilizer_size": stabilizer,
+            },
+            indent=2,
+        )
+    )
     if not result["verified"]:
         raise SystemExit(1)
 
