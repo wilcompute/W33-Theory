@@ -1,0 +1,23 @@
+{
+  "bt": 1334,
+  "title": "Gottesman-Knill threshold capacity gate",
+  "verified": true,
+  "channel_model": "independent photon loss treated as quantum erasure",
+  "capacity_model": "Q(p)=max(0,1-2p)",
+  "sample_capacities": {
+    "0.01": 0.98,
+    "0.144": 0.712,
+    "0.25": 0.5,
+    "0.49": 0.020000000000000018,
+    "0.5": 0.0,
+    "0.51": 0.0
+  },
+  "checks": {
+    "known_14p4_below_50": true,
+    "capacity_positive_at_14p4": true,
+    "capacity_zero_at_50": true,
+    "capacity_zero_above_50": true,
+    "gk_not_capacity_breaking": true
+  },
+  "verdict": "A Gottesman-Knill/stabilizer decoder can improve efficient decoding but cannot push an erasure/loss threshold above 50 percent under this channel model. The admissible target is improved approach to 50 percent from below, not greater than 50 percent."
+}
