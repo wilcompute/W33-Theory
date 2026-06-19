@@ -1,0 +1,176 @@
+{
+  "architecture_reading": "The 8-tick ISA can be read as a symbolic pulse train. The first three windows program ternary tritter/EOM axes; the last five windows switch delay-line apartment hops. The parity epilogue is the last six frame ticks, lanes 66..71. Scaling by tau gives the word, tomotope body, epilogue, frame, mirror epoch, and Clifford supercycle durations without choosing a hardware clock rate.",
+  "checks": {
+    "bt1300_verified": true,
+    "bt1303_verified": true,
+    "bt1305_verified": true,
+    "first_three_ticks_are_qutrit_axis_pulses": true,
+    "last_five_ticks_are_delay_switch_pulses": true,
+    "mirror_and_supercycle_durations_match_stack": true,
+    "parity_lanes_are_last_six_frame_ticks": true,
+    "queue_service_tick_law_loaded": true,
+    "tick_schedule_has_8_micro_ops": true,
+    "word_body_epilogue_frame_durations_match_stack": true
+  },
+  "durations": {
+    "clifford_supercycle": {
+      "formula": "51840 tau = 720 frames",
+      "tau_units": 51840
+    },
+    "microframe": {
+      "formula": "72 tau = 9 words",
+      "tau_units": 72
+    },
+    "mirror_bus_epoch": {
+      "formula": "2160 tau = 30 frames",
+      "tau_units": 2160
+    },
+    "parity_epilogue": {
+      "formula": "24 tau = 3 words",
+      "tau_units": 24
+    },
+    "tomotope_body": {
+      "formula": "48 tau = 6 words",
+      "tau_units": 48
+    },
+    "word": {
+      "formula": "8 tau",
+      "tau_units": 8
+    }
+  },
+  "hardware_tick": {
+    "meaning": "one programmable optical control window; numeric duration is implementation-dependent",
+    "symbol": "tau"
+  },
+  "honesty_boundary": "BT1306 is a symbolic timing contract. It does not set an optical clock speed, loss budget, detector timing jitter, squeezing threshold, or integrated-photonics tolerance.",
+  "parity_windows": [
+    {
+      "column_pair": [
+        0,
+        1
+      ],
+      "frame_time_window": "[66 tau, 67 tau)",
+      "lane": 66,
+      "micro_op": "q3_xor_axis_2",
+      "tick": 2
+    },
+    {
+      "column_pair": [
+        0,
+        2
+      ],
+      "frame_time_window": "[67 tau, 68 tau)",
+      "lane": 67,
+      "micro_op": "apartment_hop_0",
+      "tick": 3
+    },
+    {
+      "column_pair": [
+        0,
+        3
+      ],
+      "frame_time_window": "[68 tau, 69 tau)",
+      "lane": 68,
+      "micro_op": "apartment_hop_1",
+      "tick": 4
+    },
+    {
+      "column_pair": [
+        1,
+        2
+      ],
+      "frame_time_window": "[69 tau, 70 tau)",
+      "lane": 69,
+      "micro_op": "apartment_hop_2",
+      "tick": 5
+    },
+    {
+      "column_pair": [
+        1,
+        3
+      ],
+      "frame_time_window": "[70 tau, 71 tau)",
+      "lane": 70,
+      "micro_op": "apartment_hop_3",
+      "tick": 6
+    },
+    {
+      "column_pair": [
+        2,
+        3
+      ],
+      "frame_time_window": "[71 tau, 72 tau)",
+      "lane": 71,
+      "micro_op": "apartment_hop_4",
+      "tick": 7
+    }
+  ],
+  "theorem": "BT1306 physical timing model",
+  "tick_schedule": [
+    {
+      "hardware": "tritter/EOM phase-address pulse",
+      "micro_op": "q3_xor_axis_0",
+      "physical_action": "program ternary XOR axis",
+      "rail": "qutrit_axis_0",
+      "tick": 0,
+      "time_window": "[0 tau, 1 tau)"
+    },
+    {
+      "hardware": "tritter/EOM phase-address pulse",
+      "micro_op": "q3_xor_axis_1",
+      "physical_action": "program ternary XOR axis",
+      "rail": "qutrit_axis_1",
+      "tick": 1,
+      "time_window": "[1 tau, 2 tau)"
+    },
+    {
+      "hardware": "tritter/EOM phase-address pulse",
+      "micro_op": "q3_xor_axis_2",
+      "physical_action": "program ternary XOR axis",
+      "rail": "qutrit_axis_2",
+      "tick": 2,
+      "time_window": "[2 tau, 3 tau)"
+    },
+    {
+      "hardware": "delay-line switch pulse",
+      "micro_op": "apartment_hop_0",
+      "physical_action": "advance chart/building route",
+      "rail": "apartment_hop_0",
+      "tick": 3,
+      "time_window": "[3 tau, 4 tau)"
+    },
+    {
+      "hardware": "delay-line switch pulse",
+      "micro_op": "apartment_hop_1",
+      "physical_action": "advance chart/building route",
+      "rail": "apartment_hop_1",
+      "tick": 4,
+      "time_window": "[4 tau, 5 tau)"
+    },
+    {
+      "hardware": "delay-line switch pulse",
+      "micro_op": "apartment_hop_2",
+      "physical_action": "advance chart/building route",
+      "rail": "apartment_hop_2",
+      "tick": 5,
+      "time_window": "[5 tau, 6 tau)"
+    },
+    {
+      "hardware": "delay-line switch pulse",
+      "micro_op": "apartment_hop_3",
+      "physical_action": "advance chart/building route",
+      "rail": "apartment_hop_3",
+      "tick": 6,
+      "time_window": "[6 tau, 7 tau)"
+    },
+    {
+      "hardware": "delay-line switch pulse",
+      "micro_op": "apartment_hop_4",
+      "physical_action": "advance chart/building route",
+      "rail": "apartment_hop_4",
+      "tick": 7,
+      "time_window": "[7 tau, 8 tau)"
+    }
+  ],
+  "verified": true
+}

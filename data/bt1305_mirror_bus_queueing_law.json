@@ -1,0 +1,160 @@
+{
+  "architecture_reading": "The mirror bus is a four-server queue at each chart. One full atlas burst uses 1/4 capacity; q=3 bursts use 3/4; q+1=4 bursts saturate without backlog; the fifth packet per chart is the first queueing boundary. The same utilization law holds at every recursive depth because both demand and capacity scale by I_n.",
+  "checks": {
+    "bt1303_verified": true,
+    "bt1304_verified": true,
+    "eight_packets_needs_two_epochs": true,
+    "five_packets_per_chart_creates_one_backlog": true,
+    "four_packets_per_chart_saturates_bus": true,
+    "level6_matches_bt827_instance_count": true,
+    "nine_packets_needs_three_epochs": true,
+    "one_packet_per_chart_is_quarter_utilization": true,
+    "q_packets_per_chart_is_three_quarter_utilization": true,
+    "recursive_slack_per_instance_is_apartment_count": true,
+    "recursive_utilization_is_depth_independent": true
+  },
+  "honesty_boundary": "BT1305 is deterministic service accounting. It does not assume a stochastic arrival distribution, derive latency tails, or model hardware loss.",
+  "recursive_scaling": [
+    {
+      "level": 1,
+      "mirror_capacity": 2160,
+      "one_packet_per_chart_packets": 540,
+      "slack": 1620,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 1
+    },
+    {
+      "level": 2,
+      "mirror_capacity": 88560,
+      "one_packet_per_chart_packets": 22140,
+      "slack": 66420,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 41
+    },
+    {
+      "level": 3,
+      "mirror_capacity": 3544560,
+      "one_packet_per_chart_packets": 886140,
+      "slack": 2658420,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 1641
+    },
+    {
+      "level": 4,
+      "mirror_capacity": 141784560,
+      "one_packet_per_chart_packets": 35446140,
+      "slack": 106338420,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 65641
+    },
+    {
+      "level": 5,
+      "mirror_capacity": 5671384560,
+      "one_packet_per_chart_packets": 1417846140,
+      "slack": 4253538420,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 2625641
+    },
+    {
+      "level": 6,
+      "mirror_capacity": 226855384560,
+      "one_packet_per_chart_packets": 56713846140,
+      "slack": 170141538420,
+      "slack_per_instance": 1620,
+      "utilization": "1/4",
+      "w33_instances": 105025641
+    }
+  ],
+  "service_law": {
+    "backlog_recurrence": "B_{t+1} = max(0, B_t + arrivals_per_chart - 4)",
+    "epochs_needed_for_m_packets_per_chart": "ceil(m/4)",
+    "mirror_bus_capacity": "2160 = 540 charts * 4 slots",
+    "service_capacity_per_chart_per_epoch": 4
+  },
+  "theorem": "BT1305 mirror-bus queueing law",
+  "traffic_modes": [
+    {
+      "backlog_after_one_epoch_per_chart": 0,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 1,
+      "packets_per_chart": 1,
+      "packets_per_instance": 540,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 1620,
+      "stable_without_queue": true,
+      "utilization": "1/4"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 0,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 1,
+      "packets_per_chart": 2,
+      "packets_per_instance": 1080,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 1080,
+      "stable_without_queue": true,
+      "utilization": "1/2"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 0,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 1,
+      "packets_per_chart": 3,
+      "packets_per_instance": 1620,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 540,
+      "stable_without_queue": true,
+      "utilization": "3/4"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 0,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 1,
+      "packets_per_chart": 4,
+      "packets_per_instance": 2160,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 0,
+      "stable_without_queue": true,
+      "utilization": "1/1"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 1,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 2,
+      "packets_per_chart": 5,
+      "packets_per_instance": 2700,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 0,
+      "stable_without_queue": false,
+      "utilization": "5/4"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 4,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 2,
+      "packets_per_chart": 8,
+      "packets_per_instance": 4320,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 0,
+      "stable_without_queue": false,
+      "utilization": "2/1"
+    },
+    {
+      "backlog_after_one_epoch_per_chart": 5,
+      "capacity_per_instance": 2160,
+      "epochs_needed": 3,
+      "packets_per_chart": 9,
+      "packets_per_instance": 4860,
+      "service_slots_per_chart": 4,
+      "slack_after_one_epoch_per_instance": 0,
+      "stable_without_queue": false,
+      "utilization": "9/4"
+    }
+  ],
+  "verified": true
+}

@@ -20762,6 +20762,23 @@
                 <code>2160=30&times;72=540&times;4</code> and <code>51840=24&times;2160=720&times;72</code>.
                 Level <code>6</code> fills the tomotope body; level <code>9</code> fills one oscillator frame.</div>
             </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">BT1304&ndash;BT1306 holonet runtime</div>
+              <div class="detail">The stack now has a deterministic runtime contract. BT1304 proves the full
+                <code>540</code>-chart atlas burst has <strong>zero output-port contention</strong>: every target chart is
+                unique, while shared ticks are only broadcast control load. The burst uses
+                <code>540/2160=1/4</code> of the mirror bus, with mirror phases
+                <code>0,1,2,3</code> each occurring <code>135</code> times. BT1305 promotes the four mirror slots per
+                chart into the queue law <code>B<sub>t+1</sub>=max(0,B<sub>t</sub>+m-4)</code>:
+                <code>m=3</code> gives ternary <code>3/4</code> utilization, <code>m=4</code> saturates without backlog,
+                and <code>m=5</code> is the first queueing boundary. This law is fractal: at depth
+                <code>n</code>, both demand and capacity scale by <code>I<sub>n</sub>=(40<sup>n</sup>-1)/39</code>,
+                so one-packet-per-chart utilization stays <code>1/4</code>. BT1306 lowers the 8-tick word into symbolic
+                hardware timing: ticks <code>0..2</code> are tritter/EOM qutrit-axis pulses, ticks
+                <code>3..7</code> are delay-line apartment-hop switches, and the six parity lanes are frame ticks
+                <code>66..71</code>. All durations remain in hardware ticks <code>&tau;</code>:
+                <code>8 &rarr; 48 &rarr; 24 &rarr; 72 &rarr; 2160 &rarr; 51840</code>.</div>
+            </div>
           </div>
 
           <h3>The &Delta;<sub>27</sub> Connection (SymTFT, 2026)</h3>
