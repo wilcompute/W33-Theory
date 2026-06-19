@@ -1,0 +1,22 @@
+{
+  "bt": 1328,
+  "title": "Rolling epoch repair",
+  "verified": true,
+  "checks": {
+    "ihara_decomposition": true,
+    "offset_is_one_third_chart_cycle": true,
+    "phase_closure_steps_3": true,
+    "epoch_10980": true,
+    "epoch_is_three_ihara_frames": true,
+    "literal_lcm_not_epoch": true
+  },
+  "values": {
+    "ihara_frame": 3660,
+    "charts": 540,
+    "rolling_offset": 180,
+    "phase_closure_steps": 3,
+    "epoch": 10980,
+    "literal_lcm_3660_1620": 98820
+  },
+  "correction": "10980 is verified as 3*3660 by rolling chart phase closure, not as lcm(3660,1620)."
+}
