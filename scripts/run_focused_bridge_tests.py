@@ -28,6 +28,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_fusion_control_scheduler_splice_ccccxxvi.py",
         "tests/test_photonic_harmonic_tqc_bus_ccccxviii.py",
         "tests/test_bt1362_symmetric_q4_gauge_quotient.py",
+        "tests/test_bt1363_q4_clock_tomotope_medial_descent.py",
         "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "dcc-weld": [

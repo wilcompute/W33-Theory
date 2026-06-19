@@ -1,0 +1,371 @@
+{
+  "bt": 1363,
+  "title": "Q4 clock descent to tomotope/Reye medial layer",
+  "verified": true,
+  "q4_source": {
+    "faces": 24,
+    "edges": 32,
+    "face_edge_incidences": 96
+  },
+  "tomotope_reye_quotient": {
+    "tomotope_edge_labels_from_q4_face_pairs": 12,
+    "tomotope_face_labels_from_q4_edge_pairs": 16,
+    "middle_blocks": 48,
+    "lift_multiplicity_profile": {
+      "2": 48
+    },
+    "face_labels_sample": [
+      {
+        "tomotope_edge_label": 0,
+        "q4_face_orbit": [
+          0,
+          23
+        ],
+        "q4_axis_pair": [
+          2,
+          3
+        ]
+      },
+      {
+        "tomotope_edge_label": 1,
+        "q4_face_orbit": [
+          1,
+          22
+        ],
+        "q4_axis_pair": [
+          1,
+          3
+        ]
+      },
+      {
+        "tomotope_edge_label": 2,
+        "q4_face_orbit": [
+          2,
+          17
+        ],
+        "q4_axis_pair": [
+          0,
+          3
+        ]
+      },
+      {
+        "tomotope_edge_label": 3,
+        "q4_face_orbit": [
+          3,
+          21
+        ],
+        "q4_axis_pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "tomotope_edge_label": 4,
+        "q4_face_orbit": [
+          4,
+          16
+        ],
+        "q4_axis_pair": [
+          0,
+          2
+        ]
+      },
+      {
+        "tomotope_edge_label": 5,
+        "q4_face_orbit": [
+          5,
+          12
+        ],
+        "q4_axis_pair": [
+          0,
+          1
+        ]
+      }
+    ],
+    "edge_labels_sample": [
+      {
+        "tomotope_face_label": 0,
+        "q4_edge_orbit": [
+          0,
+          31
+        ],
+        "q4_axis": 3
+      },
+      {
+        "tomotope_face_label": 1,
+        "q4_edge_orbit": [
+          1,
+          30
+        ],
+        "q4_axis": 2
+      },
+      {
+        "tomotope_face_label": 2,
+        "q4_edge_orbit": [
+          2,
+          27
+        ],
+        "q4_axis": 1
+      },
+      {
+        "tomotope_face_label": 3,
+        "q4_edge_orbit": [
+          3,
+          19
+        ],
+        "q4_axis": 0
+      },
+      {
+        "tomotope_face_label": 4,
+        "q4_edge_orbit": [
+          4,
+          29
+        ],
+        "q4_axis": 2
+      },
+      {
+        "tomotope_face_label": 5,
+        "q4_edge_orbit": [
+          5,
+          26
+        ],
+        "q4_axis": 1
+      },
+      {
+        "tomotope_face_label": 6,
+        "q4_edge_orbit": [
+          6,
+          18
+        ],
+        "q4_axis": 0
+      },
+      {
+        "tomotope_face_label": 7,
+        "q4_edge_orbit": [
+          7,
+          28
+        ],
+        "q4_axis": 3
+      }
+    ]
+  },
+  "descended_clock": {
+    "bt1362_stabilizer_order": 64,
+    "antipodal_kernel_elements": [
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 0
+      },
+      {
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "flip": 15
+      }
+    ],
+    "quotient_group_order": 32,
+    "structure": "(C2^4/<1111>) : C4 = C2^3 : C4",
+    "tomotope_edge_orbit_profile": [
+      4,
+      8
+    ],
+    "tomotope_face_orbit_profile": [
+      16
+    ],
+    "middle_block_orbit_profile": [
+      16,
+      16,
+      16
+    ],
+    "ternary_sheets": [
+      {
+        "sheet": 0,
+        "middle_blocks": 16,
+        "tomotope_edge_labels_hit": 8,
+        "tomotope_face_labels_hit": 16,
+        "edge_projection_multiplicity_profile": {
+          "2": 8
+        },
+        "face_projection_multiplicity_profile": {
+          "1": 16
+        }
+      },
+      {
+        "sheet": 1,
+        "middle_blocks": 16,
+        "tomotope_edge_labels_hit": 8,
+        "tomotope_face_labels_hit": 16,
+        "edge_projection_multiplicity_profile": {
+          "2": 8
+        },
+        "face_projection_multiplicity_profile": {
+          "1": 16
+        }
+      },
+      {
+        "sheet": 2,
+        "middle_blocks": 16,
+        "tomotope_edge_labels_hit": 4,
+        "tomotope_face_labels_hit": 16,
+        "edge_projection_multiplicity_profile": {
+          "4": 4
+        },
+        "face_projection_multiplicity_profile": {
+          "1": 16
+        }
+      }
+    ]
+  },
+  "pure_c4_clock": {
+    "order": 4,
+    "tomotope_edge_orbit_profile": [
+      2,
+      2,
+      4,
+      4
+    ],
+    "tomotope_face_orbit_profile": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "middle_block_orbit_profile": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "four_tick_cycles_sample": [
+      {
+        "cycle": 0,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "tomotope_face_labels": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "cycle": 1,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "tomotope_face_labels": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "cycle": 2,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "tomotope_face_labels": [
+          4,
+          8,
+          11,
+          15
+        ]
+      },
+      {
+        "cycle": 3,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "tomotope_face_labels": [
+          6,
+          7,
+          10,
+          13
+        ]
+      },
+      {
+        "cycle": 4,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          1,
+          4
+        ],
+        "tomotope_face_labels": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "cycle": 5,
+        "middle_blocks": 4,
+        "tomotope_edge_labels": [
+          1,
+          4
+        ],
+        "tomotope_face_labels": [
+          5,
+          9,
+          12,
+          14
+        ]
+      }
+    ]
+  },
+  "interpretation": "The BT1362 local Q4 clock descends through the antipodal double cover to the tomotope/Reye middle layer.  The pure C4 axis clock decomposes the 48 middle blocks as twelve four-tick cycles, while adding the translation quotient fuses them into three 16-block sheets.  Each ternary sheet hits all 16 tomotope face labels exactly once.",
+  "boundary": "This proves the clock action on the tomotope medial layer.  It does not yet identify the full Q6 flag bus or the 2160 D12 global atlas with this clock; those are the next lift targets.",
+  "checks": {
+    "q4_has_24_faces_32_edges_96_incidences": true,
+    "antipodal_quotient_is_12_16_48": true,
+    "each_middle_block_has_two_q4_lifts": true,
+    "bt1362_clock_stabilizer_order_64": true,
+    "antipodal_kernel_has_order_2": true,
+    "descended_clock_order_32": true,
+    "descended_clock_is_64_over_antipode": true,
+    "face_label_orbits_are_4_and_8": true,
+    "face_labels_have_4_plus_8_total": true,
+    "face_action_is_transitive_on_16_labels": true,
+    "middle_blocks_split_into_three_16_sheets": true,
+    "each_ternary_sheet_hits_all_16_face_labels_once": true,
+    "ternary_edge_projection_profile_is_8_8_4": true,
+    "pure_c4_has_twelve_four_block_cycles": true,
+    "pure_c4_face_profile": true,
+    "pure_c4_face_label_profile": true,
+    "middle_layer_has_binary_and_ternary_readings": true
+  }
+}
