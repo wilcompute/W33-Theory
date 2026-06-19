@@ -45,3 +45,24 @@ def test_bt1283_recovery_packet_workflow_exists():
     text = wf.read_text(encoding="utf-8")
     assert "integrate_bt1282_recovery_packet_insert.py" in text
     assert "bt1281_verify_recovery_certificate.py" in text
+
+
+def test_bt1285_recovery_packet_landing_exists():
+    landing = ROOT / "docs" / "recovery_packet_landing.md"
+    assert landing.exists()
+    text = landing.read_text(encoding="utf-8")
+    assert "Recovery Packet" in text
+    assert "docs/recovery_packet_guide.md" in text
+    assert "data/bt1279_recovery_packet_index.json" in text
+    assert "verified = true" in text
+    assert "pass = 1" in text
+
+
+def test_bt1287_release_manifest_exists():
+    manifest = ROOT / "data" / "bt1287_recovery_packet_release_manifest.json"
+    assert manifest.exists()
+    d = json.loads(manifest.read_text(encoding="utf-8"))
+    assert d["bt"] == 1287
+    assert d["release_target"] == "v1.0.0"
+    assert d["strict_certificate"] == "data/bt1275_strict_polar_path_recovery_certificate.json"
+    assert "docs/recovery_packet_landing.md" in d["docs"]
