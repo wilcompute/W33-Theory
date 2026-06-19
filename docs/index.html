@@ -20739,6 +20739,17 @@
                 <code>3/2 = q/&lambda;</code>. Durable commits are always 8-tick route aligned and are 72-frame
                 aligned exactly every ternary level, <code>3 | n</code>.</div>
             </div>
+            <div class="card">
+              <div class="label" style="color: var(--accent);">BT1300 oscillator instruction ISA</div>
+              <div class="detail">The 72-tick oscillator frame now has an executable instruction layout:
+                <code>72 = 48 + 18 + 6</code>. The first <code>48 = q!&times;2<sup>q</sup></code> ticks are the
+                tomotope packet body; the final <code>24 = q&times;2<sup>q</sup></code> ticks are the local-lift
+                epilogue, split into <code>18</code> residual payload lanes and <code>6</code> F<sub>3</sub> parity
+                lanes. Each route digit is one 8-tick word:
+                <code>3</code> ternary XOR axes plus <code>5</code> apartment-hop slots. The existing BT828 route
+                compiler lowers into this word exactly; the six-digit stress route uses <code>47</code> active ticks
+                inside the 48-tick tomotope body, leaving one idle tick as verified packet slack.</div>
+            </div>
           </div>
 
           <h3>The &Delta;<sub>27</sub> Connection (SymTFT, 2026)</h3>
