@@ -1,0 +1,17 @@
+{
+  "q4": {
+    "n": 32,
+    "k": 4,
+    "d": 4,
+    "commutes": true
+  },
+  "q5": {
+    "n": 37,
+    "k": 5,
+    "d_lower": 4,
+    "commutes": true,
+    "distance_preserved": true
+  },
+  "lift_rule": "W33-heptad-pentad: n5=n4+5, k5=k4+1, d5>=d4",
+  "bt": "BT1347"
+}

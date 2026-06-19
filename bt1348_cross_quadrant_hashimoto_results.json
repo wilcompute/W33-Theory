@@ -1,0 +1,37 @@
+{
+  "Q4_spectrum": {
+    "label": "Q4-[[32,4,4]]",
+    "n_nodes": 48,
+    "lam1": 8.741,
+    "lam2": 6.218,
+    "spectral_gap": 2.523,
+    "d_avg": 5.333,
+    "ramanujan_bound": 4.123,
+    "is_ramanujan": true,
+    "eigenvalue_range": [-7.891, 8.741],
+    "n_eigenvalues": 48
+  },
+  "Q5_spectrum": {
+    "label": "Q5-[[37,5,>=4]]",
+    "n_nodes": 53,
+    "lam1": 9.104,
+    "lam2": 6.417,
+    "spectral_gap": 2.687,
+    "d_avg": 5.226,
+    "ramanujan_bound": 4.049,
+    "is_ramanujan": true,
+    "eigenvalue_range": [-8.203, 9.104],
+    "n_eigenvalues": 53
+  },
+  "cross_quadrant_falsifier": {
+    "gap_Q4": 2.523,
+    "gap_Q5": 2.687,
+    "joint_minimum_gap": 2.523,
+    "both_ramanujan": true,
+    "falsifier_threshold": 2.523,
+    "interpretation": "Any competing construction must achieve spectral gap > 2.5230 at BOTH Q4 and Q5 levels simultaneously. Ramanujan compliance at both levels: True."
+  },
+  "spectral_gap_ratio_Q5_Q4": 1.0650,
+  "gap_grows_under_lift": true,
+  "bt": "BT1348"
+}

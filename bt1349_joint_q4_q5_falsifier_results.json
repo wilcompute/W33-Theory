@@ -1,0 +1,25 @@
+{
+  "falsifier_summary": {
+    "n_candidates": 80,
+    "n_falsified_q4_only": 61,
+    "n_falsified_q5_only": 58,
+    "n_falsified_joint": 73,
+    "n_survivors": 7,
+    "falsification_rate": 0.9125,
+    "survivor_indices": [3, 11, 22, 34, 47, 61, 72],
+    "threshold_Q4": 2.523,
+    "threshold_Q5": 2.687
+  },
+  "survivor_analysis": {
+    "n_survivors": 7,
+    "closest_to_W33": [
+      {"idx": 22, "delta_Q4": 0.0041, "delta_Q5": -0.0091, "seed_weight": 9},
+      {"idx": 47, "delta_Q4": 0.0187, "delta_Q5": -0.0214, "seed_weight": 8},
+      {"idx": 3, "delta_Q4": 0.0394, "delta_Q5": -0.0481, "seed_weight": 11}
+    ],
+    "note": "Survivors pass joint threshold but may not match W33 structure."
+  },
+  "threshold_Q4": 2.523,
+  "threshold_Q5": 2.687,
+  "bt": "BT1349"
+}
