@@ -1,0 +1,17 @@
+{
+  "bt": 1344,
+  "title": "Q4 quotient canonicalization audit",
+  "verified": true,
+  "checks": {
+    "cube_automorphism_group_order_384": true,
+    "orbit_stabilizer": true,
+    "trivial_stabilizer": true,
+    "full_orbit_384": true
+  },
+  "original_subspace_key_hex": ["0x396", "0x3301", "0x4ab9", "0x9ea1"],
+  "canonical_orbit_key_hex": ["0x23", "0x1ec9", "0x2c96", "0x4974"],
+  "canonical_automorphism": {"perm": [3, 1, 2, 0], "flip": 1},
+  "orbit_size": 384,
+  "stabilizer_size": 1,
+  "interpretation": "The BT1341 quotient is valid but generic under the full Q4 cube automorphism group: its stabilizer is trivial and its orbit has size 384. A more geometric quotient should search for additional symmetry or W(3,3)-compatibility."
+}
