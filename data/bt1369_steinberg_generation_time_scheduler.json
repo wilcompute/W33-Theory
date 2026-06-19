@@ -1,0 +1,67 @@
+{
+  "boundary": "This is an exact dimensional and character-profile scheduler test. It does not yet construct a basis-level action of the 2160 slots on the Steinberg module.",
+  "bt": 1369,
+  "checks": {
+    "bt1366_bus_slots_are_2160": true,
+    "bt868_has_order6_class_of_size_2160": true,
+    "bt868_has_positive_45_chirality_classes": true,
+    "each_generation_state_gets_80_slots": true,
+    "geography_is_time_lift_of_bt868_positive_chirality": true,
+    "per_generation_phase_is_45_orbits": true,
+    "phase_count_matches_steinberg_generation_count": true,
+    "phase_orbits_are_five_lanes_per_generation_state": true,
+    "sixteen_slot_orbit_matches_local_face_register": true,
+    "steinberg_generations_are_27_each": true
+  },
+  "interpretation": "The 135 sixteen-slot phase orbits have exactly the shape of a generation-time scheduler: five lanes for each of the 27 Steinberg states, or equivalently three generation phases times a 45-geometry time wheel.  The 45 wheel is the 3-time-residue lift of the 15-channel positive chirality branch in the BT868 order-6 grading.",
+  "scheduler": {
+    "chirality_time_factorization": "135 = 3 generations * 3 time residues * 15 positive-chirality channels",
+    "generation_count": 3,
+    "generation_dim": 27,
+    "lanes_per_generation_state": 5,
+    "orbit_size": 16,
+    "per_generation_phase_orbits": 45,
+    "per_generation_phase_slots": 720,
+    "phase_orbits": 135,
+    "shape": "generation_state x lane x tomotope_face_register",
+    "slots_per_generation_state": 80,
+    "spinor_register_reading": "each sixteen-slot orbit is one tomotope face / SO(10)-spinor register",
+    "total_slots": 2160
+  },
+  "source_identities": {
+    "bt1365": "3 local tomotope sheets * 40 W33 lines = 120 selector phase sheets",
+    "bt1366": "2160 = 45 * 48 = 45 * 12 * 4 = 45 * 3 * 16",
+    "bt863_generations": [
+      27,
+      27,
+      27
+    ],
+    "bt868_chi9_class_count": 5,
+    "bt868_order2160_class": {
+      "chi": [
+        81,
+        0,
+        0,
+        -3,
+        0,
+        0
+      ],
+      "chirality": [
+        39,
+        42
+      ],
+      "gen_degenerate": true,
+      "mult": [
+        13,
+        14,
+        13,
+        14,
+        13,
+        14
+      ],
+      "size": 2160
+    }
+  },
+  "title": "Steinberg generation-time scheduler",
+  "verified": true
+}

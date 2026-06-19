@@ -1,0 +1,81 @@
+{
+  "boundary": "The visible CSV coordinate map from tomotope flags to Q6 edges is not asserted to be equivariant.  The verified map is the regular orbit-coordinate map supplied by the isomorphic group actions.",
+  "bt": 1368,
+  "checks": {
+    "gap_identifies_isomorphic_groups": true,
+    "order_profiles_match": true,
+    "q6_candidate_order_96": true,
+    "q6_candidate_preserves_line_graph": true,
+    "q6_candidate_two_regular_orbits": true,
+    "tomotope_aut_order_96": true,
+    "tomotope_two_regular_orbits": true
+  },
+  "equivariant_map_certificate": {
+    "carrier_size": 192,
+    "construction": "GAP gives Aut(tomotope) ~= G_Q6.  Both actions split the 192-point carrier into two regular 96-point orbits.  After choosing an isomorphism and pairing the two orbits, each flag/edge is the unique group element sending the selected basepoint to it, giving an equivariant bijection.",
+    "orbit_pairing_count": 2
+  },
+  "gap_witness": {
+    "isomorphic": "true",
+    "q6_id": "96-227",
+    "q6_size": "96",
+    "q6_structure": "(C2 x C2) : S4",
+    "tom_id": "96-227",
+    "tom_size": "96",
+    "tom_structure": "(C2 x C2) : S4"
+  },
+  "interpretation": "The Q6/tomotope bridge is stronger than a shared count: Q6 has a unique S3-invariant 2^4 translation subgroup whose edge action is isomorphic to the true tomotope automorphism action on flags.",
+  "q6_edge_subgroup": {
+    "direction_group_order": 6,
+    "generator_count": 3,
+    "group_order": 96,
+    "invariant_dim4_subspaces": 4,
+    "orbit_sizes": [
+      96,
+      96
+    ],
+    "order_profile": {
+      "1": 1,
+      "2": 27,
+      "3": 32,
+      "4": 36
+    },
+    "preserves_q6_line_graph": true,
+    "q6_edges": 192,
+    "unique_matching_subspace": [
+      0,
+      6,
+      9,
+      15,
+      17,
+      23,
+      24,
+      30,
+      34,
+      36,
+      43,
+      45,
+      51,
+      53,
+      58,
+      60
+    ]
+  },
+  "title": "Q6 tomotope equivariant flag lift",
+  "tomotope_aut": {
+    "aut_order": 96,
+    "flag_count": 192,
+    "generator_count": 4,
+    "orbit_sizes": [
+      96,
+      96
+    ],
+    "order_profile": {
+      "1": 1,
+      "2": 27,
+      "3": 32,
+      "4": 36
+    }
+  },
+  "verified": true
+}

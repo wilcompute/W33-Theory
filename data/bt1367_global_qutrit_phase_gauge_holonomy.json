@@ -1,0 +1,102 @@
+{
+  "boundary": "This measures holonomy of the selector phase connection.  It does not yet choose a correcting cochain or prove that any corrected selector is flat.",
+  "bt": 1367,
+  "checks": {
+    "all_120_selector_sheets_used": true,
+    "all_540_skew_line_matchings_used": true,
+    "all_s3_conjugacy_classes_appear": true,
+    "all_skew_quadrangles_enumerated": true,
+    "holonomy_profile_sums_to_quadrangles": true,
+    "non_tree_edges_match_cycle_rank": true,
+    "quadrangle_holonomy_is_not_flat": true,
+    "spanning_tree_gauge_reaches_all_40_lines": true,
+    "tree_edges_have_identity_residual": true
+  },
+  "interpretation": "The BT361 qutrit phase matchings define a genuine S3 connection on the W33 line-skew graph.  A global spanning-tree gauge exists, but the connection is curved: skew-line quadrangles realize identity, transposition, and 3-cycle holonomies.",
+  "quadrangle_holonomy": {
+    "examples": {
+      "012": [
+        0,
+        13,
+        2,
+        16
+      ],
+      "021": [
+        0,
+        13,
+        2,
+        33
+      ],
+      "102": [
+        0,
+        13,
+        2,
+        15
+      ],
+      "120": [
+        0,
+        13,
+        2,
+        31
+      ],
+      "201": [
+        0,
+        13,
+        2,
+        22
+      ],
+      "210": [
+        0,
+        13,
+        2,
+        24
+      ]
+    },
+    "holonomy_order_profile": {
+      "1": 11070,
+      "2": 29160,
+      "3": 19440
+    },
+    "holonomy_profile": {
+      "012": 11070,
+      "021": 9706,
+      "102": 9767,
+      "120": 9729,
+      "201": 9711,
+      "210": 9687
+    },
+    "quadrangles": 59670
+  },
+  "spanning_tree_gauge": {
+    "non_tree_edges": 501,
+    "residual_order_profile": {
+      "1": 160,
+      "2": 300,
+      "3": 80
+    },
+    "residual_profile": {
+      "012": 160,
+      "021": 100,
+      "102": 100,
+      "120": 41,
+      "201": 39,
+      "210": 100
+    },
+    "root_line": 0,
+    "tree_edges": 39
+  },
+  "title": "Global qutrit phase gauge and quadrangle holonomy",
+  "transport": {
+    "base": "BT361 overlap-4 skew-line phase perfect matchings",
+    "skew_line_matchings": 540,
+    "transport_permutation_profile": {
+      "012": 93,
+      "021": 91,
+      "102": 97,
+      "120": 74,
+      "201": 96,
+      "210": 89
+    }
+  },
+  "verified": true
+}

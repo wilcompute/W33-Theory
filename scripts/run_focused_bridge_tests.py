@@ -30,6 +30,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_bt1362_symmetric_q4_gauge_quotient.py",
         "tests/test_bt1363_q4_clock_tomotope_medial_descent.py",
         "tests/test_bt1364_bt1366_clock_lifts.py",
+        "tests/test_bt1367_bt1369_phase_q6_scheduler_lifts.py",
         "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "dcc-weld": [
