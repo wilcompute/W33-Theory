@@ -1,0 +1,49 @@
+{
+  "bt": 1342,
+  "title": "40-mode/240-mode Hashimoto falsifier simulator",
+  "verified": true,
+  "seed": 1342,
+  "graph_parameters": {
+    "v": 40,
+    "k_values": [12],
+    "edges": 240,
+    "lambda_values": [2],
+    "mu_values": [4]
+  },
+  "targets": {
+    "phi_gauge_deg": 63.43494882292201,
+    "phi_chiral_deg": 112.20765429859648,
+    "flat_band_xi_max": 2.0,
+    "logical_error_max": 0.01
+  },
+  "measurements": {
+    "phi_gauge_deg": 63.48471082271816,
+    "phi_chiral_deg": 112.30605642246057,
+    "flat_band_xi": 0.24813891177514855,
+    "p_phys": 0.005,
+    "p_logical_proxy": 0.0025,
+    "g2_period_samples": {
+      "0": 1.003767753292425,
+      "1": 1.7934736026863703,
+      "2": 1.798381553811626,
+      "3": 1.810536046958907,
+      "4": 1.7876265657265647,
+      "5": 1.8565958652527718,
+      "6": 1.8015355820536074,
+      "7": 1.8101126309925787,
+      "8": 1.0186870154306108,
+      "9": 0.9375207932756188,
+      "10": 0.981081540719354
+    }
+  },
+  "tests": {
+    "srg_40_12_2_4": true,
+    "hashimoto_gauge_angle": true,
+    "hashimoto_chiral_angle": true,
+    "flat_band_localization": true,
+    "css_syndrome_proxy": true,
+    "closure_clock_peaks": true,
+    "period_six_recurrence": true
+  },
+  "boundary": "This is a synthetic falsifier/pass-fail simulator based on exact W(3,3) combinatorics and protocol tolerances. It is not experimental data."
+}
