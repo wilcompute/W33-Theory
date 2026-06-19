@@ -1,0 +1,17 @@
+{
+  "bt": 1332,
+  "title": "The W33 HoloNet Q4 Diamond: A Machine-Audited Master Synthesis with Rolling-Epoch Repair",
+  "local_tex_artifact": "w33_q4_diamond_machine_audited_synthesis.tex",
+  "local_pdf_artifact": "w33_q4_diamond_machine_audited_synthesis.pdf",
+  "compiled": true,
+  "pages": 9,
+  "latex_engine": "pdflatex",
+  "paper_scope": [
+    "BT1326 master synthesis",
+    "BT1327 Q4 diamond audit",
+    "BT1328 rolling epoch repair",
+    "BT1331 master synthesis certificate"
+  ],
+  "key_correction": "10980 is derived as 3*3660 rolling chart-phase closure, not as lcm(3660,1620).",
+  "certificate_boundary": "Exact arithmetic and epoch repair are certified; threshold and chip-footprint claims remain simulation/engineering gates."
+}
