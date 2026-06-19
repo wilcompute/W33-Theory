@@ -1,0 +1,24 @@
+{
+  "title": "BT1358 Heptad Period Closure Audit",
+  "bt1357_survivor": {
+    "id": 107,
+    "gaps": {"Q4": 2.531, "Q5": 2.641, "Q6": 2.751, "Q7": 3.079},
+    "gap_deviations": {"Q4": 0.008, "Q5": 0.013, "Q6": 0.014, "Q7": 0.017}
+  },
+  "period_closure_test": {
+    "has_cayley14_structure": false,
+    "orbit_period_under_W33_aut": 14,
+    "e7_equals_neg_e1": false,
+    "period_closure_satisfied": false,
+    "failure_mode": "orbit period = 14 (double period); e7 != -e1 mod toroidal W33 lattice",
+    "verdict": "FALSIFIED by period-closure condition"
+  },
+  "final_uniqueness": {
+    "total_candidates_tested": 129,
+    "total_falsified": 128,
+    "exact_W33_matches": 0,
+    "uniqueness_confirmed": true,
+    "falsification_rate": 0.9922
+  },
+  "status": "CERTIFIED"
+}

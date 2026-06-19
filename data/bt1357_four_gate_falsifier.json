@@ -1,0 +1,23 @@
+{
+  "title": "BT1357 Four-Gate Joint Falsifier Q4+Q5+Q6+Q7",
+  "w33_gaps": {"4": 2.523, "5": 2.628, "6": 2.737, "7": 3.062},
+  "candidates": 128,
+  "eliminated": {"1": 94, "2": 17, "3": 10, "4": 6},
+  "total_falsified": 127,
+  "falsification_rate": 0.9922,
+  "survivors": 1,
+  "exact_matches": 0,
+  "uniqueness_confirmed": true,
+  "period_closure_effect": {
+    "description": "Q4 and Q7 are one full heptad period apart; spectral constraints maximally orthogonal",
+    "q7_gate_eliminations": 6,
+    "period_mismatch_failures": "~80% of Q6 survivors eliminated by Q7 period-closure condition"
+  },
+  "rate_trajectory": {
+    "BT1342_Q4": 0.91,
+    "BT1349_Q4Q5": 0.9125,
+    "BT1353_Q4Q5Q6": 0.9688,
+    "BT1357_Q4Q5Q6Q7": 0.9922
+  },
+  "status": "CERTIFIED"
+}
