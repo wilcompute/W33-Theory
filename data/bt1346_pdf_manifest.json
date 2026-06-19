@@ -1,0 +1,10 @@
+{
+  "bt": 1346,
+  "tex": "paper/w33_q4_claim_stratified_master.tex",
+  "workflow": ".github/workflows/q4-claim-stratified-paper.yml",
+  "pdf": "w33_q4_claim_stratified_master.pdf",
+  "compiled": true,
+  "pages": 4,
+  "engine": "pdflatex",
+  "claim_classes": ["EXACT", "CERT", "STRUCT", "SIM", "ENG", "SPEC"]
+}
