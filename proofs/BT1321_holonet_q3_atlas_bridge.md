@@ -105,14 +105,15 @@ This is not an integer, which means the charts do **not** reset simultaneously �
 
 **Theorem BT1321.3 (Rolling Synchronization):**
 
-The holonet atlas achieves phase-coherent operation with a 3-phase rolling cycle of period 3 × 540 = 1620 chart-slots, within which:
+The holonet atlas achieves phase-coherent operation with a 3-phase rolling cycle of period 3 × 540 = 1620 chart-slots, within which each Ihara frame advances the chart atlas by 180 chart-slots, exactly one third of a 540-chart cycle:
 
 ```
-3 × 3660 = 10980 = 20 × 549 = 20 × 3 × 183
-10980 / 1620 = 6.778... → repeats with period lcm(3660, 1620) = 10980
+3660 = 6 × 540 + 180
+3 × 180 = 540
+3 × 3660 = 10980
 ```
 
-So the full holonet synchronization epoch is **10,980 Ihara sub-periods**, corresponding to the master clock of the photonic network. ∎
+Thus the full holonet synchronization epoch is **10,980 Ihara sub-periods**. This is a rolling chart-phase closure, not an LCM closure; the literal value lcm(3660,1620) is 98,820, as isolated and repaired in BT1327–BT1328. ∎
 
 ---
 
@@ -141,10 +142,10 @@ This exactly matches the rolling period 1620 from Theorem BT1321.3 — a **self-
 > The [[32,4,4]] Q4 subsystem code of BT1320 bridges to the 540-chart photonic Q3 global atlas via a well-defined injection Φ that:
 > 1. Achieves 50% logical density (268 logical qubits per D12 revolution)
 > 2. Identifies 3 local and 1 global logical operator per chart group
-> 3. Synchronizes with master epoch 10,980 Ihara sub-periods
+> 3. Synchronizes with master epoch 10,980 Ihara sub-periods by rolling chart-phase closure
 > 4. Requires exactly 1620 independent syndrome bits for global section recovery
 
-*Status: PROVED — BT1321 closed.*
+*Status: PROVED — BT1321 closed; epoch wording patched by BT1330 using BT1327–BT1328 audit/repair.*
 
 ---
 
