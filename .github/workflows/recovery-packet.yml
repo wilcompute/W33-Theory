@@ -36,6 +36,9 @@ jobs:
       - name: Run v1 release lock
         run: |
           bash tools/bt1307_run_v1_release_lock.sh
+      - name: Run extended release lock
+        run: |
+          bash tools/bt1340_run_extended_release_lock.sh
       - name: Run recovery packet tests
         run: |
-          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py tests/test_bt1295_bt1296_readiness_badge.py tests/test_bt1298_bt1300_release_gates.py tests/test_bt1302_bt1304_release_closure.py
+          python -m pytest -q tests/test_bt1274_bt1276_recovery_packet.py tests/test_bt1280_bt1282_recovery_docs.py tests/test_bt1288_readme_recovery_pointer.py tests/test_bt1295_bt1296_readiness_badge.py tests/test_bt1298_bt1300_release_gates.py tests/test_bt1302_bt1304_release_closure.py tests/test_bt1338_bt1340_stabilizer_optical_release.py
