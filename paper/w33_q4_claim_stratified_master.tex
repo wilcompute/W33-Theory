@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\title{The W33/Q4 Diamond Machine:\\A Claim-Stratified Master Synthesis}
+\author{Wil Dahn\\W33 Theory Project}
+\date{June 19, 2026}
+
+\newcommand{\Qfour}{Q_4}
+\newcommand{\W}{\mathcal W(3,3)}
+\newcommand{\Fthree}{\mathbb F_3}
+\newcommand{\claim}[2]{\noindent\textbf{[#1]}\;#2}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document merges the audited Q4 diamond paper with the broader Q4 Diamond Machine synthesis.  The guiding rule is claim stratification: exact arithmetic, executable certificates, structural proof notes, simulation gates, engineering gates, and speculative bridges are separated rather than collapsed into one theorem.  The merged picture keeps the machine-audited Q4 corrections---especially the rolling-epoch repair and the new [[32,4,4]] gauge-quotient certificate---while importing the W(3,3), heptad/Reye, Kagome, and chip-falsifier layers as explicitly labeled claims.
+\end{abstract}
+
+\tableofcontents
+
+\section{Claim Classes}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Label & Meaning & Required evidence\\
+\midrule
+EXACT & finite arithmetic or finite graph computation & script/result certificate\\
+CERT & executable code certificate & tool plus JSON output\\
+STRUCT & proof-note theorem or construction & proof note, assumptions named\\
+SIM & synthetic or numerical simulator & model, seed, pass/fail tolerances\\
+ENG & engineering feasibility gate & physical assumptions and margins\\
+SPEC & speculative bridge & not theorem-grade until audited\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Audited Q4 Spine}
+
+\claim{EXACT}{The 4-cube has \(|V(\Qfour)|=16\), \(|E(\Qfour)|=32\), and 24 square faces.}
+
+\claim{CERT}{BT1327 audits the Q4 number table and BT1328 repairs the master epoch.  The corrected epoch is}
+\[
+3660=6\cdot540+180,\qquad 3\cdot180=540,\qquad 3\cdot3660=10980.
+\]
+Thus \(10980\) is a three-frame rolling chart-phase closure, not \(\mathrm{lcm}(3660,1620)\), whose literal value is \(98820\).
+
+\claim{CERT}{BT1338 extracts the literal cubical Q4 chain checks and finds \(k=0\) for the raw contractible cube:}
+\[
+\operatorname{rank}(\partial_1)=15,\qquad \operatorname{rank}(\partial_2)=17,
+\qquad 32-15-17=0.
+\]
+This prevents an overclaim: the raw cube is not itself the \([[32,4,4]]\) code.
+
+\claim{CERT}{BT1341 supplies the missing gauge quotient.  Four global flux functionals on the 17-dimensional cycle space have a 13-dimensional kernel used as the Z-check space.  With the 15 vertex/star X-checks,}
+\[
+ n=32,\qquad \operatorname{rank}(H_X)=15,\qquad \operatorname{rank}(H_Z)=13,\qquad k=4.
+\]
+The certificate also finds \(d_X=d_Z=4\), so the quotient object is \([[32,4,4]]\).
+
+\section{W(3,3) and the 240-Mode HoloNet Layer}
+
+\claim{EXACT}{The symplectic polar graph \(\W\) has parameters \(\mathrm{SRG}(40,12,2,4)\).  It has 40 vertices, 240 undirected edges, and 480 directed non-backtracking carriers.}
+
+\claim{STRUCT}{The broader Q4 Diamond Machine paper interprets \(\W\) as the photonic substrate, with the Q4 router and toroidal heptad as complementary representations of the same finite architecture.}
+
+\claim{EXACT}{The diamond identity from the broad synthesis is}
+\[
+40\cdot12\cdot3\cdot24\cdot15=518400=10\cdot 51840.
+\]
+This is arithmetic.  Its physical interpretation remains structural until each bridge is separately certified.
+
+\section{Toroidal Heptad, Reye, and Q4 Router}
+
+\claim{STRUCT}{The parallel synthesis identifies a toroidal heptad of size 7, a Q4 router with 24 square plaquettes, and the Reye \((12_4,16_3)\) configuration as a shared geometric spine.}
+
+\claim{EXACT}{The integer bridge}
+\[
+7\cdot24=168=6\cdot28
+\]
+is exact.  The monodromy count
+\[
+18432=32\cdot24^2
+\]
+is also exact arithmetic.
+
+\claim{SPEC}{The assertion that the heptad, Reye spine, and Q4 router are literally the same mathematical object in three photonic representations is promising but should remain structural/speculative until a functorial incidence-preserving map is machine-certified.}
+
+\section{Kagome and Experimental Embedding}
+
+\claim{STRUCT}{The Kagome route proposes that finite kagome or line-graph patches provide a physically accessible embedding of \(\W\).  The key idea is to use flat-band localization and line-graph structure as a photonic realization path.}
+
+\claim{SIM}{BT1342 turns the 40-mode/240-mode chip protocol into a synthetic falsifier simulator.  It constructs \(\W\) over \(\Fthree^4\), verifies \(\mathrm{SRG}(40,12,2,4)\), and simulates pass/fail observables.}
+
+\claim{SIM}{The Hashimoto falsifier observables are}
+\[
+\phi_1=63.43^\circ,\qquad \phi_2=112.21^\circ,
+\]
+plus flat-band localization, CSS logical-error proxy, and period-6 closure-clock recurrence.
+
+\section{Photonic Feasibility Gates}
+
+\claim{ENG}{BT1335 shows that the 4320 base-channel layer is area-plausible under explicit chart-cell assumptions on a \(5\mathrm{mm}\times5\mathrm{mm}\) die.}
+
+\claim{ENG}{BT1339 adds a first optical budget.  In the conservative scenario, total loss is \(2.52\,\mathrm{dB}\), transmission is \(0.559\), and aggregate crosstalk is \(-24.21\,\mathrm{dB}\), passing the stated \(3\,\mathrm{dB}\) and \(-20\,\mathrm{dB}\) budgets.}
+
+\claim{ENG}{This is not yet a foundry PDK simulation.  Routed layout extraction, wavelength-dependent S-parameters, coupler fanout, thermal models, and packaging remain open.}
+
+\section{Decoder and Threshold Boundary}
+
+\claim{CERT}{BT1334 imposes the erasure-channel capacity wall}
+\[
+Q(p)=\max(0,1-2p),
+\]
+so a Gottesman--Knill decoder cannot push an erasure/loss threshold above \(50\%\).}
+
+\claim{SIM}{BT1336 gives the distance-only erasure benchmark for the \([[32,4,4]]\) block.  It is a lower-bound/proxy benchmark, not a full ML or stabilizer decoder curve.}
+
+\claim{CERT}{BT1341 now supplies the check object needed for the next decoder benchmark: an explicit \([[32,4,4]]\) gauge-quotient check pair.}
+
+\section{Speculative Bridges Held Apart}
+
+\claim{SPEC}{The Monster moonshine bridge around \(14641=11^4\), the Calabi--Yau threefold branch, and the W99 syndrome-holonet cousin are valuable idea generators.  They should be treated as speculative or structural until executable finite certificates are built.}
+
+\claim{STRUCT}{The strongest of these is the W99 clue: \(1620=540\cdot3\), matching the independent syndrome count.  This suggests a self-similar syndrome layer and deserves a dedicated finite audit.}
+
+\section{Conclusion}
+
+The merged Q4 Diamond Machine is no longer a single undifferentiated claim.  Its exact core is audited.  Its \([[32,4,4]]\) code now has a concrete gauge-quotient certificate.  Its W(3,3) graph layer has a falsifier simulator.  Its photonic layout claims are engineering gates.  Its Monster, Calabi--Yau, W99, and deep unification bridges remain clearly marked as future certificate targets.
+
+\end{document}
