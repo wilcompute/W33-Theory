@@ -1,0 +1,217 @@
+{
+  "boundary": "This uses BT865's deterministic witness basis.  A different free basis conjugates the 81x81 operator, but the 27 three-cycles and nilpotent rank profile are invariant for the central C3 action.",
+  "bt": 1375,
+  "central_operator": {
+    "basis_image_sample": [
+      1,
+      2,
+      0,
+      4,
+      5,
+      3,
+      7,
+      8,
+      6,
+      11,
+      9,
+      10,
+      14,
+      12,
+      13,
+      17,
+      15,
+      16
+    ],
+    "cycle_length_profile": {
+      "3": 27
+    },
+    "kernel_dimensions": [
+      27,
+      54,
+      81
+    ],
+    "nilpotent_rank_profile": [
+      54,
+      27,
+      0
+    ],
+    "source": "unique center C3 of the BT865 Heisenberg O3"
+  },
+  "chain_complex": {
+    "C1_edges": 240,
+    "basis_vectors": 81,
+    "boundary_rank": 120,
+    "final_rank_with_boundaries": 201,
+    "rank_gains_mod_boundaries": [
+      27,
+      27,
+      27
+    ]
+  },
+  "checks": {
+    "bt1372_three_epoch_scheduler_loaded": true,
+    "bt865_h1_dimension_loaded": true,
+    "central_operator_has_27_three_cycles": true,
+    "central_operator_maps_basis_vectors_to_basis_vectors": true,
+    "nilpotent_rank_profile_matches_bt865": true,
+    "orbit_basis_completes_cycle_space_mod_boundaries": true,
+    "point_o3_order_27": true,
+    "scheduler_basis_map_has_81_rows": true,
+    "three_epoch_scheduler_uniform_on_operator_basis": true,
+    "three_orbit_copies_gain_27_each_mod_boundaries": true
+  },
+  "interpretation": "The BT1372 generation-time rule is not just a label schedule.  It is realized by the concrete central order-3 operator on BT865's Steinberg cycle-vector witnesses.  Matter states are the 3 free BT865 copies times 9 central cosets; generations are the three positions inside each central orbit.",
+  "scheduler_alignment": {
+    "basis_map_sample": [
+      {
+        "bt865_copy": 0,
+        "central_coset": 0,
+        "cycle_vector_index": 0,
+        "generation": 0,
+        "matter_state": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 0,
+        "cycle_vector_index": 1,
+        "generation": 1,
+        "matter_state": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 0,
+        "cycle_vector_index": 2,
+        "generation": 2,
+        "matter_state": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 1,
+        "cycle_vector_index": 3,
+        "generation": 0,
+        "matter_state": 1,
+        "steinberg_basis_index": 1
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 1,
+        "cycle_vector_index": 4,
+        "generation": 1,
+        "matter_state": 1,
+        "steinberg_basis_index": 28
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 1,
+        "cycle_vector_index": 5,
+        "generation": 2,
+        "matter_state": 1,
+        "steinberg_basis_index": 55
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 2,
+        "cycle_vector_index": 6,
+        "generation": 0,
+        "matter_state": 2,
+        "steinberg_basis_index": 2
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 2,
+        "cycle_vector_index": 7,
+        "generation": 1,
+        "matter_state": 2,
+        "steinberg_basis_index": 29
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 2,
+        "cycle_vector_index": 8,
+        "generation": 2,
+        "matter_state": 2,
+        "steinberg_basis_index": 56
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 3,
+        "cycle_vector_index": 9,
+        "generation": 0,
+        "matter_state": 3,
+        "steinberg_basis_index": 3
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 3,
+        "cycle_vector_index": 11,
+        "generation": 1,
+        "matter_state": 3,
+        "steinberg_basis_index": 30
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 3,
+        "cycle_vector_index": 10,
+        "generation": 2,
+        "matter_state": 3,
+        "steinberg_basis_index": 57
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 4,
+        "cycle_vector_index": 12,
+        "generation": 0,
+        "matter_state": 4,
+        "steinberg_basis_index": 4
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 4,
+        "cycle_vector_index": 14,
+        "generation": 1,
+        "matter_state": 4,
+        "steinberg_basis_index": 31
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 4,
+        "cycle_vector_index": 13,
+        "generation": 2,
+        "matter_state": 4,
+        "steinberg_basis_index": 58
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 5,
+        "cycle_vector_index": 15,
+        "generation": 0,
+        "matter_state": 5,
+        "steinberg_basis_index": 5
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 5,
+        "cycle_vector_index": 17,
+        "generation": 1,
+        "matter_state": 5,
+        "steinberg_basis_index": 32
+      },
+      {
+        "bt865_copy": 0,
+        "central_coset": 5,
+        "cycle_vector_index": 16,
+        "generation": 2,
+        "matter_state": 5,
+        "steinberg_basis_index": 59
+      }
+    ],
+    "generation_factor": "position in the central C3 cycle",
+    "matter_state_factorization": "27 = 3 BT865 free copies * 9 central cosets",
+    "three_epoch_uniform_count_per_basis": 80
+  },
+  "title": "Steinberg cycle-vector operator scheduler lift",
+  "verified": true
+}

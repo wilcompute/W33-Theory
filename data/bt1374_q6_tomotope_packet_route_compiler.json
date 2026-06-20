@@ -1,0 +1,496 @@
+{
+  "address_rule": {
+    "formula": "tomotope_flag = 4 * tomotope_block + (mirror_slot mod 4)",
+    "meaning": "48 tomotope body blocks times four local transversal flags = 192 Q6 edges"
+  },
+  "atlas_ingress_summary": {
+    "distinct_tomotope_flags": 6,
+    "flag_histogram": {
+      "127": 72,
+      "159": 108,
+      "191": 72,
+      "31": 108,
+      "63": 72,
+      "95": 108
+    },
+    "reading": "The full 540-chart ingress compiler uses a deliberately sparse six-flag control lane, while arbitrary BT828 packet programs lower digit-by-digit into the complete 192-row Q6/tomotope ABI.",
+    "routes": 540
+  },
+  "boundary": "This is an address compiler for packet headers.  It does not claim the listed Q6 edges form a shortest continuous path in the Q6 graph.",
+  "bt": 1374,
+  "checks": {
+    "all_packet_digits_lower_to_q6_edges": true,
+    "atlas_ingress_uses_sparse_control_lane": true,
+    "bt1371_address_table_verified": true,
+    "bt828_compiler_loaded": true,
+    "every_tomotope_flag_lives_in_192_bus": true,
+    "q6_edge_roundtrip_through_bt1371_inverse": true,
+    "q6_endpoints_are_single_bit_edges": true,
+    "stress_route_fills_tomotope_body_bound": true,
+    "stress_route_has_six_distinct_q6_edges": true,
+    "tomotope_block_is_flag_quotient": true,
+    "transversal_is_mirror_slot_mod_4": true
+  },
+  "compiled_programs": [
+    {
+      "level": 1,
+      "packet_rows": [
+        {
+          "apartment_hops": 1,
+          "clock_phase_c12": 2,
+          "depth": 0,
+          "mirror_slot": 7,
+          "q6_direction": 2,
+          "q6_edge_index": 16,
+          "q6_endpoint_a": "000011",
+          "q6_endpoint_b": "000111",
+          "reversible_moves": 4,
+          "source_chart": 0,
+          "source_digit": 0,
+          "target_chart": 259,
+          "target_digit": 7,
+          "tomotope_block": 7,
+          "tomotope_flag": 31,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "program": "local_flip",
+      "q6_directions": [
+        2
+      ],
+      "q6_edge_indices": [
+        16
+      ],
+      "reversible_moves": 4,
+      "route_bound": 8,
+      "slack_to_bound": 4,
+      "source": [
+        0
+      ],
+      "target": [
+        7
+      ],
+      "tomotope_flags": [
+        31
+      ]
+    },
+    {
+      "level": 1,
+      "packet_rows": [
+        {
+          "apartment_hops": 4,
+          "clock_phase_c12": 6,
+          "depth": 0,
+          "mirror_slot": 39,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "q6_endpoint_a": "110101",
+          "q6_endpoint_b": "110111",
+          "reversible_moves": 7,
+          "source_chart": 0,
+          "source_digit": 0,
+          "target_chart": 415,
+          "target_digit": 39,
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "program": "single_digit_far",
+      "q6_directions": [
+        1
+      ],
+      "q6_edge_indices": [
+        175
+      ],
+      "reversible_moves": 7,
+      "route_bound": 8,
+      "slack_to_bound": 1,
+      "source": [
+        0
+      ],
+      "target": [
+        39
+      ],
+      "tomotope_flags": [
+        159
+      ]
+    },
+    {
+      "level": 2,
+      "packet_rows": [
+        {
+          "apartment_hops": 4,
+          "clock_phase_c12": 6,
+          "depth": 0,
+          "mirror_slot": 39,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "q6_endpoint_a": "110101",
+          "q6_endpoint_b": "110111",
+          "reversible_moves": 7,
+          "source_chart": 0,
+          "source_digit": 0,
+          "target_chart": 415,
+          "target_digit": 39,
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 4,
+          "clock_phase_c12": 3,
+          "depth": 1,
+          "mirror_slot": 452,
+          "q6_direction": 4,
+          "q6_edge_index": 127,
+          "q6_endpoint_a": "100011",
+          "q6_endpoint_b": "110011",
+          "reversible_moves": 5,
+          "source_chart": 276,
+          "source_digit": 5,
+          "target_chart": 8,
+          "target_digit": 12,
+          "tomotope_block": 43,
+          "tomotope_flag": 172,
+          "transversal_index": 0,
+          "xor_axes": [
+            2
+          ]
+        }
+      ],
+      "program": "two_digit_cross",
+      "q6_directions": [
+        1,
+        4
+      ],
+      "q6_edge_indices": [
+        175,
+        127
+      ],
+      "reversible_moves": 12,
+      "route_bound": 16,
+      "slack_to_bound": 4,
+      "source": [
+        0,
+        5
+      ],
+      "target": [
+        39,
+        12
+      ],
+      "tomotope_flags": [
+        159,
+        172
+      ]
+    },
+    {
+      "level": 3,
+      "packet_rows": [
+        {
+          "apartment_hops": 4,
+          "clock_phase_c12": 6,
+          "depth": 0,
+          "mirror_slot": 39,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "q6_endpoint_a": "110101",
+          "q6_endpoint_b": "110111",
+          "reversible_moves": 7,
+          "source_chart": 0,
+          "source_digit": 0,
+          "target_chart": 415,
+          "target_digit": 39,
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 3,
+          "depth": 1,
+          "mirror_slot": 318,
+          "q6_direction": 2,
+          "q6_edge_index": 148,
+          "q6_endpoint_a": "101010",
+          "q6_endpoint_b": "101110",
+          "reversible_moves": 8,
+          "source_chart": 128,
+          "source_digit": 1,
+          "target_chart": 469,
+          "target_digit": 38,
+          "tomotope_block": 9,
+          "tomotope_flag": 38,
+          "transversal_index": 2,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 1,
+          "clock_phase_c12": 0,
+          "depth": 2,
+          "mirror_slot": 597,
+          "q6_direction": 2,
+          "q6_edge_index": 102,
+          "q6_endpoint_a": "011011",
+          "q6_endpoint_b": "011111",
+          "reversible_moves": 4,
+          "source_chart": 256,
+          "source_digit": 2,
+          "target_chart": 523,
+          "target_digit": 37,
+          "tomotope_block": 27,
+          "tomotope_flag": 109,
+          "transversal_index": 1,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "program": "three_digit_far",
+      "q6_directions": [
+        1,
+        2,
+        2
+      ],
+      "q6_edge_indices": [
+        175,
+        148,
+        102
+      ],
+      "reversible_moves": 19,
+      "route_bound": 24,
+      "slack_to_bound": 5,
+      "source": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        39,
+        38,
+        37
+      ],
+      "tomotope_flags": [
+        159,
+        38,
+        109
+      ]
+    },
+    {
+      "level": 6,
+      "packet_rows": [
+        {
+          "apartment_hops": 4,
+          "clock_phase_c12": 6,
+          "depth": 0,
+          "mirror_slot": 39,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "q6_endpoint_a": "110101",
+          "q6_endpoint_b": "110111",
+          "reversible_moves": 7,
+          "source_chart": 0,
+          "source_digit": 0,
+          "target_chart": 415,
+          "target_digit": 39,
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 9,
+          "depth": 1,
+          "mirror_slot": 552,
+          "q6_direction": 3,
+          "q6_edge_index": 133,
+          "q6_endpoint_a": "100101",
+          "q6_endpoint_b": "101101",
+          "reversible_moves": 8,
+          "source_chart": 350,
+          "source_digit": 7,
+          "target_chart": 247,
+          "target_digit": 32,
+          "tomotope_block": 21,
+          "tomotope_flag": 84,
+          "transversal_index": 0,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 0,
+          "depth": 2,
+          "mirror_slot": 585,
+          "q6_direction": 1,
+          "q6_edge_index": 56,
+          "q6_endpoint_a": "001101",
+          "q6_endpoint_b": "001111",
+          "reversible_moves": 8,
+          "source_chart": 173,
+          "source_digit": 14,
+          "target_chart": 66,
+          "target_digit": 25,
+          "tomotope_block": 3,
+          "tomotope_flag": 13,
+          "transversal_index": 1,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 3,
+          "depth": 3,
+          "mirror_slot": 1098,
+          "q6_direction": 1,
+          "q6_edge_index": 37,
+          "q6_endpoint_a": "001000",
+          "q6_endpoint_b": "001010",
+          "reversible_moves": 8,
+          "source_chart": 536,
+          "source_digit": 21,
+          "target_chart": 425,
+          "target_digit": 18,
+          "tomotope_block": 33,
+          "tomotope_flag": 134,
+          "transversal_index": 2,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 6,
+          "depth": 4,
+          "mirror_slot": 1131,
+          "q6_direction": 2,
+          "q6_edge_index": 142,
+          "q6_endpoint_a": "101000",
+          "q6_endpoint_b": "101100",
+          "reversible_moves": 8,
+          "source_chart": 359,
+          "source_digit": 28,
+          "target_chart": 244,
+          "target_digit": 11,
+          "tomotope_block": 15,
+          "tomotope_flag": 63,
+          "transversal_index": 3,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "apartment_hops": 5,
+          "clock_phase_c12": 9,
+          "depth": 5,
+          "mirror_slot": 1644,
+          "q6_direction": 2,
+          "q6_edge_index": 77,
+          "q6_endpoint_a": "010011",
+          "q6_endpoint_b": "010111",
+          "reversible_moves": 8,
+          "source_chart": 182,
+          "source_digit": 35,
+          "target_chart": 63,
+          "target_digit": 4,
+          "tomotope_block": 45,
+          "tomotope_flag": 180,
+          "transversal_index": 0,
+          "xor_axes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "program": "six_digit_stress",
+      "q6_directions": [
+        1,
+        3,
+        1,
+        1,
+        2,
+        2
+      ],
+      "q6_edge_indices": [
+        175,
+        133,
+        56,
+        37,
+        142,
+        77
+      ],
+      "reversible_moves": 47,
+      "route_bound": 48,
+      "slack_to_bound": 1,
+      "source": [
+        0,
+        7,
+        14,
+        21,
+        28,
+        35
+      ],
+      "target": [
+        39,
+        32,
+        25,
+        18,
+        11,
+        4
+      ],
+      "tomotope_flags": [
+        159,
+        84,
+        13,
+        134,
+        63,
+        180
+      ]
+    }
+  ],
+  "interpretation": "BT1371's table is now a compiler target.  A holonet route digit is not merely tagged by a tomotope block: the mirror low bits choose a transversal, and the resulting tomotope flag is an executable Q6 edge.",
+  "title": "Q6/tomotope packet route compiler",
+  "verified": true
+}
