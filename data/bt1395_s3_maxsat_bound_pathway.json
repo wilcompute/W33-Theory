@@ -1,0 +1,20 @@
+{
+  "bt": 1395,
+  "title": "S3 MaxSAT bound-certificate pathway",
+  "verified": true,
+  "checks": {
+    "schema_file_exists": true,
+    "certificate_type_known": true,
+    "witness_valid_if_labels_present": true,
+    "upper_bound_valid_if_present": true,
+    "optimality_requires_matching_bound": true
+  },
+  "certificate_type": "witness",
+  "claimed_score": 210,
+  "computed_score": 210,
+  "upper_bound": null,
+  "witness_valid": true,
+  "optimality_status": "witness_only",
+  "accepted_certificate_schema": "schema/bt1395_s3_maxsat_certificate.schema.json",
+  "boundary": "This verifies the local arithmetic of a witness and/or upper-bound certificate. It does not independently derive a solver proof; that proof must be imported as the certificate source."
+}
