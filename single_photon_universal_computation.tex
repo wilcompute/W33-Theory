@@ -2205,6 +2205,28 @@ applies \(X^r\), applies \(Z^p\), stores the \(T\)-frame parity bit
 The generated page \texttt{docs/bt1404\_holonet\_scope.html} is a machine
 surface for the interface theorem, not a physical SIC-optics certificate.
 
+\subsection{BT1405 Continuous Q6 Router}
+
+The BT1405 Continuous Q6 Router upgrades packet routing from address rows to an
+actual walk in the six-cube.  BT1374 assigned each packet digit to a Q6 edge;
+BT1405 orients those packet edges and inserts shortest Q6 connector walks
+between them.  Every traversed edge is then mapped back to the BT1371
+tomotope-flag table, so the route remains inside the same packet ABI.
+
+For the six-digit stress program the packet edges remain
+\[
+175,\ 133,\ 56,\ 37,\ 142,\ 77,
+\]
+but the executable carrier trace is
+\[
+6\ \text{packet edges} + 10\ \text{connector edges} = 16\ \text{Q6 steps}.
+\]
+The tomotope body budget is \(48\) ticks, so the continuous path leaves
+\(32\) slack ticks while preserving the packet-edge order.  This is still a
+hypercube/tomotope route certificate, not an optical waveguide layout, but it
+removes the previous gap between a list of packet addresses and a physically
+ordered carrier path.
+
 %======================================================================
 \section{The \texorpdfstring{$W(3,3)$}{W(3,3)} Structural Encoding Theorem}
 \label{sec:encoding}

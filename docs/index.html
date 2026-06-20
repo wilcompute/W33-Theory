@@ -23386,6 +23386,16 @@
         <p>The generated scope is a static, inspectable machine surface:
           <a href="bt1404_holonet_scope.html">docs/bt1404_holonet_scope.html</a>.</p>
 
+        <h4>BT1405: continuous Q6 path router</h4>
+        <p><a href="../analysis/BT1405_continuous_q6_path_router.md">BT1405</a>
+          removes BT1374's waypoint-only boundary. The existing packet compiler still emits the same
+          ordered Q6 packet edges, but the router now orients them and inserts shortest Q6 connector
+          walks between them. Every traversed edge maps back through the BT1371 tomotope flag table.</p>
+        <p>The six-digit stress route keeps packet edges
+          <code>175,133,56,37,142,77</code>, inserts <code>10</code> connector edges, and becomes a
+          continuous <code>16</code>-step Q6 trace inside the <code>48</code>-tick tomotope body, leaving
+          <code>32</code> slack ticks. This is an ABI route certificate, not an optical waveguide layout.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

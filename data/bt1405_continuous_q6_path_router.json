@@ -1,0 +1,706 @@
+{
+  "boundary": "This is still a Q6/tomotope ABI router, not an optical waveguide layout or detector timing calibration.  It proves continuous hypercube path routing inside the existing packet body budget.",
+  "breakthrough": "BT1374 packet addresses are not isolated waypoints: every compiled program now lifts to a continuous Q6 walk.  The six-digit stress route preserves its six Q6 packet edges, inserts ten connector edges, and occupies only 16 of the 48 tomotope-body ticks.",
+  "bt": 1405,
+  "checks": {
+    "all_programs_became_continuous_q6_walks": true,
+    "bt1371_address_table_verified": true,
+    "bt1374_packet_compiler_verified": true,
+    "stress_route_has_ten_connector_steps": true,
+    "stress_route_is_sixteen_q6_steps": true,
+    "stress_route_leaves_32_body_ticks_slack": true,
+    "stress_route_preserves_six_packet_edges": true,
+    "stress_route_still_fits_48_tick_body": true
+  },
+  "routes": [
+    {
+      "body_slack_ticks": 7,
+      "bt828_reversible_moves": 4,
+      "checks": {
+        "all_traversed_edges_are_in_bt1371_table": true,
+        "body_ticks_are_contiguous": true,
+        "continuous_vertices_match_steps": true,
+        "each_step_is_q6_edge": true,
+        "no_repeated_q6_edge": true,
+        "packet_edges_preserved_in_order": true,
+        "table_direction_matches_walk_axis": true,
+        "walk_fits_48_tick_tomotope_body": true,
+        "walk_fits_program_route_bound": true
+      },
+      "connector_steps": 0,
+      "direction_histogram": {
+        "2": 1
+      },
+      "end_vertex": "000111",
+      "level": 1,
+      "packet_depth_to_body_tick": {
+        "0": 0
+      },
+      "packet_edge_steps": 1,
+      "program": "local_flip",
+      "q6_walk_steps": 1,
+      "route_bound": 8,
+      "start_vertex": "000011",
+      "steps": [
+        {
+          "body_tick": 0,
+          "kind": "packet",
+          "packet_depth": 0,
+          "q6_direction": 2,
+          "q6_edge_index": 16,
+          "source": "000011",
+          "target": "000111",
+          "tomotope_block": 7,
+          "tomotope_flag": 31,
+          "transversal_index": 3,
+          "walk_bit_axis": 3
+        }
+      ],
+      "used_tomotope_blocks": [
+        7
+      ],
+      "vertices": [
+        "000011",
+        "000111"
+      ]
+    },
+    {
+      "body_slack_ticks": 7,
+      "bt828_reversible_moves": 7,
+      "checks": {
+        "all_traversed_edges_are_in_bt1371_table": true,
+        "body_ticks_are_contiguous": true,
+        "continuous_vertices_match_steps": true,
+        "each_step_is_q6_edge": true,
+        "no_repeated_q6_edge": true,
+        "packet_edges_preserved_in_order": true,
+        "table_direction_matches_walk_axis": true,
+        "walk_fits_48_tick_tomotope_body": true,
+        "walk_fits_program_route_bound": true
+      },
+      "connector_steps": 0,
+      "direction_histogram": {
+        "1": 1
+      },
+      "end_vertex": "110111",
+      "level": 1,
+      "packet_depth_to_body_tick": {
+        "0": 0
+      },
+      "packet_edge_steps": 1,
+      "program": "single_digit_far",
+      "q6_walk_steps": 1,
+      "route_bound": 8,
+      "start_vertex": "110101",
+      "steps": [
+        {
+          "body_tick": 0,
+          "kind": "packet",
+          "packet_depth": 0,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "source": "110101",
+          "target": "110111",
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "walk_bit_axis": 4
+        }
+      ],
+      "used_tomotope_blocks": [
+        39
+      ],
+      "vertices": [
+        "110101",
+        "110111"
+      ]
+    },
+    {
+      "body_slack_ticks": 13,
+      "bt828_reversible_moves": 12,
+      "checks": {
+        "all_traversed_edges_are_in_bt1371_table": true,
+        "body_ticks_are_contiguous": true,
+        "continuous_vertices_match_steps": true,
+        "each_step_is_q6_edge": true,
+        "no_repeated_q6_edge": true,
+        "packet_edges_preserved_in_order": true,
+        "table_direction_matches_walk_axis": true,
+        "walk_fits_48_tick_tomotope_body": true,
+        "walk_fits_program_route_bound": true
+      },
+      "connector_steps": 1,
+      "direction_histogram": {
+        "1": 1,
+        "2": 1,
+        "4": 1
+      },
+      "end_vertex": "100011",
+      "level": 2,
+      "packet_depth_to_body_tick": {
+        "0": 0,
+        "1": 2
+      },
+      "packet_edge_steps": 2,
+      "program": "two_digit_cross",
+      "q6_walk_steps": 3,
+      "route_bound": 16,
+      "start_vertex": "110101",
+      "steps": [
+        {
+          "body_tick": 0,
+          "kind": "packet",
+          "packet_depth": 0,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "source": "110101",
+          "target": "110111",
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 1,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 2,
+          "q6_edge_index": 170,
+          "source": "110111",
+          "target": "110011",
+          "tomotope_block": 37,
+          "tomotope_flag": 150,
+          "transversal_index": 2,
+          "walk_bit_axis": 3
+        },
+        {
+          "body_tick": 2,
+          "kind": "packet",
+          "packet_depth": 1,
+          "q6_direction": 4,
+          "q6_edge_index": 127,
+          "source": "110011",
+          "target": "100011",
+          "tomotope_block": 43,
+          "tomotope_flag": 172,
+          "transversal_index": 0,
+          "walk_bit_axis": 1
+        }
+      ],
+      "used_tomotope_blocks": [
+        37,
+        39,
+        43
+      ],
+      "vertices": [
+        "110101",
+        "110111",
+        "110011",
+        "100011"
+      ]
+    },
+    {
+      "body_slack_ticks": 15,
+      "bt828_reversible_moves": 19,
+      "checks": {
+        "all_traversed_edges_are_in_bt1371_table": true,
+        "body_ticks_are_contiguous": true,
+        "continuous_vertices_match_steps": true,
+        "each_step_is_q6_edge": true,
+        "no_repeated_q6_edge": true,
+        "packet_edges_preserved_in_order": true,
+        "table_direction_matches_walk_axis": true,
+        "walk_fits_48_tick_tomotope_body": true,
+        "walk_fits_program_route_bound": true
+      },
+      "connector_steps": 6,
+      "direction_histogram": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 2,
+        "5": 1
+      },
+      "end_vertex": "011111",
+      "level": 3,
+      "packet_depth_to_body_tick": {
+        "0": 0,
+        "1": 4,
+        "2": 8
+      },
+      "packet_edge_steps": 3,
+      "program": "three_digit_far",
+      "q6_walk_steps": 9,
+      "route_bound": 24,
+      "start_vertex": "110101",
+      "steps": [
+        {
+          "body_tick": 0,
+          "kind": "packet",
+          "packet_depth": 0,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "source": "110101",
+          "target": "110111",
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 1,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 4,
+          "q6_edge_index": 139,
+          "source": "110111",
+          "target": "100111",
+          "tomotope_block": 34,
+          "tomotope_flag": 137,
+          "transversal_index": 1,
+          "walk_bit_axis": 1
+        },
+        {
+          "body_tick": 2,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 3,
+          "q6_edge_index": 138,
+          "source": "100111",
+          "target": "101111",
+          "tomotope_block": 34,
+          "tomotope_flag": 138,
+          "transversal_index": 2,
+          "walk_bit_axis": 2
+        },
+        {
+          "body_tick": 3,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 0,
+          "q6_edge_index": 157,
+          "source": "101111",
+          "target": "101110",
+          "tomotope_block": 10,
+          "tomotope_flag": 42,
+          "transversal_index": 2,
+          "walk_bit_axis": 5
+        },
+        {
+          "body_tick": 4,
+          "kind": "packet",
+          "packet_depth": 1,
+          "q6_direction": 2,
+          "q6_edge_index": 148,
+          "source": "101110",
+          "target": "101010",
+          "tomotope_block": 9,
+          "tomotope_flag": 38,
+          "transversal_index": 2,
+          "walk_bit_axis": 3
+        },
+        {
+          "body_tick": 5,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 5,
+          "q6_edge_index": 48,
+          "source": "101010",
+          "target": "001010",
+          "tomotope_block": 32,
+          "tomotope_flag": 131,
+          "transversal_index": 3,
+          "walk_bit_axis": 0
+        },
+        {
+          "body_tick": 6,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 4,
+          "q6_edge_index": 47,
+          "source": "001010",
+          "target": "011010",
+          "tomotope_block": 32,
+          "tomotope_flag": 130,
+          "transversal_index": 2,
+          "walk_bit_axis": 1
+        },
+        {
+          "body_tick": 7,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 0,
+          "q6_edge_index": 99,
+          "source": "011010",
+          "target": "011011",
+          "tomotope_block": 29,
+          "tomotope_flag": 116,
+          "transversal_index": 0,
+          "walk_bit_axis": 5
+        },
+        {
+          "body_tick": 8,
+          "kind": "packet",
+          "packet_depth": 2,
+          "q6_direction": 2,
+          "q6_edge_index": 102,
+          "source": "011011",
+          "target": "011111",
+          "tomotope_block": 27,
+          "tomotope_flag": 109,
+          "transversal_index": 1,
+          "walk_bit_axis": 3
+        }
+      ],
+      "used_tomotope_blocks": [
+        9,
+        10,
+        27,
+        29,
+        32,
+        34,
+        39
+      ],
+      "vertices": [
+        "110101",
+        "110111",
+        "100111",
+        "101111",
+        "101110",
+        "101010",
+        "001010",
+        "011010",
+        "011011",
+        "011111"
+      ]
+    },
+    {
+      "body_slack_ticks": 32,
+      "bt828_reversible_moves": 47,
+      "checks": {
+        "all_traversed_edges_are_in_bt1371_table": true,
+        "body_ticks_are_contiguous": true,
+        "continuous_vertices_match_steps": true,
+        "each_step_is_q6_edge": true,
+        "no_repeated_q6_edge": true,
+        "packet_edges_preserved_in_order": true,
+        "table_direction_matches_walk_axis": true,
+        "walk_fits_48_tick_tomotope_body": true,
+        "walk_fits_program_route_bound": true
+      },
+      "connector_steps": 10,
+      "direction_histogram": {
+        "0": 2,
+        "1": 4,
+        "2": 3,
+        "3": 2,
+        "4": 2,
+        "5": 3
+      },
+      "end_vertex": "010011",
+      "level": 6,
+      "packet_depth_to_body_tick": {
+        "0": 0,
+        "1": 2,
+        "2": 4,
+        "3": 7,
+        "4": 9,
+        "5": 15
+      },
+      "packet_edge_steps": 6,
+      "program": "six_digit_stress",
+      "q6_walk_steps": 16,
+      "route_bound": 48,
+      "start_vertex": "110111",
+      "steps": [
+        {
+          "body_tick": 0,
+          "kind": "packet",
+          "packet_depth": 0,
+          "q6_direction": 1,
+          "q6_edge_index": 175,
+          "source": "110111",
+          "target": "110101",
+          "tomotope_block": 39,
+          "tomotope_flag": 159,
+          "transversal_index": 3,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 1,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 4,
+          "q6_edge_index": 134,
+          "source": "110101",
+          "target": "100101",
+          "tomotope_block": 20,
+          "tomotope_flag": 83,
+          "transversal_index": 3,
+          "walk_bit_axis": 1
+        },
+        {
+          "body_tick": 2,
+          "kind": "packet",
+          "packet_depth": 1,
+          "q6_direction": 3,
+          "q6_edge_index": 133,
+          "source": "100101",
+          "target": "101101",
+          "tomotope_block": 21,
+          "tomotope_flag": 84,
+          "transversal_index": 0,
+          "walk_bit_axis": 2
+        },
+        {
+          "body_tick": 3,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 5,
+          "q6_edge_index": 58,
+          "source": "101101",
+          "target": "001101",
+          "tomotope_block": 5,
+          "tomotope_flag": 22,
+          "transversal_index": 2,
+          "walk_bit_axis": 0
+        },
+        {
+          "body_tick": 4,
+          "kind": "packet",
+          "packet_depth": 2,
+          "q6_direction": 1,
+          "q6_edge_index": 56,
+          "source": "001101",
+          "target": "001111",
+          "tomotope_block": 3,
+          "tomotope_flag": 13,
+          "transversal_index": 1,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 5,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 2,
+          "q6_edge_index": 49,
+          "source": "001111",
+          "target": "001011",
+          "tomotope_block": 36,
+          "tomotope_flag": 144,
+          "transversal_index": 0,
+          "walk_bit_axis": 3
+        },
+        {
+          "body_tick": 6,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 0,
+          "q6_edge_index": 45,
+          "source": "001011",
+          "target": "001010",
+          "tomotope_block": 33,
+          "tomotope_flag": 135,
+          "transversal_index": 3,
+          "walk_bit_axis": 5
+        },
+        {
+          "body_tick": 7,
+          "kind": "packet",
+          "packet_depth": 3,
+          "q6_direction": 1,
+          "q6_edge_index": 37,
+          "source": "001010",
+          "target": "001000",
+          "tomotope_block": 33,
+          "tomotope_flag": 134,
+          "transversal_index": 2,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 8,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 5,
+          "q6_edge_index": 40,
+          "source": "001000",
+          "target": "101000",
+          "tomotope_block": 14,
+          "tomotope_flag": 58,
+          "transversal_index": 2,
+          "walk_bit_axis": 0
+        },
+        {
+          "body_tick": 9,
+          "kind": "packet",
+          "packet_depth": 4,
+          "q6_direction": 2,
+          "q6_edge_index": 142,
+          "source": "101000",
+          "target": "101100",
+          "tomotope_block": 15,
+          "tomotope_flag": 63,
+          "transversal_index": 3,
+          "walk_bit_axis": 3
+        },
+        {
+          "body_tick": 10,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 5,
+          "q6_edge_index": 55,
+          "source": "101100",
+          "target": "001100",
+          "tomotope_block": 28,
+          "tomotope_flag": 112,
+          "transversal_index": 0,
+          "walk_bit_axis": 0
+        },
+        {
+          "body_tick": 11,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 4,
+          "q6_edge_index": 54,
+          "source": "001100",
+          "target": "011100",
+          "tomotope_block": 28,
+          "tomotope_flag": 113,
+          "transversal_index": 1,
+          "walk_bit_axis": 1
+        },
+        {
+          "body_tick": 12,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 3,
+          "q6_edge_index": 82,
+          "source": "011100",
+          "target": "010100",
+          "tomotope_block": 11,
+          "tomotope_flag": 44,
+          "transversal_index": 0,
+          "walk_bit_axis": 2
+        },
+        {
+          "body_tick": 13,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 1,
+          "q6_edge_index": 81,
+          "source": "010100",
+          "target": "010110",
+          "tomotope_block": 9,
+          "tomotope_flag": 37,
+          "transversal_index": 1,
+          "walk_bit_axis": 4
+        },
+        {
+          "body_tick": 14,
+          "kind": "connector",
+          "packet_depth": null,
+          "q6_direction": 0,
+          "q6_edge_index": 87,
+          "source": "010110",
+          "target": "010111",
+          "tomotope_block": 18,
+          "tomotope_flag": 73,
+          "transversal_index": 1,
+          "walk_bit_axis": 5
+        },
+        {
+          "body_tick": 15,
+          "kind": "packet",
+          "packet_depth": 5,
+          "q6_direction": 2,
+          "q6_edge_index": 77,
+          "source": "010111",
+          "target": "010011",
+          "tomotope_block": 45,
+          "tomotope_flag": 180,
+          "transversal_index": 0,
+          "walk_bit_axis": 3
+        }
+      ],
+      "used_tomotope_blocks": [
+        3,
+        5,
+        9,
+        11,
+        14,
+        15,
+        18,
+        20,
+        21,
+        28,
+        33,
+        36,
+        39,
+        45
+      ],
+      "vertices": [
+        "110111",
+        "110101",
+        "100101",
+        "101101",
+        "001101",
+        "001111",
+        "001011",
+        "001010",
+        "001000",
+        "101000",
+        "101100",
+        "001100",
+        "011100",
+        "010100",
+        "010110",
+        "010111",
+        "010011"
+      ]
+    }
+  ],
+  "routing_rule": "Orient packet edges to minimize total Hamming connector length; insert lexicographic shortest Q6 connector walks; map every traversed edge back through the BT1371 tomotope flag table.",
+  "stress_summary": {
+    "body_slack_ticks": 32,
+    "connector_steps": 10,
+    "direction_histogram": {
+      "0": 2,
+      "1": 4,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 3
+    },
+    "end_vertex": "010011",
+    "packet_edges": [
+      175,
+      133,
+      56,
+      37,
+      142,
+      77
+    ],
+    "program": "six_digit_stress",
+    "q6_walk_steps": 16,
+    "start_vertex": "110111",
+    "used_tomotope_blocks": [
+      3,
+      5,
+      9,
+      11,
+      14,
+      15,
+      18,
+      20,
+      21,
+      28,
+      33,
+      36,
+      39,
+      45
+    ]
+  },
+  "title": "Continuous Q6 path router for holonet packet programs",
+  "verified": true
+}

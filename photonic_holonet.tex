@@ -3080,6 +3080,37 @@ microframes in a 51840-tick Clifford window.  The generated static scope is
 \texttt{docs/bt1404\_holonet\_scope.html}.  It remains an ABI display, not a
 claim of physical SIC-optics hardware.
 
+\subsection{BT1405 continuous Q6 path router}
+
+BT1374 turned packet digits into executable Q6 edge addresses, but deliberately
+left one boundary open: an address list is not yet a continuous walk.  BT1405
+closes that boundary at the tomotope ABI level.  For every compiled BT828 packet
+program, orient the packet edges to minimize the total Hamming connector length,
+insert shortest Q6 connector walks between consecutive packet edges, and map
+every traversed edge back through the BT1371 table.
+
+The six-digit stress route keeps the six BT1374 packet edges
+\[
+  175,\ 133,\ 56,\ 37,\ 142,\ 77
+\]
+but now they are waypoints on a single hypercube walk:
+\[
+  6\ \text{packet edges plus}\ 10\ \text{connector edges}
+  =16\ \text{Q6 steps}.
+\]
+In words: 6 packet edges plus 10 connector edges give the continuous carrier
+trace.
+Since the tomotope body budget is 48 ticks, the continuous trace leaves
+\[
+  48-16=32
+\]
+slack ticks inside the same body.  Thus the route is no longer merely a set of
+six distinct Q6 addresses; it is a contiguous Q6 path from
+\(\texttt{110111}\) to \(\texttt{010011}\), with every traversed edge carrying a
+tomotope flag and block.  This is still an ABI route certificate, not a
+waveguide layout or detector-loss model.  (Witness:
+\texttt{tools/bt1405\_continuous\_q6\_path\_router.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
