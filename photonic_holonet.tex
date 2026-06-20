@@ -2952,6 +2952,61 @@ whether the device computes, but of whether the gauge connection, the holonomy
 group, and the quasicrystal drive are the ones $W(3,3)$ predicts. (Witness:
 \texttt{analysis/w33\_near\_term\_falsification\_test.py}.)
 
+\subsection{BT1402 runtime-frontier handoff: readout, port, and certificate}
+
+The post-BT1377 runtime frontier makes the physical story sharper.  The
+deterministic packet machine is a protected Clifford machine first: the
+8-tick optical word, Q6/tomotope packet edge, $S_3$ phase synchronization,
+central $C_3$ Steinberg scheduler, and $51840$-window
+$\mathrm{Sp}(4,3)$ supercycle are all finite Clifford data.  Universal
+computation enters at the non-Clifford boundary, not by pretending that this
+Clifford kernel is already universal by itself.
+
+The near-term single-photon demonstrator now has a concrete readout contract.
+Its Bell-qutrit signatures are
+\[
+  V(I)=1,\qquad V(F_3)=\frac13,\qquad V(X)=V(Z)=0,
+\]
+and route-controlled Clifford transport deliberately hides route coherence if
+the Bell legs are discarded: the reduced route register has uniform
+probabilities, purity $1/3$, and zero $\ell_1$ coherence.  Coherence is restored
+only by the quantum eraser on the Bell branch,
+\[
+  \frac{\ket{\Omega}+\ket{Z\Omega}+\ket{X\Omega}}{\sqrt3},
+\]
+which succeeds with probability $1/3$, restores route $\ell_1$ coherence $2$,
+and routes the interferometer to a single output port.  The current parametric
+noise envelope keeps this falsifiable: the baseline readout has
+$\gamma=0.92919$ and port-$0$ probability $0.95280$, while the conservative
+case keeps $\gamma=0.79298$ and port-$0$ probability $0.86199$.
+
+The non-Clifford resource has likewise become an ABI rather than a slogan.  The
+Hesse-SIC/T token has nine outcomes, is consumed at a Clifford packet boundary,
+and feeds a Clifford correction plus one $T$-frame parity bit into the next
+8-tick word.  Over one $51840$-tick Clifford window there are $720$
+microframes.  In the current queue envelope the baseline heavy case still has
+positive slack (about $55.75$ successful tokens per window), and the
+conservative medium case still has positive slack (about $89.51$ tokens per
+window).  This is an engineering envelope, not a claim that the SIC optics or
+magic-state yield are solved.
+
+Finally, the correction frontier is now stated in certificate language.  The
+best current $S_3$ gauge witness has score $210$ and is locally strict through
+the checked radius, but the MaxSAT frontier remains witness-only: the example
+optimality certificate exercises the verifier path and is explicitly synthetic.
+A project-level global optimum requires an imported solver upper-bound proof
+matching the witness score.  This is the honest architecture boundary after
+BT1401: the single-photon experiment tests the Bell/route physics, the Clifford
+machine runs the protected finite kernel, the Hesse-SIC/T port supplies the
+non-Clifford ABI, and the remaining global optimality claim is a certificate
+import problem.  (Witnesses:
+\texttt{tools/bt1394\_reduced\_qutrit\_demonstrator.py},
+\texttt{tools/bt1396\_qutrit\_quantum\_erasure\_readout.py},
+\texttt{tools/bt1385\_hesse\_sic\_t\_port\_abi.py},
+\texttt{tools/bt1391\_hesse\_sic\_t\_queue\_model.py},
+\texttt{tools/bt1395\_s3\_maxsat\_bound\_pathway.py},
+\texttt{tools/bt1400\_qutrit\_erasure\_noise\_sensitivity.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

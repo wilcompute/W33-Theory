@@ -1,0 +1,49 @@
+{
+  "bt": 1402,
+  "title": "Photonic holonet manuscript runtime-frontier handoff",
+  "verified": true,
+  "checks": {
+    "runtime_contract_verified": true,
+    "demonstrator_visibility_tuple": true,
+    "eraser_restores_route_coherence": true,
+    "noise_model_has_strong_and_conservative_passes": true,
+    "hesse_sic_t_abi_is_concrete": true,
+    "queue_has_positive_slack_in_live_cases": true,
+    "maxsat_boundary_is_witness_not_global_proof": true,
+    "holonet_exposes_bt1402_runtime_frontier": true,
+    "single_photon_exposes_bt1402_runtime_frontier": true,
+    "claim_master_already_exposes_runtime_frontier": true,
+    "docs_index_exposes_bt1402_card": true
+  },
+  "frontier_contract": {
+    "clifford_runtime": {
+      "runtime_order": 51840,
+      "word_ticks": 8,
+      "clifford_window_ticks": 51840
+    },
+    "single_photon_demonstrator": {
+      "V(I)": 1.0,
+      "V(F3)": 0.33333333333333354,
+      "V(X)": 0.0,
+      "V(Z)": 2.060003483367716e-32,
+      "route_reduced_purity": 0.33333333333333354
+    },
+    "quantum_eraser_readout": {
+      "success_probability": 0.3333333333333335,
+      "conditional_l1_coherence": 2.0,
+      "baseline_gamma": 0.9288749075765147,
+      "conservative_gamma": 0.7919785021266025
+    },
+    "hesse_sic_t_port": {
+      "sic_outcomes": 9,
+      "queue_window_microframes": 720,
+      "baseline_heavy_slack_tokens": 55.750472000000016,
+      "conservative_medium_slack_tokens": 89.50968000000005
+    },
+    "s3_maxsat_boundary": {
+      "computed_score": 210,
+      "project_status": "not_solver_certified"
+    }
+  },
+  "boundary": "BT1402 is a manuscript/frontier consistency packet. It does not certify physical Hesse-SIC optics, a magic-state factory, detector dark-count budgets, or a solver-generated global S3 optimum."
+}

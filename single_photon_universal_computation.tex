@@ -2123,6 +2123,50 @@ So the photonic runtime now has a verified finite-to-curved coefficient
 extractor.  The remaining open theorem is the smooth spectral-action limit, not
 the finite coefficient roundtrip.
 
+\subsection{BT1402 Runtime-Frontier Handoff}
+
+The post-BT1377 runtime frontier separates the single-photon experiment, the
+protected Clifford machine, and the non-Clifford resource port.  The deterministic
+kernel is the \(8\)-tick optical word plus Q6/tomotope packet lowering, \(S_3\)
+phase synchronization, central \(C_3\) Steinberg scheduling, and the
+\(51840\)-window \(\Sp(4,\FF_3)\) Clifford supercycle.  It is not universal
+without the explicit non-Clifford port.
+
+The reduced Bell-qutrit demonstrator has the checked trace--Choi signature
+\[
+V(I)=1,\qquad V(F_3)=\frac13,\qquad V(X)=V(Z)=0.
+\]
+In the route-control experiment, the route register is maximally mixed before the
+eraser: discarding the Bell legs gives route probabilities \(1/3,1/3,1/3\),
+purity \(1/3\), and zero route coherence.  The coherence is recovered only by a
+Bell-branch eraser measurement onto
+\[
+\frac{\ket{\Omega}+\ket{Z\Omega}+\ket{X\Omega}}{\sqrt3},
+\]
+which succeeds with probability \(1/3\), restores conditional route
+\(\ell_1\)-coherence \(2\), and sends the route interferometer to a single
+output port.  A parametric noise envelope keeps the claim measurable: the
+baseline case has coherence \(\gamma=0.92919\) and port-\(0\) probability
+\(0.95280\), while the conservative case keeps \(\gamma=0.79298\) and
+port-\(0\) probability \(0.86199\).
+
+The non-Clifford side is now an ABI.  Operationally, the Hesse-SIC/T port consumes one
+nine-outcome SIC token at a Clifford packet boundary, records the Hesse outcome,
+and feeds a Clifford correction plus one \(T\)-frame parity bit into the next
+packet word.  One \(51840\)-tick Clifford window contains \(720\) microframes;
+the current queue envelope has positive slack in both baseline-heavy and
+conservative-medium cases.  This does not certify SIC optics or magic-state
+yield; it certifies the packet interface that such a resource must satisfy.
+
+The \(S_3\) gauge frontier is likewise explicit.  The current witness score is
+\(210\), but the project remains witness-only until a solver-generated MaxSAT
+upper-bound certificate matching that score is imported.  The example
+optimality certificate demonstrates the verifier path and is deliberately
+synthetic.  Thus the single-photon runtime is now a three-part physical
+contract: Bell/route readout for the demonstrator, protected Clifford packets
+for the finite kernel, and an explicit Hesse-SIC/T or equivalent non-Clifford
+port for universality.
+
 %======================================================================
 \section{The \texorpdfstring{$W(3,3)$}{W(3,3)} Structural Encoding Theorem}
 \label{sec:encoding}
