@@ -13,6 +13,12 @@ python tools/bt1385_hesse_sic_t_port_abi.py
 python tools/bt1388_hesse_sic_t_factory_model.py
 python tools/bt1390_import_s3_maxsat_certificate.py
 python tools/bt1391_hesse_sic_t_queue_model.py
-python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py tests/test_bt1390_bt1392_certificate_queue_workflow.py
+python tools/bt1393_ladder_consistency_audit.py
+python tools/bt1394_reduced_qutrit_demonstrator.py
+python tools/bt1395_s3_maxsat_bound_pathway.py
+python tools/bt1396_qutrit_quantum_erasure_readout.py
+python tools/bt1397_verify_example_optimality_certificate.py
+python tools/bt1400_qutrit_erasure_noise_sensitivity.py
+python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py tests/test_bt1390_bt1392_certificate_queue_workflow.py tests/test_bt1393_bt1395_audit_qutrit_maxsat.py tests/test_bt1396_bt1398_erasure_certificate_paper.py tests/test_bt1399_bt1401_pdf_noise_release.py
 
-echo "BT1389 runtime frontier release lock passed"
+echo "BT1401 runtime frontier release lock passed"
