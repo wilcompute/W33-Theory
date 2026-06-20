@@ -1,0 +1,9 @@
+{
+  "format": "bt1395.s3_maxsat_certificate.v1",
+  "certificate_type": "optimality",
+  "claimed_score": 210,
+  "labels": [0, 4, 0, 3, 3, 1, 3, 0, 5, 3, 1, 2, 5, 2, 1, 1, 2, 2, 2, 1, 3, 2, 0, 3, 3, 0, 3, 0, 5, 2, 1, 1, 3, 0, 5, 0, 1, 1, 0, 1],
+  "upper_bound": 210,
+  "solver": "example-demonstration-not-solver-generated",
+  "source": "Synthetic example demonstrating the BT1395 optimal_certified pathway. Not a project-level global optimality proof."
+}
