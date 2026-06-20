@@ -1,0 +1,571 @@
+{
+  "bt": 1404,
+  "title": "Single-photon holonet scope microframe",
+  "verified": true,
+  "checks": {
+    "bt1403_verified": true,
+    "runtime_verified": true,
+    "nine_hesse_cells": true,
+    "eight_ticks_per_packet_word": true,
+    "one_hesse_grid_equals_one_microframe": true,
+    "microframes_tile_clifford_window": true,
+    "all_microframe_ticks_used_once": true,
+    "all_hesse_outcomes_still_factor_3x3": true,
+    "t_frame_bit_is_outcome_parity": true,
+    "manuscripts_expose_bt1403_boundary": true
+  },
+  "scope_identity": "9 Hesse outcomes * 8 packet ticks = 72 ticks = one microframe",
+  "timing": {
+    "hesse_outcomes": 9,
+    "word_ticks": 8,
+    "microframe_ticks": 72,
+    "clifford_window_ticks": 51840,
+    "microframes_per_clifford_window": 720
+  },
+  "parity_rule": "t_frame_bit = (route_trit + phase_trit) mod 2 = h mod 2",
+  "frames": [
+    {
+      "h": 0,
+      "route_trit": 0,
+      "phase_trit": 0,
+      "branch": "Omega",
+      "pauli_correction": "X^0 Z^0",
+      "t_frame_bit": 0,
+      "microframe_start_tick": 0,
+      "microframe_end_tick": 7,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 0,
+          "lane": "ERASE",
+          "value": "Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 1,
+          "lane": "ROUTE",
+          "value": "r=0"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 2,
+          "lane": "PHASE",
+          "value": "p=0"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 3,
+          "lane": "X-CORR",
+          "value": "X^0"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 4,
+          "lane": "Z-CORR",
+          "value": "Z^0"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 5,
+          "lane": "T-BIT",
+          "value": "0"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 6,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 7,
+          "lane": "NEXT",
+          "value": "word 00"
+        }
+      ]
+    },
+    {
+      "h": 1,
+      "route_trit": 0,
+      "phase_trit": 1,
+      "branch": "Omega",
+      "pauli_correction": "X^0 Z^1",
+      "t_frame_bit": 1,
+      "microframe_start_tick": 8,
+      "microframe_end_tick": 15,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 8,
+          "lane": "ERASE",
+          "value": "Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 9,
+          "lane": "ROUTE",
+          "value": "r=0"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 10,
+          "lane": "PHASE",
+          "value": "p=1"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 11,
+          "lane": "X-CORR",
+          "value": "X^0"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 12,
+          "lane": "Z-CORR",
+          "value": "Z^1"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 13,
+          "lane": "T-BIT",
+          "value": "1"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 14,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 15,
+          "lane": "NEXT",
+          "value": "word 01"
+        }
+      ]
+    },
+    {
+      "h": 2,
+      "route_trit": 0,
+      "phase_trit": 2,
+      "branch": "Omega",
+      "pauli_correction": "X^0 Z^2",
+      "t_frame_bit": 0,
+      "microframe_start_tick": 16,
+      "microframe_end_tick": 23,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 16,
+          "lane": "ERASE",
+          "value": "Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 17,
+          "lane": "ROUTE",
+          "value": "r=0"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 18,
+          "lane": "PHASE",
+          "value": "p=2"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 19,
+          "lane": "X-CORR",
+          "value": "X^0"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 20,
+          "lane": "Z-CORR",
+          "value": "Z^2"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 21,
+          "lane": "T-BIT",
+          "value": "0"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 22,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 23,
+          "lane": "NEXT",
+          "value": "word 02"
+        }
+      ]
+    },
+    {
+      "h": 3,
+      "route_trit": 1,
+      "phase_trit": 0,
+      "branch": "Z Omega",
+      "pauli_correction": "X^1 Z^0",
+      "t_frame_bit": 1,
+      "microframe_start_tick": 24,
+      "microframe_end_tick": 31,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 24,
+          "lane": "ERASE",
+          "value": "Z Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 25,
+          "lane": "ROUTE",
+          "value": "r=1"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 26,
+          "lane": "PHASE",
+          "value": "p=0"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 27,
+          "lane": "X-CORR",
+          "value": "X^1"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 28,
+          "lane": "Z-CORR",
+          "value": "Z^0"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 29,
+          "lane": "T-BIT",
+          "value": "1"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 30,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 31,
+          "lane": "NEXT",
+          "value": "word 03"
+        }
+      ]
+    },
+    {
+      "h": 4,
+      "route_trit": 1,
+      "phase_trit": 1,
+      "branch": "Z Omega",
+      "pauli_correction": "X^1 Z^1",
+      "t_frame_bit": 0,
+      "microframe_start_tick": 32,
+      "microframe_end_tick": 39,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 32,
+          "lane": "ERASE",
+          "value": "Z Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 33,
+          "lane": "ROUTE",
+          "value": "r=1"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 34,
+          "lane": "PHASE",
+          "value": "p=1"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 35,
+          "lane": "X-CORR",
+          "value": "X^1"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 36,
+          "lane": "Z-CORR",
+          "value": "Z^1"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 37,
+          "lane": "T-BIT",
+          "value": "0"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 38,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 39,
+          "lane": "NEXT",
+          "value": "word 04"
+        }
+      ]
+    },
+    {
+      "h": 5,
+      "route_trit": 1,
+      "phase_trit": 2,
+      "branch": "Z Omega",
+      "pauli_correction": "X^1 Z^2",
+      "t_frame_bit": 1,
+      "microframe_start_tick": 40,
+      "microframe_end_tick": 47,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 40,
+          "lane": "ERASE",
+          "value": "Z Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 41,
+          "lane": "ROUTE",
+          "value": "r=1"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 42,
+          "lane": "PHASE",
+          "value": "p=2"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 43,
+          "lane": "X-CORR",
+          "value": "X^1"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 44,
+          "lane": "Z-CORR",
+          "value": "Z^2"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 45,
+          "lane": "T-BIT",
+          "value": "1"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 46,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 47,
+          "lane": "NEXT",
+          "value": "word 05"
+        }
+      ]
+    },
+    {
+      "h": 6,
+      "route_trit": 2,
+      "phase_trit": 0,
+      "branch": "X Omega",
+      "pauli_correction": "X^2 Z^0",
+      "t_frame_bit": 0,
+      "microframe_start_tick": 48,
+      "microframe_end_tick": 55,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 48,
+          "lane": "ERASE",
+          "value": "X Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 49,
+          "lane": "ROUTE",
+          "value": "r=2"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 50,
+          "lane": "PHASE",
+          "value": "p=0"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 51,
+          "lane": "X-CORR",
+          "value": "X^2"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 52,
+          "lane": "Z-CORR",
+          "value": "Z^0"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 53,
+          "lane": "T-BIT",
+          "value": "0"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 54,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 55,
+          "lane": "NEXT",
+          "value": "word 06"
+        }
+      ]
+    },
+    {
+      "h": 7,
+      "route_trit": 2,
+      "phase_trit": 1,
+      "branch": "X Omega",
+      "pauli_correction": "X^2 Z^1",
+      "t_frame_bit": 1,
+      "microframe_start_tick": 56,
+      "microframe_end_tick": 63,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 56,
+          "lane": "ERASE",
+          "value": "X Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 57,
+          "lane": "ROUTE",
+          "value": "r=2"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 58,
+          "lane": "PHASE",
+          "value": "p=1"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 59,
+          "lane": "X-CORR",
+          "value": "X^2"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 60,
+          "lane": "Z-CORR",
+          "value": "Z^1"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 61,
+          "lane": "T-BIT",
+          "value": "1"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 62,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 63,
+          "lane": "NEXT",
+          "value": "word 07"
+        }
+      ]
+    },
+    {
+      "h": 8,
+      "route_trit": 2,
+      "phase_trit": 2,
+      "branch": "X Omega",
+      "pauli_correction": "X^2 Z^2",
+      "t_frame_bit": 0,
+      "microframe_start_tick": 64,
+      "microframe_end_tick": 71,
+      "packet_word": [
+        {
+          "tick": 0,
+          "microframe_tick": 64,
+          "lane": "ERASE",
+          "value": "X Omega"
+        },
+        {
+          "tick": 1,
+          "microframe_tick": 65,
+          "lane": "ROUTE",
+          "value": "r=2"
+        },
+        {
+          "tick": 2,
+          "microframe_tick": 66,
+          "lane": "PHASE",
+          "value": "p=2"
+        },
+        {
+          "tick": 3,
+          "microframe_tick": 67,
+          "lane": "X-CORR",
+          "value": "X^2"
+        },
+        {
+          "tick": 4,
+          "microframe_tick": 68,
+          "lane": "Z-CORR",
+          "value": "Z^2"
+        },
+        {
+          "tick": 5,
+          "microframe_tick": 69,
+          "lane": "T-BIT",
+          "value": "0"
+        },
+        {
+          "tick": 6,
+          "microframe_tick": 70,
+          "lane": "RESTORE",
+          "value": "Clifford ABI"
+        },
+        {
+          "tick": 7,
+          "microframe_tick": 71,
+          "lane": "NEXT",
+          "value": "word 08"
+        }
+      ]
+    }
+  ],
+  "physical_reading": "The whole Hesse non-Clifford outcome alphabet can be displayed as one 72-tick microframe: each of the nine eraser-lift outcomes owns one 8-tick return word that erases the branch, records route and phase, applies X/Z frame correction, stores the T-frame bit, and restores the Clifford packet ABI.",
+  "html_scope": "docs/bt1404_holonet_scope.html",
+  "boundary": "BT1404 is a packet-scope/ABI visualization and verifier. It does not implement physical SIC optics, detector electronics, or a magic-state factory."
+}

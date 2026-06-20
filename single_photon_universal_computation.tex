@@ -2190,6 +2190,21 @@ two.  The statement is still an interface theorem, not a resource-factory
 certificate; it says exactly what a Hesse-SIC/T optical implementation must
 return to the Clifford scheduler.
 
+\subsection{BT1404 Holonet Scope}
+
+The BT1404 Holonet Scope converts the eraser-lift ABI into a one-microframe
+trace.  Since the Hesse port has nine outcomes and the packet word has eight
+ticks,
+\[
+9\times 8=72,
+\]
+so a full sweep of the Hesse alphabet is exactly one microframe.  For outcome
+\(h=3r+p\), the return word erases the Bell branch, records \(r\), records \(p\),
+applies \(X^r\), applies \(Z^p\), stores the \(T\)-frame parity bit
+\((r+p\bmod 2)\), restores the Clifford ABI, and hands off the next word.
+The generated page \texttt{docs/bt1404\_holonet\_scope.html} is a machine
+surface for the interface theorem, not a physical SIC-optics certificate.
+
 %======================================================================
 \section{The \texorpdfstring{$W(3,3)$}{W(3,3)} Structural Encoding Theorem}
 \label{sec:encoding}

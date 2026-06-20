@@ -23375,6 +23375,17 @@
         <p>The existing PDF is left untouched. A separate preview build is emitted as
           <a href="../photonic_holonet_BT1403_preview.pdf">photonic_holonet_BT1403_preview.pdf</a>.</p>
 
+        <h4>BT1404: holonet scope microframe</h4>
+        <p><a href="../analysis/BT1404_holonet_scope_microframe.md">BT1404</a>
+          turns the eraser-lift port into a packet oscilloscope:
+          <code>9</code> Hesse outcomes times <code>8</code> packet ticks equals
+          <code>72</code> ticks, exactly one Hesse/T-port microframe. Each outcome owns one
+          return word: erase branch, record route trit, record phase trit, apply
+          <code>X^r</code>/<code>Z^p</code> frame corrections, store the T-frame bit, restore the
+          Clifford ABI, and hand off the next packet word.</p>
+        <p>The generated scope is a static, inspectable machine surface:
+          <a href="bt1404_holonet_scope.html">docs/bt1404_holonet_scope.html</a>.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

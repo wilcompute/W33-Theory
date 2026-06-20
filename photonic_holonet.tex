@@ -3049,6 +3049,37 @@ The boundary remains honest: this identifies the ABI and alphabet of the port,
 not the optical SIC implementation or magic-state factory yield.  (Witness:
 \texttt{tools/bt1403\_hesse\_port\_eraser\_lift.py}.)
 
+\subsection{BT1404 holonet scope: one Hesse grid is one microframe}
+
+BT1404 makes the eraser-lift port visible as a packet oscilloscope.  The
+timing identity is
+\[
+  9\ \text{Hesse outcomes}\times 8\ \text{packet ticks}=72\ \text{ticks},
+\]
+exactly one BT1385/BT1391 microframe.  In plain terms: 9 Hesse outcomes times
+8 packet ticks fill the whole scope.  Thus the entire Hesse outcome alphabet
+fits in one microframe, with each cell \(h=3r+p\) occupying one 8-tick return
+word.
+
+The scope word is:
+\[
+\begin{array}{c|l}
+0 & \text{erase Bell branch}\\
+1 & \text{record route trit }r\\
+2 & \text{record phase trit }p\\
+3 & \text{apply }X^r\text{ frame correction}\\
+4 & \text{apply }Z^p\text{ frame correction}\\
+5 & \text{store }T\text{-frame bit }(r+p\bmod 2)\\
+6 & \text{restore Clifford ABI}\\
+7 & \text{hand off next packet word.}
+\end{array}
+\]
+This is the first machine-surface form of the non-Clifford boundary: not just a
+nine-outcome label, but a one-microframe live trace compatible with the 720
+microframes in a 51840-tick Clifford window.  The generated static scope is
+\texttt{docs/bt1404\_holonet\_scope.html}.  It remains an ABI display, not a
+claim of physical SIC-optics hardware.
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
