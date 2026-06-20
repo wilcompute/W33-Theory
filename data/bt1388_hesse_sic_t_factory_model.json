@@ -1,0 +1,54 @@
+{
+  "bt": 1388,
+  "title": "Hesse SIC T resource factory envelope",
+  "verified": true,
+  "checks": {
+    "abi_verified": true,
+    "sic_outcomes_9": true,
+    "all_success_positive": true,
+    "baseline_expected_attempts_lt_1p2": true,
+    "aggressive_best_throughput": true
+  },
+  "rows": [
+    {
+      "name": "baseline",
+      "token_rate_per_microframe": 1.0,
+      "p_token": 0.9,
+      "p_measure": 0.98,
+      "p_feedforward": 0.995,
+      "p_restore": 0.999,
+      "p_success": 0.8763201,
+      "expected_attempts": 1.1411354847415328,
+      "ticks_per_attempt": 72,
+      "expected_ticks": 82.16175490139035,
+      "successes_per_microframe": 0.8763201
+    },
+    {
+      "name": "conservative",
+      "token_rate_per_microframe": 0.5,
+      "p_token": 0.8,
+      "p_measure": 0.95,
+      "p_feedforward": 0.99,
+      "p_restore": 0.995,
+      "p_success": 0.7486380000000001,
+      "expected_attempts": 1.33575966219216,
+      "ticks_per_attempt": 144,
+      "expected_ticks": 192.34939135567106,
+      "successes_per_microframe": 0.37431900000000007
+    },
+    {
+      "name": "aggressive",
+      "token_rate_per_microframe": 2.0,
+      "p_token": 0.96,
+      "p_measure": 0.995,
+      "p_feedforward": 0.999,
+      "p_restore": 0.9995,
+      "p_success": 0.9538058544,
+      "expected_attempts": 1.048431394363711,
+      "ticks_per_attempt": 72,
+      "expected_ticks": 75.48706039418718,
+      "successes_per_microframe": 1.9076117088
+    }
+  ],
+  "boundary": "Stochastic ABI envelope only; no physical factory certificate."
+}
