@@ -1,0 +1,29 @@
+{
+  "bt": 1384,
+  "title": "Exact S3 gauge MaxSAT export",
+  "verified": true,
+  "format": "weighted partial MaxSAT WCNF",
+  "checks": {
+    "forty_lines": true,
+    "six_labels": true,
+    "variables_780": true,
+    "constraints_540": true,
+    "soft_clauses_540": true,
+    "hard_clauses_20086": true,
+    "witness_score_210": true
+  },
+  "stats": {
+    "variables": 780,
+    "label_variables": 240,
+    "satisfaction_variables": 540,
+    "hard_clauses": 20086,
+    "soft_clauses": 540,
+    "clauses": 20626,
+    "top_weight": 541,
+    "constraints": 540,
+    "bt1373_witness_score": 210,
+    "wcnf_path": "data/generated/bt1384_s3_gauge_maxsat.wcnf"
+  },
+  "objective": "maximize satisfied S3 identity-residual edge variables over the 540 W33 skew-line constraints",
+  "boundary": "This exports the exact root-fixed MaxSAT instance. It does not solve global optimality by itself."
+}
