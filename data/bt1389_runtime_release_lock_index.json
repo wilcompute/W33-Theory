@@ -1,0 +1,32 @@
+{
+  "bt": 1389,
+  "title": "Runtime frontier release lock index",
+  "ready": true,
+  "runner": "tools/bt1389_run_runtime_frontier_release_lock.sh",
+  "extends": "tools/bt1340_run_extended_release_lock.sh",
+  "frontier_tools": [
+    "tools/bt1378_verify_runtime_contract.py",
+    "tools/bt1379_verify_s3_gauge_max2csp_spec.py",
+    "tools/bt1380_verify_post_1377_bridge_index.py",
+    "tools/bt1381_s3_gauge_global_solver_probe.py",
+    "tools/bt1382_non_clifford_port_abi.py",
+    "tools/bt1383_verify_runtime_frontier_integration.py",
+    "tools/bt1384_export_s3_gauge_maxsat.py",
+    "tools/bt1385_hesse_sic_t_port_abi.py",
+    "tools/bt1388_hesse_sic_t_factory_model.py"
+  ],
+  "frontier_data": [
+    "data/bt1384_s3_gauge_maxsat_manifest.json",
+    "data/bt1385_hesse_sic_t_port_abi.json",
+    "data/bt1386_claim_master_pdf_manifest.json",
+    "data/bt1387_s3_maxsat_solver_harness.json",
+    "data/bt1388_hesse_sic_t_factory_model.json"
+  ],
+  "expected_outputs": {
+    "maxsat_export_verified": true,
+    "maxsat_solver_optimality_status": "unresolved",
+    "hesse_sic_t_abi_verified": true,
+    "resource_factory_verified": true,
+    "runtime_release_lock": "BT1389 runtime frontier release lock passed"
+  }
+}
