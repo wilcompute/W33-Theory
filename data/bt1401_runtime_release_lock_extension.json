@@ -1,0 +1,21 @@
+{
+  "bt": 1401,
+  "title": "Runtime release lock extension through BT1400",
+  "verified": true,
+  "runner": "tools/bt1389_run_runtime_frontier_release_lock.sh",
+  "extended_tools": [
+    "tools/bt1393_ladder_consistency_audit.py",
+    "tools/bt1394_reduced_qutrit_demonstrator.py",
+    "tools/bt1395_s3_maxsat_bound_pathway.py",
+    "tools/bt1396_qutrit_quantum_erasure_readout.py",
+    "tools/bt1397_verify_example_optimality_certificate.py",
+    "tools/bt1400_qutrit_erasure_noise_sensitivity.py"
+  ],
+  "new_tests": [
+    "tests/test_bt1393_bt1395_audit_qutrit_maxsat.py",
+    "tests/test_bt1396_bt1398_erasure_certificate_paper.py",
+    "tests/test_bt1399_bt1401_pdf_noise_release.py"
+  ],
+  "release_echo": "BT1401 runtime frontier release lock passed",
+  "boundary": "The runtime frontier lock now protects the ladder audit, reduced qutrit simulator, erasure readout, example certificate pathway, and erasure noise sensitivity model."
+}
