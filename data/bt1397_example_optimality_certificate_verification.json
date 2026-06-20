@@ -1,0 +1,16 @@
+{
+  "bt": 1397,
+  "title": "Example S3 MaxSAT optimality certificate pathway",
+  "verified": true,
+  "checks": {
+    "bt1395_accepts_example": true,
+    "example_reaches_optimal_certified_path": true,
+    "example_marked_not_solver_generated": true,
+    "source_warns_not_project_proof": true,
+    "upper_bound_210": true
+  },
+  "example_certificate": "examples/bt1397_example_s3_maxsat_optimality_certificate.json",
+  "bt1395_status_on_example": "optimal_certified",
+  "project_optimality_status": "not_solver_certified",
+  "boundary": "This demonstrates the optimality-certificate pathway with a synthetic upper-bound file. It is not a solver-generated proof that score 210 is globally optimal."
+}
