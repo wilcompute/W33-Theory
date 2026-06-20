@@ -20,7 +20,7 @@
 \maketitle
 
 \begin{abstract}
-This document merges the audited Q4 diamond paper with the broader Q4 Diamond Machine synthesis. The guiding rule is claim stratification: exact arithmetic, executable certificates, structural proof notes, simulation gates, engineering gates, and speculative bridges are separated rather than collapsed into one theorem. The merged picture keeps the machine-audited Q4 corrections - especially the rolling-epoch repair and the new [[32,4,4]] gauge-quotient certificate - while importing the W(3,3), heptad/Reye, Kagome, and chip-falsifier layers as explicitly labeled claims.
+This document merges the audited Q4 diamond paper with the broader Q4 Diamond Machine synthesis. The guiding rule is claim stratification: exact arithmetic, executable certificates, structural proof notes, simulation gates, engineering gates, optimization frontiers, architecture boundaries, and speculative bridges are separated rather than collapsed into one theorem. The merged picture keeps the machine-audited Q4 corrections - especially the rolling-epoch repair and the new [[32,4,4]] gauge-quotient certificate - while importing the W(3,3), heptad/Reye, Kagome, packet-runtime, non-Clifford port, and chip-falsifier layers as explicitly labeled claims.
 \end{abstract}
 
 \tableofcontents
@@ -38,6 +38,8 @@ CERT & executable code certificate & tool plus JSON output\\
 STRUCT & proof-note theorem or construction & proof note, assumptions named\\
 SIM & synthetic or numerical simulator & model, seed, pass/fail tolerances\\
 ENG & engineering feasibility gate & physical assumptions and margins\\
+OPT & optimization frontier & exact objective plus witness/bound status\\
+ABI & architecture boundary/interface & packet contract and verification signature\\
 SPEC & speculative bridge & not theorem-grade until audited\\
 \bottomrule
 \end{tabular}
@@ -69,7 +71,7 @@ This prevents an overclaim: the raw cube is not itself the \([[32,4,4]]\) code.
 \]
 The certificate also finds \(d_X=d_Z=4\), so the quotient object is \([[32,4,4]]\).
 
-\claim{CERT}{BT1344 canonicalizes this quotient under the 384 cube automorphisms. The quotient is valid but generic: orbit size 384 and stabilizer size 1. This is a signal that a later W33-compatible quotient should search for additional symmetry.}
+\claim{CERT}{BT1344 canonicalizes this quotient under the 384 cube automorphisms. The quotient is valid but generic: orbit size 384 and stabilizer size 1. BT1362 later upgrades this to a symmetric quotient with stabilizer \(C_2^4:C_4\) of order 64.}
 
 \section{W(3,3) and the 240-Mode HoloNet Layer}
 
@@ -129,7 +131,27 @@ so a Gottesman--Knill decoder cannot push an erasure/loss threshold above \(50\%
 
 \claim{SIM}{BT1336 gives the distance-only erasure benchmark for the \([[32,4,4]]\) block. It is a lower-bound/proxy benchmark, not a full ML or stabilizer decoder curve.}
 
-\claim{CERT}{BT1341 now supplies the check object needed for the next decoder benchmark: an explicit \([[32,4,4]]\) gauge-quotient check pair.}
+\claim{CERT}{BT1341 and BT1362 now supply check objects for the next decoder benchmark: explicit \([[32,4,4]]\) gauge-quotient check pairs, including a symmetric clocked representative.}
+
+\section{Physical Runtime Spine}
+
+\claim{CERT}{BT1378 verifies the cross-artifact runtime contract: symmetric Q4 code, Q6/tomotope packet compiler, central \(C_3\) Steinberg scheduler, 2160-tick mirror bus, 8-tick packet word, and 51840-window Clifford runtime.}
+
+\input{../tex/bt1380_post_1377_claim_table.tex}
+
+\input{../tex/bt1381_bt1383_runtime_frontier_insert.tex}
+
+\section{Hesse-SIC/T Non-Clifford Port}
+
+\claim{ABI}{BT1382 records two non-Clifford port options. BT1385 makes the Hesse-SIC/T option concrete as a qutrit SIC token with nine measurement outcomes.}
+
+The port token is consumed at a Clifford packet boundary. The measurement signature records an outcome
+\[
+h\in\{0,1,\ldots,8\},
+\]
+maps it to a Clifford correction plus one T-frame parity bit, appends a correction side record, and returns to the Clifford packet ABI. Failure modes are missing outcome, ambiguous SIC outcome, feed-forward timeout, and Clifford ABI restoration failure.
+
+\claim{ENG}{This is an ABI certificate, not a physical resource-factory certificate. Hesse-SIC optics, magic-state yield, and threshold overhead remain future gates.}
 
 \section{Speculative Bridges Held Apart}
 
@@ -139,6 +161,6 @@ so a Gottesman--Knill decoder cannot push an erasure/loss threshold above \(50\%
 
 \section{Conclusion}
 
-The merged Q4 Diamond Machine is no longer a single undifferentiated claim. Its exact core is audited. Its \([[32,4,4]]\) code now has a concrete gauge-quotient certificate. Its quotient has been canonicalized under cube automorphisms and found to be valid but generic. Its W(3,3) graph layer has both a synthetic falsifier simulator and a matrix-derived Hashimoto correction. Its photonic layout claims are engineering gates. Its Monster, Calabi--Yau, W99, and deep unification bridges remain clearly marked as future certificate targets.
+The merged Q4 Diamond Machine is no longer a single undifferentiated claim. Its exact core is audited. Its \([[32,4,4]]\) code now has concrete gauge-quotient certificates, including a symmetric clocked representative. Its W(3,3) graph layer has both a synthetic falsifier simulator and a matrix-derived Hashimoto correction. Its runtime layer has a verified Clifford packet contract, a precise S3 optimization frontier, and an explicit non-Clifford ABI boundary. Its photonic layout claims remain engineering gates, and its Monster, Calabi--Yau, W99, and deeper unification bridges remain clearly marked as future certificate targets.
 
 \end{document}
