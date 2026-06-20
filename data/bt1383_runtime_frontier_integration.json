@@ -1,0 +1,25 @@
+{
+  "bt": 1383,
+  "title": "Runtime frontier paper/release integration verifier",
+  "verified": true,
+  "checks": {
+    "solver_probe_verified": true,
+    "solver_best_score_210": true,
+    "port_abi_verified": true,
+    "port_has_two_options": true,
+    "tex_insert_exists": true,
+    "claim_master_exists": true,
+    "post_1377_table_exists": true
+  },
+  "paper_inserts": [
+    "tex/bt1380_post_1377_claim_table.tex",
+    "tex/bt1381_bt1383_runtime_frontier_insert.tex"
+  ],
+  "release_frontier_artifacts": [
+    "data/bt1378_runtime_contract_verification.json",
+    "data/bt1379_s3_gauge_max2csp_spec.json",
+    "data/bt1381_s3_gauge_global_solver_probe.json",
+    "data/bt1382_non_clifford_port_abi.json"
+  ],
+  "reading": "The claim-stratified master paper can now absorb the runtime contract, S3 optimization frontier, and non-Clifford port ABI without changing claim classes."
+}
