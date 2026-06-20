@@ -1,0 +1,34 @@
+{
+  "bt": 1387,
+  "title": "S3 MaxSAT external-solver harness",
+  "verified": true,
+  "checks": {
+    "wcnf_manifest_verified": true,
+    "wcnf_file_exists": true,
+    "witness_score_210": true,
+    "variables_780": true,
+    "clauses_20626": true
+  },
+  "wcnf": {
+    "variables": 780,
+    "label_variables": 240,
+    "satisfaction_variables": 540,
+    "hard_clauses": 20086,
+    "soft_clauses": 540,
+    "clauses": 20626,
+    "top_weight": 541,
+    "constraints": 540,
+    "bt1373_witness_score": 210,
+    "wcnf_path": "data/generated/bt1384_s3_gauge_maxsat.wcnf"
+  },
+  "bt1373_witness_score_recomputed": 210,
+  "available_solver_candidates": [],
+  "solver_run": null,
+  "optimality_status": "unresolved",
+  "recommended_commands": [
+    "python tools/bt1384_export_s3_gauge_maxsat.py",
+    "open-wbo data/generated/bt1384_s3_gauge_maxsat.wcnf",
+    "maxhs data/generated/bt1384_s3_gauge_maxsat.wcnf"
+  ],
+  "boundary": "This is the solver-facing harness. It regenerates the exact WCNF and verifies the 210 witness. A global optimality claim requires importing and checking a real MaxSAT/ILP certificate."
+}
