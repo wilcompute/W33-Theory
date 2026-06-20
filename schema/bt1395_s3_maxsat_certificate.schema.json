@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wilcompute.github.io/W33-Theory/schema/bt1395_s3_maxsat_certificate.schema.json",
+  "title": "BT1395 S3 MaxSAT certificate",
+  "type": "object",
+  "required": ["format", "certificate_type", "claimed_score"],
+  "properties": {
+    "format": {"const": "bt1395.s3_maxsat_certificate.v1"},
+    "certificate_type": {"enum": ["witness", "upper_bound", "optimality"]},
+    "claimed_score": {"type": "integer", "minimum": 0, "maximum": 540},
+    "labels": {
+      "type": "array",
+      "minItems": 40,
+      "maxItems": 40,
+      "items": {"type": "integer", "minimum": 0, "maximum": 5}
+    },
+    "upper_bound": {"type": ["integer", "null"], "minimum": 0, "maximum": 540},
+    "solver": {"type": "string"},
+    "source": {"type": "string"}
+  },
+  "additionalProperties": false
+}
