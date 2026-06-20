@@ -1,0 +1,92 @@
+{
+  "boundary": "BT1377 is a cross-artifact architecture contract. It does not set an optical clock speed, prove a hardware threshold, or prove that the deterministic Clifford scheduler alone is universal.",
+  "bt": 1377,
+  "checks": {
+    "bt1299_verified": true,
+    "bt1300_verified": true,
+    "bt1303_verified": true,
+    "bt1306_verified": true,
+    "bt1374_verified": true,
+    "bt1375_verified": true,
+    "bt1376_verified": true,
+    "central_c3_scheduler_is_concrete": true,
+    "deterministic_kernel_declines_universal_overclaim": true,
+    "durations_form_runtime_ladder": true,
+    "eight_tick_word_has_three_axis_and_five_switch_ops": true,
+    "packet_rows_are_single_bit_q6_edges": true,
+    "phase_correction_frontier_is_radius3_strict": true,
+    "physical_tick_schedule_matches_word": true,
+    "stress_route_is_six_distinct_q6_switches": true,
+    "tqc_artifact_records_fibonacci_universality": true,
+    "tqc_artifact_records_non_clifford_port": true
+  },
+  "deterministic_kernel": {
+    "group": "Sp(4,3)",
+    "hardware_tick_windows": 51840,
+    "microframe_ticks": 72,
+    "mirror_bus_ticks": 2160,
+    "name": "protected finite Clifford runtime",
+    "runtime_frames": 720,
+    "runtime_order": 51840,
+    "universal_without_port": false,
+    "word_ticks": 8
+  },
+  "how_it_physically_computes": "A logical packet digit is compiled into an 8-tick optical word. The first three ticks program ternary tritter/EOM axes, the last five ticks switch delay-line apartment hops, and BT1374 lowers the packet address to a single-bit Q6 edge.  BT1376 supplies the S3 phase synchronization frontier, while BT1375 makes generation advance the actual central C3 action on Steinberg cycle vectors. Repeating the 72-tick oscillator frame for 720 frames gives the 51840-window finite Clifford runtime.",
+  "physical_pipeline": [
+    {
+      "layer": "encode_route_digit",
+      "logical_object": "BT828 route digit / packet row",
+      "physical_action": "choose three ternary axes and up to five apartment hops",
+      "verified_by": "BT1300"
+    },
+    {
+      "layer": "emit_optical_word",
+      "logical_object": "8-tick ISA word",
+      "physical_action": "ticks 0..2 are tritter/EOM phase pulses; ticks 3..7 are delay-line switch pulses",
+      "verified_by": "BT1306"
+    },
+    {
+      "layer": "address_packet",
+      "logical_object": "tomotope_flag = 4*block + mirror_slot mod 4",
+      "physical_action": "lower the packet to a single-bit Q6 edge / switch rail",
+      "verified_by": "BT1374"
+    },
+    {
+      "layer": "synchronize_phase",
+      "logical_object": "root-fixed S3 line gauge",
+      "physical_action": "apply 330 nonidentity phase/counterconnection corrections; no radius-3 local improvement exists",
+      "verified_by": "BT1376"
+    },
+    {
+      "layer": "schedule_generation",
+      "logical_object": "Steinberg matter state and generation",
+      "physical_action": "advance by the central C3 operator on concrete cycle-vector witnesses",
+      "verified_by": "BT1375"
+    },
+    {
+      "layer": "run_clifford_supercycle",
+      "logical_object": "Sp(4,3) finite Clifford runtime",
+      "physical_action": "repeat 720 oscillator frames = 51840 hardware-tick windows",
+      "verified_by": "BT1299/BT1303"
+    },
+    {
+      "layer": "non_clifford_port",
+      "logical_object": "Hesse-SIC/T measurement or Fibonacci braid resource",
+      "physical_action": "inject the non-Clifford resource at a measurement/topological boundary",
+      "verified_by": "BT344 boundary artifact"
+    }
+  ],
+  "title": "Physical universal-computation contract for the holonet",
+  "universal_computation_reading": "The deterministic machine is a physical Clifford/symplectic runtime.  It becomes a universal quantum-computation architecture only when the explicit non-Clifford port is supplied: Hesse-SIC/T measurement or Fibonacci braiding as recorded by the TQC artifact.",
+  "universal_port": {
+    "port_options": [
+      "Non-Clifford T gate via Hesse-SIC/T measurement",
+      "Fibonacci anyon braiding gives universal quantum computation"
+    ],
+    "reason": "Clifford gates are efficiently simulable without a non-Clifford resource.",
+    "repo_source": "w33_BREAKTHROUGH_344_TQC_on_SQNA",
+    "required": true,
+    "runtime_status": "Recorded as an architecture port. The deterministic BT1299-BT1376 stack supplies routing, scheduling, correction, and Clifford execution; the non-Clifford resource is an explicit required input."
+  },
+  "verified": true
+}
