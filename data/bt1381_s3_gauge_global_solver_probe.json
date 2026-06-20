@@ -1,0 +1,36 @@
+{
+  "bt": 1381,
+  "title": "S3 gauge global solver probe",
+  "verified": true,
+  "checks": {
+    "constraints_540": true,
+    "base_score_210": true,
+    "root_fixed": true,
+    "labels_are_s3": true,
+    "no_probe_above_210": true,
+    "bt1373_witness_retained": true
+  },
+  "problem": {
+    "variables": 40,
+    "root_fixed_variables": 39,
+    "labels_per_variable": 6,
+    "constraints": 540,
+    "search_space_root_fixed": "6^39",
+    "objective": "maximize identity residual edges"
+  },
+  "solver": {
+    "method": "deterministic random-restart coordinate ascent",
+    "seed": 1381,
+    "restarts": 240,
+    "best_score": 210,
+    "best_source": "BT1373 witness",
+    "local_optima_histogram": {
+      "210": 1,
+      "200": 52,
+      "205": 126,
+      "190": 4,
+      "195": 58
+    }
+  },
+  "boundary": "This is a global solver probe, not a proof of global optimality. It found no witness beating 210; BT1379 remains the exact Max-2CSP specification for ILP/SAT/branch-and-bound proof work."
+}
