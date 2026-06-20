@@ -1,0 +1,34 @@
+{
+  "bt": 1379,
+  "title": "S3 gauge synchronization Max-2CSP specification",
+  "verified": true,
+  "checks": {
+    "forty_line_labels": true,
+    "root_fixed": true,
+    "six_s3_labels": true,
+    "constraints_540": true,
+    "identity_score_210": true,
+    "correction_score_330": true,
+    "radius3_local": true,
+    "radius_counts_match": true,
+    "best_delta_minus5": true
+  },
+  "problem": {
+    "variables": 40,
+    "root_fixed_variables": 39,
+    "labels_per_variable": 6,
+    "constraints": 540,
+    "objective": "maximize identity residual edges, equivalently minimize nonidentity S3 corrections",
+    "search_space_root_fixed": "6^39",
+    "current_identity_score": 210,
+    "current_correction_score": 330,
+    "radius_certified": 3,
+    "radius3_candidates_checked": 1991015,
+    "best_checked_identity_score": 205
+  },
+  "next_solver_targets": [
+    "branch-and-bound upper bound on identity_edges",
+    "ILP/SAT encoding with six labels per line",
+    "spectral or SDP relaxation for a proof that 210 is global optimal or a witness above 210"
+  ]
+}
