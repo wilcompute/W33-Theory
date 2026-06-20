@@ -1,0 +1,41 @@
+{
+  "bt": 1385,
+  "title": "Concrete Hesse-SIC/T non-Clifford port ABI",
+  "verified": true,
+  "checks": {
+    "bt1382_abi_verified": true,
+    "runtime_verified": true,
+    "dimension_qutrit_3": true,
+    "sic_has_9_outcomes": true,
+    "word_ticks_8": true,
+    "clifford_window_51840": true,
+    "has_feed_forward_rule": true,
+    "has_failure_modes": true
+  },
+  "resource_token": {
+    "name": "hesse_sic_t_token",
+    "dimension": 3,
+    "sic_outcomes": 9,
+    "logical_role": "non-stabilizer qutrit-assisted T injection resource",
+    "consumption": "single-shot measurement/injection at a Clifford packet boundary"
+  },
+  "timing_contract": {
+    "word_ticks": 8,
+    "microframe_ticks": 72,
+    "mirror_bus_ticks": 2160,
+    "clifford_window_ticks": 51840,
+    "injection_slots": ["after packet address lowering", "before Clifford frame closure", "with classical feed-forward into next packet word"]
+  },
+  "measurement_signature": {
+    "outcome_alphabet": "Hesse-SIC outcome h in {0,...,8}",
+    "feed_forward": "map h to a Clifford correction plus one T-frame parity bit",
+    "acceptance": "outcome registered, packet ABI restored, correction record appended",
+    "failure_modes": ["missing outcome", "ambiguous SIC outcome", "feed-forward timeout", "Clifford ABI restoration failure"]
+  },
+  "packet_boundary": {
+    "input": "Clifford-protected logical packet wire",
+    "operation": "consume hesse_sic_t_token and measure/inject non-Clifford resource",
+    "output": "Clifford packet ABI plus correction side record"
+  },
+  "honest_boundary": "This is a concrete ABI and verification signature for the Hesse-SIC/T port. It does not certify physical SIC optics, magic-state distillation yield, or threshold overhead."
+}
