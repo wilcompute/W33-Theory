@@ -1,0 +1,43 @@
+% BT1381--BT1383 runtime frontier insert
+\section{Post-BT1377 Runtime Frontier}
+
+The BT1362--BT1380 stack gives a certified physical Clifford/symplectic runtime.  BT1381--BT1383 extend that stack in three directions: global S3 gauge optimization, explicit non-Clifford port ABI, and paper/release integration.
+
+\subsection{S3 gauge optimization frontier}
+
+BT1379 frames synchronization as a Max-2CSP on 40 W33 line variables, six S3 labels per variable, and 540 skew-line constraints.  BT1381 adds a deterministic global solver probe.  With seed 1381 and 240 coordinate-ascent restarts, no witness exceeds the BT1373 score of 210 identity residual edges.  The frontier remains:
+
+\[
+\mathrm{identity}=210,\qquad \mathrm{corrections}=330.
+\]
+
+This is not a global optimality proof.  It is a solver-frontier certificate: branch-and-bound, ILP/SAT, or SDP relaxation remains the next proof target.
+
+\subsection{Non-Clifford port ABI}
+
+BT1382 certifies the non-Clifford port as an architecture boundary.  The deterministic runtime is a protected Clifford machine of order 51840 and is not universal by itself.  Universal computation requires one of the explicit ABI ports:
+
+\begin{itemize}
+\item Hesse-SIC/T measurement port;
+\item Fibonacci braiding port.
+\end{itemize}
+
+The port contract records entry boundary, packet interface, and verification signature.  It does not certify a magic-state factory, Hesse-SIC hardware stack, or Fibonacci anyon device.
+
+\subsection{Claim-class integration}
+
+The runtime frontier is claim-stratified as follows:
+
+\begin{center}
+\begin{tabular}{rll}
+\toprule
+BT & Class & Role\\
+\midrule
+1378 & CERT & cross-artifact runtime contract verifier\\
+1379 & OPT & S3 gauge Max-2CSP specification\\
+1381 & SIM/OPT & deterministic global solver probe\\
+1382 & ENG/ABI & non-Clifford port ABI certificate\\
+1383 & CERT & paper and release integration manifest\\
+\bottomrule
+\end{tabular}
+\end{center}
