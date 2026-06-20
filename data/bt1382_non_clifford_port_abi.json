@@ -1,0 +1,37 @@
+{
+  "bt": 1382,
+  "title": "Non-Clifford port ABI certificate",
+  "verified": true,
+  "checks": {
+    "runtime_contract_verified": true,
+    "bt1377_requires_port": true,
+    "deterministic_kernel_not_universal": true,
+    "two_port_options": true,
+    "all_ports_have_entry_boundary": true,
+    "all_ports_return_to_packet_abi": true
+  },
+  "deterministic_kernel": {
+    "runtime_order": 51840,
+    "universal_without_port": false,
+    "word_ticks": 8
+  },
+  "ports": [
+    {
+      "name": "Hesse-SIC/T measurement port",
+      "resource_class": "magic-state or SIC-assisted non-stabilizer measurement",
+      "entry_boundary": "measurement/topological boundary after Clifford packet scheduling",
+      "packet_interface": "inject one non-Clifford resource token into the protected Clifford runtime",
+      "verification_signature": ["not Clifford-generated", "consumed by measurement/injection", "returns to Clifford packet ABI"],
+      "status": "recorded ABI; physical resource factory not yet certified"
+    },
+    {
+      "name": "Fibonacci braiding port",
+      "resource_class": "topological non-Clifford braid resource",
+      "entry_boundary": "braid/measurement boundary coupled to the packet scheduler",
+      "packet_interface": "export Clifford-protected logical wire to braid resource and reimport outcome",
+      "verification_signature": ["non-Clifford braid generator", "classical feed-forward outcome", "returns to Clifford packet ABI"],
+      "status": "recorded ABI; braid hardware not yet certified"
+    }
+  ],
+  "honest_boundary": "BT1382 certifies the ABI and verification contract for non-Clifford injection. It does not certify a magic-state factory, Hesse-SIC hardware, or Fibonacci anyon device."
+}
