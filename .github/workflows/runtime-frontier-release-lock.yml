@@ -1,0 +1,20 @@
+name: Runtime Frontier Release Lock
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  runtime-frontier-release-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Run runtime frontier release lock
+        run: bash tools/bt1389_run_runtime_frontier_release_lock.sh
