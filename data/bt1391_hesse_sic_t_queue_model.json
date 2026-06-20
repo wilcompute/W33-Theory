@@ -1,0 +1,23 @@
+{
+  "bt": 1391,
+  "title": "Hesse SIC T queueing envelope over one Clifford window",
+  "verified": true,
+  "checks": {
+    "factory_verified": true,
+    "window_has_720_microframes": true,
+    "baseline_medium_stable": true,
+    "baseline_heavy_stable": true,
+    "conservative_medium_stable": true,
+    "aggressive_heavy_stable": true,
+    "all_slack_positive": true
+  },
+  "window": {"ticks": 51840, "microframe_ticks": 72, "microframes": 720},
+  "rows": [
+    {"name": "baseline_light", "service_per_microframe": 0.8763201, "demand_per_microframe": 0.25, "microframes_per_51840_window": 720, "rho": 0.2852861720541981, "stable": true, "expected_successful_tokens_per_window": 631.750472, "expected_demand_tokens_per_window": 180.0, "expected_slack_tokens_per_window": 451.750472, "expected_backlog_tokens_mm1_envelope": 0.11384505421057147, "expected_wait_microframes_mm1_envelope": 0.4553802168422859},
+    {"name": "baseline_medium", "service_per_microframe": 0.8763201, "demand_per_microframe": 0.5, "microframes_per_51840_window": 720, "rho": 0.5705723441083962, "stable": true, "expected_successful_tokens_per_window": 631.750472, "expected_demand_tokens_per_window": 360.0, "expected_slack_tokens_per_window": 271.750472, "expected_backlog_tokens_mm1_envelope": 0.7580818402709382, "expected_wait_microframes_mm1_envelope": 1.5161636805418764},
+    {"name": "baseline_heavy", "service_per_microframe": 0.8763201, "demand_per_microframe": 0.8, "microframes_per_51840_window": 720, "rho": 0.9129157505734339, "stable": true, "expected_successful_tokens_per_window": 631.750472, "expected_demand_tokens_per_window": 576.0, "expected_slack_tokens_per_window": 55.750472000000015, "expected_backlog_tokens_mm1_envelope": 9.568625679942653, "expected_wait_microframes_mm1_envelope": 11.961, "},
+    {"name": "conservative_medium", "service_per_microframe": 0.37431900000000007, "demand_per_microframe": 0.25, "microframes_per_51840_window": 720, "rho": 0.6678787612131041, "stable": true, "expected_successful_tokens_per_window": 269.50968000000005, "expected_demand_tokens_per_window": 180.0, "expected_slack_tokens_per_window": 89.50968000000005, "expected_backlog_tokens_mm1_envelope": 1.3437021130133332, "expected_wait_microframes_mm1_envelope": 5.372808452053332},
+    {"name": "aggressive_heavy", "service_per_microframe": 1.9076117088, "demand_per_microframe": 1.25, "microframes_per_51840_window": 720, "rho": 0.6552696369887258, "stable": true, "expected_successful_tokens_per_window": 1373.480430336, "expected_demand_tokens_per_window": 900.0, "expected_slack_tokens_per_window": 473.4804303359999, "expected_backlog_tokens_mm1_envelope": 1.2453274112439308, "expected_wait_microframes_mm1_envelope": 0.9962619289951448}
+  ],
+  "boundary": "Queueing envelope only. It assumes independent service and demand rates and does not model correlated optical/resource-factory faults."
+}
