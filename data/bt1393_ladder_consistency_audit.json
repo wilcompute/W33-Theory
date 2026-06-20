@@ -1,0 +1,25 @@
+{
+  "bt": 1393,
+  "title": "Q5-Q7 heptad ladder consistency audit",
+  "verified": true,
+  "checks": {
+    "bt1352_first_crossing_q6": true,
+    "bt1354_q6_super_ramanujan": true,
+    "bt1356_q7_certified": true,
+    "bt1356_q7_still_no_amplification": true,
+    "bt1358_competitor_pool_falsified": true,
+    "bt1358_exact_matches_zero_is_competitor_pool": true
+  },
+  "resolutions": {
+    "q7_ceiling_vs_q7_completion": "The earlier Q7 ceiling note is a pre-ladder/W63-extension caution. BT1356 later certifies a Q7 heptad completion inside the heptad ladder, with Q8 beginning the second period.",
+    "q6_vs_q7_ramanujan_crossing": "BT1352/BT1354 identify the first super-Ramanujan crossing at Q6. Q7 remains super-Ramanujan and period-closing; it is not the first crossing.",
+    "exact_W33_matches_zero": "BT1358's exact_W33_matches=0 refers to the competitor/falsifier pool survivor search, not to absence of the W33 reference family. The W33 reference is handled separately in BT1354 as the physically realizable family."
+  },
+  "canonical_ladder": {
+    "Q4": {"delta": 2.523, "ramanujan_bound": 2.8284, "super_ramanujan": false, "code_params": {"n": 32, "k": 4, "d": 4}},
+    "Q5": {"delta": 2.687, "ramanujan_bound": 2.8284, "super_ramanujan": false, "code_params": {"n": 37, "k": 5, "d": 4}},
+    "Q6": {"delta": 2.862, "ramanujan_bound": 2.8284, "super_ramanujan": true, "code_params": {"n": 42, "k": 6, "d": 4}},
+    "Q7": {"delta_direct_bt1356": 3.0616, "params": {"n": 47, "k": 7, "d": 4}, "period_closed": true}
+  },
+  "paper_patch_recommendation": "Add chronology language: BT1324 was an open/ceiling warning; BT1356 resolves the heptad-ladder Q7 case; BT1358 falsifies competitors, not the W33 reference."
+}
