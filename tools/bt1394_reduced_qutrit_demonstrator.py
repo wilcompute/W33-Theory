@@ -38,7 +38,6 @@ def visibility(psi, U):
 
 def route_control_state():
     I, X, Z, _F = qutrit_ops()
-    # registers: route R, fiber/source A, time/path B.  Dim = 3*3*3.
     omega_bell = bell_qutrit()
     r = np.ones(3, dtype=complex) / math.sqrt(3)
     psi = np.kron(r, omega_bell)
@@ -82,7 +81,7 @@ def main() -> None:
         "V_X_is_0": abs(vis["X_tensor_I"]) < 1e-12,
         "V_Z_is_0": abs(vis["Z_tensor_I"]) < 1e-12,
         "route_probs_uniform": all(abs(p - 1.0 / 3.0) < 1e-12 for p in route_probs),
-        "route_register_not_classically_collapsed": purity > 1.0 / 3.0,
+        "route_reduced_state_maximally_mixed": abs(purity - 1.0 / 3.0) < 1e-12 and coherence_l1 < 1e-12,
         "controlled_state_norm_1": abs(float(np.vdot(out, out).real) - 1.0) < 1e-12,
     }
     result = {
@@ -101,7 +100,7 @@ def main() -> None:
             "route_purity": purity,
             "route_l1_coherence": coherence_l1
         },
-        "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and coherent route-controlled Clifford transport; it tests route=gate=transport without requiring the full W(3,3) atlas."
+        "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In the fully entangling route-control setting, tracing out the Bell legs leaves the route register maximally mixed; therefore route coherence must be certified by an interferometric/quantum-erasure readout, not by the reduced route density matrix alone."
     }
     ns.out.parent.mkdir(parents=True, exist_ok=True)
     ns.out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
