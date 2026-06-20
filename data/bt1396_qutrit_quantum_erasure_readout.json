@@ -1,0 +1,27 @@
+{
+  "bt": 1396,
+  "title": "Qutrit route-control quantum-erasure readout",
+  "verified": true,
+  "checks": {
+    "bell_branches_orthonormal": true,
+    "trace_route_maximally_mixed": true,
+    "eraser_probability_one_third": true,
+    "eraser_restores_pure_route": true,
+    "eraser_l1_coherence_two": true,
+    "eraser_routes_to_single_interference_port": true,
+    "which_route_has_no_coherence": true
+  },
+  "readout": {
+    "branches": ["Omega", "Z Omega", "X Omega"],
+    "pre_readout_route_purity": 0.33333333333333354,
+    "eraser_projector": "(|Omega> + |Z Omega> + |X Omega>)/sqrt(3)",
+    "eraser_success_probability": 0.3333333333333335,
+    "conditional_route_density_real": [[0.333333333333, 0.333333333333, 0.333333333333], [0.333333333333, 0.333333333333, 0.333333333333], [0.333333333333, 0.333333333333, 0.333333333333]],
+    "conditional_route_density_imag": [[0.0, -0.0, -0.0], [0.0, 0.0, 0.0], [0.0, -0.0, 0.0]],
+    "conditional_route_l1_coherence": 2.0,
+    "route_interference_port_probabilities": [1.0, 4.190823558986625e-32, 1.1093356479670479e-31],
+    "which_route_success_probability": 0.3333333333333334,
+    "which_route_l1_coherence": 0.0
+  },
+  "interpretation": "The route register is mixed if the Bell legs are discarded, but a Bell-branch eraser measurement restores a pure coherent qutrit route state with l1 coherence 2 and deterministic route interferometer output. This is the missing readout for the reduced photonic demonstrator."
+}
