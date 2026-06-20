@@ -1,0 +1,21 @@
+{
+  "bt": 1399,
+  "title": "Claim master BT1398 PDF rebuild and render verification",
+  "verified": true,
+  "tex": "paper/w33_q4_claim_stratified_master.tex",
+  "local_pdf_artifact": "w33_q4_claim_stratified_master_bt1399.pdf",
+  "local_tex_artifact": "w33_q4_claim_stratified_master_bt1399.tex",
+  "compiled_locally": true,
+  "latex_engine": "pdflatex",
+  "passes": 2,
+  "pages": 6,
+  "render_verified": true,
+  "rendered_pages_inspected": [1, 4, 5, 6],
+  "new_content_checked": [
+    "BT1393 ladder chronology correction",
+    "BT1394 reduced qutrit demonstrator",
+    "BT1396 quantum-erasure readout",
+    "BT1395/BT1397 MaxSAT certificate boundary"
+  ],
+  "boundary": "The PDF was compiled and visually checked locally; repository CI still builds from TeX rather than storing the binary PDF."
+}
