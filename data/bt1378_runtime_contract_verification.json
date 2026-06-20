@@ -1,0 +1,27 @@
+{
+  "bt": 1378,
+  "title": "Physical runtime contract verifier",
+  "verified": true,
+  "checks": {
+    "q4_symmetric_3244": true,
+    "q4_clock_stabilizer_64": true,
+    "q4_clock_structure_c2_4_c4": true,
+    "packet_compiler_verified": true,
+    "packet_rule_is_4block_plus_mod4": true,
+    "packet_bus_192": true,
+    "steinberg_operator_verified": true,
+    "contract_verified": true,
+    "deterministic_kernel_not_universal": true,
+    "non_clifford_port_required": true,
+    "runtime_order_51840": true,
+    "mirror_bus_2160": true,
+    "word_ticks_8": true
+  },
+  "pipeline": [
+    "BT1362 symmetric Q4 [[32,4,4]] quotient with C2^4:C4 clock",
+    "BT1374 packet route compiler to single-bit Q6/tomotope edges",
+    "BT1375 central C3 Steinberg scheduler",
+    "BT1377 protected Clifford runtime plus explicit non-Clifford port"
+  ],
+  "honest_boundary": "The deterministic packet machine is a certified Clifford/symplectic runtime. Universal computation still requires the explicit non-Clifford port."
+}
