@@ -9,7 +9,7 @@
     "V_X_is_0": true,
     "V_Z_is_0": true,
     "route_probs_uniform": true,
-    "route_register_not_classically_collapsed": true,
+    "route_reduced_state_maximally_mixed": true,
     "controlled_state_norm_1": true
   },
   "bell_qutrit": "|Omega>=(|00>+|11>+|22>)/sqrt(3)",
@@ -28,5 +28,5 @@
     "route_purity": 0.33333333333333354,
     "route_l1_coherence": 1.968155234088864e-16
   },
-  "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In this full entangling setting the route register decoheres after tracing out the Bell legs; an interferometric quantum-erasure readout is needed to certify route coherence after control."
+  "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In the fully entangling route-control setting, tracing out the Bell legs leaves the route register maximally mixed; therefore route coherence must be certified by an interferometric/quantum-erasure readout, not by the reduced route density matrix alone."
 }
