@@ -1,0 +1,17 @@
+{
+  "bt": 1392,
+  "title": "Runtime frontier CI workflow manifest",
+  "ready": true,
+  "workflow": ".github/workflows/runtime-frontier-release-lock.yml",
+  "runner": "tools/bt1389_run_runtime_frontier_release_lock.sh",
+  "runner_extensions": [
+    "tools/bt1390_import_s3_maxsat_certificate.py",
+    "tools/bt1391_hesse_sic_t_queue_model.py"
+  ],
+  "checks": {
+    "dedicated_workflow_added": true,
+    "runtime_runner_extended_through_bt1391": true,
+    "direct_recovery_workflow_patch_blocked": true
+  },
+  "boundary": "The existing recovery workflow edit was blocked by connector safety filtering, so BT1392 adds a dedicated GitHub Actions workflow for the runtime frontier release lock."
+}
