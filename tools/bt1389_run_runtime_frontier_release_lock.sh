@@ -11,6 +11,8 @@ python tools/bt1383_verify_runtime_frontier_integration.py
 python tools/bt1384_export_s3_gauge_maxsat.py
 python tools/bt1385_hesse_sic_t_port_abi.py
 python tools/bt1388_hesse_sic_t_factory_model.py
-python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py
+python tools/bt1390_import_s3_maxsat_certificate.py
+python tools/bt1391_hesse_sic_t_queue_model.py
+python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py tests/test_bt1390_bt1392_certificate_queue_workflow.py
 
 echo "BT1389 runtime frontier release lock passed"
