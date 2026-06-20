@@ -6,6 +6,7 @@
     "bell_norm_1": true,
     "V_I_is_1": true,
     "V_F_is_1_over_3": true,
+    "F_tensor_F_conj_is_bell_invariant": true,
     "V_X_is_0": true,
     "V_Z_is_0": true,
     "route_probs_uniform": true,
@@ -13,20 +14,62 @@
     "controlled_state_norm_1": true
   },
   "bell_qutrit": "|Omega>=(|00>+|11>+|22>)/sqrt(3)",
-  "visibility_targets": {"V(I)": 1.0, "V(F3)": 0.3333333333333333, "V(X)": 0.0, "V(Z)": 0.0},
+  "visibility_targets": {
+    "V(I)": 1.0,
+    "V(F3)": 0.3333333333333333,
+    "V(X)": 0.0,
+    "V(Z)": 0.0
+  },
   "visibility_results": {
-    "I_tensor_I": 1.0,
-    "F_tensor_F_conj": 0.33333333333333354,
+    "I_tensor_I": 1.0000000000000002,
+    "F_tensor_I": 0.3333333333333335,
+    "F_tensor_F_conj_invariant": 1.0000000000000004,
     "X_tensor_I": 0.0,
-    "Z_tensor_I": 2.060003483367716e-32
+    "Z_tensor_I": 1.1443916996305594e-16
   },
   "route_control": {
-    "operation": "|0><0|⊗I + |1><1|⊗Z + |2><2|⊗X on Bell-qutrit fiber leg",
-    "route_probabilities": [0.3333333333333334, 0.3333333333333334, 0.3333333333333334],
-    "route_reduced_density_real": [[0.333333333333, -0.0, 0.0], [-0.0, 0.333333333333, 0.0], [0.0, 0.0, 0.333333333333]],
-    "route_reduced_density_imag": [[0.0, -0.0, 0.0], [0.0, 0.0, 0.0], [-0.0, -0.0, 0.0]],
-    "route_purity": 0.33333333333333354,
-    "route_l1_coherence": 1.968155234088864e-16
+    "operation": "|0><0|\u2297I + |1><1|\u2297Z + |2><2|\u2297X on Bell-qutrit fiber leg",
+    "route_probabilities": [
+      0.33333333333333354,
+      0.3333333333333335,
+      0.33333333333333354
+    ],
+    "route_reduced_density_real": [
+      [
+        0.333333333333,
+        -0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.333333333333
+      ]
+    ],
+    "route_reduced_density_imag": [
+      [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "route_purity": 0.3333333333333337,
+    "route_l1_coherence": 8.441528768080323e-17
   },
   "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In the fully entangling route-control setting, tracing out the Bell legs leaves the route register maximally mixed; therefore route coherence must be certified by an interferometric/quantum-erasure readout, not by the reduced route density matrix alone."
 }

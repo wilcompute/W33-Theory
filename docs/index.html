@@ -23361,9 +23361,19 @@
           conditional l1 coherence <code>2</code>.</p>
         <p>The Hesse-SIC/T port is stated as a concrete nine-outcome ABI at the Clifford packet boundary.
           The BT1400 readout envelope keeps the laboratory claim measurable: baseline gamma
-          <code>0.92919</code>, port-0 probability <code>0.95280</code>, and conservative gamma
-          <code>0.79298</code>. The S3 MaxSAT frontier remains witness-only at score <code>210</code> until
+          <code>0.92887</code>, port-0 probability <code>0.95258</code>, and conservative gamma
+          <code>0.79198</code>. The S3 MaxSAT frontier remains witness-only at score <code>210</code> until
           a solver-generated matching upper-bound certificate is imported.</p>
+
+        <h4>BT1403: Hesse port as eraser lift</h4>
+        <p><a href="../analysis/BT1403_hesse_port_eraser_lift.md">BT1403</a>
+          identifies the physical non-Clifford boundary more tightly. The Bell-branch quantum eraser has
+          three branches <code>Omega</code>, <code>Z Omega</code>, and <code>X Omega</code>; the Hesse-SIC/T
+          token has nine outcomes. The ABI lift is <code>9 = 3 × 3</code> and
+          <code>h = 3*route_trit + phase_trit</code>, so each Hesse outcome feeds a two-trit
+          Clifford correction <code>X^r Z^p</code> plus one T-frame parity bit into the next 8-tick packet word.</p>
+        <p>The existing PDF is left untouched. A separate preview build is emitted as
+          <a href="../photonic_holonet_BT1403_preview.pdf">photonic_holonet_BT1403_preview.pdf</a>.</p>
 
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff

@@ -180,6 +180,7 @@ network, middleware, and runtime.}
 
 %======================================================================
 \section{The substrate}
+\label{sec:substrate}
 
 \begin{definition}[$\W$]
 Let $V=\GF3^4$ with the alternating form
@@ -2977,8 +2978,8 @@ only by the quantum eraser on the Bell branch,
 which succeeds with probability $1/3$, restores route $\ell_1$ coherence $2$,
 and routes the interferometer to a single output port.  The current parametric
 noise envelope keeps this falsifiable: the baseline readout has
-$\gamma=0.92919$ and port-$0$ probability $0.95280$, while the conservative
-case keeps $\gamma=0.79298$ and port-$0$ probability $0.86199$.
+$\gamma=0.92887$ and port-$0$ probability $0.95258$, while the conservative
+case keeps $\gamma=0.79198$ and port-$0$ probability $0.86132$.
 
 The non-Clifford resource has likewise become an ABI rather than a slogan.  The
 Hesse-SIC/T token has nine outcomes, is consumed at a Clifford packet boundary,
@@ -3006,6 +3007,47 @@ import problem.  (Witnesses:
 \texttt{tools/bt1391\_hesse\_sic\_t\_queue\_model.py},
 \texttt{tools/bt1395\_s3\_maxsat\_bound\_pathway.py},
 \texttt{tools/bt1400\_qutrit\_erasure\_noise\_sensitivity.py}.)
+
+\subsection{BT1403 eraser-lift port: the Hesse boundary is the readout boundary}
+
+The Hesse port is not a second computer attached to the holonet after the fact.
+It is the quantum-eraser measurement boundary lifted by one qutrit phase label.
+BT1396 gives the first half of the boundary: the route register is incoherent if
+the Bell legs are traced out, and coherence returns only when the Bell branch is
+erased by the projector
+\[
+  \frac{\ket{\Omega}+\ket{Z\Omega}+\ket{X\Omega}}{\sqrt3}.
+\]
+This is a three-branch measurement, with branch labels
+\[
+  \Omega,\quad Z\Omega,\quad X\Omega .
+\]
+BT1385 gives the non-Clifford half: the Hesse-SIC/T token has nine outcomes.  The
+ABI statement is therefore the exact lift
+\[
+  9 = 3\times 3,\qquad h=3r+p,
+\]
+where \(r\in\{0,1,2\}\) selects the route/Bell branch and
+\(p\in\{0,1,2\}\) is the added phase label.  Equivalently, the nine Hesse
+outcomes are exactly 3 route branches times 3 phase labels.  The feed-forward
+record maps the outcome to a two-trit Clifford correction \(X^rZ^p\) plus the
+one \(T\)-frame parity bit needed by the non-Clifford injection.
+
+This is the physical meaning of the non-Clifford port in the single-photon
+architecture.  The same interferometric readout that proves the route qutrit is
+coherent also supplies the boundary at which a non-stabilizer qutrit resource can
+be consumed.  The Clifford runtime remains an 8-tick packet machine; the Hesse
+measurement writes a side record, restores the packet ABI, and hands the next
+word back to the protected scheduler.  Thus the architecture is not
+``Clifford machine plus mysterious magic box'' but
+\[
+  \text{Bell-branch eraser}\quad\longrightarrow\quad
+  \text{Hesse }3\times3\text{ lift}\quad\longrightarrow\quad
+  \text{next Clifford packet word}.
+\]
+The boundary remains honest: this identifies the ABI and alphabet of the port,
+not the optical SIC implementation or magic-state factory yield.  (Witness:
+\texttt{tools/bt1403\_hesse\_port\_eraser\_lift.py}.)
 
 \subsection{Self-error-correction and why the primitive is one}
 

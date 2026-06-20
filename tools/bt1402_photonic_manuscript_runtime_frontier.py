@@ -52,8 +52,9 @@ def main() -> None:
         "runtime_contract_verified": runtime["verified"] is True
         and runtime["checks"]["runtime_order_51840"] is True,
         "demonstrator_visibility_tuple": demonstrator["verified"] is True
-        and demonstrator["visibility_results"]["I_tensor_I"] == 1.0
-        and abs(demonstrator["visibility_results"]["F_tensor_F_conj"] - (1.0 / 3.0))
+        and abs(demonstrator["visibility_results"]["I_tensor_I"] - 1.0) < 1e-12
+        and abs(demonstrator["visibility_results"]["F_tensor_I"] - (1.0 / 3.0)) < 1e-12
+        and abs(demonstrator["visibility_results"]["F_tensor_F_conj_invariant"] - 1.0)
         < 1e-12
         and demonstrator["visibility_results"]["X_tensor_I"] < 1e-12
         and demonstrator["visibility_results"]["Z_tensor_I"] < 1e-12,
@@ -103,7 +104,10 @@ def main() -> None:
             },
             "single_photon_demonstrator": {
                 "V(I)": demonstrator["visibility_results"]["I_tensor_I"],
-                "V(F3)": demonstrator["visibility_results"]["F_tensor_F_conj"],
+                "V(F3)": demonstrator["visibility_results"]["F_tensor_I"],
+                "V(F3_tensor_conj_invariant)": demonstrator["visibility_results"][
+                    "F_tensor_F_conj_invariant"
+                ],
                 "V(X)": demonstrator["visibility_results"]["X_tensor_I"],
                 "V(Z)": demonstrator["visibility_results"]["Z_tensor_I"],
                 "route_reduced_purity": demonstrator["route_control"]["route_purity"],

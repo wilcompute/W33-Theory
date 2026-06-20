@@ -22,11 +22,12 @@
       "clifford_window_ticks": 51840
     },
     "single_photon_demonstrator": {
-      "V(I)": 1.0,
-      "V(F3)": 0.33333333333333354,
+      "V(I)": 1.0000000000000002,
+      "V(F3)": 0.3333333333333335,
+      "V(F3_tensor_conj_invariant)": 1.0000000000000004,
       "V(X)": 0.0,
-      "V(Z)": 2.060003483367716e-32,
-      "route_reduced_purity": 0.33333333333333354
+      "V(Z)": 1.1443916996305594e-16,
+      "route_reduced_purity": 0.3333333333333337
     },
     "quantum_eraser_readout": {
       "success_probability": 0.3333333333333335,
@@ -37,8 +38,8 @@
     "hesse_sic_t_port": {
       "sic_outcomes": 9,
       "queue_window_microframes": 720,
-      "baseline_heavy_slack_tokens": 55.750472000000016,
-      "conservative_medium_slack_tokens": 89.50968000000005
+      "baseline_heavy_slack_tokens": 55.23293520000004,
+      "conservative_medium_slack_tokens": 89.50967999999995
     },
     "s3_maxsat_boundary": {
       "computed_score": 210,

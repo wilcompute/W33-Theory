@@ -1,0 +1,102 @@
+{
+  "bt": 1403,
+  "title": "Hesse-SIC/T port as a quantum-eraser lift",
+  "verified": true,
+  "checks": {
+    "eraser_verified": true,
+    "hesse_port_verified": true,
+    "bt1402_frontier_verified": true,
+    "eraser_has_three_bell_branches": true,
+    "hesse_is_three_by_three_lift": true,
+    "grid_covers_all_hesse_outcomes": true,
+    "grid_covers_two_trit_corrections": true,
+    "eraser_restores_route_before_port": true,
+    "packet_boundary_returns_to_clifford_abi": true,
+    "queue_window_is_runtime_window": true,
+    "manuscripts_expose_eraser_lift": true,
+    "docs_expose_eraser_lift": true,
+    "preview_pdf_built_under_distinct_name": true
+  },
+  "eraser_lift": {
+    "route_eraser_branches": [
+      "Omega",
+      "Z Omega",
+      "X Omega"
+    ],
+    "branch_count": 3,
+    "hesse_sic_outcomes": 9,
+    "factorization": "9 = 3 route branches * 3 phase labels",
+    "grid": [
+      {
+        "h": 0,
+        "route_trit": 0,
+        "phase_trit": 0,
+        "branch": "Omega",
+        "pauli_correction": "X^0 Z^0"
+      },
+      {
+        "h": 1,
+        "route_trit": 0,
+        "phase_trit": 1,
+        "branch": "Omega",
+        "pauli_correction": "X^0 Z^1"
+      },
+      {
+        "h": 2,
+        "route_trit": 0,
+        "phase_trit": 2,
+        "branch": "Omega",
+        "pauli_correction": "X^0 Z^2"
+      },
+      {
+        "h": 3,
+        "route_trit": 1,
+        "phase_trit": 0,
+        "branch": "Z Omega",
+        "pauli_correction": "X^1 Z^0"
+      },
+      {
+        "h": 4,
+        "route_trit": 1,
+        "phase_trit": 1,
+        "branch": "Z Omega",
+        "pauli_correction": "X^1 Z^1"
+      },
+      {
+        "h": 5,
+        "route_trit": 1,
+        "phase_trit": 2,
+        "branch": "Z Omega",
+        "pauli_correction": "X^1 Z^2"
+      },
+      {
+        "h": 6,
+        "route_trit": 2,
+        "phase_trit": 0,
+        "branch": "X Omega",
+        "pauli_correction": "X^2 Z^0"
+      },
+      {
+        "h": 7,
+        "route_trit": 2,
+        "phase_trit": 1,
+        "branch": "X Omega",
+        "pauli_correction": "X^2 Z^1"
+      },
+      {
+        "h": 8,
+        "route_trit": 2,
+        "phase_trit": 2,
+        "branch": "X Omega",
+        "pauli_correction": "X^2 Z^2"
+      }
+    ],
+    "side_record": "h = 3*route_trit + phase_trit, plus one T-frame parity bit"
+  },
+  "physical_reading": "The quantum eraser first removes which-route information over the three Bell branches. The Hesse-SIC/T port is the same measurement boundary lifted by one phase trit, giving a 3x3 outcome alphabet whose outcome feeds the next 8-tick Clifford packet word.",
+  "preview_pdf": {
+    "path": "photonic_holonet_BT1403_preview.pdf",
+    "bytes": 740628
+  },
+  "boundary": "BT1403 proves an ABI/alphabet lift, not physical Hesse-SIC optics, a magic-state yield, or a detector-level noise threshold."
+}

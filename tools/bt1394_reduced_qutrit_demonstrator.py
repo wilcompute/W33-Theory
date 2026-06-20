@@ -20,7 +20,9 @@ def qutrit_ops():
     I = np.eye(3, dtype=complex)
     X = np.roll(I, 1, axis=0)
     Z = np.diag([1, omega, omega**2])
-    F = np.array([[omega ** (i * j) for j in range(3)] for i in range(3)], dtype=complex) / math.sqrt(3)
+    F = np.array(
+        [[omega ** (i * j) for j in range(3)] for i in range(3)], dtype=complex
+    ) / math.sqrt(3)
     return I, X, Z, F
 
 
@@ -33,7 +35,7 @@ def bell_qutrit():
 
 def visibility(psi, U):
     amp = np.vdot(psi, U @ psi)
-    return float(abs(amp) ** 2)
+    return float(abs(amp))
 
 
 def route_control_state():
@@ -62,13 +64,18 @@ def route_control_state():
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", type=Path, default=ROOT / "data" / "bt1394_reduced_qutrit_demonstrator.json")
+    ap.add_argument(
+        "--out",
+        type=Path,
+        default=ROOT / "data" / "bt1394_reduced_qutrit_demonstrator.json",
+    )
     ns = ap.parse_args()
     I, X, Z, F = qutrit_ops()
     psi = bell_qutrit()
     vis = {
         "I_tensor_I": visibility(psi, kron(I, I)),
-        "F_tensor_F_conj": visibility(psi, kron(F, np.conj(F))),
+        "F_tensor_I": visibility(psi, kron(F, I)),
+        "F_tensor_F_conj_invariant": visibility(psi, kron(F, np.conj(F))),
         "X_tensor_I": visibility(psi, kron(X, I)),
         "Z_tensor_I": visibility(psi, kron(Z, I)),
     }
@@ -77,11 +84,14 @@ def main() -> None:
     checks = {
         "bell_norm_1": abs(float(np.vdot(psi, psi).real) - 1.0) < 1e-12,
         "V_I_is_1": abs(vis["I_tensor_I"] - 1.0) < 1e-12,
-        "V_F_is_1_over_3": abs(vis["F_tensor_F_conj"] - 1.0 / 3.0) < 1e-12,
+        "V_F_is_1_over_3": abs(vis["F_tensor_I"] - 1.0 / 3.0) < 1e-12,
+        "F_tensor_F_conj_is_bell_invariant": abs(vis["F_tensor_F_conj_invariant"] - 1.0)
+        < 1e-12,
         "V_X_is_0": abs(vis["X_tensor_I"]) < 1e-12,
         "V_Z_is_0": abs(vis["Z_tensor_I"]) < 1e-12,
         "route_probs_uniform": all(abs(p - 1.0 / 3.0) < 1e-12 for p in route_probs),
-        "route_reduced_state_maximally_mixed": abs(purity - 1.0 / 3.0) < 1e-12 and coherence_l1 < 1e-12,
+        "route_reduced_state_maximally_mixed": abs(purity - 1.0 / 3.0) < 1e-12
+        and coherence_l1 < 1e-12,
         "controlled_state_norm_1": abs(float(np.vdot(out, out).real) - 1.0) < 1e-12,
     }
     result = {
@@ -90,7 +100,12 @@ def main() -> None:
         "verified": all(checks.values()),
         "checks": checks,
         "bell_qutrit": "|Omega>=(|00>+|11>+|22>)/sqrt(3)",
-        "visibility_targets": {"V(I)": 1.0, "V(F3)": 1.0/3.0, "V(X)": 0.0, "V(Z)": 0.0},
+        "visibility_targets": {
+            "V(I)": 1.0,
+            "V(F3)": 1.0 / 3.0,
+            "V(X)": 0.0,
+            "V(Z)": 0.0,
+        },
         "visibility_results": vis,
         "route_control": {
             "operation": "|0><0|⊗I + |1><1|⊗Z + |2><2|⊗X on Bell-qutrit fiber leg",
@@ -98,13 +113,18 @@ def main() -> None:
             "route_reduced_density_real": np.real(rho_R).round(12).tolist(),
             "route_reduced_density_imag": np.imag(rho_R).round(12).tolist(),
             "route_purity": purity,
-            "route_l1_coherence": coherence_l1
+            "route_l1_coherence": coherence_l1,
         },
-        "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In the fully entangling route-control setting, tracing out the Bell legs leaves the route register maximally mixed; therefore route coherence must be certified by an interferometric/quantum-erasure readout, not by the reduced route density matrix alone."
+        "interpretation": "The minimal demonstrator verifies Bell-qutrit signatures and route-controlled Clifford transport. In the fully entangling route-control setting, tracing out the Bell legs leaves the route register maximally mixed; therefore route coherence must be certified by an interferometric/quantum-erasure readout, not by the reduced route density matrix alone.",
     }
     ns.out.parent.mkdir(parents=True, exist_ok=True)
     ns.out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"bt": 1394, "verified": result["verified"], "V_F": vis["F_tensor_F_conj"]}, indent=2))
+    print(
+        json.dumps(
+            {"bt": 1394, "verified": result["verified"], "V_F": vis["F_tensor_I"]},
+            indent=2,
+        )
+    )
     if not result["verified"]:
         raise SystemExit(1)
 
