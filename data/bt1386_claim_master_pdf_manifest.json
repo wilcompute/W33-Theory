@@ -1,0 +1,20 @@
+{
+  "bt": 1386,
+  "title": "Claim-stratified master runtime paper build",
+  "tex": "paper/w33_q4_claim_stratified_master.tex",
+  "spliced_inputs": [
+    "tex/bt1380_post_1377_claim_table.tex",
+    "tex/bt1381_bt1383_runtime_frontier_insert.tex"
+  ],
+  "local_pdf_artifact": "w33_q4_claim_stratified_master_bt1386.pdf",
+  "compiled_locally": true,
+  "pages": 5,
+  "latex_engine": "pdflatex",
+  "render_verified": true,
+  "pdf_layout_fix": "BT1380 claim table compacted to avoid horizontal clipping",
+  "new_sections": [
+    "Physical Runtime Spine",
+    "Post-BT1377 Runtime Frontier",
+    "Hesse-SIC/T Non-Clifford Port"
+  ]
+}
