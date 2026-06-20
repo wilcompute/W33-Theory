@@ -142,6 +142,14 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
         "tests/test_bt1370_bt1372_counterconnection_address_scheduler_lifts.py"
         in SUITES["photonic-qec"]
     )
+    assert (
+        "tests/test_bt1373_bt1375_synchronization_packet_operator_lifts.py"
+        in SUITES["photonic-qec"]
+    )
+    assert (
+        "tests/test_bt1376_s3_gauge_radius3_local_optimum_certificate.py"
+        in SUITES["photonic-qec"]
+    )
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:

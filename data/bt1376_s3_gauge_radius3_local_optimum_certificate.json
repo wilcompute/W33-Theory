@@ -1,0 +1,420 @@
+{
+  "base_witness": {
+    "identity_edges": 210,
+    "labels_in_s3_perm_order": [
+      0,
+      4,
+      0,
+      3,
+      3,
+      1,
+      3,
+      0,
+      5,
+      3,
+      1,
+      2,
+      5,
+      2,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      3,
+      2,
+      0,
+      3,
+      3,
+      0,
+      3,
+      0,
+      5,
+      2,
+      1,
+      1,
+      3,
+      0,
+      5,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "nonidentity_corrections": 330,
+    "root_fixed_line": 0,
+    "source": "BT1373 improved S3 synchronization gauge"
+  },
+  "boundary": "This is an exhaustive local certificate, not a global optimum proof over all 6^39 root-fixed S3 gauges.",
+  "bt": 1376,
+  "checks": {
+    "all_540_skew_edges_used": true,
+    "all_requested_radii_strictly_decrease_score": true,
+    "best_radius_delta_is_minus_5": true,
+    "bt1373_identity_edge_score_is_210": true,
+    "radius_1_checked_195_candidates": true,
+    "radius_2_checked_25935_candidates": true,
+    "radius_3_checked_1964885_candidates": true,
+    "root_line_fixed_to_identity": true
+  },
+  "interpretation": "The BT1373 330-correction witness is a strict root-fixed local minimum through radius 3: changing any one, two, or three line labels lowers the identity-edge score by at least five.",
+  "local_certificate": {
+    "max_radius": 3,
+    "radii": [
+      {
+        "best_alternative_identity_edges": 205,
+        "best_delta": -5,
+        "best_examples": [
+          {
+            "delta": -5,
+            "lines": [
+              1
+            ],
+            "trial_labels": [
+              1
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              2
+            ],
+            "trial_labels": [
+              2
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              5
+            ],
+            "trial_labels": [
+              4
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              6
+            ],
+            "trial_labels": [
+              5
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              7
+            ],
+            "trial_labels": [
+              2
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              8
+            ],
+            "trial_labels": [
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              11
+            ],
+            "trial_labels": [
+              0
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              12
+            ],
+            "trial_labels": [
+              3
+            ]
+          }
+        ],
+        "candidate_relabels_checked": 195,
+        "delta_profile": {
+          "-12": 10,
+          "-5": 29,
+          "-6": 39,
+          "-7": 58,
+          "-8": 29,
+          "-9": 30
+        },
+        "radius": 1
+      },
+      {
+        "best_alternative_identity_edges": 205,
+        "best_delta": -5,
+        "best_examples": [
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2
+            ],
+            "trial_labels": [
+              1,
+              0
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2
+            ],
+            "trial_labels": [
+              4,
+              2
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              3
+            ],
+            "trial_labels": [
+              1,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              4
+            ],
+            "trial_labels": [
+              1,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              5
+            ],
+            "trial_labels": [
+              1,
+              1
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              5
+            ],
+            "trial_labels": [
+              4,
+              4
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              6
+            ],
+            "trial_labels": [
+              1,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              6
+            ],
+            "trial_labels": [
+              4,
+              5
+            ]
+          }
+        ],
+        "candidate_relabels_checked": 25935,
+        "delta_profile": {
+          "-10": 718,
+          "-11": 1130,
+          "-12": 3221,
+          "-13": 2571,
+          "-14": 3699,
+          "-15": 2570,
+          "-16": 1732,
+          "-17": 1601,
+          "-18": 407,
+          "-19": 524,
+          "-20": 485,
+          "-21": 60,
+          "-22": 60,
+          "-24": 15,
+          "-5": 1102,
+          "-6": 1482,
+          "-7": 2204,
+          "-8": 1214,
+          "-9": 1140
+        },
+        "radius": 2
+      },
+      {
+        "best_alternative_identity_edges": 205,
+        "best_delta": -5,
+        "best_examples": [
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              3
+            ],
+            "trial_labels": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              3
+            ],
+            "trial_labels": [
+              4,
+              2,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              4
+            ],
+            "trial_labels": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              4
+            ],
+            "trial_labels": [
+              4,
+              2,
+              3
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              5
+            ],
+            "trial_labels": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              5
+            ],
+            "trial_labels": [
+              4,
+              0,
+              4
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              5
+            ],
+            "trial_labels": [
+              4,
+              2,
+              1
+            ]
+          },
+          {
+            "delta": -5,
+            "lines": [
+              1,
+              2,
+              6
+            ],
+            "trial_labels": [
+              1,
+              0,
+              3
+            ]
+          }
+        ],
+        "candidate_relabels_checked": 1964885,
+        "delta_profile": {
+          "-10": 26566,
+          "-11": 42296,
+          "-12": 112504,
+          "-13": 98189,
+          "-14": 143939,
+          "-15": 111496,
+          "-16": 100841,
+          "-17": 127069,
+          "-18": 116391,
+          "-19": 157399,
+          "-20": 168954,
+          "-21": 155426,
+          "-22": 136980,
+          "-23": 111963,
+          "-24": 77974,
+          "-25": 55141,
+          "-26": 37460,
+          "-27": 25039,
+          "-28": 13374,
+          "-29": 7146,
+          "-30": 2717,
+          "-31": 973,
+          "-32": 675,
+          "-33": 90,
+          "-34": 30,
+          "-5": 20387,
+          "-6": 27417,
+          "-7": 40774,
+          "-8": 24531,
+          "-9": 21144
+        },
+        "radius": 3
+      }
+    ],
+    "total_candidate_relabels_checked": 1991015
+  },
+  "title": "Radius-3 local optimum certificate for the S3 synchronization gauge",
+  "verified": true
+}
