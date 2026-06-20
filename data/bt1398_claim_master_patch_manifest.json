@@ -1,0 +1,20 @@
+{
+  "bt": 1398,
+  "title": "Claim master patch for ladder, qutrit readout, and MaxSAT pathway",
+  "verified": true,
+  "paper": "paper/w33_q4_claim_stratified_master.tex",
+  "new_inputs": [
+    "data/bt1393_ladder_consistency_audit.json",
+    "data/bt1394_reduced_qutrit_demonstrator.json",
+    "data/bt1395_s3_maxsat_bound_pathway.json",
+    "data/bt1396_qutrit_quantum_erasure_readout.json",
+    "data/bt1397_example_optimality_certificate_verification.json"
+  ],
+  "paper_claims_added": [
+    "Q5-Q7 ladder chronology correction",
+    "Reduced Bell-qutrit demonstrator signatures",
+    "Quantum-erasure route-coherence readout",
+    "S3 MaxSAT certificate pathway and synthetic example boundary"
+  ],
+  "boundary": "The paper records BT1397 as a demonstration of the certificate path, not a solver-generated global optimality proof."
+}
