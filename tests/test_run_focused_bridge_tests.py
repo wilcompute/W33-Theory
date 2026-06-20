@@ -138,6 +138,10 @@ def test_focused_bridge_runner_has_expected_core_suites() -> None:
     assert (
         "tests/test_bt1367_bt1369_phase_q6_scheduler_lifts.py" in SUITES["photonic-qec"]
     )
+    assert (
+        "tests/test_bt1370_bt1372_counterconnection_address_scheduler_lifts.py"
+        in SUITES["photonic-qec"]
+    )
 
 
 def test_focused_bridge_runner_architecture_alias_dedupes_paths() -> None:

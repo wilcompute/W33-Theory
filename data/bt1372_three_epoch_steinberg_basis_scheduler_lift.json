@@ -1,0 +1,318 @@
+{
+  "boundary": "This supplies explicit basis labels and counts.  It is not yet an operator on the concrete BT865 cycle-vector witnesses; that is the next linear-action test.",
+  "bt": 1372,
+  "checks": {
+    "bt1369_source_slots_match": true,
+    "bt865_basis_dimension_matches": true,
+    "epoch_advance_commutes_with_generation_cycle": true,
+    "one_epoch_has_2160_slots": true,
+    "single_epoch_cannot_be_uniform_on_81_basis": true,
+    "single_epoch_is_globally_generation_balanced": true,
+    "single_epoch_per_matter_has_27_27_26_profile": true,
+    "three_epoch_cover_has_6480_slots": true,
+    "three_epoch_is_generation_balanced": true,
+    "three_epoch_is_uniform_on_81_basis": true,
+    "three_epoch_per_matter_is_80_80_80": true
+  },
+  "interpretation": "BT1369's scheduler is exactly a 27-matter-coordinate scheduler in one epoch.  The full 81-dimensional Steinberg basis needs the natural q=3 time cover: across three epochs, every basis label receives exactly 80 slots and epoch advance is the generation cycle.",
+  "one_epoch_boundary": {
+    "division": "2160 = 81 * 26 + 54",
+    "global_generation_counts": {
+      "0": 720,
+      "1": 720,
+      "2": 720
+    },
+    "per_matter_generation_profiles": {
+      "(26, 27, 27)": 9,
+      "(27, 26, 27)": 9,
+      "(27, 27, 26)": 9
+    },
+    "slots": 2160,
+    "steinberg_basis_dim": 81,
+    "verdict": "one epoch cannot be uniform on the full 81-state Steinberg basis"
+  },
+  "three_epoch_lift": {
+    "basis_count_profile": {
+      "80": 81
+    },
+    "generation_counts": {
+      "0": 2160,
+      "1": 2160,
+      "2": 2160
+    },
+    "identity": "3 * 2160 = 6480 = 81 * 80",
+    "per_matter_generation_profiles": {
+      "(80, 80, 80)": 27
+    },
+    "rows_sample": [
+      {
+        "epoch": 0,
+        "face_slot": 0,
+        "generation": 0,
+        "global_slot": 0,
+        "lane": 0,
+        "local_slot": 0,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 1,
+        "generation": 1,
+        "global_slot": 1,
+        "lane": 0,
+        "local_slot": 1,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "epoch": 0,
+        "face_slot": 2,
+        "generation": 2,
+        "global_slot": 2,
+        "lane": 0,
+        "local_slot": 2,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "epoch": 0,
+        "face_slot": 3,
+        "generation": 0,
+        "global_slot": 3,
+        "lane": 0,
+        "local_slot": 3,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 4,
+        "generation": 1,
+        "global_slot": 4,
+        "lane": 0,
+        "local_slot": 4,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "epoch": 0,
+        "face_slot": 5,
+        "generation": 2,
+        "global_slot": 5,
+        "lane": 0,
+        "local_slot": 5,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "epoch": 0,
+        "face_slot": 6,
+        "generation": 0,
+        "global_slot": 6,
+        "lane": 0,
+        "local_slot": 6,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 7,
+        "generation": 1,
+        "global_slot": 7,
+        "lane": 0,
+        "local_slot": 7,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "epoch": 0,
+        "face_slot": 8,
+        "generation": 2,
+        "global_slot": 8,
+        "lane": 0,
+        "local_slot": 8,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "epoch": 0,
+        "face_slot": 9,
+        "generation": 0,
+        "global_slot": 9,
+        "lane": 0,
+        "local_slot": 9,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 10,
+        "generation": 1,
+        "global_slot": 10,
+        "lane": 0,
+        "local_slot": 10,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "epoch": 0,
+        "face_slot": 11,
+        "generation": 2,
+        "global_slot": 11,
+        "lane": 0,
+        "local_slot": 11,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "epoch": 0,
+        "face_slot": 12,
+        "generation": 0,
+        "global_slot": 12,
+        "lane": 0,
+        "local_slot": 12,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 13,
+        "generation": 1,
+        "global_slot": 13,
+        "lane": 0,
+        "local_slot": 13,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 27
+      },
+      {
+        "epoch": 0,
+        "face_slot": 14,
+        "generation": 2,
+        "global_slot": 14,
+        "lane": 0,
+        "local_slot": 14,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 54
+      },
+      {
+        "epoch": 0,
+        "face_slot": 15,
+        "generation": 0,
+        "global_slot": 15,
+        "lane": 0,
+        "local_slot": 15,
+        "matter_state": 0,
+        "phase_orbit": 0,
+        "steinberg_basis_index": 0
+      },
+      {
+        "epoch": 0,
+        "face_slot": 0,
+        "generation": 1,
+        "global_slot": 16,
+        "lane": 0,
+        "local_slot": 0,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 28
+      },
+      {
+        "epoch": 0,
+        "face_slot": 1,
+        "generation": 2,
+        "global_slot": 17,
+        "lane": 0,
+        "local_slot": 1,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 55
+      },
+      {
+        "epoch": 0,
+        "face_slot": 2,
+        "generation": 0,
+        "global_slot": 18,
+        "lane": 0,
+        "local_slot": 2,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 1
+      },
+      {
+        "epoch": 0,
+        "face_slot": 3,
+        "generation": 1,
+        "global_slot": 19,
+        "lane": 0,
+        "local_slot": 3,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 28
+      },
+      {
+        "epoch": 0,
+        "face_slot": 4,
+        "generation": 2,
+        "global_slot": 20,
+        "lane": 0,
+        "local_slot": 4,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 55
+      },
+      {
+        "epoch": 0,
+        "face_slot": 5,
+        "generation": 0,
+        "global_slot": 21,
+        "lane": 0,
+        "local_slot": 5,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 1
+      },
+      {
+        "epoch": 0,
+        "face_slot": 6,
+        "generation": 1,
+        "global_slot": 22,
+        "lane": 0,
+        "local_slot": 6,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 28
+      },
+      {
+        "epoch": 0,
+        "face_slot": 7,
+        "generation": 2,
+        "global_slot": 23,
+        "lane": 0,
+        "local_slot": 7,
+        "matter_state": 1,
+        "phase_orbit": 1,
+        "steinberg_basis_index": 55
+      }
+    ],
+    "rule": "generation = (local_slot + matter_state + epoch) mod 3",
+    "slots": 6480
+  },
+  "title": "Three-epoch Steinberg basis scheduler lift",
+  "verified": true
+}

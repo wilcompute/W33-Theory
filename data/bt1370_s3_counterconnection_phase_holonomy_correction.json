@@ -1,0 +1,56 @@
+{
+  "boundary": "The counterconnection is gauge-dependent as an edge cochain.  The phase-only obstruction and the existence of a full S3 flattening are gauge-invariant statements about what kind of correction is required.",
+  "bt": 1370,
+  "checks": {
+    "bt1367_connection_rebuilt": true,
+    "c3_correction_count_is_80": true,
+    "correction_profile_matches_inverse_residuals": true,
+    "cycle_rank_boundary_is_501": true,
+    "full_s3_counterconnection_kills_all_quadrangles": true,
+    "full_s3_counterconnection_kills_every_edge_residual": true,
+    "nonidentity_correction_count_is_380": true,
+    "phase_only_c3_cannot_kill_odd_holonomy": true,
+    "transposition_correction_count_is_300": true
+  },
+  "full_s3_counterconnection": {
+    "c3_corrections": 80,
+    "corrected_residual_profile": {
+      "012": 540
+    },
+    "correction_profile": {
+      "012": 160,
+      "021": 100,
+      "102": 100,
+      "120": 39,
+      "201": 41,
+      "210": 100
+    },
+    "cycle_rank": 501,
+    "edges": 540,
+    "gauge_root": 0,
+    "nonidentity_corrections": 380,
+    "residual_order_profile": {
+      "1": 160,
+      "2": 300,
+      "3": 80
+    },
+    "residual_profile": {
+      "012": 160,
+      "021": 100,
+      "102": 100,
+      "120": 41,
+      "201": 39,
+      "210": 100
+    },
+    "transposition_corrections": 300,
+    "tree_edges": 39
+  },
+  "interpretation": "The qutrit phase curvature is not a pure phase defect.  It has an odd S3 component, so C3 phase twists cannot flatten it.  The exact counterconnection needs 300 transposition corrections and 80 C3 corrections in the BT1367 spanning-tree gauge.",
+  "phase_only_boundary": {
+    "allowed_twists": "C3 <= S3",
+    "odd_quadrangle_holonomies": 29160,
+    "verdict": "impossible to flatten with phase-only C3 twists, because parity is invariant"
+  },
+  "title": "S3 counterconnection phase holonomy correction",
+  "verified": true
+}

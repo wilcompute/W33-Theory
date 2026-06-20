@@ -1,0 +1,2023 @@
+{
+  "address_table": [
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 0,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000001",
+      "q6_group_index": 0,
+      "tomotope_flag": 0,
+      "tomotope_group_index": 0
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 1,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000010",
+      "q6_group_index": 1,
+      "tomotope_flag": 1,
+      "tomotope_group_index": 1
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 176,
+      "q6_endpoint_a": "110101",
+      "q6_endpoint_b": "111101",
+      "q6_group_index": 89,
+      "tomotope_flag": 2,
+      "tomotope_group_index": 2
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 165,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "110101",
+      "q6_group_index": 81,
+      "tomotope_flag": 3,
+      "tomotope_group_index": 3
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 110,
+      "q6_endpoint_a": "011110",
+      "q6_endpoint_b": "111110",
+      "q6_group_index": 55,
+      "tomotope_flag": 4,
+      "tomotope_group_index": 4
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 60,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "011110",
+      "q6_group_index": 29,
+      "tomotope_flag": 5,
+      "tomotope_group_index": 5
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 188,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111101",
+      "q6_group_index": 94,
+      "tomotope_flag": 6,
+      "tomotope_group_index": 6
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 189,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111110",
+      "q6_group_index": 95,
+      "tomotope_flag": 7,
+      "tomotope_group_index": 7
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 8,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "001001",
+      "q6_group_index": 6,
+      "tomotope_flag": 8,
+      "tomotope_group_index": 8
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 42,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "001101",
+      "q6_group_index": 21,
+      "tomotope_flag": 9,
+      "tomotope_group_index": 9
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 15,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "100010",
+      "q6_group_index": 9,
+      "tomotope_flag": 10,
+      "tomotope_group_index": 10
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 124,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "110010",
+      "q6_group_index": 61,
+      "tomotope_flag": 11,
+      "tomotope_group_index": 11
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 59,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "001111",
+      "q6_group_index": 28,
+      "tomotope_flag": 12,
+      "tomotope_group_index": 12
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "001111",
+      "q6_group_index": 26,
+      "tomotope_flag": 13,
+      "tomotope_group_index": 13
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 169,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "111010",
+      "q6_group_index": 83,
+      "tomotope_flag": 14,
+      "tomotope_group_index": 14
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 186,
+      "q6_endpoint_a": "111010",
+      "q6_endpoint_b": "111110",
+      "q6_group_index": 93,
+      "tomotope_flag": 15,
+      "tomotope_group_index": 15
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 72,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "110001",
+      "q6_group_index": 37,
+      "tomotope_flag": 16,
+      "tomotope_group_index": 16
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 9,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "010001",
+      "q6_group_index": 7,
+      "tomotope_flag": 17,
+      "tomotope_group_index": 17
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 167,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "110011",
+      "q6_group_index": 82,
+      "tomotope_flag": 18,
+      "tomotope_group_index": 18
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 164,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "110011",
+      "q6_group_index": 80,
+      "tomotope_flag": 19,
+      "tomotope_group_index": 19
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 30,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "001110",
+      "q6_group_index": 13,
+      "tomotope_flag": 20,
+      "tomotope_group_index": 20
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 12,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "000110",
+      "q6_group_index": 8,
+      "tomotope_flag": 21,
+      "tomotope_group_index": 21
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "101101",
+      "q6_group_index": 27,
+      "tomotope_flag": 22,
+      "tomotope_group_index": 22
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 156,
+      "q6_endpoint_a": "101101",
+      "q6_endpoint_b": "111101",
+      "q6_group_index": 79,
+      "tomotope_flag": 23,
+      "tomotope_group_index": 23
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 6,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "000011",
+      "q6_group_index": 0,
+      "tomotope_flag": 24,
+      "tomotope_group_index": 0
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 11,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "000011",
+      "q6_group_index": 1,
+      "tomotope_flag": 25,
+      "tomotope_group_index": 1
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 184,
+      "q6_endpoint_a": "111001",
+      "q6_endpoint_b": "111101",
+      "q6_group_index": 89,
+      "tomotope_flag": 26,
+      "tomotope_group_index": 2
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 166,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "111001",
+      "q6_group_index": 81,
+      "tomotope_flag": 27,
+      "tomotope_group_index": 3
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 158,
+      "q6_endpoint_a": "101110",
+      "q6_endpoint_b": "111110",
+      "q6_group_index": 55,
+      "tomotope_flag": 28,
+      "tomotope_group_index": 4
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 61,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "101110",
+      "q6_group_index": 29,
+      "tomotope_flag": 29,
+      "tomotope_group_index": 5
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 17,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "001011",
+      "q6_group_index": 24,
+      "tomotope_flag": 30,
+      "tomotope_group_index": 48
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 16,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "000111",
+      "q6_group_index": 16,
+      "tomotope_flag": 31,
+      "tomotope_group_index": 49
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 183,
+      "q6_endpoint_a": "111001",
+      "q6_endpoint_b": "111011",
+      "q6_group_index": 92,
+      "tomotope_flag": 32,
+      "tomotope_group_index": 50
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 180,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111001",
+      "q6_group_index": 90,
+      "tomotope_flag": 33,
+      "tomotope_group_index": 51
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 83,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "110100",
+      "q6_group_index": 67,
+      "tomotope_flag": 34,
+      "tomotope_group_index": 52
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 23,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "010100",
+      "q6_group_index": 11,
+      "tomotope_flag": 35,
+      "tomotope_group_index": 53
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 80,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "010101",
+      "q6_group_index": 40,
+      "tomotope_flag": 36,
+      "tomotope_group_index": 24
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "010110",
+      "q6_group_index": 42,
+      "tomotope_flag": 37,
+      "tomotope_group_index": 25
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 148,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "101110",
+      "q6_group_index": 60,
+      "tomotope_flag": 38,
+      "tomotope_group_index": 26
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 136,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "101110",
+      "q6_group_index": 59,
+      "tomotope_flag": 39,
+      "tomotope_group_index": 27
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 146,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "111001",
+      "q6_group_index": 23,
+      "tomotope_flag": 40,
+      "tomotope_group_index": 28
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 98,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "111001",
+      "q6_group_index": 22,
+      "tomotope_flag": 41,
+      "tomotope_group_index": 29
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 157,
+      "q6_endpoint_a": "101110",
+      "q6_endpoint_b": "101111",
+      "q6_group_index": 78,
+      "tomotope_flag": 42,
+      "tomotope_group_index": 72
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 153,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "101110",
+      "q6_group_index": 76,
+      "tomotope_flag": 43,
+      "tomotope_group_index": 73
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "011100",
+      "q6_group_index": 48,
+      "tomotope_flag": 44,
+      "tomotope_group_index": 74
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 66,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010100",
+      "q6_group_index": 33,
+      "tomotope_flag": 45,
+      "tomotope_group_index": 75
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 19,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "100011",
+      "q6_group_index": 63,
+      "tomotope_flag": 46,
+      "tomotope_group_index": 76
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 18,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "010011",
+      "q6_group_index": 39,
+      "tomotope_flag": 47,
+      "tomotope_group_index": 77
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 74,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "010110",
+      "q6_group_index": 43,
+      "tomotope_flag": 48,
+      "tomotope_group_index": 30
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 75,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "011010",
+      "q6_group_index": 50,
+      "tomotope_flag": 49,
+      "tomotope_group_index": 31
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 140,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101001",
+      "q6_group_index": 70,
+      "tomotope_flag": 50,
+      "tomotope_group_index": 32
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 141,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101010",
+      "q6_group_index": 72,
+      "tomotope_flag": 51,
+      "tomotope_group_index": 33
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 27,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "010101",
+      "q6_group_index": 41,
+      "tomotope_flag": 52,
+      "tomotope_group_index": 34
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 28,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "100101",
+      "q6_group_index": 69,
+      "tomotope_flag": 53,
+      "tomotope_group_index": 35
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 179,
+      "q6_endpoint_a": "110111",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 84,
+      "tomotope_flag": 54,
+      "tomotope_group_index": 54
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 187,
+      "q6_endpoint_a": "111011",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 85,
+      "tomotope_flag": 55,
+      "tomotope_group_index": 55
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 25,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "000111",
+      "q6_group_index": 12,
+      "tomotope_flag": 56,
+      "tomotope_group_index": 56
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 20,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "000101",
+      "q6_group_index": 10,
+      "tomotope_flag": 57,
+      "tomotope_group_index": 57
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "101000",
+      "q6_group_index": 19,
+      "tomotope_flag": 58,
+      "tomotope_group_index": 58
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 143,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "111000",
+      "q6_group_index": 49,
+      "tomotope_flag": 59,
+      "tomotope_group_index": 59
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 73,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "010011",
+      "q6_group_index": 34,
+      "tomotope_flag": 60,
+      "tomotope_group_index": 78
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 65,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010010",
+      "q6_group_index": 32,
+      "tomotope_flag": 61,
+      "tomotope_group_index": 79
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 115,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "101000",
+      "q6_group_index": 57,
+      "tomotope_flag": 62,
+      "tomotope_group_index": 80
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101100",
+      "q6_group_index": 66,
+      "tomotope_flag": 63,
+      "tomotope_group_index": 81
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 111,
+      "q6_endpoint_a": "011111",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 30,
+      "tomotope_flag": 64,
+      "tomotope_group_index": 82
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 159,
+      "q6_endpoint_a": "101111",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 31,
+      "tomotope_flag": 65,
+      "tomotope_group_index": 83
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 190,
+      "q6_endpoint_a": "111101",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 94,
+      "tomotope_flag": 66,
+      "tomotope_group_index": 6
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 191,
+      "q6_endpoint_a": "111110",
+      "q6_endpoint_b": "111111",
+      "q6_group_index": 95,
+      "tomotope_flag": 67,
+      "tomotope_group_index": 7
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 7,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "000101",
+      "q6_group_index": 6,
+      "tomotope_flag": 68,
+      "tomotope_group_index": 8
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 26,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "001101",
+      "q6_group_index": 21,
+      "tomotope_flag": 69,
+      "tomotope_group_index": 9
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 14,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "010010",
+      "q6_group_index": 9,
+      "tomotope_flag": 70,
+      "tomotope_group_index": 10
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 76,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "110010",
+      "q6_group_index": 61,
+      "tomotope_flag": 71,
+      "tomotope_group_index": 11
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 84,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "010111",
+      "q6_group_index": 40,
+      "tomotope_flag": 72,
+      "tomotope_group_index": 24
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "010111",
+      "q6_group_index": 42,
+      "tomotope_flag": 73,
+      "tomotope_group_index": 25
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 123,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "101010",
+      "q6_group_index": 60,
+      "tomotope_flag": 74,
+      "tomotope_group_index": 26
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 122,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "100110",
+      "q6_group_index": 59,
+      "tomotope_flag": 75,
+      "tomotope_group_index": 27
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 44,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "101001",
+      "q6_group_index": 23,
+      "tomotope_flag": 76,
+      "tomotope_group_index": 28
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 43,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "011001",
+      "q6_group_index": 22,
+      "tomotope_flag": 77,
+      "tomotope_group_index": 29
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 88,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "011110",
+      "q6_group_index": 43,
+      "tomotope_flag": 78,
+      "tomotope_group_index": 30
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 100,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "011110",
+      "q6_group_index": 50,
+      "tomotope_flag": 79,
+      "tomotope_group_index": 31
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 144,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "101011",
+      "q6_group_index": 70,
+      "tomotope_flag": 80,
+      "tomotope_group_index": 32
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 147,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "101011",
+      "q6_group_index": 72,
+      "tomotope_flag": 81,
+      "tomotope_group_index": 33
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 86,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "110101",
+      "q6_group_index": 41,
+      "tomotope_flag": 82,
+      "tomotope_group_index": 34
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "110101",
+      "q6_group_index": 69,
+      "tomotope_flag": 83,
+      "tomotope_group_index": 35
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "101101",
+      "q6_group_index": 68,
+      "tomotope_flag": 84,
+      "tomotope_group_index": 36
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 145,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "101101",
+      "q6_group_index": 71,
+      "tomotope_flag": 85,
+      "tomotope_group_index": 37
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 93,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011010",
+      "q6_group_index": 47,
+      "tomotope_flag": 86,
+      "tomotope_group_index": 38
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 92,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011001",
+      "q6_group_index": 46,
+      "tomotope_flag": 87,
+      "tomotope_group_index": 39
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 32,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "100110",
+      "q6_group_index": 15,
+      "tomotope_flag": 88,
+      "tomotope_group_index": 40
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 31,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "010110",
+      "q6_group_index": 14,
+      "tomotope_flag": 89,
+      "tomotope_group_index": 41
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 71,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "011001",
+      "q6_group_index": 36,
+      "tomotope_flag": 90,
+      "tomotope_group_index": 42
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 70,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "010101",
+      "q6_group_index": 35,
+      "tomotope_flag": 91,
+      "tomotope_group_index": 43
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 129,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "100110",
+      "q6_group_index": 65,
+      "tomotope_flag": 92,
+      "tomotope_group_index": 44
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 128,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "100101",
+      "q6_group_index": 64,
+      "tomotope_flag": 93,
+      "tomotope_group_index": 45
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 101,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "111010",
+      "q6_group_index": 51,
+      "tomotope_flag": 94,
+      "tomotope_group_index": 46
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 149,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "111010",
+      "q6_group_index": 73,
+      "tomotope_flag": 95,
+      "tomotope_group_index": 47
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 22,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "001100",
+      "q6_group_index": 2,
+      "tomotope_flag": 96,
+      "tomotope_group_index": 60
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 38,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001100",
+      "q6_group_index": 3,
+      "tomotope_flag": 97,
+      "tomotope_group_index": 61
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 173,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "110110",
+      "q6_group_index": 86,
+      "tomotope_flag": 98,
+      "tomotope_group_index": 62
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 177,
+      "q6_endpoint_a": "110110",
+      "q6_endpoint_b": "110111",
+      "q6_group_index": 88,
+      "tomotope_flag": 99,
+      "tomotope_group_index": 63
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 103,
+      "q6_endpoint_a": "011011",
+      "q6_endpoint_b": "111011",
+      "q6_group_index": 75,
+      "tomotope_flag": 100,
+      "tomotope_group_index": 64
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 50,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "011011",
+      "q6_group_index": 25,
+      "tomotope_flag": 101,
+      "tomotope_group_index": 65
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 53,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "001110",
+      "q6_group_index": 28,
+      "tomotope_flag": 102,
+      "tomotope_group_index": 12
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 52,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "001101",
+      "q6_group_index": 26,
+      "tomotope_flag": 103,
+      "tomotope_group_index": 13
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 168,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "110110",
+      "q6_group_index": 83,
+      "tomotope_flag": 104,
+      "tomotope_group_index": 14
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 178,
+      "q6_endpoint_a": "110110",
+      "q6_endpoint_b": "111110",
+      "q6_group_index": 93,
+      "tomotope_flag": 105,
+      "tomotope_group_index": 15
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 120,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "110001",
+      "q6_group_index": 37,
+      "tomotope_flag": 106,
+      "tomotope_group_index": 16
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 10,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "100001",
+      "q6_group_index": 7,
+      "tomotope_flag": 107,
+      "tomotope_group_index": 17
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 78,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "011011",
+      "q6_group_index": 38,
+      "tomotope_flag": 108,
+      "tomotope_group_index": 84
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 102,
+      "q6_endpoint_a": "011011",
+      "q6_endpoint_b": "011111",
+      "q6_group_index": 44,
+      "tomotope_flag": 109,
+      "tomotope_group_index": 85
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 112,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100001",
+      "q6_group_index": 56,
+      "tomotope_flag": 110,
+      "tomotope_group_index": 86
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 117,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "100011",
+      "q6_group_index": 58,
+      "tomotope_flag": 111,
+      "tomotope_group_index": 87
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "101100",
+      "q6_group_index": 77,
+      "tomotope_flag": 112,
+      "tomotope_group_index": 88
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "011100",
+      "q6_group_index": 53,
+      "tomotope_flag": 113,
+      "tomotope_group_index": 89
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 118,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "100101",
+      "q6_group_index": 68,
+      "tomotope_flag": 114,
+      "tomotope_group_index": 36
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 119,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "101001",
+      "q6_group_index": 71,
+      "tomotope_flag": 115,
+      "tomotope_group_index": 37
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 99,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "011011",
+      "q6_group_index": 47,
+      "tomotope_flag": 116,
+      "tomotope_group_index": 38
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 96,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "011011",
+      "q6_group_index": 46,
+      "tomotope_flag": 117,
+      "tomotope_group_index": 39
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 137,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "110110",
+      "q6_group_index": 15,
+      "tomotope_flag": 118,
+      "tomotope_group_index": 40
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 89,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "110110",
+      "q6_group_index": 14,
+      "tomotope_flag": 119,
+      "tomotope_group_index": 41
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 161,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110010",
+      "q6_group_index": 82,
+      "tomotope_flag": 120,
+      "tomotope_group_index": 18
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 160,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110001",
+      "q6_group_index": 80,
+      "tomotope_flag": 121,
+      "tomotope_group_index": 19
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 46,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "001110",
+      "q6_group_index": 13,
+      "tomotope_flag": 122,
+      "tomotope_group_index": 20
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 13,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "001010",
+      "q6_group_index": 8,
+      "tomotope_flag": 123,
+      "tomotope_group_index": 21
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 57,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "011101",
+      "q6_group_index": 27,
+      "tomotope_flag": 124,
+      "tomotope_group_index": 22
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 108,
+      "q6_endpoint_a": "011101",
+      "q6_endpoint_b": "111101",
+      "q6_group_index": 79,
+      "tomotope_flag": 125,
+      "tomotope_group_index": 23
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 97,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "011101",
+      "q6_group_index": 36,
+      "tomotope_flag": 126,
+      "tomotope_group_index": 42
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 85,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "011101",
+      "q6_group_index": 35,
+      "tomotope_flag": 127,
+      "tomotope_group_index": 43
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 135,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "100111",
+      "q6_group_index": 65,
+      "tomotope_flag": 128,
+      "tomotope_group_index": 44
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 132,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "100111",
+      "q6_group_index": 64,
+      "tomotope_flag": 129,
+      "tomotope_group_index": 45
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 47,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "011010",
+      "q6_group_index": 51,
+      "tomotope_flag": 130,
+      "tomotope_group_index": 46
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 48,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "101010",
+      "q6_group_index": 73,
+      "tomotope_flag": 131,
+      "tomotope_group_index": 47
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 163,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "111000",
+      "q6_group_index": 91,
+      "tomotope_flag": 132,
+      "tomotope_group_index": 66
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 162,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110100",
+      "q6_group_index": 87,
+      "tomotope_flag": 133,
+      "tomotope_group_index": 67
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001010",
+      "q6_group_index": 18,
+      "tomotope_flag": 134,
+      "tomotope_group_index": 68
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "001011",
+      "q6_group_index": 20,
+      "tomotope_flag": 135,
+      "tomotope_group_index": 69
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 35,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "100111",
+      "q6_group_index": 17,
+      "tomotope_flag": 136,
+      "tomotope_group_index": 70
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 139,
+      "q6_endpoint_a": "100111",
+      "q6_endpoint_b": "110111",
+      "q6_group_index": 45,
+      "tomotope_flag": 137,
+      "tomotope_group_index": 71
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 138,
+      "q6_endpoint_a": "100111",
+      "q6_endpoint_b": "101111",
+      "q6_group_index": 74,
+      "tomotope_flag": 138,
+      "tomotope_group_index": 90
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 125,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "100111",
+      "q6_group_index": 62,
+      "tomotope_flag": 139,
+      "tomotope_group_index": 91
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 104,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "011101",
+      "q6_group_index": 52,
+      "tomotope_flag": 140,
+      "tomotope_group_index": 92
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 107,
+      "q6_endpoint_a": "011101",
+      "q6_endpoint_b": "011111",
+      "q6_group_index": 54,
+      "tomotope_flag": 141,
+      "tomotope_group_index": 93
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 68,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "110000",
+      "q6_group_index": 4,
+      "tomotope_flag": 142,
+      "tomotope_group_index": 94
+    },
+    {
+      "orbit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 116,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "110000",
+      "q6_group_index": 5,
+      "tomotope_flag": 143,
+      "tomotope_group_index": 95
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "001111",
+      "q6_group_index": 24,
+      "tomotope_flag": 144,
+      "tomotope_group_index": 48
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 33,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "001111",
+      "q6_group_index": 16,
+      "tomotope_flag": 145,
+      "tomotope_group_index": 49
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 185,
+      "q6_endpoint_a": "111010",
+      "q6_endpoint_b": "111011",
+      "q6_group_index": 92,
+      "tomotope_flag": 146,
+      "tomotope_group_index": 50
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 181,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111010",
+      "q6_group_index": 90,
+      "tomotope_flag": 147,
+      "tomotope_group_index": 51
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 131,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "110100",
+      "q6_group_index": 67,
+      "tomotope_flag": 148,
+      "tomotope_group_index": 52
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 24,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "100100",
+      "q6_group_index": 11,
+      "tomotope_flag": 149,
+      "tomotope_group_index": 53
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 170,
+      "q6_endpoint_a": "110011",
+      "q6_endpoint_b": "110111",
+      "q6_group_index": 84,
+      "tomotope_flag": 150,
+      "tomotope_group_index": 54
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 171,
+      "q6_endpoint_a": "110011",
+      "q6_endpoint_b": "111011",
+      "q6_group_index": 85,
+      "tomotope_flag": 151,
+      "tomotope_group_index": 55
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 29,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "000111",
+      "q6_group_index": 12,
+      "tomotope_flag": 152,
+      "tomotope_group_index": 56
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 21,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "000110",
+      "q6_group_index": 10,
+      "tomotope_flag": 153,
+      "tomotope_group_index": 57
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 39,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "011000",
+      "q6_group_index": 19,
+      "tomotope_flag": 154,
+      "tomotope_group_index": 58
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 95,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "111000",
+      "q6_group_index": 49,
+      "tomotope_flag": 155,
+      "tomotope_group_index": 59
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 2,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000100",
+      "q6_group_index": 2,
+      "tomotope_flag": 156,
+      "tomotope_group_index": 60
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 3,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "001000",
+      "q6_group_index": 3,
+      "tomotope_flag": 157,
+      "tomotope_group_index": 61
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 172,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "110101",
+      "q6_group_index": 86,
+      "tomotope_flag": 158,
+      "tomotope_group_index": 62
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "q6_endpoint_a": "110101",
+      "q6_endpoint_b": "110111",
+      "q6_group_index": 88,
+      "tomotope_flag": 159,
+      "tomotope_group_index": 63
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 151,
+      "q6_endpoint_a": "101011",
+      "q6_endpoint_b": "111011",
+      "q6_group_index": 75,
+      "tomotope_flag": 160,
+      "tomotope_group_index": 64
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 51,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "101011",
+      "q6_group_index": 25,
+      "tomotope_flag": 161,
+      "tomotope_group_index": 65
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 182,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111100",
+      "q6_group_index": 91,
+      "tomotope_flag": 162,
+      "tomotope_group_index": 66
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 174,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "111100",
+      "q6_group_index": 87,
+      "tomotope_flag": 163,
+      "tomotope_group_index": 67
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 36,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001001",
+      "q6_group_index": 18,
+      "tomotope_flag": 164,
+      "tomotope_group_index": 68
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 41,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "001011",
+      "q6_group_index": 20,
+      "tomotope_flag": 165,
+      "tomotope_group_index": 69
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 34,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "010111",
+      "q6_group_index": 17,
+      "tomotope_flag": 166,
+      "tomotope_group_index": 70
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 91,
+      "q6_endpoint_a": "010111",
+      "q6_endpoint_b": "110111",
+      "q6_group_index": 45,
+      "tomotope_flag": 167,
+      "tomotope_group_index": 71
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 155,
+      "q6_endpoint_a": "101101",
+      "q6_endpoint_b": "101111",
+      "q6_group_index": 78,
+      "tomotope_flag": 168,
+      "tomotope_group_index": 72
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 152,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "101101",
+      "q6_group_index": 76,
+      "tomotope_flag": 169,
+      "tomotope_group_index": 73
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 94,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011100",
+      "q6_group_index": 48,
+      "tomotope_flag": 170,
+      "tomotope_group_index": 74
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 67,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "011000",
+      "q6_group_index": 33,
+      "tomotope_flag": 171,
+      "tomotope_group_index": 75
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 127,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "110011",
+      "q6_group_index": 63,
+      "tomotope_flag": 172,
+      "tomotope_group_index": 76
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 79,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "110011",
+      "q6_group_index": 39,
+      "tomotope_flag": 173,
+      "tomotope_group_index": 77
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 69,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "010011",
+      "q6_group_index": 34,
+      "tomotope_flag": 174,
+      "tomotope_group_index": 78
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 64,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010001",
+      "q6_group_index": 32,
+      "tomotope_flag": 175,
+      "tomotope_group_index": 79
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 114,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100100",
+      "q6_group_index": 57,
+      "tomotope_flag": 176,
+      "tomotope_group_index": 80
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 130,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "101100",
+      "q6_group_index": 66,
+      "tomotope_flag": 177,
+      "tomotope_group_index": 81
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 62,
+      "q6_endpoint_a": "001111",
+      "q6_endpoint_b": "011111",
+      "q6_group_index": 30,
+      "tomotope_flag": 178,
+      "tomotope_group_index": 82
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 63,
+      "q6_endpoint_a": "001111",
+      "q6_endpoint_b": "101111",
+      "q6_group_index": 31,
+      "tomotope_flag": 179,
+      "tomotope_group_index": 83
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "010111",
+      "q6_group_index": 38,
+      "tomotope_flag": 180,
+      "tomotope_group_index": 84
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 90,
+      "q6_endpoint_a": "010111",
+      "q6_endpoint_b": "011111",
+      "q6_group_index": 44,
+      "tomotope_flag": 181,
+      "tomotope_group_index": 85
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 113,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100010",
+      "q6_group_index": 56,
+      "tomotope_flag": 182,
+      "tomotope_group_index": 86
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 121,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "100011",
+      "q6_group_index": 58,
+      "tomotope_flag": 183,
+      "tomotope_group_index": 87
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 154,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "111100",
+      "q6_group_index": 77,
+      "tomotope_flag": 184,
+      "tomotope_group_index": 88
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 106,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "111100",
+      "q6_group_index": 53,
+      "tomotope_flag": 185,
+      "tomotope_group_index": 89
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 150,
+      "q6_endpoint_a": "101011",
+      "q6_endpoint_b": "101111",
+      "q6_group_index": 74,
+      "tomotope_flag": 186,
+      "tomotope_group_index": 90
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 126,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "101011",
+      "q6_group_index": 62,
+      "tomotope_flag": 187,
+      "tomotope_group_index": 91
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 105,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "011110",
+      "q6_group_index": 52,
+      "tomotope_flag": 188,
+      "tomotope_group_index": 92
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 109,
+      "q6_endpoint_a": "011110",
+      "q6_endpoint_b": "011111",
+      "q6_group_index": 54,
+      "tomotope_flag": 189,
+      "tomotope_group_index": 93
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 4,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "010000",
+      "q6_group_index": 4,
+      "tomotope_flag": 190,
+      "tomotope_group_index": 94
+    },
+    {
+      "orbit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 5,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "100000",
+      "q6_group_index": 5,
+      "tomotope_flag": 191,
+      "tomotope_group_index": 95
+    }
+  ],
+  "boundary": "The table depends on the chosen GAP isomorphism and orbit basepoints. Changing those choices conjugates the address table but preserves equivariance.",
+  "bt": 1371,
+  "checks": {
+    "equivariance_holds_for_all_group_elements": true,
+    "gap_iso_maps_all_96_group_elements": true,
+    "inverse_table_has_192_rows": true,
+    "orbit_sizes_are_two_96s": true,
+    "table_has_192_rows": true,
+    "table_is_bijective_on_q6_edges": true
+  },
+  "equivariance_failures": [],
+  "interpretation": "BT1368's existence certificate is now an explicit 192-row address table.  A tomotope flag and a Q6 edge are the same runtime address after choosing the GAP isomorphism and the two regular orbit bases.",
+  "inverse_table_sample": {
+    "0": 0,
+    "1": 1,
+    "2": 156,
+    "3": 157,
+    "4": 190,
+    "5": 191,
+    "6": 24,
+    "7": 68,
+    "8": 8,
+    "9": 17,
+    "10": 107,
+    "11": 25,
+    "12": 21,
+    "13": 123,
+    "14": 70,
+    "15": 10
+  },
+  "source": {
+    "gap_image_indices_first_12": [
+      0,
+      1,
+      89,
+      81,
+      55,
+      29,
+      94,
+      95,
+      6,
+      21,
+      9,
+      61
+    ],
+    "q6_group": {
+      "direction_group_order": 6,
+      "generator_count": 3,
+      "group_order": 96,
+      "invariant_dim4_subspaces": 4,
+      "orbit_sizes": [
+        96,
+        96
+      ],
+      "order_profile": {
+        "1": 1,
+        "2": 27,
+        "3": 32,
+        "4": 36
+      },
+      "preserves_q6_line_graph": true,
+      "q6_edges": 192,
+      "unique_matching_subspace": [
+        0,
+        6,
+        9,
+        15,
+        17,
+        23,
+        24,
+        30,
+        34,
+        36,
+        43,
+        45,
+        51,
+        53,
+        58,
+        60
+      ]
+    },
+    "tomotope_group": {
+      "aut_order": 96,
+      "flag_count": 192,
+      "generator_count": 4,
+      "orbit_sizes": [
+        96,
+        96
+      ],
+      "order_profile": {
+        "1": 1,
+        "2": 27,
+        "3": 32,
+        "4": 36
+      }
+    }
+  },
+  "title": "Q6 tomotope explicit orbit address table",
+  "verified": true
+}
