@@ -1,0 +1,26 @@
+{
+  "bt": 1400,
+  "title": "Qutrit quantum-erasure readout noise sensitivity",
+  "verified": true,
+  "checks": {
+    "ideal_recovers_bt1396": true,
+    "baseline_passes_visibility_gate": true,
+    "conservative_passes_visibility_gate": true,
+    "bad_distinguishability_fails_strong_gate": true,
+    "bad_phase_degrades_below_conservative": true,
+    "all_probabilities_normalized": true
+  },
+  "model": "rho_route has diagonal 1/3 and off-diagonal coherence gamma/3; gamma=visibility*(1-distinguishability)*exp(-sigma_phi^2)",
+  "rows": [
+    {"name": "ideal", "eraser_efficiency": 1.0, "branch_visibility": 1.0, "branch_distinguishability": 0.0, "phase_sigma_rad": 0.0, "phase_factor": 1.0, "coherence_gamma": 1.0, "eraser_success_probability": 0.3333333333333333, "conditional_l1_coherence": 2.0, "interferometer_port_probabilities": [1.0, 0.0, 0.0], "fringe_contrast_p0_minus_p1": 1.0},
+    {"name": "baseline", "eraser_efficiency": 0.9, "branch_visibility": 0.96, "branch_distinguishability": 0.03, "phase_sigma_rad": 0.05, "phase_factor": 0.9975031223974601, "coherence_gamma": 0.9291949088097137, "eraser_success_probability": 0.3, "conditional_l1_coherence": 1.8583898176194274, "interferometer_port_probabilities": [0.9527966058731426, 0.02360169706342876, 0.02360169706342876], "fringe_contrast_p0_minus_p1": 0.9291949088097138},
+    {"name": "conservative", "eraser_efficiency": 0.75, "branch_visibility": 0.9, "branch_distinguishability": 0.1, "phase_sigma_rad": 0.15, "phase_factor": 0.9777512371933363, "coherence_gamma": 0.7929785021266025, "eraser_success_probability": 0.25, "conditional_l1_coherence": 1.585957004253205, "interferometer_port_probabilities": [0.8619856680844017, 0.06900716595779915, 0.06900716595779915], "fringe_contrast_p0_minus_p1": 0.7929785021266026},
+    {"name": "bad_distinguishability", "eraser_efficiency": 0.75, "branch_visibility": 0.9, "branch_distinguishability": 0.35, "phase_sigma_rad": 0.15, "phase_factor": 0.9777512371933363, "coherence_gamma": 0.5729844741886027, "eraser_success_probability": 0.25, "conditional_l1_coherence": 1.1459689483772055, "interferometer_port_probabilities": [0.7153229827924017, 0.1423385086037991, 0.1423385086037991], "fringe_contrast_p0_minus_p1": 0.5729844741886026},
+    {"name": "bad_phase", "eraser_efficiency": 0.75, "branch_visibility": 0.9, "branch_distinguishability": 0.1, "phase_sigma_rad": 0.45, "phase_factor": 0.8166864825981108, "coherence_gamma": 0.6615160509044698, "eraser_success_probability": 0.25, "conditional_l1_coherence": 1.3230321018089396, "interferometer_port_probabilities": [0.7743440339363131, 0.1128279830318434, 0.1128279830318434], "fringe_contrast_p0_minus_p1": 0.6615160509044698}
+  ],
+  "gates": {
+    "strong_readout": "coherence_gamma >= 0.90 and port0 >= 0.93",
+    "conservative_readout": "coherence_gamma >= 0.75 and port0 >= 0.83"
+  },
+  "boundary": "Parametric visibility/readout model only. It is not a full optical interferometer simulation with detector dark counts or mode mismatch matrices."
+}
