@@ -3169,6 +3169,47 @@ restore the Clifford ABI, and hand off the next packet word.  This is a
 full-frame ABI transaction, not a SIC-optics implementation.  The witness is
 the BT1407 generator and JSON certificate.
 
+\subsection{BT1408 Witting contextual communication bridge}
+
+BT1408 imports the Witting-polytope communication scheme into the same runtime
+ABI.  The external protocol uses \(40\) Witting rays and \(40\) orthogonal
+tetrads.  Around any selected ray the other side of the delayed-query round
+splits as
+\[
+  1\ \text{same ray}
+  +12\ \text{compatible orthogonal rays}
+  +27\ \text{incompatible rays}
+  =40.
+\]
+In words: 1 same ray plus 12 compatible orthogonal rays plus 27 incompatible
+rays make the whole Witting communication desk.  Hence the accepted
+key-agreement rate is
+\[
+  \frac{1+12}{40}=\frac{13}{40},
+\]
+and the rejected sector is \(27/40\), the same \(q^q\) matter shell that the
+holonet already uses as contextual fuel.
+
+The four slots of an accepted Witting tetrad are not a new bus.  They are the
+four local residues in the packet ABI:
+\[
+  \text{tomotope\_flag}
+  =4\,\text{tomotope\_block}+(\text{mirror\_slot}\bmod 4).
+\]
+Thus an accepted communication round has the handoff
+\[
+  \text{Witting query pair}
+  \to \text{common tetrad}
+  \to \text{mirror slot}
+  \to \text{Q6 body}
+  \to \text{Hesse epilogue}.
+\]
+The contextuality audit remains the corrected BT823 ceiling
+\(36/40\), with deficit \(4\) and contextual fraction \(1/10\); the older
+\(34/40\) value from the communication paper is a useful historical warning,
+not the local theorem.  BT1408 is an ABI bridge, not a security proof or a
+ququart hardware certificate.
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

@@ -1,0 +1,312 @@
+{
+  "architecture_breakthrough": "Vlasov's 40-card Witting communication scheme is the Bell-line shell in protocol form: 1 self choice, 12 compatible basis-sharing choices, and 27 incompatible choices.  The accepted 13/40 key round is a mirror-slot transaction, while the 27/40 rejection sector is the same q^q matter shell that the holonet already uses as fuel/context.",
+  "boundary": "BT1408 is a finite communication/ABI certificate.  It does not prove cryptographic security, loss tolerance, detector calibration, or a physical ququart hardware implementation.",
+  "bt": 1408,
+  "checks": {
+    "bt1374_four_slot_mirror_abi_loaded": true,
+    "bt1407_full_frame_transaction_loaded": true,
+    "bt823_corrected_ks_budget_loaded": true,
+    "common_basis_histogram_is_0_1_4": true,
+    "every_ray_lives_in_4_tetrads": true,
+    "every_tetrad_has_4_slots": true,
+    "ordered_key_rate_is_13_over_40": true,
+    "orthogonal_pairs_have_unique_tetrad": true,
+    "per_ray_shell_is_1_12_27": true,
+    "witting_has_40_rays": true,
+    "witting_has_40_tetrads": true
+  },
+  "communication_profile": {
+    "common_basis_count_histogram": {
+      "0": 1080,
+      "1": 480,
+      "4": 40
+    },
+    "ordered_pair_counts": {
+      "compatible_distinct": 480,
+      "compatible_total": 520,
+      "incompatible": 1080,
+      "same": 40,
+      "total": 1600
+    },
+    "per_ray_shell_identity": "1 same + 12 compatible + 27 incompatible = 40",
+    "per_ray_shells": [
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      },
+      {
+        "compatible_distinct": 12,
+        "incompatible": 27,
+        "same": 1
+      }
+    ],
+    "rates": {
+      "compatible_distinct": "3/10",
+      "expected_raw_rounds_per_accept": "40/13",
+      "key_agreement": "13/40",
+      "reject": "27/40",
+      "same": "1/40"
+    }
+  },
+  "contextuality_budget": {
+    "contexts": 40,
+    "contextual_fraction": "1/10",
+    "deficit": 4,
+    "noncontextual_max": 36,
+    "reading": "Communication acceptance is 13/40, but tamper evidence is checked against the corrected BT823 36/40 contextual ceiling."
+  },
+  "holonet_abi_bridge": {
+    "accepted_round_rate": "13/40",
+    "accepted_round_shell": "same-or-orthogonal Witting pair",
+    "bt1374_address_rule": "tomotope_flag = 4 * tomotope_block + (mirror_slot mod 4)",
+    "bt1407_frame_identity": "48 Q6 body pulse ticks + 3 Hesse return words * 8 ticks = 72 ticks",
+    "mirror_slot_residues": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "ququart_tetrad_slots": 4,
+    "reading": "The four Witting basis outcomes are exactly the four local mirror-slot residues used by the packet ABI.  After basis agreement, a ququart outcome can enter the BT1374 packet row and the BT1407 72-tick body/epilogue transaction.",
+    "sample_basis_slot_map": [
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 0,
+        "ray": 0,
+        "slot": 0
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 1,
+        "ray": 1,
+        "slot": 1
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 2,
+        "ray": 2,
+        "slot": 2
+      },
+      {
+        "basis_id": 0,
+        "mirror_slot_mod_4": 3,
+        "ray": 3,
+        "slot": 3
+      }
+    ]
+  },
+  "source_paper": {
+    "arxiv": "2503.18431",
+    "author": "Alexander Yu. Vlasov",
+    "correction_boundary": "The paper's illustrative 34/40 classical marking ceiling is not imported as a theorem; local BT823 proves the exact ceiling is 36/40 with deficit 4.",
+    "title": "Scheme of quantum communications based on Witting polytope",
+    "used_as": "External Witting communication/QKD architecture: 40 ququart states, 40 orthogonal tetrads, delayed-query key agreement."
+  },
+  "title": "Witting contextual communication bridge",
+  "verified": true,
+  "witting_configuration": {
+    "basis_size_histogram": {
+      "4": 40
+    },
+    "orthogonal_tetrads": 40,
+    "ray_membership_histogram": {
+      "4": 40
+    },
+    "rays": 40,
+    "unordered_pair_common_basis_histogram": {
+      "0": 540,
+      "1": 240
+    }
+  }
+}
