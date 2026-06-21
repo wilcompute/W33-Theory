@@ -1,0 +1,511 @@
+{
+  "architecture_breakthrough": "The Witting protocol has two different acceptance clocks.  The state clock admits 13/40 compatible communication partners.  The basis clock admits only 4/40 witness apertures, exactly the BT823 contextual fraction 1/10; the complementary 36/40 basis shadow is the corrected noncontextual ceiling.  This reconciles communication throughput with contextual tamper evidence.",
+  "boundary": "BT1409 is a finite scheduler/count certificate.  It does not prove cryptographic security, channel loss tolerance, or physical detector calibration.",
+  "bt": 1409,
+  "checks": {
+    "basis_aperture_rate_is_contextual_fraction": true,
+    "basis_reject_count_matches_bt823_ks_max": true,
+    "bt1407_frame_loaded": true,
+    "bt1408_bridge_verified": true,
+    "bt823_contextual_budget_loaded": true,
+    "every_ray_has_four_witness_bases": true,
+    "incidence_accept_rate_matches_contextual_fraction": true,
+    "same_ray_has_four_basis_multiplicity": true,
+    "state_accept_rate_is_bt1408_key_rate": true,
+    "state_reject_shell_is_matter_27": true
+  },
+  "duplex_law": {
+    "basis_query": "witness bases accept at 4/40 = 1/10, the BT823 contextual deficit fraction",
+    "basis_shadow": "the 36/40 rejected basis choices match the corrected BT823 noncontextual ceiling",
+    "state_query": "unique compatible states accept at 13/40 = 1 same + 12 orthogonal over 40 rays"
+  },
+  "frame_budget_for_one_selected_ray": {
+    "basis_witness_frames": 4,
+    "basis_witness_ticks_if_all_apertures_are_audited": 288,
+    "communication_frames": 13,
+    "communication_ticks_if_all_compatible_states_are_served": 936,
+    "frame_ticks": 72,
+    "reading": "BT1409 does not require every rejected choice to consume a BT1407 frame.  It separates the accepted communication frames from the smaller basis-witness aperture used for contextual tamper evidence."
+  },
+  "histograms": {
+    "basis_accept_count": {
+      "4": 40
+    },
+    "basis_reject_count": {
+      "36": 40
+    },
+    "compatible_distinct_count": {
+      "12": 40
+    },
+    "compatible_incidence_count": {
+      "16": 40
+    },
+    "compatible_state_unique_count": {
+      "13": 40
+    },
+    "incompatible_state_count": {
+      "27": 40
+    }
+  },
+  "rates": {
+    "basis_retry_shadow": "36/40",
+    "basis_witness_aperture": "1/10",
+    "incidence_accept": "1/10",
+    "state_accept_unique": "13/40",
+    "state_reject_unique": "27/40"
+  },
+  "sample_ray_0": {
+    "basis_accept_count": 4,
+    "basis_accept_rate": "1/10",
+    "basis_epoch": [
+      {
+        "basis_id": 0,
+        "mode": "WITNESS_APERTURE",
+        "tetrad": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "basis_id": 1,
+        "mode": "WITNESS_APERTURE",
+        "tetrad": [
+          0,
+          4,
+          24,
+          32
+        ]
+      },
+      {
+        "basis_id": 2,
+        "mode": "WITNESS_APERTURE",
+        "tetrad": [
+          0,
+          8,
+          16,
+          36
+        ]
+      },
+      {
+        "basis_id": 3,
+        "mode": "WITNESS_APERTURE",
+        "tetrad": [
+          0,
+          12,
+          20,
+          28
+        ]
+      },
+      {
+        "basis_id": 4,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          1,
+          5,
+          25,
+          33
+        ]
+      },
+      {
+        "basis_id": 5,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          1,
+          9,
+          17,
+          37
+        ]
+      },
+      {
+        "basis_id": 6,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          1,
+          13,
+          21,
+          29
+        ]
+      },
+      {
+        "basis_id": 7,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          2,
+          6,
+          26,
+          34
+        ]
+      },
+      {
+        "basis_id": 8,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          2,
+          10,
+          18,
+          38
+        ]
+      },
+      {
+        "basis_id": 9,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          2,
+          14,
+          22,
+          30
+        ]
+      },
+      {
+        "basis_id": 10,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          3,
+          7,
+          27,
+          35
+        ]
+      },
+      {
+        "basis_id": 11,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          3,
+          11,
+          19,
+          39
+        ]
+      },
+      {
+        "basis_id": 12,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          3,
+          15,
+          23,
+          31
+        ]
+      },
+      {
+        "basis_id": 13,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "basis_id": 14,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          4,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "basis_id": 15,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          4,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "basis_id": 16,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          5,
+          18,
+          19,
+          36
+        ]
+      },
+      {
+        "basis_id": 17,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          5,
+          20,
+          30,
+          31
+        ]
+      },
+      {
+        "basis_id": 18,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          6,
+          11,
+          16,
+          17
+        ]
+      },
+      {
+        "basis_id": 19,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          6,
+          15,
+          28,
+          29
+        ]
+      },
+      {
+        "basis_id": 20,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "basis_id": 21,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          7,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "basis_id": 22,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          8,
+          23,
+          25,
+          26
+        ]
+      },
+      {
+        "basis_id": 23,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          8,
+          29,
+          30,
+          39
+        ]
+      },
+      {
+        "basis_id": 24,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          9,
+          19,
+          22,
+          28
+        ]
+      },
+      {
+        "basis_id": 25,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          9,
+          24,
+          31,
+          34
+        ]
+      },
+      {
+        "basis_id": 26,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          10,
+          11,
+          20,
+          21
+        ]
+      },
+      {
+        "basis_id": 27,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          10,
+          15,
+          32,
+          33
+        ]
+      },
+      {
+        "basis_id": 28,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          11,
+          14,
+          24,
+          25
+        ]
+      },
+      {
+        "basis_id": 29,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          12,
+          17,
+          18,
+          23
+        ]
+      },
+      {
+        "basis_id": 30,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          12,
+          33,
+          34,
+          39
+        ]
+      },
+      {
+        "basis_id": 31,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          13,
+          16,
+          31,
+          38
+        ]
+      },
+      {
+        "basis_id": 32,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          13,
+          19,
+          26,
+          32
+        ]
+      },
+      {
+        "basis_id": 33,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          14,
+          15,
+          36,
+          37
+        ]
+      },
+      {
+        "basis_id": 34,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          16,
+          22,
+          27,
+          33
+        ]
+      },
+      {
+        "basis_id": 35,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          17,
+          30,
+          32,
+          35
+        ]
+      },
+      {
+        "basis_id": 36,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          18,
+          24,
+          27,
+          29
+        ]
+      },
+      {
+        "basis_id": 37,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          20,
+          26,
+          27,
+          37
+        ]
+      },
+      {
+        "basis_id": 38,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          21,
+          34,
+          35,
+          36
+        ]
+      },
+      {
+        "basis_id": 39,
+        "mode": "RETRY_SHADOW",
+        "tetrad": [
+          25,
+          28,
+          35,
+          38
+        ]
+      }
+    ],
+    "basis_reject_count": 36,
+    "basis_reject_rate": "9/10",
+    "compatible_distinct": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36
+    ],
+    "compatible_distinct_count": 12,
+    "compatible_incidence_count": 16,
+    "compatible_incidence_rate": "1/10",
+    "compatible_state_unique_count": 13,
+    "compatible_unique": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36
+    ],
+    "incompatible_state_count": 27,
+    "ray": 0,
+    "same_ray_incidence_multiplicity": 4,
+    "state_accept_rate": "13/40",
+    "state_reject_rate": "27/40",
+    "witness_bases": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "title": "Witting duplex admission scheduler",
+  "verified": true
+}

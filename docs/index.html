@@ -23430,6 +23430,16 @@
           <code>72</code>-tick transaction. The contextual audit remains the corrected BT823
           ceiling <code>36/40</code>, not the older <code>34/40</code> value.</p>
 
+        <h4>BT1409: Witting duplex admission scheduler</h4>
+        <p><a href="../analysis/BT1409_witting_duplex_admission_scheduler.md">BT1409</a>
+          separates two acceptance clocks that were conflated by the shorthand rate.
+          The state-query clock admits <code>13/40</code> compatible communication partners,
+          while the basis-query clock admits only <code>4/40=1/10</code> witness apertures.</p>
+        <p>The complementary basis shadow is <code>36/40</code>, matching the corrected BT823
+          noncontextual ceiling. For one selected ray, serving all compatible states costs
+          <code>13*72=936</code> frame ticks, while auditing the four witness apertures costs
+          <code>4*72=288</code> ticks.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

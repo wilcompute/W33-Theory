@@ -3210,6 +3210,41 @@ The contextuality audit remains the corrected BT823 ceiling
 not the local theorem.  BT1408 is an ABI bridge, not a security proof or a
 ququart hardware certificate.
 
+\subsection{BT1409 Witting duplex admission scheduler}
+
+BT1409 separates the two acceptance clocks inside the Witting communication
+bridge.  The state-query clock is the BT1408 shell:
+\[
+  \frac{13}{40}
+  =\frac{1\ \text{same ray}+12\ \text{compatible rays}}{40}.
+\]
+The basis-query clock is smaller.  A selected Witting ray lives in exactly four
+tetrads, hence
+\[
+  \frac{4}{40}=\frac1{10}
+\]
+is the witness aperture.  In words: 13/40 is communication throughput, while
+1/10 is contextual witness aperture.  The complementary basis shadow is
+\[
+  \frac{36}{40},
+\]
+which matches the corrected BT823 noncontextual ceiling.  Thus the old
+``\(36/40\)'' number is not a communication success rate; it is the basis retry
+shadow and the classical boundary.
+
+For one selected ray, serving every compatible state as a BT1407 transaction
+uses
+\[
+  13\times72=936
+\]
+frame ticks.  Auditing only the four witness apertures uses
+\[
+  4\times72=288
+\]
+frame ticks.  Rejected choices need not consume a full frame; they are classified
+as retry shadow or matter-shell context unless an implementation chooses to log
+them.  This is a scheduler certificate, not a cryptographic security proof.
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
