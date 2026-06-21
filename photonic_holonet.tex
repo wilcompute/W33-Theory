@@ -3140,6 +3140,35 @@ This is a timing ABI, not a calibrated optical pulse-width, detector-jitter, or
 loss model.  (Witness:
 \texttt{tools/bt1406\_tomotope\_body\_edge\_pulse\_scheduler.py}.)
 
+\subsection{BT1407 microframe transaction composer}
+
+BT1407 closes the whole oscillator frame.  BT1406 fills the first \(48\)
+tomotope-body ticks.  The remaining BT1300 local-lift epilogue is
+\[
+  24=3\times 8,
+\]
+exactly three Hesse return words.  In words: 48 Q6 body pulse ticks plus 3
+Hesse return words equals 72 ticks.
+
+For the six-digit stress route, the final target digit is \(4\).  Hence
+\(4\bmod 3=1\), so the selected Hesse route branch is \(r=1\).  The epilogue is
+the phase fanout along that branch:
+\[
+\begin{array}{c|c|c|c}
+\text{frame ticks} & h & (r,p) & \text{correction}\\
+\hline
+48\text{--}55 & 3 & (1,0) & X^1Z^0\\
+56\text{--}63 & 4 & (1,1) & X^1Z^1\\
+64\text{--}71 & 5 & (1,2) & X^1Z^2.
+\end{array}
+\]
+Thus ticks \(0\text{--}47\) execute the Q6/tomotope carrier body, while ticks
+\(48\text{--}71\) execute the Hesse return words that erase the branch, record
+route and phase, apply the Pauli-frame correction, store the \(T\)-frame bit,
+restore the Clifford ABI, and hand off the next packet word.  This is a
+full-frame ABI transaction, not a SIC-optics implementation.  The witness is
+the BT1407 generator and JSON certificate.
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

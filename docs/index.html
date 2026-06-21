@@ -23407,6 +23407,18 @@
           ticks <code>45,46,47</code> as flag load, Q6 flip, and target latch. This is a timing ABI,
           not a calibrated optical pulse-width, jitter, or loss model.</p>
 
+        <h4>BT1407: 72-tick microframe transaction</h4>
+        <p><a href="../analysis/BT1407_microframe_transaction_composer.md">BT1407</a>
+          closes the whole oscillator frame: <code>48</code> Q6 body pulse ticks plus
+          <code>3</code> Hesse return words times <code>8</code> ticks equals <code>72</code>.
+          The six-digit stress route's final target digit is <code>4</code>, so
+          <code>4 mod 3 = 1</code> selects the <code>Z Omega</code> route branch and the
+          epilogue carries Hesse outcomes <code>h=3,4,5</code>.</p>
+        <p>Ticks <code>0..47</code> execute the BT1406 tomotope body; ticks
+          <code>48..71</code> execute the BT1404 return words for phase trits
+          <code>0,1,2</code>. This is a full oscillator-frame ABI transaction, not a
+          physical SIC-optics certificate.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

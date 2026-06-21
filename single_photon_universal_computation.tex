@@ -2246,6 +2246,32 @@ ticks \(45,46,47\): load flag \(180\) in block \(45\), flip
 timing ABI for the single-photon carrier path, not a calibrated optical
 pulse-width, detector-jitter, or loss model.
 
+\subsection{BT1407 Microframe Transaction Composer}
+
+The BT1407 Microframe Transaction Composer closes the 72-tick oscillator frame.
+The BT1406 body schedule occupies ticks \(0\) through \(47\).  The remaining
+BT1300 local-lift epilogue has length
+\[
+24=3\times 8,
+\]
+so it can be read as three BT1404 Hesse return words.  For the stress route the
+final target digit is \(4\), and therefore \(4\bmod 3=1\).  The selected route
+branch is \(r=1\), with Hesse outcomes \(h=3,4,5\) over phase trits
+\(p=0,1,2\).
+
+The full transaction is therefore:
+\[
+\begin{array}{c|l}
+0\text{--}47 & \text{BT1406 Q6/tomotope body pulses}\\
+48\text{--}55 & h=3,\ (r,p)=(1,0),\ X^1Z^0\\
+56\text{--}63 & h=4,\ (r,p)=(1,1),\ X^1Z^1\\
+64\text{--}71 & h=5,\ (r,p)=(1,2),\ X^1Z^2.
+\end{array}
+\]
+This composes the carrier walk, Hesse phase fanout, and Clifford ABI restore in
+one frame-level single-photon runtime transaction.  It remains an ABI schedule,
+not a physical SIC-optics or detector-electronics certificate.
+
 %======================================================================
 \section{The \texorpdfstring{$W(3,3)$}{W(3,3)} Structural Encoding Theorem}
 \label{sec:encoding}

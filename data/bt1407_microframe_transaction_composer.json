@@ -1,0 +1,1528 @@
+{
+  "body_ticks": [
+    {
+      "edge_kind": "packet",
+      "edge_step": 0,
+      "frame_tick": 0,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "source": "110111",
+      "target": "110101",
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 0,
+      "frame_tick": 1,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "source": "110111",
+      "target": "110101",
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 0,
+      "frame_tick": 2,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "source": "110111",
+      "target": "110101",
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 1,
+      "frame_tick": 3,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "source": "110101",
+      "target": "100101",
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 1,
+      "frame_tick": 4,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "source": "110101",
+      "target": "100101",
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 1,
+      "frame_tick": 5,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "source": "110101",
+      "target": "100101",
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 2,
+      "frame_tick": 6,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "source": "100101",
+      "target": "101101",
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 2,
+      "frame_tick": 7,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "source": "100101",
+      "target": "101101",
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 2,
+      "frame_tick": 8,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "source": "100101",
+      "target": "101101",
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 3,
+      "frame_tick": 9,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "source": "101101",
+      "target": "001101",
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 3,
+      "frame_tick": 10,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "source": "101101",
+      "target": "001101",
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 3,
+      "frame_tick": 11,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "source": "101101",
+      "target": "001101",
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 4,
+      "frame_tick": 12,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "source": "001101",
+      "target": "001111",
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 4,
+      "frame_tick": 13,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "source": "001101",
+      "target": "001111",
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 4,
+      "frame_tick": 14,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "source": "001101",
+      "target": "001111",
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 5,
+      "frame_tick": 15,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "source": "001111",
+      "target": "001011",
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 5,
+      "frame_tick": 16,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "source": "001111",
+      "target": "001011",
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 5,
+      "frame_tick": 17,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "source": "001111",
+      "target": "001011",
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 6,
+      "frame_tick": 18,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "source": "001011",
+      "target": "001010",
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 6,
+      "frame_tick": 19,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "source": "001011",
+      "target": "001010",
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 6,
+      "frame_tick": 20,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "source": "001011",
+      "target": "001010",
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 7,
+      "frame_tick": 21,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "source": "001010",
+      "target": "001000",
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 7,
+      "frame_tick": 22,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "source": "001010",
+      "target": "001000",
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 7,
+      "frame_tick": 23,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "source": "001010",
+      "target": "001000",
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 8,
+      "frame_tick": 24,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "source": "001000",
+      "target": "101000",
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 8,
+      "frame_tick": 25,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "source": "001000",
+      "target": "101000",
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 8,
+      "frame_tick": 26,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "source": "001000",
+      "target": "101000",
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 9,
+      "frame_tick": 27,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "source": "101000",
+      "target": "101100",
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 9,
+      "frame_tick": 28,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "source": "101000",
+      "target": "101100",
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 9,
+      "frame_tick": 29,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "source": "101000",
+      "target": "101100",
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 10,
+      "frame_tick": 30,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "source": "101100",
+      "target": "001100",
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 10,
+      "frame_tick": 31,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "source": "101100",
+      "target": "001100",
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 10,
+      "frame_tick": 32,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "source": "101100",
+      "target": "001100",
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 11,
+      "frame_tick": 33,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "source": "001100",
+      "target": "011100",
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 11,
+      "frame_tick": 34,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "source": "001100",
+      "target": "011100",
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 11,
+      "frame_tick": 35,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "source": "001100",
+      "target": "011100",
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 12,
+      "frame_tick": 36,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "source": "011100",
+      "target": "010100",
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 12,
+      "frame_tick": 37,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "source": "011100",
+      "target": "010100",
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 12,
+      "frame_tick": 38,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "source": "011100",
+      "target": "010100",
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 13,
+      "frame_tick": 39,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "source": "010100",
+      "target": "010110",
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 13,
+      "frame_tick": 40,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "source": "010100",
+      "target": "010110",
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 13,
+      "frame_tick": 41,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "source": "010100",
+      "target": "010110",
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 14,
+      "frame_tick": 42,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "source": "010110",
+      "target": "010111",
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 14,
+      "frame_tick": 43,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "source": "010110",
+      "target": "010111",
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_kind": "connector",
+      "edge_step": 14,
+      "frame_tick": 44,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "source": "010110",
+      "target": "010111",
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 15,
+      "frame_tick": 45,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "source": "010111",
+      "target": "010011",
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 15,
+      "frame_tick": 46,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "source": "010111",
+      "target": "010011",
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "edge_kind": "packet",
+      "edge_step": 15,
+      "frame_tick": 47,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "source": "010111",
+      "target": "010011",
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    }
+  ],
+  "boundary": "BT1407 composes existing ABI schedules.  It does not certify the physical SIC optics, detector electronics, or calibrated optical pulse implementation of the Hesse port.",
+  "breakthrough": "The full 72-tick oscillator frame is now a transaction: ticks 0-47 execute the BT1406 continuous Q6 body, and ticks 48-71 execute the Hesse phase fanout for the selected route branch.  For the stress route, final target digit 4 selects route branch r=1, so the epilogue carries h=3,4,5.",
+  "bt": 1407,
+  "checks": {
+    "bt1300_frame_contract_verified": true,
+    "bt1404_scope_verified": true,
+    "bt1406_pulse_schedule_verified": true,
+    "epilogue_is_three_hesse_words": true,
+    "epilogue_reuses_bt1404_return_word_shape": true,
+    "epilogue_words_are_8_ticks_each": true,
+    "frame_ticks_are_contiguous_0_to_71": true,
+    "no_region_overlap": true,
+    "selected_branch_is_final_target_digit_mod_3": true,
+    "stress_body_fills_first_48_ticks": true
+  },
+  "epilogue_ticks": [
+    {
+      "branch": "Z Omega",
+      "frame_tick": 48,
+      "h": 3,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Z Omega",
+      "word_tick": 0
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 49,
+      "h": 3,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "r=1",
+      "word_tick": 1
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 50,
+      "h": 3,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "p=0",
+      "word_tick": 2
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 51,
+      "h": 3,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "X^1",
+      "word_tick": 3
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 52,
+      "h": 3,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Z^0",
+      "word_tick": 4
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 53,
+      "h": 3,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "1",
+      "word_tick": 5
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 54,
+      "h": 3,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Clifford ABI",
+      "word_tick": 6
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 55,
+      "h": 3,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "word 03",
+      "word_tick": 7
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 56,
+      "h": 4,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "Z Omega",
+      "word_tick": 0
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 57,
+      "h": 4,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "r=1",
+      "word_tick": 1
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 58,
+      "h": 4,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "p=1",
+      "word_tick": 2
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 59,
+      "h": 4,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "X^1",
+      "word_tick": 3
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 60,
+      "h": 4,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "Z^1",
+      "word_tick": 4
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 61,
+      "h": 4,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "0",
+      "word_tick": 5
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 62,
+      "h": 4,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "Clifford ABI",
+      "word_tick": 6
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 63,
+      "h": 4,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 0,
+      "value": "word 04",
+      "word_tick": 7
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 64,
+      "h": 5,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Z Omega",
+      "word_tick": 0
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 65,
+      "h": 5,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "r=1",
+      "word_tick": 1
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 66,
+      "h": 5,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "p=2",
+      "word_tick": 2
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 67,
+      "h": 5,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "X^1",
+      "word_tick": 3
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 68,
+      "h": 5,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Z^2",
+      "word_tick": 4
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 69,
+      "h": 5,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "1",
+      "word_tick": 5
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 70,
+      "h": 5,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "Clifford ABI",
+      "word_tick": 6
+    },
+    {
+      "branch": "Z Omega",
+      "frame_tick": 71,
+      "h": 5,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "route_trit": 1,
+      "t_frame_bit": 1,
+      "value": "word 05",
+      "word_tick": 7
+    }
+  ],
+  "frame_identity": "48 Q6 body pulse ticks + 3 Hesse return words * 8 ticks = 72 ticks",
+  "frame_tick_summary": [
+    {
+      "frame_tick": 0,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 175,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 1,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 175,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 2,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 175,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 3,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 134,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 4,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 134,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 5,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 134,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 6,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 133,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 7,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 133,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 8,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 133,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 9,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 58,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 10,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 58,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 11,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 58,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 12,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 56,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 13,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 56,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 14,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 56,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 15,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 49,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 16,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 49,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 17,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 49,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 18,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 45,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 19,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 45,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 20,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 45,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 21,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 37,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 22,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 37,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 23,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 37,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 24,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 40,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 25,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 40,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 26,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 40,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 27,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 142,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 28,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 142,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 29,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 142,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 30,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 55,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 31,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 55,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 32,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 55,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 33,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 54,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 34,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 54,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 35,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 54,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 36,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 82,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 37,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 82,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 38,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 82,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 39,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 81,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 40,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 81,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 41,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 81,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 42,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 87,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 43,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 87,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 44,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 87,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 45,
+      "h": null,
+      "op": "LOAD_FLAG",
+      "q6_edge_index": 77,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 46,
+      "h": null,
+      "op": "FLIP_Q6_AXIS",
+      "q6_edge_index": 77,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 47,
+      "h": null,
+      "op": "LATCH_VERTEX",
+      "q6_edge_index": 77,
+      "region": "tomotope_body"
+    },
+    {
+      "frame_tick": 48,
+      "h": 3,
+      "op": "ERASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 49,
+      "h": 3,
+      "op": "ROUTE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 50,
+      "h": 3,
+      "op": "PHASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 51,
+      "h": 3,
+      "op": "X-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 52,
+      "h": 3,
+      "op": "Z-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 53,
+      "h": 3,
+      "op": "T-BIT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 54,
+      "h": 3,
+      "op": "RESTORE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 55,
+      "h": 3,
+      "op": "NEXT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 56,
+      "h": 4,
+      "op": "ERASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 57,
+      "h": 4,
+      "op": "ROUTE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 58,
+      "h": 4,
+      "op": "PHASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 59,
+      "h": 4,
+      "op": "X-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 60,
+      "h": 4,
+      "op": "Z-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 61,
+      "h": 4,
+      "op": "T-BIT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 62,
+      "h": 4,
+      "op": "RESTORE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 63,
+      "h": 4,
+      "op": "NEXT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 64,
+      "h": 5,
+      "op": "ERASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 65,
+      "h": 5,
+      "op": "ROUTE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 66,
+      "h": 5,
+      "op": "PHASE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 67,
+      "h": 5,
+      "op": "X-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 68,
+      "h": 5,
+      "op": "Z-CORR",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 69,
+      "h": 5,
+      "op": "T-BIT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 70,
+      "h": 5,
+      "op": "RESTORE",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    },
+    {
+      "frame_tick": 71,
+      "h": 5,
+      "op": "NEXT",
+      "q6_edge_index": null,
+      "region": "local_lift_hesse_epilogue"
+    }
+  ],
+  "region_histogram": {
+    "local_lift_hesse_epilogue": 24,
+    "tomotope_body": 48
+  },
+  "stress_selection": {
+    "epilogue_hesse_outcomes": [
+      3,
+      4,
+      5
+    ],
+    "final_target_digit": 4,
+    "program": "six_digit_stress",
+    "selected_route_branch": 1
+  },
+  "title": "72-tick body/epilogue microframe transaction",
+  "verified": true
+}
