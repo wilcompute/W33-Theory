@@ -23,7 +23,8 @@ python tools/bt1402_photonic_manuscript_runtime_frontier.py
 python tools/bt1403_hesse_port_eraser_lift.py
 python tools/bt1404_holonet_scope_microframe.py
 python tools/bt1405_continuous_q6_path_router.py
-python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py tests/test_bt1390_bt1392_certificate_queue_workflow.py tests/test_bt1393_bt1395_audit_qutrit_maxsat.py tests/test_bt1396_bt1398_erasure_certificate_paper.py tests/test_bt1399_bt1401_pdf_noise_release.py tests/test_bt1402_photonic_manuscript_runtime_frontier.py tests/test_bt1403_hesse_port_eraser_lift.py tests/test_bt1404_holonet_scope_microframe.py tests/test_bt1405_continuous_q6_path_router.py
+python tools/bt1406_tomotope_body_edge_pulse_scheduler.py
+python -m pytest -q tests/test_bt1378_bt1380_runtime_contracts.py tests/test_bt1381_bt1383_runtime_frontier.py tests/test_bt1384_bt1386_maxsat_port_paper.py tests/test_bt1387_bt1389_runtime_release_lock.py tests/test_bt1390_bt1392_certificate_queue_workflow.py tests/test_bt1393_bt1395_audit_qutrit_maxsat.py tests/test_bt1396_bt1398_erasure_certificate_paper.py tests/test_bt1399_bt1401_pdf_noise_release.py tests/test_bt1402_photonic_manuscript_runtime_frontier.py tests/test_bt1403_hesse_port_eraser_lift.py tests/test_bt1404_holonet_scope_microframe.py tests/test_bt1405_continuous_q6_path_router.py tests/test_bt1406_tomotope_body_edge_pulse_scheduler.py
 
 echo "BT1389 runtime frontier release lock passed"
 echo "BT1401 runtime frontier release lock passed"
@@ -31,3 +32,4 @@ echo "BT1402 runtime frontier release lock passed"
 echo "BT1403 runtime frontier release lock passed"
 echo "BT1404 runtime frontier release lock passed"
 echo "BT1405 runtime frontier release lock passed"
+echo "BT1406 runtime frontier release lock passed"

@@ -3111,6 +3111,35 @@ tomotope flag and block.  This is still an ABI route certificate, not a
 waveguide layout or detector-loss model.  (Witness:
 \texttt{tools/bt1405\_continuous\_q6\_path\_router.py}.)
 
+\subsection{BT1406 tomotope-body edge pulse scheduler}
+
+BT1406 uses the slack exposed by BT1405 as timing structure.  Each Q6 edge in
+the continuous route is not a bare edge label; it expands into the ternary
+microcycle
+\[
+\begin{array}{c|l}
+0 & \text{LOAD\_FLAG: load tomotope flag, block, and transversal}\\
+1 & \text{FLIP\_Q6\_AXIS: perform the one-bit Q6 traversal}\\
+2 & \text{LATCH\_VERTEX: latch the target vertex and ABI record.}
+\end{array}
+\]
+Therefore the stress route obeys
+\[
+  16\ \text{Q6 edge traversals}\times 3\ \text{pulse phases}
+  =48\ \text{body ticks}.
+\]
+In words: 16 Q6 edge traversals times 3 pulse phases equals 48 body ticks.
+The old \(32\)-tick slack becomes the timing shell: the stress route has no idle
+body tick after expansion.  Its packet-edge load ticks are
+\[
+  0,\ 6,\ 12,\ 21,\ 27,\ 45,
+\]
+so the final packet edge occupies ticks \(45,46,47\): load tomotope flag
+\(180\) in block \(45\), flip \(010111\to010011\), and latch the target vertex.
+This is a timing ABI, not a calibrated optical pulse-width, detector-jitter, or
+loss model.  (Witness:
+\texttt{tools/bt1406\_tomotope\_body\_edge\_pulse\_scheduler.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

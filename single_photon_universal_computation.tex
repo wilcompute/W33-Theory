@@ -2227,6 +2227,25 @@ hypercube/tomotope route certificate, not an optical waveguide layout, but it
 removes the previous gap between a list of packet addresses and a physically
 ordered carrier path.
 
+\subsection{BT1406 Tomotope-Body Pulse Scheduler}
+
+The BT1406 Tomotope-Body Pulse Scheduler turns the continuous Q6 path into a
+tick-level body schedule.  Each Q6 edge traversal expands into three substrate
+phases:
+\[
+\text{LOAD\_FLAG},\qquad \text{FLIP\_Q6\_AXIS},\qquad \text{LATCH\_VERTEX}.
+\]
+For the stress route this gives
+\[
+16\times 3=48,
+\]
+so the entire continuous Q6 path fills the tomotope body exactly.  The packet
+edge load ticks are \(0,6,12,21,27,45\), and the last packet edge occupies
+ticks \(45,46,47\): load flag \(180\) in block \(45\), flip
+\(\texttt{010111}\to\texttt{010011}\), and latch the target vertex.  This is a
+timing ABI for the single-photon carrier path, not a calibrated optical
+pulse-width, detector-jitter, or loss model.
+
 %======================================================================
 \section{The \texorpdfstring{$W(3,3)$}{W(3,3)} Structural Encoding Theorem}
 \label{sec:encoding}
