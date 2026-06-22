@@ -1,0 +1,46 @@
+{
+  "bt": 1420,
+  "title": "Finite D4-quartic injection algebra",
+  "verified": true,
+  "resource_state_space": {
+    "atoms": 2,
+    "branches_per_atom": 4,
+    "qutrit_phases": 3,
+    "guard_apertures": 24,
+    "d4_orientations": 8,
+    "oriented_tomotope_tokens": 192,
+    "identity": "2 atoms * 4 branches * 3 phases = 24; times 8 D4 orientations = 192"
+  },
+  "d4_action": {
+    "order_profile": {"1": 1, "2": 5, "4": 2},
+    "cayley_connected": true,
+    "permutations": [[0,1,2,3],[1,2,3,0],[2,3,0,1],[3,0,1,2],[0,3,2,1],[1,0,3,2],[2,1,0,3],[3,2,1,0]]
+  },
+  "clifford_frame_action": {
+    "qutrit_phase_shift": "X_frame: (branch, phase) -> (branch, phase+1 mod 3)",
+    "phase_shift_order": 3,
+    "d4_branch_action": "D4 acts on the four quartic branches and commutes with uniform qutrit phase shifts"
+  },
+  "non_clifford_injection_effect": {
+    "shear": "J: (branch, phase) -> (branch, phase+branch mod 3)",
+    "order": 3,
+    "not_product_action": true,
+    "d4_conjugate_shear_count": 8,
+    "reading": "The injected resource is a branch-controlled qutrit phase shear, not a uniform Clifford phase-frame shift."
+  },
+  "checks": {
+    "d4_has_8_elements": true,
+    "d4_order_profile_is_square_symmetry": true,
+    "d4_cayley_graph_connected": true,
+    "resource_states_are_24": true,
+    "oriented_tokens_are_192": true,
+    "tomotope_flags_bijective": true,
+    "per_atom_shell_is_864": true,
+    "two_atom_shell_is_1728": true,
+    "qutrit_phase_shift_order_3": true,
+    "injection_shear_order_3": true,
+    "injection_shear_not_product_d4_times_uniform_phase": true,
+    "d4_conjugate_shears_nontrivial": true
+  },
+  "boundary": "This is a finite permutation/resource-state algebra for the guard band. It does not assert a calibrated nonlinear optical source or collapse the two independent D4 quartic atoms into one field."
+}
