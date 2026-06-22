@@ -158,6 +158,7 @@ def main() -> None:
     hx_s = permute_columns(hx, perm)
     hz_s = permute_columns(hz, perm)
     cycles = moved_cycles(perm)
+    moved = [i for i in range(240) if perm[i] != i]
 
     rank_hx = gf_rank(hx)
     rank_hz = gf_rank(hz)
@@ -167,7 +168,7 @@ def main() -> None:
         "w33_css_carrier_shape": len(points) == 40 and len(edges) == 240 and len(triangles) == 160,
         "original_css_parameters": rank_hx == 39 and rank_hz == 120 and len(edges) - rank_hx - rank_hz == 81,
         "original_css_commutes": commute_zero(hx, hz),
-        "shear_moves_only_guard_tail": all((i >= 216) == (perm[i] != i) or i < 216 for i in range(240)) and sum(perm[i] != i for i in range(240)) == 12,
+        "shear_moves_only_guard_tail": moved and min(moved) >= 216 and max(moved) < 240 and len(moved) == 12,
         "shear_has_four_three_cycles": len(cycles) == 4 and sorted(len(c) for c in cycles) == [3, 3, 3, 3],
         "permuted_pair_still_css_equivalent": gf_rank(hx_s) == 39 and gf_rank(hz_s) == 120 and commute_zero(hx_s, hz_s),
         "hx_rowspace_not_preserved_by_guard_shear": not rowspace_equal(hx, hx_s) and rank_hx_join > rank_hx,
@@ -190,8 +191,8 @@ def main() -> None:
         },
         "guard_shear": {
             "definition": "on tail index 216 + atom*12 + branch*3 + phase, send phase -> phase + branch mod 3",
-            "moved_coordinates": sum(perm[i] != i for i in range(240)),
-            "fixed_coordinates": sum(perm[i] == i for i in range(240)),
+            "moved_coordinates": len(moved),
+            "fixed_coordinates": 240 - len(moved),
             "nontrivial_cycles": cycles,
             "order": 3,
         },
