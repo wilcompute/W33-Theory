@@ -1,0 +1,13 @@
+\begin{center}
+\begin{tikzpicture}[node distance=3.3cm,>=stealth]
+\node (A) {$36$ affine triads};
+\node[right of=A] (B) {$72$ oriented / ABI rows};
+\node[below of=B] (C) {$81$ CSS/H1 closure};
+\node[above of=B] (D) {$78$ E6 closure};
+\draw[->] (A) -- node[above] {$\times2$} (B);
+\draw[->] (B) -- node[right] {$+9=q^2$} (C);
+\draw[->] (B) -- node[right] {$+6=2q$} (D);
+\node[below of=A] (E) {$24$ active $+$ $48$ guard};
+\draw[->] (E) -- node[below] {$=72$} (B);
+\end{tikzpicture}
+\end{center}
