@@ -1,0 +1,69 @@
+{
+  "bt": 1419,
+  "checks": {
+    "active_bin_count": true,
+    "active_stack_negative_unitary": true,
+    "active_stack_positive_unitary": true,
+    "coupler_h2_unitary": true,
+    "depth_bound_is_finite": true,
+    "dual_mode_block_unitary": true,
+    "four_residue_demux_unitary": true,
+    "guard_count_is_24": true,
+    "k7_has_21_channels": true,
+    "k7_star_gram_is_6_diag_1_offdiag": true,
+    "k7_star_supports_have_size_6": true,
+    "phase_latches_unitary": true,
+    "six_mode_star_analyzer_unitary": true,
+    "total_output_bins": true
+  },
+  "depth_bound": {
+    "active_bin_depth_bound": 8,
+    "active_bin_stack": "coupler + orientation latch + F4 demux",
+    "boundary": "Depth is an abstract finite beamsplitter/phase-shifter mesh bound, not a foundry waveguide routing depth.",
+    "conservative_full_channel_analyzer_bound": 23,
+    "star_analyzer_depth_bound": 15
+  },
+  "primitive_counts": {
+    "active_residue_detector_bins": 168,
+    "edge_channel_couplers": 21,
+    "guard_apertures": 24,
+    "orientation_latches": 42,
+    "tomotope_flag_bus": 192
+  },
+  "star_incidence": {
+    "channels": [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[1,2],[1,3],[1,4],[1,5],[1,6],[2,3],[2,4],[2,5],[2,6],[3,4],[3,5],[3,6],[4,5],[4,6],[5,6]],
+    "gram": [[6,1,1,1,1,1,1],[1,6,1,1,1,1,1],[1,1,6,1,1,1,1],[1,1,1,6,1,1,1],[1,1,1,1,6,1,1],[1,1,1,1,1,6,1],[1,1,1,1,1,1,6]],
+    "reading": "diagonal 6 and off-diagonal 1 certify the K7 star overlap law for both Csaszar and Szilassi modes",
+    "support_sizes": [6,6,6,6,6,6,6]
+  },
+  "title": "Symbolic optical unitary certificate for the BT1417 dual port",
+  "unitary_blocks": {
+    "edge_channel_coupler": {
+      "count": 21,
+      "dimension": 2,
+      "mesh_depth_bound": 1,
+      "symbolic": "H2 = 1/sqrt(2) [[1,1],[1,-1]]"
+    },
+    "four_residue_demux": {
+      "count": 42,
+      "dimension": 4,
+      "mesh_depth_bound": 6,
+      "reck_clements_bound": "4*3/2 = 6 two-mode rotations",
+      "symbolic": "F4[j,k] = i^(j k)/2"
+    },
+    "oriented_phase_latch": {
+      "count": 42,
+      "dimension": 2,
+      "mesh_depth_bound": 1,
+      "symbolic": "diag(1, +/-1)"
+    },
+    "six_channel_star_analyzer": {
+      "count": 14,
+      "dimension": 6,
+      "mesh_depth_bound": 15,
+      "reck_clements_bound": "6*5/2 = 15 two-mode rotations",
+      "symbolic": "F6[j,k] = exp(2*pi*i*j*k/6)/sqrt(6)"
+    }
+  },
+  "verified": true
+}
