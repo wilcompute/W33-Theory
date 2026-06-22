@@ -1,0 +1,27 @@
+{
+  "bt": 1430,
+  "title": "Fano bus Holonet integration manifest",
+  "verified": true,
+  "main_tex": "photonic_holonet.tex",
+  "insert_sources": [
+    "analysis/BT1419_BT1421_holonet_insert.tex",
+    "analysis/BT1422_BT1424_holonet_insert.tex",
+    "analysis/BT1425_BT1427_holonet_insert.tex",
+    "analysis/BT1430_fano_bus_master_insert.tex"
+  ],
+  "figure_law": {
+    "active_fano_bus": "168 = 21 * 8 = |GL(3,2)|",
+    "guard_rail": "24 = point stabilizer S4",
+    "tomotope_bus": "192 = 168 + 24",
+    "retwined_css": "H_X' = H_X J^{-1}, H_Z' = H_Z J^{-1}"
+  },
+  "pdf_status": "The connector pass created the TeX insert and idempotent splicer but did not rebuild photonic_holonet.pdf in-place.",
+  "checks": {
+    "main_tex_exists": true,
+    "software_anchor_present": true,
+    "all_insert_sources_exist": true,
+    "fano_168_24_192_insert_present": true,
+    "input_line_count_is_4": true,
+    "pdf_rebuild_not_run_by_connector": true
+  }
+}
