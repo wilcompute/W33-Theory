@@ -1,0 +1,28 @@
+\subsection{Transaction words, quotient frontier, and scheduler lift}
+\label{sec:bt1495-bt1497-transaction-frontier-scheduler}
+
+The canonical Fano fiber now drives full transaction words.  Each of the 24
+\(S_4\) fiber actions compiles to a 72-tick word:
+\[
+3\text{ channels}\times4\text{ branches}\times6\text{ row-value slots}=72.
+\]
+Thus the physical row-pulse layer has
+\[
+24\times72=1728
+\]
+compiled ticks, with the native \(D_4\) subgroup contributing 8 words and 576
+square-pulse ticks.
+
+The old 330-correction synchronization frontier is attacked through the canonical
+Fano quotient
+\[
+168=7\cdot24=21\cdot8,
+\qquad
+24=3\cdot8.
+\]
+This produces a quotient/SAT scaffold, not a global-optimum proof.
+
+Finally, the \(D_4\) flag stabilizer lifts into the Steinberg scheduler by
+basis-independent invariants: order 8, profile \(1:1,2:5,4:2\), central scheduler
+\(C_3\), 27 length-three cycles on 81 states, and abstract lift
+\(C_3\times D_4\) of order 24.
