@@ -1,0 +1,6 @@
+eq,visible_prose,line_anchor,formula_raw,parser_expr,expected_variables,target_class,claim_tier
+49,anomalous part of the gyromagnetic factor Delta g_e was given by a simple golden mean representation with sufficient accuracy,SCIRP lines 281-283,,,"phi, Delta_g, a_e, possible denominator 24",delta_g or a_e,blocked_pending_transcription
+50,a series expansion yields a value more accurate up to the tenth decimal place,SCIRP lines 285-287,,,"series index, phi powers, Delta_g, a_e",delta_g or a_e,blocked_pending_transcription
+64,"icosahedron-based numerical interpretation combining equation 44, the icosahedron equation or golden quartic polynomial, and circumsphere radius",SCIRP lines 370-372,,,"icosahedron radius, quartic coefficient/root, Delta_g",delta_g or structural,blocked_pending_transcription
+65,power of the ratio of 12 slings to 13 half-turns gives another numerical relation for the anomalous part,SCIRP lines 374-377,,,"12, 13, exponent, Delta_g, ratio_12_13",ratio_12_13 or delta_g,blocked_pending_transcription
+66,modified Schwinger alpha/pi approximation from the Moebius stripe charge calculation modified for the Moebius ball structure,SCIRP lines 378-380,,,"alpha, pi, Schwinger, charge correction, Delta_g",Schwinger or delta_g,blocked_pending_transcription
