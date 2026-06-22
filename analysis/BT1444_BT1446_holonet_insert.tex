@@ -1,0 +1,42 @@
+\subsection{Szilassi fixed-face closure and Frobenius canonicalization}
+\label{sec:bt1444-bt1446-szilassi-closure-canonicalizer}
+
+The Szilassi realization data give an actual coordinate closure object.  For
+both Szilassi realizations, the C2 symmetry is
+\[
+R(x,y,z)=(-x,-y,z).
+\]
+The unique fixed face is face index 4 with ordered boundary
+\[
+[11,9,12,10,8,13].
+\]
+Under the half-turn this boundary maps to
+\[
+[10,8,13,11,9,12],
+\]
+which is a cyclic shift by three vertices.  Hence the fixed hexagon supplies
+three opposite boundary pairs:
+\[
+(11,10),\quad(9,8),\quad(12,13).
+\]
+The odd Otto closure tick can therefore be represented as
+\[
+12=3\text{ opposite pairs}\times2\text{ sides}\times2\text{ orientations},
+\]
+landing simultaneously in the 168 active bus, 21 Fano flags, eight local states,
+and 24 guard bins.
+
+The Frobenius canonicalizer removes the remaining arbitrary ordering.  In
+\(F_{42}=\mathbb Z_7:\mathbb Z_6\), the involutions are affine maps
+\[
+x\mapsto -x+b.
+\]
+The fixed Szilassi face has index 4, so the canonical involution fixes 4:
+\[
+\tau_4(x)=-x+1\pmod 7=(0\ 1)(2\ 6)(3\ 5)(4).
+\]
+This gives the exact closure pattern
+\[
+2+2+2+1,
+\]
+and supplies the ordering seed for Otto strands, Szilassi faces, and Fano flags.
