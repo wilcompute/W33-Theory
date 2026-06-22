@@ -1,0 +1,150 @@
+{
+  "all_checks_pass": true,
+  "antipodal_axis_pairs": [
+    [
+      "0000",
+      "1111"
+    ],
+    [
+      "0011",
+      "1100"
+    ],
+    [
+      "0101",
+      "1010"
+    ],
+    [
+      "0110",
+      "1001"
+    ]
+  ],
+  "axis_pair_histogram": {
+    "(0, 1)": 4,
+    "(0, 2)": 4,
+    "(0, 3)": 4,
+    "(1, 2)": 4,
+    "(1, 3)": 4,
+    "(2, 3)": 4
+  },
+  "boundary": "Binary Q4 guard-front-end only: this does not construct the F3 Steinberg module, prove a new CSS stabilizer code, or calibrate a chip. Guard rows alone have F2-rank 7; the 216 singleton Steinberg rows complete rank 8.",
+  "bt": 1416,
+  "checks": {
+    "complement_is_4_antipodal_edges": true,
+    "even_layer_has_24_edges": true,
+    "even_layer_has_8_vertices": true,
+    "even_layer_is_6_regular": true,
+    "even_layer_is_K2222": true,
+    "even_ticks_are_even": true,
+    "full_ledger_has_240_rows": true,
+    "full_ledger_rank_F2_is_8": true,
+    "full_ledger_state_degree_is_33": true,
+    "guard_rank_F2_is_7": true,
+    "q4_faces_biject_to_even_edges": true,
+    "q4_has_16_vertices": true,
+    "q4_has_24_square_faces": true,
+    "q4_has_32_edges": true,
+    "six_axis_pairs_each_have_4_edges": true
+  },
+  "counts": {
+    "antipodal_axes": 4,
+    "axis_pairs": 6,
+    "even_layer_edges": 24,
+    "even_states": 8,
+    "full_css_frontend_rows": 240,
+    "full_ledger_rank_F2": 8,
+    "guard_rank_F2": 7,
+    "guard_rows": 24,
+    "q4_edges": 32,
+    "q4_square_faces": 24,
+    "q4_vertices": 16,
+    "state_degree_in_full_ledger": 33,
+    "steinberg_singleton_rows": 216
+  },
+  "even_ticks": [
+    0,
+    6,
+    3,
+    5,
+    9,
+    15,
+    10,
+    12
+  ],
+  "even_words": [
+    "0000",
+    "0110",
+    "1100",
+    "1010",
+    "1001",
+    "1111",
+    "0101",
+    "0011"
+  ],
+  "face_to_even_diagonal_sample": [
+    {
+      "even_diagonal": [0, 3],
+      "face_id": 0,
+      "fixed": {"2": 0, "3": 0},
+      "free_coords": [0, 1],
+      "odd_diagonal": [1, 2]
+    },
+    {
+      "even_diagonal": [9, 10],
+      "face_id": 1,
+      "fixed": {"2": 0, "3": 1},
+      "free_coords": [0, 1],
+      "odd_diagonal": [8, 11]
+    },
+    {
+      "even_diagonal": [5, 6],
+      "face_id": 2,
+      "fixed": {"2": 1, "3": 0},
+      "free_coords": [0, 1],
+      "odd_diagonal": [4, 7]
+    },
+    {
+      "even_diagonal": [12, 15],
+      "face_id": 3,
+      "fixed": {"2": 1, "3": 1},
+      "free_coords": [0, 1],
+      "odd_diagonal": [13, 14]
+    },
+    {
+      "even_diagonal": [0, 5],
+      "face_id": 4,
+      "fixed": {"1": 0, "3": 0},
+      "free_coords": [0, 2],
+      "odd_diagonal": [1, 4]
+    },
+    {
+      "even_diagonal": [9, 12],
+      "face_id": 5,
+      "fixed": {"1": 0, "3": 1},
+      "free_coords": [0, 2],
+      "odd_diagonal": [8, 13]
+    },
+    {
+      "even_diagonal": [3, 6],
+      "face_id": 6,
+      "fixed": {"1": 1, "3": 0},
+      "free_coords": [0, 2],
+      "odd_diagonal": [2, 7]
+    },
+    {
+      "even_diagonal": [10, 15],
+      "face_id": 7,
+      "fixed": {"1": 1, "3": 1},
+      "free_coords": [0, 2],
+      "odd_diagonal": [11, 14]
+    }
+  ],
+  "identities": {
+    "axis_pair_factorization": "C(4,2)*4 = 24",
+    "css_frontend_rows": "27*8 + 24 = 240",
+    "even_demicube_edges": "8*6/2 = 24",
+    "per_even_state_degree": "27 + 6 = 33",
+    "q4_faces": "C(4,2)*2^2 = 24"
+  },
+  "name": "Even-Q4 Demicube Guard Ledger Theorem",
+  "theorem": "BT1412's eight even Q4 words form K_{2,2,2,2}; its 24 distance-2 edges are exactly the even diagonals of the 24 Q4 square plaquettes, so BT1415's 24 guard rows are the Q4 plaquette incidence ledger."
+}
