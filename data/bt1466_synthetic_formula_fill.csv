@@ -1,0 +1,7 @@
+equation,transcribed_formula,expected_target,value,nearest_target,nearest_abs_residual,classified_correctly
+49,g_over_2,g_over_2,1.00115965218059,g_over_2,0.0,true
+50,a_e,a_e,0.0011596521805901094,a_e,0.0,true
+64,delta_g,delta_g,0.002319304361180219,delta_g,0.0,true
+65,ratio_12_13,ratio_12_13,0.9230769230769231,ratio_12_13,0.0,true
+66,Schwinger,Schwinger,0.0023228194643817837,Schwinger,0.0,true
+1454,4-phi**2,none_quartic_coefficient,3.618033988749895,none_target_structural_value,NA,true
