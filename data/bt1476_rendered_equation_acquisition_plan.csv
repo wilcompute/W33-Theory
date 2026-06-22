@@ -1,0 +1,6 @@
+eq,section,visible_anchor,image_target,transcription_slot,parser_slot,residual_targets,claim_gate
+49,gyromagnetic correction factor,golden-mean anomalous factor prose,equation image immediately after anchor prose,formula_raw,parser_expr,"delta_g,a_e,g_over_2",blocked until formula image transcribed
+50,gyromagnetic correction factor,series expansion accurate to tenth decimal prose,equation image immediately after series prose,formula_raw,parser_expr,"delta_g,a_e",blocked until formula image transcribed
+64,quantum vortex structure,icosahedron/golden-quartic/circumsphere prose,equation image for icosahedral numerical interpretation,formula_raw,parser_expr,"delta_g,structural",blocked until formula image transcribed
+65,quantum vortex structure,12 slings to 13 half-turns prose,equation image involving 12/13 ratio and exponent,formula_raw,parser_expr,"ratio_12_13,delta_g",blocked until formula image transcribed
+66,quantum vortex structure,modified Schwinger alpha/pi prose,equation image for modified Schwinger relation,formula_raw,parser_expr,"Schwinger,delta_g",blocked until formula image transcribed
