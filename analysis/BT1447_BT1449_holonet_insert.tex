@@ -1,0 +1,33 @@
+\subsection{Otto equation extraction, canonical Fano map, and retwined closure decoder}
+\label{sec:bt1447-bt1449-equation-fano-closure-decoder}
+
+The accessible Otto HTML exposes contexts for equations (49), (50), (64), (65),
+and (66), but not machine-readable formula bodies.  The formula slots therefore
+remain blocked until the rendered equations are transcribed from the PDF or
+images.  The most relevant unresolved slot is equation (65), described as using
+a power of the ratio of 12 slings to 13 half-turns.
+
+The convention-dependent 12-by-14 to 21-by-8 active-bus map is now replaced by a
+Szilassi/Frobenius seeded map.  The fixed face is 4 and
+\[
+\tau_4(x)=-x+1\pmod7,
+\]
+so the canonical face order is
+\[
+[4,0,1,2,6,3,5].
+\]
+The closure face supplies opposite boundary pairs
+\[
+(11,10),\quad(9,8),\quad(12,13),
+\]
+and all 24 guard bins are covered by the 12 closure ticks with two orientations.
+
+Finally the closure tick is inserted into the retwined CSS decoder.  The tested
+closure sample has 12 closure ticks, 24 active trials, 48 guard trials, and 72
+total qutrit-value trials.  All tested X- and Z-syndromes obey
+\[
+\operatorname{syn}_{H}(e)=\operatorname{syn}_{H'}(Je),
+\]
+with ranks \(\operatorname{rank}(H_X)=39\), \(\operatorname{rank}(H_Z)=120\),
+and \(k=81\).  The odd half-turn closure is therefore legal in the finite
+active/guard CSS bus.
