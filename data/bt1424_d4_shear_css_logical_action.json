@@ -1,0 +1,43 @@
+{
+  "bt": 1424,
+  "title": "D4 quartic guard shear action on the W33 CSS carrier",
+  "verified": true,
+  "css_carrier": {
+    "field": "F3",
+    "HX_shape": [40, 240],
+    "HZ_shape": [160, 240],
+    "rank_HX": 39,
+    "rank_HZ": 120,
+    "logical_qutrits": 81,
+    "commuting": true
+  },
+  "guard_shear": {
+    "definition": "tail coordinate 216 + atom*12 + branch*3 + phase sends phase to phase + branch mod 3",
+    "moved_coordinates": 12,
+    "fixed_coordinates": 228,
+    "nontrivial_cycles": [[219,220,221],[222,224,223],[231,232,233],[234,236,235]],
+    "order": 3
+  },
+  "css_action_test": {
+    "rank_HX_plus_sheared_HX": 45,
+    "rank_HZ_plus_sheared_HZ": 128,
+    "preserves_HX_rowspace": false,
+    "preserves_HZ_rowspace": false,
+    "permuting_both_sides_preserves_commutation": true,
+    "one_sided_HX_shear_commutes_with_original_HZ": false,
+    "original_HX_commutes_with_one_sided_HZ_shear": false
+  },
+  "checks": {
+    "w33_css_carrier_shape": true,
+    "original_css_parameters": true,
+    "original_css_commutes": true,
+    "shear_moves_only_guard_tail": true,
+    "shear_has_four_three_cycles": true,
+    "permuted_pair_still_css_equivalent": true,
+    "hx_rowspace_not_preserved_by_guard_shear": true,
+    "hz_rowspace_not_preserved_by_guard_shear": true,
+    "one_sided_shear_breaks_css_commutation": true
+  },
+  "interpretation": "The D4 guard shear is not a free logical automorphism of the current identity-intertwined [[240,81,3]]_3 CSS carrier. It defines an equivalent retwined CSS frame if both stabilizer sides are permuted together, but a one-sided injection must be accompanied by a CSS frame update/correction.",
+  "boundary": "This is an exact finite carrier-action test. It does not rule out a retwined logical non-Clifford gate; it shows that the current identity ledger cannot treat the guard shear as an unannounced stabilizer automorphism."
+}
