@@ -1,0 +1,32 @@
+{
+  "bt": 1427,
+  "title": "End-to-end Fano optical front-end simulator",
+  "verified": true,
+  "pipeline": ["Fano flag", "canonical K7 edge-channel representative", "orientation-selected K7 star mesh", "four-residue active detector bin", "identity CSS frame update for active events", "D4 guard-shear CSS frame update for non-Clifford guard events"],
+  "counts": {
+    "fano_flags": 21,
+    "k7_edge_channels": 21,
+    "active_events": 168,
+    "guard_events": 24,
+    "tomotope_bus_events": 192,
+    "nontrivial_css_frame_updates": 12
+  },
+  "profiles": {
+    "k7_star_mesh_event_profile": {"0": 24, "1": 24, "2": 24, "3": 24, "4": 24, "5": 24, "6": 24},
+    "k7_channel_event_profile": "21 channels, each with 8 active events"
+  },
+  "checks": {
+    "fano_flags_are_21": true,
+    "k7_channels_are_21": true,
+    "active_events_are_168": true,
+    "guard_events_are_24": true,
+    "full_trace_is_tomotope_bus_192": true,
+    "active_detector_bins_are_unique": true,
+    "each_k7_channel_has_8_active_events": true,
+    "each_k7_star_mesh_has_24_events": true,
+    "guard_frame_updates_are_12_nontrivial_tail_moves": true,
+    "guard_targets_stay_in_tail": true,
+    "active_plus_guard_matches_fano_decomposition": true
+  },
+  "interpretation": "The active 168 events are a Fano-flag/K7-channel optical bus. The 24 guard events are a separated non-Clifford injection rail; exactly 12 of them trigger the retwined D4 CSS frame update from BT1425."
+}
