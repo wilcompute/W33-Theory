@@ -1,0 +1,28 @@
+\subsection{Claim-firewall splice, compressed closure schedule, and residual runner}
+\label{sec:bt1459-bt1461-splicer-compressor-residual}
+
+The claim-firewalled Otto--Szilassi section is now accompanied by an idempotent
+splicer.  It inserts the BT1457 section before the fuel section and checks that
+the input occurs exactly once.
+
+The closure schedule also compresses.  Instead of listing 48 primitive steps, we
+use the factorization
+\[
+S_3\times C_3
+\]
+with loop variables
+\[
+(c,s,o)\in C_3\times C_2\times C_2.
+\]
+The strand index is
+\[
+\mathrm{strand}=4c+2s+o,
+\]
+and each strand runs the four-operation template: active tick, guard pair,
+retwined frame update, and X/Z syndrome readout.  This preserves coverage of
+active columns \(14s+13\), the full guard tail \(216,\ldots,239\), and the three
+opposite-pair channels.
+
+Finally, the Otto equation worksheet has a residual runner.  Blank formula slots
+remain blocked.  Filled formulas are evaluated against the measured \(g/2\),
+\(\Delta g\), \(a_e\), Schwinger \(\alpha/\pi\), and the \(12/13\) closure ratio.
