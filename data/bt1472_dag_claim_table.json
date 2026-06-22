@@ -1,0 +1,1 @@
+{"bt":1472,"title":"DAG-to-paper claim table","verified":true,"tex_table":"analysis/BT1472_dag_claim_table.tex","row_count":10,"columns":["Claim","Tier","Dependencies","Allowed paper language"],"checks":{"rows_match_nodes":true,"tex_written":true,"has_blocked_language":true,"has_exact_language":true,"root_is_szilassi":true}}
