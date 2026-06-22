@@ -1,0 +1,10 @@
+c BT1496 quotient/SAT scaffold for BT1373 330-correction frontier
+c raw root-fixed space 6^39; observed identity edges 210; corrections 330
+c canonical quotient: 168 = 7*24 = 21*8; 24 = 3*8
+p wcnf 540 6 331
+1 1 0
+1 2 0
+1 3 0
+1 4 0
+1 5 0
+1 6 0
