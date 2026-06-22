@@ -1,0 +1,58 @@
+\subsection{Fano active bus, native star meshes, and the guard-shear boundary}
+\label{sec:bt1422-bt1424-fano-native-shear}
+
+The active detector count has a sharper finite origin.  It is not only
+\(21\cdot2\cdot4\); it is the Fano collineation group order
+\[
+|GL(3,2)|=|PSL(2,7)|=168.
+\]
+Objectwise,
+\[
+168=21\text{ Fano flags}\times8\text{ flag-stabilizer states}.
+\]
+The same factorization is the dual-port active mesh:
+\[
+21\text{ edge channels}\times2\text{ orientations}\times4\text{ residues}=168.
+\]
+The separated guard band is also Fano-native:
+\[
+24=|\operatorname{Stab}_{GL(3,2)}(p)|,
+\]
+the tetrahedral point stabilizer.  Thus the tomotope bus decomposes as
+\[
+192=168_{\rm Fano\ active}+24_{\rm point\ stabilizer\ guard}.
+\]
+This also refines the S3 optimizer frontier:
+\[
+330=168+27\cdot6,
+\qquad
+210=21\cdot10.
+\]
+
+The six-channel Cs\'asz\'ar/Szilassi star analyzers can be implemented as
+native meshes on the line graph \(L(K_7)\).  A star consists of the six K7
+edge channels incident to one vertex; in \(L(K_7)\) these form a \(K_6\) clique
+with \(\binom62=15\) native two-mode slots.  Across all seven stars this gives
+\(7\cdot15=105\) native adjacent edge-channel pairs.  The verifier decomposes
+\(F_6\) into fifteen complex Givens rotations plus a diagonal phase tail and
+reconstructs the Fourier target to numerical precision.  This replaces the
+abstract star block by a concrete symbolic K7-native mesh schedule.
+
+Finally, the D4 quartic guard shear was pushed through the actual
+\([[240,81,3]]_3\) CSS carrier.  On the 24 guard-tail coordinates it acts by
+\[
+(a,b,p)\mapsto(a,b,p+b\bmod3).
+\]
+It moves twelve coordinates in four 3-cycles.  The result is a useful boundary:
+the shear does \emph{not} preserve the current identity-intertwined rowspaces
+of \(H_X\) and \(H_Z\).  The rank joins increase to
+\[
+rank(H_X,H_XJ)=45,
+\qquad
+rank(H_Z,H_ZJ)=128.
+\]
+A one-sided shear breaks CSS commutation against the unchanged opposite
+stabilizer.  If both stabilizer sides are retwined together, commutation and the
+code parameters are preserved.  Hence the D4 guard shear is an injection-frame
+transition requiring an explicit CSS frame update; it is not a silent logical
+automorphism of the identity ledger.
