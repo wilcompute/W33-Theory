@@ -23440,6 +23440,18 @@
           <code>13*72=936</code> frame ticks, while auditing the four witness apertures costs
           <code>4*72=288</code> ticks.</p>
 
+        <h4>BT1410: Witting delayed-query frame compiler</h4>
+        <p><a href="../analysis/BT1410_witting_delayed_query_frame_compiler.md">BT1410</a>
+          compiles the delayed-query Witting desk into a basis-local holonet frame table.
+          The logical query-pair table has <code>520</code> accepted ordered pairs out of
+          <code>1600</code>, preserving the <code>13/40</code> rate.</p>
+        <p>The physical frame table is larger and sharper:
+          <code>40*4*4=640</code> basis-local records, split into <code>480</code>
+          off-diagonal data handshakes and <code>160</code> diagonal witness apertures.
+          The extra <code>120</code> records are same-ray context choices, not extra
+          throughput; the accepted basis opens a BT1407 frame and the outcome slot
+          enters BT1374 as <code>mirror_slot mod 4</code>.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

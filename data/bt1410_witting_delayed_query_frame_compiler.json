@@ -1,0 +1,334 @@
+{
+  "basis_local_frame_table": {
+    "basis_tile_histogram": {
+      "16": 40
+    },
+    "factorization": "40 tetrads * 4 Alice query slots * 4 Bob query slots",
+    "mode_histogram": {
+      "DIAGONAL_WITNESS_APERTURE": 160,
+      "OFF_DIAGONAL_DATA_HANDSHAKE": 480
+    },
+    "reading": "The physical table is larger than the logical accepted-pair table only because same-ray queries are contextual apertures: each ray lives in four bases.",
+    "records": 640,
+    "same_ray_extra_context_options": 120
+  },
+  "basis_local_records_sample": [
+    {
+      "alice_query_ray": 0,
+      "alice_query_slot": 0,
+      "basis_id": 0,
+      "bob_query_ray": 0,
+      "bob_query_slot": 0,
+      "mode": "DIAGONAL_WITNESS_APERTURE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 0,
+      "alice_query_slot": 0,
+      "basis_id": 0,
+      "bob_query_ray": 1,
+      "bob_query_slot": 1,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 0,
+      "alice_query_slot": 0,
+      "basis_id": 0,
+      "bob_query_ray": 2,
+      "bob_query_slot": 2,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 0,
+      "alice_query_slot": 0,
+      "basis_id": 0,
+      "bob_query_ray": 3,
+      "bob_query_slot": 3,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 1,
+      "alice_query_slot": 1,
+      "basis_id": 0,
+      "bob_query_ray": 0,
+      "bob_query_slot": 0,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 1,
+      "alice_query_slot": 1,
+      "basis_id": 0,
+      "bob_query_ray": 1,
+      "bob_query_slot": 1,
+      "mode": "DIAGONAL_WITNESS_APERTURE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 1,
+      "alice_query_slot": 1,
+      "basis_id": 0,
+      "bob_query_ray": 2,
+      "bob_query_slot": 2,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 1,
+      "alice_query_slot": 1,
+      "basis_id": 0,
+      "bob_query_ray": 3,
+      "bob_query_slot": 3,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 2,
+      "alice_query_slot": 2,
+      "basis_id": 0,
+      "bob_query_ray": 0,
+      "bob_query_slot": 0,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 2,
+      "alice_query_slot": 2,
+      "basis_id": 0,
+      "bob_query_ray": 1,
+      "bob_query_slot": 1,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 2,
+      "alice_query_slot": 2,
+      "basis_id": 0,
+      "bob_query_ray": 2,
+      "bob_query_slot": 2,
+      "mode": "DIAGONAL_WITNESS_APERTURE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 2,
+      "alice_query_slot": 2,
+      "basis_id": 0,
+      "bob_query_ray": 3,
+      "bob_query_slot": 3,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 3,
+      "alice_query_slot": 3,
+      "basis_id": 0,
+      "bob_query_ray": 0,
+      "bob_query_slot": 0,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 3,
+      "alice_query_slot": 3,
+      "basis_id": 0,
+      "bob_query_ray": 1,
+      "bob_query_slot": 1,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 3,
+      "alice_query_slot": 3,
+      "basis_id": 0,
+      "bob_query_ray": 2,
+      "bob_query_slot": 2,
+      "mode": "OFF_DIAGONAL_DATA_HANDSHAKE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "alice_query_ray": 3,
+      "alice_query_slot": 3,
+      "basis_id": 0,
+      "bob_query_ray": 3,
+      "bob_query_slot": 3,
+      "mode": "DIAGONAL_WITNESS_APERTURE",
+      "outcome_slot_residue_domain": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "bt": 1410,
+  "checks": {
+    "basis_local_mode_histogram_is_160_480": true,
+    "basis_local_table_has_640_records": true,
+    "bt1374_outcome_slot_abi_loaded": true,
+    "bt1407_frame_loaded": true,
+    "bt1408_key_rate_loaded": true,
+    "bt1409_duplex_clock_loaded": true,
+    "distinct_compatible_pairs_have_unique_basis": true,
+    "each_basis_tile_is_4_by_4": true,
+    "each_basis_tile_splits_4_diagonal_12_off_diagonal": true,
+    "logical_acceptance_is_520_pairs": true,
+    "logical_pair_histogram_is_40_480_1080": true,
+    "logical_pair_table_has_1600_records": true,
+    "rejected_pairs_have_no_basis": true,
+    "same_ray_extra_context_options_are_120": true,
+    "same_ray_pairs_have_four_basis_options": true
+  },
+  "delayed_query_compiler": {
+    "distinct_accept_rule": "if alice_ray != bob_ray and the pair is orthogonal, use the unique common tetrad as the frame basis",
+    "frame_rule": "after basis selection, open one BT1407 72-tick transaction; the later outcome slot is compiled by BT1374 as mirror_slot mod 4",
+    "input": "ordered Witting query rays (alice_ray, bob_ray)",
+    "reject_rule": "if the pair shares no Witting tetrad, classify as retry shadow",
+    "same_accept_rule": "if alice_ray == bob_ray, the pair has four common tetrads; a two-bit aperture selector chooses one witness basis"
+  },
+  "holonet_transaction": {
+    "basis_local_table_factorization": "40*4*4=640",
+    "bt1374_address_rule": "tomotope_flag = 4 * tomotope_block + (mirror_slot mod 4)",
+    "bt1407_frame_identity": "48 Q6 body pulse ticks + 3 Hesse return words * 8 ticks = 72 ticks",
+    "bt1407_frame_ticks": 72,
+    "outcome_slot_residue_domain": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "physical_reading": "The Witting 40-card desk becomes a packet admission ROM.  Off-diagonal entries carry compatible communication pairs; diagonal entries are the contextual audit apertures."
+  },
+  "logical_pair_table": {
+    "accept_rate": "13/40",
+    "accepted_ordered_pairs": 520,
+    "mode_histogram": {
+      "COMPATIBLE_UNIQUE_BASIS": 480,
+      "INCOMPATIBLE_RETRY_SHADOW": 1080,
+      "SAME_RAY_FOUR_BASIS_APERTURE": 40
+    },
+    "records": 1600,
+    "reject_rate": "27/40",
+    "rejected_ordered_pairs": 1080
+  },
+  "sample_compilations": {
+    "distinct_compatible": {
+      "alice_query_ray": 0,
+      "alice_query_slot": 0,
+      "basis_options": [
+        0
+      ],
+      "bob_query_ray": 1,
+      "bob_query_slot": 1,
+      "mode": "COMPATIBLE_UNIQUE_BASIS",
+      "selected_basis": 0
+    },
+    "same_ray": {
+      "aperture_selector_domain": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "basis_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "mode": "SAME_RAY_FOUR_BASIS_APERTURE",
+      "query_ray": 0,
+      "query_slot_in_each_basis": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "selected_basis_if_selector_is_0": 0
+    }
+  },
+  "source_bridge": {
+    "external_idea": "delayed query followed by classical exchange of selected states and a postponed common-basis measurement",
+    "local_upgrade": "the common basis is compiled into a BT1407 frame and its four outcome slots are exactly BT1374 mirror-slot residues",
+    "vlasov_arxiv": "2503.18431"
+  },
+  "title": "Witting delayed-query frame compiler",
+  "verified": true
+}

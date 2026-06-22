@@ -78,8 +78,11 @@ exact parabolic packet decoder: the Bell-line stabilizer splits the
     two-sheet cover of one canonical $81$-route base $H/D_8$, and their
     $324$-slot union has full equivariant commutant $D_8$ acting in $81$
     four-state fibers.  This split address bus is provably distinct from
-    the older non-split ternary $81\to162\to81$ transport memory.  The
-    newest storage layer
+    the older non-split ternary $81\to162\to81$ transport memory.  At the
+    communication edge, the Witting delayed-query desk is now a frame
+    compiler: $40$ tetrads times $4$ Alice slots times $4$ Bob slots give
+    a $640$-entry admission ROM, with $480$ off-diagonal data handshakes
+    and $160$ diagonal contextual witness apertures.  The newest storage layer
 turns the tomotope cover pathology into an engineering feature: durable
 storage is cover-indexed by a $\mathbb{Z}_k^3$ fiber over the stable
 $48$-block packet ABI, sentinel-aware compilation can trade commit-time
@@ -2735,7 +2738,7 @@ is \emph{simultaneously} the optimal $1$-, $2$-, $4$-mode GKP code lattices
 lattice tower (single-qutrit $SU(3)$, matter shell, gauge $E_8$). The error
 correction of the computer and the gauge structure of the universe are one and
 the same lattice tower; the QEC code is not chosen, it is the substrate.
-(Witness: \texttt{analysis/w33\_gkp\_lattice\_architecture.py}, verifying the
+(Witness: \path{analysis/w33_gkp_lattice_architecture.py}, verifying the
 kissing numbers $6,24,240$ and the embedding $D_4\oplus D_4\subset E_8$.)
 
 This also fixes the lattice part of the fault-tolerance threshold. The substrate
@@ -3000,13 +3003,16 @@ matching the witness score.  This is the honest architecture boundary after
 BT1401: the single-photon experiment tests the Bell/route physics, the Clifford
 machine runs the protected finite kernel, the Hesse-SIC/T port supplies the
 non-Clifford ABI, and the remaining global optimality claim is a certificate
-import problem.  (Witnesses:
-\texttt{tools/bt1394\_reduced\_qutrit\_demonstrator.py},
-\texttt{tools/bt1396\_qutrit\_quantum\_erasure\_readout.py},
-\texttt{tools/bt1385\_hesse\_sic\_t\_port\_abi.py},
-\texttt{tools/bt1391\_hesse\_sic\_t\_queue\_model.py},
-\texttt{tools/bt1395\_s3\_maxsat\_bound\_pathway.py},
-\texttt{tools/bt1400\_qutrit\_erasure\_noise\_sensitivity.py}.)
+import problem.
+\begin{flushleft}
+\footnotesize Witnesses:
+\path{tools/bt1394_reduced_qutrit_demonstrator.py};
+\path{tools/bt1396_qutrit_quantum_erasure_readout.py};
+\path{tools/bt1385_hesse_sic_t_port_abi.py};
+\path{tools/bt1391_hesse_sic_t_queue_model.py};
+\path{tools/bt1395_s3_maxsat_bound_pathway.py};
+\path{tools/bt1400_qutrit_erasure_noise_sensitivity.py}.
+\end{flushleft}
 
 \subsection{BT1403 eraser-lift port: the Hesse boundary is the readout boundary}
 
@@ -3047,7 +3053,7 @@ word back to the protected scheduler.  Thus the architecture is not
 \]
 The boundary remains honest: this identifies the ABI and alphabet of the port,
 not the optical SIC implementation or magic-state factory yield.  (Witness:
-\texttt{tools/bt1403\_hesse\_port\_eraser\_lift.py}.)
+\path{tools/bt1403_hesse_port_eraser_lift.py}.)
 
 \subsection{BT1404 holonet scope: one Hesse grid is one microframe}
 
@@ -3138,7 +3144,7 @@ so the final packet edge occupies ticks \(45,46,47\): load tomotope flag
 \(180\) in block \(45\), flip \(010111\to010011\), and latch the target vertex.
 This is a timing ABI, not a calibrated optical pulse-width, detector-jitter, or
 loss model.  (Witness:
-\texttt{tools/bt1406\_tomotope\_body\_edge\_pulse\_scheduler.py}.)
+\path{tools/bt1406_tomotope_body_edge_pulse_scheduler.py}.)
 
 \subsection{BT1407 microframe transaction composer}
 
@@ -3244,6 +3250,67 @@ frame ticks.  Auditing only the four witness apertures uses
 frame ticks.  Rejected choices need not consume a full frame; they are classified
 as retry shadow or matter-shell context unless an implementation chooses to log
 them.  This is a scheduler certificate, not a cryptographic security proof.
+
+\subsection{BT1410 Witting delayed-query frame compiler}
+
+BT1410 makes the delayed-query step operational.  The protocol in
+\cite{vlasov-witting-communications} first lets the two sides query Witting
+rays, then delays the final basis measurement until the queried states have been
+compared.  The holonet reading is a compiler:
+\[
+  (\text{Alice ray},\text{Bob ray})\longmapsto
+  \text{common Witting tetrad}\longmapsto
+  \text{BT1407 frame}.
+\]
+If the two rays share no tetrad, the pair is a retry-shadow event and no full
+frame is opened.  If they are distinct compatible rays, they share exactly one
+tetrad, so the selected basis is forced.  If they are the same ray, they share
+four tetrads; a two-bit aperture selector chooses which witness basis to audit.
+
+There are two tables, and confusing them loses the physics.  The logical ordered
+pair table has
+\[
+  40\cdot40=1600
+\]
+rows, split as
+\[
+  40\ \text{same-ray pairs}
+  +480\ \text{compatible distinct pairs}
+  +1080\ \text{retry-shadow pairs}.
+\]
+Thus the accepted logical table has \(520\) rows and rate \(520/1600=13/40\).
+The physical frame table is basis-local:
+\[
+  40\ \text{tetrads}\times4\ \text{Alice query slots}
+  \times4\ \text{Bob query slots}=640.
+\]
+Equivalently, every Witting tetrad is a \(4\times4\) frame tile with four
+diagonal witness apertures and twelve off-diagonal data handshakes.  Across all
+forty tetrads this is
+\[
+  160\ \text{diagonal witness records}
+  +480\ \text{off-diagonal data records}.
+\]
+The extra \(640-520=120\) basis-local records are not extra throughput.  They
+are the same-ray contextual aperture: each of the \(40\) rays has four basis
+contexts, so the physical compiler carries three extra context choices per ray
+above the single logical same-ray identity.
+
+Once the common basis is selected, the later four-outcome measurement slot is
+just the packet slot:
+\[
+  \texttt{tomotope\_flag}
+  =
+  4\,\texttt{tomotope\_block}
+  +(\texttt{mirror\_slot}\bmod4).
+\]
+Therefore the Witting desk is now a packet admission ROM.  Off-diagonal entries
+open communication frames; diagonal entries open contextual audit frames; both
+land in the same BT1407 \(72\)-tick body-plus-Hesse-epilogue transaction.  This
+matches the feed-forward/programmable-loop physical idiom of time-bin photonic
+qudit processors \cite{delteil-timebin-qudit}, but BT1410 itself remains a
+finite compiler certificate rather than a loss model, detector calibration, or
+cryptographic security proof.
 
 \subsection{Self-error-correction and why the primitive is one}
 
@@ -3408,14 +3475,14 @@ shell is an error-correcting code on its $40$ sites, the outer code holographica
 containing the inner layers' logical information (boundary encodes bulk), and
 reversible shells composing into a single lossless network computer. The network
 \emph{is} the computer, nested self-contained shells all the way down to the one
-carrier. (Witnesses: \texttt{analysis/w33\_two\_switch\_generation.py},
-\texttt{analysis/w33\_photon\_geon\_dyson\_sphere.py},
-\texttt{analysis/w33\_fractal\_nested\_dyson\_spheres.py}. Honest scope: the
+carrier. (Witnesses: \path{analysis/w33_two_switch_generation.py},
+\path{analysis/w33_photon_geon_dyson_sphere.py},
+\path{analysis/w33_fractal_nested_dyson_spheres.py}. Honest scope: the
 ``Dyson sphere'' is informational/holographic --- self-containment, losslessness,
 boundary-encodes-bulk --- not a literal energy-harvesting megastructure, and no
 step creates energy.)
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 \bibitem{w33paper} W.~Dahn, \emph{The $W(3,3)$ Substrate: Master
   Manuscript} (\texttt{w33\_paper.tex}), Theory of Everything Project
   (2026) --- master equation $q!=2q$, parameter closure, Bose--Mesner
@@ -3484,6 +3551,14 @@ step creates energy.)
   \emph{J.\ High Energy Phys.} \textbf{03}, 160 (2021),
   \href{https://arxiv.org/abs/2009.01244}{arXiv:2009.01244} --- the
   code/Narain-CFT correspondence.
+\bibitem{vlasov-witting-communications} A.~Yu.~Vlasov,
+  Scheme of quantum communications based on Witting polytope,
+  \emph{Moscow Univ.\ Phys.} \textbf{80}, 560 (2025),
+  \href{https://arxiv.org/abs/2503.18431}{arXiv:2503.18431}.
+\bibitem{delteil-timebin-qudit} A.~Delteil,
+  N-qubit universal quantum logic with a photonic qudit and \(O(N)\)
+  linear optics elements, \emph{APL Quantum} \textbf{1}, 046101 (2024),
+  \href{https://arxiv.org/abs/2410.06334}{arXiv:2410.06334}.
 \end{thebibliography}
 
 \end{document}
