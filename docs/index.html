@@ -23464,6 +23464,19 @@
           than <code>12</code> nonzero entries, and the detector slot is exactly the
           BT1374 <code>mirror_slot mod 4</code> residue.</p>
 
+        <h4>BT1412: toroidal Q4 oscillator boundary</h4>
+        <p><a href="../analysis/BT1412_toroidal_q4_oscillator_boundary.md">BT1412</a>
+          ties the 4x4 toroidal knight square, the tetrahedral oscillator, and the
+          Csaszar/Szilassi dual boundary into one exact local ABI. The toroidal
+          knight tour is a 16-tick Q4 Gray clock with parity alternating on every
+          step, and Q4 has <code>24</code> square faces.</p>
+        <p>The oscillator marks <code>{0,3,4,7} mod 12</code> occupy exactly
+          <code>4/24=1/6</code> of that plaquette shell. Removing the forbidden
+          neighborly genus <code>h=q=3</code> leaves <code>24-3=21</code>, the edge
+          invariant preserved by the Csaszar/Szilassi dual toroidal pair. The full
+          Hamilton Gray clock is not promoted to an induced snake code; its
+          every-other projection is the eight-word even-parity distance-2 layer.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:

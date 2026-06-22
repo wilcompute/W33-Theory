@@ -1,0 +1,412 @@
+{
+  "boundary": "BT1412 is a finite arithmetic and routing certificate. It does not prove a continuous optical embedding of the toroidal polyhedra, a new optimal snake-in-the-box code, or a calibrated physical oscillator. It supplies the exact local ABI boundary tying Q4 plaquettes, mod-12 oscillator marks, and the 21-edge toroidal dual channel.",
+  "bridge_identities": {
+    "codec_sum": "(2+7+7)*12 = 16*12 = 192",
+    "dual_polyhedron_e_equals_v_plus_f": "7+14=14+7=21",
+    "edge_boundary_from_forbidden_genus": "24 - 3 = 21",
+    "one_sixth_aperture": "4/24 = 1/6",
+    "q4_face_formula": "C(4,2)*2^2 = 24 = q*(q-1)*(q+1)",
+    "q4_square_faces": 24
+  },
+  "bt": 1412,
+  "checks": {
+    "board_parity_matches_q4_parity": true,
+    "bt1316_toroidal_data_loaded": true,
+    "bt1319_q4_bridge_loaded": true,
+    "bt802_oscillator_atlas_loaded": true,
+    "csaszar_szilassi_share_21_edges": true,
+    "dual_toroidal_boundary_has_e_equals_v_plus_f": true,
+    "duality_preserves_edges_and_swaps_vertices_faces": true,
+    "every_other_projection_has_eight_even_words": true,
+    "every_other_projection_is_distance_two_code": true,
+    "every_q4_face_is_balanced_two_even_two_odd": true,
+    "forbidden_genus_gap_is_q": true,
+    "gray_clock_is_not_an_induced_snake": true,
+    "oscillator_mark_aperture_is_one_sixth": true,
+    "oscillator_marks_are_bt802_mod12_marks": true,
+    "q4_faces_match_tetrahedral_flag_window": true,
+    "q4_faces_minus_forbidden_q_is_21": true,
+    "q4_has_24_square_faces": true,
+    "q4_local_codecs_match_toroidal_codec_sum": true,
+    "toroidal_knight_edges_are_q4_edges": true,
+    "tour_alternates_parity_each_step": true,
+    "tour_flip_sequence_matches_prior_q4_clock": true,
+    "tour_is_full_q4_gray_clock": true
+  },
+  "oscillator_boundary": {
+    "carrier_level": 6,
+    "forbidden_genus": 3,
+    "forbidden_genus_discriminant": 145,
+    "mark_aperture": "1/6",
+    "mark_count": 4,
+    "mod12_marks": [
+      0,
+      3,
+      4,
+      7
+    ]
+  },
+  "physical_reading": "The local packet clock is a 16-state toroidal Q4 Gray clock.  Its 24 square faces are the plaquette shell on which the tetrahedral oscillator's four admissible mod-12 marks occupy exactly a 1/6 aperture.  Removing the forbidden neighborly genus h=q=3 leaves 21, the edge channel preserved by the Csaszar/Szilassi dual toroidal boundaries.  The every-other parity projection is the distance-2 error-detecting clock layer; the full Hamilton clock is not claimed to be an induced snake code.",
+  "q4_toroidal_clock": {
+    "edges": 32,
+    "even_projection": {
+      "cyclic_hamming_distances": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "max_pairwise_hamming_distance": 4,
+      "min_pairwise_hamming_distance": 2,
+      "parity": [
+        0
+      ],
+      "ticks": [
+        0,
+        6,
+        3,
+        5,
+        9,
+        15,
+        10,
+        12
+      ],
+      "vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "extra_q4_chords_outside_gray_cycle": 16,
+    "gray_flip_sequence": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      3,
+      1,
+      2,
+      1,
+      0
+    ],
+    "parity_trace": [
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          0,
+          0
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "tick": 0
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          1,
+          2
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "tick": 1
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          2,
+          0
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "tick": 2
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          3,
+          2
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "tick": 3
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          1,
+          1
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "tick": 4
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          0,
+          3
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "tick": 5
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          3,
+          1
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "tick": 6
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          2,
+          3
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "tick": 7
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          0,
+          2
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "tick": 8
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          1,
+          0
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "tick": 9
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          2,
+          2
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "tick": 10
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          3,
+          0
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "tick": 11
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          1,
+          3
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "tick": 12
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          0,
+          1
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "tick": 13
+      },
+      {
+        "board_parity": 0,
+        "board_vertex": [
+          3,
+          3
+        ],
+        "q4_parity": 0,
+        "q4_word": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "tick": 14
+      },
+      {
+        "board_parity": 1,
+        "board_vertex": [
+          2,
+          1
+        ],
+        "q4_parity": 1,
+        "q4_word": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "tick": 15
+      }
+    ],
+    "snake_boundary": "The full 16-tick Gray clock is Hamiltonian but not an induced snake/coil: Q4 has 16 non-cycle chords.  The every-other projection is the distance-2 even-parity error-detecting layer.",
+    "square_faces": 24,
+    "vertices": 16
+  },
+  "title": "Toroidal Q4 oscillator boundary",
+  "toroidal_dual_boundary": {
+    "csaszar": {
+      "edges": 21,
+      "faces": 14,
+      "genus": 1,
+      "vertices": 7
+    },
+    "dual_edge_reading": "Csaszar maximizes vertex adjacency and Szilassi maximizes face adjacency; duality swaps V and F while preserving the 21-edge channel.",
+    "shared_edge_invariant": 21,
+    "szilassi": {
+      "edges": 21,
+      "faces": 7,
+      "genus": 1,
+      "vertices": 14
+    }
+  },
+  "verified": true
+}

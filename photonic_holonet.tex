@@ -3374,6 +3374,75 @@ three-rail rows, each dark on one rail.  This is a physics certificate for the
 single-photon ququart analyzer bank, not a chip calibration, loss budget, or
 beam-splitter-angle synthesis.
 
+\subsection{BT1412 toroidal Q4 oscillator boundary}
+
+BT1412 returns to the \(4\times4\) toroidal square because that square is not a
+decorative drawing of the local packet router.  With ordinary boundary
+conditions the knight graph has only \(24\) edges and mixed degree; with
+toroidal wraparound it is exactly \(Q_4\).  The existing closed toroidal knight
+tour is therefore a \(16\)-tick Gray Hamilton clock on the four-cube: each
+packet tick flips one \(Q_4\) bit, and the board parity \((r+c)\bmod2\) is the
+same as the \(Q_4\) word parity.  Hence parity alternates on every clock edge.
+
+The new splice is that the two-dimensional cells of this same local router have
+the right oscillator boundary:
+\[
+  \#F_2(Q_4)=\binom42 2^2
+  =
+  24\ \text{Q4 square faces}
+  =
+  q(q-1)(q+1).
+\]
+BT802 already proved that the tetrahedral oscillator is allowed exactly at the
+mod-\(12\) marks
+\[
+  \{0,3,4,7\}
+\]
+and that the neighborly genus level \(h=q=3\) is forbidden by the discriminant
+\(145\).  Lifting those four marks onto the \(24\)-plaquette \(Q_4\) shell gives
+the exact aperture
+\[
+  \frac{4}{24}=\frac16,
+\]
+which is the local ``one-sixth'' selector window in the clock face, not a fitted
+probability.  Removing the forbidden genus level then lands on the toroidal dual
+edge invariant:
+\[
+  24-3=21.
+\]
+
+That \(21\) is not numerology.  It is the edge channel preserved by the dual
+toroidal polyhedra:
+\[
+  \text{Cs\'asz\'ar}: (V,E,F)=(7,21,14),\qquad
+  \text{Szilassi}: (V,E,F)=(14,21,7).
+\]
+Cs\'asz\'ar is the maximal vertex-adjacency boundary, Szilassi is the maximal
+face-adjacency boundary, and geometric duality swaps \(V\) and \(F\) while
+keeping \(E=21\) intact.  In this exact local reading the tetrahedral oscillator
+sits between the two toroidal boundaries: the \(Q_4\) plaquette shell supplies
+the \(24\)-slot face clock, the forbidden \(q=3\) genus gap removes the
+non-realizable handle, and the surviving \(21\)-channel edge bus is precisely the
+dual boundary shared by the two toroidal polyhedra.
+
+The error-code boundary is also now sharper.  A Hamilton cycle in a labeled
+hypercube is a cyclic Gray code, but a snake-in-the-box code is an induced path
+or cycle constraint \cite{kautz-unit-distance,wilmer-ernst-gray}.  The full
+BT1412 \(Q_4\) Gray clock is not claimed to be such a snake: it uses \(16\)
+cycle edges while \(Q_4\) has \(32\) edges, so there are \(16\) non-cycle chords.
+The protected projection is instead the every-other-tick even layer
+\[
+  0,\ 6,\ 3,\ 5,\ 9,\ 15,\ 10,\ 12,
+\]
+an eight-word parity-even code whose cyclic steps have Hamming distance \(2\)
+and whose pairwise minimum distance is \(2\).  Thus the physical story is:
+toroidal \(Q_4\) Gray clock for packet motion, every-other parity projection for
+single-bit-error detection, and the \(1/6\)-aperture oscillator boundary tying
+the \(24\)-plaquette shell to the \(21\)-edge Cs\'asz\'ar/Szilassi channel.
+BT1412 is an ABI certificate, not a waveguide layout, a calibrated oscillator,
+or a new snake-code optimum.  (Witness:
+\path{tools/bt1412_toroidal_q4_oscillator_boundary.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
@@ -3574,6 +3643,13 @@ step creates energy.)
 \bibitem{saadschultz} Y.~Saad and M.~H.~Schultz,
   Topological properties of hypercubes,
   \emph{IEEE Transactions on Computers} \textbf{37}, 867 (1988).
+\bibitem{kautz-unit-distance} W.~H.~Kautz,
+  Unit-distance error-checking codes,
+  \emph{IRE Transactions on Electronic Computers} \textbf{EC-7}, 179 (1958).
+\bibitem{wilmer-ernst-gray} E.~L.~Wilmer and M.~D.~Ernst,
+  Graphs induced by Gray codes,
+  \emph{Discrete Mathematics} \textbf{257}, 585 (2002),
+  \href{https://homes.cs.washington.edu/~mernst/pubs/graycodes-dm2002-abstract.html}{abstract and bibliographic data}.
 \bibitem{smith} A.~Smith,
   Universality of Wolfram's 2, 3 Turing machine,
   \emph{Complex Systems} \textbf{29}, 1 (2020).
