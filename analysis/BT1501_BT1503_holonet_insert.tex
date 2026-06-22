@@ -1,0 +1,16 @@
+\subsection{Quotient compatibility, native calibration, and release splice lock}
+\label{sec:bt1501-bt1503-compat-calibration-release}
+
+The quotient/SAT frontier now includes compatibility hard clauses.  A generated
+WCNF instance has 540 soft identity-edge clauses, 237 one-hot hard clauses, and
+1620 compatibility hard clauses linking selected edges to point, flag, and fiber
+classes.  This is still a scaffold, not a solved global optimum proof.
+
+The native \(D_4\) pulse packet is split into calibration classes.  The 576
+native square-pulse ticks are one identity word, two quarter-turn words, one
+half-turn word, and four reflection words.  Each word has 72 ticks, split as
+24 active and 48 guard ticks.
+
+The release splice lock v3 promotes BT1495--BT1502 as the preferred exact finite
+transaction/scheduler packet for the next paper rebuild, with explicit quotient
+and calibration honesty boundaries.
