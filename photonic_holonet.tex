@@ -82,7 +82,11 @@ exact parabolic packet decoder: the Bell-line stabilizer splits the
     communication edge, the Witting delayed-query desk is now a frame
     compiler: $40$ tetrads times $4$ Alice slots times $4$ Bob slots give
     a $640$-entry admission ROM, with $480$ off-diagonal data handshakes
-    and $160$ diagonal contextual witness apertures.  The newest storage layer
+    and $160$ diagonal contextual witness apertures.  The corresponding
+    analyzer bank is sparse physical optics rather than a generic multiport:
+    the $40$ Witting bases split as $1+12+27$ analyzers with at most $12$
+    nonzero matrix entries and only cube-root phase weights over $\sqrt3$.
+    The newest storage layer
 turns the tomotope cover pathology into an engineering feature: durable
 storage is cover-indexed by a $\mathbb{Z}_k^3$ fiber over the stable
 $48$-block packet ABI, sentinel-aware compilation can trade commit-time
@@ -3312,6 +3316,64 @@ qudit processors \cite{delteil-timebin-qudit}, but BT1410 itself remains a
 finite compiler certificate rather than a loss model, detector calibration, or
 cryptographic security proof.
 
+\subsection{BT1411 Witting basis analyzer unitaries}
+
+BT1411 supplies the physical analyzer that BT1410 deliberately left abstract.
+For every Witting tetrad
+\[
+  B=(r_0,r_1,r_2,r_3)
+\]
+define \(U_B\) by taking row \(j\) to be the conjugate ray \(r_j^\dagger\).
+Then
+\[
+  U_B\,r_j=e_j,
+\]
+so detector slot \(j\) is exactly the packet residue
+\(\texttt{mirror\_slot}\bmod4\).  This is the standard linear-optics measurement
+move: an analyzer unitary rotates the chosen orthonormal basis to the detector
+basis, after which fixed detectors read the slots.  General finite-dimensional
+unitaries are optically synthesizeable by beam-splitter/phase-shifter meshes
+\cite{reck-unitary,clements-multiport}; BT1411 shows the Witting case is much
+more structured than a generic \(4\times4\) mesh.
+
+The forty analyzers have the exact hardware split
+\[
+  1+12+27.
+\]
+There is one computational direct-rail analyzer, twelve one-direct-rail plus
+complement-tritter analyzers, and twenty-seven four-three-rail contextual
+analyzers.  Equivalently, the nonzero-entry histogram is
+\[
+  4^1,\quad 10^{12},\quad 12^{27},
+\]
+where the exponent records how many analyzers have that many nonzero matrix
+entries.  No Witting analyzer uses all \(16\) entries of a generic dense
+four-mode unitary.  The entry alphabet is only
+\[
+  0,\quad 1,\quad
+  \frac{\pm1}{\sqrt3},\quad
+  \frac{\pm\omega}{\sqrt3},\quad
+  \frac{\pm\omega^2}{\sqrt3},
+  \qquad \omega^3=1.
+\]
+
+Thus the physical reading is sharper than ``program a universal interferometer.''
+The Witting communication desk is a sparse analyzer ROM:
+\begin{align*}
+  \text{delayed-query tetrad}
+  &\longmapsto
+  \text{four-mode Witting analyzer}\\
+  &\longmapsto
+  \text{detector slot}
+  \longmapsto
+  \text{BT1374 packet residue}.
+\end{align*}
+The twelve middle analyzers literally have one bypass rail and a three-rail
+tritter-like complement; the twenty-seven contextual analyzers are balanced
+three-rail rows, each dark on one rail.  This is a physics certificate for the
+single-photon ququart analyzer bank, not a chip calibration, loss budget, or
+beam-splitter-angle synthesis.
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
@@ -3559,6 +3621,15 @@ step creates energy.)
   N-qubit universal quantum logic with a photonic qudit and \(O(N)\)
   linear optics elements, \emph{APL Quantum} \textbf{1}, 046101 (2024),
   \href{https://arxiv.org/abs/2410.06334}{arXiv:2410.06334}.
+\bibitem{reck-unitary} M.~Reck, A.~Zeilinger, H.~J.~Bernstein, P.~Bertani,
+  Experimental realization of any discrete unitary operator,
+  \emph{Phys.\ Rev.\ Lett.} \textbf{73}, 58 (1994),
+  \href{https://doi.org/10.1103/PhysRevLett.73.58}{doi:10.1103/PhysRevLett.73.58}.
+\bibitem{clements-multiport} W.~R.~Clements, P.~C.~Humphreys,
+  B.~J.~Metcalf, W.~S.~Kolthammer, I.~A.~Walmsley,
+  Optimal design for universal multiport interferometers,
+  \emph{Optica} \textbf{3}, 1460 (2016),
+  \href{https://arxiv.org/abs/1603.08788}{arXiv:1603.08788}.
 \end{thebibliography}
 
 \end{document}

@@ -23452,6 +23452,18 @@
           throughput; the accepted basis opens a BT1407 frame and the outcome slot
           enters BT1374 as <code>mirror_slot mod 4</code>.</p>
 
+        <h4>BT1411: Witting basis analyzer unitaries</h4>
+        <p><a href="../analysis/BT1411_witting_basis_analyzer_unitaries.md">BT1411</a>
+          turns each accepted Witting tetrad into the actual <code>4x4</code>
+          single-photon analyzer unitary: row <code>j</code> is the conjugate Witting
+          ray, so the analyzer maps that ray to detector slot <code>j</code>.</p>
+        <p>The analyzer bank is not generic dense linear optics. It splits as
+          <code>1+12+27</code>: one computational direct-rail analyzer,
+          twelve one-direct-rail plus complement-tritter analyzers, and
+          twenty-seven four-three-rail contextual analyzers. No analyzer has more
+          than <code>12</code> nonzero entries, and the detector slot is exactly the
+          BT1374 <code>mirror_slot mod 4</code> residue.</p>
+
         <h4>BT838&ndash;BT839: the Grünbaum-Coxeter table becomes a runtime table</h4>
         <p><a href="../analysis/BT838_tomotope_wythoff_runtime_ladder.md">BT838</a> reads the tomotope Wythoff
           operation counts as the holonet packet-growth ladder:
