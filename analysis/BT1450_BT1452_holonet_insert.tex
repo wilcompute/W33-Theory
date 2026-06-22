@@ -1,0 +1,36 @@
+\subsection{Otto quartic replication, closure scheduling, and D4 lift}
+\label{sec:bt1450-bt1452-quartic-schedule-clifford}
+
+The Otto equation images remain gated, but the related varied golden quartic is
+reproducible directly:
+\[
+g(x)=x^4-x^3-(4-\phi^2)x^2+(4-\phi^2)x+1,
+\qquad
+\phi=\frac{\sqrt5-1}{2}.
+\]
+The key coefficient satisfies
+\[
+4-\phi^2=3+\phi=\sqrt{13+\phi^5}.
+\]
+This gives roots approximately
+\[
+-1.8516617611,\quad -0.2283085816,\quad 1.4619363539,\quad 1.6180339887.
+\]
+
+The closure decoder is compiled into a symbolic 48-step schedule: for each of
+12 closure strands, perform active tick, guard pair, frame update, and X/Z
+syndrome readout.  The active closure columns are \(14s+13\), and the guard
+coverage is the full tail \(216,\ldots,239\).
+
+The D4/Clifford lift shows that the Szilassi closure involution does not bare
+commute with the D4 shear.  On
+\[
+12=4\text{ branches}\times3\text{ phases},
+\]
+we model
+\[
+\tau_4(b,p)=(b\oplus2,p),\qquad S(b,p)=(b,p+b\bmod3).
+\]
+Then \(\tau_4S\ne S\tau_4\), but \(\tau_4S\tau_4^{-1}\) is still an order-3
+legal shear.  The generated closure/shear layer has order 18, so the correct
+compatibility law is retwined/conjugating rather than naively commuting.
