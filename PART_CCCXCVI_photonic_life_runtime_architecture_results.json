@@ -1,0 +1,657 @@
+{
+  "checks": [
+    {
+      "name": "q! = 2q",
+      "passed": true,
+      "value": 3
+    },
+    {
+      "name": "W33 has 40 projective points",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "W33 degree is 12",
+      "passed": true,
+      "value": [
+        12
+      ]
+    },
+    {
+      "name": "W33 edge count is 240",
+      "passed": true,
+      "value": 240
+    },
+    {
+      "name": "0-edge triples = 3240",
+      "passed": true,
+      "value": {
+        "0": 3240,
+        "1": 4320,
+        "2": 2160,
+        "3": 160
+      }
+    },
+    {
+      "name": "1-edge triples = 4320",
+      "passed": true,
+      "value": {
+        "0": 3240,
+        "1": 4320,
+        "2": 2160,
+        "3": 160
+      }
+    },
+    {
+      "name": "2-edge triples = 2160",
+      "passed": true,
+      "value": {
+        "0": 3240,
+        "1": 4320,
+        "2": 2160,
+        "3": 160
+      }
+    },
+    {
+      "name": "triangles = 160",
+      "passed": true,
+      "value": {
+        "0": 3240,
+        "1": 4320,
+        "2": 2160,
+        "3": 160
+      }
+    },
+    {
+      "name": "odd triples = 4480",
+      "passed": true,
+      "value": 4480
+    },
+    {
+      "name": "direct open turns = 4320",
+      "passed": true,
+      "value": 4320
+    },
+    {
+      "name": "open turns / triangles = 27",
+      "passed": true,
+      "value": 27
+    },
+    {
+      "name": "odd incidence diag = 336",
+      "passed": true,
+      "value": [
+        336
+      ]
+    },
+    {
+      "name": "odd incidence adjacent value = 20",
+      "passed": true,
+      "value": [
+        20
+      ]
+    },
+    {
+      "name": "odd incidence nonadjacent value = 16",
+      "passed": true,
+      "value": [
+        16
+      ]
+    },
+    {
+      "name": "MMT adjacency coefficient = 4 = mu",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "MMT diagonal coefficient = 320 = E + 2V",
+      "passed": true,
+      "value": 320
+    },
+    {
+      "name": "MMT J coefficient = 16 = lambda^mu",
+      "passed": true,
+      "value": 16
+    },
+    {
+      "name": "rank d1 = V-1",
+      "passed": true,
+      "value": 39
+    },
+    {
+      "name": "rank d2 = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "H1 beta1 = q^4 = 81",
+      "passed": true,
+      "value": 81
+    },
+    {
+      "name": "complete SNF H1 certificate is present",
+      "passed": true,
+      "value": {
+        "bracket_gate_present": true,
+        "bracket_gate_required_conditions": [
+          "complete H1 Smith-normal-form certificate",
+          "E8 structure constants artifact exists",
+          "E8 root metadata artifact exists",
+          "Z3 bracket verifier output exists and reports status=ok"
+        ],
+        "e8_dims": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81,
+          "total": 248
+        },
+        "g1g1_firewall_bad_couplings": 162,
+        "g1g1_nonzero_brackets": 810,
+        "g1g1_status": "ok",
+        "g1g2_cartan_outputs": 81,
+        "g1g2_pairs": 6561,
+        "g1g2_status": "ok",
+        "grade_rules": {
+          "g0,g0": "g0",
+          "g0,g1": "g1",
+          "g0,g2": "g2",
+          "g1,g1": "g2",
+          "g1,g2": "g0",
+          "g2,g2": "g1"
+        },
+        "h1_certificate_present": true,
+        "h1_complete_certificate": true,
+        "h1_free_rank": 81,
+        "h1_rank_Q": 120,
+        "h1_unit_relations": 120,
+        "manifest_present": true,
+        "z3_declared_output_present": true,
+        "z3_direct_sum_violations": {
+          "a2_mixes_into_e6": 0,
+          "e6_mixes_into_a2": 0,
+          "noncommuting_e6_a2": 0
+        },
+        "z3_grade_violations": 0,
+        "z3_status": "ok",
+        "z3_terms_checked": 8347,
+        "z3_verifier_present": true
+      }
+    },
+    {
+      "name": "H1 free rank = 81",
+      "passed": true,
+      "value": 81
+    },
+    {
+      "name": "H1 relation rank = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "H1 Smith units = 120",
+      "passed": true,
+      "value": 120
+    },
+    {
+      "name": "E8 manifest has dimensions 86+81+81=248",
+      "passed": true,
+      "value": {
+        "g0": 86,
+        "g1": 81,
+        "g2": 81,
+        "total": 248
+      }
+    },
+    {
+      "name": "E8 manifest records six Z3 grade rules",
+      "passed": true,
+      "value": {
+        "g0,g0": "g0",
+        "g0,g1": "g1",
+        "g0,g2": "g2",
+        "g1,g1": "g2",
+        "g1,g2": "g0",
+        "g2,g2": "g1"
+      }
+    },
+    {
+      "name": "E8 bracket gate records four ready conditions",
+      "passed": true,
+      "value": [
+        "complete H1 Smith-normal-form certificate",
+        "E8 structure constants artifact exists",
+        "E8 root metadata artifact exists",
+        "Z3 bracket verifier output exists and reports status=ok"
+      ]
+    },
+    {
+      "name": "actual Z3 verifier artifact exists",
+      "passed": true,
+      "value": {
+        "bracket_gate_present": true,
+        "bracket_gate_required_conditions": [
+          "complete H1 Smith-normal-form certificate",
+          "E8 structure constants artifact exists",
+          "E8 root metadata artifact exists",
+          "Z3 bracket verifier output exists and reports status=ok"
+        ],
+        "e8_dims": {
+          "g0": 86,
+          "g1": 81,
+          "g2": 81,
+          "total": 248
+        },
+        "g1g1_firewall_bad_couplings": 162,
+        "g1g1_nonzero_brackets": 810,
+        "g1g1_status": "ok",
+        "g1g2_cartan_outputs": 81,
+        "g1g2_pairs": 6561,
+        "g1g2_status": "ok",
+        "grade_rules": {
+          "g0,g0": "g0",
+          "g0,g1": "g1",
+          "g0,g2": "g2",
+          "g1,g1": "g2",
+          "g1,g2": "g0",
+          "g2,g2": "g1"
+        },
+        "h1_certificate_present": true,
+        "h1_complete_certificate": true,
+        "h1_free_rank": 81,
+        "h1_rank_Q": 120,
+        "h1_unit_relations": 120,
+        "manifest_present": true,
+        "z3_declared_output_present": true,
+        "z3_direct_sum_violations": {
+          "a2_mixes_into_e6": 0,
+          "e6_mixes_into_a2": 0,
+          "noncommuting_e6_a2": 0
+        },
+        "z3_grade_violations": 0,
+        "z3_status": "ok",
+        "z3_terms_checked": 8347,
+        "z3_verifier_present": true
+      }
+    },
+    {
+      "name": "Z3 verifier status is ok",
+      "passed": true,
+      "value": "ok"
+    },
+    {
+      "name": "Z3 verifier checked 8347 terms",
+      "passed": true,
+      "value": 8347
+    },
+    {
+      "name": "Z3 grade violations = 0",
+      "passed": true,
+      "value": 0
+    },
+    {
+      "name": "g1*g2 pair count = 81^2",
+      "passed": true,
+      "value": 6561
+    },
+    {
+      "name": "g1*g2 Cartan outputs = 81",
+      "passed": true,
+      "value": 81
+    },
+    {
+      "name": "g1*g1 nonzero brackets = 810",
+      "passed": true,
+      "value": 810
+    },
+    {
+      "name": "firewall-bad g1*g1 couplings = 162",
+      "passed": true,
+      "value": 162
+    },
+    {
+      "name": "Type-II fusion probability = lambda/mu = 1/2",
+      "passed": true,
+      "value": "1/2"
+    },
+    {
+      "name": "KLM primitive probability = 1/mu = 1/4",
+      "passed": true,
+      "value": "1/4"
+    },
+    {
+      "name": "expected fusion attempts = 2E = 480",
+      "passed": true,
+      "value": 480
+    },
+    {
+      "name": "expected KLM attempts = 4E = triangle trace",
+      "passed": true,
+      "value": 960
+    },
+    {
+      "name": "critical retained/complement edges = 120+120",
+      "passed": true,
+      "value": "120+120"
+    },
+    {
+      "name": "critical edge-count variance times 4 = E",
+      "passed": true,
+      "value": 60
+    },
+    {
+      "name": "full stabilizer weight = Phi3",
+      "passed": true,
+      "value": 13
+    },
+    {
+      "name": "critical stabilizer weight = Phi6",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "Pauli frame states = q^4 = H1",
+      "passed": true,
+      "value": 81
+    },
+    {
+      "name": "projective Pauli frames = W33 vertices",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "40-trit record fits in one 64-bit word",
+      "passed": true,
+      "value": "2^63 < 3^40 < 2^64"
+    },
+    {
+      "name": "directed environment fanout = V*K = 480",
+      "passed": true,
+      "value": 480
+    },
+    {
+      "name": "Clifford order = Aut(W33)",
+      "passed": true,
+      "value": 51840
+    },
+    {
+      "name": "Aut / vertex = 1296",
+      "passed": true,
+      "value": 1296
+    },
+    {
+      "name": "Aut / edge = 216",
+      "passed": true,
+      "value": 216
+    },
+    {
+      "name": "Aut / directed = 108",
+      "passed": true,
+      "value": 108
+    },
+    {
+      "name": "Aut / KLM trace = 54",
+      "passed": true,
+      "value": 54
+    },
+    {
+      "name": "toric logical qubits on genus 1 = lambda",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "toric ground-state degeneracy on genus 1 = mu",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "toric stabilizer weight = mu",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "Csaszar K7 torus Euler characteristic = 0",
+      "passed": true,
+      "value": 0
+    },
+    {
+      "name": "Csaszar/Szilassi genus = 1",
+      "passed": true,
+      "value": 1
+    },
+    {
+      "name": "Jungerman-Ringel K7 denominator is k=12",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "complete graph K12 genus = 6 = K/lambda",
+      "passed": true,
+      "value": 6
+    },
+    {
+      "name": "Heawood vertices = 2 Phi6",
+      "passed": true,
+      "value": 14
+    },
+    {
+      "name": "Heawood cycle rank = 2^q",
+      "passed": true,
+      "value": 8
+    },
+    {
+      "name": "topological oscillator frequency squared = lambda",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "oscillator middle shell splits 12 = 6+6",
+      "passed": true,
+      "value": 6
+    }
+  ],
+  "checks_passed": 63,
+  "checks_total": 63,
+  "classical_layer": {
+    "directed_environment_fanout": 480,
+    "exact_word_bound": "2^63 < 3^40 < 2^64",
+    "interpretation": "the full W33 measurement record is a single 64-bit-class classical selector word",
+    "measurement_word_trits": 40
+  },
+  "constants": {
+    "Albert": 27,
+    "Aut": 51840,
+    "H1": 81,
+    "Phi3": 13,
+    "Phi4": 10,
+    "Phi6": 7,
+    "directed": 480,
+    "edges": 240,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "q": 3,
+    "triangle_trace": 960,
+    "triangles": 160,
+    "v": 40
+  },
+  "deterministic_layer": {
+    "critical_stabilizer_weight": 7,
+    "full_stabilizer_weight": 13,
+    "interpretation": "feed-forward updates the Pauli frame, so measurement randomness does not randomize the logical computation",
+    "pauli_frame_states": 81,
+    "pauli_frame_trits": 4,
+    "projective_pauli_frames": 40
+  },
+  "e8_operation_audit": {
+    "bracket_gate_present": true,
+    "bracket_gate_required_conditions": [
+      "complete H1 Smith-normal-form certificate",
+      "E8 structure constants artifact exists",
+      "E8 root metadata artifact exists",
+      "Z3 bracket verifier output exists and reports status=ok"
+    ],
+    "e8_dims": {
+      "g0": 86,
+      "g1": 81,
+      "g2": 81,
+      "total": 248
+    },
+    "g1g1_firewall_bad_couplings": 162,
+    "g1g1_nonzero_brackets": 810,
+    "g1g1_status": "ok",
+    "g1g2_cartan_outputs": 81,
+    "g1g2_pairs": 6561,
+    "g1g2_status": "ok",
+    "grade_rules": {
+      "g0,g0": "g0",
+      "g0,g1": "g1",
+      "g0,g2": "g2",
+      "g1,g1": "g2",
+      "g1,g2": "g0",
+      "g2,g2": "g1"
+    },
+    "h1_certificate_present": true,
+    "h1_complete_certificate": true,
+    "h1_free_rank": 81,
+    "h1_rank_Q": 120,
+    "h1_unit_relations": 120,
+    "manifest_present": true,
+    "z3_declared_output_present": true,
+    "z3_direct_sum_violations": {
+      "a2_mixes_into_e6": 0,
+      "e6_mixes_into_a2": 0,
+      "noncommuting_e6_a2": 0
+    },
+    "z3_grade_violations": 0,
+    "z3_status": "ok",
+    "z3_terms_checked": 8347,
+    "z3_verifier_present": true
+  },
+  "external_sources": {
+    "KLM": "https://www.nature.com/articles/35051009",
+    "boson_sampling": "https://arxiv.org/abs/1011.3245",
+    "browne_rudolph_fusion": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.95.010501",
+    "minimal_triangulations": "https://doi.org/10.1007/BF02414187",
+    "one_way_mbqc": "https://arxiv.org/abs/quant-ph/0108067",
+    "photosynthetic_coherence": "https://www.nature.com/articles/nature05678",
+    "quantum_darwinism": "https://www.nature.com/articles/nphys1202",
+    "radical_pair_magnetoreception": "https://www.ks.uiuc.edu/Research/magsense/RITZ2000.pdf",
+    "toric_anyons": "https://doi.org/10.1016/S0003-4916(02)00018-0"
+  },
+  "graph_audit": {
+    "beta1": 81,
+    "degree_values": [
+      12
+    ],
+    "direct_open_turns": 4320,
+    "edges": 240,
+    "incidence_gram_adjacent_values": [
+      20
+    ],
+    "incidence_gram_diag_values": [
+      336
+    ],
+    "incidence_gram_nonadjacent_values": [
+      16
+    ],
+    "odd_triples": 4480,
+    "points": 40,
+    "rank_d1": 39,
+    "rank_d2": 120,
+    "triples_by_edge_count": {
+      "0": 3240,
+      "1": 4320,
+      "2": 2160,
+      "3": 160
+    }
+  },
+  "honesty_boundary": "This is a finite runtime architecture theorem, not a proof that life originated from W33. The biological reading is narrower: photon-driven quantum events, environmental record proliferation, and classical selection have a tested finite information architecture here.",
+  "part": "CCCXCVI",
+  "probabilistic_layer": {
+    "critical_edge_split": "120+120",
+    "expected_fusion_attempts": 480,
+    "expected_klm_attempts": 960,
+    "p_fusion": "1/2",
+    "p_klm": "1/4"
+  },
+  "response_pipeline": {
+    "actual_z3_path": "artifacts/verify_e8_z3grading_from_structure_constants.json",
+    "closed_triangles": 160,
+    "e8_grading_read": "H1=81 aligns with E8 Z3 matter grades g1/g2 upstream; this audit verifies the imported certificate, manifest, Z3 verifier, and coupling-count artifacts",
+    "g1g1_nonzero_brackets": 810,
+    "g1g2_pairs": 6561,
+    "h1_beta1": 81,
+    "incidence_gram": "M M^T = 320 I + 16 J + 4 A",
+    "odd_triples": 4480,
+    "open_to_closed_ratio": 27,
+    "open_turns": 4320,
+    "orchestrator_declared_z3_path_present": true,
+    "z3_terms_checked": 8347
+  },
+  "runtime_layers": [
+    {
+      "exact_carrier": "F_3^4 / F_3^x",
+      "invariant": "q^4=81 -> 40 projective observables",
+      "name": "two_qutrit_phase_space",
+      "regime": "quantum",
+      "role": "coherent address space for Pauli/W33 observables"
+    },
+    {
+      "exact_carrier": "KLM + Type-II fusion",
+      "invariant": "p_KLM=1/4, p_fusion=1/2, E/p_fusion=480",
+      "name": "photonic_assembly",
+      "regime": "probabilistic",
+      "role": "heralded construction of the W33 cluster resource"
+    },
+    {
+      "exact_carrier": "qutrit measurement outcomes plus Pauli frame",
+      "invariant": "q^4=81 correction states, stabilizer weights 13 -> 7",
+      "name": "mbqc_feedforward",
+      "regime": "deterministic",
+      "role": "turns random measurement outcomes into deterministic logical gates"
+    },
+    {
+      "exact_carrier": "40 trits",
+      "invariant": "2^63 < 3^40 < 2^64",
+      "name": "measurement_record",
+      "regime": "classical",
+      "role": "single-run classical controller word selected from quantum outcomes"
+    },
+    {
+      "exact_carrier": "genus-1 torus / Csaszar-Szilassi shell",
+      "invariant": "logical qubits=2, GSD=4, JR denominator=12",
+      "name": "topological_surface_code",
+      "regime": "topological",
+      "role": "stores protected loops and explains the toric/minimal-triangulation 12"
+    },
+    {
+      "exact_carrier": "odd-triple incidence M",
+      "invariant": "MM^T=320I+16J+4A, H1=81",
+      "name": "two_graph_response",
+      "regime": "response",
+      "role": "feeds the finite response and H1/E8 matter-scale pipeline"
+    }
+  ],
+  "theorem": "The W33 photonic runtime separates into four compatible regimes. Probabilistic optical assembly uses p_fusion=1/2 and p_KLM=1/4, giving 480 fusion attempts and 960 primitive KLM attempts. Deterministic MBQC then absorbs q=3 measurement randomness into an 81-state Pauli frame, with stabilizer weights Phi3=13 and Phi6=7 at the critical fusion layer. The quantum carrier is the 40-point projective two-qutrit phase space, while the classical controller receives a 40-trit record satisfying 2^63 < 3^40 < 2^64. The topological substrate is the genus-1 toric/Csaszar-Szilassi shell with JR denominator k=12, and the upstream two-graph response layer supplies open/closed dynamics through 4320 open turns, 160 closed triangles, H1=81, and a verified E8 Z3 operation pipeline with 8347 bracket terms checked.",
+  "title": "Photonic Life Runtime Architecture",
+  "topological_layer": {
+    "csaszar": {
+      "edges": 21,
+      "faces": 14,
+      "genus": 1,
+      "vertices": 7
+    },
+    "heawood_oscillator": {
+      "branch_size": 6,
+      "cycle_rank": 8,
+      "edges": 21,
+      "frequency_squared": 2,
+      "middle_shell": 12,
+      "vertices": 14
+    },
+    "toric_ground_state_degeneracy": 4,
+    "toric_logical_qubits": 2,
+    "torus_genus": 1
+  },
+  "verified": true
+}

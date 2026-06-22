@@ -1,0 +1,509 @@
+{
+  "architecture_upgrade": "Adds the harmonic/topological bus between photonic assembly and the protected W33 QEC stack. The bus explains why the optical probability denominators 2 and 4, the genus-one toric data, the Heawood oscillator, and the Steane/Phi6 protection layer belong to one architecture.",
+  "bus_layers": [
+    {
+      "carrier": "KLM / Type-II fusion probabilities",
+      "invariant": "denominators 2 and 4",
+      "name": "photonic_denominator_bus",
+      "role": "hardware randomness is routed into the harmonic/topological shell"
+    },
+    {
+      "carrier": "Szilassi dual Heawood oscillator",
+      "invariant": "14 = 2*Phi6, middle shell 12 = 6+6",
+      "name": "heawood_harmonic_bus",
+      "role": "two Phi6 rails and a W33-degree phase middle shell"
+    },
+    {
+      "carrier": "Csaszar/Szilassi genus-one torus",
+      "invariant": "logical qubits 2, GSD 4, weight-4 checks",
+      "name": "toric_surface_bus",
+      "role": "topological loop memory for protected MBQC state flow"
+    },
+    {
+      "carrier": "W33 CSS -> Steane/Phi6 lift",
+      "invariant": "[[240,81,3]] -> [[82320,81,>=81]]",
+      "name": "protected_qec_bus",
+      "role": "preserve the H1=81 tail instead of stabilizing it away"
+    },
+    {
+      "carrier": "40-trit measurement record",
+      "invariant": "2^63 < 3^40 < 2^64",
+      "name": "classical_selector_bus",
+      "role": "commit a classical selector only after protected acceptance"
+    }
+  ],
+  "checks": [
+    {
+      "name": "photonic runtime verified",
+      "passed": true,
+      "value": 63
+    },
+    {
+      "name": "protected scheduler verified",
+      "passed": true,
+      "value": 34
+    },
+    {
+      "name": "QEC ouroboros verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "Steane/Phi6 lift verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "Heawood harmonic summary is ok",
+      "passed": true,
+      "value": "ok"
+    },
+    {
+      "name": "W33 constants are 40/12/240",
+      "passed": true,
+      "value": {
+        "Albert": 27,
+        "Aut": 51840,
+        "H1": 81,
+        "Phi3": 13,
+        "Phi4": 10,
+        "Phi6": 7,
+        "directed": 480,
+        "edges": 240,
+        "k": 12,
+        "lambda": 2,
+        "mu": 4,
+        "q": 3,
+        "triangle_trace": 960,
+        "triangles": 160,
+        "v": 40
+      }
+    },
+    {
+      "name": "fusion denominator is lambda=2",
+      "passed": true,
+      "value": "1/2"
+    },
+    {
+      "name": "KLM denominator is mu=4",
+      "passed": true,
+      "value": "1/4"
+    },
+    {
+      "name": "fusion denominator equals toric logical qubits",
+      "passed": true,
+      "value": 2
+    },
+    {
+      "name": "KLM denominator equals toric GSD",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "KLM denominator equals toric stabilizer weight",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "fusion attempts equal directed W33 edges",
+      "passed": true,
+      "value": {
+        "critical_edge_split": "120+120",
+        "expected_fusion_attempts": 480,
+        "expected_klm_attempts": 960,
+        "p_fusion": "1/2",
+        "p_klm": "1/4"
+      }
+    },
+    {
+      "name": "critical fusion split is 120+120",
+      "passed": true,
+      "value": {
+        "critical_edge_split": "120+120",
+        "expected_fusion_attempts": 480,
+        "expected_klm_attempts": 960,
+        "p_fusion": "1/2",
+        "p_klm": "1/4"
+      }
+    },
+    {
+      "name": "Csaszar torus is genus one",
+      "passed": true,
+      "value": {
+        "edges": 21,
+        "faces": 14,
+        "genus": 1,
+        "vertices": 7
+      }
+    },
+    {
+      "name": "Csaszar Euler characteristic is zero",
+      "passed": true,
+      "value": {
+        "edges": 21,
+        "faces": 14,
+        "genus": 1,
+        "vertices": 7
+      }
+    },
+    {
+      "name": "Csaszar vertices equal Phi6",
+      "passed": true,
+      "value": {
+        "edges": 21,
+        "faces": 14,
+        "genus": 1,
+        "vertices": 7
+      }
+    },
+    {
+      "name": "Csaszar edges equal Heawood edges",
+      "passed": true,
+      "value": {
+        "csaszar": {
+          "edges": 21,
+          "faces": 14,
+          "genus": 1,
+          "vertices": 7
+        },
+        "heawood": {
+          "branch_size": 6,
+          "cycle_rank": 8,
+          "edges": 21,
+          "frequency_squared": 2,
+          "middle_shell": 12,
+          "vertices": 14
+        }
+      }
+    },
+    {
+      "name": "Csaszar faces equal Heawood vertices",
+      "passed": true,
+      "value": {
+        "csaszar": {
+          "edges": 21,
+          "faces": 14,
+          "genus": 1,
+          "vertices": 7
+        },
+        "heawood": {
+          "branch_size": 6,
+          "cycle_rank": 8,
+          "edges": 21,
+          "frequency_squared": 2,
+          "middle_shell": 12,
+          "vertices": 14
+        }
+      }
+    },
+    {
+      "name": "Jungerman-Ringel denominator is K=12",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "Heawood selector law BBt=2I+J",
+      "passed": true,
+      "value": {
+        "bbt_equals_2i_plus_j": true,
+        "btb_equals_2i_plus_j": true,
+        "column_sum": 3,
+        "matrix_shape": [
+          7,
+          7
+        ],
+        "row_sum": 3,
+        "selector_eigenvalues_exact": [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "9"
+        ]
+      }
+    },
+    {
+      "name": "Heawood adjacency quartic relation holds",
+      "passed": true,
+      "value": "x^4 - 11*x^2 + 18"
+    },
+    {
+      "name": "Heawood oscillator has two Phi6 rails",
+      "passed": true,
+      "value": {
+        "branch_size": 6,
+        "cycle_rank": 8,
+        "edges": 21,
+        "frequency_squared": 2,
+        "middle_shell": 12,
+        "vertices": 14
+      }
+    },
+    {
+      "name": "Heawood cycle rank equals scheduler tick count",
+      "passed": true,
+      "value": 8
+    },
+    {
+      "name": "oscillator frequency squared equals lambda",
+      "passed": true,
+      "value": {
+        "branch_size": 6,
+        "cycle_rank": 8,
+        "edges": 21,
+        "frequency_squared": 2,
+        "middle_shell": 12,
+        "vertices": 14
+      }
+    },
+    {
+      "name": "oscillator middle shell equals W33 degree",
+      "passed": true,
+      "value": {
+        "branch_size": 6,
+        "cycle_rank": 8,
+        "edges": 21,
+        "frequency_squared": 2,
+        "middle_shell": 12,
+        "vertices": 14
+      }
+    },
+    {
+      "name": "oscillator middle shell splits 6+6",
+      "passed": true,
+      "value": {
+        "branch_size": 6,
+        "cycle_rank": 8,
+        "edges": 21,
+        "frequency_squared": 2,
+        "middle_shell": 12,
+        "vertices": 14
+      }
+    },
+    {
+      "name": "oscillator middle shell is three toric stabilizers",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "weighted tetra normalization recovers Heawood gap",
+      "passed": true,
+      "value": {
+        "tetra_weight_for_same_gap_exact": "3/4 - sqrt(2)/4",
+        "tetra_weight_for_same_gap_numeric": 0.3964466094067262,
+        "weighted_tetra_nonzero_laplacian_equals_heawood_gap": true
+      }
+    },
+    {
+      "name": "deterministic Pauli frame equals H1",
+      "passed": true,
+      "value": {
+        "critical_stabilizer_weight": 7,
+        "full_stabilizer_weight": 13,
+        "interpretation": "feed-forward updates the Pauli frame, so measurement randomness does not randomize the logical computation",
+        "pauli_frame_states": 81,
+        "pauli_frame_trits": 4,
+        "projective_pauli_frames": 40
+      }
+    },
+    {
+      "name": "protected distance equals H1",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "base CSS carrier is [[240,81,3]]",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "Q4 remains local routing [[1296,81,4]]",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "line-star tail is preserved, not killed",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "correctable weight equals W33 vertices and selector trits",
+      "passed": true,
+      "value": {
+        "classical": {
+          "directed_environment_fanout": 480,
+          "exact_word_bound": "2^63 < 3^40 < 2^64",
+          "interpretation": "the full W33 measurement record is a single 64-bit-class classical selector word",
+          "measurement_word_trits": 40
+        },
+        "controller": {
+          "controller_bits": 64,
+          "measurement_states": "12157665459056928801",
+          "measurement_trits": 40,
+          "pauli_frame_bits": 7,
+          "pauli_frame_states": 81,
+          "projective_frame_bits": 6,
+          "projective_frame_states": 40
+        },
+        "steane": {
+          "guaranteed_correctable_weight": 40,
+          "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+          "logical_sector_count": 81,
+          "three_lift_code": "[[82320,81,>=81]]"
+        }
+      }
+    },
+    {
+      "name": "controller envelope is 64-bit class",
+      "passed": true,
+      "value": {
+        "classical": {
+          "directed_environment_fanout": 480,
+          "exact_word_bound": "2^63 < 3^40 < 2^64",
+          "interpretation": "the full W33 measurement record is a single 64-bit-class classical selector word",
+          "measurement_word_trits": 40
+        },
+        "controller": {
+          "controller_bits": 64,
+          "measurement_states": "12157665459056928801",
+          "measurement_trits": 40,
+          "pauli_frame_bits": 7,
+          "pauli_frame_states": 81,
+          "projective_frame_bits": 6,
+          "projective_frame_states": 40
+        }
+      }
+    },
+    {
+      "name": "bus has five ordered layers",
+      "passed": true,
+      "value": [
+        {
+          "carrier": "KLM / Type-II fusion probabilities",
+          "invariant": "denominators 2 and 4",
+          "name": "photonic_denominator_bus",
+          "role": "hardware randomness is routed into the harmonic/topological shell"
+        },
+        {
+          "carrier": "Szilassi dual Heawood oscillator",
+          "invariant": "14 = 2*Phi6, middle shell 12 = 6+6",
+          "name": "heawood_harmonic_bus",
+          "role": "two Phi6 rails and a W33-degree phase middle shell"
+        },
+        {
+          "carrier": "Csaszar/Szilassi genus-one torus",
+          "invariant": "logical qubits 2, GSD 4, weight-4 checks",
+          "name": "toric_surface_bus",
+          "role": "topological loop memory for protected MBQC state flow"
+        },
+        {
+          "carrier": "W33 CSS -> Steane/Phi6 lift",
+          "invariant": "[[240,81,3]] -> [[82320,81,>=81]]",
+          "name": "protected_qec_bus",
+          "role": "preserve the H1=81 tail instead of stabilizing it away"
+        },
+        {
+          "carrier": "40-trit measurement record",
+          "invariant": "2^63 < 3^40 < 2^64",
+          "name": "classical_selector_bus",
+          "role": "commit a classical selector only after protected acceptance"
+        }
+      ]
+    }
+  ],
+  "checks_passed": 36,
+  "checks_total": 36,
+  "external_anchors": {
+    "browne_rudolph_fusion_cluster": "https://arxiv.org/abs/quant-ph/0405157",
+    "gkp_bosonic_qec_review": "https://arxiv.org/abs/2308.02913",
+    "gkp_oscillator_code": "https://arxiv.org/abs/quant-ph/0008040",
+    "klm_feedback_linear_optics": "https://arxiv.org/abs/quant-ph/0006088",
+    "nonabelian_tqc_review": "https://arxiv.org/abs/0707.1889"
+  },
+  "harmonic_surface_packet": {
+    "csaszar": {
+      "edges": 21,
+      "faces": 14,
+      "genus": 1,
+      "vertices": 7
+    },
+    "heawood_gap_exact": "3 - sqrt(2)",
+    "heawood_oscillator": {
+      "branch_size": 6,
+      "cycle_rank": 8,
+      "edges": 21,
+      "frequency_squared": 2,
+      "middle_shell": 12,
+      "vertices": 14
+    },
+    "middle_shell_read": "12 = W33 degree = 6+6 harmonic branches = 3 toric weight-4 checks",
+    "tetra_weight_for_same_gap_exact": "3/4 - sqrt(2)/4"
+  },
+  "honesty_boundary": "This is an architecture and invariant-matching theorem. It does not claim a new optical threshold, a physical anyon implementation, or a new proof that the Q4 packet layer has distance 12.",
+  "part": "CCCCXVIII",
+  "probability_to_topology": {
+    "fusion_denominator": 2,
+    "fusion_denominator_read": "lambda=2 = toric logical qubits = harmonic frequency squared",
+    "klm_denominator": 4,
+    "klm_denominator_read": "mu=4 = toric GSD = toric stabilizer weight",
+    "p_fusion": "1/2",
+    "p_klm": "1/4"
+  },
+  "protected_tqc_packet": {
+    "active_protection_code": "[[82320,81,>=81]]",
+    "base_css_code": "[[240,81,3]]",
+    "correctable_weight": 40,
+    "logical_sector": 81,
+    "q4_local_routing_code": "[[1296,81,4]]",
+    "selector_trits": 40
+  },
+  "theorem": "The protected photonic harmonic TQC architecture is a five-layer bus. The photonic denominator layer has p_fusion=1/2 and p_KLM=1/4, whose denominators are lambda=2 and mu=4. The same 2 and 4 are the toric logical-qubit count and ground-state degeneracy on the genus-one Csaszar/Szilassi shell, and the Heawood harmonic oscillator has frequency squared 2, 14=2*Phi6 vertices, and a 12=6+6 middle shell. That middle shell is also the W33 degree and three toric weight-4 checks. The protected QEC layer then preserves the H1=81 line-star tail through [[82320,81,>=81]], while Q4 remains local [[1296,81,4]] routing and the 40-trit selector commits only after protection.",
+  "title": "Photonic Harmonic TQC Bus",
+  "verified": true
+}

@@ -1,0 +1,24 @@
+{
+  "part": "CCCCIX",
+  "title": "Line-Star Rank Correction and Matter-Sector Interpretation",
+  "verified": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "rank_table": {
+    "rank_X_vertex": 39,
+    "rank_Z_triangle": 120,
+    "base_k": 81,
+    "rank_line_star_span": 120,
+    "rank_X_plus_line_star": 120,
+    "line_star_mod_vertex_rank": 81,
+    "k_if_line_stars_are_stabilizers": 0
+  },
+  "line_star_packet": {
+    "k4_lines": 40,
+    "line_star_triples": 160,
+    "line_star_weight": 3
+  },
+  "architecture_upgrade": "Corrects the line-star gauge rank accounting: the K4 line-stars span the full X-logical/matter sector modulo vertex checks. They are not disposable stabilizers; they are the local low-distance representation of the 81 protected degrees.",
+  "theorem": "The 160 K4 line-star triples span a 120-dimensional subspace equal to ker(H_Z). Modulo the 39 vertex checks, this gives an 81-dimensional quotient, exactly the W33 logical/matter sector. Adding them as stabilizers would collapse k to zero.",
+  "honesty_boundary": "This supersedes the rank-effect statement in CCCCVIII. The next fault-tolerance layer must re-encode the line-star/matter degrees into a higher-distance tomotope/chirality or inner-code packet rather than gauge them away."
+}

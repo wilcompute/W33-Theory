@@ -19,10 +19,10 @@
     "isomorphic": "true",
     "q6_id": "96-227",
     "q6_size": "96",
-    "q6_structure": "(C2 x C2) : S4",
+    "q6_structure": "((C2 x C2 x C2 x C2) : C3) : C2",
     "tom_id": "96-227",
     "tom_size": "96",
-    "tom_structure": "(C2 x C2) : S4"
+    "tom_structure": "((C2 x C2 x C2 x C2) : C3) : C2"
   },
   "interpretation": "The Q6/tomotope bridge is stronger than a shared count: Q6 has a unique S3-invariant 2^4 translation subgroup whose edge action is isomorphic to the true tomotope automorphism action on flags.",
   "q6_edge_subgroup": {

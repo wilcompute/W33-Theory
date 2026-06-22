@@ -2624,6 +2624,14 @@
               <code>168 = 7&middot;24 = 21&middot;8</code> into one exact finite packet.</div>
           </div>
           <div class="card">
+            <div class="label">Canonical Fano/Pulse Lock</div>
+            <div class="detail">The <code>24</code>-fiber is now the Fano point stabilizer itself: fixing one
+              point gives <code>S4</code> on the four opposite lines, and fixing one flag gives the native
+              <code>D4</code> square subgroup. The row action then compiles through the BT1411 detector slot,
+              BT1374 mirror residue, and BT1407 Hesse epilogue lane, while the photonic-QEC release lock restores
+              the legacy root <code>PART_*</code> artifacts.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently
@@ -2819,8 +2827,7 @@
             The shared atom table is <code>q=3</code>, <code>&lambda;=2</code>, <code>&mu;=4</code>,
             <code>v=40</code>, <code>&Phi;3=13</code>, <code>&Phi;4=10</code>, <code>&Phi;6=7</code>,
             <code>alpha_inv=137</code>, and <code>H0=70</code>.
-            The new <a href="../PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md">Cyclic Cayley Obstruction and Photonic
-              Ouroboros Guard</a>
+            The new <a href="../PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md">Cyclic Cayley Obstruction and Photonic Ouroboros Guard</a>
             (Part CCCCXXX) then protects the architecture from a false
             shortcut: an exhaustive <code>C(19,6)=27132</code> search over symmetric valency-12 connection
             sets on <code>Z40</code> finds zero cyclic <code>Z40</code> hits for
@@ -10823,8 +10830,8 @@
             The new <a href="../PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md">QEC Ouroboros Stabilizer Loop</a>
             makes this exact on the error-correction side: the stabilizer cascade is a QEC feedback loop on the
             W33 edge-qubit carrier <code>[[240,81,3]]</code>. Vertex and triangle checks read the same
-            <code>240</code>-edge complex that carries the <code>H1=81</code> logical sector. The line-star tail is the
-            <code>H1=81</code> logical sector modulo vertex checks, so stabilizing it away collapses <code>k</code> to
+            <code>240</code>-edge complex that carries the <code>H1=81</code> logical sector. The
+            line-star tail is the <code>H1=81</code> logical sector modulo vertex checks, so stabilizing it away collapses <code>k</code> to
             zero; the current Q4 layer remains <code>[[1296,81,4]]</code> routing while the
             Steane/<code>&Phi;<sub>6</sub></code> <code>[[82320,81,&ge;81]]</code> lift is the protected closure.
             Part DCCXIV adds the local holonomy alphabet of that loop: the <code>12</code> outgoing

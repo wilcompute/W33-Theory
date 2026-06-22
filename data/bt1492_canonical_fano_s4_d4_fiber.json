@@ -1,0 +1,621 @@
+{
+  "anchor_point": 1,
+  "anchor_profiles": [
+    {
+      "anchor": 1,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 2,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 3,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 4,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 5,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 6,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    },
+    {
+      "anchor": 7,
+      "branch_action_count": 24,
+      "branch_line_count": 4,
+      "flag_stabilizer": 8,
+      "point_stabilizer": 24,
+      "through_line_count": 3
+    }
+  ],
+  "bt": 1492,
+  "canonical_fiber": {
+    "cosets_by_anchor_line": {
+      "0": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          4,
+          7,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          7,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          7,
+          6,
+          5,
+          4
+        ],
+        [
+          1,
+          3,
+          2,
+          4,
+          5,
+          7,
+          6
+        ],
+        [
+          1,
+          3,
+          2,
+          5,
+          4,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        [
+          1,
+          3,
+          2,
+          7,
+          6,
+          4,
+          5
+        ]
+      ],
+      "1": [
+        [
+          1,
+          4,
+          5,
+          2,
+          3,
+          6,
+          7
+        ],
+        [
+          1,
+          4,
+          5,
+          3,
+          2,
+          7,
+          6
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5,
+          7,
+          6,
+          3,
+          2
+        ],
+        [
+          1,
+          5,
+          4,
+          2,
+          3,
+          7,
+          6
+        ],
+        [
+          1,
+          5,
+          4,
+          3,
+          2,
+          6,
+          7
+        ],
+        [
+          1,
+          5,
+          4,
+          6,
+          7,
+          3,
+          2
+        ],
+        [
+          1,
+          5,
+          4,
+          7,
+          6,
+          2,
+          3
+        ]
+      ],
+      "2": [
+        [
+          1,
+          6,
+          7,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          6,
+          7,
+          3,
+          2,
+          5,
+          4
+        ],
+        [
+          1,
+          6,
+          7,
+          4,
+          5,
+          2,
+          3
+        ],
+        [
+          1,
+          6,
+          7,
+          5,
+          4,
+          3,
+          2
+        ],
+        [
+          1,
+          7,
+          6,
+          2,
+          3,
+          5,
+          4
+        ],
+        [
+          1,
+          7,
+          6,
+          3,
+          2,
+          4,
+          5
+        ],
+        [
+          1,
+          7,
+          6,
+          4,
+          5,
+          3,
+          2
+        ],
+        [
+          1,
+          7,
+          6,
+          5,
+          4,
+          2,
+          3
+        ]
+      ]
+    },
+    "factorization": "24 = 3 Fano lines through an anchor point * 8 flag-stabilizer states",
+    "identity": "point stabilizer = three anchor-line cosets of the flag stabilizer"
+  },
+  "canonical_objects": {
+    "base_flag_line": [
+      1,
+      2,
+      3
+    ],
+    "through_anchor_lines": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        1,
+        6,
+        7
+      ]
+    ],
+    "v4_branch_lines_not_through_anchor": [
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ]
+  },
+  "checks": {
+    "all_anchor_choices_have_same_profile": true,
+    "anchor_has_three_lines_and_four_branch_lines": true,
+    "bt1422_fano_bridge_loaded": true,
+    "bt1487_classifier_loaded": true,
+    "bt1490_shared_fiber_is_canonical_coset_count": true,
+    "bt1490_square_loaded": true,
+    "cosets_cover_point_stabilizer": true,
+    "d4_order_profile_matches_bt1487": true,
+    "fano_plane_has_7_points_7_lines": true,
+    "flag_stabilizer_acts_as_d4_on_branch_lines": true,
+    "flag_stabilizer_order_8": true,
+    "gl32_order_is_168": true,
+    "point_stabilizer_acts_as_full_s4_on_branch_lines": true,
+    "point_stabilizer_order_24": true,
+    "point_stabilizer_splits_as_three_flag_cosets": true,
+    "s4_order_profile_matches_bt1487": true
+  },
+  "fano_lines": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      1,
+      6,
+      7
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      2,
+      5,
+      7
+    ],
+    [
+      3,
+      4,
+      7
+    ],
+    [
+      3,
+      5,
+      6
+    ]
+  ],
+  "groups": {
+    "flag_stabilizer_d4": {
+      "branch_action_order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "elements_as_branch_perms": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "order": 8,
+      "order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      }
+    },
+    "gl32_order": 168,
+    "point_stabilizer_s4": {
+      "branch_action_order_profile": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      },
+      "elements_as_branch_perms": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          0,
+          2,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "order": 24,
+      "order_profile": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      }
+    }
+  },
+  "interpretation": "The 24-state fiber is no longer an index convention.  It is the point stabilizer of the Fano plane, acting as S4 on the four lines not through the anchor.  Choosing a flag splits it canonically into three lines through the anchor times an order-8 D4 flag stabilizer.",
+  "title": "Canonical Fano S4/D4 24-fiber",
+  "verified": true
+}

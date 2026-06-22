@@ -1,0 +1,2740 @@
+{
+  "action_summaries": [
+    {
+      "action_index": 0,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 1,
+      "perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 1,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 2,
+      "perm": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 2,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 2,
+      "perm": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 3,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 4,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 5,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 2,
+      "perm": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 6,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 7,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 8,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 9,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 4,
+      "perm": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 10,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 4,
+      "perm": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 11,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 12,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 13,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 4,
+      "perm": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 14,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 2,
+      "perm": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 15,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 16,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 2,
+      "perm": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 17,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 4,
+      "perm": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 18,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 4,
+      "perm": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 19,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 20,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 3,
+      "perm": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 21,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 2,
+      "perm": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 22,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "s4_analyzer_relabel",
+      "order": 4,
+      "perm": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "row_pulses": 72
+    },
+    {
+      "action_index": 23,
+      "detector_slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frame_ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "level": "native_d4_square_pulse",
+      "order": 2,
+      "perm": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "row_pulses": 72
+    }
+  ],
+  "bt": 1493,
+  "checks": {
+    "bt1374_slot_rule_loaded": true,
+    "bt1407_microframe_loaded": true,
+    "bt1411_analyzers_loaded": true,
+    "bt1489_row_lift_loaded": true,
+    "bt1492_canonical_fiber_loaded": true,
+    "compiled_all_s4_actions_on_72_rows": true,
+    "detector_slots_are_four_branch_slots": true,
+    "each_action_has_72_row_pulses": true,
+    "frame_ticks_are_hesse_epilogue_row_ticks": true,
+    "lane_counts_are_balanced": true,
+    "mirror_residue_equals_detector_slot": true,
+    "native_d4_actions_are_8_times_72": true,
+    "native_d4_order_profile_matches": true,
+    "row_slots_use_first_six_hesse_lanes": true,
+    "s4_relabel_actions_are_16_times_72": true,
+    "target_branch_follows_branch_perm": true
+  },
+  "compiled_pulses_sample": [
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 48,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.a.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 49,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.a.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 50,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.g0.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 51,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.g0.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 52,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.g1.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 0,
+      "frame_tick": 53,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P0.T0.g1.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P0.T0.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 48,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.a.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 49,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.a.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 50,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.g0.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 51,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.g0.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 52,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.g1.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 1,
+      "frame_tick": 53,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P0.T1.g1.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P0.T1.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 48,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.a.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 49,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.a.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 50,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.g0.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 51,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.g0.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 52,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.g1.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 2,
+      "frame_tick": 53,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P0.T2.g1.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P0.T2.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 48,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.a.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 49,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.a.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 50,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.g0.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 51,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.g0.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 52,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.g1.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 0,
+      "detector_slot": 3,
+      "frame_tick": 53,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P0.T3.g1.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P0.T3.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 56,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.a.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 57,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.a.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 58,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.g0.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 59,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.g0.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 60,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.g1.v1",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 0,
+      "frame_tick": 61,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 0,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 0,
+      "source_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "source_row_id": "P1.T0.g1.v2",
+      "target_branch": 0,
+      "target_branch_line": [
+        2,
+        4,
+        6
+      ],
+      "target_row_id": "P1.T0.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 56,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.a.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 57,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.a.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 58,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.g0.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 59,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.g0.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 60,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.g1.v1",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 1,
+      "frame_tick": 61,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 1,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 1,
+      "source_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "source_row_id": "P1.T1.g1.v2",
+      "target_branch": 1,
+      "target_branch_line": [
+        2,
+        5,
+        7
+      ],
+      "target_row_id": "P1.T1.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 56,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.a.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 57,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.a.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 58,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.g0.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 59,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.g0.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 60,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.g1.v1",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 2,
+      "frame_tick": 61,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 2,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 2,
+      "source_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "source_row_id": "P1.T2.g1.v2",
+      "target_branch": 2,
+      "target_branch_line": [
+        3,
+        4,
+        7
+      ],
+      "target_row_id": "P1.T2.g1.v2",
+      "word_tick": 5
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 56,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "active_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.a.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.a.v1",
+      "word_tick": 0
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 57,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "active_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.a.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.a.v2",
+      "word_tick": 1
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 58,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "guard0_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.g0.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.g0.v1",
+      "word_tick": 2
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 59,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "guard0_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.g0.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.g0.v2",
+      "word_tick": 3
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 60,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 1,
+      "row_slot": "guard1_value_1",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.g1.v1",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.g1.v1",
+      "word_tick": 4
+    },
+    {
+      "action_index": 0,
+      "action_level": "native_d4_square_pulse",
+      "branch_perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "c3_channel": 1,
+      "detector_slot": 3,
+      "frame_tick": 61,
+      "hardware_reads": [
+        "BT1411 analyzer maps the target branch ray to detector slot j",
+        "BT1374 consumes detector slot j as mirror_slot mod 4",
+        "BT1407 schedules the C3 row lane inside the Hesse epilogue word"
+      ],
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 3,
+      "qutrit_value": 2,
+      "row_slot": "guard1_value_2",
+      "source_branch": 3,
+      "source_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "source_row_id": "P1.T3.g1.v2",
+      "target_branch": 3,
+      "target_branch_line": [
+        3,
+        5,
+        6
+      ],
+      "target_row_id": "P1.T3.g1.v2",
+      "word_tick": 5
+    }
+  ],
+  "counts": {
+    "compiled_actions": 24,
+    "compiled_row_pulses": 1728,
+    "detector_slots": 4,
+    "native_d4_row_pulses": 576,
+    "row_ticks_per_action": 18,
+    "s4_analyzer_relabel_row_pulses": 1152
+  },
+  "epilogue_lane_map": {
+    "active_value_1": "ERASE",
+    "active_value_2": "ROUTE",
+    "guard0_value_1": "PHASE",
+    "guard0_value_2": "X-CORR",
+    "guard1_value_1": "Z-CORR",
+    "guard1_value_2": "T-BIT"
+  },
+  "interpretation": "The row symmetries now touch the physical holonet interfaces.  A row action selects a BT1411 detector slot, hands that slot to the BT1374 mirror residue, and occupies the matching BT1407 Hesse epilogue lane for its C3 channel and row-value slot.",
+  "physical_firewall": "The D4 square subgroup is compiled as native square-pulse routing. The remaining S4 actions are analyzer/ABI relabel actions: they are finite pulse schedules, not a calibrated optical switch-loss model.",
+  "source_packets": {
+    "analyzers": "data/bt1411_witting_basis_analyzer_unitaries.json",
+    "canonical_fiber": "data/bt1492_canonical_fano_s4_d4_fiber.json",
+    "microframe": "data/bt1407_microframe_transaction_composer.json",
+    "row_lift": "data/bt1489_s4_d4_v4_row_action_lift.json",
+    "slot_rule": "data/bt1374_q6_tomotope_packet_route_compiler.json"
+  },
+  "title": "ABI row-action physical pulse compiler",
+  "verified": true
+}

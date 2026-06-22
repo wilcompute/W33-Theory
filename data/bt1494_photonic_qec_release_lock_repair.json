@@ -1,0 +1,314 @@
+{
+  "bt": 1494,
+  "checks": {
+    "all_required_root_targets_exist": true,
+    "all_required_sources_exist": true,
+    "ccccvi_current": true,
+    "ccccxviii_current": true,
+    "ccccxxvi_current": true,
+    "dcmii_anchors_present": true,
+    "json_artifacts_load": true,
+    "key_json_artifacts_verified": true,
+    "live_generators_regenerated": true
+  },
+  "copied": [
+    {
+      "bytes": 17883,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCXCVI_photonic_life_runtime_architecture_results.json",
+      "source": "manuscripts\\parts\\PART_CCCXCVI_photonic_life_runtime_architecture_results.json",
+      "target": "PART_CCCXCVI_photonic_life_runtime_architecture_results.json"
+    },
+    {
+      "bytes": 1443,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCII_w33_css_topological_code_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCII_w33_css_topological_code_results.json",
+      "target": "PART_CCCCII_w33_css_topological_code_results.json"
+    },
+    {
+      "bytes": 1163,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCIII_w33_css_distance_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCIII_w33_css_distance_results.json",
+      "target": "PART_CCCCIII_w33_css_distance_results.json"
+    },
+    {
+      "bytes": 4948,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCIV_w33_css_steane_lift_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCIV_w33_css_steane_lift_results.json",
+      "target": "PART_CCCCIV_w33_css_steane_lift_results.json"
+    },
+    {
+      "bytes": 1453,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCIV_w33_distance_amplification_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCIV_w33_distance_amplification_results.json",
+      "target": "PART_CCCCIV_w33_distance_amplification_results.json"
+    },
+    {
+      "bytes": 1272,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCIX_line_star_rank_correction_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCIX_line_star_rank_correction_results.json",
+      "target": "PART_CCCCIX_line_star_rank_correction_results.json"
+    },
+    {
+      "bytes": 7794,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCV_protected_toe_kernel_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCV_protected_toe_kernel_results.json",
+      "target": "PART_CCCCV_protected_toe_kernel_results.json"
+    },
+    {
+      "bytes": 15678,
+      "copied": true,
+      "missing": false,
+      "name": "PART_CCCCVI_protected_photonic_runtime_scheduler_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCVI_protected_photonic_runtime_scheduler_results.json",
+      "target": "PART_CCCCVI_protected_photonic_runtime_scheduler_results.json"
+    },
+    {
+      "bytes": 2618,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md",
+      "source": "manuscripts\\parts\\PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md",
+      "target": "PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md"
+    },
+    {
+      "bytes": 4518,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXIX_photonic_harmonic_tqc_synthesis_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXIX_photonic_harmonic_tqc_synthesis_results.json",
+      "target": "PART_CCCCXIX_photonic_harmonic_tqc_synthesis_results.json"
+    },
+    {
+      "bytes": 8907,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXV_dressed_q4_packet_logical_verifier_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXV_dressed_q4_packet_logical_verifier_results.json",
+      "target": "PART_CCCCXV_dressed_q4_packet_logical_verifier_results.json"
+    },
+    {
+      "bytes": 9807,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXVI_protection_selection_ledger_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXVI_protection_selection_ledger_results.json",
+      "target": "PART_CCCCXVI_protection_selection_ledger_results.json"
+    },
+    {
+      "bytes": 6669,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXVII_qec_ouroboros_stabilizer_loop_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXVII_qec_ouroboros_stabilizer_loop_results.json",
+      "target": "PART_CCCCXVII_qec_ouroboros_stabilizer_loop_results.json"
+    },
+    {
+      "bytes": 1865,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md",
+      "source": "manuscripts\\parts\\PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md",
+      "target": "PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md"
+    },
+    {
+      "bytes": 15308,
+      "copied": true,
+      "missing": false,
+      "name": "PART_CCCCXVIII_photonic_harmonic_tqc_bus_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXVIII_photonic_harmonic_tqc_bus_results.json",
+      "target": "PART_CCCCXVIII_photonic_harmonic_tqc_bus_results.json"
+    },
+    {
+      "bytes": 1795,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md",
+      "source": "manuscripts\\parts\\PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md",
+      "target": "PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md"
+    },
+    {
+      "bytes": 8656,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXXV_theta_u5_stabilizer_completion_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXXV_theta_u5_stabilizer_completion_results.json",
+      "target": "PART_CCCCXXV_theta_u5_stabilizer_completion_results.json"
+    },
+    {
+      "bytes": 15278,
+      "copied": true,
+      "missing": false,
+      "name": "PART_CCCCXXVI_fusion_control_scheduler_splice_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXXVI_fusion_control_scheduler_splice_results.json",
+      "target": "PART_CCCCXXVI_fusion_control_scheduler_splice_results.json"
+    },
+    {
+      "bytes": 2937,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md",
+      "source": "manuscripts\\parts\\PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md",
+      "target": "PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md"
+    },
+    {
+      "bytes": 7147,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXXX_cyclic_cayley_obstruction_results.json",
+      "source": "manuscripts\\parts\\PART_CCCCXXX_cyclic_cayley_obstruction_results.json",
+      "target": "PART_CCCCXXX_cyclic_cayley_obstruction_results.json"
+    },
+    {
+      "bytes": 1662,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md",
+      "source": "manuscripts\\parts\\PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md",
+      "target": "PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md"
+    },
+    {
+      "bytes": 5537,
+      "copied": false,
+      "missing": false,
+      "name": "PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md",
+      "source": "manuscripts\\parts\\PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md",
+      "target": "PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md"
+    },
+    {
+      "bytes": 2362,
+      "copied": false,
+      "missing": false,
+      "name": "PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md",
+      "source": "manuscripts\\parts\\PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md",
+      "target": "PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md"
+    },
+    {
+      "bytes": 2447,
+      "copied": false,
+      "missing": false,
+      "name": "PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md",
+      "source": "manuscripts\\parts\\PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md",
+      "target": "PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md"
+    },
+    {
+      "bytes": 3369,
+      "copied": false,
+      "missing": false,
+      "name": "PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md",
+      "source": "manuscripts\\parts\\PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md",
+      "target": "PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md"
+    },
+    {
+      "bytes": 3325,
+      "copied": false,
+      "missing": false,
+      "name": "PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md",
+      "source": "manuscripts\\parts\\PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md",
+      "target": "PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md"
+    },
+    {
+      "bytes": 2264,
+      "copied": false,
+      "missing": false,
+      "name": "PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md",
+      "source": "manuscripts\\parts\\PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md",
+      "target": "PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md"
+    },
+    {
+      "bytes": 1349,
+      "copied": true,
+      "missing": false,
+      "name": "PART_DCMII_projective_screen_bulk_qec_bridge_results.json",
+      "source": "manuscripts\\parts\\PART_DCMII_projective_screen_bulk_qec_bridge_results.json",
+      "target": "PART_DCMII_projective_screen_bulk_qec_bridge_results.json"
+    }
+  ],
+  "interpretation": "The broad photonic-qec gate expected legacy PART artifacts at the repo root, while the preserved copies lived under manuscripts/parts. BT1494 restores those root release-lock targets and regenerates the live scheduler, harmonic bus, fusion splice, and DCMII bridge JSONs.",
+  "missing_after": [],
+  "regenerated": {
+    "PART_CCCCVI": {
+      "checks_passed": 34,
+      "checks_total": 34,
+      "verified": true
+    },
+    "PART_CCCCXVIII": {
+      "checks_passed": 36,
+      "checks_total": 36,
+      "verified": true
+    },
+    "PART_CCCCXXVI": {
+      "checks_passed": 29,
+      "checks_total": 29,
+      "verified": true
+    },
+    "PART_DCMII": {
+      "anchors_present": true,
+      "verified": true
+    }
+  },
+  "required_artifacts": [
+    "PART_CCCXCVI_photonic_life_runtime_architecture_results.json",
+    "PART_CCCCII_w33_css_topological_code_results.json",
+    "PART_CCCCIII_w33_css_distance_results.json",
+    "PART_CCCCIV_w33_css_steane_lift_results.json",
+    "PART_CCCCIV_w33_distance_amplification_results.json",
+    "PART_CCCCIX_line_star_rank_correction_results.json",
+    "PART_CCCCV_protected_toe_kernel_results.json",
+    "PART_CCCCVI_protected_photonic_runtime_scheduler_results.json",
+    "PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md",
+    "PART_CCCCXIX_photonic_harmonic_tqc_synthesis_results.json",
+    "PART_CCCCXV_dressed_q4_packet_logical_verifier_results.json",
+    "PART_CCCCXVI_protection_selection_ledger_results.json",
+    "PART_CCCCXVII_qec_ouroboros_stabilizer_loop_results.json",
+    "PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md",
+    "PART_CCCCXVIII_photonic_harmonic_tqc_bus_results.json",
+    "PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md",
+    "PART_CCCCXXV_theta_u5_stabilizer_completion_results.json",
+    "PART_CCCCXXVI_fusion_control_scheduler_splice_results.json",
+    "PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md",
+    "PART_CCCCXXX_cyclic_cayley_obstruction_results.json",
+    "PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md",
+    "PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md",
+    "PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md",
+    "PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md",
+    "PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md",
+    "PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md",
+    "PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md",
+    "PART_DCMII_projective_screen_bulk_qec_bridge_results.json"
+  ],
+  "title": "Photonic-QEC legacy artifact release-lock repair",
+  "verified": true,
+  "verified_json": {
+    "PART_CCCCIII_w33_css_distance_results.json": true,
+    "PART_CCCCII_w33_css_topological_code_results.json": true,
+    "PART_CCCCIV_w33_css_steane_lift_results.json": true,
+    "PART_CCCCIV_w33_distance_amplification_results.json": true,
+    "PART_CCCCIX_line_star_rank_correction_results.json": true,
+    "PART_CCCCVI_protected_photonic_runtime_scheduler_results.json": true,
+    "PART_CCCCV_protected_toe_kernel_results.json": true,
+    "PART_CCCCXIX_photonic_harmonic_tqc_synthesis_results.json": true,
+    "PART_CCCCXVIII_photonic_harmonic_tqc_bus_results.json": true,
+    "PART_CCCCXVII_qec_ouroboros_stabilizer_loop_results.json": true,
+    "PART_CCCCXVI_protection_selection_ledger_results.json": true,
+    "PART_CCCCXV_dressed_q4_packet_logical_verifier_results.json": true,
+    "PART_CCCCXXVI_fusion_control_scheduler_splice_results.json": true,
+    "PART_CCCCXXV_theta_u5_stabilizer_completion_results.json": true,
+    "PART_CCCCXXX_cyclic_cayley_obstruction_results.json": true,
+    "PART_CCCXCVI_photonic_life_runtime_architecture_results.json": true,
+    "PART_DCMII_projective_screen_bulk_qec_bridge_results.json": true
+  }
+}

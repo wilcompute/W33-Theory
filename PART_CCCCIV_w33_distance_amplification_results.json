@@ -1,0 +1,26 @@
+{
+  "part": "CCCCIV",
+  "title": "W33 CSS Distance Amplification Architecture",
+  "verified": true,
+  "checks_passed": 8,
+  "checks_total": 8,
+  "outer_code": {
+    "name": "W33 CSS core",
+    "n": 240,
+    "k": 81,
+    "d": 3,
+    "d_X": 3,
+    "d_Z": 4
+  },
+  "exact_amplification_candidates": {
+    "steane_css_level_1": {"n": 1680, "k": 81, "d": 9, "css": true},
+    "steane_css_level_2": {"n": 11760, "k": 81, "d": 27, "css": true},
+    "steane_css_level_3": {"n": 82320, "k": 81, "d": 81, "css": true},
+    "shor_css_level_1": {"n": 2160, "k": 81, "d": 9, "css": true},
+    "five_qubit_non_css_level_1": {"n": 1200, "k": 81, "d": 9, "css": false}
+  },
+  "recommended_first_hardware_block": "Steane CSS concatenation: [[240,81,3]] -> [[1680,81,9]]",
+  "architecture_upgrade": "Raises the base W33 CSS core from distance 3 to exact distance 9 by one level of CSS concatenation with Steane [[7,1,3]], preserving the 81 logical/topological W33/E8 sector.",
+  "theorem": "Concatenating the W33 outer code [[240,81,3]] with any one-logical-qubit inner code [[n_i,1,d_i]] gives [[240 n_i,81,3 d_i]]. In particular, Steane CSS concatenation gives [[1680,81,9]], and L Steane levels give [[240*7^L,81,3*3^L]].",
+  "honesty_boundary": "Concatenation is exact as a coding construction, but it increases qubit count substantially. A better photonic implementation may use covers, subsystem gauge fixing, or LDPC lifts to raise distance with lower overhead."
+}

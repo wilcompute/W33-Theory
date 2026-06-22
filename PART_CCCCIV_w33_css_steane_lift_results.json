@@ -1,0 +1,198 @@
+{
+  "architecture_upgrade": "Closes the bare-distance honesty boundary of the W33 CSS code by giving a finite concatenated protection stack: the exact [[240,81,3]] core lifted by the [[7,1,3]] Steane/Phi6 code gives [[82320,81,>=81]] after three lifts.",
+  "base_code": {
+    "d": 3,
+    "k": 81,
+    "n": 240,
+    "notation": "[[240,81,3]]"
+  },
+  "checks": [
+    {
+      "name": "base W33 CSS core is [[240,81,3]]",
+      "passed": true,
+      "value": [
+        240,
+        81,
+        3
+      ]
+    },
+    {
+      "name": "Steane inner length = Phi6 = 7",
+      "passed": true,
+      "value": 7
+    },
+    {
+      "name": "Steane inner dimension = 1",
+      "passed": true,
+      "value": 1
+    },
+    {
+      "name": "Steane inner distance = q = 3",
+      "passed": true,
+      "value": 3
+    },
+    {
+      "name": "Steane stabilizer count = 6 = K/lambda",
+      "passed": true,
+      "value": 6
+    },
+    {
+      "name": "level 1 parameters [[1680,81,>=9]]",
+      "passed": true,
+      "value": {
+        "correctable_weight": 4,
+        "distance_lower_bound": 9,
+        "k": 81,
+        "level": 1,
+        "n": 1680,
+        "physical_per_logical": "1680/81"
+      }
+    },
+    {
+      "name": "level 1 correctable weight = mu",
+      "passed": true,
+      "value": 4
+    },
+    {
+      "name": "level 2 distance lower bound = 27 = q^3",
+      "passed": true,
+      "value": {
+        "correctable_weight": 13,
+        "distance_lower_bound": 27,
+        "k": 81,
+        "level": 2,
+        "n": 11760,
+        "physical_per_logical": "11760/81"
+      }
+    },
+    {
+      "name": "level 3 physical qubits = 82320",
+      "passed": true,
+      "value": {
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "k": 81,
+        "level": 3,
+        "n": 82320,
+        "physical_per_logical": "82320/81"
+      }
+    },
+    {
+      "name": "level 3 distance lower bound = H1 = q^4 = 81",
+      "passed": true,
+      "value": {
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "k": 81,
+        "level": 3,
+        "n": 82320,
+        "physical_per_logical": "82320/81"
+      }
+    },
+    {
+      "name": "level 3 correctable weight = W33 vertices = 40",
+      "passed": true,
+      "value": {
+        "correctable_weight": 40,
+        "distance_lower_bound": 81,
+        "k": 81,
+        "level": 3,
+        "n": 82320,
+        "physical_per_logical": "82320/81"
+      }
+    },
+    {
+      "name": "logical dimension stays H1 through inner k=1 concatenation",
+      "passed": true,
+      "value": [
+        81,
+        81,
+        81,
+        81
+      ]
+    },
+    {
+      "name": "distance multiplies by q each lift",
+      "passed": true,
+      "value": [
+        3,
+        9,
+        27,
+        81
+      ]
+    },
+    {
+      "name": "physical length multiplies by Phi6 each lift",
+      "passed": true,
+      "value": [
+        240,
+        1680,
+        11760,
+        82320
+      ]
+    },
+    {
+      "name": "three lifts align distance with logical sector count",
+      "passed": true,
+      "value": {
+        "distance": 81,
+        "logical": 81
+      }
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "fault_tolerance_read": {
+    "guaranteed_correctable_weight": 40,
+    "interpretation": "the third Phi6/Steane lift makes the distance lower bound equal to the H1 matter rank and the correctable weight equal to the W33 vertex count",
+    "logical_sector_count": 81,
+    "three_lift_code": "[[82320,81,>=81]]"
+  },
+  "honesty_boundary": "This is a parameter and lower-bound theorem for concatenated quantum codes, not a threshold simulation or optimized hardware layout. It shows an exact finite protection architecture that can be compiled before physical noise calibration.",
+  "inner_code": {
+    "d": 3,
+    "k": 1,
+    "n": 7,
+    "name": "Steane",
+    "notation": "[[7,1,3]]",
+    "w33_read": "7 = Phi6, 3 = q, 6 stabilizers = K/lambda"
+  },
+  "lift_table": [
+    {
+      "correctable_weight": 1,
+      "distance_lower_bound": 3,
+      "k": 81,
+      "level": 0,
+      "n": 240,
+      "physical_per_logical": "240/81"
+    },
+    {
+      "correctable_weight": 4,
+      "distance_lower_bound": 9,
+      "k": 81,
+      "level": 1,
+      "n": 1680,
+      "physical_per_logical": "1680/81"
+    },
+    {
+      "correctable_weight": 13,
+      "distance_lower_bound": 27,
+      "k": 81,
+      "level": 2,
+      "n": 11760,
+      "physical_per_logical": "11760/81"
+    },
+    {
+      "correctable_weight": 40,
+      "distance_lower_bound": 81,
+      "k": 81,
+      "level": 3,
+      "n": 82320,
+      "physical_per_logical": "82320/81"
+    }
+  ],
+  "part": "CCCCIV",
+  "theorem": "Concatenating the W33 CSS core [[240,81,3]] with L levels of the Steane [[7,1,3]] code yields parameters [[240*7^L,81,>=3^(L+1)]]. For L=3 this is [[82320,81,>=81]], so the guaranteed correctable weight is 40.",
+  "title": "W33 CSS Steane-Lift Protection Stack",
+  "verified": true
+}

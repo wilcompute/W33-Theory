@@ -1,0 +1,291 @@
+{
+  "architecture_redirect": {
+    "false_shortcut": "global cyclic Cayley graph on Z40",
+    "local_routing_code": "[[1296,81,4]]",
+    "positive_cycle": "directed Hashimoto/fusion carrier with 480 states",
+    "protected_code": "[[82320,81,>=81]]",
+    "qec_loop": "QEC ouroboros preserving the H1=81 line-star tail"
+  },
+  "checks": [
+    {
+      "name": "cyclic carrier has 40 vertices",
+      "passed": true,
+      "value": 40
+    },
+    {
+      "name": "target valency is 12",
+      "passed": true,
+      "value": 12
+    },
+    {
+      "name": "Z40 has 19 inverse pairs away from 0 and 20",
+      "passed": true,
+      "value": 19
+    },
+    {
+      "name": "self-inverse 20 cannot enter an even 12-set",
+      "passed": true,
+      "value": {
+        "K": 12,
+        "involution": 20
+      }
+    },
+    {
+      "name": "candidate space is C(19,6)",
+      "passed": true,
+      "value": 27132
+    },
+    {
+      "name": "candidate space is 27132",
+      "passed": true,
+      "value": 27132
+    },
+    {
+      "name": "draft connection set has 12 elements",
+      "passed": true,
+      "value": [
+        1,
+        3,
+        7,
+        9,
+        13,
+        19,
+        21,
+        27,
+        31,
+        33,
+        37,
+        39
+      ]
+    },
+    {
+      "name": "draft connection set is symmetric",
+      "passed": true,
+      "value": [
+        1,
+        3,
+        7,
+        9,
+        13,
+        19,
+        21,
+        27,
+        31,
+        33,
+        37,
+        39
+      ]
+    },
+    {
+      "name": "draft gives the right regular edge count only",
+      "passed": true,
+      "value": 240
+    },
+    {
+      "name": "draft adjacent common-neighbor law fails",
+      "passed": true,
+      "value": {
+        "0": 12
+      }
+    },
+    {
+      "name": "draft nonadjacent common-neighbor law fails",
+      "passed": true,
+      "value": {
+        "0": 8,
+        "6": 10,
+        "7": 2,
+        "8": 5,
+        "9": 2
+      }
+    },
+    {
+      "name": "draft is not SRG(40,12,2,4)",
+      "passed": true,
+      "value": {
+        "lambda": {
+          "0": 12
+        },
+        "mu": {
+          "0": 8,
+          "6": 10,
+          "7": 2,
+          "8": 5,
+          "9": 2
+        }
+      }
+    },
+    {
+      "name": "exhaustive cyclic search has no hits",
+      "passed": true,
+      "value": 0
+    },
+    {
+      "name": "there is no Z40 cyclic Cayley W33 replacement",
+      "passed": true,
+      "value": []
+    },
+    {
+      "name": "W33 edge count remains 240",
+      "passed": true,
+      "value": 240
+    },
+    {
+      "name": "GQ local law remains lambda=2 mu=4",
+      "passed": true,
+      "value": {
+        "lambda": 2,
+        "mu": 4
+      }
+    },
+    {
+      "name": "QEC ouroboros artifact verified",
+      "passed": true,
+      "value": 15
+    },
+    {
+      "name": "fusion splice artifact verified",
+      "passed": true,
+      "value": 29
+    },
+    {
+      "name": "snake head and tail are H1",
+      "passed": true,
+      "value": {
+        "classical_selector_trits": 40,
+        "correctable_weight": 40,
+        "head_projective_frame_states": 81,
+        "operation_input": "protected H1=81 matter sector",
+        "read": "the runtime starts and ends on the H1=81 information tail while the classical selector stays at V=40",
+        "tail_logical_h1": 81
+      }
+    },
+    {
+      "name": "line-star tail is preserved not killed",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "protected closure stays [[82320,81,>=81]]",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "Q4 remains local routing code",
+      "passed": true,
+      "value": {
+        "active_protection_code": "[[82320,81,>=81]]",
+        "base_css_code": "[[240,81,3]]",
+        "correctable_weight": 40,
+        "k_if_line_stars_are_stabilizers": 0,
+        "line_star_mod_vertex_rank": 81,
+        "logical_sector": 81,
+        "physical_edge_qubits": 240,
+        "q4_dressed_weight": 4,
+        "q4_local_routing_code": "[[1296,81,4]]",
+        "q4_raw_target": 12
+      }
+    },
+    {
+      "name": "fusion attempts are the directed Hashimoto carrier",
+      "passed": true,
+      "value": {
+        "read": "p_fusion=1/2 splits 480 attempts as 210 theta + 270 transport",
+        "theta_expected_attempts": 210,
+        "total_expected_attempts": 480,
+        "transport_expected_attempts": 270
+      }
+    },
+    {
+      "name": "KLM primitive budget is trace A^3",
+      "passed": true,
+      "value": {
+        "read": "p_KLM=1/4 splits 960 primitives as 420 theta + 540 transport",
+        "theta_expected_primitives": 420,
+        "total_expected_primitives": 960,
+        "transport_expected_primitives": 540
+      }
+    },
+    {
+      "name": "photonic cycle is 480 not Z40",
+      "passed": true,
+      "value": 480
+    },
+    {
+      "name": "KLM cycle is 960 not Z40",
+      "passed": true,
+      "value": 960
+    },
+    {
+      "name": "obstruction and positive route are both present",
+      "passed": true,
+      "value": {
+        "H1": 81,
+        "hits": 0
+      }
+    }
+  ],
+  "checks_passed": 27,
+  "checks_total": 27,
+  "cyclic_search": {
+    "candidate_count": 27132,
+    "expected_candidate_count": 27132,
+    "hit_count": 0,
+    "hits": [],
+    "pair_count": 19
+  },
+  "draft_connection_set": {
+    "adjacent_common_neighbor_counts": {
+      "0": 12
+    },
+    "is_srg_40_12_2_4": false,
+    "nonadjacent_common_neighbor_counts": {
+      "0": 8,
+      "6": 10,
+      "7": 2,
+      "8": 5,
+      "9": 2
+    },
+    "set": [
+      1,
+      3,
+      7,
+      9,
+      13,
+      19,
+      21,
+      27,
+      31,
+      33,
+      37,
+      39
+    ]
+  },
+  "honesty_boundary": "This rules out cyclic Cayley realizations on Z40 and falsifies the specific local draft connection set. It does not rule out every possible non-cyclic Cayley representation on a group of order 40.",
+  "part": "CCCCXXX",
+  "theorem": "No 12-valent undirected cyclic Cayley graph Cay(Z40,S) has the W33 SRG(40,12,2,4) local law. The exhaustive C(19,6)=27132 symmetric connection-set search has zero hits. Therefore the promoted photonic cycle cannot be a global Z40 translation; it is the 480-state directed Hashimoto/fusion carrier plus the QEC ouroboros loop that preserves H1=81.",
+  "title": "Cyclic Cayley Obstruction and Photonic Ouroboros Guard",
+  "verified": true
+}

@@ -1,0 +1,27 @@
+\subsection{BT1492--BT1494 canonical Fano fiber and pulse release lock}
+\label{sec:bt1492-bt1494-canonical-fano-pulse-lock}
+
+BT1492 removes the last arbitrary index from the \(24\)-state bridge.  In the
+Fano plane, \(\mathrm{GL}(3,2)\) has order \(168\).  Fixing one point leaves a
+point stabilizer of order \(24\), and this stabilizer acts as the full \(S_4\)
+on the four Fano lines not through that point.  Fixing one incident flag leaves
+an order-\(8\) flag stabilizer with the \(D_4\) order profile.  Therefore the
+shared fiber is canonical:
+\[
+24 = 3\cdot 8,
+\]
+namely three Fano lines through the anchor point times the \(D_4\) flag
+stabilizer.
+
+BT1493 compiles those row symmetries down to the existing physical holonet
+interfaces.  A row action first selects a BT1411 detector slot, then hands that
+slot to the BT1374 rule \(\mathrm{mirror\_slot}\bmod 4\), and finally occupies
+the matching BT1407 Hesse epilogue lane for its \(C_3\) channel and row-value
+slot.  All \(24\) \(S_4\) actions compile across all \(72\) rows, while the
+order-\(8\) \(D_4\) square subgroup is the native square-pulse layer.
+
+BT1494 repairs the broad photonic-QEC release lock.  The legacy tests expected
+selected \texttt{PART\_*} artifacts at the repository root, while the preserved
+copies lived under \texttt{manuscripts/parts}.  The repair restores those root
+release-lock targets and regenerates the live scheduler, harmonic bus, fusion
+splice, and projective screen/bulk/QEC artifacts.

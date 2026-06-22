@@ -1,0 +1,27 @@
+{
+  "part": "DCMII",
+  "decimal": 902,
+  "title": "Projective Screen / Affine Bulk / QEC Tail Typing Bridge",
+  "theorem": "The new PG(2,3) language is exact when typed as a 13-point screen. The W(3,3) substrate is the 40-point PG(3,3) carrier; each point splits it as 1+12+27, and the 27 affine/non-neighbor bulk ternary lift gives H1=81 while the 13 screen gives the projective 3/13 share.",
+  "checks": {
+    "projective_space_splits_as_screen_plus_bulk": true,
+    "w33_vertices_are_pg3_points": true,
+    "closed_screen_matches_pg2_cardinality": true,
+    "nonneighbor_bulk_matches_affine_bulk": true,
+    "screen_rim_is_local_photonic_alphabet": true,
+    "w33_edge_count_from_screen_rim": true,
+    "directed_carrier_from_screen_rim": true,
+    "affine_bulk_ternary_lift_is_h1": true,
+    "nilpotent_tail_is_double_h1": true,
+    "point_stabilizer_is_q4_packet_length": true,
+    "steane_phi6_lift_length": true,
+    "pg2_complete_graph_not_w33_screen_induced_graph": true,
+    "screen_design_is_2_40_13_4": true,
+    "quotient_matrix_is_center_partition": true,
+    "quotient_spectrum_matches_w33": true,
+    "dressed_projective_share_is_screen_share": true,
+    "screen_complement_share_is_phi4_over_phi3": true,
+    "anchors_present": true
+  },
+  "status": "VERIFIED - projective screen, affine bulk, and QEC tail are typed consistently"
+}
