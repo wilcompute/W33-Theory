@@ -1,0 +1,42 @@
+{
+  "bt": 1423,
+  "title": "Native K7 line-graph star meshes for Csaszar/Szilassi analyzers",
+  "verified": true,
+  "channel_geometry": {
+    "k7_edge_channels": 21,
+    "line_graph": "L(K7)",
+    "native_adjacent_edge_pairs": 105,
+    "star_cliques": 7,
+    "incident_channels_per_star": 6,
+    "native_slots_per_star": 15
+  },
+  "f6_mesh_decomposition": {
+    "target": "F6 star analyzer",
+    "givens_rotations": 15,
+    "offdiag_norm_after_qr_elimination": 1.5327735072940278e-15,
+    "reconstruction_error": 1.020855579444905e-15,
+    "unitary": true,
+    "diagonal_phase_tail": "six one-mode phases after triangular elimination"
+  },
+  "native_mesh_summary": {
+    "csaszar_star_meshes": 7,
+    "szilassi_star_meshes": 7,
+    "rotation_slots_per_mesh": 15,
+    "total_symbolic_rotation_slots": 210,
+    "active_detector_bins": 168
+  },
+  "checks": {
+    "k7_channels_are_21": true,
+    "line_graph_has_105_native_adjacent_pairs": true,
+    "each_star_has_6_incident_channels": true,
+    "each_star_native_mesh_is_k6_with_15_slots": true,
+    "star_meshes_partition_line_graph_edges": true,
+    "f6_decomposes_into_15_givens_rotations": true,
+    "f6_decomposition_diagonalizes_target": true,
+    "f6_reconstruction_error_small": true,
+    "reconstructed_star_mesh_unitary": true,
+    "total_csaszar_and_szilassi_rotation_slots": true,
+    "active_detector_bins_preserved": true
+  },
+  "boundary": "This replaces the abstract F6 analyzer by an explicit line-graph K6 mesh schedule. It is still symbolic: no lithographic routing or loss calibration is asserted."
+}
