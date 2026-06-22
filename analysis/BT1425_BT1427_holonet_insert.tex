@@ -1,0 +1,54 @@
+\subsection{Retwined CSS frame correction and the Fano optical trace}
+\label{sec:bt1425-bt1427-retwined-fano-pipeline}
+
+The D4 quartic guard shear is not a silent automorphism of the identity-ledger
+CSS carrier.  The exact companion correction is a tracked frame retwining.  If
+\(J\) is the guard-tail permutation
+\[
+216+a\cdot12+b\cdot3+p
+\longmapsto
+216+a\cdot12+b\cdot3+(p+b\bmod3),
+\]
+then the runtime must update the tracked Pauli coordinate frame by \(J\) and
+use the retwined stabilizers
+\[
+H_X'=H_XJ^{-1},
+\qquad
+H_Z'=H_ZJ^{-1}.
+\]
+The verified invariant is syndrome equivariance:
+\[
+\operatorname{syn}_{H}(e)=\operatorname{syn}_{H'}(Je)
+\]
+for every basis error coordinate and both nonzero qutrit values.  The retwined
+carrier still has \(rank(H_X')=39\), \(rank(H_Z')=120\), and \(k=81\), while a
+one-sided retwining fails CSS commutation.  Thus the injection rail is legal
+only as an explicitly tracked frame transition.
+
+The Fano active symmetry also quotients the objective packetization of the S3
+frontier.  The full 40-line Max-2CSP is not solved, but the physical objective
+has a weighted quotient
+\[
+210=21\cdot10,
+\qquad
+330=168+162=21\cdot8+27\cdot6.
+\]
+The 540 raw terms compress to \(21+21+27=69\) weighted representatives, with
+48 representatives on the correction side.  Since the weights \(10,8,6\) have
+gcd 2, a Fano-packet-symmetric improvement above 210 cannot be 211; the next
+packet-symmetric score is 212.  The remaining question is whether a full
+symmetry-breaking S3 gauge can realize 211, or whether the quotient certificate
+lifts.
+
+Finally, the symbolic end-to-end trace is now explicit:
+\[
+Fano\ flag \to K_7\ edge\ channel \to K_7\ star\ mesh
+\to active\ detector\ bin \to CSS\ frame\ update.
+\]
+There are \(21\cdot2\cdot4=168\) active events.  Each K7 channel has eight
+active bins, each K7 star mesh sees 24 events, and the 24 guard apertures are
+separated as the non-Clifford rail.  Exactly twelve guard events trigger the
+nontrivial D4 retwined frame update, giving
+\[
+168_{active}+24_{guard}=192_{tomotope\ bus}.
+\]
