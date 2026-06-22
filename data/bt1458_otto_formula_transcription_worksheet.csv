@@ -1,0 +1,6 @@
+equation,section,nearby_prose,expected_variables,transcribed_formula,audit_expression,status
+49,Gyromagnetic correction factor,simple golden-mean representation for anomalous electron g-factor,"phi, alpha, Delta_g or a_e",,"evaluate formula, compare to measured g/2 and BT1438 residual ledger",awaiting_rendered_formula
+50,Gyromagnetic correction factor,series expansion claimed accurate to tenth decimal place,"series index, phi powers, alpha or Delta_g",,"evaluate series truncations and decimal residuals",awaiting_rendered_formula
+64,Quantum vortex structure,"icosahedron, golden quartic, circumsphere radius, anomalous part","icosahedron radius, golden quartic root, Delta_g",,"check independence from fitted g value and compare to BT1454 coefficient bridge",awaiting_rendered_formula
+65,Quantum vortex structure,power of ratio of 12 slings to 13 half-turns,"12, 13, exponent, Delta_g or alpha/pi",,"compare 12/13 expression to BT1448 closure map and BT1454 active/guard arithmetic",awaiting_rendered_formula
+66,Quantum vortex structure,modified Schwinger alpha/pi approximation from Moebius calculation,"alpha, pi, charge correction, Delta_g",,"compare to Schwinger alpha/pi and measured g/2 anchor",awaiting_rendered_formula
