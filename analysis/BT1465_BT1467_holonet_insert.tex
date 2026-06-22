@@ -1,0 +1,27 @@
+\subsection{Splicer diff manifest, synthetic parser proof, and closure packet ABI}
+\label{sec:bt1465-bt1467-splicer-synthetic-abi}
+
+The claim-firewalled section now has an expected-diff manifest.  Local execution
+of the splicer must insert exactly one marker and one input immediately before
+the fuel-section anchor.
+
+The formula parser is tested on synthetic filled rows.  The aliases \(g/2\),
+\(a_e\), \(\Delta g\), Schwinger \(\alpha/\pi\), and \(12/13\) classify exactly
+to their intended targets.  The quartic coefficient \(4-\phi^2\) evaluates as a
+structural value rather than a physical target.
+
+The closure packet is now a runtime ABI.  Its inputs are
+\[
+(c,s,o)\in C_3\times C_2\times C_2,
+\]
+with
+\[
+\mathrm{strand}=4c+2s+o,
+\qquad
+\mathrm{active}=14\mathrm{strand}+13,
+\]
+\[
+\mathrm{guard}=(216+2\mathrm{strand},216+2\mathrm{strand}+1).
+\]
+The ABI includes the retwined frame rule, syndrome contract, and claim-tier
+firewall.
