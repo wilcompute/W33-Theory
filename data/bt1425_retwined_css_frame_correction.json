@@ -1,0 +1,35 @@
+{
+  "bt": 1425,
+  "title": "Retwined CSS frame correction for the D4 guard shear",
+  "verified": true,
+  "companion_frame_update": {
+    "type": "tracked Pauli/CSS coordinate-frame permutation",
+    "rule": "apply the same old_to_new D4 guard-tail permutation to the tracked Pauli/error coordinates and use retwined stabilizers H_X J^{-1}, H_Z J^{-1}",
+    "moved_coordinates": 12,
+    "fixed_coordinates": 228,
+    "nontrivial_cycles": [[219,220,221],[222,224,223],[231,232,233],[234,236,235]],
+    "order": 3
+  },
+  "css_invariants": {
+    "original": {"rank_HX": 39, "rank_HZ": 120, "k": 81, "commuting": true},
+    "retwined": {"rank_HX": 39, "rank_HZ": 120, "k": 81, "commuting": true},
+    "one_sided_HX_retwin_commutes_with_old_HZ": false,
+    "old_HX_commutes_with_one_sided_HZ_retwin": false
+  },
+  "syndrome_equivariance": {
+    "x_basis_errors": "verified for all 240 coordinates and values 1,2",
+    "z_basis_errors": "verified for all 240 coordinates and values 1,2",
+    "statement": "For every basis error e, syndrome_H(e) equals syndrome_H_retwin(J e)."
+  },
+  "checks": {
+    "css_carrier_is_w33_240_81_3": true,
+    "original_css_commutes": true,
+    "guard_shear_tail_only_order3": true,
+    "identity_rowspaces_are_not_preserved": true,
+    "retwined_css_commutes": true,
+    "retwined_css_has_same_ranks_and_k": true,
+    "x_syndrome_equivariant_on_basis": true,
+    "z_syndrome_equivariant_on_basis": true,
+    "one_sided_commutation_fails": true
+  }
+}
