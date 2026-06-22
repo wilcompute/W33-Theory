@@ -1,0 +1,50 @@
+\subsection{Fano bus figure and retwined front-end closure}
+\label{sec:bt1430-fano-bus-closure}
+
+The Fano-active interpretation gives the front end a compact diagrammatic law:
+\[
+168=21\cdot8=|GL(3,2)|=|PSL(2,7)|,
+\qquad
+24=|\operatorname{Stab}_{GL(3,2)}(p)|,
+\qquad
+192=168+24.
+\]
+The active side is the Fano flag orbit with local flag stabilizer, equivalently
+\[
+21\text{ Fano flags}\times2\text{ orientations}\times4\text{ residues}=168.
+\]
+The guard side is the separated tetrahedral point stabilizer.  The D4 quartic
+shear is therefore not inserted into the active mesh; it is routed through the
+24-aperture guard rail and becomes legal only with the retwined CSS frame update
+\[
+H_X'=H_XJ^{-1},\qquad H_Z'=H_ZJ^{-1},\qquad e\mapsto Je.
+\]
+
+\begin{figure}[ht]\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  block/.style={draw,rounded corners,align=center,minimum width=37mm,minimum height=10mm},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[block,fill=blue!9] (fano) at (0,0) {Fano plane\\ $7$ points, $7$ lines, $21$ flags};
+  \node[block,fill=green!11] (active) at (5.2,0) {active optical bus\\ $21\cdot8=168$};
+  \node[block,fill=orange!13] (guard) at (10.4,0) {guard rail\\ $24=S_4$ point stabilizer};
+  \node[block,fill=purple!12] (tomo) at (5.2,-1.8) {tomotope bus\\ $168+24=192$};
+  \node[block,fill=red!10] (css) at (10.4,-1.8) {retwined CSS frame\\ $H_XJ^{-1},H_ZJ^{-1}$};
+  \draw[arrow] (fano) -- node[above,font=\scriptsize]{flags $\times$ stabilizer} (active);
+  \draw[arrow] (active) -- node[right,font=\scriptsize]{active bins} (tomo);
+  \draw[arrow] (guard) -- node[right,font=\scriptsize]{24 apertures} (tomo);
+  \draw[arrow] (guard) -- node[right,font=\scriptsize]{D4 shear} (css);
+  \draw[arrow] (css) -- node[below,font=\scriptsize]{tracked frame update} (tomo);
+\end{tikzpicture}
+\caption{Fano bus closure.  The active 168 detector bins are the Fano flag orbit
+with local order-8 stabilizer.  The 24 guard apertures are the tetrahedral point
+stabilizer.  The non-Clifford D4 shear is legal only after retwining the CSS
+frame.}
+\end{figure}
+
+The 211 frontier is also sharpened by this picture.  A packet-symmetric score
+above 210 must jump to 212 because the quotient weights are \(10,8,6\).  Thus a
+211 witness, if it exists, must split one raw correction slot out of the Fano or
+Steinberg packet orbit and must be at S3-gauge radius at least four from the
+current incumbent.
