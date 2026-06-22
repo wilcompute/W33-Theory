@@ -2615,6 +2615,15 @@
             </div>
           </div>
           <div class="card">
+            <div class="label">Fano/E6 ABI Fiber</div>
+            <div class="detail">The photonic holonet ABI now has a row-level symmetry bridge:
+              <code>S4</code>, <code>D4</code>, and <code>V4</code> act on all <code>72</code> active/guard rows, while the
+              shared <code>24</code>-fiber reads both as <code>4&middot;6</code> ABI row values and
+              <code>3&middot;8</code> Fano flag data. This locks
+              <code>72 = 3&middot;24</code>, <code>81 = 72+9</code>, and
+              <code>168 = 7&middot;24 = 21&middot;8</code> into one exact finite packet.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently
@@ -2727,8 +2736,7 @@
             selector commits only after protected acceptance. The new <a
               href="../PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md">Photonic Harmonic TQC Bus</a> then connects the
             hardware denominators to the topological oscillator shell: fusion denominator <code>2</code> is
-            <code>&lambda;</code>, toric logical-qubit count, and harmonic frequency squared; KLM denominator
-            <code>4</code>
+            <code>&lambda;</code>, toric logical-qubit count, and harmonic frequency squared; KLM denominator <code>4</code>
             is <code>&mu;</code>, toric ground-state degeneracy, and toric stabilizer weight. The same bus
             uses the Heawood <code>14=2&Phi;<sub>6</sub></code> rail and middle shell <code>12=6+6</code> while keeping
             Q4 as local <code>[[1296,81,4]]</code> routing and Steane/<code>&Phi;<sub>6</sub></code>

@@ -1,0 +1,29 @@
+\subsection{BT1489--BT1491 row symmetry and Fano--E6 square}
+\label{sec:bt1489-bt1491-row-fano-e6-square}
+
+BT1489 lifts the \(S_4\), \(D_4\), and \(V_4\) branch actions from triangle
+labels to the actual ABI v2 row layer.  All \(24\) elements of \(S_4\), all
+\(8\) elements of the square \(D_4\) subgroup, and all \(4\) \(V_4\)
+translations act as honest permutations of the \(72\) active/guard value rows.
+The lift preserves the \(C_3\) channel, row kind, qutrit value, guard slot, and
+column formula, so the branch symmetry is now a decoder-row symmetry.
+
+BT1490 is the new finite-geometry lock:
+\[
+24 = 4\cdot6 = 3\cdot8,\qquad
+72 = 3\cdot24,\qquad
+168 = 7\cdot24 = 21\cdot8,\qquad
+81 = 72+9.
+\]
+The shared \(24\)-state fiber is \(V_4\) branch times six row-value slots on the
+ABI side, and three local Fano arms times the \(D_4\) flag stabilizer on the
+Fano side.  Thus the same finite fiber feeds the E6/CSS \(72\)-sector, the
+\(81\)-closure after adjoining the \(q^2=9\) firewall gap, and the Fano-native
+\(168\) active-bin bus.
+
+BT1491 makes the paper splice idempotent.  The main holonet paper now imports
+the BT1480--BT1491 exact finite packet through one controlled block; rerunning
+the splicer replaces that block rather than duplicating it.  The claim firewall
+remains intact: this is an exact finite ABI and incidence statement, not a
+detector calibration, optical-layout claim, or imported Golden Quartic/Mobius
+particle interpretation.

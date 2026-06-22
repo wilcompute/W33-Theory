@@ -1,0 +1,184 @@
+{
+  "axis_profiles": {
+    "channel_rows": {
+      "P0": 24,
+      "P1": 24,
+      "P2": 24
+    },
+    "triangle_rows": {
+      "T0": 18,
+      "T1": 18,
+      "T2": 18,
+      "T3": 18
+    }
+  },
+  "bt": 1489,
+  "checks": {
+    "active_guard_split_24_48": true,
+    "bt1483_consumer_loaded": true,
+    "bt1485_branch_audit_loaded": true,
+    "bt1486_css_rows_loaded": true,
+    "bt1487_classifier_loaded": true,
+    "channel_preserved": true,
+    "channel_profile_matches_abi_v2": true,
+    "column_formula_preserved": true,
+    "d4_lifts_are_8_unique_row_permutations": true,
+    "d4_row_order_profile_matches_d4": true,
+    "kind_value_slot_preserved": true,
+    "row_action_is_homomorphism": true,
+    "row_count_72": true,
+    "row_order_profile_matches_s4": true,
+    "s4_lifts_are_24_unique_row_permutations": true,
+    "shear_identity_fixes_all_72_rows_at_branch_layer": true,
+    "tau4_row_action_matches_bt1485_branch_action": true,
+    "triangle_image_rule": true,
+    "triangle_profile_matches_abi_v2": true,
+    "v4_lifts_are_4_unique_row_permutations": true
+  },
+  "counts": {
+    "active_rows": 24,
+    "d4_branch_actions": 8,
+    "guard_rows": 48,
+    "rows": 72,
+    "s4_branch_actions": 24,
+    "v4_translation_actions": 4
+  },
+  "interpretation": "The S4/D4/V4 symmetry is now a row-level ABI symmetry, not only a label symmetry.  Every branch action lifts to a permutation of the 72 active/guard value rows while preserving channel, row kind, qutrit value, guard slot, and the column formulas.",
+  "named_lifts": {
+    "shear_identity_branch_perm": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "shear_identity_row_perm_prefix": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "tau4_branch_perm": [
+      2,
+      3,
+      0,
+      1
+    ],
+    "tau4_row_perm_prefix": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "row_action_profiles": {
+    "d4_order_profile": {
+      "1": 1,
+      "2": 5,
+      "4": 2
+    },
+    "s4_order_profile": {
+      "1": 1,
+      "2": 9,
+      "3": 8,
+      "4": 6
+    }
+  },
+  "source_packets": {
+    "abi_consumer": "data/bt1483_closure_abi_v2_consumer.json",
+    "branch_audit": "data/bt1485_d4_v4_branch_action_audit.json",
+    "classifier": "data/bt1487_v4_triangle_stabilizer_classifier.json",
+    "css_rows": "data/bt1486_retwined_css_from_abi_v2.json"
+  },
+  "tau4_first_channel_sample": [
+    {
+      "source": "P0.T0.a.v1",
+      "target": "P0.T2.a.v1"
+    },
+    {
+      "source": "P0.T0.a.v2",
+      "target": "P0.T2.a.v2"
+    },
+    {
+      "source": "P0.T0.g0.v1",
+      "target": "P0.T2.g0.v1"
+    },
+    {
+      "source": "P0.T0.g0.v2",
+      "target": "P0.T2.g0.v2"
+    },
+    {
+      "source": "P0.T0.g1.v1",
+      "target": "P0.T2.g1.v1"
+    },
+    {
+      "source": "P0.T0.g1.v2",
+      "target": "P0.T2.g1.v2"
+    },
+    {
+      "source": "P0.T1.a.v1",
+      "target": "P0.T3.a.v1"
+    },
+    {
+      "source": "P0.T1.a.v2",
+      "target": "P0.T3.a.v2"
+    },
+    {
+      "source": "P0.T1.g0.v1",
+      "target": "P0.T3.g0.v1"
+    },
+    {
+      "source": "P0.T1.g0.v2",
+      "target": "P0.T3.g0.v2"
+    },
+    {
+      "source": "P0.T1.g1.v1",
+      "target": "P0.T3.g1.v1"
+    },
+    {
+      "source": "P0.T1.g1.v2",
+      "target": "P0.T3.g1.v2"
+    }
+  ],
+  "title": "S4/D4/V4 row-action lift on ABI v2",
+  "verified": true
+}

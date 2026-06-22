@@ -1,0 +1,39 @@
+{
+  "bt": 1491,
+  "checks": {
+    "block_before_software_section": true,
+    "bt1488_manifest_loaded": true,
+    "bt1489_row_lift_loaded": true,
+    "bt1490_square_loaded": true,
+    "each_required_input_once": true,
+    "insert_written": true,
+    "markdown_written": true,
+    "required_insert_chain_present": true,
+    "single_marker_block": true,
+    "splice_ok": true
+  },
+  "insert": "analysis/BT1489_BT1491_holonet_insert.tex",
+  "interpretation": "The main photonic holonet paper now owns the BT1480-BT1491 exact finite insert chain through one idempotent input block.  Re-running the tool proves the paper stays single-copy.",
+  "main_tex": "photonic_holonet.tex",
+  "markdown": "analysis/BT1489_BT1491_row_square_splice.md",
+  "required_inserts": [
+    "analysis/BT1480_BT1482_holonet_insert.tex",
+    "analysis/BT1483_BT1485_holonet_insert.tex",
+    "analysis/BT1486_BT1488_holonet_insert.tex",
+    "analysis/BT1489_BT1491_holonet_insert.tex"
+  ],
+  "splice": {
+    "action": "unchanged",
+    "after_marker_count": 1,
+    "before_marker_count": 1,
+    "input_counts": {
+      "analysis/BT1480_BT1482_holonet_insert.tex": 1,
+      "analysis/BT1483_BT1485_holonet_insert.tex": 1,
+      "analysis/BT1486_BT1488_holonet_insert.tex": 1,
+      "analysis/BT1489_BT1491_holonet_insert.tex": 1
+    },
+    "ok": true
+  },
+  "title": "Idempotent paper splice v2",
+  "verified": true
+}

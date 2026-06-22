@@ -1,0 +1,175 @@
+{
+  "bt": 1490,
+  "checks": {
+    "bt1422_fano_bridge_loaded": true,
+    "bt1484_e6_table_loaded": true,
+    "bt1486_css_rows_loaded": true,
+    "bt1487_stabilizers_loaded": true,
+    "bt1489_row_lift_loaded": true,
+    "commuting_product_has_504_states": true,
+    "commuting_square_paths_agree": true,
+    "d4_flag_stabilizer_is_8": true,
+    "d4_state_profile_is_three_each": true,
+    "e6_72_is_three_channels_times_shared_fiber": true,
+    "e6_81_is_72_plus_q_squared_gap": true,
+    "e6_nodes_contain_72_81_c3v4": true,
+    "fano_168_is_seven_points_times_shared_fiber": true,
+    "fano_168_is_twenty_one_flags_times_d4": true,
+    "fano_plane_incidence_ok": true,
+    "local_fano_arm_profile_is_eight_each": true,
+    "point_fiber_to_flag_d4_is_bijective": true,
+    "row_slot_profile_is_four_each": true,
+    "s4_point_stabilizer_is_same_24": true,
+    "shared_fiber_is_24": true,
+    "shared_fiber_matches_v4_times_row_values": true,
+    "shared_fiber_refactors_as_three_d4_flags": true
+  },
+  "counts": {
+    "commuting_product": 504,
+    "e6_abi_rows": 72,
+    "e6_h1_closure": 81,
+    "fano_flag_bus": 168,
+    "fano_point_bus": 168,
+    "shared_fiber": 24
+  },
+  "factorization": {
+    "e6_72": "3 C3 channels * shared fiber 24",
+    "e6_81": "E6 72-sector + q^2 firewall gap 9",
+    "fano_168_flag": "21 Fano flags * D4 stabilizer 8",
+    "fano_168_point": "7 Fano points * shared fiber 24",
+    "shared_fiber_24": "4 V4 branches * 6 active/guard value slots = 3 local Fano arms * 8 D4 states"
+  },
+  "fano_lines": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      2,
+      5
+    ],
+    [
+      0,
+      4,
+      6
+    ],
+    [
+      1,
+      2,
+      6
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      3,
+      5,
+      6
+    ]
+  ],
+  "fiber_sample": [
+    {
+      "d4_state_index": 0,
+      "fiber_index": 0,
+      "local_fano_arm": 0,
+      "row_position": 0,
+      "row_slot_name": "active_value_1",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 1,
+      "fiber_index": 1,
+      "local_fano_arm": 0,
+      "row_position": 1,
+      "row_slot_name": "active_value_2",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 2,
+      "fiber_index": 2,
+      "local_fano_arm": 0,
+      "row_position": 2,
+      "row_slot_name": "guard0_value_1",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 3,
+      "fiber_index": 3,
+      "local_fano_arm": 0,
+      "row_position": 3,
+      "row_slot_name": "guard0_value_2",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 4,
+      "fiber_index": 4,
+      "local_fano_arm": 0,
+      "row_position": 4,
+      "row_slot_name": "guard1_value_1",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 5,
+      "fiber_index": 5,
+      "local_fano_arm": 0,
+      "row_position": 5,
+      "row_slot_name": "guard1_value_2",
+      "v4_branch": 0
+    },
+    {
+      "d4_state_index": 6,
+      "fiber_index": 6,
+      "local_fano_arm": 0,
+      "row_position": 0,
+      "row_slot_name": "active_value_1",
+      "v4_branch": 1
+    },
+    {
+      "d4_state_index": 7,
+      "fiber_index": 7,
+      "local_fano_arm": 0,
+      "row_position": 1,
+      "row_slot_name": "active_value_2",
+      "v4_branch": 1
+    }
+  ],
+  "firewall": "This is an exact finite factorization and ABI compatibility claim. It is not a detector calibration, waveguide layout, or imported particle-physics claim.",
+  "interpretation": "The same 24-state fiber now drives the E6/CSS 72-row ABI side and the Fano 168 active-bin side.  The bridge is 24 = 4*6 = 3*8: V4 row values on one face, local Fano arms times D4 flag states on the other.",
+  "source_packets": {
+    "css_rows": "data/bt1486_retwined_css_from_abi_v2.json",
+    "e6_claims": "data/bt1484_e6_dag_claim_table_v2.json",
+    "fano": "data/bt1422_fano_168_s3_optimizer_bridge.json",
+    "row_lift": "data/bt1489_s4_d4_v4_row_action_lift.json",
+    "stabilizers": "data/bt1487_v4_triangle_stabilizer_classifier.json"
+  },
+  "square_sample": {
+    "input": {
+      "c3_channel": 0,
+      "fano_point": 0,
+      "fiber_index": 0
+    },
+    "via_e6_then_refactor": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "via_fano_then_channel": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "title": "Fano-168 / E6-72/81 commuting square",
+  "verified": true
+}
