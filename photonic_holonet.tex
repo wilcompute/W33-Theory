@@ -3541,6 +3541,108 @@ claim depends on the Moebius-ball model.  (Witnesses:
 \path{tools/bt1414_csaszar_szilassi_dual_physical_port.py}, and
 \path{tools/bt1415_even_projection_steinberg_syndrome_layer.py}.)
 
+\subsection{BT1416 sparse CSS intertwiner}
+
+BT1416 turns the BT1415 ledger from a count into matrices.  It rebuilds the
+canonical W33 edge-chain CSS carrier:
+\[
+  H_X=d_1:\ C_1\rightarrow C_0,\qquad
+  H_Z=d_2^T:\ C_1\rightarrow C_2,
+\]
+over \(\mathbb F_3\).  The generated sparse certificate has shapes
+\[
+  H_X\in\mathbb F_3^{40\times240},\qquad
+  H_Z\in\mathbb F_3^{160\times240},
+\]
+and verifies
+\[
+  \operatorname{rank}(H_X)=39,\qquad
+  \operatorname{rank}(H_Z)=120,\qquad
+  H_XH_Z^T=0.
+\]
+Thus the carrier is still the exact edge code
+\[
+  [[240,\ 240-39-120,\ 3]]_3=[[240,81,3]]_3.
+\]
+
+The new map is the typed \(240\times240\) ledger interwiner:
+\[
+  \Pi(e_i)=e_i,\qquad 0\leq i<240.
+\]
+Rows \(0,\ldots,215\) are the \(\mathbb F_2\) Q4 parity front end, with
+check vector \((1,1,1,1)\), rank \(1\), and the eight even Q4 words as a
+distance-\(2\) kernel.  Rows \(216,\ldots,239\) are the guard tail addressing
+the same \(\mathbb F_3\) edge carrier.  This is deliberately not a field
+coercion: the binary clock syndrome and ternary CSS stabilizer live in different
+fields, and the interwiner is the finite scheduling boundary between them.
+(Witness: \path{tools/bt1416_css_sparse_intertwiner_matrices.py}.)
+
+\subsection{BT1417 linear-optical dual-port primitive synthesis}
+
+BT1417 converts the BT1414 port into an objectwise single-photon optical
+primitive list.  The active dual port is not a vague optical metaphor; it has
+the exact inventory
+\begin{align*}
+  &21\ \text{edge-channel couplers},\quad
+  42\ \text{oriented phase latches},\\
+  &168\ \text{active detector bins},\quad
+  24\ \text{guard apertures}.
+\end{align*}
+The \(21\) couplers are the shared \(K_7\) edge channels.  The \(42\) latches
+choose the two directions on each channel.  The four residue bins behind each
+oriented latch are the tomotope flag residue.  The \(24\) Q4 guard apertures are
+separate from the active mesh.
+
+The analyzer matrices are \(7\times21\) incidence matrices.  In Cs\'asz\'ar
+mode a row is a vertex star; in Szilassi mode a row is the dual face star.  In
+both modes the Gram law is
+\[
+  AA^T = 5I_7 + J_7,
+\]
+so every analyzer sees six channels and any two analyzers overlap in exactly
+one channel.  This is the chip-level object language the previous ABI was
+missing: coupler, direction latch, residue demultiplexer, detector bin, and
+guard aperture.  It is still not a calibrated waveguide mask, loss budget, or
+detector-efficiency model.  (Witness:
+\path{tools/bt1417_linear_optical_dual_port_primitives.py}.)
+
+\subsection{BT1418 finite D4-quartic magic injection}
+
+BT1418 closes the non-Clifford aperture without importing the continuum
+Moebius-ball electron hypothesis.  The repo-local minimal-magic audit already
+found the exact signed frontier: two independent irreducible \(D_4\) quartic
+atoms, with no shared quadratic subfield and splitting field
+\[
+  D_4\times D_4.
+\]
+The BT1415/BT1416 guard band fits those atoms exactly:
+\[
+  2\ \text{quartic atoms}\cdot
+  4\ \text{algebraic branches}\cdot
+  3\ \text{qutrit phases}
+  =24\ \text{guard apertures}.
+\]
+Then the internal \(D_4\) orientation torsor expands each aperture to the
+tomotope flag bus:
+\[
+  24\ \text{guard apertures}\cdot8\ \text{\(D_4\) orientations}
+  =192\ \text{oriented tomotope tokens}.
+\]
+
+This is the exact finite counterpart of the golden-quartic topology that is
+safe to use in the paper.  For one quartic atom, the Steinberg lift gives
+\[
+  4\ \text{branches}\cdot27\ \text{central cycles}\cdot8\ \text{\(D_4\) orientations}
+  =864,
+\]
+which is exactly the repo's Golden \(D_4\)/Weyl shell.  With both independent
+atoms the shell is \(1728\), but the two atoms stay independent; BT1418 does
+not collapse them into one continuum object.  The physical reading is that the
+24 guard apertures are the non-Clifford injection rail, while the 216 parity
+rows remain the cheap binary front-end syndrome and the \(\mathbb F_3\) CSS
+carrier keeps its commutation proof.  (Witness:
+\path{tools/bt1418_d4_quartic_magic_injection_frontier.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

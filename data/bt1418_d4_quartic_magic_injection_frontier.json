@@ -1,0 +1,780 @@
+{
+  "atom_summary": {
+    "atoms": [
+      {
+        "atom": 0,
+        "galois_group_label": "D4",
+        "galois_group_order": 8,
+        "name": "H_2:-+",
+        "quartic_polynomial": "x**4 - 542*x**2 + 61200"
+      },
+      {
+        "atom": 1,
+        "galois_group_label": "D4",
+        "galois_group_order": 8,
+        "name": "Hbar_2:+-",
+        "quartic_polynomial": "x**4 - 982*x**2 + 137232"
+      }
+    ],
+    "d4_orientations": 8,
+    "guard_apertures": 24,
+    "identity": "2 atoms * 4 branches * 3 qutrit phases = 24; times 8 D4 orientations = 192",
+    "oriented_tomotope_tokens": 192,
+    "quartic_atoms": 2,
+    "quartic_branches_per_atom": 4,
+    "qutrit_phases": 3
+  },
+  "boundary": "BT1418 is a finite resource-state injection certificate. It does not derive electron structure, does not calibrate an optical nonlinear source, and does not collapse the two independent D4 atoms into one.",
+  "bt": 1418,
+  "checks": {
+    "apertures_use_css_tail": true,
+    "atoms_are_field_independent": true,
+    "both_atoms_are_irreducible_d4_quartics": true,
+    "bt1413_flag_bus_loaded": true,
+    "bt1415_ledger_loaded": true,
+    "bt1416_intertwiner_loaded": true,
+    "canonical_mixing_raises_degree": true,
+    "d4_orientation_lift_fills_tomotope_flag_bus": true,
+    "external_moebius_ball_not_used_as_validation": true,
+    "guard_apertures_are_two_atoms_four_branches_three_phases": true,
+    "minimal_magic_has_two_atoms": true,
+    "oriented_tokens_are_bijective_tomotope_flags": true,
+    "per_atom_steinberg_d4_shell_matches_golden_d4_weyl_shell": true,
+    "two_atom_shell_is_double_golden_shell": true
+  },
+  "golden_shell_comparison": {
+    "identity": "4 quartic branches * 27 Steinberg cycles * 8 D4 orientations = 864 per atom",
+    "per_atom_steinberg_d4_shell": 864,
+    "reading": "The exact finite counterpart of a golden-quartic topology is the repo's D4/Weyl orientation shell, not the continuum Moebius-ball electron hypothesis.",
+    "repo_golden_d4_weyl_shell": 864,
+    "two_atom_steinberg_d4_shell": 1728
+  },
+  "oriented_resource_token_count": 192,
+  "oriented_resource_tokens_sample": [
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 0,
+      "tomotope_flag": 0
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 1,
+      "tomotope_flag": 1
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 2,
+      "tomotope_flag": 2
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 3,
+      "tomotope_flag": 3
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 4,
+      "tomotope_flag": 4
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 5,
+      "tomotope_flag": 5
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 6,
+      "tomotope_flag": 6
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0,
+      "resource_token": 7,
+      "tomotope_flag": 7
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 8,
+      "tomotope_flag": 8
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 9,
+      "tomotope_flag": 9
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 10,
+      "tomotope_flag": 10
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 11,
+      "tomotope_flag": 11
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 12,
+      "tomotope_flag": 12
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 13,
+      "tomotope_flag": 13
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 14,
+      "tomotope_flag": 14
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1,
+      "resource_token": 15,
+      "tomotope_flag": 15
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 16,
+      "tomotope_flag": 16
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 17,
+      "tomotope_flag": 17
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 18,
+      "tomotope_flag": 18
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 19,
+      "tomotope_flag": 19
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 20,
+      "tomotope_flag": 20
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 21,
+      "tomotope_flag": 21
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 22,
+      "tomotope_flag": 22
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2,
+      "resource_token": 23,
+      "tomotope_flag": 23
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 24,
+      "tomotope_flag": 24
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 25,
+      "tomotope_flag": 25
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 26,
+      "tomotope_flag": 26
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 27,
+      "tomotope_flag": 27
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 28,
+      "tomotope_flag": 28
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 29,
+      "tomotope_flag": 29
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 30,
+      "tomotope_flag": 30
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3,
+      "resource_token": 31,
+      "tomotope_flag": 31
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 32,
+      "tomotope_flag": 32
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 33,
+      "tomotope_flag": 33
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 34,
+      "tomotope_flag": 34
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 35,
+      "tomotope_flag": 35
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 36,
+      "tomotope_flag": 36
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 37,
+      "tomotope_flag": 37
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 38,
+      "tomotope_flag": 38
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4,
+      "resource_token": 39,
+      "tomotope_flag": 39
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 0,
+      "d4_orientation_label": "forward_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 40,
+      "tomotope_flag": 40
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 1,
+      "d4_orientation_label": "forward_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 41,
+      "tomotope_flag": 41
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 2,
+      "d4_orientation_label": "forward_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 42,
+      "tomotope_flag": 42
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 3,
+      "d4_orientation_label": "forward_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 43,
+      "tomotope_flag": 43
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 4,
+      "d4_orientation_label": "reverse_start_anchor",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 44,
+      "tomotope_flag": 44
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 5,
+      "d4_orientation_label": "reverse_start_left_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 45,
+      "tomotope_flag": 45
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 6,
+      "d4_orientation_label": "reverse_start_bridge",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 46,
+      "tomotope_flag": 46
+    },
+    {
+      "atom": 0,
+      "d4_orientation": 7,
+      "d4_orientation_label": "reverse_start_right_endpoint",
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5,
+      "resource_token": 47,
+      "tomotope_flag": 47
+    }
+  ],
+  "physical_reading": "The 24 Q4 guard apertures become the non-Clifford injection rail: two independent D4 quartic atoms, four branches each, three qutrit phases per branch. The internal D4 orientation torsor expands those 24 apertures to the full 192 tomotope flag bus.",
+  "resource_apertures": [
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 216,
+      "guard_tomotope_flag": 168,
+      "q4_plaquette": 0,
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 0
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 217,
+      "guard_tomotope_flag": 169,
+      "q4_plaquette": 1,
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 1
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 218,
+      "guard_tomotope_flag": 170,
+      "q4_plaquette": 2,
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 2
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 219,
+      "guard_tomotope_flag": 171,
+      "q4_plaquette": 3,
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 3
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 220,
+      "guard_tomotope_flag": 172,
+      "q4_plaquette": 4,
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 4
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 221,
+      "guard_tomotope_flag": 173,
+      "q4_plaquette": 5,
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 5
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 222,
+      "guard_tomotope_flag": 174,
+      "q4_plaquette": 6,
+      "quartic_branch": 2,
+      "qutrit_phase": 0,
+      "resource_aperture": 6
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 223,
+      "guard_tomotope_flag": 175,
+      "q4_plaquette": 7,
+      "quartic_branch": 2,
+      "qutrit_phase": 1,
+      "resource_aperture": 7
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 224,
+      "guard_tomotope_flag": 176,
+      "q4_plaquette": 8,
+      "quartic_branch": 2,
+      "qutrit_phase": 2,
+      "resource_aperture": 8
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 225,
+      "guard_tomotope_flag": 177,
+      "q4_plaquette": 9,
+      "quartic_branch": 3,
+      "qutrit_phase": 0,
+      "resource_aperture": 9
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 226,
+      "guard_tomotope_flag": 178,
+      "q4_plaquette": 10,
+      "quartic_branch": 3,
+      "qutrit_phase": 1,
+      "resource_aperture": 10
+    },
+    {
+      "atom": 0,
+      "atom_name": "H_2:-+",
+      "css_edge_index": 227,
+      "guard_tomotope_flag": 179,
+      "q4_plaquette": 11,
+      "quartic_branch": 3,
+      "qutrit_phase": 2,
+      "resource_aperture": 11
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 228,
+      "guard_tomotope_flag": 180,
+      "q4_plaquette": 12,
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "resource_aperture": 12
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 229,
+      "guard_tomotope_flag": 181,
+      "q4_plaquette": 13,
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "resource_aperture": 13
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 230,
+      "guard_tomotope_flag": 182,
+      "q4_plaquette": 14,
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "resource_aperture": 14
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 231,
+      "guard_tomotope_flag": 183,
+      "q4_plaquette": 15,
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "resource_aperture": 15
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 232,
+      "guard_tomotope_flag": 184,
+      "q4_plaquette": 16,
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "resource_aperture": 16
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 233,
+      "guard_tomotope_flag": 185,
+      "q4_plaquette": 17,
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "resource_aperture": 17
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 234,
+      "guard_tomotope_flag": 186,
+      "q4_plaquette": 18,
+      "quartic_branch": 2,
+      "qutrit_phase": 0,
+      "resource_aperture": 18
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 235,
+      "guard_tomotope_flag": 187,
+      "q4_plaquette": 19,
+      "quartic_branch": 2,
+      "qutrit_phase": 1,
+      "resource_aperture": 19
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 236,
+      "guard_tomotope_flag": 188,
+      "q4_plaquette": 20,
+      "quartic_branch": 2,
+      "qutrit_phase": 2,
+      "resource_aperture": 20
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 237,
+      "guard_tomotope_flag": 189,
+      "q4_plaquette": 21,
+      "quartic_branch": 3,
+      "qutrit_phase": 0,
+      "resource_aperture": 21
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 238,
+      "guard_tomotope_flag": 190,
+      "q4_plaquette": 22,
+      "quartic_branch": 3,
+      "qutrit_phase": 1,
+      "resource_aperture": 22
+    },
+    {
+      "atom": 1,
+      "atom_name": "Hbar_2:+-",
+      "css_edge_index": 239,
+      "guard_tomotope_flag": 191,
+      "q4_plaquette": 23,
+      "quartic_branch": 3,
+      "qutrit_phase": 2,
+      "resource_aperture": 23
+    }
+  ],
+  "title": "Finite D4-quartic magic injection frontier",
+  "verified": true
+}

@@ -1,0 +1,1723 @@
+{
+  "analyzer_matrices": {
+    "csaszar_gram": [
+      [
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        6,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        6,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6
+      ]
+    ],
+    "csaszar_vertex_channel_incidence": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "field": "integer_incidence_for_objectwise_optical_routing",
+    "gram_reading": "diagonal 6, off-diagonal 1 is the K7 star-overlap law",
+    "szilassi_face_channel_incidence": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "szilassi_gram": [
+      [
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        6,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        6,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6
+      ]
+    ]
+  },
+  "boundary": "BT1417 is an objectwise optical primitive list and incidence matrix. It is not a waveguide mask, loss model, detector calibration, or unique decomposition into a foundry process.",
+  "bt": 1417,
+  "checks": {
+    "active_detector_bins_are_168": true,
+    "bt1414_dual_port_loaded": true,
+    "csaszar_incidence_is_k7_vertex_star": true,
+    "detector_bins_fill_tomotope_bus": true,
+    "dual_modes_use_same_channel_set": true,
+    "each_channel_feeds_eight_active_bins": true,
+    "edge_channel_couplers_are_21": true,
+    "guard_apertures_are_24": true,
+    "guard_apertures_are_separate_tail_flags": true,
+    "oriented_phase_latches_are_42": true,
+    "szilassi_incidence_is_dual_k7_face_star": true
+  },
+  "physical_reading": "The same 21 edge-channel mesh can be interrogated as Csaszar vertex stars or Szilassi face stars. Orientation latches choose direction, a four-bin demux records the tomotope residue, and the 24 Q4 guard apertures remain physically separate from the active dual-port mesh.",
+  "primitive_layers": {
+    "active_detector_bins_sample": [
+      {
+        "active_slot": 0,
+        "edge_channel": 0,
+        "flag_residue": 0,
+        "orientation": "0->1",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 0
+      },
+      {
+        "active_slot": 1,
+        "edge_channel": 0,
+        "flag_residue": 1,
+        "orientation": "0->1",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 1
+      },
+      {
+        "active_slot": 2,
+        "edge_channel": 0,
+        "flag_residue": 2,
+        "orientation": "0->1",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 2
+      },
+      {
+        "active_slot": 3,
+        "edge_channel": 0,
+        "flag_residue": 3,
+        "orientation": "0->1",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 3
+      },
+      {
+        "active_slot": 4,
+        "edge_channel": 0,
+        "flag_residue": 0,
+        "orientation": "1->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 4
+      },
+      {
+        "active_slot": 5,
+        "edge_channel": 0,
+        "flag_residue": 1,
+        "orientation": "1->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 5
+      },
+      {
+        "active_slot": 6,
+        "edge_channel": 0,
+        "flag_residue": 2,
+        "orientation": "1->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 6
+      },
+      {
+        "active_slot": 7,
+        "edge_channel": 0,
+        "flag_residue": 3,
+        "orientation": "1->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 7
+      },
+      {
+        "active_slot": 8,
+        "edge_channel": 1,
+        "flag_residue": 0,
+        "orientation": "0->2",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 8
+      },
+      {
+        "active_slot": 9,
+        "edge_channel": 1,
+        "flag_residue": 1,
+        "orientation": "0->2",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 9
+      },
+      {
+        "active_slot": 10,
+        "edge_channel": 1,
+        "flag_residue": 2,
+        "orientation": "0->2",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 10
+      },
+      {
+        "active_slot": 11,
+        "edge_channel": 1,
+        "flag_residue": 3,
+        "orientation": "0->2",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 11
+      },
+      {
+        "active_slot": 12,
+        "edge_channel": 1,
+        "flag_residue": 0,
+        "orientation": "2->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 12
+      },
+      {
+        "active_slot": 13,
+        "edge_channel": 1,
+        "flag_residue": 1,
+        "orientation": "2->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 13
+      },
+      {
+        "active_slot": 14,
+        "edge_channel": 1,
+        "flag_residue": 2,
+        "orientation": "2->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 14
+      },
+      {
+        "active_slot": 15,
+        "edge_channel": 1,
+        "flag_residue": 3,
+        "orientation": "2->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 15
+      },
+      {
+        "active_slot": 16,
+        "edge_channel": 2,
+        "flag_residue": 0,
+        "orientation": "0->3",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 16
+      },
+      {
+        "active_slot": 17,
+        "edge_channel": 2,
+        "flag_residue": 1,
+        "orientation": "0->3",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 17
+      },
+      {
+        "active_slot": 18,
+        "edge_channel": 2,
+        "flag_residue": 2,
+        "orientation": "0->3",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 18
+      },
+      {
+        "active_slot": 19,
+        "edge_channel": 2,
+        "flag_residue": 3,
+        "orientation": "0->3",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 19
+      },
+      {
+        "active_slot": 20,
+        "edge_channel": 2,
+        "flag_residue": 0,
+        "orientation": "3->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 20
+      },
+      {
+        "active_slot": 21,
+        "edge_channel": 2,
+        "flag_residue": 1,
+        "orientation": "3->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 21
+      },
+      {
+        "active_slot": 22,
+        "edge_channel": 2,
+        "flag_residue": 2,
+        "orientation": "3->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 22
+      },
+      {
+        "active_slot": 23,
+        "edge_channel": 2,
+        "flag_residue": 3,
+        "orientation": "3->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 23
+      },
+      {
+        "active_slot": 24,
+        "edge_channel": 3,
+        "flag_residue": 0,
+        "orientation": "0->4",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 24
+      },
+      {
+        "active_slot": 25,
+        "edge_channel": 3,
+        "flag_residue": 1,
+        "orientation": "0->4",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 25
+      },
+      {
+        "active_slot": 26,
+        "edge_channel": 3,
+        "flag_residue": 2,
+        "orientation": "0->4",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 26
+      },
+      {
+        "active_slot": 27,
+        "edge_channel": 3,
+        "flag_residue": 3,
+        "orientation": "0->4",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 27
+      },
+      {
+        "active_slot": 28,
+        "edge_channel": 3,
+        "flag_residue": 0,
+        "orientation": "4->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 28
+      },
+      {
+        "active_slot": 29,
+        "edge_channel": 3,
+        "flag_residue": 1,
+        "orientation": "4->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 29
+      },
+      {
+        "active_slot": 30,
+        "edge_channel": 3,
+        "flag_residue": 2,
+        "orientation": "4->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 30
+      },
+      {
+        "active_slot": 31,
+        "edge_channel": 3,
+        "flag_residue": 3,
+        "orientation": "4->0",
+        "primitive": "ACTIVE_RESIDUE_DETECTOR_BIN",
+        "primitive_stack": [
+          "EDGE_CHANNEL_BALANCED_COUPLER",
+          "ORIENTED_PHASE_LATCH",
+          "FOUR_RESIDUE_DEMUX",
+          "SINGLE_PHOTON_DETECTOR_BIN"
+        ],
+        "tomotope_flag": 31
+      }
+    ],
+    "edge_channel_couplers": [
+      {
+        "edge_channel": 0,
+        "endpoints": [
+          0,
+          1
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_1"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 1,
+        "endpoints": [
+          0,
+          2
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_2"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 2,
+        "endpoints": [
+          0,
+          3
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_3"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 3,
+        "endpoints": [
+          0,
+          4
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_4"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 4,
+        "endpoints": [
+          0,
+          5
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_5"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 5,
+        "endpoints": [
+          0,
+          6
+        ],
+        "input_rails": [
+          "rail_0",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 6,
+        "endpoints": [
+          1,
+          2
+        ],
+        "input_rails": [
+          "rail_1",
+          "rail_2"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 7,
+        "endpoints": [
+          1,
+          3
+        ],
+        "input_rails": [
+          "rail_1",
+          "rail_3"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 8,
+        "endpoints": [
+          1,
+          4
+        ],
+        "input_rails": [
+          "rail_1",
+          "rail_4"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 9,
+        "endpoints": [
+          1,
+          5
+        ],
+        "input_rails": [
+          "rail_1",
+          "rail_5"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 10,
+        "endpoints": [
+          1,
+          6
+        ],
+        "input_rails": [
+          "rail_1",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 11,
+        "endpoints": [
+          2,
+          3
+        ],
+        "input_rails": [
+          "rail_2",
+          "rail_3"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 12,
+        "endpoints": [
+          2,
+          4
+        ],
+        "input_rails": [
+          "rail_2",
+          "rail_4"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 13,
+        "endpoints": [
+          2,
+          5
+        ],
+        "input_rails": [
+          "rail_2",
+          "rail_5"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 14,
+        "endpoints": [
+          2,
+          6
+        ],
+        "input_rails": [
+          "rail_2",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 15,
+        "endpoints": [
+          3,
+          4
+        ],
+        "input_rails": [
+          "rail_3",
+          "rail_4"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 16,
+        "endpoints": [
+          3,
+          5
+        ],
+        "input_rails": [
+          "rail_3",
+          "rail_5"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 17,
+        "endpoints": [
+          3,
+          6
+        ],
+        "input_rails": [
+          "rail_3",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 18,
+        "endpoints": [
+          4,
+          5
+        ],
+        "input_rails": [
+          "rail_4",
+          "rail_5"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 19,
+        "endpoints": [
+          4,
+          6
+        ],
+        "input_rails": [
+          "rail_4",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      },
+      {
+        "edge_channel": 20,
+        "endpoints": [
+          5,
+          6
+        ],
+        "input_rails": [
+          "rail_5",
+          "rail_6"
+        ],
+        "primitive": "EDGE_CHANNEL_BALANCED_COUPLER",
+        "symbolic_unitary": "1/sqrt(2) [[1, 1], [1, -1]]"
+      }
+    ],
+    "guard_apertures": [
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 0,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 0,
+        "tomotope_flag": 168
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 1,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 1,
+        "tomotope_flag": 169
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 2,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 2,
+        "tomotope_flag": 170
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 3,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 3,
+        "tomotope_flag": 171
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 4,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 4,
+        "tomotope_flag": 172
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 5,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 5,
+        "tomotope_flag": 173
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 6,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 6,
+        "tomotope_flag": 174
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 7,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 7,
+        "tomotope_flag": 175
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 8,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 8,
+        "tomotope_flag": 176
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 9,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 9,
+        "tomotope_flag": 177
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 10,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 10,
+        "tomotope_flag": 178
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 11,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 11,
+        "tomotope_flag": 179
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 12,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 12,
+        "tomotope_flag": 180
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 13,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 13,
+        "tomotope_flag": 181
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 14,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 14,
+        "tomotope_flag": 182
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 15,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 15,
+        "tomotope_flag": 183
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 16,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 16,
+        "tomotope_flag": 184
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 17,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 17,
+        "tomotope_flag": 185
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 18,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 18,
+        "tomotope_flag": 186
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 19,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 19,
+        "tomotope_flag": 187
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 20,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 20,
+        "tomotope_flag": 188
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 21,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 21,
+        "tomotope_flag": 189
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 22,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 22,
+        "tomotope_flag": 190
+      },
+      {
+        "detector_role": "clock_guard_not_active_dual_port",
+        "guard_slot": 23,
+        "primitive": "Q4_GUARD_APERTURE",
+        "q4_plaquette": 23,
+        "tomotope_flag": 191
+      }
+    ],
+    "oriented_phase_latches": [
+      {
+        "edge_channel": 0,
+        "orientation_primitive": 0,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 1
+      },
+      {
+        "edge_channel": 0,
+        "orientation_primitive": 1,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 0
+      },
+      {
+        "edge_channel": 1,
+        "orientation_primitive": 2,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 2
+      },
+      {
+        "edge_channel": 1,
+        "orientation_primitive": 3,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 0
+      },
+      {
+        "edge_channel": 2,
+        "orientation_primitive": 4,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 3
+      },
+      {
+        "edge_channel": 2,
+        "orientation_primitive": 5,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 0
+      },
+      {
+        "edge_channel": 3,
+        "orientation_primitive": 6,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 4
+      },
+      {
+        "edge_channel": 3,
+        "orientation_primitive": 7,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 0
+      },
+      {
+        "edge_channel": 4,
+        "orientation_primitive": 8,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 5
+      },
+      {
+        "edge_channel": 4,
+        "orientation_primitive": 9,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 0
+      },
+      {
+        "edge_channel": 5,
+        "orientation_primitive": 10,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 0,
+        "target": 6
+      },
+      {
+        "edge_channel": 5,
+        "orientation_primitive": 11,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 0
+      },
+      {
+        "edge_channel": 6,
+        "orientation_primitive": 12,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 2
+      },
+      {
+        "edge_channel": 6,
+        "orientation_primitive": 13,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 1
+      },
+      {
+        "edge_channel": 7,
+        "orientation_primitive": 14,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 3
+      },
+      {
+        "edge_channel": 7,
+        "orientation_primitive": 15,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 1
+      },
+      {
+        "edge_channel": 8,
+        "orientation_primitive": 16,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 4
+      },
+      {
+        "edge_channel": 8,
+        "orientation_primitive": 17,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 1
+      },
+      {
+        "edge_channel": 9,
+        "orientation_primitive": 18,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 5
+      },
+      {
+        "edge_channel": 9,
+        "orientation_primitive": 19,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 1
+      },
+      {
+        "edge_channel": 10,
+        "orientation_primitive": 20,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 1,
+        "target": 6
+      },
+      {
+        "edge_channel": 10,
+        "orientation_primitive": 21,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 1
+      },
+      {
+        "edge_channel": 11,
+        "orientation_primitive": 22,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 3
+      },
+      {
+        "edge_channel": 11,
+        "orientation_primitive": 23,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 2
+      },
+      {
+        "edge_channel": 12,
+        "orientation_primitive": 24,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 4
+      },
+      {
+        "edge_channel": 12,
+        "orientation_primitive": 25,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 2
+      },
+      {
+        "edge_channel": 13,
+        "orientation_primitive": 26,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 5
+      },
+      {
+        "edge_channel": 13,
+        "orientation_primitive": 27,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 2
+      },
+      {
+        "edge_channel": 14,
+        "orientation_primitive": 28,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 2,
+        "target": 6
+      },
+      {
+        "edge_channel": 14,
+        "orientation_primitive": 29,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 2
+      },
+      {
+        "edge_channel": 15,
+        "orientation_primitive": 30,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 4
+      },
+      {
+        "edge_channel": 15,
+        "orientation_primitive": 31,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 3
+      },
+      {
+        "edge_channel": 16,
+        "orientation_primitive": 32,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 5
+      },
+      {
+        "edge_channel": 16,
+        "orientation_primitive": 33,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 3
+      },
+      {
+        "edge_channel": 17,
+        "orientation_primitive": 34,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 3,
+        "target": 6
+      },
+      {
+        "edge_channel": 17,
+        "orientation_primitive": 35,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 3
+      },
+      {
+        "edge_channel": 18,
+        "orientation_primitive": 36,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 5
+      },
+      {
+        "edge_channel": 18,
+        "orientation_primitive": 37,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 4
+      },
+      {
+        "edge_channel": 19,
+        "orientation_primitive": 38,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 4,
+        "target": 6
+      },
+      {
+        "edge_channel": 19,
+        "orientation_primitive": 39,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 4
+      },
+      {
+        "edge_channel": 20,
+        "orientation_primitive": 40,
+        "phase_symbol": "0",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 5,
+        "target": 6
+      },
+      {
+        "edge_channel": 20,
+        "orientation_primitive": 41,
+        "phase_symbol": "pi",
+        "primitive": "ORIENTED_PHASE_LATCH",
+        "source": 6,
+        "target": 5
+      }
+    ]
+  },
+  "primitive_summary": {
+    "active_residue_detector_bins": 168,
+    "edge_channel_couplers": 21,
+    "guard_apertures": 24,
+    "identity": "21 couplers, 42 orientation latches, 168 active bins, 24 guard apertures",
+    "oriented_phase_latches": 42,
+    "total_detector_bins": 192
+  },
+  "title": "Linear-optical primitive synthesis for the dual port",
+  "verified": true
+}
