@@ -1,0 +1,5336 @@
+{
+  "boundary": "BT1415 is a finite syndrome-ledger and scheduling certificate. It does not replace the W33 CSS stabilizer construction, does not claim a physical electron model, and does not promote external Moebius-ball electron papers as evidence for the repo's exact quartic atoms.",
+  "bt": 1415,
+  "checks": {
+    "bt1375_steinberg_operator_loaded": true,
+    "bt1412_even_projection_loaded": true,
+    "bt1414_dual_port_loaded": true,
+    "central_nilpotent_rank_profile_preserved": true,
+    "even_projection_has_eight_words": true,
+    "even_projection_is_parity_zero": true,
+    "even_projection_min_distance_two": true,
+    "external_audit_is_boundary_only": true,
+    "guard_rows_are_bt1414_guard_band": true,
+    "guard_rows_occupy_css_tail": true,
+    "single_bit_q4_errors_toggle_syndrome": true,
+    "steinberg_has_27_central_cycles": true,
+    "steinberg_memory_dimension_is_81": true,
+    "syndrome_plus_guard_rows_fill_css_edge_ledger": true,
+    "syndrome_rows_are_27_times_8": true
+  },
+  "external_literature_audit": {
+    "newer_related_work": [
+      {
+        "reading": "Related 2025 ResearchGate preprint around the same electron-model program.",
+        "title": "Can Artificial Intelligence Help to Verify the Most Probable Electron Structure Model",
+        "url": "https://www.researchgate.net/publication/389905106_Can_Artificial_Intelligence_Help_to_Verify_the_Most_Probable_Electron_Structure_Model"
+      },
+      {
+        "reading": "Recent review framing extended electron models as Zitterbewegung/field-dynamics hypotheses.",
+        "title": "Critical Review of Zitterbewegung Electron Models",
+        "url": "https://www.mdpi.com/2073-8994/17/3/360"
+      }
+    ],
+    "primary_paper": {
+      "author": "Hans H. Otto",
+      "reading": "The proposal uses golden-ratio/quartic and icosahedral/Moebius-ball structure as an electron-shape model. BT1415 only borrows the closed-loop/toroidal-field caution: keep topology, chirality, and scale normalization separated.",
+      "title": "Golden Quartic Polynomial and Moebius-Ball Electron",
+      "url": "https://www.scirp.org/pdf/jamp_2022053015152222.pdf"
+    },
+    "repo_boundary": "The repo's exact quartic frontier remains the two independent D4 quartic atoms in scripts/w33_standard_model_minimal_magic_audit.py. The Moebius-ball paper is not used as evidence for electron mass, spin, or a physical waveguide layout.",
+    "status": "heuristic_only_not_a_validation_source"
+  },
+  "guard_rows": [
+    {
+      "css_edge_index": 216,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 0,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 168
+    },
+    {
+      "css_edge_index": 217,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 1,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 169
+    },
+    {
+      "css_edge_index": 218,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 2,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 170
+    },
+    {
+      "css_edge_index": 219,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 3,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 171
+    },
+    {
+      "css_edge_index": 220,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 4,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 172
+    },
+    {
+      "css_edge_index": 221,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 5,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 173
+    },
+    {
+      "css_edge_index": 222,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 6,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 174
+    },
+    {
+      "css_edge_index": 223,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 7,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 175
+    },
+    {
+      "css_edge_index": 224,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 8,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 176
+    },
+    {
+      "css_edge_index": 225,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 9,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 177
+    },
+    {
+      "css_edge_index": 226,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 10,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 178
+    },
+    {
+      "css_edge_index": 227,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 11,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 179
+    },
+    {
+      "css_edge_index": 228,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 12,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 180
+    },
+    {
+      "css_edge_index": 229,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 13,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 181
+    },
+    {
+      "css_edge_index": 230,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 14,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 182
+    },
+    {
+      "css_edge_index": 231,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 15,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 183
+    },
+    {
+      "css_edge_index": 232,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 16,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 184
+    },
+    {
+      "css_edge_index": 233,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 17,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 185
+    },
+    {
+      "css_edge_index": 234,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 18,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 186
+    },
+    {
+      "css_edge_index": 235,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 19,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 187
+    },
+    {
+      "css_edge_index": 236,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 20,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 188
+    },
+    {
+      "css_edge_index": 237,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 21,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 189
+    },
+    {
+      "css_edge_index": 238,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 22,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 190
+    },
+    {
+      "css_edge_index": 239,
+      "guard_role": "BT1412_Q4_plaquette_guard",
+      "q4_plaquette": 23,
+      "row_type": "Q4_PLAQUETTE_GUARD",
+      "tomotope_flag": 191
+    }
+  ],
+  "physical_reading": "The packet clock supplies a cheap binary front-end check: every allowed every-other Q4 state has even parity, and every one-bit clock fault toggles it. Repeating the eight allowed states over the 27 Steinberg central cycles gives 216 rows; the 24 Q4 plaquette guards fill the remaining W33 CSS edge ledger rows.",
+  "single_bit_error_profile": {
+    "all_single_bit_errors_detected": true,
+    "sample": [
+      {
+        "errored_tick": 8,
+        "errored_word": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "even_clock_state": 0,
+        "flipped_bit": 0,
+        "source_tick": 0,
+        "source_word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 4,
+        "errored_word": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "even_clock_state": 0,
+        "flipped_bit": 1,
+        "source_tick": 0,
+        "source_word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 2,
+        "errored_word": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "even_clock_state": 0,
+        "flipped_bit": 2,
+        "source_tick": 0,
+        "source_word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 1,
+        "errored_word": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "even_clock_state": 0,
+        "flipped_bit": 3,
+        "source_tick": 0,
+        "source_word": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 14,
+        "errored_word": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "even_clock_state": 1,
+        "flipped_bit": 0,
+        "source_tick": 6,
+        "source_word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 2,
+        "errored_word": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "even_clock_state": 1,
+        "flipped_bit": 1,
+        "source_tick": 6,
+        "source_word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 4,
+        "errored_word": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "even_clock_state": 1,
+        "flipped_bit": 2,
+        "source_tick": 6,
+        "source_word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 7,
+        "errored_word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "even_clock_state": 1,
+        "flipped_bit": 3,
+        "source_tick": 6,
+        "source_word": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 11,
+        "errored_word": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "even_clock_state": 2,
+        "flipped_bit": 0,
+        "source_tick": 3,
+        "source_word": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 7,
+        "errored_word": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "even_clock_state": 2,
+        "flipped_bit": 1,
+        "source_tick": 3,
+        "source_word": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 1,
+        "errored_word": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "even_clock_state": 2,
+        "flipped_bit": 2,
+        "source_tick": 3,
+        "source_word": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "syndrome": 1
+      },
+      {
+        "errored_tick": 2,
+        "errored_word": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "even_clock_state": 2,
+        "flipped_bit": 3,
+        "source_tick": 3,
+        "source_word": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "syndrome": 1
+      }
+    ],
+    "tested_edges": 32,
+    "unique_odd_error_words": 8
+  },
+  "syndrome_rows": [
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 0,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 1,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 2,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 3,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 4,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 5,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 6,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 7,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 8,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 9,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 10,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 11,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 12,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 13,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 14,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 15,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 16,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 17,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 18,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 19,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 20,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 21,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 22,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 23,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 2,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 24,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 25,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 26,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 27,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 28,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 29,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 30,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 31,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 3,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 32,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 33,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 34,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 35,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 36,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 37,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 38,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 39,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 4,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 40,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 41,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 42,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 43,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 44,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 45,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 46,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 47,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 5,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 48,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 49,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 50,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 51,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 52,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 53,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 54,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 55,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 6,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 56,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 57,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 58,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 59,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 60,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 61,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 62,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 63,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 7,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 64,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 65,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 66,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 67,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 68,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 69,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 70,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 71,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 8,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 72,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 73,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 74,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 75,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 76,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 77,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 78,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 79,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 9,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 80,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 81,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 82,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 83,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 84,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 85,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 86,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 87,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 10,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 88,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 89,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 90,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 91,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 92,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 93,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 94,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 95,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 11,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 96,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 97,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 98,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 99,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 100,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 101,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 102,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 103,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 12,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 104,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 105,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 106,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 107,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 108,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 109,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 110,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 111,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 13,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 112,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 113,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 114,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 115,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 116,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 117,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 118,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 119,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 14,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 120,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 121,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 122,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 123,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 124,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 125,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 126,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 127,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 15,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 128,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 129,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 130,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 131,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 132,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 133,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 134,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 135,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 16,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 136,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 137,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 138,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 139,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 140,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 141,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 142,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 143,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 17,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 144,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 145,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 146,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 147,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 148,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 149,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 150,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 151,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 18,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 152,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 153,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 154,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 155,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 156,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 157,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 158,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 159,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 19,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 160,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 161,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 162,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 163,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 164,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 165,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 166,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 167,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 20,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 168,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 169,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 170,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 171,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 172,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 173,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 174,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 175,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 21,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 176,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 177,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 178,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 179,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 180,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 181,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 182,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 183,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 22,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 184,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 185,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 186,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 187,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 188,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 189,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 190,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 191,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 23,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 192,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 193,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 194,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 195,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 196,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 197,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 198,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 199,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 24,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 200,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 201,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 202,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 203,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 204,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 205,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 206,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 207,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 25,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 208,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 209,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 210,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 211,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 212,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 213,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 214,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 215,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 26,
+      "syndrome_if_clean": 0
+    }
+  ],
+  "syndrome_rows_sample": [
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 0,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 1,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 2,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 3,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 4,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 5,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 6,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 7,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 0,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 8,
+      "even_clock_state": 0,
+      "q4_tick": 0,
+      "q4_word": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 9,
+      "even_clock_state": 1,
+      "q4_tick": 6,
+      "q4_word": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 10,
+      "even_clock_state": 2,
+      "q4_tick": 3,
+      "q4_word": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 11,
+      "even_clock_state": 3,
+      "q4_tick": 5,
+      "q4_word": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 12,
+      "even_clock_state": 4,
+      "q4_tick": 9,
+      "q4_word": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 13,
+      "even_clock_state": 5,
+      "q4_tick": 15,
+      "q4_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 14,
+      "even_clock_state": 6,
+      "q4_tick": 10,
+      "q4_word": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    },
+    {
+      "allowed_parity": 0,
+      "binary_check_vector": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "css_edge_index": 15,
+      "even_clock_state": 7,
+      "q4_tick": 12,
+      "q4_word": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "row_type": "EVEN_Q4_PARITY_SYNDROME",
+      "steinberg_central_cycle": 1,
+      "syndrome_if_clean": 0
+    }
+  ],
+  "syndrome_summary": {
+    "css_edge_ledger_rows": 240,
+    "even_q4_clock_states": 8,
+    "field_boundary": "binary Q4 clock syndrome front-end over F2; Steinberg/CSS memory remains over F3",
+    "identity": "27 central cycles * 8 even Q4 states + 24 plaquette guards = 240 CSS edge rows",
+    "parity_syndrome_rows": 216,
+    "q4_plaquette_guard_rows": 24,
+    "steinberg_central_cycles": 27
+  },
+  "title": "Even Q4 projection Steinberg/CSS syndrome layer",
+  "verified": true
+}

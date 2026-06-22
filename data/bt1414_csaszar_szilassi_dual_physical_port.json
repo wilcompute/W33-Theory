@@ -1,0 +1,2257 @@
+{
+  "active_slot_rows": [
+    {
+      "active_slot": 0,
+      "edge_channel": 0,
+      "flag_residue": 0,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 0
+    },
+    {
+      "active_slot": 1,
+      "edge_channel": 0,
+      "flag_residue": 1,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 1
+    },
+    {
+      "active_slot": 2,
+      "edge_channel": 0,
+      "flag_residue": 2,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 2
+    },
+    {
+      "active_slot": 3,
+      "edge_channel": 0,
+      "flag_residue": 3,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 3
+    },
+    {
+      "active_slot": 4,
+      "edge_channel": 0,
+      "flag_residue": 0,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 4
+    },
+    {
+      "active_slot": 5,
+      "edge_channel": 0,
+      "flag_residue": 1,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 5
+    },
+    {
+      "active_slot": 6,
+      "edge_channel": 0,
+      "flag_residue": 2,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 6
+    },
+    {
+      "active_slot": 7,
+      "edge_channel": 0,
+      "flag_residue": 3,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 7
+    },
+    {
+      "active_slot": 8,
+      "edge_channel": 1,
+      "flag_residue": 0,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 8
+    },
+    {
+      "active_slot": 9,
+      "edge_channel": 1,
+      "flag_residue": 1,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 9
+    },
+    {
+      "active_slot": 10,
+      "edge_channel": 1,
+      "flag_residue": 2,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 10
+    },
+    {
+      "active_slot": 11,
+      "edge_channel": 1,
+      "flag_residue": 3,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 11
+    },
+    {
+      "active_slot": 12,
+      "edge_channel": 1,
+      "flag_residue": 0,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 12
+    },
+    {
+      "active_slot": 13,
+      "edge_channel": 1,
+      "flag_residue": 1,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 13
+    },
+    {
+      "active_slot": 14,
+      "edge_channel": 1,
+      "flag_residue": 2,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 14
+    },
+    {
+      "active_slot": 15,
+      "edge_channel": 1,
+      "flag_residue": 3,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 15
+    },
+    {
+      "active_slot": 16,
+      "edge_channel": 2,
+      "flag_residue": 0,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 16
+    },
+    {
+      "active_slot": 17,
+      "edge_channel": 2,
+      "flag_residue": 1,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 17
+    },
+    {
+      "active_slot": 18,
+      "edge_channel": 2,
+      "flag_residue": 2,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 18
+    },
+    {
+      "active_slot": 19,
+      "edge_channel": 2,
+      "flag_residue": 3,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 19
+    },
+    {
+      "active_slot": 20,
+      "edge_channel": 2,
+      "flag_residue": 0,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 20
+    },
+    {
+      "active_slot": 21,
+      "edge_channel": 2,
+      "flag_residue": 1,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 21
+    },
+    {
+      "active_slot": 22,
+      "edge_channel": 2,
+      "flag_residue": 2,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 22
+    },
+    {
+      "active_slot": 23,
+      "edge_channel": 2,
+      "flag_residue": 3,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 23
+    },
+    {
+      "active_slot": 24,
+      "edge_channel": 3,
+      "flag_residue": 0,
+      "orientation": "0->4",
+      "source": 0,
+      "target": 4,
+      "tomotope_flag": 24
+    },
+    {
+      "active_slot": 25,
+      "edge_channel": 3,
+      "flag_residue": 1,
+      "orientation": "0->4",
+      "source": 0,
+      "target": 4,
+      "tomotope_flag": 25
+    },
+    {
+      "active_slot": 26,
+      "edge_channel": 3,
+      "flag_residue": 2,
+      "orientation": "0->4",
+      "source": 0,
+      "target": 4,
+      "tomotope_flag": 26
+    },
+    {
+      "active_slot": 27,
+      "edge_channel": 3,
+      "flag_residue": 3,
+      "orientation": "0->4",
+      "source": 0,
+      "target": 4,
+      "tomotope_flag": 27
+    },
+    {
+      "active_slot": 28,
+      "edge_channel": 3,
+      "flag_residue": 0,
+      "orientation": "4->0",
+      "source": 4,
+      "target": 0,
+      "tomotope_flag": 28
+    },
+    {
+      "active_slot": 29,
+      "edge_channel": 3,
+      "flag_residue": 1,
+      "orientation": "4->0",
+      "source": 4,
+      "target": 0,
+      "tomotope_flag": 29
+    },
+    {
+      "active_slot": 30,
+      "edge_channel": 3,
+      "flag_residue": 2,
+      "orientation": "4->0",
+      "source": 4,
+      "target": 0,
+      "tomotope_flag": 30
+    },
+    {
+      "active_slot": 31,
+      "edge_channel": 3,
+      "flag_residue": 3,
+      "orientation": "4->0",
+      "source": 4,
+      "target": 0,
+      "tomotope_flag": 31
+    },
+    {
+      "active_slot": 32,
+      "edge_channel": 4,
+      "flag_residue": 0,
+      "orientation": "0->5",
+      "source": 0,
+      "target": 5,
+      "tomotope_flag": 32
+    },
+    {
+      "active_slot": 33,
+      "edge_channel": 4,
+      "flag_residue": 1,
+      "orientation": "0->5",
+      "source": 0,
+      "target": 5,
+      "tomotope_flag": 33
+    },
+    {
+      "active_slot": 34,
+      "edge_channel": 4,
+      "flag_residue": 2,
+      "orientation": "0->5",
+      "source": 0,
+      "target": 5,
+      "tomotope_flag": 34
+    },
+    {
+      "active_slot": 35,
+      "edge_channel": 4,
+      "flag_residue": 3,
+      "orientation": "0->5",
+      "source": 0,
+      "target": 5,
+      "tomotope_flag": 35
+    },
+    {
+      "active_slot": 36,
+      "edge_channel": 4,
+      "flag_residue": 0,
+      "orientation": "5->0",
+      "source": 5,
+      "target": 0,
+      "tomotope_flag": 36
+    },
+    {
+      "active_slot": 37,
+      "edge_channel": 4,
+      "flag_residue": 1,
+      "orientation": "5->0",
+      "source": 5,
+      "target": 0,
+      "tomotope_flag": 37
+    },
+    {
+      "active_slot": 38,
+      "edge_channel": 4,
+      "flag_residue": 2,
+      "orientation": "5->0",
+      "source": 5,
+      "target": 0,
+      "tomotope_flag": 38
+    },
+    {
+      "active_slot": 39,
+      "edge_channel": 4,
+      "flag_residue": 3,
+      "orientation": "5->0",
+      "source": 5,
+      "target": 0,
+      "tomotope_flag": 39
+    },
+    {
+      "active_slot": 40,
+      "edge_channel": 5,
+      "flag_residue": 0,
+      "orientation": "0->6",
+      "source": 0,
+      "target": 6,
+      "tomotope_flag": 40
+    },
+    {
+      "active_slot": 41,
+      "edge_channel": 5,
+      "flag_residue": 1,
+      "orientation": "0->6",
+      "source": 0,
+      "target": 6,
+      "tomotope_flag": 41
+    },
+    {
+      "active_slot": 42,
+      "edge_channel": 5,
+      "flag_residue": 2,
+      "orientation": "0->6",
+      "source": 0,
+      "target": 6,
+      "tomotope_flag": 42
+    },
+    {
+      "active_slot": 43,
+      "edge_channel": 5,
+      "flag_residue": 3,
+      "orientation": "0->6",
+      "source": 0,
+      "target": 6,
+      "tomotope_flag": 43
+    },
+    {
+      "active_slot": 44,
+      "edge_channel": 5,
+      "flag_residue": 0,
+      "orientation": "6->0",
+      "source": 6,
+      "target": 0,
+      "tomotope_flag": 44
+    },
+    {
+      "active_slot": 45,
+      "edge_channel": 5,
+      "flag_residue": 1,
+      "orientation": "6->0",
+      "source": 6,
+      "target": 0,
+      "tomotope_flag": 45
+    },
+    {
+      "active_slot": 46,
+      "edge_channel": 5,
+      "flag_residue": 2,
+      "orientation": "6->0",
+      "source": 6,
+      "target": 0,
+      "tomotope_flag": 46
+    },
+    {
+      "active_slot": 47,
+      "edge_channel": 5,
+      "flag_residue": 3,
+      "orientation": "6->0",
+      "source": 6,
+      "target": 0,
+      "tomotope_flag": 47
+    },
+    {
+      "active_slot": 48,
+      "edge_channel": 6,
+      "flag_residue": 0,
+      "orientation": "1->2",
+      "source": 1,
+      "target": 2,
+      "tomotope_flag": 48
+    },
+    {
+      "active_slot": 49,
+      "edge_channel": 6,
+      "flag_residue": 1,
+      "orientation": "1->2",
+      "source": 1,
+      "target": 2,
+      "tomotope_flag": 49
+    },
+    {
+      "active_slot": 50,
+      "edge_channel": 6,
+      "flag_residue": 2,
+      "orientation": "1->2",
+      "source": 1,
+      "target": 2,
+      "tomotope_flag": 50
+    },
+    {
+      "active_slot": 51,
+      "edge_channel": 6,
+      "flag_residue": 3,
+      "orientation": "1->2",
+      "source": 1,
+      "target": 2,
+      "tomotope_flag": 51
+    },
+    {
+      "active_slot": 52,
+      "edge_channel": 6,
+      "flag_residue": 0,
+      "orientation": "2->1",
+      "source": 2,
+      "target": 1,
+      "tomotope_flag": 52
+    },
+    {
+      "active_slot": 53,
+      "edge_channel": 6,
+      "flag_residue": 1,
+      "orientation": "2->1",
+      "source": 2,
+      "target": 1,
+      "tomotope_flag": 53
+    },
+    {
+      "active_slot": 54,
+      "edge_channel": 6,
+      "flag_residue": 2,
+      "orientation": "2->1",
+      "source": 2,
+      "target": 1,
+      "tomotope_flag": 54
+    },
+    {
+      "active_slot": 55,
+      "edge_channel": 6,
+      "flag_residue": 3,
+      "orientation": "2->1",
+      "source": 2,
+      "target": 1,
+      "tomotope_flag": 55
+    },
+    {
+      "active_slot": 56,
+      "edge_channel": 7,
+      "flag_residue": 0,
+      "orientation": "1->3",
+      "source": 1,
+      "target": 3,
+      "tomotope_flag": 56
+    },
+    {
+      "active_slot": 57,
+      "edge_channel": 7,
+      "flag_residue": 1,
+      "orientation": "1->3",
+      "source": 1,
+      "target": 3,
+      "tomotope_flag": 57
+    },
+    {
+      "active_slot": 58,
+      "edge_channel": 7,
+      "flag_residue": 2,
+      "orientation": "1->3",
+      "source": 1,
+      "target": 3,
+      "tomotope_flag": 58
+    },
+    {
+      "active_slot": 59,
+      "edge_channel": 7,
+      "flag_residue": 3,
+      "orientation": "1->3",
+      "source": 1,
+      "target": 3,
+      "tomotope_flag": 59
+    },
+    {
+      "active_slot": 60,
+      "edge_channel": 7,
+      "flag_residue": 0,
+      "orientation": "3->1",
+      "source": 3,
+      "target": 1,
+      "tomotope_flag": 60
+    },
+    {
+      "active_slot": 61,
+      "edge_channel": 7,
+      "flag_residue": 1,
+      "orientation": "3->1",
+      "source": 3,
+      "target": 1,
+      "tomotope_flag": 61
+    },
+    {
+      "active_slot": 62,
+      "edge_channel": 7,
+      "flag_residue": 2,
+      "orientation": "3->1",
+      "source": 3,
+      "target": 1,
+      "tomotope_flag": 62
+    },
+    {
+      "active_slot": 63,
+      "edge_channel": 7,
+      "flag_residue": 3,
+      "orientation": "3->1",
+      "source": 3,
+      "target": 1,
+      "tomotope_flag": 63
+    },
+    {
+      "active_slot": 64,
+      "edge_channel": 8,
+      "flag_residue": 0,
+      "orientation": "1->4",
+      "source": 1,
+      "target": 4,
+      "tomotope_flag": 64
+    },
+    {
+      "active_slot": 65,
+      "edge_channel": 8,
+      "flag_residue": 1,
+      "orientation": "1->4",
+      "source": 1,
+      "target": 4,
+      "tomotope_flag": 65
+    },
+    {
+      "active_slot": 66,
+      "edge_channel": 8,
+      "flag_residue": 2,
+      "orientation": "1->4",
+      "source": 1,
+      "target": 4,
+      "tomotope_flag": 66
+    },
+    {
+      "active_slot": 67,
+      "edge_channel": 8,
+      "flag_residue": 3,
+      "orientation": "1->4",
+      "source": 1,
+      "target": 4,
+      "tomotope_flag": 67
+    },
+    {
+      "active_slot": 68,
+      "edge_channel": 8,
+      "flag_residue": 0,
+      "orientation": "4->1",
+      "source": 4,
+      "target": 1,
+      "tomotope_flag": 68
+    },
+    {
+      "active_slot": 69,
+      "edge_channel": 8,
+      "flag_residue": 1,
+      "orientation": "4->1",
+      "source": 4,
+      "target": 1,
+      "tomotope_flag": 69
+    },
+    {
+      "active_slot": 70,
+      "edge_channel": 8,
+      "flag_residue": 2,
+      "orientation": "4->1",
+      "source": 4,
+      "target": 1,
+      "tomotope_flag": 70
+    },
+    {
+      "active_slot": 71,
+      "edge_channel": 8,
+      "flag_residue": 3,
+      "orientation": "4->1",
+      "source": 4,
+      "target": 1,
+      "tomotope_flag": 71
+    },
+    {
+      "active_slot": 72,
+      "edge_channel": 9,
+      "flag_residue": 0,
+      "orientation": "1->5",
+      "source": 1,
+      "target": 5,
+      "tomotope_flag": 72
+    },
+    {
+      "active_slot": 73,
+      "edge_channel": 9,
+      "flag_residue": 1,
+      "orientation": "1->5",
+      "source": 1,
+      "target": 5,
+      "tomotope_flag": 73
+    },
+    {
+      "active_slot": 74,
+      "edge_channel": 9,
+      "flag_residue": 2,
+      "orientation": "1->5",
+      "source": 1,
+      "target": 5,
+      "tomotope_flag": 74
+    },
+    {
+      "active_slot": 75,
+      "edge_channel": 9,
+      "flag_residue": 3,
+      "orientation": "1->5",
+      "source": 1,
+      "target": 5,
+      "tomotope_flag": 75
+    },
+    {
+      "active_slot": 76,
+      "edge_channel": 9,
+      "flag_residue": 0,
+      "orientation": "5->1",
+      "source": 5,
+      "target": 1,
+      "tomotope_flag": 76
+    },
+    {
+      "active_slot": 77,
+      "edge_channel": 9,
+      "flag_residue": 1,
+      "orientation": "5->1",
+      "source": 5,
+      "target": 1,
+      "tomotope_flag": 77
+    },
+    {
+      "active_slot": 78,
+      "edge_channel": 9,
+      "flag_residue": 2,
+      "orientation": "5->1",
+      "source": 5,
+      "target": 1,
+      "tomotope_flag": 78
+    },
+    {
+      "active_slot": 79,
+      "edge_channel": 9,
+      "flag_residue": 3,
+      "orientation": "5->1",
+      "source": 5,
+      "target": 1,
+      "tomotope_flag": 79
+    },
+    {
+      "active_slot": 80,
+      "edge_channel": 10,
+      "flag_residue": 0,
+      "orientation": "1->6",
+      "source": 1,
+      "target": 6,
+      "tomotope_flag": 80
+    },
+    {
+      "active_slot": 81,
+      "edge_channel": 10,
+      "flag_residue": 1,
+      "orientation": "1->6",
+      "source": 1,
+      "target": 6,
+      "tomotope_flag": 81
+    },
+    {
+      "active_slot": 82,
+      "edge_channel": 10,
+      "flag_residue": 2,
+      "orientation": "1->6",
+      "source": 1,
+      "target": 6,
+      "tomotope_flag": 82
+    },
+    {
+      "active_slot": 83,
+      "edge_channel": 10,
+      "flag_residue": 3,
+      "orientation": "1->6",
+      "source": 1,
+      "target": 6,
+      "tomotope_flag": 83
+    },
+    {
+      "active_slot": 84,
+      "edge_channel": 10,
+      "flag_residue": 0,
+      "orientation": "6->1",
+      "source": 6,
+      "target": 1,
+      "tomotope_flag": 84
+    },
+    {
+      "active_slot": 85,
+      "edge_channel": 10,
+      "flag_residue": 1,
+      "orientation": "6->1",
+      "source": 6,
+      "target": 1,
+      "tomotope_flag": 85
+    },
+    {
+      "active_slot": 86,
+      "edge_channel": 10,
+      "flag_residue": 2,
+      "orientation": "6->1",
+      "source": 6,
+      "target": 1,
+      "tomotope_flag": 86
+    },
+    {
+      "active_slot": 87,
+      "edge_channel": 10,
+      "flag_residue": 3,
+      "orientation": "6->1",
+      "source": 6,
+      "target": 1,
+      "tomotope_flag": 87
+    },
+    {
+      "active_slot": 88,
+      "edge_channel": 11,
+      "flag_residue": 0,
+      "orientation": "2->3",
+      "source": 2,
+      "target": 3,
+      "tomotope_flag": 88
+    },
+    {
+      "active_slot": 89,
+      "edge_channel": 11,
+      "flag_residue": 1,
+      "orientation": "2->3",
+      "source": 2,
+      "target": 3,
+      "tomotope_flag": 89
+    },
+    {
+      "active_slot": 90,
+      "edge_channel": 11,
+      "flag_residue": 2,
+      "orientation": "2->3",
+      "source": 2,
+      "target": 3,
+      "tomotope_flag": 90
+    },
+    {
+      "active_slot": 91,
+      "edge_channel": 11,
+      "flag_residue": 3,
+      "orientation": "2->3",
+      "source": 2,
+      "target": 3,
+      "tomotope_flag": 91
+    },
+    {
+      "active_slot": 92,
+      "edge_channel": 11,
+      "flag_residue": 0,
+      "orientation": "3->2",
+      "source": 3,
+      "target": 2,
+      "tomotope_flag": 92
+    },
+    {
+      "active_slot": 93,
+      "edge_channel": 11,
+      "flag_residue": 1,
+      "orientation": "3->2",
+      "source": 3,
+      "target": 2,
+      "tomotope_flag": 93
+    },
+    {
+      "active_slot": 94,
+      "edge_channel": 11,
+      "flag_residue": 2,
+      "orientation": "3->2",
+      "source": 3,
+      "target": 2,
+      "tomotope_flag": 94
+    },
+    {
+      "active_slot": 95,
+      "edge_channel": 11,
+      "flag_residue": 3,
+      "orientation": "3->2",
+      "source": 3,
+      "target": 2,
+      "tomotope_flag": 95
+    },
+    {
+      "active_slot": 96,
+      "edge_channel": 12,
+      "flag_residue": 0,
+      "orientation": "2->4",
+      "source": 2,
+      "target": 4,
+      "tomotope_flag": 96
+    },
+    {
+      "active_slot": 97,
+      "edge_channel": 12,
+      "flag_residue": 1,
+      "orientation": "2->4",
+      "source": 2,
+      "target": 4,
+      "tomotope_flag": 97
+    },
+    {
+      "active_slot": 98,
+      "edge_channel": 12,
+      "flag_residue": 2,
+      "orientation": "2->4",
+      "source": 2,
+      "target": 4,
+      "tomotope_flag": 98
+    },
+    {
+      "active_slot": 99,
+      "edge_channel": 12,
+      "flag_residue": 3,
+      "orientation": "2->4",
+      "source": 2,
+      "target": 4,
+      "tomotope_flag": 99
+    },
+    {
+      "active_slot": 100,
+      "edge_channel": 12,
+      "flag_residue": 0,
+      "orientation": "4->2",
+      "source": 4,
+      "target": 2,
+      "tomotope_flag": 100
+    },
+    {
+      "active_slot": 101,
+      "edge_channel": 12,
+      "flag_residue": 1,
+      "orientation": "4->2",
+      "source": 4,
+      "target": 2,
+      "tomotope_flag": 101
+    },
+    {
+      "active_slot": 102,
+      "edge_channel": 12,
+      "flag_residue": 2,
+      "orientation": "4->2",
+      "source": 4,
+      "target": 2,
+      "tomotope_flag": 102
+    },
+    {
+      "active_slot": 103,
+      "edge_channel": 12,
+      "flag_residue": 3,
+      "orientation": "4->2",
+      "source": 4,
+      "target": 2,
+      "tomotope_flag": 103
+    },
+    {
+      "active_slot": 104,
+      "edge_channel": 13,
+      "flag_residue": 0,
+      "orientation": "2->5",
+      "source": 2,
+      "target": 5,
+      "tomotope_flag": 104
+    },
+    {
+      "active_slot": 105,
+      "edge_channel": 13,
+      "flag_residue": 1,
+      "orientation": "2->5",
+      "source": 2,
+      "target": 5,
+      "tomotope_flag": 105
+    },
+    {
+      "active_slot": 106,
+      "edge_channel": 13,
+      "flag_residue": 2,
+      "orientation": "2->5",
+      "source": 2,
+      "target": 5,
+      "tomotope_flag": 106
+    },
+    {
+      "active_slot": 107,
+      "edge_channel": 13,
+      "flag_residue": 3,
+      "orientation": "2->5",
+      "source": 2,
+      "target": 5,
+      "tomotope_flag": 107
+    },
+    {
+      "active_slot": 108,
+      "edge_channel": 13,
+      "flag_residue": 0,
+      "orientation": "5->2",
+      "source": 5,
+      "target": 2,
+      "tomotope_flag": 108
+    },
+    {
+      "active_slot": 109,
+      "edge_channel": 13,
+      "flag_residue": 1,
+      "orientation": "5->2",
+      "source": 5,
+      "target": 2,
+      "tomotope_flag": 109
+    },
+    {
+      "active_slot": 110,
+      "edge_channel": 13,
+      "flag_residue": 2,
+      "orientation": "5->2",
+      "source": 5,
+      "target": 2,
+      "tomotope_flag": 110
+    },
+    {
+      "active_slot": 111,
+      "edge_channel": 13,
+      "flag_residue": 3,
+      "orientation": "5->2",
+      "source": 5,
+      "target": 2,
+      "tomotope_flag": 111
+    },
+    {
+      "active_slot": 112,
+      "edge_channel": 14,
+      "flag_residue": 0,
+      "orientation": "2->6",
+      "source": 2,
+      "target": 6,
+      "tomotope_flag": 112
+    },
+    {
+      "active_slot": 113,
+      "edge_channel": 14,
+      "flag_residue": 1,
+      "orientation": "2->6",
+      "source": 2,
+      "target": 6,
+      "tomotope_flag": 113
+    },
+    {
+      "active_slot": 114,
+      "edge_channel": 14,
+      "flag_residue": 2,
+      "orientation": "2->6",
+      "source": 2,
+      "target": 6,
+      "tomotope_flag": 114
+    },
+    {
+      "active_slot": 115,
+      "edge_channel": 14,
+      "flag_residue": 3,
+      "orientation": "2->6",
+      "source": 2,
+      "target": 6,
+      "tomotope_flag": 115
+    },
+    {
+      "active_slot": 116,
+      "edge_channel": 14,
+      "flag_residue": 0,
+      "orientation": "6->2",
+      "source": 6,
+      "target": 2,
+      "tomotope_flag": 116
+    },
+    {
+      "active_slot": 117,
+      "edge_channel": 14,
+      "flag_residue": 1,
+      "orientation": "6->2",
+      "source": 6,
+      "target": 2,
+      "tomotope_flag": 117
+    },
+    {
+      "active_slot": 118,
+      "edge_channel": 14,
+      "flag_residue": 2,
+      "orientation": "6->2",
+      "source": 6,
+      "target": 2,
+      "tomotope_flag": 118
+    },
+    {
+      "active_slot": 119,
+      "edge_channel": 14,
+      "flag_residue": 3,
+      "orientation": "6->2",
+      "source": 6,
+      "target": 2,
+      "tomotope_flag": 119
+    },
+    {
+      "active_slot": 120,
+      "edge_channel": 15,
+      "flag_residue": 0,
+      "orientation": "3->4",
+      "source": 3,
+      "target": 4,
+      "tomotope_flag": 120
+    },
+    {
+      "active_slot": 121,
+      "edge_channel": 15,
+      "flag_residue": 1,
+      "orientation": "3->4",
+      "source": 3,
+      "target": 4,
+      "tomotope_flag": 121
+    },
+    {
+      "active_slot": 122,
+      "edge_channel": 15,
+      "flag_residue": 2,
+      "orientation": "3->4",
+      "source": 3,
+      "target": 4,
+      "tomotope_flag": 122
+    },
+    {
+      "active_slot": 123,
+      "edge_channel": 15,
+      "flag_residue": 3,
+      "orientation": "3->4",
+      "source": 3,
+      "target": 4,
+      "tomotope_flag": 123
+    },
+    {
+      "active_slot": 124,
+      "edge_channel": 15,
+      "flag_residue": 0,
+      "orientation": "4->3",
+      "source": 4,
+      "target": 3,
+      "tomotope_flag": 124
+    },
+    {
+      "active_slot": 125,
+      "edge_channel": 15,
+      "flag_residue": 1,
+      "orientation": "4->3",
+      "source": 4,
+      "target": 3,
+      "tomotope_flag": 125
+    },
+    {
+      "active_slot": 126,
+      "edge_channel": 15,
+      "flag_residue": 2,
+      "orientation": "4->3",
+      "source": 4,
+      "target": 3,
+      "tomotope_flag": 126
+    },
+    {
+      "active_slot": 127,
+      "edge_channel": 15,
+      "flag_residue": 3,
+      "orientation": "4->3",
+      "source": 4,
+      "target": 3,
+      "tomotope_flag": 127
+    },
+    {
+      "active_slot": 128,
+      "edge_channel": 16,
+      "flag_residue": 0,
+      "orientation": "3->5",
+      "source": 3,
+      "target": 5,
+      "tomotope_flag": 128
+    },
+    {
+      "active_slot": 129,
+      "edge_channel": 16,
+      "flag_residue": 1,
+      "orientation": "3->5",
+      "source": 3,
+      "target": 5,
+      "tomotope_flag": 129
+    },
+    {
+      "active_slot": 130,
+      "edge_channel": 16,
+      "flag_residue": 2,
+      "orientation": "3->5",
+      "source": 3,
+      "target": 5,
+      "tomotope_flag": 130
+    },
+    {
+      "active_slot": 131,
+      "edge_channel": 16,
+      "flag_residue": 3,
+      "orientation": "3->5",
+      "source": 3,
+      "target": 5,
+      "tomotope_flag": 131
+    },
+    {
+      "active_slot": 132,
+      "edge_channel": 16,
+      "flag_residue": 0,
+      "orientation": "5->3",
+      "source": 5,
+      "target": 3,
+      "tomotope_flag": 132
+    },
+    {
+      "active_slot": 133,
+      "edge_channel": 16,
+      "flag_residue": 1,
+      "orientation": "5->3",
+      "source": 5,
+      "target": 3,
+      "tomotope_flag": 133
+    },
+    {
+      "active_slot": 134,
+      "edge_channel": 16,
+      "flag_residue": 2,
+      "orientation": "5->3",
+      "source": 5,
+      "target": 3,
+      "tomotope_flag": 134
+    },
+    {
+      "active_slot": 135,
+      "edge_channel": 16,
+      "flag_residue": 3,
+      "orientation": "5->3",
+      "source": 5,
+      "target": 3,
+      "tomotope_flag": 135
+    },
+    {
+      "active_slot": 136,
+      "edge_channel": 17,
+      "flag_residue": 0,
+      "orientation": "3->6",
+      "source": 3,
+      "target": 6,
+      "tomotope_flag": 136
+    },
+    {
+      "active_slot": 137,
+      "edge_channel": 17,
+      "flag_residue": 1,
+      "orientation": "3->6",
+      "source": 3,
+      "target": 6,
+      "tomotope_flag": 137
+    },
+    {
+      "active_slot": 138,
+      "edge_channel": 17,
+      "flag_residue": 2,
+      "orientation": "3->6",
+      "source": 3,
+      "target": 6,
+      "tomotope_flag": 138
+    },
+    {
+      "active_slot": 139,
+      "edge_channel": 17,
+      "flag_residue": 3,
+      "orientation": "3->6",
+      "source": 3,
+      "target": 6,
+      "tomotope_flag": 139
+    },
+    {
+      "active_slot": 140,
+      "edge_channel": 17,
+      "flag_residue": 0,
+      "orientation": "6->3",
+      "source": 6,
+      "target": 3,
+      "tomotope_flag": 140
+    },
+    {
+      "active_slot": 141,
+      "edge_channel": 17,
+      "flag_residue": 1,
+      "orientation": "6->3",
+      "source": 6,
+      "target": 3,
+      "tomotope_flag": 141
+    },
+    {
+      "active_slot": 142,
+      "edge_channel": 17,
+      "flag_residue": 2,
+      "orientation": "6->3",
+      "source": 6,
+      "target": 3,
+      "tomotope_flag": 142
+    },
+    {
+      "active_slot": 143,
+      "edge_channel": 17,
+      "flag_residue": 3,
+      "orientation": "6->3",
+      "source": 6,
+      "target": 3,
+      "tomotope_flag": 143
+    },
+    {
+      "active_slot": 144,
+      "edge_channel": 18,
+      "flag_residue": 0,
+      "orientation": "4->5",
+      "source": 4,
+      "target": 5,
+      "tomotope_flag": 144
+    },
+    {
+      "active_slot": 145,
+      "edge_channel": 18,
+      "flag_residue": 1,
+      "orientation": "4->5",
+      "source": 4,
+      "target": 5,
+      "tomotope_flag": 145
+    },
+    {
+      "active_slot": 146,
+      "edge_channel": 18,
+      "flag_residue": 2,
+      "orientation": "4->5",
+      "source": 4,
+      "target": 5,
+      "tomotope_flag": 146
+    },
+    {
+      "active_slot": 147,
+      "edge_channel": 18,
+      "flag_residue": 3,
+      "orientation": "4->5",
+      "source": 4,
+      "target": 5,
+      "tomotope_flag": 147
+    },
+    {
+      "active_slot": 148,
+      "edge_channel": 18,
+      "flag_residue": 0,
+      "orientation": "5->4",
+      "source": 5,
+      "target": 4,
+      "tomotope_flag": 148
+    },
+    {
+      "active_slot": 149,
+      "edge_channel": 18,
+      "flag_residue": 1,
+      "orientation": "5->4",
+      "source": 5,
+      "target": 4,
+      "tomotope_flag": 149
+    },
+    {
+      "active_slot": 150,
+      "edge_channel": 18,
+      "flag_residue": 2,
+      "orientation": "5->4",
+      "source": 5,
+      "target": 4,
+      "tomotope_flag": 150
+    },
+    {
+      "active_slot": 151,
+      "edge_channel": 18,
+      "flag_residue": 3,
+      "orientation": "5->4",
+      "source": 5,
+      "target": 4,
+      "tomotope_flag": 151
+    },
+    {
+      "active_slot": 152,
+      "edge_channel": 19,
+      "flag_residue": 0,
+      "orientation": "4->6",
+      "source": 4,
+      "target": 6,
+      "tomotope_flag": 152
+    },
+    {
+      "active_slot": 153,
+      "edge_channel": 19,
+      "flag_residue": 1,
+      "orientation": "4->6",
+      "source": 4,
+      "target": 6,
+      "tomotope_flag": 153
+    },
+    {
+      "active_slot": 154,
+      "edge_channel": 19,
+      "flag_residue": 2,
+      "orientation": "4->6",
+      "source": 4,
+      "target": 6,
+      "tomotope_flag": 154
+    },
+    {
+      "active_slot": 155,
+      "edge_channel": 19,
+      "flag_residue": 3,
+      "orientation": "4->6",
+      "source": 4,
+      "target": 6,
+      "tomotope_flag": 155
+    },
+    {
+      "active_slot": 156,
+      "edge_channel": 19,
+      "flag_residue": 0,
+      "orientation": "6->4",
+      "source": 6,
+      "target": 4,
+      "tomotope_flag": 156
+    },
+    {
+      "active_slot": 157,
+      "edge_channel": 19,
+      "flag_residue": 1,
+      "orientation": "6->4",
+      "source": 6,
+      "target": 4,
+      "tomotope_flag": 157
+    },
+    {
+      "active_slot": 158,
+      "edge_channel": 19,
+      "flag_residue": 2,
+      "orientation": "6->4",
+      "source": 6,
+      "target": 4,
+      "tomotope_flag": 158
+    },
+    {
+      "active_slot": 159,
+      "edge_channel": 19,
+      "flag_residue": 3,
+      "orientation": "6->4",
+      "source": 6,
+      "target": 4,
+      "tomotope_flag": 159
+    },
+    {
+      "active_slot": 160,
+      "edge_channel": 20,
+      "flag_residue": 0,
+      "orientation": "5->6",
+      "source": 5,
+      "target": 6,
+      "tomotope_flag": 160
+    },
+    {
+      "active_slot": 161,
+      "edge_channel": 20,
+      "flag_residue": 1,
+      "orientation": "5->6",
+      "source": 5,
+      "target": 6,
+      "tomotope_flag": 161
+    },
+    {
+      "active_slot": 162,
+      "edge_channel": 20,
+      "flag_residue": 2,
+      "orientation": "5->6",
+      "source": 5,
+      "target": 6,
+      "tomotope_flag": 162
+    },
+    {
+      "active_slot": 163,
+      "edge_channel": 20,
+      "flag_residue": 3,
+      "orientation": "5->6",
+      "source": 5,
+      "target": 6,
+      "tomotope_flag": 163
+    },
+    {
+      "active_slot": 164,
+      "edge_channel": 20,
+      "flag_residue": 0,
+      "orientation": "6->5",
+      "source": 6,
+      "target": 5,
+      "tomotope_flag": 164
+    },
+    {
+      "active_slot": 165,
+      "edge_channel": 20,
+      "flag_residue": 1,
+      "orientation": "6->5",
+      "source": 6,
+      "target": 5,
+      "tomotope_flag": 165
+    },
+    {
+      "active_slot": 166,
+      "edge_channel": 20,
+      "flag_residue": 2,
+      "orientation": "6->5",
+      "source": 6,
+      "target": 5,
+      "tomotope_flag": 166
+    },
+    {
+      "active_slot": 167,
+      "edge_channel": 20,
+      "flag_residue": 3,
+      "orientation": "6->5",
+      "source": 6,
+      "target": 5,
+      "tomotope_flag": 167
+    }
+  ],
+  "active_slot_rows_sample": [
+    {
+      "active_slot": 0,
+      "edge_channel": 0,
+      "flag_residue": 0,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 0
+    },
+    {
+      "active_slot": 1,
+      "edge_channel": 0,
+      "flag_residue": 1,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 1
+    },
+    {
+      "active_slot": 2,
+      "edge_channel": 0,
+      "flag_residue": 2,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 2
+    },
+    {
+      "active_slot": 3,
+      "edge_channel": 0,
+      "flag_residue": 3,
+      "orientation": "0->1",
+      "source": 0,
+      "target": 1,
+      "tomotope_flag": 3
+    },
+    {
+      "active_slot": 4,
+      "edge_channel": 0,
+      "flag_residue": 0,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 4
+    },
+    {
+      "active_slot": 5,
+      "edge_channel": 0,
+      "flag_residue": 1,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 5
+    },
+    {
+      "active_slot": 6,
+      "edge_channel": 0,
+      "flag_residue": 2,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 6
+    },
+    {
+      "active_slot": 7,
+      "edge_channel": 0,
+      "flag_residue": 3,
+      "orientation": "1->0",
+      "source": 1,
+      "target": 0,
+      "tomotope_flag": 7
+    },
+    {
+      "active_slot": 8,
+      "edge_channel": 1,
+      "flag_residue": 0,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 8
+    },
+    {
+      "active_slot": 9,
+      "edge_channel": 1,
+      "flag_residue": 1,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 9
+    },
+    {
+      "active_slot": 10,
+      "edge_channel": 1,
+      "flag_residue": 2,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 10
+    },
+    {
+      "active_slot": 11,
+      "edge_channel": 1,
+      "flag_residue": 3,
+      "orientation": "0->2",
+      "source": 0,
+      "target": 2,
+      "tomotope_flag": 11
+    },
+    {
+      "active_slot": 12,
+      "edge_channel": 1,
+      "flag_residue": 0,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 12
+    },
+    {
+      "active_slot": 13,
+      "edge_channel": 1,
+      "flag_residue": 1,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 13
+    },
+    {
+      "active_slot": 14,
+      "edge_channel": 1,
+      "flag_residue": 2,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 14
+    },
+    {
+      "active_slot": 15,
+      "edge_channel": 1,
+      "flag_residue": 3,
+      "orientation": "2->0",
+      "source": 2,
+      "target": 0,
+      "tomotope_flag": 15
+    },
+    {
+      "active_slot": 16,
+      "edge_channel": 2,
+      "flag_residue": 0,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 16
+    },
+    {
+      "active_slot": 17,
+      "edge_channel": 2,
+      "flag_residue": 1,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 17
+    },
+    {
+      "active_slot": 18,
+      "edge_channel": 2,
+      "flag_residue": 2,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 18
+    },
+    {
+      "active_slot": 19,
+      "edge_channel": 2,
+      "flag_residue": 3,
+      "orientation": "0->3",
+      "source": 0,
+      "target": 3,
+      "tomotope_flag": 19
+    },
+    {
+      "active_slot": 20,
+      "edge_channel": 2,
+      "flag_residue": 0,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 20
+    },
+    {
+      "active_slot": 21,
+      "edge_channel": 2,
+      "flag_residue": 1,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 21
+    },
+    {
+      "active_slot": 22,
+      "edge_channel": 2,
+      "flag_residue": 2,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 22
+    },
+    {
+      "active_slot": 23,
+      "edge_channel": 2,
+      "flag_residue": 3,
+      "orientation": "3->0",
+      "source": 3,
+      "target": 0,
+      "tomotope_flag": 23
+    }
+  ],
+  "axis_summary": {
+    "crossed_axis_channel": 19,
+    "crossed_axis_edge": [
+      4,
+      6
+    ],
+    "csaszar_fixed_vertex": 6,
+    "szilassi_fixed_face": 4
+  },
+  "boundary": "BT1414 is a port/check ABI over the verified finite toroidal data. It is not a calibrated optical component layout and does not choose a unique metric embedding of the toroidal polyhedra.",
+  "bt": 1414,
+  "checks": {
+    "active_plus_guard_is_full_tomotope_flag_bus": true,
+    "active_slots_are_168": true,
+    "active_split_matches_bt1317": true,
+    "axis_modes_cross_in_one_edge_channel": true,
+    "axis_records_are_bt1318_current_boundary": true,
+    "bt1316_toroidal_lock_loaded": true,
+    "bt1317_pipeline_split_loaded": true,
+    "bt1318_axis_assignment_loaded": true,
+    "bt1412_boundary_loaded": true,
+    "bt1413_compiler_loaded": true,
+    "csaszar_vertex_mode_is_k7": true,
+    "each_channel_has_two_orientations_times_four_residues": true,
+    "guard_band_is_24": true,
+    "guard_band_is_q4_plaquette_shell": true,
+    "oriented_transport_count_is_42": true,
+    "shared_channel_count_is_21": true,
+    "szilassi_face_mode_is_dual_k7": true
+  },
+  "csaszar_vertex_mode": [
+    {
+      "analyzer": "csaszar_vertex_0",
+      "edge_channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": 0,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_1",
+      "edge_channels": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "label": 1,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_2",
+      "edge_channels": [
+        1,
+        6,
+        11,
+        12,
+        13,
+        14
+      ],
+      "label": 2,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_3",
+      "edge_channels": [
+        2,
+        7,
+        11,
+        15,
+        16,
+        17
+      ],
+      "label": 3,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_4",
+      "edge_channels": [
+        3,
+        8,
+        12,
+        15,
+        18,
+        19
+      ],
+      "label": 4,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_5",
+      "edge_channels": [
+        4,
+        9,
+        13,
+        16,
+        18,
+        20
+      ],
+      "label": 5,
+      "mode": "maximal_vertex_adjacency"
+    },
+    {
+      "analyzer": "csaszar_vertex_6",
+      "edge_channels": [
+        5,
+        10,
+        14,
+        17,
+        19,
+        20
+      ],
+      "label": 6,
+      "mode": "maximal_vertex_adjacency"
+    }
+  ],
+  "guard_band_rows": [
+    {
+      "guard_slot": 0,
+      "q4_plaquette": 0,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 168
+    },
+    {
+      "guard_slot": 1,
+      "q4_plaquette": 1,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 169
+    },
+    {
+      "guard_slot": 2,
+      "q4_plaquette": 2,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 170
+    },
+    {
+      "guard_slot": 3,
+      "q4_plaquette": 3,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 171
+    },
+    {
+      "guard_slot": 4,
+      "q4_plaquette": 4,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 172
+    },
+    {
+      "guard_slot": 5,
+      "q4_plaquette": 5,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 173
+    },
+    {
+      "guard_slot": 6,
+      "q4_plaquette": 6,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 174
+    },
+    {
+      "guard_slot": 7,
+      "q4_plaquette": 7,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 175
+    },
+    {
+      "guard_slot": 8,
+      "q4_plaquette": 8,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 176
+    },
+    {
+      "guard_slot": 9,
+      "q4_plaquette": 9,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 177
+    },
+    {
+      "guard_slot": 10,
+      "q4_plaquette": 10,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 178
+    },
+    {
+      "guard_slot": 11,
+      "q4_plaquette": 11,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 179
+    },
+    {
+      "guard_slot": 12,
+      "q4_plaquette": 12,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 180
+    },
+    {
+      "guard_slot": 13,
+      "q4_plaquette": 13,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 181
+    },
+    {
+      "guard_slot": 14,
+      "q4_plaquette": 14,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 182
+    },
+    {
+      "guard_slot": 15,
+      "q4_plaquette": 15,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 183
+    },
+    {
+      "guard_slot": 16,
+      "q4_plaquette": 16,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 184
+    },
+    {
+      "guard_slot": 17,
+      "q4_plaquette": 17,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 185
+    },
+    {
+      "guard_slot": 18,
+      "q4_plaquette": 18,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 186
+    },
+    {
+      "guard_slot": 19,
+      "q4_plaquette": 19,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 187
+    },
+    {
+      "guard_slot": 20,
+      "q4_plaquette": 20,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 188
+    },
+    {
+      "guard_slot": 21,
+      "q4_plaquette": 21,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 189
+    },
+    {
+      "guard_slot": 22,
+      "q4_plaquette": 22,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 190
+    },
+    {
+      "guard_slot": 23,
+      "q4_plaquette": 23,
+      "role": "BT1412_Q4_plaquette_guard",
+      "tomotope_flag": 191
+    }
+  ],
+  "physical_reading": "One 21-channel edge bus supports two analyzer modes. Csaszar mode asks which vertex-neighborhood channel fired; Szilassi mode asks the dual face-neighborhood question. The same edge channel is read in either mode, while the 24 remaining flags form the Q4 plaquette guard band.",
+  "port_summary": {
+    "active_slots": 168,
+    "edge_channels": 21,
+    "full_flag_bus": 192,
+    "guard_slots": 24,
+    "identity": "21 edges * 2 orientations * 4 residues + 24 guard flags = 192",
+    "oriented_transports": 42,
+    "residues_per_orientation": 4
+  },
+  "shared_edge_channels": [
+    {
+      "edge_channel": 0,
+      "endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_channel": 1,
+      "endpoints": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge_channel": 2,
+      "endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_channel": 3,
+      "endpoints": [
+        0,
+        4
+      ]
+    },
+    {
+      "edge_channel": 4,
+      "endpoints": [
+        0,
+        5
+      ]
+    },
+    {
+      "edge_channel": 5,
+      "endpoints": [
+        0,
+        6
+      ]
+    },
+    {
+      "edge_channel": 6,
+      "endpoints": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_channel": 7,
+      "endpoints": [
+        1,
+        3
+      ]
+    },
+    {
+      "edge_channel": 8,
+      "endpoints": [
+        1,
+        4
+      ]
+    },
+    {
+      "edge_channel": 9,
+      "endpoints": [
+        1,
+        5
+      ]
+    },
+    {
+      "edge_channel": 10,
+      "endpoints": [
+        1,
+        6
+      ]
+    },
+    {
+      "edge_channel": 11,
+      "endpoints": [
+        2,
+        3
+      ]
+    },
+    {
+      "edge_channel": 12,
+      "endpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "edge_channel": 13,
+      "endpoints": [
+        2,
+        5
+      ]
+    },
+    {
+      "edge_channel": 14,
+      "endpoints": [
+        2,
+        6
+      ]
+    },
+    {
+      "edge_channel": 15,
+      "endpoints": [
+        3,
+        4
+      ]
+    },
+    {
+      "edge_channel": 16,
+      "endpoints": [
+        3,
+        5
+      ]
+    },
+    {
+      "edge_channel": 17,
+      "endpoints": [
+        3,
+        6
+      ]
+    },
+    {
+      "edge_channel": 18,
+      "endpoints": [
+        4,
+        5
+      ]
+    },
+    {
+      "edge_channel": 19,
+      "endpoints": [
+        4,
+        6
+      ]
+    },
+    {
+      "edge_channel": 20,
+      "endpoints": [
+        5,
+        6
+      ]
+    }
+  ],
+  "szilassi_face_mode": [
+    {
+      "analyzer": "szilassi_face_0",
+      "edge_channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": 0,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_1",
+      "edge_channels": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "label": 1,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_2",
+      "edge_channels": [
+        1,
+        6,
+        11,
+        12,
+        13,
+        14
+      ],
+      "label": 2,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_3",
+      "edge_channels": [
+        2,
+        7,
+        11,
+        15,
+        16,
+        17
+      ],
+      "label": 3,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_4",
+      "edge_channels": [
+        3,
+        8,
+        12,
+        15,
+        18,
+        19
+      ],
+      "label": 4,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_5",
+      "edge_channels": [
+        4,
+        9,
+        13,
+        16,
+        18,
+        20
+      ],
+      "label": 5,
+      "mode": "maximal_face_adjacency"
+    },
+    {
+      "analyzer": "szilassi_face_6",
+      "edge_channels": [
+        5,
+        10,
+        14,
+        17,
+        19,
+        20
+      ],
+      "label": 6,
+      "mode": "maximal_face_adjacency"
+    }
+  ],
+  "title": "Csaszar/Szilassi dual physical port",
+  "verified": true
+}

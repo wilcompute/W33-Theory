@@ -3443,6 +3443,104 @@ BT1412 is an ABI certificate, not a waveguide layout, a calibrated oscillator,
 or a new snake-code optimum.  (Witness:
 \path{tools/bt1412_toroidal_q4_oscillator_boundary.py}.)
 
+\subsection{BT1413 Q4 plaquette-tomotope compiler}
+
+BT1413 makes the \(24\)-plaquette boundary executable.  BT1363 had already
+shown that Q4 face-edge incidence modulo the antipodal translation is the
+tomotope/Reye medial layer, with \(48\) middle blocks.  BT1371 had already
+shown that the \(192\) tomotope flags are a bijective Q6 edge address table.
+The BT1413 compiler is just the composed map:
+\[
+  24\ \text{Q4 plaquettes}\cdot4\ \text{edge incidences}/2
+  =48\ \text{middle blocks},
+\]
+\[
+  48\ \text{middle blocks}\cdot4\ \text{flag residues}
+  =192\ \text{tomotope/Q6 flags}.
+\]
+The generated certificate checks that each middle block has exactly two Q4
+lifts, that the three ternary sheets carry \(64\) flags each, that each sheet
+hits all \(16\) tomotope face labels exactly once at block level, and that every
+flag is a one-bit Q6 edge address.  The result is not an optical layout.  It is
+the local address compiler that lets the toroidal Q4 shell talk directly to the
+tomotope/Q6 packet ABI.
+
+\subsection{BT1414 Csaszar-Szilassi dual port}
+
+BT1414 uses the active/ground split that BT1317 already found in the tomotope
+packet:
+\[
+  192=168+24.
+\]
+The active part is now a concrete dual analyzer port:
+\[
+  21\ \text{shared toroidal edge channels}\cdot
+  2\ \text{orientations}\cdot4\ \text{residues}=168.
+\]
+In Cs\'asz\'ar mode the seven analyzers are vertex-neighborhood checks: each
+vertex of \(K_7\) sees six incident edge channels, and each channel is seen by
+two vertex analyzers.  In Szilassi mode the same \(21\) channels are read as the
+dual complete face-adjacency checks: seven face analyzers, again six channels
+each, again two analyzers per channel.  The current BT1318 metric-axis records
+fix Cs\'asz\'ar vertex \(6\) and Szilassi face \(4\), so the crossed calibration
+channel is the shared edge \(\{4,6\}\).
+
+The remaining \(24\) flags are not discarded.  They are the BT1412/BT1413 Q4
+plaquette guard band.  Thus the local physical port has a sharp shape:
+\[
+  21\cdot2\cdot4\quad\text{active dual-boundary slots}
+  \quad+\quad24\quad\text{Q4 plaquette guards}.
+\]
+
+\subsection{BT1415 even-projection Steinberg/CSS syndrome ledger}
+
+BT1415 finishes the front end by making the every-other Q4 projection into a
+check ledger.  The allowed clock states are the eight even words
+\[
+  0,\ 6,\ 3,\ 5,\ 9,\ 15,\ 10,\ 12.
+\]
+They form a binary distance-\(2\) parity layer: every allowed word has parity
+zero, and any one-bit Q4 clock fault flips the syndrome bit.  This check is
+binary front-end logic; the memory register is still the existing
+\(\mathbb F_3\) Steinberg/CSS object.
+
+BT1375 supplies the memory clock.  The central \(C_3\) action on the Steinberg
+register has \(27\) three-cycles and nilpotent rank profile
+\[
+  54,\ 27,\ 0.
+\]
+Therefore the exact syndrome ledger is
+\[
+  27\ \text{Steinberg central cycles}\cdot
+  8\ \text{even Q4 states}=216,
+\]
+and the BT1414 guard band completes the existing W33 CSS edge ledger:
+\[
+  216+24=240.
+\]
+This is the first complete local front end in the paper:
+\begin{align*}
+  \text{Q4 plaquettes}&\rightarrow \text{tomotope/Q6 flags}\\
+  &\rightarrow \text{Cs\'asz\'ar/Szilassi port}\\
+  &\rightarrow \text{even-parity syndrome}\\
+  &\rightarrow \text{Steinberg/CSS edge ledger}.
+\end{align*}
+
+I also checked the external Golden Quartic/Moebius-ball electron line of work.
+Otto's 2022 paper connects a golden quartic, icosahedral coefficients, chirality,
+and a proposed Moebius-ball electron geometry \cite{otto-golden-moebius}; his
+2025 preprint asks whether AI can compare such extended electron models
+\cite{otto-ai-electron-model}.  A 2025 review frames this family as
+Zitterbewegung/field-dynamics modelling rather than established particle
+physics \cite{fleury-zitter-review}.  The holonet use is deliberately
+conservative: closed-loop topology and chirality are good design warnings, but
+the repo's exact quartic frontier remains the two independent \(D_4\) quartic
+atoms in the local minimal-magic audit.  No electron mass, spin, or waveguide
+claim depends on the Moebius-ball model.  (Witnesses:
+\path{tools/bt1413_q4_plaquette_tomotope_face_compiler.py},
+\path{tools/bt1414_csaszar_szilassi_dual_physical_port.py}, and
+\path{tools/bt1415_even_projection_steinberg_syndrome_layer.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
@@ -3706,6 +3804,19 @@ step creates energy.)
   Optimal design for universal multiport interferometers,
   \emph{Optica} \textbf{3}, 1460 (2016),
   \href{https://arxiv.org/abs/1603.08788}{arXiv:1603.08788}.
+\bibitem{otto-golden-moebius} H.~H.~Otto,
+  Golden Quartic Polynomial and Moebius-Ball Electron,
+  \emph{Journal of Applied Mathematics and Physics} \textbf{10},
+  1785--1812 (2022),
+  \href{https://doi.org/10.4236/jamp.2022.105124}{doi:10.4236/jamp.2022.105124}.
+\bibitem{otto-ai-electron-model} H.~H.~Otto,
+  Can Artificial Intelligence Help to Verify the Most Probable Electron
+  Structure Model? ResearchGate preprint (March 2025),
+  \href{https://www.researchgate.net/publication/389905106_Can_Artificial_Intelligence_Help_to_Verify_the_Most_Probable_Electron_Structure_Model}{ResearchGate}.
+\bibitem{fleury-zitter-review} M.~J.~J.~Fleury and O.~Rousselle,
+  Critical Review of Zitterbewegung Electron Models,
+  \emph{Symmetry} \textbf{17}, 360 (2025),
+  \href{https://www.mdpi.com/2073-8994/17/3/360}{MDPI}.
 \end{thebibliography}
 
 \end{document}

@@ -1,0 +1,4956 @@
+{
+  "boundary": "BT1413 is a finite address compiler. It proves that every Q4 plaquette incidence lowers to the existing 192-row tomotope/Q6 flag ABI. It does not supply waveguide geometry or detector timing.",
+  "bridge_identities": {
+    "bt1363": "24 Q4 faces and 32 Q4 edges give 48 antipodal middle blocks",
+    "bt1371": "tomotope_flag is a bijective Q6 edge address",
+    "bt1412": "24 plaquettes carry the 1/6 oscillator aperture and 21-edge toroidal boundary"
+  },
+  "bt": 1413,
+  "checks": {
+    "antipodal_middle_blocks_are_48": true,
+    "bt1363_medial_descent_loaded": true,
+    "bt1371_q6_address_table_loaded": true,
+    "bt1412_boundary_loaded": true,
+    "bt1412_one_sixth_aperture_survives": true,
+    "each_middle_block_has_two_q4_lifts": true,
+    "each_q4_lift_touches_four_blocks": true,
+    "each_sheet_hits_all_16_tomotope_face_labels": true,
+    "each_unique_flag_has_two_q4_plaquette_lifts": true,
+    "flag_table_is_full_192_bijection": true,
+    "four_flag_residues_per_middle_block": true,
+    "q4_face_edge_lift_count_is_96": true,
+    "q4_has_24_plaquettes": true,
+    "q6_addresses_are_one_bit_edges": true,
+    "q6_edge_addresses_are_bijective": true,
+    "ternary_sheets_are_three_64_flag_sheets": true
+  },
+  "compiler_summary": {
+    "antipodal_middle_blocks": 48,
+    "formula": "24 plaquettes * 4 edge incidences / 2 antipodal lifts * 4 residues = 192 flags",
+    "q4_face_edge_lifts": 96,
+    "q4_plaquettes": 24,
+    "q6_edges": 192,
+    "tomotope_flags": 192
+  },
+  "flag_rows": [
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 0,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000001",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 0
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 1,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000010",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 1
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 176,
+      "q6_endpoint_a": "110101",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 2
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 165,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "110101",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 3
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 110,
+      "q6_endpoint_a": "011110",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 4
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 60,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "011110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 5
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 188,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 6
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 189,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 7
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 8,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "001001",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 8
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 42,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "001101",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 9
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 15,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "100010",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 10
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 124,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "110010",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 11
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 59,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 12
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 13
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 169,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "111010",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 14
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 186,
+      "q6_endpoint_a": "111010",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 15
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 72,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "110001",
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 16
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 9,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "010001",
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 17
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 167,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "110011",
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 18
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 164,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "110011",
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 19
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 30,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "001110",
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 20
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 12,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "000110",
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 21
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "101101",
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 22
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 156,
+      "q6_endpoint_a": "101101",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 23
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 6,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "000011",
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 24
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 11,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "000011",
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 25
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 184,
+      "q6_endpoint_a": "111001",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 26
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 166,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "111001",
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 27
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 158,
+      "q6_endpoint_a": "101110",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 28
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 61,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "101110",
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 29
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 17,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "001011",
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 30
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 16,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "000111",
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 31
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 183,
+      "q6_endpoint_a": "111001",
+      "q6_endpoint_b": "111011",
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 32
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 180,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111001",
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 33
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 83,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "110100",
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 34
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 23,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "010100",
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 35
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 80,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "010101",
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 36
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "010110",
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 37
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 148,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "101110",
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 38
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 136,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "101110",
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 39
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 146,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "111001",
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 40
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 98,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "111001",
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 41
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 157,
+      "q6_endpoint_a": "101110",
+      "q6_endpoint_b": "101111",
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 42
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 153,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "101110",
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 43
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "q6_endpoint_a": "010100",
+      "q6_endpoint_b": "011100",
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 44
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 66,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010100",
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 45
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 19,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "100011",
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 46
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 18,
+      "q6_endpoint_a": "000011",
+      "q6_endpoint_b": "010011",
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 47
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 74,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "010110",
+      "ternary_sheet": 0,
+      "tomotope_block": 12,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 48
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 75,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "011010",
+      "ternary_sheet": 0,
+      "tomotope_block": 12,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 49
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 140,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101001",
+      "ternary_sheet": 0,
+      "tomotope_block": 12,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 50
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 141,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101010",
+      "ternary_sheet": 0,
+      "tomotope_block": 12,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 51
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 27,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "010101",
+      "ternary_sheet": 1,
+      "tomotope_block": 13,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 52
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 28,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "100101",
+      "ternary_sheet": 1,
+      "tomotope_block": 13,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 53
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 179,
+      "q6_endpoint_a": "110111",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 1,
+      "tomotope_block": 13,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 54
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 187,
+      "q6_endpoint_a": "111011",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 1,
+      "tomotope_block": 13,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 55
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 25,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "000111",
+      "ternary_sheet": 1,
+      "tomotope_block": 14,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 56
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 20,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "000101",
+      "ternary_sheet": 1,
+      "tomotope_block": 14,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 57
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "101000",
+      "ternary_sheet": 1,
+      "tomotope_block": 14,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 58
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 143,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "111000",
+      "ternary_sheet": 1,
+      "tomotope_block": 14,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 59
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 73,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "010011",
+      "ternary_sheet": 0,
+      "tomotope_block": 15,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 60
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 65,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010010",
+      "ternary_sheet": 0,
+      "tomotope_block": 15,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 61
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 115,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "101000",
+      "ternary_sheet": 0,
+      "tomotope_block": 15,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 62
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "q6_endpoint_a": "101000",
+      "q6_endpoint_b": "101100",
+      "ternary_sheet": 0,
+      "tomotope_block": 15,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 63
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 111,
+      "q6_endpoint_a": "011111",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 2,
+      "tomotope_block": 16,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 64
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 159,
+      "q6_endpoint_a": "101111",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 2,
+      "tomotope_block": 16,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 65
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 190,
+      "q6_endpoint_a": "111101",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 2,
+      "tomotope_block": 16,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 66
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 191,
+      "q6_endpoint_a": "111110",
+      "q6_endpoint_b": "111111",
+      "ternary_sheet": 2,
+      "tomotope_block": 16,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 67
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 7,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "000101",
+      "ternary_sheet": 2,
+      "tomotope_block": 17,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 68
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 26,
+      "q6_endpoint_a": "000101",
+      "q6_endpoint_b": "001101",
+      "ternary_sheet": 2,
+      "tomotope_block": 17,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 69
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 14,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "010010",
+      "ternary_sheet": 2,
+      "tomotope_block": 17,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 70
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 76,
+      "q6_endpoint_a": "010010",
+      "q6_endpoint_b": "110010",
+      "ternary_sheet": 2,
+      "tomotope_block": 17,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 71
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 84,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "010111",
+      "ternary_sheet": 2,
+      "tomotope_block": 18,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 72
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "010111",
+      "ternary_sheet": 2,
+      "tomotope_block": 18,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 73
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 123,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "101010",
+      "ternary_sheet": 2,
+      "tomotope_block": 18,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 74
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 122,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "100110",
+      "ternary_sheet": 2,
+      "tomotope_block": 18,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 75
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 44,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "101001",
+      "ternary_sheet": 2,
+      "tomotope_block": 19,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 76
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 43,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "011001",
+      "ternary_sheet": 2,
+      "tomotope_block": 19,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 77
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 88,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "011110",
+      "ternary_sheet": 2,
+      "tomotope_block": 19,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 78
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 100,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "011110",
+      "ternary_sheet": 2,
+      "tomotope_block": 19,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 79
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 144,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "101011",
+      "ternary_sheet": 0,
+      "tomotope_block": 20,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 80
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 147,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "101011",
+      "ternary_sheet": 0,
+      "tomotope_block": 20,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 81
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 86,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "110101",
+      "ternary_sheet": 0,
+      "tomotope_block": 20,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 82
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "110101",
+      "ternary_sheet": 0,
+      "tomotope_block": 20,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flag": 83
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "101101",
+      "ternary_sheet": 1,
+      "tomotope_block": 21,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 84
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 145,
+      "q6_endpoint_a": "101001",
+      "q6_endpoint_b": "101101",
+      "ternary_sheet": 1,
+      "tomotope_block": 21,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 85
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 93,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011010",
+      "ternary_sheet": 1,
+      "tomotope_block": 21,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 86
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 92,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011001",
+      "ternary_sheet": 1,
+      "tomotope_block": 21,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flag": 87
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 32,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "100110",
+      "ternary_sheet": 0,
+      "tomotope_block": 22,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 88
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 31,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "010110",
+      "ternary_sheet": 0,
+      "tomotope_block": 22,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 89
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 71,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "011001",
+      "ternary_sheet": 0,
+      "tomotope_block": 22,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 90
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 70,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "010101",
+      "ternary_sheet": 0,
+      "tomotope_block": 22,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 91
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 129,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "100110",
+      "ternary_sheet": 1,
+      "tomotope_block": 23,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 92
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 128,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "100101",
+      "ternary_sheet": 1,
+      "tomotope_block": 23,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 93
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 101,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "111010",
+      "ternary_sheet": 1,
+      "tomotope_block": 23,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 94
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 149,
+      "q6_endpoint_a": "101010",
+      "q6_endpoint_b": "111010",
+      "ternary_sheet": 1,
+      "tomotope_block": 23,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 95
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 22,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "001100",
+      "ternary_sheet": 0,
+      "tomotope_block": 24,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 96
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 38,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001100",
+      "ternary_sheet": 0,
+      "tomotope_block": 24,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 97
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 173,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "110110",
+      "ternary_sheet": 0,
+      "tomotope_block": 24,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 98
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 177,
+      "q6_endpoint_a": "110110",
+      "q6_endpoint_b": "110111",
+      "ternary_sheet": 0,
+      "tomotope_block": 24,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 99
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 103,
+      "q6_endpoint_a": "011011",
+      "q6_endpoint_b": "111011",
+      "ternary_sheet": 1,
+      "tomotope_block": 25,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 100
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 50,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "011011",
+      "ternary_sheet": 1,
+      "tomotope_block": 25,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 101
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 53,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "001110",
+      "ternary_sheet": 1,
+      "tomotope_block": 25,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 102
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 52,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "001101",
+      "ternary_sheet": 1,
+      "tomotope_block": 25,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 103
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 168,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "110110",
+      "ternary_sheet": 1,
+      "tomotope_block": 26,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 104
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 178,
+      "q6_endpoint_a": "110110",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 1,
+      "tomotope_block": 26,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 105
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 120,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "110001",
+      "ternary_sheet": 1,
+      "tomotope_block": 26,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 106
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 10,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "100001",
+      "ternary_sheet": 1,
+      "tomotope_block": 26,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 107
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 78,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "011011",
+      "ternary_sheet": 0,
+      "tomotope_block": 27,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 108
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 102,
+      "q6_endpoint_a": "011011",
+      "q6_endpoint_b": "011111",
+      "ternary_sheet": 0,
+      "tomotope_block": 27,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 109
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 112,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100001",
+      "ternary_sheet": 0,
+      "tomotope_block": 27,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 110
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 117,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "100011",
+      "ternary_sheet": 0,
+      "tomotope_block": 27,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 111
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "101100",
+      "ternary_sheet": 2,
+      "tomotope_block": 28,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 112
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "q6_endpoint_a": "001100",
+      "q6_endpoint_b": "011100",
+      "ternary_sheet": 2,
+      "tomotope_block": 28,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 113
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 118,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "100101",
+      "ternary_sheet": 2,
+      "tomotope_block": 28,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 114
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 119,
+      "q6_endpoint_a": "100001",
+      "q6_endpoint_b": "101001",
+      "ternary_sheet": 2,
+      "tomotope_block": 28,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 115
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 99,
+      "q6_endpoint_a": "011010",
+      "q6_endpoint_b": "011011",
+      "ternary_sheet": 2,
+      "tomotope_block": 29,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 116
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 96,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "011011",
+      "ternary_sheet": 2,
+      "tomotope_block": 29,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 117
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 137,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "110110",
+      "ternary_sheet": 2,
+      "tomotope_block": 29,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 118
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 89,
+      "q6_endpoint_a": "010110",
+      "q6_endpoint_b": "110110",
+      "ternary_sheet": 2,
+      "tomotope_block": 29,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 119
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 161,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110010",
+      "ternary_sheet": 2,
+      "tomotope_block": 30,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 120
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 160,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110001",
+      "ternary_sheet": 2,
+      "tomotope_block": 30,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 121
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 46,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "001110",
+      "ternary_sheet": 2,
+      "tomotope_block": 30,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 122
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 13,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "001010",
+      "ternary_sheet": 2,
+      "tomotope_block": 30,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 123
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 57,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "011101",
+      "ternary_sheet": 2,
+      "tomotope_block": 31,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 124
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 108,
+      "q6_endpoint_a": "011101",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 2,
+      "tomotope_block": 31,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 125
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 97,
+      "q6_endpoint_a": "011001",
+      "q6_endpoint_b": "011101",
+      "ternary_sheet": 2,
+      "tomotope_block": 31,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 126
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 85,
+      "q6_endpoint_a": "010101",
+      "q6_endpoint_b": "011101",
+      "ternary_sheet": 2,
+      "tomotope_block": 31,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 127
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 135,
+      "q6_endpoint_a": "100110",
+      "q6_endpoint_b": "100111",
+      "ternary_sheet": 0,
+      "tomotope_block": 32,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 128
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 132,
+      "q6_endpoint_a": "100101",
+      "q6_endpoint_b": "100111",
+      "ternary_sheet": 0,
+      "tomotope_block": 32,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 129
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 47,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "011010",
+      "ternary_sheet": 0,
+      "tomotope_block": 32,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 130
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 48,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "101010",
+      "ternary_sheet": 0,
+      "tomotope_block": 32,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flag": 131
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 163,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "111000",
+      "ternary_sheet": 1,
+      "tomotope_block": 33,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 132
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 162,
+      "q6_endpoint_a": "110000",
+      "q6_endpoint_b": "110100",
+      "ternary_sheet": 1,
+      "tomotope_block": 33,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 133
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001010",
+      "ternary_sheet": 1,
+      "tomotope_block": 33,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 134
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "q6_endpoint_a": "001010",
+      "q6_endpoint_b": "001011",
+      "ternary_sheet": 1,
+      "tomotope_block": 33,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flag": 135
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 35,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "100111",
+      "ternary_sheet": 0,
+      "tomotope_block": 34,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 136
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 139,
+      "q6_endpoint_a": "100111",
+      "q6_endpoint_b": "110111",
+      "ternary_sheet": 0,
+      "tomotope_block": 34,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 137
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 138,
+      "q6_endpoint_a": "100111",
+      "q6_endpoint_b": "101111",
+      "ternary_sheet": 0,
+      "tomotope_block": 34,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 138
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 125,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "100111",
+      "ternary_sheet": 0,
+      "tomotope_block": 34,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 139
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 104,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "011101",
+      "ternary_sheet": 1,
+      "tomotope_block": 35,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 140
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 107,
+      "q6_endpoint_a": "011101",
+      "q6_endpoint_b": "011111",
+      "ternary_sheet": 1,
+      "tomotope_block": 35,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 141
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 68,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "110000",
+      "ternary_sheet": 1,
+      "tomotope_block": 35,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 142
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 116,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "110000",
+      "ternary_sheet": 1,
+      "tomotope_block": 35,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 143
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 2,
+      "tomotope_block": 36,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 144
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 33,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 2,
+      "tomotope_block": 36,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 145
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 185,
+      "q6_endpoint_a": "111010",
+      "q6_endpoint_b": "111011",
+      "ternary_sheet": 2,
+      "tomotope_block": 36,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 146
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 181,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111010",
+      "ternary_sheet": 2,
+      "tomotope_block": 36,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 147
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 131,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "110100",
+      "ternary_sheet": 2,
+      "tomotope_block": 37,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 148
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 24,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "100100",
+      "ternary_sheet": 2,
+      "tomotope_block": 37,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 149
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 170,
+      "q6_endpoint_a": "110011",
+      "q6_endpoint_b": "110111",
+      "ternary_sheet": 2,
+      "tomotope_block": 37,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 150
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 171,
+      "q6_endpoint_a": "110011",
+      "q6_endpoint_b": "111011",
+      "ternary_sheet": 2,
+      "tomotope_block": 37,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flag": 151
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 29,
+      "q6_endpoint_a": "000110",
+      "q6_endpoint_b": "000111",
+      "ternary_sheet": 2,
+      "tomotope_block": 38,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 152
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 21,
+      "q6_endpoint_a": "000100",
+      "q6_endpoint_b": "000110",
+      "ternary_sheet": 2,
+      "tomotope_block": 38,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 153
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 39,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "011000",
+      "ternary_sheet": 2,
+      "tomotope_block": 38,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 154
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 95,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "111000",
+      "ternary_sheet": 2,
+      "tomotope_block": 38,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flag": 155
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 2,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000100",
+      "ternary_sheet": 2,
+      "tomotope_block": 39,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 156
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 3,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "001000",
+      "ternary_sheet": 2,
+      "tomotope_block": 39,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 157
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 172,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "110101",
+      "ternary_sheet": 2,
+      "tomotope_block": 39,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 158
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "q6_endpoint_a": "110101",
+      "q6_endpoint_b": "110111",
+      "ternary_sheet": 2,
+      "tomotope_block": 39,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 159
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 151,
+      "q6_endpoint_a": "101011",
+      "q6_endpoint_b": "111011",
+      "ternary_sheet": 1,
+      "tomotope_block": 40,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 160
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 51,
+      "q6_endpoint_a": "001011",
+      "q6_endpoint_b": "101011",
+      "ternary_sheet": 1,
+      "tomotope_block": 40,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 161
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 182,
+      "q6_endpoint_a": "111000",
+      "q6_endpoint_b": "111100",
+      "ternary_sheet": 1,
+      "tomotope_block": 40,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 162
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 174,
+      "q6_endpoint_a": "110100",
+      "q6_endpoint_b": "111100",
+      "ternary_sheet": 1,
+      "tomotope_block": 40,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 163
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 36,
+      "q6_endpoint_a": "001000",
+      "q6_endpoint_b": "001001",
+      "ternary_sheet": 0,
+      "tomotope_block": 41,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 164
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 41,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "001011",
+      "ternary_sheet": 0,
+      "tomotope_block": 41,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 165
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 34,
+      "q6_endpoint_a": "000111",
+      "q6_endpoint_b": "010111",
+      "ternary_sheet": 0,
+      "tomotope_block": 41,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 166
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 91,
+      "q6_endpoint_a": "010111",
+      "q6_endpoint_b": "110111",
+      "ternary_sheet": 0,
+      "tomotope_block": 41,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flag": 167
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 155,
+      "q6_endpoint_a": "101101",
+      "q6_endpoint_b": "101111",
+      "ternary_sheet": 0,
+      "tomotope_block": 42,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 168
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 152,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "101101",
+      "ternary_sheet": 0,
+      "tomotope_block": 42,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 169
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 94,
+      "q6_endpoint_a": "011000",
+      "q6_endpoint_b": "011100",
+      "ternary_sheet": 0,
+      "tomotope_block": 42,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 170
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 67,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "011000",
+      "ternary_sheet": 0,
+      "tomotope_block": 42,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flag": 171
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 127,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "110011",
+      "ternary_sheet": 1,
+      "tomotope_block": 43,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 172
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 79,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "110011",
+      "ternary_sheet": 1,
+      "tomotope_block": 43,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 173
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 69,
+      "q6_endpoint_a": "010001",
+      "q6_endpoint_b": "010011",
+      "ternary_sheet": 1,
+      "tomotope_block": 43,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 174
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 64,
+      "q6_endpoint_a": "010000",
+      "q6_endpoint_b": "010001",
+      "ternary_sheet": 1,
+      "tomotope_block": 43,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 175
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 114,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100100",
+      "ternary_sheet": 0,
+      "tomotope_block": 44,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 176
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 130,
+      "q6_endpoint_a": "100100",
+      "q6_endpoint_b": "101100",
+      "ternary_sheet": 0,
+      "tomotope_block": 44,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 177
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 62,
+      "q6_endpoint_a": "001111",
+      "q6_endpoint_b": "011111",
+      "ternary_sheet": 0,
+      "tomotope_block": 44,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 178
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 63,
+      "q6_endpoint_a": "001111",
+      "q6_endpoint_b": "101111",
+      "ternary_sheet": 0,
+      "tomotope_block": 44,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flag": 179
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "q6_endpoint_a": "010011",
+      "q6_endpoint_b": "010111",
+      "ternary_sheet": 1,
+      "tomotope_block": 45,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 180
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 90,
+      "q6_endpoint_a": "010111",
+      "q6_endpoint_b": "011111",
+      "ternary_sheet": 1,
+      "tomotope_block": 45,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 181
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 113,
+      "q6_endpoint_a": "100000",
+      "q6_endpoint_b": "100010",
+      "ternary_sheet": 1,
+      "tomotope_block": 45,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 182
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 0,
+      "q6_edge_index": 121,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "100011",
+      "ternary_sheet": 1,
+      "tomotope_block": 45,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flag": 183
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 154,
+      "q6_endpoint_a": "101100",
+      "q6_endpoint_b": "111100",
+      "ternary_sheet": 1,
+      "tomotope_block": 46,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 184
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 106,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "111100",
+      "ternary_sheet": 1,
+      "tomotope_block": 46,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 185
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 150,
+      "q6_endpoint_a": "101011",
+      "q6_endpoint_b": "101111",
+      "ternary_sheet": 1,
+      "tomotope_block": 46,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 186
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 3,
+      "q6_edge_index": 126,
+      "q6_endpoint_a": "100011",
+      "q6_endpoint_b": "101011",
+      "ternary_sheet": 1,
+      "tomotope_block": 46,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flag": 187
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 105,
+      "q6_endpoint_a": "011100",
+      "q6_endpoint_b": "011110",
+      "ternary_sheet": 0,
+      "tomotope_block": 47,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 188
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 109,
+      "q6_endpoint_a": "011110",
+      "q6_endpoint_b": "011111",
+      "ternary_sheet": 0,
+      "tomotope_block": 47,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 189
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 4,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "010000",
+      "ternary_sheet": 0,
+      "tomotope_block": 47,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 190
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 5,
+      "q6_edge_index": 5,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "100000",
+      "ternary_sheet": 0,
+      "tomotope_block": 47,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flag": 191
+    }
+  ],
+  "flag_rows_sample": [
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 0,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000001",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 0
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 1,
+      "q6_endpoint_a": "000000",
+      "q6_endpoint_b": "000010",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 1
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 176,
+      "q6_endpoint_a": "110101",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 2
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 165,
+      "q6_endpoint_a": "110001",
+      "q6_endpoint_b": "110101",
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flag": 3
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 110,
+      "q6_endpoint_a": "011110",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 4
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 60,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "011110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 5
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 188,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111101",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 6
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 1,
+      "q6_edge_index": 189,
+      "q6_endpoint_a": "111100",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flag": 7
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 8,
+      "q6_endpoint_a": "000001",
+      "q6_endpoint_b": "001001",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 8
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 42,
+      "q6_endpoint_a": "001001",
+      "q6_endpoint_b": "001101",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 9
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 15,
+      "q6_endpoint_a": "000010",
+      "q6_endpoint_b": "100010",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 10
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 4,
+      "q6_edge_index": 124,
+      "q6_endpoint_a": "100010",
+      "q6_endpoint_b": "110010",
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flag": 11
+    },
+    {
+      "flag_residue": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 59,
+      "q6_endpoint_a": "001110",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 12
+    },
+    {
+      "flag_residue": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "q6_endpoint_a": "001101",
+      "q6_endpoint_b": "001111",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 13
+    },
+    {
+      "flag_residue": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 169,
+      "q6_endpoint_a": "110010",
+      "q6_endpoint_b": "111010",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 14
+    },
+    {
+      "flag_residue": 3,
+      "q6_direction": 2,
+      "q6_edge_index": 186,
+      "q6_endpoint_a": "111010",
+      "q6_endpoint_b": "111110",
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flag": 15
+    }
+  ],
+  "middle_blocks": [
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flags": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flags": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flags": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flags": [
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flags": [
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flags": [
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flags": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flags": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flags": [
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 12,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flags": [
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 13,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flags": [
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 14,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flags": [
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 15,
+      "tomotope_edge_label_from_q4_face_pair": 3,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flags": [
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 16,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flags": [
+        64,
+        65,
+        66,
+        67
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 17,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flags": [
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 18,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flags": [
+        72,
+        73,
+        74,
+        75
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 19,
+      "tomotope_edge_label_from_q4_face_pair": 4,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flags": [
+        76,
+        77,
+        78,
+        79
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 20,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flags": [
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 21,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flags": [
+        84,
+        85,
+        86,
+        87
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 22,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flags": [
+        88,
+        89,
+        90,
+        91
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 23,
+      "tomotope_edge_label_from_q4_face_pair": 5,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flags": [
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 24,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flags": [
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 25,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flags": [
+        100,
+        101,
+        102,
+        103
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 26,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flags": [
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 27,
+      "tomotope_edge_label_from_q4_face_pair": 6,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flags": [
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 28,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flags": [
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 29,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flags": [
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 30,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flags": [
+        120,
+        121,
+        122,
+        123
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 31,
+      "tomotope_edge_label_from_q4_face_pair": 7,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flags": [
+        124,
+        125,
+        126,
+        127
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 32,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flags": [
+        128,
+        129,
+        130,
+        131
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 33,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flags": [
+        132,
+        133,
+        134,
+        135
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 34,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flags": [
+        136,
+        137,
+        138,
+        139
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 35,
+      "tomotope_edge_label_from_q4_face_pair": 8,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flags": [
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 36,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flags": [
+        144,
+        145,
+        146,
+        147
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 37,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 8,
+      "tomotope_flags": [
+        148,
+        149,
+        150,
+        151
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 38,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 10,
+      "tomotope_flags": [
+        152,
+        153,
+        154,
+        155
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 39,
+      "tomotope_edge_label_from_q4_face_pair": 9,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flags": [
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 40,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flags": [
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 41,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 9,
+      "tomotope_flags": [
+        164,
+        165,
+        166,
+        167
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 42,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 11,
+      "tomotope_flags": [
+        168,
+        169,
+        170,
+        171
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 43,
+      "tomotope_edge_label_from_q4_face_pair": 10,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flags": [
+        172,
+        173,
+        174,
+        175
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 44,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flags": [
+        176,
+        177,
+        178,
+        179
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 45,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 13,
+      "tomotope_flags": [
+        180,
+        181,
+        182,
+        183
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 46,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 14,
+      "tomotope_flags": [
+        184,
+        185,
+        186,
+        187
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 47,
+      "tomotope_edge_label_from_q4_face_pair": 11,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flags": [
+        188,
+        189,
+        190,
+        191
+      ]
+    }
+  ],
+  "middle_blocks_sample": [
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 0,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 1,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 1,
+      "tomotope_flags": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 2,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 4,
+      "tomotope_flags": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 3,
+      "tomotope_edge_label_from_q4_face_pair": 0,
+      "tomotope_face_label_from_q4_edge_pair": 7,
+      "tomotope_flags": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 4,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 5,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 2,
+      "tomotope_flags": [
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 6,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 5,
+      "tomotope_flags": [
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 2,
+      "tomotope_block": 7,
+      "tomotope_edge_label_from_q4_face_pair": 1,
+      "tomotope_face_label_from_q4_edge_pair": 12,
+      "tomotope_flags": [
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 8,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 0,
+      "tomotope_flags": [
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 9,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 3,
+      "tomotope_flags": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 0,
+      "tomotope_block": 10,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 6,
+      "tomotope_flags": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "q4_lift_count": 2,
+      "ternary_sheet": 1,
+      "tomotope_block": 11,
+      "tomotope_edge_label_from_q4_face_pair": 2,
+      "tomotope_face_label_from_q4_edge_pair": 15,
+      "tomotope_flags": [
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  ],
+  "plaquette_rows": [
+    {
+      "middle_blocks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "q4_plaquette": 0,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "middle_blocks": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "q4_plaquette": 1,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "middle_blocks": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "q4_plaquette": 2,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "middle_blocks": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "q4_plaquette": 3,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "middle_blocks": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "q4_plaquette": 4,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
+    },
+    {
+      "middle_blocks": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "q4_plaquette": 5,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "middle_blocks": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "q4_plaquette": 6,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "middle_blocks": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "q4_plaquette": 7,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ]
+    },
+    {
+      "middle_blocks": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "q4_plaquette": 8,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    {
+      "middle_blocks": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "q4_plaquette": 9,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "middle_blocks": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "q4_plaquette": 10,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ]
+    },
+    {
+      "middle_blocks": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "q4_plaquette": 11,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    {
+      "middle_blocks": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "q4_plaquette": 12,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "middle_blocks": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "q4_plaquette": 13,
+      "q4_vertices": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ]
+    },
+    {
+      "middle_blocks": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "q4_plaquette": 14,
+      "q4_vertices": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ]
+    },
+    {
+      "middle_blocks": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "q4_plaquette": 15,
+      "q4_vertices": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ]
+    },
+    {
+      "middle_blocks": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "q4_plaquette": 16,
+      "q4_vertices": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
+    },
+    {
+      "middle_blocks": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "q4_plaquette": 17,
+      "q4_vertices": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "middle_blocks": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "q4_plaquette": 18,
+      "q4_vertices": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ]
+    },
+    {
+      "middle_blocks": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "q4_plaquette": 19,
+      "q4_vertices": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "middle_blocks": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "q4_plaquette": 20,
+      "q4_vertices": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "middle_blocks": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "q4_plaquette": 21,
+      "q4_vertices": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "middle_blocks": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "q4_plaquette": 22,
+      "q4_vertices": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "middle_blocks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "q4_plaquette": 23,
+      "q4_vertices": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "plaquette_rows_sample": [
+    {
+      "middle_blocks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "q4_plaquette": 0,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "middle_blocks": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "q4_plaquette": 1,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "middle_blocks": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "q4_plaquette": 2,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tomotope_flags": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "middle_blocks": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "q4_plaquette": 3,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "middle_blocks": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "q4_plaquette": 4,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
+    },
+    {
+      "middle_blocks": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "q4_plaquette": 5,
+      "q4_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "tomotope_flags": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ]
+    }
+  ],
+  "sheet_summaries": [
+    {
+      "edge_projection_multiplicity_profile": {
+        "2": 8
+      },
+      "face_projection_multiplicity_profile": {
+        "1": 16
+      },
+      "middle_blocks": 16,
+      "ternary_sheet": 0,
+      "tomotope_edge_labels_hit": 8,
+      "tomotope_face_labels_hit": 16,
+      "tomotope_flags": 64
+    },
+    {
+      "edge_projection_multiplicity_profile": {
+        "2": 8
+      },
+      "face_projection_multiplicity_profile": {
+        "1": 16
+      },
+      "middle_blocks": 16,
+      "ternary_sheet": 1,
+      "tomotope_edge_labels_hit": 8,
+      "tomotope_face_labels_hit": 16,
+      "tomotope_flags": 64
+    },
+    {
+      "edge_projection_multiplicity_profile": {
+        "4": 4
+      },
+      "face_projection_multiplicity_profile": {
+        "1": 16
+      },
+      "middle_blocks": 16,
+      "ternary_sheet": 2,
+      "tomotope_edge_labels_hit": 4,
+      "tomotope_face_labels_hit": 16,
+      "tomotope_flags": 64
+    }
+  ],
+  "title": "Q4 plaquette to tomotope/Q6 flag compiler",
+  "verified": true
+}
