@@ -1,1 +1,208 @@
-{"bt":1481,"title":"E6 firewall to claim-DAG merge","verified":true,"added_node_count":4,"added_nodes":["E0_e6_firewall_square","E1_oriented_72_sector","E2_h1_81_closure","E3_c3_v4_grid"],"firewall_rule":"E6 closure-square evidence may support exact finite ABI/CSS claims; blocked formula/physics claims still cannot support exact claims.","checks":{"base_verified":true,"node_count_increased_by_4":true,"dag_topological":true,"e6_square_upstream_of_decoder":true,"h1_81_upstream_of_abi":true,"grid_upstream_of_abi":true,"no_blocked_to_exact_edges":true}}
+{
+  "added_edges": [
+    {
+      "from": "E0_e6_firewall_square",
+      "to": "E1_oriented_72_sector"
+    },
+    {
+      "from": "E1_oriented_72_sector",
+      "to": "N4_retwined_decoder"
+    },
+    {
+      "from": "E1_oriented_72_sector",
+      "to": "E2_h1_81_closure"
+    },
+    {
+      "from": "E2_h1_81_closure",
+      "to": "N5_closure_packet_abi"
+    },
+    {
+      "from": "E3_c3_v4_grid",
+      "to": "N5_closure_packet_abi"
+    },
+    {
+      "from": "N0_szilassi_coordinates",
+      "to": "E3_c3_v4_grid"
+    },
+    {
+      "from": "E0_e6_firewall_square",
+      "to": "E3_c3_v4_grid"
+    }
+  ],
+  "added_nodes": {
+    "E0_e6_firewall_square": {
+      "claim": "E6 firewall square 36->72, 72+6=78, 72+9=81",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E1_oriented_72_sector": {
+      "claim": "72 is both E6 oriented-root sector and ABI active/guard row count",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E2_h1_81_closure": {
+      "claim": "81 is H1/CSS closure obtained by adjoining q^2=9 firewall sector to 72",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E3_c3_v4_grid": {
+      "claim": "12 closure strands form C3 x V4 with three channels and four triangles",
+      "tier": "exact_finite_structure"
+    }
+  },
+  "bt": 1481,
+  "checks": {
+    "base_verified": true,
+    "dag_topological": true,
+    "e6_square_upstream_of_decoder": true,
+    "grid_upstream_of_abi": true,
+    "h1_81_upstream_of_abi": true,
+    "no_blocked_to_exact_edges": true,
+    "node_count_increased_by_4": true
+  },
+  "edges": [
+    {
+      "from": "N0_szilassi_coordinates",
+      "to": "N1_closure_bus_arithmetic"
+    },
+    {
+      "from": "N0_szilassi_coordinates",
+      "to": "N2_frobenius_tau4"
+    },
+    {
+      "from": "N1_closure_bus_arithmetic",
+      "to": "N4_retwined_decoder"
+    },
+    {
+      "from": "N2_frobenius_tau4",
+      "to": "N3_s3_c3_classifier"
+    },
+    {
+      "from": "N3_s3_c3_classifier",
+      "to": "N4_retwined_decoder"
+    },
+    {
+      "from": "N4_retwined_decoder",
+      "to": "N5_closure_packet_abi"
+    },
+    {
+      "from": "N1_closure_bus_arithmetic",
+      "to": "N6_quartic_coefficient_bridge"
+    },
+    {
+      "from": "N6_quartic_coefficient_bridge",
+      "to": "N7_rounded_g_resonance"
+    },
+    {
+      "from": "N6_quartic_coefficient_bridge",
+      "to": "N8_formula_level_claims"
+    },
+    {
+      "from": "N8_formula_level_claims",
+      "to": "N9_real_world_model"
+    },
+    {
+      "from": "E0_e6_firewall_square",
+      "to": "E1_oriented_72_sector"
+    },
+    {
+      "from": "E1_oriented_72_sector",
+      "to": "N4_retwined_decoder"
+    },
+    {
+      "from": "E1_oriented_72_sector",
+      "to": "E2_h1_81_closure"
+    },
+    {
+      "from": "E2_h1_81_closure",
+      "to": "N5_closure_packet_abi"
+    },
+    {
+      "from": "E3_c3_v4_grid",
+      "to": "N5_closure_packet_abi"
+    },
+    {
+      "from": "N0_szilassi_coordinates",
+      "to": "E3_c3_v4_grid"
+    },
+    {
+      "from": "E0_e6_firewall_square",
+      "to": "E3_c3_v4_grid"
+    }
+  ],
+  "firewall_rule": "E6 closure-square evidence may support exact finite ABI/CSS claims; blocked formula/physics claims still cannot support exact claims.",
+  "nodes": {
+    "E0_e6_firewall_square": {
+      "claim": "E6 firewall square 36->72, 72+6=78, 72+9=81",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E1_oriented_72_sector": {
+      "claim": "72 is both E6 oriented-root sector and ABI active/guard row count",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E2_h1_81_closure": {
+      "claim": "81 is H1/CSS closure obtained by adjoining q^2=9 firewall sector to 72",
+      "tier": "exact_finite_arithmetic"
+    },
+    "E3_c3_v4_grid": {
+      "claim": "12 closure strands form C3 x V4 with three channels and four triangles",
+      "tier": "exact_finite_structure"
+    },
+    "N0_szilassi_coordinates": {
+      "claim": "unique fixed Szilassi hexagon and C2 boundary shift",
+      "tier": "exact_coordinate"
+    },
+    "N1_closure_bus_arithmetic": {
+      "claim": "3*2*2=12, 2*12=24, 12*(13+1)=168",
+      "tier": "exact_finite_arithmetic"
+    },
+    "N2_frobenius_tau4": {
+      "claim": "tau4 fixes face 4 and gives 2+2+2+1",
+      "tier": "exact_finite_group"
+    },
+    "N3_s3_c3_classifier": {
+      "claim": "closure/shear layer is S3 x C3",
+      "tier": "exact_finite_group"
+    },
+    "N4_retwined_decoder": {
+      "claim": "closure rows obey retwined active/guard decoder contract",
+      "tier": "verified_finite_decoder"
+    },
+    "N5_closure_packet_abi": {
+      "claim": "ABI maps loop inputs to active/guard outputs and claim tier",
+      "tier": "exact_runtime_abi"
+    },
+    "N6_quartic_coefficient_bridge": {
+      "claim": "4-phi^2=3+phi and square=13+phi^5 echoes closure arithmetic",
+      "tier": "numerical_structural_resonance"
+    },
+    "N7_rounded_g_resonance": {
+      "claim": "visible rounded g value is numerically close to measured g",
+      "tier": "numerical_resonance"
+    },
+    "N8_formula_level_claims": {
+      "claim": "Otto equations 49,50,64,65,66 require formula transcription",
+      "tier": "blocked_pending_transcription"
+    },
+    "N9_real_world_model": {
+      "claim": "external real-world particle interpretation is not imported",
+      "tier": "speculative_not_imported"
+    }
+  },
+  "title": "E6 firewall to claim-DAG merge",
+  "topological_order": [
+    "E0_e6_firewall_square",
+    "E1_oriented_72_sector",
+    "E2_h1_81_closure",
+    "N0_szilassi_coordinates",
+    "E3_c3_v4_grid",
+    "N1_closure_bus_arithmetic",
+    "N2_frobenius_tau4",
+    "N3_s3_c3_classifier",
+    "N4_retwined_decoder",
+    "N5_closure_packet_abi",
+    "N6_quartic_coefficient_bridge",
+    "N7_rounded_g_resonance",
+    "N8_formula_level_claims",
+    "N9_real_world_model"
+  ],
+  "unsafe_edges": [],
+  "verified": true
+}

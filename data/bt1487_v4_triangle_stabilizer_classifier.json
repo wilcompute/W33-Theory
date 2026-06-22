@@ -1,0 +1,482 @@
+{
+  "bt": 1487,
+  "checks": {
+    "all_triangle_partition_stabilizers_form_s4_order_24": true,
+    "bt1422_fano_bridge_loaded": true,
+    "bt1485_branch_audit_loaded": true,
+    "d4_order_profile": true,
+    "d4_square_subgroup_order_8": true,
+    "fano_flag_stabilizer_reads_21_times_d4": true,
+    "fano_point_stabilizer_reads_7_times_s4": true,
+    "s4_order_profile": true,
+    "shear_induced_identity_is_in_d4": true,
+    "swap_reflection_with_tau_generates_d4": true,
+    "tau4_is_d4_translation": true,
+    "tau4_preserves_partition_but_not_each_triangle": true,
+    "v4_translation_subgroup_order_4": true
+  },
+  "classifier_rows": [
+    {
+      "cycle": "()",
+      "fixes_each_triangle": true,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": true,
+      "order": 1,
+      "perm": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "cycle": "(2 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "cycle": "(1 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "cycle": "(1 2 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "cycle": "(1 3 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "cycle": "(1 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "cycle": "(0 1)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "cycle": "(0 1)(2 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": true,
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "cycle": "(0 1 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "cycle": "(0 1 2 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "cycle": "(0 1 3 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "cycle": "(0 1 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "cycle": "(0 2 1)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "cycle": "(0 2 3 1)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "cycle": "(0 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "cycle": "(0 2 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "cycle": "(0 2)(1 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": true,
+      "order": 2,
+      "perm": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "cycle": "(0 2 1 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "cycle": "(0 3 2 1)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "cycle": "(0 3 1)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "cycle": "(0 3 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 3,
+      "perm": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "cycle": "(0 3)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": false,
+      "order": 2,
+      "perm": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "cycle": "(0 3 1 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": false,
+      "in_v4_translations": false,
+      "order": 4,
+      "perm": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "cycle": "(0 3)(1 2)",
+      "fixes_each_triangle": false,
+      "in_d4_square_subgroup": true,
+      "in_v4_translations": true,
+      "order": 2,
+      "perm": [
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "groups": {
+    "d4_square_subgroup": {
+      "fano_reading": "21 Fano flags * 8 D4 flag-stabilizer states = 168",
+      "generators": {
+        "shear_induced_identity": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "swap_reflection": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "tau4": [
+          2,
+          3,
+          0,
+          1
+        ]
+      },
+      "order": 8,
+      "order2_elements": [
+        [
+          0,
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      }
+    },
+    "triangle_partition_stabilizer": {
+      "fano_reading": "7 Fano points * 24 S4 point-stabilizer states = 168",
+      "name": "S4 on four V4 triangle classes",
+      "order": 24,
+      "order_profile": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      }
+    },
+    "v4_translations": {
+      "elements": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "order": 4
+    }
+  },
+  "interpretation": "Every branch permutation preserves the four-triangle partition as a set, giving S4 of order 24.  The physically used D4 branch subgroup is the square subgroup generated by tau4 and a bit-swap reflection; shear is identity on branch classes but remains nontrivial on full branch/phase states.",
+  "named_elements": {
+    "swap_reflection": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "translation_x": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "translation_xy": [
+      3,
+      2,
+      1,
+      0
+    ],
+    "translation_y_tau4": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  "title": "V4-triangle stabilizer classifier",
+  "v4_bits": {
+    "0": [
+      0,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      1
+    ]
+  },
+  "verified": true
+}

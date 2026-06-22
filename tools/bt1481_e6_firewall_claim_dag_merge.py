@@ -3,9 +3,14 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from bt1469_paper_claim_dependency_dag import main as rebuild_bt1469_dag  # noqa: E402
+
 BASE = ROOT / "data" / "bt1469_paper_claim_dependency_dag.json"
 OUT = ROOT / "data" / "bt1481_e6_firewall_claim_dag_merge.json"
 
@@ -33,13 +38,28 @@ def topo(nodes: dict, edges: list[dict]) -> list[str]:
 
 def main() -> None:
     base = json.loads(BASE.read_text(encoding="utf-8"))
+    if "nodes" not in base or "edges" not in base:
+        rebuild_bt1469_dag()
+        base = json.loads(BASE.read_text(encoding="utf-8"))
     nodes = dict(base["nodes"])
     edges = list(base["edges"])
     extra_nodes = {
-        "E0_e6_firewall_square": {"tier": "exact_finite_arithmetic", "claim": "E6 firewall square 36->72, 72+6=78, 72+9=81"},
-        "E1_oriented_72_sector": {"tier": "exact_finite_arithmetic", "claim": "72 is both E6 oriented-root sector and ABI active/guard row count"},
-        "E2_h1_81_closure": {"tier": "exact_finite_arithmetic", "claim": "81 is H1/CSS closure obtained by adjoining q^2=9 firewall sector to 72"},
-        "E3_c3_v4_grid": {"tier": "exact_finite_structure", "claim": "12 closure strands form C3 x V4 with three channels and four triangles"},
+        "E0_e6_firewall_square": {
+            "tier": "exact_finite_arithmetic",
+            "claim": "E6 firewall square 36->72, 72+6=78, 72+9=81",
+        },
+        "E1_oriented_72_sector": {
+            "tier": "exact_finite_arithmetic",
+            "claim": "72 is both E6 oriented-root sector and ABI active/guard row count",
+        },
+        "E2_h1_81_closure": {
+            "tier": "exact_finite_arithmetic",
+            "claim": "81 is H1/CSS closure obtained by adjoining q^2=9 firewall sector to 72",
+        },
+        "E3_c3_v4_grid": {
+            "tier": "exact_finite_structure",
+            "claim": "12 closure strands form C3 x V4 with three channels and four triangles",
+        },
     }
     nodes.update(extra_nodes)
     extra_edges = [
@@ -54,18 +74,31 @@ def main() -> None:
     edges.extend(extra_edges)
     order = topo(nodes, edges)
     blocked_tiers = {"blocked_pending_transcription", "speculative_not_imported"}
-    exact_tiers = {"exact_coordinate", "exact_finite_arithmetic", "exact_finite_group", "verified_finite_decoder", "exact_runtime_abi", "exact_finite_structure"}
+    exact_tiers = {
+        "exact_coordinate",
+        "exact_finite_arithmetic",
+        "exact_finite_group",
+        "verified_finite_decoder",
+        "exact_runtime_abi",
+        "exact_finite_structure",
+    }
     unsafe = []
     for e in edges:
-        if nodes[e["from"]]["tier"] in blocked_tiers and nodes[e["to"]]["tier"] in exact_tiers:
+        if (
+            nodes[e["from"]]["tier"] in blocked_tiers
+            and nodes[e["to"]]["tier"] in exact_tiers
+        ):
             unsafe.append(e)
     checks = {
         "base_verified": base.get("verified") is True,
         "node_count_increased_by_4": len(nodes) == len(base["nodes"]) + 4,
         "dag_topological": len(order) == len(nodes),
-        "e6_square_upstream_of_decoder": order.index("E1_oriented_72_sector") < order.index("N4_retwined_decoder"),
-        "h1_81_upstream_of_abi": order.index("E2_h1_81_closure") < order.index("N5_closure_packet_abi"),
-        "grid_upstream_of_abi": order.index("E3_c3_v4_grid") < order.index("N5_closure_packet_abi"),
+        "e6_square_upstream_of_decoder": order.index("E1_oriented_72_sector")
+        < order.index("N4_retwined_decoder"),
+        "h1_81_upstream_of_abi": order.index("E2_h1_81_closure")
+        < order.index("N5_closure_packet_abi"),
+        "grid_upstream_of_abi": order.index("E3_c3_v4_grid")
+        < order.index("N5_closure_packet_abi"),
         "no_blocked_to_exact_edges": not unsafe,
     }
     result = {
@@ -82,7 +115,11 @@ def main() -> None:
         "checks": checks,
     }
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({"bt": 1481, "verified": result["verified"], "nodes": len(nodes)}, indent=2))
+    print(
+        json.dumps(
+            {"bt": 1481, "verified": result["verified"], "nodes": len(nodes)}, indent=2
+        )
+    )
     if not result["verified"]:
         raise SystemExit(1)
 

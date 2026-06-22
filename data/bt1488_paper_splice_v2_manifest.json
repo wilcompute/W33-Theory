@@ -1,0 +1,98 @@
+{
+  "bt": 1488,
+  "cascade": [
+    {
+      "dependency": "BT1457",
+      "insert": "analysis/BT1457_claim_firewalled_holonet_section.tex",
+      "name": "claim_firewalled_section",
+      "order": 1,
+      "status": "section root remains preferred firewall",
+      "target": "photonic_holonet.tex"
+    },
+    {
+      "dependency": "BT1484",
+      "insert": "analysis/BT1484_e6_dag_claim_table_v2.tex",
+      "name": "claim_dependency_table_v2",
+      "order": 2,
+      "replaces": "analysis/BT1472_dag_claim_table.tex",
+      "status": "preferred; BT1472 retained only as superseded v1 provenance",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "BT1474",
+      "insert": "analysis/BT1474_css_join_proof_table.tex",
+      "name": "css_join_proof_table",
+      "order": 3,
+      "status": "preferred exact finite CSS join table",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "BT1480",
+      "insert": "analysis/BT1480_tensor_product_grid_reading.tex",
+      "name": "tensor_product_grid_reading",
+      "order": 4,
+      "status": "preferred exact finite C3 x V4 grid reading",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "BT1482",
+      "insert": "analysis/BT1480_BT1482_holonet_insert.tex",
+      "name": "closure_abi_v2_packet",
+      "order": 5,
+      "status": "preferred runtime ABI packet",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "BT1486",
+      "insert": "data/bt1486_retwined_css_from_abi_v2.json",
+      "name": "retwined_css_abi_v2_join",
+      "order": 6,
+      "status": "new exact row-level verification",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "BT1487",
+      "insert": "data/bt1487_v4_triangle_stabilizer_classifier.json",
+      "name": "v4_triangle_stabilizer_classifier",
+      "order": 7,
+      "status": "new Fano-aware branch stabilizer classifier",
+      "target": "analysis/BT1457_claim_firewalled_holonet_section.tex"
+    },
+    {
+      "dependency": "rendered equation images acquired",
+      "insert": "transcribed formulas for equations 49,50,64,65,66",
+      "name": "rendered_equation_fill",
+      "order": 8,
+      "status": "blocked pending rendered formula transcription; no external code repository is assumed",
+      "target": "data/bt1473_scirp_prefilled_transcription_packet.csv and paper section"
+    }
+  ],
+  "checks": {
+    "all_declared_insert_files_exist_or_are_data_contracts": true,
+    "blocked_formula_fill_remains_last": true,
+    "bt1479_v1_manifest_loaded": true,
+    "bt1484_replaces_bt1472": true,
+    "bt1484_table_v2_loaded": true,
+    "bt1486_css_join_loaded": true,
+    "bt1487_classifier_loaded": true,
+    "cascade_orders_are_1_to_8": true,
+    "holonet_insert_written": true,
+    "markdown_written": true,
+    "preferred_packet_contains_bt1474_bt1480_bt1482": true,
+    "preferred_packet_contains_new_bt1486_bt1487": true
+  },
+  "holonet_insert": "analysis/BT1486_BT1488_holonet_insert.tex",
+  "interpretation": "BT1488 makes BT1484 the preferred E6-aware claim table and promotes BT1474/BT1480/BT1482 plus BT1486/BT1487 as the exact finite paper splice packet.  Formula-level Otto claims remain blocked.",
+  "markdown": "analysis/BT1488_paper_splice_v2_manifest.md",
+  "preferred_exact_finite_insert_packet": [
+    "BT1474_css_join_proof_table",
+    "BT1480_tensor_product_grid_reading",
+    "BT1482_closure_abi_v2",
+    "BT1484_e6_dag_claim_table_v2",
+    "BT1486_retwined_css_from_abi_v2",
+    "BT1487_v4_triangle_stabilizer_classifier"
+  ],
+  "supersedes": "data/bt1479_splice_cascade_manifest.json",
+  "title": "Paper splice v2 manifest",
+  "verified": true
+}

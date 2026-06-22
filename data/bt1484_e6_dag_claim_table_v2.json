@@ -1,1 +1,161 @@
-{"bt":1484,"title":"E6-DAG claim table v2","verified":true,"source_dag":"data/bt1481_e6_firewall_claim_dag_merge.json","tex_table":"analysis/BT1484_e6_dag_claim_table_v2.tex","row_count":"matches merged DAG nodes","interpretation":"Claim table v2 includes E6 provenance for the 72-sector, 81 closure, and C3 x V4 grid while preserving blocked-language gates.","checks":{"dag_verified":true,"row_count_matches_nodes":true,"has_four_e_nodes":true,"has_72_node":true,"has_81_node":true,"has_c3_v4_node":true,"blocked_language_present":true,"tex_written":true}}
+{
+  "bt": 1484,
+  "checks": {
+    "blocked_language_present": true,
+    "dag_verified": true,
+    "has_72_node": true,
+    "has_81_node": true,
+    "has_c3_v4_node": true,
+    "has_four_e_nodes": true,
+    "row_count_matches_nodes": true,
+    "tex_written": true
+  },
+  "interpretation": "Claim table v2 includes E6 provenance for the 72-sector, 81 closure, and C3 x V4 grid while preserving blocked-language gates.",
+  "rows": [
+    {
+      "allowed_language": "exact finite arithmetic claim",
+      "claim": "E6 firewall square 36->72, 72+6=78, 72+9=81",
+      "dependencies": [],
+      "node": "E0_e6_firewall_square",
+      "provenance": "E6/CSS",
+      "tier": "exact_finite_arithmetic"
+    },
+    {
+      "allowed_language": "exact finite arithmetic claim",
+      "claim": "72 is both E6 oriented-root sector and ABI active/guard row count",
+      "dependencies": [
+        "E0_e6_firewall_square"
+      ],
+      "node": "E1_oriented_72_sector",
+      "provenance": "E6/CSS",
+      "tier": "exact_finite_arithmetic"
+    },
+    {
+      "allowed_language": "exact finite arithmetic claim",
+      "claim": "81 is H1/CSS closure obtained by adjoining q^2=9 firewall sector to 72",
+      "dependencies": [
+        "E1_oriented_72_sector"
+      ],
+      "node": "E2_h1_81_closure",
+      "provenance": "E6/CSS",
+      "tier": "exact_finite_arithmetic"
+    },
+    {
+      "allowed_language": "exact coordinate claim",
+      "claim": "unique fixed Szilassi hexagon and C2 boundary shift",
+      "dependencies": [],
+      "node": "N0_szilassi_coordinates",
+      "provenance": "CSS/finite",
+      "tier": "exact_coordinate"
+    },
+    {
+      "allowed_language": "exact finite structure claim",
+      "claim": "12 closure strands form C3 x V4 with three channels and four triangles",
+      "dependencies": [
+        "N0_szilassi_coordinates",
+        "E0_e6_firewall_square"
+      ],
+      "node": "E3_c3_v4_grid",
+      "provenance": "E6/CSS",
+      "tier": "exact_finite_structure"
+    },
+    {
+      "allowed_language": "exact finite arithmetic claim",
+      "claim": "3*2*2=12, 2*12=24, 12*(13+1)=168",
+      "dependencies": [
+        "N0_szilassi_coordinates"
+      ],
+      "node": "N1_closure_bus_arithmetic",
+      "provenance": "CSS/finite",
+      "tier": "exact_finite_arithmetic"
+    },
+    {
+      "allowed_language": "exact finite group claim",
+      "claim": "tau4 fixes face 4 and gives 2+2+2+1",
+      "dependencies": [
+        "N0_szilassi_coordinates"
+      ],
+      "node": "N2_frobenius_tau4",
+      "provenance": "CSS/finite",
+      "tier": "exact_finite_group"
+    },
+    {
+      "allowed_language": "exact finite group claim",
+      "claim": "closure/shear layer is S3 x C3",
+      "dependencies": [
+        "N2_frobenius_tau4"
+      ],
+      "node": "N3_s3_c3_classifier",
+      "provenance": "CSS/finite",
+      "tier": "exact_finite_group"
+    },
+    {
+      "allowed_language": "verified decoder claim",
+      "claim": "closure rows obey retwined active/guard decoder contract",
+      "dependencies": [
+        "N1_closure_bus_arithmetic",
+        "N3_s3_c3_classifier",
+        "E1_oriented_72_sector"
+      ],
+      "node": "N4_retwined_decoder",
+      "provenance": "E6/CSS",
+      "tier": "verified_finite_decoder"
+    },
+    {
+      "allowed_language": "runtime ABI contract",
+      "claim": "ABI maps loop inputs to active/guard outputs and claim tier",
+      "dependencies": [
+        "N4_retwined_decoder",
+        "E2_h1_81_closure",
+        "E3_c3_v4_grid"
+      ],
+      "node": "N5_closure_packet_abi",
+      "provenance": "E6/CSS",
+      "tier": "exact_runtime_abi"
+    },
+    {
+      "allowed_language": "resonance language only",
+      "claim": "4-phi^2=3+phi and square=13+phi^5 echoes closure arithmetic",
+      "dependencies": [
+        "N1_closure_bus_arithmetic"
+      ],
+      "node": "N6_quartic_coefficient_bridge",
+      "provenance": "CSS/finite",
+      "tier": "numerical_structural_resonance"
+    },
+    {
+      "allowed_language": "numerical proximity only",
+      "claim": "visible rounded g value is numerically close to measured g",
+      "dependencies": [
+        "N6_quartic_coefficient_bridge"
+      ],
+      "node": "N7_rounded_g_resonance",
+      "provenance": "CSS/finite",
+      "tier": "numerical_resonance"
+    },
+    {
+      "allowed_language": "blocked until formula transcription",
+      "claim": "Otto equations 49,50,64,65,66 require formula transcription",
+      "dependencies": [
+        "N6_quartic_coefficient_bridge"
+      ],
+      "node": "N8_formula_level_claims",
+      "provenance": "CSS/finite",
+      "tier": "blocked_pending_transcription"
+    },
+    {
+      "allowed_language": "not imported as established claim",
+      "claim": "external real-world particle interpretation is not imported",
+      "dependencies": [
+        "N8_formula_level_claims"
+      ],
+      "node": "N9_real_world_model",
+      "provenance": "CSS/finite",
+      "tier": "speculative_not_imported"
+    }
+  ],
+  "source_dag": "data/bt1481_e6_firewall_claim_dag_merge.json",
+  "tex_table": "analysis/BT1484_e6_dag_claim_table_v2.tex",
+  "title": "E6-DAG claim table v2",
+  "verified": true
+}

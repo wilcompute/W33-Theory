@@ -3,9 +3,14 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from bt1481_e6_firewall_claim_dag_merge import main as rebuild_bt1481_dag  # noqa: E402
+
 DAG = ROOT / "data" / "bt1481_e6_firewall_claim_dag_merge.json"
 OUT_JSON = ROOT / "data" / "bt1484_e6_dag_claim_table_v2.json"
 OUT_TEX = ROOT / "analysis" / "BT1484_e6_dag_claim_table_v2.tex"
@@ -26,6 +31,9 @@ LANGUAGE = {
 
 def main() -> None:
     dag = json.loads(DAG.read_text(encoding="utf-8"))
+    if "nodes" not in dag or "edges" not in dag or "topological_order" not in dag:
+        rebuild_bt1481_dag()
+        dag = json.loads(DAG.read_text(encoding="utf-8"))
     nodes = dag["nodes"]
     edges = dag["edges"]
     deps = {n: [] for n in nodes}
@@ -34,15 +42,21 @@ def main() -> None:
     rows = []
     for n in dag["topological_order"]:
         meta = nodes[n]
-        provenance = "E6/CSS" if n.startswith("E") or any(d.startswith("E") for d in deps.get(n, [])) else "CSS/finite"
-        rows.append({
-            "node": n,
-            "claim": meta["claim"],
-            "tier": meta["tier"],
-            "dependencies": deps.get(n, []),
-            "provenance": provenance,
-            "allowed_language": LANGUAGE.get(meta["tier"], "cautious language"),
-        })
+        provenance = (
+            "E6/CSS"
+            if n.startswith("E") or any(d.startswith("E") for d in deps.get(n, []))
+            else "CSS/finite"
+        )
+        rows.append(
+            {
+                "node": n,
+                "claim": meta["claim"],
+                "tier": meta["tier"],
+                "dependencies": deps.get(n, []),
+                "provenance": provenance,
+                "allowed_language": LANGUAGE.get(meta["tier"], "cautious language"),
+            }
+        )
     lines = [
         r"\begin{center}\scriptsize",
         r"\begin{tabular}{p{0.18\textwidth}p{0.16\textwidth}p{0.18\textwidth}p{0.18\textwidth}p{0.20\textwidth}}",
@@ -54,7 +68,9 @@ def main() -> None:
         node = r["node"].replace("_", r"\_")
         tier = r["tier"].replace("_", r"\_")
         prov = r["provenance"].replace("_", r"\_")
-        dep = (", ".join(r["dependencies"]) if r["dependencies"] else "root").replace("_", r"\_")
+        dep = (", ".join(r["dependencies"]) if r["dependencies"] else "root").replace(
+            "_", r"\_"
+        )
         lang = r["allowed_language"].replace("_", r"\_")
         lines.append(f"{node} & {tier} & {prov} & {dep} & {lang}\\")
     lines.extend([r"\bottomrule", r"\end{tabular}", r"\end{center}"])
@@ -67,8 +83,11 @@ def main() -> None:
         "has_72_node": any(r["node"] == "E1_oriented_72_sector" for r in rows),
         "has_81_node": any(r["node"] == "E2_h1_81_closure" for r in rows),
         "has_c3_v4_node": any(r["node"] == "E3_c3_v4_grid" for r in rows),
-        "blocked_language_present": any("blocked" in r["allowed_language"] for r in rows),
-        "tex_written": OUT_TEX.exists() and "Provenance" in OUT_TEX.read_text(encoding="utf-8"),
+        "blocked_language_present": any(
+            "blocked" in r["allowed_language"] for r in rows
+        ),
+        "tex_written": OUT_TEX.exists()
+        and "Provenance" in OUT_TEX.read_text(encoding="utf-8"),
     }
     result = {
         "bt": 1484,
@@ -81,7 +100,11 @@ def main() -> None:
         "checks": checks,
     }
     OUT_JSON.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({"bt": 1484, "verified": result["verified"], "rows": len(rows)}, indent=2))
+    print(
+        json.dumps(
+            {"bt": 1484, "verified": result["verified"], "rows": len(rows)}, indent=2
+        )
+    )
     if not result["verified"]:
         raise SystemExit(1)
 
