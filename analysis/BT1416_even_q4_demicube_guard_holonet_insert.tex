@@ -1,0 +1,39 @@
+\subsection{Even-Q4 demicube guard ledger}
+\label{sec:bt1416-even-q4-guard}
+
+BT1415 fills the front-end CSS ledger by the identity
+\[
+27\cdot 8+24=240.
+\]
+The new point is that the final \(24\) rows are not only a count.  Let
+\[
+E(Q_4)=\{x\in\mathbb F_2^4:\ |x|\equiv0\pmod2\}
+\]
+be the even-parity layer of the \(Q_4\) clock.  Connect two even words when
+their Hamming distance is two.  The resulting graph is
+\[
+\boxed{E(Q_4)_{d=2}\cong K_{2,2,2,2}},
+\]
+with \(8\) vertices, \(24\) edges, and valency \(6\).  Its complement in the
+complete graph on the eight even words is the four antipodal \(Q_4\) axes, so
+equivalently
+\[
+24=\binom42\cdot4
+\]
+is the number of cross-axis binary guard transitions.
+
+Every square face of \(Q_4\) contains two even and two odd vertices.  Taking the
+even diagonal gives a canonical bijection
+\[
+\{\text{\(Q_4\) square plaquettes}\}
+\longleftrightarrow
+\{\text{distance-two edges in }E(Q_4)\}.
+\]
+Thus the \(24\) guard rows are the edge--state incidence rows of the
+demihypercube guard graph.  Over \(\mathbb F_2\) this \(24\times8\) guard
+matrix has rank \(7\), exactly the even-parity incidence subspace.  Adding the
+\(27\cdot8=216\) singleton Steinberg-cycle syndrome rows supplies the missing
+odd direction and gives the full \(240\)-row front-end ledger rank \(8\).  Each
+even clock state is touched by \(27+6=33\) rows.  The field separation remains:
+this is the binary \(Q_4\) guard front end; the protected memory register is
+the existing ternary Steinberg/CSS object.
