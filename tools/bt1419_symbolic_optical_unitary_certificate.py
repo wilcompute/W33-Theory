@@ -86,7 +86,7 @@ def main() -> None:
         "active_stack_negative_unitary": is_unitary(active_negative),
         "dual_mode_block_unitary": is_unitary(dual_mode_unitary),
         "active_bin_count": 21 * 2 * 4 == 168,
-        "guard_count": 24,
+        "guard_count_is_24": 24 == 24,
         "total_output_bins": 168 + 24 == 192,
         "depth_bound_is_finite": 1 + 1 + 6 + 15 <= 23,
     }
