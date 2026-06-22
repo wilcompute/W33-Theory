@@ -1,0 +1,26 @@
+\subsection{Product-grid closure ABI v2}
+\label{sec:bt1480-bt1482-product-grid-abi-v2}
+
+The 12 closure strands are modeled as
+\[
+C_3\times V_4,
+\qquad V_4=C_2\times C_2,
+\]
+rather than as a bare \(C_{12}\).  The \(C_3\) coordinate is the
+Szilassi/Fano channel and qutrit phase axis; the \(V_4\) coordinate is the
+four-triangle E6 gauge-shell/D4 branch axis.
+
+The E6 firewall square is now upstream in the claim DAG through the exact nodes
+\[
+36\to72,
+\qquad
+72+6=78,
+\qquad
+72+9=81.
+\]
+This supports the exact finite ABI/CSS branch while leaving blocked formula and
+physics claims downstream of the transcription gate.
+
+The closure packet ABI is upgraded to v2.  Each packet carries \(C_3\) channel,
+\(V_4\) branch, active/guard outputs, 72-row sector metadata, the nine-mode
+firewall gap, and claim-DAG dependencies.
