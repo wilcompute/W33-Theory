@@ -1,0 +1,15 @@
+\subsection{ABI v2 consumer, E6 claim table v2, and D4/V4 branch audit}
+\label{sec:bt1483-bt1485-abi-v2-d4v4}
+
+The closure ABI v2 is executable.  It regenerates 12 packets, 48 events, and 72
+rows while preserving the dual-axis metadata.  The three \(C_3\) channels each
+carry 24 rows, and the four \(V_4\) triangles each carry 18 rows.
+
+The E6-merged claim DAG now produces a table with explicit E6 provenance for the
+72-sector, the 81 closure, and the \(C_3\times V_4\) grid.  Blocked formula and
+physical claims remain downstream.
+
+On branch classes, D4 shear fixes each \(V_4\) triangle, while \(\tau_4\) acts as
+an order-two translation preserving the triangle partition as a set.  The two
+operations still fail to commute on full branch/phase states, so retwining remains
+part of the exact decoder rule.
