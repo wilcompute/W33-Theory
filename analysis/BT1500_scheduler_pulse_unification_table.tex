@@ -1,0 +1,17 @@
+\begin{center}\scriptsize
+\begin{tabular}{p{0.18\textwidth}p{0.16\textwidth}r p{0.27\textwidth}p{0.24\textwidth}}
+\toprule
+Layer & Object & Count & Factorization & Role\\
+\midrule
+Fano automorphism bus & PSL(3,2) & 168 & 7 points * 24 fiber = 21 flags * 8 D4 & global finite symmetry bus\\
+canonical shared fiber & S4 & 24 & 3 local Fano arms * 8 D4 states & fiber action set / transaction words\\
+native optical subgroup & D4 & 8 & 1:1, 2:5, 4:2 order profile & native square-pulse subgroup\\
+scheduler lift & C3 x D4 & 24 & 3 scheduler generations * 8 D4 flags & basis-independent finite scheduler class\\
+transaction word & 72 ticks & 72 & 3 C3 channels * 4 branches * 6 row slots & single S4 action word\\
+physical pulse packet & row pulses & 1728 & 24 S4 words * 72 ticks & compiled detector/mirror/Hesse interface\\
+native pulse subpacket & D4 square pulses & 576 & 8 D4 words * 72 ticks & calibration-priority native pulse block\\
+Steinberg scheduler carrier & H1 states & 81 & 27 C3 cycles * 3 states & central C3 generation-time module\\
+retwined CSS core & ABI row sector & 72 & 24 active + 48 guard & syndrome-legal transaction body\\
+\bottomrule
+\end{tabular}
+\end{center}
