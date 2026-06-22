@@ -1,0 +1,50 @@
+{
+  "bt": 1426,
+  "title": "Fano-quotiented S3 optimizer frontier",
+  "verified": true,
+  "scope": {
+    "full_problem_variables": 40,
+    "root_fixed_variables": 39,
+    "labels_per_variable": 6,
+    "raw_constraints": 540,
+    "important_boundary": "The Fano quotient acts on the physical objective packetization, not yet on the 40 W33 line variables."
+  },
+  "weighted_quotient_packets": [
+    {"packet": "identity_fano_flag_packets", "representatives": 21, "weight": 10, "raw_edges": 210, "objective_side": "identity"},
+    {"packet": "active_fano_flag_stabilizer_packets", "representatives": 21, "weight": 8, "raw_edges": 168, "objective_side": "correction"},
+    {"packet": "steinberg_s3_cache_packets", "representatives": 27, "weight": 6, "raw_edges": 162, "objective_side": "correction"}
+  ],
+  "quotient_summary": {
+    "raw_constraints": 540,
+    "weighted_representatives": 69,
+    "compression_ratio": 7.826086956521739,
+    "identity_raw": 210,
+    "correction_raw": 330,
+    "correction_representatives": 48,
+    "identity_representatives": 21,
+    "weight_gcd": 2,
+    "packet_symmetric_next_possible_identity_score_above_210": 212,
+    "packet_symmetric_next_possible_correction_score_below_330": 328
+  },
+  "radius_frontier": {
+    "radius_1": 195,
+    "radius_2": 25935,
+    "radius_3": 1964885,
+    "radius_leq3_excluding_base": 1991015,
+    "consequence": "Any full better gauge still must be radius >= 4. Any Fano-packet-symmetric better score must jump from 210 to at least 212, not 211."
+  },
+  "checks": {
+    "incumbent_labels_are_40_root_fixed": true,
+    "all_s3_labels_used": true,
+    "raw_constraint_total_is_540": true,
+    "fano_active_quotient_is_21_weight_8": true,
+    "steinberg_cache_quotient_is_27_weight_6": true,
+    "identity_quotient_is_21_weight_10": true,
+    "correction_side_is_330": true,
+    "quotient_representatives_are_69": true,
+    "correction_representatives_are_48": true,
+    "packet_symmetric_score_step_is_2": true,
+    "packet_symmetric_no_211_score": true,
+    "radius3_count_matches_prior_certificate": true
+  }
+}
