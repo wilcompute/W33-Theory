@@ -1,0 +1,37 @@
+{
+  "bt": 1428,
+  "title": "Symmetry-breaking 211 search frontier",
+  "verified": true,
+  "incumbent": {"identity_edges": 210, "corrections": 330},
+  "packet_symmetric_obstruction": {
+    "weights": [10, 8, 6],
+    "weight_gcd": 2,
+    "scores_near_210": [210, 212, 214, 216],
+    "consequence": "A score 211 witness cannot be Fano-packet-symmetric; it must split at least one raw correction slot out of a packet orbit."
+  },
+  "minimal_symmetry_breaking_defect_frontier": {
+    "target_identity_edges": 211,
+    "target_corrections": 329,
+    "active_fano_defects": 168,
+    "steinberg_s3_cache_defects": 162,
+    "total_one_defect_candidates": 330
+  },
+  "radius_frontier": {
+    "radius_1": 195,
+    "radius_2": 25935,
+    "radius_3": 1964885,
+    "radius_leq3_excluding_base": 1991015,
+    "consequence": "Any full 211 gauge must be at Hamming radius >=4 from the current 40-line S3 incumbent and must also choose one of the 330 raw correction slots as a packet defect."
+  },
+  "checks": {
+    "active_defect_frontier_is_168": true,
+    "cache_defect_frontier_is_162": true,
+    "minimal_211_frontier_is_330_raw_correction_slots": true,
+    "one_defect_score_is_211_329": true,
+    "packet_symmetric_scores_skip_211": true,
+    "next_packet_symmetric_score_is_212": true,
+    "radius_leq3_certificate_preserved": true,
+    "therefore_full_211_must_be_radius_at_least_4": true,
+    "therefore_211_must_split_a_fano_or_steinberg_packet": true
+  }
+}
