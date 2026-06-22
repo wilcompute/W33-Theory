@@ -1,0 +1,4 @@
+fixture_id,d4_generator,c3_channel,v4_branch,tick_in_word,detector_setting,mirror_residue_mod4,hesse_lane,row_slot,qutrit_value,expected_css_row_class,expected_css_col,measurement_placeholder,acceptance_rule
+BT1511.id.0.0.0,id,0,0,0,0,0,ERASE,active_value_1,1,active,13,pending_lab_measurement,match detector/mirror/lane setting and CSS class before measuring loss/noise
+BT1511.id.0.0.1,id,0,0,1,0,0,ROUTE,active_value_2,2,active,13,pending_lab_measurement,match detector/mirror/lane setting and CSS class before measuring loss/noise
+BT1511.r90.0.0.0,r90,0,0,0,0,0,ERASE,active_value_1,1,active,13,pending_lab_measurement,match detector/mirror/lane setting and CSS class before measuring loss/noise
