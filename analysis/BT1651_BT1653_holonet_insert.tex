@@ -1,0 +1,8 @@
+\subsection{Guard-shell shots, Fano gauge tilt, and time-bin compiler}
+\label{sec:bt1651-bt1653-guard-shell-hardware}
+
+A synthetic 2048-bin photon stream exercises the 448-bin guard shell.  Dark, loss, and parity faults are injected only into guard regions and remain within the BT1650 dark/loss/parity budgets.
+
+The Fano gauge orbit moves the point-mass tilt but cannot remove it.  The point-mass multiset $\{240,232,232,224,224,224,224\}$ is invariant under the tested Fano relabelings, so no balanced $228/229$ representative exists inside this charge class.
+
+The 2048-bin envelope is compiled into hardware components: source, 11-bit encoder, binary delay tree, active analyzer, guard router, dark/loss/parity gates, detector bank, and CSS retry controller.  All components have explicit loss placeholders and calibration trigger timing.
