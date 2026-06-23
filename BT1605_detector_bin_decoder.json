@@ -1,0 +1,43 @@
+{
+  "bt": "BT1605",
+  "title": "Detector-Bin Decoder",
+  "parent_bts": ["BT1601", "BT1602", "BT1603", "BT1604"],
+  "description": "Inverse map from Fano bin clicks back to Witting source/target role, rail, Hesse residue, and CSS syndrome row.",
+  "schema_version": "1.0.0",
+  "geometry": {
+    "fano_plane": "PG(2,2)",
+    "points": 7,
+    "lines": 7,
+    "orbits": 24,
+    "total_bins": 168,
+    "fano_lines": [
+      [0,1,3],[1,2,4],[2,3,5],[3,4,6],[4,5,0],[5,6,1],[6,0,2]
+    ]
+  },
+  "witting_roles": [
+    "source", "target", "relay_H", "relay_V",
+    "ancilla_css", "ancilla_hesse", "dark_ref"
+  ],
+  "decode_fields": {
+    "bin_id":          "int [0,167] — raw Fano bin index",
+    "orbit":           "int [0,23] — which of 24 Fano orbits",
+    "fano_point":      "int [0,6] — point within Fano plane",
+    "witting_role":    "string — one of 7 Witting roles",
+    "rail":            "H | V | ancilla",
+    "hesse_residue":   "int ∈ {0,1,2} = bin_id mod 3",
+    "css_syndrome_row":"int [0,6] — primary Fano line index",
+    "fano_lines":      "list[int] — all Fano line indices through this point"
+  },
+  "click_pattern_schema": {
+    "bins":   "list[int] — fired bin IDs",
+    "run_id": "string"
+  },
+  "decoded_frame_schema": {
+    "run_id":             "string",
+    "click_count":        "int",
+    "dominant_role":      "string | null",
+    "hesse_vote":         "int ∈ {0,1,2}",
+    "css_syndrome_bits":  "list[int] length 7 — parity per Fano line",
+    "valid":              "bool"
+  }
+}

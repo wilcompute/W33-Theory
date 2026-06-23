@@ -1,0 +1,65 @@
+{
+  "bt": "BT1604",
+  "title": "Physical Calibration ABI",
+  "parent_bts": ["BT1601", "BT1602", "BT1603"],
+  "description": "Converts BT1601 loss/dark placeholders into a bench-data schema with thresholds, confidence intervals, and pass/fail gates.",
+  "schema_version": "1.0.0",
+  "threshold_bank": {
+    "loss": {
+      "warn_frac": 0.05,
+      "fail_frac": 0.15,
+      "ci_z": 1.96,
+      "units": "fraction [0,1]",
+      "direction": "lower_is_better"
+    },
+    "dark": {
+      "warn_rate_hz": 100,
+      "fail_rate_hz": 500,
+      "ci_z": 1.96,
+      "units": "Hz",
+      "direction": "lower_is_better"
+    },
+    "efficiency": {
+      "warn_frac": 0.80,
+      "fail_frac": 0.60,
+      "ci_z": 1.96,
+      "units": "fraction [0,1]",
+      "direction": "higher_is_better"
+    },
+    "timing_jitter_ps": {
+      "warn": 50.0,
+      "fail": 150.0,
+      "ci_z": 1.96,
+      "units": "picoseconds",
+      "direction": "lower_is_better"
+    }
+  },
+  "gate_logic": {
+    "overall": "FAIL if any sub-gate is FAIL; WARN if any sub-gate is WARN; else PASS",
+    "sub_gates": ["loss_gate", "dark_gate", "efficiency_gate", "jitter_gate"]
+  },
+  "fano_bins": {
+    "total": 168,
+    "rails_per_bin": 2,
+    "usage_profile": {
+      "bins_0_to_79": {"count": 80, "usage_factor": 9},
+      "bins_80_to_167": {"count": 88, "usage_factor": 10},
+      "total_frames": 1600
+    }
+  },
+  "record_schema": {
+    "bin_id": "int [0,167]",
+    "rail": "string (H|V|orbital)",
+    "run_id": "string",
+    "n_samples": "int",
+    "loss_ci": {"mean": "float", "lower": "float", "upper": "float", "n_samples": "int"},
+    "dark_ci": {"mean": "float", "lower": "float", "upper": "float", "n_samples": "int"},
+    "efficiency_ci": {"mean": "float", "lower": "float", "upper": "float", "n_samples": "int"},
+    "jitter_ci": {"mean": "float", "lower": "float", "upper": "float", "n_samples": "int"},
+    "loss_gate": "PASS|WARN|FAIL",
+    "dark_gate": "PASS|WARN|FAIL",
+    "efficiency_gate": "PASS|WARN|FAIL",
+    "jitter_gate": "PASS|WARN|FAIL",
+    "overall_gate": "PASS|WARN|FAIL|UNKNOWN"
+  }
+}

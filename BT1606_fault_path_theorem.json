@@ -1,0 +1,41 @@
+{
+  "bt": "BT1606",
+  "title": "Fault-Path Theorem",
+  "parent_bts": ["BT1601", "BT1602", "BT1603", "BT1604", "BT1605"],
+  "description": "Extends BT1603 from finite universal ABI to finite retry/failure ABI by tracking missed clicks, dark clicks, Hesse/T injection failure, and Pauli-frame recovery.",
+  "schema_version": "1.0.0",
+  "fault_taxonomy": [
+    {"type": "MISSED_CLICK",      "severity": "soft", "max_retries": 3, "description": "Photon injected but no Fano bin fired"},
+    {"type": "DARK_CLICK",        "severity": "soft", "max_retries": 3, "description": "Bin fired with no real photon present"},
+    {"type": "HESSE_INJECT",      "severity": "soft", "max_retries": 2, "description": "Hesse-residue ancilla injection failed"},
+    {"type": "T_INJECT",          "severity": "soft", "max_retries": 1, "description": "Non-Clifford T-gate magic-state injection failed"},
+    {"type": "CSS_SYNDROME",      "severity": "soft", "max_retries": 2, "description": "CSS parity-check syndrome mismatch"},
+    {"type": "PAULI_UNCORRECTED", "severity": "hard", "max_retries": 0, "description": "Pauli-frame correction could not be applied; frame aborted"}
+  ],
+  "pauli_frame_tracker": {
+    "syndrome_bits": 7,
+    "basis": "Fano line indices (CSS rows)",
+    "correction_operators": {"0": "I", "1": "X", "2": "Z", "3": "Y", "-1": "UNCORRECTABLE"}
+  },
+  "retry_schedule": {
+    "description": "Per-fault retry budget; overridable per bench run",
+    "defaults": {
+      "MISSED_CLICK": 3,
+      "DARK_CLICK":   3,
+      "HESSE_INJECT": 2,
+      "T_INJECT":     1,
+      "CSS_SYNDROME": 2,
+      "PAULI_UNCORRECTED": 0
+    }
+  },
+  "frame_lifecycle": [
+    "attempt()",
+    "on fault: record FaultEvent, check retry budget",
+    "on retry: attempt() again",
+    "on CSS syndrome: apply Pauli correction, mark CORRECTED",
+    "on hard fault or budget exhausted: mark ABORTED",
+    "on success: mark PASS"
+  ],
+  "outcomes": ["PASS", "CORRECTED", "ABORTED", "PENDING"],
+  "witting_frames": 1600
+}
