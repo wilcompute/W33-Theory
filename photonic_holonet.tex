@@ -2932,6 +2932,41 @@ This is the literal content of ``holo-net''. (Witness:
 verifying order $24$, symplecticity, centre $\{\pm I\}$, quotient $A_4$, and the
 order spectrum $\{1,1,8,6,8\}$ of $2T$.)
 
+\subsection{The quantum power is the gauge curvature}
+\label{sec:curvature-is-computation}
+
+Read together with the physics tier (\S\ref{sec:implications}: the gauge
+connection is flat on the $240$ collinear edges and $2T$-curved on the matter
+graph $Q$, with curvature $F(p,q)=[R_p,R_q]$ a quaternion unit), the holonomic
+identification sharpens into a single statement: \emph{the gates are the gauge
+generators, and the entangling power is the curvature.} The $40$ long-root
+transvections $R_p$ --- one per point, each the generation-$\mathbb Z_3$ source
+of the Standard-Model spine --- are exactly the elementary gates (Wilson loops
+of the substrate connection), and they generate the whole gate group:
+\[
+  \langle R_p : p\in W(3,3)\rangle=\mathrm{Sp}(4,3),\qquad |{\cdot}|=51840 .
+\]
+Each point has $12=k$ \emph{flat} (collinear, causal) neighbours, where
+$[R_p,R_q]=I$ and $\langle R_p,R_q\rangle=\mathbb Z_3\times\mathbb Z_3$ is abelian
+and classically simulable, and $27=q^q$ \emph{curved} (matter-graph $Q$,
+non-collinear) neighbours, where the curvature $F=[R_p,R_q]$ is an order-$4$
+quaternion unit and $\langle R_p,R_q\rangle=2T=\mathrm{SL}(2,3)$ is non-abelian.
+So the non-Clifford/entangling resource of the machine sits \emph{exactly} on
+the curved directions: the $12$ flat causal directions are free photon
+propagation and give only abelian gates, while every non-classical gate is a
+loop of nonzero gauge curvature. In the physics reading the same curvature on
+$Q$ is the $su(2)$ field strength and, through its $\mathbb Z_3$ Yukawa grading,
+the fermion-mass texture --- so on the matter graph,
+\[
+  \text{curvature}\;=\;\text{entanglement}\;=\;\text{magic}\;=\;\text{mass},
+\]
+all one object, while flatness is causality. The machine's quantum advantage is
+not added to the substrate; it \emph{is} the curvature of the Standard-Model
+gauge field. (Witness:
+\texttt{analysis/w33\_gauge\_curvature\_is\_computation.py}: $40$ transvections of
+order $3$, the $12$ flat / $27$ curved split per point, curvature orders $\{4\}$
+on $Q$, and $\langle R_p\rangle=\mathrm{Sp}(4,3)$.)
+
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}
 

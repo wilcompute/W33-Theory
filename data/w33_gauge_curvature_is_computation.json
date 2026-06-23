@@ -1,0 +1,12 @@
+{
+  "flat_neighbours": 12,
+  "curved_neighbours": 27,
+  "curvature_orders": [
+    4
+  ],
+  "gate_group_order": 51840,
+  "synthesis": "gate group = gauge group = <R_p> = Sp(4,3); entangling power = gauge curvature (2T on matter graph Q); flat collinear/causal directions = abelian/classical. curvature = entanglement = magic = mass on Q.",
+  "sources": [
+    "holonet paper bt881-886 (gauge connection, transvections, flat/curved, curvature 2-form); bt870 (gravity counts matter); the holonomic-gate identity 2T=SL(2,3)"
+  ]
+}
