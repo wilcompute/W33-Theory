@@ -23,6 +23,7 @@ INSERTS = [
     "analysis/BT1583_BT1585_holonet_insert.tex",
     "analysis/BT1586_BT1588_holonet_insert.tex",
     "analysis/BT1589_BT1591_holonet_insert.tex",
+    "analysis/BT1592_BT1594_holonet_insert.tex",
 ]
 
 
@@ -74,7 +75,7 @@ def build_result(applied: bool) -> dict:
     checks = {
         "target_exists": TARGET.exists(),
         "bibliography_marker_present": INSERTION_MARKER in target_text,
-        "eight_insert_paths": len(INSERTS) == 8,
+        "nine_insert_paths": len(INSERTS) == 9,
         "insert_paths_unique": len(INSERTS) == len(set(INSERTS)),
         "all_insert_paths_exist": not missing,
         "bounded_block_has_begin_end": BEGIN in block() and END in block(),
@@ -83,6 +84,8 @@ def build_result(applied: bool) -> dict:
         "includes_new_synthesis": "analysis/BT1586_BT1588_holonet_insert.tex"
         in INSERTS,
         "includes_radial_lane_frontend": "analysis/BT1589_BT1591_holonet_insert.tex"
+        in INSERTS,
+        "includes_lab_mode_hesse_loop": "analysis/BT1592_BT1594_holonet_insert.tex"
         in INSERTS,
         "idempotent_second_pass": second == splice_text(second)[0]
         and second_mode in {"replace_existing_block", "relocate_existing_block"},
@@ -107,7 +110,8 @@ def build_result(applied: bool) -> dict:
             "The full operator/OAM appendix is now a bounded, idempotent paper splice. "
             "It includes the operator-on-photon, internal Clifford, recentering/protocol, "
             "validation/ledger, BT1586-BT1588 synthesis, and BT1589-BT1591 "
-            "radial/lane/front-end inserts."
+            "radial/lane/front-end inserts, plus the BT1592-BT1594 lab/mode/Hesse "
+            "witness-loop insert."
         ),
         "honesty_boundary": (
             "This splices exact finite and claim-ledger text into the paper. It does not "
@@ -129,8 +133,8 @@ def main() -> None:
         "BT1586 upgrades the earlier dry-run splice into a full bounded appendix splice "
         "for the main `photonic_holonet.tex` paper. The block includes the BT1564-BT1585 "
         "operator/OAM inserts, the BT1586-BT1588 synthesis insert, and the "
-        "BT1589-BT1591 radial/lane/front-end insert. It remains idempotent on repeated "
-        "application.\n",
+        "BT1589-BT1591 radial/lane/front-end insert, plus the BT1592-BT1594 "
+        "lab/mode/Hesse witness-loop insert. It remains idempotent on repeated application.\n",
         encoding="utf-8",
     )
     print(

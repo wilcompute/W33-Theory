@@ -1,0 +1,4251 @@
+{
+  "address_rows": [
+    {
+      "address": 0,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 1,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 2,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 3,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 4,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 5,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 6,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 7,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 8,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 9,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 10,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 11,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 12,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 13,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 14,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 15,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 16,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 17,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 18,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 19,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 20,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 21,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 22,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 23,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 72,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 73,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 74,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 75,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 76,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 77,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 78,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 79,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 80,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 81,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 82,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 83,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 84,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 85,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 86,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 87,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 88,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 89,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 90,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 91,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 92,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 93,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 94,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 95,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 144,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 145,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 146,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 147,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 148,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 149,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 150,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 151,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 152,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 153,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 154,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 155,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 156,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 157,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 158,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 159,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 160,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 161,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 162,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 163,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 164,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 165,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 166,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 167,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        0
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 24,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 25,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 26,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 27,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 28,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 29,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 30,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 31,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 32,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 33,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 34,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 35,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 36,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 37,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 38,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 39,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 40,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 41,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 42,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 43,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 44,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 45,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 46,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 47,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 48,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 49,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 50,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 51,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 52,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 53,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 54,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 55,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 56,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 57,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 58,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 59,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 60,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 61,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 62,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 63,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 64,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 65,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 66,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 67,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 68,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 69,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 70,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 71,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        0,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 96,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 97,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 98,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 99,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 100,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 101,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 102,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 103,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 104,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 105,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 106,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 107,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 108,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 109,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 110,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 111,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 112,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 113,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 114,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 115,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 116,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 117,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 118,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 119,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 120,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 121,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 122,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 123,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 124,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 125,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 126,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 127,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 128,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 129,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 130,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 131,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 132,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 133,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 134,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 135,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 136,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 137,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 138,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 139,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 140,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 141,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 142,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 143,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        1,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 168,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 169,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 170,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 171,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 172,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 173,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 174,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 175,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 176,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 177,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 178,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 179,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 180,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 181,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 182,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 183,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 184,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 185,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 186,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 187,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 188,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 189,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 190,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 191,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        1
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 192,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D0",
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 193,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D1",
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 194,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D2",
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 195,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D3",
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 196,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D4",
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 197,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D5",
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 198,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D6",
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 199,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F0.D7",
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 200,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D0",
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 201,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D1",
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 202,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D2",
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 203,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D3",
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 204,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D4",
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 205,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D5",
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 206,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D6",
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 207,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F1.D7",
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 208,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D0",
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 209,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D1",
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 210,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D2",
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 211,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D3",
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 212,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D4",
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 213,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D5",
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "address": 214,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D6",
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "address": 215,
+      "address_formula": "sector_id*24 + word_index",
+      "affine_shift": [
+        2,
+        2
+      ],
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "selector_label": "F2.D7",
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    }
+  ],
+  "bt": 1593,
+  "checks": {
+    "addresses_216": true,
+    "addresses_unique_and_contiguous": true,
+    "d4_slots_balanced": true,
+    "fiber_phases_balanced": true,
+    "inverse_recovers_sector": true,
+    "mode_pairs_unique": true,
+    "native_and_relabel_address_counts": true,
+    "nine_lg_modes": true,
+    "oam_charges_are_symmetric_minus4_to_4": true,
+    "radial_shells_balanced": true,
+    "tomography_verified": true,
+    "transaction_words_verified": true,
+    "twenty_four_selectors": true
+  },
+  "counts": {
+    "finite_addresses": 216,
+    "lg_modes": 9,
+    "native_d4_addresses": 72,
+    "s4_relabel_addresses": 144,
+    "word_selectors": 24
+  },
+  "honesty_boundary": "This is an explicit mode alphabet and selector ABI. It is not a fabrication tolerance, mode-purity measurement, or loss budget.",
+  "interpretation": "BT1593 fixes the nine recenter sectors as LG modes with symmetric OAM charges ell=-4..4 and balanced radial shells p=0,1,2. The centered 24-word S4 selector is a separate handoff layer, yielding 216 addresses without requiring 216 raw OAM channels.",
+  "lg_mode_alphabet": [
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "inverse_sector_id": 0,
+      "inverse_shift": [
+        0,
+        0
+      ],
+      "lg_oam_charge_ell": -4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=-4)",
+      "sector_id": 0,
+      "sector_label": "X0Z0"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "inverse_sector_id": 3,
+      "inverse_shift": [
+        1,
+        0
+      ],
+      "lg_oam_charge_ell": -1,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-1)",
+      "sector_id": 3,
+      "sector_label": "X1Z0"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "inverse_sector_id": 6,
+      "inverse_shift": [
+        2,
+        0
+      ],
+      "lg_oam_charge_ell": 2,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+2)",
+      "sector_id": 6,
+      "sector_label": "X2Z0"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "inverse_sector_id": 1,
+      "inverse_shift": [
+        0,
+        1
+      ],
+      "lg_oam_charge_ell": -3,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=-3)",
+      "sector_id": 1,
+      "sector_label": "X0Z1"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "inverse_sector_id": 2,
+      "inverse_shift": [
+        0,
+        2
+      ],
+      "lg_oam_charge_ell": -2,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=-2)",
+      "sector_id": 2,
+      "sector_label": "X0Z2"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "inverse_sector_id": 4,
+      "inverse_shift": [
+        1,
+        1
+      ],
+      "lg_oam_charge_ell": 0,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+0)",
+      "sector_id": 4,
+      "sector_label": "X1Z1"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "inverse_sector_id": 5,
+      "inverse_shift": [
+        1,
+        2
+      ],
+      "lg_oam_charge_ell": 1,
+      "lg_radial_shell_p": 2,
+      "mode_label": "LG(p=2, ell=+1)",
+      "sector_id": 5,
+      "sector_label": "X1Z2"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "inverse_sector_id": 7,
+      "inverse_shift": [
+        2,
+        1
+      ],
+      "lg_oam_charge_ell": 3,
+      "lg_radial_shell_p": 1,
+      "mode_label": "LG(p=1, ell=+3)",
+      "sector_id": 7,
+      "sector_label": "X2Z1"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "inverse_sector_id": 8,
+      "inverse_shift": [
+        2,
+        2
+      ],
+      "lg_oam_charge_ell": 4,
+      "lg_radial_shell_p": 0,
+      "mode_label": "LG(p=0, ell=+4)",
+      "sector_id": 8,
+      "sector_label": "X2Z2"
+    }
+  ],
+  "mode_rule": {
+    "inverse": "sector_id=ell+4, x=floor(sector_id/3), z=sector_id mod 3",
+    "oam_charge_ell": "sector_id - 4, giving ell=-4..4",
+    "radial_shell_p": "(x_shift + 2*z_shift) mod 3",
+    "sector_id": "3*x_shift + z_shift"
+  },
+  "selector_rule": {
+    "address": "sector_id*24 + word_index",
+    "claim": "216 finite addresses use 9 physical sector modes plus a 24-word centered selector, not 216 separate OAM modes.",
+    "d4_slot": "word_index mod 8",
+    "fiber_phase": "word_index//8"
+  },
+  "source_packets": {
+    "tomography_harness": "data/bt1592_synthetic_lab_tomography_harness.json",
+    "transaction_words": "data/bt1495_72_tick_transaction_word_compiler.json"
+  },
+  "title": "Explicit LG mode alphabet and 24-word selector handoff",
+  "verified": true,
+  "word_selectors": [
+    {
+      "d4_slot": 0,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 1,
+      "perm": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selector_label": "F0.D0",
+      "ticks": 72,
+      "word_index": 0,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 1,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "selector_label": "F0.D1",
+      "ticks": 72,
+      "word_index": 1,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 2,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "selector_label": "F0.D2",
+      "ticks": 72,
+      "word_index": 2,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 3,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "selector_label": "F0.D3",
+      "ticks": 72,
+      "word_index": 3,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 4,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "selector_label": "F0.D4",
+      "ticks": 72,
+      "word_index": 4,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 5,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "selector_label": "F0.D5",
+      "ticks": 72,
+      "word_index": 5,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 6,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "selector_label": "F0.D6",
+      "ticks": 72,
+      "word_index": 6,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 7,
+      "fiber_phase": 0,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "selector_label": "F0.D7",
+      "ticks": 72,
+      "word_index": 7,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 0,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "selector_label": "F1.D0",
+      "ticks": 72,
+      "word_index": 8,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 1,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "selector_label": "F1.D1",
+      "ticks": 72,
+      "word_index": 9,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 2,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "selector_label": "F1.D2",
+      "ticks": 72,
+      "word_index": 10,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 3,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "selector_label": "F1.D3",
+      "ticks": 72,
+      "word_index": 11,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 4,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "selector_label": "F1.D4",
+      "ticks": 72,
+      "word_index": 12,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 5,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "selector_label": "F1.D5",
+      "ticks": 72,
+      "word_index": 13,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 6,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "selector_label": "F1.D6",
+      "ticks": 72,
+      "word_index": 14,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 7,
+      "fiber_phase": 1,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "selector_label": "F1.D7",
+      "ticks": 72,
+      "word_index": 15,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 0,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "selector_label": "F2.D0",
+      "ticks": 72,
+      "word_index": 16,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 1,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "selector_label": "F2.D1",
+      "ticks": 72,
+      "word_index": 17,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 2,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "selector_label": "F2.D2",
+      "ticks": 72,
+      "word_index": 18,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 3,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "selector_label": "F2.D3",
+      "ticks": 72,
+      "word_index": 19,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 4,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 3,
+      "perm": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "selector_label": "F2.D4",
+      "ticks": 72,
+      "word_index": 20,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 5,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "selector_label": "F2.D5",
+      "ticks": 72,
+      "word_index": 21,
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "d4_slot": 6,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 4,
+      "perm": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "selector_label": "F2.D6",
+      "ticks": 72,
+      "word_index": 22,
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "d4_slot": 7,
+      "fiber_phase": 2,
+      "handoff": "LG sector mode fixes the affine recenter row; the 24-word selector chooses the centered S4 fiber action without expanding the OAM alphabet.",
+      "order": 2,
+      "perm": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "selector_label": "F2.D7",
+      "ticks": 72,
+      "word_index": 23,
+      "word_level": "native_d4_square_pulse"
+    }
+  ]
+}

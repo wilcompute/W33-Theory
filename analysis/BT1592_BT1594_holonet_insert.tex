@@ -1,0 +1,56 @@
+\subsection{Lab tomography, LG alphabet, and the Hesse/T witness loop}
+\label{sec:bt1592-bt1594-lab-mode-hesse-loop}
+
+The OAM front end is now written in a lab-facing form.  BT1592 promotes three
+acceptance surfaces: a \(9\times9\) sector confusion matrix, four radial-shell
+tomography rows, and six exact lane-replay checks.  The synthetic sector fixture
+uses diagonal probability \(0.93\), off-diagonal probability \(0.00875\), and
+acceptance thresholds
+\[
+  p_{\rm diag}\ge 0.90,\qquad p_{\rm off}\le 0.02.
+\]
+The generated CSV ingest file has \(91\) rows, all passing, and is deliberately
+replaceable by bench data.  This is a falsification harness, not measured OAM
+crosstalk.
+
+BT1593 chooses the explicit Laguerre--Gaussian sector alphabet:
+\[
+  s=3x+z,\qquad \ell=s-4,\qquad p=x+2z\pmod 3 .
+\]
+Thus the nine recenter sectors occupy symmetric OAM charges
+\[
+  \ell=-4,-3,-2,-1,0,1,2,3,4,
+\]
+with three modes in each radial shell \(p=0,1,2\).  The \(24\)-word centered
+selector is a separate handoff layer:
+\[
+  {\rm address}=24s+w,\qquad 0\le s<9,\quad 0\le w<24.
+\]
+The architecture therefore uses \(9\) physical sector modes plus a \(24\)-word
+selector, not \(216\) separate OAM channels.  The \(216\) exact finite addresses
+split into \(72\) native \(D_4\) square-pulse addresses and \(144\) \(S_4\)
+analyzer-relabel addresses.
+
+The universality port now lands in the same witness loop.  BT1404 already made a
+Hesse/T microframe with
+\[
+  9\ {\rm Hesse\ outcomes}\times 8\ {\rm ticks}=72\ {\rm ticks}.
+\]
+BT1590 already made each OAM witness segment \(72\) ticks.  BT1594 overlays these
+rather than appending a second schedule:
+\[
+  1080\ {\rm segments}\times72\ {\rm ticks}
+  =1080\ {\rm Hesse/T\ microframes}
+  =77760\ {\rm ticks}.
+\]
+Each Hesse outcome appears once per segment, hence \(1080\) times total.  The
+T-frame bit profile is \(0:5400\) and \(1:4320\), matching the parity rule
+\[
+  t=(r+p)\bmod 2.
+\]
+This closes the finite architecture loop: the Clifford/OAM witness, the
+sector-mode front end, the tomography acceptance harness, and the explicit
+Hesse/T non-Clifford port now inhabit one replayable \(77760\)-tick object.  The
+claim boundary remains unchanged: this is ABI and schedule compatibility, not a
+physical Hesse-SIC device, injection-fidelity measurement, or fault-tolerant
+magic-state-yield theorem.

@@ -1,0 +1,1061 @@
+{
+  "acceptance_thresholds": {
+    "centered_radial_eta": 0.1,
+    "recentered_radial_eta": 0.2,
+    "sector_max_off_diagonal": 0.02,
+    "sector_min_diagonal": 0.9
+  },
+  "bt": 1592,
+  "checks": {
+    "csv_ingest_all_rows_pass": true,
+    "csv_ingest_has_expected_rows": true,
+    "frontend_verified": true,
+    "lane_replay_rows_all_pass": true,
+    "lane_sheet_verified": true,
+    "radial_rows_all_pass": true,
+    "radial_verified": true,
+    "sector_diagonal_above_threshold": true,
+    "sector_matrix_is_9_by_9": true,
+    "sector_off_diagonal_below_threshold": true,
+    "sector_rows_are_stochastic": true
+  },
+  "csv_ingest": {
+    "all_rows_pass": true,
+    "kind_counts": {
+      "lane_replay": 6,
+      "radial_eta": 4,
+      "sector_diagonal": 9,
+      "sector_off_diagonal": 72
+    },
+    "path": "analysis\\BT1592_synthetic_lab_tomography_ingest.csv",
+    "rows": 91,
+    "sample_rows": [
+      {
+        "kind": "sector_diagonal",
+        "label": "X0Z0",
+        "measurement_id": "sector_diag_00",
+        "observed": "0.93000000",
+        "passes": "True",
+        "threshold_or_expected": "0.90000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X1Z0",
+        "measurement_id": "sector_off_00_01",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X2Z0",
+        "measurement_id": "sector_off_00_02",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X0Z1",
+        "measurement_id": "sector_off_00_03",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X0Z2",
+        "measurement_id": "sector_off_00_04",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X1Z1",
+        "measurement_id": "sector_off_00_05",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X1Z2",
+        "measurement_id": "sector_off_00_06",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      },
+      {
+        "kind": "sector_off_diagonal",
+        "label": "X0Z0->X2Z1",
+        "measurement_id": "sector_off_00_07",
+        "observed": "0.00875000",
+        "passes": "True",
+        "threshold_or_expected": "0.02000000"
+      }
+    ]
+  },
+  "honesty_boundary": "The numbers here are acceptance fixtures and deterministic replay checks. They are not measured OAM crosstalk, measured radial leakage, or detector data.",
+  "interpretation": "BT1592 turns the BT1591 front-end firewall into a synthetic lab harness: a 9x9 sector confusion matrix, radial-shell tomography rows, exact lane replay checks, and a CSV ingest path that can be replaced by real bench data.",
+  "lane_replay_acceptance": [
+    {
+      "expected": 1080,
+      "metric": "segments",
+      "observed": 1080,
+      "passes": true
+    },
+    {
+      "expected": 77760,
+      "metric": "total_ticks",
+      "observed": 77760,
+      "passes": true
+    },
+    {
+      "expected": [
+        12960,
+        12960,
+        12960,
+        12960,
+        12960,
+        12960
+      ],
+      "metric": "six_hesse_lanes_balanced",
+      "observed": [
+        12960,
+        12960,
+        12960,
+        12960,
+        12960,
+        12960
+      ],
+      "passes": true
+    },
+    {
+      "expected": [
+        19440,
+        19440,
+        19440,
+        19440
+      ],
+      "metric": "detector_slots_balanced",
+      "observed": [
+        19440,
+        19440,
+        19440,
+        19440
+      ],
+      "passes": true
+    },
+    {
+      "expected": 25920,
+      "metric": "native_d4_ticks",
+      "observed": 25920,
+      "passes": true
+    },
+    {
+      "expected": 51840,
+      "metric": "s4_relabel_ticks",
+      "observed": 51840,
+      "passes": true
+    }
+  ],
+  "radial_tomography": [
+    {
+      "margin": 0.0,
+      "observed_eta": 0.1,
+      "passes": true,
+      "recenter_class": "centered_frame",
+      "source": "BT1589 symbolic LG radial-shell covariance",
+      "threshold": 0.1
+    },
+    {
+      "margin": 0.01704,
+      "observed_eta": 0.18296,
+      "passes": true,
+      "recenter_class": "mixed_shift_phase",
+      "source": "BT1589 symbolic LG radial-shell covariance",
+      "threshold": 0.2
+    },
+    {
+      "margin": 0.032,
+      "observed_eta": 0.168,
+      "passes": true,
+      "recenter_class": "oam_shift_only",
+      "source": "BT1589 symbolic LG radial-shell covariance",
+      "threshold": 0.2
+    },
+    {
+      "margin": 0.083,
+      "observed_eta": 0.117,
+      "passes": true,
+      "recenter_class": "phase_shift_only",
+      "source": "BT1589 symbolic LG radial-shell covariance",
+      "threshold": 0.2
+    }
+  ],
+  "sector_confusion_matrix": [
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.93,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "centered_frame",
+      "row_sum": 1.0,
+      "source_label": "X0Z0",
+      "source_sector": 0,
+      "source_shift": [
+        0,
+        0
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "oam_shift_only",
+      "row_sum": 1.0,
+      "source_label": "X1Z0",
+      "source_sector": 1,
+      "source_shift": [
+        1,
+        0
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "oam_shift_only",
+      "row_sum": 1.0,
+      "source_label": "X2Z0",
+      "source_sector": 2,
+      "source_shift": [
+        2,
+        0
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "phase_shift_only",
+      "row_sum": 1.0,
+      "source_label": "X0Z1",
+      "source_sector": 3,
+      "source_shift": [
+        0,
+        1
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "phase_shift_only",
+      "row_sum": 1.0,
+      "source_label": "X0Z2",
+      "source_sector": 4,
+      "source_shift": [
+        0,
+        2
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "mixed_shift_phase",
+      "row_sum": 1.0,
+      "source_label": "X1Z1",
+      "source_sector": 5,
+      "source_shift": [
+        1,
+        1
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "mixed_shift_phase",
+      "row_sum": 1.0,
+      "source_label": "X1Z2",
+      "source_sector": 6,
+      "source_shift": [
+        1,
+        2
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "mixed_shift_phase",
+      "row_sum": 1.0,
+      "source_label": "X2Z1",
+      "source_sector": 7,
+      "source_shift": [
+        2,
+        1
+      ]
+    },
+    {
+      "diagonal_probability": 0.93,
+      "max_off_diagonal": 0.00875,
+      "probabilities": [
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z0",
+          "target_sector": 0,
+          "target_shift": [
+            0,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z0",
+          "target_sector": 1,
+          "target_shift": [
+            1,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z0",
+          "target_sector": 2,
+          "target_shift": [
+            2,
+            0
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z1",
+          "target_sector": 3,
+          "target_shift": [
+            0,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X0Z2",
+          "target_sector": 4,
+          "target_shift": [
+            0,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z1",
+          "target_sector": 5,
+          "target_shift": [
+            1,
+            1
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X1Z2",
+          "target_sector": 6,
+          "target_shift": [
+            1,
+            2
+          ]
+        },
+        {
+          "probability": 0.00875,
+          "target_label": "X2Z1",
+          "target_sector": 7,
+          "target_shift": [
+            2,
+            1
+          ]
+        },
+        {
+          "probability": 0.93,
+          "target_label": "X2Z2",
+          "target_sector": 8,
+          "target_shift": [
+            2,
+            2
+          ]
+        }
+      ],
+      "recenter_class": "mixed_shift_phase",
+      "row_sum": 1.0,
+      "source_label": "X2Z2",
+      "source_sector": 8,
+      "source_shift": [
+        2,
+        2
+      ]
+    }
+  ],
+  "source_packets": {
+    "frontend_firewall": "data/bt1591_oam_mdnn_frontend_firewall.json",
+    "lane_sheet": "data/bt1590_full_witness_lane_sheet_compiler.json",
+    "radial_covariance": "data/bt1589_lg_oam_radial_covariance_simulator.json"
+  },
+  "title": "Synthetic lab-tomography harness for the OAM holonet front end",
+  "verified": true
+}
