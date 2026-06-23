@@ -2714,9 +2714,11 @@ holonomies, self-error-correction from the substrate-fixed quasicrystal drive
 (zero proper time, Wigner helicity $\lambda$), and the carrier as its own geon
 inside a fractal of nested shells.
 \emph{(C) The physics and the computer are one object}: the quantum power is the
-gauge curvature on the matter graph, and that discrete curvature is a finite-group
+gauge curvature on the matter graph, that discrete curvature is a finite-group
 lattice gauge theory whose continuum limit is the spectral action's
-gauge-plus-gravity field equations.
+gauge-plus-gravity field equations (with an exact mass gap $f$), and the whole
+network is a holographic code --- black-hole entropy is the code distance, and the
+substrate carries a discrete AdS/CFT.
 \emph{(D) It is testable now}: a parameter-free near-term falsification protocol
 on the single-photon demonstrator.
 Throughout, one substrate number recurs --- $q-1=\lambda=2$ sets the drive angle,
@@ -3055,6 +3057,35 @@ geometry of $Q$, with no continuum limit needed to certify that the gap is
 nonzero. \emph{(This is the gap of the exact finite theory --- the substrate's
 shadow of the Yang--Mills mass gap, not a continuum proof.)} (Witness:
 \texttt{analysis/w33\_mass\_gap\_from\_matter\_graph.py}.)
+
+\subsection{Why ``holo-net'': the network is a holographic code}
+\label{sec:holographic-code}
+
+The name is earned, not decorative: the architecture is a holographic
+quantum error-correcting code in three exact senses, each read straight off the
+substrate spectrum, and each tying a physics fact to a machine component.
+\emph{(i) Black-hole entropy is the code distance.} A horizon is a stabilizer
+edge-cut, and the Bekenstein--Hawking law $S_{\mathrm{BH}}=A/4$ has its universal
+$\tfrac14$ \emph{equal to} the code's distance bound $1/d_Z$: the $W(3,3)$ CSS
+code has $d_Z=4=\mu$, so $S_{\mathrm{BH}}=A/d_Z=A/\mu$. The black-hole quarter is
+the QEC distance.
+\emph{(ii) Discrete AdS/CFT.} A holographic duality maps a negatively curved bulk
+to a conformal boundary. The collinearity graph has adjacency spectrum
+$\{12,2^{24},(-4)^{15}\}$; its single \emph{negative} (hyperbolic) eigenvalue
+$-4$ has multiplicity $g=15=\dim\mathrm{SO}(4,2)$, the $4$-dimensional conformal
+group. The $15$ negative-curvature bulk modes match the $15$ conformal-boundary
+generators exactly --- discrete AdS/CFT with no continuum strings. (Dually, the
+matter graph's Laplacian $\{0,24^{15},30^{24}\}$ puts the same $g/f$
+multiplicities on the gauge mass-gap spectrum.)
+\emph{(iii) The fractal is the holographic principle.} The nested-shell fractal
+of \S\ref{sec:fractal} is boundary-encodes-bulk made literal: each outer shell's
+$[[240,81,4]]_3$ code holographically contains the logical information of the
+inner layers, exactly the concatenated holographic code structure (the
+Pastawski--Yoshida--Harlow--Preskill picture), with the substrate fixing the
+dictionary. So the holonet is a holographic code whose entropy law, conformal
+boundary, and bulk--boundary map are all substrate arithmetic --- which is the
+literal content of ``holo-net''. (Witness:
+\texttt{analysis/w33\_holographic\_architecture.py}.)
 
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}

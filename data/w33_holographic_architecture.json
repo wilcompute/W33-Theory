@@ -1,0 +1,18 @@
+{
+  "bekenstein_quarter_is_1_over_dZ": {
+    "d_Z": 4,
+    "mu": 4
+  },
+  "adscft_neg_mult": 15,
+  "dim_SO_4_2": 15,
+  "Q_laplacian": {
+    "0": 1,
+    "24": 15,
+    "30": 24
+  },
+  "fractal_holography": "outer-shell code contains inner layers (boundary->bulk)",
+  "summary": "holonet is holographic: Bekenstein 1/4 = 1/d_Z (d_Z=mu=4); discrete AdS/CFT 15 = g = dim SO(4,2) (W neg-eigenvalue -4 mult 15); fractal nested shells = boundary-encodes-bulk code concatenation. Was absent from the holonet paper; now added.",
+  "sources": [
+    "w33_paper.tex (Bekenstein=QEC distance; discrete AdS/CFT 15=SO(4,2)); SRG(40,12,2,4)/(40,27,18,18) spectra; holographic quantum error correction (Pastawski et al.)"
+  ]
+}
