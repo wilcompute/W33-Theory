@@ -1,0 +1,109 @@
+{
+  "acceptance_matrix": {
+    "blocked_claims_present": true,
+    "exact_numbers_align": true,
+    "full_lane_replay": true,
+    "literature_firewall": true,
+    "native_plus_relabel_exhausts_ticks": true,
+    "radial_covariance": true
+  },
+  "bt": 1591,
+  "checks": {
+    "blocked_claims_present": true,
+    "exact_numbers_align": true,
+    "full_lane_replay": true,
+    "literature_firewall": true,
+    "native_plus_relabel_exhausts_ticks": true,
+    "radial_covariance": true
+  },
+  "claim_firewall": [
+    {
+      "allowed": true,
+      "basis": "external literature motivation plus BT1591 layer mapping",
+      "claim": "OAM-MDNN supports multiplexed OAM mode processing as an optical front-end idea"
+    },
+    {
+      "allowed": false,
+      "basis": "ABI proof remains BT1587/BT1590 exact finite certificates",
+      "claim": "OAM-MDNN proves the holonet 216-action ABI"
+    },
+    {
+      "allowed": false,
+      "basis": "BT1589 is symbolic shell covariance only",
+      "claim": "BT1589 proves measured LG radial leakage"
+    },
+    {
+      "allowed": false,
+      "basis": "BT1590 is a deterministic lane/timing compiler",
+      "claim": "BT1590 is a calibrated optical-loss budget"
+    },
+    {
+      "allowed": true,
+      "basis": "explicit protocol acceptance tests, not assumed from papers",
+      "claim": "The front-end can be accepted after tomography, crosstalk, and 77760-tick replay pass"
+    }
+  ],
+  "exact_numbers": {
+    "centered_transaction_words": 24,
+    "finite_action_addresses": 216,
+    "radial_recentered_threshold": 0.2,
+    "radial_worst_eta": 0.18296,
+    "recenter_sectors": 9,
+    "witness_segments": 1080,
+    "witness_ticks": 77760
+  },
+  "external_source_used": "oam_multiplexing_natphot_2026",
+  "frontend_layers": [
+    {
+      "acceptance_test": "row-stochastic shell tomography and worst eta below recentered threshold",
+      "claim_tier": "calibration requirement",
+      "layer": "LG mode cleaner and radial monitor",
+      "physical_role": "prepare/monitor p=0,1,2 radial shells before any recenter decision",
+      "repo_interface": "BT1589 radial channel family L(eta)"
+    },
+    {
+      "acceptance_test": "9x9 sector confusion matrix with dark-reference controls",
+      "claim_tier": "hardware proposal",
+      "layer": "OAM sector sorter",
+      "physical_role": "classify the affine shift sector (x,z) in F3^2",
+      "repo_interface": "9 recenter sectors feeding BT1587"
+    },
+    {
+      "acceptance_test": "inter-sector crosstalk matrix measured before ABI claims",
+      "claim_tier": "literature motivation",
+      "layer": "diffractive multiplex/demultiplex front-end",
+      "physical_role": "passively fan mode families into the recenter-sector channels",
+      "repo_interface": "OAM-MDNN source motivates multiplexed mode processing only"
+    },
+    {
+      "acceptance_test": "each word reused 45 times in BT1590 lane sheet",
+      "claim_tier": "exact finite ABI",
+      "layer": "24-word transaction selector",
+      "physical_role": "select the centered S4 fiber transaction word after recentering",
+      "repo_interface": "BT1495 24 centered 72-tick words"
+    },
+    {
+      "acceptance_test": "D4 and S4 tick counts match the full witness replay",
+      "claim_tier": "exact finite ABI schedule",
+      "layer": "native D4 fast lane plus S4 relabel lane",
+      "physical_role": "send eight square-subgroup words through native D4 routing and sixteen through analyzer relabels",
+      "repo_interface": "BT1590 native 25920 ticks / relabel 51840 ticks"
+    },
+    {
+      "acceptance_test": "lane balance, detector balance, radial covariance, and external-reference comparison",
+      "claim_tier": "protocol witness",
+      "layer": "five-gate witness replay",
+      "physical_role": "run I,X,Z,F3,S across all recenter sectors and transaction words",
+      "repo_interface": "BT1590 77760-tick lane sheet"
+    }
+  ],
+  "honesty_boundary": "BT1591 is a hardware-front-end proposal and claim firewall. It does not assert that an OAM-MDNN implements a quantum gate, preserves coherence, or meets loss budgets without the listed measurements.",
+  "interpretation": "The cool architecture move is to use OAM-multiplexed diffractive optics as a front-end sectorizer, not as the quantum computer. It passively classifies and routes mode families into the nine recenter sectors; the exact holonet work is still the local 9*24 ABI and the 77760-tick witness replay.",
+  "source_packets": {
+    "lane_sheet": "data/bt1590_full_witness_lane_sheet_compiler.json",
+    "literature_firewall": "data/bt1588_oam_literature_claim_firewall.json",
+    "radial_covariance": "data/bt1589_lg_oam_radial_covariance_simulator.json"
+  },
+  "title": "OAM-MDNN front-end firewall",
+  "verified": true
+}

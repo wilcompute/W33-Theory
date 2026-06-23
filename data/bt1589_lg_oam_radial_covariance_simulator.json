@@ -1,0 +1,1147 @@
+{
+  "bt": 1589,
+  "checks": {
+    "abi_verified": true,
+    "all_commutators_zero": true,
+    "all_row_stochastic": true,
+    "core_gate_threshold_preserved": true,
+    "expanded_tick_budget_77760": true,
+    "expanded_word_cases_1080": true,
+    "five_witness_gates": true,
+    "leakage_verified": true,
+    "nine_affine_shifts": true,
+    "radial_type_rows_45": true,
+    "recentered_threshold_survives": true,
+    "three_lg_shells": true,
+    "worst_is_mixed_f3": true
+  },
+  "class_eta_max": {
+    "centered_frame": 0.1,
+    "mixed_shift_phase": 0.18296,
+    "oam_shift_only": 0.168,
+    "phase_shift_only": 0.117
+  },
+  "class_tick_counts": {
+    "centered_frame": 8640,
+    "mixed_shift_phase": 34560,
+    "oam_shift_only": 17280,
+    "phase_shift_only": 17280
+  },
+  "class_type_counts": {
+    "centered_frame": 5,
+    "mixed_shift_phase": 20,
+    "oam_shift_only": 10,
+    "phase_shift_only": 10
+  },
+  "class_word_counts": {
+    "centered_frame": 120,
+    "mixed_shift_phase": 480,
+    "oam_shift_only": 240,
+    "phase_shift_only": 240
+  },
+  "counts": {
+    "expanded_ticks": 77760,
+    "expanded_word_cases": 1080,
+    "radial_type_rows": 45
+  },
+  "honesty_boundary": "This is a symbolic Laguerre-Gaussian radial-shell simulator. It is not a measured beam profile, detector calibration, or optical-loss claim.",
+  "interpretation": "The radial leakage envelopes form one commuting LG shell channel family. Therefore recentering and the centered witness gates are shell-covariant: the 216-action ABI needs a recenter leakage tax, not 216 independent radial calibrations. The worst symbolic envelope is mixed recentering followed by F3.",
+  "model": {
+    "channel_family": "L(eta): diagonal 1-eta, off-diagonal eta/2 on three LG radial shells",
+    "composition_law": "eta_total = eta_a + eta_b - (3/2)*eta_a*eta_b",
+    "core_gate_threshold": 0.1,
+    "radial_shells": [
+      0,
+      1,
+      2
+    ],
+    "recentered_threshold": 0.2
+  },
+  "rows": [
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "I"
+      ],
+      "effective_eta": 0.0,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "centered_frame",
+      "recenter_eta": 0.0,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "I"
+      ],
+      "effective_eta": 0.08,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "centered_frame",
+      "recenter_eta": 0.0,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "I"
+      ],
+      "effective_eta": 0.02,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "centered_frame",
+      "recenter_eta": 0.0,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "I"
+      ],
+      "effective_eta": 0.1,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "centered_frame",
+      "recenter_eta": 0.0,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "I"
+      ],
+      "effective_eta": 0.05,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "centered_frame",
+      "recenter_eta": 0.0,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.08,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.1504,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.168,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        1,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.124,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.08,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.1504,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.168,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        2,
+        0
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X"
+      ],
+      "effective_eta": 0.124,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "oam_shift_only",
+      "recenter_eta": 0.08,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.02,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0394,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.117,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        0,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0685,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.02,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0394,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.117,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        0,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "Z"
+      ],
+      "effective_eta": 0.0685,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "phase_shift_only",
+      "recenter_eta": 0.02,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.165888,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.114672,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.18296,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.14028,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.165888,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.114672,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.18296,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        1,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.14028,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.165888,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.114672,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.18296,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        2,
+        1
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.14028,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.0,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.0976,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.08,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.165888,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "X"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.02,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.114672,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "Z"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.1,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.18296,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "F3"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "claim_level": "symbolic LG radial-shell covariance",
+      "commutator_defect": 0.0,
+      "core_gate_eta": 0.05,
+      "correction_ops": [
+        "X",
+        "Z"
+      ],
+      "effective_eta": 0.14028,
+      "expanded_ticks": 1728,
+      "expanded_transaction_words": 24,
+      "recenter_class": "mixed_shift_phase",
+      "recenter_eta": 0.0976,
+      "row_sums": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "witness_gate": "S"
+    }
+  ],
+  "source_packets": {
+    "abi": "data/bt1587_oam_recenter_transaction_abi.json",
+    "leakage": "data/bt1577_radial_leakage_bound_from_oam_phase_ops.json"
+  },
+  "title": "LG/OAM radial-shell covariance simulator",
+  "verified": true,
+  "worst_case": {
+    "affine_shift": [
+      1,
+      1
+    ],
+    "claim_level": "symbolic LG radial-shell covariance",
+    "commutator_defect": 0.0,
+    "core_gate_eta": 0.1,
+    "correction_ops": [
+      "X",
+      "Z"
+    ],
+    "effective_eta": 0.18296,
+    "expanded_ticks": 1728,
+    "expanded_transaction_words": 24,
+    "recenter_class": "mixed_shift_phase",
+    "recenter_eta": 0.0976,
+    "row_sums": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "witness_gate": "F3"
+  }
+}

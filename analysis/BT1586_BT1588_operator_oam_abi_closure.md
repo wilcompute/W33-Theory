@@ -3,8 +3,9 @@
 ## BT1586
 
 The operator/OAM appendix is now spliced into `photonic_holonet.tex` by a bounded,
-idempotent block before the conclusion.  The block imports BT1564-BT1576,
-BT1580-BT1585, and the BT1586-BT1588 synthesis insert.
+idempotent block before the bibliography.  The block imports BT1564-BT1576,
+BT1580-BT1585, the BT1586-BT1588 synthesis insert, and subsequent operator/OAM
+appendix inserts.
 
 ## BT1587
 

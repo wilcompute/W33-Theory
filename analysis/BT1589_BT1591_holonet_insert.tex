@@ -1,0 +1,47 @@
+\subsection{LG radial covariance, full witness lane sheet, and OAM front end}
+\label{sec:bt1589-bt1591-radial-lane-frontend}
+
+The recenter ABI now has a radial-shell falsifier.  Model the first three
+Laguerre--Gaussian radial shells by the stochastic channel family \(L(\eta)\):
+diagonal entries \(1-\eta\), off-diagonal entries \(\eta/2\).  The BT1577
+operation envelopes \(I,Z,S,X,F_3\) all lie in this same channel family, so the
+radial recenter correction and the centered witness gate commute at shell level.
+For two envelopes,
+\[
+  \eta(a,b)=a+b-\frac{3}{2}ab.
+\]
+Thus the \(216=9\cdot24\) affine actions do not require \(216\) separate radial
+calibrations.  They require one centered witness table plus the recenter tax.
+The symbolic worst case is a mixed OAM/phase recenter followed by \(F_3\),
+\[
+  \eta_{\max}=0.18296 < 0.20,
+\]
+while the centered gate threshold remains the BT1577 value \(0.10\).  This is a
+covariance simulator and falsifier, not measured beam leakage.
+
+The complete witness replay is now compiled as a physical lane sheet:
+\[
+  5\ {\rm gates}\times 9\ {\rm recenter\ sectors}\times
+  24\ {\rm centered\ words}\times 72\ {\rm ticks}=77760.
+\]
+It is stored as \(1080\) exact \(72\)-tick segments with the global tick formula
+\[
+  ((((g\cdot9)+s)\cdot24+w)\cdot72+t).
+\]
+Every Hesse lane appears \(12960\) times, every detector slot appears \(19440\)
+times, native \(D_4\) square-pulse words occupy \(25920\) ticks, and the
+remaining \(S_4\) analyzer-relabel words occupy \(51840\) ticks.
+
+The hardware interpretation is deliberately sharper.  OAM-multiplexed
+diffractive optics are a proposed \emph{front-end sectorizer}: a passive
+mode-processing layer can sort or fan out the nine affine recenter sectors before
+the exact \(24\)-word transaction kernel runs.  Recent OAM-MDNN work supports
+this as an optical mode-processing direction, but it does not prove a quantum
+gate, preserve coherence by itself, or calibrate loss.  The promoted theorem
+remains local:
+\[
+  \boxed{9\ {\rm recenter\ sectors}\times24\ {\rm centered\ words}
+  =216\ {\rm exact\ finite\ ABI\ addresses},}
+\]
+with acceptance delegated to radial tomography, sector crosstalk measurements,
+and the \(77760\)-tick witness replay.

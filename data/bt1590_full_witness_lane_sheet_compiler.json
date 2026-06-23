@@ -1,0 +1,1372 @@
+{
+  "action_level_tick_counts": {
+    "native_d4_square_pulse": 25920,
+    "s4_analyzer_relabel": 51840
+  },
+  "bt": 1590,
+  "checks": {
+    "abi_verified": true,
+    "class_tick_counts_match_bt1589": true,
+    "detector_slots_balanced": true,
+    "each_radial_case_reused_24_times": true,
+    "each_word_reused_45_times": true,
+    "five_gate_sweeps_equal": true,
+    "last_tick_is_77759": true,
+    "native_d4_tick_count": true,
+    "radial_verified": true,
+    "s4_relabel_tick_count": true,
+    "segment_ticks_are_72": true,
+    "segments_1080": true,
+    "six_hesse_lanes_balanced": true,
+    "total_ticks_77760": true,
+    "transaction_words_verified": true
+  },
+  "class_tick_counts": {
+    "centered_frame": 8640,
+    "mixed_shift_phase": 34560,
+    "oam_shift_only": 17280,
+    "phase_shift_only": 17280
+  },
+  "counts": {
+    "affine_translations": 9,
+    "centered_transaction_words": 24,
+    "segments": 1080,
+    "ticks_per_segment": 72,
+    "total_ticks": 77760,
+    "witness_gates": 5
+  },
+  "detector_slot_counts": {
+    "0": 19440,
+    "1": 19440,
+    "2": 19440,
+    "3": 19440
+  },
+  "gate_tick_counts": {
+    "F3": 15552,
+    "I": 15552,
+    "S": 15552,
+    "X": 15552,
+    "Z": 15552
+  },
+  "honesty_boundary": "This is a deterministic lane compiler and timing certificate. It is not an optical-loss, detector-efficiency, or beam-quality measurement.",
+  "interpretation": "The five-gate OAM witness is now a concrete physical lane sheet: 5 witness gates times 9 recenter shifts times 24 centered transaction words times 72 ticks. The sheet preserves Hesse lane balance, detector slot balance, native D4 fast-lane accounting, and S4 relabel accounting.",
+  "lane_counts": {
+    "ERASE": 12960,
+    "PHASE": 12960,
+    "ROUTE": 12960,
+    "T-BIT": 12960,
+    "X-CORR": 12960,
+    "Z-CORR": 12960
+  },
+  "radial_case_reuse_profile": [
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24
+  ],
+  "sample_ticks": [
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 48,
+      "global_tick": 0,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 0,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 49,
+      "global_tick": 1,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 1,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 50,
+      "global_tick": 2,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 2,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 51,
+      "global_tick": 3,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 3,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 52,
+      "global_tick": 4,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 4,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 53,
+      "global_tick": 5,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 5,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 48,
+      "global_tick": 6,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 6,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 49,
+      "global_tick": 7,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 7,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 50,
+      "global_tick": 8,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 8,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 51,
+      "global_tick": 9,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 9,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 52,
+      "global_tick": 10,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 10,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 53,
+      "global_tick": 11,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 11,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 48,
+      "global_tick": 12,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 12,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 49,
+      "global_tick": 13,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 13,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 50,
+      "global_tick": 14,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 14,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 51,
+      "global_tick": 15,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 15,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 52,
+      "global_tick": 16,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 16,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 2,
+      "frame_tick": 53,
+      "global_tick": 17,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 2,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 17,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 48,
+      "global_tick": 18,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 18,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 49,
+      "global_tick": 19,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 19,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 50,
+      "global_tick": 20,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 20,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 51,
+      "global_tick": 21,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 21,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 52,
+      "global_tick": 22,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 22,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 3,
+      "frame_tick": 53,
+      "global_tick": 23,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 3,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 23,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 56,
+      "global_tick": 24,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 24,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 57,
+      "global_tick": 25,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 25,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 58,
+      "global_tick": 26,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 26,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 59,
+      "global_tick": 27,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 27,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 60,
+      "global_tick": 28,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 28,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 0,
+      "frame_tick": 61,
+      "global_tick": 29,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 29,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 56,
+      "global_tick": 30,
+      "hesse_lane": "ERASE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 30,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 57,
+      "global_tick": 31,
+      "hesse_lane": "ROUTE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 31,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 58,
+      "global_tick": 32,
+      "hesse_lane": "PHASE",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 32,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 59,
+      "global_tick": 33,
+      "hesse_lane": "X-CORR",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 33,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 60,
+      "global_tick": 34,
+      "hesse_lane": "Z-CORR",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 34,
+      "witness_gate": "I"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "detector_slot": 1,
+      "frame_tick": 61,
+      "global_tick": 35,
+      "hesse_lane": "T-BIT",
+      "mirror_slot_mod_4": 1,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "transaction_tick": 35,
+      "witness_gate": "I"
+    }
+  ],
+  "segment_grid": {
+    "affine_translations": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "axis_order": [
+      "witness_gate",
+      "affine_translation",
+      "centered_transaction_word"
+    ],
+    "centered_transaction_words": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+    "segment_index_formula": "(gate_index*9 + translation_index)*24 + word_index",
+    "start_tick_formula": "segment_index*72",
+    "witness_gates": [
+      "I",
+      "X",
+      "Z",
+      "F3",
+      "S"
+    ]
+  },
+  "segment_samples": [
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 0,
+      "correction": "I",
+      "end_tick": 71,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 0,
+      "start_tick": 0,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 1,
+      "correction": "I",
+      "end_tick": 143,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 1,
+      "start_tick": 72,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 2,
+      "correction": "I",
+      "end_tick": 215,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 2,
+      "start_tick": 144,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 3,
+      "correction": "I",
+      "end_tick": 287,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 3,
+      "start_tick": 216,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 4,
+      "correction": "I",
+      "end_tick": 359,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 4,
+      "start_tick": 288,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 5,
+      "correction": "I",
+      "end_tick": 431,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 5,
+      "start_tick": 360,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 6,
+      "correction": "I",
+      "end_tick": 503,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 6,
+      "start_tick": 432,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 7,
+      "correction": "I",
+      "end_tick": 575,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 7,
+      "start_tick": 504,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 8,
+      "correction": "I",
+      "end_tick": 647,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 8,
+      "start_tick": 576,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 9,
+      "correction": "I",
+      "end_tick": 719,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 9,
+      "start_tick": 648,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 10,
+      "correction": "I",
+      "end_tick": 791,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 10,
+      "start_tick": 720,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        0,
+        0
+      ],
+      "centered_transaction_word": 11,
+      "correction": "I",
+      "end_tick": 863,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0,
+      "recenter_class": "centered_frame",
+      "segment_index": 11,
+      "start_tick": 792,
+      "tick_count": 72,
+      "translation_index": 0,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 0,
+      "correction": "X^2 Z^2",
+      "end_tick": 8711,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 120,
+      "start_tick": 8640,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 1,
+      "correction": "X^2 Z^2",
+      "end_tick": 8783,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 121,
+      "start_tick": 8712,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 2,
+      "correction": "X^2 Z^2",
+      "end_tick": 8855,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 122,
+      "start_tick": 8784,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 3,
+      "correction": "X^2 Z^2",
+      "end_tick": 8927,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 123,
+      "start_tick": 8856,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 4,
+      "correction": "X^2 Z^2",
+      "end_tick": 8999,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 124,
+      "start_tick": 8928,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        1,
+        1
+      ],
+      "centered_transaction_word": 5,
+      "correction": "X^2 Z^2",
+      "end_tick": 9071,
+      "gate_index": 0,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.0976,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 125,
+      "start_tick": 9000,
+      "tick_count": 72,
+      "translation_index": 5,
+      "witness_gate": "I",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 12,
+      "correction": "X^1 Z^1",
+      "end_tick": 76967,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1068,
+      "start_tick": 76896,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 13,
+      "correction": "X^1 Z^1",
+      "end_tick": 77039,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1069,
+      "start_tick": 76968,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 14,
+      "correction": "X^1 Z^1",
+      "end_tick": 77111,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1070,
+      "start_tick": 77040,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 15,
+      "correction": "X^1 Z^1",
+      "end_tick": 77183,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1071,
+      "start_tick": 77112,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 16,
+      "correction": "X^1 Z^1",
+      "end_tick": 77255,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1072,
+      "start_tick": 77184,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 17,
+      "correction": "X^1 Z^1",
+      "end_tick": 77327,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1073,
+      "start_tick": 77256,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 18,
+      "correction": "X^1 Z^1",
+      "end_tick": 77399,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1074,
+      "start_tick": 77328,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 19,
+      "correction": "X^1 Z^1",
+      "end_tick": 77471,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1075,
+      "start_tick": 77400,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 20,
+      "correction": "X^1 Z^1",
+      "end_tick": 77543,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1076,
+      "start_tick": 77472,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 21,
+      "correction": "X^1 Z^1",
+      "end_tick": 77615,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1077,
+      "start_tick": 77544,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "native_d4_square_pulse"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 22,
+      "correction": "X^1 Z^1",
+      "end_tick": 77687,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1078,
+      "start_tick": 77616,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "s4_analyzer_relabel"
+    },
+    {
+      "affine_shift": [
+        2,
+        2
+      ],
+      "centered_transaction_word": 23,
+      "correction": "X^1 Z^1",
+      "end_tick": 77759,
+      "gate_index": 4,
+      "global_tick_formula": "((((gate_index*9)+translation_index)*24 + word_index)*72 + transaction_tick)",
+      "radial_effective_eta": 0.14028,
+      "recenter_class": "mixed_shift_phase",
+      "segment_index": 1079,
+      "start_tick": 77688,
+      "tick_count": 72,
+      "translation_index": 8,
+      "witness_gate": "S",
+      "word_level": "native_d4_square_pulse"
+    }
+  ],
+  "source_packets": {
+    "abi": "data/bt1587_oam_recenter_transaction_abi.json",
+    "radial_covariance": "data/bt1589_lg_oam_radial_covariance_simulator.json",
+    "transaction_words": "data/bt1495_72_tick_transaction_word_compiler.json"
+  },
+  "title": "Full OAM witness physical lane sheet",
+  "verified": true,
+  "word_reuse_profile": [
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45,
+    45
+  ]
+}
