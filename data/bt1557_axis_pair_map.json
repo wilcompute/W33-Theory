@@ -1,0 +1,1 @@
+{"bt":1557,"title":"Axis pair map","verified":true,"summary":"Six axes form three opposite pairs. Each pair shares one sector and one fiber label. This is a finite object map, not a dynamics theorem.","checks":{"six_axes":true,"three_pairs":true,"shared_sector":true,"shared_fiber":true}}
