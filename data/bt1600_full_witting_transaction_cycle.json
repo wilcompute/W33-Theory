@@ -1,0 +1,640 @@
+{
+  "bt": 1600,
+  "checks": {
+    "accepted_ticks_match_bt1598": true,
+    "control_verified": true,
+    "cycle_has_1600_frames": true,
+    "each_source_has_13_control_27_fuel": true,
+    "fuel_ticks_match_bt1595": true,
+    "fuel_verified": true,
+    "last_tick_is_115199": true,
+    "phase_weld_is_sidecar_not_extra_cycle_frames": true,
+    "phase_weld_verified": true,
+    "rail_histogram_is_520_1080": true,
+    "tick_budget_is_115200": true,
+    "transaction_object_verified": true
+  },
+  "counts": {
+    "accepted_control_frames": 520,
+    "contextual_fuel_frames": 1080,
+    "frames": 1600,
+    "same_ray_phase_sidecar_records": 120,
+    "ticks": 115200
+  },
+  "cycle_identity": {
+    "frames": "40 source rays * 40 target rays = 1600 frames",
+    "per_source": "13 accepted controls + 27 contextual fuel frames",
+    "rail_split": "520 accepted control frames + 1080 contextual fuel frames",
+    "ticks": "1600 frames * 72 ticks = 115200"
+  },
+  "cycle_rows_sample": [
+    {
+      "cycle_frame": 0,
+      "frame_end_tick": 71,
+      "frame_start_tick": 0,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 0
+    },
+    {
+      "cycle_frame": 1,
+      "frame_end_tick": 143,
+      "frame_start_tick": 72,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 1
+    },
+    {
+      "cycle_frame": 2,
+      "frame_end_tick": 215,
+      "frame_start_tick": 144,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 2
+    },
+    {
+      "cycle_frame": 3,
+      "frame_end_tick": 287,
+      "frame_start_tick": 216,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 3
+    },
+    {
+      "cycle_frame": 4,
+      "frame_end_tick": 359,
+      "frame_start_tick": 288,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 4
+    },
+    {
+      "cycle_frame": 5,
+      "frame_end_tick": 431,
+      "frame_start_tick": 360,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 5
+    },
+    {
+      "cycle_frame": 6,
+      "frame_end_tick": 503,
+      "frame_start_tick": 432,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 6
+    },
+    {
+      "cycle_frame": 7,
+      "frame_end_tick": 575,
+      "frame_start_tick": 504,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 7
+    },
+    {
+      "cycle_frame": 8,
+      "frame_end_tick": 647,
+      "frame_start_tick": 576,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 8
+    },
+    {
+      "cycle_frame": 9,
+      "frame_end_tick": 719,
+      "frame_start_tick": 648,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 9
+    },
+    {
+      "cycle_frame": 10,
+      "frame_end_tick": 791,
+      "frame_start_tick": 720,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 10
+    },
+    {
+      "cycle_frame": 11,
+      "frame_end_tick": 863,
+      "frame_start_tick": 792,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 11
+    },
+    {
+      "cycle_frame": 12,
+      "frame_end_tick": 935,
+      "frame_start_tick": 864,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 12
+    },
+    {
+      "cycle_frame": 13,
+      "frame_end_tick": 1007,
+      "frame_start_tick": 936,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 13
+    },
+    {
+      "cycle_frame": 14,
+      "frame_end_tick": 1079,
+      "frame_start_tick": 1008,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 14
+    },
+    {
+      "cycle_frame": 15,
+      "frame_end_tick": 1151,
+      "frame_start_tick": 1080,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 15
+    },
+    {
+      "cycle_frame": 16,
+      "frame_end_tick": 1223,
+      "frame_start_tick": 1152,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 16
+    },
+    {
+      "cycle_frame": 17,
+      "frame_end_tick": 1295,
+      "frame_start_tick": 1224,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 17
+    },
+    {
+      "cycle_frame": 18,
+      "frame_end_tick": 1367,
+      "frame_start_tick": 1296,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 18
+    },
+    {
+      "cycle_frame": 19,
+      "frame_end_tick": 1439,
+      "frame_start_tick": 1368,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 19
+    },
+    {
+      "cycle_frame": 20,
+      "frame_end_tick": 1511,
+      "frame_start_tick": 1440,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "target_ray": 20
+    },
+    {
+      "cycle_frame": 21,
+      "frame_end_tick": 1583,
+      "frame_start_tick": 1512,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 21
+    },
+    {
+      "cycle_frame": 22,
+      "frame_end_tick": 1655,
+      "frame_start_tick": 1584,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 22
+    },
+    {
+      "cycle_frame": 23,
+      "frame_end_tick": 1727,
+      "frame_start_tick": 1656,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "target_ray": 23
+    },
+    {
+      "cycle_frame": 1576,
+      "frame_end_tick": 113543,
+      "frame_start_tick": 113472,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 16
+    },
+    {
+      "cycle_frame": 1577,
+      "frame_end_tick": 113615,
+      "frame_start_tick": 113544,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 17
+    },
+    {
+      "cycle_frame": 1578,
+      "frame_end_tick": 113687,
+      "frame_start_tick": 113616,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 18
+    },
+    {
+      "cycle_frame": 1579,
+      "frame_end_tick": 113759,
+      "frame_start_tick": 113688,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 19
+    },
+    {
+      "cycle_frame": 1580,
+      "frame_end_tick": 113831,
+      "frame_start_tick": 113760,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 20
+    },
+    {
+      "cycle_frame": 1581,
+      "frame_end_tick": 113903,
+      "frame_start_tick": 113832,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 21
+    },
+    {
+      "cycle_frame": 1582,
+      "frame_end_tick": 113975,
+      "frame_start_tick": 113904,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 22
+    },
+    {
+      "cycle_frame": 1583,
+      "frame_end_tick": 114047,
+      "frame_start_tick": 113976,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 23
+    },
+    {
+      "cycle_frame": 1584,
+      "frame_end_tick": 114119,
+      "frame_start_tick": 114048,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 24
+    },
+    {
+      "cycle_frame": 1585,
+      "frame_end_tick": 114191,
+      "frame_start_tick": 114120,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 25
+    },
+    {
+      "cycle_frame": 1586,
+      "frame_end_tick": 114263,
+      "frame_start_tick": 114192,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 26
+    },
+    {
+      "cycle_frame": 1587,
+      "frame_end_tick": 114335,
+      "frame_start_tick": 114264,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 27
+    },
+    {
+      "cycle_frame": 1588,
+      "frame_end_tick": 114407,
+      "frame_start_tick": 114336,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 28
+    },
+    {
+      "cycle_frame": 1589,
+      "frame_end_tick": 114479,
+      "frame_start_tick": 114408,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 29
+    },
+    {
+      "cycle_frame": 1590,
+      "frame_end_tick": 114551,
+      "frame_start_tick": 114480,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 30
+    },
+    {
+      "cycle_frame": 1591,
+      "frame_end_tick": 114623,
+      "frame_start_tick": 114552,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 31
+    },
+    {
+      "cycle_frame": 1592,
+      "frame_end_tick": 114695,
+      "frame_start_tick": 114624,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 32
+    },
+    {
+      "cycle_frame": 1593,
+      "frame_end_tick": 114767,
+      "frame_start_tick": 114696,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 33
+    },
+    {
+      "cycle_frame": 1594,
+      "frame_end_tick": 114839,
+      "frame_start_tick": 114768,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 34
+    },
+    {
+      "cycle_frame": 1595,
+      "frame_end_tick": 114911,
+      "frame_start_tick": 114840,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 35
+    },
+    {
+      "cycle_frame": 1596,
+      "frame_end_tick": 114983,
+      "frame_start_tick": 114912,
+      "payload": "OAM/Hesse fuel frame",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "target_ray": 36
+    },
+    {
+      "cycle_frame": 1597,
+      "frame_end_tick": 115055,
+      "frame_start_tick": 114984,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 37
+    },
+    {
+      "cycle_frame": 1598,
+      "frame_end_tick": 115127,
+      "frame_start_tick": 115056,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 38
+    },
+    {
+      "cycle_frame": 1599,
+      "frame_end_tick": 115199,
+      "frame_start_tick": 115128,
+      "payload": "Witting analyzer/mirror-slot control frame",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "target_ray": 39
+    }
+  ],
+  "honesty_boundary": "This is a finite cycle compiler and rail partition. It does not prove hardware throughput, security, or fault-tolerant noise thresholds.",
+  "interpretation": "BT1600 compiles the entire Witting ordered-pair desk as one transaction cycle. Accepted pairs run on the Witting analyzer control rail; rejected pairs run on the OAM/Hesse fuel rail; the 120 same-ray phase records are a selector-sheet sidecar, not extra cycle frames.",
+  "rail_histogram": {
+    "ACCEPTED_CONTROL": 520,
+    "CONTEXTUAL_FUEL": 1080
+  },
+  "source_packets": {
+    "accepted_control": "data/bt1598_witting_accepted_control_rail.json",
+    "contextual_fuel": "data/bt1595_witting_matter_fuel_bijection.json",
+    "same_ray_phase_weld": "data/bt1599_same_ray_phase_sheet_weld.json",
+    "transaction_object": "data/bt1597_universal_transaction_object.json"
+  },
+  "source_rail_histogram": {
+    "0": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "1": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "2": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "3": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "4": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "5": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "6": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "7": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "8": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "9": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "10": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "11": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "12": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "13": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "14": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "15": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "16": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "17": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "18": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "19": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "20": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "21": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "22": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "23": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "24": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "25": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "26": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "27": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "28": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "29": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "30": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "31": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "32": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "33": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "34": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "35": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "36": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "37": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "38": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    },
+    "39": {
+      "ACCEPTED_CONTROL": 13,
+      "CONTEXTUAL_FUEL": 27
+    }
+  },
+  "title": "Full Witting transaction cycle compiler",
+  "verified": true
+}

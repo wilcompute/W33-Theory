@@ -25,6 +25,7 @@ INSERTS = [
     "analysis/BT1589_BT1591_holonet_insert.tex",
     "analysis/BT1592_BT1594_holonet_insert.tex",
     "analysis/BT1595_BT1597_holonet_insert.tex",
+    "analysis/BT1598_BT1600_holonet_insert.tex",
 ]
 
 
@@ -76,7 +77,7 @@ def build_result(applied: bool) -> dict:
     checks = {
         "target_exists": TARGET.exists(),
         "bibliography_marker_present": INSERTION_MARKER in target_text,
-        "ten_insert_paths": len(INSERTS) == 10,
+        "eleven_insert_paths": len(INSERTS) == 11,
         "insert_paths_unique": len(INSERTS) == len(set(INSERTS)),
         "all_insert_paths_exist": not missing,
         "bounded_block_has_begin_end": BEGIN in block() and END in block(),
@@ -89,6 +90,8 @@ def build_result(applied: bool) -> dict:
         "includes_lab_mode_hesse_loop": "analysis/BT1592_BT1594_holonet_insert.tex"
         in INSERTS,
         "includes_witting_fuel_object": "analysis/BT1595_BT1597_holonet_insert.tex"
+        in INSERTS,
+        "includes_full_witting_cycle": "analysis/BT1598_BT1600_holonet_insert.tex"
         in INSERTS,
         "idempotent_second_pass": second == splice_text(second)[0]
         and second_mode in {"replace_existing_block", "relocate_existing_block"},
@@ -114,7 +117,8 @@ def build_result(applied: bool) -> dict:
             "It includes the operator-on-photon, internal Clifford, recentering/protocol, "
             "validation/ledger, BT1586-BT1588 synthesis, and BT1589-BT1591 "
             "radial/lane/front-end inserts, plus the BT1592-BT1594 lab/mode/Hesse "
-            "witness-loop insert and the BT1595-BT1597 Witting fuel-object insert."
+            "witness-loop insert, the BT1595-BT1597 Witting fuel-object insert, "
+            "and the BT1598-BT1600 full Witting-cycle insert."
         ),
         "honesty_boundary": (
             "This splices exact finite and claim-ledger text into the paper. It does not "
@@ -138,7 +142,8 @@ def main() -> None:
         "operator/OAM inserts, the BT1586-BT1588 synthesis insert, and the "
         "BT1589-BT1591 radial/lane/front-end insert, plus the BT1592-BT1594 "
         "lab/mode/Hesse witness-loop insert and the BT1595-BT1597 Witting "
-        "fuel-object insert. It remains idempotent on repeated application.\n",
+        "fuel-object insert, plus the BT1598-BT1600 full Witting-cycle insert. "
+        "It remains idempotent on repeated application.\n",
         encoding="utf-8",
     )
     print(

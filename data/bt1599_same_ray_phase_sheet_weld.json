@@ -1,0 +1,668 @@
+{
+  "bt": 1599,
+  "checks": {
+    "control_verified": true,
+    "delayed_query_verified": true,
+    "each_ray_has_three_surplus_contexts": true,
+    "each_witting_basis_has_three_surplus_contexts": true,
+    "matches_bt1365_identity": true,
+    "phase_alignment_verified": true,
+    "selected_and_surplus_recover_four_bases_per_ray": true,
+    "selector_sheets_are_0_to_119": true,
+    "surplus_rows_120": true,
+    "three_phase_sheets_each_cover_40_rays": true
+  },
+  "counts": {
+    "phases": 3,
+    "rays": 40,
+    "selector_sheets": 120,
+    "surplus_contexts": 120
+  },
+  "histograms": {
+    "basis": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3,
+      "11": 3,
+      "12": 3,
+      "13": 3,
+      "14": 3,
+      "15": 3,
+      "16": 3,
+      "17": 3,
+      "18": 3,
+      "19": 3,
+      "20": 3,
+      "21": 3,
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 3,
+      "26": 3,
+      "27": 3,
+      "28": 3,
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 3,
+      "33": 3,
+      "34": 3,
+      "35": 3,
+      "36": 3,
+      "37": 3,
+      "38": 3,
+      "39": 3
+    },
+    "phase": {
+      "0": 40,
+      "1": 40,
+      "2": 40
+    },
+    "ray": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3,
+      "11": 3,
+      "12": 3,
+      "13": 3,
+      "14": 3,
+      "15": 3,
+      "16": 3,
+      "17": 3,
+      "18": 3,
+      "19": 3,
+      "20": 3,
+      "21": 3,
+      "22": 3,
+      "23": 3,
+      "24": 3,
+      "25": 3,
+      "26": 3,
+      "27": 3,
+      "28": 3,
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 3,
+      "33": 3,
+      "34": 3,
+      "35": 3,
+      "36": 3,
+      "37": 3,
+      "38": 3,
+      "39": 3
+    }
+  },
+  "honesty_boundary": "This is a finite incidence weld. It does not choose a calibrated global phase gauge or measure phase noise.",
+  "identity": {
+    "basis_surplus": "160 same-ray basis-local apertures - 40 selected controls = 120 surplus audits",
+    "phase_sheets": "3 local tomotope sheets * 40 W33 lines = 120 selector phase sheets",
+    "weld": "surplus same-ray contexts = 3 phases * 40 Witting rays"
+  },
+  "interpretation": "BT1599 explains the 120 records that remain after BT1598 chooses one same-ray control basis per ray. They are not discarded: they are exactly the BT1365 3-by-40 selector phase sheets.",
+  "phase_rows": [
+    {
+      "ray": 0,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 0,
+      "selector_sheet": 0,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        0,
+        4,
+        24,
+        32
+      ],
+      "unselected_basis": 1
+    },
+    {
+      "ray": 0,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 0,
+      "selector_sheet": 40,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        0,
+        8,
+        16,
+        36
+      ],
+      "unselected_basis": 2
+    },
+    {
+      "ray": 0,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 0,
+      "selector_sheet": 80,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        0,
+        12,
+        20,
+        28
+      ],
+      "unselected_basis": 3
+    },
+    {
+      "ray": 1,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 4,
+      "selector_sheet": 1,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unselected_basis": 0
+    },
+    {
+      "ray": 1,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 4,
+      "selector_sheet": 41,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        1,
+        9,
+        17,
+        37
+      ],
+      "unselected_basis": 5
+    },
+    {
+      "ray": 1,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 4,
+      "selector_sheet": 81,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        1,
+        13,
+        21,
+        29
+      ],
+      "unselected_basis": 6
+    },
+    {
+      "ray": 2,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 7,
+      "selector_sheet": 2,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unselected_basis": 0
+    },
+    {
+      "ray": 2,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 7,
+      "selector_sheet": 42,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        2,
+        10,
+        18,
+        38
+      ],
+      "unselected_basis": 8
+    },
+    {
+      "ray": 2,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 7,
+      "selector_sheet": 82,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        2,
+        14,
+        22,
+        30
+      ],
+      "unselected_basis": 9
+    },
+    {
+      "ray": 3,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 10,
+      "selector_sheet": 3,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unselected_basis": 0
+    },
+    {
+      "ray": 3,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 10,
+      "selector_sheet": 43,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        3,
+        11,
+        19,
+        39
+      ],
+      "unselected_basis": 11
+    },
+    {
+      "ray": 3,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 10,
+      "selector_sheet": 83,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        3,
+        15,
+        23,
+        31
+      ],
+      "unselected_basis": 12
+    },
+    {
+      "ray": 4,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 1,
+      "selector_sheet": 4,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "unselected_basis": 13
+    },
+    {
+      "ray": 4,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 1,
+      "selector_sheet": 44,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        4,
+        21,
+        22,
+        23
+      ],
+      "unselected_basis": 14
+    },
+    {
+      "ray": 4,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 1,
+      "selector_sheet": 84,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        4,
+        37,
+        38,
+        39
+      ],
+      "unselected_basis": 15
+    },
+    {
+      "ray": 5,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 13,
+      "selector_sheet": 5,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        1,
+        5,
+        25,
+        33
+      ],
+      "unselected_basis": 4
+    },
+    {
+      "ray": 5,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 13,
+      "selector_sheet": 45,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        5,
+        18,
+        19,
+        36
+      ],
+      "unselected_basis": 16
+    },
+    {
+      "ray": 5,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 13,
+      "selector_sheet": 85,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        5,
+        20,
+        30,
+        31
+      ],
+      "unselected_basis": 17
+    },
+    {
+      "ray": 34,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 25,
+      "selector_sheet": 34,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        2,
+        6,
+        26,
+        34
+      ],
+      "unselected_basis": 7
+    },
+    {
+      "ray": 34,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 25,
+      "selector_sheet": 74,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        12,
+        33,
+        34,
+        39
+      ],
+      "unselected_basis": 30
+    },
+    {
+      "ray": 34,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 25,
+      "selector_sheet": 114,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        21,
+        34,
+        35,
+        36
+      ],
+      "unselected_basis": 38
+    },
+    {
+      "ray": 35,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 38,
+      "selector_sheet": 35,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        3,
+        7,
+        27,
+        35
+      ],
+      "unselected_basis": 10
+    },
+    {
+      "ray": 35,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 38,
+      "selector_sheet": 75,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        17,
+        30,
+        32,
+        35
+      ],
+      "unselected_basis": 35
+    },
+    {
+      "ray": 35,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 38,
+      "selector_sheet": 115,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        25,
+        28,
+        35,
+        38
+      ],
+      "unselected_basis": 39
+    },
+    {
+      "ray": 36,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 33,
+      "selector_sheet": 36,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        0,
+        8,
+        16,
+        36
+      ],
+      "unselected_basis": 2
+    },
+    {
+      "ray": 36,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 33,
+      "selector_sheet": 76,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        5,
+        18,
+        19,
+        36
+      ],
+      "unselected_basis": 16
+    },
+    {
+      "ray": 36,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 33,
+      "selector_sheet": 116,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        21,
+        34,
+        35,
+        36
+      ],
+      "unselected_basis": 38
+    },
+    {
+      "ray": 37,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 37,
+      "selector_sheet": 37,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        1,
+        9,
+        17,
+        37
+      ],
+      "unselected_basis": 5
+    },
+    {
+      "ray": 37,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 37,
+      "selector_sheet": 77,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        4,
+        37,
+        38,
+        39
+      ],
+      "unselected_basis": 15
+    },
+    {
+      "ray": 37,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 37,
+      "selector_sheet": 117,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        14,
+        15,
+        36,
+        37
+      ],
+      "unselected_basis": 33
+    },
+    {
+      "ray": 38,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 15,
+      "selector_sheet": 38,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        2,
+        10,
+        18,
+        38
+      ],
+      "unselected_basis": 8
+    },
+    {
+      "ray": 38,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 15,
+      "selector_sheet": 78,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        13,
+        16,
+        31,
+        38
+      ],
+      "unselected_basis": 31
+    },
+    {
+      "ray": 38,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 15,
+      "selector_sheet": 118,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        25,
+        28,
+        35,
+        38
+      ],
+      "unselected_basis": 39
+    },
+    {
+      "ray": 39,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 23,
+      "selector_sheet": 39,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 0,
+      "tetrad": [
+        3,
+        11,
+        19,
+        39
+      ],
+      "unselected_basis": 11
+    },
+    {
+      "ray": 39,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 23,
+      "selector_sheet": 79,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 1,
+      "tetrad": [
+        4,
+        37,
+        38,
+        39
+      ],
+      "unselected_basis": 15
+    },
+    {
+      "ray": 39,
+      "role": "same-ray contextual audit aperture, not logical control frame",
+      "selected_control_basis": 23,
+      "selector_sheet": 119,
+      "selector_sheet_formula": "surplus_phase*40 + ray",
+      "surplus_phase": 2,
+      "tetrad": [
+        12,
+        33,
+        34,
+        39
+      ],
+      "unselected_basis": 30
+    }
+  ],
+  "source_packets": {
+    "accepted_control_rail": "data/bt1598_witting_accepted_control_rail.json",
+    "delayed_query_frames": "data/bt1410_witting_delayed_query_frame_compiler.json",
+    "phase_alignment": "data/bt1365_qutrit_phase_sheet_alignment.json"
+  },
+  "title": "Same-ray Witting surplus to phase-sheet weld",
+  "verified": true
+}

@@ -1,0 +1,55 @@
+\subsection{Accepted control rail and the full Witting transaction cycle}
+\label{sec:bt1598-bt1600-full-witting-cycle}
+
+The Witting fuel rail now has its complementary control rail.  BT1598 compiles
+the accepted \(13/40\) Witting ordered pairs into concrete \(72\)-tick control
+frames.  The only ambiguity is the same-ray case: a ray lies in four Witting
+bases.  BT1598 resolves this by a perfect matching between the \(40\) rays and
+the \(40\) bases.  Therefore each basis carries exactly one same-ray aperture and
+twelve off-diagonal compatible apertures:
+\[
+  40\ {\rm bases}\cdot 13\ {\rm controls}=520\ {\rm accepted\ frames},
+\]
+\[
+  520\cdot72=37440\ {\rm accepted\ control\ ticks}.
+\]
+The detector handoff is the existing one:
+\[
+  {\rm Witting\ analyzer\ slot}
+  \to {\rm detector\ slot}
+  \to {\rm mirror\ slot}\bmod 4
+  \to {\rm tomotope\ flag}.
+\]
+Using the selected Witting basis as a tomotope block gives
+\[
+  {\rm tomotope\ flag}=4\,{\rm basis}+{\rm detector\ slot},
+\]
+using the first \(40\) of the \(48\) tomotope blocks and leaving \(8\) slack
+blocks for non-Witting packet traffic.
+
+BT1599 explains the \(120\)-record surplus in the basis-local Witting table.
+There are \(160\) same-ray basis-local apertures, but BT1598 promotes only \(40\)
+of them to selected control frames.  The remaining records are
+\[
+  160-40=120
+  =
+  3\ {\rm local\ tomotope\ sheets}\cdot40\ {\rm W33/Witting\ lines},
+\]
+exactly the BT1365 selector phase-sheet bundle.  Thus the same-ray surplus is a
+qutrit phase sidecar rather than extra communication throughput.
+
+BT1600 then compiles the full ordered-pair desk:
+\[
+  40\ {\rm source\ rays}\cdot40\ {\rm target\ rays}=1600\ {\rm frames},
+\]
+\[
+  1600\cdot72=115200\ {\rm ticks}.
+\]
+Every source ray has
+\[
+  13\ {\rm accepted\ control\ frames}+27\ {\rm contextual\ fuel\ frames}.
+\]
+The complete cycle is therefore not two unrelated protocols.  It is one finite
+transaction machine: accepted pairs run the Witting analyzer/mirror control
+rail, rejected pairs run the OAM/Hesse contextual fuel rail, and the unused
+same-ray contexts are exactly the ternary selector phase sheets.
