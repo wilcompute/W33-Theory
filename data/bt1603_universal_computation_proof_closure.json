@@ -1,0 +1,108 @@
+{
+  "bt": 1603,
+  "checks": {
+    "automaton_verified": true,
+    "contract_verified": true,
+    "css_verified": true,
+    "cycle_verified": true,
+    "detector_bus_uses_all_168_bins": true,
+    "fano_weld_verified": true,
+    "finite_carrier_is_1600_by_72": true,
+    "hesse_verified": true,
+    "loss_and_dark_channels_are_explicit_placeholders": true,
+    "non_clifford_port_is_required_and_present": true,
+    "proof_has_six_required_steps": true,
+    "pulses_verified": true,
+    "qec_css_handoff_is_live": true,
+    "rail_split_supplies_control_and_fuel": true
+  },
+  "closure_summary": {
+    "active_detector_bins": 168,
+    "compiled_row_pulses": 1728,
+    "control_frames": 520,
+    "css_logical_dimension": 81,
+    "css_rows": 72,
+    "frames": 1600,
+    "fuel_frames": 1080,
+    "ticks": 115200
+  },
+  "honesty_boundary": "This proves finite ABI composition. It still does not prove a hardware fault-tolerance threshold, calibrated loss model, detector efficiency, or magic-state yield.",
+  "interpretation": "BT1603 is the theorem-level closure: the Witting transaction object is a finite programmable photonic-computation ABI once the explicit Hesse/T non-Clifford port and the explicit calibration placeholders are included.",
+  "proof_steps": [
+    {
+      "claim": "The program carrier is the BT1601 single-photon automaton: 1600 ordered Witting-pair frames and 115200 ticks.",
+      "step": "finite_program_carrier",
+      "verified_by": [
+        "BT1601",
+        "BT1600"
+      ]
+    },
+    {
+      "claim": "Accepted Witting frames select analyzer, mirror-slot, tomotope-flag, and row-pulse handoff data for finite Clifford transport.",
+      "step": "clifford_transport",
+      "verified_by": [
+        "BT1598",
+        "BT1377",
+        "BT1493"
+      ]
+    },
+    {
+      "claim": "Rejected Witting frames are exactly the 1080 OAM/Hesse contextual-fuel segments.",
+      "step": "contextual_fuel",
+      "verified_by": [
+        "BT1595",
+        "BT1590",
+        "BT1594"
+      ]
+    },
+    {
+      "claim": "The Hesse/T port overlays one 72-tick non-Clifford microframe on every contextual-fuel segment.",
+      "step": "non_clifford_injection",
+      "verified_by": [
+        "BT1403",
+        "BT1404",
+        "BT1594"
+      ]
+    },
+    {
+      "claim": "The 168 active detector bins are the Fano point-stabilizer bus welded to the Witting transaction body.",
+      "step": "detector_bus",
+      "verified_by": [
+        "BT1417",
+        "BT1490",
+        "BT1492",
+        "BT1602"
+      ]
+    },
+    {
+      "claim": "The same ABI hands detector/row values into the retwined CSS syndrome layer with 72 rows and logical dimension 81.",
+      "step": "qec_syndrome_handoff",
+      "verified_by": [
+        "BT1486",
+        "BT1493"
+      ]
+    }
+  ],
+  "source_packets": {
+    "fano_witting_bins": "data/bt1602_fano_witting_detector_bin_synthesis.json",
+    "full_witting_cycle": "data/bt1600_full_witting_transaction_cycle.json",
+    "hesse_t_loop": "data/bt1594_hesse_t_universality_witness_loop.json",
+    "physical_automaton": "data/bt1601_single_photon_transaction_automaton.json",
+    "physical_pulses": "data/bt1493_row_action_physical_pulse_compiler.json",
+    "retwined_css": "data/bt1486_retwined_css_from_abi_v2.json",
+    "universal_contract": "data/bt1377_physical_universal_computation_contract.json"
+  },
+  "theorem": {
+    "name": "finite_programmable_single_photon_holonet_computer",
+    "not_claimed": [
+      "fault-tolerant threshold",
+      "measured insertion loss",
+      "detector efficiency",
+      "magic-state yield",
+      "cryptographic security"
+    ],
+    "statement": "Given the calibrated placeholders required by BT1601 and the explicit non-Clifford Hesse/T port required by BT1377, the BT1600 Witting transaction cycle is a finite programmable photonic-computation ABI: accepted frames carry Clifford transport, rejected frames carry contextual fuel, the Hesse/T overlay supplies non-Clifford injection, and the retwined CSS layer receives the syndrome handoff."
+  },
+  "title": "Universal-computation proof closure for the Witting/Hesse holonet ABI",
+  "verified": true
+}

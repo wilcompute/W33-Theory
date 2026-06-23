@@ -1,0 +1,4042 @@
+{
+  "automaton_identity": {
+    "carrier": "one single-photon transaction packet",
+    "detector_slots": "accepted 130 per slot + fuel 270 per slot = 400 per slot",
+    "states": "1600 ordered Witting pair frames",
+    "switch_split": "520 Witting analyzer frames + 1080 OAM/Hesse fuel frames",
+    "ticks": "1600 frames * 72 ticks = 115200"
+  },
+  "automaton_rows_sample": [
+    {
+      "cycle_frame": 0,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0000",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          64,
+          71
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_0"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 0
+      },
+      "frame_end_tick": 71,
+      "frame_start_tick": 0,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          32,
+          47
+        ],
+        "dark_reference": [
+          64,
+          71
+        ],
+        "detector_or_hesse_handoff": [
+          48,
+          63
+        ],
+        "program_delay": [
+          8,
+          31
+        ],
+        "source_switch": [
+          0,
+          7
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_00"
+      },
+      "payload": {
+        "basis_options": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "control_mode": "SAME_RAY_MATCHED_CONTROL_APERTURE",
+        "detector_slot": 0,
+        "mirror_slot_mod_4": 0,
+        "optical_family": "COMPUTATIONAL_DIRECT_RAILS",
+        "selected_basis": 0,
+        "source_slot": 0,
+        "tomotope_flag": 0
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 1,
+      "switch": {
+        "basis_select": 0,
+        "delay_line": 0,
+        "mirror_slot": 0,
+        "source_select": 0,
+        "target_select": 0
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 0
+    },
+    {
+      "cycle_frame": 1,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0001",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          136,
+          143
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_0"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 1
+      },
+      "frame_end_tick": 143,
+      "frame_start_tick": 72,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          104,
+          119
+        ],
+        "dark_reference": [
+          136,
+          143
+        ],
+        "detector_or_hesse_handoff": [
+          120,
+          135
+        ],
+        "program_delay": [
+          80,
+          103
+        ],
+        "source_switch": [
+          72,
+          79
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_01"
+      },
+      "payload": {
+        "basis_options": [
+          0
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "COMPUTATIONAL_DIRECT_RAILS",
+        "selected_basis": 0,
+        "source_slot": 0,
+        "tomotope_flag": 1
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 2,
+      "switch": {
+        "basis_select": 0,
+        "delay_line": 0,
+        "mirror_slot": 1,
+        "source_select": 0,
+        "target_select": 1
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 1
+    },
+    {
+      "cycle_frame": 2,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0002",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          208,
+          215
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_0"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 2
+      },
+      "frame_end_tick": 215,
+      "frame_start_tick": 144,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          176,
+          191
+        ],
+        "dark_reference": [
+          208,
+          215
+        ],
+        "detector_or_hesse_handoff": [
+          192,
+          207
+        ],
+        "program_delay": [
+          152,
+          175
+        ],
+        "source_switch": [
+          144,
+          151
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_02"
+      },
+      "payload": {
+        "basis_options": [
+          0
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "COMPUTATIONAL_DIRECT_RAILS",
+        "selected_basis": 0,
+        "source_slot": 0,
+        "tomotope_flag": 2
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 3,
+      "switch": {
+        "basis_select": 0,
+        "delay_line": 0,
+        "mirror_slot": 2,
+        "source_select": 0,
+        "target_select": 2
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 2
+    },
+    {
+      "cycle_frame": 3,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0003",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          280,
+          287
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_0"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 3
+      },
+      "frame_end_tick": 287,
+      "frame_start_tick": 216,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          248,
+          263
+        ],
+        "dark_reference": [
+          280,
+          287
+        ],
+        "detector_or_hesse_handoff": [
+          264,
+          279
+        ],
+        "program_delay": [
+          224,
+          247
+        ],
+        "source_switch": [
+          216,
+          223
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_03"
+      },
+      "payload": {
+        "basis_options": [
+          0
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 3,
+        "mirror_slot_mod_4": 3,
+        "optical_family": "COMPUTATIONAL_DIRECT_RAILS",
+        "selected_basis": 0,
+        "source_slot": 0,
+        "tomotope_flag": 3
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 4,
+      "switch": {
+        "basis_select": 0,
+        "delay_line": 0,
+        "mirror_slot": 3,
+        "source_select": 0,
+        "target_select": 3
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 3
+    },
+    {
+      "cycle_frame": 4,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0004",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          352,
+          359
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_1"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 5
+      },
+      "frame_end_tick": 359,
+      "frame_start_tick": 288,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          320,
+          335
+        ],
+        "dark_reference": [
+          352,
+          359
+        ],
+        "detector_or_hesse_handoff": [
+          336,
+          351
+        ],
+        "program_delay": [
+          296,
+          319
+        ],
+        "source_switch": [
+          288,
+          295
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_04"
+      },
+      "payload": {
+        "basis_options": [
+          1
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 1,
+        "source_slot": 0,
+        "tomotope_flag": 5
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 5,
+      "switch": {
+        "basis_select": 1,
+        "delay_line": 1,
+        "mirror_slot": 1,
+        "source_select": 0,
+        "target_select": 4
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 4
+    },
+    {
+      "cycle_frame": 5,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0005",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          424,
+          431
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 0,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 0,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 431,
+      "frame_start_tick": 360,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          392,
+          407
+        ],
+        "dark_reference": [
+          424,
+          431
+        ],
+        "detector_or_hesse_handoff": [
+          408,
+          423
+        ],
+        "program_delay": [
+          368,
+          391
+        ],
+        "source_switch": [
+          360,
+          367
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_05"
+      },
+      "payload": {
+        "fuel_segment": 0,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D0"
+        },
+        "local_abi_address": 0,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 0,
+        "word_index": 0
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 6,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 5,
+        "witness_gate_index": 0,
+        "word_select": 0
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 5
+    },
+    {
+      "cycle_frame": 6,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0006",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          496,
+          503
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 1,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 1,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 503,
+      "frame_start_tick": 432,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          464,
+          479
+        ],
+        "dark_reference": [
+          496,
+          503
+        ],
+        "detector_or_hesse_handoff": [
+          480,
+          495
+        ],
+        "program_delay": [
+          440,
+          463
+        ],
+        "source_switch": [
+          432,
+          439
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_06"
+      },
+      "payload": {
+        "fuel_segment": 1,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D1"
+        },
+        "local_abi_address": 1,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 1,
+        "word_index": 1
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 7,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 6,
+        "witness_gate_index": 0,
+        "word_select": 1
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 6
+    },
+    {
+      "cycle_frame": 7,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0007",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          568,
+          575
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 2,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 2,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 575,
+      "frame_start_tick": 504,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          536,
+          551
+        ],
+        "dark_reference": [
+          568,
+          575
+        ],
+        "detector_or_hesse_handoff": [
+          552,
+          567
+        ],
+        "program_delay": [
+          512,
+          535
+        ],
+        "source_switch": [
+          504,
+          511
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_07"
+      },
+      "payload": {
+        "fuel_segment": 2,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D2"
+        },
+        "local_abi_address": 2,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 2,
+        "word_index": 2
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 8,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 7,
+        "witness_gate_index": 0,
+        "word_select": 2
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 7
+    },
+    {
+      "cycle_frame": 8,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0008",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          640,
+          647
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_2"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 9
+      },
+      "frame_end_tick": 647,
+      "frame_start_tick": 576,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          608,
+          623
+        ],
+        "dark_reference": [
+          640,
+          647
+        ],
+        "detector_or_hesse_handoff": [
+          624,
+          639
+        ],
+        "program_delay": [
+          584,
+          607
+        ],
+        "source_switch": [
+          576,
+          583
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_08"
+      },
+      "payload": {
+        "basis_options": [
+          2
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 2,
+        "source_slot": 0,
+        "tomotope_flag": 9
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 9,
+      "switch": {
+        "basis_select": 2,
+        "delay_line": 2,
+        "mirror_slot": 1,
+        "source_select": 0,
+        "target_select": 8
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 8
+    },
+    {
+      "cycle_frame": 9,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0009",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          712,
+          719
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 3,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 3,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 719,
+      "frame_start_tick": 648,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          680,
+          695
+        ],
+        "dark_reference": [
+          712,
+          719
+        ],
+        "detector_or_hesse_handoff": [
+          696,
+          711
+        ],
+        "program_delay": [
+          656,
+          679
+        ],
+        "source_switch": [
+          648,
+          655
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_09"
+      },
+      "payload": {
+        "fuel_segment": 3,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D3"
+        },
+        "local_abi_address": 3,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 3,
+        "word_index": 3
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 10,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 9,
+        "witness_gate_index": 0,
+        "word_select": 3
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 9
+    },
+    {
+      "cycle_frame": 10,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0010",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          784,
+          791
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 4,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 4,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 791,
+      "frame_start_tick": 720,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          752,
+          767
+        ],
+        "dark_reference": [
+          784,
+          791
+        ],
+        "detector_or_hesse_handoff": [
+          768,
+          783
+        ],
+        "program_delay": [
+          728,
+          751
+        ],
+        "source_switch": [
+          720,
+          727
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_10"
+      },
+      "payload": {
+        "fuel_segment": 4,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D4"
+        },
+        "local_abi_address": 4,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 4,
+        "word_index": 4
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 11,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 10,
+        "witness_gate_index": 0,
+        "word_select": 4
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 10
+    },
+    {
+      "cycle_frame": 11,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0011",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          856,
+          863
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 5,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 5,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 863,
+      "frame_start_tick": 792,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          824,
+          839
+        ],
+        "dark_reference": [
+          856,
+          863
+        ],
+        "detector_or_hesse_handoff": [
+          840,
+          855
+        ],
+        "program_delay": [
+          800,
+          823
+        ],
+        "source_switch": [
+          792,
+          799
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_11"
+      },
+      "payload": {
+        "fuel_segment": 5,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D5"
+        },
+        "local_abi_address": 5,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 5,
+        "word_index": 5
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 12,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 11,
+        "witness_gate_index": 0,
+        "word_select": 5
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 11
+    },
+    {
+      "cycle_frame": 12,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0012",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          928,
+          935
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_3"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 13
+      },
+      "frame_end_tick": 935,
+      "frame_start_tick": 864,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          896,
+          911
+        ],
+        "dark_reference": [
+          928,
+          935
+        ],
+        "detector_or_hesse_handoff": [
+          912,
+          927
+        ],
+        "program_delay": [
+          872,
+          895
+        ],
+        "source_switch": [
+          864,
+          871
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_12"
+      },
+      "payload": {
+        "basis_options": [
+          3
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 3,
+        "source_slot": 0,
+        "tomotope_flag": 13
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 13,
+      "switch": {
+        "basis_select": 3,
+        "delay_line": 3,
+        "mirror_slot": 1,
+        "source_select": 0,
+        "target_select": 12
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 12
+    },
+    {
+      "cycle_frame": 13,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0013",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1000,
+          1007
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 6,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 6,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1007,
+      "frame_start_tick": 936,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          968,
+          983
+        ],
+        "dark_reference": [
+          1000,
+          1007
+        ],
+        "detector_or_hesse_handoff": [
+          984,
+          999
+        ],
+        "program_delay": [
+          944,
+          967
+        ],
+        "source_switch": [
+          936,
+          943
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_13"
+      },
+      "payload": {
+        "fuel_segment": 6,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D6"
+        },
+        "local_abi_address": 6,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 6,
+        "word_index": 6
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 14,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 13,
+        "witness_gate_index": 0,
+        "word_select": 6
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 13
+    },
+    {
+      "cycle_frame": 14,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0014",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1072,
+          1079
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 7,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 7,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1079,
+      "frame_start_tick": 1008,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1040,
+          1055
+        ],
+        "dark_reference": [
+          1072,
+          1079
+        ],
+        "detector_or_hesse_handoff": [
+          1056,
+          1071
+        ],
+        "program_delay": [
+          1016,
+          1039
+        ],
+        "source_switch": [
+          1008,
+          1015
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_14"
+      },
+      "payload": {
+        "fuel_segment": 7,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F0.D7"
+        },
+        "local_abi_address": 7,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 7,
+        "word_index": 7
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 15,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 14,
+        "witness_gate_index": 0,
+        "word_select": 7
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 14
+    },
+    {
+      "cycle_frame": 15,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0015",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1144,
+          1151
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 8,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 8,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1151,
+      "frame_start_tick": 1080,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1112,
+          1127
+        ],
+        "dark_reference": [
+          1144,
+          1151
+        ],
+        "detector_or_hesse_handoff": [
+          1128,
+          1143
+        ],
+        "program_delay": [
+          1088,
+          1111
+        ],
+        "source_switch": [
+          1080,
+          1087
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_15"
+      },
+      "payload": {
+        "fuel_segment": 8,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D0"
+        },
+        "local_abi_address": 8,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 8,
+        "word_index": 8
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 16,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 15,
+        "witness_gate_index": 0,
+        "word_select": 8
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 15
+    },
+    {
+      "cycle_frame": 16,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0016",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1216,
+          1223
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_2"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 10
+      },
+      "frame_end_tick": 1223,
+      "frame_start_tick": 1152,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1184,
+          1199
+        ],
+        "dark_reference": [
+          1216,
+          1223
+        ],
+        "detector_or_hesse_handoff": [
+          1200,
+          1215
+        ],
+        "program_delay": [
+          1160,
+          1183
+        ],
+        "source_switch": [
+          1152,
+          1159
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_16"
+      },
+      "payload": {
+        "basis_options": [
+          2
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 2,
+        "source_slot": 0,
+        "tomotope_flag": 10
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 17,
+      "switch": {
+        "basis_select": 2,
+        "delay_line": 2,
+        "mirror_slot": 2,
+        "source_select": 0,
+        "target_select": 16
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 16
+    },
+    {
+      "cycle_frame": 17,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0017",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1288,
+          1295
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 9,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 9,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1295,
+      "frame_start_tick": 1224,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1256,
+          1271
+        ],
+        "dark_reference": [
+          1288,
+          1295
+        ],
+        "detector_or_hesse_handoff": [
+          1272,
+          1287
+        ],
+        "program_delay": [
+          1232,
+          1255
+        ],
+        "source_switch": [
+          1224,
+          1231
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_17"
+      },
+      "payload": {
+        "fuel_segment": 9,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D1"
+        },
+        "local_abi_address": 9,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 9,
+        "word_index": 9
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 18,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 17,
+        "witness_gate_index": 0,
+        "word_select": 9
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 17
+    },
+    {
+      "cycle_frame": 18,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0018",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1360,
+          1367
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 10,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 10,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1367,
+      "frame_start_tick": 1296,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1328,
+          1343
+        ],
+        "dark_reference": [
+          1360,
+          1367
+        ],
+        "detector_or_hesse_handoff": [
+          1344,
+          1359
+        ],
+        "program_delay": [
+          1304,
+          1327
+        ],
+        "source_switch": [
+          1296,
+          1303
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_18"
+      },
+      "payload": {
+        "fuel_segment": 10,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D2"
+        },
+        "local_abi_address": 10,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 10,
+        "word_index": 10
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 19,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 18,
+        "witness_gate_index": 0,
+        "word_select": 10
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 18
+    },
+    {
+      "cycle_frame": 19,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0019",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1432,
+          1439
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 11,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 11,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1439,
+      "frame_start_tick": 1368,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1400,
+          1415
+        ],
+        "dark_reference": [
+          1432,
+          1439
+        ],
+        "detector_or_hesse_handoff": [
+          1416,
+          1431
+        ],
+        "program_delay": [
+          1376,
+          1399
+        ],
+        "source_switch": [
+          1368,
+          1375
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_19"
+      },
+      "payload": {
+        "fuel_segment": 11,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D3"
+        },
+        "local_abi_address": 11,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 11,
+        "word_index": 11
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 20,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 19,
+        "witness_gate_index": 0,
+        "word_select": 11
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 19
+    },
+    {
+      "cycle_frame": 20,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0020",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1504,
+          1511
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_3"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 14
+      },
+      "frame_end_tick": 1511,
+      "frame_start_tick": 1440,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1472,
+          1487
+        ],
+        "dark_reference": [
+          1504,
+          1511
+        ],
+        "detector_or_hesse_handoff": [
+          1488,
+          1503
+        ],
+        "program_delay": [
+          1448,
+          1471
+        ],
+        "source_switch": [
+          1440,
+          1447
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_00_20"
+      },
+      "payload": {
+        "basis_options": [
+          3
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 3,
+        "source_slot": 0,
+        "tomotope_flag": 14
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 0,
+      "successor_frame": 21,
+      "switch": {
+        "basis_select": 3,
+        "delay_line": 3,
+        "mirror_slot": 2,
+        "source_select": 0,
+        "target_select": 20
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 20
+    },
+    {
+      "cycle_frame": 21,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0021",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1576,
+          1583
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 12,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 12,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1583,
+      "frame_start_tick": 1512,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1544,
+          1559
+        ],
+        "dark_reference": [
+          1576,
+          1583
+        ],
+        "detector_or_hesse_handoff": [
+          1560,
+          1575
+        ],
+        "program_delay": [
+          1520,
+          1543
+        ],
+        "source_switch": [
+          1512,
+          1519
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_21"
+      },
+      "payload": {
+        "fuel_segment": 12,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D4"
+        },
+        "local_abi_address": 12,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 12,
+        "word_index": 12
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 22,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 21,
+        "witness_gate_index": 0,
+        "word_select": 12
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 21
+    },
+    {
+      "cycle_frame": 22,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0022",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1648,
+          1655
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 13,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 13,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1655,
+      "frame_start_tick": 1584,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1616,
+          1631
+        ],
+        "dark_reference": [
+          1648,
+          1655
+        ],
+        "detector_or_hesse_handoff": [
+          1632,
+          1647
+        ],
+        "program_delay": [
+          1592,
+          1615
+        ],
+        "source_switch": [
+          1584,
+          1591
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_22"
+      },
+      "payload": {
+        "fuel_segment": 13,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D5"
+        },
+        "local_abi_address": 13,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 13,
+        "word_index": 13
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 23,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 22,
+        "witness_gate_index": 0,
+        "word_select": 13
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 22
+    },
+    {
+      "cycle_frame": 23,
+      "dark_reference": {
+        "bin": "DARK_FRAME_0023",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          1720,
+          1727
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 0,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_0"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 14,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 14,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 1727,
+      "frame_start_tick": 1656,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          1688,
+          1703
+        ],
+        "dark_reference": [
+          1720,
+          1727
+        ],
+        "detector_or_hesse_handoff": [
+          1704,
+          1719
+        ],
+        "program_delay": [
+          1664,
+          1687
+        ],
+        "source_switch": [
+          1656,
+          1663
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_00_23"
+      },
+      "payload": {
+        "fuel_segment": 14,
+        "lg_mode": {
+          "ell": -4,
+          "label": "LG(p=0, ell=-4)",
+          "p": 0,
+          "selector_label": "F1.D6"
+        },
+        "local_abi_address": 14,
+        "sector_id": 0,
+        "witness_gate_index": 0,
+        "witness_gate_source_slot": 0,
+        "witting_incompatible_index": 14,
+        "word_index": 14
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 0,
+      "successor_frame": 24,
+      "switch": {
+        "sector_select": 0,
+        "source_select": 0,
+        "target_select": 23,
+        "witness_gate_index": 0,
+        "word_select": 14
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 23
+    },
+    {
+      "cycle_frame": 1576,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1576",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113536,
+          113543
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 1064,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 200,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113543,
+      "frame_start_tick": 113472,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113504,
+          113519
+        ],
+        "dark_reference": [
+          113536,
+          113543
+        ],
+        "detector_or_hesse_handoff": [
+          113520,
+          113535
+        ],
+        "program_delay": [
+          113480,
+          113503
+        ],
+        "source_switch": [
+          113472,
+          113479
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_16"
+      },
+      "payload": {
+        "fuel_segment": 1064,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D0"
+        },
+        "local_abi_address": 200,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 11,
+        "word_index": 8
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1577,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 16,
+        "witness_gate_index": 4,
+        "word_select": 8
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 16
+    },
+    {
+      "cycle_frame": 1577,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1577",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113608,
+          113615
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 1065,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 201,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113615,
+      "frame_start_tick": 113544,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113576,
+          113591
+        ],
+        "dark_reference": [
+          113608,
+          113615
+        ],
+        "detector_or_hesse_handoff": [
+          113592,
+          113607
+        ],
+        "program_delay": [
+          113552,
+          113575
+        ],
+        "source_switch": [
+          113544,
+          113551
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_17"
+      },
+      "payload": {
+        "fuel_segment": 1065,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D1"
+        },
+        "local_abi_address": 201,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 12,
+        "word_index": 9
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1578,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 17,
+        "witness_gate_index": 4,
+        "word_select": 9
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 17
+    },
+    {
+      "cycle_frame": 1578,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1578",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113680,
+          113687
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 1066,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 202,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113687,
+      "frame_start_tick": 113616,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113648,
+          113663
+        ],
+        "dark_reference": [
+          113680,
+          113687
+        ],
+        "detector_or_hesse_handoff": [
+          113664,
+          113679
+        ],
+        "program_delay": [
+          113624,
+          113647
+        ],
+        "source_switch": [
+          113616,
+          113623
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_18"
+      },
+      "payload": {
+        "fuel_segment": 1066,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D2"
+        },
+        "local_abi_address": 202,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 13,
+        "word_index": 10
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1579,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 18,
+        "witness_gate_index": 4,
+        "word_select": 10
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 18
+    },
+    {
+      "cycle_frame": 1579,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1579",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113752,
+          113759
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 1,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_3"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 46
+      },
+      "frame_end_tick": 113759,
+      "frame_start_tick": 113688,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113720,
+          113735
+        ],
+        "dark_reference": [
+          113752,
+          113759
+        ],
+        "detector_or_hesse_handoff": [
+          113736,
+          113751
+        ],
+        "program_delay": [
+          113696,
+          113719
+        ],
+        "source_switch": [
+          113688,
+          113695
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_19"
+      },
+      "payload": {
+        "basis_options": [
+          11
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "ONE_DIRECT_RAIL_PLUS_COMPLEMENT_TRITTER",
+        "selected_basis": 11,
+        "source_slot": 3,
+        "tomotope_flag": 46
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1580,
+      "switch": {
+        "basis_select": 11,
+        "delay_line": 3,
+        "mirror_slot": 2,
+        "source_select": 39,
+        "target_select": 19
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 19
+    },
+    {
+      "cycle_frame": 1580,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1580",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113824,
+          113831
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 1067,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 203,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113831,
+      "frame_start_tick": 113760,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113792,
+          113807
+        ],
+        "dark_reference": [
+          113824,
+          113831
+        ],
+        "detector_or_hesse_handoff": [
+          113808,
+          113823
+        ],
+        "program_delay": [
+          113768,
+          113791
+        ],
+        "source_switch": [
+          113760,
+          113767
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_20"
+      },
+      "payload": {
+        "fuel_segment": 1067,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D3"
+        },
+        "local_abi_address": 203,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 14,
+        "word_index": 11
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1581,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 20,
+        "witness_gate_index": 4,
+        "word_select": 11
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 20
+    },
+    {
+      "cycle_frame": 1581,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1581",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113896,
+          113903
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 1068,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 204,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113903,
+      "frame_start_tick": 113832,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113864,
+          113879
+        ],
+        "dark_reference": [
+          113896,
+          113903
+        ],
+        "detector_or_hesse_handoff": [
+          113880,
+          113895
+        ],
+        "program_delay": [
+          113840,
+          113863
+        ],
+        "source_switch": [
+          113832,
+          113839
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_21"
+      },
+      "payload": {
+        "fuel_segment": 1068,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D4"
+        },
+        "local_abi_address": 204,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 15,
+        "word_index": 12
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1582,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 21,
+        "witness_gate_index": 4,
+        "word_select": 12
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 21
+    },
+    {
+      "cycle_frame": 1582,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1582",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          113968,
+          113975
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 1069,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 205,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 113975,
+      "frame_start_tick": 113904,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          113936,
+          113951
+        ],
+        "dark_reference": [
+          113968,
+          113975
+        ],
+        "detector_or_hesse_handoff": [
+          113952,
+          113967
+        ],
+        "program_delay": [
+          113912,
+          113935
+        ],
+        "source_switch": [
+          113904,
+          113911
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_22"
+      },
+      "payload": {
+        "fuel_segment": 1069,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D5"
+        },
+        "local_abi_address": 205,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 16,
+        "word_index": 13
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1583,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 22,
+        "witness_gate_index": 4,
+        "word_select": 13
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 22
+    },
+    {
+      "cycle_frame": 1583,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1583",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114040,
+          114047
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 1070,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 206,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114047,
+      "frame_start_tick": 113976,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114008,
+          114023
+        ],
+        "dark_reference": [
+          114040,
+          114047
+        ],
+        "detector_or_hesse_handoff": [
+          114024,
+          114039
+        ],
+        "program_delay": [
+          113984,
+          114007
+        ],
+        "source_switch": [
+          113976,
+          113983
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_23"
+      },
+      "payload": {
+        "fuel_segment": 1070,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D6"
+        },
+        "local_abi_address": 206,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 17,
+        "word_index": 14
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1584,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 23,
+        "witness_gate_index": 4,
+        "word_select": 14
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 23
+    },
+    {
+      "cycle_frame": 1584,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1584",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114112,
+          114119
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 1071,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 207,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114119,
+      "frame_start_tick": 114048,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114080,
+          114095
+        ],
+        "dark_reference": [
+          114112,
+          114119
+        ],
+        "detector_or_hesse_handoff": [
+          114096,
+          114111
+        ],
+        "program_delay": [
+          114056,
+          114079
+        ],
+        "source_switch": [
+          114048,
+          114055
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_24"
+      },
+      "payload": {
+        "fuel_segment": 1071,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F1.D7"
+        },
+        "local_abi_address": 207,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 18,
+        "word_index": 15
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1585,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 24,
+        "witness_gate_index": 4,
+        "word_select": 15
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 24
+    },
+    {
+      "cycle_frame": 1585,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1585",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114184,
+          114191
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 1072,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 208,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114191,
+      "frame_start_tick": 114120,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114152,
+          114167
+        ],
+        "dark_reference": [
+          114184,
+          114191
+        ],
+        "detector_or_hesse_handoff": [
+          114168,
+          114183
+        ],
+        "program_delay": [
+          114128,
+          114151
+        ],
+        "source_switch": [
+          114120,
+          114127
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_25"
+      },
+      "payload": {
+        "fuel_segment": 1072,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D0"
+        },
+        "local_abi_address": 208,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 19,
+        "word_index": 16
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1586,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 25,
+        "witness_gate_index": 4,
+        "word_select": 16
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 25
+    },
+    {
+      "cycle_frame": 1586,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1586",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114256,
+          114263
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 1073,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 209,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114263,
+      "frame_start_tick": 114192,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114224,
+          114239
+        ],
+        "dark_reference": [
+          114256,
+          114263
+        ],
+        "detector_or_hesse_handoff": [
+          114240,
+          114255
+        ],
+        "program_delay": [
+          114200,
+          114223
+        ],
+        "source_switch": [
+          114192,
+          114199
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_26"
+      },
+      "payload": {
+        "fuel_segment": 1073,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D1"
+        },
+        "local_abi_address": 209,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 20,
+        "word_index": 17
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1587,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 26,
+        "witness_gate_index": 4,
+        "word_select": 17
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 26
+    },
+    {
+      "cycle_frame": 1587,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1587",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114328,
+          114335
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 1074,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 210,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114335,
+      "frame_start_tick": 114264,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114296,
+          114311
+        ],
+        "dark_reference": [
+          114328,
+          114335
+        ],
+        "detector_or_hesse_handoff": [
+          114312,
+          114327
+        ],
+        "program_delay": [
+          114272,
+          114295
+        ],
+        "source_switch": [
+          114264,
+          114271
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_27"
+      },
+      "payload": {
+        "fuel_segment": 1074,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D2"
+        },
+        "local_abi_address": 210,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 21,
+        "word_index": 18
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1588,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 27,
+        "witness_gate_index": 4,
+        "word_select": 18
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 27
+    },
+    {
+      "cycle_frame": 1588,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1588",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114400,
+          114407
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 1075,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 211,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114407,
+      "frame_start_tick": 114336,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114368,
+          114383
+        ],
+        "dark_reference": [
+          114400,
+          114407
+        ],
+        "detector_or_hesse_handoff": [
+          114384,
+          114399
+        ],
+        "program_delay": [
+          114344,
+          114367
+        ],
+        "source_switch": [
+          114336,
+          114343
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_28"
+      },
+      "payload": {
+        "fuel_segment": 1075,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D3"
+        },
+        "local_abi_address": 211,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 22,
+        "word_index": 19
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1589,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 28,
+        "witness_gate_index": 4,
+        "word_select": 19
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 28
+    },
+    {
+      "cycle_frame": 1589,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1589",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114472,
+          114479
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 2,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_7"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 93
+      },
+      "frame_end_tick": 114479,
+      "frame_start_tick": 114408,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114440,
+          114455
+        ],
+        "dark_reference": [
+          114472,
+          114479
+        ],
+        "detector_or_hesse_handoff": [
+          114456,
+          114471
+        ],
+        "program_delay": [
+          114416,
+          114439
+        ],
+        "source_switch": [
+          114408,
+          114415
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_29"
+      },
+      "payload": {
+        "basis_options": [
+          23
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 23,
+        "source_slot": 3,
+        "tomotope_flag": 93
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1590,
+      "switch": {
+        "basis_select": 23,
+        "delay_line": 7,
+        "mirror_slot": 1,
+        "source_select": 39,
+        "target_select": 29
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 29
+    },
+    {
+      "cycle_frame": 1590,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1590",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114544,
+          114551
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 2,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_7"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 94
+      },
+      "frame_end_tick": 114551,
+      "frame_start_tick": 114480,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114512,
+          114527
+        ],
+        "dark_reference": [
+          114544,
+          114551
+        ],
+        "detector_or_hesse_handoff": [
+          114528,
+          114543
+        ],
+        "program_delay": [
+          114488,
+          114511
+        ],
+        "source_switch": [
+          114480,
+          114487
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_30"
+      },
+      "payload": {
+        "basis_options": [
+          23
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 23,
+        "source_slot": 3,
+        "tomotope_flag": 94
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1591,
+      "switch": {
+        "basis_select": 23,
+        "delay_line": 7,
+        "mirror_slot": 2,
+        "source_select": 39,
+        "target_select": 30
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 30
+    },
+    {
+      "cycle_frame": 1591,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1591",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114616,
+          114623
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 0,
+        "fuel_segment": 1076,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 212,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114623,
+      "frame_start_tick": 114552,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114584,
+          114599
+        ],
+        "dark_reference": [
+          114616,
+          114623
+        ],
+        "detector_or_hesse_handoff": [
+          114600,
+          114615
+        ],
+        "program_delay": [
+          114560,
+          114583
+        ],
+        "source_switch": [
+          114552,
+          114559
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_31"
+      },
+      "payload": {
+        "fuel_segment": 1076,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D4"
+        },
+        "local_abi_address": 212,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 23,
+        "word_index": 20
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1592,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 31,
+        "witness_gate_index": 4,
+        "word_select": 20
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 31
+    },
+    {
+      "cycle_frame": 1592,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1592",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114688,
+          114695
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "fuel_segment": 1077,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 213,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114695,
+      "frame_start_tick": 114624,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114656,
+          114671
+        ],
+        "dark_reference": [
+          114688,
+          114695
+        ],
+        "detector_or_hesse_handoff": [
+          114672,
+          114687
+        ],
+        "program_delay": [
+          114632,
+          114655
+        ],
+        "source_switch": [
+          114624,
+          114631
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_32"
+      },
+      "payload": {
+        "fuel_segment": 1077,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D5"
+        },
+        "local_abi_address": 213,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 24,
+        "word_index": 21
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1593,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 32,
+        "witness_gate_index": 4,
+        "word_select": 21
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 32
+    },
+    {
+      "cycle_frame": 1593,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1593",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114760,
+          114767
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 3,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_6"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 121
+      },
+      "frame_end_tick": 114767,
+      "frame_start_tick": 114696,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114728,
+          114743
+        ],
+        "dark_reference": [
+          114760,
+          114767
+        ],
+        "detector_or_hesse_handoff": [
+          114744,
+          114759
+        ],
+        "program_delay": [
+          114704,
+          114727
+        ],
+        "source_switch": [
+          114696,
+          114703
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_33"
+      },
+      "payload": {
+        "basis_options": [
+          30
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 30,
+        "source_slot": 3,
+        "tomotope_flag": 121
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1594,
+      "switch": {
+        "basis_select": 30,
+        "delay_line": 6,
+        "mirror_slot": 1,
+        "source_select": 39,
+        "target_select": 33
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 33
+    },
+    {
+      "cycle_frame": 1594,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1594",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114832,
+          114839
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 3,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_6"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 122
+      },
+      "frame_end_tick": 114839,
+      "frame_start_tick": 114768,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114800,
+          114815
+        ],
+        "dark_reference": [
+          114832,
+          114839
+        ],
+        "detector_or_hesse_handoff": [
+          114816,
+          114831
+        ],
+        "program_delay": [
+          114776,
+          114799
+        ],
+        "source_switch": [
+          114768,
+          114775
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_34"
+      },
+      "payload": {
+        "basis_options": [
+          30
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 30,
+        "source_slot": 3,
+        "tomotope_flag": 122
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1595,
+      "switch": {
+        "basis_select": 30,
+        "delay_line": 6,
+        "mirror_slot": 2,
+        "source_select": 39,
+        "target_select": 34
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 34
+    },
+    {
+      "cycle_frame": 1595,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1595",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114904,
+          114911
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "fuel_segment": 1078,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 214,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114911,
+      "frame_start_tick": 114840,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114872,
+          114887
+        ],
+        "dark_reference": [
+          114904,
+          114911
+        ],
+        "detector_or_hesse_handoff": [
+          114888,
+          114903
+        ],
+        "program_delay": [
+          114848,
+          114871
+        ],
+        "source_switch": [
+          114840,
+          114847
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_35"
+      },
+      "payload": {
+        "fuel_segment": 1078,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D6"
+        },
+        "local_abi_address": 214,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 25,
+        "word_index": 22
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1596,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 35,
+        "witness_gate_index": 4,
+        "word_select": 22
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 35
+    },
+    {
+      "cycle_frame": 1596,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1596",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          114976,
+          114983
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 4,
+        "frame_ticks": 72,
+        "profile": "OAM_RECENTER_HESSE_DELAY",
+        "symbolic_delay_line": "sector_8"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "fuel_segment": 1079,
+        "handoff": "OAM sector -> 24-word lane -> Hesse/T microframe",
+        "local_abi_address": 215,
+        "readout": "OAM_HESSE_LANE_SLOT"
+      },
+      "frame_end_tick": 114983,
+      "frame_start_tick": 114912,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          114944,
+          114959
+        ],
+        "dark_reference": [
+          114976,
+          114983
+        ],
+        "detector_or_hesse_handoff": [
+          114960,
+          114975
+        ],
+        "program_delay": [
+          114920,
+          114943
+        ],
+        "source_switch": [
+          114912,
+          114919
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_CONTEXTUAL_FUEL_39_36"
+      },
+      "payload": {
+        "fuel_segment": 1079,
+        "lg_mode": {
+          "ell": 4,
+          "label": "LG(p=0, ell=+4)",
+          "p": 0,
+          "selector_label": "F2.D7"
+        },
+        "local_abi_address": 215,
+        "sector_id": 8,
+        "witness_gate_index": 4,
+        "witness_gate_source_slot": 7,
+        "witting_incompatible_index": 26,
+        "word_index": 23
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "CONTEXTUAL_FUEL",
+      "source_ray": 39,
+      "successor_frame": 1597,
+      "switch": {
+        "sector_select": 8,
+        "source_select": 39,
+        "target_select": 36,
+        "witness_gate_index": 4,
+        "word_select": 23
+      },
+      "switch_bank": "OAM_HESSE_FUEL_SWITCH",
+      "target_ray": 36
+    },
+    {
+      "cycle_frame": 1597,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1597",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          115048,
+          115055
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 1,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_7"
+      },
+      "detector": {
+        "detector_slot": 1,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 61
+      },
+      "frame_end_tick": 115055,
+      "frame_start_tick": 114984,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          115016,
+          115031
+        ],
+        "dark_reference": [
+          115048,
+          115055
+        ],
+        "detector_or_hesse_handoff": [
+          115032,
+          115047
+        ],
+        "program_delay": [
+          114992,
+          115015
+        ],
+        "source_switch": [
+          114984,
+          114991
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_37"
+      },
+      "payload": {
+        "basis_options": [
+          15
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 1,
+        "mirror_slot_mod_4": 1,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 15,
+        "source_slot": 3,
+        "tomotope_flag": 61
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1598,
+      "switch": {
+        "basis_select": 15,
+        "delay_line": 7,
+        "mirror_slot": 1,
+        "source_select": 39,
+        "target_select": 37
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 37
+    },
+    {
+      "cycle_frame": 1598,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1598",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          115120,
+          115127
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 1,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_7"
+      },
+      "detector": {
+        "detector_slot": 2,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 62
+      },
+      "frame_end_tick": 115127,
+      "frame_start_tick": 115056,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          115088,
+          115103
+        ],
+        "dark_reference": [
+          115120,
+          115127
+        ],
+        "detector_or_hesse_handoff": [
+          115104,
+          115119
+        ],
+        "program_delay": [
+          115064,
+          115087
+        ],
+        "source_switch": [
+          115056,
+          115063
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_38"
+      },
+      "payload": {
+        "basis_options": [
+          15
+        ],
+        "control_mode": "COMPATIBLE_UNIQUE_BASIS_CONTROL",
+        "detector_slot": 2,
+        "mirror_slot_mod_4": 2,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 15,
+        "source_slot": 3,
+        "tomotope_flag": 62
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 1599,
+      "switch": {
+        "basis_select": 15,
+        "delay_line": 7,
+        "mirror_slot": 2,
+        "source_select": 39,
+        "target_select": 38
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 38
+    },
+    {
+      "cycle_frame": 1599,
+      "dark_reference": {
+        "bin": "DARK_FRAME_1599",
+        "role": "per-frame dark/reference subtraction placeholder",
+        "tick_window": [
+          115192,
+          115199
+        ]
+      },
+      "delay": {
+        "calibrated_delay_ps": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "coarse_delay_bank": 2,
+        "frame_ticks": 72,
+        "profile": "CONTROL_ANALYZER_DELAY",
+        "symbolic_delay_line": "basis_7"
+      },
+      "detector": {
+        "detector_slot": 3,
+        "handoff": "detector_slot -> mirror_slot mod 4 -> tomotope flag",
+        "readout": "WITTING_ANALYZER_SLOT",
+        "tomotope_flag": 95
+      },
+      "frame_end_tick": 115199,
+      "frame_start_tick": 115128,
+      "frame_windows": {
+        "analyzer_or_fuel_body": [
+          115160,
+          115175
+        ],
+        "dark_reference": [
+          115192,
+          115199
+        ],
+        "detector_or_hesse_handoff": [
+          115176,
+          115191
+        ],
+        "program_delay": [
+          115136,
+          115159
+        ],
+        "source_switch": [
+          115128,
+          115135
+        ]
+      },
+      "loss_placeholder": {
+        "calibrated_loss_db": null,
+        "calibration_status": "PLACEHOLDER_REQUIRED",
+        "dark_count_probability": null,
+        "symbolic_loss_channel": "L_ACCEPTED_CONTROL_39_39"
+      },
+      "payload": {
+        "basis_options": [
+          11,
+          15,
+          23,
+          30
+        ],
+        "control_mode": "SAME_RAY_MATCHED_CONTROL_APERTURE",
+        "detector_slot": 3,
+        "mirror_slot_mod_4": 3,
+        "optical_family": "FOUR_THREE_RAIL_WITTING_ROWS",
+        "selected_basis": 23,
+        "source_slot": 3,
+        "tomotope_flag": 95
+      },
+      "photon_id": "single_photon_transaction_packet",
+      "rail": "ACCEPTED_CONTROL",
+      "source_ray": 39,
+      "successor_frame": 0,
+      "switch": {
+        "basis_select": 23,
+        "delay_line": 7,
+        "mirror_slot": 3,
+        "source_select": 39,
+        "target_select": 39
+      },
+      "switch_bank": "WITTING_BASIS_ANALYZER_SWITCH",
+      "target_ray": 39
+    }
+  ],
+  "bt": 1601,
+  "checks": {
+    "alphabet_verified": true,
+    "analyzers_verified": true,
+    "control_verified": true,
+    "cycle_verified": true,
+    "dark_reference_window_is_last_eight_ticks": true,
+    "detector_slots_balanced_across_whole_cycle": true,
+    "each_source_has_13_control_27_fuel": true,
+    "every_frame_has_dark_reference": true,
+    "every_frame_has_loss_placeholder": true,
+    "fuel_verified": true,
+    "rail_histogram_is_520_1080": true,
+    "single_automaton_has_1600_frames": true,
+    "single_photon_label_conserved": true,
+    "successor_relation_is_closed_cycle": true,
+    "switch_bank_histogram_matches_rails": true,
+    "tick_budget_is_115200": true
+  },
+  "counts": {
+    "accepted_control_frames": 520,
+    "contextual_fuel_frames": 1080,
+    "dark_reference_placeholders": 1600,
+    "frames": 1600,
+    "loss_placeholders": 1600,
+    "ticks": 115200
+  },
+  "frame_template": {
+    "analyzer_or_fuel_body": "ticks 32..47",
+    "dark_reference": "ticks 64..71",
+    "detector_or_hesse_handoff": "ticks 48..63",
+    "program_delay": "ticks 8..31",
+    "source_switch": "ticks 0..7"
+  },
+  "histograms": {
+    "detector_slot": {
+      "0": 400,
+      "1": 400,
+      "2": 400,
+      "3": 400
+    },
+    "rail": {
+      "ACCEPTED_CONTROL": 520,
+      "CONTEXTUAL_FUEL": 1080
+    },
+    "switch_bank": {
+      "OAM_HESSE_FUEL_SWITCH": 1080,
+      "WITTING_BASIS_ANALYZER_SWITCH": 520
+    }
+  },
+  "honesty_boundary": "The loss, delay, and dark-count fields are deliberately uncalibrated placeholders. This certificate compiles the physical interface; it does not claim measured optical performance.",
+  "interpretation": "BT1601 turns the BT1600 Witting cycle into a single physical automaton. Every frame carries an explicit switch bank, delay placeholder, detector handoff, symbolic loss channel, and dark-reference bin.",
+  "source_packets": {
+    "accepted_control": "data/bt1598_witting_accepted_control_rail.json",
+    "analyzers": "data/bt1411_witting_basis_analyzer_unitaries.json",
+    "contextual_fuel": "data/bt1595_witting_matter_fuel_bijection.json",
+    "full_witting_cycle": "data/bt1600_full_witting_transaction_cycle.json",
+    "lg_alphabet": "data/bt1593_lg_mode_alphabet_selector.json"
+  },
+  "title": "Single-photon Witting transaction automaton",
+  "verified": true
+}

@@ -45,6 +45,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_bt1592_bt1594_lab_mode_hesse_loop.py",
         "tests/test_bt1595_bt1597_deep_witting_fuel_object.py",
         "tests/test_bt1598_bt1600_full_witting_cycle.py",
+        "tests/test_bt1601_bt1603_physical_fano_universal_closure.py",
         "tests/test_dcmii_projective_screen_bulk_qec_bridge.py",
     ],
     "dcc-weld": [

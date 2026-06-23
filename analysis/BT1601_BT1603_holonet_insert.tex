@@ -1,0 +1,83 @@
+\subsection{Physical automaton, Fano detector bins, and the universal ABI}
+\label{sec:bt1601-bt1603-physical-fano-universal-closure}
+
+BT1601 turns the \(1600\)-frame Witting transaction cycle into a single physical
+automaton.  The carrier is one single-photon transaction packet.  Each ordered
+pair frame keeps the common \(72\)-tick shape:
+\[
+  1600\cdot72=115200\ {\rm ticks}.
+\]
+The frame template is now explicit:
+\begin{center}
+\begin{tabular}{c|l}
+ticks & role\\
+\hline
+0\ldots7 & source switch\\
+8\ldots31 & program/delay placeholder\\
+32\ldots47 & analyzer or OAM/Hesse body\\
+48\ldots63 & detector or Hesse/T handoff\\
+64\ldots71 & dark-reference placeholder
+\end{tabular}
+\end{center}
+There are \(520\) Witting analyzer switch frames and \(1080\) OAM/Hesse fuel
+switch frames.  The four detector residues are balanced across the whole
+automaton:
+\[
+  400,\ 400,\ 400,\ 400.
+\]
+Every frame has a symbolic loss channel and a dark-reference bin.  These fields
+are intentionally placeholders: BT1601 compiles the interface, not a measured
+loss or dark-count model.
+
+BT1602 identifies the old \(168\) active detector-bin count with the Fano plane.
+The active bus factors as
+\[
+  168=7\cdot24=7\ {\rm Fano\ lines}\cdot3\ {\rm point\ slots}\cdot8\ D_4
+  \ {\rm states}.
+\]
+The Witting source side factors as
+\[
+  40=5\ {\rm witness\ gates}\cdot8\ D_4\ {\rm source\ states}.
+\]
+The five witness gates occupy five Fano lines.  On those lines,
+\[
+  27=3\ {\rm point\ slots}\cdot9\ {\rm Hesse/OAM\ residues}
+\]
+is the contextual fuel shell.  The two remaining Fano lines carry the accepted
+compatible controls:
+\[
+  12=2\ {\rm reserve\ lines}\cdot3\ {\rm point\ slots}\cdot2\ {\rm detector\
+  parities}.
+\]
+The same-ray control is the source anchor on the gate line.  Thus every source
+ray has
+\[
+  27\ {\rm fuel}+12\ {\rm compatible\ control}
+  +1\ {\rm same\mbox{-}ray\ control}=40
+\]
+targets, and every one of the \(168\) active detector bins is touched.  The
+usage profile across the \(1600\) frames is
+\[
+  80\ {\rm bins}\times9
+  \quad+\quad
+  88\ {\rm bins}\times10
+  \quad=\quad1600.
+\]
+
+BT1603 packages the architecture as a finite universal-computation ABI theorem.
+The accepted Witting frames provide finite Clifford transport through the
+analyzer/mirror/tomotope handoff.  The rejected Witting frames provide the
+contextual OAM/Hesse fuel.  The Hesse/T overlay supplies the explicit
+non-Clifford port required by the BT1377 universal-computation contract.  The
+detector and row values then hand into the BT1486 retwined CSS syndrome layer
+and the BT1493 physical row-pulse compiler.  In short,
+\[
+  {\rm Witting\ control}
+  +{\rm contextual\ fuel}
+  +{\rm Hesse/T\ port}
+  +{\rm CSS\ handoff}
+\]
+is now one finite programmable photonic-computation ABI.  The theorem remains
+inside the claim firewall: thresholds, measured loss, detector efficiency, and
+magic-state yield are downstream physical requirements, not consequences of the
+finite compiler alone.
