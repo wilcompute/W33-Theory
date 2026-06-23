@@ -1,0 +1,23 @@
+{
+  "c": 24,
+  "c_identities": {
+    "f": 24,
+    "chi_K3": 24,
+    "rank_Leech": 24,
+    "2k": 24,
+    "q^q-q": 24
+  },
+  "Z_head": {
+    "-1": 1,
+    "0": 0,
+    "1": 196884,
+    "2": 21493760
+  },
+  "mckay_196884": "1 + 196883 (vacuum + smallest Monster irrep)",
+  "summary": "holographic boundary central charge c = f = 24 = chi(K3) = rank(Leech) = 2k; holonet VOA ladder c=8(E8)->24(Monster); Monster CFT = extremal c=24 (Z=j-744, V2=196884=1+196883) = pure AdS3 gravity (Witten 2007) = a QEC code (Almheiri-Dong-Harlow) = the holonet; R2 McKay-Thompson dims = boundary black-hole microstate counts.",
+  "sources": [
+    "Witten, Three-dimensional gravity revisited, arXiv:0706.3359 (2007)",
+    "Almheiri-Dong-Harlow, Bulk locality and quantum error correction in AdS/CFT, JHEP (2015)",
+    "FLM, Monster VOA V-natural (c=24); index.html Pillar 136"
+  ]
+}

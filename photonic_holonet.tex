@@ -3087,6 +3087,37 @@ boundary, and bulk--boundary map are all substrate arithmetic --- which is the
 literal content of ``holo-net''. (Witness:
 \texttt{analysis/w33\_holographic\_architecture.py}.)
 
+\subsection{The boundary central charge is $f=24$: the Monster CFT is the
+holonet's holographic dual}
+\label{sec:central-charge}
+
+The holographic boundary even has a definite central charge, and it is the
+substrate's master invariant. The code lattices climb the moonshine ladder
+established above --- $A_2$ at $c=2$, $D_4$ at $c=4$, $E_8$ at $c=8$,
+then Leech and the Monster module $V^{\natural}$ at $c=24$ --- and the top rung
+fixes the boundary:
+\[
+  c \;=\; 24 \;=\; f \;=\; \chi(K3) \;=\; \mathrm{rank}(\Lambda_{24})
+    \;=\; 2k \;=\; q^q-q ,
+\]
+the matter count, the $K3$ Euler number, and the Leech rank, all one number. At
+$c=24$ the boundary is the \emph{extremal} holomorphic CFT, whose partition
+function is $Z=j(\tau)-744=q^{-1}+196884\,q+\cdots$ with graded dimensions
+$V_0=1,\ V_1=0,\ V_2=196884=1+196883$ (the McKay vacuum-plus-smallest-irrep
+identity), and the Monster is its unique symmetry. By Witten's analysis of pure
+three-dimensional gravity this extremal $c=24$ CFT \emph{is} the dual of pure
+$\mathrm{AdS}_3$ gravity \cite{witten3d}, so its graded dimensions count the
+$\mathrm{AdS}_3$ black-hole microstates --- and those dimensions are exactly the
+quintic moonshine data of the substrate (e.g.\ $\dim V_5=333\,202\,640\,600$ from
+the master manuscript). Finally, Almheiri--Dong--Harlow showed that AdS/CFT
+\emph{is} a quantum error-correcting code \cite{adh}; the holonet is that code,
+with bulk $W(3,3)$ and boundary the Monster CFT. So one substrate number,
+$c=f=24$, ties the holographic boundary, the moonshine module, the matter sector,
+and pure $3$D gravity into a single object: the holonet is the quantum
+error-correcting code that AdS/CFT always was, and its boundary is monstrous
+moonshine. (Witness:
+\texttt{analysis/w33\_holographic\_central\_charge.py}.)
+
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}
 
@@ -4012,6 +4043,10 @@ step creates energy.)
 \bibitem{mrh-pump} I.~Martin, G.~Refael, B.~Halperin,
   Topological frequency conversion in strongly driven quantum systems,
   \emph{Phys.\ Rev.\ X} \textbf{7}, 041008 (2017).
+\bibitem{witten3d} E.~Witten, Three-dimensional gravity revisited,
+  \href{https://arxiv.org/abs/0706.3359}{arXiv:0706.3359} (2007).
+\bibitem{adh} A.~Almheiri, X.~Dong, D.~Harlow, Bulk locality and quantum error
+  correction in AdS/CFT, \emph{J.\ High Energy Phys.} \textbf{04}, 163 (2015).
 \bibitem{dumitrescu} P.~T.~Dumitrescu \emph{et al.},
   Dynamical topological phase realized in a trapped-ion quantum
   simulator, \emph{Nature} \textbf{607}, 463 (2022).
