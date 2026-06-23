@@ -2951,21 +2951,33 @@ $[R_p,R_q]=I$ and $\langle R_p,R_q\rangle=\mathbb Z_3\times\mathbb Z_3$ is abeli
 and classically simulable, and $27=q^q$ \emph{curved} (matter-graph $Q$,
 non-collinear) neighbours, where the curvature $F=[R_p,R_q]$ is an order-$4$
 quaternion unit and $\langle R_p,R_q\rangle=2T=\mathrm{SL}(2,3)$ is non-abelian.
-So the non-Clifford/entangling resource of the machine sits \emph{exactly} on
-the curved directions: the $12$ flat causal directions are free photon
-propagation and give only abelian gates, while every non-classical gate is a
-loop of nonzero gauge curvature. In the physics reading the same curvature on
+So the non-Clifford/entangling resource sits \emph{exactly} on the curved
+directions: a flat pair gives only the abelian $\mathbb Z_3\times\mathbb Z_3$
+(classically simulable), and the per-gate non-abelian content requires curvature.
+Quantitatively, a triangle $p{\to}q{\to}r{\to}p$ carries a Wilson loop
+$W=R_pR_qR_r$ whose order is the discrete curvature flux: the $160$ collinear
+triangles all carry the uniform abelian flux of order $3$, while the $3240$
+matter triangles of $Q$ carry non-abelian flux of orders $\{2,4,6,12\}$ (counts
+$180,180,1440,1440$, up to $12=k$), and the discrete Yang--Mills action
+$S=\sum_{\triangle}\bigl(1-\tfrac1{\mathrm{ord}\,W}\bigr)$ concentrates
+$\approx 96\%$ on the matter graph. In the physics reading the same curvature on
 $Q$ is the $su(2)$ field strength and, through its $\mathbb Z_3$ Yukawa grading,
 the fermion-mass texture --- so on the matter graph,
 \[
   \text{curvature}\;=\;\text{entanglement}\;=\;\text{magic}\;=\;\text{mass},
 \]
-all one object, while flatness is causality. The machine's quantum advantage is
-not added to the substrate; it \emph{is} the curvature of the Standard-Model
-gauge field. (Witness:
-\texttt{analysis/w33\_gauge\_curvature\_is\_computation.py}: $40$ transvections of
-order $3$, the $12$ flat / $27$ curved split per point, curvature orders $\{4\}$
-on $Q$, and $\langle R_p\rangle=\mathrm{Sp}(4,3)$.)
+all one object, while flatness is causality. \emph{(Honest scope: this is a
+field-strength statement. Both the flat and the curved Wilson-loop \emph{sets}
+generate all of $\mathrm{Sp}(4,3)$ --- the order-$3$ flat loops are genuine gates
+--- so the curved/flat split is the per-plaquette curvature and the location of
+the Yang--Mills action, not a global classical-vs-quantum partition of the group.)}
+The machine's quantum advantage is not added to the substrate; it lives in the
+curvature of the Standard-Model gauge field. (Witnesses:
+\texttt{analysis/w33\_gauge\_curvature\_is\_computation.py} ($40$ order-$3$
+transvections, $12$ flat / $27$ curved per point, curvature order $4$ on $Q$,
+$\langle R_p\rangle=\mathrm{Sp}(4,3)$);
+\texttt{analysis/w33\_yang\_mills\_computation.py} (Wilson-loop census, the
+$96\%$ matter-graph action).)
 
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}

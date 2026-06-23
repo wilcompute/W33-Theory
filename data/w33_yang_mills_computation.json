@@ -1,0 +1,17 @@
+{
+  "flat_triangle_orders": {
+    "3": 160
+  },
+  "matter_triangle_orders": {
+    "2": 180,
+    "4": 180,
+    "6": 1440,
+    "12": 1440
+  },
+  "matter_loops_generate": 51840,
+  "flat_loops_generate": 51840,
+  "S_YM_matter": 2745.0,
+  "S_YM_flat": 106.667,
+  "matter_curvature_fraction": 0.9626,
+  "law": "gauge curvature field strength F=[R_p,R_q] zero on flat / order-4 on curved; discrete YM action 96% on the matter graph Q; per-loop flux up to k=12 on Q vs uniform 3 flat; entangling per-gate content sourced by Q curvature. HONEST: both sectors' loop sets generate Sp(4,3) -- a field-strength statement, not a global classical/quantum group split."
+}
