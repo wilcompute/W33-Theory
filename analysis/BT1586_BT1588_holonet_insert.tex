@@ -1,0 +1,37 @@
+\subsection{Full operator/OAM appendix splice and recentered transaction ABI}
+\label{sec:bt1586-bt1588-oam-abi}
+
+The operator/OAM appendix is now part of the main Holonet paper through a bounded
+idempotent splice.  The splice carries the operator-on-photon circuit model, the
+internal Clifford falsifier, the recentering protocol, the leakage and claim
+ledger, and the present synthesis block.
+
+The architectural closure is the recenter-to-transaction ABI:
+\[
+  216 = 9\cdot24
+      = (1+2+2+4)\cdot24.
+\]
+The factor \(24\) is the centered BT1495 transaction-word kernel.  The nine
+affine shifts are one centered class, two OAM-only shifts, two phase-only
+shifts, and four mixed shifts.  Thus the class profile is
+\[
+  24,\quad 48,\quad 48,\quad 96,
+\]
+and every translated internal Clifford action is executed by inverse
+recentering followed by one of the same \(24\) centered \(72\)-tick transaction
+words.
+
+One operation sweep therefore has \(216\cdot72=15552\) ticks.  The full
+five-witness \(I,X,Z,F_3,S\) protocol has \(77760\) ticks.  This is an exact
+finite ABI statement: it certifies the centered word reuse and the recentering
+burden.  It does not claim measured OAM leakage, optical loss, or a finished
+calibrated device.
+
+Recent OAM and high-dimensional time-bin experiments support the physical
+direction, including same-photon polarization/OAM gates, robust time-bin qudit
+control, directly measured topology in OAM-entangled states, and OAM-multiplexed
+diffractive mode processing
+\cite{oam-toffoli-prl2024,timebin-qudit-prl2025,oam-topology-natcomm2025,oam-multiplexing-natphot2026}.
+BT1588 keeps those sources in the literature-motivation tier only: they motivate
+the mode interface, multiplexing optics, and leakage tests, while the exact
+theorem remains the local finite \(216=9\cdot24\) recenter ABI.

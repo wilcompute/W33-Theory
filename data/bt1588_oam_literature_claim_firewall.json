@@ -1,0 +1,56 @@
+{
+  "bt": 1588,
+  "checks": {
+    "abi_verified": true,
+    "all_sources_have_blocked_use": true,
+    "all_sources_have_urls": true,
+    "claim_ledger_has_three_blocked": true,
+    "claim_ledger_verified": true,
+    "firewall_keeps_external_as_literature": true,
+    "four_external_sources": true,
+    "leakage_verified": true
+  },
+  "honesty_boundary": "No external paper is used as a proof of W(3,3), calibrated loss, measured leakage, or internal operator-leg semantics. Those remain local repo certificates or blocked claims.",
+  "interpretation": "Recent OAM and time-bin photonics support the physical direction: same-photon mode registers, high-dimensional time-bin control, OAM topology, and OAM multiplexed diffractive processing are real laboratory themes. The holonet imports them only as motivation and guardrails; the exact claim remains the finite 216-action recenter transaction ABI.",
+  "source_packets": {
+    "abi": "data/bt1587_oam_recenter_transaction_abi.json",
+    "claim_ledger": "data/bt1585_operator_oam_appendix_claim_ledger.json",
+    "leakage": "data/bt1577_radial_leakage_bound_from_oam_phase_ops.json"
+  },
+  "sources": [
+    {
+      "blocked_use": "does not prove the holonet internal operator-leg semantics",
+      "key": "oam_toffoli_prl_2024",
+      "repo_use": "same-photon polarization/OAM controlled-gate motivation",
+      "title": "Polarization and Orbital Angular Momentum Encoded Quantum Toffoli Gate Enabled by Diffractive Neural Networks",
+      "url": "https://doi.org/10.1103/PhysRevLett.133.140601",
+      "venue": "Physical Review Letters 133, 140601 (2024)"
+    },
+    {
+      "blocked_use": "does not calibrate the holonet 72-tick transaction loss model",
+      "key": "timebin_qudit_prl_2025",
+      "repo_use": "high-dimensional time-bin preparation/readout motivation",
+      "title": "Robust approach for time-bin encoded photonic quantum states",
+      "url": "https://doi.org/10.1103/PhysRevLett.134.180802",
+      "venue": "Physical Review Letters 134, 180802 (2025)"
+    },
+    {
+      "blocked_use": "does not identify the W(3,3) finite substrate or remove leakage tests",
+      "key": "oam_topology_natcomm_2025",
+      "repo_use": "OAM topology and high-dimensional mode guardrail",
+      "title": "Revealing the topological nature of entangled orbital angular momentum states of light",
+      "url": "https://www.nature.com/articles/s41467-025-66066-3",
+      "venue": "Nature Communications 16, 11095 (2025)"
+    },
+    {
+      "blocked_use": "does not provide a quantum gate certificate or holonet transaction ABI",
+      "key": "oam_multiplexing_natphot_2026",
+      "repo_use": "OAM multiplexing and diffractive mode-processing motivation",
+      "title": "Orbital angular momentum multiplexing diffractive neural networks for high-capacity optical inference",
+      "url": "https://doi.org/10.1038/s41566-026-01930-2",
+      "venue": "Nature Photonics (2026)"
+    }
+  ],
+  "title": "OAM literature claim firewall",
+  "verified": true
+}

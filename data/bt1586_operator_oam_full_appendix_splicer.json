@@ -1,0 +1,36 @@
+{
+  "applied": true,
+  "bt": 1586,
+  "checks": {
+    "all_insert_paths_exist": true,
+    "applied_block_present_or_dry_run": true,
+    "bibliography_marker_present": true,
+    "block_before_bibliography": true,
+    "block_before_end_document": true,
+    "bounded_block_has_begin_end": true,
+    "idempotent_second_pass": true,
+    "includes_latest_claim_ledger": true,
+    "includes_new_synthesis": true,
+    "insert_paths_unique": true,
+    "seven_insert_paths": true,
+    "target_exists": true
+  },
+  "honesty_boundary": "This splices exact finite and claim-ledger text into the paper. It does not assert calibrated OAM hardware, measured leakage, or an optical loss model.",
+  "insert_count": 7,
+  "inserts": [
+    "analysis/BT1564_BT1566_holonet_insert.tex",
+    "analysis/BT1567_BT1569_holonet_insert.tex",
+    "analysis/BT1570_BT1572_holonet_insert.tex",
+    "analysis/BT1573_BT1576_holonet_insert.tex",
+    "analysis/BT1580_BT1582_holonet_insert.tex",
+    "analysis/BT1583_BT1585_holonet_insert.tex",
+    "analysis/BT1586_BT1588_holonet_insert.tex"
+  ],
+  "interpretation": "The full operator/OAM appendix is now a bounded, idempotent paper splice. It includes the operator-on-photon, internal Clifford, recentering/protocol, validation/ledger, and BT1586-BT1588 synthesis inserts.",
+  "missing_inserts": [],
+  "mode": "relocate_existing_block",
+  "second_mode": "relocate_existing_block",
+  "target": "photonic_holonet.tex",
+  "title": "Operator/OAM full appendix splicer",
+  "verified": true
+}
