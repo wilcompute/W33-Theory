@@ -1,0 +1,92 @@
+{
+  "table": [
+    {
+      "n": 1,
+      "dimV": 196884,
+      "S": 12.19,
+      "cardy": 12.566,
+      "ratio": 0.9701,
+      "rademacher": 11.474
+    },
+    {
+      "n": 2,
+      "dimV": 21493760,
+      "S": 16.883,
+      "cardy": 17.772,
+      "ratio": 0.95,
+      "rademacher": 16.159
+    },
+    {
+      "n": 3,
+      "dimV": 864299970,
+      "S": 20.577,
+      "cardy": 21.766,
+      "ratio": 0.9454,
+      "rademacher": 19.849
+    },
+    {
+      "n": 4,
+      "dimV": 20245856256,
+      "S": 23.731,
+      "cardy": 25.133,
+      "ratio": 0.9442,
+      "rademacher": 23.001
+    },
+    {
+      "n": 5,
+      "dimV": 333202640600,
+      "S": 26.532,
+      "cardy": 28.099,
+      "ratio": 0.9442,
+      "rademacher": 25.8
+    },
+    {
+      "n": 6,
+      "dimV": 4252023300096,
+      "S": 29.078,
+      "cardy": 30.781,
+      "ratio": 0.9447,
+      "rademacher": 28.345
+    },
+    {
+      "n": 7,
+      "dimV": 44656994071935,
+      "S": 31.43,
+      "cardy": 33.247,
+      "ratio": 0.9453,
+      "rademacher": 30.696
+    },
+    {
+      "n": 8,
+      "dimV": 401490886656000,
+      "S": 33.626,
+      "cardy": 35.543,
+      "ratio": 0.9461,
+      "rademacher": 32.891
+    },
+    {
+      "n": 9,
+      "dimV": 3176440229784420,
+      "S": 35.695,
+      "cardy": 37.699,
+      "ratio": 0.9468,
+      "rademacher": 34.959
+    },
+    {
+      "n": 10,
+      "dimV": 22567393309593600,
+      "S": 37.655,
+      "cardy": 39.738,
+      "ratio": 0.9476,
+      "rademacher": 36.919
+    }
+  ],
+  "cardy_ratio_n10": 0.9476,
+  "rademacher_max_relerr_nge5": 0.02759,
+  "mu": 4,
+  "c": 24,
+  "summary": "ln(dim V_n) -> 4 pi sqrt(n) = Cardy(c=24) = Bekenstein area law; moonshine dims = AdS3 black-hole microstates; S=A/mu; holographic/fractal redundancy = error correction (computer = network)",
+  "sources": [
+    "Strominger-Vafa microstate counting (1996); Cardy formula; Petersson-Rademacher asymptotics of j-coefficients; Witten 3D gravity (2007); Pastawski et al. holographic QEC"
+  ]
+}

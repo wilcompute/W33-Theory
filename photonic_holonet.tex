@@ -3118,6 +3118,25 @@ error-correcting code that AdS/CFT always was, and its boundary is monstrous
 moonshine. (Witness:
 \texttt{analysis/w33\_holographic\_central\_charge.py}.)
 
+Two consequences sharpen this. First, the entropy is a microstate count: the
+graded dimensions $\dim V_n$ are the boundary state numbers, so the black-hole
+entropy is $S(n)=\ln\dim V_n$, and it follows the Cardy law
+$S\sim 2\pi\sqrt{cn/6}=4\pi\sqrt n$ at $c=24$ --- the Bekenstein--Hawking area law
+of the BTZ black hole. The leading area term captures the entropy to $\sim5\%$
+(the slow Cardy approach) and the Petersson--Rademacher-corrected form to
+$\sim2$--$3\%$ by $n\!\sim\!5$, so the moonshine dimensions are a
+Strominger--Vafa-style microstate count of the substrate's own horizon, with
+$S=A/\mu$. Second --- and this is why the holographic story is not a separate
+layer --- the holographic \emph{redundancy is the error correction}. A
+holographic code over-encodes each bulk qudit on many boundary regions, and that
+over-encoding \emph{is} the code distance; on the holonet the identical
+redundancy appears three ways at once: the fractal nested shells (each outer
+$[[240,81,4]]_3$ shell re-encoding the inner layers), the timetable
+triple-storage (\S\ref{sec:sync}), and the holographic boundary. So the network's
+holographic/fractal redundancy and the computer's fault tolerance are one
+mechanism --- the precise sense in which the computer is the network. (Witness:
+\texttt{analysis/w33\_microstate\_count.py}.)
+
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}
 
