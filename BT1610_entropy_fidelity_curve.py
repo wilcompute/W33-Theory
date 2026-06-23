@@ -1,0 +1,1 @@
+# See BT1610_entropy_fidelity_curve.py — full content in commit
