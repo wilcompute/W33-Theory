@@ -2699,6 +2699,30 @@ architecture is complete: a finite, exact, universal machine whose physics
 closes onto the Standard Model and general relativity through results that are
 now either proved or reduced to the application of known theorems.
 
+\paragraph{Reading guide for what follows.} The remaining subsections develop the
+architecture in four movements, each a chain of witnessed theorems.
+\emph{(A) The logical layer is substrate-forced}: the machine is the substrate's
+symplectic continuum (the oscillator representation), its fault-tolerant code is
+the lattice tower $A_2\subset D_4\subset E_8$, its universal gate set is the
+degree-$2$ symplectic plus degree-$3$ cubic invariants, the gate group equals the
+code's logical Clifford group $\mathrm{Sp}(4,3)$, and the code lattices sit on the
+$E_8\to$ Leech $\to$ Monster moonshine ladder.
+\emph{(B) The physical carrier is one massless self-protected photon}: the
+demonstrator versus the fault-tolerant machine, gates as geometric ($2T$)
+holonomies, self-error-correction from the substrate-fixed quasicrystal drive
+(topological, $|C|=q-1$), why the primitive must be a single massless photon
+(zero proper time, Wigner helicity $\lambda$), and the carrier as its own geon
+inside a fractal of nested shells.
+\emph{(C) The physics and the computer are one object}: the quantum power is the
+gauge curvature on the matter graph, and that discrete curvature is a finite-group
+lattice gauge theory whose continuum limit is the spectral action's
+gauge-plus-gravity field equations.
+\emph{(D) It is testable now}: a parameter-free near-term falsification protocol
+on the single-photon demonstrator.
+Throughout, one substrate number recurs --- $q-1=\lambda=2$ sets the drive angle,
+the topological protection, and the photon's transverse helicity count --- and no
+constant is fitted.
+
 \subsection{The architecture is the substrate's symplectic continuum}
 
 There is a structural reason the machine and the spacetime are different objects
@@ -2978,6 +3002,41 @@ transvections, $12$ flat / $27$ curved per point, curvature order $4$ on $Q$,
 $\langle R_p\rangle=\mathrm{Sp}(4,3)$);
 \texttt{analysis/w33\_yang\_mills\_computation.py} (Wilson-loop census, the
 $96\%$ matter-graph action).)
+
+\subsection{From the matter-graph lattice to continuum Yang--Mills: the loop
+closes}
+\label{sec:lattice-to-continuum}
+
+The discrete curvature of the previous subsection is not a metaphor for a gauge
+theory --- it \emph{is} one, and its continuum limit is the gauge sector of the
+physics. Each matter edge carries the curvature $F=[R_p,R_q]$, an order-$4$
+element of $2T=\mathrm{SL}(2,3)\subset\mathrm{SU}(2)$; realised as the binary
+tetrahedral group of $24$ unit quaternions, these are exactly the quaternion
+units $\pm i,\pm j,\pm k$ (the six order-$4$ elements, $\mathrm{SU}(2)$-trace
+$0$). So the matter graph $Q$ carries a genuine \emph{finite-group}
+($2T$) lattice gauge theory with an $su(2)$-valued field strength --- the
+computer's gate fabric, read as a Wilson lattice. The standard Wilson plaquette
+action $\tfrac\beta2\mathrm{Tr}\{1-P\}$ assigns each plaquette the curvature
+energy $1-\tfrac12\mathrm{Re}\,\mathrm{Tr}\,P$, maximal ($=1$) on a curved
+($\mathrm{Tr}=0$) plaquette and zero on a flat one, and Wilson's theorem gives
+its continuum limit $\tfrac\beta2\mathrm{Tr}\{1-P\}\to\tfrac{a^4}{2g^2}F^b_{\mu\nu}F^b_{\mu\nu}$.
+On the shape-regular edgewise tower (the same refinement that carries the finite
+spectral action to the continuum) the matter-graph action converges to the
+continuum $su(2)$ Yang--Mills integral $\tfrac1{4g^2}\!\int\!\mathrm{Tr}\,F^2$,
+which is precisely the gauge-kinetic $a_4$ term of the $W(3,3)$ spectral action.
+Together with the $a_2$ Einstein--Hilbert term --- whose metric variation gave
+the Einstein field equations (\texttt{w33\_paper.tex}) --- and the $a_0$
+cosmological term, varying $a_0+a_2+a_4$ yields the coupled Einstein $+$ $su(2)$
+Yang--Mills $+$ Higgs field equations. The loop therefore closes: \emph{the
+computer's gate curvature (a $2T$ lattice gauge theory on $Q$) and the physics
+gauge-plus-gravity field equations (the continuum spectral action) are the
+lattice and continuum descriptions of one $W(3,3)$ connection} --- discrete gates
+below, smooth fields above, the edgewise tower between. \emph{(Honest scope: the
+discrete $2T$ structure and Wilson density are computed; the continuum limit is
+the established Wilson and edgewise spectral-action results, not re-derived
+numerically; the local field strength is $su(2)$ per edge while the global
+holonomy group is $\mathrm{Sp}(4,3)$.)} (Witness:
+\texttt{analysis/w33\_lattice\_to\_continuum\_ym.py}.)
 
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}

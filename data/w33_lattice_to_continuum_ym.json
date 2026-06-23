@@ -1,0 +1,19 @@
+{
+  "order_spectrum": {
+    "1": 1,
+    "2": 1,
+    "4": 6,
+    "6": 8,
+    "3": 8
+  },
+  "field_strength_units": 6,
+  "e_curved": 1.0,
+  "e_flat": 0.0,
+  "bridge": "2T=SL(2,3)<SU(2) finite-group lattice gauge theory on Q (computer, su(2) field strength) -> Wilson continuum limit (1/4g^2) int Tr F^2 = spectral a4 gauge term; + a2 Einstein-Hilbert (field equations) + a0 cosmological = Einstein + su(2) Yang-Mills + Higgs (physics). One W(3,3) connection.",
+  "honest": "discrete 2T structure + Wilson action density computed; the continuum limit is the established Wilson(1974) + edgewise spectral-action (BT1033) result, not re-derived numerically; globally the gauge group is Sp(4,3), su(2) is the local per-edge field strength.",
+  "sources": [
+    "Wilson, Confinement of quarks, PRD 10, 2445 (1974)",
+    "Chamseddine-Connes, The spectral action principle, CMP 186, 731 (1997)",
+    "Mariani, Finite-group Yang-Mills lattice gauge theories"
+  ]
+}
