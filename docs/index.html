@@ -2682,6 +2682,14 @@
               handoff.</div>
           </div>
           <div class="card">
+            <div class="label">Fano Time-Bin Guard Closure</div>
+            <div class="detail">BT1648-BT1650 turn the detector-bin usage profile into
+              <code>80*9+40*(9+1)+48*10=1600</code>, embed those active frames in an
+              <code>11</code>-bit time-bin envelope with <code>2048-1600=448=7*64</code>
+              slack bins, and spend the slack as seven Fano guard pages for dark,
+              loss, and parity-overflow calibration.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

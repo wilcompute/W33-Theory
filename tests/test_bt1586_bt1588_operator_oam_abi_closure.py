@@ -23,7 +23,7 @@ def test_bt1586_full_appendix_splicer_is_applied_and_idempotent():
 
     assert result["verified"] is True
     assert result["applied"] is True
-    assert result["insert_count"] == 12
+    assert result["insert_count"] == 13
     assert result["checks"]["idempotent_second_pass"] is True
     assert "% BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN" in paper
     assert r"\input{analysis/BT1586_BT1588_holonet_insert.tex}" in paper
@@ -32,6 +32,7 @@ def test_bt1586_full_appendix_splicer_is_applied_and_idempotent():
     assert r"\input{analysis/BT1595_BT1597_holonet_insert.tex}" in paper
     assert r"\input{analysis/BT1598_BT1600_holonet_insert.tex}" in paper
     assert r"\input{analysis/BT1601_BT1603_holonet_insert.tex}" in paper
+    assert r"\input{analysis/BT1648_BT1650_holonet_insert.tex}" in paper
 
 
 def test_bt1587_oam_recenter_transaction_abi_counts():

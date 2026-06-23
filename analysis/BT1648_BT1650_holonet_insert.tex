@@ -1,0 +1,52 @@
+\subsection{Fano charge, time-bin envelope, and guard-page closure}
+\label{sec:bt1648-bt1650-fano-timebin-guard}
+
+The \(80\times9+88\times10\) detector-bin profile is not just a usage
+histogram.  BT1648 shows that it is a conserved Fano charge.  The \(168\)
+active detector bins split into three exact classes:
+\[
+  80\cdot9+40\cdot(9+1)+48\cdot10=1600.
+\]
+The \(80\) bins are unanchored contextual-fuel bins.  The \(40\) middle
+terms are fuel bins with one same-ray control anchor.  The \(48\) final bins
+are compatible-control reserve bins.  Equivalently, the seven Fano lines split
+as five Witting gate lines and two reserve lines:
+\[
+  5(16\cdot9+8\cdot10)+2(24\cdot10)=1600.
+\]
+This explains why the high-usage side has size \(88\): it is exactly
+\[
+  40\ \text{same-ray anchors}+48\ \text{compatible reserve bins}.
+\]
+
+BT1649 then embeds the active automaton into an \(11\)-bit time-bin qudit
+envelope, motivated by single-photon time-bin qudit universal logic
+\cite{delteil-timebin-qudit}.  The active Witting transaction uses the first
+\(1600\) time bins.  The remaining addresses factor without remainder:
+\[
+  2^{11}=2048,\qquad 2048-1600=448=7\cdot64.
+\]
+Thus every Fano point receives a \(64\)-slot guard page.  Each guard page is
+typed as
+\[
+  24\ {\rm dark\ references}
+  +24\ {\rm loss\ probes}
+  +16\ {\rm parity\ overflow\ slots}.
+\]
+The Witting source/fuel structure remains the contextual communication desk of
+\cite{vlasov-witting-communications}; the time-bin envelope is the physical
+address wrapper around that finite desk, not a new communication assumption.
+
+BT1650 closes the calibration interface.  The \(7\cdot24=168\) dark-reference
+guards cover all active detector bins once, and the \(168\) loss-probe guards
+also cover all active detector bins once.  The remaining \(7\cdot16=112\)
+parity-overflow guards feed the CSS/jitter side of the fault ABI:
+\[
+  \text{dark}\mapsto\text{DARK\_CLICK},\qquad
+  \text{loss}\mapsto\text{MISSED\_CLICK},\qquad
+  \text{parity}\mapsto\text{CSS\_SYNDROME}.
+\]
+This is the new physical closure: the \(448\) time-bin slack addresses are not
+unused capacity.  They are the calibrated guard shell required to run the
+\(1600\)-frame Witting automaton as a bench-addressable single-photon qudit
+program.

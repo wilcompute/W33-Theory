@@ -9,6 +9,7 @@
     "block_before_end_document": true,
     "bounded_block_has_begin_end": true,
     "idempotent_second_pass": true,
+    "includes_fano_timebin_guard_closure": true,
     "includes_full_witting_cycle": true,
     "includes_lab_mode_hesse_loop": true,
     "includes_latest_claim_ledger": true,
@@ -18,10 +19,10 @@
     "includes_witting_fuel_object": true,
     "insert_paths_unique": true,
     "target_exists": true,
-    "twelve_insert_paths": true
+    "thirteen_insert_paths": true
   },
   "honesty_boundary": "This splices exact finite and claim-ledger text into the paper. It does not assert calibrated OAM hardware, measured leakage, or an optical loss model.",
-  "insert_count": 12,
+  "insert_count": 13,
   "inserts": [
     "analysis/BT1564_BT1566_holonet_insert.tex",
     "analysis/BT1567_BT1569_holonet_insert.tex",
@@ -34,9 +35,10 @@
     "analysis/BT1592_BT1594_holonet_insert.tex",
     "analysis/BT1595_BT1597_holonet_insert.tex",
     "analysis/BT1598_BT1600_holonet_insert.tex",
-    "analysis/BT1601_BT1603_holonet_insert.tex"
+    "analysis/BT1601_BT1603_holonet_insert.tex",
+    "analysis/BT1648_BT1650_holonet_insert.tex"
   ],
-  "interpretation": "The full operator/OAM appendix is now a bounded, idempotent paper splice. It includes the operator-on-photon, internal Clifford, recentering/protocol, validation/ledger, BT1586-BT1588 synthesis, and BT1589-BT1591 radial/lane/front-end inserts, plus the BT1592-BT1594 lab/mode/Hesse witness-loop insert, the BT1595-BT1597 Witting fuel-object insert, the BT1598-BT1600 full Witting-cycle insert, and the BT1601-BT1603 physical/Fano/universal-closure insert.",
+  "interpretation": "The full operator/OAM appendix is now a bounded, idempotent paper splice. It includes the operator-on-photon, internal Clifford, recentering/protocol, validation/ledger, BT1586-BT1588 synthesis, and BT1589-BT1591 radial/lane/front-end inserts, plus the BT1592-BT1594 lab/mode/Hesse witness-loop insert, the BT1595-BT1597 Witting fuel-object insert, the BT1598-BT1600 full Witting-cycle insert, and the BT1601-BT1603 physical/Fano/universal-closure insert, plus the BT1648-BT1650 Fano time-bin guard closure insert.",
   "missing_inserts": [],
   "mode": "relocate_existing_block",
   "second_mode": "relocate_existing_block",

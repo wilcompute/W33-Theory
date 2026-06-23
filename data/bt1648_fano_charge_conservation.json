@@ -1,0 +1,302 @@
+{
+  "bt": 1648,
+  "charge_identity": {
+    "bin_identity": "80*9 + 40*(9+1) + 48*10 = 1600",
+    "line_identity": "5*(16*9 + 8*10) + 2*(24*10) = 1600",
+    "reading": "The 88 high-usage bins are exactly the 40 same-ray anchors plus the 48 compatible-control reserve bins; the 80 low bins are the unanchored contextual-fuel bins."
+  },
+  "checks": {
+    "all_168_bins_classified": true,
+    "bt1602_verified": true,
+    "charge_equation_sums_to_1600": true,
+    "class_histogram_is_80_40_48": true,
+    "five_gate_lines_have_16_low_8_anchor_bins": true,
+    "high_bins_are_same_anchors_plus_compatible_reserve": true,
+    "line_equation_sums_to_1600": true,
+    "low_bins_are_exactly_unanchored_fuel": true,
+    "point_mass_vector_exposes_fixed_witting_gauge_tilt": true,
+    "two_reserve_lines_are_24_compatible_bins_each": true,
+    "usage_profile_is_80x9_88x10": true
+  },
+  "counts": {
+    "active_detector_bins": 168,
+    "compatible_reserve_bins": 48,
+    "high_usage_bins": 88,
+    "low_usage_bins": 80,
+    "same_anchor_bins": 40
+  },
+  "histograms": {
+    "class": {
+      "COMPATIBLE_RESERVE_BIN": 48,
+      "SAME_ANCHORED_FUEL_BIN": 40,
+      "UNANCHORED_FUEL_BIN": 80
+    },
+    "line_frames": {
+      "0": 224,
+      "1": 224,
+      "2": 224,
+      "3": 224,
+      "4": 224,
+      "5": 240,
+      "6": 240
+    },
+    "point_frames": {
+      "0": 240,
+      "1": 232,
+      "2": 224,
+      "3": 232,
+      "4": 224,
+      "5": 224,
+      "6": 224
+    },
+    "usage": {
+      "9": 80,
+      "10": 88
+    }
+  },
+  "honesty_boundary": "This is an exact incidence and usage theorem. It does not claim detector efficiency, measured rates, or Standard Model numerical correctness.",
+  "interpretation": "BT1648 shows the 80x9 + 88x10 detector profile is a conserved charge, not an empirical-looking histogram. Five Fano gate lines carry fuel plus same-ray anchors; two reserve lines carry compatible controls. The line loads are exact while the point loads retain the chosen Witting gauge tilt.",
+  "line_profiles": {
+    "0": {
+      "bins": 24,
+      "class_histogram": {
+        "SAME_ANCHORED_FUEL_BIN": 8,
+        "UNANCHORED_FUEL_BIN": 16
+      },
+      "frames": 224
+    },
+    "1": {
+      "bins": 24,
+      "class_histogram": {
+        "SAME_ANCHORED_FUEL_BIN": 8,
+        "UNANCHORED_FUEL_BIN": 16
+      },
+      "frames": 224
+    },
+    "2": {
+      "bins": 24,
+      "class_histogram": {
+        "SAME_ANCHORED_FUEL_BIN": 8,
+        "UNANCHORED_FUEL_BIN": 16
+      },
+      "frames": 224
+    },
+    "3": {
+      "bins": 24,
+      "class_histogram": {
+        "SAME_ANCHORED_FUEL_BIN": 8,
+        "UNANCHORED_FUEL_BIN": 16
+      },
+      "frames": 224
+    },
+    "4": {
+      "bins": 24,
+      "class_histogram": {
+        "SAME_ANCHORED_FUEL_BIN": 8,
+        "UNANCHORED_FUEL_BIN": 16
+      },
+      "frames": 224
+    },
+    "5": {
+      "bins": 24,
+      "class_histogram": {
+        "COMPATIBLE_RESERVE_BIN": 24
+      },
+      "frames": 240
+    },
+    "6": {
+      "bins": 24,
+      "class_histogram": {
+        "COMPATIBLE_RESERVE_BIN": 24
+      },
+      "frames": 240
+    }
+  },
+  "sample_bins": [
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 0,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 1,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 2,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 3,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 4,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 5,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 6,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 7,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 8,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 9,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 10,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "SAME_ANCHORED_FUEL_BIN",
+      "detector_bin": 11,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9,
+        "SAME_RAY_CONTROL_ANCHOR": 1
+      }
+    },
+    {
+      "class": "UNANCHORED_FUEL_BIN",
+      "detector_bin": 156,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9
+      }
+    },
+    {
+      "class": "UNANCHORED_FUEL_BIN",
+      "detector_bin": 157,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9
+      }
+    },
+    {
+      "class": "UNANCHORED_FUEL_BIN",
+      "detector_bin": 158,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9
+      }
+    },
+    {
+      "class": "UNANCHORED_FUEL_BIN",
+      "detector_bin": 159,
+      "role_counts": {
+        "FUEL_GATE_LINE": 9
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 160,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 161,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 162,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 163,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 164,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 165,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 166,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    },
+    {
+      "class": "COMPATIBLE_RESERVE_BIN",
+      "detector_bin": 167,
+      "role_counts": {
+        "COMPATIBLE_CONTROL_RESERVE_LINE": 10
+      }
+    }
+  ],
+  "source_packets": {
+    "fano_witting_bins": "data/bt1602_fano_witting_detector_bin_synthesis.json"
+  },
+  "title": "Fano charge-conservation law for Witting detector usage",
+  "verified": true
+}

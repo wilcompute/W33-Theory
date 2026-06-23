@@ -1,0 +1,717 @@
+{
+  "active_sample": [
+    {
+      "frame": 0,
+      "role": "WITTING_FRAME",
+      "time_bin": 0,
+      "time_bin_word": "00000000000"
+    },
+    {
+      "frame": 1,
+      "role": "WITTING_FRAME",
+      "time_bin": 1,
+      "time_bin_word": "00000000001"
+    },
+    {
+      "frame": 2,
+      "role": "WITTING_FRAME",
+      "time_bin": 2,
+      "time_bin_word": "00000000010"
+    },
+    {
+      "frame": 3,
+      "role": "WITTING_FRAME",
+      "time_bin": 3,
+      "time_bin_word": "00000000011"
+    },
+    {
+      "frame": 4,
+      "role": "WITTING_FRAME",
+      "time_bin": 4,
+      "time_bin_word": "00000000100"
+    },
+    {
+      "frame": 5,
+      "role": "WITTING_FRAME",
+      "time_bin": 5,
+      "time_bin_word": "00000000101"
+    },
+    {
+      "frame": 6,
+      "role": "WITTING_FRAME",
+      "time_bin": 6,
+      "time_bin_word": "00000000110"
+    },
+    {
+      "frame": 7,
+      "role": "WITTING_FRAME",
+      "time_bin": 7,
+      "time_bin_word": "00000000111"
+    },
+    {
+      "frame": 8,
+      "role": "WITTING_FRAME",
+      "time_bin": 8,
+      "time_bin_word": "00000001000"
+    },
+    {
+      "frame": 9,
+      "role": "WITTING_FRAME",
+      "time_bin": 9,
+      "time_bin_word": "00000001001"
+    },
+    {
+      "frame": 10,
+      "role": "WITTING_FRAME",
+      "time_bin": 10,
+      "time_bin_word": "00000001010"
+    },
+    {
+      "frame": 11,
+      "role": "WITTING_FRAME",
+      "time_bin": 11,
+      "time_bin_word": "00000001011"
+    },
+    {
+      "frame": 12,
+      "role": "WITTING_FRAME",
+      "time_bin": 12,
+      "time_bin_word": "00000001100"
+    },
+    {
+      "frame": 13,
+      "role": "WITTING_FRAME",
+      "time_bin": 13,
+      "time_bin_word": "00000001101"
+    },
+    {
+      "frame": 14,
+      "role": "WITTING_FRAME",
+      "time_bin": 14,
+      "time_bin_word": "00000001110"
+    },
+    {
+      "frame": 15,
+      "role": "WITTING_FRAME",
+      "time_bin": 15,
+      "time_bin_word": "00000001111"
+    },
+    {
+      "frame": 1584,
+      "role": "WITTING_FRAME",
+      "time_bin": 1584,
+      "time_bin_word": "11000110000"
+    },
+    {
+      "frame": 1585,
+      "role": "WITTING_FRAME",
+      "time_bin": 1585,
+      "time_bin_word": "11000110001"
+    },
+    {
+      "frame": 1586,
+      "role": "WITTING_FRAME",
+      "time_bin": 1586,
+      "time_bin_word": "11000110010"
+    },
+    {
+      "frame": 1587,
+      "role": "WITTING_FRAME",
+      "time_bin": 1587,
+      "time_bin_word": "11000110011"
+    },
+    {
+      "frame": 1588,
+      "role": "WITTING_FRAME",
+      "time_bin": 1588,
+      "time_bin_word": "11000110100"
+    },
+    {
+      "frame": 1589,
+      "role": "WITTING_FRAME",
+      "time_bin": 1589,
+      "time_bin_word": "11000110101"
+    },
+    {
+      "frame": 1590,
+      "role": "WITTING_FRAME",
+      "time_bin": 1590,
+      "time_bin_word": "11000110110"
+    },
+    {
+      "frame": 1591,
+      "role": "WITTING_FRAME",
+      "time_bin": 1591,
+      "time_bin_word": "11000110111"
+    },
+    {
+      "frame": 1592,
+      "role": "WITTING_FRAME",
+      "time_bin": 1592,
+      "time_bin_word": "11000111000"
+    },
+    {
+      "frame": 1593,
+      "role": "WITTING_FRAME",
+      "time_bin": 1593,
+      "time_bin_word": "11000111001"
+    },
+    {
+      "frame": 1594,
+      "role": "WITTING_FRAME",
+      "time_bin": 1594,
+      "time_bin_word": "11000111010"
+    },
+    {
+      "frame": 1595,
+      "role": "WITTING_FRAME",
+      "time_bin": 1595,
+      "time_bin_word": "11000111011"
+    },
+    {
+      "frame": 1596,
+      "role": "WITTING_FRAME",
+      "time_bin": 1596,
+      "time_bin_word": "11000111100"
+    },
+    {
+      "frame": 1597,
+      "role": "WITTING_FRAME",
+      "time_bin": 1597,
+      "time_bin_word": "11000111101"
+    },
+    {
+      "frame": 1598,
+      "role": "WITTING_FRAME",
+      "time_bin": 1598,
+      "time_bin_word": "11000111110"
+    },
+    {
+      "frame": 1599,
+      "role": "WITTING_FRAME",
+      "time_bin": 1599,
+      "time_bin_word": "11000111111"
+    }
+  ],
+  "bt": 1649,
+  "checks": {
+    "active_and_guard_regions_are_disjoint": true,
+    "active_region_has_1600_frames": true,
+    "automaton_verified": true,
+    "calibration_schema_loaded": true,
+    "charge_verified": true,
+    "dark_and_loss_cover_all_168_detector_bins": true,
+    "eleven_bits_give_2048_time_bins": true,
+    "guard_pages_are_balanced": true,
+    "guard_region_is_448_equals_7_times_64": true,
+    "guard_roles_are_168_168_112": true,
+    "parity_overflow_is_7_times_16": true
+  },
+  "counts": {
+    "active_frames": 1600,
+    "dark_reference_bins": 168,
+    "envelope_bins": 2048,
+    "fano_guard_pages": 7,
+    "guard_bins": 448,
+    "loss_probe_bins": 168,
+    "parity_overflow_bins": 112,
+    "time_bin_bits": 11
+  },
+  "envelope_identity": {
+    "active_region": "time bins 0..1599 are the Witting transaction frames",
+    "external_anchor": "Motivated by single-photon time-bin qudit universal logic with O(N) linear optics elements; the repo only uses the finite address envelope here.",
+    "guard_region": "time bins 1600..2047 are 448 = 7*64 Fano guard bins",
+    "time_bin_qudit": "2^11 = 2048 addressable time bins"
+  },
+  "guard_rows_sample": [
+    {
+      "detector_bin": 0,
+      "fano_point": 0,
+      "fiber_index": 0,
+      "guard_offset": 0,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 0,
+      "time_bin": 1600,
+      "time_bin_word": "11001000000"
+    },
+    {
+      "detector_bin": 1,
+      "fano_point": 0,
+      "fiber_index": 1,
+      "guard_offset": 1,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 1,
+      "time_bin": 1601,
+      "time_bin_word": "11001000001"
+    },
+    {
+      "detector_bin": 2,
+      "fano_point": 0,
+      "fiber_index": 2,
+      "guard_offset": 2,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 2,
+      "time_bin": 1602,
+      "time_bin_word": "11001000010"
+    },
+    {
+      "detector_bin": 3,
+      "fano_point": 0,
+      "fiber_index": 3,
+      "guard_offset": 3,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 3,
+      "time_bin": 1603,
+      "time_bin_word": "11001000011"
+    },
+    {
+      "detector_bin": 4,
+      "fano_point": 0,
+      "fiber_index": 4,
+      "guard_offset": 4,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 4,
+      "time_bin": 1604,
+      "time_bin_word": "11001000100"
+    },
+    {
+      "detector_bin": 5,
+      "fano_point": 0,
+      "fiber_index": 5,
+      "guard_offset": 5,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 5,
+      "time_bin": 1605,
+      "time_bin_word": "11001000101"
+    },
+    {
+      "detector_bin": 6,
+      "fano_point": 0,
+      "fiber_index": 6,
+      "guard_offset": 6,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 6,
+      "time_bin": 1606,
+      "time_bin_word": "11001000110"
+    },
+    {
+      "detector_bin": 7,
+      "fano_point": 0,
+      "fiber_index": 7,
+      "guard_offset": 7,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 7,
+      "time_bin": 1607,
+      "time_bin_word": "11001000111"
+    },
+    {
+      "detector_bin": 8,
+      "fano_point": 0,
+      "fiber_index": 8,
+      "guard_offset": 8,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 8,
+      "time_bin": 1608,
+      "time_bin_word": "11001001000"
+    },
+    {
+      "detector_bin": 9,
+      "fano_point": 0,
+      "fiber_index": 9,
+      "guard_offset": 9,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 9,
+      "time_bin": 1609,
+      "time_bin_word": "11001001001"
+    },
+    {
+      "detector_bin": 10,
+      "fano_point": 0,
+      "fiber_index": 10,
+      "guard_offset": 10,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 10,
+      "time_bin": 1610,
+      "time_bin_word": "11001001010"
+    },
+    {
+      "detector_bin": 11,
+      "fano_point": 0,
+      "fiber_index": 11,
+      "guard_offset": 11,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 11,
+      "time_bin": 1611,
+      "time_bin_word": "11001001011"
+    },
+    {
+      "detector_bin": 12,
+      "fano_point": 0,
+      "fiber_index": 12,
+      "guard_offset": 12,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 12,
+      "time_bin": 1612,
+      "time_bin_word": "11001001100"
+    },
+    {
+      "detector_bin": 13,
+      "fano_point": 0,
+      "fiber_index": 13,
+      "guard_offset": 13,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 13,
+      "time_bin": 1613,
+      "time_bin_word": "11001001101"
+    },
+    {
+      "detector_bin": 14,
+      "fano_point": 0,
+      "fiber_index": 14,
+      "guard_offset": 14,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 14,
+      "time_bin": 1614,
+      "time_bin_word": "11001001110"
+    },
+    {
+      "detector_bin": 15,
+      "fano_point": 0,
+      "fiber_index": 15,
+      "guard_offset": 15,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 15,
+      "time_bin": 1615,
+      "time_bin_word": "11001001111"
+    },
+    {
+      "detector_bin": 16,
+      "fano_point": 0,
+      "fiber_index": 16,
+      "guard_offset": 16,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 16,
+      "time_bin": 1616,
+      "time_bin_word": "11001010000"
+    },
+    {
+      "detector_bin": 17,
+      "fano_point": 0,
+      "fiber_index": 17,
+      "guard_offset": 17,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 17,
+      "time_bin": 1617,
+      "time_bin_word": "11001010001"
+    },
+    {
+      "detector_bin": 18,
+      "fano_point": 0,
+      "fiber_index": 18,
+      "guard_offset": 18,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 18,
+      "time_bin": 1618,
+      "time_bin_word": "11001010010"
+    },
+    {
+      "detector_bin": 19,
+      "fano_point": 0,
+      "fiber_index": 19,
+      "guard_offset": 19,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 19,
+      "time_bin": 1619,
+      "time_bin_word": "11001010011"
+    },
+    {
+      "detector_bin": 20,
+      "fano_point": 0,
+      "fiber_index": 20,
+      "guard_offset": 20,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 20,
+      "time_bin": 1620,
+      "time_bin_word": "11001010100"
+    },
+    {
+      "detector_bin": 21,
+      "fano_point": 0,
+      "fiber_index": 21,
+      "guard_offset": 21,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 21,
+      "time_bin": 1621,
+      "time_bin_word": "11001010101"
+    },
+    {
+      "detector_bin": 22,
+      "fano_point": 0,
+      "fiber_index": 22,
+      "guard_offset": 22,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 22,
+      "time_bin": 1622,
+      "time_bin_word": "11001010110"
+    },
+    {
+      "detector_bin": 23,
+      "fano_point": 0,
+      "fiber_index": 23,
+      "guard_offset": 23,
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 23,
+      "time_bin": 1623,
+      "time_bin_word": "11001010111"
+    },
+    {
+      "detector_bin": 160,
+      "fano_point": 6,
+      "fiber_index": 16,
+      "guard_offset": 424,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 40,
+      "time_bin": 2024,
+      "time_bin_word": "11111101000"
+    },
+    {
+      "detector_bin": 161,
+      "fano_point": 6,
+      "fiber_index": 17,
+      "guard_offset": 425,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 41,
+      "time_bin": 2025,
+      "time_bin_word": "11111101001"
+    },
+    {
+      "detector_bin": 162,
+      "fano_point": 6,
+      "fiber_index": 18,
+      "guard_offset": 426,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 42,
+      "time_bin": 2026,
+      "time_bin_word": "11111101010"
+    },
+    {
+      "detector_bin": 163,
+      "fano_point": 6,
+      "fiber_index": 19,
+      "guard_offset": 427,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 43,
+      "time_bin": 2027,
+      "time_bin_word": "11111101011"
+    },
+    {
+      "detector_bin": 164,
+      "fano_point": 6,
+      "fiber_index": 20,
+      "guard_offset": 428,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 44,
+      "time_bin": 2028,
+      "time_bin_word": "11111101100"
+    },
+    {
+      "detector_bin": 165,
+      "fano_point": 6,
+      "fiber_index": 21,
+      "guard_offset": 429,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 45,
+      "time_bin": 2029,
+      "time_bin_word": "11111101101"
+    },
+    {
+      "detector_bin": 166,
+      "fano_point": 6,
+      "fiber_index": 22,
+      "guard_offset": 430,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 46,
+      "time_bin": 2030,
+      "time_bin_word": "11111101110"
+    },
+    {
+      "detector_bin": 167,
+      "fano_point": 6,
+      "fiber_index": 23,
+      "guard_offset": 431,
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 47,
+      "time_bin": 2031,
+      "time_bin_word": "11111101111"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 432,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 48,
+      "parity_guard": 0,
+      "time_bin": 2032,
+      "time_bin_word": "11111110000"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 433,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 49,
+      "parity_guard": 1,
+      "time_bin": 2033,
+      "time_bin_word": "11111110001"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 434,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 50,
+      "parity_guard": 2,
+      "time_bin": 2034,
+      "time_bin_word": "11111110010"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 435,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 51,
+      "parity_guard": 3,
+      "time_bin": 2035,
+      "time_bin_word": "11111110011"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 436,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 52,
+      "parity_guard": 4,
+      "time_bin": 2036,
+      "time_bin_word": "11111110100"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 437,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 53,
+      "parity_guard": 5,
+      "time_bin": 2037,
+      "time_bin_word": "11111110101"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 438,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 54,
+      "parity_guard": 6,
+      "time_bin": 2038,
+      "time_bin_word": "11111110110"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 439,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 55,
+      "parity_guard": 7,
+      "time_bin": 2039,
+      "time_bin_word": "11111110111"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 440,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 56,
+      "parity_guard": 8,
+      "time_bin": 2040,
+      "time_bin_word": "11111111000"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 441,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 57,
+      "parity_guard": 9,
+      "time_bin": 2041,
+      "time_bin_word": "11111111001"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 442,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 58,
+      "parity_guard": 10,
+      "time_bin": 2042,
+      "time_bin_word": "11111111010"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 443,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 59,
+      "parity_guard": 11,
+      "time_bin": 2043,
+      "time_bin_word": "11111111011"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 444,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 60,
+      "parity_guard": 12,
+      "time_bin": 2044,
+      "time_bin_word": "11111111100"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 445,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 61,
+      "parity_guard": 13,
+      "time_bin": 2045,
+      "time_bin_word": "11111111101"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 446,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 62,
+      "parity_guard": 14,
+      "time_bin": 2046,
+      "time_bin_word": "11111111110"
+    },
+    {
+      "fano_point": 6,
+      "guard_offset": 447,
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 63,
+      "parity_guard": 15,
+      "time_bin": 2047,
+      "time_bin_word": "11111111111"
+    }
+  ],
+  "histograms": {
+    "guard_page": {
+      "0": 64,
+      "1": 64,
+      "2": 64,
+      "3": 64,
+      "4": 64,
+      "5": 64,
+      "6": 64
+    },
+    "guard_role": {
+      "DARK_REFERENCE": 168,
+      "LOSS_PROBE": 168,
+      "PARITY_OVERFLOW": 112
+    }
+  },
+  "honesty_boundary": "This is a finite addressing envelope, not an implemented optical chip or a measured O(N)-element decomposition.",
+  "interpretation": "BT1649 puts the 1600-frame automaton inside an 11-bit time-bin qudit address space. The 448 unused addresses are not waste: they factor as seven Fano guard pages, each with 24 dark references, 24 loss probes, and 16 parity-overflow slots.",
+  "source_packets": {
+    "calibration_abi": "BT1604_physical_calibration_abi.json",
+    "charge_conservation": "data/bt1648_fano_charge_conservation.json",
+    "physical_automaton": "data/bt1601_single_photon_transaction_automaton.json"
+  },
+  "title": "Eleven-bit time-bin qudit envelope for the Witting automaton",
+  "verified": true
+}

@@ -1,0 +1,524 @@
+{
+  "bt": 1650,
+  "checks": {
+    "calibration_schema_loaded": true,
+    "compact_envelope_sample_present": true,
+    "dark_and_loss_cover_every_detector_bin_once": true,
+    "decoder_schema_loaded": true,
+    "each_fano_page_has_24_24_16": true,
+    "envelope_verified": true,
+    "fault_histogram_matches_guard_budget": true,
+    "fault_schema_loaded": true,
+    "full_guard_rows_are_448": true,
+    "gate_histogram_matches_guard_budget": true,
+    "guard_roles_map_to_calibration_subgates": true,
+    "guard_roles_map_to_retry_fault_modes": true,
+    "parity_overflow_has_16_slots_per_fano_point": true
+  },
+  "closure_identity": {
+    "dark_loss_coverage": "each of the 168 active detector bins receives one dark-reference and one loss-probe guard",
+    "fault_mapping": "dark -> DARK_CLICK, loss -> MISSED_CLICK, parity -> CSS_SYNDROME",
+    "guard_budget": "448 = 7*(24 dark + 24 loss + 16 parity)"
+  },
+  "counts": {
+    "dark_reference_guards": 168,
+    "detector_bins_covered_by_dark": 168,
+    "detector_bins_covered_by_loss": 168,
+    "guard_rows": 448,
+    "loss_probe_guards": 168,
+    "parity_overflow_guards": 112
+  },
+  "guard_rows_sample": [
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 0,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 0,
+      "time_bin": 1600
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 1,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 1,
+      "time_bin": 1601
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 2,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 2,
+      "time_bin": 1602
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 3,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 3,
+      "time_bin": 1603
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 4,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 4,
+      "time_bin": 1604
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 5,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 5,
+      "time_bin": 1605
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 6,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 6,
+      "time_bin": 1606
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 7,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 7,
+      "time_bin": 1607
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 8,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 8,
+      "time_bin": 1608
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 9,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 9,
+      "time_bin": 1609
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 10,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 10,
+      "time_bin": 1610
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 11,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 11,
+      "time_bin": 1611
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 12,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 12,
+      "time_bin": 1612
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 13,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 13,
+      "time_bin": 1613
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 14,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 14,
+      "time_bin": 1614
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 15,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 15,
+      "time_bin": 1615
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 16,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 16,
+      "time_bin": 1616
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 17,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 17,
+      "time_bin": 1617
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 18,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 18,
+      "time_bin": 1618
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 19,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 19,
+      "time_bin": 1619
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 20,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 20,
+      "time_bin": 1620
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 21,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 21,
+      "time_bin": 1621
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 22,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 22,
+      "time_bin": 1622
+    },
+    {
+      "calibration_gate": "dark_gate",
+      "detector_bin": 23,
+      "fano_point": 0,
+      "fault_mode": "DARK_CLICK",
+      "guard_role": "DARK_REFERENCE",
+      "guard_slot": 23,
+      "time_bin": 1623
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 160,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 40,
+      "time_bin": 2024
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 161,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 41,
+      "time_bin": 2025
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 162,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 42,
+      "time_bin": 2026
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 163,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 43,
+      "time_bin": 2027
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 164,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 44,
+      "time_bin": 2028
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 165,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 45,
+      "time_bin": 2029
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 166,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 46,
+      "time_bin": 2030
+    },
+    {
+      "calibration_gate": "loss_gate",
+      "detector_bin": 167,
+      "fano_point": 6,
+      "fault_mode": "MISSED_CLICK",
+      "guard_role": "LOSS_PROBE",
+      "guard_slot": 47,
+      "time_bin": 2031
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 48,
+      "time_bin": 2032
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 49,
+      "time_bin": 2033
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 50,
+      "time_bin": 2034
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 51,
+      "time_bin": 2035
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 52,
+      "time_bin": 2036
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 53,
+      "time_bin": 2037
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 54,
+      "time_bin": 2038
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 55,
+      "time_bin": 2039
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 56,
+      "time_bin": 2040
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 57,
+      "time_bin": 2041
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 58,
+      "time_bin": 2042
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 59,
+      "time_bin": 2043
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 60,
+      "time_bin": 2044
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 61,
+      "time_bin": 2045
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 62,
+      "time_bin": 2046
+    },
+    {
+      "calibration_gate": "jitter_gate",
+      "detector_bin": null,
+      "fano_point": 6,
+      "fault_mode": "CSS_SYNDROME",
+      "guard_role": "PARITY_OVERFLOW",
+      "guard_slot": 63,
+      "time_bin": 2047
+    }
+  ],
+  "histograms": {
+    "calibration_gate": {
+      "dark_gate": 168,
+      "jitter_gate": 112,
+      "loss_gate": 168
+    },
+    "fault_mode": {
+      "CSS_SYNDROME": 112,
+      "DARK_CLICK": 168,
+      "MISSED_CLICK": 168
+    },
+    "page_role": {
+      "0": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "1": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "2": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "3": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "4": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "5": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      },
+      "6": {
+        "DARK_REFERENCE": 24,
+        "LOSS_PROBE": 24,
+        "PARITY_OVERFLOW": 16
+      }
+    }
+  },
+  "honesty_boundary": "This is a guard-addressing and calibration-interface theorem. It still requires real bench samples before any measured hardware claim.",
+  "interpretation": "BT1650 turns the 448 time-bin slack addresses into a concrete calibration guard shell. The slack closes the BT1604/BT1606 physical interface without expanding the 1600 active Witting frames.",
+  "source_packets": {
+    "calibration_abi": "BT1604_physical_calibration_abi.json",
+    "detector_decoder": "BT1605_detector_bin_decoder.json",
+    "fault_path": "BT1606_fault_path_theorem.json",
+    "time_bin_envelope": "data/bt1649_time_bin_qudit_envelope.json"
+  },
+  "title": "Fano guard-page calibration closure",
+  "verified": true
+}
