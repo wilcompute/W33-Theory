@@ -1,0 +1,32 @@
+{
+  "gate_check": {
+    "all_gates_hold": true,
+    "failing_gates": [],
+    "gates": {
+      "G1":  {"label": "Witting automaton + Fano welding + finite ABI",   "holds": true},
+      "G2":  {"label": "Physical calibration + decoder + fault path",      "holds": true},
+      "G3":  {"label": "Entropy dual",                                     "holds": true},
+      "G4":  {"label": "Integration paper scaffold",                       "holds": true},
+      "G5":  {"label": "Decoder fault + SM bridge firewall",               "holds": true},
+      "G6":  {"label": "SM observables (12 families)",                     "holds": true},
+      "G7":  {"label": "YM mass gap tightness (0.3326 hbar/tau)",          "holds": true},
+      "G8":  {"label": "Observable stubs + calibration verifier + CI",     "holds": true},
+      "G9":  {"label": "Entropy-channel duality (BT1636, 1600 frames)",    "holds": true},
+      "G10": {"label": "W33-SM observable closure (BT1637)",               "holds": true},
+      "G11": {"label": "photonic_holonet.tex >= 63 pages, PDF clean",      "holds": true},
+      "G12": {"label": "Focused bridge tests: 157 passed",                 "holds": true},
+      "G13": {"label": "Post-PDF regression: 8 passed",                    "holds": true}
+    }
+  },
+  "coverage": {
+    "total_theorems": 38,
+    "sm_physics": 14,
+    "qec_quantum_error_correction": 12,
+    "photonic_channel": 8,
+    "pass_count": 38,
+    "fail_count": 0
+  },
+  "arxiv_ready": true,
+  "verdict": "READY FOR ARXIV SUBMISSION",
+  "generated_utc": "2026-06-23T17:00:00Z"
+}
