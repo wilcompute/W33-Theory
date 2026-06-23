@@ -1,0 +1,23 @@
+{
+  "Q_adjacency_spectrum": {
+    "27": 1,
+    "3": 15,
+    "-3": 24
+  },
+  "Q_laplacian_spectrum": {
+    "0": 1,
+    "24": 15,
+    "30": 24
+  },
+  "mass_gap": 24,
+  "mass_gap_mult": 15,
+  "W_laplacian_spectrum": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "result": "matter-graph Q Laplacian spectrum {0, 24^15, 30^24}; mass gap = 24 = f at mult g=15; top 30 at mult f=24; the discrete su(2) gauge theory is exactly gapped (confining) by the SRG expander structure. Honest: discrete finite-theory gap, the substrate's exact shadow of the YM mass gap, not a continuum Millennium-problem proof.",
+  "sources": [
+    "SRG(40,27,18,18) parameters; graph Laplacian = discrete gauge kinetic operator; Wilson lattice gauge theory"
+  ]
+}
