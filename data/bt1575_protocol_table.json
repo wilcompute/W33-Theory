@@ -1,0 +1,1 @@
+{"bt":1575,"title":"Protocol table","verified":true,"row_count":11,"stages":["prepare","control","gate","leakage","covariance","reference"],"summary":"Paper table with setup, operation, expected readout, threshold, failure mode, and claim tier.","checks":{"eleven_rows":true,"stage_coverage":true,"thresholds_present":true,"failure_modes_present":true}}
