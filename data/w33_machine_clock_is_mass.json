@@ -1,0 +1,28 @@
+{
+  "heawood_laplacian": {
+    "-0.0": 1,
+    "1.5858": 6,
+    "4.4142": 6,
+    "6.0": 1
+  },
+  "oscillator": {
+    "omega": 1.4142135623730951,
+    "E_minus": 1.5857864376269049,
+    "E_plus": 4.414213562373095,
+    "middle_shell_dim": 12,
+    "branches": "2 x 6 (Cl(1,1))"
+  },
+  "m_top_from_clock": 173.95,
+  "runtime": {
+    "word": 8,
+    "frame": 72,
+    "mirror_bus": 2160,
+    "supercycle": 51840,
+    "is_Sp43": true,
+    "h_E8": 30
+  },
+  "summary": "holonet clock = Heawood/Fano harmonic oscillator omega = sqrt(lambda) = sqrt2 (12-dim middle shell, 2x6 Cl(1,1)); that frequency = top mass v_EW/sqrt(lambda) = 173.95 GeV; runtime supercycle 51840 = |Sp(4,3)| = h(E8) x 72-frame x 24. Running the machine one supercycle = traversing the gauge group, clocked by the mass-setting oscillator.",
+  "sources": [
+    "Heawood graph = Fano PG(2,2) incidence (3-regular, spectrum +-3, +-sqrt2); |Sp(4,3)|=51840; index.html QCA/oscillator section + BT1299-1315 runtime stack"
+  ]
+}

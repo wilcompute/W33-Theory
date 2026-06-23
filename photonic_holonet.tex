@@ -2716,9 +2716,12 @@ inside a fractal of nested shells.
 \emph{(C) The physics and the computer are one object}: the quantum power is the
 gauge curvature on the matter graph, that discrete curvature is a finite-group
 lattice gauge theory whose continuum limit is the spectral action's
-gauge-plus-gravity field equations (with an exact mass gap $f$), and the whole
+gauge-plus-gravity field equations (with an exact mass gap $f$), the whole
 network is a holographic code --- black-hole entropy is the code distance, and the
-substrate carries a discrete AdS/CFT.
+substrate carries a discrete AdS/CFT --- and the runtime closes it: the clock is a
+harmonic oscillator whose frequency $\sqrt\lambda$ is the top mass, and the
+supercycle is the gauge group $\mathrm{Sp}(4,3)$, so running the machine is the
+physics.
 \emph{(D) It is testable now}: a parameter-free near-term falsification protocol
 on the single-photon demonstrator.
 Throughout, one substrate number recurs --- $q-1=\lambda=2$ sets the drive angle,
@@ -3136,6 +3139,39 @@ triple-storage (\S\ref{sec:sync}), and the holographic boundary. So the network'
 holographic/fractal redundancy and the computer's fault tolerance are one
 mechanism --- the precise sense in which the computer is the network. (Witness:
 \texttt{analysis/w33\_microstate\_count.py}.)
+
+\subsection{The clock is a mass and the supercycle is the gauge group: running the
+machine is the physics}
+\label{sec:clock-is-mass}
+
+The movement closes on the runtime itself. The holonet's clock is not an external
+metronome --- it is a \emph{topological harmonic oscillator} living on the
+Heawood graph (the incidence graph of the Fano plane $\mathrm{PG}(2,2)$, the same
+$7$ points and $7$ lines that the time-bin guard shell uses). Its Laplacian
+spectrum is $\{0,(q-\sqrt\lambda)^{6},(q+\sqrt\lambda)^{6},2q\}
+=\{0,(3-\sqrt2)^{6},(3+\sqrt2)^{6},6\}$, and on the $12$-dimensional middle shell
+\[
+  (L_H-qI)^2=\lambda I,\qquad \omega=\sqrt\lambda=\sqrt2,\qquad E_\pm=q\pm\sqrt\lambda=3\pm\sqrt2,
+\]
+two six-mode $\mathrm{Cl}(1,1)$ branches --- an exact discrete oscillator whose
+frequency is $\sqrt\lambda$. That frequency is not abstract: it is a mass. The
+heaviest fermion sits at
+\[
+  m_{\mathrm{top}}=\frac{v_{EW}}{\sqrt\lambda}=\frac{246}{\sqrt2}=173.95\ \mathrm{GeV},
+\]
+so the machine's clock \emph{rate} is the top-quark mass scale. And the runtime
+stack $8\to48\to24\to72\to2160\to51840$ tops out at the full Clifford supercycle
+\[
+  51840=720\cdot72=24\cdot\underbrace{30}_{h(E_8)}\cdot\underbrace{72}_{q^2\cdot8}=\lvert \mathrm{Sp}(4,3)\rvert,
+\]
+with the $72$-tick frame $=q^2\times$ the eight-tick word and the $2160$ mirror
+bus $=h(E_8)\times$ frame. The supercycle is the order of the gauge group. So
+executing the machine for one supercycle is one complete traversal of
+$\mathrm{Sp}(4,3)$, ticked by the oscillator whose frequency is the top mass:
+the holonet does not \emph{simulate} the physics on a clock, its clock is the
+mass-setting oscillator and one run of its instruction stream is the gauge
+dynamics. Running the machine and enacting the physics are the same act.
+(Witness: \texttt{analysis/w33\_machine\_clock\_is\_mass.py}.)
 
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}
