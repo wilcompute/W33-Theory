@@ -1,0 +1,885 @@
+{
+  "bt": 1595,
+  "checks": {
+    "alphabet_verified": true,
+    "each_witting_source_has_27_rejects": true,
+    "five_gates_cover_all_40_witting_sources": true,
+    "fuel_rows_biject_reject_pairs": true,
+    "fuel_tick_budget_is_bt1594_loop": true,
+    "hesse_loop_verified": true,
+    "lane_sheet_verified": true,
+    "one_gate_covers_8_sources_times_27_targets": true,
+    "one_gate_is_216_addresses": true,
+    "one_hesse_grid_per_reject_pair": true,
+    "sector_word_address_profiles_survive": true,
+    "witness_loop_has_1080_segments": true,
+    "witting_reject_shell_is_1080": true,
+    "witting_verified": true
+  },
+  "counts": {
+    "fuel_segments": 1080,
+    "local_abi_addresses_per_gate": 216,
+    "reject_targets_per_source": 27,
+    "sources_per_gate": 8,
+    "ticks": 77760,
+    "witness_gates": 5,
+    "witting_sources": 40
+  },
+  "fuel_rows_sample": [
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 0,
+      "gate_index": 0,
+      "local_abi_address": 0,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 71,
+      "segment_tick_start": 0,
+      "witness_gate": "I",
+      "witting_incompatible_index": 0,
+      "witting_pair": [
+        0,
+        5
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 5,
+      "word_index": 0
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1,
+      "gate_index": 0,
+      "local_abi_address": 1,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 143,
+      "segment_tick_start": 72,
+      "witness_gate": "I",
+      "witting_incompatible_index": 1,
+      "witting_pair": [
+        0,
+        6
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 6,
+      "word_index": 1
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 2,
+      "gate_index": 0,
+      "local_abi_address": 2,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 215,
+      "segment_tick_start": 144,
+      "witness_gate": "I",
+      "witting_incompatible_index": 2,
+      "witting_pair": [
+        0,
+        7
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 7,
+      "word_index": 2
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 3,
+      "gate_index": 0,
+      "local_abi_address": 3,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 287,
+      "segment_tick_start": 216,
+      "witness_gate": "I",
+      "witting_incompatible_index": 3,
+      "witting_pair": [
+        0,
+        9
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 9,
+      "word_index": 3
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 4,
+      "gate_index": 0,
+      "local_abi_address": 4,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 359,
+      "segment_tick_start": 288,
+      "witness_gate": "I",
+      "witting_incompatible_index": 4,
+      "witting_pair": [
+        0,
+        10
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 10,
+      "word_index": 4
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 5,
+      "gate_index": 0,
+      "local_abi_address": 5,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 431,
+      "segment_tick_start": 360,
+      "witness_gate": "I",
+      "witting_incompatible_index": 5,
+      "witting_pair": [
+        0,
+        11
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 11,
+      "word_index": 5
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 6,
+      "gate_index": 0,
+      "local_abi_address": 6,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 503,
+      "segment_tick_start": 432,
+      "witness_gate": "I",
+      "witting_incompatible_index": 6,
+      "witting_pair": [
+        0,
+        13
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 13,
+      "word_index": 6
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 7,
+      "gate_index": 0,
+      "local_abi_address": 7,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 575,
+      "segment_tick_start": 504,
+      "witness_gate": "I",
+      "witting_incompatible_index": 7,
+      "witting_pair": [
+        0,
+        14
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 14,
+      "word_index": 7
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 8,
+      "gate_index": 0,
+      "local_abi_address": 8,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 647,
+      "segment_tick_start": 576,
+      "witness_gate": "I",
+      "witting_incompatible_index": 8,
+      "witting_pair": [
+        0,
+        15
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 15,
+      "word_index": 8
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 9,
+      "gate_index": 0,
+      "local_abi_address": 9,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 719,
+      "segment_tick_start": 648,
+      "witness_gate": "I",
+      "witting_incompatible_index": 9,
+      "witting_pair": [
+        0,
+        17
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 17,
+      "word_index": 9
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 10,
+      "gate_index": 0,
+      "local_abi_address": 10,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 791,
+      "segment_tick_start": 720,
+      "witness_gate": "I",
+      "witting_incompatible_index": 10,
+      "witting_pair": [
+        0,
+        18
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 18,
+      "word_index": 10
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 11,
+      "gate_index": 0,
+      "local_abi_address": 11,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 863,
+      "segment_tick_start": 792,
+      "witness_gate": "I",
+      "witting_incompatible_index": 11,
+      "witting_pair": [
+        0,
+        19
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 19,
+      "word_index": 11
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 12,
+      "gate_index": 0,
+      "local_abi_address": 12,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 935,
+      "segment_tick_start": 864,
+      "witness_gate": "I",
+      "witting_incompatible_index": 12,
+      "witting_pair": [
+        0,
+        21
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 21,
+      "word_index": 12
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 13,
+      "gate_index": 0,
+      "local_abi_address": 13,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 1007,
+      "segment_tick_start": 936,
+      "witness_gate": "I",
+      "witting_incompatible_index": 13,
+      "witting_pair": [
+        0,
+        22
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 22,
+      "word_index": 13
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 14,
+      "gate_index": 0,
+      "local_abi_address": 14,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 1079,
+      "segment_tick_start": 1008,
+      "witness_gate": "I",
+      "witting_incompatible_index": 14,
+      "witting_pair": [
+        0,
+        23
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 23,
+      "word_index": 14
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 15,
+      "gate_index": 0,
+      "local_abi_address": 15,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 1151,
+      "segment_tick_start": 1080,
+      "witness_gate": "I",
+      "witting_incompatible_index": 15,
+      "witting_pair": [
+        0,
+        25
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 25,
+      "word_index": 15
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 16,
+      "gate_index": 0,
+      "local_abi_address": 16,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 1223,
+      "segment_tick_start": 1152,
+      "witness_gate": "I",
+      "witting_incompatible_index": 16,
+      "witting_pair": [
+        0,
+        26
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 26,
+      "word_index": 16
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 17,
+      "gate_index": 0,
+      "local_abi_address": 17,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 0,
+      "segment_tick_end": 1295,
+      "segment_tick_start": 1224,
+      "witness_gate": "I",
+      "witting_incompatible_index": 17,
+      "witting_pair": [
+        0,
+        27
+      ],
+      "witting_source_ray": 0,
+      "witting_target_ray": 27,
+      "word_index": 17
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1062,
+      "gate_index": 4,
+      "local_abi_address": 198,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76535,
+      "segment_tick_start": 76464,
+      "witness_gate": "S",
+      "witting_incompatible_index": 9,
+      "witting_pair": [
+        39,
+        14
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 14,
+      "word_index": 6
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1063,
+      "gate_index": 4,
+      "local_abi_address": 199,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76607,
+      "segment_tick_start": 76536,
+      "witness_gate": "S",
+      "witting_incompatible_index": 10,
+      "witting_pair": [
+        39,
+        15
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 15,
+      "word_index": 7
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1064,
+      "gate_index": 4,
+      "local_abi_address": 200,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76679,
+      "segment_tick_start": 76608,
+      "witness_gate": "S",
+      "witting_incompatible_index": 11,
+      "witting_pair": [
+        39,
+        16
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 16,
+      "word_index": 8
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1065,
+      "gate_index": 4,
+      "local_abi_address": 201,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76751,
+      "segment_tick_start": 76680,
+      "witness_gate": "S",
+      "witting_incompatible_index": 12,
+      "witting_pair": [
+        39,
+        17
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 17,
+      "word_index": 9
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1066,
+      "gate_index": 4,
+      "local_abi_address": 202,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76823,
+      "segment_tick_start": 76752,
+      "witness_gate": "S",
+      "witting_incompatible_index": 13,
+      "witting_pair": [
+        39,
+        18
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 18,
+      "word_index": 10
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1067,
+      "gate_index": 4,
+      "local_abi_address": 203,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76895,
+      "segment_tick_start": 76824,
+      "witness_gate": "S",
+      "witting_incompatible_index": 14,
+      "witting_pair": [
+        39,
+        20
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 20,
+      "word_index": 11
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1068,
+      "gate_index": 4,
+      "local_abi_address": 204,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 76967,
+      "segment_tick_start": 76896,
+      "witness_gate": "S",
+      "witting_incompatible_index": 15,
+      "witting_pair": [
+        39,
+        21
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 21,
+      "word_index": 12
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1069,
+      "gate_index": 4,
+      "local_abi_address": 205,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77039,
+      "segment_tick_start": 76968,
+      "witness_gate": "S",
+      "witting_incompatible_index": 16,
+      "witting_pair": [
+        39,
+        22
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 22,
+      "word_index": 13
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1070,
+      "gate_index": 4,
+      "local_abi_address": 206,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77111,
+      "segment_tick_start": 77040,
+      "witness_gate": "S",
+      "witting_incompatible_index": 17,
+      "witting_pair": [
+        39,
+        23
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 23,
+      "word_index": 14
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1071,
+      "gate_index": 4,
+      "local_abi_address": 207,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77183,
+      "segment_tick_start": 77112,
+      "witness_gate": "S",
+      "witting_incompatible_index": 18,
+      "witting_pair": [
+        39,
+        24
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 24,
+      "word_index": 15
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1072,
+      "gate_index": 4,
+      "local_abi_address": 208,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77255,
+      "segment_tick_start": 77184,
+      "witness_gate": "S",
+      "witting_incompatible_index": 19,
+      "witting_pair": [
+        39,
+        25
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 25,
+      "word_index": 16
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1073,
+      "gate_index": 4,
+      "local_abi_address": 209,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77327,
+      "segment_tick_start": 77256,
+      "witness_gate": "S",
+      "witting_incompatible_index": 20,
+      "witting_pair": [
+        39,
+        26
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 26,
+      "word_index": 17
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1074,
+      "gate_index": 4,
+      "local_abi_address": 210,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77399,
+      "segment_tick_start": 77328,
+      "witness_gate": "S",
+      "witting_incompatible_index": 21,
+      "witting_pair": [
+        39,
+        27
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 27,
+      "word_index": 18
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1075,
+      "gate_index": 4,
+      "local_abi_address": 211,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77471,
+      "segment_tick_start": 77400,
+      "witness_gate": "S",
+      "witting_incompatible_index": 22,
+      "witting_pair": [
+        39,
+        28
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 28,
+      "word_index": 19
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1076,
+      "gate_index": 4,
+      "local_abi_address": 212,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77543,
+      "segment_tick_start": 77472,
+      "witness_gate": "S",
+      "witting_incompatible_index": 23,
+      "witting_pair": [
+        39,
+        31
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 31,
+      "word_index": 20
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1077,
+      "gate_index": 4,
+      "local_abi_address": 213,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77615,
+      "segment_tick_start": 77544,
+      "witness_gate": "S",
+      "witting_incompatible_index": 24,
+      "witting_pair": [
+        39,
+        32
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 32,
+      "word_index": 21
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1078,
+      "gate_index": 4,
+      "local_abi_address": 214,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77687,
+      "segment_tick_start": 77616,
+      "witness_gate": "S",
+      "witting_incompatible_index": 25,
+      "witting_pair": [
+        39,
+        35
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 35,
+      "word_index": 22
+    },
+    {
+      "address_formula": "local_abi_address = sector_id*24 + word_index",
+      "fuel_segment": 1079,
+      "gate_index": 4,
+      "local_abi_address": 215,
+      "matter_formula": "source_ray = gate_index*8 + floor(local_abi_address/27)",
+      "sector_id": 8,
+      "segment_tick_end": 77759,
+      "segment_tick_start": 77688,
+      "witness_gate": "S",
+      "witting_incompatible_index": 26,
+      "witting_pair": [
+        39,
+        36
+      ],
+      "witting_source_ray": 39,
+      "witting_target_ray": 36,
+      "word_index": 23
+    }
+  ],
+  "gate_source_blocks": {
+    "F3": {
+      "reject_pairs": 216,
+      "source_rays": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "I": {
+      "reject_pairs": 216,
+      "source_rays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "S": {
+      "reject_pairs": 216,
+      "source_rays": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    "X": {
+      "reject_pairs": 216,
+      "source_rays": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "Z": {
+      "reject_pairs": 216,
+      "source_rays": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  },
+  "histograms": {
+    "gate_segments": {
+      "F3": 216,
+      "I": 216,
+      "S": 216,
+      "X": 216,
+      "Z": 216
+    },
+    "sector_segments": {
+      "0": 120,
+      "1": 120,
+      "2": 120,
+      "3": 120,
+      "4": 120,
+      "5": 120,
+      "6": 120,
+      "7": 120,
+      "8": 120
+    },
+    "source_reject_pairs": {
+      "0": 27,
+      "1": 27,
+      "2": 27,
+      "3": 27,
+      "4": 27,
+      "5": 27,
+      "6": 27,
+      "7": 27,
+      "8": 27,
+      "9": 27,
+      "10": 27,
+      "11": 27,
+      "12": 27,
+      "13": 27,
+      "14": 27,
+      "15": 27,
+      "16": 27,
+      "17": 27,
+      "18": 27,
+      "19": 27,
+      "20": 27,
+      "21": 27,
+      "22": 27,
+      "23": 27,
+      "24": 27,
+      "25": 27,
+      "26": 27,
+      "27": 27,
+      "28": 27,
+      "29": 27,
+      "30": 27,
+      "31": 27,
+      "32": 27,
+      "33": 27,
+      "34": 27,
+      "35": 27,
+      "36": 27,
+      "37": 27,
+      "38": 27,
+      "39": 27
+    },
+    "word_segments": {
+      "0": 45,
+      "1": 45,
+      "2": 45,
+      "3": 45,
+      "4": 45,
+      "5": 45,
+      "6": 45,
+      "7": 45,
+      "8": 45,
+      "9": 45,
+      "10": 45,
+      "11": 45,
+      "12": 45,
+      "13": 45,
+      "14": 45,
+      "15": 45,
+      "16": 45,
+      "17": 45,
+      "18": 45,
+      "19": 45,
+      "20": 45,
+      "21": 45,
+      "22": 45,
+      "23": 45
+    }
+  },
+  "honesty_boundary": "This is a finite bijection and timing certificate. It does not prove cryptographic security, optical loss tolerance, or magic-state injection fidelity.",
+  "identity": {
+    "holonet_witness_segments": "5 gates * 9 recenter sectors * 24 words = 1080",
+    "per_gate_refinement": "9*24 = 216 = 8 Witting source rays * 27 incompatible targets",
+    "tick_identity": "1080 contextual fuel segments * 72 ticks = 77760",
+    "witting_reject_pairs": "40 rays * 27 incompatible targets = 1080"
+  },
+  "interpretation": "BT1595 shows the BT1590/BT1594 77760-tick witness loop is not an arbitrary validation sweep. It is exactly the Witting incompatible ordered-pair shell: every rejected delayed-query pair becomes one 72-tick contextual fuel segment carrying the OAM address and Hesse/T microframe.",
+  "source_packets": {
+    "hesse_t_loop": "data/bt1594_hesse_t_universality_witness_loop.json",
+    "lane_sheet": "data/bt1590_full_witness_lane_sheet_compiler.json",
+    "lg_mode_alphabet": "data/bt1593_lg_mode_alphabet_selector.json",
+    "witting_bridge": "data/bt1408_witting_contextual_communication_bridge.json"
+  },
+  "title": "Witting matter-shell bijection for the 77760-tick witness loop",
+  "verified": true
+}

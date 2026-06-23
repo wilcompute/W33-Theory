@@ -1,0 +1,77 @@
+{
+  "bt": 1596,
+  "checks": {
+    "accepted_plus_fuel_ticks_make_complete_cycle": true,
+    "basis_local_table_is_480_plus_160": true,
+    "communication_to_fuel_ratio_is_13_to_27": true,
+    "delayed_query_verified": true,
+    "duplex_rates_match": true,
+    "duplex_verified": true,
+    "fuel_bijection_verified": true,
+    "fuel_ticks_equal_bt1594": true,
+    "hesse_loop_verified": true,
+    "hesse_outcomes_scale_with_fuel_frames": true,
+    "ordered_pair_split_is_520_1080": true,
+    "same_plus_compatible_distinct_are_accepted": true,
+    "same_ray_extra_contexts_are_120": true,
+    "witting_verified": true
+  },
+  "frame_ticks": 72,
+  "honesty_boundary": "This is a finite scheduling/economy ledger. It does not prove cryptographic security, throughput under loss, or fault-tolerant threshold behavior.",
+  "interpretation": "BT1596 turns the Witting delayed-query desk into a runtime economy. The 13/40 accepted rail is communication/control. The 27/40 rejected rail is not waste: by BT1595 it is exactly the 77760-tick contextual fuel loop carrying the Hesse/T port.",
+  "ordered_pair_counts": {
+    "accepted": 520,
+    "compatible_distinct": 480,
+    "contextual_fuel": 1080,
+    "same": 40,
+    "total": 1600
+  },
+  "ratios": {
+    "accepted_to_fuel": "13/27",
+    "accepted_to_total": "13/40",
+    "basis_witness_aperture": "1/10",
+    "fuel_to_total": "27/40",
+    "same_ray_extra_contexts_to_total": "3/40"
+  },
+  "runtime_ledger": {
+    "accepted_communication": {
+      "frames": 520,
+      "meaning": "same or basis-compatible Witting ordered pairs",
+      "rate": "13/40",
+      "ticks": 37440
+    },
+    "basis_local_physical_table": {
+      "frames": 640,
+      "meaning": "40 tetrads * 4 Alice slots * 4 Bob slots",
+      "rate_against_ordered_pairs": "2/5",
+      "ticks": 46080
+    },
+    "complete_witting_pair_cycle": {
+      "frames": 1600,
+      "meaning": "all delayed-query ordered pairs at one 72-tick frame each",
+      "rate": "1/1",
+      "ticks": 115200
+    },
+    "contextual_fuel": {
+      "frames": 1080,
+      "meaning": "incompatible Witting ordered pairs, now BT1595 fuel segments",
+      "rate": "27/40",
+      "ticks": 77760
+    },
+    "same_ray_extra_contexts": {
+      "frames": 120,
+      "meaning": "the extra three witness contexts for each same-ray query",
+      "rate_against_ordered_pairs": "3/40",
+      "ticks": 8640
+    }
+  },
+  "source_packets": {
+    "delayed_query_frames": "data/bt1410_witting_delayed_query_frame_compiler.json",
+    "duplex_admission": "data/bt1409_witting_duplex_admission_scheduler.json",
+    "fuel_bijection": "data/bt1595_witting_matter_fuel_bijection.json",
+    "hesse_t_loop": "data/bt1594_hesse_t_universality_witness_loop.json",
+    "witting_bridge": "data/bt1408_witting_contextual_communication_bridge.json"
+  },
+  "title": "Contextual runtime economy ledger",
+  "verified": true
+}

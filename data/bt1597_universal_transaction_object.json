@@ -1,0 +1,69 @@
+{
+  "bt": 1597,
+  "checks": {
+    "accepted_and_fuel_partition_total": true,
+    "clock_verified": true,
+    "complete_cycle_is_1600_frames": true,
+    "deterministic_kernel_not_universal_alone": true,
+    "economy_verified": true,
+    "fuel_rail_is_existing_77760_loop": true,
+    "fuel_verified": true,
+    "hesse_loop_verified": true,
+    "non_clifford_port_required": true,
+    "object_has_four_required_layers": true,
+    "universal_contract_verified": true,
+    "witting_accept_rate_is_control_rate": true,
+    "witting_reject_rate_is_fuel_rate": true,
+    "witting_verified": true
+  },
+  "claim": "The photonic holonet can now be read as one finite universal transaction object: accepted Witting pairs are the communication/control rail, while rejected Witting pairs are exactly the OAM/Hesse contextual fuel rail. The Hesse/T port supplies the explicit non-Clifford boundary required by BT1377.",
+  "honesty_boundary": "BT1597 proves finite ABI/timing compatibility and the exact Witting/OAM/Hesse partition. It does not prove hardware thresholds, optical coherence, or fault-tolerant universality under physical noise.",
+  "object_layers": [
+    {
+      "certificate": "BT1408/BT1409/BT1410",
+      "finite_carrier": "40 rays x 40 queried rays = 1600 ordered pairs",
+      "layer": "Witting delayed-query desk",
+      "physical_role": "separates communication/control from contextual fuel"
+    },
+    {
+      "certificate": "BT1407",
+      "finite_carrier": "one transaction frame per ordered pair",
+      "layer": "72-tick common frame clock",
+      "physical_role": "common timing shape for accepted frames and fuel frames"
+    },
+    {
+      "certificate": "BT1590/BT1593/BT1595",
+      "finite_carrier": "5 gates x 9 sectors x 24 words = 1080 fuel addresses",
+      "layer": "OAM recenter ABI",
+      "physical_role": "tiles the Witting incompatible shell"
+    },
+    {
+      "certificate": "BT1403/BT1404/BT1594",
+      "finite_carrier": "9 outcomes per 72-tick fuel segment",
+      "layer": "Hesse/T non-Clifford port",
+      "physical_role": "injects the required non-Clifford boundary into the fuel rail"
+    }
+  ],
+  "source_packets": {
+    "common_frame": "data/bt1407_microframe_transaction_composer.json",
+    "economy_ledger": "data/bt1596_contextual_runtime_economy_ledger.json",
+    "fuel_bijection": "data/bt1595_witting_matter_fuel_bijection.json",
+    "hesse_t_loop": "data/bt1594_hesse_t_universality_witness_loop.json",
+    "universal_contract": "data/bt1377_physical_universal_computation_contract.json",
+    "witting_bridge": "data/bt1408_witting_contextual_communication_bridge.json"
+  },
+  "ticks": {
+    "accepted_control": 37440,
+    "complete_cycle": 115200,
+    "contextual_fuel": 77760
+  },
+  "title": "Universal transaction object for the photonic holonet",
+  "universal_transaction_identity": {
+    "accepted_control_rail": "520 accepted pairs * 72 ticks = 37440",
+    "complete_cycle": "40 Witting rays * 40 queried rays * 72 ticks = 115200",
+    "contextual_fuel_rail": "1080 rejected pairs * 72 ticks = 77760",
+    "fuel_refinement": "1080 = 5 gates * 9 OAM sectors * 24 words = 40 rays * 27 incompatible targets",
+    "non_clifford_overlay": "each fuel frame carries one 9-outcome Hesse/T microframe"
+  },
+  "verified": true
+}
