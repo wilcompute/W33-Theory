@@ -1,0 +1,1 @@
+{"bt":1558,"title":"Mu transport schema","verified":true,"summary":"Three paired axes define a schema for packetwise sign transport. The transport data itself is not computed here.","tier":"schema","checks":{"three_pairs":true,"schema_only":true,"no_transport_claim":true}}
