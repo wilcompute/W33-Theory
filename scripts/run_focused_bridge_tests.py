@@ -4,6 +4,11 @@
 The repository is large enough that broad pytest collection can be slow on
 Windows/WSL-mounted trees.  This helper runs curated file lists for the bridge
 areas that are commonly touched during architecture work.
+
+BT1635 addition: added 'ym-calibration' suite that runs the BT1626 YM
+tightness verifier and BT1630 calibration ABI verifier as subprocess calls
+alongside the standard pytest suites.  The suite also includes the new
+BT1633 fault-path theorem verifier and BT1634 detector-bin decoder.
 """
 
 from __future__ import annotations
@@ -150,6 +155,13 @@ SUITES: dict[str, list[str]] = {
         "tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py",
         "tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py",
     ],
+    # BT1635: YM tightness + calibration ABI + fault-path + decoder verifiers
+    "ym-calibration": [
+        "bt1626_ym_mass_gap_tightness_verifier.py",
+        "bt1630_calibration_abi_verifier.py",
+        "bt1633_fault_path_theorem.py",
+        "bt1634_detector_bin_decoder.py",
+    ],
 }
 
 ALIASES = {
@@ -164,6 +176,19 @@ ALIASES = {
         "audit-core",
         "octahedral-dynamics",
     ],
+    # BT1635: full witting stack = photonic-qec + ym-calibration
+    "witting-stack": [
+        "photonic-qec",
+        "ym-calibration",
+    ],
+}
+
+# BT1635: scripts that are run directly (not via pytest) in the ym-calibration suite
+DIRECT_RUN_SCRIPTS: set[str] = {
+    "bt1626_ym_mass_gap_tightness_verifier.py",
+    "bt1630_calibration_abi_verifier.py",
+    "bt1633_fault_path_theorem.py",
+    "bt1634_detector_bin_decoder.py",
 }
 
 
@@ -201,6 +226,27 @@ def build_pytest_command(paths: list[str], extra_pytest_args: list[str]) -> list
     ]
 
 
+def run_direct_scripts(paths: list[str]) -> int:
+    """BT1635: run verifier scripts directly (not via pytest)."""
+    direct = [p for p in paths if p in DIRECT_RUN_SCRIPTS]
+    if not direct:
+        return 0
+    rc = 0
+    for script in direct:
+        script_path = ROOT / script
+        if not script_path.exists():
+            print(f"[SKIP] {script} not found at {script_path}", flush=True)
+            continue
+        print(f"\n--- Direct run: {script} ---", flush=True)
+        result = subprocess.call([sys.executable, str(script_path)], cwd=ROOT)
+        if result != 0:
+            print(f"[FAIL] {script} exited with code {result}", flush=True)
+            rc = result
+        else:
+            print(f"[PASS] {script}", flush=True)
+    return rc
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -232,15 +278,26 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     paths = expand_suites(args.suite)
-    missing = [path for path in paths if not (ROOT / path).exists()]
-    if missing:
-        raise SystemExit(
-            "Missing test files:\n" + "\n".join(f"  {path}" for path in missing)
-        )
 
-    command = build_pytest_command(paths, extra_pytest_args)
-    print("Running:", " ".join(command), flush=True)
-    return subprocess.call(command, cwd=ROOT)
+    # BT1635: split paths into direct-run scripts vs pytest paths
+    pytest_paths = [p for p in paths if p not in DIRECT_RUN_SCRIPTS]
+    direct_paths = [p for p in paths if p in DIRECT_RUN_SCRIPTS]
+
+    rc_direct = run_direct_scripts(direct_paths)
+
+    if pytest_paths:
+        missing = [path for path in pytest_paths if not (ROOT / path).exists()]
+        if missing:
+            raise SystemExit(
+                "Missing test files:\n" + "\n".join(f"  {path}" for path in missing)
+            )
+        command = build_pytest_command(pytest_paths, extra_pytest_args)
+        print("Running:", " ".join(command), flush=True)
+        rc_pytest = subprocess.call(command, cwd=ROOT)
+    else:
+        rc_pytest = 0
+
+    return max(rc_direct, rc_pytest)
 
 
 if __name__ == "__main__":
