@@ -1,0 +1,1 @@
+{"bt":1574,"title":"S F3 calibration","verified":true,"basis":[-1,0,1],"labels":[2,0,1],"s_signature":[1,0,1],"f3_rows":"finite three mode mixer on same labels","summary":"The centered basis supports both the S phase signature and the F3 mixer matrix on the same qutrit labels.","checks":{"basis_centered":true,"s_signature_exact":true,"f3_matrix_present":true,"same_basis":true}}
