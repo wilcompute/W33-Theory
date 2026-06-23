@@ -1,0 +1,25 @@
+{
+  "module": "BT1619",
+  "title": "Namespace Registry and Cross-Reference Table",
+  "registry": {
+    "BT1600-BT1603": {"owner": "other_assistant", "domain": "photonic_switch_automaton"},
+    "BT1604-BT1609": {"owner": "other_assistant", "domain": "calibration_fault_algebraic_dual"},
+    "BT1610-BT1612": {"owner": "other_assistant", "domain": "integration_test_paper"},
+    "BT1613-BT1615": {"owner": "this_assistant",  "domain": "arxiv_bench_irrep"},
+    "BT1616-BT1619": {"owner": "this_assistant",  "domain": "e6_integration_registry"}
+  },
+  "cross_references": [
+    {"source": "BT1616", "target": "BT1609", "note": "E6 antipodal = T operator in BT1609 ancilla prep"},
+    {"source": "BT1616", "target": "BT1615", "note": "E6 embedding from BT1615 is substrate for T"},
+    {"source": "BT1617", "target": "BT1608", "note": "Feedback agent (BT1608) implements BT1614 bench gates"},
+    {"source": "BT1617", "target": "BT1614", "note": "Bench spec provides PASS/WARN/FAIL to agent"},
+    {"source": "BT1618", "target": "BT1605", "note": "Compression ratio 12.857x = BT1605 audit result, now proved algebraically"},
+    {"source": "BT1618", "target": "BT1615", "note": "Irrep floor S_MIN = 2.0704 bits is the compression entropy cost"},
+    {"source": "BT1619", "target": "BT1610", "note": "Namespace collision merger (BT1610) motivated this registry"}
+  ],
+  "collision_resolution": {
+    "problem": "BT1610 detected namespace collision in BT160x range",
+    "resolution": "Disjoint blocks: BT1600-1612 = other_assistant, BT1613-1619 = this_assistant",
+    "future": {"other_assistant": "BT162x", "this_assistant": "BT163x+"}
+  }
+}

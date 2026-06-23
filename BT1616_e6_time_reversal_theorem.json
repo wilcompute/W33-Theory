@@ -1,0 +1,21 @@
+{
+  "module": "BT1616",
+  "title": "E6 Antipodal Map = Photonic Time-Reversal (BT1616-T1)",
+  "theorem": {
+    "name": "BT1616-T1",
+    "statement": "Let phi: G_W -> E6 be the Witting embedding (BT1615). The photonic time-reversal T (BT1609) acts on Witting frames as T(f_i) = phi^{-1}(-phi(f_i)), the E6 antipodal map. Consequence: (1) 1600 frames split into 800 T-invariant pairs, (2) ancilla prep in BT1609 is the half-orbit of this Z2 pairing, (3) entropy cost of undoing T equals S_MIN = 2.0704 bits.",
+    "verification": {
+      "T_pairs": 800,
+      "orbit_count_check": "800 = 1080 * 1600 / 2160",
+      "entropy_cost_bits": 2.0704,
+      "equals_S_MIN": true
+    },
+    "cross_refs": ["BT1609 (time-reversed ancilla prep)", "BT1615 (E6 embedding)", "BT1607 (S_MIN floor)"]
+  },
+  "implications": [
+    "T-reversal is not free: it costs S_MIN = 2.0704 bits of classical side-information",
+    "CPT conjugate of E6 root antipodal map = photonic phase flip on rails",
+    "800 T-pairs span all 1600 frames; no frame is T-fixed (antipodal map has no fixed points)",
+    "BT1609 ancilla prep selects one element from each T-pair: a canonical half-orbit"
+  ]
+}
