@@ -1,0 +1,40 @@
+{
+  "GQ_2_4": {
+    "points": 27,
+    "lines": 45,
+    "intersection_srg": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "collinearity": "Schlafli SRG(27,16,10,8)",
+    "aut": "W(E6)=51840=|Sp(4,3)|",
+    "is": "27 lines on cubic = E6"
+  },
+  "GQ_3_3": {
+    "points": 40,
+    "srg": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "aut": "Sp(4,3)=51840"
+  },
+  "ladder": {
+    "27": "GQ(2,4) = E6",
+    "40": "GQ(3,3)=W(3,3) substrate",
+    "45": "GQ(4,2) dual",
+    "v40": "1+12+27"
+  },
+  "four_qubit": {
+    "W72_points": 255,
+    "dw52": "(135_7,315_3)",
+    "135": true
+  },
+  "summary": "GQ ladder 27-40-45: GQ(2,4) (27 pts = 27 lines on a cubic = E6, intersection graph SRG(27,10,1,5), collinearity Schlafli SRG(27,16,10,8), Aut=W(E6)=51840=|Sp(4,3)|, D=5 BH/qubit entropy) and dual GQ(4,2) (45 pts) flank the substrate W(3,3)=GQ(3,3) (40 pts, SRG(40,12,2,4), Aut Sp(4,3)). 27 = E6 matter of v=40=1+12+27; flanks share W(E6)=Sp(4,3) order. 4-qubit W(7,2) (255 pts) carries the same 27/45 via 135 DW(5,2)=(135_7,315_3).",
+  "sources": [
+    "GQ(2,4) 27 pts/45 lines = 27 lines on cubic, collinearity-complement = Schlafli SRG(27,16,10,8), Aut=W(E6)=51840 (Wikipedia/MathWorld; black-hole/qubit E6); GQ(3,3)=W(3,3) SRG(40,12,2,4); GQ(4,2) dual 45 pts; 4-qubit W(7,2) DW(5,2)=(135_7,315_3) (BT1707); v=40=1+12+27; w33_hessian_polytope_e6.py, w33_information_structure.py."
+  ]
+}

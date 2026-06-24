@@ -1,0 +1,31 @@
+{
+  "ternary_golay": {
+    "length": 12,
+    "dim": 6,
+    "distance": 6,
+    "codewords": 729,
+    "weight_enumerator": {
+      "0": 1,
+      "6": 264,
+      "9": 440,
+      "12": 24
+    }
+  },
+  "steiner": {
+    "hexads": 132,
+    "system": "S(5,6,12)",
+    "aut": "2.M12",
+    "M12_order": 95040
+  },
+  "doubling": {
+    "k": 12,
+    "f": 24,
+    "ternary": "[12,6,6]_3 M12 S(5,6,12)",
+    "binary": "[24,12,8] M24 S(5,8,24) = c=24 Monster"
+  },
+  "grunbaum": "K12 (12 verts, genus 6) carries the ternary Golay on k=12",
+  "summary": "the K12=Grunbaum gap (n=11, 12 verts, genus 6) carries the substrate's natural q=3 code: the ternary Golay [12,6,6]_3 on k=12 points, 729=q^6 words, weight enumerator 1+264x^6+440x^9+24x^12, distance 6; its 132 weight-6 hexads = Steiner S(5,6,12), Aut 2.M12 (|M12|=95040). Doubling k=12 -> f=24 gives binary Golay [24,12,8] / M24 / S(5,8,24) = c=24 Monster. The Grunbaum gap is the ternary M12 half of the M24/Golay/Monster.",
+  "sources": [
+    "extended ternary Golay code [12,6,6]_3 (729 words, weight enum 1+264x^6+440x^9+24x^12, Aut 2.M12); Steiner S(5,6,12) = 132 hexads = weight-6 supports; binary Golay [24,12,8]/M24/S(5,8,24) doubling; k=12=ternary Golay length, f=24=c Monster; K12 Grunbaum genus-6 surface (Bokowski & H. Table 2); w33_genus_vertex_figure_selection.py."
+  ]
+}

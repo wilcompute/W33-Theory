@@ -4760,6 +4760,49 @@ contextual fraction $1/\Phi_4=1/10$, so the vertex figures $9,10,12$ are exactly
 the qutrit phase space, its contextual denominator, and its context count.
 (Witness: \path{analysis/w33_hesse_mermin_contextuality.py}.)
 
+\subsection{The Eisenstein tower qutrit\,\texorpdfstring{$\to$}{->}\,E6\,\texorpdfstring{$\to$}{->}\,E8, the Golay gap, and the quadrangle ladder}
+
+The Witting body extends downward into a complete Eisenstein ladder. The regular
+complex polytopes over $\mathbb Z[\omega]$ nest as face/vertex-figure:
+\[
+\begin{array}{l|c|c|c}
+\hbox{polytope} & \dim & \hbox{vertices} & \hbox{symmetry}\\
+\hline
+3\{3\}3\ (\hbox{M\"obius--Kantor}) & 2 & 8 & 24=|2T|=f\\
+3\{3\}3\{3\}3\ (\hbox{Hessian}) & 3 & 27 & 648=27f\\
+3\{3\}3\{3\}3\{3\}3\ (\hbox{Witting}) & 4 & 240 & 155520=q\,|\mathrm{Sp}(4,3)|
+\end{array}
+\]
+with orders multiplying by the next vertex count ($24\cdot27=648$,
+$648\cdot240=155520$). The middle rung's $27$ vertices are the $27$ lines on a
+cubic surface $=$ the minuscule $\mathrm E_6$ rep, and its automorphism group is
+$W(\mathrm E_6)$ with $|W(\mathrm E_6)|=51840=|\mathrm{Sp}(4,3)|$. Thus the
+single qutrit (Hesse, $9$), $\mathrm E_6$ (Hessian, $27$), and $\mathrm E_8$
+(Witting, $240$) are three rungs of one tower, and $27$ is exactly the
+$\mathrm E_6$ matter of $v=40=1+12+27$. (Witness:
+\path{analysis/w33_hessian_polytope_e6.py}.)
+
+The vertex-figure gap $n=11=K_{12}$ is not empty algebraically. Its $12=k$
+vertices carry the substrate's natural $q=3$ code, the \emph{ternary Golay}
+$[12,6,6]_3$: $3^6=729$ codewords, weight enumerator
+$1+264x^6+440x^9+24x^{12}$, minimum distance $6$ (verified by enumeration). Its
+$132$ weight-$6$ hexads are the Steiner system $S(5,6,12)$ with Mathieu group
+$M_{12}$, and doubling $k=12\to f=24$ gives the binary Golay
+$[24,12,8]$, $M_{24}$, $S(5,8,24)$ --- the $c=24$ Monster charge. The Gr\"unbaum
+gap is the ternary $M_{12}$ half of the substrate's $M_{24}$/Golay/Monster
+structure. (Witness: \path{analysis/w33_ternary_golay_m12_grunbaum.py}.)
+
+Finally, $W(3,3)=\mathrm{GQ}(3,3)$ sits in a quadrangle ladder $27$--$40$--$45$.
+$\mathrm{GQ}(2,4)$ has $27$ points $=$ the $27$ lines on a cubic ($=\mathrm E_6$;
+intersection graph $\mathrm{SRG}(27,10,1,5)$, collinearity the complement
+Schl\"afli graph $\mathrm{SRG}(27,16,10,8)$), with
+$\mathrm{Aut}=W(\mathrm E_6)=51840=|\mathrm{Sp}(4,3)|$ --- the group of the $D=5$
+$\mathrm E_6$ black-hole/qubit entropy. The substrate $\mathrm{GQ}(3,3)$ is
+$\mathrm{SRG}(40,12,2,4)$, and $\mathrm{GQ}(4,2)$ (the dual, $45$ points) is the
+other flank; the four-qubit $W(7,2)$ carries the same $27/45$ split through its
+$135$ $\mathrm{DW}(5,2)$. (Witness:
+\path{analysis/w33_generalized_quadrangle_ladder.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

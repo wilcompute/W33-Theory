@@ -1,0 +1,50 @@
+{
+  "tower": [
+    {
+      "name": "Mobius-Kantor",
+      "schlafli": "3{3}3",
+      "dim": 2,
+      "V": 8,
+      "E": 8,
+      "sym": 24
+    },
+    {
+      "name": "Hessian",
+      "schlafli": "3{3}3{3}3",
+      "dim": 3,
+      "V": 27,
+      "E": 72,
+      "sym": 648
+    },
+    {
+      "name": "Witting",
+      "schlafli": "3{3}3{3}3{3}3",
+      "dim": 4,
+      "V": 240,
+      "E": 2160,
+      "sym": 155520
+    }
+  ],
+  "symmetry": {
+    "mobius_kantor": "24=|2T|=f",
+    "hessian": "648=27*f",
+    "witting": "155520=q*|Sp(4,3)|"
+  },
+  "e6_rung": {
+    "verts": 27,
+    "is": "27 lines/E6/GQ(2,4)",
+    "W_E6": 51840,
+    "equals_Sp43": true
+  },
+  "decomposition": "v=40 = 1 + 12 + 27 (E6 matter = the 27)",
+  "witting_degrees": [
+    12,
+    18,
+    24,
+    30
+  ],
+  "summary": "Eisenstein complex-polytope tower qutrit->E6->E8: Mobius-Kantor 3{3}3 (8 verts, sym 24=|2T|=f) -> Hessian 3{3}3{3}3 (27 verts, sym 648=27*f) -> Witting 3{3}3{3}3{3}3 (240 verts=E8, sym 155520=q*Sp(4,3)), nested as face/vertex-figure; orders multiply by next vertex count. The E6 rung's 27 = 27 lines on a cubic = E6 fund rep = GQ(2,4) points, Aut=W(E6)=51840=|Sp(4,3)| (both ext of U4(2)=25920). 27 = E6 matter in v=40=1+12+27. Witting invariant degrees {12,18,24,30}={k,18,f,h(E8)}.",
+  "sources": [
+    "Hessian polyhedron (Wikipedia): 3{3}3{3}3, 27 verts/72 edges, sym 648, self-dual; Mobius-Kantor polygon 3{3}3 8 verts sym 24=2T; Witting sym 155520; GQ(2,4) 27 pts = 27 lines on cubic, collinearity-complement = Schlafli SRG(27,16,10,8), Aut=W(E6)=51840 (Wikipedia/MathWorld; black-hole/qubit E6 entropy); v=40=1+12+27; w33_witting_polytope_substrate.py, w33_e8_eisenstein_witting_weld.py, w33_hesse_mermin_contextuality.py."
+  ]
+}
