@@ -1,0 +1,55 @@
+{
+  "theorem": "BT1694 Dark Asymmetric Relic Ratio",
+  "verified": true,
+  "constants": {
+    "v": 40,
+    "lambda": 2,
+    "mu": 4,
+    "g_negative_multiplicity": 15,
+    "thermal_relic_cross_section_GeV_minus_2": 2.57e-09,
+    "dark_hadron_reference_GeV": 22.8
+  },
+  "symmetric_relic_check": {
+    "formula": "m_sym = sqrt(pi / <sigma v>_thermal)",
+    "mass_GeV": 34962.97459937434,
+    "mass_TeV": 34.96297459937434,
+    "ratio_to_reference_dark_hadron": 1533.4637982181728,
+    "interpretation": "The tens-of-GeV hidden-SU(4) hadron branch cannot be a strong symmetric thermal relic under this geometric estimate."
+  },
+  "abundance_ratio": {
+    "Omega_DM": "4/15",
+    "Omega_b": "2/41",
+    "Omega_DM_over_Omega_b": "82/15",
+    "Omega_DM_over_Omega_b_float": 5.466666666666667,
+    "equal_asymmetry_mass_ratio": "82/15",
+    "equal_asymmetry_dark_mass_GeV_if_mp_0_938": 5.129220748608
+  },
+  "claim_boundary": [
+    "This is a branch-selection certificate: symmetric WIMP-like freeze-out is rejected for the tens-of-GeV hidden-SU(4) branch.",
+    "The exact ratio 82/15 is a substrate abundance ratio; a detector cross section is not derived here.",
+    "A heavier dark hadron remains possible if the dark asymmetry is correspondingly smaller than the baryon asymmetry."
+  ],
+  "sources": [
+    {
+      "label": "Kaplan-Luty-Zurek asymmetric dark matter",
+      "url": "https://arxiv.org/abs/0901.4117",
+      "role": "External guardrail for abundance controlled by a dark/visible asymmetry."
+    },
+    {
+      "label": "Local hidden-SU(4) dark confinement branch",
+      "path": "analysis/w33_dark_matter_mass.py",
+      "role": "Repo anchor for the confining hidden-SU(4) branch."
+    },
+    {
+      "label": "Local dark Lambda estimate",
+      "path": "analysis/w33_dark_lambda_gut.py",
+      "role": "Repo anchor for the tens-of-GeV dark scale."
+    }
+  ],
+  "checks": {
+    "symmetric_relic_is_above_10_TeV": true,
+    "symmetric_relic_exceeds_tens_GeV_branch_by_1000x": true,
+    "substrate_ratio_is_82_over_15": true,
+    "ratio_lies_in_cosmic_coincidence_window": true
+  }
+}

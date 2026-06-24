@@ -1,0 +1,90 @@
+{
+  "theorem": "BT1695 Dark Anyon Braiding Gate Boundary",
+  "verified": true,
+  "group": "2T = SL(2,3)",
+  "group_order": 24,
+  "conjugacy_classes": [
+    {
+      "class_size": 1,
+      "representative_order": 1,
+      "centralizer_order": 24,
+      "centralizer_conjugacy_classes": 7
+    },
+    {
+      "class_size": 1,
+      "representative_order": 2,
+      "centralizer_order": 24,
+      "centralizer_conjugacy_classes": 7
+    },
+    {
+      "class_size": 4,
+      "representative_order": 3,
+      "centralizer_order": 6,
+      "centralizer_conjugacy_classes": 6
+    },
+    {
+      "class_size": 4,
+      "representative_order": 3,
+      "centralizer_order": 6,
+      "centralizer_conjugacy_classes": 6
+    },
+    {
+      "class_size": 6,
+      "representative_order": 4,
+      "centralizer_order": 4,
+      "centralizer_conjugacy_classes": 4
+    },
+    {
+      "class_size": 4,
+      "representative_order": 6,
+      "centralizer_order": 6,
+      "centralizer_conjugacy_classes": 6
+    },
+    {
+      "class_size": 4,
+      "representative_order": 6,
+      "centralizer_order": 6,
+      "centralizer_conjugacy_classes": 6
+    }
+  ],
+  "D_2T_anyon_count": 42,
+  "flux_order_lcm": 12,
+  "clock_period_k": 12,
+  "derived_series_orders": [
+    24,
+    8,
+    2,
+    1
+  ],
+  "claim_boundary": [
+    "D(2T) supplies the finite topological clock and Clifford-like protected routing backbone.",
+    "Because 2T is solvable, this certificate does not promote braiding-alone universality.",
+    "Universal computation remains the combined architecture: finite braiding backbone plus Hesse/T or Wigner-negative magic injection."
+  ],
+  "sources": [
+    {
+      "label": "Mochon finite-group anyon universality criterion",
+      "url": "https://arxiv.org/abs/quant-ph/0206128",
+      "role": "External guardrail: non-solvable finite groups are the constructive universal-braiding side."
+    },
+    {
+      "label": "Local topological magic boundary",
+      "path": "analysis/w33_topological_magic.py",
+      "role": "Repo anchor for D(2T) as finite backbone requiring magic."
+    },
+    {
+      "label": "Local dark clock",
+      "path": "analysis/w33_clock_is_dark_braiding.py",
+      "role": "Repo anchor for T-matrix order 12 as the clock."
+    }
+  ],
+  "checks": {
+    "sl23_order_is_24": true,
+    "conjugacy_class_count_is_7": true,
+    "quantum_double_anyon_count_is_42": true,
+    "T_matrix_order_is_k_12": true,
+    "derived_series_reaches_identity": true,
+    "twoT_is_solvable": true,
+    "braiding_alone_universality_not_promoted": true
+  }
+}

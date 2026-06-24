@@ -1,0 +1,111 @@
+{
+  "theorem": "BT1696 dS/CFT Time-Arrow Modes",
+  "verified": true,
+  "dimension": {
+    "d": 4,
+    "threshold": 2.25
+  },
+  "w33_laplacian_modes": [
+    {
+      "name": "vacuum",
+      "multiplicity": 1,
+      "m2": 0,
+      "series": "complementary",
+      "Delta_plus": [
+        3.0,
+        0.0
+      ],
+      "Delta_minus": [
+        0.0,
+        0.0
+      ],
+      "complex_weights": false
+    },
+    {
+      "name": "matter_boundary",
+      "multiplicity": 24,
+      "m2": 10,
+      "series": "principal",
+      "Delta_plus": [
+        1.5,
+        2.7838821814150108
+      ],
+      "Delta_minus": [
+        1.5,
+        -2.7838821814150108
+      ],
+      "complex_weights": true
+    },
+    {
+      "name": "bulk_isometry",
+      "multiplicity": 15,
+      "m2": 16,
+      "series": "principal",
+      "Delta_plus": [
+        1.5,
+        3.7080992435478315
+      ],
+      "Delta_minus": [
+        1.5,
+        -3.7080992435478315
+      ],
+      "complex_weights": true
+    }
+  ],
+  "heawood_clock": {
+    "laplacian_eigenvalues": [
+      0.0,
+      6.0,
+      1.5857864376269049,
+      1.5857864376269049,
+      1.5857864376269049,
+      1.5857864376269049,
+      1.5857864376269049,
+      1.5857864376269049,
+      4.414213562373095,
+      4.414213562373095,
+      4.414213562373095,
+      4.414213562373095,
+      4.414213562373095,
+      4.414213562373095
+    ],
+    "beta": 1.0,
+    "von_neumann_entropy": 1.82593940099253
+  },
+  "boundary": {
+    "central_charge_before_continuation": 24,
+    "dS_CFT_reading": "c -> i*c; principal-series modes give complex weights",
+    "interpretation": "Time's arrow is modeled as the non-unitary expanding boundary flow: principal-series modes decay and the finite clock state is mixed."
+  },
+  "claim_boundary": [
+    "This is a finite dS/CFT mode certificate, not a continuum dS quantum-gravity derivation.",
+    "The exact promoted facts are the 9/4 threshold classification and the positive finite-clock entropy.",
+    "The non-unitary boundary reading is anchored externally in dS/CFT and remains an interpretation layer."
+  ],
+  "sources": [
+    {
+      "label": "Strominger dS/CFT",
+      "url": "https://arxiv.org/abs/hep-th/0106113",
+      "role": "External guardrail for nonunitary/complex-weight dS/CFT boundary behavior."
+    },
+    {
+      "label": "Local dS/CFT mode split",
+      "path": "analysis/w33_dscft_modes.py",
+      "role": "Repo anchor for W(3,3) modes {0^1,10^24,16^15}."
+    },
+    {
+      "label": "Local thermal-time clock",
+      "path": "analysis/w33_thermal_time_clock.py",
+      "role": "Repo anchor for finite modular/thermal clock state."
+    }
+  ],
+  "checks": {
+    "d_equals_mu_4": true,
+    "principal_threshold_is_9_over_4": true,
+    "matter_mode_is_principal": true,
+    "isometry_mode_is_principal": true,
+    "vacuum_mode_is_complementary": true,
+    "heawood_clock_entropy_positive": true,
+    "boundary_c_is_monster_24_before_i_continuation": true
+  }
+}
