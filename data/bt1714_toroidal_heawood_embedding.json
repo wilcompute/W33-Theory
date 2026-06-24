@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "coheawood_buffers_28": true,
+    "coheawood_connected_4_regular": true,
+    "each_realization_has_3_execution_and_4_buffer_slots": true,
+    "fano_lines_partition_k7_edges": true,
+    "heawood_connected_3_regular": true,
+    "heawood_edges_21": true,
+    "k77_total_49": true,
+    "period_142857_length_6": true,
+    "seven_realizations_5_plus_2": true
+  },
+  "claim_boundary": [
+    "Scheduler embedding of realization labels into Fano incidence; concrete 3D coordinate embeddings are not parsed here.",
+    "The 28 co-Heawood slots are certified non-incidence buffers, not hardware calibration events yet."
+  ],
+  "counts": {
+    "buffer_edges": 28,
+    "execution_edges": 21,
+    "phase_period_1_over_7": 6,
+    "total_k77_edges": 49,
+    "toroidal_colors": 7,
+    "toroidal_edge_carrier": 21
+  },
+  "fano_lines": {
+    "1": [2, 4, 6],
+    "2": [1, 4, 5],
+    "3": [3, 4, 7],
+    "4": [1, 2, 3],
+    "5": [2, 5, 7],
+    "6": [1, 6, 7],
+    "7": [3, 5, 6]
+  },
+  "k7_edge_owner": {
+    "1-2": 4,
+    "1-3": 4,
+    "1-4": 2,
+    "1-5": 2,
+    "1-6": 6,
+    "1-7": 6,
+    "2-3": 4,
+    "2-4": 1,
+    "2-5": 5,
+    "2-6": 1,
+    "2-7": 5,
+    "3-4": 3,
+    "3-5": 7,
+    "3-6": 7,
+    "3-7": 3,
+    "4-5": 2,
+    "4-6": 1,
+    "4-7": 3,
+    "5-6": 7,
+    "5-7": 5,
+    "6-7": 6
+  },
+  "realization_point_map": {
+    "C0": 1,
+    "C1": 2,
+    "C2": 3,
+    "C3": 4,
+    "C4": 5,
+    "S0": 6,
+    "S1": 7
+  },
+  "schedule": [
+    {"buffer_slots": [1, 3, 5, 7], "execution_slots": [2, 4, 6], "point": 1, "realization": "C0"},
+    {"buffer_slots": [2, 3, 6, 7], "execution_slots": [1, 4, 5], "point": 2, "realization": "C1"},
+    {"buffer_slots": [1, 2, 5, 6], "execution_slots": [3, 4, 7], "point": 3, "realization": "C2"},
+    {"buffer_slots": [4, 5, 6, 7], "execution_slots": [1, 2, 3], "point": 4, "realization": "C3"},
+    {"buffer_slots": [1, 3, 4, 6], "execution_slots": [2, 5, 7], "point": 5, "realization": "C4"},
+    {"buffer_slots": [2, 3, 4, 5], "execution_slots": [1, 6, 7], "point": 6, "realization": "S0"},
+    {"buffer_slots": [1, 2, 4, 7], "execution_slots": [3, 5, 6], "point": 7, "realization": "S1"}
+  ],
+  "summary": "The five Csaszar plus two Szilassi realization heptad embeds as the point side of the Fano/Heawood K7,7 scheduler. Each realization has three Heawood execution slots and four co-Heawood buffer slots; Fano lines partition the 21-pair toroidal edge carrier while the 28 non-incidence slots form a calibration reservoir.",
+  "theorem": "BT1714 Seven-Realization Heawood Scheduler Embedding Theorem",
+  "verified": true
+}
