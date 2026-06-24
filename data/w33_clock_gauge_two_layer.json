@@ -1,0 +1,29 @@
+{
+  "Sp43": {
+    "order": 51840,
+    "factor": {
+      "2": 7,
+      "3": 4,
+      "5": 1
+    }
+  },
+  "PSL27": {
+    "order": 168,
+    "factor": {
+      "2": 3,
+      "3": 1,
+      "7": 1
+    }
+  },
+  "seven_divides_gauge": false,
+  "gcd_is_f": 24,
+  "fano_point_stabilizer_order": 24,
+  "factorizations": {
+    "168": "7 * f",
+    "51840": "2160 * f = (h(E8)*72) * f"
+  },
+  "summary": "two layers: gauge Sp(4,3) (2^7*3^4*5) and clock/readout Fano/PSL(2,7) (2^3*3*7); coprime except gcd=24=f; 7=Phi_6(3) absent from the gauge order so the clock is a separate module (group-order reason for BT1654 girth obstruction); they meet only at the f=24 core (2T in gauge, Fano-point-stab S4 in clock), where the BT1655 clock-matter resonance lands.",
+  "sources": [
+    "|Sp(4,3)|=51840, |PSL(2,7)=PSL(3,2)=GL(3,2)|=168; Aut(Heawood)=PGL(2,7)=336; BT1654 girth obstruction; BT1655 clock-matter resonance; BT1602 168=7*24 detector weld"
+  ]
+}

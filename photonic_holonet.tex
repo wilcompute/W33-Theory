@@ -3173,6 +3173,29 @@ mass-setting oscillator and one run of its instruction stream is the gauge
 dynamics. Running the machine and enacting the physics are the same act.
 (Witness: \texttt{analysis/w33\_machine\_clock\_is\_mass.py}.)
 
+Yet the clock is a \emph{separate} module, and its arithmetic says why. The
+clock/readout layer is the Fano plane $\mathrm{PG}(2,2)$ with symmetry
+$\mathrm{PSL}(2,7)=\mathrm{PSL}(3,2)$ of order $168=2^3\cdot3\cdot7$ (the same
+layer that carries the $168=7\cdot f$ detector-bin weld), while the gauge/state
+layer is $\mathrm{Sp}(4,3)$ of order $51840=2^7\cdot3^4\cdot5$. The clock prime
+$7=\Phi_6(3)$ --- the external cyclotomic prime that also fixes $\beta_0^{\mathrm{QCD}}$
+and the atmospheric angle --- \emph{does not divide} the gauge order, so
+$\mathrm{PSL}(2,7)$ is no subgroup of $\mathrm{Sp}(4,3)$: the clock's Fano symmetry
+can never be a gauge operation, which is the group-order reason the Heawood clock
+is a separate homology module rather than a $W(3,3)$ subgraph (the girth
+obstruction). The two layers are coprime except for
+\[
+  \gcd(51840,168)=24=f,
+\]
+and both realize that shared scale as an order-$f$ subgroup --- the single-qutrit
+Clifford $2T=\mathrm{SL}(2,3)$ inside $\mathrm{Sp}(4,3)$, and the Fano
+point-stabilizer $S_4$ ($=168/7$) inside $\mathrm{PSL}(2,7)$. So the clock layer
+$=7\times f$ and the gauge layer $=(h(E_8)\cdot72)\times f$ are welded only at the
+matter count $f=24$, which is exactly where the clock--matter spectral resonance
+lands. The clock and the readout are one Fano layer, coprime to the computation
+and bonded to it at the $24$-cell core. (Witness:
+\texttt{analysis/w33\_clock\_gauge\_two\_layer.py}.)
+
 \subsection{A near-term falsification test: the demonstrator as an experiment on
 the substrate}
 
