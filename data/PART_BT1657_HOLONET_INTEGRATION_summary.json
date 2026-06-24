@@ -1,0 +1,21 @@
+{
+  "theorem": "BT1657 Holonet Paper Integration: Heawood Clock Homology",
+  "status": "paper-ready insert plus idempotent integration helper pushed",
+  "files": {
+    "insert": "analysis/BT1657_heawood_clock_homology_insert.tex",
+    "integrator": "tools/integrate_bt1657_heawood_clock_homology.py",
+    "target_section": "paper/sections/sec_bt1657_heawood_clock_homology.tex",
+    "main_tex": "photonic_holonet.tex"
+  },
+  "anchor": "(Witness: \\texttt{analysis/w33\\_machine\\_clock\\_is\\_mass.py}.)",
+  "input_line": "\\input{paper/sections/sec_bt1657_heawood_clock_homology}",
+  "claims_integrated": [
+    "Heawood/Fano clock has beta1=8, the eight-tick runtime word.",
+    "Heawood simple cycle counts include C6=28 and C8=21.",
+    "Heawood line-graph flag clock has Laplacian endpoint 6^8.",
+    "W33 Levi graph has girth 8 and C6=0, so the Heawood clock is coupled but not a literal Levi subgraph.",
+    "Clock endpoint 6^8 times matter gap 24^15 lands at 30^120 inside a degenerate 30-eigenspace of total rank 144.",
+    "Runtime stack is homologically anchored: 8 -> 48 -> 72 -> 2160 -> 51840."
+  ],
+  "boundary": "The integrator is conservative and idempotent. It copies the insert into paper/sections and inserts one input line after the existing clock-is-mass witness; it does not duplicate the insert if run repeatedly."
+}
