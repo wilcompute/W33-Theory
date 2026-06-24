@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+"""BT1685 — Chebyshev-term QSP phase schedule.
+
+A direct nonlinear single-sequence QSP fit was not robust enough to certify phase
+angles.  This file records the exact term-level schedule that is certifiable now:
+Chebyshev terms T_k are implemented by k zero-phase signal-walk steps and the
+bounded components are assembled by LCU/ancilla routing.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+RESULT = {
+    "theorem": "BT1685 QSP Phase-Angle Synthesis Status",
+    "status": "term-level QSP schedules certified; collapsed single-sequence phase angles not claimed",
+    "qsp_convention": "Chebyshev T_k(x) implemented by k signal-walk steps with zero phase in the standard walk convention; components are LCUs over these term sequences.",
+    "term_phase_library": {
+        "T0": {"degree": 0, "phases": [], "coefficient_multiplier": 1},
+        "T1": {"degree": 1, "phases": [0.0], "coefficient_multiplier": 1},
+        "T2": {"degree": 2, "phases": [0.0, 0.0], "coefficient_multiplier": 1},
+        "T3": {"degree": 3, "phases": [0.0, 0.0, 0.0], "coefficient_multiplier": 1},
+        "T4": {"degree": 4, "phases": [0.0, 0.0, 0.0, 0.0], "coefficient_multiplier": 1}
+    },
+    "component_lcu_schedules": {
+        "e_c": {
+            "formula": "5/28*T0 + 9/28*T2",
+            "terms": [{"term": "T0", "weight": "5/28"}, {"term": "T2", "weight": "9/28"}],
+            "l1_mass": 0.5,
+            "max_term_depth": 2,
+            "sup_norm": 0.5
+        },
+        "o_c": {
+            "formula": "19/56*T1 + 9/56*T3",
+            "terms": [{"term": "T1", "weight": "19/56"}, {"term": "T3", "weight": "9/56"}],
+            "l1_mass": 0.5,
+            "max_term_depth": 3,
+            "sup_norm": 0.5
+        },
+        "e_30": {
+            "formula": "-1/8*T0 + 5/8*T2",
+            "terms": [{"term": "T0", "weight": "-1/8"}, {"term": "T2", "weight": "5/8"}],
+            "l1_mass": 0.75,
+            "max_term_depth": 2,
+            "sup_norm": 0.75
+        },
+        "o_30": {
+            "formula": "1/2*T1",
+            "terms": [{"term": "T1", "weight": "1/2"}],
+            "l1_mass": 0.5,
+            "max_term_depth": 1,
+            "sup_norm": 0.5
+        },
+        "p_24": {
+            "formula": "1325/2048*T0 - 175/512*T2 - 625/2048*T4",
+            "terms": [{"term": "T0", "weight": "1325/2048"}, {"term": "T2", "weight": "-175/512"}, {"term": "T4", "weight": "-625/2048"}],
+            "l1_mass": 1.2939453125,
+            "max_term_depth": 4,
+            "sup_norm": 1.0
+        }
+    },
+    "selector_routing": {
+        "P_clock_6": "LCU(e_c) + LCU(o_c)",
+        "P_clock_0": "LCU(e_c) - LCU(o_c)",
+        "P_matter_30": "LCU(e_30) + LCU(o_30)",
+        "P_matter_24": "single even LCU(p_24)"
+    },
+    "two_port_resources": {
+        "resonance_Pc6_tensor_Pm24_l1": 1.2939453125,
+        "companion_Pc0_tensor_Pm30_l1": 1.25,
+        "combined_l1": 2.5439453125,
+        "max_clock_term_depth": 3,
+        "max_matter_term_depth": 4,
+        "max_tensor_term_depth": 7
+    },
+    "boundary": "The listed phases are exact for Chebyshev term sequences. This is not a synthesized collapsed QSP phase list for each whole polynomial; it is a certified LCU-of-QSP-terms implementation."
+}
+
+
+def main() -> None:
+    out = Path("data/PART_BT1685_QSP_PHASE_ANGLE_SYNTHESIS_results.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(RESULT, indent=2) + "\n")
+    print(json.dumps(RESULT, indent=2))
+
+
+if __name__ == "__main__":
+    main()
