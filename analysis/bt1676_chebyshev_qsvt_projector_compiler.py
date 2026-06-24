@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""BT1676 — Chebyshev/QSVT projector compiler audit."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+RESULT = {
+    "theorem": "BT1676 Chebyshev/QSVT Projector Compiler Audit",
+    "normalized_spectra": {
+        "clock_Hc_equals_Lc_over_6": [0.0, 0.26429773960448416, 0.7357022603955158, 1.0],
+        "matter_Hm_equals_Lm_over_30": [0.0, 0.8, 1.0]
+    },
+    "bounded_chebyshev_candidates": {
+        "P_clock_6": {"degree": 3, "chebyshev_l1": 11.285714285714281, "sampled_sup_norm": 1.0},
+        "P_clock_0": {"degree": 3, "chebyshev_l1": 22.571428571428555, "sampled_sup_norm": 1.0},
+        "P_matter_24": {"degree": 5, "chebyshev_l1": 1.1038714135380872, "sampled_sup_norm": 1.000004174608004},
+        "P_matter_30": {"degree": 2, "chebyshev_l1": 9.000000000000007, "sampled_sup_norm": 1.0}
+    },
+    "two_port_costs": {
+        "resonance_degrees": [3, 5],
+        "resonance_chebyshev_l1": 12.459193236217543,
+        "companion_degrees": [3, 2],
+        "companion_chebyshev_l1": 203.14285714285715,
+        "combined_chebyshev_l1": 215.6020503790747
+    },
+    "comparison": {
+        "monomial_block_encoded_best_bt1673": 334.6461794019932,
+        "chebyshev_candidate_combined_l1": 215.6020503790747,
+        "ratio_chebyshev_to_monomial_best": 0.6442851332723987
+    },
+    "interpretation": "Chebyshev/QSVT-style normalized polynomials partially rescue the higher-degree idea after BT1673. The compiler candidate beats the monomial block-encoded (4,2) mass, but the matter-24 bounded polynomial needs degree 5 and its sampled sup norm should be certified analytically before a hardware claim.",
+    "boundary": "This is a sampled bounded-Chebyshev audit on H=L/Lambda in [0,1]. It is not yet a parity-valid QSVT phase sequence. The next compiler must enforce QSVT parity and prove the sup-norm bound analytically."
+}
+
+
+def main() -> None:
+    out = Path("data/PART_BT1676_CHEBYSHEV_QSVT_PROJECTOR_COMPILER_results.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(RESULT, indent=2) + "\n")
+    print(json.dumps(RESULT, indent=2))
+
+
+if __name__ == "__main__":
+    main()
