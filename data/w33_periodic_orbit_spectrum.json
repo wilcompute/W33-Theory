@@ -1,0 +1,21 @@
+{
+  "perron": 11,
+  "euler_pm1_count": 401,
+  "nontrivial_sqrt11_count": 78,
+  "graph_RH_holds": true,
+  "periodic_orbit_counts_N1_8": [
+    0,
+    0,
+    960,
+    13920,
+    181440,
+    1818240,
+    19178880,
+    214015200
+  ],
+  "topological_entropy": 2.3979,
+  "summary": "Hashimoto B on W(3,3): Perron k-1=11, Euler shell +-1, all non-trivial zeta zeros on |u|=1/sqrt(11) (graph Riemann Hypothesis <=> Ramanujan); periodic orbits N_m=Tr(B^m) = closed geodesics = particle worldlines; topological entropy ln(11), Ihara prime 11=k-1. Gutzwiller/Selberg trace-formula reading of the substrate spectrum.",
+  "sources": [
+    "Ihara zeta / Ihara-Bass formula; Terras, Zeta functions of graphs; Gutzwiller & Selberg trace formulas; Ramanujan graphs (graph Riemann Hypothesis)"
+  ]
+}

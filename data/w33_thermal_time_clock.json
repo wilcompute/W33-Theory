@@ -1,0 +1,11 @@
+{
+  "gauge_sector_timeless": true,
+  "clock_modular_generator_is_L_H": true,
+  "modular_frequency": 1.4142135623730951,
+  "KMS_holds": true,
+  "summary": "Connes-Rovelli thermal time = modular flow sigma_t(A)=rho^{it}A rho^{-it}; gauge/matter sector (max mixed, flat) K prop-to I -> timeless; clock Gibbs state K = beta L_H -> modular flow = clock tick at frequency sqrt(lambda)=sqrt2; KMS holds. Time emerges from the state and only the Fano clock layer sources it -- the modular-flow reason for the two-layer split.",
+  "sources": [
+    "Connes-Rovelli, Von Neumann algebra automorphisms and time-thermodynamics relation, Class. Quant. Grav. 11 (1994)",
+    "Tomita-Takesaki modular theory; KMS condition; w33_machine_clock_is_mass.py, w33_clock_gauge_two_layer.py"
+  ]
+}

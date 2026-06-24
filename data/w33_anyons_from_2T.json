@@ -1,0 +1,53 @@
+{
+  "n_anyons": 42,
+  "total_quantum_dimension": 24,
+  "D_squared": 576,
+  "anyon_table": [
+    {
+      "class_size": 6,
+      "rep_order": 4,
+      "centralizer_order": 4,
+      "k_centralizer": 4
+    },
+    {
+      "class_size": 4,
+      "rep_order": 6,
+      "centralizer_order": 6,
+      "k_centralizer": 6
+    },
+    {
+      "class_size": 4,
+      "rep_order": 3,
+      "centralizer_order": 6,
+      "k_centralizer": 6
+    },
+    {
+      "class_size": 4,
+      "rep_order": 6,
+      "centralizer_order": 6,
+      "k_centralizer": 6
+    },
+    {
+      "class_size": 4,
+      "rep_order": 3,
+      "centralizer_order": 6,
+      "k_centralizer": 6
+    },
+    {
+      "class_size": 1,
+      "rep_order": 1,
+      "centralizer_order": 24,
+      "k_centralizer": 7
+    },
+    {
+      "class_size": 1,
+      "rep_order": 2,
+      "centralizer_order": 24,
+      "k_centralizer": 7
+    }
+  ],
+  "summary": "matter-graph 2T=SL(2,3) gauge theory = quantum double D(2T): 7 flux sectors (conjugacy classes), 42 anyons (= Catalan C5 = 2q*Phi_6), total quantum dimension D = |2T| = 24 = f. Non-abelian topological order; logical info = anyon fusion/braiding; D = matter count f.",
+  "sources": [
+    "Kitaev, Fault-tolerant quantum computation by anyons, Ann. Phys. 303 (2003); Dijkgraaf-Witten quantum double D(G); w33_lattice_to_continuum_ym.py (2T lattice gauge theory)"
+  ]
+}
