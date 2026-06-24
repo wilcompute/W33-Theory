@@ -1,0 +1,108 @@
+{
+  "ledger": [
+    {
+      "observable": "n_s",
+      "value": "29/30 = 0.9667",
+      "experiment": "Planck (done)",
+      "era": "now",
+      "falsified_if": "outside 0.9649 +- 0.0042"
+    },
+    {
+      "observable": "r (tensor/scalar)",
+      "value": "1/300 = 0.0033",
+      "experiment": "LiteBIRD/CMB-S4",
+      "era": "~2030",
+      "falsified_if": "r > 0.01 or null at 1e-3"
+    },
+    {
+      "observable": "f_NL^local",
+      "value": "1/72 = 0.0139",
+      "experiment": "CMB-S4/LiteBIRD",
+      "era": "~2030",
+      "falsified_if": "|f_NL| >> 1"
+    },
+    {
+      "observable": "running dn_s/dlnk",
+      "value": "-1/1800 = -5.6e-4",
+      "experiment": "CMB-S4",
+      "era": "~2032",
+      "falsified_if": "outside -2/N^2 band"
+    },
+    {
+      "observable": "m_betabeta (0nubb)",
+      "value": "~2.3 meV",
+      "experiment": "nEXO/LEGEND-1000",
+      "era": "~2030s",
+      "falsified_if": "NH excluded / m_bb too big"
+    },
+    {
+      "observable": "Sum m_nu",
+      "value": "58 meV (NH)",
+      "experiment": "DESI + CMB-S4",
+      "era": "~2028",
+      "falsified_if": "inverted ordering or > 0.1 eV"
+    },
+    {
+      "observable": "delta_CP (PMNS)",
+      "value": "14pi/13 ~ 194 deg",
+      "experiment": "DUNE/HK",
+      "era": "~2030",
+      "falsified_if": "far from 194 deg"
+    },
+    {
+      "observable": "dark matter",
+      "value": "confining SU(4) hadron, tens of GeV",
+      "experiment": "LZ/XENONnT",
+      "era": "~2028",
+      "falsified_if": "WIMP-like signal at 308 GeV / null"
+    },
+    {
+      "observable": "dark-confinement GW",
+      "value": "LISA-band peak ~1e-4 Hz",
+      "experiment": "LISA",
+      "era": "~2035",
+      "falsified_if": "no stochastic background there"
+    },
+    {
+      "observable": "2nd Higgs scalar",
+      "value": "~3.2 TeV / ~159 GeV",
+      "experiment": "HL-LHC",
+      "era": "~2029+",
+      "falsified_if": "no resonance"
+    },
+    {
+      "observable": "proton lifetime",
+      "value": "~1e37 yr",
+      "experiment": "Hyper-K",
+      "era": "~2030s",
+      "falsified_if": "decay seen below 1e35"
+    },
+    {
+      "observable": "DEMONSTRATOR pump",
+      "value": "Chern C = lambda = 2 (quantized)",
+      "experiment": "tabletop photonics",
+      "era": "NOW",
+      "falsified_if": "pump quantum != 2"
+    },
+    {
+      "observable": "DEMONSTRATOR context",
+      "value": "contextual fraction = 1/Phi_4 = 1/10",
+      "experiment": "tabletop photonics",
+      "era": "NOW",
+      "falsified_if": "CF != 1/10"
+    },
+    {
+      "observable": "DEMONSTRATOR clock",
+      "value": "BC angle arccos(-2/3) = 131.8 deg",
+      "experiment": "tabletop photonics",
+      "era": "NOW",
+      "falsified_if": "beat angle != arccos(-2/3)"
+    }
+  ],
+  "n_predictions": 14,
+  "n_demonstrator": 3,
+  "summary": "falsifiability ledger: ~14 sharp predictions, each with experiment+era+falsifier; cosmology (r=1/300, f_NL=1/72, running=-1/1800), neutrinos (m_bb=2.3 meV, Sum=58 meV, delta_CP=194), dark matter (confining SU(4) hadron + LISA GW), colliders (2nd Higgs, proton decay), and 3 NOW-testable demonstrator measurements (pump C=lambda=2, CF=1/10, BC angle arccos(-2/3)). Decisive era 2028-2035.",
+  "sources": [
+    "consolidation of w33 cosmology/neutrino/dark witnesses + the demonstrator (w33_demonstrator_measures_substrate.py); CMB-S4/LiteBIRD/nEXO/DUNE/LISA/HL-LHC reach"
+  ]
+}

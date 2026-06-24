@@ -1,0 +1,44 @@
+{
+  "pump_chern_numbers": [
+    2,
+    0,
+    -2
+  ],
+  "pump_quantum": 2,
+  "contextual_fraction": 0.1,
+  "BC_angle_deg": 131.81,
+  "oscillator_levels": [
+    1.586,
+    4.414
+  ],
+  "measurement_table": [
+    {
+      "setup": "two-tone EOM pump on the photon's 3 modes",
+      "constant": "Chern C = lambda = 2",
+      "observable": "sideband photon-transfer quantum",
+      "kind": "protected integer"
+    },
+    {
+      "setup": "Kochen-Specker test on the 40 Pauli rays",
+      "constant": "CF = 1/Phi_4 = 1/10",
+      "observable": "noncontextuality-inequality violation",
+      "kind": "exact fraction"
+    },
+    {
+      "setup": "BC delay-loop two-frequency beat",
+      "constant": "arccos(-2/3) = 131.8 deg",
+      "observable": "beat geometry / drive angle",
+      "kind": "fixed angle"
+    },
+    {
+      "setup": "Heawood/oscillator gate spectrum",
+      "constant": "E_pm = 3 +- sqrt2",
+      "observable": "holonomic level spacing 2 sqrt2",
+      "kind": "spectral gap"
+    }
+  ],
+  "summary": "the single-photon demonstrator measures substrate primitives as quantized/protected optics: topological pump Chern C=lambda=2 (bands {+2,0,-2}=2S, protected integer), contextual fraction 1/Phi_4=1/10 (Kochen-Specker), BC clock arccos(-2/3)=131.8 deg, oscillator gap 3+-sqrt2. The machine reads lambda,q,Phi_4 and is itself a NOW-testable falsifiability experiment; pump != 2 or CF != 1/10 falsifies the substrate at the bench.",
+  "sources": [
+    "Martin-Refael-Halperin topological frequency conversion (2017, Chern pump = 2S); Kochen-Specker contextual fraction 1/Phi_4 (corpus BT82); BC quasicrystal arccos(-(q-1)/q); Heawood oscillator 3+-sqrt2; w33_qutrit_topological_pump.py, w33_machine_clock_is_mass.py"
+  ]
+}

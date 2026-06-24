@@ -1,0 +1,58 @@
+{
+  "scan": [
+    {
+      "T_star_GeV": 5.0,
+      "beta_over_H": 1.0,
+      "f_peak_Hz": 9.5e-07,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 5.0,
+      "beta_over_H": 10.0,
+      "f_peak_Hz": 9.5e-06,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 22.8,
+      "beta_over_H": 1.0,
+      "f_peak_Hz": 4.33e-06,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 22.8,
+      "beta_over_H": 10.0,
+      "f_peak_Hz": 4.33e-05,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 30.0,
+      "beta_over_H": 1.0,
+      "f_peak_Hz": 5.7e-06,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 30.0,
+      "beta_over_H": 10.0,
+      "f_peak_Hz": 5.7e-05,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 100.0,
+      "beta_over_H": 1.0,
+      "f_peak_Hz": 1.9e-05,
+      "band": "gap"
+    },
+    {
+      "T_star_GeV": 100.0,
+      "beta_over_H": 10.0,
+      "f_peak_Hz": 0.00019,
+      "band": "LISA (mHz)"
+    }
+  ],
+  "f_peak_nominal_Hz": 5.7e-05,
+  "band": "LISA",
+  "summary": "dark SU(4) confinement (T_* ~ Lambda_dark ~ tens of GeV) = a 4th GW band (vs corpus primordial/EWPT/cosmic-string): first-order transition -> stochastic background peaking ~1e-4 Hz (LISA), Omega_GW h^2 ~ 1e-12..1e-10. Falsifiable by LISA ~2035. Honest: assumes first-order, O(1) strength; (alpha,beta/H,v_w) not derived.",
+  "sources": [
+    "Caprini et al. phase-transition GW fits; LISA sensitivity; corpus GW bands (primordial/EWPT/cosmic strings); w33_dark_lambda_gut.py, w33_dark_matter_mass.py"
+  ]
+}
