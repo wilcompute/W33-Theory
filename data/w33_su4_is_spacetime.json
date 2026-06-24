@@ -1,0 +1,14 @@
+{
+  "dim": 15,
+  "roles": {
+    "dark color": "hidden SU(4) carrying the 128-spinor families (mu=4 colors)",
+    "Pati-Salam": "lepton number as 4th color; a generation = a 4 of SU(4)",
+    "holographic bulk": "SO(4,2) = 4D conformal group = AdS isometry (15 modes)",
+    "rotations": "SO(6) compact rotation group"
+  },
+  "fundamental": 4,
+  "summary": "one SU(4)=SO(6), dim 15 = g, is the dark color (hidden gauge group of the 128-spinor), Pati-Salam (color+lepton), and -- as SO(4,2) -- the holographic bulk / 4D conformal group (15 AdS modes); its fundamental 4 = mu = the spacetime dimension = the dark-color count. Dark matter, color, bulk, and spacetime dimension collapse into one symmetry; dark colors = spacetime directions.",
+  "sources": [
+    "SU(4) ~ SO(6); SO(4,2) = 4D conformal group (dim 15); Pati-Salam SU(4); corpus check 128 (g=15=SO(4,2)=SU(4)); w33_dark_sector_128.py, w33_holographic_architecture.py"
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "page_curve": [
+    {
+      "|A|": 1,
+      "delta": 12,
+      "S": 3.0
+    },
+    {
+      "|A|": 2,
+      "delta": 22,
+      "S": 5.5
+    },
+    {
+      "|A|": 3,
+      "delta": 30,
+      "S": 7.5
+    },
+    {
+      "|A|": 4,
+      "delta": 36,
+      "S": 9.0
+    },
+    {
+      "|A|": 5,
+      "delta": 46,
+      "S": 11.5
+    },
+    {
+      "|A|": 6,
+      "delta": 54,
+      "S": 13.5
+    },
+    {
+      "|A|": 7,
+      "delta": 60,
+      "S": 15.0
+    },
+    {
+      "|A|": 8,
+      "delta": 68,
+      "S": 17.0
+    },
+    {
+      "|A|": 9,
+      "delta": 74,
+      "S": 18.5
+    },
+    {
+      "|A|": 10,
+      "delta": 78,
+      "S": 19.5
+    },
+    {
+      "|A|": 11,
+      "delta": 84,
+      "S": 21.0
+    },
+    {
+      "|A|": 12,
+      "delta": 88,
+      "S": 22.0
+    },
+    {
+      "|A|": 13,
+      "delta": 90,
+      "S": 22.5
+    },
+    {
+      "|A|": 14,
+      "delta": 94,
+      "S": 23.5
+    },
+    {
+      "|A|": 15,
+      "delta": 96,
+      "S": 24.0
+    },
+    {
+      "|A|": 16,
+      "delta": 96,
+      "S": 24.0
+    },
+    {
+      "|A|": 17,
+      "delta": 100,
+      "S": 25.0
+    },
+    {
+      "|A|": 18,
+      "delta": 102,
+      "S": 25.5
+    },
+    {
+      "|A|": 19,
+      "delta": 102,
+      "S": 25.5
+    },
+    {
+      "|A|": 20,
+      "delta": 104,
+      "S": 26.0
+    },
+    {
+      "|A|": 21,
+      "delta": 104,
+      "S": 26.0
+    },
+    {
+      "|A|": 22,
+      "delta": 102,
+      "S": 25.5
+    },
+    {
+      "|A|": 23,
+      "delta": 102,
+      "S": 25.5
+    },
+    {
+      "|A|": 24,
+      "delta": 100,
+      "S": 25.0
+    },
+    {
+      "|A|": 25,
+      "delta": 96,
+      "S": 24.0
+    },
+    {
+      "|A|": 26,
+      "delta": 94,
+      "S": 23.5
+    },
+    {
+      "|A|": 27,
+      "delta": 90,
+      "S": 22.5
+    },
+    {
+      "|A|": 28,
+      "delta": 84,
+      "S": 21.0
+    },
+    {
+      "|A|": 29,
+      "delta": 82,
+      "S": 20.5
+    },
+    {
+      "|A|": 30,
+      "delta": 78,
+      "S": 19.5
+    },
+    {
+      "|A|": 31,
+      "delta": 72,
+      "S": 18.0
+    },
+    {
+      "|A|": 32,
+      "delta": 68,
+      "S": 17.0
+    },
+    {
+      "|A|": 33,
+      "delta": 62,
+      "S": 15.5
+    },
+    {
+      "|A|": 34,
+      "delta": 54,
+      "S": 13.5
+    },
+    {
+      "|A|": 35,
+      "delta": 48,
+      "S": 12.0
+    },
+    {
+      "|A|": 36,
+      "delta": 40,
+      "S": 10.0
+    },
+    {
+      "|A|": 37,
+      "delta": 30,
+      "S": 7.5
+    },
+    {
+      "|A|": 38,
+      "delta": 22,
+      "S": 5.5
+    },
+    {
+      "|A|": 39,
+      "delta": 12,
+      "S": 3.0
+    },
+    {
+      "|A|": 40,
+      "delta": 0,
+      "S": 0.0
+    }
+  ],
+  "peak_region_size": 20,
+  "page_point": 20,
+  "page_code": "[[40,20,11]]",
+  "summary": "discrete RT Page curve S(A)=delta(A)/mu rises, peaks at the balanced cut, falls (delta(A)=delta(A^c) symmetric); island = complementary matter region takes over at the Page point |A|=v/2=20 = the [[40,20,11]] code (distance 11=k-1). Unitary evaporation; information recovered; RT + scrambler + bulk = one story.",
+  "sources": [
+    "Page curve; island formula (Penington; Almheiri et al. 2019); Ryu-Takayanagi; corpus [[40,20,11]] code, scrambling time log2(40); w33_rt_bulk_reconstruction.py"
+  ]
+}

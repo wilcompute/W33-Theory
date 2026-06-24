@@ -1,0 +1,12 @@
+{
+  "beta0_visible": 7,
+  "beta0_dark": 4,
+  "dark_Nc": 4,
+  "dark_Nf": 16,
+  "asymptotically_free": true,
+  "dark_baryon": "mu dark quarks, mass ~ mu*Lambda_dark",
+  "summary": "hidden SU(4) (mu=4 dark colors) carrying the 128-spinor's SM families (N_f=16) has beta_0 = (44-32)/3 = 4 = mu > 0 -> asymptotically free + confining (vs visible QCD beta_0=Phi6=7). Dark matter = dark hadron (mu dark quarks) at Lambda_dark. Falsifiable: DM is a confined hidden-SU(4) bound state. Relic mass needs UV matching (not derived).",
+  "sources": [
+    "1-loop beta_0=(11Nc-2Nf)/3; conformal window N_f<11Nc/2; Pati-Salam SU(4); E8=SO(16)+128, 128=(16,4)+(16bar,4bar); w33_dark_sector_128.py; corpus m_DM~22.8 GeV"
+  ]
+}
