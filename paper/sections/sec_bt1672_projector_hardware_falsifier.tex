@@ -140,8 +140,39 @@ The resulting two-port logical QSVT/LCU mass is
 \boxed{2.5439453125},
 \]
 namely $1.2939453125$ for the resonance port and $1.25$ for the companion port.
-This is an exact bounded scalar-polynomial route, but the individual QSP phase
-angles still need to be synthesized before hardware execution.
+The Chebyshev-term phase schedules are exact at the term level:
+\[
+T_0:[],\quad T_1:[0],\quad T_2:[0,0],\quad T_3:[0,0,0],\quad T_4:[0,0,0,0].
+\]
+The whole-polynomial implementation is therefore a certified LCU of QSP terms;
+collapsed single-sequence phase lists are not claimed.
+
+The parity-routed hardware resource table has max tensor depth $7$.  The
+resonance port has mass $1.2939453125$, $12$ term products, and placeholder SNR
+$37.034240801677326$.  The companion port has mass $1.25$, $12$ term products,
+and placeholder SNR $37.33164132928002$.  Abstract LCU success accounting gives
+\[
+p_{\rm res}=0.597413338718975,
+\qquad
+p_{\rm comp}=0.64.
+\]
+The corresponding unamplified effective SNRs are
+\[
+28.625716516580017,
+\qquad
+29.865313063424016.
+\]
+A monolithic two-port LCU with mass $2.5439453125$ has success probability
+\[
+0.1544685004281349
+\]
+and effective SNR
+\[
+14.557904134592752.
+\]
+Thus separate-port postselection is already high-success under placeholder
+assumptions, while a monolithic two-port selection should use extra shots or
+amplification in an actual run card.
 
 Phase precision reinforces the same conclusion.  With the first-order bound
 \[
@@ -195,18 +226,28 @@ Thus full support twirling kills the homological bridge.
 For an oriented bridge subspace, however, the automorphism-twirl result is the
 opposite and exactly what Schur's lemma predicts.  Let $P_B$ be the projector onto
 a fixed oriented 8-cycle bridge subspace inside $H_1$.  The automorphism average
-is numerically
+is
 \[
 \frac1{|G|}\sum_{g\in G}\rho(g)P_B\rho(g)^{-1}
-=\frac{8}{81}P_{H_1}
+=\frac{8}{81}P_{H_1}.
 \]
-with Frobenius error
+The exact character check removes the previous irreducibility caveat.  For each
+group element,
 \[
-1.0598553943057821\times10^{-14}.
+\chi_{H_1}(g)=f_E(g)-f_V(g)+1,
 \]
-Thus full symmetry averaging erases the chosen bridge basis but preserves its
-oriented $H_1$ trace as isotropic density.  This reconciles the support-twirl and
-subspace-twirl stories.
+and the value distribution
+\[
+-3^{(810)},\ -1^{(3240)},\ 0^{(16640)},\ 1^{(5184)},\ 9^{(45)},\ 81^{(1)}
+\]
+has square sum $25920$.  Hence
+\[
+\langle\chi_{H_1},\chi_{H_1}\rangle=1,
+\]
+so the $81$-dimensional Levi $H_1$ character is irreducible over $\mathbb C$ for
+the generated projective symplectic action.  Full symmetry averaging erases the
+chosen bridge basis but preserves its oriented $H_1$ trace as isotropic density.
+This reconciles the support-twirl and subspace-twirl stories.
 
 The falsifier chain is therefore precise.  First build the graph projectors as
 normalized walk-power or parity-routed QSVT/LCU ports.  Then run the $30$-strobe
@@ -219,11 +260,13 @@ P_{c,0}\otimes P_{m,30}\mapsto +1
 \]
 under the partial clock evolution at $\tau=\pi/6$.  A failure of this split,
 after calibrated loss, sign-flip, block-encoding normalization, QSVT parity
-routing, and phase-precision budgets are applied, falsifies the projector version
-of the clock--matter resonance.  (Witnesses:
+routing, ancilla success accounting, and phase-precision budgets are applied,
+falsifies the projector version of the clock--matter resonance.  (Witnesses:
 \texttt{analysis/bt1661\_projector\_hardware\_compiler.py},
 \texttt{analysis/bt1667\_calibrated\_loss\_sweep.py},
 \texttt{analysis/bt1673\_block\_encoding\_normalization\_audit.py},
 \texttt{analysis/bt1679\_parity\_valid\_qsvt\_phase\_compiler.py},
-\texttt{analysis/bt1680\_analytic\_sup\_norm\_certificate.py}, and
-\texttt{analysis/bt1681\_oriented\_bridge\_projector\_twirl.py}.)
+\texttt{analysis/bt1680\_analytic\_sup\_norm\_certificate.py},
+\texttt{analysis/bt1685\_qsp\_phase\_angle\_synthesis.py},
+\texttt{analysis/bt1688\_exact\_h1\_character\_irreducibility.py}, and
+\texttt{analysis/bt1689\_ancilla\_success\_accounting.py}.)
