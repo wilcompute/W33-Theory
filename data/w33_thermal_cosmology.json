@@ -1,0 +1,11 @@
+{
+  "kappa": 0.166667,
+  "gauss_bonnet": 40.0,
+  "T_GH": 1.9099,
+  "cc_sector_vq": 120,
+  "dim_SO16": 120,
+  "summary": "discrete de Sitter (kappa=2/k=1/6>0, Gauss-Bonnet sum=v); Gibbons-Hawking T_GH=k/2pi = modular-flow (thermal-time) temperature; de Sitter entropy A/mu; CC sector vq=120=dim SO(16) (E8=SO(16)+128). Time, temperature, and Lambda are one thermal fact; the arrow of time = de Sitter expansion.",
+  "sources": [
+    "Gibbons-Hawking de Sitter temperature/entropy; Ollivier-Ricci kappa=2/k=1/6 (corpus de Sitter); T_H=k/2pi (CCCLXXIII); w33_thermal_time_clock.py; E8=SO(16)+128"
+  ]
+}

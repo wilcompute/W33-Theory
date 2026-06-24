@@ -1,0 +1,12 @@
+{
+  "n_anyons": 42,
+  "abelian": 6,
+  "nonabelian": 36,
+  "total_quantum_dim": 24,
+  "2T_solvable": true,
+  "braiding_universal_alone": false,
+  "summary": "D(2T): 42 anyons = 6 abelian + 36 non-abelian (36=4*9 MUB layer); sum d^2 = 576 = |2T|^2, D = 24 = f. 2T solvable -> braiding non-universal (Mochon); universality needs magic = Wigner-negativity. Gauge curvature = Wigner negativity = topological magic: one resource, three pictures.",
+  "sources": [
+    "Kitaev quantum double; Mochon, Anyons from non-solvable groups (2003/2004); 2T=SL(2,3) solvable; Howard et al. contextuality=magic; w33_contextuality_is_the_fuel.py"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "embeddings": {
+    "(D8)_1=SO(16)_1": "8",
+    "(A8)_1=SU(9)_1": "8",
+    "(E6)_1 x (A2)_1": "8",
+    "(E7)_1 x (A1)_1": "8",
+    "(G2)_1 x (F4)_1": "8"
+  },
+  "c_sp4_12": 8,
+  "sp4_is_conformal_embedding_in_E8": false,
+  "gut_embedding": "E6 x SU(3)_color (248=78+162+8)",
+  "cc_embedding": "SO(16) dim 120 = vq",
+  "summary": "conformal embeddings into (E8)_1 (all c=8): SO(16) [CC sector dim 120=vq], SU(9) [9=q^2], E6xA2 [GUT E8->E6xSU(3)color, 248=78+162+8], E7xA1, G2xF4. sp(4)_12 has c=8 but is NOT a conformal subalgebra of E8 (distinct CFT, matter rung). The c=8 rung contains GUT + CC; q generations -> c=24.",
+  "sources": [
+    "Schellekens-Warner / Bais-Bouwknegt conformal embeddings into (E8)_1; E8 -> E6 x SU(3) GUT (248=78+162+8); E8=SO(16)+128; w33_wzw_generation_ladder.py, w33_thermal_cosmology.py"
+  ]
+}
