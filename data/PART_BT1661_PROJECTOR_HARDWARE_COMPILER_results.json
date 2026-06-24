@@ -1,0 +1,54 @@
+{
+  "theorem": "BT1661 Projector Hardware Compiler",
+  "projector_polynomials": {
+    "P_clock_6": {"1": 0.16666666666666666, "2": -0.14285714285714285, "3": 0.023809523809523808},
+    "P_clock_0": {"0": 1.0, "1": -1.0238095238095237, "2": 0.2857142857142857, "3": -0.023809523809523808},
+    "P_matter_24": {"1": 0.20833333333333334, "2": -0.006944444444444444},
+    "P_matter_30": {"1": -0.13333333333333333, "2": 0.005555555555555556}
+  },
+  "spectral_evaluation_checks": {
+    "P_clock_6": {"0.0": 0.0, "1.585786": 0.0, "4.414214": 0.0, "6.0": 1.0},
+    "P_clock_0": {"0.0": 1.0, "1.585786": 0.0, "4.414214": 0.0, "6.0": 0.0},
+    "P_matter_24": {"0.0": 0.0, "24.0": 1.0, "30.0": 0.0},
+    "P_matter_30": {"0.0": 0.0, "24.0": 0.0, "30.0": 1.0}
+  },
+  "compiled_schedule": {
+    "clock_power_block": {
+      "powers_required": [0, 1, 2, 3],
+      "primitive": "apply L_clock walk/block-encoding repeatedly on the 21-flag clock rail",
+      "coefficients": {
+        "P_clock_6": {"L": "1/6", "L2": "-1/7", "L3": "1/42"},
+        "P_clock_0": {"I": "1", "L": "-43/42", "L2": "2/7", "L3": "-1/42"}
+      }
+    },
+    "matter_power_block": {
+      "powers_required": [1, 2],
+      "primitive": "apply L_matter walk/block-encoding on the 40-mode matter rail",
+      "coefficients": {
+        "P_matter_24": {"L": "5/24", "L2": "-1/144"},
+        "P_matter_30": {"L": "-2/15", "L2": "1/180"}
+      }
+    },
+    "tensor_selectors": {
+      "resonance_rank_120": "P_clock_6 tensor P_matter_24",
+      "companion_rank_24": "P_clock_0 tensor P_matter_30"
+    },
+    "time_bin_lowering": [
+      "allocate clock flag rail: 21 logical flags embedded in the 2048-bin envelope",
+      "allocate matter rail: 40 logical matter modes embedded in the 2048-bin envelope",
+      "realize each graph Laplacian power by repeated switch/delay/walk passes",
+      "combine powers by LCU weights with analyzer phases matching the rational coefficients",
+      "postselect or amplitude-estimate the resonance and companion ports"
+    ]
+  },
+  "resource_counts": {
+    "clock_logical_modes": 21,
+    "matter_logical_modes": 40,
+    "time_bin_envelope": 2048,
+    "max_clock_walk_power": 3,
+    "max_matter_walk_power": 2,
+    "resonance_rank": 120,
+    "companion_rank": 24
+  },
+  "boundary": "This compiles graph projectors to a walk-power/LCU schedule. It does not yet choose physical loss numbers for each switch or delay line."
+}
