@@ -4599,6 +4599,62 @@ the binary doily/hexagon ladder to the qutrit Hesse/W33 packet.  (Witnesses:
 \path{analysis/bt1708_hexagon_tomotope_contextual_bus.py}, and
 \path{analysis/bt1709_binary_to_hesse_qutrit_crossover.py}.)
 
+\subsection{The \texorpdfstring{$\{3,7\}$}{(3,7)} Hurwitz tower and the genus-7 crossover}
+
+The genus $2\le g\le 14$ polyhedral-embedding survey of Bokowski and H.\ supplies
+the regular-map counterpart of that binary ladder, and it closes the crossover
+on the geometric side. Its all-triangle $\{3,7\}$ maps (Table~1 there: Klein,
+Macbeath, and the Hurwitz triplet) are precisely the first three \emph{Hurwitz
+surfaces}---the maximally symmetric surfaces of their genus---and they form an
+exact tower:
+\[
+\begin{array}{c|c|c|c}
+g & (V,E,F) & \hbox{rotation }\mathrm{Aut} & q\\
+\hline
+3  & (24,84,56)   & \mathrm{PSL}(2,7)  = 168  & 7 \\
+7  & (72,252,168) & \mathrm{PSL}(2,8)  = 504  & 8 \\
+14 & (156,546,364)& \mathrm{PSL}(2,13) = 1092 & 13
+\end{array}
+\]
+For any $\{3,7\}$ map $V=12(g-1)$, $E=42(g-1)$, $F=28(g-1)$, and the
+orientation-preserving automorphism group has order $84(g-1)=2E$ (the dart
+count), so $g=1+|\mathrm{Aut}|/84$.
+
+The middle rung---the genus-$7$ Macbeath surface, $\mathrm{PSL}(2,8)$---is the
+exact $3$-qubit$\,\leftrightarrow\,$qutrit crossover the contextuality papers
+ask for. Its combinatorics are pure substrate:
+\[
+  V=72=\hbox{the packet/frame clock},\qquad
+  E=252=\tau,\qquad
+  F=168=\lambda k\Phi_6=\mathrm{PSL}(2,7),
+\]
+i.e.\ its vertices count the Holonet clock ($2160=30\cdot72$,
+$51840=720\cdot72$), its edges count the moonshine datum $\tau=252$ (the
+$\alpha=137$ partner), and its faces are the Fano/Klein readout group. Hence
+\[
+  F\cdot V = 168\cdot72 = 12096 = |\mathrm{G}_2(2)|
+           = |\mathrm{Aut}(\hbox{split Cayley hexagon})|
+           = \mathrm{PSL}(2,8)\cdot f = 504\cdot24,
+\]
+so the genus-$7$ surface's $(\hbox{faces})\times(\hbox{vertices})$ is exactly the
+automorphism order of the three-qubit contextuality core of the previous
+subsection; its derived group $\mathrm{G}_2(2)'=\mathrm{PSU}(3,3)$ has order
+$6048=\tau\cdot f$.
+
+The three Hurwitz moduli are the crossover made arithmetic:
+\[
+  \{7,8,13\}=\{\Phi_6,\ 2^3,\ \Phi_3\}.
+\]
+The flanks $\Phi_6=7$ and $\Phi_3=13$ are the qutrit cyclotomic primitives (the
+heptagon/torus clock layer, and the Eisenstein norm prime $\mathrm{PG}(2,3)=13$
+of \S BT1709), while the middle modulus $2^3=8=\mathrm{GF}(8)$ is precisely the
+\emph{three-qubit dimension}. So the binary three-qubit rung sits between the two
+ternary flanks, and the dimension-$14$ exceptional group $\mathrm G_2$
+($\dim\mathrm G_2=14=2\Phi_6=$ the top genus) governs both ends---the genus-$14$
+Hurwitz triplet and, via $\mathrm G_2(2)$, the genus-$7$ three-qubit hexagon. The
+binary--ternary crossover is a single $\{3,7\}$ tower threaded by the heptagon
+$\Phi_6$. (Witness: \path{analysis/w33_hurwitz_tower_qubit_crossover.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

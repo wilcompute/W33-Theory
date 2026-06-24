@@ -1,0 +1,54 @@
+{
+  "tower": {
+    "3": {
+      "V": 24,
+      "E": 84,
+      "F": 56,
+      "chi": -4,
+      "q": 7,
+      "rot_aut": 168
+    },
+    "7": {
+      "V": 72,
+      "E": 252,
+      "F": 168,
+      "chi": -12,
+      "q": 8,
+      "rot_aut": 504
+    },
+    "14": {
+      "V": 156,
+      "E": 546,
+      "F": 364,
+      "chi": -26,
+      "q": 13,
+      "rot_aut": 1092
+    }
+  },
+  "moduli": {
+    "g3": "Phi6=7",
+    "g7": "2^3=8 (3 qubits)",
+    "g14": "Phi3=13"
+  },
+  "macbeath_dictionary": {
+    "V": "72 = frame/packet clock",
+    "E": "252 = tau (Suzuki datum)",
+    "F": "168 = lambda*k*Phi6 = PSL(2,7) readout"
+  },
+  "crossover_12096": {
+    "FxV_macbeath": 12096,
+    "psl28_times_f": 12096,
+    "phi6_times_jfiber": 12096,
+    "g2_2_prime_is_tau_times_f": 6048
+  },
+  "dim_G2": 14,
+  "g_minus_1_ladder": {
+    "g3": "lambda=2",
+    "g7": "6 = A2 shell",
+    "g14": "Phi3=13"
+  },
+  "summary": "the {3,7} Hurwitz tower (genus 3,7,14 = Klein/Macbeath/triplet) is the substrate readout ladder: V=12(g-1), E=42(g-1), F=28(g-1), rot Aut=84(g-1)=PSL(2,q) for q in {7,8,13}={Phi6,2^3,Phi3}, g=1+|Aut|/84. Genus-7 Macbeath = the 3-qubit<->qutrit crossover: V=72=frame, E=252=tau, F=168=lambda*k*Phi6=PSL(2,7) readout; F*V=168*72=12096=|G2(2)|=|Aut(split Cayley hexagon)|=PSL(2,8)*f (BT1707 3-qubit core); G2(2)'=6048=tau*f. Moduli q=2^3 (3 qubits) is the binary bridge between the qutrit cyclotomic flanks Phi6,Phi3; dim G2 = 14 = 2*Phi6 = top genus governs both ends.",
+  "sources": [
+    "Bokowski & H. (CodeParade), Polyhedral Embeddings of Triangular Regular Maps of Genus g, 2<=g<=14, Symmetry 2025, 17, 622, Table 1 (R3.1 Klein, R7.1 Macbeath/Hurwitz, R14.1-3 Hurwitz triplet); PSL(2,q) Hurwitz groups q=7,8,13; |G2(2)|=12096 split Cayley hexagon; bt1707_qubit_contextuality_ladder.py (12096=168*72), w33_klein_quartic_genus3.py, w33_genus_ladder_clock.py, w33_toroidal_elkies_theta_heat_bridge.py (A2 shell 6, level 3); tau=252, frame=72, readout 168=lambda*k*Phi6."
+  ]
+}
