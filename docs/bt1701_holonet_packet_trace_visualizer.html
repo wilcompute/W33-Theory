@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BT1701 Holonet Packet Trace</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; color: #0f172a; background: #f8fafc; }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 48px; }
+    h1 { font-size: 28px; margin: 0 0 8px; }
+    p { line-height: 1.55; }
+    .panel { background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin: 18px 0; }
+    .packet-svg { width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: 14px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 8px; text-align: left; font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>BT1701 Holonet Packet Trace</h1>
+  <p>The finite packet is shown as the verified 72-tick ABI: 48 body ticks and
+  24 guard/Hesse ticks, lowered onto the physical frame stages from BT1699.</p>
+  <section class="panel">
+    <svg class="packet-svg" viewBox="0 0 908 92" role="img" aria-label="72 tick Holonet packet trace">
+<rect x="0" y="0" width="100%" height="100%" fill="#f8fafc"/>
+<rect class="tick source_switch" x="24" y="28" width="11" height="20" fill="#2563eb"><title>tick 0: LOAD_FLAG / source switch</title></rect>
+<text x="24" y="18" font-size="8" text-anchor="middle" fill="#334155">0</text>
+<rect class="tick source_switch" x="36" y="28" width="11" height="20" fill="#2563eb"><title>tick 1: FLIP_Q6_AXIS / source switch</title></rect>
+<rect class="tick source_switch" x="48" y="28" width="11" height="20" fill="#2563eb"><title>tick 2: LATCH_VERTEX / source switch</title></rect>
+<rect class="tick source_switch" x="60" y="28" width="11" height="20" fill="#2563eb"><title>tick 3: LOAD_FLAG / source switch</title></rect>
+<rect class="tick source_switch" x="72" y="28" width="11" height="20" fill="#2563eb"><title>tick 4: FLIP_Q6_AXIS / source switch</title></rect>
+<rect class="tick source_switch" x="84" y="28" width="11" height="20" fill="#2563eb"><title>tick 5: LATCH_VERTEX / source switch</title></rect>
+<rect class="tick source_switch" x="96" y="28" width="11" height="20" fill="#2563eb"><title>tick 6: LOAD_FLAG / source switch</title></rect>
+<rect class="tick source_switch" x="108" y="28" width="11" height="20" fill="#2563eb"><title>tick 7: FLIP_Q6_AXIS / source switch</title></rect>
+<rect class="tick program_delay" x="120" y="28" width="11" height="20" fill="#7c3aed"><title>tick 8: LATCH_VERTEX / program delay</title></rect>
+<text x="120" y="18" font-size="8" text-anchor="middle" fill="#334155">8</text>
+<rect class="tick program_delay" x="132" y="28" width="11" height="20" fill="#7c3aed"><title>tick 9: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="144" y="28" width="11" height="20" fill="#7c3aed"><title>tick 10: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="156" y="28" width="11" height="20" fill="#7c3aed"><title>tick 11: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="168" y="28" width="11" height="20" fill="#7c3aed"><title>tick 12: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="180" y="28" width="11" height="20" fill="#7c3aed"><title>tick 13: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="192" y="28" width="11" height="20" fill="#7c3aed"><title>tick 14: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="204" y="28" width="11" height="20" fill="#7c3aed"><title>tick 15: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="216" y="28" width="11" height="20" fill="#7c3aed"><title>tick 16: FLIP_Q6_AXIS / program delay</title></rect>
+<text x="216" y="18" font-size="8" text-anchor="middle" fill="#334155">16</text>
+<rect class="tick program_delay" x="228" y="28" width="11" height="20" fill="#7c3aed"><title>tick 17: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="240" y="28" width="11" height="20" fill="#7c3aed"><title>tick 18: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="252" y="28" width="11" height="20" fill="#7c3aed"><title>tick 19: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="264" y="28" width="11" height="20" fill="#7c3aed"><title>tick 20: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="276" y="28" width="11" height="20" fill="#7c3aed"><title>tick 21: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="288" y="28" width="11" height="20" fill="#7c3aed"><title>tick 22: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="300" y="28" width="11" height="20" fill="#7c3aed"><title>tick 23: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="312" y="28" width="11" height="20" fill="#7c3aed"><title>tick 24: LOAD_FLAG / program delay</title></rect>
+<text x="312" y="18" font-size="8" text-anchor="middle" fill="#334155">24</text>
+<rect class="tick program_delay" x="324" y="28" width="11" height="20" fill="#7c3aed"><title>tick 25: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="336" y="28" width="11" height="20" fill="#7c3aed"><title>tick 26: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="348" y="28" width="11" height="20" fill="#7c3aed"><title>tick 27: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="360" y="28" width="11" height="20" fill="#7c3aed"><title>tick 28: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick program_delay" x="372" y="28" width="11" height="20" fill="#7c3aed"><title>tick 29: LATCH_VERTEX / program delay</title></rect>
+<rect class="tick program_delay" x="384" y="28" width="11" height="20" fill="#7c3aed"><title>tick 30: LOAD_FLAG / program delay</title></rect>
+<rect class="tick program_delay" x="396" y="28" width="11" height="20" fill="#7c3aed"><title>tick 31: FLIP_Q6_AXIS / program delay</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="408" y="28" width="11" height="20" fill="#059669"><title>tick 32: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<text x="408" y="18" font-size="8" text-anchor="middle" fill="#334155">32</text>
+<rect class="tick analyzer_or_fuel_body" x="420" y="28" width="11" height="20" fill="#059669"><title>tick 33: LOAD_FLAG / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="432" y="28" width="11" height="20" fill="#059669"><title>tick 34: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="444" y="28" width="11" height="20" fill="#059669"><title>tick 35: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="456" y="28" width="11" height="20" fill="#059669"><title>tick 36: LOAD_FLAG / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="468" y="28" width="11" height="20" fill="#059669"><title>tick 37: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="480" y="28" width="11" height="20" fill="#059669"><title>tick 38: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="492" y="28" width="11" height="20" fill="#059669"><title>tick 39: LOAD_FLAG / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="504" y="28" width="11" height="20" fill="#059669"><title>tick 40: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>
+<text x="504" y="18" font-size="8" text-anchor="middle" fill="#334155">40</text>
+<rect class="tick analyzer_or_fuel_body" x="516" y="28" width="11" height="20" fill="#059669"><title>tick 41: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="528" y="28" width="11" height="20" fill="#059669"><title>tick 42: LOAD_FLAG / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="540" y="28" width="11" height="20" fill="#059669"><title>tick 43: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="552" y="28" width="11" height="20" fill="#059669"><title>tick 44: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="564" y="28" width="11" height="20" fill="#059669"><title>tick 45: LOAD_FLAG / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="576" y="28" width="11" height="20" fill="#059669"><title>tick 46: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>
+<rect class="tick analyzer_or_fuel_body" x="588" y="28" width="11" height="20" fill="#059669"><title>tick 47: LATCH_VERTEX / analyzer or fuel body</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="600" y="56" width="11" height="20" fill="#d97706"><title>tick 48: ERASE / detector or hesse handoff</title></rect>
+<text x="600" y="18" font-size="8" text-anchor="middle" fill="#334155">48</text>
+<rect class="tick detector_or_hesse_handoff" x="612" y="56" width="11" height="20" fill="#d97706"><title>tick 49: ROUTE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="624" y="56" width="11" height="20" fill="#d97706"><title>tick 50: PHASE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="636" y="56" width="11" height="20" fill="#d97706"><title>tick 51: X-CORR / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="648" y="56" width="11" height="20" fill="#d97706"><title>tick 52: Z-CORR / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="660" y="56" width="11" height="20" fill="#d97706"><title>tick 53: T-BIT / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="672" y="56" width="11" height="20" fill="#d97706"><title>tick 54: RESTORE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="684" y="56" width="11" height="20" fill="#d97706"><title>tick 55: NEXT / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="696" y="56" width="11" height="20" fill="#d97706"><title>tick 56: ERASE / detector or hesse handoff</title></rect>
+<text x="696" y="18" font-size="8" text-anchor="middle" fill="#334155">56</text>
+<rect class="tick detector_or_hesse_handoff" x="708" y="56" width="11" height="20" fill="#d97706"><title>tick 57: ROUTE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="720" y="56" width="11" height="20" fill="#d97706"><title>tick 58: PHASE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="732" y="56" width="11" height="20" fill="#d97706"><title>tick 59: X-CORR / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="744" y="56" width="11" height="20" fill="#d97706"><title>tick 60: Z-CORR / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="756" y="56" width="11" height="20" fill="#d97706"><title>tick 61: T-BIT / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="768" y="56" width="11" height="20" fill="#d97706"><title>tick 62: RESTORE / detector or hesse handoff</title></rect>
+<rect class="tick detector_or_hesse_handoff" x="780" y="56" width="11" height="20" fill="#d97706"><title>tick 63: NEXT / detector or hesse handoff</title></rect>
+<rect class="tick dark_reference" x="792" y="56" width="11" height="20" fill="#475569"><title>tick 64: ERASE / dark reference</title></rect>
+<text x="792" y="18" font-size="8" text-anchor="middle" fill="#334155">64</text>
+<rect class="tick dark_reference" x="804" y="56" width="11" height="20" fill="#475569"><title>tick 65: ROUTE / dark reference</title></rect>
+<rect class="tick dark_reference" x="816" y="56" width="11" height="20" fill="#475569"><title>tick 66: PHASE / dark reference</title></rect>
+<rect class="tick dark_reference" x="828" y="56" width="11" height="20" fill="#475569"><title>tick 67: X-CORR / dark reference</title></rect>
+<rect class="tick dark_reference" x="840" y="56" width="11" height="20" fill="#475569"><title>tick 68: Z-CORR / dark reference</title></rect>
+<rect class="tick dark_reference" x="852" y="56" width="11" height="20" fill="#475569"><title>tick 69: T-BIT / dark reference</title></rect>
+<rect class="tick dark_reference" x="864" y="56" width="11" height="20" fill="#475569"><title>tick 70: RESTORE / dark reference</title></rect>
+<rect class="tick dark_reference" x="876" y="56" width="11" height="20" fill="#475569"><title>tick 71: NEXT / dark reference</title></rect>
+<text x="8" y="43" font-size="9" fill="#0f172a">body</text>
+<text x="8" y="71" font-size="9" fill="#0f172a">guard</text>
+<text x="24" y="88" font-size="9" fill="#334155">72 = 48 body ticks + 24 Hesse/guard ticks; colors are hardware stages</text>
+</svg>
+    <div class="legend"><span class="legend-item"><span class="swatch" style="background:#2563eb"></span>source switch</span>
+<span class="legend-item"><span class="swatch" style="background:#7c3aed"></span>program delay</span>
+<span class="legend-item"><span class="swatch" style="background:#059669"></span>analyzer or fuel body</span>
+<span class="legend-item"><span class="swatch" style="background:#d97706"></span>detector or hesse handoff</span>
+<span class="legend-item"><span class="swatch" style="background:#475569"></span>dark reference</span></div>
+  </section>
+  <section class="panel">
+    <h2>Compiler Law</h2>
+    <table>
+      <tr><th>quantity</th><th>law</th></tr>
+      <tr><td>packet count</td><td><code>N(n) = 40^n</code></td></tr>
+      <tr><td>commit clock</td><td><code>T(n) = 72*40^n</code></td></tr>
+      <tr><td>scheduler</td><td><code>S(n)=45*48*40^n = 2160*40^n</code></td></tr>
+      <tr><td>supercycle</td><td><code>C(n)=24*45*48*40^n = 51840*40^n</code></td></tr>
+    </table>
+  </section>
+  <section class="panel">
+    <h2>Guard Weld</h2>
+    <p>The 24-row interface is port flag <code>168+i</code>, CSS edge row
+    <code>216+i</code>, and D4 magic aperture <code>i</code> for
+    <code>0 &lt;= i &lt; 24</code>.</p>
+  </section>
+</main>
+</body>
+</html>

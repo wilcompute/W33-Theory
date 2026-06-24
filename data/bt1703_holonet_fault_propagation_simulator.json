@@ -1,0 +1,1052 @@
+{
+  "breakthrough": "Every symbolic loss, dark-click, and parity fault in the lowered packet ABI has a finite exit: local termination, retry/reprogram, or CSS syndrome handoff.",
+  "checks": {
+    "all_faults_classified": true,
+    "bt1699_verified": true,
+    "dark_clicks_are_last_eight_ticks": true,
+    "dark_faults_terminate_locally": true,
+    "loss_fault_on_every_tick": true,
+    "no_unhandled_exit": true,
+    "parity_faults_cover_24_guard_weld_rows": true,
+    "parity_faults_enter_css_handoff": true,
+    "payload_loss_faults_retry_or_reprogram": true
+  },
+  "claim_boundary": [
+    "This is a symbolic ABI fault table, not a stochastic noise model.",
+    "No calibrated loss rate, dark-count probability, detector efficiency, or threshold is claimed."
+  ],
+  "fault_exit_policy": {
+    "DARK_CLICK": "local dark-reference termination",
+    "LOSS": "retry frame or local reprogram retry; dark-window loss closes locally",
+    "PARITY": "CSS syndrome handoff through the 24-row guard weld"
+  },
+  "fault_rows": [
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_00",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 0
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_01",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 1
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_02",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 2
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_03",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 3
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_04",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 4
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_05",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 5
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_06",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 6
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_07",
+      "fault_type": "LOSS",
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 7
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_08",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 8
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_09",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 9
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_10",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 10
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_11",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 11
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_12",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 12
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_13",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 13
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_14",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 14
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_15",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 15
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_16",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 16
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_17",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 17
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_18",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 18
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_19",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 19
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_20",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 20
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_21",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 21
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_22",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 22
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_23",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 23
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_24",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 24
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_25",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 25
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_26",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 26
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_27",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 27
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_28",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 28
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_29",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 29
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_30",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 30
+    },
+    {
+      "exit": "LOCAL_REPROGRAM_RETRY",
+      "fault_id": "LOSS_TICK_31",
+      "fault_type": "LOSS",
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 31
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_32",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 32
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_33",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 33
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_34",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 34
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_35",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 35
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_36",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 36
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_37",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 37
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_38",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 38
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_39",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 39
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_40",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 40
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_41",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 41
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_42",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 42
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_43",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 43
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_44",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 44
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_45",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 45
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_46",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 46
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_47",
+      "fault_type": "LOSS",
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 47
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_48",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ERASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 48
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_49",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ROUTE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 49
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_50",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "PHASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 50
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_51",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "X-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 51
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_52",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "Z-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 52
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_53",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "T-BIT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 53
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_54",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "RESTORE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 54
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_55",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "NEXT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 55
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_56",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ERASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 56
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_57",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ROUTE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 57
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_58",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "PHASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 58
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_59",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "X-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 59
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_60",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "Z-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 60
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_61",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "T-BIT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 61
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_62",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "RESTORE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 62
+    },
+    {
+      "exit": "RETRY_FRAME",
+      "fault_id": "LOSS_TICK_63",
+      "fault_type": "LOSS",
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "NEXT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 63
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_64",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "ERASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 64
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_64",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "ERASE",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 64
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_65",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "ROUTE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 65
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_65",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "ROUTE",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 65
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_66",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "PHASE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 66
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_66",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "PHASE",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 66
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_67",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "X-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 67
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_67",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "X-CORR",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 67
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_68",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "Z-CORR",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 68
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_68",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "Z-CORR",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 68
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_69",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "T-BIT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 69
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_69",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "T-BIT",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 69
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_70",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "RESTORE",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 70
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_70",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "RESTORE",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 70
+    },
+    {
+      "exit": "LOCAL_DARK_CLOSEOUT",
+      "fault_id": "LOSS_TICK_71",
+      "fault_type": "LOSS",
+      "hardware_stage": "dark_reference",
+      "logical_op": "NEXT",
+      "reason": "symbolic loss hook on every lowered packet tick",
+      "tick": 71
+    },
+    {
+      "exit": "LOCAL_DARK_REFERENCE_TERMINATION",
+      "fault_id": "DARK_CLICK_TICK_71",
+      "fault_type": "DARK_CLICK",
+      "hardware_stage": "dark_reference",
+      "logical_op": "NEXT",
+      "reason": "dark-reference closeout bins terminate locally",
+      "tick": 71
+    },
+    {
+      "css_edge_index": 216,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_00",
+      "fault_type": "PARITY",
+      "guard_slot": 0,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 0,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 168
+    },
+    {
+      "css_edge_index": 217,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_01",
+      "fault_type": "PARITY",
+      "guard_slot": 1,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 1,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 169
+    },
+    {
+      "css_edge_index": 218,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_02",
+      "fault_type": "PARITY",
+      "guard_slot": 2,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 2,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 170
+    },
+    {
+      "css_edge_index": 219,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_03",
+      "fault_type": "PARITY",
+      "guard_slot": 3,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 3,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 171
+    },
+    {
+      "css_edge_index": 220,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_04",
+      "fault_type": "PARITY",
+      "guard_slot": 4,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 4,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 172
+    },
+    {
+      "css_edge_index": 221,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_05",
+      "fault_type": "PARITY",
+      "guard_slot": 5,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 5,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 173
+    },
+    {
+      "css_edge_index": 222,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_06",
+      "fault_type": "PARITY",
+      "guard_slot": 6,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 6,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 174
+    },
+    {
+      "css_edge_index": 223,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_07",
+      "fault_type": "PARITY",
+      "guard_slot": 7,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 7,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 175
+    },
+    {
+      "css_edge_index": 224,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_08",
+      "fault_type": "PARITY",
+      "guard_slot": 8,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 8,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 176
+    },
+    {
+      "css_edge_index": 225,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_09",
+      "fault_type": "PARITY",
+      "guard_slot": 9,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 9,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 177
+    },
+    {
+      "css_edge_index": 226,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_10",
+      "fault_type": "PARITY",
+      "guard_slot": 10,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 10,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 178
+    },
+    {
+      "css_edge_index": 227,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_11",
+      "fault_type": "PARITY",
+      "guard_slot": 11,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 11,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 179
+    },
+    {
+      "css_edge_index": 228,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_12",
+      "fault_type": "PARITY",
+      "guard_slot": 12,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 12,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 180
+    },
+    {
+      "css_edge_index": 229,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_13",
+      "fault_type": "PARITY",
+      "guard_slot": 13,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 13,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 181
+    },
+    {
+      "css_edge_index": 230,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_14",
+      "fault_type": "PARITY",
+      "guard_slot": 14,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 14,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 182
+    },
+    {
+      "css_edge_index": 231,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_15",
+      "fault_type": "PARITY",
+      "guard_slot": 15,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 15,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 183
+    },
+    {
+      "css_edge_index": 232,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_16",
+      "fault_type": "PARITY",
+      "guard_slot": 16,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 16,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 184
+    },
+    {
+      "css_edge_index": 233,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_17",
+      "fault_type": "PARITY",
+      "guard_slot": 17,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 17,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 185
+    },
+    {
+      "css_edge_index": 234,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_18",
+      "fault_type": "PARITY",
+      "guard_slot": 18,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 18,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 186
+    },
+    {
+      "css_edge_index": 235,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_19",
+      "fault_type": "PARITY",
+      "guard_slot": 19,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 19,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 187
+    },
+    {
+      "css_edge_index": 236,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_20",
+      "fault_type": "PARITY",
+      "guard_slot": 20,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 20,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 188
+    },
+    {
+      "css_edge_index": 237,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_21",
+      "fault_type": "PARITY",
+      "guard_slot": 21,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 21,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 189
+    },
+    {
+      "css_edge_index": 238,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_22",
+      "fault_type": "PARITY",
+      "guard_slot": 22,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 22,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 190
+    },
+    {
+      "css_edge_index": 239,
+      "exit": "CSS_SYNDROME_HANDOFF",
+      "fault_id": "PARITY_GUARD_23",
+      "fault_type": "PARITY",
+      "guard_slot": 23,
+      "hardware_stage": "q4_css_d4_guard_weld",
+      "magic_resource_aperture": 23,
+      "reason": "guard weld parity faults enter the CSS edge ledger",
+      "tick": null,
+      "tomotope_flag": 191
+    }
+  ],
+  "histograms": {
+    "exit": {
+      "CSS_SYNDROME_HANDOFF": 24,
+      "LOCAL_DARK_CLOSEOUT": 8,
+      "LOCAL_DARK_REFERENCE_TERMINATION": 8,
+      "LOCAL_REPROGRAM_RETRY": 32,
+      "RETRY_FRAME": 32
+    },
+    "fault_type": {
+      "DARK_CLICK": 8,
+      "LOSS": 72,
+      "PARITY": 24
+    }
+  },
+  "source_certificates": [
+    "data/bt1699_holonet_abi_to_hardware_lowering.json"
+  ],
+  "theorem": "BT1703 Holonet Fault Propagation Simulator",
+  "verified": true
+}

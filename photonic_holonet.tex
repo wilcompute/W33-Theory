@@ -4240,6 +4240,54 @@ packet operating system recursively tiled by W(3,3).  (Witnesses:
 \path{analysis/bt1699_holonet_abi_to_hardware_lowering.py}, and
 \path{analysis/bt1700_recursive_holonet_packet_compiler.py}.)
 
+\subsection{BT1701--BT1703 runtime safety layer}
+
+The execution stack has three immediate runtime consequences.  First, BT1701
+renders the packet as an actual trace artifact at
+\path{docs/bt1701_holonet_packet_trace_visualizer.html}.
+The page is generated from the verifier data, not drawn by hand: every tick in
+the \(72\)-tick packet is colored by the physical stage
+\[
+  8+24+16+16+8,
+\]
+and the same page records the \(48/24\) split, the \(24\)-row guard weld, and
+the recursive compiler law.
+
+Second, BT1702 proves the scheduler boundary.  The collision-free recursive key is
+\[
+  \hbox{extended slot}
+  =\hbox{packet address}\cdot2160+\hbox{polar sheet}\cdot48+\hbox{body slot},
+  \qquad
+  \hbox{phase}=\hbox{body slot}\bmod 3.
+\]
+With this key, recursive packets do not collide.  If one intentionally reuses a
+single finite \(2160\)-slot physical bus, the packet address must become a time
+slice:
+\[
+  (\hbox{packet time slice},\hbox{local mirror slot},\hbox{phase}).
+\]
+This is the correct engineering boundary.  The recursive compiler gives a
+collision-free addressing fabric; it does not turn one finite bus into
+simultaneous infinite parallel hardware.
+
+Third, BT1703 classifies symbolic faults at the ABI boundary:
+\[
+\begin{array}{c|c}
+\hbox{fault} & \hbox{finite exit}\\
+\hline
+\hbox{loss} & \hbox{retry frame or local reprogram retry}\\
+\hbox{dark click} & \hbox{local dark-reference termination}\\
+\hbox{parity fault} & \hbox{CSS syndrome handoff}.
+\end{array}
+\]
+The verifier injects \(72\) loss hooks, \(8\) dark-reference clicks, and \(24\)
+guard-weld parity faults.  Every symbolic fault has one finite exit.  This is
+still not a stochastic noise model; it is the routing table that a calibrated
+noise model must plug into.  (Witnesses:
+\path{analysis/bt1701_holonet_packet_trace_visualizer.py},
+\path{analysis/bt1702_holonet_scheduler_collision_audit.py}, and
+\path{analysis/bt1703_holonet_fault_propagation_simulator.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

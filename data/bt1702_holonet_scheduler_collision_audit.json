@@ -1,0 +1,124 @@
+{
+  "breakthrough": "Recursive Holonet packets are collision-free on the extended (packet address, mirror slot, phase) scheduler key.  Reusing one finite 2160-slot physical bus is also collision-free when packet addresses are run as explicit time slices.",
+  "checks": {
+    "audits_cover_depths_0_to_3": true,
+    "bt1700_verified": true,
+    "extended_keys_are_collision_free": true,
+    "scheduler_slot_formula_matches_bt1700": true,
+    "shared_physical_bus_reuse_is_explicit": true,
+    "timesliced_shared_bus_is_collision_free": true
+  },
+  "depth_audits": [
+    {
+      "depth": 0,
+      "expected_keys": 2160,
+      "extended_collision_count": 0,
+      "extended_keys": 2160,
+      "packet_count": 1,
+      "sampled_packets": 1,
+      "shared_bus_reuse_sample": {
+        "0:0": 1,
+        "10:1": 1,
+        "11:2": 1,
+        "1:1": 1,
+        "2:2": 1,
+        "3:0": 1,
+        "4:1": 1,
+        "5:2": 1,
+        "6:0": 1,
+        "7:1": 1,
+        "8:2": 1,
+        "9:0": 1
+      },
+      "shared_physical_bus_reuse_per_slot_phase": 1,
+      "timesliced_collision_count": 0,
+      "timesliced_keys": 2160
+    },
+    {
+      "depth": 1,
+      "expected_keys": 86400,
+      "extended_collision_count": 0,
+      "extended_keys": 86400,
+      "packet_count": 40,
+      "sampled_packets": 40,
+      "shared_bus_reuse_sample": {
+        "0:0": 40,
+        "10:1": 40,
+        "11:2": 40,
+        "1:1": 40,
+        "2:2": 40,
+        "3:0": 40,
+        "4:1": 40,
+        "5:2": 40,
+        "6:0": 40,
+        "7:1": 40,
+        "8:2": 40,
+        "9:0": 40
+      },
+      "shared_physical_bus_reuse_per_slot_phase": 40,
+      "timesliced_collision_count": 0,
+      "timesliced_keys": 86400
+    },
+    {
+      "depth": 2,
+      "expected_keys": 3456000,
+      "extended_collision_count": 0,
+      "extended_keys": 3456000,
+      "packet_count": 1600,
+      "sampled_packets": 1600,
+      "shared_bus_reuse_sample": {
+        "0:0": 1600,
+        "10:1": 1600,
+        "11:2": 1600,
+        "1:1": 1600,
+        "2:2": 1600,
+        "3:0": 1600,
+        "4:1": 1600,
+        "5:2": 1600,
+        "6:0": 1600,
+        "7:1": 1600,
+        "8:2": 1600,
+        "9:0": 1600
+      },
+      "shared_physical_bus_reuse_per_slot_phase": 1600,
+      "timesliced_collision_count": 0,
+      "timesliced_keys": 3456000
+    },
+    {
+      "depth": 3,
+      "expected_keys": 3456000,
+      "extended_collision_count": 0,
+      "extended_keys": 3456000,
+      "packet_count": 64000,
+      "sampled_packets": 1600,
+      "shared_bus_reuse_sample": {
+        "0:0": 1600,
+        "10:1": 1600,
+        "11:2": 1600,
+        "1:1": 1600,
+        "2:2": 1600,
+        "3:0": 1600,
+        "4:1": 1600,
+        "5:2": 1600,
+        "6:0": 1600,
+        "7:1": 1600,
+        "8:2": 1600,
+        "9:0": 1600
+      },
+      "shared_physical_bus_reuse_per_slot_phase": 1600,
+      "timesliced_collision_count": 0,
+      "timesliced_keys": 3456000
+    }
+  ],
+  "scheduler_key": {
+    "boundary": "Dropping packet address/time slice makes recursive packets reuse the same finite 2160 physical slots; that is a scheduling reuse, not simultaneous same-slot parallelism.",
+    "extended_slot": "packet_address*2160 + polar_sheet*48 + body_slot",
+    "phase": "body_slot mod 3",
+    "timesliced_shared_bus_key": "(packet_time_slice, local_mirror_slot, phase)"
+  },
+  "source_certificates": [
+    "data/bt1700_recursive_holonet_packet_compiler.json"
+  ],
+  "theorem": "BT1702 Holonet Scheduler Collision Audit",
+  "verified": true
+}

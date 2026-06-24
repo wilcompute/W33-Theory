@@ -2718,6 +2718,16 @@
               <code>S(n)=2160*40^n</code>.</div>
           </div>
           <div class="card">
+            <div class="label">Holonet Runtime Safety</div>
+            <div class="detail">BT1701-BT1703 make the packet inspectable and
+              schedulable: generated SVG/HTML renders the <code>72</code>-tick trace,
+              the scheduler is collision-free on
+              <code>packet*2160 + sheet*48 + slot</code> with explicit shared-bus
+              time slicing, and symbolic faults classify as
+              <code>72</code> loss hooks, <code>8</code> dark clicks, and
+              <code>24</code> parity handoffs.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

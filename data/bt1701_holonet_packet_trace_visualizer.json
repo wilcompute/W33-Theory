@@ -1,0 +1,610 @@
+{
+  "breakthrough": "The execution stack now has a rendered packet schematic: every tick, hardware stage, guard weld, and recursive scaling law is visible from one generated HTML/SVG artifact.",
+  "checks": {
+    "bt1699_verified": true,
+    "bt1700_verified": true,
+    "has_72_tick_cells": true,
+    "html_contains_svg_and_guard_weld": true,
+    "stage_histogram_matches_8_24_16_16_8": true,
+    "svg_contains_72_rectangles": true
+  },
+  "guard_weld_sample": [
+    {
+      "css_edge_index": 216,
+      "guard_slot": 0,
+      "magic_resource_aperture": 0,
+      "q4_plaquette": 0,
+      "quartic_atom": 0,
+      "quartic_branch": 0,
+      "qutrit_phase": 0,
+      "tomotope_flag": 168
+    },
+    {
+      "css_edge_index": 217,
+      "guard_slot": 1,
+      "magic_resource_aperture": 1,
+      "q4_plaquette": 1,
+      "quartic_atom": 0,
+      "quartic_branch": 0,
+      "qutrit_phase": 1,
+      "tomotope_flag": 169
+    },
+    {
+      "css_edge_index": 218,
+      "guard_slot": 2,
+      "magic_resource_aperture": 2,
+      "q4_plaquette": 2,
+      "quartic_atom": 0,
+      "quartic_branch": 0,
+      "qutrit_phase": 2,
+      "tomotope_flag": 170
+    },
+    {
+      "css_edge_index": 219,
+      "guard_slot": 3,
+      "magic_resource_aperture": 3,
+      "q4_plaquette": 3,
+      "quartic_atom": 0,
+      "quartic_branch": 1,
+      "qutrit_phase": 0,
+      "tomotope_flag": 171
+    },
+    {
+      "css_edge_index": 220,
+      "guard_slot": 4,
+      "magic_resource_aperture": 4,
+      "q4_plaquette": 4,
+      "quartic_atom": 0,
+      "quartic_branch": 1,
+      "qutrit_phase": 1,
+      "tomotope_flag": 172
+    },
+    {
+      "css_edge_index": 221,
+      "guard_slot": 5,
+      "magic_resource_aperture": 5,
+      "q4_plaquette": 5,
+      "quartic_atom": 0,
+      "quartic_branch": 1,
+      "qutrit_phase": 2,
+      "tomotope_flag": 173
+    }
+  ],
+  "html_output": "docs/bt1701_holonet_packet_trace_visualizer.html",
+  "recursive_law": {
+    "body_guard_split": "B(n)=48*40^n, G(n)=24*40^n, B(n)=2G(n)",
+    "commit_clock": "T(n) = 72*40^n",
+    "packet_count": "N(n) = 40^n",
+    "route_bound": "R(n) = 8n",
+    "scheduler": "S(n)=45*48*40^n = 2160*40^n",
+    "supercycle": "C(n)=24*45*48*40^n = 51840*40^n"
+  },
+  "source_certificates": [
+    "data/bt1698_holonet_packet_state_machine.json",
+    "data/bt1699_holonet_abi_to_hardware_lowering.json",
+    "data/bt1700_recursive_holonet_packet_compiler.json"
+  ],
+  "stage_colors": {
+    "analyzer_or_fuel_body": "#059669",
+    "dark_reference": "#475569",
+    "detector_or_hesse_handoff": "#d97706",
+    "program_delay": "#7c3aed",
+    "source_switch": "#2563eb"
+  },
+  "stage_histogram": {
+    "analyzer_or_fuel_body": 16,
+    "dark_reference": 8,
+    "detector_or_hesse_handoff": 16,
+    "program_delay": 24,
+    "source_switch": 8
+  },
+  "svg": "<svg class=\"packet-svg\" viewBox=\"0 0 908 92\" role=\"img\" aria-label=\"72 tick Holonet packet trace\">\n<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"#f8fafc\"/>\n<rect class=\"tick source_switch\" x=\"24\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 0: LOAD_FLAG / source switch</title></rect>\n<text x=\"24\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">0</text>\n<rect class=\"tick source_switch\" x=\"36\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 1: FLIP_Q6_AXIS / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"48\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 2: LATCH_VERTEX / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"60\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 3: LOAD_FLAG / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"72\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 4: FLIP_Q6_AXIS / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"84\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 5: LATCH_VERTEX / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"96\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 6: LOAD_FLAG / source switch</title></rect>\n<rect class=\"tick source_switch\" x=\"108\" y=\"28\" width=\"11\" height=\"20\" fill=\"#2563eb\"><title>tick 7: FLIP_Q6_AXIS / source switch</title></rect>\n<rect class=\"tick program_delay\" x=\"120\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 8: LATCH_VERTEX / program delay</title></rect>\n<text x=\"120\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">8</text>\n<rect class=\"tick program_delay\" x=\"132\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 9: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"144\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 10: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"156\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 11: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"168\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 12: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"180\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 13: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"192\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 14: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"204\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 15: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"216\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 16: FLIP_Q6_AXIS / program delay</title></rect>\n<text x=\"216\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">16</text>\n<rect class=\"tick program_delay\" x=\"228\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 17: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"240\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 18: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"252\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 19: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"264\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 20: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"276\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 21: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"288\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 22: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"300\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 23: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"312\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 24: LOAD_FLAG / program delay</title></rect>\n<text x=\"312\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">24</text>\n<rect class=\"tick program_delay\" x=\"324\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 25: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"336\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 26: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"348\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 27: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"360\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 28: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"372\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 29: LATCH_VERTEX / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"384\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 30: LOAD_FLAG / program delay</title></rect>\n<rect class=\"tick program_delay\" x=\"396\" y=\"28\" width=\"11\" height=\"20\" fill=\"#7c3aed\"><title>tick 31: FLIP_Q6_AXIS / program delay</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"408\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 32: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<text x=\"408\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">32</text>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"420\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 33: LOAD_FLAG / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"432\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 34: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"444\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 35: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"456\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 36: LOAD_FLAG / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"468\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 37: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"480\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 38: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"492\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 39: LOAD_FLAG / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"504\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 40: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>\n<text x=\"504\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">40</text>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"516\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 41: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"528\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 42: LOAD_FLAG / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"540\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 43: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"552\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 44: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"564\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 45: LOAD_FLAG / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"576\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 46: FLIP_Q6_AXIS / analyzer or fuel body</title></rect>\n<rect class=\"tick analyzer_or_fuel_body\" x=\"588\" y=\"28\" width=\"11\" height=\"20\" fill=\"#059669\"><title>tick 47: LATCH_VERTEX / analyzer or fuel body</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"600\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 48: ERASE / detector or hesse handoff</title></rect>\n<text x=\"600\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">48</text>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"612\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 49: ROUTE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"624\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 50: PHASE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"636\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 51: X-CORR / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"648\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 52: Z-CORR / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"660\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 53: T-BIT / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"672\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 54: RESTORE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"684\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 55: NEXT / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"696\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 56: ERASE / detector or hesse handoff</title></rect>\n<text x=\"696\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">56</text>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"708\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 57: ROUTE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"720\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 58: PHASE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"732\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 59: X-CORR / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"744\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 60: Z-CORR / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"756\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 61: T-BIT / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"768\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 62: RESTORE / detector or hesse handoff</title></rect>\n<rect class=\"tick detector_or_hesse_handoff\" x=\"780\" y=\"56\" width=\"11\" height=\"20\" fill=\"#d97706\"><title>tick 63: NEXT / detector or hesse handoff</title></rect>\n<rect class=\"tick dark_reference\" x=\"792\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 64: ERASE / dark reference</title></rect>\n<text x=\"792\" y=\"18\" font-size=\"8\" text-anchor=\"middle\" fill=\"#334155\">64</text>\n<rect class=\"tick dark_reference\" x=\"804\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 65: ROUTE / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"816\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 66: PHASE / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"828\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 67: X-CORR / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"840\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 68: Z-CORR / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"852\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 69: T-BIT / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"864\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 70: RESTORE / dark reference</title></rect>\n<rect class=\"tick dark_reference\" x=\"876\" y=\"56\" width=\"11\" height=\"20\" fill=\"#475569\"><title>tick 71: NEXT / dark reference</title></rect>\n<text x=\"8\" y=\"43\" font-size=\"9\" fill=\"#0f172a\">body</text>\n<text x=\"8\" y=\"71\" font-size=\"9\" fill=\"#0f172a\">guard</text>\n<text x=\"24\" y=\"88\" font-size=\"9\" fill=\"#334155\">72 = 48 body ticks + 24 Hesse/guard ticks; colors are hardware stages</text>\n</svg>",
+  "theorem": "BT1701 Holonet Packet Trace Visualizer",
+  "tick_cells": [
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 0,
+      "tomotope_flag": 159
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 1,
+      "tomotope_flag": 159
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 2,
+      "tomotope_flag": 159
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 3,
+      "tomotope_flag": 83
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 4,
+      "tomotope_flag": 83
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 5,
+      "tomotope_flag": 83
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 6,
+      "tomotope_flag": 84
+    },
+    {
+      "hardware_stage": "source_switch",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 7,
+      "tomotope_flag": 84
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 8,
+      "tomotope_flag": 84
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 9,
+      "tomotope_flag": 22
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 10,
+      "tomotope_flag": 22
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 11,
+      "tomotope_flag": 22
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 12,
+      "tomotope_flag": 13
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 13,
+      "tomotope_flag": 13
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 14,
+      "tomotope_flag": 13
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 15,
+      "tomotope_flag": 144
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 16,
+      "tomotope_flag": 144
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 17,
+      "tomotope_flag": 144
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 18,
+      "tomotope_flag": 135
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 19,
+      "tomotope_flag": 135
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 20,
+      "tomotope_flag": 135
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 21,
+      "tomotope_flag": 134
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 22,
+      "tomotope_flag": 134
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 23,
+      "tomotope_flag": 134
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 24,
+      "tomotope_flag": 58
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 25,
+      "tomotope_flag": 58
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 26,
+      "tomotope_flag": 58
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 27,
+      "tomotope_flag": 63
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 28,
+      "tomotope_flag": 63
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 29,
+      "tomotope_flag": 63
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 30,
+      "tomotope_flag": 112
+    },
+    {
+      "hardware_stage": "program_delay",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 31,
+      "tomotope_flag": 112
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 32,
+      "tomotope_flag": 112
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 33,
+      "tomotope_flag": 113
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 34,
+      "tomotope_flag": 113
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 35,
+      "tomotope_flag": 113
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 36,
+      "tomotope_flag": 44
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 37,
+      "tomotope_flag": 44
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 38,
+      "tomotope_flag": 44
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 39,
+      "tomotope_flag": 37
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 40,
+      "tomotope_flag": 37
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 41,
+      "tomotope_flag": 37
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 42,
+      "tomotope_flag": 73
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 43,
+      "tomotope_flag": 73
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 44,
+      "tomotope_flag": 73
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LOAD_FLAG",
+      "logical_region": "tomotope_body",
+      "tick": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "FLIP_Q6_AXIS",
+      "logical_region": "tomotope_body",
+      "tick": 46,
+      "tomotope_flag": 180
+    },
+    {
+      "hardware_stage": "analyzer_or_fuel_body",
+      "logical_op": "LATCH_VERTEX",
+      "logical_region": "tomotope_body",
+      "tick": 47,
+      "tomotope_flag": 180
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ERASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 48,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ROUTE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 49,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "PHASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 50,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "X-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 51,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "Z-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 52,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "T-BIT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 53,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "RESTORE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 54,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "NEXT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 55,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ERASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 56,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "ROUTE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 57,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "PHASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 58,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "X-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 59,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "Z-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 60,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "T-BIT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 61,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "RESTORE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 62,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "detector_or_hesse_handoff",
+      "logical_op": "NEXT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 63,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "ERASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 64,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "ROUTE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 65,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "PHASE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 66,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "X-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 67,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "Z-CORR",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 68,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "T-BIT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 69,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "RESTORE",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 70,
+      "tomotope_flag": null
+    },
+    {
+      "hardware_stage": "dark_reference",
+      "logical_op": "NEXT",
+      "logical_region": "local_lift_hesse_epilogue",
+      "tick": 71,
+      "tomotope_flag": null
+    }
+  ],
+  "verified": true
+}
