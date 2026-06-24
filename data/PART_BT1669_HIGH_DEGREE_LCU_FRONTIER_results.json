@@ -1,0 +1,24 @@
+{
+  "theorem": "BT1669 High-Degree LCU Tradeoff Frontier",
+  "method": "linear-program l1 minimization over polynomial coefficients, constrained to exact spectral interpolation",
+  "degree_ranges": {"clock": "3..9", "matter": "2..8"},
+  "frontier_best_by_total_depth": [
+    {"clock_degree": 3, "matter_degree": 2, "max_walk_depth": 5, "combined_l1": 0.3958333333333333, "survival_discounted_l1": 0.4120185906958491, "resonance_l1": 0.07175925925925926, "companion_l1": 0.32407407407407407},
+    {"clock_degree": 3, "matter_degree": 3, "max_walk_depth": 6, "combined_l1": 0.01379243827160492, "survival_discounted_l1": 0.014471927806952478, "resonance_l1": 0.002989969135802469, "companion_l1": 0.010802469135802469},
+    {"clock_degree": 3, "matter_degree": 4, "max_walk_depth": 7, "combined_l1": 0.00048466435185185125, "survival_discounted_l1": 0.0005126338804847113, "resonance_l1": 0.00012458204732510288, "companion_l1": 0.00036008230452674835},
+    {"clock_degree": 3, "matter_degree": 5, "max_walk_depth": 8, "combined_l1": 0.000017193662122770897, "survival_discounted_l1": 0.00001833223880619112, "resonance_l1": 0.000005190918638545954, "companion_l1": 0.000012002743484224943},
+    {"clock_degree": 3, "matter_degree": 6, "max_walk_depth": 9, "combined_l1": 0.0000006163797260802462, "survival_discounted_l1": 0.000000662485463349415, "resonance_l1": 0.00000021628827660608135, "companion_l1": 0.0000004000914494741648},
+    {"clock_degree": 3, "matter_degree": 7, "max_walk_depth": 10, "combined_l1": 0.000000022348393174392214, "survival_discounted_l1": 0.000000024213367894621718, "resonance_l1": 0.000000009012011525253284, "companion_l1": 0.00000001333638164913893},
+    {"clock_degree": 3, "matter_degree": 8, "max_walk_depth": 11, "combined_l1": 0.0000000008200465351901854, "survival_discounted_l1": 0.0000000008956292841458918, "resonance_l1": 0.0000000003755004802188913, "companion_l1": 0.0000000004445460549712941},
+    {"clock_degree": 4, "matter_degree": 8, "max_walk_depth": 12, "combined_l1": 0.0000000003967234470325142, "survival_discounted_l1": 0.00000000043677577769863757, "resonance_l1": 0.00000000005239541584491507, "companion_l1": 0.00000000034432803118759914},
+    {"clock_degree": 5, "matter_degree": 8, "max_walk_depth": 13, "combined_l1": 0.0000000003053477789468841, "survival_discounted_l1": 0.0000000003388803070920678, "resonance_l1": 0.000000000008732569307485843, "companion_l1": 0.00000000029661520963939824},
+    {"clock_degree": 6, "matter_degree": 8, "max_walk_depth": 14, "combined_l1": 0.0000000002611876780840694, "survival_discounted_l1": 0.0000000002922033165779694, "resonance_l1": 0.0000000000014554282179142982, "companion_l1": 0.0000000002597322498661551},
+    {"clock_degree": 7, "matter_degree": 8, "max_walk_depth": 15, "combined_l1": 0.00000000023497184846984034, "survival_discounted_l1": 0.00000000026498981350403025, "resonance_l1": 0.00000000000024257136965237068, "companion_l1": 0.00000000023472927710018796},
+    {"clock_degree": 8, "matter_degree": 8, "max_walk_depth": 16, "combined_l1": 0.00000000021857339296641894, "survival_discounted_l1": 0.00000000024848005232071897, "resonance_l1": 0.000000000000040428561608728446, "companion_l1": 0.0000000002185329644048102},
+    {"clock_degree": 9, "matter_degree": 8, "max_walk_depth": 17, "combined_l1": 0.00000000020822330410596202, "survival_discounted_l1": 0.00000000023861869114584497, "resonance_l1": 0.000000000000006738093601454739, "companion_l1": 0.00000000020821656601236057}
+  ],
+  "minimal_depth_baseline": {"clock_degree": 3, "matter_degree": 2, "max_walk_depth": 5, "combined_l1": 0.3958333333333333},
+  "best_reported_point": {"clock_degree": 9, "matter_degree": 8, "max_walk_depth": 17, "combined_l1": 0.00000000020822330410596202, "survival_discounted_l1": 0.00000000023861869114584497},
+  "interpretation": "Coefficient l1 mass falls rapidly with higher polynomial degree, especially on the matter side, because the matter eigenvalues 24 and 30 are large. Under the placeholder BT1664 per-walk survival, the algebraic frontier favors deeper projectors within the tested range.",
+  "boundary": "This is an algebraic LCU frontier. A physical optimizer must include block-encoding normalization, phase precision, calibration drift, and component-specific depth loss."
+}
