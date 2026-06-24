@@ -1,0 +1,27 @@
+{
+  "theorem": "BT1660 Timing Phase Table",
+  "tau_30": "pi/15",
+  "coupled_phases_at_tau_30": {
+    "0": {"real": 1.0, "imag": -0.0},
+    "1.585786": {"real": 0.945351, "imag": -0.326054},
+    "4.414214": {"real": 0.602225, "imag": -0.798326},
+    "6": {"real": 0.309017, "imag": -0.951057},
+    "24": {"real": 0.309017, "imag": 0.951057},
+    "25.585786": {"real": 0.602225, "imag": 0.798326},
+    "28.414214": {"real": 0.945351, "imag": 0.326054},
+    "30": {"real": 1.0, "imag": 0.0},
+    "31.585786": {"real": 0.945351, "imag": -0.326054},
+    "34.414214": {"real": 0.602225, "imag": -0.798326},
+    "36": {"real": 0.309017, "imag": -0.951057}
+  },
+  "clock_separator_tau": "pi/6",
+  "clock_separator": {
+    "clock_6_phase": {"real": -1.0, "imag": -0.0},
+    "clock_0_phase": {"real": 1.0, "imag": -0.0}
+  },
+  "matter_gap_tau": "pi/24",
+  "matter_gap_probe": {
+    "matter_24_phase": {"real": -1.0, "imag": -0.0},
+    "matter_30_phase": {"real": -0.707107, "imag": 0.707107}
+  }
+}
