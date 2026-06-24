@@ -1,0 +1,52 @@
+{
+  "axis_degrees": {
+    "('C', 0)": 4,
+    "('C', 1)": 4,
+    "('C', 2)": 4,
+    "('C', 3)": 4,
+    "('R', 0)": 4,
+    "('R', 1)": 4,
+    "('R', 2)": 4,
+    "('R', 3)": 4,
+    "('S', 0)": 4,
+    "('S', 1)": 4,
+    "('S', 2)": 4,
+    "('S', 3)": 4
+  },
+  "checks": {
+    "axis_quotient_recovers_tomotope": true,
+    "each_axis_has_4_faces": true,
+    "each_face_has_3_axes": true,
+    "each_observation_degree_2": true,
+    "holonet_16_by_3_ticks_48": true,
+    "objectwise_cell_identity": true,
+    "q2025_24_observations": true,
+    "q2025_48_incidences": true,
+    "tomotope_12_axes": true,
+    "tomotope_16_faces": true,
+    "tomotope_48_incidences": true
+  },
+  "claim_boundary": [
+    "This gives an explicit abstract incidence isomorphism/quotient between the bus types.",
+    "It does not claim the q-2025 red/blue domains use this exact Klein-Latin coordinatization before a paper-derived labeling is extracted."
+  ],
+  "models": {
+    "holonet_ticks": {
+      "cells": 16,
+      "phases": ["R", "C", "S"],
+      "ticks": 48
+    },
+    "q2025_oriented_cover": {
+      "observations": "24 degree-2 observations, stored by the verifier",
+      "lines": "16 triples, one over each 4x4 Klein-Latin cell"
+    },
+    "tomotope_reye": {
+      "axes": "12 axes = 4 rows + 4 columns + 4 Klein-Latin symbols",
+      "faces": "16 triples; each axis has degree 4"
+    }
+  },
+  "observation_degrees": "all 24 observations have degree 2",
+  "summary": "A concrete 4x4 Klein-Latin bus realizes the tomotope/Reye (12_4,16_3) layer and its q-2025-style oriented double cover (24_2,16_3). Pairing the two degree-2 observations over each axis quotients 24 observations back to 12 axes. The same 16 cells with three phase labels give the Holonet 16x3=48 tick body.",
+  "theorem": "BT1715 Objectwise 48-Bus Axis-Quotient Theorem",
+  "verified": true
+}
