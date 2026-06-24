@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1684 Projector-Hardware Falsifier Update",
+  "updated_file": "paper/sections/sec_bt1672_projector_hardware_falsifier.tex",
+  "update_commit": "f2e05828e6064de8dd2a976931cdb584f15ff655",
+  "changes": [
+    "Inserted BT1679 QSVT parity obstruction: Pc6, Pc0, and Pm30 are not single parity-constrained QSVT polynomials in the centered signal model.",
+    "Inserted BT1682 explicit even/odd two-sequence decompositions for Pc6, Pc0, and Pm30.",
+    "Inserted BT1680 exact even quartic certificate for Pm24 with sup norm 1.",
+    "Replaced the previous sampled Chebyshev mass emphasis with the exact two-port logical QSVT/LCU mass 2.5439453125.",
+    "Inserted BT1681 oriented bridge projector twirl: automorphism average equals (8/81)P_H1 up to 1.06e-14 Frobenius error.",
+    "Updated final falsifier statement to require QSVT parity routing in addition to calibrated loss, sign flips, block encoding, and phase precision."
+  ],
+  "boundary": "The paper section still does not claim QSP phase-angle synthesis. It claims exact bounded scalar polynomials plus the required parity-routed compiler architecture."
+}
