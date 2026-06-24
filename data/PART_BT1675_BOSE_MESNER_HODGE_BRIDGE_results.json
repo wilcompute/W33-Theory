@@ -1,0 +1,30 @@
+{
+  "theorem": "BT1675 Bose-Mesner/Hodge Bridge Idempotent Test",
+  "levi_complex": {
+    "vertices": 80,
+    "edges": 160,
+    "incidence_rank": 79,
+    "cycle_rank_beta1": 81,
+    "cycle_projector_trace": 80.99999999999997,
+    "cycle_projector_idempotence_residual": 2.5848363704990327e-14
+  },
+  "uniform_incidence_edge_idempotent": {
+    "definition": "E_uniform = 1_E 1_E^T / 160",
+    "rank": 1,
+    "idempotence_residual": 0.0,
+    "mean_edge_weight_for_bt1671_64_events": 0.4
+  },
+  "hodge_overlap": {
+    "norm_uniform_edge_vector": 12.649110640673518,
+    "norm_cycle_projection_of_uniform_edge_vector": 2.3633435577592544e-14,
+    "normalized_h1_overlap": -6.817896941457846e-16,
+    "cycle_projector_times_uniform_idempotent_norm": 1.8683870588560942e-15
+  },
+  "boundary_operator_on_uniform_edge_vector": {
+    "point_boundary_value": -4,
+    "line_boundary_value": 4,
+    "meaning": "with point-to-line orientation, the uniform incidence vector is a pure bipartite cut mode, not a cycle"
+  },
+  "conclusion": "The automorphism-twirled bridge is the uniform rank-1 incidence-edge idempotent, but it has zero H1/Hodge-cycle content. A useful clock-Levi homology bridge therefore requires gauge fixing before twirling; full symmetry averaging erases it.",
+  "boundary": "This connects the uniform automorphism twirl to the Levi Hodge projector. It does not classify all higher edge-pair Bose-Mesner idempotents."
+}
