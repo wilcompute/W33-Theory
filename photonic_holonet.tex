@@ -3171,6 +3171,24 @@ holographic/fractal redundancy and the computer's fault tolerance are one
 mechanism --- the precise sense in which the computer is the network. (Witness:
 \texttt{analysis/w33\_microstate\_count.py}.)
 
+The central charge even explains the generation number. The matter sector's affine
+symmetry is the WZW model $\mathfrak{sp}(4)$ at level $k=12$ --- the level is the
+graph degree --- with $c=10\cdot12/(12+3)=8=\operatorname{rank}(E_8)$, the same
+$c$ as $(E_8)_1$. So the matter rung carries one $E_8$ of central charge, and the
+boundary's $c=24=f$ is exactly
+\[
+  24 = q\cdot 8 = q\cdot\operatorname{rank}(E_8),
+\]
+three generations of that matter $E_8$ rung; the jump from the matter rung to the
+full boundary \emph{is} the generation number $q=3$. The lattice picture makes it
+concrete: among the $24=f$ Niemeier (even unimodular rank-$24$) lattices --- the
+boundary's possible realizations, their count equal to the central charge itself
+--- the Leech realization is the extremal Monster CFT, while $E_8^3$ is literally
+three copies of the matter $E_8$, the three-generation realization. ``Why three
+generations'' and ``why $c=24$'' are one fact: the boundary is $q$ copies of the
+matter $E_8$. (Witness:
+\texttt{analysis/w33\_wzw\_generation\_ladder.py}.)
+
 \subsection{The clock is a mass and the supercycle is the gauge group: running the
 machine is the physics}
 \label{sec:clock-is-mass}

@@ -1,0 +1,12 @@
+{
+  "c_sp4_level12": 8,
+  "c_E8_level1": 8,
+  "boundary_c": 24,
+  "generations": 3,
+  "E8cubed_rank": 24,
+  "niemeier_count": 24,
+  "summary": "matter affine symmetry sp(4)_12 (level = degree 12) has c = 8 = rank(E8) = c((E8)_1); boundary c = 24 = f = q*8 = three generations of E8; E8^3 is a Niemeier (even unimodular rank-24) realization = 3 x matter-E8, Leech = extremal Monster CFT; #Niemeier = 24 = f = the central charge. Why-3-generations = why-c=24: the boundary is q copies of the matter E8.",
+  "sources": [
+    "index.html CCCLXXII (sp(4)_12 WZW c=8=rank E8); WZW c = k dim/(k+h^v); Niemeier lattices (24 even unimodular rank-24, E8^3 and Leech); holographic boundary c=24 (Monster)"
+  ]
+}
