@@ -1,0 +1,40 @@
+{
+  "theorem": "BT1673 Block-Encoding Normalization Audit",
+  "normalization_rule": "If H=L/Lambda is block-encoded, sum c_i L^i becomes sum c_i Lambda^i H^i.",
+  "lambdas": {"clock_lambda": 6, "matter_lambda": 30},
+  "best_raw_l1_point": {
+    "clock_degree": 9,
+    "matter_degree": 8,
+    "max_walk_depth": 17,
+    "raw_l1": 2.0822330410596202e-10,
+    "block_encoded_l1": 289713.4069956163,
+    "normalization_blowup": 1391349556881511.8
+  },
+  "best_block_encoded_l1_point": {
+    "clock_degree": 4,
+    "matter_degree": 2,
+    "max_walk_depth": 6,
+    "raw_l1": 0.2610280546327058,
+    "block_encoded_l1": 334.6461794019932,
+    "normalization_blowup": 1282.0303786655735
+  },
+  "minimal_depth_point": {
+    "clock_degree": 3,
+    "matter_degree": 2,
+    "max_walk_depth": 5,
+    "raw_l1": 0.3958333333333328,
+    "block_encoded_l1": 344.2142857142845,
+    "normalization_blowup": 869.5939849624051
+  },
+  "frontier_summary": [
+    {"depth": 5, "degrees": [3, 2], "raw_l1": 0.3958333333333328, "block_encoded_l1": 344.2142857142845},
+    {"depth": 6, "degrees": [4, 2], "raw_l1": 0.2610280546327058, "block_encoded_l1": 334.6461794019932},
+    {"depth": 7, "degrees": [4, 3], "raw_l1": 0.008784376153562198, "block_encoded_l1": 359.4489202657806},
+    {"depth": 8, "degrees": [4, 4], "raw_l1": 0.00029628924674951804, "block_encoded_l1": 390.4523463455148},
+    {"depth": 12, "degrees": [4, 8], "raw_l1": 3.967234470325142e-10, "block_encoded_l1": 613.8950069592244},
+    {"depth": 16, "degrees": [8, 8], "raw_l1": 2.185733929664189e-10, "block_encoded_l1": 76428.46666522461},
+    {"depth": 17, "degrees": [9, 8], "raw_l1": 2.0822330410596202e-10, "block_encoded_l1": 289713.4069956163}
+  ],
+  "correction": "BT1669's raw high-degree coefficient collapse is mostly a normalization artifact for block-encoded hardware. The tested block-encoded optimum is (4,2), not (9,8).",
+  "boundary": "This audit assumes monomial LCU through normalized H=L/Lambda block-encodings. Other polynomial bases, such as Chebyshev/QSVT, require a separate compiler."
+}
