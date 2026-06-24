@@ -1,0 +1,41 @@
+{
+  "trio": {
+    "tetrahedron": {
+      "V": 4,
+      "E": 6,
+      "F": 4,
+      "chi": 2,
+      "g": 0
+    },
+    "Csaszar": {
+      "V": 7,
+      "E": 21,
+      "F": 14,
+      "chi": 0,
+      "g": 1
+    },
+    "Szilassi": {
+      "V": 14,
+      "E": 21,
+      "F": 7,
+      "chi": 0,
+      "g": 1
+    }
+  },
+  "numerator_is_qmu_eq_k": true,
+  "n": 7,
+  "all_faces_adjacent": [
+    "tetrahedron (g=0)",
+    "Szilassi (g=1)"
+  ],
+  "heawood": {
+    "V": 14,
+    "E": 21,
+    "omega": 1.4142135623730951
+  },
+  "bc_twist_deg": 131.8,
+  "summary": "triangulation ladder: triangle (q=3 points, trit-saving) and tetrahedron (mu=4, self-dual, BC-helix block); genus g(K_n) = (n-3)(n-4)/k, at n=Phi_6=7 numerator = (n-4)(n-3) = q*mu = k = 12 so g=1 (torus). Tetrahedron(g0) & Szilassi(g1) = only all-faces-adjacent polyhedra; Csaszar=dual (K7 vertices). Csaszar+Szilassi share 21 Fano flags = the Heawood graph = the Fano clock (omega=sqrt2); BC helix (tetrahedra, arccos(-2/3)) is the genus-0 companion. The 3 and 4 build the clock at both genera.",
+  "sources": [
+    "Ringel-Youngs genus g(K_n)=ceil((n-3)(n-4)/12); Csaszar/Szilassi toroidal polyhedra (dual, K7); tetrahedron self-dual; Heawood=Fano incidence; Boerdijk-Coxeter helix; master (x-2)(x-4); Klee-Irwin trit-saving/cycle clock; w33_machine_clock_is_mass.py"
+  ]
+}

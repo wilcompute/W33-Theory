@@ -3404,6 +3404,45 @@ single integer, and it ends on numbers a bench and a telescope can check.
 \texttt{analysis/w33\_grand\_dependency\_map.py};
 graph: \texttt{docs/w33\_grand\_dependency\_map.dot}.)
 
+\subsection{The geometric origin of the clock: the triangulation ladder
+$3\to4\to7$}
+\label{sec:triangulation-ladder}
+
+Where does the clock come from, geometrically? From the same place as the
+substrate integers: closing simplices. The master quadratic factors as
+$(x-\lambda)(x-\mu)=(x-2)(x-4)$ from the seed $q!=2q$, and the two simplices that
+build everything are the \emph{triangle} and the \emph{tetrahedron}. Three points
+close a loop into a $2$-simplex; closing that third edge fixes one orientation ---
+it ``saves'' a single $q=3$ trit (the Klee--Irwin cycle-clock / trit-saving
+picture), so the minimal closed cell carries exactly one trit. Four points
+($\mu=q+1$) close the $3$-simplex, the tetrahedron --- self-dual ($K_4$ vertices
+\emph{and} $K_4$ faces, both maximally adjacent), genus $0$, and the building block
+of the Boerdijk--Coxeter helix whose stack twist $\arccos(-\tfrac{q-1}{q})=\arccos(-\tfrac23)$
+is the time-quasicrystal clock.
+
+The torus is born when these two combine. The Ringel--Youngs genus of the complete
+polyhedral graph is $g(K_n)=\lceil (n-3)(n-4)/12\rceil$, with denominator $12=k$.
+At $n=\Phi_6=7$ the numerator is
+\[
+  (n-3)(n-4)=\mu\cdot q = 4\cdot 3 = 12 = k,\qquad\text{so}\qquad
+  g=\frac{\mu\,q}{k}=\frac{k}{k}=1,
+\]
+the torus --- and the ``$3$'' and ``$4$'' in that numerator are precisely the
+triangle ($n-4=q$) and the tetrahedron ($n-3=\mu$). The genus is $1$ exactly
+because triangle $\times$ tetrahedron equals the degree. ($K_4$, the tetrahedron
+itself, gives $(1)(0)/12=0$, the sphere.) The two genus-$1$ realizations are the
+only ``complete'' toroidal polyhedra: the Szilassi polyhedron, with $7$ mutually
+edge-adjacent faces (the tetrahedron and Szilassi are the \emph{only} polyhedra in
+which every pair of faces touches), and its dual the Cs\'asz\'ar polyhedron, with
+$7$ mutually adjacent vertices ($K_7$). They share $21=\binom72$ edges --- the Fano
+flags --- and their incidence is the Heawood graph ($14=7+7$ vertices, $21$ edges),
+which is exactly the Fano clock whose Laplacian middle shell gives the oscillator
+frequency $\omega=\sqrt\lambda=\sqrt2$ of \S\ref{sec:clock-is-mass}. So the two
+toroidal polyhedra \emph{are} the clock oscillator, and the tetrahedral BC helix is
+its genus-$0$ companion: one triangulation ladder $3\to4\to7$, the triangle and the
+tetrahedron, builds the clock at both genera. (Witness:
+\texttt{analysis/w33\_genus\_ladder\_clock.py}.)
+
 \subsection{The clock is a mass and the supercycle is the gauge group: running the
 machine is the physics}
 \label{sec:clock-is-mass}
