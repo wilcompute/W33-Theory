@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "aut_order_factorizes_as_168_times_72": true,
+    "aut_order_factorizes_as_7_times_1728": true,
+    "gray_layer_is_substrate_f": true,
+    "layer_sum_is_63": true,
+    "q2025_bus_matches_tomotope_and_holonet_48": true,
+    "red_blue_each_are_48_incidence_domains": true,
+    "skew_classical_shared_is_39": true,
+    "skew_classical_shared_plus_changed_is_63": true,
+    "skew_copy_count_is_120_times_63": true,
+    "two_domains_are_96_incidence": true,
+    "yellow_six_is_decimal_period": true
+  },
+  "claim_boundary": [
+    "The 48-match is an incidence-bus certificate, not a proof of graph isomorphism to the tomotope.",
+    "The 39=3*13 reading is a target for the qutrit crossover program; BT1711 only verifies the arithmetic layer split."
+  ],
+  "clock_factorization": {
+    "decimal_period_one_seventh": 6,
+    "hexagon_lines": 63,
+    "level_7_fiber": 12096,
+    "packet_clock": 72,
+    "readout_psl27": 168,
+    "split_cayley_aut_order": 12096,
+    "yellow_period": 6
+  },
+  "interpretive_payoff": {
+    "axis_plus_yellow": "1+6 supplies the heptadic clock spine; the six yellow lines match the cyclic period of 1/7.",
+    "gray_24": "the 24 gray lines are the exact mutable sheet between skew and classical embeddings.",
+    "red_blue_16_each": "two 16-line domains supply dual 48-incidence buses, matching tomotope/Holonet timing.",
+    "shared_39": "39=3*13 points toward the qutrit/Hesse projective closure as a crossover target, not yet an isomorphism."
+  },
+  "layers": {
+    "axis_black": 1,
+    "blue_domain": 16,
+    "gray_between_yellow_and_red_blue": 24,
+    "red_domain": 16,
+    "yellow_axis_incident": 6
+  },
+  "red_blue_domain": {
+    "configuration": "(24_2,16_3)",
+    "incidences": 48,
+    "line_size": 3,
+    "lines": 16,
+    "observable_multiplicity": 2,
+    "observables": 24
+  },
+  "skew_classical_recipe": {
+    "changed_lines": 24,
+    "classical_copies": 120,
+    "reference_lines_per_classical_hexagon": 63,
+    "shared_lines": 39,
+    "skew_copies": 7560
+  },
+  "source_documents": [
+    "q-2025-01-20-1601.pdf"
+  ],
+  "summary": "The q-2025 split-Cayley layering is not just decorative: relative to an axis, its 63 lines split as 1+6+24+16+16. The red and blue 16-line domains each carry a (24_2,16_3) incidence bus of size 48, exactly the same interface size as the tomotope middle layer and the Holonet 48-tick body. The skew/classical switch keeps 39 lines and changes precisely the 24 gray lines.",
+  "theorem": "BT1711 Hexagon Layer / Tomotope Bus Theorem",
+  "tomotope_bus": {
+    "holonet_body_ticks": 48,
+    "q2025_blue_domain_incidence": 48,
+    "q2025_red_domain_incidence": 48,
+    "tomotope_middle_incidence": 48
+  },
+  "verified": true
+}
