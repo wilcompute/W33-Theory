@@ -1,1 +1,11 @@
-BT1719
+BT1719 genus axis bridge
+
+Verified identities:
+
+12 = 4 + 4 + 4 axes in the bus.
+16 cells times 3 local axes = 48 incidences.
+For n=7, (n-3)(n-4)=12, so the torus seed numerator equals the bus-axis count.
+For n=4, (n-3)(n-4)=0, so the tetrahedron works in both primal and dual readings.
+For n=12, (n-3)(n-4)=72 and C(12,2)=66, recovering the horizon and payload already in the repo.
+
+Interpretation: the 12-axis bus is the denominator object, and the 3 axes per cell are the local triangular incidence. The user's proposed 3-over-12 link is therefore exact at the arithmetic layer.
