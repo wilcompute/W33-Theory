@@ -1,0 +1,75 @@
+{
+  "theorem": "BT1654 Heawood Clock Homology / Runtime Word Theorem",
+  "heawood_clock": {
+    "vertices": 14,
+    "edges": 21,
+    "regular_degree": [
+      3
+    ],
+    "is_bipartite": true,
+    "girth": 6,
+    "cycle_rank_beta1": 8,
+    "simple_6_cycles": 28,
+    "simple_8_cycles": 21,
+    "adjacency_spectrum": {
+      "-3.0": 1,
+      "-1.414214": 6,
+      "1.414214": 6,
+      "3.0": 1
+    },
+    "laplacian_spectrum": {
+      "0.0": 1,
+      "1.585786": 6,
+      "4.414214": 6,
+      "6.0": 1
+    },
+    "oscillator_shell": {
+      "middle_shell_dimension": 12,
+      "lambda": 2,
+      "omega": 1.4142135623730951,
+      "energy_minus": 1.5857864376269049,
+      "energy_plus": 4.414213562373095
+    }
+  },
+  "heawood_line_graph_flag_clock": {
+    "vertices": 21,
+    "edges": 42,
+    "regular_degree": [
+      4
+    ],
+    "triangles": 14,
+    "girth": 3,
+    "cycle_rank_beta1": 22,
+    "adjacency_spectrum": {
+      "-2.0": 8,
+      "-0.414214": 6,
+      "2.414214": 6,
+      "4.0": 1
+    },
+    "laplacian_spectrum": {
+      "0.0": 1,
+      "1.585786": 6,
+      "4.414214": 6,
+      "6.0": 8
+    }
+  },
+  "w33_levi_boundary": {
+    "vertices": 80,
+    "edges": 160,
+    "cycle_rank_beta1": 81,
+    "girth": 8,
+    "simple_6_cycles": 0,
+    "simple_8_cycles": 1620,
+    "boundary": "Levi girth 8 and zero 6-cycles forbid a literal Heawood-clock subgraph; the Heawood/Fano clock is a separate runtime homology module, not an incidence subgraph of the W33 Levi graph."
+  },
+  "constant_bridge": {
+    "14": "Heawood vertices = Fano points + Fano lines = dim(G2)",
+    "21": "Heawood edges = Fano flags = C(7,2) bivector/K7 carrier",
+    "8": "Heawood beta_1 = runtime 8-tick word",
+    "28": "Heawood simple 6-cycles = W33 externality mu = v-k = 40-12",
+    "12": "Heawood oscillator middle shell dimension = W33 degree k",
+    "6": "Heawood girth and top Laplacian endpoint = g2",
+    "4": "Heawood line graph degree = W33 nonadjacent common-neighbor number mu_GQ",
+    "81": "W33 Levi beta_1 remains the protected H1 sector, separate from the 8-dimensional clock word."
+  }
+}
