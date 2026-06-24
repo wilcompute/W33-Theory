@@ -1,0 +1,32 @@
+{
+  "theorem": "BT1659 Clock/Levi Hodge Coupling Boundary Theorem",
+  "clock_complex": {
+    "graph": "Heawood/Fano incidence clock",
+    "vertices": 14,
+    "edges": 21,
+    "incidence_rank": 13,
+    "cycle_rank_beta1": 8,
+    "girth": 6
+  },
+  "levi_complex": {
+    "graph": "W33 point-line Levi graph",
+    "vertices": 80,
+    "edges": 160,
+    "incidence_rank": 79,
+    "cycle_rank_beta1": 81,
+    "girth": 8
+  },
+  "subgraph_boundary": {
+    "injective_edge_preserving_clock_embedding": false,
+    "reason": "An injective edge-preserving image of any Heawood 6-cycle would be a 6-cycle in the W33 Levi graph, but the W33 Levi graph has girth 8."
+  },
+  "functorial_coupling": {
+    "operator": "P_clock_cycle \u2297 P_Levi_cycle",
+    "ambient_edge_tensor_dimension": 3360,
+    "rank": 648,
+    "rank_factorization": "8 * 81 = 648",
+    "complement_dimension": 2712,
+    "meaning": "This is the canonical selector-free Hodge coupling of the Heawood runtime word to the protected W33 Levi H1 sector."
+  },
+  "boundary": "A direct clock-to-Levi subgraph transfer is forbidden. The natural coupling is homological/tensorial unless an additional gauge or embedding datum is supplied."
+}
