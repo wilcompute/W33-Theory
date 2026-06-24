@@ -1,1 +1,2 @@
-BT1713 placeholder
+#!/usr/bin/env python3
+print('hello')
