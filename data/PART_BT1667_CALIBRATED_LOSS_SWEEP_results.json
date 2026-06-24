@@ -1,0 +1,37 @@
+{
+  "theorem": "BT1667 Calibrated Loss Sweep",
+  "calibration_status": "range sweep over named component parameters; not measured hardware data",
+  "grid": {
+    "switch_survival": [0.9, 0.95, 0.98, 0.995],
+    "delay_survival": [0.9, 0.95, 0.99],
+    "detector_efficiency": [0.15, 0.3, 0.6, 0.85],
+    "parity_flip_probability": [0.0, 0.1, 0.2, 0.35, 0.45],
+    "phase_jitter_rms": [0.0, 0.1, 0.25, 0.5],
+    "fixed": {"phase_survival": 0.999, "analyzer": 0.98, "dark_per_bin": 1e-06, "bins": 2048}
+  },
+  "summary": {
+    "cases": 960,
+    "passes": 721,
+    "fails": 239,
+    "pass_rate": 0.751042,
+    "min_snr": 1.165254,
+    "max_snr": 40.367122
+  },
+  "by_parity_flip": [
+    {"parity_flip": 0.0, "cases": 192, "passes": 192, "pass_rate": 1.0, "min_snr": 11.65254, "max_snr": 40.367122},
+    {"parity_flip": 0.1, "cases": 192, "passes": 192, "pass_rate": 1.0, "min_snr": 9.322032, "max_snr": 32.293697},
+    {"parity_flip": 0.2, "cases": 192, "passes": 192, "pass_rate": 1.0, "min_snr": 6.991524, "max_snr": 24.220273},
+    {"parity_flip": 0.35, "cases": 192, "passes": 145, "pass_rate": 0.755208, "min_snr": 3.495762, "max_snr": 12.110137},
+    {"parity_flip": 0.45, "cases": 192, "passes": 0, "pass_rate": 0.0, "min_snr": 1.165254, "max_snr": 4.036712}
+  ],
+  "by_detector_efficiency": [
+    {"detector": 0.15, "cases": 240, "passes": 146, "pass_rate": 0.608333, "min_snr": 1.165254, "max_snr": 16.957995},
+    {"detector": 0.3, "cases": 240, "passes": 191, "pass_rate": 0.795833, "min_snr": 1.648929, "max_snr": 23.982236},
+    {"detector": 0.6, "cases": 240, "passes": 192, "pass_rate": 0.8, "min_snr": 2.330508, "max_snr": 33.91599},
+    {"detector": 0.85, "cases": 240, "passes": 192, "pass_rate": 0.8, "min_snr": 2.77389, "max_snr": 40.367122}
+  ],
+  "worst_case": {"switch": 0.9, "delay": 0.9, "detector": 0.15, "parity_flip": 0.45, "phase_jitter": 0.5, "min_snr": 1.165254},
+  "best_case": {"switch": 0.995, "delay": 0.99, "detector": 0.85, "parity_flip": 0.0, "phase_jitter": 0.0, "min_snr": 40.367122},
+  "interpretation": "The separator is loss-tolerant until contrast is directly damaged by large parity/sign flips. In this grid all parity <= 0.20 cases pass, while parity=0.45 cases fail.",
+  "boundary": "This is a component-range sweep. A measured optical build should replace the grid with calibrated component distributions."
+}
