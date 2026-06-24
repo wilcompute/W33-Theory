@@ -1,0 +1,90 @@
+\subsection{Clock homology and the eight-tick runtime word}
+\label{sec:heawood-clock-homology}
+
+The previous subsection identifies the holonet clock with the Fano/Heawood
+harmonic oscillator.  The homological content of that statement is now exact.
+Let
+\[
+  H=\mathrm{Inc}(\mathrm{PG}(2,2))
+\]
+be the Heawood graph, with seven Fano points and seven Fano lines.  The verifier
+finds
+\[
+  |V(H)|=14,
+  \qquad
+  |E(H)|=21,
+  \qquad
+  \beta_1(H)=21-14+1=8.
+\]
+Thus the eight-tick runtime word is not an added convention: it is the first
+homology rank of the clock graph itself.  The same finite graph also contains
+\[
+  \#C_6(H)=28,
+  \qquad
+  \#C_8(H)=21,
+\]
+so the clock topology sees both the externality number $v-k=40-12=28$ and the
+Fano/Klein carrier $\binom72=21$.
+
+Passing to the line graph $L(H)$ turns the $21$ Fano incidences into clock flags.
+This flag-clock is $4$-regular on $21$ vertices and has Laplacian spectrum
+\[
+  0^1\oplus(3-\sqrt2)^6\oplus(3+\sqrt2)^6\oplus6^8.
+\]
+The oscillator middle shell is preserved, while the endpoint becomes an
+$8$-dimensional shell $6^8$, again matching the runtime word.
+
+This clock module is coupled to, but not contained in, the $W(3,3)$ point-line
+Levi graph.  Indeed the Levi graph has
+\[
+  |V|=80,
+  \qquad
+  |E|=160,
+  \qquad
+  \beta_1=81,
+  \qquad
+  \mathrm{girth}=8,
+\]
+with $\#C_6=0$ and $\#C_8=1620$.  Since the Heawood clock has girth $6$, it cannot
+be a literal Levi subgraph.  The correct statement is therefore a coupled-module
+statement: the Heawood/Fano graph supplies the runtime clock homology, while the
+$W(3,3)$ Levi graph supplies the protected $H_1=81$ cycle sector.
+
+The spectral coupling to matter is equally sharp.  For the matter graph
+$Q=\overline{W(3,3)}$, the Laplacian spectrum is
+\[
+  0^1\oplus24^{15}\oplus30^{24}.
+\]
+Using the conservative Cartesian/tensor graph-product Laplacian
+\[
+  L_{L(H)}\otimes I_Q+I_{L(H)}\otimes L_Q,
+\]
+the clock endpoint and matter gap obey
+\[
+  6^8\otimes24^{15}\longmapsto30^{120}.
+\]
+The resonance value is $30=h(E_8)$ and the rank is $8\cdot15=120$.  There is an
+important degeneracy boundary: the full coupled $30$-eigenspace has multiplicity
+$144=120+24$, because $0^1_{\rm clock}\otimes30^{24}_{\rm matter}$ lands at the
+same eigenvalue.  Thus the theorem identifies a canonical rank-$120$ tensor
+subblock inside a degenerate eigenspace, not a unique eigenspace without
+projectors.
+
+Finally, the explicit cycle-basis verifier makes the runtime stack homological:
+\[
+  \beta_1(H)=8
+  \longrightarrow
+  8\cdot6=48
+  \longrightarrow
+  8\cdot q^2=72
+  \longrightarrow
+  72h(E_8)=2160
+  \longrightarrow
+  2160\cdot24=51840=|\mathrm{Sp}(4,3)|.
+\]
+The chosen cycle basis is deterministic rather than canonical, but the invariant
+object is canonical: the $8$-dimensional $\mathbb F_2$ cycle space of the
+Heawood/Fano clock.  (Witnesses:
+\texttt{analysis/bt1654\_heawood\_clock\_homology.py},
+\texttt{analysis/bt1655\_clock\_matter\_spectral\_coupling.py}, and
+\texttt{analysis/bt1656\_runtime\_word\_cycle\_basis.py}.)
