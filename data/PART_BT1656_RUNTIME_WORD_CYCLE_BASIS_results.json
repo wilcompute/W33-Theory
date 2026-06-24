@@ -1,0 +1,96 @@
+{
+  "theorem": "BT1656 Runtime Word Cycle-Basis Theorem",
+  "clock_graph": {
+    "vertices": 14,
+    "edges": 21,
+    "connected_components": 1,
+    "beta1": 8,
+    "basis_size": 8,
+    "basis_rank_over_F2": 8
+  },
+  "deterministic_cycle_basis_root_0": [
+    {
+      "slot": 0,
+      "vertices": [11, 5, 12, 6, 13, 0],
+      "length": 6,
+      "edges": [[5, 11], [5, 12], [6, 12], [6, 13], [0, 13], [0, 11]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 1,
+      "vertices": [2, 9, 5, 12, 6, 13],
+      "length": 6,
+      "edges": [[2, 9], [5, 9], [5, 12], [6, 12], [6, 13], [2, 13]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 2,
+      "vertices": [7, 3, 9, 5, 12, 6, 13, 0],
+      "length": 8,
+      "edges": [[3, 7], [3, 9], [5, 9], [5, 12], [6, 12], [6, 13], [0, 13], [0, 7]],
+      "edge_vector_weight": 8
+    },
+    {
+      "slot": 3,
+      "vertices": [10, 3, 9, 5, 12, 6],
+      "length": 6,
+      "edges": [[3, 10], [3, 9], [5, 9], [5, 12], [6, 12], [6, 10]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 4,
+      "vertices": [7, 1, 12, 6, 13, 0],
+      "length": 6,
+      "edges": [[1, 7], [1, 12], [6, 12], [6, 13], [0, 13], [0, 7]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 5,
+      "vertices": [2, 8, 1, 12, 6, 13],
+      "length": 6,
+      "edges": [[2, 8], [1, 8], [1, 12], [6, 12], [6, 13], [2, 13]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 6,
+      "vertices": [10, 4, 8, 1, 12, 6],
+      "length": 6,
+      "edges": [[4, 10], [4, 8], [1, 8], [1, 12], [6, 12], [6, 10]],
+      "edge_vector_weight": 6
+    },
+    {
+      "slot": 7,
+      "vertices": [11, 4, 8, 1, 12, 6, 13, 0],
+      "length": 8,
+      "edges": [[4, 11], [4, 8], [1, 8], [1, 12], [6, 12], [6, 13], [0, 13], [0, 11]],
+      "edge_vector_weight": 8
+    }
+  ],
+  "basis_length_profile": {
+    "6": 6,
+    "8": 2
+  },
+  "all_simple_cycles": {
+    "total": 213,
+    "length_distribution": {
+      "6": 28,
+      "8": 21,
+      "10": 84,
+      "12": 56,
+      "14": 24
+    },
+    "nonzero_F2_cycle_space_size": 255
+  },
+  "runtime_stack_comparison": {
+    "runtime_word_bits": 8,
+    "six_phase_lift": 48,
+    "six_phase_lift_interpretation": "8 independent cycle bits times 6 phase positions = 48 body/frame slots.",
+    "q2_lift": 72,
+    "q2_lift_interpretation": "8 independent cycle bits times q^2=9 gives the 72-tick oscillator frame.",
+    "e8_coxeter_lift": 2160,
+    "e8_coxeter_lift_interpretation": "72 times h(E8)=30 gives the 2160 mirror bus.",
+    "full_supercycle": 51840,
+    "full_supercycle_interpretation": "2160 times 24 gives 51840=|Sp(4,3)|."
+  },
+  "boundary": "The explicit cycle basis is deterministic but not canonical; the invariant runtime object is the 8-dimensional F2 homology/cycle space of the Heawood clock."
+}
