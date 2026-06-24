@@ -58,6 +58,7 @@ SUITES: dict[str, list[str]] = {
         "tests/test_bt1698_bt1700_holonet_execution_stack.py",
         "tests/test_bt1701_bt1703_holonet_runtime_safety.py",
         "tests/test_bt1704_bt1706_holonet_replay_scheduling_economics.py",
+        "tests/test_bt1707_bt1709_qubit_contextuality_hesse_bridge.py",
     ],
     "dcc-weld": [
         "tests/test_dccx_holonomy_selector_carrier_weld_bridge.py",

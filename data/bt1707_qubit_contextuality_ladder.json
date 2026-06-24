@@ -1,0 +1,90 @@
+{
+  "breakthrough": "The one-to-six-qubit contextuality papers organize the binary Pauli ladder through doily, Heawood, split-Cayley-hexagon, DW(5,2), projective-incidence, and K7,7 cores.  The three-qubit split Cayley automorphism order is exactly 12096 = 168*72, matching the Fano/Klein readout group times the Holonet packet clock.",
+  "checks": {
+    "dw52_profile_is_consistent": true,
+    "four_qubit_full_bound_is_five_times_315": true,
+    "six_qubit_k77_contains_heawood_plus_coheawood": true,
+    "split_cayley_aut_is_level7_j_special_fiber": true,
+    "split_cayley_aut_is_readout_times_packet_clock": true,
+    "symplectic_line_counts_match": true,
+    "symplectic_point_counts_match": true,
+    "three_qubit_contexts_are_five_hexagons_worth": true,
+    "three_qubit_degree_is_hexagon_line_count": true
+  },
+  "claim_boundary": [
+    "The verifier records paper-reported contextuality cores; it does not brute-force contextuality degree.",
+    "The promoted W33 claim is arithmetic/incidence compatibility with existing Holonet readout packets.",
+    "Objectwise equivalence between the split Cayley hexagon and a W33 submodule remains a future construction target."
+  ],
+  "ladder": [
+    {
+      "contextual_core": "none",
+      "line_contexts": 0,
+      "points": 3,
+      "qubits": 1,
+      "role": "single Pauli triple; no line-context Kochen-Specker proof",
+      "space": "W(1,2)"
+    },
+    {
+      "contextual_core": "Mermin-Peres square degree 1; doily degree 3",
+      "distinguished_subdegree": 1,
+      "line_contexts": 15,
+      "points": 15,
+      "qubits": 2,
+      "reported_degree": 3,
+      "role": "two-qubit binary seed; projective-line-over-M2(F2) shadow has 35 points",
+      "space": "W(3,2) doily"
+    },
+    {
+      "contextual_core": "classically embedded split Cayley hexagon of order 2",
+      "elliptic_core_lines": 9,
+      "hexagon_automorphism_order": 12096,
+      "hyperbolic_core_lines": 21,
+      "line_contexts": 315,
+      "points": 63,
+      "qubits": 3,
+      "reported_degree": 63,
+      "role": "full three-qubit contextuality is carried by the 63 hexagon lines",
+      "space": "W(5,2)"
+    },
+    {
+      "contextual_core": "elliptic 315 from three hexagons; hyperbolic 315 as DW(5,2)",
+      "dw52_configuration": "(135_7,315_3)",
+      "line_contexts": 5355,
+      "points": 255,
+      "qubits": 4,
+      "reported_elliptic_bound": 315,
+      "reported_full_bound": 1575,
+      "reported_hyperbolic_bound": 315,
+      "role": "first higher-rank lift where Heawood, Coxeter, and dual-W(5,2) cores separate",
+      "space": "W(7,2)"
+    },
+    {
+      "contextual_core": "hyperbolic bound compactified around PG(4,2) point-hyperplane incidence",
+      "line_contexts": 86955,
+      "points": 1023,
+      "qubits": 5,
+      "reported_hyperbolic_bound": 6975,
+      "role": "projective incidence core climbs from PG(3,2) to PG(4,2)",
+      "space": "W(9,2)"
+    },
+    {
+      "contextual_core": "full space includes two disjoint split Cayley hexagons; hyperbolic core uses K7,7",
+      "heawood_edges_inside_k77": 21,
+      "k77_edges": 49,
+      "line_contexts": 1396395,
+      "points": 4095,
+      "qubits": 6,
+      "reported_full_bound": 553140,
+      "role": "seven-fold Fano incidence becomes a K7,7 carrier; Heawood is its 21-edge subgraph",
+      "space": "W(11,2)"
+    }
+  ],
+  "source_documents": [
+    "q-2025-01-20-1601.pdf",
+    "A new heuristic approach for contextuality degree estimates and its four- to six-qubit portrayals.pdf",
+    "New and improved bounds on the contextuality degree of multi-qubit configurations.pdf"
+  ],
+  "theorem": "BT1707 qubit contextuality ladder",
+  "verified": true
+}

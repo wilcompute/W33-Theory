@@ -1,0 +1,65 @@
+{
+  "breakthrough": "The three-qubit split-Cayley layer exposes the same 48-incidence interface as the local tomotope middle layer and the 48-tick Holonet body.  Its automorphism order factors as 12096 = 168*72, making it a candidate timed contextuality/readout module rather than a loose numerical analogy.",
+  "checks": {
+    "heawood_is_fano_incidence_graph": true,
+    "holonet_body_is_same_48_interface": true,
+    "k77_splits_heawood_and_coheawood": true,
+    "q2025_domain_is_balanced_48": true,
+    "seven_toroidal_realizations_are_phi6": true,
+    "split_cayley_aut_is_level7_j_special_fiber": true,
+    "split_cayley_aut_is_readout_times_packet_clock": true,
+    "tomotope_edges_faces_are_12_16": true,
+    "tomotope_middle_is_48_blocks": true,
+    "upstream_certificates_verified": true
+  },
+  "claim_boundary": [
+    "This verifies an incidence-size and symmetry-factor bridge, not a proven graph isomorphism.",
+    "The seven toroidal realizations are recorded as an external torus marker, not as a derived W33 theorem."
+  ],
+  "heawood_k77": {
+    "coheawood_edges": 28,
+    "fano_lines": 7,
+    "fano_points": 7,
+    "heawood_edges": 21,
+    "heawood_vertices": 14,
+    "k77_edges": 49
+  },
+  "holonet_body_ticks": 48,
+  "q2025_domain": {
+    "configuration": "(24_2,16_3)",
+    "incidences": 48,
+    "line_size": 3,
+    "lines": 16,
+    "observable_multiplicity": 2,
+    "observables": 24,
+    "source": "q-2025-01-20-1601.pdf"
+  },
+  "seven_toroidal_realizations": {
+    "csaszar_realizations": 5,
+    "interpretation": "external realization count; used here only as a seven-fold torus marker",
+    "szilassi_realizations": 2,
+    "total": 7
+  },
+  "source_certificates": [
+    "data/bt814_tomotope_middle_layer_from_residual_tetrahedra.json",
+    "data/bt1697_holonet_typed_packet_abi.json"
+  ],
+  "split_cayley": {
+    "automorphism_order": 12096,
+    "holonet_packet_ticks": 72,
+    "level_7_j_special_fiber": 12096,
+    "lines": 63,
+    "points": 63,
+    "readout_group_order": 168
+  },
+  "theorem": "BT1708 hexagon-tomotope contextual bus",
+  "tomotope_middle": {
+    "cells": 8,
+    "edges": 12,
+    "faces": 16,
+    "flags_if_each_block_has_2x2_fiber": 192,
+    "middle_blocks": 48,
+    "vertices": 4
+  },
+  "verified": true
+}

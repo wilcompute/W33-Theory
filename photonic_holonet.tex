@@ -4523,6 +4523,82 @@ the exact ABI economics once a bench supplies rates.  (Witnesses:
 \path{analysis/bt1705_holonet_shared_bus_time_division_simulator.py}, and
 \path{analysis/bt1706_holonet_retry_economics.py}.)
 
+\subsection{BT1707--BT1709 contextuality and Hesse crossover}
+
+The attached multi-qubit contextuality papers supply the missing binary
+readout ladder.  For \(n\) qubits the Pauli geometry is the symplectic polar
+space \(W(2n-1,2)\), with
+\[
+  |P_n|=4^n-1,\qquad
+  |L_n|=\frac{(4^n-1)(4^{n-1}-1)}{3}.
+\]
+Thus the first six layers have
+\[
+\begin{array}{c|c|c|l}
+n & |P_n| & |L_n| & \hbox{contextual carrier}\\
+\hline
+1 & 3 & 0 & \hbox{single Pauli triple}\\
+2 & 15 & 15 & \hbox{doily / Mermin--Peres square}\\
+3 & 63 & 315 & \hbox{split Cayley hexagon}\\
+4 & 255 & 5355 & \hbox{DW(5,2), Heawood/Coxeter cores}\\
+5 & 1023 & 86955 & \hbox{PG(4,2) point--hyperplane core}\\
+6 & 4095 & 1396395 & \hbox{two hexagons and a }K_{7,7}\hbox{ carrier}
+\end{array}
+\]
+The new architectural identity is not only the count \(63\).  The split
+Cayley hexagon of order \(2\), which carries the full three-qubit
+contextuality core in the Quantum 2025 paper, has automorphism order
+\[
+  12096 = 168\cdot 72 = 7\cdot 1728.
+\]
+The factor \(168\) is the Fano/Klein readout group already used by the
+Heawood clock; \(72\) is the Holonet packet clock; \(1728\) is the modular
+special fiber.  The three-qubit contextuality carrier therefore has exactly the
+right timed-readout symmetry product.
+
+The same paper exposes a local configuration of type \((24_2,16_3)\).  Its
+incidence count is
+\[
+  24\cdot2 = 16\cdot3 = 48.
+\]
+That is the already-verified tomotope/Holonet interface:
+\[
+  48 = 12\hbox{ tomotope edge axes against }16\hbox{ faces}
+     = 16\hbox{ Q6 body edges}\cdot3\hbox{ pulse phases}.
+\]
+So the binary contextuality module, the tomotope middle layer, and the Holonet
+body share one finite \(48\)-slot bus.  This is an incidence bridge, not yet a
+claimed graph isomorphism.
+
+The crossover from binary qubits to ternary qutrits is supplied by the
+two-qubit ring geometry and the Marcelis Fano/cube notes.  The two-qubit
+projective-line model uses \(M_2(\mathbb F_2)\), the order-\(16\) ring with
+\[
+  16 = 6\hbox{ units} + 10\hbox{ zero divisors},
+\]
+and its Pauli doily admits the three exact decompositions
+\[
+  15=9+6=10+5=8+7.
+\]
+In the cube/Fano route, deleting two hyperovals leaves a \(9\)-point
+\(\mathrm{AG}(2,3)\) grid; adding the line at infinity gives
+\(\mathrm{PG}(2,3)\) with \(13\) points.  This lands exactly on the Holonet
+ABI:
+\[
+  \mathrm{AG}(2,3)=\mathbb F_3^2=9
+    = \hbox{Hesse outcome field}
+    = \hbox{Pauli feed-forward frame},
+\]
+and
+\[
+  \mathrm{PG}(2,3)=9+4=13.
+\]
+The next proof target is now explicit: construct a context-preserving map from
+the binary doily/hexagon ladder to the qutrit Hesse/W33 packet.  (Witnesses:
+\path{analysis/bt1707_qubit_contextuality_ladder.py},
+\path{analysis/bt1708_hexagon_tomotope_contextual_bus.py}, and
+\path{analysis/bt1709_binary_to_hesse_qutrit_crossover.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

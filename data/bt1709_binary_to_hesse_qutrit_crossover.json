@@ -1,0 +1,65 @@
+{
+  "breakthrough": "The binary two-qubit ring/cube story crosses to the qutrit Holonet through the exact 9-point affine plane AG(2,3).  The Marcelis hyperoval deletion leaves a 9-point grid, while the Holonet ABI's Hesse outcome and Pauli-frame fields are both F3 x F3 of size 9; projective closure adds the four infinity points to PG(2,3), giving the Eisenstein norm prime 13.",
+  "checks": {
+    "ag23_has_q_squared_points_and_q_qplus1_lines": true,
+    "all_pauli_factorizations_sum_to_doily": true,
+    "holonet_hesse_is_ag23_grid": true,
+    "pauli_frame_is_same_f3_square": true,
+    "pg23_closure_is_phi3": true,
+    "pg23_is_ag23_plus_infinity_line": true,
+    "pg23_projective_plane_count": true,
+    "projective_line_points_match_pg32_lines": true,
+    "ring_order_splits_units_and_zero_divisors": true,
+    "upstream_packet_verified": true
+  },
+  "claim_boundary": [
+    "This is an exact finite-incidence crossover, not yet a full functor from binary Pauli modules to W33 qutrit modules.",
+    "The next proof target is an explicit map preserving commutation/context structure, not just the AG(2,3) carrier."
+  ],
+  "hesse_bridge": {
+    "eisenstein_norm_prime": 13,
+    "hesse_grid": "F3 x F3",
+    "holonet_hesse_outcomes": 9,
+    "holonet_pauli_frame": 9
+  },
+  "marcelis_bridge": {
+    "ag23_lines": 12,
+    "ag23_points": 9,
+    "binary_seed": "Fano/cube over GF(2)",
+    "deleted_hyperovals": 2,
+    "leftover_grid": "AG(2,3)",
+    "line_at_infinity_points": 4,
+    "pg23_lines": 13,
+    "pg23_points": 13
+  },
+  "source_documents": [
+    "Geometry of two qubits.pdf",
+    "The Geometry of Qubits.pdf",
+    "fgmarcelis - Frans Marcelis.pdf",
+    "data/bt1697_holonet_typed_packet_abi.json"
+  ],
+  "theorem": "BT1709 binary-to-Hesse qutrit crossover",
+  "two_qubit_ring": {
+    "doily_points": 15,
+    "factorizations": {
+      "cube_kernel": [
+        8,
+        7
+      ],
+      "nine_plus_six": [
+        9,
+        6
+      ],
+      "ten_plus_five": [
+        10,
+        5
+      ]
+    },
+    "order": 16,
+    "projective_line_points": 35,
+    "ring": "M2(F2)",
+    "units": 6,
+    "zero_divisors": 10
+  },
+  "verified": true
+}
