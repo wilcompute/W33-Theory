@@ -1,0 +1,36 @@
+{
+  "n_nodes": 49,
+  "n_edges": 54,
+  "root": "q!=2q (GQ selection)",
+  "leaf_predictions": [
+    "27 matter (E6)",
+    "BENCH: BC angle arccos(-2/3)",
+    "BENCH: CF=1/10",
+    "BENCH: pump quantum 2",
+    "Bekenstein 1/mu",
+    "CMB = moonshine correlations",
+    "LISA dark-confinement GW",
+    "PMNS cyclotomic",
+    "QCD beta0=Phi6=7",
+    "SM gauge 8+3+1=k",
+    "alpha^-1=(k-1)^2+mu^2=137",
+    "code [[240,81,4]]",
+    "cogenesis (baryon+dark)",
+    "dark matter (asymmetric)",
+    "exceptional G2..E8",
+    "f_NL=1/72",
+    "holographic code [[240,81,4]]",
+    "m_top=v_EW/sqrt(lambda)",
+    "n_s=29/30",
+    "r=1/300",
+    "running=-1/1800",
+    "seesaw m_bb=2.3 meV",
+    "sin2thW=q/Phi3=3/13",
+    "supercycle 51840=|Sp(4,3)|"
+  ],
+  "connected_DAG": true,
+  "summary": "the whole program is one connected acyclic DAG rooted at the selection q!=2q -> q=3; from q the primitives (lambda,mu,k,v,f,g,Phi3,Phi4,Phi6) flow to the SM, the exceptional/moonshine tower (Monster c=24), the holographic boundary+code, the dark SU(4)/128/N_R sector, the cosmology ledger, the machine (clock/pump/supercycle), and the bench+experiment falsifiers. Every node reachable from q=3.",
+  "sources": [
+    "consolidation of the full w33 arc; master map of the SM (corpus) extended to holographic/dark/cosmology/machine; docs/w33_grand_dependency_map.dot"
+  ]
+}
