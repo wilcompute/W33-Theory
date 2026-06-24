@@ -1,0 +1,27 @@
+{
+  "theorem": "BT1662 Clock-Levi Gauge Bridge Search",
+  "input_boundary": "BT1659 forbids a literal Heawood subgraph inside the W33 Levi graph because girth 6 cannot embed into girth 8.",
+  "gauge_datum": {
+    "clock_basis": "NetworkX deterministic cycle_basis rooted at clock node 0",
+    "levi_basis": "NetworkX deterministic cycle_basis rooted at Levi node p0",
+    "bridge_selector": "the eight shortest cycles in that Levi basis, sorted by length then representation"
+  },
+  "dimensions": {
+    "clock_beta1": 8,
+    "levi_beta1": 81,
+    "bridge_rank": 8,
+    "levi_unselected_rank": 73
+  },
+  "bridge": [
+    {"slot": 0, "clock_cycle_length": 6, "clock_cycle": [11, 5, 12, 6, 13, 0], "levi_cycle_length": 8, "levi_cycle": ["l13", "p22", "l30", "p36", "l31", "p30", "l26", "p31"]},
+    {"slot": 1, "clock_cycle_length": 6, "clock_cycle": [2, 9, 5, 12, 6, 13], "levi_cycle_length": 8, "levi_cycle": ["l15", "p37", "l38", "p23", "l16", "p33", "l29", "p28"]},
+    {"slot": 2, "clock_cycle_length": 8, "clock_cycle": [7, 3, 9, 5, 12, 6, 13, 0], "levi_cycle_length": 8, "levi_cycle": ["l18", "p29", "l37", "p34", "l27", "p24", "l32", "p39"]},
+    {"slot": 3, "clock_cycle_length": 6, "clock_cycle": [10, 3, 9, 5, 12, 6], "levi_cycle_length": 8, "levi_cycle": ["l19", "p32", "l23", "p29", "l37", "p34", "l27", "p24"]},
+    {"slot": 4, "clock_cycle_length": 6, "clock_cycle": [7, 1, 12, 6, 13, 0], "levi_cycle_length": 8, "levi_cycle": ["l19", "p6", "l20", "p16", "l14", "p34", "l27", "p24"]},
+    {"slot": 5, "clock_cycle_length": 6, "clock_cycle": [2, 8, 1, 12, 6, 13], "levi_cycle_length": 8, "levi_cycle": ["l2", "p17", "l26", "p31", "l39", "p21", "l3", "p0"]},
+    {"slot": 6, "clock_cycle_length": 6, "clock_cycle": [10, 4, 8, 1, 12, 6], "levi_cycle_length": 8, "levi_cycle": ["l21", "p38", "l35", "p22", "l30", "p36", "l31", "p30"]},
+    {"slot": 7, "clock_cycle_length": 8, "clock_cycle": [11, 4, 8, 1, 12, 6, 13, 0], "levi_cycle_length": 8, "levi_cycle": ["l24", "p23", "l16", "p33", "l29", "p28", "l34", "p35"]}
+  ],
+  "bridge_matrix_description": "8x81 matrix [I_8 | 0_8x73] in the chosen clock/Levi cycle bases; this is an injective homology-coordinate bridge, not a graph embedding.",
+  "boundary": "The bridge is concrete only after choosing a spanning-tree/cycle-basis gauge. Without that gauge, BT1659's natural object remains the full 8*81 Hodge tensor coupling."
+}
