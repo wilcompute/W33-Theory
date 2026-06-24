@@ -1,0 +1,45 @@
+{
+  "theorem": "BT1660 Demonstrator Timing Observable Contract",
+  "times": {
+    "tau_30_strobe": "2*pi/30 = pi/15",
+    "tau_clock_separator": "pi/6",
+    "tau_matter_gap_probe": "pi/24"
+  },
+  "stage_1_30_phase_strobe": {
+    "operator": "L_clock tensor I + I tensor L_matter",
+    "observable": "return visibility after tau=pi/15",
+    "expected_30_phase": "+1",
+    "purpose": "test that prepared support lies in the coupled eigenvalue-30 sector"
+  },
+  "stage_2_clock_sector_separator": {
+    "operator": "L_clock tensor I",
+    "observable": "interferometric phase after tau=pi/6",
+    "resonance_block": {
+      "projector": "P_clock_6 tensor P_matter_24",
+      "rank": 120,
+      "clock_eigenvalue": 6,
+      "expected_phase": "-1"
+    },
+    "companion_block": {
+      "projector": "P_clock_0 tensor P_matter_30",
+      "rank": 24,
+      "clock_eigenvalue": 0,
+      "expected_phase": "+1"
+    }
+  },
+  "stage_3_matter_gap_probe": {
+    "operator": "I tensor L_matter",
+    "observable": "matter-side phase after tau=pi/24",
+    "resonance_matter_eigenvalue": 24,
+    "resonance_expected_phase": "-1",
+    "companion_matter_eigenvalue": 30,
+    "companion_expected_phase": "exp(-i*5*pi/4)"
+  },
+  "minimal_protocol": [
+    "prepare support in the coupled 30-sector using BT1658 polynomial projectors",
+    "run the coupled 30-strobe at tau=pi/15 and measure return visibility",
+    "run the partial-clock separator at tau=pi/6 and read the -1 versus +1 split",
+    "run the matter-gap probe at tau=pi/24 to cross-check 24-gap support"
+  ],
+  "boundary": "This is a graph-spectral timing contract. Optical loss, detector dark counts, and calibration drift belong to the separate guard-shell hardware budget."
+}
