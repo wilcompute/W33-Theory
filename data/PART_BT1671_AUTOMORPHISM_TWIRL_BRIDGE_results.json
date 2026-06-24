@@ -1,0 +1,25 @@
+{
+  "theorem": "BT1671 Automorphism-Twirl Bridge Theorem",
+  "group": {
+    "projective_action_order": 25920,
+    "sp43_order": 51840,
+    "center_kernel_size": 2,
+    "generators": "symplectic transvections over F3, projectivized"
+  },
+  "w33_levi": {
+    "points": 40,
+    "lines": 40,
+    "incidence_edges": 160
+  },
+  "orbits": {
+    "point_orbit_size": 40,
+    "line_orbit_size": 40,
+    "incidence_edge_orbit_size": 160
+  },
+  "twirl_conclusion": {
+    "edge_twirl": "uniform over all 160 W33 Levi incidence edges",
+    "vertex_twirl": "uniform on 40 points and uniform on 40 lines separately under the projective symplectic action",
+    "bridge_mean_edge_weight_for_64_edge_events": 0.4
+  },
+  "boundary": "This automorphism twirl does not produce a sparse 8-cycle embedding. It collapses the bridge support to the uniform incidence-edge idempotent. Dualities that swap points and lines are not needed for the incidence-edge transitivity test."
+}
