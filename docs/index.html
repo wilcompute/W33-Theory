@@ -2709,6 +2709,15 @@
               <code>51840=24*45*48</code>.</div>
           </div>
           <div class="card">
+            <div class="label">Holonet Execution Stack</div>
+            <div class="detail">BT1698-BT1700 execute the typed packet: the
+              <code>72</code>-tick ABI is a deterministic state machine, lowers to the
+              five physical frame windows <code>8+24+16+16+8</code>, welds the
+              <code>24</code> guard rows across port/CSS/D4 magic, and composes
+              recursively by <code>N(n)=40^n</code>, <code>T(n)=72*40^n</code>,
+              <code>S(n)=2160*40^n</code>.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

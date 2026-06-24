@@ -1,0 +1,1969 @@
+{
+  "body_edge_checks": [
+    {
+      "edge_step": 0,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "edge_step": 1,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "edge_step": 2,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "edge_step": 3,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "edge_step": 4,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "edge_step": 5,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "edge_step": 6,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "edge_step": 7,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "edge_step": 8,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "edge_step": 9,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "edge_step": 10,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "edge_step": 11,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "edge_step": 12,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "edge_step": 13,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "edge_step": 14,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "edge_step": 15,
+      "ops": [
+        "LOAD_FLAG",
+        "FLIP_Q6_AXIS",
+        "LATCH_VERTEX"
+      ],
+      "phases": [
+        0,
+        1,
+        2
+      ],
+      "same_edge": true,
+      "same_source_target": true,
+      "ticks": [
+        45,
+        46,
+        47
+      ]
+    }
+  ],
+  "breakthrough": "The BT1697 packet ABI is executable as one deterministic 72-tick state machine: 16 Q6/tomotope edges with LOAD/FLIP/LATCH phases, followed by three eight-tick Hesse/Clifford return words.",
+  "checks": {
+    "body_edges_chain_without_gap": true,
+    "body_has_16_three_phase_edges": true,
+    "body_is_first_48_ticks": true,
+    "bt1407_verified": true,
+    "bt1697_verified": true,
+    "epilogue_encodes_route_one_phase_sweep": true,
+    "epilogue_has_three_hesse_words": true,
+    "epilogue_is_last_24_ticks": true,
+    "epilogue_words_are_eight_tick_clifford_returns": true,
+    "final_body_vertex_feeds_epilogue_boundary": true,
+    "next_tick_links_are_total": true,
+    "ticks_are_contiguous_0_to_71": true,
+    "trace_has_72_ticks": true
+  },
+  "epilogue_word_checks": [
+    {
+      "hesse_outcome": 3,
+      "ops": [
+        "ERASE",
+        "ROUTE",
+        "PHASE",
+        "X-CORR",
+        "Z-CORR",
+        "T-BIT",
+        "RESTORE",
+        "NEXT"
+      ],
+      "pauli_corrections": [
+        "X^1 Z^0"
+      ],
+      "phase_trits": [
+        0
+      ],
+      "ticks": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "word_ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "hesse_outcome": 4,
+      "ops": [
+        "ERASE",
+        "ROUTE",
+        "PHASE",
+        "X-CORR",
+        "Z-CORR",
+        "T-BIT",
+        "RESTORE",
+        "NEXT"
+      ],
+      "pauli_corrections": [
+        "X^1 Z^1"
+      ],
+      "phase_trits": [
+        1
+      ],
+      "ticks": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "word_ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "hesse_outcome": 5,
+      "ops": [
+        "ERASE",
+        "ROUTE",
+        "PHASE",
+        "X-CORR",
+        "Z-CORR",
+        "T-BIT",
+        "RESTORE",
+        "NEXT"
+      ],
+      "pauli_corrections": [
+        "X^1 Z^2"
+      ],
+      "phase_trits": [
+        2
+      ],
+      "ticks": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "word_ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "histograms": {
+    "op": {
+      "ERASE": 3,
+      "FLIP_Q6_AXIS": 16,
+      "LATCH_VERTEX": 16,
+      "LOAD_FLAG": 16,
+      "NEXT": 3,
+      "PHASE": 3,
+      "RESTORE": 3,
+      "ROUTE": 3,
+      "T-BIT": 3,
+      "X-CORR": 3,
+      "Z-CORR": 3
+    },
+    "region": {
+      "local_lift_hesse_epilogue": 24,
+      "tomotope_body": 48
+    }
+  },
+  "source_certificates": [
+    "data/bt1697_holonet_typed_packet_abi.json",
+    "data/bt1407_microframe_transaction_composer.json"
+  ],
+  "state_machine_identity": {
+    "body": "16 edges * 3 phases = 48 ticks",
+    "body_ops": [
+      "LOAD_FLAG",
+      "FLIP_Q6_AXIS",
+      "LATCH_VERTEX"
+    ],
+    "epilogue": "3 Hesse words * 8 Clifford-return ticks = 24 ticks",
+    "epilogue_ops": [
+      "ERASE",
+      "ROUTE",
+      "PHASE",
+      "X-CORR",
+      "Z-CORR",
+      "T-BIT",
+      "RESTORE",
+      "NEXT"
+    ],
+    "final_body_vertex": "010011",
+    "initial_vertex": "110111",
+    "ticks": 72
+  },
+  "theorem": "BT1698 Holonet Packet State Machine",
+  "trace": [
+    {
+      "edge_step": 0,
+      "next_tick": 1,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 175,
+        "loaded_tomotope_flag": 159
+      },
+      "source": "110111",
+      "state_after": "FLAG_LOADED:159",
+      "state_before": "VERTEX:110111",
+      "target": "110101",
+      "tick": 0,
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_step": 0,
+      "next_tick": 2,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 1
+      },
+      "source": "110111",
+      "state_after": "AXIS_FLIPPED:1",
+      "state_before": "FLAG_LOADED:159",
+      "target": "110101",
+      "tick": 1,
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_step": 0,
+      "next_tick": 3,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 175,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "110101",
+        "edge_step_completed": 0
+      },
+      "source": "110111",
+      "state_after": "VERTEX:110101",
+      "state_before": "AXIS_FLIPPED:1",
+      "target": "110101",
+      "tick": 2,
+      "tomotope_block": 39,
+      "tomotope_flag": 159
+    },
+    {
+      "edge_step": 1,
+      "next_tick": 4,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 134,
+        "loaded_tomotope_flag": 83
+      },
+      "source": "110101",
+      "state_after": "FLAG_LOADED:83",
+      "state_before": "VERTEX:110101",
+      "target": "100101",
+      "tick": 3,
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_step": 1,
+      "next_tick": 5,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 4
+      },
+      "source": "110101",
+      "state_after": "AXIS_FLIPPED:4",
+      "state_before": "FLAG_LOADED:83",
+      "target": "100101",
+      "tick": 4,
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_step": 1,
+      "next_tick": 6,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 134,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "100101",
+        "edge_step_completed": 1
+      },
+      "source": "110101",
+      "state_after": "VERTEX:100101",
+      "state_before": "AXIS_FLIPPED:4",
+      "target": "100101",
+      "tick": 5,
+      "tomotope_block": 20,
+      "tomotope_flag": 83
+    },
+    {
+      "edge_step": 2,
+      "next_tick": 7,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 133,
+        "loaded_tomotope_flag": 84
+      },
+      "source": "100101",
+      "state_after": "FLAG_LOADED:84",
+      "state_before": "VERTEX:100101",
+      "target": "101101",
+      "tick": 6,
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_step": 2,
+      "next_tick": 8,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 3
+      },
+      "source": "100101",
+      "state_after": "AXIS_FLIPPED:3",
+      "state_before": "FLAG_LOADED:84",
+      "target": "101101",
+      "tick": 7,
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_step": 2,
+      "next_tick": 9,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 133,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "101101",
+        "edge_step_completed": 2
+      },
+      "source": "100101",
+      "state_after": "VERTEX:101101",
+      "state_before": "AXIS_FLIPPED:3",
+      "target": "101101",
+      "tick": 8,
+      "tomotope_block": 21,
+      "tomotope_flag": 84
+    },
+    {
+      "edge_step": 3,
+      "next_tick": 10,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 58,
+        "loaded_tomotope_flag": 22
+      },
+      "source": "101101",
+      "state_after": "FLAG_LOADED:22",
+      "state_before": "VERTEX:101101",
+      "target": "001101",
+      "tick": 9,
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_step": 3,
+      "next_tick": 11,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 5
+      },
+      "source": "101101",
+      "state_after": "AXIS_FLIPPED:5",
+      "state_before": "FLAG_LOADED:22",
+      "target": "001101",
+      "tick": 10,
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_step": 3,
+      "next_tick": 12,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 58,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001101",
+        "edge_step_completed": 3
+      },
+      "source": "101101",
+      "state_after": "VERTEX:001101",
+      "state_before": "AXIS_FLIPPED:5",
+      "target": "001101",
+      "tick": 11,
+      "tomotope_block": 5,
+      "tomotope_flag": 22
+    },
+    {
+      "edge_step": 4,
+      "next_tick": 13,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 56,
+        "loaded_tomotope_flag": 13
+      },
+      "source": "001101",
+      "state_after": "FLAG_LOADED:13",
+      "state_before": "VERTEX:001101",
+      "target": "001111",
+      "tick": 12,
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_step": 4,
+      "next_tick": 14,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 1
+      },
+      "source": "001101",
+      "state_after": "AXIS_FLIPPED:1",
+      "state_before": "FLAG_LOADED:13",
+      "target": "001111",
+      "tick": 13,
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_step": 4,
+      "next_tick": 15,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 56,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001111",
+        "edge_step_completed": 4
+      },
+      "source": "001101",
+      "state_after": "VERTEX:001111",
+      "state_before": "AXIS_FLIPPED:1",
+      "target": "001111",
+      "tick": 14,
+      "tomotope_block": 3,
+      "tomotope_flag": 13
+    },
+    {
+      "edge_step": 5,
+      "next_tick": 16,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 49,
+        "loaded_tomotope_flag": 144
+      },
+      "source": "001111",
+      "state_after": "FLAG_LOADED:144",
+      "state_before": "VERTEX:001111",
+      "target": "001011",
+      "tick": 15,
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_step": 5,
+      "next_tick": 17,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 2
+      },
+      "source": "001111",
+      "state_after": "AXIS_FLIPPED:2",
+      "state_before": "FLAG_LOADED:144",
+      "target": "001011",
+      "tick": 16,
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_step": 5,
+      "next_tick": 18,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 49,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001011",
+        "edge_step_completed": 5
+      },
+      "source": "001111",
+      "state_after": "VERTEX:001011",
+      "state_before": "AXIS_FLIPPED:2",
+      "target": "001011",
+      "tick": 17,
+      "tomotope_block": 36,
+      "tomotope_flag": 144
+    },
+    {
+      "edge_step": 6,
+      "next_tick": 19,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 45,
+        "loaded_tomotope_flag": 135
+      },
+      "source": "001011",
+      "state_after": "FLAG_LOADED:135",
+      "state_before": "VERTEX:001011",
+      "target": "001010",
+      "tick": 18,
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_step": 6,
+      "next_tick": 20,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 0
+      },
+      "source": "001011",
+      "state_after": "AXIS_FLIPPED:0",
+      "state_before": "FLAG_LOADED:135",
+      "target": "001010",
+      "tick": 19,
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_step": 6,
+      "next_tick": 21,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 45,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001010",
+        "edge_step_completed": 6
+      },
+      "source": "001011",
+      "state_after": "VERTEX:001010",
+      "state_before": "AXIS_FLIPPED:0",
+      "target": "001010",
+      "tick": 20,
+      "tomotope_block": 33,
+      "tomotope_flag": 135
+    },
+    {
+      "edge_step": 7,
+      "next_tick": 22,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 37,
+        "loaded_tomotope_flag": 134
+      },
+      "source": "001010",
+      "state_after": "FLAG_LOADED:134",
+      "state_before": "VERTEX:001010",
+      "target": "001000",
+      "tick": 21,
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_step": 7,
+      "next_tick": 23,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 1
+      },
+      "source": "001010",
+      "state_after": "AXIS_FLIPPED:1",
+      "state_before": "FLAG_LOADED:134",
+      "target": "001000",
+      "tick": 22,
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_step": 7,
+      "next_tick": 24,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 37,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001000",
+        "edge_step_completed": 7
+      },
+      "source": "001010",
+      "state_after": "VERTEX:001000",
+      "state_before": "AXIS_FLIPPED:1",
+      "target": "001000",
+      "tick": 23,
+      "tomotope_block": 33,
+      "tomotope_flag": 134
+    },
+    {
+      "edge_step": 8,
+      "next_tick": 25,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 40,
+        "loaded_tomotope_flag": 58
+      },
+      "source": "001000",
+      "state_after": "FLAG_LOADED:58",
+      "state_before": "VERTEX:001000",
+      "target": "101000",
+      "tick": 24,
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_step": 8,
+      "next_tick": 26,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 5
+      },
+      "source": "001000",
+      "state_after": "AXIS_FLIPPED:5",
+      "state_before": "FLAG_LOADED:58",
+      "target": "101000",
+      "tick": 25,
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_step": 8,
+      "next_tick": 27,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 40,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "101000",
+        "edge_step_completed": 8
+      },
+      "source": "001000",
+      "state_after": "VERTEX:101000",
+      "state_before": "AXIS_FLIPPED:5",
+      "target": "101000",
+      "tick": 26,
+      "tomotope_block": 14,
+      "tomotope_flag": 58
+    },
+    {
+      "edge_step": 9,
+      "next_tick": 28,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 142,
+        "loaded_tomotope_flag": 63
+      },
+      "source": "101000",
+      "state_after": "FLAG_LOADED:63",
+      "state_before": "VERTEX:101000",
+      "target": "101100",
+      "tick": 27,
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_step": 9,
+      "next_tick": 29,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 2
+      },
+      "source": "101000",
+      "state_after": "AXIS_FLIPPED:2",
+      "state_before": "FLAG_LOADED:63",
+      "target": "101100",
+      "tick": 28,
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_step": 9,
+      "next_tick": 30,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 142,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "101100",
+        "edge_step_completed": 9
+      },
+      "source": "101000",
+      "state_after": "VERTEX:101100",
+      "state_before": "AXIS_FLIPPED:2",
+      "target": "101100",
+      "tick": 29,
+      "tomotope_block": 15,
+      "tomotope_flag": 63
+    },
+    {
+      "edge_step": 10,
+      "next_tick": 31,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 55,
+        "loaded_tomotope_flag": 112
+      },
+      "source": "101100",
+      "state_after": "FLAG_LOADED:112",
+      "state_before": "VERTEX:101100",
+      "target": "001100",
+      "tick": 30,
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_step": 10,
+      "next_tick": 32,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 5
+      },
+      "source": "101100",
+      "state_after": "AXIS_FLIPPED:5",
+      "state_before": "FLAG_LOADED:112",
+      "target": "001100",
+      "tick": 31,
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_step": 10,
+      "next_tick": 33,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 5,
+      "q6_edge_index": 55,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "001100",
+        "edge_step_completed": 10
+      },
+      "source": "101100",
+      "state_after": "VERTEX:001100",
+      "state_before": "AXIS_FLIPPED:5",
+      "target": "001100",
+      "tick": 32,
+      "tomotope_block": 28,
+      "tomotope_flag": 112
+    },
+    {
+      "edge_step": 11,
+      "next_tick": 34,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 54,
+        "loaded_tomotope_flag": 113
+      },
+      "source": "001100",
+      "state_after": "FLAG_LOADED:113",
+      "state_before": "VERTEX:001100",
+      "target": "011100",
+      "tick": 33,
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_step": 11,
+      "next_tick": 35,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 4
+      },
+      "source": "001100",
+      "state_after": "AXIS_FLIPPED:4",
+      "state_before": "FLAG_LOADED:113",
+      "target": "011100",
+      "tick": 34,
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_step": 11,
+      "next_tick": 36,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 4,
+      "q6_edge_index": 54,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "011100",
+        "edge_step_completed": 11
+      },
+      "source": "001100",
+      "state_after": "VERTEX:011100",
+      "state_before": "AXIS_FLIPPED:4",
+      "target": "011100",
+      "tick": 35,
+      "tomotope_block": 28,
+      "tomotope_flag": 113
+    },
+    {
+      "edge_step": 12,
+      "next_tick": 37,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 82,
+        "loaded_tomotope_flag": 44
+      },
+      "source": "011100",
+      "state_after": "FLAG_LOADED:44",
+      "state_before": "VERTEX:011100",
+      "target": "010100",
+      "tick": 36,
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_step": 12,
+      "next_tick": 38,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 3
+      },
+      "source": "011100",
+      "state_after": "AXIS_FLIPPED:3",
+      "state_before": "FLAG_LOADED:44",
+      "target": "010100",
+      "tick": 37,
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_step": 12,
+      "next_tick": 39,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 3,
+      "q6_edge_index": 82,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "010100",
+        "edge_step_completed": 12
+      },
+      "source": "011100",
+      "state_after": "VERTEX:010100",
+      "state_before": "AXIS_FLIPPED:3",
+      "target": "010100",
+      "tick": 38,
+      "tomotope_block": 11,
+      "tomotope_flag": 44
+    },
+    {
+      "edge_step": 13,
+      "next_tick": 40,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 81,
+        "loaded_tomotope_flag": 37
+      },
+      "source": "010100",
+      "state_after": "FLAG_LOADED:37",
+      "state_before": "VERTEX:010100",
+      "target": "010110",
+      "tick": 39,
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_step": 13,
+      "next_tick": 41,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 1
+      },
+      "source": "010100",
+      "state_after": "AXIS_FLIPPED:1",
+      "state_before": "FLAG_LOADED:37",
+      "target": "010110",
+      "tick": 40,
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_step": 13,
+      "next_tick": 42,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 1,
+      "q6_edge_index": 81,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "010110",
+        "edge_step_completed": 13
+      },
+      "source": "010100",
+      "state_after": "VERTEX:010110",
+      "state_before": "AXIS_FLIPPED:1",
+      "target": "010110",
+      "tick": 41,
+      "tomotope_block": 9,
+      "tomotope_flag": 37
+    },
+    {
+      "edge_step": 14,
+      "next_tick": 43,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 87,
+        "loaded_tomotope_flag": 73
+      },
+      "source": "010110",
+      "state_after": "FLAG_LOADED:73",
+      "state_before": "VERTEX:010110",
+      "target": "010111",
+      "tick": 42,
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_step": 14,
+      "next_tick": 44,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "connector",
+        "flipped_q6_direction": 0
+      },
+      "source": "010110",
+      "state_after": "AXIS_FLIPPED:0",
+      "state_before": "FLAG_LOADED:73",
+      "target": "010111",
+      "tick": 43,
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_step": 14,
+      "next_tick": 45,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 0,
+      "q6_edge_index": 87,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "010111",
+        "edge_step_completed": 14
+      },
+      "source": "010110",
+      "state_after": "VERTEX:010111",
+      "state_before": "AXIS_FLIPPED:0",
+      "target": "010111",
+      "tick": 44,
+      "tomotope_block": 18,
+      "tomotope_flag": 73
+    },
+    {
+      "edge_step": 15,
+      "next_tick": 46,
+      "op": "LOAD_FLAG",
+      "phase_trit": 0,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "register_delta": {
+        "loaded_q6_edge": 77,
+        "loaded_tomotope_flag": 180
+      },
+      "source": "010111",
+      "state_after": "FLAG_LOADED:180",
+      "state_before": "VERTEX:010111",
+      "target": "010011",
+      "tick": 45,
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "edge_step": 15,
+      "next_tick": 47,
+      "op": "FLIP_Q6_AXIS",
+      "phase_trit": 1,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "register_delta": {
+        "edge_kind": "packet",
+        "flipped_q6_direction": 2
+      },
+      "source": "010111",
+      "state_after": "AXIS_FLIPPED:2",
+      "state_before": "FLAG_LOADED:180",
+      "target": "010011",
+      "tick": 46,
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "edge_step": 15,
+      "next_tick": 48,
+      "op": "LATCH_VERTEX",
+      "phase_trit": 2,
+      "q6_direction": 2,
+      "q6_edge_index": 77,
+      "region": "tomotope_body",
+      "register_delta": {
+        "committed_vertex": "010011",
+        "edge_step_completed": 15
+      },
+      "source": "010111",
+      "state_after": "VERTEX:010011",
+      "state_before": "AXIS_FLIPPED:2",
+      "target": "010011",
+      "tick": 47,
+      "tomotope_block": 45,
+      "tomotope_flag": 180
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 49,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "word_value": "Z Omega"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:1",
+      "state_before": "HESSE_WORD:3:TICK:0",
+      "tick": 48,
+      "word_tick": 0
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 50,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_register": "r=1",
+        "route_trit": 1,
+        "word_value": "r=1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:2",
+      "state_before": "HESSE_WORD:3:TICK:1",
+      "tick": 49,
+      "word_tick": 1
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 51,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_register": "p=0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "word_value": "p=0"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:3",
+      "state_before": "HESSE_WORD:3:TICK:2",
+      "tick": 50,
+      "word_tick": 2
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 52,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "word_value": "X^1",
+        "x_correction": "X^1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:4",
+      "state_before": "HESSE_WORD:3:TICK:3",
+      "tick": 51,
+      "word_tick": 3
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 53,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "word_value": "Z^0",
+        "z_correction": "Z^0"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:5",
+      "state_before": "HESSE_WORD:3:TICK:4",
+      "tick": 52,
+      "word_tick": 4
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 54,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "time_frame_bit": "1",
+        "word_value": "1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:6",
+      "state_before": "HESSE_WORD:3:TICK:5",
+      "tick": 53,
+      "word_tick": 5
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 55,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "restore_target": "Clifford ABI",
+        "route_trit": 1,
+        "word_value": "Clifford ABI"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:TICK:7",
+      "state_before": "HESSE_WORD:3:TICK:6",
+      "tick": 54,
+      "word_tick": 6
+    },
+    {
+      "hesse_outcome": 3,
+      "next_tick": 56,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^0",
+      "phase_trit": 0,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 3,
+        "next_word": "word 03",
+        "pauli_correction": "X^1 Z^0",
+        "phase_trit": 0,
+        "route_trit": 1,
+        "word_value": "word 03"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:3:DONE",
+      "state_before": "HESSE_WORD:3:TICK:7",
+      "tick": 55,
+      "word_tick": 7
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 57,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "word_value": "Z Omega"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:1",
+      "state_before": "HESSE_WORD:4:TICK:0",
+      "tick": 56,
+      "word_tick": 0
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 58,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_register": "r=1",
+        "route_trit": 1,
+        "word_value": "r=1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:2",
+      "state_before": "HESSE_WORD:4:TICK:1",
+      "tick": 57,
+      "word_tick": 1
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 59,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_register": "p=1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "word_value": "p=1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:3",
+      "state_before": "HESSE_WORD:4:TICK:2",
+      "tick": 58,
+      "word_tick": 2
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 60,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "word_value": "X^1",
+        "x_correction": "X^1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:4",
+      "state_before": "HESSE_WORD:4:TICK:3",
+      "tick": 59,
+      "word_tick": 3
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 61,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "word_value": "Z^1",
+        "z_correction": "Z^1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:5",
+      "state_before": "HESSE_WORD:4:TICK:4",
+      "tick": 60,
+      "word_tick": 4
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 62,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "time_frame_bit": "0",
+        "word_value": "0"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:6",
+      "state_before": "HESSE_WORD:4:TICK:5",
+      "tick": 61,
+      "word_tick": 5
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 63,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "restore_target": "Clifford ABI",
+        "route_trit": 1,
+        "word_value": "Clifford ABI"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:TICK:7",
+      "state_before": "HESSE_WORD:4:TICK:6",
+      "tick": 62,
+      "word_tick": 6
+    },
+    {
+      "hesse_outcome": 4,
+      "next_tick": 64,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^1",
+      "phase_trit": 1,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 4,
+        "next_word": "word 04",
+        "pauli_correction": "X^1 Z^1",
+        "phase_trit": 1,
+        "route_trit": 1,
+        "word_value": "word 04"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:4:DONE",
+      "state_before": "HESSE_WORD:4:TICK:7",
+      "tick": 63,
+      "word_tick": 7
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 65,
+      "op": "ERASE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "word_value": "Z Omega"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:1",
+      "state_before": "HESSE_WORD:5:TICK:0",
+      "tick": 64,
+      "word_tick": 0
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 66,
+      "op": "ROUTE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_register": "r=1",
+        "route_trit": 1,
+        "word_value": "r=1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:2",
+      "state_before": "HESSE_WORD:5:TICK:1",
+      "tick": 65,
+      "word_tick": 1
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 67,
+      "op": "PHASE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_register": "p=2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "word_value": "p=2"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:3",
+      "state_before": "HESSE_WORD:5:TICK:2",
+      "tick": 66,
+      "word_tick": 2
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 68,
+      "op": "X-CORR",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "word_value": "X^1",
+        "x_correction": "X^1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:4",
+      "state_before": "HESSE_WORD:5:TICK:3",
+      "tick": 67,
+      "word_tick": 3
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 69,
+      "op": "Z-CORR",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "word_value": "Z^2",
+        "z_correction": "Z^2"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:5",
+      "state_before": "HESSE_WORD:5:TICK:4",
+      "tick": 68,
+      "word_tick": 4
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 70,
+      "op": "T-BIT",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "time_frame_bit": "1",
+        "word_value": "1"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:6",
+      "state_before": "HESSE_WORD:5:TICK:5",
+      "tick": 69,
+      "word_tick": 5
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": 71,
+      "op": "RESTORE",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "restore_target": "Clifford ABI",
+        "route_trit": 1,
+        "word_value": "Clifford ABI"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:TICK:7",
+      "state_before": "HESSE_WORD:5:TICK:6",
+      "tick": 70,
+      "word_tick": 6
+    },
+    {
+      "hesse_outcome": 5,
+      "next_tick": null,
+      "op": "NEXT",
+      "pauli_correction": "X^1 Z^2",
+      "phase_trit": 2,
+      "region": "local_lift_hesse_epilogue",
+      "register_delta": {
+        "hesse_outcome": 5,
+        "next_word": "word 05",
+        "pauli_correction": "X^1 Z^2",
+        "phase_trit": 2,
+        "route_trit": 1,
+        "word_value": "word 05"
+      },
+      "route_trit": 1,
+      "state_after": "HESSE_WORD:5:DONE",
+      "state_before": "HESSE_WORD:5:TICK:7",
+      "tick": 71,
+      "word_tick": 7
+    }
+  ],
+  "verified": true
+}
