@@ -1,0 +1,31 @@
+{
+  "theorem": "BT1668 Gauge-Twirl Bridge Support Test",
+  "twirl": "average the BT1662 eight-cycle selector over all 80 Levi root gauges",
+  "coverage": {
+    "roots": 80,
+    "selected_cycles_per_root": 8,
+    "cycle_length": 8,
+    "edge_incidence_events": 5120,
+    "vertex_incidence_events": 5120,
+    "unique_cycles_seen": 156,
+    "max_cycle_reuse_count": 28,
+    "levi_edges_covered": 160,
+    "levi_vertices_covered": 80,
+    "total_levi_edges": 160,
+    "total_levi_vertices": 80
+  },
+  "edge_distribution": {
+    "min_count": 1,
+    "max_count": 103,
+    "entropy_bits": 6.694057648792,
+    "effective_support_size": 103.540949910565
+  },
+  "vertex_distribution": {
+    "min_count": 5,
+    "max_count": 134,
+    "entropy_bits": 6.02282960955,
+    "effective_support_size": 65.02080937248
+  },
+  "conclusion": "Root-gauge twirling destroys the special eight-cycle support and spreads over every Levi edge and vertex. The gauge-averaged bridge is global, not a smaller canonical 8-cycle embedding.",
+  "boundary": "This is a root-gauge twirl, not yet a full Sp(4,3) automorphism twirl. It is enough to show that the deterministic bridge does not collapse to a sparse natural support."
+}
