@@ -1,0 +1,181 @@
+{
+  "theorem": "BT1655 Clock-to-Matter Spectral Coupling Theorem",
+  "construction": "Cartesian/tensor graph-product Laplacian L_clock\u2297I + I\u2297L_matter, using clock=L(Heawood) and matter=complement(W33).",
+  "clock_graph": {
+    "name": "line graph of Heawood/Fano incidence clock",
+    "vertices": 21,
+    "edges": 42,
+    "regular_degree": [
+      4
+    ],
+    "laplacian_spectrum": {
+      "0.0": 1,
+      "1.585786": 6,
+      "4.414214": 6,
+      "6.0": 8
+    }
+  },
+  "matter_graph": {
+    "name": "complement of W(3,3)",
+    "vertices": 40,
+    "edges": 540,
+    "regular_degree": [
+      27
+    ],
+    "laplacian_spectrum": {
+      "0.0": 1,
+      "24.0": 15,
+      "30.0": 24
+    }
+  },
+  "coupled_spectrum": {
+    "0.0": 1,
+    "1.585786": 6,
+    "4.414214": 6,
+    "6.0": 8,
+    "24.0": 15,
+    "25.585786": 90,
+    "28.414214": 90,
+    "30.0": 144,
+    "31.585786": 144,
+    "34.414214": 144,
+    "36.0": 192
+  },
+  "blocks": [
+    {
+      "clock_block": "clock ground",
+      "clock_eigenvalue": 0.0,
+      "clock_mult": 1,
+      "matter_block": "matter ground",
+      "matter_eigenvalue": 0.0,
+      "matter_mult": 1,
+      "coupled_eigenvalue": 0.0,
+      "product_mult": 1
+    },
+    {
+      "clock_block": "clock ground",
+      "clock_eigenvalue": 0.0,
+      "clock_mult": 1,
+      "matter_block": "matter mass gap",
+      "matter_eigenvalue": 24.0,
+      "matter_mult": 15,
+      "coupled_eigenvalue": 24.0,
+      "product_mult": 15
+    },
+    {
+      "clock_block": "clock ground",
+      "clock_eigenvalue": 0.0,
+      "clock_mult": 1,
+      "matter_block": "matter top shell",
+      "matter_eigenvalue": 30.0,
+      "matter_mult": 24,
+      "coupled_eigenvalue": 30.0,
+      "product_mult": 24
+    },
+    {
+      "clock_block": "clock lower oscillator shell",
+      "clock_eigenvalue": 1.585786,
+      "clock_mult": 6,
+      "matter_block": "matter ground",
+      "matter_eigenvalue": 0.0,
+      "matter_mult": 1,
+      "coupled_eigenvalue": 1.585786,
+      "product_mult": 6
+    },
+    {
+      "clock_block": "clock lower oscillator shell",
+      "clock_eigenvalue": 1.585786,
+      "clock_mult": 6,
+      "matter_block": "matter mass gap",
+      "matter_eigenvalue": 24.0,
+      "matter_mult": 15,
+      "coupled_eigenvalue": 25.585786,
+      "product_mult": 90
+    },
+    {
+      "clock_block": "clock lower oscillator shell",
+      "clock_eigenvalue": 1.585786,
+      "clock_mult": 6,
+      "matter_block": "matter top shell",
+      "matter_eigenvalue": 30.0,
+      "matter_mult": 24,
+      "coupled_eigenvalue": 31.585786,
+      "product_mult": 144
+    },
+    {
+      "clock_block": "clock upper oscillator shell",
+      "clock_eigenvalue": 4.414214,
+      "clock_mult": 6,
+      "matter_block": "matter ground",
+      "matter_eigenvalue": 0.0,
+      "matter_mult": 1,
+      "coupled_eigenvalue": 4.414214,
+      "product_mult": 6
+    },
+    {
+      "clock_block": "clock upper oscillator shell",
+      "clock_eigenvalue": 4.414214,
+      "clock_mult": 6,
+      "matter_block": "matter mass gap",
+      "matter_eigenvalue": 24.0,
+      "matter_mult": 15,
+      "coupled_eigenvalue": 28.414214,
+      "product_mult": 90
+    },
+    {
+      "clock_block": "clock upper oscillator shell",
+      "clock_eigenvalue": 4.414214,
+      "clock_mult": 6,
+      "matter_block": "matter top shell",
+      "matter_eigenvalue": 30.0,
+      "matter_mult": 24,
+      "coupled_eigenvalue": 34.414214,
+      "product_mult": 144
+    },
+    {
+      "clock_block": "clock endpoint/runtime word shell",
+      "clock_eigenvalue": 6.0,
+      "clock_mult": 8,
+      "matter_block": "matter ground",
+      "matter_eigenvalue": 0.0,
+      "matter_mult": 1,
+      "coupled_eigenvalue": 6.0,
+      "product_mult": 8
+    },
+    {
+      "clock_block": "clock endpoint/runtime word shell",
+      "clock_eigenvalue": 6.0,
+      "clock_mult": 8,
+      "matter_block": "matter mass gap",
+      "matter_eigenvalue": 24.0,
+      "matter_mult": 15,
+      "coupled_eigenvalue": 30.0,
+      "product_mult": 120
+    },
+    {
+      "clock_block": "clock endpoint/runtime word shell",
+      "clock_eigenvalue": 6.0,
+      "clock_mult": 8,
+      "matter_block": "matter top shell",
+      "matter_eigenvalue": 30.0,
+      "matter_mult": 24,
+      "coupled_eigenvalue": 36.0,
+      "product_mult": 192
+    }
+  ],
+  "resonance": {
+    "clock_endpoint_eigenvalue": 6,
+    "clock_endpoint_rank": 8,
+    "matter_gap_eigenvalue": 24,
+    "matter_gap_rank": 15,
+    "coupled_eigenvalue": 30,
+    "rank": 120,
+    "interpretation": "clock endpoint 6^8 times matter gap 24^15 lands exactly at 30=h(E8), with rank 120."
+  },
+  "degeneracy_boundary": {
+    "total_30_eigenspace_rank": 144,
+    "resonant_subblock_rank": 120,
+    "clock_ground_times_matter_top_rank": 24,
+    "boundary": "The 30-eigenspace is degenerate: the 120-dimensional clock-endpoint\u00d7matter-gap block shares eigenvalue 30 with a 24-dimensional clock-ground\u00d7matter-top block. The coupling theorem identifies a canonical tensor subblock, not a unique spectral eigenspace without projectors."
+  }
+}
