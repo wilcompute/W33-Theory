@@ -1,0 +1,23 @@
+{
+  "hesse": {
+    "points": 9,
+    "lines": 12,
+    "parallel_classes": 4,
+    "configuration": "(9_4, 12_3)"
+  },
+  "mubs": 4,
+  "registers": {
+    "n9": "q^2=9 single-qutrit phase space",
+    "n12": "k=12 Hesse lines = contexts",
+    "n10": "Phi4=10 contextual denominator"
+  },
+  "fuel": {
+    "space": "F3^4 two-qutrit",
+    "rays": 40,
+    "contextual_fraction": "1/Phi4 = 1/10"
+  },
+  "summary": "Hesse configuration (9_4,12_3) = AG(2,3) = single-qutrit discrete phase space: 9 points = register n=9=q^2, 12 lines = n=12=k contexts, 4 parallel classes = 4 MUBs = (q^2-1)/(q-1). n=10=Phi4=dim Sp(4) = contextual-fraction denominator. One qutrit non-contextual; two-qutrit W(3,3) (F3^4, 40 isotropic rays) carries the magic, contextual fraction 1/Phi4=1/10. Vertex figures 9,10,12 = qutrit phase space / contextual denominator / context count.",
+  "sources": [
+    "fgmarcelis 'Hessian configuration' and 'Mermin, Cayley-Salmon, Desargues'; Hesse configuration (9_4,12_3)=AG(2,3) (inflections of a cubic); single-qutrit phase space F3^2 + 4 MUBs; Howard et al. (magic = contextuality); W(3,3)=GQ(3,3) 40 rays, contextual fraction 1/Phi4=1/10; w33_register_atlas_3n.py, w33_contextuality_is_the_fuel.py."
+  ]
+}

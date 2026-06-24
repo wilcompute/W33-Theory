@@ -4718,6 +4718,48 @@ so the substrate's three master integers $E=240$, $\mathrm{bus}=2160$, $v=40$ ar
 the vertex, edge, and diameter counts of a single Eisenstein polytope. (Witness:
 \path{analysis/w33_witting_polytope_substrate.py}.)
 
+\subsection{The register atlas, the explicit E8 weld, and the Hesse engine}
+
+Three threads close the surface picture. \emph{First}, the genus survey is a
+single \emph{register stack}: each admissible vertex figure $n=6+d$ ($d\mid k=12$)
+is a substrate register, and the $\{3,n\}$ family is its tower with
+$V=12(g-1)/(n-6)$, $E=6n(g-1)/(n-6)$, $F=4n(g-1)/(n-6)$. The five registers are
+\[
+  n=7=\Phi_6\ (\hbox{qutrit}),\quad 8=2^3\ (\hbox{qubit}),\quad
+  9=q^2\ (\hbox{single-qutrit phase space}),
+\]
+\[
+  10=\Phi_4\ (\dim\mathrm{Sp}(4),\ \hbox{contextual denominator}),\quad
+  12=k\ (\hbox{the degree}),
+\]
+and all fourteen Table-1 maps are reproduced exactly by the per-register
+parametrisation. (Witness: \path{analysis/w33_register_atlas_3n.py}.)
+
+\emph{Second}, the identification ``Witting body $=$ E8'' is now explicit. The
+Coxeter element $C$ of $W(\mathrm E_8)$ has order $h=30$, and because the
+exponents $\{1,7,11,13,17,19,23,29\}$ are coprime to $3$, the element
+$\omega=C^{10}$ has order $3$ with eigenvalues $\omega,\omega^2$ only --- a
+\emph{fixed-point-free} isometry, the multiplication-by-$\omega$ that turns E8
+into a rank-$4$ Eisenstein lattice. Explicit computation on the $240$ roots gives
+$240/3=80$ $\omega$-triangles and (under $C^5$, order $6$) exactly
+$240/6=40$ \emph{hexagons}; each hexagon spans one complex line, so the $40$
+hexagons are the $40$ Witting rays $=$ the $40$ isotropic $1$-spaces of $W(3,3)$.
+Thus $v=40$ is the number of Eisenstein complex lines in E8 and $E=240=40\cdot6$
+its roots: $W(3,3)$ \emph{is} the Eisenstein form of E8. (Witness:
+\path{analysis/w33_e8_eisenstein_witting_weld.py}.)
+
+\emph{Third}, the qutrit registers carry the contextuality engine. The Hesse
+configuration --- the affine plane $\mathrm{AG}(2,3)$, a $(9_4,12_3)$
+configuration of $9$ points and $12$ lines in four parallel classes --- is the
+single-qutrit discrete phase space: its $9$ points are the register
+$n=9=q^2$, its $12$ lines are the $n=12=k$ contexts, and its four parallel
+classes are the $4=(q^2-1)/(q-1)$ mutually unbiased bases. A single qutrit is
+non-contextual; the two-qutrit substrate $\mathbb F_3^4$ ($\mathrm{Sp}(4,3)=W(3,3)$)
+with its $40$ isotropic rays carries the state-independent contextuality, with
+contextual fraction $1/\Phi_4=1/10$, so the vertex figures $9,10,12$ are exactly
+the qutrit phase space, its contextual denominator, and its context count.
+(Witness: \path{analysis/w33_hesse_mermin_contextuality.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

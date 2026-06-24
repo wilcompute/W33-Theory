@@ -1,0 +1,15 @@
+{
+  "e8_roots": 240,
+  "coxeter_order": 30,
+  "omega_triangles": 80,
+  "hexagons": 40,
+  "substrate": {
+    "v": 40,
+    "E": 240,
+    "e8_421_edges": 6720
+  },
+  "summary": "explicit Eisenstein/icosian weld: omega=C^10 (order-3 fixed-point-free element of W(E8), exponents coprime to 3) makes E8 a rank-4 Eisenstein lattice. The 240 roots split into 80 omega-triangles (C^10) and 40 hexagons (C^5, order 6) = the 40 Witting rays = the 40 isotropic 1-spaces of W(3,3)=GQ(3,3). So v=40 = number of Eisenstein complex lines in E8, E=240=40*6 = E8 roots; 6720=2160*3+240 = Gosset 4_21 edges. W(3,3) is the Eisenstein form of E8.",
+  "sources": [
+    "E8 root system (240 roots); Coxeter element order h=30, exponents {1,7,11,13,17,19,23,29} coprime to 3 so C^10 (order 3) is fixed-point-free; Eisenstein/complex E8 = rank-4 lattice over Z[omega]; Witting polytope = complex E8 (Coxeter, Regular Complex Polytopes); fgmarcelis icosian construction; w33_witting_polytope_substrate.py, w33_witting_polytope_construction.py (40 W(3,3) rays)."
+  ]
+}

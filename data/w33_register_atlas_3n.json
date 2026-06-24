@@ -1,0 +1,42 @@
+{
+  "coefficients_per_g_minus_1": {
+    "7": [
+      12,
+      42,
+      28
+    ],
+    "8": [
+      6,
+      24,
+      16
+    ],
+    "9": [
+      4,
+      18,
+      12
+    ],
+    "10": [
+      3,
+      15,
+      10
+    ],
+    "12": [
+      2,
+      12,
+      8
+    ]
+  },
+  "maps_verified": 14,
+  "registers": {
+    "7": "Phi6  = one-qutrit readout period (heptad/Fano)",
+    "8": "2^3   = three-qubit Hilbert space GF(8)",
+    "9": "q^2   = single-qutrit phase space F3xF3 = AG(2,3) = Hesse 9 pts (4 MUBs)",
+    "10": "Phi4 = dim Sp(4) = contextual-fraction denominator (1/10)",
+    "12": "k    = W(3,3) valency / degree"
+  },
+  "hesse_n9": "9 = q^2 = AG(2,3) = Hesse 9 points; R10.1 V=36=9*4",
+  "summary": "the {3,n} register atlas: each admissible vertex figure n=6+d (d|k=12) is a substrate register, {3,n} its tower with V=12(g-1)/(n-6), E=6n(g-1)/(n-6), F=4n(g-1)/(n-6). Per-(g-1) coeffs: n7(12,42,28), n8(6,24,16), n9(4,18,12), n10(3,15,10), n12(2,12,8). Registers: 7=Phi6 qutrit, 8=2^3 qubit, 9=q^2 single-qutrit Hesse AG(2,3), 10=Phi4 Sp4/contextual denom, 12=k (9=single-qutrit phase space F3^2). All 14 Table-1 maps reproduced.",
+  "sources": [
+    "Bokowski & H., Symmetry 2025, 17, 622, Table 1 (all 14 maps); {3,n}: V=12(g-1)/(n-6); registers Phi6/2^3/q^2/Phi4/k; AG(2,3)=Hesse 9 points; w33_genus_vertex_figure_selection.py, w33_qubit_schlafli_tower_3_8.py, w33_hurwitz_tower_qubit_crossover.py."
+  ]
+}
