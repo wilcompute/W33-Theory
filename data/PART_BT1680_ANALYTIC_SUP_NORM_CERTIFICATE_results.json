@@ -1,0 +1,35 @@
+{
+  "theorem": "BT1680 Analytic Sup-Norm Certificate",
+  "target": "P_matter_24 on x=2(L_m/30)-1 with spectral points {-1, 3/5, 1}",
+  "certified_polynomial_power_basis": {
+    "x4": "-625/256",
+    "x2": "225/128",
+    "x0": "175/256",
+    "formula": "p(x)=-(625/256)x^4+(225/128)x^2+175/256"
+  },
+  "certified_polynomial_chebyshev_basis": {
+    "T0": "1325/2048",
+    "T2": "-175/512",
+    "T4": "-625/2048",
+    "chebyshev_l1": 1.2939453125
+  },
+  "interpolation_values": {
+    "p(-1)": "0",
+    "p(3/5)": "1",
+    "p(1)": "0",
+    "p(0)": "175/256"
+  },
+  "derivative_certificate": {
+    "p_prime_factorization": "p'(x)=x*(-625/64*x^2 + 225/64)",
+    "critical_points_in_interval": ["-3/5", "0", "3/5"],
+    "endpoint_values": {"p(-1)": 0, "p(1)": 0},
+    "critical_values": {"p(-3/5)": 1, "p(0)": "175/256", "p(3/5)": 1},
+    "sup_norm_on_minus1_1": 1
+  },
+  "qsvt_parity": {
+    "parity": "even degree 4",
+    "status": "parity-valid as a scalar polynomial candidate for matter-24"
+  },
+  "correction_to_BT1676": "The sampled degree-5 matter-24 candidate with sup norm 1.000004174608004 is replaced by an exact even quartic certificate with sup norm 1.",
+  "boundary": "This certifies the scalar polynomial bound. It still does not synthesize the full QSVT phase sequence."
+}
