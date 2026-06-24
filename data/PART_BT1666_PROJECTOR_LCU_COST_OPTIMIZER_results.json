@@ -1,0 +1,43 @@
+{
+  "theorem": "BT1666 Projector LCU Cost Optimizer",
+  "optimization_scope": "exact minimal-degree interpolation projectors from BT1661; no extra high-degree powers allowed",
+  "individual_projector_l1": {
+    "P_clock_6": {"l1_mass": "1/3", "max_power": 3},
+    "P_clock_0": {"l1_mass": "7/3", "max_power": 3},
+    "P_matter_24": {"l1_mass": "31/144", "max_power": 2},
+    "P_matter_30": {"l1_mass": "5/36", "max_power": 2}
+  },
+  "tensor_selectors": [
+    {
+      "name": "resonance_Pc6_tensor_Pm24",
+      "term_count": 6,
+      "l1_mass": "31/432",
+      "l1_mass_float": 0.07175925925925926,
+      "max_walk_depth": 5,
+      "weighted_walk_depth": 2.6036866359447006
+    },
+    {
+      "name": "companion_Pc0_tensor_Pm30",
+      "term_count": 8,
+      "l1_mass": "35/108",
+      "l1_mass_float": 0.32407407407407407,
+      "max_walk_depth": 5,
+      "weighted_walk_depth": 1.7542857142857142
+    }
+  ],
+  "combined_two_port_l1_mass": "19/48",
+  "combined_two_port_l1_float": 0.3958333333333333,
+  "pass_depth_bound": {
+    "resonance_max_depth": 5,
+    "companion_max_depth": 5,
+    "global_max_depth": 5,
+    "time_bin_envelope": 2048,
+    "depth_margin": 2043
+  },
+  "dominant_cost": {
+    "selector": "companion_Pc0_tensor_Pm30",
+    "reason": "P_clock_0 contains the identity branch and has l1 mass 7/3, so companion l1 mass 35/108 exceeds resonance l1 mass 31/432."
+  },
+  "optimizer_decision": "Under the depth-minimal exact projector constraint, use the BT1661 polynomials unchanged. The total two-port LCU mass is 19/48, and maximum walk depth is only 5 of 2048 bins.",
+  "boundary": "Allowing higher-degree polynomial identities can reduce coefficient l1 while increasing walk depth. That is a different optimization problem requiring calibrated loss-per-pass numbers."
+}
