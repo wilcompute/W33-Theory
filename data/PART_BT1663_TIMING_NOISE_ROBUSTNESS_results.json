@@ -1,0 +1,23 @@
+{
+  "theorem": "BT1663 Timing-Noise Robustness Simulator",
+  "model": "separator contrast = exp(-sigma_phi^2/2) * (1 - 2p_flip) * (1 - background)",
+  "nominal_case": {
+    "shots": 2048,
+    "loss_fraction": 0.1,
+    "phase_jitter_rms": 0.05,
+    "background_fraction": 0.02,
+    "parity_flip_prob": 0.05,
+    "contrast": 0.880898,
+    "snr": 37.800938
+  },
+  "five_sigma_parity_thresholds": [
+    {"loss_fraction": 0.0, "max_parity_flip_for_5sigma": 0.443559, "contrast_at_threshold": 0.110485, "effective_shots": 2048.0, "snr_at_threshold": 5.0},
+    {"loss_fraction": 0.1, "max_parity_flip_for_5sigma": 0.440506, "contrast_at_threshold": 0.116462, "effective_shots": 1843.2, "snr_at_threshold": 5.0},
+    {"loss_fraction": 0.25, "max_parity_flip_for_5sigma": 0.434828, "contrast_at_threshold": 0.127578, "effective_shots": 1536.0, "snr_at_threshold": 5.0},
+    {"loss_fraction": 0.5, "max_parity_flip_for_5sigma": 0.420181, "contrast_at_threshold": 0.15625, "effective_shots": 1024.0, "snr_at_threshold": 5.0},
+    {"loss_fraction": 0.75, "max_parity_flip_for_5sigma": 0.387119, "contrast_at_threshold": 0.220971, "effective_shots": 512.0, "snr_at_threshold": 5.0}
+  ],
+  "pass_rule": "separator is accepted when absolute contrast times sqrt(effective shots) is at least 5",
+  "interpretation": "the BT1660 -1/+1 separator is robust to moderate loss because loss mainly reduces shot number, while parity flips directly reduce contrast",
+  "boundary": "This is a first analytic-noise model, not a full optical device simulation. It should be replaced by measured component loss once hardware numbers are fixed."
+}
