@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1672 Projector-to-Hardware Falsifier Paper Integration",
+  "status": "paper-ready insert, paper section artifact, and idempotent integrator pushed",
+  "files": {
+    "insert": "analysis/BT1672_projector_hardware_falsifier_insert.tex",
+    "section": "paper/sections/sec_bt1672_projector_hardware_falsifier.tex",
+    "integrator": "tools/integrate_bt1672_projector_hardware_falsifier.py",
+    "main_tex": "photonic_holonet.tex"
+  },
+  "claims_integrated": [
+    "BT1661 projector compiler lowers Pc6, Pc0, Pm24, and Pm30 to graph-walk LCU ports.",
+    "BT1664/BT1667 component budgets show the separator is primarily parity/sign-flip limited in the placeholder sweep.",
+    "BT1669 algebraic frontier favors higher degree, while BT1670 proxy physical score prefers degree (8,8) over raw (9,8).",
+    "BT1665/BT1668/BT1671 show the clock-Levi bridge is gauge-fixed; automorphism twirl is uniform over all 160 Levi incidence edges.",
+    "The timing falsifier remains the -1/+1 split under partial clock evolution at tau=pi/6."
+  ],
+  "boundary": "The integrator is conservative and idempotent. It inserts the section after BT1657 if that input is present, otherwise before the near-term falsification subsection."
+}
