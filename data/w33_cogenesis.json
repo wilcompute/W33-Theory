@@ -1,0 +1,10 @@
+{
+  "log10_eta_B": -9.23,
+  "Omega_DM_over_Omega_b": "82/15",
+  "m_DM_equal_asymmetry_GeV": 5.13,
+  "cp_source": "128-spinor right-handed neutrino N_R decay (leptogenesis + dark)",
+  "summary": "cogenesis: the 128's right-handed neutrino N_R decays (CP-violating, out of equilibrium) -> baryon asymmetry (lepto-genesis, log10 eta_B = -240/26 = -9.23, obs -9.21) AND equal dark-SU(4) asymmetry -> asymmetric DM, Omega_DM~Omega_b automatic, ratio 82/15. Matter + dark matter from one E8 CP decay. Honest: mechanism, washout/CP factors not computed.",
+  "sources": [
+    "leptogenesis (Fukugita-Yanagida); asymmetric dark matter / cogenesis; corpus log10(eta_B)=-|E|/(v-k-lambda)=-9.23, Omega_DM=mu/g, Omega_b=lambda/(v+1); w33_dark_sector_128.py"
+  ]
+}

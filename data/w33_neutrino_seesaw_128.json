@@ -1,0 +1,15 @@
+{
+  "embedding": "128=(16,4)+(16bar,4bar); 16 of SO(10) contains N_R",
+  "M_R_GeV": 1210000000000000.0,
+  "M_GUT_GeV": 2.2e+16,
+  "sum_m_nu_meV": 58,
+  "pmns": {
+    "s12^2": "4/13",
+    "s23^2": "7/13",
+    "s13^2": "2/91"
+  },
+  "summary": "neutrino masses from the dark 128: N_R = SO(10) singlet in the family 16 (in 128=(16,4)+(16bar,4bar)); Majorana M_R ~ dark/GUT scale ~ 10^15 GeV ~ M_GUT (from m_nu=m_D^2/M_R, m_nu~0.05 eV, m_D~v_EW); corpus Sum m_nu=58 meV, cyclotomic PMNS. The same 128 N_R drives cogenesis (w33_cogenesis.py). Honest: standard type-I seesaw with substrate 128/M_R identification.",
+  "sources": [
+    "type-I seesaw (Minkowski; Gell-Mann-Ramond-Slansky; Yanagida); SO(10) 16 contains N_R; E8=SO(16)+128, 128=(16,4)+(16bar,4bar); corpus Sum m_nu=58 meV, PMNS cyclotomic; w33_dark_sector_128.py, w33_cogenesis.py"
+  ]
+}

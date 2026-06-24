@@ -1,0 +1,12 @@
+{
+  "N": 60,
+  "n_s": "29/30",
+  "fNL_local": "1/72",
+  "fNL_local_float": 0.0139,
+  "boundary_c": 24,
+  "shape": "Monster c=24 boundary CFT 3-pt (local, squeezed-peaked)",
+  "summary": "single-field inflation (unique light dS mode) -> Maldacena consistency f_NL^local = (5/12)(1-n_s) = 5/(6N) = 1/72 = 0.0139 (Planck f_NL=-0.9+-5.1, consistent); bispectrum shape = Monster c=24 dS/CFT boundary 3-pt (moonshine OPE). Falsifiable tiny f_NL, moonshine shape. Honest: consistency relation is a theorem given single-field; shape is dS/CFT framing.",
+  "sources": [
+    "Maldacena, Non-Gaussian features of primordial fluctuations (2002), single-field consistency f_NL=(5/12)(1-n_s); dS/CFT bispectrum = boundary 3-pt; w33_inflation_dscft.py, w33_holographic_central_charge.py"
+  ]
+}
