@@ -1,0 +1,602 @@
+{
+  "breakthrough": "The finite 2160-slot mirror bus supports fair recursive packet service by time division.  FIFO profiles are collision-free, every packet is served once, and the queue/latency bounds are explicit.",
+  "checks": {
+    "all_packets_served_once": true,
+    "all_profiles_collision_free": true,
+    "bt1702_verified": true,
+    "burst_profile_has_depth1_queue_bound": true,
+    "jain_fairness_is_one": true,
+    "sequential_profile_has_no_wait": true,
+    "wavefront_profile_has_depth2_queue_bound": true
+  },
+  "profiles": [
+    {
+      "collision_count": 0,
+      "jain_fairness": "1",
+      "max_latency_slices": 40,
+      "max_queue_depth": 40,
+      "max_wait_slices": 39,
+      "mean_latency_slices": "41/2",
+      "mean_wait_slices": "39/2",
+      "packets": 40,
+      "profile": "depth1_burst",
+      "service_count_histogram": {
+        "1": 40
+      },
+      "service_log_sample": [
+        {
+          "arrival_slice": 0,
+          "finish_slice": 1,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 0,
+          "service_slice": 0,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 2,
+          "latency_slices": 2,
+          "latency_ticks": 4320,
+          "local_bus_slots_used": 2160,
+          "packet": 1,
+          "service_slice": 1,
+          "wait_slices": 1,
+          "wait_ticks": 2160
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 3,
+          "latency_slices": 3,
+          "latency_ticks": 6480,
+          "local_bus_slots_used": 2160,
+          "packet": 2,
+          "service_slice": 2,
+          "wait_slices": 2,
+          "wait_ticks": 4320
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 4,
+          "latency_slices": 4,
+          "latency_ticks": 8640,
+          "local_bus_slots_used": 2160,
+          "packet": 3,
+          "service_slice": 3,
+          "wait_slices": 3,
+          "wait_ticks": 6480
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 5,
+          "latency_slices": 5,
+          "latency_ticks": 10800,
+          "local_bus_slots_used": 2160,
+          "packet": 4,
+          "service_slice": 4,
+          "wait_slices": 4,
+          "wait_ticks": 8640
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 6,
+          "latency_slices": 6,
+          "latency_ticks": 12960,
+          "local_bus_slots_used": 2160,
+          "packet": 5,
+          "service_slice": 5,
+          "wait_slices": 5,
+          "wait_ticks": 10800
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 7,
+          "latency_slices": 7,
+          "latency_ticks": 15120,
+          "local_bus_slots_used": 2160,
+          "packet": 6,
+          "service_slice": 6,
+          "wait_slices": 6,
+          "wait_ticks": 12960
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 8,
+          "latency_slices": 8,
+          "latency_ticks": 17280,
+          "local_bus_slots_used": 2160,
+          "packet": 7,
+          "service_slice": 7,
+          "wait_slices": 7,
+          "wait_ticks": 15120
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 9,
+          "latency_slices": 9,
+          "latency_ticks": 19440,
+          "local_bus_slots_used": 2160,
+          "packet": 8,
+          "service_slice": 8,
+          "wait_slices": 8,
+          "wait_ticks": 17280
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 10,
+          "latency_slices": 10,
+          "latency_ticks": 21600,
+          "local_bus_slots_used": 2160,
+          "packet": 9,
+          "service_slice": 9,
+          "wait_slices": 9,
+          "wait_ticks": 19440
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 11,
+          "latency_slices": 11,
+          "latency_ticks": 23760,
+          "local_bus_slots_used": 2160,
+          "packet": 10,
+          "service_slice": 10,
+          "wait_slices": 10,
+          "wait_ticks": 21600
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 12,
+          "latency_slices": 12,
+          "latency_ticks": 25920,
+          "local_bus_slots_used": 2160,
+          "packet": 11,
+          "service_slice": 11,
+          "wait_slices": 11,
+          "wait_ticks": 23760
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 37,
+          "latency_slices": 37,
+          "latency_ticks": 79920,
+          "local_bus_slots_used": 2160,
+          "packet": 36,
+          "service_slice": 36,
+          "wait_slices": 36,
+          "wait_ticks": 77760
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 38,
+          "latency_slices": 38,
+          "latency_ticks": 82080,
+          "local_bus_slots_used": 2160,
+          "packet": 37,
+          "service_slice": 37,
+          "wait_slices": 37,
+          "wait_ticks": 79920
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 39,
+          "latency_slices": 39,
+          "latency_ticks": 84240,
+          "local_bus_slots_used": 2160,
+          "packet": 38,
+          "service_slice": 38,
+          "wait_slices": 38,
+          "wait_ticks": 82080
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 40,
+          "latency_slices": 40,
+          "latency_ticks": 86400,
+          "local_bus_slots_used": 2160,
+          "packet": 39,
+          "service_slice": 39,
+          "wait_slices": 39,
+          "wait_ticks": 84240
+        }
+      ],
+      "service_ticks_per_packet": 2160,
+      "total_service_ticks": 86400
+    },
+    {
+      "collision_count": 0,
+      "jain_fairness": "1",
+      "max_latency_slices": 1561,
+      "max_queue_depth": 1561,
+      "max_wait_slices": 1560,
+      "mean_latency_slices": "781",
+      "mean_wait_slices": "780",
+      "packets": 1600,
+      "profile": "depth2_wavefront",
+      "service_count_histogram": {
+        "1": 1600
+      },
+      "service_log_sample": [
+        {
+          "arrival_slice": 0,
+          "finish_slice": 1,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 0,
+          "service_slice": 0,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 2,
+          "latency_slices": 2,
+          "latency_ticks": 4320,
+          "local_bus_slots_used": 2160,
+          "packet": 1,
+          "service_slice": 1,
+          "wait_slices": 1,
+          "wait_ticks": 2160
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 3,
+          "latency_slices": 3,
+          "latency_ticks": 6480,
+          "local_bus_slots_used": 2160,
+          "packet": 2,
+          "service_slice": 2,
+          "wait_slices": 2,
+          "wait_ticks": 4320
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 4,
+          "latency_slices": 4,
+          "latency_ticks": 8640,
+          "local_bus_slots_used": 2160,
+          "packet": 3,
+          "service_slice": 3,
+          "wait_slices": 3,
+          "wait_ticks": 6480
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 5,
+          "latency_slices": 5,
+          "latency_ticks": 10800,
+          "local_bus_slots_used": 2160,
+          "packet": 4,
+          "service_slice": 4,
+          "wait_slices": 4,
+          "wait_ticks": 8640
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 6,
+          "latency_slices": 6,
+          "latency_ticks": 12960,
+          "local_bus_slots_used": 2160,
+          "packet": 5,
+          "service_slice": 5,
+          "wait_slices": 5,
+          "wait_ticks": 10800
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 7,
+          "latency_slices": 7,
+          "latency_ticks": 15120,
+          "local_bus_slots_used": 2160,
+          "packet": 6,
+          "service_slice": 6,
+          "wait_slices": 6,
+          "wait_ticks": 12960
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 8,
+          "latency_slices": 8,
+          "latency_ticks": 17280,
+          "local_bus_slots_used": 2160,
+          "packet": 7,
+          "service_slice": 7,
+          "wait_slices": 7,
+          "wait_ticks": 15120
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 9,
+          "latency_slices": 9,
+          "latency_ticks": 19440,
+          "local_bus_slots_used": 2160,
+          "packet": 8,
+          "service_slice": 8,
+          "wait_slices": 8,
+          "wait_ticks": 17280
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 10,
+          "latency_slices": 10,
+          "latency_ticks": 21600,
+          "local_bus_slots_used": 2160,
+          "packet": 9,
+          "service_slice": 9,
+          "wait_slices": 9,
+          "wait_ticks": 19440
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 11,
+          "latency_slices": 11,
+          "latency_ticks": 23760,
+          "local_bus_slots_used": 2160,
+          "packet": 10,
+          "service_slice": 10,
+          "wait_slices": 10,
+          "wait_ticks": 21600
+        },
+        {
+          "arrival_slice": 0,
+          "finish_slice": 12,
+          "latency_slices": 12,
+          "latency_ticks": 25920,
+          "local_bus_slots_used": 2160,
+          "packet": 11,
+          "service_slice": 11,
+          "wait_slices": 11,
+          "wait_ticks": 23760
+        },
+        {
+          "arrival_slice": 39,
+          "finish_slice": 1597,
+          "latency_slices": 1558,
+          "latency_ticks": 3365280,
+          "local_bus_slots_used": 2160,
+          "packet": 1596,
+          "service_slice": 1596,
+          "wait_slices": 1557,
+          "wait_ticks": 3363120
+        },
+        {
+          "arrival_slice": 39,
+          "finish_slice": 1598,
+          "latency_slices": 1559,
+          "latency_ticks": 3367440,
+          "local_bus_slots_used": 2160,
+          "packet": 1597,
+          "service_slice": 1597,
+          "wait_slices": 1558,
+          "wait_ticks": 3365280
+        },
+        {
+          "arrival_slice": 39,
+          "finish_slice": 1599,
+          "latency_slices": 1560,
+          "latency_ticks": 3369600,
+          "local_bus_slots_used": 2160,
+          "packet": 1598,
+          "service_slice": 1598,
+          "wait_slices": 1559,
+          "wait_ticks": 3367440
+        },
+        {
+          "arrival_slice": 39,
+          "finish_slice": 1600,
+          "latency_slices": 1561,
+          "latency_ticks": 3371760,
+          "local_bus_slots_used": 2160,
+          "packet": 1599,
+          "service_slice": 1599,
+          "wait_slices": 1560,
+          "wait_ticks": 3369600
+        }
+      ],
+      "service_ticks_per_packet": 2160,
+      "total_service_ticks": 3456000
+    },
+    {
+      "collision_count": 0,
+      "jain_fairness": "1",
+      "max_latency_slices": 1,
+      "max_queue_depth": 1,
+      "max_wait_slices": 0,
+      "mean_latency_slices": "1",
+      "mean_wait_slices": "0",
+      "packets": 1600,
+      "profile": "depth2_sequential",
+      "service_count_histogram": {
+        "1": 1600
+      },
+      "service_log_sample": [
+        {
+          "arrival_slice": 0,
+          "finish_slice": 1,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 0,
+          "service_slice": 0,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 1,
+          "finish_slice": 2,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 1,
+          "service_slice": 1,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 2,
+          "finish_slice": 3,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 2,
+          "service_slice": 2,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 3,
+          "finish_slice": 4,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 3,
+          "service_slice": 3,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 4,
+          "finish_slice": 5,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 4,
+          "service_slice": 4,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 5,
+          "finish_slice": 6,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 5,
+          "service_slice": 5,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 6,
+          "finish_slice": 7,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 6,
+          "service_slice": 6,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 7,
+          "finish_slice": 8,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 7,
+          "service_slice": 7,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 8,
+          "finish_slice": 9,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 8,
+          "service_slice": 8,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 9,
+          "finish_slice": 10,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 9,
+          "service_slice": 9,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 10,
+          "finish_slice": 11,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 10,
+          "service_slice": 10,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 11,
+          "finish_slice": 12,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 11,
+          "service_slice": 11,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 1596,
+          "finish_slice": 1597,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 1596,
+          "service_slice": 1596,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 1597,
+          "finish_slice": 1598,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 1597,
+          "service_slice": 1597,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 1598,
+          "finish_slice": 1599,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 1598,
+          "service_slice": 1598,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        },
+        {
+          "arrival_slice": 1599,
+          "finish_slice": 1600,
+          "latency_slices": 1,
+          "latency_ticks": 2160,
+          "local_bus_slots_used": 2160,
+          "packet": 1599,
+          "service_slice": 1599,
+          "wait_slices": 0,
+          "wait_ticks": 0
+        }
+      ],
+      "service_ticks_per_packet": 2160,
+      "total_service_ticks": 3456000
+    }
+  ],
+  "service_quantum": "one packet consumes one 2160-slot time slice",
+  "source_certificates": [
+    "data/bt1702_holonet_scheduler_collision_audit.json"
+  ],
+  "theorem": "BT1705 Holonet Shared-Bus Time-Division Simulator",
+  "verified": true
+}

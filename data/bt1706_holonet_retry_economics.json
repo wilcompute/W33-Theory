@@ -1,0 +1,312 @@
+{
+  "breakthrough": "The symbolic fault exits now have deterministic economics: for any declared loss/dark/parity rates, the verifier computes retry load, CSS handoff load, local termination load, and guard-budget pressure.",
+  "checks": {
+    "all_profiles_within_guard_budget": true,
+    "bt1703_verified": true,
+    "bt1705_verified": true,
+    "css_load_comes_only_from_parity_faults": true,
+    "guard_limit_reaches_unit_pressure": true,
+    "nominal_retry_load_is_less_than_one_packet": true,
+    "profiles_are_deterministic": true
+  },
+  "claim_boundary": [
+    "Rates are input parameters, not measured hardware constants.",
+    "The verifier computes ABI load once rates are supplied; it does not assert a physical threshold."
+  ],
+  "cycle_frames": 1600,
+  "guard_budgets_per_cycle": {
+    "DARK_CLICK": 168,
+    "LOSS": 168,
+    "PARITY": 112
+  },
+  "profiles": [
+    {
+      "expected_css_handoff_per_packet": {
+        "float": 0.00012,
+        "fraction": "3/25000"
+      },
+      "expected_local_termination_per_packet": {
+        "float": 8.8e-05,
+        "fraction": "11/125000"
+      },
+      "expected_per_1600_frame_cycle_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 0.0128,
+          "fraction": "8/625"
+        },
+        "LOSS": {
+          "float": 1.152,
+          "fraction": "144/125"
+        },
+        "PARITY": {
+          "float": 0.192,
+          "fraction": "24/125"
+        }
+      },
+      "expected_per_packet_by_exit": {
+        "CSS_SYNDROME_HANDOFF": {
+          "float": 0.00012,
+          "fraction": "3/25000"
+        },
+        "LOCAL_DARK_CLOSEOUT": {
+          "float": 8e-05,
+          "fraction": "1/12500"
+        },
+        "LOCAL_DARK_REFERENCE_TERMINATION": {
+          "float": 8e-06,
+          "fraction": "1/125000"
+        },
+        "LOCAL_REPROGRAM_RETRY": {
+          "float": 0.00032,
+          "fraction": "1/3125"
+        },
+        "RETRY_FRAME": {
+          "float": 0.00032,
+          "fraction": "1/3125"
+        }
+      },
+      "expected_per_packet_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 8e-06,
+          "fraction": "1/125000"
+        },
+        "LOSS": {
+          "float": 0.00072,
+          "fraction": "9/12500"
+        },
+        "PARITY": {
+          "float": 0.00012,
+          "fraction": "3/25000"
+        }
+      },
+      "expected_retry_or_reprogram_per_packet": {
+        "float": 0.00064,
+        "fraction": "2/3125"
+      },
+      "guard_budget_pressure": {
+        "DARK_CLICK": {
+          "float": 7.619047619047618e-05,
+          "fraction": "1/13125"
+        },
+        "LOSS": {
+          "float": 0.006857142857142857,
+          "fraction": "6/875"
+        },
+        "PARITY": {
+          "float": 0.0017142857142857142,
+          "fraction": "3/1750"
+        }
+      },
+      "profile": "nominal_low",
+      "rates": {
+        "DARK_CLICK": {
+          "float": 1e-06,
+          "fraction": "1/1000000"
+        },
+        "LOSS": {
+          "float": 1e-05,
+          "fraction": "1/100000"
+        },
+        "PARITY": {
+          "float": 5e-06,
+          "fraction": "1/200000"
+        }
+      },
+      "within_guard_budget": true
+    },
+    {
+      "expected_css_handoff_per_packet": {
+        "float": 0.007,
+        "fraction": "7/1000"
+      },
+      "expected_local_termination_per_packet": {
+        "float": 0.011666666666666667,
+        "fraction": "7/600"
+      },
+      "expected_per_1600_frame_cycle_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 16.8,
+          "fraction": "84/5"
+        },
+        "LOSS": {
+          "float": 16.8,
+          "fraction": "84/5"
+        },
+        "PARITY": {
+          "float": 11.2,
+          "fraction": "56/5"
+        }
+      },
+      "expected_per_packet_by_exit": {
+        "CSS_SYNDROME_HANDOFF": {
+          "float": 0.007,
+          "fraction": "7/1000"
+        },
+        "LOCAL_DARK_CLOSEOUT": {
+          "float": 0.0011666666666666668,
+          "fraction": "7/6000"
+        },
+        "LOCAL_DARK_REFERENCE_TERMINATION": {
+          "float": 0.0105,
+          "fraction": "21/2000"
+        },
+        "LOCAL_REPROGRAM_RETRY": {
+          "float": 0.004666666666666667,
+          "fraction": "7/1500"
+        },
+        "RETRY_FRAME": {
+          "float": 0.004666666666666667,
+          "fraction": "7/1500"
+        }
+      },
+      "expected_per_packet_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 0.0105,
+          "fraction": "21/2000"
+        },
+        "LOSS": {
+          "float": 0.0105,
+          "fraction": "21/2000"
+        },
+        "PARITY": {
+          "float": 0.007,
+          "fraction": "7/1000"
+        }
+      },
+      "expected_retry_or_reprogram_per_packet": {
+        "float": 0.009333333333333334,
+        "fraction": "7/750"
+      },
+      "guard_budget_pressure": {
+        "DARK_CLICK": {
+          "float": 0.1,
+          "fraction": "1/10"
+        },
+        "LOSS": {
+          "float": 0.1,
+          "fraction": "1/10"
+        },
+        "PARITY": {
+          "float": 0.1,
+          "fraction": "1/10"
+        }
+      },
+      "profile": "engineering_upper_10pct_guard",
+      "rates": {
+        "DARK_CLICK": {
+          "float": 0.0013125,
+          "fraction": "21/16000"
+        },
+        "LOSS": {
+          "float": 0.00014583333333333335,
+          "fraction": "7/48000"
+        },
+        "PARITY": {
+          "float": 0.0002916666666666667,
+          "fraction": "7/24000"
+        }
+      },
+      "within_guard_budget": true
+    },
+    {
+      "expected_css_handoff_per_packet": {
+        "float": 0.07,
+        "fraction": "7/100"
+      },
+      "expected_local_termination_per_packet": {
+        "float": 0.11666666666666667,
+        "fraction": "7/60"
+      },
+      "expected_per_1600_frame_cycle_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 168.0,
+          "fraction": "168/1"
+        },
+        "LOSS": {
+          "float": 168.0,
+          "fraction": "168/1"
+        },
+        "PARITY": {
+          "float": 112.0,
+          "fraction": "112/1"
+        }
+      },
+      "expected_per_packet_by_exit": {
+        "CSS_SYNDROME_HANDOFF": {
+          "float": 0.07,
+          "fraction": "7/100"
+        },
+        "LOCAL_DARK_CLOSEOUT": {
+          "float": 0.011666666666666667,
+          "fraction": "7/600"
+        },
+        "LOCAL_DARK_REFERENCE_TERMINATION": {
+          "float": 0.105,
+          "fraction": "21/200"
+        },
+        "LOCAL_REPROGRAM_RETRY": {
+          "float": 0.04666666666666667,
+          "fraction": "7/150"
+        },
+        "RETRY_FRAME": {
+          "float": 0.04666666666666667,
+          "fraction": "7/150"
+        }
+      },
+      "expected_per_packet_by_fault_type": {
+        "DARK_CLICK": {
+          "float": 0.105,
+          "fraction": "21/200"
+        },
+        "LOSS": {
+          "float": 0.105,
+          "fraction": "21/200"
+        },
+        "PARITY": {
+          "float": 0.07,
+          "fraction": "7/100"
+        }
+      },
+      "expected_retry_or_reprogram_per_packet": {
+        "float": 0.09333333333333334,
+        "fraction": "7/75"
+      },
+      "guard_budget_pressure": {
+        "DARK_CLICK": {
+          "float": 1.0,
+          "fraction": "1/1"
+        },
+        "LOSS": {
+          "float": 1.0,
+          "fraction": "1/1"
+        },
+        "PARITY": {
+          "float": 1.0,
+          "fraction": "1/1"
+        }
+      },
+      "profile": "guard_budget_limit",
+      "rates": {
+        "DARK_CLICK": {
+          "float": 0.013125,
+          "fraction": "21/1600"
+        },
+        "LOSS": {
+          "float": 0.0014583333333333334,
+          "fraction": "7/4800"
+        },
+        "PARITY": {
+          "float": 0.002916666666666667,
+          "fraction": "7/2400"
+        }
+      },
+      "within_guard_budget": true
+    }
+  ],
+  "source_certificates": [
+    "data/bt1703_holonet_fault_propagation_simulator.json",
+    "data/bt1705_holonet_shared_bus_time_division_simulator.json"
+  ],
+  "theorem": "BT1706 Holonet Retry Economics",
+  "verified": true
+}

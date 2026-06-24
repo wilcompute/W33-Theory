@@ -4288,6 +4288,56 @@ noise model must plug into.  (Witnesses:
 \path{analysis/bt1702_holonet_scheduler_collision_audit.py}, and
 \path{analysis/bt1703_holonet_fault_propagation_simulator.py}.)
 
+\subsection{BT1704--BT1706 replay and retry economics}
+
+The next layer turns runtime safety into an operational model.  BT1704 replays
+the \(72\)-tick event log twice from the same initial state.  The two executions
+produce identical tick logs and identical final registers.  The final cursor is
+\[
+  \texttt{HESSE\_WORD:5:DONE},
+\]
+with final corrections \(X^1\), \(Z^2\), and time-frame bit \(1\).  This is the
+determinism test the packet ABI needed: the trace is not merely ordered; it is
+replayable.
+
+BT1705 simulates one shared \(2160\)-slot mirror bus under FIFO time division.
+One packet consumes one \(2160\)-slot service slice.  Three profiles are tested:
+\[
+\begin{array}{c|c|c}
+\hbox{profile} & \hbox{packets} & \hbox{max queue}\\
+\hline
+\hbox{depth-1 burst} & 40 & 40\\
+\hbox{depth-2 wavefront} & 1600 & 1561\\
+\hbox{depth-2 sequential} & 1600 & 1.
+\end{array}
+\]
+All profiles are collision-free, every packet is served once, and Jain fairness
+is exactly \(1\).  The result is deliberately engineering-facing: the finite bus
+is fair and schedulable, but bursty recursive traffic pays finite queueing
+latency.
+
+BT1706 attaches symbolic rates to the BT1703 fault exits.  For the nominal
+profile
+\[
+  p_{\rm loss}=10^{-5},\qquad
+  p_{\rm dark}=10^{-6},\qquad
+  p_{\rm parity}=5\cdot10^{-6},
+\]
+the expected retry/reprogram load per packet is
+\[
+  64\,p_{\rm loss}=\frac{2}{3125},
+\]
+and the expected CSS handoff load is
+\[
+  24\,p_{\rm parity}=\frac{3}{25000}.
+\]
+The verifier also includes an engineering \(10\%\)-guard profile and the exact
+guard-budget limit profile.  These are not experimental thresholds; they are
+the exact ABI economics once a bench supplies rates.  (Witnesses:
+\path{analysis/bt1704_holonet_packet_replay_runner.py},
+\path{analysis/bt1705_holonet_shared_bus_time_division_simulator.py}, and
+\path{analysis/bt1706_holonet_retry_economics.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
