@@ -1,0 +1,10 @@
+{
+  "rank_d1": 39,
+  "rank_d2": 120,
+  "H1": 81,
+  "code": "[[240,81,4]]_3",
+  "summary": "trit-saving = the code: W(3,3) chain complex (40,240,160), dd=0; closing a triangle saves a trit = weight-3 CSS Z-check (rank 120), vertices = X-checks (rank 39); H1 = (240-39)-120 = 81 = q^4 = the trits no triangle saves = the logical register of [[240,81,4]]_3 (d_Z=4=mu). Closing a loop = encoding a qutrit; the triangulation IS the code.",
+  "sources": [
+    "Klee-Irwin trit-saving / cycle clock; W(3,3) clique complex CSS code [[240,81,4]]_3 (check ranks 39,120); simplicial homology over F3; w33_genus_ladder_clock.py"
+  ]
+}

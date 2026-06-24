@@ -1,0 +1,12 @@
+{
+  "niven_irrational": true,
+  "closes_in_3D": false,
+  "closure_number": 30,
+  "cells_600": 600,
+  "mirror_bus": 2160,
+  "supercycle": 51840,
+  "summary": "BC tetrahelix twist arccos(-2/3) is Niven-irrational -> aperiodic in 3D (never closes) = time-quasicrystal / two incommensurate frequencies = the clock; closes at 30 tetrahedra in S^3 (600-cell = 20x30, 30=h(E8)); runtime 2160=h(E8)*72, 51840=24*h(E8)*72=|Sp(4,3)| supercycle. Helix geometry = machine timing.",
+  "sources": [
+    "Boerdijk-Coxeter helix (Wikipedia): aperiodic, theta=arccos(-2/3), 600-cell = 20 rings of 30; Niven's theorem; h(E8)=30; w33_genus_ladder_clock.py, w33_machine_clock_is_mass.py"
+  ]
+}

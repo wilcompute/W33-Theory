@@ -3443,6 +3443,34 @@ its genus-$0$ companion: one triangulation ladder $3\to4\to7$, the triangle and 
 tetrahedron, builds the clock at both genera. (Witness:
 \texttt{analysis/w33\_genus\_ladder\_clock.py}.)
 
+And the ladder takes us all the way home: the same simplices generate the surfaces,
+the code, and the clock at once. \emph{Surfaces (climbing to genus 3).} Above the
+sphere (tetrahedron, $g=0$) and the torus (Fano/Heawood, $g=1$) the next
+maximally-symmetric rung is the Klein quartic, the lowest-genus Hurwitz surface
+($g=3$): a regular map of $24$ heptagons / $56$ triangles / $84$ edges with
+automorphism group $\mathrm{PSL}(2,7)$, $\lvert\mathrm{PSL}(2,7)\rvert=84(g-1)=\lambda k\Phi_6=\Phi_6 f=168$.
+Its numbers are substrate integers ($24=f$, $56=v{+}k{+}\mu=\dim E_6^{\text{fund}}$
+analogue, $84=k\Phi_6$), and that $\mathrm{PSL}(2,7)$ is exactly the clock/readout
+layer of \S\ref{sec:clock-is-mass} --- so the heptagon $\Phi_6=7$ threads the whole
+ladder, the Fano heptad becoming the genus-$3$ heptagonal surface.
+\emph{Code (trit-saving is encoding).} Closing a triangle saves one $q=3$ trit: on
+the $W(3,3)$ chain complex ($40,240,160$, $\partial^2=0$) the $160$ triangles are the
+weight-$3$ CSS $Z$-checks (rank $120$) and the vertices the $X$-checks (rank $39$),
+so the trits no triangle can save are $H_1=(240{-}39){-}120=81=q^4$, the logical
+register of the $[[240,81,4]]_3$ code --- closing a loop and encoding a qutrit are
+one act. \emph{Clock (the helix is a quasicrystal).} The tetrahelix twist
+$\arccos(-\tfrac23)$ is Niven-irrational, so the Boerdijk--Coxeter helix never
+closes in flat $3$D --- the aperiodic, two-incommensurate-frequency time-crystal
+clock --- yet closes at exactly $30$ tetrahedra in $S^3$ (the $600$-cell $=20\times30$),
+and $30=h(E_8)$ is the middle factor of the supercycle $51840=24\cdot30\cdot72=\lvert\mathrm{Sp}(4,3)\rvert$.
+So from the single integer $q=3$ --- three points closing a triangle, saving a trit
+--- unfold the surfaces (genus $0,1,3$), the error-correcting code ($H_1=81$), and
+the quasicrystal clock (supercycle $\lvert\mathrm{Sp}(4,3)\rvert$): geometry, code,
+and time are one triangulation. (Witnesses:
+\texttt{analysis/w33\_klein\_quartic\_genus3.py},
+\texttt{analysis/w33\_trit\_saving\_code.py},
+\texttt{analysis/w33\_bc\_helix\_quasicrystal.py}.)
+
 \subsection{The clock is a mass and the supercycle is the gauge group: running the
 machine is the physics}
 \label{sec:clock-is-mass}

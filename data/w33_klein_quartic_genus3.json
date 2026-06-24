@@ -1,0 +1,22 @@
+{
+  "genus": 3,
+  "heptagons": 24,
+  "triangles": 56,
+  "edges": 84,
+  "aut": 168,
+  "klein_numbers": {
+    "24": "f",
+    "56": "v+k+mu (E7 fund)",
+    "84": "k*Phi6",
+    "168": "lambda*k*Phi6 = PSL(2,7)"
+  },
+  "ladder": [
+    "g0: tetrahedron (q,mu)",
+    "g1: Fano/torus (Phi6=7)",
+    "g3: Klein quartic PSL(2,7)=168"
+  ],
+  "summary": "genus-3 rung of the ladder: Klein quartic (lowest-genus Hurwitz surface), {7,3} = 24 heptagons / 56 triangles / 84 edges, Euler -4, g=3; Aut=PSL(2,7), 168=84(g-1)=lambda*k*Phi6=Phi6*f (the clock/readout layer). Klein numbers = substrate integers (24=f, 56=v+k+mu=E7 fund, 84=k*Phi6). Ladder 3->4->7->Klein threaded by the heptagon Phi6=7: trit (g0) to readout (g3).",
+  "sources": [
+    "Klein quartic / Hurwitz surface (Wikipedia); PSL(2,7)=168=84(g-1); {3,7}/{7,3} regular map (24 heptagons/56 triangles/84 edges); corpus 168=lambda*k*Phi6, 84=k*Phi6; w33_genus_ladder_clock.py, w33_clock_gauge_two_layer.py"
+  ]
+}
