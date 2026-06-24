@@ -1,0 +1,49 @@
+{
+  "theorem": "BT1658 Resonance Projector Split Theorem",
+  "projectors": {
+    "clock_ground_P0": "- (Lc-6I)((Lc-3I)^2-2I) / 42",
+    "clock_endpoint_P6": "Lc((Lc-3I)^2-2I) / 42",
+    "matter_gap_P24": "Lm(Lm-30I)/((24)(24-30))",
+    "matter_top_P30": "Lm(Lm-24I)/((30)(30-24))"
+  },
+  "checks": {
+    "clock_P0_rank": 1,
+    "clock_P6_rank": 8,
+    "matter_P24_rank": 15,
+    "matter_P30_rank": 24,
+    "clock_P0_idempotent_norm": 0.0,
+    "clock_P6_idempotent_norm": 0.0,
+    "matter_P24_idempotent_norm": 0.0,
+    "matter_P30_idempotent_norm": 0.0,
+    "clock_P0_P6_orthogonality_norm": 0.0,
+    "matter_P24_P30_orthogonality_norm": 0.0,
+    "clock_L_on_P6_residual_norm": 0.0,
+    "clock_L_on_P0_residual_norm": 0.0,
+    "matter_L_on_P24_residual_norm": 0.0,
+    "matter_L_on_P30_residual_norm": 0.0
+  },
+  "coupled_30_split": {
+    "resonance_block": {
+      "formula": "P_clock_6 \u2297 P_matter_24",
+      "coupled_eigenvalue": 30,
+      "rank": 120,
+      "partial_clock_eigenvalue": 6,
+      "partial_matter_eigenvalue": 24
+    },
+    "companion_block": {
+      "formula": "P_clock_0 \u2297 P_matter_30",
+      "coupled_eigenvalue": 30,
+      "rank": 24,
+      "partial_clock_eigenvalue": 0,
+      "partial_matter_eigenvalue": 30
+    },
+    "total_30_rank": 144
+  },
+  "separator": {
+    "operator": "K_clock = L_clock \u2297 I_matter",
+    "eigenvalue_on_resonance_block": 6,
+    "eigenvalue_on_companion_block": 0,
+    "normalized_resonance_selector_on_30_space": "(K_clock / 6) restricted to the coupled 30-eigenspace"
+  },
+  "boundary": "The coupled eigenvalue 30 is degenerate, but the degeneracy is split by commuting graph operators. The split is projector-natural, not coordinate-natural."
+}
