@@ -1,0 +1,15 @@
+{
+  "bulk_laplacian": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "isometry_modes": 15,
+  "matter_modes": 24,
+  "dim_SO42": 15,
+  "boundary_c": 24,
+  "summary": "discrete dS/CFT: de Sitter bulk W(3,3) Laplacian {0,10^24,16^15} = vacuum(1) + matter(f=24=boundary c) + SO(4,2) isometries(g=15=dim SU(4)=SO(6), the dark/bulk gauge adjoint); future boundary = Monster CFT c=24. Bulk SU(4) isometry = dark gauge group; expanding holography = dS/CFT with moonshine boundary.",
+  "sources": [
+    "Strominger dS/CFT (2001); SO(4,2) conformal Killing modes; W(3,3) Laplacian {0,10^24,16^15}; w33_su4_is_spacetime.py, w33_thermal_cosmology.py, w33_holographic_central_charge.py"
+  ]
+}

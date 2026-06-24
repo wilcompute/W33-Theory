@@ -1,0 +1,10 @@
+{
+  "order_2T": 24,
+  "chain": "2T < SU(2) < SU(4)=SO(6)=SO(4,2)",
+  "T_matrix_order": 12,
+  "clock_period": 12,
+  "summary": "2T (clock) < SU(2) < SU(4)=SO(6)=SO(4,2) (dark gauge / bulk / spacetime); |2T|=24=f=total quantum dim of D(2T); the clock tick = the D(2T) modular T-matrix (topological twists), order lcm(4,6)=12=k = the clock period. Time = dark-anyon braiding at the bottom of the SU(4) chain.",
+  "sources": [
+    "2T binary tetrahedral < SU(2) (unit quaternions); SU(2)<SU(4); D(2T) modular data (topological spins chi(g)/dim chi); w33_su4_is_spacetime.py, w33_anyons_from_2T.py, w33_machine_clock_is_mass.py"
+  ]
+}

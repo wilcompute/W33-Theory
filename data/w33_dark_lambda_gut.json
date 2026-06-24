@@ -1,0 +1,41 @@
+{
+  "scan": [
+    {
+      "N_f": 4,
+      "beta0": 12.0,
+      "identity": "k",
+      "Lambda_dark_GeV": 2521000.0
+    },
+    {
+      "N_f": 7,
+      "beta0": 10.0,
+      "identity": "Phi4",
+      "Lambda_dark_GeV": 25910.0
+    },
+    {
+      "N_f": 10,
+      "beta0": 8.0,
+      "identity": "k-mu",
+      "Lambda_dark_GeV": 26.99
+    },
+    {
+      "N_f": 13,
+      "beta0": 6.0,
+      "identity": "2q",
+      "Lambda_dark_GeV": 0.0002889
+    },
+    {
+      "N_f": 16,
+      "beta0": 4.0,
+      "identity": "mu",
+      "Lambda_dark_GeV": 3.311e-14
+    }
+  ],
+  "target_beta0": 8,
+  "target_identity": "k - mu (N_f = Phi4 = 10)",
+  "Lambda_dark_at_beta8_GeV": 27.0,
+  "summary": "Lambda_dark = M_GUT(Lambda_QCD/M_GUT)^(beta_vis/beta_dark) from E8 matching; exponentially sensitive to beta_0^dark; the corpus ~22.8 GeV dark matter is matched by beta_0^dark = 8 = k-mu (N_f = Phi4 = 10), Lambda_dark ~ tens of GeV. Honest: scale estimate, not a sharp mass.",
+  "sources": [
+    "1-loop RG matching at a common GUT scale; M_GUT~2.2e16, Lambda_QCD~0.2 GeV; beta_0^SU(4)=(44-2Nf)/3; corpus M_GUT, alpha_GUT^-1=f=24, m_DM~22.8 GeV; w33_dark_matter_mass.py"
+  ]
+}
