@@ -1,0 +1,17 @@
+{
+  "T_H": 1.9099,
+  "scrambling_time": 2,
+  "page_S_max": 240,
+  "abelian_double_dim": 81,
+  "nonabelian_double_anyons": 42,
+  "nonabelian_double_qdim": 24,
+  "catalan_42": 42,
+  "zeta_counts": {
+    "corpus": "Tr(A^n) points",
+    "new": "Tr(B^m) geodesics"
+  },
+  "summary": "four fronts = one thermal object refining corpus CCCLXXII-V: fast scrambler (time lambda=2) at Hawking temp T_H=k/2pi; modular flow = clock (thermal time); two Drinfeld doubles (abelian D(Z3^2) dim 81 = register, non-abelian D(2T) 42 anyons qdim f=24 = matter); 42=C5=v+lambda=3*14; zeta Tr(B^m) geodesics satisfy graph RH. T_H = k/2pi unifies them.",
+  "sources": [
+    "index.html CCCLXXII (U_q(sp4), D((Z/3)^2) dim 81, sp(4)_12 WZW c=8), CCCLXXIII (T_H=k/2pi, scrambling=lambda=2, Page S_max=E), CCCLXXIV (Ihara/Weil Tr(A^n)), CCCLXIV (3 anyon types); Catalan chain C5=v+lambda=42"
+  ]
+}
