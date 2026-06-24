@@ -1,0 +1,13 @@
+{
+  "m_betabeta_meV": 2.27,
+  "sum_m_nu_meV": 58.7,
+  "delta_CP_deg": 194.0,
+  "majorana_phases_deg": [
+    120,
+    240
+  ],
+  "summary": "0nubb from the 128 seesaw: cyclotomic PMNS (s12^2=4/13, s23^2=7/13, s13^2=2/91) + Z3 Majorana phases (120,240 deg) + NH masses (Sum=58 meV) -> m_betabeta ~ 2.3 meV (nEXO/LEGEND reach); delta_CP=14pi/13~194 deg = the cogenesis CP phase. One N_R fixes masses, 0nubb, CP phase, and the matter asymmetry.",
+  "sources": [
+    "0nubb effective mass formula; cyclotomic PMNS (corpus); Z3 Majorana phases 120/240 deg (corpus); delta_CP=14pi/13; w33_neutrino_seesaw_128.py, w33_cogenesis.py"
+  ]
+}

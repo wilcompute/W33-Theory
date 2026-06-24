@@ -1,0 +1,13 @@
+{
+  "n_s": "29/30",
+  "r": "1/300",
+  "f_NL_local": "1/72",
+  "running_dns_dlnk": "-1/1800",
+  "N": 60,
+  "all_within_bounds": true,
+  "boundary_c": 24,
+  "summary": "moonshine CMB sheet from N=2(v-Phi4)=60: n_s=29/30, r=1/300, f_NL=1/72, running dn_s/dlnk=-2/N^2=-1/1800 (NEW), all within bounds; correlators on the Monster c=24 dS/CFT boundary. Sharp tiny targets (running, f_NL) for CMB-S4/LiteBIRD.",
+  "sources": [
+    "Starobinsky R^2 (n_s, r, running); Maldacena consistency (f_NL); corpus N=2(v-Phi4), r_s=147, z_rec=1090; dS/CFT boundary c=24; w33_inflation_dscft.py, w33_cmb_nongaussianity.py"
+  ]
+}

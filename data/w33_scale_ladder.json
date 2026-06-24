@@ -1,0 +1,52 @@
+{
+  "ladder": [
+    {
+      "scale": "M_Pl",
+      "GeV": 1.22e+19,
+      "form": "v_EW*10^(2 Phi6)*2 dim(E8)",
+      "epoch": "Planck"
+    },
+    {
+      "scale": "M_GUT",
+      "GeV": 24600000000000000,
+      "form": "v_EW*10^(2 Phi6)",
+      "epoch": "unification/inflation"
+    },
+    {
+      "scale": "M_R",
+      "GeV": 1200000000000000.0,
+      "form": "m_D^2/m_nu (seesaw)",
+      "epoch": "leptogenesis"
+    },
+    {
+      "scale": "T_RH",
+      "GeV": 1000000000.0,
+      "form": "Starobinsky reheating",
+      "epoch": "reheating"
+    },
+    {
+      "scale": "v_EW",
+      "GeV": 246.0,
+      "form": "|E|+2q",
+      "epoch": "electroweak"
+    },
+    {
+      "scale": "Lambda_dark",
+      "GeV": 30.0,
+      "form": "hidden SU(4), beta0=k-mu",
+      "epoch": "dark confinement"
+    },
+    {
+      "scale": "Lambda_QCD",
+      "GeV": 0.2,
+      "form": "visible QCD, beta0=Phi6",
+      "epoch": "confinement"
+    }
+  ],
+  "leptogenesis_nonthermal": true,
+  "T_RH_equals_Lambda_dark": false,
+  "summary": "substrate scale ladder M_Pl>M_GUT>M_R>T_RH>v_EW>Lambda_dark>Lambda_QCD, each a closed-form substrate expression; thermal history descends it (inflation->reheating->N_R lepto/cogenesis->EW->dark->QCD). HONEST: M_R>>T_RH so leptogenesis is NON-thermal; T_RH != Lambda_dark (premise corrected).",
+  "sources": [
+    "corpus M_Pl, M_GUT=v_EW*10^(2Phi6), v_EW=|E|+2q; seesaw M_R; Starobinsky reheating; w33_dark_lambda_gut.py, w33_neutrino_seesaw_128.py, w33_cogenesis.py"
+  ]
+}
