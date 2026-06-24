@@ -3008,6 +3008,37 @@ $\langle R_p\rangle=\mathrm{Sp}(4,3)$);
 \texttt{analysis/w33\_yang\_mills\_computation.py} (Wilson-loop census, the
 $96\%$ matter-graph action).)
 
+\subsection{The fuel is contextuality: the register is a Wigner phase space and
+magic is its negativity}
+\label{sec:contextuality-fuel}
+
+There is a second, resource-theoretic answer to ``where does the quantum power
+come from,'' and it is exact on the substrate. Howard, Wallman, Veitch and
+Emerson proved that for odd-prime-dimensional qudits \emph{contextuality} ---
+equivalently, negativity of the Gross discrete Wigner function --- is the
+necessary resource that lifts Clifford computation to universal quantum
+computation by magic-state injection \cite{howard14}. The qutrit $d=q=3$ is the
+smallest, cleanest case, and the substrate realizes the whole picture
+geometrically. The discrete phase space of two qutrits is $\mathbb Z_3^{4}$ with
+$3^4=81=q^4$ points --- \emph{exactly} the logical register $H_1=81$ of the
+$[[240,81,4]]_3$ code (irreducible under $\mathrm{PSp}(4,3)$); the Wigner function
+lives on the same $81$ points the machine computes on. The $40$ vertices of
+$W(3,3)$ are the $(81-1)/2=40$ nonzero rays of that phase space --- the two-qutrit
+Pauli operators up to phase --- so the substrate \emph{is} the two-qutrit Pauli
+geometry. The Clifford group acts as $\mathrm{Sp}(4,3)=\mathrm{Aut}(W(3,3))$,
+permuting phase points and preserving Wigner-positivity (the classically simulable
+sector, Gottesman--Knill). And the non-Clifford states the holonet injects ---
+the Hesse/cubic/$T$-type magic of the universal gate set --- are exactly the
+Wigner-\emph{negative} states: a stabilizer state such as $\lvert0\rangle$ or
+$\lvert+\rangle$ has $W\ge0$, while the qutrit ``strange'' state
+$(\lvert1\rangle-\lvert2\rangle)/\sqrt2$ has $\min W=-\tfrac13$ and mana
+$\ln\tfrac53>0$. So the machine is quantum precisely where the substrate's Wigner
+function goes negative; the magic it spends is the contextuality of the geometry,
+and the corpus already measures the geometry's contextual fraction as
+$4/40=1/\Phi_4$. Curvature (the gauge picture) and Wigner-negativity (the
+resource picture) are two readings of the same fuel. (Witness:
+\texttt{analysis/w33\_contextuality\_is\_the\_fuel.py}.)
+
 \subsection{From the matter-graph lattice to continuum Yang--Mills: the loop
 closes}
 \label{sec:lattice-to-continuum}
@@ -4125,6 +4156,9 @@ step creates energy.)
   \href{https://arxiv.org/abs/0706.3359}{arXiv:0706.3359} (2007).
 \bibitem{adh} A.~Almheiri, X.~Dong, D.~Harlow, Bulk locality and quantum error
   correction in AdS/CFT, \emph{J.\ High Energy Phys.} \textbf{04}, 163 (2015).
+\bibitem{howard14} M.~Howard, J.~Wallman, V.~Veitch, J.~Emerson, Contextuality
+  supplies the `magic' for quantum computation, \emph{Nature} \textbf{510}, 351
+  (2014), \href{https://arxiv.org/abs/1401.4174}{arXiv:1401.4174}.
 \bibitem{dumitrescu} P.~T.~Dumitrescu \emph{et al.},
   Dynamical topological phase realized in a trapped-ion quantum
   simulator, \emph{Nature} \textbf{607}, 463 (2022).

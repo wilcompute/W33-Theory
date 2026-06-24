@@ -1,0 +1,14 @@
+{
+  "phase_space_points": 81,
+  "w33_points_as_rays": 40,
+  "stab_min_wigner": 0.0,
+  "magic_min_wigner": -0.3333,
+  "magic_mana": 0.5108,
+  "contextual_fraction": "1/10",
+  "summary": "logical register 81=q^4 = 2-qutrit discrete phase space; 40 W33 points = Pauli rays ((81-1)/2); Clifford=Sp(4,3)=Wigner-covariant (positivity-preserving, simulable); non-Clifford fuel = Wigner-negativity = contextuality (Howard et al. 2014, odd-prime qutrit); stabilizer states Wigner-positive, qutrit strange state Wigner-negative (mana>0); contextual fraction 1/Phi_4. The machine's quantum advantage = substrate contextuality.",
+  "sources": [
+    "Howard, Wallman, Veitch, Emerson, Contextuality supplies the magic for quantum computation, Nature 510, 351 (2014), arXiv:1401.4174",
+    "Gross, Hudson's theorem for finite-dimensional quantum systems, J. Math. Phys. 47, 122107 (2006)",
+    "Veitch et al., negativity as a resource (2014); BT82 contextual fraction 1/Phi_4"
+  ]
+}
