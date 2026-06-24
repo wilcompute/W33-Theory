@@ -1,0 +1,13 @@
+{
+  "light_modes": [
+    "vacuum (inflaton)"
+  ],
+  "N_efolds": 60,
+  "n_s": "29/30",
+  "r": "1/300",
+  "boundary_c": 24,
+  "summary": "inflation = expanding de Sitter substrate; dS/CFT: exactly one light/complementary mode (vacuum, m^2=0) = inflaton, others heavy principal-series; near-scale-invariance = de Sitter conformal symmetry; n_s=1-2/N=29/30, r=k/N^2=1/300 from N=2(v-Phi4)=60; boundary = Monster c=24 -> CMB = moonshine correlations. Honest: framework + corpus Starobinsky values, not a microscopic re-derivation.",
+  "sources": [
+    "Strominger dS/CFT (2001); Maldacena inflation/holography (2002); Starobinsky R^2; corpus N=2(v-Phi4)=60, n_s=29/30, r=1/300; w33_dscft_modes.py, w33_thermal_cosmology.py, w33_holographic_central_charge.py"
+  ]
+}
