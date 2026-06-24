@@ -1,0 +1,45 @@
+{
+  "theorem": "BT1665 Gauge Bridge Naturality Test",
+  "recipe_tested": "For each Levi root, compute deterministic cycle_basis, select the eight shortest cycles, and record support signatures.",
+  "global_summary": {
+    "roots_tested": 80,
+    "all_selected_cycles_are_8_cycles": true,
+    "distinct_support_signatures": 38,
+    "union_edges_min": 41,
+    "union_edges_max": 53,
+    "union_vertices_min": 34,
+    "union_vertices_max": 47,
+    "pair_edge_overlap_min": 12,
+    "pair_edge_overlap_max": 30
+  },
+  "by_root_type": {
+    "point_roots": {
+      "roots": 40,
+      "distinct_signatures": 24,
+      "union_edges_min": 41,
+      "union_edges_max": 53,
+      "union_vertices_min": 34,
+      "union_vertices_max": 46,
+      "pair_edge_overlap_min": 12,
+      "pair_edge_overlap_max": 30
+    },
+    "line_roots": {
+      "roots": 40,
+      "distinct_signatures": 18,
+      "union_edges_min": 42,
+      "union_edges_max": 52,
+      "union_vertices_min": 36,
+      "union_vertices_max": 47,
+      "pair_edge_overlap_min": 13,
+      "pair_edge_overlap_max": 29
+    }
+  },
+  "most_common_signatures": [
+    {"lengths": [8,8,8,8,8,8,8,8], "union_edges": 49, "union_vertices": 44, "pair_edge_overlap": 17, "count": 9},
+    {"lengths": [8,8,8,8,8,8,8,8], "union_edges": 46, "union_vertices": 41, "pair_edge_overlap": 21, "count": 6},
+    {"lengths": [8,8,8,8,8,8,8,8], "union_edges": 49, "union_vertices": 43, "pair_edge_overlap": 15, "count": 6},
+    {"lengths": [8,8,8,8,8,8,8,8], "union_edges": 48, "union_vertices": 42, "pair_edge_overlap": 16, "count": 5}
+  ],
+  "conclusion": "The BT1662 bridge is gauge-fixed rather than natural: root/basis choices change support signatures. The invariant content is rank 8 into rank 81, not the chosen eight Levi cycles.",
+  "boundary": "This is a root-gauge naturality test, not a full automorphism-group orbit computation. It is enough to falsify canonicity of the deterministic cycle-basis recipe."
+}
