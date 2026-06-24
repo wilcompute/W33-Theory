@@ -4111,6 +4111,68 @@ rows remain the cheap binary front-end syndrome and the \(\mathbb F_3\) CSS
 carrier keeps its commutation proof.  (Witness:
 \path{tools/bt1418_d4_quartic_magic_injection_frontier.py}.)
 
+\subsection{BT1697 typed packet ABI}
+
+Reading the paper back as an architecture exposes the missing promoted object.
+The header introduced in \S\ref{sec:network}
+\[
+  (\hbox{payload},\hbox{Pauli frame},\hbox{chart word},\hbox{apartment hop},
+  \hbox{mirror slot},\hbox{clock phase})
+\]
+is not only a description of fields.  It is a fixed-width transaction ABI whose
+verified projections are all the packet layers above.  The master frame identity is
+\[
+  72 = 48+24 = 16\cdot3 + 3\cdot8.
+\]
+The first \(48\) ticks are the continuous Q6/tomotope body:
+\[
+  16\ \hbox{Q6 edge traversals}\times
+  3\ \hbox{pulse phases} = 48,
+\]
+and the last \(24\) ticks are the selected Hesse branch:
+\[
+  3\ \hbox{Hesse return words}\times 8\ \hbox{ticks}=24.
+\]
+
+The same transaction header receives the Witting communication desk as an
+admission ROM,
+\[
+  1600=40^2=520+1080,\qquad 520/1600=13/40,
+\]
+while the basis-local physical table is
+\[
+  640=40\cdot4\cdot4=480+160.
+\]
+The extra \(160-40=120\) physical rows are the same-ray contextual aperture,
+not extra throughput.  At the physical front end the dual toroidal port is
+\[
+  192=168+24=21\cdot2\cdot4+24,
+\]
+and at the memory front end the CSS edge ledger is
+\[
+  240=216+24=27\cdot8+24.
+\]
+Finally the non-Clifford guard rail is typed by the finite quartic atoms,
+\[
+  24 = 2\ \hbox{\(D_4\) atoms}\cdot4\ \hbox{branches}\cdot3\ \hbox{qutrit phases},
+  \qquad
+  192=24\cdot8.
+\]
+
+Thus \(24\) is not one untyped object renamed four times.  It is the common
+guard boundary at which Hesse epilogue, Q4 guard flags, CSS guard-tail rows, and
+\(D_4\)-quartic magic apertures meet while retaining distinct source
+certificates and field semantics.  Globalizing the local \(48\)-block packet
+then recovers the mirror runtime:
+\[
+  2160=45\cdot48,\qquad
+  51840=24\cdot2160=24\cdot45\cdot48.
+\]
+So the packet header is the finite operating-system object of the holonet:
+compute, route, admit, check, inject, and commit are typed projections of one
+transaction.  BT1697 is an ABI theorem, not a calibrated optical layout.
+(Witness: \path{analysis/bt1697_holonet_typed_packet_abi.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

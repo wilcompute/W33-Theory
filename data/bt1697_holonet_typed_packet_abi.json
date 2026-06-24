@@ -1,0 +1,126 @@
+{
+  "boundary_24": {
+    "css_guard_tail_rows": 24,
+    "d4_magic_guard_apertures": 24,
+    "hesse_epilogue_ticks": 24,
+    "meaning": "The count 24 is a typed guard boundary, not one untyped object. It is the common interface where the 48-body transaction hands off to Hesse return, Q4 guard, CSS tail, and D4-quartic magic aperture.",
+    "q4_guard_slots": 24
+  },
+  "breakthrough": "The Holonet packet is a typed transaction object: a 48-tick Q6/tomotope body, a 24-tick Hesse epilogue, a Witting admission ROM, a 168+24 dual toroidal port, a 216+24 CSS ledger, and a D4-quartic magic rail are compatible projections of one ABI.",
+  "checks": {
+    "accepted_witting_rate_is_13_over_40": true,
+    "body_is_16_q6_edges_times_3_pulses": true,
+    "css_ledger_is_216_plus_24": true,
+    "dual_port_is_168_active_plus_24_guard": true,
+    "epilogue_is_3_hesse_words_times_8_ticks": true,
+    "frame_is_48_body_plus_24_epilogue": true,
+    "full_hesse_grid_is_3_by_3": true,
+    "global_mirror_bus_is_45_times_48": true,
+    "guard_24_is_common_typed_boundary": true,
+    "magic_guard_is_two_D4_quartics": true,
+    "magic_orients_to_full_tomotope_bus": true,
+    "physical_witting_rom_is_40_tetrads_times_4_by_4": true,
+    "runtime_supercycle_is_24_times_2160": true,
+    "selected_hesse_branch_is_one_route_branch": true,
+    "upstream_certificates_verified": true,
+    "witting_logical_rom_splits_40_squared": true
+  },
+  "claim_boundary": [
+    "This is an ABI theorem, not a calibrated optical layout.",
+    "Equal counts are promoted only when their typed source certificate and projection role are explicit.",
+    "The packet header unifies existing verified layers; it does not replace the individual hardware/noise boundaries of those layers."
+  ],
+  "field_schema": [
+    {
+      "domain": "F3^2",
+      "field": "pauli_frame",
+      "role": "two-trit feed-forward correction X^r Z^p",
+      "size": 9
+    },
+    {
+      "domain": "F2^3",
+      "field": "chart_word",
+      "role": "local Q3/Gray route word",
+      "size": 8
+    },
+    {
+      "domain": "Q6 edge walk",
+      "field": "q6_body_edge",
+      "role": "continuous body traversals in the stress transaction",
+      "size": 16
+    },
+    {
+      "domain": "F3",
+      "field": "body_pulse_phase",
+      "role": "LOAD, FLIP, LATCH per Q6 edge",
+      "size": 3
+    },
+    {
+      "domain": "F3 x F3",
+      "field": "hesse_outcome",
+      "role": "route branch and phase label",
+      "size": 9
+    },
+    {
+      "domain": "48 blocks x 4 residues",
+      "field": "tomotope_flag",
+      "role": "local toroidal/tomotope flag bus",
+      "size": 192
+    },
+    {
+      "domain": "21 edges x 2 orientations x 4 residues",
+      "field": "dual_port_active_slot",
+      "role": "Csaszar/Szilassi active analyzer slots",
+      "size": 168
+    },
+    {
+      "domain": "Q4 plaquette guard band",
+      "field": "q4_guard",
+      "role": "guard tail shared by port, CSS, and magic boundary",
+      "size": 24
+    },
+    {
+      "domain": "27 central cycles x 8 even Q4 states",
+      "field": "steinberg_syndrome_row",
+      "role": "binary front-end checks before ternary CSS memory",
+      "size": 216
+    },
+    {
+      "domain": "W33 edge ledger",
+      "field": "css_edge_row",
+      "role": "outer Steinberg/CSS edge carrier",
+      "size": 240
+    },
+    {
+      "domain": "45 polar sheets x 48 tomotope blocks",
+      "field": "mirror_slot",
+      "role": "global D12 mirror transport bus",
+      "size": 2160
+    },
+    {
+      "domain": "24 lifts x 45 polar sheets x 48 blocks",
+      "field": "clifford_supercycle",
+      "role": "complete Sp(4,3) runtime window",
+      "size": 51840
+    }
+  ],
+  "source_certificates": [
+    "data/bt1404_holonet_scope_microframe.json",
+    "data/bt1407_microframe_transaction_composer.json",
+    "data/bt1410_witting_delayed_query_frame_compiler.json",
+    "data/bt1414_csaszar_szilassi_dual_physical_port.json",
+    "data/bt1415_even_projection_steinberg_syndrome_layer.json",
+    "data/bt1418_d4_quartic_magic_injection_frontier.json"
+  ],
+  "theorem": "BT1697 Holonet Typed Packet ABI",
+  "transaction_identities": {
+    "css_ledger": "240 = 216 + 24 = 27*8 + 24",
+    "dual_port": "192 = 168 + 24 = 21*2*4 + 24",
+    "magic_guard": "24 = 2*4*3, 192 = 24*8",
+    "microframe": "72 = 48 + 24 = 16*3 + 3*8",
+    "mirror_runtime": "51840 = 24*2160 = 24*45*48",
+    "witting_logical_rom": "1600 = 40*40 = 520 accepted + 1080 retry-shadow",
+    "witting_physical_rom": "640 = 40*4*4 = 480 data + 160 witness"
+  },
+  "verified": true
+}
