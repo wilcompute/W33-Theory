@@ -1,0 +1,39 @@
+{
+  "theorem": "BT1674 Phase-Precision Failure Surface",
+  "model": "linearized projector error <= kappa * phase_rms",
+  "phase_rms_grid": [1e-08, 3e-08, 1e-07, 3e-07, 1e-06, 3e-06, 1e-05, 3e-05, 0.0001, 0.0003, 0.001],
+  "points": [
+    {
+      "name": "block_encoded_best_4_2",
+      "clock_degree": 4,
+      "matter_degree": 2,
+      "calibration_sensitivity": 5.845219638242888,
+      "max_phase_rms_for_1e_minus_2_error": 0.00171079969939437,
+      "max_phase_rms_for_1e_minus_3_error": 0.000171079969939437,
+      "max_phase_rms_for_1e_minus_4_error": 0.0000171079969939437,
+      "pass_count_for_1e_minus_2_over_grid": 11
+    },
+    {
+      "name": "proxy_physical_8_8",
+      "clock_degree": 8,
+      "matter_degree": 8,
+      "calibration_sensitivity": 22793.067727163656,
+      "max_phase_rms_for_1e_minus_2_error": 0.00000043872988575743546,
+      "max_phase_rms_for_1e_minus_3_error": 0.00000004387298857574355,
+      "max_phase_rms_for_1e_minus_4_error": 0.000000004387298857574355,
+      "pass_count_for_1e_minus_2_over_grid": 4
+    },
+    {
+      "name": "raw_l1_9_8",
+      "clock_degree": 9,
+      "matter_degree": 8,
+      "calibration_sensitivity": 98887.50411072331,
+      "max_phase_rms_for_1e_minus_2_error": 0.00000010112501159704773,
+      "max_phase_rms_for_1e_minus_3_error": 0.000000010112501159704774,
+      "max_phase_rms_for_1e_minus_4_error": 0.0000000010112501159704775,
+      "pass_count_for_1e_minus_2_over_grid": 3
+    }
+  ],
+  "interpretation": "After BT1673 normalization, the shallow (4,2) projector is vastly more phase-tolerant than the high-degree (8,8) and (9,8) projectors.",
+  "boundary": "This is a first-order sensitivity surface. A full optical simulation should replace kappa*sigma with sampled phase errors through the compiled interferometer."
+}
