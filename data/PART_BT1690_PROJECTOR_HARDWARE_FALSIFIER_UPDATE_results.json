@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1690 Projector-Hardware Falsifier Update",
+  "updated_file": "paper/sections/sec_bt1672_projector_hardware_falsifier.tex",
+  "update_commit": "6bd27fedaf7b471dce9a068c6c98eb812782a16b",
+  "changes": [
+    "Inserted BT1685 term-level QSP schedules for T0 through T4 and clarified that whole-polynomial collapsed phase lists are not claimed.",
+    "Inserted BT1687 resource table v2: max tensor depth 7, resonance SNR 37.034240801677326, companion SNR 37.33164132928002.",
+    "Inserted BT1689 ancilla success accounting: separate-port success probabilities 0.597413338718975 and 0.64; monolithic two-port success 0.1544685004281349.",
+    "Inserted BT1688 exact character certificate: chi_H1=f_E-f_V+1 has square sum 25920 over the 25920-element projective action, so inner product is 1.",
+    "Updated final falsifier statement to include ancilla success accounting."
+  ],
+  "boundary": "The paper still does not claim collapsed QSP phase angles or measured hardware data. It claims term-level QSP schedules, LCU routing, exact character irreducibility, and placeholder resource accounting."
+}
