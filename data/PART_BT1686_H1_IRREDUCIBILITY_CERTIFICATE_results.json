@@ -1,0 +1,29 @@
+{
+  "theorem": "BT1686 H1 Irreducibility Certificate",
+  "representation": {
+    "group": "PSp(4,3)",
+    "projective_order": 25920,
+    "module": "Levi H1 cycle space over R",
+    "dimension": 81
+  },
+  "certificate_target": {
+    "commutant_dimension_required": 1,
+    "meaning": "If End_G(H1) is one-dimensional over R, the H1 module is absolutely irreducible in the tested real representation and BT1683's Schur step is unconditional in the computational model."
+  },
+  "current_certificate_status": {
+    "BT1681_average_error_to_(8/81)P_H1": 1.0598553943057821e-14,
+    "BT1681_relative_error": 1.1923373185940048e-14,
+    "BT1681_eigenvalue_pattern": "one eigenvalue 8/81 with multiplicity 81 on H1, zero off H1",
+    "commutant_dimension_numeric_status": "consistent with 1, but exact commutant basis not yet emitted"
+  },
+  "exact_algorithm_to_emit_next": [
+    "Construct W33 Levi oriented incidence matrix D over Q.",
+    "Build two or more projective symplectic generators as signed edge permutation matrices.",
+    "Compute an exact rational basis for ker(D) representing H1.",
+    "Restrict generator matrices to the H1 basis.",
+    "Solve XA_g=A_gX for all generators over Q.",
+    "Certify the solution space is span(I_81)."
+  ],
+  "paper_status": "BT1683 remains a Schur proof conditional on H1 irreducibility; BT1686 records the precise missing exact certificate and the numerical evidence supporting it.",
+  "boundary": "Do not state irreducibility as formally proved until the rational commutant-dimension-one artifact is emitted."
+}
