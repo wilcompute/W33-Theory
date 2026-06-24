@@ -1,0 +1,35 @@
+{
+  "boundary": [
+    "Exact for the two-qubit ring square into the Hesse affine plane.",
+    "The split-Cayley part is a 63-address cover; full line incidence remains open."
+  ],
+  "checks": {
+    "ag23_has_12_lines": true,
+    "fano_x_hesse_addresses_63": true,
+    "pg23_closure_13": true,
+    "rank_one_count_9": true,
+    "six_square_contexts_preserved_as_hesse_lines": true,
+    "units_6_zero_divisors_10": true
+  },
+  "hesse": {
+    "affine_lines": 12,
+    "affine_points": 9,
+    "projective_points": 13
+  },
+  "ring_counts": {
+    "rank_one_nonzero": 9,
+    "units": 6,
+    "zero_divisors_including_zero": 10
+  },
+  "summary": "Nine nonzero singular 2x2 matrices over F2 form a 3x3 P1xP1 square. Its six row-column contexts map to six affine Hesse lines in AG(2,3). The two remaining affine directions are qutrit-only closure channels; Fano times Hesse gives 63 split-Cayley readout addresses.",
+  "target_contexts": [
+    [[0, 0], [0, 1], [0, 2]],
+    [[1, 0], [1, 1], [1, 2]],
+    [[2, 0], [2, 1], [2, 2]],
+    [[0, 0], [1, 0], [2, 0]],
+    [[0, 1], [1, 1], [2, 1]],
+    [[0, 2], [1, 2], [2, 2]]
+  ],
+  "theorem": "BT1713 M2F2 to Hesse Context Functor Seed",
+  "verified": true
+}
