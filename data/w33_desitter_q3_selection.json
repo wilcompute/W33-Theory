@@ -1,0 +1,60 @@
+{
+  "table": [
+    {
+      "q": 2,
+      "v": 15,
+      "k": 6,
+      "T_GH": 0.955,
+      "kappa": 0.3333,
+      "desitter_closes": false,
+      "2(q-1)(q^2+1)": 10,
+      "(1+q)(1+q^2)": 15
+    },
+    {
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "T_GH": 1.91,
+      "kappa": 0.1667,
+      "desitter_closes": true,
+      "2(q-1)(q^2+1)": 40,
+      "(1+q)(1+q^2)": 40
+    },
+    {
+      "q": 4,
+      "v": 85,
+      "k": 20,
+      "T_GH": 3.183,
+      "kappa": 0.1,
+      "desitter_closes": false,
+      "2(q-1)(q^2+1)": 102,
+      "(1+q)(1+q^2)": 85
+    },
+    {
+      "q": 5,
+      "v": 156,
+      "k": 30,
+      "T_GH": 4.775,
+      "kappa": 0.0667,
+      "desitter_closes": false,
+      "2(q-1)(q^2+1)": 208,
+      "(1+q)(1+q^2)": 156
+    },
+    {
+      "q": 7,
+      "v": 400,
+      "k": 56,
+      "T_GH": 8.913,
+      "kappa": 0.0357,
+      "desitter_closes": false,
+      "2(q-1)(q^2+1)": 600,
+      "(1+q)(1+q^2)": 400
+    }
+  ],
+  "selected_q": 3,
+  "T_GH_q3": 1.9099,
+  "summary": "thermodynamic q=3 selection: expanding de Sitter horizon (T_GH=k/2pi, kappa=2/k, S=A/mu) closes its first-law/Gauss-Bonnet condition E*kappa=v <=> 2(q-1)(q^2+1)=(1+q)(1+q^2) ONLY at q=3. The thermal de Sitter clock is self-consistent only at q=3 -- a sixth selection principle.",
+  "sources": [
+    "Gibbons-Hawking de Sitter thermodynamics; Ollivier-Ricci kappa=2/k; discrete Gauss-Bonnet selection (corpus check 24); w33_thermal_cosmology.py"
+  ]
+}

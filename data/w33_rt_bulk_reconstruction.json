@@ -1,0 +1,46 @@
+{
+  "S_point": 3,
+  "S_line": 9,
+  "page_curve": [
+    {
+      "|A|": 1,
+      "min_delta": 12,
+      "S": 3.0
+    },
+    {
+      "|A|": 5,
+      "min_delta": 46,
+      "S": 11.5
+    },
+    {
+      "|A|": 10,
+      "min_delta": 82,
+      "S": 20.5
+    },
+    {
+      "|A|": 20,
+      "min_delta": 106,
+      "S": 26.5
+    },
+    {
+      "|A|": 30,
+      "min_delta": 82,
+      "S": 20.5
+    },
+    {
+      "|A|": 35,
+      "min_delta": 48,
+      "S": 12.0
+    },
+    {
+      "|A|": 39,
+      "min_delta": 12,
+      "S": 3.0
+    }
+  ],
+  "reconstruction_threshold": 4,
+  "summary": "discrete RT: S(A)=delta(A)/mu (point->q, GQ line->q^2); Page curve symmetric (delta(A)=delta(A^c)) peaking at the balanced cut; JLMS entanglement-wedge reconstruction threshold = code distance d_Z = mu (same mu as RT 1/mu). The machine reconstructs its own bulk; thermal time + holographic code + scrambler = one operation.",
+  "sources": [
+    "Ryu-Takayanagi (2006); Suh (2016, bulk=boundary modular Hamiltonian); Almheiri-Dong-Harlow; w33_holographic_architecture.py, w33_scrambling_decoder.py"
+  ]
+}

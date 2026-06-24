@@ -1,0 +1,18 @@
+{
+  "visible_SO16": 120,
+  "dark_spinor": 128,
+  "adjoint_120_branching": {
+    "(45,1) SO(10) GUT": 45,
+    "(1,15) SU(4)": 15,
+    "(10,6) bifund": 60
+  },
+  "spinor_128_branching": {
+    "(16,4) family x dark-SU(4)": 64,
+    "(16bar,4bar)": 64
+  },
+  "omega_dm": "mu/g = 4/15",
+  "summary": "E8 = SO(16)[120=vq, visible gauge/CC] + 128[dark spinor]; 128 = 2^Phi6; under SO(10)xSU(4): 128 = (16,4)+(16bar,4bar) = SM family 16 x hidden SU(4)=SO(6) (mu=4 dark colors). Holographic E8 boundary predicts a dark sector mirroring the generations; Omega_DM=mu/g. Honest: branchings exact, relic density not derived.",
+  "sources": [
+    "E8 = SO(16) + 128-spinor (248=120+128); SO(16)>SO(10)xSO(6) branchings; corpus Omega_DM=mu/g, 8-dim dark eigenspace; w33_e8_conformal_embeddings.py"
+  ]
+}
