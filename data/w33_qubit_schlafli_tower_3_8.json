@@ -1,0 +1,39 @@
+{
+  "tower": {
+    "3": {
+      "V": 12,
+      "E": 48,
+      "F": 32,
+      "chi": -4,
+      "aut_full": 192
+    },
+    "5": {
+      "V": 24,
+      "E": 96,
+      "F": 64,
+      "chi": -8,
+      "aut_full": 384
+    },
+    "8": {
+      "V": 42,
+      "E": 168,
+      "F": 112,
+      "chi": -14,
+      "aut_full": 672
+    }
+  },
+  "vertex_figure": "8 = 2^3 = three-qubit Hilbert dimension",
+  "readings": {
+    "Dyck_V": "12 = k",
+    "FrickeKlein_V": "24 = f",
+    "FrickeKlein_F": "64 = 2^6",
+    "FrickeKlein_Autrot": "192 = |W(D4)|",
+    "R81_V": "42 = 2*q*Phi6 = D(2T) anyon count",
+    "R81_E": "168 = lambda*k*Phi6 = |PSL(2,7)|"
+  },
+  "fano_hinge": "PSL(2,7)=GL(3,2)=168 shared by {3,8} (R8.1) and {3,7} (Klein,Macbeath)",
+  "summary": "the {3,8} regular maps (Dyck g3, Fricke-Klein g5, R8.1/R8.2 g8) are the QUBIT Schlafli tower: vertex figure n=8=2^3=three-qubit Hilbert dim (octagon), the binary twin of the {3,7} qutrit heptagon tower. V=6(g-1),E=24(g-1),F=16(g-1),Aut_rot=48(g-1). Rungs: Dyck V=12=k; Fricke-Klein V=24=f, F=64=2^6, Aut_rot=192=|W(D4)|; R8.1 (g8=2^3) V=42=2qPhi6=D(2T) anyons, E=168=lambda*k*Phi6=PSL(2,7), structure GL(3,2)=Fano group. The Fano hinge PSL(2,7)=168 is shared with the {3,7} tower (Klein g3 Aut, Macbeath g7 faces).",
+  "sources": [
+    "Bokowski & H., Symmetry 2025, 17, 622, Table 1 (R3.2 Dyck, R5.1 Fricke-Klein, R8.1/R8.2); {3,8} octagon vertex figure = 2^3 = 3-qubit Hilbert dim; 42=2qPhi6=D(2T) anyons; 168=lambda*k*Phi6=PSL(2,7)=GL(3,2)=Fano; w33_hurwitz_tower_qubit_crossover.py, w33_anyons_from_2T.py."
+  ]
+}

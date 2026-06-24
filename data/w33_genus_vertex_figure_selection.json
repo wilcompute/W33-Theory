@@ -1,0 +1,49 @@
+{
+  "maps_verified": 14,
+  "vertex_figures_present": [
+    7,
+    8,
+    9,
+    10,
+    12
+  ],
+  "selection": {
+    "rule": "n-6 divides k=12",
+    "admissible_n": [
+      7,
+      8,
+      9,
+      10,
+      12
+    ]
+  },
+  "vertex_figure_meaning": {
+    "7": "Phi6 (qutrit heptagon)",
+    "8": "2^3 (qubit octagon)",
+    "9": "q^2 (Hesse field 3x3)",
+    "10": "Phi4 (Sp4 / contextual denom)",
+    "12": "k"
+  },
+  "gap": {
+    "n": 11,
+    "n_minus_6": 5,
+    "divides_k": false,
+    "is_K12": {
+      "V": 12,
+      "E": 66,
+      "F": 44,
+      "genus": 6
+    },
+    "grunbaum": "59 triangulations, none regular, none polyhedral"
+  },
+  "bonus": {
+    "R6.1_V": "15=g",
+    "K12_V": "12=k",
+    "R8.1_V": "42=2qPhi6",
+    "R7.1": "72=frame, 252=tau, 168=lambda*k*Phi6"
+  },
+  "summary": "substrate selects the vertex figure: genus 2-14 triangular regular maps (Table 1) have vertex figures exactly {7,8,9,10,12}=6+Div(k=12)={Phi6,2^3,q^2,Phi4,k}; formula E=6n(g-1)/(n-6), fullAut=4E verified for all 14. The gap n=11 (n-6=5 not | 12) is K12 (V=12,E=66,F=44,g=6), whose 59 triangulations are none regular and none embeddable (Grunbaum/Bokowski-Guedes 2000). So (n-6)|k excludes exactly the Grunbaum obstruction; heptagon(Phi6,qutrit) & octagon(2^3,qubit) are rungs 1-2.",
+  "sources": [
+    "Bokowski & H., Symmetry 2025, 17, 622, Table 1 (14 maps) and Table 2 (K12 genus 6, 59 surfaces, none embeddable); Bokowski-Guedes de Oliveira 2000 (Grunbaum conjecture counterexample); {3,n}: E=6n(g-1)/(n-6); vertex figures 6+Div(12); w33_qubit_schlafli_tower_3_8.py, w33_hurwitz_tower_qubit_crossover.py."
+  ]
+}

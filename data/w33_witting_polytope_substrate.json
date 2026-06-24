@@ -1,0 +1,27 @@
+{
+  "vertices": {
+    "value": 240,
+    "is": "E8 roots = E = 40 hexagons * 6"
+  },
+  "edges": {
+    "value": 2160,
+    "is": "h(E8)*frame=30*72 = holonet mirror bus"
+  },
+  "hexagons": {
+    "value": 40,
+    "is": "v = W(3,3) = GQ(3,3) = Witting rays"
+  },
+  "icosian_e8": {
+    "e8_421_edges": 6720,
+    "formula": "2160*3 + 240"
+  },
+  "symmetry_group": {
+    "order": 155520,
+    "structure": "Z_q x Sp(4,3) = 3 x 2.U4(2) = q * |W(3,3) Aut|",
+    "as_edges_times_frame": 155520
+  },
+  "summary": "the Witting polytope 3{3}3{3}3{3}3 (C^4 over Eisenstein Z[omega], q=3) is the substrate's complex body: 240 vertices = E8 roots = E (= 40 hexagons*6), 2160 3-edges = h(E8)*frame = 30*72 = holonet mirror bus, 40 hexagonal diameters = 40 Witting rays = W(3,3)=GQ(3,3) points (v=40). Icosian construction welds to E8: 6720=2160*3+240=Gosset 4_21 edges. Symmetry group |Aut|=155520=3x2.U4(2)=Z_q x Sp(4,3)=q*|W(3,3) Aut|=2160*frame. E=240, bus=2160, v=40 are vertices/edges/diameters of one polytope.",
+  "sources": [
+    "Frans Marcelis, fgmarcelis.wordpress.com 'Witting polytope' and 'Icosian construction of polytopes' (2160 3-edges, 40 hexagon diameters, 6720=2160*3+240=E8 4_21); Witting polytope Wikipedia (240 vertices, sym group 3x2.U4(2) order 155520); 2.U4(2)=Sp(4,3)=|W(3,3) Aut|=51840; w33_witting_polytope_construction.py (40 rays = W(3,3) isotropic 1-spaces = GQ(3,3)); h(E8)=30, frame=72, E=240, v=40."
+  ]
+}

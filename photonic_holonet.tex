@@ -4655,6 +4655,69 @@ Hurwitz triplet and, via $\mathrm G_2(2)$, the genus-$7$ three-qubit hexagon. Th
 binary--ternary crossover is a single $\{3,7\}$ tower threaded by the heptagon
 $\Phi_6$. (Witness: \path{analysis/w33_hurwitz_tower_qubit_crossover.py}.)
 
+\subsection{Two Schl\"afli families, a vertex-figure selection, and the Witting body}
+
+The same survey contains the \emph{qubit} twin of that qutrit tower. Its
+all-triangle $\{3,8\}$ maps (Dyck $g{=}3$, Fricke--Klein $g{=}5$, R8.1/R8.2
+$g{=}8$) satisfy $V=6(g-1)$, $E=24(g-1)$, $F=16(g-1)$, and the vertex figure is
+an octagon: $n=8=2^3$ is the \emph{three-qubit Hilbert dimension} $\mathrm{GF}(8)$,
+exactly as the heptagon $n=7=\Phi_6$ is the qutrit vertex figure. The genus-$8$
+rung R8.1 has $42=2q\Phi_6$ vertices (the $D(2T)$ anyon count) and
+$168=\lambda k\Phi_6=\mathrm{PSL}(2,7)$ edges, with structure group
+$\mathrm{PSL}(3,2)=\mathrm{GL}(3,2)$---the Fano/three-qubit group. So the two
+Schl\"afli families are the qubit/qutrit pair, $\{3,8\}\,(2^3)$ and
+$\{3,7\}\,(\Phi_6)$, hinged on $\mathrm{PSL}(2,7)=168$. (Witness:
+\path{analysis/w33_qubit_schlafli_tower_3_8.py}.)
+
+\emph{The substrate selects the vertex figure.} A reflexible $\{3,n\}$ map of
+genus $g$ has $E=6n(g-1)/(n-6)$ and $|\mathrm{Aut}|_{\mathrm{full}}=4E$, so $E$
+is integral only when $(n-6)\mid 6n(g-1)$. Across all fourteen genus-$2$--$14$
+maps the vertex figures that appear are exactly
+\[
+  n\in\{7,8,9,10,12\}=6+\{1,2,3,4,6\}=6+\{\,d:d\mid k=12\,\}
+   =\{\Phi_6,\ 2^3,\ q^2,\ \Phi_4,\ k\},
+\]
+and the unique gap in $7\le n\le 12$ is $n=11$, the one value with
+$n-6=5\nmid k=12$. Its smallest realisation is the complete graph $K_{12}$
+($12$ vertices of degree $11$; $V{=}12,E{=}66,F{=}44$, genus $6$), whose
+$59$ triangulations are none regular and (Bokowski--Guedes de Oliveira, settling
+Gr\"unbaum) none polyhedrally embeddable. Thus the selection $(n-6)\mid k$ admits
+exactly the regular, embeddable maps and excludes precisely the Gr\"unbaum
+obstruction---a $q\neq 2q$-style selection on the surface. (Witness:
+\path{analysis/w33_genus_vertex_figure_selection.py}.)
+
+\emph{The functor through the Fano heptad.} The binary-to-qutrit context map that
+\S BT1709 and BT1710--1712 leave open has a concrete structure group: the Fano
+heptad $\mathrm{PSL}(2,7)=\mathrm{GL}(3,2)$ of order $168$. By the \textsc{Atlas}
+it is maximal in $\mathrm{U}_3(3)=\mathrm G_2(2)'$, hence inside
+$\mathrm{Aut}$ of the split Cayley hexagon (the three-qubit core $W(5,2)$:
+$63$ points, $315$ contexts); it is the genus-$3$ Klein rotation group; it is the
+genus-$7$ Macbeath face count; and it acts on the three-qubit label space
+$\mathbb F_2^3$. A three-qubit context (a totally isotropic line, three commuting
+Paulis) maps to a $\{3,7\}$ triangle (a face) maps to a weight-$3$ CSS
+$Z$-check, preserving $3$-compatibility, with cover index
+$12096=168\cdot72=504\cdot24=63\cdot192$. (Witness:
+\path{analysis/w33_macbeath_hexagon_functor.py}.)
+
+\emph{The Witting body.} All of this lives in one complex polytope. The Witting
+polytope $3\{3\}3\{3\}3\{3\}3$ in $\mathbb C^4$ over the Eisenstein integers
+$\mathbb Z[\omega]$ (every edge a $3\{\}3$ triangle---the ``$3$'' is $q$) has
+$240$ vertices $=$ the E8 roots $=E$, $2160$ three-edges $=$ the holonet mirror
+bus $=h(\mathrm E_8)\cdot\mathrm{frame}=30\cdot72$, and $240=40\cdot6$ vertices
+falling into $40$ hexagonal diameters---the $40$ Witting rays $=$ the totally
+isotropic $1$-spaces of $W(3,3)=\mathrm{GQ}(3,3)$ ($v=40$). Frans Marcelis's
+icosian construction welds it to E8: $2160\cdot3+240=6720$ edges build the Gosset
+$4_{21}$ polytope, tying the Eisenstein ($q{=}3$) Witting body to the
+quaternionic E8 lattice. Its symmetry group is exactly $q$ times the substrate
+gauge group,
+\[
+  |\mathrm{Aut}(\hbox{Witting})| = 155520 = 3\times 2.\mathrm U_4(2)
+    = \mathbb Z_q\times \mathrm{Sp}(4,3) = q\cdot|W(3,3)\,\mathrm{Aut}|,
+\]
+so the substrate's three master integers $E=240$, $\mathrm{bus}=2160$, $v=40$ are
+the vertex, edge, and diameter counts of a single Eisenstein polytope. (Witness:
+\path{analysis/w33_witting_polytope_substrate.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

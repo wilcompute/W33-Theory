@@ -1,0 +1,28 @@
+{
+  "W52": {
+    "points": 63,
+    "total_lines": 651,
+    "isotropic_lines": 315
+  },
+  "structure_group": {
+    "group": "PSL(2,7)=GL(3,2)=168",
+    "roles": [
+      "maximal in U3(3)=G2(2)' (hexagon Aut core)",
+      "Klein quartic (genus 3) rotation group",
+      "Macbeath (genus 7) face count = 168",
+      "acts on 3-qubit label space F2^3"
+    ]
+  },
+  "cover": {
+    "g2_2": 12096,
+    "fano_times_frame": 12096,
+    "macbeath_aut_times_f": 12096,
+    "hexagon_lines_times_wd4": 12096
+  },
+  "type_map": "context (3 commuting Paulis) -> {3,7} triangle -> weight-3 CSS Z-check",
+  "scope": "EXACT: the W(5,2) counts (63/315), the structure group PSL(2,7) (maximal in G2(2)', = Klein Aut = Macbeath faces), the cover arithmetic, and the 3-compatibility type map. REMAINING: an explicit bijection on the hexagon's 63 lines under the PSL(2,7) action (the full functor object map).",
+  "summary": "the binary-to-qutrit context functor runs through the Fano heptad PSL(2,7)=GL(3,2)=168: maximal in U3(3)=G2(2)' (hexagon Aut, the 3-qubit core W(5,2)=63 pts/315 lines), = Klein {3,7} g3 rotation group, = Macbeath {3,7} g7 face count, acts on 3-qubit label space F2^3. Cover 12096=168*72=504*24=63*192. Type map: 3-qubit context (3 commuting Paulis) -> {3,7} triangle (face) -> weight-3 CSS Z-check, preserving 3-compatibility. Remaining: explicit 63-line bijection.",
+  "sources": [
+    "ATLAS (brauer.maths.qmul.ac.uk): L2(7) maximal in U3(3), U3(3):2=G2(2); split Cayley hexagon GH(2,2) |Aut|=12096; 3-qubit W(5,2) 63 pts/315 lines (BT1707); GL(3,2)=Fano; w33_hurwitz_tower_qubit_crossover.py, w33_klein_quartic_genus3.py, w33_trit_saving_code.py."
+  ]
+}
