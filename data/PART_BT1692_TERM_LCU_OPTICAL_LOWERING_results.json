@@ -1,0 +1,19 @@
+{
+  "theorem": "BT1692 Term-LCU Optical Lowering",
+  "summary": {
+    "resonance_arms": 12,
+    "resonance_max_depth": 7,
+    "resonance_unrolled_walk_passes": 42,
+    "companion_arms": 12,
+    "companion_max_depth": 5,
+    "companion_unrolled_walk_passes": 36,
+    "time_bin_envelope": 2048,
+    "largest_depth_margin": 2041
+  },
+  "resonance_clock_terms": ["T0 5/28", "T2 9/28", "T1 19/56", "T3 9/56"],
+  "resonance_matter_terms": ["T0 1325/2048", "T2 -175/512", "T4 -625/2048"],
+  "companion_clock_terms": ["T0 5/28", "T2 9/28", "T1 -19/56", "T3 -9/56"],
+  "companion_matter_terms": ["T0 -1/8", "T2 5/8", "T1 1/2"],
+  "primitives": ["switch arm selection", "zero-phase signal-walk delay pass", "sign analyzer", "LCU success postselection", "timing phase readout"],
+  "boundary": "Logical lowering table only; no concrete foundry component library yet."
+}
