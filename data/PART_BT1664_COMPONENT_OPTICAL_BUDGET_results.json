@@ -1,0 +1,48 @@
+{
+  "theorem": "BT1664 Component-Level Optical Budget",
+  "component_defaults_are_placeholders": true,
+  "component_defaults": {
+    "switch_survival": 0.995,
+    "delay_survival": 0.998,
+    "phase_shifter_survival": 0.999,
+    "analyzer_survival": 0.98,
+    "detector_efficiency": 0.85,
+    "dark_count_probability_per_bin": 1e-06,
+    "time_bins": 2048,
+    "phase_jitter_rms": 0.05,
+    "parity_flip_probability": 0.05
+  },
+  "per_walk_survival": 0.99201699,
+  "blocks": [
+    {
+      "name": "resonance_Pc6_tensor_Pm24",
+      "term_count": 6,
+      "l1_coefficient_mass": "31/432",
+      "max_walk_passes": 5,
+      "weighted_walk_passes": 2.603686635945,
+      "weighted_survival": 0.815807499276,
+      "dark_background_fraction": 0.002045905301,
+      "separator_contrast_after_jitter_flip_background": 0.897036688267,
+      "shot_noise_snr_for_2048_bins": 36.666463881272
+    },
+    {
+      "name": "companion_Pc0_tensor_Pm30",
+      "term_count": 8,
+      "l1_coefficient_mass": "35/108",
+      "max_walk_passes": 5,
+      "weighted_walk_passes": 1.754285714286,
+      "weighted_survival": 0.821383867965,
+      "dark_background_fraction": 0.002045905301,
+      "separator_contrast_after_jitter_flip_background": 0.897036688267,
+      "shot_noise_snr_for_2048_bins": 36.791565396791
+    }
+  ],
+  "pass_rule": "shot_noise_snr_for_2048_bins >= 5",
+  "summary": {
+    "resonance_snr": 36.666463881272,
+    "companion_snr": 36.791565396791,
+    "min_snr": 36.666463881272,
+    "passes": "both resonance and companion tensor selectors have max walk depth 5"
+  },
+  "boundary": "The budget is component-named but still uses placeholder component values. Replace component_defaults with calibrated device data before making an experimental claim."
+}
