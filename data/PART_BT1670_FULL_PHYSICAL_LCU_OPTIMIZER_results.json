@@ -1,0 +1,36 @@
+{
+  "theorem": "BT1670 Full Physical LCU Optimizer",
+  "model": "score = l1/per_walk^depth times calibration and finite-range penalties",
+  "parameters": {
+    "per_walk": 0.99201699,
+    "eps_cal": 1e-06,
+    "range_weight": 0.001
+  },
+  "best_physical_point": {
+    "clock_degree": 8,
+    "matter_degree": 8,
+    "max_walk_depth": 16,
+    "combined_l1": 2.1857339296641894e-10,
+    "calibration_sensitivity": 22793.067727163656,
+    "dynamic_range": 522.6160674977968,
+    "physical_score": 2.5483448393748145e-10
+  },
+  "raw_l1_best_point": {
+    "clock_degree": 9,
+    "matter_degree": 8,
+    "max_walk_depth": 17,
+    "combined_l1": 2.0822330410596202e-10,
+    "calibration_sensitivity": 98887.50411072331,
+    "dynamic_range": 823.1002532591317,
+    "physical_score": 2.622150979474251e-10
+  },
+  "minimal_depth_baseline": {
+    "clock_degree": 3,
+    "matter_degree": 2,
+    "max_walk_depth": 5,
+    "combined_l1": 0.3958333333333333,
+    "physical_score": 0.4126929627782523
+  },
+  "frontier_note": "The raw algebraic l1 best is degree (9,8), but the proxy physical score prefers degree (8,8) because the calibration sensitivity rises sharply at (9,8).",
+  "boundary": "This is a transparent proxy score. Replace per_walk, eps_cal, and range_weight with measured hardware limits before making an experimental claim."
+}
