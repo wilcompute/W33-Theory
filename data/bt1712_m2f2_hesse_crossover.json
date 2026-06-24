@@ -1,0 +1,84 @@
+{
+  "bridge_dictionary": {
+    "10": "zero-divisors including zero = Saniga 10-side / W33 E1-scale target",
+    "13": "PG(2,3) projective closure; same number already targeted by the qutrit/Hesse closure bridge",
+    "5": "residual pentagonal/F5 side of 10+5",
+    "6": "units GL(2,2) = S3 frame group = six-cycle/heptadic frame quotient",
+    "8+7": "cube plus Fano kernel; matches binary cube/Fano heptad boundary",
+    "9": "nonzero singular matrices in M2(F2) = AG(2,3)/Hesse outcome cells"
+  },
+  "checks": {
+    "ag23_has_9_points_12_lines": true,
+    "doily_split_10_plus_5": true,
+    "doily_split_8_plus_7": true,
+    "doily_split_9_plus_6": true,
+    "gl22_order_profile_is_s3": true,
+    "nine_nonzero_zero_divisors": true,
+    "pg23_has_13_points_lines": true,
+    "ring_order_16": true,
+    "six_units": true,
+    "ten_zero_divisors_including_zero": true
+  },
+  "claim_boundary": [
+    "This proves the ring-count and affine/projective Hesse arithmetic.",
+    "It does not yet construct a context-preserving functor from the two-qubit doily into the qutrit Hesse/W33 packet."
+  ],
+  "decompositions": {
+    "cube_plus_fano": [
+      8,
+      7
+    ],
+    "doily_points": 15,
+    "ring_nonzero_zero_divisors_plus_units": [
+      9,
+      6
+    ],
+    "ring_zero_divisors_plus_five_attractor": [
+      10,
+      5
+    ],
+    "saniga_10_plus_5": [
+      10,
+      5
+    ],
+    "saniga_8_plus_7": [
+      8,
+      7
+    ],
+    "saniga_9_plus_6": [
+      9,
+      6
+    ]
+  },
+  "hesse_counts": {
+    "AG(2,3)_directions": 4,
+    "AG(2,3)_lines": 12,
+    "AG(2,3)_points": 9,
+    "PG(2,3)": {
+      "line_size": 4,
+      "lines": 13,
+      "lines_through_point": 4,
+      "points": 13
+    },
+    "projective_closure": "9 affine points + 4 points at infinity = 13"
+  },
+  "ring_counts": {
+    "nonzero_zero_divisors": 9,
+    "ring_order": 16,
+    "unit_order_profile": {
+      "1": 1,
+      "2": 3,
+      "3": 2
+    },
+    "units": 6,
+    "zero_divisors_including_zero": 10
+  },
+  "source_documents": [
+    "Geometry of two qubits.pdf",
+    "The Geometry of Qubits.pdf",
+    "q-2025-01-20-1601.pdf"
+  ],
+  "summary": "The two-qubit ring-line seed already contains the binary-to-qutrit crossing: M2(F2) has 6 units and 10 zero-divisors; removing the zero leaves 9 nonzero zero-divisors, exactly an AG(2,3)/Hesse 3x3 outcome grid, while the 6 units form GL(2,2) with S3 order profile. Thus Saniga's 9+6 two-qubit split is ring-theoretically Hesse-grid plus frame-group, not merely numerology.",
+  "theorem": "BT1712 M2(F2) / Hesse Crossover Theorem",
+  "verified": true
+}
