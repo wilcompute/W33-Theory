@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1678 Projector-Hardware Falsifier Update",
+  "updated_file": "paper/sections/sec_bt1672_projector_hardware_falsifier.tex",
+  "update_commit": "739303aefb3968113fa81af6c8554987ba403f7c",
+  "changes": [
+    "Inserted BT1673 block-encoding normalization correction: raw high-degree monomial LCU is mostly a normalization artifact when H=L/Lambda is used.",
+    "Inserted BT1676 Chebyshev/QSVT audit: sampled bounded-Chebyshev candidate has combined two-port mass 215.6020503790747 versus monomial block-encoded best 334.6461794019932.",
+    "Inserted BT1674 phase-precision surface: (4,2) tolerates sigma_phi about 1.7108e-3 for 1e-2 error, while high-degree points require sub-microradian precision.",
+    "Inserted BT1675 Hodge bridge boundary: the uniform incidence-edge idempotent has numerically zero H1 overlap, so full support twirling erases the homological bridge.",
+    "Updated final falsifier statement to include calibrated loss, sign-flip, block-encoding normalization, and phase-precision budgets."
+  ],
+  "boundary": "The section still treats Chebyshev/QSVT as an audit, not a completed parity-valid QSVT phase-sequence compiler."
+}
