@@ -1,0 +1,22 @@
+{
+  "bt": "BT1796",
+  "title": "double-six quotient gauge",
+  "input_transport": "BT1795 transported 18 Hesse table triples as 18 H27 support lines",
+  "used_support_lines": [5, 36, 10, 12, 38, 34, 18, 41, 29, 42, 20, 30, 40, 15, 22, 37, 7, 44],
+  "used_support_kind_histogram": {"old": 11, "new": 7},
+  "cubic_surface_gauge": {
+    "sixers": 72,
+    "double_sixes": 36
+  },
+  "incidence_matrix": {
+    "shape": [18, 36],
+    "entry_rule": "1 iff transported H27 support line intersects a double-six in two points",
+    "row_sum_histogram": {"24": 18},
+    "column_sum_histogram": {"12": 36},
+    "rank_F2": 16,
+    "rank_F3": 13,
+    "distinct_row_signatures": 18,
+    "distinct_column_signatures": 36
+  },
+  "conclusion": "The double-six quotient does not collapse the transported tables to a pure gauge ambiguity: every table row and every double-six column has a distinct signature. But the incidence is perfectly balanced (24 double-sixes per transported table, 12 transported tables per double-six) and rank-deficient, so the obstruction is a structured cubic-surface gauge code rather than a coordinate relabeling."
+}
