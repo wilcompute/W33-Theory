@@ -1,0 +1,28 @@
+{
+  "bt": "BT1791",
+  "title": "D5 x Hesse weld",
+  "inputs": {
+    "bt1783_rephase_shifts": [2, 0, 3, 1, 3, 0, 3, 4],
+    "bt1783_cycles": 8,
+    "bt1790_h27_points": 27,
+    "h27_line_patches": 45
+  },
+  "local_d5_pencil": {
+    "pencils": 27,
+    "phases_per_pencil": 5,
+    "local_D5_order": 10,
+    "phase_0": "the unique new Heisenberg vertical fibre through the point",
+    "phases_1_to_4": "the four old W33 shell triples through the point",
+    "pencil_type_histogram": {"old=4,new=1": 27},
+    "oriented_flags_per_h27_boundary": 270
+  },
+  "mirror_bus_weld": {
+    "formula": "8 Coxeter cycles * 27 H27 points * 5 D5 phases * 2 orientations",
+    "value": 2160,
+    "equals_mirror_bus_slots": true,
+    "factorization": "2160 = 8 * 27 * 5 * 2",
+    "compare_existing": "also 2160 = 45 * 48 = 30 * 72 in the holonet runtime ledger"
+  },
+  "boundary": "This is a local phase/pencil weld. It does not assert that independent D5 actions at all 27 H27 points form a global automorphism group of GQ(2,4).",
+  "conclusion": "BT1783's D5 phase bus and BT1790's H27/Payne sheaf meet exactly at the five-line pencil through each H27 point. With orientation and the eight rephased Coxeter cycles, the count is 2160, the holonet mirror bus."
+}
