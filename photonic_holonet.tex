@@ -4603,6 +4603,74 @@ Every entry is a closed substrate expression; the lone historical tension
 ($\sum m_\nu$) is resolved by the seesaw (\S\ref{sec:physics}), and three rows
 are sharp near-term falsification handles.
 
+\subsection{The one object and its five faces}
+\label{sec:five-faces}
+
+Before the details, the organizing claim. Everything in this section --- the
+selection of $q=3$, the substrate constants, the neutrino masses, the
+fault-tolerant code, and the benchtop experiment --- is \emph{one structure} seen
+from five sides. That structure is the $q=3$ Eisenstein object: the Witting polytope
+$3\{3\}3\{3\}3\{3\}3$ over $\mathbb Z[\omega]$ ($240$ vertices $=$ E8 roots), its
+symmetry the Shephard--Todd group $\#32$ (order $155520=3\lvert\mathrm{Sp}(4,3)
+\rvert=3\lvert\mathrm{Aut}(\W)\rvert$), equivalently the degree-two cyclotomic
+skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ whose indices $\{3,4,6\}$ are the
+crystallographic complex periods. Its five faces (Fig.~\ref{fig:five-faces}):
+
+\begin{enumerate}\itemsep2pt
+\item \textbf{Selection} (cosmology/geometry, \S\ref{sec:why-q3}). $\Phi_4(q)=q^2+1$
+  factors the de Sitter closure cubic $(q-3)\Phi_4(q)$ and the $\mathrm{GQ}$ point
+  count $(q+1)\Phi_4(q)=40$; the periods $\{3,4,6\}$ are the only crystallographic
+  complex periods, and $3$ is the only prime among them.
+\item \textbf{Constants} (arithmetic). Two number-sets fall out of the one object:
+  the cyclotomic \emph{values} $\{\Phi_3,\Phi_4,\Phi_6\}(3)=\{13,10,7\}$ (the
+  register, the $\mathrm{Sp}(4)$ $\theta$, the Fano $7$; sum $30$), and the Witting
+  \emph{degrees} $\{12,18,24,30\}=\{k,\,h(E_7),\,c{=}f,\,h(E_8)\}$ (product
+  $155520$). The top degree $30=h(E_8)$ is the cyclotomic sum $13{+}10{+}7$.
+\item \textbf{Neutrino} (particle masses, \S\ref{sec:physics}). The Majorana
+  hierarchy ratio is $\Phi_3/q^2=13/9$ and the PMNS deformation is $1/\Phi_3$ ---
+  the same $\Phi_3=13$.
+\item \textbf{Code} (fault tolerance, \S\ref{sec:exceptional}). The GKP tower
+  $A_2<D_4<E_8$ is the Eisenstein tower: $A_2$ the $q=3$ hexagonal (one-qutrit)
+  lattice, $D_4$ the matter shell, $E_8$ the Witting polytope. The boundary charge
+  $c=24=f$ is the Witting degree-$24$.
+\item \textbf{Demonstrator} (experiment). The benchtop meters the skeleton: the
+  contextual fraction on the $40=(q{+}1)\Phi_4$ $\W$ rays is $1/\Phi_4=1/10$, and the
+  Thouless-pump Chern number on the $A_2<D_4<E_8$ ladder is $\lambda=2$.
+\end{enumerate}
+
+So the $q=3$ substrate is not a list of coincidences spanning cosmology, particle
+physics, computation, and metrology; it is one Eisenstein object presenting five
+faces. (Witnesses: \path{analysis/w33_eisenstein_grand_synthesis.py},
+\path{analysis/w33_witting_degrees_unify.py}.) The subsections that follow detail
+each face and the connections between them --- including a benchtop bridge that turns
+the neutrino mass ratio into a single-photon measurement
+(\path{analysis/w33_neutrino_demonstrator_bridge.py}).
+
+\begin{figure}[ht]\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  face/.style={draw,rounded corners,align=center,minimum width=30mm,minimum height=11mm,inner sep=2pt},
+  spoke/.style={-{Stealth},thick,gray!60!black}
+]
+  \node[draw,circle,fill=red!10,align=center,minimum size=26mm,font=\footnotesize\bfseries]
+    (o) at (0,0) {$q{=}3$ Eisenstein\\ object\\ \footnotesize Witting $/$ ST$\#32$\\ \footnotesize $\{\Phi_3,\Phi_4,\Phi_6\}$};
+  \node[face,fill=blue!8]    (s1) at ( 90:3.7) {Selection\\$(q{-}3)\Phi_4$, $\{3,4,6\}$};
+  \node[face,fill=green!10]  (s2) at ( 18:4.1) {Constants\\$\{13,10,7\}$; $\{12,18,24,30\}$};
+  \node[face,fill=yellow!18] (s3) at (-54:4.1) {Neutrino\\$\Phi_3/q^2=13/9$};
+  \node[face,fill=orange!16] (s4) at (234:4.1) {Code\\$A_2{<}D_4{<}E_8$, $c{=}24$};
+  \node[face,fill=purple!12] (s5) at (162:4.1) {Demonstrator\\$1/\Phi_4$, $\lambda{=}2$};
+  \foreach \s in {s1,s2,s3,s4,s5} \draw[spoke] (o)--(\s);
+\end{tikzpicture}}
+\caption{The $q=3$ substrate is one Eisenstein object --- the Witting polytope, its
+symmetry $\mathrm{ST}\#32$, the cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ ---
+seen from five sides. The selection of $q=3$, the substrate constants, the neutrino
+mass hierarchy, the fault-tolerant code lattice, and the benchtop experiment are
+faces of the same structure, sharing the same invariants ($240=E_8$ roots,
+$\{\Phi_3,\Phi_4,\Phi_6\}$, $155520=3\lvert\mathrm{Aut}(\W)\rvert$).}
+\label{fig:five-faces}
+\end{figure}
+
 \subsection{BT1707--BT1709 contextuality and Hesse crossover}
 
 The attached multi-qubit contextuality papers supply the missing binary
@@ -5184,8 +5252,16 @@ $p\to\bar\nu K^+$ suppressed for lack of superpartners), and
 $\tau_p\approx4.6\times10^{35}$\,yr sits squarely in the Hyper-Kamiokande window.
 (Witness: \path{analysis/w33_proton_branching_two_scale.py}.)
 
-\subsection{Three closures: the neutrino matrix, the selection census, the threshold number}
+\subsection{Pass 1 --- three closures: the neutrino matrix, the selection census, the threshold number}
 \label{sec:three-closures}
+
+\emph{Reading the next four subsections.} They make four passes over three of the
+five faces of \S\ref{sec:five-faces} --- the \textbf{neutrino} (Face~3), the
+\textbf{selection} and its constants (Faces~1--2), and the \textbf{code} (Face~4) ---
+each pass sharper than the last: closure (Pass~1), invariant (Pass~2), skeleton
+(Pass~3), and the cubic form / Witting degrees / measured curve (Pass~4). The same
+three threads run through all four; the fifth face, the demonstrator, ties them
+together at the end (\S\ref{sec:physics} and the bridge witness).
 
 Three sharper statements close gaps left open above.
 
@@ -5349,7 +5425,7 @@ bounds; the single-mode $A_2$ shift is exact.)}
 \label{fig:ft-threshold}
 \end{figure}
 
-\subsection{Sharper still: a Majorana invariant, a cyclotomic merge, a code curve}
+\subsection{Pass 2 --- sharper: a Majorana invariant, a cyclotomic merge, a code curve}
 \label{sec:sharper}
 
 Each of the three closures admits a sharper statement.
@@ -5426,7 +5502,7 @@ smaller at realistic error rates.}
 \label{fig:d4-curve}
 \end{figure}
 
-\subsection{Deeper: a cyclotomic skeleton, a projective Majorana ratio, a decoder correction}
+\subsection{Pass 3 --- deeper: a cyclotomic skeleton, a projective Majorana ratio, a decoder correction}
 \label{sec:deeper}
 
 Digging beneath the three closures turns up one structure, one geometric meaning, and
@@ -5475,7 +5551,7 @@ the full coding gain realised deep below threshold. The qualitative claim --- $D
 beats the square code and the threshold shifts down --- survives; its size is
 error-dependent. (Witness: \path{analysis/w33_d4_decoder_montecarlo.py}.)
 
-\subsection{Deepest: the cubic form, the Witting degrees, and the measured curve}
+\subsection{Pass 4 --- deepest: the cubic form, the Witting degrees, and the measured curve}
 \label{sec:deepest}
 
 Pushed to the limit, each result either closes part-way or reveals a single deeper

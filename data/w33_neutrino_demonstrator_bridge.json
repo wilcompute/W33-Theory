@@ -1,0 +1,29 @@
+{
+  "skeleton": {
+    "Phi_3_PG": 13,
+    "q2_AG": 9,
+    "Phi_4": 10,
+    "Phi_6": 7
+  },
+  "demonstrator": {
+    "rays": 40,
+    "contextual_fraction": "1/Phi_4 = 1/10"
+  },
+  "neutrino_ratio": {
+    "value": "Phi_3/q^2 = 13/9",
+    "from": "projective |PG|=13 over affine |AG|=9",
+    "benchtop_measurable": true
+  },
+  "decision": {
+    "if_13_9": {
+      "m2_over_m3": 0.1731,
+      "dm21_over_dm31": 0.03
+    },
+    "if_generic": "~1.25 (cubic-form generic VEV), not 0.030",
+    "discriminates": true
+  },
+  "summary": "neutrino<->demonstrator bridge: the demonstrator meters the cyclotomic skeleton (contextual fraction 1/Phi_4=1/10 on 40=(q+1)Phi_4 W(3,3) rays); the neutrino Majorana ratio Phi_3/q^2=13/9 is the projective/affine count |PG(2,3)|/|AG(2,3)|=13/9 of the SAME qutrit register, so a projective-vs-affine contextuality experiment measures it. This removes the cubic-form VEV ambiguity empirically: measured 13/9 -> B-L VEV is projective/affine -> dm21/dm31=0.030 predicted; measured ~1.25 (generic VEV) -> not. The neutrino mass hierarchy becomes a single-photon benchtop test, joining the neutrino sector and the demonstrator via one shared skeleton. Honest: a proposal, not a completed measurement.",
+  "sources": [
+    "contextual fraction 1/Phi_4=1/10 (w33_demonstrator_substrate_constants.py); Majorana ratio Phi_3/q^2=13/9=|PG(2,3)|/|AG(2,3)| (w33_majorana_grade_derivation.py, w33_majorana_cubic_form.py); cyclotomic skeleton (w33_cyclotomic_skeleton_census.py); single-photon qutrit registers; w33_eisenstein_grand_synthesis.py."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "object": {
+    "witting_vertices": 240,
+    "ST32_order": 155520,
+    "cyclotomic": {
+      "3": 13,
+      "4": 10,
+      "6": 7
+    },
+    "degrees": [
+      12,
+      18,
+      24,
+      30
+    ]
+  },
+  "face1_selection": {
+    "desitter": "(q-3)(q^2+1)",
+    "gq_points": 40,
+    "crystallographic_periods": [
+      3,
+      4,
+      6
+    ]
+  },
+  "face2_constants": {
+    "cyclotomic_values": [
+      13,
+      10,
+      7
+    ],
+    "sum": 30,
+    "witting_degrees": [
+      12,
+      18,
+      24,
+      30
+    ],
+    "degree_meanings": {
+      "12": "k=q(q+1)",
+      "18": "h(E7)",
+      "24": "c=f=q^3-q=|2T|",
+      "30": "h(E8)"
+    },
+    "q_parametrisation": {
+      "12": 12,
+      "18": 18,
+      "24": 24,
+      "30": 30
+    }
+  },
+  "face3_neutrino": {
+    "majorana_ratio": "Phi_3/q^2 = 13/9",
+    "pmns_deformation": "1/Phi_3 = 1/13",
+    "shared": "Phi_3=13"
+  },
+  "face4_code": {
+    "gkp_tower_kissing": {
+      "A2": 6,
+      "D4": 24,
+      "E8": 240
+    },
+    "E8_is_witting": true,
+    "c_is_degree24": true
+  },
+  "face5_demonstrator": {
+    "contextual_fraction": "1/Phi_4 = 1/10",
+    "pump_chern": "lambda = 2",
+    "meters": "the skeleton"
+  },
+  "summary": "ONE OBJECT, FIVE FACES: the q=3 Eisenstein structure (Witting polytope 240=E8 roots, symmetry ST#32 order 155520=3|Sp(4,3)|=3|Aut(W33)|, cyclotomic skeleton {Phi_3,Phi_4,Phi_6} over Z[omega]) is simultaneously (1) SELECTION: Phi_4=q^2+1 factors de Sitter (q-3)Phi_4 + GQ count 40, periods {3,4,6}; (2) CONSTANTS: cyclotomic values {13,10,7} (sum 30) and Witting degrees {12,18,24,30}={k,h(E7),c=f,h(E8)} (product 155520), top degree 30=h(E8)=cyclotomic sum; (3) NEUTRINO: Majorana ratio Phi_3/q^2=13/9 and PMNS deformation 1/Phi_3, same Phi_3=13; (4) CODE: GKP tower A2<D4<E8 = Eisenstein tower, E8=Witting, c=f=24=Witting degree; (5) DEMONSTRATOR: contextual fraction 1/Phi_4=1/10 and pump Chern lambda=2 meter the skeleton. Cosmology, masses, error correction and the benchtop are one object seen from five sides -- the deepest form of the framework->physics bridge.",
+  "sources": [
+    "Witting polytope/ST#32 (Coxeter; Shephard-Todd #32, degrees 12,18,24,30); cyclotomic skeleton {Phi_3,Phi_4,Phi_6}; E8 roots=240; |Sp(4,3)|=|Aut(W33)|=51840; GKP tower A2<D4<E8 (Conrad-Eisert-Hangleiter); contextual fraction 1/Phi_4, pump Chern lambda; w33_eisenstein_forcing.py, w33_cyclotomic_skeleton_census.py, w33_witting_degrees_unify.py, w33_majorana_cubic_form.py, w33_gkp_lattice_architecture.py, w33_demonstrator_substrate_constants.py."
+  ]
+}
