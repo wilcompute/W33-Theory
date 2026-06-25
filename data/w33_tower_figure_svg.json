@@ -1,0 +1,25 @@
+{
+  "svg_file": "docs\\w33_exceptional_tower.svg",
+  "bytes": 4665,
+  "rungs": [
+    "q = 3  (one trit: triangle + tetrahedron)",
+    "{3,n} genus / register tower",
+    "vertex-figure selection; gap = K12 = ternary Golay / M12",
+    "Witting body  (Eisenstein, q=3)",
+    "complex Leech  (Eisenstein 12 = k),  Aut 6.Suz",
+    "Co0 = 2.Co1  (real Leech)",
+    "Monster  M = Aut(V-natural)",
+    "E6",
+    "E7",
+    "E8"
+  ],
+  "threads": [
+    "omega (Eisenstein order-3 weld)",
+    "G2 = Aut(O), keyed by Phi6=7",
+    "U4(2) = PSp(4,3) = 25920"
+  ],
+  "summary": "rendered the exceptional tower as a standalone SVG (docs/w33_exceptional_tower.svg), no graphviz needed: a vertical ladder q=3 (bottom) -> Monster (top) with the E6/E7/E8 trio side by side, a dashed Standard-Model branch (dim 12=k), and the three threads (omega, G2=Aut(O), U4(2)) as a side rail. Well-formedness and all-rungs-present verified.",
+  "sources": [
+    "self-contained SVG render of the tower (graphviz not required); structure from w33_exceptional_tower_synthesis.py / docs/w33_exceptional_tower.dot."
+  ]
+}

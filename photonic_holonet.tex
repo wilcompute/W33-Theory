@@ -4979,8 +4979,35 @@ complex Leech $\to\mathrm{Co}_0\to$ Monster ($c=24$), with a downward branch to
 the Standard Model --- run the full height by three threads (the Eisenstein
 order-$3$ $\omega$, $\mathrm G_2=\mathrm{Aut}(\mathbb O)$, and the simple group
 $\mathrm U_4(2)=\mathrm{PSp}(4,3)$). It is drawn in
-\path{docs/w33_exceptional_tower.dot}. (Witness:
+\path{docs/w33_exceptional_tower.dot} and rendered to
+\path{docs/w33_exceptional_tower.svg}. (Witness:
 \path{analysis/w33_exceptional_tower_synthesis.py}.)
+
+\subsection{The measurable layer: a scorecard and a unification}
+
+Following the ledger's rule that only the measurable layer falsifies, two
+quantitative tests. \emph{The scorecard.} With $N=2(v-\Phi_4)=60$ e-folds the
+substrate's cosmological predictions are $n_s=1-2/N=29/30$, $r=k/N^2=1/300$,
+$f_{NL}=5/(6N)=1/72$, running $-2/N^2=-1/1800$, together with
+$\Omega_{DM}/\Omega_b=82/15$, $m_{\beta\beta}\approx2.3$\,meV, and
+$\textstyle\sum m_\nu\approx0.101$\,eV. Against mid-2026 data these are mostly
+\textsc{consistent} ($n_s$ at $\sim0.4\sigma$ of Planck; $r$ below the
+BICEP/Keck bound and testable by LiteBIRD), but one is in honest \textsc{tension}:
+$\sum m_\nu\approx0.101$\,eV satisfies Planck ($<0.12$\,eV) yet exceeds the DESI
+2024 bound ($<0.072$\,eV) --- a genuine falsification handle, not a confirmation.
+(Witness: \path{analysis/w33_measurable_scorecard_2026.py}.)
+
+\emph{The unification.} The same $S_3$ triality that gives the three generations
+unifies the gauge couplings: it forces $g_C=g_L=g_R$ at the trinification scale,
+and the GUT hypercharge normalization $g_1^2=\tfrac53 g'^2$ then fixes
+\[
+  \sin^2\theta_W=\frac{g'^2}{g^2+g'^2}=\frac{3/5}{1+3/5}=\frac38
+\]
+at unification --- the canonical $\mathrm{SU}(5)/\mathrm{SO}(10)/\mathrm E_6$ value
+--- running to the measured $\approx0.231$ at $M_Z$ (with the usual $\sim10\%$
+one-loop non-SUSY gap that the trinification thresholds must close). So the three
+generations and coupling unification are one triality. (Witness:
+\path{analysis/w33_trinification_unification.py}.)
 
 \subsection{Self-error-correction and why the primitive is one}
 

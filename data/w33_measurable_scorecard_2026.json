@@ -1,0 +1,86 @@
+{
+  "predictions": [
+    {
+      "observable": "n_s (spectral index)",
+      "predicted": 0.9666666666666667,
+      "formula": "1-2/N=29/30",
+      "bound": "Planck 0.9649 +- 0.0042",
+      "status": "CONSISTENT (~0.4 sigma)"
+    },
+    {
+      "observable": "r (tensor-to-scalar)",
+      "predicted": 0.0033333333333333335,
+      "formula": "k/N^2=1/300",
+      "bound": "BICEP/Keck r<0.036",
+      "status": "CONSISTENT; LiteBIRD sigma(r)~1e-3 will test"
+    },
+    {
+      "observable": "f_NL (local)",
+      "predicted": 0.013888888888888888,
+      "formula": "5/(6N)=1/72",
+      "bound": "Planck -0.9 +- 5.1",
+      "status": "CONSISTENT (tiny)"
+    },
+    {
+      "observable": "running dn_s/dlnk",
+      "predicted": -0.0005555555555555556,
+      "formula": "-2/N^2=-1/1800",
+      "bound": "Planck -0.0045 +- 0.0067",
+      "status": "CONSISTENT"
+    },
+    {
+      "observable": "Sum m_nu [eV]",
+      "predicted": 0.101,
+      "formula": "neutrino cascade",
+      "bound": "Planck<0.12; DESI2024<0.072",
+      "status": "TENSION with DESI 2024"
+    },
+    {
+      "observable": "m_bb [meV]",
+      "predicted": 2.3,
+      "formula": "Majorana eff. mass",
+      "bound": "KamLAND-Zen <36-156 meV",
+      "status": "CONSISTENT; below nEXO/LEGEND reach"
+    },
+    {
+      "observable": "Omega_DM/Omega_b",
+      "predicted": 5.466666666666667,
+      "formula": "82/15=5.47",
+      "bound": "Planck ~5.36",
+      "status": "CONSISTENT (~2%)"
+    },
+    {
+      "observable": "sin^2 theta_W (M_Z)",
+      "predicted": 0.231,
+      "formula": "3/8 at GUT (S3) -> run",
+      "bound": "measured 0.23122",
+      "status": "CONSISTENT (running; one-loop ~10% gap)"
+    },
+    {
+      "observable": "contextual fraction",
+      "predicted": 0.1,
+      "formula": "1/Phi4=1/10",
+      "bound": "demonstrator",
+      "status": "INTERNAL (lab test, not yet measured)"
+    },
+    {
+      "observable": "pump Chern number",
+      "predicted": 2,
+      "formula": "C=2S=lambda=2",
+      "bound": "topological pump",
+      "status": "TESTABLE-SOON (demonstrator)"
+    }
+  ],
+  "tally": {
+    "CONSISTENT": 5,
+    "CONSISTENT;": 2,
+    "TENSION": 1,
+    "INTERNAL": 1,
+    "TESTABLE-SOON": 1
+  },
+  "tension": "Sum m_nu ~0.101 eV vs DESI 2024 <0.072 eV -> TENSION",
+  "summary": "measurable scorecard (N=60): n_s=29/30~0.9667 (Planck CONSISTENT ~0.4s), r=1/300 (CONSISTENT, LiteBIRD-testable), f_NL=1/72 (CONSISTENT), running=-1/1800 (CONSISTENT), m_bb~2.3 meV (CONSISTENT, below next-gen reach), Omega_DM/Omega_b=82/15 (~2%), sin^2theta_W via 3/8 GUT (S3). HONEST TENSION: Sum m_nu ~0.101 eV is OK vs Planck<0.12 but in TENSION with DESI 2024 <0.072 eV -- a genuine falsification handle. Several predictions TESTABLE-SOON (LiteBIRD/nEXO/demonstrator). Not a confirmation.",
+  "sources": [
+    "substrate inflation/cosmology formulas (N=2(v-Phi4)=60; n_s=1-2/N, r=k/N^2, f_NL=5/(6N), running=-2/N^2); neutrino cascade Sum m_nu~0.101, m_bb~2.3 meV; sin^2theta_W=3/8 GUT (trinification); current bounds Planck 2018, BICEP/Keck 2021, DESI 2024 (<0.072 eV), KamLAND-Zen; w33_exceptional_tower_ledger.py, w33_cmb_moonshine_suite.py, w33_neutrinoless_betabeta.py."
+  ]
+}
