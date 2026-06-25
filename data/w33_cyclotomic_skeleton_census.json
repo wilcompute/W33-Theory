@@ -1,0 +1,61 @@
+{
+  "generating_identity": {
+    "Phi3_at_3": 13,
+    "Phi4_at_3": 10,
+    "Phi6_at_3": 7,
+    "sum": 30,
+    "equals_hE8": true,
+    "roles": {
+      "13": "register/genus Phi3",
+      "10": "Sp(4) theta, v=(q+1)Phi4=40",
+      "7": "Fano/Hurwitz {3,7} Phi6"
+    }
+  },
+  "gq_point_count": {
+    "formula": "(q+1)Phi_4(q)",
+    "at_3": 40
+  },
+  "reduction_map": {
+    "S4 de Sitter": {
+      "reduces": "YES",
+      "reason": "cubic = (q-3) Phi_4(q)"
+    },
+    "S5 crystallographic": {
+      "reduces": "YES",
+      "reason": "periods {3,4,6} = cyclotomic indices"
+    },
+    "S1 geometric": {
+      "reduces": "NO",
+      "reason": "(q-1)!=2 factorial; only coincides with Phi_1(3)=2"
+    },
+    "S2 resource": {
+      "reduces": "NO",
+      "reason": "minimal odd prime = primality fact, not the polynomial"
+    },
+    "S3 holographic": {
+      "reduces": "NO",
+      "reason": "c=24=q^3-q=(q-1)q(q+1)=|2T|, not a degree-2 cyclotomic"
+    }
+  },
+  "holographic_24": {
+    "q3_minus_q": 24,
+    "factorization": "(q-1)q(q+1)=2*3*4",
+    "equals_8q": true
+  },
+  "honest_count": {
+    "deep_object": "the {Phi_3,Phi_4,Phi_6} cyclotomic skeleton (selects q=3 AND generates {13,10,7})",
+    "independent_confirmations": [
+      "S1 geometric (factorial)",
+      "S2 resource (primality)",
+      "S3 holographic (central charge)"
+    ],
+    "faces_of_deep_object": [
+      "S4 de Sitter",
+      "S5 crystallographic"
+    ]
+  },
+  "summary": "the q=3 census = ONE deep cyclotomic object + THREE independent confirmations. The degree-2 cyclotomic skeleton {Phi_3,Phi_4,Phi_6} both SELECTS q=3 (indices {3,4,6}=crystallographic periods; Phi_4=q^2+1 factors the de Sitter cubic (q-3)Phi_4 and the GQ count (q+1)Phi_4=40) and GENERATES the substrate constants {Phi_3,Phi_4,Phi_6}(3)={13,10,7} (sum 30=h(E8)). S4,S5 are its two faces. S1 geometric (factorial (q-1)!=2), S2 resource (minimal odd prime), S3 holographic (c=24=q^3-q=|2T|) do NOT reduce -- independent arithmetic agreeing at q=3. Bridge = one cyclotomic core + 3 independent confirmations; honest and tighter than 'five independent'.",
+  "sources": [
+    "cyclotomic polynomials Phi_3,Phi_4,Phi_6; substrate constants 13,10,7; h(E8)=30; GQ point count v=(q+1)(q^2+1); de Sitter (q-3)Phi_4 (w33_desitter_crystallographic_unify.py); 24=q^3-q=|2T|; w33_q3_selection_census.py, w33_eisenstein_forcing.py."
+  ]
+}

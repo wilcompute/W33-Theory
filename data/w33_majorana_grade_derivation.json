@@ -1,0 +1,52 @@
+{
+  "step_A_degeneracy": {
+    "M_R": [
+      [
+        1.7,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "abs_eigs": [
+      1.0,
+      1.0,
+      1.7
+    ],
+    "degenerate": true,
+    "conclusion": "single-grade M_R is degenerate; a splitting is mandatory"
+  },
+  "step_B_geometry": {
+    "PG_points": 13,
+    "AG_points": 9,
+    "line_at_infinity": 4,
+    "r2_over_r3": 1.4444,
+    "meaning": "Phi3/q^2 = |PG(2,3)|/|AG(2,3)| = projective/affine"
+  },
+  "spectrum": {
+    "m2_over_m3": 0.1731,
+    "dm21_over_dm31": 0.03,
+    "observed": 0.0296
+  },
+  "cyclotomic_tie": {
+    "Phi_3_4_6_at_3": [
+      13,
+      10,
+      7
+    ],
+    "note": "Phi3=13=Phi_3(3); neutrino hierarchy uses the q=3-selection skeleton"
+  },
+  "summary": "Majorana ratio 13/9 opened up: the naive single-grade-0 VEV gives an EXACTLY degenerate M_R = [[A,0,0],[0,0,C],[0,C,0]] (eigs {A,+C,-C}) -> two degenerate light neutrinos, contradicting observation, so a splitting is mandatory. The splitting is the projective/affine count |PG(2,3)|/|AG(2,3)| = 13/9 = Phi3/q^2 (democratic RH-neutrino sees all 13 projective points, others the 9 affine), giving dm21/dm31=0.030. Phi3=13=Phi_3(3), one of the degree-2 cyclotomics {13,10,7} that select q=3 -- the neutrino hierarchy shares the q=3 skeleton. Honest: degeneracy exact; projective/affine gives 13/9 meaning + right spectrum, but deriving M_R eigenvalues = these counts from the cubic form is the remaining step.",
+  "sources": [
+    "Z3 grade selection rule (Pillar 68, THEORY_PART_CLXXVII_MASS_TEXTURE.py); type-I seesaw m_i=y_i^2/r_i; PG(2,3)=13 projective / AG(2,3)=9 affine points; Phi_n(3) for n=3,4,6 = 13,10,7; w33_neutrino_majorana_texture.py, w33_desitter_crystallographic_unify.py."
+  ]
+}

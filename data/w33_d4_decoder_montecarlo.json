@@ -1,0 +1,56 @@
+{
+  "setup": {
+    "dmin_D4": 1.1892,
+    "kissing": {
+      "Z4": 8,
+      "D4": 24
+    },
+    "nominal_gain_dB": 1.51
+  },
+  "advantage_vs_error": [
+    {
+      "target": 0.03,
+      "sigma_Z4": 0.1873,
+      "sigma_D4": 0.2013,
+      "advantage_measured_dB": 0.63,
+      "advantage_unionbound_dB": 0.44
+    },
+    {
+      "target": 0.01,
+      "sigma_Z4": 0.1654,
+      "sigma_D4": 0.1803,
+      "advantage_measured_dB": 0.75,
+      "advantage_unionbound_dB": 0.64
+    },
+    {
+      "target": 0.003,
+      "sigma_Z4": 0.1484,
+      "sigma_D4": 0.1634,
+      "advantage_measured_dB": 0.84,
+      "advantage_unionbound_dB": 0.78
+    },
+    {
+      "target": 0.001,
+      "sigma_Z4": 0.1365,
+      "sigma_D4": 0.1515,
+      "advantage_measured_dB": 0.91,
+      "advantage_unionbound_dB": 0.88
+    }
+  ],
+  "trend": {
+    "advantage_low_error": 0.63,
+    "advantage_high_squeezing": 0.91,
+    "asymptote_dB": 1.51,
+    "growing": true
+  },
+  "engineering": {
+    "advantage_near_threshold_dB": 0.75,
+    "D4_threshold_near_dB": 9.2,
+    "D4_threshold_asymptotic_dB": 8.4,
+    "note": "advantage is error-rate dependent; 1.5 dB is the low-error asymptote"
+  },
+  "summary": "real D4 decoder CORRECTS the constant-1.5-dB model. Conway-Sloane closest-point decoding over Gaussian noise (equal density) gives a D4-vs-square advantage that GROWS from ~0.6 dB at logical error 3e-2 to ~0.9 dB at 1e-3, tracking the union bound WITH kissing numbers (D4 kissing 24 vs Z4 8 suppresses the finite-error gain) and approaching the nominal 1.5 dB only asymptotically. Honest near-threshold advantage ~0.7-1.0 dB; full 1.5 dB deep below threshold. Qualitative claim (D4 beats square, threshold shifts down) holds; magnitude is error-rate dependent -- a correction the simulation makes that the union-bound shift hid.",
+  "sources": [
+    "Conway-Sloane, SPLAG (D_n closest-point algorithm; coding gains; kissing numbers 8, 24); GKP correctable region = Voronoi cell; Conrad-Eisert-Hangleiter, Quantum 6, 648 (2022); Noh-Chamberland 9.9 dB; w33_d4_gkp_error_curve.py, w33_gkp_coding_gain.py."
+  ]
+}

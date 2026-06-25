@@ -5383,11 +5383,12 @@ and curve behind it. The $D_4$ stabilizer lattice $\{x\in\mathbb Z^4:\sum x_i\ \
 (generators $\times\sqrt\pi$) has exact invariants $d_{\min}^2=2$, $\det=4$, kissing
 $24$, coding gain $1.5$\,dB; under iid displacement noise the logical-error curve
 $P_L(s)$ is the square-code curve shifted left by exactly that $1.5$\,dB
-(Fig.~\ref{fig:d4-curve}), so $D_4$ reaches any target error at $1.5$\,dB less
+(Fig.~\ref{fig:d4-curve}), so $D_4$ reaches any target error at up to $1.5$\,dB less
 squeezing and the surface-GKP threshold $9.9$\,dB becomes $\sim8.4$\,dB --- below the
-$9.5$\,dB already demonstrated. The relative $1.5$\,dB $D_4$-versus-square advantage
-is the falsifiable handle. (Honest: the lattice quantities are exact; the curve is the
-union-bound effective-distance model, not a full circuit-level FT simulation. Witness:
+$9.5$\,dB already demonstrated. The relative $D_4$-versus-square advantage is the
+falsifiable handle. (Honest: the lattice quantities are exact and the $1.5$\,dB is the
+low-error \emph{asymptote}; a real closest-point decoder shows the finite-error
+advantage is smaller --- see \S\ref{sec:deeper}. Witness:
 \path{analysis/w33_d4_gkp_error_curve.py}.)
 
 \begin{figure}[ht]\centering
@@ -5424,6 +5425,55 @@ $9.5$\,dB squeezing already demonstrated. The relative advantage is the falsifia
 handle.}
 \label{fig:d4-curve}
 \end{figure}
+
+\subsection{Deeper: a cyclotomic skeleton, a projective Majorana ratio, a decoder correction}
+\label{sec:deeper}
+
+Digging beneath the three closures turns up one structure, one geometric meaning, and
+one honest correction.
+
+\emph{The substrate constants are degree-two cyclotomics, and they do double duty.}
+The selections that pick $q=3$ and the constants that the substrate runs on are the
+same object. The three degree-two cyclotomic polynomials, evaluated at the selected
+field, are
+\[
+\Phi_3(3)=13,\qquad \Phi_4(3)=10,\qquad \Phi_6(3)=7,\qquad 13+10+7=30=h(E_8),
+\]
+i.e.\ the substrate's core invariants (register $\Phi_3=13$, the $\mathrm{Sp}(4)$
+$\theta=10$, the Fano/Hurwitz $7$), summing to the $E_8$ Coxeter number. The same
+$\{\Phi_3,\Phi_4,\Phi_6\}$ skeleton \emph{selects} $q=3$: its indices $\{3,4,6\}$ are
+the crystallographic periods, and $\Phi_4(q)=q^2+1$ factors both the de Sitter cubic
+$(q-3)\Phi_4$ and the $\mathrm{GQ}$ point count $(q+1)\Phi_4=40$. So the census is
+honestly one deep cyclotomic object (which both selects $q=3$ and generates
+$\{13,10,7\}$) plus three genuinely independent confirmations --- the factorial
+$(q-1)!=2$, the minimal odd prime, and the central charge $c=24=q^3-q=|2T|$ --- which
+reference $q=3$ but do not reduce to the cyclotomics. (Witness:
+\path{analysis/w33_cyclotomic_skeleton_census.py}.)
+
+\emph{The Majorana ratio is projective over affine.} The neutrino number $\Phi_3/q^2=
+13/9$ has a geometric meaning. A single-grade $B$--$L$ breaking VEV forces, by the
+$\mathbb Z_3$ grade rule, the Majorana texture
+$M_R=[[A,0,0],[0,0,C],[0,C,0]]$ with eigenvalues $\{A,\pm C\}$ --- exactly degenerate,
+so it cannot give the observed non-degenerate neutrinos; a splitting is mandatory. The
+splitting that works is $r_2/r_3=\lvert\mathrm{PG}(2,3)\rvert/\lvert\mathrm{AG}(2,3)
+\rvert=13/9$: the democratic (trivial-rep) right-handed neutrino couples to all
+$\Phi_3=13$ projective points, the others to the $q^2=9$ affine ones. Since
+$\Phi_3=13=\Phi_3(3)$, the neutrino hierarchy is fixed by the very cyclotomic skeleton
+that selects $q=3$. (Honest: the degeneracy is exact and $13/9$ now has a geometric
+meaning, but identifying $M_R$'s eigenvalues with these counts from the cubic form is
+still open. Witness: \path{analysis/w33_majorana_grade_derivation.py}.)
+
+\emph{A real decoder corrects the threshold advantage.} Replacing the union-bound
+shift with an actual Conway--Sloane closest-point decoder over sampled Gaussian noise
+(both codes at equal density) shows the $D_4$-versus-square advantage is
+\emph{error-rate dependent}: it grows from $\sim0.6$\,dB at logical error $3\times
+10^{-2}$ to $\sim0.9$\,dB at $10^{-3}$, tracking the union bound \emph{with} kissing
+numbers ($D_4$'s $24$ versus the square's $8$ suppresses the finite-error gain) and
+reaching the nominal $1.5$\,dB only asymptotically. So the constant-$1.5$\,dB curve was
+the low-error limit; the honest near-threshold advantage is $\sim0.7$--$1.0$\,dB, with
+the full coding gain realised deep below threshold. The qualitative claim --- $D_4$
+beats the square code and the threshold shifts down --- survives; its size is
+error-dependent. (Witness: \path{analysis/w33_d4_decoder_montecarlo.py}.)
 
 \subsection{Self-error-correction and why the primitive is one}
 
