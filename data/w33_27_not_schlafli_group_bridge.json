@@ -1,0 +1,19 @@
+{
+  "first_subconstituent": "4*K3 (4 triangles = the 4 lines through p)",
+  "second_subconstituent": {
+    "regular_valency": 8,
+    "is_schlafli": false,
+    "schlafli_would_be": "SRG(27,16,10,8)"
+  },
+  "count_not_graph": true,
+  "group_bridge": {
+    "simple_group": "U4(2)=PSp(4,3)=PSU(4,2)=25920",
+    "Sp43": "2.U4(2)=51840",
+    "W_E6": "U4(2):2=51840",
+    "GQ24_aut": "U4(2):2"
+  },
+  "summary": "GUARDRAIL: 40=1+12+27 in GQ(3,3) is an exact count (matter cone 28=1+27, BT890) and 27 = E6 rep dim = GQ(2,4) points, but the 27 non-collinear points form an 8-regular graph, NOT the Schlafli graph SRG(27,16,10,8) (16-regular); the 12 collinear form 4*K3. So '27=E6' is a dimension/group match, not a subgraph. The true bridge is the simple group U4(2)=PSp(4,3)=PSU(4,2)=25920, shared by Sp(4,3)=2.U4(2)=51840, W(E6)=U4(2):2=51840, and Aut(GQ(2,4))=U4(2):2.",
+  "sources": [
+    "GQ(3,3)=W(3,3) collinearity SRG(40,12,2,4), subconstituents (4*K3 and an 8-regular non-Schlafli 27-graph) computed here; Schlafli graph SRG(27,16,10,8) = GQ(2,4) collinearity; PSp(4,3)=PSU(4,2)=U4(2)=25920, W(E6)=U4(2):2=51840; BT890 matter cone 28=1+27; w33_generalized_quadrangle_ladder.py, w33_hessian_polytope_e6.py."
+  ]
+}

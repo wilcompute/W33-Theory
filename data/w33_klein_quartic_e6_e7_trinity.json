@@ -1,0 +1,27 @@
+{
+  "orbits": {
+    "weierstrass": "24=f",
+    "bitangents": "28=mu*Phi6=1+27",
+    "sextactic": "84=k*Phi6"
+  },
+  "e7": {
+    "minuscule": 56,
+    "is": "2*28 bitangents = v+k+mu = Klein faces"
+  },
+  "trinity": {
+    "E6": "27 lines (cubic)",
+    "E7": "28 bitangents (Klein quartic)",
+    "E8": "120 tritangents = 120 icosians (Witting, 240=2*120)"
+  },
+  "weyl_cascade": {
+    "W_E6": 51840,
+    "W_E7": 2903040,
+    "W_E8": 696729600,
+    "multipliers": "x56 (2*bitangents), x240 (|E|)"
+  },
+  "correction": "x56 step is 2*bitangents=E7 minuscule=Klein faces, not sextactic(=84)",
+  "summary": "the Klein quartic carries E7: PSL(2,7) acts transitively on 24 Weierstrass (=f), 28 bitangents (=mu*Phi6=matter cone 1+27), 84 sextactic (=k*Phi6). 28 bitangents = E7: minuscule 56=2*28=v+k+mu = the 56 Klein faces. Trinity 27 lines/28 bitangents/120 tritangents = E6/E7/E8 = cubic/quartic/Witting (120=icosians, 240=2*120=E8 roots). Weyl cascade 51840=|Sp(4,3)| -> x56 -> x240 = 696729600. Corrects w33_exceptional_weyl_chain_closure.py: the x56 step is 2*bitangents=Klein faces, not sextactic (=84).",
+  "sources": [
+    "Klein quartic (Grokipedia/Wikipedia): x^3y+y^3z+z^3x, Aut PSL(2,7), transitive on 24 Weierstrass / 28 bitangents / 84 sextactic points; 28 bitangents of a plane quartic = E7 (56=2*28 minuscule); 27 lines (E6) / 28 bitangents (E7) / 120 tritangents (E8) trinity; |W(E6/E7/E8)|=51840/2903040/696729600; BT890 (28=1+27), w33_exceptional_weyl_chain_closure.py, Pillar 67 / BT327 (cubic invariant, BH entropy S=A/mu)."
+  ]
+}

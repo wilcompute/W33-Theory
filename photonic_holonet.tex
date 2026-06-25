@@ -4803,6 +4803,48 @@ other flank; the four-qubit $W(7,2)$ carries the same $27/45$ split through its
 $135$ $\mathrm{DW}(5,2)$. (Witness:
 \path{analysis/w33_generalized_quadrangle_ladder.py}.)
 
+\subsection{A guardrail on the 27, and the Klein quartic as the E7 rung}
+
+Two honest refinements close this arc. \emph{First, a guardrail.} It is tempting
+to read $v=40=1+12+27$ as realising the $\mathrm E_6$/$27$-lines Schl\"afli graph
+inside $W(3,3)$. It does \emph{not}: fixing a point of $\mathrm{GQ}(3,3)$, the
+$12$ collinear points induce $4K_3$ and the $27$ non-collinear points induce an
+$8$-regular graph that is \emph{not} strongly regular --- in particular not the
+$16$-regular Schl\"afli graph $\mathrm{SRG}(27,16,10,8)$. So $40=1+12+27$ is an
+exact count (the matter cone $28=1+27$), and $27$ matches the $\mathrm E_6$
+representation dimension and the $\mathrm{GQ}(2,4)$ point count, but it is
+\emph{not} a subgraph embedding. The genuine bridge is group-theoretic: the
+substrate's projective gauge group and the $\mathrm E_6$ group are the same
+simple group $\mathrm U_4(2)=\mathrm{PSp}(4,3)=\mathrm{PSU}(4,2)$, of order
+$25920$, with $\mathrm{Sp}(4,3)=2.\mathrm U_4(2)$, $W(\mathrm E_6)=\mathrm
+U_4(2){:}2$, and $\mathrm{Aut}(\mathrm{GQ}(2,4))=\mathrm U_4(2){:}2$ all order
+$51840$. (Witness: \path{analysis/w33_27_not_schlafli_group_bridge.py}.)
+
+\emph{Second, the E7 rung.} The genus-$3$ Klein quartic
+$x^3y+y^3z+z^3x$ --- the first $\{3,7\}$ Hurwitz rung --- carries $\mathrm E_7$.
+Its automorphism group $\mathrm{PSL}(2,7)$ acts transitively on three
+distinguished point-sets that are all substrate integers:
+\[
+  24\ \hbox{Weierstrass}=f,\quad
+  28\ \hbox{bitangents}=\mu\Phi_6\ (=1+27),\quad
+  84\ \hbox{sextactic}=k\Phi_6 .
+\]
+The $28$ bitangents are the $\mathrm E_7$ datum: the minuscule rep has dimension
+$56=2\cdot28=v+k+\mu$, which is exactly the number of triangular faces of the
+Klein map. So the exceptional trinity
+\[
+  27\ \hbox{lines (cubic)}\ \to \mathrm E_6,\quad
+  28\ \hbox{bitangents (quartic)}\ \to \mathrm E_7,\quad
+  120\ \hbox{tritangents}\ \to \mathrm E_8\ (=120\ \hbox{icosians},\ 240=2\cdot120),
+\]
+closes the substrate's exceptional ladder, with Weyl orders
+$|W(\mathrm E_6)|=51840=|\mathrm{Sp}(4,3)|$, $|W(\mathrm E_7)|=56\cdot51840$, and
+$|W(\mathrm E_8)|=240\cdot|W(\mathrm E_7)|=696729600$ --- the multipliers being
+$56$ ($=2\times$ bitangents) and $240$ ($=|E|=$ E8 roots $=$ Witting vertices).
+The Hessian polytope ($\mathrm E_6$), the Klein quartic ($\mathrm E_7$), and the
+Witting body ($\mathrm E_8$) are the three exceptional rungs of one qutrit tower.
+(Witness: \path{analysis/w33_klein_quartic_e6_e7_trinity.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
