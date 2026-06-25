@@ -1,0 +1,35 @@
+{
+  "bt": "BT1788",
+  "title": "Hesse relation materializer and counts-only falsifier",
+  "status": "synthetic scaffold; not the real BT1781 tuple data",
+  "schema": {
+    "variables": ["R0", "R1", "R2", "C0", "C1", "C2", "D0", "D1", "D2"],
+    "domain_size": 12,
+    "constraint_count": 18,
+    "raw_entries": 31104,
+    "accepted_entries": 9980,
+    "counts": [528, 562, 578, 528, 612, 580, 528, 528, 480, 528, 612, 564, 562, 528, 578, 562, 562, 560],
+    "nonconcurrency_rule": "table for (Ri,Cj,Ds) exactly when s != (j-i) mod 3"
+  },
+  "networkx_graph_stats": {
+    "primal_nodes": 9,
+    "primal_edges": 27,
+    "primal_degree_sequence": [6, 6, 6, 6, 6, 6, 6, 6, 6],
+    "is_complete_tripartite_K333": true,
+    "approx_treewidth_min_fill": 6,
+    "incidence_nodes": 27,
+    "incidence_edges": 54,
+    "incidence_connected": true,
+    "pair_frontier_count": 27
+  },
+  "same_counts_synthetic_summary": {
+    "seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+    "all_runs_keep_incumbent": true,
+    "pair_consistency_tuple_count_min": 9608,
+    "pair_consistency_tuple_count_max": 9722,
+    "solution_count_min": 5,
+    "solution_count_max": 11,
+    "solution_count_histogram": {"5": 2, "7": 1, "8": 3, "10": 1, "11": 1}
+  },
+  "conclusion": "BT1781 counts plus unary support do not determine the global solve. Same-count saturated synthetic tables preserve the incumbent but leave different pair-consistent tuple totals and different incumbent-first DFS solution counts. The next real artifact must commit either the 18 accepted ternary tuple lists or the 27 pair-frontier projections."
+}
