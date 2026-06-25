@@ -5207,6 +5207,20 @@ this is the unique substrate-symmetric matrix consistent with the data --- a
 closure demonstration, not an absolute-mass prediction. Witness:
 \path{analysis/w33_neutrino_texture_pinned.py}.)
 
+\emph{The ratio as a partial prediction.} The closure above fixes the two mass
+scales from the two measured $\Delta m^2$; the ratio can instead be \emph{predicted}.
+Feeding the substrate's own mild Yukawa hierarchy --- up-type singular values
+$10\!:\!5\!:\!1$ (Pillar~68), with $Y_\nu=Y_{\rm up}$ at the GUT scale --- into a
+type-I seesaw with a minimal flat $S_3$-symmetric $M_R$, with \emph{no}
+neutrino-sector input, the seesaw squares the hierarchy and returns
+$\Delta m^2_{21}/\Delta m^2_{31}\approx0.062$: the right strong-normal-ordering order
+of magnitude, a factor $\sim2$ from the observed $0.030$; the down-type ratios
+$6\!:\!2\!:\!1$ give $0.012$, so the observed value is \emph{bracketed} (against the
+$0.21$ --- a factor $7$ --- of the geometric cascade). The residual factor $\sim2$ is
+named, not removed: the $M_R$ texture and $Y_\nu\neq Y_{\rm up}$ running. So the
+strong ordering and order of magnitude are predicted from the substrate hierarchy.
+(Witness: \path{analysis/w33_neutrino_seesaw_prediction.py}.)
+
 \begin{figure}[ht]\centering
 \resizebox{0.96\textwidth}{!}{%
 \begin{tikzpicture}[
@@ -5249,6 +5263,19 @@ Shephard--Todd group $\#32$ of order $155520=3\times|\mathrm{Sp}(4,3)|$. The
 symplectic orders were verified directly in \textsc{Gap}:
 $|\mathrm{Sp}(4,3)|=51840$, $|\mathrm{PSp}(4,3)|=25920=|U_4(2)|$, and
 $3\times51840=155520$. (Witness: \path{analysis/w33_q3_selection_census.py}.)
+
+\emph{The Eisenstein selection is forced, and it equals the magic-dimension
+selection.} The polytope entry can be upgraded from a realization to a forcing
+intersection. The crystallographic restriction $\phi(p)=2$ admits exactly the
+genuinely-complex periods $p\in\{3,4,6\}$ (Eisenstein $3,6$ over $\mathbb Z[\omega]$,
+Gaussian $4$ over $\mathbb Z[i]$); requiring the reflection order to be \emph{prime}
+--- the minimal-magic / clean-qudit condition of the resource selection --- leaves
+$p=3$ uniquely, since $4=2^2$ and $6=2\cdot3$ are composite. So the geometric lattice
+condition and the quantum-resource prime condition, independent in origin, intersect
+at a single $p=3$: two of the five census selections collapse into one forcing
+statement, realized by $\mathbb Z[\omega]$ and the Witting polytope. (\textsc{Gap}-verified:
+$\phi^{-1}(2)\cap[3,\infty)=\{3,4,6\}$, prime part $\{3\}$. Witness:
+\path{analysis/w33_eisenstein_forcing.py}.)
 
 \begin{figure}[ht]\centering
 \resizebox{0.82\textwidth}{!}{%

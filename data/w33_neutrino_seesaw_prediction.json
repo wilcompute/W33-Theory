@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "case": "up-type 10:5:1 (Y_nu = Y_up, GUT)",
+      "y_ratios": [
+        1.0,
+        5.0,
+        10.0
+      ],
+      "dm21_over_dm31": 0.0624,
+      "factor_vs_obs": 2.11,
+      "m2_over_m3": 0.25
+    },
+    {
+      "case": "down-type 6:2:1",
+      "y_ratios": [
+        1.0,
+        2.0,
+        6.0
+      ],
+      "dm21_over_dm31": 0.0116,
+      "factor_vs_obs": 0.39,
+      "m2_over_m3": 0.111
+    }
+  ],
+  "bracketing": {
+    "down": 0.0116,
+    "observed": 0.0296,
+    "up": 0.0624,
+    "bracketed": true
+  },
+  "improvement": {
+    "cascade_ratio": 0.214,
+    "cascade_factor": 7.2,
+    "seesaw_up_ratio": 0.0624,
+    "seesaw_up_factor": 2.1
+  },
+  "residual": "up-type prediction ~2x high; residual from M_R texture + Y_nu!=Y_up running; order/strong-NO predicted, exact 0.030 not yet",
+  "summary": "neutrino mass ratio as a PARTIAL PREDICTION (not a fit): substrate mild Yukawa hierarchy (up-type 10:5:1, Pillar 68) + flat S3-symmetric M_R, type-I seesaw squares it -> dm21/dm31 ~ 0.062 (observed 0.030, factor ~2 high); down-type 6:2:1 -> 0.012, so observed is BRACKETED by the substrate hierarchies. ~3.5x closer than the geometric cascade (0.21) with NO neutrino input. Honest residual (~2x) named: M_R not exactly flat, Y_nu!=Y_up at low scale. Strong NO + order of magnitude predicted; exact 0.030 remaining.",
+  "sources": [
+    "type-I seesaw m_nu=Y_nu^T M_R^-1 Y_nu; Y_nu=Y_up at GUT (E6/SO(10)); substrate up SV ratios 10:5:1, down 6:2:1 (Pillar 68, THEORY_PART_CLXXVII_MASS_TEXTURE.py, Pillars 65-66); observed dm21=7.4e-5, dm31=2.5e-3 eV^2; w33_neutrino_texture_pinned.py, w33_neutrino_seesaw_texture.py."
+  ]
+}

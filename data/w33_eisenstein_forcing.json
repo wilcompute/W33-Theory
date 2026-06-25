@@ -1,0 +1,30 @@
+{
+  "crystallographic": {
+    "condition": "phi(p)=2, p>=3",
+    "set": [
+      3,
+      4,
+      6
+    ]
+  },
+  "prime_intersection": {
+    "primes_in_cryst": [
+      3
+    ]
+  },
+  "forced_p": 3,
+  "realization": {
+    "ring": "Z[omega] (Eisenstein)",
+    "polytope": "Witting 3{3}3{3}3{3}3",
+    "vertices": 240,
+    "equals_E8_roots": true,
+    "symmetry_order": 155520,
+    "factorization": "155520 = 3 x |Sp(4,3)| = 3 x 51840"
+  },
+  "census_link": "S5 (crystallographic) AND S2 (prime) intersect uniquely at p=3; S5 upgraded realization -> forcing",
+  "gap_verified": "GAP gapsystem/gap-docker: Filtered([2..14],p->Phi(p)=2)=[3,4,6]; Filtered(that,IsPrimeInt)=[3]; Size(Sp(4,3))=51840; 3*51840=155520",
+  "summary": "Eisenstein selection upgraded realization -> FORCING, and unified with the magic-dimension selection. Crystallographic restriction phi(p)=2 admits complex periods p in {3,4,6} (Eisenstein 3,6 / Gaussian 4); requiring p PRIME (minimal-magic qudit, S2) leaves {3} uniquely (4,6 composite). So geometry (lattice) cap resource (prime) = {3}, realizing Z[omega] -> Witting (240=E8 roots, sym 155520=3x|Sp(4,3)|). GAP-verified (gap-docker): phi-set {3,4,6}, primes-in {3}, |Sp(4,3)|=51840. Honest: p=4,6 are also crystallographic (E8 has Gaussian+Eisenstein structures); primality is what singles out 3.",
+  "sources": [
+    "crystallographic restriction theorem (phi(p)=2 <=> p in {3,4,6} for complex periods); Coxeter, Regular Complex Polytopes (Witting 3{3}3{3}3{3}3, Eisenstein Z[omega]); Shephard-Todd #32 order 155520; discrete Wigner / magic needs prime dimension (Gross; Howard et al.); GAP gapsystem/gap-docker; w33_q3_selection_census.py, w33_q3_triple_selection.py."
+  ]
+}
