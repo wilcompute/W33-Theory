@@ -1,0 +1,118 @@
+{
+  "d4_code": {
+    "generators_times_sqrt_pi": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "d_min2": 2,
+    "det": 4,
+    "kissing": 24,
+    "coding_gain_dB": 1.51,
+    "lattice_role": "densest 4-dim lattice = matter shell W(D4); 2-mode GKP optimum"
+  },
+  "curve": [
+    {
+      "s_dB": 6,
+      "P_L_square": 0.024636652566070727,
+      "P_L_D4": 0.0059071160480727025
+    },
+    {
+      "s_dB": 7,
+      "P_L_square": 0.01001252846288303,
+      "P_L_D4": 0.0017069509182811027
+    },
+    {
+      "s_dB": 8,
+      "P_L_square": 0.003283079573463188,
+      "P_L_D4": 0.00036563898187724764
+    },
+    {
+      "s_dB": 8.4,
+      "P_L_square": 0.0019566314176224786,
+      "P_L_D4": 0.00017859546153853323
+    },
+    {
+      "s_dB": 9,
+      "P_L_square": 0.0008236939999342052,
+      "P_L_D4": 5.38155865004164e-05
+    },
+    {
+      "s_dB": 9.5,
+      "P_L_square": 0.00036563898187724764,
+      "P_L_D4": 1.7421459891364677e-05
+    },
+    {
+      "s_dB": 9.9,
+      "P_L_square": 0.00017859546153853323,
+      "P_L_D4": 6.4324843437324475e-06
+    },
+    {
+      "s_dB": 11,
+      "P_L_square": 1.7421459891364677e-05,
+      "P_L_D4": 2.511598147236782e-07
+    },
+    {
+      "s_dB": 12,
+      "P_L_square": 1.210505502502457e-06,
+      "P_L_D4": 6.0560514381080566e-09
+    },
+    {
+      "s_dB": 14,
+      "P_L_square": 6.708573696556641e-10,
+      "P_L_D4": 1.6586731987899839e-13
+    }
+  ],
+  "crossings": [
+    {
+      "target": 0.01,
+      "square_dB": 7.0,
+      "D4_dB": 5.5,
+      "advantage_dB": 1.5
+    },
+    {
+      "target": 1e-06,
+      "square_dB": 12.06,
+      "D4_dB": 10.56,
+      "advantage_dB": 1.5
+    },
+    {
+      "target": 1e-09,
+      "square_dB": 13.91,
+      "D4_dB": 12.41,
+      "advantage_dB": 1.5
+    }
+  ],
+  "engineering": {
+    "square_threshold_dB": 9.9,
+    "D4_threshold_dB": 8.4,
+    "demonstrated_dB": 9.5,
+    "advantage_dB": 1.5,
+    "reachable": true
+  },
+  "summary": "D4-GKP code as a live spec: explicit stabilizer-lattice generators (D4={x in Z^4: sum even}, x sqrt(pi)), exact invariants d_min^2=2, det=4, kissing 24, coding gain 1.5 dB. Logical-error-vs-squeezing curve = square curve shifted left by 1.5 dB, so D4 reaches any target P_L at 1.5 dB less squeezing; FT threshold 9.9 dB (square) -> 8.4 dB (D4), at/below the 9.5 dB demonstrated. Crossings verified: advantage = coding gain at every target. Falsifiable: D4 must beat square by ~1.5 dB. Honest: lattice exact, P_L curve is union-bound/effective-distance (idealized noise, single-round), not full FT.",
+  "sources": [
+    "Conrad-Eisert-Hangleiter, GKP codes: a lattice perspective, Quantum 6, 648 (2022); Noh-Chamberland surface-GKP threshold 9.9 dB, PRX Quantum 3, 010315 (2022); Conway-Sloane nominal coding gains; w33_gkp_coding_gain.py, w33_gkp_lattice_architecture.py, w33_holonet_ft_threshold_budget.py."
+  ]
+}

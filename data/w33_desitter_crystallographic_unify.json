@@ -1,0 +1,28 @@
+{
+  "desitter": {
+    "cubic": "q**3 - 3*q**2 + q - 3",
+    "factored": "(q - 3)*(q**2 + 1)"
+  },
+  "phi4_factor": "de Sitter cubic = (q-3)*Phi_4(q); Phi_4=q^2+1, roots +-i=zeta_4",
+  "crystallographic_cyclotomics": {
+    "3": "q**2 + q + 1",
+    "4": "q**2 + 1",
+    "6": "q**2 - q + 1"
+  },
+  "gq_point_count": {
+    "formula": "(q+1)*Phi_4(q)",
+    "at_q3": 40
+  },
+  "selection": {
+    "desitter_real_root": 3,
+    "prime_crystallographic": [
+      3
+    ],
+    "coincide_at": 3
+  },
+  "recount": "S4 (de Sitter) and S5 (crystallographic) share the degree-2 cyclotomic skeleton {Phi_3,Phi_4,Phi_6}; honest count = 4 independent + S5 a refinement of S4, not 5 independent. q=3 = unique real prime crystallographic period.",
+  "summary": "de Sitter (S4) and crystallographic/Eisenstein (S5) selections are two readings of the degree-2 cyclotomic structure {Phi_3,Phi_4,Phi_6}, NOT independent. de Sitter cubic = (q-3)*Phi_4(q) (Phi_4=q^2+1, complex roots +-i=zeta_4 = the Gaussian p=4 that S5 rejects by primality); {Phi_3,Phi_4,Phi_6} = crystallographic periods {3,4,6}; Phi_4 also factors the GQ point count v=(q+1)Phi_4 (=40 at q=3). Honest recount: 4 independent selections + S5 a refinement of S4 (not 5 independent). Tighter convergence: q=3 = unique real prime crystallographic period.",
+  "sources": [
+    "de Sitter closure (w33_desitter_q3_selection.py); crystallographic restriction phi(p)=2 (w33_eisenstein_forcing.py); cyclotomic polynomials Phi_3,Phi_4,Phi_6; GQ(q,q) point count v=(q+1)(q^2+1); w33_q3_selection_census.py."
+  ]
+}

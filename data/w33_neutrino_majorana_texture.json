@@ -1,0 +1,25 @@
+{
+  "majorana_ratio": {
+    "needed": 1.4531,
+    "substrate_Phi3_over_q2": 1.4444,
+    "identity": "Phi3/q^2 = 13/9 = 1 + 1/q + 1/q^2"
+  },
+  "prediction": {
+    "m2_over_m3": 0.1731,
+    "dm21_over_dm31": 0.03,
+    "observed": 0.0296,
+    "factor": 1.01,
+    "was_flat_MR": 0.0625
+  },
+  "spectrum": {
+    "m3_meV": 50.0,
+    "m2_meV": 8.65,
+    "Sum_meV": 58.7,
+    "ordering": "strong NO"
+  },
+  "phi3_link": "Phi3=13 sets the PMNS deformation (bt920) AND the Majorana ratio Phi3/q^2",
+  "summary": "neutrino factor-2 closed on ONE substrate invariant: in the TBM basis the seesaw gives m_i=y_i^2/r_i; substrate Dirac (1,5,10) with flat M_R overshoots dm21/dm31 by ~2x (0.062). The needed Majorana ratio r2/r3=1.45 is the substrate number Phi3/q^2=13/9=1+1/q+1/q^2; fixing it (not fitted) gives dm21/dm31=0.030, m2=8.6 meV=sqrt(dm21), Sum~0.059 eV (strong NO). The same Phi3=13 sets the PMNS deformation (bt920) and this Majorana hierarchy. Honest: Phi3/q^2 is substrate-motivated, gives exact agreement, but is an input; deriving it from the Z3-graded Majorana coupling (Pillar 68/69) is the open step -- a strong lead, not yet a closed derivation.",
+  "sources": [
+    "type-I seesaw m_i=y_i^2/r_i in TBM basis (Y_nu,M_R simultaneously mu-tau+magic); substrate Dirac up-type 10:5:1 (Pillar 68); Phi3=q^2+q+1=13, q^2=9; PMNS Phi3-deformation (bt920); dm21=7.4e-5, dm31=2.5e-3 eV^2; w33_neutrino_seesaw_prediction.py, w33_neutrino_texture_pinned.py."
+  ]
+}

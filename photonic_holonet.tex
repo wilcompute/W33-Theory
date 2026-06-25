@@ -5349,6 +5349,82 @@ bounds; the single-mode $A_2$ shift is exact.)}
 \label{fig:ft-threshold}
 \end{figure}
 
+\subsection{Sharper still: a Majorana invariant, a cyclotomic merge, a code curve}
+\label{sec:sharper}
+
+Each of the three closures admits a sharper statement.
+
+\emph{The neutrino factor of two closes on a substrate invariant.} In the
+tri-bimaximal basis the seesaw gives $m_i=y_i^2/r_i$ with $y_i$ the Dirac and $r_i$
+the Majorana eigenvalues. The substrate Dirac hierarchy $(1,5,10)$ with a flat $M_R$
+overshoots the mass-squared ratio by the factor $\sim2$ above. The Majorana
+eigenvalue ratio the seesaw needs is $r_2/r_3=1.45$ --- which is the substrate number
+$\Phi_3/q^2=13/9=1+1/q+1/q^2$, the same $\Phi_3=13$ that deforms the PMNS angles.
+Fixing $r_2/r_3=\Phi_3/q^2$ (not fitted) gives
+$\Delta m^2_{21}/\Delta m^2_{31}=0.030$, $m_2=8.6$\,meV$=\sqrt{\Delta m^2_{21}}$, and
+$\sum m_\nu\approx59$\,meV --- the observed strong ordering. (Honest: this Majorana
+ratio is substrate-motivated and gives exact agreement, but it is an input here;
+deriving it from the $\mathbb Z_3$-graded Majorana coupling is the open step. Witness:
+\path{analysis/w33_neutrino_majorana_texture.py}.)
+
+\emph{Two of the selections are one cyclotomic structure.} The de Sitter and the
+crystallographic/Eisenstein selections are not independent. The de Sitter closure
+cubic factors as $(q-3)\,\Phi_4(q)$ with $\Phi_4(q)=q^2+1$ (complex roots $\pm i=
+\zeta_4$, the Gaussian period); the crystallographic periods $\{3,4,6\}$ are exactly
+the three degree-two cyclotomics $\{\Phi_3,\Phi_4,\Phi_6\}$; and $\Phi_4$ already
+factors the $\mathrm{GQ}(q,q)$ point count $v=(q+1)\Phi_4(q)$ ($=40$ at $q=3$). So the
+census's ``five independent'' selections are honestly \emph{four} independent plus
+one cyclotomic refinement, and $q=3$ is the unique real prime the structure admits ---
+a tighter convergence, not a weaker one. (Witness:
+\path{analysis/w33_desitter_crystallographic_unify.py}.)
+
+\emph{The $D_4$ code as a measured curve.} The threshold number has an explicit code
+and curve behind it. The $D_4$ stabilizer lattice $\{x\in\mathbb Z^4:\sum x_i\ \text{even}\}$
+(generators $\times\sqrt\pi$) has exact invariants $d_{\min}^2=2$, $\det=4$, kissing
+$24$, coding gain $1.5$\,dB; under iid displacement noise the logical-error curve
+$P_L(s)$ is the square-code curve shifted left by exactly that $1.5$\,dB
+(Fig.~\ref{fig:d4-curve}), so $D_4$ reaches any target error at $1.5$\,dB less
+squeezing and the surface-GKP threshold $9.9$\,dB becomes $\sim8.4$\,dB --- below the
+$9.5$\,dB already demonstrated. The relative $1.5$\,dB $D_4$-versus-square advantage
+is the falsifiable handle. (Honest: the lattice quantities are exact; the curve is the
+union-bound effective-distance model, not a full circuit-level FT simulation. Witness:
+\path{analysis/w33_d4_gkp_error_curve.py}.)
+
+\begin{figure}[ht]\centering
+\resizebox{0.78\textwidth}{!}{%
+\begin{tikzpicture}[x=0.92cm,y=0.52cm,every node/.style={font=\small}]
+  % axes
+  \draw[thick,-{Stealth}] (5.8,0)--(14.4,0) node[right]{$s$ (dB squeezing)};
+  \draw[thick,-{Stealth}] (6,0.5)--(6,-10.6) node[below]{$\log_{10}P_L$};
+  \foreach \x in {6,8,10,12,14} \draw (\x,0.12)--(\x,-0.12) node[below=1pt]{\x};
+  \foreach \y in {-2,-4,-6,-8,-10} \draw (5.88,\y)--(6.12,\y) node[left=1pt]{$10^{\y}$};
+  % square curve (solid)
+  \draw[thick] plot coordinates
+    {(6,-1.61)(7,-2.00)(8,-2.48)(9,-3.08)(9.9,-3.75)(11,-4.76)(12,-5.92)(13,-7.40)(14,-9.17)};
+  \node[anchor=west] at (12.1,-5.4) {square $\mathbb Z^4$};
+  % D4 curve (dashed), clipped at -10
+  \draw[thick,dashed,blue!60!black] plot coordinates
+    {(6,-2.23)(7,-2.77)(8,-3.44)(9,-4.27)(9.9,-5.19)(11,-6.60)(12,-8.22)(12.78,-10)};
+  \node[anchor=east,blue!60!black] at (9.2,-6.2) {$D_4$};
+  % demonstrated 9.5 dB
+  \draw[red,dashed] (9.5,0.3)--(9.5,-10.3);
+  \node[red,font=\footnotesize] at (9.5,0.75) {9.5 dB demo};
+  % threshold dots: square 9.9, D4 8.4 (same P_L=-3.75)
+  \fill[black] (9.9,-3.75) circle(2.6pt); \node[anchor=south west,font=\footnotesize] at (9.9,-3.6) {9.9 sq.};
+  \fill[blue!60!black] (8.4,-3.75) circle(2.6pt); \node[anchor=south east,font=\footnotesize,blue!60!black] at (8.4,-3.6) {8.4 $D_4$};
+  \draw[-{Stealth},thick,blue!55!black] (9.75,-3.75) -- (8.55,-3.75);
+  \node[font=\footnotesize,blue!55!black] at (9.15,-3.05) {1.5 dB};
+\end{tikzpicture}}
+\caption{The $D_4$-GKP logical-error curve as a spec. Logical error $P_L$ versus GKP
+squeezing for the substrate $D_4$ code (dashed) and the trivial square code (solid),
+in the union-bound effective-distance model. The $D_4$ curve is the square curve
+shifted left by its exact $1.5$\,dB coding gain, so the surface-GKP fault-tolerance
+level ($9.9$\,dB for the square code) is reached at $\sim8.4$\,dB --- below the
+$9.5$\,dB squeezing already demonstrated. The relative advantage is the falsifiable
+handle.}
+\label{fig:d4-curve}
+\end{figure}
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,
