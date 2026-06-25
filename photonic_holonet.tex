@@ -4916,6 +4916,36 @@ mirror-bus addresses --- so $2160=30\cdot72$ and $51840=24\cdot30\cdot72=
 \emph{is} the icosian $600$-cell. (Witness:
 \path{analysis/w33_icosian_600cell_runtime.py}.)
 
+\subsection{The ceiling, the Suzuki tower, and the G2 thread}
+
+The climb tops out, telescopes, and is held together by one group. \emph{The
+ceiling.} The complex-Leech / Co0 tower ends at the Monster $M=\mathrm{Aut}(V^\natural)$,
+the $c=24$ holomorphic CFT, whose graded dimension is $J=j-744=q^{-1}+196884q+
+\dots$ with the moonshine head $196884=1+196883$ and $21493760=1+196883+21296876$.
+Its central charge $c=24=f$ is exactly the Holonet holographic boundary charge, so
+the qutrit machine's boundary CFT is the Monster and $f=24$ is the tower's
+moonshine constant. (Witness: \path{analysis/w33_monster_moonshine_ceiling.py}.)
+
+\emph{The Suzuki tower.} The chain $\mathrm G_2(2)\to\mathrm J_2\to\mathrm G_2(4)
+\to\mathrm{Suz}$ is the automorphism tower of four nested strongly regular graphs,
+$\mathrm{SRG}(36,14,4,6)\prec\mathrm{SRG}(100,36,14,12)\prec\mathrm{SRG}(416,100,
+36,20)\prec\mathrm{SRG}(1782,416,100,96)$, in which each valency is the previous
+vertex count and each $\lambda$ the previous valency, so the parameters telescope
+$14<36<100<416<1782$. The base $\mathrm{SRG}(36,14,4,6)$ anchors the substrate:
+its $36$ vertices are the \emph{even} theta characteristics of the Klein quartic
+(the $\mathrm E_7$ companion of the $28$ bitangents), and its valency
+$14=\dim\mathrm G_2$. (Witness: \path{analysis/w33_suzuki_tower_srg.py}.)
+
+\emph{The G2 thread.} $\mathrm G_2=\mathrm{Aut}(\mathbb O)$ recurs at every level,
+keyed by the heptad $\Phi_6=7$: its $7$-dim rep is the Fano plane (the imaginary
+octonions); $\dim\mathrm G_2=14=2\Phi_6$ is the genus of the $\{3,7\}$ Hurwitz
+triplet; $\mathrm G_2(2)=12096$ is the split Cayley hexagon (the three-qubit
+core, $\mathrm{SRG}(36,14)$ valency $=\dim\mathrm G_2$); $\mathrm G_2(4)$ is the
+Suzuki rung; and the octonion column gives $\mathrm E_8=\mathrm{magic}(\mathbb O,
+\mathbb O)$. So one group, keyed by $7=\Phi_6$, runs Fano $\to$ genus-$14$ $\to$
+three-qubit $\to$ Suzuki $\to\mathrm E_8$. (Witness:
+\path{analysis/w33_g2_thread.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

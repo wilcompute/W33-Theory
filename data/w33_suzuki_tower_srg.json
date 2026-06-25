@@ -1,0 +1,43 @@
+{
+  "tower": [
+    {
+      "group": "G2(2)=U3(3)",
+      "n": 36,
+      "k": 14,
+      "lambda": 4,
+      "mu": 6
+    },
+    {
+      "group": "J2 Hall-Janko",
+      "n": 100,
+      "k": 36,
+      "lambda": 14,
+      "mu": 12
+    },
+    {
+      "group": "G2(4)",
+      "n": 416,
+      "k": 100,
+      "lambda": 36,
+      "mu": 20
+    },
+    {
+      "group": "Suz",
+      "n": 1782,
+      "k": 416,
+      "lambda": 100,
+      "mu": 96
+    }
+  ],
+  "nesting": "valency(i)=vertices(i-1), lambda(i)=valency(i-1)",
+  "anchors": {
+    "n_36": "even theta characteristics (Klein/E7)",
+    "k_14": "dim G2 = 2*Phi6 = genus-14 Hurwitz triplet",
+    "group": "G2(2)=U3(3):2 = split Cayley hexagon = 3-qubit core"
+  },
+  "top": "Suz graph on 1782 = complex Leech (6.Suz)",
+  "summary": "the Suzuki chain is a tower of four nested SRGs: SRG(36,14,4,6) < SRG(100,36,14,12) < SRG(416,100,36,20) < SRG(1782,416,100,96), each feasible, with valency(i)=vertices(i-1) and lambda(i)=valency(i-1) so the parameters telescope 14<36<100<416<1782. The base SRG(36,14,4,6) anchors the substrate: 36 = even theta characteristics of the Klein quartic (E7 companion of the 28 bitangents), valency 14 = dim G2 = 2*Phi6 = genus-14 Hurwitz triplet, group G2(2)=U3(3):2=the 3-qubit hexagon. Top = Suz on 1782 = the complex Leech.",
+  "sources": [
+    "Suzuki tower of SRGs: SRG(36,14,4,6) [U3(3)/G2(2)], SRG(100,36,14,12) [Hall-Janko/J2], SRG(416,100,36,20) [G2(4)], SRG(1782,416,100,96) [Suz]; feasibility + nesting verified; 36=even theta (g=3), 14=dim G2=2*Phi6; w33_e7_theta_bitangents.py, w33_complex_leech_suzuki_chain.py, w33_macbeath_hexagon_functor.py."
+  ]
+}

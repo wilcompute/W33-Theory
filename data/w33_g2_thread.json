@@ -1,0 +1,12 @@
+{
+  "rep7": "7 = Phi6 = Fano plane (imaginary octonions); 21 flags",
+  "dim_g2": "14 = 2*Phi6 = genus-14 Hurwitz triplet",
+  "g2_2": "12096 = split Cayley hexagon = 3-qubit core; SRG(36,14) valency=dim G2",
+  "g2_4": "251596800 = Suzuki chain rung 3",
+  "octonion": "G2=Aut(O); O column -> E8=magic(O,O)=Witting",
+  "thread": "Fano(7) -> genus-14(2Phi6) -> G2(2) 3-qubit -> G2(4) Suzuki -> O/E8",
+  "summary": "G2 = Aut(O) threads the substrate, keyed by Phi6=7: (1) 7-dim rep = Fano plane (7 imaginary octonions, 21 flags); (2) dim G2 = 14 = 2*Phi6 = genus-14 Hurwitz triplet (top of {3,7} tower); (3) G2(2)=12096=168*72=split Cayley hexagon=3-qubit core, rank-3 graph SRG(36,14) valency=dim G2; (4) G2(4)=251596800 = Suzuki chain rung 3 -> complex Leech; (5) G2=Aut(O), the octonion column -> E8=magic(O,O)=Witting. One group, keyed by 7=Phi6, runs Fano -> genus-14 -> 3-qubit -> Suzuki -> E8.",
+  "sources": [
+    "G2 = Aut(octonions); 7-dim rep = imaginary octonions = Fano PG(2,2); dim G2 = 14; G2(2)=U3(3):2=12096 split Cayley hexagon; G2(4)=251596800 Suzuki chain; G2 octonion column of magic square -> E8; w33_hurwitz_tower_qubit_crossover.py (genus-14=dim G2), w33_macbeath_hexagon_functor.py, w33_suzuki_tower_srg.py, w33_magic_square_substrate.py."
+  ]
+}

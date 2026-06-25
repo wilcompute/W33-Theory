@@ -1,0 +1,18 @@
+{
+  "central_charge": {
+    "c": 24,
+    "is": "f = holographic boundary = Monster CFT"
+  },
+  "j_head": {
+    "196884": "1+196883",
+    "21493760": "1+196883+21296876"
+  },
+  "monster_rep": {
+    "196883": "smallest faithful Monster rep = substrate datum"
+  },
+  "tower": "q=3 -> G2(2) -> complex Leech (12=k) -> Co0 -> Monster (c=24=f)",
+  "summary": "the Eisenstein climb closes at the Monster: the complex-Leech/Suzuki/Co0 tower tops at the Monster M = Aut(V-natural), the c=24 holomorphic CFT, graded dim J=j-744=q^-1+196884q+21493760q^2+...; moonshine head 196884=1+196883, 21493760=1+196883+21296876. Central charge c=24=f = the Holonet holographic boundary charge, so the qutrit machine's boundary CFT is the Monster and f=24 is the tower's moonshine constant. 196883 = substrate datum (tau*f'+mu*q^4-1).",
+  "sources": [
+    "monstrous moonshine (Conway-Norton, Borcherds): V-natural c=24 CFT, graded dim j(tau)-744, 196884=1+196883, 21493760=1+196883+21296876; Monster smallest faithful rep 196883; c=24=f Holonet holographic boundary; existing moonshine 196883=tau*f'+mu*q^4-1 and bt982_mckay_thompson_v5.py; w33_complex_leech_suzuki_chain.py, w33_holographic_central_charge.py."
+  ]
+}
