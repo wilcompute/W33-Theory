@@ -1,0 +1,23 @@
+{
+  "bt": "BT1801",
+  "title": "double-six matrix and linear kernels",
+  "matrix_shape": [18, 36],
+  "row_labels": ["T001","T002","T010","T012","T020","T021","T100","T101","T111","T112","T120","T122","T200","T202","T210","T211","T221","T222"],
+  "row_sum_set": [24],
+  "column_sum_set": [12],
+  "ranks": {"F2": 16, "F3": 13},
+  "kernel_dimensions": {"left_F2": 2, "right_F2": 20, "left_F3": 5, "right_F3": 23},
+  "left_kernel_basis_F2": [
+    [1,0,0,1,1,0,1,0,1,0,0,1,0,1,1,0,1,0],
+    [0,1,1,0,0,1,0,1,0,1,1,0,1,0,0,1,0,1]
+  ],
+  "left_kernel_basis_F3": [
+    [1,0,0,1,2,0,2,0,0,0,0,2,0,1,0,0,0,0],
+    [2,0,0,1,1,0,2,0,2,0,0,0,0,0,1,0,0,0],
+    [0,0,2,0,0,2,0,1,0,1,2,0,0,0,0,1,0,0],
+    [1,0,2,2,0,2,0,1,0,2,1,0,0,0,0,0,1,0],
+    [2,2,1,1,1,1,2,1,2,1,0,0,1,0,1,1,0,1]
+  ],
+  "full_output_instruction": "Run analysis/bt1801_double_six_matrix_nullspaces.py to write data/bt1801_double_six_matrix_nullspaces_full.json with the full matrix and all right-side bases.",
+  "conclusion": "BT1801 makes BT1800 executable with explicit labels, ranks, and left-side linear relations. The committed script emits the complete matrix and all right-side bases."
+}
