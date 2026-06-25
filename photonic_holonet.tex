@@ -5419,10 +5419,10 @@ advantage is smaller --- see \S\ref{sec:deeper}. Witness:
 \caption{The $D_4$-GKP logical-error curve as a spec. Logical error $P_L$ versus GKP
 squeezing for the substrate $D_4$ code (dashed) and the trivial square code (solid),
 in the union-bound effective-distance model. The $D_4$ curve is the square curve
-shifted left by its exact $1.5$\,dB coding gain, so the surface-GKP fault-tolerance
-level ($9.9$\,dB for the square code) is reached at $\sim8.4$\,dB --- below the
-$9.5$\,dB squeezing already demonstrated. The relative advantage is the falsifiable
-handle.}
+shifted left by its \emph{asymptotic} $1.5$\,dB coding gain. This idealised constant
+shift is corrected by a real decoder in \S\ref{sec:deeper}
+(Fig.~\ref{fig:d4-advantage}): the actual advantage is error-rate dependent and
+smaller at realistic error rates.}
 \label{fig:d4-curve}
 \end{figure}
 
@@ -5474,6 +5474,79 @@ the low-error limit; the honest near-threshold advantage is $\sim0.7$--$1.0$\,dB
 the full coding gain realised deep below threshold. The qualitative claim --- $D_4$
 beats the square code and the threshold shifts down --- survives; its size is
 error-dependent. (Witness: \path{analysis/w33_d4_decoder_montecarlo.py}.)
+
+\subsection{Deepest: the cubic form, the Witting degrees, and the measured curve}
+\label{sec:deepest}
+
+Pushed to the limit, each result either closes part-way or reveals a single deeper
+object.
+
+\emph{The cubic form proves the degeneracy and bounds the rest.} Computing the
+Majorana mass from the actual $E_6$ cubic invariant $c(\psi_a,\psi_b,\langle v\rangle)$
+on the $\mathrm{H}_{27}$ profiles (Pillar~68), a grade-$0$ ($S_3$-symmetric) $B$--$L$
+VEV gives, with real substrate numbers $A=0.0017$, $C=0.0442$, the texture
+$M_R=[[A,0,0],[0,0,C],[0,C,0]]$ whose generation-$(1,2)$ block is \emph{exactly}
+degenerate --- so the ``a splitting is mandatory'' step is now \emph{proven} from the
+cubic form, not assumed. A grade-$1/2$ VEV lifts it to a genuine non-degenerate
+spectrum, and the natural symmetric VEVs give eigenvalue ratios $\sim1.25$ --- near,
+but not equal to, $\Phi_3/q^2=1.444$; the exact $13/9$ needs a particular $B$--$L$
+direction. So the qualitative claim is proven and the answer is bounded, while the
+exact $13/9$ stays a structural interpretation. (Witness:
+\path{analysis/w33_majorana_cubic_form.py}.)
+
+\emph{The substrate constants are the Witting degrees.} The cyclotomic skeleton has a
+companion: the Witting complex reflection group (Shephard--Todd $\#32$, the $q=3$
+Eisenstein polytope's symmetry, $|G|=155520=3\lvert\mathrm{Sp}(4,3)\rvert$) has the
+four invariant degrees $\{12,18,24,30\}$, whose product is $|G|$, and these are
+\[
+12=q(q+1)=k,\quad 18=h(E_7),\quad 24=q^3-q=|2T|=f=c,\quad 30=h(E_8)=\Phi_3(3)+\Phi_4(3)+\Phi_6(3).
+\]
+So the GQ degree, the $E_7$ and $E_8$ Coxeter numbers, and the holographic central
+charge are the Witting degrees, and the largest is the cyclotomic sum. In particular
+the holographic $c=24$ is \emph{not} an independent selection --- it is the
+degree-$24$ of the Witting group, fixed by the same $q=3$ Eisenstein structure. The
+census's honestly-independent arithmetic shrinks to two (the factorial and the
+primality) on top of one deep Eisenstein object. (Witness:
+\path{analysis/w33_witting_degrees_unify.py}.)
+
+\emph{The advantage is a curve, measured to $10^{-6}$.} Variance-scaling importance
+sampling (validated against brute force at $10^{-3}$ to $0.0\%$) pushes the real
+Conway--Sloane decoder deep below threshold. The $D_4$-versus-square advantage grows
+$0.48\!\to\!0.74\!\to\!0.92\!\to\!1.03\!\to\!1.11\!\to\!1.17$\,dB as the logical error
+falls $10^{-1}\!\to\!10^{-6}$ (Fig.~\ref{fig:d4-advantage}), tracking the union bound
+and reaching only $\sim1.2$\,dB even at $10^{-6}$ --- the full $1.5$\,dB is realised
+only at far lower error. So the honest engineering spec is a curve: $D_4$ buys
+$\sim0.7$\,dB near threshold, $\sim1.2$\,dB at $10^{-6}$, the full coding gain only
+asymptotically. (Witness: \path{analysis/w33_d4_advantage_curve.py}.)
+
+\begin{figure}[ht]\centering
+\resizebox{0.72\textwidth}{!}{%
+\begin{tikzpicture}[x=1.55cm,y=3.4cm,every node/.style={font=\small}]
+  % axes: x = -log10 P_err (1..6), y = advantage dB (0..1.6)
+  \draw[thick,-{Stealth}] (0.8,0)--(6.5,0) node[right]{logical error $P_L$};
+  \draw[thick,-{Stealth}] (1,0)--(1,1.62) node[above]{advantage (dB)};
+  \foreach \x in {1,2,3,4,5,6} \draw (\x,0.02)--(\x,-0.02) node[below=1pt]{$10^{-\x}$};
+  \foreach \y in {0.5,1.0,1.5} \draw (0.97,\y)--(1.03,\y) node[left=1pt]{\y};
+  % nominal 1.5 dB asymptote
+  \draw[red,dashed] (1,1.5)--(6.4,1.5);
+  \node[red,font=\footnotesize,anchor=south east] at (6.4,1.5) {$1.5$ dB coding gain (asymptote)};
+  % measured advantage curve
+  \draw[thick,blue!60!black] plot[mark=*,mark options={scale=0.7}] coordinates
+    {(1,0.48)(2,0.74)(3,0.92)(4,1.03)(5,1.11)(6,1.17)};
+  % near-threshold marker
+  \draw[gray,dashed] (2,0)--(2,0.74);
+  \node[font=\footnotesize,anchor=west] at (2.1,0.55) {near threshold: $\sim0.7$ dB};
+  \node[blue!60!black,font=\footnotesize,anchor=north west] at (5.0,1.25) {measured ($D_4$ vs $\mathbb Z^4$)};
+\end{tikzpicture}}
+\caption{The measured $D_4$-versus-square advantage as a function of target logical
+error, from a real Conway--Sloane closest-point decoder (importance-sampled below
+$10^{-3}$, validated against brute force). The advantage is error-rate dependent ---
+$\sim0.7$\,dB near threshold ($10^{-2}$), $\sim1.2$\,dB at $10^{-6}$ --- approaching
+the nominal $1.5$\,dB coding gain (dashed) only asymptotically, because $D_4$'s larger
+kissing number suppresses the finite-error gain. This corrects the constant-shift
+idealisation of Fig.~\ref{fig:d4-curve}.}
+\label{fig:d4-advantage}
+\end{figure}
 
 \subsection{Self-error-correction and why the primitive is one}
 

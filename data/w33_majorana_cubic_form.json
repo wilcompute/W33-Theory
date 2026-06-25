@@ -1,0 +1,37 @@
+{
+  "grade0": {
+    "A": 0.00174,
+    "C": 0.0442,
+    "abs_eigs": [
+      0.00174,
+      0.0442,
+      0.0442
+    ],
+    "degenerate": true,
+    "texture": "[[A,0,0],[0,0,C],[0,C,0]] (grade-0 selection rule)"
+  },
+  "grade1": {
+    "abs_eigs": [
+      0.01589,
+      0.04445,
+      0.05641
+    ],
+    "lifted": true,
+    "r_top_over_mid": 1.2691
+  },
+  "natural_vs_target": {
+    "grade-1 (Re psi1)": 1.2691,
+    "democratic sum Re psi": 1.2389
+  },
+  "target_13_9": 1.4444,
+  "vertex_scan": {
+    "min": 1.0,
+    "max": 44.145,
+    "mean": 5.604,
+    "near_13_9": 2
+  },
+  "summary": "E6 cubic form, real computation: grade-0 (S3-symmetric) B-L VEV gives M_R=[[A,0,0],[0,0,C],[0,C,0]] with A=0.0017, C=0.0442 (substrate numbers), EXACTLY degenerate generation-(1,2) block -> 'splitting mandatory' now PROVEN from the cubic form. Grade-1/2 VEV lifts it to a non-degenerate spectrum (|eig|~0.011,0.031,0.040). But natural symmetric VEVs give ratio ~1.24-1.27, NEAR but != 13/9=1.444; exact 13/9 only for tuned vertex directions. So the cubic form confirms the structure + ballpark but does NOT force 13/9 -- projective/affine stays a structural interpretation pending a first-principles B-L VEV. Honest partial closure: qualitative proven, exact number not.",
+  "sources": [
+    "E6 cubic c(x,y,z) on H27 (scripts/w33_ckm_from_vev.cubic_form_on_h27); Z3 grade profiles (scripts/w33_complex_yukawa.build_z3_complex_profiles, Pillar 68); type-I seesaw; Phi3/q^2=13/9=|PG(2,3)|/|AG(2,3)|; w33_majorana_grade_derivation.py, w33_neutrino_majorana_texture.py."
+  ]
+}

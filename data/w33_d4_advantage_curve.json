@@ -1,0 +1,61 @@
+{
+  "is_validation": {
+    "brute_sigma": 0.1365,
+    "is_sigma": 0.1365
+  },
+  "advantage_curve": [
+    {
+      "target": 0.1,
+      "sigma_Z4": 0.2247,
+      "sigma_D4": 0.2374,
+      "advantage_measured_dB": 0.48,
+      "advantage_unionbound_dB": 0.09
+    },
+    {
+      "target": 0.01,
+      "sigma_Z4": 0.1654,
+      "sigma_D4": 0.1802,
+      "advantage_measured_dB": 0.74,
+      "advantage_unionbound_dB": 0.64
+    },
+    {
+      "target": 0.001,
+      "sigma_Z4": 0.1365,
+      "sigma_D4": 0.1517,
+      "advantage_measured_dB": 0.92,
+      "advantage_unionbound_dB": 0.88
+    },
+    {
+      "target": 0.0001,
+      "sigma_Z4": 0.1186,
+      "sigma_D4": 0.1336,
+      "advantage_measured_dB": 1.03,
+      "advantage_unionbound_dB": 1.02
+    },
+    {
+      "target": 1e-05,
+      "sigma_Z4": 0.1062,
+      "sigma_D4": 0.1207,
+      "advantage_measured_dB": 1.11,
+      "advantage_unionbound_dB": 1.11
+    },
+    {
+      "target": 1e-06,
+      "sigma_Z4": 0.0969,
+      "sigma_D4": 0.111,
+      "advantage_measured_dB": 1.17,
+      "advantage_unionbound_dB": 1.17
+    }
+  ],
+  "trend": {
+    "adv_1e-1": 0.48,
+    "adv_1e-2": 0.74,
+    "adv_1e-6": 1.17,
+    "asymptote": 1.5,
+    "note": "even at 1e-6 only ~1.17 dB; full 1.5 dB at far lower error"
+  },
+  "summary": "full D4-vs-square advantage CURVE, measured by importance sampling (validated vs brute force at 1e-3, 0.0% diff) to logical error 1e-6. Advantage grows 0.5->0.7->1.2 dB as P_err 1e-1->1e-2->1e-6, tracking the union bound with kissing numbers and approaching the 1.5 dB coding gain only asymptotically -- STILL just ~1.2 dB at 1e-6. Honest spec is a curve not a number: ~0.7 dB near threshold, ~1.2 dB at 1e-6, full 1.5 dB only at far lower error. Single-shot lattice quantizer; full FT threshold needs surface-code decoder.",
+  "sources": [
+    "variance-scaling importance sampling; Conway-Sloane D_n closest point + coding gains + kissing numbers (SPLAG); GKP correctable region = Voronoi cell; Conrad-Eisert-Hangleiter Quantum 6 648 (2022); w33_d4_decoder_montecarlo.py, w33_d4_gkp_error_curve.py."
+  ]
+}

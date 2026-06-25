@@ -1,0 +1,24 @@
+{
+  "witting_degrees": [
+    12,
+    18,
+    24,
+    30
+  ],
+  "order_from_degrees": 155520,
+  "degree_identities": {
+    "12": "q(q+1) = k",
+    "18": "h(E7)",
+    "24": "q^3-q = |2T| = f = c (holographic)",
+    "30": "Phi_3+Phi_4+Phi_6 at q=3 = h(E8)"
+  },
+  "coxeter_cyclotomic": {
+    "h_E8": 30,
+    "cyclotomic_sum": 30
+  },
+  "census_consequence": "c=24 holographic = Witting degree-24, not independent; honest independent arithmetic reduces to two (factorial, primality) + one Eisenstein object",
+  "summary": "the substrate core integers are the Witting group ST#32 DEGREES {12,18,24,30} = {k=q(q+1), h(E7)=18, c=f=q^3-q=24, h(E8)=30}, product 155520=3|Sp(4,3)|. Largest degree 30=h(E8)=Phi_3(3)+Phi_4(3)+Phi_6(3)=13+10+7, so the cyclotomic skeleton (selects q=3, generates 13,10,7) and the Witting degrees (carry k, c=f, h) are one Eisenstein object. Consequence: the holographic c=24 is the Witting degree-24, NOT independent; honest census = one deep Eisenstein object + two independent arithmetic confirmations (factorial (q-1)!=2, primality). Convergence tightens further.",
+  "sources": [
+    "Shephard-Todd #32 (Witting group) degrees 12,18,24,30, |G|=product=155520 (Lehrer-Taylor, Unitary Reflection Groups); |G|=Pi degrees law; h(E7)=18, h(E8)=30; c=24=q^3-q=|2T|=f; GAP gapsystem/gap-docker (|Sp(4,3)|=51840); w33_cyclotomic_skeleton_census.py, w33_eisenstein_forcing.py."
+  ]
+}
