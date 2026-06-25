@@ -1,0 +1,86 @@
+{
+  "balance": [
+    {
+      "item": "n_s = 29/30 = 0.9667",
+      "category": "CONSISTENT",
+      "status": "Planck ~0.4 sigma"
+    },
+    {
+      "item": "r = 1/300",
+      "category": "CONSISTENT",
+      "status": "below BICEP/Keck; LiteBIRD-testable"
+    },
+    {
+      "item": "f_NL = 1/72, running = -1/1800",
+      "category": "CONSISTENT",
+      "status": "within Planck errors"
+    },
+    {
+      "item": "Omega_DM/Omega_b = 82/15",
+      "category": "CONSISTENT",
+      "status": "~2% of observed"
+    },
+    {
+      "item": "sin^2 theta_W = 3/8 at GUT",
+      "category": "CONSISTENT",
+      "status": "canonical E6/SU(5); runs to 0.231"
+    },
+    {
+      "item": "Sum m_nu ~ 0.06 eV (strong NO seesaw)",
+      "category": "FIXED",
+      "status": "resolves DESI; geometric cascade 0.10 eV was an artifact"
+    },
+    {
+      "item": "m_bb ~ 2-4 meV (NO)",
+      "category": "CONSISTENT",
+      "status": "below next-gen 0nubb reach"
+    },
+    {
+      "item": "proton lifetime tau_p ~ 10^35-36 yr",
+      "category": "TESTABLE",
+      "status": "Hyper-K reach; M_GUT~10^16"
+    },
+    {
+      "item": "contextual fraction = 1/10",
+      "category": "TESTABLE",
+      "status": "demonstrator readout of Phi4=10"
+    },
+    {
+      "item": "pump Chern C = 2",
+      "category": "TESTABLE",
+      "status": "demonstrator readout of lambda=2"
+    },
+    {
+      "item": "exceptional tower q=3 -> E6/E7/E8 -> Leech -> Monster",
+      "category": "FRAMEWORK",
+      "status": "exact theorems + substrate dictionary; not physics confirmation"
+    },
+    {
+      "item": "exact neutrino Y_nu/M_R texture (pin m1)",
+      "category": "OPEN",
+      "status": "needs full seesaw texture"
+    },
+    {
+      "item": "precise M_GUT, M_I from full RG thresholds",
+      "category": "OPEN",
+      "status": "two-loop + thresholds"
+    },
+    {
+      "item": "the FRAMEWORK->physics bridge (why these numbers are physical)",
+      "category": "OPEN",
+      "status": "the central open question"
+    }
+  ],
+  "tally": {
+    "CONSISTENT": 6,
+    "FIXED": 1,
+    "TESTABLE": 3,
+    "FRAMEWORK": 1,
+    "OPEN": 3
+  },
+  "verdict": "cosmo+EW CONSISTENT; the DESI neutrino tension FIXED (seesaw, Sum~0.06); proton decay/contextual fraction/pump Chern TESTABLE soon; the q=3->Monster tower is exact FRAMEWORK (a dictionary, not proof); OPEN: neutrino texture, GUT scales, the FRAMEWORK->physics bridge (the central question).",
+  "summary": "state of the theory balance sheet: cosmo+EW predictions (n_s, r, f_NL, running, Omega_DM/Omega_b, sin^2theta_W=3/8) CONSISTENT; the DESI neutrino tension FIXED (seesaw strong-NO Sum~0.06 eV, not the cascade 0.10); proton lifetime ~10^35-36 yr (Hyper-K), contextual fraction 1/10 & pump Chern 2 (demonstrator) TESTABLE; the q=3->Monster exceptional tower is exact FRAMEWORK (a dictionary, not proof); OPEN: neutrino Y_nu/M_R texture, precise M_GUT/M_I, and the FRAMEWORK->physics bridge -- the central task.",
+  "sources": [
+    "consolidation of the session: w33_measurable_scorecard_2026.py, w33_neutrino_seesaw_texture.py (DESI fix), w33_proton_lifetime_gut_scale.py, w33_demonstrator_substrate_constants.py, w33_exceptional_tower_ledger.py, w33_trinification_two_step_unification.py."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scales": {
+    "M_I": "10^13-14 GeV",
+    "M_GUT": "~10^16 GeV"
+  },
+  "lifetimes": [
+    {
+      "log10_M_GUT": 15.5,
+      "tau_p_yr": "4.6e+33",
+      "status": "EXCLUDED by Super-K"
+    },
+    {
+      "log10_M_GUT": 16.0,
+      "tau_p_yr": "4.6e+35",
+      "status": "Hyper-K testable"
+    },
+    {
+      "log10_M_GUT": 16.5,
+      "tau_p_yr": "4.6e+37",
+      "status": "beyond Hyper-K"
+    }
+  ],
+  "M_GUT_lower_bound": "~10^15.7 GeV (Super-K)",
+  "summary": "GUT scale and proton lifetime: the two-step trinification fit gives M_GUT~10^16 GeV (M_I~10^13-14), so tau_p ~ (1/alpha_GUT^2)M_GUT^4/m_p^5 ~ 4.6e35 yr via p->e+pi0 -- above Super-K (2.4e34, requiring M_GUT>~10^15.7 GeV) and within Hyper-K reach (~10^35). M_GUT=10^15.5 is EXCLUDED, 10^16-16.5 allowed. A sharp falsifiable GUT-scale prediction.",
+  "sources": [
+    "proton decay p->e+pi0, tau_p~(1/alpha_GUT^2)M_GUT^4/m_p^5, alpha_GUT~1/40; Super-K bound 2.4e34 yr; Hyper-K reach ~10^35 yr; trinification/E6 M_GUT~10^16 GeV, M_I~10^13-14; w33_trinification_two_step_unification.py, w33_trinification_unification.py."
+  ]
+}

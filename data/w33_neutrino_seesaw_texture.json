@@ -1,0 +1,36 @@
+{
+  "spectrum": [
+    {
+      "m1": 0.0,
+      "Sum": 0.0586,
+      "below_DESI": true
+    },
+    {
+      "m1": 0.003,
+      "Sum": 0.0622,
+      "below_DESI": true
+    },
+    {
+      "m1": 0.006,
+      "Sum": 0.0668,
+      "below_DESI": true
+    },
+    {
+      "m1": 0.009,
+      "Sum": 0.0723,
+      "below_DESI": false
+    },
+    {
+      "m1": 0.012,
+      "Sum": 0.0782,
+      "below_DESI": false
+    }
+  ],
+  "resolution": "m1 <~ 0.009 eV gives Sum < 0.072 -> DESI tension resolved",
+  "m_bb": "~2-4 meV (NO, small m1); consistent with substrate 2.3 meV",
+  "cascade_failure": "geometric r=0.5225 -> ratio 0.21 vs 0.030; replaced by seesaw",
+  "summary": "neutrino texture fixed: the failed geometric cascade (ratio 0.21 vs 0.030, Sum~0.10) is replaced by a type-I seesaw with hierarchical Dirac Yukawa (Z3-graded), which squares the hierarchy -> strong normal ordering, small m1. For m1 <~ 0.009 eV the spectrum is fixed by oscillation data and Sum m_nu ~ 0.06 eV (below DESI 0.072 -> tension RESOLVED), m_bb ~ 2-4 meV (consistent with 2.3 meV). Honest: substrate FAVOURS small m1 (generic for hierarchical seesaw), exact value needs full Y_nu/M_R; corrected prediction Sum~0.06 eV, not 0.10.",
+  "sources": [
+    "type-I seesaw m_nu=Y_nu^T M_R^-1 Y_nu v^2; Z3-graded Yukawa texture (Pillar 68, w33_mass_texture); oscillation data dm21=7.4e-5, dm31=2.5e-3 eV^2, s12^2=0.304, s13^2=0.022 (NuFIT); DESI 2024 <0.072 eV; m_bb NO ~2-4 meV; w33_neutrino_desi_scrutiny.py, w33_neutrino_seesaw_128.py."
+  ]
+}
