@@ -4880,6 +4880,42 @@ $=$ the Witting body, with the $600$-cell the Boerdijk--Coxeter clock. One body,
 two arithmetics --- Eisenstein ($q=3$) and icosian (golden quaternion). (Witness:
 \path{analysis/w33_icosian_e8_witting.py}.)
 
+\subsection{The magic square, the complex Leech, and the icosian clock}
+
+These exceptional rungs sit inside three larger frames. \emph{The magic square.}
+$\mathrm E_6,\mathrm E_7,\mathrm E_8$ are the octonion row of the
+Freudenthal--Tits magic square (dims $78,133,248$), and the substrate's two
+welded arithmetics are its $\mathbb C$ and $\mathbb H$ columns: Eisenstein
+($q=3$) gives $\mathrm E_6=\mathrm{magic}(\mathbb O,\mathbb C)$ (the Hessian/
+trinification $27$), the icosian (quaternion) gives
+$\mathrm E_7=\mathrm{magic}(\mathbb O,\mathbb H)$, and $\mathrm E_8=
+\mathrm{magic}(\mathbb O,\mathbb O)$. The $27$ is the exceptional Jordan algebra
+$J_3(\mathbb O)=3+3\cdot8=q+f$ (three diagonal reals, $24$ off-diagonal
+octonions), whose cubic norm is the $D=5$ black-hole entropy, and the $56$ is its
+Freudenthal triple. (Witness: \path{analysis/w33_magic_square_substrate.py}.)
+
+\emph{The complex Leech.} One level above $\mathrm E_8$, the same fixed-point-free
+order-$3$ $\omega$ that welds $\mathrm E_8$ makes the $24$-dimensional Leech
+lattice $12=k$-dimensional over the Eisenstein integers --- the complex Leech,
+with automorphism group $6.\mathrm{Suz}\le\mathrm{Co}_0=2.\mathrm{Co}_1$. The
+Suzuki chain $\mathrm G_2(2)\to\mathrm J_2\to\mathrm G_2(4)\to\mathrm{Suz}$ (on
+$36,100,416,1782$ points) \emph{starts} at $\mathrm G_2(2)=\mathrm U_3(3){:}2$,
+$|\mathrm G_2(2)|=12096=168\cdot72$ --- the split Cayley hexagon, the three-qubit
+contextuality core --- and climbs to $\mathrm{Suz}$, the complex Leech group. So
+the substrate's $q=3$ Eisenstein arithmetic threads $\mathrm E_8$ ($8$d) $\to$
+complex Leech ($12=k$ complex $=24=f$ real) $\to\mathrm{Co}_0\to$ Monster
+($c=24=f$), with the three-qubit hexagon as its first rung. (Witness:
+\path{analysis/w33_complex_leech_suzuki_chain.py}.)
+
+\emph{The icosian clock.} Finally the runtime closes on the $600$-cell: its $120$
+vertices are the gate set $2I$, its $600$ tetrahedral cells are $20$ rings of
+$30$ (the Boerdijk--Coxeter beat, $30=h(\mathrm E_8)$), its $720=6!$ edges are
+the supercycle width, and its $240=2\cdot120$ E8 roots/Witting vertices are the
+mirror-bus addresses --- so $2160=30\cdot72$ and $51840=24\cdot30\cdot72=
+720\cdot72=|\mathrm{Sp}(4,3)|$ are the polytope's own counts. The machine's clock
+\emph{is} the icosian $600$-cell. (Witness:
+\path{analysis/w33_icosian_600cell_runtime.py}.)
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

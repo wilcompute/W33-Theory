@@ -1,0 +1,19 @@
+{
+  "magic_row_O": {
+    "F4": 52,
+    "E6": 78,
+    "E7": 133,
+    "E8": 248
+  },
+  "substrate_columns": {
+    "C": "Eisenstein (q=3) -> E6",
+    "H": "icosian (quaternion) -> E7",
+    "O": "octonion -> E8 (Witting)"
+  },
+  "jordan_27": "27 = J3(O) = 3 + 3*dim(O) = q + f = 3 + 24",
+  "fts_56": "56 = 2*27 + 2 = Freudenthal triple system on J3(O)",
+  "summary": "the substrate lives in the octonion row of the Freudenthal-Tits magic square (dims F4/E6/E7/E8 = 52/78/133/248). Its two welds are the C and H columns: Eisenstein (complex, q=3) -> E6=magic(O,C) (Hessian/trinif. 27), icosian (quaternion) -> E7=magic(O,H), octonion -> E8=magic(O,O)=Witting. 27=J3(O)=3+3*dim(O)=q+f=3+24, cubic norm = D=5 BH entropy; 56=2*27+2=Freudenthal triple. Magic-square table in bt1723; this places the substrate.",
+  "sources": [
+    "Freudenthal-Tits magic square R/C/H/O -> A1..E8 (bt1723_magic_square_latin_exceptional_heptad.py tabulates it); octonion row F4/E6/E7/E8 dims 52/78/133/248; 27=J3(O)=3+3*8 exceptional Jordan algebra, cubic norm = D=5 BH entropy (Pillar 67/BT327); 56=Freudenthal triple; w33_hessian_polytope_e6.py, w33_icosian_e8_witting.py, w33_e8_eisenstein_witting_weld.py."
+  ]
+}

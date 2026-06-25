@@ -1,0 +1,29 @@
+{
+  "f_vector": {
+    "V": 120,
+    "E": 720,
+    "F": 1200,
+    "C": 600,
+    "euler": 0
+  },
+  "rings": {
+    "count": 20,
+    "length": 30,
+    "note": "30=h(E8) BC clock"
+  },
+  "runtime": {
+    "bus": 2160,
+    "supercycle": 51840,
+    "720": "6! = 600-cell edges",
+    "30": "h(E8) = ring length"
+  },
+  "gates": {
+    "gate_set": "2I (120)",
+    "transition_table": 14400,
+    "bus_addresses": 240
+  },
+  "summary": "the runtime clock is the icosian 600-cell: V=120=|2I| (gate set), E=720=6! (supercycle width), F=1200, C=600=20 rings of 30 tetrahedra (BC beat, 30=h(E8)). Holonet bus 2160=h(E8)*frame=30*72; supercycle 51840=24*30*72=720*72=|Sp(4,3)|. 2I (120) = gates (14400 products = transition table); 240=2*120 E8 roots=Witting vertices=mirror-bus addresses. The clock is the icosian 600-cell.",
+  "sources": [
+    "600-cell f-vector (120,720,1200,600), 600=20 rings of 30 tetrahedra (BC helix); 720=6!; 120=|2I| binary icosahedral; runtime 2160=30*72, 51840=24*30*72=720*72=|Sp(4,3)|; 240=2*120 E8/Witting; w33_icosian_e8_witting.py, w33_bc_helix_quasicrystal.py, w33_machine_clock_is_mass.py."
+  ]
+}
