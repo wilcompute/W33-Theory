@@ -1,0 +1,18 @@
+{
+  "bt": "BT1797",
+  "title": "index.html H27 promotion patch",
+  "direct_index_update": false,
+  "status": "patch_script_and_snippet_committed",
+  "index_blob_sha_at_read": "ef341afdc36317391a33dac9fc160196cf681e1d",
+  "reason_direct_update_not_applied": "docs/index.html is a 24619-line blob. The connector exposed the blob only in truncated chunks and raw/fetch_file could not safely provide the complete replacement text required by GitHub contents update_file, so an in-place rewrite was not safe in this turn.",
+  "committed_patch_script": "analysis/bt1797_index_h27_promotion_patch.py",
+  "committed_snippet": "docs/bt1797_h27_correction_box.html",
+  "marker": "BT1797_H27_CORRECTION_BOX",
+  "box_claims": [
+    "raw 27 non-neighbour shell is 8-regular affine Heisenberg bulk, not Schlaefli and not GQ(2,4)",
+    "Payne transform adds nine Heisenberg vertical fibres to the 36 old W33 triples, producing GQ(2,4)=SRG(27,10,1,5)",
+    "the complement is the Schlaefli skew graph SRG(27,16,10,8), yielding the E6 cubic-surface package",
+    "BT1795 transport sends all 18 nonconcurrent Hesse table triples to H27 support and no concurrent triples to support, but only through a non-affine non-layer-preserving transport"
+  ],
+  "how_to_apply": "Run python analysis/bt1797_index_h27_promotion_patch.py from the repo root; it inserts the correction box once and writes docs/index.html.bak_bt1797."
+}
