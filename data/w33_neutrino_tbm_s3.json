@@ -1,0 +1,13 @@
+{
+  "tbm": {
+    "sin2_th12": "1/3 (obs 0.304)",
+    "sin2_th23": "1/2 (obs ~0.5)",
+    "sin2_th13": "0 (obs 0.022, Phi3 deformation)"
+  },
+  "closeness": "TBM th12=1/3 within ~9% of 0.304; th23 maximal = observed",
+  "one_triality": "S3 -> 3 generations + unification (3/8) + TBM mixing",
+  "summary": "one S3 triality = the whole neutrino sector: the S3 permuting the three SU(3) factors (= 3 generations, = gauge unification sin^2 theta_W=3/8) is the flavour symmetry giving tri-bimaximal PMNS (sin^2 th12=1/3, th23=1/2, th13=0; observed 0.304, ~0.5, 0.022 -- th13 the Phi3 deformation). U_TBM verified unitary. Hierarchical seesaw sets the scale (strong NO, Sum~0.06 eV). Generations + unification + mixing = one triality.",
+  "sources": [
+    "tri-bimaximal mixing from S3/A4 flavour symmetry (Harrison-Perkins-Scott); S3 = 3 generations = trinification triality; observed PMNS (NuFIT) 0.304/~0.5/0.022; theta_13 Phi3-deformation (BT920, BT922); seesaw scale Sum~0.06 eV; w33_standard_model_from_trinification.py, w33_neutrino_seesaw_texture.py, w33_trinification_unification.py."
+  ]
+}

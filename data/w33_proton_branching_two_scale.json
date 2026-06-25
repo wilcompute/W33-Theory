@@ -1,0 +1,42 @@
+{
+  "scales": {
+    "M_I": "10^13.5 GeV",
+    "M_GUT": "10^16.0 GeV"
+  },
+  "channels": [
+    {
+      "mode": "p -> e+ pi0",
+      "via": "gauge (X,Y)",
+      "BR": "30-60%",
+      "note": "DOMINANT (Hyper-K target)"
+    },
+    {
+      "mode": "p -> mu+ pi0",
+      "via": "gauge",
+      "BR": "~10-20%",
+      "note": "subdominant"
+    },
+    {
+      "mode": "p -> e+ K0",
+      "via": "gauge",
+      "BR": "few %",
+      "note": "subdominant"
+    },
+    {
+      "mode": "p -> nubar K+",
+      "via": "dim-5 (SUSY)",
+      "BR": "suppressed",
+      "note": "needs superpartners (absent)"
+    }
+  ],
+  "dominant": "p -> e+ pi0 (gauge-mediated; nubar K+ suppressed, no SUSY)",
+  "tau_p": {
+    "value_yr": "4.6e+35",
+    "above_superK": true,
+    "hyperK_testable": true
+  },
+  "summary": "two-scale GUT + proton signature: E6->SU(3)^3->SM gives M_I~10^13.5, M_GUT~10^16 GeV; non-SUSY gauge-mediated proton decay -> DOMINANT mode p->e+pi0 (BR~30-60%), p->nubar K+ suppressed (no superpartners); tau_p~4.6e35 yr in the Hyper-K window (above Super-K 2.4e34). Hyper-K on the e+pi0 channel is the direct test of M_GUT~10^16 GeV.",
+  "sources": [
+    "non-SUSY GUT proton decay: gauge-mediated p->e+pi0 dominant, nubar K+ suppressed (Langacker; Nath-Perez Fileviez); tau_p~(1/alpha_GUT^2)M_GUT^4/m_p^5; Super-K 2.4e34 yr, Hyper-K ~10^35; two-scale E6->SU(3)^3->SM M_GUT~10^16, M_I~10^13.5; w33_proton_lifetime_gut_scale.py, w33_trinification_two_step_unification.py."
+  ]
+}

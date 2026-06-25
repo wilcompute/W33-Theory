@@ -1,0 +1,20 @@
+{
+  "selection_1": {
+    "equation": "q!=2q <=> (q-1)!=2",
+    "solution": 3,
+    "unique": true
+  },
+  "selection_2": {
+    "minimal_odd_prime": 3,
+    "is": "minimal magic dimension"
+  },
+  "selection_3": {
+    "c": 24,
+    "is": "f = 8q, Monster boundary, closes at q=3"
+  },
+  "convergence": "geometric = resource = holographic = q = 3",
+  "summary": "the framework->physics bridge: q=3 is TRIPLY forced. (1) geometric: q!=2q <=> (q-1)!=2 -> q=3 unique (3!=6=2*3); (2) quantum resource: minimal odd prime = minimal magic/contextuality dimension = 3 (qubits stabilizer-positive); (3) holographic: c=24=f=8q Monster boundary closes at q=3. Three independent principles (geometry, resource theory, holography) return the same q=3 -- the substrate is the unique common solution, not a choice. A convergence argument (the central claim), each selection exact.",
+  "sources": [
+    "master equation q!=2q (substrate); minimal odd prime / discrete Wigner negativity = contextuality = magic (Gross, Howard et al.); holographic code c=24 Monster boundary (Witten, ADH); c=24=f=8q; w33_monster_moonshine_ceiling.py, w33_holographic_central_charge.py, w33_contextuality_is_the_fuel.py, w33_desitter_q3_selection.py."
+  ]
+}
