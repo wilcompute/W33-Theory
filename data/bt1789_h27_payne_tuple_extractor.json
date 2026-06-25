@@ -1,0 +1,26 @@
+{
+  "bt": "BT1789",
+  "title": "H27 Payne tuple extractor",
+  "coordinate_model": "non-neighbours of anchor are (a,b,d) from projective vector (a,b,1,d) over F3",
+  "w33_collinearity_parameters": [40, 12, 2, 4],
+  "raw_local_27_shell": {
+    "vertices": 27,
+    "edges": 108,
+    "degree_set": [8],
+    "lambda_histogram": {"1": 108},
+    "mu_histogram": {"0": 27, "3": 216},
+    "is_srg": false,
+    "interpretation": "raw affine H27 shell / AG(3,3) bulk; not yet Schlaefli or GQ(2,4)"
+  },
+  "payne_derivation": {
+    "old_w33_lines_not_through_anchor": 36,
+    "new_heisenberg_vertical_fibres": 9,
+    "total_lines": 45,
+    "line_size": 3,
+    "point_line_degree_set": [5],
+    "new_fibre_template": "for fixed (b,d), {(0,b,d),(1,b,d),(2,b,d)}",
+    "payne_collinearity_parameters": [27, 10, 1, 5],
+    "schlafli_complement_parameters": [27, 16, 10, 8]
+  },
+  "conclusion": "The H27/SRG connection is real after the index correction: the raw 27 non-neighbour shell is 8-regular, but Payne derivation by adjoining the 9 Heisenberg vertical fibres turns it into GQ(2,4)=SRG(27,10,1,5); its complement is the Schlaefli graph SRG(27,16,10,8). This is a transformed local shell, not the raw dual of W(3,3) collinearity."
+}
