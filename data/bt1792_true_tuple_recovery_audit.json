@@ -1,0 +1,30 @@
+{
+  "bt": "BT1792",
+  "title": "true BT1781 tuple recovery audit",
+  "status": "blocked_missing_predicate",
+  "searched_sources": [
+    "analysis/BT1779_BT1781_summary.md",
+    "analysis/BT1781_consistency_census.md",
+    "analysis/BT1784_relational_solver_frontier.md",
+    "analysis/BT1787_solver_materialization_note.md",
+    "analysis/BT1788_hesse_relation_materializer.md",
+    "GitHub code search: 9980, accepted local triples, BT1781, 528/612 counts"
+  ],
+  "found_artifacts": {
+    "table_counts": [528, 562, 578, 528, 612, 580, 528, 528, 480, 528, 612, 564, 562, 528, 578, 562, 562, 560],
+    "accepted_entries": 9980,
+    "raw_entries": 31104,
+    "actual_tuple_lists_found": false,
+    "acceptance_predicate_found": false
+  },
+  "networkx_reconstruction": {
+    "raw_local_27_shell": {"vertices": 27, "edges": 108, "degree_set": [8], "parameters": null},
+    "payne_gq24": {"vertices": 27, "edges": 135, "degree_set": [10], "parameters": [27, 10, 1, 5]},
+    "schlafli_complement": {"vertices": 27, "edges": 216, "degree_set": [16], "parameters": [27, 16, 10, 8]},
+    "old_w33_triples": 36,
+    "new_heisenberg_fibres": 9,
+    "total_h27_support_triples": 45
+  },
+  "index_html_constraint": "live index says raw 27 is 8-regular affine H27 shell; nine central-fibre triples give GQ(2,4) and the Schlaefli complement.",
+  "decision": "Do not fabricate true tuple lists from counts. The recoverable executable object is the H27/Payne target geometry and the projection scaffold; the real BT1781 acceptance predicate or tuple lists remain the next missing source artifact."
+}
