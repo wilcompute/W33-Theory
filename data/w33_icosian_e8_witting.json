@@ -1,0 +1,21 @@
+{
+  "icosians": {
+    "count": 120,
+    "group": "2I (binary icosahedral)",
+    "is_600cell": true,
+    "unit_norm": true,
+    "closed": true
+  },
+  "e8": {
+    "roots": 240,
+    "is": "2*120 icosians = E8 = Witting vertices"
+  },
+  "trinity_e8": {
+    "120": "tritangents = icosians = 2I = 600-cell",
+    "240": "2*120 = E8 roots = Witting verts"
+  },
+  "summary": "the icosian E8 rung: the 120 icosians (8 units + 16 half-units + 96 golden even-perms) are 120 distinct unit quaternions closed under quaternion mult (all 14400 products verified) = the binary icosahedral group 2I = the 600-cell vertices. 240 = 2*120 = E8 roots = Witting polytope vertices (icosian construction). The trinity's E8 rung (120 tritangents) = the 120 icosians; 600-cell = 20 rings of 30 = BC clock. Complements the Eisenstein weld (omega=C^10 -> 40 rays): one body, two arithmetics (Eisenstein q=3 and icosian golden quaternion).",
+  "sources": [
+    "binary icosahedral group 2I = 120 unit icosians = 600-cell vertices (8+16+96), closed under quaternion mult (verified); icosian construction of E8 (240=2*120 roots); fgmarcelis 'Icosians' / 'Witting polytope'; 600-cell = 20x30 tetrahedra (BC helix); w33_e8_eisenstein_witting_weld.py, w33_witting_polytope_substrate.py, w33_bc_helix_quasicrystal.py, w33_klein_quartic_e6_e7_trinity.py."
+  ]
+}

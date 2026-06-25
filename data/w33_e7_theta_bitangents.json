@@ -1,0 +1,21 @@
+{
+  "theta": {
+    "odd": 28,
+    "even": 36,
+    "total": 64
+  },
+  "bitangents": "28 odd theta characteristics = mu*Phi6",
+  "groups": {
+    "Sp(6,2)": 1451520,
+    "W(E7)": 2903040,
+    "relation": "W(E7)=2xSp(6,2)"
+  },
+  "e7_56": {
+    "dim": 56,
+    "is": "2*28 bitangents = v+k+mu = Klein faces (Freudenthal)"
+  },
+  "summary": "the E7 rung is symplectic: the 28 bitangents of the genus-3 Klein quartic are its 28 odd theta characteristics (Arf=1) in F2^6 (verified 28 odd + 36 even = 64 by Arf enumeration). Sp(6,2)=W(E7)/{+-1} (order 1451520, |W(E7)|=2903040) permutes them transitively. E7 minuscule 56=2*28=v+k+mu = the Klein quartic's 56 faces = the Freudenthal symplectic double. 28=mu*Phi6.",
+  "sources": [
+    "genus-g theta characteristics: 2^(g-1)(2^g-+1) odd/even; g=3 -> 28 odd + 36 even = 64; 28 odd = the 28 bitangents of a plane quartic; Sp(6,2)=W(E7)/{+-1}, |Sp(6,2)|=1451520, |W(E7)|=2903040; E7 minuscule 56=2*28, Freudenthal triple system; 28=mu*Phi6, 56=v+k+mu; w33_klein_quartic_e6_e7_trinity.py."
+  ]
+}

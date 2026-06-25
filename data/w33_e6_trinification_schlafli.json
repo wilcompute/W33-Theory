@@ -1,0 +1,20 @@
+{
+  "schlafli": {
+    "graph": "SRG(27,16,10,8)",
+    "complement": "SRG(27,10,1,5)",
+    "aut": "W(E6)=U4(2):2=51840"
+  },
+  "trinification": {
+    "decomposition": "27 = 9+9+9 = (3,3b,1)+(1,3,3b)+(3b,1,3)",
+    "nonet": "9 = F3xF3 = AG(2,3) = Hesse = single-qutrit phase space"
+  },
+  "triality": "S3 permutes the 3 SU(3) factors = 3 generations",
+  "group": {
+    "W_E6": 51840,
+    "simple": "U4(2)=PSp(4,3)=25920"
+  },
+  "summary": "the E6/27 lives in GQ(2,4): the Schlafli graph SRG(27,16,10,8) (complement of the 27-lines SRG(27,10,1,5)), Aut=W(E6)=U4(2):2=51840. Its substrate content is trinification 27=(3,3b,1)+(1,3,3b)+(3b,1,3)=9+9+9, three Hesse nonets (each F3xF3=AG(2,3)=single-qutrit phase space) = three generations fused by S3 triality. Same simple group U4(2)=PSp(4,3)=25920 as the substrate. Complements the guardrail: E6/27 is the 3-generation/3-Hesse trinification, geometrized as GQ(2,4), not a W(3,3) subgraph.",
+  "sources": [
+    "GQ(2,4) collinearity = Schlafli graph SRG(27,16,10,8), Aut=W(E6)=U4(2):2=51840 (built here); E6 trinification 27=(3,3b,1)+(1,3,3b)+(3b,1,3) under SU(3)^3:S3 (standard GUT); 9=F3xF3=AG(2,3)=Hesse; U4(2)=PSp(4,3)=25920; w33_27_not_schlafli_group_bridge.py, w33_hesse_mermin_contextuality.py, w33_generalized_quadrangle_ladder.py."
+  ]
+}
