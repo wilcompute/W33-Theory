@@ -1,0 +1,16 @@
+{
+  "bt": "BT1806",
+  "title": "Schlaefli orbit export",
+  "vertices": 27,
+  "edges": 216,
+  "tritangent_supports": 45,
+  "bt1795_image": [5,7,10,12,15,18,20,22,29,30,34,36,37,38,40,41,42,44],
+  "files": [
+    "data/bt1806_schlafli_graph.dimacs",
+    "analysis/bt1806_schlafli_orbit_export.gap",
+    "analysis/bt1806_schlafli_orbit_export.sage"
+  ],
+  "expected_aut_order": 51840,
+  "export_notes": "DIMACS uses 1-based vertices. GAP/Sage support triples use the same 1-based vertices in GAP and 0-based vertices in Sage. BT1795 image uses 0-based support-line indices, matching prior BT1795-BT1803 data files.",
+  "conclusion": "BT1806 exports the exact Schlaefli graph, 45 tritangent supports, and BT1795 image in portable formats for the W(E6) orbit computation."
+}
