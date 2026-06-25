@@ -1,0 +1,29 @@
+{
+  "bt": "BT1800",
+  "title": "double-six syndrome decoder",
+  "matrix_source": "BT1796 18 x 36 table-line/double-six incidence matrix",
+  "shape": [18, 36],
+  "rank": {"F2": 16, "F3": 13},
+  "nullities": {"left_F2": 2, "right_F2": 20, "left_F3": 5, "right_F3": 23},
+  "balanced_checks": {
+    "row_sum": 24,
+    "column_sum": 12,
+    "all_ones_left_null_F2": true,
+    "all_ones_right_null_F2": true,
+    "all_ones_left_null_F3": true,
+    "all_ones_right_null_F3": true
+  },
+  "decoder_reading": {
+    "syndrome_domain": "36 double-six checks",
+    "error_domain": "18 transported Hesse table-lines",
+    "observable_rank_F2": 16,
+    "observable_rank_F3": 13,
+    "F2_redundant_checks": 20,
+    "F3_redundant_checks": 23,
+    "F2_left_relations_among_table_rows": 2,
+    "F3_left_relations_among_table_rows": 5
+  },
+  "interpretation": "As a syndrome object, the double-six layer is highly redundant. Over F2 it has two row-side relations and twenty check-side gauge freedoms; over F3 it has five row-side relations and twenty-three check-side gauge freedoms. The all-ones relation is forced by the 24/12 balanced incidence.",
+  "next_decoder_step": "Commit the full matrix basis and compute explicit nullspace generators; then compare generators with H27 vertical fibres, old/new support kind, and BT1788 plateau symmetries.",
+  "conclusion": "BT1800 turns the BT1796 incidence into a decoder specification. It is not yet a correcting decoder for the missing tuple lists, but it identifies the syndrome ranks and gauge nullities that any final BT1781 recovery must respect."
+}
