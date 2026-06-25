@@ -1,0 +1,20 @@
+{
+  "geometric_cascade": {
+    "r": 0.5225,
+    "Sum_eV": 0.0933,
+    "predicted_ratio": 0.214,
+    "observed_ratio": 0.03,
+    "flag": "geometric cascade overpredicts dm21/dm31 by ~7x -> model needs revisiting"
+  },
+  "desi": {
+    "minimal_NO": 0.0586,
+    "substrate": 0.1,
+    "LCDM_bound": 0.072,
+    "w0waCDM_bound": 0.16,
+    "status": "TENSION with DESI-LCDM, CONSISTENT with DESI-w0waCDM"
+  },
+  "summary": "honest neutrino scrutiny, two flags. (1) EXTERNAL: substrate Sum m_nu ~0.10 eV is in ~1.5-2 sigma tension with DESI-2024 LCDM (<0.072) but CONSISTENT with DESI-preferred w0waCDM (<~0.16); minimal NO sum = 0.059 eV. (2) INTERNAL: a geometric cascade r=0.5225 predicts dm21/dm31=0.21 vs observed 0.030 (~7x too large), so the substrate neutrino masses are NOT a simple geometric cascade -- the model needs revisiting. Recorded, not smoothed.",
+  "sources": [
+    "oscillation data dm21=7.4e-5, dm31=2.5e-3 eV^2 (NuFIT/PDG); substrate Sum m_nu ~0.10 eV cascade r=0.5225 (memory CCXLIX); DESI 2024 LCDM Sum<0.072 eV (95%), w0waCDM ~0.16 eV; w33_measurable_scorecard_2026.py, w33_neutrinoless_betabeta.py."
+  ]
+}

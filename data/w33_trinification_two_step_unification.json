@@ -1,0 +1,18 @@
+{
+  "crossings": {
+    "a1=a2": 13.0,
+    "a1=a3": 14.4,
+    "a2=a3": 17.0
+  },
+  "spread_orders": 4.0,
+  "one_step": "SM couplings miss by ~4 orders of magnitude (no single-step GUT)",
+  "two_step": {
+    "constraints": 2,
+    "free_scales": 2,
+    "verdict": "trinification fits sin^2 theta_W and alpha_s, predicting M_I, M_GUT"
+  },
+  "summary": "unification gap closed honestly: one-loop SM running does NOT unify (a1=a2 ~10^13, a1=a3 ~10^14, a2=a3 ~10^17 GeV, ~4 orders spread). The substrate's two-step E6 -> SU(3)^3 -> SM inserts an intermediate scale M_I, giving 2 free scales (M_I, M_GUT) that fit the 2 low-energy constraints (sin^2 theta_W, alpha_s); so trinification unifies with sin^2 theta_W=3/8 as the exact GUT boundary -- a fit predicting M_I, M_GUT, not a parameter-free success. Honest status of non-SUSY GUTs.",
+  "sources": [
+    "one-loop SM running alpha_i^-1(M_Z)=59.0/29.6/8.5 (GUT-norm), b=(41/10,-19/6,-7); pairwise crossings ~10^13/10^14/10^17 GeV (standard non-unification); E6->SU(3)^3->SM two-scale fit; sin^2 theta_W=3/8 GUT; w33_trinification_unification.py, w33_standard_model_from_trinification.py."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "readout_1": {
+    "observable": "contextual fraction",
+    "value": "1/Phi4 = 1/10",
+    "reads_out": "Phi4 = 10 = dim Sp(4)",
+    "W33": {
+      "rays": 40,
+      "contexts": 40,
+      "lines_per_ray": 4
+    }
+  },
+  "readout_2": {
+    "observable": "pump Chern number",
+    "value": "C = 2S = 2",
+    "reads_out": "lambda = 2",
+    "lattice": "A2<D4<E8 GKP, S=1"
+  },
+  "meter": {
+    "Phi4": "from contextual fraction 1/10",
+    "lambda": "from Chern 2",
+    "carrier": "single photon, ternary internal registers"
+  },
+  "summary": "the demonstrator is a substrate-constant meter: (1) the contextual fraction of a two-qutrit Kochen-Specker measurement on the 40 W(3,3) rays (40 contexts, 4 per ray) = 1/Phi4 = 1/10, reading out Phi4=10=dim Sp(4); (2) the Thouless-pump Chern number on the qutrit GKP ladder (A2<D4<E8, S=1) = C=2S=lambda=2, reading out lambda=2. Both integer/unit-fraction = robust, calibration-free; carrier = single photon with ternary registers. Proposal (scorecard TESTABLE-SOON); a deviation from 1/10 or 2 falsifies the substrate's contextuality/topology on a benchtop.",
+  "sources": [
+    "contextual fraction = 1/Phi4 = 1/10 (Howard et al. magic=contextuality; W(3,3)=GQ(3,3) 40 rays/40 contexts); Thouless pump Chern C=2S (Martin-Refael-Halperin), qutrit S=1 -> C=2=lambda; GKP tower A2<D4<E8; single-photon ternary registers; w33_measurable_scorecard_2026.py, w33_contextuality_is_the_fuel.py, w33_pump_protection_theorem.py; reduced_photonic_holonet_build_sheet."
+  ]
+}
