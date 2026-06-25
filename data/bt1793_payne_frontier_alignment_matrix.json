@@ -1,0 +1,20 @@
+{
+  "bt": "BT1793",
+  "title": "Payne/frontier alignment matrix",
+  "tables": 18,
+  "patches": 45,
+  "matrix_shape": [18, 45],
+  "entry_intersection_histogram": {"0": 570, "1": 212, "2": 26, "3": 2},
+  "rows_with_exact_H27_patch": 2,
+  "exact_patch_rows": [
+    {"table": "T111", "tuple": [1, 1, 1], "exact_patch": "N04"},
+    {"table": "T222", "tuple": [2, 2, 2], "exact_patch": "N08"}
+  ],
+  "two_point_overlap_count_histogram": {"0": 2, "1": 6, "2": 10},
+  "interpretation": {
+    "canonical_table_triangle": "T_{i,j,s} = {(RC,i,j),(RD,i,s),(CD,j,s)} for s != j-i mod 3",
+    "canonical_H27_patch_family": "45 triples = 36 old W33 shell triples + 9 Payne vertical fibres",
+    "warning": "The 18 BT1788 nonconcurrent table triangles are mostly transversal to the H27/Payne line sheaf; they are not the 45 H27 line patches themselves."
+  },
+  "conclusion": "Under the canonical frontier labelling, only 2 of the 18 BT1788 nonconcurrent table triangles are themselves H27/Payne lines; most are transversal triangles meeting the H27 line sheaf in one- or two-point overlaps. Therefore the true 18 accepted ternary tuple lists must be projection-matched to the 45 H27 support triples; they cannot be identified naively with the 45 triples."
+}
