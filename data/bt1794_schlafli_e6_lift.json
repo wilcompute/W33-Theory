@@ -1,0 +1,24 @@
+{
+  "bt": "BT1794",
+  "title": "Schlaefli/E6 lift",
+  "graphs": {
+    "gq24_intersection_graph": {"vertices": 27, "edges": 135, "degree_set": [10], "parameters": [27, 10, 1, 5]},
+    "schlafli_skew_graph": {"vertices": 27, "edges": 216, "degree_set": [16], "parameters": [27, 16, 10, 8]}
+  },
+  "tritangent_planes": {
+    "count": 45,
+    "as_GQ_lines": 45,
+    "as_triangles_in_intersection_graph": 45,
+    "triangle_set_equal_to_H27_support": true
+  },
+  "sixers_and_double_sixes": {
+    "sixers_K6_in_schlafli": 72,
+    "double_sixes": 36,
+    "double_six_induced_profile": {"(12, 36, 6)": 36},
+    "each_line_in_double_sixes_distribution": {"16": 27}
+  },
+  "double_six_tritangent_intersections": {
+    "profile": {"((0, 12), (2, 24))": 45}
+  },
+  "e6_reading": "The 27 H27 points are the 27 cubic-surface lines; GQ(2,4) collinearity is line-intersection/tritangent support, and the Schlaefli complement is the skew graph. NetworkX recovers the classical 36 double-sixes from the Schlaefli graph itself."
+}
