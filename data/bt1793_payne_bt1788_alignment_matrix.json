@@ -1,0 +1,23 @@
+{
+  "bt": "BT1793",
+  "title": "Payne-BT1788 alignment matrix",
+  "table_model": "BT1788 table (Ri,Cj,Ds) maps to three pair-frontier points RC(i,j), RD(i,s), CD(j,s); concurrent iff s=(j-i) mod 3.",
+  "h27_target": "45 Payne/H27 support triples = 36 old W33 shell triples + 9 central fibres.",
+  "default_alignment": {
+    "nonconcurrent_hits": 2,
+    "total_support_hits": 3,
+    "concurrent_hits": 1
+  },
+  "best_RC_fixed_affine_alignment": {
+    "search_space": "RC identity; RD and CD independently affine GL(2,3) semidirect F3^2; 432^2 cases",
+    "max_nonconcurrent_hits": 12,
+    "total_support_hits": 15,
+    "concurrent_hits": 3,
+    "number_of_tied_optima": 2,
+    "RD_matrix": [[2, 2], [0, 2]],
+    "RD_translation": [1, 1],
+    "CD_matrix": [[0, 1], [2, 1]],
+    "CD_translation": [2, 2]
+  },
+  "conclusion": "The 18 nonconcurrent ternary tables are not merely 18 renamed H27 support lines. Naively only 2/18 nonconcurrent table triples land on the H27 support; even the best RC-fixed affine pair-frontier alignment lands on only 12/18. The missing BT1781 materialization is a real projection/transport map, not a coordinate relabeling."
+}
