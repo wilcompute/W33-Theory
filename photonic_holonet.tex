@@ -93,7 +93,24 @@ $48$-block packet ABI, sentinel-aware compilation can trade commit-time
 slack for lower $g=15$ fault energy, the first exact guard band is the
 arithmetically forced desynchronization at $n=5$ with remainder
 $24=f$, and the Gr\"unbaum--Coxeter Wythoff operations of the tomotope
-are exactly the packet-growth ladder $4,12,24,48,96$.  No fitted
+are exactly the packet-growth ladder $4,12,24,48,96$.
+
+Beyond the architecture, the same substrate is a candidate \emph{physics}. The
+choice $q=3$ is triply forced --- by the geometric master equation $q!=2q$, by
+the minimal magic (contextuality) dimension, and by the holographic central
+charge $c=24=f$ --- and from it unfolds an exact exceptional skeleton: the
+Eisenstein tower $q=3\to\{3,7\}$ Hurwitz surfaces $\to$ the Witting polytope
+$\to\mathrm E_6/\mathrm E_7/\mathrm E_8\to$ the complex Leech $\to$ the Monster
+at $c=24$, threaded by $\mathrm G_2=\mathrm{Aut}(\mathbb O)$ and welded by a
+single order-$3$ Eisenstein element.  The Standard Model descends from
+$\mathrm E_6$ by trinification ($\dim\mathrm{SU}(3)^3=24=f$, $\dim$ SM $=12=k$),
+with the three generations, gauge unification ($\sin^2\theta_W=3/8$), and
+tri-bimaximal PMNS mixing all one $S_3$ triality.  The falsifiable layer is on a
+live test sheet: the cosmological predictions ($n_s=29/30$, $r=1/300$,
+$f_{NL}=1/72$) are consistent, the neutrino sum is resolved by the seesaw
+($\sum m_\nu\approx0.06$\,eV), and proton decay ($\tau_p\sim10^{35\text{--}36}$\,yr,
+Hyper-K) together with two demonstrator readouts (contextual fraction $1/10$,
+pump Chern $2$) are sharp near-term tests.  No fitted
 parameters appear anywhere: every constant is substrate arithmetic at
 $q=3$.
 \end{abstract}
@@ -4523,6 +4540,69 @@ the exact ABI economics once a bench supplies rates.  (Witnesses:
 \path{analysis/bt1705_holonet_shared_bus_time_division_simulator.py}, and
 \path{analysis/bt1706_holonet_retry_economics.py}.)
 
+%======================================================================
+\section{The exceptional skeleton and its physics}
+\label{sec:exceptional}
+
+The architecture above shows that a single photon on $\W$ is a universal
+computer, network, and clock. This section turns from the \emph{machine} to the
+\emph{world}: it shows that the same $q=3$ substrate carries an exact tower of
+exceptional structures --- and a layer of falsifiable physics.
+
+\paragraph{Roadmap.} The argument is one ascending ladder, each rung an
+executable witness.
+\begin{enumerate}\itemsep2pt
+\item \emph{Why $q=3$} (\S\ref{sec:why-q3}): three independent selections ---
+  geometric ($q!=2q$), quantum-resource (minimal magic dimension), and
+  holographic ($c=24$) --- all force $q=3$.
+\item \emph{The qubit/qutrit crossover and the genus tower}: the multi-qubit
+  contextuality ladder meets the $\{3,7\}$ Hurwitz tower at the genus-$7$
+  Macbeath surface; the $\{3,8\}$ octagon tower is its qubit twin; and the
+  substrate selects the vertex figure $n-6\mid k=12$.
+\item \emph{The Eisenstein body}: the Witting polytope ($240$ E8 roots, $2160$
+  bus edges, $40$ $\W$ rays) is the substrate over $\mathbb Z[\omega]$, welded
+  to E8 two ways (Eisenstein $\omega=C^{10}$ and the $120$ icosians).
+\item \emph{The exceptional rungs} $\mathrm E_6\to\mathrm E_7\to\mathrm E_8$:
+  the Hessian polytope ($27$ lines), the Klein quartic ($28$ bitangents), and
+  the icosian $600$-cell; their Weyl groups telescope $51840\to\times56\to
+  \times240$.
+\item \emph{Above E8}: the complex Leech (Eisenstein, $12=k$), the Suzuki chain
+  from the three-qubit $\mathrm G_2(2)$, and the Monster at $c=24=f$.
+\item \emph{The physics} (\S\ref{sec:physics}): the Standard Model from
+  trinification, gauge unification, the neutrino sector, and the falsifiable
+  scorecard --- with one honest tension and its resolution.
+\end{enumerate}
+The whole climb is drawn in \path{docs/w33_exceptional_tower.svg}, and its
+honest epistemic status (framework / derived / measurable) is kept by
+\path{analysis/w33_exceptional_tower_ledger.py}: most rungs are exact theorems
+wearing substrate labels, a smaller set is computed from $q=3$, and only the
+measurable layer below falsifies.
+
+\paragraph{Results at a glance.} The substrate's falsifiable predictions, all
+fixed by $q=3$ arithmetic with no free parameters ($N=2(v-\Phi_4)=60$ e-folds):
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Observable & Substrate & Current bound (mid-2026) & Status\\
+\midrule
+$n_s$ & $1-2/N=29/30$ & Planck $0.9649\pm0.0042$ & consistent ($\sim0.4\sigma$)\\
+$r$ & $k/N^2=1/300$ & $<0.036$ & consistent; LiteBIRD\\
+$f_{NL}$ & $5/(6N)=1/72$ & $-0.9\pm5.1$ & consistent\\
+$dn_s/d\ln k$ & $-2/N^2=-1/1800$ & $-0.0045\pm0.0067$ & consistent\\
+$\sum m_\nu$ & $\approx0.06$\,eV (NO) & DESI $<0.072$\,eV & consistent (resolved)\\
+$m_{\beta\beta}$ & $2$--$4$\,meV & $<36$--$156$\,meV & consistent\\
+$\Omega_{DM}/\Omega_b$ & $82/15$ & $\approx5.36$ & $\sim2\%$\\
+$\sin^2\theta_W$ & $3/8\to0.231$ & $0.23122$ & consistent (run)\\
+$\tau_p(p\!\to\! e^+\pi^0)$ & $\sim4.6\times10^{35}$\,yr & $>2.4\times10^{34}$ (SK) & testable (Hyper-K)\\
+contextual fraction & $1/\Phi_4=1/10$ & demonstrator & testable\\
+pump Chern $C$ & $2S=\lambda=2$ & demonstrator & testable\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every entry is a closed substrate expression; the lone historical tension
+($\sum m_\nu$) is resolved by the seesaw (\S\ref{sec:physics}), and three rows
+are sharp near-term falsification handles.
+
 \subsection{BT1707--BT1709 contextuality and Hesse crossover}
 
 The attached multi-qubit contextuality papers supply the missing binary
@@ -4984,6 +5064,7 @@ $\mathrm U_4(2)=\mathrm{PSp}(4,3)$). It is drawn in
 \path{analysis/w33_exceptional_tower_synthesis.py}.)
 
 \subsection{The measurable layer: a scorecard and a unification}
+\label{sec:physics}
 
 Following the ledger's rule that only the measurable layer falsifies, two
 quantitative tests. \emph{The scorecard.} With $N=2(v-\Phi_4)=60$ e-folds the
@@ -5071,6 +5152,7 @@ framework to why these numbers are the physical world, which is the program's
 defining task. (Witness: \path{analysis/w33_state_of_the_theory.py}.)
 
 \subsection{Why \texorpdfstring{$q=3$}{q=3}, and one triality for the neutrino}
+\label{sec:why-q3}
 
 \emph{The bridge: $q=3$ is triply forced.} The defining task --- why is the
 $q=3$ substrate the physical world? --- has a sharp answer in the form of a
