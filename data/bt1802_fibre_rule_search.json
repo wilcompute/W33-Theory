@@ -1,0 +1,15 @@
+{
+  "bt": "BT1802",
+  "title": "structured 12-symbol fibre rule search",
+  "counts": [528,562,578,528,612,580,528,528,480,528,612,564,562,528,578,562,562,560],
+  "total": 9980,
+  "tests": {
+    "12=3x4_uniform_residue_lift": {"required_multiple": 64, "passes": false, "mod64_histogram": {"2": 2, "4": 1, "16": 6, "32": 1, "36": 2, "48": 1, "50": 4, "52": 1}},
+    "12=2x6_uniform_binary_lift": {"required_multiple": 216, "passes": false, "mod216_histogram": {"48": 1, "96": 6, "128": 1, "130": 4, "132": 1, "146": 2, "148": 1, "180": 2}},
+    "coarse_binary_or_quartic_lift": {"required_multiple": 8, "passes": false, "mod8_histogram": {"0": 8, "2": 6, "4": 4}},
+    "point_additive_27_potential_model": {"left_relation_dot_counts": 164, "passes": false},
+    "double_six_syndrome_over_F2": {"left_kernel_evaluations": [0,0], "passes": true},
+    "double_six_syndrome_over_F3": {"left_kernel_evaluations": [0,2,1,1,1], "passes": false}
+  },
+  "conclusion": "The 9980 vector fails every simple structured 12-symbol rule tested except trivial even parity over F2. It is not a uniform 3x4 lift, not a uniform 2x6 lift, not point-additive on H27, and not a pure F3 double-six syndrome."
+}
