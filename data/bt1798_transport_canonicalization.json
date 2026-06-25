@@ -1,0 +1,13 @@
+{
+  "bt": "BT1798",
+  "title": "transport canonicalization probe",
+  "exact_source_automorphisms": 216,
+  "target_automorphism_context": "Schlaefli/E6 graph has W(E6) symmetry in the mathematical model; full orbit enumeration was not attempted with NetworkX VF2 because it is too slow for the 27-line graph in this connector session.",
+  "sampled_transports": 1000,
+  "distinct_support_images_in_sample": 504,
+  "first_BT1795_image": [5, 7, 10, 12, 15, 18, 20, 22, 29, 30, 34, 36, 37, 38, 40, 41, 42, 44],
+  "most_common_image_multiplicity_in_sample": 2,
+  "uniqueness_status": "not_unique",
+  "canonicalization_status": "open_orbit_classification",
+  "conclusion": "BT1795 is not unique as a literal transport: even the first 1000 VF2 embeddings split across 504 distinct 18-line images, and the source hypergraph already has 216 automorphisms. The right canonical object is therefore an orbit under source automorphisms and Schlaefli/E6 target automorphisms, not a single map."
+}
