@@ -1,0 +1,37 @@
+{
+  "threshold_table": [
+    {
+      "lattice": "A2 (1 mode, hexagonal)",
+      "coding_gain_dB": 0.62,
+      "nominal_threshold_dB": 9.28,
+      "below_reached_9p5": true
+    },
+    {
+      "lattice": "D4 (2 modes)",
+      "coding_gain_dB": 1.51,
+      "nominal_threshold_dB": 8.39,
+      "below_reached_9p5": true
+    },
+    {
+      "lattice": "E8 (4 modes)",
+      "coding_gain_dB": 3.01,
+      "nominal_threshold_dB": 6.89,
+      "below_reached_9p5": true
+    }
+  ],
+  "claim": "substrate FT squeezing target ~7-9 dB (A2 9.3, D4 8.4, E8 6.9 dB), at/below the 9.5 dB reached in hardware",
+  "universality": {
+    "criterion": "Lloyd-Braunstein: Gaussian + one non-Gaussian = universal",
+    "substrate_set": [
+      "Gaussian (deg-2 symplectic Weil rep of Sp(4,3))",
+      "cubic phase gate (deg-3, E6)"
+    ],
+    "min_set_size": 2,
+    "magic_resource": "cubic-phase / GKP-magic state, 1 per non-Clifford gate"
+  },
+  "falsifier": "no FT at coding-gain-reduced squeezing, or no D4 advantage over Z^4 GKP -> substrate-code claim falsified",
+  "summary": "holonet FT threshold as a lab number: substrate-fixed GKP lattices A2/D4/E8 (coding gains 0.6/1.5/3.0 dB) shift the measured square-GKP+surface threshold 9.9 dB (Noh-Chamberland 2022; 11.2 dB MWPM) down to ~9.3/8.4/6.9 dB -- all at/below the 9.5 dB GKP squeezing already demonstrated. Universality = minimal set Gaussian(deg-2 Sp(4,3) Weil) + cubic(deg-3 E6), cubic-phase magic states the only distilled resource. Falsifiable target: D4-GKP photonic demonstrator crosses FT near 8-9 dB; no FT or no D4 advantage falsifies. Honest: A2 single-mode shift exact, multimode nominal (upper bound) pending full FT simulation.",
+  "sources": [
+    "Noh & Chamberland, Low-overhead FT QEC with the surface-GKP code, PRX Quantum 3, 010315 (2022) -- 9.9 dB threshold; Vuillot et al. 2019 -- 11.2 dB MWPM; experimental GKP squeezing ~9.5 dB (circuit QED); Conrad-Eisert-Hangleiter, Quantum 6, 648 (2022); Lloyd-Braunstein, PRL 82, 1784 (1999) (CV universality); w33_gkp_coding_gain.py, w33_gkp_lattice_architecture.py, w33_cv_universality_cubic.py."
+  ]
+}

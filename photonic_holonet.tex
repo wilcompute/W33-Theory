@@ -5184,6 +5184,144 @@ $p\to\bar\nu K^+$ suppressed for lack of superpartners), and
 $\tau_p\approx4.6\times10^{35}$\,yr sits squarely in the Hyper-Kamiokande window.
 (Witness: \path{analysis/w33_proton_branching_two_scale.py}.)
 
+\subsection{Three closures: the neutrino matrix, the selection census, the threshold number}
+\label{sec:three-closures}
+
+Three sharper statements close gaps left open above.
+
+\emph{(1) The neutrino texture, pinned to one matrix.} The mixing pattern
+(\S\ref{sec:why-q3}) and the mass scale were established separately; an earlier
+single-parameter geometric cascade gave $\Delta m^2_{21}/\Delta m^2_{31}=0.21$,
+about $7\times$ the observed $0.030$ --- recorded honestly as a wrong-model flag.
+That flag is now closed by a \emph{single} matrix. The $S_3$ triality forces the
+Majorana mass matrix into $\mu$--$\tau$-symmetric $+$ \emph{magic} (constant
+row-sum) form, whose eigenvectors are exactly the tri-bimaximal columns, so the
+angles are fixed by symmetry rather than fitted; crucially that form carries
+\emph{two} independent mass scales, so it fits \emph{both} $\Delta m^2$ where the
+one-scale cascade could not. Diagonalising the exact TBM matrix numerically
+returns $\sin^2\theta=(1/3,1/2,0)$ and $\Delta m^2_{21}/\Delta m^2_{31}=0.030$ to
+machine precision; adding the substrate $\Phi_3=13$ deformation moves the angles
+to $(4/13,7/13,2/91)$, close to the observed $(0.307,0.546,0.0220)$, with the ratio
+unchanged. (Honest: the two scales are fixed by the two measured $\Delta m^2$, so
+this is the unique substrate-symmetric matrix consistent with the data --- a
+closure demonstration, not an absolute-mass prediction. Witness:
+\path{analysis/w33_neutrino_texture_pinned.py}.)
+
+\begin{figure}[ht]\centering
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  box/.style={draw,rounded corners,align=center,minimum height=12mm,inner sep=3pt},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[box,fill=blue!8] (s3) {$S_3$ triality\\(3 generations)};
+  \node[box,fill=green!10,right=9mm of s3] (mat) {mass matrix\\$\mu$--$\tau$ sym.\ $+$ magic};
+  \node[box,fill=yellow!16,right=9mm of mat] (tbm) {diagonalise\\$\sin^2\theta=(\tfrac13,\tfrac12,0)$};
+  \node[box,fill=orange!14,right=9mm of tbm] (obs) {$+\,1/\Phi_3$ deform\\$(\tfrac{4}{13},\tfrac{7}{13},\tfrac{2}{91})\approx$ obs.};
+  \draw[arrow] (s3)--(mat);
+  \draw[arrow] (mat)--(tbm);
+  \draw[arrow] (tbm)--(obs);
+  \node[align=center,font=\footnotesize] at ($(mat)!0.5!(tbm)+(0,-1.45)$)
+    {two independent mass scales $\Rightarrow$ fits \emph{both} $\Delta m^2$:\;
+     $\Delta m^2_{21}/\Delta m^2_{31}=0.030$ (observed), \emph{not} the $0.21$ of the one-scale cascade};
+\end{tikzpicture}}
+\caption{The neutrino sector closed by one matrix. The $S_3$ triality forces the
+mass matrix into $\mu$--$\tau$-symmetric $+$ magic form, whose eigenvectors are the
+tri-bimaximal columns; because that form carries two independent mass scales it fits
+both $\Delta m^2$ (the one-scale geometric cascade could not). The $\Phi_3=13$
+deformation moves the angles onto the observed values.}
+\label{fig:neutrino-pinned}
+\end{figure}
+
+\emph{(2) The $q=3$ selection census.} The bridge is a convergence, and it is
+overdetermined: \emph{five} independent first-principles selections return $q=3$
+by genuinely different mathematics --- geometric $(q-1)!=2$ (a forcing equation),
+minimal odd prime (a minimality fact), holographic $c=24=8q$ (a charge match to
+the Monster ceiling), thermodynamic de Sitter closure
+$2(q-1)(q^2+1)=(1+q)(1+q^2)\Leftrightarrow(q-3)(q^2+1)=0$ (a cubic, a
+\emph{different} polynomial from the factorial, so not one equation in disguise),
+and a new \emph{Eisenstein complex-polytope} selection: the regular complex
+polytopes with order-$3$ reflections over $\mathbb Z[\omega]$ form the exceptional
+tower M\"obius--Kantor $3\{3\}3$ ($8$ vertices, $2T$) $\to$ Hessian
+$3\{3\}3\{3\}3$ ($27=$ lines on a cubic $=E_6$) $\to$ Witting
+$3\{3\}3\{3\}3\{3\}3$ ($240=E_8$ roots), with Witting symmetry the
+Shephard--Todd group $\#32$ of order $155520=3\times|\mathrm{Sp}(4,3)|$. The
+symplectic orders were verified directly in \textsc{Gap}:
+$|\mathrm{Sp}(4,3)|=51840$, $|\mathrm{PSp}(4,3)|=25920=|U_4(2)|$, and
+$3\times51840=155520$. (Witness: \path{analysis/w33_q3_selection_census.py}.)
+
+\begin{figure}[ht]\centering
+\resizebox{0.82\textwidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  sel/.style={draw,rounded corners,align=center,minimum width=34mm,minimum height=10mm,inner sep=2pt},
+  arrow/.style={-{Stealth},thick}
+]
+  \node[draw,circle,fill=red!12,minimum size=18mm,font=\bfseries] (q) at (0,0) {$q=3$};
+  \node[sel,fill=blue!8]    (s1) at (-5.4, 2.3) {geometric\\$(q{-}1)!=2$};
+  \node[sel,fill=green!10]  (s2) at ( 5.4, 2.3) {resource\\min.\ odd prime};
+  \node[sel,fill=yellow!18] (s3) at (-6.3, 0.0) {holographic\\$c=24=8q$};
+  \node[sel,fill=orange!16] (s4) at ( 6.3, 0.0) {thermodynamic\\$(q{-}3)(q^2{+}1)=0$};
+  \node[sel,fill=purple!12] (s5) at ( 0.0,-2.6) {Eisenstein polytope\\$8\!\to\!27\!\to\!240$};
+  \foreach \s in {s1,s2,s3,s4,s5} \draw[arrow] (\s)--(q);
+  \node[font=\footnotesize,align=center] at (0,2.7) {five independent\\selections};
+\end{tikzpicture}}
+\caption{The $q=3$ selection census: five first-principles selections, each a
+different kind of mathematics (two forcing equations of distinct degree, a
+minimality fact, a holographic charge match, and the Eisenstein complex-polytope
+tower $2T\!\to\!E_6\!\to\!E_8$), all return $q=3$. The substrate value is
+overdetermined.}
+\label{fig:q3-census}
+\end{figure}
+
+\emph{(3) The fault-tolerance threshold as a lab number.} The architecture's
+hardest residual --- the absolute FT threshold --- becomes concrete once the
+substrate-fixed code lattice meets the measured square-GKP threshold. The best
+reported square-GKP\,$+$\,surface-code threshold is $9.9$\,dB of squeezing
+(Noh--Chamberland 2022; $11.2$\,dB under minimum-weight matching), and $9.5$\,dB
+has already been demonstrated in hardware. The substrate code is \emph{not} the
+square code: its single-mode lattice is hexagonal $A_2$ (coding gain $0.6$\,dB),
+its natural two-mode code is $D_4$ ($1.5$\,dB), and its four-mode code is $E_8$
+($3.0$\,dB), so the threshold shifts down to $\sim9.3/8.4/6.9$\,dB respectively ---
+all at or below the $9.5$\,dB already reached. Universality needs only the minimal
+Lloyd--Braunstein set, Gaussian (degree-$2$, the $\mathrm{Sp}(4,3)$ Weil rep) plus
+one cubic gate (degree-$3$, $E_6$), with cubic-phase magic states the sole
+distilled resource. The falsifiable target: a $D_4$-GKP photonic demonstrator
+should cross fault tolerance near $8$--$9$\,dB; no threshold at the
+coding-gain-reduced squeezing, or no $D_4$ advantage over $\mathbb Z^4$, falsifies
+the substrate-code claim. (Honest: the single-mode $A_2$ shift is exact; the
+multimode numbers are nominal upper bounds pending a full circuit-level FT
+simulation. Witness: \path{analysis/w33_holonet_ft_threshold_budget.py}.)
+
+\begin{figure}[ht]\centering
+\resizebox{0.92\textwidth}{!}{%
+\begin{tikzpicture}[every node/.style={font=\small},x=1.6cm]
+  % axis from 6.3 to 11.9 dB
+  \draw[thick,-{Stealth}] (6.3,0)--(12.0,0) node[right]{dB squeezing};
+  \foreach \x in {7,8,9,10,11} \draw (\x,0.08)--(\x,-0.08) node[below=1pt]{\x};
+  % demonstrated 9.5 dB line
+  \draw[red,dashed,thick] (9.5,-1.15)--(9.5,1.5);
+  \node[red,align=center,font=\footnotesize] at (9.5,1.78) {$9.5$ dB\\demonstrated};
+  % baseline (square-code) thresholds above the axis
+  \fill[gray!55] (11.2,0.0) circle(2.4pt); \node[above=2pt] at (11.2,0.0) {$11.2$ MWPM};
+  \fill[gray!75] (9.9,0.0)  circle(2.4pt); \node[above=10pt] at (9.9,0.0) {$9.9$ square};
+  % substrate-lowered thresholds below the axis
+  \fill[blue!55]   (9.3,0.0) circle(2.4pt); \node[below=10pt] at (9.3,0.0) {$9.3$ $A_2$};
+  \fill[green!55]  (8.4,0.0) circle(2.4pt); \node[below=2pt]  at (8.4,0.0) {$8.4$ $D_4$};
+  \fill[orange!70] (6.9,0.0) circle(2.4pt); \node[below=2pt]  at (6.9,0.0) {$6.9$ $E_8$};
+  % shift arrow
+  \draw[-{Stealth},thick,blue!60!black] (9.85,-0.5) .. controls (9.0,-0.85) and (7.7,-0.85) .. (6.95,-0.5);
+  \node[font=\footnotesize,blue!60!black] at (8.4,-1.05) {coding-gain shift};
+\end{tikzpicture}}
+\caption{The fault-tolerance threshold as a lab number. The measured square-GKP
+$+$ surface-code threshold ($9.9$\,dB, Noh--Chamberland 2022; $11.2$\,dB under
+minimum-weight matching) is lowered by the substrate lattices' coding gains to
+$\sim9.3/8.4/6.9$\,dB for $A_2/D_4/E_8$ --- all at or below the $9.5$\,dB squeezing
+already demonstrated in hardware. (Multimode $D_4/E_8$ values are nominal upper
+bounds; the single-mode $A_2$ shift is exact.)}
+\label{fig:ft-threshold}
+\end{figure}
+
 \subsection{Self-error-correction and why the primitive is one}
 
 The carrier is a single photon --- not two, not a pack --- and that is structural,

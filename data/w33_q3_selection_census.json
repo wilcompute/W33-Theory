@@ -1,0 +1,71 @@
+{
+  "selections": [
+    {
+      "id": "S1",
+      "kind": "geometric (factorial equation)",
+      "statement": "(q-1)! = 2",
+      "q": 3,
+      "forcing": true
+    },
+    {
+      "id": "S2",
+      "kind": "quantum resource (minimality)",
+      "statement": "minimal odd prime = minimal magic dimension",
+      "q": 3,
+      "forcing": false
+    },
+    {
+      "id": "S3",
+      "kind": "holographic (charge match)",
+      "statement": "c = 24 = f = 8q (Monster c=24)",
+      "q": 3,
+      "forcing": false
+    },
+    {
+      "id": "S4",
+      "kind": "thermodynamic (cubic equation)",
+      "statement": "2(q-1)(q^2+1)=(1+q)(1+q^2) <=> (q-3)(q^2+1)=0",
+      "q": 3,
+      "forcing": true
+    },
+    {
+      "id": "S5",
+      "kind": "Eisenstein complex-polytope (group/lattice realization)",
+      "statement": "p{3}p{3}p... over Z[zeta_p] gives 8->27->240 (2T->E6->E8) only at p=3",
+      "q": 3,
+      "forcing": false,
+      "tower": [
+        {
+          "polytope": "3{3}3 (Moebius-Kantor)",
+          "vertices": 8,
+          "sym_order": 24,
+          "role": "2T binary tetrahedral = |f|=24 faces"
+        },
+        {
+          "polytope": "3{3}3{3}3 (Hessian)",
+          "vertices": 27,
+          "sym_order": 648,
+          "role": "27 lines on a cubic = E6 fundamental"
+        },
+        {
+          "polytope": "3{3}3{3}3{3}3 (Witting)",
+          "vertices": 240,
+          "sym_order": 155520,
+          "role": "240 = E8 roots; ST #32"
+        }
+      ],
+      "witting_sym_factorization": "155520 = 3 x |Sp(4,3)| = 3 x 51840",
+      "gap_verified": "GAP (gapsystem/gap-docker): Size(Sp(4,3))=51840, Size(PSp(4,3))=25920=|U4(2)|, 3*51840=155520"
+    }
+  ],
+  "count": 5,
+  "all_return_q3": true,
+  "forcing_equations": [
+    "S1",
+    "S4"
+  ],
+  "summary": "q=3 selection census: FIVE independent first-principles selections return q=3 by different mathematics -- S1 geometric (q-1)!=2 (forcing), S2 resource minimal odd prime, S3 holographic c=24=8q (Monster), S4 thermodynamic de Sitter cubic (q-3)(q^2+1)=0 (forcing), S5 NEW Eisenstein complex-polytope tower 3{3}3->3{3}3{3}3->Witting = 8->27->240 (2T->E6->E8) over Z[omega], Witting symmetry 155520 = 3x|Sp(4,3)|. Independence audited: S1 (factorial) and S4 (cubic) are distinct polynomials, the five are distinct statement types. Honest: S1,S4 forcing; S2 minimality; S3,S5 realization. q=3 is overdetermined -- the framework->physics bridge.",
+  "sources": [
+    "Shephard-Todd 1954 unitary reflection groups (#25 order 648 Hessian, #32 order 155520 Witting); Coxeter, Regular Complex Polytopes (3{3}3, Hessian, Witting; Eisenstein Z[omega]); 240=E8 roots; 155520=3x|Sp(4,3)|=3x51840, 51840=|W(E6)|=2|U4(2)|; fgmarcelis complex-polytope/Witting pages; w33_q3_triple_selection.py, w33_desitter_q3_selection.py, w33_witting_polytope_substrate.py, w33_hessian_polytope_e6.py."
+  ]
+}

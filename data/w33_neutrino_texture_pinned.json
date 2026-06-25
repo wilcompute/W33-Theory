@@ -1,0 +1,36 @@
+{
+  "step1_TBM": {
+    "sin2_th12": 0.333333,
+    "sin2_th23": 0.5,
+    "sin2_th13": 0.0,
+    "dm21_over_dm31": 0.0296,
+    "observed_ratio": 0.0296,
+    "mu_tau_symmetric": true,
+    "magic": true
+  },
+  "step2_deformed": {
+    "sin2_th12": 0.3077,
+    "sin2_th23": 0.5385,
+    "sin2_th13": 0.022,
+    "dm21_over_dm31": 0.0296,
+    "bt920": {
+      "s12": "4/13",
+      "s23": "7/13",
+      "s13": "2/91"
+    },
+    "observed": {
+      "s12": 0.307,
+      "s23": 0.546,
+      "s13": 0.022
+    }
+  },
+  "cascade_contrast": {
+    "cascade_ratio": 0.214,
+    "pinned_ratio": 0.0296,
+    "observed": 0.0296
+  },
+  "summary": "neutrino texture pinned to ONE matrix, closing the 7x cascade flag. S3 triality forces the mass matrix into mu-tau-symmetric + magic form whose eigenvectors are the TBM columns (angles fixed by symmetry, not fitted); it has TWO independent mass scales so it fits BOTH Delta m^2 (the one-scale cascade could not). Diagonalising the exact TBM matrix gives sin^2 th=(1/3,1/2,0) and dm21/dm31=0.030 to machine precision; the Phi3=13 deformation moves the angles to (4/13,7/13,2/91), close to observed (0.307,0.546,0.0220), ratio unchanged. Honest: the two scales are fixed by the two observed Delta m^2 (a unique-matrix closure demonstration, not an absolute-mass prediction); TBM structure + 1/Phi3 are the substrate inputs.",
+  "sources": [
+    "mu-tau + magic neutrino mass matrix <=> tri-bimaximal (Harrison-Perkins-Scott; Lam, magic symmetry); S3 flavour = trinification triality; bt920 Phi3=13 deformation (4/13, 7/13, 2/91); NuFIT angles 0.307/0.546/0.0220; DM21=7.4e-5, DM31=2.5e-3 eV^2; w33_neutrino_seesaw_texture.py, w33_neutrino_desi_scrutiny.py, bt920_pmns_tribimaximal_deformation.py."
+  ]
+}
