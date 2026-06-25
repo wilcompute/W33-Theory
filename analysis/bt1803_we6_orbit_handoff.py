@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""BT1803: GAP/nauty handoff for the W(E6) transport orbit.
+
+NetworkX was enough to disprove literal uniqueness in BT1798, but exhaustive
+orbit classification should use GAP/GRAPE, nauty, or Sage.  This file writes the
+exact payload those tools need and records the expected group-theoretic target.
+"""
+from __future__ import annotations
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'data'/'bt1803_we6_orbit_handoff.json'
+GAP=ROOT/'analysis'/'bt1803_we6_orbit_handoff.gap'
+USED=[5,7,10,12,15,18,20,22,29,30,34,36,37,38,40,41,42,44]
+def main():
+    gap_text='''# BT1803 W(E6) orbit-classification handoff\n# Load GRAPE/nauty in GAP, construct the Schlaefli graph SRG(27,16,10,8),\n# compute Aut(Schlaefli) (expected order 51840 = W(E6)), then compute orbits\n# on 18-subsets of the 45 tritangent support lines containing the BT1795 image.\n# The BT1795 image support indices are:\nBT1795Image := [5,7,10,12,15,18,20,22,29,30,34,36,37,38,40,41,42,44];\n# Required outputs:\n#   Size(AutSchlaefli);\n#   Orbit(AutSchlaefliOnTritangents, BT1795Image, OnSets);\n#   Stabilizer(AutSchlaefliOnTritangents, BT1795Image, OnSets);\n#   Orbit representatives grouped by old/new count, double-six syndrome ranks.\n'''
+    GAP.write_text(gap_text)
+    payload={'bt':'BT1803','title':'W(E6) transport orbit classification handoff','status':'handoff_prepared_not_full_orbit_computed','why_not_networkx':'NetworkX VF2 already showed non-uniqueness, but full Schlaefli/E6 target-orbit enumeration is too slow and should be done with GAP/GRAPE, Sage, or nauty.','known_inputs':{'source_automorphism_order':216,'target_group_expected':'Aut(Schlaefli)=W(E6), order 51840','bt1795_image_support_indices':USED,'bt1798_sampled_transports':1000,'bt1798_distinct_images_in_sample':504},'created_gap_handoff':'analysis/bt1803_we6_orbit_handoff.gap','classification_tasks':['construct Schlaefli graph SRG(27,16,10,8)','verify automorphism group order 51840','act on the 45 tritangent support lines','compute orbit and stabilizer of the BT1795 18-line image','classify orbits by old/new count and BT1800 double-six syndrome ranks'],'conclusion':'BT1803 advances the orbit problem to a reproducible GAP/GRAPE handoff. The honest result remains: BT1795 is not a single canonical map; the canonical object must be an orbit under source automorphisms and W(E6) target automorphisms.'}
+    OUT.write_text(json.dumps(payload,indent=2,sort_keys=True))
+    print(json.dumps({'status':payload['status'],'gap':str(GAP.relative_to(ROOT)),'target_order':51840},indent=2))
+if __name__=='__main__': main()
