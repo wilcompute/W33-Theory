@@ -1,0 +1,24 @@
+{
+  "bt": "BT1805",
+  "title": "nonuniform fibre ansatz",
+  "symbol_model": "12=3x4 table-local fibre layer above BT1795 transport",
+  "observed": {
+    "total": 9980,
+    "F2_eval": [0,0],
+    "F3_eval": [0,2,1,1,1]
+  },
+  "minimal_even_F3_repair": {
+    "delta": [0,0,-2,0,0,0,0,0,0,0,0,0,0,0,-2,0,0,2],
+    "changed_tables": [
+      {"table":"T010","delta":-2,"old":578,"new":576},
+      {"table":"T210","delta":-2,"old":578,"new":576},
+      {"table":"T222","delta":2,"old":560,"new":562}
+    ],
+    "L1_size": 6,
+    "adjusted_total": 9978,
+    "adjusted_F2_eval": [0,0],
+    "adjusted_F3_eval": [0,0,0,0,0]
+  },
+  "interpretation": "The nearest even-count repair to the F3 syndrome changes only three tables by two counts: T010, T210, and T222. This points to a small ternary fibre correction rather than a global support-geometry failure.",
+  "conclusion": "A table-local nonuniform 12-symbol fibre layer can fit the data, but the observed vector is off the pure F3 double-six constraint by a tiny three-table even correction. The next target is to explain the special triple T010/T210/T222 from fibre geometry."
+}
