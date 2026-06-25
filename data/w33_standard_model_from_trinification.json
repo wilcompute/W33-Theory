@@ -1,0 +1,15 @@
+{
+  "dimensions": {
+    "E6": 78,
+    "trinification_SU3^3": "24=f",
+    "broken": 54,
+    "SM_gauge": "12=k"
+  },
+  "generation": "27 = (3,3bar,1)+(1,3,3bar)+(3bar,1,3) = one generation",
+  "generations": "3 = S3 triality of the three SU(3) factors",
+  "bookends": "trinification dim = f=24; SM dim = k=12",
+  "summary": "the Standard Model from the E6 27 by trinification: E6 -> SU(3)_C x SU(3)_L x SU(3)_R ><| S3, 27 -> (3,3bar,1)+(1,3,3bar)+(3bar,1,3). dim(E6)=78, dim(SU(3)^3)=3*8=24=f (trinification adjoint), 78-24=54 broken, dim(SM gauge)=8+3+1=12=k. The 27 = one generation (9+9+9 = quarks/leptons/Higgs); the 3 generations = S3 triality of the three SU(3) factors (the same S3 permuting the 3 Hesse nonets). f=24 (trinification) and k=12 (SM) bookend the breaking.",
+  "sources": [
+    "E6 trinification SU(3)^3:S3 (standard GUT, Glashow/Achiman-Stech); 27=(3,3bar,1)+(1,3,3bar)+(3bar,1,3) one generation; dim(E6)=78, dim(SU(3))=8, dim(SM)=8+3+1=12=k, dim(SU(3)^3)=24=f; 3 generations = S3 triality; w33_e6_trinification_schlafli.py, w33_information_structure.py (generations), existing SM-completion pillars (BT1059 particle table)."
+  ]
+}

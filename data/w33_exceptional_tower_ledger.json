@@ -1,0 +1,92 @@
+{
+  "counts": {
+    "FRAMEWORK": 5,
+    "DERIVED": 7,
+    "MEASURABLE": 1
+  },
+  "ledger": [
+    {
+      "rung": "genus {3,n} register formulas (E=6n(g-1)/(n-6), n-6|k selection)",
+      "type": "DERIVED",
+      "exact": "the f-vectors and the vertex-figure set {7,8,9,10,12}",
+      "interpretation": "the register meanings (qutrit/qubit/Hesse/...) are interpretation"
+    },
+    {
+      "rung": "trit-saving code H1=81=[[240,81,4]]_3 (chain complex dd=0)",
+      "type": "DERIVED",
+      "exact": "ranks 39/120, H1=81 over F3",
+      "interpretation": "the 'code = matter' reading"
+    },
+    {
+      "rung": "W(3,3)=GQ(3,3) SRG(40,12,2,4); 27 non-collinear is 8-regular NOT Schlafli",
+      "type": "DERIVED",
+      "exact": "the SRG params and the guardrail (8-regular)",
+      "interpretation": "nothing unproven -- this is the honest negative result"
+    },
+    {
+      "rung": "Eisenstein E8 weld: omega=Cox^10 splits 240 roots into 40 hexagons",
+      "type": "DERIVED",
+      "exact": "the order-3 fixed-point-free element, 80 triangles, 40 hexagons",
+      "interpretation": "'40 hexagons = W(3,3) rays' is an identification of counts"
+    },
+    {
+      "rung": "icosian 600-cell: 120 = 2I closed under quaternion mult (14400 products)",
+      "type": "DERIVED",
+      "exact": "the group closure and 240=2*120",
+      "interpretation": "'2I = gate set' is a proposal"
+    },
+    {
+      "rung": "ternary Golay [12,6,6]_3 (729 words, 1+264x^6+440x^9+24x^12, 132 hexads)",
+      "type": "DERIVED",
+      "exact": "the code and S(5,6,12) hexads",
+      "interpretation": "'substrate code at K12 gap' reading"
+    },
+    {
+      "rung": "E7 theta: 28 odd + 36 even = 64 (Arf enumeration on F2^6)",
+      "type": "DERIVED",
+      "exact": "the Arf count 28/36",
+      "interpretation": "28 bitangents = mu*Phi6 is a label"
+    },
+    {
+      "rung": "Witting polytope symmetry 155520 = q*|Sp(4,3)|; tower 24/648/155520",
+      "type": "FRAMEWORK",
+      "exact": "the complex-polytope symmetry orders (Coxeter)",
+      "interpretation": "q*|Sp(4,3)| and 24=f are substrate dictionary"
+    },
+    {
+      "rung": "the exceptional trinity 27/28/120 = E6/E7/E8 = cubic/quartic/Witting",
+      "type": "FRAMEWORK",
+      "exact": "the classical 27 lines / 28 bitangents / 120 tritangents",
+      "interpretation": "the substrate integers (mu*Phi6, etc.) are annotations"
+    },
+    {
+      "rung": "magic square: substrate = C/H columns; 27=J3(O)=q+f",
+      "type": "FRAMEWORK",
+      "exact": "the Freudenthal-Tits square and J3(O)=3+3*8",
+      "interpretation": "C=Eisenstein/H=icosian placement is interpretation"
+    },
+    {
+      "rung": "complex Leech = Eisenstein 12=k, Aut 6.Suz; Suzuki chain from G2(2)",
+      "type": "FRAMEWORK",
+      "exact": "the complex Leech, 6.Suz, the Suzuki tower SRGs",
+      "interpretation": "12=k and G2(2)=3-qubit-core are dictionary"
+    },
+    {
+      "rung": "Monster ceiling c=24=f; j-744 head 196884=1+196883",
+      "type": "FRAMEWORK",
+      "exact": "monstrous moonshine (Borcherds) and the j-head",
+      "interpretation": "c=24=f = holographic boundary is the substrate claim, not derived here"
+    },
+    {
+      "rung": "masses, CMB suite (n_s, r, f_NL), contextual fraction 1/Phi4, pump Chern C=2",
+      "type": "MEASURABLE",
+      "exact": "the numerical predictions (earlier sessions)",
+      "interpretation": "THESE are what falsify the theory -- not the tower above"
+    }
+  ],
+  "reading_rule": "FRAMEWORK exactness confirms a theorem+dictionary, not the physics; only the MEASURABLE layer is falsifiable.",
+  "summary": "honest ledger of the q=3->Monster exceptional tower: classifies each rung as FRAMEWORK (established math + substrate-integer dictionary: magic square, trinity, Witting symmetry, complex Leech, Monster moonshine), DERIVED (computed from q=3 and asserted: genus/register formulas, trit-saving code, Eisenstein E8 weld, icosian 2I closure, ternary Golay, theta-Arf count, W(3,3)/guardrail), or MEASURABLE (the falsifiable physics: masses, CMB, contextual fraction, pump Chern). Reading rule: FRAMEWORK exactness = a real theorem+dictionary, not confirmation of the physics; only the MEASURABLE layer falsifies. Keeps the tower honest.",
+  "sources": [
+    "epistemic audit of this session's witnesses (w33_genus_*, w33_hessian_polytope_e6, w33_klein_quartic_e6_e7_trinity, w33_icosian_*, w33_complex_leech_suzuki_chain, w33_monster_moonshine_ceiling, w33_27_not_schlafli_group_bridge, ...); the MEASURABLE layer = w33_falsifiability_ledger.py, w33_cmb_moonshine_suite.py, masses pillars."
+  ]
+}

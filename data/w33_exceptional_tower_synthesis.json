@@ -1,0 +1,105 @@
+{
+  "levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    4,
+    5,
+    6,
+    7
+  ],
+  "n_rungs": 11,
+  "threads": [
+    {
+      "name": "omega = Eisenstein order-3 weld",
+      "span": "Cox^10 splits E8; complex Leech; Witting",
+      "witness": "w33_e8_eisenstein_witting_weld.py"
+    },
+    {
+      "name": "G2 = Aut(O), keyed by Phi6=7",
+      "span": "Fano -> genus-14 -> G2(2) 3-qubit -> Suzuki -> E8",
+      "witness": "w33_g2_thread.py"
+    },
+    {
+      "name": "U4(2) = PSp(4,3) = 25920 (simple group)",
+      "span": "the E6 <-> substrate bridge",
+      "witness": "w33_27_not_schlafli_group_bridge.py"
+    }
+  ],
+  "dot_file": "docs\\w33_exceptional_tower.dot",
+  "rungs": [
+    {
+      "level": 0,
+      "rung": "q = 3 (one trit; triangle + tetrahedron)",
+      "integer": "q=3, mu=4",
+      "witness": "w33_genus_ladder_clock.py"
+    },
+    {
+      "level": 1,
+      "rung": "{3,n} genus/register tower (Hurwitz {3,7}, qubit {3,8})",
+      "integer": "registers {7,8,9,10,12}={Phi6,2^3,q^2,Phi4,k}",
+      "witness": "w33_register_atlas_3n.py"
+    },
+    {
+      "level": 2,
+      "rung": "vertex-figure selection; gap n=11 = K12 = ternary Golay/M12",
+      "integer": "n-6|k=12; f=24=M24/Monster",
+      "witness": "w33_ternary_golay_m12_grunbaum.py"
+    },
+    {
+      "level": 3,
+      "rung": "Witting body (Eisenstein, q=3)",
+      "integer": "240=E8 roots, 2160=bus, 40=W(3,3)",
+      "witness": "w33_witting_polytope_substrate.py"
+    },
+    {
+      "level": 4,
+      "rung": "E6 = Hessian 27 = trinification (3 generations)",
+      "integer": "27=q+f; |W(E6)|=|Sp(4,3)|",
+      "witness": "w33_hessian_polytope_e6.py"
+    },
+    {
+      "level": 4,
+      "rung": "E7 = Klein quartic 28 bitangents",
+      "integer": "56=2*28=v+k+mu",
+      "witness": "w33_klein_quartic_e6_e7_trinity.py"
+    },
+    {
+      "level": 4,
+      "rung": "E8 = 120 icosians = 2I = 600-cell clock",
+      "integer": "240=2*120; 51840=supercycle",
+      "witness": "w33_icosian_e8_witting.py"
+    },
+    {
+      "level": 5,
+      "rung": "complex Leech (Eisenstein 12=k), Aut 6.Suz",
+      "integer": "12=k, 24=f",
+      "witness": "w33_complex_leech_suzuki_chain.py"
+    },
+    {
+      "level": 6,
+      "rung": "Co0 = 2.Co1 (real Leech)",
+      "integer": "24=f",
+      "witness": "w33_complex_leech_suzuki_chain.py"
+    },
+    {
+      "level": 7,
+      "rung": "Monster M = Aut(V-natural)",
+      "integer": "c=24=f = holographic boundary",
+      "witness": "w33_monster_moonshine_ceiling.py"
+    },
+    {
+      "level": -1,
+      "rung": "Standard Model (downward branch from E6)",
+      "integer": "dim SM = 12 = k",
+      "witness": "w33_standard_model_from_trinification.py"
+    }
+  ],
+  "summary": "master synthesis: the whole session is one vertical ladder q=3 -> {3,n} genus/register tower -> Witting body (240/2160/40) -> E6/E7/E8 (Hessian 27 / Klein 28 / icosian 120) -> complex Leech (Eisenstein 12=k) -> Co0 -> Monster (c=24=f = holographic boundary), with a downward branch to the SM (dim 12=k). Three threads run the full height: the Eisenstein order-3 omega weld, G2=Aut(O) keyed by Phi6=7, and the simple group U4(2)=PSp(4,3)=25920. Emitted as docs/w33_exceptional_tower.dot.",
+  "sources": [
+    "synthesis of the session's witnesses (w33_genus_*, w33_register_atlas_3n, w33_witting_polytope_substrate, w33_hessian_polytope_e6, w33_klein_quartic_e6_e7_trinity, w33_icosian_e8_witting, w33_complex_leech_suzuki_chain, w33_monster_moonshine_ceiling, w33_g2_thread, w33_standard_model_from_trinification); docs/w33_grand_dependency_map.dot (the horizontal companion)."
+  ]
+}

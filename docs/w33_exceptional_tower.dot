@@ -1,0 +1,31 @@
+digraph w33_exceptional_tower {
+  rankdir=BT;
+  node [shape=box, style=rounded, fontname="Helvetica"];
+  label="W(3,3) exceptional tower: q=3 -> Monster"; labelloc=t;
+  "q = 3 (one trit; triangle + tetrahedron)" [xlabel="q=3, mu=4"];
+  "{3,n} genus/register tower (Hurwitz {3,7}, qubit {3,8})" [xlabel="registers {7,8,9,10,12}={Phi6,2^3,q^2,Phi4,k}"];
+  "vertex-figure selection; gap n=11 = K12 = ternary Golay/M12" [xlabel="n-6|k=12; f=24=M24/Monster"];
+  "Witting body (Eisenstein, q=3)" [xlabel="240=E8 roots, 2160=bus, 40=W(3,3)"];
+  "E6 = Hessian 27 = trinification (3 generations)" [xlabel="27=q+f; |W(E6)|=|Sp(4,3)|"];
+  "E7 = Klein quartic 28 bitangents" [xlabel="56=2*28=v+k+mu"];
+  "E8 = 120 icosians = 2I = 600-cell clock" [xlabel="240=2*120; 51840=supercycle"];
+  "complex Leech (Eisenstein 12=k), Aut 6.Suz" [xlabel="12=k, 24=f"];
+  "Co0 = 2.Co1 (real Leech)" [xlabel="24=f"];
+  "Monster M = Aut(V-natural)" [xlabel="c=24=f = holographic boundary"];
+  "q = 3 (one trit; triangle + tetrahedron)" -> "{3,n} genus/register tower (Hurwitz {3,7}, qubit {3,8})";
+  "{3,n} genus/register tower (Hurwitz {3,7}, qubit {3,8})" -> "vertex-figure selection; gap n=11 = K12 = ternary Golay/M12";
+  "vertex-figure selection; gap n=11 = K12 = ternary Golay/M12" -> "Witting body (Eisenstein, q=3)";
+  "Witting body (Eisenstein, q=3)" -> "E6 = Hessian 27 = trinification (3 generations)";
+  "Witting body (Eisenstein, q=3)" -> "E7 = Klein quartic 28 bitangents";
+  "Witting body (Eisenstein, q=3)" -> "E8 = 120 icosians = 2I = 600-cell clock";
+  "E6 = Hessian 27 = trinification (3 generations)" -> "complex Leech (Eisenstein 12=k), Aut 6.Suz";
+  "E7 = Klein quartic 28 bitangents" -> "complex Leech (Eisenstein 12=k), Aut 6.Suz";
+  "E8 = 120 icosians = 2I = 600-cell clock" -> "complex Leech (Eisenstein 12=k), Aut 6.Suz";
+  "complex Leech (Eisenstein 12=k), Aut 6.Suz" -> "Co0 = 2.Co1 (real Leech)";
+  "Co0 = 2.Co1 (real Leech)" -> "Monster M = Aut(V-natural)";
+  "Standard Model (downward branch from E6)" [xlabel="dim SM = 12 = k", style="rounded,dashed"];
+  "E6 = Hessian 27 = trinification (3 generations)" -> "Standard Model (downward branch from E6)" [style=dashed, label="break"];
+  "omega = Eisenstein order-3 weld" [shape=note, fillcolor="#eef", style="filled,note"];
+  "G2 = Aut(O), keyed by Phi6=7" [shape=note, fillcolor="#eef", style="filled,note"];
+  "U4(2) = PSp(4,3) = 25920 (simple group)" [shape=note, fillcolor="#eef", style="filled,note"];
+}
