@@ -1,0 +1,21 @@
+{
+  "bt": "BT1804",
+  "title": "linear relation geometry",
+  "row_count": 18,
+  "double_sixes": 36,
+  "result_summary": [
+    "The two F2 left relations split the 18 Hesse tables into the two nonconcurrent classes: delta 1 and delta 2.",
+    "Both F2 halves are perfectly balanced across i, j, and s and each gives double-six column total 6 across all 36 checks.",
+    "The five F3 left relations are not explained by old/new line type, H27 vertical fibres, or a single Hesse coordinate family.",
+    "The count vector respects the binary split but fails four of the five ternary relations."
+  ],
+  "F2_relation_rows": {
+    "delta_1": ["T001","T012","T020","T100","T111","T122","T202","T210","T221"],
+    "delta_2": ["T002","T010","T021","T101","T112","T120","T200","T211","T222"]
+  },
+  "F2_count_sums": {"delta_1": 4908, "delta_2": 5072},
+  "F2_double_six_column_total": 6,
+  "F3_relation_count_sums": [4992,4790,5158,6658,9812],
+  "F3_relation_count_sums_mod3": [0,2,1,1,1],
+  "conclusion": "The visible binary geometry is the Hesse delta split; the ternary relations are genuine double-six/E6 constraints and expose the missing nonuniform fibre layer."
+}
