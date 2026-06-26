@@ -1,0 +1,27 @@
+{
+  "bt": "BT1823",
+  "title": "quartet W(E6) diagram spec",
+  "layers": [
+    "W(E6) image stabilizer",
+    "10 stabilizer slices of Hesse hinges",
+    "observed size-6 hinge slice",
+    "K4 edge set on {00,01,10,11}",
+    "oriented edge 00 -> 11",
+    "XZ diagonal / both-quadrature half-shift",
+    "T010:-2, T210:-2, T222:+2",
+    "F3 syndrome cancellation"
+  ],
+  "counts": {
+    "all_triples": 816,
+    "hesse_hinges": 54,
+    "stabilizer_slices": 10,
+    "observed_slice_hinges": 6,
+    "quartet_states": 4,
+    "oriented_quartet_edges": 12,
+    "observed_oriented_edges": 1
+  },
+  "mermaid": "flowchart TD\n  A[W(E6) image stabilizer] --> B[10 stabilizer slices]\n  B --> C[observed size-6 hinge slice]\n  C --> D[K4 edge set: C(4,2)=6]\n  D --> E[hidden quartet F2^2: 00,01,10,11]\n  E --> F[observed oriented edge: 00 -> 11]\n  F --> G[XZ diagonal / both-quadrature half-shift]\n  G --> H[T010:-2, T210:-2, T222:+2]\n  H --> I[F3 cancellation: [0,2,1,1,1]+[0,1,2,2,2]=0]",
+  "dot": "digraph quartet_law { rankdir=LR; W_E6 [label=\"W(E6) image stabilizer\"]; slices [label=\"10 stabilizer slices\"]; hinge [label=\"observed 6-hinge slice\"]; k4 [label=\"K4 edge set, C(4,2)=6\"]; square [label=\"F2^2 quartet: 00,01,10,11\"]; edge [label=\"oriented edge 00 -> 11\"]; op [label=\"XZ diagonal / both-quadrature half-shift\"]; corr [label=\"T010:-2, T210:-2, T222:+2\"]; syn [label=\"F3 cancellation\"]; W_E6 -> slices -> hinge -> k4 -> square -> edge -> op -> corr -> syn; }",
+  "caption": "The global Schlaefli/W(E6) symmetry selects a size-six Hesse-hinge slice, not a single defect. The slice is the edge set of a hidden four-state D4/GKP quartet. The observed table correction is the oriented diagonal edge 00 -> 11, corresponding to the local XZ half-shift and cancelling the ternary double-six syndrome.",
+  "verified": true
+}
