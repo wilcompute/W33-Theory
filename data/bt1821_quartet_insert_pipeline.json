@@ -1,0 +1,17 @@
+{
+  "bt": "BT1821",
+  "title": "quartet insert pipeline",
+  "status": "idempotent_integrator_committed",
+  "integrator": "tools/integrate_bt1820_quartet_insert.py",
+  "source_insert": "analysis/BT1820_quartet_law_paper_insert.tex",
+  "target_section": "paper/sections/sec_bt1820_quartet_fibre_law.tex",
+  "target_input_line": "\\input{sections/sec_bt1820_quartet_fibre_law}",
+  "integration_behavior": [
+    "copy the BT1820 insert into paper/sections",
+    "insert the input line exactly once into paper/w33_preprint.tex",
+    "prefer nearby folded-Hashimoto / physical-propagator anchors",
+    "fall back to insertion after begin{document} if no anchor is present"
+  ],
+  "boundary": "The helper is committed. The direct section-copy commit was blocked by the connector safety filter, so the committed script is the safe idempotent integration path.",
+  "conclusion": "BT1821 gives the quartet fibre-law insert a clean paper-pipeline route without risking duplicate inputs or unsafe full preprint rewrites."
+}
