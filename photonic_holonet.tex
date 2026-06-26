@@ -1213,6 +1213,28 @@ the combinatorial face of Kochen--Specker.
 \emph{Witnesses: \texttt{bt818}, \texttt{bt823}.}
 \end{theorem}
 
+\begin{theorem}[No distillation factory: the fuel is the code]
+In every standard fault-tolerant architecture the dominant cost is \emph{magic-state
+distillation} --- a separate factory producing $10^3$--$10^6$ raw magic states per
+logical non-Clifford gate, feeding a Clifford error-correction layer. Here that cost is
+not paid twice: \emph{matter $=$ magic}. The $36$ magic rays $=(q!)^2$, graded
+$8{+}24{+}4=\{2^q,f,\mu\}$, \emph{are} the matter shell --- the same $D_4$/GKP code
+register (the $[[240,81,4,3]]_3$ Steinberg module of \S\ref{sec:memory}) that protects
+the logical data. The fuel is therefore structural, and it is genuine magic: the qutrit
+Strange state $\lvert S\rangle=(\lvert1\rangle-\lvert2\rangle)/\sqrt2$ has mana
+$\log(5/3)$, the single-qutrit maximum (computed from the discrete Wigner function;
+stabilizer states have mana $0$). Its standing density is the contextual fraction
+$1/\Phi_4=1/10$, replenished by the same cycle that maintains the code; the
+Kochen--Specker deficit $\vartheta-\alpha=10-7=q=3$ is the magic per round; and because
+$\W$ has no ovoid the magic can never be gauged away. So the dominant cost of fault
+tolerance is reorganised into the matter$=$magic identity. \emph{And the fuel gauge is a
+cosmological constant}: the $\Phi_4=10$ that meters the magic density is the same
+$\Phi_4=q^2+1$ that factors the de Sitter selection cubic (\S\ref{sec:five-faces},
+Face~1) and the demonstrator readout (Face~6). The machine's computational fuel and the
+world's vacuum selection are one substrate constant.
+\emph{Witness: \path{analysis/w33_magic_economy.py}.}
+\end{theorem}
+
 %======================================================================
 \section{Memory, protection, and the immune system}
 \label{sec:memory}

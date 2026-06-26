@@ -1,0 +1,32 @@
+{
+  "split": {
+    "stabilizer": 4,
+    "magic": 36,
+    "magic_is": "(q!)^2",
+    "grades": {
+      "deep 8 = 2^q": 8,
+      "mid 24 = f": 24,
+      "shallow 4 = mu": 4
+    }
+  },
+  "mana": {
+    "stabilizer": 0.0,
+    "strange_state": 0.510826,
+    "strange_is": "log(5/3) (max single-qutrit mana)"
+  },
+  "ks_deficit": {
+    "theta_Phi4": 10,
+    "alpha_Phi6": 7,
+    "deficit": "q = 3",
+    "contextual_fraction": "1/Phi_4 = 1/10"
+  },
+  "economy": {
+    "standard": "code overhead x magic-distillation overhead (distillation dominant)",
+    "substrate": "matter=magic: no factory; the code IS the fuel; density 1/Phi_4=1/10",
+    "claim": "the dominant cost of FT (magic distillation) is reorganised, not paid twice"
+  },
+  "summary": "the architecture has NO magic-distillation factory: matter = magic. Standard FT pays (code) x (distillation), distillation dominant (10^3-10^6 magic states per non-Clifford gate). In W(3,3), 36/40 rays are intrinsically magic (36=(q!)^2, grades 8+24+4={2^q,f,mu}), the matter shell (D_4/GKP code) IS the magic sector, and the magic is real (qutrit Strange-state mana = log(5/3), from the Wigner function). The contextual fraction 1/Phi_4=1/10 is the standing magic density; the KS deficit theta-alpha = 10-7 = q = 3 is the magic per round; W(3,3) has no ovoid so the magic can't be gauged away. The dominant cost of FT (magic distillation) is reorganised into the matter=magic identity -- the code is the fuel. Honest: mana exact; the no-factory claim is structural (matter=magic + Howard sufficiency), not a full FT resource accounting.",
+  "sources": [
+    "matter=magic, 4+36 split, 36=(q!)^2, grades 8+24+4, contextual fraction 1/10, theta=10/alpha=7 (sec:fuel, bt822/bt823, w33_contextuality_simulation.py); qutrit Wigner function + mana (Gross 2006; Veitch-Ferrie-Gross-Emerson; Howard-Wallman-Veitch-Emerson contextuality=magic); Strange-state mana log(5/3); magic-state distillation dominant FT cost (Bravyi-Kitaev; Litinski); w33_gkp_lattice_architecture.py, w33_contextuality_is_the_fuel.py."
+  ]
+}
