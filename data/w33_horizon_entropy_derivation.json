@@ -1,0 +1,24 @@
+{
+  "exact_reduction": {
+    "epsilon": "q/(4N^2) = 1/4800",
+    "S_dS": 2329000000000.0,
+    "S_dS_form": "(4N^2/q) e^(N/q) = (16 beat^2/q) e^(N/q)",
+    "H_over_MPl": 5.823e-06,
+    "H_inf_GeV": 14180000000000.0
+  },
+  "holographic_negative": {
+    "f": 24,
+    "S_dS_over_f": 97030000000.0,
+    "ln_S_dS_over_f": 25.3,
+    "verdict": "bulk inflationary horizon entropy != boundary central charge f=24 x integer"
+  },
+  "remains": {
+    "V_quarter_GeV": 7733000000000000.0,
+    "M_GUT_GeV": 1.112e+16,
+    "reading": "exponent origin = GUT-scale inflation (V^1/4 ~ M_Pl e^-Phi_6), not f=24"
+  },
+  "summary": "pushing the amplitude law to the entropy -- exact reduction + honest negative. Granting A_s = e^-(N/q) and Starobinsky epsilon = q/(4N^2), the exact law A_s = 1/(epsilon S_dS) DERIVES the inflationary horizon entropy S_dS = (4N^2/q) e^(N/q) ~ 2.3x10^12 (prefactor 16 beat^2/q, cyclotomic) and the Hubble scale H_inf/M_Pl = (pi sqrt(2q)/N) e^(-N/2q) ~ 5.8x10^-6 (H_inf ~ 1.4x10^13 GeV), purely from N, q. HONEST NEGATIVE: the holographic shortcut -- S_dS = boundary central charge f = 24 x integer-exponential -- FAILS (S_dS/f ~ 10^11, ln = 25.3, not a clean integer; ln S_dS = 28.5 also not), so the bulk inflationary horizon entropy and the boundary f=24 are distinct objects. The remaining input is the single exponential e^(N/q), equivalently H_inf exponentially below M_Pl, which traces to the GUT-scale inflation V^(1/4) ~ M_Pl e^-Phi_6 (Pass 9), NOT to a boundary-entropy identity. So the exponent is reduced to the gravity-to-GUT gap, derived in N and q, with the holographic f=24 route honestly closed off. A partial close with a clear negative.",
+  "sources": [
+    "A_s = 1/(eps S_dS), (A_s)^q = e^-N (w33_amplitude_entropy.py); Starobinsky eps = q/(4N^2), r=12/N^2 (w33_starobinsky.py); de Sitter entropy S_dS = 8 pi^2 (M_Pl/H)^2; boundary central charge f=c=24 (gravity dictionary); V^(1/4) ~ M_GUT = M_Pl e^-Phi_6 (w33_complete_primordial_spectrum.py, w33_hierarchy_derivation.py)."
+  ]
+}

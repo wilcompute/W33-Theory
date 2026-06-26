@@ -1,0 +1,102 @@
+{
+  "audit": [
+    {
+      "quantity": "beat",
+      "routes": {
+        "Phi3+Phi4+Phi6": "30",
+        "q*Phi4": "30",
+        "h(E8)": "30",
+        "600/20": "30"
+      },
+      "agree": true,
+      "value": "30"
+    },
+    {
+      "quantity": "N",
+      "routes": {
+        "2*beat": "60",
+        "q*(Phi3+Phi6)": "60"
+      },
+      "agree": true,
+      "value": "60"
+    },
+    {
+      "quantity": "1-n_s",
+      "routes": {
+        "1/beat": "1/30",
+        "2/N": "1/30"
+      },
+      "agree": true,
+      "value": "1/30"
+    },
+    {
+      "quantity": "r",
+      "routes": {
+        "1/(Phi4 beat)": "1/300",
+        "12/N^2": "1/300"
+      },
+      "agree": true,
+      "value": "1/300"
+    },
+    {
+      "quantity": "n_t",
+      "routes": {
+        "-1/(2^q Phi4 beat)": "-1/2400",
+        "-r/8": "-1/2400",
+        "-3/(2N^2)": "-1/2400"
+      },
+      "agree": true,
+      "value": "-1/2400"
+    },
+    {
+      "quantity": "running",
+      "routes": {
+        "-1/(2 beat^2)": "-1/1800",
+        "-2/N^2": "-1/1800"
+      },
+      "agree": true,
+      "value": "-1/1800"
+    },
+    {
+      "quantity": "epsilon",
+      "routes": {
+        "r/16": "1/4800",
+        "q/(4N^2)": "1/4800"
+      },
+      "agree": true,
+      "value": "1/4800"
+    },
+    {
+      "quantity": "ln(MPl/MEW)",
+      "routes": {
+        "q*Phi3": "39",
+        "N-q*Phi6": "39",
+        "Phi6+2^q*mu": "39"
+      },
+      "agree": true,
+      "value": "39"
+    },
+    {
+      "quantity": "A_s exponent",
+      "routes": {
+        "Phi3+Phi6": "20",
+        "N/q": "20",
+        "v/2": "20",
+        "600/beat": "20"
+      },
+      "agree": true,
+      "value": "20"
+    }
+  ],
+  "internal_contradiction": false,
+  "external_frontier": {
+    "n_s_substrate": 0.9667,
+    "planck": "0.9649 +/- 0.0042",
+    "sigma": 0.42,
+    "note": "tightest external point; CMB-S4 tests at ~1 sigma"
+  },
+  "summary": "adversarial audit hunting an internal contradiction in the cosmological tower (Passes 6-10): nine over-determined quantities -- beat (Phi3+Phi4+Phi6 | q Phi4 | h(E8) | 600/20 = 30), N (2 beat | q(Phi3+Phi6) = 60), 1-n_s (1/beat | 2/N = 1/30), r (1/(Phi4 beat) | 12/N^2 = 1/300), n_t (-1/(2^q Phi4 beat) | -r/8 | -3/2N^2 = -1/2400), running (-1/(2 beat^2) | -2/N^2 = -1/1800), epsilon (r/16 | q/4N^2 = 1/4800), ln(M_Pl/M_EW) (q Phi3 | N-q Phi6 | Phi6+2^q mu = 39), A_s exponent (Phi3+Phi6 | N/q | v/2 | 600/beat = 20) -- each via 2-4 independent routes, ALL agree: NO internal contradiction. The agreements are non-trivial (e.g. r=1/(Phi4 beat)=12/N^2 only because N=2 beat and Phi4 beat=N^2/12=300, which the data could have broken). Tightest EXTERNAL point: n_s = 1-1/30 = 0.9667 vs Planck 0.9649 +/- 0.0042 (0.42 sigma high), consistent, the sharpest near-term discriminator (CMB-S4 sigma(n_s)~0.002 tests at ~1 sigma); r, running, n_t, A_s comfortable. The tower is certified internally CONSISTENT (over-determined, coherent, not self-refuting). HONEST: this does NOT prove it true (integers could be coincidence); it proves the system self-consistent and over-determined, so a single off measurement (n_s, r, n_t, running off its locked value) breaks it. The stress-test passes.",
+  "sources": [
+    "all cosmological passes: beat/N (w33_efold_tick.py), 1-n_s/r/n_t/running (w33_tensor_clock.py, w33_overdetermined_clock.py), Starobinsky r=12/N^2, eps=q/4N^2 (w33_starobinsky.py), hierarchy q Phi_3 (w33_hierarchy_derivation.py), A_s exponent (w33_complete_primordial_spectrum.py); Planck 2018 n_s=0.9649+/-0.0042; CMB-S4 sigma(n_s)~0.002 forecast."
+  ]
+}

@@ -6365,6 +6365,46 @@ running; the $\{20,39\}$ unification is exact partition arithmetic with the expl
 $V(\phi)$ the next step. The robust result: the absolute-scale residue is now exactly one
 units choice, with zero free dimensionless parameters.
 
+\subsection{Pass 11 --- the potential identified (Starobinsky $R^2$), the entropy derived, the tower audited}
+\label{sec:capstone-eleven}
+
+The implicit potential becomes explicit, the entropy is derived, and the whole tower is
+stress-tested for contradiction.
+
+\emph{The inflaton is the Starobinsky scalaron.} The substrate \emph{is} Starobinsky
+($R^2$) inflation with $N=2\,\mathrm{beat}=60$: all four observables coincide \emph{exactly}
+with the model at $N=60$ --- $1-n_s=2/N=1/30$, $r=12/N^2=1/300$, $n_t=-3/2N^2=-1/2400$,
+$dn_s/d\ln k=-2/N^2=-1/1800$ --- the cyclotomic forms equalling the Starobinsky values
+because $\mathrm{beat}=q\Phi_4$ and $N=2\,\mathrm{beat}$ give $\Phi_4\mathrm{beat}=N^2/12=300$.
+The potential is the plateau $V=V_0(1-e^{-\sqrt{2/3}\,\phi/M_{\rm Pl}})^2$ with a
+\emph{super-Planckian} excursion $\Delta\phi\sim5.4\,M_{\rm Pl}$ (excluding small-field
+models) and $V_0^{1/4}\sim10^{16}$\,GeV. Crucially, Starobinsky inflation is $f(R)=R+R^2/6M^2$
+\emph{gravity} --- the inflaton is the scalaron of curvature itself --- so the substrate's
+inflaton is geometric, exactly machine $=$ world. (Witness: \path{analysis/w33_starobinsky.py}.)
+
+\emph{The horizon entropy, derived (with an honest negative).} Granting $A_s=e^{-N/q}$ and
+the Starobinsky $\epsilon=q/4N^2$, the exact law $A_s=1/(\epsilon S_{\rm dS})$ derives both
+$S_{\rm dS}=(4N^2/q)e^{N/q}\sim2.3\times10^{12}$ and $H_{\rm inf}/M_{\rm Pl}=(\pi\sqrt{2q}/N)
+e^{-N/2q}\sim5.8\times10^{-6}$ ($H_{\rm inf}\sim1.4\times10^{13}$\,GeV) purely from $N,q$.
+But the holographic shortcut --- identifying this bulk entropy with the boundary central
+charge $f=24$ --- \emph{fails} ($S_{\rm dS}/f\sim10^{11}$, not a clean integer); the
+exponent traces instead to the GUT-scale inflation $V^{1/4}\sim M_{\rm Pl}e^{-\Phi_6}$.
+(Witness: \path{analysis/w33_horizon_entropy_derivation.py}.)
+
+\emph{The tower is internally consistent.} An adversarial audit computes nine
+over-determined quantities (beat, $N$, $1-n_s$, $r$, $n_t$, running, $\epsilon$, the
+Planck/EW exponent, the $A_s$ exponent) by $2$--$4$ independent routes each: all agree, no
+internal contradiction --- the agreements non-trivial (e.g.\ $r=1/(\Phi_4\mathrm{beat})$
+equals $12/N^2$ only because $\Phi_4\mathrm{beat}=N^2/12$). The tightest \emph{external}
+point is $n_s=0.9667$ versus Planck $0.9649\pm0.0042$ ($0.42\sigma$), the sharpest
+near-term discriminator (CMB-S4 tests it at $\sim1\sigma$). (Witness:
+\path{analysis/w33_consistency_audit.py}.) \emph{Honest scope:} the four-observable equality
+with Starobinsky-at-$N=60$ is exact, and $f(R)=R^2$ is the natural action-level reading
+(motivated, not derived from the substrate action); the entropy reduction is exact with the
+$e^{N/q}$ origin tied to GUT-scale inflation (holographic $f=24$ route a clear negative);
+the audit certifies self-consistency (not truth --- the integers could be coincidence), so a
+single off measurement breaks it.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
