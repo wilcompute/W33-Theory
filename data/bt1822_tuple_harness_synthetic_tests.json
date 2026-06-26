@@ -1,0 +1,34 @@
+{
+  "bt": "BT1822",
+  "title": "tuple harness synthetic tests",
+  "status": "synthetic_fixtures_only_not_true_BT1781_data",
+  "fixtures": {
+    "synthetic_positive_counts_only": {
+      "total": 9980,
+      "matches_expected": true,
+      "observed_F2": [0,0],
+      "observed_F3": [0,2,1,1,1],
+      "adjusted_F2": [0,0],
+      "adjusted_F3": [0,0,0,0,0],
+      "passes": true
+    },
+    "synthetic_negative_wrong_count": {
+      "total": 9981,
+      "matches_expected": false,
+      "passes": false
+    },
+    "synthetic_negative_wrong_syndrome": {
+      "total": 9982,
+      "matches_expected": false,
+      "passes": false
+    }
+  },
+  "checks": {
+    "positive_passes": true,
+    "negative_wrong_count_fails": true,
+    "negative_wrong_syndrome_fails": true
+  },
+  "verified": true,
+  "boundary": "These fixtures validate BT1819 harness behavior only. They are synthetic counts, not materialized BT1781 tuple lists.",
+  "conclusion": "BT1822 gives the tuple harness a pass/fail self-test layer without smuggling in fake tuple data."
+}
