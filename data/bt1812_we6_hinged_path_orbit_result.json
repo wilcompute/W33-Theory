@@ -1,0 +1,25 @@
+{
+  "bt": "BT1812",
+  "title": "W(E6) hinged-path orbit result",
+  "schlaefli_aut_order": 51840,
+  "bt1795_image_size": 18,
+  "bt1795_image_stabilizer_size": 36,
+  "defect_support": [10,22,44],
+  "defect_table_map": {"T010":10, "T210":22, "T222":44},
+  "defect_orbit_size_under_image_stabilizer": 36,
+  "defect_orbit_intersection_with_hesse_hinges": [
+    [5,10,41],
+    [7,34,40],
+    [10,22,44],
+    [12,34,42],
+    [18,40,42],
+    [30,41,44]
+  ],
+  "hesse_hinge_class_size": 54,
+  "hinge_slices_under_image_stabilizer": {
+    "slice_count": 10,
+    "slice_size_histogram": {"6":8, "3":2},
+    "full_orbit_size_histogram_for_slice_reps": {"36":8, "18":2}
+  },
+  "conclusion": "W(E6) does not fix the specific defect uniquely. It distinguishes a 6-hinge slice containing it. Since 6=C(4,2), this points to the hidden 4-state quartet: the defect is one quartet edge/oriented pair inside a K4 fibre."
+}
