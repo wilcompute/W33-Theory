@@ -1,0 +1,26 @@
+{
+  "ladder": {
+    "ln_MPl_MGUT": 7.0,
+    "ln_MPl_MGUT_form": "Phi_6 = 7",
+    "ln_MGUT_MEW": 32.0,
+    "ln_MGUT_MEW_form": "q Phi_3 - Phi_6 = 32",
+    "ln_MPl_MEW": 39.0,
+    "ln_MPl_MEW_form": "q Phi_3 = 39"
+  },
+  "GUT_scale_derived": {
+    "formula": "M_GUT = M_Pl e^(-Phi_6)",
+    "value_GeV": 1.112e+16,
+    "corpus_trinification_GeV": 1.11e+16,
+    "agree": true
+  },
+  "decompositions": {
+    "qPhi3": 39,
+    "physical_split": "Phi_6 + 2^q*mu = 7 + 32",
+    "desert_is_2q_mu": "32 = 2^q*mu = 8*4",
+    "alt_split": "q^2 + beat = 9 + 30"
+  },
+  "summary": "partial DERIVATION of the hierarchy exponent: the Planck->GUT gap is exactly Phi_6 = 7 e-folds, so M_GUT = M_Pl e^(-Phi_6) ~ 1.1x10^16 GeV -- the corpus's independently-derived trinification scale -- deriving the GUT scale from gravity by a substrate integer instead of positing it. The total ln(M_Pl/M_EW) = q Phi_3 = 39 then forces the GUT desert = q Phi_3 - Phi_6 = 32 = 2^q mu (consistent with ln(M_GUT/M_EW)); equivalently 39 = q^2 + beat = 9 + 30. So the gravity -> GUT -> electroweak ladder threads substrate integers: gravity --Phi_6--> GUT --2^q mu--> electroweak. HONEST: the Phi_6 step (GUT scale from gravity, M_GUT = M_Pl e^-Phi_6) is the genuine upgrade from Pass 8's pure match; the total q Phi_3 is the prior result; the desert follows by arithmetic and is consistent with the trinification ladder but its full dynamics (two-loop gauge running, sin^2 theta_W = 3/8) is deferred to the corpus proton-lifetime work -- a PARTIAL derivation that ties the GUT scale to gravity.",
+  "sources": [
+    "Pass 8 ln(M_Pl/M_EW)=q Phi_3=39 (w33_hierarchy_exponential.py); trinification M_GUT~10^16, two-step E6->SU(3)^3->SM, proton lifetime 4.6e35 yr (w33_proton_lifetime_gut_scale.py, w33_trinification_two_step); sin^2 theta_W=3/8 at GUT (w33_trinification_unification.py); M_Pl=1.22e19 GeV."
+  ]
+}

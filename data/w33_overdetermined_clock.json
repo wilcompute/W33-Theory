@@ -1,0 +1,39 @@
+{
+  "running_relation": {
+    "from_N": "-1/1800",
+    "from_tilt": "-1/1800",
+    "substrate": "-1/1800",
+    "p_equals": 2,
+    "form": "dn_s/dlnk = -2/N^2 = -(1-n_s)^2/2 = -1/1800"
+  },
+  "consistency_relations": {
+    "I_tensor": {
+      "relation": "r = -8 n_t",
+      "holds": true,
+      "because": "2^q = 8"
+    },
+    "II_running": {
+      "relation": "dn_s/dlnk = -2/N^2",
+      "holds": true,
+      "because": "N=2 beat, 1-n_s=1/beat"
+    }
+  },
+  "counting": {
+    "observables": {
+      "1-n_s": "1/30",
+      "r": "1/300",
+      "n_t": "-1/2400",
+      "dn_s/dlnk": "-1/1800"
+    },
+    "inputs": {
+      "beat": 30,
+      "Phi_4": 10
+    },
+    "relations": 2,
+    "verdict": "4 observables, 2 inputs, 2 consistency constraints -> over-determined/falsifiable"
+  },
+  "summary": "the single clock is OVER-DETERMINED: four inflationary observables (1-n_s=1/30, r=1/300, n_t=-1/2400, running=-1/1800) flow from two substrate inputs (beat=30, Phi_4=10) and satisfy TWO independent slow-roll consistency relations -- (I) r=-8 n_t (holds because 2^q=8) and (II) dn_s/dlnk=-2/N^2=-(1-n_s)^2/2 (holds because N=2 beat=60 and 1-n_s=2/N, i.e. p=N(1-n_s)=2, giving the coefficient 1/2). Both are standard single-field identities; the substrate satisfies both with its clock integers, so scalars, tensors, AND the running read beat=30. Counting: 4 observables from 2 inputs linked by 2 consistency constraints = an over-determined, falsifiable system -- the data could violate either relation (independent n_t off -r/8, or running off -2/N^2) but won't if the single de Sitter clock is real, far harder to fake than a single tuned coincidence. Honest: (I),(II) are standard slow-roll identities and p=2 is the substrate's value; new is showing BOTH close on the same clock with substrate coefficients and the over-determination counting. Assumes single-field slow roll.",
+  "sources": [
+    "first relation r=-8 n_t (w33_tensor_clock.py); single clock N=2 beat=60, 1-n_s=1/beat (w33_efold_tick.py); running -1/1800 (w33_measurable_scorecard_2026.py); slow-roll consistency and running dn_s/dlnk=-2/N^2 for 1-n_s=2/N (Liddle-Lyth, Lyth-Riotto)."
+  ]
+}

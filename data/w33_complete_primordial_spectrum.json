@@ -1,0 +1,50 @@
+{
+  "amplitude": {
+    "ln_inv_As_observed": 19.982,
+    "exponent": 20,
+    "exponent_roots": "Phi_3+Phi_6 = N/q = v/2 = 600/beat = 20 (BC ring count)",
+    "A_s_substrate": 2.061e-09,
+    "A_s_observed": 2.099e-09,
+    "ln1010_substrate": 3.026,
+    "ln1010_observed": "3.044 +/- 0.014",
+    "sigma": 1.3
+  },
+  "complete_spectrum": {
+    "A_s": {
+      "form": "e^-(Phi3+Phi6)=e^-20",
+      "value": 2.06115e-09
+    },
+    "1-n_s": {
+      "form": "1/beat=1/30",
+      "value": 0.0333333
+    },
+    "r": {
+      "form": "1/(Phi4*beat)=1/300",
+      "value": 0.00333333
+    },
+    "n_t": {
+      "form": "-1/(2^q*Phi4*beat)=-1/2400",
+      "value": -0.000416667
+    },
+    "dn_s/dlnk": {
+      "form": "-1/(2*beat^2)=-1/1800",
+      "value": -0.000555556
+    }
+  },
+  "inputs": {
+    "q": 3,
+    "beat": 30,
+    "Phi_4": 10,
+    "Phi_3+Phi_6": 20
+  },
+  "scale_residue": {
+    "epsilon": "r/16 = 1/4800",
+    "V_quarter_GeV": 3.874e+16,
+    "M_GUT_GeV": 1.112e+16,
+    "conclusion": "inflationary energy scale ~ GUT scale = M_Pl e^-Phi_6; inflaton energy removed from the dynamical residue"
+  },
+  "summary": "BREAKTHROUGH: the substrate writes the COMPLETE primordial spectrum including its absolute normalisation. The scalar amplitude A_s = e^-(Phi_3+Phi_6) = e^-20 = 2.06x10^-9 matches Planck's 2.10x10^-9 to 1.3 sigma (ln(10^10 A_s): substrate 3.026 vs observed 3.044 +/- 0.014; 20 reproduces ln(1/A_s)=19.98 to <0.1%), with exponent 20 = Phi_3+Phi_6 = N/q = v/2 = 600/beat (the BC ring count). This completes the five-observable spectrum from substrate integers {q=3, beat=30, Phi_4=10, Phi_3+Phi_6=20}: A_s=e^-20, 1-n_s=1/30, r=1/300, n_t=-1/2400, running=-1/1800 -- no continuous parameter fit. The amplitude fixes the inflationary energy scale V^(1/4)=(24 pi^2 eps A_s)^(1/4) M_Pl ~ 3.9x10^16 GeV at the GUT scale M_GUT = M_Pl e^-Phi_6, removing the inflaton's energy from the long-standing 'absolute scale' residue (only an overall mass unit, e.g. M_Pl, remains). The last major dimensionless cosmological number is a substrate integer in the exponent. HONEST: an integer-level match (20 nails ln(1/A_s) to <0.1%, 1.3 sigma on ln(10^10 A_s)); the deep reason for e^-20 -- plausibly the de Sitter horizon mode count/entropy or e-folds-per-q-sector N/q -- is conjectural and the next derivation target. A real break into the scale residue, flagged as a match whose dynamical origin is open.",
+  "sources": [
+    "Planck 2018 ln(10^10 A_s)=3.044+/-0.014 (A_s=2.1e-9); complete spectrum (w33_tensor_clock.py, w33_overdetermined_clock.py, w33_efold_tick.py); 600-cell BC rings 600/30=20 (w33_bc_helix_omega2.py); inflation V^(1/4)=(24 pi^2 eps A_s)^(1/4) M_Pl; M_GUT=M_Pl e^-Phi_6 (w33_hierarchy_derivation.py); eps=r/16=1/4800."
+  ]
+}

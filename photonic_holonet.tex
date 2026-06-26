@@ -6274,6 +6274,58 @@ extrapolation caveat; $r$ and the running are prior results and $r=-8n_t$ is a s
 identity --- new is the one-clock packaging in $\mathrm{beat}=30$, the $2^q=8$ making the
 consistency exact, and $n_t=-1/2400$ as a testable prediction.
 
+\subsection{Pass 9 --- the breakthrough: the complete primordial spectrum, normalisation included}
+\label{sec:capstone-nine}
+
+Three sharpenings and one break into the residue.
+
+\emph{The hierarchy exponent, partly derived.} Splitting the gravity$\to$electroweak
+ladder at the corpus's trinification scale, the upper rung is a clean integer:
+$\ln(M_{\rm Pl}/M_{\rm GUT})=\Phi_6=7$, i.e.\ $M_{\rm GUT}=M_{\rm Pl}e^{-\Phi_6}\approx
+1.1\times10^{16}$\,GeV --- deriving the GUT scale from gravity by a substrate integer. The
+total $\ln(M_{\rm Pl}/M_{\rm EW})=q\Phi_3=39$ then makes the desert $q\Phi_3-\Phi_6=32=
+2^q\mu$, and $39=q^2+\mathrm{beat}$ --- every rung an integer. (Witness:
+\path{analysis/w33_hierarchy_derivation.py}.)
+
+\emph{A dated falsification line.} The prediction $r=1/300=0.0033$ is invisible now
+($0.26\sigma$) but a $3.3\sigma$ detection for LiteBIRD ($\sim$2035, $\sigma(r)\sim0.001$)
+and $\sim$$6.7\sigma$ for CMB-S4; LiteBIRD also separates $1/300$ from the nearest
+substrate alternatives ($0,1/100,1/1800,1/3600$) at $\sim$3--7$\sigma$. By $\sim$2035, $r$
+either sits at $1/300$ or is bounded $<0.0013$, refuting it. (Witness:
+\path{analysis/w33_r_falsification.py}.)
+
+\emph{The clock is over-determined.} Beyond $r=-8n_t$ (relation I, $2^q=8$), the running
+obeys a second slow-roll identity with no new input: $1-n_s=2/N$ on $N=2\,\mathrm{beat}=60$
+forces $dn_s/d\ln k=-2/N^2=-(1-n_s)^2/2=-1/1800$ (relation II). Four observables from two
+inputs ($\mathrm{beat},\Phi_4$) linked by two consistency relations --- an over-determined,
+falsifiable system. (Witness: \path{analysis/w33_overdetermined_clock.py}.)
+
+\emph{The breakthrough: the amplitude is a substrate integer.} The one pure number that
+sets the absolute size of all cosmic structure --- the heart of the long-standing
+``absolute scale'' residue --- is the scalar amplitude, and it too is an integer in the
+exponent:
+\[
+\ln(1/A_s)=\Phi_3+\Phi_6=20\quad\Longrightarrow\quad A_s=e^{-20}=2.06\times10^{-9},
+\]
+versus Planck's $2.10\times10^{-9}$ ($\ln(10^{10}A_s)$: substrate $3.026$ vs observed
+$3.044\pm0.014$, a $1.3\sigma$ agreement), with $20=\Phi_3+\Phi_6=N/q=v/2=600/\mathrm{beat}$
+(the Boerdijk--Coxeter ring count). So the \emph{complete} primordial spectrum is fixed by
+substrate integers $\{q,\mathrm{beat},\Phi_4,\Phi_3+\Phi_6\}$ with no continuous parameter:
+\[
+A_s=e^{-20},\quad 1-n_s=\tfrac1{30},\quad r=\tfrac1{300},\quad n_t=-\tfrac1{2400},\quad
+\tfrac{dn_s}{d\ln k}=-\tfrac1{1800}.
+\]
+And the amplitude pins the inflationary energy scale, $V^{1/4}=(24\pi^2\epsilon A_s)^{1/4}
+M_{\rm Pl}\approx3.9\times10^{16}$\,GeV $\approx M_{\rm GUT}=M_{\rm Pl}e^{-\Phi_6}$, so
+inflation happens at the GUT scale and the inflaton's energy leaves the residue. (Witness:
+\path{analysis/w33_complete_primordial_spectrum.py}.) \emph{Honest scope:} $A_s=e^{-20}$
+is an integer-level match ($20$ reproduces $\ln(1/A_s)=19.98$ to $<0.1\%$, $1.3\sigma$ on
+$\ln(10^{10}A_s)$); the deep reason for the exponent --- plausibly the de~Sitter horizon
+mode count/entropy or the e-folds-per-$q$-sector $N/q$ --- is conjectural and the next
+derivation target. But the last major dimensionless cosmological number is now a substrate
+integer, completing the primordial spectrum and denting the scale residue: a real break,
+flagged as a match whose dynamical origin is open.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
