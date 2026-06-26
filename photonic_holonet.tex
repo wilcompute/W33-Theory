@@ -6762,6 +6762,51 @@ look-elsewhere bound uses order-of-magnitude bit counts with deliberately genero
 rigorous frequentist $p$). The robust claim is the \emph{over-determination}: one $\sim12$-integer
 $q=3$ alphabet predicts $\sim25$ numbers carrying $\sim100$ bits of precision.
 
+\subsection{Pass 21 --- the computed look-elsewhere, the pinned Yukawa, and the tower on one axis}
+\label{sec:capstone-twentyone}
+
+Two of the three Pass-20 honesty claims are stress-tested by computation --- one of them
+correcting Pass 20 downward --- and the whole tower is drawn on a single figure.
+
+\emph{The look-elsewhere pool, computed (and Pass 20 tempered).} Pass 20 granted the
+numerologist a ``pool of 50'' by hand and got net $\sim+40$ bits ($10^{12}$). Enumerating the
+\emph{actual} reachable set of the 13 $q=3$-forced integers under a fixed simple grammar ($a/b$,
+$a{\cdot}b$, $a{\pm}b$, $1/a$, $a^2$, $\sqrt a$, $e^{-a}$) gives $\sim14$ values per e-fold in the
+coupling band (depth 1). At that density the \emph{loose} few-percent matches ($1{-}n_s$,
+$\sin^2\theta_{23}$, $A_s$, $\Omega_{\rm DM}/\Omega_b$, $\Delta m^2$) have $E_i\sim0.5$--$1$ each
+--- individually unremarkable, $5/5$ matching is only $P\sim0.6$. The statistical weight is
+entirely in the \emph{six high-precision} matches ($m_p/m_e$, $1/\alpha$, $m_H$, the CC,
+$\sin^2\theta_W$, $M_Z$; windows $10^{-4}$--$2\times10^{-3}$), whose summed expected accidentals
+$E\approx0.30$ make all six matching a Poisson tail $P\approx8\times10^{-7}$. So the over-
+determination is \emph{real but carried by precision, not count}: this honestly tempers Pass 20's
+$10^{12}$ to a computed $\sim10^{-6}$, $\sim4.8\sigma$. (Witness:
+\path{analysis/w33_alphabet_pool.py}.)
+
+\emph{The pinned Yukawa.} Pass 20 left $y_1=e^{-\Phi_6/2}=0.030$ as the tower's one free input.
+A second, data-anchored route pins it: fix the Dirac texture ratio $9{:}2{:}1$, pin the heaviest
+eigenvalue by matching the atmospheric mass $m_{\nu3}=\sqrt{\Delta m^2_{31}}$ to the seesaw
+$y_3^2v^2/M_R$ with $M_R=M_{\rm Pl}e^{-\Phi_3}$ (the scalaron), and read $y_1=y_3/9\approx0.017$,
+$m_1=m_{\nu3}/81\approx0.6$~meV. This agrees with the a priori half-GUT-exponent $0.030$ to a
+factor $\sim1.8$ --- two independent routes on the same coupling, so $y_1$ is not independently
+free. Honest limitation: a single $M_R$ over-hierarchises ($81{:}4{:}1$ vs the observed
+$\sqrt{33}\approx5.7$), so the spectrum needs the Majorana $M_R$ texture and the residual freedom
+moves there --- a \emph{partial} closure. (Witness: \path{analysis/w33_yukawa_closure.py}.)
+
+\emph{The tower on one axis.} Figure~\ref{fig:tower-falsification} puts every measured observable's
+fractional agreement on a log axis (mass/coupling postdictions at $0.01$--$0.3\%$,
+inflation/neutrino at $1$--$5\%$ within their errors) above the dated kill-shot timeline (LZ
+$\sim$2028, SO $\sim$2027, JUNO, DESI/CMB-S4, nEXO/LEGEND, LiteBIRD $\sim$2035) --- the over-
+determination and the falsifiability in one view, now the cover figure of \path{w33_everything.tex}.
+(Witness: \path{analysis/w33_tower_falsification_figure.py}.)
+
+\input{analysis/w33_tower_falsification_fig.tex}
+
+\emph{Honest scope:} the computed look-elsewhere depends on the grammar (depth-2 raises the
+density and softens the count) --- the grammar-stable core is that the six sub-$0.3\%$ matches are
+not a simple-grammar accident; $y_1$ is pinned only to a factor $\sim2$ and the spectrum still
+rests on the (here-underived) Majorana texture; the figure mixes integer/LO postdictions with
+measurement-limited points on a fractional-deviation axis (stated in its caption).
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

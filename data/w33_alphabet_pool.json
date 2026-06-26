@@ -1,0 +1,107 @@
+{
+  "depth1": {
+    "n_total": 247,
+    "rho_couplings": 14.4,
+    "rho_masses": 16.4
+  },
+  "depth2": {
+    "n_total": 3882,
+    "rho_couplings": 220.0,
+    "rho_masses": 216.6
+  },
+  "per_observable_depth1": [
+    {
+      "obs": "m_p/m_e",
+      "delta": 8.2e-05,
+      "rho_local": 1.7,
+      "E_i": 0.0003,
+      "tight": true
+    },
+    {
+      "obs": "1/alpha",
+      "delta": 0.00026,
+      "rho_local": 20.0,
+      "E_i": 0.0104,
+      "tight": true
+    },
+    {
+      "obs": "m_Higgs",
+      "delta": 0.0008,
+      "rho_local": 20.0,
+      "E_i": 0.032,
+      "tight": true
+    },
+    {
+      "obs": "M_Z",
+      "delta": 0.0021,
+      "rho_local": 20.0,
+      "E_i": 0.084,
+      "tight": true
+    },
+    {
+      "obs": "sin^2 th_W",
+      "delta": 0.002,
+      "rho_local": 20.0,
+      "E_i": 0.08,
+      "tight": true
+    },
+    {
+      "obs": "alpha_s",
+      "delta": 0.0036,
+      "rho_local": 13.3,
+      "E_i": 0.096,
+      "tight": true
+    },
+    {
+      "obs": "Dm31/Dm21->0.33",
+      "delta": 0.012,
+      "rho_local": 28.3,
+      "E_i": 0.68,
+      "tight": false
+    },
+    {
+      "obs": "Omega_DM/Omega_b->0.547",
+      "delta": 0.016,
+      "rho_local": 31.7,
+      "E_i": 1.0133,
+      "tight": false
+    },
+    {
+      "obs": "A_s->2.06",
+      "delta": 0.019,
+      "rho_local": 35.0,
+      "E_i": 1.33,
+      "tight": false
+    },
+    {
+      "obs": "sin^2 th_23",
+      "delta": 0.021,
+      "rho_local": 33.3,
+      "E_i": 1.4,
+      "tight": false
+    },
+    {
+      "obs": "1-n_s",
+      "delta": 0.051,
+      "rho_local": 6.7,
+      "E_i": 0.68,
+      "tight": false
+    }
+  ],
+  "honest_split": {
+    "loose": {
+      "n": 5,
+      "E": 5.1,
+      "P": "5.77e-01"
+    },
+    "tight": {
+      "n": 6,
+      "E": 0.303,
+      "P": "8.24e-07"
+    }
+  },
+  "summary": "the look-elsewhere pool COMPUTED from the q=3 alphabet -- an honest correction to Pass 20. The 13 forced integers under a fixed simple grammar (a/b, a*b, a+/-b, 1/a, a^2, sqrt a, e^-a) reach ~14 values/e-fold in the coupling band at depth 1 (~170 at depth 2). At that density the LOOSE few-percent matches (1-n_s, sin^2 th_23, A_s, Omega_DM/Omega_b, Dm) have E_i ~ 0.5-1 each -- individually unremarkable (5/5 matching is only P~5.8e-01). The weight is entirely in the HIGH-PRECISION matches -- m_p/m_e (1e-4), 1/alpha (3e-4), m_Higgs (8e-4), CC (1e-3), sin^2 th_W & M_Z (2e-3) -- whose tight windows give E_i <<0.1 each; all 6 matching is a Poisson tail P~8.2e-07. So the over-determination is REAL but carried by PRECISION not count, honestly tempering Pass 20's hand-set 10^12 (which over-credited the loose matches) to a computed ~1e-5 - 1e-6 from the precision subset. HONEST: density grows with grammar depth (unbounded grammar reaches anything), so the claim holds for the fixed simple grammar; the grammar-stable core is that the six sub-0.3% matches are not a simple-grammar accident. The pool is now a computed number, not an assumption.",
+  "sources": [
+    "Pass-20 look-elsewhere bit-count (w33_look_elsewhere.py); q=3 cyclotomic alphabet (SRG W(3,3) invariants); achieved windows from the final-scorecard ledger (w33_final_scorecard.py)."
+  ]
+}

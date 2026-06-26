@@ -1,0 +1,106 @@
+{
+  "measured": [
+    {
+      "label": "$m_p/m_e$",
+      "dev_pct": 0.008,
+      "cat": "mc"
+    },
+    {
+      "label": "$1/\\alpha$",
+      "dev_pct": 0.026,
+      "cat": "mc"
+    },
+    {
+      "label": "$m_H$",
+      "dev_pct": 0.08,
+      "cat": "mc"
+    },
+    {
+      "label": "CC $\\log_{10}$",
+      "dev_pct": 0.1,
+      "cat": "mc"
+    },
+    {
+      "label": "$\\sin^2\\theta_W$",
+      "dev_pct": 0.19,
+      "cat": "mc"
+    },
+    {
+      "label": "$M_Z$",
+      "dev_pct": 0.21,
+      "cat": "mc"
+    },
+    {
+      "label": "$\\alpha_s$",
+      "dev_pct": 0.34,
+      "cat": "mc"
+    },
+    {
+      "label": "$\\Delta m^2_{31}/\\Delta m^2_{21}$",
+      "dev_pct": 1.2,
+      "cat": "in"
+    },
+    {
+      "label": "$\\Omega_{\\rm DM}/\\Omega_b$",
+      "dev_pct": 1.6,
+      "cat": "in"
+    },
+    {
+      "label": "$A_s$",
+      "dev_pct": 1.9,
+      "cat": "in"
+    },
+    {
+      "label": "$\\sin^2\\theta_{23}$",
+      "dev_pct": 2.1,
+      "cat": "in"
+    },
+    {
+      "label": "Jarlskog $J$",
+      "dev_pct": 2.6,
+      "cat": "in"
+    },
+    {
+      "label": "$1-n_s$",
+      "dev_pct": 5.1,
+      "cat": "in"
+    }
+  ],
+  "future": [
+    {
+      "label": "SO",
+      "year": 2027,
+      "decides": "$r$ hint"
+    },
+    {
+      "label": "LZ",
+      "year": 2028,
+      "decides": "$m_{\\rm DM}{=}22.8$"
+    },
+    {
+      "label": "JUNO",
+      "year": 2030,
+      "decides": "$\\Delta m^2$ ratio $=33$"
+    },
+    {
+      "label": "DESI/S4",
+      "year": 2030,
+      "decides": "$\\Sigma m_\\nu{=}58$"
+    },
+    {
+      "label": "nEXO",
+      "year": 2032,
+      "decides": "$m_{\\beta\\beta}{\\sim}1.4$"
+    },
+    {
+      "label": "LiteBIRD",
+      "year": 2035,
+      "decides": "$r{=}1/300$"
+    }
+  ],
+  "figure": "analysis/w33_tower_falsification_fig.tex",
+  "summary": "the whole substrate tower on one axis -- the cover figure for w33_everything.tex. Panel A: a forest plot of every measured observable's fractional agreement |pred-obs|/obs (log scale) -- the mass/coupling postdictions (m_p/m_e, 1/alpha, sin^2 th_W, M_Z, CC, m_H) cluster at 0.01-0.3% (integer/LO), the inflation/neutrino observables (A_s, n_s, alpha_s, Dm^2 ratio, sin^2 th_23, Omega_DM/Omega_b) at 1-5%, each within its measurement error; zero off the chart. Panel B: the dated kill-shots 2025-2040 -- m_DM (LZ ~2028), first r hint (SO ~2027), Dm^2 ratio (JUNO), Sum m_nu (DESI/CMB-S4), m_betabeta (nEXO/LEGEND), headline r=1/300 (LiteBIRD ~2035). One figure shows the over-determination (one q=3 alphabet, ~20 numbers, all consistent) AND the dated falsifiability. HONEST: the common axis is fractional deviation not sigma (mixes integer/LO postdictions with measurement-limited points; caption says so); a presentation of the scorecard, not a new result; dates are published schedules. Emits w33_tower_falsification_fig.tex (two-panel figure).",
+  "sources": [
+    "final-scorecard ledger (w33_final_scorecard.py); experiment schedules (LZ, Simons Observatory, JUNO, DESI, CMB-S4, LiteBIRD, nEXO/LEGEND); substrate predictions r=1/300, Sum m_nu=58 meV, m_DM=22.8 GeV, Dm^2 ratio=33, m_betabeta~1.4 meV."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "two_routes": {
+    "y1_a_priori": 0.0302,
+    "y1_atm_pinned": 0.0168,
+    "y3": 0.151,
+    "M_R_GeV": "2.76e+13",
+    "m1_meV": 0.62,
+    "agreement_factor": 1.8
+  },
+  "inverse_check": {
+    "M_R_needed_GeV": "8.94e+13",
+    "factor_vs_scalaron": 3.2,
+    "reading": "M_R = M_Pl e^-Phi3 and y1 = e^-Phi6/2 are mutually consistent to ~3x"
+  },
+  "limitation": {
+    "single_MR_spectrum": "81:4:1",
+    "pred_m3_over_m2": 20.0,
+    "obs_m3_over_m2": 5.8,
+    "over_hierarchy_factor": 3.5,
+    "conclusion": "single M_R fails the spectrum; Majorana M_R texture needed (residual moves there)"
+  },
+  "summary": "is y1 free? a second, data-anchored route pins it to a factor ~2. Pass 20 left the lightest neutrino Dirac Yukawa y1 = e^-Phi6/2 = 0.030 as the tower's one free input. Route B: take the Dirac texture ratio 9:2:1 (Pillar 65/68 SVD), pin the heaviest eigenvalue y3 by matching m_nu3 = sqrt(Dm^2_31) = 0.050 eV to the seesaw y3^2 v^2/M_R with M_R = M_Pl e^-Phi3 (scalaron), read y1 = y3/9 = 0.017, m1 = m_nu3/81 = 0.6 meV. This agrees with the a priori e^-Phi6/2 = 0.030 to a factor ~1.8 -- two independent routes on the same coupling, so y1 is NOT independently free; it trades for the measured Dm^2_31. Inverse: M_R = M_Pl e^-Phi3 and y1 = e^-Phi6/2 reproduce the atmospheric scale to ~3x. HONEST: PARTIAL closure -- a single M_R + 9:2:1 Dirac gives light spectrum 81:4:1 (m3/m2 ~ 20) vs observed sqrt(33) ~ 5.7, so the Majorana M_R texture (Pillar 68/69 cubic form) is needed and the residual freedom moves there. y1 is pinned to a factor ~2 by data + the substrate M_R + texture; the leftover is the Majorana texture, not eliminated.",
+  "sources": [
+    "Pass-20 residual y1 = e^-Phi6/2 (w33_neutrino_dirac_yukawa.py); Dirac texture 9:2:1 (Pillar 65/68, w33_yukawa_optimization.py / w33_mass_texture.py); M_R = M_Pl e^-Phi3 (w33_scalaron_is_rhn.py); cubic-form M_R (Pillar 68/69, w33_majorana_cubic_form.py); Dm^2_31 = 2.5e-3 eV^2, Dm^2_21 = 7.5e-5 eV^2 (global fits)."
+  ]
+}
