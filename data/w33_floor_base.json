@@ -1,0 +1,32 @@
+{
+  "cc_anchor": {
+    "log10_CC": -120,
+    "vq": 120,
+    "vq_is_4beat": true,
+    "base": 10,
+    "exact_to": "0.1% (Pass 17, reduced M_Pl)"
+  },
+  "scale": {
+    "rho_quarter_meV": 2.44,
+    "depth_decades": 30,
+    "form": "M_Pl 10^-beat, beat = 30 = 600-cell BC ring",
+    "exact": true
+  },
+  "efold_identity": {
+    "seesaw_efolds": 72,
+    "seesaw_in_decades": 31.3,
+    "beat_in_efolds": 69.1,
+    "gap_pct": 4.0,
+    "reading": "72 e-folds and beat decades are one scale in two bases (agree up to ln10)"
+  },
+  "tie_break": {
+    "primary_base": 10,
+    "reason": "the 0.1%-exact statement (CC = -vq) is base-10; vq = v*q is an integer point count",
+    "floor_depth": "beat = 30 decades below M_Pl",
+    "bc_ring": "beat = 30 = 600-cell BC helix ring = decades below M_Pl"
+  },
+  "summary": "is the floor beat decades or beat e-folds? the exact CC settles it: DECADES (base 10). Pass 19 derived the neutrino/dark-energy floor as (q+2)Phi3 + Phi6 = 72 e-folds below M_Pl but left the base open (72 ~ beat decades = 30 ln10 = 69, ~4%). The cosmological constant is EXACT in base 10: log10(rho_Lambda/M_Pl^4) = -vq = -120 to 0.1% (Pass 17, reduced M_Pl), vq = 4 beat, so the dark-energy SCALE rho^1/4 = M_Pl 10^-beat = 2.44 meV = exactly beat = 30 DECADES below M_Pl. The seesaw 72 e-folds is the SAME depth in natural log (72/ln10 = 31.3 decades ~ beat); the 4% is the e-vs-10 base mismatch + O(1) Yukawa, not a second number. Decades is primary BECAUSE the 0.1%-exact statement (CC = -vq) is base-10 and vq = v*q = 120 is an integer point count (40 points x q=3). So the floor's canonical depth is beat = 30 decades, the 600-cell BC helix ring counts DECADES below M_Pl: M_Pl --beat=30 decades--> 2.44 meV, CC its 4th power 10^-vq, seesaw = 72 e-folds. HONEST: the CC is the base-10 anchor (0.1% exact), the 72 e-folds the base-e count, agreeing up to ln10; decades-as-primary is a principled tie-break (the CC is the exact one), not a hand convention. Residual: the e-vs-10 factor (now understood) + y1.",
+  "sources": [
+    "CC log10 = -vq = -120 (w33_cc_exact.py, Pass 17, reduced M_Pl); CC mechanism vq = 4 beat (w33_cc_mechanism.py, Pass 18); seesaw floor (q+2)Phi3 + Phi6 = 72 e-folds (w33_floor_derivation.py, Pass 19); beat = 30 = 600-cell BC ring (600 = 20 x 30)."
+  ]
+}

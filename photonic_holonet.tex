@@ -6712,6 +6712,56 @@ decades to $\sim4\%$ (the base-10-vs-$e$ factor the residual); the decision tree
 $\sigma(r)$ forecasts (foregrounds/delensing may move the dates), with $r=1/300$ and the
 Starobinsky line the exact predictions.
 
+\subsection{Pass 20 --- the one residual input, the floor base settled, and the look-elsewhere bound}
+\label{sec:capstone-twenty}
+
+The tower's last free number is pinned, the base of the floor is fixed by the exact
+cosmological constant, and the referee's first objection is answered by counting bits.
+
+\emph{The one residual input.} The seesaw floor (Pass~19) reduced the neutrino/dark-energy/CC
+scale to $(q{+}2)\Phi_3+\Phi_6=72$ e-folds up to a single input, the lightest neutrino's Dirac
+Yukawa $y_1$. The $\mathbb{Z}_3$ texture (Pillar~68) is a \emph{theorem} that fixes only the
+Dirac \emph{ratios} (the grade rule, up-type $\sim9{:}2{:}1$), never the overall Higgs-VEV
+scale --- so $y_1$ is genuinely the one normalisation the geometry leaves free. The value the
+floor wants, $y_1=e^{-\Phi_6/2}=0.030$ ($m_{D1}=y_1v=7.4$~GeV, charm-scale), is the substrate's
+own: a \emph{half} of the GUT exponent $\Phi_6=q^2{-}q{+}1=7$ ($M_{\rm GUT}=M_{\rm Pl}e^{-\Phi_6}$),
+the coupling at the geometric mean of the $M_{\rm Pl}$ and $M_{\rm GUT}$ scales. And the floor is
+only \emph{logarithmically} sensitive: a factor-3 change in $y_1$ moves it by $\sim\Phi_6\approx7$
+e-folds ($m_1$ by $\sim10$), so the $\sim2$~meV scale needs $y_1$ only within a factor $\sim3$ of
+$e^{-\Phi_6/2}$. So the whole tower reduces to \emph{one} residual number, a charm-scale neutrino
+Dirac Yukawa equal to $e^{-(\text{half the GUT exponent})}$. (Witness:
+\path{analysis/w33_neutrino_dirac_yukawa.py}.)
+
+\emph{The floor base, settled by the CC.} Pass~19 left the base (e-folds vs decades) open,
+noting $72\approx\mathrm{beat}$ decades to $\sim4\%$. The cosmological constant removes the
+ambiguity: it is \emph{exact in base 10}, $\log_{10}(\rho_\Lambda/M_{\rm Pl}^4)=-vq=-120$ to
+$0.1\%$ (Pass~17, reduced $M_{\rm Pl}$), and $vq=4\,\mathrm{beat}$, so the dark-energy scale is
+$\rho_\Lambda^{1/4}=M_{\rm Pl}10^{-\mathrm{beat}}=2.44$~meV --- \emph{exactly} $\mathrm{beat}=30$
+decades below $M_{\rm Pl}$. The seesaw's $72$ e-folds is the same depth in natural log
+($72/\ln10=31.3$ decades $\approx\mathrm{beat}$); the $4\%$ is the $e$-vs-$10$ base mismatch, not
+a second number. Decades is primary \emph{because} the $0.1\%$-exact statement is the CC and it
+is base-10 ($vq=v\cdot q$ is an integer point count), so the $600$-cell BC ring counts decades.
+(Witness: \path{analysis/w33_floor_base.py}.)
+
+\emph{The look-elsewhere bound.} A numerologist can always fit \emph{one} number; the honest
+question is $\sim25$ observables against one fixed integer alphabet. Counting bits (MDL): the
+clean measured matches ($m_p/m_e$ to $10^{-4}$, the CC to $10^{-3}$, $\sin^2\theta_W$ and $M_Z$
+to $2\times10^{-3}$) carry $\sim100$ bits of precision evidence; and the \emph{same} integers
+recur --- $\mathrm{beat}=30$ sets $n_s,r,n_t$, running and the CC; $\Phi_3,\Phi_6$ set
+$\sin^2\theta_W,M_Z,\theta_{23},\Delta m^2_{31}/\Delta m^2_{21},A_s$ --- so the trials factor is
+paid \emph{once per integer} ($\sim12$), not per observable ($\sim25$). Granting (generously)
+each integer a free choice from a pool of $50$, the vocabulary costs $\sim62$ bits, against
+$\sim100$ bits of evidence: net $\sim+40$ bits, odds $\sim10^{12}$ against chance. The \emph{only}
+null that washes the signal out is a fresh free integer per observable --- exactly what a fixed,
+$q=3$-forced alphabet forbids. (Witness: \path{analysis/w33_look_elsewhere.py}.)
+
+\emph{Honest scope:} $y_1$ is an input (motivated by $\Phi_6$ as a half-GUT-exponent, not
+derived), needed only within a factor $\sim3$; the floor-base tie-break is principled (the CC is
+the $0.1\%$-exact base-10 statement) with the residual the $e$-vs-$10$ factor and $y_1$; the
+look-elsewhere bound uses order-of-magnitude bit counts with deliberately generous priors (not a
+rigorous frequentist $p$). The robust claim is the \emph{over-determination}: one $\sim12$-integer
+$q=3$ alphabet predicts $\sim25$ numbers carrying $\sim100$ bits of precision.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

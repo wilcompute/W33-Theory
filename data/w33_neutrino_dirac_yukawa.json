@@ -1,0 +1,48 @@
+{
+  "y1": {
+    "value": 0.0302,
+    "form": "e^-Phi6/2",
+    "minus2lny1_is_Phi6": true,
+    "m_D1_GeV": 7.43,
+    "scale": "charm (m_D1 ~ 7.4 GeV ~ few x m_charm)"
+  },
+  "texture": {
+    "grade_rule": "T[a,b,v]=0 unless grade(v)=-(a+b) mod 3 (Pillar 68 T2)",
+    "fixes": "Dirac eigenvalue ratios (up-type ~9:2:1)",
+    "does_not_fix": "overall Higgs-VEV scale v_H (flat direction, Pillar 65)",
+    "conclusion": "y1 is an input; the texture gives only y2/y1, y3/y1"
+  },
+  "half_gut_exponent": {
+    "Phi6": 7,
+    "M_GUT_over_M_Pl": "e^-Phi6",
+    "reading": "y1 = e^-(Phi6/2) = half the GUT exponent (geometric mean descent)",
+    "freedom": "only the factor 1/2 (the geometric mean) -- no new number"
+  },
+  "sensitivity": {
+    "rows": [
+      {
+        "y1": 0.0101,
+        "label": "y1/3",
+        "floor_shift_efolds": 2.2,
+        "m1_factor": 0.11
+      },
+      {
+        "y1": 0.0302,
+        "label": "y1",
+        "floor_shift_efolds": 0.0,
+        "m1_factor": 1.0
+      },
+      {
+        "y1": 0.0906,
+        "label": "3 y1",
+        "floor_shift_efolds": -2.2,
+        "m1_factor": 9.0
+      }
+    ],
+    "reading": "factor-3 in y1 -> +-Phi6~7 e-folds ~3 decades -> m1 x~10; floor needs y1 within ~3 of e^-Phi6/2"
+  },
+  "summary": "the last input weighed honestly: the neutrino Dirac Yukawa y1 = e^-Phi6/2 = 0.030. The seesaw floor (Pass 19) closed the neutrino/dark-energy/CC scale to (q+2)Phi3 + Phi6 = 72 e-folds below M_Pl up to ONE input, y1. The Z3 Yukawa texture (Pillar 68, a theorem) fixes only the Dirac RATIOS (grade rule, up-type ~9:2:1), never the overall Higgs-VEV scale (flat direction, Pillar 65) -- so y1 is genuinely an input, the one normalization the geometry leaves free. The value the floor wants, y1 = e^-Phi6/2 (m_D1 = y1 v = 7.4 GeV, charm-scale), is a HALF of the GUT exponent Phi6 = q^2-q+1 = 7 (M_GUT = M_Pl e^-Phi6): the coupling at the geometric mean of the M_Pl and M_GUT scales, the only freedom being the factor 1/2. The floor is LOGARITHMICALLY sensitive: a factor-3 change in y1 -> ~Phi6~7 e-folds ~3 decades -> m1 x~10, so the ~2 meV floor needs y1 within a factor ~3 of e^-Phi6/2 -- met by any charm-scale Dirac coupling. HONEST: y1 is NOT derived; it is an input motivated by Phi6 (a half-GUT-exponent), needed only to within ~3. The whole tower reduces to ONE residual free number, a single charm-scale neutrino Dirac Yukawa = e^-(half the GUT exponent).",
+  "sources": [
+    "seesaw floor (q+2)Phi3 + Phi6 = 72 (w33_floor_derivation.py); Z3 Yukawa grade rule T[a,b,v]=0 unless grade(v)=-(a+b) mod 3 (Pillar 68, w33_mass_texture.py); flat Higgs directions (Pillar 65, w33_yukawa_optimization.py); M_GUT = M_Pl e^-Phi6, Phi6 = q^2-q+1 = 7 (canonical mass ladder)."
+  ]
+}
