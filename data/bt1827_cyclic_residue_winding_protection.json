@@ -1,0 +1,213 @@
+{
+  "boundary": "This proves the topological status of the cyclic-residue term.  It does not yet construct the full optical circuit for the remaining P,G,E terms; those remain as the next Hamiltonian/syndrome realization targets.",
+  "bt": "BT1827",
+  "checks": {
+    "basis_size_12_cubed": true,
+    "collision_free_edges": true,
+    "collision_free_edges_preserve_residue": true,
+    "collision_free_nodes": true,
+    "component_windings_are_1_and_2": true,
+    "components_are_660_660": true,
+    "cyclic_rotation_preserves_winding": true,
+    "each_component_has_constant_winding": true,
+    "full_one_step_residue_jumps_touch_collision": true,
+    "orientation_reversal_swaps_winding": true,
+    "residue_always_multiple_of_12": true,
+    "residue_values_are_0_12_24": true,
+    "two_collision_free_components": true
+  },
+  "component_profiles": [
+    {
+      "component": 0,
+      "residue_profile": {
+        "24": 660
+      },
+      "size": 660,
+      "winding_profile": {
+        "2": 660
+      }
+    },
+    {
+      "component": 1,
+      "residue_profile": {
+        "12": 660
+      },
+      "size": 660,
+      "winding_profile": {
+        "1": 660
+      }
+    }
+  ],
+  "counts": {
+    "collision_free_component_sizes": [
+      660,
+      660
+    ],
+    "collision_free_graph_edges": 3240,
+    "collision_free_graph_nodes": 1320,
+    "collision_profile": {
+      "diagonal_collision": 12,
+      "distinct": 1320,
+      "double_collision": 396
+    },
+    "full_one_step_graph_edges": 5184,
+    "residue_changing_one_step_edges": 792,
+    "residue_profile": {
+      "0": 12,
+      "12": 1056,
+      "24": 660
+    },
+    "total_basis": 1728,
+    "winding_profile": {
+      "0": 12,
+      "1": 1056,
+      "2": 660
+    }
+  },
+  "operator": "C(x0,x1,x2)=sum_i (x_i-x_{i+1}) mod 12 = 12*winding",
+  "orientation_symmetry": {
+    "cyclic_rotation": "preserves winding",
+    "orientation_reversal": "swaps winding 1 and winding 2",
+    "reversal_profile": {
+      "1->2": 660,
+      "2->1": 660
+    }
+  },
+  "phase_slip_boundary": {
+    "all_residue_changing_one_step_edges_touch_collision": true,
+    "example_jumps": [
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          11,
+          0,
+          0
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          1,
+          0,
+          0
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          0,
+          11,
+          0
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          0,
+          1,
+          0
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          0,
+          0,
+          11
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "from_residue": 0,
+        "from_type": "diagonal_collision",
+        "to": [
+          0,
+          0,
+          1
+        ],
+        "to_residue": 12,
+        "to_type": "double_collision"
+      },
+      {
+        "from": [
+          0,
+          0,
+          1
+        ],
+        "from_residue": 12,
+        "from_type": "double_collision",
+        "to": [
+          11,
+          0,
+          1
+        ],
+        "to_residue": 24,
+        "to_type": "distinct"
+      },
+      {
+        "from": [
+          0,
+          0,
+          11
+        ],
+        "from_residue": 12,
+        "from_type": "double_collision",
+        "to": [
+          1,
+          0,
+          11
+        ],
+        "to_residue": 24,
+        "to_type": "distinct"
+      }
+    ]
+  },
+  "physical_interpretation": "C is the natural topological readout for a 12-bin photonic/OAM/time-bin ring. A collision-free perturbation cannot change the winding sector; a phase slip through a collision state is required.  This supplies the missing hardware interpretation of the BT1824 commuting term C in the finite law stack.",
+  "summary": "The BT1824 cyclic-residue operator C is exactly 12 times a discrete winding number on the local 12-clock.  The collision-free ordered configuration graph of three clock points has two connected components of size 660, with winding 1 and winding 2.  Every collision-free local move preserves C; every one-step C-changing move in the full cube touches a collision/phase-slip state.  Thus C is a genuine topological syndrome, not an arbitrary cyclic tie-breaker.",
+  "title": "Cyclic Residue / Winding Protection Theorem",
+  "verified": true
+}
