@@ -1,0 +1,60 @@
+{
+  "boundary": "The simulator is a finite-state falsifier for the winding term C. It does not include optical loss, detector dark counts, or continuous wavepacket deformation.",
+  "bt": "BT1829",
+  "checks": {
+    "collision_free_edges_preserve_winding": true,
+    "collision_free_graph_edges": true,
+    "collision_free_graph_nodes": true,
+    "collision_free_walk_w1_preserves_winding": true,
+    "collision_free_walk_w2_preserves_winding": true,
+    "full_graph_residue_changers_touch_collision": true,
+    "minimal_phase_slip_changes_winding": true,
+    "minimal_phase_slip_length_two": true,
+    "minimal_phase_slip_profile": true
+  },
+  "controlled_phase_slip": {
+    "path": [
+      {"residue": 24, "state": [0, 1, 2], "type": "distinct", "winding": 2},
+      {"residue": 12, "state": [0, 1, 1], "type": "double_collision", "winding": 1},
+      {"residue": 12, "state": [0, 2, 1], "type": "distinct", "winding": 1}
+    ],
+    "source": [0, 1, 2],
+    "target_winding": 1
+  },
+  "exhaustive_counts": {
+    "collision_free_edges": 3240,
+    "collision_free_nodes": 1320,
+    "full_edges": 5184,
+    "full_nodes": 1728,
+    "full_residue_changing_edges": 792
+  },
+  "interpretation": "The winding syndrome is robust under ordinary collision-free perturbations. A hardware phase-slip gate is therefore exactly a controlled excursion through the collision manifold, not an uncontrolled local drift.",
+  "noise_model": "one coordinate moves by +/-1 on C12; collision-free simulator rejects collisions",
+  "summary": "Collision-free local noise on the 12-clock preserves the BT1827 winding syndrome, while a controlled phase slip changes winding only by passing through a collision boundary. The shortest explicit transition is (0,1,2)->(0,1,1)->(0,2,1), i.e. distinct -> double collision -> distinct, changing winding 2 to winding 1.",
+  "title": "Phase-Slip Simulator",
+  "verified": true,
+  "walks": {
+    "winding_1_walk": {
+      "end": [3, 0, 9],
+      "rejected_collision_moves": 744,
+      "seed": 1830,
+      "start": [0, 11, 1],
+      "states_visited": 615,
+      "steps": 4096,
+      "winding_end": 1,
+      "winding_start": 1,
+      "winding_values_seen": {"1": 4096}
+    },
+    "winding_2_walk": {
+      "end": [1, 3, 7],
+      "rejected_collision_moves": 800,
+      "seed": 1829,
+      "start": [0, 1, 2],
+      "states_visited": 615,
+      "steps": 4096,
+      "winding_end": 2,
+      "winding_start": 2,
+      "winding_values_seen": {"2": 4096}
+    }
+  }
+}
