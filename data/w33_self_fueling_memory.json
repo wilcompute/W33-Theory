@@ -1,0 +1,36 @@
+{
+  "pillars": {
+    "DATA (holographic code)": {
+      "object": "matter shell = [[240,81,4,3]]_3 on H_1 (Steinberg)",
+      "invariant": "bulk-from-boundary redundancy mu = 4 = d = 4",
+      "property": "1+12+27 split, causal diameter 2, no local logical"
+    },
+    "FUEL (matter = magic)": {
+      "object": "matter shell = the 36 = (q!)^2 magic rays",
+      "invariant": "density 1/Phi_4 = 1/10; non-Clifford premium P = 1",
+      "property": "magic structural (mana log(5/3)); no distillation factory"
+    },
+    "RENEWAL (quasicrystal clock)": {
+      "object": "the drive on the matter shell",
+      "invariant": "theta = arccos(-2/3) = -(q-1)/q; theta/pi irrational",
+      "property": "magic never precesses to Clifford -- refreshed each tick"
+    }
+  },
+  "composition": {
+    "same_object": "the matter shell",
+    "consequences": [
+      "no distillation factory (fuel is the code, saving ~d^3)",
+      "no separate fuel store (magic is the EC redundancy)",
+      "no recurrence (irrational clock refreshes the magic)"
+    ],
+    "q3_invariants": {
+      "mu=d": 4,
+      "Phi_4": 10,
+      "cos_theta": "-(q-1)/q = -2/3"
+    }
+  },
+  "summary": "the architecture is a SELF-FUELING, SELF-RENEWING HOLOGRAPHIC QUANTUM MEMORY. One object -- the matter shell -- is simultaneously the holographic code (data: [[240,81,4,3]]_3 Steinberg, bulk-from-boundary at redundancy mu=4=d, causal diameter 2, no local logical), the magic fuel (the 36=(q!)^2 rays, mana log(5/3), non-Clifford premium P=1, no distillation factory, density 1/Phi_4=1/10), and the system the irrational Boerdijk-Coxeter clock keeps non-Clifford (theta=arccos(-2/3), theta/pi irrational, refreshed each tick). So: no distillation factory (fuel is the code, saving ~d^3), no separate fuel store (magic is the EC redundancy), no recurrence (irrational clock). All q=3 (mu=4=d, Phi_4=10, cos theta=-(q-1)/q). A holographic memory whose error-correction is its magic supply, kept alive by an irrational clock.",
+  "sources": [
+    "holographic code (w33_holographic_code.py); matter=magic + mana (w33_magic_economy.py); resource accounting P=1 (w33_magic_resource_accounting.py); clock renewal (w33_clock_magic_renewal.py); [[240,81,4,3]]_3 Steinberg (sec:memory); q=3 invariants mu=4=d, Phi_4=10, theta=arccos(-2/3)."
+  ]
+}

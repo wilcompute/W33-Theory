@@ -1,0 +1,41 @@
+{
+  "rt": {
+    "bulk_point": 12,
+    "recover_one_qutrit_minsurface": 4,
+    "maxflow_to_boundary": 12
+  },
+  "bulk_boundary": {
+    "maxflow": 108,
+    "gauge_matter_edges": 108
+  },
+  "area_law": [
+    {
+      "|A|": 1,
+      "avg_|dA|": 12.0,
+      "volume_12k": 12,
+      "ratio_to_volume": 1.0
+    },
+    {
+      "|A|": 5,
+      "avg_|dA|": 53.7,
+      "volume_12k": 60,
+      "ratio_to_volume": 0.895
+    },
+    {
+      "|A|": 10,
+      "avg_|dA|": 92.3,
+      "volume_12k": 120,
+      "ratio_to_volume": 0.769
+    },
+    {
+      "|A|": 20,
+      "avg_|dA|": 122.4,
+      "volume_12k": 240,
+      "ratio_to_volume": 0.51
+    }
+  ],
+  "summary": "discrete Ryu-Takayanagi on the W(3,3) holographic code, computed by max-flow: the entanglement entropy of a boundary region = the minimal edge-cut (RT surface area). A single ray's RT area = collinearity degree k=12; the minimal RT surface (recovering one bulk qutrit from the boundary) = the code distance d=4 (the mu screening) -- the smallest holographic surface IS the distance. The edge-boundary |dA| stays below the volume bound 12|A| (ratio<1, falling as |A| grows): an AREA law, not volume. RT surfaces are graph min-cuts; the network's entanglement is geometric -- a quantitative holographic memory. Honest: discrete RT exact from the geometry; the min-cut=entropy identification is the standard holographic-code correspondence, exhibited structurally not proven for the full [[240,81,4,3]] stabiliser group.",
+  "sources": [
+    "Ryu-Takayanagi; Freedman-Headrick max-flow=min-cut RT; HaPPY holographic codes (Pastawski-Yoshida-Harlow-Preskill); W(3,3)=SRG(40,12,2,4), 1+12+27 split, mu=4=d (w33_holographic_code.py); k=q(q+1)=12; networkx max-flow; w33_self_fueling_memory.py."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "cosmology": {
+    "e_folds_N": 60,
+    "N_is": "2 * h(E8) = 2 * clock beat",
+    "tilt_1_minus_ns": "2/N = 1/30 = 1/(clock beat)",
+    "n_s": "29/30"
+  },
+  "correspondence": {
+    "clock": "time quasicrystal: theta/pi irrational, nearly periodic",
+    "inflation": "quasi-de Sitter: slow roll, n_s != 1, nearly exponential",
+    "common": "broken de Sitter by q=3; clock aperiodicity = tilt 1-n_s = 1/beat"
+  },
+  "de_sitter_angle": {
+    "cos_theta": "-(q-1)/q = -2/3",
+    "beat": 30,
+    "beat_is": "h(E8) = Phi_3+Phi_4+Phi_6"
+  },
+  "summary": "the machine's clock IS the universe's clock. The Boerdijk-Coxeter time quasicrystal that renews the computational magic advances by theta=arccos(-2/3) = the discrete de Sitter angle -(q-1)/q, with fundamental beat 30 = h(E8) (the 600-cell's 20 rings of 30). Inflation reads off the same clock: e-folds N = 2*30 = 60 (twice the beat), and CMB tilt 1 - n_s = 2/N = 1/30 = 1/(beat) -- the spectrum's deviation from scale invariance is the inverse of the clock's period. The structures match in kind: the clock is a time quasicrystal (nearly periodic, never exact) as inflation is quasi-de Sitter (nearly exponential, never exact), both broken de Sitter by q=3 -- the clock's aperiodicity = the cosmology's tilt. Architecture time (Face 5) and cosmic expansion (Face 7) are one quasicrystal: angle -(q-1)/q, beat h(E8)=30, tilt 1/beat.",
+  "sources": [
+    "Boerdijk-Coxeter clock theta=arccos(-2/3)=-(q-1)/q, beat 30=h(E8) (600-cell 20x30, sec:time); time quasicrystal (w33_clock_magic_renewal.py); inflation N=2(v-Phi_4)=60, n_s=1-2/N=29/30 (w33_cosmology_seventh_face.py); de Sitter selection (w33_desitter_q3_selection.py, Face 1); quasi-de Sitter slow roll; w33_self_fueling_memory.py."
+  ]
+}
