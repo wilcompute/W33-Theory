@@ -1,0 +1,62 @@
+% BT1820 -- Quartet fibre-law paper insert
+\subsection{The quartet fibre law}
+\label{subsec:quartet-fibre-law}
+
+The residual ternary obstruction in the H27/Schl\"afli transport is not a new global count identity.  It is local.  The $W(E_6)$ stabilizer of the transported eighteen-line image does not fix the observed defect triple uniquely; instead it distinguishes a six-element hinge slice.  Since
+\[
+  6=\binom{4}{2},
+\]
+this slice is naturally the edge set of a hidden four-state fibre quartet.
+
+We label the four fibre states by
+\[
+  \mathbb F_2^2=\{00,01,10,11\}.
+\]
+Equivalently, this is the local D4/GKP Pauli square
+\[
+  00\leftrightarrow I,\qquad
+  01\leftrightarrow X,\qquad
+  10\leftrightarrow Z,\qquad
+  11\leftrightarrow XZ.
+\]
+Under the committed edge-to-hinge chart, the observed support
+\[
+  (10,22,44)
+\]
+corresponds to the diagonal quartet edge
+\[
+  00\longrightarrow 11,
+\]
+that is, to the simultaneous $XZ$ half-shift in the local fibre square.
+
+The resulting local correction law is:
+\[
+  \boxed{\text{oriented quartet edge}\;=\;\text{two endpoint losses plus one edge-target gain, in units of }2.}
+\]
+For the observed edge this gives
+\[
+  \boxed{T010:-2,\qquad T210:-2,\qquad T222:+2.}
+\]
+The uncorrected count vector has double-six syndromes
+\[
+  F_2=(0,0),\qquad F_3=(0,2,1,1,1).
+\]
+The quartet-edge correction contributes
+\[
+  F_2=(0,0),\qquad F_3=(0,1,2,2,2),
+\]
+so the corrected vector satisfies
+\[
+  \boxed{F_2=(0,0),\qquad F_3=(0,0,0,0,0).}
+\]
+Thus the binary Hesse delta split is preserved while the ternary double-six obstruction is cancelled.
+
+The search problem is correspondingly reduced:
+\[
+  816\;\text{triples}
+  \longrightarrow 54\;\text{Hesse hinges}
+  \longrightarrow 10\;W(E_6)\text{-stabilizer slices}
+  \longrightarrow 6\;K_4\text{ edges}
+  \longrightarrow 1\;\text{oriented edge}.
+\]
+This is the operative fibre-law statement: $W(E_6)$ selects the hidden quartet edge-slice, while the remaining orientation is the local $12=3\times4$ fibre datum.
