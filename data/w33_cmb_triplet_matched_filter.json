@@ -1,0 +1,60 @@
+{
+  "triplet_gain": {
+    "b": 0.6,
+    "fisher_ratio": 1.18,
+    "sigma_A_improvement": 1.0863,
+    "note": "modest; sidebands carry little power. Value is that the statistic is the spacing omega2."
+  },
+  "resolution_threshold": {
+    "omega2": 0.2094,
+    "delta_x_needed": 30.0,
+    "equals_beat": 30,
+    "meaning": "log-k window must span one full beat (30 e-folds) to split the triplet"
+  },
+  "lever_arm": [
+    {
+      "probe": "CMB TT (l=30..2000)",
+      "delta_x": 4.2,
+      "freq_res": 1.496,
+      "resolves_omega2": false,
+      "sigma(beat)/beat~": 7.14
+    },
+    {
+      "probe": "CMB wide (l=2..2500)",
+      "delta_x": 7.1,
+      "freq_res": 0.881,
+      "resolves_omega2": false,
+      "sigma(beat)/beat~": 4.21
+    },
+    {
+      "probe": "+ LSS / Lyman-alpha (k~3)",
+      "delta_x": 10.0,
+      "freq_res": 0.631,
+      "resolves_omega2": false,
+      "sigma(beat)/beat~": 3.01
+    },
+    {
+      "probe": "+ mu-distortions (k~1e4)",
+      "delta_x": 18.1,
+      "freq_res": 0.348,
+      "resolves_omega2": false,
+      "sigma(beat)/beat~": 1.66
+    },
+    {
+      "probe": "+ 21cm / distortions (k~1e5)",
+      "delta_x": 20.4,
+      "freq_res": 0.308,
+      "resolves_omega2": false,
+      "sigma(beat)/beat~": 1.47
+    }
+  ],
+  "verdict": {
+    "cmb_measures": "amplitude A at the q=3-fixed carrier (bound from forecast ~1e-3 optimistic)",
+    "cmb_cannot_measure": "the spacing omega2 = the 600-cell closure number 30 (sub-resolution)",
+    "needs": "wider log-k lever: spectral mu-distortions (k~1e4) + 21cm push Delta x toward beat=30"
+  },
+  "summary": "matched filter on the locked triplet -> an honest division of labour. Co-adding the carrier (omega1) and two sidebands (omega1 +/- omega2, amplitude A b/2) gives a Fisher S/N gain of only sqrt(1+b^2/2) = 1.086 for b=0.6 (sidebands carry little power), so the CMB's role is to BOUND the amplitude A at the q=3-fixed carrier. The closure observable -- the spacing omega2 = 2pi/30 (the 600-cell, the number 30) -- requires a log-k window at least one beat wide, Delta x >= 2pi/omega2 = beat = 30 e-folds, while the CMB spans only Delta x ~ 4-7, so the triplet is UNRESOLVED (sidebands blur into a slow carrier modulation). Measuring the closure thus needs a wider lever: spectral mu-distortions (k~1e4) and 21 cm extend ln k by ~6 decades (Delta x ~ 14-18), approaching the required 30. Honest NEGATIVE that sharpens the program: CMB bounds the coupling; a wide-lever (distortion/21cm) joint analysis measures the closure number 30. S/N gain exact; resolution thresholds are standard Fourier/Cramer-Rao order-of-magnitude.",
+  "sources": [
+    "triplet from product-to-sum (w33_cmb_template_forecast.py); Fisher info additivity; Fourier/Cramer-Rao frequency resolution delta omega ~ 2pi/Delta x; mu-distortion k-reach ~50-1e4 Mpc^-1 (Chluba; PIXIE); 21cm k-reach; 600-cell closure beat=30 (w33_bc_helix_omega2.py)."
+  ]
+}

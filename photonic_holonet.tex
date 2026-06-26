@@ -6176,6 +6176,55 @@ entropy$=$kissing the same holographic dictionary that fixes $G(D_4)=1/2^q$ and 
 UV/IR-via-$h$ reading interpretive. Given those, the bound, $\omega_2$, the ratio, and
 the running are forced.
 
+\subsection{Pass 7 --- three edges pressed: a resolution reality, the last identification closed, and an honest hierarchy}
+\label{sec:capstone-edges}
+
+Pushing each Pass-6 result one step further yields one sharper test, one closure, and
+one clean negative.
+
+\emph{What the CMB can and cannot measure.} The substrate signal is a rigid spectral
+triplet (carrier at $\omega_1$, sidebands at $\omega_1\pm\omega_2$, amplitudes $A:b/2:b/2$).
+A matched filter co-adds all three, but the Fisher gain over the carrier alone is only
+$\sqrt{1+b^2/2}=1.086$ (for $b=0.6$) --- the sidebands carry little power, so the CMB's
+job is to \emph{bound the amplitude}. The closure itself --- the spacing $\omega_2=2\pi/30$,
+the direct test of the $600$-cell --- requires a log-$k$ window at least one beat wide,
+$\Delta x\ge2\pi/\omega_2=\mathrm{beat}=30$ e-folds, whereas the CMB spans only
+$\Delta x\sim4$--$7$; the triplet is unresolved there. Even adding $\mu$-distortions
+($k\sim10^4$) and $21$\,cm reaches only $\Delta x\sim18$--$20$. So measuring the closure
+number $30$ is a target for a wide-lever joint analysis, not the CMB alone --- an honest
+correction to ``the spacing confirms closure.'' (Witness:
+\path{analysis/w33_cmb_triplet_matched_filter.py}.)
+
+\emph{The last identification is a corollary.} The CMB template's one remaining asserted
+input --- that one inflationary e-fold $=$ one Boerdijk--Coxeter tick --- follows from the
+machine$=$world capstone. de~Sitter space has a single timescale $1/H=\ell_{\rm dS}=
+\sqrt6$ ($\Lambda=1/6$); since the holographic memory's bulk \emph{is} that de~Sitter
+spacetime, the substrate clock is the expansion and runs at $H$, so $\mathrm{ticks}=Ht=N$
+--- exactly one tick per e-fold, because there is one clock. Then everything is forced
+with no free normalisation: the phase advances $\theta=\arccos(-\tfrac23)$ per e-fold
+($\omega_1$), the ring closes after $30$ e-folds ($\omega_2$), inflation lasts $N=2\,
+\mathrm{beat}=60=2(v-\Phi_4)$ e-folds, and the tilt's two readings agree, $2/N=1/\mathrm{
+beat}=1/30$, precisely because $N=2\,\mathrm{beat}$. (The rate is $H$, the expansion, not
+the thermal $H/2\pi$ --- the machine$=$world choice.) Only the coupling amplitude $A$ stays
+free. (Witness: \path{analysis/w33_efold_tick.py}.)
+
+\emph{The gravity hierarchy: exact at the tower, open at $10^{17}$.} Extending the Newton
+ladder to the Leech ceiling, the step factors are all substrate constants:
+$G(A_2)/G(D_4)=\mu=4$, $G(D_4)/G(E_8)=\Phi_4=10$, $G(E_8)/G(\Lambda_{24})=q^2\Phi_3\Phi_6
+=819$. So the cumulative spans are cyclotomic and exact: $G(A_2)/G(E_8)=\mu\Phi_4=40=v$
+(the gravity-to-gauge hierarchy) and $G(A_2)/G(\Lambda_{24})=\mu q^2\Phi_3\Phi_4\Phi_6=
+32760=\mathrm{kiss}(\Lambda_{24})/\mathrm{kiss}(A_2)$, tying back to the $\alpha$-closure
+factorisation $196560=6\mu q^2\Phi_3\Phi_4\Phi_6$. But $3\times10^4$ is $\sim$13 orders
+short of the Planck/electroweak $10^{17}$: the discrete tower fixes the \emph{geometric}
+gravity hierarchy ($v=40$), not the absolute one. The missing orders need the dynamical
+scale (the named residue) or an exponential ($e^{N}$, $N=60\Rightarrow10^{26}$,
+overshooting; $10^{17}$ needs $N\sim39$) --- neither lands without tuning. A genuine open
+edge, reported plainly. (Witness: \path{analysis/w33_gravity_hierarchy.py}.)
+\emph{Honest scope:} the triplet gain and resolution thresholds are exact/standard-order;
+the e-fold$=$tick closure rests on machine$=$world plus de~Sitter's single timescale; the
+hierarchy result is exact arithmetic on the kissing numbers (positive) with a real
+$10^{17}$ shortfall (negative) left open.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

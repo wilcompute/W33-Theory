@@ -1,0 +1,57 @@
+{
+  "G": {
+    "A2": {
+      "kissing": 6,
+      "G": "1/2"
+    },
+    "D4": {
+      "kissing": 24,
+      "G": "1/8"
+    },
+    "E8": {
+      "kissing": 240,
+      "G": "1/80"
+    },
+    "Leech": {
+      "kissing": 196560,
+      "G": "1/65520"
+    }
+  },
+  "steps": {
+    "A2_to_D4": {
+      "factor": 4,
+      "is": "mu = 4"
+    },
+    "D4_to_E8": {
+      "factor": 10,
+      "is": "Phi_4 = 10"
+    },
+    "E8_to_Leech": {
+      "factor": 819,
+      "is": "q^2 Phi_3 Phi_6 = 819"
+    }
+  },
+  "spans": {
+    "A2_to_E8": {
+      "value": 40,
+      "form": "mu*Phi_4 = v = 40"
+    },
+    "A2_to_Leech": {
+      "value": 32760,
+      "form": "mu*q^2*Phi_3*Phi_4*Phi_6 = 32760"
+    },
+    "leech_kissing": "196560 = 6*mu*q^2*Phi_3*Phi_4*Phi_6 (alpha closure)"
+  },
+  "hierarchy_test": {
+    "observed_MPl_over_MEW": "~1e17",
+    "tower_max_ratio": 32760,
+    "shortfall_orders": 12.5,
+    "exponential_e60": 1.142e+26,
+    "N_for_1e17": 39.1,
+    "verdict": "OPEN: tower gives geometric hierarchy v=40 / 32760, not the absolute 1e17"
+  },
+  "summary": "G-running vs the hierarchy: an exact positive and an honest negative. The Newton ladder G_s = k/(4 kissing_s) has step factors that are ALL substrate constants -- A2->D4 x mu=4, D4->E8 x Phi_4=10, E8->Leech x q^2 Phi_3 Phi_6 = 819 -- so the geometric gravity hierarchy is cyclotomic and exact: G(A2)/G(E8) = mu Phi_4 = 40 = v (gravity->gauge), and the full span to the Leech ceiling G(A2)/G(Leech) = mu q^2 Phi_3 Phi_4 Phi_6 = 32760 = kissing(Leech)/kissing(A2), consistent with the alpha-closure factorisation 196560 = 6 mu q^2 Phi_3 Phi_4 Phi_6. HONEST NEGATIVE: 32760 ~ 3e4 is ~13 orders short of the Planck/electroweak ~1e17; the discrete tower fixes the tower-level (geometric) gravity hierarchy v=40 but NOT the absolute 1e17. The missing orders need the dynamical absolute scale (named residue) or an exponential (e^N, N=60 -> 1e26, overshooting; 1e17 needs N~39) -- neither lands without tuning. So the substrate explains the geometric gravity hierarchy exactly and leaves the absolute Planck/EW hierarchy OPEN. Stated plainly: exact step factors + cumulative v=40/32760 (positive), 1e17 not reproduced (negative).",
+  "sources": [
+    "G-running G_s=k/(4 kissing_s) (w33_newton_running.py); kissing numbers A2=6, D4=24, E8=240, Leech=196560; Leech factorisation 196560=6 mu q^2 Phi_3 Phi_4 Phi_6 (w33_alpha_closure.py); moonshine ceiling = Leech c=rank=24=f; observed M_Pl/M_EW ~ 1e17; inflation N=60 (w33_efold_tick.py)."
+  ]
+}
