@@ -1,0 +1,23 @@
+{
+  "screening": {
+    "bulk_rays": 27,
+    "gauge_neighbours_each": 4,
+    "is": "mu = SRG parameter = code distance d = 4"
+  },
+  "redundancy": {
+    "mu": 4,
+    "code_distance": 4,
+    "erasures_tolerated": 3
+  },
+  "causal_diameter": 2,
+  "no_local_logical": {
+    "register": "H_1 = Steinberg",
+    "dim": 81,
+    "irreducible": true,
+    "consequence": "logical algebra nonlocal (no local recovery)"
+  },
+  "summary": "the W(3,3) code is a HOLOGRAPHIC code. From any pole the 40 rays split 1+12+27 = self + gauge boundary + matter bulk; every bulk ray is screened by exactly mu=4 boundary (gauge) rays -- the SRG parameter = the code distance d=4 -- so the bulk matter is reconstructed from the boundary gauge redundantly (erase up to d-1=3 boundary neighbours and recover). Causal diameter 2 (bulk one hop from boundary, two from pole) = RT-like depth; the logical register H_1 is the irreducible Steinberg module (dim 81=q^4), so no local logical operator -- logical info is nonlocal. Redundant bulk-from-boundary recovery + redundancy=distance + RT depth + no local recovery = the holographic signature. The 'holo' in holonet is earned. Honest: holographic SIGNATURE from the geometry + Steinberg irreducibility, not a full HaPPY perfect-tensor proof.",
+  "sources": [
+    "W(3,3)=SRG(40,12,2,4), parabolic split 1+12+27, mu=4 common neighbours of non-adjacent vertices; code distance d=4 ([[240,81,4,3]]_3); causal diameter 2 (Pillar 67, w33_information_structure); Steinberg module H_1 dim 81 irreducible (sec:memory); holographic codes / complementary recovery (Pastawski-Yoshida-Harlow-Preskill HaPPY); w33_magic_economy.py, w33_contextuality_simulation.py."
+  ]
+}

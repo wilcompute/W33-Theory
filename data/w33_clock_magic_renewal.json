@@ -1,0 +1,31 @@
+{
+  "twist": {
+    "theta": 2.300524,
+    "cos": "-2/3 = -(q-1)/q",
+    "theta_over_pi_irrational": true,
+    "by": "Niven"
+  },
+  "equidistribution": {
+    "N": 200000,
+    "discrepancy": 2e-05,
+    "equidistributed": true
+  },
+  "three_gap": {
+    "N": 500,
+    "distinct_gaps": 3,
+    "steinhaus": true
+  },
+  "no_stabilizer_recurrence": {
+    "min_distance": 0.00048,
+    "never_exact": true
+  },
+  "space_time": {
+    "spatial": "no ovoid; alpha=7=Phi_6 < theta=10=Phi_4; KS deficit q=3",
+    "temporal": "theta/pi irrational (Niven); no Clifford recurrence",
+    "common": "q=3 forbids removing the magic in space or time"
+  },
+  "summary": "the Boerdijk-Coxeter time quasicrystal RENEWS the magic. Its twist theta=arccos(-2/3) = the q=3 simplex vertex angle has theta/pi IRRATIONAL (Niven: -2/3 not in {0,+-1/2,+-1}), so the stroboscopic phases never repeat, are Weyl-equidistributed (star discrepancy ->0 at N=2e5), obey the Steinhaus three-gap law, and never hit a stabilizer angle 2pi k/q exactly. A drive is Clifford-trackable only if it closes a finite cycle (rational theta/2pi); the irrational q-simplex angle never closes, so each tick injects a fresh cubic (non-Clifford) rotation -- the magic is continuously replenished, never precessing into a Clifford loop. Temporal partner of the spatial no-ovoid result: the same q=3 forbids gauging the magic away in space (no ovoid, alpha=7<theta=10, deficit q=3) and in time (no recurrence). The clock fuels the machine.",
+  "sources": [
+    "Boerdijk-Coxeter helix clock theta=arccos(-2/3)=-(q-1)/q simplex angle (sec:time); Niven's theorem (rational cos & rational theta/pi); Weyl equidistribution; Steinhaus three-gap; qutrit stabilizer phases 2pi k/q; matter=magic + no ovoid (w33_magic_economy.py, w33_contextuality_simulation.py); cubic gate = non-Clifford resource (Lloyd-Braunstein, degree-3 E6)."
+  ]
+}

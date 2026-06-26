@@ -1235,6 +1235,48 @@ world's vacuum selection are one substrate constant.
 \emph{Witness: \path{analysis/w33_magic_economy.py}.}
 \end{theorem}
 
+\paragraph{The resource accounting.} Matter $=$ magic has a measurable payoff. Define
+the non-Clifford premium $P=\mathrm{cost}(\text{non-Clifford})/\mathrm{cost}(\text{Clifford})$.
+In the surface-code baseline a non-Clifford gate needs a distilled magic state, so
+$P\sim O(d^3)$ (the distillation factory, $\sim10^3$--$10^4$ qubit-rounds at useful code
+distances $d$, occupying $30$--$90\%$ of the device --- the dominant cost of fault
+tolerance). On this substrate $P=1$: a non-Clifford gate is a magic injection from the
+matter shell the code already maintains, costing one error-correction cycle, exactly
+like a Clifford gate. The distillation factory and its $O(d^3)$ premium are absent; the
+saving scales as $d^3$, and the non-Clifford gate rate equals the Clifford rate (magic
+per round $=\vartheta-\alpha=q=3$). Non-Clifford gates are as cheap as Clifford gates
+because the fuel \emph{is} the code. (Witness:
+\path{analysis/w33_magic_resource_accounting.py}.)
+
+\paragraph{The clock renews the magic.} What keeps the structural magic from precessing
+into a Clifford frame is the clock's aperiodicity. The Boerdijk--Coxeter twist
+$\theta=\arccos(-2/3)$ --- the $q=3$ simplex angle, $-2/3=-(q-1)/q$ --- has $\theta/\pi$
+\emph{irrational} (Niven, since $\cos\theta=-2/3\notin\{0,\pm\tfrac12,\pm1\}$), so the
+stroboscopic phases $\{n\theta\bmod2\pi\}$ never repeat, are Weyl-equidistributed (star
+discrepancy $\to0$), obey the Steinhaus three-gap law, and never land exactly on a
+stabilizer angle $2\pi k/q$. A drive is Clifford-trackable only if it closes a finite
+cycle ($\theta$ a rational multiple of $2\pi$); the irrational $q$-simplex angle never
+closes, so each tick injects a fresh cubic (non-Clifford) rotation --- the magic is
+continuously replenished. This is the \emph{temporal} partner of the spatial no-ovoid
+result: the same $q=3$ forbids gauging the magic away in space (no ovoid,
+$\alpha=7=\Phi_6<\vartheta=10=\Phi_4$) and in time (no recurrence). The time quasicrystal
+does not merely clock the machine; it fuels it. (Witness:
+\path{analysis/w33_clock_magic_renewal.py}.)
+
+\paragraph{And the code is holographic.} The matter shell is not just a code but a
+\emph{holographic} one. From any pole the $40$ rays split $1+12+27=$ self $+$ gauge
+boundary $+$ matter bulk, and every bulk ray is screened by exactly $\mu=4$ boundary
+rays --- the strongly-regular $\mu$-parameter, equal to the code distance $d=4$. So the
+bulk matter is reconstructed from the boundary gauge \emph{redundantly}: erase up to
+$d-1=3$ of a bulk ray's boundary neighbours and it is still recoverable. The causal
+diameter is $2$ (every bulk ray one hop from the boundary, two from the pole), the
+RT-like depth; and the logical register $H_1$ is the irreducible Steinberg module
+(dim $81=q^4$), so there is no local logical operator --- logical information lives only
+nonlocally on the boundary. Redundant bulk-from-boundary recovery, redundancy $=$
+distance, an RT-like causal depth, and no local recovery are the holographic signature:
+the ``holo'' in holonet is earned. (Witness:
+\path{analysis/w33_holographic_code.py}.)
+
 %======================================================================
 \section{Memory, protection, and the immune system}
 \label{sec:memory}

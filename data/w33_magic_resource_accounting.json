@@ -1,0 +1,43 @@
+{
+  "premium_table": [
+    {
+      "distance_d": 11,
+      "P_baseline": 1331,
+      "P_substrate": 1,
+      "saving_factor": 1331
+    },
+    {
+      "distance_d": 15,
+      "P_baseline": 3375,
+      "P_substrate": 1,
+      "saving_factor": 3375
+    },
+    {
+      "distance_d": 21,
+      "P_baseline": 9261,
+      "P_substrate": 1,
+      "saving_factor": 9261
+    },
+    {
+      "distance_d": 25,
+      "P_baseline": 15625,
+      "P_substrate": 1,
+      "saving_factor": 15625
+    }
+  ],
+  "device_fraction": {
+    "baseline_factory": "0.3-0.9",
+    "substrate_factory": 0.0,
+    "freed": "the entire distillation factory"
+  },
+  "rate": {
+    "density": "1/Phi_4 = 1/10",
+    "magic_rays_per_core": 36,
+    "nonclifford_rate": "= Clifford rate (no slowdown)",
+    "magic_per_round": "theta-alpha = q = 3"
+  },
+  "summary": "resource accounting of matter=magic: the non-Clifford premium P=cost(non-Cliff)/cost(Cliff) is O(d^3) in the surface-code+distillation baseline (~10^3-10^4 at useful d; T-factory = 30-90% of device) but P=1 on the substrate -- a non-Clifford gate is a magic injection from the matter shell the code already carries, costing one EC cycle like a Clifford gate. The distillation factory and its O(d^3) premium vanish; saving ~ d^3. Non-Clifford gate rate = Clifford rate (magic density 1/Phi_4=1/10, 36 magic rays/core, magic per round = theta-alpha = q = 3). The dominant cost of FT (magic distillation) scales O(d^3) baseline vs O(1) substrate -- structural saving, the code is the fuel. Honest: overhead-scaling accounting, not a circuit-level FT sim.",
+  "sources": [
+    "magic-state distillation as dominant FT cost: Bravyi-Kitaev 2005; Litinski, 'Magic State Distillation: Not as Costly as You Think', Quantum 3, 205 (2019); 15-to-1 factory ~O(d^3), 30-90% device fraction; matter=magic (w33_magic_economy.py, sec:fuel); contextual fraction 1/Phi_4=1/10; KS deficit theta-alpha=q=3; [[240,81,4,3]]_3 code; w33_gkp_lattice_architecture.py."
+  ]
+}
