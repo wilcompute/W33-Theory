@@ -1,0 +1,41 @@
+{
+  "bt": "BT1832",
+  "title": "Optical Primitive Lowering",
+  "verified": true,
+  "summary": "BT1832 lowers the BT1830 syndrome compiler into explicit optical primitive classes. The bill of materials covers all 12 syndrome terms plus the classical decoder outputs. The component graph is connected with 33 nodes and 39 edges.",
+  "factor_graph": {"nodes": 33, "edges": 39},
+  "primitive_totals": {
+    "ancilla_detectors": 2,
+    "balanced_interferometers": 3,
+    "classical_adders": 4,
+    "coincidence_comparators": 3,
+    "edge_detectors": 6,
+    "flag_logic": 1,
+    "four_mode_encoder": 3,
+    "guard_detectors": 3,
+    "mode_detectors": 12,
+    "parity_comparators": 2,
+    "path_delays": 6,
+    "phase_shifters": 21,
+    "ring_bins": 12,
+    "ring_detectors": 12,
+    "threshold_detectors": 9,
+    "tritter_or_2_BS_mesh": 3,
+    "winding_analyzers": 1,
+    "xor_interferometers": 4
+  },
+  "checks": {
+    "all_BT1830_syndrome_terms_covered": true,
+    "decoder_outputs_present": true,
+    "module_count_7": true,
+    "ring_has_12_bins": true,
+    "three_slip_guards": true,
+    "three_K4_interferometers": true,
+    "two_D4_parity_ancillas": true,
+    "three_qutrit_sorters": true,
+    "graph_connected": true,
+    "graph_has_expected_nodes": true,
+    "graph_has_expected_edges": true
+  },
+  "boundary": "Primitive-level lowering only; spatial footprints, exact matrices, and calibration pulses remain future work."
+}
