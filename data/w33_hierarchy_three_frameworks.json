@@ -1,0 +1,37 @@
+{
+  "complement_base": {
+    "r": "q^q/(lambda v) = kbar/(lambda v) = 27/80",
+    "kbar": 27,
+    "kbar_forms": "v-k-1 = q^q = E6 fundamental",
+    "complement_SRG": [
+      40,
+      27,
+      18,
+      18
+    ],
+    "identity": "l^mu F5 = lambda v = 80"
+  },
+  "three_forms": {
+    "A_base10": {
+      "form": "2 Phi_6 log10 + log 496",
+      "ln_value": 38.44
+    },
+    "B_cyclotomic": {
+      "form": "q Phi_3",
+      "value": 39
+    },
+    "C_tier": {
+      "form": "ln-gap / ln(80/27)",
+      "tiers": 35.4
+    },
+    "A_vs_B_pct": 1.4
+  },
+  "open_alignment": {
+    "status": "same gap, three bases, not simultaneously integer-aligned",
+    "evidence": "q Phi_3 = 39 e-folds = 35.4 tiers (non-integer)"
+  },
+  "summary": "one hierarchy, three frameworks reconciled, the tier base grounded in the COMPLEMENT graph. The Planck-EW gap appears three ways: (A) canonical base-10 (log10(M_GUT/M_EW) = 2 Phi_6 = 14, M_Pl/M_GUT = 496 = dim SO(32)), (B) cyclotomic e-fold (ln(M_Pl/M_EW) = q Phi_3 = 39), (C) multiplicative tier tower -- all giving the same ~38-39 e-fold gap (A=38.44 vs B=39, 1.4%). NEW grounding (user identities q^3=q^q, 27=complement degree): r = q^q/(lambda v) = kbar/(lambda v), where q^q = 27 = kbar = v - k - 1 is the degree of the complement SRG(40,27,18,18) (= E6 fundamental / matter sector; its lambda_bar = mu_bar = 18 = h(E7)), and lambda v = 80 = l^mu F5. So the tier tower's base is a pure complement-graph invariant, joining the cyclotomic and base-10 forms as W(3,3) data. OPEN: the three bases (10, e, 80/27) encode the same gap but do not integer-align simultaneously (q Phi_3 = 39 e-folds = 35.4 tiers, non-integer) -- the same physics in three quantizations, a single all-integer alignment the remaining thread. HONEST: A vs B is a 1.4% numerical reconciliation (each exact in its base); the complement-graph grounding of r is the genuine new identity.",
+  "sources": [
+    "canonical document hierarchy (vEW/MPl = 1/(10^(2 Phi_6) * 496), 496 = dim SO(32)); cyclotomic e-fold q Phi_3 = 39 (w33_hierarchy_derivation.py, w33_scale_reduction.py); tier tower r = q^q/(l^mu F5) (BT399, BT411); complement SRG(40,27,18,18), kbar = v-k-1 = 27 = E6 fundamental; user identities q^3 = q^q, 27 in complement graph."
+  ]
+}
