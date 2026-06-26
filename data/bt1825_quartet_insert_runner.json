@@ -1,0 +1,16 @@
+{
+  "bt": "BT1825",
+  "title": "quartet insert runner and validator",
+  "status": "read_only_validator_committed",
+  "integrator_command": "python tools/integrate_bt1820_quartet_insert.py",
+  "validator_command": "python tools/check_bt1820_quartet_insert.py",
+  "validator": "tools/check_bt1820_quartet_insert.py",
+  "expected_checks": [
+    "analysis/BT1820_quartet_law_paper_insert.tex exists",
+    "paper/sections/sec_bt1820_quartet_fibre_law.tex exists after integrator runs",
+    "paper/w33_preprint.tex exists",
+    "the quartet section input command appears exactly once"
+  ],
+  "boundary": "The validator is read-only and does not run the integrator internally. Run the integrator command first, then the validator command.",
+  "conclusion": "BT1825 gives the quartet paper insert a narrow runbook and validation check without requiring a risky full paper rewrite in the connector session."
+}
