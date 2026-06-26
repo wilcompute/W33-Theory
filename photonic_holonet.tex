@@ -146,12 +146,14 @@ demonstrator} (contextual fraction $1/\Phi_4=1/10$, pump Chern $\lambda=2$), and
 \textbf{(7) cosmology} ($N=2(v{-}\Phi_4)=2h(E_8)=60$ e-folds; $n_s=29/30$, $r=k/N^2=1/300$).
 The faces share integers --- $k{=}12,\Phi_4{=}10,\Phi_3{=}13,c{=}f{=}24,v{=}40$ each serve
 $\ge3$ faces (Table~\ref{tab:periodic}) --- which is why they are one object
-(Fig.~\ref{fig:five-faces}). \emph{The honest edge}: every geometric integer is a
-cyclotomic value, GQ count, or Witting degree, but the fine-structure constant
-($1/\alpha\approx137$) and the Monster dimension $196883$ sit at the $c=24=f$ moonshine
-ceiling ($196883$ is second-layer forced via the complex Leech; $\alpha$ is the remaining
-edge). \emph{The one experiment to run first}: the benchtop, calibration-free contextual
-fraction $1/\Phi_4=1/10$, which tests three faces at once.
+(Fig.~\ref{fig:five-faces}). \emph{No free integer parameter}: every geometric integer is a cyclotomic value, GQ
+count, or Witting degree, and even the moonshine ceiling closes --- the Leech kissing
+number factors as $196560=6\mu q^2\Phi_3\Phi_4\Phi_6$, so the Monster ($196883$),
+$\tau=\mu q^2\Phi_6=252$, and the fine-structure integer $1/\alpha=137=\Phi_3\Phi_4+
+\Phi_6$ are all $\{\mu,q,\Phi_3,\Phi_4,\Phi_6\}$ arithmetic; the lone non-integer input
+is the $0.036$ of $137.036$ (QED running). \emph{The one experiment to run first}: the
+benchtop, calibration-free contextual fraction $1/\Phi_4=1/10$, which tests three faces
+at once.
 
 The identification rests on seven exact pillars, each proved by
 explicit computation in the project repository (every theorem below
@@ -4696,28 +4698,36 @@ measurement (\path{analysis/w33_neutrino_demonstrator_bridge.py}), which a conte
 simulation on the $40$ $\W$ rays realises explicitly, returning $\Phi_4=10$ and $13/9$
 from the incidence geometry (\path{analysis/w33_contextuality_simulation.py}).
 
-\emph{The honest edge.} A synthesis is worth its boundary. Every geometric integer of
-the seven faces is a cyclotomic value $\Phi_d(3)$, a GQ count, a Witting degree, or a
-simple combination of these (e.g.\ $\lvert\mathrm{PSL}(2,7)\rvert=168=\Phi_6\!\cdot\!f$,
-$\dim E_8=248=240+8$). But not everything reduces directly: the Monster minimal
-dimension $196883$ and the fine-structure constant ($1/\alpha\approx137$) are
-\emph{not} Witting degrees or cyclotomic values; they sit one level up, at the
-$c=24=f$ moonshine ceiling. The Monster dimension, however, is not free: the classical
-$j$/Leech identity $196884=196560+324$ with $324=\mu q^4=h(E_7)^2$ forces
-$196883=196560+\mu q^4-1$, and the Leech kissing number $196560$ is carried by the
-\emph{complex} (Eisenstein) Leech --- the $\mathbb Z[\omega]$, rank-$12{=}k$, $6\cdot
-\mathrm{Suz}$ lattice atop the substrate's Eisenstein tower. So $196883$ is
-\emph{second-layer forced}, welded to the object; the genuine remaining edge is one
-factorization deeper ($196560=252\cdot780$, $\tau=252$), where $\alpha$ enters via the
-Suzuki lift. The unification is therefore layered, not floating: the Witting object
-fixes the seven faces directly, the complex Leech determines the Monster ceiling, and
-$\alpha$ alone is the open edge. (The third cyclotomic value $\Phi_6(3)=7$ also surfaces
-in the toroidal thread: the Cs\'asz\'ar polyhedron is $K_7$ on the torus and the dual
-Szilassi has $7$ faces, with $C_2$ symmetry of order $2=\lambda=q-1$.) Witnesses:
-\path{analysis/w33_eisenstein_stress_test.py},
-\path{analysis/w33_monster_leech_second_layer.py}. And the single most decisive
-near-term test --- benchtop, calibration-free, and touching three faces --- is the
-contextual fraction $1/\Phi_4=1/10$ (\path{analysis/w33_decisive_experiment.py}).
+\emph{The edge, and how it closes.} A synthesis is worth its boundary. Every geometric
+integer of the seven faces is a cyclotomic value $\Phi_d(3)$, a GQ count, a Witting
+degree, or a simple combination (e.g.\ $\lvert\mathrm{PSL}(2,7)\rvert=168=\Phi_6\!\cdot
+\!f$, $\dim E_8=248=240+8$). The two quantities that seemed to escape --- the Monster
+minimal dimension $196883$ and the fine-structure constant ($1/\alpha\approx137$),
+which live at the $c=24=f$ moonshine ceiling --- turn out to close too, at the integer
+level. The key is that the \emph{Leech kissing number factors entirely into substrate
+constants},
+\[
+196560 \;=\; 6\,\mu\,q^2\,\Phi_3\Phi_4\Phi_6 \;=\; 6\cdot4\cdot9\cdot13\cdot10\cdot7,
+\]
+so the complex (Eisenstein) Leech --- the $\mathbb Z[\omega]$, rank-$12{=}k$, $6\cdot
+\mathrm{Suz}$ lattice atop the substrate's tower --- is built from $\{\mu,q,\Phi_3,
+\Phi_4,\Phi_6\}$. Then the lift parameter is forced, $\tau=\mu q^2\Phi_6=252=32760/
+(\Phi_3\Phi_4)$; the Monster dimension is $196883=196560+\mu q^4-1$ (with $\mu
+q^4=h(E_7)^2=324$ the classical $j$/Leech gap); and the fine-structure \emph{integer}
+is a cyclotomic combination, $1/\alpha=137=\Phi_3\Phi_4+\Phi_6=2^{\Phi_6}+q^2$. So no
+free \emph{integer} parameter remains: even the famous $137$ is $\{\Phi_3,\Phi_4,
+\Phi_6\}$ arithmetic, and the moonshine ceiling is the substrate constants. The one
+genuinely non-integer input is the $0.036$ of the measured $137.036$ --- the QED
+running, dynamics rather than arithmetic. \emph{That} is the honest residue: the
+substrate fixes the integer, the renormalization flow supplies the rest. (The third
+value $\Phi_6(3)=7$ also surfaces in the toroidal thread: the Cs\'asz\'ar polyhedron is
+$K_7$ on the torus and the dual Szilassi has $7$ faces, with $C_2$ symmetry of order
+$2=\lambda=q-1$.) Witnesses: \path{analysis/w33_alpha_closure.py},
+\path{analysis/w33_monster_leech_second_layer.py},
+\path{analysis/w33_eisenstein_stress_test.py}. And the single most decisive near-term
+test --- benchtop, calibration-free, three faces --- is the contextual fraction
+$1/\Phi_4=1/10$, now a concrete single-photon protocol
+(\path{analysis/w33_contextuality_protocol.py}).
 
 \begin{table}[ht]\centering\small
 \caption{The periodic table of the $q=3$ Eisenstein object (excerpt): the load-bearing

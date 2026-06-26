@@ -1,0 +1,21 @@
+{
+  "structure": {
+    "points_weyls": 40,
+    "contexts_lines": 40,
+    "weyls_per_context": 4,
+    "contexts_per_weyl": 4
+  },
+  "protocol": {
+    "carrier": "single photon, 2 qutrits (path x OAM = C^9)",
+    "settings": 40,
+    "detection": "PNR in 9 modes",
+    "statistic": "noncontextuality LP (Abramsky-Brandenburger)",
+    "prediction": "CF = 1/Phi_4 = 1/10",
+    "budget": "~1e6 photons/setting, ~4e7 total; calibration-free unit fraction"
+  },
+  "discriminates": "q=2 contextuality-free; q=5 -> 1/26; generic SRG -> != 1/10",
+  "summary": "concrete single-photon protocol for the contextual fraction 1/10: encode 2 qutrits in one photon (path x OAM = C^9); the 40 W(3,3) points are the 40 two-qutrit Weyl operators, the 40 contexts are the isotropic lines (4 commuting Weyls each, 4 per Weyl -- GQ(3,3) incidence verified). 40 Clifford (Sp(4,3)) optical settings (tritter+phase) + PNR detection in 9 modes; the noncontextuality LP over the 40 distributions returns CF = 1/Phi_4 = 1/10 (spectral bound). Calibration-free unit fraction, ~1e6 photons/setting (~4e7 total), seconds at MHz rates. Measuring 1/10 confirms three faces; deviation falsifies. Honest: a verified-geometry protocol proposal, not a completed measurement.",
+  "sources": [
+    "two-qutrit Weyl operators = W(3,3)=GQ(3,3) points (40); isotropic lines = commuting contexts; contextual fraction = Abramsky-Brandenburger LP; substrate CF=1/Phi_4=1/10 (w33_contextuality_simulation.py, w33_demonstrator_substrate_constants.py); Clifford optics = Sp(4,3) (universality theorem, bt825); single-photon path/OAM qutrits; w33_decisive_experiment.py."
+  ]
+}

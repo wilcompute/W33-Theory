@@ -1,0 +1,30 @@
+{
+  "leech_factorization": {
+    "leech_kissing": 196560,
+    "formula": "6*mu*q^2*Phi_3*Phi_4*Phi_6",
+    "classes": 32760,
+    "classes_formula": "mu*q^2*Phi_3*Phi_4*Phi_6"
+  },
+  "tau": {
+    "value": 252,
+    "formula": "mu*q^2*Phi_6 = 32760/(Phi_3*Phi_4)"
+  },
+  "monster": {
+    "dim": 196883,
+    "formula": "6*mu*q^2*Phi_3*Phi_4*Phi_6 + mu*q^4 - 1",
+    "gap": "mu*q^4 = h(E7)^2 = 324"
+  },
+  "alpha_integer": {
+    "value": 137,
+    "decompositions": [
+      "Phi_3*Phi_4+Phi_6",
+      "2^Phi_6+q^2",
+      "2*H_67+q"
+    ]
+  },
+  "honest_scope": "closes the integer level (no free integer parameter; 1/alpha=137 cyclotomic); the 0.036 of 137.036 is QED running, not a substrate integer",
+  "summary": "CLOSURE at the integer level: the Leech kissing number factors entirely into substrate constants, 196560 = 6*mu*q^2*Phi_3*Phi_4*Phi_6, so the complex Leech, the Monster dim (196560+mu*q^4-1=196883, mu*q^4=h(E7)^2=324), the lift tau=mu*q^2*Phi_6=252 (=32760/(Phi_3*Phi_4)), and the fine-structure integer 1/alpha=137=Phi_3*Phi_4+Phi_6=2^Phi_6+q^2=2*H_67+q are all built from {mu,q,Phi_3,Phi_4,Phi_6}. The edge (alpha, Monster) is welded shut: the moonshine ceiling IS the substrate constants; 137 is cyclotomic; no free integer parameter remains. HONEST: this fixes the integer 137, not the measured 137.036 -- the 0.036 is QED running (RG dynamics), the one genuinely non-integer input.",
+  "sources": [
+    "complex (Eisenstein) Leech kissing 196560; Eisenstein units = 6 (sixth roots); j/Leech gap 324 = h(E7)^2 = mu*q^4; Monster minimal dim 196883 (moonshine); tau=252, alpha^-1=137 (BREAKTHROUGH CCLVI, w33_alpha_mtau_heegner_connection.py); 137 = 2^Phi_6+q^2 = 2*Heegner_67+q (corpus); w33_monster_leech_second_layer.py, w33_eisenstein_stress_test.py, w33_complex_leech_suzuki_chain.py."
+  ]
+}

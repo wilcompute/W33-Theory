@@ -1,0 +1,189 @@
+{
+  "sections": [
+    {
+      "section": "Overture (+ Rosetta stone)",
+      "role": "frames all; one-object claim",
+      "faces": [
+        "all"
+      ]
+    },
+    {
+      "section": "The substrate",
+      "role": "W(3,3), the shared foundation",
+      "faces": [
+        "S"
+      ]
+    },
+    {
+      "section": "The carrier (self-entangle a photon)",
+      "role": "single-photon qutrit register",
+      "faces": [
+        "M",
+        6
+      ]
+    },
+    {
+      "section": "The network (atlas, building, routing)",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "The middleware (tomotope, mirror bus)",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "The software (braids, universality)",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "Fractal scaling",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "Runtime closure",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "Memory, protection, immune system",
+      "role": "architecture",
+      "faces": [
+        "M",
+        5
+      ]
+    },
+    {
+      "section": "Time: three clocks, a quasicrystal",
+      "role": "architecture",
+      "faces": [
+        "M"
+      ]
+    },
+    {
+      "section": "Synchronization (beacons, schedules)",
+      "role": "architecture",
+      "faces": [
+        "M"
+      ]
+    },
+    {
+      "section": "Build sheet & falsifiable witnesses",
+      "role": "engineering",
+      "faces": [
+        "M",
+        6
+      ]
+    },
+    {
+      "section": "Implications, corrections, ethos",
+      "role": "bridges to physics",
+      "faces": [
+        "all"
+      ]
+    },
+    {
+      "section": "Verification ledger",
+      "role": "epistemics",
+      "faces": [
+        "all"
+      ]
+    },
+    {
+      "section": "Architecture Completeness / 3 residuals",
+      "role": "code layer",
+      "faces": [
+        5
+      ]
+    },
+    {
+      "section": "The exceptional skeleton and its physics",
+      "role": "the seven faces",
+      "faces": [
+        "all"
+      ]
+    },
+    {
+      "section": "  five-faces synthesis",
+      "role": "the one object",
+      "faces": [
+        "all"
+      ]
+    },
+    {
+      "section": "  why q=3 / neutrino triality",
+      "role": "selection + neutrino",
+      "faces": [
+        1,
+        4
+      ]
+    },
+    {
+      "section": "  measurable layer (scorecard)",
+      "role": "constants/gauge/cosmology",
+      "faces": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "section": "  passes 1-4 (closure->deepest)",
+      "role": "neutrino/selection/code",
+      "faces": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "section": "  self-error-correction / one photon",
+      "role": "code + carrier",
+      "faces": [
+        5,
+        6
+      ]
+    }
+  ],
+  "coverage": {
+    "faces_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "all_seven": true,
+    "orphans": []
+  },
+  "structure": {
+    "machine_half": "Face 5 (code) on the W(3,3) substrate",
+    "world_half": "the seven faces",
+    "frame": "Rosetta note + five-faces synthesis"
+  },
+  "summary": "coherence audit of photonic_holonet.tex: every top-level section maps onto one of the seven faces, the machine spine (Face 5, the fault-tolerant computation), or the shared W(3,3) substrate. All seven faces are covered; no out-of-frame sections. The two halves -- MACHINE (architecture = Face 5 on the substrate) and WORLD (the exceptional skeleton = the seven faces) -- are the one Eisenstein object, framed up front by the Overture Rosetta note and the five-faces synthesis. The seven-faces reorganization is complete end to end.",
+  "sources": [
+    "photonic_holonet.tex section structure; the seven faces (w33_eisenstein_grand_synthesis.py, w33_gauge_sixth_face.py, w33_cosmology_seventh_face.py); Rosetta note + five-faces synthesis (sec:five-faces)."
+  ]
+}
