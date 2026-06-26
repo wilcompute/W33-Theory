@@ -6673,6 +6673,45 @@ explains the $120$ as $4\,\mathrm{beat}$ \emph{given} the meV floor (the neutrin
 reframing the CC problem rather than solving it from nothing; the joint forecast uses published
 CMB-S4/LiteBIRD sensitivities; the standalone paper is a summary, not new derivations.
 
+\subsection{Pass 19 --- the floor derived from the 600-cell, and the dated decision}
+\label{sec:capstone-nineteen}
+
+The last shared input is derived from the seesaw and the 600-cell, and the whole tower is
+reduced to one dated measurement.
+
+\emph{The beat-decade floor, derived.} The meV floor that the CC mechanism (Pass 18) and the
+neutrino sector share is not an input: it is the type-I seesaw combination of the substrate's
+own exponents. The lightest neutrino is $m_1=y_1^2v^2/M_R$, so
+\[
+\ln(M_{\rm Pl}/m_1)=\ln(M_{\rm Pl}/v)+\ln(M_R/v)-2\ln y_1=q\Phi_3+2\Phi_3+\Phi_6=(q{+}2)\Phi_3+\Phi_6=72,
+\]
+the electroweak descent ($q\Phi_3$), the right-handed scale ($2\Phi_3$ above $v$, from $M_R=
+M_{\rm Pl}e^{-\Phi_3}$, the scalaron), and a neutrino Dirac Yukawa $y_1=e^{-\Phi_6/2}\approx0.03$.
+This $\sim72$ e-folds equals $\mathrm{beat}$ decades ($30\ln10=69$) to $\sim4\%$ --- and
+$\mathrm{beat}=30=h(E_8)$ is the Boerdijk--Coxeter helix ring length on the $600$-cell
+($600=20\times30$). So the same $600$-cell ring that sets the inflationary clock sets the
+floor; the CC's breaking scale is closed up to the one Yukawa $y_1$. (Witness:
+\path{analysis/w33_floor_derivation.py}.)
+
+\emph{The dated decision.} The whole cosmological tower reduces to one number by $\sim$2035.
+The substrate predicts $r=12/N^2=1/300$ ($N=2\,\mathrm{beat}=60$); the $\sigma(r)$ timeline ---
+Simons Observatory ($\sim$2027, $r/\sigma\!\sim\!1$), LiteBIRD ($\sim$2035, $3.3\sigma$), CMB-S4
+($6.7\sigma$) --- gives three verdicts (Fig.~\ref{fig:decisive-r}): (A) $r\approx1/300$ on the
+line $\Rightarrow$ the tower stands and $\mathrm{beat}=30$ is in the sky; (B) $r<10^{-3}
+\Rightarrow$ the Starobinsky $N=60$ spectrum is falsified; (C) $r$ detected $\neq1/300
+\Rightarrow$ the $\mathrm{beat}\to N$ origin is wrong. (Witness:
+\path{analysis/w33_decisive_r_test.py}.) These distillations are collected in the standalone
+manuscript \path{w33_everything.tex}, now with a derived/matched/open table and references.
+
+\input{analysis/w33_decisive_r_test_fig.tex}
+
+\emph{Honest scope:} the seesaw is standard and the EW/RH exponents are the substrate's, so the
+floor is derived up to the one Yukawa $y_1=e^{-\Phi_6/2}$ (a charm-scale neutrino Dirac
+coupling, motivated by $\Phi_6$ not independently derived), and $72\approx\mathrm{beat}$
+decades to $\sim4\%$ (the base-10-vs-$e$ factor the residual); the decision tree uses published
+$\sigma(r)$ forecasts (foregrounds/delensing may move the dates), with $r=1/300$ and the
+Starobinsky line the exact predictions.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

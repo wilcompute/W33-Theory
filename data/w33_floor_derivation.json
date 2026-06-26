@@ -1,0 +1,25 @@
+{
+  "bc_ring": {
+    "cells_600": 600,
+    "rings": 20,
+    "cells_per_ring": 30,
+    "identity": "beat = 30 = h(E8) = 600-cell BC helix ring length"
+  },
+  "seesaw_floor": {
+    "m1_meV": 2.0,
+    "y1": 0.03,
+    "ln_floor_efolds": 70.9,
+    "substrate_form": "(q+2) Phi_3 + Phi_6 = 5 Phi_3 + Phi_6 = 72",
+    "terms": "EW (q Phi_3) + RH scale (2 Phi_3) + Yukawa (Phi_6)"
+  },
+  "beat_decades": {
+    "beat_decades_efolds": 69.1,
+    "seesaw_efolds": 72,
+    "agreement_pct": 4.0,
+    "reading": "floor depth = beat = 30 decades = BC ring length, same as the clock"
+  },
+  "summary": "deriving the beat-decade floor (the last input of the CC mechanism) from the seesaw, tied to the 600-cell BC helix. The lightest neutrino is the seesaw floor m1 = y1^2 v^2/M_R, so ln(M_Pl/m1) = ln(M_Pl/v) + ln(M_R/v) - 2 ln(y1) = the sum of substrate exponents: the EW descent q Phi_3 = 39, the right-handed scale 2 Phi_3 = 26 (M_R = M_Pl e^-Phi_3, the scalaron/N_1), and a neutrino Dirac Yukawa y1 = e^-Phi_6/2 (-2 ln y1 = Phi_6 = 7), giving (q+2) Phi_3 + Phi_6 = 5 Phi_3 + Phi_6 = 72 e-folds, m1 ~ 2 meV. This equals beat decades (30 ln10 = 69) to ~4%, and beat = 30 = h(E8) is the Boerdijk-Coxeter helix ring length on the 600-cell (600 cells = 20 rings x 30, the user's pointer) -- the SAME geometric number that sets the inflationary clock (omega2 = 2pi/beat, N = 2 beat). So one number, the 600-cell BC ring 30, governs both the clock and the floor, closing the CC mechanism's breaking scale (M_SUSY = the seesaw floor, CC = M_SUSY^4 = M_Pl^4 10^-vq). HONEST: the seesaw is standard, the EW and RH exponents are the substrate's (derived earlier); the one remaining input is the Yukawa y1 = e^-Phi_6/2 ~ 0.03 (charm-scale neutrino Dirac coupling, motivated by Phi_6 not independently derived); floor = beat decades holds to ~4% (base-10-vs-e the residual). A real partial closure of the last input, tied to the 600-cell BC helix.",
+  "sources": [
+    "CC mechanism + beat-decade floor (w33_cc_mechanism.py); BC helix beat=30, 600-cell 600=20x30 (w33_bc_helix_omega2.py, Pass 6, user pointer); seesaw m1 = y1^2 v^2/M_R; EW exponent q Phi_3 (w33_hierarchy_exponential.py), RH scale M_R = M_Pl e^-Phi_3 (w33_scalaron_is_rhn.py); neutrino Dirac Yukawa y1 = e^-Phi_6/2."
+  ]
+}

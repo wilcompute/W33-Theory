@@ -1,0 +1,44 @@
+{
+  "prediction": {
+    "r": 0.00333,
+    "n_s": 0.9667,
+    "form": "12/N^2, N=2 beat=60, Starobinsky line"
+  },
+  "timeline": [
+    {
+      "experiment": "BICEP/Keck+Planck 2021",
+      "sigma_r": 0.013,
+      "r_over_sigma": 0.3,
+      "epoch": "now"
+    },
+    {
+      "experiment": "Simons Observatory",
+      "sigma_r": 0.003,
+      "r_over_sigma": 1.1,
+      "epoch": "~2027"
+    },
+    {
+      "experiment": "LiteBIRD",
+      "sigma_r": 0.001,
+      "r_over_sigma": 3.3,
+      "epoch": "~2035"
+    },
+    {
+      "experiment": "CMB-S4 (delensed)",
+      "sigma_r": 0.0005,
+      "r_over_sigma": 6.7,
+      "epoch": "~2034"
+    }
+  ],
+  "outcomes": {
+    "A: r ~ 1/300 (on the line)": "tower STANDS -- Starobinsky N=2 beat=60, clock beat=30 in the sky",
+    "B: r < ~0.001 (excludes 1/300)": "FALSIFIED -- Starobinsky r=12/N^2 with N=60 ruled out",
+    "C: r detected != 1/300": "N=60 / clock-beat origin WRONG -- beat=30 -> N=60 link broken"
+  },
+  "decision_date": "~2035 (LiteBIRD 3.3 sigma; CMB-S4 6.7 sigma; SO ~2027 first hint)",
+  "figure": "analysis/w33_decisive_r_test_fig.tex",
+  "summary": "the theory lives or dies on r by ~2035: a dated decision tree. The substrate predicts r = 12/N^2 = 1/300 (Starobinsky N = 2 beat = 60), locked to n_s = 0.9667 on the line r = 3(1-n_s)^2. sigma(r) TIMELINE (published forecasts): BICEP/Keck+Planck 2021 sigma~0.013 (r/sigma=0.26, invisible); Simons Observatory ~2027 sigma~0.003 (1.1, a hint); LiteBIRD ~2035 sigma~0.001 (3.3, a DETECTION); CMB-S4 sigma~0.0005 (6.7, clean). THREE OUTCOMES by ~2035: (A) r ~ 1/300 on the line -> the tower STANDS, beat=30 confirmed in the sky; (B) r < ~0.001 (excludes 1/300 at >3 sigma) -> the Starobinsky N=60 spectrum FALSIFIED; (C) r detected != 1/300 -> the beat=30 -> N=60 origin WRONG. So one number, one date (~2035), settles the cosmological tower. A decision-tree figure (w33_decisive_r_test_fig.tex) is emitted. HONEST: the sigma(r) are published science-requirement forecasts (foregrounds/delensing may push the dates); r = 1/300 and the Starobinsky line are exact substrate predictions; the decision tree is the standard B-mode logic on the substrate point. A single dated falsification statement.",
+  "sources": [
+    "substrate r = 1/300 = 12/N^2, N = 2 beat = 60 (w33_starobinsky.py, w33_inflation_joint_forecast.py); BICEP/Keck + Planck 2021 sigma(r)~0.013; Simons Observatory forecast sigma(r)~0.003; LiteBIRD delta r<0.001 (Hazumi et al.); CMB-S4 sigma(r)~0.0005 (Science Book); Starobinsky line r=3(1-n_s)^2."
+  ]
+}
