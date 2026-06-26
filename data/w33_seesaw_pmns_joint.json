@@ -1,0 +1,162 @@
+{
+  "scans": {
+    "graded(1:2:9)": [
+      {
+        "d_over_C": 0.05,
+        "m1": 22.3,
+        "m2": 25.7,
+        "ratio": 12.2,
+        "th12": 18.5,
+        "th13": 54.4,
+        "th23": 27.9,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.1,
+        "m1": 11.8,
+        "m2": 15.1,
+        "ratio": 26.5,
+        "th12": 27.8,
+        "th13": 42.5,
+        "th23": 19.2,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.15,
+        "m1": 6.6,
+        "m2": 8.6,
+        "ratio": 78.1,
+        "th12": 33.8,
+        "th13": 34.3,
+        "th23": 12.7,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.2,
+        "m1": 4.1,
+        "m2": 5.3,
+        "ratio": 216.3,
+        "th12": 37.2,
+        "th13": 28.1,
+        "th23": 8.5,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.3,
+        "m1": 2.2,
+        "m2": 2.7,
+        "ratio": 965.9,
+        "th12": 40.5,
+        "th13": 20.1,
+        "th23": 4.3,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.5,
+        "m1": 1.4,
+        "m2": 1.6,
+        "ratio": 3838.0,
+        "th12": 42.6,
+        "th13": 12.5,
+        "th23": 1.6,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 1.0,
+        "m1": 1.2,
+        "m2": 1.3,
+        "ratio": 10394.0,
+        "th12": 43.9,
+        "th13": 6.3,
+        "th23": 0.3,
+        "joint_ok": false
+      }
+    ],
+    "diagonal(1,2,9)": [
+      {
+        "d_over_C": 0.05,
+        "m1": 30.4,
+        "m2": 38.2,
+        "ratio": 2.9,
+        "th12": 17.2,
+        "th13": 80.9,
+        "th23": 65.3,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.1,
+        "m1": 26.7,
+        "m2": 41.7,
+        "ratio": 1.7,
+        "th12": 25.9,
+        "th13": 76.3,
+        "th23": 77.0,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.15,
+        "m1": 24.1,
+        "m2": 45.5,
+        "ratio": 1.3,
+        "th12": 35.2,
+        "th13": 73.1,
+        "th23": 89.1,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.2,
+        "m1": 22.4,
+        "m2": 49.4,
+        "ratio": 1.0,
+        "th12": 43.6,
+        "th13": 70.2,
+        "th23": 79.7,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.3,
+        "m1": 18.8,
+        "m2": 44.4,
+        "ratio": 1.3,
+        "th12": 75.2,
+        "th13": 20.8,
+        "th23": 25.6,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 0.5,
+        "m1": 17.2,
+        "m2": 39.8,
+        "ratio": 1.7,
+        "th12": 76.5,
+        "th13": 30.4,
+        "th23": 17.5,
+        "joint_ok": false
+      },
+      {
+        "d_over_C": 1.0,
+        "m1": 18.7,
+        "m2": 40.3,
+        "ratio": 1.7,
+        "th12": 80.8,
+        "th13": 38.6,
+        "th23": 9.0,
+        "joint_ok": false
+      }
+    ]
+  },
+  "any_joint_acceptance": false,
+  "closest_point": {
+    "texture": "graded(1:2:9)",
+    "d_over_C": 0.15,
+    "ratio": 78.1,
+    "th12": 33.8,
+    "th13": 34.3,
+    "th23": 12.7
+  },
+  "verdict": "minimal cubic-form M_R FAILS the JOINT PMNS+spectrum: no single lift satisfies all of (ratio in [20,50], th12~33, th13~8.6, th23~49); where th13 is small the ratio explodes (>200) and th23 collapses (<10). Masses sit at the meV floor but the mixing is not joint.",
+  "summary": "the residual is bigger than one lift -- an honest NEGATIVE result. Pass 21 framed the leftover freedom as 'the single lift direction.' Testing it: the full seesaw with the up-type Dirac block and the cubic-form M_R (A=0.0017, C=0.0442) + one grade-1 lift reproduces the meV-floor MASSES (m1~2 meV) but NOT the PMNS angles -- across the whole lift scan, in both graded and diagonal Dirac textures, NO single lift reproduces all four (ratio, th12, th13, th23); where th13 nears 8.6 deg the ratio explodes past 200 and th23 -> 0 (closest: graded(1:2:9), ratio=78, th12=34, th13=34, th23=13). So the minimal cubic-form M_R explains the SPECTRUM but not the MIXING; the joint closure FAILS at one-lift. This CORRECTS the Pass-21 framing: the residual is the full neutrino Yukawa/Majorana texture, not one number. The substrate CAN fit PMNS (the Pillar-65 graded-Yukawa optimization reaches PMNS error 0.006) but with the FULL texture. HONEST: a negative result -- masses come out, angles do not; the residual is resized from 'one lift' to 'the full mixing texture' (captured by the full optimization, not re-run).",
+  "sources": [
+    "cubic-form M_R A=0.0017 C=0.0442 + grade-1 lift (Pillar 68/69, w33_neutrino_lightest_pinned.py); up-type Dirac 1:2:9 (Pillar 65/68); type-I seesaw; Pillar-65 PMNS optimization error 0.006 (w33_yukawa_optimization.py); PMNS global fits (th12~33, th13~8.6, th23~49 deg; Dm^2_31/Dm^2_21~33)."
+  ]
+}

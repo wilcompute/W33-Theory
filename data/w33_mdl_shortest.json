@@ -1,0 +1,121 @@
+{
+  "counts": {
+    "N_le1": 14,
+    "N_le2": 224,
+    "N_le3": 5401
+  },
+  "matches": [
+    {
+      "obs": "sin^2 th_W",
+      "cost": 2,
+      "expr": "3/13",
+      "value": 0.23077,
+      "delta": 0.002,
+      "bound": 0.896
+    },
+    {
+      "obs": "sin^2 th_12",
+      "cost": 2,
+      "expr": "4/13",
+      "value": 0.30769,
+      "delta": 0.042,
+      "bound": 18.816
+    },
+    {
+      "obs": "sin^2 th_13",
+      "cost": 3,
+      "expr": "(1/3)/15",
+      "value": 0.02222,
+      "delta": 0.029,
+      "bound": 313.258
+    },
+    {
+      "obs": "sin^2 th_23",
+      "cost": 2,
+      "expr": "10/18",
+      "value": 0.55556,
+      "delta": 0.021,
+      "bound": 9.408
+    },
+    {
+      "obs": "M_Z",
+      "cost": 2,
+      "expr": "3*30",
+      "value": 90.0,
+      "delta": 0.0021,
+      "bound": 0.941
+    },
+    {
+      "obs": "CC exponent",
+      "cost": 2,
+      "expr": "3*40",
+      "value": 120.0,
+      "delta": 0.0008,
+      "bound": 0.358
+    },
+    {
+      "obs": "Dm31/Dm21",
+      "cost": 2,
+      "expr": "3+30",
+      "value": 33.0,
+      "delta": 0.012,
+      "bound": 5.376
+    },
+    {
+      "obs": "alpha_s",
+      "cost": 3,
+      "expr": "2/(2+15)",
+      "value": 0.11765,
+      "delta": 0.0034,
+      "bound": 36.727
+    },
+    {
+      "obs": "m_Higgs",
+      "cost": 2,
+      "expr": "7*18",
+      "value": 126.0,
+      "delta": 0.0008,
+      "bound": 0.358
+    },
+    {
+      "obs": "Omega_DM/Omega_b",
+      "cost": 3,
+      "expr": "27/(1+4)",
+      "value": 5.4,
+      "delta": 0.016,
+      "bound": 172.832
+    }
+  ],
+  "by_cost": {
+    "cost2": [
+      "sin^2 th_W",
+      "sin^2 th_12",
+      "sin^2 th_23",
+      "M_Z",
+      "CC exponent",
+      "Dm31/Dm21",
+      "m_Higgs"
+    ],
+    "cost3": [
+      "sin^2 th_13",
+      "alpha_s",
+      "Omega_DM/Omega_b"
+    ],
+    "not_short_le3": []
+  },
+  "rare_depth_stable": [
+    "sin^2 th_W",
+    "M_Z",
+    "CC exponent",
+    "m_Higgs"
+  ],
+  "null": {
+    "random_frac_cost_le2": 0.383,
+    "substrate_frac_cost_le2": 0.7,
+    "reading": "substrate observables sit on lower-complexity alphabet lattice points than random targets"
+  },
+  "summary": "the grammar-robust core: shortest descriptions counted at fixed complexity, fixing Pass 21's depth-dependence. cost = #integer leaves; the q=3 alphabet reaches N(<=1)=14, N(<=2)=224, N(<=3)=5401 distinct values -- and N(<=2) is FIXED under grammar depth (cost-4+ never enters it), so a cost-2 match's look-elsewhere bound N(<=2)*2*delta is DEPTH-INVARIANT (unlike Pass 21's growing density). Strongest matches are cost-2 ['sin^2 th_W', 'sin^2 th_12', 'sin^2 th_23', 'M_Z', 'CC exponent', 'Dm31/Dm21', 'm_Higgs'] (q/Phi3, Phi6/Phi3, mu/Phi3, Phi3*Phi6, v*q); Dm ratio and th_13 cost-3 ['sin^2 th_13', 'alpha_s', 'Omega_DM/Omega_b']; not-short(<=3): []. Substrate observables hit cost<=2 70% vs random targets 38% -- they sit on low-complexity alphabet lattice points. HONEST -- this CONTINUES the tempering: even at fixed cost only 4 matches (['sin^2 th_W', 'M_Z', 'CC exponent', 'm_Higgs']) have a depth-stable bound BELOW 1, the rest O(1)+. So no single numerical match is decisive -- the coincidences are CORROBORATIVE, not a proof; the theory's weight is in the DERIVATIONS (geometry -> couplings/mixing) with the numerology as support. The grammar-robust numerical statement is modest and depth-invariant (substrate on lower-complexity points than random, 70% vs 38%; a few high-precision matches with bound <1), not the orders-of-magnitude of Pass 20.",
+  "sources": [
+    "Pass-21 computed look-elsewhere (w33_alphabet_pool.py); MDL/Kolmogorov shortest-description; q=3 cyclotomic alphabet (SRG W(3,3) invariants); achieved windows from the final-scorecard ledger."
+  ]
+}

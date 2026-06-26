@@ -1,0 +1,49 @@
+{
+  "discovery": [
+    {
+      "observable": "r = 1/300",
+      "pred": 0.0033333333333333335,
+      "sigma3_year": 2031.9,
+      "sigma5_year": 2034.2,
+      "experiments": "BICEP/Keck -> Simons Obs -> CMB-S4 -> LiteBIRD"
+    },
+    {
+      "observable": "Sum m_nu = 58 meV",
+      "pred": 0.058,
+      "sigma3_year": 2027.6,
+      "sigma5_year": 2030.9,
+      "experiments": "DESI -> DESI+CMB-S4"
+    }
+  ],
+  "coverage": [
+    {
+      "observable": "Dm^2_31/Dm^2_21 = 33",
+      "year": 2030,
+      "type": "precision",
+      "note": "JUNO pins to sub-% (sigma~0.1), distinguishing 33 from 32/34; already 0.8 sigma"
+    },
+    {
+      "observable": "m_DM = 22.8 GeV",
+      "year": 2028,
+      "type": "coverage",
+      "note": "LZ/XENONnT full exposure covers the Z-portal sigma_SI for a ~23 GeV WIMP"
+    },
+    {
+      "observable": "m_betabeta ~ 1.4 meV",
+      "year": 2035,
+      "type": "limit (far)",
+      "note": "nEXO/LEGEND reach ~15-50 meV; 1.4 meV is a long-term kill-shot, not near-term"
+    }
+  ],
+  "schedule": {
+    "2028": "Sum m_nu 3 sigma + m_DM coverage (LZ)",
+    "2030": "Dm^2 ratio (JUNO) + Sum m_nu 5 sigma",
+    "2032": "r = 1/300 at 3 sigma",
+    "2034": "r = 1/300 at 5 sigma"
+  },
+  "figure": "analysis/w33_killshot_dashboard_fig.tex",
+  "summary": "the kill-shot dashboard: computed discovery dates. Interpolating published sigma(t) forecasts and solving prediction/sigma(t)=3 (and 5): Sum m_nu = 58 meV reaches 3 sigma ~2028 and 5 sigma ~2030 (DESI+CMB-S4); r = 1/300 reaches 3 sigma ~2032 and 5 sigma ~2034 (SO->CMB-S4->LiteBIRD). Precision/coverage: JUNO pins Dm^2_31/Dm^2_21=33 to sub-% by ~2030; LZ covers m_DM=22.8 GeV by ~2028; m_betabeta~1.4 meV is a far (2030s+) limit. Schedule: 2028 (Sum m_nu 3 sigma + m_DM), 2030 (Dm^2 ratio + Sum m_nu 5 sigma), 2032 (r 3 sigma), 2034 (r 5 sigma) -- largely decided by the mid-2030s. Emits the discovery-curve figure (sigma(t) normalised to 3-sigma thresholds, crossing years marked). HONEST: the sigma(t) are published forecasts (may slip); the Sum m_nu detection assumes NH-minimum 58 meV is true (current DESI hints prefer lower -> could be an EXCLUSION = falsification); m_DM/m_betabeta are coverage/limit milestones. The dates are earliest plausible decisive years, not guarantees.",
+  "sources": [
+    "Pass-21 timeline (w33_tower_falsification_figure.py); sigma(r) forecasts (BICEP/Keck, Simons Observatory, CMB-S4, LiteBIRD); sigma(Sum m_nu) forecasts (DESI, CMB-S4); JUNO Dm^2 precision; LZ/XENONnT exposure; substrate r=1/300, Sum m_nu=58 meV, Dm^2 ratio=33, m_DM=22.8 GeV."
+  ]
+}
