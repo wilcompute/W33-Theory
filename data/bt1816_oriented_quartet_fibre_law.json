@@ -1,0 +1,20 @@
+{
+  "bt": "BT1816",
+  "title": "oriented quartet fibre law",
+  "hidden_quartet_edge": ["00", "11"],
+  "edge_support": [10,22,44],
+  "table_correction": {"T010": -2, "T210": -2, "T222": 2},
+  "law_template": "oriented K4 edge = two endpoint losses plus one edge-target gain, in units of 2",
+  "observed_syndromes": {"F2": [0,0], "F3": [0,2,1,1,1]},
+  "correction_syndromes": {"F2": [0,0], "F3": [0,1,2,2,2]},
+  "adjusted_syndromes": {"F2": [0,0], "F3": [0,0,0,0,0]},
+  "integer_effect": {"L1": 6, "net_total_change": -2, "adjusted_total": 9978},
+  "checks": {
+    "preserves_F2_parity": true,
+    "kills_F3_syndrome": true,
+    "minimal_even_L1_six": true,
+    "two_losses_one_gain": true
+  },
+  "verified": true,
+  "conclusion": "The minimal fibre repair is exactly an oriented-edge law on the hidden quartet: two even losses and one even gain. It preserves the binary Hesse delta split and cancels the ternary double-six syndrome, so the unresolved rule is the orientation of the K4 edge selected inside the W(E6) size-6 slice."
+}
