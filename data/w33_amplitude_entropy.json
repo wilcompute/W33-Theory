@@ -1,0 +1,25 @@
+{
+  "exact_relation": {
+    "formula": "A_s = 1/(epsilon * S_dS) = H^2/(8 pi^2 eps M_Pl^2)",
+    "epsilon": "r/16 = 1/4800",
+    "S_dS": 2329000000000.0,
+    "meaning": "amplitude smallness = inverse (epsilon x de Sitter horizon entropy)"
+  },
+  "substrate_law": {
+    "law": "(A_s)^q = e^(-N)",
+    "equivalently": "A_s = e^(-N/q) = e^-20",
+    "reading": "q = 3 spatial dimensions/sectors; per-dimension inverse expansion",
+    "verified": true
+  },
+  "implied_scale": {
+    "S_dS": 2329000000000.0,
+    "H_inf_GeV": 14180000000000.0,
+    "V_quarter_GeV": 7733000000000000.0,
+    "M_GUT_GeV": 1.112e+16,
+    "note": "inflationary scale ~ 10^16 GeV ~ GUT (consistent with Pass 9)"
+  },
+  "summary": "the primordial amplitude upgraded from match to LAW. EXACT: A_s = 1/(epsilon S_dS) -- the scalar amplitude is the inverse of slow-roll epsilon times the de Sitter horizon entropy (A_s = H^2/(8 pi^2 eps M_Pl^2), S_dS = 8 pi^2 (M_Pl/H)^2), so A_s ~ 10^-9 is the inverse of S_dS ~ 10^12 nats times eps ~ 1/4800 -- a derivation of the smallness. CLEAN LAW: the substrate value is (A_s)^q = e^(-N), the q-th power of the amplitude = the inverse total expansion e^-60 (q=3 the spatial dimensions/sectors), so A_s = e^(-N/q) = e^-20. Together these fix the inflationary horizon entropy S_dS = (1/eps) e^(N/q) ~ 2.3x10^12, H_inf ~ 1.4x10^13 GeV, V^(1/4) ~ 10^16 GeV ~ M_GUT = M_Pl e^-Phi_6. HONEST: A_s=1/(eps S_dS) and (A_s)^q=e^-N are exact/structural; the VALUE of the horizon entropy (why S_dS = (1/eps)e^(N/q)) is the remaining input, so Pass 9's integer match is upgraded to a structural law (inverse-entropy amplitude + q-th power = inverse expansion), not yet a full first-principles derivation. The q-as-dimensions/sectors reading is interpretive.",
+  "sources": [
+    "A_s = e^-20 (w33_complete_primordial_spectrum.py); slow-roll A_s = H^2/(8 pi^2 eps M_Pl^2) (Liddle-Lyth); de Sitter entropy S_dS = 8 pi^2 (M_Pl/H)^2 = A/(4G) (Gibbons-Hawking); eps = r/16 = 1/4800 (w33_tensor_clock.py); N = 2 beat = 60, M_GUT = M_Pl e^-Phi_6 (w33_hierarchy_derivation.py)."
+  ]
+}

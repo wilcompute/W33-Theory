@@ -6326,6 +6326,45 @@ derivation target. But the last major dimensionless cosmological number is now a
 integer, completing the primordial spectrum and denting the scale residue: a real break,
 flagged as a match whose dynamical origin is open.
 
+\subsection{Pass 10 --- the scale residue closed to one unit: amplitude as a law, all masses as integers, two exponents as one}
+\label{sec:capstone-ten}
+
+The breakthrough's three loose ends are tied: the amplitude becomes a law, the masses
+reduce to one unit, and the two exponents become one structure.
+
+\emph{The amplitude is a law, not a coincidence.} Exactly, $A_s=1/(\epsilon\,S_{\rm dS})$:
+the scalar amplitude is the inverse of the slow-roll $\epsilon$ times the de~Sitter horizon
+entropy ($A_s=H^2/8\pi^2\epsilon M_{\rm Pl}^2$, $S_{\rm dS}=8\pi^2(M_{\rm Pl}/H)^2$), so
+$A_s\sim10^{-9}$ is the inverse of a horizon entropy $S_{\rm dS}\sim10^{12}$ nats times
+$\epsilon\sim1/4800$ --- a derivation of the smallness. And the substrate value is the
+clean law $(A_s)^q=e^{-N}$: the $q$-th power of the amplitude equals the inverse total
+expansion $e^{-60}$ ($q=3$ the spatial dimensions/sectors), i.e.\ $A_s=e^{-N/q}=e^{-20}$.
+These fix $H_{\rm inf}\sim1.4\times10^{13}$\,GeV and $V^{1/4}\sim10^{16}$\,GeV at the GUT
+scale. (Witness: \path{analysis/w33_amplitude_entropy.py}.)
+
+\emph{All masses reduce to one unit.} A dimensionful number cannot come from integers --- a
+unit must be chosen --- so the achievement is reducing \emph{every} scale to one unit by
+substrate-integer exponents: $M_{\rm GUT}=M_{\rm Pl}e^{-\Phi_6}$, $M_{\rm EW}=M_{\rm Pl}
+e^{-q\Phi_3}$, $m_p\sim M_{\rm Pl}e^{-(v+\mu)}$ ($\ln(M_{\rm Pl}/m_p)=44.0\approx v+\mu=44$).
+Choosing any one scale as the unit fixes all others by integers, so the theory has
+\emph{one} dimensionful input (a units choice) and \emph{zero} free dimensionless
+parameters. Gravity's weakness follows: $\alpha_G=(m_p/M_{\rm Pl})^2=e^{-2(v+\mu)}=e^{-88}=
+6\times10^{-39}$. (Witness: \path{analysis/w33_scale_reduction.py}.)
+
+\emph{The two exponents are one structure.} The amplitude exponent ($20$) and the
+hierarchy exponent ($39$) are both partitions of the single inflationary e-fold count
+$N=60=2\,\mathrm{beat}$: $N=q(N/q)=3\cdot20$ (amplitude) and $N=q\Phi_3+q\Phi_6=39+21$
+(hierarchy), locked by $39=N-q\Phi_6=q\cdot20-q\Phi_6$. So one GUT-scale inflaton rolling
+$N=60$ e-folds fixes the whole exponential layer at once: its energy scale gives the
+hierarchy, its e-fold flow gives the normalisation $A_s=e^{-N/q}$, its clock gives the
+tilts. (Witness: \path{analysis/w33_exponent_unification.py}.) \emph{Honest scope:}
+$A_s=1/(\epsilon S_{\rm dS})$ and $(A_s)^q=e^{-N}$ are exact/structural with the horizon
+entropy's value the remaining input; the GUT ($7$) and EW ($39$) exponents are clean while
+the proton $44=v+\mu$ admits several substrate forms (flagged) and ultimately traces to QCD
+running; the $\{20,39\}$ unification is exact partition arithmetic with the explicit
+$V(\phi)$ the next step. The robust result: the absolute-scale residue is now exactly one
+units choice, with zero free dimensionless parameters.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

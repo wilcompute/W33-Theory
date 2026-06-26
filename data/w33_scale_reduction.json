@@ -1,0 +1,32 @@
+{
+  "scale_ladder": {
+    "M_GUT": {
+      "exponent": "Phi_6 = 7",
+      "GeV": 1.113e+16
+    },
+    "M_EW": {
+      "exponent": "q*Phi_3 = 39",
+      "GeV": 141.0
+    },
+    "m_proton": {
+      "exponent": "v+mu = 44 (= (Phi3+Phi6)+f = 20+24)",
+      "ln_observed": 44.01,
+      "GeV": 0.9383
+    }
+  },
+  "reduction": {
+    "statement": "all scales = M_Pl * e^(-substrate integer)",
+    "dimensionful_inputs": 1,
+    "free_dimensionless_parameters": 0,
+    "note": "a dimensionful number cannot come from integers; one unit is irreducible"
+  },
+  "gravity_weak": {
+    "alpha_G": "(m_p/M_Pl)^2 = e^-(2(v+mu)) = e^-88",
+    "substrate": 6.055e-39,
+    "observed": 5.906e-39
+  },
+  "summary": "closing the absolute scale, honestly: a dimensionful number cannot be derived from integers (a unit must be chosen), so the achievement is reducing EVERY scale to ONE unit by substrate-integer exponents -- M_GUT = M_Pl e^-Phi_6 (7), V^(1/4) ~ M_GUT, M_EW = M_Pl e^-(q Phi_3) (39), m_p ~ M_Pl e^-(v+mu) (44, = (Phi3+Phi6)+f = 20+24, reproducing ln(M_Pl/m_p)=44.0 to 0.05%). Choosing any one scale as the unit fixes all others by integers, so the theory has ONE dimensionful input (a units choice) and ZERO free dimensionless parameters. The gravity-is-weak number follows: alpha_G = (m_p/M_Pl)^2 = e^-(2(v+mu)) = e^-88 = 6x10^-39 vs observed 5.9x10^-39 -- the famous ~10^-39 as the substrate integer 88 in the exponent. HONEST: the GUT (7) and EW (39) exponents are clean; the proton 44 = v+mu reproduces the log to 0.05% but admits several substrate forms (flagged), and m_p's exponent ultimately comes from QCD dimensional transmutation (gauge running, deferred). The robust point is conceptual and solid: one unit, zero free dimensionless parameters -- the residue is exactly one units choice.",
+  "sources": [
+    "M_GUT=M_Pl e^-Phi_6, M_EW=M_Pl e^-q Phi_3 (w33_hierarchy_derivation.py); inflation V^(1/4)~M_GUT (w33_complete_primordial_spectrum.py); M_Pl=1.2209e19 GeV, m_p=0.9383 GeV (PDG); gravitational coupling alpha_G=(m_p/M_Pl)^2; v=40, mu=4, f=24; QCD dimensional transmutation for m_p."
+  ]
+}

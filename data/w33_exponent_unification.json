@@ -1,0 +1,22 @@
+{
+  "partitions": {
+    "N": 60,
+    "A_amplitude": "q*(N/q) = 3*20",
+    "B_hierarchy": "q*Phi_3 + q*Phi_6 = 39 + 21"
+  },
+  "exponents": {
+    "amplitude_exp": 20,
+    "hierarchy_exp": 39,
+    "relation": "39 = q Phi_3 = N - q Phi_6 = q*(N/q) - q Phi_6",
+    "both_from": "the single N = 60 and {q, Phi_3, Phi_6}"
+  },
+  "unifying_potential": {
+    "scale -> hierarchy": "V^(1/4) ~ M_GUT = M_Pl e^-Phi_6; M_EW = M_Pl e^-q Phi_3",
+    "flow -> amplitude": "N e-folds -> A_s = e^-(N/q)",
+    "clock -> tilts": "1-n_s = 1/beat, r = 1/(Phi_4 beat), n_t = -1/(2^q Phi_4 beat)"
+  },
+  "summary": "UNIFYING the two exponential layers: the cosmological amplitude exponent (20) and the gauge-hierarchy exponent (39) are both PARTITIONS of the single inflationary e-fold count N = 60 = 2 beat (the one de Sitter clock). Partition A (amplitude): N = q*(N/q) = 3*20, so A_s = e^-(N/q) = e^-20. Partition B (hierarchy): N = q Phi_3 + q Phi_6 = 39 + 21, so M_EW/M_Pl = e^-(N - q Phi_6) = e^-39. The exponents are locked: 39 = q Phi_3 = N - q Phi_6 = q*20 - q Phi_6 -- not independent, but two projections of the same N via {q, Phi_3, Phi_6}. One GUT-scale inflaton rolling 60 e-folds fixes the whole exponential layer: its energy scale -> hierarchy (M_GUT = M_Pl e^-Phi_6, M_EW = M_Pl e^-q Phi_3), its e-fold flow -> normalisation (A_s = e^-N/q), its clock -> tilts (1-n_s=1/beat, r=1/(Phi_4 beat), ...). HONEST: the partition arithmetic (N=q*20=q Phi_3+q Phi_6, 39=N-q Phi_6) is exact and is the genuine unification (both exponents from one N); the explicit closed-form V(phi) deriving both exponents from first principles is sketched, the next target. The cosmological normalisation and the gauge hierarchy are two faces of one inflaton e-fold flow.",
+  "sources": [
+    "amplitude exponent 20=N/q (w33_amplitude_entropy.py, w33_complete_primordial_spectrum.py); hierarchy exponent 39=q Phi_3, M_GUT=M_Pl e^-Phi_6 (w33_hierarchy_derivation.py); N=2 beat=60=q(Phi_3+Phi_6), EW->end=q Phi_6=21 (w33_hierarchy_exponential.py, w33_efold_tick.py); single de Sitter clock (w33_efold_tick.py)."
+  ]
+}
