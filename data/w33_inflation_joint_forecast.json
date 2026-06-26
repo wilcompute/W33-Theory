@@ -1,0 +1,43 @@
+{
+  "point": {
+    "ln1010_As": 3.026,
+    "n_s": 0.9667,
+    "r": 0.00333,
+    "on_starobinsky_line": true,
+    "N": 60
+  },
+  "forecast": [
+    {
+      "obs": "ln(10^10 A_s)",
+      "substrate": 3.026,
+      "observed": "3.044+/-0.014",
+      "sigma_now": 1.3,
+      "sigma_future": 1.8
+    },
+    {
+      "obs": "n_s",
+      "substrate": 0.967,
+      "observed": "0.9649+/-0.0042",
+      "sigma_now": 0.42,
+      "sigma_future": 0.9
+    },
+    {
+      "obs": "r",
+      "substrate": 0.00333,
+      "observed": "< 0.036",
+      "sigma_now": "undet",
+      "sigma_future": 6.7
+    }
+  ],
+  "joint": {
+    "chi2_now": 1.86,
+    "joint_sigma_now": 1.4,
+    "r_detection_future": 6.7,
+    "tightest": "A_s = e^-20 (1.3 sigma now, 1.8 future)"
+  },
+  "figure": "analysis/w33_inflation_joint_forecast_fig.tex",
+  "summary": "the full inflationary prediction as one joint forecast. The substrate fixes the point (ln(10^10 A_s), n_s, r) = (3.026, 0.9667, 1/300) -- the Starobinsky N=2 beat=60 point on the line r = 3(1-n_s)^2. MARGINAL significances vs Planck now / CMB-S4+LiteBIRD future: A_s (e^-20): 1.3 sigma now (3.026 vs 3.044+/-0.014), 1.8 future (sigma->0.01); n_s: 0.43 now, 0.9 future; r: undetected now, 6.7 sigma DETECTION future (sigma->0.0005). JOINT chi^2 today = 1.84 -> 1.4 sigma, consistent. Headline: r = 1/300 a 6.7 sigma detection by ~2035 pinning the point; the amplitude A_s = e^-20 is the TIGHTEST single constraint (the integer prediction most exposed, 1.3->1.8 sigma). The substrate is a POINT not a region: r detected at the Starobinsky value AND on the line AND with A_s = e^-20, N=60 -- a measurement off any one falsifies. A figure (w33_inflation_joint_forecast_fig.tex) shows the (n_s,r) ellipse with the substrate point. HONEST: the point is exact; the sigma's use published CMB-S4/LiteBIRD forecasts (sigma(ln A_s)~0.01 tau-limited); the joint assumes mild (n_s,r) correlation; A_s being the tightest is the genuine exposure, ahead of the r-detection confirmation. The whole primordial spectrum, one localizable point, decided by ~2035.",
+  "sources": [
+    "substrate (A_s, n_s, r) (w33_complete_primordial_spectrum.py, w33_starobinsky.py); Pass-12 (n_s,r) forecast (w33_ns_r_forecast.py); Planck 2018 ln(10^10 A_s)=3.044+/-0.014, n_s=0.9649+/-0.0042; CMB-S4 sigma(r)~0.0005, sigma(n_s)~0.002; LiteBIRD; Starobinsky line r=3(1-n_s)^2."
+  ]
+}

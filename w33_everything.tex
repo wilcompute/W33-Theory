@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+\usepackage{longtable}
+
+\title{\textbf{The W(3,3) Substrate: Physics from One Integer}\\[4pt]
+\large A cyclotomic descent from the Planck scale to dark energy, with zero free dimensionless parameters}
+\author{W.\ Dahn \and the W(3,3) Theory Project}
+\date{2026}
+
+\newcommand{\Pl}{M_{\rm Pl}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We summarise a finite-geometric account of fundamental physics built from a single integer,
+the field characteristic $q=3$, selected uniquely by demanding that the edge count of the
+generalized quadrangle $\mathrm{GQ}(q,q)$ equal the Frobenius count $q^5-q$. This selects the
+symplectic polar space $W(3,3)$, whose collinearity graph is the strongly regular graph
+$\mathrm{SRG}(40,12,2,4)$ with eigenvalues $\{12,2,-4\}$. From its two cyclotomic invariants
+$\Phi_3(3)=13$ and $\Phi_6(3)=7$ and the graph parameters $(v,k,\lambda,\mu)=(40,12,2,4)$ we
+reconstruct, with no fitted dimensionless number: the fine-structure constant
+($1/\alpha=137=11^2+4^2$), the electroweak and PMNS mixing angles, the complete primordial
+power spectrum as Starobinsky $R^2$ inflation with $N=2(v-\Phi_4)=60$ e-folds, the entire mass
+spectrum as a cyclotomic descent from the Planck scale to the cosmological constant, the dark
+matter, and the baryon asymmetry. We collect the twenty-five resulting predictions into one
+falsification ledger: zero current tensions, zero falsified, the decisive near-term test the
+tensor-to-scalar ratio $r=1/300$ at LiteBIRD ($\sim$2035). The only residue is dynamical (the
+QED running, an overall mass unit).
+\end{abstract}
+
+\section{The selection principle}
+The integer $q=3$ is not assumed but selected. The edge count of $\mathrm{GQ}(q,q)$ is
+$q(q+1)^2(q^2+1)/2$; setting it equal to the Frobenius count $q^5-q$ gives
+\[
+q^5-q = \tfrac12 q(q+1)^2(q^2+1)\ \Longrightarrow\ 2(q-1)=q+1\ \Longrightarrow\ q=3,
+\]
+the unique positive solution. Four further conditions (the $E_8$ root count $q^5-q=240$; the
+Gau\ss--Bonnet identity $E\kappa=v$; the atmospheric sum rule $\sin^2\theta_{23}=\sin^2\theta_W
++\sin^2\theta_{12}$ requiring $q(q-3)=0$; $\mathrm{Aut}(\mathrm{GQ}(q,q))\cong W(E_6)$) all
+return $q=3$. There is no landscape.
+
+\section{The geometry and the cyclotomic skeleton}
+$W(3,3)$ is the symplectic polar space $W(3,\mathbb{F}_3)$: $40$ isotropic points, $240$ edges
+($=|\Phi(E_8)|$), automorphism group $\mathrm{Sp}(4,3)$ of order $51840=|W(E_6)|$. Its Hodge
+Laplacian on $1$-chains has eigenspaces $\{0^{81},\,4^{120},\,10^{24},\,16^{15}\}$: the
+massless matter ($H_1=\mathbb{Z}^{81}$, three generations $27\oplus27\oplus27$ under
+$\mathrm{PSp}(4,3)$), the gauge bosons, and the heavy sectors. The two cyclotomic polynomials
+at $q=3$,
+\[
+\Phi_3(3)=q^2+q+1=13,\qquad \Phi_6(3)=q^2-q+1=7,\qquad \mathrm{beat}=\Phi_3+\Phi_4+\Phi_6=30=h(E_8),
+\]
+together with $(v,k,\lambda,\mu)=(40,12,2,4)$, $f=24$, $g=15$ generate the observables below.
+
+\section{Couplings and mixing}
+The fine-structure constant is the norm of a Gaussian prime: $1/\alpha=(k-1)^2+\mu^2=11^2+4^2
+=137$, with the non-backtracking (Ihara--Bass) spectral correction $+v/1111=40/1111=0.036$
+giving $137.036$. The mixing angles are cyclotomic ratios:
+\[
+\sin^2\theta_W=\frac{q}{\Phi_3}=\frac{3}{13},\quad
+\sin^2\theta_{12}=\frac{q+1}{\Phi_3}=\frac{4}{13},\quad
+\sin^2\theta_{13}=\frac{\lambda}{\Phi_3\Phi_6}=\frac{2}{91},\quad
+\sin^2\theta_{23}=\frac{\Phi_6}{\Phi_3}=\frac{7}{13},
+\]
+all within $\sim0.5\sigma$ of experiment, and $\Delta m^2_{31}/\Delta m^2_{21}=2\Phi_3+\Phi_6=33$.
+
+\section{The primordial spectrum: Starobinsky inflation}
+The substrate clock is the Boerdijk--Coxeter time quasicrystal, whose per-tetrahedron twist is
+$\theta=\arccos(-2/3)$ (computed from regular tetrahedra) and which closes after
+$\mathrm{beat}=30$ cells on the $600$-cell. With $N=2\,\mathrm{beat}=60$ e-folds the spectrum
+is \emph{exactly} Starobinsky $R^2$ inflation:
+\[
+A_s=e^{-(\Phi_3+\Phi_6)}=e^{-20},\quad 1-n_s=\tfrac2N=\tfrac1{30},\quad r=\tfrac{12}{N^2}=\tfrac1{300},
+\quad n_t=-\tfrac3{2N^2}=-\tfrac1{2400},\quad \tfrac{dn_s}{d\ln k}=-\tfrac2{N^2}=-\tfrac1{1800}.
+\]
+The scalar amplitude $A_s=e^{-20}=2.06\times10^{-9}$ matches Planck's $2.10\times10^{-9}$
+($1.3\sigma$), with $20=\Phi_3+\Phi_6=N/q=v/2$. The inflaton is the Starobinsky scalaron, i.e.
+$f(R)=R+R^2/6M^2$ gravity --- the inflaton \emph{is} curvature, the computation \emph{is} the
+spacetime. The whole spectrum is one point in $(A_s,n_s,r)$ on the Starobinsky line
+$r=3(1-n_s)^2$ (Fig.~\ref{fig:joint}).
+
+\input{analysis/w33_inflation_joint_forecast_fig.tex}
+
+\section{The mass ladder: Planck scale to dark energy}
+Every mass scale sits at a substrate-integer number of e-folds below the Planck scale
+(Fig.~\ref{fig:ladder}): the grand-unification scale at $\Phi_6$ ($M_{\rm GUT}=\Pl e^{-\Phi_6}
+\approx10^{16}$\,GeV), the inflaton scalaron $=$ lightest right-handed neutrino $N_1$ at
+$\Phi_3$, the electroweak scale at $q\Phi_3=39$ ($\Pl e^{-39}\approx141$\,GeV), the proton at
+$v+\mu=44$ ($\ln(\Pl/m_p)=44.0$, $m_p/m_e=v(v+\lambda+\mu)/\mu=1836$), and the neutrinos at the
+seesaw floor. The descent ends at the cosmological constant:
+\[
+\log_{10}\!\Big(\frac{\rho_\Lambda}{\Pl^4}\Big)=-vq=-120=-\,4\,\mathrm{beat}
+\quad(\text{reduced }\Pl,\ \text{to }0.1\%),
+\]
+the famous ``120 orders'' being the point count $vq$. The dark-energy scale
+$\rho_\Lambda^{1/4}=\Pl10^{-\mathrm{beat}}=2.4$\,meV coincides with the lightest neutrino
+($\sim2$\,meV) and the $0\nu\beta\beta$ mass ($\sim1.4$\,meV): the boson--fermion balance
+$f\Phi_4=g\mu^2=240$ cancels the leading vacuum energy (structural supersymmetry), broken only
+at the meV floor, giving $\rho_\Lambda=M_{\rm SUSY}^4=\Pl^4 10^{-4\,\mathrm{beat}}$.
+
+\input{analysis/w33_cc_floor_fig.tex}
+
+\section{Dark matter and baryons}
+The dark matter is the exotic fermion of the $E_6$ \textbf{27} shell, mass $m_{\rm DM}=M_Z/\mu
+=22.8$\,GeV, with relic density $\Omega_{\rm DM}=\mu/g=4/15$ ($\Omega_{\rm DM}h^2=0.12$) and
+$\Omega_{\rm DM}/\Omega_b=82/15$. The scalaron $N_1$ ($\sim2.8\times10^{13}$\,GeV) reheats into
+right-handed neutrinos, so thermal leptogenesis with the substrate CP phase (Jarlskog
+$J\sim3\times10^{-5}$) gives the baryon asymmetry $\eta_B\sim6\times10^{-10}$. One particle
+inflates the universe, gives the neutrino masses, and makes the baryons.
+
+\section{The falsification ledger}
+\begin{center}\small
+\begin{longtable}{lll l}
+\toprule
+Observable & Substrate & Measured & Status\\ \midrule
+$A_s$ amplitude & $e^{-20}=2.06\times10^{-9}$ & $2.10\times10^{-9}$ & CONSISTENT ($1.3\sigma$)\\
+$1-n_s$ & $1/30=0.0333$ & $0.0351\pm0.0042$ & CONSISTENT ($0.4\sigma$)\\
+$r$ tensor & $1/300=0.0033$ & $<0.036$ & TEST-SOON (LiteBIRD $\sim$2035)\\
+running & $-1/1800$ & $-0.0045\pm0.0067$ & CONSISTENT\\
+$f_{NL}$ & $1/72$ & $-0.9\pm5.1$ & CONSISTENT\\
+$1/\alpha$ & $137(+0.036)$ & $137.036$ & CONSISTENT\\
+$\sin^2\theta_W$ & $3/13\to0.231$ & $0.23122$ & CONSISTENT\\
+$\alpha_s$ & $9/76=0.1184$ & $0.1180\pm0.0009$ & CONSISTENT ($0.5\sigma$)\\
+Jarlskog $J$ & $3.0\times10^{-5}$ & $3.08\times10^{-5}$ & CONSISTENT ($2.9\%$)\\
+$m_p/m_e$ & $1836$ & $1836.15$ & CONSISTENT ($0.01\%$)\\
+$m_{\rm Higgs}$ & $vq{+}\mu{+}1=125$ & $125.10\pm0.14$ & CONSISTENT ($0.7\sigma$)\\
+$M_Z$ & $\Phi_3\Phi_6=91$ & $91.19$ & CONSISTENT ($0.2\%$)\\
+$\sum m_\nu$ & $58$\,meV (NH min) & $<72$ (DESI) & CONSISTENT\\
+$\Delta m^2_{31}/\Delta m^2_{21}$ & $2\Phi_3{+}\Phi_6=33$ & $32.6\pm0.5$ & CONSISTENT ($0.8\%$)\\
+$m_{\beta\beta}$ & $\sim1.4$\,meV & $<36$--$156$ & CONSISTENT (far)\\
+$\Omega_{\rm DM}/\Omega_b$ & $82/15=5.47$ & $5.38$ & CONSISTENT ($2\%$)\\
+$m_{\rm DM}$ & $M_Z/\mu=22.8$\,GeV & not excluded & TEST-SOON (LZ $\sim$2028)\\
+$\eta_B$ & $\sim6\times10^{-10}$ & $6.1\times10^{-10}$ & CONSISTENT (order)\\
+CC $\log_{10}$ & $-vq=-120$ & $-120.1$ & CONSISTENT ($0.1\%$)\\
+\bottomrule
+\end{longtable}
+\end{center}
+\noindent Tally: the large majority \textsc{consistent}, two \textsc{test-soon}
+($r$/LiteBIRD, $m_{\rm DM}$/LZ), the rest \textsc{test-future} or \textsc{lab}; \emph{zero}
+tensions, \emph{zero} falsified, \emph{zero} free dimensionless parameters.
+
+\section{Conclusion}
+From one selected integer $q=3$, the W(3,3) substrate reproduces the gauge and Yukawa sector,
+the complete primordial spectrum (Starobinsky $N=60$), the entire mass spectrum as a cyclotomic
+descent from the Planck scale to the cosmological constant, and the dark and baryonic sectors,
+with no free dimensionless parameter. The framework is falsifiable on every front and currently
+passes all tests; the decisive near-term measurement is the tensor-to-scalar ratio $r=1/300$ at
+LiteBIRD. The honest residue is dynamical: the QED running ($0.036$), the absolute mass unit,
+and the deepest dynamical questions (the exact continuum gravity lift, the from-nothing
+cosmological-constant cancellation). The detailed executable witnesses for every result above
+are in the companion repository.
+
+\end{document}

@@ -1,0 +1,24 @@
+{
+  "balance": {
+    "f_Phi4": 240,
+    "g_mu2": 240,
+    "equal_240": true,
+    "meaning": "boson-fermion vacuum-energy cancellation (structural SUSY)"
+  },
+  "mechanism": {
+    "M_SUSY_meV": 2.44,
+    "CC_log10": -120,
+    "equals_minus_vq": true,
+    "form": "CC = M_SUSY^4 = M_Pl^4 10^(-4 beat) = M_Pl^4 10^(-vq), vq = 4 beat",
+    "contrast": "TeV-SUSY would give ~10^-64 (far too large); meV floor gives 10^-vq"
+  },
+  "holographic": {
+    "relation": "rho_Lambda/M_Pl^4 = 1/S_dS",
+    "S_dS": "10^120",
+    "reading": "vq = log10(cosmological horizon entropy)"
+  },
+  "summary": "a MECHANISM for the cosmological constant. The substrate's Hodge spectrum has an exact boson-fermion balance: the gauge sector (f = 24 modes at gap Phi_4 = k-r = 10) and the matter sector (g = 15 at gap mu^2 = k-s = 16) carry equal vacuum energy, f Phi_4 = g mu^2 = 240 = |Roots(E8)|, so the leading M_Pl^4 vacuum energy CANCELS (structural supersymmetry; f(k-r)=g(k-s) for the SRG). The balance breaks only at the mass-ladder floor M_SUSY ~ M_Pl 10^(-beat) = 2.4 meV (the same beat = 30 = h(E8) decades as the neutrino and dark-energy scales), so rho_Lambda = M_SUSY^4 = M_Pl^4 10^(-4 beat) = M_Pl^4 10^(-vq): the 120 orders ARE 4 beat (TeV-SUSY would give 10^-64, far too large; the meV floor gives 10^-vq). Holographically rho_Lambda/M_Pl^4 = 1/S_dS with the cosmological horizon entropy S_dS = 10^vq = 10^120. HONEST: the balance f Phi_4 = g mu^2 = 240 is an exact SRG theorem (leading cancellation real); the breaking-at-beat-decades + CC = M_SUSY^4 is a scale-level mechanism connecting the CC to the boson-fermion balance and the neutrino floor -- it explains the 120 as 4 beat GIVEN the floor at beat decades but does NOT derive why the floor is there (same input as the neutrino floor), so it REFRAMES the CC problem as 'why beat decades', not a from-nothing solution. A real step past Pass 17's postdiction: the CC is the broken boson-fermion balance, the 120 orders = 4 beat.",
+  "sources": [
+    "boson-fermion balance f Phi_4 = g mu^2 = 240 = E8 roots, f(k-r)=g(k-s) (canonical document, Hodge spectrum / structural SUSY); CC = -vq = -4 beat (w33_cc_exact.py); beat-decade floor = neutrino/dark-energy scale (w33_neutrino_dark_energy.py); holographic rho_Lambda = M_Pl^4/S_dS (Cohen-Kaplan-Nelson, de Sitter entropy)."
+  ]
+}
