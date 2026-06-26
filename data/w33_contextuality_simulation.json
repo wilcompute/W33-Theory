@@ -1,0 +1,24 @@
+{
+  "partA_W33": {
+    "rays": 40,
+    "degree": 12,
+    "spectrum": [
+      12,
+      2,
+      -4
+    ],
+    "spectral_bound_Phi4": 10,
+    "integer_alpha": 7,
+    "no_ovoid_q_odd": true,
+    "contextual_fraction": "1/10"
+  },
+  "partB_projective_affine": {
+    "PG": 13,
+    "AG": 9,
+    "ratio": "13/9 = Phi_3/q^2"
+  },
+  "summary": "simulated the demonstrator contextuality readout from incidence geometry: (A) the 40 W(3,3) rays' collinearity graph SRG(40,12,2,4) (spectrum 12,2,-4) has SPECTRAL (Hoffman) independence bound q^2+1=10=Phi_4=dim Sp(4), the contextual-fraction denominator CF=1/Phi_4=1/10 (honest: q=3 odd has no integer ovoid, so 10 is the spectral/theta bound, integer alpha~7-8 below it); (B) the qutrit register's PG(2,3) has 13 points vs AG(2,3)'s 9, ratio 13/9 = Phi_3/q^2 = the neutrino Majorana ratio. A single-photon contextuality experiment returns both Phi_4=10 (spectral) and 13/9 (projective/affine) from the geometry -- the neutrino<->demonstrator bridge as a simulated measurement. Both exact combinatorial results; mapping to a lab CF measurement is the proposal.",
+  "sources": [
+    "W(3,3)=GQ(3,3) symplectic generalized quadrangle, SRG(40,12,2,4); ovoid size q^2+1=10 (Hoffman ratio bound; ovoids of W(3,3)); contextual fraction 1/Phi_4 (w33_demonstrator_substrate_constants.py, w33_contextuality_is_the_fuel.py); PG(2,3)=13/AG(2,3)=9 (w33_neutrino_demonstrator_bridge.py); w33_eisenstein_grand_synthesis.py."
+  ]
+}

@@ -172,6 +172,16 @@ carries its witness script):
   logarithmic reversible routing.
 \end{enumerate}
 
+And the machine is not separate from the world it computes. The second half of the
+paper (\S\ref{sec:exceptional}) shows that the \emph{same} $q=3$ Eisenstein structure
+that fixes this architecture --- the Witting polytope, its symmetry $\mathrm{ST}\#32$,
+the cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ --- is also the selection of $q=3$,
+the substrate constants, the Standard-Model gauge group, the neutrino masses, the
+error-correcting code, and the benchtop experiment. These six faces, and the single
+object behind them, are laid out in \S\ref{sec:five-faces}
+(Fig.~\ref{fig:five-faces}); the reader who wants the unifying picture before the
+engineering may read that subsection first.
+
 \begin{figure}[ht]\centering
 \resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[
@@ -2764,7 +2774,7 @@ spacetime is its metric continuum: the universal computer and the universe are
 the two faces of one finite geometry's continuum limit. (Witness:
 \texttt{analysis/w33\_two\_continua\_symplectic\_metric.py}.)
 
-\subsection{The fault-tolerant layer is the substrate's lattice tower}
+\subsection{The fault-tolerant layer is the substrate's lattice tower \texorpdfstring{\normalfont\small[Face 5]}{[Face 5]}}
 
 Because the holonet's logical layer is a continuous-variable (CV) oscillator
 computation, its canonical fault-tolerant encoding is the
@@ -2868,7 +2878,7 @@ Cliffords are teleported using the cubic resource. The logical layer of the
 holonet is thus a single coherent object, every part of it fixed by $W(3,3)$.
 (Witness: \texttt{analysis/w33\_gkp\_clifford\_coherence.py}.)
 
-\subsection{The code lattices are the moonshine ladder}
+\subsection{The code lattices are the moonshine ladder \texorpdfstring{\normalfont\small[Face 5]}{[Face 5]}}
 
 The same lattices carry one last structure that ties the machine to the deepest
 arithmetic of the substrate. The holonet's modes are free bosons, and a GKP code
@@ -2898,7 +2908,7 @@ module are one vertex-algebra tower --- the architecture and the moonshine
 residual~(R2) are the bottom and top of a single ladder of substrate lattices.
 (Witness: \texttt{analysis/w33\_gkp\_voa\_bridge.py}.)
 
-\subsection{What is physically needed: demonstrator versus fault-tolerant machine}
+\subsection{What is physically needed: demonstrator versus fault-tolerant machine \texorpdfstring{\normalfont\small[Face 6]}{[Face 6]}}
 
 It is worth being exact about what we are building, because the design is now
 complete but the \emph{physical} realisation has two genuinely different layers.
@@ -4603,18 +4613,19 @@ Every entry is a closed substrate expression; the lone historical tension
 ($\sum m_\nu$) is resolved by the seesaw (\S\ref{sec:physics}), and three rows
 are sharp near-term falsification handles.
 
-\subsection{The one object and its five faces}
+\subsection{The one object and its six faces}
 \label{sec:five-faces}
 
-Before the details, the organizing claim. Everything in this section --- the
-selection of $q=3$, the substrate constants, the neutrino masses, the
-fault-tolerant code, and the benchtop experiment --- is \emph{one structure} seen
-from five sides. That structure is the $q=3$ Eisenstein object: the Witting polytope
-$3\{3\}3\{3\}3\{3\}3$ over $\mathbb Z[\omega]$ ($240$ vertices $=$ E8 roots), its
-symmetry the Shephard--Todd group $\#32$ (order $155520=3\lvert\mathrm{Sp}(4,3)
-\rvert=3\lvert\mathrm{Aut}(\W)\rvert$), equivalently the degree-two cyclotomic
-skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ whose indices $\{3,4,6\}$ are the
-crystallographic complex periods. Its five faces (Fig.~\ref{fig:five-faces}):
+Before the details, the organizing claim --- and it frames the entire paper, not
+just this section. Everything here --- the selection of $q=3$, the substrate
+constants, the gauge group, the neutrino masses, the fault-tolerant code, and the
+benchtop experiment --- is \emph{one structure} seen from six sides. That structure
+is the $q=3$ Eisenstein object: the Witting polytope $3\{3\}3\{3\}3\{3\}3$ over
+$\mathbb Z[\omega]$ ($240$ vertices $=$ E8 roots), its symmetry the Shephard--Todd
+group $\#32$ (order $155520=3\lvert\mathrm{Sp}(4,3)\rvert=3\lvert\mathrm{Aut}(\W)
+\rvert$), equivalently the degree-two cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$
+whose indices $\{3,4,6\}$ are the crystallographic complex periods. Its six faces
+(Fig.~\ref{fig:five-faces}):
 
 \begin{enumerate}\itemsep2pt
 \item \textbf{Selection} (cosmology/geometry, \S\ref{sec:why-q3}). $\Phi_4(q)=q^2+1$
@@ -4626,6 +4637,12 @@ crystallographic complex periods. Its five faces (Fig.~\ref{fig:five-faces}):
   register, the $\mathrm{Sp}(4)$ $\theta$, the Fano $7$; sum $30$), and the Witting
   \emph{degrees} $\{12,18,24,30\}=\{k,\,h(E_7),\,c{=}f,\,h(E_8)\}$ (product
   $155520$). The top degree $30=h(E_8)$ is the cyclotomic sum $13{+}10{+}7$.
+\item \textbf{Gauge} (the Standard Model, \S\ref{sec:physics}). $E_6$ enters as the
+  Hessian polytope ($27$, a sub-rung of the Witting tower $8\!\to\!27\!\to\!240$), and
+  the gauge dimensions \emph{are} Witting degrees: $\dim\mathrm{SU}(3)^3=24=c{=}f$ and
+  $\dim\mathrm{SM}=8{+}3{+}1=12=k$; the two non-Coxeter degrees $\{12,24\}$ are exactly
+  the SM and trinification dimensions, with $\sin^2\theta_W=3/8$ and three generations
+  from the $S_3$ triality.
 \item \textbf{Neutrino} (particle masses, \S\ref{sec:physics}). The Majorana
   hierarchy ratio is $\Phi_3/q^2=13/9$ and the PMNS deformation is $1/\Phi_3$ ---
   the same $\Phi_3=13$.
@@ -4638,13 +4655,15 @@ crystallographic complex periods. Its five faces (Fig.~\ref{fig:five-faces}):
   Thouless-pump Chern number on the $A_2<D_4<E_8$ ladder is $\lambda=2$.
 \end{enumerate}
 
-So the $q=3$ substrate is not a list of coincidences spanning cosmology, particle
-physics, computation, and metrology; it is one Eisenstein object presenting five
-faces. (Witnesses: \path{analysis/w33_eisenstein_grand_synthesis.py},
-\path{analysis/w33_witting_degrees_unify.py}.) The subsections that follow detail
-each face and the connections between them --- including a benchtop bridge that turns
-the neutrino mass ratio into a single-photon measurement
-(\path{analysis/w33_neutrino_demonstrator_bridge.py}).
+So the $q=3$ substrate is not a list of coincidences spanning cosmology, gauge
+physics, particle masses, computation, and metrology; it is one Eisenstein object
+presenting six faces. (Witnesses: \path{analysis/w33_eisenstein_grand_synthesis.py},
+\path{analysis/w33_gauge_sixth_face.py}, \path{analysis/w33_witting_degrees_unify.py}.)
+The subsections that follow detail each face and the connections between them ---
+including a benchtop bridge that turns the neutrino mass ratio into a single-photon
+measurement (\path{analysis/w33_neutrino_demonstrator_bridge.py}), which a contextuality
+simulation on the $40$ $\W$ rays realises explicitly, returning $\Phi_4=10$ and $13/9$
+from the incidence geometry (\path{analysis/w33_contextuality_simulation.py}).
 
 \begin{figure}[ht]\centering
 \resizebox{0.8\textwidth}{!}{%
@@ -4655,19 +4674,21 @@ the neutrino mass ratio into a single-photon measurement
 ]
   \node[draw,circle,fill=red!10,align=center,minimum size=26mm,font=\footnotesize\bfseries]
     (o) at (0,0) {$q{=}3$ Eisenstein\\ object\\ \footnotesize Witting $/$ ST$\#32$\\ \footnotesize $\{\Phi_3,\Phi_4,\Phi_6\}$};
-  \node[face,fill=blue!8]    (s1) at ( 90:3.7) {Selection\\$(q{-}3)\Phi_4$, $\{3,4,6\}$};
-  \node[face,fill=green!10]  (s2) at ( 18:4.1) {Constants\\$\{13,10,7\}$; $\{12,18,24,30\}$};
-  \node[face,fill=yellow!18] (s3) at (-54:4.1) {Neutrino\\$\Phi_3/q^2=13/9$};
-  \node[face,fill=orange!16] (s4) at (234:4.1) {Code\\$A_2{<}D_4{<}E_8$, $c{=}24$};
-  \node[face,fill=purple!12] (s5) at (162:4.1) {Demonstrator\\$1/\Phi_4$, $\lambda{=}2$};
-  \foreach \s in {s1,s2,s3,s4,s5} \draw[spoke] (o)--(\s);
+  \node[face,fill=blue!8]    (s1) at (  90:4.3) {Selection\\$(q{-}3)\Phi_4$, $\{3,4,6\}$};
+  \node[face,fill=green!10]  (s2) at (  30:4.6) {Constants\\$\{13,10,7\}$; $\{12,18,24,30\}$};
+  \node[face,fill=teal!14]   (s6) at ( -30:4.6) {Gauge (SM)\\$24{=}c$, $12{=}k$, $3/8$};
+  \node[face,fill=yellow!18] (s3) at ( -90:4.3) {Neutrino\\$\Phi_3/q^2=13/9$};
+  \node[face,fill=orange!16] (s4) at (-150:4.6) {Code\\$A_2{<}D_4{<}E_8$, $c{=}24$};
+  \node[face,fill=purple!12] (s5) at ( 150:4.6) {Demonstrator\\$1/\Phi_4$, $\lambda{=}2$};
+  \foreach \s in {s1,s2,s3,s4,s5,s6} \draw[spoke] (o)--(\s);
 \end{tikzpicture}}
 \caption{The $q=3$ substrate is one Eisenstein object --- the Witting polytope, its
 symmetry $\mathrm{ST}\#32$, the cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ ---
-seen from five sides. The selection of $q=3$, the substrate constants, the neutrino
-mass hierarchy, the fault-tolerant code lattice, and the benchtop experiment are
-faces of the same structure, sharing the same invariants ($240=E_8$ roots,
-$\{\Phi_3,\Phi_4,\Phi_6\}$, $155520=3\lvert\mathrm{Aut}(\W)\rvert$).}
+seen from six sides. The selection of $q=3$, the substrate constants, the Standard-Model
+gauge group, the neutrino mass hierarchy, the fault-tolerant code lattice, and the
+benchtop experiment are faces of the same structure, sharing the same invariants
+($240=E_8$ roots, $\{\Phi_3,\Phi_4,\Phi_6\}$, the Witting degrees $\{12,18,24,30\}$,
+$155520=3\lvert\mathrm{Aut}(\W)\rvert$).}
 \label{fig:five-faces}
 \end{figure}
 
@@ -5131,7 +5152,7 @@ $\mathrm U_4(2)=\mathrm{PSp}(4,3)$). It is drawn in
 \path{docs/w33_exceptional_tower.svg}. (Witness:
 \path{analysis/w33_exceptional_tower_synthesis.py}.)
 
-\subsection{The measurable layer: a scorecard and a unification}
+\subsection{The measurable layer: a scorecard and a unification \texorpdfstring{\normalfont\small[Faces 2, 3]}{[Faces 2, 3]}}
 \label{sec:physics}
 
 Following the ledger's rule that only the measurable layer falsifies, two
@@ -5219,7 +5240,7 @@ neutrino texture, the GUT scales, and --- above all --- the bridge from the
 framework to why these numbers are the physical world, which is the program's
 defining task. (Witness: \path{analysis/w33_state_of_the_theory.py}.)
 
-\subsection{Why \texorpdfstring{$q=3$}{q=3}, and one triality for the neutrino}
+\subsection{Why \texorpdfstring{$q=3$}{q=3}, and one triality for the neutrino \texorpdfstring{\normalfont\small[Faces 1, 4]}{[Faces 1, 4]}}
 \label{sec:why-q3}
 
 \emph{The bridge: $q=3$ is triply forced.} The defining task --- why is the

@@ -1,0 +1,44 @@
+{
+  "eisenstein_tower": [
+    {
+      "polytope": "Moebius-Kantor 3{3}3",
+      "vertices": 8,
+      "role": "2T"
+    },
+    {
+      "polytope": "Hessian 3{3}3{3}3",
+      "vertices": 27,
+      "role": "27 lines = E6 fundamental"
+    },
+    {
+      "polytope": "Witting 3{3}3{3}3{3}3",
+      "vertices": 240,
+      "role": "E8 roots"
+    }
+  ],
+  "gauge_dimensions": {
+    "dim_SU3_cubed": 24,
+    "is": "24 = q^3-q = c = f = Witting degree-24",
+    "dim_SM": 12,
+    "is2": "12 = q(q+1) = k = Witting degree-12",
+    "generation": "27 = E6 fundamental = Hessian vertices"
+  },
+  "degree_split": {
+    "low_gauge": {
+      "12": "dim SM = k",
+      "24": "dim SU(3)^3 = c=f"
+    },
+    "high_coxeter": {
+      "18": "h(E7)",
+      "30": "h(E8)"
+    }
+  },
+  "unification": {
+    "sin2_thetaW": "3/8",
+    "generations": "S3 triality on 3 SU(3) factors"
+  },
+  "summary": "the SM gauge sector is the SIXTH face of the q=3 Eisenstein object. E6 = the Hessian polytope (27 = sub-rung of the Witting tower 8->27->240); the gauge dimensions are Witting reflection-group degrees: dim SU(3)^3 = 24 = q^3-q = c = f = Witting degree-24, dim SM = 8+3+1 = 12 = q(q+1) = k = Witting degree-12. The non-Coxeter Witting degrees {12,24} = {dim SM, dim SU(3)^3}; the Coxeter ones {18,30} = {h(E7),h(E8)} are the tower above. sin^2 theta_W=3/8, 3 generations = S3 triality. So the gauge group joins selection/constants/neutrino/code/demonstrator: SIX faces of one Eisenstein structure; the SM dimensions ARE Witting degrees.",
+  "sources": [
+    "E6 trinification SM (w33_standard_model_from_trinification.py, w33_trinification_unification.py); Hessian polytope 3{3}3{3}3 = 27 lines = E6 (w33_hessian_polytope_e6.py); Witting degrees {12,18,24,30}; dim SU(3)^3=24=c, dim SM=12=k; sin^2 theta_W=3/8; w33_witting_degrees_unify.py, w33_eisenstein_grand_synthesis.py."
+  ]
+}
