@@ -1,0 +1,86 @@
+{
+  "ranking": [
+    {
+      "score": 27,
+      "handle": "contextual fraction 1/Phi_4=1/10",
+      "integer": "Phi_4=10",
+      "faces": [
+        1,
+        2,
+        6
+      ],
+      "feasibility": 3,
+      "robustness": 3
+    },
+    {
+      "score": 9,
+      "handle": "pump Chern lambda=2",
+      "integer": "lambda=2",
+      "faces": [
+        6
+      ],
+      "feasibility": 3,
+      "robustness": 3
+    },
+    {
+      "score": 8,
+      "handle": "Sum m_nu / 13-9 contextuality",
+      "integer": "Phi_3=13",
+      "faces": [
+        2,
+        4
+      ],
+      "feasibility": 2,
+      "robustness": 2
+    },
+    {
+      "score": 4,
+      "handle": "tensor ratio r=k/N^2=1/300",
+      "integer": "k=12,N=60",
+      "faces": [
+        5,
+        7
+      ],
+      "feasibility": 1,
+      "robustness": 2
+    },
+    {
+      "score": 4,
+      "handle": "sin^2 theta_W=3/8",
+      "integer": "gauge 3/8",
+      "faces": [
+        3
+      ],
+      "feasibility": 2,
+      "robustness": 2
+    },
+    {
+      "score": 2,
+      "handle": "proton tau_p~1e35 yr",
+      "integer": "M_GUT",
+      "faces": [
+        3
+      ],
+      "feasibility": 1,
+      "robustness": 2
+    }
+  ],
+  "winner": {
+    "handle": "contextual fraction 1/Phi_4=1/10",
+    "score": 27,
+    "faces": [
+      1,
+      2,
+      6
+    ]
+  },
+  "near_miss": {
+    "q=2 (qubit substrate)": "stabilizer/Wigner-positive: no qutrit contextuality -> not 1/10",
+    "generic SRG(40,a,b,c)": "different spectrum -> different Hoffman bound -> CF != 1/10",
+    "q=5 (next odd prime)": "W(5,5) has v=156 rays, theta=q^2+1=26 -> CF=1/26 != 1/10"
+  },
+  "summary": "the single most decisive experiment is the contextual fraction 1/Phi_4=1/10. Ranking the live handles by (faces served) x feasibility x robustness, the benchtop Kochen-Specker contextual fraction on the 40 W(3,3) rays wins (score 27): integer-valued/calibration-free and tests THREE faces at once (Phi_4=10 serves selection, constants, demonstrator). Near-miss discrimination: q=2 is contextuality-free, a generic SRG has a different Hoffman bound, q=5 gives 1/26 -- so measuring exactly 1/10 confirms the q=3 W(3,3) object across three faces and any deviation falsifies it. The deep handles (r=1/300, tau_p) remain, but the contextual fraction is the sharpest near-term test to run first.",
+  "sources": [
+    "contextual fraction 1/Phi_4=1/10 (w33_demonstrator_substrate_constants.py, w33_contextuality_simulation.py); pump Chern lambda=2; inflation r=k/N^2 (w33_cosmology_seventh_face.py); sin^2thetaW=3/8; periodic table (w33_substrate_periodic_table.py); qutrit contextuality = magic (Howard et al.); W(q,q) theta=q^2+1; w33_eisenstein_grand_synthesis.py."
+  ]
+}

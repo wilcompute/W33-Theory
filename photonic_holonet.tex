@@ -131,6 +131,28 @@ Transporting the photon through the mesh \emph{is} applying a gate
 \emph{is} routing a packet.  One physical process; three descriptions.
 \end{principle}
 
+\paragraph{Rosetta stone of the $q=3$ substrate (read this first).} This paper has two
+halves: the \emph{machine} (the architecture, below) and the \emph{world} it computes
+(\S\ref{sec:exceptional}). Both are the one $q=3$ Eisenstein object --- the Witting
+polytope $3\{3\}3\{3\}3\{3\}3$ ($240$ vertices $=$ E8 roots), its symmetry
+$\mathrm{ST}\#32$ (order $155520=3\lvert\mathrm{Aut}(\W)\rvert$), equivalently the
+degree-two cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}=\{13,10,7\}$ at $q=3$ --- seen
+from \emph{seven faces}: \textbf{(1) selection} ($q=3$ forced: $\Phi_4=q^2+1$ factors the
+de Sitter cubic and $v=(q{+}1)\Phi_4=40$), \textbf{(2) constants} (the Witting degrees
+$\{12,18,24,30\}=\{k,h(E_7),c{=}f,h(E_8)\}$), \textbf{(3) gauge} ($\dim\mathrm{SU}(3)^3=24=c$,
+$\dim\mathrm{SM}=12=k$, $\sin^2\theta_W=3/8$), \textbf{(4) neutrino} ($\Phi_3/q^2=13/9$,
+PMNS $1/\Phi_3$), \textbf{(5) code} (the GKP tower $A_2{<}D_4{<}E_8$), \textbf{(6)
+demonstrator} (contextual fraction $1/\Phi_4=1/10$, pump Chern $\lambda=2$), and
+\textbf{(7) cosmology} ($N=2(v{-}\Phi_4)=2h(E_8)=60$ e-folds; $n_s=29/30$, $r=k/N^2=1/300$).
+The faces share integers --- $k{=}12,\Phi_4{=}10,\Phi_3{=}13,c{=}f{=}24,v{=}40$ each serve
+$\ge3$ faces (Table~\ref{tab:periodic}) --- which is why they are one object
+(Fig.~\ref{fig:five-faces}). \emph{The honest edge}: every geometric integer is a
+cyclotomic value, GQ count, or Witting degree, but the fine-structure constant
+($1/\alpha\approx137$) and the Monster dimension $196883$ sit at the $c=24=f$ moonshine
+ceiling ($196883$ is second-layer forced via the complex Leech; $\alpha$ is the remaining
+edge). \emph{The one experiment to run first}: the benchtop, calibration-free contextual
+fraction $1/\Phi_4=1/10$, which tests three faces at once.
+
 The identification rests on seven exact pillars, each proved by
 explicit computation in the project repository (every theorem below
 carries its witness script):
@@ -4677,16 +4699,25 @@ from the incidence geometry (\path{analysis/w33_contextuality_simulation.py}).
 \emph{The honest edge.} A synthesis is worth its boundary. Every geometric integer of
 the seven faces is a cyclotomic value $\Phi_d(3)$, a GQ count, a Witting degree, or a
 simple combination of these (e.g.\ $\lvert\mathrm{PSL}(2,7)\rvert=168=\Phi_6\!\cdot\!f$,
-$\dim E_8=248=240+8$). But not everything reduces: the Monster minimal dimension
-$196883=47\!\cdot\!59\!\cdot\!71$ and the fine-structure constant
-($1/\alpha\approx137$) are \emph{not} Witting degrees or cyclotomic values. They sit
-one level up, at the $c=24=f$ moonshine ceiling, reachable only through the
-Monster/complex Leech ($196883=196560+\mu q^4-1$, with $196560$ the Leech kissing
-number). So the unification is layered --- the Witting object directly fixes the
-seven faces' structural integers, while $\alpha$ and the Monster require the full
-moonshine ceiling welded at $c=24=f$. The fine-structure constant is the honest edge
-the direct Eisenstein object does not fix. (Witness:
-\path{analysis/w33_eisenstein_stress_test.py}.)
+$\dim E_8=248=240+8$). But not everything reduces directly: the Monster minimal
+dimension $196883$ and the fine-structure constant ($1/\alpha\approx137$) are
+\emph{not} Witting degrees or cyclotomic values; they sit one level up, at the
+$c=24=f$ moonshine ceiling. The Monster dimension, however, is not free: the classical
+$j$/Leech identity $196884=196560+324$ with $324=\mu q^4=h(E_7)^2$ forces
+$196883=196560+\mu q^4-1$, and the Leech kissing number $196560$ is carried by the
+\emph{complex} (Eisenstein) Leech --- the $\mathbb Z[\omega]$, rank-$12{=}k$, $6\cdot
+\mathrm{Suz}$ lattice atop the substrate's Eisenstein tower. So $196883$ is
+\emph{second-layer forced}, welded to the object; the genuine remaining edge is one
+factorization deeper ($196560=252\cdot780$, $\tau=252$), where $\alpha$ enters via the
+Suzuki lift. The unification is therefore layered, not floating: the Witting object
+fixes the seven faces directly, the complex Leech determines the Monster ceiling, and
+$\alpha$ alone is the open edge. (The third cyclotomic value $\Phi_6(3)=7$ also surfaces
+in the toroidal thread: the Cs\'asz\'ar polyhedron is $K_7$ on the torus and the dual
+Szilassi has $7$ faces, with $C_2$ symmetry of order $2=\lambda=q-1$.) Witnesses:
+\path{analysis/w33_eisenstein_stress_test.py},
+\path{analysis/w33_monster_leech_second_layer.py}. And the single most decisive
+near-term test --- benchtop, calibration-free, and touching three faces --- is the
+contextual fraction $1/\Phi_4=1/10$ (\path{analysis/w33_decisive_experiment.py}).
 
 \begin{table}[ht]\centering\small
 \caption{The periodic table of the $q=3$ Eisenstein object (excerpt): the load-bearing

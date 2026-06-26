@@ -1,0 +1,34 @@
+{
+  "modular_identity": {
+    "j_head": 196884,
+    "leech_kissing": 196560,
+    "gap": 324,
+    "gap_is": "mu*q^4 = h(E7)^2 = 324",
+    "monster_196883": "196560 + mu*q^4 - 1"
+  },
+  "complex_leech": {
+    "ring": "Z[omega]",
+    "rank": 12,
+    "aut": "6.Suz",
+    "minimal_vectors": 196560,
+    "status": "196883 second-layer forced (not free)"
+  },
+  "remaining_edge": {
+    "tau": 252,
+    "factor": 780,
+    "leech_kissing": "252*780",
+    "edge": "alpha=137 via tau-relation, not yet shown forced"
+  },
+  "csaszar_szilassi": {
+    "Phi_6": 7,
+    "csaszar_vertices": 7,
+    "szilassi_faces": 7,
+    "genus": 1,
+    "symmetry": "C2 order 2 = lambda = q-1 = Phi_1(3) = 2",
+    "tie": "toroidal-polyhedron thread touches the cyclotomic skeleton at Phi_6=7"
+  },
+  "summary": "refined boundary: the Monster minimal dim 196883 is NOT free but second-layer FORCED -- the j/Leech identity 196884=196560+324 (324=mu*q^4=h(E7)^2) gives 196883=196560+mu*q^4-1, and 196560 is carried by the complex (Eisenstein) Leech (Z[omega], rank 12=k, 6.Suz). So the moonshine ceiling is welded to the Eisenstein object. The genuine open edge is alpha, one factorization deeper (196560=252*780, tau=252; alpha=137 via the Suzuki lift, not yet shown forced). Connection: Phi_6(3)=7 = Csaszar K7-on-torus vertices = Szilassi 7 faces (genus 1), symmetry C2 order 2 = lambda=q-1 -- the toroidal-polyhedron thread ties to the skeleton at Phi_6. So 196883 moves outside->second-layer-forced; alpha stays the edge.",
+  "sources": [
+    "j-function head c(1)=196884; Leech kissing number 196560; 196884-196560=324=h(E7)^2=mu*q^4; Monster minimal irrep 196883=c(1)-1 (moonshine); complex (Eisenstein) Leech rank 12, Aut 6.Suz; tau=252, alpha=137 (Suzuki lift, BREAKTHROUGH CCLVI); Csaszar/Szilassi 7-vertex/7-face toroidal polyhedra, C2 symmetry (Polytope Wiki); w33_eisenstein_stress_test.py, w33_complex_leech_suzuki_chain.py, w33_monster_moonshine_ceiling.py."
+  ]
+}
