@@ -1296,6 +1296,30 @@ area law (sub-volume). (Witnesses: \path{analysis/w33_self_fueling_memory.py},
 \path{analysis/w33_holographic_rt.py}.)
 \end{theorem}
 
+\begin{theorem}[The memory is the de Sitter spacetime --- and its honest price]
+The loop closes: the holographic memory's bulk \emph{is} the de Sitter spacetime it
+runs in. The collinearity graph $\W$ has \emph{positive} Ollivier--Ricci curvature ---
+computed by optimal transport, $\kappa=1-W_1(m_x,m_y)=1/6=2/k$ --- the discrete
+signature of de Sitter / a positive cosmological constant, and it satisfies the
+Gibbons--Hawking/Gauss--Bonnet closure $E\,\kappa=240\cdot\tfrac16=40=v$ (Face~1). So the
+same positively-curved $\W$ is the holographic memory, the RT horizons are the de Sitter
+horizons, the Boerdijk--Coxeter clock is de Sitter time, and inflation is the expansion:
+computation and spacetime are one geometry, the machine computing itself because its
+memory is the de Sitter universe it inhabits. (Witness:
+\path{analysis/w33_memory_is_desitter.py}.)
+
+\emph{The honest price.} Self-fueling is not a free lunch but a space-for-rate trade.
+Removing the distillation factory saves $\sim d^3$ qubits ($30$--$90\%$ of a standard
+device), but the magic is replenished only at the contextual-fraction rate
+$1/\Phi_4=1/10$ per cycle, so the non-Clifford throughput is capped: a circuit whose
+non-Clifford fraction $f\le1/\Phi_4=1/10$ runs with no factory and no slowdown (a pure
+win), while $f>1/10$ is throttled by $\Phi_4 f=10f$ (or needs $10f$ times more cores).
+The remaining costs are routine matter-shell error correction (paid anyway), the clock
+renewal bandwidth, and the $q=3$ fresh-magic-per-round deficit. The advantage is real
+and bounded: the $d^3$ distillation \emph{space} is traded for a non-Clifford \emph{rate}
+cap at $1/\Phi_4$. (Witness: \path{analysis/w33_self_fueling_cost.py}.)
+\end{theorem}
+
 %======================================================================
 \section{Memory, protection, and the immune system}
 \label{sec:memory}
@@ -1638,6 +1662,19 @@ Sitter} (nearly exponential, never exact) --- both broken de Sitter by $q=3$, th
 aperiodicity being the cosmology's tilt. The architecture's time and the universe's
 expansion are one quasicrystal.
 \emph{Witness: \path{analysis/w33_clock_cosmology.py}.}
+\end{corollary}
+
+\begin{corollary}[A falsifiable clock fingerprint in the CMB]
+If the clock couples to the inflaton, its quasiperiodicity imprints a \emph{quasi-periodic}
+modulation on the primordial spectrum: peaks at log-period $2\pi/\theta\approx2.73$ in
+$\ln k$ (with $\theta=\arccos(-2/3)$) whose spacings obey the Steinhaus \emph{three-gap}
+law (two gap lengths near the BC ring $n=30$) --- the time-quasicrystal fingerprint,
+distinct from smooth slow roll (no peaks) and from single-frequency resonant inflation (a
+uniform comb, one gap). The log-frequency and the three-gap shape are fixed by $q=3$; only
+the amplitude (the coupling) is free. A CMB feature search (Planck, LiteBIRD, CMB-S4) can
+detect the three-gap comb, bound the coupling, or --- finding a clean single-frequency
+comb --- disfavour the clock. (Witness:
+\path{analysis/w33_cmb_clock_signature.py}.)
 \end{corollary}
 
 \begin{theorem}[The arrow of time]

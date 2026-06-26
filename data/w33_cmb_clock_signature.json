@@ -1,0 +1,28 @@
+{
+  "modulation": {
+    "theta": 2.3005,
+    "log_period": 2.7312
+  },
+  "single_frequency": {
+    "distinct_gaps": 1,
+    "is": "uniform comb (resonant inflation)"
+  },
+  "three_gap_fingerprint": {
+    "n": 30,
+    "distinct_gaps": 2,
+    "is": "Steinhaus three-gap = time-quasicrystal signature"
+  },
+  "test": {
+    "smooth power law (no peaks)": "slow roll; bounds coupling A -> 0",
+    "single clean log-periodic comb": "resonant inflation; DISFAVOURS the clock",
+    "three-gap comb at log-period ~2.73": "the substrate clock signature"
+  },
+  "fixed_vs_free": {
+    "fixed": "log-frequency theta=arccos(-2/3), three-gap structure",
+    "free": "amplitude A (inflaton-clock coupling)"
+  },
+  "summary": "falsifiable CMB fingerprint of the clock: if the Boerdijk-Coxeter time quasicrystal couples to the inflaton, the primordial spectrum carries a quasi-periodic modulation -- peaks at log-period 2pi/theta ~ 2.73 in ln k (theta=arccos(-2/3)) whose spacings obey the Steinhaus THREE-GAP law (two gaps near the BC ring n=30), the time-quasicrystal signature. This is distinct from smooth slow roll (no peaks) and single-frequency resonant inflation (one uniform comb gap). Fixed by q=3: the log-frequency theta and the three-gap shape; free: the amplitude (coupling). A CMB feature search (Planck/LiteBIRD/CMB-S4) can detect the three-gap comb, bound the coupling, or disfavour the clock (clean single comb). Honest: conditional/qualitative (feature exists IF the clock couples; amplitude free), but the frequency and three-gap shape are the fixed, computed, distinguishing prediction.",
+  "sources": [
+    "Boerdijk-Coxeter clock theta=arccos(-2/3), three-gap (w33_clock_magic_renewal.py, w33_clock_cosmology.py); resonant/axion-monodromy inflation features (Chen; Flauger et al.); Steinhaus three-gap theorem; CMB feature searches (Planck 2018 X; LiteBIRD; CMB-S4); ln k ~ N e-folds."
+  ]
+}

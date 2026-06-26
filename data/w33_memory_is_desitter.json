@@ -1,0 +1,25 @@
+{
+  "ollivier": {
+    "kappa": 0.1667,
+    "positive": true,
+    "meaning": "de Sitter / positive cosmological constant"
+  },
+  "closure": {
+    "kappa_2_over_k": "1/6",
+    "E": 240,
+    "E_kappa": 40,
+    "v": 40,
+    "is": "discrete Gibbons-Hawking/Gauss-Bonnet de Sitter closure"
+  },
+  "dictionary": {
+    "memory": "[[240,81,4,3]]_3 holographic code, bulk-from-boundary mu=4=d",
+    "horizon": "RT surfaces (minimal cuts) = de Sitter horizons",
+    "curvature": "Ollivier kappa > 0 = de Sitter; kappa = 2/k = 1/6 = Lambda",
+    "time": "Boerdijk-Coxeter clock theta=arccos(-2/3) = de Sitter angle",
+    "expansion": "inflation N=60, tilt 1-n_s=1/30=1/(clock beat)"
+  },
+  "summary": "the loop closes: the self-fueling holographic memory's bulk IS de Sitter spacetime. The W(3,3) bulk has POSITIVE Ollivier-Ricci curvature (computed by optimal-transport LP, kappa=1-W1>0) -- the discrete de Sitter / positive-Lambda signature; with kappa=2/k=1/6 it satisfies the Gauss-Bonnet de Sitter closure E*kappa=v=40. The SAME positively-curved W(3,3) is the holographic memory ([[240,81,4,3]]_3, bulk-from-boundary mu=4=d), the curved spacetime (kappa=Lambda>0), the de Sitter clock (BC theta=arccos(-2/3)), and the expansion (inflation N=60, tilt 1-n_s=1/30=1/clock-beat). Computation and spacetime are one geometry: the machine computes itself because its memory is the de Sitter universe it runs in. Honest: curvature computed exactly; the RT-horizon=de-Sitter-horizon and kappa=Lambda identifications are the substrate's central geometric claim, here made consistent across curvature, closure, clock, and expansion.",
+  "sources": [
+    "Ollivier-Ricci curvature (Ollivier 2009; Lin-Lu-Yau) via Wasserstein-1 transport LP; W(3,3)=SRG(40,12,2,4); Gauss-Bonnet de Sitter closure E*kappa=v, kappa=2/k (w33_desitter_q3_selection.py, Face 1); RT (w33_holographic_rt.py); clock (w33_clock_cosmology.py); self-fueling memory (w33_self_fueling_memory.py)."
+  ]
+}

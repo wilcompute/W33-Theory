@@ -1,0 +1,57 @@
+{
+  "regimes": [
+    {
+      "f": 0.001,
+      "throttle": 1.0,
+      "regime": "PURE WIN (no factory, no slowdown)"
+    },
+    {
+      "f": 0.01,
+      "throttle": 1.0,
+      "regime": "PURE WIN (no factory, no slowdown)"
+    },
+    {
+      "f": 0.05,
+      "throttle": 1.0,
+      "regime": "PURE WIN (no factory, no slowdown)"
+    },
+    {
+      "f": 0.1,
+      "throttle": 1.0,
+      "regime": "PURE WIN (no factory, no slowdown)"
+    },
+    {
+      "f": 0.3,
+      "throttle": 3.0,
+      "regime": "throttled x3.0 (or 3.0x more cores)"
+    },
+    {
+      "f": 0.7,
+      "throttle": 7.0,
+      "regime": "throttled x7.0 (or 7.0x more cores)"
+    },
+    {
+      "f": 1.0,
+      "throttle": 10.0,
+      "regime": "throttled x10.0 (or 10.0x more cores)"
+    }
+  ],
+  "trade": {
+    "saved": "distillation factory ~d^3 (space)",
+    "price": "non-Clifford throughput cap at f=1/Phi_4=1/10; throttle 10f"
+  },
+  "hidden_costs": [
+    "matter-shell maintenance: the usual code EC overhead, paid anyway (not extra, not zero)",
+    "clock renewal bandwidth: non-Clifford rate <= BC clock tick rate",
+    "KS deficit q=3: only q contexts' fresh magic per round"
+  ],
+  "crossover": {
+    "f": "1/Phi_4 = 1/10",
+    "below": "pure win",
+    "above": "throttle 10f"
+  },
+  "summary": "the honest price of self-fueling: NOT a free lunch but a SPACE-for-RATE trade. matter=magic removes the distillation factory (saving ~d^3 qubits, 30-90% of a standard device), but the magic is replenished only at the contextual-fraction rate 1/Phi_4=1/10 per cycle, so the non-Clifford throughput is capped: circuits with non-Clifford fraction f<=1/10 run with no factory and no slowdown (pure win), f>1/10 is throttled by 10f (or needs 10f more cores). Hidden costs named: matter-shell EC maintenance (paid anyway), clock-renewal bandwidth (rate <= tick rate), KS deficit q=3 magic/round. Verdict: trades the d^3 distillation SPACE for a non-Clifford RATE cap at 1/Phi_4=1/10; Clifford-dominated workloads win outright, magic-heavy ones pay 10f. Advantage real but bounded, stated with its price.",
+  "sources": [
+    "matter=magic, contextual fraction 1/Phi_4=1/10, KS deficit theta-alpha=q=3 (w33_magic_economy.py, w33_magic_resource_accounting.py); distillation factory ~d^3, 30-90% device (Litinski 2019); BC clock renewal (w33_clock_magic_renewal.py); w33_self_fueling_memory.py."
+  ]
+}
