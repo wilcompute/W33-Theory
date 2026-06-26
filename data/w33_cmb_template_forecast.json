@@ -1,0 +1,37 @@
+{
+  "triplet": {
+    "lower_sideband": 2.0911,
+    "carrier_w1": 2.3005,
+    "upper_sideband": 2.51,
+    "carrier_amp": "A",
+    "sideband_amp": "A*b/2"
+  },
+  "window": {
+    "l_min": 30,
+    "l_max": 2000,
+    "f_sky": 0.7,
+    "x_range": [
+      -3.155,
+      1.045
+    ],
+    "n_modes": 1971,
+    "transfer": "T=1 (optimistic, cosmic-variance-limited; real transfer weakens this)"
+  },
+  "forecast": {
+    "sigma_A": 0.001303,
+    "upper_limit_95pct": 0.002553,
+    "note": "cosmic-variance-limited optimistic; realistic transfer weakens by a few-to-ten",
+    "realistic_planck_feature_bound": "~ few percent (axion-monodromy/resonant analyses)"
+  },
+  "injection_recovery": {
+    "A_true": 0.01,
+    "A_hat": 0.0102,
+    "snr": 7.8,
+    "phase_true": 0.7,
+    "phase_hat": 0.712
+  },
+  "summary": "the q=3 CMB clock template, fit to a mock Planck-TT covariance, yields a NUMBER. Expanded (product-to-sum), delta P/P predicts a spectral TRIPLET at {w1-w2, w1, w1+w2} = {2.091, 2.301, 2.510} -- a carrier at w1=theta=arccos(-2/3) split by the ring envelope w2=2pi/30 (the frequency-domain three-gap comb). A cosmic-variance-limited mock TT likelihood (l=30..2000, f_sky=0.7, x=ln(k/k_*), transfer T=1 optimistic) gives sigma_A ~ 1e-3, a 95% upper limit A < ~2e-3; an injected 1% modulation is recovered at high SNR (pipeline works). Real acoustic transfer weakens this by a few-to-ten (landing near the few-percent level Planck feature searches reach). Honest: a FORECAST with a simplified noise model, not the real Planck likelihood -- it gives the order of magnitude and demonstrates recovery, with the optimistic/realistic gap named. Frequencies q=3-fixed (the prediction); only A, b, phases fit. First time the theory meets data with an error bar.",
+  "sources": [
+    "template (w33_cmb_template.py); product-to-sum triplet; Planck 2018 X (feature/oscillation searches, amplitude bounds ~few %); cosmic variance sigma_l=sqrt(2/((2l+1)f_sky)); D_A=14065 Mpc, k_*=0.05; axion-monodromy/resonant templates (Flauger et al.; Chen); Cobaya/CLASS feature likelihoods."
+  ]
+}

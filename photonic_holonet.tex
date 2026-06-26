@@ -6119,6 +6119,63 @@ and area/entropy identifications the substrate's central geometric claim; the CM
 feature conditional on the clock--inflaton coupling). Given those, machine $=$ world,
 $G=1/2^q$, and the two-tone template are forced.
 
+\subsection{Pass 6 --- sharpening the capstone: a fit, a derived frequency, and a running $G$}
+\label{sec:capstone-sharper}
+
+Each capstone claim has a soft spot; this pass hardens three of them.
+
+\emph{The sky template touches data with an error bar.} Product-to-sum turns the
+modulation into an exact spectral \emph{triplet}: $\delta P/P = A\cos(\omega_1 x+\phi_1)
++\tfrac{Ab}2\cos((\omega_1{+}\omega_2)x+\cdots)+\tfrac{Ab}2\cos((\omega_1{-}\omega_2)x
++\cdots)$ --- three lines at $\{\omega_1{-}\omega_2,\omega_1,\omega_1{+}\omega_2\}=
+\{2.091,2.301,2.510\}$, a carrier split by the ring envelope (the frequency-domain face
+of the three-gap comb). Fitting the central line to a cosmic-variance-limited mock
+Planck-TT vector ($\ell=30$--$2000$, $f_{\rm sky}=0.7$, $k=\ell/D_A$, transfer $T=1$)
+gives a sensitivity $\sigma_A\simeq1.3\times10^{-3}$, i.e.\ a $95\%$ upper limit
+$A<2.6\times10^{-3}$ in the optimistic case; an injected $1\%$ modulation is recovered
+at $8\sigma$, so the pipeline works. Realistic acoustic transfer (projection $+$ Silk
+damping) weakens this by a factor of a few-to-ten, landing near the few-percent level
+current feature searches reach --- but the substrate's prediction is now a
+\emph{constrainable amplitude at fixed, $q=3$-locked frequencies}, the first contact
+with data carrying an error bar. (Witness: \path{analysis/w33_cmb_template_forecast.py}.)
+
+\emph{The slow frequency is derived, not asserted.} The template's $\omega_2=2\pi/30$ was
+an identification; it is now a theorem of the Boerdijk--Coxeter helix. Building the
+tetrahelix from regular tetrahedra by the recurrence $v_{n+4}=\mathrm{reflect}\,(v_n,\,
+\mathrm{plane}(v_{n+1},v_{n+2},v_{n+3}))$, the per-tetrahedron screw twist has cosine
+\emph{exactly} $-\tfrac23$, so the substrate clock angle $\theta=\arccos(-\tfrac23)$
+\emph{is} the BC-helix twist (the same $-(q{-}1)/q$). In flat space $\theta/2\pi$ is
+irrational, so the helix never closes --- the fast tone $\omega_1=\theta$, the time
+quasicrystal; in the curved $600$-cell the same helix closes after exactly $30$
+tetrahedra ($600$ cells $=20$ rings $\times\,30$, and $30=h(E_8)=\Phi_3{+}\Phi_4{+}\Phi_6$),
+the slow tone $\omega_2=2\pi/30$. Both tones share one geometric origin, and the ratio
+$\omega_1/\omega_2=30\theta/2\pi=15\theta/\pi=10.984$ is forced and irrational (in $30$
+ticks the fast phase wraps a non-integer $10.984$ times). Only the tick$\leftrightarrow$
+e-fold normalisation remains an identification. (Witness:
+\path{analysis/w33_bc_helix_omega2.py}.)
+
+\emph{Newton's constant runs over the tower.} $G=k/4f=1/2^q$ was a single number; over
+the GKP shell ladder $A_2<D_4<E_8$ it is a curve. Treating each shell as a horizon whose
+microstate count is its kissing number ($=\#\text{roots}=h\cdot\mathrm{rank}$: $6,24,240$)
+and keeping the self-similar gauge-screen area $A=k=12$, Bekenstein--Hawking gives
+\[
+G_s=\frac{A}{4S_s}=\frac{k}{4\,\mathrm{kiss}_s}=\frac{q}{h_s\,\mathrm{rank}_s}:\quad
+G(A_2)=\tfrac12,\ \ G(D_4)=\tfrac18=\tfrac1{2^q},\ \ G(E_8)=\tfrac1{80},
+\]
+exact on all three rungs. The matter shell $D_4$ sits at the physical $G=1/2^q$; gravity
+weakens up the tower by $\mu=4$ then $\Phi_4=10$. With the Coxeter number as scale, the
+seed $A_2$ ($h=3$) is the UV (strong, Planckian) and the full $E_8$ gauge shell ($h=30$)
+the IR (weak) --- gravity strongest in the UV, irrelevant in the IR, as a gravitational
+coupling should run ($G_s\sim1/h_s\mathrm{rank}_s$). So the substrate predicts not just
+the value of $G$ but its scale dependence. (Witness:
+\path{analysis/w33_newton_running.py}.) \emph{Honest scope:} the forecast uses a
+simplified (cosmic-variance-limited, $T=1$) noise model; the BC twist and $600$-cell
+closure are computed geometry while the e-fold$=$tick coupling remains an assumption; the
+$G$-running is a discrete three-point trend on the established tower, with area$=k$ and
+entropy$=$kissing the same holographic dictionary that fixes $G(D_4)=1/2^q$ and the
+UV/IR-via-$h$ reading interpretive. Given those, the bound, $\omega_2$, the ratio, and
+the running are forced.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

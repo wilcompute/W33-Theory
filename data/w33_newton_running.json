@@ -1,0 +1,53 @@
+{
+  "tower": {
+    "A2": {
+      "rank": 2,
+      "coxeter": 3,
+      "kissing": 6,
+      "G": "1/2",
+      "G_float": 0.5,
+      "closed_form": "q/(h*rank) = k/(4*kissing)"
+    },
+    "D4": {
+      "rank": 4,
+      "coxeter": 6,
+      "kissing": 24,
+      "G": "1/8",
+      "G_float": 0.125,
+      "closed_form": "q/(h*rank) = k/(4*kissing)"
+    },
+    "E8": {
+      "rank": 8,
+      "coxeter": 30,
+      "kissing": 240,
+      "G": "1/80",
+      "G_float": 0.0125,
+      "closed_form": "q/(h*rank) = k/(4*kissing)"
+    }
+  },
+  "matter_shell": {
+    "shell": "D4",
+    "G": "1/8 = 1/2^q"
+  },
+  "steps": {
+    "A2_to_D4": {
+      "factor": 4,
+      "is": "mu = 4"
+    },
+    "D4_to_E8": {
+      "factor": 10,
+      "is": "Phi_4 = 10"
+    },
+    "trend": "G weakens monotonically up the tower (UV->IR)"
+  },
+  "scale": {
+    "UV": "A2 (h=3), G=1/2 -> Planckian",
+    "matter": "D4 (h=6), G=1/8=1/2^q",
+    "IR": "E8 (h=30), G=1/80",
+    "trend": "G_s ~ 1/(h_s*rank_s): gravity strong UV, weak IR (irrelevant, as it should be)"
+  },
+  "summary": "Newton's constant RUNS over the exceptional tower A2 < D4 < E8: G_s = k/(4*kissing_s) = q/(h_s*rank_s), a curve not a constant. Treating each GKP shell as a horizon with its own microstate count (kissing = #roots = h*rank: 6, 24, 240) and keeping the self-similar gauge-screen area A=k=12, Bekenstein-Hawking gives G(A2)=1/2, G(D4)=1/8=1/2^q (the physical matter-shell value), G(E8)=1/80 -- exact closed form on all three rungs. Gravity weakens monotonically up the tower by the substrate factors mu=4 then Phi_4=10. With the Coxeter number h as scale, A2(h=3)=UV (strong gravity, Planckian), E8(h=30)=IR (weak gravity), D4(h=6, G=1/8)=our matter shell: gravity strongest in UV, irrelevant in IR, as it should be (G_s ~ 1/(h_s*rank_s)). Honest: a discrete 3-point running; area=k and entropy=kissing are the holographic dictionary (the same that gives G=1/8 at D4), the UV/IR-via-h identification is interpretive, and the absolute Planck scale stays dynamical -- but GIVEN the dictionary, G_s=q/(h*rank) is forced arithmetic. New: G is a curve, hitting 1/2^q at matter, weakening by mu then Phi_4.",
+  "sources": [
+    "G=k/(4f)=1/8=1/2^q at D4 (w33_gravity_dictionary.py); GKP shell tower A2<D4<E8 (Face 5, w33 moonshine ladder); exceptional root/Coxeter data (kissing=#roots=h*rank: A2 6, D4 24, E8 240); Bekenstein-Hawking S=A/4G; de Sitter entropy = horizon microstate count; 'supercycle is the gauge group' (Coxeter=scale)."
+  ]
+}

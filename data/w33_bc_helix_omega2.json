@@ -1,0 +1,34 @@
+{
+  "bc_twist": {
+    "angle_rad": 2.30052,
+    "angle_deg": 131.81,
+    "cos_twist": -0.66667,
+    "abs_cos_equals_2_over_3": true,
+    "clock_angle_theta": 2.30052,
+    "note": "BC-helix twist cosine = +/-2/3; substrate clock angle theta = arccos(-2/3)"
+  },
+  "flat_non_closure": {
+    "twist_over_2pi": 0.36614,
+    "irrational": true,
+    "meaning": "BC helix never closes in flat space = time-quasicrystal (fast tone)"
+  },
+  "curved_closure": {
+    "cells_600": 600,
+    "rings": 20,
+    "ring_length": 30,
+    "beat_is_hE8": true,
+    "hE8_cyclotomic": "Phi3+Phi4+Phi6 = 13+10+7 = 30",
+    "omega2": 0.20944
+  },
+  "ratio_theorem": {
+    "fast_turns_per_ring": 10.98419,
+    "ratio": 10.98419,
+    "form": "15*theta/pi",
+    "irrational": true,
+    "derived_from": "BC twist theta + 600-cell closure 30 (not asserted)"
+  },
+  "summary": "omega2 = 2pi/30 DERIVED, not asserted, from the Boerdijk-Coxeter helix. Built from regular tetrahedra (tetrahelix recurrence v_{n+4}=reflect(v_n, plane(v_{n+1..n+3}))), the per-tetrahedron screw twist has cosine EXACTLY -2/3 -> twist = arccos(-2/3) = theta, so the substrate clock angle IS the BC-helix twist (the same -(q-1)/q). In FLAT space theta/2pi is irrational (Niven) so the helix never closes = time-quasicrystal = fast tone omega1=theta; in the CURVED 600-cell it closes after exactly 30 tetrahedra (600 = 20 rings x 30, 30 = h(E8) = Phi3+Phi4+Phi6) = slow tone omega2 = 2pi/30. Both CMB tones share ONE origin; the ratio omega1/omega2 = 30*theta/2pi = 15*theta/pi = 10.984 is FORCED (the fast phase wraps a non-integer 10.984 times per ring), irrational. The template's slow frequency and irrational ratio are now theorems; the only residue is the tick<->e-fold normalization (the inflaton-clock coupling). Honest: BC twist and 600-cell closure are computed/established geometry; the e-fold=tick identification remains the coupling assumption.",
+  "sources": [
+    "Boerdijk-Coxeter helix / tetrahelix (Boerdijk 1952; Coxeter); twist cos=-2/3 (computed here); 600-cell = 20 BC rings x 30 cells; h(E8)=30=Phi3+Phi4+Phi6 (Witting degree-30); Niven irrationality; CMB template (w33_cmb_template.py, w33_clock_cosmology.py)."
+  ]
+}
