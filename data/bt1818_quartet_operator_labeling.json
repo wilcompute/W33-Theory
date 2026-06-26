@@ -1,0 +1,19 @@
+{
+  "bt": "BT1818",
+  "title": "quartet operator labeling",
+  "quartet_model": "local F2^2 D4/GKP/Pauli square",
+  "state_labels": {
+    "00": {"x": 0, "z": 0, "operator": "I", "gkp_coset": "origin / no half-shift"},
+    "01": {"x": 1, "z": 0, "operator": "X", "gkp_coset": "position half-shift"},
+    "10": {"x": 0, "z": 1, "operator": "Z", "gkp_coset": "momentum half-shift"},
+    "11": {"x": 1, "z": 1, "operator": "XZ", "gkp_coset": "both-quadrature half-shift / Y-like corner"}
+  },
+  "observed_defect_support": [10,22,44],
+  "observed_oriented_edge": ["00", "11"],
+  "observed_difference_operator": "XZ",
+  "observed_edge_type": "diagonal/both-quadrature flip",
+  "operator_counts": {"coordinate_edges": 4, "diagonal_edges": 2},
+  "verified": true,
+  "boundary": "This labels the hidden quartet as a local D4/GKP/Pauli-square fibre. It does not claim that the true BT1781 tuple data has already supplied canonical physical operators; that remains the BT1819 pass/fail input.",
+  "conclusion": "The hidden quartet is concretely the F2^2 local fibre square. The observed defect edge 00->11 is the XZ/Y-like diagonal: a simultaneous position/momentum half-shift. This is the operator-level content of the oriented quartet law."
+}
