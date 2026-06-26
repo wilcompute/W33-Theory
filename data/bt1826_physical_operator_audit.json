@@ -1,0 +1,32 @@
+{
+  "bt": "BT1826",
+  "title": "physical operator audit",
+  "claim_tiers": {
+    "tier_1_exact_local_algebra": {
+      "claim": "The hidden quartet is an F2^2 local fibre and the observed edge has difference 11 = XZ.",
+      "status": "exact"
+    },
+    "tier_2_D4_glue_reading": {
+      "claim": "The quartet has the same Z2 x Z2 shape as the D4 glue quotient, so the D4-glue reading is structural.",
+      "status": "structural"
+    },
+    "tier_3_GKP_coset_reading": {
+      "claim": "In the GKP reading, the observed 00 -> 11 edge is a both-quadrature half-shift.",
+      "status": "engineering_interpretation"
+    },
+    "tier_4_BT1781_physical_operator": {
+      "claim": "The real BT1781 tuples canonically realize the defect as a physical XZ operator.",
+      "status": "pending_true_tuple_rows"
+    }
+  },
+  "safe_wording": "The W(E6) stabilizer selects a six-edge quartet slice. We model the hidden quartet as a local F2^2/D4-glue square with Pauli labels I,X,Z,XZ. In that model the observed edge is the XZ diagonal, giving the correction T010:-2, T210:-2, T222:+2. The physical GKP/displacement interpretation remains a claim to be tested by the tuple-list harness.",
+  "unsafe_wording": "W(E6) proves the physical GKP XZ displacement.",
+  "bottom_line": {
+    "exact": "F2^2 quartet and XZ difference label",
+    "structural": "D4 glue quotient reading",
+    "engineering": "GKP both-quadrature half-shift reading",
+    "pending": "physical operator realization from true BT1781 tuple rows"
+  },
+  "verified": true,
+  "conclusion": "BT1826 keeps the operator story honest: Pauli-square algebra is exact, D4 glue is structural, GKP displacement is an engineering interpretation, and physical BT1781 realization remains pending until true tuple rows are tested."
+}
