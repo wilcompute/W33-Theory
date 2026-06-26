@@ -1,0 +1,24 @@
+{
+  "bt": "BT1815",
+  "title": "quartet slice geometry",
+  "states": ["00", "01", "10", "11"],
+  "quartet_edge_count": 6,
+  "defect_slice_supports": [[5,10,41],[7,34,40],[10,22,44],[12,34,42],[18,40,42],[30,41,44]],
+  "edge_to_hinge_support": {
+    "('00', '01')": [5,10,41],
+    "('00', '10')": [7,34,40],
+    "('00', '11')": [10,22,44],
+    "('01', '10')": [12,34,42],
+    "('01', '11')": [18,40,42],
+    "('10', '11')": [30,41,44]
+  },
+  "observed_defect_support": [10,22,44],
+  "observed_quartet_edge": ["00", "11"],
+  "aut_K4_order": 24,
+  "edge_orbit_size_under_aut_K4": 6,
+  "edge_stabilizer_order": 4,
+  "oriented_edge_count": 12,
+  "line_graph_of_K4": {"vertices": 6, "edges": 12, "description": "octahedral graph on the six quartet edges"},
+  "verified": true,
+  "conclusion": "The W(E6) size-6 hinge slice is exactly modeled by the six edges of a hidden K4 quartet. The observed defect is one oriented edge inside this quartet; W(E6) chooses the quartet-edge slice, while the remaining orientation is the local fibre law."
+}
