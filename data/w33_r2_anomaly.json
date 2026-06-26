@@ -1,0 +1,22 @@
+{
+  "starobinsky_R2": {
+    "scalaron_mass_GeV": 28360000000000.0,
+    "R2_coefficient": 614500000.0
+  },
+  "conformal_anomaly": {
+    "c": 24,
+    "anomaly_R2_coeff": 0.0008443,
+    "ratio_star_over_anomaly": 727700000000.0,
+    "orders_too_weak": 11.9,
+    "verdict": "c=24 anomaly does NOT generate the large Starobinsky R^2 coefficient"
+  },
+  "residue_unified": {
+    "identity": "A_s = N^2 M^2/(24 pi^2 M_Pl^2); R^2 coeff = M_Pl^2/12M^2",
+    "one_number": "R^2 coefficient = scalaron mass = A_s exponent",
+    "A_s_from_M": 2.061e-09
+  },
+  "summary": "testing whether the c=24 boundary generates R^2 -- an honest NEGATIVE that unifies the residue. The substrate is Starobinsky (R^2) inflation; its R^2 coefficient M_Pl^2/(12 M^2) ~ 6x10^8 is fixed by the scalaron mass M ~ 2.8x10^13 GeV (from A_s = N^2 M^2/24 pi^2 M_Pl^2). The conformal anomaly of the c = f = 24 boundary CFT induces an R^2 coefficient only of order c/(2880 pi^2) ~ 8x10^-4 -- about 12 orders of magnitude too weak (ratio ~ 7x10^11). So the c=24 anomaly does NOT generate the large Starobinsky coefficient, and machine=world is not promoted to a derivation via the anomaly (the large R^2 coefficient is the known model-building challenge, not a one-loop number). POSITIVE content: the R^2 coefficient, the scalaron mass M, and the A_s exponent are the SAME single number, so the entire residual freedom of the cosmological tower is ONE quantity (light scalaron / large R^2 coeff / amplitude exponent N/q), not the boundary central charge. The scale residue is exactly one number, honestly undetermined by the anomaly. The anomaly normalisation is order-of-magnitude/scheme-dependent but the 12-order gap is robust.",
+  "sources": [
+    "Starobinsky R^2 inflation, A_s = N^2 M^2/(24 pi^2 M_Pl^2) (w33_starobinsky.py); scalaron mass M ~ 1.3e-5 M_Pl (COBE normalisation); conformal/trace anomaly induced R^2 ~ c/(2880 pi^2) (Birrell-Davies; Duff trace anomaly); c=f=24 boundary central charge (gravity dictionary, Monster CFT)."
+  ]
+}

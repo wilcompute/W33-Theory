@@ -1,0 +1,23 @@
+{
+  "substrate_point": {
+    "n_s": 0.9667,
+    "r": 0.00333,
+    "on_line": "r = 3(1-n_s)^2 (Starobinsky), N=60"
+  },
+  "current": {
+    "n_s_sigma": 0.42,
+    "r": "< 0.036 (consistent)"
+  },
+  "forecast": {
+    "sigma_ns": 0.002,
+    "sigma_r": 0.0005,
+    "r_detection_sigma": 6.7,
+    "sigma_N": 3.6,
+    "N_vs_50_sigma": 2.8
+  },
+  "figure": "analysis/w33_ns_r_forecast_fig.tex",
+  "summary": "the cosmological tower as ONE dated point in the (n_s, r) plane. The substrate predicts (n_s, r) = (1-1/beat, 1/(Phi_4 beat)) = (0.9667, 1/300), the N = 2 beat = 60 point on the Starobinsky line r = 3(1-n_s)^2 -- a point on a known one-parameter curve, with N=60 the location. Current (Planck + BK 2021): n_s 0.42 sigma high, r < 0.036, consistent. Forecast (CMB-S4/LiteBIRD, sigma(n_s)~0.002, sigma(r)~0.0005): r detected at 6.7 sigma, the point pinned to a tiny ellipse, N measured to sigma(N) = (N^2/2)sigma(n_s) = 3.6 (N = 60 +/- 3.6), testing N=2 beat=60 vs N=50 at 2.8 sigma. So by the mid-2030s the tower is confirmed as the Starobinsky N=60 point or excluded. A TikZ figure (analysis/w33_ns_r_forecast_fig.tex) shows the Starobinsky line, the substrate point, the Planck n_s band, and the CMB-S4 ellipse. HONEST: the point and line-membership are exact; sigma(n_s), sigma(r) are published sensitivities (realised values depend on foregrounds/delensing). The packaging of Passes 6-11 into one falsifiable plot, not a new prediction.",
+  "sources": [
+    "substrate (n_s,r) (w33_starobinsky.py, w33_consistency_audit.py); Starobinsky line r=3(1-n_s)^2; Planck+BK 2021 n_s=0.9649+/-0.0042, r<0.036; CMB-S4 sigma(r)~0.0005, LiteBIRD/CMB-S4 sigma(n_s)~0.002 (forecasts); sigma(N)=(N^2/2)sigma(n_s) from 1-n_s=2/N."
+  ]
+}

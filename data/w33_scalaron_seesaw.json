@@ -1,0 +1,25 @@
+{
+  "scalaron": {
+    "M_GeV": 28360000000000.0,
+    "ln_MPl_full_over_M": 12.97,
+    "ln_form": "~ Phi_3 = 13 (full M_Pl); 11.4 (reduced) -- convention dependent"
+  },
+  "seesaw": {
+    "~100 GeV": 200000000000000.0,
+    "top": 598600000000000.0,
+    "vev": 1210000000000000.0
+  },
+  "cross_sector": {
+    "M_scalaron": 28360000000000.0,
+    "M_R_range": [
+      200000000000000.0,
+      1210000000000000.0
+    ],
+    "link": "Starobinsky scalaron reheats into RH neutrinos -> seesaw + leptogenesis",
+    "note": "M ~ 2.8e13 at low edge of M_R range (lighter RH neutrinos)"
+  },
+  "summary": "the Starobinsky scalaron mass and a cross-sector link. Fixed by A_s = e^-20, the scalaron mass is M = M_Pl sqrt(24 pi^2 A_s)/N ~ 2.8x10^13 GeV, with ln(M_Pl/M) ~ 13.0 ~ Phi_3 (full M_Pl; reduced gives 11.4) -- the cyclotomic skeleton again. The corpus's neutrino masses (sum ~ 0.1 eV, atmospheric ~ 0.05 eV) need a type-I seesaw scale M_R = m_D^2/m_nu ~ 10^14-10^15 GeV (m_D ~ 100-246 GeV), within ~1 order of M. Because M_scalaron ~ M_R (same 10^13-10^15 GeV window), the scalaron reheats by decaying into the right-handed neutrinos: inflation -> heavy-nu production -> (i) light-neutrino masses via seesaw and (ii) baryon asymmetry via leptogenesis. So one scale ~ 10^13-10^14 GeV ties the end of inflation, the neutrino masses, and matter genesis -- the inflaton and neutrino sectors meet. HONEST: ln(M_Pl/M) ~ Phi_3 is convention-dependent; the M ~ M_R overlap is order-of-magnitude (seesaw scale depends on m_D), so a natural scale coincidence + concrete mechanism, not yet a precise M = M_R identification. Valuable: the inflaton's one new scale lands in the seesaw window, connecting three sectors.",
+  "sources": [
+    "scalaron mass from A_s (w33_starobinsky.py, w33_r2_anomaly.py); neutrino sum ~ 0.1 eV, mu_eff^2=1/4 (w33_neutrino_seesaw_prediction.py, w33_neutrino_texture_pinned.py); type-I seesaw M_R = m_D^2/m_nu; Starobinsky reheating into RH neutrinos & leptogenesis (Fukugita-Yanagida; Davidson-Nardi-Nir bound M_R > ~10^9 GeV)."
+  ]
+}
