@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BT1824 Quartet W(E6) Panel</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;margin:32px;color:#111827;background:#fff}
+.card{border:2px solid #334155;border-radius:14px;padding:16px;background:#f8fafc;min-width:190px;text-align:center}
+.accent{border-color:#0891b2;background:#ecfeff}.warn{border-color:#ea580c;background:#fff7ed}
+.row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:28px 0}.arrow{font-size:28px;color:#334155}.small{font-size:13px;color:#475569}.big{font-size:20px;font-weight:700}.grid{display:grid;grid-template-columns:120px 120px;gap:36px;width:max-content;margin:22px auto}.node{border:2px solid #334155;border-radius:50%;height:68px;width:68px;display:flex;align-items:center;justify-content:center;background:#fff}.hot{border-color:#dc2626;background:#fff7ed}.formula{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#f1f5f9;padding:14px;border-radius:10px}.caption{max-width:980px;line-height:1.55}
+</style>
+</head>
+<body>
+<h1>BT1824: W(E6) to K4 quartet to oriented XZ correction</h1>
+<p class="caption">The global Schlaefli/W(E6) symmetry selects a size-six Hesse-hinge slice, not a single defect. The slice is the edge set of a hidden four-state D4/GKP quartet. The local fibre law orients one diagonal edge.</p>
+<div class="row">
+  <div class="card"><div class="big">W(E6) image stabilizer</div><div class="small">global Schlaefli symmetry</div></div><div class="arrow">→</div>
+  <div class="card"><div class="big">10 stabilizer slices</div><div class="small">54 Hesse hinges grouped</div></div><div class="arrow">→</div>
+  <div class="card accent"><div class="big">observed size-6 slice</div><div class="small">six hinges = C(4,2)</div></div><div class="arrow">→</div>
+  <div class="card accent"><div class="big">hidden K4 edge set</div><div class="small">states 00,01,10,11</div></div>
+</div>
+<h2>Local F2^2 / D4-GKP square</h2>
+<div class="grid">
+  <div class="node">00 / I</div><div class="node">01 / X</div>
+  <div class="node">10 / Z</div><div class="node hot">11 / XZ</div>
+</div>
+<p class="caption"><strong>Observed oriented edge:</strong> 00 → 11, the XZ diagonal / both-quadrature half-shift.</p>
+<div class="row">
+  <div class="card warn"><div class="big">table correction</div><div class="small">T010:-2, T210:-2, T222:+2</div></div><div class="arrow">→</div>
+  <div class="card warn"><div class="big">syndrome effect</div><div class="small">preserves F2, cancels F3</div></div>
+</div>
+<p class="formula">F3 cancellation: [0,2,1,1,1] + [0,1,2,2,2] = [0,0,0,0,0]</p>
+<p class="caption">Search ladder: 816 all triples → 54 Hesse hinges → 10 W(E6) slices → one 6-edge K4 quartet slice → one oriented quartet edge.</p>
+</body>
+</html>
