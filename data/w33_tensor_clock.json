@@ -1,0 +1,43 @@
+{
+  "spectrum": {
+    "one_minus_ns": {
+      "form": "1/beat",
+      "value": "1/30",
+      "float": 0.03333
+    },
+    "r": {
+      "form": "1/(Phi4*beat)",
+      "value": "1/300",
+      "float": 0.00333
+    },
+    "n_t": {
+      "form": "-1/(2^q*Phi4*beat)",
+      "value": "-1/2400",
+      "float": -0.000417
+    },
+    "running": {
+      "form": "-1/(2*beat^2) = -2/N^2",
+      "value": "-1/1800",
+      "float": -0.000556
+    }
+  },
+  "consistency": {
+    "relation": "r = -8 n_t",
+    "holds": true,
+    "reason": "2^q = 8 makes 8 n_t = r exactly -> scalars and tensors share the clock",
+    "epsilon": "1/4800",
+    "slow_roll": "r=16 eps, n_t=-2 eps"
+  },
+  "status": {
+    "r": 0.0033,
+    "r_current_bound": 0.036,
+    "r_consistent": true,
+    "n_t": -0.0004167,
+    "test": "independent n_t vs -r/8: equality = single clock (machine=world); inequality = multi-field (two clocks), falsifies single-clock claim",
+    "experiments": "r~1/300 a LiteBIRD/CMB-S4 B-mode target; n_t needs next-gen tensor-tilt reach"
+  },
+  "summary": "one clock writes the whole inflationary spectrum (beat = 30): scalar tilt 1-n_s = 1/beat = 1/30, tensor/scalar r = 1/(Phi_4 beat) = 1/300, tensor tilt n_t = -1/(2^q Phi_4 beat) = -1/2400, running dn_s/dlnk = -1/(2 beat^2) = -1/1800 (= -2/N^2, N=2 beat) -- all powers of beat with substrate-constant coefficients Phi_4=10 and 2^q=8. The single-field consistency r = -8 n_t HOLDS IDENTICALLY (because 2^q=8), so scalars and tensors share the one de Sitter clock -- the independent tensor-sector confirmation of machine=world's single-clock claim. Predictions: r = 1/300 = 0.0033 (below current bound r<0.036, a LiteBIRD/CMB-S4 target) and n_t = -1/2400 = -4.2e-4. FALSIFICATION: measure n_t independently of r; n_t = -r/8 confirms one clock, n_t != -r/8 means two clocks (multi-field), breaking machine=world. Honest: r=1/300 and running=-1/1800 are prior results and r=-8n_t is a standard slow-roll identity; new is the one-clock packaging in beat=30 with substrate coefficients, the 2^q=8 making the consistency exact, and n_t as a concrete testable prediction. Assumes single-field slow roll (the substrate setting).",
+  "sources": [
+    "single de Sitter clock (w33_efold_tick.py); r=1/300, running=-1/1800, 1-n_s=1/30 (w33_clock_cosmology.py, w33_measurable_scorecard_2026.py); single-field consistency r=-8 n_t and r=16 eps, n_t=-2 eps (Liddle-Lyth); current bound r<0.036 (BICEP/Keck 2021); LiteBIRD/CMB-S4 B-mode forecasts."
+  ]
+}

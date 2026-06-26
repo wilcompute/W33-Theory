@@ -1,0 +1,54 @@
+{
+  "exponent": {
+    "dN": 39,
+    "form": "q*Phi_3 = 3*13",
+    "MPl_over_MEW": 8.659e+16,
+    "M_Pl_GeV": 1.22e+19,
+    "M_EW_predicted_GeV": 141.0
+  },
+  "dimensionless_gravity_strength_EW": "e^(-2 q Phi_3) = e^-78",
+  "observed_ln_ratios": [
+    {
+      "EW_scale": "Higgs vev v=246",
+      "ln_ratio": 38.44,
+      "delta_from_39": -0.56
+    },
+    {
+      "EW_scale": "top=173",
+      "ln_ratio": 38.79,
+      "delta_from_39": -0.21
+    },
+    {
+      "EW_scale": "Higgs=125",
+      "ln_ratio": 39.12,
+      "delta_from_39": 0.12
+    },
+    {
+      "EW_scale": "~100 GeV",
+      "ln_ratio": 39.34,
+      "delta_from_39": 0.34
+    },
+    {
+      "EW_scale": "Z=91",
+      "ln_ratio": 39.43,
+      "delta_from_39": 0.43
+    },
+    {
+      "EW_scale": "W=80",
+      "ln_ratio": 39.56,
+      "delta_from_39": 0.56
+    }
+  ],
+  "efold_budget": {
+    "N": 60,
+    "N_as_2beat": 60,
+    "N_as_q(Phi3+Phi6)": 60,
+    "planck_to_EW": 39,
+    "EW_to_end": 21,
+    "rings_20": "Phi3+Phi6 = 20 = 600/30 BC rings"
+  },
+  "summary": "the exponential the hierarchy needs is a substrate integer: ln(M_Pl/M_EW) = q*Phi_3 = 3*13 = 39. Pass 7's open edge (power-law tower 3x10^4 vs observed 10^17) is filled by an exponential with exponent q Phi_3 = 39: M_Pl/M_EW = e^39 ~ 8.7x10^16, predicting M_EW = M_Pl e^-39 ~ 141 GeV (between W=80, Z=91, Higgs=125, top=173 -- THE electroweak scale), and (M_EW/M_Pl)^2 = e^-78 = e^(-2 q Phi_3). It closes the e-fold budget: inflation N = 60 = 2 beat = q(Phi_3+Phi_6) splits into Planck->EW = q Phi_3 = 39 and EW->end = q Phi_6 = 21 e-folds (with Phi_3+Phi_6 = 20 = 600/30 BC rings). So the gravity-to-electroweak hierarchy is the gravity-shell descent measured in the same e-fold clock as the CMB tilt, 39 e-folds down. HONEST: an integer-level MATCH/postdiction -- q Phi_3 = 39 reproduces the observed ln(M_Pl/M_EW) (38.4 at v=246 to 39.3 at ~100 GeV) to ~1-2% and predicts M_EW ~ 141 GeV, but does not independently derive why the EW scale sits exactly q Phi_3 e-folds down. New: the missing exponent is a clean substrate integer that slots exactly into N = 60 = q Phi_3 + q Phi_6 -- the open edge becomes a sharp clue.",
+  "sources": [
+    "Pass 7 open edge (w33_gravity_hierarchy.py); N=60=2 beat, beat=30 (w33_efold_tick.py); q Phi_3 = 39, q Phi_6 = 21, q(Phi3+Phi6)=60; M_Pl=1.22e19 GeV; electroweak scale ~100-246 GeV (PDG); inflation e-fold budget."
+  ]
+}

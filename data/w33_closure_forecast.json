@@ -1,0 +1,54 @@
+{
+  "threshold": {
+    "sigma_beat_target": 0.1,
+    "rho_deltax_needed": 165.0
+  },
+  "probes": [
+    {
+      "probe": "CMB (Planck)",
+      "delta_x": 7.6,
+      "N_modes": 4000000.0,
+      "rho": 14.1,
+      "rho_deltax": 107.0,
+      "sigma_beat_over_beat": 0.154,
+      "spans_full_beat": false
+    },
+    {
+      "probe": "CMB-S4",
+      "delta_x": 8.5,
+      "N_modes": 25000000.0,
+      "rho": 35.4,
+      "rho_deltax": 301.0,
+      "sigma_beat_over_beat": 0.055,
+      "spans_full_beat": false
+    },
+    {
+      "probe": "21cm IM (HERA/SKA)",
+      "delta_x": 8.0,
+      "N_modes": 100000000.0,
+      "rho": 70.7,
+      "rho_deltax": 566.0,
+      "sigma_beat_over_beat": 0.029,
+      "spans_full_beat": false
+    },
+    {
+      "probe": "21cm dark ages (lunar)",
+      "delta_x": 13.8,
+      "N_modes": 100000000000000.0,
+      "rho": 70710.7,
+      "rho_deltax": 976904.0,
+      "sigma_beat_over_beat": 0.0,
+      "spans_full_beat": false
+    }
+  ],
+  "verdict": {
+    "cmb": "bounds amplitude; cannot measure the spacing (rho*Dx << 165, Dx << beat)",
+    "dark_ages_21cm": "sigma(beat)/beat ~ 0.0 (sub-10% in principle, given A~1e-2 and ~1e14 modes)",
+    "caveat": "no probe spans Delta x = beat = 30, so the closure is EXTRAPOLATED from < 1 full envelope period -- CR error optimistic/prior-dependent",
+    "conclusion": "the 600-cell closure is an extreme-frontier (dark-ages 21cm) target, not near-term; CMB bounds amplitude, future high-k/high-mode probe measures the number 30"
+  },
+  "summary": "Fisher forecast for MEASURING the 600-cell closure (the number 30, the triplet spacing omega2=2pi/30). For a feature of matched-filter SNR rho over log-k baseline Delta x, sigma(beat)/beat = beat*sqrt12/(2pi*rho*Delta x); a 10% measurement needs rho*Delta x > 165. With amplitude A~1e-2 and rho = A sqrt(N/2): CMB (Dx~7.6, N~4e6) and CMB-S4 (Dx~8.5) fall far short (bound the amplitude only); 21cm IM (Dx~8, N~1e8) marginal; a dark-ages 21cm interferometer (k~100, Dx~14, N~1e14) reaches sigma(beat)/beat < 0.1 -- a sub-10% closure measurement in principle. KEY caveat: NO probe spans Delta x = beat = 30 (one full envelope period), so the closure is EXTRAPOLATED from < 1 beat, making the CR error optimistic/prior-dependent. Honest conclusion: the 600-cell closure is an extreme-frontier target (dark-ages 21cm, lunar-farside/space), not near-term; the CMB bounds the amplitude, a future high-k/high-mode-count probe could measure the number 30. A Fisher forecast with order-of-magnitude survey assumptions.",
+  "sources": [
+    "triplet/resolution (w33_cmb_triplet_matched_filter.py); Cramer-Rao frequency error sigma(omega)=sqrt12/(rho Delta x); matched-filter rho=A sqrt(N/2); probe k-reach & mode counts: Planck/CMB-S4 (ell_max), 21cm IM HERA/SKA, dark-ages 21cm (Loeb-Zaldarriaga; lunar-farside concepts); beat=30 (w33_bc_helix_omega2.py)."
+  ]
+}
