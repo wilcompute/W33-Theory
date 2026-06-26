@@ -5,7 +5,7 @@
   "input": {"blocks": 12, "block_size": 144, "local_terms": 1728, "base_p": 0.00872, "gap": 2},
   "control_packet": {"shots": 10000, "mean_offblock_rho_hat": 0.006, "mean_offblock_rho_upper95": 0.012},
   "budget_using_rho_upper95": {"variance_inflation": 2.716, "single_sigma": 6.369321430990651, "runs_3sigma": 92, "runs_5sigma": 254},
-  "comparison": {"BT1833_independent_5sigma": 94, "BT1836_calibrated_scalar_5sigma": 114, "BT1837_covariance_upper_5sigma": 254},
-  "checks": {"rho_upper_exceeds_hat": true, "inflation_formula_used": true, "budget_conservative_vs_BT1836": true, "runs_5sigma_under_BT1834_rho001": false, "runs_5sigma_between_rho001_and_rho005": true},
+  "comparison": {"BT1833_independent_5sigma": 94, "BT1836_calibrated_scalar_5sigma": 114, "BT1837_covariance_upper_5sigma": 254, "BT1834_rho001_5sigma": 227, "BT1834_rho005_5sigma": 761},
+  "checks": {"rho_upper_exceeds_hat": true, "inflation_formula_used": true, "budget_conservative_vs_BT1836": true, "runs_5sigma_above_BT1834_rho001": true, "runs_5sigma_below_BT1834_rho005": true},
   "boundary": "Uses scalar mean off-block covariance upper bound; the full 12x12 covariance estimator remains the next implementation layer."
 }
