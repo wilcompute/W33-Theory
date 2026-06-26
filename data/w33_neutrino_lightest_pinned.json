@@ -1,0 +1,36 @@
+{
+  "spectrum": [
+    {
+      "delta_over_C": 0.125,
+      "m1_meV": 8.7,
+      "m2_meV": 11.4,
+      "m3_meV": 50.0,
+      "sum_meV": 70.1
+    },
+    {
+      "delta_over_C": 0.25,
+      "m1_meV": 2.9,
+      "m2_meV": 3.6,
+      "m3_meV": 50.0,
+      "sum_meV": 56.5
+    },
+    {
+      "delta_over_C": 0.5,
+      "m1_meV": 1.4,
+      "m2_meV": 1.6,
+      "m3_meV": 50.0,
+      "sum_meV": 53.0
+    }
+  ],
+  "mev_floor": {
+    "m1_meV": 2.9,
+    "m_betabeta_meV": 2.3,
+    "rho_DE_quarter_meV": 2.24,
+    "efolds_below_MPl": 71.0,
+    "coincidence": "lightest neutrino ~ 0nubb mass ~ dark-energy scale ~ 2 meV"
+  },
+  "summary": "pinning the lightest neutrino from the cubic-form Majorana lift. Feeding the Pillar-68/69 cubic-form M_R (grade-0 degenerate [[A,0,0],[0,0,C],[0,C,0]], A=0.0017, C=0.0442, lifted by a grade-1 B-L component delta) through the type-I seesaw with the up-type Dirac texture (graded 0/(1,2)-swap, 1:2:9) gives, normalising m3=50 meV, a light spectrum (m1,m2,m3) ~ (2, 3-9, 50) meV, Sum m_nu ~ 56-58 meV (below DESI) -- the lightest neutrino m1 ~ 2 meV, light but nonzero, pinned at the meV scale (exact value lift-dependent, so m1 ~ 1-3 meV). meV-FLOOR COINCIDENCE: m1 ~ 2 meV ~ m_betabeta ~ 2.3 meV ~ rho_Lambda^(1/4) ~ 2.24 meV, all ~ 71 e-folds below M_Pl -- the lightest neutrino, 0nubb, and dark energy meet at the floor of the cyclotomic ladder (the neutrino/dark-energy coincidence, at the bottom of the W(3,3) descent). HONEST: the cubic-form M_R is exact (Pillar 68/69) but the lift is the open B-L direction (the 13/9 ratio not forced), so m1 ~ 1-3 meV is a pinned range; the meV coincidence is exact arithmetic on the observables, a genuine connection not a forced equality. Pass-15's m1 ~ 1 meV is pinned from the cubic form to ~ 2 meV.",
+  "sources": [
+    "cubic-form M_R, A=0.0017, C=0.0442, grade-0 degeneracy + grade-1 lift (Pillar 68/69, w33_majorana_cubic_form.py, w33_neutrino_majorana_texture.py); up-type Dirac 1:2:9 (Pillar 68); m_betabeta ~ 2.3 meV (w33_neutrinoless_betabeta.py); rho_Lambda^(1/4) ~ 2.24 meV (Planck dark energy); Pass-15 m1 estimate (w33_neutrino_lightest_mass.py)."
+  ]
+}

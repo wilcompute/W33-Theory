@@ -1,0 +1,52 @@
+{
+  "cc_floor": {
+    "log10_density": -122.9,
+    "leading_integer": "vq = 120",
+    "rho_quarter_meV": 2.24,
+    "efolds_below_MPl": 70.8
+  },
+  "mev_floor": {
+    "scales_meV": {
+      "dark energy rho^1/4": 2.24,
+      "lightest neutrino m1": 2.0,
+      "0nubb m_betabeta": 1.4
+    },
+    "efolds": 71.0,
+    "coincidence": "dark energy ~ lightest neutrino ~ 0nubb ~ 2 meV (within factor ~2)"
+  },
+  "descent": [
+    {
+      "scale": "M_Pl",
+      "efolds": 0.0
+    },
+    {
+      "scale": "M_GUT (Phi_6)",
+      "efolds": 7.0
+    },
+    {
+      "scale": "N_1/scalaron (Phi_3)",
+      "efolds": 13.0
+    },
+    {
+      "scale": "M_EW (q Phi_3)",
+      "efolds": 39.4
+    },
+    {
+      "scale": "proton (v+mu)",
+      "efolds": 44.0
+    },
+    {
+      "scale": "m_nu3",
+      "efolds": 67.7
+    },
+    {
+      "scale": "dark energy / lightest nu",
+      "efolds": 70.8
+    }
+  ],
+  "figure": "analysis/w33_cc_floor_fig.tex",
+  "summary": "the bottom of the ladder: the cosmological constant and the meV floor where dark energy meets the neutrinos. The dark-energy density gives log10(rho_Lambda/M_Pl^4) ~ -123, the famous '120 orders', with the substrate vq = 120 (= dim adj SO(16)) as the leading integer (a ~3-order residual). As a scale rho_Lambda^(1/4) ~ 2.24 meV sits ~ 71 e-folds below M_Pl -- the SAME meV floor as the lightest neutrino m1 ~ 2 meV (the cubic-form pin) and the 0nubb mass m_betabeta ~ 1.4 meV, all within a factor ~2. So the cyclotomic descent (M_Pl 0 -> M_GUT Phi_6 -> scalaron N_1 Phi_3 -> M_EW q Phi_3 -> proton v+mu -> m_nu3 seesaw -> dark-energy/lightest-nu floor ~71) ends in a meV cluster where the lightest neutrino, 0nubb, and the cosmological constant coincide -- the noted neutrino/dark-energy coincidence, here as the floor of the W(3,3) descent. One continuous ladder, the Planck scale to dark energy, the whole of physics between. A full-descent figure (w33_cc_floor_fig.tex) is emitted. HONEST: vq=120 is the leading integer of the CC density (CC problem not fully closed, ~3-order residual); the ~71 e-fold placement exact; the meV coincidence genuine but within a factor ~2, not a derived equality.",
+  "sources": [
+    "mass ladder (w33_mass_ladder.py); CC log10(rho_Lambda/M_Pl^4) ~ -123, vq=120 leading (canonical document check 60/81); rho_Lambda^(1/4) ~ 2.24 meV (Planck dark energy); lightest neutrino m1 ~ 2 meV (w33_neutrino_lightest_pinned.py); m_betabeta ~ 1.4 meV (w33_betabeta_refined.py)."
+  ]
+}

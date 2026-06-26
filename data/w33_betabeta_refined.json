@@ -1,0 +1,41 @@
+{
+  "scan": [
+    {
+      "m1_meV": 0.0,
+      "m_bb_meV": 2.27
+    },
+    {
+      "m1_meV": 1.0,
+      "m_bb_meV": 1.76
+    },
+    {
+      "m1_meV": 2.0,
+      "m_bb_meV": 1.4
+    },
+    {
+      "m1_meV": 2.7,
+      "m_bb_meV": 1.31
+    },
+    {
+      "m1_meV": 3.0,
+      "m_bb_meV": 1.32
+    }
+  ],
+  "prediction": {
+    "m_bb_range_meV": "1.3-2.3",
+    "central_meV": 1.4,
+    "corpus_m1_0_meV": 2.27,
+    "revision": "down (phase cancellation at m1>0)",
+    "ordering": "normal",
+    "phases": "Z3: alpha21=120, alpha31=240 deg"
+  },
+  "tests": {
+    "KamLAND-Zen": "< 36-156 meV (current); substrate ~1.5 meV well below",
+    "nEXO/LEGEND": "reach ~10-20 meV; substrate below first stage",
+    "falsify": "m_bb > ~10 meV would require inverted ordering or heavy m1"
+  },
+  "summary": "the 0nubb effective mass refined with the pinned lightest neutrino. With the cyclotomic PMNS angles (sin^2 th12 = 4/Phi3 = 0.307, sin^2 th13 = 2/91 = 0.022), the Z3-graded Majorana phases alpha21 = 120, alpha31 = 240 deg (the same Z3 tripling the generations), the measured NH splittings (m2 = 8.66, m3 = 50 meV), and the PINNED m1 ~ 2 meV (cubic-form lift), m_betabeta = |c12^2 c13^2 m1 + s12^2 c13^2 m2 e^{i120} + s13^2 m3 e^{i240}| ~ 1.4 meV. The m1 term (phase 0) partially cancels the phased m2,m3 terms, so the nonzero pinned m1 pushes m_betabeta DOWN from the corpus m1=0 value (2.27 meV) into the NH cancellation trough: m_betabeta ~ 1.3-2.3 meV, central ~ 1.5 meV. Below KamLAND-Zen (36-156 meV) and the first nEXO/LEGEND stage (~10-20 meV) -- a far-future ~1-2 meV target; m_bb > ~10 meV would falsify (inverted ordering / heavy m1). HONEST: angles and phases exact-cyclotomic; m2,m3 measured; m1 ~ 1-3 meV the pinned (lift-dependent) range, so m_betabeta ~ 1.3-2.3 meV is a range, central ~1.5 meV with m1 ~ 2 meV. The neutrino sector closes with a sharp 0nubb prediction tied to the Z3 generation symmetry.",
+  "sources": [
+    "0nubb formula + Z3 phases 120/240 (w33_neutrinoless_betabeta.py); PMNS sin^2 th12 = 4/Phi3, sin^2 th13 = 2/91 (canonical document, PMNS cyclotomics); pinned m1 ~ 2 meV (w33_neutrino_lightest_pinned.py); NH splittings Dm21^2 = 7.5e-5, Dm31^2 = 33*Dm21^2; KamLAND-Zen, nEXO, LEGEND reach."
+  ]
+}
