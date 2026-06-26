@@ -1,0 +1,13 @@
+{
+  "geometric_all_fit": true,
+  "boundary": {
+    "monster_196883": "TIER3 outside",
+    "moonshine_relation": "196883 = 196560 (Leech kissing) + mu*q^4 - 1",
+    "alpha_137": "TIER3 outside",
+    "note": "TIER3: moonshine ceiling at c=24=f, not a Witting degree/cyclotomic value"
+  },
+  "summary": "honest stress test: every geometric integer of the seven faces is TIER 1 (cyclotomic value Phi_d(3), GQ count, or Witting degree) or TIER 2 (simple combination, e.g. |PSL(2,7)|=168=Phi_6*f, dim E8=248=240+8). But the Monster minimal dim 196883 (=47*59*71) and the fine-structure constant alpha~137 are TIER 3: NOT a Witting degree/cyclotomic value -- they sit at the c=24=f moonshine ceiling, reachable only via the Monster/complex Leech (196883 = 196560 Leech-kissing + mu*q^4 - 1). So the direct Eisenstein/Witting object fixes all seven faces' structural integers, but alpha is the one core physical constant it does NOT fix; the unification is LAYERED (Witting below, Monster ceiling above, welded at c=24=f), not a single collapse. The honest edge is alpha.",
+  "sources": [
+    "cyclotomic values/Witting degrees/GQ counts (w33_substrate_periodic_table.py, w33_witting_degrees_unify.py); Monster minimal dim 196883, moonshine j-744; complex Leech (Eisenstein, 12=k), Leech kissing 196560; 196883=196560+mu*q^4-1; tau-alpha relation (Suzuki lift, alpha=137); |PSL(2,7)|=168; dim E8=248; w33_eisenstein_grand_synthesis.py, w33_monster_moonshine_ceiling.py."
+  ]
+}

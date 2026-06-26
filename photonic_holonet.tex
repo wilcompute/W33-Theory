@@ -177,8 +177,8 @@ paper (\S\ref{sec:exceptional}) shows that the \emph{same} $q=3$ Eisenstein stru
 that fixes this architecture --- the Witting polytope, its symmetry $\mathrm{ST}\#32$,
 the cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ --- is also the selection of $q=3$,
 the substrate constants, the Standard-Model gauge group, the neutrino masses, the
-error-correcting code, and the benchtop experiment. These six faces, and the single
-object behind them, are laid out in \S\ref{sec:five-faces}
+error-correcting code, the benchtop experiment, and inflationary cosmology. These
+seven faces, and the single object behind them, are laid out in \S\ref{sec:five-faces}
 (Fig.~\ref{fig:five-faces}); the reader who wants the unifying picture before the
 engineering may read that subsection first.
 
@@ -4613,19 +4613,19 @@ Every entry is a closed substrate expression; the lone historical tension
 ($\sum m_\nu$) is resolved by the seesaw (\S\ref{sec:physics}), and three rows
 are sharp near-term falsification handles.
 
-\subsection{The one object and its six faces}
+\subsection{The one object and its seven faces}
 \label{sec:five-faces}
 
 Before the details, the organizing claim --- and it frames the entire paper, not
 just this section. Everything here --- the selection of $q=3$, the substrate
-constants, the gauge group, the neutrino masses, the fault-tolerant code, and the
-benchtop experiment --- is \emph{one structure} seen from six sides. That structure
-is the $q=3$ Eisenstein object: the Witting polytope $3\{3\}3\{3\}3\{3\}3$ over
-$\mathbb Z[\omega]$ ($240$ vertices $=$ E8 roots), its symmetry the Shephard--Todd
-group $\#32$ (order $155520=3\lvert\mathrm{Sp}(4,3)\rvert=3\lvert\mathrm{Aut}(\W)
-\rvert$), equivalently the degree-two cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$
-whose indices $\{3,4,6\}$ are the crystallographic complex periods. Its six faces
-(Fig.~\ref{fig:five-faces}):
+constants, the gauge group, the neutrino masses, the fault-tolerant code, the
+benchtop experiment, and inflationary cosmology --- is \emph{one structure} seen from
+seven sides. That structure is the $q=3$ Eisenstein object: the Witting polytope
+$3\{3\}3\{3\}3\{3\}3$ over $\mathbb Z[\omega]$ ($240$ vertices $=$ E8 roots), its
+symmetry the Shephard--Todd group $\#32$ (order $155520=3\lvert\mathrm{Sp}(4,3)
+\rvert=3\lvert\mathrm{Aut}(\W)\rvert$), equivalently the degree-two cyclotomic
+skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ whose indices $\{3,4,6\}$ are the crystallographic
+complex periods. Its seven faces (Fig.~\ref{fig:five-faces}):
 
 \begin{enumerate}\itemsep2pt
 \item \textbf{Selection} (cosmology/geometry, \S\ref{sec:why-q3}). $\Phi_4(q)=q^2+1$
@@ -4653,17 +4653,63 @@ whose indices $\{3,4,6\}$ are the crystallographic complex periods. Its six face
 \item \textbf{Demonstrator} (experiment). The benchtop meters the skeleton: the
   contextual fraction on the $40=(q{+}1)\Phi_4$ $\W$ rays is $1/\Phi_4=1/10$, and the
   Thouless-pump Chern number on the $A_2<D_4<E_8$ ladder is $\lambda=2$.
+\item \textbf{Cosmology} (inflation, \S\ref{sec:physics}). The e-fold number is
+  $N=2(v-\Phi_4)=2\,h(E_8)=60$ --- twice the $E_8$ Coxeter number (the top Witting
+  degree), built from the GQ count $v=40$ and $\Phi_4=10$. The CMB observables are
+  then closed forms in $N$ and the Witting degree $k=12$: $n_s=1-2/N=29/30$,
+  $r=k/N^2=1/300$, $f_{NL}=5/(6N)=1/72$, running $-2/N^2=-1/1800$.
 \end{enumerate}
 
 So the $q=3$ substrate is not a list of coincidences spanning cosmology, gauge
 physics, particle masses, computation, and metrology; it is one Eisenstein object
-presenting six faces. (Witnesses: \path{analysis/w33_eisenstein_grand_synthesis.py},
-\path{analysis/w33_gauge_sixth_face.py}, \path{analysis/w33_witting_degrees_unify.py}.)
+presenting seven faces. (Witnesses: \path{analysis/w33_eisenstein_grand_synthesis.py},
+\path{analysis/w33_gauge_sixth_face.py}, \path{analysis/w33_cosmology_seventh_face.py}.)
+The faces are not independent because they share the same integers: the load-bearing
+ones --- $k=12$, $\Phi_4=10$, $\Phi_3=13$, $c{=}f=24$, $v=40$ --- each serve three or
+more faces at once, and the whole bookkeeping is one periodic table over $q=3$
+(Table~\ref{tab:periodic}; witness \path{analysis/w33_substrate_periodic_table.py}).
 The subsections that follow detail each face and the connections between them ---
 including a benchtop bridge that turns the neutrino mass ratio into a single-photon
 measurement (\path{analysis/w33_neutrino_demonstrator_bridge.py}), which a contextuality
 simulation on the $40$ $\W$ rays realises explicitly, returning $\Phi_4=10$ and $13/9$
 from the incidence geometry (\path{analysis/w33_contextuality_simulation.py}).
+
+\emph{The honest edge.} A synthesis is worth its boundary. Every geometric integer of
+the seven faces is a cyclotomic value $\Phi_d(3)$, a GQ count, a Witting degree, or a
+simple combination of these (e.g.\ $\lvert\mathrm{PSL}(2,7)\rvert=168=\Phi_6\!\cdot\!f$,
+$\dim E_8=248=240+8$). But not everything reduces: the Monster minimal dimension
+$196883=47\!\cdot\!59\!\cdot\!71$ and the fine-structure constant
+($1/\alpha\approx137$) are \emph{not} Witting degrees or cyclotomic values. They sit
+one level up, at the $c=24=f$ moonshine ceiling, reachable only through the
+Monster/complex Leech ($196883=196560+\mu q^4-1$, with $196560$ the Leech kissing
+number). So the unification is layered --- the Witting object directly fixes the
+seven faces' structural integers, while $\alpha$ and the Monster require the full
+moonshine ceiling welded at $c=24=f$. The fine-structure constant is the honest edge
+the direct Eisenstein object does not fix. (Witness:
+\path{analysis/w33_eisenstein_stress_test.py}.)
+
+\begin{table}[ht]\centering\small
+\caption{The periodic table of the $q=3$ Eisenstein object (excerpt): the load-bearing
+integers, their closed expression, and the faces they serve
+(1~Selection, 2~Constants, 3~Gauge, 4~Neutrino, 5~Code, 6~Demonstrator, 7~Cosmology).}
+\label{tab:periodic}
+\begin{tabular}{@{}rlll@{}}
+\toprule
+Value & Expression & Class & Faces\\
+\midrule
+$2$ & $q-1=\Phi_1$ & cyclotomic & $6$ (pump Chern $\lambda$)\\
+$10$ & $q^2+1=\Phi_4$ & cyclotomic value & $1,2,6$ ($\theta$, $1/\Phi_4$)\\
+$12$ & $q(q+1)=k$ & Witting degree & $3,5,7$ (dim SM, $D_4$, $r{=}k/N^2$)\\
+$13$ & $q^2+q+1=\Phi_3$ & cyclotomic value & $2,4$ (register, $\Phi_3/q^2$)\\
+$24$ & $q^3-q=c{=}f$ & Witting degree & $2,3,5$ ($\dim\mathrm{SU}(3)^3$, charge)\\
+$30$ & $h(E_8)=\Phi_3{+}\Phi_4{+}\Phi_6$ & Witting degree & $2,7$ ($N/2$)\\
+$40$ & $(q+1)\Phi_4=v$ & GQ count & $1,6,7$ (rays, $N{=}2(v{-}\Phi_4)$)\\
+$60$ & $2(v-\Phi_4)=2h(E_8)$ & derived & $7$ (e-folds $N$)\\
+$240$ & E8 roots $=$ Witting & derived & $1,5$ (gauge lattice)\\
+$155520$ & $3\lvert\mathrm{Sp}(4,3)\rvert$ & the object & $1$--$7$ (ST$\#32$ order)\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[ht]\centering
 \resizebox{0.8\textwidth}{!}{%
@@ -4674,21 +4720,22 @@ from the incidence geometry (\path{analysis/w33_contextuality_simulation.py}).
 ]
   \node[draw,circle,fill=red!10,align=center,minimum size=26mm,font=\footnotesize\bfseries]
     (o) at (0,0) {$q{=}3$ Eisenstein\\ object\\ \footnotesize Witting $/$ ST$\#32$\\ \footnotesize $\{\Phi_3,\Phi_4,\Phi_6\}$};
-  \node[face,fill=blue!8]    (s1) at (  90:4.3) {Selection\\$(q{-}3)\Phi_4$, $\{3,4,6\}$};
-  \node[face,fill=green!10]  (s2) at (  30:4.6) {Constants\\$\{13,10,7\}$; $\{12,18,24,30\}$};
-  \node[face,fill=teal!14]   (s6) at ( -30:4.6) {Gauge (SM)\\$24{=}c$, $12{=}k$, $3/8$};
-  \node[face,fill=yellow!18] (s3) at ( -90:4.3) {Neutrino\\$\Phi_3/q^2=13/9$};
-  \node[face,fill=orange!16] (s4) at (-150:4.6) {Code\\$A_2{<}D_4{<}E_8$, $c{=}24$};
-  \node[face,fill=purple!12] (s5) at ( 150:4.6) {Demonstrator\\$1/\Phi_4$, $\lambda{=}2$};
-  \foreach \s in {s1,s2,s3,s4,s5,s6} \draw[spoke] (o)--(\s);
+  \node[face,fill=blue!8]    (s1) at (   90:4.7) {Selection\\$(q{-}3)\Phi_4$, $\{3,4,6\}$};
+  \node[face,fill=green!10]  (s2) at (   39:4.9) {Constants\\$\{13,10,7\};\{12,18,24,30\}$};
+  \node[face,fill=teal!14]   (s6) at (  -13:4.9) {Gauge (SM)\\$24{=}c$, $12{=}k$, $3/8$};
+  \node[face,fill=yellow!18] (s3) at (  -64:4.9) {Neutrino\\$\Phi_3/q^2=13/9$};
+  \node[face,fill=pink!22]   (s7) at ( -116:4.9) {Cosmology\\$N{=}2h(E_8){=}60$};
+  \node[face,fill=orange!16] (s4) at ( -167:4.9) {Code\\$A_2{<}D_4{<}E_8$, $c{=}24$};
+  \node[face,fill=purple!12] (s5) at (  141:4.9) {Demonstrator\\$1/\Phi_4$, $\lambda{=}2$};
+  \foreach \s in {s1,s2,s3,s4,s5,s6,s7} \draw[spoke] (o)--(\s);
 \end{tikzpicture}}
 \caption{The $q=3$ substrate is one Eisenstein object --- the Witting polytope, its
 symmetry $\mathrm{ST}\#32$, the cyclotomic skeleton $\{\Phi_3,\Phi_4,\Phi_6\}$ ---
-seen from six sides. The selection of $q=3$, the substrate constants, the Standard-Model
-gauge group, the neutrino mass hierarchy, the fault-tolerant code lattice, and the
-benchtop experiment are faces of the same structure, sharing the same invariants
-($240=E_8$ roots, $\{\Phi_3,\Phi_4,\Phi_6\}$, the Witting degrees $\{12,18,24,30\}$,
-$155520=3\lvert\mathrm{Aut}(\W)\rvert$).}
+seen from seven sides. The selection of $q=3$, the substrate constants, the
+Standard-Model gauge group, the neutrino mass hierarchy, the fault-tolerant code
+lattice, the benchtop experiment, and inflationary cosmology are faces of the same
+structure, sharing the same invariants ($240=E_8$ roots, $\{\Phi_3,\Phi_4,\Phi_6\}$,
+the Witting degrees $\{12,18,24,30\}$, $155520=3\lvert\mathrm{Aut}(\W)\rvert$).}
 \label{fig:five-faces}
 \end{figure}
 
@@ -5152,7 +5199,7 @@ $\mathrm U_4(2)=\mathrm{PSp}(4,3)$). It is drawn in
 \path{docs/w33_exceptional_tower.svg}. (Witness:
 \path{analysis/w33_exceptional_tower_synthesis.py}.)
 
-\subsection{The measurable layer: a scorecard and a unification \texorpdfstring{\normalfont\small[Faces 2, 3]}{[Faces 2, 3]}}
+\subsection{The measurable layer: a scorecard and a unification \texorpdfstring{\normalfont\small[Faces 2, 3, 7]}{[Faces 2, 3, 7]}}
 \label{sec:physics}
 
 Following the ledger's rule that only the measurable layer falsifies, two

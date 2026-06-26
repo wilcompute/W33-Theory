@@ -1,0 +1,20 @@
+{
+  "e_folds": {
+    "N": 60,
+    "formula": "2(v-Phi_4) = 2 h(E8)",
+    "v": 40,
+    "Phi_4": 10,
+    "hE8": 30
+  },
+  "observables": {
+    "n_s": "29/30 = 1-2/N",
+    "r": "1/300 = k/N^2",
+    "f_NL": "1/72 = 5/(6N)",
+    "running": "-1/1800 = -2/N^2"
+  },
+  "connection": "N=2 h(E8)=2(v-Phi4); r uses k=12 (Witting degree); cosmology is face 7",
+  "summary": "SEVENTH FACE -- inflationary cosmology reads off the Eisenstein object. The e-fold number N = 2(v-Phi_4) = 2 h(E8) = 60 (twice the E8 Coxeter number = the top Witting degree = cyclotomic sum 13+10+7), built from the GQ point count v=40 and Phi_4=10. The observables are closed forms in N and the Witting degree k=12=dim SM: n_s=1-2/N=29/30, r=k/N^2=1/300, f_NL=5/(6N)=1/72, running=-2/N^2=-1/1800. So cosmology proper joins selection/constants/gauge/neutrino/code/demonstrator: SEVEN faces of one q=3 Eisenstein object.",
+  "sources": [
+    "inflation predictions N=60, n_s=1-2/N, r=k/N^2, f_NL=5/(6N), running=-2/N^2 (w33_measurable_scorecard_2026.py, w33_inflation_dscft.py); v=(q+1)Phi_4=40, h(E8)=30=Phi_3+Phi_4+Phi_6=v-Phi_4; k=12=dim SM=Witting degree; w33_eisenstein_grand_synthesis.py, w33_gauge_sixth_face.py."
+  ]
+}

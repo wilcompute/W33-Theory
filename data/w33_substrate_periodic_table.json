@@ -1,0 +1,202 @@
+{
+  "faces": {
+    "1": "Selection",
+    "2": "Constants",
+    "3": "Gauge",
+    "4": "Neutrino",
+    "5": "Code",
+    "6": "Demonstrator",
+    "7": "Cosmology"
+  },
+  "entries": [
+    {
+      "value": 2,
+      "expr": "q-1 = Phi_1",
+      "class": "cyclotomic",
+      "faces": [
+        6
+      ],
+      "role": "GQ lambda; pump Chern C=2S=lambda"
+    },
+    {
+      "value": 3,
+      "expr": "q",
+      "class": "field",
+      "faces": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "role": "the field; sin^2thetaW=3/8 numerator"
+    },
+    {
+      "value": 4,
+      "expr": "q+1 = Phi_2",
+      "class": "cyclotomic",
+      "faces": [
+        1,
+        6
+      ],
+      "role": "GQ mu; lines/ray; line at infinity"
+    },
+    {
+      "value": 7,
+      "expr": "q^2-q+1 = Phi_6",
+      "class": "cyclotomic value",
+      "faces": [
+        2
+      ],
+      "role": "Fano / Hurwitz {3,7}; Phi_6"
+    },
+    {
+      "value": 8,
+      "expr": "q^2-1 = dim SU(3)",
+      "class": "derived",
+      "faces": [
+        3
+      ],
+      "role": "dim SU(3); Moebius-Kantor vertices"
+    },
+    {
+      "value": 10,
+      "expr": "q^2+1 = Phi_4",
+      "class": "cyclotomic value",
+      "faces": [
+        1,
+        2,
+        6
+      ],
+      "role": "dim Sp(4)=theta; contextual denom 1/Phi_4; de Sitter factor"
+    },
+    {
+      "value": 12,
+      "expr": "q(q+1) = k",
+      "class": "Witting degree",
+      "faces": [
+        3,
+        5,
+        7
+      ],
+      "role": "GQ degree k; dim SM; D4 kissing; r=k/N^2"
+    },
+    {
+      "value": 13,
+      "expr": "q^2+q+1 = Phi_3",
+      "class": "cyclotomic value",
+      "faces": [
+        2,
+        4
+      ],
+      "role": "register; |PG(2,3)|; neutrino Phi_3/q^2; PMNS 1/Phi_3"
+    },
+    {
+      "value": 18,
+      "expr": "h(E7)",
+      "class": "Witting degree",
+      "faces": [
+        2
+      ],
+      "role": "E7 Coxeter number; Witting degree-18"
+    },
+    {
+      "value": 24,
+      "expr": "q^3-q = c = f",
+      "class": "Witting degree",
+      "faces": [
+        2,
+        3,
+        5
+      ],
+      "role": "|2T|; dim SU(3)^3; boundary charge c=f; Witting degree-24"
+    },
+    {
+      "value": 27,
+      "expr": "q^3 = Hessian",
+      "class": "derived",
+      "faces": [
+        3
+      ],
+      "role": "Hessian vertices; 27 lines = E6 fundamental = one generation"
+    },
+    {
+      "value": 30,
+      "expr": "h(E8) = Phi3+Phi4+Phi6",
+      "class": "Witting degree",
+      "faces": [
+        2,
+        7
+      ],
+      "role": "E8 Coxeter number; top Witting degree; N/2"
+    },
+    {
+      "value": 40,
+      "expr": "(q+1)Phi_4 = v",
+      "class": "GQ count",
+      "faces": [
+        1,
+        6,
+        7
+      ],
+      "role": "GQ(3,3) points/rays/contexts; N=2(v-Phi_4)"
+    },
+    {
+      "value": 60,
+      "expr": "2(v-Phi_4)=2h(E8)",
+      "class": "derived",
+      "faces": [
+        7
+      ],
+      "role": "inflation e-folds N; n_s,r,f_NL,running from N"
+    },
+    {
+      "value": 240,
+      "expr": "E8 roots = Witting",
+      "class": "derived",
+      "faces": [
+        1,
+        5
+      ],
+      "role": "E8 roots = Witting vertices; 4-mode GKP / gauge lattice"
+    },
+    {
+      "value": 155520,
+      "expr": "3|Sp(4,3)| = prod degrees",
+      "class": "the object",
+      "faces": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "role": "ST#32 order = product of Witting degrees = 3|Aut(W33)|"
+    }
+  ],
+  "face_hits": {
+    "1": 6,
+    "2": 8,
+    "3": 6,
+    "4": 3,
+    "5": 5,
+    "6": 6,
+    "7": 6
+  },
+  "load_bearing": [
+    3,
+    10,
+    12,
+    24,
+    40,
+    155520
+  ],
+  "summary": "the periodic table of the q=3 Eisenstein object: 16 core substrate integers, each a closed q=3 expression (cyclotomic value Phi_d(3), GQ count, Witting degree, or simple combination), tagged with the faces (1 Selection, 2 Constants, 3 Gauge, 4 Neutrino, 5 Code, 6 Demonstrator, 7 Cosmology) it serves. All seven faces populated; load-bearing integers k=12, Phi_4=10, Phi_3=13, c=f=24, v=40 each serve >=3 faces -- the faces share the same numbers, which is why they are one object. The auditable form of 'one object, seven faces'.",
+  "sources": [
+    "q=3 substrate invariants; cyclotomic values Phi_d(3); Witting degrees {12,18,24,30}; GQ(3,3) counts v=40,k=12; inflation N=60; w33_eisenstein_grand_synthesis.py, w33_witting_degrees_unify.py, w33_gauge_sixth_face.py, w33_cosmology_seventh_face.py."
+  ]
+}
