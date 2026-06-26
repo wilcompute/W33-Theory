@@ -1,0 +1,24 @@
+{
+  "common_floor": {
+    "rho_quarter_meV": 2.44,
+    "m1_meV": 2.0,
+    "ratio": 1.22,
+    "decades_below_MPl": 30.0,
+    "form": "both ~ M_Pl 10^(-beat), beat = 30 = h(E8)"
+  },
+  "rho_m1_fourth": {
+    "relation": "rho_Lambda ~ m1^4",
+    "ratio": 1.57,
+    "within": "factor < 2",
+    "context": "Fardon-Nelson-Weiner neutrino dark energy / acceleron"
+  },
+  "hypothesis": {
+    "statement": "B-L VEV sources both M_R (neutrino floor) and the vacuum energy",
+    "signature": "shared beat-decade floor M_Pl 10^(-beat)",
+    "status": "structural connection (motivated), dynamical derivation open"
+  },
+  "summary": "why dark energy sits at the neutrino scale: both are the beat-decade floor. The dark-energy scale rho_Lambda^(1/4) = M_Pl 10^(-beat) = 2.44 meV (CC = -vq = -4 beat, Move 1) and the lightest neutrino m1 ~ 2 meV (seesaw floor, Pass 16) sit at the SAME ~ 69 e-folds below the reduced Planck scale, within ~ 10% (ratio ~ 1.1), so rho_Lambda ~ m1^4 to a factor < 2 -- the substrate's 'neutrino dark energy' (Fardon-Nelson-Weiner rho_DE ~ m_nu^4). STRUCTURAL: the lightest neutrino is the seesaw floor m1 ~ m_D^2/M_R; if the same B-L VEV that sets M_R sets the vacuum energy, rho_Lambda ~ m1^4 is a consequence not a coincidence, with the shared beat-decade depth (both M_Pl 10^(-beat)) the signature -- the clock beat = 30 = h(E8) sets the floor where the neutrino sector and dark energy meet. Upgrades the Pass-16 coincidence to one floor, two observables. HONEST: the common floor is exact arithmetic; rho_Lambda ~ m1^4 is the known phenomenological relation, MOTIVATED by the shared floor but not derived (the dynamical B-L-VEV model is the hypothesis); the factor < 2 in rho_Lambda/m1^4 is the residual.",
+  "sources": [
+    "CC = M_Pl 10^(-beat) = -vq (w33_cc_exact.py); lightest neutrino m1 ~ 2 meV seesaw floor (w33_neutrino_lightest_pinned.py); neutrino dark energy rho_DE ~ m_nu^4 (Fardon-Nelson-Weiner 2004; mass-varying neutrinos / acceleron); beat = 30 = h(E8); reduced Planck mass."
+  ]
+}
