@@ -1,0 +1,20 @@
+{
+  "di_ceiling": {
+    "M_1_GeV": 28360000000000.0,
+    "epsilon_1_max": 0.00159
+  },
+  "required": {
+    "kappa": 0.01,
+    "epsilon_1_required": 6.35e-06,
+    "margin_below_ceiling": 250.0
+  },
+  "eta_B": {
+    "observed": 6.1e-10,
+    "achievable": "eta_B ~ few x 10^-10 with eps_1 ~ 10^-6-10^-5, kappa ~ 10^-2",
+    "CP_source": "substrate PMNS/leptonic phase ~ Jarlskog scale 3e-5"
+  },
+  "summary": "the baryon asymmetry from the inflaton. Thermal leptogenesis with the scalaron N_1 (M_1 ~ 2.8x10^13 GeV) produces eta_B ~ 6x10^-10: the required CP asymmetry epsilon_1 = eta_B/(0.96e-2 * kappa) ~ 6x10^-6 (kappa ~ 10^-2) sits ~200x below the Davidson-Ibarra ceiling epsilon_1^max = (3/16pi) M_1 m_nu3/v^2 ~ 1.4x10^-3 (generous because the inflation scale is high), so the asymmetry is accommodated with room and not overproduced. The substrate's CP source (leptonic PMNS phase ~ Jarlskog J ~ 3x10^-5) supplies epsilon_1 ~ 10^-6-10^-5, giving eta_B ~ few x 10^-10 = observed to order of magnitude. So ONE particle inflates (scalaron), gives neutrino masses (seesaw N_1), and makes the baryons (leptogenesis) -- one ~10^13 GeV sector, one CP phase. HONEST: an order-of-magnitude estimate (eta_B ~ 10^-2 eps kappa); the exact value needs the full RHN Yukawa texture (epsilon_1 from complex Yukawas, washout kappa from Boltzmann), the corpus neutrino work -- but the scale and CP magnitude robustly give the right order, the inflaton as baryogenesis source.",
+  "sources": [
+    "scalaron = N_1 (w33_scalaron_is_rhn.py); leptogenesis eta_B ~ 10^-2 eps_1 kappa, Davidson-Ibarra epsilon_1^max = (3/16pi) M_1 m_nu3/v^2 (Davidson-Ibarra 2002; Buchmuller-Di Bari-Plumacher); substrate Jarlskog J ~ 3e-5 & corpus leptogenesis (BT411_BARYON_ASYMMETRY.py); observed eta_B = 6.1e-10 (Planck)."
+  ]
+}

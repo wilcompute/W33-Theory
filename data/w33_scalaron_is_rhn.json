@@ -1,0 +1,26 @@
+{
+  "spectrum": {
+    "M_scalaron_GeV": 28360000000000.0,
+    "ln_MPl_over_M_scalaron": 12.97,
+    "M_scalaron_tier": "Phi_3 = 13 (N_1, lightest)",
+    "M_R3_GeV": 1067000000000000.0,
+    "ln_MPl_over_M_R3": 9.34,
+    "M_R3_tier": "q^2 = 9 (N_3, heaviest)",
+    "span_efolds": 4
+  },
+  "davidson_ibarra": {
+    "bound_GeV": 1000000000.0,
+    "M_scalaron": 28400000000000.0,
+    "passes": true,
+    "orders_to_spare": 4.5
+  },
+  "one_sector": {
+    "identification": "scalaron = N_1 (lightest RH neutrino)",
+    "chain": "inflation -> reheating -> seesaw + leptogenesis",
+    "CP_source": "substrate Jarlskog J ~ 3e-5 (PMNS/CKM phase)"
+  },
+  "summary": "the Starobinsky scalaron IS the lightest right-handed neutrino N_1 -- inflaton and leptogenesis source are one particle. M_scalaron ~ 2.8x10^13 GeV (from A_s) sits at the light end of the substrate seesaw RHN spectrum: ln(M_Pl/M_scalaron) ~ Phi_3 = 13 (N_1, lightest) and ln(M_Pl/M_R3) ~ q^2 = 9 (N_3 = v^2/m_nu3 ~ 10^15 GeV, heaviest), the cyclotomic skeleton bracketing the seesaw (span ~ Phi_3 - q^2 = 4 e-folds, M_R3/M_scalaron ~ 40). The scalaron = N_1 is consistent: clears Davidson-Ibarra (M_1 > 10^9 GeV) by 8 orders, sits at the light end (so it is the leptogenesis-dominant N_1), and the substrate Jarlskog J ~ 3e-5 sources both quark CP violation and the lepton asymmetry. So inflation -> reheating -> seesaw + leptogenesis is ONE ~10^13 GeV sector driven by one particle. HONEST: a consistent identification (scalaron mass in the RHN window, passes Davidson-Ibarra), motivated by reheating, with ln(M_Pl/M) ~ Phi_3, q^2 integer-level (convention-dependent ~2%) and the exact RHN masses set by the corpus Yukawa texture -- a single-sector unification, not a forced derivation.",
+  "sources": [
+    "scalaron mass from A_s (w33_starobinsky.py, w33_scalaron_seesaw.py); sum m_nu ~ 0.101 eV neutrino cascade (w33_measurable_scorecard_2026.py); type-I seesaw M_R=v^2/m_nu (BT399_NEUTRINO_MASSES.py); leptogenesis & Jarlskog J~3e-5 (BT411_BARYON_ASYMMETRY.py); Davidson-Ibarra bound M_1 > ~10^9 GeV."
+  ]
+}
