@@ -1,0 +1,15 @@
+{
+  "bt": "BT1839",
+  "title": "Adaptive Sequential Decoder",
+  "verified": true,
+  "rule": "SPRT log-likelihood test for section_A=9980 vs section_B=9978; stop when |LLR| >= ln(999)",
+  "input": {"gap": 2, "alpha_beta_target": 0.001, "llr_threshold": 6.906754778648554},
+  "sigma_cases": {
+    "BT1833_independent_sigma": {"sigma": 3.864811204289286, "median_stop": 47, "mean_stop": 53.7798, "p95_stop": 107, "wrong_in_5000": 4},
+    "BT1836_scalar_calibrated_sigma": {"sigma": 4.259701234272514, "median_stop": 57, "mean_stop": 65.295, "p95_stop": 131, "wrong_in_5000": 1},
+    "BT1837_covariance_upper_sigma": {"sigma": 6.369321430990651, "median_stop": 129, "mean_stop": 144.454, "p95_stop": 286, "wrong_in_5000": 3}
+  },
+  "comparison_fixed_runs": {"BT1833_5sigma": 94, "BT1836_5sigma": 114, "BT1837_5sigma": 254},
+  "checks": {"threshold_matches_ln999": true, "adaptive_median_below_fixed_for_covariance_case": true, "wrong_rate_below_one_tenth_percent_in_all_cases": true, "p95_covariance_near_fixed_budget": true},
+  "boundary": "SPRT uses an independent Gaussian section-estimator approximation; correlated drift must feed sigma from BT1837 or a full covariance matrix."
+}
