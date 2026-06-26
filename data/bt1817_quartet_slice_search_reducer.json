@@ -1,0 +1,26 @@
+{
+  "bt": "BT1817",
+  "title": "quartet slice search reducer",
+  "search_ladder": [
+    {"stage": "all triples", "candidates": 816, "meaning": "all possible three-support subsets in the transported 18-line image"},
+    {"stage": "Hesse hinges", "candidates": 54, "meaning": "three-support subsets with Hesse hinged-path geometry"},
+    {"stage": "W(E6) stabilizer slices", "candidates": 10, "meaning": "orbits/slices under the BT1795 image stabilizer"},
+    {"stage": "observed quartet slice", "candidates": 6, "meaning": "one size-6 slice, modeled as the edge set of K4"},
+    {"stage": "oriented quartet edge", "candidates": 12, "meaning": "six K4 edges with two orientations each"}
+  ],
+  "slice_pattern": {"size_6": 8, "size_3": 2},
+  "reductions": {
+    "all_to_hesse_factor": 15.11111111111111,
+    "hesse_to_slices_factor": 5.4,
+    "all_to_slices_factor": 81.6,
+    "all_to_observed_slice_factor": 136.0
+  },
+  "pass_contract_for_final_tuple_data": [
+    "real BT1781 tuple lists must reproduce the 9980 count vector before repair",
+    "projection to BT1795/H27 support must land the F3 obstruction in one W(E6) size-6 hinge slice",
+    "the slice must identify a K4 quartet edge orientation whose correction syndrome is [0,1,2,2,2] over F3",
+    "after the oriented-edge correction, F2 and F3 left-kernel evaluations must both vanish"
+  ],
+  "verified": true,
+  "conclusion": "The post-BT1812 search is no longer an 816-triple problem. The exact ladder is 816 -> 54 Hesse hinges -> 10 W(E6) slices -> one 6-edge K4 quartet slice -> one oriented quartet edge. This is the executable search contract for the missing 12-symbol fibre law."
+}
