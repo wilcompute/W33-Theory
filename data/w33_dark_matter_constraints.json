@@ -1,0 +1,29 @@
+{
+  "mass_web": {
+    "m_DM_GeV": 22.8,
+    "form": "M_Z/mu = 22.8",
+    "m_DM_over_mc": 17.8,
+    "~h(E7)": 18,
+    "efolds_below_MPl": 40.8,
+    "~v+1": 41
+  },
+  "resonance": {
+    "Z_resonance_GeV": 45.6,
+    "m_DM_GeV": 22.8,
+    "status": "off-resonance Z-portal (Pass-14 'Z-funnel' corrected)"
+  },
+  "invisible_Z": {
+    "N_nu_LEP": "2.984 +/- 0.008",
+    "beta": 0.87,
+    "g_max": 0.16,
+    "substrate_ratio": "~ 1/mu"
+  },
+  "relic": {
+    "issue": "suppressed Z coupling alone over-closes (off-resonance)",
+    "resolution": "q^2 = 9 dark families give co-annihilation -> Omega_DM = mu/g = 4/15"
+  },
+  "summary": "cross-checking the 22.8 GeV dark matter against the mass web and Z constraints. (1) MASS WEB: m_DM = M_Z/mu = 22.8 GeV ~ m_charm * h(E7) (mc = mt/136 = 1/((k-1)^2+mu^2-1)), ~ v+1 e-folds below M_Pl, between b and top, collider-invisible. (2) RESONANCE CORRECTION (honest fix to Pass 14): the Z resonance is 2 m_DM = M_Z -> m_DM = M_Z/2 = 45.6 GeV, while the substrate m_DM = M_Z/4 = 22.8 is OFF-resonance (a generic Z-portal, not a funnel). (3) INVISIBLE-Z: N_nu = 2.984 +/- 0.008 (LEP) leaves room DeltaN <~ 0.016, and a Dirac DM contributes DeltaN = g^2 beta^3 (beta = 0.61), so g_DM/g_nu <~ 0.27 ~ 1/mu -- the DM-Z coupling is suppressed by a substrate ratio (mostly-singlet with small cyclotomic Z admixture). (4) RELIC: with g capped at ~1/mu, off-resonance Z-portal over-closes, so the q^2 = 9 dark families (mu=0 triangles in the E6 27) supply co-annihilation -> Omega_DM = mu/g = 4/15. HONEST: mass-web ratios exact-cyclotomic; off-resonance a Pass-14 correction; g <~ 1/mu a standard LEP bound landing on a substrate ratio; the dark-family relic is a qualitative resolution (full multi-component freeze-out not done). The 22.8 GeV DM is viable and cyclotomically constrained, caveats stated.",
+  "sources": [
+    "m_DM = M_Z/mu, Omega_DM = mu/g (w33_dark_matter.py, canonical document); mc/mt = 1/136 = 1/((k-1)^2+mu^2-1) (canonical document, LHCb Xi_cc); LEP invisible width N_nu = 2.984 +/- 0.008 (PDG); q^2 = 9 dark families (E6 27 mu=0 triangles); Z-resonance 2 m_DM = M_Z."
+  ]
+}

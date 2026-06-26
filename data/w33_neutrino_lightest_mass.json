@@ -1,0 +1,28 @@
+{
+  "grade_textures": {
+    "m_D_rank": 3,
+    "M_R_rank": 3,
+    "verdict": "grade rule gives rank-3 matrices -> m_nu rank 3 -> m1 NOT forced to 0"
+  },
+  "degeneracy": {
+    "spectrum_norm": [
+      0.0247,
+      0.0247,
+      1.0
+    ],
+    "m1_eq_m2": true,
+    "light_pair_scale_meV": 1.2
+  },
+  "lifted": {
+    "m1_meV": 1.0,
+    "m2_meV": 8.7,
+    "m3_meV": 49.7,
+    "sum_meV": 59.0,
+    "vs_DESI": "below 72 meV",
+    "note": "m1 ~ 1 meV (not 0); NH-min 58 meV is the m1->0 idealisation"
+  },
+  "summary": "does the Z3 grade rule force a massless lightest neutrino? Honest NO. With the Higgs/B-L VEV at grade 0, the selection rule a+b=0 mod 3 populates the '0/(1,2)-swap' texture in BOTH the Dirac (m_D) and Majorana (M_R) matrices, and both are RANK 3 -- so the seesaw m_nu = m_D M_R^{-1} m_D^T is rank 3 and m1 is nonzero (no texture zero from the grade rule). What IS forced (grade-0 VEV) is m1 = m2 (the cyclotomic degeneracy from the (1,2) swap), at the light-pair scale (y1/y3)^2 m3 ~ 1.2 meV with the up-type hierarchy 9:2:1. Lifting the degeneracy (grade-1/2 VEV, Pillar 68/69) splits the pair and pushes the lightest toward but not to zero: m1 ~ 1 meV. So (m1,m2,m3) ~ (1, 8.7, 49.8) meV, Sum m_nu ~ 59 meV, still below DESI (< 72). Pass-14's 'm1 ~ 0' is the m1->0 idealisation (NH minimum 58 meV); the substrate's actual prediction is a meV-scale (not massless) lightest neutrino, Sum ~ 59 meV. HONEST: the rank-3 result and m1=m2 degeneracy are exact for the graded texture; m1 ~ 1 meV is the natural light-pair scale (exact lifting needs the grade-1/2 VEV magnitude, the open Yukawa-texture problem). Same falsifiable conclusion as Pass 14, sharpened: not massless but meV-scale.",
+  "sources": [
+    "Z3 grade selection rule T[a,b]=0 unless grade(a)+grade(b)+grade(VEV)=0 mod 3 (Pillar 68, THEORY_PART_CLXXVII_MASS_TEXTURE); up-type hierarchy 9:2:1 (Pillar 68 SVD); Majorana degeneracy & grade-1/2 lifting (Pillar 68/69, w33_majorana_cubic_form.py, w33_neutrino_majorana_texture.py); m1->0 NH minimum (w33_neutrino_nh_minimum.py); Dm31/Dm21 = 2 Phi_3 + Phi_6 = 33; DESI 2024 < 72 meV."
+  ]
+}

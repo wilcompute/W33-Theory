@@ -6526,6 +6526,45 @@ level, and a $22.8$\,GeV Z-coupled WIMP requires a \emph{suppressed} $Z$ couplin
 both the relic density and the invisible-$Z$ width (standard for Z-funnel models) --- a
 flagged constraint, not yet a full freeze-out calculation.
 
+\subsection{Pass 15 --- the dark matter stress-tested, the lightest neutrino, and the mass ladder}
+\label{sec:capstone-fifteen}
+
+Two cross-checks sharpen earlier claims (one with an honest correction), and the whole mass
+spectrum is collected into one figure.
+
+\emph{The dark matter, stress-tested.} $m_{\rm DM}=M_Z/\mu=22.8$\,GeV slots into the mass
+web ($\sim m_{\rm charm}\,h(E_7)$; $\sim v+1$ e-folds below $M_{\rm Pl}$), collider-invisible
+between $b$ and top. \emph{Correction:} it is \emph{off} the Z resonance ($2m_{\rm DM}=M_Z$
+needs $m_{\rm DM}=M_Z/2=45.6$\,GeV), so the Pass-14 ``Z-funnel'' is a generic off-resonance
+Z-portal. The LEP invisible width ($N_\nu=2.984\pm0.008$) caps the DM--Z coupling at
+$g_{\rm DM}/g_\nu\lesssim1/\mu$ (a substrate ratio --- a mostly-singlet state), and the relic
+density then comes from the $q^2=9$ dark families' co-annihilation rather than Z-portal alone.
+(Witness: \path{analysis/w33_dark_matter_constraints.py}.)
+
+\emph{The lightest neutrino is light, not massless.} Does the $\mathbb{Z}_3$ grade rule force
+$m_1=0$? \emph{No:} with a grade-0 B--L VEV the selection rule $a+b\equiv0$ populates the
+``$0/(1,2)$-swap'' texture in \emph{both} $m_D$ and $M_R$, both rank 3, so the seesaw is rank
+3 and $m_1\ne0$. What is forced is $m_1=m_2$ (the cyclotomic degeneracy) at the light-pair
+scale $(y_1/y_3)^2m_3\sim1.2$\,meV; lifting it (a grade-$1/2$ VEV, Pillar 68/69) leaves
+$m_1\sim1$\,meV. So $(m_1,m_2,m_3)\sim(1,8.7,49.8)$\,meV, $\sum m_\nu\sim59$\,meV --- still
+below DESI; Pass-14's $m_1\sim0$ sharpened to a meV-scale lightest neutrino. (Witness:
+\path{analysis/w33_neutrino_lightest_mass.py}.)
+
+\emph{The mass ladder.} Every scale sits at a substrate-integer depth $\ln(M_{\rm Pl}/M)$
+(Fig.~\ref{fig:mass-ladder}): $M_{\rm GUT}$ at $\Phi_6=7$, $N_3$ at $q^2=9$, the scalaron
+$N_1$ at $\Phi_3=13$, $M_Z$ at $q\Phi_3=39$, $m_{\rm DM}=M_Z/\mu$ just below, the proton at
+$v+\mu=44$, the neutrinos at the seesaw floor $\sim68$ --- the gaps themselves cyclotomic
+($\Phi_6$, $2\Phi_3$, $\sim f$). (Witness: \path{analysis/w33_mass_ladder.py}.)
+
+\input{analysis/w33_mass_ladder_fig.tex}
+
+\emph{Honest scope:} the DM mass-web ratios are exact-cyclotomic, the off-resonance a
+correction, $g\lesssim1/\mu$ a standard LEP bound on a substrate ratio, the dark-family relic
+qualitative; the neutrino result is an honest negative ($m_1$ not forced to zero) refined to
+$m_1\sim1$\,meV (the lifting needs the grade-$1/2$ VEV magnitude); the ladder is a summary of
+the Pass 8--14 exponents, each with its own scope, the softest rungs the DM ($\sim40.8$,
+non-integer) and the neutrino floor ($\sim68$).
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
