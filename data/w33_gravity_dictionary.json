@@ -1,0 +1,52 @@
+{
+  "dictionary": {
+    "Lambda": "2/k = 1/6",
+    "A_area": 12,
+    "S_dS": 24,
+    "S_dS_form": "f = c = 24 (central charge)",
+    "G": "k/(4f) = 1/8 = 1/2^q",
+    "ell": "1/sqrt(Lambda) = sqrt(6)"
+  },
+  "checks": [
+    {
+      "relation": "Bekenstein-Hawking  S = A/(4G)",
+      "want": 24,
+      "got": 24.0,
+      "ok": true
+    },
+    {
+      "relation": "de Sitter radius  Lambda*ell^2",
+      "want": 1.0,
+      "got": 1.0,
+      "ok": true
+    },
+    {
+      "relation": "Gauss-Bonnet closure  E*Lambda",
+      "want": 40,
+      "got": 40.0,
+      "ok": true
+    },
+    {
+      "relation": "G * S_dS = q",
+      "want": 3,
+      "got": 3.0,
+      "ok": true
+    },
+    {
+      "relation": "A / G = 4 S_dS",
+      "want": 96,
+      "got": 96.0,
+      "ok": true
+    }
+  ],
+  "thermo": {
+    "T_dS": 0.064975,
+    "T_dS_form": "1/(2 pi sqrt(6))",
+    "F": -1.559394
+  },
+  "interpretation": "G = 1/2^q = 1/8: 2^q is the GKP/qubit Hilbert dimension of the D4 matter shell; Newton's constant = inverse matter-shell dimension = 1/(states the horizon resolves).",
+  "summary": "the gravity dictionary closed to a number: Newton's constant G = k/(4f) = 1/8 = 1/2^q in substrate units. Given the holographic dictionary -- horizon AREA = gauge causal screen k = 12, de Sitter ENTROPY = boundary central charge S_dS = c = f = 24 -- Bekenstein-Hawking S = A/(4G) FORCES G = A/(4S) = k/(4f) = 1/2^q (2^q = 8 = GKP/qubit dim of the D4 matter shell, so G = inverse matter-shell Hilbert dimension). With Lambda = 2/k = 1/6 (computed as Ollivier-Ricci curvature, w33_memory_is_desitter) and de Sitter radius ell = 1/sqrt(Lambda) = sqrt(6), the three gravitational numbers are all q-integers and mutually consistent: S = A/4G = 24 = f, Lambda*ell^2 = 1, E*Lambda = 40 = v (Gauss-Bonnet), G*S_dS = 3 = q, A/G = 96 = 4 S_dS. Honest: AREA=k and ENTROPY=c=f are the holographic dictionary (the central geometric claim); GIVEN it, G = 1/2^q is DERIVED by Bekenstein-Hawking; in dimensionless substrate units (the absolute Planck scale is part of the named dynamical residue).",
+  "sources": [
+    "Lambda=2/k Ollivier-Ricci (w33_memory_is_desitter.py); 1+12+27 split, holographic screen (w33_holographic_code.py, w33_information_structure.py); de Sitter entropy = central charge c=f=24 (Gibbons-Hawking 1977; holographic c-theorem); Bekenstein-Hawking S=A/4G; D4 GKP/qubit dim 2^q=8 (w33_d4_gkp_error_curve.py); Gauss-Bonnet closure E*Lambda=v (Face 1, w33_cosmology_seventh_face.py)."
+  ]
+}

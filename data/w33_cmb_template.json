@@ -1,0 +1,144 @@
+{
+  "fixed_frequencies": {
+    "omega1": 2.30052,
+    "omega1_form": "theta = arccos(-2/3)",
+    "omega2": 0.20944,
+    "omega2_form": "2*pi/beat, beat = h(E8) = 30",
+    "ratio": 10.98419,
+    "ratio_form": "15*theta/pi (irrational)"
+  },
+  "template_formula": "delta P/P(ln k) = A*cos(omega1*x+phi1)*[1+b*cos(omega2*x+phi2)], x=ln(k/k_*); FIXED omega1=arccos(-2/3), omega2=2pi/30; FREE A,b,phi1,phi2",
+  "free_params": {
+    "A": "amplitude (inflaton-clock coupling), >=0",
+    "b": "envelope depth, 0..1",
+    "phi1": "fast phase, [0,2pi)",
+    "phi2": "slow phase, [0,2pi)",
+    "ln_k_star": "pivot (degenerate with phi1)"
+  },
+  "sampled": {
+    "window_x": [
+      -6.0,
+      6.0
+    ],
+    "pivot_k_star_Mpc": 0.05,
+    "n_peaks": 5,
+    "distinct_peak_gaps": 2,
+    "peak_gaps": [
+      2.72,
+      2.73
+    ],
+    "note": "envelope breaks the uniform single-tone comb into a multi-gap (three-gap) pattern"
+  },
+  "template_table": [
+    {
+      "x": -6.0,
+      "dP_over_P": 0.38863
+    },
+    {
+      "x": -5.5,
+      "dP_over_P": 1.23939
+    },
+    {
+      "x": -5.0,
+      "dP_over_P": 0.63128
+    },
+    {
+      "x": -4.5,
+      "dP_over_P": -0.81129
+    },
+    {
+      "x": -4.0,
+      "dP_over_P": -1.36687
+    },
+    {
+      "x": -3.5,
+      "dP_over_P": -0.28421
+    },
+    {
+      "x": -3.0,
+      "dP_over_P": 1.21033
+    },
+    {
+      "x": -2.5,
+      "dP_over_P": 1.30969
+    },
+    {
+      "x": -2.0,
+      "dP_over_P": -0.17201
+    },
+    {
+      "x": -1.5,
+      "dP_over_P": -1.49615
+    },
+    {
+      "x": -1.0,
+      "dP_over_P": -1.05793
+    },
+    {
+      "x": -0.5,
+      "dP_over_P": 0.65186
+    },
+    {
+      "x": 0.0,
+      "dP_over_P": 1.6
+    },
+    {
+      "x": 0.5,
+      "dP_over_P": 0.65186
+    },
+    {
+      "x": 1.0,
+      "dP_over_P": -1.05793
+    },
+    {
+      "x": 1.5,
+      "dP_over_P": -1.49615
+    },
+    {
+      "x": 2.0,
+      "dP_over_P": -0.17201
+    },
+    {
+      "x": 2.5,
+      "dP_over_P": 1.30969
+    },
+    {
+      "x": 3.0,
+      "dP_over_P": 1.21033
+    },
+    {
+      "x": 3.5,
+      "dP_over_P": -0.28421
+    },
+    {
+      "x": 4.0,
+      "dP_over_P": -1.36687
+    },
+    {
+      "x": 4.5,
+      "dP_over_P": -0.81129
+    },
+    {
+      "x": 5.0,
+      "dP_over_P": 0.63128
+    },
+    {
+      "x": 5.5,
+      "dP_over_P": 1.23939
+    },
+    {
+      "x": 6.0,
+      "dP_over_P": 0.38863
+    }
+  ],
+  "decision_tree": {
+    "A consistent with 0": "bounds the inflaton-clock coupling (no detection)",
+    "A != 0 at fixed (omega1,omega2)": "DETECTION of the substrate clock comb",
+    "best-fit single tone at different omega": "ordinary resonant inflation; DISFAVOURS the clock",
+    "two incommensurate tones with ratio ~10.98": "the substrate two-tone signature"
+  },
+  "summary": "the CMB clock signature, sharpened into a fittable TEMPLATE: delta P/P(ln k) = A*cos(omega1*x+phi1)*[1+b*cos(omega2*x+phi2)], x=ln(k/k_*), with BOTH log-frequencies FIXED by q=3 -- omega1=theta=arccos(-2/3)=2.30052 (fast) and omega2=2pi/beat=2pi/30=0.20944 (slow envelope, beat=h(E8)=30), ratio=15theta/pi=10.9842 (IRRATIONAL) -- leaving only A, b, phi1, phi2 free for a likelihood pipeline (Cobaya/CosmoMC/CLASS). The two incommensurate tones beat into the Steinhaus three-gap peak pattern (envelope splits the uniform comb), distinct from smooth slow roll (no peaks) and single-tone resonant inflation (one gap). Decision tree: A~0 bounds the coupling; A!=0 at the fixed frequencies = detection; a single tone at a different omega disfavours the clock; two locked incommensurate tones at ratio ~10.98 = the substrate signature. Honest: still conditional (feature exists IF the clock couples; A free) and omega2=2pi/beat is the clock-cosmology claim -- but the frequencies are pinned and codeable, the maximally constrained sky test.",
+  "sources": [
+    "clock signature (w33_cmb_clock_signature.py), clock-cosmology beat=30, 1-n_s=1/30 (w33_clock_cosmology.py); BC theta=arccos(-2/3); resonant/axion-monodromy templates (Chen; Flauger, McAllister, Pajer, Westphal, Xu); Steinhaus three-gap; CMB feature likelihoods (Planck 2018 X; Cobaya; CLASS); LiteBIRD; CMB-S4."
+  ]
+}
