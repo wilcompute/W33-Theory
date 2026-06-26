@@ -1,0 +1,21 @@
+{
+  "bt": "BT1819",
+  "title": "tuple-list pass/fail harness",
+  "status": "harness_ready_no_true_tuple_list_embedded",
+  "expected_tables": ["T001","T002","T010","T012","T020","T021","T100","T101","T111","T112","T120","T122","T200","T202","T210","T211","T221","T222"],
+  "expected_counts": {"T001":528,"T002":562,"T010":578,"T012":528,"T020":612,"T021":580,"T100":528,"T101":528,"T111":480,"T112":528,"T120":612,"T122":564,"T200":562,"T202":528,"T210":578,"T211":562,"T221":562,"T222":560},
+  "expected_total": 9980,
+  "oriented_quartet_correction": {"T010": -2, "T210": -2, "T222": 2},
+  "pass_contract": [
+    "input tuple rows/counts reproduce the 9980 vector exactly",
+    "apply the oriented quartet correction T010=-2, T210=-2, T222=+2",
+    "F2 left-kernel evaluations vanish after correction",
+    "F3 left-kernel evaluations vanish after correction"
+  ],
+  "accepted_input_formats": [
+    "list of records with table/label/table_label",
+    "object with rows list",
+    "object with counts dict or counts list in expected table order"
+  ],
+  "boundary": "The harness is committed without true BT1781 tuple rows. It must be run on real materialized tuple data, not on fabricated counts."
+}
