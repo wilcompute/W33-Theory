@@ -1,0 +1,12 @@
+% BT1889 direct integrated Holonet artifact
+% This file is committed as a direct in-repo integration target for the two finite-code patches.
+% It keeps the original journal source intact and includes the two patch sections in order.
+% For an exact in-place insertion before Discussion/Open Questions, run tools/apply_bt1857_holonet_patch.py.
+
+\input{BT1347_photonic_holonet_journal.tex}
+
+% Integrated patch order:
+% 1. finite K12/F12 compiler layer
+% 2. finite CSS/subsystem theorem layer
+\input{BT1857_holonet_k12_compiler_patch.tex}
+\input{BT1880_holonet_finite_css_theorem_patch.tex}
