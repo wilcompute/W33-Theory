@@ -1,0 +1,16 @@
+{
+  "bt": "BT1850",
+  "title": "Face-Word Extractor",
+  "verified": true,
+  "source_anchor": "analysis/w33_reye_k12_orientable_horizon_completion.py",
+  "counts": {"vertices": 12, "edges": 66, "faces": 44, "reye_faces": 16, "residual_faces": 28, "directed_edges": 132, "unordered_edge_profile": {"2": 66}},
+  "horizon_code": {"total": 72, "payload": 66, "parity": 6, "rate": "11/12"},
+  "face_words": {
+    "reye": [[0,1,11],[0,10,2],[0,9,4],[0,8,7],[1,3,10],[1,9,5],[1,8,6],[2,11,3],[2,8,5],[2,9,6],[3,4,8],[3,9,7],[4,5,11],[4,10,6],[5,7,10],[6,11,7]],
+    "residual": [[0,2,1],[0,4,3],[0,3,8],[0,5,6],[0,11,5],[0,6,10],[0,7,9],[1,2,3],[1,4,9],[1,10,4],[1,5,8],[1,6,7],[1,7,11],[2,7,4],[2,4,11],[2,5,9],[2,6,8],[2,10,7],[3,7,5],[3,5,10],[3,6,9],[3,11,6],[4,6,5],[4,7,8],[8,9,10],[8,11,9],[8,10,11],[9,10,11]]
+  },
+  "mesh_rotation_rule": "face (a,b,c) maps to ordered F12 rotations R_ab, R_bc, R_ca and unordered K12 edges {a,b},{b,c},{c,a}",
+  "sample_mesh_words": [{"face":[0,1,11],"rotations":["R_0_1","R_1_11","R_11_0"],"currents":[1,10,1]},{"face":[0,10,2],"rotations":["R_0_10","R_10_2","R_2_0"],"currents":[10,4,10]},{"face":[9,10,11],"rotations":["R_9_10","R_10_11","R_11_9"],"currents":[1,1,10]}],
+  "checks": {"face_count_44": true, "reye_plus_residual_44": true, "directed_edges_132": true, "unordered_edges_66_each_twice": true, "horizon_code_72_66_6": true, "every_face_maps_to_three_F12_rotations": true},
+  "boundary": "Uses the existing MCXCII Reye-K12 face basis; no new geometric embedding is asserted."
+}

@@ -1,0 +1,13 @@
+{
+  "bt": "BT1884",
+  "title": "Detector-Time Decoder Graph",
+  "verified": true,
+  "parent_code": "BT1872 [[66,13,3]]_3 with BT1881 repeated-syndrome policy",
+  "graph_counts": {"checks": 56, "rounds": 3, "detector_nodes": 168, "time_links": 112, "single_error_links": 528, "relation_shadow_flags": 3},
+  "detector_rule": "D(c,t)=s_c(t)-s_c(t-1) over GF3 for check c and round t.",
+  "link_types": {"time_link": "same check changes between adjacent rounds", "data_link": "BT1878 single Pauli syndrome repeated across adjacent rounds", "shadow_flag": "known distance-3 relation pattern that should be flagged rather than nearest-single corrected"},
+  "decoder_policy": {"persistent_same_syndrome": "prefer data correction", "isolated_one_round_event": "prefer time-link explanation", "relation_shadow": "flag and request another round or postselection"},
+  "weights": {"time_link": 1.0, "data_link": 2.0, "shadow_flag": 100.0},
+  "checks": {"nodes_56_times_3": true, "time_links_56_times_2": true, "single_error_links_528": true, "does_not_claim_weight2_correction": true},
+  "boundary": "Detector-event graph specification only; not a calibrated likelihood model or implemented matching decoder."
+}

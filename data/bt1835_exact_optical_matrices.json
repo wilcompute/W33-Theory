@@ -1,0 +1,23 @@
+{
+  "bt": "BT1835",
+  "title": "Exact Optical Matrix Catalog",
+  "verified": true,
+  "matrices": {
+    "qutrit_sorter": "F3[j,k]=omega3^(j*k)/sqrt(3), omega3=exp(2*pi*i/3), dimension 3",
+    "D4_quartet_encoder": "H2 tensor H2 divided by 2, dimension 4",
+    "C12_winding_analyzer": "F12[j,k]=omega12^(j*k)/sqrt(12), omega12=exp(2*pi*i/12), dimension 12",
+    "D4_parity_ancilla": "reversible XOR permutation |q0,q1,q2,a> -> |q0,q1,q2,a xor q0 xor q1 xor q2 xor chi>, dimension 256",
+    "K4_equality_comparator": "reversible comparator |a,b,f> -> |a,b,f xor [a != b]>, dimension 32",
+    "phase_slip_guard": "reversible comparator |x,y,f> -> |x,y,f xor [x=y]>, dimension 288"
+  },
+  "checks": {
+    "F3_unitary": true,
+    "H2_tensor_H2_unitary": true,
+    "F12_unitary": true,
+    "D4_parity_is_permutation_unitary": true,
+    "K4_comparator_is_permutation_unitary": true,
+    "C12_guard_is_permutation_unitary": true,
+    "dimensions_match_BT1832": true
+  },
+  "boundary": "Exact matrix catalog only; it does not yet choose a physical mesh decomposition for every unitary."
+}

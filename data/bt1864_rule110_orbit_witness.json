@@ -1,0 +1,13 @@
+{
+  "bt": "BT1864",
+  "title": "Rule-110 Orbit Witness",
+  "verified": true,
+  "seed": "BT1858 length-30 tape prefix",
+  "rule": "BT1861 radius-one Rule-110-style update on the S/L gap track plus h->h+1 mod 6 on the hole track",
+  "run": {"length": 30, "steps": 120, "first_full_state_repeat": null, "first_gap_track_repeat": null},
+  "statistics": {"ones_min": 9, "ones_max": 24, "max_cyclic_transitions": 24, "hole_track_coverage_each_step": [0,1,2,3,4,5]},
+  "snapshots": {"0": "S0 L1 S2 S3 L4 S5 L0 S1 L2 S3 S4 L5 S0 L1 S2 L3 S4 L5 S0 S1 L2 S3 L4 S5 S0 L1 S2 S3 L4 S5", "1": "L1 L2 S3 L4 L5 L0 L1 L2 L3 S4 L5 L0 L1 L2 L3 L4 L5 L0 S1 L2 L3 L4 L5 S0 L1 L2 S3 L4 L5 S0", "2": "L2 L3 L4 L5 S0 S1 S2 S3 L4 L5 L0 S1 S2 S3 S4 S5 S0 L1 L2 L3 S4 S5 L0 L1 L2 L3 L4 L5 L0 L1", "10": "S4 L5 L0 S1 S2 L3 S4 L5 L0 S1 L2 S3 S4 S5 L0 L1 S2 L3 L4 S5 S0 S1 L2 S3 S4 S5 L0 L1 S2 L3", "30": "L0 S1 L2 L3 S4 L5 L0 L1 S2 L3 S4 L5 L0 L1 L2 L3 S4 L5 L0 L1 S2 S3 S4 S5 L0 L1 L2 S3 L4 L5"},
+  "gap_words": {"t0": "SLSSLSLSLSSLSLSLSLSSLSLSSLSSLS", "t30": "LSLLSLLLSLSLLLLLSLLLSSSSLLLSLL", "t60": "LLLSLLLSLLSLLLLLSSSLLLSLLLSSSS", "t90": "LLSSSSLLLSLLLSLLSLLLLLSSSLLLSL", "t120": "SLLLSLLLSSSSLLLSLLLSLLSLLLLLSS"},
+  "checks": {"nontrivial_evolution": true, "no_repeat_through_120": true, "holes_cover_all_six_symbols_each_step": true, "gap_track_does_not_collapse": true, "rule_covers_BT1861_alphabet": true},
+  "boundary": "Finite orbit witness only; no full universality proof or physical implementation proof is claimed."
+}

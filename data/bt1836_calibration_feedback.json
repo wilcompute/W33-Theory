@@ -1,0 +1,20 @@
+{
+  "bt": "BT1836",
+  "title": "Calibration Feedback Loop",
+  "verified": true,
+  "control_run": {"shots": 10000, "erasures": 296, "kept": 9704, "syndrome_events": 85},
+  "estimates": {
+    "p_hat": 0.008759274525968672,
+    "p_upper_95": 0.010613251409451746,
+    "erasure_hat": 0.0296,
+    "erasure_upper_95": 0.03292182937165653
+  },
+  "updated_budget": {
+    "single_sigma_upper": 4.259701234272514,
+    "runs_for_3sigma": 41,
+    "runs_for_5sigma": 114
+  },
+  "comparison_to_BT1833": {"old_3sigma": 34, "old_5sigma": 94, "new_3sigma": 41, "new_5sigma": 114},
+  "checks": {"kept_plus_erasures_equals_shots": true, "upper_bound_exceeds_point_estimate": true, "budget_is_conservative_vs_BT1833": true, "new_5sigma_under_125": true},
+  "boundary": "Wilson/normal-style first feedback pass only; correlated drift feedback remains a future BT1834-linked extension."
+}

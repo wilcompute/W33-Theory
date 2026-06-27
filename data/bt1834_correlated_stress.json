@@ -1,0 +1,15 @@
+{
+  "bt": "BT1834",
+  "title": "Correlated Error Stress Test",
+  "verified": true,
+  "model": "12 syndrome-term blocks of size 144; intra-block correlation inflates variance by 1+143*rho",
+  "input": {"local_terms": 1728, "p_syndrome": 0.00872, "section_gap": 2},
+  "scenarios": {
+    "rho_0": {"inflation": 1.0, "sigma": 3.864811204289286, "runs_3sigma": 34, "runs_5sigma": 94},
+    "rho_0_01": {"inflation": 2.4299999999999997, "sigma": 6.024644430741453, "runs_3sigma": 82, "runs_5sigma": 227},
+    "rho_0_05": {"inflation": 8.15, "sigma": 11.033342195596038, "runs_3sigma": 274, "runs_5sigma": 761},
+    "rho_0_10": {"inflation": 15.3, "sigma": 15.117291899194115, "runs_3sigma": 515, "runs_5sigma": 1429}
+  },
+  "checks": {"rho0_matches_BT1833": true, "rho001_under_250_5sigma": true, "rho005_under_800_5sigma": true, "monotone_runs": true},
+  "boundary": "Block-correlation stress model only; it is a conservative variance inflation, not a calibrated noise covariance."
+}

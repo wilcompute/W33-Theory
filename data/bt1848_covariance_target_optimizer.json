@@ -1,0 +1,21 @@
+{
+  "bt": "BT1848",
+  "title": "Covariance Target Optimizer",
+  "verified": true,
+  "objective": "minimize weighted covariance reductions subject to lambda_max <= 1.4",
+  "starting_lambda_max": 1.821589796573715,
+  "target_lambda_max": 1.4,
+  "optimized_lambda_max": 1.392744103256981,
+  "starting_5sigma_runs": 200,
+  "optimized_5sigma_runs": 157,
+  "selected_reductions": {
+    "C12_C_internal": {"from": 0.20, "to": 0.055, "delta": 0.145, "weight": 1.0},
+    "qutrit_P_internal": {"from": 0.18, "to": 0.07, "delta": 0.11, "weight": 1.0},
+    "E_C_cross": {"from": 0.08, "to": 0.035, "delta": 0.045, "weight": 1.5},
+    "D4_G_internal": {"from": 0.16, "to": 0.08, "delta": 0.08, "weight": 1.25}
+  },
+  "not_selected_or_unchanged": {"K4_E_internal": 0.14, "P_G_cross": 0.06, "P_E_cross": 0.02, "P_C_cross": 0.03, "G_E_cross": 0.04, "G_C_cross": 0.02},
+  "priority_result": ["C12_C_internal", "qutrit_P_internal", "E_C_cross", "D4_G_internal"],
+  "checks": {"lambda_target_met": true, "run_budget_reduced": true, "uses_fewer_targets_than_BT1845_manual_table": true, "C12_priority_selected": true},
+  "boundary": "Greedy spectral optimizer over covariance-family knobs; not a physical control-theory optimizer."
+}

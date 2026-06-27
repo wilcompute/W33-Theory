@@ -1,0 +1,11 @@
+{
+  "bt": "BT1860",
+  "title": "Holonet TeX Integration Sanity",
+  "verified": true,
+  "integration_target": "papers/BT1347_photonic_holonet_journal.tex",
+  "patch_file": "papers/BT1857_holonet_k12_compiler_patch.tex",
+  "suggested_insertion_point": "before \\section{Discussion and Open Questions}",
+  "actions": ["searched Holonet paper and patch terms", "checked REVTeX package compatibility", "updated BT1857 patch to remove enumitem-only enumerate option", "kept claim stratification from BT1856"],
+  "sanity_checks": {"uses_existing_revtex_theorem_envs": true, "uses_ruledtabular_available_in_revtex": true, "no_enumitem_nosep_dependency": true, "does_not_overclaim_raw_distance": true, "patch_ready_for_manual_or_scripted_splice": true},
+  "boundary": "Patch is insertion-ready and TeX-sanitized. The original Holonet journal file was not overwritten because the connector exposes chunked file content and the safe update route is to keep a patch file plus manifest until a local build can apply and compile it."
+}

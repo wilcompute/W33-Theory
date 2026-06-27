@@ -1,0 +1,14 @@
+{
+  "bt": "BT1881",
+  "title": "Repeated-Syndrome Decoder",
+  "verified": true,
+  "code": "BT1872 [[66,13,3]]_3 parent with BT1878 single-error table",
+  "history_lengths": [2, 3],
+  "single_error_policy": {"persistent_same_syndrome_2_cycles": "correct using BT1878 unique single-error table", "persistent_same_syndrome_3_cycles": "correct and mark high confidence", "single_cycle_syndrome_only": "flag transient; do not immediately correct unless hardware policy demands"},
+  "dangerous_relation_policy": {"known_relation": "edge(0,1)+2*edge(0,3)+edge(1,3)", "two_cycle_inconsistent_completion": "flag as relation-shadow", "three_cycle_alternating_single_decoder_outputs": "do not apply nearest-single correction; request another syndrome round or erasure/postselection"},
+  "coverage": {"single_pauli_syndromes": 528, "unique_single_error_syndromes": true, "weight2_errors_detected": 137280, "generic_weight2_correction_claimed": false},
+  "decision_table": {"000": "no correction", "SS0_or_0SS": "correct if same nonzero syndrome persists two adjacent cycles", "S0S": "flag intermittent", "SST_with_T_not_S": "flag collision/history inconsistency", "STR_all_different": "flag multi-error/noise history", "SSS": "correct single-error S high confidence"},
+  "interpretation": "The repeated decoder converts BT1878's single-shot table into a safe history decoder: it corrects persistent single-error syndromes and flags patterns compatible with distance-3 weight-3 relations instead of pretending to correct generic weight-2 errors.",
+  "checks": {"uses_BT1878_table": true, "corrects_persistent_weight1": true, "flags_weight3_relation_shadows": true, "does_not_claim_weight2_correction": true, "distance3_boundary_respected": true},
+  "boundary": "History-rule decoder only. It is not a maximum-likelihood decoder or calibrated detector-time noise model."
+}

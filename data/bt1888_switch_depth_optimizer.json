@@ -1,0 +1,13 @@
+{
+  "bt": "BT1888",
+  "title": "Switch-Depth Optimizer",
+  "verified": true,
+  "input": "BT1885 switch-fabric lowering",
+  "baseline": {"rounds": 5, "low_loss_switches": 76, "edge_touch_entries": 264, "active_loss_units": 76, "survival": 0.8588264426049117},
+  "optimization": {"merge_X_residual_halves": true, "split_vertex_stars_by_bus_conflict_not_parity_only": true, "shared_face_star_selector_tables": 4, "optimized_rounds": 4, "optimized_switch_units": 64, "optimized_active_loss_units": 64, "optimized_survival": 0.8797377103140766},
+  "optimized_rounds": [{"round": "X0_Reye", "checks": 16, "touches": 48}, {"round": "X1_all_residual", "checks": 28, "touches": 84}, {"round": "Z0_star_set_A", "checks": 6, "touches": 66}, {"round": "Z1_star_set_B", "checks": 6, "touches": 66}],
+  "improvement": {"round_reduction": 1, "switch_unit_reduction": 12, "survival_gain_vs_BT1885": 0.02091126770916486, "erasure_reduction_vs_BT1885": 0.02091126770916486},
+  "constraint": "Do not merge X and Z rounds; CSS measurement bases remain separated. Merge only compatible X residual face rounds and optimize vertex-star grouping by bus conflicts.",
+  "checks": {"rounds_5_to_4": true, "switch_units_76_to_64": true, "survival_improves": true, "basis_separation_preserved": true, "not_a_physical_layout": true},
+  "boundary": "Schedule-depth optimization model only; no routed switch matrix or measured insertion-loss claim."
+}

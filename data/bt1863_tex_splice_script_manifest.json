@@ -1,0 +1,14 @@
+{
+  "bt": "BT1863",
+  "title": "Local TeX Splice Script",
+  "verified": true,
+  "script": "tools/apply_bt1857_holonet_patch.py",
+  "source": "papers/BT1347_photonic_holonet_journal.tex",
+  "patch": "papers/BT1857_holonet_k12_compiler_patch.tex",
+  "output": "papers/BT1347_photonic_holonet_journal_with_BT1857.tex",
+  "marker": "\\section{Discussion and Open Questions}",
+  "safety_checks": ["marker must exist", "patch label must not already exist in source", "patch label must exist in patch", "definition/theorem/remark/table/ruledtabular/tabular/enumerate begin-end counts must balance", "enumitem-only [nosep] option must be absent"],
+  "reason_not_overwriting_source": "The script writes an integrated output file rather than overwriting the journal source, preserving a reversible TeX integration path.",
+  "checks": {"script_committed": true, "non_destructive_output": true, "balanced_environment_checks": true, "no_enumitem_dependency": true},
+  "boundary": "Script is committed; actual local compile requires running it in a checkout with a TeX toolchain."
+}

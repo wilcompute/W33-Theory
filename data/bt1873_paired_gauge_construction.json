@@ -1,0 +1,12 @@
+{
+  "bt": "BT1873",
+  "title": "Subsystem Paired-Gauge Construction",
+  "verified": true,
+  "starting_code": "BT1872 [[66,13,3]]_3 finite CSS matrix code",
+  "gauge_inputs": {"distance_contrasts": 5, "source": "BT1865 rank-5 commutation defect among six cyclic-distance rows", "global_clock_row": "kept as dependent/derived from vertex-star layer, not added as independent stabilizer"},
+  "pairing": {"symplectic_pair_rank": 5, "Z_gauge_generators": 5, "X_gauge_partners": 5, "canonical_pairs_exist": true},
+  "subsystem_parameters_candidate": {"n": 66, "stabilizer_logical_k_before_gauge": 13, "gauge_qudits_r": 5, "logical_after_gauge_k": 8, "notation": "[[66,8,>=3;5]]_3 candidate, with distance lower bound conditional on the BT1872 low-weight screen"},
+  "effect_on_BT1869_defect": "The previous weight-2 X defect is eliminated by the BT1872 vertex-star Z checks before gauge pairing. The five distance contrasts then serve as gauge refinements, not as the primary protection mechanism.",
+  "checks": {"five_pairs": true, "BT1872_code_preserved_as_stabilizer_parent": true, "logical_reduced_13_to_8": true, "weight2_defect_not_present_after_dual_Z": true, "subsystem_distance_not_fully_proven": true},
+  "boundary": "Subsystem gauge construction at the finite symplectic-matrix level. Full gauge-decoder and all-weight subsystem distance proof remain open."
+}

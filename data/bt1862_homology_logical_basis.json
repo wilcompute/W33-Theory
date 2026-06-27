@@ -1,0 +1,14 @@
+{
+  "bt": "BT1862",
+  "title": "Homology / Logical-Basis Computation",
+  "verified": true,
+  "field": "GF3",
+  "matrix": {"symbols": 72, "edge_symbols": 66, "parity_symbols": 6, "face_rows": 44, "distance_rows": 6, "total_rows": 50},
+  "ranks": {"face_rank": 42, "distance_rank": 6, "combined_rank": 48, "payload_only_combined_rank": 48},
+  "kernels": {"full_kernel_dimension": 24, "payload_only_kernel_dimension": 18, "parity_gauge_degrees": 6},
+  "row_dependencies": {"face_row_dependencies": 2, "combined_row_dependencies": 2},
+  "classical_check_distance": {"min_weight": 4, "no_words_weight_1_to_3": true, "example_weight_4_word": [{"symbol": "edge_1_5", "coef": 1}, {"symbol": "edge_2_5", "coef": 1}, {"symbol": "edge_5_8", "coef": 2}, {"symbol": "edge_5_9", "coef": 2}]},
+  "interpretation": "The combined 44 face rows plus 6 distance/parity rows improve the raw six-row compiler from distance 2 to classical check-code distance 4, with 18 payload logical cycles and 6 parity/gauge degrees. This still does not prove a quantum stabilizer/subsystem distance theorem.",
+  "checks": {"combined_rank_48": true, "full_kernel_24": true, "payload_kernel_18": true, "min_weight_4_found": true, "no_quantum_distance_claim": true},
+  "boundary": "Exact GF3 linear algebra for the classical check complex only; quantum logical operator commutation and CSS distance remain future work."
+}

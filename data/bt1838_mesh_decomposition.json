@@ -1,0 +1,15 @@
+{
+  "bt": "BT1838",
+  "title": "Mesh Decomposition Schedule",
+  "verified": true,
+  "schedules": {
+    "F3_qutrit_sorter": {"dimension": 3, "two_mode_rotations": 3, "output_phases": 3, "generator": "Clements/Reck triangular Givens nullification of F3"},
+    "F12_winding_analyzer": {"dimension": 12, "two_mode_rotations": 66, "output_phases": 12, "generator": "Clements/Reck triangular Givens nullification of F12"},
+    "H4_D4_encoder": {"dimension": 4, "separable_layers": 2, "balanced_50_50_couplers": 4, "matrix": "H2 tensor H2 divided by 2"},
+    "D4_parity_ancilla": {"dimension": 256, "logical_XOR_gates": 6, "chi_phase_or_bit_offsets": 2, "kind": "permutation network"},
+    "K4_comparator": {"dimension": 32, "bitwise_XORs": 2, "multi_control_flag": 1, "kind": "reversible comparator"},
+    "C12_phase_slip_guard": {"dimension": 288, "valid_clock_pairs": 144, "equality_flag": 1, "kind": "reversible equality comparator"}
+  },
+  "checks": {"F3_rotation_count": true, "F12_rotation_count": true, "H4_balanced_coupler_count": true, "permutation_networks_match_BT1835_dimensions": true, "all_BT1835_primitives_covered": true},
+  "boundary": "This gives exact mesh schedules by universal Givens/Clements generators and logical permutation networks; numeric per-rotation phase tables for F12 are deferred to a generated artifact."
+}

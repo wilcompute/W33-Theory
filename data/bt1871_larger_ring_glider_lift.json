@@ -1,0 +1,17 @@
+{
+  "bt": "BT1871",
+  "title": "Rule-110 Larger-Ring Glider Lift",
+  "verified": true,
+  "seed_rule": "BC/Sturmian binary prefix using alpha=arccos(-2/3)/(2*pi), lifted to ring lengths 6*F for F in {5,8,13,21,34}; hole track h=n mod 6",
+  "rings": [
+    {"length": 30, "steps": 120, "repeat": {"start": 44, "end": 104, "period": 60}, "ones_min": 9, "ones_max": 24, "entropy_min": 0.7219280948873623, "entropy_max": 1.0, "transitions_min": 6, "transitions_max": 20, "best_diagonal": {"velocity": -8, "length": 84}},
+    {"length": 48, "steps": 192, "repeat": null, "ones_min": 15, "ones_max": 39, "entropy_min": 0.6962122601251458, "entropy_max": 1.0, "transitions_min": 10, "transitions_max": 34, "best_diagonal": {"velocity": -2, "length": 26}},
+    {"length": 78, "steps": 312, "repeat": null, "ones_min": 24, "ones_max": 63, "entropy_min": 0.7062740891876007, "entropy_max": 1.0, "transitions_min": 16, "transitions_max": 56, "best_diagonal": {"velocity": 0, "length": 130}},
+    {"length": 126, "steps": 504, "repeat": null, "ones_min": 36, "ones_max": 102, "entropy_min": 0.7024665512903903, "entropy_max": 1.0, "transitions_min": 24, "transitions_max": 92, "best_diagonal": {"velocity": 0, "length": 198}},
+    {"length": 204, "steps": 816, "repeat": null, "ones_min": 60, "ones_max": 165, "entropy_min": 0.7039260680195971, "entropy_max": 1.0, "transitions_min": 40, "transitions_max": 148, "best_diagonal": {"velocity": 0, "length": 388}}
+  ],
+  "neighborhood_coverage": "all eight Rule-110 neighborhoods occur in every tested ring",
+  "verdict": "The length-30 ring is too small and can produce finite-box recurrence. Larger BC/Fibonacci rings show no repeat through 4N steps, maintain nonzero entropy/domain walls, and expose longer diagonal persistence. This supports larger-ring glider diagnostics as the right next dynamical test.",
+  "checks": {"fibonacci_lifts_used": true, "lengths_multiple_of_6": true, "larger_rings_no_repeat_through_4N": true, "no_collapse": true, "all_neighborhoods_seen": true},
+  "boundary": "Finite larger-ring diagnostic only; no Rule-110 universality proof or physical machine proof is claimed."
+}

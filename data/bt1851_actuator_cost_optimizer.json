@@ -1,0 +1,19 @@
+{
+  "bt": "BT1851",
+  "title": "Actuator-Cost Covariance Optimizer",
+  "verified": true,
+  "objective": "minimize actuator cost while achieving lambda_max <= 1.4 using BT1848 reductions mapped onto BT1832 primitives",
+  "target": {"lambda_max_start": 1.821589796573715, "lambda_max_goal": 1.4, "lambda_max_after_selected_actuators": 1.386912, "fixed_5sigma_runs_start": 200, "fixed_5sigma_runs_after_selected_actuators": 156},
+  "candidate_actuators": {
+    "ring_guard_thermal_decoupler": {"targets": ["C12_C_internal", "E_C_cross"], "cost": 5.0, "lambda_drop": 0.235, "selected": true, "repo_anchor": "C12 ring bins and phase-slip guards from BT1832"},
+    "qutrit_path_balancer": {"targets": ["qutrit_P_internal"], "cost": 3.0, "lambda_drop": 0.135, "selected": true, "repo_anchor": "3 qutrit sorters from BT1832"},
+    "D4_parity_clock_isolator": {"targets": ["D4_G_internal"], "cost": 2.5, "lambda_drop": 0.075, "selected": true, "repo_anchor": "2 D4 parity ancillas from BT1832"},
+    "K4_phase_dither_pack": {"targets": ["K4_E_internal", "E_C_cross"], "cost": 3.5, "lambda_drop": 0.052, "selected": false, "repo_anchor": "3 K4 equality interferometers from BT1832"},
+    "global_environment_stabilizer": {"targets": ["all_cross_family"], "cost": 9.0, "lambda_drop": 0.11, "selected": false, "repo_anchor": "model-layer option only"}
+  },
+  "selected_set": ["ring_guard_thermal_decoupler", "qutrit_path_balancer", "D4_parity_clock_isolator"],
+  "total_cost": 10.5,
+  "why_not_K4_first": "K4 phase dithering helps, but the optimizer prefers ring/guard, qutrit, and D4 actions first because they buy more lambda drop per cost under the BT1848 target set.",
+  "checks": {"lambda_goal_met": true, "cost_finite": true, "selected_actuators_cover_BT1848_selected_internal_targets": true, "uses_BT1832_primitive_families": true, "does_not_claim_measured_hardware": true},
+  "boundary": "Actuator costs are modeled engineering weights, not measured hardware time, power, or bill-of-material costs."
+}

@@ -1,0 +1,19 @@
+{
+  "bt": "BT1831",
+  "title": "Photonic Syndrome Loss/Noise Budget",
+  "verified": true,
+  "resource_count": 15,
+  "survival_probability": 0.9704163817442235,
+  "erasure_probability": 0.02958361825577649,
+  "surviving_shot_syndrome_error_union_bound": 0.00872,
+  "unconditional_error_or_erasure_bound": 0.03830361825577649,
+  "effective_postselected_success_rate": 0.9619540256157939,
+  "checks": {
+    "resource_count_15": true,
+    "syndrome_bound_below_one_percent": true,
+    "erasure_below_four_percent": true,
+    "total_bound_below_five_percent": true,
+    "loss_separated_from_syndrome_flips": true
+  },
+  "boundary": "Union-bound and postselection budget only; correlated errors and chip calibration remain future work."
+}

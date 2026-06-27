@@ -1,0 +1,13 @@
+{
+  "bt": "BT1865",
+  "title": "CSS Commutation Matrix",
+  "verified": true,
+  "field": "GF3",
+  "input": {"HX_rows": 44, "HZ_rows": 6, "edge_symbols": 66, "source": "BT1850 face words plus BT1853 distance rows"},
+  "commutation_matrix": {"shape": [44, 6], "rank": 5, "nonzero_entries": 116, "zero_face_rows": 1, "nonzero_face_rows": 43, "row_support_profile": {"0": 1, "2": 13, "3": 30}, "column_nonzero_counts": [18, 22, 21, 21, 22, 12], "column_sums_mod3": [0, 0, 0, 0, 0, 0]},
+  "right_kernel": {"dimension": 1, "basis": [[1,1,1,1,1,1]], "interpretation": "the all-distance/global clock-sum Z row commutes with all 44 face X rows"},
+  "verdict": "The naive 44-face X / 6-distance Z CSS split fails: HX HZ^T is not zero. The defect has rank 5, leaving one commuting global clock-sum Z stabilizer and five gauge/defect directions to absorb or quotient.",
+  "repair_path": "Use the global all-distance row as the commuting Z stabilizer; treat the five independent distance-class contrasts as gauge checks or add dual face rows before claiming a CSS code.",
+  "checks": {"naive_css_fails": true, "commutation_defect_rank_5": true, "global_clock_sum_commutes": true, "no_quantum_distance_claim": true},
+  "boundary": "Exact GF3 CSS commutation test for the proposed split; no protected CSS/subsystem code is claimed."
+}

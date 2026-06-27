@@ -1,0 +1,13 @@
+{
+  "bt": "BT1868",
+  "title": "Global-Clock CSS Skeleton",
+  "verified": true,
+  "input_from_BT1865": {"HX_face_rank": 42, "HZ_distance_rows": 6, "commutation_defect_rank": 5, "right_kernel": [[1,1,1,1,1,1]]},
+  "repair": "Keep only the all-distance/global clock-sum Z row as a stabilizer and demote the five independent distance-class contrast rows to gauge/defect directions.",
+  "payload_skeleton_66": {"physical_qutrits": 66, "X_rank": 42, "Z_rank": 1, "commuting": true, "candidate_k": 23, "distance": "unknown"},
+  "full_symbol_skeleton_72": {"physical_symbols": 72, "X_rank": 42, "Z_rank": 1, "candidate_k_before_gauge_fixing": 29, "parity_gauge_degrees": 6},
+  "gauge_contrasts": 5,
+  "interpretation": "The K12/F12 face system is not a naive six-Z-row CSS code. Its valid first CSS skeleton is a face-check layer plus one global clock stabilizer; the five remaining distance contrasts are gauge degrees or require a dual face system.",
+  "checks": {"global_clock_row_commutes": true, "naive_six_row_css_rejected": true, "candidate_k_payload_23": true, "distance_not_claimed": true},
+  "boundary": "CSS skeleton only; no quantum distance, decoder, or physical protection theorem is claimed."
+}

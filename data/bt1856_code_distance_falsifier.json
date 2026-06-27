@@ -1,0 +1,12 @@
+{
+  "bt": "BT1856",
+  "title": "Code-Distance Falsifier",
+  "verified": true,
+  "object_tested": "BT1853 GF3 optical incidence compiler with 72 total symbols, 66 edge payload symbols, and 6 cyclic-distance parity symbols",
+  "six_row_code": {"rank": 6, "dimension": 66, "minimum_distance": 2, "single_error_syndrome_weight": 1, "verdict": "check code only; not a standalone distance-bearing stabilizer code"},
+  "with_face_rows": {"extra_face_checks": 44, "single_edge_error_syndrome_weight": 3, "single_parity_error_syndrome_weight": 1, "minimum_distance_upper_bound": 2, "reason": "two errors in the same cyclic-distance class can cancel the six-row check, so distance is not proven above 2 without adding independent face/vertex constraints on parity symbols"},
+  "falsifier": "The raw [72,66,6] incidence compiler detects some structured errors but does not by itself prove quantum code distance greater than 2.",
+  "surviving_candidate": "A subsystem/stabilizer candidate remains possible only after adding face-row constraints, antipodal-sheet constraints, and a logical/gauge split; this is a future code construction, not BT1853 itself.",
+  "checks": {"six_parity_rows_independent": true, "raw_dimension_66": true, "minimum_distance_not_above_2": true, "single_error_detected_by_at_least_one_row": true, "quantum_distance_not_claimed": true},
+  "boundary": "Finite linear-code falsifier over GF3; it does not analyze a full CSS/subsystem quantum code."
+}

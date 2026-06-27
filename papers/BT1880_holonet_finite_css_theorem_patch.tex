@@ -1,0 +1,82 @@
+% BT1880 -- Holonet finite CSS / subsystem theorem patch
+% Suggested insertion: after papers/BT1857_holonet_k12_compiler_patch.tex
+
+\section{Finite CSS and Subsystem Codes on the \texorpdfstring{$K_{12}/F_{12}$}{K12/F12} Compiler Surface}\label{sec:k12-f12-css-code}
+
+The incidence compiler of Sec.~\ref{sec:k12-f12-compiler} is not merely a check surface.
+After replacing the failed six distance-row $Z$ layer by the dual vertex-star layer,
+it becomes an exact finite qutrit CSS code.
+
+\begin{theorem}[Finite qutrit CSS code]
+Let the $66$ physical qutrits be indexed by the edges of $K_{12}$.  Let $H_X$ be the
+$44$ oriented triangular face-boundary rows of the genus-six $K_{12}$ map, and let
+$H_Z$ be the $12$ signed vertex-star rows, with coefficient $+1$ at the lower endpoint
+and $-1$ at the upper endpoint of each edge.  Over $\mathbb F_3$,
+\[
+  H_X H_Z^{T}=0,
+\]
+\[
+  \operatorname{rank}(H_X)=42,\qquad \operatorname{rank}(H_Z)=11.
+\]
+The resulting finite CSS matrix code has parameters
+\[
+  [[66,13,3]]_3.
+\]
+\end{theorem}
+
+\begin{proof}[Finite verification]
+The commutation identity is the boundary-of-boundary cancellation on the oriented
+triangular surface: every signed vertex contribution around an oriented face cancels
+modulo $3$.  The rank calculation gives
+\[
+  k=66-42-11=13.
+\]
+The low-weight screen finds no logical operator of weight $1$ or $2$ on either CSS
+side, and exhibits weight-$3$ representatives, so $d_X=d_Z=3$.
+\end{proof}
+
+\begin{corollary}[Gauge-refined subsystem code]
+The five independent cyclic-distance contrasts from the failed six-row distance layer
+can be paired with five independent $X$-gauge partners.  For this finite symplectic
+model the gauge-refined code has parameters
+\[
+  [[66,8,3;5]]_3.
+\]
+The six-distance/hole layer is therefore a gauge/clock phase layer rather than the
+stabilizer-protection layer itself.
+\end{corollary}
+
+\begin{remark}[Optical measurement schedule]
+A full parent-code syndrome cycle may be organized into five rounds:
+\[
+  16\ X\text{-Reye checks},\quad 14+14\ X\text{-residual checks},
+\]
+\[
+  6\ Z\text{-even vertex-star checks},\quad 6\ Z\text{-odd vertex-star checks}.
+\]
+This gives $264$ edge/check touches per full cycle.  The schedule is a compiler-level
+measurement plan, not a calibrated photonic threshold.
+\end{remark}
+
+\begin{remark}[Decoder boundary]
+The single-error syndrome table contains $66\cdot 8=528$ nonidentity one-qutrit Pauli
+errors and is unique.  All weight-two errors are detected, but a distance-three code
+must not claim generic weight-two correction; weight-three relations create dangerous
+single-vs-double syndrome collisions.
+\end{remark}
+
+\begin{table}[h]
+\caption{Finite-code claims added by the $K_{12}/F_{12}$ CSS layer.}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+Claim & Status & Witness \\
+\colrule
+$[[66,13,3]]_3$ CSS parent & exact finite matrix code & BT1872 \\
+$[[66,8,3;5]]_3$ subsystem code & exact finite symplectic model & BT1875 \\
+528 single Pauli errors decoded & exact table & BT1878 \\
+Generic weight-two correction & false / not claimed & BT1878 \\
+Five-round optical schedule & compiler-level plan & BT1876 \\
+Noise threshold / hardware feasibility & open & BT1879+future work \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}

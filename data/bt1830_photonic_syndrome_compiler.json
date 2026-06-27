@@ -1,0 +1,79 @@
+{
+  "boundary": "BT1830 is an IR/compiler specification, not a fabricated hardware design. The next step is to attach loss/noise parameters and compile each component to concrete beam splitter, delay, OAM, and detector primitives.",
+  "bt": "BT1830",
+  "checks": {
+    "C_has_winding_plus_three_guards": true,
+    "E_has_three_K4_edges": true,
+    "G_has_two_parity_bits": true,
+    "P_has_three_projectors": true,
+    "all_registers_are_used": true,
+    "all_terms_have_registers": true,
+    "factor_graph_edges": true,
+    "factor_graph_is_bipartite": true,
+    "factor_graph_nodes": true,
+    "one_C12_ring_register": true,
+    "seven_registers": true,
+    "six_compilation_stages": true,
+    "three_D4_quartet_registers": true,
+    "three_qutrit_strand_registers": true,
+    "twelve_syndrome_terms": true
+  },
+  "factor_graph": {
+    "coverage": {
+      "C_terms": ["Cslip01", "Cslip12", "Cslip20", "Cwind"],
+      "E_terms": ["E01", "E12", "E20"],
+      "G_terms": ["G0", "G1"],
+      "P_terms": ["P0", "P1", "P2"]
+    },
+    "edges": 19,
+    "nodes": 19,
+    "register_degrees": {"Q0": 4, "Q1": 4, "Q2": 4, "R": 4, "S0": 1, "S1": 1, "S2": 1},
+    "term_degrees": {"Cslip01": 1, "Cslip12": 1, "Cslip20": 1, "Cwind": 1, "E01": 2, "E12": 2, "E20": 2, "G0": 3, "G1": 3, "P0": 1, "P1": 1, "P2": 1}
+  },
+  "interpretation": "This is a compiler boundary object: it turns the finite law into named optical syndrome components without claiming chip-level loss budgets or detector efficiencies.",
+  "ir": {
+    "registers": {
+      "Q0": {"bits": 2, "kind": "D4_glue_quartet", "levels": 4, "role": "quartet coordinate 0"},
+      "Q1": {"bits": 2, "kind": "D4_glue_quartet", "levels": 4, "role": "quartet coordinate 1"},
+      "Q2": {"bits": 2, "kind": "D4_glue_quartet", "levels": 4, "role": "quartet coordinate 2"},
+      "R": {"kind": "C12_ring", "levels": 12, "role": "clock/winding readout"},
+      "S0": {"kind": "qutrit_path", "levels": 3, "role": "strand coordinate 0"},
+      "S1": {"kind": "qutrit_path", "levels": 3, "role": "strand coordinate 1"},
+      "S2": {"kind": "qutrit_path", "levels": 3, "role": "strand coordinate 2"}
+    },
+    "stages": [
+      {"description": "encode each local symbol x=4*strand+quartet into qutrit path S and D4 quartet Q; route ordered triple into the C12 ring R", "stage": "prepare"},
+      {"description": "read three qutrit mismatch projectors P0,P1,P2", "stage": "measure_P"},
+      {"description": "compute two D4 parity ancillas G0,G1 from Q0,Q1,Q2 and table chi", "stage": "measure_G"},
+      {"description": "read the three K4 equality-vs-edge comparators E01,E12,E20", "stage": "measure_E"},
+      {"description": "read winding Cwind and collision guards Cslip01,Cslip12,Cslip20", "stage": "measure_C"},
+      {"description": "assemble H=(P0+P1+P2,G0+G1,E01+E12+E20,Cwind) and flag phase-slip events if any Cslip term fires", "stage": "classical_decode"}
+    ],
+    "terms": {
+      "Cslip01": {"implementation": "coincidence/equality monitor for clock coordinates 0 and 1", "operator": "phase-slip collision guard", "registers": ["R"], "term": "1[x0=x1]"},
+      "Cslip12": {"implementation": "coincidence/equality monitor for clock coordinates 1 and 2", "operator": "phase-slip collision guard", "registers": ["R"], "term": "1[x1=x2]"},
+      "Cslip20": {"implementation": "coincidence/equality monitor for clock coordinates 2 and 0", "operator": "phase-slip collision guard", "registers": ["R"], "term": "1[x2=x0]"},
+      "Cwind": {"implementation": "12-bin ring interferometer / OAM winding readout", "operator": "C12 winding syndrome", "registers": ["R"], "term": "C/12"},
+      "E01": {"implementation": "quartet equality interferometer; bright if Q0 != Q1", "operator": "K4 edge energy", "registers": ["Q0", "Q1"], "term": "1[Q0 != Q1]"},
+      "E12": {"implementation": "quartet equality interferometer; bright if Q1 != Q2", "operator": "K4 edge energy", "registers": ["Q1", "Q2"], "term": "1[Q1 != Q2]"},
+      "E20": {"implementation": "quartet equality interferometer; bright if Q2 != Q0", "operator": "K4 edge energy", "registers": ["Q2", "Q0"], "term": "1[Q2 != Q0]"},
+      "G0": {"implementation": "two-bit XOR parity ancilla, compare with chi_high(T)", "operator": "D4 glue parity high bit", "registers": ["Q0", "Q1", "Q2"], "term": "bit1(Q0 xor Q1 xor Q2 xor chi)"},
+      "G1": {"implementation": "two-bit XOR parity ancilla, compare with chi_low(T)", "operator": "D4 glue parity low bit", "registers": ["Q0", "Q1", "Q2"], "term": "bit0(Q0 xor Q1 xor Q2 xor chi)"},
+      "P0": {"implementation": "qutrit sorter + target-bin dark/bright comparator", "operator": "strand mismatch projector", "registers": ["S0"], "term": "1[S0 != i]"},
+      "P1": {"implementation": "qutrit sorter + target-bin dark/bright comparator", "operator": "strand mismatch projector", "registers": ["S1"], "term": "1[S1 != j]"},
+      "P2": {"implementation": "qutrit sorter + target-bin dark/bright comparator", "operator": "strand mismatch projector", "registers": ["S2"], "term": "1[S2 != s]"}
+    }
+  },
+  "resource_counts": {
+    "C12_ring_winding_readouts": 1,
+    "D4_parity_ancillas": 2,
+    "D4_quartet_registers": 3,
+    "K4_equality_interferometers": 3,
+    "classical_decoder_outputs": ["P", "G", "E", "C", "phase_slip_flag"],
+    "phase_slip_collision_guards": 3,
+    "qutrit_sorters": 3
+  },
+  "summary": "The BT1828 commuting syndrome Hamiltonian is lowered into a finite photonic compiler IR. The registers are three qutrit strand paths, three D4 quartet registers, and one C12 winding ring. The terms are 3 P projectors, 2 G parity bits, 3 E K4 edge comparators, one C winding readout, and three phase-slip guards. The resulting bipartite factor graph has 19 nodes and 19 edges and covers every BT1824/BT1828 term.",
+  "title": "Photonic Syndrome Compiler",
+  "verified": true
+}

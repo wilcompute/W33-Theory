@@ -1,0 +1,13 @@
+{
+  "bt": "BT1878",
+  "title": "Decoder Table for [[66,13,3]]_3",
+  "verified": true,
+  "code": "BT1872 [[66,13,3]]_3 finite GF3 CSS matrix code",
+  "single_error_decoder": {"edges": 66, "qutrit_pauli_errors_per_edge": 8, "total_single_pauli_errors": 528, "X_part_syndromes": 132, "Z_part_syndromes": 132, "mixed_XZ_syndromes": 264, "unique_single_error_syndromes": true},
+  "decoder_rule": "For a syndrome pair (sX,sZ), decode Z-type support from the X-face syndrome and X-type support from the Z-vertex-star syndrome. The signed vertex-star columns identify ordered edge endpoints for X errors; the face-boundary columns identify the two incident faces for Z errors.",
+  "weight2_screen": {"two_qudit_pauli_errors": 137280, "zero_syndrome_weight2_errors": 0, "all_weight2_errors_detected": true, "all_weight2_errors_correctable_by_single_error_decoder": false},
+  "first_dangerous_collision": {"relation": "edge(0,1) + 2*edge(0,3) + edge(1,3) is a weight-3 dressed logical", "consequence": "the weight-2 partial error edge(0,1)+2*edge(0,3) has the same syndrome as the opposite single-edge completion on edge(1,3), so a nearest-single decoder can logical-fail on this class"},
+  "correction_policy": "Correct all weight-1 syndromes. Flag repeated inconsistent syndromes or any syndrome-history pattern compatible with a known weight-3 relation as untrusted rather than claiming weight-2 correction.",
+  "checks": {"single_error_table_complete": true, "single_error_syndromes_unique": true, "no_weight2_zero_syndrome": true, "weight2_failure_classes_identified": true, "distance3_boundary_respected": true},
+  "boundary": "Exact single-error decoder and weight-2 screen for the finite matrix code. It is not a maximum-likelihood decoder, repeated-syndrome decoder, or hardware decoder."
+}

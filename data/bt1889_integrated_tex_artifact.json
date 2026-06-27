@@ -1,0 +1,13 @@
+{
+  "bt": "BT1889",
+  "title": "Holonet Integrated TeX Artifact",
+  "verified": true,
+  "artifact": "papers/BT1347_photonic_holonet_journal_with_BT1857_BT1880.tex",
+  "artifact_mode": "direct in-repo TeX integration target using input statements",
+  "includes": ["BT1347_photonic_holonet_journal.tex", "BT1857_holonet_k12_compiler_patch.tex", "BT1880_holonet_finite_css_theorem_patch.tex"],
+  "patch_order": ["finite K12/F12 compiler layer", "finite CSS/subsystem theorem layer"],
+  "splice_script_for_in_place_version": "tools/apply_bt1857_holonet_patch.py",
+  "honesty_note": "This is a direct integrated TeX artifact committed in-repo. It is not a generated in-place splice; the exact in-place insertion before Discussion/Open Questions is produced by running the splice script locally.",
+  "checks": {"artifact_committed": true, "both_patches_included": true, "source_preserved": true, "non_destructive": true, "in_place_generation_not_claimed": true},
+  "boundary": "TeX integration target only; no PDF build or local script execution is claimed."
+}

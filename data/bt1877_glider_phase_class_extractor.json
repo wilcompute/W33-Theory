@@ -1,0 +1,19 @@
+{
+  "bt": "BT1877",
+  "title": "Glider Phase-Class Extractor",
+  "verified": true,
+  "input": "BT1874 larger-ring Rule-110 catalog on BC/Sturmian rings N=78 and N=204",
+  "phase_rule": "hole phase on a velocity-v diagonal evolves as h_t = h0 + (v+1)t mod 6",
+  "velocity_phase_classes": {
+    "v0": {"phase_step": 1, "cycle_size": 6, "phase_cycle": [0,1,2,3,4,5], "interpretation": "full six-phase stationary/domain packet"},
+    "v_minus4": {"phase_step": 3, "cycle_size": 2, "phase_cycles": [[0,3],[1,4],[2,5]], "interpretation": "antipodal two-phase packet"},
+    "v3": {"phase_step": 4, "cycle_size": 3, "phase_cycles": [[0,4,2],[1,5,3]], "interpretation": "three-phase chiral packet"},
+    "v10": {"phase_step": 5, "cycle_size": 6, "phase_cycle": [0,5,4,3,2,1], "interpretation": "full six-phase reverse packet"},
+    "v_minus11": {"phase_step": 2, "cycle_size": 3, "phase_cycles": [[0,2,4],[1,3,5]], "interpretation": "three-phase reverse/alias packet"}
+  },
+  "survival_by_ring": {"N78": ["v0", "v_minus4", "v3"], "N204": ["v0", "v_minus4", "v3", "v10"]},
+  "phase_survival_verdict": "The stable active-ring packets organize by Z6 phase step v+1. v=0 and v=10/-11 are six-phase clock packets, v=-4 is an antipodal two-phase packet, and v=3/-11 split into two three-phase chiral classes. N=78 and N=204 both preserve v=0,-4,3; v=10 is stronger in N=204.",
+  "connection_to_code_layer": "The same Z6 hole/phase track used in the tape dynamics is the six-distance/gauge clock layer from BT1873, tying computational packet phase to code gauge phase rather than to stabilizer protection.",
+  "checks": {"phase_rule_mod6": true, "N78_active_classes_extracted": true, "N204_active_classes_extracted": true, "antipodal_v_minus4_identified": true, "gauge_phase_not_confused_with_binary_dynamics": true},
+  "boundary": "Finite phase-class extractor for cataloged packet velocities; no infinite glider theorem or physical computation proof is claimed."
+}

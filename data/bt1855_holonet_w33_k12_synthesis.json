@@ -1,0 +1,13 @@
+{
+  "bt": "BT1855",
+  "title": "Holonet-W33-K12 Compiler Synthesis",
+  "verified": true,
+  "read_inputs": {"holonet_tex": "papers/BT1347_photonic_holonet_journal.tex", "w33_paper_tex": "w33_paper.tex", "website_html": "docs/w33_website.html"},
+  "holonet_open_gaps": ["qutrit error correction not integrated", "multi-photon scaling not witnessed", "UTM tape mapping not executable"],
+  "w33_spine": ["q!=2q gives q=3", "SRG(40,12,2,4)", "E=240", "T=160", "Sp(4,3) order 51840", "27 matter shell", "master cubic roots -7,-1,5"],
+  "website_spine": ["parameter-free unification", "q!=2^q displayed as public-facing master equation", "exceptional chain E8 to SM", "fine structure alpha inverse as 13+124", "spectral zeta product gives -40"],
+  "new_bridge": {"object": "F12-K12 genus-6 optical face code", "payload": 66, "faces": 44, "parity": 6, "total_symbols": 72, "rate": "11/12"},
+  "synthesis_theorem": "The Holonet carrier supplies the qutrit route and BC clock; W33 supplies the finite contextual/magic substrate; the K12/F12 genus-6 face code supplies the missing compiler/error-syndrome surface tying routing, clock, and finite incidence into one executable layer.",
+  "checks": {"holonet_gaps_addressed_by_K12_layer": true, "w33_parameters_preserved": true, "website_public_spine_preserved": true, "no_new_physics_axiom_added": true, "compiler_layer_is_finite": true},
+  "boundary": "Synthesis theorem is structural and finite. It does not validate phenomenological physics claims or claim physical chip realization."
+}

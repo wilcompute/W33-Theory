@@ -1,0 +1,65 @@
+{
+  "boundary": "This proves a commuting syndrome Hamiltonian over the finite fibre.  It is not yet a loss/noise model for a particular photonic chip; BT1829 adds the phase-slip dynamics and BT1830 lowers the syndrome terms into a component compiler.",
+  "bt": "BT1828",
+  "canonical_spectra": {
+    "T010": {
+      "C_spectrum": {"0": 12, "1": 1056, "2": 660},
+      "E_spectrum": {"0": 108, "2": 972, "3": 648},
+      "G_spectrum": {"0": 432, "1": 864, "2": 432},
+      "P_spectrum": {"0": 64, "1": 384, "2": 768, "3": 512},
+      "joint_PGEC_blocks": 78,
+      "joint_PGE_blocks": 36,
+      "min_lex_energy": 1,
+      "min_lex_energy_multiplicity": 1
+    },
+    "T210": {
+      "C_spectrum": {"0": 12, "1": 1056, "2": 660},
+      "E_spectrum": {"0": 108, "2": 972, "3": 648},
+      "G_spectrum": {"0": 432, "1": 864, "2": 432},
+      "P_spectrum": {"0": 64, "1": 384, "2": 768, "3": 512},
+      "joint_PGEC_blocks": 60,
+      "joint_PGE_blocks": 36,
+      "min_lex_energy": 1,
+      "min_lex_energy_multiplicity": 1
+    },
+    "T222": {
+      "C_spectrum": {"0": 12, "1": 1056, "2": 660},
+      "E_spectrum": {"0": 108, "2": 972, "3": 648},
+      "G_spectrum": {"0": 432, "1": 864, "2": 432},
+      "P_spectrum": {"0": 64, "1": 384, "2": 768, "3": 512},
+      "joint_PGEC_blocks": 63,
+      "joint_PGE_blocks": 36,
+      "min_lex_energy": 0,
+      "min_lex_energy_multiplicity": 1
+    }
+  },
+  "checks": {
+    "C_is_BT1827_winding": true,
+    "all_tables_same_C_spectrum": true,
+    "all_tables_same_E_spectrum": true,
+    "all_tables_same_G_spectrum": true,
+    "all_tables_same_P_spectrum": true,
+    "all_terms_integer": true,
+    "basis_size": true,
+    "diagonal_commutators_zero": true,
+    "k4_graph_is_complete": true,
+    "projector_terms_are_local": true
+  },
+  "expected_single_term_spectra": {
+    "C": {"0": 12, "1": 1056, "2": 660},
+    "E": {"0": 108, "2": 972, "3": 648},
+    "G": {"0": 432, "1": 864, "2": 432},
+    "P": {"0": 64, "1": 384, "2": 768, "3": 512}
+  },
+  "finite_fibre": "Z3 x (Z2)^2, encoded as 12 symbols x=4*strand+quartet",
+  "hamiltonian_terms": {
+    "H_C": "winding(x0,x1,x2)=C_BT1824/12",
+    "H_E": "sum_r 1[quartet_r != quartet_{r+1}] on the K4 quartet",
+    "H_G": "popcount(q0 xor q1 xor q2 xor chi(i,j,s))",
+    "H_P": "sum_r 1[strand_r != target_r(T_i,j,s)]"
+  },
+  "hardware_reading": "P is a qutrit sorter/mismatch counter; G is a two-bit D4 parity ancilla; E is a K4 equality-vs-edge counter; C is the BT1827 winding/phase-slip readout.",
+  "summary": "The remaining BT1824 finite operators P,G,E are realized as explicit local diagonal Hamiltonian/syndrome projector sums on the 12-symbol fibre. P is three qutrit mismatch projectors, G is two D4 glue-parity projectors, E is the three-edge K4 equality/edge-energy term, and C is the BT1827 winding syndrome. All four terms commute because they are computational-basis projector sums, and their spectra are uniform over all 27 Hesse table labels.",
+  "title": "P,G,E Hamiltonian Realization Theorem",
+  "verified": true
+}
