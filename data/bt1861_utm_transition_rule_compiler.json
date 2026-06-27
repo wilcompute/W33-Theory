@@ -1,0 +1,14 @@
+{
+  "bt": "BT1861",
+  "title": "UTM Transition-Rule Compiler",
+  "verified": true,
+  "alphabet": {"gap_track": {"S": 0, "L": 1}, "hole_track": "Z6", "composite_symbols": 12},
+  "rule_template": "Rule-110-style binary local update on the gap track, plus deterministic hole-track advance h -> h+1 mod 6",
+  "binary_rule_table": {"111": 0, "110": 1, "101": 1, "100": 0, "011": 1, "010": 1, "001": 1, "000": 0},
+  "compiled_transition": "T((a,h_a),(b,h_b),(c,h_c)) = (rule110(a,b,c), h_b+1 mod 6)",
+  "locality": {"radius": 1, "input_neighborhood_symbols": 3, "neighborhoods_over_12_symbol_alphabet": 1728, "distinct_output_symbols": 12},
+  "sample_transitions": [{"in": ["S0","S1","L2"], "out": "L2"}, {"in": ["L2","L3","L4"], "out": "S4"}, {"in": ["L5","S0","L1"], "out": "L1"}, {"in": ["S4","S5","S0"], "out": "S0"}],
+  "connection_to_BT1858": "BT1858 supplies the 12-symbol tape alphabet. BT1861 supplies a local transition rule on that alphabet.",
+  "checks": {"uses_12_symbol_alphabet": true, "uses_binary_gap_track": true, "uses_six_hole_track": true, "radius_one_local_rule": true, "covers_all_1728_neighborhoods": true, "does_not_claim_physical_universality_proof": true},
+  "boundary": "Transition-rule compiler only. It is Rule-110-style and executable as a symbolic local rule, but no full physical universal-machine simulation or halting/gadget proof is claimed."
+}
