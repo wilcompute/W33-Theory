@@ -1,0 +1,12 @@
+{
+  "bt": "BT1844",
+  "title": "F12 Mesh Verifier and Genus-6 Edge Bridge",
+  "verified": true,
+  "f12_mesh": {"modes": 12, "two_mode_rotations": 66, "formula": "n(n-1)/2", "reconstruction_error_frobenius": 2.351156386898407e-15},
+  "csaszar_side": {"v": 12, "h": 6, "edges": 66, "faces": 44, "formula": "h=(v-3)(v-4)/12, E=v(v-1)/2, F=2E/3", "v_mod_12": 0},
+  "szilassi_side": {"f": 12, "h": 6, "edges": 66, "vertices": 44, "formula": "h=(f-4)(f-3)/12, E=f(f-1)/2, V=2E/3", "f_mod_12": 0},
+  "bridge": {"common_object": "complete-pair schedule on 12 labels", "identity": "66 = C(12,2)", "f12_interpretation": "one Givens rotation for each unordered mode pair", "genus6_interpretation": "one edge for each unordered vertex pair in K12, or dually one adjacency edge for each unordered face pair"},
+  "verdict": "The 66-match is exact at the incidence-schedule level, not proof of a geometrically embedded genus-6 Csaszar/Szilassi realization.",
+  "checks": {"f12_rotation_count_is_C12_2": true, "csaszar_edges_are_C12_2": true, "szilassi_edges_are_C12_2": true, "dual_swap_V_F": true, "genus_is_6": true, "mod_12_condition_passes": true},
+  "boundary": "This proves a shared complete-pair combinatorics. It does not prove the unknown geometric non-self-crossing genus-6 polyhedron exists."
+}
