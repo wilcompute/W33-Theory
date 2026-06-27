@@ -1,0 +1,11 @@
+{
+  "bt": "BT1886",
+  "title": "Local Dual-Patch Splice/Build Runner",
+  "verified": true,
+  "updated_runner": "tools/run_bt1863_tex_splice_and_check.sh",
+  "calls_splice_script": "tools/apply_bt1857_holonet_patch.py",
+  "expected_output": "papers/BT1347_photonic_holonet_journal_with_BT1857_BT1880.tex",
+  "checks": {"output_file_required": true, "compiler_patch_label_required": true, "css_patch_label_required": true, "enumitem_nosep_rejected": true, "latexmk_or_pdflatex_attempted_if_available": true},
+  "script_result_boundary": "The runner is committed for local use. The GitHub connector cannot execute checkout shell scripts, so no remote PDF artifact is claimed.",
+  "status": "Reproducible local splice/build runner updated for both BT1857 and BT1880 patches."
+}
