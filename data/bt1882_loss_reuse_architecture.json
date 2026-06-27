@@ -1,0 +1,13 @@
+{
+  "bt": "BT1882",
+  "title": "Loss-Reuse Architecture",
+  "verified": true,
+  "goal": "Move BT1876 measurement closer to BT1879's ancilla-only survival regime by reusing the 66 payload paths across all five syndrome rounds.",
+  "architecture": {"payload_paths": 66, "reused_payload_paths": true, "check_ancillas": 56, "rounds": 5, "edge_check_touches": 264, "switching_layers": 5, "memory_delays": 4},
+  "resource_models": {"conservative_BT1879": {"active_resources": 122, "survival": 0.7832962313857886, "erasure": 0.21670376861421137, "unconditional_error_or_erasure_bound": 0.24925843528087804}, "ancilla_only_BT1879": {"active_resources": 56, "survival": 0.8939439964545421, "erasure": 0.10605600354545786, "unconditional_error_or_erasure_bound": 0.13861067021212453}, "reuse_with_switching_overhead": {"active_loss_units": 76, "survival": 0.8588264426049117, "erasure": 0.1411735573950883, "unconditional_error_or_erasure_bound": 0.17372822406175498}},
+  "improvement_vs_conservative": {"survival_gain": 0.0755302112191231, "erasure_reduction": 0.07553021121912308, "bound_reduction": 0.07553021121912306},
+  "schedule_rewrite": ["prepare 66 payload paths once", "round X0 measure 16 Reye faces", "round X1/X2 measure residual face halves", "round Z0/Z1 measure even/odd vertex stars", "reuse payload path phases; reset only check ancillas and switch fabric"],
+  "hardware_priority": ["low-loss switch fabric", "phase-stable payload memory across five rounds", "ancilla detector reset", "shared F12 edge-address bus"],
+  "checks": {"payload_reuse_modeled": true, "beats_conservative_survival": true, "does_not_beat_ideal_ancilla_only": true, "switching_overhead_included": true, "not_a_calibrated_threshold": true},
+  "boundary": "Architecture/budget model only. It does not prove a physical loss rate, a threshold, or a detailed optical layout."
+}
