@@ -1,0 +1,17 @@
+{
+  "bt": "BT1874",
+  "title": "Larger-Ring Rule-110 Glider Catalog",
+  "verified": true,
+  "input": "BT1871 BC/Sturmian larger-ring lift, extended to 16N steps",
+  "rings": [
+    {"length": 48, "steps": 768, "repeat": {"start": 120, "end": 216, "period": 96}, "ones_min": 15, "ones_max": 39, "entropy_min": 0.6962122601251458, "entropy_max": 1.0, "transitions_min": 10, "transitions_max": 34, "top_diagonals": [{"v": -2, "length": 26}, {"v": 0, "length": 21}, {"v": 10, "length": 21}, {"v": -10, "length": 18}]},
+    {"length": 78, "steps": 1248, "repeat": null, "ones_min": 24, "ones_max": 63, "entropy_min": 0.7062740891876007, "entropy_max": 1.0, "transitions_min": 16, "transitions_max": 56, "top_diagonals": [{"v": 0, "length": 130}, {"v": -4, "length": 46}, {"v": -8, "length": 38}, {"v": 3, "length": 30}]},
+    {"length": 126, "steps": 2016, "repeat": {"start": 759, "end": 766, "period": 7}, "ones_min": 36, "ones_max": 102, "entropy_min": 0.7024665512903903, "entropy_max": 1.0, "transitions_min": 24, "transitions_max": 92, "top_diagonals": [{"v": 10, "length": 1336}, {"v": -11, "length": 1335}, {"v": 3, "length": 1329}, {"v": -4, "length": 1323}, {"v": 0, "length": 198}]},
+    {"length": 204, "steps": 3264, "repeat": null, "ones_min": 60, "ones_max": 165, "entropy_min": 0.7039260680195971, "entropy_max": 1.0, "transitions_min": 40, "transitions_max": 148, "top_diagonals": [{"v": 0, "length": 388}, {"v": -4, "length": 88}, {"v": 3, "length": 68}, {"v": 10, "length": 42}]}
+  ],
+  "neighborhood_coverage": "all eight Rule-110 neighborhoods occur in every cataloged ring",
+  "catalog_verdict": "N=48 enters a period-96 finite-box orbit; N=126 enters a period-7 traveling-wave/glider-lock regime with very long diagonal packets; N=78 and N=204 do not repeat through 16N and retain high entropy/domain-wall activity. The dominant velocities recurring across rings are v=0, v=-4, v=3, and v=10/-11 aliases.",
+  "hole_phase_result": "The Z6 hole phase remains a uniform overlay and can be used to label glider phase classes, but binary Rule-110 dynamics determines the actual domain-wall packets.",
+  "checks": {"extended_to_16N": true, "all_neighborhoods_seen": true, "finite_box_periods_detected": true, "nonrepeating_rings_identified": true, "candidate_velocity_classes_extracted": true},
+  "boundary": "Finite larger-ring catalog only; no infinite Rule-110 glider theorem or physical universality proof is claimed."
+}
