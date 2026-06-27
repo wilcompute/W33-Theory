@@ -1,0 +1,27 @@
+{
+  "bt": "BT1893",
+  "title": "Holonet Claim-Ledger Consistency Audit",
+  "verified": true,
+  "source": "uploaded photonic_holonet.tex, 7332 lines, June 2026 machine-verified edition",
+  "audit_target": "Reconcile Appendix B residual-completeness language with the later state-of-the-solution table.",
+  "source_anchors": {
+    "architecture_completeness_section": "lines 2834-2853",
+    "R1_resolved_language": "lines 2855-2861",
+    "R2_reduced_language": "lines 2862-2870",
+    "R3_theorem_governed_language": "lines 2871-2876",
+    "state_of_solution_language": "lines 7139-7148",
+    "open_questions_table": "lines 7151-7168"
+  },
+  "ledger": {
+    "R1": {"appendix_status": "gauge-lattice embedding resolved", "later_status": "continuum Einstein-Hilbert lift remains open under the global state table", "consistent_reading": "finite E8/2E8 quadratic refinement and gauge lattice can be marked resolved; full continuum gravity must remain open"},
+    "R2": {"appendix_status": "moonshine datum supplied and matter-register bridge built", "later_status": "physical fermion-multiplet assignment and full CKM/PMNS matrices are not fully derived", "consistent_reading": "finite spectral/matter register bridge is exact or witnessed; phenomenological labelling and full mixing matrices remain open or fitted"},
+    "R3": {"appendix_status": "emergent-spacetime limit theorem-governed by known convergence results", "later_status": "continuum Einstein-Hilbert gravity lift is the principal open piece", "consistent_reading": "conditional/literature-backed convergence path exists; the constructive physical continuum lift is not yet a completed derivation"}
+  },
+  "recommended_public_language": [
+    "The finite Holonet machine is specified end-to-end as a computational architecture.",
+    "R1 finite gauge-lattice data are fixed at the E8/2E8 and E8-lift level, but the continuum gravity lift remains a separate open dynamical question.",
+    "R2 supplies moonshine traces and a finite matter-register bridge; the physical fermion assignment and full mixing matrices remain downstream tasks.",
+    "R3 should be stated as theorem-governed conditional convergence, not as a fully derived continuum Einstein-Hilbert construction."
+  ],
+  "hard_boundary": "Do not say R1/R2/R3 are all completely solved without qualifiers. The safe claim is: machine-complete finite architecture, with finite lattice/register data fixed and remaining physical/continuum identifications classified."
+}
