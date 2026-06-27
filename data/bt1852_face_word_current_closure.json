@@ -1,0 +1,13 @@
+{
+  "bt": "BT1852",
+  "title": "Face-Word Current Closure Test",
+  "verified": true,
+  "source": "BT1850 face words on the MCXCII Reye-K12 horizon completion",
+  "current_rule": "for oriented face (a,b,c), currents are (b-a, c-b, a-c) mod 12",
+  "counts": {"faces": 44, "closed_mod_12": 44, "ordinary_flat": 32, "antipodal_flat": 12, "twisted_nonzero": 0},
+  "split": {"reye": {"faces": 16, "ordinary_flat": 12, "antipodal_flat": 4, "twisted_nonzero": 0}, "residual": {"faces": 28, "ordinary_flat": 20, "antipodal_flat": 8, "twisted_nonzero": 0}},
+  "antipodal_faces": [[2,8,5],[3,9,7],[4,5,11],[4,10,6],[0,5,6],[0,11,5],[0,6,10],[1,10,4],[1,6,7],[1,7,11],[2,6,8],[3,6,9]],
+  "interpretation": "All 44 face words are flat in Z/12Z. The only nonordinary flats are exactly the 12 triangles containing one distance-6 antipodal edge, so the six genus-hole parity symbols should absorb antipodal sheet data rather than ordinary curvature.",
+  "checks": {"all_faces_close_mod_12": true, "no_twisted_nonzero_faces": true, "antipodal_faces_count_12": true, "reye_residual_split_preserved": true, "compatible_with_BT1849_global_sheet_bit": true},
+  "boundary": "Current closure is a finite Z/12Z incidence result, not an optical phase-noise measurement."
+}
