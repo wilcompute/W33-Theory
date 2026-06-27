@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BT1900 Single-Photon Holonet Demonstrator Raw Shot Row",
+  "type": "object",
+  "required": ["shot_id", "witting_tetrad", "alice_slot", "bob_slot", "logical_pair_type", "transaction_tick", "time_bin", "detector_id", "polarization_setting", "tritter_phase_setting", "modulator_phase", "click_pattern", "dark_reference", "loss_probe", "accepted_flag", "witness_class"],
+  "properties": {
+    "shot_id": {"type": "integer", "minimum": 0},
+    "witting_tetrad": {"type": "integer", "minimum": 0, "maximum": 39},
+    "alice_slot": {"type": "integer", "minimum": 0, "maximum": 3},
+    "bob_slot": {"type": "integer", "minimum": 0, "maximum": 3},
+    "logical_pair_type": {"type": "string", "enum": ["same_ray", "compatible_distinct", "retry_shadow"]},
+    "transaction_tick": {"type": "integer", "minimum": 0, "maximum": 71},
+    "time_bin": {"type": "integer", "minimum": 0, "maximum": 2047},
+    "detector_id": {"type": "string", "minLength": 1},
+    "polarization_setting": {"type": "string"},
+    "tritter_phase_setting": {"type": "string"},
+    "modulator_phase": {"type": "number"},
+    "click_pattern": {"type": "string"},
+    "dark_reference": {"type": "boolean"},
+    "loss_probe": {"type": "boolean"},
+    "accepted_flag": {"type": "boolean"},
+    "witness_class": {"type": "string", "enum": ["diagonal_contextual", "off_diagonal_data", "calibration", "guard", "unknown"]}
+  },
+  "additionalProperties": true
+}
