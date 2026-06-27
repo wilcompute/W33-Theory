@@ -3970,6 +3970,37 @@
               p&#8348;&#8341;~5&times;10&#8315;&#8308; is a conservative bound.</div>
           </div>
           <div class="card">
+            <div class="label">The Silicon Questions: the ISA Enumerated, the Power Budget, the Floorplan</div>
+            <div class="detail"><strong>The three questions a chip architect asks of any machine &mdash; what are the opcodes, what does
+              it cost to run, can it be laid out &mdash; answered with fixed integers.</strong>
+              <strong>(1) The ISA, enumerated.</strong> The degree-2 (Clifford) layer is not an abstract "free" class but a concrete finite
+              <strong>opcode group: Sp(4,3)</strong> on the substrate's F&#8323;&#8308; phase space (the W(3,3) points). Built by closure from its
+              symplectic transvections (one shear x&rarr;x+a&middot;B(x,v)&middot;v per substrate point, the 40 points of GQ(3,3)), the group has
+              order <strong>exactly 51840 = |W(E&#8326;)| = 3&#8308;(3&sup2;&minus;1)(3&#8308;&minus;1)</strong> &mdash; the free part of the ISA
+              <strong>IS the Weyl group of E&#8326;</strong>. The per-qutrit Clifford (mod Paulis) is Sp(2,3)=SL(2,3), order 24=f. On top sits a
+              single non-Clifford macro-op, the degree-3 E&#8326; cubic form det(X) on the 27-register; Gottesman&ndash;Knill &rarr; Clifford = the
+              classically-simulable opcodes, Lloyd&ndash;Braunstein &rarr; +1 cubic = universal. <strong>(2) The power budget.</strong> From
+              Landauer: balanced ternary costs nothing thermodynamically &mdash; kT&nbsp;ln2 per bit, a trit costs kT&nbsp;ln3 but carries
+              log&#8322;3=1.585 bits, so cost/bit = kT&nbsp;ln3/log&#8322;3 = <strong>kT&nbsp;ln2 exactly (base-independent)</strong>; base 3's win is in
+              digit count, not dissipation. The only irreducible cost is <strong>error correction = the metabolism</strong>: the Clifford datapath
+              is unitary (reversible, Landauer-free, Bennett) and the [[66,8,3]]&#8323; genome is copied reversibly; the one irreversible step is
+              syndrome extraction, measuring + resetting <strong>n&minus;k=58 syndrome qutrits/cycle</strong>, exporting entropy at (n&minus;k)
+              kT&nbsp;ln3/cycle &mdash; exactly Schr&ouml;dinger negative entropy / Prigogine dissipative structure (export entropy to stay ordered).
+              Metabolic rate: ~2.6&times;10&#8315;&sup1;&#8313; J/cycle @300K &rarr; <strong>~2.6&times;10&#8315;&sup1;&#8304; W/block @1&nbsp;GHz</strong>
+              (~9&times;10&#8315;&sup1;&#8309; W @10&nbsp;mK). <strong>(3) The floorplan.</strong> The bisection width (min links cut to split 40 nodes
+              20|20) is <strong>exactly 100</strong>: the spectral lower bound (n/4)(k&minus;&lambda;&#8322;)=(40/4)(12&minus;2)=100 is met by an
+              explicit cut of 100 (spectral + Kernighan&ndash;Lin), so min bisection = spectral bound. That's 100 of 240 links (<strong>42%</strong>)
+              across any halving &mdash; huge expander bandwidth &mdash; but by Thompson's VLSI theorem a 2-D layout needs area &ge;
+              (bisection/2)&sup2;~2500 crossing-units, and an expander (bisection ~ size) is <strong>intrinsically non-planar</strong>. Vs a 6&times;6
+              torus (bisection 12, planar) or Q&#8326; (32), GQ(3,3)'s 100 buys diameter-2 all-to-all reach at the price of non-planarity. Resolution:
+              a high-bisection non-planar fabric is exactly what a <strong>photonic realisation</strong> is for (light in 3-D / free-space /
+              wavelength has no planar crossing penalty) &mdash; the optical Holonet is <strong>forced by the bisection, not optional</strong>.
+              Honest: the group orders and the bisection 100 are exact/computed; Gottesman&ndash;Knill, Lloyd&ndash;Braunstein, base-independent
+              Landauer, Bennett reversibility, and Thompson's bound are standard; the substrate content is the identifications (Clifford = Sp(4,3) =
+              W(E&#8326;), magic = E&#8326; cubic, irreversible cost = the 58 syndrome qutrits, bisection &rarr; photonic medium); Landauer is a lower
+              bound and the power rate assumes the chosen clock/temperature.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

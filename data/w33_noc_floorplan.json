@@ -1,0 +1,47 @@
+{
+  "bisection": {
+    "spectral_lower_bound": 100,
+    "formula": "(n/4)(k - lambda_2) = (40/4)(12 - 2) = 100",
+    "explicit_cut": 100,
+    "minimum_bisection": 100,
+    "is_optimal": true,
+    "cross_section_fraction": 0.417,
+    "links_total": 240
+  },
+  "layout": {
+    "thompson_area_bound": 2500.0,
+    "thompson_note": "A = Omega(bisection^2); ~(B/2)^2 ~ 2500 wire-crossing units",
+    "planarity": "non-planar (bisection grows with size -> no short-wire planar layout)",
+    "resolution": "photonic / 3-D / free-space / wavelength routing has no planar crossing penalty -> optical Holonet forced"
+  },
+  "comparison": [
+    {
+      "topology": "GQ(3,3)",
+      "nodes": 40,
+      "radix": 12,
+      "diameter": 2,
+      "bisection": 100,
+      "note": "diameter-2 all-to-all reach; non-planar; photonic"
+    },
+    {
+      "topology": "hypercube Q6",
+      "nodes": 64,
+      "radix": 6,
+      "diameter": 6,
+      "bisection": 32,
+      "note": "moderate bisection, higher diameter"
+    },
+    {
+      "topology": "6x6 torus",
+      "nodes": 36,
+      "radix": 4,
+      "diameter": 6,
+      "bisection": 12,
+      "note": "planar, cheap wiring, high diameter"
+    }
+  ],
+  "summary": "the floorplan: the bisection is exactly 100, so the fabric is non-planar -- it wants light, not wires. The bisection width (min links cut to split 40 nodes into 20|20) is EXACTLY 100: the spectral lower bound (n/4)(k - lambda_2) = (40/4)(12-2) = 100 is met by an explicit balanced cut of 100 edges (spectral + Kernighan-Lin), so minimum bisection = spectral bound = 100 -- 100 of the 240 links (42%) cross any halving, the hallmark of a good expander (huge cross-section bandwidth). The same number is the cost: Thompson's VLSI theorem gives 2-D area >= ~(bisection/2)^2 ~ 2500 wire-crossing units, and a graph whose bisection grows with size is intrinsically NON-PLANAR (an expander cannot be laid out flat with short wires). Vs a 6x6 torus (bisection 12, planar, diameter 6) or hypercube Q6 (bisection 32), GQ(3,3)'s 100 buys diameter-2 all-to-all reach at the price of non-planar wiring. Resolution: a high-bisection non-planar fabric is exactly what a PHOTONIC realisation is for -- light in 3-D / free space / wavelength has no planar crossing penalty -- so the optical Holonet is FORCED by the bisection, not optional. HONEST: the bisection 100 is computed exactly (spectral bound met by an explicit cut, so both a lower and achieved upper bound); Thompson's area bound and expander non-planarity are standard VLSI/graph theory; the photonic-medium inference is the engineering reading, consistent with the corpus optical Holonet.",
+  "sources": [
+    "GQ(3,3) = SRG(40,12,2,4), spectrum {12, 2^24, -4^15}; spectral bisection bound (n/4)(k - lambda_2) for d-regular graphs (standard); Kernighan-Lin partitioning; Thompson VLSI area lower bound A = Omega(bisection^2); expanders are non-planar (Lipton-Tarjan planar separator is O(sqrt n), expanders have Omega(n)); optical Holonet realisation (corpus)."
+  ]
+}

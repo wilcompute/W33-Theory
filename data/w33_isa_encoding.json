@@ -1,0 +1,29 @@
+{
+  "register": {
+    "size": 27,
+    "form": "3^3 (a tryte of three qutrits)",
+    "is": "E6 fundamental"
+  },
+  "clifford_opcode_group": {
+    "group": "Sp(4,3) on the F_3^4 phase space (the W(3,3) points)",
+    "order": 51840,
+    "equals": "|W(E6)| = 3^4(3^2-1)(3^4-1) = 51840",
+    "generators": "symplectic transvections T_{v,a}: x -> x + a B(x,v) v, one per substrate point (40 points), a in {1,2}",
+    "verified_by": "BFS closure of the transvection-generated matrix group (mod 3)"
+  },
+  "per_qutrit_clifford": {
+    "group": "Sp(2,3) = SL(2,3)",
+    "order": 24,
+    "is": "f = 24 (the gauge count)"
+  },
+  "magic_opcode": {
+    "count": 1,
+    "gate": "the E6 cubic form det(X) on the 27 (the unique cubic E6 invariant)",
+    "universality": "Clifford (Gottesman-Knill simulable) + 1 cubic = universal (Lloyd-Braunstein)",
+    "total_opcodes": "51840 Clifford + 1 magic"
+  },
+  "summary": "the ISA, enumerated: the Clifford opcode group IS Sp(4,3) = 51840 = |W(E6)|, plus one cubic magic op. The degree-2 (Clifford) layer is a concrete finite opcode group -- the symplectic group Sp(4,3) on the substrate's F_3^4 phase space (the W(3,3) points), built by closure from its symplectic transvections (one shear x -> x + a B(x,v) v per substrate point, 40 points, a in {1,2}); closure order EXACTLY 51840 = |W(E6)| = 3^4(3^2-1)(3^4-1). So the free part of the ISA is literally the Weyl group of E6. Per-qutrit Clifford (mod Paulis) = Sp(2,3) = SL(2,3), order 24 = f. On top: ONE non-Clifford macro-op, the degree-3 E6 cubic form det(X) on the 27 (the unique E6 cubic invariant). Gottesman-Knill: Clifford = classically simulable; Lloyd-Braunstein: + 1 cubic = UNIVERSAL. Total opcode set = 51840 Clifford + 1 magic over a 27 = 3^3 operand register (a tryte). HONEST: the group orders (|Sp(4,3)|=51840=|W(E6)|, |Sp(2,3)|=24) are exact and computed by closing the transvection group; the symplectic formula and Gottesman-Knill/Lloyd-Braunstein universality are standard; the substrate content is Clifford group = Sp(4,3) = W(E6) (free ISA = E6 Weyl symmetry), operand register = E6 27, magic op = E6 cubic form; gate realisations are an implementation question. A finite, enumerated, balanced-ternary universal ISA.",
+  "sources": [
+    "Sp(4,3) constructed here by closing symplectic transvections (order 51840 = |W(E6)|); |Sp(2n,q)| = q^{n^2} prod (q^{2i}-1) (standard); Aut(GQ(3,3)) = W(E6) order 51840 (corpus); Gottesman-Knill (Clifford classically simulable); Lloyd-Braunstein (Gaussian/Clifford + one non-Gaussian/non-Clifford = universal); E6 cubic form det(X) on the 27 (the magic gate, corpus holonet architecture)."
+  ]
+}

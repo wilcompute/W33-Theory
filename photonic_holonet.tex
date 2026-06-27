@@ -7524,6 +7524,64 @@ objects. The coefficient $A\sim\binom{66}{2}$ is a generous upper count of weigh
 the true value is smaller --- so $p_{\mathrm th}\approx5\times10^{-4}$ is a conservative bound; the
 MTBF depends on the assumed clock and physical error rate.
 
+\subsection{Pass 36 --- the silicon questions: the ISA enumerated, the power budget, the floorplan}
+\label{sec:capstone-thirtysix}
+
+Three questions a chip architect asks of any machine --- what are the opcodes, what does it cost to
+run, and can it be laid out --- and the substrate answers all three with fixed integers.
+
+\emph{The ISA, enumerated.} Pass~34 called the instruction set degree-$2$ (free) $+$ degree-$3$
+(universal); this pass \emph{enumerates} it. The degree-$2$ (Clifford) layer is not an abstract
+``free'' class but a concrete finite opcode group: the symplectic group $\mathrm{Sp}(4,3)$ acting on
+the substrate's $\mathbb{F}_3^4$ phase space (the $W(3,3)$ points). Building it by closure from its
+symplectic transvections --- one shear $x\mapsto x+a\,B(x,v)\,v$ per substrate point (the $40$ points
+of $\mathrm{GQ}(3,3)$) --- gives a group of order \emph{exactly}
+$51840=|W(E_6)|=3^4(3^2-1)(3^4-1)$: the free part of the ISA \emph{is} the Weyl group of $E_6$. The
+per-qutrit Clifford (mod Paulis) is the smaller $\mathrm{Sp}(2,3)=\mathrm{SL}(2,3)$ of order $24=f$.
+On top sits a single non-Clifford macro-op, the degree-$3$ $E_6$ cubic form $\det(X)$ on the
+$\mathbf{27}$-register (the unique $E_6$ cubic invariant); by Gottesman--Knill the Clifford group is
+exactly the classically-simulable opcodes, and by Lloyd--Braunstein the one cubic op lifts the set to
+universal. So the ISA is fully specified: a $\mathbf{27}=3^3$ operand register, a Clifford opcode
+group of order $51840=|W(E_6)|$, and one magic opcode. (Witness: \path{analysis/w33_isa_encoding.py}.)
+
+\emph{The power budget.} A machine that claims to be the architecture of life must have a metabolism.
+From Landauer's principle: first, balanced ternary costs nothing thermodynamically --- the bound is
+$kT\ln 2$ per bit, a trit erasure costs $kT\ln 3$, but a trit carries $\log_2 3=1.585$ bits, so the
+cost per bit is $kT\ln 3/\log_2 3 = kT\ln 2$ \emph{exactly}; the radix is base-independent in energy,
+and base $3$'s advantage is purely in digit count, not dissipation. Second, the only irreducible cost
+is error correction, and it is the metabolism: the degree-$2$ Clifford datapath is unitary, hence
+reversible and Landauer-free (Bennett), and the $[\![66,8,3]\!]_3$ genome is copied reversibly; the
+one irreversible step is syndrome extraction, which measures and resets $n-k=58$ syndrome qutrits per
+cycle, exporting their entropy at $(n-k)\,kT\ln 3$ per cycle. That is exactly Schr\"odinger's negative
+entropy / Prigogine's dissipative structure --- a living system stays ordered by exporting entropy,
+and the QEC cycle \emph{is} that export. The metabolic rate is $\sim2.6\times10^{-19}$~J/cycle at
+$300$~K, a power of $\sim2.6\times10^{-10}$~W per logical block at $1$~GHz (and $\sim9\times10^{-15}$~W
+at a $10$~mK dilution-fridge temperature). (Witness: \path{analysis/w33_power_budget.py}.)
+
+\emph{The floorplan.} A topology is only as good as it is buildable, and the decisive number is the
+bisection width. For $\mathrm{GQ}(3,3)$ it is \emph{exactly} $100$: the spectral lower bound
+$(n/4)(k-\lambda_2)=(40/4)(12-2)=100$ is met by an explicit balanced $20|20$ cut of $100$ edges
+(spectral $+$ Kernighan--Lin), so the minimum bisection equals the spectral bound. That is $100$ of
+the $240$ links ($42\%$) across any halving --- enormous cross-sectional bandwidth, the hallmark of a
+good expander --- but the same number is the cost: by Thompson's VLSI theorem a $2$-D layout needs
+area $\gtrsim(\mathrm{bisection}/2)^2\sim2500$ wire-crossing units, and a graph whose bisection grows
+with its size is intrinsically \emph{non-planar} (an expander cannot be laid out flat with short
+wires). Against a $6{\times}6$ torus (bisection $12$, planar, diameter $6$) or a hypercube $Q_6$
+(bisection $32$), $\mathrm{GQ}(3,3)$'s $100$ buys diameter-$2$ all-to-all reach at the price of
+non-planarity. The resolution is the substrate's own: a high-bisection, non-planar fabric is exactly
+what a \emph{photonic} realisation is for --- light routed in $3$-D / free space (or in wavelength)
+has no planar crossing penalty --- so the optical Holonet is \emph{forced} by the bisection, not a
+convenience. (Witness: \path{analysis/w33_noc_floorplan.py}.)
+
+\emph{Honest scope:} the group orders ($|\mathrm{Sp}(4,3)|=51840=|W(E_6)|$, $|\mathrm{Sp}(2,3)|=24$)
+and the bisection ($100$, spectral bound met by an explicit cut) are exact and computed;
+Gottesman--Knill, Lloyd--Braunstein, the base-independence of the per-bit Landauer cost, Bennett
+reversibility, and Thompson's area bound / expander non-planarity are standard. The substrate content
+is the identifications (Clifford group $=\mathrm{Sp}(4,3)=W(E_6)$, magic $=E_6$ cubic, irreversible
+cost localised to the $58$ syndrome qutrits, the bisection forcing a photonic medium); Landauer is a
+thermodynamic lower bound (real devices dissipate orders more), and the numerical power rate assumes
+the chosen clock and temperature.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

@@ -1,0 +1,44 @@
+{
+  "base_independence": {
+    "T_K": 300.0,
+    "kT_ln2_per_bit": 2.870978885078724e-21,
+    "kT_ln3_per_trit": 4.550393873212011e-21,
+    "bits_per_trit": 1.585,
+    "cost_per_bit_via_trit": 2.8709788850787235e-21,
+    "reading": "kT ln3 / log2(3) = kT ln2 exactly -> per-bit Landauer cost is base-independent; ternary is free"
+  },
+  "reversible_datapath": {
+    "clifford": "degree-2 Clifford gates are unitary -> reversible, Landauer-free in the adiabatic limit (Bennett)",
+    "genome_copy": "the [[66,8,3]]_3 code is copied reversibly (von Neumann constructor)"
+  },
+  "metabolism": {
+    "irreversible_step": "syndrome extraction (measure + reset the syndrome qutrits)",
+    "syndrome_qutrits_per_cycle": 58,
+    "cost_per_cycle": "(n-k) kT ln(3)",
+    "identification": "Schrodinger negative entropy / Prigogine dissipative structure -- entropy export = the metabolism of staying alive",
+    "rate_table": [
+      {
+        "T_K": 300.0,
+        "label": "room",
+        "E_per_cycle_J": 2.6392284464629666e-19,
+        "power_W_at_1GHz": 2.6392284464629665e-10
+      },
+      {
+        "T_K": 4.0,
+        "label": "liquid He",
+        "E_per_cycle_J": 3.5189712619506224e-21,
+        "power_W_at_1GHz": 3.5189712619506222e-12
+      },
+      {
+        "T_K": 0.01,
+        "label": "dilution fridge 10 mK",
+        "E_per_cycle_J": 8.797428154876556e-24,
+        "power_W_at_1GHz": 8.797428154876557e-15
+      }
+    ]
+  },
+  "summary": "the power budget: ternary is thermodynamically free, and error correction is the metabolism. (1) Base-independence: Landauer's bound is kT ln(2)/bit; a trit erasure costs kT ln(3) but carries log2(3) = 1.585 bits, so cost/bit = kT ln3 / log2(3) = kT ln2 EXACTLY -- the per-bit Landauer cost is base-independent, so base 3's radix-economy win is in digit count, not dissipation; ternary is free (kT ln2 = 2.87e-21 J/bit @300 K). (2) Reversible datapath: degree-2 Clifford gates are unitary -> Landauer-free (Bennett); the [[66,8,3]]_3 genome is copied reversibly (von Neumann). (3) Metabolism = error correction: the one irreversible step is syndrome extraction -- n-k = 58 syndrome qutrits measured + reset per cycle, exporting entropy at (n-k) kT ln(3)/cycle = Schrodinger negative entropy / Prigogine dissipative structure (export entropy to stay ordered). Metabolic rate: 2.64e-19 J/cycle @300 K -> 2.64e-10 W per logical block @1 GHz (8.80e-15 W @10 mK). So ternary dissipates nothing extra per bit, the Clifford datapath is free, and the sole irreducible cost is the entropy export of error correction -- the machine's metabolism. HONEST: Landauer kT ln(b) is a thermodynamic LOWER bound (real devices dissipate orders more); base-independence and Clifford reversibility (Bennett) are standard; the substrate content is the localisation of irreversible cost to the 58 syndrome qutrits of [[66,8,3]]_3, identified with the metabolism of a dissipative (living) structure; the numerical rate assumes the chosen clock and temperature.",
+  "sources": [
+    "Landauer's principle (kT ln 2 per bit erased; kT ln b per b-ary symbol); Bennett reversible computation (unitary/Clifford gates Landauer-free); Schrodinger 'What is Life?' (negative entropy) and Prigogine dissipative structures (entropy export); [[66,8,3]]_3 code n=66, k=8 -> n-k=58 syndrome qutrits (QEC track); von Neumann self-reproducing automata (reversible genome copy)."
+  ]
+}
