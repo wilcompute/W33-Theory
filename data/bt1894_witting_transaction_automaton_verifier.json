@@ -1,0 +1,12 @@
+{
+  "bt": "BT1894",
+  "title": "Witting Transaction Automaton Verifier",
+  "verified": true,
+  "source": "uploaded photonic_holonet.tex",
+  "logical_table": {"total": 1600, "same_ray": 40, "compatible_distinct": 480, "retry_shadow": 1080, "accepted": 520, "accepted_rate": "13/40"},
+  "physical_frame_table": {"witting_tetrads": 40, "alice_slots": 4, "bob_slots": 4, "total_records": 640, "diagonal_witness": 160, "off_diagonal_data": 480, "extra_context_records": 120},
+  "tick_counts": {"ticks_per_frame": 72, "full_logical_envelope": 115200, "accepted_logical_ticks": 37440, "physical_frame_ticks": 46080, "four_aperture_ticks": 288},
+  "checks": {"logical_split_sums_to_1600": true, "accepted_is_40_plus_480": true, "physical_is_40_times_4_times_4": true, "physical_split_sums_to_640": true, "full_envelope_is_1600_times_72": true, "accepted_ticks_is_520_times_72": true, "physical_ticks_is_640_times_72": true},
+  "source_absence_note": "The exact 2048=1600+448 time-bin envelope formula was not found in the uploaded TeX source used for this pass.",
+  "boundary": "Finite scheduler/accounting verifier only."
+}
