@@ -1,0 +1,13 @@
+{
+  "bt": "BT1904",
+  "title": "Exact Binomial/Bayesian Contextual-Fraction Estimator",
+  "verified": true,
+  "script": "analysis/bt1904_exact_contextual_fraction_estimator.py",
+  "input_format": "BT1900 JSONL raw shot table",
+  "upgrades_over_BT1901": ["exact two-sided binomial p-value for H0 p=1/10", "Bayesian Beta(1,1) posterior summary", "equal-tail credible interval from dependency-free grid quadrature", "retains BT1901 dark/loss corrected point estimate"],
+  "default_alpha": 0.05,
+  "target": "1/10",
+  "fixture": "data/bt1903_synthetic_demonstrator_fixture.jsonl",
+  "expected_fixture_behavior": {"signal_rows": 16, "signal_clicks": 2, "raw_fraction": 0.125, "corrected_contextual_fraction": 0.125, "compatible_with_one_tenth_at_alpha_0p05": true},
+  "boundary": "Exact signal-count estimator and Bayesian report only; full detector calibration and preregistered final analysis remain future work."
+}
