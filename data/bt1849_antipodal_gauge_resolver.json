@@ -1,0 +1,12 @@
+{
+  "bt": "BT1849",
+  "title": "Distance-6 Antipodal Gauge Resolver",
+  "verified": true,
+  "obstruction": "In Z/12Z, distance +6 equals distance -6, so the six antipodal K12/F12 pairs have no intrinsic cyclic orientation from phase distance alone.",
+  "repo_anchors": ["analysis/BT1847_F12_to_K12_functor.md", "analysis/bt1825_d5_coxeter_defect_involution.py", "analysis/BT1826_finite_law_theorem.md", "analysis/w33_reye_k12_orientable_horizon_completion.py"],
+  "antipodal_pairs": [[0,6],[1,7],[2,8],[3,9],[4,10],[5,11]],
+  "minimal_gauge": {"name": "global antipodal sheet bit", "group": "Z2", "bit_0_orientation": "i -> i+6 for i=0..5", "bit_1_orientation": "i+6 -> i for i=0..5", "local_bits_needed": 0, "global_bits_needed": 1},
+  "resolved_currents_bit0": [{"edge":[0,6],"oriented":[0,6],"current":6},{"edge":[1,7],"oriented":[1,7],"current":6},{"edge":[2,8],"oriented":[2,8],"current":6},{"edge":[3,9],"oriented":[3,9],"current":6},{"edge":[4,10],"oriented":[4,10],"current":6},{"edge":[5,11],"oriented":[5,11],"current":6}],
+  "checks": {"six_antipodal_pairs": true, "one_global_bit_resolves_all_ties": true, "no_zero_current_edges": true, "compatible_with_BT1846_lower_to_upper_rule": true, "compatible_with_BT1825_antipodal_involution_language": true},
+  "boundary": "This resolves the combinatorial orientation tie. It does not choose a physical chip routing polarity."
+}
