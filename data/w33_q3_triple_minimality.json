@@ -1,0 +1,32 @@
+{
+  "selection": {
+    "rule": "q! = 2q",
+    "solutions": [
+      3
+    ],
+    "unique": 3,
+    "shared_value": 6,
+    "meaning": "6 = 2q = KO-dimension -> 4D"
+  },
+  "cp_violation": {
+    "phase_count": "(n-1)(n-2)/2",
+    "minimal_n_gen": 3,
+    "note": "Kobayashi-Maskawa; first physical phase at n=3; CP violation observed"
+  },
+  "fault_tolerance": {
+    "corrects": "floor((d-1)/2)",
+    "minimal_distance": 3,
+    "substrate_code": "[[66,8,3]]_3"
+  },
+  "shared_3": {
+    "q_color": 3,
+    "n_generations": 3,
+    "code_distance": 3,
+    "identity": "d = q = n_gen = 3",
+    "reading": "the 3 generations are the distance-3 fault-tolerant redundancy"
+  },
+  "summary": "why 3? over-determined -- three independent minimalities, one answer. (1) Substrate selection q! = 2q: unique solution q=3 (3!=6=2*3), shared value 6=2q=KO-dimension->4D. (2) CP violation (Kobayashi-Maskawa): physical CKM phases (n-1)(n-2)/2 first nonzero at n=3, so three generations is the MINIMUM for the observed CP violation. (3) Fault tolerance: distance-d corrects floor((d-1)/2) errors, so d=3 is the minimum single-error-correcting distance; the substrate code is [[66,8,3]]_3. The substrate realizes all three: q=3 colors, 3 generations (Sp(4,3)=three copies), code distance d=3. So the SAME 3 is color = generations = code distance (d=q=n_gen), and the minimum for self-doubling, CP, and fault tolerance. Three different KINDS of constraint (arithmetic, representation-theoretic, coding-theoretic), not implying one another, all select 3 -- the 3 generations ARE the distance-3 redundancy. HONEST: q!=2q is the substrate's chosen rule; the KM and distance-3 minima are standard theorems whose landing on q=3/d=3 is the genuine convergence; the 'universe runs the minimal code' reading is interpretation. A real over-determination of 3.",
+  "sources": [
+    "q!=2q selection (corpus selection principle / website spine); Kobayashi-Maskawa CP phase count (n-1)(n-2)/2; quantum-code distance bound floor((d-1)/2); substrate [[66,8,3]]_3 code (other agent, merged BT1875); 3 generations Sp(4,3)=W(E6) (w33_information_structure.py)."
+  ]
+}

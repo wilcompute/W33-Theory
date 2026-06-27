@@ -1,0 +1,86 @@
+{
+  "faces": {
+    "combinatorics": "SRG(40,12,2,4) = GQ(3,3) generalized quadrangle (self-dual)",
+    "physics": "KO-dim-6 spectral triple -> 4D + Standard Model + cosmology",
+    "computation": "[[66,8,3;5]]_3 code on the genus-6 K_12 surface (E6 roots)",
+    "dynamics": "QCA, topological index 27, universal (Rule-110) computation"
+  },
+  "spine": {
+    "3": {
+      "=": "q",
+      "graph": "parameter q",
+      "physics": "color SU(3) / 3 generations",
+      "code": "distance d",
+      "dynamics": "Z_3 grading"
+    },
+    "6": {
+      "=": "2q",
+      "graph": "-",
+      "physics": "KO-dimension -> 4D",
+      "code": "genus / rank E6 / 6 parity",
+      "dynamics": "-"
+    },
+    "12": {
+      "=": "k",
+      "graph": "valency",
+      "physics": "k = q(q+1)",
+      "code": "vertices / 2g logical",
+      "dynamics": "C_12 clock / Z3x(Z2)^2 fibre"
+    },
+    "27": {
+      "=": "q^q",
+      "graph": "complement valency k-bar",
+      "physics": "E6 fundamental / matter shell",
+      "code": "protected logical content",
+      "dynamics": "QCA topological index"
+    },
+    "40": {
+      "=": "v",
+      "graph": "points = lines",
+      "physics": "1+12+27 causal decomposition",
+      "code": "-",
+      "dynamics": "cells"
+    },
+    "72": {
+      "=": "roots(E6)",
+      "graph": "-",
+      "physics": "seesaw-floor e-folds (q+2)Phi3+Phi6",
+      "code": "code length n",
+      "dynamics": "-"
+    },
+    "240": {
+      "=": "roots(E8)",
+      "graph": "-",
+      "physics": "CC boson-fermion balance f*Phi4=g*mu^2",
+      "code": "-",
+      "dynamics": "-"
+    },
+    "30": {
+      "=": "beat=h(E8)",
+      "graph": "-",
+      "physics": "inflation clock N=2 beat",
+      "code": "syndrome cycle",
+      "dynamics": "BC quasicrystal tape"
+    }
+  },
+  "identities": {
+    "6 = 2q": true,
+    "27 = q^q": true,
+    "40 = 1+12+27": true,
+    "72 = roots(E6) = (q+2)Phi3+Phi6": true,
+    "12 = q(q+1)": true,
+    "30 = h(E8) = Phi3+Phi4+Phi6": true,
+    "240 = roots(E8) = 24*10 = 15*16": true
+  },
+  "closure": {
+    "qca_topological_index": 27,
+    "e6_fundamental": 27,
+    "srg_matter_shell": 27,
+    "all_27": true,
+    "reading": "QCA invariant = E6 matter = protected logical content = 27; the machine computes the world and the world is the machine's protected state"
+  },
+  "summary": "the architecture as a whole: one finite object W(3,3)=SRG(40,12,2,4)=GQ(3,3), four faces, one integer spine, a self-referential closure. Faces: (i) combinatorics (the SRG/GQ); (ii) physics (KO-dim-6 spectral triple -> 4D + SM + cosmology); (iii) computation ([[66,8,3;5]]_3 code on the genus-6 K_12 surface = E6 roots); (iv) dynamics (QCA, topological index 27, universal Rule-110 computation). The SAME integers structure all four: 3=q=color=generations=code distance; 6=2q=KO-dim=rank E6=genus=6 parity; 12=valency=code vertices=Z3x(Z2)^2 fibre; 27=q^q=E6 fundamental=matter shell=QCA index=complement valency; 40=points=1+12+27; 72=roots(E6)=code length=seesaw floor (q+2)Phi3+Phi6; 240=roots(E8)=CC balance; beat=30=h(E8)=inflation clock=QEC syndrome/BC tape. CLOSURE: the QCA runs the code that protects the physics, and the QCA invariant 27 IS the E6 matter shell (40=1+12+27) -- 27=27=27, so the machine's conserved quantity is its own physics. HONEST: integer identities exact; 'four faces one object' = one W(3,3) underlies all four (shown by shared integers); the 'machine computes the world' closure is the architectural reading of the exact 27=27=27 identity, not a separate dynamical theorem. The substrate is a graph, a spacetime, a code, and a computation at once.",
+  "sources": [
+    "SRG(40,12,2,4)=GQ(3,3) (w33_homology); KO-dim-6 spectral triple (Connes/Pillar tracks); [[66,8,3;5]]_3 genus-6 K12 code (other agent BT1855/1875, merged; w33_machine_world_bridge.py); QCA topological index 27 (Pillar 64, w33_w33_as_qca / w33_qca_pillar64.json); 40=1+12+27 (w33_information_structure.py); E6 roots 72 / E8 roots 240; beat=30=h(E8) (w33_starobinsky / w33_floor_derivation)."
+  ]
+}
