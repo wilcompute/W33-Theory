@@ -1,0 +1,13 @@
+{
+  "bt": "BT1854",
+  "title": "Reye/Residual Face Split Physics",
+  "verified": true,
+  "split": {"reye_faces": 16, "residual_faces": 28, "total_faces": 44},
+  "incidences": {"reye_directed_edge_incidences": 48, "residual_directed_edge_incidences": 84, "total_directed_edge_incidences": 132},
+  "arithmetic": {"reye_48": "4*12 = mu*k = tomotope/Reye stabilizer layer", "residual_84": "7*12 = Phi6*k = genus-completion layer", "total_132": "11*12 = (k-1)*k = full directed K12 horizon"},
+  "current_closure": {"reye_ordinary_flat": 12, "reye_antipodal_flat": 4, "residual_ordinary_flat": 20, "residual_antipodal_flat": 8},
+  "physics_dictionary": {"reye_layer": "tomotope/Reye stabilizer skeleton; already anchored in Q4 antipodal quotient", "residual_layer": "genus-6 completion shell; supplies the remaining face constraints and the Phi6=7 residual packet", "combined_layer": "F12/K12 optical face code with 66 payload rotations and 6 genus-hole parity symbols"},
+  "holonet_connection": "This supplies a finite error-correction/compiler layer missing from the Holonet open questions: the single-photon qutrit route gets a K12/F12 syndrome surface rather than an ad hoc repetition code.",
+  "checks": {"face_split_16_28_44": true, "incidence_split_48_84_132": true, "reye_equals_mu_times_k": true, "residual_equals_Phi6_times_k": true, "total_equals_k_minus_1_times_k": true, "all_faces_close_mod12": true},
+  "boundary": "Physics dictionary is a structural compiler interpretation; it is not a measured photonic implementation."
+}
