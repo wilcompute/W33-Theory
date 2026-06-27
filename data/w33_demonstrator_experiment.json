@@ -1,0 +1,30 @@
+{
+  "decision": {
+    "observable": "contextual fraction CF over the 40 Witting bases",
+    "substrate_value": "1/10 = 1/Phi_4 (corpus)",
+    "null": "CF = 0 (classical non-contextual)",
+    "shots_3sigma": 81,
+    "shots_5sigma": 225,
+    "raw_photons_5sigma": {
+      "0.88": 256,
+      "0.78": 289
+    },
+    "test": "one-sided binomial; n >= k^2 p(1-p)/p^2"
+  },
+  "components": [
+    "heralded SPDC single-photon source (e.g. ppKTP waveguide)",
+    "1 polarizing beam splitter (Stage A: Witting spatial Bell state in C^4)",
+    "1 symmetric 3-port fiber coupler (tritter) + three-bin delay ladder + 1 EOM (Stage B: temporal Bell qutrit)",
+    "1 Boerdijk-Coxeter loop (fixed waveplate at arccos(-2/3) ~ 131.8 deg)",
+    "4 single-photon detectors (SPADs). No cryostat; room temperature."
+  ],
+  "falsification": {
+    "certify_if": "measured CF consistent with 1/10",
+    "refute_if": "measured CF consistent with 0",
+    "calibration_free": true
+  },
+  "summary": "the first milestone, cut loose: a few hundred photons on a tabletop decide whether the substrate is real. The substrate predicts a contextual fraction CF = 1/10 = 1/Phi_4 (corpus): one-tenth of all rounds over the 40 Witting bases violate every classical non-contextual value assignment (a Kochen-Specker signal), and the expected value is a substrate integer so the test is calibration-free. Decision statistic: distinguishing CF=1/10 from the classical null CF=0 is a one-sided binomial test needing n >= k^2 p(1-p)/p^2 valid coincidences -- 81 for 3 sigma, 225 for 5 sigma; at 78-88% optical survival the raw 5-sigma budget is ~256-289 detected photons (minutes on a heralded source). Components (catalog optics, no cryostat): SPDC source; 1 PBS (Stage A Witting spatial Bell state); tritter + 3-bin delay + EOM (Stage B temporal Bell qutrit); 1 Boerdijk-Coxeter loop (arccos(-2/3) waveplate); 4 single-photon detectors. Falsification: CF ~ 1/10 certifies the q=3 substrate contextuality (the magic fuel) with no free parameters; CF ~ 0 refutes it. The cheapest possible test of a candidate theory of everything, and the entry point to the whole architecture. HONEST: the 1/10 contextual-fraction value is a corpus result (not re-derived here); what is computed here is the shot-count decision statistics (81/225 valid coincidences, ~256-289 raw photons with loss) and the protocol assembly.",
+  "sources": [
+    "contextual fraction 1/10 = 1/Phi_4 (corpus demonstrator / Witting work, bt1901/bt1904); one-sided binomial decision statistics (computed here); optical survival 78-88% (loss budget, BT1879/1882); demonstrator component chain (SPDC, PBS, tritter, delay, EOM, BC loop, SPADs)."
+  ]
+}

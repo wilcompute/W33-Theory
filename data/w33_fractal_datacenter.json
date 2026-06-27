@@ -1,0 +1,100 @@
+{
+  "fractal_scaling": [
+    {
+      "n": 1,
+      "leaves": 40,
+      "instances": 1,
+      "diameter": 8
+    },
+    {
+      "n": 2,
+      "leaves": 1600,
+      "instances": 41,
+      "diameter": 16
+    },
+    {
+      "n": 3,
+      "leaves": 64000,
+      "instances": 1641,
+      "diameter": 24
+    },
+    {
+      "n": 4,
+      "leaves": 2560000,
+      "instances": 65641,
+      "diameter": 32
+    },
+    {
+      "n": 5,
+      "leaves": 102400000,
+      "instances": 2625641,
+      "diameter": 40
+    },
+    {
+      "n": 6,
+      "leaves": 4096000000,
+      "instances": 105025641,
+      "diameter": 48
+    },
+    {
+      "n": 7,
+      "leaves": 163840000000,
+      "instances": 4201025641,
+      "diameter": 56
+    }
+  ],
+  "everyone_a_node": [
+    {
+      "N": 1000000,
+      "label": "1M pilot",
+      "level": 4,
+      "leaf_slots": 2560000,
+      "diameter": 32
+    },
+    {
+      "N": 8000000000,
+      "label": "humanity 8B",
+      "level": 7,
+      "leaf_slots": 163840000000,
+      "diameter": 56
+    },
+    {
+      "N": 30000000000,
+      "label": "devices 30B",
+      "level": 7,
+      "leaf_slots": 163840000000,
+      "diameter": 56
+    }
+  ],
+  "no_backbone": "W(E6) transitive on leaves -> no privileged node; consensus structural; join = splice a W(3,3) copy",
+  "emulation_cost": {
+    "clifford_layer": "Gottesman-Knill stabilizer tableau over F_3 -- polynomial; runs on legacy hardware",
+    "magic_knob": "t cubic gates -> classical cost 9^t (robustness bound); t=0 = fully classical node",
+    "table": [
+      {
+        "magic_gates": 0,
+        "classical_cost": 1
+      },
+      {
+        "magic_gates": 1,
+        "classical_cost": 9
+      },
+      {
+        "magic_gates": 2,
+        "classical_cost": 81
+      },
+      {
+        "magic_gates": 5,
+        "classical_cost": 59049
+      },
+      {
+        "magic_gates": 10,
+        "classical_cost": 3486784401
+      }
+    ]
+  },
+  "summary": "the planetary computer: everyone runs a node, the network is the computer, and it boots on a dinosaur. (1) Fractal law: H_n replaces each of the 40 points of W(3,3) by H_{n-1} (corpus BT827) -> 40^n leaf cores, (40^n-1)/39 instances, routing diameter 8n = 8 log_40 N (verified). (2) Everyone a node: seat N -> level ceil(log_40 N); humanity (8e9) and devices (3e10) both fit at level 7 (1.64e11 slots), diameter 56 hops; a 1e6 pilot is level 4, diameter 32. W(E6) transitive on leaves -> no privileged node, no backbone/spine, no full-vs-light split; consensus is structural (a theorem), a node joins by splicing a W(3,3) copy with no global reconfiguration. (3) Boots on a dinosaur: the degree-2 Clifford layer (routing, memory, network, fault tolerance) is the Gottesman-Knill stabilizer formalism -- a polynomial-time tableau over F_3 a 1970s minicomputer can run; only the quantum ADVANTAGE costs more, a node paying classical factor 9^t for t cubic magic gates, a knob from t=0 (a fully classical holonet node -- the whole architecture, free, on any machine) up to whatever its photonics afford. So the STRUCTURE is universal and free (every machine ever built can be a node) while the POWER is a tunable priced resource, and the network of everyone's computers self-assembles into H_n as one planetary computer that is also the architecture of life. HONEST: the fractal substitution and 8n diameter are the corpus law (BT827), verified arithmetically; the world-scale seating is direct computation; classical emulability is standard Gottesman-Knill (Clifford poly) plus the robustness 9^t magic cost (Pass 38); 'runs on a dinosaur' means the architecture layer is poly-time classical, not that legacy hardware delivers quantum advantage; the photonic leaves and splicing are an engineering problem.",
+  "sources": [
+    "fractal substitution H_n and 8 log_40 N diameter (corpus BT827 holonet fractal architecture; bt1700 recursive packet compiler); Gottesman-Knill (Clifford classically simulable in polynomial time); robustness-of-magic 9^t classical emulation cost (Pass 38, w33_provable_advantage); W(E6) transitivity on the 40 leaves (Pass 37, w33_one_group_machine)."
+  ]
+}
