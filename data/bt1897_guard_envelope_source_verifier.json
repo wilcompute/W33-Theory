@@ -1,0 +1,15 @@
+{
+  "bt": "BT1897",
+  "title": "2048 Guard-Envelope Source Verifier",
+  "verified": true,
+  "uploaded_holonet_source_status": "exact 2048=1600+448 formula not found in uploaded photonic_holonet.tex pass",
+  "repo_source_status": "found and verified in BT1649/BT1650 artifacts",
+  "repo_anchors": {
+    "analysis/BT1649_time_bin_qudit_envelope.md": "2^11=2048, 2048-1600=448=7*64, per Fano point 24 dark + 24 loss + 16 parity",
+    "analysis/BT1648_BT1650_fano_timebin_guard_closure.md": "1600 detector usage law, 2048 envelope, seven Fano guard pages, guard allocation"
+  },
+  "arithmetic": {"active_witting_frames": 1600, "time_bin_bits": 11, "time_bins": 2048, "slack": 448, "fano_pages": 7, "guards_per_fano_page": 64, "dark_refs_per_page": 24, "loss_probes_per_page": 24, "parity_overflow_per_page": 16},
+  "checks": {"2_power_11_equals_2048": true, "2048_minus_1600_equals_448": true, "448_equals_7_times_64": true, "24_plus_24_plus_16_equals_64": true, "repo_source_found": true, "uploaded_source_anchor_missing": true},
+  "publication_rule": "May cite as repo-derived BT1649/BT1650 guard-envelope theorem, not as a statement already present in the uploaded Holonet source unless the insert is added.",
+  "boundary": "Source verifier only; no new optical timing calibration is claimed."
+}
