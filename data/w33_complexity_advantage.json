@@ -1,0 +1,25 @@
+{
+  "clifford_layer": {
+    "num_stabilizer_states": 12,
+    "min_wigner": -0.0,
+    "all_nonnegative": true,
+    "complexity": "P (Veitch-Mari: positive-Wigner Clifford dynamics efficiently classically simulable)"
+  },
+  "magic_gate": {
+    "state": "the qutrit Strange state (|1> - |2>)/sqrt(2)",
+    "min_wigner": -0.333333,
+    "mana": 0.510826,
+    "mana_closed_form": "ln(5/3)",
+    "meaning": "Wigner-negative <=> contextual (Howard et al.) = the necessary resource for advantage"
+  },
+  "placement": {
+    "clifford_only": "P (classically simulable)",
+    "clifford_plus_cubic": "BQP-universal (Lloyd-Braunstein)",
+    "separating_resource": "Wigner-negative mana / contextuality injected by the degree-3 cubic gate",
+    "classical_hardness": "no efficient classical sampler of the magic-fuelled output unless the polynomial hierarchy collapses (post-selection argument)"
+  },
+  "summary": "the complexity class: the machine sits exactly on the classical/quantum boundary, on the quantum side by the mana the cubic gate injects. The separating invariant is the Gross qutrit Wigner function. Clifford layer (degree 2): all 12 single-qutrit stabilizer states have Wigner >= 0 (computed, min = 0) -> Veitch-Mari-Emerson-Gross: positive-Wigner Clifford dynamics with Pauli readout is efficiently classically simulable = P (qudit Gottesman-Knill), zero mana, non-contextual. Magic gate (degree 3): the Strange state has min Wigner = -1/3 < 0 and mana = ln||W||_1 = ln(5/3) = 0.5108 > 0 (matches corpus) -> Howard-Wallman-Veitch-Emerson (2014): Wigner negativity <=> contextuality for odd-prime qudits, NECESSARY for speed-up. Placement: Clifford = P; Clifford + 1 cubic = BQP-universal; the difference IS the mana. Hardness: classically sampling the magic-fuelled output collapses the polynomial hierarchy (post-selection). So the machine computes in BQP, crossing out of the classically-simulable class exactly when the cubic gate adds Wigner-negative mana, and that crossing is contextuality, supplied by W(3,3). HONEST: the Wigner positivity of the 12 stabilizer states and the Strange-state mana = ln(5/3) are computed here; Veitch-Mari simulability, Howard's negativity<=>contextuality equivalence, Lloyd-Braunstein universality, and the post-selection hardness argument are established; BQP is the standard placement of a universal quantum machine and the classical-hardness is conditional on PH not collapsing.",
+  "sources": [
+    "Gross discrete Wigner function for odd-prime qudits (2006); Veitch-Ferrie-Gross-Emerson / Mari-Eisert: positive Wigner -> efficient classical simulation; Howard-Wallman-Veitch-Emerson (Nature 2014) contextuality <=> Wigner negativity, necessary for magic-state speed-up; Gottesman-Knill (Clifford simulable); Lloyd-Braunstein universality; Bremner-Jozsa-Shepherd / Aaronson-Arkhipov post-selection hardness (PH collapse); corpus mana = ln(5/3) (w33_magic_economy.py, w33_contextuality_is_the_fuel.py)."
+  ]
+}

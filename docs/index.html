@@ -4001,6 +4001,41 @@
               bound and the power rate assumes the chosen clock/temperature.</div>
           </div>
           <div class="card">
+            <div class="label">The Boundary Questions: Complexity Class, Distributed Clock, I/O, and One Group</div>
+            <div class="detail"><strong>Four questions close the machine off &mdash; how hard is what it computes, how do 40 nodes share one
+              tick, how does it talk to the world, what holds it together &mdash; and the fourth answer subsumes the rest: one group is the
+              whole machine.</strong>
+              <strong>(1) Complexity class.</strong> The separating invariant is the Gross qutrit Wigner function. The degree-2 Clifford layer
+              keeps it non-negative &mdash; all 12 single-qutrit stabilizer states have Wigner &ge; 0 (computed) &mdash; so by
+              Veitch&ndash;Mari&ndash;Emerson&ndash;Gross the Clifford datapath is efficiently classically simulable: it lives in <strong>P</strong>
+              (qudit Gottesman&ndash;Knill), zero mana, non-contextual. The degree-3 cubic magic gate breaks exactly this: its resource (the
+              Strange state) has a negative Wigner entry &minus;&#8531; and <strong>mana = ln(5/3) = 0.5108 &gt; 0</strong>, and by
+              Howard&ndash;Wallman&ndash;Veitch&ndash;Emerson (2014) Wigner negativity <em>is</em> contextuality for odd-prime qudits and is
+              necessary for speed-up. So Clifford = P, Clifford + 1 cubic = <strong>BQP-universal</strong>, the gap is exactly the mana the cubic
+              injects (supplied by W(3,3)); classically sampling the magic-fuelled output collapses the polynomial hierarchy. <strong>(2)
+              Distributed clock.</strong> Diameter 2 &rarr; clock distribution is a <strong>two-hop broadcast</strong>. Neighbour-averaging W=A/k
+              has second eigenvalue magnitude exactly <strong>1/3</strong> (A spectrum {12,2,&minus;4} &rarr; W {1, 1/6, &minus;1/3}), so the phase
+              spread contracts <strong>threefold per round</strong> (expander-fast, simulated). Crash faults: connectivity 12 &rarr; survives 11.
+              Byzantine: n&ge;3t+1 (Lamport&ndash;Melliar-Smith) AND connectivity&ge;2t+1 (Dolev) &rarr;
+              <strong>t = min(13, 5) = 5 traitors</strong> (connectivity-bound: 11 dead nodes but 5 lying ones), with &mu;=4 disjoint distribution
+              routes. <strong>(3) I/O &amp; boundary.</strong> The readout interface is the line geometry: the <strong>40 totally-isotropic lines</strong>
+              of GQ(3,3) (computed: 4-point cliques, 4 lines/point) are the measurement <em>contexts</em> (maximal commuting sets, one readout
+              basis each). The air-gap carrier is a photon's orbital angular momentum in the sector {&ell;=&minus;1,0,+1} = the balanced-ternary
+              digit, so 1 photon = 1 trit; by the <strong>Holevo bound</strong> a qutrit conveys &le; log&#8322;3 = <strong>1.585 bits/photon</strong>
+              and the OAM-trit saturates it. The logical port is the code boundary: [[66,8,3]]&#8323; exposes <strong>k=8 logical qutrits</strong>
+              (= 12.68 bits/block, 12.68 Gbit/s @1 GHz), the 66 interior protected. <strong>(4) One group runs the whole machine.</strong> The
+              deepest fact: the <em>same</em> group &mdash; <strong>W(E&#8326;), order 51840</strong>, realised as the symplectic group on
+              F&#8323;&#8308; &mdash; is simultaneously the <strong>processor's</strong> Clifford gate group, the <strong>network's</strong>
+              automorphisms (transitive on the 40 nodes), the <strong>memory's</strong> code automorphisms (transitive on the 40 line-contexts),
+              and the <strong>readout's</strong> contextuality symmetry (those same 40 lines), and it is transitive even on the <strong>160
+              point-on-line flags</strong> (the joint register/readout-basis states). So the computer IS the network IS the memory: one group,
+              four faces &mdash; and, by Solovay&ndash;Kitaev, an efficient compiler target too. Honest: the Wigner positivity, mana ln(5/3), the
+              1/3 contraction, the 40 line-contexts, and the transitivities (40/40/160) are computed; Veitch&ndash;Mari simulability, Howard's
+              negativity&hArr;contextuality, the Byzantine bounds, the Holevo bound, Aut(GQ(3,3))=W(E&#8326;)=PSp(4,3):2, and Solovay&ndash;Kitaev are
+              established; BQP is the standard placement of a universal quantum machine (classical-hardness conditional on PH not collapsing); bit
+              rates assume the stated clock.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

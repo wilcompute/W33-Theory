@@ -1,0 +1,29 @@
+{
+  "network": {
+    "preserves_collinearity": true,
+    "node_orbit": 40,
+    "transitive": true
+  },
+  "memory_readout": {
+    "lines": 40,
+    "line_orbit": 40,
+    "transitive": true
+  },
+  "flags": {
+    "count": 160,
+    "flag_orbit": 160,
+    "transitive": true
+  },
+  "one_group": {
+    "group": "W(E6) = Aut(GQ(3,3)) = PSp(4,3):2, order 51840 = |Sp(4,3)| (closure in the ISA witness)",
+    "processor": "degree-2 Clifford gate group on the qutrit phase space F_3^4",
+    "network": "automorphisms of the GQ(3,3) collinearity graph, transitive on the 40 nodes",
+    "memory": "permutes the 40 line-contexts = the code's stabilizer contexts, transitive",
+    "readout": "symmetry of the 40 measurement contexts = the contextuality structure (the magic)",
+    "compiler": "Solovay-Kitaev: any logical unitary to precision eps in O(log^c(1/eps)) gates"
+  },
+  "summary": "the unification: one group runs the whole machine. The SAME symmetry group -- W(E6), order 51840, realised as the symplectic group Sp(4,3) on the substrate's F_3^4 phase space (order verified by closure in the ISA witness) -- is simultaneously (a) the PROCESSOR's degree-2 Clifford gate group on the qutrit register; (b) the NETWORK's automorphisms: it preserves the symplectic form, hence GQ(3,3) collinearity (verified), so it is graph automorphisms TRANSITIVE on the 40 nodes (perfect load balancing); (c) the MEMORY's code automorphisms: TRANSITIVE on the 40 totally-isotropic lines = the maximal commuting sets = the code's stabilizer contexts; (d) the READOUT's contextuality symmetry: those same 40 lines are the measurement contexts that fuel the magic. It is also TRANSITIVE on the 160 (point, line) flags = the joint (register, readout-basis) states. So the computer IS the network IS the memory: one group, four faces -- and by Solovay-Kitaev any logical unitary compiles from this gate set to precision eps in O(log^c(1/eps)) gates, so it is an efficient compiler target too. HONEST: the transitivities (40 nodes, 40 lines, 160 flags) and the collinearity-preservation are computed here; the order 51840 = |W(E6)| is verified by closure in the companion ISA witness; Aut(GQ(3,3)) = W(E6) = PSp(4,3):2 (order 51840) is the standard identification; the four-faces dictionary (Clifford = symplectic, routing = graph automorphism, code contexts = maximal commuting sets, contextuality = the same lines) and Solovay-Kitaev are standard.",
+  "sources": [
+    "Sp(4,3) on F_3^4 (the W(3,3) phase space); transitivity on points/lines/flags computed here; Aut(GQ(3,3)) = W(E6) = PSp(4,3):2, order 51840 (standard; corpus); Clifford = symplectic (Gottesman); strongly-regular-graph automorphisms = routing symmetry; maximal commuting sets = stabilizer contexts; Solovay-Kitaev theorem (efficient gate compilation)."
+  ]
+}

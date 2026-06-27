@@ -7582,6 +7582,63 @@ cost localised to the $58$ syndrome qutrits, the bisection forcing a photonic me
 thermodynamic lower bound (real devices dissipate orders more), and the numerical power rate assumes
 the chosen clock and temperature.
 
+\subsection{Pass 37 --- the boundary questions: complexity class, distributed clock, I/O, and one group}
+\label{sec:capstone-thirtyseven}
+
+Four questions close the machine off: how hard is what it computes, how do forty nodes share one
+tick, how does it talk to the world, and what holds it together. The fourth answer subsumes the rest
+--- one group is the whole machine.
+
+\emph{The complexity class.} The separating invariant is the Gross qutrit Wigner function. The
+degree-$2$ Clifford layer keeps it non-negative: all $12$ single-qutrit stabilizer states have Wigner
+$\ge0$ (computed), so by Veitch--Mari--Emerson--Gross the Clifford datapath is efficiently classically
+simulable --- it lives in $\mathsf{P}$ (qudit Gottesman--Knill), with zero mana and no contextuality.
+The degree-$3$ cubic magic gate breaks exactly this: its resource (the Strange state) has a negative
+Wigner entry $-\tfrac13$ and mana $\ln(5/3)=0.5108>0$, and by Howard--Wallman--Veitch--Emerson (2014)
+Wigner negativity \emph{is} contextuality for odd-prime qudits and is necessary for speed-up. So
+Clifford alone $=\mathsf{P}$, Clifford $+$ one cubic $=\mathsf{BQP}$-universal, and the gap is exactly
+the mana the cubic injects --- which $W(3,3)$ supplies; classically sampling the magic-fuelled output
+collapses the polynomial hierarchy. (Witness: \path{analysis/w33_complexity_advantage.py}.)
+
+\emph{The distributed clock.} A network needs one tick shared by all $40$ nodes. Diameter $2$ makes
+clock distribution a two-hop broadcast. The natural distributed clock is neighbour-averaging
+$W=A/k$, whose second eigenvalue magnitude is exactly $\tfrac13$ (the spectrum $\{12,2,-4\}$ of $A$
+gives $\{1,\tfrac16,-\tfrac13\}$ for $W$), so the phase spread contracts threefold every round ---
+geometric, expander-fast convergence (confirmed by simulation). Against silent faults the
+connectivity $12$ keeps the clock connected through $11$ failures; against malicious (Byzantine)
+faults the bounds are tighter and exact --- $n\ge3t+1$ (Lamport--Melliar-Smith / Dolev--Halpern-Strong)
+and connectivity $\ge2t+1$ (Dolev) give $t=\min(\lfloor39/3\rfloor,\lfloor11/2\rfloor)=\min(13,5)=5$
+traitors, the connectivity binding: $11$ dead nodes but $5$ lying ones, with $\mu=4$ disjoint
+distribution routes. (Witness: \path{analysis/w33_clock_distribution.py}.)
+
+\emph{The I/O and boundary.} The readout interface is the line geometry: the $40$ totally-isotropic
+lines of $\mathrm{GQ}(3,3)$ (computed: $4$-point cliques, $4$ lines per point) are the measurement
+\emph{contexts} --- $40$ maximal commuting sets, one readout basis each. The air-gap carrier is a
+photon's orbital angular momentum in the sector $\{\ell=-1,0,+1\}$, exactly the balanced-ternary
+digit, so one photon is one trit; by the Holevo bound a qutrit conveys at most $\log_2 3=1.585$ bits
+per use and the OAM-trit saturates it. The logical port is the code boundary: $[\![66,8,3]\!]_3$
+exposes $k=8$ fault-tolerant logical qutrits ($=8\log_2 3=12.68$ bits/block, $12.68$~Gbit/s at
+$1$~GHz), the $n=66$ interior protected. (Witness: \path{analysis/w33_io_boundary.py}.)
+
+\emph{One group runs the whole machine.} The deepest fact is that the \emph{same} symmetry group ---
+$W(E_6)$, order $51840$, realised as the symplectic group on $\mathbb{F}_3^4$ (the order closed in the
+Pass-36 ISA witness, $|\mathrm{Sp}(4,3)|=51840=|W(E_6)|$) --- is simultaneously the processor's
+Clifford gate group, the network's automorphisms (it preserves collinearity and acts transitively on
+the $40$ nodes, verified), the memory's code automorphisms (transitive on the $40$ line-contexts), and
+the readout's contextuality symmetry (those same $40$ lines), and it is transitive even on the $160$
+point-on-line flags --- the joint (register, readout-basis) states. So the computer \emph{is} the
+network \emph{is} the memory: one group, four faces (and, by Solovay--Kitaev, an efficient compiler
+target too). (Witness: \path{analysis/w33_one_group_machine.py}.)
+
+\emph{Honest scope:} the Wigner positivity, the mana $\ln(5/3)$, the $\tfrac13$ contraction, the $40$
+line-contexts, and the transitivities (40 nodes, 40 lines, 160 flags) are computed; Veitch--Mari
+simulability, Howard's negativity$\Leftrightarrow$contextuality, the Byzantine bounds $n\ge3t+1$ /
+connectivity $\ge2t+1$, the Holevo bound, $\mathrm{Aut}(\mathrm{GQ}(3,3))=W(E_6)=\mathrm{PSp}(4,3){:}2$,
+and Solovay--Kitaev are established. The substrate content is the identifications and that one group
+realises all four roles; $\mathsf{BQP}$ is the standard placement of a universal quantum machine, the
+classical-hardness conditional on $\mathsf{PH}$ not collapsing, and bit/skew rates assume the stated
+clock.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

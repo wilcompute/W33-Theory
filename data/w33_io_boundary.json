@@ -1,0 +1,28 @@
+{
+  "readout_contexts": {
+    "count": 40,
+    "points_per_line": 4,
+    "lines_per_point": 4,
+    "meaning": "each line = a maximal commuting set = one measurement basis; readout = 2 trits"
+  },
+  "air_gap": {
+    "carrier": "photon OAM sector {ell = -1, 0, +1} = the balanced-ternary digit / 3-grading",
+    "holevo_capacity_bits": 1.585,
+    "reading": "one photon = one trit; saturates the Holevo bound (max for a 3-level carrier)"
+  },
+  "network_io": {
+    "links_per_node": 12,
+    "channels": 240,
+    "bisection": 100
+  },
+  "logical_port": {
+    "logical_qutrits": 8,
+    "physical_protected": 66,
+    "bits_per_block": 12.68,
+    "rate_at_1GHz_Gbit_s": 12.68
+  },
+  "summary": "the I/O and the boundary: forty readout contexts, an OAM-trit at the air-gap, a Holevo-saturating 1.585-bit channel, and an eight-qutrit logical port. Readout interface = the line geometry of GQ(3,3): 40 points = registers, 40 totally-isotropic LINES (computed: 4-point cliques, 4 lines through every point) = 40 measurement CONTEXTS (maximal commuting sets / readout bases); a readout returns the 4-point (2-trit) value. Physical channel = photon OAM sector {ell = -1, 0, +1} = the balanced-ternary digit, so 1 photon = 1 trit; by the Holevo bound a qutrit conveys <= log2(3) = 1.585 bits/use and the OAM-trit SATURATES it (a 1.585-bit/photon air-gap). Logical port = the code boundary: [[66,8,3]]_3 exposes k = 8 fault-tolerant logical qutrits (interior n = 66 protected) = 8 log2(3) = 12.68 bits/block -> 12.68 Gbit/s at a 1 GHz logical cycle. With 12 duplex links/node (240 channels, bisection 100) the peripheral / bus row of the datasheet is filled. HONEST: the 40 line-contexts (count, 4-point cliques, 4 per point) are computed from the symplectic geometry; the Holevo bound log2(3) and the 12.68-bit logical port are standard information theory; the substrate content is the identifications (lines = measurement contexts, OAM {-1,0,+1} = the balanced-ternary digit at the air-gap, k = 8 logical qutrits = the I/O port), the photonic OAM realisation being the corpus optical Holonet; bit rates assume the stated logical clock.",
+  "sources": [
+    "GQ(3,3) line geometry (40 totally-isotropic lines, 4 points/line, 4 lines/point) computed from the F_3^4 symplectic form; maximal commuting sets / measurement contexts of the two-qutrit Pauli group; Holevo bound (a qudit conveys <= log2(d) classical bits); photon OAM as a qudit carrier (corpus optical Holonet / OAM appendix); [[66,8,3]]_3 code k=8 logical qutrits (QEC track)."
+  ]
+}
