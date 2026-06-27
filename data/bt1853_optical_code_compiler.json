@@ -1,0 +1,14 @@
+{
+  "bt": "BT1853",
+  "title": "Optical Code Compiler",
+  "verified": true,
+  "code_parameters": {"total_symbols": 72, "edge_payload": 66, "parity_symbols": 6, "rate": "11/12", "field": "GF3"},
+  "payload_rule": "The 66 payload symbols are the F12/K12 edge rotations indexed by unordered pairs on 12 labels.",
+  "parity_rule": "Six parity rows group payload edges by cyclic distance d=1..6; the parity symbol stores the negative class sum in GF3.",
+  "distance_partition": {"d1": 12, "d2": 12, "d3": 12, "d4": 12, "d5": 12, "d6_antipodal": 6, "total": 66},
+  "row_weights": {"H1": 13, "H2": 13, "H3": 13, "H4": 13, "H5": 13, "H6": 7},
+  "face_constraints": {"face_words": 44, "ordinary_flat": 32, "antipodal_flat": 12, "nonzero_twisted": 0},
+  "special_role": "H6 is the antipodal sheet parity row tied to the six distance-6 pairs.",
+  "checks": {"total_72": true, "payload_66": true, "parity_6": true, "distance_partition_sums_to_66": true, "H6_is_antipodal": true},
+  "boundary": "Finite GF3 incidence compiler only; no quantum code distance proof is claimed."
+}
