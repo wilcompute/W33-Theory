@@ -1,0 +1,75 @@
+{
+  "generation_16": {
+    "multiplets": [
+      {
+        "multiplet": "Q  (left quark doublet)",
+        "su3": 3,
+        "su2": 2,
+        "Y": "1/6",
+        "states": 6
+      },
+      {
+        "multiplet": "u^c (up antiquark)",
+        "su3": 3,
+        "su2": 1,
+        "Y": "-2/3",
+        "states": 3
+      },
+      {
+        "multiplet": "d^c (down antiquark)",
+        "su3": 3,
+        "su2": 1,
+        "Y": "1/3",
+        "states": 3
+      },
+      {
+        "multiplet": "L  (left lepton doublet)",
+        "su3": 1,
+        "su2": 2,
+        "Y": "-1/2",
+        "states": 2
+      },
+      {
+        "multiplet": "e^c (positron)",
+        "su3": 1,
+        "su2": 1,
+        "Y": "1",
+        "states": 1
+      },
+      {
+        "multiplet": "nu^c (RH neutrino)",
+        "su3": 1,
+        "su2": 1,
+        "Y": "0",
+        "states": 1
+      }
+    ],
+    "total": 16,
+    "chiral": 15,
+    "g": 15,
+    "note": "16 of SO(10) = one generation + nu_R; chiral 15 = g"
+  },
+  "decomposition": {
+    "27": "16 + 10 + 1",
+    "16": "one generation + nu_R",
+    "10+1": "vector-like exotics (heavy)",
+    "27_is_q_q": true
+  },
+  "multiplicities": {
+    "chiral_per_gen": 15,
+    "gauge_adjoint": 24,
+    "f_is_dim_SU5": true,
+    "balance": 240,
+    "balance_is_E8_roots": true,
+    "reading": "g=15 matter (10+5bar of SU(5)), f=24 gauge (SU(5) adjoint); balance = CC structural SUSY"
+  },
+  "three_generations": {
+    "total": 81,
+    "is_q4": true,
+    "note": "3 x 27 = 81 = q^4 = dim H_1 (massless matter homology)"
+  },
+  "summary": "the protected matter shell 27 IS one Standard Model generation, with W(3,3) multiplicities. Pass 24's protected logical content / QCA invariant / matter shell = the E6 fundamental 27 (=q^q, complement valency, 40=1+12+27). Standard branching E6->SO(10)->SU(5)->SM: 27 = 16 + 10 + 1, and the 16 of SO(10) is EXACTLY one generation (Q, u^c, d^c, L, e^c, nu^c) = 16 = g+1 Weyl states, chiral 15 = g; the 10+1 are vector-like exotics (heavy). Multiplicities are Hodge integers: g=15 chiral matter (10+5bar of SU(5)), f=24 = dim SU(5) gauge adjoint, balance f*Phi4 = g*mu^2 = 24*10 = 15*16 = 240 = |roots(E8)| (the SU(5) adjoint vs one generation = the CC structural SUSY). Three copies (Sp(4,3)) give 3*27 = 81 = q^4 = dim H_1 (massless matter). So the world's fermions ARE the machine's protected logical content -- the 27 is one SM generation, f=24/g=15 the SU(5) gauge/matter split, full matter q^4=81. HONEST: the E6->SM branching is standard group theory; the substrate content is that the matter group is E6 and the multiplicities g/f/q^4 are W(3,3) integers, so the SM content is substrate-forced, not inserted; the exotic 10+1 is assumed heavy; chirality follows from the H_1 holomorphic three-27 structure.",
+  "sources": [
+    "E6 27 = matter shell = q^q (w33_substrate_four_faces.py, w33_information_structure.py 40=1+12+27); E6->SO(10)->SU(5)->SM branching (standard GUT group theory); g=15/f=24 Hodge eigenspaces + balance 240 (w33_cc_mechanism.py); H_1 = 81 = 3x27 three generations (w33_everything.tex spine, Sp(4,3)=W(E6))."
+  ]
+}

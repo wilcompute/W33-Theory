@@ -6964,6 +6964,64 @@ universe must be a code; the $44=v+\mu$ entry is the one loose match; and the $q
 substrate's chosen principle, with the Kobayashi--Maskawa and distance-$3$ minima the genuine
 independent convergences onto $3$.
 
+\subsection{Pass 25 --- the protected 27 is one Standard-Model generation, and charge is $1/3$ because $q=3$}
+\label{sec:capstone-twentyfive}
+
+Pass 24 identified the code's protected matter shell with the $E_6$ fundamental $\mathbf{27}$. This
+pass shows that $\mathbf{27}$ carries \emph{exactly} the Standard-Model fermion quantum numbers, and
+that the most basic facts of the electromagnetic and strong sectors --- charge quantised in $1/3$,
+fractionally-charged quarks, confinement --- are one consequence of $q=3$.
+
+\emph{The 27 is one generation.} The standard branching $E_6\to\mathrm{SO}(10)\to\mathrm{SU}(5)\to
+\mathrm{SU}(3){\times}\mathrm{SU}(2){\times}\mathrm{U}(1)$ gives $\mathbf{27}=\mathbf{16}+\mathbf{10}
++\mathbf{1}$, and the $\mathbf{16}$ of $\mathrm{SO}(10)$ is one complete generation
+(Table~\ref{tab:27-sm}): $16=g+1$ Weyl states, of which $15=g$ are chiral, plus the right-handed
+neutrino; the $\mathbf{10}+\mathbf{1}$ are vector-like exotics. The multiplicities are the
+substrate's Hodge integers: the chiral count is $g=15$, the gauge adjoint is $f=24=\dim\mathrm{SU}(5)$,
+and the boson--fermion balance $f\Phi_4=g\mu^2=24\cdot10=15\cdot16=240=|\mathrm{roots}(E_8)|$ (the
+structural supersymmetry behind the cosmological constant) is the $\mathrm{SU}(5)$ adjoint balanced
+against one generation. Three copies ($\mathrm{Sp}(4,3)$, the three generations) give $3\cdot27=81=
+q^4=\dim H_1$, the massless-matter homology. (Witness:
+\path{analysis/w33_e6_27_standard_model.py}.)
+
+\begin{table}[ht]\centering\small
+\caption{The protected $\mathbf{27}$ as one Standard-Model generation. The $\mathbf{16}$ of
+$\mathrm{SO}(10)$ is one family; every electric charge $Q=T_3+Y$ is a multiple of $1/q=1/3$, and the
+fractional part is $-t/3 \bmod 1$ with $t$ the colour triality.}
+\label{tab:27-sm}
+\begin{tabular}{l c c c c c}
+\toprule
+Multiplet & $(\mathrm{SU}3,\mathrm{SU}2)_Y$ & states & triality $t$ & $Q$ & $Q\bmod1$\\ \midrule
+$Q$ (quark doublet) & $(\mathbf{3},\mathbf{2})_{+1/6}$ & $6$ & $1$ & $+\tfrac23,-\tfrac13$ & $\tfrac23$\\
+$u^c$ & $(\bar{\mathbf3},\mathbf1)_{-2/3}$ & $3$ & $2$ & $-\tfrac23$ & $\tfrac13$\\
+$d^c$ & $(\bar{\mathbf3},\mathbf1)_{+1/3}$ & $3$ & $2$ & $+\tfrac13$ & $\tfrac13$\\
+$L$ (lepton doublet) & $(\mathbf1,\mathbf2)_{-1/2}$ & $2$ & $0$ & $0,-1$ & $0$\\
+$e^c$ & $(\mathbf1,\mathbf1)_{+1}$ & $1$ & $0$ & $+1$ & $0$\\
+$\nu^c$ (RH neutrino) & $(\mathbf1,\mathbf1)_{0}$ & $1$ & $0$ & $0$ & $0$\\ \midrule
+\multicolumn{2}{l}{total $=16=g+1$; chiral $=15=g$} & & \multicolumn{3}{l}{$+\ \mathbf{10}+\mathbf1$ exotics $=\mathbf{27}$}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{Charge is $1/3$ because $q=3$.} The defining integer $q=3$ is the order of the colour centre
+$\mathbb{Z}_3$ (the SRG $3$-grading, $\mathrm{Sp}(4,3)=$ three copies of $\mathbb{F}_3^4$, colour
+$\mathrm{SU}(3)$). Computing $Q=T_3+Y$ for every fermion (Table~\ref{tab:27-sm}), \emph{every} charge
+is a multiple of $1/q=1/3$, and the fractional part obeys the triality law $Q\bmod1=-t/3$: colour
+singlets ($t=0$ --- leptons, hadrons) carry integer charge and are free, while colour triplets
+($t\neq0$ --- quarks) carry fractional charge in $\tfrac13\mathbb{Z}$ and are confined, since only
+triality-$0$ states are asymptotic. So the $1/3$ charge quantum is the $1/q$ of the $\mathbb{Z}_3$
+centre, fractional charge is the signature of non-zero triality, and confinement is the rule that
+only $\mathbb{Z}_3$-trivial states are observable --- charge quantisation, the fractional quark
+charge, and confinement are \emph{one} consequence of $q=3$. (Witness:
+\path{analysis/w33_charge_quantization_z3.py}.)
+
+\emph{Honest scope:} the $E_6\to$ SM branching and the triality--charge relation are standard group
+theory; the substrate content is that the matter group is $E_6$ (the $\mathbf{27}=q^q$ shell, derived
+earlier) and that the multiplicities $g=15$, $f=24$, $q^4=81$ and the charge quantum $1/q$ are the
+$W(3,3)$ integers, so the Standard-Model content, its multiplicities, and its charge quantisation are
+substrate-forced rather than inserted. The exotic $\mathbf{10}+\mathbf1$ is assumed heavy, and the
+confinement \emph{dynamics} is asserted through the triality-$0$ selection rule, not derived from QCD.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
