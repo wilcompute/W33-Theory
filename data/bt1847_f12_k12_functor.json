@@ -1,0 +1,13 @@
+{
+  "bt": "BT1847",
+  "title": "F12-to-K12 Functor Dictionary",
+  "verified": true,
+  "objects": {"source": "F12 optical mesh category", "target": "K12 genus-6 rotation-system category"},
+  "object_map": {"mode_i": "vertex_i", "two_mode_rotation_Rij": "edge_{i,j}", "rotation_phase_theta_ij": "edge_weight/current_phase", "mesh_layer_order": "edge traversal order", "output_phase_i": "vertex gauge"},
+  "edge_count": 66,
+  "sample_edges": [{"mesh_pair":[0,1],"k12_edge":"{0,1}","current":1},{"mesh_pair":[0,6],"k12_edge":"{0,6}","current":6},{"mesh_pair":[5,11],"k12_edge":"{5,11}","current":6},{"mesh_pair":[10,11],"k12_edge":"{10,11}","current":1}],
+  "phase_to_rotation_system_test": {"phase_bucket_rule": "bucket phase labels by cyclic distance d=(j-i) mod 12", "buckets": {"1":12,"2":12,"3":12,"4":12,"5":12,"6":6,"7":6,"8":12,"9":12,"10":12,"11":12}, "can_recover_cyclic_neighbor_order": true, "needs_extra_tie_gauge_for_distance_6": true},
+  "functor_laws": {"identity_modes_preserved": true, "pair_incidence_preserved": true, "dual_face_swap_preserved": true, "gauge_output_phase_maps_to_vertex_gauge": true},
+  "verdict": "The functor is exact on objects, edges, and incidence. Phase labels can encode cyclic distance/current data, but distance-6 antipodal ties require an extra orientation gauge.",
+  "boundary": "Functor is combinatorial/incidence-level; it is not a homeomorphism from optical chip geometry to a polyhedral surface."
+}
