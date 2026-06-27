@@ -1,0 +1,33 @@
+{
+  "memory_hierarchy": [
+    {
+      "level": "register",
+      "desc": "27 = 3^3 trits (the tryte; three qutrits; the E6 word)"
+    },
+    {
+      "level": "logical store",
+      "desc": "[[66,8,3]]_3 -- 8 fault-tolerant logical qutrits in 66 physical (working set)"
+    },
+    {
+      "level": "tape",
+      "desc": "Boerdijk-Coxeter / Fibonacci tape (UTM tape) -- quasicrystalline addressing, aperiodic"
+    }
+  ],
+  "clock": {
+    "phi": 1.618,
+    "rotation": 0.618,
+    "three_gap": {
+      "8": 2,
+      "30": 3,
+      "100": 3,
+      "500": 3
+    },
+    "bounded_jitter": "<= 3 distinct inter-tick intervals at every horizon",
+    "discrepancy": "O(log N) (optimal 1-D; phi is the most irrational)",
+    "properties": "aperiodic / EMI-quiet, self-similar (Fibonacci word); supercycle beat = 30"
+  },
+  "summary": "the memory hierarchy and the golden-ratio (Boerdijk-Coxeter) clock. Memory: register 27 = 3^3 trits (the tryte / E6 word) -> [[66,8,3]]_3 protected store (8 logical qutrits in 66 physical, the working set) -> Boerdijk-Coxeter / Fibonacci tape (the UTM tape, quasicrystalline aperiodic addressing). Clock: a quasicrystal oscillator, two-gap timing from the golden ratio phi = 1.618, tick sequence the Fibonacci word (S->L, L->LS) -- aperiodic (no resonances, EMI-quiet) and self-similar. KEY: the three-gap theorem -- the golden-rotation inter-tick intervals take at most 3 distinct values at every horizon (verified N=8,30,100,500) -> jitter bounded to <= 3 intervals; discrepancy O(log N) (optimal 1-D, phi the most irrational -> slowest resonance). Supercycle beat = 30 = the 600-cell BC ring. So a low-discrepancy, three-gap, self-similar quasicrystal clock over a register / protected-store / quasicrystal-tape hierarchy. HONEST: the three-gap theorem and O(log N) golden discrepancy are classical (verified here); the substrate content is the BC clock IS this golden/Fibonacci timing, beat = 30 its supercycle; the memory levels map the corpus objects (27 word, [[66,8,3]]_3 code, UTM tape); physical oscillator realisation is an implementation question.",
+  "sources": [
+    "Steinhaus three-gap theorem; golden ratio as most irrational (continued fraction [1;1,1,...]) -> O(log N) discrepancy; Fibonacci word / Sturmian sequences; Boerdijk-Coxeter clock + beat = 30 = 600-cell ring (holonet/BC work, w33_floor_derivation.py); [[66,8,3]]_3 code (QEC track); UTM tape (BT1858)."
+  ]
+}

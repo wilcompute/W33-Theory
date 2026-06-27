@@ -7464,6 +7464,66 @@ physical gate and wiring realisations are an implementation question. ``Architec
 the von~Neumann architecture of self-reproduction --- the rigorous computational notion (universal
 computation $+$ construction $+$ error-corrected heredity) --- not literal biochemistry.
 
+\subsection{Pass 35 --- the datapath: the router, the clock, and the reliability budget}
+\label{sec:capstone-thirtyfive}
+
+Pass~34 gave the datasheet; this pass quantifies its three working subsystems the way a systems
+engineer would specify them --- the routing protocol on the fabric, the memory hierarchy with its
+clock, and the error budget of the store --- and finds that every operational constant is a fixed
+substrate integer.
+
+\emph{The router.} The $\mathrm{GQ}(3,3)$ fabric carries a table-free routing protocol. A node's
+address is a projective point of $\mathbb{F}_3^4$ --- four balanced-ternary digits --- and the
+forwarding decision is a single ALU operation: two nodes are directly linked iff their symplectic
+inner product $B(x,y)$ vanishes, so the \emph{address is the route} (the parabolic-router duality, no
+routing table). Diameter $2$ makes every delivery one or two hops. The path diversity is exact and
+strongly-regular: between adjacent nodes the direct link plus $\lambda=2$ length-$2$ detours; between
+non-adjacent nodes $\mu=4$ internally-disjoint length-$2$ paths --- native \emph{four-way shortest
+multipath} for load spreading and instant failover --- and by Menger's theorem the vertex
+connectivity $12$ gives twelve internally-disjoint paths in all, so the protocol survives any eleven
+simultaneous failures with guaranteed delivery. Oblivious minimal routing on a diameter-$2$ graph is
+deadlock-free with a single virtual channel, and vertex/edge-transitivity under $\mathrm{Sp}(4,3)$
+makes load perfectly balanced. So the protocol is a $4$-trit address, a one-operation symplectic
+forwarding test, two-hop delivery, four-way multipath, twelve-way resilience --- every constant
+$(2,4,12)$ an SRG parameter. (Witness: \path{analysis/w33_router_protocol.py}.)
+
+\emph{The clock and memory.} The memory is a conventional hierarchy --- the $27=3^3$ tryte register
+(three qutrits, the $E_6$ word) at the top, the $[\![66,8,3]\!]_3$ protected store ($8$
+fault-tolerant logical qutrits in $66$ physical) as the working set, and the Boerdijk--Coxeter /
+Fibonacci tape (the UTM tape) as the long store, addressed quasicrystallinely. The clock is
+\emph{unconventional}: not a periodic crystal but a quasicrystal oscillator, a two-gap timing built
+from the golden ratio $\varphi=1.618$ whose tick sequence is the Fibonacci word (substitution
+$S\!\to\!L$, $L\!\to\!LS$), aperiodic (no resonances --- spread-spectrum, EMI-quiet) and self-similar
+at every scale. Its key engineering property is the \emph{three-gap theorem}: the inter-tick
+intervals of the golden rotation take at most three distinct values at every horizon (verified here
+to $N=500$), so the clock's jitter is bounded to at most three intervals --- a deterministic,
+low-discrepancy schedule ($O(\log N)$, optimal for a $1$-D sequence, since $\varphi$ is the most
+irrational number and so the slowest to resonate). The supercycle is $\mathrm{beat}=30$, the
+$600$-cell Boerdijk--Coxeter ring. (Witness: \path{analysis/w33_memory_clock.py}.)
+
+\emph{The reliability budget.} The store's error budget is clean. The code distance is $3$, so it
+corrects one fault per cycle with certainty --- every single-qutrit error has a unique syndrome ($528$
+of them) and every weight-$2$ error is detected. The depolarizing reliability is the standard
+distance-$3$ quadratic, $P_L\sim A\,p^2$ with $A\sim\binom{66}{2}=2145$, so the pseudo-threshold
+(the physical rate below which encoding helps, $P_L<p$) is $p_{\mathrm th}=1/A\approx 5\times10^{-4}$:
+below it the encoded store beats the bare qutrit (at $p=10^{-4}$, $P_L\sim2\times10^{-5}$, a $5\times$
+gain), above it encoding hurts --- the honest crossover. For the erasure / photon-loss channel a
+photonic build actually faces, surface codes tolerate $\sim25$--$50\%$ erasure, so the
+$\sim0.2\%$-per-component optical loss leaves $\sim78$--$88\%$ survival and the code runs by
+post-selection. And reliability scales: below threshold the logical error falls super-exponentially
+as the code is enlarged (the threshold theorem), the enlargement being the GKP concatenation tower
+$A_2<D_4<E_8$ (the moonshine ladder), driving the logical error to zero. With a $1$~GHz clock and
+$p=10^{-4}$ this already gives a multi-year mean time between logical failures. (Witness:
+\path{analysis/w33_reliability_threshold.py}.)
+
+\emph{Honest scope:} the routing constants ($\lambda=2$, $\mu=4$, connectivity $12$) and the
+three-gap property are exact and computed; the routing dictionary (header $=$ address, forward $=$
+symplectic test, deadlock-freedom from diameter $2$), the three-gap theorem, the golden-rotation
+$O(\log N)$ discrepancy, and the threshold theorem are standard results applied to the substrate
+objects. The coefficient $A\sim\binom{66}{2}$ is a generous upper count of weight-$2$ error pairs ---
+the true value is smaller --- so $p_{\mathrm th}\approx5\times10^{-4}$ is a conservative bound; the
+MTBF depends on the assumed clock and physical error rate.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

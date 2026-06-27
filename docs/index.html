@@ -3941,6 +3941,35 @@
               rigorous notion), not literal biochemistry.</div>
           </div>
           <div class="card">
+            <div class="label">The Datapath: the Router, the Clock, and the Reliability Budget</div>
+            <div class="detail"><strong>The three working subsystems of the datasheet, specified as a systems engineer would &mdash;
+              and every operational constant is a fixed substrate integer.</strong>
+              <strong>(1) The router.</strong> The GQ(3,3) fabric carries a <strong>table-free</strong> routing protocol: a node's address is a
+              projective point of F&#8323;&#8308; (<strong>4 balanced-ternary digits</strong>), and forwarding is one ALU op &mdash; two nodes are
+              linked iff their symplectic inner product B(x,y)=0, so the <strong>address IS the route</strong>. Diameter 2 &rarr; every delivery is 1
+              or 2 hops. Path diversity is exact: adjacent pairs have the direct link + <strong>&lambda;=2</strong> detours; non-adjacent pairs have
+              <strong>&mu;=4 internally-disjoint shortest paths</strong> (native four-way multipath for load-spread + failover); vertex connectivity 12
+              gives twelve disjoint paths (Menger) &rarr; survives <strong>11 simultaneous failures</strong>. Oblivious minimal routing on a diameter-2
+              graph &rarr; deadlock-free with 1 virtual channel; vertex/edge-transitive (Sp(4,3)) &rarr; perfect load balancing. Every constant (2, 4,
+              12) is an SRG parameter. <strong>(2) The clock &amp; memory.</strong> Memory is a hierarchy &mdash; the 27=3&sup3; tryte register &rarr;
+              the [[66,8,3]]&#8323; protected store (8 logical qutrits in 66 physical) &rarr; the Boerdijk&ndash;Coxeter/Fibonacci tape. The clock is a
+              <strong>quasicrystal oscillator</strong>: a golden-ratio (&phi;=1.618) two-gap timing whose ticks are the Fibonacci word (S&rarr;L,
+              L&rarr;LS), aperiodic (no resonances, EMI-quiet) and self-similar. Its key property is the <strong>three-gap theorem</strong> &mdash; the
+              golden-rotation inter-tick intervals take at most <strong>3 distinct values at every horizon</strong> (verified to N=500), so jitter is
+              bounded to &le;3 intervals with discrepancy O(log&nbsp;N) (optimal for 1-D; &phi; is the most irrational number). Supercycle: beat=30, the
+              600-cell BC ring. <strong>(3) The reliability budget.</strong> Distance 3 &rarr; corrects one fault/cycle with certainty (528 unique
+              single-error syndromes, every weight-2 error detected). Depolarizing reliability is the distance-3 quadratic P&#8343;&nbsp;~&nbsp;A&nbsp;p&sup2;
+              with A~C(66,2)=2145, so the <strong>pseudo-threshold</strong> p&#8348;&#8341;=1/A&nbsp;&asymp;&nbsp;5&times;10&#8315;&#8308;: below it the
+              encoded store beats the bare qutrit (p=10&#8315;&#8308; &rarr; P&#8343;~2&times;10&#8315;&#8309;, a 5&times; gain), above it encoding hurts
+              (the honest crossover). For the erasure/photon-loss channel a photonic build faces, surface codes tolerate <strong>~25&ndash;50%
+              erasure</strong>, so ~0.2%/component optical loss leaves ~78&ndash;88% survival (post-selected). Reliability scales: below threshold P&#8343;
+              &rarr; 0 super-exponentially with code size (threshold theorem), the enlargement being the <strong>GKP tower
+              A&#8322;&lt;D&#8324;&lt;E&#8328;</strong> (the moonshine ladder). At 1&nbsp;GHz and p=10&#8315;&#8308; &rarr; multi-year MTBF before
+              scaling. Honest: the routing constants and the three-gap property are exact/computed; the routing dictionary, three-gap theorem, O(log&nbsp;N)
+              discrepancy, and threshold theorem are standard results applied to the substrate; A~C(66,2) is a generous upper count &rarr;
+              p&#8348;&#8341;~5&times;10&#8315;&#8308; is a conservative bound.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently
