@@ -4088,6 +4088,33 @@
               architecture layer is poly-time classical, not that legacy hardware delivers quantum advantage.</div>
           </div>
           <div class="card">
+            <div class="label">The Machine Made Runnable: the Emulator and Three Frontier Applications</div>
+            <div class="detail"><strong>The architecture shipped as a runnable program, plus three frontier applications pushed from
+              conjecture to verified witnesses.</strong>
+              <strong>(1) The universal VM, executable.</strong> <code>analysis/holonet_node.py</code> is a runnable holonet node: it builds
+              the 40-node GQ(3,3) fabric and routes a packet in 2 hops (<strong>address IS route</strong>, &mu;=4 multipath); runs a qutrit register
+              as a Clifford stabilizer tableau over F&#8323; that evolves by the symplectic group in <strong>polynomial time</strong> (a Fourier+SUM
+              circuit builds a valid entangled qutrit-Bell stabilizer state, checked by mutual commutation; gate timing stays flat from 4 to 32
+              qutrits); exposes the magic dial (classical cost 9&#7511;); and <strong>self-reproduces</strong> by splicing a W(3,3) child (address
+              +1 digit, diameter +8). That it executes on a laptop is the proof: <strong>the architecture of life boots on ordinary hardware</strong>,
+              and the network of many such emulators is, as one W(E&#8326;)-symmetric object, the planetary computer. <strong>(2) Mining-free
+              consensus</strong> (<code>w33_consensus_ledger.py</code>): W(E&#8326;) transitivity makes a ledger leaderless; agreement = 2 hops + a
+              1/3-per-round contraction (~19 rounds for 1e-9), Byzantine-safe to 5. Proof-of-work pays ~10&#8313; J/txn (Bitcoin ~150 TWh/yr); the
+              holonet floor is the ~2.6&times;10&#8315;&sup1;&#8313; J syndrome export &mdash; <strong>~27 orders lower</strong>, security from geometry
+              not burned power. <strong>(3) The substrate code is a DNA code</strong> (<code>w33_dna_storage_code.py</code>): homopolymer-free DNA has
+              density log&#8322;3 = <strong>1.585 bit/nt</strong> &mdash; the substrate's exact Holevo/OAM alphabet &mdash; and {&minus;1,0,+1} maps to a
+              homopolymer-free, GC-balanced base alphabet (verified on a 200-trit strand), with [[66,8,3]]&#8323; supplying distance-3 correction; a
+              substrate-encoded strand IS a holonet memory block. <strong>(4) The quantum-internet spec</strong> (<code>w33_quantum_internet.py</code>):
+              gate teleportation = store-and-forward entanglement swap; diameter 2 &rarr; <strong>one swap connects any pair</strong>, &mu;=4 redundant
+              swap paths (~89% per-hop survival, ~1 with multipath), 8 log&#8324;&#8320; N fractal backbone &mdash; a candidate specification for the
+              repeater networks now being built (Zheng et al. 2025; Photonic&ndash;TELUS; Qunnect&ndash;Cisco). Companion paper:
+              <code>holonet_practical_implications.tex</code> (with title figure). Honest: the emulator's routing, poly-time Clifford evolution,
+              validity check, and fractal growth are run; the consensus/DNA/quantum-internet numbers are computed; the applications are directions,
+              not built systems (the 9&#7511; magic layer isn't executed; energy uses external estimates + a thermodynamic floor; the DNA match is an
+              encoding hypothesis; the quantum-internet mapping is a specification); "boots on a dinosaur" = the architecture layer is poly-time
+              classical, not that legacy hardware yields quantum advantage.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

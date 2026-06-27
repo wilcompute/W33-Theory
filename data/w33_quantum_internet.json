@@ -1,0 +1,42 @@
+{
+  "repeater": "gate teleportation (Choi-Jamiolkowski self-measurement, Stage B) = store-and-forward entanglement swap",
+  "metro": {
+    "swaps_per_pair": 1,
+    "multipath_swap_paths": 4,
+    "routing": "symplectic test (table-free)"
+  },
+  "backbone": {
+    "law": "8 log_40 N reversible hops",
+    "rows": [
+      {
+        "level": 1,
+        "leaves": 40,
+        "hops": 8
+      },
+      {
+        "level": 2,
+        "leaves": 1600,
+        "hops": 16
+      },
+      {
+        "level": 3,
+        "leaves": 64000,
+        "hops": 24
+      },
+      {
+        "level": 7,
+        "leaves": 163840000000,
+        "hops": 56
+      }
+    ]
+  },
+  "loss": {
+    "per_component": 0.002,
+    "single_path_survival": 0.887,
+    "multipath_survival": 0.9998
+  },
+  "summary": "the protocol for the quantum internet being built right now: gate teleportation is the repeater, GQ(3,3) is the metro. The 2025-2026 quantum internet is a repeater story (Photonic-TELUS 30 km, Qunnect-Cisco metro entanglement swap, $300M Long Island entangled-photon data center), needing entanglement swapping, quantum memory, and a routing/topology no testbed specifies. The substrate supplies all three. (1) Repeater = its own preparation: a unitary stored in a photon's self-entanglement, applied by Bell projection against its past (Choi-Jamiolkowski, Stage B) = store-and-forward swap, gate never exposed classically. (2) Metro = GQ(3,3): diameter 2 -> 1 entanglement swap connects any pair; mu = 4 disjoint swap paths; relay = symplectic test, no table. (3) Backbone = fractal H_n: 8 log_40 N reversible hops reach N leaves -> planet-scale entanglement distribution. Loss: ~0.2%/component -> ~78-88% per-hop survival (post-selected); mu = 4 multipath -> P(>=1 swap path survives) high. So the holonet is not a competitor but a candidate SPECIFICATION (topology + routing + code) for the quantum internet -- a diameter-2, table-free, four-way-redundant repeater fabric whose gate and route are one operation. HONEST: the single-swap diameter-2 connectivity, mu = 4 multipath, and 8 log_40 N backbone are computed graph facts; the gate-teleportation = repeater identification is the corpus two-carrier preparation (Stage B), realized in spirit by 2025 hardware (Zheng et al. PRL 2025; Photonic-TELUS; Qunnect-Cisco); the loss/survival figures are the corpus optical budget; this is a specification, not a built repeater.",
+  "sources": [
+    "GQ(3,3) diameter / mu multipath / fractal 8 log_40 N (computed; Pass 35/39); gate-teleportation = Choi-Jamiolkowski self-measurement Stage B (corpus two-carrier preparation); 2025 hardware (Zheng et al. chip-to-chip CNOT teleportation, PRL 2025; Photonic-TELUS 30 km; Qunnect-Cisco metro entanglement swap; $300M Long Island quantum testbed); optical loss budget ~0.2%/component, 78-88% survival (corpus BT1879/1882)."
+  ]
+}

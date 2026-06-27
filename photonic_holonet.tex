@@ -7724,6 +7724,49 @@ law (BT827), and the physics identifications are corpus results used as inputs, 
 ``Boots on a dinosaur'' means the architecture layer is polynomial-time classical, not that legacy
 hardware delivers quantum advantage.
 
+\subsection{Pass 40 --- the machine made runnable: the emulator and three frontier applications}
+\label{sec:capstone-forty}
+
+This pass ships the architecture as a \emph{runnable} program and pushes three frontier applications
+from conjecture to verified witnesses; the companion paper \path{holonet_practical_implications.tex}
+collects the practical case.
+
+\emph{The universal VM, executable.} \path{analysis/holonet_node.py} is a runnable holonet node: it
+builds the $40$-node GQ$(3,3)$ fabric and routes a packet in two hops (address is route, $\mu=4$
+multipath); runs a qutrit register as a Clifford stabilizer tableau over $\mathbb{F}_3$ that evolves by
+the symplectic group in \emph{polynomial} time (a Fourier$+$SUM circuit builds a valid entangled
+qutrit-Bell stabilizer state, checked by mutual commutation; gate timing stays flat from $4$ to $32$
+qutrits); exposes the magic dial (classical cost $9^t$); and self-reproduces by splicing a $W(3,3)$
+child (address $+1$ digit, diameter $+8$). That the file executes on a laptop is the demonstration: the
+architecture of life boots on ordinary hardware, and the network of many such emulators is, as one
+$W(E_6)$-symmetric object, the planetary computer.
+
+\emph{Mining-free consensus.} \path{analysis/w33_consensus_ledger.py}: $W(E_6)$ vertex-transitivity
+makes a ledger leaderless (leader election dissolves); agreement is two hops plus a $1/3$-per-round
+averaging contraction ($\sim19$ rounds for a part in $10^9$), Byzantine-safe to $5$. Proof-of-work pays
+$\sim10^9$~J/transaction (Bitcoin $\sim150$~TWh/yr); the holonet's floor is the $\sim2.6\times10^{-19}$~J
+syndrome export --- $\sim27$ orders lower, security from geometry not burned power.
+
+\emph{The substrate code is a DNA code.} \path{analysis/w33_dna_storage_code.py}: a homopolymer-free DNA
+encoding has density $\log_2 3 = 1.585$~bit/nt --- the substrate's exact Holevo/OAM alphabet --- and the
+balanced-ternary digit $\{-1,0,+1\}$ maps to a homopolymer-free, GC-balanced base alphabet (verified on a
+$200$-trit strand), with $[[66,8,3]]_3$ supplying distance-$3$ correction. A substrate-encoded strand
+\emph{is} a holonet memory block.
+
+\emph{The quantum-internet specification.} \path{analysis/w33_quantum_internet.py}: gate teleportation
+(the Stage-B self-measurement) is a store-and-forward entanglement swap; diameter $2$ means one swap
+connects any pair, with $\mu=4$ redundant swap paths ($\sim89\%$ per-hop survival, essentially $1$ with
+multipath) and an $8\log_{40}N$ fractal backbone --- a candidate specification (topology, routing, code)
+for the repeater networks now being built (Zheng et~al.\ 2025; Photonic--TELUS; Qunnect--Cisco).
+
+\emph{Honest scope:} the emulator's routing, polynomial-time Clifford evolution, validity check, and
+fractal growth are computed and run; the consensus graph facts, the DNA density and homopolymer-free
+mapping, and the swap/multipath/backbone counts are computed. The applications themselves are
+directions, not built systems: the $9^t$ magic layer is not executed (it is the quantum-advantage
+regime), the energy comparisons use external estimates and a thermodynamic floor, the DNA match is an
+encoding hypothesis, and the quantum-internet mapping is a specification. ``Boots on a dinosaur'' means
+the architecture layer is poly-time classical, not that legacy hardware yields quantum advantage.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

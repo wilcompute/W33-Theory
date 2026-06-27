@@ -12,6 +12,9 @@
 \usepackage{titlesec}
 \titleformat{\section}{\Large\bfseries\color{RoyalBlue}}{\thesection}{1em}{}
 \titleformat{\subsection}{\large\bfseries\color{RoyalBlue!80!black}}{\thesubsection}{1em}{}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+\sloppy
 
 \newtcolorbox{keybox}[1]{colback=RoyalBlue!6,colframe=RoyalBlue!55,title={#1},
   fonttitle=\bfseries\color{white},coltitle=white,boxrule=0.6pt,arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt}
@@ -52,6 +55,42 @@ technology choice. We close with the cheapest possible test of the whole edifice
 on a tabletop, measuring the contextual fraction $1/10$. Throughout, we separate what is computed and
 verified from what is corpus identification or aspiration, in shaded \emph{honest-scope} boxes.
 \end{abstract}
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\small,>=Latex,node distance=6mm]
+\tikzset{
+  core/.style={draw=RoyalBlue!70,fill=RoyalBlue!10,rounded corners=3pt,align=center,inner sep=5pt,thick},
+  face/.style={draw=RoyalBlue!40,fill=white,rounded corners=2pt,align=center,inner sep=3pt},
+  lvl/.style={draw=Orange!60,fill=Orange!8,rounded corners=2pt,align=center,inner sep=3pt},
+}
+% central object
+\node[core] (w) {\textbf{one photon on $W(3,3)$}\\[1pt]{\footnotesize $40$ points $=$ states $=$ operators}\\[1pt]{\footnotesize symmetry $W(E_6)$, order $51840$}};
+% four faces
+\node[face,above left=8mm and 16mm of w] (proc) {Processor\\{\footnotesize Clifford $+$ cubic}};
+\node[face,above right=8mm and 16mm of w] (net) {Network\\{\footnotesize diameter $2$, table-free}};
+\node[face,below left=8mm and 16mm of w] (mem) {Memory\\{\footnotesize $[[66,8,3]]_3$}};
+\node[face,below right=8mm and 16mm of w] (clk) {Clock\\{\footnotesize quasicrystal}};
+\foreach \n in {proc,net,mem,clk}{\draw[<->,RoyalBlue!55] (w) -- (\n);}
+% emulator / fractal chain
+\node[lvl,right=26mm of w] (emu) {classical\\emulator\\{\footnotesize (any computer)}};
+\node[lvl,right=8mm of emu] (h1) {$H_1$\\{\footnotesize $40$}};
+\node[lvl,right=5mm of h1] (h2) {$H_2$\\{\footnotesize $1600$}};
+\node[lvl,right=5mm of h2] (hn) {$H_7$\\{\footnotesize everyone}};
+\draw[->,Orange!70] (w) -- (emu);
+\draw[->,Orange!70] (emu) -- (h1);
+\draw[->,Orange!70] (h1) -- (h2);
+\draw[->,Orange!70,dashed] (h2) -- (hn);
+\node[below=2mm of hn,align=center,text=Orange!70!black,font=\footnotesize] {planetary\\computer};
+\end{tikzpicture}}
+\caption{The thesis in one picture. \emph{Left:} on $W(3,3)$ the processor, network, memory, and clock
+are four readings of one object, with one symmetry group $W(E_6)$. \emph{Right:} because the
+architecture is classically emulable, it runs as software on any computer; spliced by the fractal law
+$H_n$, the network of everyone's machines becomes, as one object, a planetary computer. The quantum
+advantage is a separate priced dial.}
+\label{fig:thesis}
+\end{figure}
 
 \tableofcontents
 
@@ -172,6 +211,25 @@ physically impossible, not merely policy-blocked.
 
 \emph{(Witness: \texttt{analysis/w33\_fractal\_datacenter.py} for the emulation cost; the VM/coset and
 Steinberg claims are corpus.)}
+
+\section{Run It Yourself: The Emulator Exists}
+\label{sec:emulator}
+The previous section is not a thought experiment. The repository ships
+\texttt{analysis/holonet\_node.py} --- a runnable universal VM that you can execute right now on the
+machine you are reading this on. In one file it builds the $40$-node fabric, routes a packet between two
+nodes (\emph{address is route}, two hops, four-way multipath), runs a qutrit register as a Clifford
+stabilizer tableau over $\mathbb{F}_3$ that evolves under the symplectic group in \emph{polynomial}
+time (a small circuit builds a valid entangled qutrit-Bell stabilizer state, checked by mutual
+commutation; gate timing stays flat from $4$ to $32$ qutrits, with no exponential blow-up), exposes the
+magic dial (classical cost $9^t$), and \emph{self-reproduces} --- a node spawns a child by splicing a
+$W(3,3)$ copy, growing the address one digit and the diameter by $8$, with no new control logic.
+
+The point of the program is its own execution. A file that builds the network, runs the processor, and
+reproduces itself --- and does so on a laptop --- is the proof that the architecture of life boots on
+ordinary hardware. The same file, run by many people and spliced by the fractal law, \emph{is} the
+planetary computer of \S\ref{sec:planetary}: not a network of programs but, as one
+$W(E_6)$-symmetric object, a single one. The quantum advantage is the only thing the laptop cannot
+supply --- and that is exactly the priced $9^t$ dial, not the architecture.
 
 \section{The Planetary Data Center: Everyone Is a Node}
 \label{sec:planetary}
@@ -404,9 +462,13 @@ entanglement is swapped, quantum memories hold the state until the network synch
 two-carrier self-measurement --- a unitary stored in a photon's self-entanglement and applied by Bell
 projection against its own past --- \emph{is} a store-and-forward repeater primitive, and its
 diameter-$2$, table-free, $\mu=4$-multipath routing is exactly the metro/backbone topology these
-testbeds are groping toward by trial. The holonet does not compete with the quantum internet; it is a
-candidate \textbf{specification} for it --- the missing answer to ``which states, which routing, which
-code'' that the hardware programs currently leave open.
+testbeds are groping toward by trial. Quantitatively (witness
+\texttt{analysis/w33\_quantum\_internet.py}): a single entanglement swap connects any pair (diameter
+$2$); there are $\mu=4$ internally-disjoint swap paths, and at $\sim0.2\%$/component loss the per-hop
+survival is $\sim89\%$, so the four-way multipath raises the chance that at least one swap path survives
+to essentially $1$; the fractal backbone reaches $N$ leaves in $8\log_{40}N$ hops. The holonet does not
+compete with the quantum internet; it is a candidate \textbf{specification} for it --- the missing
+answer to ``which states, which routing, which code'' that the hardware programs currently leave open.
 
 \subsection{DNA data storage: the substrate code is a biological code}
 DNA data storage is a serious 2025 industry (the SNIA published a formal technology review in June
@@ -414,10 +476,14 @@ DNA data storage is a serious 2025 industry (the SNIA published a formal technol
 $1.58 = \log_2 3$ is \emph{exactly} the substrate's Holevo capacity, the same number that governs the
 OAM-trit air-gap. This is not a coincidence of branding: the substrate is a $q=3$ (ternary) machine
 with a built-in distance-$3$ error-correcting code $[[66,8,3]]_3$, and DNA storage's central problem is
-\emph{ternary error-correcting codes under biochemical constraints}. The ``architecture of life''
-framing becomes literally actionable: the substrate's code geometry is a design template for synthetic
-genetic information systems with error correction baked into the alphabet, not bolted on. A holonet node
-and a DNA archive speak the same ternary, error-corrected language.
+\emph{ternary error-correcting codes under biochemical constraints}. Quantitatively (witness
+\texttt{analysis/w33\_dna\_storage\_code.py}): the balanced-ternary digit $\{-1,0,+1\}$ maps to a
+homopolymer-free DNA alphabet --- each trit selects one of the three bases that \emph{differ} from the
+previous one --- verified homopolymer-free on a $200$-trit strand with GC content $\approx 0.45$, and
+the $[[66,8,3]]_3$ code adds distance-$3$ correction (one substitution per $66$-trit block). The
+``architecture of life'' framing becomes literally actionable: the substrate's code geometry is a design
+template for synthetic genetic information systems with error correction baked into the alphabet, not
+bolted on. A holonet node and a DNA archive speak the same ternary, error-corrected language.
 
 \subsection{Autopoietic infrastructure and von~Neumann probes}
 The substrate is, in von~Neumann's exact sense, a self-reproducing automaton: a universal computer
@@ -445,8 +511,14 @@ pseudo-) randomness from the hardware itself, testable with $O(1)$ samples.
 \item \textbf{Energy-free consensus.} Decentralization is structural ($W(E_6)$ transitivity), so a
 distributed ledger on the holonet reaches consensus as a \emph{theorem}, not by proof-of-work ---
 post-quantum by construction, with the certified randomness as its unforgeable beacon and \emph{zero}
-mining energy. The technology that today consumes nation-scale electricity for artificial scarcity
-becomes a group-membership check.
+mining energy. Quantitatively (witness \texttt{analysis/w33\_consensus\_ledger.py}): leaderless (no
+validator is privileged, so leader election dissolves), agreement in two hops plus a neighbour-averaging
+round contracting by $1/3$ each step ($\sim19$ rounds for a part-in-$10^9$), Byzantine-safe to $5$ lying
+nodes. The energy contrast is the headline: proof-of-work pays $\sim\!10^9$~J of dissipated work per
+transaction (Bitcoin draws $\sim\!150$~TWh/yr), while the holonet's only irreducible cost is the
+$\sim\!2.6\times10^{-19}$~J Landauer syndrome export --- some \textbf{twenty-seven orders of magnitude}
+lower, because security is geometry (a group-membership check), not burned electricity. The technology
+that today consumes nation-scale power for artificial scarcity becomes a homomorphism test.
 \end{itemize}
 
 \subsection{Equivariant AI on the symmetry of the world}
