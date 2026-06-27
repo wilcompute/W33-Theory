@@ -1,0 +1,74 @@
+{
+  "inputs": {
+    "a1inv_MZ": 59.02,
+    "a2inv_MZ": 29.58,
+    "a3inv_MZ": 8.47
+  },
+  "scenarios": {
+    "Standard Model": {
+      "betas": [
+        4.1,
+        -3.167,
+        -7
+      ],
+      "crossings": {
+        "a1=a2": {
+          "mu_GeV": "1.03e+13",
+          "aGUT_inv": 42.4
+        },
+        "a1=a3": {
+          "mu_GeV": "2.44e+14",
+          "aGUT_inv": 44.0
+        },
+        "a2=a3": {
+          "mu_GeV": "9.82e+16",
+          "aGUT_inv": 47.0
+        }
+      },
+      "scale_spread": 9529.2,
+      "unifies": false
+    },
+    "structural SUSY": {
+      "betas": [
+        6.6,
+        1.0,
+        -3.0
+      ],
+      "crossings": {
+        "a1=a2": {
+          "mu_GeV": "2.01e+16",
+          "aGUT_inv": 24.3
+        },
+        "a1=a3": {
+          "mu_GeV": "2.13e+16",
+          "aGUT_inv": 24.3
+        },
+        "a2=a3": {
+          "mu_GeV": "2.32e+16",
+          "aGUT_inv": 24.3
+        }
+      },
+      "scale_spread": 1.2,
+      "unifies": true
+    }
+  },
+  "unification": {
+    "M_GUT_GeV": "2.15e+16",
+    "M_Pl_e_minus_Phi6": "1.11e+16",
+    "exponent_vs_Phi6": [
+      6.3,
+      7
+    ],
+    "aGUT_inv": 24.3,
+    "aGUT_inv_is_f": true,
+    "f_is_dim_SU5": true
+  },
+  "structural_susy": {
+    "balance": "f Phi_4 = g mu^2 = 240 = |roots(E8)|",
+    "reading": "the boson-fermion balance (CC cancellation) is the content that unifies the couplings"
+  },
+  "summary": "the three forces meet -- at M_Pl e^-Phi6, with alpha_GUT^-1 = f = 24. One-loop RG from M_Z (SU(5) norm): plain Standard-Model content does NOT unify (pairwise crossings spread over 10^13-10^17 GeV, the near-miss); the substrate's structural-SUSY content (the SUSY-like spectrum implied by the boson-fermion balance f Phi4 = g mu^2 = 240) converges to a single point at M_GUT ~ 2x10^16 GeV ~ M_Pl e^-Phi6 (GUT rung, Phi6 = q^2-q+1 = 7), with alpha_GUT^-1 ~ 24 = f = dim SU(5). So the unification scale is the mass-ladder rung M_Pl e^-Phi6 and the unified coupling inverse is the gauge mode count f = 24 = dim of the unified group; the SAME boson-fermion balance that cancels the leading CC supplies the content that unifies the couplings (one spectrum, two consequences). HONEST: one-loop MSSM-like unification near 2x10^16 with alpha_GUT^-1 ~ 24-25 is textbook; the substrate content is M_GUT = the ladder rung M_Pl e^-Phi6 (exponent 6.4 vs 7, ~10%), alpha_GUT^-1 = f = dim SU(5), and the unifying content = the balance f Phi4 = g mu^2; the exact M_GUT/alpha_GUT depend on the assumed SUSY-like spectrum and thresholds, not derived in detail; plain SM does NOT unify.",
+  "sources": [
+    "M_Z, sin^2 th_W, alpha_s, alpha_em (PDG); one-loop SM/MSSM beta functions (standard); M_GUT = M_Pl e^-Phi6 (mass ladder, w33_everything.tex / w33_floor_derivation.py); f=24, g=15, balance f Phi4 = g mu^2 = 240 (w33_cc_mechanism.py, w33_e6_27_standard_model.py)."
+  ]
+}

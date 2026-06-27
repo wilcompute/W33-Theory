@@ -7066,6 +7066,49 @@ $q/(q^2-1)$ at unification and $q/\Phi_3$ at $M_Z$, both cyclotomic ratios, with
 denominator shift. The running that connects them is the standard SM/SUSY-GUT RG, not derived here;
 the measured $q/\Phi_3$ is a separate (very good) postdiction.
 
+\subsection{Pass 27 --- the three forces meet at $M_{\rm Pl}e^{-\Phi_6}$ with $\alpha_{\rm GUT}^{-1}=f$, and the proton decays}
+\label{sec:capstone-twentyseven}
+
+Pass 26 fixed the weak angle as a $\mathbf{27}$-trace; the deeper test is whether the three running
+couplings actually converge --- and what it predicts for proton decay.
+
+\emph{Unification at the ladder rung, with $\alpha_{\rm GUT}^{-1}=f$.} Running the one-loop
+renormalisation group from $M_Z$ (in $\mathrm{SU}(5)$ normalisation, $\alpha_1^{-1}=59.0$,
+$\alpha_2^{-1}=29.6$, $\alpha_3^{-1}=8.5$), the plain Standard-Model content does \emph{not} unify
+--- its three pairwise crossings are spread over a factor $\sim10^4$ in scale ($10^{13}$--$10^{17}$
+GeV, the famous near-miss). But with the substrate's structural-supersymmetric content --- the
+SUSY-like spectrum implied by the exact boson--fermion balance $f\Phi_4=g\mu^2=240$ --- the three
+crossings coincide to a factor $1.2$ at
+\[
+M_{\rm GUT}\simeq2\times10^{16}\ \mathrm{GeV}\simeq M_{\rm Pl}e^{-\Phi_6},\qquad
+\alpha_{\rm GUT}^{-1}\simeq24.3=f=\dim\mathrm{SU}(5).
+\]
+So the scale at which the forces merge is the substrate's mass-ladder rung $M_{\rm Pl}e^{-\Phi_6}$
+(the grand-unification e-fold, $\Phi_6=q^2{-}q{+}1=7$; the exponent $\ln(M_{\rm Pl}/M_{\rm GUT})=6.3$
+vs $\Phi_6=7$ to $\sim10\%$), and the \emph{strength} at which they merge is the gauge-mode count
+$f=24=\dim\mathrm{SU}(5)$ --- the unified inverse coupling is the dimension of the unified group. And
+the content doing the unifying is the \emph{same} boson--fermion balance $f\Phi_4=g\mu^2$ that
+cancels the leading cosmological constant (Pass 18): one spectrum, two consequences. (Witness:
+\path{analysis/w33_gauge_unification.py}.)
+
+\emph{The proton decays --- a dated kill-shot.} Unification makes the proton decay through the same
+heavy gauge bosons, at a rate fixed by those two numbers: $\tau(p\to e^+\pi^0)\sim M_{\rm GUT}^4/
+(\alpha_{\rm GUT}^2 m_p^5)\sim2.6\times10^{35}$~yr (or $\sim3\times10^{36}$~yr at the one-loop scale),
+i.e.\ $\sim10^{35}$--$10^{36}$~yr. This is above the Super-Kamiokande bound $\tau>2.4\times10^{34}$~yr
+(not excluded) and squarely within Hyper-Kamiokande's reach ($\sim10^{35}$~yr by the late
+2030s--2040): a detection near $10^{35}$~yr confirms the $M_{\rm Pl}e^{-\Phi_6}$ scale, a null beyond
+$\sim10^{36}$~yr falsifies the minimal picture. So grand unification stakes itself on one dated
+experiment, like the inflationary $r=1/300$. (Witness:
+\path{analysis/w33_proton_decay_test.py}.)
+
+\emph{Honest scope:} one-loop MSSM-like running unifying near $2\times10^{16}$ with
+$\alpha_{\rm GUT}^{-1}\sim24$--$25$ is textbook, and plain SM does not unify; the substrate content
+is that $M_{\rm GUT}$ is the ladder rung $M_{\rm Pl}e^{-\Phi_6}$, that $\alpha_{\rm GUT}^{-1}=f=
+\dim\mathrm{SU}(5)$, and that the unifying SUSY-like spectrum is the balance $f\Phi_4=g\mu^2$. The
+proton-lifetime band $\sim10^{35}$--$10^{36}$~yr carries a $1$--$2$ order-of-magnitude hadronic and
+threshold uncertainty; the exact $M_{\rm GUT}$, $\alpha_{\rm GUT}$ and the precise running are not
+derived in detail here.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

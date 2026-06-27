@@ -1,0 +1,24 @@
+{
+  "lifetime": {
+    "M_GUT_substrate_GeV": "1.11e+16",
+    "alpha_GUT_inv": 24,
+    "tau_substrate_yr": "2.5e+35",
+    "tau_1loop_yr": "3.2e+36",
+    "band": "~10^35-36 yr"
+  },
+  "status": {
+    "superK_bound_yr": "2.4e+34",
+    "not_excluded": true,
+    "hyperK_reach_yr": "1e+35",
+    "in_window": true
+  },
+  "verdict": {
+    "detection": "tau ~ 10^35 yr confirms M_GUT = M_Pl e^-Phi6",
+    "null": "tau > ~10^36 yr falsifies the minimal dim-6 picture",
+    "date": "2030s-2040s (Hyper-Kamiokande)"
+  },
+  "summary": "proton decay: the dated kill-shot of unification, tau ~ 10^35-36 yr in Hyper-K's reach. Grand unification makes the proton decay through the same heavy gauge bosons that unify the couplings; the dim-6 lifetime tau ~ M_GUT^4/(alpha_GUT^2 m_p^5) is fixed by the Pass-27 inputs M_GUT = M_Pl e^-Phi6 ~ 10^16 GeV and alpha_GUT^-1 = f = 24. tau(p->e+ pi0) ~ 2.6x10^35 yr (substrate M_GUT=1.1e16) or ~3x10^36 yr (one-loop 2x10^16), i.e. ~10^35-36 yr. ABOVE the Super-K bound (2.4x10^34, not excluded) and WITHIN Hyper-K reach (~10^35 yr, late 2030s-2040). Verdict: detection ~10^35 yr confirms M_GUT = M_Pl e^-Phi6; Hyper-K null beyond ~10^36 yr falsifies the minimal dim-6 picture -- a dated kill-shot like r=1/300. HONEST: the dim-6 formula is standard but the absolute rate has ~1-2 order-of-magnitude uncertainty (hadronic matrix element, exact M_GUT, thresholds), so ~10^35-36 yr is a band; substrate inputs are M_GUT = M_Pl e^-Phi6 and alpha_GUT^-1 = f; e+ pi0 is the standard minimal channel.",
+  "sources": [
+    "M_GUT = M_Pl e^-Phi6, alpha_GUT^-1 = f = 24 (w33_gauge_unification.py); dim-6 proton-decay lifetime tau ~ M_GUT^4/(alpha_GUT^2 m_p^5) (standard GUT); Super-K bound tau(p->e+ pi0) > 2.4e34 yr; Hyper-K reach ~10^35 yr (late 2030s-2040)."
+  ]
+}
