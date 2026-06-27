@@ -1,0 +1,14 @@
+{
+  "bt": "BT1872",
+  "title": "Dual-Face Z-Check Construction",
+  "verified": true,
+  "construction": "Use signed vertex-star rows as the Szilassi-dual face checks of the K12 triangular surface. Each edge i<j has +1 at vertex i and -1 at vertex j over GF3.",
+  "input": {"edge_symbols": 66, "X_face_rows": 44, "Z_dual_vertex_rows": 12, "field": "GF3"},
+  "ranks": {"X_face_rank": 42, "Z_dual_rank": 11, "combined_stabilizer_rank": 53},
+  "commutation": {"HX_HZt_shape": [44,12], "rank": 0, "nonzero_entries": 0, "verdict": "exact CSS commutation"},
+  "parameters": {"n": 66, "k": 13, "d_X": 3, "d_Z": 3, "candidate_code": "[[66,13,3]]_3 in the finite GF3 matrix model"},
+  "distance_witnesses": {"X_logical_weight3": [{"symbol": "edge_0_1", "coef": 1}, {"symbol": "edge_0_3", "coef": 2}, {"symbol": "edge_1_3", "coef": 1}], "Z_logical_weight3": [{"symbol": "edge_0_3", "coef": 1}, {"symbol": "edge_3_4", "coef": 2}, {"symbol": "edge_3_8", "coef": 2}], "no_weight_1_or_2_logicals": true},
+  "comparison_to_BT1865": "BT1865's six distance rows failed CSS commutation. The signed dual-face/vertex-star rows commute because they implement boundary-of-boundary cancellation on the oriented K12 surface.",
+  "checks": {"dual_rows_commute": true, "rank_count_gives_k13": true, "distance_3_found_both_sides": true, "not_physical_implementation": true},
+  "boundary": "Exact finite GF3 CSS matrix code. Physical decoding, optical measurement schedule, and hardware noise thresholds remain open."
+}
