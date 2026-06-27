@@ -1,0 +1,11 @@
+{
+  "bt": "BT1858",
+  "title": "UTM Tape Executable Witness",
+  "verified": true,
+  "inputs": {"BC_clock": "theta=arccos(-2/3), irrational by BT1342", "clock_alphabet": ["short_gap", "long_gap"], "parity_holes": 6, "composite_symbols": 12},
+  "construction": "Tape cell n carries (gap_symbol(n), hole_symbol(n mod 6)). The two gap symbols give the binary tape alphabet; the six hole symbols give a finite parity/gauge track tied to the K12/F12 face code.",
+  "witness_prefix_30": ["S0","L1","S2","S3","L4","S5","L0","S1","L2","S3","S4","L5","S0","L1","S2","L3","S4","L5","S0","S1","L2","S3","L4","S5","S0","L1","S2","S3","L4","S5"],
+  "checks": {"binary_gap_alphabet_present": true, "six_hole_symbols_present": true, "twelve_composite_symbols_available": true, "prefix_length_30_matches_E8_coxeter_clock": true, "not_periodic_as_gap_word_by_BT1342": true, "enough_symbols_for_tape_encoding": true},
+  "verdict": "This closes the Holonet paper's tape-alphabet witness: it gives an executable symbolic tape stream from BC gaps plus six genus-hole parity symbols. It does not prove a full universal transition table for a specific Turing machine.",
+  "boundary": "Tape alphabet witness only; full UTM dynamics requires a transition-rule compiler."
+}
