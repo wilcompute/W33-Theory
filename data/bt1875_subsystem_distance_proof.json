@@ -1,0 +1,13 @@
+{
+  "bt": "BT1875",
+  "title": "All-Weight Subsystem Distance Proof",
+  "verified": true,
+  "parent_code": "BT1872 [[66,13,3]]_3 finite GF3 CSS matrix code",
+  "subsystem_candidate": "BT1873 [[66,8,>=3;5]]_3 with five gauge qudits",
+  "proof_strategy": "For distance 3 it is sufficient to prove no dressed logical of weight 1 or 2 and exhibit a dressed logical of weight 3. The BT1872 parent has no weight-1/2 logicals; imposing five gauge-pair commutation constraints can only shrink the logical centralizer, so no new weight-1/2 dressed logical can appear. A weight-3 parent logical survives the chosen five-gauge quotient and is not in the gauge group.",
+  "results": {"no_weight_1_dressed_logicals": true, "no_weight_2_dressed_logicals": true, "weight_3_dressed_logical_exists": true, "subsystem_distance": 3},
+  "surviving_weight3_witness": [{"symbol": "edge_0_1", "coef": 1}, {"symbol": "edge_0_3", "coef": 2}, {"symbol": "edge_1_3", "coef": 1}],
+  "parameters": {"n": 66, "k": 8, "r": 5, "d": 3, "notation": "[[66,8,3;5]]_3 in the finite symplectic matrix model"},
+  "checks": {"lower_bound_3": true, "upper_bound_3": true, "gauge_pairs_do_not_introduce_weight2_logicals": true, "witness_not_gauge": true, "finite_matrix_model_only": true},
+  "boundary": "Exact finite symplectic-matrix distance result for the chosen gauge-pair model. It is not yet an optical decoder, hardware threshold, or physical measurement proof."
+}
