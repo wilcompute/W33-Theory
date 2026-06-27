@@ -1,0 +1,13 @@
+{
+  "bt": "BT1870",
+  "title": "Gauge-Contrast Quotient Construction",
+  "verified": true,
+  "starting_point": {"full_distance_rows": 6, "commuting_global_clock_row": 1, "noncommuting_contrast_rows": 5, "from_BT1865_defect_rank": 5},
+  "quotient": {"distance_row_space": "span(H1,...,H6)", "stabilizer_subspace": "span(H1+H2+H3+H4+H5+H6)", "gauge_contrast_subspace_dimension": 5, "quotient_dimension": 1},
+  "subsystem_accounting": {"payload_symbols": 66, "face_X_rank": 42, "global_Z_rank": 1, "gauge_contrasts": 5, "candidate_logical_after_gauge_accounting": 18, "matches_BT1862_payload_kernel": true},
+  "meaning": "The five noncommuting distance contrasts should not be deleted; they are gauge handles. Accounting for them reduces the apparent BT1868 k=23 payload skeleton to an 18-dimensional logical/gauge-compatible payload sector, matching the BT1862 payload kernel.",
+  "failure_still_remaining": "The quotient does not by itself remove the BT1869 weight-2 X defect. It organizes the defect directions but does not supply the missing dual Z locality.",
+  "repair_candidates": ["add dual face rows from the Szilassi face-adjacency side", "promote distance contrasts into measured gauge checks with paired X partners", "construct a hypergraph-product-like doubled K12/F12 code"],
+  "checks": {"five_contrasts_identified": true, "quotient_dimension_1": true, "k_reduced_23_to_18": true, "BT1869_defect_not_hidden": true},
+  "boundary": "Gauge quotient bookkeeping, not a completed subsystem code or distance proof."
+}
