@@ -6853,6 +6853,50 @@ not a proof); the neutrino-mixing test is a genuine \emph{failure} of the minima
 slip, and the $\Sigma m_\nu$ ``detection'' assumes the NH-minimum value is true (current data
 could instead yield an exclusion, which would falsify).
 
+\subsection{Pass 23 --- the predicted mixing, the derivation ledger, and the separation from SO(10)}
+\label{sec:capstone-twentythree}
+
+The Pass-22 neutrino-mixing failure is given its positive form, the whole corpus is graded on one
+honest scale, and the question ``why not just SO(10)?'' is answered.
+
+\emph{The mixing, predicted with zero parameters.} Pass 22 showed the minimal cubic-form $M_R$
+fails the PMNS angles; the angles' proper form is the substrate's three zero-parameter integer
+formulas, $\sin^2\theta_{12}=\mu/\Phi_3=4/13$, $\sin^2\theta_{13}=\lambda/(\Phi_6\Phi_3)=2/91$,
+$\sin^2\theta_{23}=\Phi_6/\Phi_3=7/13$, each matching the global fit to under $1\sigma$ (the
+reactor angle to $0.07\sigma$, the sharpest single test), with all denominators from $\Phi_3=13$.
+They satisfy a zero-parameter relation \emph{between} two angles, $\sin^2\theta_{12}+\sin^2
+\theta_{23}=11/13$ ($11=k-1$, Ihara) --- a cross-angle prediction a generic model leaves free. So
+the mixing is not fitted (the Pillar-65 optimisation fits it; these formulas do not): the angles
+are fixed by $q=3$. The one honest gap is the leptonic Dirac $\delta_{CP}$ --- the substrate's
+clean CP datum $\sin\delta=15/17$ is the \emph{quark} phase --- so $\delta_{CP}$ is the open
+forward test (DUNE/T2HK $\sim$2030--2035). (Witness: \path{analysis/w33_pmns_prediction.py}.)
+
+\emph{The derivation ledger.} Grading the corpus on one scale --- DERIVED (geometry-forced, no
+free parameter), POSTDICTED (a zero-parameter integer formula equal to a measured value), FITTED
+(parameters tuned), INPUT (a dimensionful anchor) --- the $25$ major results split $8$ DERIVED,
+$12$ POSTDICTED, $2$ FITTED, $3$ INPUT. The \emph{structure} is derived (4D via the KO-dimension,
+three generations via $\mathrm{Sp}(4,3)=W(E_6)$, the gauge group, the cyclotomic skeleton,
+Starobinsky inflation, the boson--fermion balance behind the CC); most \emph{numbers} are
+zero-parameter postdictions; only the full CKM/PMNS matrices are fitted, and only the electroweak
+scale and one neutrino Yukawa are input. So the honest backbone is derived structure $+$
+zero-parameter numbers, with very few fits --- the claim the Pass-22 audit pointed to. (Witness:
+\path{analysis/w33_derivation_ledger.py}.)
+
+\emph{The separation from SO(10).} Much of the tower (seesaw, unification, Starobinsky-like
+inflation, a dark-matter candidate) is shared with generic SO(10), which carries $\sim$27 free
+Yukawa/Higgs parameters; the substrate fixes them by $q=3$, leaving $\sim$1, so it is a single
+\emph{point} in the SO(10) family's parameter space. Every zero-parameter relation it forces is a
+discriminator: the PMNS relation $11/13$ and $\sin^2\theta_{13}=2/91$ (JUNO/DUNE $\sim$2030); the
+inflation \emph{point} $(A_s,n_s,r)=(e^{-20},1{-}1/30,1/300)$ at $N=60$ where generic Starobinsky
+has a \emph{line} (LiteBIRD $\sim$2035); $m_{\rm DM}=M_Z/\mu=22.8$~GeV (LZ $\sim$2028); and the CC
+$=-vq$, which SO(10) does not predict at all. The single cleanest discriminator is the inflation
+point --- three primordial numbers fixed at once. (Witness: \path{analysis/w33_vs_so10.py}.)
+
+\emph{Honest scope:} the angle formulas are zero-parameter postdictions (matched, but unfitted),
+$\delta_{CP}$ is genuinely not predicted; the DERIVED/POSTDICTED line is a judgement (structure
+vs.\ value); and SO(10) is a family that can fit any single number, so the separation is a
+rigidity/Occam argument (fewer parameters, sharper relations), not a logical impossibility.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

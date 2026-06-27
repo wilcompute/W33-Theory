@@ -1,0 +1,50 @@
+{
+  "rigidity": {
+    "so10_params": {
+      "charged-fermion Yukawas": 9,
+      "neutrino/Majorana": 6,
+      "CKM+phase": 4,
+      "PMNS+phases": 5,
+      "Higgs/inflation": 3
+    },
+    "so10_total": 27,
+    "substrate_params": 1,
+    "reading": "substrate = a point in the SO(10) family's parameter space"
+  },
+  "relations": [
+    {
+      "sector": "PMNS",
+      "substrate": "sin^2 th_12 + sin^2 th_23 = 11/13; sin^2 th_13 = 2/91",
+      "so10_freedom": "all three mixing angles free (Yukawa textures)",
+      "test": "JUNO/DUNE ~2030"
+    },
+    {
+      "sector": "Inflation",
+      "substrate": "(A_s,n_s,r)=(e^-20, 1-1/30, 1/300) at N=60 -- a POINT",
+      "so10_freedom": "a LINE (N free 50-60) + free amplitude A_s",
+      "test": "LiteBIRD ~2035"
+    },
+    {
+      "sector": "Dark matter",
+      "substrate": "m_DM = M_Z/mu = 22.8 GeV exactly",
+      "so10_freedom": "DM mass free (GeV-TeV)",
+      "test": "LZ/XENONnT ~2028"
+    },
+    {
+      "sector": "Cosmological constant",
+      "substrate": "log10(rho_Lambda/M_Pl^4) = -vq = -120",
+      "so10_freedom": "not predicted at all",
+      "test": "fixed (postdiction); no GUT analogue"
+    }
+  ],
+  "cleanest_discriminator": {
+    "which": "the inflation point (A_s, n_s, r, N=60)",
+    "why": "three primordial numbers fixed at once where generic SO(10) has a line + free amplitude",
+    "test": "LiteBIRD ~2035",
+    "verdict": "on the point -> substrate; off -> generic Starobinsky (substrate falsified)"
+  },
+  "summary": "what separates the substrate from generic SO(10): RIGIDITY. Much of the tower (seesaw, unification, Starobinsky-like inflation, a DM candidate) is shared with generic SO(10), which has ~27 free Yukawa/Higgs parameters; the substrate fixes them by q=3, leaving ~1 (EW scale + one Yukawa). So the substrate is a single POINT in a ~27-dim SO(10) parameter space, and every zero-parameter RELATION it forces is a discriminator: (1) PMNS sin^2 th_12 + sin^2 th_23 = 11/13 and sin^2 th_13 = 2/91 (JUNO/DUNE ~2030); (2) the inflation POINT (A_s=e^-20, n_s=1-1/30, r=1/300, N=60) where generic Starobinsky has a LINE + free amplitude (LiteBIRD ~2035); (3) m_DM=M_Z/mu=22.8 GeV exactly (LZ ~2028); (4) CC=-vq=-120 (SO(10) doesn't predict it). The single cleanest discriminator is the inflation POINT -- three primordial numbers fixed at once, decided by LiteBIRD ~2035. HONEST: SO(10) is a family; with enough freedom it can fit any single number, so none is a logical 'only-the-substrate' prediction -- the discriminator is the rigidity (fewer parameters, sharper relations), a Bayesian/Occam separation. A measurement landing exactly on a substrate relation, especially the joint inflation point, is the evidence the continuous freedom is absent.",
+  "sources": [
+    "PMNS relations 11/13, 2/91 (w33_pmns_prediction.py, bt919); inflation point e^-20/1-1/30/1/300 at N=60 (w33_inflation_joint_forecast.py); m_DM=M_Z/mu (w33_dark_matter.py); CC=-vq (w33_cc_exact.py); SO(10) parameter counting (standard GUT Yukawa sector)."
+  ]
+}

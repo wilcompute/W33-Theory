@@ -1,0 +1,49 @@
+{
+  "angles": [
+    {
+      "angle": "sin^2 th_12 (solar)",
+      "substrate": 0.30769,
+      "form": "mu/Phi3 = 4/13",
+      "theta_deg": 33.69,
+      "obs": 0.307,
+      "sigma": 0.06
+    },
+    {
+      "angle": "sin^2 th_13 (reactor)",
+      "substrate": 0.02198,
+      "form": "lambda/(Phi6 Phi3) = 2/91",
+      "theta_deg": 8.53,
+      "obs": 0.02203,
+      "sigma": 0.07
+    },
+    {
+      "angle": "sin^2 th_23 (atmos)",
+      "substrate": 0.53846,
+      "form": "Phi6/Phi3 = 7/13",
+      "theta_deg": 47.21,
+      "obs": 0.546,
+      "sigma": 0.36
+    }
+  ],
+  "locking_relation": {
+    "form": "sin^2 th_12 + sin^2 th_23 = 11/13",
+    "value": 0.8462,
+    "k_minus_1": 11,
+    "meaning": "a zero-parameter cross-angle prediction; generic flavour models leave it free"
+  },
+  "cp_phase": {
+    "quark_sin_delta": "15/17",
+    "quark_value": 0.882,
+    "leptonic_delta_CP": "NOT predicted by the angle formulas -- open forward target",
+    "test": "DUNE/T2HK ~2030-2035"
+  },
+  "dates": {
+    "sin^2 th_13 = 2/91": "already 0.07 sigma (reactors/Daya Bay); JUNO tightens ~2030",
+    "th_23 octant + 11/13 relation": "DUNE/T2HK/JUNO ~2030",
+    "leptonic delta_CP (open)": "DUNE/T2HK ~2030-2035 (the decisive new number)"
+  },
+  "summary": "the neutrino mixing predicted with ZERO parameters -- the positive form of the Pass-22 negative. The minimal cubic-form M_R fails the angles, but the angles are fixed by q=3 alone: sin^2 th_12 = mu/Phi3 = 4/13, sin^2 th_13 = lambda/(Phi6 Phi3) = 2/91, sin^2 th_23 = Phi6/Phi3 = 7/13 -- denominators from Phi3=13, no continuous parameter, each matching the global fit to <1 sigma (reactor 2/91 to 0.07 sigma, the sharpest test). They satisfy a zero-parameter cross-angle relation sin^2 th_12 + sin^2 th_23 = 11/13 (11 = k-1, Ihara/BT918) -- one substrate number a generic flavour model leaves free. So the mixing is NOT fitted (the Pillar-65 129-param optimization fits it; these formulas do not): the angles ARE predicted, by the integer formulas. The honest GAP is the leptonic Dirac delta_CP -- the substrate's clean CP datum sin delta = 15/17 is the QUARK phase, so delta_CP is not predicted and is the cleanest forward test (DUNE/T2HK ~2030-2035, with the reactor angle JUNO ~2030 and the th_23 octant / 11/13 relation). HONEST: the angle formulas are zero-parameter postdictions (matched, but unfitted -- the strongest kind); the 11/13 relation is a genuine cross-angle prediction; delta_CP is an honest gap, not predicted.",
+  "sources": [
+    "PMNS integer formulas mu/Phi3, lambda/(Phi6 Phi3), Phi6/Phi3 (bt897/bt898/bt904/bt919_mixing_cp_scorecard.py); locking relation 11/13, 11=k-1 (BT918/bt919); CP datum sin delta = (mu^2-1)/(mu^2+1) = 15/17 (quark, bt919); Pass-22 minimal-M_R failure (w33_seesaw_pmns_joint.py); Pillar-65 optimization PMNS error 0.006 (w33_yukawa_optimization.py); global fits (NuFIT-class)."
+  ]
+}
