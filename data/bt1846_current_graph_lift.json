@@ -1,0 +1,16 @@
+{
+  "bt": "BT1846",
+  "title": "Current-Graph Lift of the 66 Bridge",
+  "verified": true,
+  "labels": 12,
+  "edges": 66,
+  "arcs": 132,
+  "current_group": "Z/12Z",
+  "orientation_rule": "orient pair {i,j} as i->j when (j-i) mod 12 is in {1,2,3,4,5,6}; ties at distance 6 use smaller source",
+  "current_profile": {"1": 12, "2": 12, "3": 12, "4": 12, "5": 12, "6": 6, "7": 6, "8": 12, "9": 12, "10": 12, "11": 12},
+  "rotation_system": "cyclic order around vertex i: i+1,i+2,...,i+11 mod 12",
+  "face_trace": {"faces": 44, "face_length_uniform": 3, "Euler_characteristic": -10, "orientable_genus": 6},
+  "bridge_to_BT1844": {"F12_rotations": 66, "K12_edges": 66, "triangular_faces": 44, "same_complete_pair_schedule": true},
+  "checks": {"edges_equal_C12_2": true, "arcs_equal_132": true, "face_count_44": true, "all_faces_triangles": true, "genus_6": true, "current_labels_nonzero": true},
+  "boundary": "This is an abstract current-graph/rotation-system lift of K12 on genus 6. It does not assert a self-crossing-free Euclidean polyhedron realization."
+}
