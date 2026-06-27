@@ -1,0 +1,50 @@
+{
+  "anomalies": [
+    {
+      "anomaly": "SU(3)^3",
+      "value": "0",
+      "cancels": true
+    },
+    {
+      "anomaly": "SU(3)^2 U(1)",
+      "value": "0",
+      "cancels": true
+    },
+    {
+      "anomaly": "SU(2)^2 U(1)",
+      "value": "0",
+      "cancels": true
+    },
+    {
+      "anomaly": "grav^2 U(1)",
+      "value": "0",
+      "cancels": true
+    },
+    {
+      "anomaly": "U(1)^3",
+      "value": "0",
+      "cancels": true
+    }
+  ],
+  "all_cancel": true,
+  "hypercharges": {
+    "Y": [
+      "1/6",
+      "-2/3",
+      "1/3",
+      "-1/2",
+      "1"
+    ],
+    "quantum": "1/6",
+    "note": "Y = (1/6,-2/3,1/3,-1/2,1); the unique anomaly-free assignment (up to scale), provided by the 27"
+  },
+  "e6": {
+    "fact": "E6 27 has vanishing cubic anomaly (anomaly-safe group)",
+    "consequence": "matter in 27s is automatically anomaly-free",
+    "substrate": "matter group = E6 (27 = q^q shell); SM consistency inherited"
+  },
+  "summary": "why the Standard Model is consistent: anomaly cancellation inherited from the E6 27. A chiral gauge theory is consistent only if its gauge+gravitational anomalies cancel (five sum rules). For one generation (Q, u^c, d^c, L, e^c with the 27's hypercharges), ALL FIVE vanish exactly: SU(3)^3, SU(3)^2 U(1), SU(2)^2 U(1), grav^2 U(1), U(1)^3. In the bare SM these look like accidents of the hypercharges; here they are automatic because the matter lives in the E6 fundamental 27, an anomaly-free rep (E6 has no cubic Casimir). The substrate forces the matter group to be E6 (27 = q^q shell), so the cancellation is inherited, not checked; the hypercharges Y = (1/6,-2/3,1/3,-1/2,1), quantized in 1/6, are the unique anomaly-free assignment = the q=3-quantized charges of the 27. So the deepest consistency requirement of the SM is a consequence of the substrate's matter group. HONEST: anomaly cancellation for one generation is textbook; the substrate content is that the matter group is E6 and an E6 27 is anomaly-free by group theory (so cancellation is substrate-inherited), with the normalization fixed by the SU(5) embedding.",
+  "sources": [
+    "E6 27 = one SM generation (w33_e6_27_standard_model.py); E6 anomaly-freedom (E6 has no cubic Casimir, standard); SM anomaly conditions (standard); hypercharge quantization from anomaly cancellation (Geng-Marshak / Foot et al.); q=3 charges (w33_charge_quantization_z3.py)."
+  ]
+}

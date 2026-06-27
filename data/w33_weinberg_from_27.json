@@ -1,0 +1,19 @@
+{
+  "tree": {
+    "sum_T3sq": "2",
+    "sum_Qsq": "16/3",
+    "sin2_tree": "3/8",
+    "form": "q/(q^2-1) = 3/8",
+    "is_q_over_q2m1": true
+  },
+  "low_energy": {
+    "sin2": "3/13",
+    "value": 0.2308,
+    "measured": 0.23122,
+    "denominator_shift": "q^2-1=8 (GUT) -> Phi3=13 (low); shift = 5 = F5"
+  },
+  "summary": "the weak mixing angle from the 27: sin^2 theta_W = 3/8 = q/(q^2-1) at unification, running to q/Phi3 = 3/13. At a GUT scale the Weinberg angle is a pure trace sin^2 theta_W = Tr(T_3^2)/Tr(Q^2). Over one generation (= the E6 27): sum T_3^2 = 2, sum Q^2 = 16/3, so sin^2 theta_W = 3/8 = q/(q^2-1) exactly. The measured low-energy value is q/Phi3 = 3/13 = 0.2308 (vs 0.2312); the RG carries 3/8 = 0.375 down to 3/13 at M_Z, the denominator running from q^2-1 = 8 (GUT) to Phi3 = q^2+q+1 = 13 (low), a shift of 5 = F5. So both the unified and measured weak angle are q over a quadratic in q (q/(q^2-1) at top, q/Phi3 at bottom), same numerator q=3. HONEST: the tree 3/8 is the standard SU(5) trace (shown = q/(q^2-1), computed over the 27); the measured q/Phi3 is a separate postdiction; the running between them is the standard SM/SUSY-GUT RG, NOT derived here -- the substrate supplies the two cyclotomic endpoints and the F5 denominator shift.",
+  "sources": [
+    "E6 27 = one SM generation (w33_e6_27_standard_model.py); SU(5) tree sin^2 theta_W = 3/8 = Tr(T_3^2)/Tr(Q^2) (standard GUT); measured sin^2 theta_W(M_Z) = 0.23122 = q/Phi3 = 3/13 (corpus / bt919); F5 = 5."
+  ]
+}

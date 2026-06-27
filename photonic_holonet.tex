@@ -7022,6 +7022,50 @@ $W(3,3)$ integers, so the Standard-Model content, its multiplicities, and its ch
 substrate-forced rather than inserted. The exotic $\mathbf{10}+\mathbf1$ is assumed heavy, and the
 confinement \emph{dynamics} is asserted through the triality-$0$ selection rule, not derived from QCD.
 
+\subsection{Pass 26 --- why the Standard Model is consistent, and the weak angle as a 27-trace}
+\label{sec:capstone-twentysix}
+
+Having placed one generation in the $E_6$ $\mathbf{27}$ (Pass 25), two deep facts follow with no
+extra input: the Standard Model's anomaly cancellation, and its weak mixing angle.
+
+\emph{Anomaly cancellation, inherited.} A chiral gauge theory is mathematically consistent only if
+its gauge and gravitational anomalies cancel --- five delicate sum rules over the fermion content.
+For one generation with the $\mathbf{27}$'s hypercharges they all vanish exactly:
+\[
+\mathrm{SU}(3)^3=0,\quad \mathrm{SU}(3)^2\mathrm{U}(1)=0,\quad \mathrm{SU}(2)^2\mathrm{U}(1)=0,\quad
+\mathrm{grav}^2\mathrm{U}(1)=0,\quad \mathrm{U}(1)^3=0.
+\]
+In the bare Standard Model these look like arithmetic accidents of the hypercharges; here they are
+automatic, because the matter lives in the $E_6$ fundamental $\mathbf{27}$, which is an anomaly-free
+representation ($E_6$ has no cubic Casimir). The substrate forces the matter group to be $E_6$ (the
+$\mathbf{27}=q^q$ shell), so the cancellation is \emph{inherited}, not checked generation by
+generation; and the hypercharges that make it work, $Y=(\tfrac16,-\tfrac23,\tfrac13,-\tfrac12,1)$
+--- quantised in $\tfrac16$, i.e.\ $6Y=(1,-4,2,-3,6)$ --- are the unique anomaly-free assignment, the
+$q=3$-quantised charges of the $\mathbf{27}$. (Witness:
+\path{analysis/w33_anomaly_cancellation.py}.)
+
+\emph{The weak angle is a 27-trace.} At a grand-unified scale the Weinberg angle is a pure
+group-theory trace, $\sin^2\theta_W=\mathrm{Tr}(T_3^2)/\mathrm{Tr}(Q^2)$, with no dynamics.
+Evaluated over one generation (the $\mathbf{27}$),
+\[
+\sum T_3^2=2,\qquad \sum Q^2=\tfrac{16}{3},\qquad
+\sin^2\theta_W=\frac{2}{16/3}=\frac38=\frac{q}{q^2-1},
+\]
+the exact $\mathrm{SU}(5)$ tree value, here a cyclotomic ratio. The measured low-energy value is the
+substrate's \emph{other} ratio, $\sin^2\theta_W(M_Z)=q/\Phi_3=3/13=0.2308$ (vs.\ $0.2312$ measured),
+and the renormalisation-group running carries the unified $3/8=0.375$ down to $3/13$ at the $Z$ mass:
+the denominator runs from $q^2-1=8$ at unification to $\Phi_3=q^2+q+1=13$ at low energy, a shift of
+$5=F_5$. So the weak angle is $q$ over a quadratic in $q$ at both ends of the descent ---
+$q/(q^2-1)$ at the top, $q/\Phi_3$ at the bottom, the same numerator $q=3$. (Witness:
+\path{analysis/w33_weinberg_from_27.py}.)
+
+\emph{Honest scope:} the anomaly cancellation and the $\mathrm{SU}(5)$ tree value $\sin^2\theta_W=
+3/8$ are standard group theory; the substrate content is that the matter group is $E_6$ (an
+$E_6$ $\mathbf{27}$ is anomaly-free, so the consistency is inherited) and that the weak angle equals
+$q/(q^2-1)$ at unification and $q/\Phi_3$ at $M_Z$, both cyclotomic ratios, with the $F_5$
+denominator shift. The running that connects them is the standard SM/SUSY-GUT RG, not derived here;
+the measured $q/\Phi_3$ is a separate (very good) postdiction.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
