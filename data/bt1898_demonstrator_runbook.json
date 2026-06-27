@@ -1,0 +1,14 @@
+{
+  "bt": "BT1898",
+  "title": "Single-Photon Holonet Demonstrator Runbook",
+  "verified": true,
+  "source_basis": "BT1895 demonstrator-vs-fault-tolerant stack compiler plus uploaded Holonet build-sheet anchors",
+  "goal": "Convert the single-photon demonstrator into an executable experimental sequence with raw data columns and pass/fail criteria.",
+  "components": ["heralded single-photon source", "polarizing beam splitter", "symmetric 3-port tritter", "0/tau/2tau delay ladder", "bin-synchronous electro-optic modulator", "polarization rotator at arccos(-2/3)", "single-photon detectors", "classical controller for Witting frame schedule"],
+  "run_sequence": ["calibrate source and dark/loss baselines", "calibrate tritter and phase settings", "load 40 Witting tetrad analyzer schedule", "run 640 basis-local admission records", "separately tag 160 diagonal contextual witness apertures and 480 off-diagonal data handshakes", "run 72-tick transaction body per accepted frame", "compute witness metrics and compare to pass/fail criteria"],
+  "raw_data_columns": ["shot_id", "witting_tetrad", "alice_slot", "bob_slot", "logical_pair_type", "transaction_tick", "time_bin", "detector_id", "polarization_setting", "tritter_phase_setting", "modulator_phase", "click_pattern", "dark_reference", "loss_probe", "accepted_flag", "witness_class"],
+  "primary_witnesses": {"contextual_fraction": {"target": "1/10", "status": "primary finite-substrate demonstrator target"}, "pump_chern": {"target": 2, "status": "topological pump readout target"}, "accepted_rate": {"target": "13/40", "status": "Witting logical admission table target"}, "frame_split": {"target": "160 diagonal witness records + 480 off-diagonal data records", "status": "basis-local physical frame ROM target"}},
+  "pass_fail": {"schedule_integrity": "all 640 physical frame records attempted with correct tetrad/slot labels", "admission_integrity": "accepted logical count matches 520/1600 within declared shot-noise interval", "contextuality": "contextual-fraction estimate compatible with 1/10 after dark/loss correction", "topological_pump": "Chern readout compatible with 2 under the chosen pump protocol", "guarding": "dark-reference and loss-probe estimates reported separately; do not fold them into the contextual-fraction estimate without correction"},
+  "outputs": ["CSV/Parquet raw shot table", "calibration summary", "witness summary JSON", "pass/fail report", "commit hash and run manifest"],
+  "boundary": "Runbook for the unencoded single-photon demonstrator only; not the GKP(D4) fault-tolerant machine and not a hardware threshold claim."
+}
