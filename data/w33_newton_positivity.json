@@ -1,0 +1,34 @@
+{
+  "positivity": {
+    "formula": "1/16piG ~ f_2 Lambda^2 M_0",
+    "M0": 40,
+    "M0_positive": true,
+    "cutoffs": [
+      {
+        "cutoff": "exp e^-u",
+        "f2": 1.0005,
+        "positive": true
+      },
+      {
+        "cutoff": "bump (1-u)^2 on [0,1]",
+        "f2": 0.3338,
+        "positive": true
+      },
+      {
+        "cutoff": "gaussian e^-u^2",
+        "f2": 0.8867,
+        "positive": true
+      }
+    ],
+    "conclusion": "G > 0 manifest from f_2 > 0 and M_0 = v > 0"
+  },
+  "ricci_flat": {
+    "K3": "Calabi-Yau, holonomy SU(2), Ricci-flat (R=0)",
+    "vacuum_solution": "int R = 0 -> K3 is a vacuum Einstein solution / gravitational instanton",
+    "background_CC": "zero (R=0 + balance cancels a_0); observed CC = meV-floor breaking"
+  },
+  "summary": "(T1) cracked: the Newton constant is positive by manifest spectral positivity, and K3's Ricci-flatness makes spacetime a vacuum solution. The EH coefficient 1/16piG ~ f_2 Lambda^2 M_0 with f_2 = int_0^inf f(u) du > 0 for any positive cutoff (1.00 for e^-u, 0.33 bump, 0.89 Gaussian) and M_0 = Tr_F(1) = v = 40 > 0, so G > 0 -- the curvature R is the INTEGRAND of a_2, the COEFFICIENT's sign is the positive f_2 M_0, so the curved-positivity worry dissolves. K3 is Ricci-flat (Calabi-Yau, holonomy SU(2)): R = 0, int R = 0, so K3 is a vacuum Einstein solution / gravitational instanton with zero background CC (a_0 cancelled by the balance); the observed CC is the meV-floor breaking (Passes 17-19). So (T1) reduces to f_2 > 0 and M_0 > 0, both manifest, plus K3 being a vacuum solution. HONEST: this asserts the gravitational sign from f_2, M_0 > 0 for a standard positive cutoff; the residual is the milder fermion-doubling sign bookkeeping, not a curved positivity theorem. (T1) closed modulo the positive-cutoff assumption.",
+  "sources": [
+    "Chamseddine-Connes spectral action EH coefficient 1/16piG ~ f_2 Lambda^2 (cutoff moment); M_0 = Tr_F(1) = v = 40 (w33_gravity_spectral_action.py, Pass 29); K3 Ricci-flat / Calabi-Yau (standard); boson-fermion balance cancels a_0 (w33_cc_mechanism.py, Pass 18); a_2 positivity (T1) named in w33_continuum_gap.py (Pass 29)."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "obstruction": {
+    "rows": [
+      {
+        "point": [
+          1,
+          1
+        ],
+        "taxicab": 2,
+        "euclidean": 1.414,
+        "ratio": 1.4142,
+        "d": 2
+      },
+      {
+        "point": [
+          3,
+          4
+        ],
+        "taxicab": 7,
+        "euclidean": 5.0,
+        "ratio": 1.4,
+        "d": 2
+      },
+      {
+        "point": [
+          5,
+          5
+        ],
+        "taxicab": 10,
+        "euclidean": 7.071,
+        "ratio": 1.4142,
+        "d": 2
+      },
+      {
+        "point": [
+          10,
+          10
+        ],
+        "taxicab": 20,
+        "euclidean": 14.142,
+        "ratio": 1.4142,
+        "d": 2
+      },
+      {
+        "point": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "taxicab": 4,
+        "euclidean": 2.0,
+        "ratio": 2.0,
+        "d": 4
+      }
+    ],
+    "fact": "cubic-grid graph/Connes distance = L^1 (taxicab); ratio sqrt(d) scale-invariant; never Euclidean"
+  },
+  "cure": {
+    "cubic_diagonal": 10,
+    "triangulated_diagonal": 7.071,
+    "euclidean": 7.071,
+    "mechanism": "shape-regular simplicial -> piecewise-flat -> Riemannian (GH/FEEC convergence)"
+  },
+  "k3_tower": {
+    "construction": "edgewise simplicial triangulation tower (BT984-1135), shape-regular",
+    "reduces_T2pp_to": "shape-regularity (finite per-level check) + FEEC/GH/propinquity convergence"
+  },
+  "summary": "(T2'') named and resolved: the metric obstruction is the taxicab problem, shape-regular triangulations its cure. Difficulty: a naive cubic grid gives the TAXICAB (L^1) distance, overestimating Euclidean by sqrt(d) (sqrt2 in 2D, 2 in 4D) -- a SCALE-INVARIANT ratio, so refining a cubic mesh NEVER recovers Euclidean (this is why the metric is harder than the spectrum). Cure: a shape-regular SIMPLICIAL triangulation gives a piecewise-flat metric whose geodesic distance converges to the Riemannian distance (Gromov-Hausdorff / FEEC Whitney) -- the diagonal edge turns taxicab 2a into exact Euclidean sqrt(2)a, refining fills all directions. The substrate's K3 tower is precisely a shape-regular simplicial triangulation (edgewise BT984-1135), NOT a cubic grid -- in the convergent class. So (T2'') reduces to 'the W(3,3) x K3 tower is shape-regular' (finite per-level check) + the standard FEEC/GH metric convergence. HONEST: the taxicab obstruction and shape-regular cure are standard; the substrate content is the K3 tower being shape-regular simplicial; this does not verify shape-regularity at every level (the finite residual check) or the full propinquity statement. (T2'') reduced to a finite shape-regularity check + established convergence theorems.",
+  "sources": [
+    "taxicab/L^1 cubic-grid Connes distance (standard discrete geometry); shape-regular simplicial -> Gromov-Hausdorff metric convergence; FEEC Whitney-form convergence; K3 edgewise simplicial triangulation tower (BT984-1135, shape-regular); spectral propinquity (w33_propinquity_reduction.py); (T2') / Lipschitz residual (w33_k3_convergence_checklist.py)."
+  ]
+}

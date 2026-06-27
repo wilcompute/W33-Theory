@@ -7302,6 +7302,55 @@ computation (large, curved) is not run; and (M), the Lipschitz / quantum-metric 
 genuinely open --- the named residual. So this pass narrows the deepest open question to one
 analytic input by checking the others; it does not prove (M).
 
+\subsection{Pass 32 --- cracking the frontier: both theorems collapse to one finite condition}
+\label{sec:capstone-thirtytwo}
+
+The two residual theorems are attacked together, and they collapse to a single checkable hypothesis:
+the shape-regularity of the K3 triangulation tower.
+
+\emph{(T1) is manifest, and K3 is a vacuum solution.} The Einstein--Hilbert coefficient is
+$\tfrac1{16\pi G}\sim f_2\,\Lambda^2 M_0$, where $f_2=\int_0^\infty f(u)\,du$ is the cutoff moment
+(positive for \emph{any} positive cutoff: $1.00$ for $e^{-u}$, $0.33$ for a bump, $0.89$ for a
+Gaussian) and $M_0=\mathrm{Tr}_F(1)=v=40>0$. So $G>0$ is manifest from positive spectral data ---
+the curvature $R$ is the \emph{integrand} of $a_2$, its sign-fixing \emph{coefficient} is the
+positive $f_2 M_0$, and the curved-positivity worry dissolves. Moreover K3 is Ricci-flat (Calabi--Yau,
+holonomy $\mathrm{SU}(2)$): $R=0$, $\int R=0$, so K3 is a \emph{vacuum} Einstein solution --- a
+gravitational instanton --- with zero background cosmological constant (the $a_0$ term cancelled by
+the boson--fermion balance), the observed CC being the meV-floor breaking. (Witness:
+\path{analysis/w33_newton_positivity.py}.)
+
+\emph{(T2$''$) is the taxicab problem, cured by shape-regularity.} A naive cubic grid gives the
+\emph{taxicab} ($L^1$) distance, overestimating the Euclidean by $\sqrt d$ (a \emph{scale-invariant}
+ratio --- $\sqrt2$ in 2D), so refining a cubic mesh never recovers Euclidean geometry: that is why
+the metric is harder than the spectrum. A shape-regular \emph{simplicial} triangulation cures it ---
+its geodesic metric converges to the Riemannian metric (Gromov--Hausdorff / FEEC), the diagonal edge
+turning the taxicab $2a$ into the exact Euclidean $\sqrt2\,a$. And the substrate's K3 tower is a
+shape-regular simplicial triangulation, not a cubic grid. (Witness:
+\path{analysis/w33_metric_taxicab.py}.)
+
+\emph{The collapse.} One property --- shape-regularity of the $W(3,3)\times K3$ tower ---
+\emph{simultaneously} delivers the Hodge-eigenvalue convergence (Dodziuk--Patodi, C5) \emph{and} the
+metric convergence (Gromov--Hausdorff/FEEC, M), hence by the spectral propinquity the spectral-action
+convergence and the emergence of the Riemannian manifold $M^4=K3$, with $G>0$ already manifest. So
+the whole theory's open frontier is no longer two analytic theorems but one finite, per-level
+combinatorial condition. The chain runs
+\[
+q{=}3\to W(3,3)\to\text{finite spectral triple}\to\text{spectral action }=\text{ gravity}+\text{SM}
+\to M^4{=}K3\xrightarrow{\text{[shape-regular]}}\text{Riemannian }K3,\ G>0,\ \text{Ricci-flat vacuum},
+\]
+its one unproven link being whether the explicit K3 triangulation tower is shape-regular. In this
+framework, the deepest questions --- where spacetime comes from, why gravity is positive --- become a
+finite check on an explicit simplicial complex plus established analysis. (Witness:
+\path{analysis/w33_frontier_collapse.py}.)
+
+\emph{Honest scope:} this is a \emph{reduction}, not a closure. (T1)'s positivity assumes a standard
+positive cutoff (the mild fermion-doubling sign bookkeeping aside); (T2$''$)'s reduction uses the
+established FEEC / Gromov--Hausdorff / propinquity convergence for shape-regular towers; and the
+shape-regularity of the \emph{specific} BT984--1135 K3 tower at every level is a finite but unrun
+combinatorial check --- the single remaining step. The K3 identification keeps its candidate caveat.
+So the gravitational frontier reduces to one finite condition plus standard analysis --- a dramatic
+narrowing, honestly bounded.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

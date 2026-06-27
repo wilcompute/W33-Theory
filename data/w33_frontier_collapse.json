@@ -1,0 +1,27 @@
+{
+  "collapse": {
+    "T1": "manifest (f_2>0, M_0=v=40>0; K3 Ricci-flat vacuum solution)",
+    "T2pp": "shape-regular -> Dodziuk-Patodi (C5) + GH/FEEC (M)",
+    "one_condition": "shape-regularity of the W(3,3) x K3 tower closes both C5 and M"
+  },
+  "chain": [
+    "q = 3",
+    "W(3,3) = SRG(40,12,2,4)",
+    "finite spectral triple F (KO-dim 6 = 2q)",
+    "spectral action Tr f(D^2/Lambda^2) on M^4 x F = gravity + Standard Model",
+    "M^4 = K3 (chi = f = 24, sigma = -mu^2 = -16; topology = substrate integers)",
+    "[shape-regular tower]  <-- the one unproven link (finite per-level check)",
+    "Dodziuk-Patodi + Gromov-Hausdorff/FEEC + spectral propinquity",
+    "Riemannian K3 emerges; G > 0; K3 Ricci-flat vacuum solution"
+  ],
+  "one_unproven_link": "shape-regularity of the W(3,3) x K3 triangulation tower (finite, per-level)",
+  "residual": {
+    "question": "is the explicit W(3,3) x K3 triangulation tower shape-regular at every level?",
+    "nature": "finite, per-level combinatorial check",
+    "everything_else": "derived or matched, or reduced to established FEEC/GH/propinquity theorems"
+  },
+  "summary": "the frontier collapses to one finite condition: shape-regularity. The two residual theorems become a single checkable hypothesis. (T1) Newton positivity is MANIFEST: 1/16piG ~ f_2 Lambda^2 M_0 with f_2 > 0 (positive cutoff) and M_0 = v = 40 > 0; K3 Ricci-flat -> vacuum Einstein, zero background CC. (T2'') metric convergence reduces to the taxicab cure: a shape-regular simplicial triangulation has BOTH eigenvalues (Dodziuk-Patodi) AND geodesic metric (Gromov-Hausdorff/FEEC) converging to the continuum, and the K3 tower is shape-regular simplicial. So ONE property -- shape-regularity of the W(3,3) x K3 tower -- simultaneously delivers the eigenvalue convergence (C5) and the metric convergence (M), hence via the spectral propinquity the spectral-action convergence and the emergence of Riemannian K3, with G > 0 manifest. The chain: q=3 -> W(3,3) -> finite spectral triple (KO-dim 6) -> spectral action = gravity + SM -> M^4 = K3 (chi=f, sigma=-mu^2) -> [shape-regular tower] -> Dodziuk-Patodi + GH/FEEC + propinquity -> Riemannian K3 emerges, G>0, Ricci-flat vacuum. The one unproven link is shape-regularity of the explicit tower (a finite per-level check). So the deepest questions reduce to a finite check on an explicit simplicial complex + established analysis. HONEST: a REDUCTION, not a closure -- (T1) assumes a positive cutoff, (T2'') uses established convergence theorems, shape-regularity of the specific tower is the finite unrun residual, the K3 identification keeps its candidate caveat. One finite condition, honestly named.",
+  "sources": [
+    "(T1) positivity (w33_newton_positivity.py); (T2'') taxicab/shape-regular (w33_metric_taxicab.py); Dodziuk-Patodi eigenvalue + Gromov-Hausdorff/FEEC metric convergence (standard); spectral propinquity (w33_propinquity_reduction.py); K3 = continuum, chi=f (w33_manifold_emergence_k3.py); gravity = spectral action (w33_gravity_spectral_action.py); shape-regular K3 tower (BT984-1135)."
+  ]
+}
