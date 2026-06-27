@@ -1,0 +1,20 @@
+{
+  "bt": "BT1876",
+  "title": "Optical Measurement Schedule for [[66,13,3]]_3",
+  "verified": true,
+  "code": "BT1872 [[66,13,3]]_3 finite GF3 CSS matrix code",
+  "checks": {"X_face_checks": 44, "Z_dual_vertex_checks": 12, "edge_payload_rotations": 66, "field": "GF3"},
+  "touch_counts": {"X_face_edge_touches": 132, "Z_star_edge_touches": 132, "total_syndrome_edge_touches": 264},
+  "rounds": [
+    {"round": "X0_Reye_faces", "checks": 16, "edge_touches": 48, "primitive": "three-edge F12 face-word interferometry"},
+    {"round": "X1_residual_faces_A", "checks": 14, "edge_touches": 42, "primitive": "three-edge F12 face-word interferometry"},
+    {"round": "X2_residual_faces_B", "checks": 14, "edge_touches": 42, "primitive": "three-edge F12 face-word interferometry"},
+    {"round": "Z0_even_vertex_stars", "checks": 6, "edge_touches": 66, "primitive": "signed eleven-edge vertex-star parity over incident F12 rotations"},
+    {"round": "Z1_odd_vertex_stars", "checks": 6, "edge_touches": 66, "primitive": "signed eleven-edge vertex-star parity over incident F12 rotations"}
+  ],
+  "rank_reduction": {"X_rows_measured": 44, "X_rank": 42, "X_dependencies": 2, "Z_rows_measured": 12, "Z_rank": 11, "Z_dependencies": 1},
+  "resource_delta_from_BT1832": {"existing_F12_rotations": 66, "additional_face_ancillas": 44, "additional_vertex_star_ancillas": 12, "measurement_rounds": 5},
+  "commutation_safety": "X face checks and Z vertex-star checks commute by BT1872 boundary-of-boundary cancellation, so the five scheduled rounds can be repeated syndrome cycles rather than destructive alternatives.",
+  "checks_passed": {"all_66_edges_covered_by_X_faces_twice": true, "all_66_edges_covered_by_Z_stars_twice": true, "total_touches_264": true, "five_round_schedule": true, "rank_dependencies_recorded": true},
+  "boundary": "Compiler-level optical measurement schedule; not a calibrated photonic circuit layout or loss/error threshold."
+}
