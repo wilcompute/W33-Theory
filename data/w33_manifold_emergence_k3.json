@@ -1,0 +1,42 @@
+{
+  "invariants": {
+    "chi": 24,
+    "chi_is_f": true,
+    "sigma": -16,
+    "sigma_is_minus_mu2": true,
+    "betti": [
+      1,
+      0,
+      22,
+      0,
+      1
+    ],
+    "b2": 22,
+    "b2_is_2km1": true,
+    "b2_plus": 3,
+    "b2plus_is_q": true,
+    "b2_minus": 19
+  },
+  "lattice": {
+    "form": "E8(-1)^2 (+) H^3, sig (3,19), rank 22",
+    "two_E8_roots": 480,
+    "M1": 480,
+    "equal": true,
+    "reading": "K3 lattice E8^2 = 480 = M_1 = first Hodge heat-kernel moment"
+  },
+  "gauss_bonnet": {
+    "term": "(1/32pi^2) int GB = chi",
+    "value_on_K3": 24,
+    "is_f": true,
+    "reading": "the gauge-mode count f IS the topological charge (Euler char) of the emergent spacetime"
+  },
+  "tower": {
+    "construction": "edgewise K3 triangulation tower (BT984-1135)",
+    "forced_betti": "(1,0,22,0,1) at every level, chi=24",
+    "status": "M^4 = K3 realised as an explicit triangulation; convergence = next witness"
+  },
+  "summary": "the emergent spacetime is the K3 surface, and its topology IS the substrate's gauge count. (T2) asked whether M^4 can be derived; the candidate is K3, and every topological invariant is a W(3,3) integer: chi(K3) = 24 = f (gauge-mode count = dim SU(5)); sigma(K3) = -16 = -mu^2 (matter gap); Betti (1,0,22,0,1), b_2^+ = 3 = q, b_2 = 22 = 2(k-1); K3 lattice E_8(-1)^2 + H^3, whose two E_8 carry 2 x 240 = 480 = M_1 = Tr(L), the substrate's first heat-kernel moment (Pass 29). The spectral-action Gauss-Bonnet term = 32pi^2 chi is fixed on K3 to chi = 24 = f -- the gauge-mode count is the Euler characteristic of spacetime; the signature term gives -mu^2. The substrate realises K3 as an edgewise triangulation tower (BT984-1135) with Betti (1,0,22,0,1) forced at every level. So M^4 is not free: it is K3, its topology is the substrate's gauge/matter data, the tower an explicit triangulation -- (T2) reduces to the tower's convergence (next witness). HONEST: 'the continuum IS K3' is a candidate identification (strong invariant matches + heterotic-K3 dictionary + triangulation tower), not proven uniqueness; the Gauss-Bonnet=chi and signature relations are standard, the substrate content is chi=f and sigma=-mu^2; convergence and uniqueness are the residual.",
+  "sources": [
+    "K3 surface invariants (chi=24, sigma=-16, b=(1,0,22,0,1), lattice E8^2+3H -- standard); f=24, g=15, mu^2=16, q=3 (substrate); M_1 = Tr(L) = 480 (w33_gravity_spectral_action.py, Pass 29); edgewise K3 triangulation tower (BT984-1135, bt1030_k3_ranks_topologically_forced); heterotic-K3 dictionary (corpus continuum work)."
+  ]
+}

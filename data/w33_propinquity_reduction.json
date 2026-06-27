@@ -1,0 +1,26 @@
+{
+  "tool": {
+    "name": "spectral propinquity (Latremoliere, Math. Ann. 2023)",
+    "property": "Dirac spectrum + spectral action are continuous functionals"
+  },
+  "reduction": {
+    "statement": "(T2) <=> spectral-propinquity convergence of the W(3,3) x K3 triangulation tower",
+    "consequence": "if convergent, the spectral action converges rigorously and M^4 = K3 emerges"
+  },
+  "inputs_in_place": {
+    "limit manifold": "K3 (chi=f=24, sigma=-mu^2=-16, lattice E8^2+3H = M_1=480)",
+    "action continuity": "Latremoliere: the spectral action is continuous for the propinquity",
+    "discrete tower": "edgewise K3 triangulations, Betti (1,0,22,0,1) forced at every level (BT984-1135)",
+    "symmetry densification": "Sp(4,F_q)=W(E_6) -> Sp(4,R) -> AdS_4 -> Minkowski (BT366)",
+    "geometric convergence": "term-by-term, no cutoff interchange (bt1033)"
+  },
+  "remaining": "prove spectral-propinquity convergence of the W(3,3) x K3 tower",
+  "frontier": {
+    "T1 a_2 curved positivity": "Einstein-Hilbert with Newton constant G > 0 on the curved tower",
+    "T2' propinquity convergence": "spectral-propinquity convergence of the W(3,3) x K3 triangulation tower"
+  },
+  "summary": "manifold emergence reduces to one convergence theorem: spectral propinquity of the K3 tower. The emergent manifold is K3 (previous witness); (T2) now reduces, via Latremoliere's spectral propinquity (Math. Ann. 2023) -- a metric on spectral triples for which the Dirac spectrum AND the spectral action Tr f(D^2/Lambda^2) are continuous functionals -- to: does [W(3,3) (x) edgewise-K3 tower] converge in the propinquity to K3 (x) W(3,3)? If yes, the spectral action (EH + CC + R^2 + SM) converges RIGOROUSLY and M^4 = K3 emerges from the discrete substrate. The inputs are in place: the limit (K3, topology = substrate integers), action continuity (Latremoliere), the triangulation tower (BT984-1135), the symmetry densification Sp(4,F_q)=W(E_6) -> Sp(4,R) -> AdS_4 -> Minkowski (BT366), and term-by-term geometric convergence (bt1033). What remains: prove the propinquity convergence of THIS tower. So the whole theory's frontier is exactly two named theorems: (T1) a_2 curved positivity (Newton constant G>0) and (T2') spectral-propinquity convergence of the K3 tower; everything else is derived or matched. HONEST: spectral propinquity and the action's continuity are Latremoliere's theorems; the convergence of THIS tower is the residual (not proven here); the K3 identification carries its candidate/uniqueness caveat. The deepest open question is sharpened to one convergence theorem with a known limit and continuous action -- a genuine sharpening, not a closure.",
+  "sources": [
+    "spectral propinquity (Latremoliere, Math. Ann. 2023, arXiv:2112.11000; bt1031_spectral_propinquity_route.py); manifold = K3 (w33_manifold_emergence_k3.py); edgewise K3 triangulation tower (BT984-1135); Sp(4,F_q)->Sp(4,R)->Minkowski (w33_BREAKTHROUGH_366_spacetime_emergence_Minkowski.py); term-by-term convergence (bt1033); a_2 positivity T1 (w33_continuum_gap.py, Pass 29)."
+  ]
+}
