@@ -1,0 +1,11 @@
+{
+  "bt": "BT1895",
+  "title": "Demonstrator vs Fault-Tolerant Stack Compiler",
+  "verified": true,
+  "source": "uploaded photonic_holonet.tex",
+  "source_anchors": {"build_sheet_components": "lines 2085-2091", "parameter_free_witnesses": "lines 2093-2115", "two_layer_distinction": "lines 3075-3084", "fault_tolerant_cv_stack": "lines 3086-3098", "remaining_hardware_bottlenecks": "lines 3099-3112"},
+  "demonstrator": {"role": "ideal unencoded logical layer and parameter-free witness machine", "components": ["heralded single-photon source", "polarizing beam splitter", "symmetric 3-port tritter", "0/tau/2tau delay ladder", "bin-synchronous electro-optic modulator", "polarization rotator at arccos(-2/3)", "single-photon detectors"], "certifies": ["Sp(4,3) gate-set logic", "routing network", "trace-Choi and contextual witnesses", "finite Witting transaction accounting"], "not_fault_tolerant_reason": "single photon has fixed photon number and cannot carry a many-photon GKP grid state"},
+  "fault_tolerant_machine": {"role": "continuous-variable GKP(D4) composed with outer Steinberg code", "stack": ["240 squeezed modes", "120 D4 GKP pairs", "240 GKP qutrits", "[[240,81,4]]_3 outer Steinberg code", "81 logical qutrits"], "inner_code": "D4 GKP lattice converts continuous displacement noise to discrete qutrit errors", "outer_code": "[[240,81,4]]_3 Steinberg code on the 240 substrate edges", "bottlenecks": ["threshold squeezed light", "GKP qutrit state generation", "degree-3 E6 non-Gaussian resource", "programmable beamsplitter/phase/squeeze network", "homodyne readout"]},
+  "compiler_verdict": "Keep the single-photon Holonet demonstrator and the fault-tolerant CV machine as separate build targets. The demonstrator tests finite logic; the fault-tolerant machine requires GKP resources and the Steinberg outer code.",
+  "boundary": "Build-roadmap compiler only; not a lab bill of materials, threshold proof, or hardware performance claim."
+}
