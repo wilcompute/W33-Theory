@@ -1,0 +1,29 @@
+{
+  "balance": {
+    "f_Phi4": 240,
+    "g_mu2": 240,
+    "equals_240": true,
+    "nature": "structural mode balance, NOT particle SUSY; predicts no superpartners"
+  },
+  "breaking_scale": {
+    "meV": {
+      "M_SUSY_meV": 2.44,
+      "CC_log10": -120,
+      "is_minus_vq": true
+    },
+    "TeV": {
+      "M_SUSY_GeV": 1000.0,
+      "CC_log10": -62.0,
+      "orders_too_large": 58
+    },
+    "verdict": "CC requires meV breaking; no TeV superpartners (a prediction)"
+  },
+  "hierarchy": {
+    "mechanism": "the boson-fermion mode balance cancels the Higgs quadratic sensitivity structurally",
+    "consequence": "light Higgs without TeV SUSY; naturalness = the exact balance"
+  },
+  "summary": "one structural SUSY, no superpartners -- no TeV-vs-meV tension. Gauge unification (Pass 27) needs SUSY-like running (in ordinary SUSY -> ~TeV superpartners); the CC (Pass 18) is the broken balance at the meV floor (2.4 meV) -- 15 orders apart. Resolution: the substrate SUSY is STRUCTURAL, the exact Hodge mode balance f Phi4 = g mu^2 = 240 = |roots(E8)|, NOT particle SUSY -- a spectral identity, exact in the UV, predicting NO superpartners; it cancels the leading vacuum energy AND the Higgs quadratic divergence by mode-counting, breaking only at the meV floor. The CC FIXES the breaking at meV (-> log10(rho/M_Pl^4) = -vq = -120) and FORBIDS TeV (-> -62, 10^58 too large): the absence of TeV superpartners is a prediction. So naturalness (TeV SUSY) is replaced by the exact balance, the breaking is at meV, and the gauge-unification 'SUSY-like content' is the substrate's own UV spectrum. HONEST: the mode balance is an exact SRG theorem and the meV-CC link is Pass 18; the hierarchy protection by the same mode-counting is the substrate's naturalness stance (asserted, not proven loop-by-loop); the precise intermediate spectrum for exact unification (Pass 27 used MSSM-like betas as a proxy) is the honest open gap. The TeV-vs-meV tension dissolves: no particle-SUSY scale, only the structural balance and its meV breaking.",
+  "sources": [
+    "boson-fermion balance f Phi4 = g mu^2 = 240 (w33_cc_mechanism.py, Pass 18); CC = -vq at meV floor (w33_cc_exact.py); gauge unification SUSY-like running (w33_gauge_unification.py, Pass 27); Higgs/hierarchy (w33_higgs_sector.py)."
+  ]
+}

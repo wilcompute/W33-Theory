@@ -1,0 +1,29 @@
+{
+  "higgs": {
+    "m_H": 125,
+    "m_H_form": "vq+mu+1",
+    "m_H_meas": 125.25,
+    "v_EW": 246,
+    "v_EW_form": "2(vq+q)",
+    "v_EW_meas": 246.22,
+    "m_H_over_v_EW": 0.509,
+    "lambda": 0.1294,
+    "lambda_form": "mu^2/(vq+mu) = 16/124",
+    "lambda_sub": 0.129
+  },
+  "hierarchy": {
+    "ln_MPl_over_vEW": 38.4,
+    "q_Phi3": 39,
+    "reading": "the electroweak scale is q Phi_3 = 39 e-folds below M_Pl (the ladder rung)"
+  },
+  "metastability": {
+    "instability_GeV": "~1e11",
+    "ln_MPl_over_inst": 18.6,
+    "h_E7": 18,
+    "reading": "the EW vacuum becomes metastable at h(E7)=18 e-folds below M_Pl"
+  },
+  "summary": "the Higgs sector and the hierarchy, as substrate integers. m_H = vq+mu+1 = 125 GeV (meas 125.25); v_EW = 2(vq+q) = 246 GeV, so m_H/v_EW ~ 1/2 and the quartic lambda = m_H^2/(2 v_EW^2) = 0.129 ~ mu^2/(vq+mu) = 16/124. The electroweak scale is q Phi_3 = 39 e-folds below M_Pl (ln(M_Pl/v_EW) = 38.4) -- the hierarchy is the substrate integer q Phi_3, the ladder rung. The Higgs-vacuum metastability scale (SM quartic -> 0 at ~10^11 GeV) is h(E7) = 18 e-folds below M_Pl (ln(M_Pl/10^11) = 18.6, 18 = h(E7) = lambda_bar = mu_bar of the complement SRG). So the electroweak masses, scale, quartic, hierarchy exponent, and metastability scale are all substrate integers -- a cyclotomic descent. HONEST: m_H and v_EW are integer-level postdictions (~0.2%); the quartic and m_H/v_EW ~ 1/2 follow from them; the hierarchy q Phi_3 = 39 is the value of the EW exponent (dynamical protection is the structural-SUSY question); metastability ~ h(E7) is approximate (instability-scale theory uncertainty). The EW symmetry-breaking sector closes the matter+gauge map.",
+  "sources": [
+    "m_H = vq+mu+1, v_EW = 246, q Phi3 = 39 EW rung (mass ladder, w33_everything.tex / w33_e6_27_standard_model.py); SM Higgs metastability ~10^11 GeV (standard); h(E7)=18 = lambda_bar = mu_bar of complement SRG(40,27,18,18)."
+  ]
+}
