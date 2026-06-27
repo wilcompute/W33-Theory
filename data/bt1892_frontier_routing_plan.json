@@ -1,0 +1,11 @@
+{
+  "bt": "BT1892",
+  "title": "R1/R2/R3 Frontier Routing Plan",
+  "verified": true,
+  "starting_point": "Holonet finite machine complete modulo R1/R2/R3 plus BT1891 Phi3=E8+F5 decomposition",
+  "routes": {"R1_integral_E8_lift": {"object": "8 logical qudits of [[66,8,3;5]]_3", "task": "construct integral positive-definite gauge-fixed lift", "avoid": "+2 eigenlattice; ruled out by BT926"}, "R2_moonshine_quintic": {"object": "5 gauge-clock qudits", "task": "test whether quintic 2A/2B obstruction is the transport law on the F5 gauge sector"}, "R3_continuum_EH": {"object": "detector-time/noise action of the 8+5 split", "task": "derive continuum coefficient as effective action of repeated syndrome cycles"}},
+  "next_tests": ["compute automorphism action on 8 logical qudits and 5 gauge qudits separately", "test whether the 5 gauge qudits carry the same phase classes as BT1877 Rule-110 packet phases", "build an integral Gram candidate from the 8 logical basis rather than from W33 eigenlattices"],
+  "breakthrough_claim": "The residuals are not three unrelated loose ends. They route to three layers of the same finite code decomposition: E8 logicals, F5 gauge clocks, and decoder-time effective action.",
+  "checks": {"R1_routed_to_8_logicals": true, "R2_routed_to_5_gauge_clocks": true, "R3_routed_to_decoder_action": true, "does_not_claim_residuals_solved": true},
+  "boundary": "Research routing plan only; no solution of the three residual frontiers is claimed."
+}
