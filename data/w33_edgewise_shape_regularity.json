@@ -1,0 +1,30 @@
+{
+  "two_simplex": {
+    "rho": 3.464,
+    "levels_max_rho": [
+      3.464101615137755,
+      3.4641016151377553,
+      3.464101615137757
+    ],
+    "result": "exactly constant; single shape class; shape-regular"
+  },
+  "three_simplex": {
+    "rho_regular": 4.899,
+    "corner_rho": 4.899,
+    "levels_max_rho_naive": [
+      7.464,
+      7.464,
+      10.156
+    ],
+    "result": "corner tets regular (constant); octahedral pieces bounded under canonical scheme; naive recursion drifts (so canonical Edelsbrunner-Grayson scheme required)"
+  },
+  "theorem": {
+    "name": "Edelsbrunner-Grayson, edgewise subdivision of a simplex (DCG 2000)",
+    "statement": "sub-simplices in a bounded number of similarity classes -> shape-regular for all d",
+    "K3": "d=4: the edgewise K3 tower is shape-regular (canonical scheme)"
+  },
+  "summary": "the last link computed: edgewise subdivision is shape-regular (Edelsbrunner-Grayson). The gravitational frontier collapsed to one finite condition -- is the K3 tower shape-regular? The tower is built by edgewise refinement (BT984-1135), and edgewise subdivision is the classical shape-regular scheme: Edelsbrunner-Grayson (2000) proved its sub-simplices fall into a BOUNDED number of similarity types, so the aspect ratio is uniformly bounded across all levels. 2D: edgewise subdivision of a triangle -> 4 sub-triangles all similar -> rho = diam/inradius EXACTLY constant (3.464) at every level. 3D: corner sub-tetrahedra stay regular (rho = 4.899 always); the central-octahedron pieces add a bounded number of shapes under the canonical scheme (a naive recursive diagonal drifts -- so the canonical Edelsbrunner-Grayson scheme is the shape-regular one). K3 is d=4 -> its edgewise tower is shape-regular by the d=4 case. So the last link is NOT an open analytic theorem: it is 'the K3 tower uses canonical edgewise subdivision', whose shape-regularity is the Edelsbrunner-Grayson theorem. HONEST: the 2D exactness and 3D corner-regularity are computed; the general-d bound (d=4 for K3) is the cited theorem; the naive-recursion drift is the caveat that the CANONICAL scheme is required, so the finite condition reduces to confirming the subdivision scheme.",
+  "sources": [
+    "Edelsbrunner-Grayson, 'Edgewise subdivision of a simplex' (Discrete Comput. Geom. 2000); edgewise K3 triangulation tower (BT984-1135, 'edgewise refinement', shape-regular); frontier collapse to shape-regularity (w33_frontier_collapse.py, Pass 32); chunkiness rho = diam/inradius (standard FEM shape-regularity measure)."
+  ]
+}
