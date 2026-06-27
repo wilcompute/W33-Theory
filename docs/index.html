@@ -3912,6 +3912,35 @@
               assumes a standard positive cutoff. "Closed to two narrow conditions" means no OPEN analytic theorem remains in the chain.</div>
           </div>
           <div class="card">
+            <div class="label">The System: the Substrate as a Computer and Network Architecture</div>
+            <div class="detail"><strong>Stripped of physics, the substrate is a complete computer and network &mdash; a fault-tolerant
+              universal ternary machine whose subsystem datasheet is, precisely, the von&nbsp;Neumann architecture of self-reproduction (the
+              architecture of life).</strong>
+              <strong>(1) The interconnect.</strong> The wiring is GQ(3,3)=SRG(40,12,2,4): <strong>40 nodes of radix 12, diameter 2</strong>
+              (any-to-any in two hops, deterministic via the line incidence), vertex/edge connectivity 12 (survives any <strong>11 simultaneous
+              failures</strong>, maximal for degree 12), second eigenvalue &lambda;&#8322;=2 far below the Ramanujan bound 2&radic;11=6.63 (a
+              <strong>better-than-Ramanujan expander</strong>, near-optimal bisection), vertex- &amp; edge-transitive (Sp(4,3)), self-dual GQ
+              (perfect load balancing, no hot spots), 240 links. Against a 6&times;6 torus (radix 4, diameter 6) or hypercube Q&#8326; (radix 6,
+              diameter 6), it pays radix 12 to buy diameter 2 and maximal resilience &mdash; the flattened-butterfly/dragonfly corner with SRG
+              regularity. <strong>(2) The processor.</strong> The core computes in <strong>balanced ternary</strong> &mdash; the most economical
+              radix (economy E(b)=b/ln&nbsp;b minimized at e; base 3 at 2.731 beats binary and base 4 at 2.885; the Setun choice), with the 3-grading
+              {&minus;1,0,+1} the balanced-ternary digit. Native word = <strong>27 = 3&sup3;</strong> (a tryte of three qutrits, the E&#8326;
+              register); instruction set = the universal minimum: degree-2 (Gaussian/Clifford, from Sp(4,3)) gates free + classically simulable, plus a
+              single degree-3 (cubic, the E&#8326; cubic form on the 27) gate &rarr; <strong>universal</strong> (Lloyd&ndash;Braunstein). The power
+              source is <strong>contextuality</strong> (the qutrit register is a Wigner phase space; W(3,3) is a contextuality structure, its smallest
+              contextual sub-config the doily GQ(2,2)). <strong>(3) The architecture of life.</strong> The datasheet &mdash; processor (ternary,
+              27-word, deg-2+deg-3 universal) + interconnect (GQ(3,3)) + memory/ECC ([[66,8,3]]&#8323; qutrit surface code on genus-6 K&#8321;&#8322;) +
+              clock (Boerdijk&ndash;Coxeter golden-ratio quasicrystal, beat=30) + universality (Turing-complete, Rule-110 on the BC tape) &mdash; IS the
+              von&nbsp;Neumann architecture of a self-reproducing automaton, which needs three things: a universal computer (Rule-110/UTM), a universal
+              constructor (the gate set + network), and a copyable error-corrected description / genome (the [[66,8,3]]&#8323; code). All three present
+              &rarr; the substrate is the minimal architecture that <strong>computes, constructs, and corrects</strong>, the three "selves" of life as
+              its layers: self-correcting (the code), self-replicating (universal construction), self-similar (the quasicrystal clock + the
+              A&#8322;&lt;D&#8324;&lt;E&#8328; lattice tower). Honest: the interconnect and radix-economy metrics are exact and computed; the gate-set
+              universality and contextuality-as-fuel are standard QC facts mapped onto the substrate's Sp(4,3)/cubic/W(3,3) structure; physical gate and
+              wiring realizations are an implementation question. "Architecture of life" = the von&nbsp;Neumann architecture of self-reproduction (the
+              rigorous notion), not literal biochemistry.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

@@ -1,0 +1,46 @@
+{
+  "radix": {
+    "economy": [
+      {
+        "base": 2,
+        "economy": 2.885
+      },
+      {
+        "base": 3,
+        "economy": 2.731
+      },
+      {
+        "base": 4,
+        "economy": 2.885
+      },
+      {
+        "base": 5,
+        "economy": 3.107
+      },
+      {
+        "base": 10,
+        "economy": 4.343
+      }
+    ],
+    "optimal_integer_base": 3,
+    "balanced_ternary": "{-1,0,+1} = the 3-grading; no sign bit, negate by flip"
+  },
+  "word": {
+    "size": 27,
+    "form": "3^3 = three qutrits (a tryte)",
+    "is": "E6 fundamental / matter shell / QCA index"
+  },
+  "instruction_set": {
+    "degree2": "quadratic/Gaussian/Clifford (Sp(4,3)) -- free, classically simulable",
+    "degree3": "cubic (E6 cubic form det(X) on 27) -- the non-Clifford gate",
+    "universality": "Lloyd-Braunstein: degree-2 + any degree-3 = universal"
+  },
+  "power_source": {
+    "resource": "contextuality / negative Wigner (magic)",
+    "substrate": "W(3,3) is a contextuality structure (doily GQ(2,2) sub-geometry) -> supplies the magic"
+  },
+  "summary": "the processor: a balanced-ternary core with a degree-2 + degree-3 universal ISA. Radix q = 3 is the most economical integer base (radix economy E(b)=b/ln(b) min at e=2.718; E(3)=2.731 beats binary/base-4 at 2.885) -- the Setun (1958) choice -- with the 3-grading {-1,0,+1} the balanced-ternary digit (no sign bit, negate by flip). Native word = 27 = 3^3 = three qutrits (a tryte) = the E6 fundamental. Instruction set = the universal minimum: degree-2 (quadratic/Gaussian/Clifford from Sp(4,3)) free + classically simulable, plus a single degree-3 (cubic, the E6 cubic form det(X) on 27) non-Clifford gate -> UNIVERSAL (Lloyd-Braunstein). Power source = contextuality: the qutrit register is a Wigner phase space, W(3,3) is a contextuality structure (doily GQ(2,2) sub-config) supplying the negative-Wigner magic quantum advantage needs. HONEST: radix-economy optimality and Lloyd-Braunstein universality are standard CS/QC facts; the substrate content is q=3 IS the economical radix, 27 the word, Sp(4,3) the Clifford layer, the E6 cubic form the magic gate, W(3,3) the contextuality; gate realisations are an implementation question. A quantified balanced-ternary universal core.",
+  "sources": [
+    "radix economy E(b)=b/ln(b), base-3 optimality (Knuth, balanced ternary; Setun 1958); Lloyd-Braunstein universality (Gaussian + non-Gaussian); Clifford = classically simulable (Gottesman-Knill); contextuality as the resource for magic (Howard-Wallman-Veitch-Emerson); Sp(4,3) Clifford + E6 cubic form magic + W(3,3) contextuality (corpus holonet architecture)."
+  ]
+}

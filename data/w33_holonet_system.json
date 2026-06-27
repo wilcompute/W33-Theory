@@ -1,0 +1,43 @@
+{
+  "datasheet": [
+    {
+      "subsystem": "processor",
+      "spec": "balanced ternary; word 27 = 3^3; ISA deg-2 (Clifford) + deg-3 (magic) = universal",
+      "substrate": "q=3 radix; E6 27 register; Sp(4,3) + E6 cubic form"
+    },
+    {
+      "subsystem": "interconnect",
+      "spec": "40 nodes, radix 12, diameter 2, survives 11 faults, > Ramanujan expander",
+      "substrate": "GQ(3,3) = SRG(40,12,2,4)"
+    },
+    {
+      "subsystem": "memory / ECC",
+      "spec": "[[66,8,3]]_3 qutrit surface code, distance 3 (corrects 1 fault/cycle)",
+      "substrate": "genus-6 K_12 face code"
+    },
+    {
+      "subsystem": "clock",
+      "spec": "two-gap golden-ratio quasicrystal, self-clocking, beat = 30",
+      "substrate": "Boerdijk-Coxeter / 600-cell ring"
+    },
+    {
+      "subsystem": "universality",
+      "spec": "Turing-complete (Rule-110 on the BC tape)",
+      "substrate": "UTM tape mapping"
+    }
+  ],
+  "von_neumann": {
+    "(1) universal computer": "Rule-110 / UTM (Turing-complete)",
+    "(2) universal constructor": "degree-2 + degree-3 universal gate set + the network",
+    "(3) error-corrected genome": "the [[66,8,3]]_3 code (copyable, fault-tolerant description)"
+  },
+  "three_selves": {
+    "self-correcting": "the error-correcting code (DNA-repair analogue)",
+    "self-replicating": "von Neumann universal construction (the universal constructor)",
+    "self-similar": "the quasicrystal clock + the A2 < D4 < E8 lattice tower (recursive structure)"
+  },
+  "summary": "the whole machine on one datasheet, and why it is the architecture of life. The substrate is a complete fault-tolerant universal ternary computer: PROCESSOR balanced-ternary (optimal radix), word 27 = 3^3, ISA degree-2 (Clifford, free) + degree-3 (cubic, magic) = universal; INTERCONNECT GQ(3,3) = SRG(40,12,2,4), 40 nodes radix 12 diameter 2, survives 11 faults, better-than-Ramanujan expander; MEMORY/ECC the [[66,8,3]]_3 qutrit surface code on genus-6 K_12, distance 3 (one fault/cycle); CLOCK a two-gap golden-ratio Boerdijk-Coxeter quasicrystal (beat = 30); UNIVERSALITY Turing-complete (Rule-110 on the BC tape). That datasheet IS the von Neumann architecture of self-reproducing automata, which needs three things -- a universal computer (Rule-110/UTM), a universal constructor (degree-2+degree-3 gate set + network), and a copyable error-corrected description / genome (the [[66,8,3]]_3 code) -- all present. So the substrate is the minimal architecture that computes, constructs, and corrects, with the three selves of life as its layers: self-correcting (code), self-replicating (universal construction), self-similar (quasicrystal clock + A2<D4<E8 lattice tower). HONEST: each subsystem is computed/established in the companion witnesses; the von Neumann identification is a logical-architecture claim (the three components of self-reproduction), not biochemistry -- 'architecture of life' = the rigorous von Neumann architecture of self-reproduction.",
+  "sources": [
+    "processor (w33_ternary_processor.py); interconnect (w33_interconnect_network.py); [[66,8,3]]_3 code (QEC track, w33_machine_world_bridge.py); Boerdijk-Coxeter clock + Rule-110 universality (holonet/UTM-tape work, BT1858/1864); von Neumann self-reproducing automata (Theory of Self-Reproducing Automata, 1966)."
+  ]
+}

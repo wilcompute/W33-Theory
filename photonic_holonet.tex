@@ -7396,6 +7396,74 @@ positivity assuming a standard positive cutoff. ``Closed to two narrow condition
 \emph{open} analytic theorem remains in the chain, the residuals being a candidate identification and
 a scheme confirmation --- a faithful, honestly-bounded closing status.
 
+\subsection{Pass 34 --- the system: the substrate as a computer and network architecture}
+\label{sec:capstone-thirtyfour}
+
+Stripped of physics, the substrate is a complete computer and network. Read by the standard metrics
+of computer and interconnect engineering it is a fault-tolerant universal ternary machine, and its
+subsystem datasheet is, precisely, the von~Neumann architecture of self-reproduction --- the
+architecture of life.
+
+\emph{The interconnect.} The wiring is $\mathrm{GQ}(3,3)=\mathrm{SRG}(40,12,2,4)$: $40$ nodes of
+radix (degree) $12$, diameter $2$ (any-to-any in two hops, deterministic via the line incidence),
+vertex and edge connectivity both $12$ (it survives any eleven simultaneous failures, the maximum
+for degree $12$), second eigenvalue $\lambda_2=2$ far below the Ramanujan bound $2\sqrt{11}=6.63$
+(a \emph{better}-than-Ramanujan expander, near-optimal bisection), and vertex- and edge-transitive
+under $\mathrm{Sp}(4,3)$, self-dual as a generalized quadrangle (perfect load balancing, no hot
+spots), with $240$ links. Against a $6{\times}6$ torus (radix $4$, diameter $6$) or a hypercube
+$Q_6$ (radix $6$, diameter $6$), it pays radix $12$ to buy diameter $2$ and maximal resilience ---
+the low-diameter, high-resilience corner (flattened-butterfly/dragonfly class) with SRG regularity.
+(Witness: \path{analysis/w33_interconnect_network.py}.)
+
+\emph{The processor.} The core computes in balanced ternary --- the most economical radix (the
+economy $E(b)=b/\ln b$ is minimised at $e$, and base $3$ at $2.731$ beats binary and base $4$ at
+$2.885$; the Setun choice), with the $3$-grading $\{-1,0,+1\}$ the balanced-ternary digit. Its
+native word is $27=3^3$ (a tryte of three qutrits, the $E_6$ register), and its instruction set is
+the universal minimum: degree-$2$ (Gaussian/Clifford, from $\mathrm{Sp}(4,3)$) gates are free and
+classically simulable, and a single degree-$3$ (cubic, the $E_6$ cubic form on the $\mathbf{27}$)
+gate makes them universal (Lloyd--Braunstein). The power source is contextuality --- the qutrit
+register is a Wigner phase space, and $W(3,3)$ is a contextuality structure (its smallest contextual
+sub-configuration is the doily $\mathrm{GQ}(2,2)$), supplying the magic quantum advantage requires.
+(Witness: \path{analysis/w33_ternary_processor.py}.)
+
+\begin{table}[ht]\centering\small
+\caption{The Holonet system datasheet: the substrate as a fault-tolerant universal ternary computer.}
+\label{tab:datasheet}
+\begin{tabular}{l l l}
+\toprule
+Subsystem & Specification & Substrate object\\ \midrule
+Processor & balanced ternary; word $27{=}3^3$; ISA deg-2 (Clifford) $+$ deg-3 (magic) $=$ universal
+ & $q{=}3$ radix; $E_6$ \textbf{27}; $\mathrm{Sp}(4,3)+E_6$ cubic\\
+Interconnect & $40$ nodes, radix $12$, diameter $2$, $11$-fault, $>$Ramanujan expander
+ & $\mathrm{GQ}(3,3){=}\mathrm{SRG}(40,12,2,4)$\\
+Memory / ECC & $[\![66,8,3]\!]_3$ qutrit surface code, distance $3$
+ & genus-$6$ $K_{12}$ face code\\
+Clock & two-gap golden-ratio quasicrystal, self-clocking, beat $=30$
+ & Boerdijk--Coxeter / $600$-cell\\
+Universality & Turing-complete (Rule-110 on the BC tape)
+ & UTM tape mapping\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{The architecture of life.} That datasheet (Table~\ref{tab:datasheet}) is the von~Neumann
+architecture of a self-reproducing automaton, which requires three things: a universal computer to
+read instructions, a universal constructor to build from a description, and a copyable
+error-corrected description (heredity). The substrate supplies all three --- Rule-110/UTM (universal
+computation), the degree-$2+$degree-$3$ gate set with the network (universal construction), and the
+$[\![66,8,3]\!]_3$ code (the error-corrected genome). So the substrate is the minimal
+architecture that computes, constructs, and corrects, with the three ``selves'' of life as its three
+layers: self-correcting (the code), self-replicating (von~Neumann universal construction),
+self-similar (the quasicrystal clock and the $A_2{<}D_4{<}E_8$ lattice tower). (Witness:
+\path{analysis/w33_holonet_system.py}.)
+
+\emph{Honest scope:} the interconnect and radix-economy metrics are exact and computed; the gate-set
+universality (Lloyd--Braunstein) and contextuality-as-fuel (Howard et~al.) are standard
+quantum-computing facts mapped onto the substrate's $\mathrm{Sp}(4,3)$/cubic/$W(3,3)$ structure;
+physical gate and wiring realisations are an implementation question. ``Architecture of life'' means
+the von~Neumann architecture of self-reproduction --- the rigorous computational notion (universal
+computation $+$ construction $+$ error-corrected heredity) --- not literal biochemistry.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
