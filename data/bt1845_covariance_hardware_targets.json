@@ -1,0 +1,23 @@
+{
+  "bt": "BT1845",
+  "title": "Covariance-Aware Hardware Target Table",
+  "verified": true,
+  "spectral_target": {"current_lambda_max": 1.821589796573715, "target_lambda_max": 1.4, "current_5sigma_runs": 200, "target_5sigma_runs": 159},
+  "family_targets": {
+    "qutrit_P": {"current_internal_rho": 0.18, "target_internal_rho": 0.05, "primitive": "qutrit sorters / P0-P2", "action": "balance path splitter phases and suppress common path drift"},
+    "D4_G": {"current_internal_rho": 0.16, "target_internal_rho": 0.05, "primitive": "D4 parity ancillas / G0-G1", "action": "separate parity ancilla clocks and randomize chi offset calibration"},
+    "K4_E": {"current_internal_rho": 0.14, "target_internal_rho": 0.04, "primitive": "K4 equality interferometers / E01-E20", "action": "independent phase dithers for the three equality interferometers"},
+    "C12_C": {"current_internal_rho": 0.20, "target_internal_rho": 0.05, "primitive": "C12 winding and phase-slip guards", "action": "decouple ring thermal drift from guard coincidence thresholds"}
+  },
+  "cross_family_targets": {
+    "P_G": {"current": 0.06, "target": 0.03},
+    "P_E": {"current": 0.02, "target": 0.02},
+    "P_C": {"current": 0.03, "target": 0.02},
+    "G_E": {"current": 0.04, "target": 0.02},
+    "G_C": {"current": 0.02, "target": 0.02},
+    "E_C": {"current": 0.08, "target": 0.03}
+  },
+  "priority_order": ["C12_C internal covariance", "qutrit_P internal covariance", "D4_G internal covariance", "K4_E to C12_C cross covariance", "K4_E internal covariance"],
+  "checks": {"all_internal_targets_tighter_than_current": true, "lambda_target_reduces_5sigma_budget": true, "priority_names_match_matrix_families": true, "targets_are_engineering_not_claimed_calibration": true},
+  "boundary": "Targets convert the BT1840 covariance matrix into engineering tolerances; no physical chip has been measured."
+}
