@@ -1,0 +1,12 @@
+{
+  "bt": "BT1903",
+  "title": "Synthetic Demonstrator Dataset",
+  "verified": true,
+  "fixture": "data/bt1903_synthetic_demonstrator_fixture.jsonl",
+  "rows": 24,
+  "purpose": "Small JSONL fixture to exercise BT1900 validator field/range checks and BT1901 contextual-fraction estimator end-to-end.",
+  "counts": {"diagonal_contextual_rows": 16, "diagonal_contextual_clicks": 2, "off_diagonal_data_rows": 4, "dark_reference_rows": 2, "loss_probe_rows": 2},
+  "expected_estimator_behavior": {"raw_fraction": 0.125, "dark_click_rate": 0.0, "loss_rate_estimate": 0.0, "corrected_contextual_fraction": 0.125, "compatible_with_one_tenth_at_z2": true},
+  "schedule_note": "This is not a full 640-record schedule fixture. The validator should accept row structure and report schedule_integrity_pass=false for this miniature dataset.",
+  "boundary": "Synthetic test fixture only; not experimental data."
+}
