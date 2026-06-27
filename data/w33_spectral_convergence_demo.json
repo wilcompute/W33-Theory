@@ -1,0 +1,104 @@
+{
+  "eigenvalue_convergence": {
+    "levels": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "rows": [
+      {
+        "mode": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "continuum": 1,
+        "discrete": {
+          "8": 0.9496,
+          "16": 0.9872,
+          "32": 0.9968,
+          "64": 0.9992
+        },
+        "err_ratio_last": 4.0
+      },
+      {
+        "mode": [
+          -1,
+          -1,
+          0,
+          0
+        ],
+        "continuum": 2,
+        "discrete": {
+          "8": 1.8993,
+          "16": 1.9744,
+          "32": 1.9936,
+          "64": 1.9984
+        },
+        "err_ratio_last": 4.0
+      },
+      {
+        "mode": [
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "continuum": 3,
+        "discrete": {
+          "8": 2.8489,
+          "16": 2.9616,
+          "32": 2.9904,
+          "64": 2.9976
+        },
+        "err_ratio_last": 4.0
+      },
+      {
+        "mode": [
+          -2,
+          0,
+          0,
+          0
+        ],
+        "continuum": 4,
+        "discrete": {
+          "8": 3.2423,
+          "16": 3.7986,
+          "32": 3.9489,
+          "64": 3.9872
+        },
+        "err_ratio_last": 3.98
+      }
+    ],
+    "rate": "error ~ O(1/n^2): each doubling of n cuts the error by ~4 (Dodziuk-Patodi)"
+  },
+  "spectral_dimension": {
+    "rows": [
+      {
+        "t": 0.25,
+        "d_s": 4.0
+      },
+      {
+        "t": 0.165,
+        "d_s": 4.0
+      },
+      {
+        "t": 0.11,
+        "d_s": 3.97
+      },
+      {
+        "t": 0.075,
+        "d_s": 3.8
+      }
+    ],
+    "continuum_dim": 4,
+    "best": 4.0,
+    "note": "d_s=4.00 in the resolved regime; small-t dip is truncation"
+  },
+  "summary": "the discrete -> continuum spectral convergence that (T2') needs, demonstrated in 4D. The flat 4-torus T^4 = lim Z_n^4 has explicit spectra: the rescaled graph-Laplacian eigenvalues converge to the continuum sum_i k_i^2 with the Dodziuk-Patodi rate O(1/n^2) (each doubling of n cuts the error by ~4), and the heat trace gives a spectral dimension d_s = -2 d(logZ)/d(logt) approaching 4 (the continuum dimension) in the many-mode regime. This is exactly the convergence the spectral propinquity controls (Dirac spectrum + spectral action continuous). The K3 tower is the SAME mechanism on a curved 4-manifold -- harder (K3 large and curved) but the principle (refine -> spectrum + spectral dimension converge) is the one shown. So (T2') is 4D Dodziuk-Patodi convergence applied to K3. HONEST: T^4 is FLAT, so this shows the spectral/dimension convergence cleanly but not K3's curved subtleties; the propinquity also needs the quantum-metric (Lipschitz) convergence (next witness). A proof-of-concept of the spectral half of the convergence mechanism in 4D, not a proof of (T2').",
+  "sources": [
+    "Dodziuk-Patodi simplicial eigenvalue convergence; finite-element exterior calculus (FEEC); spectral propinquity continuity (Latremoliere, w33_propinquity_reduction.py); flat 4-torus spectrum sum k_i^2 (standard); r_4(m) sums of four squares (Jacobi)."
+  ]
+}

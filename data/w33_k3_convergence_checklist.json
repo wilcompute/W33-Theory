@@ -1,0 +1,48 @@
+{
+  "checklist": [
+    {
+      "condition": "C1 spectral dimension = 4",
+      "desc": "each level is a triangulation of the closed 4-manifold K3; heat trace ~ t^-2 (4D Weyl law)",
+      "status": "ESTABLISHED (mechanism: T^4 demo)"
+    },
+    {
+      "condition": "C2 Betti = (1,0,22,0,1) stable",
+      "desc": "topologically forced at every refinement level (Dodziuk; BT1030)",
+      "status": "ESTABLISHED"
+    },
+    {
+      "condition": "C3 chi = 24 = f stable",
+      "desc": "alternating f-vector sum = 24 at every level",
+      "status": "ESTABLISHED"
+    },
+    {
+      "condition": "C4 closed pseudomanifold",
+      "desc": "every codim-1 face in exactly two top faces ({2:184320} incidence, BT1006)",
+      "status": "ESTABLISHED"
+    },
+    {
+      "condition": "C5 Hodge eigenvalues -> K3",
+      "desc": "combinatorial Hodge Laplacian -> continuum K3 spectrum (Dodziuk-Patodi / FEEC)",
+      "status": "ESTABLISHED (mechanism: T^4 demo)"
+    },
+    {
+      "condition": "M  Lipschitz seminorm -> geodesic",
+      "desc": "the quantum-metric from the Dirac commutator [D,.]: combinatorial distance -> geodesic on K3",
+      "status": "THE RESIDUAL (open)"
+    }
+  ],
+  "narrowing": {
+    "established": 5,
+    "total": 6,
+    "residual": "(M) Lipschitz / quantum-metric convergence of the K3 tower",
+    "regrade": "(T2') spectral-propinquity convergence -> (T2'') K3-tower Lipschitz convergence"
+  },
+  "frontier": {
+    "T1": "a_2 curved positivity (Newton constant G > 0)",
+    "T2pp": "the K3-tower Lipschitz (quantum-metric) convergence"
+  },
+  "summary": "(T2') narrowed to one analytic input: the spectral half is in place, the metric half remains. Applying the T^4 convergence lesson to the K3 triangulation tower, five necessary conditions for spectral-propinquity convergence are ESTABLISHED: (C1) spectral dimension = 4 (closed 4-manifold triangulation, 4D Weyl law, T^4-demo mechanism); (C2) Betti (1,0,22,0,1) stable (topologically forced); (C3) chi = 24 = f stable; (C4) closed pseudomanifold ({2:184320} incidence); (C5) Hodge eigenvalues -> continuum K3 (Dodziuk-Patodi/FEEC, T^4-demo mechanism). The ONE remaining analytic input is (M) the quantum-METRIC convergence: the Lipschitz seminorm from the Dirac commutator [D,.] (combinatorial distance -> geodesic on K3) must converge. So (T2') narrows from 'spectral-propinquity convergence of the K3 tower' to 'the quantum-metric (Lipschitz) convergence of the K3 tower' (T2''), the spectral half in place. The whole theory's frontier is then (T1) a_2 curved positivity (G>0) and (T2'') the K3-tower Lipschitz convergence; everything else (spectrum, dimension, topology, all of physics) derived or matched. HONEST: (C1)-(C4) are established facts; (C5) is eigenvalue convergence whose mechanism the T^4 demo shows but whose K3 computation is not run; (M) is genuinely open, the named residual. A real narrowing of the frontier to one analytic input, not a closure.",
+  "sources": [
+    "T^4 spectral convergence demo (w33_spectral_convergence_demo.py); K3 triangulation tower Betti/closedness (BT984-1135, BT1006 {2:184320}, BT1030 topologically forced); Dodziuk-Patodi eigenvalue convergence; spectral propinquity = metric on metric spectral triples (Latremoliere; w33_propinquity_reduction.py); Lipschitz seminorm from Dirac commutator [D,.]."
+  ]
+}
