@@ -1,0 +1,11 @@
+{
+  "bt": "BT1866",
+  "title": "TeX Splice Runner",
+  "verified": true,
+  "runner": "tools/run_bt1863_tex_splice_and_check.sh",
+  "calls": "python3 tools/apply_bt1857_holonet_patch.py",
+  "expected_output": "papers/BT1347_photonic_holonet_journal_with_BT1857.tex",
+  "checks": {"output_file_required": true, "patch_label_required": true, "raw_distance_boundary_required": true, "no_enumitem_nosep": true, "compile_attempts_if_latexmk_or_pdflatex_available": true},
+  "connector_note": "The repository connector cannot execute shell scripts in the remote checkout. This commit supplies the exact local runner so the splice and TeX check can be run reproducibly in a clone.",
+  "boundary": "Executable integration runner committed; remote connector execution and PDF artifact generation are not claimed."
+}
