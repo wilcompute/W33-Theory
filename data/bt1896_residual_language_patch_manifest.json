@@ -1,0 +1,16 @@
+{
+  "bt": "BT1896",
+  "title": "Holonet Residual-Language Patch",
+  "verified": true,
+  "patch": "papers/BT1896_holonet_residual_language_patch.tex",
+  "suggested_insertion": "Appendix B, after the opening architecture-completeness paragraphs",
+  "purpose": "Prevent overclaiming by separating finite machine closure from physical-continuum closure.",
+  "safe_public_statement": "finite machine-complete architecture, with remaining physical/continuum identifications classified",
+  "claim_split": {
+    "finite_machine": "W(3,3) carriers, routing atlas, Steinberg memory, Witting transaction ABI, contextual-fuel accounting, and finite lattice/register data are exact or machine-witnessed",
+    "R1": "finite E8/2E8 quadratic refinement and positive E8 lift fixed; continuum Einstein-Hilbert derivation not completed by that alone",
+    "R2": "moonshine traces and matter-register bridge supplied; physical fermion assignment and full CKM/PMNS remain separate unless independently proved",
+    "R3": "spacetime/field-theory limit theorem-governed; constructive physical continuum lift remains downstream"
+  },
+  "boundary": "Language patch only; it does not solve R1/R2/R3."
+}
