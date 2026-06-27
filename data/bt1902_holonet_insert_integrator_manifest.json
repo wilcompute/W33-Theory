@@ -1,0 +1,11 @@
+{
+  "bt": "BT1902",
+  "title": "Holonet Insert Integrator",
+  "verified": true,
+  "script": "tools/integrate_bt1899_holonet_insert.py",
+  "patch": "papers/BT1899_holonet_residual_and_guard_insert.tex",
+  "default_source": "papers/BT1347_photonic_holonet_journal.tex",
+  "default_output": "papers/BT1347_photonic_holonet_journal_with_BT1899.tex",
+  "behavior": ["non-destructive output file", "splits residual and guard blocks", "inserts residual block at architecture-completeness/appendix marker", "inserts guard block at transaction/time-bin/build marker", "idempotent labels prevent duplicate insertion", "rejects enumitem-only [nosep]"],
+  "boundary": "Integrator script only; remote checkout execution and PDF build are not claimed."
+}
