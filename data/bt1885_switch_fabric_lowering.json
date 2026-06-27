@@ -1,0 +1,13 @@
+{
+  "bt": "BT1885",
+  "title": "Switch-Fabric Lowering",
+  "verified": true,
+  "input": "BT1882 payload-reuse architecture for BT1876 five-round schedule",
+  "component_counts": {"payload_paths": 66, "check_ancillas": 56, "rounds": 5, "switching_layers": 5, "memory_delays": 4, "edge_address_bus_lines": 12, "round_select_bits": 3, "face_star_select_tables": 5, "reset_lines": 56},
+  "round_map": {"X0_Reye": {"checks": 16, "touches": 48, "selector": "Reye face table"}, "X1_residual_A": {"checks": 14, "touches": 42, "selector": "residual face table A"}, "X2_residual_B": {"checks": 14, "touches": 42, "selector": "residual face table B"}, "Z0_even_stars": {"checks": 6, "touches": 66, "selector": "even vertex-star table"}, "Z1_odd_stars": {"checks": 6, "touches": 66, "selector": "odd vertex-star table"}},
+  "lowered_primitives": {"low_loss_switches": 76, "phase_memory_segments": 66, "round_delay_latches": 4, "ancilla_reset_channels": 56, "shared_F12_address_bus": 1, "edge_touch_schedule_entries": 264},
+  "loss_units": {"BT1882_model_units": 76, "interpretation": "56 check ancilla channels plus 20 aggregate switch/memory overhead units"},
+  "critical_paths": ["payload phase memory across five rounds", "switch table fanout into 264 edge/check touches", "vertex-star eleven-edge parity fan-in", "ancilla reset between rounds"],
+  "checks": {"matches_BT1882_loss_units": true, "covers_all_five_rounds": true, "covers_264_edge_touches": true, "payload_paths_reused": true, "not_a_physical_layout": true},
+  "boundary": "Primitive-lowering bill of materials only; not a routed chip layout, calibrated insertion-loss model, or fabrication design."
+}
