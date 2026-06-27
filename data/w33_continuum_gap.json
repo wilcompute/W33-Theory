@@ -1,0 +1,23 @@
+{
+  "derived": [
+    "Cosmological constant (a_0, weight M_0=40) -- cancelled by the balance",
+    "Einstein-Hilbert FORM (a_2 term in the expansion)",
+    "R^2 Starobinsky (a_4) -- the inflation",
+    "Weyl^2 + Gauss-Bonnet (a_4)",
+    "Yang-Mills (F^2) + Higgs (|DH|^2 - V) -- the Standard Model"
+  ],
+  "remaining_theorems": {
+    "T1 a_2 positivity / curved refinement": "prove the a_2 coefficient on the curved tower gives Einstein-Hilbert with G>0 (1/16piG ~ Lambda^2 v); spectral data pinned (bt892), geometric convergence (bt1033), curved positivity OPEN",
+    "T2 manifold emergence": "derive the external M^4 from the discrete substrate (Connes reconstruction of a smooth spacetime from the finite spectral datum); the substrate gives F, M^4 is tensored in"
+  },
+  "regrade": {
+    "was": "continuum Einstein-Hilbert gravity lift (one OPEN sector)",
+    "now_derived": "gravity dynamics = spectral action",
+    "now_open": "(T1) a_2 curved positivity, (T2) manifold emergence",
+    "net": "open frontier narrowed from a sector to two named theorems"
+  },
+  "summary": "the continuum gap located precisely: two theorems, not a sector. Gravity is the substrate's spectral action (previous witness): CC (a_0), Einstein-Hilbert form (a_2), R^2 Starobinsky (a_4), Weyl^2, Gauss-Bonnet, Yang-Mills, Higgs -- all heat-kernel coefficients of Tr f(D^2/Lambda^2) on M^4 x W(3,3). So the gravity DYNAMICS is derived. What remains is two named theorems: (T1) a_2 positivity / curved-4D refinement -- prove the Einstein-Hilbert coefficient on the curved tower gives G>0 (1/16piG ~ Lambda^2 v); spectral data pinned (bt892), geometric convergence (bt1033), curved positivity OPEN; (T2) manifold emergence -- derive M^4 from the discrete substrate (Connes reconstruction of a smooth spacetime from the finite datum); the substrate gives F = W(3,3), M^4 is tensored in. RE-GRADE: Pass 28's OPEN 'continuum gravity lift' splits -- gravity dynamics -> DERIVED (spectral action), OPEN narrows to (T1)+(T2). The open frontier shrinks from a sector to two named theorems. HONEST: this LOCATES the frontier, it does not prove either theorem; partial progress (pinned spectral data, geometric convergence, two-continua candidates) is real but not a proof. Gravity dynamics derived; spacetime manifold and curved positivity remain.",
+  "sources": [
+    "gravity = spectral action (w33_gravity_spectral_action.py); a_2 EH curved refinement OPEN (bt892_spectral_action_finite_input.py); geometric-route term-by-term convergence (bt1033_spectral_action_term_by_term_geometric.py); Connes reconstruction theorem (2008); state of solution (w33_state_of_the_solution.py, Pass 28)."
+  ]
+}

@@ -7177,6 +7177,49 @@ integer postdictions; the structural-SUSY hierarchy protection is asserted by mo
 proven loop-by-loop; and continuum gravity is not derived. So ``solved'' means a closed, falsifiable,
 parameter-free framework with dated tests --- a strong claim, honestly bounded.
 
+\subsection{Pass 29 --- gravity is the spectral action, and the continuum gap is two theorems}
+\label{sec:capstone-twentynine}
+
+The principal open item of Pass 28 was the continuum gravity lift. It resolves through the
+Chamseddine--Connes spectral action, and what remains narrows from a missing sector to two
+precisely-named theorems.
+
+\emph{Gravity is the substrate's spectral action.} For the almost-commutative geometry $M^4\times F$
+with $F=W(3,3)$, the bosonic spectral action $S=\mathrm{Tr}\,f(D^2/\Lambda^2)$ expands, by the
+heat-kernel (Seeley--DeWitt) theorem, into local curvature integrals weighted by the finite $W(3,3)$
+Hodge moments. The three leading coefficients \emph{are} the three gravitational terms:
+\[
+a_0\ (\Lambda^4,\ M_0)\to\text{CC},\quad
+a_2\ (\Lambda^2,\ M_0)\to\text{Einstein--Hilbert}\ \big(\tfrac1{16\pi G}\sim\Lambda^2 v\big),\quad
+a_4\ (\Lambda^0,\ M_1,M_2)\to R^2\ \text{Starobinsky}+\text{Weyl}^2+\text{GB},
+\]
+and the same expansion gives the Yang--Mills and Higgs terms --- so gravity and the Standard Model
+are \emph{one} spectral action. The weights are the substrate's Hodge spectrum $\{0^1,10^{24},
+16^{15}\}$: $M_0=\mathrm{Tr}\,1=40=v$, $M_1=\mathrm{Tr}\,L=480$, $M_2=6240$. Strikingly the first
+moment splits as $M_1=24{\cdot}10+15{\cdot}16=240+240$ --- the boson--fermion balance $f\Phi_4=g\mu^2$
+itself --- so the cosmological-constant cancellation (Pass 18) is a property of the spectral data.
+Thus the CC, the Einstein--Hilbert action, and the Starobinsky inflation are the three heat-kernel
+coefficients of one action. (Witness: \path{analysis/w33_gravity_spectral_action.py}.)
+
+\emph{The continuum gap is two theorems, not a sector.} The gravity \emph{dynamics} is therefore
+derived. What is \emph{not} yet proven narrows to two precisely-located theorems: \textbf{(T1)} the
+$a_2$ positivity / curved-$4$D refinement --- proving the Einstein--Hilbert coefficient on the
+curved tower gives a \emph{positive} Newton constant ($\tfrac1{16\pi G}\sim\Lambda^2 v$), with the
+spectral data pinned and the geometric-route convergence established but the curved positivity open;
+and \textbf{(T2)} the emergence of the spacetime manifold $M^4$ from the discrete substrate (Connes
+reconstruction of a smooth manifold from the finite datum) --- the substrate supplies $F=W(3,3)$,
+while $M^4$ is currently tensored in, not derived. So Pass~28's single open item splits: the gravity
+dynamics moves to \textsc{derived}, and the open frontier becomes (T1)$+$(T2). (Witness:
+\path{analysis/w33_continuum_gap.py}.)
+
+\emph{Honest scope:} the Chamseddine--Connes spectral action and the $a_0/a_2/a_4=$CC/EH/$R^2$
+identification are established machinery; the substrate content is that $F=W(3,3)$, so the weights
+are the specific moments $\{40,480,6240\}$ and the $M_1=240+240$ split is the structural
+supersymmetry. This pass shows gravity \emph{is} the substrate's spectral action and locates the
+frontier precisely; it does \emph{not} prove (T1) or (T2). The continuum gravity lift is thus
+narrowed from a missing sector to two named theorems --- the genuine, honestly-stated edge of the
+solution.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
