@@ -1,0 +1,12 @@
+{
+  "bt": "BT1891",
+  "title": "Phi3 = E8 + F5 Decomposition",
+  "verified": true,
+  "input_codes": {"parent": "[[66,13,3]]_3", "subsystem": "[[66,8,3;5]]_3"},
+  "identity": {"Phi3": 13, "E8_rank": 8, "F5": 5, "equation": "13 = 8 + 5"},
+  "interpretation": "The parent K12/F12 CSS code exposes the Phi3=13 mixing sector. Gauge refinement splits it into an E8-rank logical sector plus five Fibonacci/gauge-clock qudits.",
+  "r1_interface": "R1 should be attacked as a canonical integral lift/gauge-fixing problem on the 8 logical qudits of the subsystem, not as an eigenlattice search inside the +2 eigenspace already ruled out by BT926.",
+  "r2_r3_interfaces": {"R2": "moonshine quintic should act on the 5 gauge-clock qudits or their phase transport, not on the 8 protected E8 logicals alone", "R3": "continuum/EH coefficient should be extracted from the decoder/noise action of the 8+5 split, not from the raw finite graph alone"},
+  "checks": {"parent_k13": true, "subsystem_k8_r5": true, "matches_Phi3_E8_F5": true, "does_not_claim_R1_solved": true},
+  "boundary": "Structural decomposition and frontier-routing theorem only; not an integral E8 lift proof, moonshine module construction, or continuum coefficient derivation."
+}

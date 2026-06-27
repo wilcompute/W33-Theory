@@ -1,0 +1,11 @@
+{
+  "bt": "BT1899",
+  "title": "Holonet Residual and Guard Insert",
+  "verified": true,
+  "patch": "papers/BT1899_holonet_residual_and_guard_insert.tex",
+  "contains": ["BT1896 residual-language clarification", "BT1897 Fano time-bin guard envelope theorem"],
+  "guard_arithmetic": {"active_frames": 1600, "time_bin_bits": 11, "time_bins": 2048, "slack": 448, "fano_pages": 7, "guards_per_page": 64, "page_split": "24 dark + 24 loss + 16 parity"},
+  "safe_public_statement": "finite machine-complete architecture, with remaining physical/continuum identifications classified",
+  "source_status": "guard formula is repo-derived from BT1649/BT1650; this patch makes it paper-body explicit when inserted",
+  "boundary": "TeX insert only; no continuum residual is solved and no hardware timing calibration is claimed."
+}

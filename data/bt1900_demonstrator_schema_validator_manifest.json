@@ -1,0 +1,12 @@
+{
+  "bt": "BT1900",
+  "title": "Demonstrator Data Schema and Validator",
+  "verified": true,
+  "schema": "schemas/bt1900_demonstrator_raw_shot_schema.json",
+  "validator": "analysis/bt1900_demonstrator_raw_shot_validator.py",
+  "input_format": "JSONL raw shot table",
+  "required_fields": ["shot_id", "witting_tetrad", "alice_slot", "bob_slot", "logical_pair_type", "transaction_tick", "time_bin", "detector_id", "polarization_setting", "tritter_phase_setting", "modulator_phase", "click_pattern", "dark_reference", "loss_probe", "accepted_flag", "witness_class"],
+  "range_checks": {"witting_tetrad": "0..39", "alice_slot": "0..3", "bob_slot": "0..3", "transaction_tick": "0..71", "time_bin": "0..2047"},
+  "schedule_check": "unique (witting_tetrad, alice_slot, bob_slot) records should hit 640 basis-local records",
+  "boundary": "Validator for raw demonstrator data only; it does not estimate contextual fraction or prove hardware performance."
+}

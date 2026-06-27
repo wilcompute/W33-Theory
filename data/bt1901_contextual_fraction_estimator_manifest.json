@@ -1,0 +1,12 @@
+{
+  "bt": "BT1901",
+  "title": "Contextual-Fraction Estimator",
+  "verified": true,
+  "script": "analysis/bt1901_contextual_fraction_estimator.py",
+  "input_format": "BT1900 JSONL raw shot table",
+  "target": "1/10",
+  "corrections": ["subtract dark-reference click rate", "divide by one minus loss-probe loss estimate", "clip corrected estimate to [0,1]"],
+  "compatibility_test": "normal approximation around target 1/10 using z=2 by default",
+  "reported_fields": ["signal_rows", "signal_clicks", "raw_fraction", "dark_click_rate", "loss_rate_estimate", "corrected_contextual_fraction", "normal_approx_interval", "compatible_with_one_tenth"],
+  "boundary": "First-pass estimator only; final analysis should use preregistered binomial/Bayesian intervals and full detector calibration."
+}
