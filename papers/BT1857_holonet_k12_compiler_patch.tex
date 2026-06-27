@@ -1,0 +1,61 @@
+% BT1857 -- claim-stratified Holonet K12/F12 compiler patch
+% Insert suggestion: before \section{Discussion and Open Questions} in papers/BT1347_photonic_holonet_journal.tex
+
+\section{Finite Compiler Layer: the \texorpdfstring{$K_{12}/F_{12}$}{K12/F12} Face Code}\label{sec:k12-f12-compiler}
+
+The preceding sections establish the single-photon carrier, coherent qutrit routing,
+contextual magic supply, and Boerdijk--Coxeter aperiodic clock.  The missing finite
+engineering layer is an explicit syndrome surface on which routing and clock data can
+be checked without replacing the one-photon architecture by an ad hoc repetition code.
+
+\begin{definition}[The optical incidence compiler]
+Let the twelve clock/mode labels be the vertices of a complete graph $K_{12}$.
+The unordered pairs $\{i,j\}$ index both the $66=\binom{12}{2}$ two-mode
+Givens rotations of the $F_{12}$ winding analyzer and the $66$ edge payload symbols
+of an abstract genus-six $K_{12}$ triangular map.  The resulting finite compiler has
+\[
+  n=72,\qquad \text{payload}=66,\qquad \text{parity}=6,
+\]
+over $\mathbb F_3$, with rate $11/12$.
+\end{definition}
+
+\begin{theorem}[Exact finite claims]
+The following claims are exact finite/combinatorial statements verified in BT1852--BT1856.
+\begin{enumerate}[nosep]
+  \item The $44$ triangular face words of the $K_{12}$ genus-six horizon close as
+  $\mathbb Z/12\mathbb Z$ current words.
+  \item The split is $16$ Reye faces plus $28$ residual faces, hence
+  $48=4\cdot 12=\mu k$ Reye incidences and $84=7\cdot12=\Phi_6 k$ residual incidences.
+  \item The six parity rows group the $66$ payload edges by cyclic distance
+  $d=1,\ldots,6$, with the $d=6$ row carrying the antipodal sheet check.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[Claim boundary]
+The compiler is a syndrome/check surface, not yet a quantum error-correcting code
+distance theorem.  BT1856 falsifies the stronger claim: the raw $[72,66,6]$ incidence
+compiler has minimum distance $2$ as a linear check code.  A genuine protected quantum
+memory would require an additional CSS or subsystem split with independent logical and
+gauge operators.
+\end{remark}
+
+\begin{table}[h]
+\caption{Claim stratification for the $K_{12}/F_{12}$ compiler layer.}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+Claim & Status & Witness \\
+\colrule
+$66=\binom{12}{2}$ rotations/edges & exact finite & BT1844--BT1847 \\
+$44$ closed triangular face words & exact finite & BT1850--BT1852 \\
+$[72,66,6]_{\mathbb F_3}$ incidence compiler & exact check surface & BT1853 \\
+Raw code distance $>2$ & false & BT1856 \\
+Quantum stabilizer/subsystem distance & open & future work \\
+Physical chip calibration & open & future work \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+This layer addresses the error-correction and tape-mapping gaps stated below by
+turning the aperiodic $F_{12}$ winding analyzer into a finite face-code surface: a
+single-photon route produces edge/rotation payloads, triangular face words supply
+closed local checks, and six genus-hole parity symbols store the antipodal sheet data.
