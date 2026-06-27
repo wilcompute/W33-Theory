@@ -1,0 +1,13 @@
+{
+  "bt": "BT1887",
+  "title": "Matching Decoder Prototype",
+  "verified": true,
+  "input": "BT1884 detector-time graph for the [[66,13,3]]_3 parent code",
+  "scope": "one persistent data event plus one transient measurement event over a 3-round window",
+  "graph_counts": {"detector_nodes": 168, "time_links": 112, "single_error_links": 528},
+  "prototype_rules": {"persistent_pair": "two equal adjacent nonzero syndrome changes choose the BT1878 data link", "isolated_node_pair_same_check": "choose the time link", "data_plus_measurement": "choose one data link plus one time link if the supports are disjoint", "relation_shadow": "assign high penalty and flag instead of correcting"},
+  "toy_cases": [{"case": "single persistent data syndrome plus isolated time blip", "decision": "one data correction and one measurement flag"}, {"case": "two adjacent same-check detector events only", "decision": "time-link measurement explanation"}, {"case": "dangerous relation shadow", "decision": "flag/postselect"}],
+  "weights": {"time_link": 1.0, "data_link": 2.0, "relation_shadow": 100.0},
+  "checks": {"uses_BT1884_graph": true, "handles_data_plus_measurement_case": true, "does_not_claim_weight2_correction": true, "relation_shadows_flagged": true},
+  "boundary": "Finite prototype rule table only; not an optimized MWPM implementation or calibrated detector likelihood model."
+}
