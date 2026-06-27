@@ -7639,6 +7639,54 @@ realises all four roles; $\mathsf{BQP}$ is the standard placement of a universal
 classical-hardness conditional on $\mathsf{PH}$ not collapsing, and bit/skew rates assume the stated
 clock.
 
+\subsection{Pass 38 --- the advantage measured, the scheduler, and the falsifiable datasheet}
+\label{sec:capstone-thirtyeight}
+
+Three closing moves: quantify the quantum advantage as a number, build the resource-management layer,
+and state the architecture as a testable specification.
+
+\emph{The advantage, measured.} Pass~37 placed the machine in $\mathsf{BQP}$; this pass turns that
+into a computed separation via the \emph{robustness of magic} $R(\rho)=\min\{\sum_i|x_i|:\rho=\sum_i
+x_i\sigma_i,\ \sigma_i\ \text{pure stabilizer}\}$, the cost parameter of the Pashayan--Wallman--Bartlett
+quasiprobability simulator (cost $\sim R^2$ per resource). By linear programming over the $12$
+single-qutrit pure stabilizer states, the substrate's degree-$3$ resource --- the Strange state
+$(|1\rangle-|2\rangle)/\sqrt2$ --- has $R=3$ \emph{exactly} (with an exact $6$-term decomposition; the
+sanity check $R=1$ for a stabilizer state). Since robustness is submultiplicative, a circuit with $t$
+cubic magic gates costs the classical simulator $\sim R^{2t}=9^t$, exponential in the magic count,
+while the quantum machine runs in time $\sim t$: every cubic gate multiplies the classical cost by
+$9$, and exact classical sampling collapses $\mathsf{PH}$. So the resource is quantified --- robustness
+$3$, mana $\ln(5/3)$, a per-gate classical overhead of $9$. (Witness:
+\path{analysis/w33_provable_advantage.py}.)
+
+\emph{The scheduler.} The $240$ links partition \emph{exactly} into the $40$ lines, each a $4$-clique
+(every edge on a unique line), so the wiring is $40$ four-way buses. The collinearity graph is
+$1$-factorable into $12$ perfect matchings (computed), giving a conflict-free point-to-point schedule
+of exactly $12$ slots (each node drives one of its $12$ ports per slot), perfectly balanced by
+vertex/edge-transitivity. For readout, a spread of $10$ disjoint lines covers all $40$ nodes (so $10$
+contexts measure in parallel), but the $40$ contexts do \emph{not} resolve into $4$ parallel spreads
+(proven by backtracking) --- so the readout is not fully parallelizable, and that non-resolvability
+\emph{is} measurement incompatibility, the contextuality that fuels the magic, appearing as a hard
+scheduling obstruction. (Witness: \path{analysis/w33_scheduler_os.py}.)
+
+\emph{The falsifiable datasheet.} The architecture fits on one consistency-checked ledger (the
+headline constants $(40,12,2,4)$, bisection $100$, Holevo $\log_2 3$, optimal radix $3$, Byzantine $5$,
+mana $\ln(5/3)$ all re-derived and cross-checked here), and it separates two kinds of claim. Theorems
+(verifiable, not falsifiable): $|\mathrm{Sp}(4,3)|=51840=|W(E_6)|$, diameter $2$, connectivity $12$,
+distance $3$, bisection $100$, Clifford $=\mathsf{P}$ / $+$cubic $=\mathsf{BQP}$, $1$-factorability.
+Predictions (falsifiable --- a build could refute them, each with a criterion): radix-$12$ diameter-$2$
+wiring; the OAM-trit saturating Holevo at $1.585$~bit/photon; the $[\![66,8,3]\!]_3$ pseudo-threshold
+near $5\times10^{-4}$; the magic robustness $3$/mana $\ln(5/3)$; and $5$-Byzantine/$11$-crash
+tolerance. So the architecture is a complete, internally consistent, and \emph{testable} computer
+specification. (Witness: \path{analysis/w33_architecture_capstone.py}.)
+
+\emph{Honest scope:} the robustness $R=3$, the bus/$1$-factor/spread/non-resolvability facts, and the
+ledger constants are computed here (the heavy $|\mathrm{Sp}(4,3)|$ closure is referenced from the
+Pass-36 witness); the Pashayan--Wallman--Bartlett $R^2$ cost and submultiplicativity, and the
+post-selection $\mathsf{PH}$-collapse hardness, are established. The theorem/prediction split is the
+honest core: the graph- and group-theoretic facts are theorems; the physical predictions are what a
+hardware realisation could refute. ``Testable'' means the refutation criteria are operational, not
+that a build has been performed.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

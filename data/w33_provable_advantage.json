@@ -1,0 +1,42 @@
+{
+  "robustness": {
+    "stabilizer_baseline": 1.0,
+    "strange_state": 3.0,
+    "method": "LP: min sum|x_i| s.t. rho = sum x_i sigma_i over the 12 pure single-qutrit stabilizer states",
+    "reconstruction_error": 4.478165665991511e-16,
+    "decomposition_terms": 6
+  },
+  "classical_cost": {
+    "per_gate_R2": 8.999999999999998,
+    "t_gates_scaling": "R^(2t) = 9^t (exponential)",
+    "quantum_cost": "~ t",
+    "hardness": "exact classical sampling collapses the polynomial hierarchy",
+    "table": [
+      {
+        "t_magic_gates": 1,
+        "classical_cost_~9^t": 8.999999999999998
+      },
+      {
+        "t_magic_gates": 2,
+        "classical_cost_~9^t": 80.99999999999997
+      },
+      {
+        "t_magic_gates": 5,
+        "classical_cost_~9^t": 59048.99999999994
+      },
+      {
+        "t_magic_gates": 10,
+        "classical_cost_~9^t": 3486784400.9999933
+      }
+    ]
+  },
+  "monotones": {
+    "robustness": 3.0,
+    "mana": 0.510826,
+    "note": "both exceed the stabilizer value (R=1, mana=0)"
+  },
+  "summary": "the advantage, made concrete: the magic state has robustness 3, so classically faking the machine costs 9^t. The robustness of magic R(rho) = min{ sum|x_i| : rho = sum x_i sigma_i, sigma_i pure stabilizer } is 1 for a stabilizer state and >1 for magic, and is the cost parameter of the Pashayan-Wallman-Bartlett quasiprobability simulator (cost ~ R^2 per resource). By LP over the 12 single-qutrit pure stabilizer states, the substrate's degree-3 resource -- the Strange state (|1>-|2>)/sqrt(2) -- has R = 3 EXACTLY (6-term decomposition, exact reconstruction; sanity R(stabilizer) = 1). By submultiplicativity R(rho^t) <= R^t, a circuit with t cubic magic gates costs the classical simulator ~ R^(2t) = 9^t -- exponential in the magic count -- while the quantum machine runs in time ~ t; exact classical sampling collapses the polynomial hierarchy. So the magic resource is quantified: robustness 3, mana ln(5/3) (Pass 37), a per-gate classical overhead of 9. HONEST: R = 3 is computed exactly by LP (verified R=1 for a stabilizer state and exact target reconstruction); the PWB cost ~ R^2 and the submultiplicativity R(rho^t) <= R^t are established theorems giving 9^t as an exponential upper-bound scaling; the substrate content is that the degree-3 gate's resource IS this Strange state, so the per-gate classical overhead is 9; 'collapses PH' is the standard post-selection hardness for non-stabilizer circuits.",
+  "sources": [
+    "robustness of magic (Howard-Campbell 2017); Pashayan-Wallman-Bartlett quasiprobability simulation cost ~ R^2 (PRL 2015); qutrit stabilizer states (12 = d(d+1)); Strange state as a qutrit magic state; submultiplicativity of robustness; Bremner-Jozsa-Shepherd / Aaronson-Arkhipov post-selection hardness (PH collapse); corpus mana = ln(5/3)."
+  ]
+}

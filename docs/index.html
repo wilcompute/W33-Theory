@@ -4036,6 +4036,34 @@
               rates assume the stated clock.</div>
           </div>
           <div class="card">
+            <div class="label">The Advantage Measured, the Scheduler, and the Falsifiable Datasheet</div>
+            <div class="detail"><strong>Three closing moves: quantify the quantum advantage as a number, build the resource-management
+              layer, and state the architecture as a testable specification.</strong>
+              <strong>(1) The advantage, measured.</strong> Pass 37 placed the machine in BQP; this quantifies it via the <strong>robustness
+              of magic</strong> R(&rho;) = min{&sum;|x&#7522;| : &rho; = &sum; x&#7522;&sigma;&#7522;, &sigma;&#7522; pure stabilizer}, the cost
+              parameter of the Pashayan&ndash;Wallman&ndash;Bartlett classical simulator (cost ~ R&sup2; per resource). By LP over the 12
+              single-qutrit pure stabilizer states, the substrate's degree-3 resource (the Strange state) has <strong>R = 3 exactly</strong> (6-term
+              decomposition; sanity R=1 for a stabilizer state). By submultiplicativity, t cubic magic gates cost the classical simulator
+              <strong>~ R&#8312;&#7511; = 9&#7511;</strong> (exponential), while the quantum machine runs in time ~ t: every cubic gate multiplies
+              the classical cost by 9, and exact classical sampling collapses PH. So the resource is quantified &mdash; robustness 3, mana ln(5/3),
+              per-gate overhead 9. <strong>(2) The scheduler.</strong> The 240 links partition <em>exactly</em> into the 40 lines (4-cliques, every
+              edge unique) &rarr; <strong>40 four-way buses</strong>. The collinearity graph is <strong>1-factorable into 12 perfect
+              matchings</strong> (computed) &rarr; a 12-slot conflict-free point-to-point frame (each node drives 1 of 12 ports/slot), balanced by
+              vertex/edge-transitivity. A spread of 10 disjoint lines covers all 40 nodes (10 contexts in parallel), but the 40 contexts do
+              <strong>NOT resolve into 4 spreads</strong> (proven by backtracking) &mdash; readout is not fully parallelizable, and that
+              non-resolvability <em>is</em> measurement incompatibility / contextuality, appearing as a hard scheduling obstruction. <strong>(3) The
+              falsifiable datasheet.</strong> The architecture fits one consistency-checked ledger (constants (40,12,2,4), bisection 100, Holevo
+              log&#8322;3, optimal radix 3, Byzantine 5, mana ln(5/3) all re-derived &amp; cross-checked) and separates <strong>theorems</strong>
+              (verifiable, not falsifiable: |Sp(4,3)|=51840=|W(E&#8326;)|, diameter 2, connectivity 12, distance 3, bisection 100, Clifford=P /
+              +cubic=BQP, 1-factorability) from <strong>falsifiable predictions</strong> a build could refute, each with a criterion: P1 radix-12
+              diameter-2 wiring; P2 OAM-trit saturating Holevo 1.585 bit/photon; P3 [[66,8,3]]&#8323; pseudo-threshold ~5e-4; P4 magic robustness 3 /
+              mana ln(5/3); P5 5-Byzantine / 11-crash. So the architecture is a complete, internally consistent, <strong>testable</strong> computer
+              specification. Honest: the robustness R=3, the bus/1-factor/spread/non-resolvability facts, and the ledger constants are computed (the
+              heavy |Sp(4,3)| closure referenced from the ISA witness); the PWB R&sup2; cost, submultiplicativity, and PH-collapse hardness are
+              established; the theorem/prediction split is the honest core; "testable" means the refutation criteria are operational, not that a
+              build exists.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

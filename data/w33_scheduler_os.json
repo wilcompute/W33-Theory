@@ -1,0 +1,28 @@
+{
+  "bus_map": {
+    "links": 240,
+    "buses": 40,
+    "bus_size": 4,
+    "each_edge_unique": true,
+    "primitive": "line-local 4-way exchange"
+  },
+  "link_schedule": {
+    "one_factorable": true,
+    "perfect_matchings": 12,
+    "frame_slots": 12,
+    "edges_covered": 240,
+    "reading": "12-slot conflict-free point-to-point frame; each node uses 1 of 12 ports/slot"
+  },
+  "readout_schedule": {
+    "spread_size": 10,
+    "spread_covers_all_nodes": true,
+    "resolves_into_4_spreads": false,
+    "interpretation": "readout NOT fully parallelizable: the contexts overlap as measurement incompatibility (contextuality) -- a hard scheduling obstruction"
+  },
+  "fairness": "W(E6) vertex/edge/line-transitive -> schedules symmetrize to hot-spot-free",
+  "frame": "beat-30 clock provides the slot boundaries; 12-slot link frame",
+  "summary": "the scheduler: the wires partition into 40 four-way buses, the links run on a 12-slot conflict-free frame, and the readout contexts provably do NOT parallelize -- contextuality seen by the scheduler. (1) Bus map: the 240 links partition EXACTLY into the 40 lines of GQ(3,3), each a 4-clique (every edge on a unique line) -> 40 four-way buses; the primitive is a line-local 4-way exchange. (2) Link schedule: the collinearity graph is 1-FACTORABLE into 12 perfect matchings (computed) -> a 12-slot conflict-free point-to-point frame (each node drives 1 of its 12 ports/slot), frame length = radix 12 (minimal), perfectly balanced by vertex/edge-transitivity. (3) Readout: a spread (10 disjoint lines covering all 40 nodes) exists -> 10 contexts in parallel, but the 40 contexts do NOT resolve into 4 spreads (proven by backtracking search) -> readout is NOT fully parallelizable = measurement incompatibility / contextuality as a hard scheduling obstruction. Fairness: W(E6) transitive on nodes/links/contexts -> schedules symmetrize, hot-spot-free; the beat-30 clock provides slot boundaries. So: 40 four-way buses, a 12-slot link frame, parallel readout up to a spread of 10 but provably not fully parallel, and symmetry-guaranteed fairness. HONEST: the bus decomposition (40 lines, each edge unique), the 1-factorization (12 perfect matchings), the spread, and the non-resolvability into 4 spreads are all computed here (the last by exhaustive backtracking); the scheduling reading (bus=line, link slot=1-factor, readout slot=spread, non-resolvability=contextuality) is the standard dictionary; the fairness uses W(E6) transitivity.",
+  "sources": [
+    "GQ(3,3) line geometry (240 edges = 40 lines, each edge unique); 1-factorization / perfect matchings (computed via networkx max-cardinality matching); spreads and resolutions of generalized quadrangles; W(3,3) spread existence; W(E6) = Aut(GQ(3,3)) transitivity; edge-coloring = conflict-free link scheduling (standard NoC dictionary); beat-30 clock (Pass 35)."
+  ]
+}

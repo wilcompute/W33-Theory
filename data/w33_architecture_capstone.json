@@ -1,0 +1,92 @@
+{
+  "consistency_checks": {
+    "srg_params": true,
+    "diameter_2": true,
+    "bisection_100": true,
+    "holevo_1585": true,
+    "radix3_optimal": true,
+    "byzantine_5": true,
+    "crash_11": true,
+    "mana_ln53": true
+  },
+  "ledger": [
+    {
+      "subsystem": "interconnect",
+      "spec": "GQ(3,3)=SRG(40,12,2,4); diameter 2; connectivity 12; bisection 100; lambda_2=2",
+      "witness": "w33_interconnect_network / w33_noc_floorplan"
+    },
+    {
+      "subsystem": "processor",
+      "spec": "radix 3 (E(3)=2.731<E(2)=E(4)=2.885); word 27; Clifford |Sp(4,3)|=51840=|W(E6)|",
+      "witness": "w33_ternary_processor / w33_isa_encoding"
+    },
+    {
+      "subsystem": "memory",
+      "spec": "[[66,8,3]]_3; distance 3; n-k=58 syndrome; mana ln(5/3); robustness 3",
+      "witness": "w33_reliability_threshold / w33_provable_advantage"
+    },
+    {
+      "subsystem": "clock",
+      "spec": "beat 30; averaging contraction 1/3; Byzantine t=5; crash 11",
+      "witness": "w33_memory_clock / w33_clock_distribution"
+    },
+    {
+      "subsystem": "I/O",
+      "spec": "40 line-contexts; OAM-trit; Holevo log2(3)=1.585 bit/photon; k=8 logical port",
+      "witness": "w33_io_boundary"
+    },
+    {
+      "subsystem": "scheduler",
+      "spec": "40 four-way buses; 12-slot 1-factor link frame; readout NOT 4-resolvable",
+      "witness": "w33_scheduler_os"
+    },
+    {
+      "subsystem": "one group",
+      "spec": "W(E6) = processor gates = network automorphisms = code/readout symmetry",
+      "witness": "w33_one_group_machine"
+    },
+    {
+      "subsystem": "complexity",
+      "spec": "Clifford = P (Wigner>=0); Clifford+cubic = BQP (mana>0)",
+      "witness": "w33_complexity_advantage"
+    }
+  ],
+  "theorems": [
+    "|Sp(4,3)| = 51840 = |W(E6)| (one group: gates = automorphisms = code/readout symmetry)",
+    "diameter 2, connectivity 12, bisection exactly 100 (spectral bound met)",
+    "code distance 3 (corrects one fault/cycle)",
+    "Clifford = P (positive Wigner) and Clifford + cubic = BQP (Wigner-negative mana)",
+    "collinearity graph 1-factorable -> 12-slot conflict-free link schedule"
+  ],
+  "falsifiable_predictions": [
+    {
+      "id": "P1",
+      "claim": "the wiring is radix-12, diameter-2",
+      "refute_if": "a built fabric needs a 3rd hop or radix != 12"
+    },
+    {
+      "id": "P2",
+      "claim": "the air-gap OAM-trit saturates Holevo at 1.585 bit/photon",
+      "refute_if": "a 3-mode channel misses or beats 1.585 bit/use"
+    },
+    {
+      "id": "P3",
+      "claim": "the [[66,8,3]]_3 store has a depolarizing pseudo-threshold ~5e-4",
+      "refute_if": "encoding fails to help below ~5e-4"
+    },
+    {
+      "id": "P4",
+      "claim": "the degree-3 magic resource has robustness 3 / mana ln(5/3)",
+      "refute_if": "a stabilizer decomposition of lower 1-norm is found"
+    },
+    {
+      "id": "P5",
+      "claim": "the machine tolerates 5 Byzantine / 11 crash faults",
+      "refute_if": "6 Byzantine survived, or 5 not"
+    }
+  ],
+  "summary": "the capstone: the whole architecture on one sheet, with the predictions that could falsify it. The ledger re-derives the cheap headline constants for internal consistency -- GQ(3,3)=(40,12,2,4), minimum bisection (n/4)(k-lambda_2)=100, Holevo log2(3)=1.585, optimal radix 3 (E(3)<E(2)=E(4)), Byzantine min((n-1)/3,(kappa-1)/2)=5, mana ln(5/3) -- all checks passing, each subsystem pointed at its witness (Passes 34-38). It then separates THEOREMS (verifiable, not falsifiable: |Sp(4,3)|=51840=|W(E6)| one-group, diameter 2 / connectivity 12, distance 3, bisection 100, Clifford=P / +cubic=BQP, 1-factorability -> 12-slot schedule) from FALSIFIABLE PREDICTIONS a build could refute: P1 radix-12 diameter-2 wiring (refute: needs a 3rd hop / radix!=12); P2 OAM-trit saturates Holevo 1.585 bit/photon (refute: 3-mode channel misses/beats it); P3 [[66,8,3]]_3 pseudo-threshold ~5e-4 (refute: encoding fails to help below it); P4 magic robustness 3 / mana ln(5/3) (refute: lower-1-norm stabilizer decomposition); P5 5 Byzantine / 11 crash (refute: 6 Byzantine survived or 5 not). So the architecture is a complete, internally consistent, TESTABLE computer specification -- the strongest honest claim, that it could be proven wrong and (on the geometry) has not been. HONEST: ledger constants re-computed here (heavy |Sp(4,3)| closure referenced from the ISA witness); the theorem/prediction split is the honest core; 'testable' means the refutation criteria are operational, not that a build exists.",
+  "sources": [
+    "Passes 34-38 witnesses (interconnect, processor/ISA, memory/reliability, clock, I/O, scheduler, one-group, complexity/advantage); GQ(3,3)=SRG(40,12,2,4); spectral bisection bound; Holevo bound; radix economy; Byzantine bounds (Dolev/Lamport); robustness of magic / mana; |Sp(4,3)|=51840=|W(E6)| (closure in w33_isa_encoding)."
+  ]
+}
