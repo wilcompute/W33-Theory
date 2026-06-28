@@ -4159,6 +4159,28 @@
               exact; the entanglement-swap pair establishment is modelled; the quantum advantage remains the priced 9&#7511; dial.</div>
           </div>
           <div class="card">
+            <div class="label">Consensus Run Against an Adversary, the KS Inequality, and the Holonet CLI</div>
+            <div class="detail"><strong>The consensus layer executed against a live adversary, the contextual fraction turned into an
+              explicit inequality with a number, and the whole VM packaged as a command-line tool.</strong>
+              <strong>(1) Consensus, executed</strong> (<code>analysis/holonet_consensus_demo.py</code>): on a simulated 40-node fabric,
+              neighbour-averaging contracts the disagreement by <strong>1/3 per round</strong> (measured); five silent nodes don't stop agreement
+              (connectivity 12 survives 11 crashes); and five <strong>malicious</strong> nodes broadcasting oscillating &plusmn;5 values are
+              <strong>outvoted</strong> by the trimmed-mean (MSR) rule (discard the 5 highest + 5 lowest neighbour values) &mdash; honest nodes still
+              converge. Six malicious nodes break it, so the boundary sits <strong>exactly at t=5</strong>, the Dolev bound 2t+1&le;12. Leaderless,
+              two-hop, threefold-per-round, 11-crash / 5-Byzantine agreement &mdash; run, not asserted. <strong>(2) The KS inequality, with a
+              number</strong> (<code>w33_ks_inequality.py</code>): over the 40 contexts let S count those returning exactly one outcome. A
+              noncontextual model obeys <strong>S &le; 36</strong> (exact ILP; the best classical strategy lights 11 rays and fails exactly 4 contexts);
+              quantum mechanics gives <strong>S = 40</strong> (orthonormal-basis exclusivity, state-independent). Violation = 4, normalized
+              (40&minus;36)/40 = <strong>1/10 = 1/&Phi;&#8324;</strong>. So the bench has a sharp test: measure all 40 contexts, and any
+              <strong>S &gt; 36 refutes noncontextual realism</strong>. <strong>(3) The holonet CLI</strong> (<code>holonet_cli.py</code>):
+              <code>holonet route A B</code>, <code>teleport</code>, <code>correct</code>, <code>reproduce</code>, <code>verify</code> (self-tests the
+              whole stack to PASS/FAIL), <code>info</code> &mdash; the universal machine as a tool anyone can install and run. Honest: the 1/3
+              contraction is the measured spectral fact; the crash/Byzantine runs are executed sims with explicit adversaries (t=5 convergence is
+              empirical for MSR, matching the connectivity bound); the KS classical bound 36 and 4 failed contexts are computed exactly, the quantum
+              value 40 is orthonormal-basis exclusivity on the Witting realisation; the CLI wraps the classical/exact VM, the quantum advantage remains
+              the priced 9&#7511; dial.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

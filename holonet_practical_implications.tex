@@ -268,6 +268,15 @@ quantum advantage is still the priced $9^t$ dial; everything else --- the error 
 teleportation protocol, the self-reproduction --- is classical, exact, and runs today.
 \end{keybox}
 
+\paragraph{And it agrees under attack, and ships as a tool.} The consensus layer is executed too
+(\texttt{analysis/holonet\_consensus\_demo.py}): on a simulated $40$-node fabric the disagreement
+contracts by $1/3$ per round, five silent nodes do not stop agreement, and five \emph{malicious} nodes
+broadcasting wild values are outvoted by the trimmed-mean rule --- with six the boundary breaks, exactly
+the Dolev bound $t=5$. And the whole machine is packaged as a command-line tool
+(\texttt{analysis/holonet\_cli.py}): \texttt{holonet route A B}, \texttt{teleport}, \texttt{correct},
+\texttt{reproduce}, \texttt{verify} (self-tests the stack to \textsc{pass}/\textsc{fail}), \texttt{info}
+--- the universal VM as something anyone can install and run.
+
 \section{The Planetary Data Center: Everyone Is a Node}
 \label{sec:planetary}
 The architecture is self-similar by construction. The level-$n$ holonet $H_n$ is defined by replacing
@@ -625,6 +634,13 @@ ovoid (Thas) --- confirmed by the maximum partial ovoid being $7<10$. By exact i
 most contexts any global assignment can satisfy is exactly $36$, so the irreducible contextual fraction
 is $(40-36)/40 = 1/10$. The benchtop number is a theorem of the same $q=3$ geometry that is the
 processor, the network, and the memory.
+
+This gives the experiment a concrete test statistic (witness
+\texttt{analysis/w33\_ks\_inequality.py}). Let $S$ count, over the $40$ contexts, those that return
+exactly one outcome. A noncontextual model obeys $S\le36$ (the bound above); quantum mechanics gives
+$S=40$ (orthonormal-basis exclusivity, state-independent). So the rule is sharp: measure all $40$
+contexts, and any $S>36$ refutes noncontextual realism, with the normalized violation $4/40=1/10$ the
+signal size the shot budget was sized against.
 
 The decision statistic is a one-sided binomial. To distinguish $\mathrm{CF}=1/10$ from the classical
 null $\mathrm{CF}=0$ at $k\sigma$ requires $n \ge k^2\,p(1-p)/p^2$ valid coincidences: $\mathbf{81}$ for

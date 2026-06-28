@@ -1,0 +1,19 @@
+{
+  "noncontextual_bound": {
+    "S_max": 36,
+    "rays_lit": 11,
+    "contexts_failed": 4
+  },
+  "quantum_value": 40,
+  "violation": {
+    "absolute": 4,
+    "normalized": 0.1,
+    "closed_form": "1/10 = 1/Phi_4"
+  },
+  "inequality": "S <= 36 (noncontextual)  vs  S = 40 (quantum); state-independent",
+  "test_statistic": "measure all 40 contexts; count exact single-outcome exclusivity; S-hat > 36 refutes noncontextuality",
+  "summary": "the bench gets a test statistic: a noncontextual inequality the substrate violates, classical <= 36 vs quantum 40. Over the 40 measurement contexts (orthonormal tetrads of Witting rays = the lines of W(3,3)), let S = the number of contexts returning exactly one outcome. Noncontextual hidden-variable models pre-assign each ray a fixed 0/1 value; by exact ILP the maximum is S = 36 (the optimal assignment lights 11 rays and fails exactly 4 contexts), so the inequality is S <= 36. Quantum mechanically every context is an orthonormal basis -> exactly one outcome always, so S = 40 (state-independent). Violation = 40 - 36 = 4; normalized (40-36)/40 = 1/10 = 1/Phi_4 = the contextual fraction. State-independent test: measure all 40 contexts, count exact single-outcome exclusivity, S-hat > 36 refutes noncontextual realism; the 1/10 fraction is the signal size the demonstrator shot budget (~225 valid coincidences for 5 sigma) was sized against. HONEST: the classical bound 36 and the 4 failed contexts are computed exactly from the W(3,3) line incidence; the quantum value 40 is the state-independent exclusivity of orthonormal-basis measurement, guaranteed once the 40 contexts are realised as orthonormal tetrads (the Witting realisation in C^4, corpus two-carrier); this is the logical/possibilistic form (counting contexts with exact single-outcome exclusivity).",
+  "sources": [
+    "W(3,3) line incidence (40 contexts; computed); noncontextual bound via exact ILP (scipy milp); Witting rays as orthonormal tetrads in C^4 (corpus two-carrier); state-independent contextuality / KS noncontextual inequalities (Cabello, Yu-Oh style); contextual fraction 1/10 = 1/Phi_4 (Pass 42); shot budget (Pass 39)."
+  ]
+}

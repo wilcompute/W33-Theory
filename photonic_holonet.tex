@@ -7834,6 +7834,40 @@ here derived; the QEC and teleportation are exact ideal state-vector simulations
 is exact; the entanglement-swap pair establishment is modelled (the corpus Stage-B primitive). The
 quantum advantage remains the priced $9^t$ dial.
 
+\subsection{Pass 43 --- consensus run against an adversary, the KS inequality, and the holonet CLI}
+\label{sec:capstone-fortythree}
+
+This pass executes the consensus layer against a live adversary, turns the contextual fraction into an
+explicit inequality with a number, and packages the whole VM as a command-line tool.
+
+\emph{Consensus, executed.} \path{analysis/holonet_consensus_demo.py}: on a simulated $40$-node fabric,
+neighbour-averaging contracts the disagreement by $1/3$ per round (measured), five silent nodes do not
+stop agreement (connectivity $12$ survives $11$ crashes), and five \emph{malicious} nodes broadcasting
+oscillating $\pm5$ values are outvoted --- each honest node runs the trimmed-mean (MSR) rule (discard
+the five highest and five lowest neighbour values) and the honest nodes still converge. Six malicious
+nodes break it, so the boundary sits exactly at $t=5$, the Dolev connectivity bound $2t+1\le12$.
+Leaderless, two-hop, threefold-per-round, eleven-crash / five-Byzantine agreement, run not asserted.
+
+\emph{The KS inequality, with a number.} \path{analysis/w33_ks_inequality.py}: over the $40$ contexts
+let $S$ count those returning exactly one outcome. A noncontextual model pre-assigns each ray a fixed
+$0/1$ value, and by exact integer programming the maximum is $S\le36$ (the best classical strategy
+lights $11$ rays and fails exactly $4$ contexts); quantum mechanically every context is an orthonormal
+basis, so $S=40$ with certainty (state-independent). The violation is $40-36=4$, normalized
+$(40-36)/40 = 1/10 = 1/\Phi_4$ --- the contextual fraction is now an explicit, state-independent
+inequality the bench reads off: measure all $40$ contexts, and any $S>36$ refutes noncontextual realism.
+
+\emph{The holonet CLI.} \path{analysis/holonet_cli.py} packages the VM as a tool:
+\texttt{holonet route A B}, \texttt{teleport}, \texttt{correct}, \texttt{reproduce}, \texttt{verify}
+(self-tests the whole stack to \textsc{pass}/\textsc{fail}), and \texttt{info} (the datasheet). The
+universal machine as something anyone can install and run.
+
+\emph{Honest scope:} the $1/3$ contraction is the measured spectral fact; the crash and Byzantine runs
+are executed simulations with explicit adversaries (the $t=5$ Byzantine convergence is empirical for the
+MSR rule, matching the connectivity bound, not a general robustness proof). The KS inequality's classical
+bound $36$ and four failed contexts are computed exactly; the quantum value $40$ is the state-independent
+exclusivity of orthonormal-basis measurement on the Witting realisation. The CLI is a wrapper over the
+classical/exact VM; the quantum advantage remains the priced $9^t$ dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
