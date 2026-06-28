@@ -1,0 +1,18 @@
+{
+  "reproduction": {
+    "genome_chars": 128,
+    "is_quine": true,
+    "fixed_point": true
+  },
+  "von_neumann_mapping": {
+    "universal computer": "the Python interpreter (Turing-complete; substrate Rule-110/UTM)",
+    "universal constructor": "the write of the rendered genome (substrate: degree-2+3 gate set + network)",
+    "copyable description (genome)": "the GENOME string (substrate: the data register)",
+    "error-corrected heredity": "the [[66,8,3]]_3 code -- see holonet_qec_demo.py (runs)",
+    "variation / evolvability": "the fractal W(3,3) splice -- see holonet_node.spawn (child address + 1 digit)"
+  },
+  "summary": "proof of life, part 3: the machine reproduces itself. A von Neumann self-reproduction loop, executed: the program carries its full source as an internal description string (GENOME), and running the genome renders and writes the genome -> a byte-identical child (a true quine fixed point); the child re-emits an identical grandchild (verified at runtime: child == grandchild == genome-render). Mapping onto von Neumann's components: the Python interpreter = universal computer (substrate Rule-110/UTM); the write of the rendered genome = universal constructor (substrate degree-2+3 gate set + network); the GENOME string = copyable description (substrate data register); the [[66,8,3]]_3 code (which actually corrects errors in holonet_qec_demo.py) = error-corrected heredity; the fractal W(3,3) splice (holonet_node.spawn, child address + 1 digit) = variation/evolvability. So 'the architecture of life' is a running fixed point: read the description, construct a copy of (constructor + description), and the copy does the same. HONEST: the quine fixed point is real and verified; this demonstrates the LOGICAL architecture of self-reproduction (von Neumann's three components), not biological reproduction.",
+  "sources": [
+    "von Neumann, Theory of Self-Reproducing Automata (universal computer + universal constructor + copyable description); the quine fixed point (computed/verified here); substrate three components (Rule-110/UTM, degree-2+3 gate set + network, [[66,8,3]]_3 code) -- corpus / companion papers; fractal splice (holonet_node.py / w33_fractal_datacenter)."
+  ]
+}

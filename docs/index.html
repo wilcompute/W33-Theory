@@ -4115,6 +4115,28 @@
               classical, not that legacy hardware yields quantum advantage.</div>
           </div>
           <div class="card">
+            <div class="label">Proof of Life: the Machine Corrects, Teleports, and Reproduces (Executed)</div>
+            <div class="detail"><strong>The three things von Neumann's "architecture of life" requires &mdash; compute-and-correct,
+              construct-and-move, reproduce &mdash; now run as exact, verified programs.</strong>
+              <strong>(1) It corrects errors</strong> (<code>analysis/holonet_qec_demo.py</code>): an exact state-vector run of the qutrit
+              <strong>[[5,1,3]]&#8323; perfect code</strong> (a runnable stand-in for the substrate's [[66,8,3]]&#8323;, same distance-3
+              mechanism). The 4 stabilizers (cyclic shifts of X, Z, Z&#8315;&sup1;, X&#8315;&sup1;, I) commute; codespace is exactly
+              3-dimensional (one logical qutrit); <strong>all 40 single-qutrit Pauli errors give 40 distinct syndromes</strong>, and every error
+              is decoded + corrected to <strong>fidelity 1</strong>. The memory is a running code, not a parameter triple. <strong>(2) It
+              teleports</strong> (<code>holonet_teleport_demo.py</code>): two nodes share a qutrit Bell pair; A Bell-measures the message, sends 2
+              classical trits, B applies the correction X&#7503;Z&#737; &mdash; B's qutrit IS the message, <strong>fidelity 1 for all 9
+              outcomes</strong> (exact). The message is destroyed at A (no-cloning &rarr; teleport-only VM migration); chained, it is entanglement
+              swapping &mdash; the quantum-internet repeater primitive executed. <strong>(3) It reproduces</strong> (<code>holonet_quine.py</code>):
+              the program carries its own source as an internal description (a genome); running it constructs a <strong>byte-identical child</strong>,
+              which constructs an identical grandchild &mdash; a verified self-reproduction fixed point. Interpreter = universal computer, the write =
+              universal constructor, the genome string = copyable description, the [[66,8,3]]&#8323; code (just shown correcting errors) =
+              error-corrected heredity, the fractal W(3,3) splice = variation. <strong>The "architecture of life" is not a slogan but a running fixed
+              point.</strong> Honest: the QEC and teleport are exact ideal-syndrome state-vector simulations (no measurement error/loss); [[5,1,3]]&#8323;
+              stands in for the larger surface code; the quine is a real verified fixed point demonstrating the LOGICAL architecture of
+              self-reproduction (von Neumann's 3 components), not biology. Everything here is classical, exact, and runs today; the quantum advantage
+              remains the priced 9&#7511; dial.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

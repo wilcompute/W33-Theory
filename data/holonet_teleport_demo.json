@@ -1,0 +1,84 @@
+{
+  "teleportation": {
+    "outcomes": [
+      {
+        "outcome": [
+          0,
+          0
+        ],
+        "correction": "X^0Z^0",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          0,
+          1
+        ],
+        "correction": "X^0Z^1",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          0,
+          2
+        ],
+        "correction": "X^0Z^2",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          1,
+          0
+        ],
+        "correction": "X^1Z^0",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          1,
+          1
+        ],
+        "correction": "X^1Z^1",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          1,
+          2
+        ],
+        "correction": "X^1Z^2",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          2,
+          0
+        ],
+        "correction": "X^2Z^0",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          2,
+          1
+        ],
+        "correction": "X^2Z^1",
+        "fidelity": 1.0
+      },
+      {
+        "outcome": [
+          2,
+          2
+        ],
+        "correction": "X^2Z^2",
+        "fidelity": 1.0
+      }
+    ],
+    "min_fidelity": 1.0,
+    "no_cloning": "message destroyed at A; migration is teleport-only"
+  },
+  "summary": "proof of life, part 2: two nodes actually teleport a state. Exact 3-qutrit (27-dimensional) state-vector run: a message qutrit |psi> at node A and a Bell pair |Phi> = sum_j |jj>/sqrt(3) shared A--B; A performs the generalized Bell measurement on (message, A-half) -> one of 9 outcomes (k,l) in Z_3xZ_3; A sends 2 classical trits to B; B applies X^k Z^l -> B's qutrit IS the message, fidelity 1.0 for all 9 outcomes (verified). The message is destroyed at A (no-cloning), so a quantum VM can migrate only by teleportation, never by copying. This is the quantum-internet repeater primitive EXECUTED -- chained (B->C against a fresh pair) it is entanglement swapping; the diameter-2 fabric needs one swap per pair, mu = 4 redundant paths. HONEST: exact ideal protocol (no channel noise/loss); the optical loss budget (~78-88% per-hop survival, mu=4 hedge) and the identification with the substrate's Stage-B gate-teleportation preparation and with swapping are the corpus/companion-paper reading.",
+  "sources": [
+    "generalized qudit teleportation (Bennett et al. generalized to qutrits); Bell measurement + X^k Z^l correction (computed here, exact); substrate gate-teleportation preparation Stage B (corpus two-carrier); entanglement swapping = chained teleportation (quantum-internet literature; w33_quantum_internet)."
+  ]
+}

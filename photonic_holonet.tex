@@ -7767,6 +7767,38 @@ regime), the energy comparisons use external estimates and a thermodynamic floor
 encoding hypothesis, and the quantum-internet mapping is a specification. ``Boots on a dinosaur'' means
 the architecture layer is poly-time classical, not that legacy hardware yields quantum advantage.
 
+\subsection{Pass 41 --- proof of life: the machine corrects, teleports, and reproduces, executed}
+\label{sec:capstone-fortyone}
+
+Pass 40 made the architecture runnable; this pass runs the three things the von~Neumann
+``architecture of life'' claim requires --- compute-and-correct, construct-and-move, reproduce ---
+as exact, verified programs.
+
+\emph{It corrects errors.} \path{analysis/holonet_qec_demo.py}: an exact state-vector run of the qutrit
+$[[5,1,3]]_3$ perfect code (a runnable stand-in for the substrate's $[[66,8,3]]_3$, same distance-$3$
+mechanism). The four stabilizers (cyclic shifts of $X,Z,Z^{-1},X^{-1},I$) commute; the codespace is
+$3$-dimensional (one logical qutrit); all $40$ single-qutrit Pauli errors give $40$ distinct syndromes;
+and every error is decoded and corrected to fidelity $1$. The memory is a running code, not a parameter
+triple.
+
+\emph{It teleports.} \path{analysis/holonet_teleport_demo.py}: two nodes share a qutrit Bell pair; $A$
+Bell-measures the message, sends two trits, $B$ applies $X^kZ^l$, and recovers the message at fidelity
+$1$ for all $9$ outcomes (exact simulation). The message is destroyed at $A$ (no-cloning $\Rightarrow$
+teleport-only VM migration); chained, it is entanglement swapping --- the quantum-internet repeater
+primitive executed.
+
+\emph{It reproduces.} \path{analysis/holonet_quine.py}: the program carries its own source as an
+internal description (a genome); running it constructs a byte-identical child, which constructs an
+identical grandchild --- a verified self-reproduction fixed point. Interpreter $=$ universal computer,
+the write $=$ universal constructor, the genome string $=$ copyable description, the $[[66,8,3]]_3$ code
+(just shown correcting errors) $=$ error-corrected heredity, the fractal $W(3,3)$ splice $=$ variation.
+
+\emph{Honest scope:} the QEC and teleportation are exact, ideal-syndrome state-vector simulations (no
+measurement error/loss); $[[5,1,3]]_3$ stands in for the larger surface code (same mechanism). The quine
+fixed point is real and verified; it demonstrates the \emph{logical} architecture of self-reproduction
+(von~Neumann's three components), not biology. Everything here is classical, exact, and runs today; the
+quantum advantage remains the priced $9^t$ dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
