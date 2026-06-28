@@ -1,0 +1,18 @@
+{
+  "no_ovoid": {
+    "hoffman_bound": 10,
+    "max_partial_ovoid": 7,
+    "ovoid_exists": false
+  },
+  "max_satisfiable_contexts": 36,
+  "contextual_fraction": {
+    "numerator": 4,
+    "denominator": 40,
+    "value": 0.1,
+    "closed_form": "1/10 = 1/Phi_4"
+  },
+  "summary": "the contextual fraction, derived from scratch: exactly 1/10. The 40 Witting rays in C^4 have the orthogonality structure of W(3,3); the 40 measurement contexts are the totally-isotropic lines (tetrads of orthonormal rays). A Kochen-Specker assignment (0/1 per ray, exactly one 1 per context) satisfying all 40 contexts would be an ovoid (10 points meeting every line once); Thas's theorem says W(q) for q odd has no ovoid, confirmed here by the maximum partial ovoid (independence number) = 7 < the Hoffman bound 10. By exact integer programming over the 40 rays, the maximum number of contexts any global 0/1 assignment can satisfy is exactly 36 of 40 (re-verified on the optimal assignment), so 4 contexts are irreducibly unsatisfiable and the contextual fraction is CF = (40-36)/40 = 4/40 = 1/10 = 1/Phi_4. The 36/40 KS budget and the 1/10 fraction are theorems of the W(3,3) line incidence -- the same q=3 structure that is the processor, network, and memory -- so the benchtop number that certifies the magic fuel and tests the theory is derived from first principles, not assumed. HONEST: this is the logical/possibilistic contextual fraction (max contexts admitting a consistent global value), computed from the incidence geometry; it equals the corpus 1/10 = 1/Phi_4 and the KS budget 36/40, here DERIVED rather than cited; that the 40 Witting rays realise this incidence in C^4 is the corpus two-carrier result and the no-ovoid fact is the Thas theorem.",
+  "sources": [
+    "W(3,3) line incidence (40 points, 40 totally-isotropic line-contexts; computed); Witting rays in C^4 with W(3,3) orthogonality (corpus two-carrier); ovoid = set meeting every line once; Thas: W(q) has no ovoid for q odd; Hoffman ratio bound on the independence number; exact ILP max-satisfiable contexts (scipy milp); contextual fraction 1/10 = 1/Phi_4 (corpus value, here derived)."
+  ]
+}

@@ -7799,6 +7799,41 @@ fixed point is real and verified; it demonstrates the \emph{logical} architectur
 (von~Neumann's three components), not biology. Everything here is classical, exact, and runs today; the
 quantum advantage remains the priced $9^t$ dial.
 
+\subsection{Pass 42 --- the benchtop number derived, and the quantum packet delivered}
+\label{sec:capstone-fortytwo}
+
+This pass closes the one gap the computer-engineering arc kept citing rather than deriving --- the
+contextual fraction $1/10$ --- and assembles the runnable pieces into one VM and one end-to-end
+quantum delivery.
+
+\emph{The contextual fraction, from first principles.} \path{analysis/w33_contextual_fraction.py}: the
+$40$ Witting rays have the orthogonality structure of $W(3,3)$, with $40$ measurement contexts $=$ the
+totally-isotropic lines (tetrads). A Kochen--Specker assignment satisfying all $40$ contexts would be an
+ovoid ($10$ points meeting every line once); $W(q)$ for $q$ odd has no ovoid (Thas), confirmed here by
+the maximum partial ovoid (independence number) being $7<10$. By exact integer programming over the
+$40$ rays, the most contexts any global $0/1$ assignment can satisfy is exactly $36$, so the contextual
+fraction is $\mathrm{CF}=(40-36)/40 = 4/40 = 1/10 = 1/\Phi_4$. The $36/40$ KS budget and the $1/10$
+fraction are theorems of the $q=3$ line geometry, not inputs --- so the single number the demonstrator
+measures is derived from scratch.
+
+\emph{The VM does all three.} \path{analysis/holonet_node.py} now exposes \texttt{correct()} (a full
+$[[5,1,3]]_3$ cycle, fidelity $1$), \texttt{teleport()} (a qutrit moved to a partner, the two classical
+trits routed over the fabric, fidelity $1$), and \texttt{reproduce()} (a fractal $W(3,3)$ splice) as
+node methods --- one runnable object that computes-and-corrects, constructs-and-moves, and reproduces.
+
+\emph{A quantum packet, delivered.} \path{analysis/holonet_quantum_packet.py}: an unknown qutrit is
+teleported between nodes anywhere on the fabric, with the two classical correction trits routed by the
+symplectic address-is-route test in at most two hops ($\mu=4$ multipath); across several source/
+destination pairs the payload arrives with fidelity $1$, the quantum content never traversing the
+classical wire (no-cloning). For non-adjacent endpoints the shared Bell pair is established by one
+entanglement swap at the relay --- the diameter-$2$ repeater.
+
+\emph{Honest scope:} the contextual fraction is the logical/possibilistic one (max contexts admitting a
+consistent global assignment), computed from the incidence geometry and equal to the corpus $1/10$,
+here derived; the QEC and teleportation are exact ideal state-vector simulations; the classical routing
+is exact; the entanglement-swap pair establishment is modelled (the corpus Stage-B primitive). The
+quantum advantage remains the priced $9^t$ dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

@@ -159,6 +159,100 @@ class CliffordRegister:
 
 
 # --------------------------------------------------------------------------------------
+# Quantum capabilities (exact, small): error correction and teleportation.
+# These make the node DO the von Neumann components, not just describe them.
+# --------------------------------------------------------------------------------------
+import cmath  # noqa: E402
+
+_W = cmath.exp(2j * cmath.pi / 3)
+_X3 = np.zeros((3, 3), complex)
+for _k in range(3):
+    _X3[(_k + 1) % 3, _k] = 1
+_Z3 = np.diag([1, _W, _W**2])
+
+
+def _p3(a, b):
+    return np.linalg.matrix_power(_X3, a) @ np.linalg.matrix_power(_Z3, b)
+
+
+def qec_cycle(seed=0):
+    """Encode a logical qutrit in [[5,1,3]]_3, inject a random single error, correct it; return fidelity."""
+    rng = np.random.default_rng(seed)
+    base = [(1, 0), (0, 1), (0, 2), (2, 0), (0, 0)]  # X, Z, Z^-1, X^-1, I
+
+    def tens(exps):
+        M = np.array([[1]], complex)
+        for a, b in exps:
+            M = np.kron(M, _p3(a, b))
+        return M
+
+    gens = [tens(base[-s:] + base[:-s]) if s else tens(base) for s in range(4)]
+    dim = 3**5
+    Pc = np.eye(dim, dtype=complex)
+    for S in gens:
+        Pc = Pc @ ((np.eye(dim) + S + S @ S) / 3)
+    vals, vecs = np.linalg.eigh(Pc)
+    psi = vecs[:, int(np.argmax(vals))]
+    psi = psi / np.linalg.norm(psi)
+
+    def syndrome(Ep):
+        syn = []
+        for S in gens:
+            v = S @ Ep
+            lam = np.mean([v[i] / Ep[i] for i in range(dim) if abs(Ep[i]) > 1e-9])
+            syn.append(
+                int(round((cmath.phase(lam) % (2 * cmath.pi)) / (2 * cmath.pi / 3))) % 3
+            )
+        return tuple(syn)
+
+    syn_map = {}
+    for q in range(5):
+        for a in range(3):
+            for b in range(3):
+                if (a, b) != (0, 0):
+                    e = [(0, 0)] * 5
+                    e[q] = (a, b)
+                    syn_map[syndrome(tens(e) @ psi)] = (q, a, b)
+    q = int(rng.integers(5))
+    a, b = int(rng.integers(1, 3)), int(rng.integers(0, 3))
+    e = [(0, 0)] * 5
+    e[q] = (a, b)
+    corrupted = tens(e) @ psi
+    dq, da, db = syn_map[syndrome(corrupted)]
+    ec = [(0, 0)] * 5
+    ec[dq] = ((-da) % 3, (-db) % 3)
+    recovered = tens(ec) @ corrupted
+    return {
+        "injected": (q, a, b),
+        "decoded": (dq, da, db),
+        "fidelity": float(abs(np.vdot(psi, recovered)) ** 2),
+    }
+
+
+def teleport_state(seed=0):
+    """Teleport a random qutrit A->B via a Bell pair; return the (k,l) correction and fidelity."""
+    rng = np.random.default_rng(seed)
+    psi = rng.standard_normal(3) + 1j * rng.standard_normal(3)
+    psi = psi / np.linalg.norm(psi)
+    Phi = np.zeros(9, complex)
+    for j in range(3):
+        Phi[3 * j + j] = 1 / np.sqrt(3)
+    state = np.kron(psi, Phi).reshape(3, 3, 3)
+    # measure outcome (k,l) with its Born probability, then correct
+    probs, outs = [], []
+    for k in range(3):
+        for l in range(3):
+            bkl = (np.kron(_p3(k, l), np.eye(3)) @ Phi).reshape(3, 3)
+            amp = np.einsum("ab,abc->c", bkl.conj(), state)
+            probs.append(np.linalg.norm(amp) ** 2)
+            outs.append((k, l, amp))
+    idx = rng.choice(len(outs), p=np.array(probs) / sum(probs))
+    k, l, amp = outs[idx]
+    corrected = _p3(k, l) @ (amp / np.linalg.norm(amp))
+    return {"outcome": (k, l), "fidelity": float(abs(np.vdot(psi, corrected)) ** 2)}
+
+
+# --------------------------------------------------------------------------------------
 # The node and the fractal splice (self-reproduction).
 # --------------------------------------------------------------------------------------
 class HolonetNode:
@@ -178,6 +272,25 @@ class HolonetNode:
         return (
             9**self.magic_budget
         )  # Clifford = poly (cost 1 in the dial); each magic gate x9
+
+    def correct(self, seed=0):
+        """COMPUTE-AND-CORRECT: run a full [[5,1,3]]_3 error-correction cycle on this node's memory."""
+        return qec_cycle(seed)
+
+    def teleport(self, other, seed=0):
+        """CONSTRUCT-AND-MOVE: teleport a qutrit to `other`, routing the 2 classical trits over the fabric."""
+        r = teleport_state(seed)
+        a = self.address if self.level == 1 else POINTS[0]
+        b = other.address if other.level == 1 else POINTS[1]
+        r["classical_route"] = [
+            list(p) for p in route(a, b)
+        ]  # the (k,l) trits travel this path
+        return r
+
+    def reproduce(self, child_point=None):
+        """REPRODUCE: splice a W(3,3) child (von Neumann self-reproduction with variation)."""
+        cp = child_point if child_point is not None else POINTS[1]
+        return self.spawn(cp)
 
 
 def main():
@@ -275,6 +388,29 @@ def main():
     out["it_runs_here"] = (
         "the architecture of life boots on a dinosaur: this VM is poly-time classical"
     )
+
+    # 6. PROOF OF LIFE -- the node does the three von Neumann things, end to end
+    print(f"\n[6] PROOF OF LIFE  (the node corrects, teleports, and reproduces)")
+    nodeA, nodeB = HolonetNode(POINTS[0]), HolonetNode(dst)
+    qc = nodeA.correct(seed=1)
+    print(
+        f"    correct():    [[5,1,3]]_3 cycle -- injected {qc['injected']}, decoded {qc['decoded']}, fidelity {qc['fidelity']:.4f}"
+    )
+    tp = nodeA.teleport(nodeB, seed=1)
+    print(
+        f"    teleport():   A->B outcome {tp['outcome']}, fidelity {tp['fidelity']:.4f}; classical trits routed {tp['classical_route']}"
+    )
+    kid = nodeA.reproduce()
+    print(
+        f"    reproduce():  spawned child {kid.address} (level {kid.level}, diameter {8*kid.level})"
+    )
+    assert qc["fidelity"] > 0.999999 and tp["fidelity"] > 0.999999 and kid.level == 2
+    out["proof_of_life"] = {
+        "correct_fidelity": round(qc["fidelity"], 6),
+        "teleport_fidelity": round(tp["fidelity"], 6),
+        "teleport_route_hops": len(tp["classical_route"]) - 1,
+        "reproduce_child_level": kid.level,
+    }
 
     print("\n" + "=" * 78)
     print(
