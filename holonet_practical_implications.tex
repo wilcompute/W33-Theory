@@ -272,10 +272,15 @@ teleportation protocol, the self-reproduction --- is classical, exact, and runs 
 (\texttt{analysis/holonet\_consensus\_demo.py}): on a simulated $40$-node fabric the disagreement
 contracts by $1/3$ per round, five silent nodes do not stop agreement, and five \emph{malicious} nodes
 broadcasting wild values are outvoted by the trimmed-mean rule --- with six the boundary breaks, exactly
-the Dolev bound $t=5$. And the whole machine is packaged as a command-line tool
-(\texttt{analysis/holonet\_cli.py}): \texttt{holonet route A B}, \texttt{teleport}, \texttt{correct},
-\texttt{reproduce}, \texttt{verify} (self-tests the stack to \textsc{pass}/\textsc{fail}), \texttt{info}
---- the universal VM as something anyone can install and run.
+the Dolev bound $t=5$. The whole machine is packaged as a command-line tool
+(\texttt{analysis/holonet\_cli.py}, installable as \texttt{holonet} via \texttt{pip install -e .}):
+\texttt{route A B}, \texttt{teleport}, \texttt{correct}, \texttt{reproduce}, \texttt{verify} (self-tests
+the stack to \textsc{pass}/\textsc{fail}), \texttt{info}, with a $13$-test CI suite covering the VM.
+Even the quantum \emph{advantage} is now executed for small $t$: the Pashayan--Wallman--Bartlett
+quasiprobability simulator (\texttt{analysis/w33\_magic\_dial.py}) runs the magic gates as a signed
+Monte Carlo, unbiased against the exact value, with each $t$-gate sample in $[-3^t,3^t]$ so the sample
+cost scales as $9^t$ --- the priced dial, turned and measured. The architecture of life as something
+anyone can install, run, and verify.
 
 \section{The Planetary Data Center: Everyone Is a Node}
 \label{sec:planetary}
@@ -641,6 +646,13 @@ exactly one outcome. A noncontextual model obeys $S\le36$ (the bound above); qua
 $S=40$ (orthonormal-basis exclusivity, state-independent). So the rule is sharp: measure all $40$
 contexts, and any $S>36$ refutes noncontextual realism, with the normalized violation $4/40=1/10$ the
 signal size the shot budget was sized against.
+
+And the whole experiment now runs in simulation, with error bars
+(\texttt{analysis/holonet\_ks\_experiment.py}). Using the Cabello--Severini--Winter witness
+$\chi=\sum_v P(v)$ --- noncontextual bound the independence number $\alpha=7$, quantum value
+$10$ (state-independent) --- a simulated heralded-photon run with shot noise, visibility, and dark
+counts clears the bound at $5\sigma$ with only $\sim21$ detected events per ray ($\sim840$ photons),
+$\hat\chi\to10$. The first milestone is a costed, error-barred experiment.
 
 The decision statistic is a one-sided binomial. To distinguish $\mathrm{CF}=1/10$ from the classical
 null $\mathrm{CF}=0$ at $k\sigma$ requires $n \ge k^2\,p(1-p)/p^2$ valid coincidences: $\mathbf{81}$ for

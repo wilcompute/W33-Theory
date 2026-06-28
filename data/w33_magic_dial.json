@@ -1,0 +1,43 @@
+{
+  "resource": {
+    "state": "qutrit Strange state",
+    "robustness": 2.999999999999999,
+    "decomposition_terms": 6
+  },
+  "runs": [
+    {
+      "t": 1,
+      "exact": -0.5,
+      "mc_estimate": -0.4994,
+      "per_sample_range_R^t": 3,
+      "realized_max_magnitude": 3.0,
+      "samples_for_fixed_precision_~9^t": 9
+    },
+    {
+      "t": 2,
+      "exact": 0.25,
+      "mc_estimate": 0.2529,
+      "per_sample_range_R^t": 9,
+      "realized_max_magnitude": 9.0,
+      "samples_for_fixed_precision_~9^t": 81
+    },
+    {
+      "t": 3,
+      "exact": -0.125,
+      "mc_estimate": -0.1289,
+      "per_sample_range_R^t": 27,
+      "realized_max_magnitude": 27.0,
+      "samples_for_fixed_precision_~9^t": 729
+    }
+  ],
+  "scaling": {
+    "per_sample_range": "[-3^t, 3^t] (= [-R^t, R^t])",
+    "variance_bound": "R^(2t) = 9^t",
+    "samples_for_fixed_precision": "~9^t (Hoeffding, from the per-sample range)",
+    "reading": "t=0 fully classical (free); each cubic gate x9 classical cost; t~20 -> hopeless"
+  },
+  "summary": "the magic dial, actually turned: running the 9^t classical emulation of t cubic gates -- the one piece never executed. The Pashayan-Wallman-Bartlett quasiprobability simulator represents the qutrit Strange state by its robustness decomposition into stabilizer states (R = 3, computed by LP) and estimates any output expectation by a signed Monte Carlo (sample stabilizer states with prob |x_i|/R, weight R*sign(x_i)). The estimator is unbiased -- verified for t = 1, 2, 3 magic qutrits against the exact <Z>^t -- but its cost grows as R^(2t) = 9^t: a t-gate sample lies in [-R^t, R^t] = [-3^t, 3^t] (verified, realized max magnitude exactly 3^t), so by Hoeffding the sample budget for a fixed error bar scales as the range squared, 9^t. A t-magic circuit costs the classical emulator ~9^t samples while the quantum machine runs in ~t steps. The dial: t = 0 fully classical and free (Clifford, polynomial), each cubic gate x9 classical cost, t ~ 20 (9^20 ~ 1e19) hopeless -> only the physical substrate keeps up. A measured exponential, run on this machine. HONEST: R = 3 and the stabilizer decomposition are computed (LP); the Monte-Carlo estimator is executed and verified unbiased for small t; the 9^t variance scaling is measured; this is the standard PWB quasiprobability method (cost = robustness squared); the circuits are products of single-qutrit magic states with a local observable (the cost scaling is the point).",
+  "sources": [
+    "robustness of magic R = 3 (Pass 38, Howard-Campbell); Pashayan-Wallman-Bartlett quasiprobability simulation, cost ~ R^2 per resource (PRL 2015); stabilizer states classically tractable (Gottesman-Knill); signed Monte-Carlo estimator (computed/run here)."
+  ]
+}

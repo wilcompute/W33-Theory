@@ -1,0 +1,46 @@
+{
+  "witness": {
+    "nc_bound": 7,
+    "quantum_value": 10,
+    "gap": 3,
+    "noise_tolerance": 0.3
+  },
+  "simulation": {
+    "runs": [
+      {
+        "shots_per_ray": 21,
+        "total_photons": 840,
+        "chi_hat": 10.238,
+        "stderr": 0.585,
+        "sigma_over_nc_bound": 5.5
+      },
+      {
+        "shots_per_ray": 50,
+        "total_photons": 2000,
+        "chi_hat": 10.22,
+        "stderr": 0.385,
+        "sigma_over_nc_bound": 8.4
+      },
+      {
+        "shots_per_ray": 200,
+        "total_photons": 8000,
+        "chi_hat": 9.96,
+        "stderr": 0.193,
+        "sigma_over_nc_bound": 15.4
+      },
+      {
+        "shots_per_ray": 1000,
+        "total_photons": 40000,
+        "chi_hat": 9.935,
+        "stderr": 0.086,
+        "sigma_over_nc_bound": 34.0
+      }
+    ],
+    "shots_per_ray_5sigma": 21,
+    "photons_5sigma": 840
+  },
+  "summary": "the demonstrator, simulated end-to-end: a few hundred photons clear the noncontextual bound by many sigma. The Cabello-Severini-Winter witness chi = sum over the 40 Witting rays of P(ray fires in its context) obeys chi <= alpha = 7 for any noncontextual hidden-variable model (alpha = the independence number of the W(3,3) exclusivity graph, computed), but quantum mechanically the 40 rays form 40 orthonormal tetrads with sum of all 40 projectors = 10*I, so chi = 10 for ANY input state (state-independent); the gap 10 vs 7 is the contextuality and tolerates (10-7)/10 = 30% depolarizing noise. Simulating the heralded-photon experiment (maximally-mixed input -> each ray fires ~1/4; N shots/ray with visibility 0.98 and 0.5% dark counts; chi-hat with error bars): ~21 detected events per ray (under a thousand photons) already clear the noncontextual bound 7 at 5 sigma, chi-hat -> 10 as visibility -> 1. So the first milestone is a simulated, error-barred experiment: a few hundred to a few thousand photons on catalog optics refute noncontextual realism. HONEST: alpha = 7 is computed exactly (independence number); the quantum value 10 (= Hoffman/Lovasz number; sum of 40 projectors = 10*I) is the state-independent value guaranteed by the Witting orthonormal realisation in C^4 (corpus two-carrier); the simulation models the standard heralded-photon shot statistics; the CSW witness (7 vs 10) and the logical contextual fraction 1/10 (Pass 42) are two contextuality measures of the same KS set.",
+  "sources": [
+    "Cabello-Severini-Winter graph-theoretic contextuality (noncontextual bound = independence number, quantum bound = Lovasz theta); W(3,3) independence number alpha = 7 (computed; Pass 42); Hoffman/Lovasz theta = 10 for the vertex-transitive SRG; Witting orthonormal realisation in C^4 (corpus two-carrier); heralded single-photon shot statistics (simulated here)."
+  ]
+}

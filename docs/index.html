@@ -4181,6 +4181,27 @@
               the priced 9&#7511; dial.</div>
           </div>
           <div class="card">
+            <div class="label">The Experiment Simulated, the Magic Dial Turned, the Tool Installed</div>
+            <div class="detail"><strong>The demonstrator run in simulation with error bars, the 9&#7511; quantum-advantage emulation
+              executed (not just priced), and the VM shipped as an installable command with a test suite.</strong>
+              <strong>(1) The demonstrator, simulated</strong> (<code>analysis/holonet_ks_experiment.py</code>): the Cabello&ndash;Severini&ndash;Winter
+              witness &chi; = &sum;&#7515; P(ray fires in its context) obeys <strong>&chi; &le; &alpha; = 7</strong> for any noncontextual model
+              (&alpha; = the independence number of the W(3,3) exclusivity graph, computed), while quantum mechanically the 40 projectors sum to
+              10&middot;I, so <strong>&chi; = 10</strong> for any state &mdash; a gap 10 vs 7 tolerating 30% depolarizing noise. A simulated
+              heralded-photon run (shot noise, visibility, dark counts) clears the bound at <strong>5&sigma; with only ~21 detected events per ray
+              (~840 photons)</strong>, &chi;-hat &rarr; 10. The first milestone is now a costed, error-barred experiment. <strong>(2) The magic dial,
+              turned</strong> (<code>w33_magic_dial.py</code>): the Pashayan&ndash;Wallman&ndash;Bartlett quasiprobability simulator represents the
+              Strange state by its robustness decomposition (R=3, computed) and estimates expectations by a signed Monte Carlo &mdash; verified
+              <strong>unbiased</strong> against the exact value for t=1,2,3 magic qutrits. Each t-gate sample lies in <strong>[&minus;3&#7511;, 3&#7511;]</strong>
+              (realized max exactly 3&#7511;), so by Hoeffding the sample budget for fixed precision scales as <strong>9&#7511;</strong> &mdash; the priced
+              advantage, executed and measured, the one piece never run before. <strong>(3) The tool, installed</strong> (<code>holonet_cmd.py</code> +
+              <code>setup.py</code> entry point): <code>holonet</code> is a real command after <code>pip install -e .</code> (route / teleport /
+              correct / reproduce / verify / info), with <code>tests/test_holonet_vm.py</code> giving the whole VM CI coverage &mdash; <strong>13 exact
+              tests, all passing</strong>. Honest: &alpha;=7 and R=3 are computed; &chi;=10 is the state-independent Hoffman/Lov&aacute;sz value on the
+              Witting realisation; the KS experiment models standard heralded-photon shot statistics; the magic-dial estimator is run and verified
+              unbiased with the 9&#7511; Hoeffding bound from the per-sample range; the quantum advantage is still the 9&#7511; dial, now run for small t.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently

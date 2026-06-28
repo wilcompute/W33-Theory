@@ -7868,6 +7868,39 @@ bound $36$ and four failed contexts are computed exactly; the quantum value $40$
 exclusivity of orthonormal-basis measurement on the Witting realisation. The CLI is a wrapper over the
 classical/exact VM; the quantum advantage remains the priced $9^t$ dial.
 
+\subsection{Pass 44 --- the experiment simulated, the magic dial turned, the tool installed}
+\label{sec:capstone-fortyfour}
+
+This pass runs the demonstrator in simulation with error bars, executes the $9^t$ magic emulation that
+was only ever priced, and ships the VM as an installable command with a test suite.
+
+\emph{The demonstrator, simulated.} \path{analysis/holonet_ks_experiment.py}: the
+Cabello--Severini--Winter witness $\chi=\sum_{v}P(v\ \text{fires in its context})$ obeys
+$\chi\le\alpha=7$ for any noncontextual model ($\alpha=$ the independence number of the $W(3,3)$
+exclusivity graph, computed), while quantum mechanically the $40$ projectors sum to $10\,\mathbb{I}$, so
+$\chi=10$ for any state --- a gap $10$ vs $7$ tolerating $30\%$ depolarizing noise. Simulating the
+heralded-photon run (maximally-mixed input, shot noise, visibility, dark counts), only $\sim21$ detected
+events per ray ($\sim840$ photons) clear the noncontextual bound at $5\sigma$, with $\hat\chi\to10$. The
+first milestone is now a simulated experiment with error bars.
+
+\emph{The magic dial, turned.} \path{analysis/w33_magic_dial.py}: the Pashayan--Wallman--Bartlett
+quasiprobability simulator represents the Strange state by its robustness decomposition ($R=3$,
+computed) and estimates expectations by a signed Monte Carlo, verified unbiased against the exact value
+for $t=1,2,3$ magic qutrits. Each $t$-gate sample lies in $[-3^t,3^t]$ (the realized maximum is exactly
+$3^t$), so by Hoeffding the sample budget for fixed precision scales as $R^{2t}=9^t$ --- the priced
+advantage, executed and measured, not asserted.
+
+\emph{The tool, installed.} \path{holonet_cmd.py} plus a \texttt{console\_scripts} entry in
+\path{setup.py} make \texttt{holonet} a real command after \texttt{pip install -e .}; and
+\path{tests/test_holonet_vm.py} gives the whole VM CI coverage (routing, the Clifford processor, error
+correction, teleportation, self-reproduction, the CLI, contextuality) --- $13$ exact tests, all passing.
+
+\emph{Honest scope:} the noncontextual bound $\alpha=7$ and the magic robustness $R=3$ are computed; the
+quantum value $\chi=10$ is the state-independent Hoffman/Lov\'asz value on the Witting realisation; the
+KS experiment models standard heralded-photon shot statistics; the magic-dial estimator is executed and
+verified unbiased with the $9^t$ Hoeffding sample bound from the per-sample range. The quantum advantage
+itself is still the $9^t$ dial --- now run on this machine for small $t$.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
