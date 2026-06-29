@@ -32,7 +32,8 @@ holonet bench
 | Bisection 100 and non-planar fabric directive | E | `analysis/w33_noc_floorplan.py`; `holonet audit` | `data/w33_noc_floorplan.json` | bisection lower bound met by explicit cut | VLSI/photonic hardware implication is engineering interpretation. |
 | Link scheduling / one-factorization | E | `analysis/w33_scheduler_os.py` | `data/w33_scheduler_os.json` | 12 conflict-free perfect matchings | Physical timing closure still pending. |
 | Contextual fraction `1/10` | E/P | `analysis/w33_contextual_fraction.py`; `analysis/w33_ks_inequality.py` | `data/w33_contextual_fraction.json`; `data/w33_ks_inequality.json` | max satisfiable contexts 36/40; CSW 10 > 7 | Exact finite witness; physical certification pending. |
-| Parity law: contextual iff `q` odd for `q=2,3` scan | E | `analysis/w33_audit_qscan.py` | `data/w33_audit_qscan.json` | `q=2` has ovoid/CF 0; `q=3` no ovoid/CF 1/10 | Current witness scans sister geometries in scope, not every finite polar space. |
+| Parity law: contextual iff `q` odd, `CF=1/(q^2+1)`, scan `q=2,3,4` (GF(4)) | E | `analysis/w33_audit_qscan.py` | `data/w33_audit_qscan.json` | even `q` (2,4) ovoid/CF 0; odd `q` (3,5) no ovoid/CF `1/(q^2+1)`; `q=4` even composite (parity not primality) | Scans sister geometries `q<=4` by default (`--deep` adds `q=5`), not every finite polar space. |
+| Explicit even-`q` ovoid (noncontextual control model) | E | `analysis/w33_ovoid_construct.py` | `data/w33_ovoid_construct.json` | `W(2)` 5-ray and `W(4)` 17-ray ovoid each meets every context once and is a cap; `q=3` admits none | Finite construction; the predicted data for the demonstrator's control arm, not a physical run. |
 | Magic robustness `R=3` and classical cost `9^t` | E/S | `analysis/w33_magic_dial.py`; `analysis/w33_provable_advantage.py` | `data/w33_magic_dial.json`; `data/w33_provable_advantage.json` | exact robustness plus unbiased small-`t` signed Monte Carlo | Quantum advantage is priced, not supplied by laptop. |
 | QEC correction of all single-qutrit errors | E | `analysis/holonet_qec_demo.py` | `data/holonet_qec_demo.json` | all 40 single-qutrit errors correct to fidelity 1 | `[[5,1,3]]_3` stand-in, not full `[[66,8,3]]_3` device. |
 | Threshold curve `P_L ~ A p^2` | S | `analysis/holonet_threshold_demo.py`; `analysis/holonet_ft_threshold.py` | `data/holonet_threshold_demo.json`; `data/holonet_ft_threshold.json` | perfect-syndrome curve bends below break-even; repeated measurement restores noisy case | Monte Carlo / model; full circuit-level implementation pending. |
@@ -55,7 +56,7 @@ holonet bench
 2. **Audit the datasheet:** `holonet audit`.
 3. **Measure the classical host:** `holonet bench`.
 4. **Read the machine paper:** `holonet_machine.tex`.
-5. **Falsify the first physical layer:** `holonet_demonstrator_protocol_v1.tex`.
+5. **Falsify the first physical layer:** `holonet_demonstrator_protocol_v1.tex`, with its positive control in `holonet_parity_control.tex` (the even-`q` arm that must read `CF=0`).
 6. **Grade the grand claims:** `holonet_claim_tiers.tex` and `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`.
 
 ## Rule for future claims

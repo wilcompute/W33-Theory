@@ -8341,6 +8341,56 @@ and excluded from the fast path.  The routing comparison is an
 architectural state-and-setup comparison, not a wall-clock race: a table lookup is
 a cheap operation, but it presupposes the very table the Holonet never builds.
 
+\subsection{Pass 54 --- the control arm: an explicit even-\(q\) ovoid, and the scaling win}
+\label{sec:capstone-fiftyfour}
+
+Pass~53 made the parity law falsifiable in principle; Pass~54 supplies the
+\emph{positive control} that makes it falsifiable in practice, and shows the
+routing win is a scaling law rather than a single number.
+
+\paragraph{The explicit noncontextual model.}  The demonstrator protocol measures
+the \(q=3\) fabric and expects \(\mathrm{CF}=1/10\); its natural control is an
+even-order fabric, which the parity law predicts must read \(\mathrm{CF}=0\).
+That prediction is now a constructed object.  The witness
+\path{analysis/w33_ovoid_construct.py} builds the ovoid of \(W(2)\) and \(W(4)\) ---
+the five rays
+\[
+  \{0100,\ 1000,\ 1101,\ 1110,\ 1111\}
+\]
+for \(q=2\), and seventeen rays for \(q=4\) --- and verifies each three
+independent ways: it has size \(q^2+1\), it meets every one of the \(n\) contexts
+in exactly one ray, and its rays are pairwise non-collinear.  Assigning the value
+one to the ovoid rays and zero to all others is then a single context-independent
+truth assignment that satisfies every context at once: a working noncontextual
+hidden-variable model, so \(\mathrm{CF}=0\) on the even fabric.  The same witness
+confirms that \(q=3\) admits no such assignment (the best leaves four of forty
+contexts unsatisfiable), which is exactly the obstruction the positive arm
+detects.  This converts the single-sided test into a two-arm discriminator,
+written up in \path{holonet_parity_control.tex}: contextuality must appear on the
+odd fabric and vanish on the even one, a contrast fixed by the geometry, so a
+systematic that faked a violation would have to respect the field parity to
+survive both arms.
+
+\paragraph{The scaling win.}  Finally \path{holonet bench --compare --scale} shows
+that the table-free routing advantage grows without bound.  For
+\(W(q)=\mathrm{GQ}(q,q)\) with \(n=(q+1)(q^2+1)\) nodes, a classical all-pairs
+forwarding table costs \(n(n-1)\) next-hop entries of \(\lceil\log_2 n\rceil\)
+bits --- routing state of order \(n^2\log n\) that diverges with \(q\) --- while
+the Holonet stores zero bytes and reaches any node in a constant two hops at seven
+modular operations per decision, because the address is the route and the
+generalized quadrangle has diameter two at every order.  Tabulated from \(q=2\) to
+\(q=13\), the baseline routing state climbs from about a hundred bytes to several
+megabytes while the Holonet column stays identically zero and the hop count stays
+two.
+
+\emph{Honest scope:} the ovoid construction is an exact finite computation over
+\(F_2\) and the genuine field \(\mathrm{GF}(4)\); it is the predicted data for a
+physical control arm, not itself a run, and the even-order analyzer bank is a
+different optical object from the forty Witting tetrads.  In the scaling table the
+forwarding-table sizes are exact closed forms, and the address-routing /
+diameter-two property is verified explicitly for \(q\le5\) and holds for the whole
+\(\mathrm{GQ}(q,q)\) family by the diameter-two theorem.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

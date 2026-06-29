@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "q": 2,
+      "n": 15,
+      "table_entries": 210,
+      "bits_per_entry": 4,
+      "baseline_routing_bytes": 105,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 3,
+      "n": 40,
+      "table_entries": 1560,
+      "bits_per_entry": 6,
+      "baseline_routing_bytes": 1170,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 4,
+      "n": 85,
+      "table_entries": 7140,
+      "bits_per_entry": 7,
+      "baseline_routing_bytes": 6248,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 5,
+      "n": 156,
+      "table_entries": 24180,
+      "bits_per_entry": 8,
+      "baseline_routing_bytes": 24180,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 7,
+      "n": 400,
+      "table_entries": 159600,
+      "bits_per_entry": 9,
+      "baseline_routing_bytes": 179550,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 8,
+      "n": 585,
+      "table_entries": 341640,
+      "bits_per_entry": 10,
+      "baseline_routing_bytes": 427050,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 9,
+      "n": 820,
+      "table_entries": 671580,
+      "bits_per_entry": 10,
+      "baseline_routing_bytes": 839475,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 11,
+      "n": 1464,
+      "table_entries": 2141832,
+      "bits_per_entry": 11,
+      "baseline_routing_bytes": 2945019,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    },
+    {
+      "q": 13,
+      "n": 2380,
+      "table_entries": 5662020,
+      "bits_per_entry": 12,
+      "baseline_routing_bytes": 8493030,
+      "holonet_routing_bytes": 0,
+      "holonet_hops": 2,
+      "holonet_per_decision_ops": 7
+    }
+  ],
+  "law": "baseline routing state ~ n^2 log2(n) bytes and diverges; Holonet routing state = 0 and hops = 2 for all q",
+  "verified_geometries": "address-routing/diameter-2 checked for q<=5 by run_compare(); holds for all GQ(q,q) by the diameter-2 theorem",
+  "summary": "holonet bench --compare --scale: the table-free routing win grows with fabric order q. For W(q)=GQ(q,q), n=(q+1)(q^2+1), the classical all-pairs forwarding table needs n(n-1) next-hop entries of ceil(log2 n) bits -- routing state ~ n^2 log2 n that DIVERGES with q -- while the Holonet stores 0 bytes and reaches any node in a constant 2 hops at 7 mod-3 ops per decision, because the address is the route and the generalized quadrangle has diameter 2 at every order. So as the fabric scales, baseline routing state explodes and the Holonet's stays exactly zero. HONEST: table sizes are exact closed forms; the address-routing/diameter-2 property is verified explicitly for q<=5 by run_compare() and holds for the whole GQ(q,q) family by the diameter-2 theorem.",
+  "sources": [
+    "closed-form table size n(n-1)ceil(log2 n)",
+    "GQ(q,q) diameter-2 theorem"
+  ]
+}

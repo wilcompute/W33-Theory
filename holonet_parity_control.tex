@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=RoyalBlue,urlcolor=RoyalBlue,citecolor=RoyalBlue}
+\usepackage{enumitem}
+\sloppy
+
+\newtcolorbox{honestbox}{colback=Orange!8,colframe=Orange!75!black,boxrule=0.6pt,arc=2pt,
+  title=\textbf{Honest scope},fonttitle=\bfseries,left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{decisionbox}{colback=RoyalBlue!6,colframe=RoyalBlue!65!black,boxrule=0.6pt,arc=2pt,
+  title=\textbf{Decision rule},fonttitle=\bfseries,left=4pt,right=4pt,top=3pt,bottom=3pt}
+
+\title{\textbf{Holonet Demonstrator: the Parity Control Arm}\\[0.3em]
+\large Turning the $W(3,3)$ Contextuality Test into a Two-Arm Discriminator}
+\author{Wil Dahn \quad\textbar\quad \texttt{github.com/wilcompute/W33-Theory}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Holonet Demonstrator Protocol v1 measures the contextual fraction of the $q=3$ Witting fabric and
+predicts $\mathrm{CF}=1/10$.  This note adds the missing \emph{positive control}.  The parity law --- a
+generalized quadrangle $W(q)$ has an ovoid, hence a noncontextual model, if and only if $q$ is even ---
+predicts that the \emph{same class} of single-photon apparatus, re-pointed at an \emph{even}-order
+analyzer map ($W(2)$ with $15$ rays or $W(4)$ with $85$ rays), must read $\mathrm{CF}=0$.  Running both
+arms turns a one-sided test (``observe $1/10$, or kill'') into a \emph{discriminating} measurement:
+contextuality must appear on the odd fabric and vanish on the even fabric, with the contrast fixed by
+the geometry, not by any tunable parameter.  A systematic that could fake a violation would have to
+respect the parity of the field order to survive both arms.  The control arm ships with an explicit
+noncontextual model: the ovoid assignment constructed and verified in
+\texttt{analysis/w33\_ovoid\_construct.py}.
+\end{abstract}
+
+\section{The two arms}
+The substrate is the symplectic generalized quadrangle $W(q)=\mathrm{GQ}(q,q)$, whose points are the
+measurement rays and whose totally-isotropic lines are the $n=(q+1)(q^2+1)$ measurement contexts.  The
+parity law (witness \texttt{analysis/w33\_audit\_qscan.py}) gives the contextual fraction in closed
+form,
+\[
+  \mathrm{CF}(q)=
+  \begin{cases}
+    0, & q\ \text{even},\\[2pt]
+    \dfrac{1}{q^2+1}, & q\ \text{odd},
+  \end{cases}
+\]
+so the experiment has two arms with opposite, geometry-forced predictions:
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Arm & Fabric & rays $n$ & contexts & predicted $\mathrm{CF}$\\
+\midrule
+positive (v1) & $W(3)$ & $40$ & $40$ & $1/10$\\
+control       & $W(2)$ & $15$ & $15$ & $0$\\
+control       & $W(4)$ & $85$ & $85$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+On the even-order arm an \emph{ovoid} exists: a set of $q^2+1$ rays (five for $W(2)$, seventeen for
+$W(4)$) meeting every context exactly once.  Assigning the value $1$ to those rays and $0$ to all others
+is a single, context-independent truth assignment that satisfies all $n$ contexts simultaneously --- a
+working noncontextual hidden-variable model.  Its existence is precisely why the even arm must measure
+no contextuality.
+
+\section{The explicit control model}
+The control prediction is not an assertion; it is a constructed object.  The witness
+\texttt{analysis/w33\_ovoid\_construct.py} builds the ovoid for $q=2$ and $q=4$ and verifies it three
+independent ways: it has size $q^2+1$, it meets every context in exactly one ray, and its rays are
+pairwise non-collinear (a cap).  The same witness confirms that the odd order $q=3$ admits \emph{no}
+such assignment (the best leaves four of forty contexts unsatisfiable), which is the obstruction the
+positive arm detects.  The explicit $W(2)$ ovoid is
+\[
+  \{0100,\ 1000,\ 1101,\ 1110,\ 1111\},
+\]
+five rays, one per context; the $W(4)$ ovoid has seventeen rays and is written to
+\texttt{data/w33\_ovoid\_construct.json}.
+
+\section{Statistics and decision rule}
+Each arm uses the same raw-shot schema, validator, and estimator as v1.  Distinguishing a contextual
+fraction $p$ from $0$ at $k\sigma$ needs, in the binomial planning approximation,
+\[
+  N \ge \frac{k^2\,p(1-p)}{p^2},
+\]
+so the positive arm targets $N\approx 225$ valid coincidences for $5\sigma$ at $p=1/10$.  The control
+arm instead \emph{bounds $\mathrm{CF}$ from above}: it must show no statistically significant violation
+of the noncontextual budget on the even fabric, i.e. an estimate consistent with $0$ to the same few-
+percent resolution.  Because the control arm has no contextual signal to integrate, its budget is set by
+the upper-confidence target rather than by a violation; a comparable detected-event count suffices to
+exclude $\mathrm{CF}\gtrsim$ a few percent.
+
+\begin{decisionbox}
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Pass (theory survives):} the $W(3)$ arm gives $\mathrm{CF}$ consistent with $1/10$ \emph{and}
+the $W(2)$/$W(4)$ arm gives $\mathrm{CF}$ consistent with $0$.
+\item \textbf{Kill:} contextuality appears on an even-order fabric, or the odd fabric fails to show
+$1/10$ --- either breaks the parity law that the substrate identification rests on.
+\item \textbf{Inconclusive:} the two arms are run on apparatus whose analyzer imbalance or loss profile
+differs enough that the contrast cannot be attributed to the fabric; re-run with a shared calibration.
+\end{itemize}
+\end{decisionbox}
+
+\begin{honestbox}
+The control arm requires a different analyzer bank: the $W(2)$ and $W(4)$ ray families ($15$ and $85$
+rays) are not the $40$ Witting tetrads, so this is a generalization of the v1 apparatus class, not a
+re-run of the identical optics.  The claim is that the same \emph{kind} of single-photon
+path/polarization-plus-qutrit setup realizes all three fabrics.  Building the even-order analyzers is
+the engineering cost of buying the control.  As in v1, a positive odd-arm result certifies only the
+finite contextual resource of the substrate, not the full physics program; the value added here is that
+the even-arm null makes a faked contextuality far harder, because the apparatus must reproduce a
+parity-dependent contrast it was never told about.
+\end{honestbox}
+
+\section{Repository command path}
+\begin{verbatim}
+python analysis/w33_audit_qscan.py          # parity law: CF=0 (even) vs 1/(q^2+1) (odd)
+python analysis/w33_ovoid_construct.py       # explicit even-q ovoid = the control model
+holonet audit                                # pin the architecture ledger to the same commit
+\end{verbatim}
+The first line establishes the prediction, the second constructs the noncontextual model the control arm
+must reproduce, and the third synchronizes the executable specification with the physical run.
+
+\bigskip
+\noindent\rule{\linewidth}{0.4pt}\\[0.25em]
+{\footnotesize \textbf{Companion to:} \texttt{holonet\_demonstrator\_protocol\_v1.tex}.\quad
+\textbf{Primary witnesses:} \texttt{analysis/w33\_audit\_qscan.py},
+\texttt{analysis/w33\_ovoid\_construct.py}.}
+
+\end{document}

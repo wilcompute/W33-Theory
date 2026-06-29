@@ -132,6 +132,13 @@ def cmd_bench(args):
     """Time the classical machine: deterministic op counts + host-relative throughput."""
     import holonet_bench  # noqa: E402
 
+    if getattr(args, "compare", False) and getattr(args, "scale", False):
+        ledger, ok = holonet_bench.run_compare_scale()
+        holonet_bench._print_compare_scale(ledger)
+        print(
+            f"\n{'OK -- baseline routing state diverges with q; Holonet stays 0 bytes / 2 hops.' if ok else 'FAILURES present.'}"
+        )
+        sys.exit(0 if ok else 1)
     if getattr(args, "compare", False):
         ledger, ok = holonet_bench.run_compare()
         holonet_bench._print_compare(ledger)
@@ -224,6 +231,11 @@ def main(argv=None):
         "--compare",
         action="store_true",
         help="compare table-free address routing against a classical table-routed baseline",
+    )
+    pb.add_argument(
+        "--scale",
+        action="store_true",
+        help="with --compare: tabulate how the routing-state win grows with fabric order q",
     )
     pb.set_defaults(func=cmd_bench)
     args = p.parse_args(argv)

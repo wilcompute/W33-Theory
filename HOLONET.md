@@ -58,6 +58,7 @@ holonet verify               # 7 stack checks -> ALL PASS
 holonet audit                # re-derive every layer's headline constant from q=3 -> 16 checks, ALL PASS
 holonet bench                # the performance face: op counts (forced) + host-relative throughput
 holonet bench --compare      # table-free address routing vs a classical table-routed baseline (1170 B -> 0)
+holonet bench --compare --scale  # the table-free win grows with q: routing state -> infinity vs 0, hops stay 2
 ```
 
 `holonet verify` should end with **`ALL PASS — this machine is a working holonet node.`**
@@ -95,6 +96,7 @@ The machine, executed:
 | `py -3 analysis/w33_holonet_firmware_fabric_profile.py` | firmware-to-fabric accounting: **2160 = 30 × 72**, with `13/40` Witting admission and `117/5` expected trits/query |
 | `py -3 analysis/w33_master_audit.py` | the machine audits itself: **16 layer constants re-derived from q=3** in one pass/fail ledger (`holonet audit`) |
 | `py -3 analysis/w33_audit_qscan.py` | the parity law across **W(q) for q=2,3,4** (q=4 = GF(4)): **CF = 0 for even q, 1/(q²+1) for odd q** — contextual iff q is odd, **parity not primality** (`--deep` adds q=5) |
+| `py -3 analysis/w33_ovoid_construct.py` | the explicit **noncontextual control model**: constructs & verifies the **W(2) 5-ray / W(4) 17-ray ovoid** (CF=0); q=3 has none — the demonstrator's control arm |
 | `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
 
 The physics/computer-science core:
@@ -123,6 +125,7 @@ python -m pytest tests/test_holonet_vm.py -q     # 13 exact checks of the VM
 - **`holonet_practical_implications.tex`** — the implications paper (data centers, decentralized compute,
   virtual machines, energy, and the frontier applications).
 - **`holonet_demonstrator_protocol_v1.tex`** — the first physical falsifier: a tabletop Witting/KS contextuality protocol for measuring `CF = 1/10`.
+- **`holonet_parity_control.tex`** — the **positive control arm**: the same apparatus on an even-order fabric (W(2)/W(4)) must read `CF = 0`, turning the test into a two-arm discriminator (ships with the explicit ovoid model).
 - **`docs/holonet_theorem_ledger.md`** — the public theorem/audit ledger mapping each claim to its witness, output, tier, pass condition, and boundary.
 - **`analysis/BT1907_photonic_holonet_claim_tier_refactor.md`** — the claim-tier refactor spine for keeping exact, simulated, physical, identified, and speculative claims separate.
 - **`docs/index.html`** — the interactive results index.

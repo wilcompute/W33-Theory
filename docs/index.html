@@ -4401,6 +4401,28 @@
               address <em>is</em> the route, 7 mod-3 ops, &le;2 hops &mdash; so routing is stateless and
               survives topology changes with no rebuild.</div>
           </div>
+          <div class="card" id="holonet-control-arm-card">
+            <div class="label">Pass 54 &mdash; The Control Arm: an Explicit Ovoid + the Scaling Win</div>
+            <div class="detail"><strong>The falsifiable prediction now ships with its control model.</strong>
+              The demonstrator measures the <code>q=3</code> fabric and expects <code>CF=1/10</code>; the
+              parity law says an <em>even</em>-order fabric must read <code>CF=0</code>.
+              <code>analysis/w33_ovoid_construct.py</code> makes that concrete: it constructs and verifies
+              (three independent ways) the explicit <strong>ovoid</strong> of <code>W(2)</code> &mdash; the 5
+              rays <code>{0100, 1000, 1101, 1110, 1111}</code> &mdash; and of <code>W(4)</code> (17 rays).
+              Assigning 1 to those rays and 0 elsewhere satisfies <em>every</em> context at once: a working
+              noncontextual model, so <code>CF=0</code>. <code>q=3</code> admits no such assignment (the
+              obstruction the positive arm detects). This turns the single-sided test into a <strong>two-arm
+              discriminator</strong> (<code>holonet_parity_control.tex</code>): contextuality must appear on
+              the odd fabric and vanish on the even one &mdash; a contrast fixed by geometry, so a faked
+              violation would have to respect the field parity to survive both arms.
+              <br><br>
+              <strong>And the table-free win is a scaling law, not a point.</strong>
+              <code>holonet bench --compare --scale</code> tabulates, for <code>W(q)</code> from
+              <code>q=2</code> to <code>q=13</code>, a classical forwarding table growing as
+              <code>~n&sup2;log n</code> (≈100 bytes &rarr; several MB) while the Holonet stays at
+              <strong>0 bytes and a constant 2 hops</strong> at every order &mdash; the address is the route,
+              and the generalized quadrangle has diameter 2 at every scale.</div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile

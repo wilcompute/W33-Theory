@@ -1,0 +1,73 @@
+{
+  "orders": {
+    "2": {
+      "parity": "even",
+      "ovoid_exists": true,
+      "ovoid_points": [
+        "0100",
+        "1000",
+        "1101",
+        "1110",
+        "1111"
+      ],
+      "verify": {
+        "size": 5,
+        "expected_size": 5,
+        "size_ok": true,
+        "covers_every_line_once": true,
+        "is_cap_pairwise_noncollinear": true,
+        "min_line_hits": 1,
+        "max_line_hits": 1
+      },
+      "contextual_fraction": 0.0,
+      "verified": true
+    },
+    "4": {
+      "parity": "even",
+      "ovoid_exists": true,
+      "ovoid_points": [
+        "0011",
+        "0013",
+        "0102",
+        "0110",
+        "0112",
+        "1003",
+        "1020",
+        "1023",
+        "1102",
+        "1110",
+        "1112",
+        "1202",
+        "1210",
+        "1212",
+        "1303",
+        "1320",
+        "1323"
+      ],
+      "verify": {
+        "size": 17,
+        "expected_size": 17,
+        "size_ok": true,
+        "covers_every_line_once": true,
+        "is_cap_pairwise_noncollinear": true,
+        "min_line_hits": 1,
+        "max_line_hits": 1
+      },
+      "contextual_fraction": 0.0,
+      "verified": true
+    },
+    "3": {
+      "parity": "odd",
+      "ovoid_exists": false,
+      "max_satisfiable_contexts": 36,
+      "n_contexts": 40,
+      "contextual_fraction": 0.1
+    }
+  },
+  "summary": "the explicit noncontextual model: for even q (2 and 4) the witness CONSTRUCTS the ovoid -- a set of q^2+1 points (5 and 17) meeting every line exactly once -- and verifies it three independent ways (size, covers-every-line-once, pairwise non-collinear cap). Assigning 1 to the ovoid points and 0 elsewhere is a global context-independent truth assignment satisfying all n contexts, i.e. a working noncontextual hidden-variable model, so even-q fabrics have CF=0. For odd q=3 there is NO ovoid (best assignment leaves 4/40 contexts unsatisfiable), the obstruction that makes the Holonet contextual. This is the explicit predicted data for the CONTROL ARM of the photonic demonstrator: the same single-photon apparatus on an even-order analyzer map should read CF=0, with this ovoid as the model; the q=3 arm reads CF=1/10. Same hardware, opposite geometry-forced predictions. HONEST: exact finite construction over F_2 and the genuine field GF(4); the model for a physical control arm, not itself a physical run.",
+  "sources": [
+    "w33_master_audit._build (GF(4) included)",
+    "max-satisfiable-contexts ILP (scipy milp); ovoid re-verified independently",
+    "Thas: ovoids of W(q) exist iff q even; pairs with w33_audit_qscan and the demonstrator protocol"
+  ]
+}
