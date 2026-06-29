@@ -1,0 +1,98 @@
+{
+  "families": {
+    "1": {
+      "curve": [
+        {
+          "p": 0.08,
+          "P_L": 0.32055,
+          "below_break_even": false
+        },
+        {
+          "p": 0.05,
+          "P_L": 0.2039,
+          "below_break_even": false
+        },
+        {
+          "p": 0.03,
+          "P_L": 0.1204,
+          "below_break_even": false
+        },
+        {
+          "p": 0.02,
+          "P_L": 0.08245,
+          "below_break_even": false
+        },
+        {
+          "p": 0.01,
+          "P_L": 0.0392,
+          "below_break_even": false
+        }
+      ],
+      "has_threshold": false
+    },
+    "3": {
+      "curve": [
+        {
+          "p": 0.08,
+          "P_L": 0.0904,
+          "below_break_even": false
+        },
+        {
+          "p": 0.05,
+          "P_L": 0.0381,
+          "below_break_even": true
+        },
+        {
+          "p": 0.03,
+          "P_L": 0.01345,
+          "below_break_even": true
+        },
+        {
+          "p": 0.02,
+          "P_L": 0.00595,
+          "below_break_even": true
+        },
+        {
+          "p": 0.01,
+          "P_L": 0.0013,
+          "below_break_even": true
+        }
+      ],
+      "has_threshold": true
+    },
+    "5": {
+      "curve": [
+        {
+          "p": 0.08,
+          "P_L": 0.0557,
+          "below_break_even": true
+        },
+        {
+          "p": 0.05,
+          "P_L": 0.0208,
+          "below_break_even": true
+        },
+        {
+          "p": 0.03,
+          "P_L": 0.00815,
+          "below_break_even": true
+        },
+        {
+          "p": 0.02,
+          "P_L": 0.00305,
+          "below_break_even": true
+        },
+        {
+          "p": 0.01,
+          "P_L": 0.0007,
+          "below_break_even": true
+        }
+      ],
+      "has_threshold": true
+    }
+  },
+  "summary": "fault tolerance restored: noisy syndromes kill the single-round threshold, repeated measurement brings it back. Phenomenological model on the runnable [[5,1,3]]_3 code: one data error (depol rate p), each of the 4 syndrome trits measured R times (meas err rate p), per-component majority vote, exact symplectic decoder, exact F_3 logical-error test. R=1 (single noisy measurement): NO break-even -- P_L > p at every tested p (as in Pass 45). R=3: threshold RESTORED -- majority voting suppresses the measurement error p -> ~3 p^2, the decoder sees a nearly clean syndrome, and P_L falls below break-even (pseudo-threshold near p ~ 0.06). R=5: deepens further. So fault tolerance under measurement noise is a measured curve family: no threshold until the syndrome is measured repeatedly, then a break-even that deepens with the round count -- exactly why fault-tolerant architectures schedule repeated syndrome extraction (the role of the substrate's beat-30 clock + distance-3 code). HONEST: phenomenological noise (data depolarizing + independent per-round syndrome-measurement error), exact decoder and exact F_3 logical test; a full circuit-level model with faulty SUM/CNOT gates and hook errors is more detailed than this single-data-error, R-measurement gadget; [[5,1,3]]_3 is the runnable stand-in for the substrate's [[66,8,3]]_3 (same distance-3 mechanism, different size).",
+  "sources": [
+    "[[5,1,3]]_3 symplectic decoder + exact F_3 logical test (Pass 45); repeated syndrome measurement + majority vote (Shor; standard fault tolerance); phenomenological noise model; substrate [[66,8,3]]_3 + beat-30 clock (corpus)."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "figure": "holonet_scorecard.png",
+  "threshold_A": 8.2,
+  "contextuality_5sigma_photons_per_ray": 21,
+  "summary": "the scorecard, plotted: the two headline numbers as real figures (holonet_scorecard.png). Left panel -- the measured fault-tolerance threshold of the runnable [[5,1,3]]_3 code: P_L(p) on log-log axes with the break-even diagonal P_L=p; the perfect-syndrome curve bends below (encoding helps, ~A p^2), the R=1 noisy-syndrome curve stays above (no threshold), the R=3 repeated-measurement curve drops back below (threshold restored). Right panel -- the contextuality certification: significance (sigma over the noncontextual bound alpha=7 of the Cabello-Severini-Winter witness, quantum value 10) versus detected photons, crossing 5 sigma at a few hundred photons. Together: the machine corrects errors below a measured threshold and certifies its quantum resource on a bench. HONEST: the threshold curves are Monte-Carlo estimates with the exact symplectic decoder (Pass 45); the contextuality significance is the binomial estimate for the CSW witness under heralded-photon shot statistics (Pass 44); [[5,1,3]]_3 is the runnable stand-in for the substrate's [[66,8,3]]_3.",
+  "sources": [
+    "holonet_threshold_demo / holonet_ft_threshold (Pass 45); holonet_ks_experiment (Pass 44); matplotlib figure generated here"
+  ]
+}

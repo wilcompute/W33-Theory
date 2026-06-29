@@ -1,0 +1,44 @@
+name: holonet
+
+# Continuously verify the runnable Holonet VM: the architecture self-tests on every push.
+# Runs `holonet verify`, the fast witnesses, and the VM test suite.
+
+on:
+  push:
+    paths:
+      - 'analysis/holonet_*.py'
+      - 'analysis/w33_minimal_architecture.py'
+      - 'analysis/w33_vm_speedup.py'
+      - 'analysis/w33_contextual_fraction.py'
+      - 'analysis/w33_ks_inequality.py'
+      - 'tests/test_holonet_vm.py'
+      - 'holonet_cmd.py'
+      - 'setup.py'
+      - '.github/workflows/holonet-ci.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy scipy networkx pytest
+      - name: Install the holonet command
+        run: pip install -e .
+      - name: holonet verify (self-test the whole stack)
+        run: holonet verify
+      - name: holonet info
+        run: holonet info
+      - name: Fast witnesses (architecture + contextuality)
+        run: |
+          python analysis/w33_minimal_architecture.py
+          python analysis/w33_vm_speedup.py
+          python analysis/w33_contextual_fraction.py
+          python analysis/w33_ks_inequality.py
+      - name: VM test suite
+        run: python -m pytest tests/test_holonet_vm.py -q

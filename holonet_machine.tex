@@ -7,6 +7,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=RoyalBlue,urlcolor=RoyalBlue,citecolor=RoyalBlue}
 \usepackage{titlesec}
@@ -110,7 +111,19 @@ channel gives a \emph{measured} threshold curve $P_L(p)\sim A p^2$ with $A\appro
 $P_L=p$ at a pseudo-threshold $p_{\mathrm th}=1/A\approx0.12$. The substrate's larger code has
 $A\sim\binom{66}{2}=2145$, hence $p_{\mathrm th}\sim5\times10^{-4}$ --- the same $p^2$ mechanism at a
 different size. Adding syndrome-measurement noise at the same per-round rate removes the single-round
-break-even, the standard motivation for repeated fault-tolerant extraction.
+break-even; \emph{repeating} the measurement ($R=3$ rounds, majority vote) restores it
+(Fig.~\ref{fig:scorecard}, left), the standard fault-tolerance gadget.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{holonet_scorecard.png}
+\caption{The machine's scorecard. \emph{Left:} the measured logical error $P_L(p)$ of the runnable
+$[[5,1,3]]_3$ code vs.\ the physical depolarizing rate, with the break-even diagonal $P_L=p$; the
+perfect-syndrome curve bends below it ($\sim A p^2$, $A\approx8$), single-round noisy syndromes have no
+threshold, and three repeated measurements restore it. \emph{Right:} the statistical significance of the
+contextuality witness ($\chi=10>\alpha=7$) vs.\ detected photons, crossing $5\sigma$ at a few hundred.}
+\label{fig:scorecard}
+\end{figure}
 
 \section{Energy and I/O}
 The degree-$2$ Clifford datapath is unitary, hence reversible and Landauer-free (Bennett); base $3$

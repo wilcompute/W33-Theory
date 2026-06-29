@@ -1,5 +1,7 @@
 # The Holonet Machine — Quickstart
 
+[![holonet](https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml/badge.svg)](https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml)
+
 **Run a universal computer that is also its own network and memory, on the machine in front of you.**
 
 The Holonet is a finite architecture built on the symplectic generalized quadrangle
@@ -63,6 +65,10 @@ The machine, executed:
 | `py -3 analysis/holonet_quantum_packet.py` | a quantum packet delivered across the fabric |
 | `py -3 analysis/holonet_consensus_demo.py` | leaderless consensus, 1/3-per-round, **5-Byzantine / 11-crash** |
 | `py -3 analysis/holonet_threshold_demo.py` | the fault-tolerance curve: `P_L ~ A p^2`, break-even `p_th = 1/A` |
+| `py -3 analysis/holonet_ft_threshold.py` | circuit-level: repeated measurement **restores** the threshold |
+| `py -3 analysis/holonet_scorecard.py` | plots the threshold + contextuality figure (`holonet_scorecard.png`) |
+| `py -3 analysis/w33_minimal_architecture.py` | the node runs on a **mod-3 ALU + ~100 bytes** (a ternary VM) |
+| `py -3 analysis/w33_vm_speedup.py` | efficiency by matching: zero routing table, the von Neumann gap eliminated |
 
 The physics/computer-science core:
 

@@ -1,0 +1,28 @@
+{
+  "routing_state": {
+    "conventional_table_entries": 1600,
+    "holonet_table_entries": 0
+  },
+  "forwarding": {
+    "holonet_ops": 7,
+    "constant_in_N": true,
+    "conventional": "table lookup (requires O(N^2) table)"
+  },
+  "von_neumann_gap": {
+    "conventional_crossings": 5,
+    "holonet_crossings": 1,
+    "reduction_factor": 5
+  },
+  "absent_overhead": {
+    "cache hierarchy": "addressing is the line incidence (no locality cache needed)",
+    "memory-management unit": "isolation is Schur's lemma on the Steinberg module",
+    "hypervisor": "a VM is a coset of W(E6); context switch = one group multiply",
+    "routing protocol (BGP/OSPF)": "the symplectic test replaces tables + convergence",
+    "OS scheduler": "W(E6) transitivity -> hot-spot-free schedule from the symmetry"
+  },
+  "native_host": "balanced ternary; the binary host is the suboptimal substrate (encoding tax)",
+  "summary": "efficiency by matching: the holonet carries no overhead its problem does not need, so it beats the general-purpose stack it runs on -- not by out-computing the substrate (impossible) but by eliminating the abstraction tax. (1) Routing state: conventional O(N^2) = 1600-entry table (+ convergence on churn); holonet 0 (the forwarding decision is one symplectic test on the destination, 7 mod-3 ops, constant in N -- address IS route). (2) Von Neumann gap: a conventional logical op crosses the bus ~5 times (fetch instruction, fetch operands, compute, write back, network send), each an irreversible data-movement cost (the gap dominating AI/datacenter energy); on the holonet routing IS gating IS memory access, so the op is 1 fused group action -> ~5x fewer crossings. (3) No overhead: no cache (addressing = line incidence), no MMU (isolation = Schur on the Steinberg module), no hypervisor (a VM is a coset of W(E6), context switch = one group multiply), no routing protocol (symplectic test replaces tables + convergence), no OS scheduler (W(E6) transitivity -> hot-spot-free schedule). So it is efficient the way an ASIC is -- matched to its problem, no general-purpose tax -- and because its native problem is balanced-ternary and symmetric, the binary host is itself the suboptimal substrate (the algorithm wants ternary hardware). HONEST: the routing-state count (0 vs N^2) and forwarding op count (7, constant) are exact; the von Neumann boundary-crossing count (~5 vs 1) is the standard architectural model of a fused route=gate=memory op vs a load/compute/store/send pipeline; this is constant-factor / data-movement / footprint efficiency from architectural MATCHING (ASIC-vs-CPU kind), NOT an asymptotic complexity speedup (no such claim; the quantum advantage is the separate priced 9^t dial); 'more efficient than the hardware it runs on' means more efficient per logical op than the general-purpose CPU+OS+network stack by bypassing its overhead, for data-movement-bound workloads -- not faster than physics.",
+  "sources": [
+    "holonet routing = symplectic address-is-route (zero table); von Neumann gap / data-movement energy (standard architecture); fused route=gate=memory (the operator-operand duality, corpus); isolation via Schur on the Steinberg module, scheduling via W(E6) transitivity (Pass 37/38); balanced-ternary native digit (Setun)."
+  ]
+}

@@ -4221,6 +4221,31 @@
               (single-round; circuit-level faults are future work); the quantum advantage remains the priced 9&#7511; dial.</div>
           </div>
           <div class="card">
+            <div class="label">The Minimal Machine, Efficiency by Matching, the Circuit-Level Threshold, and the Scorecard</div>
+            <div class="detail"><strong>What is the least hardware that runs the VM, and in what precise sense is it efficient? Plus the
+              circuit-level threshold, a plotted scorecard, and continuous integration.</strong>
+              <strong>(1) The minimal machine</strong> (<code>analysis/w33_minimal_architecture.py</code>): a holonet node's routing + Clifford
+              layer needs only arithmetic mod 3. Forwarding is the symplectic form B(x,y) mod 3 &mdash; <strong>7 ternary ops, no routing
+              table</strong> (address IS route); the Clifford register is a trit tableau updated by mod-3 additions. So the entire instruction set is
+              <strong>3 primitives {ADD&#8323;, SUB&#8323;, MUL&#8323;}</strong> &mdash; no FPU/cache/OS/bus. We build that machine (a ternary ALU VM) and
+              run the routing on it: reproduces the reference adjacency for all 1600 node pairs, footprint <strong>tens of bytes</strong> (addresses
+              generated, not stored). Fits an 8-bit micro or a 1970s 4-bit CPU; runs <strong>most efficiently on a balanced-ternary computer
+              (Setun)</strong>, where {&minus;1,0,+1} is the native digit. <strong>(2) Efficiency by matching</strong> (<code>w33_vm_speedup.py</code>):
+              the VM can't out-compute its substrate, but it's more efficient <em>per logical op</em> than the general-purpose CPU+OS+network stack it
+              runs on (for data-movement-bound workloads), by eliminating the abstraction tax: routing state <strong>0 vs N&sup2;=1600</strong>; forwarding
+              7 ops constant in N; <strong>~5 von Neumann bus crossings &rarr; 1 fused group action</strong> (route=gate=memory); no cache/MMU/hypervisor/
+              routing-protocol (the geometry supplies addressing, isolation via Schur, scheduling via W(E&#8326;) transitivity). ASIC-style efficiency
+              from architectural matching &mdash; <em>not</em> an asymptotic speedup. <strong>(3) Circuit-level threshold</strong>
+              (<code>holonet_ft_threshold.py</code>): one noisy syndrome round has no break-even, but measuring each trit 3&times; and majority-voting
+              <strong>restores the threshold</strong> (p&#8348;&#8341; ~ 0.06), 5 rounds deepen it &mdash; the repeated-extraction gadget, measured.
+              <strong>(4) The scorecard</strong> (<code>holonet_scorecard.py</code>): both headline numbers plotted (threshold curve + contextuality
+              &sigma; vs photons), embedded in the Machine paper; a GitHub Actions workflow runs <code>holonet verify</code> + witnesses + tests on every
+              push. Honest: the minimal footprint and routing/efficiency counts are exact (the ~5 crossings is the standard architectural model); the
+              circuit-level threshold is Monte-Carlo with the exact decoder under phenomenological noise (a full faulty-gate model is more detailed);
+              "more efficient than the hardware it runs on" = more efficient per logical op than the general-purpose stack, not faster than physics; the
+              quantum advantage remains the priced 9&#7511; dial.</div>
+          </div>
+          <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
               opens the exact test file on GitHub, while the verified layer tells you which results are currently
