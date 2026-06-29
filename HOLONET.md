@@ -15,6 +15,13 @@ about five minutes.
 > self-reproduce) is classically emulable and runs here; only the quantum **advantage** is a priced
 > resource (classical emulation cost `9^t` for `t` non-Clifford "magic" gates).
 
+## Public reader paths
+
+- **Run it:** install the CLI and run `holonet verify`, `holonet audit`, and `holonet bench`.
+- **Audit it:** read `docs/holonet_theorem_ledger.md`, the public claim-to-witness map.
+- **Falsify it:** read `holonet_demonstrator_protocol_v1.tex`, the first physical contextuality protocol.
+- **Grade it:** read `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`, the claim-tier spine for separating exact architecture, simulation, physical protocol, physics identification, and frontier applications.
+
 ---
 
 ## 1. Requirements
@@ -114,6 +121,9 @@ python -m pytest tests/test_holonet_vm.py -q     # 13 exact checks of the VM
   arc as one coherent document).
 - **`holonet_practical_implications.tex`** — the implications paper (data centers, decentralized compute,
   virtual machines, energy, and the frontier applications).
+- **`holonet_demonstrator_protocol_v1.tex`** — the first physical falsifier: a tabletop Witting/KS contextuality protocol for measuring `CF = 1/10`.
+- **`docs/holonet_theorem_ledger.md`** — the public theorem/audit ledger mapping each claim to its witness, output, tier, pass condition, and boundary.
+- **`analysis/BT1907_photonic_holonet_claim_tier_refactor.md`** — the claim-tier refactor spine for keeping exact, simulated, physical, identified, and speculative claims separate.
 - **`docs/index.html`** — the interactive results index.
 - **`docs/holonet.html`** — the interactive **playground**: route a packet, drive the Clifford
   register, run the contextuality witness, and reproduce a node, all live in the browser (no install).
