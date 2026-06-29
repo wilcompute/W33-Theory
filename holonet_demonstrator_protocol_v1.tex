@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=RoyalBlue,urlcolor=RoyalBlue,citecolor=RoyalBlue}
+\usepackage{enumitem}
+\sloppy
+
+\newtcolorbox{honestbox}{colback=Orange!8,colframe=Orange!75!black,boxrule=0.6pt,arc=2pt,
+  title=\textbf{Honest scope},fonttitle=\bfseries,left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{decisionbox}{colback=RoyalBlue!6,colframe=RoyalBlue!65!black,boxrule=0.6pt,arc=2pt,
+  title=\textbf{Decision rule},fonttitle=\bfseries,left=4pt,right=4pt,top=3pt,bottom=3pt}
+
+\title{\textbf{Holonet Demonstrator Protocol v1}\\[0.3em]
+\large A Minimal Single-Photon Contextuality Test for the $W(3,3)$ Substrate}
+\author{Wil Dahn \quad\textbar\quad \texttt{github.com/wilcompute/W33-Theory}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates the first physical falsifier for the Photonic Holonet architecture: a tabletop
+single-photon contextuality experiment on the forty Witting bases realizing the symplectic generalized
+quadrangle $W(3,3)$.  The prediction is a substrate integer, not a fitted parameter: the noncontextual
+budget satisfies $S\le 36$ over $40$ contexts, while the quantum Witting realization gives $S=40$, so the
+irreducible contextual fraction is
+\[
+  \mathrm{CF}=\frac{40-36}{40}=\frac{1}{10}.
+\]
+The goal of v1 is not to build the full Holonet computer.  It is to certify or kill the magic fuel of
+the architecture with a small, auditable optical run: one photon, one path--polarization Bell preparation,
+one tritter/time-bin qutrit, one electro-optic modulator, one recirculation loop, and a bank of analyzers
+for the forty Witting tetrads.  The same raw-shot format is consumed by the repository estimators and
+schema validators, making the experiment a paper that runs.
+\end{abstract}
+
+\section{Claim under test}
+The demonstrator tests exactly one claim:
+\[
+  \boxed{\text{The }W(3,3)\text{ Witting-basis measurement family has contextual fraction }1/10.}
+\]
+Equivalently, over the $40$ tetrad contexts, no noncontextual hidden-variable assignment can satisfy more
+than $36$, while the quantum realization satisfies all $40$ in the ideal state-independent construction.
+The repository witnesses are:
+\begin{itemize}[leftmargin=1.4em]
+\item \texttt{analysis/w33\_contextual\_fraction.py}: derives the $36/40$ budget from the no-ovoid geometry.
+\item \texttt{analysis/w33\_ks\_inequality.py}: implements the sharp $S\le36$ versus $S=40$ statistic.
+\item \texttt{analysis/holonet\_ks\_experiment.py}: simulates the heralded-photon run with shot noise, visibility, and dark counts.
+\item \texttt{analysis/bt1900\_demonstrator\_raw\_shot\_validator.py}: validates raw-shot JSONL before estimation.
+\item \texttt{analysis/bt1901\_contextual\_fraction\_estimator.py} and \texttt{analysis/bt1904\_exact\_contextual\_fraction\_estimator.py}: estimate the observed contextual fraction.
+\end{itemize}
+
+\begin{honestbox}
+The experiment does not test the full physics program, the Standard-Model identifications, gravity, K3,
+or the full fault-tolerant photonic computer.  It tests the finite-geometry magic fuel.  A null result
+near zero contextual fraction refutes the substrate identification used by the Holonet architecture.  A
+positive result near $1/10$ certifies the first physical layer but does not by itself prove the rest of the
+program.
+\end{honestbox}
+
+\section{Apparatus}
+The minimal apparatus is the smallest optical object that can prepare and interrogate the two-carrier
+picture: path--polarization for Witting states and time-bin/OAM qutrit structure for the operator side.
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+Component & Role\\
+\midrule
+Heralded single-photon source & Supplies one photon per trial with a herald used for shot accounting.\\
+Polarizing beam splitter / path interferometer & Prepares the path--polarization Bell sector used for the Witting-ray realization in $\mathbb C^4$.\\
+Tritter or three-bin delay network & Creates the balanced-ternary time-bin/OAM qutrit channel.\\
+Electro-optic modulator & Applies the scheduled phase/route setting for the selected tetrad context.\\
+Analyzer bank & Implements the $40$ Witting tetrad measurements.  Sparse analyzers are preferred over a generic multiport.\\
+Single-photon detectors & Record the one-click-per-context outcomes, dark counts, losses, and herald metadata.\\
+Classical controller & Randomizes or cycles context choices, writes raw JSONL, and runs validator/estimator scripts.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Experimental schedule}
+Each trial selects one context $c\in\{0,\ldots,39\}$ and one analyzer slot $a\in\{0,1,2,3\}$ inside that
+context.  The controller records whether the context produced exactly one valid click.  The schedule can
+be uniform random, round-robin, or blocked round-robin; the estimator only requires that the context
+sampling metadata be present and that missing contexts be reported.
+
+\begin{enumerate}[leftmargin=1.4em]
+\item Calibrate source/herald timing and detector dead-time on a non-contextual control setting.
+\item Run dark-count and loss baselines with the source blocked and then with analyzers bypassed.
+\item Execute a short smoke test over all $40$ contexts, requiring at least one valid event per context.
+\item Execute the certification run until the predeclared shot target is reached.
+\item Freeze the raw JSONL file; validate schema; estimate $\widehat{S}$, $\widehat{\chi}$, and $\widehat{\mathrm{CF}}$.
+\item Publish raw shots, validator output, estimator output, and the exact commit SHA of the repository.
+\end{enumerate}
+
+\section{Raw-shot schema}
+The raw-shot line format is deliberately simple.  Each line is one trial.
+\begin{verbatim}
+{
+  "trial_id": 1042,
+  "commit_sha": "<repo commit used for schedule/analyzer map>",
+  "context_id": 17,
+  "basis_slot": 2,
+  "herald": true,
+  "detector_clicks": [0, 0, 1, 0],
+  "valid_single_click": true,
+  "loss_flag": false,
+  "dark_flag": false,
+  "timestamp_ns": 123456789,
+  "settings": {
+    "visibility_estimate": 0.98,
+    "integration_block": 12,
+    "phase_setting": "witting_17_2"
+  }
+}
+\end{verbatim}
+
+Required top-level fields are \texttt{trial\_id}, \texttt{context\_id}, \texttt{herald},
+\texttt{detector\_clicks}, \texttt{valid\_single\_click}, \texttt{loss\_flag}, and \texttt{dark\_flag}.  The
+validator may accept additional metadata, but no estimator may use unreported hidden calibration constants.
+
+\section{Statistics and decision rule}
+Let $N$ be the number of valid heralded trials after the predeclared loss/dark-count cuts.  Let $S$ be the
+number of contexts satisfying the exactly-one-click contextuality constraint after aggregation, and let
+\[
+  \widehat{\mathrm{CF}}=\frac{\widehat{S}-36}{40}
+\]
+with the convention that negative values are clipped to $0$ when reporting contextual fraction.  The
+primary pass/fail statistic is the one-sided violation of the noncontextual bound $S\le36$.  The CSW
+cross-check reports $\widehat\chi$ against the noncontextual bound $\alpha=7$ and the quantum target
+$\chi=10$.
+
+\begin{decisionbox}
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Pass:} the preregistered estimator gives $S>36$ and the contextual-fraction estimate is
+consistent with $1/10$ within the declared error model.
+\item \textbf{Kill:} the validated data remain consistent with $S\le36$ after reaching the preregistered
+shot target, or the inferred contextual fraction is statistically consistent with $0$ rather than $1/10$.
+\item \textbf{Inconclusive:} loss, drift, dark counts, or analyzer imbalance invalidate the preregistered
+cuts; the run must be repeated with the same schema and an updated hardware note.
+\end{itemize}
+\end{decisionbox}
+
+For the binomial planning approximation, distinguishing $p=1/10$ from $p=0$ at $k\sigma$ uses
+\[
+  N\ge \frac{k^2p(1-p)}{p^2},
+\]
+so the planning targets are $81$ valid coincidences for $3\sigma$ and $225$ for $5\sigma$.  With optical
+survival in the rough $78\%$--$88\%$ range, the raw budget is a few hundred photons; the repository
+simulation uses a more conservative full-Witting CSW model and reports the corresponding detected-event
+budget.
+
+\section{Controls and failure modes}
+\begin{longtable}{p{0.25\linewidth}p{0.35\linewidth}p{0.30\linewidth}}
+\toprule
+Failure mode & Symptom & Required response\\
+\midrule
+Analyzer imbalance & Some contexts have systematically lower single-click rates & Re-run with per-context balance report; estimator must not fit away the imbalance.\\
+Dark counts & Clicks with blocked source or multi-click inflation & Flag dark trials; report blocked-source baseline.\\
+Loss drift & Context-dependent herald-to-click survival & Report block-level survival; repeat if drift crosses preregistered threshold.\\
+Phase mis-setting & Context map fails smoke-test identities & Freeze run as invalid; regenerate schedule from the exact commit.\\
+Post-selection abuse & Cuts change after seeing $S$ or $\chi$ & Kill the run for certification purposes.\\
+Classical control leakage & Context choice leaks into detector thresholding & Use fixed thresholds; report controller logs.\\
+\bottomrule
+\end{longtable}
+
+\section{Repository command path}
+The intended command sequence is:
+\begin{verbatim}
+python analysis/bt1900_demonstrator_raw_shot_validator.py raw_shots.jsonl
+python analysis/bt1901_contextual_fraction_estimator.py raw_shots.jsonl
+python analysis/bt1904_exact_contextual_fraction_estimator.py raw_shots.jsonl
+holonet audit
+\end{verbatim}
+The final line is not part of the experimental estimate; it pins the broader architecture ledger to the
+same commit so the physical result and the executable specification remain synchronized.
+
+\section{Deliverables}
+A certification packet contains:
+\begin{enumerate}[leftmargin=1.4em]
+\item raw JSONL shots;
+\item blocked-source and bypass baselines;
+\item validator output;
+\item estimator output;
+\item analyzer map and context schedule;
+\item repository commit SHA;
+\item one-page hardware note listing source, interferometer, tritter/delay, EOM, analyzers, detectors, and environmental controls.
+\end{enumerate}
+
+\section{Interpretation}
+A successful run certifies the finite contextual resource of the $q=3$ substrate.  It is the first physical
+boot test of the Holonet, not the final computer.  A failed run is equally valuable: it kills the substrate
+identification early and cheaply, before investing in level-1 photonic integration or fault-tolerant
+scaling.
+
+\bigskip
+\noindent\rule{\linewidth}{0.4pt}\\[0.25em]
+{\footnotesize \textbf{Primary witnesses:} \texttt{analysis/w33\_contextual\_fraction.py},
+\texttt{analysis/w33\_ks\_inequality.py}, \texttt{analysis/holonet\_ks\_experiment.py},
+\texttt{analysis/bt1900\_demonstrator\_raw\_shot\_validator.py},
+\texttt{analysis/bt1901\_contextual\_fraction\_estimator.py},
+\texttt{analysis/bt1904\_exact\_contextual\_fraction\_estimator.py}.}
+
+\end{document}
