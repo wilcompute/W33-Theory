@@ -1,0 +1,30 @@
+{
+  "n": 40,
+  "baseline_table_routed": {
+    "routing_table_entries": 1560,
+    "bits_per_entry": 6,
+    "routing_table_bits": 9360,
+    "routing_table_bytes": 1170,
+    "setup_bfs_edge_relaxations": 19200,
+    "per_decision": "1 table lookup (requires the full table resident, rebuilt on any topology change)"
+  },
+  "holonet_address_routed": {
+    "routing_table_entries": 0,
+    "routing_table_bytes": 0,
+    "setup_ops": 0,
+    "per_decision_mod3_ops": 7,
+    "max_hops": 2
+  },
+  "win": {
+    "routing_state_bytes_eliminated": 1170,
+    "setup_relaxations_eliminated": 19200,
+    "note": "address IS the route: routing is stateless and local, so topology changes need no table rebuild"
+  },
+  "routers_agree_on_sample": true,
+  "sample_pairs": 392,
+  "summary": "holonet bench --compare: the table-free routing win, measured. A classical all-pairs router needs an n(n-1)-entry next-hop forwarding table (here 1560 entries, ceil(log2 40)=6 bits each = 1170 bytes of fabric-wide routing state) built by a BFS from every node; the Holonet needs ZERO table -- the destination address is the route, every adjacency is the 7-op symplectic test, any pair is <=2 hops. The baseline table is built explicitly and the two routers are verified to agree (same reachability, <=2 hops) on a seeded sample, so the win -- O(n^2) routing-state bytes plus a rebuild on every topology change, reduced to zero -- is a measured fact. HONEST: this is an architectural state/setup comparison, not a wall-clock race; a table lookup is a fast op, but it presupposes the table the Holonet never builds.",
+  "sources": [
+    "holonet_node neighbors/route",
+    "BFS all-pairs forwarding table"
+  ]
+}

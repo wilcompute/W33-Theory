@@ -49,26 +49,69 @@ import json
 import math
 
 
+def _field(q):
+    """Arithmetic of F_q for q in {2,3,4,5,...}: returns (elements, add, mul, inv, neg).
+
+    Primes use integers mod q; q=4 is the genuine field GF(4)=F_2[x]/(x^2+x+1) (elements
+    0,1,2=alpha,3=alpha^2), NOT integers mod 4. This lets the q-scan reach an EVEN COMPOSITE order, so
+    the parity law can be told apart from a primality law.
+    """
+    if q == 4:
+        exp = {0: 1, 1: 2, 2: 3}  # alpha^i
+        log = {1: 0, 2: 1, 3: 2}
+
+        def add(a, b):
+            return a ^ b  # characteristic 2
+
+        def mul(a, b):
+            return 0 if (a == 0 or b == 0) else exp[(log[a] + log[b]) % 3]
+
+        def inv(a):
+            return exp[(-log[a]) % 3]
+
+        def neg(a):
+            return a  # -a == a in characteristic 2
+
+        return list(range(4)), add, mul, inv, neg
+
+    def add(a, b):
+        return (a + b) % q
+
+    def mul(a, b):
+        return (a * b) % q
+
+    def inv(a):
+        return pow(a, q - 2, q)
+
+    def neg(a):
+        return (-a) % q
+
+    return list(range(q)), add, mul, inv, neg
+
+
 def _build(q=3):
-    """Build the symplectic generalized quadrangle W(q) = GQ(q,q) over F_q (q prime).
+    """Build the symplectic generalized quadrangle W(q) = GQ(q,q) over F_q (q a prime power <= 5).
 
     Returns (points, adjacency, totally-isotropic lines, symplectic form B). q=3 is the Holonet
-    substrate; other primes are the sister geometries the q-scan uses to prove the q-dependence.
+    substrate; the other orders are the sister geometries the q-scan uses to prove the q-dependence.
     """
     import numpy as np
 
-    inv = {c: pow(c, q - 2, q) for c in range(1, q)}
+    els, add, mul, inv, neg = _field(q)
 
     def norm(v):
         for c in v:
             if c != 0:
-                return tuple((x * inv[c]) % q for x in v)
+                iv = inv(c)
+                return tuple(mul(x, iv) for x in v)
 
-    pts = sorted({norm(v) for v in itertools.product(range(q), repeat=4) if any(v)})
+    pts = sorted({norm(v) for v in itertools.product(els, repeat=4) if any(v)})
     pidx = {p: i for i, p in enumerate(pts)}
 
     def B(x, y):
-        return (x[0] * y[1] - x[1] * y[0] + x[2] * y[3] - x[3] * y[2]) % q
+        t1, t2 = mul(x[0], y[1]), mul(x[1], y[0])
+        t3, t4 = mul(x[2], y[3]), mul(x[3], y[2])
+        return add(add(t1, neg(t2)), add(t3, neg(t4)))
 
     n = len(pts)
     A = np.zeros((n, n), int)
@@ -79,9 +122,9 @@ def _build(q=3):
 
     def span(p, r):
         S = set()
-        for a in range(q):
-            for b in range(q):
-                v = tuple((a * p[k] + b * r[k]) % q for k in range(4))
+        for a in els:
+            for b in els:
+                v = tuple(add(mul(a, p[k]), mul(b, r[k])) for k in range(4))
                 if any(v):
                     S.add(norm(v))
         return frozenset(pidx[x] for x in S)
@@ -97,14 +140,17 @@ def _build(q=3):
     return pts, A, lines, B
 
 
-def audit_constants(q):
-    """Recompute the W(q) layer constants from the field size q alone (q prime).
+def audit_constants(q, alpha_cap=100):
+    """Recompute the W(q) layer constants from the field order q alone (q a prime power <= 5).
 
     Returns a dict of the measured constants for one sister geometry. Used by qscan() to show that
     every layer constant moves with q exactly as the closed forms predict -- and, crucially, that the
-    contextuality turns ON precisely when q is odd (Thas: W(q) has an ovoid iff q is even).
+    contextuality turns ON precisely when q is odd (Thas: W(q) has an ovoid iff q is even). Ovoid
+    existence is decided rigorously by the max-satisfiable-contexts ILP (an exactly-one-per-line
+    assignment IS an ovoid), so it does not need the exact independence number; the independence number
+    alpha is reported as well, but only when the graph is small enough (n <= alpha_cap) to find it
+    exactly without a slow max-clique search.
     """
-    import networkx as nx
     import numpy as np
 
     pts, A, lines, B = _build(q)
@@ -118,13 +164,17 @@ def audit_constants(q):
     ev = sorted(np.linalg.eigvalsh(A.astype(float)))
     lam2 = sorted({round(x, 6) for x in ev})[-2]
 
-    G = nx.Graph()
-    G.add_nodes_from(range(n))
-    for i in range(n):
-        for j in range(i + 1, n):
-            if A[i, j]:
-                G.add_edge(i, j)
-    alpha = len(nx.max_weight_clique(nx.complement(G), weight=None)[0])
+    alpha = None
+    if n <= alpha_cap:
+        import networkx as nx
+
+        G = nx.Graph()
+        G.add_nodes_from(range(n))
+        for i in range(n):
+            for j in range(i + 1, n):
+                if A[i, j]:
+                    G.add_edge(i, j)
+        alpha = len(nx.max_weight_clique(nx.complement(G), weight=None)[0])
 
     # max satisfiable contexts (an exactly-1-per-line assignment is a partial-ovoid packing)
     from scipy.optimize import Bounds, LinearConstraint, milp
@@ -169,22 +219,25 @@ def audit_constants(q):
         "lambda_2": lam2,
         "lines": len(lines),
         "pts_per_line": len(lines[0]),
-        "alpha": alpha,
+        "alpha": alpha,  # None when n > alpha_cap (independence number skipped)
         "hoffman": hoffman,
-        "ovoid_exists": alpha == hoffman,
+        "ovoid_exists": max_sat
+        == len(lines),  # exactly one ray per context == an ovoid
         "max_sat_contexts": max_sat,
         "contextual_fraction": (len(lines) - max_sat) / len(lines),
         "Sp4q": sp4q,
     }
 
 
-def qscan(qs=(2, 3)):
+def qscan(qs=(2, 3, 4)):
     """Run the audit across sister geometries W(q) and check the q-dependence is the forced one.
 
     Returns (rows, checks, all_ok). Each row is the measured constant dict for one q; each check pins a
     measured constant against its closed form n=(q+1)(q^2+1), k=q(q+1), lambda=q-1, mu=q+1,
     lambda_2=q-1, lines=n, pts/line=q+1, |Sp(4,q)|=q^4(q^2-1)(q^4-1), Hoffman=q^2+1 -- and the headline
-    parity law: the substrate is contextual (CF>0) exactly when q is odd.
+    parity law: the substrate is contextual (CF>0) exactly when q is ODD, with the exact contextual
+    fraction CF = 1/(q^2+1). The default scan {2,3,4} reaches the even COMPOSITE order q=4 = GF(4), so
+    it separates the parity law from a primality law. q=5 (slow ILP) is opt-in via qs=(2,3,4,5).
     """
     rows, checks = [], []
 
@@ -210,17 +263,27 @@ def qscan(qs=(2, 3)):
             c["Sp4q"] == q**4 * (q**2 - 1) * (q**4 - 1),
         )
         chk(f"{tag}: Hoffman/ovoid bound = q^2+1 = {q**2+1}", c["hoffman"] == q**2 + 1)
-        # the headline parity law
+        # the headline parity law (the q=4 row is even but COMPOSITE: parity, not primality)
         q_even = q % 2 == 0
         chk(f"{tag}: ovoid exists  <=>  q even ({q_even})", c["ovoid_exists"] == q_even)
         chk(
             f"{tag}: CONTEXTUAL (CF>0)  <=>  q ODD ({not q_even})",
             (c["contextual_fraction"] > 0) == (not q_even),
         )
+        # the emergent closed form: CF is 0 for even q and exactly 1/(q^2+1) for odd q
+        cf_pred = 0.0 if q_even else 1.0 / (q**2 + 1)
+        chk(
+            f"{tag}: CF = {'0' if q_even else f'1/(q^2+1) = 1/{q**2+1}'} (measured {c['contextual_fraction']:.4g})",
+            abs(c["contextual_fraction"] - cf_pred) < 1e-9,
+        )
 
-    # cross-q sanity: the two geometries are genuinely different sizes
+    # cross-q sanity: the geometries are genuinely different sizes; and at least one even + one odd
     ns = [r["n"] for r in rows]
     chk("q-scan covers distinct geometries (sizes differ)", len(set(ns)) == len(ns))
+    chk(
+        "q-scan straddles parity (>=1 even and >=1 odd order)",
+        any(q % 2 == 0 for q in qs) and any(q % 2 for q in qs),
+    )
     all_ok = all(ok for _, ok in checks)
     return rows, checks, all_ok
 

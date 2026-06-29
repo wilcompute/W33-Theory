@@ -24,6 +24,7 @@ on:
       - 'tests/test_pass48_holonet_asm_energy.py'
       - 'tests/test_pass50_master_audit.py'
       - 'tests/test_pass52_qscan_bench.py'
+      - 'tests/test_pass53_parity_compare.py'
       - 'analysis/holonet_cli.py'
       - 'holonet_cmd.py'
       - 'setup.py'
@@ -49,6 +50,8 @@ jobs:
         run: holonet audit
       - name: holonet bench (op counts + host-relative throughput)
         run: holonet bench
+      - name: holonet bench --compare (table-free routing vs table-routed baseline)
+        run: holonet bench --compare
       - name: holonet info
         run: holonet info
       - name: Fast witnesses (architecture + contextuality)
@@ -65,4 +68,4 @@ jobs:
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py -q

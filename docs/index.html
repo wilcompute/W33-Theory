@@ -4374,6 +4374,33 @@
               audit ledger live in your browser &mdash; 13 rows recomputed from <code>q=3</code> on the spot,
               3 solver rows Python-verified.</div>
           </div>
+          <div class="card" id="holonet-falsifiable-card">
+            <div class="label">Pass 53 &mdash; Parity, Not Primality &mdash; and a Falsifiable Prediction</div>
+            <div class="detail"><strong>The discriminating experiment, in one line.</strong>
+              The parity law now spans four orders. <code>analysis/w33_audit_qscan.py</code> extends the
+              scan to <code>q = 4 = GF(4)</code> (a genuine field, not integers mod 4) and, opt-in,
+              <code>q = 5</code>. The result is a clean closed form for the contextual fraction:
+              <div style="margin:0.5rem 0;text-align:center;"><code>CF(q) = 0 if q even, &nbsp; 1/(q&sup2;+1) if q odd</code></div>
+              measured exactly: <code>q=2&rarr;0</code>, <code>q=3&rarr;1/10</code>, <code>q=4&rarr;0</code>,
+              <code>q=5&rarr;1/26</code>. The <code>q = 4</code> row is the control that matters: 4 is even
+              but <em>composite</em>, and it still has an ovoid (CF&nbsp;=&nbsp;0), so the cause is
+              <strong>parity, not primality</strong>.
+              <br><br>
+              <strong>This makes the program falsifiable at the bench.</strong> Build the same photonic
+              contextuality test on an <em>even</em>-order symplectic fabric &mdash; <code>W(2)</code> (15 rays)
+              or <code>W(4)</code> (85 rays) &mdash; and the theory predicts <strong>zero</strong> contextuality
+              (<code>CF = 0</code>, an explicit ovoid assignment reproduces every measurement). Observing
+              contextuality there, or failing to see <code>CF = 1/10</code> on the <code>q = 3</code> fabric,
+              refutes the construction. The contextual fraction is not a free parameter; it is pinned to the
+              field order, and the even-vs-odd contrast is the discriminating measurement.
+              <br><br>
+              <strong>And the table-free win is now measured.</strong> <code>holonet bench --compare</code>
+              builds a classical all-pairs forwarding table explicitly (1560 next-hop entries =
+              <strong>1170 bytes</strong> of fabric-wide routing state, plus a BFS from every node) and
+              verifies the Holonet routes the same pairs with <strong>0 bytes</strong> of table &mdash; the
+              address <em>is</em> the route, 7 mod-3 ops, &le;2 hops &mdash; so routing is stateless and
+              survives topology changes with no rebuild.</div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile

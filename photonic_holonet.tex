@@ -8287,6 +8287,60 @@ mod \(q\); it is a property test of the audit, not a new physical claim.  The
 bench times the \emph{classical} emulation only --- the priced \(9^t\) magic
 dial is excluded by construction --- and its absolute times are host-relative.
 
+\subsection{Pass 53 --- parity not primality, a falsifiable prediction, and the table-free win}
+\label{sec:capstone-fiftythree}
+
+Pass~52 established the parity law on two data points, \(q=2\) and \(q=3\), both
+prime.  Pass~53 closes the obvious loophole and turns the law into an experiment.
+
+\paragraph{Parity, not primality.}  The scan in
+\path{analysis/w33_audit_qscan.py} now reaches \(q=4=\mathrm{GF}(4)\), built over
+the genuine field \(F_2[x]/(x^2+x+1)\) rather than the integers modulo \(4\), and
+optionally \(q=5\).  The geometry \(W(4)\) is \(\mathrm{SRG}(85,20,3,5)\) with
+\(|\mathrm{Sp}(4,4)|=979200\), and it possesses an ovoid of \(17=q^2+1\) points,
+so its contextual fraction is \emph{zero}.  Because \(4\) is even but
+\emph{composite}, this rules out a ``contextuality requires prime order'' reading:
+the cause is the parity of \(q\), full stop.  Across the scan the contextual
+fraction takes the exact closed form
+\[
+  \mathrm{CF}(q)=
+  \begin{cases}
+    0, & q\ \text{even},\\[2pt]
+    \dfrac{1}{q^2+1}, & q\ \text{odd},
+  \end{cases}
+\]
+measured as \(0,\ \tfrac1{10},\ 0,\ \tfrac1{26}\) for \(q=2,3,4,5\).  The Holonet
+sits at \(q=3\), the smallest order with nonzero \(\mathrm{CF}\), and its value
+\(1/10\) is the \(q=3\) instance of this one-line law.
+
+\paragraph{A falsifiable prediction.}  This makes the construction testable by a
+contrast rather than a single number.  The same photonic Kochen--Specker test,
+laid out on an \emph{even}-order symplectic fabric --- \(W(2)\) with \(15\) rays
+or \(W(4)\) with \(85\) rays --- must return \emph{zero} contextuality, because an
+explicit ovoid assignment reproduces every measurement outcome
+noncontextually.  Observing contextuality on an even-order fabric, or failing to
+observe \(\mathrm{CF}=1/10\) on the \(q=3\) fabric, refutes the model.  The
+contextual fraction is not a tunable parameter; it is pinned to the field order,
+and the even-versus-odd contrast is the discriminating measurement.
+
+\paragraph{The table-free win, measured.}  Finally \path{holonet bench --compare}
+quantifies the claim that ``the address is the route''.  It builds a classical
+all-pairs forwarding table explicitly: a next hop for each of the \(n(n-1)=1560\)
+ordered destination pairs, \(\lceil\log_2 40\rceil=6\) bits each, i.e.\ \(1170\)
+bytes of fabric-wide routing state, assembled by a breadth-first search from every
+node.  It then verifies that the Holonet routes the same sampled pairs with
+\emph{zero} table --- the destination address is the route, every adjacency is the
+seven-operation symplectic test, every pair is reached in at most two hops --- and
+that the two routers agree on reachability.  The win is therefore a measured fact:
+\(O(n^2)\) bytes of routing state and a rebuild on every topology change, reduced
+to nothing, because routing is stateless and local.
+
+\emph{Honest scope:} the \(q=4\) arithmetic is the true \(\mathrm{GF}(4)\); the
+\(q=5\) check is exact but its integer program is heavy (minutes), so it is opt-in
+and excluded from the fast path.  The routing comparison is an
+architectural state-and-setup comparison, not a wall-clock race: a table lookup is
+a cheap operation, but it presupposes the very table the Holonet never builds.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

@@ -132,6 +132,14 @@ def cmd_bench(args):
     """Time the classical machine: deterministic op counts + host-relative throughput."""
     import holonet_bench  # noqa: E402
 
+    if getattr(args, "compare", False):
+        ledger, ok = holonet_bench.run_compare()
+        holonet_bench._print_compare(ledger)
+        print(
+            f"\n{'OK -- table-free routing verified equivalent; 0 bytes of routing state.' if ok else 'FAILURES present.'}"
+        )
+        sys.exit(0 if ok else 1)
+
     ledger, ok = holonet_bench.run_bench()
     print("holonet bench -- deterministic op counts (same on any machine):")
     for k, v in ledger["deterministic_op_counts"].items():
@@ -208,10 +216,16 @@ def main(argv=None):
     sub.add_parser(
         "audit", help="re-derive every layer's headline constant from q=3 -> PASS/FAIL"
     ).set_defaults(func=cmd_audit)
-    sub.add_parser(
+    pb = sub.add_parser(
         "bench",
         help="time the classical machine -> op counts + host-relative throughput",
-    ).set_defaults(func=cmd_bench)
+    )
+    pb.add_argument(
+        "--compare",
+        action="store_true",
+        help="compare table-free address routing against a classical table-routed baseline",
+    )
+    pb.set_defaults(func=cmd_bench)
     args = p.parse_args(argv)
     args.func(args)
 
