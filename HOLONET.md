@@ -49,6 +49,7 @@ holonet teleport             # teleport a qutrit A->B (no-cloning)       -> fide
 holonet reproduce            # splice a W(3,3) child (von Neumann self-reproduction)
 holonet verify               # 7 stack checks -> ALL PASS
 holonet audit                # re-derive every layer's headline constant from q=3 -> 16 checks, ALL PASS
+holonet bench                # the performance face: op counts (forced) + host-relative throughput
 ```
 
 `holonet verify` should end with **`ALL PASS — this machine is a working holonet node.`**
@@ -85,6 +86,8 @@ The machine, executed:
 | `py -3 analysis/w33_packet_energy.py` | the per-packet traffic bill: **72 trits -> 144 binary host bits** for the minimal control packet |
 | `py -3 analysis/w33_holonet_firmware_fabric_profile.py` | firmware-to-fabric accounting: **2160 = 30 × 72**, with `13/40` Witting admission and `117/5` expected trits/query |
 | `py -3 analysis/w33_master_audit.py` | the machine audits itself: **16 layer constants re-derived from q=3** in one pass/fail ledger (`holonet audit`) |
+| `py -3 analysis/w33_audit_qscan.py` | the parity law: across **W(q) for q=2,3** every constant is forced, and the machine is **contextual iff q is odd** (q=2 has an ovoid → CF=0; q=3 → CF=1/10) |
+| `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
 
 The physics/computer-science core:
 

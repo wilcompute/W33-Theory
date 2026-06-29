@@ -4351,6 +4351,29 @@
               the same vanilla-JS symplectic math the witnesses verify against Python.</div>
             <div style="margin-top:0.6rem;"><a href="holonet.html" style="display:inline-block;padding:0.4rem 0.9rem;border:1px solid #4a9;border-radius:6px;text-decoration:none;">&#9654;&nbsp; Open the Holonet playground</a></div>
           </div>
+          <div class="card" id="holonet-parity-card">
+            <div class="label">Pass 52 &mdash; The Parity Law: Why q = 3</div>
+            <div class="detail"><strong>The machine is contextual <em>because</em> 3 is odd.</strong>
+              <code>analysis/w33_audit_qscan.py</code> runs the same audit across the sister geometries
+              <code>W(q) = GQ(q,q)</code> for <code>q = 2</code> and <code>q = 3</code> and verifies every
+              layer constant follows its closed form &mdash; <code>n=(q+1)(q&sup2;+1)</code> (15, 40),
+              <code>k=q(q+1)</code> (6, 12), <code>|Sp(4,q)|=q&#8308;(q&sup2;&minus;1)(q&#8308;&minus;1)</code>
+              (720, 51840). The punchline is Thas's theorem: <code>W(q)</code> has an <em>ovoid</em> &mdash; a
+              Kochen&ndash;Specker assignment satisfying every context &mdash; <strong>iff q is even</strong>.
+              So <code>q = 2</code> is classical (an ovoid of 5 exists, <code>CF = 0</code>) and
+              <code>q = 3</code> is contextual (no ovoid, max partial ovoid <code>7 &lt; 10</code>,
+              <code>CF = 1/10</code>). The contextual power that drives the machine is not put in by hand;
+              it is forced by the parity of the field, and <code>q = 3</code> is the smallest odd prime that
+              supplies it.
+              <br><br>
+              <strong>And the machine now has a performance face.</strong> <code>holonet bench</code>
+              (<code>analysis/holonet_bench.py</code>) separates the <em>deterministic</em> op counts forced
+              by the geometry (7 mod-3 ops per routing decision, &le;2 hops, <code>&mu;=4</code> multipath)
+              from <em>host-relative</em> wall-clock throughput (~10&#8309; routes/sec on ordinary Python, a
+              floor not a ceiling). The <a href="holonet.html">playground</a> now also renders the 16-row
+              audit ledger live in your browser &mdash; 13 rows recomputed from <code>q=3</code> on the spot,
+              3 solver rows Python-verified.</div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile

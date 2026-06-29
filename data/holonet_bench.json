@@ -1,0 +1,28 @@
+{
+  "deterministic_op_counts": {
+    "route_decision_mod3_ops": 7,
+    "hops_per_packet": 2,
+    "multipath_mu": 4,
+    "qec_syndromes_per_cycle": 4,
+    "audit_layer_checks": 16
+  },
+  "host_relative_timings_s": {
+    "route_median_s": 5.3000112529844046e-06,
+    "qec_cycle_median_s": 0.15005094998923596,
+    "teleport_median_s": 0.0002447500010021031,
+    "clifford_gate_median_s": 7.599999662488699e-06,
+    "full_audit_s": 1.0532160999719054
+  },
+  "host_relative_throughput": {
+    "routes_per_sec": 188678.84467922704,
+    "qec_cycles_per_sec": 6.664402991595427,
+    "clifford_gates_per_sec": 131578.95321176102
+  },
+  "reps": 197,
+  "audit_passed": true,
+  "summary": "holonet bench, the machine's performance face. Separates DETERMINISTIC operation counts (7 mod-3 ops per routing decision, <=2 hops/packet, mu=4 multipath, syndromes/QEC cycle, 16 audit checks -- the same on any computer) from HOST-RELATIVE wall-clock timings (route/QEC/teleport/gate/audit medians over fixed seeded workloads -> routes/sec, gates/sec on this machine). HONEST: times the CLASSICAL emulation only; the priced 9^t magic dial is excluded by construction; ordinary Python on ordinary hardware, so the times are a floor not a ceiling. Correctness face is `holonet audit`; this is the throughput face.",
+  "sources": [
+    "holonet_node VM (route/qec/teleport/Clifford)",
+    "w33_master_audit.run_audit"
+  ]
+}

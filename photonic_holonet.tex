@@ -8221,6 +8221,72 @@ re-measured, by the audit; they keep their own witnesses and the priced \(9^t\)
 dial.  What Pass~51 proves is the self-auditing property: one command, the whole
 datasheet, re-derived and checked from \(q=3\) alone.
 
+\subsection{Pass 52 --- the parity law, and the performance face}
+\label{sec:capstone-fiftytwo}
+
+Pass~51 made the datasheet re-derive itself from \(q=3\).  Pass~52 asks the two
+questions that audit invites: \emph{is \(q=3\) forced}, and \emph{how fast does
+the machine run}.
+
+\paragraph{The parity law (is \(q=3\) forced?).}  The witness
+\path{analysis/w33_audit_qscan.py} runs the same audit across the sister
+geometries \(W(q)=\mathrm{GQ}(q,q)\) for \(q=2\) and \(q=3\) and verifies that
+every layer constant moves with \(q\) exactly as its closed form predicts:
+\[
+\begin{array}{lll}
+n=(q+1)(q^2+1) & k=q(q+1) & \lambda=q-1\\
+\mu=q+1 & \lambda_2=q-1 & \text{points/line}=q+1\\
+|\mathrm{Sp}(4,q)|=q^4(q^2-1)(q^4-1) & \text{Hoffman}=q^2+1 & \text{lines}=n
+\end{array}
+\]
+giving \((n,k,\lambda,\mu)=(15,6,1,3)\) at \(q=2\) and \((40,12,2,4)\) at
+\(q=3\), and \(|\mathrm{Sp}(4,2)|=720\) against \(|\mathrm{Sp}(4,3)|=51840\).
+The headline is the contextuality.  By Thas's theorem \(W(q)\) possesses an
+ovoid --- a set of \(q^2+1\) pairwise non-collinear points meeting every line
+once --- \emph{if and only if \(q\) is even}.  An ovoid is precisely a
+Kochen--Specker \(0/1\) assignment satisfying all \(n\) contexts, so the audit
+finds, computationally:
+\[
+  q=2\ (\text{even}):\ \text{ovoid of }5\text{ exists}\ \Rightarrow\ \mathrm{CF}=0\ (\text{classical}),
+\]
+\[
+  q=3\ (\text{odd}):\ \text{no ovoid},\ \text{max partial ovoid }7<10\ \Rightarrow\ \mathrm{CF}=\tfrac1{10}\ (\text{contextual}).
+\]
+The contextual power that drives the whole machine is therefore not inserted by
+hand: it is forced by the parity of the field, and \(q=3\) is the smallest odd
+prime that supplies it.  The audit exhibits, side by side, the \(q=2\) ovoid that
+kills contextuality and the \(q=3\) obstruction that creates it.
+
+\paragraph{The performance face.}  Where \path{holonet audit} certifies the
+machine is \emph{correct}, \path{analysis/holonet_bench.py} (the command
+\path{holonet bench}) certifies it is \emph{cheap}, and it separates two kinds of
+number honestly.  The deterministic operation counts --- \(7\) mod-\(3\) ALU
+operations per routing decision, \(\le 2\) hops per packet, \(\mu=4\) multipath,
+four syndromes per error-correction cycle --- are properties of the geometry and
+are identical on any computer.  The wall-clock timings --- route latency,
+correction-cycle time, teleport time, audit time, and the derived throughputs ---
+are reported as medians over fixed, seeded workloads, but are host-relative.  On
+ordinary Python on ordinary hardware the classical layer routes on the order of
+\(10^5\) packets per second and applies Clifford gates at a similar rate; these
+are a floor, not a ceiling, since a compiled or ASIC realization of the same op
+counts would be far faster.
+
+\paragraph{The audit, live in the browser.}  Finally \path{docs/holonet.html}
+now renders the audit ledger client-side: thirteen of the sixteen rows are
+recomputed live in the reader's browser from \(q=3\) (the page rebuilds
+\(W(3,3)\), counts the fabric, derives \(\lambda_2\) and the line-contexts, and
+checks the arithmetic), with the three solver rows --- the contextual fraction,
+the magic robustness, and the code threshold --- marked as verified by the
+Python witness.  The same symplectic form \(B(x,y)\) drives the browser page and
+the audited specification.
+
+\emph{Honest scope:} the \(q\)-scan is an exact recomputation per \(q\) (scipy
+\textsc{milp} for the max-satisfiable count, \textsc{networkx} for the
+independence number) and \(q\in\{2,3\}\) are prime, so \(F_q\) is integers
+mod \(q\); it is a property test of the audit, not a new physical claim.  The
+bench times the \emph{classical} emulation only --- the priced \(9^t\) magic
+dial is excluded by construction --- and its absolute times are host-relative.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

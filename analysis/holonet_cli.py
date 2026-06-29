@@ -128,6 +128,24 @@ def cmd_audit(args):
     sys.exit(0 if all_ok else 1)
 
 
+def cmd_bench(args):
+    """Time the classical machine: deterministic op counts + host-relative throughput."""
+    import holonet_bench  # noqa: E402
+
+    ledger, ok = holonet_bench.run_bench()
+    print("holonet bench -- deterministic op counts (same on any machine):")
+    for k, v in ledger["deterministic_op_counts"].items():
+        print(f"  {k:32s}: {v}")
+    print("host-relative throughput (THIS machine):")
+    for k, v in ledger["host_relative_throughput"].items():
+        if v:
+            print(f"  {k:32s}: {v:12.0f} /s")
+    print(
+        f"\n{'OK -- op counts forced by geometry; times host-relative.' if ok else 'FAILURES present.'}"
+    )
+    sys.exit(0 if ok else 1)
+
+
 def cmd_verify(args):
     checks = []
     # network
@@ -190,6 +208,10 @@ def main(argv=None):
     sub.add_parser(
         "audit", help="re-derive every layer's headline constant from q=3 -> PASS/FAIL"
     ).set_defaults(func=cmd_audit)
+    sub.add_parser(
+        "bench",
+        help="time the classical machine -> op counts + host-relative throughput",
+    ).set_defaults(func=cmd_bench)
     args = p.parse_args(argv)
     args.func(args)
 
