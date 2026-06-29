@@ -673,6 +673,58 @@ cheapest decisive test a candidate theory of everything has ever offered.
 
 \emph{(Witness: \texttt{analysis/w33\_demonstrator\_experiment.py}.)}
 
+\section{Pass 48: From VM to Bootstrap Compiler}
+\label{sec:pass48}
+The practical question after the VM runs is whether the architecture has a real
+bootstrap path: can it compile to ordinary old machines, can its ternary tax be
+priced per packet rather than per digit, and can a reader inspect the router
+without installing anything?  Pass~48 answers yes to all three.
+
+\paragraph{A tiny assembler.}
+\texttt{analysis/w33\_holonet\_asm.py} adds a small assembler for the routing
+kernel
+\[
+  B(x,y)=x_0y_1-x_1y_0+x_2y_3-x_3y_2\pmod 3.
+\]
+It targets both the Pass~47 four-bit register machine and a stricter
+6502-style eight-bit accumulator machine.  The four-bit target is the
+twenty-two-instruction program already shown to run on a dinosaur.  The
+eight-bit target has no multiply and no \(\bmod 3\) opcode; it synthesizes both
+from load, store, add, subtract, compare, and branch instructions.  The
+assembled program verifies the reference adjacency for all \(1600\) ordered
+pairs of \(W(3,3)\) addresses, with a worst-case \(185\) primitive accumulator
+steps.
+
+\paragraph{A per-packet traffic bill.}
+\texttt{analysis/w33\_packet\_energy.py} turns the per-trit encoding tax into a
+packet number.  The minimal worst-case control envelope has \(16\) route
+address trit-reads, \(48\) body pulse trits, and \(8\) Hesse/Pauli epilogue
+trits:
+\[
+  16+48+8=72.
+\]
+A native ternary substrate moves \(72\) trit symbols.  A binary host must use
+\(144\) bits to carry only \(72\log_2 3\approx114.1\) bits of information.
+The extra \(\sim29.9\) bits are the binary encoding tax at packet scale.  This
+is not a measured joule-per-packet benchmark; it is the exact traffic
+accounting that any implementation must pay or avoid.
+
+\paragraph{A browser router.}
+\texttt{docs/index.html} now includes a live router widget.  It generates the
+\(40\) normalized projective addresses in \(\mathbb F_3^4\), evaluates the same
+symplectic form as the Python witnesses, and returns either the direct edge or
+the four common relays.  The infrastructure claim is therefore inspectable in a
+browser: address is route.
+
+\begin{honestbox}
+Pass~48 proves compiler and traffic properties, not quantum hardware.  The
+eight-bit target is a 6502-style accumulator semantics rather than a
+cycle-accurate MOS~6502.  The \(72\)-trit packet is the minimal control
+envelope; user payloads scale linearly above it.  The value is still practical:
+the Holonet has a bootstrap compiler path, a packet-level ternary tax, and a
+public in-browser routing primitive.
+\end{honestbox}
+
 \section{A Roadmap}
 \label{sec:roadmap}
 \begin{description}[leftmargin=0pt,style=nextline]

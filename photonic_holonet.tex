@@ -8007,6 +8007,53 @@ exact arithmetic, and the honesty is that ternary gives no fundamental per-infor
 (Landauer is base-independent) --- the tax is encoding overhead only. The quantum advantage remains the
 priced $9^t$ dial.
 
+\subsection{Pass 48 --- the assembler, packet energy, and the live router}
+\label{sec:capstone-fortyeight}
+
+This pass turns the runnable VM into a small compiler and makes the energy accounting packet-scale.
+
+\emph{The assembler.} \path{analysis/w33_holonet_asm.py}: the router
+\[
+  B(x,y)=x_0y_1-x_1y_0+x_2y_3-x_3y_2\pmod 3
+\]
+is now compiled through a tiny \emph{holonet-asm} layer to two targets.  The
+first is the Pass~47 four-bit machine, still a $22$-instruction program with
+primitive \(\textsc{mul}\) and \(\textsc{mod}_3\).  The second is stricter:
+a 6502-style eight-bit accumulator target with no multiply and no mod opcode.
+It synthesizes multiplication and reduction from loads, stores, add, subtract,
+compare, and branches, then verifies the resulting program on all \(1600\)
+ordered pairs of \(W(3,3)\) addresses.  The worst case executes \(185\)
+primitive accumulator steps.  This is not a cycle-accurate MOS~6502 emulator;
+it is the compiler-level statement that the classical router needs only the
+ordinary integer-control substrate of an old eight-bit machine.
+
+\emph{The packet-scale energy bill.} \path{analysis/w33_packet_energy.py}:
+Pass~47 gave the per-trit binary encoding tax \(2/\log_2 3=1.262\).  Pass~48
+pushes it through the minimal Holonet control packet.  A worst-case two-hop
+route reads two four-trit addresses at each hop (\(16\) trit reads), the
+Holonet body contributes \(16\) Q6 edges times \(3\) pulse phases (\(48\)
+trits), and the Hesse/Pauli epilogue contributes \(3\) two-trit Hesse words
+plus one two-trit Pauli frame (\(8\) trits):
+\[
+  16 + 48 + 8 = 72 \quad\hbox{trits}.
+\]
+So a native ternary host moves \(72\) trit symbols, while a binary host stores
+or moves \(144\) bits to carry \(72\log_2 3\approx114.1\) bits of information.
+The missing \(\sim29.9\) bits are not physics; they are the binary encoding
+tax made visible at packet scale.
+
+\emph{The live router.} \path{docs/index.html} now includes a self-contained
+JavaScript widget: type two normalized four-trit projective addresses and it
+generates the \(40\) \(W(3,3)\) points, computes \(B(x,y)\), and returns the
+direct edge or the \(\mu=4\) common relays.  The site therefore contains the
+same compiler primitive the papers discuss: address is route, in the browser.
+
+\emph{Honest scope:} the assembler certifies the classical router/compiler
+layer only; quantum advantage still requires the photonic/magic layer.  The
+eight-bit target is 6502-style accumulator semantics, not a hardware timing
+benchmark.  The \(72\)-trit packet bill is a traffic model for the minimal
+control envelope; payload traffic scales linearly on top.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

@@ -1,0 +1,196 @@
+{
+  "breakthrough": "The symplectic router now compiles through a tiny holonet-asm layer to both the 4-bit Pass-47 target and an 8-bit 6502-style target where MUL and MOD3 are synthesized from add/subtract/compare/branch. Both targets reproduce B(x,y) mod 3 on all 1600 ordered W33 address pairs.",
+  "checks": {
+    "eight_bit_has_no_mul_or_mod_opcode": true,
+    "eight_bit_synthesizes_arithmetic_from_branches": true,
+    "eight_bit_target_verified": true,
+    "forty_projective_addresses": true,
+    "four_bit_target_verified": true
+  },
+  "claim_boundary": [
+    "The 8-bit target is 6502-style accumulator semantics, not a cycle-accurate MOS 6502 emulator.",
+    "The weighted-cycle count is an internal cost model for this emulator, not a hardware benchmark.",
+    "This proves the classical router/compiler layer only; quantum advantage still requires the photonic/magic layer."
+  ],
+  "eight_bit_6502_style_target": {
+    "has_mul_mod_primitives": false,
+    "matches_reference": true,
+    "max_instruction_steps": 185,
+    "max_weighted_cycles": 484,
+    "primitive_opcodes": [
+      "ADC",
+      "BCC",
+      "BEQ",
+      "CLC",
+      "CMP",
+      "HLT",
+      "JMP",
+      "LDA",
+      "SBC",
+      "SEC",
+      "STA"
+    ],
+    "program_instructions": 130,
+    "sample_trace_first_12": [
+      {
+        "a_before": 0,
+        "op": [
+          "LDA",
+          0,
+          "imm"
+        ],
+        "pc": 0
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "STA",
+          9,
+          "mem"
+        ],
+        "pc": 1
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "LDA",
+          5,
+          "mem"
+        ],
+        "pc": 2
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "STA",
+          12,
+          "mem"
+        ],
+        "pc": 3
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "LDA",
+          12,
+          "mem"
+        ],
+        "pc": 4
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "CMP",
+          0,
+          "imm"
+        ],
+        "pc": 5
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "BEQ",
+          16
+        ],
+        "pc": 6
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "LDA",
+          9,
+          "mem"
+        ],
+        "pc": 16
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "CMP",
+          3,
+          "imm"
+        ],
+        "pc": 17
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "BCC",
+          23
+        ],
+        "pc": 18
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "LDA",
+          0,
+          "imm"
+        ],
+        "pc": 23
+      },
+      {
+        "a_before": 0,
+        "op": [
+          "STA",
+          11,
+          "mem"
+        ],
+        "pc": 24
+      }
+    ],
+    "verified_pairs": 1600
+  },
+  "four_bit_target": {
+    "has_mul_mod_primitives": true,
+    "matches_reference": true,
+    "max_instruction_steps": 22,
+    "max_weighted_cycles": 0,
+    "program_instructions": 22,
+    "verified_pairs": 1600
+  },
+  "source_excerpt": [
+    "LDA #0",
+    "STA $9",
+    "LDA $5",
+    "STA $12",
+    "x0y1_loop:",
+    "LDA $12",
+    "CMP #0",
+    "BEQ x0y1_done",
+    "LDA $9",
+    "CLC",
+    "ADC $0",
+    "STA $9",
+    "LDA $12",
+    "SEC",
+    "SBC #1",
+    "STA $12",
+    "JMP x0y1_loop",
+    "x0y1_done:",
+    "x0y1_mod_reduce:",
+    "LDA $9",
+    "CMP #3",
+    "BCC x0y1_mod_done",
+    "SEC",
+    "SBC #3",
+    "STA $9",
+    "JMP x0y1_mod_reduce",
+    "x0y1_mod_done:",
+    "LDA #0",
+    "STA $11",
+    "LDA $7",
+    "STA $12",
+    "x2y3_loop:",
+    "LDA $12",
+    "CMP #0",
+    "BEQ x2y3_done",
+    "LDA $11",
+    "CLC",
+    "ADC $2",
+    "STA $11",
+    "LDA $12"
+  ],
+  "theorem": "Pass 48 Holonet assembler targets",
+  "verified": true
+}

@@ -9,9 +9,14 @@ on:
       - 'analysis/holonet_*.py'
       - 'analysis/w33_minimal_architecture.py'
       - 'analysis/w33_vm_speedup.py'
+      - 'analysis/w33_tritcpu_emulator.py'
+      - 'analysis/w33_ternary_energy.py'
+      - 'analysis/w33_holonet_asm.py'
+      - 'analysis/w33_packet_energy.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
       - 'tests/test_holonet_vm.py'
+      - 'tests/test_pass48_holonet_asm_energy.py'
       - 'holonet_cmd.py'
       - 'setup.py'
       - '.github/workflows/holonet-ci.yml'
@@ -38,7 +43,11 @@ jobs:
         run: |
           python analysis/w33_minimal_architecture.py
           python analysis/w33_vm_speedup.py
+          python analysis/w33_tritcpu_emulator.py
+          python analysis/w33_ternary_energy.py
+          python analysis/w33_holonet_asm.py
+          python analysis/w33_packet_energy.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py -q

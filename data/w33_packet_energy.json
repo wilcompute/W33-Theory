@@ -1,0 +1,41 @@
+{
+  "binary_vs_ternary": {
+    "binary_host_bits": 144,
+    "bit_traffic_tax": 1.261859507142915,
+    "ternary_information_bits": 114.11730005192324,
+    "wasted_bits": 29.882699948076763,
+    "wasted_state_fraction_per_trit": 0.25
+  },
+  "breakthrough": "The per-trit 1.26x binary encoding tax becomes a per-minimal-packet tax on a 72-trit control transaction: a binary host moves 144 bits where the ternary information content is about 114.1 bits.",
+  "checks": {
+    "abi_verified": true,
+    "binary_host_uses_144_bits": true,
+    "body_is_48_phase_trits": true,
+    "epilogue_is_8_trits": true,
+    "minimal_packet_is_72_trits": true,
+    "packet_tax_matches_per_trit_tax": true
+  },
+  "claim_boundary": [
+    "This is a traffic model for the minimal control packet, not a measured joule-per-packet hardware benchmark.",
+    "The route model uses the worst-case diameter-2 Holonet path; adjacent nodes use one hop.",
+    "Payload data scales linearly on top of this control envelope."
+  ],
+  "source_certificates": [
+    "data/bt1697_holonet_typed_packet_abi.json",
+    "data/w33_ternary_energy.json"
+  ],
+  "theorem": "Pass 48 Holonet packet energy traffic",
+  "traffic_model": {
+    "body_phase_trits": 48,
+    "epilogue_trits": 8,
+    "per_hop": {
+      "binary_bits": 16,
+      "route_address_reads_trits": 8,
+      "ternary_information_bits": 12.679700005769249
+    },
+    "route_address_reads_trits": 16,
+    "route_hops": 2,
+    "total_packet_trits": 72
+  },
+  "verified": true
+}

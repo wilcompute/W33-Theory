@@ -4257,6 +4257,69 @@
                   photons (right, crossing 5&sigma; at ~21/ray). Regenerate with <code>py -3 analysis/holonet_scorecard.py</code>.</div>
               </div></div>
           </div>
+          <div class="card" id="holonet-router-widget">
+            <div class="label">Holonet Router Widget</div>
+            <div class="detail"><strong>Pass 48 turns the VM into a compiler surface:</strong>
+              <code>analysis/w33_holonet_asm.py</code> compiles the router to the 4-bit target
+              and to a 6502-style 8-bit accumulator target with no MUL/MOD opcodes, while
+              <code>analysis/w33_packet_energy.py</code> lifts the ternary encoding tax to a
+              minimal packet: <code>72</code> trits become <code>144</code> binary host bits.
+              Try the route below; four digits are a normalized point of <code>F3^4</code>.</div>
+            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:flex-end;margin-top:0.8rem;">
+              <label style="font-size:0.85em;">source<br><input id="hn-src" value="1000" maxlength="4"
+                style="width:5.5rem;padding:0.35rem;border:1px solid #bbb;border-radius:4px;"></label>
+              <label style="font-size:0.85em;">destination<br><input id="hn-dst" value="0100" maxlength="4"
+                style="width:5.5rem;padding:0.35rem;border:1px solid #bbb;border-radius:4px;"></label>
+              <button id="hn-run" type="button"
+                style="padding:0.45rem 0.75rem;border:1px solid #666;border-radius:4px;background:#f7f7f7;">route</button>
+            </div>
+            <pre id="hn-out" style="white-space:pre-wrap;margin-top:0.8rem;padding:0.7rem;background:#f6f8fa;border:1px solid #ddd;border-radius:4px;font-size:0.86em;"></pre>
+            <script>
+              (function(){
+                const inv = {1:1, 2:2};
+                const key = p => p.join("");
+                function norm(v){
+                  for (const c of v) if (c !== 0) return v.map(x => (x * inv[c]) % 3);
+                  return null;
+                }
+                const points = [];
+                const seen = new Set();
+                for (let a=0;a<3;a++) for (let b=0;b<3;b++) for (let c=0;c<3;c++) for (let d=0;d<3;d++) {
+                  const n = norm([a,b,c,d]);
+                  if (n && !seen.has(key(n))) { seen.add(key(n)); points.push(n); }
+                }
+                points.sort((u,v) => key(u).localeCompare(key(v)));
+                function parse(s){
+                  if (!/^[012]{4}$/.test(s)) return null;
+                  const n = norm(s.split("").map(Number));
+                  return n && key(n) === s ? n : null;
+                }
+                function B(x,y){ return (x[0]*y[1] - x[1]*y[0] + x[2]*y[3] - x[3]*y[2] + 99) % 3; }
+                function route(){
+                  const src = parse(document.getElementById("hn-src").value.trim());
+                  const dst = parse(document.getElementById("hn-dst").value.trim());
+                  const out = document.getElementById("hn-out");
+                  if (!src || !dst) {
+                    out.textContent = "Use normalized nonzero projective addresses, e.g. 1000, 0100, 0010, 0001.";
+                    return;
+                  }
+                  if (key(src) === key(dst)) {
+                    out.textContent = `self route: ${key(src)}\nB(src,dst)=0`;
+                    return;
+                  }
+                  const b = B(src,dst);
+                  if (b === 0) {
+                    out.textContent = `direct edge: ${key(src)} -> ${key(dst)}\nB(src,dst)=0\ncompiler cost: 7 mod-3 ops`;
+                    return;
+                  }
+                  const relays = points.filter(p => key(p)!==key(src) && key(p)!==key(dst) && B(src,p)===0 && B(p,dst)===0);
+                  out.textContent = `two-hop route: ${key(src)} -> ${key(relays[0])} -> ${key(dst)}\nB(src,dst)=${b}\ncommon relays=${relays.length} (= mu)\ncompiler cost: 7 mod-3 ops per adjacency test`;
+                }
+                document.getElementById("hn-run").addEventListener("click", route);
+                route();
+              })();
+            </script>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
