@@ -294,6 +294,72 @@ def run_compare_scale(qs=(2, 3, 4, 5, 7, 8, 9, 11, 13)):
     return ledger, ok
 
 
+def plot_compare_scale(ledger, path="docs/holonet_scale.png"):
+    """Render the divergence figure: baseline routing state explodes with q, Holonet stays 0."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    rows = ledger["rows"]
+    qs = [r["q"] for r in rows]
+    base = [r["baseline_routing_bytes"] for r in rows]
+
+    fig, ax = plt.subplots(figsize=(7.2, 4.2))
+    ax.semilogy(
+        qs,
+        base,
+        "o-",
+        color="#c0392b",
+        lw=2,
+        label="classical table-routed  (~$n^2\\log n$ bytes)",
+    )
+    ax.semilogy(
+        qs,
+        [1] * len(qs),
+        "s--",
+        color="#1f9d6a",
+        lw=2,
+        label="Holonet address-routed  (0 bytes, 2 hops)",
+    )
+    for q, b in zip(qs, base):
+        ax.annotate(
+            _human_bytes(b),
+            (q, b),
+            textcoords="offset points",
+            xytext=(0, 7),
+            ha="center",
+            fontsize=7,
+            color="#7a2520",
+        )
+    ax.set_xlabel("fabric order  q   (W(q) = GQ(q,q),  n = (q+1)(q²+1) nodes)")
+    ax.set_ylabel("fabric-wide routing state (bytes, log scale)")
+    ax.set_title("Table-free routing: baseline routing state diverges, Holonet stays 0")
+    ax.text(
+        qs[-1],
+        1.5,
+        "0 bytes · constant 2 hops · 7 mod-3 ops, every q",
+        ha="right",
+        va="bottom",
+        fontsize=8,
+        color="#14613f",
+    )
+    ax.legend(loc="upper left", fontsize=8)
+    ax.grid(True, which="both", alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(path, dpi=130)
+    plt.close(fig)
+    return path
+
+
+def _human_bytes(b):
+    for unit in ("B", "KB", "MB", "GB"):
+        if b < 1024:
+            return f"{b:.0f}{unit}" if unit == "B" else f"{b:.1f}{unit}"
+        b /= 1024
+    return f"{b:.1f}TB"
+
+
 def _print_compare_scale(ledger):
     print(
         "== holonet bench --compare --scale: the table-free win grows with fabric order q ==\n"
@@ -351,6 +417,12 @@ def main(argv=None):
     if "--compare" in args and "--scale" in args:
         ledger, ok = run_compare_scale()
         _print_compare_scale(ledger)
+        if "--plot" in args:
+            try:
+                p = plot_compare_scale(ledger)
+                print(f"\nwrote {p}")
+            except Exception as e:  # pragma: no cover - plotting is optional
+                print(f"\n(plot skipped: {e})")
         ledger["summary"] = (
             "holonet bench --compare --scale: the table-free routing win grows with fabric order q. For "
             "W(q)=GQ(q,q), n=(q+1)(q^2+1), the classical all-pairs forwarding table needs n(n-1) next-hop "

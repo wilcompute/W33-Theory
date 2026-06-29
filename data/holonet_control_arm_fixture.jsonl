@@ -1,0 +1,800 @@
+{"shot_id": 0, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 1, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 2, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 3, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 4, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 5, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 6, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 7, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 8, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 9, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 10, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 11, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 12, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 13, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 14, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 15, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 16, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 17, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 18, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 19, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 20, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 21, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 22, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 23, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 24, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 25, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 26, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 27, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 28, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 29, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 30, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 31, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 32, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 33, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 34, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 35, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 36, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 37, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 38, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 39, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 40, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "1", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 41, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 42, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 43, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 44, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 45, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 46, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 47, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 48, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 49, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 50, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 51, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 52, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 53, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 54, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 55, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 56, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 57, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 58, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 59, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 60, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 61, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 62, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 63, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 64, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 65, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 66, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 67, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 68, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 69, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 70, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 71, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 72, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 73, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 74, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 75, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 76, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 77, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 78, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 79, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 80, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 81, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 82, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 83, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 84, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 85, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 86, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 87, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 88, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 89, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 90, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 91, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 92, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 93, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 94, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 95, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 96, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 97, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 98, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 99, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 100, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 101, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 102, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 103, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 104, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 105, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 106, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 107, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 108, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 109, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 110, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 111, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 112, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 113, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 114, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 115, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 116, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 117, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 118, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 119, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 120, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 121, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 122, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 123, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 124, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 125, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 126, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 127, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 128, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 129, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 130, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 131, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 132, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 133, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 134, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 135, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 136, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 137, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 138, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 139, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 140, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 141, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 142, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 143, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 144, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 145, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 146, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 147, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 148, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 149, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 150, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 151, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 152, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 153, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 154, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 155, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 156, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 157, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 158, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 159, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 160, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 161, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 162, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 163, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 164, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 165, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 166, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 167, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 168, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 169, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 170, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 171, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 172, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 173, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 174, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 175, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 176, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 177, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 178, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 179, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 180, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 181, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 182, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 183, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 184, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 185, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 186, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "1", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 187, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 188, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 189, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 190, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 191, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 192, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 193, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 194, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 195, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 196, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 197, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 198, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 199, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 200, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 201, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 202, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 203, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 204, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 205, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 206, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 207, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 208, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 209, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 210, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 211, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 212, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 213, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 214, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 215, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 216, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 217, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 218, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 219, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 220, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 221, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 222, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 223, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 224, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 225, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "1", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 226, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 227, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 228, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 229, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 230, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 231, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 232, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 233, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 234, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 235, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 236, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 237, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 238, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 239, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 240, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 241, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 242, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 243, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 244, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 245, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 246, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 247, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 248, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 249, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 250, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 251, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 252, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 253, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 254, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 255, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 256, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 257, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 258, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 259, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 260, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 261, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 262, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 263, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 264, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 265, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 266, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "1", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 267, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 268, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 269, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 270, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 271, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 272, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 273, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 274, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 275, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 276, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 277, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 278, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 279, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 280, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 281, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 282, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 283, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 284, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 285, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 286, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 287, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 288, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 289, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 290, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 291, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 292, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 293, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 294, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 295, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 296, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 297, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 298, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 299, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 300, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 301, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 302, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 303, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 304, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 305, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 306, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 307, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 308, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 309, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 310, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "1", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 311, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 312, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 313, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 314, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 315, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 316, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 317, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 318, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 319, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 320, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 321, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 322, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 323, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 324, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 325, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 326, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 327, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 328, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 329, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 330, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 331, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 332, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 333, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 334, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 335, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 336, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 337, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 338, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 339, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 340, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 341, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 342, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 343, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 344, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 345, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 346, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 347, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 348, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 349, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 350, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 351, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 352, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 353, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 354, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 355, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 356, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 357, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 358, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 359, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 360, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 361, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 362, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 363, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 364, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 365, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 366, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 367, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 368, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 369, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 370, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 371, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 372, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 373, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 374, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 375, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 376, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 377, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 378, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 379, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 380, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 381, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 382, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 383, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 384, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 385, "context_id": 10, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 386, "context_id": 11, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 387, "context_id": 12, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 388, "context_id": 13, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 389, "context_id": 14, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 390, "context_id": 0, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 391, "context_id": 1, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 392, "context_id": 2, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 393, "context_id": 3, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 394, "context_id": 4, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 395, "context_id": 5, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 396, "context_id": 6, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 397, "context_id": 7, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 398, "context_id": 8, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 399, "context_id": 9, "ovoid_order_q": 2, "click_pattern": "0", "dark_reference": false, "loss_probe": false, "accepted_flag": true, "witness_class": "diagonal_contextual"}
+{"shot_id": 400, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 401, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 402, "click_pattern": "1", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 403, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 404, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 405, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 406, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 407, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 408, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 409, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 410, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 411, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 412, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 413, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 414, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 415, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 416, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 417, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 418, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 419, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 420, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 421, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 422, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 423, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 424, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 425, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 426, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 427, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 428, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 429, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 430, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 431, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 432, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 433, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 434, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 435, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 436, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 437, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 438, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 439, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 440, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 441, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 442, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 443, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 444, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 445, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 446, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 447, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 448, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 449, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 450, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 451, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 452, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 453, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 454, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 455, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 456, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 457, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 458, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 459, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 460, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 461, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 462, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 463, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 464, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 465, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 466, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 467, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 468, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 469, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 470, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 471, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 472, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 473, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 474, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 475, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 476, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 477, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 478, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 479, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 480, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 481, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 482, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 483, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 484, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 485, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 486, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 487, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 488, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 489, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 490, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 491, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 492, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 493, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 494, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 495, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 496, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 497, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 498, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 499, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 500, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 501, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 502, "click_pattern": "1", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 503, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 504, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 505, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 506, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 507, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 508, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 509, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 510, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 511, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 512, "click_pattern": "1", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 513, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 514, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 515, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 516, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 517, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 518, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 519, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 520, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 521, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 522, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 523, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 524, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 525, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 526, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 527, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 528, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 529, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 530, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 531, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 532, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 533, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 534, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 535, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 536, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 537, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 538, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 539, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 540, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 541, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 542, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 543, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 544, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 545, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 546, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 547, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 548, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 549, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 550, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 551, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 552, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 553, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 554, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 555, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 556, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 557, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 558, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 559, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 560, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 561, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 562, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 563, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 564, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 565, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 566, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 567, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 568, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 569, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 570, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 571, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 572, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 573, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 574, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 575, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 576, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 577, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 578, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 579, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 580, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 581, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 582, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 583, "click_pattern": "1", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 584, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 585, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 586, "click_pattern": "1", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 587, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 588, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 589, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 590, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 591, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 592, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 593, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 594, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 595, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 596, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 597, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 598, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 599, "click_pattern": "0", "dark_reference": true, "loss_probe": false, "accepted_flag": true, "witness_class": "dark"}
+{"shot_id": 600, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 601, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 602, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 603, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 604, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 605, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 606, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 607, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 608, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 609, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 610, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 611, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 612, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 613, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 614, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 615, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 616, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 617, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 618, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 619, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 620, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 621, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 622, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 623, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 624, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 625, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 626, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 627, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 628, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 629, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 630, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 631, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 632, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 633, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 634, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 635, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 636, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 637, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 638, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 639, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 640, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 641, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 642, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 643, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 644, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 645, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 646, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 647, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 648, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 649, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 650, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 651, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 652, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 653, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 654, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 655, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 656, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 657, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 658, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 659, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 660, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 661, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 662, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 663, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 664, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 665, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 666, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 667, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 668, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 669, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 670, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 671, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 672, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 673, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 674, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 675, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 676, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 677, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 678, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 679, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 680, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 681, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 682, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 683, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 684, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 685, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 686, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 687, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 688, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 689, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 690, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 691, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 692, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 693, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 694, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 695, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 696, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 697, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 698, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 699, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 700, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 701, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 702, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 703, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 704, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 705, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 706, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 707, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 708, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 709, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 710, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 711, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 712, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 713, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 714, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 715, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 716, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 717, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 718, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 719, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 720, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 721, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 722, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 723, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 724, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 725, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 726, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 727, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 728, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 729, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 730, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 731, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 732, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 733, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 734, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 735, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 736, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 737, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 738, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 739, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 740, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 741, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 742, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 743, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 744, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 745, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 746, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 747, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 748, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 749, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 750, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 751, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 752, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 753, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 754, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 755, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 756, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 757, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 758, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 759, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 760, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 761, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 762, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 763, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 764, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 765, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 766, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 767, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 768, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 769, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 770, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 771, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 772, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 773, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 774, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 775, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 776, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 777, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 778, "click_pattern": "0", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 779, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 780, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 781, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 782, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 783, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 784, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 785, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 786, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 787, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 788, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 789, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 790, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 791, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 792, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 793, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 794, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 795, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 796, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 797, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 798, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}
+{"shot_id": 799, "click_pattern": "1", "dark_reference": false, "loss_probe": true, "accepted_flag": true, "witness_class": "loss"}

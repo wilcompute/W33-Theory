@@ -1,0 +1,24 @@
+{
+  "positive_arm": {
+    "fabric": "W(3) odd",
+    "corrected_CF": 0.125,
+    "compatible_with_one_tenth": true,
+    "exact_pvalue_under_1/10": 0.6705741886485617
+  },
+  "control_arm": {
+    "fabric": "W(2) even",
+    "n_contexts": 15,
+    "ovoid_size": 5,
+    "corrected_CF": 0.0,
+    "compatible_with_one_tenth": false,
+    "one_sided_95_upper_bound_CF": 0.02163817488530259,
+    "consistent_with_zero_and_below_one_tenth": true
+  },
+  "discriminator_ok": true,
+  "summary": "the demonstrator's two-arm discriminator, runnable end-to-end through the EXISTING estimators (bt1901 normal-window, bt1904 exact-binomial), unmodified. A synthetic control fixture for the even-order W(2) fabric is generated from the explicit ovoid model (signal click rate = dark baseline, i.e. zero contextual excess, in the demonstrator's raw-shot schema) and run beside the committed BT1903 positive fixture. The SAME estimator returns opposite verdicts on the one-tenth hypothesis: positive arm CF~1/10 (compatible with 1/10), control arm CF~0 (incompatible with 1/10, one-sided 95% upper bound below 1/10). That is the parity law made a runnable discriminating test: a faked 1/10 on the odd fabric would have to be faked on the even fabric too, where the ovoid forbids any contextual excess. HONEST: synthetic control fixture exercising the estimator path, not physical data; the positive arm reuses the committed BT1903 fixture; the ovoid is the exact object from w33_ovoid_construct.py.",
+  "sources": [
+    "bt1901_contextual_fraction_estimator / bt1904_exact_contextual_fraction_estimator (unmodified)",
+    "w33_ovoid_construct (even-q ovoid = noncontextual model)",
+    "holonet_demonstrator_protocol_v1.tex / holonet_parity_control.tex"
+  ]
+}

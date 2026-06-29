@@ -97,6 +97,7 @@ The machine, executed:
 | `py -3 analysis/w33_master_audit.py` | the machine audits itself: **16 layer constants re-derived from q=3** in one pass/fail ledger (`holonet audit`) |
 | `py -3 analysis/w33_audit_qscan.py` | the parity law across **W(q) for q=2,3,4** (q=4 = GF(4)): **CF = 0 for even q, 1/(q²+1) for odd q** — contextual iff q is odd, **parity not primality** (`--deep` adds q=5) |
 | `py -3 analysis/w33_ovoid_construct.py` | the explicit **noncontextual control model**: constructs & verifies the **W(2) 5-ray / W(4) 17-ray ovoid** (CF=0); q=3 has none — the demonstrator's control arm |
+| `py -3 analysis/holonet_control_arm.py` | the **two-arm discriminator**: the same estimators (`bt1901`/`bt1904`) return **CF≈1/10 (q=3) vs CF≈0 (even q)** on the two fixtures — runnable end-to-end |
 | `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
 
 The physics/computer-science core:

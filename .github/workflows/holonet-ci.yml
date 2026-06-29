@@ -18,6 +18,7 @@ on:
       - 'analysis/w33_master_audit.py'
       - 'analysis/w33_audit_qscan.py'
       - 'analysis/w33_ovoid_construct.py'
+      - 'analysis/holonet_control_arm.py'
       - 'analysis/holonet_bench.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
@@ -27,6 +28,7 @@ on:
       - 'tests/test_pass52_qscan_bench.py'
       - 'tests/test_pass53_parity_compare.py'
       - 'tests/test_pass54_ovoid_scale.py'
+      - 'tests/test_pass55_control_arm.py'
       - 'analysis/holonet_cli.py'
       - 'holonet_cmd.py'
       - 'setup.py'
@@ -43,7 +45,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install numpy scipy networkx pytest
+        run: pip install numpy scipy networkx matplotlib pytest
       - name: Install the holonet command
         run: pip install -e .
       - name: holonet verify (self-test the whole stack)
@@ -55,7 +57,7 @@ jobs:
       - name: holonet bench --compare (table-free routing vs table-routed baseline)
         run: holonet bench --compare
       - name: holonet bench --compare --scale (routing-state win grows with q)
-        run: holonet bench --compare --scale
+        run: holonet bench --compare --scale --plot
       - name: holonet info
         run: holonet info
       - name: Fast witnesses (architecture + contextuality)
@@ -70,7 +72,8 @@ jobs:
           python analysis/w33_holonet_firmware_fabric_profile.py
           python analysis/w33_audit_qscan.py
           python analysis/w33_ovoid_construct.py
+          python analysis/holonet_control_arm.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py tests/test_pass55_control_arm.py -q

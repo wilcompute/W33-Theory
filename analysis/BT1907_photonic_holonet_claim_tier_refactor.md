@@ -31,6 +31,10 @@ This refactor separates the full Holonet manuscript into public claim tiers.  Th
 | Steinberg memory and `[[66,8,3]]_3` protection | E/S | Exact representation/code claims where witnessed; threshold behavior simulated. | Split theorem from threshold model. |
 | Runnable VM, teleportation, QEC, quine, consensus | E/S | Executable software demonstrations; simulations clearly labelled. | Keep in machine paper. |
 | Contextual fraction `1/10` | E/P | Exact finite budget and first physical falsifier. | Promote to demonstrator protocol. |
+| Parity law: `CF=0` (even `q`) / `1/(q^2+1)` (odd `q`), scan `q=2,3,4` incl GF(4) | E | Exact: contextual iff `q` odd; `q=4` even composite proves parity, not primality. | Witness `analysis/w33_audit_qscan.py`; ledger row. |
+| Explicit even-`q` ovoid (noncontextual control model) | E | Exact construction of the `W(2)` 5-ray / `W(4)` 17-ray ovoid giving `CF=0`. | Witness `analysis/w33_ovoid_construct.py`; control model for the demonstrator. |
+| Two-arm contextuality discriminator | E/P | Same estimator returns `1/10` (odd) vs `0` (even); the physical control arm is pending. | `analysis/holonet_control_arm.py` runs `bt1901`/`bt1904` on both arms; `holonet_parity_control.tex`. |
+| Table-free routing scaling win | E | Routing state `~n^2 log n` diverges while the Holonet stays `0` bytes / `2` hops at every order. | `holonet bench --compare --scale`. |
 | Magic robustness `R=3` and `9^t` dial | E/S | Exact robustness plus simulated small-`t` cost. | Keep as quantum-resource knob. |
 | Photonic apparatus: PBS, tritter, EOM, OAM/time bins | P | Concrete experiment plan, not a completed build. | Move into demonstrator protocol. |
 | Data-center, virtualization, consensus-without-mining, DNA storage | F | Applications suggested by exact substrate properties. | Keep in implications paper; avoid theorem wording. |

@@ -135,6 +135,12 @@ def cmd_bench(args):
     if getattr(args, "compare", False) and getattr(args, "scale", False):
         ledger, ok = holonet_bench.run_compare_scale()
         holonet_bench._print_compare_scale(ledger)
+        if getattr(args, "plot", False):
+            try:
+                p = holonet_bench.plot_compare_scale(ledger)
+                print(f"\nwrote {p}")
+            except Exception as e:
+                print(f"\n(plot skipped: {e})")
         print(
             f"\n{'OK -- baseline routing state diverges with q; Holonet stays 0 bytes / 2 hops.' if ok else 'FAILURES present.'}"
         )
@@ -236,6 +242,11 @@ def main(argv=None):
         "--scale",
         action="store_true",
         help="with --compare: tabulate how the routing-state win grows with fabric order q",
+    )
+    pb.add_argument(
+        "--plot",
+        action="store_true",
+        help="with --compare --scale: also write the divergence figure docs/holonet_scale.png",
     )
     pb.set_defaults(func=cmd_bench)
     args = p.parse_args(argv)

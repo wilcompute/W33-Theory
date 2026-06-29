@@ -8391,6 +8391,49 @@ forwarding-table sizes are exact closed forms, and the address-routing /
 diameter-two property is verified explicitly for \(q\le5\) and holds for the whole
 \(\mathrm{GQ}(q,q)\) family by the diameter-two theorem.
 
+\subsection{Pass 55 --- the two-arm discriminator, runnable end to end}
+\label{sec:capstone-fiftyfive}
+
+Pass~54 supplied the control model; Pass~55 makes the two-arm test executable
+inside the demonstrator's own estimator pipeline, and gives the scaling win a
+figure.
+
+\paragraph{One estimator, two fabrics, opposite verdicts.}  The demonstrator
+ships two contextual-fraction estimators --- a normal-window check and an exact
+two-sided binomial test --- both written against the raw-shot schema and both
+targeting \(1/10\).  The witness \path{analysis/holonet_control_arm.py} runs those
+\emph{unmodified} estimators on two fixtures.  The positive fixture is the
+committed synthetic \(q=3\) run; the control fixture is generated from the
+explicit \(W(2)\) ovoid, where, because the ovoid satisfies every context, the
+noncontextual model has zero contextual excess and the signal therefore clicks
+only at the dark-count baseline.  The same estimators then return opposite
+verdicts on the one-tenth hypothesis:
+\[
+  \text{positive } W(3):\ \widehat{\mathrm{CF}}\approx 0.125\ \text{(compatible with }1/10\text{)},
+  \qquad
+  \text{control } W(2):\ \widehat{\mathrm{CF}}\approx 0\ \text{(incompatible with }1/10\text{)},
+\]
+with a one-sided upper bound on the control fraction below \(1/10\).  This is the
+parity law as a discriminating measurement that runs through the existing
+pipeline: a systematic faking a \(1/10\) signal on the odd fabric would have to
+fake it on the even fabric as well, where an explicit ovoid forbids any
+contextual excess.  The parity law, the explicit ovoid, and this discriminator
+are registered at tier~E in the public claim-tier spine
+(\path{analysis/BT1907_photonic_holonet_claim_tier_refactor.md}).
+
+\paragraph{The scaling win, drawn.}  Finally
+\path{holonet bench --compare --scale --plot} renders the routing comparison as a
+figure: across \(q=2\) to \(13\) the classical forwarding table climbs from about
+a hundred bytes to several megabytes on a logarithmic axis, while the Holonet line
+stays pinned at zero bytes and two hops, written to \path{docs/holonet_scale.png}.
+
+\emph{Honest scope:} the control fixture is a synthetic run exercising the
+estimator path, not physical data; the positive arm reuses the committed synthetic
+fixture; the even-order analyzer bank remains a different optical object from the
+forty Witting tetrads.  What is demonstrated is that the discriminator executes
+through the unmodified estimators and returns the geometry-forced verdicts, and
+that the figure is regenerated from the same closed-form scaling law.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
