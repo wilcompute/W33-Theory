@@ -4268,7 +4268,12 @@
               <code>analysis/w33_holonet_retro_export.py</code> writes deterministic
               <code>artifacts/holonet_asm/router_4004_style.asm</code>,
               <code>router_6502_style.asm</code>, and <code>router_z80_style.asm</code>
-              plus golden traces. Try the route below; four digits are a normalized
+              plus golden traces. <strong>Pass 50 closes the firmware-to-fabric accounting:</strong>
+              <code>analysis/w33_holonet_firmware_fabric_profile.py</code> verifies that the
+              global mirror atlas is exactly <code>2160 = 30 &times; 72</code>, the full
+              runtime supercycle is <code>51840 = 720 &times; 72</code>, and Witting admission
+              opens a full packet with probability <code>13/40</code>, giving
+              <code>117/5</code> expected packet trits per random query. Try the route below; four digits are a normalized
               point of <code>F3^4</code>.</div>
             <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:flex-end;margin-top:0.8rem;">
               <label style="font-size:0.85em;">source<br><input id="hn-src" value="1000" maxlength="4"
@@ -4324,6 +4329,27 @@
                 route();
               })();
             </script>
+          </div>
+          <div class="card" id="holonet-playground-card">
+            <div class="label">Pass 51 &mdash; The Machine Audits Itself + Live Playground</div>
+            <div class="detail"><strong>The device specification is its own audit.</strong>
+              <code>analysis/w33_master_audit.py</code> (run it as <code>holonet audit</code>)
+              <em>recomputes</em> &mdash; does not store &mdash; the headline constant of every
+              architectural layer from the single integer <code>q = 3</code>, in one pass, into a single
+              pass/fail ledger: the network <code>SRG(40,12,2,4)</code> / diameter 2 / <code>&lambda;&#8322;=2</code> /
+              bisection 100, the processor runtime <code>51840 = 24&middot;2160 = |W(E6)|</code> with its
+              40 line-contexts, the contextuality (max partial ovoid 7, max satisfiable contexts
+              <code>36/40 &rarr; CF = 1/10</code>, CSW <code>&chi; = 10 &gt; 7</code>), the magic robustness 3,
+              the distance-3 break-even and Byzantine bound 5, the Holevo capacity <code>log&#8322;3</code>,
+              the 7-op minimal forwarding, and the ternary tax <code>2/log&#8322;3</code> &mdash; <strong>16
+              checks, ALL PASS</strong>, and it gates CI on every push. There is no separate trusted
+              checker: running the audit <em>is</em> the act of trusting the machine.
+              <br><br>
+              <strong>And the whole machine is now a live, no-install playground:</strong>
+              <a href="holonet.html">docs/holonet.html</a> lets you route a packet, drive the Clifford
+              register, run the contextuality witness, and reproduce a node directly in the browser &mdash;
+              the same vanilla-JS symplectic math the witnesses verify against Python.</div>
+            <div style="margin-top:0.6rem;"><a href="holonet.html" style="display:inline-block;padding:0.4rem 0.9rem;border:1px solid #4a9;border-radius:6px;text-decoration:none;">&#9654;&nbsp; Open the Holonet playground</a></div>
           </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>

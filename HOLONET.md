@@ -48,9 +48,18 @@ holonet correct              # run a [[5,1,3]]_3 error-correction cycle  -> fide
 holonet teleport             # teleport a qutrit A->B (no-cloning)       -> fidelity 1
 holonet reproduce            # splice a W(3,3) child (von Neumann self-reproduction)
 holonet verify               # 7 stack checks -> ALL PASS
+holonet audit                # re-derive every layer's headline constant from q=3 -> 16 checks, ALL PASS
 ```
 
 `holonet verify` should end with **`ALL PASS — this machine is a working holonet node.`**
+
+`holonet audit` is the stronger statement: it recomputes (does not store) the headline constant of
+*every* architectural layer — the network `SRG(40,12,2,4)` / diameter 2 / `λ₂ = 2` / bisection 100, the
+processor runtime `51840 = 24·2160 = |W(E6)|` and its 40 line-contexts, the contextuality (max partial
+ovoid 7, max satisfiable contexts 36/40 → `CF = 1/10`, CSW `χ = 10 > 7`), the magic robustness 3, the
+distance-3 break-even and Byzantine bound 5, the Holevo capacity `log₂3`, the 7-op minimal forwarding,
+and the ternary tax `2/log₂3` — straight from the single integer **q = 3**, and reports one pass/fail
+ledger. The device specification is its own audit: there is no separate trusted checker.
 
 ## 4. The runnable witnesses (each prints its own result + writes `data/*.json`)
 
@@ -74,6 +83,8 @@ The machine, executed:
 | `py -3 analysis/w33_holonet_asm.py` | a tiny holonet assembler: 4-bit target plus **6502-style 8-bit target** with MUL/MOD synthesized |
 | `py -3 analysis/w33_holonet_retro_export.py` | exports deterministic **4004 / 6502 / Z80-style listings** plus golden traces |
 | `py -3 analysis/w33_packet_energy.py` | the per-packet traffic bill: **72 trits -> 144 binary host bits** for the minimal control packet |
+| `py -3 analysis/w33_holonet_firmware_fabric_profile.py` | firmware-to-fabric accounting: **2160 = 30 × 72**, with `13/40` Witting admission and `117/5` expected trits/query |
+| `py -3 analysis/w33_master_audit.py` | the machine audits itself: **16 layer constants re-derived from q=3** in one pass/fail ledger (`holonet audit`) |
 
 The physics/computer-science core:
 
@@ -101,6 +112,8 @@ python -m pytest tests/test_holonet_vm.py -q     # 13 exact checks of the VM
 - **`holonet_practical_implications.tex`** — the implications paper (data centers, decentralized compute,
   virtual machines, energy, and the frontier applications).
 - **`docs/index.html`** — the interactive results index.
+- **`docs/holonet.html`** — the interactive **playground**: route a packet, drive the Clifford
+  register, run the contextuality witness, and reproduce a node, all live in the browser (no install).
 
 ## 7. One honest paragraph
 

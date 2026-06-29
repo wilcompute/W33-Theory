@@ -114,6 +114,20 @@ def cmd_info(args):
         print(f"  {k:14s}: {v}")
 
 
+def cmd_audit(args):
+    """Re-verify every architectural layer from q=3 in one pass/fail ledger."""
+    import w33_master_audit  # noqa: E402
+
+    checks, all_ok = w33_master_audit.run_audit()
+    print("holonet audit -- re-deriving the whole datasheet from q=3:")
+    for name, ok in checks:
+        print(f"  [{'PASS' if ok else 'FAIL'}]  {name}")
+    print(
+        f"\n{'ALL PASS -- the whole datasheet re-derives from q=3.' if all_ok else 'FAILURES present.'}"
+    )
+    sys.exit(0 if all_ok else 1)
+
+
 def cmd_verify(args):
     checks = []
     # network
@@ -173,6 +187,9 @@ def main(argv=None):
     sub.add_parser(
         "verify", help="self-test the whole stack -> PASS/FAIL"
     ).set_defaults(func=cmd_verify)
+    sub.add_parser(
+        "audit", help="re-derive every layer's headline constant from q=3 -> PASS/FAIL"
+    ).set_defaults(func=cmd_audit)
     args = p.parse_args(argv)
     args.func(args)
 

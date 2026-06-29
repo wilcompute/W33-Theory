@@ -13,11 +13,15 @@ on:
       - 'analysis/w33_ternary_energy.py'
       - 'analysis/w33_holonet_asm.py'
       - 'analysis/w33_holonet_retro_export.py'
+      - 'analysis/w33_holonet_firmware_fabric_profile.py'
       - 'analysis/w33_packet_energy.py'
+      - 'analysis/w33_master_audit.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
       - 'tests/test_holonet_vm.py'
       - 'tests/test_pass48_holonet_asm_energy.py'
+      - 'tests/test_pass50_master_audit.py'
+      - 'analysis/holonet_cli.py'
       - 'holonet_cmd.py'
       - 'setup.py'
       - '.github/workflows/holonet-ci.yml'
@@ -38,6 +42,8 @@ jobs:
         run: pip install -e .
       - name: holonet verify (self-test the whole stack)
         run: holonet verify
+      - name: holonet audit (re-derive every layer's headline constant from q=3)
+        run: holonet audit
       - name: holonet info
         run: holonet info
       - name: Fast witnesses (architecture + contextuality)
@@ -49,7 +55,8 @@ jobs:
           python analysis/w33_holonet_asm.py
           python analysis/w33_holonet_retro_export.py
           python analysis/w33_packet_energy.py
+          python analysis/w33_holonet_firmware_fabric_profile.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py -q

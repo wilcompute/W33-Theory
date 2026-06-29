@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "name": "network: SRG(40,12,2,4)",
+      "pass": true
+    },
+    {
+      "name": "network: diameter 2 (every non-edge has a common neighbour)",
+      "pass": true
+    },
+    {
+      "name": "network: lambda_2 = 2 < Ramanujan 2*sqrt(11)",
+      "pass": true
+    },
+    {
+      "name": "network: bisection 100 = (n/4)(k-lambda_2)",
+      "pass": true
+    },
+    {
+      "name": "processor: Clifford runtime 51840 = 24*2160 = |W(E6)|",
+      "pass": true
+    },
+    {
+      "name": "processor: per-qutrit Clifford |Sp(2,3)| = 24 = f",
+      "pass": true
+    },
+    {
+      "name": "processor: 40 totally-isotropic line-contexts (4 points each)",
+      "pass": true
+    },
+    {
+      "name": "contextuality: max partial ovoid (independence number) = 7",
+      "pass": true
+    },
+    {
+      "name": "contextuality: max satisfiable contexts 36/40 -> CF = 1/10",
+      "pass": true
+    },
+    {
+      "name": "contextuality: CSW quantum value chi = 10 > alpha = 7",
+      "pass": true
+    },
+    {
+      "name": "magic: robustness R = 3 (LP); mana = ln(5/3)",
+      "pass": true
+    },
+    {
+      "name": "fault-tol: distance-3 code below break-even at p=0.05 (P_L < p)",
+      "pass": true
+    },
+    {
+      "name": "fault-tol: Byzantine t = 5 = min((n-1)/3, (kappa-1)/2)",
+      "pass": true
+    },
+    {
+      "name": "I/O: Holevo qutrit capacity log2(3) = 1.585",
+      "pass": true
+    },
+    {
+      "name": "minimal: forwarding = 7 mod-3 ops, zero routing table",
+      "pass": true
+    },
+    {
+      "name": "energy: ternary encoding tax = 2/log2(3) = 1.26",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "summary": "the machine audits itself: one command re-verifies every layer of the Holonet from q=3. Recomputes (not stores) the headline constant of each layer -- network SRG(40,12,2,4) / diameter 2 / lambda_2=2 / bisection 100; processor 51840=24*2160=|W(E6)|, 40 line-contexts; contextuality max partial ovoid 7, max satisfiable contexts 36/40 -> CF 1/10, CSW chi=10>7; magic robustness 3 (LP); fault tolerance distance-3 break-even + Byzantine 5; I/O Holevo log2(3); minimal forwarding 7 mod-3 ops; ternary tax 2/log2(3) -- and emits a single pass/fail ledger. Wired as `holonet audit` and into CI, so the whole specification is re-verified on every push: the device spec is its own audit. HONEST: each check is an exact recomputation from the geometry (a few use scipy milp/linprog; the threshold check is a small Monte-Carlo, so statistical); the heavy |Sp(4,3)| closure is checked via its arithmetic factorization 24*2160 (full closure in w33_isa_encoding); physics identifications and quantum-advantage values stay in their own witnesses.",
+  "sources": [
+    "all Pass 34-49 witnesses (re-checked here); W(3,3) geometry; scipy milp/linprog; networkx"
+  ]
+}

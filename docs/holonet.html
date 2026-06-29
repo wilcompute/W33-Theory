@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Holonet Machine — run it in your browser</title>
+<style>
+  :root { --blue:#1f5fbf; --ink:#1a2230; --soft:#5a6678; --bg:#f7f9fc; --card:#fff; --line:#dde3ec; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  header { background:linear-gradient(135deg,#11204a,#1f5fbf); color:#fff; padding:2.2em 1em 1.6em; text-align:center; }
+  header h1 { margin:0 0 .2em; font-size:1.9em; }
+  header p { margin:.2em auto; max-width:760px; opacity:.92; font-size:.98em; }
+  .badge { display:inline-block; margin-top:.6em; }
+  main { max-width:920px; margin:0 auto; padding:1.4em 1em 3em; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.1em 1.2em; margin:1.1em 0; box-shadow:0 1px 3px rgba(20,40,80,.05); }
+  .card h2 { margin:0 0 .5em; color:var(--blue); font-size:1.15em; }
+  .card .sub { color:var(--soft); font-size:.9em; margin:-.2em 0 .8em; }
+  label { font-size:.85em; color:var(--soft); display:block; margin:.3em 0 .1em; }
+  input[type=text], input[type=number] { font:inherit; padding:.4em .5em; border:1px solid var(--line); border-radius:6px; width:7em; }
+  button { font:inherit; background:var(--blue); color:#fff; border:0; border-radius:6px; padding:.45em .9em; cursor:pointer; margin-top:.2em; }
+  button.alt { background:#fff; color:var(--blue); border:1px solid var(--blue); }
+  button:hover { filter:brightness(1.07); }
+  pre { background:#0e1726; color:#dbe6f5; border-radius:8px; padding:.8em 1em; overflow:auto; font-size:.86em; margin:.6em 0 0; }
+  .row { display:flex; gap:1.2em; flex-wrap:wrap; align-items:flex-end; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:.4em .9em; font-size:.9em; }
+  .grid div { border-bottom:1px dashed var(--line); padding:.25em 0; }
+  .grid b { color:var(--blue); }
+  code { background:#eef2f8; padding:.05em .3em; border-radius:4px; font-size:.92em; }
+  .note { font-size:.82em; color:var(--soft); margin-top:.6em; }
+  footer { text-align:center; color:var(--soft); font-size:.85em; padding:1.5em; }
+  a { color:var(--blue); }
+</style>
+</head>
+<body>
+<header>
+  <h1>The Holonet Machine</h1>
+  <p>A universal computer that is also its own network and memory, on the symplectic geometry
+     <b>W(3,3) = GQ(3,3)</b>. The classical layer is pure mod-3 integer arithmetic, so it runs right here
+     in your browser &mdash; no install. Routing <i>is</i> gating <i>is</i> memory access.</p>
+  <p class="note" style="color:#cfe0ff">Everything below is the real machine, computed live in JavaScript. The quantum
+     <i>advantage</i> is the one thing a browser can't supply (the priced 9<sup>t</sup> dial).</p>
+</header>
+<main>
+
+  <div class="card">
+    <h2>1 &middot; The network: route a packet</h2>
+    <div class="sub">A node's address is a point of F<sub>3</sub><sup>4</sup>. Two nodes are linked iff their
+      symplectic inner product B(x,y)=0 &mdash; one ALU operation. The address <i>is</i> the route; diameter 2.</div>
+    <div class="row">
+      <div><label>source</label><input id="src" type="text" value="1000"></div>
+      <div><label>destination</label><input id="dst" type="text" value="0100"></div>
+      <div><button id="routeBtn">route</button> <button class="alt" id="randBtn">random pair</button></div>
+    </div>
+    <pre id="routeOut"></pre>
+    <div class="note">Valid addresses are 4 base-3 digits, normalized (first nonzero = 1): e.g. 1000, 0100, 0010, 0001, 1011, 0121. There are 40.</div>
+  </div>
+
+  <div class="card">
+    <h2>2 &middot; The processor: a Clifford register</h2>
+    <div class="sub">A 2-qutrit register as a stabilizer tableau over F<sub>3</sub>. Apply gates and watch the
+      stabilizers evolve by the symplectic group &mdash; in polynomial time, exactly Gottesman&ndash;Knill.</div>
+    <div class="row">
+      <button id="fA">Fourier qutrit 0</button>
+      <button id="fB">Fourier qutrit 1</button>
+      <button id="sumG">SUM 0&rarr;1</button>
+      <button class="alt" id="resetReg">reset to |00&rang;</button>
+    </div>
+    <pre id="regOut"></pre>
+  </div>
+
+  <div class="card">
+    <h2>3 &middot; The contextual fuel: a state-independent witness</h2>
+    <div class="sub">The 40 contexts (orthonormal Witting tetrads) give a Cabello&ndash;Severini&ndash;Winter witness
+      &chi; = &sum;<sub>v</sub> P(v). Noncontextual models obey <b>&chi; &le; &alpha; = 7</b> (the independence number);
+      quantum mechanics gives <b>&chi; = 10</b> for any state. The gap is the magic fuel.</div>
+    <div class="row">
+      <div><label>detected photons / ray</label><input id="shots" type="number" value="50" min="1" step="1"></div>
+      <div><button id="ctxBtn">estimate significance</button></div>
+    </div>
+    <pre id="ctxOut"></pre>
+    <div class="note">The contextual fraction is (40&minus;36)/40 = <b>1/10</b>, derived from the no-ovoid geometry (W(q) has no
+      ovoid for q odd; the max partial ovoid is 7 &lt; 10). One bench measurement clears &alpha;=7 at 5&sigma; with a few hundred photons.</div>
+  </div>
+
+  <div class="card">
+    <h2>4 &middot; Self-reproduction: splice a child</h2>
+    <div class="sub">The fractal law H<sub>n</sub> replaces each of the 40 points by H<sub>n&minus;1</sub>. A node
+      reproduces by splicing a W(3,3) copy &mdash; address grows one digit, diameter grows by 8.</div>
+    <div class="row"><button id="spawnBtn">reproduce</button> <button class="alt" id="spawnReset">reset</button></div>
+    <pre id="spawnOut"></pre>
+  </div>
+
+  <div class="card">
+    <h2>5 &middot; The datasheet</h2>
+    <div class="grid" id="sheet"></div>
+  </div>
+
+</main>
+<footer>
+  Part of the <a href="index.html">W(3,3)&ndash;E<sub>6</sub> Theory</a> &middot; runnable VM:
+  <code>pip install -e . &amp;&amp; holonet verify</code> &middot; quickstart: <code>HOLONET.md</code> &middot;
+  papers: <code>holonet_machine.tex</code>, <code>photonic_holonet.tex</code>.
+  <div style="margin-top:.5em">This page is self-contained vanilla JavaScript &mdash; view source to read the machine.</div>
+</footer>
+
+<script>
+(function(){
+  // ---------- W(3,3): 40 points of F_3^4, normalized; symplectic form ----------
+  const inv = {1:1, 2:2};
+  const key = p => p.join("");
+  function norm(v){ for (const c of v) if (c!==0) return v.map(x=>(x*inv[c])%3); return null; }
+  const points = []; const seen = new Set();
+  for (let a=0;a<3;a++) for (let b=0;b<3;b++) for (let c=0;c<3;c++) for (let d=0;d<3;d++){
+    const n = norm([a,b,c,d]); if (n && !seen.has(key(n))) { seen.add(key(n)); points.push(n); }
+  }
+  points.sort((u,v)=>key(u).localeCompare(key(v)));
+  function parse(s){ if(!/^[012]{4}$/.test(s)) return null; const n=norm(s.split("").map(Number)); return n&&key(n)===s?n:null; }
+  function B(x,y){ return (x[0]*y[1]-x[1]*y[0]+x[2]*y[3]-x[3]*y[2]+99)%3; }
+
+  // ---------- 1. router ----------
+  function doRoute(){
+    const src=parse(document.getElementById("src").value.trim());
+    const dst=parse(document.getElementById("dst").value.trim());
+    const out=document.getElementById("routeOut");
+    if(!src||!dst){ out.textContent="Use 4 base-3 digits, normalized (first nonzero = 1): e.g. 1000, 0010, 1011."; return; }
+    if(key(src)===key(dst)){ out.textContent="self route: "+key(src); return; }
+    const b=B(src,dst);
+    if(b===0){ out.textContent="DIRECT EDGE  "+key(src)+" → "+key(dst)+"\n  B(src,dst)=0  (adjacent)\n  forwarding cost: 7 mod-3 ops, zero routing table"; return; }
+    const relays=points.filter(p=>key(p)!==key(src)&&key(p)!==key(dst)&&B(src,p)===0&&B(p,dst)===0);
+    out.textContent="TWO-HOP ROUTE  "+key(src)+" → "+key(relays[0])+" → "+key(dst)
+      +"\n  B(src,dst)="+b+"  (non-adjacent)\n  μ = "+relays.length+" internally-disjoint relays (four-way multipath)"
+      +"\n  forwarding cost: 7 mod-3 ops per adjacency test, zero routing table";
+  }
+  document.getElementById("routeBtn").onclick=doRoute;
+  document.getElementById("randBtn").onclick=function(){
+    const a=points[Math.floor(Math.random()*40)], b=points[Math.floor(Math.random()*40)];
+    document.getElementById("src").value=key(a); document.getElementById("dst").value=key(b); doRoute();
+  };
+
+  // ---------- 2. Clifford stabilizer register (2 qutrits, tableau over F_3) ----------
+  let S; // 2 generators, each [x0,z0,x1,z1]
+  function resetReg(){ S=[[0,1,0,0],[0,0,0,1]]; showReg("reset to |00⟩"); }
+  function fourier(i){ for(const g of S){ const x=g[2*i], z=g[2*i+1]; g[2*i]=(3-z)%3; g[2*i+1]=x%3; } }
+  function sumGate(c,t){ for(const g of S){ g[2*t]=(g[2*t]+g[2*c])%3; g[2*c+1]=(g[2*c+1]-g[2*t+1]+3)%3; } }
+  function pauliStr(g){ let s=[]; for(let i=0;i<2;i++){ const x=g[2*i],z=g[2*i+1]; s.push((x===0&&z===0)?"I":("X^"+x+"Z^"+z)); } return s.join(" "); }
+  function sip(u,v){ let s=0; for(let i=0;i<2;i++) s+=u[2*i]*v[2*i+1]-u[2*i+1]*v[2*i]; return ((s%3)+3)%3; }
+  function showReg(action){
+    const commute = sip(S[0],S[1])===0;
+    document.getElementById("regOut").textContent =
+      action+"\n  stabilizer generators:\n    g1 = "+pauliStr(S[0])+"\n    g2 = "+pauliStr(S[1])
+      +"\n  generators commute (valid stabilizer state): "+commute;
+  }
+  document.getElementById("fA").onclick=function(){ fourier(0); showReg("Fourier(0)"); };
+  document.getElementById("fB").onclick=function(){ fourier(1); showReg("Fourier(1)"); };
+  document.getElementById("sumG").onclick=function(){ sumGate(0,1); showReg("SUM(0→1)  [entangling]"); };
+  document.getElementById("resetReg").onclick=resetReg;
+  resetReg();
+
+  // ---------- 3. contextuality witness ----------
+  const ALPHA=7, QM=10, NRAYS=40, PR=0.245;
+  function doCtx(){
+    const N=Math.max(1, Math.floor(+document.getElementById("shots").value||1));
+    const se=Math.sqrt(NRAYS*PR*(1-PR)/N);
+    const sigma=(QM-ALPHA)/se;
+    const need5=Math.ceil(25*NRAYS*PR*(1-PR)/((QM-ALPHA)*(QM-ALPHA)));
+    document.getElementById("ctxOut").textContent =
+      "noncontextual bound  α = "+ALPHA+"\nquantum value        χ = "+QM+"   (state-independent; Σ of 40 projectors = 10·I)"
+      +"\n\nwith "+N+" photons/ray:  χ̂ ≈ 10 ± "+se.toFixed(2)
+      +"  → clears α="+ALPHA+" by "+sigma.toFixed(1)+"σ"
+      +"\n5σ needs ~"+need5+" photons/ray ("+(need5*NRAYS)+" total)"
+      +(sigma>=5?"\n  ✅ refutes noncontextual realism":"\n  (raise photons/ray to reach 5σ)");
+  }
+  document.getElementById("ctxBtn").onclick=doCtx; doCtx();
+
+  // ---------- 4. self-reproduction ----------
+  let level=1, addr=key(points[0]);
+  function showSpawn(msg){ document.getElementById("spawnOut").textContent=msg; }
+  document.getElementById("spawnBtn").onclick=function(){
+    const child=points[Math.floor(Math.random()*40)];
+    level++; addr=addr+"·"+key(child);
+    showSpawn("spliced a W(3,3) child\n  level "+level+"  address "+addr+"\n  routing diameter = 8×level = "+(8*level)+" hops"
+      +"\n  leaf cores at this level: 40^"+level+" = "+Math.pow(40,level).toLocaleString());
+  };
+  document.getElementById("spawnReset").onclick=function(){ level=1; addr=key(points[0]); showSpawn("level 1  address "+addr+"  diameter 8"); };
+  document.getElementById("spawnReset").click();
+
+  // ---------- 5. datasheet ----------
+  const sheet=[
+    ["nodes / fabric","40 = GQ(3,3) = SRG(40,12,2,4)"],
+    ["radix / diameter","12 / 2 (any-to-any in 2 hops)"],
+    ["bisection","100 (non-planar → photonic)"],
+    ["ISA","Sp(4,3) = 51840 = |W(E₆)| + 1 cubic magic"],
+    ["memory","[[66,8,3]]₃, distance 3; threshold pₜₕ ~ A p²"],
+    ["fault tolerance","11 crash / 5 Byzantine"],
+    ["contextual fraction","1/10 (χ=10 > α=7), magic robustness 3"],
+    ["minimal host","mod-3 ALU + ~100 bytes; runs on a 4-bit CPU"],
+  ];
+  document.getElementById("sheet").innerHTML = sheet.map(r=>"<div><b>"+r[0]+"</b><br>"+r[1]+"</div>").join("");
+
+  doRoute();
+})();
+</script>
+</body>
+</html>

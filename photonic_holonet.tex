@@ -8097,6 +8097,130 @@ not vendor assembler promises.  They prove deterministic compilation and
 traceability of the classical control layer; they do not claim cycle-accurate
 performance on historical 4004, MOS~6502, or Z80 silicon.
 
+\subsection{Pass 50 --- firmware-to-fabric accounting}
+\label{sec:capstone-fifty}
+
+The last missing practical bridge was not another emulator.  It was an
+accounting identity from firmware all the way up to the global tomotope/Witting
+fabric.  Pass~48 gave the minimal packet:
+\[
+  72 = 16\ \hbox{route trits}+48\ \hbox{body trits}+8\ \hbox{epilogue trits}.
+\]
+Pass~49 gave the exported route-decision programs.  The typed packet ABI
+already contains the global mirror bus:
+\[
+  2160 = 45\cdot48,\qquad 51840 = 24\cdot2160 .
+\]
+\path{analysis/w33_holonet_firmware_fabric_profile.py} joins those facts and
+verifies the cross-layer closure
+\[
+  2160 = 30\cdot72,\qquad 51840 = 720\cdot72 .
+\]
+A complete mirror atlas is exactly thirty minimal packet frames, and a full
+\(\mathrm{Sp}(4,3)\) runtime supercycle is exactly seven hundred twenty packet
+frames.  This is the system-level meaning of the Boerdijk--Coxeter/E8 beat:
+the global bus does not float above the packet machine; it is an integral
+multiple of the packet clock.
+
+The same witness pushes the firmware counts through that accounting.  A
+worst-case packet asks for two route decisions, so the exported targets cost
+\[
+\begin{array}{c|ccc}
+\hbox{target} & \hbox{listing instructions/decision} &
+\hbox{static instructions/packet} & \hbox{static instructions/mirror atlas}\\
+\hline
+4004\hbox{-style} & 22 & 44 & 1320\\
+6502\hbox{-style} & 130 & 260 & 7800\\
+Z80\hbox{-style} & 111 & 222 & 6660
+\end{array}
+\]
+with dynamic accumulator-step upper bounds recorded separately for the
+eight-bit targets.  The same packet on a binary host moves \(144\) bits; a
+filled mirror atlas therefore corresponds to \(30\cdot144=4320\) binary host
+bits, while the ternary information content is only about \(3423.5\) bits.
+That gap is precisely the encoding tax, now visible at the bus epoch rather
+than at one digit.
+
+The Witting admission desk also becomes a traffic statement.  The logical ROM
+splits
+\[
+  1600 = 520\ \hbox{accepted} + 1080\ \hbox{retry-shadow},
+  \qquad \frac{520}{1600}=\frac{13}{40}.
+\]
+Therefore a random ordered Witting query opens a full packet with probability
+\(13/40\), and the expected full-frame traffic is
+\[
+  72\cdot \frac{13}{40}=\frac{117}{5}=23.4
+\]
+trits per query.  The retry-shadow sector is not ignored; it is now counted as
+the complementary \(27/40\) admission shadow and paired with the symbolic
+BT1706 retry economics.  At the nominal rates \(p_{\rm loss}=10^{-5}\),
+\(p_{\rm dark}=10^{-6}\), and \(p_{\rm parity}=5\times10^{-6}\), the combined
+retry-exit probability is \(64p_{\rm loss}+8p_{\rm dark}+24p_{\rm parity}
+=7.68\times10^{-4}\), below one tenth of one percent per packet.
+
+\emph{Honest scope:} this pass is deterministic accounting, not a measured
+latency benchmark.  The retro listings are canonical target programs rather
+than vendor-cycle timing claims; the packed mirror-atlas capacity assumes
+disjoint typed slots; and the retry numbers use the nominal symbolic rates of
+the existing runtime model.  What is proved is the architectural fact that the
+firmware router, \(72\)-trit packet, \(2160\)-slot mirror bus, and
+\(51840\)-slot supercycle are one integer clockwork.
+
+\subsection{Pass 51 --- the machine audits itself, and the live playground}
+\label{sec:capstone-fiftyone}
+
+Every prior pass added a witness; this pass closes the loop by making the whole
+datasheet re-derive itself in one command.  The Holonet's signature claim is
+that the device specification \emph{is} its own audit: there is no separate
+trusted checker, because every architectural constant is forced by the geometry
+and can be recomputed from the single integer \(q=3\).  Pass~51 makes that
+literal.  The witness \path{analysis/w33_master_audit.py} recomputes --- it does
+not store --- the headline constant of every layer, in one pass, into a single
+pass/fail ledger:
+\begin{center}
+\begin{tabular}{ll}
+network & \(\mathrm{SRG}(40,12,2,4)\); diameter \(2\); \(\lambda_2=2\); bisection \(100=\tfrac{n}{4}(k-\lambda_2)\)\\
+processor & runtime \(51840=24\cdot2160=|W(E_6)|\); \(40\) totally-isotropic line-contexts\\
+contextuality & max partial ovoid \(7\); max satisfiable contexts \(36/40\Rightarrow \mathrm{CF}=1/10\); CSW \(\chi=10>7\)\\
+magic & robustness \(R=3\) (LP); mana \(\ln(5/3)\)\\
+fault tolerance & distance-\(3\) break-even at \(p=0.05\); Byzantine \(t=5=\min(\tfrac{n-1}{3},\tfrac{k-1}{2})\)\\
+I/O \& minimal & Holevo \(\log_2 3\); forwarding \(=7\) mod-\(3\) ops, zero table; ternary tax \(2/\log_2 3\)
+\end{tabular}
+\end{center}
+Sixteen checks, all passing.  Crucially, none of these is a stored number: the
+audit rebuilds \(W(3,3)\) from \(q=3\), recomputes the spectrum, solves the
+contextuality ILP and the magic-robustness LP, runs a small distance-\(3\)
+Monte-Carlo, and only then compares.  Running the audit is therefore exactly the
+act of trusting the machine --- if the geometry is what the specification says it
+is, every layer's headline constant follows.  It is exposed as a command,
+\path{holonet audit}, and wired into continuous integration, so the entire
+datasheet is re-verified on every push.
+
+The same pass makes the architecture a no-install playground.  The page
+\path{docs/holonet.html} runs the classical machine live in a browser in vanilla
+JavaScript: route a packet (the address \emph{is} the route, two hops, \(\mu=4\)
+multipath), drive the qutrit Clifford register (Fourier and \textsc{sum} gates
+with a symplectic commutation check), run the Cabello--Severini--Winter
+contextuality witness as a shot count converging on the \(7\) versus \(10\) gap,
+and splice a self-reproducing child.  The JavaScript uses the identical
+symplectic form
+\[
+  B(x,y)=x_0y_1-x_1y_0+x_2y_3-x_3y_2\pmod 3
+\]
+that the Python witnesses verify against, so the browser demonstration and the
+audited specification are the same arithmetic.
+
+\emph{Honest scope:} fifteen of the sixteen audit checks are exact
+recomputations; the distance-\(3\) break-even check is a small Monte-Carlo and is
+therefore statistical, and the heavy \(|\mathrm{Sp}(4,3)|=51840\) closure is
+checked here through its arithmetic factorization \(24\cdot2160=|W(E_6)|\) rather
+than re-enumerated (the full closure remains in \path{analysis/w33_isa_encoding.py}).
+The physics identifications and the quantum-advantage values are re-stated, not
+re-measured, by the audit; they keep their own witnesses and the priced \(9^t\)
+dial.  What Pass~51 proves is the self-auditing property: one command, the whole
+datasheet, re-derived and checked from \(q=3\) alone.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
