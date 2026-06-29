@@ -8054,6 +8054,49 @@ eight-bit target is 6502-style accumulator semantics, not a hardware timing
 benchmark.  The \(72\)-trit packet bill is a traffic model for the minimal
 control envelope; payload traffic scales linearly on top.
 
+\subsection{Pass 49 --- exported retro targets and golden traces}
+\label{sec:capstone-fortynine}
+
+Pass~48 showed that the router has a compiler semantics.  Pass~49 makes that
+semantics into files a reader can inspect and diff.  The witness
+\path{analysis/w33_holonet_retro_export.py} writes a small artifact bundle
+under \path{artifacts/holonet_asm/}:
+\begin{center}
+\begin{tabular}{lll}
+4004-style & 22 instructions & \path{router_4004_style.asm}\\
+6502-style & 130 instructions & \path{router_6502_style.asm}\\
+Z80-style & 111 instructions & \path{router_z80_style.asm}
+\end{tabular}
+\end{center}
+Each listing computes the same symplectic routing bit
+\[
+  B(x,y)=x_0y_1-x_1y_0+x_2y_3-x_3y_2\pmod 3,
+\]
+and the artifact bundle includes golden traces for the sample route
+\[
+  1000 \longrightarrow 0100,\qquad B=1.
+\]
+The Z80-style target is an independent check, not a re-label of the 6502
+program: it is assembled to its own accumulator/control-flow instruction set
+and verified on all \(1600\) ordered \(W(3,3)\) address pairs, with no
+\(\textsc{mul}\) and no \(\textsc{mod}_3\) opcode.  Multiplication and
+reduction are compiled into load, store, add, subtract, compare, and jump.
+
+The architectural interpretation is important.  The Holonet router has crossed
+from ``there exists an emulator'' to ``there exists a bootstrapping compiler
+surface.''  The smallest layer is the ternary algebra
+\(\{\textsc{add}_3,\textsc{sub}_3,\textsc{mul}_3\}\); above it, ordinary
+binary-era control machines can synthesize the same route decision; above
+that, the browser widget executes the same primitive interactively; and above
+that, the photonic packet layer supplies the quantum timing and magic.  The
+network stack is therefore fractal: the same \(B(x,y)\) form appears as
+machine code, routing rule, packet admission test, and projective geometry.
+
+\emph{Honest scope:} the exported files are canonical Holonet target listings,
+not vendor assembler promises.  They prove deterministic compilation and
+traceability of the classical control layer; they do not claim cycle-accurate
+performance on historical 4004, MOS~6502, or Z80 silicon.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

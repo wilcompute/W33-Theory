@@ -72,6 +72,7 @@ The machine, executed:
 | `py -3 analysis/w33_tritcpu_emulator.py` | the router as a **22-instruction program on an emulated 4-bit CPU** (Intel 4004) |
 | `py -3 analysis/w33_ternary_energy.py` | the ternary-vs-binary **encoding tax** (1.26×, 25% wasted states) |
 | `py -3 analysis/w33_holonet_asm.py` | a tiny holonet assembler: 4-bit target plus **6502-style 8-bit target** with MUL/MOD synthesized |
+| `py -3 analysis/w33_holonet_retro_export.py` | exports deterministic **4004 / 6502 / Z80-style listings** plus golden traces |
 | `py -3 analysis/w33_packet_energy.py` | the per-packet traffic bill: **72 trits -> 144 binary host bits** for the minimal control packet |
 
 The physics/computer-science core:

@@ -59,3 +59,25 @@ def test_pass48_publication_anchors():
     assert "Pass 48" in main_paper
     assert "Pass 48" in practical
     assert "w33_packet_energy.py" in ci
+    assert "Pass 49" in docs
+    assert "w33_holonet_retro_export.py" in holonet
+    assert "Pass 49" in main_paper
+    assert "Pass 49" in practical
+    assert "w33_holonet_retro_export.py" in ci
+
+
+def test_pass49_retro_exports_are_generated_and_verified():
+    result = run_script("w33_holonet_retro_export.py", "w33_holonet_retro_export.json")
+
+    assert result["verified"] is True
+    assert result["targets"]["4004_style"]["instructions"] == 22
+    assert result["targets"]["6502_style"]["instructions"] == 130
+    assert result["targets"]["z80_style"]["instructions"] == 111
+    assert result["targets"]["z80_style"]["matches_reference"] is True
+    assert result["targets"]["z80_style"]["verified_pairs"] == 1600
+    assert result["checks"]["sample_agrees_across_targets"] is True
+    assert result["checks"]["z80_has_no_mul_or_mod_opcode"] is True
+
+    for target in result["targets"].values():
+        assert (ROOT / target["artifact"]).exists()
+        assert (ROOT / target["trace"]).exists()

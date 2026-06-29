@@ -725,6 +725,54 @@ the Holonet has a bootstrap compiler path, a packet-level ternary tax, and a
 public in-browser routing primitive.
 \end{honestbox}
 
+\section{Pass 49: Exported Targets and Golden Traces}
+\label{sec:pass49}
+The next practical question is whether the compiler result can leave the
+Python witness and become a build artifact.  Pass~49 answers yes.  The witness
+\texttt{analysis/w33\_holonet\_retro\_export.py} exports a deterministic
+machine bundle:
+\begin{center}
+\begin{tabular}{lll}
+4004-style & 22 instructions & \texttt{artifacts/holonet\_asm/router\_4004\_style.asm}\\
+6502-style & 130 instructions & \texttt{artifacts/holonet\_asm/router\_6502\_style.asm}\\
+Z80-style & 111 instructions & \texttt{artifacts/holonet\_asm/router\_z80\_style.asm}
+\end{tabular}
+\end{center}
+The same run writes golden traces for the sample route
+\[
+  1000\to0100,\qquad B(1000,0100)=1.
+\]
+
+This matters because it turns the Holonet from a model into a bootstrappable
+stack.  There are now four concrete layers, all executing the same symplectic
+decision:
+\begin{enumerate}[leftmargin=1.4em]
+\item the ternary algebraic core, where routing is the seven-term mod-three
+inner-product calculation;
+\item the four-bit target, where \(\textsc{mul}\) and \(\textsc{mod}_3\) are
+primitive Holonet opcodes;
+\item ordinary eight-bit accumulator/control machines, where multiply and
+reduction are synthesized from load, store, add, subtract, compare, and jump;
+\item the browser widget, where the same route primitive becomes a public
+interactive network diagnostic.
+\end{enumerate}
+
+The Z80-style target is the new independence check.  It is not merely the
+6502-style program renamed: it has its own accumulator instruction set and is
+verified on all \(1600\) ordered pairs of \(W(3,3)\) addresses without any
+hidden multiply or modulo opcode.  Thus the router has a portable classical
+control surface.  The quantum advantage still belongs to the photonic magic
+layer, but the address/routing/control plane can be compiled, traced, tested,
+and shipped like ordinary firmware.
+
+\begin{honestbox}
+The exported listings are canonical Holonet target listings, not promises that
+a vendor assembler will accept them byte-for-byte.  The claim is deterministic
+compilation and auditability of the classical route primitive.  Timing,
+electrical constraints, and exact historical instruction encodings remain
+implementation work.
+\end{honestbox}
+
 \section{A Roadmap}
 \label{sec:roadmap}
 \begin{description}[leftmargin=0pt,style=nextline]

@@ -4264,7 +4264,12 @@
               and to a 6502-style 8-bit accumulator target with no MUL/MOD opcodes, while
               <code>analysis/w33_packet_energy.py</code> lifts the ternary encoding tax to a
               minimal packet: <code>72</code> trits become <code>144</code> binary host bits.
-              Try the route below; four digits are a normalized point of <code>F3^4</code>.</div>
+              <strong>Pass 49 exports the compiler:</strong>
+              <code>analysis/w33_holonet_retro_export.py</code> writes deterministic
+              <code>artifacts/holonet_asm/router_4004_style.asm</code>,
+              <code>router_6502_style.asm</code>, and <code>router_z80_style.asm</code>
+              plus golden traces. Try the route below; four digits are a normalized
+              point of <code>F3^4</code>.</div>
             <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:flex-end;margin-top:0.8rem;">
               <label style="font-size:0.85em;">source<br><input id="hn-src" value="1000" maxlength="4"
                 style="width:5.5rem;padding:0.35rem;border:1px solid #bbb;border-radius:4px;"></label>

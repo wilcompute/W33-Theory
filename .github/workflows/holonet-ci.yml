@@ -12,6 +12,7 @@ on:
       - 'analysis/w33_tritcpu_emulator.py'
       - 'analysis/w33_ternary_energy.py'
       - 'analysis/w33_holonet_asm.py'
+      - 'analysis/w33_holonet_retro_export.py'
       - 'analysis/w33_packet_energy.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
@@ -46,6 +47,7 @@ jobs:
           python analysis/w33_tritcpu_emulator.py
           python analysis/w33_ternary_energy.py
           python analysis/w33_holonet_asm.py
+          python analysis/w33_holonet_retro_export.py
           python analysis/w33_packet_energy.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py

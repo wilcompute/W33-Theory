@@ -1,0 +1,756 @@
+{
+  "result": 1,
+  "sample": {
+    "destination": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "expected_B_mod_3": 1,
+    "interpretation": "nonzero means a direct W(3,3) edge",
+    "source": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "target": "6502-style",
+  "trace": [
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        0,
+        "imm"
+      ],
+      "pc": 0
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        9,
+        "mem"
+      ],
+      "pc": 1
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        5,
+        "mem"
+      ],
+      "pc": 2
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "STA",
+        12,
+        "mem"
+      ],
+      "pc": 3
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 4
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CMP",
+        0,
+        "imm"
+      ],
+      "pc": 5
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "BEQ",
+        16
+      ],
+      "pc": 6
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        9,
+        "mem"
+      ],
+      "pc": 7
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CLC"
+      ],
+      "pc": 8
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "ADC",
+        0,
+        "mem"
+      ],
+      "pc": 9
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "STA",
+        9,
+        "mem"
+      ],
+      "pc": 10
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 11
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "SEC"
+      ],
+      "pc": 12
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "SBC",
+        1,
+        "imm"
+      ],
+      "pc": 13
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        12,
+        "mem"
+      ],
+      "pc": 14
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "JMP",
+        4
+      ],
+      "pc": 15
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 4
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        0,
+        "imm"
+      ],
+      "pc": 5
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BEQ",
+        16
+      ],
+      "pc": 6
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        9,
+        "mem"
+      ],
+      "pc": 16
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 17
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "BCC",
+        23
+      ],
+      "pc": 18
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        0,
+        "imm"
+      ],
+      "pc": 23
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        11,
+        "mem"
+      ],
+      "pc": 24
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        7,
+        "mem"
+      ],
+      "pc": 25
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        12,
+        "mem"
+      ],
+      "pc": 26
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 27
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        0,
+        "imm"
+      ],
+      "pc": 28
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BEQ",
+        39
+      ],
+      "pc": 29
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        11,
+        "mem"
+      ],
+      "pc": 39
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 40
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BCC",
+        46
+      ],
+      "pc": 41
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        9,
+        "mem"
+      ],
+      "pc": 46
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CLC"
+      ],
+      "pc": 47
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "ADC",
+        11,
+        "mem"
+      ],
+      "pc": 48
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "STA",
+        9,
+        "mem"
+      ],
+      "pc": 49
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        9,
+        "mem"
+      ],
+      "pc": 50
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 51
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "BCC",
+        57
+      ],
+      "pc": 52
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        0,
+        "imm"
+      ],
+      "pc": 57
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        10,
+        "mem"
+      ],
+      "pc": 58
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        4,
+        "mem"
+      ],
+      "pc": 59
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        12,
+        "mem"
+      ],
+      "pc": 60
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 61
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        0,
+        "imm"
+      ],
+      "pc": 62
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BEQ",
+        73
+      ],
+      "pc": 63
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        10,
+        "mem"
+      ],
+      "pc": 73
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 74
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BCC",
+        80
+      ],
+      "pc": 75
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        0,
+        "imm"
+      ],
+      "pc": 80
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        11,
+        "mem"
+      ],
+      "pc": 81
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        6,
+        "mem"
+      ],
+      "pc": 82
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        12,
+        "mem"
+      ],
+      "pc": 83
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        12,
+        "mem"
+      ],
+      "pc": 84
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        0,
+        "imm"
+      ],
+      "pc": 85
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BEQ",
+        96
+      ],
+      "pc": 86
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        11,
+        "mem"
+      ],
+      "pc": 96
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 97
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BCC",
+        103
+      ],
+      "pc": 98
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        10,
+        "mem"
+      ],
+      "pc": 103
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CLC"
+      ],
+      "pc": 104
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "ADC",
+        11,
+        "mem"
+      ],
+      "pc": 105
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "STA",
+        10,
+        "mem"
+      ],
+      "pc": 106
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        10,
+        "mem"
+      ],
+      "pc": 107
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 108
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "BCC",
+        114
+      ],
+      "pc": 109
+    },
+    {
+      "a_before": 0,
+      "op": [
+        "LDA",
+        9,
+        "mem"
+      ],
+      "pc": 114
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "STA",
+        8,
+        "mem"
+      ],
+      "pc": 115
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        8,
+        "mem"
+      ],
+      "pc": 116
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CLC"
+      ],
+      "pc": 117
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "ADC",
+        3,
+        "imm"
+      ],
+      "pc": 118
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "SEC"
+      ],
+      "pc": 119
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "SBC",
+        10,
+        "mem"
+      ],
+      "pc": 120
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "STA",
+        8,
+        "mem"
+      ],
+      "pc": 121
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "LDA",
+        8,
+        "mem"
+      ],
+      "pc": 122
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 123
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "BCC",
+        129
+      ],
+      "pc": 124
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "SEC"
+      ],
+      "pc": 125
+    },
+    {
+      "a_before": 4,
+      "op": [
+        "SBC",
+        3,
+        "imm"
+      ],
+      "pc": 126
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "STA",
+        8,
+        "mem"
+      ],
+      "pc": 127
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "JMP",
+        122
+      ],
+      "pc": 128
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "LDA",
+        8,
+        "mem"
+      ],
+      "pc": 122
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "CMP",
+        3,
+        "imm"
+      ],
+      "pc": 123
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "BCC",
+        129
+      ],
+      "pc": 124
+    },
+    {
+      "a_before": 1,
+      "op": [
+        "HLT"
+      ],
+      "pc": 129
+    }
+  ]
+}
