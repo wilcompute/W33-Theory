@@ -1,0 +1,93 @@
+{
+  "cpu": {
+    "registers": 16,
+    "bits": 4,
+    "opcodes": [
+      "LDI",
+      "LD",
+      "ST",
+      "ADD",
+      "SUB",
+      "MUL",
+      "MOD3",
+      "HLT"
+    ]
+  },
+  "program_instructions": 22,
+  "verified_pairs": 1600,
+  "cycles_per_decision": 22,
+  "intel_4004": {
+    "clock_hz": 740000,
+    "us_per_decision": 237.8,
+    "routes_per_sec": 4205
+  },
+  "sample_trace_first8": [
+    [
+      0,
+      "LD",
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      1,
+      "LD",
+      [
+        1,
+        5
+      ]
+    ],
+    [
+      2,
+      "MUL",
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      3,
+      "LD",
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      4,
+      "LD",
+      [
+        3,
+        7
+      ]
+    ],
+    [
+      5,
+      "MUL",
+      [
+        2,
+        3
+      ]
+    ],
+    [
+      6,
+      "ADD",
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      7,
+      "MOD3",
+      [
+        0
+      ]
+    ]
+  ],
+  "summary": "boots on a dinosaur, literally: the holonet router as a 22-instruction program executed on an emulated 4-bit CPU. We built a minimal Intel-4004-flavoured machine (16 4-bit registers, small RAM, opcodes {LDI, LD, ST, ADD, SUB, MUL, MOD3, HLT}), assembled the holonet forwarding test B(x,y) = ((x0y1+x2y3) - (x1y0+x3y2)) mod 3 as a 22-instruction program (all intermediates in 0..15, so a 4-bit datapath suffices), and executed it with a full instruction trace. It reproduces the reference adjacency for all 1600 ordered node pairs in 22 cycles per routing decision; on the real 1971 Intel 4004 (~740 kHz, ~8 clk/instr) that is ~240 us/decision, ~4000 routes/sec on a fifty-year-old 4-bit chip. So 'the architecture of life boots on a dinosaur' is literal -- the classical routing/forwarding/network/memory layer runs on hardware older than its users; only the quantum advantage (the priced 9^t magic) needs photons. HONEST: the CPU emulator is a faithful 4-bit register machine and the program uses only its small opcode set (verified on all 1600 pairs); the 4004 timing is the historical figure (order-of-magnitude wall-clock, not a cycle-accurate port); this is the classical layer, the quantum advantage still needs a physical photonic substrate.",
+  "sources": [
+    "holonet forwarding test B(x,y) mod 3 (the routing layer); minimal instruction set (Pass 46, w33_minimal_architecture); Intel 4004 (1971, 4-bit, ~740 kHz) historical specs; CPU emulator + assembled program + trace (built/run here)."
+  ]
+}

@@ -69,6 +69,8 @@ The machine, executed:
 | `py -3 analysis/holonet_scorecard.py` | plots the threshold + contextuality figure (`holonet_scorecard.png`) |
 | `py -3 analysis/w33_minimal_architecture.py` | the node runs on a **mod-3 ALU + ~100 bytes** (a ternary VM) |
 | `py -3 analysis/w33_vm_speedup.py` | efficiency by matching: zero routing table, the von Neumann gap eliminated |
+| `py -3 analysis/w33_tritcpu_emulator.py` | the router as a **22-instruction program on an emulated 4-bit CPU** (Intel 4004) |
+| `py -3 analysis/w33_ternary_energy.py` | the ternary-vs-binary **encoding tax** (1.26×, 25% wasted states) |
 
 The physics/computer-science core:
 

@@ -1,0 +1,21 @@
+{
+  "information_bits_per_trit": 1.585,
+  "bit_traffic_tax": 1.2619,
+  "wasted_state_fraction": 0.25,
+  "radix_economy": {
+    "E2": 2.8854,
+    "E3": 2.7307,
+    "ratio": 0.9464,
+    "ternary_digit_saving": 5.4
+  },
+  "landauer": {
+    "base_independent": true,
+    "kT_ln2_per_bit_J": 2.870978885078724e-21,
+    "encoding_overhead_per_trit": 1.2619,
+    "note": "no fundamental per-information energy difference; the 1.26x is encoding overhead only"
+  },
+  "summary": "the encoding tax: the holonet is a ternary algorithm, so on binary hardware it pays a precise tax -- and (carefully) that tax is ENCODING overhead, not a fundamental energy gap. The substrate's digit is a balanced trit carrying log2(3) = 1.585 bits; a binary machine needs 2 bits per trit (3 of 4 states used -> 25% wasted), so the bit-traffic tax is 2/log2(3) = 1.26x (26% overhead) on every load/store/hop. The digit-count tax is the radix economy E(3)/E(2) = 0.946 -> ternary needs ~5.4% fewer digit-positions. But Landauer's bound is base-INDEPENDENT (kT ln2/bit = kT ln3/trit = same energy per nat), so there is NO fundamental per-information energy win from ternary; the 1.26x is strictly the encoding overhead of representing a 3-state digit in 2 bits (extra bit-traffic + extra irreversible erasures), which a native ternary machine (Setun) would not pay. So: ternary is not magically more energy-efficient per unit information, but the holonet pays a ~26% bit-traffic/erasure tax and a ~5% digit-count tax on the binary host it currently runs on -- the exact, quantified sense in which it 'wants ternary hardware' and runs sub-optimally on binary silicon. HONEST: every number is exact arithmetic; the key honesty is the base-independence of Landauer (no fundamental ternary energy advantage), so the 1.26x is the encoding tax only, not a claim that ternary beats binary at the Landauer bound.",
+  "sources": [
+    "information per trit = log2(3) (Shannon); radix economy E(b)=b/ln(b), base-3 optimum among integers (Knuth; Setun 1958); Landauer's principle base-independence (kT ln b per b-ary symbol = same energy per nat); the substrate's balanced-ternary {-1,0,+1} 3-grading (corpus)."
+  ]
+}

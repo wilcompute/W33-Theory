@@ -7974,6 +7974,39 @@ detailed). ``More efficient than the hardware it runs on'' means more efficient 
 general-purpose stack, by bypassing its overhead --- not faster than physics; the quantum advantage
 remains the priced $9^t$ dial.
 
+\subsection{Pass 47 --- the router on a 4-bit CPU, the ternary encoding tax, and the live scorecard}
+\label{sec:capstone-fortyseven}
+
+This pass makes ``boots on a dinosaur'' literal, quantifies what running a ternary algorithm on binary
+hardware costs, and wires the scorecard and CI status into the live site.
+
+\emph{The router on a 4-bit CPU.} \path{analysis/w33_tritcpu_emulator.py}: we build a minimal
+Intel-4004-flavoured machine (sixteen $4$-bit registers, a small RAM, opcodes
+$\{\textsc{ldi},\textsc{ld},\textsc{st},\textsc{add},\textsc{sub},\textsc{mul},\textsc{mod}_3,\textsc{hlt}\}$),
+assemble the holonet forwarding test $B(x,y)\bmod3$ as a $22$-instruction program (every value stays in
+$0..15$, so a $4$-bit datapath suffices), and execute it with a full trace. It reproduces the reference
+adjacency for all $1600$ node pairs in $22$ cycles; on the real $1971$ Intel 4004 ($\sim740$~kHz) that
+is $\sim240~\mu$s per routing decision --- about four thousand holonet routes per second on a
+fifty-year-old four-bit chip. The classical layer runs on hardware older than its users; only the
+quantum advantage needs photons.
+
+\emph{The ternary encoding tax.} \path{analysis/w33_ternary_energy.py}: a balanced trit carries
+$\log_2 3=1.585$ bits, but a binary machine needs $2$ bits per trit (three of four states used), so the
+bit-traffic tax is $2/\log_2 3=1.26$ ($26\%$ overhead, $25\%$ wasted states), plus a $\sim5\%$
+digit-count tax from the radix economy. Crucially, Landauer's bound is base-independent ($kT\ln2$ per bit
+$=kT\ln3$ per trit), so there is \emph{no} fundamental energy win from ternary --- the $1.26\times$ is
+strictly the \emph{encoding} overhead a binary host pays and a native ternary substrate (the Setun
+digit) would not. That is the exact, honest sense in which the holonet ``wants ternary hardware.''
+
+\emph{The live scorecard.} The scorecard figure and the CI status badge are now embedded in
+\path{docs/index.html}: the site shows the green build and the measured threshold / contextuality plot.
+
+\emph{Honest scope:} the CPU emulator is a faithful $4$-bit register machine (program verified on all
+$1600$ pairs; the 4004 timing is the historical order-of-magnitude figure); the encoding-tax numbers are
+exact arithmetic, and the honesty is that ternary gives no fundamental per-information energy advantage
+(Landauer is base-independent) --- the tax is encoding overhead only. The quantum advantage remains the
+priced $9^t$ dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

@@ -1615,6 +1615,11 @@
     <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
     <div class="subtitle">Exact qutrit kernel first &middot; Local E<sub>6</sub> bridge exact &middot; Promoted spectral
       closure after that &middot; 1000+ tests pass</div>
+    <div style="margin:0.6em 0;">
+      <a href="https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml" target="_blank" rel="noopener">
+        <img src="https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml/badge.svg" alt="holonet CI status"></a>
+      <span style="font-size:0.85em;opacity:0.8;margin-left:0.5em;">the runnable Holonet VM self-tests on every push &mdash; <code>holonet verify</code></span>
+    </div>
     <div class="tagline">
       The public theorem spine now starts with the exact statement that
       <strong>W(3,3) = SRG(40,12,2,4)</strong> is the projective commutation geometry of the
@@ -4243,7 +4248,14 @@
               push. Honest: the minimal footprint and routing/efficiency counts are exact (the ~5 crossings is the standard architectural model); the
               circuit-level threshold is Monte-Carlo with the exact decoder under phenomenological noise (a full faulty-gate model is more detailed);
               "more efficient than the hardware it runs on" = more efficient per logical op than the general-purpose stack, not faster than physics; the
-              quantum advantage remains the priced 9&#7511; dial.</div>
+              quantum advantage remains the priced 9&#7511; dial.
+              <div style="margin-top:1em;text-align:center;">
+                <img src="holonet_scorecard.png" alt="Holonet scorecard: measured fault-tolerance threshold and contextuality significance vs photons"
+                  style="max-width:100%;border:1px solid #ccc;border-radius:4px;">
+                <div style="font-size:0.82em;opacity:0.75;margin-top:0.3em;">The Holonet scorecard: the measured fault-tolerance
+                  threshold (left, with break-even and the R=1/R=3 syndrome-noise curves) and the contextuality significance vs detected
+                  photons (right, crossing 5&sigma; at ~21/ray). Regenerate with <code>py -3 analysis/holonet_scorecard.py</code>.</div>
+              </div></div>
           </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
