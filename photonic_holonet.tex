@@ -7901,6 +7901,38 @@ KS experiment models standard heralded-photon shot statistics; the magic-dial es
 verified unbiased with the $9^t$ Hoeffding sample bound from the per-sample range. The quantum advantage
 itself is still the $9^t$ dial --- now run on this machine for small $t$.
 
+\subsection{Pass 45 --- the threshold curve measured, the quickstart, and the unified Machine paper}
+\label{sec:capstone-fortyfive}
+
+This pass measures the fault-tolerance threshold as a curve, ships a five-minute quickstart, and
+collects the Pass 34--44 results into one submission-grade paper.
+
+\emph{The threshold, measured.} \path{analysis/holonet_threshold_demo.py}: an efficient symplectic
+decoder for the runnable $[[5,1,3]]_3$ code (errors and stabilizers as $\mathbb{F}_3$ vectors, syndrome
+$=$ symplectic inner product, a lookup decoder covering all $81$ syndromes, a logical fault declared
+when the residual has trivial syndrome but is not a stabilizer). Monte-Carlo over the depolarizing rate
+gives a \emph{measured} curve $P_L(p)\sim A p^2$ with $A\approx8$, crossing break-even $P_L=p$ at a
+pseudo-threshold $p_{\mathrm th}=1/A\approx0.12$ --- the honest crossover, now a point on a plot.
+Syndrome-measurement noise at the same per-round rate removes the single-round break-even (motivating
+repeated extraction). The $[[5,1,3]]_3$ value ($\sim0.12$) is the small stand-in; the substrate's
+$[[66,8,3]]_3$ has $A\sim\binom{66}{2}=2145$, hence $p_{\mathrm th}\sim5\times10^{-4}$ --- same $p^2$
+mechanism, different size.
+
+\emph{The quickstart.} \path{HOLONET.md}: install the \texttt{holonet} command, run \texttt{holonet
+verify}, and a tour of every runnable witness (route / correct / teleport / reproduce / consensus /
+threshold / contextuality / magic dial) --- zero to a verified, running node in five minutes.
+
+\emph{The unified Machine paper.} \path{holonet_machine.tex} collects the computer-engineering arc
+(Pass 34--44) into one self-contained, submission-grade document with the one-object figure: the one
+group, the enumerated ISA, the non-planar floorplan, the measured threshold, the I/O boundary, the
+$\mathsf{P}$-to-$\mathsf{BQP}$ complexity placement with the derived $1/10$ contextual fraction, the
+runnable VM, consensus, and the falsifiable-predictions table.
+
+\emph{Honest scope:} the decoder and the logical-error test are exact; $P_L(p)$ is a Monte-Carlo
+estimate with the $A p^2$ fit and break-even read off (single-round; circuit-level faults are future
+work); the Machine paper restates computed results and cites the standard theorems. The quantum
+advantage remains the priced $9^t$ dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

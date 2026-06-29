@@ -1,0 +1,89 @@
+{
+  "perfect_syndrome": {
+    "curve": [
+      {
+        "p": 0.3,
+        "P_L": 0.43902,
+        "below_break_even": false,
+        "A=P_L/p2": 4.9
+      },
+      {
+        "p": 0.2,
+        "P_L": 0.24277,
+        "below_break_even": false,
+        "A=P_L/p2": 6.1
+      },
+      {
+        "p": 0.15,
+        "P_L": 0.15265,
+        "below_break_even": false,
+        "A=P_L/p2": 6.8
+      },
+      {
+        "p": 0.12,
+        "P_L": 0.10218,
+        "below_break_even": true,
+        "A=P_L/p2": 7.1
+      },
+      {
+        "p": 0.08,
+        "P_L": 0.04955,
+        "below_break_even": true,
+        "A=P_L/p2": 7.7
+      },
+      {
+        "p": 0.05,
+        "P_L": 0.02082,
+        "below_break_even": true,
+        "A=P_L/p2": 8.3
+      },
+      {
+        "p": 0.03,
+        "P_L": 0.00788,
+        "below_break_even": true,
+        "A=P_L/p2": 8.8
+      },
+      {
+        "p": 0.02,
+        "P_L": 0.00345,
+        "below_break_even": true,
+        "A=P_L/p2": 8.6
+      },
+      {
+        "p": 0.01,
+        "P_L": 0.00093,
+        "below_break_even": true,
+        "A=P_L/p2": 9.2
+      }
+    ],
+    "A": 8.5,
+    "pseudo_threshold": 0.1171
+  },
+  "with_measurement_noise": [
+    {
+      "p": 0.12,
+      "P_L": 0.46305,
+      "below_break_even": false
+    },
+    {
+      "p": 0.08,
+      "P_L": 0.31998,
+      "below_break_even": false
+    },
+    {
+      "p": 0.05,
+      "P_L": 0.20595,
+      "below_break_even": false
+    },
+    {
+      "p": 0.03,
+      "P_L": 0.11958,
+      "below_break_even": false
+    }
+  ],
+  "caveat": "[[5,1,3]]_3 stand-in A~8 -> p_th~0.13; the substrate's [[66,8,3]]_3 has A~C(66,2)=2145 -> p_th~5e-4. Same distance-3 mechanism, different size.",
+  "summary": "the threshold, measured: the logical error falls as A p^2 and the curve crosses break-even -- a fault-tolerance plot, run. On the runnable [[5,1,3]]_3 stand-in (symplectic-vector decoder: errors/stabilizers as F_3 vectors, syndrome = symplectic inner product, lookup decoder covering all 81 syndromes with min-weight errors, logical fault = residual with trivial syndrome but not in the stabilizer group), sweeping the depolarizing rate p gives P_L(p) ~ A p^2 with A ~ 8 (distance 3: single errors always corrected, weight-2 leading), and the curve crosses break-even P_L = p at a pseudo-threshold p_th = 1/A ~ 0.12 (below it encoding helps, above it hurts -- the honest crossover, now a measured point). Syndrome-measurement noise at the same per-round rate eliminates the single-round break-even (motivating repeated fault-tolerant extraction). The ~0.12 is the small [[5,1,3]]_3 stand-in (A ~ 8); the substrate's [[66,8,3]]_3 has A ~ C(66,2) = 2145 -> p_th ~ 5e-4 (Pass 36) -- the SAME p^2 mechanism and break-even crossover at a different size. HONEST: the decoder and the logical-error test are exact (lookup covers all 81 syndromes; F_3 stabilizer-group membership); P_L(p) is a Monte Carlo estimate with the A p^2 fit and break-even p_th read off; depolarizing + syndrome-measurement noise are the standard models; a full circuit-level fault-tolerance treatment (faulty gates, multiple rounds) is beyond this single-round demo. So: a measured threshold curve for the mechanism, runnable.",
+  "sources": [
+    "[[5,1,3]]_3 qutrit code (Pass 41); symplectic stabilizer formalism over F_3; lookup decoder + F_3 stabilizer-group membership (computed); P_L ~ A p^2 distance-3 scaling and pseudo-threshold p_th = 1/A (standard QEC); substrate [[66,8,3]]_3 A ~ C(66,2) = 2145 -> p_th ~ 5e-4 (Pass 36)."
+  ]
+}
