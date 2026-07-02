@@ -40,8 +40,9 @@
 - **BT403 Lorentz-distributed closure amplitude (2026-06-06):** The threshold coefficient target is c0=log(F5^2)/q!=log(25)/6, interpreted as squared fivefold closure entropy distributed over six Lorentz bivectors. BT401 exact-trace c differs by 0.2958%; W33-scale c differs by 0.3982%.
 - **BT404 finite electroweak boundary prediction (2026-06-06):** With no observed couplings as boundary inputs, the finite boundary mean q*k+F5=41 plus log(F5^2)/q!*(1,mu,-F5) at M_W33 predicts alpha_em^-1(M_Z)=128.147302 (0.5839%), sin^2 thetaW=0.230383209 (0.3619%), and alpha_s=0.121895367 (3.2137%) against the repo targets.
 - **BT406 identifies the carrier** as BT385's 16 line stabilizers times BT402's fivefold closure over the q^2 color-generation averaging grid.
-- **BT367 (2026-07-02):** The 120-sheet Holonet selector (40 W(3,3) lines * 3 phases) is identified as a holographic E6 object. The permutation representation decomposes multiplicity-freely into five W(E6) irreducible representations with dimensions {1, 15, 20, 24, 60}. The 51,840-tick supercycle is the Weyl group W(E6).
+- **BT367 (2026-07-02):** The 120-sheet Holonet selector (40 W(3,3) lines * 3 phases) is identified as a holographic E6 object. The permutation representation decomposes multiplicity-freely into five W(E6) irreducible representations with dimensions {1, 15, 20, 24, 60}. The 51,840-tick supercycle is the Weyl group W(E6). **SUCCESS**: GAP verification of intersection matrix eigenvalues and multiplicities confirmed the {1, 15, 20, 24, 60} profile (Success: 2026-07-02).
 - **BT367 Holonomy (2026-07-02):** The global selector obstruction is measured at 760 conflicts, exactly 2 * 380 twisted basis cycles in the skew-line graph. This "Twisted Phase Phantom" identifies the specific topological cost of the holographic E6-to-W33 projection.
+- **UOR Pipeline Refresh (2026-07-02):** Regenerated all Holonet-UOR bridge artifacts for the investor presentation. All 19 pipeline stages (CLI `uor` command) passed, including the exact-backend line compiler, clock graph, and SHACL shape validation. Browser replay successfully generated at `docs/holonet_uor_os_replay.html`.
 - **BT1404 holonet scope microframe (2026-06-20, commit `d476830ae`):** The BT1403 eraser-lift Hesse port is now a visible ABI scope: 9 Hesse outcomes times 8 packet ticks equals one 72-tick microframe. Each outcome h=3r+p owns an 8-tick return word (erase, route, phase, X/Z frame correction, T-frame parity, ABI restore, next word). Generated artifacts: `docs/bt1404_holonet_scope.html`, `data/bt1404_holonet_scope_microframe.json`, and comparison PDF `photonic_holonet_BT1404_holonet_scope.pdf`.
 - **BT1405 continuous Q6 path router (2026-06-20, commit `25866beed`):** BT1374's Q6 packet-edge addresses now lift to continuous Q6 walks. The six-digit stress route preserves packet edges `175,133,56,37,142,77`, inserts 10 connector edges, uses 16 total Q6 steps, and leaves 32 slack ticks inside the 48-tick tomotope body. This is an ABI route certificate, not a waveguide/detector model.
 - **BT1406 tomotope-body edge pulse scheduler (2026-06-21, commit `f5324c611`):** BT1405's 16-step stress Q6 path now expands into the ternary pulse microcycle `LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX`. The identity `16*3=48` fills the entire tomotope body with zero idle ticks; packet-edge load ticks are `0,6,12,21,27,45`. This is a timing ABI, not calibrated optics.
@@ -89,11 +90,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-02T01:57:25.207Z (reason: file save)
+- Auto-saved at 2026-07-02T02:30:39.985Z (reason: file save)
 - Recent commits:
+  - 7545613d7 BT367: Identify E6 holographic selector bridge and quantify 760-conflict holonomy phantom
   - 8a7ba8ce2 BT982: explicit integral E8 basis from W33 selector (script + test)
   - 13d9ca368 Pass 55: the two-arm contextuality discriminator (runnable end-to-end) and the scaling figure
-  - 25bed31a8 Pass 54: the demonstrator's control arm (explicit even-q ovoid) and the scaling routing win
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

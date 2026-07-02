@@ -5,44 +5,55 @@
 This project uses Continuity to keep repo-local decisions and session context available through MCP and generated instruction files. Prefer MCP when connected; otherwise fall back to the repo files.
 
 ## Project Context
-- **Total Decisions:** 2695
-- **Known Topics:** why, needs-review, auto-draft, w33, testing, docs, architecture, toe, photonic, audit, qec, github, selector, css, holonomy
+- **Total Decisions:** 4303
+- **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, photonic, docs, holonet, audit, qec, github, selector, tomotope
 
 ## Current State
 **Branch:** master
 
 **Recent Commits:**
-- `700cf4b1 (c) Harden CI: add verify-papers-build.yml that compiles both master papers from a clean checkout and FAILS if either PDF is not produced or is implausibly short. Sets TEXINPUTS=.:./manuscripts/tex: (the fix the w33_paper build needs) and asserts page counts (w33>=100, holonet>=20) so a broken master manuscript turns CI red instead of silently passing. The existing build-final-papers.yml only checked for a manifest JSON, never the PDFs; and the connector is blocked from editing workflow YAML, so this verification gate is maintained locally`
-- `8df5acff Fix bt974 build script: set TEXINPUTS so w33_paper.tex resolves its manuscripts/tex/ includes. The script ran 'pdflatex w33_paper.tex' with no path, so it halted at 'part5_unified_breakthrough.tex not found' (all part5-32 \input files live in manuscripts/tex/; BT974's note confirms the cloud connector never ran a full compile). Adding 'export TEXINPUTS=.:./manuscripts/tex:' makes the master manuscript build. Verified locally: w33_paper.tex now compiles to 232 pages (exit 0, refs resolved), including the new completeness-boundary section`
-- `73973f3f OPEN_FRONTIERS: record the completeness-boundary milestone now stated as a theorem in both papers (R1/R2/R3 = the three opens; R1 gained the +2-eigenlattice obstruction proposition)`
-- `95f18251 Capstone: completeness boundary in both papers + the eigenlattice obstruction (new rigorous result).`
-- `9ef43166 OPEN_FRONTIERS: sync the #5 (integral E8 lift) status to the BT924-957 arc. Records the parallel-agent advances so the done/open boundary is current: BT925/950 canonical symplectic mod-2 form = E8/2E8 (SNF-transform extractor shows the d_i=2 divided form is indefinite, NOT positive E8 - the positive metric needs a SELECTOR); BT951-957 selector via support-minimality (support 60, profile [6,6,6,6,6,8,10,12]) + vertex/tetracode metric-gauge agreement; plus a complementary finding (the +2-eigenlattice L2={x:Ax=2x}, rank 24=8x3, is even/posdef but det 2^16*3^10*5, rootless - NOT E8^3, ruling out the natural definite candidate). STILL OPEN per BT927: chain shadow vs vertex/tetracode E8 not yet proved one canonical lift; the positive-definite identification + selector stabilizer orbit remain`
+- `7545613d7 BT367: Identify E6 holographic selector bridge and quantify 760-conflict holonomy phantom`
+- `8a7ba8ce2 BT982: explicit integral E8 basis from W33 selector (script + test)`
+- `13d9ca368 Pass 55: the two-arm contextuality discriminator (runnable end-to-end) and the scaling figure`
+- `25bed31a8 Pass 54: the demonstrator's control arm (explicit even-q ovoid) and the scaling routing win`
+- `bf8929ada Pass 53: parity not primality, a falsifiable prediction, and the table-free win`
 
 **Working Tree:**
-- M w33_paper.tex
-- ?? .cache/
-- ?? analysis/bt980_aut_action_on_homology.py
-- ?? gap_bt852_universal_groups.g
-- ?? tomotope_aut_gens.g
+- M .continuity/SESSION_NOTES.md
+- M .cursorrules
+- M .github/copilot-instructions.md
+- M .github/workflows/holonet-ci.yml
+- M CLAUDE.md
+- M GEMINI.md
+- M HOLONET.md
+- M analysis/holonet_cli.py
+- M data/bt1494_photonic_qec_release_lock_repair.json
+- M data/bt950_snf_transform_e8_extractor.json
+- M data/bt951_exact_support_minimal_selector.json
+- M data/bt953_support60_orbit_classifier.json
+- M data/bt954_metric_selector_among_support60.json
+- M data/w33_holonet_firmware_fabric_profile.json
+- M docs/INDEX.md
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-06-14T16:35:52.974Z
-**Startup Summary:** mode=degraded-fallback | decisions=2695 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Startup audit: 294 uncovered commits in last 7 days (auto-drafted 0) | fallback-files=12
-**Decision Count:** 2695
+**Generated At:** 2026-07-02T02:28:40.365Z
+**Startup Summary:** mode=degraded-fallback | decisions=4303 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. MCP probe timed out after 15000ms. [GitCommitDetector] Using cached audit (36 uncovered, 12min old)
+[GitCommitDetector] Startup audit: 36 uncovered commits in last 7 days (auto-drafted 0) | fallback-files=12
+**Decision Count:** 4303
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Workspace MCP Self-Test
 **Status:** Ready
-**Last Checked:** 2026-06-13T14:25:46.419Z
+**Last Checked:** 2026-07-02T00:46:25.446Z
 **Summary:** No MCP summary recorded.
 
 ## Resume Snapshot
 **Last Task:** 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-**Last Completed Milestone:** Auto-saved at 2026-06-14T16:23:12.871Z (reason: timer)
+**Last Completed Milestone:** Auto-saved at 2026-07-02T02:21:48.688Z (reason: file save)
 **Next Expected Step:** Recent commits:
-**Last Successful Tool Call:** search_decisions @ 2026-05-01T15:06:07.971Z
-**Relevant Files:** .cache/tools/tectonic-0.16.9/tectonic, .cache/tools/tectonic-0.16.9/tectonic.tar.gz, gap_bt852_universal_groups.g, tomotope_aut_gens.g
+**Last Successful Tool Call:** log_decision @ 2026-07-01T21:34:35.793Z
+**Relevant Files:** AGENTS.md, analysis\holonet_cli.py, analysis\holonet_uor_browser_demo.py, analysis\holonet_vm_demo_launcher.py, analysis\w33_hashimoto_packet_phase_bridge.py, analysis\BT367_verify_phantom.g
 
 ## Workflow
 
@@ -55,12 +66,14 @@ Use the repo-local artifacts directly — these are always available:
 | Log a decision | `continuity log "question" "answer"` |
 | Update session notes | Edit `.continuity/SESSION_NOTES.md` directly |
 
-**Decision logging path:** use the Continuity CLI first: `continuity log "question" "answer"`. Do not treat `.continuity/SESSION_NOTES.md` or manual `.continuity/decisions.json` edits as the logging sink.
+**Decision logging path:** MCP `log_decision` first when connected — it exercises the production path. `continuity log "question" "answer"` is the always-works fallback when MCP is down. Do not treat `.continuity/SESSION_NOTES.md` or manual `.continuity/decisions.json` edits as the logging sink.
 **Search-before-log still applies.** Check `.continuity/decisions.json` before recording a new rationale.
 
 ## Engineering Guardrails
 
 **Real-time decision logging is MANDATORY.** Log each decision IMMEDIATELY after the code change — not batched at the end of a session. The trigger is the change, not the commit. If you edited a file, log the decision. Period.
+
+**Override auto-memory for project decisions.** Claude Code's built-in auto-memory writes to a private `~/.claude/projects/.../memory/` store invisible to teammates, future sessions on other machines, and other AI tools. For Continuity-managed projects, that auto-memory is NOT the source of truth — `.continuity/decisions.json` is. When you would otherwise save a *project-scoped* decision (architecture, tradeoffs, "we chose X because Y") to auto-memory, route it through `continuity log` instead. Auto-memory is still appropriate for cross-project context (user preferences, environment quirks) but project decisions belong in Continuity.
 
 **Search before you change.** Always search `.continuity/decisions.json` (via CLI or `grep`) before proposing architectural changes to check for prior decisions.
 
@@ -164,45 +177,45 @@ the shell `git` as a narrow fallback; everything else goes through GitKraken.
 
 
 ## Recent Decisions
-1. **decision-8c6f3f89** (6/13/2026) [why, w33]
-   - Q: Why commit BT922 unified Phi3 mixing scale?
-   - A: Commit 7beb8968, unifies hard open #1 across quarks+leptons. CKM (quark) Cabi...
+1. **decision-3587a7a6** (7/1/2026) [architecture, e6]
+   - Q: What is the mathematical identity of the 120-sheet Holonet selector and its relation to the 51,840-tick supercycle?
+   - A: The 120-sheet Holonet selector fabric (40 W(3,3) lines * 3 phases) is a holographic representation of the E6 root system. The 51,840-tick supercycle is the Weyl group W(E6). The 120-dimensional permutation representation on the sheets decomposes into five W(E6) irreducible representations with dimensions {1, 15, 20, 24, 60}. The 760 conflicts measured in the global holonomy solver are exactly 2 * 380, where 380 is the number of twisted cycles in the W(3,3) skew-line graph cycle basis. This identifies the 'Twisted Phase Phantom' as a specific topological obstruction in the E6-to-W33 projection.
 
-2. **decision-17812757** (6/12/2026) [auto-draft, needs-review]
-   - Q: Why: BT787: add Q43 one block mirror check?
-   - A: (Auto-drafted from commit 5ec559e on 2026-06-12.) Please review and expand wi...
+2. **decision-18f248cb** (7/1/2026) [why, node]
+   - Q: Why refine the presentation validation note with docs/index anchor checks?
+   - A: Updated .continuity/SESSION_NOTES.md so the July 1 presentation verification records that the investor notes' six docs/index evidence anchors resolve to existing public cards, alongside the py_compile, content checks, HTML slide count, and node --check validation.
 
-3. **decision-1a24be30** (5/17/2026) [cosmology, baryogenesis]
-   - Q: What is the structural basis for the tensor-to-scalar ratio r and Baryon Asym...
-   - A: The tensor-to-scalar ratio r = 0.0222 is exactly 1/45, reflecting the recipro...
+3. **decision-17825782** (6/27/2026) [auto-draft, needs-review]
+   - Q: Why: BT1904: add exact estimator manifest?
+   - A: (Auto-drafted from commit d1a9a99 on 2026-06-27.) Please review and expand with actual reasoning.
 
-4. **decision-1f37fb97** (5/17/2026) [phenomenology, hierarchy]
-   - Q: What explains the proton-to-electron mass hierarchy and the electron-to-neutr...
-   - A: The proton relates to the electron via the affine bulk * GQ geometry (T_7 + v...
+4. **decision-1a24be30** (5/17/2026) [cosmology, baryogenesis]
+   - Q: What is the structural basis for the tensor-to-scalar ratio r and Baryon Asymmetry eta_B?
+   - A: The tensor-to-scalar ratio r = 0.0222 is exactly 1/45, reflecting the reciprocal of the 45 tritangent planes on the W(3,3) cubic surface. Baryon asymmetry eta_B ~ 6.18 x 10^-10 scales exactly as the Higgs IR fixed point coupling lambda_h = phi - 1.
 
-5. **decision-4a150b07** (5/17/2026) [architecture, qec]
-   - Q: What are the next major derivations to tackle after the w33_for_everyone synt...
-   - A: 1. QCD Confinement and Baryon Mass Gap. 2. Macroscopic Gravity & de Sitter En...
+5. **decision-1f37fb97** (5/17/2026) [phenomenology, hierarchy]
+   - Q: What explains the proton-to-electron mass hierarchy and the electron-to-neutrino scale?
+   - A: The proton relates to the electron via the affine bulk * GQ geometry (T_7 + v)*q^q = 1836. The neutrino seesaw mechanism scales explicitly by the Leech Lattice kissing number (T_7 + f) * K(Lambda_24) = 10,221,120.
 
 6. **decision-17776479** (5/1/2026) [master-lock, mckay]
-   - Q: Why integrate McKay bridge directly into q3 master lock owner and test bounda...
-   - A: The standalone McKay audit already certifies exact q=3 invariants, but the ow...
+   - Q: Why integrate McKay bridge directly into q3 master lock owner and test boundary surface?
+   - A: The standalone McKay audit already certifies exact q=3 invariants, but the owner theorem surface must include those invariants directly to keep the integrated boundary honest. We added the McKay bridge record, theorem flag, and summary payload in the master lock plus explicit test assertions for record ordering and theorem truth so integrated certificates cannot drift from standalone McKay evidence.
 
 7. **decision-17776480** (5/1/2026) [mckay, w33]
    - Q: Why add McKay Layers 11 and 12 to bridge audit?
-   - A: Layer 11: sum of irrep dimensions of each binary polyhedral group equals the ...
+   - A: Layer 11: sum of irrep dimensions of each binary polyhedral group equals the corresponding Coxeter number (sum_dims(2T)=h(E6)=k=12, sum_dims(2O)=h(E7)=18, sum_dims(2I)=h(E8)=30). Ratios {2,3,5} match the Fibonacci multipliers from Layer 10. Layer 12: k=12 anchor chain through Leech lattice dimension 24=mE6=2k, PSL(2,q) order=k, and SL/PSL center order=phi1=2. Both layers added to exact_factorizations and theorem dicts; boundary_note in master lock updated to document 12th layer. All 22 tests pass.
 
 8. **decision-17775735** (4/30/2026) [audit, chapter6]
    - Q: Why add a Chapter 6 global-selector obstruction + lift witness audit?
-   - A: To provide an executable frontier certificate for the missing selector/global...
+   - A: To provide an executable frontier certificate for the missing selector/global-lift problem: a finite base-cycle monodromy obstruction (no one-turn fixed selector) together with a minimal Z2 lifted two-turn consistency witness. This advances the frontier without overclaiming full global closure on W(3,3)/Penrose dynamics.
 
 9. **decision-mohlhmfy** (4/27/2026) [auto-scanned, configuration]
    - Q: Why use GitHub Actions for CI/CD?
-   - A: Detected .github/workflows/ directory. GitHub Actions automates testing, buil...
+   - A: Detected .github/workflows/ directory. GitHub Actions automates testing, building, and deployment pipelines.
 
 10. **decision-mohlhk1j** (4/27/2026)
    - Q: Why: Sharpen tail wall to coordinate witness?
-   - A: Commit f3a26e8f on 2026-04-27. (Auto-seeded from git history — edit to add yo...
+   - A: Commit f3a26e8f on 2026-04-27. (Auto-seeded from git history — edit to add your reasoning.)
 
 ---
 
@@ -222,6 +235,6 @@ the shell `git` as a narrow fallback; everything else goes through GitKraken.
 
 ---
 
-*Auto-generated by Continuity CLI | Updated: 2026-06-14*
+*Auto-generated by Continuity CLI | Updated: 2026-07-02*
 
 <!-- END CONTINUITY AUTO-GENERATED CONTENT -->
