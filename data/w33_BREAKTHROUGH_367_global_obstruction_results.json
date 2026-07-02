@@ -1,0 +1,35 @@
+{
+  "lines_processed": 40,
+  "total_skew_edges": 540,
+  "satisfied_constraints": 281,
+  "conflicts": 760,
+  "is_trivial": false,
+  "topology": "twisted",
+  "cocycle_sample": {
+    "(0, 13)": [
+      1,
+      0,
+      2
+    ],
+    "(13, 0)": [
+      1,
+      0,
+      2
+    ],
+    "(0, 14)": [
+      0,
+      2,
+      1
+    ],
+    "(14, 0)": [
+      0,
+      2,
+      1
+    ],
+    "(0, 15)": [
+      0,
+      2,
+      1
+    ]
+  }
+}

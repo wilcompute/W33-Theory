@@ -4330,6 +4330,59 @@
               })();
             </script>
           </div>
+          <div class="card" id="holonet-uor-replay-card">
+            <div class="label">Holonet UOR Replay &mdash; Content-Addressed VM Certificate and OS Tick Trace</div>
+            <div class="detail"><strong>The VM now has a content-addressed proof wrapper and a replayable operating-system trace.</strong>
+              <code>holonet uor</code> regenerates the full bridge: two wrapped classical programs become UOR-style certificates,
+              an OpenAPI-aware adapter plan prepares all 9 UOR surfaces, a local mock runtime executes the blocked POST stages
+              deterministically, and the W(3,3) spread scheduler packs <strong>33 packets into 8 conflict-free spread ticks</strong>.
+              The replay is a concrete finite scheduler: each tick is a full-site spread epoch, each packet owns its route sites
+              without collision, and the trace is pinned by replay hash
+              <code>1b76e15c0e129c8dde9e334348b088b8be188901de44bdac85e27165741e1dce</code>.
+              The stricter microkernel bridge now separates that coarse site envelope from actual line-context execution:
+              <code>analysis/w33_spread_contextual_microkernel_bridge.py</code> verifies
+              <strong>36 spreads = the KS classical ceiling 36</strong>, with contextual deficit
+              <code>40 - 36 = 4 = &mu;</code>. It also constructs 40 optimal witnesses: choose any
+              W(3,3) point, delete its 4 incident line contexts, and the other 36 contexts are
+              exactly coverable by 11 selected points; the deleted lines are double-occupied
+              (line sum 2), so the obstruction is a movable point-star defect. The current wrapper demo refines from 33 packets to
+              <strong>56 ordered hop-line operations</strong>; each hop line has exactly <code>9</code>
+              compatible spread frames, every two-hop route has <code>0</code> single-spread line windows
+              because the hop lines meet at the relay, and the strict line microkernel schedules the demo in
+              <strong>14 active ticks</strong> (46 elapsed slots on a fixed 36-spread cycle).
+              The compiler artifact (<code>analysis/w33_line_context_compiler.py</code>) now emits that
+              packet DAG &rarr; hop-line DAG &rarr; spread-clock microcode directly, with exact schedule
+              verification, explicit lower bounds, and an optional SciPy MILP backend; under the project
+              venv it certifies that <strong>14 active ticks is optimal</strong> for the current demo. The new defect/spread tensor
+              (<code>analysis/w33_defect_spread_tensor.py</code>) exposes the hidden bus:
+              <code>40&times;36 = 1440</code> colored slots, each labelled by the unique carried line clock.
+              Row equalities reconstruct <code>SRG(40,12,2,4)</code>; spread pairs overlap in
+              <code>1</code> or <code>4</code> line clocks, and the 4-overlap graph has spectrum
+              <code>{15, 3^15, -3^20}</code>. The promoted frame clock is
+              <code>SRG(36,15,6,6)</code>: the 8 coarse OS ticks embed in 10 clock slots, while the
+              active-optimal 14-tick microkernel embeds in 22 slots after adding 8 connector frames. The
+              compiler also emits a clock-native program: 15 active ticks, zero connector frames, 15 clock slots.
+              The wrapper itself now exposes this policy choice: <code>analysis/holonet_wrap.py --optimize active-ticks|clock-slots</code>.
+              On the wrapped Rule-110 demo, the active policy selects <code>8</code> ticks / <code>13</code>
+              clock slots, while the clock-slot policy selects <code>7</code> ticks / <code>7</code> slots.
+              The policy stress artifact (<code>analysis/w33_clock_policy_stress.py</code>) repeats the wrapped
+              packet DAG at <code>1x..6x</code>; every scaled row stays connector-free under the clock-native policy
+              and saves <code>8,15,21,25,25,38</code> elapsed frame-clock slots, while preserving the one-copy
+              MILP boundary as the certified active-tick optimum.
+              The packet-latency artifact (<code>analysis/w33_packet_latency_benchmark.py</code>) looks inside the
+              schedule: the certified one-copy row finishes <code>28/33</code> packets earlier under the clock-native
+              policy, and deterministic <code>1x..4x</code> rows finish <code>23,52,80,106</code> packets earlier.
+              The browser replay now exposes all four views: OS ticks, active-optimal microkernel, expanded clock
+              walk, and clock-native microkernel. Its 36-frame SVG clock panel is clickable: each frame reports
+              its spread lines, active/connector slots, connector reason, and current jobs or packets.
+              The certificate shape is exported as Turtle/SHACL (<code>docs/holonet_uor_certificate_shapes.ttl</code>) and checked
+              locally; live UOR currently accepts the critical-identity proof and SHACL witness probes, while public POST runtime
+              surfaces remain a documented boundary.</div>
+            <div style="margin-top:0.6rem;display:flex;gap:0.6rem;flex-wrap:wrap;">
+              <a href="holonet_uor_os_replay.html" style="display:inline-block;padding:0.4rem 0.9rem;border:1px solid #4a9;border-radius:6px;text-decoration:none;">Open UOR OS replay</a>
+              <a href="holonet_uor_certificate_shapes.ttl" style="display:inline-block;padding:0.4rem 0.9rem;border:1px solid #888;border-radius:6px;text-decoration:none;">View SHACL shapes</a>
+            </div>
+          </div>
           <div class="card" id="holonet-playground-card">
             <div class="label">Pass 51 &mdash; The Machine Audits Itself + Live Playground</div>
             <div class="detail"><strong>The device specification is its own audit.</strong>
@@ -4440,6 +4493,57 @@
               <strong>The scaling win, visualized:</strong>
               <div style="margin-top:0.6rem;"><img src="holonet_scale.png" alt="Routing-state cost vs fabric order q: the classical table-routed baseline diverges from ~100 bytes to ~8 MB across q=2..13, while the Holonet stays flat at 0 bytes and 2 hops" style="max-width:100%;border-radius:6px;"></div>
               <div class="caption" style="font-size:0.85em;opacity:0.8;">Generated by <code>holonet bench --compare --scale --plot</code>. Baseline routing state grows as ~n&sup2;log n; the Holonet column is identically zero at every order.</div></div>
+          </div>
+          <div class="card" id="hashimoto-packet-phase-bridge">
+            <div class="label">Hashimoto Packet Phase Bridge</div>
+            <div class="detail"><strong>The nonbacktracking transport phases now have a packet ABI.</strong>
+              <code>analysis/w33_hashimoto_packet_phase_bridge.py</code> consumes the Hashimoto sector spectrum
+              and the Pass 48-50 packet/mirror certificates, then emits
+              <code>data/w33_hashimoto_packet_phase_bridge.json</code>. The exact bridge is:
+              <code>48</code> gauge-sector complex modes fill the <code>48</code> tomotope packet-body ticks;
+              <code>30</code> chiral-sector complex modes fill the <code>30</code> packet frames of one mirror atlas;
+              and the <code>720</code>-packet supercycle tiles both sectors as
+              <code>15&times;48 = 24&times;30</code>.
+              <br><br>
+              The analyzer settings are the two Ihara-Ramanujan phase sectors:
+              <code>1+i&radic;10</code> at <code>72.4516&deg;</code> and
+              <code>-2+i&radic;7</code> at <code>127.0867&deg;</code>, both on
+              <code>|u|&sup2;=11</code>. Honest boundary: this calibrates the packet/mirror phase protocol;
+              optical fringe visibility, loss, jitter, and physical phase stability remain bench measurements.</div>
+          </div>
+          <div class="card" id="frequency-bin-hashimoto-compiler">
+            <div class="label">Frequency-Bin Hashimoto Compiler</div>
+            <div class="detail"><strong>The phase bridge now has a frequency-bin control surface.</strong>
+              <code>analysis/w33_frequency_bin_hashimoto_compiler.py</code> lowers the packet phase certificate
+              into <code>data/w33_frequency_bin_hashimoto_compiler.json</code>: an <code>11</code>-bin plan with
+              <code>9</code> Hesse outcome bins plus <code>2</code> Hashimoto sector sidebands. The width is not
+              arbitrary: <code>9+2 = 11</code>, the nonbacktracking branch width and shared
+              <code>|u|&sup2;</code> of the two analyzer sectors.
+              <br><br>
+              The probe budget is the new handle: one mirror atlas carries
+              <code>30&times;9&times;2 = 540</code> sector probes, and a full supercycle carries
+              <code>720&times;9&times;2 = 12960</code>. Since the runtime supercycle is
+              <code>51840</code> slots, the sector-probe clock is exactly one quarter of the runtime clock.
+              This is a frequency-bin compiler certificate inspired by QFP-style EOM/pulse-shaper hardware;
+              bin spacing, RF drive, insertion loss, thermal drift, and measured fringe visibility remain
+              lab parameters.</div>
+          </div>
+          <div class="card" id="frequency-bin-phase-probe-lab-packet">
+            <div class="label">Frequency-Bin Phase-Probe Lab Packet</div>
+            <div class="detail"><strong>The compiler now emits a bench-facing schedule.</strong>
+              <code>analysis/w33_frequency_bin_lab_packet.py</code> turns the 11-bin compiler into
+              <code>data/w33_frequency_bin_lab_packet.json</code>,
+              <code>docs/holonet_frequency_bin_phase_probe_schedule.csv</code>, and
+              <code>docs/holonet_frequency_bin_raw_shot_template.jsonl</code>. One mirror atlas is
+              <code>30</code> packets times <code>9</code> Hesse bins times <code>2</code> sector sidebands:
+              <code>540</code> probe rows.
+              <br><br>
+              Each probe owns four runtime slots, so the lab schedule tiles the mirror atlas as
+              <code>540&times;4 = 2160</code>. Repeating across the <code>24</code> mirror atlases gives
+              <code>12960&times;4 = 51840</code>. The JSONL template deliberately leaves
+              <code>plus_counts</code>, <code>minus_counts</code>, <code>visibility</code>, and
+              <code>phase_error_degrees</code> blank: those fields must come from bench data, not from
+              the theorem.</div>
           </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>

@@ -1,0 +1,247 @@
+{
+  "identities": {
+    "all_identities_hold": true,
+    "fiber_count": true,
+    "phase_fiber_size": true,
+    "phase_matchings_present": true,
+    "same_line_fibers": true,
+    "skew_line_pairs": true
+  },
+  "part": "BT366",
+  "sample_transport_records": [
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "phase_transport": {
+        "0": "1",
+        "1": "0",
+        "2": "2"
+      },
+      "right_line": 13
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "phase_transport": {
+        "0": "0",
+        "1": "2",
+        "2": "1"
+      },
+      "right_line": 14
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "phase_transport": {
+        "0": "0",
+        "1": "2",
+        "2": "1"
+      },
+      "right_line": 15
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "phase_transport": {
+        "0": "0",
+        "1": "1",
+        "2": "2"
+      },
+      "right_line": 16
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "phase_transport": {
+        "0": "0",
+        "1": "1",
+        "2": "2"
+      },
+      "right_line": 17
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "phase_transport": {
+        "0": "1",
+        "1": "0",
+        "2": "2"
+      },
+      "right_line": 18
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "phase_transport": {
+        "0": "0",
+        "1": "2",
+        "2": "1"
+      },
+      "right_line": 19
+    },
+    {
+      "left_line": 0,
+      "line_relation": "skew",
+      "overlap_counts": {
+        "2": 6,
+        "4": 3
+      },
+      "phase_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "phase_transport": {
+        "0": "2",
+        "1": "1",
+        "2": "0"
+      },
+      "right_line": 20
+    }
+  ],
+  "summary": {
+    "all_identities_hold": true,
+    "fiber_count": 40,
+    "phase_fiber_size": 3,
+    "same_line_fibers": 40,
+    "sample_transport_records": 540,
+    "skew_line_pairs": 540
+  },
+  "theorem": "Selector Phase Transport Theorem. The 120 selector sheets are a qutrit bundle over the 40 W(3,3) lines. Each same-line fiber is a 3-sheet triangle; each skew-line pair carries a canonical phase matching at overlap 4, and the remaining phase pairs sit at overlap 2. This is the concrete transport law behind the BT360/BT361 bundle.",
+  "title": "Selector phase transport certificate"
+}

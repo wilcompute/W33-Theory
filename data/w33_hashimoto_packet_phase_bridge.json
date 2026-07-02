@@ -1,0 +1,85 @@
+{
+  "breakthrough": "The two non-trivial Hashimoto transport sectors now have a typed packet ABI: the 48 gauge-sector complex modes fill the 48-tick tomotope packet body, the 30 chiral-sector complex modes fill the 30 packet frames of one 2160-slot mirror atlas, and the 720 packet frames of a full supercycle tile both sectors as 15*48 = 24*30.",
+  "checks": {
+    "both_sectors_share_ihara_radius_squared_11": true,
+    "chiral_complex_modes_fill_one_mirror_atlas": true,
+    "gauge_complex_modes_fill_packet_body": true,
+    "packet_is_one_72_tick_microframe": true,
+    "phase_lane_once_per_hesse_word": true,
+    "phase_unit_vectors_are_normalized": true,
+    "source_firmware_fabric_verified": true,
+    "source_hashimoto_on_ramanujan_circle": true,
+    "source_microframe_verified": true,
+    "source_packet_energy_verified": true,
+    "supercycle_tiles_chiral_modes_by_gauge_multiplicity": true,
+    "supercycle_tiles_gauge_modes_by_chiral_multiplicity": true
+  },
+  "claim_boundary": [
+    "This is an ABI/protocol certificate, not a measured photonic fringe experiment.",
+    "It calibrates the two Hashimoto analyzer phase settings and their packet/mirror placement.",
+    "Optical phase stability, loss, detector jitter, and physical fringe visibility remain separate bench measurements."
+  ],
+  "packet_binding": {
+    "chiral_atlas_identity": "30 chiral complex modes = 30 packet frames per mirror atlas",
+    "gauge_body_identity": "48 gauge complex modes = 48 packet body phase ticks",
+    "microframe_ticks": 72,
+    "minimal_packet_trits": 72,
+    "mirror_atlas_packet_frames": 30,
+    "packet_body_phase_trits": 48,
+    "phase_lane_rule": "one PHASE lane at tick 2 of each 8-tick Hesse return word",
+    "phase_lane_ticks": [
+      2,
+      10,
+      18,
+      26,
+      34,
+      42,
+      50,
+      58,
+      66
+    ],
+    "supercycle_dual_tiling": "720 = 15*48 = 24*30",
+    "supercycle_packet_frames": 720
+  },
+  "phase_analyzers": {
+    "chiral": {
+      "analyzer_phase_degrees": 127.08668993406384,
+      "complex_mode_count": 30,
+      "eigenvalue_minus": "-2.0 - i*sqrt(7)",
+      "eigenvalue_plus": "-2.0 + i*sqrt(7)",
+      "imaginary_part_squared": 7.000000000000001,
+      "lambda_A": -4,
+      "pair_multiplicity": 15,
+      "radius": 3.3166247903554,
+      "radius_squared": 11.0,
+      "real_part": -2.0,
+      "sector": "chiral",
+      "unit_cos": -0.6030226891555273,
+      "unit_sin": 0.7977240352174657
+    },
+    "gauge": {
+      "analyzer_phase_degrees": 72.4515993862077,
+      "complex_mode_count": 48,
+      "eigenvalue_minus": "1.0 - i*sqrt(10)",
+      "eigenvalue_plus": "1.0 + i*sqrt(10)",
+      "imaginary_part_squared": 10.000000000000002,
+      "lambda_A": 2,
+      "pair_multiplicity": 24,
+      "radius": 3.3166247903554003,
+      "radius_squared": 11.000000000000002,
+      "real_part": 1.0,
+      "sector": "gauge",
+      "unit_cos": 0.3015113445777636,
+      "unit_sin": 0.9534625892455922
+    },
+    "shared_radius": "sqrt(11), the Ihara-Ramanujan radius"
+  },
+  "source_certificates": [
+    "data/w33_hashimoto_sector_spectrum.json",
+    "data/w33_packet_energy.json",
+    "data/w33_holonet_firmware_fabric_profile.json",
+    "data/bt1404_holonet_scope_microframe.json"
+  ],
+  "theorem": "W33 Hashimoto packet phase bridge",
+  "verified": true
+}
