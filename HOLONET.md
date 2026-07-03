@@ -99,6 +99,8 @@ The machine, executed:
 | `py -3 analysis/w33_ovoid_construct.py` | the explicit **noncontextual control model**: constructs & verifies the **W(2) 5-ray / W(4) 17-ray ovoid** (CF=0); q=3 has none — the demonstrator's control arm |
 | `py -3 analysis/holonet_control_arm.py` | the **two-arm discriminator**: the same estimators (`bt1901`/`bt1904`) return **CF≈1/10 (q=3) vs CF≈0 (even q)** on the two fixtures — runnable end-to-end |
 | `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
+| `py -3 analysis/w33_doily_mermin.py` | two contextualities separated on W(2): **sign-contextual (Mermin–Peres, exact F₂ obstruction + 6-line certificate) yet selection-noncontextual (ovoid)** — the control arm's CF=0 is the selection statistic only |
+| `py -3 analysis/w33_realization_dimension.py` | why one photon in C⁴: **W(2) has NO complete-basis realization in C³** (μ=3 rays can't fit a 1-dim orthocomplement); q=3 is the smallest realizable **and** smallest contextual order |
 
 The physics/computer-science core:
 
