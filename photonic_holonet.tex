@@ -8434,6 +8434,54 @@ forty Witting tetrads.  What is demonstrated is that the discriminator executes
 through the unmodified estimators and returns the geometry-forced verdicts, and
 that the figure is regenerated from the same closed-form scaling law.
 
+\subsection{Pass 56 --- two contextualities, separated; and why one photon in \(\mathbb C^4\)}
+\label{sec:capstone-fiftysix}
+
+Pass~55 made the two-arm discriminator executable; Pass~56 computes its honest
+boundary, and in doing so finds a second, independent forcing of \(q=3\).
+
+\paragraph{Sign versus selection.}  The parity law says the even fabric \(W(2)\)
+has contextual fraction zero --- yet the doily is the textbook home of the
+Mermin--Peres magic square.  Both are true, because they are different
+statistics, and \path{analysis/w33_doily_mermin.py} computes both exactly on the
+same fifteen points.  The \emph{selection} system --- exactly one click per
+context, the statistic the contextual-fraction estimators measure --- is
+satisfied perfectly by the five-ray ovoid, so \(\mathrm{CF}=0\).  The
+\emph{sign} system --- noncontextual \(\pm1\) values reproducing the product of
+each line's commuting two-qubit Pauli triple, with the fifteen signs computed as
+actual \(4\times4\) matrix products (three lines multiply to \(-I\)) --- is
+\emph{unsatisfiable}: exact \(F_2\) elimination proves it, and the minimal
+certificate is six lines covering every point an even number of times with an
+odd number of \(-I\) lines --- a Mermin--Peres square sitting inside the doily.
+So the even-order control fabric is sign-contextual yet selection-noncontextual,
+while the \(q=3\) fabric is contextual in \emph{both} senses.  The two-arm
+contrast is therefore a statement about one declared observable, and both arms
+must measure exactly that observable; this boundary is now stated in
+\path{holonet_parity_control.tex} and registered in the public theorem ledger.
+
+\paragraph{The realization dimension bound.}  A complete-basis realization of
+\(W(q)\) maps each context to an orthonormal basis, hence lives in
+\(\mathbb C^{q+1}\).  The witness \path{analysis/w33_realization_dimension.py}
+proves this is \emph{impossible} for \(q=2\): a non-collinear pair of distinct
+rays spans two dimensions of \(\mathbb C^3\), leaving a one-dimensional
+orthocomplement containing exactly one ray, while the geometry demands
+\(\mu=3\) distinct common neighbours there.  The same count at \(q=3\) ---
+four rays in a two-dimensional orthocomplement of \(\mathbb C^4\) --- poses no
+obstruction, and the Witting realization exists (cited corpus result); \(q=4\)
+passes this test with existence left open.  Consequence: \(q=3\) is the
+\emph{smallest} symplectic quadrangle the one-photon \(\mathbb C^4\) apparatus
+can realize at all, and by the parity law the smallest \emph{contextual} one.
+Two independent forcings --- one metrological, one statistical --- select the
+same order.
+
+\emph{Honest scope:} both results are exact finite computations (matrix
+products and \(F_2\) elimination; strongly-regular pair counts).  The
+qubit-Pauli labelling of \(W(2)\) is standard; the Witting existence at
+\(q=3\) is cited, not re-derived; \(q=4\) existence in \(\mathbb C^5\) is
+open.  Neither result weakens the discriminator --- it sharpens what the
+discriminator's contrast is a contrast \emph{of}: the selection statistic,
+declared in advance, measured identically on both arms.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

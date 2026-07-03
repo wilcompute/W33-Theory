@@ -15,10 +15,16 @@ on:
       - 'analysis/w33_holonet_retro_export.py'
       - 'analysis/w33_holonet_firmware_fabric_profile.py'
       - 'analysis/w33_packet_energy.py'
+      - 'analysis/w33_hashimoto_sector_spectrum.py'
+      - 'analysis/w33_hashimoto_packet_phase_bridge.py'
+      - 'analysis/w33_frequency_bin_hashimoto_compiler.py'
+      - 'analysis/w33_frequency_bin_lab_packet.py'
       - 'analysis/w33_master_audit.py'
       - 'analysis/w33_audit_qscan.py'
       - 'analysis/w33_ovoid_construct.py'
       - 'analysis/holonet_control_arm.py'
+      - 'analysis/w33_doily_mermin.py'
+      - 'analysis/w33_realization_dimension.py'
       - 'analysis/holonet_bench.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
@@ -29,6 +35,10 @@ on:
       - 'tests/test_pass53_parity_compare.py'
       - 'tests/test_pass54_ovoid_scale.py'
       - 'tests/test_pass55_control_arm.py'
+      - 'tests/test_pass56_mermin_dimension.py'
+      - 'tests/test_hashimoto_packet_phase_bridge.py'
+      - 'tests/test_frequency_bin_hashimoto_compiler.py'
+      - 'tests/test_frequency_bin_lab_packet.py'
       - 'analysis/holonet_cli.py'
       - 'holonet_cmd.py'
       - 'setup.py'
@@ -70,10 +80,16 @@ jobs:
           python analysis/w33_holonet_retro_export.py
           python analysis/w33_packet_energy.py
           python analysis/w33_holonet_firmware_fabric_profile.py
+          python analysis/w33_hashimoto_sector_spectrum.py
+          python analysis/w33_hashimoto_packet_phase_bridge.py
+          python analysis/w33_frequency_bin_hashimoto_compiler.py
+          python analysis/w33_frequency_bin_lab_packet.py
           python analysis/w33_audit_qscan.py
           python analysis/w33_ovoid_construct.py
           python analysis/holonet_control_arm.py
+          python analysis/w33_doily_mermin.py
+          python analysis/w33_realization_dimension.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py tests/test_pass55_control_arm.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py tests/test_pass55_control_arm.py tests/test_pass56_mermin_dimension.py tests/test_hashimoto_packet_phase_bridge.py tests/test_frequency_bin_hashimoto_compiler.py tests/test_frequency_bin_lab_packet.py -q

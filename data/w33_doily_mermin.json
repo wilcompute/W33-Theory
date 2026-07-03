@@ -1,0 +1,29 @@
+{
+  "selection_system": {
+    "statistic": "exactly one click per context (the demonstrator's CF)",
+    "ovoid_exists": true,
+    "ovoid_size": 5,
+    "contextual_fraction": 0.0
+  },
+  "sign_system": {
+    "statistic": "noncontextual +-1 values reproducing every line's Pauli product sign",
+    "lines_with_minus_I": 3,
+    "satisfiable": false,
+    "minimal_certificate_lines": [
+      4,
+      5,
+      7,
+      8,
+      9,
+      10
+    ],
+    "certificate_size": 6
+  },
+  "all_pass": true,
+  "summary": "two contextualities separated exactly on the doily W(2). SELECTION (the statistic the demonstrator's contextual-fraction estimators measure -- exactly one click per context): the 5-point ovoid is a perfect noncontextual model, so CF=0, as the parity law says. SIGN (Mermin-Peres): labelling the 15 points by the 15 two-qubit Hermitian Paulis, each line is a commuting triple multiplying to +I or -I (computed as 4x4 products); the noncontextual +-1 assignment system over F_2 is UNSATISFIABLE, with a minimal 6-line certificate = a Mermin-Peres magic square inside the doily (every point even degree, odd number of -I lines). So the even-order control fabric is NOT globally classical -- it is sign-contextual -- and the parity law's CF=0 concerns specifically the selection statistic. The q=3 fabric is contextual in BOTH senses (no ovoid, CF=1/10). This is the precise honesty boundary of the two-arm discriminator: the contrast is in one declared observable. HONEST: exact finite computation; the qubit-Pauli labeling of W(2) is standard; no new physical claim.",
+  "sources": [
+    "w33_master_audit._build(2) (the doily); w33_ovoid_construct (the ovoid)",
+    "Mermin-Peres magic square; two-qubit Pauli labeling of W(1,2)=GQ(2,2)",
+    "pairs with holonet_parity_control.tex (control-arm honesty)"
+  ]
+}

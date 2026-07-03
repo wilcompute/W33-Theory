@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "q": 2,
+      "dim_required": 3,
+      "mu": [
+        3
+      ],
+      "lambda": [
+        1
+      ],
+      "orthocomplement_dim_noncollinear": 1,
+      "obstruction": true,
+      "collinear_common_mutually_collinear": true
+    },
+    {
+      "q": 3,
+      "dim_required": 4,
+      "mu": [
+        4
+      ],
+      "lambda": [
+        2
+      ],
+      "orthocomplement_dim_noncollinear": 2,
+      "obstruction": false,
+      "collinear_common_mutually_collinear": true
+    },
+    {
+      "q": 4,
+      "dim_required": 5,
+      "mu": [
+        5
+      ],
+      "lambda": [
+        3
+      ],
+      "orthocomplement_dim_noncollinear": 3,
+      "obstruction": false,
+      "collinear_common_mutually_collinear": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "q=2: mu = q+1 = 3 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=2: lambda = q-1 = 1 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=2: collinear pair's common neighbours mutually collinear (complete the basis)",
+      "pass": true
+    },
+    {
+      "name": "q=3: mu = q+1 = 4 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=3: lambda = q-1 = 2 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=3: collinear pair's common neighbours mutually collinear (complete the basis)",
+      "pass": true
+    },
+    {
+      "name": "q=4: mu = q+1 = 5 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=4: lambda = q-1 = 3 (single value)",
+      "pass": true
+    },
+    {
+      "name": "q=4: collinear pair's common neighbours mutually collinear (complete the basis)",
+      "pass": true
+    },
+    {
+      "name": "q=2: obstruction (3 distinct rays cannot fit a 1-dim subspace)",
+      "pass": true
+    },
+    {
+      "name": "q=3: no obstruction (4 rays fit a plane)",
+      "pass": true
+    },
+    {
+      "name": "q=4: no obstruction from this test",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "theorem": "W(2) admits no faithful ray realization in C^3 with every line an orthonormal basis: a non-collinear pair spans dim 2, its orthocomplement in C^3 has dim 1 and holds exactly one ray, but mu=3 distinct common neighbours would all have to be that ray.",
+  "summary": "why one photon in C^4: the complete-measurement realization dimension bound. Contexts of W(q) have q+1 points, so a complete-basis (von Neumann) ray realization must live in C^{q+1}. COUNTING THEOREM, inputs verified here: for q=2 a non-collinear pair has mu=3 common neighbours that would have to be 3 distinct rays inside a 1-dimensional orthocomplement -- impossible, so the doily has NO such realization in C^3. For q=3 the same count (mu=4 rays in a 2-dim orthocomplement of C^4) poses no obstruction and the Witting realization exists (cited corpus result); q=4 (5 rays in 3 dims of C^5) passes this test, existence left open. Collinear pairs check out for all q: lambda=q-1 common neighbours, mutually collinear, completing the shared basis. CONSEQUENCE: q=3 is the smallest order the one-photon C^4 apparatus can realize AND (parity law) the smallest contextual one -- two independent forcings of the same q -- and the even-order control arm provably needs a different measurement class, sharpening the holonet_parity_control honesty. HONEST: the impossibility is exact with computationally verified inputs; Witting existence cited, not re-derived; q=4 existence open.",
+  "sources": [
+    "w33_master_audit._build (SRG mu/lambda verified per q)",
+    "Witting 40-ray realization in C^4 (corpus result, cited in w33_ks_inequality)",
+    "pairs with w33_doily_mermin (the two-contextuality separation) and holonet_parity_control.tex"
+  ]
+}

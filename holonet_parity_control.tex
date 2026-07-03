@@ -80,6 +80,33 @@ positive arm detects.  The explicit $W(2)$ ovoid is
 five rays, one per context; the $W(4)$ ovoid has seventeen rays and is written to
 \texttt{data/w33\_ovoid\_construct.json}.
 
+\section{Two notions of contextuality (what the control arm does and does not test)}
+Two exact results sharpen the scope of the control prediction, both computed in the repository.
+
+First, \emph{the even fabric is not globally classical}.  Labelling the fifteen points of $W(2)$ by the
+fifteen nontrivial two-qubit Pauli operators, every line is a commuting triple whose product is $\pm I$,
+and the noncontextual $\pm1$ assignment system is \emph{unsatisfiable}: the witness
+\texttt{analysis/w33\_doily\_mermin.py} computes the fifteen signs as $4\times4$ matrix products, proves
+unsatisfiability by exact $F_2$ elimination, and extracts the minimal certificate --- six lines, every
+point covered an even number of times, an odd number of $-I$ lines: a Mermin--Peres magic square inside
+the doily.  So $W(2)$ is \emph{sign}-contextual.  What the parity law kills on even $q$ is specifically
+the \emph{selection} contextuality --- the exactly-one-click-per-context excess that the
+contextual-fraction estimators measure --- for which the ovoid is a perfect noncontextual model.  The
+$q=3$ fabric is contextual in \emph{both} senses.  The two-arm contrast is therefore a statement about
+one declared observable, the CF statistic, and both arms must measure exactly that statistic.
+
+Second, \emph{the control arm provably needs a different measurement class}.  A complete-basis
+realization of $W(q)$ maps each context to an orthonormal basis, hence lives in $\mathbb C^{q+1}$.  For
+$q=2$ this is impossible: a non-collinear pair of rays spans two dimensions of $\mathbb C^3$, leaving a
+one-dimensional orthocomplement that contains exactly one ray, while the geometry demands $\mu=3$
+distinct common neighbours there (\texttt{analysis/w33\_realization\_dimension.py} verifies the counts).
+So the doily cannot be interrogated by the $q=3$ arm's complete von Neumann measurements in its matching
+dimension; its exactly-one-click statistic must be realized by a different measurement class, as the
+honest-scope box below already concedes.  The same counting at $q=3$ poses no obstruction --- and the
+Witting realization exists --- so $q=3$ is the \emph{smallest} order the one-photon $\mathbb C^4$
+apparatus can realize at all, and by the parity law the smallest contextual one: two independent
+forcings of the same order.
+
 \section{Statistics and decision rule}
 Each arm uses the same raw-shot schema, validator, and estimator as v1.  Distinguishing a contextual
 fraction $p$ from $0$ at $k\sigma$ needs, in the binomial planning approximation,
@@ -117,8 +144,11 @@ parity-dependent contrast it was never told about.
 
 \section{Repository command path}
 \begin{verbatim}
-python analysis/w33_audit_qscan.py          # parity law: CF=0 (even) vs 1/(q^2+1) (odd)
+python analysis/w33_audit_qscan.py           # parity law: CF=0 (even) vs 1/(q^2+1) (odd)
 python analysis/w33_ovoid_construct.py       # explicit even-q ovoid = the control model
+python analysis/holonet_control_arm.py       # both arms through the unmodified estimators
+python analysis/w33_doily_mermin.py          # sign vs selection contextuality, separated
+python analysis/w33_realization_dimension.py # q=2 has no complete-basis realization
 holonet audit                                # pin the architecture ledger to the same commit
 \end{verbatim}
 The first line establishes the prediction, the second constructs the noncontextual model the control arm
