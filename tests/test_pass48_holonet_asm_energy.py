@@ -64,6 +64,11 @@ def test_pass48_publication_anchors():
     assert "Pass 49" in main_paper
     assert "Pass 49" in practical
     assert "w33_holonet_retro_export.py" in ci
+    assert "Pass 50" in docs
+    assert "w33_holonet_firmware_fabric_profile.py" in holonet
+    assert "Pass 50" in main_paper
+    assert "Pass 50" in practical
+    assert "w33_holonet_firmware_fabric_profile.py" in ci
 
 
 def test_pass49_retro_exports_are_generated_and_verified():
@@ -81,3 +86,48 @@ def test_pass49_retro_exports_are_generated_and_verified():
     for target in result["targets"].values():
         assert (ROOT / target["artifact"]).exists()
         assert (ROOT / target["trace"]).exists()
+
+
+def test_pass50_firmware_fabric_profile_closes_packet_bus_accounting():
+    run_script("w33_holonet_retro_export.py", "w33_holonet_retro_export.json")
+    run_script("w33_packet_energy.py", "w33_packet_energy.json")
+    result = run_script(
+        "w33_holonet_firmware_fabric_profile.py",
+        "w33_holonet_firmware_fabric_profile.json",
+    )
+
+    assert result["verified"] is True
+    assert result["packet"]["trits"] == 72
+    assert result["mirror_fabric"]["mirror_slots"] == 2160
+    assert result["mirror_fabric"]["packet_frames_per_mirror_atlas"] == 30
+    assert result["mirror_fabric"]["packet_frames_per_supercycle"] == 720
+    assert result["witting_admission"]["accepted_rate"]["numerator"] == 13
+    assert result["witting_admission"]["accepted_rate"]["denominator"] == 40
+    assert (
+        result["witting_admission"]["expected_full_packet_trits_per_random_query"][
+            "numerator"
+        ]
+        == 117
+    )
+    assert (
+        result["witting_admission"]["expected_full_packet_trits_per_random_query"][
+            "denominator"
+        ]
+        == 5
+    )
+    assert (
+        result["firmware_targets"]["4004_style"]["packet_static_instruction_count"]
+        == 44
+    )
+    assert (
+        result["firmware_targets"]["6502_style"]["packet_static_instruction_count"]
+        == 260
+    )
+    assert (
+        result["firmware_targets"]["z80_style"]["packet_static_instruction_count"]
+        == 222
+    )
+    assert (
+        result["symbolic_retry_economics"]["expected_retry_exit_probability_per_packet"]
+        < 1e-3
+    )

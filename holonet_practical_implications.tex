@@ -773,6 +773,79 @@ electrical constraints, and exact historical instruction encodings remain
 implementation work.
 \end{honestbox}
 
+\section{Pass 50: Firmware-to-Fabric Accounting}
+\label{sec:pass50}
+Pass~49 leaves the reader with firmware files.  The practical question is what
+those files cost once they are no longer isolated route kernels but part of the
+full Holonet fabric.  The answer is now executable:
+\texttt{analysis/w33\_holonet\_firmware\_fabric\_profile.py} reads the exported
+target bundle, the \(72\)-trit packet bill, and the typed packet ABI, then
+writes a single profile certificate.
+
+\paragraph{The bridge identity.}
+The typed packet is \(72\) trits.  The global mirror atlas is \(2160\) typed
+slots.  Therefore
+\[
+  2160 = 30\cdot72 .
+\]
+One complete mirror atlas is thirty minimal packet frames.  The full runtime
+supercycle is
+\[
+  51840 = 24\cdot2160 = 720\cdot72 ,
+\]
+so the packet clock, tomotope/Witting mirror bus, and \(\mathrm{Sp}(4,3)\)
+runtime window are not three unrelated scales.  They are one integer clock
+viewed at packet, bus, and supercycle resolution.
+
+\paragraph{Firmware work per packet and per bus atlas.}
+A worst-case diameter-two packet performs two route decisions.  The exported
+firmware therefore costs:
+\begin{center}
+\begin{tabular}{lrrr}
+target & instructions/decision & instructions/packet & instructions/30-frame atlas\\
+\hline
+4004-style & 22 & 44 & 1320\\
+6502-style & 130 & 260 & 7800\\
+Z80-style & 111 & 222 & 6660
+\end{tabular}
+\end{center}
+The eight-bit targets also record dynamic accumulator-step upper bounds
+\((370\) per packet for the 6502-style target and \(324\) for the Z80-style
+target).  This is the practical bootstrap number: the classical control plane
+of a full mirror atlas is still small enough to audit as firmware.
+
+\paragraph{Admission and retry load.}
+The Witting logical desk admits \(520\) of the \(1600\) ordered query pairs and
+marks the other \(1080\) as retry-shadow:
+\[
+  \frac{520}{1600}=\frac{13}{40}, \qquad
+  \frac{1080}{1600}=\frac{27}{40}.
+\]
+Thus a random ordered query opens a full packet with probability \(13/40\).
+The expected full-frame traffic is exactly
+\[
+  72\cdot \frac{13}{40} = \frac{117}{5}=23.4
+\]
+trits, or \(144\cdot13/40=234/5=46.8\) binary host bits, per random query.
+At the nominal symbolic BT1706 rates, the retry exits add
+\[
+  64p_{\rm loss}+8p_{\rm dark}+24p_{\rm parity}
+  =7.68\times10^{-4}
+\]
+expected exits per packet.  A \(1600\)-packet wavefront therefore adds only
+about \(1.23\) expected retry packets at those rates.  That is not a calibrated
+optical loss budget, but it is the first end-to-end control-plane load number:
+firmware, packet, bus atlas, Witting admission, and retry hooks in one table.
+
+\begin{honestbox}
+Pass~50 is deterministic accounting, not measured throughput.  The
+``30-frame atlas'' assumes disjoint typed mirror slots; a contended shared bus
+still follows the FIFO stress behavior of BT1705.  The firmware listings are
+canonical Holonet targets, not cycle-accurate historical chips.  The value is
+that a builder can now trace one route decision from four-bit firmware all the
+way to the \(2160\)-slot fabric and know exactly what has been counted.
+\end{honestbox}
+
 \section{A Roadmap}
 \label{sec:roadmap}
 \begin{description}[leftmargin=0pt,style=nextline]

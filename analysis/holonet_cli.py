@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -167,6 +168,169 @@ def cmd_bench(args):
     sys.exit(0 if ok else 1)
 
 
+def cmd_uor(args):
+    """Run the Holonet-UOR bridge demo path."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    py = sys.executable
+    venv_py_bin = os.path.join(root, ".venv", "bin", "python")
+    venv_py_scripts = os.path.join(root, ".venv", "Scripts", "python.exe")
+
+    def is_valid_venv(path):
+        if not os.path.exists(path):
+            return False
+        # On Windows, check if pyvenv.cfg points to a Linux path (WSL venv)
+        cfg = os.path.join(os.path.dirname(os.path.dirname(path)), "pyvenv.cfg")
+        if os.path.exists(cfg):
+            try:
+                with open(cfg, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    if "home = /usr/bin" in content or "home = /bin" in content:
+                        return False
+            except Exception:
+                pass
+        return True
+
+    if sys.platform == "win32":
+        compiler_py = venv_py_scripts if is_valid_venv(venv_py_scripts) else py
+    else:
+        compiler_py = venv_py_bin if is_valid_venv(venv_py_bin) else py
+
+    commands = [
+        [
+            py,
+            "analysis/holonet_uor_certificate.py",
+            "--input",
+            "data/holonet_wrap_demo_factorial.json",
+            "--out",
+            "data/holonet_uor_certificate.json",
+        ],
+        [
+            py,
+            "analysis/holonet_uor_certificate.py",
+            "--input",
+            "data/holonet_wrap_rule110_demo.json",
+            "--out",
+            "data/holonet_uor_rule110_certificate.json",
+        ],
+        [
+            py,
+            "analysis/holonet_uor_live_adapter.py",
+            "--out",
+            "data/holonet_uor_live_adapter_plan.json",
+        ],
+        [
+            py,
+            "analysis/holonet_uor_submitter.py",
+            "--out",
+            "data/holonet_uor_submitter_report.json",
+        ],
+        [
+            py,
+            "analysis/holonet_uor_mock_runtime.py",
+            "--out",
+            "data/holonet_uor_mock_runtime_report.json",
+        ],
+        [py, "analysis/w33_uor_runtime_model.py"],
+        [
+            py,
+            "analysis/w33_uor_spread_scheduler.py",
+            "--out",
+            "data/w33_uor_spread_scheduler.json",
+        ],
+        [
+            py,
+            "analysis/holonet_os_scheduler.py",
+            "--out",
+            "data/holonet_os_scheduler_trace.json",
+        ],
+        [
+            py,
+            "analysis/w33_spread_contextual_microkernel_bridge.py",
+            "--out",
+            "data/w33_spread_contextual_microkernel_bridge.json",
+        ],
+        [
+            compiler_py,
+            "analysis/w33_line_context_compiler.py",
+            "--exact-backend",
+            "auto",
+            "--exact-time-limit",
+            "120",
+            "--out",
+            "data/w33_line_context_compiler.json",
+        ],
+        [
+            py,
+            "analysis/w33_defect_spread_tensor.py",
+            "--out",
+            "data/w33_defect_spread_tensor.json",
+        ],
+        [
+            py,
+            "analysis/w33_spread_clock_graph.py",
+            "--out",
+            "data/w33_spread_clock_graph.json",
+        ],
+        [
+            py,
+            "analysis/w33_clock_policy_stress.py",
+            "--out",
+            "data/w33_clock_policy_stress.json",
+        ],
+        [
+            py,
+            "analysis/w33_packet_latency_benchmark.py",
+            "--out",
+            "data/w33_packet_latency_benchmark.json",
+        ],
+        [py, "analysis/w33_uor_holonomy_shadow_api_bridge.py"],
+        [
+            py,
+            "analysis/w33_uor_holonomy_live_probe.py",
+            "--out",
+            "data/w33_uor_holonomy_live_probe.json",
+        ],
+        [
+            py,
+            "analysis/holonet_uor_shacl_shape_check.py",
+            "--out",
+            "data/holonet_uor_shacl_shape_report.json",
+        ],
+        [py, "analysis/holonet_uor_shacl_export.py"],
+        [py, "analysis/holonet_uor_browser_demo.py"],
+    ]
+
+    def insert_before_output(script_name, flag):
+        for command in commands:
+            if len(command) > 1 and command[1].endswith(script_name):
+                command.insert(-2, flag)
+                return
+        raise RuntimeError(f"could not find {script_name} in UOR command list")
+
+    if args.live:
+        insert_before_output("holonet_uor_live_adapter.py", "--probe-live")
+        insert_before_output("holonet_uor_submitter.py", "--live")
+        insert_before_output("w33_uor_holonomy_live_probe.py", "--live")
+        insert_before_output("holonet_uor_shacl_shape_check.py", "--live")
+
+    print("holonet uor -- content-addressed VM certificate and OS replay", flush=True)
+    for index, command in enumerate(commands, start=1):
+        label = " ".join(command[1:])
+        print(f"\n[{index:02d}/{len(commands):02d}] {label}", flush=True)
+        proc = subprocess.run(command, cwd=root, check=False)
+        if proc.returncode != 0:
+            print(f"\nFAIL: command exited {proc.returncode}")
+            sys.exit(proc.returncode)
+    print("\nALL PASS -- Holonet-UOR bridge demo artifacts regenerated.")
+    print("  browser replay: docs/holonet_uor_os_replay.html")
+    print("  SHACL export:   docs/holonet_uor_certificate_shapes.ttl")
+    print("  line compiler:  data/w33_line_context_compiler.json")
+    print("  defect tensor:  data/w33_defect_spread_tensor.json")
+    print("  clock graph:    data/w33_spread_clock_graph.json")
+    print("  clock stress:   data/w33_clock_policy_stress.json")
+    print("  packet latency: data/w33_packet_latency_benchmark.json")
+
+
 def cmd_verify(args):
     checks = []
     # network
@@ -249,6 +413,16 @@ def main(argv=None):
         help="with --compare --scale: also write the divergence figure docs/holonet_scale.png",
     )
     pb.set_defaults(func=cmd_bench)
+    pu = sub.add_parser(
+        "uor",
+        help="run the Holonet-UOR bridge demo, mock runtime, OS replay, and shapes",
+    )
+    pu.add_argument(
+        "--live",
+        action="store_true",
+        help="also run bounded live UOR probes for accepted public endpoints",
+    )
+    pu.set_defaults(func=cmd_uor)
     args = p.parse_args(argv)
     args.func(args)
 

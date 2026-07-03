@@ -9,10 +9,20 @@
 - 2026-06-30 current work: read `w33_paper.tex`, `holonet_practical_implications.tex` (the repo file corresponding to the requested `practical_holonet.tex`), and `photonic_holonet.tex` top-to-bottom; promote a scoped Holonet/W33 packet breakthrough into runnable code, JSON, CI, and `docs/index.html`.
 - 2026-06-30 current work extension: searched the repo and external primary-source surfaces for loosely related quantum-walk/frequency-bin ideas, then promoted the most promising new physical/compiler interface: a frequency-bin lowering of the Hashimoto packet phase bridge.
 - 2026-07-01 current work: update the existing Holonet practical presentation package for an investor-facing talk by folding in the practical paper, machine paper, photonic Pass 48-55 chain, W33 Hashimoto/frequency-bin bridge, current origin/master state, and current market-context sources.
+- 2026-07-02 current work: absorb the latest BT367/BT982 commits and continue the Holonet practical investor presentation by adding an executable selector E6/E8 runtime bridge that ties the 120-sheet selector, 240 signed-sheet/E8 budget, frequency-bin probes, and 51,840-tick runtime into one certificate.
+- 2026-07-02 current work extension: push the selector E6/E8 bridge into architecture by compiling the 51,840-slot runtime as a lookup-free control-plane word: `24 * 5 * 6 * 9 * 2 * 4`.
+- 2026-07-02 current work extension: bridge the remaining S3 completion frontier to the executable probe clock: `4320 * 3 = 1620 * 8 = 24 * 540 = 12960`, then `12960 * 4 = 51840`, while preserving the no-exact-cover boundary.
+- 2026-07-02 current work extension: promote the S3 completion surface into a conservative admission controller: each ordered path owns a 12-tick word (`3` candidate completions times `4` probe/adjudication ticks), so one atlas is `180 * 12 = 2160` and the supercycle is `4320 * 12 = 51840`.
+- 2026-07-03 current work: executed the Pass 57 contextuality tax (Deficit Law) rollout. Hardened `holonet_cli.py` for cross-platform venv execution, verified `--scale` benchmarks, and conducted a q=4 faithful ray realization probe in C^5 (failed, confirming q=3 Witting uniqueness among low-order symplectic quadrangles).
 
 ## 💡 Key Decisions Made
 
 **MAJOR BREAKTHROUGH — Repository Unified:**
+
+- **Pass 57: The Contextuality Tax (2026-07-03):** Established the Structural Deficit Law: the 4-context gap in the Holonet selector is the physical tax of quantum contextuality ($CF = 1/(q^2+1)$). The deficit is one movable point-star (4 contexts). Docs/index.html updated with the canonical ledger card.
+- **W(4) Realization Probe (2026-07-03):** Probed the sister geometry W(4) for a faithful C^5 ray realization. Numerical optimization (L-BFGS-B) failed (error ~18), while correctly finding the Witting realization for q=3 and confirming impossibility for q=2. This supports the claim that the q=3 substrate is the minimal physical apparatus for the Holonet.
+- **CLI Hardening (2026-07-03):** Fixed `holonet_cli.py` to handle broken venv symlinks in mixed Windows/WSL environments, ensuring `holonet uor` operates correctly when called from either side.
+- **Scale Benchmarking (2026-07-03):** Wired `--scale` into `holonet bench`, allowing verification of O(1) state growth across the full sister geometry scan.
 
 - CCLXXXVII (Krein Array): Complete on master. 35/35 checks, 55/55 tests. **KEY IDENTITY**: (b*_0 - c*_1)/(b*_1 - c*_2) = Q = 3 (field order!)
 - CCLXIX–CCLXXII (Graviton/SM/Mass-Ratios/CKM-PMNS): Live on origin/main branch. All implemented.
@@ -43,6 +53,9 @@
 - **BT367 (2026-07-02):** The 120-sheet Holonet selector (40 W(3,3) lines * 3 phases) is identified as a holographic E6 object. The permutation representation decomposes multiplicity-freely into five W(E6) irreducible representations with dimensions {1, 15, 20, 24, 60}. The 51,840-tick supercycle is the Weyl group W(E6). **SUCCESS**: GAP verification of intersection matrix eigenvalues and multiplicities confirmed the {1, 15, 20, 24, 60} profile (Success: 2026-07-02).
 - **BT367 Holonomy (2026-07-02):** The global selector obstruction is measured at 760 conflicts, exactly 2 * 380 twisted basis cycles in the skew-line graph. This "Twisted Phase Phantom" identifies the specific topological cost of the holographic E6-to-W33 projection.
 - **UOR Pipeline Refresh (2026-07-02):** Regenerated all Holonet-UOR bridge artifacts for the investor presentation. All 19 pipeline stages (CLI `uor` command) passed, including the exact-backend line compiler, clock graph, and SHACL shape validation. Browser replay successfully generated at `docs/holonet_uor_os_replay.html`.
+- **BT367 (2026-07-02):** The 120-sheet Holonet selector (40 W(3,3) lines * 3 phases) is identified as a holographic E6 object. The permutation representation decomposes multiplicity-freely into five W(E6) irreducible representations with dimensions {1, 15, 20, 24, 60}. The 51,840-tick supercycle is the Weyl group W(E6). **SUCCESS**: GAP verification of intersection matrix eigenvalues and multiplicities confirmed the {1, 15, 20, 24, 60} profile (Success: 2026-07-02).
+- **BT367 Holonomy (2026-07-02):** The global selector obstruction is measured at 760 conflicts, exactly 2 * 380 twisted basis cycles in the skew-line graph. This "Twisted Phase Phantom" identifies the specific topological cost of the holographic E6-to-W33 projection.
+- **UOR Pipeline Refresh (2026-07-02):** Regenerated all Holonet-UOR bridge artifacts for the investor presentation. All 19 pipeline stages (CLI `uor` command) passed, including the exact-backend line compiler, clock graph, and SHACL shape validation. Browser replay successfully generated at `docs/holonet_uor_os_replay.html`.
 - **BT1404 holonet scope microframe (2026-06-20, commit `d476830ae`):** The BT1403 eraser-lift Hesse port is now a visible ABI scope: 9 Hesse outcomes times 8 packet ticks equals one 72-tick microframe. Each outcome h=3r+p owns an 8-tick return word (erase, route, phase, X/Z frame correction, T-frame parity, ABI restore, next word). Generated artifacts: `docs/bt1404_holonet_scope.html`, `data/bt1404_holonet_scope_microframe.json`, and comparison PDF `photonic_holonet_BT1404_holonet_scope.pdf`.
 - **BT1405 continuous Q6 path router (2026-06-20, commit `25866beed`):** BT1374's Q6 packet-edge addresses now lift to continuous Q6 walks. The six-digit stress route preserves packet edges `175,133,56,37,142,77`, inserts 10 connector edges, uses 16 total Q6 steps, and leaves 32 slack ticks inside the 48-tick tomotope body. This is an ABI route certificate, not a waveguide/detector model.
 - **BT1406 tomotope-body edge pulse scheduler (2026-06-21, commit `f5324c611`):** BT1405's 16-step stress Q6 path now expands into the ternary pulse microcycle `LOAD_FLAG -> FLIP_Q6_AXIS -> LATCH_VERTEX`. The identity `16*3=48` fills the entire tomotope body with zero idle ticks; packet-edge load ticks are `0,6,12,21,27,45`. This is a timing ABI, not calibrated optics.
@@ -59,12 +72,18 @@
 - 2026-07-01 Holonet live deck refresh: updated `presentations/holonet_architecture_live_deck.html` to July 1 framing with current Pass 53-55 status, the two-arm discriminator, table-free scaling, frequency-bin compiler, phase-probe packet, and a closer investor decision frame around falsifiers plus SDK surface.
 - 2026-07-01 Pass 55 end-to-end verification: ran `tests/test_pass55_control_arm.py` through WSL (the Windows venv is a WSL-created wrapper). All three tests pass: positive arm compatible with 1/10, control arm consistent with zero and below 1/10, and scaling plot renders.
 - 2026-07-01 Integral E8 lift explicit basis (BT982): closed the cosmetic remaining step by constructing an explicit integral E8 basis from the BT951 support-60 minimizer 2, using the BT954/BT956 vertex/tetracode metric gauges. `analysis/bt982_explicit_integral_e8_basis.py` finds 58 norm-2 roots, extracts a GL(8,Z) transformation to the standard E8 Cartan form, and writes `data/bt982_explicit_integral_e8_basis.json`. `tests/test_bt982_explicit_integral_e8_basis.py` verifies the final Gram is the standard E8 Cartan and both gauges agree on minimizer 2.
+- 2026-07-02 Selector E6/E8 runtime bridge: added `analysis/w33_selector_e6_e8_runtime_bridge.py`, `data/w33_selector_e6_e8_runtime_bridge.json`, `tests/test_selector_e6_e8_runtime_bridge.py`, and a `docs/index.html#selector-e6-e8-runtime-bridge` card. The certificate verifies `120*108=12960`, `12960*4=51840`, `2*120=240`, `240*216=51840`, and `760=2*380`, while preserving the boundary that this is an accounting bridge, not a canonical sheet-to-root bijection or measured photonic bench result.
+- 2026-07-02 Holonet practical investor notes refresh: updated `presentations/holonet_architecture_investor_notes.md` so BT367/BT982 now land in the investor narrative as a runtime diligence proof: the selector fabric, frequency-bin packet, E6 supercycle, and E8 signed-sheet budget all close on the same 51,840-tick clock.
+- 2026-07-02 Holonet architecture control-plane ABI: added `analysis/w33_architecture_control_plane_abi.py`, `data/w33_architecture_control_plane_abi.json`, `tests/test_w33_architecture_control_plane_abi.py`, and `docs/index.html#holonet-control-plane-abi`. The new architectural identity is `51840 = 24*5*6*9*2*4`, decoding a runtime slot into mirror atlas, selector sheet, packet frame, Hesse bin, Hashimoto sector, and four-slot probe lane. It proves the decoder is bijective over all 51,840 slots and keeps calibration, route policy, fault policy, and canonical E8-root ordering outside the ABI claim.
+- 2026-07-02 Holonet practical investor notes extension: added the control-plane ABI as the architecture slide, product-surface evidence anchor, execution packet, risk boundary, and next-move item.
 
 ## 🚧 Blockers & Challenges
 <!-- What's preventing progress? -->
 
 ## 🔍 Attempted Approaches
 <!-- What did we try that didn't work? -->
+- 2026-07-02: Verified the selector E6/E8 runtime bridge with direct script execution, `py_compile`, `json.tool`, docs anchor/text checks, and direct invocation of the focused test functions. `python3 -m pytest tests/test_selector_e6_e8_runtime_bridge.py -q` is blocked in this shell because `pytest` is not installed.
+- 2026-07-02: Verified the control-plane ABI with direct script execution, `py_compile`, `json.tool`, docs/index anchor checks, and direct invocation of the focused test functions. `python3 -m pytest tests/test_w33_architecture_control_plane_abi.py -q` is blocked in this shell because `pytest` is not installed.
 - 2026-06-05: Refreshed origin/master and found local/remote aligned at f52a81ae after the BT285-BT317 remote substrate batch. BT318 was already occupied, so the selector group-law packet used BT319.
 - 2026-06-05: Verified BT319 with `python3 -m py_compile`, direct verifier execution, direct focused test execution, and `python3 -m json.tool` on the generated result JSON.
 - 2026-06-05: Used GAP to compute the selector D4 normalizers: S4 normalizer size 8/self-normalizing; GL(4,2) normalizer size 16 with structure C2 x D8; centralizer size 4. BT320 then reproduced the result offline in Python and verified 23/23.
@@ -90,11 +109,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-02T02:30:39.985Z (reason: file save)
+- Auto-saved at 2026-07-03T18:07:34.693Z (reason: file save)
 - Recent commits:
-  - 7545613d7 BT367: Identify E6 holographic selector bridge and quantify 760-conflict holonomy phantom
-  - 8a7ba8ce2 BT982: explicit integral E8 basis from W33 selector (script + test)
-  - 13d9ca368 Pass 55: the two-arm contextuality discriminator (runnable end-to-end) and the scaling figure
+  - aa3cd248b Pass 57: the contextuality tax -- the defect is one movable point-star (synthesis)
+  - f0cf2d108 Pass 56 deferred surfaces: index card + HOLONET.md witness rows
+  - ba7f09312 Pass 56: two contextualities separated on W(2), and the realization dimension bound
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

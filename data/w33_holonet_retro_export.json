@@ -1,5 +1,5 @@
 {
-  "artifact_directory": "artifacts/holonet_asm",
+  "artifact_directory": "artifacts\\holonet_asm",
   "breakthrough": "The Holonet router is no longer only an emulator proof: it now has deterministic assembly-style export artifacts and golden traces for 4-bit, 6502-style, and Z80-style targets.  The Z80-style target is independently verified on all 1600 ordered W33 address pairs with MUL and MOD3 synthesized away.",
   "checks": {
     "artifacts_written": true,
@@ -26,28 +26,28 @@
   },
   "targets": {
     "4004_style": {
-      "artifact": "artifacts/holonet_asm/router_4004_style.asm",
+      "artifact": "artifacts\\holonet_asm\\router_4004_style.asm",
       "claim_boundary": "4-bit Holonet ISA with primitive MUL and MOD3, matching Pass 47.",
       "instructions": 22,
       "sample_result": 1,
-      "trace": "artifacts/holonet_asm/golden_trace_4004_style.json"
+      "trace": "artifacts\\holonet_asm\\golden_trace_4004_style.json"
     },
     "6502_style": {
-      "artifact": "artifacts/holonet_asm/router_6502_style.asm",
+      "artifact": "artifacts\\holonet_asm\\router_6502_style.asm",
       "claim_boundary": "6502-style accumulator semantics, not cycle-accurate MOS 6502.",
       "instructions": 130,
       "max_instruction_steps": 185,
       "sample_result": 1,
-      "trace": "artifacts/holonet_asm/golden_trace_6502_style.json"
+      "trace": "artifacts\\holonet_asm\\golden_trace_6502_style.json"
     },
     "z80_style": {
-      "artifact": "artifacts/holonet_asm/router_z80_style.asm",
+      "artifact": "artifacts\\holonet_asm\\router_z80_style.asm",
       "claim_boundary": "Z80-style accumulator/control-flow semantics, not vendor-cycle timing.",
       "instructions": 111,
       "matches_reference": true,
       "max_instruction_steps": 162,
       "sample_result": 1,
-      "trace": "artifacts/holonet_asm/golden_trace_z80_style.json",
+      "trace": "artifacts\\holonet_asm\\golden_trace_z80_style.json",
       "verified_pairs": 1600
     }
   },

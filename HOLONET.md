@@ -59,6 +59,8 @@ holonet audit                # re-derive every layer's headline constant from q=
 holonet bench                # the performance face: op counts (forced) + host-relative throughput
 holonet bench --compare      # table-free address routing vs a classical table-routed baseline (1170 B -> 0)
 holonet bench --compare --scale  # the table-free win grows with q: routing state -> infinity vs 0, hops stay 2
+holonet uor                  # content-addressed VM cert, local UOR runtime, OS replay, SHACL shapes
+holonet uor --live           # same path plus bounded live UOR proof/SHACL probes
 ```
 
 `holonet verify` should end with **`ALL PASS — this machine is a working holonet node.`**
@@ -98,10 +100,22 @@ The machine, executed:
 | `py -3 analysis/w33_audit_qscan.py` | the parity law across **W(q) for q=2,3,4** (q=4 = GF(4)): **CF = 0 for even q, 1/(q²+1) for odd q** — contextual iff q is odd, **parity not primality** (`--deep` adds q=5) |
 | `py -3 analysis/w33_ovoid_construct.py` | the explicit **noncontextual control model**: constructs & verifies the **W(2) 5-ray / W(4) 17-ray ovoid** (CF=0); q=3 has none — the demonstrator's control arm |
 | `py -3 analysis/holonet_control_arm.py` | the **two-arm discriminator**: the same estimators (`bt1901`/`bt1904`) return **CF≈1/10 (q=3) vs CF≈0 (even q)** on the two fixtures — runnable end-to-end |
-| `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
 | `py -3 analysis/w33_doily_mermin.py` | two contextualities separated on W(2): **sign-contextual (Mermin–Peres, exact F₂ obstruction + 6-line certificate) yet selection-noncontextual (ovoid)** — the control arm's CF=0 is the selection statistic only |
 | `py -3 analysis/w33_realization_dimension.py` | why one photon in C⁴: **W(2) has NO complete-basis realization in C³** (μ=3 rays can't fit a 1-dim orthocomplement); q=3 is the smallest realizable **and** smallest contextual order |
 | `py -3 analysis/w33_contextuality_tax.py` | the contextuality tax: **exhaustive proof that every optimal KS failure set is one movable point-star** (exactly 40, one per point); deficit = q+1 (odd) / 0 (even) — the OS escalation budget = the 9^t spend = **1/10 of the fabric** |
+| `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
+| `py -3 analysis/holonet_wrap.py --optimize ... -- <cmd>` | wraps any classical command in a Holonet packet envelope and now compiles that envelope under `active-ticks` or `clock-slots`; the Rule-110 demo is `8/13` active-policy ticks/slots versus `7/7` clock-policy ticks/slots |
+| `py -3 analysis/holonet_vm_demo_launcher.py` | one-button VM demo: interface proof, substrate stub, side-channel suite, and the same wrapped Rule-110 command run under both scheduler policies |
+| `py -3 analysis/holonet_uor_mock_runtime.py` | local UOR-shaped runtime for all 9 advertised adapter stages while public POST access is blocked |
+| `py -3 analysis/holonet_os_scheduler.py` | replayable Holonet OS tick trace: 33 packets dispatched in 8 conflict-free spread ticks |
+| `py -3 analysis/w33_spread_contextual_microkernel_bridge.py` | stricter line-context microkernel: 36 spreads = KS ceiling 36, the 4-context deficit localizes as a movable point-star double-occupancy defect, 56 hop-line ops, 14 active execution ticks |
+| `py -3 analysis/w33_line_context_compiler.py` | compiler from wrapped packets to packet DAG, hop-line DAG, and verified spread-clock microcode; venv SciPy certifies the 14-active-tick optimum and emits a 15-slot clock-native schedule |
+| `py -3 analysis/w33_defect_spread_tensor.py` | 1440-slot colored defect/spread bus: row equalities reconstruct W(3,3), spread overlap graph has spectrum `{15, 3^15, -3^20}` |
+| `py -3 analysis/w33_spread_clock_graph.py` | 36-frame clock graph: spread 4-overlap is `SRG(36,15,6,6)`; 8 OS ticks embed in 10 slots, the 14-tick optimum in 22 slots, and the clock-native schedule in 15 slots |
+| `py -3 analysis/w33_clock_policy_stress.py` | active-vs-clock-native policy stress: certified 14/22 vs 15/15 anchor, then repeated wrapper DAGs `1x..6x` stay connector-free and save 8, 15, 21, 25, 25, 38 clock slots |
+| `py -3 analysis/w33_packet_latency_benchmark.py` | packet-completion latency, not just total slots: certified one-copy row has clock-native finishing `28/33` packets earlier; deterministic `1x..4x` rows finish `23,52,80,106` packets earlier |
+| `py -3 analysis/holonet_uor_shacl_shape_check.py` | Holonet-UOR certificate shape validation, with optional live UOR SHACL witness probing |
+| `py -3 analysis/holonet_uor_browser_demo.py` | browser replay at `docs/holonet_uor_os_replay.html`: OS ticks, active-optimal microkernel, expanded clock walk, clock-native microkernel, and a clickable SVG 36-frame clock inspector |
 
 The physics/computer-science core:
 
