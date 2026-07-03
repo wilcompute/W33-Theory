@@ -1,0 +1,336 @@
+{
+  "deficit_law": [
+    {
+      "q": 2,
+      "n_contexts": 15,
+      "max_sat": 15,
+      "deficit": 0,
+      "deficit_predicted": 0,
+      "alpha": 5,
+      "hoffman": 5,
+      "selection_gap_hoffman_minus_alpha": 0
+    },
+    {
+      "q": 3,
+      "n_contexts": 40,
+      "max_sat": 36,
+      "deficit": 4,
+      "deficit_predicted": 4,
+      "alpha": 7,
+      "hoffman": 10,
+      "selection_gap_hoffman_minus_alpha": 3
+    },
+    {
+      "q": 4,
+      "n_contexts": 85,
+      "max_sat": 85,
+      "deficit": 0,
+      "deficit_predicted": 0,
+      "alpha": 17,
+      "hoffman": 17,
+      "selection_gap_hoffman_minus_alpha": 0
+    }
+  ],
+  "q3_classification": {
+    "max_sat": 36,
+    "n_failure_sets": 40,
+    "all_point_stars": true,
+    "star_centers": [
+      3,
+      19,
+      37,
+      21,
+      0,
+      7,
+      24,
+      28,
+      30,
+      15,
+      6,
+      8,
+      12,
+      1,
+      33,
+      2,
+      16,
+      18,
+      31,
+      26,
+      14,
+      9,
+      17,
+      29,
+      39,
+      34,
+      20,
+      22,
+      4,
+      10,
+      11,
+      35,
+      13,
+      36,
+      25,
+      32,
+      23,
+      27,
+      38,
+      5
+    ],
+    "failure_sets": [
+      [
+        12,
+        13,
+        14,
+        15
+      ],
+      [
+        5,
+        16,
+        27,
+        36
+      ],
+      [
+        7,
+        17,
+        25,
+        35
+      ],
+      [
+        9,
+        18,
+        30,
+        33
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        22,
+        23,
+        24
+      ],
+      [
+        2,
+        32,
+        35,
+        38
+      ],
+      [
+        6,
+        18,
+        26,
+        34
+      ],
+      [
+        10,
+        17,
+        29,
+        31
+      ],
+      [
+        1,
+        31,
+        34,
+        37
+      ],
+      [
+        0,
+        19,
+        20,
+        21
+      ],
+      [
+        8,
+        25,
+        26,
+        27
+      ],
+      [
+        8,
+        37,
+        38,
+        39
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        3,
+        33,
+        36,
+        39
+      ],
+      [
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        5,
+        19,
+        29,
+        38
+      ],
+      [
+        13,
+        21,
+        26,
+        32
+      ],
+      [
+        3,
+        7,
+        11,
+        15
+      ],
+      [
+        10,
+        21,
+        22,
+        36
+      ],
+      [
+        1,
+        22,
+        25,
+        28
+      ],
+      [
+        12,
+        28,
+        29,
+        30
+      ],
+      [
+        9,
+        20,
+        23,
+        35
+      ],
+      [
+        14,
+        16,
+        23,
+        37
+      ],
+      [
+        11,
+        16,
+        28,
+        32
+      ],
+      [
+        7,
+        21,
+        30,
+        37
+      ],
+      [
+        13,
+        17,
+        24,
+        39
+      ],
+      [
+        2,
+        6,
+        10,
+        14
+      ],
+      [
+        0,
+        4,
+        8,
+        12
+      ],
+      [
+        4,
+        31,
+        32,
+        33
+      ],
+      [
+        12,
+        34,
+        35,
+        36
+      ],
+      [
+        11,
+        19,
+        24,
+        34
+      ],
+      [
+        1,
+        5,
+        9,
+        13
+      ],
+      [
+        15,
+        20,
+        27,
+        31
+      ],
+      [
+        6,
+        20,
+        28,
+        39
+      ],
+      [
+        3,
+        23,
+        26,
+        29
+      ],
+      [
+        2,
+        24,
+        27,
+        30
+      ],
+      [
+        14,
+        19,
+        25,
+        33
+      ],
+      [
+        15,
+        18,
+        22,
+        38
+      ],
+      [
+        0,
+        16,
+        17,
+        18
+      ]
+    ]
+  },
+  "runtime_tie_in": {
+    "s3_admission_word_ticks": 12,
+    "mirror_atlas_slots": 2160,
+    "supercycle_ticks": 51840,
+    "note": "accounting on committed constants: per classical assignment the escalation budget is one movable star = 4 contexts = 1/10 of the fabric; the 9^t dial is spent on the tax only"
+  },
+  "all_pass": true,
+  "summary": "the contextuality tax: the machine's irreducible scheduling defect is ONE MOVABLE POINT-STAR. Joins the contextual-fraction arc (max_sat=36/40, parity law CF=1/(q^2+1) odd / 0 even) with the UOR/OS scheduler arc ('36 spreads, movable point-star defect', previously flagged as an unproven bridge). NEW EXACT RESULT: exhaustive enumeration of ALL optimal failure sets at q=3 via ILP + no-good cuts terminates with exactly 40 sets, each the star of one point (4 lines through it), one per point -- so the defect is always a star and fully movable, a theorem, not a metaphor. DEFICIT LAW: deficit = q+1 (one star) for odd q -- 4 at q=3, 6 at q=5 -- and 0 for even q (ovoid); equivalently CF=(q+1)/n=1/(q^2+1). COROLLARY BY PARITY: even q has alpha = Hoffman = q^2+1 (no selection gap even in principle; and for q=2 no complete-basis realization exists at all, Pass 56), odd q keeps the gap (7<10 at q=3). OPERATIONALLY: the OS escalates exactly one star (1/10 of contexts) to quantum adjudication and may move it to the least-loaded point; the 9^t dial is spent on the tax only. HONEST: q=3 classification exhaustive; deficit law exact at q in {2,3,4} (+5 with --deep); no canonical assignment<->spread bijection claimed; runtime tie-in is accounting on committed constants.",
+  "sources": [
+    "w33_master_audit (geometry + ILP); w33_audit_qscan (parity law); w33_ovoid_construct (even-q ovoid)",
+    "w33_spread_contextual_microkernel_bridge (the scheduler arc's audited 36=36 bridge, in-flight)",
+    "docs/index.html#holonet-s3-completion-admission-controller (12-tick words, 2160, 51840)"
+  ]
+}

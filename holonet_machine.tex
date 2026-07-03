@@ -149,6 +149,29 @@ photons. The classical emulation cost of $t$ cubic gates is $9^t$: the Pashayan-
 quasiprobability estimator (each $t$-gate sample in $[-3^t,3^t]$) is unbiased but needs $\sim9^t$ samples.
 \end{result}
 
+\begin{result}[Why $q=3$, and what the operating system pays]
+Three exact results pin the order of the fabric and price its quantum layer.
+\emph{(i) Parity forces contextuality.}  Scanning the sister geometries $W(q)$ for $q=2,3,4$ (with
+$q=4$ built over the genuine field $\mathrm{GF}(4)$) shows the contextual fraction obeys the closed form
+$\mathrm{CF}(q)=0$ for even $q$ and $1/(q^2+1)$ for odd $q$: even orders carry an explicit ovoid --- a
+perfect noncontextual model --- and $q=4$, even but composite, still does, so the cause is the parity of
+the field, not primality.  \emph{(ii) Dimension forces the apparatus.}  A complete-basis realization of
+$W(q)$ maps contexts to orthonormal bases of $\mathbb C^{q+1}$; for $q=2$ this is impossible (a
+non-collinear pair leaves a one-dimensional orthocomplement in $\mathbb C^3$ that would have to hold
+$\mu=3$ distinct rays), while the $q=3$ Witting realization exists.  So $q=3$ is simultaneously the
+smallest order the one-photon $\mathbb C^4$ apparatus can realize and the smallest contextual one.
+\emph{(iii) The tax is one movable star.}  Exhaustive enumeration of every optimal Kochen--Specker
+assignment (integer programming with no-good cuts, terminating, hence complete) shows the $4$ contexts
+any $36$-context assignment must fail are always the four lines through a single point --- a
+\emph{point-star} --- and every one of the $40$ points can carry it.  The deficit for odd $q$ is exactly
+$q+1$, one star, which is the closed form $\mathrm{CF}=1/(q^2+1)$ restated structurally.  Operationally:
+the classical scheduler covers everything except one star of its choosing (a gauge freedom it can move to
+the least-loaded point), so the escalation budget --- the part of the runtime on which the priced $9^t$
+quantum resource is spent --- is exactly $1/10$ of the contexts, and on an even-order fabric the tax and
+the quantum gap both vanish ($\alpha=q^2+1$ meets the Hoffman bound).  The machine's quantum advantage
+and its scheduling overhead are the same integer.
+\end{result}
+
 \section{The Machine, Executed}
 Because the Clifford layer is polynomial-time, the architecture runs as software. A single file
 (\path{analysis/holonet_node.py}) builds the fabric, routes a packet (address is route, $\mu=4$

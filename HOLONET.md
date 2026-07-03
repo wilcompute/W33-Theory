@@ -101,6 +101,7 @@ The machine, executed:
 | `py -3 analysis/holonet_bench.py` | the performance face: **deterministic op counts** (7 mod-3 ops/route, μ=4) + host-relative throughput (`holonet bench`) |
 | `py -3 analysis/w33_doily_mermin.py` | two contextualities separated on W(2): **sign-contextual (Mermin–Peres, exact F₂ obstruction + 6-line certificate) yet selection-noncontextual (ovoid)** — the control arm's CF=0 is the selection statistic only |
 | `py -3 analysis/w33_realization_dimension.py` | why one photon in C⁴: **W(2) has NO complete-basis realization in C³** (μ=3 rays can't fit a 1-dim orthocomplement); q=3 is the smallest realizable **and** smallest contextual order |
+| `py -3 analysis/w33_contextuality_tax.py` | the contextuality tax: **exhaustive proof that every optimal KS failure set is one movable point-star** (exactly 40, one per point); deficit = q+1 (odd) / 0 (even) — the OS escalation budget = the 9^t spend = **1/10 of the fabric** |
 
 The physics/computer-science core:
 

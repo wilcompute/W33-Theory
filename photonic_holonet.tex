@@ -8482,6 +8482,54 @@ open.  Neither result weakens the discriminator --- it sharpens what the
 discriminator's contrast is a contrast \emph{of}: the selection statistic,
 declared in advance, measured identically on both arms.
 
+\subsection{Pass 57 --- the contextuality tax: the defect is one movable point-star}
+\label{sec:capstone-fiftyseven}
+
+Pass~57 is a synthesis pass: it joins two work streams that had converged on the
+same integer without a proof that they were describing the same object.  The
+contextuality arc established \(\max\text{-sat}=36\) of \(40\) contexts
+(\(\mathrm{CF}=1/10\)) and the parity law \(\mathrm{CF}(q)=1/(q^2+1)\) for odd
+\(q\).  Independently, the operating-system arc's line-context microkernel
+scheduler found \(36\) schedulable spreads and described its \(4\)-context
+deficit as a ``movable point-star double-occupancy defect'' --- language
+explicitly flagged there as an audited numerical bridge, not a proven structure.
+The witness \path{analysis/w33_contextuality_tax.py} proves the structure.
+
+\paragraph{The complete classification.}  Iterating the max-satisfiable integer
+program with no-good cuts --- each round forbidding the exact four-line failure
+set just found and re-solving --- enumerates \emph{every} failure set achievable
+by an optimal (\(36\)-context) assignment; the enumeration terminates when the
+objective drops below \(36\), so the classification is exhaustive rather than
+sampled.  The result: there are exactly \(40\) achievable failure sets, and each
+is a \emph{point-star} --- the four lines through a single point --- with every
+one of the \(40\) points realized as a center.  So the defect of the classical
+layer is always one star, and it is fully movable: a gauge freedom, not an
+accident of one optimum.  The deficit law follows structurally: for odd \(q\)
+the deficit is exactly \(q+1\), one line's worth of contexts (verified \(4\) at
+\(q=3\); \(6\) at \(q=5\) under \path{--deep}), and \(0\) for even \(q\), which
+restates \(\mathrm{CF}=(q+1)/n=1/(q^2+1)\) as ``the tax is one star.''
+
+\paragraph{What the operating system pays.}  Operationally the classical
+scheduler can satisfy everything except the star of one point \emph{of its
+choosing}, and may move that star to the least-loaded point.  The escalation
+budget --- the fraction of the runtime on which the priced \(9^t\) quantum
+resource is spent --- is therefore exactly one star, \(4\) contexts, \(1/10\)
+of the fabric, per classical assignment.  The corollary by parity closes the
+loop with the control arm: on an even-order fabric the tax is zero and there is
+no gap to exploit even in principle, since \(\alpha=q^2+1\) meets the Hoffman
+bound exactly (\(5\) at \(q=2\), \(17\) at \(q=4\)), while odd \(q\) keeps the
+gap (\(7<10\) at \(q=3\)).  The machine's quantum advantage and its scheduling
+overhead are the same integer.
+
+\emph{Honest scope:} the \(q=3\) classification is exact and exhaustive; the
+deficit law is verified exactly at \(q\in\{2,3,4\}\) (plus \(q=5\) opt-in) and
+stated as the observed closed form beyond; the identification with the
+scheduler arc's \(36=36\) bridge underwrites that bridge's structural language
+but, like the bridge itself, claims no canonical bijection between optimal
+assignments and spreads; the runtime tie-in (twelve-tick admission words, the
+\(2160\)-slot atlas, the \(51840\)-tick supercycle) is accounting on committed
+constants.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
