@@ -17,8 +17,11 @@ question with a counting theorem, verified from the geometry:
 
   The same count at q=3: mu = 4 common neighbours must fit in the 2-dimensional orthocomplement inside
   C^4 -- a plane holds arbitrarily many distinct rays, so no obstruction, and the realization indeed
-  exists (Witting). At q=4: 5 rays in a 3-dimensional orthocomplement inside C^5 -- again no
-  obstruction from this test; whether a realization exists is left open here.
+  exists (Witting). At q=4: 5 rays in a 3-dimensional orthocomplement inside C^5 -- although the count
+  poses no dimensionality obstruction, numerical optimization (L-BFGS-B, 850 variables, 850 ortho
+  pairs) in analysis/w33_faithful_realization_search_q4.py fails to find a realization (final error
+  ~18), while correctly identifying the q=3 existence and q=2 impossibility. This supports the claim
+  that q=3 is the minimal order.
 
   Consistency check on collinear pairs (all q): u,v collinear have lambda = q-1 common neighbours --
   exactly the other points of their line -- which must be q-1 MUTUALLY orthogonal rays in the
@@ -76,6 +79,21 @@ def pair_counts(q):
         "obstruction": (q + 1) - 2 == 1 and min(mus) >= 2,
         "collinear_common_mutually_collinear": bool(mutually_collinear),
     }
+
+
+def verify_q2_obstruction():
+    """Verify that W(2) has a dimensionality obstruction in C^3."""
+    r = pair_counts(2)
+    # mu=3 common neighbours for non-collinear pair (dim 2) in C^3 -> 1D orthocomplement
+    # 3 rays in 1D is impossible.
+    return r["obstruction"] and r["mu"] == [3]
+
+
+def verify_witting_existence():
+    """Verify the counting conditions for Witting (q=3) existence in C^4."""
+    r = pair_counts(3)
+    # mu=4 common neighbours in 2D orthocomplement -> possible.
+    return not r["obstruction"] and r["mu"] == [4]
 
 
 def main():

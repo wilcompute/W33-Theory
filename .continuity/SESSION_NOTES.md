@@ -109,11 +109,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-03T18:07:34.693Z (reason: file save)
+- Auto-saved at 2026-07-03T19:14:57.460Z (reason: file save)
 - Recent commits:
+  - 8c258e6ed Pass 57: The Contextuality Tax, W(4) realization probe, and CLI hardening.
   - aa3cd248b Pass 57: the contextuality tax -- the defect is one movable point-star (synthesis)
   - f0cf2d108 Pass 56 deferred surfaces: index card + HOLONET.md witness rows
-  - ba7f09312 Pass 56: two contextualities separated on W(2), and the realization dimension bound
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->

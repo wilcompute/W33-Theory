@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holonet Architecture: Universal Computation, Networking, and Physics</title>
+  <style>
+    :root {
+      --bg: #0a0d12;
+      --panel: #121923;
+      --panel2: #172331;
+      --ink: #edf6ff;
+      --muted: #aebdca;
+      --line: #2a3a4d;
+      --gold: #f4c95d;
+      --green: #60d394;
+      --cyan: #62d0ff;
+      --red: #ff6b6b;
+      --violet: #b794f4;
+      --blue: #6aa9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    main {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      min-height: 100vh;
+      width: 100vw;
+      padding: 54px clamp(28px, 5vw, 76px) 48px;
+      background:
+        linear-gradient(180deg, rgba(98, 208, 255, 0.08), rgba(10, 13, 18, 0.0) 34%),
+        radial-gradient(circle at 78% 10%, rgba(244, 201, 93, 0.10), transparent 28%),
+        var(--bg);
+    }
+
+    .slide.active {
+      display: grid;
+      align-content: center;
+    }
+
+    .topline {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 96px);
+      line-height: 0.94;
+      margin: 0 0 22px;
+      max-width: 1180px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.0;
+      margin: 0 0 24px;
+      max-width: 1180px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: var(--cyan);
+    }
+
+    p {
+      font-size: clamp(18px, 2.1vw, 28px);
+      line-height: 1.3;
+      color: var(--muted);
+      max-width: 1180px;
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: clamp(22px, 2.7vw, 34px);
+      color: #dcecff;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .two {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 120px;
+    }
+
+    .card strong {
+      color: var(--ink);
+    }
+
+    .card p,
+    .card li {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    code {
+      color: #d8f7ff;
+      background: rgba(98, 208, 255, 0.08);
+      border: 1px solid rgba(98, 208, 255, 0.18);
+      padding: 0 5px;
+      border-radius: 4px;
+    }
+
+    .stat {
+      font-size: clamp(38px, 6vw, 78px);
+      color: var(--gold);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 8px;
+    }
+
+    .small {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .accent {
+      color: var(--gold);
+    }
+
+    .green {
+      color: var(--green);
+    }
+
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .red {
+      color: var(--red);
+    }
+
+    .violet {
+      color: var(--violet);
+    }
+
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+
+    .node {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+      position: relative;
+    }
+
+    .node.big {
+      background: var(--panel2);
+    }
+
+    .arrow {
+      color: var(--cyan);
+      font-size: 34px;
+      align-self: center;
+      text-align: center;
+    }
+
+    .claim-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+      margin: 8px 0;
+    }
+
+    .tier {
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+      font-weight: 800;
+      background: #1d2b3a;
+    }
+
+    .tier.e {
+      color: var(--green);
+    }
+
+    .tier.s {
+      color: var(--cyan);
+    }
+
+    .tier.p {
+      color: var(--gold);
+    }
+
+    .tier.c {
+      color: var(--violet);
+    }
+
+    .tier.f {
+      color: var(--red);
+    }
+
+    .demo {
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 10px 0 4px;
+    }
+
+    select,
+    button {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #0d141d;
+      color: var(--ink);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      background: #18354a;
+      margin-top: 12px;
+    }
+
+    button:hover {
+      background: #20465f;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      margin: 0;
+      color: #dff7ea;
+      background: #071014;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 260px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .footer {
+      position: fixed;
+      left: 28px;
+      right: 28px;
+      bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #7f91a3;
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    .progress {
+      height: 4px;
+      background: #223244;
+      border-radius: 999px;
+      width: 220px;
+      overflow: hidden;
+    }
+
+    .bar {
+      height: 100%;
+      background: var(--cyan);
+      width: 0%;
+    }
+
+    .kbd {
+      border: 1px solid var(--line);
+      border-bottom-width: 2px;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      body {
+        overflow: auto;
+      }
+
+      .slide {
+        min-height: auto;
+        padding: 34px 18px 64px;
+      }
+
+      .slide.active {
+        display: block;
+      }
+
+      .two,
+      .three,
+      .four,
+      .diagram,
+      .demo {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        position: static;
+        padding: 12px 18px;
+      }
+    }
+
+    @media print {
+      body {
+        overflow: visible;
+        background: var(--bg);
+      }
+
+      main {
+        height: auto;
+      }
+
+      .slide {
+        display: grid !important;
+        min-height: 100vh;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      button,
+      select {
+        border-color: #516579;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="slide active">
+      <div class="topline"><span class="pill">Holonet Architecture</span><span class="pill">Wil Dahn</span><span
+          class="pill">July 3, 2026</span></div>
+      <h1>A computer whose network is its memory.</h1>
+      <p class="lead">The Holonet turns one finite geometry, <code>W(3,3)</code>, into a runnable machine: route a
+        packet, apply a Clifford gate, read memory, audit the design, and stage the first photonic falsifiers.</p>
+      <div class="grid four" style="margin-top:24px;">
+        <div class="card">
+          <div class="stat">40</div>
+          <div class="stat-label">nodes, contexts, Witting rays</div>
+        </div>
+        <div class="card">
+          <div class="stat">240</div>
+          <div class="stat-label">edges, packet fabric, E8-sized carrier</div>
+        </div>
+        <div class="card">
+          <div class="stat">1/10</div>
+          <div class="stat-label">contextual fraction to measure</div>
+        </div>
+        <div class="card">
+          <div class="stat">7</div>
+          <div class="stat-label">mod-3 ops per adjacency test</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">What Changed Since First Draft</span></div>
+      <h2>The project now has runnable, auditable, falsifiable assets.</h2>
+      <div class="grid four">
+        <div class="card">
+          <h3>Run It</h3>
+          <p><code>verify</code>, <code>audit</code>, <code>bench</code>, and <code>bench --compare --scale</code> turn
+            the paper into executable evidence.</p>
+        </div>
+        <div class="card">
+          <h3>Audit It</h3>
+          <p>The theorem ledger and claim dashboard map each claim to a witness, artifact, pass condition, and boundary.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Falsify It</h3>
+          <p>Pass 57 adds the Deficit Law (CF = 1/10 is exactly one star). The q=4 probe confirms Witting uniqueness.</p>
+        </div>
+        <div class="card">
+          <h3>ABI Bridge</h3>
+          <p>The control-plane ABI decodes 51,840 ticks into a lookup-free mirror, sheet, frame, and bin word.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Architecture Primitive</span></div>
+      <h2>One incidence object replaces three stacks.</h2>
+      <div class="diagram">
+        <div class="node big">
+          <h3>Compute</h3>
+          <p>Clifford action over trits. Universal computation arrives when the priced magic dial is added.</p>
+        </div>
+        <div class="node big">
+          <h3>Network</h3>
+          <p>Address is route. Direct if symplectic inner product vanishes; otherwise two-hop through <code>mu=4</code>
+            relays.</p>
+        </div>
+        <div class="node big">
+          <h3>Memory</h3>
+          <p>Stabilizer and incidence constraints protect state, expose syndromes, and organize self-reproduction.</p>
+        </div>
+      </div>
+      <p style="margin-top:22px;">The engineering claim is not "a faster Python script." It is that the geometry removes
+        layers: routing table, directory service, bus arbitration, memory map, scheduler, and audit ledger collapse into
+        one finite object.</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Live Demo</span><span class="pill">No Server</span></div>
+      <h2>Route a packet with no routing table.</h2>
+      <div class="demo">
+        <div class="card">
+          <label for="src">Source address</label>
+          <select id="src"></select>
+          <label for="dst">Destination address</label>
+          <select id="dst"></select>
+          <button id="route">Route Packet</button>
+          <button id="randomize">Random Pair</button>
+          <p class="small" style="margin-top:12px;">The 40 addresses are generated as projective points over
+            <code>F3</code>. The route is computed by the symplectic form, not by a stored table.</p>
+        </div>
+        <pre id="out"></pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Contextuality Tax</span><span class="pill">Pass 57</span><span class="pill">New</span></div>
+      <h2>The 4-context gap is the physical cost of contextuality.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>The Deficit Law</h3>
+          <p>For the 120-sheet Holonet, the max-satisfiable score is 36/40. The 4-line deficit is exactly one point-star (<code>q+1</code> contexts).</p>
+        </div>
+        <div class="card">
+          <h3>Movable Point-Star</h3>
+          <p>The deficit is not an error; it is a gauge freedom. The scheduler can steer the 4-line "tax" to any point in the fabric.</p>
+        </div>
+      </div>
+      <p style="margin-top:22px;">The price of the machine's quantum advantage (in the 540-cover) and its mandatory scheduling overhead are the same exact integer: <code>CF = 1/(q&sup2;+1) = 1/10</code>.</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Physical Falsifier</span></div>
+      <h2>One photon can kill or advance the program.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Uniqueness</h3>
+          <p>W(q) requires C^(q+1). Numerical search at <code>q=4</code> fails (error ~18), while correctly finding the Witting <code>q=3</code> realization. q=3 is the unique minimal substrate.</p>
+        </div>
+        <div class="card">
+          <h3>Control arm</h3>
+          <p>The newest discriminator runs the same estimators on W(3) and even-q controls. The investor question becomes separation, not belief.</p>
+        </div>
+      </div>
+      <p>That is the investor-friendly milestone: a cheap, bounded, finite experiment with a hard pass/fail statistic before any grand physics claim has to be believed.</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Claim Tiers</span></div>
+      <h2>The deck is ambitious, but the evidence is tiered.</h2>
+      <div class="claim-row">
+        <div class="tier e">E</div>
+        <div class="card"><strong>Exact finite theorem</strong></div>
+        <div class="card">Witness script, proof, table, or audit recomputes it.</div>
+      </div>
+      <div class="claim-row">
+        <div class="tier s">S</div>
+        <div class="card"><strong>Simulation</strong></div>
+        <div class="card">Seeded model, assumptions, output JSON, pass/fail.</div>
+      </div>
+      <div class="claim-row">
+        <div class="tier p">P</div>
+        <div class="card"><strong>Physical protocol</strong></div>
+        <div class="card">Apparatus, raw schema, estimator, decision rule.</div>
+      </div>
+      <div class="claim-row">
+        <div class="tier c">C</div>
+        <div class="card"><strong>Corpus identification</strong></div>
+        <div class="card">Matched arithmetic or structural identification, not yet dynamics.</div>
+      </div>
+      <div class="claim-row">
+        <div class="tier f">F</div>
+        <div class="card"><strong>Frontier application</strong></div>
+        <div class="card">Roadmap language until reduced to E, S, P, or C.</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Computer Engineering</span></div>
+      <h2>The node is tiny because the geometry is the operating system.</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Minimal VM</h3>
+          <p>A node needs ternary arithmetic: add, subtract, multiply mod 3. The rest is generated by the address
+            geometry.</p>
+        </div>
+        <div class="card">
+          <h3>Retro firmware</h3>
+          <p>The router has been compiled into small 4-bit and 8-bit-style traces. This is a serious embedded
+            architecture, not just a cloud simulator.</p>
+        </div>
+        <div class="card">
+          <h3>Zero table</h3>
+          <p>Pass 53 measures the table-free win: <code>1170 bytes -> 0</code> for the q=3 all-pairs routing state when
+            address is route.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Systems Engineering</span></div>
+      <h2>What can be built with it?</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Self-auditing runtime</h3>
+          <p>Every deployed artifact ships with a ledger that re-derives its own constants and tells the reviewer what
+            is exact, simulated, physical, matched, or frontier.</p>
+        </div>
+        <div class="card">
+          <h3>Photonic control fabric</h3>
+          <p>Use time bins, frequency bins, OAM lanes, and finite geometry to coordinate packets where the physical mode
+            is also the logical address.</p>
+        </div>
+        <div class="card">
+          <h3>Energy-aware AI fabric</h3>
+          <p>Data-center growth makes routing, power per bit, and optical interconnects strategic. Holonet is a
+            zero-table, low-control-overhead fabric model.</p>
+        </div>
+        <div class="card">
+          <h3>Consensus and resilience</h3>
+          <p>The same graph supplies bounded-degree local neighborhoods and exact multipath. Consensus simulations turn
+            that into failure envelopes.</p>
+        </div>
+        <div class="card">
+          <h3>Quantum benchmark kit</h3>
+          <p>The <code>CF=1/10</code> demonstrator becomes a clean contextuality benchmark for photonic labs.</p>
+        </div>
+        <div class="card">
+          <h3>Finite-geometry SDK</h3>
+          <p>Expose routing, Clifford state, audit, and witness generation as developer APIs for experiments and
+            simulations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Physics Program</span></div>
+      <h2>The physics thesis is a roadmap, not a sales shortcut.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Strong today</h3>
+          <ul>
+            <li><code>W(3,3)</code> finite geometry and graph constants.</li>
+            <li>Witting/KS contextual fraction.</li>
+            <li>Runnable VM, audit, benchmark, small QEC/teleport demos.</li>
+            <li>Physical demonstrator protocol.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Frontier</h3>
+          <ul>
+            <li>Exceptional tower and Standard Model identifications.</li>
+            <li>K3/gravity/spectral-action bridge.</li>
+            <li>Cosmology and particle predictions.</li>
+            <li>Full fault-tolerant photonic implementation.</li>
+          </ul>
+        </div>
+      </div>
+      <p>The pitch is stronger when we say exactly what would change our mind.</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Why Now</span></div>
+      <h2>The external world is moving toward the same constraints.</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Energy pressure</h3>
+          <p>U.S. data centers consumed about 4.4% of electricity in 2023 and are projected by LBNL at 6.7-12% by 2028.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Optical interconnects</h3>
+          <p>Co-packaged optics moves conversion closer to the ASIC to reduce link overhead and improve performance per
+            watt.</p>
+        </div>
+        <div class="card">
+          <h3>High-dimensional photons</h3>
+          <p>Time-bin and OAM work is making single-photon qudits, multiplexed optical inference, and robust
+            high-dimensional measurement more practical.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Investor Narrative</span></div>
+      <h2>Lead with the machine, then earn the physics.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Near-term company</h3>
+          <p>Build auditable finite-geometry networking software, a browser playground, a photonic contextuality
+            demonstrator, and a reproducible benchmark suite.</p>
+        </div>
+        <div class="card">
+          <h3>Long-term option</h3>
+          <p>If the physical demonstrator and follow-on tests survive, the same architecture becomes a candidate
+            blueprint for photonic quantum computing and universal networked computation.</p>
+        </div>
+      </div>
+      <p class="lead">The credible ask is not "believe the Theory of Everything." It is "fund the next falsifiers and
+        the developer platform that makes the theory executable."</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Demo Script</span></div>
+      <h2>What to show live today.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Terminal</h3>
+          <ul>
+            <li><code>python3 analysis/holonet_cli.py verify</code></li>
+            <li><code>python3 analysis/holonet_cli.py audit</code></li>
+            <li><code>python3 analysis/holonet_cli.py bench</code></li>
+            <li><code>python3 analysis/holonet_cli.py bench --compare --scale</code></li>
+            <li><code>python3 presentations/holonet_architecture_demo.py</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Browser</h3>
+          <ul>
+            <li>Open this deck.</li>
+            <li>Run the packet router slide.</li>
+            <li>Open <code>docs/holonet.html</code>.</li>
+            <li>Show the theorem ledger, claim dashboard, demonstrator packet, and frequency-bin packet.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">New Execution Packets</span></div>
+      <h2>The presentation now has concrete follow-through artifacts.</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Claim Dashboard</h3>
+          <p><code>docs/holonet_claim_tier_dashboard.html</code> filters exact, simulated, physical, corpus, and
+            frontier claims and links each one to its witness/artifact.</p>
+        </div>
+        <div class="card">
+          <h3>Two-Arm Discriminator</h3>
+          <p>Pass 55 compares W(3) against even-q controls through the same estimators, giving a stronger falsifier than
+            a single positive arm.</p>
+        </div>
+        <div class="card">
+          <h3>Table-Free Scaling</h3>
+          <p>Pass 53-54 expose parity controls and the scaling route win behind <code>bench --compare --scale</code>.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Demonstrator Packet</h3>
+          <p><code>docs/holonet_demonstrator_lab_packet.md</code> adds the analyzer map, raw-shot schema, expected
+            plots, validator path, and one-page checklist.</p>
+        </div>
+        <div class="card">
+          <h3>Frequency Compiler</h3>
+          <p><code>analysis/w33_frequency_bin_hashimoto_compiler.py</code> lowers the Hashimoto bridge into
+            <code>11 = 9 + 2</code> control bins.</p>
+        </div>
+        <div class="card">
+          <h3>Phase-Probe Packet</h3>
+          <p><code>docs/holonet_frequency_bin_lab_packet.md</code> packages the <code>540*4 = 2160</code> and
+            <code>12960*4 = 51840</code> shot schedule.</p>
+        </div>
+        <div class="card">
+          <h3>Phase Transport</h3>
+          <p>BT366 maps the 540 skew-line pairs to 6 permutation classes, providing the rigid transport ledger for
+            photonic phase control.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">S3 Admission Controller</span><span class="pill">New</span></div>
+      <h2>The missing selector is now an operating-system interface.</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Runtime word</h3>
+          <p>One ordered path is <code>3</code> candidate completions times <code>4</code> probe ticks:
+            <code>4320*3*4 = 51840</code>. One mirror atlas is <code>180*12 = 2160</code>.</p>
+        </div>
+        <div class="card">
+          <h3>Conservative states</h3>
+          <p>The controller exposes unmeasured, no-signal, ambiguous, accepted branch, and holonomy escalation. A branch
+            is accepted only when measured evidence has a unique margin winner.</p>
+        </div>
+      </div>
+      <p>The no-cover theorem stays active: the <code>540</code>-row atlas is an admission/probe surface, not a solved
+        canonical selector packet.</p>
+    </section>
+
+    <section class="slide">
+      <div class="topline"><span class="pill">Close</span></div>
+      <h2>The architecture is a finite object with product surface area.</h2>
+      <p class="lead">As software, it is a zero-table, self-auditing, ternary network computer. As physics, it gives a
+        cheap contextuality experiment with a hard number. As a systems platform, it is a way to make future optical,
+        quantum, and AI fabrics less ad hoc.</p>
+      <div class="grid three" style="margin-top:26px;">
+        <div class="card">
+          <h3>First milestone</h3>
+          <p>Separate W(3) from even-q controls.</p>
+        </div>
+        <div class="card">
+          <h3>Second milestone</h3>
+          <p>Ship the SDK and live audit dashboard.</p>
+        </div>
+        <div class="card">
+          <h3>Third milestone</h3>
+          <p>Run the frequency-bin phase-probe packet.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">
+    <div><span class="kbd">Left</span> <span class="kbd">Right</span> navigate</div>
+    <div class="progress">
+      <div class="bar" id="bar"></div>
+    </div>
+    <div id="count"></div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let current = 0;
+    function show(i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === current));
+      document.getElementById('count').textContent = `${current + 1} / ${slides.length}`;
+      document.getElementById('bar').style.width = `${100 * (current + 1) / slides.length}%`;
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') show(current + 1);
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') show(current - 1);
+    });
+    show(0);
+
+    function mod3(n) { return ((n % 3) + 3) % 3; }
+    function norm(v) {
+      for (let i = 0; i < 4; i++) {
+        if (v[i] !== 0) {
+          const inv = v[i] === 1 ? 1 : 2;
+          return v.map(x => mod3(x * inv));
+        }
+      }
+      return v;
+    }
+    function key(v) { return v.join(''); }
+    function B(a, b) {
+      return mod3(a[0] * b[2] - a[2] * b[0] + a[1] * b[3] - a[3] * b[1]);
+    }
+    const seen = new Set();
+    const points = [];
+    for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) for (let c = 0; c < 3; c++) for (let d = 0; d < 3; d++) {
+      const v = [a, b, c, d];
+      if (v.every(x => x === 0)) continue;
+      const n = norm(v);
+      const k = key(n);
+      if (!seen.has(k)) { seen.add(k); points.push(n); }
+    }
+    points.sort((a, b) => key(a).localeCompare(key(b)));
+    const srcSel = document.getElementById('src');
+    const dstSel = document.getElementById('dst');
+    if (srcSel && dstSel) {
+      points.forEach((p, i) => {
+        const o1 = document.createElement('option');
+        o1.value = i; o1.textContent = key(p);
+        const o2 = document.createElement('option');
+        o2.value = i; o2.textContent = key(p);
+        srcSel.appendChild(o1); dstSel.appendChild(o2);
+      });
+      srcSel.value = '0'; dstSel.value = '17';
+    }
+    function route() {
+      const out = document.getElementById('out');
+      const s = points[Number(srcSel.value)];
+      const d = points[Number(dstSel.value)];
+      if (key(s) === key(d)) {
+        out.textContent = `same node: ${key(s)}\nroute length: 0\nrouting table entries used: 0`;
+        return;
+      }
+      const b = B(s, d);
+      if (b === 0) {
+        out.textContent = [
+          `direct edge: ${key(s)} -> ${key(d)}`,
+          `B(src,dst) = 0`,
+          `route length: 1 hop`,
+          `adjacency cost: 7 mod-3 operations`,
+          `routing table entries used: 0`
+        ].join('\n');
+        return;
+      }
+      const relays = points.filter(p => key(p) !== key(s) && key(p) !== key(d) && B(s, p) === 0 && B(p, d) === 0);
+      out.textContent = [
+        `two-hop route: ${key(s)} -> ${key(relays[0])} -> ${key(d)}`,
+        `B(src,dst) = ${b}`,
+        `common relays found: ${relays.length} (= mu)`,
+        `route length: 2 hops`,
+        `adjacency cost: 7 mod-3 operations per test`,
+        `routing table entries used: 0`
+      ].join('\n');
+    }
+    const routeBtn = document.getElementById('route');
+    if (routeBtn) routeBtn.addEventListener('click', route);
+    const randBtn = document.getElementById('randomize');
+    if (randBtn) randBtn.addEventListener('click', () => {
+      let a = Math.floor(Math.random() * points.length);
+      let b = Math.floor(Math.random() * points.length);
+      while (b === a) b = Math.floor(Math.random() * points.length);
+      srcSel.value = String(a); dstSel.value = String(b); route();
+    });
+    if (routeBtn) route();
+  </script>
+</body>
+
+</html>

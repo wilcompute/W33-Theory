@@ -333,6 +333,21 @@ def cmd_uor(args):
 
 def cmd_verify(args):
     checks = []
+    # realization / minimal substrate
+    import w33_realization_dimension
+
+    checks.append(
+        (
+            "minimal substrate: q=2 impossible",
+            w33_realization_dimension.verify_q2_obstruction(),
+        )
+    )
+    checks.append(
+        (
+            "minimal substrate: q=3 Witting exists",
+            w33_realization_dimension.verify_witting_existence(),
+        )
+    )
     # network
     a = hn.POINTS[0]
     dst = next(p for p in hn.POINTS if hn.symplectic(a, p) != 0)

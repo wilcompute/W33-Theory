@@ -5481,9 +5481,13 @@
               leaves a 1-dimensional orthocomplement in <code>C&sup3;</code> that must hold
               <code>&mu;=3</code> distinct rays &mdash; <strong>impossible</strong>. For <code>q=3</code>
               the count (4 rays in a plane of <code>C&#8308;</code>) poses no obstruction, and the Witting
-              realization exists. So <code>q=3</code> is the <em>smallest</em> order the one-photon
-              C&#8308; apparatus can realize at all &mdash; and by parity the smallest contextual one:
-              <strong>two independent forcings of the same order</strong>.</div>
+              realization exists. Numerical optimization (L-BFGS-B) in
+              <code>analysis/w33_faithful_realization_search_q4.py</code>
+              fails for <code>q=4</code> (error ~18), while correctly finding
+              the Witting realization for <code>q=3</code> and confirming the
+              <code>q=2</code> impossibility. So <code>q=3</code> is the
+              <em>unique minimal</em> order the one-photon C&#8308; apparatus
+              can realize: <strong>two independent forcings of the same order</strong>.</div>
           </div>
           <div class="card" id="holonet-contextuality-tax-card">
             <div class="label">Pass 57 &mdash; The Contextuality Tax: the Defect Is One Movable Point-Star</div>
