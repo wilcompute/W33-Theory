@@ -1,0 +1,38 @@
+{
+  "n_spreads": 36,
+  "spreads_per_line": 9,
+  "service_rate_lemma": "every spread contains exactly one line of every star -> 9/10 satisfied under any optimum",
+  "defect_classification": {
+    "classes": 4,
+    "sizes": [
+      9,
+      9,
+      9,
+      9
+    ]
+  },
+  "optima_anatomy": {
+    "center": 0,
+    "n_optima": 20,
+    "center_lit_half": 10,
+    "occupancy_classes": {
+      "(0, (2, 2, 2, 2))": 9,
+      "(0, (3, 3, 3, 3))": 1,
+      "(1, (3, 3, 3, 3))": 9,
+      "(1, (4, 4, 4, 4))": 1
+    },
+    "lit_counts": [
+      11,
+      12,
+      13
+    ]
+  },
+  "all_pass": true,
+  "summary": "the spread side of the tax. INDEPENDENT COUNT: exact-cover backtracking (no shared code with the scheduler arc) finds exactly 36 spreads of W(3,3), each line in 9 of them -- the bridge's 36 verified from scratch. SERVICE-RATE LEMMA: every spread contains exactly one line of every point-star (verified all 36x40 pairs), so with Pass 57 (failure set = one star) EVERY spread has exactly 9/10 lines satisfied under ANY optimal assignment -- the tax is spread-isotropic, and for a fixed defect star the 36 spreads split 4x9 by which defect line they carry. ANATOMY (exhaustive: exactly 20 optima per center): the center is FREE (optima come in center-lit/unlit pairs, exactly half each), and -- a structure the computation itself corrected us into -- every optimum loads its four defect lines UNIFORMLY, occupancy always (c,c,c,c) with c in {2,3,4}, never mixed, never empty, never accidentally satisfied: center-unlit are (2,2,2,2) [11 rays] or (3,3,3,3) [12], center-lit partners (3,3,3,3) [12] or (4,4,4,4) [13]. The scheduler arc's 'double-occupancy defect' is literally the MINIMAL class of optima; the full spectrum is uniform loading at 2, 3, or 4. HONEST: exact finite enumerations; exhaustive for the chosen center with movability supplied by Pass 57; no canonical assignment-to-spread bijection claimed -- the lemma shows the relation is many-to-many and uniform.",
+  "total_optimal_assignments": 800,
+  "sources": [
+    "w33_master_audit._build (geometry); Pass 57 w33_contextuality_tax (the star theorem)",
+    "w33_spread_contextual_microkernel_bridge + w33_defect_spread_tensor (scheduler arc, in-flight; the complete defect/spread incidence is theirs, re-verified independently here)",
+    "exact-cover backtracking + ILP feasibility with no-good cuts"
+  ]
+}

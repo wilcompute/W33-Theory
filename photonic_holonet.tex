@@ -8530,6 +8530,54 @@ assignments and spreads; the runtime tie-in (twelve-tick admission words, the
 \(2160\)-slot atlas, the \(51840\)-tick supercycle) is accounting on committed
 constants.
 
+\subsection{Pass 58 --- the spread side of the tax, and the anatomy of the optima}
+\label{sec:capstone-fiftyeight}
+
+Pass~57 proved the tax theorem from the assignment side.  Pass~58
+(\path{analysis/w33_spread_star_anatomy.py}) completes the synthesis from the
+scheduler's side and, in doing so, lets the computation correct a guess.
+
+\paragraph{The clock, counted independently.}  The scheduler arc's spread-clock
+rests on the spreads of \(W(3,3)\) --- sets of ten pairwise-disjoint lines
+partitioning the forty points --- counted there by its own \path{find_spreads}.
+This witness re-enumerates them by exact-cover backtracking, a different
+algorithm sharing no code, and confirms: exactly \(36\) spreads, each line lying
+in exactly \(9\) of them.  The bridge's \(36\) is now verified from two
+independent directions.
+
+\paragraph{The service-rate guarantee.}  Every spread covers every point exactly
+once, hence contains exactly one line of every point-star (the scheduler arc's
+in-flight defect/spread tensor records the same complete incidence; it is
+re-verified here for all \(36\times40\) pairs).  Combined with the tax theorem
+--- the failure set of any optimal assignment is one star --- this yields the
+operational statement: \emph{under any optimal classical assignment, every
+spread has exactly nine of its ten lines satisfied}.  The spread-clock never
+sees a better or a worse cycle; the tax is spread-isotropic.  For a fixed defect
+star the \(36\) spreads split into \(q+1=4\) classes of exactly \(9\) according
+to which defect line they carry.
+
+\paragraph{The anatomy of the optima.}  Exhaustive enumeration (integer-program
+feasibility with no-good cuts, terminating) finds \emph{exactly \(20\) optimal
+assignments per defect center} --- \(800\) in all across the forty movable
+centers.  The computation corrected the naive ``double occupancy everywhere''
+guess and found a sharper structure, then pinned it: the center is \emph{free}
+(optima come in center-lit/unlit pairs, exactly half each), and every optimum
+loads its four defect lines \emph{uniformly} --- the occupancy vector is always
+\((c,c,c,c)\), never mixed, with \(c\in\{2,3,4\}\): center-unlit optima are
+\((2,2,2,2)\) with \(11\) lit rays or \((3,3,3,3)\) with \(12\); their
+center-lit partners are \((3,3,3,3)\) with \(12\) or \((4,4,4,4)\) with \(13\).
+A defect line is never empty and never accidentally satisfied.  The scheduler
+arc's ``double-occupancy defect'' is therefore literally the \emph{minimal}
+class of optima --- the ground state of the defect --- while the full spectrum
+is uniform loading at two, three, or four rays per failed context.
+
+\emph{Honest scope:} all counts are exact finite enumerations; the optimum
+enumeration is exhaustive for the chosen center, with movability across centers
+supplied by Pass~57; the complete defect/spread incidence is the scheduler
+arc's observation, independently re-verified here; as before, no canonical
+assignment-to-spread bijection is claimed --- the service-rate lemma shows the
+relation is many-to-many and uniform.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

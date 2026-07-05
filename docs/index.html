@@ -5512,6 +5512,27 @@
               <strong>The machine's quantum advantage and its scheduling overhead are the same
               integer.</strong></div>
           </div>
+          <div class="card" id="holonet-spread-anatomy-card">
+            <div class="label">Pass 58 &mdash; The Spread Side of the Tax, and the Anatomy of the Optima</div>
+            <div class="detail"><strong>The clock, counted independently; the defect, anatomized.</strong>
+              <code>analysis/w33_spread_star_anatomy.py</code> re-enumerates the spreads of
+              <code>W(3,3)</code> by exact-cover backtracking &mdash; no shared code with the scheduler
+              arc's <code>find_spreads</code> &mdash; and confirms: <strong>exactly 36 spreads, each line
+              in exactly 9</strong>. Every spread meets every point-star in exactly one line (all
+              36&times;40 pairs verified), so with the Pass 57 tax theorem: <strong>under any optimal
+              classical assignment, every spread runs at exactly 9/10</strong> &mdash; the tax is
+              spread-isotropic, and the 36 spreads split 4&times;9 by which defect line they carry.
+              <br><br>
+              <strong>And the computation corrected our guess.</strong> Exhaustive enumeration finds
+              exactly <strong>20 optimal assignments per defect center (800 in all)</strong>: the center
+              is <em>free</em> (optima pair up, half lit / half unlit), and every optimum loads its four
+              defect lines <em>uniformly</em> &mdash; occupancy always <code>(c,c,c,c)</code>, never
+              mixed, with <code>c &isin; {2,3,4}</code> and lit-ray spectrum {11, 12, 13}. A defect line
+              is never empty and never accidentally satisfied. The scheduler arc's "double-occupancy
+              defect" is literally the <strong>minimal class</strong> of optima &mdash; the ground state
+              of the defect &mdash; while the full spectrum is uniform loading at 2, 3, or 4 rays per
+              failed context.</div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile
