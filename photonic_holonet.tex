@@ -8578,6 +8578,54 @@ arc's observation, independently re-verified here; as before, no canonical
 assignment-to-spread bijection is claimed --- the service-rate lemma shows the
 relation is many-to-many and uniform.
 
+\subsection{Pass 59 --- the tax orbits: one group moves the defect's ground states}
+\label{sec:capstone-fiftynine}
+
+Pass~58 counted \(20\) optimal assignments per defect center, in classes
+\(9+1+9+1\).  Pass~59 (\path{analysis/w33_tax_orbits.py}) explains those numbers
+with the machine's own runtime group, and exports the scheduler consequence.
+
+\paragraph{The group, rebuilt --- and a distinction enforced.}  Symplectic
+transvections \(T_v\colon x\mapsto x+B(x,v)\,v\) generate the symplectic group;
+closing a handful of transvection permutations of the forty points by
+breadth-first search yields the faithful point action.  The check itself caught
+the classic subtlety the claim-tier spine warns about: on \emph{points} the
+order is \(25920 = 51840/2\) --- the projective group \(\mathrm{PSp}(4,3)\) ---
+because \(-I\) acts trivially projectively; the \(51840\) matrix group is its
+double cover.  The witness now enforces the distinction rather than blurring
+it, and verifies transitivity on the forty points.
+
+\paragraph{The orbit theorem.}  Acting with the group on the twenty optima of
+one center generates \emph{all} \(800\) optima --- twenty per center, every
+center reached --- and they fall into exactly \emph{four orbits}, of sizes
+\(360,\ 40,\ 360,\ 40\), with the pair (center lit?, uniform load \(c\)) a
+complete orbit invariant.  The nine ground-state \((2,2,2,2)\) optima per
+center form one \(360\)-orbit (their center-lit flips another), while the
+special \((3,3,3,3)\) optimum of each center forms a canonical \(40\)-orbit:
+one distinguished twelve-ray configuration attached to each point of the
+fabric.  The one-group-machine result thus extends to the tax at the projective
+level: the group that is the processor, the network, and the memory also moves
+the defect's ground states transitively.
+
+\paragraph{The queue invariant, and the family probe.}  Re-verified across all
+\(800\) optima globally: the defect star's load vector is always uniform, with
+spectrum \(\{2,3,4\}\) and ground state \(2\) --- so a round-robin escalation
+queue has \emph{zero} load imbalance in every optimal configuration, a
+statement exported machine-readably for the scheduler arc's in-flight queue
+simulator.  Under \path{--deep}, the same anatomy question is put to \(W(5)\):
+in a capped sample of forty optima at one center, uniform loading persists on
+the six-line defect star, the incidence law \(L = 25 + c\) holds, and the
+observed load spectrum is \(\{4,5,6\}\) --- i.e.\ \(\{q-1,\,q,\,q+1\}\),
+matching the \(q=3\) spectrum \(\{2,3,4\}\) under the same formula.  A
+parity-family load law is suggested, honestly marked as a capped sample rather
+than an exhaustive classification.
+
+\emph{Honest scope:} the group closure, orbit decomposition, validity of all
+\(800\) optima, and the global uniform-loading law are exact finite
+computations; the \(q=5\) probe is exact but capped; the queue statement is a
+restatement of the loading theorem in scheduler language, with no claim about
+the in-flight simulator's internals.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

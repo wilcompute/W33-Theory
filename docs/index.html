@@ -5533,6 +5533,30 @@
               of the defect &mdash; while the full spectrum is uniform loading at 2, 3, or 4 rays per
               failed context.</div>
           </div>
+          <div class="card" id="holonet-tax-orbits-card">
+            <div class="label">Pass 59 &mdash; The Tax Orbits: One Group Moves the Defect's Ground States</div>
+            <div class="detail"><strong>The 800 optima are four orbits of the machine's own group.</strong>
+              <code>analysis/w33_tax_orbits.py</code> rebuilds the runtime group from symplectic
+              transvections and closes it by BFS on the 40 points &mdash; and the check itself caught the
+              classic subtlety the claim-tier spine warns about: on <em>points</em> the faithful group is
+              <strong>PSp(4,3), order 25920 = 51840/2</strong> (the 51840 matrix group is the double
+              cover; &minus;I acts trivially projectively). Acting on the 20 optima of one center
+              generates <em>all</em> 800, in <strong>exactly four orbits: 360 + 40 + 360 + 40</strong>,
+              with (center lit?, uniform load c) a complete orbit invariant. The nine ground-state
+              (2,2,2,2) optima per center form one 360-orbit; the special (3,3,3,3) optimum is a
+              <strong>canonical 40-orbit</strong> &mdash; one distinguished 12-ray configuration attached
+              to every point of the fabric. The one-group machine extends to the tax: the group that is
+              the processor, network, and memory also moves the defect's ground states transitively.
+              <br><br>
+              <strong>The queue invariant, global:</strong> across all 800 optima the defect star's load
+              is always uniform &mdash; spectrum {2,3,4}, ground state 2 &mdash; so a round-robin
+              escalation queue has <strong>zero load imbalance</strong> in every optimal configuration
+              (exported machine-readably for the in-flight queue simulator). And under
+              <code>--deep</code>, W(5) answers the family question: in a capped 40-optimum sample,
+              uniform loading persists with spectrum {4,5,6} = <strong>{q&minus;1, q, q+1}</strong>,
+              matching q=3's {2,3,4} under the same formula &mdash; a suggestive parity-family load law,
+              honestly marked as capped.</div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile

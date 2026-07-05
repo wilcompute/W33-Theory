@@ -1,0 +1,68 @@
+{
+  "group_order": 25920,
+  "orbit_sizes": [
+    40,
+    40,
+    360,
+    360
+  ],
+  "orbit_classes": [
+    [
+      [
+        false,
+        "(2, 2, 2, 2)"
+      ]
+    ],
+    [
+      [
+        true,
+        "(3, 3, 3, 3)"
+      ]
+    ],
+    [
+      [
+        true,
+        "(4, 4, 4, 4)"
+      ]
+    ],
+    [
+      [
+        false,
+        "(3, 3, 3, 3)"
+      ]
+    ]
+  ],
+  "total_optima": 800,
+  "queue_invariant": {
+    "uniform_loading_all_800": true,
+    "load_values": [
+      2,
+      3,
+      4
+    ],
+    "ground_state_load": 2,
+    "imbalance": 0,
+    "statement": "in every optimal classical configuration the four escalated contexts carry identical load (c,c,c,c), so a round-robin escalation queue has zero imbalance; worst-case depth = mean depth = c, with ground state c=2",
+    "consumers": [
+      "w33_contextuality_tax_queue_simulator (scheduler arc, in-flight)"
+    ]
+  },
+  "q5_probe": {
+    "n_found": 40,
+    "exhaustive": false,
+    "uniform_loading": true,
+    "loads_seen": [
+      4,
+      5,
+      6
+    ],
+    "incidence_law_L_eq_25_plus_c": true
+  },
+  "all_pass": true,
+  "summary": "the tax orbits: the 800 optimal assignments are exactly FOUR orbits of the projective runtime group PSp(4,3), sizes 360+40+360+40. The group is rebuilt from symplectic transvections and closed by BFS on the 40 points: the faithful point image has order 25920 = 51840/2 (the 51840 matrix group Sp(4,3) is its double cover; -I acts trivially on points -- the claim-tier spine's double-cover warning, honored and enforced). Acting on the 20 optima of one center generates all 800 (20 per center, all centers), with class (center lit?, uniform load c) a complete orbit invariant: the nine ground-state (2,2,2,2) optima per center form a 360-orbit (flips another), and the special (3,3,3,3) optimum is a canonical 40-orbit -- one distinguished 12-ray configuration per point. QUEUE INVARIANT re-verified globally on all 800: defect loading is always uniform, load spectrum {2,3,4}, ground state 2 -- zero escalation-queue imbalance, exported for the scheduler arc's in-flight queue simulator. --deep probes q=5: whether uniform loading is a parity-family law (reported exhaustive or capped). HONEST: exact finite computations; the one-group reading extends the committed one-group-machine result to the tax at the projective level; no claim about the in-flight simulator's internals.",
+  "sources": [
+    "w33_spread_star_anatomy (the 20-per-center anatomy); w33_contextuality_tax (the star theorem)",
+    "symplectic transvections generate Sp(4,3); w33_one_group_machine (the committed one-group result)",
+    "consumed by: w33_contextuality_tax_queue_simulator (in-flight)"
+  ]
+}
