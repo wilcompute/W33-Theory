@@ -1,0 +1,75 @@
+{
+  "triad_space_q3": {
+    "four_centric_triads": 81,
+    "per_point": 9,
+    "center_quad_split": {
+      "4": 9,
+      "1": 72
+    },
+    "ilp_free_characterization": "grounds = the all-centers-in-perp triads"
+  },
+  "affine_plane_q3": {
+    "q": 3,
+    "n_grounds": 9,
+    "unlit_size": [
+      4
+    ],
+    "pairwise_co_unlit": [
+      1
+    ],
+    "line_size_on_grounds": [
+      3
+    ],
+    "unlit_transversal_of_defect_lines": true,
+    "same_class_co_unlit": [
+      0
+    ],
+    "diff_class_co_unlit": [
+      1
+    ],
+    "ground_lit_pairwise_intersection": [
+      5
+    ]
+  },
+  "affine_plane_q5": {
+    "q": 5,
+    "n_grounds": 25,
+    "unlit_size": [
+      6
+    ],
+    "pairwise_co_unlit": [
+      1
+    ],
+    "line_size_on_grounds": [
+      5
+    ],
+    "unlit_transversal_of_defect_lines": true,
+    "same_class_co_unlit": [
+      0
+    ],
+    "diff_class_co_unlit": [
+      1
+    ],
+    "ground_lit_pairwise_intersection": [
+      19
+    ]
+  },
+  "q5_closure": {
+    "n_optima": 52,
+    "exhaustive": true,
+    "classes": {
+      "(0, (4, 4, 4, 4, 4, 4))": 25,
+      "(1, (5, 5, 5, 5, 5, 5))": 25,
+      "(1, (6, 6, 6, 6, 6, 6))": 1,
+      "(0, (5, 5, 5, 5, 5, 5))": 1
+    }
+  },
+  "stabilizer_two_transitive_on_grounds": true,
+  "all_pass": true,
+  "summary": "the ground states are an affine plane. ILP-FREE CHARACTERIZATION (q=3): the 27 non-neighbors carry exactly 81 four-centric triads (9 per point, pairs on at most one); their center-quads split {all-4-in-perp: 9, exactly-1: 72}, and the nine ground states are EXACTLY the nine all-centers-in-perp triads -- the defect's ground states need no optimizer. AFFINE PLANE LAW (exhaustive at q=3 AND q=5): per defect center the optima number 2(q^2+1) = twice the Hoffman bound (20 and 52, the q=5 closure terminating below cap and upgrading Pass 59's sample); the q^2 grounds carry AG(2,q) -- grounds = points, the q(q+1) neighbors = lines (incidence = unlit), each ground's unlit set = the q+1 lines through its point = a transversal of the defect star, and the q+1 parallel classes ARE the q+1 defect lines; the two remaining optima are the perp states; ground lit-sets are pairwise equidistant (5 at q=3, 19 at q=5). At q=3 the plane is the HESSE CONFIGURATION -- the corpus's single-qutrit Wigner phase space (w33_hesse_mermin), its 4 striations/MUBs realized as the 4 defect contexts: every node's defect bookkeeping is a qutrit phase space. LOCAL SYMMETRY: the point stabilizer (648) is 2-transitive on the 9 grounds. HONEST: exact and exhaustive at both odd orders; the phase-space reading cites the committed Hesse identification.",
+  "sources": [
+    "w33_perp_states (Pass 60); w33_tax_orbits (Pass 59); w33_spread_star_anatomy (Pass 58)",
+    "w33_hesse_mermin_contextuality (Hesse = AG(2,3) = single-qutrit phase space, committed corpus witness)",
+    "exhaustive ILP closures at q=3 (20) and q=5 (52); exact triad enumeration"
+  ]
+}

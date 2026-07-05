@@ -5580,6 +5580,30 @@
               <strong>transitive</strong> on the nine: one ground state up to local symmetry, just as
               globally there is one up to the full group.</div>
           </div>
+          <div class="card" id="holonet-affine-plane-card">
+            <div class="label">Pass 61 &mdash; Every Node Carries a Qutrit Phase Space</div>
+            <div class="detail"><strong>The ground states are an affine plane &mdash; and the optimizer was
+              never needed.</strong> <code>analysis/w33_ground_affine_plane.py</code>: among the 27
+              non-neighbors of a center there are exactly <strong>81 four-centric triads</strong> (each
+              point on 9, each pair on &le;1); their center-quads split {all-4-in-perp: 9, exactly-1: 72},
+              and the nine ground states are <em>exactly</em> the nine all-centers-in-perp triads &mdash;
+              a purely geometric characterization, verified set-for-set against the ILP.
+              <br><br>
+              <strong>The affine plane law, exhaustive at two odd orders:</strong> per defect center the
+              optima close at <strong>2(q&sup2;+1) = twice the Hoffman bound</strong> &mdash; 20 at q=3 and
+              <strong>52 at q=5</strong> (terminating below cap, upgrading Pass 59's sample to a theorem).
+              The q&sup2; grounds carry <strong>AG(2,q)</strong>: grounds = points, the q(q+1) neighbors =
+              lines (incidence = unlit), each unlit set = the q+1 lines through a point (a transversal of
+              the defect star), and <strong>the q+1 parallel classes ARE the q+1 defect lines</strong>.
+              Ground lit-sets are pairwise equidistant (5 at q=3, 19 at q=5); the stabilizer is
+              <strong>2-transitive</strong> on the nine (single 72 pair-orbit), matching the affine group.
+              <br><br>
+              <strong>The phase-space reading:</strong> at q=3 this plane is the <strong>Hesse
+              configuration = the single-qutrit Wigner phase space</strong> (the committed
+              <code>w33_hesse_mermin</code> identification), its 4 striations/MUBs realized as the 4
+              defect contexts. The nine classical ways to pay the tax at a node are the nine phase points:
+              <em>every node's defect bookkeeping is a qutrit phase space.</em></div>
+          </div>
           <div class="card">
             <div class="label">How To Read Proofs</div>
             <div class="detail">Use the hard-computation tiles as proof entry points, not as a first read. Each tile

@@ -8672,6 +8672,53 @@ Schl\"afli-adjacent observations are recorded as computed invariants (a
 partition of the \(27\) into nine centric triads; an \(8\)-regular induced
 graph) with no further corpus identification claimed.
 
+\subsection{Pass 61 --- every node carries a qutrit phase space}
+\label{sec:capstone-sixtyone}
+
+Pass~60 named the perp states and left the ground states anatomized but
+unnamed.  Pass~61 (\path{analysis/w33_ground_affine_plane.py}) names them, with
+an exhaustive closure at two odd orders.
+
+\paragraph{The optimizer was never needed.}  Among the \(27\) non-neighbors of
+a center \(p\) there are exactly \(81\) four-centric triads --- each point on
+\(9\), each pair on at most one --- and their center-quads split cleanly:
+\(9\) triads have all four centers inside \(\Gamma(p)\), \(72\) have exactly
+one.  The nine ground states are \emph{exactly} the nine all-centers-in-perp
+triads (verified set-for-set against the integer-program enumeration).  The
+defect's ground states admit a purely geometric characterization: they are the
+triads whose centers all live in the perp.
+
+\paragraph{The affine plane law.}  Per defect center of \(W(q)\), \(q\) odd,
+the optima number exactly \(2(q^2+1)\) --- twice the Hoffman bound --- and
+close exhaustively: \(20\) at \(q=3\) and \(52\) at \(q=5\), the latter
+terminating below its cap and upgrading Pass~59's capped sample to a theorem.
+The \(q^2\) ground states carry the structure of the affine plane
+\(\mathrm{AG}(2,q)\): grounds are the points; the \(q(q+1)\) neighbors in
+\(\Gamma(p)\) are the lines, incident when the neighbor is \emph{unlit} in the
+ground; each ground's unlit set is precisely the \(q+1\) lines through its
+point, a transversal of the defect star; and the \(q+1\) parallel classes of
+the plane \emph{are} the \(q+1\) defect lines (same-class neighbors are never
+co-unlit; different-class, exactly once).  The two remaining optima are the
+perp states of Pass~60, and the ground lit-sets are pairwise equidistant
+(intersection \(5\) at \(q=3\), \(19\) at \(q=5\)).
+
+\paragraph{The phase-space reading.}  At \(q=3\) this affine plane is the
+Hesse configuration \((9_4,12_3)\) --- the single-qutrit Wigner phase space of
+the corpus witness \path{w33_hesse_mermin_contextuality}, whose four
+striations (the mutually unbiased bases) are realized here as the four defect
+contexts.  Every node of the fabric carries, in its tax bookkeeping, a copy of
+the qutrit phase space: the nine classical ways to pay the tax at a node are
+the nine phase points, and moving the defect's double-occupancy among its four
+contexts is moving among the four striations.  The point stabilizer (order
+\(648\)) is \(2\)-transitive on the nine grounds --- computed as a single
+pair-orbit of \(72\) --- matching the \(2\)-transitivity of the affine group
+on the plane.
+
+\emph{Honest scope:} exact finite computations, exhaustive at both odd orders
+tested; the \(\mathrm{AG}(2,q)\) identification is verified through its
+defining incidence properties, and the phase-space reading cites the
+committed Hesse identification rather than re-deriving it.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}
