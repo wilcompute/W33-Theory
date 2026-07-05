@@ -8626,6 +8626,52 @@ computations; the \(q=5\) probe is exact but capped; the queue statement is a
 restatement of the loading theorem in scheduler language, with no claim about
 the in-flight simulator's internals.
 
+\subsection{Pass 60 --- the perp states: the canonical orbit named, the spectrum explained}
+\label{sec:capstone-sixty}
+
+Pass~59 found a canonical \(40\)-orbit of special optima and asked what the
+object is.  Pass~60 (\path{analysis/w33_perp_states.py}) answers: it is the
+oldest object in the geometry.
+
+\paragraph{The identification.}  The special \((3,3,3,3)\) optimum at defect
+center \(p\) is \emph{exactly} the neighborhood \(\Gamma(p)\) --- the deleted
+perp \(p^\perp\setminus\{p\}\) --- verified unique and equal per center; its
+center-lit flip is the full perp \(p^\perp\), a classical geometric hyperplane
+of the quadrangle.  The optimality proof is the \emph{defining axiom} of a
+generalized quadrangle: a point off a line is collinear with exactly one of its
+points.  Lighting \(\Gamma(p)\) therefore satisfies every non-star line exactly
+once (the axiom, verified for every point--line pair at \(q=2,3,4,5\)) and
+fails only the star, loaded uniformly with the three non-center points of each
+star line.  The mysterious canonical configuration was the perp all along.
+
+\paragraph{The spectrum, explained.}  Because the axiom holds in every
+generalized quadrangle, perp states exist at \emph{every} order, loading the
+star uniformly at \(q\) (deleted) and \(q+1\) (full) --- verified at
+\(q=2,3,4,5\).  This explains the tax load spectrum \(\{q-1,\,q,\,q+1\}\): the
+top two loads are the deleted and full perp states, now \emph{proven} present
+for all \(q\) (upgrading the \(q=5\) sample observation for those classes),
+while the bottom load \(q-1\) belongs to the ground states.  Parity still
+decides optimality: for odd \(q\) one failed star is the proven minimum, so the
+perp state is optimal; for even \(q\) it is strictly dominated by the ovoid.
+
+\paragraph{The ground states, anatomized.}  Each of the nine \((2,2,2,2)\)
+ground states per center decomposes as \(8\) in-perp \(+\;3\) out-of-perp
+points.  Verified exactly: the nine out-triples are pairwise non-collinear
+triads, each with common perp of size exactly \(4\) (centric triads), and they
+\emph{partition} the \(27\) non-neighbors of the center --- the second
+subconstituent, regular of degree \(8\) on \(27\) vertices, the same
+\(27\)-point structure the corpus ties to the Schl\"afli/E\(_6\) story.  The
+point stabilizer in \(\mathrm{PSp}(4,3)\) (order \(648\)) is \emph{transitive}
+on the nine ground states, so per center there is one ground state up to local
+symmetry, just as globally there is one up to the full group.
+
+\emph{Honest scope:} the perp and hyperplane are standard finite-geometry
+objects; the new content is the exact identification with the Pass~58/59
+optima and the resulting explanation of the load spectrum.  The
+Schl\"afli-adjacent observations are recorded as computed invariants (a
+partition of the \(27\) into nine centric triads; an \(8\)-regular induced
+graph) with no further corpus identification claimed.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

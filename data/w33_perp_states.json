@@ -1,0 +1,112 @@
+{
+  "identification": {
+    "special_optimum": "deleted perp Gamma(p) (12 = q(q+1) neighbors of the center)",
+    "flip": "full perp p-perp = geometric hyperplane",
+    "optimality_proof": "the defining GQ axiom (external point sees each line exactly once)"
+  },
+  "family": [
+    {
+      "q": 2,
+      "deleted_perp_size": 6,
+      "non_star_all_satisfied": true,
+      "star_loading_deleted": [
+        2,
+        2,
+        2
+      ],
+      "star_loading_full": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "deleted_perp_size": 12,
+      "non_star_all_satisfied": true,
+      "star_loading_deleted": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "star_loading_full": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "q": 4,
+      "deleted_perp_size": 20,
+      "non_star_all_satisfied": true,
+      "star_loading_deleted": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "star_loading_full": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "q": 5,
+      "deleted_perp_size": 30,
+      "non_star_all_satisfied": true,
+      "star_loading_deleted": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "star_loading_full": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  ],
+  "ground_state_anatomy": {
+    "count_per_center": 9,
+    "decomposition": "8 in-perp + 3 out-of-perp",
+    "out_triples_pairwise_noncollinear": true,
+    "out_triples_partition_27_nonneighbors": true,
+    "triad_common_perp_sizes": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "second_subconstituent_degree": [
+      8
+    ],
+    "stabilizer_order": 648,
+    "stabilizer_orbit_sizes_on_grounds": [
+      9
+    ]
+  },
+  "all_pass": true,
+  "summary": "the canonical 40-orbit identified: the special (3,3,3,3) optimum at center p IS the deleted perp Gamma(p) (verified unique and exactly equal), its flip the full perp -- a classical geometric hyperplane -- and the optimality proof is the DEFINING GQ AXIOM (an external point sees each line exactly once), verified at q=2,3,4,5. Hence perp states exist at every order, loading the star uniformly at q and q+1, which explains the tax load spectrum {q-1,q,q+1}: {ground states, deleted perp, full perp}; parity still decides optimality (even q: dominated by the ovoid; odd q: optimal, since one star is the proven minimum). GROUND-STATE ANATOMY at q=3: each of the nine ground states is 8 in-perp + 3 out-of-perp; the nine out-triples are pairwise non-collinear triads that exactly PARTITION the 27 non-neighbors (the second subconstituent, regular of computed degree -- the 27-point structure the corpus ties to Schlafli/E6); the point stabilizer (order 648) is TRANSITIVE on the nine. HONEST: standard GQ objects newly identified WITH the Pass 58/59 optima; the Schlafli connection recorded as computed invariants only.",
+  "sources": [
+    "w33_spread_star_anatomy (the 20 optima); w33_tax_orbits (the canonical 40-orbit, PSp(4,3))",
+    "GQ axiom / perp = geometric hyperplane (standard finite-geometry facts, recomputed here)",
+    "second subconstituent on 27 points (corpus Schlafli/E6 thread)"
+  ]
+}
