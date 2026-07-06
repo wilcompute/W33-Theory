@@ -8719,6 +8719,61 @@ tested; the \(\mathrm{AG}(2,q)\) identification is verified through its
 defining incidence properties, and the phase-space reading cites the
 committed Hesse identification rather than re-deriving it.
 
+\subsection{Pass 64 --- the interrupt controller: the tax arc runs inside the VM}
+\label{sec:capstone-sixtyfour}
+
+(Passes~62--63 --- the global phase-space bundle with Wigner fuel accounting,
+and the GAP Hilbert-transport certificate --- belong to the parallel VM/OS
+track and are documented in its own passes.)  Pass~64 fuses the two tracks.
+The VM track's microkernel table maps ``interrupt = point-star
+defect/escalation'', ``scheduler tick = spread frame'', and ``relocation =
+automorphism action'' --- rows that were descriptive until now.  The tax arc
+(Passes~57--61) proved exactly the theorems those rows need.  The witness
+\path{analysis/w33_interrupt_controller.py} makes the rows executable, with
+the theorems as \emph{runtime invariants}, and the fusion yields two new exact
+laws.
+
+\paragraph{The closed-form vector table.}  For each of the nine
+all-centers-in-perp triads \(T\) at a center \(p\),
+\[
+  \mathrm{ground}(T) \;=\; T \,\cup\, \bigl(\Gamma(p)\setminus T^{\perp}\bigr),
+\]
+verified set-for-set against the integer-program enumeration --- and the unlit
+quad \emph{is} the center quad \(T^\perp\), a transversal of the defect star.
+The controller rebuilds its \(\mathrm{AG}(2,3)\) vector table in closed form;
+no optimizer runs at interrupt time.
+
+\paragraph{The migration price law.}  Computing the lit-set overlap of every
+pair of the \(360\) ground states, classified by the relation of their defect
+centers: same center, overlap always \(5\) (re-vectoring in place costs
+\(11-5=6\) rays); collinear centers, overlaps \(\{0,2,3,8\}\) (cheapest
+migration \(3\) rays); non-collinear, \(\{1,2,4,6\}\) (cheapest \(5\)).  Every
+ground state has exactly \(8\) cheap (overlap-\(8\)) channels, sitting two per
+center at exactly \emph{four} collinear centers --- which are the ground's own
+center quad.  So the interrupt's escape routes are written into its own
+vector; it migrates cheapest along fabric edges (locality emerges in the
+operating-system layer); and, strikingly, moving the defect to a neighboring
+node (\(3\) rays) costs \emph{less} than reconfiguring it in place (\(6\)).
+
+\paragraph{The controller, run.}  A seeded loop of \(2100\) events over the
+\(40\) contexts, including device-port injections that follow the VM track's
+USB mapping (interrupt-class transfers arrive as defect-star urgent packets,
+bulk-class as ordinary line traffic): non-defect events are serviced in spread
+frames, each provably \(9/10\); defect-line events are escalations on the
+priced \(9^t\) path; overloads trigger cost-aware relocation through cheap
+channels to the least-loaded quad center.  Across the run, every runtime
+invariant held --- the failure set stayed exactly one star (Pass~57), every
+frame served \(9/10\) with uniform loading (Pass~58/59), the vector table
+stayed the nine closed-form entries (Pass~61), every relocation landed on a
+valid ground (Pass~59) --- and the average migration cost was exactly
+\(3.00\) rays.
+
+\emph{Honest scope:} the price law and closed form are exact finite
+computations; the controller is a classical seeded simulation bound to the
+committed theorems --- the interrupt layer the VM track's packet machine can
+adopt, not a claim about that in-flight code; escalation pricing cites the
+committed \(9^t\) dial.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

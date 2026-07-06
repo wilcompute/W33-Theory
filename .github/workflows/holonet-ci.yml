@@ -30,6 +30,7 @@ on:
       - 'analysis/w33_tax_orbits.py'
       - 'analysis/w33_perp_states.py'
       - 'analysis/w33_ground_affine_plane.py'
+      - 'analysis/w33_interrupt_controller.py'
       - 'analysis/holonet_bench.py'
       - 'analysis/w33_contextual_fraction.py'
       - 'analysis/w33_ks_inequality.py'
@@ -46,6 +47,7 @@ on:
       - 'tests/test_pass59_tax_orbits.py'
       - 'tests/test_pass60_perp_states.py'
       - 'tests/test_pass61_affine_plane.py'
+      - 'tests/test_pass64_interrupt_controller.py'
       - 'tests/test_hashimoto_packet_phase_bridge.py'
       - 'tests/test_frequency_bin_hashimoto_compiler.py'
       - 'tests/test_frequency_bin_lab_packet.py'
@@ -104,7 +106,8 @@ jobs:
           python analysis/w33_tax_orbits.py
           python analysis/w33_perp_states.py
           python analysis/w33_ground_affine_plane.py
+          python analysis/w33_interrupt_controller.py
           python analysis/w33_contextual_fraction.py
           python analysis/w33_ks_inequality.py
       - name: VM test suite
-        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py tests/test_pass55_control_arm.py tests/test_pass56_mermin_dimension.py tests/test_pass57_contextuality_tax.py tests/test_pass58_spread_anatomy.py tests/test_pass59_tax_orbits.py tests/test_pass60_perp_states.py tests/test_pass61_affine_plane.py tests/test_hashimoto_packet_phase_bridge.py tests/test_frequency_bin_hashimoto_compiler.py tests/test_frequency_bin_lab_packet.py -q
+        run: python -m pytest tests/test_holonet_vm.py tests/test_pass48_holonet_asm_energy.py tests/test_pass50_master_audit.py tests/test_pass52_qscan_bench.py tests/test_pass53_parity_compare.py tests/test_pass54_ovoid_scale.py tests/test_pass55_control_arm.py tests/test_pass56_mermin_dimension.py tests/test_pass57_contextuality_tax.py tests/test_pass58_spread_anatomy.py tests/test_pass59_tax_orbits.py tests/test_pass60_perp_states.py tests/test_pass61_affine_plane.py tests/test_pass64_interrupt_controller.py tests/test_hashimoto_packet_phase_bridge.py tests/test_frequency_bin_hashimoto_compiler.py tests/test_frequency_bin_lab_packet.py -q

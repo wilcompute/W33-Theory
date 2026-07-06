@@ -1,0 +1,52 @@
+{
+  "closed_form_vector_table": "ground(T) = T + (Gamma(p) - T_perp); unlit quad = center quad = star transversal",
+  "migration_price_law": {
+    "same_center_overlap": [
+      5
+    ],
+    "collinear_overlaps": [
+      0,
+      2,
+      3,
+      8
+    ],
+    "noncollinear_overlaps": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "costs_rays": {
+      "revector_in_place": 6,
+      "edge_migration": 3,
+      "noncollinear_min": 5
+    },
+    "cheap_channels_per_ground": 8,
+    "spectrum_counts": {
+      "collinear:0": 4320,
+      "collinear:2": 5040,
+      "collinear:3": 8640,
+      "collinear:8": 1440,
+      "noncollinear:1": 8640,
+      "noncollinear:2": 13500,
+      "noncollinear:4": 12960,
+      "noncollinear:6": 8640,
+      "same:5": 1440
+    }
+  },
+  "controller_run": {
+    "events": 2100,
+    "classical_services": 1844,
+    "escalations": 256,
+    "relocations": 64,
+    "avg_migration_cost_rays": 3.0,
+    "invariant_failures": []
+  },
+  "all_pass": true,
+  "summary": "the interrupt controller: the tax arc running inside the VM track's microkernel. The VM/OS track's table rows (interrupt = point-star defect/escalation; scheduler tick = spread frame; relocation = automorphism action; USB interrupt transfer = point-star urgent packet) are made executable with the tax theorems as RUNTIME INVARIANTS. CLOSED FORM: ground(T) = T + (Gamma(p) - T_perp) rebuilds the 9-entry AG(2,3) vector table with no optimizer (verified == ILP; the unlit quad IS the center quad, a star transversal). NEW MIGRATION PRICE LAW from the 360-state bundle gluing: same-center overlap always 5 (re-vector costs 6 rays); collinear-center overlaps {0,2,3,8} (cheapest migration 3 rays); non-collinear {1,2,4,6} (>=5); every ground has exactly 8 cheap channels, all along edges -- the interrupt migrates cheapest along fabric edges, and moving next door beats reconfiguring in place. The seeded controller (2100 events incl. device-port interrupt/bulk injections) held every invariant and used only cheap channels (avg cost 3.00). HONEST: exact price/table computations; a classical simulation bound to committed theorems; the escalation price cites the 9^t dial; complements (does not modify) the in-flight packet VM and multi-star packing/queue work.",
+  "sources": [
+    "VM/OS track: microkernel table + packet VM + loader (in-flight); tax packing/queue witnesses (in-flight)",
+    "tax arc: w33_contextuality_tax (57), w33_spread_star_anatomy (58), w33_tax_orbits (59), w33_perp_states (60), w33_ground_affine_plane (61)",
+    "the 9^t dial (w33_magic_dial) for escalation pricing"
+  ]
+}
