@@ -1,0 +1,29 @@
+{
+  "placement": "page -> phase point (hash mod 9) -> triple slot (hash//9 mod 3); safe zone only",
+  "page_bill_law": {
+    "adjacent_overlap": [
+      18
+    ],
+    "nonadjacent_overlap": [
+      18
+    ],
+    "bill_points": 9,
+    "statement": "the relocation page bill is a constant 9 of 27 safe points, for every move; edge relocation wins on rays and ties on pages"
+  },
+  "rekeying_histogram_edge_move": [
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "all_pass": true,
+  "summary": "defect-aware placement: the VM track's page loader gains a phase-space directory. At defect center p the 27 non-neighbors touch no defect line (verified), and Pass 61's ground out-triples partition them into the 9 AG(2,3) phase points -- so pages place page -> phase point -> triple slot, deterministically, never on an escalation path. PAGE BILL LAW (computed over all 780 center pairs): the safe-zone overlap is a constant 18/27 for BOTH adjacent and non-adjacent relocations -- the memory bill is always exactly 9 points -- so the page side is relocation-isotropic and the ray-side price law (edge = 3 rays, Pass 64) alone decides: edges win strictly. Re-keying histogram after an edge move recorded. HONEST: exact computations; the directory is canonical by Pass 61's ILP-free characterization; the in-flight 81-trit loader is the named consumer, not a dependency.",
+  "sources": [
+    "w33_interrupt_controller.vector_table (closed form); w33_ground_affine_plane (Pass 61)",
+    "VM track: w33_binary_object_loader (in-flight consumer)"
+  ]
+}

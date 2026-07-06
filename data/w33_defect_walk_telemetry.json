@@ -1,0 +1,26 @@
+{
+  "trace_file": "data/w33_defect_walk_trace.jsonl",
+  "schema": {
+    "tick": "event counter",
+    "event": "relocate",
+    "from": "center",
+    "to": "center",
+    "quad": "the 4 unlit neighbors = allowed moves",
+    "cost_rays": "always 3"
+  },
+  "walk_law": "every step lands in the pre-move center quad; every step is an edge; every step costs 3 rays",
+  "run": {
+    "events": 20000,
+    "steps": 1023,
+    "coverage_centers": 29,
+    "visit_min": 29,
+    "visit_max": 43,
+    "seed": 99
+  },
+  "all_pass": true,
+  "summary": "defect-walk telemetry: over a 20000-event seeded run the Pass 64 controller's defect performed a long relocation walk, and every step obeyed the WALK LAW -- landing in the pre-move center quad (the 4 unlit neighbors written into the current vector), along a fabric edge, at exactly 3 rays -- with all tax-theorem invariants held throughout. The walk is emitted as a spread-clock-compatible JSONL trace (tick/event/from/to/quad/cost) for the VM track's scheduler tooling to replay or join against packet traces. Coverage statistics reported as seed-specific measurements, not an ergodicity claim.",
+  "sources": [
+    "w33_interrupt_controller (Pass 64 policy, subclassed for telemetry only)",
+    "VM track: spread-clock trace tooling (in-flight consumer of the JSONL)"
+  ]
+}

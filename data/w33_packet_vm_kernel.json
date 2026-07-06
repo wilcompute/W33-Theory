@@ -1,0 +1,27 @@
+{
+  "workload": "committed 22-instruction TritCPU router (B(x,y)) over all 1600 ordered pairs",
+  "embedding": {
+    "registers": "points 0..15",
+    "ram": "points 16..24"
+  },
+  "counters": {
+    "escalated": 90,
+    "hops": 46400,
+    "local_ops": 8000,
+    "serviced": 46310,
+    "transactions": 27200
+  },
+  "controller": {
+    "relocations": 15,
+    "avg_migration_cost_rays": 3.0,
+    "escalations": 90,
+    "invariant_failures": []
+  },
+  "inflight_packet_vm_detected": true,
+  "all_pass": true,
+  "summary": "mode-2 execution with a real kernel: the committed 22-instruction TritCPU router program is lifted to a packet stream (registers/RAM embedded at W(3,3) points; every LD/ST/ALU movement = one route of 1-2 line transactions) and executed THROUGH the Pass 64 interrupt controller. Over all 1600 ordered inputs the kernel-wrapped outputs equal the direct TritCPU outputs AND the ground-truth symplectic form; every hop is line-legal; defect-line touches escalate on the priced 9^t path; overloads relocate through cheap channels at exactly 3 rays; every tax theorem holds as a runtime invariant under a real workload. The VM track's packet VM (whose presence is detected but not depended on) can adopt the kernel via the service() hook. HONEST: the embedding is bookkeeping; the semantic engine is the committed TritCPU; the kernel adds the OS layer (legality, pricing, escalation, relocation), not new computation.",
+  "sources": [
+    "w33_tritcpu_emulator (committed router program); w33_interrupt_controller (Pass 64)",
+    "VM track: w33_packet_vm / microkernel table (in-flight adoption target)"
+  ]
+}
