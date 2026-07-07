@@ -1,0 +1,22 @@
+{
+  "audit_theorem": {
+    "directed_edges": 480,
+    "uniquely_decodable": 480,
+    "rule": "the 3 rebuilt-line quads at the destination meet in exactly the departing center"
+  },
+  "executable_replay": {
+    "steps": 400,
+    "reconstructed_exactly": true
+  },
+  "cover_corollary": {
+    "scheduler_rows": 1440,
+    "edge_cover_multiplicity": 3,
+    "all_auditable": true
+  },
+  "all_pass": true,
+  "summary": "BT1808's compiled edge scheduler, made auditable by geometry. The parallel track's TD(4,3) scheduler compiles 1440 relocation rows (40 centers x 9 phases x 4 exits = 3 x 480 directed edges) but supplies no replay. Wiring Pass 66's self-logging decode into it, on BT1808's own geometry: the AUDIT THEOREM holds for all 480 directed edges -- the three rebuilt-line rows at the destination have center quads meeting in exactly the departing center, so one marker per row decodes the origin uniquely with no event log. A 400-step walk driven through the scheduler's own edges replays edge-for-edge from markers + geometry. COVER COROLLARY: since BT1808 covers every directed edge exactly 3x and each is uniquely decodable, all 1440 rows are geometrically auditable -- a 3-fold-redundant, self-auditing relocation table. HONEST: exact over all 480 edges; the replay is seeded; an audit backend the committed scheduler can adopt, adding geometric replay, not new scheduling.",
+  "sources": [
+    "bt1808_td43_edge_scheduler / bt1807_defect_phase_plane_transversal_design (committed, parallel track)",
+    "w33_kernel_dynamics (Pass 66 self-logging law); w33_interrupt_controller (Pass 64)"
+  ]
+}

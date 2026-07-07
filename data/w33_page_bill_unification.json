@@ -1,0 +1,29 @@
+{
+  "same_nine": {
+    "moves": 1560,
+    "td43_equals_overlap": true,
+    "bill": [
+      9
+    ]
+  },
+  "edge_split": {
+    "profile": {
+      "3": 6,
+      "0": 3
+    },
+    "fully_churned_triads": "the AG-line indexed by the old center (Pass 66 rebuilt-line rule)",
+    "addressed": "the 3 rebuilt quads meet in exactly {old center}"
+  },
+  "nonedge_split": {
+    "profile": {
+      "2": 9
+    },
+    "structure": "a transversal of the phase plane (one point per triad)"
+  },
+  "all_pass": true,
+  "summary": "one law, two proofs. The constant nine-point relocation page bill is derived two ways -- the safe-zone overlap of Pass 65 (|safe(p) cap safe(q)| = 18 => bill 9) and the TD(4,3) churn of the parallel track's BT1809/BT1816 -- and this witness proves they are the SAME set difference for all 1560 ordered moves (BT1816's retained count == the independent overlap, always 18). It then explains the edge/non-edge histogram dichotomy with Pass 66's rebuilt-line rule: for an edge move p->q the three fully-churned destination triads (profile {3:6,0:3}) are exactly the rows whose center quad contains p -- the AG(2,3) line indexed by the departing center, whose three quads meet in exactly {p}, so edge re-keying is phase-coherent AND origin-addressed; for a non-edge move the churn is a transversal (profile {2:9}, one point per triad), which scrambles phase structure. The two committed derivations collapse into one theorem with two proofs and a geometric reason for the line/transversal split. HONEST: exact over all 1560 moves on committed BT1816/bt1807 geometry plus an independent safe-zone computation; no new bill introduced.",
+  "sources": [
+    "w33_ground_affine_plane / w33_defect_aware_placement (Pass 65); w33_kernel_dynamics (Pass 66)",
+    "bt1809_page_loader_td43_fusion / bt1816_page_cache_churn_simulator / bt1807 (committed, parallel track)"
+  ]
+}

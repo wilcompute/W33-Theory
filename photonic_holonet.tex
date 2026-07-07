@@ -8915,6 +8915,57 @@ mixing are numerics on the exact matrix); the rebuilt-line rule and the
 pipeline and decode are seeded executions whose invariants are the committed
 theorems, the decode reading only three markers and the geometry.
 
+\subsection{Pass 67 --- unifying the tracks: a self-auditing scheduler and an exact gap}
+\label{sec:capstone-sixtyseven}
+
+Pass~67 fuses the tax-arc kernel with the parallel track's committed
+BT1807--1816 relocation hardware, on that track's own geometry.
+
+\paragraph{The scheduler audits itself.}  The parallel track's BT1808 compiles
+all allowed cheap relocations into \(1440\) rows (\(40\) centers \(\times\) nine
+phase rows \(\times\) four exits \(=3\times480\) directed edges) but supplies no
+replay.  Wiring Pass~66's self-logging decode into it
+(\path{analysis/w33_scheduler_audit_backend.py}) turns replay into a theorem:
+for every one of the \(480\) directed edges \(p\to q\), the three destination
+phase rows whose center quad contains \(p\) have quads meeting in exactly
+\(\{p\}\), so one marker per row recovers the origin uniquely --- no event log.
+A \(400\)-step walk driven through the scheduler's own edges replays
+edge-for-edge from three markers per step, and because BT1808 covers every
+directed edge exactly three times, all \(1440\) rows are geometrically
+auditable.
+
+\paragraph{The exact mixing time.}  The cheap-channel graph on the \(360\)
+ground states (\path{analysis/w33_cheap_channel_spectrum.py}) is \(8\)-regular
+but \emph{not} strongly regular: it has eight distinct eigenvalues, proved
+exact by integer trace moments,
+\[
+  \mathrm{spec} = \Bigl\{8^{1},\ \tfrac{1+\sqrt{97}}{2}^{\,15},\ 3^{84},\ 1^{111},\ (-1)^{20},\ (-3)^{90},\ (-4)^{24},\ \tfrac{1-\sqrt{97}}{2}^{\,15}\Bigr\},
+\]
+the irrational pair being roots of \(x^2-x-24\).  Hence the defect walk has
+exact second eigenvalue modulus \((1+\sqrt{97})/16\) and exact spectral gap
+\[
+  1-\frac{1+\sqrt{97}}{16}=\frac{15-\sqrt{97}}{16}\approx 0.3219,
+\]
+with relaxation time \((15+\sqrt{97})/8\).  Pass~66's numeric gap \(0.32\) and
+\(\sim23\)-step bound were the shadow of these algebraic numbers.
+
+\paragraph{One page bill, two proofs.}  Pass~65's safe-zone overlap derivation
+and the parallel track's TD\((4,3)\) churn derivation
+(\path{analysis/w33_page_bill_unification.py}) compute the \emph{same} set
+difference for all \(1560\) ordered moves --- the retained count is the
+safe-zone overlap, always \(18\), so the bill is always nine.  The edge/non-edge
+histogram split is the line/transversal dichotomy of the \(\mathrm{AG}(2,3)\)
+directory: for an edge move the three fully-churned triads are exactly the
+rebuilt line indexed by the departing center (their quads meeting in
+\(\{p\}\), so edge re-keying is phase-coherent \emph{and} origin-addressed),
+while a non-edge move churns a transversal, one point per triad.
+
+\emph{Honest scope:} all three are exact finite computations on the parallel
+track's committed geometry plus the tax arc's structures; the audit theorem and
+the page-bill unification hold for all edges/moves, the spectrum is verified by
+integer moments, and the mixing figure is the standard spectral bound with exact
+inputs.
+
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}
 \input{analysis/BT1567_BT1569_holonet_insert.tex}

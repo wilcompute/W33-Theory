@@ -1,0 +1,31 @@
+{
+  "regular_degree": 8,
+  "vertices": 360,
+  "distinct_eigenvalues": 8,
+  "strongly_regular": false,
+  "spectrum": {
+    "8": 1,
+    "(1+sqrt97)/2": 15,
+    "3": 84,
+    "1": 111,
+    "-1": 20,
+    "-3": 90,
+    "-4": 24,
+    "(1-sqrt97)/2": 15
+  },
+  "irrational_pair_minimal_poly": "x^2 - x - 24",
+  "proof": "integer trace moments sum_i m_i lambda_i^k == trace(A^k) for k=0..7",
+  "mixing": {
+    "slem": "(1+sqrt97)/16",
+    "spectral_gap": "(15-sqrt97)/16",
+    "spectral_gap_numeric": 0.3219463873877435,
+    "relaxation_time": "(15+sqrt97)/8",
+    "tv_mixing_bound_steps": 20.43585972619171
+  },
+  "all_pass": true,
+  "summary": "the exact mixing time. The 360 ground states under the cheap-channel (overlap-8, cost-3) adjacency form an 8-regular graph that is NOT strongly regular -- it has eight distinct eigenvalues. Six are integers and one conjugate pair is irrational: the spectrum is 8(x1), (1+sqrt97)/2 (x15), 3(x84), 1(x111), -1(x20), -3(x90), -4(x24), (1-sqrt97)/2 (x15), the pair being roots of x^2-x-24. This multiset is PROVED exact by integer trace moments (sum_i m_i lambda_i^k == trace(A^k) for k=0..7, the irrational pair contributing 15*(alpha^k+beta^k) via the integer recurrence p_k=p_{k-1}+24 p_{k-2}). Hence the defect walk P=A/8 has EXACT SLEM (1+sqrt97)/16 ~ 0.678 and EXACT spectral gap (15-sqrt97)/16 ~ 0.322 -- Pass 66's numeric gap in closed form -- with relaxation time (15+sqrt97)/8 ~ 3.11. With vertex-transitivity the stationary law is uniform and equilibration is fixed by these algebraic numbers. HONEST: spectrum exact by integer moments (numerics only to discover and cross-check); the mixing figure is the standard spectral upper bound with exact inputs.",
+  "sources": [
+    "w33_kernel_dynamics.cheap_channel_graph (Pass 66); w33_tax_orbits (the 360-orbit)",
+    "integer trace-moment identification of a graph spectrum"
+  ]
+}
