@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1857 Selector API Refactor Audit",
+  "api": "analysis/bt1853_runtime_selector_api.py",
+  "direct_consumers": [
+    "analysis/bt1836_e8_selector_aperture_table.py",
+    "analysis/bt1842_e8_labelled_compiled_trace_schema.py",
+    "analysis/bt1843_aperture_to_shot_protocol.py"
+  ],
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "status_label": "transported_S4_closed_local_A2_open",
+  "checks": {
+    "bt1836_imports_api": true,
+    "bt1842_imports_api": true,
+    "bt1843_imports_api": true,
+    "canonical_basis_single_source": true
+  }
+}
