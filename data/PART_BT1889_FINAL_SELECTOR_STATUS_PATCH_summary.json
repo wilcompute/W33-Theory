@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1889 Final Selector Status Patch",
+  "paper_insert": "paper/BT1889_final_selector_status_patch.tex",
+  "closed_now": [
+    "BT982 integral vertex-E8 basis exists",
+    "BT1880 maps BT982 basis columns into selector-pair/phase slots",
+    "BT1882 preserves vertex-E8 Gram contributions under central-inversion phase",
+    "BT1887 validates sparse Z40 embedding against W33 adjacency-derived candidate form",
+    "BT1888 preserves sparse-Z40 G40 contributions under central-inversion phase"
+  ],
+  "remaining_open": "identify/prove the actual Z40 chain A/2 boundary/operator model and verify the mapped phase action there",
+  "honest_scope": "Paper patch only; not a full paper rewrite or PDF build."
+}
