@@ -1,0 +1,26 @@
+{
+  "theorem": "BT1856 Transport Local Survivor to H",
+  "tetracode_coordinate_survivor": {
+    "signed_monomial_glue_stabilizer_order": 48,
+    "block_quotient_order": 24,
+    "sign_kernel_size": 2
+  },
+  "H_effective_transport": {
+    "transported_part": "S4 block quotient",
+    "transported_order": 24,
+    "selected_minimizer_orbit_size": 24,
+    "selected_minimizer_stabilizer_size": 1,
+    "support60_intersection_singleton": true
+  },
+  "not_yet_transportable": {
+    "part": "sign kernel / local A2 Weyl lift",
+    "reason": "ternary signs collapse on the mod-2 chain shadow unless an explicit integral A2 representative lift is chosen"
+  },
+  "checks": {
+    "S4_transported_to_H": true,
+    "transported_order_24": true,
+    "selected_minimizer_rigid_under_transported_S4": true,
+    "sign_kernel_boundary_explicit": true,
+    "no_full_local_chain_lift_overclaim": true
+  }
+}
