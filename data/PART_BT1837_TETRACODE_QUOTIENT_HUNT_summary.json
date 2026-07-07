@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1837 Tetracode Quotient Hunt",
+  "certificate_graph_orbits": [[0, 1], [2], [3], [4], [5]],
+  "metric_winner": 2,
+  "metric_winner_certificate_orbit": [2],
+  "next_required_artifact": "explicit BT930 tetracode isometry matrix",
+  "reading": "The intrinsic certificate quotient fixes minimizer 2. The full tetracode quotient is not closed by this evidence alone.",
+  "checks": {
+    "certificate_automorphism_order_2": true,
+    "metric_winner_singleton_under_certificate_quotient": true,
+    "intrinsic_quotient_does_not_close_full_tetracode_action": true,
+    "bt930_matrix_required_to_finish": true
+  },
+  "honest_scope": "This closes the intrinsic-certificate quotient only. It does not prove the full tetracode quotient."
+}
