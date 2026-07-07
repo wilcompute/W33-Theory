@@ -1,0 +1,32 @@
+% BT1889 -- final selector status patch
+%
+% Suggested insertion point: after BT1869's merged selector/glue subsection.
+
+\begin{result}[The selector lift is now reduced to the explicit $\mathbb Z^{40}$ chain operator]
+The integral selector bridge has advanced beyond the abstract-support layer.  The support selector and
+all quotient data visible on the mod-$2$ shadow remain closed, and the integral vertex-E8 basis is no
+longer missing: BT982 supplies an explicit basis $B$ in vertex E8 root coordinates, with the standard E8
+Cartan Gram.  BT1880 maps the columns of $B$ into the four selector-pair/phase slots, and BT1882 checks
+that the central-inversion phase action preserves the corresponding vertex-E8 Gram contributions.
+
+The first $\mathbb Z^{40}$ lift is the sparse vertex-subset embedding: place each BT982 $8$-vector on the
+BT982 vertex subset of the forty W(3,3) points and set all other coordinates to zero.  BT1887 verifies
+that this sparse embedding is internally consistent with the W(3,3) adjacency-derived candidate form
+\[
+  G_{40}=2I-A_{W(3,3)}.
+\]
+BT1888 then checks that the central-inversion phase action, represented by simultaneous negation of the
+two sparse slot vectors, preserves the $G_{40}$ contributions.
+
+\emph{Boundary.}  This closes the vertex-E8 basis bridge and the first sparse-$\mathbb Z^{40}$ metric-form
+action test.  It still does not prove that $G_{40}$ is the final chain $A/2$ boundary operator.  The
+remaining task is to identify or prove the actual $\mathbb Z^{40}$ chain $A/2$ boundary/operator model and
+verify the mapped phase action there.
+
+Witnesses: \path{analysis/bt1880_bt982_to_bt1875_mapper.py},
+\path{analysis/bt1881_chain_boundary_compatibility_tester.py},
+\path{analysis/bt1885_explicit_z40_representative_schema.py},
+\path{analysis/bt1886_chain_A_over_2_operator_locator.py},
+\path{analysis/bt1887_vertex_subset_embedding_test.py}, and
+\path{analysis/bt1888_phase_action_sparse_z40.py}.
+\end{result}
