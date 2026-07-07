@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1884 Paper Patch Apply/Check Bundle",
+  "purpose": "apply BT1869 selector/glue subsection via BT1873 and verify TeX/static selector certificate state",
+  "expected_insert": "Metric-canonical selector and remaining sign-kernel lift subsection",
+  "expected_artifacts": [
+    "holonet_machine.tex",
+    "data/PART_BT1874_FINAL_SELECTOR_QUOTIENT_CERTIFICATE.json",
+    "data/PART_BT1884_PAPER_PATCH_APPLY_CHECK_BUNDLE_results.json"
+  ],
+  "checks": {
+    "apply_command_recorded": true,
+    "static_tex_check_recorded": true,
+    "certificate_refresh_recorded": true,
+    "expected_holonet_target_recorded": true,
+    "pdf_build_not_claimed": true
+  },
+  "honest_scope": "Command bundle only. It does not claim the connector pass rewrote the paper or built a PDF."
+}
