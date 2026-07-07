@@ -4224,6 +4224,60 @@ and the error bound through $m=12$, and confirms the Bass spectrum
 $\{11,1\}\cup\{1\pm i\sqrt{10}\}^{24}\cup\{-2\pm i\sqrt{7}\}^{15}\cup
 \{\pm1\}^{200}$.
 
+\subsection*{The Zeta Frontier: Quadrangle Primes, the Explicit Formula,
+and What the Zeta Cannot Hear}
+
+Four exact extensions, all verified in
+\texttt{w33\_pass74\_zeta\_frontier.py} (status \texttt{PASS}).
+
+\paragraph{(i) Quadrangle primes on the incidence graph.}
+The point--line \emph{incidence} (Levi) graph of $W_{3,3}$ --- $80$ vertices,
+$4$-regular, adjacency spectrum $\{\pm4^{1},\pm2^{24},0^{30}\}$ --- has
+\textbf{girth $8$} and is itself Ramanujan (all non-trivial Hashimoto
+eigenvalues of modulus $\sqrt{3}=\sqrt{k-1}$).  Its first Ihara primes
+therefore appear at length $8$: they are the \emph{oriented ordinary
+quadrangles} of the generalized quadrangle.  Exactly as the collinearity
+graph gives $\pi_G(3)=2T=320$ triangles, the incidence graph gives
+\[
+\boxed{\;\pi^{\mathrm{inc}}_G(8) \;=\; 2\cdot(\#\text{ordinary quadrangles})
+\;=\; 2\cdot 1620 \;=\; 3240\;}
+\]
+($N_m^{\mathrm{inc}}=0$ for $m<8$; the $1620$ is cross-checked by direct
+$8$-cycle enumeration).  The two shortest primes of the two W\/$(3,3)$
+graphs are precisely the two shortest closed configurations of the
+generalized quadrangle --- its triangles and its quadrangles.
+
+\paragraph{(ii) The prime explicit formula and $\dim E_6$.}
+The based counts satisfy the exact ``explicit formula''
+\[
+N_m = 11^m + 201 + 200(-1)^m
+      + 48\,\operatorname{Re}\!\bigl((1+i\sqrt{10})^m\bigr)
+      + 30\,\operatorname{Re}\!\bigl((-2+i\sqrt{7})^m\bigr),
+\]
+whose two oscillatory frequencies are the arguments of the Frobenius
+eigenvalues (the graph's ``Riemann zeros''), with
+$\cos^2(\arg(1+i\sqrt{10})) = 1/11$: they encode the Ihara norm, not a
+mixing angle.  The total oscillatory amplitude is
+$48+30 = \mathbf{78} = \dim E_6$ --- the periodic-orbit fluctuation of
+$W_{3,3}$ is bounded by the dimension of $E_6$, tying the graph
+prime-number theorem to the $\Sp(4,3)=W(E_6)$ spine.
+
+\paragraph{(iii) Functional equation.}
+Each quadratic Ihara factor $11u^2-\lambda u+1$ has roots of product
+$1/11$, so the involution $u\mapsto 1/(11u)$ swaps them: the pole set is
+invariant, the trivial pair $u=1\leftrightarrow u=1/11$ maps to itself,
+and the critical circle $|u|=1/\sqrt{11}$ is fixed.  The $u\to1$ tree
+residue is the complexity $\tau = 10^{24}\,16^{15}/40 = 2^{81}\,5^{23}$.
+
+\paragraph{(iv) What the zeta cannot hear.}
+Both the Ihara and the Bartholdi zeta are functions of the adjacency
+spectrum alone, so they are \emph{identical} on all $28$ cospectral
+$\SRG(40,12,2,4)$ graphs (Spence 2000); in particular every one of the
+$28$ has the same prime geodesic counts $\pi_G(m)$.  One \emph{cannot}
+hear which $W_{3,3}$-parameter graph one is on from the (Bartholdi--)Ihara
+zeta; the finer \textbf{edge zeta} (a $2|E|\times2|E|$ non-spectral
+determinant) is the distinguishing invariant.
+
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════

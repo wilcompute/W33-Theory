@@ -1,0 +1,211 @@
+{
+  "schema": "w33.pass74.zeta_frontier.v1",
+  "status": "PASS",
+  "trackA_levi_incidence_zeta": {
+    "vertices": 80,
+    "arcs": 320,
+    "girth": 8,
+    "spectrum": {
+      "-4": 1,
+      "-2": 24,
+      "0": 30,
+      "2": 24,
+      "4": 1
+    },
+    "bipartite_ramanujan_modulus_sqrt3": true,
+    "perron_kminus1": 3,
+    "N_m": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 25920
+    },
+    "pi_primes": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 3240
+    },
+    "first_prime_length": 8,
+    "pi_8_oriented_quadrangles": 3240,
+    "ordinary_quadrangles_from_pi": 1620,
+    "ordinary_quadrangles_direct_8cycle_count": 1620,
+    "quadrangle_crosscheck_ok": true,
+    "note": "first primes appear at length 8 = girth; pi_G(8)=2*(#ordinary quadrangles) of GQ(3,3), cross-checked by direct 8-cycle enumeration; N_m=0 for m<8 (bipartite, girth 8). Analog of collinearity pi_G(3)=2*(#triangles)."
+  },
+  "trackB_explicit_formula": {
+    "geodesic_frequencies_rad": {
+      "gauge_arg(1+i sqrt10)": 1.264519,
+      "chiral_arg(-2+i sqrt7)": 2.218081
+    },
+    "geodesic_frequencies_deg": {
+      "gauge": 72.4516,
+      "chiral": 127.0867
+    },
+    "cos2_gauge_equals_1_over_11": 0.090909,
+    "oscillatory_amplitude": 78,
+    "amplitude_equals_dim_E6": true,
+    "explicit_formula": "N_m = 11^m + 201 + 200(-1)^m + 48 Re((1+i sqrt10)^m) + 30 Re((-2+i sqrt7)^m)",
+    "verified_rows": [
+      {
+        "m": 1,
+        "N_m_explicit": 0.0,
+        "match": true
+      },
+      {
+        "m": 2,
+        "N_m_explicit": -0.0,
+        "match": true
+      },
+      {
+        "m": 3,
+        "N_m_explicit": 960.0,
+        "match": true
+      },
+      {
+        "m": 4,
+        "N_m_explicit": 13920.0,
+        "match": true
+      },
+      {
+        "m": 5,
+        "N_m_explicit": 181440.0,
+        "match": true
+      },
+      {
+        "m": 6,
+        "N_m_explicit": 1818240.0,
+        "match": true
+      },
+      {
+        "m": 7,
+        "N_m_explicit": 19178880.0,
+        "match": true
+      },
+      {
+        "m": 8,
+        "N_m_explicit": 214015200.0,
+        "match": true
+      },
+      {
+        "m": 9,
+        "N_m_explicit": 2359466880.0,
+        "match": true
+      },
+      {
+        "m": 10,
+        "N_m_explicit": 25940386560.0,
+        "match": true
+      },
+      {
+        "m": 11,
+        "N_m_explicit": 285329352000.0,
+        "match": true
+      },
+      {
+        "m": 12,
+        "N_m_explicit": 3138359764320.0,
+        "match": true
+      }
+    ],
+    "all_match": true,
+    "note": "The two geodesic frequencies are the arguments of the Frobenius eigenvalues (the graph's 'Riemann zeros'); cos^2(gauge)=1/11 shows they encode the Ihara norm, NOT a mixing angle. Total oscillatory amplitude 78 = dim(E6)."
+  },
+  "trackC_functional_equation": {
+    "num_nontrivial_poles": 4,
+    "num_all_poles_incl_trivial": 6,
+    "functional_equation": "pole set invariant under u -> 1/(11u); fixes RH circle |u|=1/sqrt(11)",
+    "pole_set_invariant_under_involution": true,
+    "all_poles_on_RH_circle": true,
+    "spanning_trees_tau": 28823037615171174400000000000000000000000,
+    "tau_factored": "2^81 * 5^23",
+    "tau_equals_2^81_5^23": true,
+    "note": "Each quadratic factor 11u^2 - lambda u + 1 has roots with product 1/11, so u -> 1/(11u) swaps them: the functional equation is a root-pairing involution fixing the critical circle. tau matches index.html (2^81 * 5^23)."
+  },
+  "trackD_spence_cospectrality": {
+    "spence_count": 28,
+    "shared_adjacency_spectrum": {
+      "12": 1,
+      "2": 24,
+      "-4": 15
+    },
+    "ihara_zeta_spectral": true,
+    "bartholdi_zeta_spectral": true,
+    "ihara_separates_28": false,
+    "bartholdi_separates_28": false,
+    "separator": "edge zeta (2m x 2m edge-weight determinant) -- NOT spectral, sees girth cycle structure that differs across the 28.",
+    "theorem": "Cospectral graphs have identical Ihara and Bartholdi zeta; therefore the prime geodesic counts pi_G(m) are IDENTICAL for all 28 Spence graphs. You cannot hear which SRG(40,12,2,4) you are on from the (Bartholdi-)Ihara zeta; the edge zeta is the finest distinguishing invariant.",
+    "note": "Bartholdi/edge-zeta: 0 hits in index.html -- this hierarchy statement is new."
+  },
+  "trackE_artin_ihara_reps": {
+    "group": "PSp(4,3) = PSU(4,2), order 25920",
+    "gauge_eigenspace_dim_f": 24,
+    "chiral_eigenspace_dim_g": 15,
+    "f_is_irrep_degree": true,
+    "g_is_irrep_degree": true,
+    "psp43_irrep_degrees_sample": [
+      1,
+      5,
+      6,
+      10,
+      15,
+      20,
+      24,
+      30,
+      30,
+      40,
+      45,
+      60,
+      60,
+      64,
+      81
+    ],
+    "note": "The r=2 (dim 24) and s=-4 (dim 15) eigenspaces are PSp(4,3)-modules whose dimensions are irreducible representation degrees; the Ihara quadratic factors (1-2u+11u^2)^24 and (1+4u+11u^2)^15 are the equivariant Artin-Ihara L-factors for these irreps. Full irreducibility needs GAP; degrees match the ATLAS. The doc already develops Deligne-Lusztig/Langlands for Sp(4,3) -- this ties the graph zeta exponents to that representation theory."
+  },
+  "trackF_weil_vs_ihara": {
+    "variety": "symplectic polar space W(3,3) over F_3",
+    "point_counts_F_3n": {
+      "1": 40,
+      "2": 820,
+      "3": 20440,
+      "4": 538084,
+      "5": 14408200
+    },
+    "point_count_formula": "|W(F_{3^n})| = (3^n+1)(3^{2n}+1) = 3^{3n}+3^{2n}+3^n+1",
+    "weil_zeta_reciprocal_roots_t": [
+      1,
+      0.3333333333333333,
+      0.1111111111111111,
+      0.037037037037037035
+    ],
+    "contrast_with_ihara": "Two distinct zetas of the SAME W(3,3): the WEIL zeta counts F_{3^n}-points of the polar-space variety (arithmetic, Frobenius sigma_3: x->x^3, weights q^j) and satisfies the Weil functional equation; the IHARA zeta counts closed geodesics of the collinearity GRAPH (dynamical, weight k-1=11). The doc develops the Weil/Deligne-Lusztig side; this makes the point-count zeta explicit for direct contrast.",
+    "n1_point_count_is_40": true
+  },
+  "checks": {
+    "A_levi_girth_8": true,
+    "A_first_prime_length_8": true,
+    "A_bipartite_ramanujan": true,
+    "A_quadrangle_crosscheck": true,
+    "B_amplitude_is_dim_E6_78": true,
+    "B_explicit_formula_matches": true,
+    "C_functional_equation_invariant": true,
+    "C_all_poles_on_RH_circle": true,
+    "C_tau_2^81_5^23": true,
+    "D_zeta_cannot_hear_28": true,
+    "E_f_g_are_irrep_degrees": true,
+    "F_weil_n1_is_40": true
+  },
+  "doc_cross_checks": {
+    "amplitude_78_is_dim_E6": "index.html line 18118",
+    "tau_2^81_5^23": "index.html lines 9480/18055",
+    "disc_r_40_disc_s_28": "index.html line 18122 (disc_r=v=40, disc_s=v-k=28=dim SO(8))"
+  }
+}
