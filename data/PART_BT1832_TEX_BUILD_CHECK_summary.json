@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1832 Holonet machine TeX build-check witness",
+  "target": "holonet_machine.tex",
+  "checks": {
+    "has_compiled_runtime_stack_result": true,
+    "has_selector_formula": true,
+    "has_aperture_honest_boundary": true,
+    "begin_end_document_balanced": true,
+    "result_environments_balanced": true,
+    "honestbox_balanced": true,
+    "display_math_delimiters_even": true
+  },
+  "all_static_checks_pass": true,
+  "honest_scope": "Static TeX sanity check only. Not a full pdflatex build."
+}
