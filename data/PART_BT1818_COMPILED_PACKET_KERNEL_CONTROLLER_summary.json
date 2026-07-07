@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1818 Compiled Packet-Kernel Controller Integration",
+  "directed_edges": 480,
+  "phase_rows_per_edge": 3,
+  "compiled_rows": 1440,
+  "selection_rule": "phase = table[(source,target)][counter[(source,target)] mod 3]",
+  "checked_rounds_per_edge": 12,
+  "max_reuse_per_phase_row": 4,
+  "checks": {
+    "compiled_table_has_all_directed_edges": true,
+    "three_phase_rows_per_edge": true,
+    "counter_mod_3_balances_repeated_edge_use": true
+  },
+  "honest_scope": "Compiled relocation selector for the packet-kernel path."
+}
