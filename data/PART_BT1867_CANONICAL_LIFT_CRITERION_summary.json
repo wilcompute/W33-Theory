@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1867 Canonical Lift Criterion",
+  "criterion": "choose the central, Gram-preserving, order-two, minimum-height representative in each O(A2)/W(A2) sign-kernel class",
+  "neutral_class_representative": [[1, 0], [0, 1]],
+  "nontrivial_class_representative": [[-1, 0], [0, -1]],
+  "nontrivial_class_name": "central_inversion_phase",
+  "phase_coset_bit": {"neutral": 0, "central_inversion_phase": 1},
+  "reading": "The selector stack can use identity for the neutral lift and central inversion for the nontrivial phase bookkeeping class. This is canonical as lattice bookkeeping, not yet as a physical E8 chain representative.",
+  "checks": {
+    "identity_height_one": true,
+    "central_inversion_height_one": true,
+    "neutral_representative_identity": true,
+    "nontrivial_representative_central_inversion": true,
+    "criterion_does_not_claim_physical_equivalence": true,
+    "chain_complex_lift_still_requires_E8_representative_model": true
+  },
+  "honest_scope": "Canonical bookkeeping criterion only. A physical/runtime chain lift still needs a concrete E8 representative model."
+}
