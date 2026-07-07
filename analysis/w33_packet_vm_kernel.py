@@ -93,10 +93,11 @@ class PacketKernelVM:
     REG_POINT = list(range(16))  # register r -> point r
     RAM_BASE = 16  # RAM cell a -> point 16 + a (cells 0..8 used)
 
-    def __init__(self, ctl, A, lines):
+    def __init__(self, ctl, A, lines, ram_point=None):
         self.ctl = ctl
         self.A = A
         self.lines = lines
+        self.ram_point = ram_point  # optional dynamic page placement (Pass 66 pipeline)
         self.line_by_pair = {}
         for li, L in enumerate(lines):
             for a in L:
@@ -114,6 +115,9 @@ class PacketKernelVM:
         return [(src, relay), (relay, dst)]
 
     def _transact(self, src_pt, dst_pt):
+        if src_pt == dst_pt:
+            self.counters["local_ops"] += 1
+            return
         for a, b in self._route_points(src_pt, dst_pt):
             li = self.line_by_pair.get((a, b))
             if li is None:
@@ -130,9 +134,19 @@ class PacketKernelVM:
         result = cpu.run(prog, mem)
         for pc, name, args in cpu.trace:
             if name == "LD":
-                self._transact(self.RAM_BASE + args[1], self.REG_POINT[args[0]])
+                src = (
+                    self.ram_point(args[1])
+                    if self.ram_point
+                    else self.RAM_BASE + args[1]
+                )
+                self._transact(src, self.REG_POINT[args[0]])
             elif name == "ST":
-                self._transact(self.REG_POINT[args[0]], self.RAM_BASE + args[1])
+                dst = (
+                    self.ram_point(args[1])
+                    if self.ram_point
+                    else self.RAM_BASE + args[1]
+                )
+                self._transact(self.REG_POINT[args[0]], dst)
             elif name in ("ADD", "SUB", "MUL"):
                 self._transact(self.REG_POINT[args[1]], self.REG_POINT[args[0]])
             else:  # LDI, MOD3, HLT: point-local

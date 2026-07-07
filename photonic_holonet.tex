@@ -8719,6 +8719,52 @@ tested; the \(\mathrm{AG}(2,q)\) identification is verified through its
 defining incidence properties, and the phase-space reading cites the
 committed Hesse identification rather than re-deriving it.
 
+\subsection{Pass 62 --- the global phase-space bundle and Wigner fuel accounting}
+\label{sec:capstone-sixtytwo}
+
+Pass~61 placed a qutrit phase space at every defect center.  Pass~62
+(\path{analysis/w33_phase_space_bundle_wigner_accounting.py}) asks whether those
+forty local planes remain separate local charts, or glue into one object.
+
+\paragraph{The bundle theorem.}  Starting from the ILP-free triad
+characterization of the nine grounds at one center, and acting by the same
+projective runtime group rebuilt in Pass~59, the witness obtains a single
+\(360\)-state orbit:
+\[
+  360 = 40 \times 9.
+\]
+The fiber over each of the forty centers has size nine.  The stabilizer of one
+ground has order \(72\), so \(25920/72=360\), and the action on the bundle has
+rank \(15\), with subdegrees
+\[
+  [1,3,4,8,8,24^{\times 8},72,72].
+\]
+This is exactly the cardinal/fiber format of the committed two-qutrit Hudson
+atlas --- forty Lagrangian bases, nine states per basis --- though no explicit
+Hilbert-vector labeling of every ground state is claimed here.
+
+\paragraph{The gluing spectrum.}  The local phase planes do not merely sit side
+by side.  Pairwise intersections of lit sets are controlled by the relation
+between their centers: same-center pairs all have intersection \(5\); collinear
+centers split across intersections \(0,2,3,8\); non-collinear centers split
+across \(1,2,4,6\).  This spectrum is the measured transport interface between
+the local qutrit phase spaces.
+
+\paragraph{The Wigner fuel ledger.}  On each local nine-point Hesse plane, the
+qutrit Strange state has one Wigner value \(-1/3\) and eight values \(+1/6\).
+Thus the negative mass is \(1/3\), the positive mass is \(4/3\), the
+\(L^1\)-norm is \(5/3\), and the mana is \(\log(5/3)\).  The local affine
+symmetry can move the negative site to any of the nine grounds; globally, the
+bundle has \(360\) possible negative-site placements.  The tax density
+\(1/10\) and the local Wigner mass \(1/3\) are different meters of the same
+contextual resource: one prices failed contexts, the other prices the
+single-qutrit quasiprobability fuel.
+
+\emph{Honest scope:} the bundle, rank, subdegrees, and gluing spectrum are
+exact finite computations; the Wigner ledger reuses the committed Gross qutrit
+phase-point operators; the Hudson statement is a cardinal/fiber bridge, not an
+explicit basis-state dictionary.
+
 \subsection{Pass 64 --- the interrupt controller: the tax arc runs inside the VM}
 \label{sec:capstone-sixtyfour}
 
@@ -8821,6 +8867,53 @@ statistics are reported as seed-specific measurements, not ergodicity claims.
 canonical by committed theorems; the semantic engines are the committed
 TritCPU and controller; the VM track's in-flight loader, packet VM, and trace
 tooling are named consumers, not dependencies.
+
+\subsection{Pass 66 --- kernel dynamics: stationarity, re-keying, and the self-logging fabric}
+\label{sec:capstone-sixtysix}
+
+Pass~65 left the defect walking; Pass~66
+(\path{analysis/w33_kernel_dynamics.py}) closes it with four results.
+
+\paragraph{The stationary law.}  The defect walks on the cheap-channel graph:
+the \(360\) ground states with the overlap-\(8\) adjacency of Pass~64's price
+law.  This graph is \(8\)-regular, \emph{connected}, and group-invariant, hence
+vertex-transitive, so the walk's stationary distribution is \emph{uniform}:
+every ground state, and therefore every center, is visited equally in the long
+run (nine grounds each).  Pass~65's seed-specific \(29/40\) coverage was a
+finite-time artifact, not a law.  On the exact \(360\times360\) matrix the
+spectral gap is \(0.32\) and the second-eigenvalue mixing bound is about
+\(23\) steps.
+
+\paragraph{Re-keying, made addressed.}  For every one of the \(480\) ordered
+fabric edges \(p\to p'\), the three rebuilt phase triples of the new directory
+are exactly the \(\mathrm{AG}(2,3)\) line of the new plane indexed by the
+\emph{old} center \(p\), and their three center-quads meet in exactly
+\(\{p\}\).  Pass~65's all-or-nothing re-keying is therefore \emph{addressed}:
+the departing center's name is written, as a line of the new phase plane, onto
+the pages that just arrived.
+
+\paragraph{The pipeline, live.}  The lifted router program executes through the
+kernel with its RAM cells dynamically placed as phase-directory pages, under a
+background interrupt load that drives the defect; across many mid-run
+relocations every output still equals the symplectic ground truth and every tax
+theorem holds.  Process, memory, interrupt, relocation, and audit run as one
+object.
+
+\paragraph{The fabric logs itself.}  Because re-keying is addressed, every
+relocation stamps its origin into the geometry: the loader writes one marker on
+each of the three rebuilt triples, and because their center-quads meet in
+exactly \(\{p\}\), the previous center decodes \emph{uniquely} from the three
+markers plus the incidence structure --- no explicit interrupt log.  Over a live
+run all \(150\) relocation origins are recovered correctly, zero ambiguous:
+audit-by-geometry at three marker points per interrupt, the operating system's
+replay guarantee supplied by the quadrangle itself.
+
+\emph{Honest scope:} the stationary conclusion is the standard theorem for
+connected vertex-transitive chains, its hypotheses verified here (gap and
+mixing are numerics on the exact matrix); the rebuilt-line rule and the
+\(\{p\}\)-intersection fact are verified for all \(480\) ordered edges; the
+pipeline and decode are seeded executions whose invariants are the committed
+theorems, the decode reading only three markers and the geometry.
 
 % BT1586 OPERATOR_OAM_FULL_APPENDIX BEGIN
 \input{analysis/BT1564_BT1566_holonet_insert.tex}

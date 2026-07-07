@@ -1,0 +1,27 @@
+{
+  "stationary_law": {
+    "graph": "360 grounds, 8-regular (cheap channels), connected, vertex-transitive",
+    "stationary": "uniform on 360 (theorem); centers uniform (9 each)",
+    "spectral_gap": 0.32194638738774195,
+    "mixing_bound_steps": 22.588849191873063,
+    "distinct_eigenvalues": 8
+  },
+  "rebuilt_line_rule": "for all 480 ordered edges: rebuilt triples = the new plane's line indexed by the old center",
+  "pipeline": {
+    "programs": 300,
+    "outputs_correct": 300,
+    "relocations": 150
+  },
+  "self_logging": {
+    "decoded_correct": 150,
+    "total_steps": 150,
+    "ambiguous": 0,
+    "statement": "each relocation stamps 3 markers on the rebuilt triples; their center-quads meet in exactly {old center}, so the origin decodes uniquely from geometry -- no explicit interrupt log"
+  },
+  "all_pass": true,
+  "summary": "kernel dynamics, four paths. (A) STATIONARY LAW: the cheap-channel graph on the 360 grounds is 8-regular, connected, and group-invariant, so the defect walk's stationary distribution is UNIFORM -- every center equally visited in the long run (Pass 65's 29/40 coverage was finite-time); spectral gap and mixing bound computed on the exact matrix. (B) REBUILT-LINE RULE, all 480 ordered edges: the three rebuilt phase triples after a relocation are exactly the new plane's AG-line indexed by the OLD center, covering exactly the nine fresh points -- re-keying is addressed, not just all-or-nothing. (C) THE PIPELINE LIVE: 300 router programs executed with RAM pages dynamically placed through the phase directory, migrating correctly across mid-run relocations, outputs all equal to ground truth, every kernel invariant held. (D) THE FOURTH PATH -- THE FABRIC LOGS ITSELF: because of B, each relocation stamps its origin into the geometry; the full walk is reconstructed from page placement + arrival ages alone, matching the ground-truth telemetry step for step. Audit-by-geometry at zero logging cost -- the UOR track's replay guarantee, supplied by the incidence structure. HONEST: A's conclusion is the standard vertex-transitive theorem with hypotheses verified; C/D are seeded executions; ages order the stamps, geometry names the centers.",
+  "sources": [
+    "w33_interrupt_controller / w33_defect_walk_telemetry / w33_packet_vm_kernel / w33_defect_aware_placement (Passes 64-65)",
+    "w33_tax_orbits (the 360-orbit); VM/UOR track (audit-replay consumer)"
+  ]
+}
