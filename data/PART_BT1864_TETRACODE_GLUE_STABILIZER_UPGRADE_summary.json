@@ -1,0 +1,13 @@
+{
+  "theorem": "BT1864 Tetracode Glue Stabilizer Upgrade Insert",
+  "paper_insert": "paper/BT1864_tetracode_glue_stabilizer_upgrade_insert.tex",
+  "glue_stabilizer_order": 48,
+  "split": "2 x 24",
+  "transported_part": "S4 block quotient",
+  "transported_order": 24,
+  "kernel_size": 2,
+  "candidate_integral_lift": "four-plane long Weyl element -I on each A2 plane",
+  "H_support_action": "winner-2 support mask fixed",
+  "remaining_open_problem": "canonical integral A2 representative chain lift for sign-kernel/local-Weyl action",
+  "honest_scope": "Paper insert and summary; not a full rebuilt paper or PDF."
+}
