@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1879 Final Selector Certificate Dashboard",
+  "dashboard": "docs/BT1879_FINAL_SELECTOR_CERTIFICATE_DASHBOARD.md",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "phase_bit": "A2_integral_phase_coset_bit in O(A2)/W(A2)",
+  "basis_material_found": "analysis/bt982_explicit_integral_e8_basis.py",
+  "final_boundary": "map BT982 basis columns onto BT1875 selector-pair/phase template and prove chain-boundary compatibility",
+  "honest_scope": "Human-readable dashboard only; it does not solve the final integral representative lift."
+}
