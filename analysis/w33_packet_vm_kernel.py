@@ -15,7 +15,8 @@ components, so the kernel is adoptable by the in-flight packet VM without depend
   THE KERNEL. Each line transaction is serviced by the Pass 64 interrupt controller: non-defect lines
   are served in spread frames (each provably 9/10); defect-line touches are ESCALATIONS on the priced
   9^t path; overloads relocate the defect through cheap channels (cost exactly 3 rays, to the ground's
-  own center quad). The tax theorems run as live invariants under a real workload.
+  own center quad). BT1823 now uses the compiled BT1818 selector for relocation phase accounting:
+  phase = table[(source,target)][counter mod 3]. The tax theorems run as live invariants under a real workload.
 
   THE PROOF. All 1600 ordered (x,y) inputs are executed twice -- direct TritCPU vs kernel-wrapped --
   and the outputs are verified identical to each other AND to the ground-truth symplectic form B(x,y).
@@ -40,10 +41,46 @@ from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import bt1818_compiled_packet_kernel_controller as compiled_ctl  # noqa: E402
 import w33_interrupt_controller as ic  # noqa: E402
 import w33_master_audit as audit  # noqa: E402
 import w33_spread_star_anatomy as anat  # noqa: E402
 import w33_tritcpu_emulator as tcpu  # noqa: E402
+
+
+class CompiledInterruptController(ic.InterruptController):
+    """Pass-64 controller with BT1818 compiled phase-row selection for relocations."""
+
+    def __init__(self, *args, **kwargs):
+        self.compiled_selector = compiled_ctl.CompiledRelocationSelector()
+        self.compiled_relocation_trace = []
+        super().__init__(*args, **kwargs)
+
+    def _relocate(self):
+        """Cost-aware edge relocation plus compiled phase accounting.
+
+        The target edge remains the Pass-64 cheapest-load choice. BT1823 adds the
+        BT1818 phase selector on the directed edge center->target, so repeated
+        use of the same edge is balanced by counter mod 3.
+        """
+        nbrs = [x for x in range(self.n) if self.A[self.center][x]]
+        best = None
+        for x in nbrs:
+            tbl, _ = ic.vector_table(x, self.pts, self.A, self.lines, self.n)
+            ov = max(len(t[0] & self.lit) for t in tbl)
+            key = (11 - ov, self.counters[f"load@{x}"])
+            if best is None or key < best[0]:
+                best = (key, x)
+        target = best[1]
+        phase = self.compiled_selector.choose_phase(self.center, target)
+        self.counters["compiled_scheduler_selections"] += 1
+        self.counters[f"compiled_phase@{phase}"] += 1
+        self.compiled_relocation_trace.append(
+            {"from": self.center, "to": target, "compiled_phase": phase, "cost_rays": best[0][0]}
+        )
+        self.counters["relocations"] += 1
+        self._move_to(target, prefer=self.lit)
+        self.counters[f"load@{target}"] += 1
 
 
 def _line_of(a, b, lines, line_by_pair):
@@ -105,7 +142,7 @@ class PacketKernelVM:
 
 def main():
     print(
-        "== the packet-kernel VM: mode-2 execution through the interrupt controller ==\n"
+        "== the packet-kernel VM: mode-2 execution through the compiled interrupt controller ==\n"
     )
     checks = []
 
@@ -116,7 +153,7 @@ def main():
     pts, A, lines, B = audit._build(3)
     n = len(pts)
     spreads = anat.enumerate_spreads(lines, n)
-    ctl = ic.InterruptController(
+    ctl = CompiledInterruptController(
         pts, A, lines, n, spreads, center=0, threshold=6, seed=11
     )
     vm = PacketKernelVM(ctl, A, lines)
@@ -155,6 +192,10 @@ def main():
         reloc > 0 and avg_cost == 3.0,
     )
     chk(
+        "BT1823 compiled selector fired exactly once per relocation",
+        ctl.counters["compiled_scheduler_selections"] == reloc and reloc == len(ctl.compiled_relocation_trace),
+    )
+    chk(
         "ALL tax-theorem runtime invariants held during the full 1600-program run",
         not ctl.invariant_failures,
     )
@@ -171,9 +212,9 @@ def main():
 
     all_ok = all(ok for _, ok in checks)
     print(
-        "\nFUSION COMPLETE (move 1): the lifted instruction stream executes through a real kernel --"
-        "\nline-legal hops, spread-frame service, priced escalations, cheap-channel relocations -- with"
-        "\noutputs proven identical to the direct machine and to the symplectic ground truth."
+        "\nFUSION COMPLETE (BT1823): the lifted instruction stream executes through a compiled controller --"
+        "\nline-legal hops, spread-frame service, priced escalations, cheap-channel relocations, and"
+        "\ncompiled phase-row selection -- with outputs proven identical to the direct machine."
     )
     print(f"\n{'ALL PASS' if all_ok else 'FAILURES present.'}")
 
@@ -185,25 +226,27 @@ def main():
             "relocations": reloc,
             "avg_migration_cost_rays": avg_cost,
             "escalations": ctl.counters["escalations"],
+            "compiled_scheduler_selections": ctl.counters["compiled_scheduler_selections"],
+            "compiled_phase_histogram": {
+                k: v for k, v in sorted(ctl.counters.items()) if str(k).startswith("compiled_phase@")
+            },
+            "compiled_relocation_trace_sample": ctl.compiled_relocation_trace[:12],
             "invariant_failures": ctl.invariant_failures,
         },
         "inflight_packet_vm_detected": inflight,
         "all_pass": bool(all_ok),
         "summary": (
-            "mode-2 execution with a real kernel: the committed 22-instruction TritCPU router program is "
-            "lifted to a packet stream (registers/RAM embedded at W(3,3) points; every LD/ST/ALU movement "
-            "= one route of 1-2 line transactions) and executed THROUGH the Pass 64 interrupt controller. "
-            "Over all 1600 ordered inputs the kernel-wrapped outputs equal the direct TritCPU outputs AND "
-            "the ground-truth symplectic form; every hop is line-legal; defect-line touches escalate on "
-            "the priced 9^t path; overloads relocate through cheap channels at exactly 3 rays; every tax "
-            "theorem holds as a runtime invariant under a real workload. The VM track's packet VM (whose "
-            "presence is detected but not depended on) can adopt the kernel via the service() hook. "
-            "HONEST: the embedding is bookkeeping; the semantic engine is the committed TritCPU; the "
-            "kernel adds the OS layer (legality, pricing, escalation, relocation), not new computation."
+            "mode-2 execution with a compiled controller: the committed 22-instruction TritCPU router "
+            "is lifted to a packet stream and executed through the Pass-64 controller patched with the "
+            "BT1818 phase selector. Over all 1600 ordered inputs the kernel-wrapped outputs equal the "
+            "direct TritCPU outputs and the ground-truth symplectic form; every hop is line-legal; "
+            "relocations remain cheap-channel moves at exactly 3 rays; and the compiled selector fires "
+            "once per relocation. HONEST: the semantic engine is still TritCPU; this patch changes "
+            "relocation phase-row accounting, not the computation."
         ),
         "sources": [
             "w33_tritcpu_emulator (committed router program); w33_interrupt_controller (Pass 64)",
-            "VM track: w33_packet_vm / microkernel table (in-flight adoption target)",
+            "bt1818_compiled_packet_kernel_controller (compiled phase-row selector)",
         ],
     }
     with open("data/w33_packet_vm_kernel.json", "w") as fh:
