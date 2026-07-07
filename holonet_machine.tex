@@ -201,6 +201,31 @@ Witnesses: \path{w33_contextuality_tax}, \path{w33_spread_star_anatomy}, \path{w
 \path{w33_perp_states}, \path{w33_ground_affine_plane}, \path{w33_interrupt_controller}.
 \end{result}
 
+\begin{result}[Compiled defect runtime stack]
+The movable defect has a compiled runtime law.  For each active center, the $27$ safe non-neighbours
+split into nine Hesse/affine-plane phase rows, and each row exposes four cheap apertures, one on each
+star striation.  Thus
+\[
+40\cdot9\cdot4=1440=3\cdot480,
+\]
+so every directed fabric edge has exactly three compiled phase rows.  The packet kernel now uses the
+selector
+\[
+\phi=\mathrm{table}[(p,q)][c(p,q)\bmod 3]
+\]
+for relocation phase accounting.  Repeated use of a fixed edge is minimax-balanced: the maximum row reuse
+over a run of length $L$ is the pigeonhole optimum $\lceil L/3\rceil$.  The page side has a constant
+nine-point churn for every relocation, but edge moves preserve phase locality: six phase triples survive
+intact and three rebuild whole, while non-edge moves rebuild one point inside each of the nine triples.
+This is the direct runtime chain
+\[
+TD(4,3)\to 3\hbox{-slot scheduler}\to \lceil L/3\rceil\hbox{ run law}\to 9\hbox{-point cache law}.
+\]
+Witnesses: \path{bt1807_defect_phase_plane_transversal_design}, \path{bt1808_td43_edge_scheduler},
+\path{bt1818_compiled_packet_kernel_controller}, \path{w33_packet_vm_kernel},
+\path{bt1824_executable_packet_replay}, \path{bt1825_aperture_shot_table_exporter}.
+\end{result}
+
 \section{Falsifiable Predictions}
 \begin{center}
 \begin{tabular}{l l l}
@@ -228,8 +253,9 @@ and the standard quantum-computing theorems (Gottesman--Knill, Lloyd--Braunstein
 Pashayan--Wallman--Bartlett). The $[[5,1,3]]_3$ code is a runnable stand-in for $[[66,8,3]]_3$ (same
 mechanism, different size). The QEC, teleportation, and threshold are exact / Monte-Carlo simulations
 (single-round; a full circuit-level treatment is future work). No physical photonic build exists yet;
-the quantum advantage is the priced $9^t$ dial, run here only for small $t$. ``Architecture of life''
-means the von~Neumann architecture of self-reproduction (the rigorous computational notion), not biology.
+the aperture shot table is a readout scaffold, not data; the quantum advantage is the priced $9^t$ dial,
+run here only for small $t$. ``Architecture of life'' means the von~Neumann architecture of
+self-reproduction (the rigorous computational notion), not biology.
 \end{honestbox}
 
 \section{Conclusion}
@@ -248,7 +274,9 @@ $1/10$ fraction --- is decided by a few hundred photons.
 \path{w33_ks_inequality.py}, \path{w33_magic_dial.py}, \path{holonet_node.py},
 \path{holonet_qec_demo.py}, \path{holonet_teleport_demo.py}, \path{holonet_quine.py},
 \path{holonet_quantum_packet.py}, \path{holonet_consensus_demo.py}, \path{holonet_threshold_demo.py},
-\path{holonet_ks_experiment.py}, \path{w33_architecture_capstone.py}. \textbf{Standard results:}
+\path{holonet_ks_experiment.py}, \path{w33_architecture_capstone.py},
+\path{w33_packet_vm_kernel.py}, \path{bt1824_executable_packet_replay.py},
+\path{bt1825_aperture_shot_table_exporter.py}. \textbf{Standard results:}
 Gottesman--Knill; Lloyd--Braunstein; Howard--Wallman--Veitch--Emerson (2014); Pashayan--Wallman--Bartlett
 (2015); Cabello--Severini--Winter; Dolev; Lamport--Melliar-Smith; Thompson (VLSI); Bennett; Landauer.}
 
