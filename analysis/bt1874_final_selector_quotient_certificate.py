@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""BT1874: final selector quotient certificate.
+"""BT1874/BT1883: upgraded final selector quotient certificate.
 
-Emits one certificate JSON containing the canonical selector, all quotient stages,
-the O(A2)/W(A2) phase bit, and the final open representative-lift boundary.
+BT1883 upgrades the certificate to distinguish three layers: (1) support shadow
+closed, (2) integral vertex-E8 basis exists through BT982 and is mapped through
+BT1880, (3) explicit Z^40 chain-boundary compatibility is still open.
 """
 from __future__ import annotations
 
@@ -22,7 +23,10 @@ QUOTIENT_STAGES = [
     {"stage": "glue_stabilizer", "status": "closed", "witness": "BT1855", "claim": "signed monomial tetracode glue stabilizer 48 = 2 x 24"},
     {"stage": "S4_transport_to_H", "status": "closed", "witness": "BT1856", "claim": "S4 quotient transports to H"},
     {"stage": "support_phase_action", "status": "closed_at_H_support_level", "witness": "BT1861/BT1871", "claim": "central-inversion phase fixes winner-2 support mask"},
-    {"stage": "integral_E8_representative_phase_lift", "status": "open", "witness": "BT1870", "claim": "needs concrete integral E8 representative vectors and chain-boundary compatibility"},
+    {"stage": "integral_vertex_E8_basis", "status": "closed", "witness": "BT982/BT1876", "claim": "BT982 supplies final_integral_basis_B in vertex E8 root coordinates with E8 Cartan Gram"},
+    {"stage": "BT982_to_selector_template_mapping", "status": "closed_candidate", "witness": "BT1880", "claim": "BT982 basis columns mapped into BT1875 selector-pair/phase rows"},
+    {"stage": "basis_level_phase_gram_action", "status": "closed_in_vertex_E8_coordinates", "witness": "BT1882", "claim": "central-inversion bookkeeping action preserves mapped slot Gram contributions"},
+    {"stage": "explicit_Z40_chain_boundary_compatibility", "status": "open", "witness": "BT1881", "claim": "needs explicit Z^40 chain A/2 representatives and boundary operator/action"},
 ]
 
 PHASE_BIT = {
@@ -31,6 +35,7 @@ PHASE_BIT = {
     "identity_class": 0,
     "central_inversion_class": 1,
     "support_shadow": "both bits are identical on the mod-2 H support selector",
+    "basis_level_action": "phase bit 1 is represented by simultaneous vector negation in the mapped BT982 slot pair",
 }
 
 
@@ -39,21 +44,25 @@ def theorem_summary():
     checks = {
         "canonical_selector_recorded": CANONICAL_SELECTOR == [[3, 68], [4, 42], [38, 65], [90, 144]],
         "phase_bit_recorded": PHASE_BIT["ambient_quotient"] == "O(A2)/W(A2)",
+        "BT982_basis_exists_recorded": any(s["stage"] == "integral_vertex_E8_basis" and s["status"] == "closed" for s in QUOTIENT_STAGES),
+        "BT1880_mapping_recorded": any(s["stage"] == "BT982_to_selector_template_mapping" for s in QUOTIENT_STAGES),
+        "BT1882_basis_phase_action_recorded": any(s["stage"] == "basis_level_phase_gram_action" for s in QUOTIENT_STAGES),
         "exactly_one_open_stage": len(open_stages) == 1,
-        "open_stage_is_integral_E8_lift": open_stages[0]["stage"] == "integral_E8_representative_phase_lift",
+        "open_stage_is_Z40_chain_boundary": open_stages[0]["stage"] == "explicit_Z40_chain_boundary_compatibility",
         "support_shadow_closed": any(s["stage"] == "support_phase_action" and s["status"] == "closed_at_H_support_level" for s in QUOTIENT_STAGES),
     }
     return {
-        "theorem": "BT1874 Final Selector Quotient Certificate",
+        "theorem": "BT1874/BT1883 Upgraded Final Selector Quotient Certificate",
         "canonical_selector": CANONICAL_SELECTOR,
         "metric_winner": 2,
         "quotient_stages": QUOTIENT_STAGES,
         "phase_bit": PHASE_BIT,
-        "final_open_boundary": "construct/prove a concrete integral E8 representative phase lift for the central-inversion class with chain-boundary compatibility",
+        "final_open_boundary": "construct/prove explicit Z^40 chain A/2 representatives and boundary compatibility for the mapped BT982 phase action",
         "closed_shadow_statement": "everything visible on the mod-2 H support shadow is closed",
+        "basis_bridge_statement": "BT982 supplies the integral vertex-E8 basis; BT1880 maps it into selector-pair/phase rows; BT1882 preserves Gram at vertex-E8 basis level",
         "checks": checks,
         "all_pass": all(checks.values()),
-        "honest_scope": "Final certificate for current quotient state. It does not solve the remaining integral E8 representative lift."
+        "honest_scope": "Upgraded certificate. It does not solve the remaining explicit Z^40 chain-boundary compatibility problem."
     }
 
 
