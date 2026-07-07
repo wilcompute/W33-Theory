@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1815 Hesse Magic Aperture Theorem",
+  "center_fibers": 40,
+  "phase_rows_per_center": 9,
+  "phase_rows_total": 360,
+  "apertures_per_phase_row": 4,
+  "apertures_total_with_center_fibers": 1440,
+  "local_statement": "Each phase row selects one aperture on each of the four defect star striations.",
+  "checks": {
+    "all_phase_rows_have_four_apertures": true,
+    "each_phase_row_hits_each_star_striation_once": true,
+    "total_apertures_match_BT1808_scheduler_rows": true
+  },
+  "honest_scope": "Exact aperture dictionary. It identifies local contextual ports; it does not claim a measured Wigner-negativity experiment."
+}
