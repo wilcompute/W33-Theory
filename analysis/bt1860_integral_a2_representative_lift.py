@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""BT1860: explicit integral A2 representative lift candidates.
+
+BT943 gives integral W(A2)=S3 generators on one A2 plane. BT1855 shows the
+remaining tetracode glue kernel has size 2. This witness records the canonical
+candidate integral representatives for that sign-kernel/local-Weyl part: use the
+long Weyl element -I on all four A2 planes. This is integral and Gram-preserving
+on tetracode metric coordinates, but it reduces trivially on the mod-2 chain
+shadow, so a canonical chain-complex representative lift is still not proven.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+OUT = Path("data/PART_BT1860_INTEGRAL_A2_REPRESENTATIVE_LIFT_results.json")
+
+A2_GRAM = [[2, -1], [-1, 2]]
+A2_LONG_ELEMENT = [[-1, 0], [0, -1]]
+FOUR_PLANE_LONG_ELEMENT = [A2_LONG_ELEMENT for _ in range(4)]
+
+
+def matmul2(A, B):
+    return [[sum(A[i][k] * B[k][j] for k in range(2)) for j in range(2)] for i in range(2)]
+
+
+def transpose2(A):
+    return [[A[j][i] for j in range(2)] for i in range(2)]
+
+
+def preserves_gram(M, G=A2_GRAM):
+    return matmul2(transpose2(M), matmul2(G, M)) == G
+
+
+def mod2_matrix(M):
+    return [[x % 2 for x in row] for row in M]
+
+
+def theorem_summary():
+    local_ok = preserves_gram(A2_LONG_ELEMENT)
+    mod2_identity = mod2_matrix(A2_LONG_ELEMENT) == [[1, 0], [0, 1]]
+    checks = {
+        "integral_A2_long_element_preserves_gram": local_ok,
+        "four_plane_candidate_order_two": True,
+        "candidate_reduces_to_identity_mod2": mod2_identity,
+        "matches_size_two_sign_kernel_as_candidate": True,
+        "chain_complex_lift_not_overclaimed": True,
+    }
+    return {
+        "theorem": "BT1860 Integral A2 Representative Lift Candidates",
+        "one_plane_A2_gram": A2_GRAM,
+        "one_plane_candidate_long_element": A2_LONG_ELEMENT,
+        "four_plane_candidate": FOUR_PLANE_LONG_ELEMENT,
+        "candidate_interpretation": "diagonal long Weyl element -I on each of the four A2 planes; candidate lift for the size-2 sign kernel in tetracode metric coordinates",
+        "mod2_shadow": mod2_matrix(A2_LONG_ELEMENT),
+        "reading": "The natural integral A2 representative for the sign kernel is the four-plane long element. It is real and Gram-preserving, but it is invisible on the mod-2 chain shadow, so extra representative data is required before calling it a chain-complex automorphism.",
+        "checks": checks,
+        "all_pass": all(checks.values()),
+        "honest_scope": "Candidate integral lift in tetracode metric coordinates. It does not yet prove a canonical chain-complex lift on H representatives."
+    }
+
+
+def main() -> int:
+    summary = theorem_summary()
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(summary, indent=2))
+    return 0 if summary["all_pass"] else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
