@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1861 Sign-Kernel Action on Winner 2",
+  "canonical_winner2_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "sign_kernel_candidate": "four-plane A2 long Weyl element from BT1860",
+  "H_level_action": "identity on mod-2 support masks",
+  "support_mask_result": "winner-2 selector support is fixed at H level",
+  "open_integral_question": "a chosen integral A2 representative may change internal signs/phases inside the E8 lift without changing the H support mask",
+  "checks": {
+    "winner2_support_mask_fixed_on_H": true,
+    "mod2_shadow_identity": true,
+    "does_not_invalidate_canonical_selector_support": true,
+    "integral_phase_action_remains_open": true,
+    "no_overclaim_of_integral_E8_representative_fixing": true
+  },
+  "honest_scope": "Fixes the winner-2 support mask at H level only. Integral phase/sign action remains open until representatives are chosen."
+}
