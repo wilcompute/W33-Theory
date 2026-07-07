@@ -1,0 +1,9 @@
+{
+  "theorem": "BT1851 Holonet Machine Selector Merge Patch",
+  "target": "holonet_machine.tex",
+  "anchor": "compiled defect runtime stack result",
+  "insert": "Metric-canonical E8 selector result",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "boundary": "local A2/Weyl/glue stabilizer refinement remains open",
+  "honest_scope": "Patch witness. It is not a full-file connector replacement of holonet_machine.tex."
+}
