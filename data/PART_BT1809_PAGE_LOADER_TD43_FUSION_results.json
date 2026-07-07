@@ -1,0 +1,28 @@
+{
+  "theorem": "BT1809 Page-Loader TD(4,3) Fusion Theorem",
+  "safe_zone_overlap": {
+    "ordered_center_moves": 1560,
+    "overlap_points": 18,
+    "page_bill_points": 9
+  },
+  "edge_move_profile": {
+    "ordered_edge_moves": 480,
+    "phase_triples_survive_whole": 6,
+    "phase_triples_rebuild_whole": 3,
+    "histogram_survivors_per_new_triple": {"0": 3, "3": 6},
+    "interpretation": "edge move preserves six phase blocks exactly and rebuilds three complete phase blocks"
+  },
+  "nonedge_move_profile": {
+    "ordered_nonedge_moves": 1080,
+    "phase_triples_degrade": 9,
+    "histogram_survivors_per_new_triple": {"2": 9},
+    "interpretation": "nonedge move keeps two points in every phase block and rebuilds one point in each block"
+  },
+  "decision_law": "page bill ties at nine points, but edge moves preserve phase blocks and Pass 64 also prices them at 3 rays, so edge relocation strictly wins.",
+  "checks": {
+    "all_edge_moves_have_6_survive_3_rebuild_profile": true,
+    "all_nonedge_moves_have_9_partial_rebuild_profile": true,
+    "all_ordered_moves_have_safe_overlap_18": true
+  },
+  "honest_scope": "Exact phase-directory migration law. It describes address survival/rebuild structure, not measured cache latency."
+}
