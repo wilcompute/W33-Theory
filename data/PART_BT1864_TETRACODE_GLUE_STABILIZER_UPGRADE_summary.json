@@ -6,8 +6,8 @@
   "transported_part": "S4 block quotient",
   "transported_order": 24,
   "kernel_size": 2,
-  "candidate_integral_lift": "four-plane long Weyl element -I on each A2 plane",
+  "candidate_integral_lift": "four-plane central inversion -I in O(A2), outside plain W(A2)",
   "H_support_action": "winner-2 support mask fixed",
-  "remaining_open_problem": "canonical integral A2 representative chain lift for sign-kernel/local-Weyl action",
+  "remaining_open_problem": "canonical integral A2 representative chain lift for sign-kernel/local-lattice action",
   "honest_scope": "Paper insert and summary; not a full rebuilt paper or PDF."
 }
