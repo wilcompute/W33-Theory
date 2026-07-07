@@ -1,0 +1,157 @@
+{
+  "schema": "w33.pass73.prime_geodesics.v1",
+  "status": "PASS",
+  "graph": {
+    "n": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "spectrum": {
+      "12": 1,
+      "2": 24,
+      "-4": 15
+    },
+    "srg_verified": true
+  },
+  "hashimoto": {
+    "arcs": 480,
+    "edges": 240,
+    "genus_rank_EminusV": 200,
+    "bass_spectrum_ok": true,
+    "all_nontrivial_modulus_sqrt11": true
+  },
+  "N_m_trace_Bm": {
+    "1": 0,
+    "2": 0,
+    "3": 960,
+    "4": 13920,
+    "5": 181440,
+    "6": 1818240,
+    "7": 19178880,
+    "8": 214015200,
+    "9": 2359466880,
+    "10": 25940386560,
+    "11": 285329352000,
+    "12": 3138359764320
+  },
+  "pi_primes": {
+    "1": 0,
+    "2": 0,
+    "3": 320,
+    "4": 3480,
+    "5": 36288,
+    "6": 302880,
+    "7": 2739840,
+    "8": 26750160,
+    "9": 262162880,
+    "10": 2594020512,
+    "11": 25939032000,
+    "12": 261529827680
+  },
+  "graph_PNT_ratio": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.721262,
+    "4": 0.950755,
+    "5": 1.1266,
+    "6": 1.025807,
+    "7": 0.98418,
+    "8": 0.998332,
+    "9": 1.000644,
+    "10": 1.000107,
+    "11": 1.000062,
+    "12": 0.999978
+  },
+  "ramanujan_error_bound": {
+    "formula": "|N_m - 11^m - 1 - 200(1+(-1)^m)| <= 78*11^(m/2)",
+    "rows": [
+      {
+        "m": 1,
+        "residual": 12,
+        "bound": 258.697,
+        "ok": true
+      },
+      {
+        "m": 2,
+        "residual": 522,
+        "bound": 858.0,
+        "ok": true
+      },
+      {
+        "m": 3,
+        "residual": 372,
+        "bound": 2845.664,
+        "ok": true
+      },
+      {
+        "m": 4,
+        "residual": 1122,
+        "bound": 9438.0,
+        "ok": true
+      },
+      {
+        "m": 5,
+        "residual": 20388,
+        "bound": 31302.305,
+        "ok": true
+      },
+      {
+        "m": 6,
+        "residual": 46278,
+        "bound": 103818.0,
+        "ok": true
+      },
+      {
+        "m": 7,
+        "residual": 308292,
+        "bound": 344325.352,
+        "ok": true
+      },
+      {
+        "m": 8,
+        "residual": 344082,
+        "bound": 1141998.0,
+        "ok": true
+      },
+      {
+        "m": 9,
+        "residual": 1519188,
+        "bound": 3787578.877,
+        "ok": true
+      },
+      {
+        "m": 10,
+        "residual": 2961558,
+        "bound": 12561978.0,
+        "ok": true
+      },
+      {
+        "m": 11,
+        "residual": 17681388,
+        "bound": 41663367.651,
+        "ok": true
+      },
+      {
+        "m": 12,
+        "residual": 68612802,
+        "bound": 138181758.0,
+        "ok": true
+      }
+    ],
+    "all_hold": true
+  },
+  "triangle_crosscheck": {
+    "triangles": 160,
+    "pi_3": 320,
+    "expected_2x": 320,
+    "ok": true
+  },
+  "mixing": {
+    "nonbacktracking_gap": 7.683375,
+    "srw_adjacency_gap": 10,
+    "perron": 11,
+    "second_modulus": 3.316625
+  },
+  "interpretation": "Closed non-backtracking routes on W(3,3) are the periodic orbits of the Holonet router; their count obeys the graph prime number theorem pi(m) ~ 11^m/m, and Ramanujan-ness bounds the fluctuation by 78*11^(m/2) exactly -- the tightest possible (RH) error.",
+  "paper_reconciliation": "Corrects w33_paper.tex 'Prime-Geodesic Expansion': pi_G(3) is 320 (oriented triangles = 2T), not the undirected triangle count T=160. Forced by the paper's own N_3=tr(B^3)=960 via N_m=sum_{d|m} d*pi(d) => N_3=3*pi_G(3). This pass supplies the full pi_G(m) and the exact Ramanujan error bound, both absent from the paper (which stops at N_n~11^n)."
+}

@@ -4150,16 +4150,79 @@ $\max(|r|,|s|)=4 < 2\sqrt{11}\approx 6.633$.
 
 The Ihara zeta admits an Euler product over prime cycles:
 \[
-\frac{1}{\zeta_G(u)} = \prod_{\text{prime } P} (1 - u^{\ell(P)}).
+\frac{1}{\zeta_G(u)} = \prod_{\text{prime } P} (1 - u^{\ell(P)}),
 \]
-For $W_{3,3}$ the first non-trivial prime-cycle length is $\ell=3$,
-matching the graph's girth, and the count of length-3 primes (directed
-triangles) is
+where a \emph{prime} $[P]$ is an equivalence class, under cyclic rotation
+of the base edge, of a primitive backtrackless tailless closed walk.  For
+$W_{3,3}$ the first prime length is $\ell=3$, matching the girth.
+
+\paragraph{The length-3 prime count is $320$, not the triangle count $160$.}
+A length-3 prime is an \emph{oriented} triangle: each of the
+$T = vk\lambda/6 = 160$ undirected triangles is traversed in two
+inequivalent cyclic orientations, which are distinct primes (a triangle
+and its reverse are not cyclic rotations of one another).  Hence
 \[
-\pi_G(3) = \tfrac{v\,k\,\lambda}{6} = \tfrac{40\cdot 12\cdot 2}{6} = 160,
+\boxed{\;\pi_G(3) \;=\; 2T \;=\; 2\cdot\tfrac{vk\lambda}{6} \;=\; 320\;}.
 \]
-independently computable from the SRG parameters. This is consistent
-with the explicit zero count above.
+This is forced by Proposition~\ref{prop:N_n}: the based non-backtracking
+count $N_3=\Tr(B^3)=960$ obeys the exact Ihara identity
+$N_m = \sum_{d\mid m} d\,\pi_G(d)$, so $N_3 = 3\,\pi_G(3)$ gives
+$\pi_G(3)=320$.  (The bare $vk\lambda/6=160$ counts \emph{undirected}
+triangles $T$, a distinct quantity; the two differ by the orientation
+factor $2$.)  A direct based-walk count confirms it: each oriented
+triangle contributes one diagonal return at each of its $3$ base edges,
+so $\Tr(B^3)=3\cdot 2T = 960$.
+
+\paragraph{The full prime-counting function.}
+M\"obius inversion of $N_m=\sum_{d\mid m} d\,\pi_G(d)$ gives the exact
+number of primitive closed geodesics of each length,
+\[
+\pi_G(m) \;=\; \frac1m \sum_{d\mid m}\mu\!\left(\tfrac{m}{d}\right) N_d,
+\qquad N_d=\Tr(B^d),
+\]
+a positive integer for every $m$ (verified through $m=12$):
+\begin{center}\small
+\begin{tabular}{rrrr}
+\toprule
+$m$ & $N_m=\Tr(B^m)$ & $\pi_G(m)$ & $m\,\pi_G(m)/11^m$ \\
+\midrule
+$3$  & $960$              & $320$          & $0.721$ \\
+$4$  & $13\,920$           & $3\,480$        & $0.951$ \\
+$5$  & $181\,440$          & $36\,288$       & $1.127$ \\
+$6$  & $1\,818\,240$        & $302\,880$      & $1.026$ \\
+$7$  & $19\,178\,880$       & $2\,739\,840$    & $0.984$ \\
+$8$  & $214\,015\,200$      & $26\,750\,160$   & $0.998$ \\
+$9$  & $2\,359\,466\,880$    & $262\,162\,880$  & $1.001$ \\
+$12$ & $3\,138\,359\,764\,320$ & $261\,529\,827\,680$ & $1.000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The last column is the graph Prime Number Theorem
+$\pi_G(m)\sim p_{\mathrm{Ih}}^{\,m}/m = 11^m/m$, converging to $1$.
+
+\begin{proposition}[Quantitative Ramanujan Error Bound]
+\label{prop:ramanujan-error}
+Because every Hashimoto eigenvalue other than the Perron value $11$ and
+the trivial $\pm1$ sectors has modulus exactly $\sqrt{11}$ (the graph RH,
+Corollary~\ref{cor:graph-rh}), the based counts obey the tight bound
+\[
+\Bigl|\,N_m - 11^m - 201 - 200(-1)^m\,\Bigr|
+\;\le\; 78\cdot 11^{\,m/2},
+\qquad 78 = 2(f+g)=2(24+15),
+\]
+for all $m\ge1$, where $f=24,g=15$ are the multiplicities of the gauge
+$(r=2)$ and chiral $(s=-4)$ eigenspaces.  The exponent $m/2$ is the
+Riemann-Hypothesis (square-root-cancellation) rate; no slower error is
+possible, so $W_{3,3}$ realises the optimal periodic-orbit fluctuation.
+\end{proposition}
+
+All values above are recomputed from the explicit $480\times480$
+Hashimoto matrix in
+\texttt{w33\_pass73\_prime\_geodesics.py} (status \texttt{PASS}), which
+cross-checks $\pi_G(3)=320$ against $2T$, verifies the M\"obius identity
+and the error bound through $m=12$, and confirms the Bass spectrum
+$\{11,1\}\cup\{1\pm i\sqrt{10}\}^{24}\cup\{-2\pm i\sqrt{7}\}^{15}\cup
+\{\pm1\}^{200}$.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
@@ -4273,10 +4336,10 @@ Monstrous Moonshine (Conway--Norton, Borcherds) relates the Monster
 simple group $\mathbb{M}$ to modular functions via McKay--Thompson
 series. The theory is otherwise unrelated to $W(3,3)$, yet the
 \emph{same integers} that appear on the $\mathbb{M}$-side appear
-directly in the $W(3,3)$ constants. 
+directly in the $W(3,3)$ constants.
 
 \subsection*{I.0 \quad The Spectral Holography of the 15 Moonshine Primes}
-The $W(3,3)$ characteristic spectrum bounds exactly three parameters: $(12)^1, (2)^{24},$ and $(-4)^{15}$. 
+The $W(3,3)$ characteristic spectrum bounds exactly three parameters: $(12)^1, (2)^{24},$ and $(-4)^{15}$.
 The sum of the multiplicities ($1+24+15$) exactly yields the vertex volume $v=40$. Notably:
 \begin{enumerate}
 \item The $24$ positive modes exactly mirror the Leech Lattice dimension ($\Lambda_{24}$).
