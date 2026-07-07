@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1876 Representative Existence Search",
+  "primary_candidate": "analysis/bt982_explicit_integral_e8_basis.py",
+  "bt982_contract": {
+    "loads": ["BT951", "BT954", "BT956"],
+    "winner_minimizer": 2,
+    "constructs": ["lift_matrix_M", "gl8Z_to_cartan_T", "final_integral_basis_B"],
+    "checks": ["both gauges select minimizer 2", "M unimodular", "T unimodular", "B unimodular", "B^T G_vertex B equals E8 Cartan"],
+    "remaining_bridge": "map BT982 basis columns onto BT1875 support-pair/phase rows and add chain-boundary compatibility data"
+  },
+  "reading": "The repo already contains the right integral E8 basis source. The remaining work is wiring BT982's final basis B into BT1875's selector-pair/phase template and proving chain-boundary compatibility.",
+  "checks": {
+    "bt982_primary_candidate_found": true,
+    "bt982_has_final_basis_contract": true,
+    "bt982_has_cartan_check": true,
+    "remaining_bridge_explicit": true,
+    "does_not_claim_BT1875_filled_yet": true
+  },
+  "honest_scope": "Search/audit witness. It identifies BT982 as the basis source but does not instantiate BT1875 rows yet."
+}
