@@ -1,0 +1,30 @@
+% BT1864 -- Tetracode glue stabilizer upgrade insert
+%
+% Suggested insertion point: after BT1849's metric-canonical E8 selector result.
+
+\begin{result}[The remaining tetracode quotient splits as transported $S_4$ plus a local sign-kernel lift]
+The local quotient boundary has now been sharpened.  The four local $A_2$ planes carry
+$W(A_2)^4$ of order $6^4=1296$ in tetracode metric coordinates.  Intersecting with the
+ternary tetracode glue gives the signed monomial glue stabilizer
+\[
+  |G_{\mathrm{glue}}|=48=2\cdot24.
+\]
+Its block-permutation quotient is $S_4$ of order $24$, and this quotient is the part already
+transported through the recovered chain-to-tetracode matrix: the selected support-$60$ minimizer has
+orbit size $24$, trivial stabilizer, and support-$60$ intersection singleton.  The remaining kernel has
+size $2$.  The natural integral $A_2$ representative for this kernel is the four-plane long Weyl element
+$-I$ on each $A_2$ plane; it preserves the $A_2$ Gram form but reduces to the identity on the mod-$2$
+chain shadow.  Consequently it fixes the winner-$2$ support mask on $H$, but its internal integral
+sign/phase action inside a chosen E8 representative is still not a canonical chain-complex automorphism
+until the representative lift is fixed.
+
+\emph{Boundary.}  The tetracode-coordinate glue stabilizer is closed, and the $S_4$ quotient is transported
+to $H$.  The only remaining local quotient problem is the explicit integral $A_2$ representative chain lift
+for the sign-kernel/local-Weyl action.
+
+Witnesses: \path{analysis/bt1855_code_glue_stabilizer_intersection.py},
+\path{analysis/bt1856_transport_local_survivor_to_H.py},
+\path{analysis/bt1860_integral_a2_representative_lift.py},
+\path{analysis/bt1861_sign_kernel_action_on_winner2.py}, and
+\path{analysis/bt1862_quotient_dashboard_refinement.py}.
+\end{result}
