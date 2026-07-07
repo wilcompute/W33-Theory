@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1854 Quotient Status Dashboard",
+  "metric_winner": 2,
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "closed_or_partially_closed_stage_count": 5,
+  "open_stage_count": 1,
+  "remaining_open_stage": "local_A2_Weyl_glue_refinement",
+  "summary": "Winner 2 is support-minimal, vertex-metric selected, tetracode-metric selected, and transported-S4-rigid. Local A2/Weyl/glue refinement remains open.",
+  "checks": {
+    "winner_two_recorded": true,
+    "transported_S4_closed": true,
+    "local_A2_open": true,
+    "six_stages_recorded": true
+  },
+  "honest_scope": "Dashboard only; it summarizes existing witnesses and boundaries."
+}
