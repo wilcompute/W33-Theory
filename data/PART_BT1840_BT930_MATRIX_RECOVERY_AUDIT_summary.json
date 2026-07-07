@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1840 BT930 Matrix Recovery Audit",
+  "source_found": "analysis/bt956_tetracode_metric_selector_matrix.py",
+  "matrix_status": "recovered and stored by BT956",
+  "metric_winner": 2,
+  "winner_decomposition": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "tetracode_winner_score": {"trace": 56, "frobenius_squared": 1320, "max_abs_entry": 16},
+  "agrees_with_BT954_vertex_metric": true,
+  "remaining_open_boundary": "The BT930 matrix is recovered, but the full tetracode stabilizer quotient still needs explicit group-action orbit computation.",
+  "checks": {
+    "bt956_file_found": true,
+    "matrix_stored": true,
+    "candidate_2_wins_tetracode_metric": true,
+    "agrees_with_BT954_metric_winner": true,
+    "full_group_quotient_not_overclaimed": true
+  }
+}
