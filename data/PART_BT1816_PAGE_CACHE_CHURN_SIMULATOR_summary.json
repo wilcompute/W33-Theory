@@ -1,0 +1,19 @@
+{
+  "theorem": "BT1816 Page-Cache Churn Simulator",
+  "ordered_moves": 1560,
+  "churn_points_per_move": 9,
+  "edge_moves": 480,
+  "nonedge_moves": 1080,
+  "edge_profile": {"0_survivors": 3, "3_survivors": 6},
+  "nonedge_profile": {"2_survivors": 9},
+  "interpretation": {
+    "edge_move": "nine pages move as three whole phase triples; six phase triples remain intact",
+    "nonedge_move": "nine pages move as one page in each of nine phase triples; no phase triple remains intact"
+  },
+  "checks": {
+    "all_moves_churn_exactly_9_points": true,
+    "all_edge_moves_have_whole_block_profile": true,
+    "all_nonedge_moves_have_distributed_profile": true
+  },
+  "honest_scope": "Exact cache-churn accounting over the 27-point page directory. Not a measured cache-latency benchmark."
+}
