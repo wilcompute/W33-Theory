@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1863 Trace Runner Selector API Overlay",
+  "target_runner": "analysis/bt1848_e8_labelled_trace_runner.py",
+  "selector_api": "analysis/bt1853_runtime_selector_api.py",
+  "metric_winner": 2,
+  "canonical_basis_name": "E8_selector_winner2_BT954_BT956_BT959",
+  "selector_pairs_by_striation": {
+    "0": [3, 68],
+    "1": [4, 42],
+    "2": [38, 65],
+    "3": [90, 144]
+  },
+  "status_label": "transported_S4_closed_local_A2_open",
+  "honest_scope": "Overlay/audit for BT1848 selector routing. The direct BT1848 replacement was skipped in this connector pass."
+}
