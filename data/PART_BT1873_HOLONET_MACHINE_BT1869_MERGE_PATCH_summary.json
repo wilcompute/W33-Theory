@@ -1,0 +1,10 @@
+{
+  "theorem": "BT1873 Holonet Machine BT1869 Merge Patch",
+  "target": "holonet_machine.tex",
+  "insert": "paper/BT1869_selector_glue_merged_subsection.tex distilled subsection after compiled runtime stack",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "glue_split": "48 = 2 x 24",
+  "phase_class": "central inversion in O(A2)/W(A2)",
+  "final_boundary": "integral E8 chain representative for central-inversion phase action",
+  "honest_scope": "Patch witness. It does not rewrite holonet_machine.tex unless run with apply=True in a repo checkout."
+}
