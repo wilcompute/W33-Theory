@@ -1,0 +1,32 @@
+{
+  "track": "F",
+  "title": "W33 PMNS mixing angle extraction",
+  "eigenstructure": [
+    {"eigenvalue": 12.0, "multiplicity": 1, "sector": "vacuum"},
+    {"eigenvalue": 2.0,  "multiplicity": 24, "sector": "gauge"},
+    {"eigenvalue": -4.0, "multiplicity": 15, "sector": "fermion"}
+  ],
+  "w33_predictions": {
+    "theta_12_deg": 52.24078512602477,
+    "sin2_theta_12": 0.625,
+    "theta_13_deg": 5.745027072679392,
+    "sin2_theta_13": 0.009999999999999998,
+    "theta_23_deg": 63.74084064625911,
+    "delta_CP_deg": -63.43494882297201
+  },
+  "pdg_2024_values": {
+    "theta_12_deg": 33.41,
+    "theta_13_deg": 8.58,
+    "theta_23_deg": 48.40,
+    "delta_CP_deg": -90.0
+  },
+  "deviations_from_pdg": {
+    "delta_theta_12_deg": 18.830785126024774,
+    "delta_theta_13_deg": 2.834972927320608,
+    "delta_theta_23_deg": 15.340840646259112
+  },
+  "spectral_parameters": {"k": 12, "r": 2, "s": -4, "f": 24, "g": 15},
+  "note": "Angles derived from Bose-Mesner algebra spectral ratios; full eigenvector extraction requires SageMath/GAP",
+  "supplement_reference": "Supplement O (Penrose/Neutrino), Supplement Q (Cosmic Neutrino)",
+  "falsifiability": "Any deviation >0.5 deg from PDG 2024 within experimental uncertainty falsifies the spectral mapping"
+}

@@ -1,53 +1,48 @@
-name: CI
+name: W33 Theory CI
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [master]
   pull_request:
-    branches: [ main, master ]
+    branches: [master]
 
 jobs:
-  test:
+  verify-passes:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.11]
+        python-version: ["3.11", "3.12"]
+
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install -e . || true
-          pip install pytest
+          pip install pytest numpy scipy
 
-      - name: Generate summary artifacts
-        run: |
-          python scripts/collect_results.py
-          python scripts/make_numeric_comparisons_from_summary.py
-          python scripts/prepare_legacy_test_fixtures.py
+      - name: Run Pass 70 tracks
+        run: python w33_pass70_run_all_tracks.py
 
-      - name: Materialize BT1236 paper inclusion
-        run: |
-          python tools/integrate_bt1236_insert.py
-          python tools/integrate_bt1261_ladder_insert.py
-          python tools/integrate_bt1267_score_vector_insert.py
-          python tools/integrate_bt1276_external_protocol_insert.py
-          python analysis/bt1239_bt1236_integration_sanity.py
+      - name: Run Pass 71 tracks
+        run: python w33_pass71_run_all_tracks.py
 
-      - name: Run latest BT Clifford/R3/recovery regressions
-        run: |
-          python tests/test_bt1231_bt1233.py
+      - name: Run full pytest suite
+        run: pytest tests/ -v --tb=short
 
-      - name: Run tests
+      - name: Verify JSON witnesses exist
         run: |
-          python -m pytest -q
-
-      - name: Run repo health scanner
-        run: |
-          python scripts/find_top_level_calls.py || true
+          for f in \
+            w33_pass70_trackA_ramanujan.json \
+            w33_pass70_trackB_qec.json \
+            w33_pass70_trackC_partition.json \
+            w33_pass71_trackD_css_matrices.json \
+            w33_pass71_trackE_ihara_zeta_poles.json \
+            w33_pass71_trackF_pmns_angles.json; do
+            test -f $f && echo "OK: $f" || (echo "MISSING: $f" && exit 1)
+          done

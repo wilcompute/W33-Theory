@@ -1,0 +1,21 @@
+{
+  "track": "E",
+  "title": "W33 Ihara zeta function pole confirmation",
+  "n_vertices": 40,
+  "n_edges": 240,
+  "degree_k": 12,
+  "grh_radius": 0.30151134457776363,
+  "grh_radius_formula": "1/sqrt(k-1) = 1/sqrt(11)",
+  "eigenvalues": [
+    {"lambda": 12.0, "multiplicity": 1},
+    {"lambda": 2.0, "multiplicity": 24},
+    {"lambda": -4.0, "multiplicity": 15}
+  ],
+  "total_poles_computed": 80,
+  "grh_violations": 0,
+  "grh_satisfied": true,
+  "min_abs_u_nonzero": 0.30151134457776363,
+  "ramanujan_check": true,
+  "note": "GRH for W(3,3): all Ihara zeta non-trivial poles lie on |u|=1/sqrt(11) circle",
+  "supplement_G_reference": "Supplement G: Ihara Zeta GRH for W3,3"
+}

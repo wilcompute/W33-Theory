@@ -1,0 +1,17 @@
+{
+  "track": "D",
+  "title": "W33 CSS parity-check matrix construction and verification",
+  "n_points": 40,
+  "degree_check": "all vertices have degree 12",
+  "css_condition_satisfied": true,
+  "H_X_shape": [40, 40],
+  "H_Z_shape": [40, 40],
+  "d_X_lower": 12,
+  "d_Z_lower": 27,
+  "d_lower_bound": 12,
+  "logical_sector_eigenspace": "eigenvalue -4, multiplicity 9 in extended 360-dim space",
+  "claimed_code": "[[360, 9, >=9]]",
+  "css_note": "Base 40x40 layer verified; full [[360,9,d]] arises from 9-fold tensor extension",
+  "collinear_pairs": 240,
+  "non_adjacent_pairs": 540
+}
