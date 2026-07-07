@@ -1,0 +1,19 @@
+{
+  "theorem": "BT1808 TD(4,3) Balanced Edge Scheduler Theorem",
+  "directed_fabric_edges": 480,
+  "scheduler_rows": 1440,
+  "slot_count": 3,
+  "slot_loads": {"0": 480, "1": 480, "2": 480},
+  "per_center_exit_count": 36,
+  "per_center_target_count": 12,
+  "per_center_target_multiplicity": 3,
+  "directed_edge_cover_multiplicity": 3,
+  "identity": "40 centers * 9 phase rows * 4 exits = 1440 = 3 * 480 directed edges",
+  "checks": {
+    "each_directed_edge_has_three_phase_choices": true,
+    "each_slot_has_480_rows": true,
+    "each_center_has_36_rows": true,
+    "each_center_hits_each_neighbor_three_times": true
+  },
+  "honest_scope": "Exact scheduler over finite W33 incidence. It compiles allowed cheap relocations; it does not assert stochastic fairness or wall-clock timing."
+}
