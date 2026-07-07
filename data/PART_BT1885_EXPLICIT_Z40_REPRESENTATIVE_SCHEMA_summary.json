@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1885 Explicit Z40 Representative Schema",
+  "output": "data/PART_BT1885_EXPLICIT_Z40_REPRESENTATIVE_SCHEMA.json",
+  "row_count": 8,
+  "lift_rule": "embed each BT982 8-vector sparsely into Z^40 on BT982 vertex_subset",
+  "checks": {
+    "eight_rows": true,
+    "all_z40_vectors_length_40": true,
+    "all_supports_inside_vertex_subset": true,
+    "vertex_subset_size_8": true,
+    "operator_validation_not_claimed": true
+  },
+  "honest_scope": "Defines candidate sparse Z^40 representatives. It does not prove this is the final chain A/2 representative model."
+}
