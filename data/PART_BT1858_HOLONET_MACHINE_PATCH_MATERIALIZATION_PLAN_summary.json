@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1858 Holonet Machine Patch Materialization Plan",
+  "patcher": "analysis/bt1851_holonet_machine_selector_merge_patch.py",
+  "target": "holonet_machine.tex",
+  "post_patch_check": "analysis/bt1832_tex_build_check.py",
+  "insertion": "Metric-canonical E8 selector result after compiled defect runtime stack",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "required_checks": {
+    "anchor_found_by_BT1851": true,
+    "selector_insert_contains_BT959": true,
+    "local_A2_boundary_present": true,
+    "static_tex_check_after_patch": true
+  },
+  "honest_scope": "Materialization plan. Not a connector-side applied full-file paper update or PDF rebuild."
+}
