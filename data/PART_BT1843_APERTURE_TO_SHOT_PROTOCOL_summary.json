@@ -1,0 +1,19 @@
+{
+  "theorem": "BT1843 Aperture-to-Shot Protocol",
+  "rows": 1440,
+  "shots_per_setting": 100,
+  "total_nominal_shots": 144000,
+  "detector_channel_counts": {
+    "D0": 360,
+    "D1": 360,
+    "D2": 360,
+    "D3": 360
+  },
+  "checks": {
+    "full_1440_rows": true,
+    "four_detector_channels_balanced": true,
+    "e8_metric_winner_labels_present": true,
+    "observed_columns_blank_until_data": true
+  },
+  "honest_scope": "Physical measurement protocol skeleton. It is not a measured experiment."
+}
