@@ -1,0 +1,19 @@
+{
+  "theorem": "BT1855 Code-Glue Stabilizer Intersection",
+  "local_A2_four_plane_order": 1296,
+  "tetracode_code_size": 9,
+  "signed_monomial_glue_stabilizer_order": 48,
+  "block_quotient_order": 24,
+  "sign_kernel_size": 2,
+  "block_order_profile": {"1": 1, "2": 9, "3": 8, "4": 6},
+  "reading": "Inside the local A2/Weyl universe, the tetracode glue-preserving monomial stabilizer has order 48 = 2 x 24: an S4 block quotient plus a sign kernel of size 2.",
+  "remaining_chain_boundary": "The S4 quotient transports through BT956 to H; the sign-kernel/local-Weyl part still needs an explicit integral A2 representative lift to become a chain-complex action.",
+  "checks": {
+    "tetracode_size_9": true,
+    "signed_monomial_order_48": true,
+    "block_quotient_order_24": true,
+    "sign_kernel_size_2": true,
+    "s4_order_profile": true,
+    "chain_lift_not_overclaimed": true
+  }
+}
