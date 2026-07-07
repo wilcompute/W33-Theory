@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1836 E8 Selector Aperture Table",
+  "rows": 1440,
+  "metric_winner": 2,
+  "winner_decomposition": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "winner_score": {"trace": 38, "frobenius_squared": 444, "max_abs_entry": 8},
+  "selector_pair_counts": {
+    "(3, 68)": 360,
+    "(4, 42)": 360,
+    "(38, 65)": 360,
+    "(90, 144)": 360
+  },
+  "checks": {
+    "full_1440_rows_exported": true,
+    "winner_2_attached_to_all_rows": true,
+    "four_selector_pairs_each_appear_360_times": true,
+    "tetracode_quotient_status_remains_open": true
+  },
+  "honest_scope": "E8 selector labels are attached from BT954. This does not close the BT953 tetracode quotient."
+}
