@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1888 Phase Action on Sparse Z40",
+  "input": "data/PART_BT1885_EXPLICIT_Z40_REPRESENTATIVE_SCHEMA.json",
+  "operator_candidate": "G40 = 2I - A_W33",
+  "phase_one_action": "simultaneous negation of the two sparse Z40 slot vectors",
+  "closed_now": "central-inversion phase action preserves the sparse-Z40 W33 adjacency-form contributions",
+  "remaining_open": "prove/identify the actual chain A/2 boundary operator and verify compatibility there",
+  "checks": {
+    "eight_rows_checked": true,
+    "phase_zero_identity_rows_present": true,
+    "phase_one_sparse_negation_rows_present": true,
+    "all_G40_contributions_preserved": true,
+    "chain_boundary_operator_not_overclaimed": true
+  },
+  "honest_scope": "Sparse-Z40 candidate-form invariance only. It is not a final chain-boundary proof."
+}
