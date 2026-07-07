@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1833 uploaded artifact import manifest",
+  "artifact_count": 10,
+  "artifacts": [
+    {"name": "bt950_snf_transform_e8_extractor.json", "bytes": 3598, "sha256": "dd1d3e2cc04e8461df5c8c18cc8a218ce2bc48282de8bdc0ae1d4b56a15750ab", "reading": "SNF d=2 sector from U inverse; rank-8 mod-2 E8 shadow; metric selector still needed."},
+    {"name": "bt951_exact_support_minimal_selector.json", "bytes": 2195, "sha256": "f7d835ac1f006448a8c1a87a57d9be6cdfa456827f5d3d9f4b9fdb7a3182c6d6", "reading": "support minimum 60; six minimizers; support-76 superseded."},
+    {"name": "bt953_support60_orbit_classifier.json", "bytes": 1820, "sha256": "7af986c918669c1bb3f3e14abdb9d8ea6787962d1efe0f7e831ffd813f0f01e3", "reading": "certificate graph automorphism order 2; tetracode quotient still open."},
+    {"name": "bt954_metric_selector_among_support60.json", "bytes": 5135, "sha256": "845dbb27d85d86ddbdb7255a9f6b47e3faa6a2d6d891b4e3aab9ba67cdb0373f", "reading": "metric winner is minimizer 2 in BT929 vertex metric gauge."},
+    {"name": "bt1494_photonic_qec_release_lock_repair.json", "bytes": 13007, "sha256": "7382c1996f4d8ecbf1d19f3efa5e6a5a6e15906c081d8b260930d3b063cb8629", "reading": "photonic-QEC release-lock repaired and required artifacts verified."},
+    {"name": "w33_defect_aware_placement.json", "bytes": 1588, "sha256": "8aa55e46b3f467acd5cf3714febb5ed2290397a12b5daf3badaefc6effd649e4", "reading": "safe-zone page directory and constant 9-point page bill."},
+    {"name": "w33_defect_walk_telemetry.json", "bytes": 1337, "sha256": "8846add70a47a2c5524be7d09b538d02d78767bd33dfd21fc450598bc405bb19", "reading": "20000-event walk; 1023 relocations; edge and quad constrained, cost 3."},
+    {"name": "w33_defect_walk_trace.jsonl", "bytes": 102646, "sha256": "cd39ba85960d6b7d9001eea0fcfd0ce224eb15f87ef0f1c5f12812d133fecf9c", "line_count": 1023, "reading": "relocation JSONL trace."},
+    {"name": "w33_packet_vm_kernel.json", "bytes": 1649, "sha256": "d1143bcca6e649b2b721a3c3192fee87dbca1ef0ccc15a6ca9f28a7c80795b2f", "reading": "1600-input packet-kernel pass; 46400 hops; 90 escalations; 15 relocations."},
+    {"name": "w33_interrupt_controller.json", "bytes": 2642, "sha256": "62213108e6a1ffe8771a87b8ea4dd0f5a4329d164f96776fee07e3fb14591eea", "reading": "closed vector table and migration price law."}
+  ],
+  "honest_scope": "Manifest records uploaded artifact metadata and extracted readings. Raw trace is represented by checksum here."
+}
