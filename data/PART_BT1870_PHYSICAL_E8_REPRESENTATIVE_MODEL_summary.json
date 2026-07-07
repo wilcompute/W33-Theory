@@ -1,0 +1,23 @@
+{
+  "theorem": "BT1870 Physical E8 Representative Model Boundary",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "phase_classes": {
+    "0": "identity/W(A2) coset",
+    "1": "central inversion coset in O(A2)/W(A2)"
+  },
+  "required_model_fields": [
+    "support_pair",
+    "integral_E8_vector_a",
+    "integral_E8_vector_b",
+    "A2_plane_id",
+    "A2_lattice_coordinates",
+    "phase_coset_bit",
+    "Gram_value",
+    "metric_score_contribution",
+    "chain_boundary_compatibility"
+  ],
+  "closed_current_layer": "mod-2 H support selector plus tetracode metric bookkeeping",
+  "missing_physical_layer": "integral E8 vector representatives with explicit A2 phase/sign coordinates and chain-boundary compatibility",
+  "model_pass_condition": "for every canonical support pair, provide integral E8 vectors and prove the phase_coset_bit action preserves Gram/metric and chain boundaries",
+  "honest_scope": "Boundary/model specification only. It does not construct the physical E8 representative vectors."
+}
