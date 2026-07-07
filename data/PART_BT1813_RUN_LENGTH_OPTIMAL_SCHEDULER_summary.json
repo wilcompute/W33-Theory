@@ -1,0 +1,21 @@
+{
+  "theorem": "BT1813 Run-Length Optimal Scheduler Theorem",
+  "edge_phase_choices": 3,
+  "law": "For a run of length L using one fixed directed edge, worst row reuse is at least ceil(L/3), and the BT1808 round-robin rule attains it.",
+  "sample_windows": [
+    {"L": 1, "bound": 1},
+    {"L": 2, "bound": 1},
+    {"L": 3, "bound": 1},
+    {"L": 4, "bound": 2},
+    {"L": 5, "bound": 2},
+    {"L": 6, "bound": 2},
+    {"L": 12, "bound": 4},
+    {"L": 96, "bound": 32}
+  ],
+  "checks": {
+    "pigeonhole_lower_bound": true,
+    "round_robin_attains_bound": true,
+    "slot_loads_differ_by_at_most_one": true
+  },
+  "honest_scope": "Exact finite scheduling statement for repeated use of a fixed directed edge. Not a global workload theorem."
+}
