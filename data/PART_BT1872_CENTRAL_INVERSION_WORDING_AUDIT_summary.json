@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1872 Central-Inversion Wording Audit",
+  "correction": "replace sloppy 'long Weyl element -I' wording with 'central inversion in O(A2), outside plain W(A2)' for the active path",
+  "patched_files": [
+    "analysis/bt1860_integral_a2_representative_lift.py",
+    "analysis/bt1861_sign_kernel_action_on_winner2.py",
+    "paper/BT1864_tetracode_glue_stabilizer_upgrade_insert.tex"
+  ],
+  "source_of_correction": "BT1865 integral representative equivalence classes: O(A2) order 12, W(A2) order 6, -I outside W(A2)",
+  "honest_scope": "Active witness wording patched. Some generated summaries/archive notes may still contain historical phrasing until regenerated."
+}
