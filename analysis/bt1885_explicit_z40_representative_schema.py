@@ -2,10 +2,10 @@
 """BT1885: explicit Z^40 representative schema.
 
 Defines the schema for lifting each BT1880 vertex-E8 8-vector into the W(3,3)
-40-coordinate chain model. The first candidate lift uses BT982's vertex_subset:
-place the eight coordinates of a BT982 vector on those eight W33 vertices and
-zero elsewhere. This is a schema/candidate lift, not yet a proof that it is the
-correct chain A/2 representative model.
+40-coordinate chain model. The first candidate lift uses BT982's vertex_subset
+when the materialized BT982 JSON is present; otherwise it uses the vertex subset
+recorded in the BT982 source. This is a schema/candidate lift, not yet a proof
+that it is the correct chain A/2 representative model.
 """
 from __future__ import annotations
 
@@ -17,6 +17,13 @@ BT982 = ROOT / "data/bt982_explicit_integral_e8_basis.json"
 MAPPED = ROOT / "data/PART_BT1880_BT982_TO_BT1875_MAPPED_TEMPLATE.json"
 OUT = ROOT / "data/PART_BT1885_EXPLICIT_Z40_REPRESENTATIVE_SCHEMA.json"
 SUMMARY_OUT = ROOT / "data/PART_BT1885_EXPLICIT_Z40_REPRESENTATIVE_SCHEMA_summary.json"
+FALLBACK_VERTEX_SUBSET = [0, 1, 4, 22, 27, 35, 23, 34]
+
+
+def load_vertex_subset():
+    if BT982.exists():
+        return json.loads(BT982.read_text(encoding="utf-8"))["vertex_subset"], True
+    return FALLBACK_VERTEX_SUBSET, False
 
 
 def embed_z40(v, vertex_subset):
@@ -27,9 +34,8 @@ def embed_z40(v, vertex_subset):
 
 
 def schema_rows():
-    bt982 = json.loads(BT982.read_text(encoding="utf-8"))
+    vertex_subset, materialized = load_vertex_subset()
     rows = json.loads(MAPPED.read_text(encoding="utf-8"))["rows"]
-    vertex_subset = bt982["vertex_subset"]
     out = []
     for r in rows:
         z40a = embed_z40(r["integral_E8_vector_a"], vertex_subset)
@@ -39,6 +45,7 @@ def schema_rows():
             "support_pair": r["support_pair"],
             "phase_coset_bit": r["phase_coset_bit"],
             "vertex_subset": vertex_subset,
+            "materialized_bt982_json_present": materialized,
             "z40_vector_a": z40a,
             "z40_vector_b": z40b,
             "z40_support_a": [i for i, x in enumerate(z40a) if x != 0],
@@ -62,7 +69,8 @@ def theorem_summary():
         "theorem": "BT1885 Explicit Z40 Representative Schema",
         "output": str(OUT.relative_to(ROOT)),
         "row_count": len(rows),
-        "lift_rule": "embed each BT982 8-vector sparsely into Z^40 on BT982 vertex_subset",
+        "lift_rule": "embed each 8-vector sparsely into Z^40 on BT982 vertex_subset or its recorded fallback",
+        "materialized_bt982_json_present": all(r["materialized_bt982_json_present"] for r in rows),
         "checks": checks,
         "all_pass": all(checks.values()),
         "honest_scope": "Defines candidate sparse Z^40 representatives. It does not prove this is the final chain A/2 representative model."
