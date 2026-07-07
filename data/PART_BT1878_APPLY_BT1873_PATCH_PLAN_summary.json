@@ -1,0 +1,8 @@
+{
+  "theorem": "BT1878 Apply BT1873 Patch Plan",
+  "patcher": "analysis/bt1873_holonet_machine_bt1869_merge_patch.py",
+  "target": "holonet_machine.tex",
+  "post_patch_static_check": "analysis/bt1832_tex_build_check.py",
+  "expected_insert": "BT1869 merged selector/glue subsection after compiled defect runtime stack",
+  "honest_scope": "Apply/check plan only. The connector pass did not rewrite holonet_machine.tex or build a PDF."
+}
