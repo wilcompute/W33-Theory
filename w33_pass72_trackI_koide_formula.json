@@ -1,0 +1,15 @@
+{
+  "track": "I",
+  "title": "W33 Koide hierarchy verification",
+  "spectral_parameters": {"k": 12.0, "r": 2.0, "s": -4.0},
+  "toy_masses": {
+    "m_e": 1.0,
+    "m_mu": 9.0,
+    "m_tau": 64.0
+  },
+  "koide_Q": 0.6176470588235294,
+  "target_2_over_3": 0.6666666666666666,
+  "absolute_error": 0.04901960784313725,
+  "relative_error": 0.07352941176470588,
+  "reference": "Supplement V (Koide Lepton Hierarchy)"
+}

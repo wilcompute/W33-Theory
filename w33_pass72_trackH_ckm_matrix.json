@@ -1,0 +1,29 @@
+{
+  "track": "H",
+  "title": "W33 CKM spectral reconstruction",
+  "spectral_parameters": {"k": 12.0, "r": 2.0, "s": -4.0},
+  "spread_decomposition": {"total_spreads": 27, "families": 3, "per_family": 9},
+  "angles_deg": {
+    "theta_12": 24.094842552110702,
+    "theta_13": 2.204227503972035,
+    "theta_23": 12.504061600944768,
+    "delta_CP": -15.945395900922854
+  },
+  "ckm_moduli": {
+    "Vus": 0.408248290463863,
+    "Vub": 0.041666666666666664,
+    "Vcb": 0.21650635094610965
+  },
+  "pdg_2024": {
+    "Vus": 0.2245,
+    "Vub": 0.00382,
+    "Vcb": 0.0411
+  },
+  "absolute_errors": {
+    "Vus": 0.18374829046386302,
+    "Vub": 0.03784666666666667,
+    "Vcb": 0.17540635094610967
+  },
+  "reference": "BREAKTHROUGH_BT692_CKM_ANGLES.md",
+  "falsifiability": "Direct comparison against PDG moduli; large deviations reject the proxy mapping."
+}

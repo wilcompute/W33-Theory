@@ -1,0 +1,14 @@
+{
+  "track": "G",
+  "title": "W33 Yang-Mills mass gap lower bound",
+  "degree_k": 12,
+  "lambda_gauge": 2.0,
+  "lambda_fermion": -4.0,
+  "delta_graph_units": 6.0,
+  "lattice_spacing_a": 0.2886751345948129,
+  "inverse_lattice_spacing": 3.4641016151377544,
+  "mass_gap_lower_natural_units": 20.784609690826528,
+  "mass_gap_lower_GeV_if_a_in_fm": 4.10196511600365,
+  "formula": "Delta * (1/a)",
+  "reference": "BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md"
+}
