@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1880 BT982-to-BT1875 Mapper",
+  "output": "data/PART_BT1880_BT982_TO_BT1875_MAPPED_TEMPLATE.json",
+  "row_count": 8,
+  "basis_source": "data/bt982_explicit_integral_e8_basis.json",
+  "mapping_rule": "selector slot s receives BT982 basis columns 2s and 2s+1; phase bits 0/1 duplicate support vectors pending vector-level phase action",
+  "checks": {
+    "eight_rows": true,
+    "all_integral_vectors_populated": true,
+    "four_selector_pairs_two_phase_rows_each": true,
+    "bt982_columns_cover_basis_once_per_phase_pair": true,
+    "chain_boundary_left_pending": true
+  },
+  "honest_scope": "Populates candidate integral vectors. Chain-boundary compatibility and vector-level phase action are tested separately."
+}
