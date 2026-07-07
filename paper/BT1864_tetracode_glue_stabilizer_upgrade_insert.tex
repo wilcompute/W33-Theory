@@ -12,19 +12,21 @@ ternary tetracode glue gives the signed monomial glue stabilizer
 Its block-permutation quotient is $S_4$ of order $24$, and this quotient is the part already
 transported through the recovered chain-to-tetracode matrix: the selected support-$60$ minimizer has
 orbit size $24$, trivial stabilizer, and support-$60$ intersection singleton.  The remaining kernel has
-size $2$.  The natural integral $A_2$ representative for this kernel is the four-plane long Weyl element
-$-I$ on each $A_2$ plane; it preserves the $A_2$ Gram form but reduces to the identity on the mod-$2$
+size $2$.  The natural integral $A_2$ bookkeeping representative for this kernel is the four-plane
+central inversion $-I$ in the full lattice automorphism group $O(A_2)$, not an ordinary element of the
+plain Weyl group $W(A_2)$.  It preserves the $A_2$ Gram form but reduces to the identity on the mod-$2$
 chain shadow.  Consequently it fixes the winner-$2$ support mask on $H$, but its internal integral
 sign/phase action inside a chosen E8 representative is still not a canonical chain-complex automorphism
 until the representative lift is fixed.
 
 \emph{Boundary.}  The tetracode-coordinate glue stabilizer is closed, and the $S_4$ quotient is transported
 to $H$.  The only remaining local quotient problem is the explicit integral $A_2$ representative chain lift
-for the sign-kernel/local-Weyl action.
+for the sign-kernel/local-lattice action.
 
 Witnesses: \path{analysis/bt1855_code_glue_stabilizer_intersection.py},
 \path{analysis/bt1856_transport_local_survivor_to_H.py},
 \path{analysis/bt1860_integral_a2_representative_lift.py},
-\path{analysis/bt1861_sign_kernel_action_on_winner2.py}, and
-\path{analysis/bt1862_quotient_dashboard_refinement.py}.
+\path{analysis/bt1861_sign_kernel_action_on_winner2.py},
+\path{analysis/bt1862_quotient_dashboard_refinement.py}, and
+\path{analysis/bt1865_integral_representative_equivalence_classes.py}.
 \end{result}
