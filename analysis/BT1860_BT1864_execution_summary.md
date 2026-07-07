@@ -2,7 +2,7 @@
 
 ## BT1860
 
-Added candidate integral A2 representatives for the sign-kernel/local-Weyl part. The natural candidate is the four-plane long Weyl element -I on each A2 plane. It preserves the A2 Gram form and reduces to identity mod 2, which explains why the sign kernel is invisible on the H support shadow.
+Added candidate integral A2 representatives for the sign-kernel/local-lattice part. The natural candidate is the four-plane central inversion `-I` in `O(A2)`, outside the plain Weyl subgroup `W(A2)`. It preserves the A2 Gram form and reduces to identity mod 2, which explains why the sign kernel is invisible on the H support shadow.
 
 ## BT1861
 
@@ -18,8 +18,8 @@ Refactored BT1847 to import the BT1853 runtime selector API. A direct BT1848 rep
 
 ## BT1864
 
-Added a paper insert stating the tetracode glue stabilizer split: 48 = 2 x 24, S4 transported to H, size-2 sign kernel represented by the four-plane long Weyl candidate, and the integral chain lift remains open.
+Added a paper insert stating the tetracode glue stabilizer split: 48 = 2 x 24, S4 transported to H, size-2 sign kernel represented by the four-plane central inversion in O(A2), and the integral chain lift remains open.
 
 ## Honest boundary
 
-No full CI, PDF rebuild, physical shot run, or canonical integral chain-complex lift was executed in this connector pass. BT1860 is a candidate representative witness, not a final chain-lift proof.
+No full CI, PDF rebuild, physical shot run, or canonical integral chain-complex lift was executed in this connector pass. BT1860 is a candidate representative witness, not a final chain-lift proof. BT1865 later sharpens the wording: `-I` is central inversion in `O(A2)`, not an ordinary element of plain `W(A2)`.
