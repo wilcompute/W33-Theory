@@ -1,0 +1,11 @@
+{
+  "theorem": "BT1886 Chain A/2 Operator Locator",
+  "located_candidate": {
+    "operator": "W33 adjacency-derived symmetric form",
+    "formula": "G40 = 2I - A_W33",
+    "source": "analysis/bt982_explicit_integral_e8_basis.py build_w33_adjacency + vertex restriction",
+    "status": "first_naive_chain_metric_candidate"
+  },
+  "reading": "The repo search did not surface a named chain A/2 boundary operator. The available concrete object is the W33 adjacency-derived symmetric form G40 = 2I - A_W33 used by BT982 through vertex restriction.",
+  "honest_scope": "Locator/audit only. The W33 adjacency form is a candidate metric/chain form, not yet a proven boundary operator."
+}
