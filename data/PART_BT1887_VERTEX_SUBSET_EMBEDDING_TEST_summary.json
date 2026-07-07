@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1887 Vertex-Subset Embedding Test",
+  "input": "data/PART_BT1885_EXPLICIT_Z40_REPRESENTATIVE_SCHEMA.json",
+  "operator_candidate": "G40 = 2I - A_W33",
+  "closed_now": "sparse Z40 embedding is consistent with the W33 adjacency-derived form on the BT982 vertex subset",
+  "remaining_open": "prove or replace G40 as the actual chain A/2 boundary/operator model",
+  "checks": {
+    "eight_rows_checked": true,
+    "all_sparse_forms_consistent": true,
+    "vertex_subset_size_8": true,
+    "G40_candidate_used": true,
+    "boundary_operator_not_overclaimed": true
+  },
+  "honest_scope": "Metric-form consistency test for the sparse embedding; not a full chain-boundary proof."
+}
