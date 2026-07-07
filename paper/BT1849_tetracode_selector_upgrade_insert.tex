@@ -1,0 +1,32 @@
+% BT1849 -- Tetracode selector upgrade insert
+%
+% Suggested insertion point: after the compiled defect runtime stack result in
+% holonet_machine.tex, or in the E8 selector subsection of the companion paper.
+
+\begin{result}[The E8 selector is metric-canonical and tetracode-rigid at the transported $S_4$ level]
+The support-minimal E8-side selector is no longer merely a candidate.  The Smith-normal-form route first
+extracts the valuation-one, rank-$8$ mod-$2$ E8 shadow; exact recursion lowers the selector from the old
+support-$76$ candidate to support $60$ with six minimizers; the vertex metric selects minimizer $2$; and
+the recovered chain-to-tetracode matrix independently selects the same minimizer in the tetracode metric
+gauge.  The canonical selector is
+\[
+  (3,68),\quad (4,42),\quad (38,65),\quad (90,144).
+\]
+Moreover, transporting the tetracode block-permutation quotient $S_4$ through the recovered matrix gives
+a $24$-element orbit with trivial stabilizer, and that orbit intersects the six support-$60$ minimizers
+only at the selected minimizer itself.  Thus the runtime aperture stack uses a selector that is canonical
+under both the vertex and tetracode metric gauges and rigid under the strongest explicit transported
+quotient currently present in the repository.
+
+\emph{Boundary.}  This closes the metric selector and transported $S_4$ quotient.  It does not yet close
+the full local $A_2$/Weyl/glue stabilizer refinement; that requires an explicit transported local action
+beyond the tetracode block-permutation quotient.
+
+Witnesses: \path{analysis/bt950_snf_transform_e8_extractor.py},
+\path{analysis/bt951_exact_support_minimal_selector.py},
+\path{analysis/bt954_metric_selector_among_support60.py},
+\path{analysis/bt956_tetracode_metric_selector_matrix.py},
+\path{analysis/bt959_selected_minimizer_stabilizer_orbit.py},
+\path{analysis/bt1845_tetracode_stabilizer_action_audit.py}, and
+\path{analysis/bt1846_winner2_canonical_basis_export.py}.
+\end{result}
