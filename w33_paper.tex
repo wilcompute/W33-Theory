@@ -4278,6 +4278,29 @@ hear which $W_{3,3}$-parameter graph one is on from the (Bartholdi--)Ihara
 zeta; the finer \textbf{edge zeta} (a $2|E|\times2|E|$ non-spectral
 determinant) is the distinguishing invariant.
 
+\paragraph{Remarks (verified in \texttt{w33\_pass75\_zeta\_equidistribution.py}).}
+\emph{(a) Equidistribution.}  The unit Frobenius phase
+$\alpha=(1+i\sqrt{10})/\sqrt{11}$ has minimal polynomial
+$121u^4+198u^2+121$, which is \emph{non-monic}: $\alpha$ is not an
+algebraic integer, hence not a root of unity, so the geodesic frequency
+$\arg(1+i\sqrt{10})=0.4025\pi$ is an irrational multiple of $\pi$.  The
+primes therefore do not resonate: the normalized discrepancy
+$R_m=(N_m-11^m-201-200(-1)^m)/(78\cdot11^{m/2})$ stays in $[-1,1]$
+(observed $\max|R_m|=0.965$ over $m\le40$) and oscillates aperiodically ---
+the graph analogue of prime-geodesic equidistribution, at the Ramanujan
+(square-root) rate.
+\emph{(b) The amplitude is $\dim E_6$.}  For any strongly regular graph the
+explicit-formula oscillatory amplitude is $2(f+g)=2(v-1)$; for $W_{3,3}$
+this is $2\cdot39=78=2q(q^2+q+1)=\dim E_6$, with $f=24,g=15$ the
+irreducible eigenspace dimensions of $\Sp(4,3)=W(E_6)$ and $q^2+q+1=13=|\PG(2,3)|$.
+\emph{(c) The cospectral demonstrator.}  The Shrikhande graph and the
+$4\times4$ rook graph are cospectral $\SRG(16,6,2,2)$ with \emph{identical}
+$N_m$ (hence identical Ihara and Bartholdi zeta), yet non-isomorphic: their
+vertex neighbourhoods are $C_6$ versus $2K_3$ (non-cospectral).  This is the
+constructible witness that a cospectral family --- the $28$ graphs at
+$(40,12,2,4)$ included --- is invisible to the spectral zeta but separated
+by the edge zeta.
+
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════
