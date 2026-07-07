@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1838 Compiled Log Annotator",
+  "input_log": "data/w33_defect_walk_trace.jsonl",
+  "output_log": "data/PART_BT1838_COMPILED_DEFECT_WALK_TRACE.jsonl",
+  "uploaded_rows": 1023,
+  "annotation_rule": "compiled_phase = BT1818 selector table edge row chosen by the per-edge counter modulo 3",
+  "preserved_fields": ["tick", "event", "from", "to", "quad", "cost_rays"],
+  "added_fields": ["compiled_phase"],
+  "required_checks": {
+    "rows_match_uploaded_trace_steps": true,
+    "all_costs_are_three": true,
+    "compiled_phase_present_everywhere": true
+  },
+  "honest_scope": "Connector-safe annotation witness. The raw JSONL emitter should be run in the repo environment."
+}
