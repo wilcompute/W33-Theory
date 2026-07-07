@@ -1,0 +1,15 @@
+{
+  "theorem": "BT1875 Integral E8 Representative Template",
+  "row_count": 8,
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "phase_bits": [0, 1],
+  "next_instantiation_source": "analysis/bt982_explicit_integral_e8_basis.py",
+  "checks": {
+    "four_selector_pairs": true,
+    "two_phase_rows_per_pair": true,
+    "bt1870_required_integral_fields_present": true,
+    "chain_boundary_pending_recorded": true,
+    "bt982_candidate_basis_linked": true
+  },
+  "honest_scope": "Template only. Integral E8 vectors and chain-boundary compatibility remain unfilled until BT982 is wired into the selector-pair model."
+}
