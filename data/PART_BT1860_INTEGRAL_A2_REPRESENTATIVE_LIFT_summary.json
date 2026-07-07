@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1860 Integral A2 Representative Lift Candidates",
+  "one_plane_A2_gram": [[2, -1], [-1, 2]],
+  "one_plane_candidate_long_element": [[-1, 0], [0, -1]],
+  "candidate_interpretation": "diagonal long Weyl element -I on each of the four A2 planes; candidate lift for the size-2 sign kernel in tetracode metric coordinates",
+  "mod2_shadow": [[1, 0], [0, 1]],
+  "reading": "The natural integral A2 representative for the sign kernel is the four-plane long element. It is real and Gram-preserving, but invisible on the mod-2 chain shadow.",
+  "checks": {
+    "integral_A2_long_element_preserves_gram": true,
+    "four_plane_candidate_order_two": true,
+    "candidate_reduces_to_identity_mod2": true,
+    "matches_size_two_sign_kernel_as_candidate": true,
+    "chain_complex_lift_not_overclaimed": true
+  },
+  "honest_scope": "Candidate integral lift in tetracode metric coordinates. It does not yet prove a canonical chain-complex lift on H representatives."
+}
