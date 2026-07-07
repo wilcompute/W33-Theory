@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1853 Canonical Runtime Selector API",
+  "canonical_basis_name": "E8_selector_winner2_BT954_BT956_BT959",
+  "metric_winner": 2,
+  "canonical_selector_pairs": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "selector_pairs_by_striation": {
+    "0": [3, 68],
+    "1": [4, 42],
+    "2": [38, 65],
+    "3": [90, 144]
+  },
+  "boundary": "local A2/Weyl/glue stabilizer refinement remains open",
+  "checks": {
+    "four_striations": true,
+    "winner_two": true,
+    "s4_rigidity_in_source_chain": true,
+    "local_A2_boundary_recorded": true
+  },
+  "honest_scope": "Reusable constants/API only; it centralizes the selected basis but does not compute new quotient data."
+}
