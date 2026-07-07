@@ -1,0 +1,12 @@
+{
+  "theorem": "BT1869 Selector/Glue Merged Subsection",
+  "paper_insert": "paper/BT1869_selector_glue_merged_subsection.tex",
+  "combines": ["BT1849 metric-canonical selector", "BT1864 tetracode glue stabilizer upgrade"],
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "glue_stabilizer_order": 48,
+  "transported_part": "S4 order 24",
+  "sign_kernel_size": 2,
+  "phase_class": "central inversion in O(A2)/W(A2), support-mask invisible mod 2",
+  "remaining_open_problem": "canonical integral A2 representative chain-complex lift inside a concrete E8 representative model",
+  "honest_scope": "Merged insertion-ready subsection, not a full paper rewrite or PDF build."
+}
