@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1871 Central-Inversion Phase Transport Test",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "phase_bits_tested": [0, 1],
+  "support_level_result": "central-inversion phase bit fixes the winner-2 support selector on H",
+  "metric_level_result": "support-only BT954/BT956 metric selection remains winner 2",
+  "open_integral_layer": "need concrete integral E8 representatives to test vector-level sign/phase transport",
+  "checks": {
+    "phase_zero_fixes_support": true,
+    "phase_one_fixes_support": true,
+    "metric_winner_two_not_moved_at_support_level": true,
+    "transported_S4_result_unchanged": true,
+    "integral_vector_phase_action_still_open": true
+  },
+  "honest_scope": "Support/metric-shadow transport test only; no vector-level E8 phase transport is claimed."
+}
