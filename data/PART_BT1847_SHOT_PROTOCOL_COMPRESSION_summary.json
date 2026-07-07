@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1847 Shot Protocol Compression",
+  "uncompressed_rows": 1440,
+  "compressed_bundles": 360,
+  "compression_factor": 4,
+  "total_nominal_shots_preserved": 144000,
+  "bundles_per_center": 9,
+  "checks": {
+    "compressed_to_360_bundles": true,
+    "full_center_coverage": true,
+    "four_striations_per_bundle": true,
+    "shot_budget_preserved": true,
+    "observed_columns_blank_until_data": true
+  },
+  "honest_scope": "Scheduling compression only. It preserves coverage but is not measured data."
+}
