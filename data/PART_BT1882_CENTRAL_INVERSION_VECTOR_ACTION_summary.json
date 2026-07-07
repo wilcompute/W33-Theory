@@ -1,0 +1,16 @@
+{
+  "theorem": "BT1882 Central-Inversion Vector Action",
+  "input": "data/PART_BT1880_BT982_TO_BT1875_MAPPED_TEMPLATE.json",
+  "gram_source": "BT982 final_gram_Bt_G_vertex_B",
+  "phase_one_action": "simultaneous sign reversal of both mapped slot vectors",
+  "closed_now": "basis-level Gram/metric contributions are preserved by the central-inversion bookkeeping action",
+  "remaining_open": "explicit Z^40 chain-boundary compatibility for the phase action",
+  "checks": {
+    "eight_rows_checked": true,
+    "phase_zero_identity_rows_present": true,
+    "phase_one_negation_rows_present": true,
+    "all_slot_gram_contributions_preserved": true,
+    "chain_boundary_still_not_claimed": true
+  },
+  "honest_scope": "Vector-level Gram test in BT982 vertex E8 coordinates only; not a Z^40 chain-boundary proof."
+}
