@@ -1,0 +1,17 @@
+{
+  "theorem": "BT1866 Phase-Action Invariant",
+  "invariant_name": "A2_integral_phase_coset_bit",
+  "definition": "coset bit in O(A2)/W(A2), restricted to the size-2 sign-kernel representatives visible after BT1865",
+  "identity_class_bit": 0,
+  "central_inversion_class_bit": 1,
+  "support_mask_reading": "both classes reduce to the same H support mask, so ordinary support selectors cannot distinguish them",
+  "phase_reading": "the bit detects whether an integral representative carries the central-inversion phase action",
+  "checks": {
+    "identity_bit_zero": true,
+    "central_inversion_bit_one": true,
+    "support_mask_blind_to_both": true,
+    "invariant_detects_integral_phase_choice": true,
+    "physical_equivalence_not_overclaimed": true
+  },
+  "honest_scope": "Invariant for integral lift bookkeeping. It does not declare the two phase choices physically inequivalent."
+}
