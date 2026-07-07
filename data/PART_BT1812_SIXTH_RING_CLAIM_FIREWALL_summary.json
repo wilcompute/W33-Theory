@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1812 Sixth Ring Claim Firewall",
+  "tier_counts": {
+    "T0_EXECUTABLE": 1,
+    "T1_ARITHMETIC": 1,
+    "T2_PHENOMENOLOGY": 2,
+    "T3_SPECULATIVE_IDENTIFICATION": 4,
+    "T4_RESEARCH_NOTE": 2
+  },
+  "claim_count": 10,
+  "old_label_counts": {"EXACT": 5, "APPROXIMATE": 2, "SPECULATIVE": 3},
+  "demoted_claim_count": 4,
+  "public_rule": "Only executable or arithmetic claims may be stated as exact. External-physics links require comparison, speculation, or research-note language.",
+  "checks": {
+    "every_claim_has_tier": true,
+    "every_claim_has_public_language": true,
+    "physics_identifications_demoted_from_exact_where_needed": true
+  },
+  "honest_scope": "Claim-tier firewall preserving exact Holonet results while preventing public overclaiming."
+}
