@@ -1,0 +1,12 @@
+{
+  "track": "C",
+  "title": "W33 partition function and holographic transition witness",
+  "lambda2": 5.42442890089806,
+  "lambda3": 3,
+  "beta_c": 0.48586827674895055,
+  "T_c": 2.0582985705388905,
+  "T_holo": 0.25,
+  "sector_ratio": "40:9",
+  "predicted_HOM_visibility_drop": "40x suppression to 1/40",
+  "BTZ_horizon_radius_claim": 1.2311444133449163
+}

@@ -1,0 +1,20 @@
+{
+  "track": "B",
+  "title": "W33 logical sector code witness",
+  "length_n": 360,
+  "logical_dimension_k": 9,
+  "distance_lower_bound": 1,
+  "claimed_code": "[[360,9,1]]",
+  "largest_nonlogical_eigenspace": 250,
+  "logical_decomposition": "3 x 3",
+  "eigenspaces": [
+    {"eigenvalue": 8, "multiplicity": 1, "sector": "vacuum"},
+    {"eigenvalue": 3, "multiplicity": 40, "sector": "gauge_bosons"},
+    {"eigenvalue": -4, "multiplicity": 9, "sector": "logical_space"},
+    {"eigenvalue": "(1+sqrt(97))/2", "multiplicity": 15, "sector": "quark_lepton_doublets"},
+    {"eigenvalue": "(1-sqrt(97))/2", "multiplicity": 15, "sector": "quark_lepton_doublets_conjugate"},
+    {"eigenvalue": "(-1+sqrt(97))/2", "multiplicity": 15, "sector": "conjugate_sector"},
+    {"eigenvalue": "(-1-sqrt(97))/2", "multiplicity": 15, "sector": "conjugate_sector_dual"},
+    {"eigenvalue": 0, "multiplicity": 250, "sector": "bulk_modes"}
+  ]
+}

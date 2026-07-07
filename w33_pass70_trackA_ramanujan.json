@@ -1,0 +1,12 @@
+{
+  "track": "A",
+  "title": "W33 Ramanujan impossibility theorem witness",
+  "degree": 8,
+  "lambda2": 5.42442890089806,
+  "ramanujan_bound": 5.291502622129181,
+  "delta": 0.13292627876887944,
+  "is_ramanujan": false,
+  "minimal_polynomial": "x^2 - x - 24",
+  "quadratic_fields": ["Q(sqrt(97))", "Q(sqrt(7))"],
+  "claim": "Any 8-regular graph with second eigenvalue (1+sqrt(97))/2 violates the Ramanujan bound."
+}
