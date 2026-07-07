@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1845 Tetracode Stabilizer Action Audit",
+  "source_found": "analysis/bt959_selected_minimizer_stabilizer_orbit.py",
+  "transported_group": "tetracode block-permutation quotient S4 via BT956 matrix",
+  "selected_minimizer": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "group_order": 24,
+  "orbit_size": 24,
+  "stabilizer_size": 1,
+  "orbit_intersection_with_support60_minimizers_count": 1,
+  "reading": "Minimizer 2 is S4-rigid inside the six support-60 minimizers under the transported tetracode block-permutation quotient.",
+  "remaining_open_boundary": "The local A2/Weyl/glue stabilizer refinement is still separate from the transported S4 quotient.",
+  "checks": {
+    "bt959_file_found": true,
+    "orbit_size_24": true,
+    "stabilizer_trivial": true,
+    "support60_intersection_singleton": true,
+    "selected_in_intersection": true,
+    "local_A2_boundary_explicit": true
+  }
+}
