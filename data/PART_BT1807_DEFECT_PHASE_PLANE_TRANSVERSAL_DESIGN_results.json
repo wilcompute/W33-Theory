@@ -1,0 +1,86 @@
+{
+  "theorem": "BT1807 Defect Phase-Plane Transversal Design Theorem",
+  "substrate": {
+    "points": 40,
+    "lines": 40,
+    "degree": 12,
+    "undirected_fabric_edges": 240,
+    "directed_fabric_edges": 480,
+    "srg": [40, 12, 2, 4]
+  },
+  "local_law_per_defect_center": {
+    "ground_triad_count": 9,
+    "safe_non_neighbors_partitioned": 27,
+    "star_neighbors": 12,
+    "star_lines": 4,
+    "star_line_size": 3,
+    "cheap_quads": 9,
+    "cheap_quad_size": 4,
+    "quad_design": "TD(4,3): 4 star-line groups of size 3, 9 transversal blocks",
+    "neighbor_replication_in_quads": 3,
+    "quad_pair_intersection": 1,
+    "cross_star_pairs": 54,
+    "cross_star_pair_replication": 1,
+    "same_star_pairs": 12,
+    "same_star_pair_replication": 0
+  },
+  "global_cheap_exit_cover": {
+    "ground_vectors": 360,
+    "cheap_directed_exits": 1440,
+    "directed_fabric_edges": 480,
+    "directed_edge_cover_multiplicity": 3,
+    "undirected_fabric_edges": 240,
+    "undirected_edge_cover_multiplicity": 6,
+    "identity": "40*9*4 = 1440 = 3*480 = 6*240"
+  },
+  "checks": {
+    "all_40_centers_have_9_ground_triads": true,
+    "all_safe_zones_partitioned_by_triads": true,
+    "all_quad_blocks_are_star_transversals": true,
+    "all_quad_blocks_are_independent": true,
+    "all_cross_star_neighbor_pairs_once": true,
+    "all_directed_edges_covered_three_times": true
+  },
+  "per_center_first_three": [
+    {
+      "center": 0,
+      "ground_triad_count": 9,
+      "safe_zone_size": 27,
+      "neighbor_count": 12,
+      "star_line_count": 4,
+      "star_line_size_profile": [3, 3, 3, 3],
+      "triad_replication_profile": [[1, 27]],
+      "quad_replication_profile": [[3, 12]],
+      "quad_intersection_profile": {"1": 36},
+      "cross_star_neighbor_pairs_once": 54,
+      "same_star_neighbor_pairs_zero": 12
+    },
+    {
+      "center": 1,
+      "ground_triad_count": 9,
+      "safe_zone_size": 27,
+      "neighbor_count": 12,
+      "star_line_count": 4,
+      "star_line_size_profile": [3, 3, 3, 3],
+      "triad_replication_profile": [[1, 27]],
+      "quad_replication_profile": [[3, 12]],
+      "quad_intersection_profile": {"1": 36},
+      "cross_star_neighbor_pairs_once": 54,
+      "same_star_neighbor_pairs_zero": 12
+    },
+    {
+      "center": 2,
+      "ground_triad_count": 9,
+      "safe_zone_size": 27,
+      "neighbor_count": 12,
+      "star_line_count": 4,
+      "star_line_size_profile": [3, 3, 3, 3],
+      "triad_replication_profile": [[1, 27]],
+      "quad_replication_profile": [[3, 12]],
+      "quad_intersection_profile": {"1": 36},
+      "cross_star_neighbor_pairs_once": 54,
+      "same_star_neighbor_pairs_zero": 12
+    }
+  ],
+  "honest_scope": "Exact finite-geometric design witness. It strengthens the seeded walking-defect telemetry into a local/global incidence law, but it does not claim hardware timing, ergodicity, or physical noise tolerance."
+}
