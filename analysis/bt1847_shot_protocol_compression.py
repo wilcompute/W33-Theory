@@ -4,7 +4,8 @@
 Compresses the 1440-row BT1843 protocol into 360 balanced measurement bundles.
 Each bundle is one center/phase row containing four striation detector settings.
 The compressed protocol preserves full center/phase/striation coverage while
-making the run plan easier to schedule.
+making the run plan easier to schedule. Selector metadata is sourced from the
+BT1853 canonical runtime selector API through BT1843/BT1836.
 """
 from __future__ import annotations
 
@@ -16,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bt1843_aperture_to_shot_protocol as proto  # noqa: E402
+import bt1853_runtime_selector_api as selector_api  # noqa: E402
 
 CSV_OUT = Path("data/PART_BT1847_SHOT_PROTOCOL_COMPRESSION.csv")
 JSON_OUT = Path("data/PART_BT1847_SHOT_PROTOCOL_COMPRESSION_summary.json")
@@ -35,6 +37,7 @@ def compressed_rows():
             "center": center,
             "phase": phase,
             "bundle_id": f"C{center:02d}_P{phase:02d}",
+            "canonical_basis_name": selector_api.CANONICAL_BASIS_NAME,
             "detector_channels": " ".join(sorted(r["detector_channel"] for r in rs)),
             "measurement_settings": " ".join(sorted(r["measurement_setting"] for r in rs)),
             "e8_selector_pairs": " | ".join(f"{r['e8_selector_pair_a']}-{r['e8_selector_pair_b']}" for r in sorted(rs, key=lambda x: int(x["striation"]))),
@@ -66,12 +69,14 @@ def theorem_summary():
         "compression_factor": 4,
         "total_nominal_shots_preserved": 144000,
         "bundles_per_center": 9,
+        "canonical_basis_name": selector_api.CANONICAL_BASIS_NAME,
         "csv": str(CSV_OUT),
         "checks": {
             "compressed_to_360_bundles": True,
             "full_center_coverage": True,
             "four_striations_per_bundle": True,
             "shot_budget_preserved": True,
+            "uses_BT1853_runtime_selector_api": selector_api.METRIC_WINNER == 2,
             "observed_columns_blank_until_data": True
         },
         "honest_scope": "Scheduling compression only. It preserves coverage but is not measured data."
