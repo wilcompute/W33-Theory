@@ -1,0 +1,18 @@
+{
+  "theorem": "BT1846 Winner-2 Canonical Basis Export",
+  "canonical_basis_name": "E8_selector_winner2_BT954_BT956_BT959",
+  "canonical_selector_pairs": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "selector_pairs_by_striation": {
+    "0": [3, 68],
+    "1": [4, 42],
+    "2": [38, 65],
+    "3": [90, 144]
+  },
+  "checks": {
+    "four_hyperbolic_pairs": true,
+    "winner_two_source_chain_present": true,
+    "four_striations_labelled": true,
+    "s4_rigidity_recorded": true
+  },
+  "honest_scope": "Canonical export of the selected basis. It does not assert the unresolved local A2/Weyl/glue quotient."
+}
