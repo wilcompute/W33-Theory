@@ -1,0 +1,20 @@
+{
+  "theorem": "BT1877 Regenerate Corrected Summaries Audit",
+  "correction": "central inversion in O(A2), outside plain W(A2)",
+  "updated_files": [
+    "data/PART_BT1860_INTEGRAL_A2_REPRESENTATIVE_LIFT_summary.json",
+    "data/PART_BT1861_SIGN_KERNEL_ACTION_ON_WINNER2_summary.json",
+    "data/PART_BT1864_TETRACODE_GLUE_STABILIZER_UPGRADE_summary.json",
+    "docs/BT1860_BT1864_LEDGER_PROMOTION.md",
+    "analysis/BT1860_BT1864_execution_summary.md"
+  ],
+  "reason": "BT1865 showed O(A2) has order 12, W(A2) has order 6, and -I is outside plain W(A2)",
+  "checks": {
+    "bt1860_summary_corrected": true,
+    "bt1861_summary_corrected": true,
+    "bt1864_summary_corrected": true,
+    "ledger_corrected": true,
+    "execution_summary_corrected": true
+  },
+  "honest_scope": "Corrects active generated/static summaries. Deep archive files may still contain historical wording."
+}
