@@ -1,0 +1,51 @@
+% BT1869 -- merged selector/glue subsection
+%
+% Combines BT1849 and BT1864 into one coherent insertion-ready subsection.
+
+\subsection{Metric-canonical selector and the remaining sign-kernel lift}
+
+The E8-side selector used by the runtime aperture stack is now canonical at every quotient level that is
+visible on the mod-$2$ support shadow.  Smith-normal-form extraction first isolates the valuation-one,
+rank-$8$ mod-$2$ E8 shadow.  Exact support recursion then lowers the old support-$76$ candidate to the
+true support minimum $60$, with six minimizers.  The vertex metric selects minimizer $2$, and the
+recovered chain-to-tetracode matrix independently selects the same minimizer in the tetracode metric
+gauge.  The selected basis is
+\[
+  (3,68),\quad (4,42),\quad (38,65),\quad (90,144).
+\]
+These four pairs label the four runtime striations in the aperture table, the compiled trace schema, and
+the shot protocol.
+
+The tetracode quotient has also been sharpened.  The transported block-permutation quotient is $S_4$ of
+order $24$; acting on the selected support-$60$ minimizer it has orbit size $24$, trivial stabilizer, and
+intersection with the six support-$60$ minimizers only at the selected minimizer.  Thus the selector is
+transported-$S_4$ rigid on the support shadow.
+
+The local glue stabilizer has the exact tetracode-coordinate split
+\[
+  |G_{\mathrm{glue}}|=48=2\cdot24.
+\]
+The $24$-part is the transported $S_4$ quotient.  The remaining size-$2$ sign kernel is represented, at
+the lattice-bookkeeping level, by the central inversion $-I$ in the full $A_2$ lattice automorphism group
+$O(A_2)$ on each of the four $A_2$ planes.  This representative preserves the $A_2$ Gram form and fixes
+the winner-$2$ support mask because it reduces to the identity mod $2$.  It is better described as a
+central-inversion phase class in $O(A_2)/W(A_2)$, not as an ordinary element of the plain Weyl group
+$W(A_2)$.
+
+\begin{honestbox}
+The support selector, both metric gauges, the transported $S_4$ quotient, the tetracode-coordinate glue
+stabilizer, and the winner-$2$ support-mask action of the sign kernel are closed by executable witnesses.
+The remaining open layer is narrower: choose and verify a canonical integral $A_2$ representative
+chain-complex lift for the central-inversion phase action inside a concrete E8 representative model.
+\end{honestbox}
+
+Witnesses: \path{analysis/bt951_exact_support_minimal_selector.py},
+\path{analysis/bt954_metric_selector_among_support60.py},
+\path{analysis/bt956_tetracode_metric_selector_matrix.py},
+\path{analysis/bt959_selected_minimizer_stabilizer_orbit.py},
+\path{analysis/bt1855_code_glue_stabilizer_intersection.py},
+\path{analysis/bt1860_integral_a2_representative_lift.py},
+\path{analysis/bt1861_sign_kernel_action_on_winner2.py},
+\path{analysis/bt1865_integral_representative_equivalence_classes.py},
+\path{analysis/bt1866_phase_action_invariant.py}, and
+\path{analysis/bt1867_canonical_lift_criterion.py}.
