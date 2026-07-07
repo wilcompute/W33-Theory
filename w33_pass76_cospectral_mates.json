@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass76.cospectral_mates.v1",
+  "status": "PASS",
+  "track1_Q43_mate": {
+    "mate": "Q(4,3) parabolic-quadric GQ (dual of W(3,3))",
+    "srg_params": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "is_SRG_40_12_2_4": true,
+    "cospectral_with_W33": true,
+    "isomorphic_to_W33": false,
+    "non_isomorphic": true,
+    "neighbourhood_W33": {
+      "(-1, -1, -1, -1, -1, -1, -1, -1, 2, 2, 2, 2)": 40
+    },
+    "neighbourhood_Q43": {
+      "(-1, -1, -1, -1, -1, -1, -1, -1, 2, 2, 2, 2)": 40
+    },
+    "mu_graph_W33": {
+      "(0, 0, 0, 0)": 540
+    },
+    "mu_graph_Q43": {
+      "(0, 0, 0, 0)": 540
+    },
+    "locally_identical": true,
+    "note": "W(3,3) and Q(4,3) are cospectral SRG(40,12,2,4) graphs, NON-isomorphic (exact test), yet LOCALLY IDENTICAL: both have 4K3 neighbourhoods and 4K1 mu-graphs. No spectral (Ihara/Bartholdi) or local invariant separates them; only a global invariant (edge zeta / isomorphism) does. Sharper than Shrikhande/rook, where a local invariant sufficed."
+  },
+  "track2_godsil_mckay_negative": {
+    "gm_size4_switching_sets": 0,
+    "switching_rigid_at_size_4": true,
+    "note": "No size-4 Godsil-McKay switching set exists in W(3,3): the generalized quadrangle is switching-rigid at that scale (uniform 4K3 local structure). The cospectral mate here comes from the dual GQ Q(4,3), not from switching."
+  },
+  "track3_integral_invariants": {
+    "det_A": -216172782113783808,
+    "det_factored": "-(3 * 2^56)",
+    "det_check": true,
+    "rank_mod_2": 16,
+    "rank_mod_3": 39,
+    "rank_mod_5": 40,
+    "note": "det(A)=12*2^24*(-4)^15 = -3*2^56; 2-rank 16 = binary code [40,16,8] dim; 3-rank 39 = v-1; 5-rank 40 = full (A invertible mod 5)."
+  },
+  "checks": {
+    "T1_Q43_is_SRG_40_12_2_4": true,
+    "T1_Q43_cospectral": true,
+    "T1_Q43_non_isomorphic": true,
+    "T1_locally_identical": true,
+    "T2_gm_size4_rigid": true,
+    "T3_det_minus_3x2^56": true,
+    "T3_2rank_16": true,
+    "T3_3rank_39": true
+  }
+}
