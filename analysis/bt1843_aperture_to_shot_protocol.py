@@ -3,7 +3,8 @@
 
 Turns the E8-labelled aperture table into a physical measurement protocol schema:
 each center/phase/striation/aperture row receives a detector channel, setting
-label, shot budget, and expected contextual contribution target.
+label, shot budget, and expected contextual contribution target. The E8 labels
+come through BT1836, which now imports the canonical BT1853 runtime selector API.
 """
 from __future__ import annotations
 
@@ -15,6 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bt1836_e8_selector_aperture_table as e8ap  # noqa: E402
+import bt1853_runtime_selector_api as selector_api  # noqa: E402
 
 CSV_OUT = Path("data/PART_BT1843_APERTURE_TO_SHOT_PROTOCOL.csv")
 JSON_OUT = Path("data/PART_BT1843_APERTURE_TO_SHOT_PROTOCOL_summary.json")
@@ -22,7 +24,7 @@ DEFAULT_SHOTS = 100
 
 
 def protocol_rows(shots_per_setting: int = DEFAULT_SHOTS):
-    for i, row in enumerate(e8ap.selector_rows()):
+    for row in e8ap.selector_rows():
         center = int(row["center"])
         phase = int(row["phase"])
         striation = int(row["striation"])
@@ -58,11 +60,13 @@ def theorem_summary(shots_per_setting: int = DEFAULT_SHOTS):
         "shots_per_setting": shots_per_setting,
         "total_nominal_shots": total_shots,
         "detector_channel_counts": detector_counts,
+        "canonical_basis_name": selector_api.CANONICAL_BASIS_NAME,
         "csv": str(CSV_OUT),
         "checks": {
             "full_1440_rows": True,
             "four_detector_channels_balanced": True,
             "e8_metric_winner_labels_present": True,
+            "uses_BT1853_runtime_selector_api": selector_api.METRIC_WINNER == 2,
             "observed_columns_blank_until_data": True
         },
         "honest_scope": "Physical measurement protocol skeleton. It is not a measured experiment."
