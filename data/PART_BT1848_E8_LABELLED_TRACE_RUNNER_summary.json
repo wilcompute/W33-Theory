@@ -1,0 +1,22 @@
+{
+  "theorem": "BT1848 E8-labelled Trace Runner",
+  "input_trace": "data/w33_defect_walk_trace.jsonl",
+  "output_trace": "data/PART_BT1848_E8_LABELLED_TRACE.jsonl",
+  "uploaded_trace_rows": 1023,
+  "runtime_label": "compiled_phase from BT1818 per-edge counter mod 3",
+  "e8_label": "canonical BT1846 winner-2 selector pair by local striation",
+  "selector_pairs_by_striation": {
+    "0": [3, 68],
+    "1": [4, 42],
+    "2": [38, 65],
+    "3": [90, 144]
+  },
+  "required_checks": {
+    "input_rows_1023": true,
+    "cost_rays_three_preserved": true,
+    "compiled_phase_present": true,
+    "winner2_selector_pair_present": true,
+    "s4_rigidity_boundary_recorded": true
+  },
+  "honest_scope": "Runner specification for repo execution. The large labelled JSONL is generated when run against the raw trace."
+}
