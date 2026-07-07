@@ -1,0 +1,14 @@
+{
+  "theorem": "BT1862 Refined Quotient Dashboard",
+  "canonical_selector": [[3, 68], [4, 42], [38, 65], [90, 144]],
+  "open_stage_count": 1,
+  "remaining_open_stage": "integral_A2_representative_chain_lift",
+  "summary": "The tetracode-coordinate glue stabilizer and S4 transport are closed; the only remaining open layer is the integral A2 representative chain lift for the sign-kernel/local-Weyl action.",
+  "checks": {
+    "glue_stabilizer_closed": true,
+    "S4_transport_closed": true,
+    "sign_kernel_support_closed": true,
+    "integral_chain_lift_open": true
+  },
+  "honest_scope": "Refined dashboard only; it summarizes existing witnesses and the remaining open integral lift."
+}
