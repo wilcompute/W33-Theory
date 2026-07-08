@@ -1,0 +1,124 @@
+{
+  "schema": "w33.pass90.aut_census.v1",
+  "status": "PASS",
+  "aut_orders": {
+    "1": 48,
+    "2": 8,
+    "3": 8,
+    "4": 64,
+    "5": 12,
+    "6": 4,
+    "7": 9,
+    "8": 4,
+    "9": 72,
+    "10": 2,
+    "11": 6,
+    "12": 144,
+    "13": 432,
+    "14": 3,
+    "15": 384,
+    "16": 1,
+    "17": 192,
+    "18": 48,
+    "19": 9,
+    "20": 18,
+    "21": 27,
+    "22": 6,
+    "23": 16,
+    "24": 6,
+    "25": 648,
+    "26": 48,
+    "27": 51840,
+    "28": 51840
+  },
+  "two_ranks": {
+    "1": 14,
+    "2": 14,
+    "3": 14,
+    "4": 14,
+    "5": 14,
+    "6": 16,
+    "7": 16,
+    "8": 16,
+    "9": 16,
+    "10": 16,
+    "11": 16,
+    "12": 14,
+    "13": 16,
+    "14": 16,
+    "15": 12,
+    "16": 16,
+    "17": 12,
+    "18": 14,
+    "19": 16,
+    "20": 16,
+    "21": 16,
+    "22": 16,
+    "23": 14,
+    "24": 16,
+    "25": 16,
+    "26": 16,
+    "27": 10,
+    "28": 16
+  },
+  "rung_summary": {
+    "16": {
+      "count": 17,
+      "max_aut": 51840,
+      "mean_aut": 3125.6,
+      "median_aut": 9
+    },
+    "14": {
+      "count": 8,
+      "max_aut": 144,
+      "mean_aut": 43.5,
+      "median_aut": 48
+    },
+    "12": {
+      "count": 2,
+      "max_aut": 384,
+      "mean_aut": 288.0,
+      "median_aut": 384
+    },
+    "10": {
+      "count": 1,
+      "max_aut": 51840,
+      "mean_aut": 51840.0,
+      "median_aut": 51840
+    }
+  },
+  "GQ_graphs_max_aut": {
+    "indices": [
+      27,
+      28
+    ],
+    "order": 51840,
+    "equals_Sp43_WE6": true
+  },
+  "next_largest_aut": 648,
+  "W": {
+    "index": 28,
+    "two_rank": 16,
+    "aut": 51840,
+    "rung": "generic bottom"
+  },
+  "Q": {
+    "index": 27,
+    "two_rank": 10,
+    "aut": 51840,
+    "rung": "unique top"
+  },
+  "mass_sum_1_over_aut": "189457/51840",
+  "labelled_graph_count": 2981883908531962983331722112343196932505600000000,
+  "reading": "The two dual generalized quadrangles bookend the 2-rank ladder with maximal symmetry |Aut|=51840=|Sp(4,3)|=|W(E6)|: W(3,3) at the generic bottom rung (2-rank 16, hidden among 16 low-symmetry graphs), Q(4,3) alone at the top rung (2-rank 10). Symmetry broadly anti-correlates with 2-rank across the family, with W as the sole high-symmetry exception at the generic rung.",
+  "checks": {
+    "28_graphs": true,
+    "two_GQ_have_aut_51840": true,
+    "51840_is_Sp43_order": true,
+    "GQ_aut_is_maximal": true,
+    "only_the_two_GQs_reach_51840": true,
+    "next_largest_is_648": true,
+    "W_generic_rank16_Q_extreme_rank10": true,
+    "labelled_count_is_integer": true
+  }
+}
