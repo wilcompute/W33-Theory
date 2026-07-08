@@ -1,0 +1,12 @@
+{
+  "pass": 113,
+  "title": "{17,8,2,1} Completeness: 2-Rank vs Full Smith Group",
+  "identification": "2-rank partition = F_2-rank(A) = dim(C_2(G)) partition",
+  "code_dims": {"16": 17, "14": 8, "12": 2, "10": 1},
+  "W33_dim_C2": 16,
+  "W33_Q43": "Same 2-rank class; different full Smith 2-Sylow within rung",
+  "completeness_coarse": "2-rank ladder is complete as coarse separator",
+  "completeness_fine": "Full Smith group is strictly finer (open: are all 17 identical?)",
+  "open": "Full SNF computation for all 28 graphs via GAP",
+  "verdict": "The {17,8,2,1} ladder is the 2-rank partition. Full Smith group refines further within each rung."
+}

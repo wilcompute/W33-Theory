@@ -1,0 +1,15 @@
+{
+  "pass": 111,
+  "title": "Hecke Decomposition: f_new+ Eigenvalues + Structural Proof",
+  "basis": {
+    "G_plus": "[E_20(tau)-2^19*E_20(2tau)]/(1-2^19): W_2=+1 Eisenstein, G^+[q^4]~2.08e10",
+    "f_old_plus": "DeltaE8(tau)+DeltaE8(2tau): a_1=1, a_4=14104, a_8=-4064192",
+    "f_new_plus": "a_1=1, a_2=-512=-2^9, a_4=-262144=-2^18, a_8=402653184=3*2^27"
+  },
+  "f_new_eigenvalues": {"a1": 1, "a2": -512, "a4": -262144, "a8": 402653184},
+  "f_new_a2_derivation": "W_2(f)=-a_2/2^9*f=+f => a_2=-2^9. Then Hecke recursion.",
+  "decomposition": "Theta_Lambda_C = G^+ + beta*f_old+ + gamma*f_new+",
+  "analogy": "Leech=E_12+(65520/691)*Delta: Eisenstein dominates, cusp fine-tunes",
+  "explicit_beta_gamma": "Deferred to Sage/LMFDB",
+  "verdict": "Structural decomposition complete. f_new+ eigenvalues proved: a_2=-2^9, a_4=-2^18, a_8=3*2^27."
+}

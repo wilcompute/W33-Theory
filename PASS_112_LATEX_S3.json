@@ -1,0 +1,13 @@
+{
+  "pass": 112,
+  "title": "LaTeX Draft: Section 3 (Critical Groups and the 2-Adic Transfer Law)",
+  "filename": "PAPER_SECTION3_CRITICAL_GROUPS.tex",
+  "theorems": [
+    "Theorem 3.1: 2-adic transfer law (1-line proof via det = spectral invariant)",
+    "Theorem 3.2: {17,8,2,1} Smith 2-rank ladder for 28 Spence graphs",
+    "Theorem 3.3: Smith critical group transcends all zeta invariants (Bass-Hashimoto)"
+  ],
+  "estimated_pages": 6,
+  "references": ["Spence1975", "GAP", "Bass1992", "Hashimoto1989"],
+  "verdict": "Section 3 LaTeX complete. Anchor theorem and ladder/transcendence results fully drafted."
+}
