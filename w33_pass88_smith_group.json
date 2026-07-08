@@ -1,0 +1,198 @@
+{
+  "schema": "w33.pass88.smith_group.v1",
+  "status": "PASS",
+  "smith_group_W": {
+    "invariant_factors": {
+      "2": 8,
+      "8": 15,
+      "24": 1
+    },
+    "order": 216172782113783808,
+    "order_factored": "3*2^56",
+    "structure": "(Z/2)^8 (+) (Z/8)^15 (+) Z/24"
+  },
+  "smith_group_Q": {
+    "invariant_factors": {
+      "2": 14,
+      "4": 6,
+      "8": 9,
+      "24": 1
+    },
+    "order": 216172782113783808,
+    "order_factored": "3*2^56",
+    "structure": "(Z/2)^14 (+) (Z/4)^6 (+) (Z/8)^9 (+) Z/24"
+  },
+  "smith_groups_differ": true,
+  "two_adic_transfer": {
+    "aligned_W": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      24
+    ],
+    "aligned_Q": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      24
+    ],
+    "v2_total_W": 56,
+    "v2_total_Q": 56,
+    "positions_Q_gains_a_2_low_side": 6,
+    "positions_W_gains_a_2_high_side": 6,
+    "net_valuation_transfer": 0,
+    "middle_agreeing_two_band": 8,
+    "conserved": true,
+    "reading": "The Smith forms differ by a symmetric 2-adic transfer: 6 low-side entries go 1->2 (Q gains a 2) and 6 high-side entries go 8->4 (W keeps the 2 Q loses), reflected across the central band of eight agreeing 2's. Total 2-valuation 56 is conserved, so |S(W)|=|S(Q)|=3*2^56, but the group structures differ."
+  },
+  "p_ranks": {
+    "2rank_W": 16,
+    "2rank_Q": 10,
+    "3rank_W": 39,
+    "3rank_Q": 39
+  },
+  "binary_codes": {
+    "C2_W": [
+      40,
+      16,
+      8
+    ],
+    "C2_Q": [
+      40,
+      10,
+      12
+    ]
+  },
+  "critical_groups": {
+    "K_W": {
+      "10": 8,
+      "40": 1,
+      "160": 14
+    },
+    "K_Q": {
+      "2": 6,
+      "10": 8,
+      "40": 1,
+      "80": 6,
+      "160": 8
+    },
+    "differ": true
+  },
+  "refined_hearing_hierarchy": [
+    [
+      "adjacency / Ihara / Bartholdi / spectral zeta",
+      "DEAF (identical)"
+    ],
+    [
+      "local neighbourhood + mu-graph (Pass 76)",
+      "DEAF (both 4K3 / 4K1)"
+    ],
+    [
+      "class number kappa = spanning trees",
+      "DEAF (both 2^81*5^23)"
+    ],
+    [
+      "2-rank of A = binary code dimension (this pass)",
+      "HEARS (16 vs 10)"
+    ],
+    [
+      "Smith group coker(A) (this pass)",
+      "HEARS (2-part structure)"
+    ],
+    [
+      "ovoid number alpha (Pass 77)",
+      "HEARS (7 vs 10)"
+    ],
+    [
+      "critical group coker(L) (Pass 82)",
+      "HEARS (2-Sylow)"
+    ]
+  ],
+  "correction_to_pass84": "The 2-rank of the adjacency (= binary code dimension) separates the cospectral pair (16 vs 10) -- more elementary than the ovoid number or the critical group. p-ranks are not spectral (Brouwer-van Eijl), so this is consistent with the spectrum being deaf.",
+  "literature": [
+    "Brouwer-van Eijl, p-rank of adjacency of SRGs, JAC 1 (1992) 329-346",
+    "Haemers-Peeters-van Rijckevorsel, binary codes of SRGs",
+    "W(3),Q(4,3) = Brouwer SRG(40,12,2,4) graphs #3 and #23 (the two GQ(3,3))"
+  ],
+  "checks": {
+    "smith_groups_same_order_3x2^56": true,
+    "smith_groups_differ": true,
+    "2rank_separates_16_vs_10": true,
+    "3ranks_equal_39": true,
+    "binary_code_dims_differ": true,
+    "critical_groups_differ": true,
+    "two_adic_transfer_symmetric_6_6": true
+  }
+}
