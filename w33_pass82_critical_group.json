@@ -1,0 +1,65 @@
+{
+  "schema": "w33.pass82.critical_group.v1",
+  "status": "PASS",
+  "critical_group_W33": {
+    "invariant_factors": {
+      "10": 8,
+      "40": 1,
+      "160": 14
+    },
+    "num_nontrivial_factors": 23,
+    "order": 28823037615171174400000000000000000000000,
+    "order_factored": "2^81 * 5^23",
+    "sylow_2": {
+      "2": 8,
+      "8": 1,
+      "32": 14
+    },
+    "sylow_5": {
+      "5": 23
+    },
+    "structure": "(Z/10)^8 (+) Z/40 (+) (Z/160)^14"
+  },
+  "critical_group_Q43": {
+    "invariant_factors": {
+      "2": 6,
+      "10": 8,
+      "40": 1,
+      "80": 6,
+      "160": 8
+    },
+    "num_nontrivial_factors": 29,
+    "order": 28823037615171174400000000000000000000000,
+    "order_factored": "2^81 * 5^23",
+    "sylow_2": {
+      "2": 14,
+      "8": 1,
+      "16": 6,
+      "32": 8
+    },
+    "sylow_5": {
+      "5": 23
+    },
+    "structure": "(Z/2)^6 (+) (Z/10)^8 (+) Z/40 (+) (Z/80)^6 (+) (Z/160)^8"
+  },
+  "separation": {
+    "same_order": true,
+    "order_factored": "2^81 * 5^23",
+    "same_5_sylow": true,
+    "different_2_sylow": true,
+    "separates_cospectral_pair": true,
+    "reading": "Cospectral graphs share |K| (spanning-tree count 2^81*5^23) and here even the 5-Sylow (Z/5)^23; the 2-Sylow differs, so the sandpile group is a new algebraic separator of the W(3,3)/Q(4,3) pair -- complementing the geometric ovoid separator alpha=7 vs 10 (Pass 77)."
+  },
+  "cross_checks": {
+    "order_matches_pass74_spanning_trees": "2^81 * 5^23",
+    "adjacency_smith_pass77": "1^16 2^8 8^15 24 (distinct from the Laplacian critical group)"
+  },
+  "checks": {
+    "orders_equal_cospectral": true,
+    "order_is_2^81_5^23_spanning_trees": true,
+    "critical_groups_non_isomorphic": true,
+    "same_5_Sylow": true,
+    "different_2_Sylow": true,
+    "critical_group_separates_cospectral_pair": true
+  }
+}
