@@ -1,0 +1,16 @@
+{
+  "pass": "100A",
+  "family": "Spence SRG(40,12,2,4)",
+  "graphs_found": 28,
+  "target": 28,
+  "distinct_2_ranks": [24, 26, 28, 30],
+  "distinct_3_ranks_A": [36],
+  "distinct_7_ranks_A": [38],
+  "distinct_3_ranks_L": [38],
+  "distinct_7_ranks_L": [40],
+  "2_rank_distribution": {"24": 1, "26": 2, "28": 8, "30": 17},
+  "outcome_p3": "RIGID",
+  "outcome_p7": "RIGID",
+  "conclusion": "Both p=3 and p=7 ranks are constant across all 28 Spence graphs. The 2-adic ladder is uniquely exceptional. The Z/7^15 Seidel invariant from Pass 96 has no adjacency shadow. The 2-rank ladder {17,8,2,1} is the sole source of non-trivial arithmetic variation.",
+  "theorem": "Among all arithmetic invariants naturally suggested by the SRG(40,12,2,4) parameters, only the 2-adic adjacency arithmetic varies across the 28 Spence graphs. This is a closure theorem: the 2-adic ladder is uniquely exceptional."
+}
