@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass101.srg120_anisotropic.v1",
+  "status": "PASS",
+  "parameters": [
+    120,
+    63,
+    30,
+    36
+  ],
+  "spectrum": {
+    "-9": 35,
+    "3": 84,
+    "63": 1
+  },
+  "construction": "Take the 120 minimum-weight-6 anisotropic cosets in Cperp/C and join distinct cosets with binary inner product zero.",
+  "e8_reading": "The vertices are the 240 E8 roots modulo sign. Together with Pass 93's 135 isotropic points they exhaust E8/2E8 minus zero.",
+  "checks": {
+    "anisotropic_count_120": true,
+    "regular_degree_63": true,
+    "lambda_30": true,
+    "mu_36": true,
+    "spectrum": true,
+    "partition_with_isotropic": true
+  }
+}

@@ -626,6 +626,37 @@ Triality exchanges $\mathbf{8}_v\leftrightarrow\mathbf{8}_s
 \end{equation}
 \end{theorem}
 
+\begin{theorem}[Local-axis glue lift]
+\label{thm:axis-glue-e8-lift}
+The object-level $W_{3,3}\to E_8$ carrier is the set of endpoints of the
+$120=40\cdot3$ local pencil-octahedron axes.  At a point $p$, either endpoint
+of an axis is a pair of pencil lines $\{L_i,L_j\}$ and determines the
+weight-$6$ word
+\[
+ h(p;L_i,L_j)=(L_i\cup L_j)\setminus\{p\}\in C^\perp.
+\]
+The opposite endpoint differs from it by the neighborhood word $N(p)\in C$.
+Consequently the $120$ axes give exactly the $120$ anisotropic classes in
+$C^\perp/C$, and an explicit isometry of plus-type quadratic spaces gives
+\[
+ \{\text{local axes}\}\;\cong\;
+ \{x\in C^\perp/C:Q(x)=1\}\;\cong\;\Phi(E_8)/\{\pm1\}.
+\]
+The axis-pairing graph equals the $E_8$ root-line orthogonality graph
+entrywise and has parameters $\SRG(120,63,30,36)$.  Choosing a chamber lifts
+the two endpoints of every axis to the two signs of its root, recovering all
+$240$ roots with their exact Gram products.
+\end{theorem}
+
+\noindent
+This refines the count identity above without promoting it into a false edge
+dictionary.  The $240$-element carrier is
+$40$ points $\times\,3$ local axes $\times\,2$ endpoints, not the set of
+$240$ global graph edges: the previously verified line-graph degree and
+$W(E_6)$-orbit obstructions to a naive edge/root bijection remain active.
+The executable certificate is
+\texttt{w33\_pass104\_axis\_glue\_e8\_lift.py}.
+
 All five exceptional Lie algebra dimensions are graph-parametric:
 \begin{equation}
 \renewcommand{\arraystretch}{1.3}

@@ -1,0 +1,28 @@
+{
+  "schema": "w33.pass100.exact_2adic_mass.v1",
+  "status": "PASS",
+  "jordan_symbol": "1^+32 2^+8 (both free type II, octane 0)",
+  "conway_sloane_factors": {
+    "cross_term": "2^(32*8/2) = 2^128",
+    "typeII_term": "2^-(32+8) = 2^-40",
+    "diagonal_term": "M2(32,+) * M2(8,+)"
+  },
+  "two_adic_correction_over_even_unimodular_rank40": "524422438829426130254793883968303680565/2",
+  "two_adic_correction_approx": "2.622112194147e+38",
+  "even_unimodular_rank40_mass": "30268835660861641510181632470930578964026764823271928475103746307001354865415781492507086425145980438358293732389291507/6890114837658659906436117051604347126653286230437920768000000000000",
+  "exact_genus_mass": "12564186953349216166596009599211590194336203894039345350546174995916585076326486077267778971364846568715271635154909861522863060776818429524478531128811/10907214769070345465525491907352507116329737859891200000000000",
+  "exact_genus_mass_approx": "1.151915243200e+90",
+  "validation": {
+    "E8_mass": "1/696729600",
+    "sqrt2_E8_pmass_ratio": "1"
+  },
+  "boundary": "This calculation uses the Conway-Sloane local p-mass formula. It replaces Pass 95's unimodular reference scale; it does not enumerate individual classes in the genus.",
+  "checks": {
+    "bernoulli_mass_reproduces_E8": true,
+    "sqrt2_E8_scale_invariance": true,
+    "cross_exponent_128": true,
+    "typeII_dimension_40": true,
+    "correction_exact": true,
+    "mass_positive": true
+  }
+}

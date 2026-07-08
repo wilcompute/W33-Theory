@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass102.weight20_theta.v1",
+  "status": "PASS",
+  "space": "M_20(Gamma_0(2)), dimension 6",
+  "theta_coefficients_q0_to_q20": [
+    1,
+    80,
+    14640,
+    5403840,
+    1301706800,
+    90075980640,
+    2879296353600,
+    53857455633280,
+    680913378127920,
+    6382454482231440,
+    47248463932033440,
+    288960070660699200,
+    1509498882848512320,
+    6907166587010126560,
+    28237226446808584320,
+    104739395800710579840,
+    357000697591565545520,
+    1129550453973532594080,
+    3346316338666980902640,
+    9347480148083982654400,
+    24771899426740325600160
+  ],
+  "canonical_basis": [
+    "E20(tau), PARI normalization a1=1",
+    "E20(2 tau), same normalization",
+    "f20_level1(tau)=Delta*E8",
+    "f20_level1(2 tau)",
+    "f20_level2_plus (a2=+512)",
+    "f20_level2_minus (a2=-512)"
+  ],
+  "basis_coefficients": [
+    "1048560/221930581",
+    "15728640/221930581",
+    "3950923808/130434417",
+    "-143451226112/130434417",
+    "6784/279",
+    "86400/3403"
+  ],
+  "newform_coefficients": {
+    "a2_plus_512": "6784/279",
+    "a2_minus_512": "86400/3403"
+  },
+  "boundary": "The modular decomposition is exact through q^20 and determined by Sturm-bounded finite data. The coefficients 45, 135 and 240 do not appear as direct Hecke eigenvalues, so no L-function particle-count claim is made.",
+  "checks": {
+    "weight_20_level_2_dimension_6": true,
+    "theta_constant_1": true,
+    "root_count_80": true,
+    "first_coefficients": true,
+    "pari_decomposition_exact": true,
+    "decomposition_matches_through_q20": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "w33.pass99.lattice_intersection.v1",
+  "status": "PASS",
+  "ranks": {
+    "Lambda_C": 40,
+    "L2": 24,
+    "C": 16,
+    "L2_mod2_image": 24,
+    "C_intersection_L2_mod2": 16
+  },
+  "exact_sequence": "0 -> L2^C -> L2 -> Cperp/C -> 0, where L2^C={x in L2: x mod 2 in C}",
+  "quotient": {
+    "dimension": 8,
+    "order": 256,
+    "identification": "L2/L2^C ~= Cperp/C ~= (Z/2)^8"
+  },
+  "lattice_chain": "sqrt(2)L2 subset (1/sqrt(2))L2^C = Lambda_C intersection ((1/sqrt(2))L2_R)",
+  "determinants": {
+    "L2": 19349176320,
+    "L2_factorization": "2^16 * 3^10 * 5",
+    "scaled_intersection": 75582720,
+    "scaled_intersection_factorization": "2^8 * 3^10 * 5"
+  },
+  "reading": "The two lattices are related by the full eight-dimensional glue quotient, not by equality: reduction mod 2 maps L2 onto Cperp, and the vectors that enter Lambda_C have index 2^8 in L2.",
+  "checks": {
+    "integer_eigenlattice_rank_24": true,
+    "kernel_equation": true,
+    "mod2_image_is_Cperp_rank24": true,
+    "binary_code_rank16": true,
+    "code_contained_in_mod2_image": true,
+    "intersection_dimension_16": true,
+    "intersection_index_2pow8": true,
+    "scaled_intersection_det": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass103.hopf_synthesis.v1",
+  "status": "PASS",
+  "exact_finite_projectivization": {
+    "total_nonzero_vectors": 80,
+    "fiber": "F3^x ~= C2",
+    "base": "PG(3,3), 40 points",
+    "formula": "(3^4-1)/(3-1)=40"
+  },
+  "distinct_phase_bundle": {
+    "selector_sheets": "40 W33 lines * 3 qutrit phases = 120",
+    "signed_lift_count": "40 * 3 * 2 = 240",
+    "warning": "The C2 projective-scalar fiber and C3 qutrit-phase fiber are different structures. Equality with the E8-root set requires an equivariant bijection, not just the common count 240."
+  },
+  "proved_exceptional_branching": "On E8 roots modulo sign, W(E6) orbits are 3 fixed + 27+27+27 + 36.",
+  "paper_boundary": "BU(1)=CPinfinity and the complex Hopf universal bundle are standard. They do not by themselves force Standard Model factors, torsion, 3+1 Einstein equations, masses, or coupling constants.",
+  "checks": {
+    "finite_projective_bundle_80_to_40": true,
+    "projective_scalar_fiber_C2": true,
+    "selector_phase_count_40_times_3": true,
+    "signed_phase_count_40_times_3_times_2": true,
+    "e8_root_pairs_120": true,
+    "e8_branching_object_level": true
+  }
+}
