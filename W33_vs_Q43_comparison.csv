@@ -1,0 +1,15 @@
+Property,W(3,3),Q(4,3),Notes
+Type,SRG(40-12-2-4),SRG(40-12-2-4),Cospectral pair
+Construction,GQ(3-3) symplectic,GQ(3-3) parabolic quadric,Different geometric origins
+2-rank(A),16,10,DIFFERENT — key discriminator
+3-rank(A),39,39,Same — parameter forced
+7-rank(A),40,40,Same — parameter forced
+Code [n-k-d],[40-16-8],[40-10-12],Different code parameters
+A_8 (weight-8 codewords),45,0,UNIQUE to W(3-3): E6/tritangent signal
+det(Lambda_C),256=2^8,1048576=2^20,Different discriminants
+Disc group,(Z/2)^8,(Z/2)^20,Different ranks
+Theta m=4,80,80,Same (parameter forced)
+Theta m=8,14640,3120,DIFFERENT: W(3-3) 4.69x larger
+Ihara zeta,IDENTICAL,IDENTICAL,Cospectral => same zeta
+Ramanujan?,YES,YES,Both satisfy RH analogue
+Aut order,51840=|W(E6)|,unknown,W(3-3) = W(E6)
