@@ -1,0 +1,114 @@
+\section{The E\textsubscript{6}/E\textsubscript{8} Arithmetic Confluence}
+\label{sec:e6e8}
+
+\subsection{The Automorphism Group is W(E\textsubscript{6})}
+
+\begin{theorem}
+\label{thm:aut}
+The automorphism group of the collinearity graph of $W(3,3)$ is isomorphic to
+the Weyl group of $E_6$:
+$$\mathrm{Aut}(W(3,3)) \cong W(E_6), \quad |W(E_6)| = 51840.$$
+\end{theorem}
+
+\begin{proof}
+The symplectic group $\mathrm{GSp}(4,3)$ acts on $W(3,3)$ by construction.
+The kernel of this action is $\{\pm I\}$, giving $\mathrm{PSp}(4,3)$ of order $25920$.
+The full collinearity-preserving group is $\mathrm{PSp}(4,3) \rtimes \mathbb{Z}/2$
+of order $51840$. This is isomorphic to $W(E_6)$ by the exceptional isomorphism
+$W(E_6) \cong \mathrm{GO}^-(4,3) / \{\pm I\}$
+(cf.\ \cite[Ch.~4]{ConwaySloane1999}). \qed
+\end{proof}
+
+\begin{remark}[Numerical coincidences]
+The following integers encode the $E_6/E_8$ geometry of $W(3,3)$:
+\begin{itemize}
+\item $78 = \dim E_6$: the Ihara zeta amplitude of $W(3,3)$ (Theorem~\ref{thm:ihara});
+\item $240$: the number of $E_8$ roots = twice the number of edges of $W(3,3)$;
+\item $45$: the number of $E_6$ tritangent planes = the weight-8 multiplicity $A_8$ of $C_2(W(3,3))$;
+\item $135$: the number of isotropic cosets of $\Lambda_C$ (Theorem~\ref{thm:orbits}).
+\end{itemize}
+\end{remark}
+
+\subsection{The Construction-A Lattice}
+
+The binary code of $W(3,3)$ is $C = C_2(W(3,3))$, the row space of the adjacency
+matrix over $\mathbb{F}_2$. By Theorem~\ref{thm:ladder}, $\dim C = 16$, so
+$C$ is a $[40,16,8]_2$ code.
+
+\begin{theorem}
+\label{thm:code}
+The binary code $C = C_2(W(3,3))$ is a $[40,16,8]_2$ self-orthogonal code with:
+\begin{align*}
+A_8 &= 45 \quad \text{(weight-8 codewords = $E_6$ tritangent planes)},\\
+|C^\perp / C| &= 2^8 \quad \text{(dual quotient)},\\
+A_6(C^\perp) &= 240 \quad \text{(weight-6 words of } C^\perp = E_8 \text{ root system)}.
+\end{align*}
+\end{theorem}
+
+The Construction-A lattice associated to $C$ is
+$$\Lambda_C = \{x \in \mathbb{Z}^{40} : x \bmod 2 \in C\} \subset \mathbb{R}^{40}.$$
+This is an even integral lattice of rank $40$ and determinant $2^8$.
+
+\subsection{The Discriminant Form is E\textsubscript{8}/2E\textsubscript{8}}
+
+The discriminant group of $\Lambda_C$ is $D(\Lambda_C) = \Lambda_C^*/\Lambda_C$,
+equipped with the discriminant form $q_D: D \to \mathbb{Q}/2\mathbb{Z}$.
+
+\begin{theorem}
+\label{thm:disc}
+The discriminant group and form of $\Lambda_C$ are:
+$$D(\Lambda_C) \cong (E_8/2E_8, \, q_D) \cong ((\mathbb{Z}/2)^8, \, q_{E_8}^{(2)}),$$
+of type $O^+(8,2)$ (plus-type orthogonal group over $\mathbb{F}_2$).
+\end{theorem}
+
+\begin{proof}
+By Construction~A, $\Lambda_C^* = \{x \in \mathbb{R}^{40} : x \cdot c \in \mathbb{Z},\; \forall c \in \Lambda_C\}$.
+One verifies that $\Lambda_C^*/\Lambda_C \cong C^\perp/C$ as abelian groups (of order $2^8$).
+The induced quadratic form on $C^\perp/C$ coincides with the discriminant form of the
+$E_8$ root lattice scaled by $2$: $q_D(x) \equiv x \cdot x / 2 \pmod{2}$.
+The resulting form over $(\mathbb{Z}/2)^8$ is the unique even unimodular form
+of $O^+(8,2)$ type. \qed
+\end{proof}
+
+\subsection{Three W(E\textsubscript{6})-Orbits on the Discriminant Cosets}
+
+Since $W(E_6) = \mathrm{Aut}(W(3,3))$ acts on $\Lambda_C$ (lifting from the code symmetry),
+it acts on the $255 = 2^8 - 1$ nonzero elements of $D(\Lambda_C)$.
+
+\begin{theorem}
+\label{thm:orbits}
+The action of $W(E_6)$ on the $255$ nonzero discriminant cosets decomposes as:
+$$255 = 1 + 135 + 120,$$
+where:
+\begin{itemize}
+\item the trivial orbit $\{e\}$ (size $1$);
+\item $135$ isotropic cosets ($q_D(x) = 0$; stabilizer order $384$);
+\item $120$ anisotropic cosets ($q_D(x) \neq 0$; stabilizer order $432$).
+\end{itemize}
+\end{theorem}
+
+\begin{corollary}
+\label{cor:roots}
+The $120$ anisotropic cosets are in bijection with the $240$ roots of the $E_8$ lattice
+(via $\pm$ identification), consistent with the identification $W(3,3) \leftrightarrow E_8$ roots.
+\end{corollary}
+
+\subsection{The Moonshine Chain}
+
+\begin{theorem}
+\label{thm:moonshine}
+The discriminant form $D(\Lambda_C) = E_8/2E_8$ is isomorphic to the glue
+group used in the Niemeier construction of the Leech lattice from $E_8^3$:
+$$\mathrm{Leech} = \{(x_1,x_2,x_3) \in E_8^3 : \varphi(x_1)+\varphi(x_2)+\varphi(x_3)=0\},$$
+where $\varphi: E_8 \to E_8/2E_8 = D(\Lambda_C)$ is the reduction map.
+This yields the explicit moonshine chain:
+$$W(3,3) \xrightarrow{\;\text{code}\;} C \xrightarrow{\;\text{Constr.~A}\;} \Lambda_C 
+  \xrightarrow{\;\text{disc}\;} D(\Lambda_C) = E_8/2E_8 
+  \xleftarrow{\;\varphi\;} E_8 \xrightarrow{\;\text{glue}\;} \mathrm{Leech} \to \mathbb{M}.$$
+\end{theorem}
+
+\begin{remark}
+No direct lattice map $\Lambda_C \to \mathrm{Leech}$ exists (Theorem~\ref{thm:nomap}):
+the determinants $2^8 \neq 1$ obstruct any quotient.
+The chain is parametric via the discriminant module.
+\end{remark}

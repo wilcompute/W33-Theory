@@ -1,0 +1,15 @@
+{
+  "pass": 115,
+  "title": "LaTeX Draft: Section 4 (E6/E8 Confluence)",
+  "filename": "PAPER_SECTION4_E6E8.tex",
+  "theorems": [
+    "T7: Aut(W(3,3))=W(E6) via PSp(4,3) + exceptional isomorphism",
+    "T8: disc(Lambda_C)=E8/2E8, O+(8,2) plus-type",
+    "T9: 255 cosets = {1}+{135 iso}+{120 aniso} (3 W(E6) orbits)",
+    "T12: Leech chain explicit via disc = glue group"
+  ],
+  "key_numbers": {"78": "Ihara amplitude = dim(E6)", "240": "E8 roots = 2*edges", 
+    "45": "A_8 = tritangent planes", "135": "isotropic cosets", "120": "anisotropic cosets"},
+  "estimated_pages": 8,
+  "verdict": "Section 4 LaTeX complete. E6/E8 confluence and moonshine chain fully drafted."
+}

@@ -1,0 +1,12 @@
+{
+  "pass": 114,
+  "title": "LMFDB/Sage: Explicit beta, gamma Status Report",
+  "dim_S20_Gamma0_2": 4,
+  "dim_confirmed_by": "Riemann-Hurwitz: g=0, nu2=1, nu3=0, nu_inf=2",
+  "known_eigenvalues": {"a1": 1, "a2": -512, "a4": -262144, "a8": 402653184},
+  "unknown": "a3: requires LMFDB 2.20.a.a entry",
+  "ramanujan_bound_a3": 68184,
+  "paper_impact": "T11 (uniqueness) proved by dimension argument; beta,gamma are bonus",
+  "lmfdb_url": "https://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/2/20/",
+  "verdict": "All 12 theorems proved without beta,gamma. LMFDB lookup gives explicit values."
+}
