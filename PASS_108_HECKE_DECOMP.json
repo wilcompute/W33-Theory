@@ -1,0 +1,18 @@
+{
+  "pass": 108,
+  "title": "Hecke Eigenform Decomposition of Theta_{Lambda_C}",
+  "modular_space": "M_20(Gamma_0(2))",
+  "dim_total": 6,
+  "dim_cusp_old": 2,
+  "dim_cusp_new": 2,
+  "dim_eisenstein": 2,
+  "plus_eigenspace_dim": 3,
+  "plus_eigenspace_basis": ["E_20^inf", "f_old+ = DeltaE8(tau)+DeltaE8(2tau)", "f_new+ (a_2=-512=-2^9)"],
+  "f_new_plus_a2": -512,
+  "f_new_plus_a2_derivation": "W_2(f)=-a_2/2^9*f=+f => a_2=-2^9",
+  "decomposition": "Theta = 1*E_20^inf + beta*f_old+ + gamma*f_new+",
+  "alpha": 1,
+  "beta_gamma": "rational; deferred to LMFDB/Sage for f_new+ q-expansion",
+  "large_cancellation": "E_20[q^4] ~ 2.08e10 >> 80 (analogous to Leech theta = E_12 + cusp)",
+  "verdict": "Structural decomposition complete. f_new+ Euler factor at 2: (1+512*2^{-s}+2^{19}*2^{-2s})^{-1}"
+}

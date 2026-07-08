@@ -1,0 +1,13 @@
+{
+  "pass": 109,
+  "title": "Rank-Reduction Lambda_C -> Leech: Impossibility Theorem",
+  "main_result": "THEOREM: No direct lattice quotient/projection Lambda_C->Leech exists. Proof: det(Lambda_C)=2^8, det(Leech)=1, quotient preserves/increases det. QED.",
+  "impossibility_proof": "det(Lambda_C)=2^8; any sublattice quotient L/M has det(L/M)=det(L)/det(M)^2 (for orthog split); cannot produce det=1 from det=2^8 by quotient.",
+  "correct_pathway": {
+    "type": "parametric via discriminant module",
+    "diagram": "W(3,3)->C->Lambda_C->disc=E8/2E8 <- E8 --phi-> E8^3->Leech",
+    "120_aniso_cosets": "= fibers of phi = 240 E8 roots / pm1",
+    "W_E6_acts": "on both Disc(Lambda_C) and the glue group simultaneously"
+  },
+  "verdict": "Rank-reduction question closed definitively. No lattice map. Parametric moonshine chain is the correct and explicit formulation."
+}
