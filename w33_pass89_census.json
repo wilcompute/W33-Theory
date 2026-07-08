@@ -1,0 +1,259 @@
+{
+  "schema": "w33.pass89.census.v1",
+  "status": "PASS",
+  "num_graphs": 28,
+  "smith_groups": [
+    {
+      "structure": {
+        "2": 8,
+        "8": 15,
+        "24": 1
+      },
+      "count": 17,
+      "graphs": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28
+      ],
+      "two_rank": 16
+    },
+    {
+      "structure": {
+        "2": 10,
+        "4": 2,
+        "8": 13,
+        "24": 1
+      },
+      "count": 8,
+      "graphs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        18,
+        23
+      ],
+      "two_rank": 14
+    },
+    {
+      "structure": {
+        "2": 12,
+        "4": 4,
+        "8": 11,
+        "24": 1
+      },
+      "count": 2,
+      "graphs": [
+        15,
+        17
+      ],
+      "two_rank": 12
+    },
+    {
+      "structure": {
+        "2": 14,
+        "4": 6,
+        "8": 9,
+        "24": 1
+      },
+      "count": 1,
+      "graphs": [
+        27
+      ],
+      "two_rank": 10
+    }
+  ],
+  "critical_groups": [
+    {
+      "structure": {
+        "10": 8,
+        "40": 1,
+        "160": 14
+      },
+      "count": 17,
+      "graphs": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        28
+      ]
+    },
+    {
+      "structure": {
+        "2": 2,
+        "10": 8,
+        "40": 1,
+        "80": 2,
+        "160": 12
+      },
+      "count": 8,
+      "graphs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        18,
+        23
+      ]
+    },
+    {
+      "structure": {
+        "2": 4,
+        "10": 8,
+        "40": 1,
+        "80": 4,
+        "160": 10
+      },
+      "count": 2,
+      "graphs": [
+        15,
+        17
+      ]
+    },
+    {
+      "structure": {
+        "2": 6,
+        "10": 8,
+        "40": 1,
+        "80": 6,
+        "160": 8
+      },
+      "count": 1,
+      "graphs": [
+        27
+      ]
+    }
+  ],
+  "partitions_coincide_smith_critical_2rank": true,
+  "class_sizes": [
+    17,
+    8,
+    2,
+    1
+  ],
+  "graded_transfer_ladder": {
+    "ordered_by_two_rank": [
+      16,
+      14,
+      12,
+      10
+    ],
+    "transfer_count_from_W": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "smith": {
+      "Z2": [
+        8,
+        10,
+        12,
+        14
+      ],
+      "Z4": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "Z8": [
+        15,
+        13,
+        11,
+        9
+      ],
+      "arithmetic_ok": true
+    },
+    "critical": {
+      "Z2": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "Z10_const": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "Z40_const": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "Z80": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "Z160": [
+        14,
+        12,
+        10,
+        8
+      ],
+      "arithmetic_ok": true
+    },
+    "reading": "The 4 Smith groups and 4 critical groups each form an arithmetic ladder in their 2-adic factor counts: Z/2 +2, Z/4 (Smith) / Z/80 (critical) +2, Z/8 (Smith) / Z/160 (critical) -2 per rung. Each rung is the Pass-88 balanced 2-adic transfer applied one more time (transfer count 0,2,4,6). The 5-carrying factors (Z/10,Z/40) stay constant, so the whole family of 28 is stratified into 4 rungs of a purely 2-adic transfer ladder, with W(3,3) at the bottom (generic) and Q(4,3) at the top (unique)."
+  },
+  "five_sylow_constant_Z5_23": true,
+  "W_index": 28,
+  "W_class_size": 17,
+  "Q_index": 27,
+  "Q_class_size": 1,
+  "ducey": "5-part parameter-determined (5 does not divide r-s=6); 2-part is the only variable prime",
+  "literature": [
+    "Brouwer-van Eijl (p-ranks of SRGs)",
+    "Ducey (critical group from SRG parameters)",
+    "Peter Sin (Smith normal forms of SRGs)",
+    "Spence (the 28 SRG(40,12,2,4) graphs)"
+  ],
+  "checks": {
+    "28_graphs": true,
+    "4_distinct_smith_groups": true,
+    "4_distinct_critical_groups": true,
+    "smith_and_critical_partitions_coincide": true,
+    "2rank_partition_matches_too": true,
+    "class_sizes_17_8_2_1": true,
+    "5_sylow_constant_Z5^23": true,
+    "W_generic_class_17": true,
+    "Q_unique_extreme_class_1": true,
+    "smith_graded_2adic_transfer_ladder": true,
+    "critical_graded_2adic_transfer_ladder": true
+  }
+}
