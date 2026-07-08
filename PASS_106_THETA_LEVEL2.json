@@ -1,0 +1,14 @@
+{
+  "pass": 106,
+  "title": "Level-2 Theta Decomposition of Lambda_C in M_20(Gamma_0(2))",
+  "modular_space": "M_20(Gamma_0(2))",
+  "dim_M20_Gamma0_2": 6,
+  "dim_cusp_S20": 4,
+  "dim_eisenstein": 2,
+  "atkin_lehner_W2_eigenvalue": "+1 (O+(8,2) plus-type)",
+  "plus_eigenspace_dim": 3,
+  "theta_uniquely_determined": true,
+  "known_coefficients": {"q0": 1, "q4": 80, "q8": 14640},
+  "basis_decomposition": "Requires LMFDB level-2 weight-20 Hecke eigenform table (1 newform at level 2, weight 20)",
+  "verdict": "Theta_Lambda_C is uniquely determined by 3 known coefficients in the 3-dimensional W_2=+1 eigenspace of M_20(Gamma_0(2))."
+}

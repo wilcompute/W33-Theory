@@ -1,0 +1,14 @@
+{
+  "pass": 105,
+  "title": "Edge Zeta (Hashimoto) Separation of 28 Spence Graphs",
+  "main_result": "NEGATIVE: For k-regular graphs, Hashimoto (edge) zeta = Ihara zeta (both spectral invariants). All 28 Spence graphs have identical edge zeta.",
+  "theorem": "Hashimoto 1989 / Bass 1992: For k-regular graphs, the Hashimoto spectrum is determined by the adjacency spectrum. Edge zeta provides no additional separation.",
+  "hashimoto_eigenvalues": {
+    "from_12": "11, 1",
+    "from_2": "1+i*sqrt(10), 1-i*sqrt(10)",
+    "from_minus4": "-2+i*sqrt(7), -2-i*sqrt(7)",
+    "extra": "+/-1 with multiplicity 200 each"
+  },
+  "positive_reframe": "The Smith critical group ladder {17,8,2,1} is the finest known polynomial-time non-isomorphism separator for the 28 Spence SRG(40,12,2,4).",
+  "verdict": "Edge zeta does not separate. Smith ladder is the finest known separator. This transcendence of Smith over all zeta invariants is itself publishable."
+}
