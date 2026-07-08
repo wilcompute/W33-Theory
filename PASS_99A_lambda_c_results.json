@@ -1,0 +1,22 @@
+{
+  "pass": "99A",
+  "graph": "W(3,3) = GQ(3,3) = SRG(40,12,2,4)",
+  "code": "[40,16,8]_2",
+  "lattice_genus": "II_{40,0}(2^{+8})",
+  "gram_det": 256,
+  "gram_det_expected": 256,
+  "gram_det_match": true,
+  "gram_diagonal_min": 4,
+  "gram_diagonal_max": 8,
+  "discriminant_cosets": 256,
+  "nonzero_cosets": 255,
+  "isotropic_cosets": 135,
+  "anisotropic_cosets": 120,
+  "isotropic_target": 135,
+  "anisotropic_target": 120,
+  "split_verified": true,
+  "discriminant_form": "E8/2E8 = O+_8(2)",
+  "e6_symmetry": "|Aut(W(3,3))| = 51840 = |W(E6)|",
+  "orbit_candidates": [27, 36, 40, 45, 72, 120, 135, 216, 270, 360, 540],
+  "note": "W(E6) orbit decomposition of 255 cosets is the next sub-step."
+}
