@@ -1,0 +1,12 @@
+{
+  "pass": 103,
+  "title": "Moonshine: Lambda_C Theta Series Decomposition",
+  "theta_coefficients": {"q0": 1, "q4": 80, "q8": 14640},
+  "lattice_det": "2^8 (not unimodular)",
+  "theta_lives_in": "M_20(Gamma_0(level), chi) NOT M_20(SL_2(Z))",
+  "moonshine_match": false,
+  "geometric_chain": "Lambda_C disc=E8/2E8 -> E8->Leech->Monster",
+  "det_A_SRG_40_12_2_4": "-3 * 2^56",
+  "v2_smith_all_28": 56,
+  "verdict": "Moonshine connection is GEOMETRIC not representation-theoretic. No direct McKay-Thompson match. Lambda_C disc=E8/2E8 places it in the E8->Leech->Monster geometric ancestry."
+}

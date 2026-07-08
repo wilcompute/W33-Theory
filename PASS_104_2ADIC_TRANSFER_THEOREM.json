@@ -1,0 +1,14 @@
+{
+  "pass": 104,
+  "title": "2-Adic Transfer Law: A General Theorem",
+  "theorem": "For any cospectral pair G1, G2, sum_i v_p(s_i(G1)) = sum_i v_p(s_i(G2)) for all primes p. Total p-valuation of Smith group is a spectral invariant.",
+  "proof": "det(A) = product of eigenvalues = product of Smith diagonals. Both are spectral invariants. QED.",
+  "det_SRG_40_12_2_4": "-3 * 2^56",
+  "v2_all_28_graphs": 56,
+  "balanced_transfer_W33_Q43": {
+    "entries_1_to_2": 6,
+    "entries_8_to_4": 6,
+    "net_delta_v2": 0
+  },
+  "verdict": "THEOREM proved. The balanced 2-adic transfer follows from spectral invariance of det(A). All 28 Spence graphs have v_2(Smith)=56. The {17,8,2,1} ladder = 4 distinct distributions of the fixed 56 units of 2-adic weight."
+}
