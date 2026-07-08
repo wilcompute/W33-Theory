@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass92.discriminant_e8.v1",
+  "status": "PASS",
+  "glue_group": {
+    "structure": "(Z/2)^8",
+    "order": 256,
+    "C_dim": 16,
+    "Cperp_dim": 24
+  },
+  "coset_minweight_distribution": {
+    "0": 1,
+    "6": 120,
+    "8": 135
+  },
+  "anisotropic_norm1_count": 120,
+  "isotropic_count": 135,
+  "O_plus_8_2": {
+    "isotropic_formula_(2^4-1)(2^3+1)": 135,
+    "anisotropic_formula_2^7-2^3": 120,
+    "type": "plus (O+_8(2))"
+  },
+  "e8_identification": "discriminant form of Lambda_C = the E8/2E8 quadratic form N(x)/2 mod 2; 120 anisotropic = 240 E8 roots mod +-1; 135 nonzero isotropic; O+_8(2) acts (isotropic graph is SRG(135,70,37,35)).",
+  "reading": "The pervasive 8 of the W(3,3) arithmetic tower -- the glue dimension of the code-lattice, the binary code's minimum distance d=8, and the E8 rank -- is one object: the discriminant form of the Construction A lattice of C_2(W) is the E8/2E8 = O+_8(2) form, splitting the 255 glue cosets as 135 isotropic + 120 anisotropic (the 240 E8 roots mod +-1).",
+  "grounding": "E8 lattice: E8/2E8 has 120 norm-1 and 135 nonzero isotropic vectors under O+_8(2).",
+  "checks": {
+    "glue_dim_8_order_256": true,
+    "coset_minweight_split_1_120_135": true,
+    "nonzero_cosets_255": true,
+    "isotropic_135_matches_O+8": true,
+    "anisotropic_120_matches_O+8": true,
+    "120_is_240_E8_roots_mod_pm1": true,
+    "code_min_distance_8_equals_E8_rank": true
+  }
+}
