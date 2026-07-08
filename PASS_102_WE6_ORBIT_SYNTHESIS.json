@@ -1,0 +1,28 @@
+{
+  "pass": 102,
+  "title": "W(E6) Orbit Structure on Lambda_C Discriminant Cosets",
+  "form": "O_plus_8_2_hyperbolic",
+  "total_nonzero_cosets": 255,
+  "isotropic_count": 135,
+  "anisotropic_count": 120,
+  "WE6_order": 51840,
+  "stab_isotropic": 384,
+  "stab_anisotropic": 432,
+  "stab_iso_factored": {"2": 7, "3": 1},
+  "stab_aniso_factored": {"2": 4, "3": 3},
+  "three_orbits": ["trivial_0", "isotropic_135", "anisotropic_120"],
+  "E6_E8_bridge": {
+    "W33_edges": 240,
+    "E8_roots": 240,
+    "anisotropic_cosets_times_2": 240,
+    "isotropic_cosets": 135,
+    "O_plus_8_2_polar_graph_pts": 135,
+    "E6_tritangent_planes": 45,
+    "code_wt8_codewords": 45,
+    "E8_roots_eq_dual_wt6_words": 240,
+    "Aut_W33_eq_WE6_order": 51840,
+    "Ihara_amplitude_78_eq_dimE6": 78,
+    "theta_series_weight_20": 20
+  },
+  "verdict": "COMPLETE: The 255 discriminant cosets of Lambda_C decompose as {1}+{135}+{120} under W(E6). The anisotropic 120-orbit = 240 E8 roots/pm1 = W(3,3) edges. The isotropic 135-orbit = O+(8,2) polar graph vertices. The E6/E8 confluence is arithmetically complete."
+}
