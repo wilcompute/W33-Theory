@@ -1,0 +1,68 @@
+{
+  "schema": "w33.pass83.class_number_formula.v1",
+  "status": "PASS",
+  "graph": {
+    "n": 40,
+    "m": 240,
+    "k": 12,
+    "q": 11,
+    "first_betti": 201
+  },
+  "class_number_kappa": 28823037615171174400000000000000000000000,
+  "kappa_factored": "2^81*5^23",
+  "kappa_equals_critical_group_order": true,
+  "order_of_vanishing_at_u1": 201,
+  "reduced_special_value": -11529215046068469760000000000000000000000000,
+  "reduced_special_value_factored": "-2^85*5^25",
+  "full_special_value": -18526734277970591267771357601390065256523197546502490246313213441266100742389760000000000000000000000000,
+  "full_special_value_factored": "-2^285*5^25",
+  "class_number_formula": "lim_{u->1} det(I-Au+qu^2)/(1-u) = -(q-1)*n*kappa(G)",
+  "symbolic_check": {
+    "available": true,
+    "order_at_1": 201,
+    "leading_coefficient": -18526734277970591267771357601390065256523197546502490246313213441266100742389760000000000000000000000000
+  },
+  "f1_dictionary": [
+    [
+      "curve / number field",
+      "the graph W(3,3)"
+    ],
+    [
+      "Dedekind / Selberg zeta",
+      "Ihara zeta zeta_G(u) (Pass 73/74)"
+    ],
+    [
+      "Riemann Hypothesis",
+      "Ramanujan: poles on |u|=1/sqrt(11) (Pass 73)"
+    ],
+    [
+      "functional equation",
+      "u -> 1/(11u) pole involution (Pass 74)"
+    ],
+    [
+      "genus / rank (order of vanishing at u=1)",
+      "first Betti number beta = m-n+1 = 201"
+    ],
+    [
+      "class number h",
+      "#spanning trees kappa = 2^81*5^23 (Pass 74)"
+    ],
+    [
+      "ideal class group / Jacobian",
+      "critical group K(W) = (Z/10)^8+Z/40+(Z/160)^14 (Pass 82)"
+    ],
+    [
+      "analytic class number formula",
+      "lim det(I-Au+qu^2)/(1-u) = -(q-1) n kappa = -400 kappa"
+    ]
+  ],
+  "checks": {
+    "kappa_is_2^81_5^23": true,
+    "kappa_equals_critical_group_order_pass82": true,
+    "order_of_vanishing_is_first_Betti_201": true,
+    "class_number_formula_matches_factored_zeta": true,
+    "reduced_special_value_is_-400_kappa": true,
+    "sympy_order_at_1_is_201": true,
+    "sympy_leading_coeff_matches": true
+  }
+}
