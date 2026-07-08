@@ -655,7 +655,37 @@ $40$ points $\times\,3$ local axes $\times\,2$ endpoints, not the set of
 $240$ global graph edges: the previously verified line-graph degree and
 $W(E_6)$-orbit obstructions to a naive edge/root bijection remain active.
 The executable certificate is
-\texttt{w33\_pass104\_axis\_glue\_e8\_lift.py}.
+\texttt{w33\_pass123\_axis\_glue\_e8\_lift.py}.
+
+\begin{theorem}[Two nonconjugate $W(E_6)$ embeddings]
+\label{thm:two-we6-embeddings}
+The code automorphism action
+$\mathrm{PGSp}(4,3)\cong W(E_6)\curvearrowright C^\perp/C$ is faithful and has orbit
+decomposition
+\[
+ 256=1+135+120,
+\]
+with one zero class, $135$ nonzero isotropic classes, and $120$ anisotropic
+classes.  The ordered-anisotropic-pair stabilizer of Pass~117 is a
+nonconjugate copy of $W(E_6)$: its isotropic orbit sizes are
+$27,36,36,36$, and its anisotropic orbit sizes are
+$1,1,1,27,27,27,36$.
+\end{theorem}
+
+\begin{proof}
+Pass~125 generates the $40$-point projective similitude group from five
+symplectic transvections and one nonsquare similitude, enumerates its order
+$51840$, transports every generator through the W33 binary code, and
+enumerates a faithful quotient image of the same order.  Its measured orbits
+are $1,135,120$.  The Pass~117 fingerprints are different; conjugate
+subgroups have identical orbit-size multisets in the same ambient
+permutation action.
+\end{proof}
+
+Thus ``the $W(E_6)$ action'' is embedding-dependent.  The code embedding
+exposes the coarse W33 quadratic split, while the ordered-pair embedding
+exposes the finer $E_8\to E_6\times A_2$ branching.  Transitivity of the
+containing orthogonal group alone proves neither statement.
 
 All five exceptional Lie algebra dimensions are graph-parametric:
 \begin{equation}
@@ -2666,7 +2696,9 @@ with respect to the standard alternating bilinear form
 $\omega(u,v) = u_1v_3 - u_3v_1 + u_2v_4 - u_4v_2$.
 
 Its collinearity graph is $\SRG(40,12,2,4)$, with automorphism group
-$\Sp(4,3)$ satisfying $|\Sp(4,3)| = |W(E_6)| = 51\,840$.
+$\mathrm{PGSp}(4,3)\cong W(E_6)$ of order $51\,840$.  The matrix group
+$\Sp(4,3)$ also has order $51\,840$, but its center acts trivially on
+projective points and it is not the faithful graph automorphism group.
 
 From this single finite geometry, with \textbf{zero free parameters},
 one derives:
@@ -4291,7 +4323,7 @@ $\cos^2(\arg(1+i\sqrt{10})) = 1/11$: they encode the Ihara norm, not a
 mixing angle.  The total oscillatory amplitude is
 $48+30 = \mathbf{78} = \dim E_6$ --- the periodic-orbit fluctuation of
 $W_{3,3}$ is bounded by the dimension of $E_6$, tying the graph
-prime-number theorem to the $\Sp(4,3)=W(E_6)$ spine.
+prime-number theorem to the $\mathrm{PGSp}(4,3)\cong W(E_6)$ spine.
 
 \paragraph{(iii) Functional equation.}
 Each quadratic Ihara factor $11u^2-\lambda u+1$ has roots of product
@@ -4323,7 +4355,8 @@ the graph analogue of prime-geodesic equidistribution, at the Ramanujan
 \emph{(b) The amplitude is $\dim E_6$.}  For any strongly regular graph the
 explicit-formula oscillatory amplitude is $2(f+g)=2(v-1)$; for $W_{3,3}$
 this is $2\cdot39=78=2q(q^2+q+1)=\dim E_6$, with $f=24,g=15$ the
-irreducible eigenspace dimensions of $\Sp(4,3)=W(E_6)$ and $q^2+q+1=13=|\PG(2,3)|$.
+irreducible eigenspace dimensions of the projective W33 symmetry group
+$\mathrm{PGSp}(4,3)\cong W(E_6)$ and $q^2+q+1=13=|\PG(2,3)|$.
 \emph{(c) The cospectral demonstrator.}  The Shrikhande graph and the
 $4\times4$ rook graph are cospectral $\SRG(16,6,2,2)$ with \emph{identical}
 $N_m$ (hence identical Ihara and Bartholdi zeta), yet non-isomorphic: their

@@ -31,10 +31,10 @@ the E8 quadratic form.  The symmetry tower locks together:
 where 6720 = 120*56 is the ordered anisotropic-pair orbit of Pass 117, and 136 = 135+1 is
 the count of isotropic vectors including 0 (the O+_8(2) stabilizer index in Sp(8,2)).
 
-THE PRIME SHIFT.  W(3,3) itself IS a symplectic graph: the collinearity graph
-SRG(40,12,2,4) is Sp(4,3), the symplectic polarity graph on the (3^4-1)/(3-1)=40 points of
-PG(3,3).  So W(3,3) = Sp(4,3) over F_3 generates, through its E8/2E8 glue, the symplectic
-graph Sp(8,2) over F_2 -- a symplectic-to-symplectic bridge across the prime shift 3 -> 2,
+THE PRIME SHIFT.  W(3,3) is the symplectic polarity graph on the
+(3^4-1)/(3-1)=40 points of PG(3,3), with full projective automorphism group
+PGSp(4,3) isomorphic to W(E6).  Through its E8/2E8 glue it generates the
+symplectic graph Sp(8,2) over F_2 -- a symplectic-to-symplectic bridge across the prime shift 3 -> 2,
 the two Ducey "bad primes" of r-s = 6 = 2*3 (Pass 97).
 
 Self-contained (F_2^8 quadratic geometry + numpy spectra).  ASCII-only.
@@ -130,7 +130,7 @@ def main() -> int:
         and sp82 // go8 == 136 == 135 + 1,
         "index_GOplus8_over_WE6_is_6720": go8 % we6 == 0
         and go8 // we6 == 6720 == 120 * 56,
-        "W33_is_Sp43_on_40_points": (3**4 - 1) // (3 - 1) == 40,
+        "PG3_3_has_40_projective_points": (3**4 - 1) // (3 - 1) == 40,
         "complement_is_SRG_255_128_64_64": 255 - 1 - 126 == 128,
     }
     all_ok = all(checks.values())
@@ -153,7 +153,7 @@ def main() -> int:
         f"   6720 = 120*56 (Pass 117 ordered anisotropic pair); 136 = 135+1 isotropic"
     )
     print(
-        f"   W(3,3) = Sp(4,3) on 40 = PG(3,3) points: prime shift 3 -> 2 (r-s = 6 = 2*3)"
+        f"   W(3,3) is the symplectic polar graph on 40 PG(3,3) points: prime shift 3 -> 2"
     )
     print()
     print("checks:")
@@ -183,10 +183,15 @@ def main() -> int:
             "Sp(8,2)": sp82,
             "index_GO_over_WE6": go8 // we6,
             "index_Sp_over_GO": sp82 // go8,
-            "note": "6720 = 120*56 (Pass 117); 136 = 135+1 isotropic incl 0",
+            "note": (
+                "The first subgroup is Pass 117's ordered-pair W(E6), not the "
+                "nonconjugate code embedding of Pass 125. The displayed "
+                "relations are subgroup indices, not normal inclusions."
+            ),
         },
         "prime_shift": (
-            "W(3,3) = Sp(4,3) is the symplectic polarity graph on the 40 points of PG(3,3); "
+            "W(3,3) is the symplectic polarity graph on the 40 points of PG(3,3), "
+            "with full projective automorphism group PGSp(4,3) isomorphic to W(E6); "
             "its E8/2E8 glue yields Sp(8,2) on 255 points.  A symplectic-to-symplectic bridge "
             "across the prime shift 3 -> 2, the two bad primes of r-s = 6 = 2*3 (Pass 97)."
         ),
@@ -194,8 +199,10 @@ def main() -> int:
             "The two W(3,3) glue graphs SRG(135,70,37,35) and SRG(120,63,30,36) are the isotropic "
             "and anisotropic subconstituents of a single object: the symplectic graph Sp(8,2) = "
             "SRG(255,126,61,63) on all 255 nonzero E8/2E8 vectors.  The E8 quadratic form is exactly "
-            "what splits the symplectic 255 into 135 + 120.  The symmetry tower "
-            "W(E6) < GO+_8(2) < Sp(8,2) realizes on 40/120/135/255 points, all rooted in W(3,3) = Sp(4,3)."
+            "what splits the symplectic 255 into 135 + 120.  "
+            "The Pass 117 ordered-pair W(E6) embeds with index 6720 in O+_8(2):2, "
+            "which embeds with index 136 in Sp(8,2). Pass 125 distinguishes the "
+            "nonconjugate code-induced W(E6) embedding."
         ),
         "checks": checks,
     }

@@ -8,9 +8,51 @@
   "WE6_order": 51840,
   "stab_isotropic": 384,
   "stab_anisotropic": 432,
-  "stab_iso_factored": {"2": 7, "3": 1},
-  "stab_aniso_factored": {"2": 4, "3": 3},
-  "three_orbits": ["trivial_0", "isotropic_135", "anisotropic_120"],
+  "stab_iso_factored": {
+    "2": 7,
+    "3": 1
+  },
+  "stab_aniso_factored": {
+    "2": 4,
+    "3": 3
+  },
+  "three_orbits": [
+    "trivial_0",
+    "isotropic_135",
+    "anisotropic_120"
+  ],
+  "proof_source": "Pass 125 explicit PGSp(4,3) coordinate action on Cperp/C",
+  "orbit_fingerprint_measured": [
+    [
+      1,
+      0
+    ],
+    [
+      120,
+      1
+    ],
+    [
+      135,
+      0
+    ]
+  ],
+  "distinct_pass117_embedding": {
+    "isotropic_orbits": [
+      27,
+      36,
+      36,
+      36
+    ],
+    "anisotropic_orbits": [
+      1,
+      1,
+      1,
+      27,
+      27,
+      27,
+      36
+    ]
+  },
   "E6_E8_bridge": {
     "W33_edges": 240,
     "E8_roots": 240,
@@ -24,5 +66,5 @@
     "Ihara_amplitude_78_eq_dimE6": 78,
     "theta_series_weight_20": 20
   },
-  "verdict": "COMPLETE: The 255 discriminant cosets of Lambda_C decompose as {1}+{135}+{120} under W(E6). The anisotropic 120-orbit = 240 E8 roots/pm1 = W(3,3) edges. The isotropic 135-orbit = O+(8,2) polar graph vertices. The E6/E8 confluence is arithmetically complete."
+  "verdict": "CORRECTED BY PASS 125: the code-induced W(E6) action is explicitly enumerated and has orbits {0}+{135}+{120}. The Pass 117 ordered-pair stabilizer is a different, nonconjugate W(E6) embedding. The 120 classes correspond to E8 root lines and to W33 local axes, not to a canonical global-edge/root bijection."
 }

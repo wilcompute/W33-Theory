@@ -109,11 +109,11 @@
 
 ## ✅ Next Steps
 <!-- What should we do next? -->
-- Auto-saved at 2026-07-03T19:14:57.460Z (reason: file save)
+- Auto-saved at 2026-07-08T22:16:37.943Z (reason: timer)
 - Recent commits:
-  - 8c258e6ed Pass 57: The Contextuality Tax, W(4) realization probe, and CLI hardening.
-  - aa3cd248b Pass 57: the contextuality tax -- the defect is one movable point-star (synthesis)
-  - f0cf2d108 Pass 56 deferred surfaces: index card + HOLONET.md witness rows
+  - 91847e802 Pass 124: the symplectic capstone -- Sp(8,2) = SRG(255,126,61,63) is the E8/2E8 orthogonality graph; W(3,3)'s two glue graphs are its O+_8(2) subconstituents
+  - 212fac958 Passes 117-123: the exceptional-glue / Hopf track (GO+(8,2) embedding, r=2 lattice quotient, exact 2-adic mass, SRG(120), theta newforms, Hopf boundary, axis-glue E8 lift)
+  - e8e4508b4 Passes 114-116: LMFDB status, Section 4 LaTeX (E6/E8 confluence), SNF completeness
 
 ## 📝 Open Questions
 <!-- What do we still need to figure out? -->
@@ -536,3 +536,14 @@
 2026-06-29 clock-native scheduler continuation: Added an explicit line-context compiler policy flag (`--optimize active-ticks|clock-slots`), kept the exact one-copy active optimum as the default proof artifact, and added analysis/w33_clock_policy_stress.py. Full `holonet uor` now has 18 stages and regenerates the stress artifact. Verified certified anchor 14 active ticks / 22 clock slots versus 15 clock-native ticks / 15 slots; repeated wrapper DAGs 1x..6x stay clock-native connector-free and save 8, 15, 21, 25, 25, 38 elapsed frame-clock slots. Updated HOLONET.md, docs/INDEX.md, docs/holonet_uor_bridge.md, docs/index.html, and browser replay artifacts. Added an SVG 36-frame clock-panel to docs/holonet_uor_os_replay.html so active and connector frame paths are visible. TeX rebuild blocked in this shell because no TeX engine is installed on WSL or visible from Windows PATH.
 
 2026-06-29 execute-all-3 clock scheduler architecture: Added live scheduler policy selection to analysis/holonet_wrap.py (`--optimize active-ticks|clock-slots|none`) and embedded selected-policy compiler summaries in wrapper JSON. Updated analysis/holonet_vm_demo_launcher.py to run the same Rule-110 envelope under both policies; generated data/holonet_wrap_rule110_demo.json (active policy 8 ticks / 13 clock slots) and data/holonet_wrap_rule110_demo_clock_slots.json (clock policy 7 ticks / 7 slots). Added analysis/w33_packet_latency_benchmark.py and wired it into holonet uor as stage 14/19; certified row shows clock-native finishing 28/33 packets earlier and deterministic 1x..4x rows finish 23,52,80,106 packets earlier. Upgraded docs/holonet_uor_os_replay.html to a clickable 36-frame clock inspector with spread line indices, active/connector slots, connector reason, and current jobs/packets. Verified launcher PASS, holonet uor PASS, py_compile, json.tool, HTML parser, and node --check.
+
+## 2026-07-08 session - Pass 125 two nonconjugate W(E6) embeddings
+
+- Fetched and reviewed the complete 13-commit range `2e841ef77..91847e802` through GitKraken, reading every changed file and cross-checking related claims in `w33_paper.tex`, `docs/index.html`, and the wider repository. Found that Pass 102 inferred subgroup transitivity from the containing orthogonal group, while the executable Pass 117 certificate gave incompatible nontransitive orbit fingerprints.
+- Added `w33_pass125_two_we6_embeddings.py/json`, `PASS125_TWO_WE6_EMBEDDINGS.md`, and `tests/test_pass125_two_we6_embeddings.py`. Five symplectic transvections generate the 25920-element projective PSp image; adjoining `diag(2,2,1,1)` gives the 51840-element PGSp(4,3) image. Coordinate transport through the W33 adjacency code gives a faithful order-51840 action on `Cperp/C` with measured orbits `{0}`, 135 isotropic, and 120 anisotropic.
+- Compared with Pass 117's order-51840 ordered-anisotropic-pair stabilizer, whose isotropic orbits are `27+36+36+36` and anisotropic orbits are `1+1+1+27+27+27+36`. Different orbit fingerprints prove the two W(E6) subgroups are nonconjugate in the common `O+_8(2):2` action. The code embedding supplies the W33 quadratic split; the ordered-pair embedding supplies the `E8 -> E6 x A2` branching.
+- Repaired Pass 102 to invoke the explicit Pass 125 action, corrected Pass 124's tower from normal-inclusion notation to subgroup indices, identified its first subgroup specifically as the Pass 117 embedding, and replaced same-order `Sp(4,3)=W(E6)` language with the faithful `PGSp(4,3) ~= W(E6)` projective action. Integrated the theorem into `w33_paper.tex` and `docs/index.html`.
+- Corrected the newly added standalone Sections 3-4: `coker(A)` is now the adjacency Smith group rather than the reduced-Laplacian critical group; the all-28 Smith census is explicitly open; W33's SNF gives F2 rank 16 and nullity 24; multivariate edge zeta is no longer conflated with spectral Ihara/Hashimoto zeta. Normalized Construction A consistently with determinant `2^8`, corrected `256=1+135+120`, and replaced the false displayed Leech equality by its exact index-`2^8`, determinant-`2^16` obstruction.
+- Verification: Pass 125 executable 12/12; neighboring Passes 117-125 focused suite 16 passed in 118.99s; Pass 125 focused suite 3 passed in 41.11s; `py_compile`, four JSON parses, and HTML parse/unique-ID/link checks pass. Portable Tectonic 0.16.9 builds `w33_paper_new_sections.tex` with no warnings or undefined references, and the gitignored local PDF was refreshed. The monolithic `w33_paper.tex` build remains blocked by the pre-existing missing `part5_unified_breakthrough.tex` include, so `w33_paper.pdf` was not overwritten.
+- Two previously unlogged commits (`212fac958`, `91847e802`) were detected and retroactively logged before new work. Every deliberate change in this packet has its own Continuity decision.
+- Best non-sequential continuations: compute full graph automorphism groups for the 255/135/120 graphs; classify both W(E6) subgroup conjugacy classes in GAP; explain the `3^10` elementary-divisor exponent; repair or remove the missing monolithic-paper include; complete the actual all-28 Spence SNF census.

@@ -1,24 +1,34 @@
-\section{Critical Groups and the 2-Adic Transfer Law}
+\section{Adjacency Smith Groups and the 2-Adic Transfer Law}
 \label{sec:smith}
 
 \subsection{The Smith Normal Form Invariant}
 
-Let $G$ be a graph with adjacency matrix $A$. The \emph{critical group} (or
-\emph{sandpile group}) of $G$ is the torsion part of $\mathbb{Z}^n / \mathrm{Im}(A)$,
-determined up to isomorphism by the Smith normal form (SNF) of $A$.
+Let $G$ be a graph with nonsingular adjacency matrix $A$. Define its
+\emph{adjacency Smith group}
+\[
+ K_A(G)=\operatorname{coker}(A)=\mathbb Z^n/A\mathbb Z^n.
+\]
+This is not the graph critical (sandpile) group, which is defined from a
+reduced Laplacian. The group $K_A(G)$ is determined up to isomorphism by the
+Smith normal form (SNF) of $A$.
 Write $\mathrm{SNF}(A) = \mathrm{diag}(s_1, \ldots, s_n)$ with $s_i \mid s_{i+1}$.
 
-For a strongly regular graph $\mathrm{SRG}(v,k,\lambda,\mu)$ the adjacency spectrum
-is $\{k^1, r^f, s^g\}$ and $\det(A) = k \cdot r^f \cdot s^g$ is a complete spectral invariant.
+For a strongly regular graph with parameters $(v,k,\lambda,\mu)$, write the
+adjacency spectrum as $\{k^1,r^f,s^g\}$. Then
+\[
+ |\det(A)|=|k r^f s^g|
+\]
+is a spectral invariant.
 
 \subsection{The 2-Adic Transfer Theorem}
 
-\begin{theorem}[2-Adic Transfer Law]
+\begin{theorem}[$p$-Adic Transfer Law]
 \label{thm:transfer}
 Let $G_1, G_2$ be cospectral graphs (same adjacency eigenvalue multiset).
 For every prime $p$:
 $$\sum_{i=1}^{n} v_p(s_i(G_1)) = \sum_{i=1}^{n} v_p(s_i(G_2)).$$
-That is, the total $p$-adic valuation of the Smith group is a spectral invariant.
+That is, the total $p$-adic valuation of the adjacency Smith group order is
+a spectral invariant.
 \end{theorem}
 
 \begin{proof}
@@ -29,53 +39,48 @@ and the right-hand side is the same for any cospectral pair. \qed
 \end{proof}
 
 \begin{corollary}
-For any cospectral pair $G_1, G_2$: $|\mathrm{Crit}(G_1)|_p = |\mathrm{Crit}(G_2)|_p$
-for all primes $p$, where $|\cdot|_p$ denotes the $p$-part of the group order.
+For any nonsingular cospectral pair $G_1,G_2$,
+$|K_A(G_1)|_p=|K_A(G_2)|_p$ for all primes $p$, where $|\cdot|_p$
+denotes the $p$-part of the group order. The theorem fixes the total
+valuation, not the individual invariant factors.
 \end{corollary}
 
-\subsection{The Spence Smith Ladder}
+\subsection{The Certified W33 Smith Data}
 
 The Spence family consists of 28 non-isomorphic $\mathrm{SRG}(40,12,2,4)$, including
 the symplectic polar space $W(3,3)$ and the orthogonal polar space $Q(4,3)$.
 All share the adjacency spectrum $\{12^1, 2^{24}, (-4)^{15}\}$, hence by
 Theorem~\ref{thm:transfer}, all have $v_2(\mathrm{Smith}) = v_2(\det A) = 56$.
 
-The \emph{2-rank} of $G$ is $\rho_2(G) = \#\{i : 2 \mid s_i(G)\}$.
-By GAP computation of all 28 SNFs \cite{Spence1975,GAP}, we obtain:
-
-\begin{theorem}[Smith 2-Rank Ladder]
+\begin{theorem}[W33 adjacency Smith group]
 \label{thm:ladder}
-The 28 Spence graphs partition by Smith 2-rank as:
-$$\{17, 8, 2, 1\} \quad \text{(counts in each 2-rank class)}.$$
-$W(3,3)$ and $Q(4,3)$ belong to the same 2-rank class and are
-distinguished by their 2-Sylow subgroups of the critical group.
+The verified Smith normal form is
+\[
+ \operatorname{SNF}(A_{W33})
+ =\operatorname{diag}(1^{16},2^8,8^{15},24).
+\]
+Consequently $\operatorname{rank}_{\mathbb F_2}(A_{W33})=16$ and its
+mod-$2$ nullity is $24$. Moreover
+$|K_A(W33)|=3\cdot2^{56}$, as required by the spectrum.
 \end{theorem}
 
-\begin{remark}
-The Sunada-Gassmann structure of the pair $\{W(3,3), Q(4,3)\}$ (same Ihara
-zeta, same Bartholdi zeta, same class number) is resolved at the level of
-the Smith normal form: the critical groups differ in their 2-Sylow, providing
-the finest group-theoretic non-isomorphism certificate.
-\end{remark}
-
-\subsection{Transcendence of the Smith Invariant}
-
-\begin{theorem}[Smith Transcends Zeta]
+\begin{proposition}[Open all-28 census]
 \label{thm:transcend}
-For the Spence family, the Smith critical group invariant is strictly finer
-than any graph zeta function (Ihara, Hashimoto/edge, Bartholdi with any parameters).
-\end{theorem}
-
-\begin{proof}
-By the Bass-Hashimoto theorem~\cite{Bass1992,Hashimoto1989}, for a $k$-regular
-graph the Hashimoto (edge) zeta equals the Ihara zeta, both determined purely
-by the adjacency spectrum. Since all 28 Spence graphs share the same spectrum,
-they share the same zeta function. But the Smith 2-rank separates them into
-4 classes, so the Smith invariant is strictly finer than any zeta invariant. \qed
-\end{proof}
+The complete Smith normal forms of all 28 Spence graphs have not been
+computed in the committed certificate. In particular, the proposed
+$\{17,8,2,1\}$ class multiplicities remain a target rather than a theorem.
+For any integer matrix with Smith entries $s_i$,
+\[
+ \operatorname{rank}_{\mathbb F_p}(A)=\#\{i:p\nmid s_i\};
+\]
+counting entries divisible by $p$ gives the nullity, not the rank.
+\end{proposition}
 
 \begin{remark}
-Theorem~\ref{thm:transcend} says that for this family, the first
-\emph{non-spectral} invariant one encounters -- the Smith normal form -- is
-already sufficient to separate 4 classes, while no spectral method separates even 2.
+For regular graphs the ordinary Ihara zeta and the one-variable
+Hashimoto determinant are determined by the adjacency spectrum, as is the
+standard Bartholdi specialization. A differing adjacency SNF would therefore
+refine those spectral invariants. This does not imply that it refines every
+``edge zeta'': multivariate edge-zeta constructions can retain
+non-spectral incidence information.
 \end{remark}

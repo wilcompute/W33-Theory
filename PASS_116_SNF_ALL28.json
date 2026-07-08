@@ -3,10 +3,11 @@
   "title": "Full Smith Group for 28 Spence Graphs - Theoretical Analysis",
   "W33_SNF": "diag(1^16, 2^8, 8^15, 24)",
   "W33_det_check": "2^8 * 8^15 * 24 = 3*2^56 checkmark",
-  "W33_F2_rank": 24,
-  "ladder_interpretation": "{17,8,2,1} = F_2-rank partition; W(3,3) has F_2-rank 24",
+  "W33_F2_rank": 16,
+  "W33_F2_nullity": 24,
+  "ladder_interpretation": "OPEN: {17,8,2,1} was proposed as a class partition but is not certified here; entries divisible by 2 count nullity, not rank",
   "GAP_command": "SmithNormalFormIntegerMat(AdjacencyMatrix(G))",
   "status": "OPEN: requires GAP computation",
-  "paper_impact": "All 12 theorems hold without this. Closes Open Problem 2.",
-  "verdict": "Pass 116 deferred to GAP. W(3,3) SNF confirmed. Full ladder analysis is future work."
+  "paper_impact": "Any theorem asserting the all-28 class multiplicities remains open. Full computation closes Open Problem 2.",
+  "verdict": "CORRECTED: W(3,3) SNF gives F2-rank 16 and nullity 24. Pass 116 remains deferred to GAP; the full all-28 ladder is future work."
 }

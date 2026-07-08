@@ -1,0 +1,78 @@
+{
+  "schema": "w33.pass125.two_we6_embeddings.v1",
+  "status": "PASS",
+  "theorem": "The code-induced PGSp(4,3), isomorphic to W(E6), acts faithfully on Cperp/C with orbits {0}, 135 isotropic, and 120 anisotropic. The Pass 117 ordered-anisotropic-pair stabilizer is a nonconjugate W(E6) embedding in O+_8(2):2, detected by its different orbit fingerprints.",
+  "generators": {
+    "symplectic_transvections": [
+      "1000",
+      "0100",
+      "0010",
+      "0001",
+      "1100"
+    ],
+    "nonsquare_similitude": "diag(2,2,1,1)",
+    "PSp43_projective_order": 25920,
+    "PGSp43_projective_order": 51840
+  },
+  "code_embedding": {
+    "quotient_image_order": 51840,
+    "faithful": true,
+    "orbit_fingerprint_size_Q": [
+      [
+        1,
+        0
+      ],
+      [
+        120,
+        1
+      ],
+      [
+        135,
+        0
+      ]
+    ],
+    "isotropic_nonzero_orbits": [
+      135
+    ],
+    "anisotropic_orbits": [
+      120
+    ],
+    "stabilizers": {
+      "isotropic": 384,
+      "anisotropic": 432
+    }
+  },
+  "pass117_ordered_pair_embedding": {
+    "isotropic_orbits": [
+      27,
+      36,
+      36,
+      36
+    ],
+    "anisotropic_orbits": [
+      1,
+      1,
+      1,
+      27,
+      27,
+      27,
+      36
+    ]
+  },
+  "nonconjugacy_certificate": "Conjugate subgroups have identical orbit-size multisets in the same ambient permutation action. These two order-51840 subgroups do not, so they are not conjugate in O+_8(2):2.",
+  "correction": "Pass 102's orbit statement is true for the code-induced embedding, but its old proof was invalid: transitivity of O+_8(2) does not imply transitivity of a subgroup. Pass 125 supplies the missing explicit action. Pass 117 remains true for a different embedding.",
+  "checks": {
+    "w33_has_40_points_240_edges": true,
+    "all_projective_generators_preserve_adjacency": true,
+    "PSp43_projective_image_order_25920": true,
+    "PGSp43_projective_image_order_51840": true,
+    "all_generators_preserve_binary_code": true,
+    "induced_quotient_maps_are_linear": true,
+    "induced_quotient_maps_preserve_Q": true,
+    "quotient_action_is_faithful_order_51840": true,
+    "code_embedding_orbits_are_1_135_120": true,
+    "isotropic_stabilizer_order_384": true,
+    "anisotropic_stabilizer_order_432": true,
+    "pass117_fingerprints_differ": true
+  }
+}

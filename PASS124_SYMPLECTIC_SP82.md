@@ -33,21 +33,25 @@ So the two W(3,3) glue graphs are *exactly* the O⁺₈(2)-subconstituents of Sp
 ## The symmetry tower locks together
 
 ```
-W(E6) [51840]  ◁₆₇₂₀  GO⁺₈(2) [348364800]  ◁₁₃₆  Sp(8,2) [47377612800]
+W(E6)_pair [51840]  <_[6720]  O⁺₈(2):2 [348364800]  <_[136]  Sp(8,2) [47377612800]
 ```
 
+- the first subgroup is specifically Pass 117's ordered-pair embedding, not
+  Pass 125's nonconjugate code embedding;
 - index **6720 = 120·56** is precisely the ordered anisotropic-pair orbit of Pass 117;
 - index **136 = 135 + 1** is the number of isotropic vectors including 0 (the O⁺₈(2) stabilizer
   index in Sp(8,2)).
 
-All three groups act on the 40 / 120 / 135 / 255 point sets rooted in W(3,3).
+The symbols denote subgroup indices, not normal inclusions.
 
 ## The prime shift 3 → 2
 
-W(3,3) itself **is** a symplectic graph: the collinearity graph SRG(40,12,2,4) is **Sp(4,3)**, the
-symplectic-polarity graph on the (3⁴−1)/(3−1) = 40 points of PG(3,3). So
+W(3,3) is the symplectic-polarity graph on the
+(3⁴−1)/(3−1) = 40 points of PG(3,3). Its full projective automorphism group is
+**PGSp(4,3) ≅ W(E6)**; **Sp(4,3)** has the same order as \(W(E_6)\) but is not
+the faithful 40-point group. So
 
-> **W(3,3) = Sp(4,3) over F₃ generates, through its E₈/2E₈ glue, the symplectic graph Sp(8,2)
+> **The F₃ symplectic polar graph W(3,3) generates, through its E₈/2E₈ glue, the F₂ symplectic graph Sp(8,2)
 > over F₂.**
 
 A symplectic-to-symplectic bridge across the prime shift **3 → 2** — the two Ducey "bad primes" of

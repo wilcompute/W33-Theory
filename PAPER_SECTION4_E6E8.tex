@@ -1,4 +1,5 @@
-\section{The E\textsubscript{6}/E\textsubscript{8} Arithmetic Confluence}
+\section{\texorpdfstring{The $E_6/E_8$ Arithmetic Confluence}
+{The E6/E8 Arithmetic Confluence}}
 \label{sec:e6e8}
 
 \subsection{The Automorphism Group is W(E\textsubscript{6})}
@@ -11,19 +12,23 @@ $$\mathrm{Aut}(W(3,3)) \cong W(E_6), \quad |W(E_6)| = 51840.$$
 \end{theorem}
 
 \begin{proof}
-The symplectic group $\mathrm{GSp}(4,3)$ acts on $W(3,3)$ by construction.
-The kernel of this action is $\{\pm I\}$, giving $\mathrm{PSp}(4,3)$ of order $25920$.
-The full collinearity-preserving group is $\mathrm{PSp}(4,3) \rtimes \mathbb{Z}/2$
-of order $51840$. This is isomorphic to $W(E_6)$ by the exceptional isomorphism
-$W(E_6) \cong \mathrm{GO}^-(4,3) / \{\pm I\}$
-(cf.\ \cite[Ch.~4]{ConwaySloane1999}). \qed
+The projective similitude group
+$\mathrm{PGSp}(4,3)=\mathrm{GSp}(4,3)/\mathbb F_3^\times$ acts faithfully on
+the $40$ projective points of $W(3,3)$ and has order $51840$. Its index-two
+subgroup is $\mathrm{PSp}(4,3)$ of order $25920$. The standard exceptional
+isomorphism identifies $\mathrm{PGSp}(4,3)$ with $W(E_6)$. Pass~125 gives an
+explicit certificate: five projective transvections and one nonsquare
+similitude generate all $51840$ permutations and preserve W33 adjacency.
+\qed
 \end{proof}
 
-\begin{remark}[Numerical coincidences]
-The following integers encode the $E_6/E_8$ geometry of $W(3,3)$:
+\begin{remark}
+Several integers recur in the $E_6/E_8$ geometry of $W(3,3)$:
 \begin{itemize}
-\item $78 = \dim E_6$: the Ihara zeta amplitude of $W(3,3)$ (Theorem~\ref{thm:ihara});
-\item $240$: the number of $E_8$ roots = twice the number of edges of $W(3,3)$;
+\item $78 = \dim E_6$: the W33 Ihara-zeta amplitude;
+\item $240$: both the number of $E_8$ roots and the number of W33 edges, but
+the verified root carrier is the $120\cdot2$ local-axis endpoints, not a
+canonical edge/root bijection;
 \item $45$: the number of $E_6$ tritangent planes = the weight-8 multiplicity $A_8$ of $C_2(W(3,3))$;
 \item $135$: the number of isotropic cosets of $\Lambda_C$ (Theorem~\ref{thm:orbits}).
 \end{itemize}
@@ -45,8 +50,9 @@ A_6(C^\perp) &= 240 \quad \text{(weight-6 words of } C^\perp = E_8 \text{ root s
 \end{align*}
 \end{theorem}
 
-The Construction-A lattice associated to $C$ is
-$$\Lambda_C = \{x \in \mathbb{Z}^{40} : x \bmod 2 \in C\} \subset \mathbb{R}^{40}.$$
+The normalized Construction-A lattice associated to $C$ is
+$$\Lambda_C = \frac1{\sqrt2}\{x \in \mathbb{Z}^{40} : x \bmod 2 \in C\}
+\subset \mathbb{R}^{40}.$$
 This is an even integral lattice of rank $40$ and determinant $2^8$.
 
 \subsection{The Discriminant Form is E\textsubscript{8}/2E\textsubscript{8}}
@@ -70,21 +76,39 @@ The resulting form over $(\mathbb{Z}/2)^8$ is the unique even unimodular form
 of $O^+(8,2)$ type. \qed
 \end{proof}
 
-\subsection{Three W(E\textsubscript{6})-Orbits on the Discriminant Cosets}
+\subsection{Two W(E\textsubscript{6}) Embeddings on the Discriminant Cosets}
 
 Since $W(E_6) = \mathrm{Aut}(W(3,3))$ acts on $\Lambda_C$ (lifting from the code symmetry),
 it acts on the $255 = 2^8 - 1$ nonzero elements of $D(\Lambda_C)$.
 
 \begin{theorem}
 \label{thm:orbits}
-The action of $W(E_6)$ on the $255$ nonzero discriminant cosets decomposes as:
-$$255 = 1 + 135 + 120,$$
+The code-induced action of $W(E_6)$ on all $256$ discriminant cosets
+decomposes as:
+$$256 = 1 + 135 + 120,$$
 where:
 \begin{itemize}
-\item the trivial orbit $\{e\}$ (size $1$);
+\item the zero orbit $\{0\}$ (size $1$);
 \item $135$ isotropic cosets ($q_D(x) = 0$; stabilizer order $384$);
 \item $120$ anisotropic cosets ($q_D(x) \neq 0$; stabilizer order $432$).
 \end{itemize}
+\end{theorem}
+
+\begin{proof}
+Pass~125 transports explicit generators of
+$\mathrm{PGSp}(4,3)\cong W(E_6)$ through coordinate permutations of the
+binary W33 code. The induced permutation group on $C^\perp/C$ is faithful of
+order $51840$, preserves the quadratic form, and has the displayed measured
+orbits. This action is not inferred from transitivity of the containing
+orthogonal group.
+\end{proof}
+
+\begin{theorem}[Nonconjugate branching embedding]
+The Pass~117 pointwise stabilizer of an ordered anisotropic pair is a second
+$W(E_6)$ subgroup of $O_8^+(2):2$. Its nonzero isotropic orbits have sizes
+$27,36,36,36$, while its anisotropic orbits have sizes
+$1,1,1,27,27,27,36$. Therefore it is not conjugate to the code-induced
+subgroup, whose corresponding orbit sizes are $135$ and $120$.
 \end{theorem}
 
 \begin{corollary}
@@ -93,22 +117,21 @@ The $120$ anisotropic cosets are in bijection with the $240$ roots of the $E_8$ 
 (via $\pm$ identification), consistent with the identification $W(3,3) \leftrightarrow E_8$ roots.
 \end{corollary}
 
-\subsection{The Moonshine Chain}
+\subsection{Boundary of the Leech Comparison}
 
-\begin{theorem}
+\begin{theorem}[The displayed mod-$2$ kernel is not Leech]
 \label{thm:moonshine}
-The discriminant form $D(\Lambda_C) = E_8/2E_8$ is isomorphic to the glue
-group used in the Niemeier construction of the Leech lattice from $E_8^3$:
-$$\mathrm{Leech} = \{(x_1,x_2,x_3) \in E_8^3 : \varphi(x_1)+\varphi(x_2)+\varphi(x_3)=0\},$$
-where $\varphi: E_8 \to E_8/2E_8 = D(\Lambda_C)$ is the reduction map.
-This yields the explicit moonshine chain:
-$$W(3,3) \xrightarrow{\;\text{code}\;} C \xrightarrow{\;\text{Constr.~A}\;} \Lambda_C 
-  \xrightarrow{\;\text{disc}\;} D(\Lambda_C) = E_8/2E_8 
-  \xleftarrow{\;\varphi\;} E_8 \xrightarrow{\;\text{glue}\;} \mathrm{Leech} \to \mathbb{M}.$$
+Let $\varphi:E_8\to E_8/2E_8$ be reduction and set
+$$K=\{(x_1,x_2,x_3)\in E_8^3:
+\varphi(x_1)+\varphi(x_2)+\varphi(x_3)=0\}.$$
+Then $K$ has index $2^8$ in the unimodular lattice $E_8^3$, hence
+$\det K=(2^8)^2=2^{16}$. In particular, $K$ is not the unimodular Leech
+lattice.
 \end{theorem}
 
 \begin{remark}
-No direct lattice map $\Lambda_C \to \mathrm{Leech}$ exists (Theorem~\ref{thm:nomap}):
-the determinants $2^8 \neq 1$ obstruct any quotient.
-The chain is parametric via the discriminant module.
+The verified chain stops at the common finite quadratic module
+$D(\Lambda_C)\cong E_8/2E_8$. A Leech construction requires additional
+rank-$24$ glue data and a root-elimination argument; neither follows from
+the displayed mod-$2$ condition alone.
 \end{remark}
