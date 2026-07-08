@@ -27222,6 +27222,42 @@
         </p>
       </section>
 
+      <section id="arithmetic-tower">
+        <h2><span class="icon">&#8484;</span> The Arithmetic of W(3,3): an F&#8321;-Curve and its Code&ndash;Lattice Tower
+          <span class="section-badge">New</span></h2>
+        <p>Passes 82&ndash;87 assemble a complete arithmetic-geometry dictionary in which W(3,3) behaves like a curve
+          over the &ldquo;field with one element&rdquo; F&#8321;. Every statement below has a runnable witness
+          (<code>w33_pass82</code>&ndash;<code>w33_pass87</code>).</p>
+
+        <h4>Critical group = class group; the sandpile separator</h4>
+        <p>The critical (sandpile) group <code>K(G) = Z&#8308;&#8304;/im(L)</code>, <code>L = 12I&minus;A</code>, has order
+          the number of spanning trees. From the Smith normal forms of the two Laplacians,
+          <code>K(W(3,3)) = (Z/10)&#8312; &oplus; Z/40 &oplus; (Z/160)&#185;&#8308;</code> while
+          <code>K(Q(4,3)) = (Z/2)&#8310; &oplus; (Z/10)&#8312; &oplus; Z/40 &oplus; (Z/80)&#8310; &oplus; (Z/160)&#8312;</code>.
+          Both have order <code>2&#8312;&#185;&middot;5&#178;&#179;</code> and identical 5-Sylow, but different 2-Sylow: the
+          critical group <strong>separates the cospectral pair</strong> where the spectrum, the Ihara/spectral zeta, and
+          all local invariants are deaf.</p>
+
+        <h4>Analytic class number formula</h4>
+        <p><code>1/&zeta;<sub>G</sub>(u)</code> vanishes at <code>u=1</code> to order the first Betti number
+          <code>&beta; = m&minus;n+1 = 201</code>, with special value
+          <code>lim det(I&minus;Au+11u&#178;)/(1&minus;u) = &minus;(q&minus;1)&middot;n&middot;&kappa; = &minus;400&kappa;</code>,
+          <code>&kappa; = 2&#8312;&#185;&middot;5&#178;&#179; = |K|</code> &mdash; the graph analogue of the analytic class
+          number formula. W(3,3) and Q(4,3) are a <strong>Sunada&ndash;Gassmann pair</strong>: identical zeta and class
+          number, different class group.</p>
+
+        <h4>Code, dual, lattice, modular form</h4>
+        <p>The binary code <code>C&#8322;(W) = [40,16,8]</code> is doubly-even and self-orthogonal (structurally, since
+          <code>A&#178; = 12I+2A+4(J&minus;I&minus;A) &equiv; 0 mod 2</code>); its <strong>45 minimum-weight words are the 45
+          tritangent planes</strong> (E&#8326;). The MacWilliams dual <code>[40,24,6]</code> (dim <code>24</code> = gauge
+          eigenspace = moonshine 24) has <strong>240 minimum-weight words = the 240 roots of E&#8328; = the edge count</strong>.
+          The Construction A lattice <code>&Lambda; = {x &isin; Z&#8308;&#8304; : x mod 2 &isin; C&#8322;(W)}</code> is an even
+          rank-40 lattice whose theta series <code>&Theta; = W<sub>C</sub>(&theta;&#8323;,&theta;&#8322;) = 1 + 80q&#8308; +
+          14640q&#8312; + &hellip;</code> is a <strong>weight-20 modular form</strong>, its <code>q&#8312;</code> coefficient
+          again carrying the <code>45&middot;2&#8312;</code> tritangent contribution. The exceptional structure the graph
+          encodes spectrally reappears exactly in a code, a lattice, and a modular form.</p>
+      </section>
+
       <section id="open">
         <h2><span class="icon">?</span> Open Problems and Exact Boundaries</h2>
         <p>The strongest current statement is not “nothing works yet”; it is that a large exact finite kernel is already

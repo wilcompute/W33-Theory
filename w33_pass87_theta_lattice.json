@@ -1,0 +1,41 @@
+{
+  "schema": "w33.pass87.theta_lattice.v1",
+  "status": "PASS",
+  "construction": "Lambda_C = {x in Z^40 : x mod 2 in C_2(W)}; Theta = W_C(f0,f1)",
+  "lattice_rank": 40,
+  "even_lattice": true,
+  "modular_form_weight": 20,
+  "theta_q_expansion": {
+    "0": 1,
+    "4": 80,
+    "8": 14640,
+    "12": 5403840,
+    "16": 1301706800,
+    "20": 90075980640,
+    "24": 2879296353600,
+    "28": 53857455633280,
+    "32": 680913378127920,
+    "36": 6382454482231440,
+    "40": 47248463932033440
+  },
+  "min_norm": 4,
+  "min_norm_vector_count": 80,
+  "norm8_breakdown": {
+    "from_zero_codeword_two_pm2": 3120,
+    "from_weight8_codewords": 11520,
+    "total": 14640,
+    "matches_theta": true
+  },
+  "reading": "The Construction A lattice of the doubly-even self-orthogonal code C_2(W) is an even rank-40 lattice whose theta series is a weight-20 modular form, computed exactly from the [40,16,8] weight enumerator via W_C(theta3,theta2) (Gleason / Broue-Enguehard). This completes the W(3,3) arithmetic tower: graph -> zeta/class group -> code -> lattice + modular form.",
+  "literature": [
+    "Crnkovic-Maksimovic, self-orthogonal codes from SRG(40,12,2,4)",
+    "Broue-Enguehard maps; Gleason's theorem (modular forms from codes)"
+  ],
+  "checks": {
+    "constant_term_1": true,
+    "no_norm_1_2_3_vectors": true,
+    "min_norm_4_with_80_vectors": true,
+    "norm_8_count_positive": true,
+    "weight_20_modular_form": true
+  }
+}

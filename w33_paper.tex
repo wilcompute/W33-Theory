@@ -4335,6 +4335,65 @@ invariant that hears exactly the difference the zeta cannot.
 
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
+\subsection*{The Arithmetic of $W_{3,3}$: an $\mathbb{F}_1$-Curve and its
+Code--Lattice Tower}
+
+The zeta of \S\,\ref{sec:ihara-zeta} is the first floor of a complete
+arithmetic-geometry dictionary in which $W_{3,3}$ behaves like a curve over
+$\mathbb{F}_1$.  All statements below are verified by runnable witnesses
+(\texttt{w33\_pass82}--\texttt{w33\_pass87}).
+
+\paragraph{Critical group $=$ class group.}
+The sandpile (critical) group $K(G)=\mathbb{Z}^{40}/\operatorname{im}L$,
+$L=12I-A$, has order equal to the number of spanning trees.  From the Smith
+normal forms of the two Laplacians,
+\[
+K(W_{3,3}) = (\mathbb{Z}/10)^{8}\oplus\mathbb{Z}/40\oplus(\mathbb{Z}/160)^{14},
+\quad
+K(Q(4,3)) = (\mathbb{Z}/2)^{6}\oplus(\mathbb{Z}/10)^{8}\oplus\mathbb{Z}/40
+            \oplus(\mathbb{Z}/80)^{6}\oplus(\mathbb{Z}/160)^{8}.
+\]
+Both have order $2^{81}5^{23}$ and identical $5$-Sylow $(\mathbb{Z}/5)^{23}$,
+but different $2$-Sylow: the critical group \emph{separates} the cospectral
+pair, where the ovoid number ($7$ vs $10$) and the sandpile group are the only
+distinguishing invariants.
+
+\paragraph{Analytic class number formula.}
+The reciprocal Ihara zeta $1/\zeta_G(u)=(1-u^2)^{m-n}\det(I-Au+11u^2)$ vanishes
+at $u=1$ to order the first Betti number $\beta=m-n+1=201$, with special value
+\[
+\lim_{u\to1}\frac{\det(I-Au+11u^2)}{1-u} = -(q-1)\,n\,\kappa(G) = -400\,\kappa(G),
+\qquad \kappa(G)=2^{81}5^{23}=|K(W_{3,3})|,
+\]
+the graph analogue of the analytic class number formula (verified symbolically).
+Thus $W_{3,3}$ carries: zeta $\leftrightarrow$ Dedekind, Ramanujan
+$\leftrightarrow$ RH, $u\mapsto1/(11u)$ $\leftrightarrow$ functional equation,
+$\beta=201\leftrightarrow$ genus, $\kappa\leftrightarrow$ class number, $K
+\leftrightarrow$ class group.  $W_{3,3}$ and $Q(4,3)$ are a
+\emph{Sunada--Gassmann pair}: identical Ihara and spectral zeta and identical
+class number, different class group.
+
+\paragraph{Code and lattice.}
+The binary code $C_2(W)=[40,16,8]$ (row space of $A$ over $\mathbb{F}_2$) is
+\emph{doubly-even} and \emph{self-orthogonal} --- structurally, since $A^2 =
+12I+2A+4(J-I-A)\equiv0\pmod 2$ as $k,\lambda,\mu$ are all even --- with weight
+enumerator
+\[
+W_C = x^{40}+45\,x^{32}y^{8}+1120\,x^{28}y^{12}+15570\,x^{24}y^{16}
+      +32064\,x^{20}y^{20}+\cdots,
+\]
+whose $45$ minimum-weight words are the $45$ tritangent planes of the cubic
+surface ($E_6$).  Its MacWilliams dual $[40,24,6]$ (dimension $24=$ the gauge
+eigenspace, the moonshine/Leech $24$) has $240$ minimum-weight words $=$ the
+$240$ roots of $E_8$ $=$ the edge count.  Finally the Construction A lattice
+$\Lambda_C=\{x\in\mathbb{Z}^{40}:x\bmod2\in C_2(W)\}$ is an even rank-$40$
+lattice whose theta series $\Theta=W_C(\theta_3,\theta_2)=1+80q^{4}+14640q^{8}
++\cdots$ is a weight-$20$ modular form, its $q^8$ coefficient again carrying the
+$45\cdot2^8$ tritangent contribution.  So the exceptional structure the graph
+encodes spectrally reappears, exactly, in a code, a lattice, and a modular form.
+
+\hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
+
 % ═══════════════════════════════════════════════════════════════
 %  SUPPLEMENT H --- CONSTRUCTIVE VERIFICATION OF W(3,3)
 % ═══════════════════════════════════════════════════════════════
