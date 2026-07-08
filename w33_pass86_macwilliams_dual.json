@@ -1,0 +1,81 @@
+{
+  "schema": "w33.pass86.macwilliams_dual.v1",
+  "status": "PASS",
+  "code_C2": {
+    "n": 40,
+    "k": 16,
+    "d": 8,
+    "weight_distribution": {
+      "0": 1,
+      "8": 45,
+      "12": 1120,
+      "16": 15570,
+      "20": 32064,
+      "24": 15570,
+      "28": 1120,
+      "32": 45,
+      "40": 1
+    }
+  },
+  "dual_C2perp": {
+    "n": 40,
+    "k": 24,
+    "d": 6,
+    "weight_distribution": {
+      "0": 1,
+      "6": 240,
+      "8": 2205,
+      "10": 23760,
+      "12": 182560,
+      "14": 664560,
+      "16": 2035170,
+      "18": 3243600,
+      "20": 4473024,
+      "22": 3243600,
+      "24": 2035170,
+      "26": 664560,
+      "28": 182560,
+      "30": 23760,
+      "32": 2205,
+      "34": 240,
+      "40": 1
+    },
+    "total": 16777216
+  },
+  "dual_dimension_24": "gauge eigenspace mult (r=2) = moonshine/Leech 24",
+  "self_orthogonal_containment": true,
+  "e6_appearances": [
+    {
+      "code": "C_2(W)",
+      "weight": 8,
+      "count": 45,
+      "e6": "tritangent planes"
+    },
+    {
+      "code": "C_2(W)",
+      "weight": 32,
+      "count": 45,
+      "e6": "tritangent planes"
+    },
+    {
+      "code": "dual [40,24]",
+      "weight": 6,
+      "count": 240,
+      "e6": "E8 roots = edges"
+    },
+    {
+      "code": "dual [40,24]",
+      "weight": 34,
+      "count": 240,
+      "e6": "E8 roots = edges"
+    }
+  ],
+  "reading": "C_2(W)=[40,16,8] and its MacWilliams dual [40,24] form the code face of the W(3,3) arithmetic: dual dim 24 = gauge eigenspace, code min-weight words = 45 tritangent planes; the pair encodes the cubic-surface/E6 geometry over GF(2).",
+  "checks": {
+    "dual_total_is_2^24": true,
+    "dual_dimension_24_is_gauge_eigenspace": true,
+    "self_orthogonal_containment": true,
+    "code_min_weight_8_is_45_tritangents": true,
+    "dual_min_distance_positive": true
+  }
+}
