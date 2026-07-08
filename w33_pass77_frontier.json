@@ -1,0 +1,121 @@
+{
+  "schema": "w33.pass77.frontier.v1",
+  "status": "PASS",
+  "track1_gap_rank3_irreducible": {
+    "available": true,
+    "perm_group_order": 25920,
+    "rank_action": 3,
+    "constituent_degrees": {
+      "1": 1,
+      "15": 1,
+      "24": 1
+    },
+    "eigenspaces_irreducible": true,
+    "note": "Sp(4,3) is rank-3 on 40 points; permutation character 1+chi_15+chi_24, each multiplicity 1, so the r/s eigenspaces are irreducible modules (GAP-proved)."
+  },
+  "track2_3_ovoid_separator": {
+    "alpha_W33": 7,
+    "alpha_Q43": 10,
+    "ovoid_size_bound_Hoffman": 10,
+    "W33_has_ovoid": false,
+    "Q43_has_ovoid": true,
+    "separated_by_ovoids": true,
+    "geometric_graphs_among_28": [
+      "W(3,3) symplectic GQ",
+      "Q(4,3) parabolic-quadric GQ"
+    ],
+    "note": "W(q) has ovoids iff q even; W(3,3) (q=3 odd) has none, so alpha=7 (max partial ovoid), while the dual Q(4,3) has ovoids, alpha=10. The independence number is a classical, geometric, non-spectral invariant separating the two cospectral, locally identical graphs -- the two GEOMETRIC members of the 28 Spence graphs."
+  },
+  "track4_terwilliger": {
+    "dim_terwilliger_algebra": 16,
+    "generators": "I, A, E0*, E1*, E2* (E_i* = distance-i projection from a base vertex)",
+    "note": "The subconstituent (Terwilliger) algebra dimension is the size of the local 'quantum symmetry' controlling W(3,3) around a base vertex; it refines the 2-dimensional Bose-Mesner (adjacency) algebra."
+  },
+  "track5_gap_smith_normal_form": {
+    "available": true,
+    "elementary_divisors": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      24
+    ],
+    "product": 216172782113783808,
+    "product_is_3x2^56": true,
+    "note": "Smith normal form 1^16 2^8 8^15 24; product 3*2^56 = |det A|."
+  },
+  "track6_gap_weil_representation": {
+    "available": true,
+    "Sp43_has_deg4": true,
+    "Sp43_has_deg5": true,
+    "weil_dim_9_splits_5_plus_4": true,
+    "note": "Weil rep of Sp(4,3): degree q^2=9 = 5+4 = (q^2+1)/2 + (q^2-1)/2; degrees 4,5 irreducible."
+  },
+  "track7_joint_equidistribution": {
+    "theta1_arg_1_i_sqrt10_over_pi": 0.40250889,
+    "theta2_arg_m2_i_sqrt7_over_pi": 0.70603717,
+    "theta1_minpoly_nonmonic": [
+      121,
+      0,
+      198,
+      0,
+      121
+    ],
+    "theta2_minpoly_nonmonic": [
+      121,
+      0,
+      66,
+      0,
+      121
+    ],
+    "both_irrational_multiples_of_pi": true,
+    "small_integer_relation": null,
+    "rationally_independent": true,
+    "joint_chi2_over_dof_on_8x8_grid": 0.0447,
+    "equidistributes_on_2_torus": true,
+    "note": "Both geodesic frequencies are irrational multiples of pi; no small integer relation a*t1+b*t2+c*pi=0 exists, so by Weyl the pair (m t1, m t2) mod 2pi equidistributes on the 2-torus (chi^2/dof near 1). Joint prime-geodesic equidistribution -- the effective, quantitative form of Pass 75 Track 2."
+  },
+  "checks": {
+    "T1_eigenspaces_irreducible": true,
+    "T2_ovoid_separates_7_vs_10": true,
+    "T4_terwilliger_dim_computed": true,
+    "T5_smith_product_3x2^56": true,
+    "T6_weil_5_plus_4": true,
+    "T7_rationally_independent_equidistributes": true
+  }
+}

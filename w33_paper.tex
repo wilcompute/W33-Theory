@@ -4316,6 +4316,23 @@ Integral data: $\det A=-3\cdot2^{56}$, with $2$-rank $16$ (the code
 $[40,16,8]$), $3$-rank $39=v-1$, $5$-rank $40$; and $W_{3,3}$ admits no
 size-$4$ Godsil--McKay switching set (it is switching-rigid at that scale).
 
+\emph{(e) GAP-verified refinements and the geometric separator
+(\texttt{w33\_pass77\_group.g}, \texttt{w33\_pass77\_frontier.py}).}  In
+\textsf{GAP}, $\Sp(4,3)$ acts on the $40$ points with rank $3$ and
+permutation character $1+\chi_{15}+\chi_{24}$ (each of multiplicity one),
+\emph{proving} that the $r=2$ (dimension $24$) and $s=-4$ (dimension $15$)
+eigenspaces are \textbf{irreducible} $\PSp(4,3)$-modules --- the Artin--Ihara
+$L$-factors of \S\,\ref{sec:ihara-zeta} are equivariant.  The Weil
+(oscillator) representation of $\Sp(4,3)$ has degree $q^2=9=5+4=
+(q^2{+}1)/2+(q^2{-}1)/2$ (degrees $4,5$ are genuine irreducibles of
+$\Sp(4,3)$), the two-qutrit oscillator carrier; and the Smith normal form
+of $A$ is $1^{16}2^{8}8^{15}24$ (product $3\cdot2^{56}=|\det A|$).  Finally,
+the \emph{geometric} separator of the two cospectral graphs: since $W(q)$
+has ovoids iff $q$ is even, $W_{3,3}$ ($q=3$) has none while the dual
+$Q(4,3)$ does, so the independence numbers differ,
+$\alpha(W_{3,3})=7<10=\alpha(Q(4,3))$ --- a classical, non-spectral
+invariant that hears exactly the difference the zeta cannot.
+
 \hfill $\blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare\ \blacksquare$
 
 % ═══════════════════════════════════════════════════════════════
