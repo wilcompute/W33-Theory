@@ -1,0 +1,110 @@
+{
+  "schema": "w33.pass84.sunada_gassmann.v1",
+  "status": "PASS",
+  "T1_ihara": {
+    "N_m_W": {
+      "1": 0,
+      "2": 0,
+      "3": 960,
+      "4": 13920,
+      "5": 181440,
+      "6": 1818240,
+      "7": 19178880,
+      "8": 214015200,
+      "9": 2359466880,
+      "10": 25940386560,
+      "11": 285329352000,
+      "12": 3138359764320
+    },
+    "N_m_Q": {
+      "1": 0,
+      "2": 0,
+      "3": 960,
+      "4": 13920,
+      "5": 181440,
+      "6": 1818240,
+      "7": 19178880,
+      "8": 214015200,
+      "9": 2359466880,
+      "10": 25940386560,
+      "11": 285329352000,
+      "12": 3138359764320
+    },
+    "identical": true
+  },
+  "T2_spectral_zeta": {
+    "W": {
+      "num_zero_eigenvalues": 1,
+      "zeta_L_at_0": 39,
+      "zeta_L_at_minus_1": 480,
+      "regularized_det_prime_L": 1152921504606846976000000000000000000000000
+    },
+    "Q": {
+      "num_zero_eigenvalues": 1,
+      "zeta_L_at_0": 39,
+      "zeta_L_at_minus_1": 480,
+      "regularized_det_prime_L": 1152921504606846976000000000000000000000000
+    },
+    "identical": true,
+    "special_values": {
+      "zeta_L(0)": 39,
+      "zeta_L(-1)": 480,
+      "det_prime_L": 1152921504606846976000000000000000000000000,
+      "n_times_kappa": 1152921504606846976000000000000000000000000
+    }
+  },
+  "T3_class_group": {
+    "class_number_kappa": 28823037615171174400000000000000000000000,
+    "same_class_number": true,
+    "K_W": {
+      "10": 8,
+      "40": 1,
+      "160": 14
+    },
+    "K_Q": {
+      "2": 6,
+      "10": 8,
+      "40": 1,
+      "80": 6,
+      "160": 8
+    },
+    "different_class_group": true
+  },
+  "hearing_hierarchy": [
+    [
+      "adjacency / Ihara / Bartholdi spectrum",
+      "DEAF (identical)"
+    ],
+    [
+      "spectral zeta special values",
+      "DEAF (identical)"
+    ],
+    [
+      "local neighbourhood + mu-graph (Pass 76)",
+      "DEAF (both 4K3 / 4K1)"
+    ],
+    [
+      "class number kappa (spanning trees)",
+      "DEAF (both 2^81*5^23)"
+    ],
+    [
+      "ovoid number alpha (Pass 77)",
+      "HEARS (7 vs 10)"
+    ],
+    [
+      "critical group / class group (Pass 82)",
+      "HEARS (2-Sylow differs)"
+    ]
+  ],
+  "reading": "W(3,3) and Q(4,3) are the graph analogue of Sunada-isospectral manifolds / arithmetically equivalent number fields: identical Ihara AND spectral zeta and identical class number 2^81*5^23, yet different class group (critical group, 2-Sylow). The arithmetic hears what the spectrum -- and even local geometry -- cannot; only the ovoid number and the critical group distinguish the pair.",
+  "checks": {
+    "T1_identical_Ihara_zeta_N_m": true,
+    "T2_identical_spectral_zeta": true,
+    "T2_zeta_L_0_is_n_minus_1_39": true,
+    "T2_zeta_L_minus1_is_2m_480": true,
+    "T2_det_prime_L_is_n_kappa": true,
+    "T3_same_class_number": true,
+    "T3_different_class_group": true,
+    "T3_class_number_is_2^81_5^23": true
+  }
+}
