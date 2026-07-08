@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass93.srg135.v1",
+  "status": "PASS",
+  "vertices": 135,
+  "degree": 70,
+  "lambda": 37,
+  "mu": 35,
+  "spectrum": {
+    "-5": 84,
+    "7": 50,
+    "70": 1
+  },
+  "is_SRG_135_70_37_35": true,
+  "construction": "135 weight-8 (isotropic) cosets of C_2(W)=[40,16,8] in C^perp, joined when their Hamming inner product is 0 mod 2 (the O+_8(2) polar graph).",
+  "reading": "A second strongly regular graph -- SRG(135,70,37,35), the O+_8(2) polar graph of E8/2E8 -- falls directly out of W(3,3)'s own code-lattice glue group. The 40-point E6 generalized quadrangle generates the 135-point E8 polar graph: an explicit E6 -> E8 bridge inside one finite object.",
+  "grounding": "E8 lattice: the graph on the 135 isotropic vectors of E8/2E8 is SRG(135,70,37,35).",
+  "checks": {
+    "135_isotropic_vertices": true,
+    "70_regular": true,
+    "lambda_37": true,
+    "mu_35": true,
+    "is_SRG_135_70_37_35": true,
+    "spectrum_70_7^50_-5^84": true
+  }
+}

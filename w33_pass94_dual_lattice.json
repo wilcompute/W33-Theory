@@ -1,0 +1,58 @@
+{
+  "schema": "w33.pass94.dual_lattice.v1",
+  "status": "PASS",
+  "W": {
+    "name": "W(3,3)",
+    "code": "[40,16,8]",
+    "weight_enumerator": {
+      "0": 1,
+      "8": 45,
+      "12": 1120,
+      "16": 15570,
+      "20": 32064,
+      "24": 15570,
+      "28": 1120,
+      "32": 45,
+      "40": 1
+    },
+    "doubly_even": true,
+    "glue_dim": 8,
+    "glue_dim_formula_n_minus_2k": 8,
+    "arf": 0,
+    "disc_form": "O+_8(2)",
+    "type": "plus",
+    "nonzero_isotropic": 135
+  },
+  "Q": {
+    "name": "Q(4,3)",
+    "code": "[40,10,12]",
+    "weight_enumerator": {
+      "0": 1,
+      "12": 40,
+      "16": 135,
+      "20": 672,
+      "24": 135,
+      "28": 40,
+      "40": 1
+    },
+    "doubly_even": true,
+    "glue_dim": 20,
+    "glue_dim_formula_n_minus_2k": 20,
+    "arf": 0,
+    "disc_form": "O+_20(2)",
+    "type": "plus",
+    "nonzero_isotropic": 524799
+  },
+  "reading": "The cospectral non-isomorphic mates W(3,3) and Q(4,3) separate again at the code-lattice level: both binary codes are doubly-even self-orthogonal, but the Construction-A discriminant forms are O+_8(2) (= E8/2E8, rank 8) for W and O+_20(2) (rank 20) for Q.  W's maximal 2-rank code (16) gives the minimal glue (8) and hence the E8 form; Q's lower 2-rank (10) gives rank-20 glue.  glue rank = n - 2k; 8 + 20 = 28.",
+  "checks": {
+    "W_code_40_16_8": true,
+    "Q_code_40_10_12": true,
+    "both_doubly_even": true,
+    "W_glue_8_Q_glue_20": true,
+    "glue_formula_n_minus_2k": true,
+    "W_disc_O+8_E8": true,
+    "Q_disc_O+20": true,
+    "ranks_differ_8_vs_20": true,
+    "glue_sum_28_census": true
+  }
+}

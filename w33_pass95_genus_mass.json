@@ -1,0 +1,40 @@
+{
+  "schema": "w33.pass95.genus_mass.v1",
+  "status": "PASS",
+  "lattice": {
+    "name": "Lambda_C (Construction-A even lattice of C_2(W)=[40,16,8])",
+    "rank": 40,
+    "signature": [
+      40,
+      0
+    ],
+    "even": true,
+    "determinant": "2^8",
+    "discriminant_form": "O+_8(2) = E8/2E8"
+  },
+  "genus_symbol": "II_{40,0}(2^{+8}); odd p unimodular; 2-adic Jordan 1^{+32} 2^{+8}",
+  "aut_lower_bound": {
+    "value": 56998682783907840,
+    "factorization": "2^40 * 51840 = 2^40 * |W(E6)|",
+    "reason": "all 2^40 coordinate sign changes preserve the Construction-A lattice; the permutation automorphisms of C_2(W) contain Aut(W(3,3)) = W(E6) (Pass 91)."
+  },
+  "mass": {
+    "dim8": "1/696729600",
+    "dim8_is_E8": true,
+    "dim16": "691/277667181515243520000",
+    "dim24_matches_conway_sloane": true,
+    "dim40_reference": "4.393081e+51",
+    "note": "standard mass = even-UNIMODULAR reference; Lambda_C's own (non-unimodular) genus mass differs by a 2-adic factor for the 2^{+8} block but is of the same astronomical scale. h >= mass => the dim-40 genus is vast."
+  },
+  "reading": "The W(3,3) code-lattice Lambda_C is a rank-40 even lattice of genus II_{40,0}(2^{+8}) -- unimodular away from 2, with the E8/2E8 = O+_8(2) form at 2 -- and enormous symmetry |Aut| >= 2^40 * |W(E6)|.  Where dimension 8 has the single class E8, dimension 40 has an astronomically populated genus (mass ~ 1e51), placing Lambda_C among a vast family that shares its E8-at-2 discriminant form.",
+  "checks": {
+    "mass_routine_reproduces_E8_dim8": true,
+    "mass_dim16_numerator_691": true,
+    "mass_routine_reproduces_dim24_CS": true,
+    "aut_lower_bound_2^40_times_WE6": true,
+    "genus_even_det_2^8_sig_40": true,
+    "odd_primes_unimodular": true,
+    "2adic_symbol_1^32_2^+8": true,
+    "dim40_mass_astronomical": true
+  }
+}

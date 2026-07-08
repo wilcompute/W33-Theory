@@ -1,0 +1,45 @@
+{
+  "schema": "w33.pass97.five_adic_mirror.v1",
+  "status": "PASS",
+  "parameters": {
+    "k": 12,
+    "r": 2,
+    "s": -4,
+    "r_minus_s": 6,
+    "k_minus_r": 10,
+    "k_minus_s": 16
+  },
+  "critical_group_order": {
+    "two_part": 81,
+    "five_part": 23,
+    "only_2_and_5": true
+  },
+  "ducey_bad_primes_p_div_rs": [
+    2,
+    3
+  ],
+  "p2": "bad prime; 2|k-r,2|k-s; doubly-even self-orthogonal code -> E8/2E8 = O+_8(2)",
+  "p3": "bad prime but 3 does not divide k-r or k-s -> 3-part trivial (necessary != sufficient)",
+  "p5": "good prime (5 not| r-s); 5||k-r, 5 not|k-s -> (Z/5)^(f-1) = (Z/5)^23 in the r-eigenspace",
+  "mod5_jordan": {
+    "valency_collides_with_r": true,
+    "nullity_A_2I": 24,
+    "nullity_A_2I_squared": 25,
+    "one_size2_jordan_block": true,
+    "five_code_ker_A_2I": "[40,24]_5"
+  },
+  "reading": "The critical group of W(3,3) has order 2^81 * 5^23.  The exceptional E8/2E8 = O+_8(2) structure is intrinsically 2-adic: it requires 2 | (r-s)=6 (a Ducey bad prime, so the 2-part is not parameter-determined) together with the doubly-even self-orthogonal binary code.  The prime 3 is also bad (3|r-s) but empty (3 does not divide k-r or k-s).  The prime 5 is good (5 not| r-s), so its part is elementary abelian by theorem: (Z/5)^{f-1} = (Z/5)^23, f=mult(r)=24, forced clean by 5||(k-r) and a size-2 Jordan block from the k=r mod 5 collision.  There is no E8 at 5 -- that asymmetry is exactly why E8 sits at 2.",
+  "checks": {
+    "|K|_is_2^81_5^23": true,
+    "bad_primes_2_and_3": true,
+    "p2_bad_and_2_divides_kr_ks": true,
+    "p3_bad_but_empty": true,
+    "p5_good_5_notdiv_rs": true,
+    "5_exactly_divides_kr": true,
+    "5_notdiv_ks": true,
+    "five_part_is_Z5_f_minus_1": true,
+    "mod5_valency_collides_with_r": true,
+    "mod5_jordan_block_size2": true,
+    "5code_ker_A_2I_is_40_24": true
+  }
+}

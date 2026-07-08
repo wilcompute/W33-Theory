@@ -1,0 +1,50 @@
+{
+  "schema": "w33.pass96.switching_ladder.v1",
+  "status": "PASS",
+  "num_graphs": 28,
+  "two_rank_ladder": {
+    "16": 17,
+    "14": 8,
+    "12": 2,
+    "10": 1
+  },
+  "ladder_multiplicities": [
+    17,
+    8,
+    2,
+    1
+  ],
+  "W_index_28_rank": 16,
+  "Q_index_27_rank": 10,
+  "Q_is_unique_min_2rank": true,
+  "seidel_smith_group": {
+    "structure": "Z/3 (+) (Z/5)^23 (+) Z/25 (+) (Z/7)^15",
+    "as_prime_power_multiplicities": {
+      "3": 1,
+      "5": 23,
+      "7": 15,
+      "25": 1
+    },
+    "constant_across_all_28": true,
+    "is_switching_invariant": true,
+    "p_part_ranks": {
+      "3": 1,
+      "5": 24,
+      "7": 15
+    },
+    "ducey_type": "5-part rank 24 = mult(Seidel -5); 7-part rank 15 = mult(Seidel 7)"
+  },
+  "reading": "The 28 SRG(40,12,2,4) share the Seidel spectrum {15,-5^24,7^15} AND the Seidel Smith group Z/3(+)(Z/5)^23(+)Z/25(+)(Z/7)^15 -- a genuine switching invariant -- yet they split into the ladder {17,8,2,1} by the 2-rank of the adjacency matrix.  So the arithmetic ladder is strictly finer than (transverse to) the two-graph switching class: it distinguishes graphs the two-graph cannot.  W(3,3) is generic (2-rank 16); Q(4,3) is the unique minimum-2-rank member (rank 10, its maximal glue of Pass 94).  The (Z/5)^23 echoes the critical group's constant 5-part (Pass 89).",
+  "checks": {
+    "num_graphs_28": true,
+    "ladder_17_8_2_1": true,
+    "ladder_ranks_16_14_12_10": true,
+    "W28_rank16_generic": true,
+    "Q27_rank10_unique_min": true,
+    "seidel_smith_constant": true,
+    "seidel_smith_struct": true,
+    "ladder_NOT_switching_invariant": true,
+    "seidel_5part_rank24_eq_mult_minus5": true,
+    "seidel_7part_rank15_eq_mult_7": true
+  }
+}
