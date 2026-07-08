@@ -1,0 +1,40 @@
+{
+  "schema": "w33.pass85.codes.v1",
+  "status": "PASS",
+  "code": {
+    "n": 40,
+    "k": 16,
+    "d": 8,
+    "weight_distribution": {
+      "0": 1,
+      "8": 45,
+      "12": 1120,
+      "16": 15570,
+      "20": 32064,
+      "24": 15570,
+      "28": 1120,
+      "32": 45,
+      "40": 1
+    },
+    "total_codewords": 65536,
+    "doubly_even": true,
+    "self_orthogonal": true,
+    "symmetric_contains_allones": true,
+    "min_weight": 8
+  },
+  "weight_enumerator": "x^40 + 45*x^32y^8 + 1120*x^28y^12 + 15570*x^24y^16 + 32064*x^20y^20 + 15570*x^16y^24 + 1120*x^12y^28 + 45*x^8y^32 + 1*x^0y^40",
+  "connections": {
+    "45_min_weight_words_are_tritangent_planes": true,
+    "self_orthogonality_reason": "A^2 = 12I+2A+4(J-I-A) = 0 mod 2 (k,lambda,mu all even)",
+    "length_40_is_8x5_doubly_even": true,
+    "gleason_modular_forms": "doubly-even self-orthogonal subcode of length 40; weight enumerators of doubly-even self-dual codes are polynomials in the E8 enumerator x^8+14x^4y^4+y^8 (Gleason)."
+  },
+  "checks": {
+    "is_40_16_8": true,
+    "weight_distribution_sums_to_2^16": true,
+    "doubly_even": true,
+    "self_orthogonal_A2_is_0_mod_2": true,
+    "symmetric_contains_allones": true,
+    "min_weight_words_45_tritangent_planes": true
+  }
+}

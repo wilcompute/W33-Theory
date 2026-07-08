@@ -1,0 +1,8 @@
+binary_n=40
+binary_k=16
+binary_weight_distribution=[ 1, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 1120, 0, 0, 0, 15570, 0, 0, 0, 32064, 0, 0, 0, 15570, 0, 0, 0, 1120, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1 ]
+binary_d=8
+binary_self_orthogonal=true
+binary_doubly_even=true
+binary_all_weights_even=true
+binary_contains_allones=true
