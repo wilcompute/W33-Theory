@@ -1,0 +1,1081 @@
+{
+  "checks": {
+    "hashimoto_tail_gap_verified": true,
+    "noisy_syndrome_rows_verified": true,
+    "packet_vm_terwilliger_channels": true,
+    "rotation_system_verified": true,
+    "spence_classifier_all_28": true
+  },
+  "schema": "w33.pass81.rotation_noise_tail_vm_classifier.v1",
+  "status": "PASS",
+  "track1_k12_rotation_system": {
+    "boundary": "This is an explicit orientable triangular K12 embedding.  Its 44 face boundaries span rank 43, while the Pass 80 native code uses a rank-47 triangle-cycle stabilizer basis.  The code basis is larger than the face-boundary space, so the embedding is a comparison object, not a replacement for the full stabilizer basis.",
+    "checks": {
+      "all_vertex_links_are_11_cycles": true,
+      "directed_arcs_once": true,
+      "euler_genus_6": true,
+      "face_boundaries_are_cycles": true,
+      "face_boundary_rank_43": true,
+      "face_count_44": true,
+      "nontrivial_overlap": true,
+      "pass80_z_rank_47": true
+    },
+    "comparison_with_pass80_z_basis": {
+      "combined_rank": 55,
+      "face_boundary_rank": 43,
+      "faces_in_pass80_span": 11,
+      "intersection_dimension": 35,
+      "pass80_checks_in_face_span": 9,
+      "pass80_z_rank": 47
+    },
+    "counts": {
+      "edges": 66,
+      "euler": -10,
+      "faces": 44,
+      "genus": 6,
+      "vertices": 12
+    },
+    "faces": [
+      [
+        0,
+        1,
+        6
+      ],
+      [
+        0,
+        2,
+        8
+      ],
+      [
+        0,
+        3,
+        11
+      ],
+      [
+        0,
+        4,
+        3
+      ],
+      [
+        0,
+        5,
+        9
+      ],
+      [
+        0,
+        7,
+        2
+      ],
+      [
+        0,
+        10,
+        5
+      ],
+      [
+        0,
+        6,
+        10
+      ],
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        9,
+        4
+      ],
+      [
+        0,
+        11,
+        7
+      ],
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        1,
+        9,
+        7
+      ],
+      [
+        1,
+        5,
+        11
+      ],
+      [
+        1,
+        10,
+        9
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        7,
+        4
+      ],
+      [
+        1,
+        8,
+        10
+      ],
+      [
+        1,
+        11,
+        6
+      ],
+      [
+        2,
+        5,
+        10
+      ],
+      [
+        4,
+        7,
+        10
+      ],
+      [
+        3,
+        4,
+        10
+      ],
+      [
+        2,
+        10,
+        11
+      ],
+      [
+        4,
+        11,
+        8
+      ],
+      [
+        4,
+        9,
+        11
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        4,
+        8,
+        6
+      ],
+      [
+        2,
+        11,
+        9
+      ],
+      [
+        2,
+        6,
+        3
+      ],
+      [
+        2,
+        7,
+        6
+      ],
+      [
+        2,
+        9,
+        8
+      ],
+      [
+        3,
+        9,
+        5
+      ],
+      [
+        3,
+        10,
+        8
+      ],
+      [
+        5,
+        7,
+        8
+      ],
+      [
+        6,
+        8,
+        9
+      ],
+      [
+        6,
+        9,
+        10
+      ],
+      [
+        3,
+        7,
+        9
+      ],
+      [
+        7,
+        11,
+        10
+      ],
+      [
+        3,
+        6,
+        11
+      ],
+      [
+        3,
+        8,
+        7
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        5,
+        8,
+        11
+      ]
+    ],
+    "rotations": {
+      "0": [
+        1,
+        6,
+        10,
+        5,
+        9,
+        4,
+        3,
+        11,
+        7,
+        2,
+        8
+      ],
+      "1": [
+        0,
+        8,
+        10,
+        9,
+        7,
+        4,
+        2,
+        3,
+        5,
+        11,
+        6
+      ],
+      "10": [
+        0,
+        6,
+        9,
+        1,
+        8,
+        3,
+        4,
+        7,
+        11,
+        2,
+        5
+      ],
+      "11": [
+        0,
+        3,
+        6,
+        1,
+        5,
+        8,
+        4,
+        9,
+        2,
+        10,
+        7
+      ],
+      "2": [
+        0,
+        7,
+        6,
+        3,
+        1,
+        4,
+        5,
+        10,
+        11,
+        9,
+        8
+      ],
+      "3": [
+        0,
+        4,
+        10,
+        8,
+        7,
+        9,
+        5,
+        1,
+        2,
+        6,
+        11
+      ],
+      "4": [
+        0,
+        9,
+        11,
+        8,
+        6,
+        5,
+        2,
+        1,
+        7,
+        10,
+        3
+      ],
+      "5": [
+        0,
+        10,
+        2,
+        4,
+        6,
+        7,
+        8,
+        11,
+        1,
+        3,
+        9
+      ],
+      "6": [
+        0,
+        1,
+        11,
+        3,
+        2,
+        7,
+        5,
+        4,
+        8,
+        9,
+        10
+      ],
+      "7": [
+        0,
+        11,
+        10,
+        4,
+        1,
+        9,
+        3,
+        8,
+        5,
+        6,
+        2
+      ],
+      "8": [
+        0,
+        2,
+        9,
+        6,
+        4,
+        11,
+        5,
+        7,
+        3,
+        10,
+        1
+      ],
+      "9": [
+        0,
+        5,
+        3,
+        7,
+        1,
+        10,
+        6,
+        8,
+        2,
+        11,
+        4
+      ]
+    },
+    "verified": true
+  },
+  "track2_noisy_syndrome_simulator": {
+    "best_rows_at_p_0_001": {
+      "0.0": {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 1,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      "0.002": {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      "0.01": {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      }
+    },
+    "boundary": "This is a phenomenological repeated-syndrome simulator.  It is not yet a gate-level circuit-noise threshold calculation.",
+    "checks": {
+      "repetition_helps_at_q_0_01": true,
+      "rows_generated": true,
+      "zero_syndrome_noise_best_success_high": true
+    },
+    "decoder": "single-error ideal lookup, applied to majority-voted syndrome",
+    "model": "phenomenological qutrit data errors plus repeated noisy syndrome extraction",
+    "rng_seed": 81033,
+    "rows": [
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 1,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.05,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.0005,
+        "rounds": 1,
+        "success_rate": 0.95,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.15,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 1,
+        "success_rate": 0.85,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0278
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.0005,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 1,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0556,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.001,
+        "rounds": 1,
+        "success_rate": 0.9444,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0278
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 3,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.001,
+        "rounds": 5,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.1111,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 1,
+        "success_rate": 0.8889,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0222
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.001,
+        "rounds": 3,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.0,
+        "multi_error_trial_rate": 0.0,
+        "physical_error_p": 0.001,
+        "rounds": 5,
+        "success_rate": 1.0,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.002,
+        "rounds": 1,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.0167,
+        "multi_error_trial_rate": 0.0167,
+        "physical_error_p": 0.002,
+        "rounds": 3,
+        "success_rate": 0.9833,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0167
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.002,
+        "rounds": 5,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.0611,
+        "multi_error_trial_rate": 0.0167,
+        "physical_error_p": 0.002,
+        "rounds": 1,
+        "success_rate": 0.9389,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0278
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.002,
+        "rounds": 3,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.0056,
+        "multi_error_trial_rate": 0.0056,
+        "physical_error_p": 0.002,
+        "rounds": 5,
+        "success_rate": 0.9944,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0056
+      },
+      {
+        "logical_failure_rate": 0.1167,
+        "multi_error_trial_rate": 0.0111,
+        "physical_error_p": 0.002,
+        "rounds": 1,
+        "success_rate": 0.8833,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0444
+      },
+      {
+        "logical_failure_rate": 0.0111,
+        "multi_error_trial_rate": 0.0111,
+        "physical_error_p": 0.002,
+        "rounds": 3,
+        "success_rate": 0.9889,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0111
+      },
+      {
+        "logical_failure_rate": 0.0111,
+        "multi_error_trial_rate": 0.0111,
+        "physical_error_p": 0.002,
+        "rounds": 5,
+        "success_rate": 0.9889,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0111
+      },
+      {
+        "logical_failure_rate": 0.0444,
+        "multi_error_trial_rate": 0.0444,
+        "physical_error_p": 0.005,
+        "rounds": 1,
+        "success_rate": 0.9556,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0444
+      },
+      {
+        "logical_failure_rate": 0.0389,
+        "multi_error_trial_rate": 0.0389,
+        "physical_error_p": 0.005,
+        "rounds": 3,
+        "success_rate": 0.9611,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0389
+      },
+      {
+        "logical_failure_rate": 0.0333,
+        "multi_error_trial_rate": 0.0333,
+        "physical_error_p": 0.005,
+        "rounds": 5,
+        "success_rate": 0.9667,
+        "syndrome_error_q": 0.0,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0333
+      },
+      {
+        "logical_failure_rate": 0.1167,
+        "multi_error_trial_rate": 0.0611,
+        "physical_error_p": 0.005,
+        "rounds": 1,
+        "success_rate": 0.8833,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.1
+      },
+      {
+        "logical_failure_rate": 0.0278,
+        "multi_error_trial_rate": 0.0278,
+        "physical_error_p": 0.005,
+        "rounds": 3,
+        "success_rate": 0.9722,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0278
+      },
+      {
+        "logical_failure_rate": 0.0333,
+        "multi_error_trial_rate": 0.0333,
+        "physical_error_p": 0.005,
+        "rounds": 5,
+        "success_rate": 0.9667,
+        "syndrome_error_q": 0.002,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0333
+      },
+      {
+        "logical_failure_rate": 0.2,
+        "multi_error_trial_rate": 0.0278,
+        "physical_error_p": 0.005,
+        "rounds": 1,
+        "success_rate": 0.8,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.1
+      },
+      {
+        "logical_failure_rate": 0.0667,
+        "multi_error_trial_rate": 0.0556,
+        "physical_error_p": 0.005,
+        "rounds": 3,
+        "success_rate": 0.9333,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0556
+      },
+      {
+        "logical_failure_rate": 0.0333,
+        "multi_error_trial_rate": 0.0333,
+        "physical_error_p": 0.005,
+        "rounds": 5,
+        "success_rate": 0.9667,
+        "syndrome_error_q": 0.01,
+        "trials": 180,
+        "uncorrected_nonzero_rate": 0.0333
+      }
+    ]
+  },
+  "track3_hashimoto_tail_gap": {
+    "directed_edge_degree": 480,
+    "edge_group_order": 25920,
+    "minus_constituents": [
+      {
+        "character_index": 8,
+        "degree": 15,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 9,
+        "degree": 20,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 10,
+        "degree": 24,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 18,
+        "degree": 60,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 20,
+        "degree": 81,
+        "multiplicity": 1
+      }
+    ],
+    "minus_dimension_sum": 200,
+    "minus_eigenspace_dimension": 200,
+    "plus_constituents": [
+      {
+        "character_index": 11,
+        "degree": 30,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 16,
+        "degree": 45,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 17,
+        "degree": 45,
+        "multiplicity": 1
+      },
+      {
+        "character_index": 20,
+        "degree": 81,
+        "multiplicity": 1
+      }
+    ],
+    "plus_dimension_sum": 201,
+    "plus_eigenspace_dimension": 201,
+    "tail_reading": "The -1 Hashimoto eigenspace is the clean 200-dimensional tail.  The +1 eigenspace has dimension 201, so the x=1 Bass root fuses with the + tail as a single GAP eigenspace decomposition."
+  },
+  "track4_packet_vm_terwilliger_channels": {
+    "checks": {
+      "channels_attached": true,
+      "m3_channel_used": true,
+      "packet_vm_passes": true,
+      "sixteen_ops_available": true
+    },
+    "packet_vm_status": "PASS",
+    "sample_channel_totals": {
+      "M2(Q)": 98,
+      "M3(Q)": 251,
+      "Q": 80
+    },
+    "samples": [
+      {
+        "result": 140,
+        "sample": "sample_sum_squares",
+        "terwilliger_channel_counts": {
+          "M2(Q)": 12,
+          "M3(Q)": 65,
+          "Q": 5
+        }
+      },
+      {
+        "result": "00110000",
+        "sample": "sample_rule110_step",
+        "terwilliger_channel_counts": {
+          "M2(Q)": 86,
+          "M3(Q)": 186,
+          "Q": 75
+        }
+      }
+    ],
+    "terwilliger_op_count": 16
+  },
+  "track5_spence_universe_classifier": {
+    "checks": {
+      "all_28_classified": true,
+      "cheap_stage_classifies_26": true,
+      "expensive_stage_classifies_2": true,
+      "only_one_residual_pair": true
+    },
+    "classified_count": 28,
+    "classifier": [
+      {
+        "signature": "((('C12', 12), ('C6+C6', 28)), 10)",
+        "spence_index": 1,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 10), ('C3+C3+C6', 4), ('C3+C9', 8), ('C6+C6', 18)), 10)",
+        "spence_index": 2,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 2), ('C3+C3+C3+C3', 2), ('C3+C3+C6', 16), ('C3+C9', 8), ('C6+C6', 12)), 10)",
+        "spence_index": 3,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 16), ('C3+C3+C6', 16), ('C6+C6', 8)), 10)",
+        "spence_index": 4,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 6), ('C3+C3+C6', 10), ('C3+C9', 12), ('C6+C6', 12)), 10)",
+        "spence_index": 5,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 12), ('C3+C3+C3+C3', 2), ('C3+C3+C6', 14), ('C3+C9', 12)), 7)",
+        "spence_index": 6,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 9), ('C3+C3+C3+C3', 4), ('C3+C3+C6', 9), ('C3+C9', 18)), 7)",
+        "spence_index": 7,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 4), ('C3+C3+C3+C3', 2), ('C3+C3+C6', 10), ('C3+C9', 20), ('C6+C6', 4)), 7)",
+        "spence_index": 8,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 10), ('C3+C3+C6', 18), ('C3+C9', 12)), 7)",
+        "spence_index": 9,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 8), ('C3+C3+C3+C3', 3), ('C3+C3+C6', 9), ('C3+C9', 18), ('C6+C6', 2)), 7)",
+        "spence_index": 10,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 6), ('C3+C3+C3+C3', 3), ('C3+C3+C6', 3), ('C3+C9', 22), ('C6+C6', 6)), 7)",
+        "spence_index": 11,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 4), ('C3+C3+C6', 12), ('C3+C9', 24)), 10)",
+        "spence_index": 12,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 4), ('C3+C3+C6', 36)), 7)",
+        "spence_index": 13,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 12), ('C3+C3+C3+C3', 1), ('C3+C3+C6', 3), ('C3+C9', 18), ('C6+C6', 6)), 7)",
+        "spence_index": 14,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C6', 16), ('C6+C6', 24)), 10)",
+        "spence_index": 15,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 16), ('C3+C3+C3+C3', 1), ('C3+C3+C6', 5), ('C3+C9', 14), ('C6+C6', 4)), 7)",
+        "spence_index": 16,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 12), ('C3+C3+C6', 24), ('C6+C6', 4)), 10)",
+        "spence_index": 17,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 6), ('C3+C3+C6', 12), ('C3+C9', 16), ('C6+C6', 6)), 10)",
+        "spence_index": 18,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 18), ('C3+C3+C3+C3', 1), ('C3+C9', 12), ('C6+C6', 9)), 7)",
+        "spence_index": 19,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "induced6:-6825289529144626533",
+        "spence_index": 20,
+        "stage": "targeted_induced6_profile"
+      },
+      {
+        "signature": "((('C12', 27), ('C3+C3+C3+C3', 1), ('C3+C9', 12)), 7)",
+        "spence_index": 21,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 18), ('C3+C3+C3+C3', 2), ('C3+C9', 20)), 7)",
+        "spence_index": 22,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C12', 8), ('C3+C3+C3+C3', 4), ('C3+C3+C6', 20), ('C3+C9', 8)), 10)",
+        "spence_index": 23,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "induced6:8953217462096578049",
+        "spence_index": 24,
+        "stage": "targeted_induced6_profile"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 4), ('C3+C9', 36)), 7)",
+        "spence_index": 25,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 8), ('C3+C9', 32)), 7)",
+        "spence_index": 26,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 40),), 10)",
+        "spence_index": 27,
+        "stage": "local_cycle_histogram_plus_alpha"
+      },
+      {
+        "signature": "((('C3+C3+C3+C3', 40),), 7)",
+        "spence_index": 28,
+        "stage": "local_cycle_histogram_plus_alpha"
+      }
+    ],
+    "local_cycle_classes": 26,
+    "local_plus_alpha_classes": 27,
+    "residual_after_local_plus_alpha": [
+      [
+        20,
+        24
+      ]
+    ],
+    "stage_counts": {
+      "local_cycle_histogram_plus_alpha": 26,
+      "targeted_induced6_profile": 2
+    }
+  }
+}

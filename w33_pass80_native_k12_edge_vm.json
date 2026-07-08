@@ -1,0 +1,781 @@
+{
+  "checks": {
+    "edge_zeta_factor_degree_480": true,
+    "native_k12_code_replaces_block_witness": true,
+    "single_error_decoder_complete": true,
+    "spence_residual_pair_separated": true,
+    "terwilliger_vm_isa_16_ops": true
+  },
+  "schema": "w33.pass80.native_k12_edge_vm.v1",
+  "status": "PASS",
+  "track1_native_k12_code": {
+    "boundary": "This replaces the Pass 79 block-plus-ancilla witness with a K12-native triangle-cycle CSS code.  The selected 47 Z checks are a stabilizer basis on the K12 triangle-cycle space; they are not asserted to be the 44 faces of one committed orientable K12 embedding.",
+    "checks": {
+      "all_edges_covered_by_triangle_checks": true,
+      "commuting_css": true,
+      "k_logical_8": true,
+      "no_x_side_logical_weight_1_or_2": true,
+      "no_z_side_logical_weight_1_or_2": true,
+      "x_rank_11": true,
+      "x_side_has_weight_3_logical": true,
+      "z_rank_47": true,
+      "z_side_has_weight_3_logical": true
+    },
+    "edge_coverage_histogram": {
+      "1": 19,
+      "2": 24,
+      "3": 18,
+      "4": 5
+    },
+    "parameters": {
+      "distance": 3,
+      "k_logical": 8,
+      "n": 66,
+      "rank_sum": 58,
+      "rank_x": 11,
+      "rank_z": 47
+    },
+    "status": "native_K12_triangle_cycle_CSS_witness",
+    "surface_context": {
+      "K12_edges": 66,
+      "K12_vertices": 12,
+      "euler_characteristic": -10,
+      "orientable_genus_if_triangular_embedding_chosen": 6,
+      "triangular_faces_for_genus6_embedding": 44
+    },
+    "verified": true,
+    "x_check_source": "12 oriented K12 vertex-incidence rows, rank 11",
+    "x_side_weight3_logical": [
+      3,
+      [
+        24,
+        27,
+        42
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "z_check_source": "47 independent oriented K12 triangle-cycle rows, rank 47",
+    "z_side_weight3_logical": [
+      3,
+      [
+        0,
+        1,
+        11
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "z_triangle_checks": [
+      [
+        3,
+        4,
+        10
+      ],
+      [
+        3,
+        8,
+        9
+      ],
+      [
+        4,
+        5,
+        8
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        7
+      ],
+      [
+        1,
+        10,
+        11
+      ],
+      [
+        2,
+        8,
+        11
+      ],
+      [
+        2,
+        4,
+        9
+      ],
+      [
+        6,
+        7,
+        11
+      ],
+      [
+        5,
+        6,
+        10
+      ],
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        5,
+        9,
+        11
+      ],
+      [
+        3,
+        5,
+        7
+      ],
+      [
+        0,
+        9,
+        10
+      ],
+      [
+        1,
+        7,
+        9
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        7,
+        8,
+        10
+      ],
+      [
+        4,
+        7,
+        11
+      ],
+      [
+        0,
+        3,
+        11
+      ],
+      [
+        0,
+        5,
+        8
+      ],
+      [
+        2,
+        3,
+        10
+      ],
+      [
+        2,
+        6,
+        9
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        0,
+        1,
+        11
+      ],
+      [
+        8,
+        9,
+        10
+      ],
+      [
+        2,
+        3,
+        8
+      ],
+      [
+        0,
+        7,
+        8
+      ],
+      [
+        1,
+        6,
+        9
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        7,
+        10
+      ],
+      [
+        1,
+        5,
+        11
+      ],
+      [
+        8,
+        9,
+        11
+      ],
+      [
+        1,
+        6,
+        10
+      ],
+      [
+        0,
+        8,
+        11
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        4,
+        7,
+        8
+      ],
+      [
+        1,
+        5,
+        9
+      ],
+      [
+        1,
+        3,
+        11
+      ],
+      [
+        0,
+        2,
+        11
+      ],
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        3,
+        6,
+        8
+      ],
+      [
+        1,
+        3,
+        7
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        6,
+        7
+      ]
+    ]
+  },
+  "track2_edge_zeta_factor_table": {
+    "boundary": "The Bass/Hashimoto factor table is complete spectrally.  The GAP directed-edge decomposition supplies the representation carrier, but a full noncommutative Artin splitting of the 200-dimensional tail is still a stronger target.",
+    "directed_edge_dimension": 480,
+    "factor_table": [
+      {
+        "degree": 400,
+        "det_I_minus_uB_factor": "(1 - u^2)^200",
+        "exponent": 200,
+        "hashimoto_factor": "(x^2 - 1)^200",
+        "reading": "pure directed-edge tail not visible in the point module",
+        "source": "Bass tail"
+      },
+      {
+        "degree": 2,
+        "det_I_minus_uB_factor": "1 - 12u + 11u^2",
+        "exponent": 1,
+        "hashimoto_factor": "x^2 - 12x + 11 = (x-1)(x-11)",
+        "reading": "trivial/Perron sector",
+        "source": "theta=12 point constituent"
+      },
+      {
+        "degree": 48,
+        "det_I_minus_uB_factor": "(1 - 2u + 11u^2)^24",
+        "exponent": 24,
+        "hashimoto_factor": "(x^2 - 2x + 11)^24",
+        "reading": "degree-24 point module sector",
+        "source": "theta=2 point constituent"
+      },
+      {
+        "degree": 30,
+        "det_I_minus_uB_factor": "(1 + 4u + 11u^2)^15",
+        "exponent": 15,
+        "hashimoto_factor": "(x^2 + 4x + 11)^15",
+        "reading": "degree-15 point module sector",
+        "source": "theta=-4 point constituent"
+      }
+    ],
+    "gap_directed_edge_constituents": [
+      [
+        1,
+        1
+      ],
+      [
+        15,
+        2
+      ],
+      [
+        15,
+        1
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        30,
+        1
+      ],
+      [
+        45,
+        1
+      ],
+      [
+        45,
+        1
+      ],
+      [
+        60,
+        1
+      ],
+      [
+        81,
+        2
+      ]
+    ],
+    "gap_directed_edge_rank": 24,
+    "hashimoto_degree": 480
+  },
+  "track3_spence_residual_separator": {
+    "combined_hearing_statement": "local cycle histogram + alpha hears 27 classes; adding the targeted induced-6 profile on the only residual pair hears all 28 Spence graphs.",
+    "difference_count": 20,
+    "first_differences": [
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          "edge_count": 3
+        },
+        "spence_20_count": 8292,
+        "spence_24_count": 8256
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "edge_count": 3
+        },
+        "spence_20_count": 275292,
+        "spence_24_count": 275400
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "edge_count": 3
+        },
+        "spence_20_count": 217080,
+        "spence_24_count": 216972
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "edge_count": 3
+        },
+        "spence_20_count": 18948,
+        "spence_24_count": 18984
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            0,
+            1,
+            2,
+            2,
+            3
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 55368,
+        "spence_24_count": 55476
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 27882,
+        "spence_24_count": 27774
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            3
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 285408,
+        "spence_24_count": 285192
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 287352,
+        "spence_24_count": 287568
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 29412,
+        "spence_24_count": 29520
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "edge_count": 4
+        },
+        "spence_20_count": 136170,
+        "spence_24_count": 136062
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            3
+          ],
+          "edge_count": 5
+        },
+        "spence_20_count": 91836,
+        "spence_24_count": 91728
+      },
+      {
+        "profile": {
+          "degree_sequence": [
+            0,
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          "edge_count": 5
+        },
+        "spence_20_count": 204120,
+        "spence_24_count": 204336
+      }
+    ],
+    "invariant": "induced 6-vertex edge-count/degree-sequence profile histogram",
+    "prior_residual_pair": [
+      20,
+      24
+    ],
+    "profile_classes_spence20": 63,
+    "profile_classes_spence24": 63,
+    "separates_pair": true,
+    "total_6_subsets_per_graph": 3838380
+  },
+  "track4_terwilliger_vm_isa": {
+    "channel_counts": {
+      "M2(Q)": 4,
+      "M3(Q)": 9,
+      "Q": 3
+    },
+    "checks": {
+      "matches_block_sizes": true,
+      "matches_component_dimensions": true,
+      "sixteen_ops": true
+    },
+    "micro_op_count": 16,
+    "micro_ops": [
+      {
+        "arity": 1,
+        "block": "Q",
+        "channel": "control/selector scalar",
+        "opcode": "T_SCALAR_0"
+      },
+      {
+        "arity": 1,
+        "block": "Q",
+        "channel": "control/selector scalar",
+        "opcode": "T_SCALAR_1"
+      },
+      {
+        "arity": 1,
+        "block": "Q",
+        "channel": "control/selector scalar",
+        "opcode": "T_SCALAR_2"
+      },
+      {
+        "arity": 2,
+        "block": "M2(Q)",
+        "channel": "binary relay/cut-plane channel",
+        "opcode": "T_M2_00"
+      },
+      {
+        "arity": 2,
+        "block": "M2(Q)",
+        "channel": "binary relay/cut-plane channel",
+        "opcode": "T_M2_01"
+      },
+      {
+        "arity": 2,
+        "block": "M2(Q)",
+        "channel": "binary relay/cut-plane channel",
+        "opcode": "T_M2_10"
+      },
+      {
+        "arity": 2,
+        "block": "M2(Q)",
+        "channel": "binary relay/cut-plane channel",
+        "opcode": "T_M2_11"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_00"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_01"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_02"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_10"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_11"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_12"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_20"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_21"
+      },
+      {
+        "arity": 3,
+        "block": "M3(Q)",
+        "channel": "native ternary/qutrit local processor channel",
+        "opcode": "T_M3_22"
+      }
+    ],
+    "source_component_dimensions": [
+      1,
+      1,
+      1,
+      4,
+      9
+    ],
+    "source_wedderburn_blocks": [
+      1,
+      1,
+      1,
+      2,
+      3
+    ],
+    "vm_reading": "The point-rooted local algebra compiles to 3 scalar selector ops, 4 M2 binary-relay ops, and 9 M3 native ternary processor ops.  This is the local ISA shape implied by Q+Q+Q+M2+M3."
+  },
+  "track5_syndrome_decoder": {
+    "all_single_errors_corrected": true,
+    "collisions": [],
+    "decoder_boundary": "This is an exact ideal-syndrome lookup for all single-qutrit Pauli errors.  It is not a noisy circuit-level threshold simulation.",
+    "expected_single_error_count": 528,
+    "sample_decodes": [
+      {
+        "corrects_exactly": true,
+        "decoded_correction": [
+          0,
+          1,
+          0
+        ],
+        "error": {
+          "site": 0,
+          "x": 1,
+          "z": 0
+        },
+        "syndrome_weight": 2
+      },
+      {
+        "corrects_exactly": true,
+        "decoded_correction": [
+          17,
+          0,
+          2
+        ],
+        "error": {
+          "site": 17,
+          "x": 0,
+          "z": 2
+        },
+        "syndrome_weight": 2
+      },
+      {
+        "corrects_exactly": true,
+        "decoded_correction": [
+          58,
+          2,
+          1
+        ],
+        "error": {
+          "site": 58,
+          "x": 2,
+          "z": 1
+        },
+        "syndrome_weight": 4
+      },
+      {
+        "corrects_exactly": true,
+        "decoded_correction": [
+          65,
+          1,
+          2
+        ],
+        "error": {
+          "site": 65,
+          "x": 1,
+          "z": 2
+        },
+        "syndrome_weight": 3
+      }
+    ],
+    "single_error_syndrome_count": 528
+  }
+}

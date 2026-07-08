@@ -1,0 +1,215 @@
+{
+  "checks": {
+    "T1_vertex_artin_ihara_complete_for_point_module": true,
+    "T2_terwilliger_fingerprint": true,
+    "T3_ovoid_spread_duality": true,
+    "T4_code_boundary_kept_open": true,
+    "T5_weil_clifford_split": true,
+    "T6_spence_boundary_exact_pair": true,
+    "T7_ladder_checks": true
+  },
+  "schema": "w33.pass78.equivariant_closure.v1",
+  "status": "PASS",
+  "track1_vertex_artin_ihara": {
+    "active_constituent_degrees": {
+      "1": 1,
+      "15": 1,
+      "24": 1
+    },
+    "active_dimension_sum": 40,
+    "active_factors": [
+      {
+        "adjacency_eigenvalue": 12,
+        "bass_factor": "1 - 12u + 11u^2",
+        "degree": 1,
+        "exponent": 1,
+        "module": "trivial"
+      },
+      {
+        "adjacency_eigenvalue": 2,
+        "bass_factor": "1 - 2u + 11u^2",
+        "degree": 24,
+        "exponent": 24,
+        "module": "degree-24 constituent"
+      },
+      {
+        "adjacency_eigenvalue": -4,
+        "bass_factor": "1 + 4u + 11u^2",
+        "degree": 15,
+        "exponent": 15,
+        "module": "one degree-15 constituent"
+      }
+    ],
+    "active_irreducible_count_on_point_module": 3,
+    "all_irreducible_degree_histogram": {
+      "1": 1,
+      "10": 2,
+      "15": 2,
+      "20": 6,
+      "24": 1,
+      "30": 3,
+      "36": 2,
+      "4": 2,
+      "40": 2,
+      "45": 2,
+      "5": 2,
+      "6": 1,
+      "60": 4,
+      "64": 2,
+      "80": 1,
+      "81": 1
+    },
+    "bass_denominator_degree": 480,
+    "bass_tail_factor": "(1 - u^2)^200",
+    "boundary": "This is the complete Artin-Ihara map for the 40-dimensional point permutation module. It is not yet the full edge-zeta Artin factorization across all 34 irreducibles.",
+    "degree_check": true,
+    "directed_edge_count": 480,
+    "inactive_irreducible_count_on_point_module": 31,
+    "irreducible_character_count": 34
+  },
+  "track2_terwilliger_fingerprint": {
+    "bose_mesner_dimension": 3,
+    "boundary": "Pass 78 records a fast reproducible Terwilliger fingerprint. The full Wedderburn/T-module decomposition remains the next exact-algebra target.",
+    "dimension_lift": "3 -> 16",
+    "distance_fibre_sizes": [
+      1,
+      12,
+      27
+    ],
+    "local_graph_degree": 2,
+    "local_graph_spectrum": {
+      "-1": 8,
+      "2": 4
+    },
+    "local_graph_vertices": 12,
+    "second_subconstituent_degree": 8,
+    "second_subconstituent_spectrum": {
+      "-1": 8,
+      "-4": 6,
+      "2": 12,
+      "8": 1
+    },
+    "second_subconstituent_vertices": 27,
+    "terwilliger_dimension": 16
+  },
+  "track3_ovoid_spread_duality": {
+    "Q43_has_ovoid": true,
+    "W33_has_ovoid": false,
+    "alpha_Q43": 10,
+    "alpha_W33": 7,
+    "duality_reading": "The odd-q W side has no ovoid but has 36 spreads; the parabolic-quadric dual has ovoids. The separator is global geometry, not adjacency spectrum.",
+    "line_participation_profile": {
+      "9": 40
+    },
+    "overlap_4_graph": {
+      "adjacent_common_neighbor_profile": {
+        "6": 270
+      },
+      "degree_profile": {
+        "15": 36
+      },
+      "edge_count": 270,
+      "nonadjacent_common_neighbor_profile": {
+        "6": 360
+      },
+      "overlap_value": 4,
+      "vertices": 36
+    },
+    "spread_count": 36,
+    "spread_overlap_profile": {
+      "1": 360,
+      "4": 270
+    },
+    "spread_size_profile": {
+      "10": 36
+    }
+  },
+  "track4_66_code_boundary": {
+    "document_mentions": {
+      "HOLONET.md": 1,
+      "docs\\index.html": 11,
+      "holonet_machine.tex": 4,
+      "holonet_practical_implications.tex": 8,
+      "photonic_holonet.tex": 11,
+      "w33_paper.tex": 0
+    },
+    "explicit_generator_promoted_by_this_pass": false,
+    "generator_marker_counts": {
+      "HOLONET.md": 0,
+      "docs\\index.html": 2,
+      "holonet_machine.tex": 0,
+      "holonet_practical_implications.tex": 1,
+      "photonic_holonet.tex": 0,
+      "w33_paper.tex": 0
+    },
+    "honest_status": "The architecture repeatedly cites the 66-symbol distance-3 store, but Pass 78 does not find or construct a canonical [[66,8,3]]_3 generator/stabilizer witness in the Pass 73-78 spine.",
+    "next_verification_target": "Build the finite generator/parity-check matrices and verify n=66, k=8, d=3 directly.",
+    "target": "[[66,8,3]]_3 protected store / Steinberg-adjacent memory claim"
+  },
+  "track5_weil_clifford_carrier": {
+    "gap_confirms_degree_4": true,
+    "gap_confirms_degree_5": true,
+    "q": 3,
+    "reading": "The oscillator carrier is q^2=9, decomposing into the two finite Weil pieces 5 and 4. This is the representation-theoretic substrate for the two-qutrit Clifford layer.",
+    "split_check": true,
+    "two_qutrit_dimension": 9,
+    "weil_split": [
+      5,
+      4
+    ]
+  },
+  "track6_spence_hearing_boundary": {
+    "boundary": "The W/Q pair is the exact proved separator. A complete 28-graph hearing table still needs the external Spence adjacency data or a generator for all 28 graphs.",
+    "cospectral": true,
+    "full_28_adjacency_data_available_in_repo": false,
+    "full_spence_count": 28,
+    "geometric_pair_separated_by_alpha": true,
+    "locally_identical": true,
+    "non_isomorphic": true,
+    "same_srg_parameters": true,
+    "verified_pair": [
+      "W(3,3)",
+      "Q(4,3)"
+    ]
+  },
+  "track7_algebra_ladder": {
+    "checks": {
+      "bose_mesner_less_than_terwilliger": true,
+      "group_order_is_480_times_108": true,
+      "hashimoto_degree_matches_bass_denominator": true,
+      "point_module_is_1_plus_15_plus_24": true,
+      "spread_count_is_36": true
+    },
+    "ladder": [
+      {
+        "dimension": 3,
+        "layer": "Bose-Mesner algebra"
+      },
+      {
+        "dimension": 9,
+        "layer": "Weil/two-qutrit carrier"
+      },
+      {
+        "dimension": 16,
+        "layer": "Terwilliger local algebra"
+      },
+      {
+        "dimension": 40,
+        "layer": "point permutation module"
+      },
+      {
+        "dimension": 36,
+        "layer": "W33 spreads"
+      },
+      {
+        "dimension": 480,
+        "layer": "Hashimoto directed-edge carrier"
+      },
+      {
+        "dimension": 51840,
+        "layer": "Sp(4,3) double cover"
+      }
+    ],
+    "reading": "The current architecture is a ladder of checked finite carriers, not one undifferentiated count: association algebra, oscillator, local algebra, point module, spread clock, directed-edge zeta, and full symplectic/Clifford symmetry."
+  }
+}
