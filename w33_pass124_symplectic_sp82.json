@@ -1,0 +1,40 @@
+{
+  "schema": "w33.pass124.symplectic_sp82.v1",
+  "status": "PASS",
+  "full_graph": {
+    "vertices": 255,
+    "params": "SRG(255,126,61,63)",
+    "spectrum": {
+      "-9": 119,
+      "7": 135,
+      "126": 1
+    },
+    "identification": "symplectic graph Sp(8,2) (perp form); complement SRG(255,128,64,64)"
+  },
+  "subconstituents": {
+    "isotropic_135": "SRG(135,70,37,35) (Pass 93)",
+    "anisotropic_120": "SRG(120,63,30,36) (Pass 120)"
+  },
+  "symmetry_tower": {
+    "W(E6)": 51840,
+    "GO+_8(2)": 348364800,
+    "Sp(8,2)": 47377612800,
+    "index_GO_over_WE6": 6720,
+    "index_Sp_over_GO": 136,
+    "note": "6720 = 120*56 (Pass 117); 136 = 135+1 isotropic incl 0"
+  },
+  "prime_shift": "W(3,3) = Sp(4,3) is the symplectic polarity graph on the 40 points of PG(3,3); its E8/2E8 glue yields Sp(8,2) on 255 points.  A symplectic-to-symplectic bridge across the prime shift 3 -> 2, the two bad primes of r-s = 6 = 2*3 (Pass 97).",
+  "reading": "The two W(3,3) glue graphs SRG(135,70,37,35) and SRG(120,63,30,36) are the isotropic and anisotropic subconstituents of a single object: the symplectic graph Sp(8,2) = SRG(255,126,61,63) on all 255 nonzero E8/2E8 vectors.  The E8 quadratic form is exactly what splits the symplectic 255 into 135 + 120.  The symmetry tower W(E6) < GO+_8(2) < Sp(8,2) realizes on 40/120/135/255 points, all rooted in W(3,3) = Sp(4,3).",
+  "checks": {
+    "split_135_iso_plus_120_ani": true,
+    "graph_is_SRG_255_126_61_63": true,
+    "sp82_spectrum_126_7^135_-9^119": true,
+    "isotropic_subconstituent_is_SRG135": true,
+    "anisotropic_subconstituent_is_SRG120": true,
+    "Sp82_order_47377612800": true,
+    "index_Sp82_over_GOplus8_is_136": true,
+    "index_GOplus8_over_WE6_is_6720": true,
+    "W33_is_Sp43_on_40_points": true,
+    "complement_is_SRG_255_128_64_64": true
+  }
+}
