@@ -1,0 +1,9 @@
+aut_order=51840
+derived_order=25920
+derived_is_simple=true
+derived_simple_name=B(2,3) = O(5,3) ~ C(2,3) = S(4,3) ~ 2A(3,2) = U(4,2) ~ 2D(3,2) = O-(6,2)
+aut_index_over_derived=2
+WE6_order=51840
+WE6_derived_order=25920
+WE6_derived_simple_name=B(2,3) = O(5,3) ~ C(2,3) = S(4,3) ~ 2A(3,2) = U(4,2) ~ 2D(3,2) = O-(6,2)
+aut_iso_WE6=true

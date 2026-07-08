@@ -1,0 +1,34 @@
+{
+  "schema": "w33.pass91.e6.v1",
+  "status": "PASS",
+  "aut_order": 51840,
+  "derived": {
+    "order": 25920,
+    "simple": true,
+    "name": "B(2,3) = O(5,3) ~ C(2,3) = S(4,3) ~ 2A(3,2) = U(4,2) ~ 2D(3,2) = O-(6,2)",
+    "index_in_aut": 2
+  },
+  "WE6": {
+    "order": 51840,
+    "derived_order": 25920
+  },
+  "Aut_W_isomorphic_to_WE6": true,
+  "e6_configuration": {
+    "27": "lines on the cubic surface",
+    "36": "double-sixes",
+    "45": "tritangent planes = 45 minimum-weight codewords of C_2(W)=[40,16,8] (Pass 85)",
+    "72": "roots of E6",
+    "78": "dim E6 = 2(f+g) = the Ihara oscillatory amplitude (Pass 74)",
+    "240": "roots of E8 = 240 min-weight words of the dual [40,24] (Pass 86) = edges of W(3,3)"
+  },
+  "reading": "Aut(W(3,3)) = PSp(4,3):2 is isomorphic to W(E6) (verified by GAP). So the whole W(3,3) arithmetic tower -- Ihara zeta, class number/group, code [40,16,8], dual [40,24], even lattice, weight-20 modular form -- lives under a single exceptional symmetry, W(E6)=Sp(4,3), whose 27 lines / 45 tritangent planes / 240 E8 roots recur throughout the code and lattice. The symmetry, the code, and the arithmetic are three faces of one exceptional object.",
+  "grounding": "graph automorphism group of the symplectic GQ W(3,q) is P.Gamma.Sp(4,q); at q=3 this is PSp(4,3):2 = W(E6) = SO_5(3).",
+  "checks": {
+    "aut_order_51840": true,
+    "derived_simple_order_25920": true,
+    "aut_is_PSp43_dot_2": true,
+    "WE6_same_order_and_derived": true,
+    "Aut_W_isomorphic_to_WE6": true,
+    "simple_group_is_PSp43_family": true
+  }
+}
