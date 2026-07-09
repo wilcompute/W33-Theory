@@ -61,20 +61,14 @@ for f in "${INPUT_FILES[@]}"; do
   if [[ -f "$f" ]]; then
     ok "$f"
   else
-    warn "$f MISSING — will cause \\input error. Run: touch '$f' to create placeholder."
+    fail "$f MISSING — refusing to manufacture submission content."
     MISSING=$((MISSING + 1))
   fi
 done
 
 if (( MISSING > 0 )); then
-  log "\n${COLOR_YELLOW}Creating placeholder stubs for $MISSING missing files...${NC}"
-  for f in "${INPUT_FILES[@]}"; do
-    if [[ ! -f "$f" ]]; then
-      SECNAME=$(echo "$f" | sed 's/PAPER_//;s/.tex//;s/_/ /g')
-      echo "% PLACEHOLDER: $f\n\\section{$SECNAME}\n\\label{sec:placeholder_$(echo $f | md5sum | head -c6)}\n\nSection content pending." > "$f"
-      warn "Created stub: $f"
-    fi
-  done
+  fail "$MISSING required input file(s) missing; compile aborted."
+  exit 1
 fi
 
 # ---- arXiv style injection ----------------------------------------

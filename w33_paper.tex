@@ -9929,7 +9929,7 @@ Wu class. What is \emph{not} fixed by the chain mod-$2$ data is the
 definiteness of the lift. The following proposition removes the most natural
 definite candidate.
 
-\begin{proposition}[The $+2$-eigenlattice is not the $E_8$ home]
+\begin{proposition}[Primary structure and minimal shell of the $+2$-eigenlattice]
 \label{prop:eigenlattice-obstruction}
 On a $+2$-eigenvector $v$ ($Av=2v$) the canonical form $\tfrac12\langle
 v,Aw\rangle$ equals the standard inner product $\langle v,w\rangle$. The
@@ -9938,30 +9938,56 @@ integer $+2$-eigenlattice
   L_2=\{x\in\mathbb Z^{40}: Ax=2x\}
 \]
 is a primitive rank-$24$ sublattice that is even and positive-definite under
-the standard form, with
+the standard form. Its exact Gram Smith form and discriminant group are
 \[
-  \det(L_2)=2^{16}\cdot 3^{10}\cdot 5=19\,349\,176\,320,\qquad
-  \min(L_2)=6 .
+ \operatorname{SNF}(L_2)=\operatorname{diag}(1^8,2^6,6^9,30),
+ \qquad
+ L_2^\#/L_2\cong
+ (\mathbb Z/2)^{16}\oplus(\mathbb Z/3)^{10}\oplus\mathbb Z/5 .
 \]
-In particular $L_2$ is \emph{non-unimodular} and \emph{rootless}, hence not
-isometric to $E_8^{\,3}$, to the Leech lattice, or to any root lattice. The
-integral $E_8$ of the chain complex does not arise as the $r=2$ eigenlattice.
+Moreover
+\[
+ \det(L_2)=2^{16}3^{10}5,\qquad
+ \min(L_2)=6,\qquad
+ |\operatorname{Min}(L_2)|=480 .
+\]
+The $480$ minimal vectors are exactly
+\[
+ x(p;L_+,L_-)=
+ \mathbf1_{L_+\setminus\{p\}}-\mathbf1_{L_-\setminus\{p\}},
+\]
+where $(L_+,L_-)$ is an ordered pair of distinct W33 lines through $p$.
+Consequently the $240$ projective minimal rays are the $240$ local-axis
+endpoints used in the signed $E_8$ lift of
+Section~\ref{sec:e8-eigenlattice-boundary}. Thus $L_2$ is not isometric to
+$E_8^{\,3}$ or to any root lattice, but its projective minimal shell carries
+the complete signed $E_8$ root set.
 \end{proposition}
 
 \begin{proof}
 Extract $L_2$ from an integer Smith normal form with transforms
 $U(A-2I)V=D$: the $24$ columns of $V$ with $D_{jj}=0$ are a $\mathbb Z$-basis
-of the saturated kernel (verified $AK=2K$). The Gram $K^{\mathsf T}K$ has
-integer determinant $2^{16}\cdot3^{10}\cdot5$ (an exact computation, hence
-$L_2$ is not unimodular and $\det\neq1$ excludes $E_8^{\,3}$ and Leech). An
-LLL reduction of the explicit basis returns vector norms
-$(6^{18},8^{5},10^{1})$ with no vector of norm $2$ or $4$, so $L_2$ has
-minimal norm $6$ and no roots, excluding every root lattice. (Witness:
-\texttt{analysis/bt926\_plus2\_eigenlattice.py}.) As a primitive sublattice
-of the unimodular $\mathbb Z^{40}$, $\det(L_2)=\det(L_2^{\perp})$, so the same
-covolume measures the orthogonal $\{-4,12\}$-eigenlattice of rank $16$; the
-factor $3=q$ is the unique odd prime, $16=\operatorname{rank}_{\mathbb F_2}A$,
-and $10=\Theta=\dim\mathrm{Sp}(4)$.
+of the saturated kernel. Exact integer Smith reduction of
+$K^{\mathsf T}K$ gives the displayed invariant factors. Their primary parts
+have dimensions $16,10,1$. These are intrinsic: over $\mathbb F_2$ the
+radical is $\operatorname{im}A=C$; over $\mathbb F_3$, the strongly regular
+identity $A^2=8I-2A+4J$ gives $(A+I)^2=J$, and
+\[
+ \operatorname{rad}(L_2/3L_2)
+ =\operatorname{im}\bigl((A+I)|_{\mathbf1^\perp}\bigr)
+ \quad(\dim=10);
+\]
+over $\mathbb F_5$ it is the constant line $\langle\mathbf1\rangle$. Hence
+the former coincidence $10=\dim\operatorname{Sp}(4)$ is replaced by an exact
+modular collision space.
+
+For the shell, the generalized-quadrangle axiom directly gives
+$Ax(p;L_+,L_-)=2x(p;L_+,L_-)$ and norm $6$. The count is
+$40\cdot4\cdot3=480$. Exact PARI Fincke--Pohst enumeration proves both that
+the minimum is $6$ and that these are all the minimal vectors. Quotienting by
+$x\sim-x$ forgets the ordering of the two lines, leaving the $240$ unordered
+line pairs through a point, exactly the local-axis endpoints. (Witness:
+\texttt{analysis/w33\_pass157\_eigenlattice\_prime\_collision.py}.)
 \end{proof}
 
 The definite lift is not fixed by linear-algebraic chain data; the natural

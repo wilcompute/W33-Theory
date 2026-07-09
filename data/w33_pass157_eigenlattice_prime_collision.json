@@ -1,0 +1,112 @@
+{
+  "schema": "w33.pass157.eigenlattice_prime_collision.v1",
+  "status": "PASS",
+  "lattice": {
+    "definition": "L2 = {x in Z^40 : A x = 2 x}",
+    "rank": 24,
+    "determinant": 19349176320,
+    "determinant_factorization": "2^16 * 3^10 * 5",
+    "smith_invariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      30
+    ],
+    "smith_profile": {
+      "1": 8,
+      "2": 6,
+      "6": 9,
+      "30": 1
+    },
+    "discriminant_group_invariant_factors": "(Z/2)^6 + (Z/6)^9 + Z/30",
+    "discriminant_group_primary": "(Z/2)^16 + (Z/3)^10 + Z/5"
+  },
+  "primary_radicals": {
+    "2": {
+      "L2_mod_p_dimension": 24,
+      "gram_rank": 8,
+      "radical_dimension": 16,
+      "identification": "rad(L2/2L2) = im(A mod 2) = C, dimension 16"
+    },
+    "3": {
+      "L2_mod_p_dimension": 24,
+      "gram_rank": 14,
+      "radical_dimension": 10,
+      "identification": "rad(L2/3L2) = im((A+I)|1^perp), dimension 10",
+      "operator_rank_on_full_space": 11,
+      "operator_rank_on_augmentation": 10,
+      "operator_identity": "(A+I)^2 = J mod 3"
+    },
+    "5": {
+      "L2_mod_p_dimension": 24,
+      "gram_rank": 23,
+      "radical_dimension": 1,
+      "identification": "rad(L2/5L2) = span(all-ones), dimension 1"
+    }
+  },
+  "minimal_shell": {
+    "minimal_vector_count": 480,
+    "minimal_norm": 6,
+    "half_shell_columns": 240,
+    "pari_certificate_source": "live",
+    "construction": "x(p;L+,L-) = 1_(L+ minus p) - 1_(L- minus p), for ordered distinct lines L+,L- through p",
+    "ordered_local_line_pairs": 480,
+    "projective_minimal_rays": 240,
+    "axis_endpoints": 240,
+    "local_axes": 120,
+    "local_inner_product_profile": {
+      "-6": 1,
+      "-3": 4,
+      "-2": 45,
+      "-1": 108,
+      "0": 164,
+      "1": 108,
+      "2": 45,
+      "3": 4,
+      "6": 1
+    },
+    "reading": "The 480 minimal vectors are the oriented local line-pair selectors. Modulo antipodes they are the 240 axis endpoints used by Pass 123 to lift onto the 240 signed E8 roots."
+  },
+  "checks": {
+    "w33_srg_relation": true,
+    "integer_eigenbasis_rank_24": true,
+    "integer_eigenbasis_equation": true,
+    "exact_determinant": true,
+    "exact_smith_profile": true,
+    "all_primary_factors_elementary": true,
+    "p2_radical_dimension_16": true,
+    "p2_radical_is_image_A": true,
+    "p3_radical_dimension_10": true,
+    "p3_collision_identity": true,
+    "p3_radical_is_collision_image": true,
+    "p5_radical_dimension_1": true,
+    "p5_radical_is_constants": true,
+    "forty_W33_lines": true,
+    "four_lines_per_point": true,
+    "local_line_pair_vectors_480": true,
+    "local_vectors_are_norm6_eigenvectors": true,
+    "projective_shell_is_240_axis_endpoints": true,
+    "minimal_shell_local_profile_constant": true,
+    "pari_exact_minimum_and_shell_complete": true
+  }
+}

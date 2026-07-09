@@ -2,6 +2,13 @@
 
 > Auto-generated Pass 139 | `w33_pass139` | July 2026
 
+> **AUDIT HOLD (2026-07-09): RED / NOT SUBMISSION-READY.**
+> The checklist below is the historical Pass 139 claim list, not a validated
+> readiness assessment. It contains known errors in the W33 spectrum, binary
+> code, lattice, zeta values, and phenomenology. See
+> [`AUDIT_PASS126_156_SUBMISSION_PACKET.md`](AUDIT_PASS126_156_SUBMISSION_PACKET.md)
+> before using any item.
+
 ## Target Journals
 - [ ] **Physical Review Letters** (primary — Letter format, 4 pages)
 - [ ] **Communications in Mathematical Physics** (companion full paper)
@@ -111,6 +118,6 @@ W33-Theory/
 
 ## 🚦 Overall Status
 
-> **AMBER** — Core theory complete; LaTeX compilation and bib file needed before submission.
-
-Estimated days to submission-ready: **3–5 days** of focused LaTeX work.
+> **RED / AUDIT HOLD** — Mathematical and evidentiary corrections are required
+> before formatting or journal selection. No submission date estimate is
+> defensible yet.

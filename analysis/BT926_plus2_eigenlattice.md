@@ -23,8 +23,9 @@ the standard inner product is the canonical `½A` form.
 ```text
 rank 24,  even,  positive-definite,
 det(L₂) = 19 349 176 320 = 2¹⁶ · 3¹⁰ · 5,
-minimal norm = 6  (LLL-reduced: 18 vectors of norm 6, then 8,8,8,8,8,10; no
-                   vectors of norm 2 or 4 — rootless).
+SNF(Gram) = diag(1⁸, 2⁶, 6⁹, 30),
+minimal norm = 6, with exactly 480 minimal vectors (exact Fincke–Pohst
+enumeration in Pass 157).
 ```
 
 Since `det ≠ 1`, `L₂` is **not unimodular**, hence **not E₈³** (det 1, 720
@@ -37,12 +38,15 @@ E₈³ in the +2-eigenlattice" is **false**.
 The natural definite candidate for the E₈ lift is ruled out: the integral E₈
 does **not** sit in the +2-eigenlattice as E₈³ (or any root lattice). This
 sharpens open frontier #5 — combined with BT925 (the residual is definiteness)
-and BT924 (rank + 2-adic location pinned), we now know the definite lift, if it
-exists, is **not** an eigenlattice of A. The determinant `2¹⁶·3¹⁰·5` is itself
-a new integral invariant of W(3,3) (note `16 = rank_F₂ A`, `3 = q`,
-`10 = Θ = dim Sp(4)`), recording the covolume of the r=2 eigenlattice (equal,
-as a primitive sublattice of the unimodular Z⁴⁰, to that of its orthogonal
-complement = the {−4, 12}-eigenlattice of rank 16).
+and BT924 (rank + 2-adic location pinned), we know the definite lift is **not**
+the eigenlattice of A. Pass 157 replaces the former dimensional numerology by
+the exact primary decomposition
+`(Z/2)¹⁶ ⊕ (Z/3)¹⁰ ⊕ Z/5`: the exponents are the Gram-radical dimensions
+`16,10,1` at `p=2,3,5`. In particular, the previously unexplained `3¹⁰` is
+the image of the square-zero collision operator `(A+I)|1⊥` over `F₃`. The
+same pass proves that the 480 minimal vectors are precisely the oriented
+local line-pair selectors; their 240 projective rays are the local axis
+endpoints used by Pass 123 for the signed E₈ lift.
 
 ## The #5 arc (BT924–926), honestly
 
