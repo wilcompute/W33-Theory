@@ -1,0 +1,74 @@
+\subsection{Sentinel admission, two-adic chiral lift, native runtime, and eight-bin photonic compilation}
+\label{sec:levi-next5-v2}
+
+The odd-$q$ rank theorem is now represented by an exact symbolic dependency
+certificate. The nontrivial additive-character block is
+$Y\mapsto Y+Y^T$ on $\operatorname{Mat}_q$, the transformed incidence image is
+$\operatorname{Sym}_q$, and the line Gram form retains only diagonal
+coordinates in characteristic two. Together with the affine-plane fixed block,
+this proves
+\[
+ \operatorname{rank}_2M_q=\frac{q(q+1)^2+2}{2},\quad
+ \operatorname{rank}_2A_P=\frac{q(q^2+1)}2+1,\quad
+ \operatorname{rank}_2A_L=q^2+1,
+\]
+and hence
+\[
+ D_q\sim J_4^2\oplus J_3^{(q^3+2q^2+q-4)/2}
+ \oplus J_1^{q(q-1)^2/2}
+\]
+with no $J_2$ blocks for every odd prime power $q$.
+
+The Pass--159 sentinel code is now used directly by packet admission. For an
+authenticated envelope, the context-readout syndrome is applied to the payload
+displacement from the provenance-derived expected packet. Since the code is
+$[40,15,8]_2$, every nonzero displacement of support below eight is detected.
+A minimum dark-code displacement is still rejected by transition provenance,
+and a raw point/line retag is rejected as type confusion.
+
+The chiral two-primary discriminant form admits the exact refinement
+\[
+ A_2(L_{-4})\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8.
+\]
+If $h$ generates the depth-three factor, then
+\[
+ q(h)=\frac{11}{8}\pmod{2\mathbb Z}.
+\]
+The natural map $L_{-4}/2L_{-4}\to A_2(L_{-4})[2]$ sends the unique fixed line
+to $\langle4h\rangle$, while
+\[
+ h^\perp\cong U_{14}^-.
+\]
+The Brown invariants are $7$ and $4$, summing to the previously computed
+2-adic phase $3$ modulo eight.
+
+The native runtime is the regular action of
+\[
+ \PSp(4,3):2\cong W(E_6)
+\]
+on $51840$ states. The index-two subgroup has two regular chirality orbits of
+size $25920$, and the outer similitude swaps them. A point stabilizer has order
+$648$, center $3$, and quotient order $216$; a noncollinear-pair stabilizer has
+order $48$. Thus
+\[
+ 51840=2\cdot40\cdot3\cdot216=2\cdot540\cdot48,
+\]
+with unique coordinates given by chirality, point, central phase, and Clifford
+quotient class.
+
+Finally, the integral $8\times80$ Levi-to-$E_8$ intertwiner factors through only
+eight time bins,
+\[
+ 0,4,7,13,40,41,44,45,
+\]
+and the active $8\times8$ matrix is unimodular. An exact 16-mode unitary
+dilation has a verified 120-rotation Reck netlist; an equivalent Clements mesh
+uses 120 Mach--Zehnder elements. The sparse readout realization uses the
+support-optimal $86$ tunable couplers and $31$ $\pi$-phase elements. Under the
+stated loss and detector model, optical loss becomes retry/no-click and all
+modeled dark-count corruptions are rejected by the sentinel/provenance layer.
+
+\emph{Witnesses:}
+\path{analysis/w33_levi_next5_v2.py},
+\path{data/PART_2026_07_10_LEVI_NEXT5_V2_results.json}, and
+\path{tests/test_w33_levi_next5_v2.py}.
