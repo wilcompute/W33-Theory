@@ -1,0 +1,75 @@
+\subsection{Fourier rank theorem, trade-module bridge, and executable middleware}
+\label{sec:levi-next5}
+
+Let $M_q$ be the point--line incidence matrix of $W(3,q)$ over $\mathbb F_2$,
+where $q$ is an odd prime power, and put
+$A_P=M_qM_q^T$, $A_L=M_q^TM_q$. A central-translation Fourier
+decomposition gives one affine-plane block and $q-1$ nontrivial additive-
+character blocks. On a nontrivial block, Fourier conjugation sends the point
+operator to
+\[
+Y\longmapsto Y+Y^T\qquad(Y\in\operatorname{Mat}_q),
+\]
+so its rank is $q(q-1)/2$. The transformed incidence columns span
+$\operatorname{Sym}_q$, of dimension $q(q+1)/2$, while their Gram form has
+rank $q$ because off-diagonal terms cancel in characteristic two. The
+trivial affine-plane block has ranks $q^2+1$, $q^2+q+1$, and $q+1$,
+respectively. Therefore
+\[
+\operatorname{rank}_2M_q=\frac{q(q+1)^2+2}{2},\qquad
+\operatorname{rank}_2A_P=\frac{q(q^2+1)}2+1,\qquad
+\operatorname{rank}_2A_L=q^2+1.
+\]
+Together with $D_q^3=\left(\begin{smallmatrix}0&J\\J&0\end{smallmatrix}\right)$
+and $D_q^4=0$, this proves
+\[
+D_q\sim J_4^{\,2}\oplus J_3^{(q^3+2q^2+q-4)/2}\oplus J_1^{q(q-1)^2/2},
+\]
+with no $J_2$ blocks, for every odd prime power $q$.
+
+At $q=3$, exact reduction of the Pass--158 chiral trade lattice gives
+\[
+L_{-4}/2L_{-4}\cong\mathbf1\oplus U_{14}^-
+\]
+as an $\mathbb F_2[\PSp(4,3)]$-module. The fixed space is one-dimensional;
+the quotient is faithful and irreducible, and the intertwiner space to the
+$U_{14}^-$ summand of line homology is one-dimensional with invertible
+nonzero element.
+
+Let $C\in\operatorname{Mat}_{80\times8}(\mathbb Z)$ contain the two maximal
+Levi chains and let $B$ be the materialized BT982 $E_8$ payload basis. The
+Smith invariants of $C$ are all one, so there is an integral left inverse
+$L$. With $J=J_4\oplus J_4$, define
+\[
+F=BL,\qquad \partial_C=CJL,\qquad N=BJB^{-1}.
+\]
+Then
+\[
+FC=B,\qquad F\partial_C=NF,
+\]
+and $B^TG_{\rm vertex}B$ is exactly the $E_8$ Cartan matrix. The projected
+integral differential agrees with raw incidence modulo two on the eight
+control states, and integral inversion commutes with the boundary.
+
+The typed packet runtime now authenticates immutable origin/current headers,
+transition provenance, parity, nonce, and a keyed BLAKE2s tag before Levi
+cycle/syndrome and route admission. Loss, payload loss, dark counts, parity
+faults, Byzantine headers, authenticated raw retags, and route failures are
+covered by executable stress tests; no corrupted packet is admitted. The
+command \texttt{holonet packet-fault-stack} runs the certificate.
+
+Finally, explicit permutation actions realize
+\[
+|X_{48}|=48,\quad |X_{96}|=96,\quad |X_{192}|=192,
+\quad |X_{2160}|=2160,\quad |X_{51840}|=51840.
+\]
+Here $X_{2160}=45\times G_{48}$ and
+$X_{51840}=24\times45\times G_{48}$. The $D_{12}$ mirror subgroup has 180
+regular orbits on $X_{2160}$, while $G_{48}$ has 45. The forgetful maps from
+the phase lift, tomotope flag lift, and guard-sheet runtime are verified
+equivariant on every generator.
+
+\emph{Witnesses:}
+\path{analysis/w33_levi_next5.py},
+\path{analysis/holonet_typed_fault_stack.py}, and certificate
+\path{data/PART_2026_07_10_LEVI_NEXT5_results.json}.
