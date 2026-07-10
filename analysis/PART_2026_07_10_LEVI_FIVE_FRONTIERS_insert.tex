@@ -1,0 +1,59 @@
+\subsection{Five Levi frontiers: odd-order Jordan law, discriminant lift, and typed middleware}
+\label{sec:levi-five-frontiers}
+
+Let $M_q$ be the point--line incidence matrix of $W(q)$ and
+$D_q=\left(\begin{smallmatrix}0&M_q\\M_q^T&0\end{smallmatrix}\right)$.
+Exact construction over $\mathbb F_3,\mathbb F_5,\mathbb F_7$, and the genuine
+extension field $\mathbb F_9=\mathbb F_3[w]/(w^2+1)$ gives
+\[
+\operatorname{rank}_2 M_q=\frac{q(q+1)^2+2}{2},\quad
+\operatorname{rank}_2 A_P=\frac{q(q^2+1)}2+1,\quad
+\operatorname{rank}_2 A_L=q^2+1
+\]
+for $q=3,5,7,9$.  Consequently the observed Jordan law is
+\[
+D_q\sim J_4^{\,2}\oplus
+J_3^{(q^3+2q^2+q-4)/2}\oplus
+J_1^{q(q-1)^2/2},
+\]
+with no $J_2$ blocks.  Independently of those rank formulas, the generalized
+quadrangle axiom proves for every odd $q$ that
+\[
+D_q^3=\begin{pmatrix}0&J\\J&0\end{pmatrix},\qquad D_q^4=0.
+\]
+Thus the terminal image is the two-plane spanned by the all-point and all-line
+parity rails, whose three nonzero rays are permuted by
+$\mathrm{GL}(2,2)\cong S_3$.
+
+At $q=3$, the two chain homologies are
+\[
+H_P=\ker A_P/\operatorname{im}A_P\cong O_8^+(2)=E_8/2E_8,
+\qquad
+H_L=\ker A_L/\operatorname{im}A_L\cong O_{20}^+(2),
+\]
+with dimensions $8$ and $20$, respectively.  Both Arf invariants vanish, and
+their direct sum is a rank-$28$ plus-type discriminant carrier.
+
+This produces a typed packet ABI.  A point packet carries an eight-bit homology
+syndrome, a line packet a twenty-bit syndrome, and a legal mirror conversion
+applies $M^T$ or $M$ while toggling the type bit.  The target class is always a
+boundary, hence has zero target syndrome.  Raw retagging is rejected on all
+$28$ canonical homology generators.  The type bit is therefore an algebraic
+invariant rather than metadata.
+
+Finally, the $q=3$ Jordan partition $4^2 3^{22}1^6$ has conjugate partition
+$(30,24,24,2)$.  Its nilpotent centralizer acts on the two length-four chains
+through $\mathrm{GL}(2,2)=S_3$.  Adjoining the independent phase bit gives
+$S_3\times C_2\cong D_{12}$ with order profile
+$\{1^1,2^7,3^2,6^2\}$, exactly the mirror-bus slot-stabilizer profile.  This
+explains the middleware counts
+\[
+8\cdot6=48,\qquad 8\cdot12=96,\qquad
+24\cdot45\cdot48=51840,\qquad 25920/12=2160.
+\]
+The $96$ equality is an order-level bridge only; no direct-product
+identification with the tomotope automorphism group is asserted.
+
+\emph{Witness:}
+\path{analysis/w33_levi_five_frontiers.py}, with certificate
+\path{data/PART_2026_07_10_LEVI_FIVE_FRONTIERS_results.json}.
