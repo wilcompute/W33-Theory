@@ -1,0 +1,38 @@
+{
+  "theorem": "BT982 explicit integral E8 basis (materialized by Levi-next5 closure)",
+  "status": "closed_materialized: explicit unimodular E8 basis in vertex gauge",
+  "winner_minimizer": 2,
+  "support_minimal_masks": [3, 68, 4, 42, 38, 65, 90, 144],
+  "support_profile": [6, 6, 6, 6, 8, 6, 10, 12],
+  "final_integral_basis_B": [
+    [-1, 1, 1, -2, 1, 1, -1, 0],
+    [-1, 2, 0, -3, 2, 2, -2, 0],
+    [-1, 2, 0, -4, 3, 3, -3, -1],
+    [-1, 1, 0, -3, 2, 3, -2, -1],
+    [-1, 0, 0, -2, 2, 2, -2, 0],
+    [-1, 0, 0, -1, 1, 1, -1, 0],
+    [0, 0, 0, -1, 1, 0, 0, 0],
+    [-1, 1, 0, -2, 2, 1, -1, -1]
+  ],
+  "det_B": 1,
+  "final_gram_Bt_G_vertex_B": [
+    [2, 0, -1, 0, 0, 0, 0, 0],
+    [0, 2, 0, -1, 0, 0, 0, 0],
+    [-1, 0, 2, -1, 0, 0, 0, 0],
+    [0, -1, -1, 2, -1, 0, 0, 0],
+    [0, 0, 0, -1, 2, -1, 0, 0],
+    [0, 0, 0, 0, -1, 2, -1, 0],
+    [0, 0, 0, 0, 0, -1, 2, -1],
+    [0, 0, 0, 0, 0, 0, -1, 2]
+  ],
+  "matches_standard_e8_cartan": true,
+  "vertex_subset": [0, 1, 4, 22, 27, 35, 23, 34],
+  "materialization_source": "analysis/w33_levi_next5.py track 3; independent reconstruction of analysis/bt982_explicit_integral_e8_basis.py",
+  "intertwiner_sha256": "402c0914ac2203d30b65a9e3ce9ffbde366f01d3c1047f2d787deabcf1a5a9d1",
+  "checks": {
+    "basis_integral": true,
+    "basis_unimodular": true,
+    "gram_is_e8_cartan": true,
+    "mapped_to_primitive_Levi_control_lattice": true
+  }
+}

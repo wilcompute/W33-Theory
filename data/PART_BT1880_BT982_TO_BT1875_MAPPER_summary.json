@@ -1,17 +1,17 @@
 {
-  "theorem": "BT1880 BT982-to-BT1875 Mapper",
+  "theorem": "BT1880 canonical J4-chain selector-control crosswalk",
   "output": "data/PART_BT1880_BT982_TO_BT1875_MAPPED_TEMPLATE.json",
   "row_count": 8,
-  "basis_source": "BT982 JSON when present; otherwise declared temporary basis pending materialization",
-  "materialized_bt982_json_present": false,
-  "mapping_rule": "selector slot s receives basis columns 2s and 2s+1; phase bits 0 and 1 duplicate support vectors pending vector-level phase action",
+  "materialized_bt982_json_present": true,
+  "mapping_rule": "slot s: BT982 columns (2s,2s+1) are controlled by stage s of the point-seeded and line-seeded Levi J4 chains",
   "checks": {
-    "eight_rows": true,
-    "all_integral_vectors_populated": true,
-    "four_selector_pairs_two_phase_rows_each": true,
-    "bt982_columns_cover_basis_once_per_phase_pair": true,
-    "chain_boundary_left_pending": true,
-    "basis_source_declared": true
+    "eight_phase_rows": true,
+    "four_slots_two_phases": true,
+    "basis_columns_cover_zero_to_seven": true,
+    "all_Z40_controls_populated": true,
+    "chain_boundary_closed": true,
+    "phase_boundary_closed": true
   },
-  "honest_scope": "Uses materialized BT982 output when available; otherwise uses a declared temporary basis. Chain-boundary compatibility and vector-level phase action are tested separately."
+  "all_pass": true,
+  "honest_scope": "The crosswalk canonically couples an 8-state Levi control basis to the eight E8 payload columns; it does not identify the J4 control span with E8 homology."
 }
