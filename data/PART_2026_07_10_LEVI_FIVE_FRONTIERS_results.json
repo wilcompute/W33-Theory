@@ -1,0 +1,293 @@
+{
+  "checks": {
+    "all_five_tracks_pass": true,
+    "all_five_tracks_present": true,
+    "q_scan_contains_3_5_7_9_when_deep": true
+  },
+  "external_context": {
+    "boundary": "The q=3 theorems are exact. The q-family rank formulas are computationally verified at 3,5,7,9; only the D^3/J parity identity is claimed here with a general combinatorial proof.",
+    "incidence_module_reference": "Chandler-Sin-Xiang study symplectic incidence modules and rank formulas; this packet probes the cross-characteristic F2 Levi operator for odd q."
+  },
+  "status": "PASS",
+  "title": "Five Levi Frontiers: odd-q Jordan law, discriminant lift, terminal selector, typed ABI, and middleware centralizer",
+  "tracks": {
+    "1_odd_q_jordan_census": {
+      "all_pass": true,
+      "closed_form": {
+        "H_line": "(q-1)(q^2+1)",
+        "H_point": "q^2-1",
+        "Jordan": "J4^2 + J3^((q^3+2q^2+q-4)/2) + J1^(q(q-1)^2/2); no J2 blocks",
+        "rank_A_line": "q^2+1",
+        "rank_A_point": "q(q^2+1)/2+1",
+        "rank_D_powers": [
+          "q(q+1)^2+2",
+          "(q^3+2q^2+q+4)/2",
+          "2",
+          "0"
+        ],
+        "rank_M": "(q(q+1)^2+2)/2"
+      },
+      "orders": [
+        {
+          "all_pass": true,
+          "checks": {
+            "d3_exactly_off_diagonal_J": true,
+            "dirac_rank_formula": true,
+            "flags": true,
+            "incidence_rank_formula": true,
+            "jordan_formula": true,
+            "kernel_formula": true,
+            "line_homology_formula": true,
+            "line_rank_formula": true,
+            "point_and_line_counts": true,
+            "point_homology_formula": true,
+            "point_rank_formula": true
+          },
+          "d3_bottom_is_all_ones_matrix": true,
+          "d3_top_is_all_ones_matrix": true,
+          "dirac_rank_ladder": {"1": 50, "2": 26, "3": 2, "4": 0},
+          "field_model": "prime field F_3",
+          "flags": 160,
+          "incidence_rank": 25,
+          "jordan_blocks": {"1": 6, "2": 0, "3": 22, "4": 2},
+          "kernel_filtration": {"1": 30, "2": 54, "3": 78, "4": 80},
+          "line_half_rank": 10,
+          "line_homology_dimension": 20,
+          "lines": 40,
+          "point_half_rank": 16,
+          "point_homology_dimension": 8,
+          "points": 40,
+          "q": 3
+        },
+        {
+          "all_pass": true,
+          "checks": {
+            "d3_exactly_off_diagonal_J": true,
+            "dirac_rank_formula": true,
+            "flags": true,
+            "incidence_rank_formula": true,
+            "jordan_formula": true,
+            "kernel_formula": true,
+            "line_homology_formula": true,
+            "line_rank_formula": true,
+            "point_and_line_counts": true,
+            "point_homology_formula": true,
+            "point_rank_formula": true
+          },
+          "d3_bottom_is_all_ones_matrix": true,
+          "d3_top_is_all_ones_matrix": true,
+          "dirac_rank_ladder": {"1": 182, "2": 92, "3": 2, "4": 0},
+          "field_model": "prime field F_5",
+          "flags": 936,
+          "incidence_rank": 91,
+          "jordan_blocks": {"1": 40, "2": 0, "3": 88, "4": 2},
+          "kernel_filtration": {"1": 130, "2": 220, "3": 310, "4": 312},
+          "line_half_rank": 26,
+          "line_homology_dimension": 104,
+          "lines": 156,
+          "point_half_rank": 66,
+          "point_homology_dimension": 24,
+          "points": 156,
+          "q": 5
+        },
+        {
+          "all_pass": true,
+          "checks": {
+            "d3_exactly_off_diagonal_J": true,
+            "dirac_rank_formula": true,
+            "flags": true,
+            "incidence_rank_formula": true,
+            "jordan_formula": true,
+            "kernel_formula": true,
+            "line_homology_formula": true,
+            "line_rank_formula": true,
+            "point_and_line_counts": true,
+            "point_homology_formula": true,
+            "point_rank_formula": true
+          },
+          "d3_bottom_is_all_ones_matrix": true,
+          "d3_top_is_all_ones_matrix": true,
+          "dirac_rank_ladder": {"1": 450, "2": 226, "3": 2, "4": 0},
+          "field_model": "prime field F_7",
+          "flags": 3200,
+          "incidence_rank": 225,
+          "jordan_blocks": {"1": 126, "2": 0, "3": 222, "4": 2},
+          "kernel_filtration": {"1": 350, "2": 574, "3": 798, "4": 800},
+          "line_half_rank": 50,
+          "line_homology_dimension": 300,
+          "lines": 400,
+          "point_half_rank": 176,
+          "point_homology_dimension": 48,
+          "points": 400,
+          "q": 7
+        },
+        {
+          "all_pass": true,
+          "checks": {
+            "d3_exactly_off_diagonal_J": true,
+            "dirac_rank_formula": true,
+            "flags": true,
+            "incidence_rank_formula": true,
+            "jordan_formula": true,
+            "kernel_formula": true,
+            "line_homology_formula": true,
+            "line_rank_formula": true,
+            "point_and_line_counts": true,
+            "point_homology_formula": true,
+            "point_rank_formula": true
+          },
+          "d3_bottom_is_all_ones_matrix": true,
+          "d3_top_is_all_ones_matrix": true,
+          "dirac_rank_ladder": {"1": 902, "2": 452, "3": 2, "4": 0},
+          "field_model": "GF(9)=F3[w]/(w^2+1)",
+          "flags": 8200,
+          "incidence_rank": 451,
+          "jordan_blocks": {"1": 288, "2": 0, "3": 448, "4": 2},
+          "kernel_filtration": {"1": 738, "2": 1188, "3": 1638, "4": 1640},
+          "line_half_rank": 82,
+          "line_homology_dimension": 656,
+          "lines": 820,
+          "point_half_rank": 370,
+          "point_homology_dimension": 80,
+          "points": 820,
+          "q": 9
+        }
+      ],
+      "scope": "Exact exhaustive finite-field computations at q=3,5,7,9; D^3=offdiag(J) and D^4=0 have a direct generalized-quadrangle parity proof for every odd q. The rank formulas are verified on these four orders."
+    },
+    "2_integral_discriminant_lift": {
+      "all_pass": true,
+      "checks": {
+        "both_doubly_even": true,
+        "both_quadratic_forms_well_defined": true,
+        "direct_sum_rank_28_plus_type": true,
+        "line_code_40_10_12": true,
+        "line_exact_sequence_10_30_20": true,
+        "line_plus_type_O20": true,
+        "point_code_40_16_8": true,
+        "point_exact_sequence_16_24_8": true,
+        "point_plus_type_E8_mod_2": true
+      },
+      "direct_sum": {
+        "arf_invariant": 0,
+        "interpretation": "H_point plus H_line is the 28-dimensional binary discriminant carrier; the 8-dimensional summand is E8/2E8.",
+        "nonzero_isotropic_vectors": 134225919,
+        "orthogonal_type": "O+_28(2)",
+        "rank": 28
+      },
+      "halves": {
+        "line": {
+          "arf_invariant": 0,
+          "chain_exact_sequence_dimensions": [10, 30, 20],
+          "code_dimension": 10,
+          "code_is_doubly_even": true,
+          "code_minimum_weight": 12,
+          "code_weight_enumerator": {"0": 1, "12": 40, "16": 135, "20": 672, "24": 135, "28": 40, "40": 1},
+          "homology_basis_hex": ["0x00000000ff", "0x0000000356", "0x0000000563", "0x000000093a", "0x000000111e", "0x000000217b", "0x0000004128", "0x0000008142", "0x000007000e", "0x0000090033", "0x000013005b", "0x000041007b", "0x0000820042", "0x0001030026", "0x0002030130", "0x0004010161", "0x000802015e", "0x0010020146", "0x0080010048", "0x0100030073"],
+          "homology_basis_weights": [8, 6, 6, 6, 6, 8, 4, 4, 6, 6, 8, 8, 4, 6, 6, 6, 8, 6, 4, 8],
+          "kernel_is_even_weight": true,
+          "nonzero_isotropic_vectors": 524799,
+          "orthogonal_type": "O+_20(2)",
+          "symplectic_nondegenerate": true
+        },
+        "point": {
+          "arf_invariant": 0,
+          "chain_exact_sequence_dimensions": [16, 24, 8],
+          "code_dimension": 16,
+          "code_is_doubly_even": true,
+          "code_minimum_weight": 8,
+          "code_weight_enumerator": {"0": 1, "12": 1120, "16": 15570, "20": 32064, "24": 15570, "28": 1120, "32": 45, "40": 1, "8": 45},
+          "homology_basis_hex": ["0x00000004e3", "0x0000000a69", "0x000000e070", "0x0000092073", "0x0000142079", "0x00004763a0", "0x0002832133", "0x0004862235"],
+          "homology_basis_weights": [6, 6, 6, 8, 8, 10, 10, 10],
+          "kernel_is_even_weight": true,
+          "nonzero_isotropic_vectors": 135,
+          "orthogonal_type": "O+_8(2)",
+          "symplectic_nondegenerate": true
+        }
+      }
+    },
+    "3_rank_two_terminal_selector": {
+      "abstract_ray_permutation_group": "GL(2,2) = S3",
+      "all_pass": true,
+      "checks": {
+        "bottom_d3_is_J": true,
+        "exactly_three_nonzero_terminal_states": true,
+        "line_terminal_killed_by_incidence": true,
+        "point_terminal_killed_by_incidence_transpose": true,
+        "rank_two_terminal_plane": true,
+        "top_d3_is_J": true
+      },
+      "combinatorial_proof": {
+        "closure": "each point and line has q+1 incidences, even for odd q, so D^4=0",
+        "incident_case": "for p on L, exactly q other lines through p meet L, hence parity 1 when q is odd",
+        "nonincident_case": "the generalized-quadrangle axiom gives exactly one line through p meeting L"
+      },
+      "identity": "D^3 = [[0,J],[J,0]] over F2 for odd q",
+      "nonzero_terminal_states": {"line_rail": "L:0xffffffffff", "mirror_sum": "P+L:0xffffffffff|0xffffffffff", "point_rail": "P:0xffffffffff"},
+      "terminal_basis": ["all-point parity rail", "all-line parity rail"],
+      "terminal_plane_dimension": 2
+    },
+    "4_typed_packet_abi": {
+      "abi": {
+        "header": ["type_bit", "homology_syndrome", "40_bit_payload"],
+        "illegal_raw_retag": "toggle type without applying incidence map; reject on target differential/syndrome mismatch",
+        "legal_mirror_conversion": "toggle type, apply M^T or M, require target syndrome zero",
+        "line_type": {"differential_rank": 10, "syndrome_width": 20, "type_bit": 1},
+        "point_type": {"differential_rank": 16, "syndrome_width": 8, "type_bit": 0}
+      },
+      "all_pass": true,
+      "canonical_basis_trials": {
+        "line_basis_raw_retag_rejected": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        "line_to_point_target_syndromes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "point_basis_raw_retag_rejected": [true, true, true, true, true, true, true, true],
+        "point_to_line_target_syndromes": [0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      "checks": {
+        "all_20_line_basis_retags_rejected": true,
+        "all_8_point_basis_retags_rejected": true,
+        "common_kernel_census": true,
+        "common_kernel_dimension_15": true,
+        "legal_line_to_point_maps_to_boundary": true,
+        "legal_point_to_line_maps_to_boundary": true,
+        "line_syndrome_width_20": true,
+        "point_syndrome_width_8": true
+      },
+      "common_kernel": {
+        "dimension": 15,
+        "reading": "The type bit remains necessary: most vectors valid for both differentials carry nonzero, inequivalent syndromes in both namespaces.",
+        "syndrome_namespace_census": {"point_nonzero/line_nonzero": 32640, "point_zero/line_nonzero": 126, "point_zero/line_zero": 2}
+      }
+    },
+    "5_centralizer_middleware_bridge": {
+      "all_pass": true,
+      "centralizer_order_decimal": "262823763933113770269699898068062645067074205842980367787928303993706387570306945952342477512439807779507736164692812464802940500368367542008164217969284135452819753673778462807235667464826039871223388384349976973732543576866329262566409520440910874282559800829914814859045675442954253863067871230699508300882882684380798314972581879339354431145556568180879454887466216904487166863201549820425065980318322350327306195265731029982870981208335062750001365883144740713148880351820636066533703139223538998909058255855434390375393181811263178454077324597973079205060176773186939804539110057506197603691245209355550720000000",
+      "centralizer_order_digits": 618,
+      "centralizer_order_formula": "2^2056 * product_{j=1..6}(1-2^-j) * product_{j=1..22}(1-2^-j) * product_{j=1..2}(1-2^-j)",
+      "centralizer_prime_factorization": {"11": 2, "127": 3, "13": 1, "131071": 1, "151": 1, "17": 2, "19": 1, "2": 1779, "23": 2, "257": 1, "3": 20, "31": 5, "337": 1, "41": 1, "43": 1, "5": 7, "524287": 1, "683": 1, "7": 10, "73": 2, "8191": 1, "89": 2},
+      "checks": {
+        "centralizer_exponent_sum_2056": true,
+        "conjugate_partition_30_24_24_2": true,
+        "local_D4_times_terminal_S3_count_48": true,
+        "mirror_bus_orbit_stabilizer": true,
+        "phase_doubled_local_count_96": true,
+        "phase_extension_order_12": true,
+        "phase_extension_profile_matches_BT856_D12": true,
+        "runtime_factorization_24_45_48": true,
+        "terminal_nonzero_rays_3": true,
+        "terminal_quotient_GL2_order_6": true
+      },
+      "conjugate_partition": [30, 24, 24, 2],
+      "jordan_type": "J4^2 + J3^22 + J1^6",
+      "middleware_bridge": {
+        "BT856_slot_stabilizer_match": true,
+        "D12_order_profile": {"1": 1, "2": 7, "3": 2, "6": 2},
+        "count_48": "D4 local square order 8 times terminal S3 order 6",
+        "count_96": "phase-doubled 48-slot count; order-level bridge only, not a claimed direct-product identification with Aut(tomotope)",
+        "independent_phase_extension": "S3 x C2 is isomorphic to D12",
+        "mirror_bus": "25920 / 12 = 2160 slots",
+        "runtime": "24 * 45 * 48 = 51840"
+      },
+      "terminal_quotient": {"action": "permutes the three nonzero terminal states: point rail, line rail, mirror sum", "group": "GL(2,2) = S3", "order": 6}
+    }
+  }
+}
