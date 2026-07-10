@@ -10388,4 +10388,125 @@ specify by hand is, in the $W(3,3)$ substrate, pinned to an invariant of the
 finite geometry.
 \end{corollary}
 
+%% ===============================================================
+\section{The Chiral Trade Lattice and the Two 480s}
+\label{sec:chiral-trade-lattice}
+%% ===============================================================
+
+Section~\ref{sec:e8-eigenlattice-boundary} resolved the definite side of the
+spectrum: the $+2$-eigenlattice $L_2$ (rank $24$) whose minimal shell carries
+the signed $E_8$ roots. The spectral complement --- the $(-4)$-eigenspace of
+multiplicity $g=15$, the \emph{chiral sector} of the Hashimoto decomposition
+--- remained integrally uncharted. Pass~158 closes it and, in doing so,
+settles a $G$-set question the Ihara-zeta track left open.
+
+\begin{proposition}[The chiral eigenlattice is the trade lattice]
+\label{prop:chiral-trade}
+Let $N$ be the $40\times40$ line--point incidence matrix of $W(3,3)$. The
+integer $(-4)$-eigenlattice
+\[
+  L_{4}=\{x\in\mathbb Z^{40}: Ax=-4x\}
+\]
+is exactly the saturated kernel of $N$: the lattice of integer point-weights
+summing to zero on \emph{every} isotropic line --- the \emph{trade lattice}
+of the quadrangle, in design-theoretic language. It is a primitive rank-$15$
+sublattice, \emph{even} under the standard form, with exact Gram Smith form
+and discriminant data
+\[
+ \operatorname{SNF}(L_4)=\operatorname{diag}(2^{5},6^{9},24),
+ \qquad
+ \det(L_4)=2^{17}3^{10},
+ \qquad
+ L_4^{\#}/L_4\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8\oplus(\mathbb Z/3)^{10}.
+\]
+Unlike $L_2$, whose discriminant group is elementary, the chiral lattice
+carries a genuine $\mathbb Z/8$ depth. Moreover the incidence matrix itself
+is \emph{Smith-trivial}: $\operatorname{SNF}_{\mathbb Z}(N)=
+\operatorname{diag}(1^{25},0^{15})$, so its image is a rank-$25$ direct
+summand of $\mathbb Z^{40}$ and every $p$-rank of the incidence matrix of
+$W(3,3)$ equals $25$.
+\end{proposition}
+
+\begin{theorem}[Spectral splitting of the standard unimodular lattice]
+\label{thm:glue-identity}
+With $L_{12}=\mathbb Z\cdot\mathbf 1$ (Gram $40$), the three eigenlattices
+glue into $\mathbb Z^{40}$ with finite index
+\[
+  \bigl[\mathbb Z^{40}:L_{12}\oplus L_2\oplus L_4\bigr]
+  = 2^{18}3^{10}5
+  = 77\,396\,705\,280,
+\]
+and the glue identity
+\[
+  \bigl(2^{18}3^{10}5\bigr)^2
+  \;=\;
+  \underbrace{2^3\!\cdot\!5}_{\det L_{12}}
+  \cdot
+  \underbrace{2^{16}3^{10}5}_{\det L_2}
+  \cdot
+  \underbrace{2^{17}3^{10}}_{\det L_4}
+\]
+holds exactly. The Perron, gauge, and chiral sectors of the Bose--Mesner
+spectrum are thereby realized as an exact-index orthogonal splitting of the
+standard $\mathbb Z^{40}$, with all glue supported on the substrate primes
+$\{2,3,5\}$.
+\end{theorem}
+
+\begin{theorem}[The minimal trades are the hyperbolic double-fours]
+\label{thm:minimal-trades}
+The minimal norm of $L_4$ is $8$ and its minimal shell has exactly $90$
+vectors, forming a single $\mathrm{PSp}(4,3)$-orbit: each is
+\[
+  x \;=\; \mathbf 1_{\{a,b\}^{\perp\perp}}-\mathbf 1_{\{a,b\}^{\perp}}
+\]
+for a hyperbolic (non-collinear) point pair $\{a,b\}$ --- weight $+1$ on the
+four-point \emph{span} and $-1$ on the four-point \emph{perp} (all points of
+$W(3,3)$ are regular, so both sets are $4$-sets). The $90$ minimal trades are
+the $90$ hyperbolic lines with a choice of orientation; the $45$ unordered
+$\{\mathrm{span},\mathrm{perp}\}$ supports each induce a complete bipartite
+$K_{4,4}$ in the collinearity graph, and they are precisely the canonical
+$8$-point orbits of the $45$ index-$45$ \emph{binary-polar} subgroups
+$(2T\times 2T){:}2$ (support stabilizer order $576$, point orbits $[8,32]$)
+--- the fifth vacuum of the five-vacua table, now realized as the ground
+shell of the chiral lattice. Finally, the zero-inner-product relation on the
+$45$ supports is a strongly regular graph
+\[
+  \mathrm{SRG}(45,12,3,3),
+\]
+the collinearity parameters of the generalized quadrangle $\GQ(4,2)$ --- the
+point-line dual of the Schl\"afli quadrangle $\GQ(2,4)$ on $27$ points. The
+chiral ground shell of $W(3,3)$ thus rebuilds a generalized quadrangle one
+level up the $E_6$ ladder.
+\end{theorem}
+
+\begin{theorem}[The two 480s]
+\label{thm:two-480s}
+The $480$ Hashimoto arcs (directed edges, the carrier of the Ihara zeta
+function and the graph Riemann Hypothesis of
+\S\ref{sec:ihara-zeta}) and the $480$ minimal vectors of the eigenlattice
+$L_2$ (the signed $E_8$-root carrier of
+Proposition~\ref{prop:eigenlattice-obstruction}) are both transitive
+$\mathrm{PSp}(4,3)$-sets with point stabilizers of order $54$ --- yet they
+are \emph{not isomorphic} as $G$-sets: the stabilizer of a shell vector
+fixes no arc, and the orbital ranks separate them decisively,
+\[
+  \operatorname{rank}(\text{arcs}) = 24 = f,
+  \qquad
+  \operatorname{rank}(\text{shell}) = 40 = v,
+  \qquad
+  \operatorname{rank}(\text{joint}) = 24 .
+\]
+One count, two $G$-sets. This is the sharp $G$-set form of the edge/root
+dictionary obstruction recorded after
+Theorem~\ref{thm:axis-glue-e8-lift}: the Ihara-zeta carrier and the $E_8$
+shell agree in cardinality and in stabilizer order but not in structure, so
+no equivariant dictionary between non-backtracking transport and the root
+shell exists even at the crudest level.
+\end{theorem}
+
+\noindent The executable certificate for all four statements is
+\texttt{analysis/w33\_pass158\_chiral\_trade\_lattice\_two\_480s.py}
+($26$ exact checks, all passing; artifact
+\texttt{data/w33\_pass158\_chiral\_trade\_lattice\_two\_480s.json}).
+
 \end{document}

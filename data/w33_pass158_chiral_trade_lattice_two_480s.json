@@ -1,0 +1,127 @@
+{
+  "schema": "w33.pass158.chiral_trade_lattice_two_480s.v1",
+  "status": "PASS",
+  "chiral_lattice": {
+    "definition": "L4 = {x in Z^40 : A x = -4 x}",
+    "rank": 15,
+    "trade_characterization": "L4 equals the saturated kernel of the 40x40 line-point incidence matrix: integer point-weights with zero sum on every isotropic line (the trade lattice of the GQ)",
+    "gram_determinant": 7739670528,
+    "gram_smith_invariants": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      24
+    ],
+    "gram_smith_profile": {
+      "2": 5,
+      "6": 9,
+      "24": 1
+    },
+    "even": true,
+    "incidence_matrix_smith_profile": {
+      "1": 25
+    },
+    "incidence_matrix_rank": 25
+  },
+  "glue": {
+    "identity": "index^2 = det(L12) * det(L2) * det(L4)",
+    "det_L12": 40,
+    "det_L2": 19349176320,
+    "det_L4": 7739670528,
+    "index": 77396705280,
+    "verified": true
+  },
+  "minimal_trades": {
+    "minimal_norm": 8,
+    "shell_size": 90,
+    "norms_histogram_to_min": {
+      "8": 90
+    },
+    "support_sizes": {
+      "8": 90
+    },
+    "value_profiles": {
+      "{-1: 4, 1: 4}": 90
+    },
+    "supports_avoiding_a_point_perp": {
+      "0": 45
+    },
+    "orbit_count_under_PSp43": 1,
+    "support_stabilizer_order": 576,
+    "support_stabilizer_point_orbits": [
+      8,
+      32
+    ],
+    "binary_polar_identification": "the 45 trade supports are exactly the canonical 8-point orbits of the 45 index-45 binary-polar subgroups (2T x 2T):2 of the five-vacua table",
+    "induced_collinearity_degrees_on_support": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "trade_inner_product_profile": {
+      "-8": 1,
+      "-2": 32,
+      "0": 24,
+      "2": 32,
+      "8": 1
+    },
+    "trade_inner_profile_constant": true,
+    "span_perp_identification": "each minimal trade is +1 on the span and -1 on the perp of a hyperbolic point pair: 90 = number of hyperbolic lines, 45 supports = unordered {span, perp} double-fours = K44s",
+    "support_zero_relation_degrees": [
+      12
+    ]
+  },
+  "two_480s": {
+    "arc_action_rank": 24,
+    "shell_action_rank": 40,
+    "joint_action_rank": 24,
+    "shell_stabilizer_order": 54,
+    "stabilizer_fixed_arcs": 0,
+    "g_sets_isomorphic": false,
+    "verdict": "NOT isomorphic: the shell stabilizer fixes no arc -- the Ihara zeta carrier and the E8 shell are two genuinely different 480s, one count, two G-sets"
+  },
+  "checks": {
+    "w33_srg_relation": true,
+    "chiral_rank_15": true,
+    "chiral_eigenvector_equation": true,
+    "incidence_kernel_rank_15": true,
+    "chiral_equals_trade_lattice": true,
+    "gauge_rank_24": true,
+    "gauge_det_matches_pass157": true,
+    "glue_identity": true,
+    "minimal_trades_are_eigenvectors": true,
+    "minimal_trades_kill_every_line": true,
+    "projective_group_order_25920": true,
+    "minimal_trades_single_orbit": true,
+    "support_stabilizer_order_576": true,
+    "support_orbit_size_45": true,
+    "binary_polar_point_orbits_8_32": true,
+    "octad_orbit_is_trade_support": true,
+    "trade_supports_are_K44": true,
+    "trade_sign_classes_are_span_perp_pairs": true,
+    "ninety_hyperbolic_spans": true,
+    "support_zero_relation_is_srg_45_12_3_3": true,
+    "arc_count_480": true,
+    "shell_label_count_480": true,
+    "arcs_transitive": true,
+    "shell_transitive": true,
+    "shell_stabilizer_order_54": true,
+    "two_480s_verdict_computed": true
+  }
+}
