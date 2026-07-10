@@ -10,6 +10,7 @@ commands and the typed Levi packet ABI:
     holonet packet-info
     holonet packet-demo
     holonet packet-fuzz --trials 1000
+    holonet packet-fault-stack
 """
 from __future__ import annotations
 
@@ -18,6 +19,7 @@ import sys
 
 
 _TYPED_COMMANDS = {"packet-info", "packet-demo", "packet-fuzz"}
+_FAULT_COMMANDS = {"packet-fault-stack"}
 
 
 def main(argv=None):
@@ -28,6 +30,12 @@ def main(argv=None):
         import holonet_typed_packet  # noqa: E402
 
         raise SystemExit(holonet_typed_packet.main(arguments))
+    if arguments and arguments[0] in _FAULT_COMMANDS:
+        if len(arguments) != 1:
+            raise SystemExit("packet-fault-stack takes no arguments")
+        import holonet_typed_fault_stack  # noqa: E402
+
+        raise SystemExit(holonet_typed_fault_stack.main())
 
     import holonet_cli  # noqa: E402
 
