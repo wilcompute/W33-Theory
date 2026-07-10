@@ -2,16 +2,14 @@
 """
 holonet_cmd -- console-script entry point for the holonet CLI.
 
-This thin shim makes `holonet` a real installed command. After `pip install -e .` from the repo root,
-the `holonet` command is available system-wide; it forwards to the universal-VM CLI in
-analysis/holonet_cli.py (route / teleport / correct / reproduce / verify / info). The shim only adds the
-analysis directory to the import path and calls the CLI's main, so the installed command and
-`py -3 analysis/holonet_cli.py` behave identically.
+After ``pip install -e .`` this shim exposes both the original universal-VM
+commands and the typed Levi packet ABI:
 
-Usage after install:
-    pip install -e .
     holonet verify
     holonet route 0001 0010
+    holonet packet-info
+    holonet packet-demo
+    holonet packet-fuzz --trials 1000
 """
 from __future__ import annotations
 
@@ -19,13 +17,21 @@ import os
 import sys
 
 
+_TYPED_COMMANDS = {"packet-info", "packet-demo", "packet-fuzz"}
+
+
 def main(argv=None):
-    sys.path.insert(
-        0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis")
-    )
+    analysis = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis")
+    sys.path.insert(0, analysis)
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if arguments and arguments[0] in _TYPED_COMMANDS:
+        import holonet_typed_packet  # noqa: E402
+
+        raise SystemExit(holonet_typed_packet.main(arguments))
+
     import holonet_cli  # noqa: E402
 
-    holonet_cli.main(argv)
+    holonet_cli.main(arguments)
 
 
 if __name__ == "__main__":
