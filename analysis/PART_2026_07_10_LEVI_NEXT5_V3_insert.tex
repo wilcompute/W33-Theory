@@ -1,0 +1,64 @@
+\subsection{Discriminant automorphisms, native $E_6$ objects, and the optical admission loop}
+\label{sec:levi-next5-v3}
+
+The odd-prime-power rank assembly has been translated into a placeholder-free
+Lean~4 module, together with a dependency and polynomial-identity certificate.
+It formalizes the block-rank sums, parity of the odd-$q$ multiplicity
+numerators, and the Jordan rank ladder. The source is pinned to the current
+mathlib toolchain; kernel compilation is not claimed in the present execution
+environment because Lean and Lake are unavailable there.
+
+For the integral chiral lattice $L_{-4}$, the complete two-primary
+discriminant group is
+\[
+ A_2(L_{-4})\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8.
+\]
+Transporting the integral permutation action through exact Smith coordinates
+gives a faithful quadratic action of orders $25920$ and $51840$. If $h$ is
+the canonical order-eight generator, then $q(h)=11/8$ and the fixed line is
+$\langle4h\rangle$. In the canonical elementary generators $e_i$, the outer
+involution acts by
+\[
+ \tau(h)=5h+e_0+e_1+e_2+e_5+e_8+e_{10}+e_{12}+e_{13}.
+\]
+Thus the outer action is genuinely mixed, not merely fixed or inverted; its
+square is the identity and the $\PSp(4,3)$-orbit of $h$ has size $2880$.
+
+The same native generators induce the six-dimensional minus-type homology
+module. Its $27$ singular vectors are explicitly identified with the cubic-
+surface lines $E_i,L_{ij},Q_i$. Their graph reconstructs $45$ tritangent
+planes and $72$ oriented double-sixes, hence the $72$ roots of $E_6$. The
+regular $51840$-state runtime maps equivariantly with fibers
+\[
+ 51840/27=1920,\quad 51840/45=1152,\quad
+ 51840/72=720,\quad 51840/540=96.
+\]
+The last fiber splits by chirality into two $48$-element middleware fibers.
+
+The normalized eight-bin integral $E_8$ map is compiled into a $16$-mode
+Halmos dilation with $120$ two-mode rotations. Exact reconstruction residuals
+are below $7\times10^{-15}$. A tolerance model including fabrication offsets,
+phase drift, finite extinction, correlated loss, and $50$~ps detector jitter
+selects calibration gain $1.025$ and yields
+\[
+ \overline F=0.999297,\qquad F_{5\%}=0.998749,
+\]
+compared with uncalibrated $\overline F=0.989727$.
+
+Finally, balanced optical click streams carry the eight-bit point-homology
+syndrome. Maximum-likelihood optical decoding reconstructs a $40$-bit cycle,
+after which authentication, the $[40,15,8]_2$ sentinel, immutable provenance,
+homology validation, retry control, and the native $W(E_6)$ coordinate map run
+in sequence. All $256$ noiseless words pass. In $2500$ noisy frames, $2495$
+are admitted and $5$ retried, with no wrong admission. The attack suite rejects
+all $448$ weight-$1$ through weight-$7$ errors at the sentinel, all $45$ weight-
+$8$ dark words at provenance, one raw retag at type checking, and one invalid
+tag at authentication.
+
+\emph{Witnesses:}
+\path{formal/W33/OddQRank.lean},
+\path{analysis/w33_levi_next5_v3_discriminant.py},
+\path{analysis/w33_levi_next5_v3_e6.py},
+\path{analysis/w33_levi_next5_v3_tolerance.py},
+\path{analysis/w33_levi_next5_v3_emulator.py}, and
+\path{data/PART_2026_07_10_LEVI_NEXT5_V3_results.json}.
