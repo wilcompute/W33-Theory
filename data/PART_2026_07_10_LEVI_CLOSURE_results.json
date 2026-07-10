@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "all_five_pass": true,
+    "all_five_present": true
+  },
+  "honest_scope": "D^3/D^4 is proved for all odd q; the three simple binary rank formulas remain exact q=3,5,7,9 theorem targets.",
+  "status": "PASS",
+  "tracks": {
+    "1_rank_proof_boundary": {
+      "all_pass": true,
+      "checks": {"D3_offdiag_J_checked": true, "all_census_rows_pass": true, "q_3_5_7_9_exact": true},
+      "derived_if_rank_lemmas_hold": "J4^2 + J3^((q^3+2q^2+q-4)/2) + J1^(q(q-1)^2/2)",
+      "proved_all_odd_q": "D^3=[[0,J],[J,0]] and D^4=0 by the GQ incidence parity argument",
+      "rank_lemmas_remaining": {"rank_A_line": "q^2+1", "rank_A_point": "q(q^2+1)/2+1", "rank_M": "(q(q+1)^2+2)/2"},
+      "scope": "No primary proof of the cross-characteristic rank lemmas was located; they are certified at q=3,5,7,9, not promoted as proved for all odd q."
+    },
+    "2_module_decomposition": {
+      "all_pass": true,
+      "checks": {"all_three_irreducible": true, "dimensions_8_6_14": true, "faithful_images": true, "line_direct_sum": true, "line_summands_minus_type": true, "line_summands_orthogonal": true},
+      "decomposition": "H_P + H_L = U8+ orthogonal-sum U6- orthogonal-sum U14-",
+      "embedding": "block action in O+_8(2) x O-_6(2) x O-_14(2) < O+_28(2)",
+      "group": "PSp(4,3)",
+      "group_order": 25920,
+      "line": {
+        "dimension": 20,
+        "summands": [
+          {"dimension": 6, "isotropic_nonzero": 27, "orbit_sizes": [27, 36], "seed_orbit": 27, "type": "O-_6(2)"},
+          {"dimension": 14, "isotropic_nonzero": 8127, "orbit_sizes": [45, 720, 270, 3240, 120, 1080, 2880, 2592, 3240, 1440, 216, 540], "seed_orbit": 45, "type": "O-_14(2)"}
+        ],
+        "type": "O+_20(2)"
+      },
+      "point": {"dimension": 8, "orbit_sizes": [120, 135], "type": "O+_8(2)"}
+    },
+    "3_typed_packet_vm": {
+      "all_pass": true,
+      "checks": {"fuzz": true, "legal_mirror_zero_syndrome": true, "raw_retag_rejected": true, "widths_8_20": true},
+      "commands": ["packet-info", "packet-demo", "packet-fuzz"],
+      "fuzz": {"all_pass": true, "legal_mirrors_passed": 256, "raw_retags_rejected": 256, "seed": 20260710, "trials": 256},
+      "implementation": "analysis/holonet_typed_packet.py"
+    },
+    "4_selector_closure": {
+      "all_pass": true,
+      "checks": {"both_chains_close": true, "eight_control_states": true, "weights_1_4_12_40": true},
+      "mapping": "slot s uses stage s of both J4 rails for BT982 columns 2s and 2s+1",
+      "phase": "v -> -v commutes with the integral boundary: D(-v)=-D(v)",
+      "rows": [
+        {"BT982_column": 0, "Z40_hex": "0x0000000001", "grade": "point", "rail": "point_seeded", "slot": 0, "support_pair": [3, 68], "weight": 1},
+        {"BT982_column": 1, "Z40_hex": "0x0000000001", "grade": "line", "rail": "line_seeded", "slot": 0, "support_pair": [3, 68], "weight": 1},
+        {"BT982_column": 2, "Z40_hex": "0x000000000f", "grade": "line", "rail": "point_seeded", "slot": 1, "support_pair": [4, 42], "weight": 4},
+        {"BT982_column": 3, "Z40_hex": "0x0000000071", "grade": "point", "rail": "line_seeded", "slot": 1, "support_pair": [4, 42], "weight": 4},
+        {"BT982_column": 4, "Z40_hex": "0x0381c0e070", "grade": "point", "rail": "point_seeded", "slot": 2, "support_pair": [38, 65], "weight": 12},
+        {"BT982_column": 5, "Z40_hex": "0x00003f111e", "grade": "line", "rail": "line_seeded", "slot": 2, "support_pair": [38, 65], "weight": 12},
+        {"BT982_column": 6, "Z40_hex": "0xffffffffff", "grade": "line", "rail": "point_seeded", "slot": 3, "support_pair": [90, 144], "weight": 40},
+        {"BT982_column": 7, "Z40_hex": "0xffffffffff", "grade": "point", "rail": "line_seeded", "slot": 3, "support_pair": [90, 144], "weight": 40}
+      ],
+      "scope": "canonical control/payload crosswalk; the J4 span is not identified with E8 homology",
+      "selector": [[3, 68], [4, 42], [38, 65], [90, 144]]
+    },
+    "5_group_bridge": {
+      "all_pass": true,
+      "checks": {"fiber_product": true, "local_D4": true, "mirror_D12": true, "runtime_48": true, "tomotope_profile": true, "two_order96_groups_not_isomorphic": true},
+      "phase_doubled_runtime": {"is_tomotope": false, "order": 96, "profile": {"1": 1, "2": 39, "3": 2, "4": 24, "6": 30}, "separator": "has order-6 elements; tomotope has none"},
+      "runtime_48": {"profile": {"1": 1, "2": 19, "3": 2, "4": 12, "6": 14}, "structure": "D4 fiber-product_over_C2 D12"},
+      "tomotope": {"order": 96, "profile": {"1": 1, "2": 27, "3": 32, "4": 36}, "structure": "(V4+V4):S3 = S4 fiber-product_over_S3 S4"}
+    }
+  }
+}
