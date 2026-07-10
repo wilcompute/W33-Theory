@@ -1,0 +1,56 @@
+\subsection{Levi closure: modular sectors, typed packets, selector chains, and middleware groups}
+\label{sec:levi-closure}
+
+Let $D_q=\left(\begin{smallmatrix}0&M_q\\M_q^T&0\end{smallmatrix}\right)$ be the
+point--line incidence operator of $W(q)$, reduced modulo two. For every odd
+$q$, the generalized-quadrangle axiom gives the exact identities
+\[
+ D_q^3=\begin{pmatrix}0&J\\J&0\end{pmatrix},\qquad D_q^4=0.
+\]
+Thus the terminal image always consists of the all-point and all-line parity
+rails. The stronger closed rank formulas remain computationally certified at
+$q=3,5,7,9$ and are isolated as three explicit cross-characteristic incidence-
+rank lemmas rather than promoted beyond the present proof.
+
+At $q=3$, the induced $\PSp(4,3)$ action on binary homology has the refined
+orthogonal decomposition
+\[
+ H_P\oplus H_L\cong U_8^+\perp U_6^-\perp U_{14}^-.
+\]
+All three summands are irreducible. The point sector is $O_8^+(2)\cong
+E_8/2E_8$; the line sector splits orthogonally as $O_6^-(2)\perp O_{14}^-(2)$,
+whose two Arf invariants sum to zero and hence recover $O_{20}^+(2)$. The
+result supplies an explicit block representation
+\[
+ \PSp(4,3)\hookrightarrow O_8^+(2)\times O_6^-(2)\times O_{14}^-(2)
+ \subset O_{28}^+(2).
+\]
+
+The executable packet ABI now carries
+\[
+ (\text{type bit},\ \text{homology syndrome},\ \text{40-bit payload}),
+\]
+with syndrome widths eight and twenty for point/address and line/route packets.
+A legal mirror operation applies $M^T$ or $M$ before toggling type and always
+lands in a target boundary; a raw retag is rejected. The installed command
+exposes \texttt{packet-info}, \texttt{packet-demo}, and \texttt{packet-fuzz}.
+
+The two maximal Jordan chains provide eight explicit $\mathbb Z^{40}$ control
+states, with stage weights $1,4,12,40$ on both rails. Selector slot $s$ is
+therefore canonically paired with stage $s$ of the point-seeded and line-seeded
+chains and with BT982 payload columns $2s$ and $2s+1$. Integral inversion
+commutes with the boundary, $D(-v)=-D(v)$, closing the former BT1881 chain-
+boundary frontier.
+
+Finally, the order-$96$ tomotope group is identified as
+\[
+ (V_4\oplus V_4)\rtimes S_3\cong S_4\times_{S_3}S_4,
+\]
+with profile $\{1:1,2:27,3:32,4:36\}$. The local and mirror groups are
+$D_4\cong V_4\rtimes C_2$ and $D_{12}\cong S_3\times C_2$, while the runtime
+order-$48$ object is the fiber product
+\[
+ G_{48}=D_4\times_{C_2}D_{12}.
+\]
+Its phase double has order $96$ but is not isomorphic to the tomotope group,
+because it has elements of order six whereas the tomotope group does not.
