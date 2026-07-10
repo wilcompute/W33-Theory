@@ -1,0 +1,134 @@
+{
+  "characteristic_two": {
+    "dirac_jordan_blocks": {
+      "1": 6,
+      "3": 22,
+      "4": 2
+    },
+    "dirac_kernel_filtration": {
+      "1": 30,
+      "2": 54,
+      "3": 78,
+      "4": 80
+    },
+    "dirac_power_ranks": {
+      "1": 50,
+      "2": 26,
+      "3": 2,
+      "4": 0
+    },
+    "homology_dimension_sum": 28,
+    "incidence_rank": 25,
+    "induced_line_to_point_homology_rank": 0,
+    "induced_point_to_line_homology_rank": 0,
+    "kernel_ladder_reading": {
+      "30": "h(E8)",
+      "54": "2*q^3",
+      "78": "dim(E6)",
+      "80": "2*v"
+    },
+    "line_half_homology_dimension": 20,
+    "line_half_rank": 10,
+    "point_half_homology_dimension": 8,
+    "point_half_rank": 16,
+    "rank_ladder_reading": {
+      "0": "nilpotent closure",
+      "2": "lambda",
+      "26": "2*Phi_3",
+      "50": "5*Phi_4"
+    }
+  },
+  "characteristic_zero": {
+    "dirac_spectrum": {
+      "+4": 1,
+      "+sqrt(6)": 24,
+      "-4": 1,
+      "-sqrt(6)": 24,
+      "0": 30
+    },
+    "grading_flip_automorphism_exists": false,
+    "incidence_gram_spectrum": {
+      "0": 15,
+      "16": 1,
+      "6": 24
+    },
+    "incidence_rank": 25,
+    "line_zero_modes": 15,
+    "point_zero_modes": 15,
+    "witten_index": 0
+  },
+  "checks": {
+    "balanced_zero_modes_15_plus_15": true,
+    "char2_half_factorization_line": true,
+    "char2_half_factorization_point": true,
+    "dirac_jordan_type_4x2_3x22_1x6": true,
+    "dirac_kernel_filtration_30_54_78_80": true,
+    "dirac_nilpotency_index_4": true,
+    "dirac_rank_ladder_50_26_2_0": true,
+    "dirac_spectrum_expected": true,
+    "four_lines_through_each_point": true,
+    "four_points_on_each_line": true,
+    "geometry_160_flags": true,
+    "geometry_40_lines": true,
+    "geometry_40_points": true,
+    "graded_anticommutation": true,
+    "half_homology_8_20": true,
+    "half_homology_sum_28": true,
+    "half_ranks_16_10": true,
+    "hamiltonian_block_identity": true,
+    "incidence_gram_spectrum_16_6_0": true,
+    "incidence_induced_maps_zero_on_homology": true,
+    "incidence_rank_char0_25": true,
+    "line_alpha_10": true,
+    "line_differential_square_zero": true,
+    "line_gram_identity": true,
+    "point_alpha_7": true,
+    "point_differential_square_zero": true,
+    "point_gram_identity": true,
+    "point_line_graphs_nonisomorphic": true
+  },
+  "geometry": {
+    "alpha_line_graph": 10,
+    "alpha_point_graph": 7,
+    "flags": 160,
+    "line_graph": "Q(4,3) point graph",
+    "lines": 40,
+    "maximum_independent_set_line_graph": [
+      0,
+      5,
+      11,
+      14,
+      22,
+      26,
+      30,
+      31,
+      35,
+      39
+    ],
+    "maximum_independent_set_point_graph": [
+      6,
+      15,
+      23,
+      33,
+      37,
+      38,
+      39
+    ],
+    "point_graph": "W(3,3)",
+    "point_line_graphs_isomorphic": false,
+    "points": 40,
+    "q": 3
+  },
+  "interpretation": {
+    "boundary": "The exceptional-number labels are exact arithmetic readings of the verified filtration; they are not by themselves a continuum-physics derivation.",
+    "char2_glue_dimensions_explained": [
+      8,
+      20
+    ],
+    "geometrically_swappable": false,
+    "spectrally_paired": true,
+    "type_bit_is_intrinsic": true
+  },
+  "status": "PASS",
+  "title": "Levi Duality-Defect and Characteristic-Two Incidence-Dirac Theorem"
+}
