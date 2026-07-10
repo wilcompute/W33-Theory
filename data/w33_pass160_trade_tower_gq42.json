@@ -1,0 +1,88 @@
+{
+  "schema": "w33.pass160.trade_tower_gq42.v1",
+  "status": "PASS",
+  "gq42": {
+    "points": 45,
+    "lines": 27,
+    "incidence_rank": 21,
+    "reading": "the chiral shell geometry of W(3,3), rebuilt as a point-line geometry; PSU(4,2) = PSp(4,3) keeps the tower inside one abstract group"
+  },
+  "trade_lattice": {
+    "rank": 24,
+    "determinant": 391820820480,
+    "smith_profile": {
+      "1": 10,
+      "6": 13,
+      "30": 1
+    },
+    "even": true,
+    "minimal_norm": 6,
+    "shell_size": 240,
+    "support_sizes": {
+      "6": 240
+    },
+    "value_profiles": {
+      "{-1: 3, 1: 3}": 240
+    },
+    "orbits_under_group": 1
+  },
+  "hyperbolic_anatomy": {
+    "noncollinear_pairs": 720,
+    "perp_span_profile_sample": {
+      "(3, 3)": 60
+    }
+  },
+  "line_relations": {
+    "rank": 6,
+    "determinant": 139968,
+    "smith_profile": {
+      "6": 5,
+      "18": 1
+    },
+    "minimal_norm": 12,
+    "shell_size": 72,
+    "support_sizes": {
+      "12": 72
+    },
+    "value_profiles": {
+      "{-1: 6, 1: 6}": 72
+    }
+  },
+  "tower_step": {
+    "distinct_supports": 120,
+    "relation_graph_degrees": [
+      56
+    ],
+    "relation_graph_srg": null,
+    "complement_srg": null,
+    "complement_is_e8_rootline": false,
+    "shell_span": {
+      "span_rank": 24,
+      "ip_profile_row0": {
+        "-6": 1,
+        "-2": 27,
+        "-1": 36,
+        "0": 112,
+        "1": 36,
+        "2": 27,
+        "6": 1
+      },
+      "is_scaled_e8": false
+    },
+    "honest_negatives": "the 240/120/720 counts repeat the E8-root/local-axis/moonshine numerology, but the relation-graph complement (63-regular) is NOT the E8 root-line SRG and the shell spans the full rank-24 lattice, not a scaled E8: the tower lands on a new 120-object"
+  },
+  "checks": {
+    "support_graph_srg": true,
+    "gq42_line_count_27": true,
+    "gq42_three_lines_per_point": true,
+    "gq42_trade_rank_24": true,
+    "gq42_incidence_rank_21": true,
+    "gq42_trades_kill_every_line": true,
+    "gq42_hyperbolic_pairs_720": true,
+    "gq42_line_relations_rank_6": true,
+    "group_order_25920": true,
+    "tower_relation_graph_analyzed": true,
+    "tower_complement_analyzed": true,
+    "shell_span_rank_recorded": true
+  }
+}

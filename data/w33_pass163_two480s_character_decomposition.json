@@ -1,0 +1,516 @@
+{
+  "schema": "w33.pass163.two480s_character_decomposition.v1",
+  "status": "PASS",
+  "gap_source": "live",
+  "irreducible_degrees": [
+    1,
+    5,
+    5,
+    6,
+    10,
+    10,
+    15,
+    15,
+    20,
+    24,
+    30,
+    30,
+    30,
+    40,
+    40,
+    45,
+    45,
+    60,
+    64,
+    81
+  ],
+  "carriers": {
+    "points": {
+      "size": 40,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "lines": {
+      "size": 40,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "arcs": {
+      "size": 480,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2
+      ]
+    },
+    "shell": {
+      "size": 480,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        3,
+        0,
+        4,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "trades": {
+      "size": 90,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "supports": {
+      "size": 45,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "skew_pairs": {
+      "size": 540,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    "hyperbolic_pairs": {
+      "size": 540,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        3,
+        0,
+        1
+      ]
+    },
+    "gq42_arcs": {
+      "size": 540,
+      "multiplicities": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2
+      ]
+    }
+  },
+  "intertwiner_gram": [
+    [
+      3,
+      2,
+      6,
+      6,
+      3,
+      2,
+      3,
+      5,
+      3
+    ],
+    [
+      2,
+      3,
+      5,
+      8,
+      2,
+      2,
+      6,
+      3,
+      4
+    ],
+    [
+      6,
+      5,
+      24,
+      24,
+      8,
+      5,
+      17,
+      20,
+      16
+    ],
+    [
+      6,
+      8,
+      24,
+      40,
+      6,
+      5,
+      28,
+      16,
+      20
+    ],
+    [
+      3,
+      2,
+      8,
+      6,
+      5,
+      3,
+      5,
+      7,
+      6
+    ],
+    [
+      2,
+      2,
+      5,
+      5,
+      3,
+      3,
+      5,
+      4,
+      6
+    ],
+    [
+      3,
+      6,
+      17,
+      28,
+      5,
+      5,
+      32,
+      16,
+      25
+    ],
+    [
+      5,
+      3,
+      20,
+      16,
+      7,
+      4,
+      16,
+      25,
+      15
+    ],
+    [
+      3,
+      4,
+      16,
+      20,
+      6,
+      6,
+      25,
+      15,
+      27
+    ]
+  ],
+  "eigenspace_irreducibles": {
+    "chi24_gauge_index": 9,
+    "chi15_chiral_index": 6
+  },
+  "sentinel_gauge_table": {
+    "points": {
+      "chi15_chiral_multiplicity": 1,
+      "chi24_gauge_multiplicity": 1
+    },
+    "lines": {
+      "chi15_chiral_multiplicity": 0,
+      "chi24_gauge_multiplicity": 1
+    },
+    "arcs": {
+      "chi15_chiral_multiplicity": 2,
+      "chi24_gauge_multiplicity": 3
+    },
+    "shell": {
+      "chi15_chiral_multiplicity": 1,
+      "chi24_gauge_multiplicity": 4
+    },
+    "trades": {
+      "chi15_chiral_multiplicity": 1,
+      "chi24_gauge_multiplicity": 1
+    },
+    "supports": {
+      "chi15_chiral_multiplicity": 0,
+      "chi24_gauge_multiplicity": 1
+    },
+    "skew_pairs": {
+      "chi15_chiral_multiplicity": 0,
+      "chi24_gauge_multiplicity": 2
+    },
+    "hyperbolic_pairs": {
+      "chi15_chiral_multiplicity": 2,
+      "chi24_gauge_multiplicity": 2
+    },
+    "gq42_arcs": {
+      "chi15_chiral_multiplicity": 0,
+      "chi24_gauge_multiplicity": 2
+    }
+  },
+  "selection_rule": {
+    "arc_constituents": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        6,
+        15,
+        2
+      ],
+      [
+        7,
+        15,
+        1
+      ],
+      [
+        8,
+        20,
+        1
+      ],
+      [
+        9,
+        24,
+        3
+      ],
+      [
+        10,
+        30,
+        1
+      ],
+      [
+        15,
+        45,
+        1
+      ],
+      [
+        16,
+        45,
+        1
+      ],
+      [
+        17,
+        60,
+        1
+      ],
+      [
+        19,
+        81,
+        2
+      ]
+    ],
+    "shell_constituents": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        6,
+        15,
+        1
+      ],
+      [
+        7,
+        15,
+        3
+      ],
+      [
+        9,
+        24,
+        4
+      ],
+      [
+        11,
+        30,
+        1
+      ],
+      [
+        12,
+        30,
+        1
+      ],
+      [
+        19,
+        81,
+        3
+      ]
+    ],
+    "arc_support_subset_of_shell": false,
+    "common_constituents": 5
+  },
+  "checks": {
+    "group_order_25920": true,
+    "twenty_conjugacy_classes": true,
+    "degree_consistency": true,
+    "rank_consistency": true,
+    "arcs_rank_24_f": true,
+    "shell_rank_40_v": true,
+    "arcs_shell_joint_24": true,
+    "skew_rank_32": true,
+    "hyper_rank_25": true,
+    "gq42_arc_rank_27": true,
+    "cross_540_ranks_16_25_15": true,
+    "points_rank_3": true,
+    "point_character_1_24_15": true,
+    "selection_rule_computed": true
+  }
+}

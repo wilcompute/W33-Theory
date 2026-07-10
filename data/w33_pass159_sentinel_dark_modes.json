@@ -1,0 +1,65 @@
+{
+  "schema": "w33.pass159.sentinel_dark_modes.v1",
+  "status": "PASS",
+  "readout_law": {
+    "point_gram": "N^T N = 4 I + A",
+    "spectrum": {
+      "16": 1,
+      "6": 24,
+      "0": 15
+    },
+    "reading": "readout gain 2^mu=16 on the Perron mode, q!=6 on the gauge sector, 0 on the g=15 sentinel sector: the sentinel eigenspace is exactly the readout kernel",
+    "line_side": "N N^T = 4 I + A_dual, concurrence SRG(40,12,2,4)"
+  },
+  "duality": {
+    "det_code_lattice": 7739670528,
+    "det_dark_lattice": 7739670528,
+    "glue_index": 7739670528,
+    "identity": "det(im N^T) = det(ker N) = [Z^40 : im + ker] = 2^17 3^10"
+  },
+  "dark_modes": {
+    "count": 90,
+    "norm": 8,
+    "external_balance_profile": {
+      "(1, 1)": 2880
+    },
+    "reading": "every off-support point sees equal +/- support neighbors, so each dark mode is pointwise invisible outside its own K44 crossbar, which alone carries A x = -4 x"
+  },
+  "sentinel_code": {
+    "parameters": "[40, 15, 8] over F2",
+    "weight_enumerator": {
+      "0": 1,
+      "8": 45,
+      "12": 720,
+      "16": 6930,
+      "20": 17376,
+      "24": 6930,
+      "28": 720,
+      "32": 45,
+      "40": 1
+    },
+    "minimum_weight_words": 45,
+    "identification": "the 45 weight-8 codewords are exactly the 45 trade supports (binary-polar K44 octads)",
+    "security_reading": "any nonzero integer tamper pattern of support < 8 has a nonzero odd part of weight < 8, hence lies outside the code and excites at least one of the 40 contexts: sub-8 anomalies are always context-visible, and the cheapest context-invisible excitation is quantized at norm 8 with exactly 90 modes"
+  },
+  "checks": {
+    "readout_gram_is_muI_plus_A": true,
+    "readout_spectrum_16_6_0": true,
+    "line_concurrence_is_srg_40_12_2_4": true,
+    "line_gram_is_muI_plus_dual_A": true,
+    "incidence_snf_trivial": true,
+    "dark_equals_trade": true,
+    "code_rank_25": true,
+    "code_contains_all_context_rows": true,
+    "duality_det_code_equals_det_dark": true,
+    "duality_det_is_2_17_3_10": true,
+    "duality_index_equals_det": true,
+    "ninety_dark_modes_norm_8": true,
+    "external_balance_law": true,
+    "crossbar_drive_carries_eigenvalue": true,
+    "sentinel_code_dimension_15": true,
+    "sentinel_min_distance_8": true,
+    "weight8_words_are_the_45_supports": true,
+    "all_codewords_kill_every_line_mod2": true
+  }
+}

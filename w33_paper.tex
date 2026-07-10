@@ -10509,4 +10509,205 @@ shell exists even at the crudest level.
 ($26$ exact checks, all passing; artifact
 \texttt{data/w33\_pass158\_chiral\_trade\_lattice\_two\_480s.json}).
 
+%% ===============================================================
+\section{The Chiral Program: Five Executions}
+\label{sec:chiral-program}
+%% ===============================================================
+
+Pass~158 opened five directions; Passes~159--163 execute all five. Each is
+an exact finite computation with its own witness and JSON certificate.
+
+\subsection{Pass 159 --- the sentinel space is the trade lattice, and the
+dark modes are quantized}
+\label{ssec:pass159}
+
+The holonet security layer detects intrusion as a spectral anomaly against
+the $g=15$ sentinel eigenspace. Pass~158 identified that eigenspace
+integrally as the trade lattice; Pass~159 turns the identification into a
+readout-security theorem package.
+
+\begin{theorem}[Readout spectral law and readout/dark duality]
+\label{thm:readout-law}
+The context readout map $N$ (line--point incidence) has point-side Gram
+$N^{\mathsf T}N=\mu I+A$ with exact spectrum
+$\{16^{\,1},\,6^{\,24},\,0^{\,15}\}$: readout gain $2^{\mu}=16$ on the
+Perron mode, $q!=6$ on the gauge sector, and $0$ on the sentinel sector ---
+the sentinel eigenspace is precisely the readout kernel. The line-side Gram
+$NN^{\mathsf T}=\mu I+A^{\vee}$ is the concurrence graph, again
+$\SRG(40,12,2,4)$ (self-duality). The context-generated code lattice
+$\operatorname{im}N^{\mathsf T}$ is saturated of rank $25$, and
+\[
+  \det(\operatorname{im}N^{\mathsf T})
+  \;=\;\det(\ker N)
+  \;=\;\bigl[\mathbb Z^{40}:\operatorname{im}N^{\mathsf T}\oplus\ker N\bigr]
+  \;=\;2^{17}3^{10}.
+\]
+\end{theorem}
+
+\begin{theorem}[External balance and the sentinel code]
+\label{thm:sentinel-code}
+Every minimal dark mode is pointwise invisible outside its own support:
+each of the $32$ off-support points sees exactly one $+1$ and one $-1$
+support neighbour (all $90\times32=2880$ instances), so the $K_{4,4}$
+crossbar alone carries the eigenvector equation. The mod-$2$ reduction of
+the trade lattice is a self-complementary binary code with parameters
+\[
+  [40,\,15,\,8]_2,
+  \qquad
+  W(z)=1+45z^{8}+720z^{12}+6930z^{16}+17376z^{20}
+  +6930z^{24}+720z^{28}+45z^{32}+z^{40},
+\]
+all weights divisible by $4$, whose $45$ minimum-weight words are exactly
+the $45$ trade supports. Consequently \emph{any nonzero integer tamper
+pattern of support $<8$ excites at least one of the $40$ measurement
+contexts}: sub-$8$ anomalies are always context-visible, and the cheapest
+context-invisible excitation is quantized at norm $8$ with exactly $90$
+modes. (Witness:
+\texttt{analysis/w33\_pass159\_sentinel\_dark\_modes.py}, $18$ checks.)
+\end{theorem}
+
+\subsection{Pass 160 --- the trade tower: iterating the chiral construction}
+\label{ssec:pass160}
+
+The support geometry $\GQ(4,2)$ of Pass~158 carries the same abstract group
+($\mathrm{PSU}(4,2)\cong\PSp(4,3)$, the exceptional isomorphism realized
+geometrically), so the chiral construction iterates.
+
+\begin{theorem}[The second trade lattice]
+\label{thm:second-trade}
+The $27$ lines of $\GQ(4,2)$ are recovered as the $5$-cliques of the
+support graph ($3$ per point). Its trade lattice (zero sum on every line)
+has rank $24=f$ (incidence rank $21$: the $27$ lines are integrally
+dependent), is even with
+$\operatorname{SNF}=\operatorname{diag}(1^{10},6^{13},30)$ and
+$\det=2^{14}3^{14}5$, and its minimal shell has norm $6$ with exactly
+$240$ vectors on $120$ supports, again in a single group orbit: each is
+$\pm(\mathbf 1_{\mathrm{span}}-\mathbf 1_{\mathrm{perp}})$ over the $720$
+hyperbolic pairs of $\GQ(4,2)$ (span and perp both $3$-sets). The dual
+kernel --- relations among the $27$ lines --- has rank $6$,
+$\operatorname{SNF}=\operatorname{diag}(6^{5},18)$, $\det=2^{6}3^{7}$, and
+minimal shell of norm $12$ with $72$ vectors ($\pm1$ on $6{+}6$ lines).
+\end{theorem}
+
+\noindent\emph{Honest negatives.} The counts $720/240/120$ repeat the
+substrate's moonshine/$E_8$-root/local-axis integers, but the $240$ trades
+span the full rank-$24$ lattice (not a scaled $E_8$; inner-product profile
+$\{\pm6{:}1,\pm2{:}27,\pm1{:}36,0{:}112\}$), and the $120$-support relation
+graph is $56$-regular with a $63$-regular complement that is \emph{not}
+strongly regular: the tower lands on a new $120$-object, not the $E_8$
+root-line graph. (Witness:
+\texttt{analysis/w33\_pass160\_trade\_tower\_gq42.py}.)
+
+\subsection{Pass 161 --- the Ihara prime propagates down the tower}
+\label{ssec:pass161}
+
+\begin{theorem}[Graph RH inheritance]
+\label{thm:ihara-inheritance}
+The support geometry $\SRG(45,12,3,3)$ is $12$-regular like $W(3,3)$
+itself, so its Ihara prime is the same $k-1=11$. Its zeta function is
+\[
+  \zeta^{-1}(u)=(1-u^2)^{225}\,(1-u)(1-11u)\,
+  (1-3u+11u^2)^{20}\,(1+3u+11u^2)^{24},
+\]
+both quadratic sectors sharing the single discriminant
+$9-44=-35=-(\mu{+}1)\Phi_6<0$, and all $88$ complex Hashimoto eigenvalues
+satisfy $|x|^2=11$ exactly: the chiral shell geometry satisfies the graph
+Riemann Hypothesis on the \emph{same} critical circle $|u|=1/\sqrt{11}$ as
+the substrate. The critical norm $\sqrt{11}$ is a tower invariant.
+\end{theorem}
+
+\begin{theorem}[The three 540s]
+\label{thm:three-540s}
+The $540$ skew line pairs (the hypercube-chart atlas), the $540$ hyperbolic
+point pairs (the minimal-trade seeds), and the $540$ Hashimoto arcs of the
+support geometry are all transitive $\PSp(4,3)$-sets with stabilizers of
+order $48$ --- and pairwise \emph{non-isomorphic}: no stabilizer fixes a
+point of another carrier, and the orbital ranks separate them,
+\[
+  \operatorname{rank}=32,\;25,\;27,
+  \qquad
+  \text{joint ranks}=16,\;25,\;15 .
+\]
+Together with the two 480s, ``one count, many $G$-sets'' is a systematic
+substrate phenomenon. (Witness:
+\texttt{analysis/w33\_pass161\_gq42\_ihara\_inheritance.py}, $20$ checks.)
+\end{theorem}
+
+\subsection{Pass 162 --- the mod-8 anomaly ledger}
+\label{ssec:pass162}
+
+Each sector of the spectral splitting is an even positive-definite lattice,
+so each carries a finite discriminant quadratic form whose normalized Gauss
+sum is, by Milgram's theorem, $e^{2\pi i\,\sigma/8}$.
+
+\begin{theorem}[The mod-8 ledger]
+\label{thm:mod8-ledger}
+Computing all three discriminant forms exactly (p-adic Smith generators,
+element-distinctness certified, every $p$-part Gauss sum an exact eighth
+root of unity):
+\[
+  \sigma(L_{12})=1,\qquad
+  \sigma(L_2)=24\equiv 0,\qquad
+  \sigma(L_4)=15\equiv 7\pmod 8 .
+\]
+The gauge sector is Brown-trivial (anomaly-free, $E_8$-like); the chiral
+sector carries Brown invariant $7=\Phi_6\bmod 8$; and the ledger closes,
+$1+0+7=8\equiv0$, the discriminant-form statement that $\mathbb Z^{40}$ is
+unimodular ($v=40\equiv0\bmod 8$). The chiral sector's phase splits over
+its primes as $\tfrac38+\tfrac48=\tfrac78$ (2-part and 3-part Gauss
+phases), and its discriminant form has a unique $\mathbb Z/8$ Jordan block
+(2-adic depth $3$, from the Smith invariant $24$) --- entirely absent from
+the gauge sector, whose discriminant group is elementary --- whose
+generator evaluates to
+\[
+  q(h)\;=\;\frac{88}{64}\;=\;\frac{11}{8}\ \bmod\ 2\mathbb Z,
+\]
+the Ihara prime over eight. (Witness:
+\texttt{analysis/w33\_pass162\_mod8\_anomaly\_ledger.py}, $41$ checks.)
+\end{theorem}
+
+\subsection{Pass 163 --- the two 480s decomposed: a dynamics/kinematics
+selection rule}
+\label{ssec:pass163}
+
+The orbital ranks $24=f$ and $40=v$ of the two 480s are explained at the
+level of irreducible characters, computed in GAP for the nine natural
+substrate carriers as one combined permutation action on $2795$ points.
+
+\begin{theorem}[Character selection rule]
+\label{thm:selection-rule}
+Write $\chi_{15}$ and $\chi_{15}'$ for the two degree-$15$ irreducibles of
+$\PSp(4,3)$ and $\chi_{24}$ for the degree-$24$; then
+$\pi_{\mathrm{points}}=1+\chi_{15}+\chi_{24}$ and
+$\pi_{\mathrm{lines}}=1+\chi_{15}'+\chi_{24}$ (duality swaps the two
+$15$s). The Hashimoto arc character and the eigenlattice shell character
+share exactly \emph{five} constituents,
+\[
+  \{\,1,\;\chi_{15},\;\chi_{15}',\;\chi_{24},\;\chi_{81}\,\}
+\]
+--- the trivial, both eigenspace $15$s, the gauge $24$, and the Steinberg
+representation $81=3^4$ (the protected-memory module). Neither spectrum
+contains the other: arcs alone carry degrees $\{20,30,45,45,60\}$
+(dimension sum $200=5v$) while the shell alone carries
+$\{10,10,30,30\}$ (dimension sum $80=2v$), giving the exact splits
+\[
+  480 = \underbrace{280}_{|V|+|E|} + 200
+  \quad(\text{arcs}),
+  \qquad
+  480 = \underbrace{400}_{\Theta v} + 80
+  \quad(\text{shell}),
+\]
+where the common-core dimension sums are the substrate's configurational
+total $280=|V|+|E|$ on the dynamics side and $\Theta v=400$ on the
+kinematics side. Moreover the chiral $\chi_{15}$ is \emph{line-blind}: its
+multiplicity is zero in every line-side and tower-side carrier (lines, skew
+pairs, trade supports, $\GQ(4,2)$ arcs) and nonzero in every point-side
+carrier (points, arcs, shell, trades, hyperbolic pairs) --- the sentinel
+sector is invisible from the dual world. The full $9\times9$ intertwiner
+Gram matrix independently re-derives every rank of Passes~158 and~161.
+(Witness:
+\texttt{analysis/w33\_pass163\_two480s\_character\_decomposition.py},
+GAP-assisted, $14$ checks.)
+\end{theorem}
+
 \end{document}

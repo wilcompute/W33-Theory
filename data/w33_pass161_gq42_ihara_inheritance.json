@@ -1,0 +1,64 @@
+{
+  "schema": "w33.pass161.gq42_ihara_inheritance.v1",
+  "status": "PASS",
+  "ihara": {
+    "graph": "SRG(45,12,3,3) on the 45 trade supports",
+    "zeta_inverse": "(1-u^2)^225 (1-u)(1-11u) (1-3u+11u^2)^20 (1+3u+11u^2)^24",
+    "ihara_prime": 11,
+    "sector_discriminant": -35,
+    "discriminant_reading": "-35 = -(mu+1)*Phi_6",
+    "graph_rh": "all 88 complex Hashimoto eigenvalues satisfy |x|^2 = 11: the chiral support geometry lives on the same critical circle |u| = 1/sqrt(11) as W(3,3) itself"
+  },
+  "three_540s": {
+    "carriers": [
+      "540 skew line pairs (the hypercube-chart atlas)",
+      "540 hyperbolic point pairs (the minimal-trade seeds)",
+      "540 Hashimoto arcs of the GQ(4,2) support geometry"
+    ],
+    "stabilizer_order": 48,
+    "verdicts": {
+      "skew_line_pairs_vs_hyperbolic_pairs": {
+        "stabilizer_fixed_points": 0,
+        "isomorphic": false
+      },
+      "skew_line_pairs_vs_gq42_arcs": {
+        "stabilizer_fixed_points": 0,
+        "isomorphic": false
+      },
+      "hyperbolic_pairs_vs_gq42_arcs": {
+        "stabilizer_fixed_points": 0,
+        "isomorphic": false
+      }
+    },
+    "orbital_ranks": {
+      "skew_line_pairs": 32,
+      "hyperbolic_pairs": 25,
+      "gq42_arcs": 27,
+      "skew_line_pairs_x_hyperbolic_pairs": 16,
+      "skew_line_pairs_x_gq42_arcs": 25,
+      "hyperbolic_pairs_x_gq42_arcs": 15
+    }
+  },
+  "checks": {
+    "support_graph_12_regular": true,
+    "support_graph_srg_45_12_3_3": true,
+    "support_spectrum_12_3_m3": true,
+    "edge_count_270": true,
+    "arc_count_540": true,
+    "hashimoto_row_sum_11": true,
+    "hashimoto_real_spectrum": true,
+    "hashimoto_complex_count_88": true,
+    "graph_rh_critical_norm_11": true,
+    "sector_discriminant_minus_35": true,
+    "group_order_25920": true,
+    "skew_line_pairs_540": true,
+    "hyperbolic_pairs_540": true,
+    "skew_line_pairs_transitive": true,
+    "hyperbolic_pairs_transitive": true,
+    "gq42_arcs_transitive": true,
+    "skew_line_pairs_stabilizer_48": true,
+    "hyperbolic_pairs_stabilizer_48": true,
+    "gq42_arcs_stabilizer_48": true,
+    "ranks_computed": true
+  }
+}

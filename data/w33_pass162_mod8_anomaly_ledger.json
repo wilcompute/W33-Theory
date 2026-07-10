@@ -1,0 +1,169 @@
+{
+  "schema": "w33.pass162.mod8_anomaly_ledger.v1",
+  "status": "PASS",
+  "sectors": {
+    "L12_perron": {
+      "rank": 1,
+      "signature": 1,
+      "signature_mod_8": 1,
+      "discriminant_order": 40,
+      "smith_invariants_nontrivial": [
+        40
+      ],
+      "p_parts": {
+        "2": {
+          "size": 8,
+          "max_denominator": 8,
+          "normalized_phase_eighths": 1,
+          "residual": 2.482534153247273e-16
+        },
+        "5": {
+          "size": 5,
+          "max_denominator": 5,
+          "normalized_phase_eighths": 0,
+          "residual": 2.432376777795247e-16
+        }
+      },
+      "milgram_phase_eighths": 1,
+      "milgram_residual": 4.002966042486721e-16
+    },
+    "L2_gauge": {
+      "rank": 24,
+      "signature": 24,
+      "signature_mod_8": 0,
+      "discriminant_order": 19349176320,
+      "smith_invariants_nontrivial": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        30
+      ],
+      "p_parts": {
+        "2": {
+          "size": 65536,
+          "max_denominator": 2,
+          "normalized_phase_eighths": 4,
+          "residual": 1.5614246689128757e-14
+        },
+        "3": {
+          "size": 59049,
+          "max_denominator": 3,
+          "normalized_phase_eighths": 4,
+          "residual": 2.8196184494748207e-14
+        },
+        "5": {
+          "size": 5,
+          "max_denominator": 5,
+          "normalized_phase_eighths": 0,
+          "residual": 2.432376777795247e-16
+        }
+      },
+      "milgram_phase_eighths": 0,
+      "milgram_residual": 4.102294873954392e-14
+    },
+    "L4_chiral": {
+      "rank": 15,
+      "signature": 15,
+      "signature_mod_8": 7,
+      "discriminant_order": 7739670528,
+      "smith_invariants_nontrivial": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        24
+      ],
+      "p_parts": {
+        "2": {
+          "size": 131072,
+          "max_denominator": 8,
+          "normalized_phase_eighths": 3,
+          "residual": 5.645361266601573e-14
+        },
+        "3": {
+          "size": 59049,
+          "max_denominator": 3,
+          "normalized_phase_eighths": 4,
+          "residual": 2.742641277507364e-14
+        }
+      },
+      "milgram_phase_eighths": 7,
+      "milgram_residual": 7.278602166755409e-14
+    }
+  },
+  "ledger": {
+    "identity": "sigma(L12) + sigma(L2) + sigma(L4) = 1 + 24 + 15 = 40 = v",
+    "mod8": "1 + 0 + 7 = 8 = 0 (mod 8)",
+    "reading": "the gauge sector is Brown-trivial like E8; the chiral sector carries Brown invariant 7 = Phi_6 mod 8; the Perron carries 1; the ledger closes because Z^40 is unimodular and v = 40 = 0 mod 8"
+  },
+  "z8_block": {
+    "source": "Smith invariant 24 of the chiral Gram",
+    "q_numerator_mod_128_over_64": 88,
+    "reading": "the chiral discriminant form has 2-adic depth 3 (a Z/8 Jordan block) -- absent from the gauge sector, whose discriminant is elementary"
+  },
+  "checks": {
+    "gauge_even": true,
+    "chiral_even": true,
+    "L12_p2_dual_certificate": true,
+    "L12_p2_elements_distinct": true,
+    "L12_p2_size_matches_det": true,
+    "L12_p2_gauss_is_eighth_root": true,
+    "L12_p5_dual_certificate": true,
+    "L12_p5_elements_distinct": true,
+    "L12_p5_size_matches_det": true,
+    "L12_p5_gauss_is_eighth_root": true,
+    "L12_milgram_signature": true,
+    "L12_discriminant_order": true,
+    "L2_p2_dual_certificate": true,
+    "L2_p2_elements_distinct": true,
+    "L2_p2_size_matches_det": true,
+    "L2_p2_gauss_is_eighth_root": true,
+    "L2_p3_dual_certificate": true,
+    "L2_p3_elements_distinct": true,
+    "L2_p3_size_matches_det": true,
+    "L2_p3_gauss_is_eighth_root": true,
+    "L2_p5_dual_certificate": true,
+    "L2_p5_elements_distinct": true,
+    "L2_p5_size_matches_det": true,
+    "L2_p5_gauss_is_eighth_root": true,
+    "L2_milgram_signature": true,
+    "L2_discriminant_order": true,
+    "L4_p2_dual_certificate": true,
+    "L4_p2_elements_distinct": true,
+    "L4_p2_size_matches_det": true,
+    "L4_p2_gauss_is_eighth_root": true,
+    "L4_p3_dual_certificate": true,
+    "L4_p3_elements_distinct": true,
+    "L4_p3_size_matches_det": true,
+    "L4_p3_gauss_is_eighth_root": true,
+    "L4_milgram_signature": true,
+    "L4_discriminant_order": true,
+    "ledger_closes_mod_8": true,
+    "chiral_brown_is_phi6": true,
+    "gauge_brown_trivial": true,
+    "chiral_has_unique_z8_block": true,
+    "z8_generator_q_even_numerator": true
+  }
+}
