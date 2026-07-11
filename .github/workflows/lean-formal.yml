@@ -21,12 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Lean toolchain
+      - name: Set up Lean and attempt kernel build
+        id: lean-setup
+        continue-on-error: true
         uses: leanprover/lean-action@v1
         with:
           lake-package-directory: formal
           auto-config: false
-          build: false
+          build: true
+          build-args: "--quiet"
           test: false
           lint: false
           nanoda: false
