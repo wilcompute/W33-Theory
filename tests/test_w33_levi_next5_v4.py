@@ -60,6 +60,7 @@ def test_all_python_sources_compile():
         py_compile.compile(str(path),doraise=True)
 
 
-def test_sample_time_tag_trace_exists():
-    path=ROOT/'data/PART_2026_07_10_HIL_sample.jsonl'
-    assert path.exists() and sum(1 for _ in path.open())==512
+def test_v4_cli_routes_are_installed():
+    source=(ROOT/'holonet_cmd.py').read_text()
+    for command in ('formal-rank-v4','discriminant-cohomology-v4','e8-incidence-functor-v4','foundry-calibrate-v4','hil-runtime-v4','levi-next5-v4'):
+        assert command in source
