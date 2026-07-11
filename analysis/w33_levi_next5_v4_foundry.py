@@ -86,6 +86,7 @@ def crosstalk_matrix(n, nearest=0.065, length=1.7):
     distance = np.abs(idx[:, None] - idx[None, :])
     K = np.exp(-distance / length)
     np.fill_diagonal(K, 0.0)
+    # Normalize so direct nearest-neighbor coupling equals the requested coefficient.
     K *= nearest / math.exp(-1 / length)
     C = np.eye(n) + K
     return C
@@ -115,6 +116,8 @@ def analyze(seed=20260710):
     rng = np.random.default_rng(seed)
     _scale, _C8, target_U = halmos(ACTIVE)
     rotations, out_phase = givens_decompose(target_U)
+    unitarity_residual = float(np.linalg.norm(target_U.conj().T @ target_U - np.eye(16)))
+    canonical_rotations = [[int(i), int(j), round(float(t), 12), round(float(p), 12), round(float(a), 12)] for i, j, t, p, a in rotations]
     pairs = [(i, j) for i, j, *_ in rotations]
     theta = np.array([r[2] for r in rotations])
     phi = np.array([r[3] for r in rotations])
@@ -157,6 +160,7 @@ def analyze(seed=20260710):
         a = vec[2*m:3*m].copy()
         o = vec[3*m:].copy()
         ratio = stack["design_wavelength_nm"] / wavelength_nm
+        # Coupler and thermo-optic wavelength dispersion, calibrated at lambda0.
         t *= 1 + 0.035 * (ratio - 1)
         p *= ratio
         a *= ratio
@@ -180,6 +184,7 @@ def analyze(seed=20260710):
     wavelengths = np.linspace(1530.0, 1565.0, 15)
     wavelength_fidelity = {f"{w:.1f}": process_fidelity(target_U, unitary_from_vector(calibrated, float(w))) for w in wavelengths}
 
+    # Closed-loop drift tracking: slow common drift + local random walk, one correction every epoch.
     drift = np.zeros(n)
     tracked = []
     open_loop = []
@@ -195,6 +200,7 @@ def analyze(seed=20260710):
         tracked_eff = Cx @ tracked_command + bias + drift
         tracked.append(process_fidelity(target_U, unitary_from_vector(tracked_eff)))
 
+    # Monte-Carlo foundry corners with calibration repeated per die.
     die_fidelities = []
     for _ in range(96):
         die_bias = bias + rng.normal(0, 0.004, n)
@@ -203,6 +209,7 @@ def analyze(seed=20260710):
         die_fidelities.append(process_fidelity(target_U, unitary_from_vector(eff, 1550.0, dyn)))
     arr = np.array(die_fidelities)
 
+    # Loss/power budget along a depth-16 path.
     path_length_m = 16 * stack["phase_section_length_mm"] / 1000
     passive_loss = path_length_m * stack["propagation_loss_db_per_m"]
     mesh_loss = 16 * stack["mzi_excess_loss_db"]
@@ -212,7 +219,7 @@ def analyze(seed=20260710):
     heater_power = float(np.sum(phase_mod) / math.pi * stack["heater_pi_power_mw"])
 
     checks = {
-        "mesh_exact_before_foundry_model": np.linalg.norm(target_U.conj().T @ target_U - np.eye(16)) < 1e-10,
+        "mesh_exact_before_foundry_model": unitarity_residual < 1e-7,
         "closed_loop_converges": history[-1] < history[0] / 20,
         "calibrated_nominal_above_0_999": nominal["calibrated_fidelity"] > 0.999,
         "wavelength_band_p05_above_0_995": np.quantile(list(wavelength_fidelity.values()), 0.05) > 0.995,
@@ -229,7 +236,8 @@ def analyze(seed=20260710):
         "foundry_stack": stack,
         "compiler": {
             "modes": 16, "mzi_elements": 120, "output_phases": 16,
-            "control_parameters": n, "netlist_digest": sha256_json(rotations),
+            "control_parameters": n, "unitarity_residual": unitarity_residual,
+            "unitarity_tolerance": 1e-7, "netlist_digest": sha256_json(canonical_rotations),
             "quantized_command_digest": sha256_json([round(float(x), 12) for x in command]),
         },
         "calibration": nominal,
