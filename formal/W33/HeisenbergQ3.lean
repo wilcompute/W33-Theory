@@ -6,7 +6,7 @@ import Mathlib
 This file eliminates the abstract block-rank placeholder in the native case.
 It defines the nine-dimensional binary matrix space, the Fourier point operator
 `Y ↦ Y + Yᵀ`, and kernel/image/Gram cardinalities by kernel-checked finite
-computation.  These are the exact local ranks used by the W(3,3) Levi theorem.
+computation. These are the exact local ranks used by the W(3,3) Levi theorem.
 -/
 
 namespace W33.HeisenbergQ3
@@ -37,24 +37,24 @@ theorem transposeSum_image_card :
 /-- Objectwise identification of the image with alternating matrices. -/
 theorem transposeSum_image_eq_alternating :
     (Finset.univ.image transposeSum : Finset Mat3) =
-      (Finset.univ.filter IsAlternating : Finset Mat3) := by
+      (Finset.univ.filter (fun Y : Mat3 => Y.transpose = Y ∧ ∀ i, Y i i = 0) : Finset Mat3) := by
   native_decide
 
 /-- There are exactly 2⁶ symmetric matrices. -/
 theorem symmetric_card :
-    (Finset.univ.filter IsSymmetric : Finset Mat3).card = 64 := by
+    (Finset.univ.filter (fun Y : Mat3 => Y.transpose = Y) : Finset Mat3).card = 64 := by
   native_decide
 
 /-- The diagonal map on symmetric matrices has all eight possible values. -/
 def diagonal (Y : Mat3) : Fin 3 → F2 := fun i => Y i i
 
 theorem diagonal_image_card :
-    ((Finset.univ.filter IsSymmetric : Finset Mat3).image diagonal).card = 8 := by
+    ((Finset.univ.filter (fun Y : Mat3 => Y.transpose = Y) : Finset Mat3).image diagonal).card = 8 := by
   native_decide
 
 /-- The kernel of the diagonal Gram map is the alternating subspace. -/
 theorem diagonal_kernel_card :
-    (Finset.univ.filter (fun Y : Mat3 => IsSymmetric Y ∧ diagonal Y = 0)).card = 8 := by
+    (Finset.univ.filter (fun Y : Mat3 => Y.transpose = Y ∧ diagonal Y = 0)).card = 8 := by
   native_decide
 
 /-- Native numerical rank package: point 3, incidence-column span 6, line Gram 3. -/
