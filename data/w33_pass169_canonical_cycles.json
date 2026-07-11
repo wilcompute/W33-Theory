@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass169.canonical_cycles.v1",
+  "status": "PASS",
+  "cycles": {
+    "on_240_trades": {
+      "6": 40
+    },
+    "on_120_supports": {
+      "3": 40
+    }
+  },
+  "partner_rule": {
+    "four_partner_signature": {
+      "(0, 0, 0, 0)": 40
+    },
+    "other_zero_class_signatures": {
+      "(0, 0, 0, 0)": 108
+    },
+    "reading": "the four partners of a trade are the orthogonal trades with the distinguished span/perp intersection signature; the remaining 108 orthogonal trades have different signatures"
+  },
+  "four_valent_spectrum": {
+    "-2.0": 80,
+    "-0.0": 120,
+    "4.0": 40
+  },
+  "triangle_identification": {
+    "stabilizer_order": 648,
+    "fixed_points_of_stabilizer": 0,
+    "fixed_lines_of_stabilizer": 1,
+    "verdict": "lines",
+    "reading": "the 40 octahedra / 40 triangles carry the natural PSp(4,3)-set of the W(3,3) lines: one canonical octahedron of second-shell trades per line"
+  },
+  "checks": {
+    "shell_240": true,
+    "group_order": true,
+    "orbital_rank_10": true,
+    "four_valent_orbital_found": true,
+    "support_graph_2_regular": true,
+    "partner_signature_constant": true,
+    "spectrum_computed": true,
+    "components_are_octahedra": true,
+    "forty_triangles": true,
+    "triangle_stabilizer_order_648": true,
+    "triangle_identification_decided": true
+  }
+}

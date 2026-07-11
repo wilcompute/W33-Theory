@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass175.dual_shell_720.v1",
+  "status": "PASS",
+  "duality": {
+    "primal": "L = {x : x mod 2 in sentinel [40,15,8]}, B = x.y/2",
+    "dual": "L* = {y : y mod 2 in context [40,25,4]}",
+    "index": "2^10 = det(L), quotient = the SO(10)-shadow module"
+  },
+  "the_720": {
+    "count": 720,
+    "closed_form": "2*40 (the +-2e_i) + 16*40 (sign lifts of the lines)",
+    "moonshine": "720 = T_1A + T_2B (Pass 71) = the weight-12 sentinel count (Pass 159): the dual shell is counted by the moonshine integer"
+  },
+  "structure": {
+    "twice_B_profile": {
+      "-4/2": 720,
+      "-2/2": 7680,
+      "-1/2": 61440,
+      "0/2": 378720,
+      "1/2": 61440,
+      "2/2": 7680,
+      "4/2": 720
+    },
+    "half_integer_B_occurs": true,
+    "root_system_closed": false,
+    "span_rank": 40,
+    "greedy_basis_abs_det": 1099511627776,
+    "nonzero_B_components": 1
+  },
+  "theta": {
+    "dual_shells_scaled_0_to_6": [
+      1,
+      0,
+      720,
+      15360,
+      1350960,
+      50016256,
+      1534663360
+    ],
+    "primal_shells_scaled_0_to_6": [
+      1,
+      0,
+      80,
+      0,
+      14640,
+      0,
+      3765440
+    ]
+  },
+  "checks": {
+    "lines_orthogonal_to_sentinel": true,
+    "shell_size_720": true,
+    "all_norm_2_scaled": true,
+    "shell_in_context_code": true,
+    "half_integer_B_occurs": true,
+    "shell_spans_rank_40": true,
+    "greedy_basis_full_rank": true,
+    "nonzero_B_graph_connected": true,
+    "macwilliams_A4_is_40_lines": true,
+    "dual_theta_shell2_is_720": true,
+    "dual_shell2_closed_form": true
+  }
+}

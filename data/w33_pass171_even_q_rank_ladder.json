@@ -1,0 +1,111 @@
+{
+  "schema": "w33.pass171.even_q_rank_ladder.v1",
+  "status": "PASS",
+  "table": {
+    "2": {
+      "points": 15,
+      "rank2_M": 10,
+      "formula_M": 10,
+      "M_formula_holds": true,
+      "rank2_AP": 5,
+      "formula_AP": 6,
+      "AP_formula_holds": false,
+      "rank2_AL": 5,
+      "formula_AL": 5,
+      "AL_formula_holds": true,
+      "self_dual": true
+    },
+    "3": {
+      "points": 40,
+      "rank2_M": 25,
+      "formula_M": 25,
+      "M_formula_holds": true,
+      "rank2_AP": 16,
+      "formula_AP": 16,
+      "AP_formula_holds": true,
+      "rank2_AL": 10,
+      "formula_AL": 10,
+      "AL_formula_holds": true,
+      "self_dual": false
+    },
+    "4": {
+      "points": 85,
+      "rank2_M": 50,
+      "formula_M": 51,
+      "M_formula_holds": false,
+      "rank2_AP": 17,
+      "formula_AP": 35,
+      "AP_formula_holds": false,
+      "rank2_AL": 17,
+      "formula_AL": 17,
+      "AL_formula_holds": true,
+      "self_dual": true
+    },
+    "5": {
+      "points": 156,
+      "rank2_M": 91,
+      "formula_M": 91,
+      "M_formula_holds": true,
+      "rank2_AP": 66,
+      "formula_AP": 66,
+      "AP_formula_holds": true,
+      "rank2_AL": 26,
+      "formula_AL": 26,
+      "AL_formula_holds": true,
+      "self_dual": false
+    },
+    "8": {
+      "points": 585,
+      "rank2_M": 298,
+      "formula_M": 325,
+      "M_formula_holds": false,
+      "rank2_AP": 65,
+      "formula_AP": 261,
+      "AP_formula_holds": false,
+      "rank2_AL": 65,
+      "formula_AL": 65,
+      "AL_formula_holds": true,
+      "self_dual": true
+    },
+    "16": {
+      "points": 4369,
+      "rank2_M": 1890,
+      "even_cubic_prediction": 2138,
+      "even_cubic_holds": false
+    }
+  },
+  "even_q_verdict": {
+    "M_extends": false,
+    "AP_extends": false,
+    "AL_extends": true,
+    "AP_equals_AL_by_self_duality": true
+  },
+  "reading": "the odd-q Levi rank theorem tested at five prime powers; for even q the self-duality of W(3,q) forces rank A_P = rank A_L, so the two Gram formulas cannot both extend -- the table records exactly which laws survive, as anchor data for the Lean formalization track",
+  "checks": {
+    "q2_point_count": true,
+    "q2_line_count": true,
+    "q2_points_per_line": true,
+    "q2_ranks_computed": true,
+    "q3_point_count": true,
+    "q3_line_count": true,
+    "q3_points_per_line": true,
+    "q3_ranks_computed": true,
+    "q4_point_count": true,
+    "q4_line_count": true,
+    "q4_points_per_line": true,
+    "q4_ranks_computed": true,
+    "q5_point_count": true,
+    "q5_line_count": true,
+    "q5_points_per_line": true,
+    "q5_ranks_computed": true,
+    "q8_point_count": true,
+    "q8_line_count": true,
+    "q8_points_per_line": true,
+    "q8_ranks_computed": true,
+    "odd_q_theorem_reverified": true,
+    "even_q_verdict_recorded": true,
+    "even_cubic_fits_2_4_8": true,
+    "q16_point_count": true,
+    "q16_rank_computed": true
+  }
+}

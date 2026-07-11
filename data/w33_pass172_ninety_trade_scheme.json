@@ -1,0 +1,268 @@
+{
+  "schema": "w33.pass172.ninety_trade_scheme.v1",
+  "status": "PASS",
+  "scheme": {
+    "size": 90,
+    "classes": 4,
+    "valencies": {
+      "id": 1,
+      "-8": 1,
+      "-2": 32,
+      "0": 24,
+      "2": 32
+    },
+    "coherent": true,
+    "commutative": true,
+    "symmetric": true,
+    "schurian_rank": 5,
+    "reading": "unlike the 240-shell one level down, the 90-shell's inner-product classes ARE the orbitals: a symmetric commutative 4-class association scheme, the antipodal double cover of the GQ(4,2) support geometry"
+  },
+  "eigenmatrix": {
+    "row_order": "eigenspaces of the 0-relation, descending",
+    "column_order": [
+      "id",
+      "2",
+      "-2",
+      "0",
+      "-8"
+    ],
+    "P": [
+      [
+        1.0,
+        32.0,
+        32.0,
+        24.0,
+        1.0
+      ],
+      [
+        1.0,
+        -4.0,
+        4.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -4.0,
+        -4.0,
+        6.0,
+        1.0
+      ],
+      [
+        1.0,
+        2.0,
+        2.0,
+        -6.0,
+        1.0
+      ],
+      [
+        1.0,
+        8.0,
+        -8.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "multiplicities": [
+      1,
+      30,
+      20,
+      24,
+      15
+    ]
+  },
+  "intersection_numbers": {
+    "id*id": {
+      "id": 1,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 0
+    },
+    "id*-8": {
+      "id": 0,
+      "-8": 1,
+      "-2": 0,
+      "0": 0,
+      "2": 0
+    },
+    "id*-2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 1,
+      "0": 0,
+      "2": 0
+    },
+    "id*0": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 1,
+      "2": 0
+    },
+    "id*2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 1
+    },
+    "-8*id": {
+      "id": 0,
+      "-8": 1,
+      "-2": 0,
+      "0": 0,
+      "2": 0
+    },
+    "-8*-8": {
+      "id": 1,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 0
+    },
+    "-8*-2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 1
+    },
+    "-8*0": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 1,
+      "2": 0
+    },
+    "-8*2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 1,
+      "0": 0,
+      "2": 0
+    },
+    "-2*id": {
+      "id": 0,
+      "-8": 0,
+      "-2": 1,
+      "0": 0,
+      "2": 0
+    },
+    "-2*-8": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 1
+    },
+    "-2*-2": {
+      "id": 32,
+      "-8": 0,
+      "-2": 9,
+      "0": 12,
+      "2": 13
+    },
+    "-2*0": {
+      "id": 0,
+      "-8": 0,
+      "-2": 9,
+      "0": 8,
+      "2": 9
+    },
+    "-2*2": {
+      "id": 0,
+      "-8": 32,
+      "-2": 13,
+      "0": 12,
+      "2": 9
+    },
+    "0*id": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 1,
+      "2": 0
+    },
+    "0*-8": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 1,
+      "2": 0
+    },
+    "0*-2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 9,
+      "0": 8,
+      "2": 9
+    },
+    "0*0": {
+      "id": 24,
+      "-8": 24,
+      "-2": 6,
+      "0": 6,
+      "2": 6
+    },
+    "0*2": {
+      "id": 0,
+      "-8": 0,
+      "-2": 9,
+      "0": 8,
+      "2": 9
+    },
+    "2*id": {
+      "id": 0,
+      "-8": 0,
+      "-2": 0,
+      "0": 0,
+      "2": 1
+    },
+    "2*-8": {
+      "id": 0,
+      "-8": 0,
+      "-2": 1,
+      "0": 0,
+      "2": 0
+    },
+    "2*-2": {
+      "id": 0,
+      "-8": 32,
+      "-2": 13,
+      "0": 12,
+      "2": 9
+    },
+    "2*0": {
+      "id": 0,
+      "-8": 0,
+      "-2": 9,
+      "0": 8,
+      "2": 9
+    },
+    "2*2": {
+      "id": 32,
+      "-8": 0,
+      "-2": 9,
+      "0": 12,
+      "2": 13
+    }
+  },
+  "checks": {
+    "ninety_trades": true,
+    "five_ip_classes": true,
+    "partition": true,
+    "coherent": true,
+    "commutative": true,
+    "symmetric": true,
+    "group_order": true,
+    "transitive": true,
+    "schurian_rank_5": true,
+    "eigenmatrix_consistent": true,
+    "eigenspace_count_5": true,
+    "multiplicities_sum_90": true,
+    "eigenmatrix_integral": true,
+    "antipode_is_negation": true,
+    "quotient_zero_relation_is_gq42_srg": true
+  }
+}

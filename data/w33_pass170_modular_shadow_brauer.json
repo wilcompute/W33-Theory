@@ -1,0 +1,135 @@
+{
+  "schema": "w33.pass170.modular_shadow_brauer.v1",
+  "status": "PASS",
+  "gap_source": "live (CTblLib U4(2), Brauer tables mod 2 and mod 3)",
+  "ordinary_degrees": [
+    1,
+    5,
+    5,
+    6,
+    10,
+    10,
+    15,
+    15,
+    20,
+    24,
+    30,
+    30,
+    30,
+    40,
+    40,
+    45,
+    45,
+    60,
+    64,
+    81
+  ],
+  "brauer_degrees_mod2": [
+    1,
+    4,
+    4,
+    6,
+    14,
+    20,
+    20,
+    64
+  ],
+  "brauer_degrees_mod3": [
+    1,
+    5,
+    10,
+    14,
+    25,
+    81
+  ],
+  "decomposition_rows": {
+    "degree_10_ordinaries": [
+      {
+        "index": 4,
+        "row": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "index": 5,
+        "row": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "degree_15_ordinaries": [
+      {
+        "index": 6,
+        "row": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "index": 7,
+        "row": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "degree_24_ordinary": [
+      {
+        "index": 9,
+        "row": [
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "shadow_law": {
+    "statement": "the two degree-5 ordinary irreducibles of U4(2) reduce mod 2 as 1 + 4 and 1 + 4bar, so 5 + 5bar reduces with Brauer factors {1, 1, 4, 4bar} -- exactly the factors of Pass 164's uniserial H10 (whose F2-factor 8 is the conjugate pair 4 + 4bar over the splitting field)",
+    "holds": true,
+    "reading": "the hidden pair: the two degree-5 irreducibles appear in NONE of the nine permutation carriers of Pass 163 (all multiplicities zero), yet their 2-modular reduction carries exactly the composition factors of the SO(10) shadow. The smallest faithful representations of the substrate group, invisible in every natural permutation geometry, materialize as the incidence quotient form. The kinematic degree-10s instead reduce as 4 + 6 and 4bar + 6."
+  },
+  "checks": {
+    "twenty_ordinary_irreducibles": true,
+    "ordinary_degrees_match_pass163": true,
+    "brauer_degrees_are_known_list": true,
+    "dec2_degree_consistency": true,
+    "two_conjugate_4s": true,
+    "two_degree_10_ordinaries": true,
+    "kinematic_10s_reduce_to_4_plus_6": true,
+    "two_degree_5_ordinaries": true,
+    "shadow_law_5_plus_5bar_gives_1_1_4_4bar": true,
+    "context_rows_extracted": true
+  }
+}

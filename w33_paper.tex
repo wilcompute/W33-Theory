@@ -347,8 +347,12 @@ $\GQ(3,3)$---a rank-$2$ polar space satisfying the Payne--Thas axioms:
   \textbf{unique} point $p'\in\ell$ collinear with $p$
   (and a unique line joining $p$ to $p'$).
 \end{enumerate}
-Since $s=t=q=3$, the quadrangle is \textbf{self-dual}:
-interchanging points and lines yields an isomorphic structure.
+The equality $s=t=q=3$ gives equal point and line counts and identical
+strongly regular parameters on the two concurrence graphs, but it does
+\emph{not} imply incidence self-duality.  For odd $q$, the dual of the
+symplectic quadrangle $W(3,q)$ is the nonisomorphic parabolic quadrangle
+$Q(4,q)$; at $q=3$ the halves are spectrally paired but geometrically
+non-swappable (Theorem~\ref{thm:pass173-dark-lattices}).
 \end{theorem}
 
 
@@ -3485,12 +3489,13 @@ It verifies the exact finite statements behind the table:
 \]
 Supplements~L and~M sharpen that bridge one step further.  The $120$
 matching states are not an unstructured cloud; they form a $3$-state
-bundle over the $40$ isotropic lines.  Those $40$ lines themselves form
-the self-dual line graph of $W_{3,3}$, again with parameters
-$\SRG(40,12,2,4)$.  Hence a local $12$-neighbor $H_4$ selector would
+bundle over the $40$ isotropic lines.  Those $40$ lines form the
+line-intersection graph of the dual $Q(4,3)$ quadrangle, again with
+parameters $\SRG(40,12,2,4)$ but nonisomorphic to the point graph.
+Hence a local $12$-neighbor $H_4$ selector would
 have to choose, for each of the $12$ adjacent lines, exactly one of the
 three states above it.  Equivalently, the missing finite datum is an
-$S_3$ transport law on a self-dual $40$-vertex possibility graph.  In
+$S_3$ transport law on the dual $40$-vertex possibility graph.  In
 Cycle Clock Theory language: the quasicrystal projection is not merely a
 count collapse $240\to 120$, but a synchronization rule for three-state
 line clocks.
@@ -5097,8 +5102,8 @@ same symmetry-breaking step is unavoidable on the finite $W_{3,3}$ side.
 \section*{The Missing Datum is a Three-State Transport Law}
 
 The obstruction theorem can be sharpened.  The $40$ isotropic lines of
-$W_{3,3}$ are themselves a self-dual copy of the same point graph: the
-line-intersection graph has
+$W_{3,3}$ carry the concurrence graph of the dual quadrangle $Q(4,3)$.
+It is cospectral with, but nonisomorphic to, the point graph and has
 \[
 |V|=40,\qquad k=12,\qquad \lambda=2,\qquad \mu=4,\qquad |E|=240.
 \]
@@ -5119,7 +5124,7 @@ permutation in $S_3$.  The finite $H_4$ problem is thus equivalent to:
 \[
 \boxed{\;
 \begin{aligned}
-&\text{find the }S_3\text{-valued transport law on the self-dual 40-line graph}\\
+&\text{find the }S_3\text{-valued transport law on the dual 40-line graph}\\
 &\text{whose lift on }120\text{ states reproduces the }600\text{-cell local combinatorics.}
 \end{aligned}
 \;}
@@ -5154,8 +5159,8 @@ $3\times 3$ choice block above $(L_1,L_2)$.  Hence even after fixing the
 anchor point and transport direction, all nine local candidates remain
 symmetry equivalent.
 
-The first genuine split appears one layer later, on cycles of the
-self-dual 40-line graph.  The $160$ triangles still form a single
+The first genuine split appears one layer later, on cycles of the dual
+40-line graph.  The $160$ triangles still form a single
 $\PSp(4,3)$ orbit, so they carry no new canonical distinction.  But the
 $1740$ simple $4$-cycles split into exactly two orbits:
 \[
@@ -5167,21 +5172,23 @@ anchored at the same point.  The $1620$-orbit is the first global
 quadrangle carrier: its four transport edges have four distinct anchor
 points, and opposite lines are disjoint.  So the first possible finite
 holonomy law is not on triangles, nor on anchored local choices, but on
-these nonlocal quadrangles.  Better still, this carrier is canonically
-self-dual.  Sending each edge of a nonlocal line quadrangle to its
+these nonlocal quadrangles.  Better still, this restricted carrier is
+canonically paired across the two object types.  Sending each edge of a
+nonlocal line quadrangle to its
 anchor point produces a unique nonlocal point quadrangle, and every
 nonlocal point quadrangle reconstructs the unique nonlocal line
 quadrangle obtained by joining adjacent points with their unique
 isotropic lines.  Thus the first global holonomy carrier is a
-self-dual $1620$-element quadrangle correspondence between the point and
-line sides of $W_{3,3}$.  Moreover this carrier already has an exact
+type-reversing $1620$-element correspondence between the point and line
+sides.  This orbit bijection is not an incidence self-duality of the full
+generalized quadrangle.  Moreover this carrier already has an exact
 internal symmetry type.  Orbit-stabilizer gives a stabilizer of size
 $25920/1620=16$ for a nonlocal quadrangle.  Its visible action on the
 four line positions is the full dihedral square group $D_4$ of order
 $8$, and the same visible $D_4$ acts on the four anchor points.  The
 remaining factor is a $2$-element kernel invisible on both squares.  So
 the first global holonomy carrier is not an amorphous orbit; it is a
-self-dual square with visible dihedral symmetry and a hidden twofold
+paired square with visible dihedral symmetry and a hidden twofold
 lift.  Better still, that hidden kernel acts in a completely rigid way
 on the four ternary line fibres of the quadrangle.  On each line, the
 two anchor points and the two non-anchor points determine a unique
@@ -5292,7 +5299,7 @@ builds the $120$ matching states, constructs the $\PSp(4,3)$
 transvection generators from the same symplectic form used to build
 $W_{3,3}$, computes the four unordered pair orbitals, proves that the
 40-line intersection graph is another $\SRG(40,12,2,4)$, refines the
-transport problem to the $40$ point residues and then to the self-dual
+transport problem to the $40$ point residues and then to the paired
 $1620$ global quadrangle carrier, and verifies:
 \[
 \begin{array}{rcl}
@@ -5313,7 +5320,7 @@ $1620$ global quadrangle carrier, and verifies:
 \#\text{global quadrangle carrier} &=& 1620,\\
 \#\text{point 4-cycles} &=& 1740,\\
 \#\text{point-side global quadrangles} &=& 1620,\\
-\#\text{self-dual quadrangle carrier} &=& 1620,\\
+\#\text{type-reversing quadrangle carrier} &=& 1620,\\
 \#\text{global-quadrangle stabilizer} &=& 16,\\
 \#\text{visible square symmetry} &=& 8,\\
 \#\text{hidden square kernel} &=& 2,\\
@@ -5590,8 +5597,8 @@ is the constant function, completing $f+g+1=v$.
 \subsection*{P.4 \quad Twistor lines as isotropic 2-spaces}
 Each line of $\GQ(3,3)$ is an isotropic 2-dimensional subspace of
 $\FF_3^4$, contains $\mu=q+1=4$ points, and is incident with $\mu=4$
-points per line. The number of lines is $40$ (self-dual generalised
-quadrangle).
+points per line. The number of lines is $40$ (equal parameters and
+counts, although the odd-$q$ quadrangle is not incidence-self-dual).
 
 \subsection*{P.5 \quad The Plucker embedding for Gr$(2,4)$}
 Tree-level $\mathcal{N}=4$ MHV amplitudes live on the Grassmannian
@@ -10533,8 +10540,9 @@ $N^{\mathsf T}N=\mu I+A$ with exact spectrum
 $\{16^{\,1},\,6^{\,24},\,0^{\,15}\}$: readout gain $2^{\mu}=16$ on the
 Perron mode, $q!=6$ on the gauge sector, and $0$ on the sentinel sector ---
 the sentinel eigenspace is precisely the readout kernel. The line-side Gram
-$NN^{\mathsf T}=\mu I+A^{\vee}$ is the concurrence graph, again
-$\SRG(40,12,2,4)$ (self-duality). The context-generated code lattice
+$NN^{\mathsf T}=\mu I+A^{\vee}$ is the concurrence graph of the dual
+$Q(4,3)$ quadrangle, again $\SRG(40,12,2,4)$ but nonisomorphic to the
+point graph. The context-generated code lattice
 $\operatorname{im}N^{\mathsf T}$ is saturated of rank $25$, and
 \[
   \det(\operatorname{im}N^{\mathsf T})
@@ -10737,9 +10745,10 @@ $0\subset\langle z\rangle\subset z^{\perp}\subset H_{10}$ and composition
 factors $1,8,1$ (cyclic-submodule profile: one vector generates the
 isotropic fixed line, $510$ generate $z^{\perp}$, $512$ generate all of
 $H_{10}$); and $z^{\perp}$ carries exactly $272=2\cdot136$ isotropic
-vectors, so $z^{\perp}/\langle z\rangle$ is precisely the plus-type
-$8$-dimensional $E_8/2E_8$ module of
-Corollary~\ref{cor:e8-canonical} ($136$ isotropic). \emph{The
+vectors, so $z^{\perp}/\langle z\rangle$ is an abstract plus-type
+$8$-dimensional quadratic space with the same $136/120$ split as
+$E_8/2E_8$.  An explicit equivariant identification with the earlier
+adjacency realization is a separate step. \emph{The
 $\mathrm{SO}(10)$ shadow contains the $E_8$ shadow as its middle
 composition factor: the $D_5\to D_4$ reduction, realized in the substrate's
 own mod-2 homology.} (Witness:
@@ -10783,11 +10792,15 @@ W(3,3) & 11 & 3 & 11/8 & \textbf{yes}\\
 \end{array}
 \]
 The doily's trade discriminant is $(\mathbb Z/2)\oplus(\mathbb
-Z/4)^3\oplus\mathbb Z/12$ with signature $5\bmod8$; the $\GQ(4,2)$ trade
-lattice is $2$-elementary with signature $0\bmod 8$ (Brown-trivial, like
-the gauge sector); only $W(3,3)$'s chiral lattice carries $2$-adic depth
-$3$ --- and there, and only there, the block evaluates to the Ihara prime
-over eight. All three Milgram signatures verified by exact Gauss sums.
+Z/4)^3\oplus\mathbb Z/12$ with signature $5\bmod8$; the $2$-primary part
+of the $\GQ(4,2)$ trade discriminant is elementary with signature
+$0\bmod8$ (the full Smith group also has odd parts).  Only $W(3,3)$'s
+chiral lattice carries $2$-adic depth $3$, and one chosen generator has
+$q(h)=11/8$.  This value is generator-dependent: $3h$ has $q(3h)=3/8$.
+Thus the table disproves a universal law but records a chosen-certificate
+coincidence, not a canonical ``there and only there'' invariant.  The
+Gauss sums use exact residue censuses with numerical eighth-root
+recognition.
 (Witness: \texttt{analysis/w33\_pass166\_ihara\_discriminant\_law.py}.)
 
 \subsection{Pass 167 --- the sentinel theta and the context enumerator}
@@ -10834,5 +10847,304 @@ relation}: every trade has exactly four distinguished orthogonal partners,
 descending to a $2$-regular invariant graph (a canonical cycle structure)
 on the $120$ supports, whose orbital rank is $5$. (Witness:
 \texttt{analysis/w33\_pass168\_second\_shell\_scheme.py}.)
+
+\subsection{Pass 173 --- the incidence transceiver and the route-dark
+pentad lattice}
+\label{ssec:pass173}
+
+Let $N$ be the $40$-line by $40$-point incidence matrix, and let
+$A_P,A_L$ be the point- and line-concurrence adjacencies.  Centering the
+incidence operator removes the constant mode:
+\[
+  T=N-\frac1{10}J.
+\]
+
+\begin{theorem}[The shared-sector incidence transceiver]
+\label{thm:pass173-transceiver}
+The operator $T$ has rank $24$, intertwines the two concurrence graphs,
+and has exact polar squares
+\[
+  TA_P=A_LT,
+  \qquad
+  T^{\mathsf T}T=6E_{24}^{P},
+  \qquad
+  TT^{\mathsf T}=6E_{24}^{L}.
+\]
+Thus $T/\sqrt6$ is an isometry between the common $24$-dimensional
+constituents while annihilating constants and both unmatched
+$15$-dimensional constituents.  For every one of the $480$ Pass-157
+selectors $x$, the analyzer word $y=Nx=Tx$ has
+\[
+ \{-3^1,-1^9,0^{20},1^9,3^1\},
+ \qquad \|x\|^2=6,quad \|y\|^2=36,
+ \qquad x=\frac16N^{\mathsf T}y.
+\]
+If $X,Y$ collect the $480$ input and output words, then
+$X^{\mathsf T}X=120E_{24}^{P}$ and
+$Y^{\mathsf T}Y=720E_{24}^{L}$.  This is an exact algebraic
+analyzer/decoder, not by itself a physical optical implementation.
+\end{theorem}
+
+\begin{theorem}[The asymmetric address and route dark lattices]
+\label{thm:pass173-dark-lattices}
+The two rank-$15$ integral kernels are arithmetically inequivalent:
+\[
+\begin{array}{c|c|c}
+ & L_{\rm address}=\ker_{\mathbb Z}N
+ & L_{\rm route}=\ker_{\mathbb Z}N^{\mathsf T}\\ \hline
+\det &2^{17}3^{10}&2^{11}3^{14}\\
+\operatorname{SNF}&2^5,6^9,24&1,3^5,6^8,24\\
+\min&8&10\\
+\#\operatorname{Min}&90&432\\
+\text{binary code}&[40,15,8]&[40,15,10].
+\end{array}
+\]
+In particular
+\[
+ \frac{\det L_{\rm route}}{\det L_{\rm address}}
+ =\frac{81}{64}=\left(\frac98\right)^2.
+\]
+The address code is self-orthogonal; the route code has binary Gram rank
+$6$ and hull dimension $9$.  These invariants also give an integral
+obstruction to incidence self-duality: a point--line duality would
+permutation-identify the two kernels and preserve every entry of the
+table.  In particular, the Pass-164 full quotient
+$C_{\rm address}^{\perp}/C_{\rm address}$ and its $O^+(10,2)$ quadratic
+form are address-chiral, because
+$C_{\rm route}\not\subset C_{\rm route}^{\perp}$.  Pass~174 nevertheless
+constructs the canonical route hull quotient
+$(C_{\rm route}\cap C_{\rm route}^{\perp})/\langle\mathbf1\rangle$, a
+plus-type $8$-space.  Exact MacWilliams transforms sharpen the separation:
+\[
+\begin{array}{c|rrrr}
+ &A_4&A_6&A_8&A_{10}\\ \hline
+C_{\rm address}^{\perp}&40&240&5085&47824\\
+C_{\rm route}^{\perp}&40&240&3645&54736.
+\end{array}
+\]
+The context systems agree through their first two nonzero shells and
+first split at weight $8$.
+\end{theorem}
+
+\begin{theorem}[The pentad-core shell]
+\label{thm:pass173-pentads}
+Among all $13{,}824$ five-line partial spreads, exactly $432$ occur in
+$216$ pairs with the same $20$-point cover.  Each pair $(P_+,P_-)$ gives
+\[
+ v_P=\mathbf1_{P_+}-\mathbf1_{P_-}\in L_{\rm route},
+ \qquad \|v_P\|^2=10.
+\]
+The two pentads induce $K_{5,5}$ minus a perfect matching; the deleted
+matchings double-cover all $540$ skew-line charts.  Live PARI/GP
+Fincke--Pohst enumeration proves that $L_{\rm route}$ has exactly $432$
+minimal vectors of norm $10$, so these are the complete shell.  Their
+$216$ supports form one $\PSp(4,3)$ orbit with stabilizer $120$, while
+the signed shell splits into two chiral $216$-orbits.  Hence the old
+BT844--BT846 pentad/core carrier is intrinsically the projectivized
+minimum shell of the route-dark lattice.
+\end{theorem}
+
+\noindent Witness and synthesis:
+\texttt{analysis/w33\_pass173\_incidence\_transceiver\_route\_dark\_lattice.py}
+and \texttt{PASS173\_INCIDENCE\_TRANSCEIVER\_ROUTE\_DARK\_LATTICE.md}
+($36/36$ checks).
+
+\subsection{Pass 174 --- the dual discriminant fixed rail and the
+route-hull $E_8$ shadow}
+\label{ssec:pass174}
+
+For an order-eight discriminant generator $h$ and the outer involution
+$\tau$, write $\tau(h)=c h+u_c$ with $c$ odd.  The v4 calculation found
+the correct equality $[u_5]=[4h]\ne0$ but drew the wrong conclusion from
+it.
+
+\begin{theorem}[The fixed-rail correction]
+\label{thm:pass174-fixed-rail}
+On both dark discriminant modules,
+\[
+ [u_1]=0,
+ \qquad [u_5]=[4h]\ne0
+ \quad\text{in }H^1(C_2,A[2]).
+\]
+Hence the nonzero class obstructs only a pure scalar-$5$ form
+$\tau(h')=5h'$; it does not obstruct a fixed generator.  Explicit
+order-two shifts give $h'=h+v$ with
+\[
+ \tau(h')=h',\qquad q(h')=11/8.
+\]
+The exact comparison is
+\[
+\begin{array}{c|cc}
+ &\text{address}&\text{route}\\ \hline
+A_2(L)&(\mathbb Z/2)^{14}\oplus\mathbb Z/8
+ &(\mathbb Z/2)^8\oplus\mathbb Z/8\\
+\dim H^1&3&1\\
+\#\text{ fixed shifts}&512&32\\
+\#\text{ fixed shifts with }q=11/8&256&16.
+\end{array}
+\]
+The complementary fixed shifts give $q=3/8$, so $11/8$ labels one
+quadratic orbit rather than every order-eight generator.
+\end{theorem}
+
+\begin{theorem}[The route-hull $E_8/2E_8$ shadow]
+\label{thm:pass174-route-hull}
+Let $R=\ker_{\mathbb F_2}N^{\mathsf T}=[40,15,10]$.  Its hull is
+\[
+ H=R\cap R^{\perp}=[40,9,16],
+ \qquad
+ W_H(z)=1+135z^{16}+240z^{20}+135z^{24}+z^{40}.
+\]
+The all-ones word is a fixed radical, and
+\[
+ \overline H=H/\langle\mathbf1\rangle\cong\mathbb F_2^8,
+ \qquad q([x])=\operatorname{wt}(x)/4\pmod2
+\]
+is nondegenerate plus type with $136$ isotropic and $120$ anisotropic
+vectors.  The native projective and outer actions are faithful of orders
+$25920$ and $51840$ and have orbits $1+135+120$.  Objectwise, all $512$
+hull words satisfy
+\[
+ c^{\mathsf T}Gc/4\equiv\operatorname{wt}(x)/4\pmod2,
+\]
+and $\mathbf1$ has lattice coefficient mask \texttt{0x7fff} and Smith
+coordinate exactly $4h$.  Thus the code hull and route discriminant
+quotients are the same quadratic object, not merely equal counts.
+\end{theorem}
+
+\begin{corollary}[One route code reconstructs the symplectic capstone]
+On the $255$ nonzero vectors of $\overline H$, polar orthogonality gives
+\[
+ \SRG(255,126,61,63),
+\]
+and the quadratic split induces
+\[
+ \SRG(135,70,37,35)\ \sqcup\ \SRG(120,63,30,36).
+\]
+Hence the route code carries the whole chain
+\[
+ 432\text{ signed pentads}\to216\text{ cores}\to
+ [40,9,16]\to255=135+120,
+\]
+recovering the complete Pass-124 $E_8/2E_8$ capstone from one intrinsic
+line-side code.  A chosen equivariant identification with every earlier
+$E_8/2E_8$ realization remains separate from this exact abstract
+quadratic-space and orbit theorem.
+\end{corollary}
+
+\noindent Witness and synthesis:
+\texttt{analysis/w33\_pass174\_dual\_discriminant\_fixed\_rail.py}
+and \texttt{PASS174\_DUAL\_DISCRIMINANT\_FIXED\_RAIL\_E8\_HULL.md}
+($66/66$ checks).
+
+%% ===============================================================
+\section{The Chiral Program, Third Round: Passes 169--172 and 175}
+\label{sec:chiral-program-three}
+%% ===============================================================
+
+\subsection{Pass 169 --- the canonical cycles are forty octahedra, one per
+line}
+\label{ssec:pass169}
+
+The 4-valent invariant relation of Pass~168 decomposes into $40$ connected
+components of size~$6$ with spectrum $\{4,0^3,(-2)^2\}$ per component ---
+each component is an \emph{octahedron} $K_{2,2,2}$ --- descending to $40$
+triangles on the $120$ supports. The stabilizer of one triangle has order
+$648$ and fixes exactly one \emph{line} of $W(3,3)$ (and no point):
+\[
+  \boxed{\ \text{the 40 octahedra of second-shell trades are the 40
+  \emph{lines} of } W(3,3).\ }
+\]
+A curiosity with teeth: every pair of orthogonal trades has fully disjoint
+supports, so the partner rule is invisible to intersection signatures ---
+only the group sees it. (Witness:
+\texttt{analysis/w33\_pass169\_canonical\_cycles.py}.)
+
+\subsection{Pass 170 --- the hidden pair: $H_{10}$ is the 2-modular
+reduction of $5\oplus\bar 5$}
+\label{ssec:pass170}
+
+The 2-modular irreducible degrees of $\mathrm{U}_4(2)$ are
+$[1,4,4,6,14,20,20,64]$: there is \emph{no} $8$ --- the $\mathbb
+F_2$-irreducible $E_8$-shadow module splits over the splitting field as a
+conjugate pair of $4$s, so $H_{10}$'s Brauer factors are
+$\{1,1,4,\bar4\}$. The decomposition matrix (GAP, CTblLib) then gives the
+identification: the two degree-$5$ ordinary irreducibles --- which appear
+in \emph{none} of the nine permutation carriers of Pass~163 --- reduce mod
+$2$ as $1+4$ and $1+\bar4$, so $5\oplus\bar 5$ reduces with exactly
+$H_{10}$'s composition factors: the smallest faithful representations of
+the substrate group, invisible in every natural permutation geometry,
+materialize as the $\mathrm{SO}(10)$ quotient form of the incidence tower.
+The kinematic degree-$10$s instead reduce as $4+6$ and $\bar4+6$.
+(Witness: \texttt{analysis/w33\_pass170\_modular\_shadow\_brauer.py},
+GAP-assisted.)
+
+\subsection{Pass 171 --- the binary rank ladder at even $q$}
+\label{ssec:pass171}
+
+Testing the Levi rank theorem at five prime powers ($q=2,3,4,5,8$, plus a
+$q=16$ anchor):
+\[
+\begin{array}{l|c|c|c|c|c|c}
+ q & 2 & 3 & 4 & 5 & 8 & 16\\\hline
+ \operatorname{rank}_2 M_q & 10 & 25 & 50 & 91 & 298 & 1890\\
+ \operatorname{rank}_2 A_L & 5 & 10 & 17 & 26 & 65 & \text{---}
+\end{array}
+\]
+The odd-$q$ theorem is independently re-verified at $q=3,5$. At even $q$
+the self-duality of $W(3,q)$ forces
+$\operatorname{rank}A_P=\operatorname{rank}A_L$, so only \emph{one} Gram
+formula can survive --- and it is the line one:
+$\operatorname{rank}_2A_L=q^2+1$ holds at \emph{every} tested prime power.
+The incidence formula does not extend, and the even values
+$10,50,298,1890$ refute the three-anchor cubic $(q^3{+}12q{-}12)/2$ at
+$q=16$: the even-$q$ closed form is an open item handed to the Lean track
+with four exact anchors. (Witness:
+\texttt{analysis/w33\_pass171\_even\_q\_rank\_ladder.py}.)
+
+\subsection{Pass 172 --- the 90-trade scheme and its eigenmatrix}
+\label{ssec:pass172}
+
+One level up from Pass~168's non-commutative surprise, the $90$ minimal
+trades of $W(3,3)$'s chiral lattice behave perfectly: the inner-product
+classes (valencies $1,1,32,32,24$) \emph{are} the orbitals (schurian rank
+$5$), forming a symmetric commutative $4$-class association scheme with
+exact first eigenmatrix
+\[
+P=\begin{pmatrix}
+1&32&32&24&1\\
+1&-4&4&0&-1\\
+1&-4&-4&6&1\\
+1&2&2&-6&1\\
+1&8&-8&0&-1
+\end{pmatrix},
+\qquad
+m=(1,30,20,24,15),
+\]
+whose multiplicities are precisely the character content
+$1\oplus30\oplus20\oplus24\oplus15$ of the trade carrier from Pass~163.
+The antipodal class is exact negation, and the quotient's zero-relation is
+$\SRG(45,12,3,3)$: the 90-scheme is the antipodal double cover of the
+$\GQ(4,2)$ support geometry. (Witness:
+\texttt{analysis/w33\_pass172\_ninety\_trade\_scheme.py}.)
+
+\subsection{Pass 175 --- the sentinel modular pair and the 720}
+\label{ssec:pass175}
+
+The dual of the sentinel lattice under the half form is exactly the
+context construction, $L^{*}=\{y:y\bmod2\in[40,25,4]\}$, with
+$[L^{*}:L]=2^{10}$ and quotient the $\mathrm{SO}(10)$-shadow module of
+Pass~164. Its norm-$2$ shell has exactly
+\[
+  \boxed{\,720 \;=\; 2\cdot40 \;+\; 16\cdot40\,}
+\]
+vectors --- the $\pm2e_i$ together with all sign-lifts of the $40$ lines
+--- the moonshine integer $T_{1A}+T_{2B}$ of Pass~71 and the weight-12
+sentinel count of Pass~159. The next shell counts $15360=2^6\cdot240$: the
+sign-lifts of the $240$ weight-6 context words. The dual is genuinely
+non-integral (pairing profile $\{0,\pm\tfrac12,\pm1,\pm2\}$ with class
+counts $378720/61440/7680/720$), so the $720$ is \emph{not} a closed root
+system: a new connected, spanning $720$-object counted by the moonshine
+integer. (Witness: \texttt{analysis/w33\_pass175\_dual\_shell\_720.py}.)
 
 \end{document}
