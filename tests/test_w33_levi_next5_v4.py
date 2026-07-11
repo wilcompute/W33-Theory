@@ -20,7 +20,10 @@ def run_witness(name: str) -> dict:
 
 
 def test_formal_contract():
-    out=formal.analyze(); assert out['status']=='PASS'; assert out['workflow']['nanoda_no_sorry']
+    out=formal.analyze()
+    assert out['status']=='PASS'
+    assert out['workflow']['independent_checker']=='leanchecker'
+    assert out['workflow']['placeholders_forbidden']
 
 
 def test_mixed_class_is_canonical_fixed_line_obstruction():
