@@ -24,9 +24,6 @@ def IsSymmetric (Y : Mat3) : Prop := Y.transpose = Y
 def IsAlternating (Y : Mat3) : Prop :=
   IsSymmetric Y ∧ ∀ i, Y i i = 0
 
-instance (Y : Mat3) : Decidable (IsSymmetric Y) := inferInstance
-instance (Y : Mat3) : Decidable (IsAlternating Y) := inferInstance
-
 /-- The point-block kernel is the six-dimensional symmetric-matrix space. -/
 theorem transposeSum_kernel_card :
     (Finset.univ.filter fun Y : Mat3 => transposeSum Y = 0).card = 64 := by
