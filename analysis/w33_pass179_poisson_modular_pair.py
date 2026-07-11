@@ -175,6 +175,7 @@ def main():
             },
             "half_form_determinants": {"A": "2^10", "B": "2^-10"},
             "identity": (
+                "Theta_A(t) = 2^-25 t^-20 Theta_B(1/(4t)); equivalently "
                 "sum_{x in A} e^{-pi t |x|^2} = 2^-25 t^-20 "
                 "sum_{z in B} e^{-pi |z|^2/(4t)}, for every t>0"
             ),

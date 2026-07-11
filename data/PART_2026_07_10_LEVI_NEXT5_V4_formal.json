@@ -1,1 +1,34 @@
-{"checks":{"all_symbolic_identities_zero":true,"branch_and_pr_triggers":true,"imports_root_module":true,"independent_leanchecker_required":true,"kernel_build_required":true,"lean_action_v1":true,"no_admit":true,"no_sorry":true,"placeholder_rejection_required":true,"q3_numeric_theorems":true},"files":["formal/W33/OddQRank.lean","formal/W33/FourierBlocks.lean","formal/W33.lean",".github/workflows/lean-formal.yml"],"honest_boundary":"The Python witness validates source structure and algebra locally. Kernel and independent leanchecker validation run in the committed GitHub Actions workflow because Lean is unavailable in this execution container.","source_digest":"f658c08fdf0a70d07f35f3765e780f25c8bf43d25e47f6da0867a395db2f6478","status":"PASS","theorem":"The local Fourier-block interface kernel-reduces the global odd-q rank/Jordan theorem to explicit geometric block certificates and numerically closes q=3; CI requires lake build, placeholder rejection, and the independent leanchecker.","workflow":{"action":"leanprover/lean-action@v1","build_wfail":true,"independent_checker":"leanchecker","lake_directory":"formal","placeholders_forbidden":true}}
+{
+  "checks": {
+    "all_symbolic_identities_zero": true,
+    "branch_and_pr_triggers": true,
+    "formal_scope_boundaries_present": true,
+    "imports_root_module": true,
+    "independent_leanchecker_required": true,
+    "kernel_build_required": true,
+    "lean_action_v1": true,
+    "no_admit": true,
+    "no_sorry": true,
+    "no_tautological_block_certificate_structures": true,
+    "placeholder_rejection_required": true,
+    "q3_arithmetic_theorems": true
+  },
+  "files": [
+    "formal/W33/OddQRank.lean",
+    "formal/W33/FourierBlocks.lean",
+    "formal/W33/HeisenbergQ3.lean",
+    "formal/W33.lean",
+    ".github/workflows/lean-formal.yml"
+  ],
+  "honest_boundary": "The Python witness validates source structure and arithmetic locally. Lean kernel and leanchecker validation run in the committed GitHub Actions workflow because Lean is unavailable in this execution container. Neither path supplies the missing finite-field Fourier/incidence construction.",
+  "source_digest": "bb670c942864f16be4e0af0117cf88c398ed21f0e91e68d08132ca69123e8a16",
+  "status": "PASS",
+  "theorem": "Lean checks exact q=3 matrix-space cardinalities plus the arithmetic/divisibility identities used by the proposed odd-q rank and Jordan formulas. It does not prove the geometric incidence-rank theorem; CI requires lake build, placeholder rejection, and a second Lean-kernel replay via leanchecker.",
+  "workflow": {
+    "action": "leanprover/lean-action@v1",
+    "build_wfail": true,
+    "independent_checker": "leanchecker",
+    "lake_directory": "formal",
+    "placeholders_forbidden": true
+  }
+}

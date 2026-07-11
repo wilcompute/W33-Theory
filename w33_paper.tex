@@ -3525,12 +3525,12 @@ $600$-cell adjacency cannot be produced without choosing additional
 $H_4$ / golden-ratio projection data.  This makes the quasicrystal step
 mathematically necessary rather than decorative.
 
-\input{part5_unified_breakthrough}
-\input{part6_cascade_breakthroughs}
-\input{part7_pascal_information_functor}
-\input{part8_three_functors}
-\input{part9_seven_locks}
-\input{part10_tangled_universe}
+\input{manuscripts/tex/part5_unified_breakthrough}
+\input{manuscripts/tex/part6_cascade_breakthroughs}
+\input{manuscripts/tex/part7_pascal_information_functor}
+\input{manuscripts/tex/part8_three_functors}
+\input{manuscripts/tex/part9_seven_locks}
+\input{manuscripts/tex/part10_tangled_universe}
 \input{part11_golay_code}
 \input{part12_moonshine_chain}
 \input{part13_arithmetic_synthesis}
@@ -11060,22 +11060,22 @@ supports, so the partner rule is invisible to intersection signatures ---
 only the group sees it. (Witness:
 \texttt{analysis/w33\_pass169\_canonical\_cycles.py}.)
 
-\subsection{Pass 170 --- the hidden pair: $H_{10}$ is the 2-modular
-reduction of $5\oplus\bar 5$}
+\subsection{Pass 170 --- the hidden-pair composition-factor match}
 \label{ssec:pass170}
 
 The 2-modular irreducible degrees of $\mathrm{U}_4(2)$ are
 $[1,4,4,6,14,20,20,64]$: there is \emph{no} $8$ --- the $\mathbb
 F_2$-irreducible $E_8$-shadow module splits over the splitting field as a
 conjugate pair of $4$s, so $H_{10}$'s Brauer factors are
-$\{1,1,4,\bar4\}$. The decomposition matrix (GAP, CTblLib) then gives the
-identification: the two degree-$5$ ordinary irreducibles --- which appear
+$\{1,1,4,\bar4\}$. The decomposition matrix (GAP, CTblLib) shows that the
+two degree-$5$ ordinary irreducibles --- which appear
 in \emph{none} of the nine permutation carriers of Pass~163 --- reduce mod
 $2$ as $1+4$ and $1+\bar4$, so $5\oplus\bar 5$ reduces with exactly
-$H_{10}$'s composition factors: the smallest faithful representations of
-the substrate group, invisible in every natural permutation geometry,
-materialize as the $\mathrm{SO}(10)$ quotient form of the incidence tower.
-The kinematic degree-$10$s instead reduce as $4+6$ and $\bar4+6$.
+$H_{10}$'s composition-factor multiset.  This does \emph{not} determine
+the uniserial extension class of $H_{10}$ or prove a modular-module
+isomorphism; an explicit module map or extension calculation remains
+necessary.  The kinematic degree-$10$s instead reduce as $4+6$ and
+$\bar4+6$.
 (Witness: \texttt{analysis/w33\_pass170\_modular\_shadow\_brauer.py},
 GAP-assisted.)
 
@@ -11123,6 +11123,10 @@ m=(1,30,20,24,15),
 \]
 whose multiplicities are precisely the character content
 $1\oplus30\oplus20\oplus24\oplus15$ of the trade carrier from Pass~163.
+The certificate is integral: all $125$ character-product identities in
+the intersection algebra and
+$P^{\mathsf T}\operatorname{diag}(m)P=90\operatorname{diag}(k)$ are checked
+exactly, with no rounded eigensolve.
 The antipodal class is exact negation, and the quotient's zero-relation is
 $\SRG(45,12,3,3)$: the 90-scheme is the antipodal double cover of the
 $\GQ(4,2)$ support geometry. (Witness:
@@ -11145,7 +11149,10 @@ sign-lifts of the $240$ weight-6 context words. The dual is genuinely
 non-integral (pairing profile $\{0,\pm\tfrac12,\pm1,\pm2\}$ with class
 counts $378720/61440/7680/720$), so the $720$ is \emph{not} a closed root
 system: a new connected, spanning $720$-object counted by the moonshine
-integer. (Witness: \texttt{analysis/w33\_pass175\_dual\_shell\_720.py}.)
+integer.  Moreover the shell generates $L^*$ exactly: it contains
+$2\mathbb Z^{40}$ and its reductions span the full $25$-dimensional
+context code, hence its index in $\mathbb Z^{40}$ is $2^{15}$.
+(Witness: \texttt{analysis/w33\_pass175\_dual\_shell\_720.py}.)
 
 \subsection{Pass 176 --- incidence identifies the fixed-line reduction
 with the route-hull $E_8$ shadow}
@@ -11203,14 +11210,24 @@ group of the graph nor yet supplies signed integral $E_8$ Gram products.
 \subsection{Pass 177 --- the address--route dual theta split}
 \label{ssec:pass177}
 
-The MacWilliams obstruction of Pass~173 lifts from binary words to
-integer-lattice shells: the two dual context codes agree exactly at
-$A_4=40$ and $A_6=240$ and split first at weight $8$
-($5085$ vs.\ $3645$), so the address and route parity lattices share
-their opening shells and separate at $q^4$ ($14640$ vs.\ $3120$), the
-route side then contributing $216\cdot2^{10}=221184$ vectors at $q^5$
-from its pentad words. Address and route are theta-inequivalent from the
-fourth shell onward. (Witness:
+Let $K_A$ and $K_R$ be the parity constructions from the \emph{dual}
+address and route context codes, with exponent $q^{\lVert x\rVert^2/2}$.
+Their exact openings are
+\[
+\begin{aligned}
+\Theta_{K_A}&=1+720q^2+15360q^3+1350960q^4+\cdots,\\
+\Theta_{K_R}&=1+720q^2+15360q^3+ 982320q^4+\cdots.
+\end{aligned}
+\]
+The common $720=80+40\cdot2^4$ consists objectwise of coordinate doubles
+plus sign-lifts of the $40$ lines on the address side and the $40$ point
+stars on the route side; the common next shell is $240\cdot2^6$.  The
+first split is entirely the weight-$8$ sector,
+\[
+1350960-982320=(5085-3645)2^8=\boxed{368640}.
+\]
+Thus non-self-duality is delayed for two dual shells and first detected
+by the signed weight-eight sector. (Witness:
 \texttt{analysis/w33\_pass177\_address\_route\_dual\_theta\_split.py}
 and \texttt{PASS177\_ADDRESS\_ROUTE\_DUAL\_THETA\_SPLIT.md}.)
 
@@ -11235,39 +11252,47 @@ two order-three recurrences, and the theorem, not the fit, decides.
 \subsection{Pass 179 --- the Poisson certificate of the sentinel pair}
 \label{ssec:pass179}
 
-With exact integer shells computed to scaled norm $40$ on both sides, the
-theta transformation of the sentinel/context pair,
+For
+$A=\{x\in\mathbb Z^{40}:x\bmod2\in S\}$ and
+$B=\{z\in\mathbb Z^{40}:z\bmod2\in S^\perp\}$, parity pairing proves
+$A^\vee=\tfrac12B$ and the code dimensions give
+$\operatorname{covol}(A)=2^{25}$.  Poisson summation therefore proves,
+for every $t>0$,
 \[
-  \sum_{x\in L'}e^{-\pi t|x|^2}
-  \;=\;2^{-25}\,t^{-20}\sum_{z\in L^{*}}e^{-\pi|z|^2/(4t)},
+  \sum_{x\in A}e^{-\pi t|x|^2}
+  \;=\;2^{-25}\,t^{-20}\sum_{z\in B}e^{-\pi|z|^2/(4t)}.
 \]
-holds to relative error $<10^{-15}$ at $t\in\{0.45,\,0.5,\,0.55\}$: the
-weight-$20$, level-$4$ modular pair is certified from finite data.
+All $41$ MacWilliams coefficients and the inverse transform are exact;
+shells are expanded through scaled norm $40$.  The three finite-window
+evaluations near $t=1/2$ corroborate the normalization numerically but do not prove the infinite identity; exactness comes from the dual-lattice and
+covolume argument.
 (Witness: \texttt{analysis/w33\_pass179\_poisson\_modular\_pair.py} and
 \texttt{PASS179\_SENTINEL\_CONTEXT\_POISSON\_PAIR.md}.)
 
-\subsection{Pass 180 --- the route lattice is the $Q(4,3)$ trade lattice,
-and the $11/8$ lives on both sides}
+\subsection{Pass 180 --- the $Q(4,3)$ dual-trade regularity boundary}
 \label{ssec:pass180}
 
-$L_{\rm route}=\ker_{\mathbb Z}N^{\mathsf T}$ is the trade lattice of the
-dual quadrangle $Q(4,3)$, and the $90$-vs-$432$ minimal-shell dichotomy is
-the classical regular/antiregular point dichotomy of the self-dual pair
-(hyperbolic spans of size $4$ vs.\ $2$, verified exactly). Its Milgram row:
-signature $7\bmod8$ with prime phases $(7,0)$ --- against the address
-side's $(3,4)$ --- and its unique $\mathbb Z/8$ block evaluates to
+$L_{\rm route}=\ker_{\mathbb Z}N^{\mathsf T}$ is, by construction, the
+point-trade lattice of the dual quadrangle $Q(4,3)$.  An exact span scan
+gives the classical regularity boundary
 \[
-  q(h_{\rm route})\;=\;\frac{11}{8}\ \bmod\ 2\mathbb Z
+\operatorname{span}_{W(3,3)}(x,y)=4,
+\qquad
+\operatorname{span}_{Q(4,3)}(x,y)=2
 \]
-as well: \emph{the Ihara-prime-over-eight identity holds on both members
-of the self-dual pair}, upgrading Pass~166's verdict from a point-side
-miracle to an exact invariant of the $W(3,3)/Q(4,3)$ duality. The
-$[40,15,10]$ route code and its $216$ weight-$10$ pentad words are
-independently re-derived. (Witness:
-\texttt{analysis/w33\_pass180\_dual\_trade\_lattice\_q43.py}.)
+for every noncollinear pair.  This correlates with, but does not by itself
+derive, the $90$-versus-$432$ lattice-shell dichotomy certified in
+Pass~173.  The two quadrangles are a nonisomorphic dual pair, not an
+incidence-self-dual geometry.
 
-\subsection{Pass 181 --- the adjoint shadow: $\mathfrak{sp}(4,\mathbb F_3)$
-inside the mod-3 trade modules}
+One selected Smith generator of the route $\mathbb Z/8$ block has
+$q(h)=11/8$, but Pass~174 proves that outer-fixed generators split between
+$11/8$ and $3/8$.  Thus $11/8$ exists on both sides but is not a canonical
+generator invariant or an invariant of the dual pair. (Witness:
+\texttt{analysis/w33\_pass180\_dual\_trade\_lattice\_q43.py} and
+\texttt{PASS180\_Q43\_DUAL\_TRADE\_REGULARITY\_BOUNDARY.md}.)
+
+\subsection{Pass 181 --- the adjoint Hom census in characteristic three}
 \label{ssec:pass181}
 
 In the defining characteristic, with a certified generating pair of
@@ -11279,13 +11304,12 @@ matrix transvections and exact integral lattice actions:
   \qquad
   \dim\operatorname{Hom}_G(\mathrm{ad},\,L_{\rm route}/3L_{\rm route})=0 .
 \]
-The $10$-dimensional adjoint module $\mathfrak{sp}(4,\mathbb F_3)$
-($\Theta=10$) materializes inside the mod-3 address and gauge trade
-modules --- non-split (no Hom back to the adjoint, no trivial fixed
-vectors anywhere) --- and is \emph{invisible from the route side}: the
-defining-characteristic twin of the chiral line-blindness of Pass~163.
-The gauge algebra itself lives in the discriminant glue of the address
-sector. (Witness:
+The reverse Hom spaces and all three fixed spaces vanish.  This is an
+exact Hom census, not by itself an embedding theorem:
+$\dim\operatorname{End}_G(\mathrm{ad})=1$ does not alone prove simplicity,
+and a nonzero Hom need not be injective.  Pass~184 constructs the two
+maps explicitly and proves their ranks are $10$; the route-side zero is
+already conclusive here. (Witness:
 \texttt{analysis/w33\_pass181\_adjoint\_shadow\_mod3.py}.)
 
 \subsection{Pass 182 --- the line-octahedron dictionary: blindness
@@ -11297,15 +11321,19 @@ second-shell trades is support-disjoint, so the finest
 invariant-theoretic relation is $56$-regular with $27{,}040$ triangles
 --- the $40$ true octahedra are strictly invisible to inner-product and
 support-intersection data, sharpening Pass~168. \emph{The dictionary,
-made canonical:} given a true octahedron-triangle ($18$ binary-polar
+made canonical after selecting the true orbital:} given a true
+octahedron-triangle ($18$ binary-polar
 octads), its line is the \emph{unique} line of $W(3,3)$ meeting all $18$
 octads in exactly two points (the constant-section rule; profile
 $2^{18}$, bijective onto the $40$ lines), and the axis/pair-partition
 interaction table is exactly diagonal
 $\operatorname{diag}(6,6,6)$: \emph{the three axes of the octahedron are
-canonically the three pair-partitions of its line} --- the same $S_3$
-that the admission controller's three-completion fibre carries
-(count-level alignment recorded with honest scope). (Witness:
+canonically the three pair-partitions of its line}.  All $40$ tables are
+$6$ times permutation matrices; the line dictionary commutes with both
+stored generators in $80$ cases and the $120$ axis labels in $240$ cases.
+The four-valent orbital itself remains group-selected: inner products and
+support intersections provably do not recover it.  The controller link is
+only an abstract three-set alignment at this stage. (Witness:
 \texttt{analysis/w33\_pass182\_line\_octahedron\_dictionary.py}.)
 
 %% ===============================================================
@@ -11316,62 +11344,71 @@ that the admission controller's three-completion fibre carries
 \subsection{Pass 183 --- the discriminant ledger of the incidence square}
 \label{ssec:pass183}
 
-The mechanism behind the two-sided $11/8$. Since
-$\operatorname{SNF}(N)=1^{25}$, the incidence map is a
-\emph{unimodular-cokernel} map: $N\mathbb Z^{40}$ is already saturated.
-The generator-invariant reading of a $\mathbb Z/8$ block is its
-numerator mod $8$ (since $q(uh)=u^2q(h)$ with $u^2\in\{1,9\}$): the two
-dark blocks lie in class $3\bmod 8$ (representative $11/8$ on both
-sides), the two code-lattice blocks in class $5\bmod 8$, and $3+5\equiv0$
---- the negation law $D(L)\cong D(L^\perp)(-1)$ of the unimodular ambient,
-verified exactly on both sides together with the code signatures
-$1\bmod8$. The transport is pinned by the exact annihilator
+The exact census replaces the phrase ``the two-sided $11/8$.''  Every
+order-eight discriminant element was enumerated.  On the address dark
+form the numerator distribution modulo $16$ is
+\[
+  \{3:32768,\ 11:32768\},
+\]
+and on the route dark form it is $\{3:512,\ 11:512\}$.  The complementary
+code forms have the exact negative distributions
+$\{5:32768,13:32768\}$ and $\{5:512,13:512\}$.  Thus a selected
+$11/8$ generator exists, but the invariant theorem is the complete
+$\{3,11\}/8\leftrightarrow\{5,13\}/8$ negation orbit.  Milgram
+eighth-root recognition remains numerical corroboration; the element
+census is exact.
+
+Since $\operatorname{SNF}(N)=1^{25}$, $N\mathbb Z^{40}$ is saturated.
+The transport also obeys $N^TN=4I+A$ and the exact annihilator
 $(A-2I)(A-12I)$ on $\mathrm{code}_P$ ($N$ scales the Perron line by $4$
-and the gauge $24$-sector by $\sqrt6$), and the whole square closes in one
-exact sequence:
+and the gauge $24$-sector by $\sqrt6$).  Finally
 \[
   0\longrightarrow \mathrm{code}_P
   \xrightarrow{\;N\;}\mathrm{code}_L
-  \longrightarrow D(L_{\rm address})\longrightarrow 0,
+  \longrightarrow Q\longrightarrow 0,
 \]
 with index $2^{17}3^{10}=\det L_{\rm address}$ and cokernel invariant
-factors exactly $(2^5,6^9,24)$: \emph{the address discriminant group is
-the cokernel of the incidence bridge between the two code lattices}.
+factors exactly $(2^5,6^9,24)$.  Hence $Q$ and
+$D(L_{\rm address})$ are isomorphic as finite abelian groups.  No
+quadratic-form isometry between them has yet been constructed.
 (Witness: \texttt{analysis/w33\_pass183\_incidence\_square\_ledger.py}.)
 
 \subsection{Pass 184 --- the mod-3 factor table of the trade tower}
 \label{ssec:pass184}
 
-In the defining characteristic, with 3-modular Brauer degrees
-$[1,5,10,14,25,81]$, the three trade modules resolve exactly:
+In the defining characteristic, the three exact sequences currently
+proved are
 \[
-  L_4/3L_4=\bigl[\,\mathrm{ad}\,10\;\big|\;5\,\bigr],\qquad
-  L_2/3L_2=\bigl[\,\mathrm{ad}\,10\;\big|\;14\,\bigr],\qquad
-  L_{\rm route}/3L_{\rm route}=\bigl[\,14\;\big|\;1\,\bigr],
+  0\to\mathrm{ad}_{10}\to L_4/3L_4\to Q_5\to0,
+  \qquad
+  0\to\mathrm{ad}_{10}\to L_2/3L_2\to Q_{14}\to0,
 \]
-all non-split (the address quotient $5$ certified irreducible by
-exhaustive $3^5$ cyclic generation; the quotient endomorphism algebras
-one-dimensional; the route module has one-dimensional coinvariants and no
-invariants). The adjoint $\mathfrak{sp}(4,\mathbb F_3)$ sits at the bottom
-of the address and gauge modules with the \emph{hidden five} of Pass~170
-as the address quotient --- three modules, three different ways to sit
-around the gauge algebra. (Witness:
+and
+\[
+  0\to K_{14}\to L_{\rm route}/3L_{\rm route}\to\mathbf1\to0.
+\]
+All are nonsplit.  The two adjoint maps have rank $10$ and $Q_5$ is
+irreducible by exhaustive $3^5$ cyclic generation.  By contrast,
+$\dim\operatorname{End}_G(Q_{14})=1$ proves only that $Q_{14}$ is a
+brick, not that it is simple; simplicity of $K_{14}$ is likewise not
+inferred from its dimension.  The live GAP ledger separately verifies
+all $20$ Brauer decomposition degree identities for degrees
+$[1,5,10,14,25,81]$. (Witness:
 \texttt{analysis/w33\_pass184\_mod3\_trade\_factors.py}, GAP dec-3
 ledger included.)
 
-\subsection{Pass 185 --- the octahedron clock: the axis torsor is a full
-$S_3$}
+\subsection{Pass 185 --- the octahedron clock: a degree-three $S_3$-set}
 \label{ssec:pass185}
 
 The line stabilizer (order $648$) acts on its octahedron's three axes
 with \emph{full image $S_3$}, the axes carry the three distinct
 pair-partitions of the line, and the labeling is
-$\PSp(4,3)$-equivariant: every line of $W(3,3)$ owns a native free
-$S_3$-structure --- precisely the fibre shape (three completions, seed
-action of order $6$) that the S3 completion admission controller
-postulates over its $4320$ ordered paths. The geometric torsor gives the
-controller's arithmetic a canonical per-line model (alignment recorded;
-the $4320$-path carrier itself is not identified here). (Witness:
+$\PSp(4,3)$-equivariant in all $240$ generator cases.  The action kernel
+has order $108$ and an axis stabilizer has order $216$, so the axes form
+$S_3/C_2$: a faithful transitive three-set, \emph{not} a free $S_3$
+torsor.  The committed controller data independently verifies
+$4320\cdot3=12960$ and seed-action order $6$; this establishes the same
+abstract fibre type, not a carrier identification. (Witness:
 \texttt{analysis/w33\_pass185\_octahedron\_clock.py}.)
 
 \subsection{Pass 186 --- the pentad-core configuration and the 36
@@ -11379,15 +11416,15 @@ dodecads}
 \label{ssec:pass186}
 
 The antiregular counterpart of the second shell: the $432$ pentad cores
-carry a PSp$(4,3)$ orbital configuration of rank $40$ (two shell orbits;
-coherence verified), and its valency-$5$ sparse orbitals decompose into
+carry a PSp$(4,3)$ orbital configuration of rank $40$ with exactly two
+shell orbits.  After transpose deduplication, its valency-$5$ sparse
+relations consist of one family of $36$ twelve-vertex components and two
+families of $36$ six-vertex components, all with stabilizer order $720$:
 \[
   \boxed{\,36\ \text{twelve-vertex components with stabilizer order }720\,}
 \]
---- the index-$36$ \emph{double-six} ($S_6$ spread-fibration) vacuum of the
-five-vacua table. Where the address tower hangs $40$ octahedra on the
-lines, the route tower hangs $36$ dodecads on the double-sixes: each side
-of the duality selects its own maximal-subgroup geometry. (Witness:
+Pass~188 proves, rather than assumes, that these are the two sixes and
+their crown gluing. (Witness:
 \texttt{analysis/w33\_pass186\_pentad\_core\_scheme.py}.)
 
 \subsection{Pass 187 --- the layer sandwich of the binary permutation
@@ -11405,7 +11442,9 @@ with dimensions $1,15,16,24,25,39$ and layer sequence
 \[
   \boxed{\,1,\;14,\;1,\;8,\;1,\;14,\;1\,}
 \]
-(the $14$s and the $8$ certified irreducible by Norton's criterion; the
+(the $14$s and the $8$ certified by exhaustive cyclic-span scans on one
+representative of every nonzero-vector orbit, covering
+$16383,255,16383$ vectors; the
 fixed subspace is exactly $\langle\mathbf j\rangle$). Consequences read
 off directly: the sentinel code $C$ is the bottom $1{+}14$; the
 $\mathrm{SO}(10)$ shadow $H_{10}=C^\perp/C$ is the middle sandwich
@@ -11418,5 +11457,111 @@ asymmetry is a \emph{filtration shift}, the same phenomenon the
 Sastry--Sin $\sqrt{17}$ radical-series analysis quantifies at general
 even $q$. (Witness:
 \texttt{analysis/w33\_pass187\_f2\_layer\_sandwich.py}.)
+
+%% ===============================================================
+\section{The Chiral Program, Sixth Round: Passes 188--192}
+\label{sec:chiral-program-six}
+%% ===============================================================
+
+\subsection{Pass 188 --- the dodecads are exact double-six crowns}
+\label{ssec:pass188}
+
+The two directed valency-$5$ orbitals are transposes.  Their union has
+exactly $36$ connected components, and every component is proved
+combinatorially to be
+\[
+  K_{6,6}\setminus 6K_2,
+\]
+not an icosahedron.  The two symmetric valency-$5$ orbitals separately
+give two families of $36$ copies of $K_6$.  Each crown bipartition is
+bijectively one $K_6$ from each family, and every six is used once.  The
+component stabilizer acts faithfully with order $720$ and induces the
+full $S_6$ on either six.  Thus the route shell contains an internal,
+$\PSp(4,3)$-equivariant double-six model; its exact characteristic
+polynomial is
+$(x-5)(x+5)(x-1)^5(x+1)^5$. (Witness:
+\texttt{analysis/w33\_pass188\_icosahedron\_test.py}.)
+
+\subsection{Pass 189 --- the point permutation module is uniserial}
+\label{ssec:pass189}
+
+Pass~187's chain is the complete invariant-submodule lattice.  Exact Hom
+computations in each successive quotient identify a unique simple socle,
+while exhaustive vector-orbit scans certify the $14$- and $8$-dimensional
+simples.  Therefore $\mathbb F_2^{40}$ is uniserial with composition
+series
+\[
+  1\mid14\mid1\mid8\mid1\mid14\mid1,
+\]
+and has exactly eight invariant binary codes.  In particular the
+$[40,15,8]$ sentinel is the unique invariant $15$-space,
+$C^\perp/C$ is forced, and the central $8$ is the unique
+$8$-dimensional subquotient.  The endomorphism fields are
+$\operatorname{End}(14)=\mathbb F_2$ and
+$\operatorname{End}(8)=\mathbb F_4$. (Witness:
+\texttt{analysis/w33\_pass189\_uniserial\_certificate.py}.)
+
+\subsection{Pass 190 --- the mod-3 Steinberg composition census}
+\label{ssec:pass190}
+
+A live GAP calculation first proves that the computed permutation-group
+table is permutation-equivalent to the CTblLib table for $U_4(2)$, then
+transports ten permutation characters to its $3$-modular Brauer table.
+For
+\[
+ (\text{points, lines, arcs, shell, trades, supports, skew pairs,
+ hyperbolic pairs, }Q(4,2)\text{ arcs, flags}),
+\]
+the multiplicities of the Steinberg simple of degree $81$ are exactly
+\[
+  \boxed{(0,0,2,3,0,0,2,1,2,1)}.
+\]
+All ten complete multiplicity rows satisfy their exact dimension
+identities.  This is a composition-factor census; it does not by itself
+select an embedded logical register, code, or hardware protection
+mechanism. (Witness:
+\texttt{analysis/w33\_pass190\_steinberg\_address.py}.)
+
+\subsection{Pass 191 --- the $27+6+3$ double-six subdegrees}
+\label{ssec:pass191}
+
+The tempting $120\cdot36=4320$ controller identification is false as a
+group action.  The product of octahedron axes and double-sixes splits
+exactly as
+\[
+  \boxed{4320=3240+720+360=120(27+6+3)},
+\]
+with pair-stabilizer orders $8,36,72$.  This refutation exposes the
+correct positive structure: the stabilizer of one axis has order $216$
+and acts on its distinguished three double-sixes through full $S_3$,
+with kernel $36$.  Hence every axis owns a native completion fibre
+$S_3/C_2$.  It has the controller's abstract three-completion type, but
+it lies over $120$ axes; the full $4320$ product has the right cardinality
+and the wrong orbit structure. (Witness:
+\texttt{analysis/w33\_pass191\_supercycle\_pullback.py}.)
+
+\subsection{Pass 192 --- signed trades are tetrahedral edges}
+\label{ssec:pass192}
+
+For a signed second-shell trade, its three positive octads contain one
+unique pair of points on the matched line, while its three negative
+octads contain the complementary pair.  This gives the explicit
+equivariant bijection
+\[
+  \boxed{240\ \text{signed trades}
+  \;\longleftrightarrow\;40\ \text{lines}\times6\ \text{edges}},
+\]
+verified in all $480$ generator cases; sign reversal is edge complement.
+The line stabilizer $H$ of order $648$ acts on the six edges exactly as
+$S_4$ on the two-subsets of a four-set, and
+\[
+  \boxed{1\longrightarrow C_3^3\longrightarrow H
+  \longrightarrow S_4\longrightarrow1}.
+\]
+The kernel is checked elementwise to be abelian of order $27$ and
+exponent $3$.  Quotienting edges by complement gives the axis action
+$S_4\to S_3$.  Thus signed trades form $S_4/V_4$ and unsigned axes form
+$S_3/C_2$; the six signed trades are not a regular $S_3$ frame. (Witness:
+\texttt{analysis/w33\_pass192\_signed\_trade\_edge\_s4.py}.)
 
 \end{document}

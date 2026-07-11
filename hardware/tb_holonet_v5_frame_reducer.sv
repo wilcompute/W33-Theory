@@ -14,9 +14,17 @@ module tb_holonet_v5_frame_reducer;
     repeat(2) @(negedge clk); rst_n=1;
     send(64'd100,5'd0); send(64'd110,5'd0); send(64'd120,5'd3); send(64'd200,5'd16);
     @(posedge clk); #1;
-    if (!ov || c0!==0 || c3!==0 || fts!==100 || lts!==200 || fid!==1) $fatal(1,"bad frame output");
+    if (!ov || overflow || c0!==2 || c3!==1 || fts!==100 || lts!==200 || fid!==0) $fatal(1,"bad first frame snapshot");
+    repeat(3) begin
+      @(posedge clk); #1;
+      if (!ov || c0!==2 || c3!==1 || fts!==100 || lts!==200 || fid!==0) $fatal(1,"frame changed under backpressure");
+    end
     ordy=1; @(posedge clk); #1;
     if (ov) $fatal(1,"output handshake did not clear valid");
+    ordy=0;
+    send(64'd300,5'd2); send(64'd350,5'd16);
+    @(posedge clk); #1;
+    if (!ov || overflow || c0!==0 || c2!==1 || c3!==0 || fts!==300 || lts!==350 || fid!==1) $fatal(1,"bad second frame snapshot");
     $display("PASS"); $finish;
   end
 endmodule

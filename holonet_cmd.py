@@ -54,6 +54,11 @@ def main(argv=None):
             if len(arguments) != 1:
                 raise SystemExit(f"{arguments[0]} takes no arguments")
             module = importlib.import_module(commands[arguments[0]])
+            if arguments[0] == "levi-next5-v4":
+                # The aggregate has its own argparse parser.  Do not leak the
+                # outer Holonet command name through sys.argv as an invalid
+                # inner choice; explicitly select its aggregate route.
+                raise SystemExit(module.main(["all"]))
             raise SystemExit(module.main())
     import holonet_cli
     holonet_cli.main(arguments)

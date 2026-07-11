@@ -14,9 +14,9 @@ module M = F2^40 (points) under PSp(4,3):
 
    are verified exactly, with layer dimensions 1,14,1,8,1,14,1.
 
-2. THE LAYERS.  The 8-layer is the E8-shadow module (known); the two
-   14-layers are certified irreducible by exhaustive cyclic generation
-   (every nonzero vector of the subquotient generates it); the fixed
+2. THE LAYERS.  The 8-layer is the E8-shadow module; both 14-layers and
+   the 8-layer are certified irreducible by an exhaustive orbit-representative
+   cyclic scan (hence every nonzero vector generates the full subquotient); the fixed
    subspace of M is exactly <j> (so the trivial socle is one-dimensional).
 
 3. THE IDENTIFICATIONS.  H10 = C-perp/C inherits exactly the middle
@@ -153,6 +153,43 @@ def spin_full(vector, matrices, dim):
     return False
 
 
+def mask_to_vector(mask, dim):
+    return np.array([(mask >> bit) & 1 for bit in range(dim)], dtype=np.uint8)
+
+
+def vector_to_mask(vector):
+    return sum(int(bit) << i for i, bit in enumerate(vector))
+
+
+def exhaustive_cyclic_irreducible(matrices, dim):
+    """Check one representative of every group orbit on nonzero vectors.
+
+    Cyclic span dimension is constant on a group orbit.  Removing each full
+    orbit therefore checks every one of the 2^dim-1 nonzero vectors without
+    repeating the same spin thousands of times.
+    """
+    unseen = set(range(1, 1 << dim))
+    orbit_count = 0
+    while unseen:
+        representative = min(unseen)
+        start = mask_to_vector(representative, dim)
+        if not spin_full(start, matrices, dim):
+            return False, orbit_count + 1
+        orbit = {representative}
+        stack = [start]
+        while stack:
+            current = stack.pop()
+            for matrix in matrices:
+                image = (matrix @ current) % 2
+                key = vector_to_mask(image)
+                if key not in orbit:
+                    orbit.add(key)
+                    stack.append(image)
+        unseen.difference_update(orbit)
+        orbit_count += 1
+    return True, orbit_count
+
+
 def norton_irreducible(matrices, dim):
     """Norton's criterion: pick theta with small nonzero kernel; the module
     is irreducible iff every nonzero kernel vector of theta spins to the
@@ -229,7 +266,7 @@ def norton_irreducible(matrices, dim):
 
 def subquotient_irreducible(top_basis, bottom_basis, gen_perms):
     matrices, dim = subquotient_action_matrices(top_basis, bottom_basis, gen_perms)
-    verdict = norton_irreducible(matrices, dim)
+    verdict, _ = exhaustive_cyclic_irreducible(matrices, dim)
     return bool(verdict)
 
 
@@ -330,8 +367,15 @@ def main():
     # ------------------------------------------------------------------
     # 2. layer irreducibility and the socle
     # ------------------------------------------------------------------
-    checks["layer_14_low_irreducible"] = subquotient_irreducible(C, [j], two_gens)
-    checks["layer_8_irreducible"] = subquotient_irreducible(ker_a2, im_a2, two_gens)
+    low14_actions, low14_dim = subquotient_action_matrices(C, [j], two_gens)
+    layer8_actions, layer8_dim = subquotient_action_matrices(ker_a2, im_a2, two_gens)
+    high14_actions, high14_dim = subquotient_action_matrices(j_perp, c_perp, two_gens)
+    low14_irred, low14_orbits = exhaustive_cyclic_irreducible(low14_actions, low14_dim)
+    layer8_irred, layer8_orbits = exhaustive_cyclic_irreducible(layer8_actions, layer8_dim)
+    high14_irred, high14_orbits = exhaustive_cyclic_irreducible(high14_actions, high14_dim)
+    checks["layer_14_low_irreducible_exhaustive"] = low14_dim == 14 and low14_irred
+    checks["layer_8_irreducible_exhaustive"] = layer8_dim == 8 and layer8_irred
+    checks["layer_14_high_irreducible_exhaustive"] = high14_dim == 14 and high14_irred
 
     # fixed subspace of M: solve (g-1)x = 0 for both generators
     constraints = []
@@ -389,6 +433,13 @@ def main():
             "chain": "0 < j < C < im A2 < ker A2 < C_perp < j_perp < M",
             "dims": dims,
             "layers": layer_dims,
+            "irreducibility_scan": {
+                "method": "one cyclic-span test per group orbit, covering every nonzero vector",
+                "low_14_vector_orbits": low14_orbits,
+                "middle_8_vector_orbits": layer8_orbits,
+                "high_14_vector_orbits": high14_orbits,
+                "vectors_covered": {"low_14": 2**14-1, "middle_8": 2**8-1, "high_14": 2**14-1},
+            },
             "reading": (
                 "one filtration generates the binary facts: the sentinel "
                 "code C is the second layer (1+14), the SO(10) shadow "
@@ -403,8 +454,9 @@ def main():
             "route_in_ker_AL": bool(line_route_in_kerAL),
             "reading": (
                 "the line module rearranges: rank A_L = 10 = q^2+1, the "
-                "hull [40,9] sits low (j + the 8-layer), and the "
-                "filtration shift IS the address/route asymmetry"
+                "route hull has dimension 9, im A_L lies in route-perp "
+                "but not in the route code, and the point-side chain does "
+                "not transfer unchanged to line coordinates"
             ),
         },
         "checks": {name: bool(value) for name, value in checks.items()},

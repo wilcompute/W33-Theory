@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass182.line_octahedron_dictionary.v1",
+  "schema": "w33.pass182.line_octahedron_dictionary.v2",
   "status": "PASS",
   "blindness_certificate": {
     "disjoint_orthogonal_degree_profile": {
@@ -16,23 +16,30 @@
     },
     "bijective": true
   },
-  "axis_pair_partition_sample": [
-    [
-      6,
-      0,
-      0
+  "axis_pair_partition_certificate": {
+    "sample": [
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        6
+      ]
     ],
-    [
-      0,
-      6,
-      0
-    ],
-    [
-      0,
-      0,
-      6
-    ]
-  ],
+    "tables_checked": 40,
+    "axis_labels_checked": 120,
+    "dictionary_generator_cases": 80,
+    "axis_generator_cases": 240,
+    "scope": "the true four-valent orbital is group-selected; once supplied, the line and pair-partition labels are intrinsic incidence profiles and equivariant under both stored generators"
+  },
   "s3_alignment": {
     "axes_per_octahedron": 3,
     "completions_per_ordered_path": 3,
@@ -49,6 +56,9 @@
     "four_valent_orbital_found": true,
     "forty_true_triangles": true,
     "profile_rule_unique_per_triangle": true,
-    "dictionary_hits_all_40_lines": true
+    "dictionary_hits_all_40_lines": true,
+    "all_40_axis_tables_are_6_times_permutations": true,
+    "profile_dictionary_equivariant_80_cases": true,
+    "axis_partition_equivariant_240_cases": true
   }
 }

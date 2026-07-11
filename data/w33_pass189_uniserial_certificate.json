@@ -1,0 +1,90 @@
+{
+  "schema": "w33.pass189.uniserial_certificate.v1",
+  "status": "PASS",
+  "theorem": "F2^40 is a uniserial PSp(4,3)-module with composition series 0 < j < C < im A2 < ker A2 < C_perp < j_perp < M and layers 1,14,1,8,1,14,1: every invariant binary structure of W(3,3) is one of the eight chain members",
+  "socle_table": [
+    {
+      "quotient": "M/0",
+      "dimension": 40,
+      "hom_1": 1,
+      "hom_8": 0,
+      "hom_14": 0,
+      "socle": "1"
+    },
+    {
+      "quotient": "M/j",
+      "dimension": 39,
+      "hom_1": 0,
+      "hom_8": 0,
+      "hom_14": 1,
+      "socle": "14"
+    },
+    {
+      "quotient": "M/C",
+      "dimension": 25,
+      "hom_1": 1,
+      "hom_8": 0,
+      "hom_14": 0,
+      "socle": "1"
+    },
+    {
+      "quotient": "M/imA2",
+      "dimension": 24,
+      "hom_1": 0,
+      "hom_8": 2,
+      "hom_14": 0,
+      "socle": "8"
+    },
+    {
+      "quotient": "M/kerA2",
+      "dimension": 16,
+      "hom_1": 1,
+      "hom_8": 0,
+      "hom_14": 0,
+      "socle": "1"
+    },
+    {
+      "quotient": "M/Cperp",
+      "dimension": 15,
+      "hom_1": 0,
+      "hom_8": 0,
+      "hom_14": 1,
+      "socle": "14"
+    },
+    {
+      "quotient": "M/jperp",
+      "dimension": 1,
+      "hom_1": 1,
+      "hom_8": 0,
+      "hom_14": 0,
+      "socle": "1"
+    }
+  ],
+  "endomorphism_fields": {
+    "8": "F4",
+    "14": "F2"
+  },
+  "simple_module_scan": {
+    "14_nonzero_vectors": 16383,
+    "14_vector_orbits": 12,
+    "8_nonzero_vectors": 255,
+    "8_vector_orbits": 2
+  },
+  "corollaries": [
+    "the sentinel code [40,15,8] is the unique 15-dimensional invariant code",
+    "H10 = C_perp/C with its (1,8,1) structure is forced",
+    "the E8 shadow is the unique 8-dimensional subquotient",
+    "there are exactly 8 invariant binary codes of length 40"
+  ],
+  "checks": {
+    "group_order": true,
+    "fourteen_dim": true,
+    "eight_dim": true,
+    "end_8_is_F4": true,
+    "end_14_is_F2": true,
+    "simple_14_irreducible_exhaustive": true,
+    "simple_8_irreducible_exhaustive": true,
+    "socle_simple_at_every_step": true,
+    "uniserial": true
+  }
+}

@@ -89,7 +89,7 @@ def main():
             table.append(shell_keys[tuple(int(x) for x in image)])
         gen_maps.append(table)
     n_orbits = orbit_count(432, gen_maps)
-    checks["shell_orbit_count"] = n_orbits in (1, 2)
+    checks["shell_has_exactly_two_orbits"] = n_orbits == 2
 
     tables = []
     for mapping in gen_maps:
@@ -111,7 +111,7 @@ def main():
                     stack.append(image)
         orbital_count += 1
     label_grid = labels.reshape(432, 432)
-    checks["orbital_rank_computed"] = orbital_count > 0
+    checks["orbital_rank_40"] = orbital_count == 40
 
     orbital_info = []
     for o in range(orbital_count):
@@ -149,12 +149,17 @@ def main():
 
     # sparse relations: components + stabilizer identification
     sparse_reports = []
+    seen_sparse_relations = set()
     for info in sorted(orbital_info, key=lambda r: r["valency"]):
-        if info["valency"] == 0 or info["valency"] > 6 or info["orbital"] == 0:
+        if info["valency"] != 5:
             continue
         matrix = orbital_matrices[info["orbital"]]
         if not bool(np.array_equal(matrix, matrix.T)):
             matrix = matrix + matrix.T
+        relation_key = matrix.tobytes()
+        if relation_key in seen_sparse_relations:
+            continue
+        seen_sparse_relations.add(relation_key)
         seen = np.zeros(432, dtype=bool)
         components = []
         for start in range(432):
@@ -172,9 +177,11 @@ def main():
                         stack.append(int(nxt))
             components.append(frozenset(component))
         sizes = Counter(len(c) for c in components)
+        nontrivial = [component for component in components if len(component) > 1]
+        nontrivial_sizes = Counter(len(component) for component in nontrivial)
 
         # stabilizer identification of one component
-        base = components[0]
+        base = nontrivial[0]
         base_vectors = {tuple(int(x) for x in shell[i]) for i in base}
         stabilizer = []
         for perm in group:
@@ -200,17 +207,30 @@ def main():
                 "valency": info["valency"],
                 "ip_value": info["ip_value"],
                 "component_sizes": {str(k): int(v) for k, v in sorted(sizes.items())},
+                "nontrivial_component_sizes": {
+                    str(k): int(v) for k, v in sorted(nontrivial_sizes.items())
+                },
                 "component_count": len(components),
+                "nontrivial_component_count": len(nontrivial),
                 "stabilizer_order": stab_order,
                 "fixed_points": fixed_points,
                 "fixed_lines": fixed_lines,
             }
         )
-    checks["sparse_relations_recorded"] = True
+    sparse_shapes = Counter(
+        tuple(sorted(report["nontrivial_component_sizes"].items()))
+        for report in sparse_reports
+    )
+    checks["sparse_relations_are_one_crown_and_two_six_families"] = (
+        len(sparse_reports) == 3
+        and sparse_shapes
+        == Counter({(("12", 36),): 1, (("6", 36),): 2})
+        and all(report["stabilizer_order"] == 720 for report in sparse_reports)
+    )
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass186.pentad_core_scheme.v1",
+        "schema": "w33.pass186.pentad_core_scheme.v2",
         "status": "PASS" if all_pass else "FAIL",
         "shell": {
             "size": 432,

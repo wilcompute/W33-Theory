@@ -135,12 +135,13 @@ point. Every numerical claim reduces to arithmetic in nine integers --- $q=3,\ \
 k=12,\ f=24,\ g=15,\ \Phi_6=7,\ \Phi_4=10,\ \Phi_3=13$ --- forced by the master equation $q!=2q$, whose
 only positive solution is $q=3$.
 
-\paragraph{One group.} The automorphism group $W(E_6)$, order $51840$, is simultaneously the
-processor's Clifford gate group (the symplectic group $\mathrm{Sp}(4,3)$ on the phase space, built by
-closure from $40$ transvections), the network's automorphism group (transitive on the $40$ nodes), the
-memory's protection group (it permutes the $40$ line-contexts that are the code's stabilizers), and the
-contextuality symmetry of readout. It is transitive even on the $160$ point-on-line flags. \emph{The
-computer is the network is the memory: one group, four faces.}
+\paragraph{One symmetry family, three precise groups.} The projective network action is
+$\mathrm{PSp}(4,3)$ of order $25920$; the Clifford central cover
+$\mathrm{Sp}(4,3)$ has order $51840$; and the full Weyl/outer extension
+$W(E_6)\cong\mathrm{PSp}(4,3){:}2$ also has order $51840$.  These related but nonidentical groups act on
+the processor, network, memory contexts, and contextual readout.  The projective group is transitive on
+the $40$ nodes and $160$ point-on-line flags; the outer extension supplies the additional involution.
+The layers share one symmetry family, but a group-membership claim must retain the quotient/cover bit.
 
 \paragraph{Instruction set.} A $27 = 3^3$ operand register; a Clifford opcode group
 $\mathrm{Sp}(4,3)$ of order $51840$ (the classically-simulable part, by Gottesman--Knill); and a single
@@ -161,6 +162,90 @@ operator--operand duality, the Steinberg memory module, and the contextual fract
 established in the broader corpus and used here as inputs, not re-derived. The physics identifications
 (generations, weak angle, $1/\alpha$) are corpus postdictions, several at integer level.
 \end{honestbox}
+
+\section{One Transceiver, Two Dark Fault Budgets}
+\label{sec:incidence-transceiver-dark-budgets}
+
+The point and line sides have equal size but are not interchangeable.  Let $N$ be the $40$-line by
+$40$-point incidence matrix.  Pass~173 proves that
+\[
+T=N-\frac1{10}J,qquad
+T^{\mathsf T}T=6E_{24}^{P},qquad
+TT^{\mathsf T}=6E_{24}^{L}.
+\]
+So $T/\sqrt6$ is a lossless address-to-route transceiver on the shared $24$-dimensional gauge sector.
+For each of the $480$ local-axis selectors, the $40$ line analyzers return exactly one $+3$, one $-3$,
+nine $+1$, nine $-1$, and twenty zeros; the input is reconstructed by $x=N^{\mathsf T}(Nx)/6$.
+
+The unmatched kernels give different exact fault budgets:
+\[
+\ker_{\mathbb Z}N:\ [40,15,8],\quad 90\text{ minima of norm }8,
+\qquad
+\ker_{\mathbb Z}N^{\mathsf T}:\ [40,15,10],\quad 432\text{ minima of norm }10.
+\]
+Thus an address-dark integral fault needs support at least $8$, while a route-dark fault needs at least
+$10$.  The $216$ route supports are exactly the existing pentad cores: two five-line halves coupled by
+$K_{5,5}$ minus a matching, whose deleted edges double-cover all $540$ skew-line charts.  In engineering
+terms, the route monitor's minimum undetectable support is two coordinates higher and its full boundary
+catalog is already the mirror-bus atlas.
+
+The corresponding legal-context catalogs agree at weights $4$ and $6$ ($40$ and $240$ words) and first
+separate at weight $8$: $5085$ address words versus $3645$ route words.  This gives a staged classifier:
+the first two shells can share hardware and calibration, while the third shell is the first place the
+firmware must retain the address/route type bit.  Only the address code is self-orthogonal, so its
+$O^+(10,2)$ quotient must not be instantiated on route packets.
+
+The route side nevertheless has its own protected subcodec:
+\[
+H=R\cap R^\perp=[40,9,16],
+\qquad H/\langle\mathbf1\rangle\cong\mathbb F_2^8
+\]
+with a plus-type (1+135+120) orbit split.  Operationally, route admission remains a 15-dimensional
+code, while its 9-dimensional hull is the protected core and the all-ones word is the explicit radical
+tag removed before the 8-bit quadratic classification.  The resulting 255-state table reproduces the
+existing (135/120) E8-mod-2 routing split.
+
+Pass~174 also repairs the phase-control interpretation: a fixed order-eight rail preserving
+$q(h)=11/8$ exists on both address and route discriminants.  The nonzero cohomology class blocks only a
+pure scalar-5 representation of that rail, not the scalar-1 fixed implementation.  This removes a false
+software no-go, but does not replace calibration and drift tests on a physical phase controller.  The
+value is not generator-invariant: the other half of the fixed shifts have $q=3/8$, so software must store
+the selected rail rather than infer $11/8$ from the route type alone.
+
+The address-to-route conversion is now executable without a lookup-table isomorphism.  Incidence maps the
+fixed-line reduction of the 10-bit address shadow isometrically onto the 8-bit protected route quotient,
+sends the fixed address class to the all-ones route tag, and maps all $240$ weight-six address words
+bijectively to the $240$ weight-20 hull words before the $2$-to-$1$ quotient to $120$ anisotropic states.
+All $512$ quadratic checks and $8192$ native-generator commuting checks pass.  This is the codec contract
+an implementation should test at its address/route boundary.
+
+The dual-shell tables also determine the first mandatory type-aware tier.  Address and route share
+$720$ and $15360$ states in their first two nontrivial dual shells; the next counts are $1350960$ and
+$982320$, a gap of exactly $368640$.  The common $720$ has different labels---line sign-lifts versus
+point-star sign-lifts---but identical capacity.  A compact implementation can therefore share storage for
+the first two tiers and branch before loading weight-eight entries.  These are exact catalog sizes, not
+throughput, latency, or physical-error-rate measurements.
+
+The next controller revision needs two additional type fields.  First, the nominal
+$120\times36=4320$ axis/double-six table is not homogeneous: its exact native orbit partition is
+$3240+720+360=120(27+6+3)$.  A runtime row must therefore retain whether its double-six lies in the
+$27$-, $6$-, or $3$-suborbit of the chosen axis.  The smallest suborbit is operationally distinguished:
+the axis stabilizer acts on those three double-sixes through full $S_3$, so it is the exact finite model
+for an unframed three-completion choice.  This does not identify the full $4320$ product with the
+controller's ordered-path carrier.
+
+Second, a signed local-axis state now has a compact lossless address: line ID plus one of the six
+two-point edges on that line.  Sign reversal is just edge complement.  The six-state symmetry is the
+tetrahedral-edge action of $S_4$, with line-stabilizer sequence
+$1\to C_3^3\to H\to S_4\to1$; after complement-pairing, the three axes carry $S_3/C_2$.  Consequently a
+six-slot controller cannot substitute a regular $S_3$ frame for these six signed states without an
+explicit conversion map.  This is an exact ABI distinction, not measured performance.
+
+This is a coding and analyzer theorem, not a cryptographic security proof: a threat model still has to
+specify which integer faults an adversary can inject and which analyzer channels are trusted.  It also
+corrects the old ``self-dual'' shorthand.  At $q=3$, $W(3,3)$ and its dual $Q(4,3)$ are cospectral and
+equally sized but nonisomorphic; only the common $24$-sector is canonically transported.  (Witness:
+\path{analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py}.)
 
 \section{The Universal Virtual Machine: It Boots on a Dinosaur}
 \label{sec:vm}
@@ -454,12 +539,12 @@ for quantum repeaters in which the operation is never present classically to be 
 independent reconstructions; losing a whole description class does not lose the schedule.
 \end{enumerate}
 
-The deepest security consequence is the \emph{one-group audit}. The same $W(E_6)$ is the ISA, the
-network's automorphism group, the memory's protection group, the clock's symmetry, and the code's
-symmetry. A single group-membership check certifies the entire stack: an audit is a homomorphism test,
-not a multi-layer scan, because there is no boundary between network, OS, and application to defend ---
-the layers are mathematically identical. A guest escape attempt manifests as a measurable spectral
-anomaly against the $g=15$ sentinel eigenspace; legal traffic is sentinel-dark.
+The deepest security consequence is the \emph{one-family audit}.  The projective group, Clifford cover,
+and Weyl outer extension act compatibly across the ISA, network, memory, clock, and code, provided the
+quotient/cover type is retained.  The resulting audit is a family of homomorphism and provenance tests,
+not a claim that every layer is literally the same group.  A guest escape attempt can manifest as a
+spectral anomaly against the $g=15$ sentinel eigenspace; legal traffic is required to be sentinel-dark,
+and the exact support thresholds above state where that test alone ceases to be complete.
 
 \section{One Number, Two Worlds: The Physics Bridge}
 \label{sec:physics}

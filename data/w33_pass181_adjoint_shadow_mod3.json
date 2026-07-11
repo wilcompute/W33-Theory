@@ -1,9 +1,10 @@
 {
-  "schema": "w33.pass181.adjoint_shadow_mod3.v1",
+  "schema": "w33.pass181.adjoint_hom_census.v2",
   "status": "PASS",
   "adjoint": {
     "module": "sp(4,F3), dimension 10 = Theta, defining characteristic",
-    "schur_endomorphism_dim": 1
+    "schur_endomorphism_dim": 1,
+    "boundary": "endomorphism dimension one does not alone prove simplicity"
   },
   "trade_modules_mod3": {
     "address_L4": {
@@ -25,7 +26,7 @@
       "trivial_fixed_vectors": 0
     }
   },
-  "reading": "the defining-characteristic side of the trade tower: exact Hom_G dimensions between the adjoint module sp(4,F3) and the mod-3 reductions of the address, route, and gauge trade lattices -- where (and whether) the gauge algebra materializes inside the discriminant glue",
+  "reading": "the defining-characteristic side of the trade tower: exact Hom_G dimensions between the adjoint module sp(4,F3) and the mod-3 reductions of the address, route, and gauge trade lattices.  Nonzero Hom does not alone prove injection; the rank-10 embeddings for address and gauge are established by the explicit maps in Pass 184",
   "checks": {
     "generators_symplectic": true,
     "projective_pair_generates_25920": true,
@@ -36,6 +37,6 @@
     "address_L4_action_wellformed": true,
     "route_Q43_action_wellformed": true,
     "gauge_L2_action_wellformed": true,
-    "adjoint_hom_computed": true
+    "all_twelve_hom_and_dimension_entries_exact": true
   }
 }

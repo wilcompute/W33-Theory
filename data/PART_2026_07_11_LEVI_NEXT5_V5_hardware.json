@@ -1,91 +1,144 @@
 {
   "checks": {
-    "all_frames_routed_40_27_72_240": true,
-    "all_payload_roots_typed": true,
+    "all_162_payload_addresses_exercised": true,
+    "all_w33_points_exercised": true,
     "backpressure_exercised": true,
-    "bounded_reducer_matches_software": true,
+    "bounded_reference_reducer_matches_software": true,
     "qutag_sdk_contract": true,
-    "rtl_contract_present": true,
+    "rtl_frame_snapshot_contract_present": true,
     "stream_over_one_million_events": true,
     "swabian_sdk_contract": true,
+    "timestamp_changes_route": true,
+    "typed_positive_control_routes": true,
     "vendor_loss_is_fail_closed": true
   },
-  "fpga": {
+  "reference_reducer": {
     "accepted_events": 1048832,
     "backpressure_cycles": 165,
     "cycles": 1049253,
+    "execution": "Python cycle model, not RTL or FPGA execution",
     "frames": 256,
     "input_events": 1048832,
-    "rtl": {
-      "path": "hardware/holonet_v5_frame_reducer.sv",
-      "required_tokens": true,
-      "sha256": "450057b97dc506f8932fc1dce3e95ff822b005f081e151e1e03771256b439141"
-    },
     "summary_digest": "6904b7b448a5dcc45623339de721527dbaee0e8d887301ea1801262a4596a9dd"
   },
+  "rtl": {
+    "contract": {
+      "path": "hardware/holonet_v5_frame_reducer.sv",
+      "required_tokens": true,
+      "sha256": "27aa856268cde2b5f1173c58738930d4d922e32606dd2f266879750d8c28b149"
+    },
+    "execution": "Icarus compile/smoke in CI; two completed frames, including output backpressure"
+  },
   "runtime_replay": {
-    "chain": "timestamp -> frame -> W33 point40 -> Schlaefli line27 -> E6 root72 -> typed E8 root240",
+    "chain": "frame summary -> timestamp-derived W33 point address || Schlaefli payload address -> positive E6 control -> typed E8 payload",
     "frames": 256,
-    "route_digest": "235cd75de2e5e50f3bf2f839e8e661da3696c46f54af03f13a051944a8ba4db3",
+    "mapping_scope": "The W33 40-action and Schlaefli 27-action are parallel typed projections. No W33-to-Schlaefli subgraph or incidence morphism is asserted.",
+    "payload_addresses_covered": 162,
+    "route_digest": "8e73fc8dc1d08b7e735b783cf604e80d069dee484ca1bb5fb6c352890722e037",
     "sample": [
       {
-        "control_root72": 124,
+        "control_pairing": 1,
+        "control_root72": 117,
         "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "first_timestamp_ps": 37,
         "frame": 0,
-        "line27": "L14",
-        "line27_slot": 13,
+        "last_timestamp_ps": 172229,
+        "overflow": false,
+        "payload_lane": 4,
+        "payload_root240": 157,
+        "point40": 36,
+        "point40_coordinate": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "schlafli_line27": "L13",
+        "schlafli_slot27": 12
+      },
+      {
+        "control_pairing": 1,
+        "control_root72": 114,
+        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "first_timestamp_ps": 172273,
+        "frame": 1,
+        "last_timestamp_ps": 344486,
         "overflow": false,
         "payload_lane": 0,
-        "payload_root240": 9,
-        "point40": 16
+        "payload_root240": 14,
+        "point40": 14,
+        "point40_coordinate": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "schlafli_line27": "E1",
+        "schlafli_slot27": 1
       },
       {
-        "control_root72": 163,
+        "control_pairing": 1,
+        "control_root72": 102,
         "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
-        "frame": 1,
-        "line27": "L14",
-        "line27_slot": 13,
-        "overflow": false,
-        "payload_lane": 1,
-        "payload_root240": 36,
-        "point40": 17
-      },
-      {
-        "control_root72": 64,
-        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "first_timestamp_ps": 344526,
         "frame": 2,
-        "line27": "L14",
-        "line27_slot": 13,
+        "last_timestamp_ps": 516727,
         "overflow": false,
-        "payload_lane": 2,
-        "payload_root240": 52,
-        "point40": 18
+        "payload_lane": 5,
+        "payload_root240": 210,
+        "point40": 1,
+        "point40_coordinate": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "schlafli_line27": "E5",
+        "schlafli_slot27": 5
       },
       {
-        "control_root72": 103,
+        "control_pairing": 1,
+        "control_root72": 170,
         "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "first_timestamp_ps": 516774,
         "frame": 3,
-        "line27": "L14",
-        "line27_slot": 13,
+        "last_timestamp_ps": 688963,
         "overflow": false,
-        "payload_lane": 3,
-        "payload_root240": 147,
-        "point40": 19
+        "payload_lane": 4,
+        "payload_root240": 204,
+        "point40": 8,
+        "point40_coordinate": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "schlafli_line27": "L04",
+        "schlafli_slot27": 9
       }
-    ]
+    ],
+    "w33_points_covered": 40
   },
   "status": "PASS",
-  "theorem": "Vendor-normalized tags are reduced with bounded state and every completed frame is replayed through an explicit 40-27-72-240 typed route; loss, overflow, and backpressure are fail-closed.",
+  "theorem": "Documentation-shaped vendor tags feed a bounded Python reference reducer; clean acquisitions produce timestamp-sensitive W33 addresses and separate Schlaefli/E6/E8 typed routes, while loss and overflow are rejected. The companion RTL is independently compile/smoke-tested with stable completed-frame snapshots.",
   "vendor_adapters": {
     "qutag": {
-      "api": "getLastTimestamps(reset)",
+      "api": "getLastTimestamps(reset) + getDataLost",
       "lost": 0,
       "sample_events": 128
     },
-    "scope_boundary": "CI injects deterministic SDK doubles; real instruments are optional runtime dependencies and missed/lost events are fatal telemetry.",
+    "scope_boundary": "CI uses documentation-shaped SDK doubles. read_clean rejects missed/lost/full-buffer telemetry; no physical instrument is attached.",
     "swabian": {
-      "api": "createTimeTagger + TimeTagStream.getData",
+      "api": "createTimeTagger + TimeTagStreamBuffer arrays/members",
       "missed": 0,
+      "normalized_channels": [
+        0,
+        16
+      ],
+      "physical_channels": [
+        1,
+        17
+      ],
       "sample_events": 128
     }
   }

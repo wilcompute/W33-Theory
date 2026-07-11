@@ -1,44 +1,68 @@
 {
-  "schema": "w33.pass183.incidence_square_ledger.v1",
+  "schema": "w33.pass183.incidence_square_ledger.v2",
   "status": "PASS",
   "ledger": {
-    "dark_z8_blocks": {
-      "address": "11/8",
-      "route": "11/8"
+    "selected_z8_generators": {
+      "dark": {
+        "address": "11/8",
+        "route": "11/8"
+      },
+      "code": {
+        "code_P": "13/8",
+        "code_L": "13/8"
+      },
+      "boundary": "these are representatives, not generator-invariant values"
     },
-    "code_z8_blocks": {
-      "code_P": "13/8",
-      "code_L": "13/8"
+    "all_order8_q_numerators_mod16": {
+      "address": {
+        "3": 32768,
+        "11": 32768
+      },
+      "route": {
+        "3": 512,
+        "11": 512
+      },
+      "code_P": {
+        "5": 32768,
+        "13": 32768
+      },
+      "code_L": {
+        "5": 512,
+        "13": 512
+      }
     },
-    "negation": "11/8 + 5/8 = 2 = 0 in Q/2Z on both sides",
+    "negation": "the complete dark orbit {3,11}/8 negates to the complete code orbit {5,13}/8 in Q/2Z",
     "code_signatures_mod_8": [
       1,
       1
-    ]
+    ],
+    "milgram_boundary": "discriminant enumeration is exact; eighth-root recognition is a floating numerical corroboration"
   },
   "mechanism": {
     "unimodular_cut": "SNF(N) = 1^25: N Z^40 = code_L exactly",
     "transport": "(A-2I)(A-12I) annihilates code_P: N scales the Perron line by 4 and the gauge 24-sector by sqrt(6)",
-    "exact_sequence": "0 -> code_P --N--> code_L -> D(L_address) -> 0: index 2^17 3^10 with cokernel invariants (2^5, 6^9, 24) -- the address discriminant group is literally the cokernel of the incidence bridge between the code lattices",
-    "reading": "the eleven-eighths travels the square: dark-to-code by the unimodular negation law (11/8 <-> 5/8), code_P to code_L by the incidence bridge whose cokernel is the address discriminant, and code-to-dark again by negation on the route side"
+    "exact_sequence": "0 -> code_P --N--> code_L -> Q -> 0: index 2^17 3^10; Q and D(L_address) have invariant factors (2^5, 6^9, 24), hence are isomorphic as finite abelian groups",
+    "reading": "the full order-eight value distribution, not a selected generator, obeys dark/code negation on each unimodular side.  The incidence bridge identifies the intervening cokernel only as a finite abelian group; compatibility with the discriminant quadratic form remains open"
   },
   "checks": {
     "ranks_25": true,
     "image_inside_code_l": true,
     "N_image_saturated": true,
-    "dark_blocks_class_3_mod_8": true,
-    "code_blocks_class_5_mod_8": true,
-    "negation_law_3_plus_5": true,
+    "all_order8_elements_enumerated": true,
+    "dark_order8_distribution_exact": true,
+    "code_order8_distribution_exact": true,
+    "order8_orbits_are_negatives_mod16": true,
     "codeP_p2_distinct": true,
     "codeP_p3_distinct": true,
     "codeP_discriminant_complete": true,
-    "codeP_milgram_eighth_root": true,
+    "codeP_milgram_numeric_eighth_root": true,
     "codeL_p2_distinct": true,
     "codeL_p3_distinct": true,
     "codeL_discriminant_complete": true,
-    "codeL_milgram_eighth_root": true,
+    "codeL_milgram_numeric_eighth_root": true,
     "code_signatures_1_mod_8": true,
     "det_duality": true,
+    "incidence_square_identity": true,
     "transport_annihilator": true,
     "N_codeP_inside_codeL": true,
     "index_is_det_address": true,

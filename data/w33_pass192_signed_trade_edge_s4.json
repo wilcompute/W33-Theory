@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass192.signed_trade_edge_s4.v1",
+  "status": "PASS",
+  "signed_edge_codec": {
+    "signed_trades": 240,
+    "lines_times_edges": "40*6=240",
+    "sign_reversal": "edge complement inside the matched four-point line",
+    "equivariance_cases": 480
+  },
+  "line_stabilizer_exact_sequence": {
+    "sequence": "1 -> C3^3 -> H_line -> S4 -> 1",
+    "orders": [
+      27,
+      648,
+      24
+    ],
+    "S4_order_profile": {
+      "1": 1,
+      "2": 9,
+      "3": 8,
+      "4": 6
+    }
+  },
+  "actions": {
+    "six_signed_trades": "S4/V4, the six edges of a tetrahedron",
+    "three_unsigned_axes": "S3/C2, complementary edge-pairs",
+    "axis_kernel_in_line_stabilizer": 108
+  },
+  "controller_boundary": {
+    "verified": true,
+    "completions_per_path": 3,
+    "seed_action_size": 6,
+    "reading": "the unframed three-completion type agrees with the axis S3/C2 action.  The six signed trades instead carry S4 on tetrahedral edges, not the regular S3 action; equal counts do not identify the framed actions"
+  },
+  "checks": {
+    "shell_240_norm_6": true,
+    "unsigned_supports_120": true,
+    "group_order_25920": true,
+    "true_four_valent_orbital_found": true,
+    "forty_three_axis_components": true,
+    "constant_section_bijection": true,
+    "all_signed_trade_edge_labels_total": true,
+    "signed_codec_is_40_times_six_bijection": true,
+    "sign_reversal_is_edge_complement_240_cases": true,
+    "signed_edge_codec_equivariant_480_cases": true,
+    "local_six_labels_all_edges": true,
+    "line_stabilizer_order_648": true,
+    "signed_action_equals_S4_on_two_subsets_648_cases": true,
+    "axis_quotient_is_full_S3_with_kernel_108": true,
+    "line_kernel_is_elementary_abelian_C3_cubed": true,
+    "S4_order_profile_exact": true,
+    "controller_three_and_six_scales_loaded": true
+  }
+}

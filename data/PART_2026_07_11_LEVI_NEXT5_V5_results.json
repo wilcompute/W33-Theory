@@ -6,6 +6,14 @@
     "hybrid": true,
     "lanes": true
   },
+  "execution": "all five witness analyze() functions regenerated in this process before cache comparison",
+  "fresh_matches_cached": {
+    "extension": true,
+    "fourier": true,
+    "hardware": true,
+    "hybrid": true,
+    "lanes": true
+  },
   "results": {
     "extension": {
       "H1_dimension": 3,
@@ -21,10 +29,10 @@
         "J3": 22,
         "J4": 2
       },
-      "q3_local_ranks": {
-        "incidence": 6,
-        "line_gram": 3,
-        "point": 3
+      "q3_matrix_dimensions": {
+        "alternating": 3,
+        "diagonal_map_rank": 3,
+        "symmetric": 6
       },
       "w33_ranks": {
         "incidence": 25,
@@ -33,15 +41,23 @@
       }
     },
     "hardware": {
-      "events": 1048832,
-      "frames": 256,
-      "route_digest": "235cd75de2e5e50f3bf2f839e8e661da3696c46f54af03f13a051944a8ba4db3"
+      "payload_addresses_covered": 162,
+      "reference_events": 1048832,
+      "reference_frames": 256,
+      "route_digest": "8e73fc8dc1d08b7e735b783cf604e80d069dee484ca1bb5fb6c352890722e037",
+      "rtl_scope": "Icarus compile/smoke in CI; two completed frames, including output backpressure",
+      "w33_points_covered": 40
     },
     "hybrid": {
-      "die_p05": 0.9999882938337242,
       "gds_sha256": "de1c8f9df648f5d3310ec55b1f95371cfc01da178b83c035cf37b921b2ce5e47",
+      "layout_kind": "record-valid abstract placement sketch",
+      "phase_word_range": [
+        -16532,
+        16713
+      ],
       "power_mw": 85.607097,
-      "tracked_min": 0.999999695603991
+      "synthetic_phase_p05": 0.9999885895524915,
+      "tracked_min": 0.9999995561883877
     },
     "lanes": {
       "decomposition": [
@@ -59,11 +75,11 @@
         27,
         72
       ],
-      "falsifier_steps": 50000,
-      "payload_addresses": 162
+      "payload_addresses": 162,
+      "seeded_replay_smoke_steps": 50000
     }
   },
   "schema": "w33.levi_next5_v5.v1",
   "status": "PASS",
-  "synthesis": "Native q=3 Fourier geometry, the periodic H2 extension/transgression, typed E8 carrier lanes, a sub-100 mW hybrid photonic controller, and vendor-normalized FPGA time-tag replay now form one executable v5 stack."
+  "synthesis": "The exact q=3 matrix-space and separate W33 rank censuses, prescribed-action H2 classes, and typed E8 witnesses are joined to a sub-100 mW architectural phase model, a record-valid placement-sketch GDS, documentation-shaped vendor adapters, a million-event Python reference replay, and an independently smoke-simulated two-frame RTL reducer. No Fourier-incidence bridge, fabricated device, PDK closure, or million-event FPGA run is claimed."
 }

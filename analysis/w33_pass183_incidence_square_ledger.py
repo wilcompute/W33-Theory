@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Pass 183: the discriminant ledger of the incidence square.
 
-Passes 162/180 found q(h) = 11/8 on both dark lattices of the self-dual
-pair.  This witness assembles the mechanism from four exact ingredients:
+Passes 162/180 found a selected Z/8 generator with q(h) = 11/8 on both
+dark lattices attached to the nonisomorphic dual pair W(3,3), Q(4,3).
+This witness assembles the group-level mechanism from four exact ingredients:
 
 1. UNIMODULAR CUT.  SNF(N) = 1^25 makes N a unimodular-cokernel map:
    N Z^40 is already saturated and equals code_L = L_route^perp.
 
 2. NEGATION LAWS.  In the unimodular ambient, D(L) = D(L^perp) with
-   negated form: the code lattices' Z/8 blocks evaluate to -11/8 = 5/8,
-   verified exactly on both sides, with Milgram signatures 1 (rank 25).
+   negated form.  Under change of Z/8 generator the dark numerator orbit
+   is {3,11} mod 16 and the code orbit is its negative {5,13}; the stored
+   representatives are 11/8 and 13/8.  Both code lattices have Milgram
+   signature 1 mod 8 (rank 25).
 
 3. THE TRANSPORT.  On code_P the readout Gram N^T N = 4I + A satisfies
    the exact annihilator (A - 2I)(A - 12I) = 0: N scales the Perron line
@@ -18,14 +21,15 @@ pair.  This witness assembles the mechanism from four exact ingredients:
 4. THE EXACT SEQUENCE.  0 -> code_P --N--> code_L -> Q -> 0 with
    [code_L : N code_P] = 2^17 3^10 = det(L_address) and the invariant
    factors of Q equal to the Smith invariants of the address Gram
-   (2^5, 6^9, 24): the address discriminant group IS the cokernel of the
-   incidence bridge between the two code lattices -- the mechanism that
-   carries the eleven-eighths from one side of the duality to the other.
+   (2^5, 6^9, 24).  This proves an abstract finite-abelian-group
+   identification with the address discriminant group.  It does not by
+   itself construct a discriminant-quadratic-form isometry.
 """
 
 from __future__ import annotations
 
 from collections import Counter
+from itertools import product
 import json
 import math
 from pathlib import Path
@@ -75,6 +79,58 @@ def z8_block_q(gram):
     return None
 
 
+def order8_q_distribution(gram):
+    """Enumerate every exact-order-eight element of the 2-primary form.
+
+    The Smith coordinates returned by ``p_adic_snf_generators`` are an
+    independent direct-product coordinate system.  With common denominator
+    eight, the exact element order is therefore the lcm of the component
+    orders, and q(x) is computed exactly modulo 2Z.
+    """
+    determinant = abs(int(Matrix(gram.tolist()).det()))
+    generators, dual_ok = p_adic_snf_generators(
+        gram, 2, p_valuation(determinant, 2, 64)
+    )
+    denominator = max(order for order, _ in generators)
+    if not dual_ok or denominator != 8:
+        return {}, 0, False
+    scaled = [
+        (
+            order,
+            (np.asarray(column, dtype=np.int64) * (denominator // order))
+            % denominator,
+        )
+        for order, column in generators
+    ]
+    expected_total = math.prod(order for order, _ in scaled)
+    if expected_total != 2 ** p_valuation(determinant, 2, 64):
+        return {}, 0, False
+    counts = Counter()
+    representatives = set()
+    enumerated = 0
+    for coefficients in product(*(range(order) for order, _ in scaled)):
+        exact_order = 1
+        numerator = np.zeros(gram.shape[0], dtype=np.int64)
+        for coefficient, (order, vector) in zip(coefficients, scaled):
+            numerator = (numerator + coefficient * vector) % denominator
+            if coefficient:
+                exact_order = math.lcm(
+                    exact_order, order // math.gcd(coefficient, order)
+                )
+        representatives.add(tuple(int(value) for value in numerator))
+        if exact_order != 8:
+            continue
+        q_numerator = int(numerator @ gram @ numerator) % (
+            2 * denominator * denominator
+        )
+        if q_numerator % denominator:
+            return {}, enumerated, False
+        counts[(q_numerator // denominator) % (2 * denominator)] += 1
+        enumerated += 1
+    independent = len(representatives) == expected_total
+    return dict(sorted(counts.items())), enumerated, independent
+
+
 def milgram_phase(gram, checks, tag):
     smith = smith_normal_form(Matrix(gram.tolist()), domain=ZZ)
     rank = gram.shape[0]
@@ -94,7 +150,7 @@ def milgram_phase(gram, checks, tag):
         total_size *= size
     index, residual = eighth_root_index(total)
     checks[f"{tag}_discriminant_complete"] = total_size == determinant
-    checks[f"{tag}_milgram_eighth_root"] = residual < 1e-6
+    checks[f"{tag}_milgram_numeric_eighth_root"] = residual < 1e-6
     return index, determinant
 
 
@@ -128,7 +184,11 @@ def main():
     )
     smith_img = smith_normal_form(Matrix(coord_matrix.tolist()), domain=ZZ)
     img_invariants = [abs(int(smith_img[i, i])) for i in range(min(25, 40))]
-    checks["N_image_saturated"] = all(v == 1 for v in img_invariants if v)
+    nonzero_img_invariants = [v for v in img_invariants if v]
+    checks["N_image_saturated"] = (
+        len(nonzero_img_invariants) == 25
+        and all(v == 1 for v in nonzero_img_invariants)
+    )
 
     # 2. negation laws
     gram_addr = np.array(address.T @ address, dtype=np.int64)
@@ -141,22 +201,35 @@ def main():
     q_cp = z8_block_q(gram_cp)
     q_cl = z8_block_q(gram_clat)
 
-    # generator-invariant reading: q(u h) = u^2 q(h) with u^2 in {1, 9}
-    # mod 16, so only the numerator mod 8 is canonical: dark blocks read
-    # 3 mod 8 (representative 11/8), code blocks 5 mod 8, and 3 + 5 = 0
-    # in Z/8 -- the negation law of the unimodular ambient
-    def numerator_mod8(q_string):
-        if q_string is None or not q_string.endswith("/8"):
-            return None
-        return int(q_string.split("/")[0]) % 8
-
-    checks["dark_blocks_class_3_mod_8"] = (
-        numerator_mod8(q_addr) == 3 and numerator_mod8(q_route) == 3
+    # Exhaust every order-eight element, rather than extrapolating from one
+    # Smith generator.  Odd-unit rescaling and mixing with lower-order
+    # components are both included in the complete distributions below.
+    dist_addr, count_addr, exact_addr = order8_q_distribution(gram_addr)
+    dist_route, count_route, exact_route = order8_q_distribution(gram_route)
+    dist_cp, count_cp, exact_cp = order8_q_distribution(gram_cp)
+    dist_cl, count_cl, exact_cl = order8_q_distribution(gram_clat)
+    expected_large_dark = {3: 32768, 11: 32768}
+    expected_small_dark = {3: 512, 11: 512}
+    expected_large_code = {5: 32768, 13: 32768}
+    expected_small_code = {5: 512, 13: 512}
+    checks["all_order8_elements_enumerated"] = (
+        exact_addr
+        and exact_route
+        and exact_cp
+        and exact_cl
+        and (count_addr, count_route, count_cp, count_cl)
+        == (65536, 1024, 65536, 1024)
     )
-    checks["code_blocks_class_5_mod_8"] = (
-        numerator_mod8(q_cp) == 5 and numerator_mod8(q_cl) == 5
+    checks["dark_order8_distribution_exact"] = (
+        dist_addr == expected_large_dark and dist_route == expected_small_dark
     )
-    checks["negation_law_3_plus_5"] = (3 + 5) % 8 == 0
+    checks["code_order8_distribution_exact"] = (
+        dist_cp == expected_large_code and dist_cl == expected_small_code
+    )
+    checks["order8_orbits_are_negatives_mod16"] = (
+        set(dist_cp) == {(-value) % 16 for value in dist_addr}
+        and set(dist_cl) == {(-value) % 16 for value in dist_route}
+    )
 
     phase_cp, det_cp = milgram_phase(gram_cp, checks, "codeP")
     phase_cl, det_cl = milgram_phase(gram_clat, checks, "codeL")
@@ -164,6 +237,12 @@ def main():
     checks["det_duality"] = det_cp == 2**17 * 3**10 and det_cl == 2**11 * 3**14
 
     # 3. the transport annihilator on code_P
+    checks["incidence_square_identity"] = bool(
+        (
+            incidence.T @ incidence
+            == 4 * np.eye(40, dtype=np.int64) + adjacency
+        ).all()
+    )
     annihilator = (adjacency - 2 * np.eye(40, dtype=np.int64)) @ (
         adjacency - 12 * np.eye(40, dtype=np.int64)
     )
@@ -202,13 +281,31 @@ def main():
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass183.incidence_square_ledger.v1",
+        "schema": "w33.pass183.incidence_square_ledger.v2",
         "status": "PASS" if all_pass else "FAIL",
         "ledger": {
-            "dark_z8_blocks": {"address": q_addr, "route": q_route},
-            "code_z8_blocks": {"code_P": q_cp, "code_L": q_cl},
-            "negation": "11/8 + 5/8 = 2 = 0 in Q/2Z on both sides",
+            "selected_z8_generators": {
+                "dark": {"address": q_addr, "route": q_route},
+                "code": {"code_P": q_cp, "code_L": q_cl},
+                "boundary": (
+                    "these are representatives, not generator-invariant values"
+                ),
+            },
+            "all_order8_q_numerators_mod16": {
+                "address": {str(k): v for k, v in dist_addr.items()},
+                "route": {str(k): v for k, v in dist_route.items()},
+                "code_P": {str(k): v for k, v in dist_cp.items()},
+                "code_L": {str(k): v for k, v in dist_cl.items()},
+            },
+            "negation": (
+                "the complete dark orbit {3,11}/8 negates to the complete "
+                "code orbit {5,13}/8 in Q/2Z"
+            ),
             "code_signatures_mod_8": [int(phase_cp), int(phase_cl)],
+            "milgram_boundary": (
+                "discriminant enumeration is exact; eighth-root recognition "
+                "is a floating numerical corroboration"
+            ),
         },
         "mechanism": {
             "unimodular_cut": "SNF(N) = 1^25: N Z^40 = code_L exactly",
@@ -217,17 +314,16 @@ def main():
                 "line by 4 and the gauge 24-sector by sqrt(6)"
             ),
             "exact_sequence": (
-                "0 -> code_P --N--> code_L -> D(L_address) -> 0: index "
-                "2^17 3^10 with cokernel invariants (2^5, 6^9, 24) -- the "
-                "address discriminant group is literally the cokernel of "
-                "the incidence bridge between the code lattices"
+                "0 -> code_P --N--> code_L -> Q -> 0: index 2^17 3^10; "
+                "Q and D(L_address) have invariant factors (2^5, 6^9, 24), "
+                "hence are isomorphic as finite abelian groups"
             ),
             "reading": (
-                "the eleven-eighths travels the square: dark-to-code by "
-                "the unimodular negation law (11/8 <-> 5/8), code_P to "
-                "code_L by the incidence bridge whose cokernel is the "
-                "address discriminant, and code-to-dark again by "
-                "negation on the route side"
+                "the full order-eight value distribution, not a selected "
+                "generator, obeys dark/code negation on each unimodular "
+                "side.  The incidence bridge identifies the intervening "
+                "cokernel only as a finite abelian group; compatibility with "
+                "the discriminant quadratic form remains open"
             ),
         },
         "checks": {name: bool(value) for name, value in checks.items()},

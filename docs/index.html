@@ -2365,6 +2365,172 @@
               <a href="../PASS157_L2_PRIMARY_MINIMAL_SHELL.md">Exact theorem and verifier</a>.
             </div>
           </div>
+          <div class="card" id="pass173-incidence-transceiver">
+            <div class="label">Pass 173 &mdash; Incidence Transceiver and the Route-Dark Pentad Lattice</div>
+            <div class="detail">Centering the line&ndash;point incidence matrix gives
+              <code>T=N-J/10</code>, a rank-<code>24</code> exact transceiver with
+              <code>T<sup>T</sup>T=6E<sub>24</sub><sup>P</sup></code> and
+              <code>TT<sup>T</sup>=6E<sub>24</sub><sup>L</sup></code>. All <code>480</code> Pass-157 selectors map to
+              fixed analyzer words <code>{-3<sup>1</sup>,-1<sup>9</sup>,0<sup>20</sup>,1<sup>9</sup>,3<sup>1</sup>}</code>
+              and decode by <code>x=N<sup>T</sup>(Nx)/6</code>. The two rank-15 dark lattices are not dual copies:
+              the address side is <code>[40,15,8]</code>, determinant <code>2<sup>17</sup>3<sup>10</sup></code>,
+              with <code>90</code> norm-8 minima; the new route side is <code>[40,15,10]</code>, determinant
+              <code>2<sup>11</sup>3<sup>14</sup></code>, with <code>432</code> norm-10 minima. Those minima are exactly
+              the two chiral <code>216</code>-orbits of pentads, projectivizing to the <code>216</code> old pentad
+              cores (<code>K<sub>5,5</sub></code> minus a matching) whose deleted matchings double-cover all
+              <code>540</code> skew charts. The address code is self-orthogonal and supports Pass 164's
+              <code>O<sup>+</sup>(10,2)</code> full quotient; the route code has binary Gram rank <code>6</code>, so
+              <code>R&perp;/R</code> is undefined, but Pass 174 constructs its canonical hull quotient. The two context
+              duals agree at weights <code>4,6</code> (<code>40,240</code>) and first split at weight <code>8</code>
+              (<code>5085</code> versus <code>3645</code>). This is an integral obstruction to the stale W33 self-duality claim.
+              <a href="../PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md">Exact theorem and verifier</a>.
+            </div>
+          </div>
+          <div class="card" id="pass174-route-hull-fixed-rail">
+            <div class="label">Pass 174 &mdash; Route-Hull E8 Shadow and the Fixed Order-Eight Rail</div>
+            <div class="detail">The route-code hull is exactly <code>H=R&cap;R&perp;=[40,9,16]</code> with enumerator
+              <code>1+135z<sup>16</sup>+240z<sup>20</sup>+135z<sup>24</sup>+z<sup>40</sup></code>. Quotienting its
+              all-ones radical gives a nondegenerate plus-type <code>F<sub>2</sub><sup>8</sup></code> with faithful
+              native action orders <code>25920/51840</code> and orbits <code>1+135+120</code>. Objectwise comparison of
+              all <code>512</code> hull words identifies the all-ones radical with discriminant <code>4h</code> and proves
+              the code and lattice quadratic forms agree. Polar orthogonality reconstructs the complete Pass-124 stack:
+              <code>SRG(255,126,61,63)</code>, <code>SRG(135,70,37,35)</code>, and
+              <code>SRG(120,63,30,36)</code>. The same verifier corrects the recent cohomology reading:
+              <code>[&tau;(h)-h]=0</code> while <code>[&tau;(h)-5h]=[4h]&ne;0</code>, so a fixed order-eight rail preserving
+              <code>q(h)=11/8</code> exists; only the pure scalar-5 normal form is obstructed. Address/route
+              <code>H<sup>1</sup></code> dimensions are <code>3/1</code>, with <code>512/32</code> fixed shifts.
+              <a href="../PASS174_DUAL_DISCRIMINANT_FIXED_RAIL_E8_HULL.md">Exact theorem and verifier</a>.
+            </div>
+          </div>
+          <div class="card" id="pass176-incidence-fixed-line-e8-bridge">
+            <div class="label">Pass 176 &mdash; Incidence Fixed-Line Bridge to the E8 Shadow</div>
+            <div class="detail">The original W33 incidence matrix now supplies the object map that Pass 174
+              left open. In the address shadow <code>H<sub>10</sub>=C&perp;/C</code>, the native
+              <code>PSp(4,3)</code> action has a unique nonzero fixed isotropic class <code>f</code>. Incidence sends
+              <code>f</code> to the all-ones route word and gives an equivariant quadratic isometry
+              <code>f&perp;/&lang;f&rang; &rarr; (R&cap;R&perp;)/&lang;1&rang;</code>. All <code>512</code> identities
+              <code>wt(x)/2 = wt(Mx)/4 mod 2</code> and all <code>8192</code> native-generator/object commuting
+              squares are checked exactly. The <code>240</code> Pass-175 weight-6 context words are precisely the
+              two sheets over the <code>120</code> anisotropic quotient points: translation by <code>f</code> pairs
+              disjoint supports, and incidence maps them bijectively to the <code>240</code> weight-20 route-hull
+              words. Their polar graph is <code>SRG(120,63,30,36)</code>. This proves native
+              <code>PSp(4,3)</code>-equivariance; it does not claim the full graph automorphism group or signed
+              integral E8 Gram products.
+              <a href="../PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md">Exact theorem and verifier</a>.
+            </div>
+          </div>
+          <div class="card" id="pass177-address-route-dual-theta-split">
+            <div class="label">Pass 177 &mdash; Address&ndash;Route Dual Theta Split</div>
+            <div class="detail">The two dual context constructions agree for two complete nontrivial shells,
+              <code>1+720q<sup>2</sup>+15360q<sup>3</sup></code>. The <code>720</code> is objectwise:
+              coordinate doubles plus sign lifts of the <code>40</code> W33 lines on the address side and the
+              <code>40</code> point stars on the route side. The first detector of point&ndash;line non-self-duality is
+              the signed weight-eight sector:
+              <code>1350960-982320=(5085-3645)&middot;2<sup>8</sup>=368640</code>.
+              <a href="../PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md">Exact theorem and verifier</a>.
+            </div>
+          </div>
+          <div class="card" id="pass178-even-q-incidence-rank-transfer">
+            <div class="label">Pass 178 &mdash; Exact Even-Order Incidence-Rank Transfer</div>
+            <div class="detail">Sastry&ndash;Sin&rsquo;s theorem closes the even-order rank ladder without fitting:
+              for <code>q=2<sup>n</sup></code>,
+              <code>rank<sub>2</sub>M(q)=1+tr(B<sup>n</sup>)</code> with
+              <code>B=[[4,2],[2,5]]</code>. The exact continuation is
+              <code>10,50,298,1890,12250,80018,...</code>. This also falsifies the local four-anchor
+              <code>{1,6,13}</code> interpolation at <code>q=32</code>, where it predicts <code>12794</code>.
+              <a href="../PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md">Theorem attribution and verifier</a>.
+            </div>
+          </div>
+          <div class="card" id="pass179-sentinel-context-poisson-pair">
+            <div class="label">Pass 179 &mdash; Exact Sentinel/Context Poisson Pair</div>
+            <div class="detail">For the sentinel parity lattice <code>A</code> and context parity lattice
+              <code>B</code>, exact parity pairing gives <code>A<sup>&vee;</sup>=(1/2)B</code> and
+              <code>covol(A)=2<sup>25</sup></code>. Poisson summation therefore proves the theta transformation
+              with factor <code>2<sup>-25</sup>t<sup>-20</sup></code> and reciprocal argument
+              <code>1/(4t)</code>. All <code>41</code> MacWilliams coefficients and the inverse transform are
+              exact. Three truncated evaluations are labeled numerical corroboration only, not a proof.
+              <a href="../PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md">Exact normalization and boundary</a>.
+            </div>
+          </div>
+          <div class="card" id="pass180-q43-dual-trade-boundary">
+            <div class="label">Pass 180 &mdash; Q(4,3) Dual-Trade Regularity Boundary</div>
+            <div class="detail"><code>ker<sub>Z</sub>(N<sup>T</sup>)</code> is the point-trade lattice of the
+              dual quadrangle <code>Q(4,3)</code>. An exhaustive span scan gives the exact regular/antiregular
+              split <code>W(3,3):4</code> versus <code>Q(4,3):2</code>. The quadrangles are a nonisomorphic dual
+              pair, not incidence-self-dual, and the span census does not by itself derive the lattice shell
+              counts. A selected order-eight generator has <code>q=11/8</code>, but fixed generators also have
+              <code>q=3/8</code>; no canonical 11/8 duality law is claimed.
+              <a href="../PASS180_Q43_DUAL_TRADE_REGULARITY_BOUNDARY.md">Corrected theorem boundary</a>.
+            </div>
+          </div>
+          <div class="card" id="pass181-185-audited-module-axis-boundaries">
+            <div class="label">Passes 181&ndash;185 &mdash; Audited Module and Axis Boundaries</div>
+            <div class="detail">The characteristic-three result is now separated into exact layers.
+              Pass 181 locks the adjoint Hom census; nonzero Hom is not called an embedding until Pass 184
+              constructs rank-10 maps. The address quotient is an exhaustively irreducible five, while the
+              gauge quotient is only proved to be a 14-dimensional brick and the route module fits a nonsplit
+              <code>0&rarr;K<sub>14</sub>&rarr;R&rarr;1&rarr;0</code> sequence without a simplicity claim.
+              Pass 182 checks all <code>40</code> axis tables and <code>240</code> generator transports, conditioned
+              on the group-selected true orbital. Pass 185 corrects &ldquo;torsor&rdquo; to the degree-three set
+              <code>S3/C2</code>: image order <code>6</code>, kernel <code>108</code>, axis stabilizer <code>216</code>.
+            </div>
+          </div>
+          <div class="card" id="pass183-order-eight-distribution-ledger">
+            <div class="label">Pass 183 &mdash; Complete Order-Eight Distribution Ledger</div>
+            <div class="detail">The invariant result is not one <code>11/8</code> value. Exhausting every
+              order-eight element gives dark numerator distributions
+              <code>{3:32768,11:32768}</code> and <code>{3:512,11:512}</code>; the code complements give their
+              negatives <code>{5:32768,13:32768}</code> and <code>{5:512,13:512}</code>. The incidence sequence has
+              index <code>2<sup>17</sup>3<sup>10</sup></code> and cokernel invariants
+              <code>(2<sup>5</sup>,6<sup>9</sup>,24)</code>, proving an abstract finite-group isomorphism with the
+              address discriminant group, not yet a quadratic-form isometry. Milgram root recognition is
+              numerical corroboration.</div>
+          </div>
+          <div class="card" id="pass186-188-exact-double-six-crowns">
+            <div class="label">Passes 186/188 &mdash; Exact Double-Six Crowns</div>
+            <div class="detail">The <code>432</code> route minima have exactly two shell orbits and orbital rank
+              <code>40</code>. Their transpose valency-five pair glues into <code>36</code> exact crowns
+              <code>K<sub>6,6</sub></code> minus a perfect matching&mdash;not icosahedra. Two symmetric orbitals give
+              two families of <code>36</code> exact <code>K6</code>s, and every crown pairs one six from each family
+              bijectively. The component stabilizer acts faithfully as full <code>S6</code>, order <code>720</code>.
+            </div>
+          </div>
+          <div class="card" id="pass187-189-f2-uniserial-module">
+            <div class="label">Passes 187/189 &mdash; The Complete Binary Submodule Chain</div>
+            <div class="detail">Exhaustive vector-orbit scans and successive-socle Hom computations prove that
+              <code>F2<sup>40</sup></code> is uniserial with layers
+              <code>1|14|1|8|1|14|1</code>. There are exactly eight invariant binary codes; the
+              <code>[40,15,8]</code> sentinel is the unique invariant 15-space, <code>C&perp;/C</code> is forced, and
+              the central eight is the unique eight-dimensional subquotient. Endomorphism fields are
+              <code>F2</code> for the 14 and <code>F4</code> for the eight.</div>
+          </div>
+          <div class="card" id="pass190-steinberg-composition-census">
+            <div class="label">Pass 190 &mdash; Live GAP Steinberg Composition Census</div>
+            <div class="detail">After certifying character-table equivalence with CTblLib
+              <code>U4(2)</code>, live GAP gives Steinberg-81 multiplicities across points, lines, arcs, shell,
+              trades, supports, skew pairs, hyperbolic pairs, GQ(4,2) arcs, and flags:
+              <code>(0,0,2,3,0,0,2,1,2,1)</code>. All ten full Brauer rows satisfy exact dimension identities.
+              These are composition multiplicities, not a selected logical register or device-protection claim.
+            </div>
+          </div>
+          <div class="card" id="pass191-double-six-subdegrees">
+            <div class="label">Pass 191 &mdash; The 27+6+3 Completion-Fibre Breakthrough</div>
+            <div class="detail">The tempting homogeneous <code>120&times;36=4320</code> carrier is refuted:
+              axis/double-six pairs split as <code>3240+720+360=120(27+6+3)</code>, with pair stabilizers
+              <code>8,36,72</code>. The distinguished three double-sixes over each axis do carry full
+              <code>S3</code>: the axis stabilizer has order <code>216</code> and kernel <code>36</code> on that
+              three-set. This is a native <code>S3/C2</code> completion fibre over 120 axes, not an identification
+              of the full product with the controller&rsquo;s ordered-path carrier.</div>
+          </div>
+          <div class="card" id="pass192-signed-trade-edge-s4-lift">
+            <div class="label">Pass 192 &mdash; Signed Trades Are Tetrahedral Edges</div>
+            <div class="detail">Every signed second-shell trade selects one unique two-point edge on its
+              matched W33 line; the negative trade selects the complementary edge. This is an equivariant
+              bijection <code>240 = 40&times;6</code>, checked in all <code>480</code> generator cases. The line
+              stabilizer fits <code>1&rarr;C3<sup>3</sup>&rarr;H&rarr;S4&rarr;1</code> and acts on the six signed
+              trades as <code>S4</code> on tetrahedral edges. Complement-pairing gives the three axes and the
+              quotient <code>S4&rarr;S3</code>; the six signed states are not a regular S3 frame.</div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching
@@ -4496,7 +4662,7 @@
                 failures</strong>, maximal for degree 12), second eigenvalue &lambda;&#8322;=2 far below the Ramanujan
               bound 2&radic;11=6.63 (a
               <strong>better-than-Ramanujan expander</strong>, near-optimal bisection), vertex- &amp; edge-transitive
-              (Sp(4,3)), self-dual GQ
+              (PSp(4,3)), point/line regular with equal counts but not incidence-self-dual
               (perfect load balancing, no hot spots), 240 links. Against a 6&times;6 torus (radix 4, diameter 6) or
               hypercube Q&#8326; (radix 6,
               diameter 6), it pays radix 12 to buy diameter 2 and maximal resilience &mdash; the
@@ -7014,7 +7180,7 @@
               L₂=k-s=16=2^μ (power of mu!); v₂(L₂)=μ=4; τ=2^(q^μ)×5^(MUL_R-1)=2^81×5^23 (exponents involve q^μ=q^4=81!);
               KF=q×F₁₁/2=267/2 (Kirchhoff index via Fibonacci); trace(L²)=kV(k+1)=6240; 53 tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Generalized Quadrangle GQ(q,q)
-                (CLXX)</strong> &mdash; W(3,3)=Sp(4,q): V=(q+1)(q²+1)=40; L=V=40 (self-dual!); flags=V·μ=160; K=q·μ,
+                (CLXX)</strong> &mdash; W(3,3): V=(q+1)(q²+1)=40; L=V=40 (equal counts, not self-duality); flags=V·μ=160; K=q·μ,
               λ=q-1, μ=q+1; V-K-1=q³=27 (non-adjacent=q³!); |Sp(4,q)|=q⁴(q⁴-1)(q²-1)=51840=|W(E₆)|; Stab=(r-s)⁴=6⁴=1296;
               α·triangles=V²; K/q=μ; 45 tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Grand Synthesis: Q=3 Uniqueness
@@ -7115,7 +7281,7 @@
               K-LAM=&theta;=10; r=LAM, s=-MU; K-MU=-rs=8; 46 tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Clique Complex &amp; GQ Subgraph
                 Counting (CLXXIX)</strong> &mdash; f-vector=(40,240,160,40); f1=V&times;C(Q+1,2)=240,
-              f2=V&times;C(Q+1,3)=160, f3=V=40 (K₄=lines); f0=f3 self-dual!; sum=480=V&times;K=tr(A&sup2;); Euler
+              f2=V&times;C(Q+1,3)=160, f3=V=40 (K₄=lines); f0=f3 is a numerical palindrome, not incidence self-duality; sum=480=V&times;K=tr(A&sup2;); Euler
               &chi;=-2V=-80; every edge in unique K₄; every triangle in unique K₄; flags=V(Q+1)=160; 50 tests.</span>
           </div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Eigenvalue Quadratic &amp;
@@ -7146,11 +7312,12 @@
               |x&perp;&cap;y&perp;|=&mu;=4 for ALL x&ne;y (CONSTANT!); key identity &lambda;+2=&mu; (q-1+2=q+1); x~y:
               cap=line L(x,y) of size &mu;; x&not;~y: cap=&mu; common nbrs; |x&perp;&cup;y&perp;|=22=2K+2-&mu;;
               V-22=18=q&sup2;(q-1); non-perp count=q&sup3;=27; 41 tests.</span></div>
-          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>GQ Self-Duality: Lines as
-                Cliques (CLXXIII)</strong> &mdash; 40 GQ lines = cliques of size q+1=&mu;=4; edges partitioned exactly
+          <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>GQ Dual Concurrence: Lines as
+                Cliques (CLXXIII, corrected)</strong> &mdash; 40 GQ lines = cliques of size q+1=&mu;=4; edges partitioned exactly
               into 40 cliques&times;6 edges=240=VK/2; line degree=(q+1)q=K=12; adjacent lines share 1 point;
               &lambda;_line=q-1=2=&lambda; (GQ axiom: line thru L_1 minus {p} meeting L_2 IS L_1 itself!);
-              &mu;_line=q+1=4=&mu;; line intersection graph=SRG(40,12,2,4)=W(3,3) &mdash; EXACT SELF-DUALITY! 36
+              &mu;_line=q+1=4=&mu;; line intersection graph=SRG(40,12,2,4), but it is the nonisomorphic Q(4,3) dual
+              concurrence graph, not W(3,3) incidence self-duality; 36
               tests.</span></div>
           <div class="highlight-item"><span class="hi-icon">&starf;</span><span><strong>Intersection Array &amp; DRG
                 Structure (CLXXII)</strong> &mdash; Array {12,9;1,4}={K,q&sup2;;1,q+1}; b&#8321;=q&sup2;=9 (intersection
@@ -9514,7 +9681,7 @@
           </div>
           <div class="domain-chip">
             <div class="domain-phase">CLXXIII</div>
-            <div class="domain-name">GQ Self-Duality Lines</div>
+            <div class="domain-name">GQ Dual Concurrence Lines</div>
             <div class="domain-tests">36 tests</div>
           </div>
           <div class="domain-chip">
@@ -10421,8 +10588,8 @@
             <code>tests/test_algebraic_combinatorics_computation.py</code> (48 passing tests) 1-(40,12,12) design from
             neighborhoods, quasi-symmetric block intersection sizes {2,4}, Fisher inequality, partial geometry
             pg(3,3,1), tactical decomposition, spreads (10 disjoint lines) by backtracking, P/Q Bose-Mesner
-            eigenmatrices with PQ=40I, Krein parameters, primitive (not antipodal/bipartite), GQ(3,3) axiom verified, GQ
-            self-duality s=t=3, derived design, resolution into 4 parallel classes.
+            eigenmatrices with PQ=40I, Krein parameters, primitive (not antipodal/bipartite), GQ(3,3) axiom verified,
+            equal parameters s=t=3 (which do not imply incidence self-duality), derived design, resolution into 4 parallel classes.
           </li>
           <li><strong>Topological Graph Theory (LXXVIII-b):</strong>
             <code>tests/test_topological_graph_computation.py</code> (50 passing tests) orientable genus lower bound 21,
@@ -15010,9 +15177,9 @@
           </tr>
           <tr>
             <td>110</td>
-            <td>GQ(q,q) self-dual: Points = Lines = v</td>
-            <td>String T-duality from graph self-duality</td>
-            <td class="status-ok">✅</td>
+            <td>GQ(q,q): equal point and line counts</td>
+            <td>No incidence or string T-duality follows from the count</td>
+            <td class="status-warn">⚠️ corrected</td>
           </tr>
           <tr>
             <td>111</td>
@@ -18133,7 +18300,8 @@
           <span class="eq">&lambda; = q &minus; 1 = 2, &ensp; &mu; = q + 1 = 4</span><br>
           <span class="eq">k = q&middot;&mu; = q(q+1) = 12, &ensp; v = (q+1)(q&sup2;+1) = 40</span>
         </div>
-        <p><strong>Self-dual:</strong> points = lines = v = 40 (point-line democracy).</p>
+        <p><strong>Parameter-balanced, not self-dual:</strong> points = lines = v = 40, while the point graph
+          W(3,3) and line graph Q(4,3) are nonisomorphic.</p>
         <p><strong>Overlap product:</strong> &mu;&lambda; = (q+1)(q&minus;1) = q&sup2;&minus;1 = <strong>8 =
             rank(E&#8328;)</strong>.</p>
         <p><strong>Uniqueness:</strong> &mu;&minus;&lambda; = &lambda; requires 2 = q&minus;1, i.e., <strong>q = 3 is
@@ -23464,9 +23632,11 @@
           <!-- Foundational Principle -->
           <h3>The Foundational Principle</h3>
           <div class="spotlight" style="border-left-color: var(--gold);">
-            <p><strong style="color: var(--gold);">&ldquo;The internal geometry of spacetime is a self-dual generalized
-                quadrangle whose electromagnetic coupling constant is the norm of a Gaussian prime.&rdquo;</strong></p>
-            <p style="margin-top: 0.8rem;">This principle has a unique solution: GQ(3,3) = W(3,3).</p>
+            <p><strong style="color: var(--gold);">Corrected conjectural principle:</strong> &ldquo;The finite carrier is a
+                spectrally paired, type-protected generalized quadrangle whose candidate coupling dictionary uses a
+                Gaussian-prime norm.&rdquo;</p>
+            <p style="margin-top: 0.8rem;">The arithmetic conditions select q=3 inside the stated family; they do not
+              prove a spacetime model or incidence self-duality.</p>
           </div>
 
           <h3>The Chain of Determination</h3>
@@ -26420,8 +26590,8 @@
           <div class="highlights-banner"
             style="border-color: var(--gold); background: linear-gradient(135deg, rgba(227,179,65,0.15), rgba(210,168,255,0.08), rgba(63,185,80,0.06));">
             <h3 style="color: var(--gold);">Theorem (W(3,3) Uniqueness)</h3>
-            <p style="color: var(--fg); max-width: 750px; margin: 0.8rem auto 0;">Let GQ(q,q) be a self-dual generalized
-              quadrangle over &Fopf;<sub>q</sub> with q a prime power. The following are equivalent, and all select
+            <p style="color: var(--fg); max-width: 750px; margin: 0.8rem auto 0;">Let W(3,q) be the symplectic generalized
+              quadrangle over &Fopf;<sub>q</sub> with q a prime power. The following arithmetic conditions all select
               <strong>q = 3</strong> uniquely within the finite spectral landscape verified here:
             </p>
           </div>
@@ -27355,9 +27525,9 @@
           <tr>
             <td>5</td>
             <td><strong>Integral E<sub>8</sub> lift</strong></td>
-            <td>🟡 <strong>OPEN</strong> — the mod-2 homology already gives the correct rank-8 shadow, but the integral
-              Cartan pairing and a canonical root-lattice lift have not yet been reconstructed directly from the chain
-              complex.</td>
+            <td>✅ <strong>CLOSED</strong> — Pass 123 gives the explicit integral axis-to-root lift onto all 240 signed
+              E<sub>8</sub> roots with the exact Gram pairing; Pass 157 independently identifies the projective minimal
+              shell carrier. The remaining question is functorial uniqueness, not existence.</td>
           </tr>
           <tr>
             <td>6</td>

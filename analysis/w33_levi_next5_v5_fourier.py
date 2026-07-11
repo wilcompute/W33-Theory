@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Actual q=3 Heisenberg/Fourier geometry and full binary Levi census."""
+"""Exact q=3 symmetric-matrix block and a separate full W33 rank census."""
 from __future__ import annotations
 from functools import lru_cache
 import json
+from pathlib import Path
 import numpy as np
 from w33_levi_next5_v5_common import (
     build_w33, gf2_rank_matrix, sha256_json, transpose_mask3,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "PART_2026_07_11_LEVI_NEXT5_V5_fourier.json"
 
 
 def mat_add(a:int,b:int)->int: return a^b
@@ -67,8 +71,8 @@ def analyze():
         'transpose_sum_image_is_alternating':set(image)==set(alternating),
         'transpose_sum_kernel_card_64':len(kernel)==64,
         'transpose_sum_image_card_8':len(image)==8,
-        'symmetric_columns_span_64':len(sym_span)==64 and sym_span==set(symmetric),
-        'diagonal_gram_rank_3':len(diag_image)==8 and len(diag_kernel)==8,
+        'symmetric_basis_spans_kernel':len(sym_span)==64 and sym_span==set(symmetric),
+        'diagonal_map_rank_3':len(diag_image)==8 and len(diag_kernel)==8,
         'full_incidence_rank_25':gf2_rank_matrix(M)==25,
         'point_gram_rank_16':gf2_rank_matrix(AP)==16,
         'line_gram_rank_10':gf2_rank_matrix(AL)==10,
@@ -78,15 +82,13 @@ def analyze():
     return {
         'status':'PASS' if all(checks.values()) else 'FAIL',
         'checks':checks,
-        'heisenberg_q3':{
+        'symmetric_matrix_q3':{
             'ambient_matrices':512,
             'transpose_sum_kernel_card':len(kernel),
             'transpose_sum_image_card':len(image),
             'symmetric_dimension':6,
             'alternating_dimension':3,
-            'point_block_rank':3,
-            'incidence_column_span_dimension':6,
-            'line_gram_diagonal_rank':3,
+            'diagonal_map_rank':3,
             'kernel_digest':sha256_json(kernel),
             'image_digest':sha256_json(image),
         },
@@ -100,14 +102,21 @@ def analyze():
         },
         'lean_module':'formal/W33/HeisenbergQ3.lean',
         'theorem':(
-            'For the native q=3 Fourier block over F2, Y -> Y+Y^T has kernel Sym_3(F2) '
-            'of size 64 and image Alt_3(F2) of size 8; symmetric incidence columns span dimension 6 '
-            'and the diagonal Gram map has rank 3. The explicit 40x40 W(3,3) incidence matrix then has '
-            'ranks 25,16,10 and Levi rank ladder 80,50,26,2,0, forcing J4^2+J3^22+J1^6.'
+            'Over F2, Y -> Y+Y^T on Mat_3 has kernel Sym_3 of size 64, image Alt_3 '
+            'of size 8, and diagonal-map rank 3. Separately, the explicit 40x40 W(3,3) '
+            'incidence matrix has ranks 25,16,10 and Levi rank ladder 80,50,26,2,0, '
+            'forcing J4^2+J3^22+J1^6.'
         ),
-        'scope_boundary':'This closes the actual native q=3 geometry in Lean/Python. The uniform finite-field character theory for arbitrary odd prime powers remains a separate generalization theorem.'
+        'scope_boundary':(
+            'The matrix-space cardinalities and W33 ranks are two exact computations. No '
+            'finite Fourier transform or direct-sum map connecting the 3x3 symmetric basis '
+            'to the 40x40 incidence operator is constructed here; that bridge and the uniform '
+            'odd-prime-power character theorem remain open.'
+        )
     }
 
 def main():
-    out=analyze(); print(json.dumps(out,indent=2,sort_keys=True)); return 0 if out['status']=='PASS' else 1
+    out=analyze(); text=json.dumps(out,indent=2,sort_keys=True)+"\n"
+    OUT.write_text(text,encoding="utf-8"); print(text,end="")
+    return 0 if out['status']=='PASS' else 1
 if __name__=='__main__': raise SystemExit(main())

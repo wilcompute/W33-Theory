@@ -53,14 +53,28 @@ from analysis.w33_pass161_gq42_ihara_inheritance import (
 )
 
 OUT = ROOT / "data" / "w33_pass163_two480s_character_decomposition.json"
-GAP_BASH = Path("C:/Program Files/GAP-4.15.1/runtime/bin/bash.exe")
+GAP_BASH_WINDOWS = Path("C:/Program Files/GAP-4.15.1/runtime/bin/bash.exe")
+GAP_BASH_WSL = Path("/mnt/c/Program Files/GAP-4.15.1/runtime/bin/bash.exe")
+GAP_BASH = GAP_BASH_WSL if GAP_BASH_WSL.exists() else GAP_BASH_WINDOWS
 GAP_BINARY = "/opt/gap-4.15.1/gap"
 
 
 def cygwin_path(path):
     text = str(path).replace("\\", "/")
-    drive, rest = text.split(":", 1)
-    return f"/cygdrive/{drive.lower()}{rest}"
+    if text.startswith("/mnt/") and len(text) > 6 and text[6] == "/":
+        return f"/cygdrive/{text[5].lower()}{text[6:]}"
+    if ":" in text:
+        drive, rest = text.split(":", 1)
+        return f"/cygdrive/{drive.lower()}{rest}"
+    raise ValueError(f"GAP input must live on a Windows-mounted path: {text}")
+
+
+def gap_tempdir(prefix):
+    """Return a temporary directory visible to both WSL and Cygwin GAP."""
+    windows_temp = Path("/mnt/c/Windows/Temp")
+    if str(GAP_BASH).startswith("/mnt/") and windows_temp.is_dir():
+        return Path(tempfile.mkdtemp(prefix=prefix, dir=windows_temp))
+    return Path(tempfile.mkdtemp(prefix=prefix))
 
 
 def build_carriers():
@@ -207,7 +221,7 @@ def run_gap(generator_images, sizes):
     program.append('Print("GRAM=", gram, ";\\n");')
     program.append("QUIT;")
 
-    workdir = Path(tempfile.mkdtemp(prefix="w33_pass163_"))
+    workdir = gap_tempdir("w33_pass163_")
     script = workdir / "pass163.g"
     script.write_text("\n".join(program) + "\n", encoding="ascii")
     completed = subprocess.run(

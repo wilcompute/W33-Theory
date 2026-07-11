@@ -7,7 +7,8 @@ from pathlib import Path
 import sympy as sp
 
 ROOT=Path(__file__).resolve().parents[1]
-FILES=[ROOT/'formal/W33/OddQRank.lean',ROOT/'formal/W33/FourierBlocks.lean',ROOT/'formal/W33.lean',ROOT/'.github/workflows/lean-formal.yml']
+FILES=[ROOT/'formal/W33/OddQRank.lean',ROOT/'formal/W33/FourierBlocks.lean',ROOT/'formal/W33/HeisenbergQ3.lean',ROOT/'formal/W33.lean',ROOT/'.github/workflows/lean-formal.yml']
+OUT=ROOT/'data/PART_2026_07_10_LEVI_NEXT5_V4_formal.json'
 
 @lru_cache(maxsize=1)
 def analyze():
@@ -32,15 +33,27 @@ def analyze():
       'independent_leanchecker_required':'lake env leanchecker' in workflow,
       'placeholder_rejection_required':"grep -R -n -E" in workflow and '(sorry|admit)' in workflow,
       'branch_and_pr_triggers':'pull_request:' in workflow and '"agent/**"' in workflow,
-      'q3_numeric_theorems':(
-          'theorem q3Ranks' in joined and 'theorem q3JordanCensus' in joined
+      'q3_arithmetic_theorems':(
+          'theorem q3ArithmeticValues' in joined and 'theorem q3JordanArithmetic' in joined
           and '= 22' in content['formal/W33/FourierBlocks.lean']
           and '22*3 + 6 = 80' in content['formal/W33/FourierBlocks.lean']
       ),
+      'no_tautological_block_certificate_structures':(
+          'structure TrivialBlock' not in joined
+          and 'structure NontrivialBlock' not in joined
+          and 'OddQFourierCertificate' not in joined
+      ),
+      'formal_scope_boundaries_present':(
+          'finite-field Fourier transform' in content['formal/W33/FourierBlocks.lean']
+          and 'No incidence matrix' in content['formal/W33/OddQRank.lean']
+          and 'not a formal proof of the W(3,3) Levi rank theorem' in content['formal/W33/HeisenbergQ3.lean']
+      ),
     }
     digest=hashlib.sha256('\n'.join(f'{k}\0{v}' for k,v in sorted(content.items())).encode()).hexdigest()
-    return {'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,'files':list(content),'source_digest':digest,'workflow':{'action':'leanprover/lean-action@v1','lake_directory':'formal','build_wfail':True,'independent_checker':'leanchecker','placeholders_forbidden':True},'honest_boundary':'The Python witness validates source structure and algebra locally. Kernel and independent leanchecker validation run in the committed GitHub Actions workflow because Lean is unavailable in this execution container.','theorem':'The local Fourier-block interface kernel-reduces the global odd-q rank/Jordan theorem to explicit geometric block certificates and numerically closes q=3; CI requires lake build, placeholder rejection, and the independent leanchecker.'}
+    return {'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,'files':list(content),'source_digest':digest,'workflow':{'action':'leanprover/lean-action@v1','lake_directory':'formal','build_wfail':True,'independent_checker':'leanchecker','placeholders_forbidden':True},'honest_boundary':'The Python witness validates source structure and arithmetic locally. Lean kernel and leanchecker validation run in the committed GitHub Actions workflow because Lean is unavailable in this execution container. Neither path supplies the missing finite-field Fourier/incidence construction.','theorem':'Lean checks exact q=3 matrix-space cardinalities plus the arithmetic/divisibility identities used by the proposed odd-q rank and Jordan formulas. It does not prove the geometric incidence-rank theorem; CI requires lake build, placeholder rejection, and a second Lean-kernel replay via leanchecker.'}
 
 def main():
-    out=analyze();print(json.dumps(out,indent=2,sort_keys=True));return 0 if out['status']=='PASS' else 1
+    out=analyze();text=json.dumps(out,indent=2,sort_keys=True)+"\n"
+    OUT.write_text(text,encoding='utf-8');print(text,end='')
+    return 0 if out['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())

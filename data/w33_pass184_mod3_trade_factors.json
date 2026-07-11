@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass184.mod3_trade_factors.v1",
+  "schema": "w33.pass184.mod3_trade_factors.v2",
   "status": "PASS",
   "brauer_degrees_mod3": [
     1,
@@ -35,7 +35,8 @@
       "end_dim": 1
     }
   },
-  "reading": "the defining-characteristic factor table of the trade tower: address = adjoint 10 below a five (non-split -- the hidden five's mod-3 home), gauge = adjoint 10 below the 14, route = no adjoint, coinvariants of dimension 1 (a 14 below a trivial): three modules, three different ways to sit around the gauge algebra",
+  "reading": "the defining-characteristic factor table of the trade tower: address is a nonsplit extension of an exhaustively simple five-dimensional quotient by the injected adjoint 10. Gauge is a nonsplit extension with a 14-dimensional brick quotient; brick does not imply simple. Route has no adjoint map and fits 0 -> K_14 -> route -> 1 -> 0 nonsplit, without a simplicity claim for K_14",
+  "boundary": "End_G(Q)=F3 proves that Q is a brick, not that it is irreducible; composition-factor names require a separate submodule census",
   "dec3_ledger": {
     "5": [
       {
@@ -177,9 +178,11 @@
     "address_quotient_irreducible": true,
     "address_nonsplit": true,
     "gauge_adjoint_bottom_quotient_14": true,
-    "gauge_quotient_end_1": true,
-    "route_coinvariants_1": true,
+    "gauge_quotient_is_14d_brick": true,
+    "gauge_extension_nonsplit": true,
+    "route_exact_nonsplit_14_to_15_to_1": true,
     "mod3_degrees": true,
-    "dec3_ledger_recorded": true
+    "dec3_complete_dimension_identities": true,
+    "dec3_selected_rows_complete": true
   }
 }

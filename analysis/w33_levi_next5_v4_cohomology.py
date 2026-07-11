@@ -14,6 +14,7 @@ from sympy.polys.matrices import DomainMatrix
 from sympy.polys.matrices.normalforms import smith_normal_decomp
 
 ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "PART_2026_07_10_LEVI_NEXT5_V4_cohomology.json"
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -196,6 +197,9 @@ def analyze() -> dict:
     five_h = tuple(5 if i == h_index else 0 for i in range(15))
     u_coord = add_coord(outer_h, scale_coord(-1, five_h, mods), mods)
     u = torsion_mask(u_coord, mods)
+    one_h = h
+    u1_coord = add_coord(outer_h, scale_coord(-1, one_h, mods), mods)
+    u1 = torsion_mask(u1_coord, mods)
 
     T = torsion_cols(outer, mods)
     identity = tuple(1 << i for i in range(15))
@@ -205,6 +209,8 @@ def analyze() -> dict:
     h1_dim = len(kernel_basis) - len(image_basis)
     u_is_cocycle = apply_cols(N, u) == 0
     u_is_coboundary = in_span(u, image_basis)
+    u1_is_cocycle = apply_cols(N, u1) == 0
+    u1_is_coboundary = in_span(u1, image_basis)
 
     fixed_line = 1 << h_index
     fixed_line_is_cocycle = apply_cols(N, fixed_line) == 0
@@ -229,12 +235,38 @@ def analyze() -> dict:
     while q_u >= 2:
         q_u -= 2
 
+    # Solve (1+tau)v=u1 on A[2].  Each solution makes h+v fixed.
+    fixed_shifts = [
+        value
+        for value in range(1 << len(mods))
+        if apply_cols(N, value) == u1
+    ]
+
+    def mask_coord(mask):
+        coord = (0,) * len(mods)
+        for index, basis_vector in enumerate(torsion_basis(mods)):
+            if (mask >> index) & 1:
+                coord = add_coord(coord, basis_vector, mods)
+        return coord
+
+    q_h_num = q_num128(h, parts, S, D, G)
+    q_preserving_shifts = []
+    for shift in fixed_shifts:
+        h_prime = add_coord(h, mask_coord(shift), mods)
+        assert apply_auto(outer, h_prime, mods) == h_prime
+        if q_num128(h_prime, parts, S, D, G) == q_h_num:
+            q_preserving_shifts.append(shift)
+    fixed_generator = add_coord(h, mask_coord(min(q_preserving_shifts)), mods)
+
     checks = {
         "p2_module_type": sorted(mods) == [2] * 14 + [8],
         "outer_difference_is_2_torsion": all((x in (0, 1) if m == 2 else x in (0, 4)) for x, m in zip(u_coord, mods)),
         "cocycle_condition": u_is_cocycle,
         "h1_dimension_positive": h1_dim > 0,
         "mixed_class_nontrivial": not u_is_coboundary,
+        "scalar1_displacement_is_coboundary": u1_is_cocycle and u1_is_coboundary,
+        "fixed_generator_exists": len(fixed_shifts) == 512,
+        "q_preserving_fixed_generator_exists": len(q_preserving_shifts) == 256,
         "fixed_line_is_cocycle": fixed_line_is_cocycle,
         "outer_is_involution_on_torsion": all(apply_cols(T, apply_cols(T, 1 << i)) == (1 << i) for i in range(15)),
         "h1_representatives_match_dimension": len(h1_reps) == h1_dim,
@@ -242,8 +274,11 @@ def analyze() -> dict:
 
     relation = "same" if h1_u == h1_f else "independent" if gf2_rank([h1_u, h1_f]) == 2 else "distinct-dependent"
     theorem = (
-        "The mixed displacement u=tau(h)-5h is a 1-cocycle for C2 acting on A_2(L_-4)[2]. "
-        "Its class is nonzero in H^1(C2,A[2]); hence no order-two rechoice h->h+v removes the mixing."
+        "The scalar-5 displacement u5=tau(h)-5h is the nonzero fixed-line class [4h], "
+        "so a pure scalar-5 normal form is obstructed. But u1=tau(h)-h=u5+4h is a "
+        "coboundary: 512 order-two shifts make h+v fixed, and 256 preserve q=11/8. "
+        "Thus the outer action admits a fixed order-eight rail; the earlier absolute "
+        "nonremovability interpretation was false."
     )
     return {
         "status": "PASS" if all(checks.values()) else "FAIL",
@@ -255,6 +290,8 @@ def analyze() -> dict:
             "mixed_displacement": list(u_coord),
             "mixed_displacement_mask": hex(u),
             "q_u": str(q_u),
+            "scalar1_displacement": list(u1_coord),
+            "scalar1_displacement_mask": hex(u1),
         },
         "cohomology": {
             "complex": "H^1(C2,A[2]) = ker(1+tau)/im(1+tau)",
@@ -265,7 +302,16 @@ def analyze() -> dict:
             "mixed_class_coordinates": hex(h1_u),
             "fixed_line_class_coordinates": hex(h1_f),
             "relation_to_fixed_line": relation,
-            "removable_by_h_shift": u_is_coboundary,
+            "scalar5_displacement_removable": u_is_coboundary,
+            "scalar1_displacement_removable": u1_is_coboundary,
+            "fixed_generator_exists": bool(fixed_shifts),
+        },
+        "fixed_order8_rail": {
+            "shift_count": len(fixed_shifts),
+            "q_preserving_shift_count": len(q_preserving_shifts),
+            "smallest_q_preserving_shift_mask": hex(min(q_preserving_shifts)),
+            "fixed_generator": list(fixed_generator),
+            "q": "11/8",
         },
         "digests": {
             "outer_torsion_action": sha256_json(T),
@@ -277,6 +323,7 @@ def analyze() -> dict:
 
 def main() -> int:
     out = analyze()
+    OUT.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(out, indent=2, sort_keys=True))
     return 0 if out["status"] == "PASS" else 1
 

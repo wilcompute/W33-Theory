@@ -4,20 +4,22 @@
 The parallel track's Pass 173/174 charted L_route = ker_Z(N^T) as the
 "route-dark pentad lattice".  This witness fuses it into the trade tower:
 
-1. THE IDENTIFICATION.  L_route is by construction the trade lattice of
-   the DUAL generalized quadrangle Q(4,3) (points = W(3,3) lines), and
-   the 90-vs-432 shell dichotomy is the classical regular/antiregular
-   point dichotomy: W(3,3) points are regular (span of a hyperbolic pair
-   has size 4 -> span/perp double-fours, 90 minima), Q(4,3) points are
-   ANTIREGULAR (span size 2 -> no double-fours; the minima are the 432
-   pentad cores at norm 10), both verified exactly.
+1. THE IDENTIFICATION.  L_route is tautologically the trade lattice of
+   the DUAL generalized quadrangle Q(4,3) (points = W(3,3) lines).  An
+   exact span census records the classical boundary: W(3,3) has span
+   size 4 and Q(4,3) has span size 2.  This is a regular/antiregular
+   correlation with the 90-vs-432 shells, not a proof that regularity
+   alone causes or determines those lattice minima.
 
-2. THE MOD-8 ROW.  The Milgram signature, per-prime Gauss phases, and
-   the Z/8 Jordan block q-value of L_route -- the 11/8 test on the dual
-   side of the self-dual pair, extending the Pass 166 law table.
+2. THE MOD-8 CROSS-CHECK.  The Milgram signature, per-prime Gauss phases,
+   and the value 11/8 on one selected Smith Z/8 generator.  Pass 174
+   proves that this value is not generator-invariant: fixed generators
+   split between 11/8 and 3/8.  Therefore it is an existence statement,
+   not a new law or invariant of incidence duality.
 
-3. INDEPENDENT CROSS-CHECKS of the parallel track's invariants:
-   det = 2^11 3^14, minimum 10, 432 minimal vectors, [40,15,10] code.
+3. REGRESSION CROSS-CHECKS of Pass 173's stronger PARI-certified
+   invariants: det = 2^11 3^14, minimum 10, 432 candidate minimal
+   vectors, and the [40,15,10] code.
 """
 
 from __future__ import annotations
@@ -157,35 +159,45 @@ def main():
         g = math.gcd(z8_q, 64) or 1
         q_fraction = f"{z8_q // g}/{64 // g}"
         law_holds = (z8_q // g) == 11 and (64 // g) == 8
+    checks["selected_z8_generator_has_q_11_over_8"] = law_holds is True
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass180.dual_trade_lattice_q43.v1",
+        "schema": "w33.pass180.dual_trade_lattice_q43.v2",
         "status": "PASS" if all_pass else "FAIL",
         "identification": {
             "statement": (
                 "L_route = ker_Z(N^T) is the trade lattice of the dual "
-                "quadrangle Q(4,3); the 90-vs-432 minimal-shell dichotomy "
-                "is the regular/antiregular point dichotomy of the "
-                "self-dual pair (W(3,3) spans have size 4, Q(4,3) spans "
-                "size 2)"
+                "quadrangle Q(4,3). W(3,3) and Q(4,3) are a nonisomorphic "
+                "dual pair, not an incidence-self-dual geometry"
             ),
             "w33_span_sizes": sorted(w33_spans),
             "q43_span_sizes": sorted(dual_spans),
+            "boundary": (
+                "the exact 4-versus-2 span census records the regular versus "
+                "antiregular distinction; it does not by itself derive the "
+                "90-versus-432 lattice-shell dichotomy"
+            ),
         },
         "mod8_row": {
             "rank": 15,
             "signature_mod_8": 7,
             "determinant": determinant,
             "p_phases_eighths": p_phases,
-            "z8_block_q_value": q_fraction,
-            "eleven_eighths_law_holds_on_route_side": law_holds,
+            "selected_smith_z8_generator_q_value": q_fraction,
+            "selected_generator_has_q_11_over_8": law_holds,
+            "fixed_generator_values_from_pass174": ["11/8", "3/8"],
             "reading": (
-                "the Pass 166 law table gains its fourth row: the dual "
-                "trade lattice of the self-dual pair, same Ihara prime "
-                "11, 2-adic depth 3"
+                "one selected Smith generator has q=11/8, while Pass 174 "
+                "proves that the fixed order-eight generators split equally "
+                "between q=11/8 and q=3/8; 11/8 exists but is not canonical"
             ),
         },
+        "scope": (
+            "the determinant, Smith form, minimum census, and code repeat "
+            "Pass 173; the new exact content here is the dual-geometry naming "
+            "and the span-size 4-versus-2 census"
+        ),
         "route_code_weight_enumerator": {
             str(k): int(v) for k, v in sorted(enum.items())
         },

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Pass 182: the line-octahedron dictionary, made intrinsic.
+"""Pass 182: the line-octahedron dictionary after selecting the true orbital.
 
 Pass 169 proved the 40 second-shell octahedra biject with the 40 lines of
 W(3,3) via stabilizers -- a group-theoretic identification.  This witness
-makes the dictionary intrinsic (no group needed) and tests the pair-
-partition reading of the axes:
+starts from that group-defined four-valent orbital and then proves that its
+line label and axis labels are intrinsic incidence profiles.  It does not
+claim that inner products and support intersections recover the orbital:
 
 1. THE PROFILE RULE.  Each triangle consists of 3 GQ(4,2)-trade supports
    = 18 binary-polar octads (8-point sets of W(3,3)).  For each of the
@@ -14,11 +15,11 @@ partition reading of the axes:
    bijection (each triangle selects exactly one line; all 40 lines
    selected).
 
-2. THE AXIS = PAIR-PARTITION TEST.  An octahedron has 3 axes; a 4-point
+2. THE AXIS = PAIR-PARTITION THEOREM.  An octahedron has 3 axes; a 4-point
    line has exactly 3 partitions into two pairs.  For the matched pair,
    the interaction profile between each support (axis) and each pair
-   partition is computed, testing whether the 3 axes are canonically the
-   3 pair-partitions of the line.
+   partition is computed for all 40 octahedra.  The resulting 120 labels
+   are checked equivariantly under both stored generators.
 
 3. THE S3 ALIGNMENT.  Recorded count alignments with the S3 completion
    admission controller (3 completions per ordered path; 12960 = 3*4320)
@@ -255,12 +256,10 @@ def main():
             profile_of_match[profile] += 0  # touch
             best_lines.append((profile, ln))
 
-        # candidate distinguished profile: all-2 meetings (perfectly
-        # balanced) -- check whether exactly one line attains max
-        # uniformity, measured by the profile's variance
+        # Exact numerator of 18 times the variance.  Avoid a floating
+        # comparison in what is an entirely integral certificate.
         def uniformity(profile):
-            mean = sum(profile) / len(profile)
-            return sum((x - mean) ** 2 for x in profile)
+            return len(profile) * sum(x * x for x in profile) - sum(profile) ** 2
 
         scored = sorted((uniformity(p), p, ln) for p, ln in best_lines)
         top = [entry for entry in scored if entry[0] == scored[0][0]]
@@ -278,33 +277,106 @@ def main():
         len(image_lines) == 40 if len(triangles) == 40 else False
     )
 
-    # axis = pair-partition test on one matched pair (recorded)
-    axis_partition = None
-    if matched and len(triangles) == 40:
-        tri = triangles[0]
-        line = sorted(lines[matched[tri]])
-        partitions = [
-            ((line[0], line[1]), (line[2], line[3])),
-            ((line[0], line[2]), (line[1], line[3])),
-            ((line[0], line[3]), (line[1], line[2])),
+    # Axis = pair-partition theorem on every matched pair.  Canonicalize a
+    # partition as an unordered pair of unordered point-pairs.
+    def canonical_partition(pair1, pair2):
+        return tuple(sorted((tuple(sorted(pair1)), tuple(sorted(pair2)))))
+
+    def line_partitions(line):
+        line = sorted(line)
+        return [
+            canonical_partition((line[0], line[1]), (line[2], line[3])),
+            canonical_partition((line[0], line[2]), (line[1], line[3])),
+            canonical_partition((line[0], line[3]), (line[1], line[2])),
         ]
-        table = []
-        for i in tri:
-            support = sup120[i]
-            row = []
-            for p1, p2 in [(pp[0], pp[1]) for pp in partitions]:
-                count = sum(
-                    1
-                    for o in support
-                    if len(octads[o] & set(p1)) == 2 or len(octads[o] & set(p2)) == 2
-                )
-                row.append(count)
-            table.append(row)
-        axis_partition = table
+
+    axis_tables = {}
+    axis_label = {}
+    all_tables_permutation = True
+    if matched and len(triangles) == 40:
+        for tri in triangles:
+            partitions = line_partitions(lines[matched[tri]])
+            table = []
+            for i in tri:
+                support = sup120[i]
+                row = []
+                for p1, p2 in partitions:
+                    pair1, pair2 = set(p1), set(p2)
+                    count = sum(
+                        1
+                        for o in support
+                        if len(octads[o] & pair1) == 2
+                        or len(octads[o] & pair2) == 2
+                    )
+                    row.append(count)
+                table.append(row)
+                hits = [j for j, value in enumerate(row) if value == 6]
+                if len(hits) == 1 and all(
+                    value == (6 if j == hits[0] else 0)
+                    for j, value in enumerate(row)
+                ):
+                    axis_label[i] = partitions[hits[0]]
+                else:
+                    all_tables_permutation = False
+            if sorted(table) != [[0, 0, 6], [0, 6, 0], [6, 0, 0]]:
+                all_tables_permutation = False
+            axis_tables[tri] = table
+
+    checks["all_40_axis_tables_are_6_times_permutations"] = (
+        all_tables_permutation and len(axis_tables) == 40 and len(axis_label) == 120
+    )
+
+    # The profile dictionary and every axis label commute with both group
+    # generators: 80 triangle cases and 240 axis cases in total.
+    line_index = {frozenset(line): i for i, line in enumerate(lines)}
+    representative_shell_index = {
+        support: next(i for i, value in enumerate(sup_of) if value == support)
+        for support in sup120
+    }
+    support_maps = []
+    for shell_mapping in gen_maps:
+        support_maps.append(
+            [
+                sup_index[sup_of[shell_mapping[representative_shell_index[support]]]]
+                for support in sup120
+            ]
+        )
+
+    dictionary_cases = 0
+    axis_cases = 0
+    dictionary_equivariant = True
+    axes_equivariant = True
+    for generator, support_map in zip(two_gens, support_maps):
+        for tri in triangles:
+            image_tri = tuple(sorted(support_map[i] for i in tri))
+            expected_line = line_index[
+                frozenset(generator[x] for x in lines[matched[tri]])
+            ]
+            dictionary_cases += 1
+            if image_tri not in matched or matched[image_tri] != expected_line:
+                dictionary_equivariant = False
+        for support in range(120):
+            image_support = support_map[support]
+            image_partition = canonical_partition(
+                (generator[x] for x in axis_label[support][0]),
+                (generator[x] for x in axis_label[support][1]),
+            )
+            axis_cases += 1
+            if axis_label[image_support] != image_partition:
+                axes_equivariant = False
+
+    checks["profile_dictionary_equivariant_80_cases"] = (
+        dictionary_equivariant and dictionary_cases == 80
+    )
+    checks["axis_partition_equivariant_240_cases"] = (
+        axes_equivariant and axis_cases == 240
+    )
+
+    axis_partition = axis_tables.get(triangles[0]) if triangles else None
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass182.line_octahedron_dictionary.v1",
+        "schema": "w33.pass182.line_octahedron_dictionary.v2",
         "status": "PASS" if all_pass else "FAIL",
         "blindness_certificate": {
             "disjoint_orthogonal_degree_profile": {
@@ -331,7 +403,18 @@ def main():
             },
             "bijective": bool(checks.get("dictionary_hits_all_40_lines", False)),
         },
-        "axis_pair_partition_sample": axis_partition,
+        "axis_pair_partition_certificate": {
+            "sample": axis_partition,
+            "tables_checked": len(axis_tables),
+            "axis_labels_checked": len(axis_label),
+            "dictionary_generator_cases": dictionary_cases,
+            "axis_generator_cases": axis_cases,
+            "scope": (
+                "the true four-valent orbital is group-selected; once supplied, "
+                "the line and pair-partition labels are intrinsic incidence "
+                "profiles and equivariant under both stored generators"
+            ),
+        },
         "s3_alignment": {
             "axes_per_octahedron": 3,
             "completions_per_ordered_path": 3,

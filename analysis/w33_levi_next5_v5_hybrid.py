@@ -2,11 +2,15 @@
 """Sub-100 mW piezoelectric/electro-optic compiler and deterministic layout package."""
 from __future__ import annotations
 from functools import lru_cache
-import json, math
+import json, math, struct
 from pathlib import Path
 import numpy as np
 from scipy.linalg import eigh
 from w33_levi_next5_v5_common import ACTIVE, gds_library, sha256_json
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'data/PART_2026_07_11_LEVI_NEXT5_V5_hybrid.json'
+TAU=2*math.pi
 
 
 def psd_sqrt(H):
@@ -35,8 +39,30 @@ def synthesize(pairs,theta,phi,alpha,out):
     return A
 def fidelity(U,V):
     n=U.shape[0];return float(abs(np.trace(U.conj().T@V))**2/(n*n))
-def quantize(x,bits):
-    step=2*math.pi/(2**bits-1);return np.round(x/step)*step
+def encode_phase_words(x,bits,signed=True):
+    if bits<2 or bits>31:raise ValueError('unsupported phase word width')
+    values=np.asarray(x,dtype=float)
+    if not np.all(np.isfinite(values)):raise ValueError('non-finite phase command')
+    if signed:
+        top=(1<<(bits-1))-1
+        if np.any(values < -TAU) or np.any(values > TAU):raise ValueError('phase command outside signed full scale')
+        words=np.rint(values*top/TAU).astype(np.int64)
+        if np.any(words < -top) or np.any(words > top):raise ValueError('phase word outside signed range')
+    else:
+        top=(1<<bits)-1
+        if np.any(values<0) or np.any(values>TAU):raise ValueError('phase command outside unsigned full scale')
+        words=np.rint(values*top/TAU).astype(np.int64)
+        if np.any(words<0) or np.any(words>top):raise ValueError('phase word outside unsigned range')
+    return words
+def decode_phase_words(words,bits,signed=True):
+    top=(1<<(bits-1))-1 if signed else (1<<bits)-1;raw=np.asarray(words)
+    if np.any(raw!=np.floor(raw)):raise ValueError('phase words must be integers')
+    raw=raw.astype(np.int64)
+    floor=-top if signed else 0
+    if np.any(raw<floor) or np.any(raw>top):raise ValueError('phase word outside declared range')
+    return raw.astype(float)*TAU/top
+def quantize(x,bits):return decode_phase_words(encode_phase_words(x,bits,signed=True),bits,signed=True)
+def phase_error(target,measured):return (target-measured+math.pi)%TAU-math.pi
 def crosstalk(n,nearest=0.010,length=1.25):
     idx=np.arange(n);d=np.abs(idx[:,None]-idx[None,:]);K=np.exp(-d/length);np.fill_diagonal(K,0)
     K*=nearest/math.exp(-1/length);return np.eye(n)+K
@@ -44,13 +70,13 @@ def crosstalk(n,nearest=0.010,length=1.25):
 def calibrate(target,C,Cinv,bias,bits,rng,iters=9):
     cmd=quantize(target,bits);hist=[]
     for _ in range(iters):
-        measured=C@cmd+bias+rng.normal(0,4e-5,len(target));err=target-measured
+        measured=C@cmd+bias+rng.normal(0,4e-5,len(target));err=phase_error(target,measured)
         cmd=quantize(cmd+0.97*(Cinv@err),bits);hist.append(float(np.linalg.norm(err)/math.sqrt(len(err))))
     return cmd,C@cmd+bias,hist
 
 def layout_manifest():
-    rects=[];cells=[];pitch_y=22.0;stage_pitch=360.0;x0=200.0
-    # SiN waveguide layer 1.
+    rects=[];slots=[];pitch_y=22.0;stage_pitch=360.0;x0=200.0
+    # Abstract placement rails, not routed foundry waveguides.
     for m in range(16): rects.append({'layer':1,'x0':50,'y0':m*pitch_y,'x1':6100,'y1':m*pitch_y+0.8})
     idx=0
     for stage in range(16):
@@ -64,12 +90,30 @@ def layout_manifest():
                 {'layer':30,'x0':x+25,'y0':y-8,'x1':x+190,'y1':y-6},
                 {'layer':30,'x0':x+25,'y0':y+6,'x1':x+190,'y1':y+8},
             ]
-            cells.append({'index':idx,'stage':stage,'modes':[m,m+1],'x_um':x,'y_um':y,'pzt_trim_length_um':210,'eo_length_um':165})
+            slots.append({'index':idx,'stage':stage,'modes':[m,m+1],'x_um':x,'y_um':y,'pzt_placement_length_um':210,'eo_placement_length_um':165})
             idx+=1
     assert idx==120
     for m in range(16):
         x=6000;y=m*pitch_y;rects.append({'layer':40,'x0':x,'y0':y-3,'x1':x+45,'y1':y+4})
-    return {'units':'um','layers':{'SiN_waveguide':1,'PZT_trim':20,'EO_electrode':30,'monitor':40},'mzi_cells':cells,'rectangles':rects}
+    return {'units':'um','scope':'abstract deterministic placement sketch; no couplers, routed MZIs, ports, PDK layers, or DRC closure',
+        'layers':{'SiN_reference_rail':1,'PZT_placement':20,'EO_placement':30,'monitor_placement':40},
+        'interferometer_slots':slots,'rectangles':rects}
+
+def validate_gds_records(data,expected_boundaries):
+    i=0;boundaries=0;records=0
+    while i<len(data):
+        if i+4>len(data):raise ValueError('truncated GDS record header')
+        n,rtype,_dtype=struct.unpack('>HBB',data[i:i+4])
+        if n<4 or n%2 or i+n>len(data):raise ValueError('invalid GDS record length')
+        boundaries+=rtype==0x08;records+=1;i+=n
+    return {'full_parse':i==len(data),'records':records,'boundaries':boundaries,
+        'expected_boundaries':expected_boundaries,'envelope_ok':i==len(data) and boundaries==expected_boundaries and data[:4]==bytes.fromhex('00060002') and data[-4:]==bytes.fromhex('00040400')}
+
+def veriloga_contract():
+    p=ROOT/'hardware/holonet_v5_hybrid_phase.va';text=p.read_text()
+    need=['module holonet_v5_hybrid_phase','parameter real VPI = 2.5','parameter real C_EO = 55f','PZT_TAU','laplace_nd']
+    return {'path':str(p.relative_to(ROOT)),'required_tokens':all(x in text for x in need),
+        'scope':'static source contract only; no Verilog-A simulator or PDK compact-model validation'}
 
 @lru_cache(maxsize=1)
 def analyze(seed=20260711):
@@ -92,7 +136,7 @@ def analyze(seed=20260711):
     for _ in range(256):
         drift += rng.normal(0,0.00018,n)+rng.normal(0,0.0005)*np.exp(-np.arange(n)/180)
         openloop.append(fidelity(U,unitary(Cx@cmd+bias+drift)))
-        meas=Cx@tracked_cmd+bias+drift+rng.normal(0,5e-5,n);err=target-meas
+        meas=Cx@tracked_cmd+bias+drift+rng.normal(0,5e-5,n);err=phase_error(target,meas)
         tracked_cmd=quantize(tracked_cmd+0.96*(Cinv@err),16)
         tracked.append(fidelity(U,unitary(Cx@tracked_cmd+bias+drift)))
     arr=np.array(dies)
@@ -111,38 +155,47 @@ def analyze(seed=20260711):
     }
     power['total_mw']=sum(power.values())
     manifest=layout_manifest();gds=gds_library(manifest['rectangles'])
-    # Header/end records and deterministic size are validated without external CAD libraries.
-    gds_valid=gds[:4]==bytes.fromhex('00060002') and gds[-4:]==bytes.fromhex('00040400') and len(gds)>20_000
+    gds_validation=validate_gds_records(gds,len(manifest['rectangles']));va=veriloga_contract()
+    words=encode_phase_words(cmd,16,signed=True)
+    rejects_invalid=True
+    for bad,signed in [([32768],True),([-32768],True),([-1],False),([65536],False)]:
+        try:decode_phase_words(bad,16,signed=signed);rejects_invalid=False
+        except ValueError:pass
     checks={
         'mesh_unitary':np.linalg.norm(U.conj().T@U-np.eye(16))<1e-7,
         'calibration_converges':hist[-1]<hist[0]/100,
         'nominal_above_0_9999':nominal>0.9999,
         'wavelength_p05_above_0_997':float(np.quantile(waveF,0.05))>0.997,
-        'die_p05_above_0_999':float(np.quantile(arr,0.05))>0.999,
+        'synthetic_phase_p05_above_0_999':float(np.quantile(arr,0.05))>0.999,
         'tracked_min_above_0_999':min(tracked)>0.999,
         'tracking_beats_open_loop':np.mean(tracked)>np.mean(openloop),
         'power_below_100mW':power['total_mw']<100,
-        'layout_has_120_mzis':len(manifest['mzi_cells'])==120,
-        'gds_binary_valid':gds_valid,
+        'signed16_phase_words_valid':len(words)==n and int(words.min())>=-32767 and int(words.max())<=32767 and rejects_invalid,
+        'reference_manifest_has_120_slots':len(manifest['interferometer_slots'])==120,
+        'gds_record_envelope_valid':gds_validation['envelope_ok'],
+        'veriloga_static_contract_present':va['required_tokens'],
     }
     return {
         'status':'PASS' if all(checks.values()) else 'FAIL','checks':{k:bool(v) for k,v in checks.items()},
-        'compiler':{'modes':16,'mzi_cells':120,'controls':n,'phase_bits':16,'nominal_fidelity':nominal,'calibration_rms':hist,'command_digest':sha256_json([round(float(x),8) for x in cmd])},
-        'foundry_corners':{'dies':128,'mean':float(arr.mean()),'p05':float(np.quantile(arr,0.05)),'min':float(arr.min())},
+        'compiler':{'modes':16,'mathematical_givens_rotations':120,'controls':n,'phase_bits':16,
+            'phase_word_encoding':'signed symmetric 16-bit, full scale +/-2pi, -32768 reserved','command_word_min':int(words.min()),'command_word_max':int(words.max()),
+            'nominal_fidelity':nominal,'calibration_rms':hist,'command_digest':sha256_json(words.tolist())},
+        'synthetic_phase_corners':{'draws':128,'model':'fixed-seed Gaussian phase bias/noise with full inverse-crosstalk recalibration; no PDK, loss, yield, or measured device distribution','mean':float(arr.mean()),'p05':float(np.quantile(arr,0.05)),'min':float(arr.min())},
         'wavelength':{'band_nm':[1530,1565],'p05':float(np.quantile(waveF,0.05)),'min':float(min(waveF))},
         'drift':{'epochs':256,'tracked_mean':float(np.mean(tracked)),'tracked_min':float(min(tracked)),'open_loop_mean':float(np.mean(openloop))},
         'power_budget':power,
-        'layout':{'manifest_digest':sha256_json(manifest),'gds_sha256':__import__('hashlib').sha256(gds).hexdigest(),'gds_bytes':len(gds),'layers':manifest['layers'],'generator':'analysis/w33_levi_next5_v5_gds.py'},
+        'layout':{'kind':'record-valid abstract placement sketch','manifest_digest':sha256_json(manifest),'gds_sha256':__import__('hashlib').sha256(gds).hexdigest(),'gds_bytes':len(gds),'layers':manifest['layers'],'validation':gds_validation,'generator':'analysis/w33_levi_next5_v5_gds.py','scope':manifest['scope']},
+        'veriloga':va,
         'design_assumptions':{
             'platform':'Si3N4 passive mesh with PZT piezo-optomechanical coarse trim and capacitive Pockels fine control',
             'pzt_leakage_per_control_w':12e-9,'eo_capacitance_f':cap_f,'eo_vrms_v':vrms,'servo_update_hz':update_hz,
-            'boundary':'Electrical driver, TIA, servo and clock powers are explicit architectural allocations, not measurements from a selected PDK. The GDS is a deterministic floorplan/reference cell package pending design-rule substitution.'
+            'boundary':'Electrical driver, TIA, servo and clock powers are allocations, not measurements. Monte Carlo values are synthetic phase-model samples. The GDS is a placement sketch, not a functional photonic layout; the Verilog-A file has only a static source-contract check.'
         },
         'theorem':(
-            'Replacing continuous thermo-optic holding power by piezoelectric coarse trim and capacitive electro-optic '
-            'fine control preserves >0.999 foundry-tail process fidelity in the modeled 16-mode mesh while reducing the '
-            'explicit steady-state control budget from 7.81 W to below 100 mW; a deterministic 120-cell GDSII reference '
-            'layout and Verilog-A phase-element model are generated from the same manifest.'
+            'Under explicit architectural allocations, replacing the v4 thermo-optic model by PZT/EO controls gives an '
+            '85.607097 mW modeled budget and >0.999 fidelity in fixed-seed phase-error simulations. Commands are validated '
+            'signed 16-bit phase words with explicit full scale. The supplied GDSII is a record-valid deterministic placement sketch and the '
+            'Verilog-A file is a separate static compact-model interface; neither is PDK, DRC, or measurement evidence.'
         )
     }
 
@@ -150,5 +203,7 @@ def emit_gds(path:Path):
     path.write_bytes(gds_library(layout_manifest()['rectangles']))
 
 def main():
-    out=analyze();print(json.dumps(out,indent=2,sort_keys=True));return 0 if out['status']=='PASS' else 1
+    out=analyze();text=json.dumps(out,indent=2,sort_keys=True)+"\n"
+    OUT.write_text(text,encoding='utf-8');print(text,end='')
+    return 0 if out['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())

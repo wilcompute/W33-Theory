@@ -18,6 +18,7 @@
 \newcommand{\GF}[1]{\mathbb{F}_{#1}}
 \newcommand{\Sp}{\mathrm{Sp}}
 \newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\SRG}{\mathrm{SRG}}
 \newcommand{\ket}[1]{|#1\rangle}
 \newcommand{\bra}[1]{\langle#1|}
 
@@ -452,6 +453,157 @@ not a regular $G$-set identification.  Projectively, the Bell
 stabilizer has order $648$ and the orbit stabilizers are $1,2,4$.
 The useful result is stronger than the count: a hierarchical decoder
 and a persistent address bit are forced by the two parabolic actions.
+
+\subsection{The incidence transceiver and the route-dark lattice}
+\label{sec:incidence-transceiver-route-dark}
+
+Pass~173 turns the address/route distinction into an exact signal law.
+For the line--point incidence matrix $N$, the centered operator
+\[
+ T=N-\frac1{10}J
+\]
+has rank $24$ and satisfies
+\[
+ TA_P=A_LT,
+ \qquad T^{\mathsf T}T=6E_{24}^{P},
+ \qquad TT^{\mathsf T}=6E_{24}^{L}.
+\]
+Thus $T/\sqrt6$ is a lossless transceiver on the shared gauge sector,
+while the unmatched address and route dark sectors remain type-protected.
+Every one of the $480$ local-axis selector vectors produces a
+$40$-channel analyzer word with histogram
+$\{-3^1,-1^9,0^{20},1^9,3^1\}$ and exact decoder
+$x=N^{\mathsf T}(Nx)/6$.
+
+The two dark lattices are not interchangeable.  The address lattice
+$\ker_{\mathbb Z}N$ has minimum shell $90$ at norm $8$ and binary code
+$[40,15,8]$; the route-dark lattice $\ker_{\mathbb Z}N^{\mathsf T}$ has
+minimum shell $432$ at norm $10$ and code $[40,15,10]$.  Its $216$
+projective supports are exactly the pentad cores already used by the
+router: each is $K_{5,5}$ minus a perfect matching, and the deleted
+matchings double-cover the $540$ skew-line chart atlas.  The signed shell
+splits into the two chiral $216$-orbits.  Hence the old compass carrier is
+not merely count-compatible with the route layer; it is its complete
+minimum-energy integral dark shell.
+
+The two $25$-dimensional context duals are locally indistinguishable at
+their first two nonzero shells: both have $A_4=40$ and $A_6=240$.  They
+first separate at the third shell,
+\[
+ A_8^{\rm address}=5085,
+ \qquad A_8^{\rm route}=3645.
+\]
+Moreover only the address code is self-orthogonal; the route code has
+binary Gram rank $6$.  Thus the Pass-164 $O^+(10,2)$ quotient is
+address-chiral and cannot be silently reused as a route codec.
+
+This also corrects the architecture vocabulary.  At odd $q=3$,
+$W(3,3)$ and its dual $Q(4,3)$ have equal $40+40$ counts and cospectral
+concurrence graphs, but are not incidence-self-dual.  The lossless
+identification exists only on the shared $24$-sector.  The statement is
+an algebraic analyzer-ROM/control-codec theorem until a specified optical
+amplitude implementation of $T$ is supplied.  (Witness:
+\path{analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py}.)
+
+Pass~174 supplies the missing protected subcodec.  Although the full
+route code $R=[40,15,10]$ is not self-orthogonal, its route-code hull is
+\[
+ H=R\cap R^\perp=[40,9,16],
+ \qquad
+ W_H=1+135z^{16}+240z^{20}+135z^{24}+z^{40}.
+\]
+The all-ones word is a fixed radical and
+$H/\langle\mathbf1\rangle$ is a plus-type $8$-space with the exact
+$1+135+120$ native group orbits.  Its $255$ nonzero words reconstruct
+the symplectic graph $\SRG(255,126,61,63)$ and its two quadratic
+subconstituents $\SRG(135,70,37,35)$ and
+$\SRG(120,63,30,36)$.  So one route codec now supplies the complete
+finite stack
+\[
+ 432\text{ signed pentads}\to216\text{ cores}\to[40,9,16]
+ \to255=135+120.
+\]
+
+The order-eight control rail is also less obstructed than the previous
+cohomology wording claimed.  On both address and route discriminants,
+$[\tau(h)-h]=0$ while
+$[\tau(h)-5h]=[4h]\ne0$.  Thus a $q(h)=11/8$ fixed order-eight rail
+exists; the nonzero class forbids only a pure scalar-$5$ normal form.
+This is a finite control-label theorem, not yet a fabricated phase rail.
+(Witness: \path{analysis/w33_pass174_dual_discriminant_fixed_rail.py}.)
+
+Pass~176 removes the remaining abstract quotient choice.  If
+$C=\ker_{\mathbb F_2}N$ and $R=\ker_{\mathbb F_2}N^{\mathsf T}$, the
+unique nonzero fixed isotropic class $f\in C^\perp/C$ is sent by incidence
+to the all-ones route word, and
+\[
+ f^\perp/\langle f\rangle
+ \xrightarrow{\;N\;}
+ (R\cap R^\perp)/\langle\mathbf1\rangle
+\]
+is an exact native-$\PSp(4,3)$ quadratic isometry.  All $512$ quadratic
+identities and $8192$ generator/object commuting squares are checked.
+The $240$ weight-six address words become the two explicit sheets over
+the $120$ anisotropic route states and map bijectively to the $240$
+weight-$20$ hull words.  This is an executable codec map; it still does
+not specify an optical transfer matrix, loss budget, or detector model.
+
+Pass~177 then locates the first address/route classification depth in the
+\emph{dual} context lattices.  Both begin
+\[
+ 1+720q^2+15360q^3,
+\]
+where the $720$ is coordinate doubles plus sign-lifts of lines on the
+address side and point stars on the route side.  They first split at
+\[
+ q^4:\qquad 1350960-982320=368640.
+\]
+Thus firmware may share the first two dual-shell tables, but must retain
+the type bit before admitting weight-eight sectors.  Separately, the
+sentinel/context theta regression has an exact normalization because
+$A^\vee=\tfrac12B$ and $\operatorname{covol}(A)=2^{25}$; finite shell sums
+are regression checks only.  Finally,
+$\ker_{\mathbb Z}N^{\mathsf T}$ is the point-trade lattice of the
+nonisomorphic dual $Q(4,3)$, whose span size is $2$ versus $4$ for
+$W(3,3)$.  A route generator with $q=11/8$ exists, but $3/8$ occurs on
+the other fixed-generator orbit, so no invariant $11/8$ hardware phase
+is inferred.  (Witnesses:
+\path{analysis/w33_pass176_incidence_fixed_line_e8_bridge.py},
+\path{analysis/w33_pass177_address_route_dual_theta_split.py}, and
+\path{analysis/w33_pass179_poisson_modular_pair.py}.)
+
+Passes~188--192 refine the local controller geometry.  The $432$ route
+minima contain $36$ exact double-six crowns: each is
+$K_{6,6}$ minus a matching, assembled from one $K_6$ in each of the two
+chiral shell orbits, with faithful $S_6$ component symmetry.  The naive
+homogeneous-product scheduler is ruled out:
+\[
+ (120\ \text{axes})\times(36\ \text{double-sixes})
+ =3240+720+360=120(27+6+3).
+\]
+Thus a packet carrying an axis/double-six pair needs a three-valued
+relation-type tag; the $4320$ pairs are not one native group orbit.  The
+positive replacement is local: an axis stabilizer of order $216$ acts on
+its distinguished three double-sixes through full $S_3$ with kernel $36$,
+giving a genuine $S_3/C_2$ completion fibre.
+
+Restoring signs gives an even sharper codec.  The three positive octads
+of each signed second-shell trade contain a unique two-point edge of its
+matched four-point line; the three negative octads contain the
+complementary edge.  Hence
+\[
+ 240\ \text{signed trades}\longleftrightarrow40\ \text{lines}\times6\
+ \text{edge addresses},
+\]
+with sign reversal implemented by edge complement.  The line stabilizer
+satisfies $1\to C_3^3\to H_{\rm line}\to S_4\to1$: its six signed states
+carry the tetrahedral-edge $S_4$ action, while complement-pairing gives
+the unframed $S_3/C_2$ axis action.  Firmware must therefore not identify
+the six edge states with a regular $S_3$ clock merely because both sets
+have size six.  (Witnesses:
+\path{analysis/w33_pass188_icosahedron_test.py},
+\path{analysis/w33_pass191_supercycle_pullback.py}, and
+\path{analysis/w33_pass192_signed_trade_edge_s4.py}.)
 
 %======================================================================
 \section{The carrier: how to self-entangle a photon}
@@ -3578,7 +3730,7 @@ with $|C|_{\max}=1,2,3$), so the qutrit's pump quantum is $2S=q-1=\lambda=2$ for
 \emph{any} drive realizing the winding, protected by a finite Floquet gap
 $\Delta_{\min}\sim\mathcal O(1)$ that fixes the spec (drive rate and
 coherence/temperature below the gap). \emph{The contextuality is a protocol.} The
-$40$ Pauli rays carry the $40$ self-dual $\mathrm{GQ}(3,3)$ lines as measurement
+$40$ Pauli rays carry the $40$ isotropic line contexts of $W(3,3)$ as measurement
 contexts (four commuting Paulis each, four contexts per ray); a state-independent
 Kochen--Specker test over them has contextual fraction $4/40=1/\Phi_4=\tfrac1{10}$,
 a second tabletop falsifier. \emph{And the whole theory is one graph.} Every claim
@@ -7409,8 +7561,9 @@ radix (degree) $12$, diameter $2$ (any-to-any in two hops, deterministic via the
 vertex and edge connectivity both $12$ (it survives any eleven simultaneous failures, the maximum
 for degree $12$), second eigenvalue $\lambda_2=2$ far below the Ramanujan bound $2\sqrt{11}=6.63$
 (a \emph{better}-than-Ramanujan expander, near-optimal bisection), and vertex- and edge-transitive
-under $\mathrm{Sp}(4,3)$, self-dual as a generalized quadrangle (perfect load balancing, no hot
-spots), with $240$ links. Against a $6{\times}6$ torus (radix $4$, diameter $6$) or a hypercube
+under $\mathrm{PSp}(4,3)$ (perfect load balancing, no hot spots), with $240$ links.  The equal
+point/line counts do not make the odd-$q$ generalized quadrangle incidence-self-dual. Against a
+$6{\times}6$ torus (radix $4$, diameter $6$) or a hypercube
 $Q_6$ (radix $6$, diameter $6$), it pays radix $12$ to buy diameter $2$ and maximal resilience ---
 the low-diameter, high-resilience corner (flattened-butterfly/dragonfly class) with SRG regularity.
 (Witness: \path{analysis/w33_interconnect_network.py}.)

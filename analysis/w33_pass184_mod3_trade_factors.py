@@ -13,12 +13,13 @@ exactly:
    home of the hidden five.
 
 2. GAUGE L2/3L2 (dim 24):  adjoint at the bottom, quotient of dimension
-   14 -- End_G(Q) computed exactly (dim 1 <=> irreducible over F3).
+   14 -- End_G(Q) has dimension 1.  Thus Q is a brick; this condition
+   alone does not prove that Q is simple.
 
-3. ROUTE (dim 15):  no adjoint on either end and no fixed vectors, so
-   with factors from {1,5,10,14,25,81} the only length-2 option is
-   14 | 1 -- verified by computing the coinvariants (Hom to trivial) and
-   the 14-dimensional bottom.
+3. ROUTE (dim 15):  no adjoint map and no fixed vectors, while its
+   coinvariants are one-dimensional.  Hence it has an exact nonsplit
+   sequence 0 -> K_14 -> route -> 1 -> 0.  The witness does not infer
+   simplicity of K_14 from dimensions alone.
 
 4. THE DEC3 LEDGER (GAP): decomposition rows of the ordinaries onto the
    six 3-modular simples, locating which characteristic-0 objects reduce
@@ -312,8 +313,13 @@ def main():
         reports["gauge_L2"].get("adjoint_image_rank") == 10
         and reports["gauge_L2"].get("quotient_dimension") == 14
     )
-    checks["gauge_quotient_end_1"] = reports["gauge_L2"].get("quotient_end_dim") == 1
-    checks["route_coinvariants_1"] = (
+    checks["gauge_quotient_is_14d_brick"] = (
+        reports["gauge_L2"].get("quotient_end_dim") == 1
+    )
+    checks["gauge_extension_nonsplit"] = (
+        reports["gauge_L2"].get("extension_split") is False
+    )
+    checks["route_exact_nonsplit_14_to_15_to_1"] = (
         reports["route_Q43"].get("hom_to_trivial") == 1
         and reports["route_Q43"].get("hom_from_trivial") == 0
     )
@@ -324,6 +330,16 @@ def main():
     dec3 = data["dec3"]
     ordinary = data["ordinary"]
     checks["mod3_degrees"] = sorted(mod3) == [1, 5, 10, 14, 25, 81]
+    checks["dec3_complete_dimension_identities"] = (
+        len(dec3) == len(ordinary) == 20
+        and all(len(row) == len(mod3) for row in dec3)
+        and all(
+            all(isinstance(value, int) and value >= 0 for value in row)
+            and sum(value * degree for value, degree in zip(row, mod3))
+            == ordinary_degree
+            for ordinary_degree, row in zip(ordinary, dec3)
+        )
+    )
     ledger = {}
     for want in (5, 10, 15, 24, 30, 81):
         rows = [
@@ -332,21 +348,29 @@ def main():
             if d == want
         ]
         ledger[str(want)] = rows
-    checks["dec3_ledger_recorded"] = len(ledger) > 0
+    expected_row_counts = {"5": 2, "10": 2, "15": 2, "24": 1, "30": 3, "81": 1}
+    checks["dec3_selected_rows_complete"] = {
+        degree: len(rows) for degree, rows in ledger.items()
+    } == expected_row_counts
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass184.mod3_trade_factors.v1",
+        "schema": "w33.pass184.mod3_trade_factors.v2",
         "status": "PASS" if all_pass else "FAIL",
         "brauer_degrees_mod3": mod3,
         "factor_table": reports,
         "reading": (
             "the defining-characteristic factor table of the trade tower: "
-            "address = adjoint 10 below a five (non-split -- the hidden "
-            "five's mod-3 home), gauge = adjoint 10 below the 14, route = "
-            "no adjoint, coinvariants of dimension 1 (a 14 below a "
-            "trivial): three modules, three different ways to sit around "
-            "the gauge algebra"
+            "address is a nonsplit extension of an exhaustively simple "
+            "five-dimensional quotient by the injected adjoint 10. Gauge "
+            "is a nonsplit extension with a 14-dimensional brick quotient; "
+            "brick does not imply simple. Route has no adjoint map and fits "
+            "0 -> K_14 -> route -> 1 -> 0 nonsplit, without a simplicity "
+            "claim for K_14"
+        ),
+        "boundary": (
+            "End_G(Q)=F3 proves that Q is a brick, not that it is irreducible; "
+            "composition-factor names require a separate submodule census"
         ),
         "dec3_ledger": ledger,
         "checks": {name: bool(value) for name, value in checks.items()},

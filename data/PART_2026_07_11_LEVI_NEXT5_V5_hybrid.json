@@ -1,37 +1,42 @@
 {
   "checks": {
     "calibration_converges": true,
-    "die_p05_above_0_999": true,
-    "gds_binary_valid": true,
-    "layout_has_120_mzis": true,
+    "gds_record_envelope_valid": true,
     "mesh_unitary": true,
     "nominal_above_0_9999": true,
     "power_below_100mW": true,
+    "reference_manifest_has_120_slots": true,
+    "signed16_phase_words_valid": true,
+    "synthetic_phase_p05_above_0_999": true,
     "tracked_min_above_0_999": true,
     "tracking_beats_open_loop": true,
+    "veriloga_static_contract_present": true,
     "wavelength_p05_above_0_997": true
   },
   "compiler": {
     "calibration_rms": [
-      0.052422252831826034,
-      0.001571869816084171,
-      7.832888428435928e-05,
-      5.8396289566648e-05,
-      6.212006504934096e-05,
-      6.369062871072986e-05,
-      6.619728829814704e-05,
-      6.163761761409994e-05,
-      6.058625393652712e-05
+      0.052437963331785735,
+      0.0015705868461418145,
+      9.129337191149979e-05,
+      7.676877789036236e-05,
+      7.911872103357746e-05,
+      7.796614235728914e-05,
+      8.007345068275893e-05,
+      7.862091099574657e-05,
+      7.820333183438199e-05
     ],
-    "command_digest": "bcc03cfbf7cc69556545e790acdad6b18221c5d77ebc54fc187006eac15a7cff",
+    "command_digest": "7a60c86f6a0d5a899814f08880ff34b97ee9c5da122795c59651f7cfb7602d81",
+    "command_word_max": 16713,
+    "command_word_min": -16532,
     "controls": 376,
+    "mathematical_givens_rotations": 120,
     "modes": 16,
-    "mzi_cells": 120,
-    "nominal_fidelity": 0.9999999204395618,
-    "phase_bits": 16
+    "nominal_fidelity": 0.9999998472561195,
+    "phase_bits": 16,
+    "phase_word_encoding": "signed symmetric 16-bit, full scale +/-2pi, -32768 reserved"
   },
   "design_assumptions": {
-    "boundary": "Electrical driver, TIA, servo and clock powers are explicit architectural allocations, not measurements from a selected PDK. The GDS is a deterministic floorplan/reference cell package pending design-rule substitution.",
+    "boundary": "Electrical driver, TIA, servo and clock powers are allocations, not measurements. Monte Carlo values are synthetic phase-model samples. The GDS is a placement sketch, not a functional photonic layout; the Verilog-A file has only a static source-contract check.",
     "eo_capacitance_f": 5.5e-14,
     "eo_vrms_v": 2.5,
     "platform": "Si3N4 passive mesh with PZT piezo-optomechanical coarse trim and capacitive Pockels fine control",
@@ -40,27 +45,30 @@
   },
   "drift": {
     "epochs": 256,
-    "open_loop_mean": 0.9988463262973515,
-    "tracked_mean": 0.9999998567980343,
-    "tracked_min": 0.999999695603991
-  },
-  "foundry_corners": {
-    "dies": 128,
-    "mean": 0.999991341775313,
-    "min": 0.9999854892367118,
-    "p05": 0.9999882938337242
+    "open_loop_mean": 0.9988473864787849,
+    "tracked_mean": 0.9999997569748077,
+    "tracked_min": 0.9999995561883734
   },
   "layout": {
     "gds_bytes": 25200,
     "gds_sha256": "de1c8f9df648f5d3310ec55b1f95371cfc01da178b83c035cf37b921b2ce5e47",
     "generator": "analysis/w33_levi_next5_v5_gds.py",
+    "kind": "record-valid abstract placement sketch",
     "layers": {
-      "EO_electrode": 30,
-      "PZT_trim": 20,
-      "SiN_waveguide": 1,
-      "monitor": 40
+      "EO_placement": 30,
+      "PZT_placement": 20,
+      "SiN_reference_rail": 1,
+      "monitor_placement": 40
     },
-    "manifest_digest": "d54766d084cf47737dedc2629dbd10ad190cad825f960960e0ad767d514f8ad3"
+    "manifest_digest": "60ef4842fa791e2b462c8b2263efe40c56b12fa861d85c4203e21228e879106f",
+    "scope": "abstract deterministic placement sketch; no couplers, routed MZIs, ports, PDK layers, or DRC closure",
+    "validation": {
+      "boundaries": 392,
+      "envelope_ok": true,
+      "expected_boundaries": 392,
+      "full_parse": true,
+      "records": 1968
+    }
   },
   "power_budget": {
     "clock_reference_mw": 8.0,
@@ -73,13 +81,25 @@
     "total_mw": 85.607097
   },
   "status": "PASS",
-  "theorem": "Replacing continuous thermo-optic holding power by piezoelectric coarse trim and capacitive electro-optic fine control preserves >0.999 foundry-tail process fidelity in the modeled 16-mode mesh while reducing the explicit steady-state control budget from 7.81 W to below 100 mW; a deterministic 120-cell GDSII reference layout and Verilog-A phase-element model are generated from the same manifest.",
+  "synthetic_phase_corners": {
+    "draws": 128,
+    "mean": 0.9999912372554394,
+    "min": 0.9999858657801411,
+    "model": "fixed-seed Gaussian phase bias/noise with full inverse-crosstalk recalibration; no PDK, loss, yield, or measured device distribution",
+    "p05": 0.9999885895524037
+  },
+  "theorem": "Under explicit architectural allocations, replacing the v4 thermo-optic model by PZT/EO controls gives an 85.607097 mW modeled budget and >0.999 fidelity in fixed-seed phase-error simulations. Commands are validated signed 16-bit phase words with explicit full scale. The supplied GDSII is a record-valid deterministic placement sketch and the Verilog-A file is a separate static compact-model interface; neither is PDK, DRC, or measurement evidence.",
+  "veriloga": {
+    "path": "hardware/holonet_v5_hybrid_phase.va",
+    "required_tokens": true,
+    "scope": "static source contract only; no Verilog-A simulator or PDK compact-model validation"
+  },
   "wavelength": {
     "band_nm": [
       1530,
       1565
     ],
-    "min": 0.9980196615119946,
-    "p05": 0.9983482238170813
+    "min": 0.9980197605171813,
+    "p05": 0.9983482991864026
   }
 }

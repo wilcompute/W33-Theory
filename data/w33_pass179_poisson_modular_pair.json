@@ -17,7 +17,7 @@
       "A": "2^10",
       "B": "2^-10"
     },
-    "identity": "sum_{x in A} e^{-pi t |x|^2} = 2^-25 t^-20 sum_{z in B} e^{-pi |z|^2/(4t)}, for every t>0",
+    "identity": "Theta_A(t) = 2^-25 t^-20 Theta_B(1/(4t)); equivalently sum_{x in A} e^{-pi t |x|^2} = 2^-25 t^-20 sum_{z in B} e^{-pi |z|^2/(4t)}, for every t>0",
     "exact_basis": "2e_i in A forces A^vee into (1/2)Z^40; reducing the pairing modulo 2 gives z mod 2 in S^perp, and the converse follows from the same parity pairing"
   },
   "macwilliams": {

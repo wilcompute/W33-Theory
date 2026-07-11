@@ -1,7 +1,7 @@
-\section{Native Fourier geometry, extension transgression, typed $E_8$ lanes, and hardware closure}
+\section{Audited $q=3$ matrix algebra, extension transgression, typed $E_8$ lanes, and hardware models}
 \label{sec:levi-v5-closure}
 
-For the native $q=3$ Fourier block, the point operator on
+For the exact $q=3$ binary matrix block, the transpose-sum operator on
 $\operatorname{Mat}_3(\mathbb F_2)$ is $T(Y)=Y+Y^T$.  Exact finite
 calculation gives
 \[
@@ -9,15 +9,18 @@ calculation gives
  \qquad
  \operatorname{im}T=\operatorname{Alt}_3(\mathbb F_2),\quad |\operatorname{im}T|=8.
 \]
-The transformed incidence span has dimension six and its Gram map has rank
-three.  Consequently the local rank triple is $(3,6,3)$, while the complete
-native incidence matrices give
+The symmetric and alternating spaces have dimensions six and three, and the
+diagonal map on the symmetric space has rank three.  Separately, the complete
+native W33 incidence matrices give
 \[
  \rank_2 M_3=25,\qquad \rank_2 A_P=16,\qquad \rank_2 A_L=10,
  \qquad D_3\sim J_4^2\oplus J_3^{22}\oplus J_1^6.
 \]
-These finite statements are represented directly in
-\texttt{W33.HeisenbergQ3} and checked by Lean finite computation.
+The matrix cardinalities are represented directly in
+\texttt{W33.HeisenbergQ3} and checked by Lean finite computation.  No Fourier
+transform or direct-sum map connecting that matrix basis to the $40\times40$
+incidence operator is formalized; the other Lean modules check the arithmetic
+assembly identities, not the geometric rank theorem.
 
 Let $A\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8$ be the two-primary
 discriminant module with outer involution $\tau$.  Periodic cyclic cohomology
@@ -25,7 +28,10 @@ gives
 \[
  \dim H^1(C_2,A[2])=\dim H^2(C_2,A[2])=3.
 \]
-Thus there are eight two-torsion extension classes, seven non-split.  If $h$
+Thus there are eight two-torsion extension classes for the prescribed
+nontrivial $C_2$ action, seven non-split; these are not central extensions.
+The displayed minimum-weight Smith-coordinate representatives and their
+quadratic values depend on the selected basis. If $h$
 generates the order-eight rail and $\tau(h)=5h+u$, then $[u]=[4h]\ne0$ in
 $H^1$, but the connecting homomorphism for
 $0\to A[2]\to A\to A/A[2]\to0$ satisfies
@@ -41,25 +47,39 @@ The full $E_8$ carrier is compiled as
  \boxed{240=72+6+6\cdot27},
 \]
 with 72 $E_6$ control roots, six fixed $A_2$ reference roots forming a
-hexagon, and six Schlaefli payload lanes.  Each payload root has routing
+hexagon, and six payload lanes carrying the degree-$10$ complement of the
+conventional Schl\"afli graph.  Each payload root has routing
 signature $16+16+40$ against the control roots.  Simple $E_6$ reflections
-preserve all lane and route data, including a $50{,}000$-step generator replay.
+preserve all lane and route data exhaustively.  A seeded $50{,}000$-step
+generator replay is an integration smoke test, not additional proof.
 
 Replacing continuously heated controls by PZT coarse trim and capacitive
-Pockels fine control lowers the explicit modeled steady-state budget to
+Pockels fine control gives the explicit architectural allocation
 \[
  \boxed{85.607097\ \mathrm{mW}}.
 \]
-The $128$-die fifth-percentile process fidelity is $0.999988294$, and online
-tracking keeps the $256$-epoch minimum at $0.999999696$.  A deterministic
-GDSII reference floorplan and Verilog-A phase model are generated from the
-same manifest.
+In $128$ fixed-seed synthetic phase-error draws, the fifth percentile is
+$0.999988590$, and modeled tracking keeps the $256$-epoch minimum at
+$0.999999673$.  The phase commands use a validated signed $16$-bit range.
+A deterministic GDSII record/placement sketch and a separate hand-written
+Verilog-A interface are supplied; neither is a PDK, DRC, device-simulation,
+or measurement certificate.  The mathematical compiler has $376$ phase
+parameters; the placement sketch has $120$ abstract interferometer slots and
+does not provide a complete command-to-device manifest.
 
-Finally, vendor-normalized time-tag adapters and a synthesizable AXI-style
-frame reducer process $1{,}048{,}832$ deterministic events into $256$ bounded
-frame summaries under backpressure.  Each completed frame is replayed through
+Finally, documentation-shaped vendor adapters feed a Python cycle reference
+that processes $1{,}048{,}832$ deterministic events into $256$ bounded frame
+summaries under backpressure.  The SystemVerilog evidence is independent: a
+two-frame Icarus smoke simulation checks completed-frame snapshots and output
+hold.  Clean reference frames give parallel typed projections
 \[
- \text{timestamp}\longrightarrow40\longrightarrow27\longrightarrow72\longrightarrow240,
+ \text{summary}\longrightarrow W(3,3)\text{ point}_{40}
+ \qquad\parallel\qquad
+ \text{complement-Schlaefli payload}_{162}\longrightarrow E_6\text{ control}_{72}
+ \longrightarrow E_8\text{ root}_{240}.
 \]
-ending at a typed minuscule $E_8$ payload address.  Lost-event, overflow, and
-backpressure conditions are surfaced fail-closed.
+All $40$ point addresses and $162$ payload addresses occur, and the selected
+control has inner product $+1$ with its payload root.  No $40\to27$ incidence
+morphism is asserted.  Missed/lost/full-buffer and overflow conditions are
+rejected by the clean path.  The aggregate regenerates all five witnesses and
+requires exact JSON-normalized equality with the cached certificates.

@@ -28,7 +28,6 @@ import json
 from pathlib import Path
 import subprocess
 import sys
-import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -38,6 +37,7 @@ from analysis.w33_pass163_two480s_character_decomposition import (
     GAP_BASH,
     GAP_BINARY,
     cygwin_path,
+    gap_tempdir,
 )
 
 OUT = ROOT / "data" / "w33_pass170_modular_shadow_brauer.json"
@@ -56,7 +56,7 @@ QUIT;
 
 
 def run_gap():
-    workdir = Path(tempfile.mkdtemp(prefix="w33_pass170_"))
+    workdir = gap_tempdir("w33_pass170_")
     script = workdir / "pass170.g"
     script.write_text(GAP_PROGRAM, encoding="ascii")
     completed = subprocess.run(

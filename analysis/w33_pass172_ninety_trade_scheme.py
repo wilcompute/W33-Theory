@@ -118,46 +118,52 @@ def main():
     rank = orbit_count(90 * 90, tables)
     checks["schurian_rank_5"] = rank == 5
 
-    # eigenmatrix via a generic element of the Bose-Mesner algebra
-    generic = (
-        1.0 * relations["2"]
-        + np.pi * relations["-2"]
-        + np.e * relations["0"]
-        + np.sqrt(2) * relations["-8"]
-    ).astype(float)
-    eigvals, eigvecs = np.linalg.eigh(generic)
-    groups = {}
-    for idx, value in enumerate(eigvals):
-        placed = False
-        for key in groups:
-            if abs(key - float(value)) < 1e-8:
-                groups[key].append(idx)
-                placed = True
-                break
-        if not placed:
-            groups[float(value)] = [idx]
-    eigenmatrix = []
-    multiplicities = []
-    consistent = True
-    integral = True
-    for key in sorted(groups, reverse=True):
-        basis = eigvecs[:, groups[key]]
-        row = []
-        for name in ("id", "2", "-2", "0", "-8"):
-            block = basis.T @ relations[name].astype(float) @ basis
-            scalar = float(np.trace(block)) / block.shape[0]
-            off = np.abs(block - scalar * np.eye(block.shape[0])).max()
-            if off > 1e-6:
-                consistent = False
-            if abs(scalar - round(scalar)) > 1e-6:
-                integral = False
-            row.append(round(scalar, 6))
-        eigenmatrix.append(row)
-        multiplicities.append(len(groups[key]))
-    checks["eigenmatrix_consistent"] = bool(consistent)
-    checks["eigenspace_count_5"] = len(eigenmatrix) == 5
-    checks["multiplicities_sum_90"] = sum(multiplicities) == 90
-    checks["eigenmatrix_integral"] = bool(integral)
+    # Exact character table of the integral intersection algebra.  Each row
+    # is checked as a one-dimensional algebra character against every one of
+    # the 25 products A_i A_j = sum_k p_ij^k A_k.  The integer orthogonality
+    # relation P^T diag(m) P = 90 diag(k) then certifies multiplicities and
+    # identifies these five characters with the simultaneous eigenspaces of
+    # the real symmetric Bose--Mesner algebra.  No floating eigensolve is
+    # used in the certificate.
+    column_order = ["id", "2", "-2", "0", "-8"]
+    eigenmatrix = np.array(
+        [
+            [1, 32, 32, 24, 1],
+            [1, -4, 4, 0, -1],
+            [1, -4, -4, 6, 1],
+            [1, 2, 2, -6, 1],
+            [1, 8, -8, 0, -1],
+        ],
+        dtype=np.int64,
+    )
+    multiplicities = np.array([1, 30, 20, 24, 15], dtype=np.int64)
+    column_index = {name: index for index, name in enumerate(column_order)}
+    character_laws = True
+    for row in eigenmatrix:
+        for left in column_order:
+            for right in column_order:
+                numbers = intersection[f"{left}*{right}"]
+                lhs = int(row[column_index[left]] * row[column_index[right]])
+                rhs = sum(
+                    int(numbers[name]) * int(row[column_index[name]])
+                    for name in column_order
+                )
+                if lhs != rhs:
+                    character_laws = False
+    valency_vector = np.array([valencies[name] for name in column_order], dtype=np.int64)
+    orthogonality = (
+        eigenmatrix.T @ np.diag(multiplicities) @ eigenmatrix
+        == 90 * np.diag(valency_vector)
+    )
+    trace_identity = multiplicities @ eigenmatrix
+    checks["exact_character_laws_125"] = bool(character_laws)
+    checks["exact_eigenmatrix_orthogonality"] = bool(orthogonality.all())
+    checks["exact_trace_multiplicities"] = bool(
+        np.array_equal(trace_identity, np.array([90, 0, 0, 0, 0]))
+    )
+    checks["eigenspace_count_5"] = eigenmatrix.shape == (5, 5)
+    checks["multiplicities_sum_90"] = int(multiplicities.sum()) == 90
+    checks["eigenmatrix_integral"] = np.issubdtype(eigenmatrix.dtype, np.integer)
 
     # antipodal quotient onto the 45 supports
     checks["antipode_is_negation"] = all(
@@ -203,10 +209,14 @@ def main():
             ),
         },
         "eigenmatrix": {
-            "row_order": "eigenspaces of the 0-relation, descending",
-            "column_order": ["id", "2", "-2", "0", "-8"],
-            "P": eigenmatrix,
-            "multiplicities": multiplicities,
+            "row_order": "exact characters of the intersection algebra",
+            "column_order": column_order,
+            "P": eigenmatrix.tolist(),
+            "multiplicities": multiplicities.tolist(),
+            "certificate": (
+                "125 exact character-product identities plus "
+                "P^T diag(m) P = 90 diag(k)"
+            ),
         },
         "intersection_numbers": intersection,
         "checks": {name: bool(value) for name, value in checks.items()},

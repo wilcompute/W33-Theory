@@ -1,1 +1,139 @@
-{"checks":{"cocycle_condition":true,"fixed_line_is_cocycle":true,"h1_dimension_positive":true,"h1_representatives_match_dimension":true,"mixed_class_nontrivial":true,"outer_difference_is_2_torsion":true,"outer_is_involution_on_torsion":true,"p2_module_type":true},"cohomology":{"H1_dimension":3,"coboundary_dimension":6,"complex":"H^1(C2,A[2]) = ker(1+tau)/im(1+tau)","fixed_line_class_coordinates":"0x1","kernel_dimension":9,"mixed_class_coordinates":"0x1","relation_to_fixed_line":"same","removable_by_h_shift":false,"representatives_hex":["0x3f","0x5e","0x118"]},"digests":{"cohomology_representatives":"1d000915790994639fb5cd2190e439882367bed3b930ab2db5b194c4484f991e","outer_torsion_action":"3ffbd89239c0e235f49469dff715330b633668c09016733dfe7933a74e16eafe"},"module":{"h_index":14,"torsion_dimension":15,"type":"(Z/2)^14 + Z/8"},"outer":{"five_h":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,5],"h_image":[1,1,1,0,0,1,0,0,1,0,1,0,1,1,5],"mixed_displacement":[1,1,1,0,0,1,0,0,1,0,1,0,1,1,0],"mixed_displacement_mask":"0x3527","q_u":"1"},"status":"PASS","theorem":"The mixed displacement u=tau(h)-5h is a 1-cocycle for C2 acting on A_2(L_-4)[2]. Its class is nonzero in H^1(C2,A[2]); hence no order-two rechoice h->h+v removes the mixing."}
+{
+  "checks": {
+    "cocycle_condition": true,
+    "fixed_generator_exists": true,
+    "fixed_line_is_cocycle": true,
+    "h1_dimension_positive": true,
+    "h1_representatives_match_dimension": true,
+    "mixed_class_nontrivial": true,
+    "outer_difference_is_2_torsion": true,
+    "outer_is_involution_on_torsion": true,
+    "p2_module_type": true,
+    "q_preserving_fixed_generator_exists": true,
+    "scalar1_displacement_is_coboundary": true
+  },
+  "cohomology": {
+    "H1_dimension": 3,
+    "coboundary_dimension": 6,
+    "complex": "H^1(C2,A[2]) = ker(1+tau)/im(1+tau)",
+    "fixed_generator_exists": true,
+    "fixed_line_class_coordinates": "0x1",
+    "kernel_dimension": 9,
+    "mixed_class_coordinates": "0x1",
+    "relation_to_fixed_line": "same",
+    "representatives_hex": [
+      "0x3f",
+      "0x5e",
+      "0x118"
+    ],
+    "scalar1_displacement_removable": true,
+    "scalar5_displacement_removable": false
+  },
+  "digests": {
+    "cohomology_representatives": "1d000915790994639fb5cd2190e439882367bed3b930ab2db5b194c4484f991e",
+    "outer_torsion_action": "3ffbd89239c0e235f49469dff715330b633668c09016733dfe7933a74e16eafe"
+  },
+  "fixed_order8_rail": {
+    "fixed_generator": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "q": "11/8",
+    "q_preserving_shift_count": 256,
+    "shift_count": 512,
+    "smallest_q_preserving_shift_mask": "0x44f"
+  },
+  "module": {
+    "h_index": 14,
+    "torsion_dimension": 15,
+    "type": "(Z/2)^14 + Z/8"
+  },
+  "outer": {
+    "five_h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "h_image": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      5
+    ],
+    "mixed_displacement": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "mixed_displacement_mask": "0x3527",
+    "q_u": "1",
+    "scalar1_displacement": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      4
+    ],
+    "scalar1_displacement_mask": "0x7527"
+  },
+  "status": "PASS",
+  "theorem": "The scalar-5 displacement u5=tau(h)-5h is the nonzero fixed-line class [4h], so a pure scalar-5 normal form is obstructed. But u1=tau(h)-h=u5+4h is a coboundary: 512 order-two shifts make h+v fixed, and 256 preserve q=11/8. Thus the outer action admits a fixed order-eight rail; the earlier absolute nonremovability interpretation was false."
+}

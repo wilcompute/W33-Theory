@@ -1,12 +1,12 @@
 {
   "checks": {
-    "diagonal_gram_rank_3": true,
+    "diagonal_map_rank_3": true,
     "full_incidence_rank_25": true,
     "jordan_census": true,
     "levi_rank_ladder_80_50_26_2_0": true,
     "line_gram_rank_10": true,
     "point_gram_rank_16": true,
-    "symmetric_columns_span_64": true,
+    "symmetric_basis_spans_kernel": true,
     "transpose_sum_image_card_8": true,
     "transpose_sum_image_is_alternating": true,
     "transpose_sum_kernel_card_64": true,
@@ -31,20 +31,18 @@
     "line_gram_rank": 10,
     "point_gram_rank": 16
   },
-  "heisenberg_q3": {
+  "lean_module": "formal/W33/HeisenbergQ3.lean",
+  "scope_boundary": "The matrix-space cardinalities and W33 ranks are two exact computations. No finite Fourier transform or direct-sum map connecting the 3x3 symmetric basis to the 40x40 incidence operator is constructed here; that bridge and the uniform odd-prime-power character theorem remain open.",
+  "status": "PASS",
+  "symmetric_matrix_q3": {
     "alternating_dimension": 3,
     "ambient_matrices": 512,
+    "diagonal_map_rank": 3,
     "image_digest": "e3e6df492248fe781ea0f408ce7606fc6a7264c0e904028d0b966f63588eba58",
-    "incidence_column_span_dimension": 6,
     "kernel_digest": "dbe137ffe71026fcf2569e72847543cedf3b8aa99d80daa2d84b93cc9874d568",
-    "line_gram_diagonal_rank": 3,
-    "point_block_rank": 3,
     "symmetric_dimension": 6,
     "transpose_sum_image_card": 8,
     "transpose_sum_kernel_card": 64
   },
-  "lean_module": "formal/W33/HeisenbergQ3.lean",
-  "scope_boundary": "This closes the actual native q=3 geometry in Lean/Python. The uniform finite-field character theory for arbitrary odd prime powers remains a separate generalization theorem.",
-  "status": "PASS",
-  "theorem": "For the native q=3 Fourier block over F2, Y -> Y+Y^T has kernel Sym_3(F2) of size 64 and image Alt_3(F2) of size 8; symmetric incidence columns span dimension 6 and the diagonal Gram map has rank 3. The explicit 40x40 W(3,3) incidence matrix then has ranks 25,16,10 and Levi rank ladder 80,50,26,2,0, forcing J4^2+J3^22+J1^6."
+  "theorem": "Over F2, Y -> Y+Y^T on Mat_3 has kernel Sym_3 of size 64, image Alt_3 of size 8, and diagonal-map rank 3. Separately, the explicit 40x40 W(3,3) incidence matrix has ranks 25,16,10 and Levi rank ladder 80,50,26,2,0, forcing J4^2+J3^22+J1^6."
 }

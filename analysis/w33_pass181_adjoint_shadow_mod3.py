@@ -370,23 +370,45 @@ def main():
             "trivial_fixed_vectors": int(hom_triv),
         }
         checks[f"{name}_action_wellformed"] = all(f3_rank(m) == dim for m in act)
-    checks["adjoint_hom_computed"] = True
+    expected_reports = {
+        "address_L4": {
+            "dimension": 15,
+            "hom_from_adjoint": 1,
+            "hom_to_adjoint": 0,
+            "trivial_fixed_vectors": 0,
+        },
+        "route_Q43": {
+            "dimension": 15,
+            "hom_from_adjoint": 0,
+            "hom_to_adjoint": 0,
+            "trivial_fixed_vectors": 0,
+        },
+        "gauge_L2": {
+            "dimension": 24,
+            "hom_from_adjoint": 1,
+            "hom_to_adjoint": 0,
+            "trivial_fixed_vectors": 0,
+        },
+    }
+    checks["all_twelve_hom_and_dimension_entries_exact"] = reports == expected_reports
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass181.adjoint_shadow_mod3.v1",
+        "schema": "w33.pass181.adjoint_hom_census.v2",
         "status": "PASS" if all_pass else "FAIL",
         "adjoint": {
             "module": "sp(4,F3), dimension 10 = Theta, defining characteristic",
             "schur_endomorphism_dim": 1,
+            "boundary": "endomorphism dimension one does not alone prove simplicity",
         },
         "trade_modules_mod3": reports,
         "reading": (
             "the defining-characteristic side of the trade tower: exact "
             "Hom_G dimensions between the adjoint module sp(4,F3) and the "
             "mod-3 reductions of the address, route, and gauge trade "
-            "lattices -- where (and whether) the gauge algebra "
-            "materializes inside the discriminant glue"
+            "lattices.  Nonzero Hom does not alone prove injection; the "
+            "rank-10 embeddings for address and gauge are established by "
+            "the explicit maps in Pass 184"
         ),
         "checks": {name: bool(value) for name, value in checks.items()},
     }

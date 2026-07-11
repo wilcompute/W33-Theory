@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Periodic H^2 classification and transgression for the mixed order-eight rail."""
+"""Periodic H^2 classes for a prescribed C2 action and rail transgression."""
 from __future__ import annotations
 from functools import lru_cache
 from fractions import Fraction
 import json
+from pathlib import Path
 
 from sympy import Matrix, ZZ
 from sympy.polys.matrices import DomainMatrix
@@ -14,6 +15,9 @@ from w33_levi_next5_v5_common import (
     gf2_row_basis, in_span, point_outer_perm, point_transvection_perm,
     sha256_json, tagged_basis,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "PART_2026_07_11_LEVI_NEXT5_V5_extension.json"
 
 
 def smith(A: Matrix):
@@ -155,8 +159,9 @@ def analyze():
         qv=Fraction(q_num128(coord,parts,S,D,G),64)
         while qv>=2:qv-=2
         classes.append({
-            'class':hex(c),'canonical_mask':hex(rep),'weight':rep.bit_count(),
-            'quadratic_value_mod_2':str(qv),'split':c==0,
+            'class':hex(c),'selected_min_hamming_smith_mask':hex(rep),
+            'selected_mask_weight':rep.bit_count(),
+            'representative_quadratic_value_mod_2':str(qv),'split':c==0,
             'outer_lift_order':2 if c==0 else 4,
         })
 
@@ -173,7 +178,10 @@ def analyze():
         'gauged_order8_generator_fixed':fixed_hprime and order(hprime)==8,
         'scalar5_mixing_still_nonremovable':not in_span(u,image),
         'eight_H2_classes':len(classes)==8 and sum(not x['split'] for x in classes)==7,
-        'crossed_product_associativity_condition':all(apply_cols(N,int(x['canonical_mask'],16))==0 for x in classes),
+        'crossed_product_associativity_condition':all(
+            apply_cols(N,int(x['selected_min_hamming_smith_mask'],16))==0
+            for x in classes
+        ),
     }
     return {
         'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,
@@ -195,17 +203,30 @@ def analyze():
             'minimal_gauge_mask':hex(gauge),'minimal_gauge_weight':gauge.bit_count(),
             'fixed_order8_lift':list(hprime),
         },
-        'H2_extensions':classes,
+        'H2_extension_classes_prescribed_action':classes,
+        'representative_convention':(
+            'Each H2 class is labeled by a minimum-Hamming mask in the selected '
+            'Smith-coordinate basis. The mask, its weight, and the displayed '
+            'quadratic value are representative/basis dependent; the cohomology '
+            'class and split/non-split status are the invariant content.'
+        ),
         'digests':{'outer_action':sha256_json(T),'H2_classes':sha256_json(classes),'fixed_gauge':sha256_json(list(hprime))},
         'theorem':(
             'The C2-module A[2] has periodic H1=H2 of dimension three. The mixed class equals the fixed-line '
-            'class and defines one canonical non-split order-four outer lift, but the connecting transgression of '
+            'class and selects a non-split order-four lift for the prescribed nontrivial C2 action, but the connecting transgression of '
             'h mod A[2] vanishes because tau(h)-h=u+4h has zero class. Consequently an explicit order-eight '
             'generator h+v is tau-fixed, even though no gauge removes u while retaining scalar action 5.'
         ),
-        'scope_boundary':'This classifies extensions of C2 by the exact 2-torsion module and the connecting map for the order-eight rail; it does not assert a unique global extension of the entire integral Weyl lattice.'
+        'scope_boundary':(
+            'This classifies group extensions with the prescribed nontrivial C2 action on the exact '
+            '2-torsion module; they are not central extensions. It also computes the connecting map '
+            'for the order-eight rail. It does not assert a unique global extension of the integral '
+            'Weyl lattice, and Smith-coordinate representative labels are not canonical.'
+        )
     }
 
 def main():
-    out=analyze();print(json.dumps(out,indent=2,sort_keys=True));return 0 if out['status']=='PASS' else 1
+    out=analyze();text=json.dumps(out,indent=2,sort_keys=True)+"\n"
+    OUT.write_text(text,encoding="utf-8");print(text,end="")
+    return 0 if out['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())

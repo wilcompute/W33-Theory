@@ -20,6 +20,17 @@
       14,
       1
     ],
+    "irreducibility_scan": {
+      "method": "one cyclic-span test per group orbit, covering every nonzero vector",
+      "low_14_vector_orbits": 12,
+      "middle_8_vector_orbits": 2,
+      "high_14_vector_orbits": 12,
+      "vectors_covered": {
+        "low_14": 16383,
+        "middle_8": 255,
+        "high_14": 16383
+      }
+    },
     "reading": "one filtration generates the binary facts: the sentinel code C is the second layer (1+14), the SO(10) shadow H10 = C_perp/C is the middle sandwich (1,8,1) with its fixed vector f = [im A2], and the E8 shadow is the central 8-layer ker A2/im A2"
   },
   "line_side": {
@@ -32,7 +43,7 @@
     },
     "im_AL_in_route": false,
     "route_in_ker_AL": true,
-    "reading": "the line module rearranges: rank A_L = 10 = q^2+1, the hull [40,9] sits low (j + the 8-layer), and the filtration shift IS the address/route asymmetry"
+    "reading": "the line module rearranges: rank A_L = 10 = q^2+1, the route hull has dimension 9, im A_L lies in route-perp but not in the route code, and the point-side chain does not transfer unchanged to line coordinates"
   },
   "checks": {
     "group_order": true,
@@ -43,8 +54,9 @@
     "kerA2_in_Cperp": true,
     "Cperp_in_jperp": true,
     "layer_dims_1_14_1_8_1_14_1": true,
-    "layer_14_low_irreducible": true,
-    "layer_8_irreducible": true,
+    "layer_14_low_irreducible_exhaustive": true,
+    "layer_8_irreducible_exhaustive": true,
+    "layer_14_high_irreducible_exhaustive": true,
     "fixed_space_is_j_only": true,
     "H10_bottom_is_imA2_class": true,
     "line_side_rank_AL_10": true,

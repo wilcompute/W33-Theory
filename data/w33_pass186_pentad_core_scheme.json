@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass186.pentad_core_scheme.v1",
+  "schema": "w33.pass186.pentad_core_scheme.v2",
   "status": "PASS",
   "shell": {
     "size": 432,
@@ -290,49 +290,17 @@
   },
   "sparse_relations": [
     {
-      "orbital": 19,
-      "valency": 1,
-      "ip_value": -10,
-      "component_sizes": {
-        "2": 216
-      },
-      "component_count": 216,
-      "stabilizer_order": 120,
-      "fixed_points": 0,
-      "fixed_lines": 0
-    },
-    {
-      "orbital": 21,
-      "valency": 1,
-      "ip_value": 10,
-      "component_sizes": {
-        "1": 432
-      },
-      "component_count": 432,
-      "stabilizer_order": 120,
-      "fixed_points": 0,
-      "fixed_lines": 0
-    },
-    {
-      "orbital": 39,
-      "valency": 1,
-      "ip_value": -10,
-      "component_sizes": {
-        "2": 216
-      },
-      "component_count": 216,
-      "stabilizer_order": 120,
-      "fixed_points": 0,
-      "fixed_lines": 0
-    },
-    {
       "orbital": 9,
       "valency": 5,
       "ip_value": 2,
       "component_sizes": {
         "12": 36
       },
+      "nontrivial_component_sizes": {
+        "12": 36
+      },
       "component_count": 36,
+      "nontrivial_component_count": 36,
       "stabilizer_order": 720,
       "fixed_points": 0,
       "fixed_lines": 0
@@ -345,19 +313,11 @@
         "1": 216,
         "6": 36
       },
-      "component_count": 252,
-      "stabilizer_order": 720,
-      "fixed_points": 0,
-      "fixed_lines": 0
-    },
-    {
-      "orbital": 28,
-      "valency": 5,
-      "ip_value": 2,
-      "component_sizes": {
-        "12": 36
+      "nontrivial_component_sizes": {
+        "6": 36
       },
-      "component_count": 36,
+      "component_count": 252,
+      "nontrivial_component_count": 36,
       "stabilizer_order": 720,
       "fixed_points": 0,
       "fixed_lines": 0
@@ -370,8 +330,12 @@
         "1": 216,
         "6": 36
       },
+      "nontrivial_component_sizes": {
+        "6": 36
+      },
       "component_count": 252,
-      "stabilizer_order": 120,
+      "nontrivial_component_count": 36,
+      "stabilizer_order": 720,
       "fixed_points": 0,
       "fixed_lines": 0
     }
@@ -381,9 +345,9 @@
     "shell_432_norm_10": true,
     "ip_profile_constant": true,
     "group_order": true,
-    "shell_orbit_count": true,
-    "orbital_rank_computed": true,
+    "shell_has_exactly_two_orbits": true,
+    "orbital_rank_40": true,
     "orbital_configuration_coherent": true,
-    "sparse_relations_recorded": true
+    "sparse_relations_are_one_crown_and_two_six_families": true
   }
 }

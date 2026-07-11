@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
-"""Pass 185: the octahedron clock -- the axis torsor behind the S3 fibre.
+"""Pass 185: the octahedron clock -- a native degree-three S3 fibre.
 
 The S3 completion admission controller postulates a three-completion
 fibre with seed action S3 (order 6) over each ordered path.  Pass 182
 gave every LINE of W(3,3) a canonical octahedron whose three axes are the
 three pair-partitions of the line.  This witness certifies the geometric
-torsor and aligns it with the controller's arithmetic:
+fibre and aligns it with the controller's arithmetic:
 
-1. THE TORSOR.  The line stabilizer (order 648) acts on its octahedron's
+1. THE DEGREE-THREE SET.  The line stabilizer (order 648) acts on its
    three axes with FULL image S3 (surjective onto the pair-partition
-   action) -- so each line carries a native free S3-structure, and the
-   octahedron's total runtime symmetry (the stabilizer's image on the six
-   trades) is computed exactly.
+   action).  The axes form the transitive S3-set S3/C2, not an S3 torsor:
+   the action kernel has order 108 and an axis stabilizer has order 216.
 
 2. THE INTRINSIC MAP.  The constant-section rule (Pass 182) supplies the
    line of each octahedron with no group input; the composite
    line -> octahedron -> axis-fibre is PSp(4,3)-equivariant by
-   construction, verified on a generator.
+   construction, verified on both stored generators for all 40 lines and
+   all 120 axes.
 
 3. THE CONTROLLER ALIGNMENT.  From the committed S3 bridge data:
    4320 ordered paths x 3 completions = 12960 incidences with seed
    completion action of order 6 = |S3| -- the same fibre shape the axis
-   torsor realizes geometrically (recorded alignment; no identification
+   degree-three S3-set realizes geometrically (recorded alignment; no identification
    of the 4320-path carrier is claimed).
 """
 
@@ -174,7 +174,7 @@ def main():
     checks["constant_section_total"] = all(v is not None for v in matches.values())
     checks["constant_section_bijective"] = len(set(matches.values())) == 40
 
-    # 1. the torsor: stabilizer of one line acting on its triangle's axes
+    # 1. the degree-three S3-set: one line stabilizer acting on its axes
     tri0 = next(tri for tri, ln in matches.items() if ln == 0)
     line0 = lines[0]
     stabilizer = [perm for perm in group if frozenset(perm[x] for x in line0) == line0]
@@ -189,17 +189,21 @@ def main():
         return mapping
 
     axis_perms = set()
-    trade_images = set()
-    tri_vectors = [
-        tuple(int(x) for x in shell[n]) for n in range(240) if sup_of[n] in tri_supports
-    ]
+    axis_perm_counts = Counter()
     for perm in stabilizer:
         images = [support_image(perm, s) for s in tri_supports]
-        axis_perms.add(tuple(tri_supports.index(img) for img in images))
-    checks["axis_action_is_full_S3"] = len(axis_perms) == 6
+        axis_perm = tuple(tri_supports.index(img) for img in images)
+        axis_perms.add(axis_perm)
+        axis_perm_counts[axis_perm] += 1
+    identity_axis_perm = tuple(range(3))
+    checks["axis_action_is_full_S3"] = axis_perms == set(permutations(range(3)))
+    checks["axis_action_kernel_108"] = axis_perm_counts[identity_axis_perm] == 108
+    checks["axis_stabilizer_216_with_image_C2"] = (
+        sum(count for perm, count in axis_perm_counts.items() if perm[0] == 0) == 216
+        and sum(1 for perm in axis_perms if perm[0] == 0) == 2
+    )
 
-    # pair-partition equivariance on one generator: the partition matched
-    # to each axis (Pass 182's diagonal) transports correctly
+    # Pair-partition equivariance on both generators and all 120 axes.
     def partition_of_axis(support, line):
         line_sorted = sorted(line)
         partitions = [
@@ -217,6 +221,7 @@ def main():
                 ]
             ),
         ]
+        matches_here = []
         for partition in partitions:
             pair1, pair2 = tuple(partition)
             count = sum(
@@ -225,56 +230,97 @@ def main():
                 if len(octads[o] & set(pair1)) == 2 or len(octads[o] & set(pair2)) == 2
             )
             if count == 6:
-                return partition
-        return None
+                matches_here.append(partition)
+        return matches_here[0] if len(matches_here) == 1 else None
 
-    labels0 = [partition_of_axis(s, line0) for s in tri_supports]
-    checks["axes_carry_distinct_partitions"] = (
-        None not in labels0 and len(set(labels0)) == 3
+    axis_labels = {}
+    all_lines_distinct = True
+    for tri, line_id in matches.items():
+        labels_here = [
+            partition_of_axis(sup120[support], lines[line_id]) for support in tri
+        ]
+        if None in labels_here or len(set(labels_here)) != 3:
+            all_lines_distinct = False
+        for support, label in zip(tri, labels_here):
+            axis_labels[sup120[support]] = label
+    checks["all_40_lines_carry_three_distinct_partitions"] = (
+        all_lines_distinct and len(axis_labels) == 120
     )
 
-    g = two_gens[0]
-    image_line = frozenset(g[x] for x in line0)
-    image_line_id = next(n for n, line in enumerate(lines) if line == image_line)
-    image_tri = next(tri for tri, ln in matches.items() if ln == image_line_id)
+    line_index = {frozenset(line): i for i, line in enumerate(lines)}
+    triangle_for_line = {line_id: tri for tri, line_id in matches.items()}
+    dictionary_cases = 0
+    axis_cases = 0
     equivariant = True
-    for s, label in zip(tri_supports, labels0):
-        image_support = support_image(g, s)
-        if image_support not in [sup120[i] for i in image_tri]:
-            equivariant = False
-            break
-        transported = frozenset(frozenset(g[x] for x in pair) for pair in label)
-        if partition_of_axis(image_support, image_line) != transported:
-            equivariant = False
-            break
-    checks["partition_labels_equivariant"] = bool(equivariant)
+    for generator in two_gens:
+        for tri, line_id in matches.items():
+            image_line = frozenset(generator[x] for x in lines[line_id])
+            image_line_id = line_index[image_line]
+            image_tri = triangle_for_line[image_line_id]
+            image_supports = {sup120[support] for support in image_tri}
+            dictionary_cases += 1
+            for support_id in tri:
+                support = sup120[support_id]
+                image_support = support_image(generator, support)
+                axis_cases += 1
+                if image_support not in image_supports:
+                    equivariant = False
+                    continue
+                transported = frozenset(
+                    frozenset(generator[x] for x in pair)
+                    for pair in axis_labels[support]
+                )
+                if axis_labels[image_support] != transported:
+                    equivariant = False
+    checks["partition_labels_equivariant_240_cases"] = (
+        equivariant and dictionary_cases == 80 and axis_cases == 240
+    )
 
     # 2. controller alignment from committed data
     alignment = {}
     if BRIDGE.exists():
         bridge = json.loads(BRIDGE.read_text(encoding="utf-8"))
         chk = bridge.get("checks", {})
+        frontier = bridge.get("frontier_completion_surface", {})
+        control = bridge.get("probe_control_surface", {})
         alignment = {
-            "bridge_checks_pass": all(
-                bool(v) for v in chk.values() if isinstance(v, bool)
+            "bridge_verified": bridge.get("verified") is True,
+            "bridge_checks_pass": bool(chk) and all(bool(v) for v in chk.values()),
+            "ordered_paths": frontier.get("ordered_nonlocal_paths"),
+            "completions_per_path": frontier.get("completions_per_path"),
+            "completion_incidences": frontier.get("completion_incidences"),
+            "seed_completion_action_size": frontier.get(
+                "seed_completion_action_size"
             ),
-            "ordered_paths_4320": True,
-            "completions_per_path_3": True,
-            "incidences_12960": True,
+            "runtime_slots": control.get("supercycle_runtime_slots"),
         }
-        checks["controller_bridge_loaded"] = True
+        checks["controller_bridge_exact"] = alignment == {
+            "bridge_verified": True,
+            "bridge_checks_pass": True,
+            "ordered_paths": 4320,
+            "completions_per_path": 3,
+            "completion_incidences": 12960,
+            "seed_completion_action_size": 6,
+            "runtime_slots": 51840,
+        }
     else:
-        checks["controller_bridge_loaded"] = True  # optional input
+        checks["controller_bridge_exact"] = False
 
     all_pass = all(checks.values())
     payload = {
-        "schema": "w33.pass185.octahedron_clock.v1",
+        "schema": "w33.pass185.octahedron_clock.v2",
         "status": "PASS" if all_pass else "FAIL",
-        "torsor": {
+        "degree_three_s3_set": {
             "line_stabilizer_order": 648,
             "axis_action_image": "S3 (order 6, full)",
+            "action_kernel_order": 108,
+            "axis_stabilizer_order": 216,
+            "image_axis_stabilizer": "C2 (order 2)",
+            "homogeneous_space": "S3/C2, hence not an S3 torsor",
             "axis_labels": "the three pair-partitions of the line",
             "equivariant": bool(equivariant),
+            "dictionary_generator_cases": dictionary_cases,
+            "axis_generator_cases": axis_cases,
         },
         "alignment": {
             "geometric_fibre": "40 lines x 3 axes (x2 trades) = 240",
@@ -282,8 +328,8 @@ def main():
             "seed_action": "|S3| = 6 on both sides",
             **alignment,
             "honest_scope": (
-                "the axis torsor gives the controller's postulated "
-                "three-completion S3 fibre a native geometric model per "
+                "the degree-three axis S3-set gives the controller's "
+                "postulated three-completion fibre a native geometric model per "
                 "line; the 4320-path carrier itself is not identified "
                 "with an octahedron object here"
             ),

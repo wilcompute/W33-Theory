@@ -1,33 +1,30 @@
 import Mathlib.Tactic
 
 /-!
-# Odd-q binary Levi rank assembly
+# Arithmetic identities behind the proposed odd-q binary Levi ranks
 
-This file formalizes the arithmetic closure of the central-translation block
-proof for the binary point-line incidence operator of `W(3,q)`. The geometric
-input is represented by the trivial and nontrivial block ranks proved in the
-paper/executable certificate; the theorems below kernel-check the global rank
-formulas, parity of all half-integral expressions for odd `q`, and the Jordan
-rank ladder.
+This file formalizes only the arithmetic closure used after a geometric
+central-translation block calculation: polynomial identities, parity of the
+half-integral expressions for odd `q`, and consistency of the proposed Jordan
+multiplicities.  No incidence matrix, finite field, Fourier decomposition, or
+matrix rank is defined here, so the geometric rank theorem remains an external
+input rather than a Lean theorem in this module.
 -/
 
 namespace W33.OddQRank
 
-/-- Twice the point-side rank assembled from one affine block and `q-1`
-nontrivial character blocks. -/
+/-- Polynomial identity corresponding to the proposed point-block assembly. -/
 theorem point_block_assembly (q : ℤ) :
     2 * (q^2 + 1) + (q - 1) * q * (q - 1) = q * (q^2 + 1) + 2 := by
   ring
 
-/-- Twice the incidence rank assembled from one affine block and `q-1`
-nontrivial character blocks. -/
+/-- Polynomial identity corresponding to the proposed incidence-block assembly. -/
 theorem incidence_block_assembly (q : ℤ) :
     2 * (q^2 + q + 1) + (q - 1) * q * (q + 1) =
       q * (q + 1)^2 + 2 := by
   ring
 
-/-- The line-side Gram rank assembled from the affine block and the `q-1`
-nontrivial character blocks. -/
+/-- Polynomial identity corresponding to the proposed line-block assembly. -/
 theorem line_block_assembly (q : ℤ) :
     (q + 1) + (q - 1) * q = q^2 + 1 := by
   ring

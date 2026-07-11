@@ -2,82 +2,65 @@ import W33.OddQRank
 import Mathlib.Tactic
 
 /-!
-# Fourier-block certificate for the odd-q Levi theorem
+# Arithmetic block assembly for the odd-q Levi formulas
 
-This module turns the geometric central-translation decomposition into an
-explicit kernel-checked interface.  A producer of `OddQFourierCertificate q`
-must supply the fixed-character and nontrivial-character ranks; the theorems
-below prove that these local blocks force the global point, line, incidence,
-and nilpotent-Jordan formulas.
+This module kernel-checks the polynomial identities obtained *after* the
+trivial and nontrivial block ranks have been supplied by geometry.  It does
+not define a finite-field Fourier transform, an incidence matrix, or a rank,
+and therefore does not prove those geometric block ranks.
+
+The earlier `TrivialBlock` and `NontrivialBlock` structures contained only
+reflexive equalities, while the global theorems ignored their certificate
+argument.  They have been removed so the formal surface states its actual
+scope directly: divisibility, arithmetic assembly, and the q=3 numerals.
 -/
 
 namespace W33.FourierBlocks
 
-/-- Rank data for the trivial additive-character block. -/
-structure TrivialBlock (q : ℤ) : Prop where
-  pointRank : q^2 + 1 = q^2 + 1
-  incidenceRank : q^2 + q + 1 = q^2 + q + 1
-  lineRank : q + 1 = q + 1
-
-/-- Rank data for one nontrivial additive-character block.  The equalities are
-cleared of denominators so the certificate lives entirely over `ℤ`. -/
-structure NontrivialBlock (q : ℤ) : Prop where
-  pointRankTwice : 2 * (q * (q - 1) / 2) = q * (q - 1)
-  incidenceRankTwice : 2 * (q * (q + 1) / 2) = q * (q + 1)
-  lineRank : q = q
-
-/-- Complete local Fourier certificate.  The geometric formalization supplies
-one trivial block and one common rank theorem for all `q-1` nontrivial blocks. -/
-structure OddQFourierCertificate (q : ℤ) : Prop where
-  odd : Odd q
-  trivial : TrivialBlock q
-  nontrivial : NontrivialBlock q
-
-/-- Oddness makes the nontrivial point-block numerator divisible by two. -/
+/-- Oddness makes the proposed nontrivial point-block numerator divisible by
+two.  This proves integrality, not that the quotient is a matrix rank. -/
 theorem pointBlockIntegral (q : ℤ) (hq : Odd q) :
     2 ∣ q * (q - 1) := by
   rcases hq with ⟨k, rfl⟩
   refine ⟨(2*k + 1) * k, ?_⟩
   ring
 
-/-- Oddness makes the nontrivial incidence-block numerator divisible by two. -/
+/-- Oddness makes the proposed nontrivial incidence-block numerator
+divisible by two. -/
 theorem incidenceBlockIntegral (q : ℤ) (hq : Odd q) :
     2 ∣ q * (q + 1) := by
   rcases hq with ⟨k, rfl⟩
   refine ⟨(2*k + 1) * (k + 1), ?_⟩
   ring
 
-/-- The fixed block plus the `q-1` nontrivial blocks force the global point rank. -/
-theorem globalPointRankCleared (q : ℤ) (_c : OddQFourierCertificate q) :
+/-- Arithmetic assembly identity for the proposed point-block dimensions. -/
+theorem globalPointRankArithmetic (q : ℤ) :
     2 * (q^2 + 1) + (q - 1) * q * (q - 1) = q * (q^2 + 1) + 2 := by
   exact W33.OddQRank.point_block_assembly q
 
-/-- The fixed block plus the `q-1` nontrivial blocks force the global incidence rank. -/
-theorem globalIncidenceRankCleared (q : ℤ) (_c : OddQFourierCertificate q) :
+/-- Arithmetic assembly identity for the proposed incidence-block dimensions. -/
+theorem globalIncidenceRankArithmetic (q : ℤ) :
     2 * (q^2 + q + 1) + (q - 1) * q * (q + 1) = q * (q + 1)^2 + 2 := by
   exact W33.OddQRank.incidence_block_assembly q
 
-/-- The fixed and nontrivial line blocks force the global line-Gram rank. -/
-theorem globalLineRank (q : ℤ) (_c : OddQFourierCertificate q) :
+/-- Arithmetic assembly identity for the proposed line-block dimensions. -/
+theorem globalLineRankArithmetic (q : ℤ) :
     (q + 1) + (q - 1) * q = q^2 + 1 := by
   exact W33.OddQRank.line_block_assembly q
 
-/-- The local Fourier certificate produces the complete arithmetic certificate
-used by the Jordan theorem. -/
-theorem arithmeticClosure (q : ℤ) (_c : OddQFourierCertificate q) :
-    W33.OddQRank.ArithmeticCertificate q :=
+/-- Collect the arithmetic identities used by the Jordan calculation. -/
+theorem arithmeticClosure (q : ℤ) : W33.OddQRank.ArithmeticCertificate q :=
   W33.OddQRank.arithmeticCertificate q
 
-/-- Numerically close the native `q=3` case used by the repository witnesses. -/
-theorem q3Ranks :
+/-- Numerical evaluation of the three proposed formulas at q=3. -/
+theorem q3ArithmeticValues :
     ((3 * (3 + 1)^2 + 2) / 2 : ℤ) = 25 ∧
     ((3 * (3^2 + 1) + 2) / 2 : ℤ) = 16 ∧
     (3^2 + 1 : ℤ) = 10 := by
   norm_num
 
-/-- Numerically close the `q=3` Jordan census: two `J₄`, twenty-two `J₃`, no
-`J₂`, and six `J₁` blocks on the 80-dimensional Levi space. -/
-theorem q3JordanCensus :
+/-- Numerical evaluation of the proposed q=3 Jordan multiplicities. -/
+theorem q3JordanArithmetic :
     ((3^3 + 2*3^2 + 3 - 4) / 2 : ℤ) = 22 ∧
     (3 * (3 - 1)^2 / 2 : ℤ) = 6 ∧
     2*4 + 22*3 + 6 = 80 := by

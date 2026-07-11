@@ -1,21 +1,30 @@
 {
-  "schema": "w33.pass185.octahedron_clock.v1",
+  "schema": "w33.pass185.octahedron_clock.v2",
   "status": "PASS",
-  "torsor": {
+  "degree_three_s3_set": {
     "line_stabilizer_order": 648,
     "axis_action_image": "S3 (order 6, full)",
+    "action_kernel_order": 108,
+    "axis_stabilizer_order": 216,
+    "image_axis_stabilizer": "C2 (order 2)",
+    "homogeneous_space": "S3/C2, hence not an S3 torsor",
     "axis_labels": "the three pair-partitions of the line",
-    "equivariant": true
+    "equivariant": true,
+    "dictionary_generator_cases": 80,
+    "axis_generator_cases": 240
   },
   "alignment": {
     "geometric_fibre": "40 lines x 3 axes (x2 trades) = 240",
     "controller_fibre": "4320 ordered paths x 3 completions = 12960",
     "seed_action": "|S3| = 6 on both sides",
+    "bridge_verified": true,
     "bridge_checks_pass": true,
-    "ordered_paths_4320": true,
-    "completions_per_path_3": true,
-    "incidences_12960": true,
-    "honest_scope": "the axis torsor gives the controller's postulated three-completion S3 fibre a native geometric model per line; the 4320-path carrier itself is not identified with an octahedron object here"
+    "ordered_paths": 4320,
+    "completions_per_path": 3,
+    "completion_incidences": 12960,
+    "seed_completion_action_size": 6,
+    "runtime_slots": 51840,
+    "honest_scope": "the degree-three axis S3-set gives the controller's postulated three-completion fibre a native geometric model per line; the 4320-path carrier itself is not identified with an octahedron object here"
   },
   "checks": {
     "shell_240": true,
@@ -26,8 +35,10 @@
     "constant_section_bijective": true,
     "line_stabilizer_648": true,
     "axis_action_is_full_S3": true,
-    "axes_carry_distinct_partitions": true,
-    "partition_labels_equivariant": true,
-    "controller_bridge_loaded": true
+    "axis_action_kernel_108": true,
+    "axis_stabilizer_216_with_image_C2": true,
+    "all_40_lines_carry_three_distinct_partitions": true,
+    "partition_labels_equivariant_240_cases": true,
+    "controller_bridge_exact": true
   }
 }

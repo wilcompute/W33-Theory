@@ -18,15 +18,18 @@ module holonet_v5_frame_reducer (
     output logic [23:0]  count12, count13, count14, count15
 );
     logic [23:0] counts [0:15];
+    logic [23:0] frame_counts [0:15];
     logic [63:0] first_ts;
     logic        have_first;
+    logic        accum_overflow;
+    logic [31:0] frame_counter;
     integer i;
 
     assign s_axis_tready = ~m_axis_tvalid;
-    assign count0=counts[0]; assign count1=counts[1]; assign count2=counts[2]; assign count3=counts[3];
-    assign count4=counts[4]; assign count5=counts[5]; assign count6=counts[6]; assign count7=counts[7];
-    assign count8=counts[8]; assign count9=counts[9]; assign count10=counts[10]; assign count11=counts[11];
-    assign count12=counts[12]; assign count13=counts[13]; assign count14=counts[14]; assign count15=counts[15];
+    assign count0=frame_counts[0]; assign count1=frame_counts[1]; assign count2=frame_counts[2]; assign count3=frame_counts[3];
+    assign count4=frame_counts[4]; assign count5=frame_counts[5]; assign count6=frame_counts[6]; assign count7=frame_counts[7];
+    assign count8=frame_counts[8]; assign count9=frame_counts[9]; assign count10=frame_counts[10]; assign count11=frame_counts[11];
+    assign count12=frame_counts[12]; assign count13=frame_counts[13]; assign count14=frame_counts[14]; assign count15=frame_counts[15];
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -34,10 +37,15 @@ module holonet_v5_frame_reducer (
             m_axis_frame_id <= 32'd0;
             m_axis_first_timestamp_ps <= 64'd0;
             m_axis_last_timestamp_ps <= 64'd0;
+            frame_counter <= 32'd0;
             first_ts <= 64'd0;
             have_first <= 1'b0;
+            accum_overflow <= 1'b0;
             overflow <= 1'b0;
-            for (i=0; i<16; i=i+1) counts[i] <= 24'd0;
+            for (i=0; i<16; i=i+1) begin
+                counts[i] <= 24'd0;
+                frame_counts[i] <= 24'd0;
+            end
         end else begin
             if (m_axis_tvalid && m_axis_tready)
                 m_axis_tvalid <= 1'b0;
@@ -46,18 +54,23 @@ module holonet_v5_frame_reducer (
                     m_axis_tvalid <= 1'b1;
                     m_axis_first_timestamp_ps <= have_first ? first_ts : s_axis_timestamp_ps;
                     m_axis_last_timestamp_ps <= s_axis_timestamp_ps;
-                    m_axis_frame_id <= m_axis_frame_id + 1'b1;
+                    m_axis_frame_id <= frame_counter;
+                    frame_counter <= frame_counter + 1'b1;
                     first_ts <= 64'd0;
                     have_first <= 1'b0;
-                    overflow <= 1'b0;
-                    for (i=0; i<16; i=i+1) counts[i] <= 24'd0;
+                    overflow <= accum_overflow;
+                    accum_overflow <= 1'b0;
+                    for (i=0; i<16; i=i+1) begin
+                        frame_counts[i] <= counts[i];
+                        counts[i] <= 24'd0;
+                    end
                 end else if (s_axis_channel < 5'd16) begin
                     if (!have_first) begin
                         first_ts <= s_axis_timestamp_ps;
                         have_first <= 1'b1;
                     end
                     if (counts[s_axis_channel] == 24'hffffff)
-                        overflow <= 1'b1;
+                        accum_overflow <= 1'b1;
                     else
                         counts[s_axis_channel] <= counts[s_axis_channel] + 1'b1;
                 end

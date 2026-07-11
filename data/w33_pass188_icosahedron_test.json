@@ -1,0 +1,49 @@
+{
+  "schema": "w33.pass188.double_six_crown.v2",
+  "status": "PASS",
+  "orbital_families": {
+    "directed_crown_pair": [
+      9,
+      28
+    ],
+    "symmetric_six_pair": [
+      14,
+      35
+    ],
+    "crown_components": 36,
+    "sixes_per_family": [
+      36,
+      36
+    ]
+  },
+  "verdict": {
+    "is_icosahedron": false,
+    "exact_graph": "K6,6 minus a perfect matching (the 6-crown)",
+    "exact_characteristic_polynomial": "(x-5)(x+5)(x-1)^5(x+1)^5",
+    "reading": "each dodecad is assembled bijectively from one K6 in each of the two shell orbits; crossing adjacency is exactly the 6-crown.  This is an internal PSp-equivariant double-six model, not an identification inferred from a spectrum"
+  },
+  "symmetry": {
+    "component_stabilizer_order": 720,
+    "image_in_sym12_order": 720,
+    "image_on_one_six_order": 720,
+    "group": "S6 on either intrinsic six"
+  },
+  "double_six_count": {
+    "components": 36,
+    "first_sixes": 36,
+    "second_sixes": 36,
+    "gluing": "one six from each family per crown, bijectively"
+  },
+  "checks": {
+    "shell_432": true,
+    "group_order": true,
+    "valency5_orbitals_split_2_directed_2_symmetric": true,
+    "directed_orbitals_are_transposes": true,
+    "all_36_components_are_exact_crown_graphs": true,
+    "two_exact_36_component_K6_families": true,
+    "crown_bipartitions_glue_the_two_six_families_bijectively": true,
+    "component_stabilizer_is_faithful_720": true,
+    "component_stabilizer_is_full_S6_on_each_six": true,
+    "orbit_stabilizer_gives_36_components": true
+  }
+}

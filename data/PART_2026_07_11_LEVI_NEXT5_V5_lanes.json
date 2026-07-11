@@ -84,10 +84,10 @@
     "decomposition_72_6_6x27": true,
     "generator_lane_preservation": true,
     "generator_route_equivariance": true,
-    "generator_schlafli_equivariance": true,
+    "generator_schlafli_complement_equivariance": true,
     "route_signature_16_16_40": true,
-    "runtime_replay_50k": true,
-    "six_schlafli_payload_lanes": true
+    "seeded_replay_smoke_50k": true,
+    "six_schlafli_complement_payload_lanes": true
   },
   "decomposition": {
     "control_root_indices": [
@@ -364,11 +364,6 @@
       ]
     ]
   },
-  "falsifier": {
-    "passed": true,
-    "steps": 50000,
-    "trace_digest": "73af7cac4a81b800b99637dae6d210b329174dd74d96565d5f7bee4d375c1abc"
-  },
   "lane_semantics": {
     "A2_REFERENCE": {
       "count": 6,
@@ -380,7 +375,7 @@
     },
     "MINUSCULE_PAYLOAD": {
       "lanes": 6,
-      "meaning": "six parallel Schlaefli payload/generation lanes",
+      "meaning": "six parallel degree-10 complement-Schlaefli payload lanes",
       "slots_per_lane": 27
     }
   },
@@ -722,7 +717,13 @@
     "route_digest": "b1883fae735968059dba3e3335f1ef536ab808b24e65ac1562fb6744f99549ce",
     "state_digest": "85a9365621257eee2ba843a8fef57ff6b02b29d852eee91c68ce96212324d074"
   },
-  "scope_boundary": "The six payload lanes are canonically typed and individually identified with the cubic-line graph; choosing one physical naming alignment across all six remains a calibration convention, not extra mathematics.",
+  "scope_boundary": "The six payload lanes are canonically typed and individually identified with the degree-10 intersection graph, i.e. the complement of the conventional Schlaefli graph. Choosing one physical naming alignment across all six remains a calibration convention. The seeded 50k replay is a smoke test; exhaustive generator equivariance is the certificate.",
+  "seeded_replay_smoke": {
+    "passed": true,
+    "proof_strength": "none beyond the exhaustive generator/object equivariance checks",
+    "steps": 50000,
+    "trace_digest": "73af7cac4a81b800b99637dae6d210b329174dd74d96565d5f7bee4d375c1abc"
+  },
   "status": "PASS",
-  "theorem": "The complete E8 carrier is compiled into 72 typed E6 control states, a pointwise-fixed six-state A2 reference hexagon, and six 27-state Schlaefli payload lanes. Every W(E6) simple reflection preserves lane identity, Schlaefli adjacency, and the exact 16+/16-/40-orthogonal payload-to-control routing relation."
+  "theorem": "The complete E8 carrier is compiled into 72 typed E6 control states, a pointwise-fixed six-state A2 reference hexagon, and six 27-state payload lanes carrying SRG(27,10,1,5), the complement of the conventional Schlaefli graph SRG(27,16,10,8). Every W(E6) simple reflection preserves lane identity, complement-Schlaefli adjacency, and the exact 16+/16-/40-orthogonal routing relation."
 }

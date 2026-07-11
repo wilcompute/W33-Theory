@@ -1,0 +1,159 @@
+{
+  "schema": "w33.pass190.steinberg_composition_census.v2",
+  "status": "PASS",
+  "gap_source": "live",
+  "m3_degrees": [
+    1,
+    5,
+    10,
+    14,
+    25,
+    81
+  ],
+  "carriers": {
+    "points": {
+      "dimension": 40,
+      "multiplicities": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "steinberg_multiplicity": 0
+    },
+    "lines": {
+      "dimension": 40,
+      "multiplicities": [
+        2,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "steinberg_multiplicity": 0
+    },
+    "arcs": {
+      "dimension": 480,
+      "multiplicities": [
+        4,
+        6,
+        10,
+        6,
+        4,
+        2
+      ],
+      "steinberg_multiplicity": 2
+    },
+    "shell": {
+      "dimension": 480,
+      "multiplicities": [
+        6,
+        3,
+        9,
+        9,
+        0,
+        3
+      ],
+      "steinberg_multiplicity": 3
+    },
+    "trades": {
+      "dimension": 90,
+      "multiplicities": [
+        2,
+        3,
+        2,
+        2,
+        1,
+        0
+      ],
+      "steinberg_multiplicity": 0
+    },
+    "supports": {
+      "dimension": 45,
+      "multiplicities": [
+        2,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "steinberg_multiplicity": 0
+    },
+    "skew_pairs": {
+      "dimension": 540,
+      "multiplicities": [
+        11,
+        9,
+        9,
+        13,
+        2,
+        2
+      ],
+      "steinberg_multiplicity": 2
+    },
+    "hyperbolic_pairs": {
+      "dimension": 540,
+      "multiplicities": [
+        7,
+        12,
+        13,
+        8,
+        6,
+        1
+      ],
+      "steinberg_multiplicity": 1
+    },
+    "gq42_arcs": {
+      "dimension": 540,
+      "multiplicities": [
+        9,
+        10,
+        9,
+        11,
+        3,
+        2
+      ],
+      "steinberg_multiplicity": 2
+    },
+    "flags": {
+      "dimension": 160,
+      "multiplicities": [
+        2,
+        1,
+        3,
+        3,
+        0,
+        1
+      ],
+      "steinberg_multiplicity": 1
+    }
+  },
+  "steinberg_column": {
+    "points": 0,
+    "lines": 0,
+    "arcs": 2,
+    "shell": 3,
+    "trades": 0,
+    "supports": 0,
+    "skew_pairs": 2,
+    "hyperbolic_pairs": 1,
+    "gq42_arcs": 2,
+    "flags": 1
+  },
+  "reading": "the exact mod-3 composition tables of ten geometric carriers, restricted to 3-regular classes and decomposed against the Brauer characters: the Steinberg column is the exact composition-factor census for the Steinberg simple in the defining characteristic",
+  "boundary": "composition multiplicity is not by itself a selected embedding, logical register, error-correcting code, or device-protection claim",
+  "checks": {
+    "flag_count_160": true,
+    "group_order": true,
+    "computed_table_matches_U4_2_library": true,
+    "m3_degrees": true,
+    "decompositions_found": true,
+    "dimension_consistency": true,
+    "all_ten_multiplicity_rows_exact": true,
+    "steinberg_column_exact": true
+  }
+}

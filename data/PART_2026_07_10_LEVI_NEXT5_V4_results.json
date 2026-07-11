@@ -1,1 +1,778 @@
-{"schema":"w33.levi_next5_v4.v1","status":"PASS","checks":{"formal-rank-v4":true,"discriminant-cohomology-v4":true,"e8-incidence-functor-v4":true,"foundry-calibrate-v4":true,"hil-runtime-v4":true},"results":{"formal":{"source_digest":"f658c08fdf0a70d07f35f3765e780f25c8bf43d25e47f6da0867a395db2f6478","kernel_ci":"lake build --wfail plus placeholder rejection plus independent leanchecker","q3_jordan":{"J4":2,"J3":22,"J2":0,"J1":6}},"cohomology":{"H1_dimension":3,"mixed_class":"0x1","fixed_line_class":"0x1","relation":"same","removable":false},"functor":{"E8_orbits":[1,1,1,1,1,1,27,27,27,27,27,27,72],"middleware":48,"E8_digest":"37e7b07616dbe11d50f93e46acbbb5d8032379b719c55e1a26a711d1ed38036b"},"foundry":{"calibrated_fidelity":0.999998963621972,"die_p05":0.999959653049925,"tracked_min":0.999994252854219,"heater_power_mw":7814.182017945431},"hil":{"time_tags":3164709,"accepted":126,"retry":2,"wrong_admitted":0,"attack_admissions":0,"runtime_digest":"729861ce2a5aa59dedf0cfd76c0fcddc01291a0c083da26f067799d12452b406"}},"synthesis":"Kernel plus independent leanchecker CI, the nontrivial fixed-line H1 obstruction, a commuting W33-E6-E8 incidence functor, foundry self-calibration, and bounded-memory timestamp admission close one executable v4 architecture."}
+{
+  "checks": {
+    "discriminant-cohomology-v4": true,
+    "e8-incidence-functor-v4": true,
+    "formal-rank-v4": true,
+    "foundry-calibrate-v4": true,
+    "hil-runtime-v4": true
+  },
+  "comparison_mode": {
+    "formal/cohomology/functor": "exact JSON equality",
+    "foundry/HIL": "all nondigest fields with floats rounded to 1e-8; status and every threshold check remain exact"
+  },
+  "execution": "fresh witnesses regenerated in-process",
+  "fresh_matches_cached": {
+    "discriminant-cohomology-v4": true,
+    "e8-incidence-functor-v4": true,
+    "formal-rank-v4": true,
+    "foundry-calibrate-v4": true,
+    "hil-runtime-v4": true
+  },
+  "schema": "w33.levi_next5_v4.v1",
+  "status": "PASS",
+  "synthesis": "The odd-q assembly arithmetic and q3 matrix cardinalities are kernel-built and leanchecker-replayed in CI, without claiming a formal geometric incidence-rank proof; the scalar-5 outer displacement is the fixed-line H1 class while the scalar-1 displacement admits a q-preserving fixed order-eight rail; the native group acts on one commuting W33-E6-E8 incidence diagram; the 16-mode mesh is calibrated against a deterministic SiN thermal foundry model; and simulated NDJSON time tags exercise the optical-to-homology-to-W(E6) runtime loop.",
+  "tracks": {
+    "discriminant-cohomology-v4": {
+      "checks": {
+        "cocycle_condition": true,
+        "fixed_generator_exists": true,
+        "fixed_line_is_cocycle": true,
+        "h1_dimension_positive": true,
+        "h1_representatives_match_dimension": true,
+        "mixed_class_nontrivial": true,
+        "outer_difference_is_2_torsion": true,
+        "outer_is_involution_on_torsion": true,
+        "p2_module_type": true,
+        "q_preserving_fixed_generator_exists": true,
+        "scalar1_displacement_is_coboundary": true
+      },
+      "cohomology": {
+        "H1_dimension": 3,
+        "coboundary_dimension": 6,
+        "complex": "H^1(C2,A[2]) = ker(1+tau)/im(1+tau)",
+        "fixed_generator_exists": true,
+        "fixed_line_class_coordinates": "0x1",
+        "kernel_dimension": 9,
+        "mixed_class_coordinates": "0x1",
+        "relation_to_fixed_line": "same",
+        "representatives_hex": [
+          "0x3f",
+          "0x5e",
+          "0x118"
+        ],
+        "scalar1_displacement_removable": true,
+        "scalar5_displacement_removable": false
+      },
+      "digests": {
+        "cohomology_representatives": "1d000915790994639fb5cd2190e439882367bed3b930ab2db5b194c4484f991e",
+        "outer_torsion_action": "3ffbd89239c0e235f49469dff715330b633668c09016733dfe7933a74e16eafe"
+      },
+      "fixed_order8_rail": {
+        "fixed_generator": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "q": "11/8",
+        "q_preserving_shift_count": 256,
+        "shift_count": 512,
+        "smallest_q_preserving_shift_mask": "0x44f"
+      },
+      "module": {
+        "h_index": 14,
+        "torsion_dimension": 15,
+        "type": "(Z/2)^14 + Z/8"
+      },
+      "outer": {
+        "five_h": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        "h_image": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          5
+        ],
+        "mixed_displacement": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "mixed_displacement_mask": "0x3527",
+        "q_u": "1",
+        "scalar1_displacement": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          4
+        ],
+        "scalar1_displacement_mask": "0x7527"
+      },
+      "status": "PASS",
+      "theorem": "The scalar-5 displacement u5=tau(h)-5h is the nonzero fixed-line class [4h], so a pure scalar-5 normal form is obstructed. But u1=tau(h)-h=u5+4h is a coboundary: 512 order-two shifts make h+v fixed, and 256 preserve q=11/8. Thus the outer action admits a fixed order-eight rail; the earlier absolute nonremovability interpretation was false."
+    },
+    "e8-incidence-functor-v4": {
+      "E8_decomposition_under_W_E6": {
+        "A2_simple_roots_doubled": [
+          [
+            -2,
+            -2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            -2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "E6_simple_roots_doubled": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ]
+        ],
+        "orbit_sizes": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          72
+        ],
+        "reading": "72 E6 roots + 6 fixed A2 roots + six minuscule 27-orbits = 240"
+      },
+      "checks": {
+        "all_incidence_squares_commute": true,
+        "all_native_generators_lift_to_E8": true,
+        "e6_orthogonal_roots_72": true,
+        "e8_W_E6_orbits": true,
+        "e8_roots_240": true,
+        "middleware_stabilizer_48": true,
+        "oriented_double_six_root_bijection": true,
+        "pair_orbit_540": true,
+        "schlafli_27_identified": true
+      },
+      "generator_lift": {
+        "E8_240_digest": "37e7b07616dbe11d50f93e46acbbb5d8032379b719c55e1a26a711d1ed38036b",
+        "bfs_states_visited": 45518,
+        "line27_digest": "ddcae709e82d443fb4d4b14a2bf311d202140afbd02a29957ec93f4e69631875",
+        "pair540_digest": "1f415eb0d8038de0f4bd9ada6869f36dd60b5af901635f8fbb3aebcd7ac5a3d7",
+        "word_lengths": [
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          11
+        ]
+      },
+      "incidence_equivariance": {
+        "W33_point_line": true,
+        "double_six_equals_E6_root_action": true,
+        "line_root_six": true,
+        "line_tritangent": true,
+        "pair_endpoint": true,
+        "root72_in_E8_240": true
+      },
+      "middleware": {
+        "base_pair": [
+          0,
+          4
+        ],
+        "digest": "7653b448dc8151d365c80c9116fdb6b6349b44273acbc1c9abad0a63ab9049bb",
+        "stabilizer_order": 48
+      },
+      "objects": {
+        "E6_roots_oriented_double_sixes": 72,
+        "E8_roots": 240,
+        "W33_lines": 40,
+        "W33_points": 40,
+        "cubic_lines": 27,
+        "middleware_fiber": 48,
+        "noncollinear_pairs": 540,
+        "tritangent_planes": 45
+      },
+      "root_map": {
+        "E6_root_to_oriented_double_six": {
+          "100": 5,
+          "101": 7,
+          "102": 6,
+          "103": 1,
+          "104": 9,
+          "105": 14,
+          "106": 13,
+          "107": 15,
+          "108": 30,
+          "109": 29,
+          "110": 16,
+          "111": 46,
+          "112": 67,
+          "113": 66,
+          "114": 31,
+          "115": 18,
+          "116": 47,
+          "117": 70,
+          "118": 17,
+          "119": 48,
+          "120": 25,
+          "121": 49,
+          "122": 71,
+          "123": 24,
+          "124": 50,
+          "125": 63,
+          "126": 68,
+          "127": 69,
+          "128": 26,
+          "129": 51,
+          "130": 64,
+          "131": 65,
+          "132": 40,
+          "133": 41,
+          "134": 42,
+          "135": 20,
+          "136": 36,
+          "137": 43,
+          "138": 44,
+          "139": 45,
+          "162": 27,
+          "163": 33,
+          "164": 32,
+          "165": 57,
+          "166": 34,
+          "167": 58,
+          "168": 59,
+          "169": 55,
+          "170": 28,
+          "171": 52,
+          "172": 53,
+          "173": 60,
+          "174": 54,
+          "175": 61,
+          "176": 62,
+          "177": 56,
+          "62": 0,
+          "63": 11,
+          "64": 10,
+          "65": 2,
+          "66": 12,
+          "67": 4,
+          "68": 3,
+          "69": 8,
+          "70": 35,
+          "71": 22,
+          "72": 21,
+          "73": 37,
+          "74": 23,
+          "75": 38,
+          "76": 39,
+          "77": 19
+        },
+        "oriented_double_six_to_E8_root_index": [
+          62,
+          103,
+          65,
+          68,
+          67,
+          100,
+          102,
+          101,
+          69,
+          104,
+          64,
+          63,
+          66,
+          106,
+          105,
+          107,
+          110,
+          118,
+          115,
+          77,
+          135,
+          72,
+          71,
+          74,
+          123,
+          120,
+          128,
+          162,
+          170,
+          109,
+          108,
+          114,
+          164,
+          163,
+          166,
+          70,
+          136,
+          73,
+          75,
+          76,
+          132,
+          133,
+          134,
+          137,
+          138,
+          139,
+          111,
+          116,
+          119,
+          121,
+          124,
+          129,
+          171,
+          172,
+          174,
+          169,
+          177,
+          165,
+          167,
+          168,
+          173,
+          175,
+          176,
+          125,
+          130,
+          131,
+          113,
+          112,
+          126,
+          127,
+          117,
+          122
+        ],
+        "pairing_value_for_schlafli_edges": 0
+      },
+      "status": "PASS",
+      "theorem": "The native PSp(4,3):2 generators define one commuting incidence diagram on 40 points, 40 lines, 27 cubic lines, 45 tritangents, 72 oriented double-sixes/E6 roots, 240 E8 roots, 540 noncollinear pairs, and the 48-element pair stabilizer. The E8 restriction is 72 + 6 + 6*27, and the root-to-double-six map is pairing-defined."
+    },
+    "formal-rank-v4": {
+      "checks": {
+        "all_symbolic_identities_zero": true,
+        "branch_and_pr_triggers": true,
+        "formal_scope_boundaries_present": true,
+        "imports_root_module": true,
+        "independent_leanchecker_required": true,
+        "kernel_build_required": true,
+        "lean_action_v1": true,
+        "no_admit": true,
+        "no_sorry": true,
+        "no_tautological_block_certificate_structures": true,
+        "placeholder_rejection_required": true,
+        "q3_arithmetic_theorems": true
+      },
+      "files": [
+        "formal/W33/OddQRank.lean",
+        "formal/W33/FourierBlocks.lean",
+        "formal/W33/HeisenbergQ3.lean",
+        "formal/W33.lean",
+        ".github/workflows/lean-formal.yml"
+      ],
+      "honest_boundary": "The Python witness validates source structure and arithmetic locally. Lean kernel and leanchecker validation run in the committed GitHub Actions workflow because Lean is unavailable in this execution container. Neither path supplies the missing finite-field Fourier/incidence construction.",
+      "source_digest": "bb670c942864f16be4e0af0117cf88c398ed21f0e91e68d08132ca69123e8a16",
+      "status": "PASS",
+      "theorem": "Lean checks exact q=3 matrix-space cardinalities plus the arithmetic/divisibility identities used by the proposed odd-q rank and Jordan formulas. It does not prove the geometric incidence-rank theorem; CI requires lake build, placeholder rejection, and a second Lean-kernel replay via leanchecker.",
+      "workflow": {
+        "action": "leanprover/lean-action@v1",
+        "build_wfail": true,
+        "independent_checker": "leanchecker",
+        "lake_directory": "formal",
+        "placeholders_forbidden": true
+      }
+    },
+    "foundry-calibrate-v4": {
+      "budget": {
+        "estimated_total_heater_power_mw": 7814.182017945431,
+        "fiber_to_fiber_loss_db": 5.33792,
+        "mesh_excess_loss_db": 0.288,
+        "on_chip_loss_db": 0.33792,
+        "passive_propagation_loss_db": 0.04992,
+        "path_length_m": 0.0192
+      },
+      "calibration": {
+        "calibrated_fidelity": 0.9999989636219758,
+        "calibration_rms_history": [
+          0.406349853029031,
+          0.032527500886605595,
+          0.002608461186868305,
+          0.00032061534812755625,
+          0.0002389728281844053,
+          0.00023343202012295384,
+          0.00022935920478662003,
+          0.0002203994861788057,
+          0.0002274068020528103,
+          0.00024081255780059158,
+          0.00022504401389068494,
+          0.00022209068545608776
+        ],
+        "final_phase_rms_rad": 0.00017032468683304513,
+        "uncalibrated_fidelity": 0.19517580349033622
+      },
+      "checks": {
+        "calibrated_nominal_above_0_999": true,
+        "closed_loop_converges": true,
+        "foundry_corner_p05_above_0_995": true,
+        "mesh_exact_before_foundry_model": true,
+        "phase_controls_quantized": true,
+        "tracked_min_above_0_995": true,
+        "tracking_beats_open_loop": true,
+        "wavelength_band_p05_above_0_995": true
+      },
+      "compiler": {
+        "control_parameters": 376,
+        "modes": 16,
+        "mzi_elements": 120,
+        "netlist_digest": "39b53821c90314aa0c32ef800440737d285634219ef7a60e91ebf98b7a6f76f9",
+        "output_phases": 16,
+        "quantized_command_digest": "5712059ddef42f649d609ac5cc120986fade7ff26325d7f894060627064911d4",
+        "unitarity_residual": 2.9245251882662575e-09,
+        "unitarity_tolerance": 1e-07
+      },
+      "drift_tracking": {
+        "epochs": 64,
+        "open_loop_mean": 0.9980031489335743,
+        "tracked_digest": "9071c11dd624b1216156f4f74ef3944ec9d14bdd1886f4f1be6d8339304c075d",
+        "tracked_mean": 0.9999977680572826,
+        "tracked_min": 0.9999942528541785
+      },
+      "foundry_corners": {
+        "dies": 96,
+        "max": 0.9999819811029165,
+        "mean": 0.9999706630135418,
+        "min": 0.9999541188591451,
+        "p05": 0.9999596530498738
+      },
+      "foundry_stack": {
+        "assumption_boundary": "Passive loss is anchored to foundry-manufactured thick SiN; heater efficiency, excess loss, and layout lengths are explicit design assumptions pending a chosen PDK corner deck.",
+        "design_wavelength_nm": 1550.0,
+        "fiber_coupling_db_per_facet": 2.5,
+        "heater_pi_power_mw": 24.0,
+        "mzi_excess_loss_db": 0.018,
+        "nearest_neighbor_thermal_crosstalk": 0.065,
+        "phase_dac_bits": 14,
+        "phase_section_length_mm": 1.2,
+        "platform": "800-nm-class foundry-compatible Si3N4 passive core with thermo-optic metal heaters",
+        "propagation_loss_db_per_m": 2.6,
+        "thermal_correlation_length_cells": 1.7,
+        "wavelength_band_nm": [
+          1530.0,
+          1565.0
+        ]
+      },
+      "status": "PASS",
+      "theorem": "A 14-bit closed-loop inverse-crosstalk calibration of the 16-mode, 120-MZI Levi-to-E8 mesh maintains >0.995 fifth-percentile process fidelity across the modeled foundry corners and 1530-1565 nm band, while online drift correction dominates open-loop operation.",
+      "wavelength_fidelity": {
+        "1530.0": 0.9979992662214806,
+        "1532.5": 0.9984714238589483,
+        "1535.0": 0.9988790391028513,
+        "1537.5": 0.9992226295391134,
+        "1540.0": 0.9995027221635259,
+        "1542.5": 0.999719853019544,
+        "1545.0": 0.9998745668396716,
+        "1547.5": 0.999967416690565,
+        "1550.0": 0.9999989636219758,
+        "1552.5": 0.999969776319649,
+        "1555.0": 0.9998804307622906,
+        "1557.5": 0.9997315098827031,
+        "1560.0": 0.9995236032331876,
+        "1562.5": 0.9992573066552958,
+        "1565.0": 0.9989332219540352
+      }
+    },
+    "hil-runtime-v4": {
+      "accepted_runtime_digest": "6ef1a1278b474fd784996557df3cfd83ddb30c3721f20656387f2a3776ba0519",
+      "attacks": {
+        "authentication": 1,
+        "provenance": 45,
+        "sentinel": 224,
+        "type-confusion": 1
+      },
+      "checks": {
+        "acceptance_above_95_percent": true,
+        "all_dark8_attacks_rejected": true,
+        "all_sub8_attacks_rejected": true,
+        "native_runtime_coordinates_for_every_accept": true,
+        "ndjson_adapter_roundtrip": true,
+        "online_drift_is_bounded": true,
+        "retag_and_bad_auth_rejected": true,
+        "stream_has_over_2m_tags": true,
+        "zero_wrong_frames_admitted": true
+      },
+      "estimator": {
+        "final_drift": [
+          0.006205051319117878,
+          0.004947312052314283,
+          0.00498493866015005,
+          0.00435271945685373,
+          0.006260515862023489,
+          0.004116062368052101,
+          0.006639498494029004,
+          0.010235759807467909
+        ],
+        "final_gain": 0.992239536247383
+      },
+      "outcomes": {
+        "accepted": 126,
+        "retry": 2
+      },
+      "sample_accepted": [
+        {
+          "confidence": 0.1903470814942298,
+          "decoder": {
+            "drift_estimate": [
+              0.00037934186471663646,
+              0.0003172062568206621,
+              0.000339411983624861,
+              -5.636978579481866e-07,
+              9.192407889839854e-05,
+              -0.00026186997808619447,
+              1.5452538631346435e-05,
+              7.549962990377468e-05
+            ],
+            "gain_estimate": 1.0003066570629793,
+            "total_clicks": 21677,
+            "z_observed": [
+              0.19195612431444242,
+              0.4878137504547108,
+              0.6226274655749907,
+              0.4332957534761368,
+              0.2727949385932266,
+              0.08254200146092038,
+              0.06769683590875644,
+              0.20503330866025166
+            ]
+          },
+          "frame": 0,
+          "runtime": {
+            "chirality": 1,
+            "event_word_digest": "3787575ccca8c3491dea30df18239822a5c3286fd61555355183f93444d75fb4",
+            "line27": "L25",
+            "pair540": 491,
+            "root72": 67,
+            "tritangent45": 32
+          },
+          "syndrome": 77
+        },
+        {
+          "confidence": 2.460009417811786,
+          "decoder": {
+            "drift_estimate": [
+              0.00025083081756997576,
+              0.00023064984888780243,
+              0.0010126290384107003,
+              0.0004402447576099207,
+              0.0003496418300110333,
+              -0.0005168227834919212,
+              5.4546593248505296e-05,
+              -0.0007784895514263649
+            ],
+            "gain_estimate": 0.9995367535914478,
+            "total_clicks": 25310,
+            "z_observed": [
+              -0.041521394611727415,
+              -0.07211988760536997,
+              -0.0881127843639859,
+              -0.13728,
+              -0.11606022584692598,
+              -0.11725872367180132,
+              0.06928838951310862,
+              -0.12352377912543888
+            ]
+          },
+          "frame": 1,
+          "runtime": {
+            "chirality": 1,
+            "event_word_digest": "ac13548a026747656a85bbf86b493fc9bd1fd80b059f82f1dd238b8c9063f237",
+            "line27": "L24",
+            "pair540": 323,
+            "root72": 10,
+            "tritangent45": 44
+          },
+          "syndrome": 157
+        },
+        {
+          "confidence": 1.4059085946414878,
+          "decoder": {
+            "drift_estimate": [
+              0.00012417388985438068,
+              0.0002648871539303595,
+              0.0007125253571222529,
+              -0.00014934646562144756,
+              -0.0002255686677463004,
+              -0.0007144430587239445,
+              0.0003382729184030017,
+              -0.0005970666522121325
+            ],
+            "gain_estimate": 0.9989934952841244,
+            "total_clicks": 23191,
+            "z_observed": [
+              0.15847370230319696,
+              0.33584647018505825,
+              0.44767238361918094,
+              0.3278008298755187,
+              0.22866894197952217,
+              0.08630849220103987,
+              0.08563630160354828,
+              0.1446497037295225
+            ]
+          },
+          "frame": 2,
+          "runtime": {
+            "chirality": 0,
+            "event_word_digest": "605d92e139e3765562c5d2c876e1f406610bb5807ce634ac912f43fa2e30e3b1",
+            "line27": "L01",
+            "pair540": 96,
+            "root72": 37,
+            "tritangent45": 15
+          },
+          "syndrome": 109
+        }
+      ],
+      "status": "PASS",
+      "stream": {
+        "adapter": "NDJSON {timestamp_ps,channel,frame}",
+        "channels": 17,
+        "frames": 128,
+        "processing": "online; bounded-memory frame reduction",
+        "sample_path": "data/PART_2026_07_10_HIL_sample.jsonl",
+        "time_tags": 3164709
+      },
+      "telemetry": {
+        "accepted": 126,
+        "decoded": 128,
+        "reject_authentication": 1,
+        "reject_provenance": 45,
+        "reject_sentinel": 224,
+        "reject_type_confusion": 1,
+        "retry_decode_mismatch": 2
+      },
+      "theorem": "The HIL adapter ingests line-oriented time tags with bounded memory, performs online likelihood decoding and drift estimation, then admits only authenticated, sentinel-consistent, provenance-exact homology cycles and replays each accepted event through the native W(E6) coordinate system. No injected attack or wrong decoded frame is admitted."
+    }
+  }
+}
