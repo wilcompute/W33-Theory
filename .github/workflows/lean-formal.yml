@@ -17,17 +17,36 @@ permissions:
   contents: read
 
 jobs:
-  kernel:
+  kernel-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Kernel build and independent checker
+      - name: Lean kernel build
         uses: leanprover/lean-action@v1
         with:
           lake-package-directory: formal
+          auto-config: false
           build: true
-          build-args: "--wfail"
+          build-args: "--wfail --quiet"
+          test: false
+          lint: false
+          nanoda: false
+          use-github-cache: false
+
+  independent-nanoda:
+    runs-on: ubuntu-latest
+    needs: kernel-build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent nanoda verification
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: true
+          build-args: "--quiet"
           test: false
           lint: false
           nanoda: true
           nanoda-allow-sorry: false
+          use-github-cache: false
