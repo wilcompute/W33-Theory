@@ -1,0 +1,86 @@
+{
+  "anisotropic_graph": {
+    "adjacency_digest": "b9ef694d26f772a1b877d7b9febeb5cd350d466b2ffc554e480d2e48e5ccc0dc",
+    "edges": 3780,
+    "parameters": [
+      120,
+      63,
+      30,
+      36
+    ]
+  },
+  "checks": {
+    "address_context_dimensions_15_25": true,
+    "address_doubly_even_self_orthogonal": true,
+    "address_inside_context": true,
+    "address_polar_nondegenerate": true,
+    "address_shadow_dimension_10": true,
+    "all_512_quadratic_identities": true,
+    "all_8192_incidence_equivariance_identities": true,
+    "anisotropic_graph_srg_120_63_30_36": true,
+    "fixed_line_is_isotropic": true,
+    "fixed_line_maps_to_all_ones": true,
+    "fixed_perp_dimension_9": true,
+    "fixed_perp_maps_onto_route_hull": true,
+    "fixed_translation_pairs_weight6_sheets": true,
+    "incidence_descends_injectively": true,
+    "incidence_image_is_im_MMt": true,
+    "native_PSp_quotient_graph_equivariance": true,
+    "native_action_order_25920": true,
+    "paired_weight6_supports_disjoint": true,
+    "plus8_census_136_120": true,
+    "route_dimensions_15_25_hull9": true,
+    "route_hull_contains_all_ones": true,
+    "route_hull_enumerator": true,
+    "shadow_generators_invertible": true,
+    "unique_nonzero_fixed_line": true,
+    "weight6_240_distinct_anisotropic_lifts": true,
+    "weight6_bijection_to_route_weight20": true
+  },
+  "digests": {
+    "incidence_images": "e92ba731f4dd082981490ce479c1bc54dbc964ae12fe07a349f607a77aabb8a9",
+    "native_generators": "f6aafee3cdfbd82529dc0690213da66bc3ee4bd2dc403256d1774c4b9686bf45",
+    "sheet_pairs": "4122d12871f9d5e5b758cb054509bbfa6f9932814c0c04a80be51bd3a37cc0a7",
+    "weight6_classes": "6a8f8cb0bb94fcfe8e6dae7432a225caa7de36f7130e348b94216a854cfce202"
+  },
+  "incidence_bridge": {
+    "codomain": "(R cap R^perp)/<all-ones>",
+    "codomain_size_before_quotient": 512,
+    "domain": "f^perp/<f>",
+    "domain_size_before_quotient": 512,
+    "equivariance_identities_checked": 8192,
+    "fixed_image": "all-ones",
+    "isotropic_anisotropic_quotient_census": [
+      136,
+      120
+    ],
+    "native_action_order": 25920,
+    "quadratic_identities_checked": 512
+  },
+  "schema": "w33.pass176.incidence_fixed_line_e8_bridge.v1",
+  "scope_boundary": "The proved symmetry is the native PSp(4,3) coordinate action. No equality with the full automorphism group of the 120-graph is asserted, and the two-sheet cover is not yet an integral signed E8 Gram realization.",
+  "spaces": {
+    "address_code": "[40,15,8]",
+    "address_shadow": "C^perp/C = F2^10",
+    "fixed_representative_weight": 16,
+    "fixed_vector": "0x33f",
+    "route_code": "[40,15,10]",
+    "route_hull": "[40,9,16]",
+    "route_hull_weight_enumerator": {
+      "0": 1,
+      "16": 135,
+      "20": 240,
+      "24": 135,
+      "40": 1
+    }
+  },
+  "status": "PASS",
+  "theorem": "Incidence induces a native PSp(4,3)-equivariant quadratic isometry f^perp/<f> -> (R cap R^perp)/<1> between plus-type 8-spaces. The 240 weight-six context words are exactly the two sheets over its 120 anisotropic vectors, whose polar graph is SRG(120,63,30,36).",
+  "weight6_sheet_cover": {
+    "context_words": 240,
+    "distinct_shadow_classes": 240,
+    "fixed_translation_pairs": 120,
+    "paired_support_intersection": 0,
+    "route_weight20_images": 240
+  }
+}

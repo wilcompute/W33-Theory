@@ -1,0 +1,70 @@
+{
+  "schema": "w33.pass177.address_route_dual_theta_split.v1",
+  "status": "PASS",
+  "codes": {
+    "address": "C_A=ker_F2(N)=[40,15,8]",
+    "route": "C_R=ker_F2(N^T)=[40,15,10]",
+    "address_dual_A4_A6_A8": [
+      40,
+      240,
+      5085
+    ],
+    "route_dual_A4_A6_A8": [
+      40,
+      240,
+      3645
+    ]
+  },
+  "theta": {
+    "convention": "coefficient of q^m counts |x|^2/2=m",
+    "address_scaled_0_to_6": [
+      1,
+      0,
+      720,
+      15360,
+      1350960,
+      50016256,
+      1534663360
+    ],
+    "route_scaled_0_to_6": [
+      1,
+      0,
+      720,
+      15360,
+      982320,
+      57094144,
+      1452088000
+    ],
+    "common_q2": {
+      "count": 720,
+      "address": "80 coordinate doubles + 16 lifts * 40 lines",
+      "route": "80 coordinate doubles + 16 lifts * 40 point stars"
+    },
+    "common_q3": {
+      "count": 15360,
+      "decomposition": "2^6 sign lifts * 240 weight-6 context words"
+    },
+    "q4_split": {
+      "common_coordinate_sector": 3120,
+      "common_weight4_plus_coordinate_sector": 46080,
+      "address_weight8_sector": 1301760,
+      "route_weight8_sector": 933120,
+      "address_total": 1350960,
+      "route_total": 982320,
+      "difference": 368640
+    }
+  },
+  "reading": "the point-line non-self-duality is spectrally delayed: lines and point stars give identical 720 openings, and the weight-6 sectors also agree, but 1440 extra address weight-8 words create exactly 368640 extra signed vectors in the next shell",
+  "checks": {
+    "kernel_codes_40_15": true,
+    "dual_enumerators_complete": true,
+    "dual_heads_40_240_then_split": true,
+    "address_min_words_are_lines": true,
+    "route_min_words_are_point_stars": true,
+    "first_two_nontrivial_shells_agree": true,
+    "third_shell_split_exact": true,
+    "q4_sector_decomposition": true,
+    "split_is_1440_weight8_words_times_256_signs": true,
+    "non_self_duality_already_visible_in_kernel_gram": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass180.dual_trade_lattice_q43.v1",
+  "status": "PASS",
+  "identification": {
+    "statement": "L_route = ker_Z(N^T) is the trade lattice of the dual quadrangle Q(4,3); the 90-vs-432 minimal-shell dichotomy is the regular/antiregular point dichotomy of the self-dual pair (W(3,3) spans have size 4, Q(4,3) spans size 2)",
+    "w33_span_sizes": [
+      4
+    ],
+    "q43_span_sizes": [
+      2
+    ]
+  },
+  "mod8_row": {
+    "rank": 15,
+    "signature_mod_8": 7,
+    "determinant": 9795520512,
+    "p_phases_eighths": {
+      "2": 7,
+      "3": 0
+    },
+    "z8_block_q_value": "11/8",
+    "eleven_eighths_law_holds_on_route_side": true,
+    "reading": "the Pass 166 law table gains its fourth row: the dual trade lattice of the self-dual pair, same Ihara prime 11, 2-adic depth 3"
+  },
+  "route_code_weight_enumerator": {
+    "0": 1,
+    "10": 216,
+    "12": 270,
+    "14": 1080,
+    "16": 3375,
+    "18": 7920,
+    "20": 7044,
+    "22": 7920,
+    "24": 3375,
+    "26": 1080,
+    "28": 270,
+    "30": 216,
+    "40": 1
+  },
+  "checks": {
+    "w33_points_regular_span_4": true,
+    "q43_points_antiregular_span_2": true,
+    "route_rank_15": true,
+    "route_det_2_11_3_14": true,
+    "route_even": true,
+    "route_smith_profile": true,
+    "route_min_norm_10": true,
+    "route_shell_432": true,
+    "route_projective_minima_216": true,
+    "route_code_min_distance_10": true,
+    "route_p2_dual_certificate": true,
+    "route_p2_distinct": true,
+    "route_p2_size": true,
+    "route_p2_eighth_root": true,
+    "route_p3_dual_certificate": true,
+    "route_p3_distinct": true,
+    "route_p3_size": true,
+    "route_p3_eighth_root": true,
+    "route_milgram_signature_7": true,
+    "route_discriminant_complete": true,
+    "route_has_z8_block": true
+  }
+}

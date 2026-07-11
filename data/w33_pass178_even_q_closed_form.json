@@ -1,0 +1,59 @@
+{
+  "schema": "w33.pass178.even_q_closed_form.v2",
+  "status": "PASS",
+  "theorem": {
+    "source": "Sastry--Sin, The Code of a Regular Generalized Quadrangle of Even Order, Theorem 1",
+    "radical_form": "rank_2 M(2^n) = 1 + ((1+sqrt(17))/2)^(2n) + ((1-sqrt(17))/2)^(2n)",
+    "integral_transfer_matrix": [
+      [
+        4,
+        2
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "integral_form": "rank_2 M(2^n) = 1 + trace(B^n)",
+    "affine_recurrence": "r_n = 9*r_(n-1) - 16*r_(n-2) + 8",
+    "homogeneous_recurrence": "r_n = 10*r_(n-1) - 25*r_(n-2) + 16*r_(n-3)",
+    "characteristic_roots": [
+      "1",
+      "(9+sqrt(17))/2",
+      "(9-sqrt(17))/2"
+    ]
+  },
+  "ranks": {
+    "2": 10,
+    "4": 50,
+    "8": 298,
+    "16": 1890,
+    "32": 12250,
+    "64": 80018,
+    "128": 524170,
+    "256": 3437250
+  },
+  "measured_anchors": {
+    "2": 10,
+    "4": 50,
+    "8": 298,
+    "16": 1890
+  },
+  "q32_correction": {
+    "theorem_value": 12250,
+    "rejected_interpolant_value": 12794,
+    "difference": -544
+  },
+  "reading": "the even-order rank ladder is governed by a two-state integral transfer matrix, not by the four-anchor {1,6,13} interpolation; q=32 is the first separating value",
+  "checks": {
+    "small_anchors_rederived": true,
+    "q16_anchor_is_1890": true,
+    "transfer_matches_all_measured_anchors": true,
+    "integral_transfer_matrix": true,
+    "transfer_trace_9_determinant_16": true,
+    "affine_recurrence": true,
+    "homogeneous_recurrence": true,
+    "exact_sequence_through_q256": true,
+    "false_four_anchor_interpolant_refuted_at_q32": true
+  }
+}

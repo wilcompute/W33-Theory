@@ -118,8 +118,9 @@
   "shadow_law": {
     "statement": "the two degree-5 ordinary irreducibles of U4(2) reduce mod 2 as 1 + 4 and 1 + 4bar, so 5 + 5bar reduces with Brauer factors {1, 1, 4, 4bar} -- exactly the factors of Pass 164's uniserial H10 (whose F2-factor 8 is the conjugate pair 4 + 4bar over the splitting field)",
     "holds": true,
-    "reading": "the hidden pair: the two degree-5 irreducibles appear in NONE of the nine permutation carriers of Pass 163 (all multiplicities zero), yet their 2-modular reduction carries exactly the composition factors of the SO(10) shadow. The smallest faithful representations of the substrate group, invisible in every natural permutation geometry, materialize as the incidence quotient form. The kinematic degree-10s instead reduce as 4 + 6 and 4bar + 6."
+    "reading": "the hidden pair: the two degree-5 irreducibles appear in NONE of the nine permutation carriers of Pass 163 (all multiplicities zero), yet their 2-modular reduction carries exactly the composition factors of the SO(10) shadow. This identifies the ordinary-character source of the same factor multiset, but does not identify the uniserial extension class or prove a module isomorphism. The kinematic degree-10s instead reduce as 4 + 6 and 4bar + 6."
   },
+  "boundary": "Brauer decomposition rows determine composition factors only; an explicit modular module map or extension-class calculation would be required to identify H10 with a reduction of 5+5bar",
   "checks": {
     "twenty_ordinary_irreducibles": true,
     "ordinary_degrees_match_pass163": true,

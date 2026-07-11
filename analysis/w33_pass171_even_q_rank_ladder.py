@@ -174,7 +174,21 @@ def main():
         and table[str(q)]["AL_formula_holds"]
         for q in (3, 5)
     )
-    checks["even_q_verdict_recorded"] = True
+    checks["even_self_duality_verified"] = all(
+        table[str(q)]["rank2_AP"] == table[str(q)]["rank2_AL"]
+        for q in (2, 4, 8)
+    )
+    checks["even_AL_formula_survives"] = all(
+        table[str(q)]["AL_formula_holds"] for q in (2, 4, 8)
+    )
+    checks["even_M_odd_formula_not_universal"] = (
+        table["2"]["M_formula_holds"]
+        and not table["4"]["M_formula_holds"]
+        and not table["8"]["M_formula_holds"]
+    )
+    checks["even_AP_odd_formula_fails"] = all(
+        not table[str(q)]["AP_formula_holds"] for q in (2, 4, 8)
+    )
 
     # the even-q incidence rank fits the cubic (q^3 + 12q - 12)/2 at the
     # three anchors; test the conjecture at a fourth anchor q = 16
@@ -197,7 +211,8 @@ def main():
         "even_cubic_prediction": even_conjecture(16),
         "even_cubic_holds": rank16 == even_conjecture(16),
     }
-    checks["q16_rank_computed"] = rank16 > 0
+    checks["q16_rank_exact_1890"] = rank16 == 1890
+    checks["even_cubic_refuted_at_q16"] = rank16 != even_conjecture(16)
 
     even_verdict = {
         "M_extends": all(table[str(q)]["M_formula_holds"] for q in (2, 4, 8)),
@@ -215,11 +230,13 @@ def main():
         "table": table,
         "even_q_verdict": even_verdict,
         "reading": (
-            "the odd-q Levi rank theorem tested at five prime powers; for "
+            "the odd-q Levi rank theorem is reverified at q=3,5; for "
             "even q the self-duality of W(3,q) forces rank A_P = rank A_L, "
-            "so the two Gram formulas cannot both extend -- the table "
-            "records exactly which laws survive, as anchor data for the "
-            "Lean formalization track"
+            "the A_L formula survives at q=2,4,8 while the odd-q incidence "
+            "formula only coincides accidentally at q=2 and the A_P formula "
+            "fails.  The q=16 rank 1890 also refutes the "
+            "cubic interpolant through q=2,4,8; these are anchor data, not "
+            "an even-q closed form"
         ),
         "checks": {name: bool(value) for name, value in checks.items()},
     }

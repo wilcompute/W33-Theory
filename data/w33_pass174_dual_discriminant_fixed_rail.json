@@ -1,0 +1,450 @@
+{
+  "address": {
+    "checks": {
+      "actual_scalar_coefficient": true,
+      "cohomology_h1_basis": true,
+      "cohomology_image_basis": true,
+      "cohomology_kernel_basis": true,
+      "fixed_generator_preserves_q": true,
+      "fixed_line": true,
+      "fixed_shift_count": true,
+      "fixed_shift_digest": true,
+      "module_type": true,
+      "outer_is_involution": true,
+      "q_generator_two_orbits": true,
+      "q_preserving_count": true,
+      "q_preserving_shift_digest": true,
+      "scalar1_displacement": true,
+      "scalar1_is_coboundary": true,
+      "scalar5_displacement": true,
+      "scalar5_is_fixed_line_class": true,
+      "smallest_q_preserving_shift": true
+    },
+    "cohomology": {
+      "H1_basis_hex": [
+        "0x3f",
+        "0x5e",
+        "0x118"
+      ],
+      "H1_dimension": 3,
+      "fixed_line_H1_coordinates": "0x1",
+      "fixed_line_mask": "0x4000",
+      "image_basis_hex": [
+        "0x5dc5",
+        "0x3518",
+        "0x12e2",
+        "0xff7",
+        "0x2d7",
+        "0xef"
+      ],
+      "image_dimension": 6,
+      "interpretation": "[u_5]=[4h] obstructs a pure scalar-5 normal form; u_1=u_5+4h is a coboundary, so a fixed generator exists",
+      "kernel_basis_hex": [
+        "0x3f",
+        "0x5e",
+        "0x8e",
+        "0x118",
+        "0x207",
+        "0xc07",
+        "0x100a",
+        "0x240a",
+        "0x4000"
+      ],
+      "kernel_dimension": 9,
+      "scalar1_H1_coordinates": "0x0",
+      "scalar1_displacement_mask": "0x7527",
+      "scalar1_is_coboundary": true,
+      "scalar5_H1_coordinates": "0x1",
+      "scalar5_displacement_mask": "0x3527",
+      "scalar5_is_coboundary": false
+    },
+    "fixed_order8_rail": {
+      "all_shift_digest": "ecb459a1e5039b23d741f86857c45b14878cda71e268443394bb3cc70cd2840b",
+      "fixed_generator": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fixed_generator_q": "11/8",
+      "q_distribution_numerator_over_64": {
+        "24": 256,
+        "88": 256
+      },
+      "q_h": "11/8",
+      "q_preserving_shift_count": 256,
+      "q_preserving_shift_digest": "6199dcd8be51c8351933b5aad4fd7ec3901107796a42249a636520a39a9d349e",
+      "shift_count": 512,
+      "smallest_q_preserving_shift_mask": "0x44f"
+    },
+    "lattice": {
+      "gram_determinant": 7739670528,
+      "gram_snf": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        24
+      ],
+      "p2_module": "(Z/2)^14 + Z/8",
+      "p2_order_exponent": 17,
+      "rank": 15
+    },
+    "outer": {
+      "actual_h_image": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        5
+      ],
+      "actual_scalar_coefficient": 5,
+      "one_plus_tau_columns_hex": [
+        "0x5dc5",
+        "0x3518",
+        "0x3aef",
+        "0x37cf",
+        "0x3a00",
+        "0x5ffd",
+        "0x238",
+        "0x3838",
+        "0xdcf",
+        "0x5232",
+        "0x12e2",
+        "0x40d0",
+        "0x2d7",
+        "0x1035",
+        "0x0"
+      ],
+      "torsion_action_columns_hex": [
+        "0x5dc4",
+        "0x351a",
+        "0x3aeb",
+        "0x37c7",
+        "0x3a10",
+        "0x5fdd",
+        "0x278",
+        "0x38b8",
+        "0xccf",
+        "0x5032",
+        "0x16e2",
+        "0x48d0",
+        "0x12d7",
+        "0x3035",
+        "0x4000"
+      ]
+    },
+    "quadratic_displacements": {
+      "q_u1": "1",
+      "q_u5": "1",
+      "warning": "q(h)=11/8 is preserved by only half the fixed shifts; the other half have q(h')=3/8"
+    },
+    "status": "PASS"
+  },
+  "corrected_theorem": "Both 2-primary dark discriminant modules admit an outer-fixed order-eight generator preserving q=11/8. The nonzero class [tau(h)-5h]=[4h] obstructs only the pure scalar-5 normal form, not a fixed rail. Address and route remain distinct by module types (Z2^14+Z8 versus Z2^8+Z8), H1 dimensions 3 versus 1, and fixed-shift counts 512 versus 32. The route code hull H=[40,9,16] has a canonical plus-type quotient H/<1> of dimension 8 whose 255 nonzero vectors reproduce the full 135+120 E8/2E8 quadratic split and Pass-124 graphs.",
+  "cross_checks": {
+    "address_route_H1_dimensions_3_1": true,
+    "address_route_p2_exponents_17_11": true,
+    "both_have_q_preserving_fixed_rail": true,
+    "both_sides_pass": true,
+    "route_discriminant_torsion_plus_quotient": true,
+    "route_hull_pass": true,
+    "scalar5_class_is_not_absolute_obstruction": true
+  },
+  "honesty_boundary": "This is a finite discriminant-module and cohomology theorem. It does not by itself construct a continuum gauge field or physical transport channel.",
+  "route": {
+    "checks": {
+      "actual_scalar_coefficient": true,
+      "cohomology_h1_basis": true,
+      "cohomology_image_basis": true,
+      "cohomology_kernel_basis": true,
+      "fixed_generator_preserves_q": true,
+      "fixed_line": true,
+      "fixed_shift_count": true,
+      "fixed_shift_digest": true,
+      "module_type": true,
+      "outer_is_involution": true,
+      "q_generator_two_orbits": true,
+      "q_preserving_count": true,
+      "q_preserving_shift_digest": true,
+      "route_basis_digest": true,
+      "route_gram_digest": true,
+      "route_integral_outer_digest": true,
+      "route_p2_outer_digest": true,
+      "route_smith_left_digest": true,
+      "route_smith_right_digest": true,
+      "scalar1_displacement": true,
+      "scalar1_is_coboundary": true,
+      "scalar5_displacement": true,
+      "scalar5_is_fixed_line_class": true,
+      "smallest_q_preserving_shift": true
+    },
+    "cohomology": {
+      "H1_basis_hex": [
+        "0x4"
+      ],
+      "H1_dimension": 1,
+      "fixed_line_H1_coordinates": "0x1",
+      "fixed_line_mask": "0x100",
+      "image_basis_hex": [
+        "0x180",
+        "0xe4",
+        "0x62",
+        "0x2"
+      ],
+      "image_dimension": 4,
+      "interpretation": "[u_5]=[4h] obstructs a pure scalar-5 normal form; u_1=u_5+4h is a coboundary, so a fixed generator exists",
+      "kernel_basis_hex": [
+        "0x2",
+        "0x4",
+        "0x60",
+        "0x80",
+        "0x100"
+      ],
+      "kernel_dimension": 5,
+      "scalar1_H1_coordinates": "0x0",
+      "scalar1_displacement_mask": "0x62",
+      "scalar1_is_coboundary": true,
+      "scalar5_H1_coordinates": "0x1",
+      "scalar5_displacement_mask": "0x162",
+      "scalar5_is_coboundary": false
+    },
+    "fixed_order8_rail": {
+      "all_shift_digest": "366f8b0cc296c5d26dede2ab0104994346e266113acdc4d71f4bd9278c8d9f39",
+      "fixed_generator": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fixed_generator_q": "11/8",
+      "q_distribution_numerator_over_64": {
+        "24": 16,
+        "88": 16
+      },
+      "q_h": "11/8",
+      "q_preserving_shift_count": 16,
+      "q_preserving_shift_digest": "93bc1816f0648ebe5569041a689c78c2e629a3554bf4ad6fe02c34ae0cbe53c1",
+      "shift_count": 32,
+      "smallest_q_preserving_shift_mask": "0x1"
+    },
+    "lattice": {
+      "gram_determinant": 9795520512,
+      "gram_snf": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        24
+      ],
+      "p2_module": "(Z/2)^8 + Z/8",
+      "p2_order_exponent": 11,
+      "rank": 15
+    },
+    "outer": {
+      "actual_h_image": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "actual_scalar_coefficient": 1,
+      "one_plus_tau_columns_hex": [
+        "0x62",
+        "0x0",
+        "0x0",
+        "0xe4",
+        "0x180",
+        "0x60",
+        "0x60",
+        "0x0",
+        "0x0"
+      ],
+      "torsion_action_columns_hex": [
+        "0x63",
+        "0x2",
+        "0x4",
+        "0xec",
+        "0x190",
+        "0x40",
+        "0x20",
+        "0x80",
+        "0x100"
+      ]
+    },
+    "quadratic_displacements": {
+      "q_u1": "0",
+      "q_u5": "0",
+      "warning": "q(h)=11/8 is preserved by only half the fixed shifts; the other half have q(h')=3/8"
+    },
+    "status": "PASS"
+  },
+  "route_discriminant_torsion": {
+    "fixed_radical": "<4h>",
+    "q_numerator_over_64_counts": {
+      "0": 272,
+      "64": 240
+    },
+    "quotient_counts": {
+      "anisotropic": 120,
+      "isotropic": 136
+    }
+  },
+  "route_hull_e8_shadow": {
+    "capstone_graphs": {
+      "all_nonzero": {
+        "name": "Sp(8,2) orthogonality graph",
+        "parameters": [
+          255,
+          126,
+          61,
+          63
+        ]
+      },
+      "anisotropic": {
+        "parameters": [
+          120,
+          63,
+          30,
+          36
+        ]
+      },
+      "isotropic": {
+        "parameters": [
+          135,
+          70,
+          37,
+          35
+        ]
+      },
+      "reading": "the route-code hull reconstructs the full Pass-124 255=135+120 quadratic split"
+    },
+    "checks": {
+      "all_ones_is_discriminant_4h": true,
+      "all_ones_is_fixed_radical": true,
+      "anisotropic_graph_reconstructed": true,
+      "hull_quadratic_equals_discriminant_quadratic": true,
+      "hull_quotient_dimension_8": true,
+      "hull_quotient_plus_type": true,
+      "hull_quotient_polar_nondegenerate": true,
+      "isotropic_graph_reconstructed": true,
+      "outer_extension_order_51840": true,
+      "outer_preserves_orbits": true,
+      "psp_action_faithful_25920": true,
+      "psp_orbits_1_135_120": true,
+      "route_code_gram_rank_6": true,
+      "route_code_rank_15": true,
+      "route_hull_40_9_16": true,
+      "route_hull_rank_9": true,
+      "sp8_graph_reconstructed": true
+    },
+    "digests": {
+      "code_basis": "a4967a0dfd4b5981b24f66f5ee778604fdf46b66462ee27fb417c7831a6e07bf",
+      "hull_basis": "ac9a07a7f53a40a3925068d6522fefde5ef01c2e66e410f8b258b47da1e623f3",
+      "outer_action": "a8ed2d58603d814fc1aa597bd9ebeab057d05284fb40375e5d97c48c9a077438",
+      "psp_actions": "ca401e0fec06ce2f62234fee8bc1434ee2407b79c4e6e4d58078e2fa1579283f",
+      "quotient_basis": "66e3792323b554631eb92a3ffa58e94a6a8fa53dcb46ddb266ea47cc0d4449b4"
+    },
+    "hull": {
+      "definition": "H = R intersect R^perp",
+      "fixed_radical": "<all-ones>",
+      "fixed_radical_discriminant_coordinate": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "fixed_radical_lattice_coefficients": "0x7fff",
+      "parameters": "[40,9,16]",
+      "weight_enumerator": {
+        "0": 1,
+        "16": 135,
+        "20": 240,
+        "24": 135,
+        "40": 1
+      }
+    },
+    "quotient": {
+      "PSp_action_order": 25920,
+      "PSp_orbits": [
+        1,
+        135,
+        120
+      ],
+      "PSp_stabilizers": {
+        "anisotropic": 216,
+        "isotropic_nonzero": 192
+      },
+      "anisotropic_vectors": 120,
+      "definition": "H/<all-ones>",
+      "dimension": 8,
+      "isotropic_vectors": 136,
+      "outer_extension_order": 51840,
+      "quadratic_form": "q([x]) = wt(x)/4 mod 2",
+      "type": "plus"
+    },
+    "route_code": {
+      "binary_gram_rank": 6,
+      "parameters": "[40,15,10]"
+    },
+    "status": "PASS"
+  },
+  "schema": "w33.pass174.dual_discriminant_fixed_rail.v1",
+  "status": "PASS"
+}

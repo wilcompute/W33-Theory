@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 170: the modular shadow -- H10 is the reduction of the hidden pair.
+"""Pass 170: the modular shadow -- the hidden-pair factor match.
 
 Pass 164 found the incidence-tower module H10 = C^perp/C is uniserial
 with F2 composition factors 1, 8, 1.  This witness locates those factors
@@ -15,9 +15,9 @@ library), with two findings:
 2. THE HIDDEN PAIR.  The two degree-5 ordinary irreducibles -- which
    appear in NONE of the nine permutation carriers of Pass 163 -- reduce
    mod 2 as 1 + 4 and 1 + 4bar.  Hence 5 + 5bar reduces with exactly
-   H10's composition factors: the smallest faithful representations of
-   the substrate group, invisible in every natural permutation geometry,
-   materialize as the SO(10) quotient form.  The kinematic degree-10s
+   H10's composition factors.  This is a composition-factor match, not a
+   module isomorphism: the decomposition matrix does not determine the
+   extension class of the uniserial H10 module.  The kinematic degree-10s
    instead reduce as 4 + 6 and 4bar + 6.
 """
 
@@ -192,9 +192,9 @@ def main():
                     "NONE of the nine permutation carriers of Pass 163 (all "
                     "multiplicities zero), yet their 2-modular reduction "
                     "carries exactly the composition factors of the SO(10) "
-                    "shadow. The smallest faithful representations of the "
-                    "substrate group, invisible in every natural permutation "
-                    "geometry, materialize as the incidence quotient form. "
+                    "shadow. This identifies the ordinary-character source "
+                    "of the same factor multiset, but does not identify the "
+                    "uniserial extension class or prove a module isomorphism. "
                     "The kinematic degree-10s instead reduce as 4 + 6 and "
                     "4bar + 6."
                 )
@@ -202,6 +202,11 @@ def main():
                 else "the reduction pattern differs; see decomposition rows"
             ),
         },
+        "boundary": (
+            "Brauer decomposition rows determine composition factors only; "
+            "an explicit modular module map or extension-class calculation "
+            "would be required to identify H10 with a reduction of 5+5bar"
+        ),
         "checks": {name: bool(value) for name, value in checks.items()},
     }
 

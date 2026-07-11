@@ -10876,7 +10876,7 @@ $15$-dimensional constituents.  For every one of the $480$ Pass-157
 selectors $x$, the analyzer word $y=Nx=Tx$ has
 \[
  \{-3^1,-1^9,0^{20},1^9,3^1\},
- \qquad \|x\|^2=6,quad \|y\|^2=36,
+ \qquad \|x\|^2=6,\qquad \|y\|^2=36,
  \qquad x=\frac16N^{\mathsf T}y.
 \]
 If $X,Y$ collect the $480$ input and output words, then
@@ -11038,7 +11038,7 @@ and \texttt{PASS174\_DUAL\_DISCRIMINANT\_FIXED\_RAIL\_E8\_HULL.md}
 ($66/66$ checks).
 
 %% ===============================================================
-\section{The Chiral Program, Third Round: Passes 169--172 and 175}
+\section{The Chiral Program, Third Round: Passes 169--172, 175, and 176}
 \label{sec:chiral-program-three}
 %% ===============================================================
 
@@ -11098,8 +11098,8 @@ formula can survive --- and it is the line one:
 $\operatorname{rank}_2A_L=q^2+1$ holds at \emph{every} tested prime power.
 The incidence formula does not extend, and the even values
 $10,50,298,1890$ refute the three-anchor cubic $(q^3{+}12q{-}12)/2$ at
-$q=16$: the even-$q$ closed form is an open item handed to the Lean track
-with four exact anchors. (Witness:
+$q=16$; the closed form is supplied by the Sastry--Sin transfer theorem in
+Pass~178 below. (Witness:
 \texttt{analysis/w33\_pass171\_even\_q\_rank\_ladder.py}.)
 
 \subsection{Pass 172 --- the 90-trade scheme and its eigenmatrix}
@@ -11146,5 +11146,166 @@ non-integral (pairing profile $\{0,\pm\tfrac12,\pm1,\pm2\}$ with class
 counts $378720/61440/7680/720$), so the $720$ is \emph{not} a closed root
 system: a new connected, spanning $720$-object counted by the moonshine
 integer. (Witness: \texttt{analysis/w33\_pass175\_dual\_shell\_720.py}.)
+
+\subsection{Pass 176 --- incidence identifies the fixed-line reduction
+with the route-hull $E_8$ shadow}
+\label{ssec:pass176}
+
+Let $C=\ker_{\mathbb F_2}M=[40,15,8]$ and
+$R=\ker_{\mathbb F_2}M^{\mathsf T}=[40,15,10]$.  The address shadow
+$H_{10}=C^\perp/C$ has a unique nonzero vector $f$ fixed by the native
+$\PSp(4,3)$ action, and $q_A(f)=0$.
+
+\begin{theorem}[The incidence fixed-line bridge]
+\label{thm:pass176-incidence-bridge}
+Incidence descends to an injective map on $H_{10}$, sends $f$ to the
+all-ones route word, and restricts to a $\PSp(4,3)$-equivariant quadratic
+isometry
+\[
+ \boxed{
+ f^\perp/\langle f\rangle
+ \xrightarrow{\;M\;}
+ (R\cap R^\perp)/\langle\mathbf1\rangle .}
+\]
+Objectwise, for all $512$ classes $[x]\in f^\perp$,
+\[
+ \frac{\operatorname{wt}(x)}2
+ \equiv
+ \frac{\operatorname{wt}(Mx)}4\pmod2.
+\]
+The codomain is the Pass-174 hull $[40,9,16]$, with enumerator
+$1+135z^{16}+240z^{20}+135z^{24}+z^{40}$.  Quotienting the fixed lines
+gives the plus-type census $256=136+120$.
+\end{theorem}
+
+The $240$ weight-$6$ context words of Pass~175 represent all $240$
+anisotropic elements of $f^\perp$.  Translation by $f$ pairs them into
+$120$ fibres whose two representatives have disjoint supports, and $M$
+maps them bijectively to the $240$ weight-$20$ route-hull words.  Polar
+orthogonality on the fibres is
+\[
+ \boxed{\SRG(120,63,30,36)}.
+\]
+Thus the original incidence matrix supplies the explicit object map from
+the Pass-164 $\mathrm{SO}(10)$ shadow through the Pass-175 $240$ to the
+Pass-174 $E_8/2E_8$ anisotropic $120$.  The verifier checks all
+$8\cdot1024=8192$ native-generator equivariance identities.  This is a
+native $\PSp(4,3)$ theorem; it neither identifies the full automorphism
+group of the graph nor yet supplies signed integral $E_8$ Gram products.
+(Witness:
+\texttt{analysis/w33\_pass176\_incidence\_fixed\_line\_e8\_bridge.py}.)
+
+%% ===============================================================
+\section{The Chiral Program, Fourth Round: Passes 177--182}
+\label{sec:chiral-program-four}
+%% ===============================================================
+
+\subsection{Pass 177 --- the address--route dual theta split}
+\label{ssec:pass177}
+
+The MacWilliams obstruction of Pass~173 lifts from binary words to
+integer-lattice shells: the two dual context codes agree exactly at
+$A_4=40$ and $A_6=240$ and split first at weight $8$
+($5085$ vs.\ $3645$), so the address and route parity lattices share
+their opening shells and separate at $q^4$ ($14640$ vs.\ $3120$), the
+route side then contributing $216\cdot2^{10}=221184$ vectors at $q^5$
+from its pentad words. Address and route are theta-inequivalent from the
+fourth shell onward. (Witness:
+\texttt{analysis/w33\_pass177\_address\_route\_dual\_theta\_split.py}
+and \texttt{PASS177\_ADDRESS\_ROUTE\_DUAL\_THETA\_SPLIT.md}.)
+
+\subsection{Pass 178 --- the even-order rank transfer theorem}
+\label{ssec:pass178}
+
+The even-$q$ item left open in Pass~171 is closed by the Sastry--Sin
+theorem, in exact integral normal form: with
+$B=\begin{psmallmatrix}4&2\\2&5\end{psmallmatrix}$,
+\[
+  \operatorname{rank}_2M(2^n)\;=\;1+\operatorname{trace}(B^n)
+  \;=\;1+\Bigl(\tfrac{1+\sqrt{17}}2\Bigr)^{2n}
+  +\Bigl(\tfrac{1-\sqrt{17}}2\Bigr)^{2n},
+\]
+matching all four measured anchors $10,50,298,1890$ and continuing
+$12250,\,80018,\,524170,\,3437250$. A cautionary tale is recorded: a
+four-anchor $\{1,6,13\}$-eigenvalue interpolation also fits the anchors
+but diverges at $q=32$ ($12794\ne12250$) --- four anchors cannot separate
+two order-three recurrences, and the theorem, not the fit, decides.
+(Witness: \texttt{analysis/w33\_pass178\_even\_q\_closed\_form.py}.)
+
+\subsection{Pass 179 --- the Poisson certificate of the sentinel pair}
+\label{ssec:pass179}
+
+With exact integer shells computed to scaled norm $40$ on both sides, the
+theta transformation of the sentinel/context pair,
+\[
+  \sum_{x\in L'}e^{-\pi t|x|^2}
+  \;=\;2^{-25}\,t^{-20}\sum_{z\in L^{*}}e^{-\pi|z|^2/(4t)},
+\]
+holds to relative error $<10^{-15}$ at $t\in\{0.45,\,0.5,\,0.55\}$: the
+weight-$20$, level-$4$ modular pair is certified from finite data.
+(Witness: \texttt{analysis/w33\_pass179\_poisson\_modular\_pair.py} and
+\texttt{PASS179\_SENTINEL\_CONTEXT\_POISSON\_PAIR.md}.)
+
+\subsection{Pass 180 --- the route lattice is the $Q(4,3)$ trade lattice,
+and the $11/8$ lives on both sides}
+\label{ssec:pass180}
+
+$L_{\rm route}=\ker_{\mathbb Z}N^{\mathsf T}$ is the trade lattice of the
+dual quadrangle $Q(4,3)$, and the $90$-vs-$432$ minimal-shell dichotomy is
+the classical regular/antiregular point dichotomy of the self-dual pair
+(hyperbolic spans of size $4$ vs.\ $2$, verified exactly). Its Milgram row:
+signature $7\bmod8$ with prime phases $(7,0)$ --- against the address
+side's $(3,4)$ --- and its unique $\mathbb Z/8$ block evaluates to
+\[
+  q(h_{\rm route})\;=\;\frac{11}{8}\ \bmod\ 2\mathbb Z
+\]
+as well: \emph{the Ihara-prime-over-eight identity holds on both members
+of the self-dual pair}, upgrading Pass~166's verdict from a point-side
+miracle to an exact invariant of the $W(3,3)/Q(4,3)$ duality. The
+$[40,15,10]$ route code and its $216$ weight-$10$ pentad words are
+independently re-derived. (Witness:
+\texttt{analysis/w33\_pass180\_dual\_trade\_lattice\_q43.py}.)
+
+\subsection{Pass 181 --- the adjoint shadow: $\mathfrak{sp}(4,\mathbb F_3)$
+inside the mod-3 trade modules}
+\label{ssec:pass181}
+
+In the defining characteristic, with a certified generating pair of
+matrix transvections and exact integral lattice actions:
+\[
+  \dim\operatorname{Hom}_G(\mathrm{ad},\,L_4/3L_4)=1,
+  \qquad
+  \dim\operatorname{Hom}_G(\mathrm{ad},\,L_2/3L_2)=1,
+  \qquad
+  \dim\operatorname{Hom}_G(\mathrm{ad},\,L_{\rm route}/3L_{\rm route})=0 .
+\]
+The $10$-dimensional adjoint module $\mathfrak{sp}(4,\mathbb F_3)$
+($\Theta=10$) materializes inside the mod-3 address and gauge trade
+modules --- non-split (no Hom back to the adjoint, no trivial fixed
+vectors anywhere) --- and is \emph{invisible from the route side}: the
+defining-characteristic twin of the chiral line-blindness of Pass~163.
+The gauge algebra itself lives in the discriminant glue of the address
+sector. (Witness:
+\texttt{analysis/w33\_pass181\_adjoint\_shadow\_mod3.py}.)
+
+\subsection{Pass 182 --- the line-octahedron dictionary: blindness
+quantified, and the constant-section rule}
+\label{ssec:pass182}
+
+Two halves. \emph{Blindness, quantified:} every orthogonal pair of
+second-shell trades is support-disjoint, so the finest
+invariant-theoretic relation is $56$-regular with $27{,}040$ triangles
+--- the $40$ true octahedra are strictly invisible to inner-product and
+support-intersection data, sharpening Pass~168. \emph{The dictionary,
+made canonical:} given a true octahedron-triangle ($18$ binary-polar
+octads), its line is the \emph{unique} line of $W(3,3)$ meeting all $18$
+octads in exactly two points (the constant-section rule; profile
+$2^{18}$, bijective onto the $40$ lines), and the axis/pair-partition
+interaction table is exactly diagonal
+$\operatorname{diag}(6,6,6)$: \emph{the three axes of the octahedron are
+canonically the three pair-partitions of its line} --- the same $S_3$
+that the admission controller's three-completion fibre carries
+(count-level alignment recorded with honest scope). (Witness:
+\texttt{analysis/w33\_pass182\_line\_octahedron\_dictionary.py}.)
 
 \end{document}

@@ -1,0 +1,41 @@
+{
+  "schema": "w33.pass181.adjoint_shadow_mod3.v1",
+  "status": "PASS",
+  "adjoint": {
+    "module": "sp(4,F3), dimension 10 = Theta, defining characteristic",
+    "schur_endomorphism_dim": 1
+  },
+  "trade_modules_mod3": {
+    "address_L4": {
+      "dimension": 15,
+      "hom_from_adjoint": 1,
+      "hom_to_adjoint": 0,
+      "trivial_fixed_vectors": 0
+    },
+    "route_Q43": {
+      "dimension": 15,
+      "hom_from_adjoint": 0,
+      "hom_to_adjoint": 0,
+      "trivial_fixed_vectors": 0
+    },
+    "gauge_L2": {
+      "dimension": 24,
+      "hom_from_adjoint": 1,
+      "hom_to_adjoint": 0,
+      "trivial_fixed_vectors": 0
+    }
+  },
+  "reading": "the defining-characteristic side of the trade tower: exact Hom_G dimensions between the adjoint module sp(4,F3) and the mod-3 reductions of the address, route, and gauge trade lattices -- where (and whether) the gauge algebra materializes inside the discriminant glue",
+  "checks": {
+    "generators_symplectic": true,
+    "projective_pair_generates_25920": true,
+    "adjoint_dimension_10": true,
+    "adjoint_action_wellformed": true,
+    "adjoint_schur_hom_1": true,
+    "adjoint_no_trivial": true,
+    "address_L4_action_wellformed": true,
+    "route_Q43_action_wellformed": true,
+    "gauge_L2_action_wellformed": true,
+    "adjoint_hom_computed": true
+  }
+}

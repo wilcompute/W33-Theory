@@ -16,9 +16,14 @@
     "other_zero_class_signatures": {
       "(0, 0, 0, 0)": 108
     },
-    "reading": "the four partners of a trade are the orthogonal trades with the distinguished span/perp intersection signature; the remaining 108 orthogonal trades have different signatures"
+    "reading": "all 112 orthogonal trades have the same disjoint-support signature (0,0,0,0); support intersections cannot select the four partners, so the distinction is group-orbital"
   },
-  "four_valent_spectrum": {
+  "four_valent_exact_spectrum": {
+    "-2": 80,
+    "0": 120,
+    "4": 40
+  },
+  "four_valent_floating_diagnostic": {
     "-2.0": 80,
     "-0.0": 120,
     "4.0": 40
@@ -37,8 +42,9 @@
     "four_valent_orbital_found": true,
     "support_graph_2_regular": true,
     "partner_signature_constant": true,
-    "spectrum_computed": true,
-    "components_are_octahedra": true,
+    "intersection_signature_cannot_select_orbital": true,
+    "components_are_octahedra_exact": true,
+    "floating_spectrum_matches_exact_certificate": true,
     "forty_triangles": true,
     "triangle_stabilizer_order_648": true,
     "triangle_identification_decided": true

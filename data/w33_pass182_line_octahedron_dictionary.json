@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass182.line_octahedron_dictionary.v1",
+  "status": "PASS",
+  "blindness_certificate": {
+    "disjoint_orthogonal_degree_profile": {
+      "56": 120
+    },
+    "coarse_triangle_count": 27040,
+    "reading": "every orthogonal trade pair is support-disjoint, so the coarse invariant relation is 56-regular with 27040 triangles: the 40 true octahedra are invisible to all inner-product/support-intersection invariants -- the quantified form of Pass 168's blindness theorem"
+  },
+  "true_triangles": 40,
+  "profile_rule": {
+    "statement": "for each octahedron-triangle (18 octads), the matched line is the unique line whose 18 meeting numbers |octad cap line| are most uniform",
+    "matched_profiles": {
+      "(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)": 40
+    },
+    "bijective": true
+  },
+  "axis_pair_partition_sample": [
+    [
+      6,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      6
+    ]
+  ],
+  "s3_alignment": {
+    "axes_per_octahedron": 3,
+    "completions_per_ordered_path": 3,
+    "octahedron_carrier": "40 lines x 3 axes x 2 = 240 trades",
+    "controller_carrier": "4320 ordered paths x 3 completions = 12960",
+    "honest_scope": "count-level alignment only; no identification of the 4320-path carrier with any octahedron object is claimed"
+  },
+  "checks": {
+    "shell_240": true,
+    "supports_120": true,
+    "coarse_relation_56_regular": true,
+    "coarse_triangle_flood": true,
+    "group_order": true,
+    "four_valent_orbital_found": true,
+    "forty_true_triangles": true,
+    "profile_rule_unique_per_triangle": true,
+    "dictionary_hits_all_40_lines": true
+  }
+}

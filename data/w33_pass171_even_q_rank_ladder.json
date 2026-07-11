@@ -80,7 +80,7 @@
     "AL_extends": true,
     "AP_equals_AL_by_self_duality": true
   },
-  "reading": "the odd-q Levi rank theorem tested at five prime powers; for even q the self-duality of W(3,q) forces rank A_P = rank A_L, so the two Gram formulas cannot both extend -- the table records exactly which laws survive, as anchor data for the Lean formalization track",
+  "reading": "the odd-q Levi rank theorem is reverified at q=3,5; for even q the self-duality of W(3,q) forces rank A_P = rank A_L, the A_L formula survives at q=2,4,8 while the odd-q incidence formula only coincides accidentally at q=2 and the A_P formula fails.  The q=16 rank 1890 also refutes the cubic interpolant through q=2,4,8; these are anchor data, not an even-q closed form",
   "checks": {
     "q2_point_count": true,
     "q2_line_count": true,
@@ -103,9 +103,13 @@
     "q8_points_per_line": true,
     "q8_ranks_computed": true,
     "odd_q_theorem_reverified": true,
-    "even_q_verdict_recorded": true,
+    "even_self_duality_verified": true,
+    "even_AL_formula_survives": true,
+    "even_M_odd_formula_not_universal": true,
+    "even_AP_odd_formula_fails": true,
     "even_cubic_fits_2_4_8": true,
     "q16_point_count": true,
-    "q16_rank_computed": true
+    "q16_rank_exact_1890": true,
+    "even_cubic_refuted_at_q16": true
   }
 }

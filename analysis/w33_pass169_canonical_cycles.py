@@ -11,15 +11,16 @@ This witness names them:
    240 trades and of the 2-regular relation on the 120 supports, with
    exact lengths and counts.
 
-2. THE PARTNER RULE.  The orbital is characterized combinatorially: for a
-   trade t = 1_span - 1_perp and each of its four partners t', the
-   intersection signature (|S+ cap S'+|, |S+ cap S'-|, |S- cap S'+|,
-   |S- cap S'-|) is computed and shown constant -- the geometric law that
-   picks the four partners out of the 112 orthogonal trades.
+2. THE PARTNER OBSTRUCTION.  For a trade t = 1_span - 1_perp and each
+   orthogonal trade t', the intersection signature
+   (|S+ cap S'+|, |S+ cap S'-|, |S- cap S'+|, |S- cap S'-|) is computed.
+   It is identically (0,0,0,0) for both the four partners and the other
+   108 orthogonal trades.  Thus support intersections do *not* distinguish
+   the four partners: the 4-valent relation is genuinely orbital data.
 
-3. THE SPECTRUM.  Exact eigenvalues of the 4-valent relation (a union of
-   equal cycles has spectrum 4cos(2 pi j / L) + ...), confirming the
-   cycle type spectrally.
+3. THE OCTAHEDRA.  An exact component certificate proves that every
+   six-vertex component is K(2,2,2), hence has spectrum
+   {4,0,0,0,-2,-2}; a floating eigensolve is retained only as a diagnostic.
 """
 
 from __future__ import annotations
@@ -185,7 +186,7 @@ def main():
                     len(minus_i & minus_j),
                 )
             ] += 1
-    checks["partner_signature_constant"] = len(signatures) == 1
+    checks["partner_signature_constant"] = signatures == Counter({(0, 0, 0, 0): 40})
 
     # compare with the signature profile of the REST of the zero class
     other_signatures = Counter()
@@ -204,12 +205,43 @@ def main():
                     len(minus_i & minus_j),
                 )
             ] += 1
+    checks["intersection_signature_cannot_select_orbital"] = (
+        other_signatures == Counter({(0, 0, 0, 0): 108})
+    )
 
-    # 3. spectrum of the 4-valent relation
+    # 3. exact octahedron certificate, followed by a numerical diagnostic
+    seen240 = set()
+    component_sets = []
+    for start in range(240):
+        if start in seen240:
+            continue
+        component = {start}
+        stack = [start]
+        seen240.add(start)
+        while stack:
+            current = stack.pop()
+            for nxt in adj240[current]:
+                if nxt not in seen240:
+                    seen240.add(nxt)
+                    component.add(nxt)
+                    stack.append(nxt)
+        component_sets.append(component)
+    exact_octahedra = all(
+        len(component) == 6
+        and all(len(set(adj240[v]) & component) == 4 for v in component)
+        and all(
+            len(component - {v} - (set(adj240[v]) & component)) == 1
+            for v in component
+        )
+        for component in component_sets
+    )
+    checks["components_are_octahedra_exact"] = (
+        len(component_sets) == 40 and exact_octahedra
+    )
+    exact_eigen_profile = Counter({4: 40, 0: 120, -2: 80})
     eigen = np.linalg.eigvalsh(four_matrix.astype(float))
     eigen_profile = Counter(round(float(v), 6) for v in eigen)
-    checks["spectrum_computed"] = len(eigen_profile) > 0
-    checks["components_are_octahedra"] = eigen_profile == Counter(
+    checks["floating_spectrum_matches_exact_certificate"] = eigen_profile == Counter(
         {4.0: 40, 0.0: 120, -2.0: 80}
     ) or eigen_profile == Counter({4.0: 40, -0.0: 120, -2.0: 80})
 
@@ -278,13 +310,15 @@ def main():
                 str(k): int(v) for k, v in sorted(other_signatures.items())
             },
             "reading": (
-                "the four partners of a trade are the orthogonal trades "
-                "with the distinguished span/perp intersection signature; "
-                "the remaining 108 orthogonal trades have different "
-                "signatures"
+                "all 112 orthogonal trades have the same disjoint-support "
+                "signature (0,0,0,0); support intersections cannot select "
+                "the four partners, so the distinction is group-orbital"
             ),
         },
-        "four_valent_spectrum": {
+        "four_valent_exact_spectrum": {
+            str(k): int(v) for k, v in sorted(exact_eigen_profile.items())
+        },
+        "four_valent_floating_diagnostic": {
             str(k): int(v) for k, v in sorted(eigen_profile.items())
         },
         "triangle_identification": {

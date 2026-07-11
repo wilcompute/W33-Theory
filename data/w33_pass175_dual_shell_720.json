@@ -24,7 +24,10 @@
     "half_integer_B_occurs": true,
     "root_system_closed": false,
     "span_rank": 40,
-    "greedy_basis_abs_det": 1099511627776,
+    "generated_lattice": "L* exactly",
+    "generated_lattice_index_in_Z40": 32768,
+    "generated_lattice_euclidean_covolume": 32768,
+    "generated_lattice_half_form_determinant": "2^-10",
     "nonzero_B_components": 1
   },
   "theta": {
@@ -54,7 +57,10 @@
     "shell_in_context_code": true,
     "half_integer_B_occurs": true,
     "shell_spans_rank_40": true,
-    "greedy_basis_full_rank": true,
+    "context_code_rank_25": true,
+    "shell_reductions_span_context": true,
+    "shell_contains_all_coordinate_doubles": true,
+    "shell_generates_dual_lattice_exactly": true,
     "nonzero_B_graph_connected": true,
     "macwilliams_A4_is_40_lines": true,
     "dual_theta_shell2_is_720": true,
