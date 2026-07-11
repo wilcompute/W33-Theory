@@ -15,6 +15,12 @@ on:
 permissions:
   contents: read
 
+env:
+  PYTHONHASHSEED: "0"
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -25,15 +31,15 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install numpy scipy sympy networkx pytest
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 pytest
       - name: Fresh formal witness
-        run: python analysis/w33_levi_next5_v4_formal.py > /tmp/formal-v4.json
+        run: python analysis/w33_levi_next5_v4_formal.py | tee /tmp/formal-v4.json
       - name: Fresh cohomology witness
-        run: python analysis/w33_levi_next5_v4_cohomology.py > /tmp/cohomology-v4.json
+        run: python analysis/w33_levi_next5_v4_cohomology.py | tee /tmp/cohomology-v4.json
       - name: Fresh incidence-functor witness
-        run: python analysis/w33_levi_next5_v4_functor.py > /tmp/functor-v4.json
+        run: python analysis/w33_levi_next5_v4_functor.py | tee /tmp/functor-v4.json
       - name: Fresh foundry witness
-        run: python analysis/w33_levi_next5_v4_foundry.py > /tmp/foundry-v4.json
+        run: python analysis/w33_levi_next5_v4_foundry.py | tee /tmp/foundry-v4.json
       - name: Fresh bounded-memory HIL witness
-        run: python analysis/w33_levi_next5_v4_hil.py > /tmp/hil-v4.json
+        run: python analysis/w33_levi_next5_v4_hil.py | tee /tmp/hil-v4.json
       - run: pytest -q tests/test_w33_levi_next5_v4.py
