@@ -1,0 +1,33 @@
+name: Lean formal verification
+
+on:
+  push:
+    branches: [master, "agent/**"]
+    paths:
+      - "formal/**"
+      - ".github/workflows/lean-formal.yml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "formal/**"
+      - ".github/workflows/lean-formal.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Kernel build and independent checker
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: true
+          build-args: "--wfail"
+          test: false
+          lint: false
+          nanoda: true
+          nanoda-allow-sorry: false
