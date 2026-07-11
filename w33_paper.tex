@@ -11308,4 +11308,115 @@ that the admission controller's three-completion fibre carries
 (count-level alignment recorded with honest scope). (Witness:
 \texttt{analysis/w33\_pass182\_line\_octahedron\_dictionary.py}.)
 
+%% ===============================================================
+\section{The Chiral Program, Fifth Round: Passes 183--187}
+\label{sec:chiral-program-five}
+%% ===============================================================
+
+\subsection{Pass 183 --- the discriminant ledger of the incidence square}
+\label{ssec:pass183}
+
+The mechanism behind the two-sided $11/8$. Since
+$\operatorname{SNF}(N)=1^{25}$, the incidence map is a
+\emph{unimodular-cokernel} map: $N\mathbb Z^{40}$ is already saturated.
+The generator-invariant reading of a $\mathbb Z/8$ block is its
+numerator mod $8$ (since $q(uh)=u^2q(h)$ with $u^2\in\{1,9\}$): the two
+dark blocks lie in class $3\bmod 8$ (representative $11/8$ on both
+sides), the two code-lattice blocks in class $5\bmod 8$, and $3+5\equiv0$
+--- the negation law $D(L)\cong D(L^\perp)(-1)$ of the unimodular ambient,
+verified exactly on both sides together with the code signatures
+$1\bmod8$. The transport is pinned by the exact annihilator
+$(A-2I)(A-12I)$ on $\mathrm{code}_P$ ($N$ scales the Perron line by $4$
+and the gauge $24$-sector by $\sqrt6$), and the whole square closes in one
+exact sequence:
+\[
+  0\longrightarrow \mathrm{code}_P
+  \xrightarrow{\;N\;}\mathrm{code}_L
+  \longrightarrow D(L_{\rm address})\longrightarrow 0,
+\]
+with index $2^{17}3^{10}=\det L_{\rm address}$ and cokernel invariant
+factors exactly $(2^5,6^9,24)$: \emph{the address discriminant group is
+the cokernel of the incidence bridge between the two code lattices}.
+(Witness: \texttt{analysis/w33\_pass183\_incidence\_square\_ledger.py}.)
+
+\subsection{Pass 184 --- the mod-3 factor table of the trade tower}
+\label{ssec:pass184}
+
+In the defining characteristic, with 3-modular Brauer degrees
+$[1,5,10,14,25,81]$, the three trade modules resolve exactly:
+\[
+  L_4/3L_4=\bigl[\,\mathrm{ad}\,10\;\big|\;5\,\bigr],\qquad
+  L_2/3L_2=\bigl[\,\mathrm{ad}\,10\;\big|\;14\,\bigr],\qquad
+  L_{\rm route}/3L_{\rm route}=\bigl[\,14\;\big|\;1\,\bigr],
+\]
+all non-split (the address quotient $5$ certified irreducible by
+exhaustive $3^5$ cyclic generation; the quotient endomorphism algebras
+one-dimensional; the route module has one-dimensional coinvariants and no
+invariants). The adjoint $\mathfrak{sp}(4,\mathbb F_3)$ sits at the bottom
+of the address and gauge modules with the \emph{hidden five} of Pass~170
+as the address quotient --- three modules, three different ways to sit
+around the gauge algebra. (Witness:
+\texttt{analysis/w33\_pass184\_mod3\_trade\_factors.py}, GAP dec-3
+ledger included.)
+
+\subsection{Pass 185 --- the octahedron clock: the axis torsor is a full
+$S_3$}
+\label{ssec:pass185}
+
+The line stabilizer (order $648$) acts on its octahedron's three axes
+with \emph{full image $S_3$}, the axes carry the three distinct
+pair-partitions of the line, and the labeling is
+$\PSp(4,3)$-equivariant: every line of $W(3,3)$ owns a native free
+$S_3$-structure --- precisely the fibre shape (three completions, seed
+action of order $6$) that the S3 completion admission controller
+postulates over its $4320$ ordered paths. The geometric torsor gives the
+controller's arithmetic a canonical per-line model (alignment recorded;
+the $4320$-path carrier itself is not identified here). (Witness:
+\texttt{analysis/w33\_pass185\_octahedron\_clock.py}.)
+
+\subsection{Pass 186 --- the pentad-core configuration and the 36
+dodecads}
+\label{ssec:pass186}
+
+The antiregular counterpart of the second shell: the $432$ pentad cores
+carry a PSp$(4,3)$ orbital configuration of rank $40$ (two shell orbits;
+coherence verified), and its valency-$5$ sparse orbitals decompose into
+\[
+  \boxed{\,36\ \text{twelve-vertex components with stabilizer order }720\,}
+\]
+--- the index-$36$ \emph{double-six} ($S_6$ spread-fibration) vacuum of the
+five-vacua table. Where the address tower hangs $40$ octahedra on the
+lines, the route tower hangs $36$ dodecads on the double-sixes: each side
+of the duality selects its own maximal-subgroup geometry. (Witness:
+\texttt{analysis/w33\_pass186\_pentad\_core\_scheme.py}.)
+
+\subsection{Pass 187 --- the layer sandwich of the binary permutation
+module}
+\label{ssec:pass187}
+
+One filtration generates the week's binary facts. The $\mathbb F_2$
+permutation module on the $40$ points has the exact chain
+\[
+  0\;\subset\;\langle\mathbf j\rangle\;\subset\;C\;\subset\;
+  \operatorname{im}A_2\;\subset\;\ker A_2\;\subset\;C^\perp\;\subset\;
+  \mathbf j^\perp\;\subset\;\mathbb F_2^{40},
+\]
+with dimensions $1,15,16,24,25,39$ and layer sequence
+\[
+  \boxed{\,1,\;14,\;1,\;8,\;1,\;14,\;1\,}
+\]
+(the $14$s and the $8$ certified irreducible by Norton's criterion; the
+fixed subspace is exactly $\langle\mathbf j\rangle$). Consequences read
+off directly: the sentinel code $C$ is the bottom $1{+}14$; the
+$\mathrm{SO}(10)$ shadow $H_{10}=C^\perp/C$ is the middle sandwich
+$(1,8,1)$ with its fixed vector $f=[\operatorname{im}A_2]$; and the $E_8$
+shadow is the central $8$-layer $\ker A_2/\operatorname{im}A_2$. On the
+line side the filtration genuinely rearranges
+($\operatorname{rank}_2A_L=10=q^2{+}1$, hull dimension $9$,
+$\operatorname{im}A_L\not\subset C_{\rm route}$): the address/route
+asymmetry is a \emph{filtration shift}, the same phenomenon the
+Sastry--Sin $\sqrt{17}$ radical-series analysis quantifies at general
+even $q$. (Witness:
+\texttt{analysis/w33\_pass187\_f2\_layer\_sandwich.py}.)
+
 \end{document}

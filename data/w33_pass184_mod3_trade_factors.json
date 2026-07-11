@@ -1,0 +1,185 @@
+{
+  "schema": "w33.pass184.mod3_trade_factors.v1",
+  "status": "PASS",
+  "brauer_degrees_mod3": [
+    1,
+    5,
+    10,
+    14,
+    25,
+    81
+  ],
+  "factor_table": {
+    "address_L4": {
+      "dimension": 15,
+      "adjoint_image_rank": 10,
+      "quotient_dimension": 5,
+      "quotient_end_dim": 1,
+      "hom_quotient_into_module": 0,
+      "extension_split": false,
+      "quotient_irreducible_exhaustive": true
+    },
+    "gauge_L2": {
+      "dimension": 24,
+      "adjoint_image_rank": 10,
+      "quotient_dimension": 14,
+      "quotient_end_dim": 1,
+      "hom_quotient_into_module": 0,
+      "extension_split": false
+    },
+    "route_Q43": {
+      "dimension": 15,
+      "adjoint_image_rank": 0,
+      "hom_to_trivial": 1,
+      "hom_from_trivial": 0,
+      "end_dim": 1
+    }
+  },
+  "reading": "the defining-characteristic factor table of the trade tower: address = adjoint 10 below a five (non-split -- the hidden five's mod-3 home), gauge = adjoint 10 below the 14, route = no adjoint, coinvariants of dimension 1 (a 14 below a trivial): three modules, three different ways to sit around the gauge algebra",
+  "dec3_ledger": {
+    "5": [
+      {
+        "ordinary": 5,
+        "row": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ordinary": 5,
+        "row": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "10": [
+      {
+        "ordinary": 10,
+        "row": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ordinary": 10,
+        "row": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "15": [
+      {
+        "ordinary": 15,
+        "row": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "ordinary": 15,
+        "row": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "24": [
+      {
+        "ordinary": 24,
+        "row": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "30": [
+      {
+        "ordinary": 30,
+        "row": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "ordinary": 30,
+        "row": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "ordinary": 30,
+        "row": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "81": [
+      {
+        "ordinary": 81,
+        "row": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "generating_pair_found": true,
+    "address_adjoint_bottom_quotient_5": true,
+    "address_quotient_irreducible": true,
+    "address_nonsplit": true,
+    "gauge_adjoint_bottom_quotient_14": true,
+    "gauge_quotient_end_1": true,
+    "route_coinvariants_1": true,
+    "mod3_degrees": true,
+    "dec3_ledger_recorded": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass185.octahedron_clock.v1",
+  "status": "PASS",
+  "torsor": {
+    "line_stabilizer_order": 648,
+    "axis_action_image": "S3 (order 6, full)",
+    "axis_labels": "the three pair-partitions of the line",
+    "equivariant": true
+  },
+  "alignment": {
+    "geometric_fibre": "40 lines x 3 axes (x2 trades) = 240",
+    "controller_fibre": "4320 ordered paths x 3 completions = 12960",
+    "seed_action": "|S3| = 6 on both sides",
+    "bridge_checks_pass": true,
+    "ordered_paths_4320": true,
+    "completions_per_path_3": true,
+    "incidences_12960": true,
+    "honest_scope": "the axis torsor gives the controller's postulated three-completion S3 fibre a native geometric model per line; the 4320-path carrier itself is not identified with an octahedron object here"
+  },
+  "checks": {
+    "shell_240": true,
+    "group_order": true,
+    "four_valent_found": true,
+    "forty_triangles": true,
+    "constant_section_total": true,
+    "constant_section_bijective": true,
+    "line_stabilizer_648": true,
+    "axis_action_is_full_S3": true,
+    "axes_carry_distinct_partitions": true,
+    "partition_labels_equivariant": true,
+    "controller_bridge_loaded": true
+  }
+}

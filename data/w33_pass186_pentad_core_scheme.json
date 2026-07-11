@@ -1,0 +1,389 @@
+{
+  "schema": "w33.pass186.pentad_core_scheme.v1",
+  "status": "PASS",
+  "shell": {
+    "size": 432,
+    "norm": 10,
+    "orbit_count": 2,
+    "ip_values": [
+      -10,
+      -5,
+      -4,
+      -2,
+      -1,
+      1,
+      2,
+      4,
+      5,
+      10
+    ],
+    "ip_row_profile": {
+      "-10": 1,
+      "-5": 20,
+      "-4": 30,
+      "-2": 65,
+      "-1": 100,
+      "1": 100,
+      "2": 65,
+      "4": 30,
+      "5": 20,
+      "10": 1
+    }
+  },
+  "orbital_configuration": {
+    "rank": 40,
+    "coherent": true,
+    "orbitals": [
+      {
+        "orbital": 0,
+        "valency": 1,
+        "ip_value": 10,
+        "symmetric": true
+      },
+      {
+        "orbital": 1,
+        "valency": 10,
+        "ip_value": 5,
+        "symmetric": false
+      },
+      {
+        "orbital": 2,
+        "valency": 30,
+        "ip_value": 4,
+        "symmetric": true
+      },
+      {
+        "orbital": 3,
+        "valency": 10,
+        "ip_value": 5,
+        "symmetric": false
+      },
+      {
+        "orbital": 4,
+        "valency": 60,
+        "ip_value": 2,
+        "symmetric": false
+      },
+      {
+        "orbital": 5,
+        "valency": 20,
+        "ip_value": 1,
+        "symmetric": false
+      },
+      {
+        "orbital": 6,
+        "valency": 20,
+        "ip_value": 1,
+        "symmetric": false
+      },
+      {
+        "orbital": 7,
+        "valency": 30,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 8,
+        "valency": 20,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 9,
+        "valency": 5,
+        "ip_value": 2,
+        "symmetric": false
+      },
+      {
+        "orbital": 10,
+        "valency": 30,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 11,
+        "valency": 20,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 12,
+        "valency": 30,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 13,
+        "valency": 60,
+        "ip_value": -2,
+        "symmetric": true
+      },
+      {
+        "orbital": 14,
+        "valency": 5,
+        "ip_value": -2,
+        "symmetric": true
+      },
+      {
+        "orbital": 15,
+        "valency": 30,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 16,
+        "valency": 30,
+        "ip_value": -4,
+        "symmetric": false
+      },
+      {
+        "orbital": 17,
+        "valency": 10,
+        "ip_value": -5,
+        "symmetric": false
+      },
+      {
+        "orbital": 18,
+        "valency": 10,
+        "ip_value": -5,
+        "symmetric": false
+      },
+      {
+        "orbital": 19,
+        "valency": 1,
+        "ip_value": -10,
+        "symmetric": false
+      },
+      {
+        "orbital": 20,
+        "valency": 10,
+        "ip_value": 5,
+        "symmetric": false
+      },
+      {
+        "orbital": 21,
+        "valency": 1,
+        "ip_value": 10,
+        "symmetric": true
+      },
+      {
+        "orbital": 22,
+        "valency": 10,
+        "ip_value": 5,
+        "symmetric": false
+      },
+      {
+        "orbital": 23,
+        "valency": 30,
+        "ip_value": 4,
+        "symmetric": true
+      },
+      {
+        "orbital": 24,
+        "valency": 20,
+        "ip_value": 1,
+        "symmetric": false
+      },
+      {
+        "orbital": 25,
+        "valency": 60,
+        "ip_value": 2,
+        "symmetric": false
+      },
+      {
+        "orbital": 26,
+        "valency": 20,
+        "ip_value": 1,
+        "symmetric": false
+      },
+      {
+        "orbital": 27,
+        "valency": 30,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 28,
+        "valency": 5,
+        "ip_value": 2,
+        "symmetric": false
+      },
+      {
+        "orbital": 29,
+        "valency": 20,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 30,
+        "valency": 20,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 31,
+        "valency": 30,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 32,
+        "valency": 30,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 33,
+        "valency": 60,
+        "ip_value": -2,
+        "symmetric": true
+      },
+      {
+        "orbital": 34,
+        "valency": 30,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 35,
+        "valency": 5,
+        "ip_value": -2,
+        "symmetric": true
+      },
+      {
+        "orbital": 36,
+        "valency": 10,
+        "ip_value": -5,
+        "symmetric": false
+      },
+      {
+        "orbital": 37,
+        "valency": 30,
+        "ip_value": -4,
+        "symmetric": false
+      },
+      {
+        "orbital": 38,
+        "valency": 10,
+        "ip_value": -5,
+        "symmetric": false
+      },
+      {
+        "orbital": 39,
+        "valency": 1,
+        "ip_value": -10,
+        "symmetric": false
+      }
+    ],
+    "ip_class_splitting": {
+      "-10": 2,
+      "-5": 4,
+      "-4": 2,
+      "-2": 4,
+      "-1": 8,
+      "1": 8,
+      "2": 4,
+      "4": 2,
+      "5": 4,
+      "10": 2
+    }
+  },
+  "sparse_relations": [
+    {
+      "orbital": 19,
+      "valency": 1,
+      "ip_value": -10,
+      "component_sizes": {
+        "2": 216
+      },
+      "component_count": 216,
+      "stabilizer_order": 120,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 21,
+      "valency": 1,
+      "ip_value": 10,
+      "component_sizes": {
+        "1": 432
+      },
+      "component_count": 432,
+      "stabilizer_order": 120,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 39,
+      "valency": 1,
+      "ip_value": -10,
+      "component_sizes": {
+        "2": 216
+      },
+      "component_count": 216,
+      "stabilizer_order": 120,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 9,
+      "valency": 5,
+      "ip_value": 2,
+      "component_sizes": {
+        "12": 36
+      },
+      "component_count": 36,
+      "stabilizer_order": 720,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 14,
+      "valency": 5,
+      "ip_value": -2,
+      "component_sizes": {
+        "1": 216,
+        "6": 36
+      },
+      "component_count": 252,
+      "stabilizer_order": 720,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 28,
+      "valency": 5,
+      "ip_value": 2,
+      "component_sizes": {
+        "12": 36
+      },
+      "component_count": 36,
+      "stabilizer_order": 720,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    },
+    {
+      "orbital": 35,
+      "valency": 5,
+      "ip_value": -2,
+      "component_sizes": {
+        "1": 216,
+        "6": 36
+      },
+      "component_count": 252,
+      "stabilizer_order": 120,
+      "fixed_points": 0,
+      "fixed_lines": 0
+    }
+  ],
+  "reading": "the antiregular counterpart of the 240-shell: the pentad cores' orbital configuration, its rank, the inner-product blindness data, and the canonical sparse structures with their stabilizer identifications",
+  "checks": {
+    "shell_432_norm_10": true,
+    "ip_profile_constant": true,
+    "group_order": true,
+    "shell_orbit_count": true,
+    "orbital_rank_computed": true,
+    "orbital_configuration_coherent": true,
+    "sparse_relations_recorded": true
+  }
+}

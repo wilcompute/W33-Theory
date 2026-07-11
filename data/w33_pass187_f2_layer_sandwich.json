@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass187.f2_layer_sandwich.v1",
+  "status": "PASS",
+  "point_side": {
+    "chain": "0 < j < C < im A2 < ker A2 < C_perp < j_perp < M",
+    "dims": {
+      "j": 1,
+      "C": 15,
+      "im_A2": 16,
+      "ker_A2": 24,
+      "C_perp": 25,
+      "j_perp": 39
+    },
+    "layers": [
+      1,
+      14,
+      1,
+      8,
+      1,
+      14,
+      1
+    ],
+    "reading": "one filtration generates the binary facts: the sentinel code C is the second layer (1+14), the SO(10) shadow H10 = C_perp/C is the middle sandwich (1,8,1) with its fixed vector f = [im A2], and the E8 shadow is the central 8-layer ker A2/im A2"
+  },
+  "line_side": {
+    "dims": {
+      "route": 15,
+      "im_AL": 10,
+      "ker_AL": 30,
+      "route_perp": 25,
+      "hull": 9
+    },
+    "im_AL_in_route": false,
+    "route_in_ker_AL": true,
+    "reading": "the line module rearranges: rank A_L = 10 = q^2+1, the hull [40,9] sits low (j + the 8-layer), and the filtration shift IS the address/route asymmetry"
+  },
+  "checks": {
+    "group_order": true,
+    "dims_1_15_16_24_25_39": true,
+    "j_in_C": true,
+    "C_in_imA2": true,
+    "imA2_in_kerA2": true,
+    "kerA2_in_Cperp": true,
+    "Cperp_in_jperp": true,
+    "layer_dims_1_14_1_8_1_14_1": true,
+    "layer_14_low_irreducible": true,
+    "layer_8_irreducible": true,
+    "fixed_space_is_j_only": true,
+    "H10_bottom_is_imA2_class": true,
+    "line_side_rank_AL_10": true,
+    "line_hull_dim_9": true,
+    "line_imAL_in_route_perp": true
+  }
+}
