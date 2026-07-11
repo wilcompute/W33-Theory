@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "calibration_converges": true,
+    "die_p05_above_0_999": true,
+    "gds_binary_valid": true,
+    "layout_has_120_mzis": true,
+    "mesh_unitary": true,
+    "nominal_above_0_9999": true,
+    "power_below_100mW": true,
+    "tracked_min_above_0_999": true,
+    "tracking_beats_open_loop": true,
+    "wavelength_p05_above_0_997": true
+  },
+  "compiler": {
+    "calibration_rms": [
+      0.052422252831826034,
+      0.001571869816084171,
+      7.832888428435928e-05,
+      5.8396289566648e-05,
+      6.212006504934096e-05,
+      6.369062871072986e-05,
+      6.619728829814704e-05,
+      6.163761761409994e-05,
+      6.058625393652712e-05
+    ],
+    "command_digest": "bcc03cfbf7cc69556545e790acdad6b18221c5d77ebc54fc187006eac15a7cff",
+    "controls": 376,
+    "modes": 16,
+    "mzi_cells": 120,
+    "nominal_fidelity": 0.9999999204395618,
+    "phase_bits": 16
+  },
+  "design_assumptions": {
+    "boundary": "Electrical driver, TIA, servo and clock powers are explicit architectural allocations, not measurements from a selected PDK. The GDS is a deterministic floorplan/reference cell package pending design-rule substitution.",
+    "eo_capacitance_f": 5.5e-14,
+    "eo_vrms_v": 2.5,
+    "platform": "Si3N4 passive mesh with PZT piezo-optomechanical coarse trim and capacitive Pockels fine control",
+    "pzt_leakage_per_control_w": 1.2e-08,
+    "servo_update_hz": 20000
+  },
+  "drift": {
+    "epochs": 256,
+    "open_loop_mean": 0.9988463262973515,
+    "tracked_mean": 0.9999998567980343,
+    "tracked_min": 0.999999695603991
+  },
+  "foundry_corners": {
+    "dies": 128,
+    "mean": 0.999991341775313,
+    "min": 0.9999854892367118,
+    "p05": 0.9999882938337242
+  },
+  "layout": {
+    "gds_bytes": 25200,
+    "gds_sha256": "de1c8f9df648f5d3310ec55b1f95371cfc01da178b83c035cf37b921b2ce5e47",
+    "generator": "analysis/w33_levi_next5_v5_gds.py",
+    "layers": {
+      "EO_electrode": 30,
+      "PZT_trim": 20,
+      "SiN_waveguide": 1,
+      "monitor": 40
+    },
+    "manifest_digest": "d54766d084cf47737dedc2629dbd10ad190cad825f960960e0ad767d514f8ad3"
+  },
+  "power_budget": {
+    "clock_reference_mw": 8.0,
+    "digital_servo_mw": 28.0,
+    "driver_quiescent_mw": 25.6,
+    "eo_capacitive_switching_mw": 0.0025849999999999996,
+    "monitor_tia_mw": 20.0,
+    "pzt_refresh_average_mw": 4.0,
+    "pzt_static_leakage_mw": 0.004512,
+    "total_mw": 85.607097
+  },
+  "status": "PASS",
+  "theorem": "Replacing continuous thermo-optic holding power by piezoelectric coarse trim and capacitive electro-optic fine control preserves >0.999 foundry-tail process fidelity in the modeled 16-mode mesh while reducing the explicit steady-state control budget from 7.81 W to below 100 mW; a deterministic 120-cell GDSII reference layout and Verilog-A phase-element model are generated from the same manifest.",
+  "wavelength": {
+    "band_nm": [
+      1530,
+      1565
+    ],
+    "min": 0.9980196615119946,
+    "p05": 0.9983482238170813
+  }
+}

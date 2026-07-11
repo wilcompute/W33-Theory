@@ -1,0 +1,71 @@
+name: Levi v5 closure
+
+on:
+  push:
+    branches: [master, "agent/**"]
+    paths:
+      - "analysis/w33_levi_next5_v5*.py"
+      - "data/PART_2026_07_11_LEVI_NEXT5_V5*.json"
+      - "formal/**"
+      - "hardware/holonet_v5*"
+      - "tests/test_w33_levi_next5_v5.py"
+      - ".github/workflows/levi-v5.yml"
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONHASHSEED: "0"
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
+jobs:
+  witnesses:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 pytest==8.4.2
+      - name: Native Fourier witness
+        run: python analysis/w33_levi_next5_v5_fourier.py > /tmp/v5-fourier.json
+      - name: H2 extension witness
+        run: python analysis/w33_levi_next5_v5_extension.py > /tmp/v5-extension.json
+      - name: E8 lane witness
+        run: python analysis/w33_levi_next5_v5_lanes.py > /tmp/v5-lanes.json
+      - name: Hybrid compiler witness
+        run: python analysis/w33_levi_next5_v5_hybrid.py > /tmp/v5-hybrid.json
+      - name: Vendor/FPGA runtime witness
+        run: python analysis/w33_levi_next5_v5_hardware.py > /tmp/v5-hardware.json
+      - name: Generate and verify deterministic GDSII
+        shell: bash
+        run: |
+          python analysis/w33_levi_next5_v5_gds.py /tmp/generated-a.gds > /tmp/v5-gds.json
+          python analysis/w33_levi_next5_v5_gds.py /tmp/generated-b.gds > /tmp/v5-gds-second.json
+          cmp /tmp/generated-a.gds /tmp/generated-b.gds
+          test "$(stat -c %s /tmp/generated-a.gds)" -gt 20000
+      - name: Focused v5 regression
+        run: pytest -q tests/test_w33_levi_next5_v5.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: levi-v5-certificates
+          path: /tmp/v5-*.json
+
+  rtl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Compile and simulate frame reducer
+        run: |
+          iverilog -g2012 -o /tmp/v5-frame-reducer hardware/holonet_v5_frame_reducer.sv hardware/tb_holonet_v5_frame_reducer.sv
+          vvp /tmp/v5-frame-reducer | tee /tmp/v5-rtl.log
+          grep -q PASS /tmp/v5-rtl.log

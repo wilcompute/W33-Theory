@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "extension": true,
+    "fourier": true,
+    "hardware": true,
+    "hybrid": true,
+    "lanes": true
+  },
+  "results": {
+    "extension": {
+      "H1_dimension": 3,
+      "H2_classes": 8,
+      "H2_dimension": 3,
+      "fixed_order8_gauge": "0x411",
+      "transgression": "0x0"
+    },
+    "fourier": {
+      "jordan": {
+        "J1": 6,
+        "J2": 0,
+        "J3": 22,
+        "J4": 2
+      },
+      "q3_local_ranks": {
+        "incidence": 6,
+        "line_gram": 3,
+        "point": 3
+      },
+      "w33_ranks": {
+        "incidence": 25,
+        "line_gram": 10,
+        "point_gram": 16
+      }
+    },
+    "hardware": {
+      "events": 1048832,
+      "frames": 256,
+      "route_digest": "235cd75de2e5e50f3bf2f839e8e661da3696c46f54af03f13a051944a8ba4db3"
+    },
+    "hybrid": {
+      "die_p05": 0.9999882938337242,
+      "gds_sha256": "de1c8f9df648f5d3310ec55b1f95371cfc01da178b83c035cf37b921b2ce5e47",
+      "power_mw": 85.607097,
+      "tracked_min": 0.999999695603991
+    },
+    "lanes": {
+      "decomposition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        72
+      ],
+      "falsifier_steps": 50000,
+      "payload_addresses": 162
+    }
+  },
+  "schema": "w33.levi_next5_v5.v1",
+  "status": "PASS",
+  "synthesis": "Native q=3 Fourier geometry, the periodic H2 extension/transgression, typed E8 carrier lanes, a sub-100 mW hybrid photonic controller, and vendor-normalized FPGA time-tag replay now form one executable v5 stack."
+}

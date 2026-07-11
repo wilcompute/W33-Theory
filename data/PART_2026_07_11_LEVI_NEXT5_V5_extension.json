@@ -1,0 +1,139 @@
+{
+  "H2_extensions": [
+    {
+      "canonical_mask": "0x0",
+      "class": "0x0",
+      "outer_lift_order": 2,
+      "quadratic_value_mod_2": "0",
+      "split": true,
+      "weight": 0
+    },
+    {
+      "canonical_mask": "0x4000",
+      "class": "0x1",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "0",
+      "split": false,
+      "weight": 1
+    },
+    {
+      "canonical_mask": "0x1084",
+      "class": "0x2",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "1",
+      "split": false,
+      "weight": 3
+    },
+    {
+      "canonical_mask": "0x61",
+      "class": "0x3",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "0",
+      "split": false,
+      "weight": 3
+    },
+    {
+      "canonical_mask": "0x118",
+      "class": "0x4",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "1",
+      "split": false,
+      "weight": 3
+    },
+    {
+      "canonical_mask": "0x1c8",
+      "class": "0x5",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "1",
+      "split": false,
+      "weight": 4
+    },
+    {
+      "canonical_mask": "0x146",
+      "class": "0x6",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "1",
+      "split": false,
+      "weight": 4
+    },
+    {
+      "canonical_mask": "0x341",
+      "class": "0x7",
+      "outer_lift_order": 4,
+      "quadratic_value_mod_2": "1",
+      "split": false,
+      "weight": 4
+    }
+  ],
+  "checks": {
+    "H1_dimension_3": true,
+    "H2_dimension_3": true,
+    "combined_transgression_zero": true,
+    "crossed_product_associativity_condition": true,
+    "eight_H2_classes": true,
+    "explicit_gauge_found": true,
+    "gauged_order8_generator_fixed": true,
+    "mixed_equals_fixed_line_class": true,
+    "module_type": true,
+    "periodicity_chain_maps_equal": true,
+    "scalar5_mixing_still_nonremovable": true
+  },
+  "digests": {
+    "H2_classes": "3070d7cfd669f46b706c775142a21d69344b17de38b125e2ca3191361a47cc6f",
+    "fixed_gauge": "54db9ed02f97ff0d20e1643954b7823ed1b22fd90db1c84f66dd23b165e4bdd2",
+    "outer_action": "3ffbd89239c0e235f49469dff715330b633668c09016733dfe7933a74e16eafe"
+  },
+  "module": {
+    "h_index": 14,
+    "torsion_dimension": 15,
+    "type": "(Z/2)^14 + Z/8"
+  },
+  "periodic_cohomology": {
+    "H1_dimension": 3,
+    "H1_representatives": [
+      "0x3f",
+      "0x5e",
+      "0x118"
+    ],
+    "H2_dimension": 3,
+    "H2_representatives": [
+      "0x3f",
+      "0x5e",
+      "0x118"
+    ],
+    "coboundary_dimension": 6,
+    "fixed_line_class": "0x1",
+    "kernel_dimension": 9,
+    "mixed_class": "0x1",
+    "periodicity": "H^(n+2)(C2,M) = H^n(C2,M) for n>=1; in characteristic two both differentials are 1+tau."
+  },
+  "scope_boundary": "This classifies extensions of C2 by the exact 2-torsion module and the connecting map for the order-eight rail; it does not assert a unique global extension of the entire integral Weyl lattice.",
+  "status": "PASS",
+  "theorem": "The C2-module A[2] has periodic H1=H2 of dimension three. The mixed class equals the fixed-line class and defines one canonical non-split order-four outer lift, but the connecting transgression of h mod A[2] vanishes because tau(h)-h=u+4h has zero class. Consequently an explicit order-eight generator h+v is tau-fixed, even though no gauge removes u while retaining scalar action 5.",
+  "transgression": {
+    "delta_class": "0x0",
+    "delta_raw_mask": "0x7527",
+    "exact_sequence": "0 -> A[2] -> A -> A/A[2] -> 0",
+    "fixed_order8_lift": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "minimal_gauge_mask": "0x411",
+    "minimal_gauge_weight": 3,
+    "quotient_generator": "h mod A[2]",
+    "reason": "tau(h)-h = u+4h and [u]=[4h], so the two nonzero H1 classes cancel."
+  }
+}

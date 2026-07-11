@@ -1,0 +1,21 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Foundry-neutral compact model for one hybrid PZT/Pockels phase element.
+// Replace parameters with measured PDK corners before tape-out.
+module holonet_v5_hybrid_phase(p, n, phase_out);
+  inout p, n;
+  output phase_out;
+  electrical p, n, phase_out;
+  parameter real VPI = 2.5 from (0:inf);
+  parameter real C_EO = 55f from [0:inf);
+  parameter real PZT_GAIN = 0.3141592653589793; // rad/V coarse trim
+  parameter real PZT_TAU = 5m from (0:inf);
+  parameter real EO_GAIN = `M_PI/VPI;
+  real pzt_state;
+  analog begin
+    I(p,n) <+ C_EO * ddt(V(p,n));
+    pzt_state = laplace_nd(PZT_GAIN * V(p,n), {1.0}, {PZT_TAU, 1.0});
+    V(phase_out) <+ pzt_state + EO_GAIN * V(p,n);
+  end
+endmodule
