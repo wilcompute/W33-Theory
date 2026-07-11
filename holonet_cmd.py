@@ -24,6 +24,14 @@ _V4_COMMANDS = {
     "hil-runtime-v4": "w33_levi_next5_v4_hil",
     "levi-next5-v4": "w33_levi_next5_v4",
 }
+_V5_COMMANDS = {
+    "fourier-geometry-v5": "w33_levi_next5_v5_fourier",
+    "extension-cohomology-v5": "w33_levi_next5_v5_extension",
+    "e8-lanes-v5": "w33_levi_next5_v5_lanes",
+    "hybrid-compiler-v5": "w33_levi_next5_v5_hybrid",
+    "hardware-runtime-v5": "w33_levi_next5_v5_hardware",
+    "levi-next5-v5": "w33_levi_next5_v5",
+}
 
 def main(argv=None):
     analysis = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis")
@@ -41,7 +49,7 @@ def main(argv=None):
         import w33_levi_next5_v2
         command = "all" if arguments[0] == "levi-next5-v2" else arguments[0]
         raise SystemExit(w33_levi_next5_v2.main([command]))
-    for commands in (_V3_COMMANDS, _V4_COMMANDS):
+    for commands in (_V3_COMMANDS, _V4_COMMANDS, _V5_COMMANDS):
         if arguments and arguments[0] in commands:
             if len(arguments) != 1:
                 raise SystemExit(f"{arguments[0]} takes no arguments")
