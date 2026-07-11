@@ -21,17 +21,50 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Lean kernel build
+      - name: Set up Lean toolchain
         uses: leanprover/lean-action@v1
         with:
           lake-package-directory: formal
           auto-config: false
-          build: true
-          build-args: "--wfail --quiet"
+          build: false
           test: false
           lint: false
           nanoda: false
           use-github-cache: false
+      - name: Capture kernel build logs
+        id: kernel
+        shell: bash
+        run: |
+          set +e
+          cd formal
+          lake update > "$RUNNER_TEMP/lake-update.log" 2>&1
+          update_status=$?
+          if [ "$update_status" -eq 0 ]; then
+            lake build --wfail > "$RUNNER_TEMP/lean-build.log" 2>&1
+            build_status=$?
+          else
+            printf 'lake update failed; build not run\n' > "$RUNNER_TEMP/lean-build.log"
+            build_status=99
+          fi
+          printf '%s\n' "$update_status" > "$RUNNER_TEMP/update-status.txt"
+          printf '%s\n' "$build_status" > "$RUNNER_TEMP/build-status.txt"
+          exit 0
+      - name: Upload kernel diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-kernel-diagnostics
+          path: |
+            ${{ runner.temp }}/lake-update.log
+            ${{ runner.temp }}/lean-build.log
+            ${{ runner.temp }}/update-status.txt
+            ${{ runner.temp }}/build-status.txt
+          if-no-files-found: error
+      - name: Enforce kernel success
+        shell: bash
+        run: |
+          test "$(cat "$RUNNER_TEMP/update-status.txt")" = "0"
+          test "$(cat "$RUNNER_TEMP/build-status.txt")" = "0"
 
   independent-nanoda:
     runs-on: ubuntu-latest
