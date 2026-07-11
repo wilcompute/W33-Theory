@@ -29,7 +29,7 @@ def analyze():
       'imports_root_module':'import W33.FourierBlocks' in content['formal/W33.lean'],
       'lean_action_v1':'leanprover/lean-action@v1' in workflow,
       'kernel_build_required':'lake build --wfail' in workflow or ('build: true' in workflow and '--wfail' in workflow),
-      'independent_leanchecker_required':'leanchecker: true' in workflow,
+      'independent_leanchecker_required':'lake env leanchecker' in workflow,
       'placeholder_rejection_required':"grep -R -n -E" in workflow and '(sorry|admit)' in workflow,
       'branch_and_pr_triggers':'pull_request:' in workflow and '"agent/**"' in workflow,
       'q3_numeric_theorems':(
