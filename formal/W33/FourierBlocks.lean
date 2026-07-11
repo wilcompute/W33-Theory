@@ -75,12 +75,12 @@ theorem q3Ranks :
     (3^2 + 1 : ℤ) = 10 := by
   norm_num
 
-/-- Numerically close the `q=3` Jordan census: two `J₄`, fifteen `J₃`, no
+/-- Numerically close the `q=3` Jordan census: two `J₄`, twenty-two `J₃`, no
 `J₂`, and six `J₁` blocks on the 80-dimensional Levi space. -/
 theorem q3JordanCensus :
-    ((3^3 + 2*3^2 + 3 - 4) / 2 : ℤ) = 15 ∧
+    ((3^3 + 2*3^2 + 3 - 4) / 2 : ℤ) = 22 ∧
     (3 * (3 - 1)^2 / 2 : ℤ) = 6 ∧
-    2*4 + 15*3 + 6 = 80 := by
+    2*4 + 22*3 + 6 = 80 := by
   norm_num
 
 end W33.FourierBlocks
