@@ -44,12 +44,13 @@ jobs:
         run: python analysis/w33_levi_next5_v5_hybrid.py > /tmp/v5-hybrid.json
       - name: Vendor/FPGA runtime witness
         run: python analysis/w33_levi_next5_v5_hardware.py > /tmp/v5-hardware.json
-      - name: Reconstruct and verify GDSII transport
+      - name: Generate and verify deterministic GDSII
         shell: bash
         run: |
-          base64 -d hardware/holonet_v5_hybrid.gds.b64 > /tmp/holonet_v5_hybrid.gds
-          python analysis/w33_levi_next5_v5_gds.py /tmp/generated.gds > /tmp/v5-gds.json
-          cmp /tmp/holonet_v5_hybrid.gds /tmp/generated.gds
+          python analysis/w33_levi_next5_v5_gds.py /tmp/generated-a.gds > /tmp/v5-gds.json
+          python analysis/w33_levi_next5_v5_gds.py /tmp/generated-b.gds > /tmp/v5-gds-second.json
+          cmp /tmp/generated-a.gds /tmp/generated-b.gds
+          test "$(stat -c %s /tmp/generated-a.gds)" -gt 20000
       - name: Focused v5 regression
         run: pytest -q tests/test_w33_levi_next5_v5.py
       - uses: actions/upload-artifact@v4

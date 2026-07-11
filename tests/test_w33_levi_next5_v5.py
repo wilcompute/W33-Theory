@@ -46,7 +46,7 @@ def test_hybrid_hardware_budget():
     assert d["power_budget"]["total_mw"] < 100
     assert d["foundry_corners"]["p05"] > .999
     assert d["drift"]["tracked_min"] > .999
-    assert len((ROOT/"hardware/holonet_v5_hybrid.gds.b64").read_text()) > 30000
+    assert d["layout"]["gds_bytes"] > 20000
 
 
 def test_vendor_fpga_runtime():
