@@ -28,10 +28,14 @@ def analyze():
       'no_admit':not re.search(r'(?m)^\s*admit\b', '\n'.join(v for k,v in content.items() if k.endswith('.lean')), re.I),
       'imports_root_module':'import W33.FourierBlocks' in content['formal/W33.lean'],
       'lean_action_v1':'leanprover/lean-action@v1' in workflow,
-      'kernel_build_required':'build: true' in workflow and '--wfail' in workflow,
+      'kernel_build_required':'lake build --wfail' in workflow or ('build: true' in workflow and '--wfail' in workflow),
       'independent_nanoda_required':'nanoda: true' in workflow and 'nanoda-allow-sorry: false' in workflow,
       'branch_and_pr_triggers':'pull_request:' in workflow and '"agent/**"' in workflow,
-      'q3_numeric_theorems':'theorem q3Ranks' in joined and 'theorem q3JordanCensus' in joined,
+      'q3_numeric_theorems':(
+          'theorem q3Ranks' in joined and 'theorem q3JordanCensus' in joined
+          and '= 22' in content['formal/W33/FourierBlocks.lean']
+          and '22*3 + 6 = 80' in content['formal/W33/FourierBlocks.lean']
+      ),
     }
     digest=hashlib.sha256('\n'.join(f'{k}\0{v}' for k,v in sorted(content.items())).encode()).hexdigest()
     return {'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,'files':list(content),'source_digest':digest,'workflow':{'action':'leanprover/lean-action@v1','lake_directory':'formal','build_wfail':True,'nanoda_no_sorry':True},'honest_boundary':'The Python witness validates source structure and algebra locally. Kernel and nanoda validation are delegated to the committed GitHub Actions workflow because Lean is unavailable in this execution container.','theorem':'The local Fourier-block interface kernel-reduces the global odd-q rank/Jordan theorem to explicit geometric block certificates and numerically closes q=3; CI requires both lake build and nanoda with sorryAx forbidden.'}
