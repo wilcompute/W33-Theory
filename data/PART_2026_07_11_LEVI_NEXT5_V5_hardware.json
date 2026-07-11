@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "all_frames_routed_40_27_72_240": true,
+    "all_payload_roots_typed": true,
+    "backpressure_exercised": true,
+    "bounded_reducer_matches_software": true,
+    "qutag_sdk_contract": true,
+    "rtl_contract_present": true,
+    "stream_over_one_million_events": true,
+    "swabian_sdk_contract": true,
+    "vendor_loss_is_fail_closed": true
+  },
+  "fpga": {
+    "accepted_events": 1048832,
+    "backpressure_cycles": 165,
+    "cycles": 1049253,
+    "frames": 256,
+    "input_events": 1048832,
+    "rtl": {
+      "path": "hardware/holonet_v5_frame_reducer.sv",
+      "required_tokens": true,
+      "sha256": "450057b97dc506f8932fc1dce3e95ff822b005f081e151e1e03771256b439141"
+    },
+    "summary_digest": "6904b7b448a5dcc45623339de721527dbaee0e8d887301ea1801262a4596a9dd"
+  },
+  "runtime_replay": {
+    "chain": "timestamp -> frame -> W33 point40 -> Schlaefli line27 -> E6 root72 -> typed E8 root240",
+    "frames": 256,
+    "route_digest": "235cd75de2e5e50f3bf2f839e8e661da3696c46f54af03f13a051944a8ba4db3",
+    "sample": [
+      {
+        "control_root72": 124,
+        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "frame": 0,
+        "line27": "L14",
+        "line27_slot": 13,
+        "overflow": false,
+        "payload_lane": 0,
+        "payload_root240": 9,
+        "point40": 16
+      },
+      {
+        "control_root72": 163,
+        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "frame": 1,
+        "line27": "L14",
+        "line27_slot": 13,
+        "overflow": false,
+        "payload_lane": 1,
+        "payload_root240": 36,
+        "point40": 17
+      },
+      {
+        "control_root72": 64,
+        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "frame": 2,
+        "line27": "L14",
+        "line27_slot": 13,
+        "overflow": false,
+        "payload_lane": 2,
+        "payload_root240": 52,
+        "point40": 18
+      },
+      {
+        "control_root72": 103,
+        "count_digest": "60397d32178ab626f4c73f10b530fffd0e49d87ff0820bd3cf34283cc10901c0",
+        "frame": 3,
+        "line27": "L14",
+        "line27_slot": 13,
+        "overflow": false,
+        "payload_lane": 3,
+        "payload_root240": 147,
+        "point40": 19
+      }
+    ]
+  },
+  "status": "PASS",
+  "theorem": "Vendor-normalized tags are reduced with bounded state and every completed frame is replayed through an explicit 40-27-72-240 typed route; loss, overflow, and backpressure are fail-closed.",
+  "vendor_adapters": {
+    "qutag": {
+      "api": "getLastTimestamps(reset)",
+      "lost": 0,
+      "sample_events": 128
+    },
+    "scope_boundary": "CI injects deterministic SDK doubles; real instruments are optional runtime dependencies and missed/lost events are fatal telemetry.",
+    "swabian": {
+      "api": "createTimeTagger + TimeTagStream.getData",
+      "missed": 0,
+      "sample_events": 128
+    }
+  }
+}

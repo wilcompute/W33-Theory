@@ -1,0 +1,65 @@
+\section{Native Fourier geometry, extension transgression, typed $E_8$ lanes, and hardware closure}
+\label{sec:levi-v5-closure}
+
+For the native $q=3$ Fourier block, the point operator on
+$\operatorname{Mat}_3(\mathbb F_2)$ is $T(Y)=Y+Y^T$.  Exact finite
+calculation gives
+\[
+ \ker T=\operatorname{Sym}_3(\mathbb F_2),\quad |\ker T|=64,
+ \qquad
+ \operatorname{im}T=\operatorname{Alt}_3(\mathbb F_2),\quad |\operatorname{im}T|=8.
+\]
+The transformed incidence span has dimension six and its Gram map has rank
+three.  Consequently the local rank triple is $(3,6,3)$, while the complete
+native incidence matrices give
+\[
+ \rank_2 M_3=25,\qquad \rank_2 A_P=16,\qquad \rank_2 A_L=10,
+ \qquad D_3\sim J_4^2\oplus J_3^{22}\oplus J_1^6.
+\]
+These finite statements are represented directly in
+\texttt{W33.HeisenbergQ3} and checked by Lean finite computation.
+
+Let $A\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8$ be the two-primary
+discriminant module with outer involution $\tau$.  Periodic cyclic cohomology
+gives
+\[
+ \dim H^1(C_2,A[2])=\dim H^2(C_2,A[2])=3.
+\]
+Thus there are eight two-torsion extension classes, seven non-split.  If $h$
+generates the order-eight rail and $\tau(h)=5h+u$, then $[u]=[4h]\ne0$ in
+$H^1$, but the connecting homomorphism for
+$0\to A[2]\to A\to A/A[2]\to0$ satisfies
+\[
+ \boxed{\delta([h])=[\tau(h)-h]=[u+4h]=0.}
+\]
+Indeed a minimum-weight gauge $v=\mathtt{0x411}$ makes $h+v$ fixed of exact
+order eight.  Hence a fixed rail exists, whereas the scalar-five rail retains
+its genuine nonremovable mixing.
+
+The full $E_8$ carrier is compiled as
+\[
+ \boxed{240=72+6+6\cdot27},
+\]
+with 72 $E_6$ control roots, six fixed $A_2$ reference roots forming a
+hexagon, and six Schlaefli payload lanes.  Each payload root has routing
+signature $16+16+40$ against the control roots.  Simple $E_6$ reflections
+preserve all lane and route data, including a $50{,}000$-step generator replay.
+
+Replacing continuously heated controls by PZT coarse trim and capacitive
+Pockels fine control lowers the explicit modeled steady-state budget to
+\[
+ \boxed{85.607097\ \mathrm{mW}}.
+\]
+The $128$-die fifth-percentile process fidelity is $0.999988294$, and online
+tracking keeps the $256$-epoch minimum at $0.999999696$.  A deterministic
+GDSII reference floorplan and Verilog-A phase model are generated from the
+same manifest.
+
+Finally, vendor-normalized time-tag adapters and a synthesizable AXI-style
+frame reducer process $1{,}048{,}832$ deterministic events into $256$ bounded
+frame summaries under backpressure.  Each completed frame is replayed through
+\[
+ \text{timestamp}\longrightarrow40\longrightarrow27\longrightarrow72\longrightarrow240,
+\]
+ending at a typed minuscule $E_8$ payload address.  Lost-event, overflow, and
+backpressure conditions are surfaced fail-closed.
