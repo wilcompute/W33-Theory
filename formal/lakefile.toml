@@ -1,4 +1,4 @@
-name = "w33-odd-q-rank"
+name = "W33"
 version = "0.2.0"
 defaultTargets = ["W33"]
 
