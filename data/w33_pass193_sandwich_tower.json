@@ -1,0 +1,70 @@
+{
+  "schema": "w33.pass193.sandwich_tower.v1",
+  "status": "PASS",
+  "towers": {
+    "W33": {
+      "points": 40,
+      "layers": [
+        1,
+        14,
+        1,
+        8,
+        1,
+        14,
+        1
+      ],
+      "uniserial": true,
+      "source": "Passes 187/189 (committed)"
+    },
+    "doily": {
+      "points": 15,
+      "dims": {
+        "j": 1,
+        "C": 5,
+        "imA2": 14,
+        "kerA2": 1,
+        "Cperp": 10
+      },
+      "inclusions": [
+        "C<Cperp",
+        "C<imA2",
+        "j<Cperp",
+        "j<kerA2",
+        "kerA2<Cperp",
+        "kerA2<j"
+      ],
+      "fixed_space_dim": 1,
+      "j_in_C": false,
+      "C_in_Cperp": true
+    },
+    "GQ42": {
+      "points": 45,
+      "dims": {
+        "j": 1,
+        "C": 24,
+        "imA2": 44,
+        "kerA2": 1,
+        "Cperp": 21
+      },
+      "inclusions": [
+        "C<imA2",
+        "j<Cperp",
+        "j<kerA2",
+        "kerA2<Cperp",
+        "kerA2<j"
+      ],
+      "fixed_space_dim": 1,
+      "j_in_C": false,
+      "C_in_Cperp": false
+    }
+  },
+  "reading": "line-size parity drives the shape: W(3,3) has 4-point lines (j inside the trade code, uniserial 1|14|1|8|1|14|1); the doily has 3-point lines (j escapes the trade code and the filtration opens); GQ(4,2) has 5-point lines. The exact posets, dimensions, and socle data are recorded for each: the sandwich is a property of the even-line geometry, not of quadrangles in general",
+  "checks": {
+    "doily_group_720": true,
+    "doily_pair_found": true,
+    "doily_computed": true,
+    "doily_j_not_in_C": true,
+    "gq42_computed": true,
+    "gq42_j_status_recorded": true
+  }
+}

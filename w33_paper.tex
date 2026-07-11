@@ -11564,4 +11564,23 @@ $S_4\to S_3$.  Thus signed trades form $S_4/V_4$ and unsigned axes form
 $S_3/C_2$; the six signed trades are not a regular $S_3$ frame. (Witness:
 \texttt{analysis/w33\_pass192\_signed\_trade\_edge\_s4.py}.)
 
+\subsection{Pass 193 --- the sandwich is an even-line phenomenon}
+\label{ssec:pass193}
+
+Running the binary-filtration battery down the tower: for the doily
+($3$-point lines, $\mathrm{Sp}(4,2)$, defining characteristic) the exact
+dimensions are $(j,C,\operatorname{im}A_2,\ker A_2,C^\perp)=
+(1,5,14,1,10)$ --- the all-ones vector escapes the trade code, the
+adjacency mod $2$ is nearly nonsingular ($\ker A_2=\langle\mathbf
+j\rangle$), and no sandwich forms; for $\GQ(4,2)$ ($5$-point lines) the
+same collapse occurs ($\operatorname{rank}_2A=44$,
+$\ker A_2=\langle\mathbf j\rangle$, and $C=[45,24]$ is not even
+self-orthogonal). Only $W(3,3)$, with \emph{four}-point lines, has
+$\mathbf j$ inside its trade code, $A_2$ a differential ($A_2^2=0$), and
+the uniserial chain of Pass~189: \emph{the layer sandwich --- and with it
+the sentinel code, the $\mathrm{SO}(10)$ shadow, and the $E_8$ shadow ---
+is a property of the even-line geometry, singling out $W(3,3)$ within its
+own trade tower}. (Witness:
+\texttt{analysis/w33\_pass193\_sandwich\_tower.py}.)
+
 \end{document}
