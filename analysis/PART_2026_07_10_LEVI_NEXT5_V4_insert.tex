@@ -6,10 +6,16 @@ $\mathsf{OddQFourierCertificate}(q)$ whose fields are the trivial and
 nontrivial additive-character blocks.  The resulting kernel statements include
 \[
  \rank_2 M_3=25,\qquad \rank_2 A_P=16,\qquad \rank_2 A_L=10,
- \qquad D_3\sim J_4^2\oplus J_3^{15}\oplus J_1^6.
+ \qquad D_3\sim J_4^2\oplus J_3^{22}\oplus J_1^6.
 \]
-The repository CI requires both \texttt{lake build --wfail} and the independent
-\texttt{nanoda} checker with \texttt{sorryAx} disabled.
+Here
+\[
+ \frac{3^3+2\cdot3^2+3-4}{2}=22,
+ \qquad 2\cdot4+22\cdot3+6=80.
+\]
+The repository CI requires \texttt{lake build --wfail}, an explicit rejection
+of \texttt{sorry} and \texttt{admit}, and an independent official
+\texttt{leanchecker} pass.
 
 Let $A=A_2(L_{-4})\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8$ and let $h$
 generate the order-eight factor.  Writing
