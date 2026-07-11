@@ -1,0 +1,67 @@
+{
+  "schema": "w33.pass167.sentinel_theta_macwilliams.v1",
+  "status": "PASS",
+  "context_code": {
+    "parameters": "[40, 25, 4]",
+    "weight_enumerator": {
+      "0": 1,
+      "4": 40,
+      "6": 240,
+      "8": 5085,
+      "10": 47824,
+      "12": 353920,
+      "14": 1378800,
+      "16": 3944610,
+      "18": 6699600,
+      "20": 8694192,
+      "22": 6699600,
+      "24": 3944610,
+      "26": 1378800,
+      "28": 353920,
+      "30": 47824,
+      "32": 5085,
+      "34": 240,
+      "36": 40,
+      "40": 1
+    },
+    "reading": "the lightest legal traffic has weight 4 (the lines themselves are among the minimum words); every context word has even weight because j lies in the sentinel code"
+  },
+  "sentinel_lattice": {
+    "definition": "L_S = {x in Z^40 : x mod 2 in S}, norms |x|^2/2",
+    "rank": 40,
+    "determinant_scaled": 1024,
+    "even": true,
+    "theta_shells_scaled_0_to_12": [
+      1,
+      0,
+      80,
+      0,
+      14640,
+      0,
+      3765440,
+      0,
+      643725360,
+      0,
+      44998484832,
+      0,
+      1440062879040
+    ],
+    "closed_forms": {
+      "N(2)": "2v = 80 (the +-2e_i)",
+      "N(4)": "4*C(40,2) + 2^8*45 = 14640"
+    }
+  },
+  "checks": {
+    "sentinel_enumerator_matches_pass159": true,
+    "macwilliams_integrality": true,
+    "dual_total_2_25": true,
+    "dual_all_even_weights": true,
+    "dual_min_distance_4": true,
+    "dual_weight4_at_least_lines": true,
+    "no_weight2_context_words": true,
+    "theta_shell0_is_1": true,
+    "theta_odd_scaled_shells_vanish": true,
+    "theta_shell2_is_80": true,
+    "theta_shell4_closed_form": true
+  }
+}

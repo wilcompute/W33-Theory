@@ -10710,4 +10710,129 @@ Gram matrix independently re-derives every rank of Passes~158 and~161.
 GAP-assisted, $14$ checks.)
 \end{theorem}
 
+%% ===============================================================
+\section{The Chiral Program, Second Round: Passes 164--168}
+\label{sec:chiral-program-two}
+%% ===============================================================
+
+\subsection{Pass 164 --- the incidence tower carries the $\mathrm{SO}(10)$
+shadow, with the $E_8$ shadow inside it}
+\label{ssec:pass164}
+
+\begin{theorem}[The rank-10 quotient form]
+\label{thm:so10-shadow}
+The sentinel code $C=[40,15,8]_2$ is doubly even, hence self-orthogonal
+inside its dual, the context code $C^{\perp}=[40,25,4]_2$. The quotient
+$H_{10}=C^{\perp}/C\cong\mathbb F_2^{10}$ carries the well-defined
+quadratic form $q(x{+}C)=\operatorname{wt}(x)/2\bmod2$ with nondegenerate
+polar form, and $q$ has exactly $\mathbf{528}$ isotropic vectors:
+\emph{plus type}. Thus the incidence mod-2 tower produces
+\[
+  \PSp(4,3)\;\hookrightarrow\;O^{+}(10,2),
+\]
+a faithful embedding into the $D_5=\mathrm{SO}(10)$ orthogonal group over
+$\mathbb F_2$ --- the GUT companion of the adjacency tower's
+$O_8^{+}(2)/E_8$ embedding. The module is uniserial with filtration
+$0\subset\langle z\rangle\subset z^{\perp}\subset H_{10}$ and composition
+factors $1,8,1$ (cyclic-submodule profile: one vector generates the
+isotropic fixed line, $510$ generate $z^{\perp}$, $512$ generate all of
+$H_{10}$); and $z^{\perp}$ carries exactly $272=2\cdot136$ isotropic
+vectors, so $z^{\perp}/\langle z\rangle$ is precisely the plus-type
+$8$-dimensional $E_8/2E_8$ module of
+Corollary~\ref{cor:e8-canonical} ($136$ isotropic). \emph{The
+$\mathrm{SO}(10)$ shadow contains the $E_8$ shadow as its middle
+composition factor: the $D_5\to D_4$ reduction, realized in the substrate's
+own mod-2 homology.} (Witness:
+\texttt{analysis/w33\_pass164\_so10\_shadow\_quotient\_form.py}.)
+\end{theorem}
+
+\subsection{Pass 165 --- the doily fusion: the trade construction meets the
+Pass-71 codes}
+\label{ssec:pass165}
+
+Applying the trade construction to $W(2,2)$: the doily trade lattice has
+rank $5$, $\det=1536=2^9\cdot3$,
+$\operatorname{SNF}=\operatorname{diag}(2,4^3,12)$, even, minimal norm $6$
+with exactly $20$ minimal trades --- the span/perp double-threes of the
+$60$ hyperbolic pairs on $10$ supports --- while the $15$ ovoid differences
+($W(2,2)$ has ovoids since $q=2$ is even; $A\mathbf 1_O=3\mathbf
+j-3\mathbf 1_O$, so differences are integral trades) sit at norm $8$, one
+per point ($15$ ovoid pairs, pairwise meeting in one point). Over
+$\mathbb F_2$ the fusion with the doily track is exact: the trade code is
+$[15,5,6]$ with enumerator $1+10z^6+15z^8+6z^{10}$ --- precisely the
+\emph{even-ization} of the Pass-71 spread code $[15,5,5]$ (enumerator
+$1+6z^5+15z^8+10z^9$; adjoin $\mathbf j$ and keep even words:
+$6\!\leftrightarrow\!15-9$, $10\!\leftrightarrow\!15-5$, $z^8$ fixed), the
+two codes sharing the $4$-dimensional spread/ovoid-difference core on
+their respective sides of the self-duality. The chiral program and the
+doily QEC track are one construction. (Witness:
+\texttt{analysis/w33\_pass165\_doily\_trade\_fusion.py}.)
+
+\subsection{Pass 166 --- the 11/8 is a $W(3,3)$ miracle, not a law}
+\label{ssec:pass166}
+
+Testing the candidate law ``the deepest 2-adic Jordan block of a GQ trade
+lattice evaluates to its Ihara prime over $2^{\mathrm{depth}}$'' across the
+tower:
+\[
+\begin{array}{l|c|c|c|c}
+ & \text{Ihara prime} & \text{2-adic depth} & q(h) & \text{law} \\\hline
+W(2,2) & 5 & 2 & 1 & \text{no}\\
+W(3,3) & 11 & 3 & 11/8 & \textbf{yes}\\
+\GQ(4,2) & 11 & 1 & 0 & \text{no}
+\end{array}
+\]
+The doily's trade discriminant is $(\mathbb Z/2)\oplus(\mathbb
+Z/4)^3\oplus\mathbb Z/12$ with signature $5\bmod8$; the $\GQ(4,2)$ trade
+lattice is $2$-elementary with signature $0\bmod 8$ (Brown-trivial, like
+the gauge sector); only $W(3,3)$'s chiral lattice carries $2$-adic depth
+$3$ --- and there, and only there, the block evaluates to the Ihara prime
+over eight. All three Milgram signatures verified by exact Gauss sums.
+(Witness: \texttt{analysis/w33\_pass166\_ihara\_discriminant\_law.py}.)
+
+\subsection{Pass 167 --- the sentinel theta and the context enumerator}
+\label{ssec:pass167}
+
+The exact MacWilliams transform of the sentinel enumerator gives the
+context code $[40,25,4]_2$ in closed form without enumerating $2^{25}$
+words: every context word has even weight (because $\mathbf j$ lies in the
+sentinel code), and the minimum-weight words are counted by
+\[
+  A_4=40,\qquad A_6=240,\qquad A_8=5085,\ \ldots
+\]
+--- \emph{the $40$ lines are exactly the lightest legal traffic}, and the
+$A_6$ coefficient is again $240$. Construction A on the sentinel code
+yields an even rank-$40$ lattice of determinant $2^{10}$ with exact theta
+opening
+\[
+  \Theta(q)=1+80q^2+14640q^4+3\,765\,440q^6+\cdots,
+\qquad
+  N(2)=2v,\quad N(4)=4\tbinom{40}{2}+2^8\!\cdot\!45 .
+\]
+(Witness: \texttt{analysis/w33\_pass167\_sentinel\_theta\_macwilliams.py}.)
+
+\subsection{Pass 168 --- the second-shell scheme is rank 10, and the inner
+product is blind to it}
+\label{ssec:pass168}
+
+The $240$ minimal trades of the $\GQ(4,2)$ trade lattice carry seven
+inner-product classes (valencies $1,1,27,27,36,36,112$) whose relation
+matrices commute pairwise --- yet the fusion is \emph{not} coherent: the
+true orbital rank of $\PSp(4,3)$ on the $240$ shell is $\mathbf{10}$, and
+the orbital coherent configuration (verified exactly, schurian by
+construction) properly refines the inner-product classes:
+\[
+  36_{+1}=18+18,\qquad
+  36_{-1}=18+18^{\mathsf T}\ \text{(an \emph{asymmetric} pair --- the
+  configuration is non-commutative)},\qquad
+  112_{0}=108+\mathbf 4 .
+\]
+The inner product does not see the finer orbital structure --- a
+second-shell analogue of the two-480s obstruction --- and the split of the
+zero class exposes a canonical \emph{4-valent invariant orthogonality
+relation}: every trade has exactly four distinguished orthogonal partners,
+descending to a $2$-regular invariant graph (a canonical cycle structure)
+on the $120$ supports, whose orbital rank is $5$. (Witness:
+\texttt{analysis/w33\_pass168\_second\_shell\_scheme.py}.)
+
 \end{document}

@@ -1,0 +1,219 @@
+{
+  "schema": "w33.pass168.second_shell_scheme.v1",
+  "status": "PASS",
+  "shell_scheme": {
+    "size": 240,
+    "ip_classes": 7,
+    "ip_valencies": {
+      "id": 1,
+      "-6": 1,
+      "-2": 27,
+      "-1": 36,
+      "0": 112,
+      "1": 36,
+      "2": 27
+    },
+    "ip_fusion_coherent": false,
+    "ip_relations_commute": true,
+    "orbital_rank": 10,
+    "orbitals": [
+      {
+        "orbital": 0,
+        "valency": 1,
+        "ip_value": 6,
+        "symmetric": true
+      },
+      {
+        "orbital": 1,
+        "valency": 27,
+        "ip_value": 2,
+        "symmetric": true
+      },
+      {
+        "orbital": 2,
+        "valency": 18,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 3,
+        "valency": 18,
+        "ip_value": 1,
+        "symmetric": true
+      },
+      {
+        "orbital": 4,
+        "valency": 108,
+        "ip_value": 0,
+        "symmetric": true
+      },
+      {
+        "orbital": 5,
+        "valency": 4,
+        "ip_value": 0,
+        "symmetric": true
+      },
+      {
+        "orbital": 6,
+        "valency": 18,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 7,
+        "valency": 27,
+        "ip_value": -2,
+        "symmetric": true
+      },
+      {
+        "orbital": 8,
+        "valency": 18,
+        "ip_value": -1,
+        "symmetric": false
+      },
+      {
+        "orbital": 9,
+        "valency": 1,
+        "ip_value": -6,
+        "symmetric": true
+      }
+    ],
+    "ip_class_splitting": {
+      "-6": 1,
+      "-2": 1,
+      "-1": 2,
+      "0": 2,
+      "1": 2,
+      "2": 1,
+      "6": 1
+    },
+    "orbital_scheme_coherent": true,
+    "orbital_scheme_commutative": false,
+    "reading": "the second trade shell carries a schurian rank-10 coherent configuration; the seven inner-product classes are a NON-coherent fusion of it -- the inner product does not see the finer orbital structure",
+    "ip_spectra": {
+      "-6": {
+        "eigenvalues": {
+          "-1": 120,
+          "1": 120
+        },
+        "max_integer_residual": 0.0
+      },
+      "-2": {
+        "eigenvalues": {
+          "-9": 24,
+          "-3": 84,
+          "1": 81,
+          "3": 15,
+          "9": 35,
+          "27": 1
+        },
+        "max_integer_residual": 2.842170943040401e-14
+      },
+      "-1": {
+        "eigenvalues": {
+          "-12": 30,
+          "-6": 24,
+          "0": 80,
+          "4": 81,
+          "6": 24,
+          "36": 1
+        },
+        "max_integer_residual": 3.552713678800501e-14
+      },
+      "0": {
+        "eigenvalues": {
+          "-20": 20,
+          "-8": 24,
+          "0": 120,
+          "4": 60,
+          "16": 15,
+          "112": 1
+        },
+        "max_integer_residual": 7.105427357601002e-14
+      },
+      "1": {
+        "eigenvalues": {
+          "-12": 15,
+          "-4": 81,
+          "0": 80,
+          "6": 48,
+          "12": 15,
+          "36": 1
+        },
+        "max_integer_residual": 4.263256414560601e-14
+      },
+      "2": {
+        "eigenvalues": {
+          "-9": 15,
+          "-3": 84,
+          "-1": 81,
+          "3": 15,
+          "9": 44,
+          "27": 1
+        },
+        "max_integer_residual": 2.842170943040401e-14
+      }
+    }
+  },
+  "support_scheme_120": {
+    "size": 120,
+    "abs_ip_valencies": {
+      "id": 1,
+      "0": 56,
+      "1": 36,
+      "2": 27
+    },
+    "abs_ip_fusion_coherent": false,
+    "abs_ip_relations_commute": true,
+    "orbital_rank": 5,
+    "abs_ip_spectra": {
+      "0": {
+        "eigenvalues": {
+          "-10": 20,
+          "-4": 24,
+          "2": 60,
+          "8": 15,
+          "56": 1
+        },
+        "max_integer_residual": 1.4210854715202004e-14
+      },
+      "1": {
+        "eigenvalues": {
+          "-12": 15,
+          "0": 80,
+          "6": 24,
+          "36": 1
+        },
+        "max_integer_residual": 5.684341886080802e-14
+      },
+      "2": {
+        "eigenvalues": {
+          "-3": 84,
+          "3": 15,
+          "9": 20,
+          "27": 1
+        },
+        "max_integer_residual": 2.842170943040401e-14
+      }
+    }
+  },
+  "checks": {
+    "gq42_trade_rank_24": true,
+    "shell_240_norm_6": true,
+    "ip_values_seven_classes": true,
+    "partition_complete": true,
+    "ip_fusion_coherence_recorded": true,
+    "ip_relations_commute": true,
+    "spectra_integral": true,
+    "group_order_25920": true,
+    "shell_single_orbit": true,
+    "orbital_rank_10": true,
+    "orbital_scheme_coherent": true,
+    "orbital_commutativity_recorded": true,
+    "supports_120": true,
+    "support_partition_complete": true,
+    "support_scheme_verdict_recorded": true,
+    "supports_single_orbit": true,
+    "support_orbital_rank_recorded": true
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "schema": "w33.pass166.ihara_discriminant_law.v1",
+  "status": "PASS",
+  "sectors": {
+    "doily_W22": {
+      "rank": 5,
+      "degree": 6,
+      "ihara_prime": 5,
+      "determinant": 1536,
+      "smith_profile": {
+        "2": 1,
+        "4": 3,
+        "12": 1
+      },
+      "even": true,
+      "signature_mod_8": 5,
+      "two_adic_phase_eighths": 7,
+      "two_adic_q_values": [
+        {
+          "order": 2,
+          "q": "6/4"
+        },
+        {
+          "order": 4,
+          "q": "16/16"
+        },
+        {
+          "order": 4,
+          "q": "16/16"
+        },
+        {
+          "order": 4,
+          "q": "16/16"
+        },
+        {
+          "order": 4,
+          "q": "16/16"
+        }
+      ],
+      "deepest_2adic_depth": 2,
+      "deepest_q_value": "1/1",
+      "law_q_numerator_equals_ihara_prime": false
+    },
+    "chiral_W33": {
+      "rank": 15,
+      "degree": 12,
+      "ihara_prime": 11,
+      "determinant": 7739670528,
+      "smith_profile": {
+        "2": 5,
+        "6": 9,
+        "24": 1
+      },
+      "even": true,
+      "signature_mod_8": 7,
+      "two_adic_phase_eighths": 3,
+      "two_adic_q_values": [
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 8,
+          "q": "88/64"
+        }
+      ],
+      "deepest_2adic_depth": 3,
+      "deepest_q_value": "11/8",
+      "law_q_numerator_equals_ihara_prime": true
+    },
+    "support_GQ42": {
+      "rank": 24,
+      "degree": 12,
+      "ihara_prime": 11,
+      "determinant": 391820820480,
+      "smith_profile": {
+        "6": 13,
+        "30": 1
+      },
+      "even": true,
+      "signature_mod_8": 0,
+      "two_adic_phase_eighths": 4,
+      "two_adic_q_values": [
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "4/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        },
+        {
+          "order": 2,
+          "q": "0/4"
+        }
+      ],
+      "deepest_2adic_depth": 1,
+      "deepest_q_value": "0/1",
+      "law_q_numerator_equals_ihara_prime": false
+    }
+  },
+  "law_table": {
+    "doily_W22": {
+      "ihara_prime": 5,
+      "deepest_2adic_depth": 2,
+      "deepest_q_value": "1/1",
+      "law_holds": false
+    },
+    "chiral_W33": {
+      "ihara_prime": 11,
+      "deepest_2adic_depth": 3,
+      "deepest_q_value": "11/8",
+      "law_holds": true
+    },
+    "support_GQ42": {
+      "ihara_prime": 11,
+      "deepest_2adic_depth": 1,
+      "deepest_q_value": "0/1",
+      "law_holds": false
+    }
+  },
+  "reading": "the candidate law: the deepest 2-adic Jordan block of a GQ trade lattice evaluates to (Ihara prime)/2^depth. The table records where it holds; the three-lattice discriminant ledger is exact regardless.",
+  "checks": {
+    "doily_trade_rank_5": true,
+    "w33_trade_rank_15": true,
+    "gq42_trade_rank_24": true,
+    "doily_even": true,
+    "doily_2adic_dual_certificate": true,
+    "doily_2adic_distinct": true,
+    "doily_2adic_gauss_eighth_root": true,
+    "doily_p2_distinct": true,
+    "doily_p3_distinct": true,
+    "doily_milgram_matches_rank": true,
+    "doily_discriminant_complete": true,
+    "w33_even": true,
+    "w33_2adic_dual_certificate": true,
+    "w33_2adic_distinct": true,
+    "w33_2adic_gauss_eighth_root": true,
+    "w33_p2_distinct": true,
+    "w33_p3_distinct": true,
+    "w33_milgram_matches_rank": true,
+    "w33_discriminant_complete": true,
+    "gq42_even": true,
+    "gq42_2adic_dual_certificate": true,
+    "gq42_2adic_distinct": true,
+    "gq42_2adic_gauss_eighth_root": true,
+    "gq42_p2_distinct": true,
+    "gq42_p3_distinct": true,
+    "gq42_p5_distinct": true,
+    "gq42_milgram_matches_rank": true,
+    "gq42_discriminant_complete": true,
+    "w33_law_holds_11_over_8": true,
+    "law_verdict_recorded": true
+  }
+}

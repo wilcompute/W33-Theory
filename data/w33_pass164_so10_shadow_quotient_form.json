@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass164.so10_shadow_quotient_form.v1",
+  "status": "PASS",
+  "tower": {
+    "adjacency_tower": "ker(A)/im(A) = F2^8, plus type -> E8 (known)",
+    "incidence_tower": "C^perp/C = F2^10 with q = wt/2 mod 2",
+    "trade_code": "[40,15,8] doubly even",
+    "context_code": "[40,25] = dual of the trade code"
+  },
+  "quotient_form": {
+    "dimension": 10,
+    "isotropic_vectors": 528,
+    "anisotropic_vectors": 496,
+    "type": "plus",
+    "reading": "plus type (528 zeros) is O+(10,2), the D5 = SO(10) GUT shadow; minus type (496 zeros) is O-(10,2), with 496 = dim SO(32) = dim E8xE8 the anomaly-free dimension"
+  },
+  "group_action": {
+    "embedding": "PSp(4,3) -> O_plus(10,2)",
+    "faithful": true,
+    "irreducible_over_F2": false,
+    "cyclic_submodule_dimension_profile": {
+      "1": 1,
+      "9": 510,
+      "10": 512
+    },
+    "proper_invariant_submodules": [
+      {
+        "dimension": 1,
+        "q_zero_count": 2,
+        "totally_isotropic": true
+      },
+      {
+        "dimension": 9,
+        "q_zero_count": 272,
+        "totally_isotropic": false
+      }
+    ]
+  },
+  "checks": {
+    "trade_code_dim_15": true,
+    "context_code_dim_25": true,
+    "trade_code_doubly_even": true,
+    "trade_inside_context_dual": true,
+    "dual_dimensions_match": true,
+    "trade_words_in_context_code": true,
+    "c_image_dim_15": true,
+    "quotient_dim_10": true,
+    "all_context_weights_even": true,
+    "form_type_decided": true,
+    "polar_form_nondegenerate": true,
+    "quadratic_refinement_law": true,
+    "group_order_25920": true,
+    "action_preserves_q": true,
+    "action_faithful_25920": true,
+    "module_structure_recorded": true
+  }
+}
