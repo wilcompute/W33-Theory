@@ -1,0 +1,140 @@
+name: Lean formal verification
+
+on:
+  push:
+    branches: [master, "agent/**"]
+    paths:
+      - "formal/**"
+      - ".github/workflows/lean-formal.yml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "formal/**"
+      - ".github/workflows/lean-formal.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kernel-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Lean and attempt kernel build
+        id: lean-setup
+        continue-on-error: true
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: true
+          build-args: "--quiet"
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-github-cache: false
+      - name: Capture kernel build logs
+        id: kernel
+        shell: bash
+        run: |
+          set +e
+          cd formal
+          lake update > "$RUNNER_TEMP/lake-update.log" 2>&1
+          update_status=$?
+          if [ "$update_status" -eq 0 ]; then
+            lake build --wfail > "$RUNNER_TEMP/lean-build.log" 2>&1
+            build_status=$?
+          else
+            printf 'lake update failed; build not run\n' > "$RUNNER_TEMP/lean-build.log"
+            build_status=99
+          fi
+          printf '%s\n' "$update_status" > "$RUNNER_TEMP/update-status.txt"
+          printf '%s\n' "$build_status" > "$RUNNER_TEMP/build-status.txt"
+          exit 0
+      - name: Upload kernel diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-kernel-diagnostics
+          path: |
+            ${{ runner.temp }}/lake-update.log
+            ${{ runner.temp }}/lean-build.log
+            ${{ runner.temp }}/update-status.txt
+            ${{ runner.temp }}/build-status.txt
+          if-no-files-found: error
+      - name: Enforce kernel success
+        shell: bash
+        run: |
+          test "$(cat "$RUNNER_TEMP/update-status.txt")" = "0"
+          test "$(cat "$RUNNER_TEMP/build-status.txt")" = "0"
+
+  independent-leanchecker:
+    runs-on: ubuntu-latest
+    needs: kernel-build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject placeholders
+        shell: bash
+        run: |
+          if grep -R -n -E '^[[:space:]]*(sorry|admit)\b' formal --include='*.lean'; then
+            exit 1
+          fi
+      - name: Set up Lean and build environment
+        continue-on-error: true
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: true
+          build-args: "--quiet"
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-github-cache: false
+      - name: Capture independent leanchecker log
+        shell: bash
+        run: |
+          set +e
+          cd formal
+          lake update > "$RUNNER_TEMP/checker-update.log" 2>&1
+          update_status=$?
+          if [ "$update_status" -eq 0 ]; then
+            lake build --quiet > "$RUNNER_TEMP/checker-build.log" 2>&1
+            build_status=$?
+          else
+            printf 'lake update failed; build not run\n' > "$RUNNER_TEMP/checker-build.log"
+            build_status=99
+          fi
+          if [ "$build_status" -eq 0 ]; then
+            lake env leanchecker > "$RUNNER_TEMP/leanchecker.log" 2>&1
+            checker_status=$?
+          else
+            printf 'lake build failed; leanchecker not run\n' > "$RUNNER_TEMP/leanchecker.log"
+            checker_status=99
+          fi
+          printf '%s\n' "$update_status" > "$RUNNER_TEMP/checker-update-status.txt"
+          printf '%s\n' "$build_status" > "$RUNNER_TEMP/checker-build-status.txt"
+          printf '%s\n' "$checker_status" > "$RUNNER_TEMP/leanchecker-status.txt"
+          exit 0
+      - name: Upload leanchecker diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leanchecker-diagnostics
+          path: |
+            ${{ runner.temp }}/checker-update.log
+            ${{ runner.temp }}/checker-build.log
+            ${{ runner.temp }}/leanchecker.log
+            ${{ runner.temp }}/checker-update-status.txt
+            ${{ runner.temp }}/checker-build-status.txt
+            ${{ runner.temp }}/leanchecker-status.txt
+          if-no-files-found: error
+      - name: Enforce independent leanchecker success
+        shell: bash
+        run: |
+          test "$(cat "$RUNNER_TEMP/checker-update-status.txt")" = "0"
+          test "$(cat "$RUNNER_TEMP/checker-build-status.txt")" = "0"
+          test "$(cat "$RUNNER_TEMP/leanchecker-status.txt")" = "0"

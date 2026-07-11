@@ -1,0 +1,75 @@
+\section{Kernel, cohomological, exceptional, foundry, and HIL closure}
+\label{sec:levi-v4-closure}
+
+The odd-$q$ rank arithmetic is now exposed through a Lean structure
+$\mathsf{OddQFourierCertificate}(q)$ whose fields are the trivial and
+nontrivial additive-character blocks.  The resulting kernel statements include
+\[
+ \rank_2 M_3=25,\qquad \rank_2 A_P=16,\qquad \rank_2 A_L=10,
+ \qquad D_3\sim J_4^2\oplus J_3^{22}\oplus J_1^6.
+\]
+Here
+\[
+ \frac{3^3+2\cdot3^2+3-4}{2}=22,
+ \qquad 2\cdot4+22\cdot3+6=80.
+\]
+The repository CI requires \texttt{lake build --wfail}, an explicit rejection
+of \texttt{sorry} and \texttt{admit}, and an independent official
+\texttt{leanchecker} pass.
+
+Let $A=A_2(L_{-4})\cong(\mathbb Z/2)^{14}\oplus\mathbb Z/8$ and let $h$
+generate the order-eight factor.  Writing
+\[
+ \tau(h)=5h+u,
+ \qquad
+ u=e_0+e_1+e_2+e_5+e_8+e_{10}+e_{12}+e_{13},
+\]
+the involution condition puts $u$ in $\ker(1+\tau)$.  Replacing $h$ by $h+v$
+changes $u$ by $(1+\tau)v$, so the mixing class lies in
+\[
+ H^1(C_2,A[2])=\ker(1+\tau)/\operatorname{im}(1+\tau).
+\]
+The exact dimensions are $9-6=3$, and the computed class satisfies
+\[
+ \boxed{[u]=[4h]\ne0.}
+\]
+Consequently the mixed action cannot be removed by changing the order-eight
+lift: it is the same cohomology class as the canonical fixed isotropic line.
+
+Using doubled integral coordinates for the $240$ roots of $E_8$, an explicit
+$A_2$ pair has an orthogonal $E_6$ subsystem of $72$ roots.  The restriction of
+$W(E_6)$ to the full root set decomposes as
+\[
+ \boxed{240=72+6+6\cdot27}.
+\]
+For every $E_6$ root $\alpha$, the six minuscule weights with
+$\langle w,\alpha\rangle=1$ form a skew six, yielding an equivariant bijection
+between the $72$ roots and the $72$ oriented double-sixes.  Native generator
+permutations make the incidences among
+\[
+ 40,40,27,45,72,240,540
+\]
+commute, and the stabilizer of a noncollinear pair has order $48$.
+
+The $16$-mode, $120$-rotation optical compiler was lowered to an explicit
+800-nm-class Si$_3$N$_4$ thermal foundry model with $14$-bit controls, wavelength
+dispersion, fabrication offsets, dense thermal crosstalk, insertion loss, and
+closed-loop calibration.  Across $96$ modeled dies,
+\[
+ \overline F=0.999970663,
+ \qquad F_{5\%}=0.999959653,
+\]
+and drift tracking maintains
+\[
+ F_{\min}=0.999994253.
+\]
+The modeled on-chip loss is $0.33792$ dB.  The $7.81$ W thermal upper bound is a
+hardware warning: the passive mesh is viable, but high-duty control should
+migrate toward piezoelectric or electro-optic actuation.
+
+Finally, a bounded-memory hardware-in-the-loop adapter processed
+$3{,}164{,}709$ timestamp events on sixteen balanced channels plus sync.  It
+accepted $126$ of $128$ frames, retried two, admitted no wrong frame, and
+rejected all $224$ sub-eight corruptions, all $45$ dark-code displacements, a
+raw retag, and a bad authenticator before assigning native
+$W(E_6)$ coordinates.

@@ -1,11 +1,17 @@
 # W33 odd-q rank formalization
 
-`W33/OddQRank.lean` formalizes the arithmetic assembly and parity layer of the odd-prime-power binary Levi rank theorem.
+The `formal/` package contains two layers:
+
+- `W33/OddQRank.lean`: arithmetic rank and Jordan-block identities;
+- `W33/FourierBlocks.lean`: the kernel-checked interface from trivial/nontrivial additive-character blocks to the global odd-`q` theorem, including the exact `q=3` ranks and Jordan census
+  \(D_3\sim J_4^2\oplus J_3^{22}\oplus J_1^6\).
+
+`W33.lean` imports the complete package surface.
 
 ```bash
 cd formal
 lake update
-lake build
+lake build --wfail
 ```
 
-The file contains no `sorry` declarations or custom axioms. The current execution container did not include Lean/Lake and could not install packages, so kernel compilation was not run here. `analysis/w33_levi_next5_v3_formal.py` supplies a deterministic mirror certificate and source hash.
+The repository workflow `.github/workflows/lean-formal.yml` requires three independent conditions: `lake build --wfail`, an explicit repository scan rejecting `sorry` and `admit`, and the official bundled `leanchecker` pass through `leanprover/lean-action@v1`. The local execution container does not include Lean/Lake, so the committed Python witness validates source structure and algebra while GitHub Actions performs kernel and independent-checker validation.
