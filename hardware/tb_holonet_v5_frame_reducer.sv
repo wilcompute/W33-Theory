@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module tb_holonet_v5_frame_reducer;
-  logic clk=0, rst_n=0, iv=0, ir, ov, ordy=1, overflow;
+  logic clk=0, rst_n=0, iv=0, ir, ov, ordy=0, overflow;
   logic [63:0] ts=0, fts, lts;
   logic [4:0] ch=0;
   logic [31:0] fid;
@@ -15,6 +15,8 @@ module tb_holonet_v5_frame_reducer;
     send(64'd100,5'd0); send(64'd110,5'd0); send(64'd120,5'd3); send(64'd200,5'd16);
     @(posedge clk); #1;
     if (!ov || c0!==0 || c3!==0 || fts!==100 || lts!==200 || fid!==1) $fatal(1,"bad frame output");
-    @(posedge clk); #1; $display("PASS"); $finish;
+    ordy=1; @(posedge clk); #1;
+    if (ov) $fatal(1,"output handshake did not clear valid");
+    $display("PASS"); $finish;
   end
 endmodule
