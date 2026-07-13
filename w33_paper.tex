@@ -4435,8 +4435,8 @@ K(Q(4,3)) = (\mathbb{Z}/2)^{6}\oplus(\mathbb{Z}/10)^{8}\oplus\mathbb{Z}/40
 \]
 Both have order $2^{81}5^{23}$ and identical $5$-Sylow $(\mathbb{Z}/5)^{23}$,
 but different $2$-Sylow: the critical group \emph{separates} the cospectral
-pair, where the ovoid number ($7$ vs $10$) and the sandpile group are the only
-distinguishing invariants.
+pair, where the maximum partial-ovoid/independence number ($7$ vs $10$) and
+the sandpile group are the only distinguishing invariants.
 
 \paragraph{Analytic class number formula.}
 The reciprocal Ihara zeta $1/\zeta_G(u)=(1-u^2)^{m-n}\det(I-Au+11u^2)$ vanishes
@@ -9255,10 +9255,12 @@ the $40$ Burkhardt $j$-planes into disjoint fours.  Thus
 On the cubic-surface side, the exact Schlaefli reconstruction already yields
 the classical $36$ double-sixes.  Both the spread orbit and the double-six
 orbit have size $36$, and both have stabilizer $S_6\times C_2$ of order
-$1440$ inside $W(E_6)$.  Hence they are the same transitive $W(E_6)$-set.  In
-other words, the complementary $36$-layer is no loose numerology: the elliptic
+$1440$ inside $W(E_6)$; those abstract data alone do not identify the two
+actions.  Pass~209 supplies the missing explicit equivariant bijection.
+Therefore the complementary $36$-layer is no loose numerology: the elliptic
 off-quadric orbit, the $36$ spreads of $W_{3,3}$, and the cubic-surface
-double-sixes are three realizations of one exact object.
+double-sixes are three certified realizations of one exact object.  (GAP
+witness: \texttt{analysis/w33\_pass209\_silent\_spread\_two\_clock.g}.)
 
 \subsection*{$\omega$.9 \quad The $36$-layer has the same overlap graph on both sides}
 The previous subsection identifies the carrier sets, but the bridge is stronger
@@ -11835,8 +11837,10 @@ on the full five-transvection actions instead gives
 \[
   \boxed{q=3:[8],\qquad q=5:[24],\qquad q=7:[24,24].}
 \]
-The $q=5$ rung is therefore irreducible as well, while the $q=7$ rung is a
-$24+24$ extension and contains no dimension-$8$ composition factor.
+The $q=5$ rung is therefore irreducible as well, while the $q=7$ rung has
+composition factors $24+24$ and contains no dimension-$8$ composition factor.
+Pass~205 did not decide the extension class; Pass~218 below proves that it
+splits as $U\oplus U^*$.
 Consequently $E_8$ is \emph{not} the unique irreducible rung among the
 computed anchors.  No ``all higher rungs'' theorem is claimed from these
 three fields. (GAP witness:
@@ -12065,5 +12069,200 @@ $1,\omega,\omega^2$ on the three spaces; it does not cyclically permute them,
 and no canonical three-summand integral or physical-generation theorem
 follows without an additional bridge. (GAP witness:
 \texttt{analysis/w33\_pass213\_foundation\_group\_audit.g}.)
+
+%% ===============================================================
+\section{The Chiral Program, Eleventh Round: Passes 214--218}
+\label{sec:chiral-program-eleven}
+%% ===============================================================
+
+\subsection{Pass 214 --- the source line is the regular $V_4$ torsor}
+\label{ssec:pass214}
+
+Pass~212's negative result concerned the points of a chosen \emph{completion}
+line.  The active \emph{source} line has a different and positive structure.
+For every active pair $(\Sigma,L)$, GAP computes
+\[
+ H_{\Sigma,L}\cong S_4
+ \quad\hbox{faithfully on }L,
+ \qquad
+ K_{\Sigma,L}=\ker\!\left(
+ H_{\Sigma,L}\longrightarrow
+ \operatorname{Sym}(\operatorname{Part}_{2+2}(L))
+ \right)\cong V_4.
+\]
+The normal subgroup $K_{\Sigma,L}$ acts regularly on the four points of
+$L$.  Its three nonidentity elements are the three fixed-point-free double
+transpositions, and the two cycles of each element are exactly its intrinsic
+complementary pair-partition label.  GAP checks all $1080$ active pairs, all
+$4320$ choices of source origin, and the complete generator covariance of
+the kernels and labels.
+
+Thus $L$ is canonically an origin-free $V_4$-torsor, and choosing the carrier
+point $p$ identifies its four positions with the identity and three
+nonidentity elements.  This closes the regular source-line $V_4$ torsor, but not
+the semantic one: the residual $S_3$ permutes the three nonidentity labels,
+so named runtime roles still require an external frame or calibration.
+(GAP witness:
+\texttt{analysis/w33\_pass214\_source\_line\_v4\_torsor.g}.)
+
+\subsection{Pass 215 --- the carrier reaches the local-axis sign cover}
+\label{ssec:pass215}
+
+Let $(\Sigma,L,p)$ be a carrier sheet and let $M$ be the unique line of
+$\Sigma$ through $p$.  In the four-line pencil at $p$, the unordered pair
+$\{L,M\}$ is one endpoint of a unique local octahedral axis.  Therefore
+\[
+ (\Sigma,L,p)\longmapsto (p,\{L,M\})
+\]
+is the missing direct map from the Pass~209 double-six/spread carrier to the
+Pass~123 signed local-axis carrier.  GAP proves the full projective-similitude
+equivariance and the exact tower
+\[
+ 4320\xrightarrow{18:1}240\xrightarrow{2:1}120.
+\]
+Each endpoint fibre is $18=2\cdot9$: either member of the endpoint pair can
+be the external line, and nine spreads contain the other member.  Replacing
+an endpoint by its complementary pair in the pencil is a fixed-point-free
+involution centralizing the code action; adjoining it gives the extended
+order-$103680$ action.  Hence
+\[
+ C_2\longrightarrow\{240\hbox{ endpoints}\}
+ \longrightarrow\{120\hbox{ local axes}\}
+\]
+is the exact minimal sign sheet.  Via the chosen quadratic-space/chamber
+isometry of Pass~123 these sheets may be represented by signed $E_8$ roots
+and root lines, but that representation is a coordinate gauge.
+
+This also sharpens the embedding boundary.  The W33 code copy of
+$\PGSp(4,3)$ is transitive on the $240$ endpoints and on the $120$ axes,
+whereas GAP reconstructs the standard reflection embedding
+$W(E_6)<W(E_8)$ with signed-root orbits
+\[
+ 1^6+27^6+72
+\]
+and root-line orbits $1^3+27^3+36$.  Consequently the chamber-coordinate
+identification with the $E_8$ roots is an explicit gauge, not an equivariant
+identification for the nonconjugate standard $E_6\times A_2$ embedding.  A
+trivial extra phase sheet cannot repair different orbit fingerprints.
+(GAP witness:
+\texttt{analysis/w33\_pass215\_carrier\_double\_six\_signed\_e8.g}.)
+
+\subsection{Pass 216 --- the $Q(4,3)$ carrier is ovoid-typed}
+\label{ssec:pass216}
+
+Exact-cover enumeration on the incidence-dual quadrangle gives
+\[
+\begin{array}{c|cc|c}
+ &\#\text{spreads}&\#\text{ovoids}&
+ \text{noncollinear span size}\\ \hline
+ W(3,3)&36&0&4\\
+ Q(4,3)&0&36&2.
+\end{array}
+\]
+Thus the convention-free duality-odd spread--ovoid imbalance
+\[
+ \Delta_{SO}(G)=\#\operatorname{Spreads}(G)-\#\operatorname{Ovoids}(G)
+\]
+takes the values $+36$ and $-36$ and is not an Euler characteristic.  Under
+incidence duality, the Pass~209 common-zero W-spread becomes an ovoid on the
+dual point set; there is no same-type $Q(4,3)$
+spread mirror.
+
+For a $Q$-ovoid $\Omega$, its $30$ external points have $15$ owner blocks
+of size four, each with fibre two.  The blocks form a $2$-$(10,4,2)$ design
+and are indexed equivariantly by the $15$ route-$S_6$ duads, each duad
+selecting four of the ten $3{+}3$ bisections.  The two points in a fibre are
+noncollinear, have their owner block as their full common perpendicular, and
+span exactly that pair.  If
+$\tau_\Omega(x)$ denotes the mate and $m$ is a $Q$-line through $x$, then
+\[
+ (\Omega,x,m)\longmapsto
+ \bigl(x,\Omega\cap m,\tau_\Omega(x)\bigr)
+\]
+is a canonical equivariant bijection onto all $4320$ ordered nonlocal
+$Q$-paths.  Its complete tower is
+\[
+ 4320=36\cdot15\cdot2\cdot4,
+ \qquad
+ S_6>C_2\times S_4>S_4>S_3.
+\]
+The central $C_2$ swaps the two mates, so that fibre is not an absolute
+left/right chirality bit.  The surviving carrier is precisely Pass~212
+retyped by incidence duality, not an independent copy.
+(GAP witness:
+\texttt{analysis/w33\_pass216\_q43\_dual\_ovoid\_carrier.g}.)
+
+\subsection{Pass 217 --- $q=3$ uniquely closes the full spread-source carrier}
+\label{ssec:pass217}
+
+For $W(3,q)$, if $S(q)$ is the number of spreads, then the natural
+owner-source and ordered-path counts are
+\[
+ |X_q|=S(q)q(q^2+1)(q+1),
+ \qquad
+ |P_q|=q^3(q+1)^2(q^2+1).
+\]
+Consequently a carrier/path bijection requires
+$S(q)=q^2(q+1)$.  The regular symplectic spreads form the classical orbit
+\[
+ R(q)=\frac{q^2(q^2-1)}2,
+ \qquad
+ \frac{R(q)}{q^2(q+1)}=\frac{q-1}{2}.
+\]
+GAP constructs this orbit at $q=2,3,4,5,7$, obtaining respectively
+$6,36,120,300,1176$ regular spreads.  It exhausts all spreads at the two
+smallest orders: $S(2)=6<12$, while $S(3)=36=36$.  For every $q\ge4$ the
+regular orbit alone already exceeds the required count.  Hence $q=3$ is the
+unique prime-power order $q\ge2$ at which the counts can close.
+
+The owner relation is sharper at the tested odd anchors.  It has one candidate
+on every sheet at $q=3,5,7$, so the full regular-spread orbit maps equivariantly
+onto the path carrier with degrees $1,2,3=(q-1)/2$.  It is bijective only at
+$q=3$.  At the even anchors $q=2,4$, the same regular-spread owner rule has
+no candidate.  The executable certificate proves these displayed anchors
+and uses the classical regular-spread stabilizer index for the all-$q$
+inequality; it does not classify higher-order nonregular spreads.
+(For the classical regular-spread stabilizer, see
+\url{https://arxiv.org/abs/2105.05833}, Lemma~4.2.)
+(GAP witness:
+\texttt{analysis/w33\_pass217\_w3q\_owner\_spread\_uniqueness.g}.)
+
+\subsection{Pass 218 --- the $q=5$ identification and $q=7$ Weil fingerprint}
+\label{ssec:pass218}
+
+The $q=5$ binary shadow is irreducible of dimension $24$ but not absolutely
+irreducible.  GAP finds
+\[
+ \operatorname{End}_{\PSp(4,5)}(H_5)\cong\mathbb F_4,
+ \qquad J^2+J+1=0,
+\]
+and scalar extension gives two nonisomorphic, absolutely irreducible,
+Frobenius-conjugate self-dual modules $12_a\oplus12_b$.  CTblLib locates the
+unique degree-$12$ pair and AtlasRep identifies
+\texttt{S45G1-f4r12aB0}.  Thus $H_5$ is the restriction of scalars of a
+degree-$12$ Weil module, not a Golay/Leech constituent.
+
+At $q=7$, the formerly ambiguous $[24,24]$ factorization is split:
+\[
+ H_7=U\oplus U^*,
+\]
+where $U$ and $U^*$ are nonisomorphic absolutely irreducible
+$24$-dimensional binary modules.  The complete invariant-submodule
+dimensions are $0,24,24,48$; the socle is all of $H_7$, the radical is zero,
+and GAP constructs a commuting rank-$24$ idempotent.  The two summands are
+totally singular and pair perfectly under the nondegenerate rank-$48$ form
+of Arf invariant zero.  Their
+transvection values
+\[
+ \frac{-1\pm7\sqrt{-7}}2
+\]
+give the exact degree-$(7^2-1)/2$ Weil fingerprint; at $q=5$ the analogous
+pair has values $(-1\pm5\sqrt5)/2$.  This agrees with Szechtman's
+characteristic-two Weil-module degree formula
+(\url{https://arxiv.org/abs/math/0212378}).  The local GAP databases provide
+the independent $q=5$ label but no $q=7$ $2$-Brauer table, so the latter name
+is reported as a certified fingerprint rather than a database match.
+(GAP witness:
+\texttt{analysis/w33\_pass218\_weil\_shadow\_split.g}.)
 
 \end{document}

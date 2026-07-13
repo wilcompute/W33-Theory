@@ -1,0 +1,39 @@
+{
+  "schema": "w33.pass217.w3q_owner_spread_uniqueness.gap.v1",
+  "producer": "GAP 4.12.1",
+  "status": "PASS",
+  "count_theorem": {
+    "carrier": "S(q)*q*(q^2+1)*(q+1)",
+    "ordered_nonlocal_paths": "q^3*(q+1)^2*(q^2+1)",
+    "required_spreads": "q^2*(q+1)",
+    "regular_spread_orbit": "q^2*(q^2-1)/2",
+    "regular_over_required": "(q-1)/2",
+    "orbit_stabilizer_derivation": "[q^4(q^2-1)(q^4-1)/d]/[2q^2(q^4-1)/d]=q^2(q^2-1)/2, d=gcd(2,q-1)",
+    "tested_odd_anchor_owner_map": "at q=3,5,7 respectively, equivariant 1-,2-,3-fold covers of ordered nonlocal paths; q=3 is the only tested bijection",
+    "unique_closure": "q=3 among prime powers q>=2"
+  },
+  "literature": {"regular_spread_stabilizer": "Crnkovic-Hawtin-Svob, arXiv:2105.05833, Lemma 4.2"},
+  "anchors": [
+    {"q":2,"points":15,"lines":15,"spread_size":5,"regular_orbit":6,"regular_stabilizer":120,"required_spreads":12,"owner_cover_degree":0,"all_spreads":6,"owner_candidate_profile":[[0,30]]},
+    {"q":3,"points":40,"lines":40,"spread_size":10,"regular_orbit":36,"regular_stabilizer":720,"required_spreads":36,"owner_cover_degree":1,"all_spreads":36,"owner_candidate_profile":[[1,120]]},
+    {"q":4,"points":85,"lines":85,"spread_size":17,"regular_orbit":120,"regular_stabilizer":8160,"required_spreads":80,"owner_cover_degree":0,"all_spreads":null,"owner_candidate_profile":[[0,340]]},
+    {"q":5,"points":156,"lines":156,"spread_size":26,"regular_orbit":300,"regular_stabilizer":15600,"required_spreads":150,"owner_cover_degree":2,"all_spreads":null,"owner_candidate_profile":[[1,780]]},
+    {"q":7,"points":400,"lines":400,"spread_size":50,"regular_orbit":1176,"regular_stabilizer":117600,"required_spreads":392,"owner_cover_degree":3,"all_spreads":null,"owner_candidate_profile":[[1,2800]]}
+  ],
+  "boundary": "The global uniqueness theorem uses the classical regular-spread stabilizer index q^2(q^2-1)/2. GAP constructs and checks that orbit at q=2,3,4,5,7, proves the owner candidate profile on one whole regular spread (hence its group orbit), and exhausts all spreads only at q=2,3; it does not classify all higher-q nonregular spreads or prove the odd-q candidate formula beyond the displayed anchors.",
+  "checks": {
+    "anchor_substrates": true,
+    "regular_spreads_partition_points": true,
+    "regular_orbit_formula_q2_q3_q4_q5_q7": true,
+    "regular_stabilizer_formula_q2_q3_q4_q5_q7": true,
+    "path_carrier_closure_requires_q2_qplus1": true,
+    "regular_to_required_ratio_is_qminus1_over2": true,
+    "q2_all_spreads_six_not_twelve": true,
+    "q3_all_spreads_are_regular_36": true,
+    "q4_q5_q7_regular_orbit_already_too_large": true,
+    "q3_owner_rule_is_unique_on_every_regular_sheet": true,
+    "odd_anchor_owner_rule_is_unique": true,
+    "odd_anchor_cover_degrees_are_1_2_3": true,
+    "even_anchor_regular_owner_rule_has_no_candidate": true
+  }
+}

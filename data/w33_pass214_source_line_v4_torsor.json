@@ -1,0 +1,59 @@
+{
+  "schema": "w33.pass214.source_line_v4_torsor.gap.v1",
+  "producer": "GAP 4.12.1",
+  "status": "PASS",
+  "theorem": {
+    "domain": "all 1080 active pairs (Sigma,L), with Sigma a W33 spread and L outside Sigma",
+    "stabilizer": "H_(Sigma,L) is S4, faithful on the four points of L",
+    "normal_klein": "K_(Sigma,L)=ker(H -> Sym(Part_2+2(L))) is the intrinsic normal V4",
+    "torsor": "K acts regularly on L; choosing source p gives e->p and k->p^k",
+    "three_nonidentity_labels": "k != e is labelled by its two 2-cycles, a complementary pair-partition of L",
+    "verdict": "PROVED for every active pair and every source origin"
+  },
+  "counts": {
+    "active_pairs": 1080,
+    "source_origins": 4320,
+    "nonidentity_partition_labels": 3240,
+    "source_point_partition_incidence_cases": 12960,
+    "generator_kernel_covariance_cases": 2160,
+    "generator_partition_covariance_cases": 6480
+  },
+  "seed": {
+    "active_pair": [ 1, 2 ],
+    "line_points": [ 1, 14, 15, 16 ],
+    "sample_source_origin": 1,
+    "identity_row": [1,"identity fixes the chosen source origin"],
+    "nonidentity_rows_image_point_then_partition": [ [ 14, [ [ 1, 14 ], [ 15, 16 ] ] ], [ 15, [ [ 1, 15 ], [ 14, 16 ] ] ], [ 16, [ [ 1, 16 ], [ 14, 15 ] ] ] ]
+  },
+  "compatibility": {
+    "passes_182_192": "the three labels are exactly the complementary pair-partitions / unsigned axes; signed edges carry the parent S4 action",
+    "passes_209_210": "this is the active S4-to-S3 clock stratum; its kernel is now identified objectwise",
+    "pass_212": "strengthens faithful S4 on source points to a canonical regular V4 torsor",
+    "no_contradiction": "Pass 212's 1+1+2 obstruction is on completion-line points under the PGSp chosen-completion V4, not on this source line under the active-pair PSp V4"
+  },
+  "semantic_boundary": {
+    "canonical": "the origin-free K-set L, and after choosing source p the identity plus three pair-partition-labelled nonidentity elements",
+    "not_canonical": "no assignment of these four geometric positions to four named runtime roles; the residual S3 permutes the three nonidentity labels, so semantic names require an external frame or calibration"
+  },
+  "checks": {
+    "points_40": true,
+    "lines_40": true,
+    "spreads_36": true,
+    "psp_order_25920": true,
+    "active_pairs_1080_transitive": true,
+    "active_action_faithful": true,
+    "every_active_stabilizer_is_faithful_S4": true,
+    "every_pair_partition_action_is_S3": true,
+    "every_kernel_is_normal_V4": true,
+    "seed_V4_is_unique_normal_order_four_subgroup": true,
+    "every_V4_is_regular_on_source_line": true,
+    "every_nonidentity_is_a_double_transposition": true,
+    "nonidentity_to_complementary_partition_is_bijective": true,
+    "every_source_point_supplies_a_V4_origin": true,
+    "origin_image_pair_is_the_labelled_two_cycle": true,
+    "all_nonidentity_partition_cases_3240": true,
+    "stabilizer_bundle_is_generator_covariant": true,
+    "V4_bundle_is_generator_covariant": true,
+    "partition_labels_are_generator_covariant": true
+  }
+}

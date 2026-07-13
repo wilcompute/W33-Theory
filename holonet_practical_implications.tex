@@ -281,10 +281,66 @@ separate interface.  (GAP witnesses:
 \path{analysis/w33_pass211_pgsp_controller_clifford.g}, and
 \path{analysis/w33_pass212_4320_carrier_equivariant_bijection.g}.)
 
+Pass~214 now identifies the correct four-way runtime primitive.  For every
+active $(\Sigma,L)$ row, the normal kernel
+$V_4=\ker(S_4\to S_3)$ acts \emph{regularly} on the four source points of
+$L$.  Choosing the packet's source $p$ makes one point the identity and the
+three others the three double-transposition/pair-partition directions.  This
+does not contradict the completion-line $1+1+2$ warning above: the two
+$V_4$ actions live on different fibres.  An implementation may therefore
+use the source line as a lossless four-slot algebra, but the residual $S_3$
+still permutes the three nonidentity slots, so human names such as
+``data'', ``return'', or ``audit'' remain calibration metadata rather than
+geometry.
+
+The same packet now has an exact local-axis sign address.  If $M$ is the
+spread line through $p$, the local-pencil endpoint $\{L,M\}$ gives
+\[
+ 4320\longrightarrow240\longrightarrow120
+\]
+with uniform fibres $18$ and $2$.  Endpoint complement is a fixed-point-free
+$C_2$ deck operation central in the extended order-$103680$ action.  Firmware
+can transport this two-sheet sign bit without a lookup table, but it must not conflate the W33
+code action with the nonconjugate standard $E_6\times A_2$ branching action:
+their orbit fingerprints differ, so the final rational root coordinates
+remain a chamber gauge.
+
+The dual substrate requires an object-type opcode, not a second copy of the
+same schedule.  Exact enumeration gives $36$ spreads and no ovoids on
+$W(3,3)$, but no spreads and $36$ ovoids on $Q(4,3)$.  The signed type
+checksum
+\[
+ \Delta_{SO}=\#\mathrm{spreads}-\#\mathrm{ovoids}=+36\ \hbox{or}\ -36
+\]
+is invariant under relabeling and flips under incidence duality.  The
+correct $Q$ schedule is an ovoid carrier
+$4320=36\cdot15\cdot2\cdot4$ with controller chain
+$S_6>C_2\times S_4>S_4>S_3$; its central $C_2$ swaps the two owner mates, so
+that local bit is not an absolute left/right label.  The W and Q carriers
+are one incidence-dual ABI with different types, not independent memory
+banks.
+
+Finally, the architecture is genuinely order-selective.  For $W(3,q)$ the
+regular-spread owner map covers the ordered path carrier with degree
+$(q-1)/2$ at the tested odd anchors: degrees $1,2,3$ at $q=3,5,7$.  Only
+$q=3$ is bijective; at even anchors $q=2,4$ the same rule has no candidate.  The
+higher shadows also change their scalar ABI: the $q=5$ binary $24$ is a
+restriction of scalars from an $\mathbb F_4$ Weil $12$, whereas the $q=7$
+$48$ is the split hyperbolic pair $24\oplus24^*$.  A generic backend must
+therefore store a field-of-definition tag and cannot reuse the former q=5
+Golay/Leech guess or the unresolved q=7 extension placeholder.  (GAP
+witnesses:
+\path{analysis/w33_pass214_source_line_v4_torsor.g},
+\path{analysis/w33_pass215_carrier_double_six_signed_e8.g},
+\path{analysis/w33_pass216_q43_dual_ovoid_carrier.g},
+\path{analysis/w33_pass217_w3q_owner_spread_uniqueness.g}, and
+\path{analysis/w33_pass218_weil_shadow_split.g}.)
+
 This is a coding and analyzer theorem, not a cryptographic security proof: a threat model still has to
 specify which integer faults an adversary can inject and which analyzer channels are trusted.  It also
 corrects the old ``self-dual'' shorthand.  At $q=3$, $W(3,3)$ and its dual $Q(4,3)$ are cospectral and
-equally sized but nonisomorphic; only the common $24$-sector is canonically transported.  (Witness:
+equally sized but nonisomorphic; only the common linear $24$-sector is canonically transported by the
+Pass~173 transceiver, while Pass~216 supplies the separate full combinatorial carrier.  (Witness:
 \path{analysis/w33_pass173_incidence_transceiver_route_dark_lattice.py}.)
 
 \section{The Universal Virtual Machine: It Boots on a Dinosaur}

@@ -141,6 +141,11 @@ data/*
 !data/w33_pass211_pgsp_controller_clifford.json
 !data/w33_pass212_4320_carrier_equivariant_bijection.json
 !data/w33_pass213_foundation_group_audit.json
+!data/w33_pass214_source_line_v4_torsor.json
+!data/w33_pass215_carrier_double_six_signed_e8.json
+!data/w33_pass216_q43_dual_ovoid_carrier.json
+!data/w33_pass217_w3q_owner_spread_uniqueness.json
+!data/w33_pass218_weil_shadow_split.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

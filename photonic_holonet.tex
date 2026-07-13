@@ -658,6 +658,55 @@ separately rather than infer it from group order.  (GAP witnesses:
 \path{analysis/w33_pass211_pgsp_controller_clifford.g}, and
 \path{analysis/w33_pass212_4320_carrier_equivariant_bijection.g}.)
 
+Passes~214--218 now separate the remaining controller sheets before any
+optical interpretation.  The four points of the \emph{source} line do carry
+a regular $V_4$ action: after choosing the source point, the identity fixes
+that port and the three nonidentity double transpositions address the other
+ports through their intrinsic pair-partition labels.  This is the exact
+four-way switching algebra that the completion line lacked, but the residual
+$S_3$ still permutes the three nonidentity labels.  A photonic controller
+must calibrate semantic port names; geometry supplies the torsor, not the
+laboratory naming convention.
+
+The same carrier sheet selects the local-axis endpoint formed by the external
+line and its unique spread owner through the source point.  GAP verifies the
+uniform tower
+\[
+ 4320\xrightarrow{18:1}240\xrightarrow{2:1}120,
+\]
+where endpoint complement is a fixed-point-free $C_2$ deck operation central
+in the extended order-$103680$ action.  Via Pass~123's chosen chamber gauge it
+can be represented by an $E_8$ root sign; it is not a measured optical phase.
+Moreover the transitive W33-code action and the standard
+$E_6\times A_2<E_8$ branching action are nonconjugate and have different
+root-orbit fingerprints, so choosing rational $E_8$ coordinates remains a
+chamber calibration rather than a symmetry-forced device frame.
+
+Incidence duality also changes the schedule type.  $W(3,3)$ has $36$ spreads
+and no ovoids, while $Q(4,3)$ has no spreads and $36$ ovoids; the duality-odd
+checksum is therefore
+$\Delta_{SO}=\#\mathrm{spreads}-\#\mathrm{ovoids}=\pm36$, not an Euler
+characteristic.  The surviving $Q$ carrier
+is the ovoid tower $4320=36\cdot15\cdot2\cdot4$ with stabilizers
+$S_6>C_2\times S_4>S_4>S_3$.  It is the incidence-dual typing of the same
+controller, not a second independent optical channel, and its central mate
+swap is not an absolute handedness observable.
+
+The construction is also special to field order three.  At the tested odd
+anchors the regular-spread owner router covers the path carrier with degree
+$(q-1)/2$:
+$1,2,3$ at $q=3,5,7$, so only $q=3$ is lookup-free and bijective.  The module
+backend changes at the same anchors: the $q=5$ binary $24$ is the
+$\mathbb F_2$ restriction of an $\mathbb F_4$ Weil $12$, while the $q=7$
+$48$ is the split dual pair $24\oplus24^*$.  These are representation and
+control-plane constraints, not claims of fabricated modes or measured
+coherence.  (GAP witnesses:
+\path{analysis/w33_pass214_source_line_v4_torsor.g},
+\path{analysis/w33_pass215_carrier_double_six_signed_e8.g},
+\path{analysis/w33_pass216_q43_dual_ovoid_carrier.g},
+\path{analysis/w33_pass217_w3q_owner_spread_uniqueness.g}, and
+\path{analysis/w33_pass218_weil_shadow_split.g}.)
+
 %======================================================================
 \section{The carrier: how to self-entangle a photon}
 \label{sec:carrier}

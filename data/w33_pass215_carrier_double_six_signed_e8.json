@@ -1,0 +1,44 @@
+{
+  "schema": "w33.pass215.carrier_double_six_signed_e8.gap.v1",
+  "producer": "GAP 4.12.1",
+  "status": "PASS",
+  "carrier_lift": {
+    "source": "(Sigma,L,p), with Sigma the Pass-209 double-six spread and L external",
+    "map": "M is the unique line of Sigma through p; send (Sigma,L,p) to the local-axis endpoint (p,{L,M})",
+    "sheets": 4320, "local_axis_endpoints": 240, "axes": 120,
+    "endpoint_fibre": 18, "endpoint_fibre_factorization": "2 orientations times 9 owner spreads",
+    "axis_fibre": 36, "PGSp_equivariance_cases": 177120
+  },
+  "minimal_phase_sheet": {
+    "cover": "C2 -> 240 endpoints -> 120 axes",
+    "deck_map": "replace a two-line endpoint by its complementary pair in the four-line pencil",
+    "centralizes_code_action": true, "fixed_points": 0,
+    "extended_action_order": 103680
+  },
+  "embedding_ledger": {
+    "W33_code_embedding_endpoint_orbits": [240],
+    "W33_code_embedding_axis_orbits": [120],
+    "standard_E6_signed_root_orbits": [1,1,1,1,1,1,27,27,27,27,27,27,72],
+    "standard_E6_rootline_orbits": [1,1,1,27,27,27,36],
+    "conclusion": "the carrier reaches the local-axis sign cover canonically; Pass 123 can represent it by E8 roots after choosing a quadratic-space/chamber isometry, but that coordinate representation is not equivariant for the nonconjugate standard E6xA2 embedding"
+  },
+  "boundary": "The C2 local-axis endpoint cover is the minimal sign phase. Calling its sheets E8 roots requires the chosen Pass-123 coordinate gauge. A trivial extra sheet cannot repair the two W(E6) orbit fingerprints; changing between the code and E6xA2 lenses is an embedding change, not a counting identification.",
+  "checks": {
+    "w33_and_spreads": true,
+    "correct_projective_group_ledger": true,
+    "endpoint_and_axis_counts": true,
+    "carrier_count": true,
+    "endpoint_fibre_is_18": true,
+    "axis_fibre_is_36": true,
+    "endpoint_fibre_splits_9_plus_9": true,
+    "full_generator_equivariance": true,
+    "code_embedding_is_transitive": true,
+    "endpoint_stabilizers": true,
+    "central_sign_cover": true,
+    "e8_root_system_240": true,
+    "standard_E6_order": true,
+    "standard_E6_signed_orbits": true,
+    "standard_E6_rootline_orbits": true,
+    "embedding_obstruction": true
+  }
+}

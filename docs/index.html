@@ -2596,6 +2596,82 @@
               <a href="../analysis/w33_pass213_foundation_group_audit.g">Run the GAP Pass 213 audit</a>.
             </div>
           </div>
+          <div class="card" id="pass214-source-line-v4-torsor">
+            <div class="label">Pass 214 &mdash; The Source Line Is the Regular V4 Torsor</div>
+            <div class="detail">For every one of the <code>1080</code> active spread/line pairs, GAP finds a
+              faithful <code>S4</code> stabilizer on the four source points. Its intrinsic kernel on the three
+              complementary <code>2+2</code> partitions is the unique normal <code>V4</code>, and that V4 acts
+              regularly on the source line. Choosing <code>p</code> supplies the identity origin; the three
+              nonidentity double transpositions are labelled exactly by their two-cycle partitions. This closes
+              the regular source-line V4 torsor in all <code>4320</code> source-origin cases. It does not name four
+              runtime roles: the residual S3 still permutes the three nonidentity labels. Pass 212&rsquo;s
+              <code>1+1+2</code> obstruction remains correct for the different completion-line action.
+              <a href="../analysis/w33_pass214_source_line_v4_torsor.g">Run the GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass215-carrier-signed-e8-endpoint-cover">
+            <div class="label">Pass 215 &mdash; The 4320 Carrier Reaches the Local-Axis Sign Cover</div>
+            <div class="detail">For a carrier sheet <code>(&Sigma;,L,p)</code>, let <code>M</code> be the unique
+              spread line through <code>p</code>. The pair <code>{L,M}</code> is a local-axis endpoint, giving
+              the exact equivariant tower <code>4320 &rarr;<sup>18:1</sup> 240 &rarr;<sup>2:1</sup> 120</code>.
+              Endpoint complement is a fixed-point-free C2 deck map central in the extended order-103680 action,
+              the minimal sign sheet over the 120 local axes. Via Pass 123&rsquo;s chosen quadratic-space/chamber
+              isometry these may be represented by E8 roots and root lines, but that representation is a gauge.
+              The embedding ledger is essential: the W33 code copy of W(E6) is transitive on
+              <code>240/120</code>, while the standard <code>E6&sub;E8</code> reflection copy has signed-root orbits
+              <code>1<sup>6</sup>+27<sup>6</sup>+72</code> and root-line orbits
+              <code>1<sup>3</sup>+27<sup>3</sup>+36</code>. The chamber root coordinates are therefore an explicit
+              gauge, not an equivariant identification across the two nonconjugate embeddings.
+              <a href="../analysis/w33_pass215_carrier_double_six_signed_e8.g">Run the GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass216-q43-dual-ovoid-carrier">
+            <div class="label">Pass 216 &mdash; Q(4,3) Has the Dual Ovoid Carrier</div>
+            <div class="detail">Exact covers give
+              <code>W(3,3)=(36 spreads,0 ovoids)</code> and
+              <code>Q(4,3)=(0 spreads,36 ovoids)</code>, so
+              <code>&Delta;<sub>SO</sub>=#spreads-#ovoids</code> is the duality-odd spread&ndash;ovoid imbalance
+              <code>+36/-36</code>, not an Euler characteristic. Under incidence duality, a Pass 209 W-spread
+              becomes a Q-ovoid. Its 30 external points form 15 owner pairs over a
+              <code>2-(10,4,2)</code> owner-block design. The 15 blocks are indexed equivariantly by the 15 S6
+              duads, each selecting four of the ten bisections. GAP builds the full bijection to Q-paths with
+              <code>4320=36&middot;15&middot;2&middot;4</code> and stabilizers
+              <code>S6 &gt; C2&times;S4 &gt; S4 &gt; S3</code>. The central C2 swaps each mate pair, so it is not an
+              absolute chirality bit; the carrier is Pass 212 incidence-dually retyped, not an independent mirror.
+              <a href="../analysis/w33_pass216_q43_dual_ovoid_carrier.g">Run the GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass217-w3q-owner-spread-uniqueness">
+            <div class="label">Pass 217 &mdash; q=3 Uniquely Closes the Full Spread-Source Carrier</div>
+            <div class="detail">For <code>W(3,q)</code>, the spread-source carrier has size
+              <code>S(q)q(q<sup>2</sup>+1)(q+1)</code>, while ordered nonlocal paths have size
+              <code>q<sup>3</sup>(q+1)<sup>2</sup>(q<sup>2</sup>+1)</code>; equality needs exactly
+              <code>S(q)=q<sup>2</sup>(q+1)</code> spreads. The regular-spread orbit has
+              <code>q<sup>2</sup>(q<sup>2</sup>-1)/2</code>, a ratio <code>(q-1)/2</code>. GAP constructs the
+              orbit at <code>q=2,3,4,5,7</code> as <code>6,36,120,300,1176</code> and exhausts
+              <code>S(2)=6</code>, <code>S(3)=36</code>. On odd anchors the owner map is a
+              <code>1,2,3</code>-fold path cover; only q=3 is bijective. On even anchors q=2,4 the same regular
+              owner rule has no candidate. The <code>1,2,3</code> degree statement is certified at these three
+              tested odd anchors; the all-q uniqueness is the separate regular-orbit count obstruction.
+              <a href="../analysis/w33_pass217_w3q_owner_spread_uniqueness.g">Run the GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass218-weil-shadow-field-split">
+            <div class="label">Pass 218 &mdash; q=5 Is the F4 Weil Pair; q=7 Splits with the Weil Fingerprint</div>
+            <div class="detail">The q=5 binary shadow is irreducible 24 but not absolutely irreducible:
+              <code>End<sub>G</sub>=F4</code>, with a commuting <code>J</code> satisfying
+              <code>J<sup>2</sup>+J+1=0</code>. Over F4 it splits as the Frobenius-conjugate self-dual
+              <code>12a+12b</code> pair, independently anchored by CTblLib and AtlasRep
+              <code>S45G1-f4r12aB0</code>. At q=7 the old extension question is decisively split:
+              <code>H7=U&oplus;U*</code>, two nonisomorphic absolute 24s, with submodule dimensions
+              <code>0,24,24,48</code>, radical zero, and a commuting rank-24 projector. They are complementary
+              totally singular spaces paired perfectly by the nondegenerate rank-48 form of Arf invariant zero.
+              Their transvection fingerprints are the
+              degree-<code>(q<sup>2</sup>-1)/2</code> Weil values. No local q=7 characteristic-two table supplies
+              a database label, and the old q=5 Golay/Leech identification remains refuted.
+              <a href="../analysis/w33_pass218_weil_shadow_split.g">Run the GAP witness</a>.
+            </div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching

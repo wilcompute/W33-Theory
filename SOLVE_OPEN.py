@@ -20055,12 +20055,10 @@ check("P37 SPR: spread * (pts/line) = v: Theta * mu = 40",
 check("P37 OVD: ovoid * (lines/pt) = total_lines: Theta * mu = 40",
       _ovoid_sz * mu_val == v_val)
 
-# Number of spreads in W(3,3)
-# For W(3,q), number of spreads = q^2(q^2-1)/2 + 1  for q odd
-# Actually for W(3,3): there are 36 spreads (counted by Dye, 1977)
-# 36 = q^4-q^2+q!-q = 81-9+6-3 = nope. Let's use q^2*(q^2+1)/2=45? No.
-# The number of regular spreads of W(3,3) is q^2+1 = 10.
-# Total spreads: Let's just verify key spread properties.
+# Number of spreads in W(3,3).
+# The regular PSp(4,q)-orbit has q^2(q^2-1)/2 members.  Pass 217's GAP
+# exhaustion proves that at q=3 these are all 36 spreads.  The number 10 is
+# the number of lines in each spread, not the number of spreads.
 
 check("P37 SPR: lines in a spread partition v points into Theta groups of mu",
       _spread_sz * mu_val == v_val and v_val // mu_val == _spread_sz)
@@ -20076,8 +20074,10 @@ check("P37 STR: D_string = spread_size = ovoid_size = Theta = 10",
 # ──────────────────────────────────────────────────────────────
 #  V. COLLINEATION GROUP — PSp(4,3) ACTING ON W(3,3)
 # ──────────────────────────────────────────────────────────────
-# The full collineation group of W(3,3) is PGSp(4,3) = PSp(4,3)
-# |PSp(4,3)| = |Sp(4,3)|/gcd(2,q-1) = 51840/2 = 25920
+# The inner projective group PSp(4,3) has order 25920.  The full faithful
+# geometry/graph group is PGSp(4,3) = PSp(4,3):2 of order 51840 (Pass 213);
+# it is not equal to PSp(4,3).  Also distinguish it from the centered matrix
+# group Sp(4,3), which has the same order 51840 but a different action.
 
 _sp_order  = q ** 4 * (q ** 2 - 1) * (q ** 4 - 1)  # 51840
 _psp_order = _sp_order // _math_std.gcd(2, q - 1)   # 25920
