@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass195.steinberg_projector.v1",
+  "status": "PASS",
+  "gap_source": "live",
+  "projector": {
+    "operator": "S = sum_g chi81(g) rho_shell(g), integer 480x480",
+    "identities": "S^2 = 320 S, trace = 320*243, rank = 243",
+    "mod3": "P = 2S mod 3 is an idempotent of rank 243 on F3^480: the protected register as an explicit direct summand of the kinematic shell (3 copies of St_81)"
+  },
+  "reading": "the holonet's protected memory is no longer a multiplicity in a census: it is the image of an explicit integral projector on the E8-root carrier, 3-integral because 320 is prime to 3 -- projectivity of the Steinberg module made matrix-concrete",
+  "checks": {
+    "group_order": true,
+    "closure_25920": true,
+    "fingerprints_computed": true,
+    "gap_size": true,
+    "twenty_classes": true,
+    "chi81_constant_on_cycle_type": true,
+    "all_elements_classified": true,
+    "fingerprint_sizes_match": true,
+    "chi81_degree": true,
+    "S_squared_320_S": true,
+    "trace_320_243": true,
+    "rank_243": true,
+    "mod3_idempotent": true,
+    "mod3_rank_243": true
+  }
+}

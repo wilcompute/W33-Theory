@@ -11583,4 +11583,97 @@ is a property of the even-line geometry, singling out $W(3,3)$ within its
 own trade tower}. (Witness:
 \texttt{analysis/w33\_pass193\_sandwich\_tower.py}.)
 
+%% ===============================================================
+\section{The Chiral Program, Seventh Round: Passes 194--198}
+\label{sec:chiral-program-seven}
+%% ===============================================================
+
+\subsection{Pass 194 --- the odd-\texorpdfstring{$q$}{q} shadow ladder}
+\label{ssec:pass194}
+
+The layer sandwich is not special to $q=3$: for \emph{every} odd $q$ the
+SRG parameters $k-\mu=q^2-1$, $\lambda-\mu=-2$, $\mu=q+1$ are all even, so
+$A^2\equiv0\pmod2$ and the trade code contains $\mathbf j$. The $W(3,q)$
+permutation module therefore carries the same uniserial pattern with
+layers
+\[
+  1,\ d(q),\ 1,\ q^2-1,\ 1,\ d(q),\ 1,
+  \qquad d(q)=\tfrac12(q-1)(q^2+q+2),
+\]
+verified exactly at $q=5$ (layers $1,64,1,24,1,64,1$). The central
+$(q^2-1)$-layer $\ker A_2/\operatorname{im}A_2$ carries the divided
+quadratic form $\bar q(x)=\tfrac12x^{\mathsf T}Ax\bmod2$: at $q=3$ this is
+the plus-type $E_8/2E_8$ form (dimension $8$, Arf $0$), and $E_8$ is
+merely the first rung of an odd-$q$ ladder of quadratic shadows. (Witness:
+\texttt{analysis/w33\_pass194\_odd\_q\_shadow\_ladder.py}.)
+
+\subsection{Pass 195 --- the Steinberg projector, made matrix-explicit}
+\label{ssec:pass195}
+
+Pass~190 located the Steinberg module $\mathrm{St}_{81}$ with multiplicity
+$3$ in the $480$-dimensional eigenlattice shell. Because
+$|G|/81=320$ is prime to $3$, the ordinary Steinberg idempotent is
+$3$-integral. Summing the Steinberg character against the shell
+representation over all $25\,920$ group elements gives an explicit integer
+operator
+\[
+  S=\sum_{g}\chi_{81}(g)\,\rho_{\mathrm{shell}}(g),
+  \qquad
+  S^2=320\,S,\quad \operatorname{tr}S=320\cdot243,\quad
+  \operatorname{rank}S=243,
+\]
+so $P=S/320$ is an idempotent whose reduction $\bar P=2S\bmod3$ is an
+$\mathbb F_3$-idempotent of rank $243=3\cdot81$: the holonet's protected
+memory realized as an explicit $243$-dimensional direct summand of the
+$E_8$-root carrier, not merely a multiplicity in a census. (Witness:
+\texttt{analysis/w33\_pass195\_steinberg\_projector.py}, GAP-assisted.)
+
+\subsection{Pass 196 --- the two order-27 shells are the two parabolic
+cores}
+\label{ssec:pass196}
+
+The dual-torsor compiler distinguishes a flat $\mathbb F_3^3$ program
+shell from a Heisenberg $3^{1+2}$ state shell. Both appear as the
+$O_3$-core of an order-$648$ parabolic: the line stabilizer's core (the
+kernel of Pass~192's $S_4$ map) is the \emph{elementary abelian} $C_3^3$
+--- the flat program shell --- while the point stabilizer's core is the
+elation group, \emph{extraspecial} $3^{1+2}$ (nonabelian, centre $C_3$,
+exponent $3$, regular on the $27$ opposite points) --- the Heisenberg
+state shell. The compiler's program/state duality is exactly the
+parabolic core dichotomy. (Witness:
+\texttt{analysis/w33\_pass196\_kernel\_flat\_shell.py}.)
+
+\subsection{Pass 197 --- the double-six syzygetic graph}
+\label{ssec:pass197}
+
+The $36$ pentad dodecads of Pass~188 carry the classical rank-$3$
+double-six action of $\PSp(4,3)\cong W(E_6)^+$: subdegrees $1+15+20$,
+with the $15$-suborbit realizing the strongly regular
+\emph{syzygetic graph} $\SRG(36,15,6,6)$ and the $20$-suborbit its
+azygetic complement, each a constant line-sharing stratum. The
+Schl\"afli double-six census is thereby materialized inside the route
+shell. (Witness:
+\texttt{analysis/w33\_pass197\_double\_six\_syzygy.py}.)
+
+\subsection{Pass 198 --- the layer law at \texorpdfstring{$q=7$}{q=7} and
+the shadow dichotomy}
+\label{ssec:pass198}
+
+The third anchor $q=7$ ($400$ points) confirms the closed forms: layers
+$1,174,1,48,1,174,1$, matching $d(7)=174$ and $q^2-1=48$, with the
+$a_2$-rank theorem $\operatorname{rank}_2M=\tfrac12(q(q+1)^2+2)$
+independently re-verified. The divided pairing satisfies
+\[
+  \tfrac12A^2=\tfrac{q^2-1}2\,I-A+\tfrac{q+1}2\,J,
+\]
+so it reproduces $A$ modulo $2$ --- making the middle shadow
+nondegenerate --- precisely when $\tfrac{q^2-1}2$ and $\tfrac{q+1}2$ are
+both even, i.e.\ $q\equiv3\pmod4$. Hence the nondegenerate quadratic
+shadows occur at $q=3$ (dimension $8$, $E_8$), $q=7$ (dimension $48$),
+$q=11$ (dimension $120$), \dots, while the intermediate middles ($q=5,13,
+\dots$) carry a pure-radical form. The $\sqrt{17}$ Sastry--Sin transfer of
+Pass~178 governs the total rank; the mod-$4$ dichotomy governs which
+rungs carry a genuine orthogonal shadow. (Witness:
+\texttt{analysis/w33\_pass198\_layer\_law\_q7.py}.)
+
 \end{document}

@@ -1,0 +1,51 @@
+{
+  "schema": "w33.pass197.double_six_syzygy.v1",
+  "status": "PASS",
+  "double_sixes": {
+    "count": 36,
+    "lineset_sizes": {
+      "30": 36
+    },
+    "subdegrees": [
+      20,
+      15,
+      1
+    ],
+    "rank": 3
+  },
+  "syzygy_dictionary": {
+    "1": {
+      "size": 1,
+      "line_overlap": 30,
+      "vector_overlap": 12
+    },
+    "20": {
+      "size": 20,
+      "line_overlap": 21,
+      "vector_overlap": 0
+    },
+    "15": {
+      "size": 15,
+      "line_overlap": 24,
+      "vector_overlap": 0
+    }
+  },
+  "syzygetic_graph": [
+    36,
+    15,
+    6,
+    6
+  ],
+  "reading": "the double-six action of PSp(4,3) on the 36 pentad dodecads is the classical rank-3 action with subdegrees 1+15+20: the 15-suborbit is the syzygetic relation SRG(36,15,6,6) and the 20-suborbit the azygetic complement, each a constant line-sharing stratum -- the Schlafli double-six census materialized in the route shell",
+  "checks": {
+    "shell_432": true,
+    "group_order": true,
+    "thirty_six_double_sixes": true,
+    "double_sixes_transitive": true,
+    "d0_stabilizer_720": true,
+    "double_six_action_rank_3": true,
+    "subdegrees_1_15_20": true,
+    "sharing_constant_on_suborbits": true,
+    "syzygetic_graph_srg_36_15_6_6": true
+  }
+}

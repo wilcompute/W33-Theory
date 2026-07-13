@@ -1,0 +1,78 @@
+{
+  "schema": "w33.pass194.odd_q_shadow_ladder.v1",
+  "status": "PASS",
+  "ladder": {
+    "3": {
+      "points": 40,
+      "dims": {
+        "C": 15,
+        "imA2": 16,
+        "kerA2": 24,
+        "Cperp": 25
+      },
+      "layers": [
+        1,
+        14,
+        1,
+        8,
+        1,
+        14,
+        1
+      ],
+      "shadow_dimension": 8,
+      "polar_radical_dim": 0,
+      "nondegenerate_rank": 8,
+      "arf_invariant": 0,
+      "type": "plus (O+)"
+    },
+    "5": {
+      "points": 156,
+      "dims": {
+        "C": 65,
+        "imA2": 66,
+        "kerA2": 90,
+        "Cperp": 91
+      },
+      "layers": [
+        1,
+        64,
+        1,
+        24,
+        1,
+        64,
+        1
+      ],
+      "shadow_dimension": 24,
+      "polar_radical_dim": 24,
+      "nondegenerate_rank": 0,
+      "arf_invariant": 0,
+      "type": "plus (O+)"
+    }
+  },
+  "laws": {
+    "differential": "A^2 = 0 mod 2 for every odd q",
+    "code_layer": "d(q) = (q-1)(q^2+q+2)/2  [14, 64, 174, ...]",
+    "shadow_dimension": "m(q) = q^2 - 1  [8, 24, 48, ...]"
+  },
+  "reading": "the E8 shadow is the first rung of an odd-q ladder: at q=5 the sandwich reappears with layers 1,64,1,24,1,64,1 and a canonical 24-dimensional quadratic shadow whose type is decided by its Arf invariant -- the natural comparison object at dimension 24 being the Leech lattice mod 2",
+  "checks": {
+    "odd_q_differential_law": true,
+    "q3_A2_differential": true,
+    "q3_chain_holds": true,
+    "q3_layer_formulas": true,
+    "q3_middle_dim": 8,
+    "q3_polar_radical_dim": 0,
+    "q3_q_vanishes_on_radical": true,
+    "q3_hyperbolic_pairs": true,
+    "q3_shadow_dim_q2_minus_1": true,
+    "q5_A2_differential": true,
+    "q5_chain_holds": true,
+    "q5_layer_formulas": true,
+    "q5_middle_dim": 24,
+    "q5_polar_radical_dim": 24,
+    "q5_q_vanishes_on_radical": true,
+    "q5_hyperbolic_pairs": true,
+    "q5_shadow_dim_q2_minus_1": true,
+    "q3_reproduces_e8_plus": true
+  }
+}

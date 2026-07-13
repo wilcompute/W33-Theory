@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass196.kernel_flat_shell.v1",
+  "status": "PASS",
+  "line_side": {
+    "core": "O_3(line stabilizer) = pointwise line stabilizer",
+    "order": 27,
+    "structure": "elementary abelian C3^3 -- the FLAT program shell",
+    "identification": "Pass 192's S4-codec kernel equals O_3 of the Bell-line parabolic 3^3:S4: the signed-trade register's hidden 27 is the compiler's flat F3^3 program shell"
+  },
+  "point_side": {
+    "core": "elation group at a point",
+    "order": 27,
+    "structure": "extraspecial 3^{1+2} (nonabelian, center C3, exponent 3) -- the Heisenberg state shell"
+  },
+  "reading": "the dual-torsor compiler's program/state shell dichotomy is the parabolic core dichotomy: same order 648, same core order 27, abelian vs extraspecial",
+  "checks": {
+    "group_order": true,
+    "line_stabilizer_648": true,
+    "sylow3_81_found": true,
+    "core_order_27": true,
+    "core_elementary_abelian": true,
+    "pointwise_kernel_27": true,
+    "kernel_equals_O3": true,
+    "four_pencil_lines": true,
+    "point_stabilizer_648": true,
+    "27_opposite_points": true,
+    "elation_group_27": true,
+    "elation_regular_on_opposite": true,
+    "elation_nonabelian": true,
+    "elation_center_3": true,
+    "elation_exponent_3": true
+  }
+}
