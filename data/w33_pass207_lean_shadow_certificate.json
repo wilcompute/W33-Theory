@@ -1,0 +1,45 @@
+{
+  "schema": "w33.pass207.lean_shadow_certificate.v1",
+  "status": "PASS",
+  "lean_file": "formal\\W33\\ShadowDichotomy.lean",
+  "structure": {
+    "imports_mathlib": true,
+    "no_sorry": true,
+    "no_axiom": true,
+    "integrated_in_root": true,
+    "theorems": [
+      "layer_sum_eq_v",
+      "nondegenerate_iff",
+      "two_incidence_rank_def"
+    ]
+  },
+  "content_verification": {
+    "layer_sum_identity": "4 + (q-1)(q^2+q+2) + (q^2-1) = (q+1)(q^2+1)  [ring]",
+    "dichotomy": "odd q>=3: nondegenerate iff q mod 4 = 3  [checked to q=999]",
+    "e8_ladder": "shadowDim {3,7,11} = {8,48,120}",
+    "incidence_crosscheck": "odd-q incidenceRank matches committed C^perp dims at q=3,5,7"
+  },
+  "honest_scope": "no Lean toolchain in this container: this certifies the source structure, project integration, and the exact truth of every theorem's arithmetic content (what ring/omega prove) -- it is NOT a substitute for `lake build`, which remains a separate environment check",
+  "checks": {
+    "imports_mathlib": true,
+    "no_sorry": true,
+    "no_axiom": true,
+    "namespace_present": true,
+    "declares_twoLayerD": true,
+    "declares_shadowDim": true,
+    "declares_twoIncidenceRank": true,
+    "declares_nondegenerate": true,
+    "declares_layer_sum_eq_v": true,
+    "declares_nondegenerate_iff": true,
+    "declares_two_incidence_rank_def": true,
+    "namespace_closed": true,
+    "imported_in_project_root": true,
+    "layer_sum_polynomial_identity": true,
+    "layer_sum_numeric_range": true,
+    "nondegenerate_iff_exhaustive": true,
+    "first_conjunct_automatic": true,
+    "two_incidence_rank_matches": true,
+    "example_e8_48_120": true,
+    "incidence_matches_odd_q_certs": true
+  }
+}

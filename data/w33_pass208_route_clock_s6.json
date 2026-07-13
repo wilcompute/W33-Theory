@@ -1,0 +1,30 @@
+{
+  "schema": "w33.pass208.route_clock_s6.v1",
+  "status": "PASS",
+  "route_clock": {
+    "carrier": "one route dodecad = a double-six crown graph",
+    "stabilizer_order": 720,
+    "action_on_12_vertices_order": 720,
+    "action_on_6_crossing_pairs_order": 720,
+    "identity": "S6 = Sp(4,2) = the doily W(2,2) automorphism group",
+    "reading": "the order-720 double-six stabilizer acts faithfully on its 12 crown vertices and maps ONTO S6 on the 6 crossing pairs -- the route clock is an S6 clock, the SAME group as the W(2,2) doily, tying the pentad shell back to the smallest quadrangle in the trade tower"
+  },
+  "two_platonic_clocks": {
+    "line_clock": "octahedral: line stab 648 -> S3 on 3 axes (Pass 185)",
+    "route_clock": "S6: double-six stab 720 -> S6 on 6 pairs",
+    "reading": "the supercycle carries two vacuum clocks: the octahedral S3 line clock and the S6 route clock; both are quotients of the substrate's maximal parabolics"
+  },
+  "checks": {
+    "shell_432": true,
+    "group_25920": true,
+    "36_dodecads": true,
+    "stabilizer_720": true,
+    "faithful_on_12": true,
+    "crown_5_regular": true,
+    "crown_spectrum": true,
+    "six_crossing_pairs": true,
+    "preserves_pairing": true,
+    "image_on_6_pairs_is_S6": true,
+    "transitive_on_6_pairs": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass205.q7_composition_series.v1",
+  "status": "PASS",
+  "shadow": {
+    "dimension": 48,
+    "composition_factors": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      6,
+      7,
+      7,
+      7
+    ],
+    "factor_multiplicities": {
+      "3": 3,
+      "4": 3,
+      "6": 1,
+      "7": 3
+    },
+    "number_of_factors": 10,
+    "endomorphism_dim": 50,
+    "contains_dim_8_factor": false
+  },
+  "reading": "the q=7 shadow's composition factors: unlike the q=3 shadow (a single irreducible 8 = E8), the q=7 O+(48,2) module splits into factors [3, 3, 3, 4, 4, 4, 6, 7, 7, 7]. The E8 shadow is NOT a factor; the higher ladder rungs are built from the substrate's larger char-2 irreducibles, so E8's irreducibility at q=3 is special to the smallest field",
+  "checks": {
+    "shadow_dim_48": true,
+    "action_wellformed": true,
+    "factors_sum_to_48": true,
+    "endomorphism_recorded": true,
+    "composition_series_computed": true
+  }
+}

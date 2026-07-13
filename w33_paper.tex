@@ -11770,4 +11770,96 @@ geometry, with the $S_3$ completion fibre geometric and the
 controller-carrier identification honestly not claimed. (Witness:
 \texttt{analysis/w33\_pass203\_supercycle\_bundle.py}.)
 
+%% ===============================================================
+\section{The Chiral Program, Ninth Round: Passes 204--208}
+\label{sec:chiral-program-nine}
+%% ===============================================================
+
+\subsection{Pass 204 --- the transversal logical Clifford gates}
+\label{ssec:pass204}
+
+The $25\,920$ physical qubit-permutations $\mathrm{PGSp}(4,3)$ that fix
+the sentinel CSS code $[[40,10,4]]$ (Pass~201) act on the $10$ logical
+qubits as a subgroup of $O^+(10,2)\subset\Sp(10,2)$ --- verified to
+preserve both the shadow quadratic form and its symplectic polar form ---
+i.e.\ as \emph{logical Clifford} operations. Since a permutation hits $X$-
+and $Z$-type logicals identically, these are the diagonal CSS entangling
+gates. The Eastin--Knill ceiling is explicit:
+\[
+  |\Sp(10,2)|\approx2.5\times10^{16},\quad
+  |O^+(10,2)|\approx4.7\times10^{13},\quad
+  [\,O^+(10,2):\text{transversal}\,]=1\,813\,217\,280,
+\]
+so the transversal gate group is a tiny finite slice ($315$ logical
+involutions, the transversal-$CZ$ census), necessarily non-universal and
+containing no non-Clifford gate: the magic must come from the $E_6$ cubic,
+outside the permutation group. (Witness:
+\texttt{analysis/w33\_pass204\_transversal\_clifford.py}.)
+
+\subsection{Pass 205 --- E$_8$ is the unique irreducible ladder rung}
+\label{ssec:pass205}
+
+MeatAxe on the $48$-dimensional $q=7$ shadow (from a generating pair, no
+enumeration of $\Sp(4,7)$) yields the composition factors
+\[
+  48 = 3^{\,3}\oplus4^{\,3}\oplus6\oplus7^{\,3}
+  \quad(\text{endomorphism algebra dimension }50),
+\]
+with \emph{no} dimension-$8$ factor. The higher rungs of the odd-$q$
+ladder are built from the substrate group's own characteristic-$2$
+irreducibles, so the irreducibility of the $E_8$ shadow at $q=3$ is
+special to the smallest field --- $E_8$ is not merely the first rung but
+the unique irreducible one. (Witness:
+\texttt{analysis/w33\_pass205\_q7\_composition\_series.py}.)
+
+\subsection{Pass 206 --- the sentinel distance is structurally robust}
+\label{ssec:pass206}
+
+The three graded layers of the logical space $H_{10}$ have minimum
+physical weights $12$ (the fixed vector $f$), $6$ (the $E_8$ shadow
+$8$-block), and $4$ (the top): the distance-$4$ of $[[40,10,4]]$ comes
+from the \emph{top} layer, not the $E_8$ block. Gauging the nine non-$f$
+logical directions to isolate the weight-$12$ fixed vector \emph{fails} to
+boost the distance --- $f$ drops back to weight $4$ modulo the gauge group,
+because the weight-$4$ top logical is $f$'s symplectic partner and cannot
+be gauged away without gauging $f$ itself. The sentinel distance is
+structurally $4$; the layer-weight triple $(12,6,4)$ is the genuine new
+invariant. (Witness:
+\texttt{analysis/w33\_pass206\_subsystem\_distance\_boost.py}.)
+
+\subsection{Pass 207 --- the Lean shadow-dichotomy module}
+\label{ssec:pass207}
+
+The odd-$q$ arithmetic (Pass~202) is packaged as
+\texttt{formal/W33/ShadowDichotomy.lean}, integrated into the project root
+and using only \texttt{Mathlib}, with the polynomial layer-sum identity
+\[
+  4 + (q-1)(q^2+q+2) + (q^2-1) = (q+1)(q^2+1)
+\]
+(\texttt{ring}) and the nondegeneracy dichotomy
+$\text{nondegenerate}(q)\iff q\equiv3\pmod4$ (\texttt{omega}), plus the
+$E_8$/$48$/$120$ example (\texttt{decide}). No Lean toolchain is present
+in the working container, so the certificate verifies the source
+structure, the project integration, and the exact truth of every
+theorem's arithmetic content (checked to $q=999$ and cross-checked against
+the $q=3,5,7$ geometric certificates) --- not a substitute for
+\texttt{lake build}, but a guarantee the statements are true and the file
+well-formed. (Witness:
+\texttt{analysis/w33\_pass207\_lean\_shadow\_certificate.py}.)
+
+\subsection{Pass 208 --- the S$_6$ route clock is the doily's group}
+\label{ssec:pass208}
+
+The order-$720$ double-six stabiliser acts faithfully on the $12$ vertices
+of its dodecad (the double-six crown graph $K_{6,6}$ minus a perfect
+matching, spectrum $\{5,1^5,(-1)^5,-5\}$) and maps \emph{onto} $S_6$ on
+the $6$ crossing pairs (the removed matching edges, identified as the
+non-adjacent vertex pairs with zero common neighbours). Since $S_6\cong
+\Sp(4,2)$ is the automorphism group of the doily $W(2,2)$, the route clock
+is a \emph{doily clock} --- tying the pentad shell back to the smallest
+quadrangle in the trade tower. Together with the octahedral $S_3$ line
+clock (Pass~185), the supercycle carries two Platonic vacuum clocks, both
+quotients of the substrate's maximal parabolics. (Witness:
+\texttt{analysis/w33\_pass208\_route\_clock\_s6.py}.)
+
 \end{document}

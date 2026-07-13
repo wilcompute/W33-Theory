@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass204.transversal_clifford.v1",
+  "status": "PASS",
+  "logical_action": {
+    "group": "PGSp(4,3) -> O+(10,2) subset Sp(10,2)",
+    "image_order": 25920,
+    "is_clifford": true,
+    "is_orthogonal": true,
+    "reading": "the transversal permutation gates act as logical Clifford operations preserving the O+(10,2) form; because a qubit permutation hits X and Z identically, they are the diagonal CSS gates diag(M,M)"
+  },
+  "eastin_knill": {
+    "Sp_10_2_order": 24815256521932800,
+    "O_plus_10_2_order": 46998591897600,
+    "transversal_order": 25920,
+    "index_in_O_plus": 1813217280,
+    "reading": "the transversal gate group is a FINITE subgroup of index 1813217280 in O+(10,2) and far smaller than Sp(10,2): necessarily non-universal (Eastin-Knill) and containing no non-Clifford gate -- the magic is the E6 cubic, supplied outside the permutation group"
+  },
+  "gate_census": {
+    "logical_order_distribution": {
+      "1": 1,
+      "2": 315,
+      "3": 800,
+      "4": 3780,
+      "5": 5184,
+      "6": 5760,
+      "9": 5760,
+      "12": 4320
+    },
+    "involutions": 315
+  },
+  "checks": {
+    "logical_dim_10": true,
+    "group_25920": true,
+    "generators_preserve_polar_form": true,
+    "generators_in_O_plus_10_2": true,
+    "transversal_image_25920": true,
+    "whole_image_in_O_plus": true,
+    "image_divides_O_plus": true,
+    "O_plus_subset_Sp": true,
+    "order_census_recorded": true
+  }
+}
