@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass199.q7_shadow_identity.v1",
+  "status": "PASS",
+  "shadow": {
+    "dimension": 48,
+    "type": "plus",
+    "arf": 0,
+    "witt_index": 24,
+    "isotropic_vectors": 140737496743936,
+    "isotropic_formula": "2^47 + 2^23",
+    "f2_irreducible_under_substrate": false,
+    "cyclic_submodule_dims": {
+      "27": 1,
+      "28": 1,
+      "31": 5,
+      "34": 5,
+      "35": 2,
+      "38": 4,
+      "42": 30
+    }
+  },
+  "comparison": {
+    "q3_E8": {
+      "dim": 8,
+      "type": "plus",
+      "witt_index": 4
+    },
+    "q7": {
+      "dim": 48,
+      "type": "plus",
+      "witt_index": 24
+    },
+    "reading": "the second rung of the odd-q ladder is a plus-type O+(48,2) shadow of Witt index 24 preserved by the substrate collineation group -- but F2-REDUCIBLE (unlike the irreducible E8 shadow at q=3), so the ladder's higher rungs decompose into smaller substrate constituents; the cyclic-submodule profile records the split"
+  },
+  "checks": {
+    "q7_400_points": true,
+    "gens_are_collineations": true,
+    "shadow_dim_48": true,
+    "polar_nondegenerate": true,
+    "symplectic_pairs_24": true,
+    "plus_type": true,
+    "action_preserves_shadow": true,
+    "irreducibility_decided": true,
+    "submodule_profile_recorded": true
+  }
+}

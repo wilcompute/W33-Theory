@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass200.q5_golay_leech_shadow.v1",
+  "status": "PASS",
+  "middle_module": {
+    "dimension": 24,
+    "pairing_rank": 0,
+    "totally_degenerate": true,
+    "cyclic_submodule_dims": {
+      "14": 2,
+      "20": 22
+    },
+    "has_proper_submodule": true,
+    "invariant_min_dim": 14
+  },
+  "golay_comparison": {
+    "golay_enumerator": {
+      "0": 1,
+      "8": 759,
+      "12": 2576,
+      "16": 759,
+      "24": 1
+    },
+    "module_dim_is_24": true,
+    "invariant_12_subcode_present": false,
+    "reading": "the degenerate q=5 rung is a 24-dimensional F2-module with a totally isotropic (radical) form -- the structural setting of Leech/2Leech and the binary Golay code. The cyclic-submodule ladder is reported; a definitive Golay identification needs the substrate group's 24-dim constituent matched to M24, which is recorded here as a dimension-and-submodule fingerprint, not asserted"
+  },
+  "checks": {
+    "q5_156_points": true,
+    "middle_dim_24": true,
+    "pairing_totally_degenerate": true,
+    "action_wellformed": true,
+    "submodule_structure_recorded": true,
+    "module_has_proper_submodule": true,
+    "dimension_matches_leech_24": true
+  }
+}

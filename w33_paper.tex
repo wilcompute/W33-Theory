@@ -11676,4 +11676,98 @@ Pass~178 governs the total rank; the mod-$4$ dichotomy governs which
 rungs carry a genuine orthogonal shadow. (Witness:
 \texttt{analysis/w33\_pass198\_layer\_law\_q7.py}.)
 
+%% ===============================================================
+\section{The Chiral Program, Eighth Round: Passes 199--203}
+\label{sec:chiral-program-eight}
+%% ===============================================================
+
+\subsection{Pass 199 --- the q=7 shadow is a reducible plus-type
+$O^+(48,2)$}
+\label{ssec:pass199}
+
+The dimension-$48$ middle shadow of $W(3,7)$ (Pass~198) carries a
+nondegenerate plus-type quadratic form: Witt index $24$, Arf $0$,
+$2^{47}+2^{23}$ isotropic vectors, preserved by the substrate collineation
+group $\mathrm{PGSp}(4,7)$. Unlike the $E_8$ shadow at $q=3$ --- which is
+$\mathbb F_2$-\emph{irreducible} --- the $q=7$ shadow is \emph{reducible}
+(cyclic-submodule dimensions ranging $27$--$42$ under a generating pair):
+the higher rungs of the odd-$q$ ladder decompose into smaller substrate
+constituents, so $E_8$ is distinguished among the ladder not only as the
+first rung but as the unique \emph{irreducible} one. (Witness:
+\texttt{analysis/w33\_pass199\_q7\_shadow\_identity.py}.)
+
+\subsection{Pass 200 --- the degenerate q=5 shadow is not Golay}
+\label{ssec:pass200}
+
+The $q=5$ middle is a $24$-dimensional module with a \emph{totally
+degenerate} divided pairing (radical $24$) --- the natural setting for the
+binary Golay code and Leech mod~$2$. The identification \emph{fails}: the
+module has no invariant $[24,12]$ self-dual subcode; its cyclic-submodule
+ladder is $\{14,20\}$, so it is built from the same degree-$14$
+constituent that forms the $W(3,3)$ sandwich, not from Golay's $12$. The
+degenerate rungs of the ladder are internal to the $W(3,q)$ family, not a
+moonshine bridge. (Witness:
+\texttt{analysis/w33\_pass200\_q5\_golay\_leech\_shadow.py}.)
+
+\subsection{Pass 201 --- the sentinel CSS code and its logical shadow}
+\label{ssec:pass201}
+
+The sentinel trade code $C=[40,15,8]_2$ is doubly even and
+self-orthogonal, so it defines a CSS code with $X$- and $Z$-checks both
+equal to $C$:
+\[
+  \boxed{\,[[40,\,10,\,4]]\,,}
+\]
+and its $10$ logical qubits are \emph{exactly} the $\mathrm{SO}(10)$
+shadow $H_{10}=C^\perp/C$ of Pass~164 --- the logical Pauli commutator is
+the plus-type polar form ($528$ isotropic logical operators), so the
+code's logical algebra is the $O^+(10,2)$ geometry. The $40$ lines are the
+weight-$4$ minimum logical operators (distance $4$), and
+$\mathrm{PGSp}(4,3)$ permutes the $40$ physical qubits fixing $C$, acting
+\emph{faithfully} on the $10$ logicals through $O^+(10,2)$: the substrate
+automorphism group is a built-in group of transversal (qubit-permutation)
+logical gates. The protected register is a QEC code, and its symmetry is
+the fault-tolerant gate set. (Witness:
+\texttt{analysis/w33\_pass201\_sentinel\_css\_logical\_shadow.py}.)
+
+\subsection{Pass 202 --- the shadow dichotomy as a Lean theorem}
+\label{ssec:pass202}
+
+The odd-$q$ sandwich reduces to four integral closed forms and one
+congruence:
+\[
+  d(q)=\tfrac{(q-1)(q^2+q+2)}2,\quad
+  \mathrm{shadow}(q)=q^2-1,\quad
+  \operatorname{rank}_2M=\tfrac{q(q+1)^2+2}2,
+\]
+\[
+  \text{nondegenerate}\iff q\equiv3\!\!\pmod4,
+\]
+with the seven layers summing to $v=(q+1)(q^2+1)$ for every odd $q$. These
+are emitted as a machine-checkable Lean file
+(\texttt{formal/W33/ShadowDichotomy.lean}) proving the layer-sum identity
+and the mod-$4$ dichotomy over all odd $q\ge3$ by \texttt{omega}, and
+cross-verified against the $q=3,5,7$ geometric certificates --- the
+module-structure layer atop the Sastry--Sin rank formalization. (Witness:
+\texttt{analysis/w33\_pass202\_shadow\_dichotomy\_arithmetic.py}.)
+
+\subsection{Pass 203 --- the supercycle bundle}
+\label{ssec:pass203}
+
+Assembling the axis and double-six geometries: the product carrier
+$4320=120\times36$ is \emph{not} homogeneous --- it splits into
+$\PSp(4,3)$-orbits $3240+720+360$ --- but over each axis the $36$
+double-sixes split $27+6+3$ under the axis stabiliser (order $216$), and
+the distinguished $3$-orbit carries the full $S_3$ acted on by the flat
+$C_3^3$ core (Pass~196). The supercycle ledger
+\[
+  51840=24\cdot2160=12\cdot4320=720\cdot72,\qquad
+  2160=30\cdot72,\qquad 12960=3\cdot4320
+\]
+ties the packet clock ($72$), the mirror bus ($2160$), the product carrier
+($4320$), and the runtime supercycle ($51840$) to the axis/double-six
+geometry, with the $S_3$ completion fibre geometric and the
+controller-carrier identification honestly not claimed. (Witness:
+\texttt{analysis/w33\_pass203\_supercycle\_bundle.py}.)
+
 \end{document}

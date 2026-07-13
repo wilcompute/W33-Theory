@@ -1,0 +1,36 @@
+{
+  "schema": "w33.pass201.sentinel_css_logical_shadow.v1",
+  "status": "PASS",
+  "css_code": {
+    "parameters": "[[40, 10, 4]]",
+    "stabilizer_code": "C = sentinel [40,15,8], doubly even, self-orthogonal",
+    "logical_qubits": 10,
+    "distance": 4,
+    "distance_witness": "the 40 lines are weight-4 logical operators"
+  },
+  "logicals_are_so10_shadow": {
+    "logical_space": "C^perp / C = H10 (Pass 164)",
+    "logical_form": "polar form |x cap y| mod 2, nondegenerate",
+    "type": "plus (O+(10,2)), 528 isotropic logical operators",
+    "reading": "the sentinel CSS code's 10 logical qubits ARE the SO(10) shadow; the logical Pauli algebra is the O+(10,2) geometry"
+  },
+  "transversal_gates": {
+    "group": "PGSp(4,3) -> O+(10,2)",
+    "image_order": 25920,
+    "reading": "the substrate automorphism group is a group of transversal (qubit-permutation) logical gates acting faithfully on the 10 logicals -- the protected register carries a built-in fault-tolerant gate set"
+  },
+  "checks": {
+    "sentinel_dim_15": true,
+    "context_dim_25": true,
+    "doubly_even": true,
+    "self_orthogonal": true,
+    "C_in_Cperp": true,
+    "no_context_word_below_weight_4": true,
+    "css_distance_4": true,
+    "logical_dim_10": true,
+    "logical_form_nondegenerate": true,
+    "logical_plus_type_528": true,
+    "group_25920": true,
+    "transversal_image_25920": true
+  }
+}

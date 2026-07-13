@@ -1,0 +1,48 @@
+{
+  "schema": "w33.pass203.supercycle_bundle.v1",
+  "status": "PASS",
+  "bundle": {
+    "total_space": "4320 = 120 axes x 36 double-sixes",
+    "base_maps": [
+      "4320 -> 120 axes",
+      "4320 -> 36 double-sixes"
+    ],
+    "transitive": false,
+    "product_orbits": [
+      3240,
+      720,
+      360
+    ],
+    "axis_stabilizer_order": 216,
+    "fibre_split_over_axis": [
+      3,
+      6,
+      27
+    ],
+    "completion_fibre": "the 3-orbit, full S3 (order 6)",
+    "structure_group_core": "flat C3^3 = O_3(axis stabilizer)"
+  },
+  "supercycle_ledger": {
+    "51840 = 24*2160": true,
+    "51840 = 12*4320": true,
+    "51840 = 720*72": true,
+    "4320 = 120*36": true,
+    "2160 = 30*72": true,
+    "12960 = 3*4320": true,
+    "216 = 27*8": true
+  },
+  "reading": "the 4320-product is NOT a homogeneous bundle -- it splits 3240+720+360 -- but over each axis the double-sixes carry a canonical S3 completion fibre (the distinguished 3-orbit) acted on by the flat C3^3 core, and the supercycle arithmetic 51840=12*4320=720*72 ties the packet clock, mirror bus, and product carrier to the axis/double-six geometry. Honest scope: the S3 fibre is geometric; the controller-carrier identification is NOT claimed",
+  "checks": {
+    "group_25920": true,
+    "axes_120": true,
+    "double_sixes_36": true,
+    "axes_transitive": true,
+    "double_sixes_transitive": true,
+    "product_orbits_3240_720_360": true,
+    "product_not_transitive": true,
+    "axis_stabilizer_216": true,
+    "fibre_split_3_6_27": true,
+    "completion_fibre_full_S3": true,
+    "arithmetic_ledger_exact": true
+  }
+}
