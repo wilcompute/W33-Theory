@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass208.route_clock_s6.v1",
+  "schema": "w33.pass208.route_clock_s6.v2",
   "status": "PASS",
   "route_clock": {
     "carrier": "one route dodecad = a double-six crown graph",
@@ -12,7 +12,7 @@
   "two_platonic_clocks": {
     "line_clock": "octahedral: line stab 648 -> S3 on 3 axes (Pass 185)",
     "route_clock": "S6: double-six stab 720 -> S6 on 6 pairs",
-    "reading": "the supercycle carries two vacuum clocks: the octahedral S3 line clock and the S6 route clock; both are quotients of the substrate's maximal parabolics"
+    "reading": "the supercycle carries two vacuum clocks: the octahedral S3 line clock and the S6 route clock. The line stabilizer is parabolic; the route S6 is the non-parabolic spread/double-six stabilizer"
   },
   "checks": {
     "shell_432": true,

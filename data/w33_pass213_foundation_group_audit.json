@@ -1,0 +1,50 @@
+{
+  "schema": "w33.pass213.foundation_group_audit.gap.v1",
+  "status": "PASS",
+  "producer": "GAP 4.12.1",
+  "geometry": {
+    "points": 40, "totally_isotropic_lines": 40, "edges": 240,
+    "adjacency": "orthogonal projective points spanning a unique totally isotropic line",
+    "nonadjacency": "nonorthogonal point pairs spanning an ordinary hyperbolic projective line",
+    "srg": "SRG(40,12,2,4)",
+    "parameter_boundary": "the symplectic construction identifies W(3,3); SRG parameters alone do not"
+  },
+  "group_ledger": {
+    "PSp4_3": "U4(2), order 25920, faithful inner projective action",
+    "PGSp4_3": "U4(2):2, order 51840, centerless projective similitude extension",
+    "W_E6": "CTblLib identifier U4(2).2",
+    "Sp4_3": "2.U4(2), order 51840, center C2; not the centerless projective extension"
+  },
+  "order3_homology_character": {
+    "classes": 4, "elements": 800, "degree": 81,
+    "trace_on_each_class": [0,0,0,0],
+    "complex_phase_multiplicities": [27,27,27],
+    "boundary": "phase eigenspaces for 1,omega,omega^2; no cyclic permutation of three integral summands follows"
+  },
+  "literature_boundary": "full automorphism and 28-SRG classification are cited separately; GAP verifies the explicit PGSp subgroup and character data",
+  "checks": {
+    "projective_points_40": true,
+    "totally_isotropic_lines_40": true,
+    "edges_240": true,
+    "each_edge_has_unique_isotropic_line": true,
+    "nonedges_are_nonorthogonal_pairs": true,
+    "srg_degree_12": true,
+    "srg_lambda_2": true,
+    "srg_mu_4": true,
+    "psp_order_25920": true,
+    "pgsp_order_51840": true,
+    "psp_edge_transitive": true,
+    "outer_similitude_is_not_inner": true,
+    "pgsp_derived_subgroup_is_psp": true,
+    "pgsp_center_trivial": true,
+    "sp_matrix_order_51840": true,
+    "sp_matrix_center_order_2": true,
+    "we6_table_is_u4_2_outer": true,
+    "sp_cover_table_is_distinct": true,
+    "four_order3_classes": true,
+    "order3_elements_800": true,
+    "steinberg_degree_81": true,
+    "all_order3_steinberg_traces_zero": true,
+    "order3_phase_multiplicities_27_27_27": true
+  }
+}

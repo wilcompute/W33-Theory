@@ -1,34 +1,20 @@
 {
-  "schema": "w33.pass206.subsystem_distance_boost.v1",
-  "status": "PASS",
-  "base_code": "[[40, 10, 4]] sentinel CSS (Pass 201)",
-  "filtration_layer_weights": {
-    "fixed_line_f": 12,
-    "e8_shadow_8block": 6,
-    "top": 4,
-    "note": "min physical weight of a coset rep in each H10 layer"
+  "schema": "w33.pass206.subsystem_claim_withdrawal.v2",
+  "status": "WITHDRAWN",
+  "producer": "GAP withdrawal ledger",
+  "preserved": {
+    "base_css_code": "[[40,10,4]] sentinel CSS",
+    "filtration_dimensions": "15 < 16 < 24 < 25"
   },
-  "subsystem_code": {
-    "parameters": "[[40, 1, 9, 4]]",
-    "gauge_qubits": 9,
-    "gauge_group": "C + 9 non-f logical directions (dim 24)",
-    "bare_logical": "the fixed vector f = [im A2] (G-fixed)",
-    "bare_logical_distance": 4,
-    "base_distance": 4,
-    "distance_boosted": false
+  "withdrawn_claims": {
+    "layer_minima_12_6_4": "three selected cosets are not exhaustive layer minima",
+    "nine_gauge_qubits": "nine binary directions do not supply nine hyperbolic Pauli pairs",
+    "subsystem_parameters": "[[40,1,9,4]] is not established",
+    "bare_logical_robustness": "not established"
   },
-  "verdict": {
-    "reading": "HONEST NEGATIVE: although the fixed vector f has weight 12 modulo the stabilizer C, gauging the other 9 logical directions does NOT boost the distance -- f drops back to weight 4 modulo the gauge group. The weight-4 top logical is f's symplectic partner (they form one hyperbolic qubit), so it cannot be gauged away without gauging f too. The sentinel [[40,10,4]] distance is structurally robust at 4; the E8-shadow layer weights (12,6,4) are the genuine new invariant"
-  },
+  "replacement": "Pass 211: H is one 10-dimensional X/Z label copy and the full logical Pauli space has dimension 20",
   "checks": {
-    "filtration_dims": true,
-    "layer_weights_12_6_4": true,
-    "base_distance_4": true,
-    "h10_basis_dim_10": true,
-    "gauge_group_dim_24": true,
-    "f_not_in_gauge": true,
-    "subsystem_distance_computed": true,
-    "gauging_does_not_boost": true,
-    "distance_verdict_recorded": true
+    "withdrawal_recorded": true,
+    "unsupported_subsystem_claim_present": false
   }
 }

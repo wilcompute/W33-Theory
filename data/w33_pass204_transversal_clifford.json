@@ -1,22 +1,23 @@
 {
-  "schema": "w33.pass204.transversal_clifford.v1",
+  "schema": "w33.pass204.transversal_clifford.v2",
   "status": "PASS",
-  "logical_action": {
-    "group": "PGSp(4,3) -> O+(10,2) subset Sp(10,2)",
+  "label_action": {
+    "group": "PSp(4,3) -> O+(10,2) subset Sp(10,2)",
     "image_order": 25920,
-    "is_clifford": true,
     "is_orthogonal": true,
-    "reading": "the transversal permutation gates act as logical Clifford operations preserving the O+(10,2) form; because a qubit permutation hits X and Z identically, they are the diagonal CSS gates diag(M,M)"
+    "full_logical_pauli_dimension": 20,
+    "corrected_clifford_lift": "diag(M,M^(-T)) in Sp(20,2) (Pass 211)",
+    "reading": "the 10x10 matrices act on one logical-label copy only; they are not by themselves full Clifford matrices"
   },
-  "eastin_knill": {
-    "Sp_10_2_order": 24815256521932800,
-    "O_plus_10_2_order": 46998591897600,
-    "transversal_order": 25920,
+  "ambient_label_groups": {
+    "Sp_10_2_order_on_H": 24815256521932800,
+    "O_plus_10_2_order_on_H": 46998591897600,
+    "PSp_image_order": 25920,
     "index_in_O_plus": 1813217280,
-    "reading": "the transversal gate group is a FINITE subgroup of index 1813217280 in O+(10,2) and far smaller than Sp(10,2): necessarily non-universal (Eastin-Knill) and containing no non-Clifford gate -- the magic is the E6 cubic, supplied outside the permutation group"
+    "reading": "these are ambient counts for the one-copy label form; they do not establish a gate inventory or universality claim"
   },
-  "gate_census": {
-    "logical_order_distribution": {
+  "image_order_census": {
+    "element_order_distribution": {
       "1": 1,
       "2": 315,
       "3": 800,
@@ -26,7 +27,7 @@
       "9": 5760,
       "12": 4320
     },
-    "involutions": 315
+    "involutions_not_CZ_gates": 315
   },
   "checks": {
     "logical_dim_10": true,

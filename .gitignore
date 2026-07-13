@@ -135,6 +135,12 @@ data/*
 !data/w33_dual_selector_orientation_sign_bridge_summary.json
 !data/w33_transport_ternary_cocycle_bridge_summary.json
 !data/w33_yukawa_unipotent_reduction_bridge_summary.json
+!data/w33_odd_q_shadow_correction_capstone.json
+!data/w33_pass209_silent_spread_two_clock.json
+!data/w33_pass210_s6_route_atlas.json
+!data/w33_pass211_pgsp_controller_clifford.json
+!data/w33_pass212_4320_carrier_equivariant_bijection.json
+!data/w33_pass213_foundation_group_audit.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

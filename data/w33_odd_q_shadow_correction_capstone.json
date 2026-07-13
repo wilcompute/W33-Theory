@@ -1,0 +1,32 @@
+{
+  "schema": "w33.odd_q_shadow_correction_capstone.gap.v1",
+  "status": "PASS",
+  "owner": "GAP 4.12 MTX",
+  "supersedes_claims_in": [194,198,199,200,205],
+  "uniform_construction": {
+    "group_generators": "five standard symplectic transvections e1,e2,f1,f2,e1+e2",
+    "quadratic_refinement": "q(x)=x^T A x/4 mod 2",
+    "polar_form": "B(x,y)=x^T A y/2 mod 2",
+    "shadow": "H_A=ker(A mod 2)/im(A mod 2)"
+  },
+  "anchor_table": [
+    {"q":3, "points":40, "Sp4_order":51840, "projective_order":25920, "C_inter_imA":15, "shadow_dim":8, "polar_rank":8, "arf":0, "MTX_factors":[8]},
+    {"q":5, "points":156, "Sp4_order":9360000, "projective_order":4680000, "C_inter_imA":65, "shadow_dim":24, "polar_rank":0, "arf":0, "MTX_factors":[24]},
+    {"q":7, "points":400, "Sp4_order":276595200, "projective_order":138297600, "C_inter_imA":175, "shadow_dim":48, "polar_rank":48, "arf":0, "MTX_factors":[24,24]}
+  ],
+  "refutations": {
+    "half_quadratic_refinement": false,
+    "two_transvections_generate_Sp4_q": false,
+    "q5_has_14_20_submodule_profile": false,
+    "E8_is_unique_irreducible_rung": false
+  },
+  "surviving_theorems": {
+    "A2_square_zero_for_odd_q": true,
+    "point_code_C_subset_imA": true,
+    "valid_A_homology_shadow": true,
+    "q3_plus_8": true,
+    "q5_zero_form_irreducible_24": true,
+    "q7_plus_48_with_factors_24_24": true,
+    "computed_scope_only_q3_q5_q7": true
+  }
+}

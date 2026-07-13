@@ -1,30 +1,25 @@
 #!/usr/bin/env python3
-"""Pass 204: the transversal logical Clifford gates of the sentinel code.
+"""Pass 204: the orthogonal action on one sentinel logical-label copy.
 
-Pass 201 showed PGSp(4,3) permutes the 40 physical qubits of the CSS code
-[[40,10,4]], acting on the 10 logical qubits through O+(10,2).  This
-witness pins that action as a fault-tolerant gate set:
+Pass 201 showed PSp(4,3) permutes the 40 physical coordinates of the CSS
+code [[40,10,4]], acting on H=C^perp/C through O+(10,2).  H is one
+10-dimensional X/Z label copy, not the full logical Pauli space.  This
+witness certifies only that label action:
 
-1. THE LOGICAL SYMPLECTIC (CLIFFORD) ACTION.  Each physical permutation
-   induces a 10x10 matrix M on the logical Paulis (H10) that preserves
-   BOTH the quadratic form q(x)=wt/2 mod 2 AND its symplectic polar form
-   B -- so the image lies in O+(10,2) subset Sp(10,2) = the logical
-   Clifford group modulo Paulis.  The image order is exactly |PGSp(4,3)|
-   = 25920.
+1. THE ORTHOGONAL LABEL ACTION.  Each physical permutation induces a
+   10x10 matrix M on H that preserves q(x)=wt/2 mod 2 and its polar form.
+   The image lies in O+(10,2) subset Sp(10,2) and has order 25920, hence
+   is the PSp(4,3) image.  Sp(10,2) here is an ambient group for H, not
+   the full logical Clifford quotient.
 
-2. THE EASTIN-KNILL CEILING.  |Sp(10,2)| and |O+(10,2)| are computed
-   exactly; the transversal group is a proper subgroup of index >> 1, so
-   the transversal gates are a tiny, FINITE slice of the Clifford group
-   -- necessarily non-universal (Eastin-Knill), and containing NO
-   non-Clifford gate.  The magic must come from outside the permutation
-   group: the substrate's E6 cubic.
+2. THE AMBIENT LABEL GROUPS.  |Sp(10,2)| and |O+(10,2)| and the image
+   index are computed exactly.  These counts do not establish a gate
+   inventory, universality boundary, or an E6 implementation.
 
-3. THE GATE INVENTORY.  Because a permutation acts identically on X- and
-   Z-type logicals, the realized gates are exactly the "diagonal" CSS
-   Clifford operations diag(M,M) with M in O+(10,2): logical CZ/CNOT-type
-   entangling gates and Hadamard-free Paulis, with no logical phase gate
-   escaping O+.  The count of order-2 (involution) logical gates is
-   reported as the transversal-CZ census.
+3. THE CORRECTED CLIFFORD LIFT.  After choosing the dot-product dual Z
+   basis, the full action is diag(M,M^(-T)) in Sp(20,2), as certified by
+   GAP in Pass 211.  The order distribution below is only the abstract
+   PSp image census; its 315 involutions are not a CZ census.
 """
 
 from __future__ import annotations
@@ -130,7 +125,7 @@ def main():
 
     Lgens = [logical_action(g) for g in two_gens]
 
-    # --- verify the action is symplectic (Clifford) AND orthogonal ---
+    # --- verify the one-copy label action is polar-preserving and orthogonal ---
     def preserves_B(M):
         return np.array_equal((M.T @ B @ M) % 2, B % 2)
 
@@ -175,14 +170,14 @@ def main():
         preserves_B(M) and preserves_q(M) for M in image
     )
 
-    # --- the Eastin-Knill ceiling ---
+    # --- ambient groups for the one-copy polar form ---
     sp10 = sp_order(5)
     op10 = o_plus_order(5)
     checks["image_divides_O_plus"] = op10 % 25920 == 0
     checks["O_plus_subset_Sp"] = sp10 % op10 == 0
     index_in_O = op10 // 25920
 
-    # --- gate census: order distribution of the logical gates ---
+    # --- abstract order census of the PSp image (not a gate inventory) ---
     def mat_order(M):
         o = 1
         cur = M.copy()
@@ -197,38 +192,34 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass204.transversal_clifford.v1",
+        "schema": "w33.pass204.transversal_clifford.v2",
         "status": "PASS" if all_pass else "FAIL",
-        "logical_action": {
-            "group": "PGSp(4,3) -> O+(10,2) subset Sp(10,2)",
+        "label_action": {
+            "group": "PSp(4,3) -> O+(10,2) subset Sp(10,2)",
             "image_order": 25920,
-            "is_clifford": True,
             "is_orthogonal": True,
+            "full_logical_pauli_dimension": 20,
+            "corrected_clifford_lift": "diag(M,M^(-T)) in Sp(20,2) (Pass 211)",
             "reading": (
-                "the transversal permutation gates act as logical Clifford "
-                "operations preserving the O+(10,2) form; because a qubit "
-                "permutation hits X and Z identically, they are the "
-                "diagonal CSS gates diag(M,M)"
+                "the 10x10 matrices act on one logical-label copy only; "
+                "they are not by themselves full Clifford matrices"
             ),
         },
-        "eastin_knill": {
-            "Sp_10_2_order": sp10,
-            "O_plus_10_2_order": op10,
-            "transversal_order": 25920,
+        "ambient_label_groups": {
+            "Sp_10_2_order_on_H": sp10,
+            "O_plus_10_2_order_on_H": op10,
+            "PSp_image_order": 25920,
             "index_in_O_plus": index_in_O,
             "reading": (
-                "the transversal gate group is a FINITE subgroup of index "
-                f"{index_in_O} in O+(10,2) and far smaller than Sp(10,2): "
-                "necessarily non-universal (Eastin-Knill) and containing "
-                "no non-Clifford gate -- the magic is the E6 cubic, "
-                "supplied outside the permutation group"
+                "these are ambient counts for the one-copy label form; "
+                "they do not establish a gate inventory or universality claim"
             ),
         },
-        "gate_census": {
-            "logical_order_distribution": {
+        "image_order_census": {
+            "element_order_distribution": {
                 str(k): int(v) for k, v in sorted(order_dist.items())
             },
-            "involutions": involutions,
+            "involutions_not_CZ_gates": involutions,
         },
         "checks": {name: bool(v) for name, v in checks.items() if isinstance(v, bool)},
     }

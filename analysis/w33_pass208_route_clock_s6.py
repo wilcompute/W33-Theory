@@ -20,7 +20,8 @@ clock of Pass 185):
 3. THE TWO CLOCKS.  A side-by-side of the octahedral line clock (Pass 185:
    line stabilizer 648 -> S3 on 3 axes) and the route dodecad clock
    (double-six stabilizer 720 -> S6 on 6 pairs): the supercycle carries
-   two Platonic vacuum clocks.
+   two Platonic vacuum clocks.  Only the line stabilizer is parabolic;
+   the route S6 is the non-parabolic spread/double-six stabilizer.
 """
 
 from __future__ import annotations
@@ -223,7 +224,7 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass208.route_clock_s6.v1",
+        "schema": "w33.pass208.route_clock_s6.v2",
         "status": "PASS" if all_pass else "FAIL",
         "route_clock": {
             "carrier": "one route dodecad = a double-six crown graph",
@@ -244,8 +245,9 @@ def main():
             "route_clock": "S6: double-six stab 720 -> S6 on 6 pairs",
             "reading": (
                 "the supercycle carries two vacuum clocks: the octahedral "
-                "S3 line clock and the S6 route clock; both are quotients "
-                "of the substrate's maximal parabolics"
+                "S3 line clock and the S6 route clock. The line stabilizer "
+                "is parabolic; the route S6 is the non-parabolic "
+                "spread/double-six stabilizer"
             ),
         },
         "checks": {name: bool(v) for name, v in checks.items() if isinstance(v, bool)},

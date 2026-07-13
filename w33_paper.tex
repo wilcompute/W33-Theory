@@ -153,9 +153,10 @@
 We prove that the symplectic polar space $W(3,3)$---the incidence geometry
 of totally isotropic subspaces of $\PG(3,\FF_3)$ with respect to a
 non-degenerate alternating bilinear form---encodes the complete structure
-of fundamental physics.  The collinearity graph of $W(3,3)$ is the unique
-(up to isomorphism within 28 non-isomorphic copies) strongly regular graph
-$\SRG(40,12,2,4)$.  Starting from the single Diophantine equation
+of fundamental physics.  Its collinearity graph is the symplectically
+constructed member of the $28$ non-isomorphic strongly regular graphs with
+parameters $\SRG(40,12,2,4)$; the parameter tuple alone does not identify it.
+Starting from the single Diophantine equation
 $q!=2q$ (uniquely solved by $q=3$), we derive:
 \begin{itemize}[nosep]
 \item all four fundamental forces and the Standard Model gauge group
@@ -394,8 +395,11 @@ $t+1=4$ lines on $p'$ produces a unique point collinear to $p$
 \begin{corollary}[Spence Enumeration, 2000]
 There are exactly $\mathbf{28}$ non-isomorphic $\SRG(40,12,2,4)$ graphs,
 and $28 = \binom{8}{2} = \dim\,\SO(8)$.
-The collinearity graph of $W(3,3)$ is the unique member whose
-automorphism group is $\Sp(4,3)$.
+The graph used here is identified by the displayed symplectic polar-space
+construction, not by the four SRG parameters or by group order alone.  Its
+full automorphism group is
+$\operatorname{Aut}(\PSp(4,3))\cong\PGSp(4,3)$ of order $51\,840$; the
+normal inner projective subgroup $\PSp(4,3)$ has order $25\,920$.
 \end{corollary}
 
 \subsection{Bose--Mesner Algebra}
@@ -574,16 +578,23 @@ $|\Sp(4,3)| = q^4\cdot\lambda\mu\cdot\lambda\mu\Theta
 
 \subsection{Exceptional Isomorphisms}
 
-\begin{theorem}[The $W(E_6)$ Connection]
+\begin{theorem}[The corrected $W(E_6)$ group ledger]
 \label{thm:e6}
 \begin{equation}
-\boxed{|\Sp(4,3)| = |W(E_6)| = 2^7\cdot 3^4\cdot 5 = 51\,840}
+\boxed{|\Sp(4,3)| = |\PGSp(4,3)| = |W(E_6)|
+ = 2^7\cdot 3^4\cdot 5 = 51\,840}
 \end{equation}
-and the projective group
+but equality of orders must not be confused with isomorphism.  The exact
+identifications are
 \begin{equation}
-\PSp(4,3) = \Sp(4,3)/\{\pm I\} \cong W(E_6)^+
-\quad\text{(simple group of order $25\,920$)}.
+\PSp(4,3)\cong U_4(2)\cong W(E_6)^+,
+\qquad
+\PGSp(4,3)\cong U_4(2){:}2\cong W(E_6),
 \end{equation}
+whereas $\Sp(4,3)\cong 2.U_4(2)$ has center $C_2$ and its projective
+point action has image only $\PSp(4,3)$.  Thus the faithful full graph
+group is the centerless projective similitude extension, not the symplectic
+matrix-group cover.
 \end{theorem}
 
 \begin{theorem}[The Deep Parametric Identity]
@@ -5041,7 +5052,7 @@ $12$-regular relation on $\mathcal{M}_{120}$.
 
 \section*{The Orbital Computation}
 
-The full automorphism group $\PSp(4,3)$ acts on the $120$ matching
+The chosen inner symmetry group $\PSp(4,3)$ acts on the $120$ matching
 states.  Computing the unordered pair orbitals gives exactly four
 relations:
 \[
@@ -11588,24 +11599,33 @@ own trade tower}. (Witness:
 \label{sec:chiral-program-seven}
 %% ===============================================================
 
-\subsection{Pass 194 --- the odd-\texorpdfstring{$q$}{q} shadow ladder}
+\subsection{Pass 194 --- the corrected odd-\texorpdfstring{$q$}{q} shadow anchors}
 \label{ssec:pass194}
 
-The layer sandwich is not special to $q=3$: for \emph{every} odd $q$ the
-SRG parameters $k-\mu=q^2-1$, $\lambda-\mu=-2$, $\mu=q+1$ are all even, so
-$A^2\equiv0\pmod2$ and the trade code contains $\mathbf j$. The $W(3,q)$
-permutation module therefore carries the same uniserial pattern with
-layers
+For odd $q$, the SRG parameters $k-\mu=q^2-1$,
+$\lambda-\mu=-2$, $\mu=q+1$ are even, so $A^2\equiv0\pmod2$ and the
+$A$-homology shadow $H_q=\ker A_2/\operatorname{im}A_2$ is defined.  GAP
+must compute the point code $C=\ker N$ as
+$\operatorname{NullspaceMat}(N^{\mathsf T})$; using
+$\operatorname{NullspaceMat}(N)$ instead gives the distinct line-side
+kernel.  With the point-side convention, the nested sandwich and the layer
+dimensions
 \[
   1,\ d(q),\ 1,\ q^2-1,\ 1,\ d(q),\ 1,
   \qquad d(q)=\tfrac12(q-1)(q^2+q+2),
 \]
-verified exactly at $q=5$ (layers $1,64,1,24,1,64,1$). The central
-$(q^2-1)$-layer $\ker A_2/\operatorname{im}A_2$ carries the divided
-quadratic form $\bar q(x)=\tfrac12x^{\mathsf T}Ax\bmod2$: at $q=3$ this is
-the plus-type $E_8/2E_8$ form (dimension $8$, Arf $0$), and $E_8$ is
-merely the first rung of an odd-$q$ ladder of quadratic shadows. (Witness:
-\texttt{analysis/w33\_pass194\_odd\_q\_shadow\_ladder.py}.)
+are matrix-certified at $q=3,5,7$ (at $q=5$:
+$1,64,1,24,1,64,1$).  The historical quadratic expression was off by a
+factor of two: the actual refinement and its polar form are
+\[
+  \boxed{Q(x)=\tfrac14x^{\mathsf T}Ax\bmod2},\qquad
+  B(x,y)=\tfrac12x^{\mathsf T}Ay\bmod2.
+\]
+At $q=3$ this is the plus-type dimension-$8$ form; at $q=5$ both $Q$ and
+$B$ vanish on the dimension-$24$ shadow.  No general uniserial-module
+claim beyond the certified anchors is inferred from the dimension formula.
+(GAP witness:
+\texttt{analysis/w33\_pass194\_odd\_q\_shadow\_ladder.g}.)
 
 \subsection{Pass 195 --- the Steinberg projector, made matrix-explicit}
 \label{ssec:pass195}
@@ -11662,19 +11682,19 @@ the shadow dichotomy}
 The third anchor $q=7$ ($400$ points) confirms the closed forms: layers
 $1,174,1,48,1,174,1$, matching $d(7)=174$ and $q^2-1=48$, with the
 $a_2$-rank theorem $\operatorname{rank}_2M=\tfrac12(q(q+1)^2+2)$
-independently re-verified. The divided pairing satisfies
+independently re-verified.  With the corrected refinement
+$Q(x)=x^{\mathsf T}Ax/4$, its polar form satisfies the coefficient identity
 \[
   \tfrac12A^2=\tfrac{q^2-1}2\,I-A+\tfrac{q+1}2\,J,
 \]
-so it reproduces $A$ modulo $2$ --- making the middle shadow
-nondegenerate --- precisely when $\tfrac{q^2-1}2$ and $\tfrac{q+1}2$ are
-both even, i.e.\ $q\equiv3\pmod4$. Hence the nondegenerate quadratic
-shadows occur at $q=3$ (dimension $8$, $E_8$), $q=7$ (dimension $48$),
-$q=11$ (dimension $120$), \dots, while the intermediate middles ($q=5,13,
-\dots$) carry a pure-radical form. The $\sqrt{17}$ Sastry--Sin transfer of
-Pass~178 governs the total rank; the mod-$4$ dichotomy governs which
-rungs carry a genuine orthogonal shadow. (Witness:
-\texttt{analysis/w33\_pass198\_layer\_law\_q7.py}.)
+which predicts the nondegenerate residue class $q\equiv3\pmod4$.  The
+matrix anchors are exact: $q=3$ is plus type in dimension $8$, $q=5$ has
+radical dimension $24$ and zero refinement, and $q=7$ is plus type in
+dimension $48$ with Witt index $24$.  Values $q=11,13,\ldots$ are at this
+stage coefficient-law predictions, not computed module certificates.  The
+$\sqrt{17}$ Sastry--Sin transfer of Pass~178 governs the total rank; the
+mod-$4$ arithmetic gives the candidate orthogonal-shadow dichotomy. (GAP
+witness: \texttt{analysis/w33\_pass198\_layer\_law\_q7.g}.)
 
 %% ===============================================================
 \section{The Chiral Program, Eighth Round: Passes 199--203}
@@ -11687,27 +11707,34 @@ $O^+(48,2)$}
 
 The dimension-$48$ middle shadow of $W(3,7)$ (Pass~198) carries a
 nondegenerate plus-type quadratic form: Witt index $24$, Arf $0$,
-$2^{47}+2^{23}$ isotropic vectors, preserved by the substrate collineation
-group $\mathrm{PGSp}(4,7)$. Unlike the $E_8$ shadow at $q=3$ --- which is
-$\mathbb F_2$-\emph{irreducible} --- the $q=7$ shadow is \emph{reducible}
-(cyclic-submodule dimensions ranging $27$--$42$ under a generating pair):
-the higher rungs of the odd-$q$ ladder decompose into smaller substrate
-constituents, so $E_8$ is distinguished among the ladder not only as the
-first rung but as the unique \emph{irreducible} one. (Witness:
-\texttt{analysis/w33\_pass199\_q7\_shadow\_identity.py}.)
+$2^{47}+2^{23}$ isotropic vectors, preserved by the projective substrate
+group $\PSp(4,7)$ of order $138\,297\,600$.  The historical generating
+pair generated only an embedded $\operatorname{SL}_2(7)$, so its cyclic
+submodule profile was not a full-group invariant.  Five standard
+symplectic transvections generate $\Sp(4,7)$ of order $276\,595\,200$;
+their projective shadow action is faithful, and GAP MTX gives the exact
+composition-factor dimensions
+\[
+  \boxed{48=24+24.}
+\]
+Thus the $q=7$ shadow is reducible, but the former small-factor and
+``unique irreducible rung'' extrapolations do not follow. (GAP witness:
+\texttt{analysis/w33\_pass199\_q7\_shadow\_identity.g}.)
 
 \subsection{Pass 200 --- the degenerate q=5 shadow is not Golay}
 \label{ssec:pass200}
 
 The $q=5$ middle is a $24$-dimensional module with a \emph{totally
-degenerate} divided pairing (radical $24$) --- the natural setting for the
-binary Golay code and Leech mod~$2$. The identification \emph{fails}: the
-module has no invariant $[24,12]$ self-dual subcode; its cyclic-submodule
-ladder is $\{14,20\}$, so it is built from the same degree-$14$
-constituent that forms the $W(3,3)$ sandwich, not from Golay's $12$. The
-degenerate rungs of the ladder are internal to the $W(3,q)$ family, not a
-moonshine bridge. (Witness:
-\texttt{analysis/w33\_pass200\_q5\_golay\_leech\_shadow.py}.)
+degenerate} polar form (radical $24$), and the corrected quadratic
+refinement itself is identically zero.  The historical $\{14,20\}$
+cyclic-submodule profile came from an order-$120$ embedded
+$\operatorname{SL}_2(5)$, not the full substrate group.  With five standard
+transvections, GAP constructs $\Sp(4,5)$ of order $9\,360\,000$ and its
+projective shadow image of order $4\,680\,000$; MTX proves the binary
+$24$-module is \emph{irreducible}.  Consequently it has no invariant
+dimension-$12$ Golay submodule.  The equality of dimensions with the Golay
+length is only an analogy, not a Leech/moonshine identification. (GAP
+witness: \texttt{analysis/w33\_pass200\_q5\_golay\_leech\_shadow.g}.)
 
 \subsection{Pass 201 --- the sentinel CSS code and its logical shadow}
 \label{ssec:pass201}
@@ -11719,15 +11746,16 @@ equal to $C$:
   \boxed{\,[[40,\,10,\,4]]\,,}
 \]
 and its $10$ logical qubits are \emph{exactly} the $\mathrm{SO}(10)$
-shadow $H_{10}=C^\perp/C$ of Pass~164 --- the logical Pauli commutator is
-the plus-type polar form ($528$ isotropic logical operators), so the
-code's logical algebra is the $O^+(10,2)$ geometry. The $40$ lines are the
-weight-$4$ minimum logical operators (distance $4$), and
-$\mathrm{PGSp}(4,3)$ permutes the $40$ physical qubits fixing $C$, acting
-\emph{faithfully} on the $10$ logicals through $O^+(10,2)$: the substrate
-automorphism group is a built-in group of transversal (qubit-permutation)
-logical gates. The protected register is a QEC code, and its symmetry is
-the fault-tolerant gate set. (Witness:
+shadow $H_{10}=C^\perp/C$ of Pass~164.  Here $H_{10}$ is the common
+$X$/$Z$ \emph{label space}, not the whole Pauli space: the latter is
+$H_X\oplus H_Z$ of dimension $20$, with its hyperbolic symplectic form.
+The plus-type quadratic form on one label copy still gives the
+$O^+(10,2)$ geometry, and the $40$ lines give weight-$4$ logical labels
+(distance $4$).  Coordinate permutations preserving $C$ therefore give
+weight-preserving code automorphisms.  Their exact Clifford lift, including
+the distinction between $M$ on $X$ labels and $M^{-\mathsf T}$ on the dual
+$Z$ labels, is established only in Pass~211; ``transversal gate set'' is
+not used here. (Original witness:
 \texttt{analysis/w33\_pass201\_sentinel\_css\_logical\_shadow.py}.)
 
 \subsection{Pass 202 --- the shadow dichotomy as a Lean theorem}
@@ -11741,14 +11769,16 @@ congruence:
   \operatorname{rank}_2M=\tfrac{q(q+1)^2+2}2,
 \]
 \[
-  \text{nondegenerate}\iff q\equiv3\!\!\pmod4,
+  \text{coefficient-parity predicate}\iff q\equiv3\!\!\pmod4,
 \]
 with the seven layers summing to $v=(q+1)(q^2+1)$ for every odd $q$. These
-are emitted as a machine-checkable Lean file
-(\texttt{formal/W33/ShadowDichotomy.lean}) proving the layer-sum identity
-and the mod-$4$ dichotomy over all odd $q\ge3$ by \texttt{omega}, and
-cross-verified against the $q=3,5,7$ geometric certificates --- the
-module-structure layer atop the Sastry--Sin rank formalization. (Witness:
+are emitted as a Lean source file
+(\texttt{formal/W33/ShadowDichotomy.lean}) whose stated theorems prove the
+polynomial layer-sum identity and the equivalence between a
+\emph{coefficient-parity predicate} and $q\equiv3\pmod4$.  The file does
+not formalize $W(3,q)$, its permutation module, or the existence and
+nondegeneracy of a quadratic quotient; those geometric statements remain
+the GAP-certified $q=3,5,7$ anchors and higher-$q$ predictions. (Witness:
 \texttt{analysis/w33\_pass202\_shadow\_dichotomy\_arithmetic.py}.)
 
 \subsection{Pass 203 --- the supercycle bundle}
@@ -11767,7 +11797,9 @@ $C_3^3$ core (Pass~196). The supercycle ledger
 ties the packet clock ($72$), the mirror bus ($2160$), the product carrier
 ($4320$), and the runtime supercycle ($51840$) to the axis/double-six
 geometry, with the $S_3$ completion fibre geometric and the
-controller-carrier identification honestly not claimed. (Witness:
+controller-carrier identification honestly not claimed at this stage;
+Pass~212 later supplies the typed carrier and its explicit bijection.
+(Witness:
 \texttt{analysis/w33\_pass203\_supercycle\_bundle.py}.)
 
 %% ===============================================================
@@ -11775,56 +11807,56 @@ controller-carrier identification honestly not claimed. (Witness:
 \label{sec:chiral-program-nine}
 %% ===============================================================
 
-\subsection{Pass 204 --- the transversal logical Clifford gates}
+\subsection{Pass 204 --- corrected scope of the logical Clifford action}
 \label{ssec:pass204}
 
-The $25\,920$ physical qubit-permutations $\mathrm{PGSp}(4,3)$ that fix
-the sentinel CSS code $[[40,10,4]]$ (Pass~201) act on the $10$ logical
-qubits as a subgroup of $O^+(10,2)\subset\Sp(10,2)$ --- verified to
-preserve both the shadow quadratic form and its symplectic polar form ---
-i.e.\ as \emph{logical Clifford} operations. Since a permutation hits $X$-
-and $Z$-type logicals identically, these are the diagonal CSS entangling
-gates. The Eastin--Knill ceiling is explicit:
+The original Pass~204 mixed the $10$-dimensional label space with the full
+logical Pauli space.  Its $\Sp(10,2)$ ambient group, ``diagonal''
+$\operatorname{diag}(M,M)$ action, and $315$-involution CZ interpretation
+are withdrawn.  The exact replacement is Pass~211: $\PSp(4,3)$ of order
+$25\,920$ and its multiplier extension $\operatorname{PGSp}(4,3)$ of order
+$51\,840$ act faithfully on $H_{10}$, and after choosing the dot-product
+dual $Z$ basis their full Pauli action is
 \[
-  |\Sp(10,2)|\approx2.5\times10^{16},\quad
-  |O^+(10,2)|\approx4.7\times10^{13},\quad
-  [\,O^+(10,2):\text{transversal}\,]=1\,813\,217\,280,
+  \boxed{\operatorname{diag}(M,M^{-\mathsf T})\in\Sp(20,2).}
 \]
-so the transversal gate group is a tiny finite slice ($315$ logical
-involutions, the transversal-$CZ$ census), necessarily non-universal and
-containing no non-Clifford gate: the magic must come from the $E_6$ cubic,
-outside the permutation group. (Witness:
-\texttt{analysis/w33\_pass204\_transversal\_clifford.py}.)
+These are physical coordinate-permutation code automorphisms and hence a
+finite logical Clifford subgroup.  This proves neither an elementary
+CNOT/SWAP synthesis nor a universal encoded gate set. (Superseded witness:
+\texttt{analysis/w33\_pass204\_transversal\_clifford.py}; corrected GAP
+witness: \texttt{analysis/w33\_pass211\_pgsp\_controller\_clifford.g}.)
 
-\subsection{Pass 205 --- E$_8$ is the unique irreducible ladder rung}
+\subsection{Pass 205 --- the corrected full-group factor anchors}
 \label{ssec:pass205}
 
-MeatAxe on the $48$-dimensional $q=7$ shadow (from a generating pair, no
-enumeration of $\Sp(4,7)$) yields the composition factors
+The historical coordinate-spin search used the same two proper-subgroup
+generators as Passes~199--200 and produced a false factorization.  GAP MTX
+on the full five-transvection actions instead gives
 \[
-  48 = 3^{\,3}\oplus4^{\,3}\oplus6\oplus7^{\,3}
-  \quad(\text{endomorphism algebra dimension }50),
+  \boxed{q=3:[8],\qquad q=5:[24],\qquad q=7:[24,24].}
 \]
-with \emph{no} dimension-$8$ factor. The higher rungs of the odd-$q$
-ladder are built from the substrate group's own characteristic-$2$
-irreducibles, so the irreducibility of the $E_8$ shadow at $q=3$ is
-special to the smallest field --- $E_8$ is not merely the first rung but
-the unique irreducible one. (Witness:
-\texttt{analysis/w33\_pass205\_q7\_composition\_series.py}.)
+The $q=5$ rung is therefore irreducible as well, while the $q=7$ rung is a
+$24+24$ extension and contains no dimension-$8$ composition factor.
+Consequently $E_8$ is \emph{not} the unique irreducible rung among the
+computed anchors.  No ``all higher rungs'' theorem is claimed from these
+three fields. (GAP witness:
+\texttt{analysis/w33\_pass205\_q7\_composition\_series.g}; joint audit:
+\texttt{analysis/w33\_odd\_q\_shadow\_correction\_capstone.g}.)
 
-\subsection{Pass 206 --- the sentinel distance is structurally robust}
+\subsection{Pass 206 --- the proposed subsystem reduction is withdrawn}
 \label{ssec:pass206}
 
-The three graded layers of the logical space $H_{10}$ have minimum
-physical weights $12$ (the fixed vector $f$), $6$ (the $E_8$ shadow
-$8$-block), and $4$ (the top): the distance-$4$ of $[[40,10,4]]$ comes
-from the \emph{top} layer, not the $E_8$ block. Gauging the nine non-$f$
-logical directions to isolate the weight-$12$ fixed vector \emph{fails} to
-boost the distance --- $f$ drops back to weight $4$ modulo the gauge group,
-because the weight-$4$ top logical is $f$'s symplectic partner and cannot
-be gauged away without gauging $f$ itself. The sentinel distance is
-structurally $4$; the layer-weight triple $(12,6,4)$ is the genuine new
-invariant. (Witness:
+The draft Pass~206 does not construct a subsystem code.  A gauge qubit
+requires an anticommuting hyperbolic Pauli pair, whereas the draft gauged
+single binary directions; checking that its proposed surviving class $f$
+lies outside a classical row span does not establish that $f$ centralizes
+the full gauge group.  The advertised
+$[[40,1,9,4]]$ parameters and the ``structurally robust'' conclusion are
+therefore withdrawn.  The displayed weights $(12,6,4)$ came from selected
+representatives rather than an exhaustive quotient minimum calculation,
+so they are not promoted to layer invariants.  The certified statement
+remaining here is only the parent CSS code $[[40,10,4]]$ of Pass~201.
+(Refuted draft:
 \texttt{analysis/w33\_pass206\_subsystem\_distance\_boost.py}.)
 
 \subsection{Pass 207 --- the Lean shadow-dichotomy module}
@@ -11838,13 +11870,13 @@ and using only \texttt{Mathlib}, with the polynomial layer-sum identity
 \]
 (\texttt{ring}) and the nondegeneracy dichotomy
 $\text{nondegenerate}(q)\iff q\equiv3\pmod4$ (\texttt{omega}), plus the
-$E_8$/$48$/$120$ example (\texttt{decide}). No Lean toolchain is present
-in the working container, so the certificate verifies the source
-structure, the project integration, and the exact truth of every
-theorem's arithmetic content (checked to $q=999$ and cross-checked against
-the $q=3,5,7$ geometric certificates) --- not a substitute for
-\texttt{lake build}, but a guarantee the statements are true and the file
-well-formed. (Witness:
+$8$/$48$/$120$ dimension-polynomial example (\texttt{decide}). No Lean
+toolchain is present in the working container.  The companion script checks
+source markers and independently rechecks the arithmetic to $q=999$; it is
+neither a parser nor a kernel certificate and cannot guarantee that the
+Lean source type-checks.  A real \texttt{lake build} remains required, and
+even a successful build would certify only these arithmetic statements.
+(Witness:
 \texttt{analysis/w33\_pass207\_lean\_shadow\_certificate.py}.)
 
 \subsection{Pass 208 --- the S$_6$ route clock is the doily's group}
@@ -11856,10 +11888,182 @@ matching, spectrum $\{5,1^5,(-1)^5,-5\}$) and maps \emph{onto} $S_6$ on
 the $6$ crossing pairs (the removed matching edges, identified as the
 non-adjacent vertex pairs with zero common neighbours). Since $S_6\cong
 \Sp(4,2)$ is the automorphism group of the doily $W(2,2)$, the route clock
-is a \emph{doily clock} --- tying the pentad shell back to the smallest
-quadrangle in the trade tower. Together with the octahedral $S_3$ line
-clock (Pass~185), the supercycle carries two Platonic vacuum clocks, both
-quotients of the substrate's maximal parabolics. (Witness:
+has the correct abstract group for a derived doily; the group identity
+alone does not embed a doily among the twelve crown vertices.  Pass~210
+constructs the precise duad--syntheme functor. Together with the octahedral
+$S_3$ line clock (Pass~185), this gives two exact finite clocks, but only the
+line stabilizer is parabolic: the $S_6$ route stabilizer is the non-parabolic
+spread/double-six stabilizer. (Witness:
 \texttt{analysis/w33\_pass208\_route\_clock\_s6.py}.)
+
+%% ===============================================================
+\section{The Chiral Program, Tenth Round: Passes 209--212}
+\label{sec:chiral-program-ten}
+%% ===============================================================
+
+\subsection{Pass 209 --- the silent-spread theorem and relation fusion}
+\label{ssec:pass209}
+
+GAP rebuilds the route lattice as the saturated integral kernel of the
+$40\times40$ line--point incidence matrix (rank $15$, determinant
+$9\,795\,520\,512$, minimum $10$, and $432=216+216$ signed minima).  For
+each of its $36$ double-six dodecads $D$, define
+\[
+  \Sigma(D)=\{\ell: v_\ell=0\text{ for every }v\in D\}.
+\]
+Each $\Sigma(D)$ consists of ten pairwise skew lines covering all forty
+points.  An independent exact-cover enumeration finds exactly $36$ spreads,
+and $D\mapsto\Sigma(D)$ recovers all of them bijectively; all $1440$
+generator/dodecad equivariance cases pass.  Every line occurs in nine such
+spreads, while two spreads meet in one line ($360$ pairs) or four lines
+($270$ pairs).
+
+The diagonal line/dodecad action is therefore the two-stratum biset
+\[
+  40\cdot36=360+1080,
+  \qquad |G_{(\ell,D)}|=72,24,
+\]
+where the first orbit is exactly $\ell\in\Sigma(D)$.  Lifting a line to its
+three pair-partition axes gives the orbit fusion
+\[
+  360+720+3240\longrightarrow360+1080
+\]
+with projection degrees $1,2,3$: above a silent incidence the axis profile
+is $(3,6,6)$, while above an active pair all three axes lie in the $27$
+relation.  Thus an axis's middle six is the union of the other two axes'
+special triples. (GAP witnesses:
+\texttt{analysis/w33\_pass209\_210\_gap\_common.g} and
+\texttt{analysis/w33\_pass209\_silent\_spread\_two\_clock.g}.)
+
+\subsection{Pass 210 --- the unique $S_6$ route atlas}
+\label{ssec:pass210}
+
+The six removed matching edges of a crown form its natural six-set.  Its
+ten unordered $3{+}3$ bisections admit a \emph{unique} base match with the
+ten lines of $\Sigma(D)$ having the same order-$72$ stabilizer.  Transport
+under the route $S_6$ gives a bijection, verified in all $7200$ element/line
+equivariance cases.  The $15$ duads and $15$ synthemes of this six-set then
+form the derived $W(2,2)$, with point graph $\SRG(15,6,1,3)$ and the full
+generalized-quadrangle axiom checked.  This is a functor attached to the
+crown six-set, not a claim that its twelve vertices contain a doily.
+
+The atlas also resolves the two clocks locally.  On the active $1080$
+stratum the common stabilizer is $S_4$, faithful on the four points of the
+line, and
+\[
+  1\longrightarrow V_4\longrightarrow S_4\longrightarrow S_3
+  \longrightarrow1
+\]
+is exactly the line-clock quotient.  On the silent $360$ stratum the common
+stabilizer is $(S_3\times S_3){:}C_2$ of order $72$; its line-clock image is
+only $C_2$, with kernel $S_3\times S_3$.  Adjoining the explicit multiplier
+$2$ similitude doubles the group to $\operatorname{PGSp}(4,3)$ and the
+crown stabilizer to $S_6\times C_2$ of order $1440$; its central involution
+fixes the six pair labels and swaps the two crown sides. (GAP witness:
+\texttt{analysis/w33\_pass210\_s6\_route\_atlas.g}.)
+
+\subsection{Pass 211 --- the PGSp controller and the corrected Clifford lift}
+\label{ssec:pass211}
+
+The full $\operatorname{PGSp}(4,3)$ of order $51\,840$ is transitive on the
+$4320$ ordered nonlocal paths.  A path stabilizer $H$ has order $12$ and
+fits into the split central sequence
+\[
+  1\longrightarrow C_2\longrightarrow H\longrightarrow S_3
+  \longrightarrow1,
+  \qquad H\cong S_3\times C_2.
+\]
+The quotient is the faithful action on the path's three quadrangle
+completions; fixing one completion leaves $V_4$.  Hence the controller
+factorization is the exact orbit--stabilizer identity
+\[
+  51\,840=4320\cdot12=4320\cdot3\cdot4.
+\]
+Independently, the same GAP run corrects the CSS action described above:
+$H_{10}$ is the common ten-dimensional label quotient, its dot-product dual
+supplies the $Z$ basis, and every physical generator acts on the full
+twenty-dimensional Pauli space as
+$\operatorname{diag}(M,M^{-\mathsf T})\in\Sp(20,2)$.  The inner and full
+images have orders $25\,920$ and $51\,840$.  No canonical labeling of the
+four $V_4$ elements by runtime roles and no elementary Clifford circuit are
+claimed. (GAP witness:
+\texttt{analysis/w33\_pass211\_pgsp\_controller\_clifford.g}.)
+
+\subsection{Pass 212 --- the canonical $4320$ carrier/path bijection}
+\label{ssec:pass212}
+
+The controller identification left open in Pass~203 is now explicit.  For
+a spread $\Sigma$, an external line $L$, and a point $p\in L$, let $M$ be
+the unique member of $\Sigma$ through $p$.  For any line $R$, let
+$\operatorname{owner}_{\Sigma}(R)$ be the four spread lines through the
+four points of $R$.  There is a unique line $N$ satisfying
+\[
+  M\cap N\ne\varnothing,\qquad L\cap N=\varnothing,
+  \qquad
+  \operatorname{owner}_{\Sigma}(N)
+    =\operatorname{owner}_{\Sigma}(L),
+\]
+and
+\[
+  \boxed{(\Sigma,L,p)\longmapsto(L,M,N)}
+\]
+is a canonical $\PSp(4,3)$-equivariant bijection onto the ordered nonlocal
+paths.  Conversely, $(L,M,N)$ determines the unique spread containing $M$
+with equal endpoint owner sets, and $p=L\cap M$.  GAP verifies uniqueness
+in all $4320$ directions, both inverse identities, equal $S_3$ stabilizers,
+and all $8640$ generator-equivariance cases; the JSON certificate emits the
+complete table.
+
+Forgetting $p$ exposes the sharper flag tower
+\[
+  1080\xrightarrow{\times4}4320\xrightarrow{\times3}12960.
+\]
+The active pair stabilizer is $S_4$ on the four points of $L$; fixing $p$
+is exactly the path $S_3$, and the three completions correspond
+equivariantly to the other three points of $L$.  The tempting final step is
+\emph{false}: after fixing a completion, $V_4$ acts on its four line points
+through a $C_2$ image with orbit profile $1+1+2$, producing global strata
+$12960+12960+25920$, not a regular four-slot torsor. (GAP witness:
+\texttt{analysis/w33\_pass212\_4320\_carrier\_equivariant\_bijection.g}.)
+
+\subsection{Pass 213 --- the foundational symplectic and group audit}
+\label{ssec:pass213}
+
+The coordinate definition itself now closes two long-standing notation
+errors.  GAP rebuilds the $40$ projective points and $40$ totally isotropic
+lines of $W(3,3)$.  The $240$ graph edges are precisely the orthogonal point
+pairs, and every edge spans one unique totally isotropic projective line;
+a nonedge is a nonorthogonal pair spanning an ordinary hyperbolic line.
+Although the resulting graph is $\SRG(40,12,2,4)$, those parameters do not
+identify it: Spence classified exactly $28$ non-isomorphic graphs with that
+tuple.  The symplectic construction is essential.
+
+The same GAP run separates the three commonly conflated groups:
+\[
+\begin{array}{ccl}
+\PSp(4,3)&\cong&U_4(2),\quad |G|=25\,920,\\
+\PGSp(4,3)&\cong&U_4(2){:}2\cong W(E_6),\quad |G|=51\,840,\\
+\Sp(4,3)&\cong&2.U_4(2),\quad |G|=51\,840,\quad |Z(G)|=2.
+\end{array}
+\]
+The first group is already edge-transitive; adjoining the multiplier-$2$
+similitude gives the centerless projective extension.  CTblLib identifies
+the character table named \texttt{W(E6)} with \texttt{U4(2).2}, while the
+central cover has the distinct identifier \texttt{2.U4(2)}.
+
+Finally, $U_4(2)$ has four order-$3$ classes containing $800$ elements in
+total.  Its degree-$81$ Steinberg character is zero on all four, so for every
+order-$3$ element
+\[
+H_1\otimes\mathbb C
+ = H_1^{(1)}\oplus H_1^{(\omega)}\oplus H_1^{(\omega^2)},
+\qquad
+(\dim H_1^{(1)},\dim H_1^{(\omega)},\dim H_1^{(\omega^2)})=(27,27,27).
+\]
+This is an exact complex phase-eigenspace statement.  The element acts by
+$1,\omega,\omega^2$ on the three spaces; it does not cyclically permute them,
+and no canonical three-summand integral or physical-generation theorem
+follows without an additional bridge. (GAP witness:
+\texttt{analysis/w33\_pass213\_foundation\_group\_audit.g}.)
 
 \end{document}

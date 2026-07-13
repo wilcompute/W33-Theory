@@ -605,6 +605,59 @@ have size six.  (Witnesses:
 \path{analysis/w33_pass191_supercycle_pullback.py}, and
 \path{analysis/w33_pass192_signed_trade_edge_s4.py}.)
 
+Passes~209--212 close the global controller carrier without undoing that
+local warning.  A route-shell double-six $D$ now determines its timetable
+intrinsically:
+\[
+ \Sigma(D)=\{\ell:\ v_\ell=0\ \hbox{for every signed minimum }v\in D\}.
+\]
+The ten lines in $\Sigma(D)$ are pairwise skew and cover all $40$ points;
+the $36$ double-sixes recover all $36$ spreads, equivariantly and
+bijectively.  On the crossing-pair six-set of $D$, its ten silent lines are
+the ten unordered $3+3$ bisections, by a unique $S_6$-equivariant atlas.
+The associated doily is the derived duad--syntheme geometry on that six-set,
+not a literal incidence subgeometry on the twelve crown vertices.
+
+This bridge gives the controller an exact two-stratum ABI.  For a silent
+spread incidence $(\Sigma,\ell)$, the common stabilizer has order $72$ and
+shape $(S_3\times S_3){:}C_2$; its line-clock image is $C_2$ with kernel
+$S_3\times S_3$.  For an active pair $\ell\notin\Sigma$, the stabilizer is
+$S_4$, faithful on the four points of $\ell$, and its line-clock quotient is
+$S_4/V_4\cong S_3$.  Thus the silent and active rows require an explicit
+stratum bit: they are two equivariant clock modes, not one direct-product
+clock.
+
+Most importantly, the previously numerical $4320$-carrier coincidence is
+now a canonical $\PSp(4,3)$-equivariant bijection.  Let
+\[
+ X=\{(\Sigma,L,p):L\notin\Sigma,\ p\in L\},\qquad
+ |X|=1080\cdot4=4320.
+\]
+For $(\Sigma,L,p)$, let $M$ be the unique line of $\Sigma$ through $p$ and
+let $N$ be the unique line meeting $M$, disjoint from $L$, whose four
+$\Sigma$-owner lines equal those of $L$.  Then
+\[
+ (\Sigma,L,p)\longmapsto(L,M,N)
+\]
+is the required bijection to ordered nonlocal two-paths; the inverse chooses
+the unique such $\Sigma$ and returns $p=L\cap M$.  The path has three
+quadrangle completions, canonically indexed by the other three points of
+$L$, so the complete incidence surface is
+\[
+ 1080\cdot4\cdot3=12960.
+\]
+In the full $\mathrm{PGSp}(4,3)$ supercycle the path stabilizer is the split
+group $S_3\times C_2$ of order $12$: $S_3$ permutes the three completions,
+its central kernel has order two, and fixing one completion leaves $V_4$.
+That $V_4$ is an exact four-element branch carrier, but it is \emph{not} a
+regular four-probe address on the completion line: the four points have
+orbits $1+1+2$.  Firmware must supply any semantic probe-role labelling
+separately rather than infer it from group order.  (GAP witnesses:
+\path{analysis/w33_pass209_silent_spread_two_clock.g},
+\path{analysis/w33_pass210_s6_route_atlas.g},
+\path{analysis/w33_pass211_pgsp_controller_clifford.g}, and
+\path{analysis/w33_pass212_4320_carrier_equivariant_bijection.g}.)
+
 %======================================================================
 \section{The carrier: how to self-entangle a photon}
 \label{sec:carrier}

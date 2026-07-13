@@ -231,8 +231,9 @@ $120\times36=4320$ axis/double-six table is not homogeneous: its exact native or
 $3240+720+360=120(27+6+3)$.  A runtime row must therefore retain whether its double-six lies in the
 $27$-, $6$-, or $3$-suborbit of the chosen axis.  The smallest suborbit is operationally distinguished:
 the axis stabilizer acts on those three double-sixes through full $S_3$, so it is the exact finite model
-for an unframed three-completion choice.  This does not identify the full $4320$ product with the
-controller's ordered-path carrier.
+for an unframed three-completion choice.  The raw axis/double-six product is therefore not itself the
+controller carrier.  Passes~209--212 now supersede the former ``not identified'' boundary with a
+canonical typed carrier built from the same double-sixes.
 
 Second, a signed local-axis state now has a compact lossless address: line ID plus one of the six
 two-point edges on that line.  Sign reversal is just edge complement.  The six-state symmetry is the
@@ -240,6 +241,45 @@ tetrahedral-edge action of $S_4$, with line-stabilizer sequence
 $1\to C_3^3\to H\to S_4\to1$; after complement-pairing, the three axes carry $S_3/C_2$.  Consequently a
 six-slot controller cannot substitute a regular $S_3$ frame for these six signed states without an
 explicit conversion map.  This is an exact ABI distinction, not measured performance.
+
+For every route-shell double-six $D$, define the common-zero set
+\[
+ \Sigma(D)=\{\ell:v_\ell=0\ \hbox{for every signed minimum }v\in D\}.
+\]
+It is a ten-line spread, and the $36$ double-sixes recover all $36$ spreads bijectively and
+equivariantly.  The crossing pairs of the crown supply a natural six-set: its ten unordered $3+3$
+bisections map uniquely and $S_6$-equivariantly to the ten silent lines of $\Sigma(D)$.  The resulting
+duad--syntheme doily is a derived route atlas, not a claim that the twelve crown vertices themselves
+form a doily.
+
+The compiler can now type a spread/line row exactly.  A silent row $L\in\Sigma$ has stabilizer
+$(S_3\times S_3){:}C_2$ of order $72$ and line-clock quotient $C_2$ with kernel $S_3\times S_3$.  An
+active row $L\notin\Sigma$ has stabilizer $S_4$, acts faithfully on the four points of $L$, and exposes
+the quotient $S_4/V_4\cong S_3$.  The two rows therefore need distinct opcodes; a single global
+direct-product clock would erase real stabilizer information.
+
+The exact $4320$ controller record is
+\[
+ X=\{(\Sigma,L,p):L\notin\Sigma,\ p\in L\},\qquad |X|=1080\cdot4=4320.
+\]
+Let $M$ be the unique spread line through $p$.  Among the lines meeting $M$ and disjoint from $L$, let
+$N$ be the unique one with the same four $\Sigma$-owner lines as $L$.  The map
+$(\Sigma,L,p)\mapsto(L,M,N)$ is a canonical $\mathrm{PSp}(4,3)$-equivariant bijection to the ordered
+nonlocal two-path carrier; its inverse recovers the unique spread and $p=L\cap M$.  The other three
+points of $L$ label the path's three quadrangle completions, giving the exact flag tower
+\[
+ 1080\cdot4\cdot3=12960.
+\]
+Under the full $\mathrm{PGSp}(4,3)$ controller, each path has stabilizer $S_3\times C_2$ of order $12$:
+the $S_3$ image permutes the three completions, the central kernel has order two, and choosing one
+completion leaves $V_4$.  This does \emph{not} justify four interchangeable probe slots.  On the four
+points of the completion line the $V_4$ action has orbit sizes $1+1+2$, not one regular orbit of size
+four.  A runtime may use the four-element branch carrier, but it must assign semantic probe roles by a
+separate interface.  (GAP witnesses:
+\path{analysis/w33_pass209_silent_spread_two_clock.g},
+\path{analysis/w33_pass210_s6_route_atlas.g},
+\path{analysis/w33_pass211_pgsp_controller_clifford.g}, and
+\path{analysis/w33_pass212_4320_carrier_equivariant_bijection.g}.)
 
 This is a coding and analyzer theorem, not a cryptographic security proof: a threat model still has to
 specify which integer faults an adversary can inject and which analyzer channels are trusted.  It also

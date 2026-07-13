@@ -1,0 +1,45 @@
+{
+  "schema": "w33.pass209.silent_spread_two_clock.gap.v3",
+  "producer": "GAP 4.12.1",
+  "status": "PASS",
+  "route_lattice": {
+    "rank": 15, "determinant": 9795520512, "minimum": 10,
+    "signed_minimum_vectors": 432, "orbits": [216, 216]
+  },
+  "silent_spread_bridge": {
+    "definition": "Sigma(D)={ell: v[ell]=0 for every v in D}",
+    "dodecads": 36, "spreads": 36, "lines_per_spread": 10,
+    "spreads_per_line": 9, "overlaps": {"1": 360, "4": 270},
+    "generator_equivariance_cases": 1440
+  },
+  "clocks": {
+    "line": "648 -> S3, kernel 108",
+    "route": "S6 of order 720; line orbits 10+30"
+  },
+  "line_x_dodecad": {"orbits": [360, 1080], "stabilizers": [72, 24]},
+  "axis_relation_fusion": {
+    "orbits": [360, 720, 3240],
+    "silent_profile": [360, 720, 720],
+    "active_profile": [3240, 3240, 3240],
+    "projection_degrees": [1, 2, 3],
+    "theorem": "the middle six on one axis is the union of the other two special triples"
+  },
+  "boundary": "The clocks form a two-stratum equivariant biset, not a global direct product.",
+  "checks": {
+    "groups": true,
+    "substrate": true,
+    "route_shell": true,
+    "crowns": true,
+    "ten_silent_lines": true,
+    "silent_sets_are_spreads": true,
+    "all_spreads_recovered": true,
+    "nine_spreads_per_line": true,
+    "spread_overlap_profile": true,
+    "full_generator_equivariance": true,
+    "route_clock": true,
+    "line_clock": true,
+    "line_dodecad_biset": true,
+    "axis_relation_fusion": true,
+    "two_clock_arithmetic": true
+  }
+}

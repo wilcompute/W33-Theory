@@ -1,20 +1,19 @@
 import Mathlib.Tactic
 
 /-!
-# The odd-`q` shadow dichotomy (arithmetic layer)
+# The odd-`q` shadow formulas (arithmetic layer)
 
-The module-structure layer of the odd-`q` `W(3,q)` sandwich, distilled to
-pure arithmetic.  For odd `q`, the binary permutation module of `W(3,q)`
-is uniserial with layers `1, d(q), 1, q²-1, 1, d(q), 1`, where the doubled
-code-layer dimension is `(q-1)(q²+q+2)` and the central quadratic-shadow
-dimension is `q²-1`.  The seven layers reconstruct the point count
-`v = (q+1)(q²+1)`, and the shadow's divided pairing is nondegenerate
-exactly when `q ≡ 3 (mod 4)`.
+This file formalizes only the arithmetic formulas suggested by the
+odd-`q` `W(3,q)` calculations.  It does not define `W(3,q)`, a permutation
+module, a filtration, or a quadratic form.  The polynomial layer dimensions
+reconstruct `v = (q+1)(q²+1)`, and the coefficient-parity predicate defined
+below is equivalent to `q ≡ 3 (mod 4)`.  The geometric/module interpretation
+is a separate GAP-certified statement at `q = 3,5,7`.
 
-Machine-generated companion to
+Arithmetic companion to
 `analysis/w33_pass202_shadow_dichotomy_arithmetic.py` and structurally
-certified by `analysis/w33_pass207_lean_shadow_certificate.py`.  All
-proofs are complete (`ring`, `omega`, `decide`); no extra axioms.
+proof scripts are written with `ring`, `omega`, and `decide`; a real
+`lake build` is still required before calling them kernel-checked.
 -/
 
 namespace W33.ShadowDichotomy
@@ -42,13 +41,14 @@ theorem layer_sum_eq_v (q : ℤ) :
 theorem two_incidence_rank_def (q : ℤ) :
     twoIncidenceRank q = q * (q + 1) ^ 2 + 2 := rfl
 
-/-- Nondegeneracy of the divided pairing, as a predicate on odd `q`. -/
+/-- The coefficient-parity condition predicted to govern nondegeneracy.
+This definition itself contains no quadratic space. -/
 def nondegenerate (q : ℕ) : Prop :=
   (q ^ 2 - 1) / 2 % 2 = 0 ∧ (q + 1) / 2 % 2 = 0
 
-/-- For odd `q ≥ 3`, the shadow is nondegenerate exactly when
-`q ≡ 3 (mod 4)`.  (The first conjunct is automatic; the dichotomy is
-carried by the second.) -/
+/-- For odd `q ≥ 3`, the coefficient-parity predicate is equivalent to
+`q ≡ 3 (mod 4)`.  (The first conjunct is automatic; the arithmetic
+dichotomy is carried by the second.) -/
 theorem nondegenerate_iff (q : ℕ) (hq : q % 2 = 1) (h3 : 3 ≤ q) :
     nondegenerate q ↔ q % 4 = 3 := by
   obtain ⟨k, rfl⟩ : ∃ k, q = 2 * k + 3 := ⟨(q - 3) / 2, by omega⟩
@@ -57,8 +57,8 @@ theorem nondegenerate_iff (q : ℕ) (hq : q % 2 = 1) (h3 : 3 ≤ q) :
   rw [hsq]
   omega
 
-/-- The first three nondegenerate rungs are the `E₈` shadow (dim 8), then
-dim 48, then dim 120. -/
+/-- Values of the dimension polynomial at three residue-class examples;
+this does not construct the corresponding modules. -/
 example : shadowDim 3 = 8 ∧ shadowDim 7 = 48 ∧ shadowDim 11 = 120 := by
   refine ⟨?_, ?_, ?_⟩ <;> decide
 

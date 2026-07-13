@@ -1,94 +1,32 @@
 {
-  "schema": "w33.pass202.shadow_dichotomy_arithmetic.v1",
+  "schema": "w33.pass202.shadow_dichotomy_arithmetic.gap.v2",
   "status": "PASS",
+  "producer": "GAP 4.12.1",
   "closed_forms": {
     "layer_d": "(q-1)(q^2+q+2)/2",
     "shadow_dim": "q^2-1",
-    "incidence_rank": "(q(q+1)^2+2)/2  [Sastry-Sin]",
-    "nondegenerate": "q = 3 (mod 4)"
+    "incidence_rank": "(q(q+1)^2+2)/2 [Sastry-Sin]",
+    "coefficient_parity": "equivalent to q = 3 (mod 4) for odd q >= 3"
+  },
+  "certified_scope": {
+    "arithmetic_only": true,
+    "constructs_W3q": false,
+    "proves_quadratic_shadow_nondegenerate": false,
+    "higher_q_module_structure": "prediction only"
   },
   "sample_table": {
-    "3": {
-      "d": 14,
-      "shadow_dim": 8,
-      "incidence_rank": 25,
-      "nondegenerate": true
-    },
-    "5": {
-      "d": 64,
-      "shadow_dim": 24,
-      "incidence_rank": 91,
-      "nondegenerate": false
-    },
-    "7": {
-      "d": 174,
-      "shadow_dim": 48,
-      "incidence_rank": 225,
-      "nondegenerate": true
-    },
-    "9": {
-      "d": 368,
-      "shadow_dim": 80,
-      "incidence_rank": 451,
-      "nondegenerate": false
-    },
-    "11": {
-      "d": 670,
-      "shadow_dim": 120,
-      "incidence_rank": 793,
-      "nondegenerate": true
-    },
-    "13": {
-      "d": 1104,
-      "shadow_dim": 168,
-      "incidence_rank": 1275,
-      "nondegenerate": false
-    }
+    "3": {"d": 14, "shadow_dim": 8, "incidence_rank": 25, "coefficient_parity": true},
+    "5": {"d": 64, "shadow_dim": 24, "incidence_rank": 91, "coefficient_parity": false},
+    "7": {"d": 174, "shadow_dim": 48, "incidence_rank": 225, "coefficient_parity": true}
   },
-  "nondegenerate_ladder": [
-    {
-      "q": 3,
-      "shadow_dim": 8
-    },
-    {
-      "q": 7,
-      "shadow_dim": 48
-    },
-    {
-      "q": 11,
-      "shadow_dim": 120
-    },
-    {
-      "q": 15,
-      "shadow_dim": 224
-    },
-    {
-      "q": 19,
-      "shadow_dim": 360
-    },
-    {
-      "q": 23,
-      "shadow_dim": 528
-    }
-  ],
-  "lean_source": "formal\\W33\\ShadowDichotomy.lean",
-  "lean_theorems": [
-    "layer_sum_eq_v",
-    "nondegenerate_iff"
-  ],
-  "reading": "the odd-q sandwich reduced to four integral closed forms and one mod-4 congruence; the Lean file proves the layer-sum identity and the nondegeneracy dichotomy for all odd q >= 3, extending the Sastry-Sin rank formalization from dimensions to module structure. Honest scope: Lean/Lake not run in this container; the source is emitted and its arithmetic is cross-verified in Python plus the q=3,5,7 geometric certs",
+  "lean_source": "formal/W33/ShadowDichotomy.lean",
+  "lean_source_written": false,
+  "lean_toolchain_run": false,
   "checks": {
     "layer_d_integral": true,
     "incidence_rank_integral": true,
-    "shadow_dim_integral": true,
     "layer_sum_is_v": true,
-    "dichotomy_is_q_mod4_3": true,
-    "q3_geo_nondegenerate": true,
-    "q5_geo_degenerate": true,
-    "q7_geo_nondegenerate": true,
-    "ladder_starts_e8": true,
-    "ladder_second_48": true,
-    "ladder_third_120": true,
-    "lean_source_written": true
+    "coefficient_parity_iff_mod4_3": true,
+    "anchor_dimensions": true
   }
 }

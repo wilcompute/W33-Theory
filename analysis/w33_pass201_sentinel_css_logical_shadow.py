@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 201: the sentinel CSS code and its protected logical shadow.
+r"""Pass 201: the sentinel CSS code and one logical-label shadow.
 
 Idea #3 of round 7: wire the protected register into an explicit QEC code.
 The sentinel trade code C = ker_F2(N) = [40,15,8] is doubly-even and
@@ -7,22 +7,23 @@ self-orthogonal (C subset C^perp), so it defines a CSS code
 
     [[40, dim C^perp - dim C, d]] = [[40, 25 - 15, d]] = [[40, 10, d]],
 
-and its 10 logical qubits are EXACTLY the SO(10)-shadow module
-H10 = C^perp / C (Pass 164).  This witness makes the identification exact:
+and one 10-dimensional logical label space is the SO(10)-shadow module
+H10 = C^perp / C (Pass 164).  This witness makes that label-space
+identification exact without conflating it with the full Pauli space:
 
 1. THE CSS CODE.  C doubly-even + self-orthogonal is verified; the CSS
    code [[40,10,d]] is built with X- and Z-checks both equal to C, and
    its distance d = min weight of C^perp \ C is computed exactly.
 
-2. LOGICALS = THE SO(10) SHADOW.  The 10 logical qubits are the cosets
-   C^perp/C; the logical symplectic form (commutator of logical X and Z)
-   is the polar form B(x,y) = |x cap y| mod 2 of the plus-type quadratic
-   shadow -- so the code's logical algebra IS the O+(10,2) geometry.
+2. ONE LABEL COPY = THE SO(10) SHADOW.  C^perp/C labels either the X or
+   the dual Z logicals.  Its plus-type polar form is O+(10,2) geometry,
+   but the full logical Pauli label space is H_X plus H_Z, dimension 20,
+   with its hyperbolic symplectic form.
 
-3. TRANSVERSAL GATES.  PGSp(4,3) permutes the 40 physical qubits fixing
-   C, hence acts on the 10 logicals through O+(10,2): the substrate
-   automorphism group is a group of transversal (permutation) logical
-   gates.  Its image order and the plus-type stabilizer are certified.
+3. CODE AUTOMORPHISMS.  PSp(4,3) permutes the 40 physical coordinates
+   fixing C and acts faithfully on H10 through O+(10,2), with image order
+   25920.  This alone does not identify a logical gate inventory.  The
+   corrected Clifford lift is diag(M,M^(-T)) in Sp(20,2) (Pass 211).
 """
 
 from __future__ import annotations
@@ -147,7 +148,7 @@ def main():
     checks["css_distance_4"] = lines_in_cperp and lines_not_in_C and small == 0
     css_distance = 4
 
-    # ---- logicals = SO(10) shadow ----
+    # ---- one logical-label copy = SO(10) shadow ----
     # coset coordinates: reduce C^perp mod C, keep 10 free pivots
     Cperp_mat = np.array(Cperp, dtype=np.uint8)
 
@@ -162,13 +163,13 @@ def main():
     quotient_basis = rref_f2([reduce_mod_C(Cperp_mat[i]) for i in range(25)])
     checks["logical_dim_10"] = len(quotient_basis) == 10
 
-    # logical symplectic form = |x cap y| mod 2 (the polar form)
+    # polar form on one label copy = |x cap y| mod 2
     H = np.array(quotient_basis, dtype=np.uint8)
     polar = np.zeros((10, 10), dtype=np.uint8)
     for i in range(10):
         for k in range(10):
             polar[i, k] = int((H[i] & H[k]).sum()) % 2
-    # nondegenerate polar form (symplectic on the logical qubits)
+    # nondegenerate polar form on H10; this is not the full Pauli form
     rank_polar = len(rref_f2([polar[i] for i in range(10)]))
     checks["logical_form_nondegenerate"] = rank_polar == 10
 
@@ -182,7 +183,7 @@ def main():
     isotropic = int((qvals == 0).sum())
     checks["logical_plus_type_528"] = isotropic == 528
 
-    # ---- transversal gates: PGSp(4,3) -> O+(10,2) ----
+    # ---- coordinate automorphisms: PSp(4,3) -> O+(10,2) ----
     generators, group = build_group(points, symplectic)
     checks["group_25920"] = len(group) == 25920
     two_gens = small_generating_set(group)
@@ -229,32 +230,35 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass201.sentinel_css_logical_shadow.v1",
+        "schema": "w33.pass201.sentinel_css_logical_shadow.v2",
         "status": "PASS" if all_pass else "FAIL",
         "css_code": {
             "parameters": f"[[40, 10, {css_distance}]]",
             "stabilizer_code": "C = sentinel [40,15,8], doubly even, self-orthogonal",
             "logical_qubits": 10,
+            "full_logical_pauli_dimension": 20,
             "distance": css_distance,
             "distance_witness": "the 40 lines are weight-4 logical operators",
         },
-        "logicals_are_so10_shadow": {
-            "logical_space": "C^perp / C = H10 (Pass 164)",
-            "logical_form": "polar form |x cap y| mod 2, nondegenerate",
-            "type": "plus (O+(10,2)), 528 isotropic logical operators",
+        "one_label_copy_is_so10_shadow": {
+            "label_space": "C^perp / C = H10 (Pass 164)",
+            "full_pauli_space": "H_X plus H_Z, dimension 20",
+            "label_form": "polar form |x cap y| mod 2, nondegenerate",
+            "type": "plus (O+(10,2)), 528 isotropic labels",
             "reading": (
-                "the sentinel CSS code's 10 logical qubits ARE the SO(10) "
-                "shadow; the logical Pauli algebra is the O+(10,2) geometry"
+                "H10 is one common X/Z label copy, not the whole logical "
+                "Pauli algebra; the latter is the 20-dimensional hyperbolic "
+                "space H_X plus H_Z"
             ),
         },
-        "transversal_gates": {
-            "group": "PGSp(4,3) -> O+(10,2)",
+        "coordinate_automorphisms": {
+            "group": "PSp(4,3) -> O+(10,2)",
             "image_order": 25920,
+            "corrected_clifford_lift": "diag(M,M^(-T)) in Sp(20,2) (Pass 211)",
             "reading": (
-                "the substrate automorphism group is a group of "
-                "transversal (qubit-permutation) logical gates acting "
-                "faithfully on the 10 logicals -- the protected register "
-                "carries a built-in fault-tolerant gate set"
+                "the substrate permutations are weight-preserving code "
+                "automorphisms acting faithfully on one label copy; this "
+                "certificate does not claim a built-in fault-tolerant gate set"
             ),
         },
         "checks": {name: bool(v) for name, v in checks.items() if isinstance(v, bool)},

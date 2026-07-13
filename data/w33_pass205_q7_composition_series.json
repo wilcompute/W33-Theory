@@ -1,36 +1,36 @@
 {
-  "schema": "w33.pass205.q7_composition_series.v1",
+  "schema": "w33.pass205.odd_q_composition_factors.gap.v2",
   "status": "PASS",
-  "shadow": {
-    "dimension": 48,
-    "composition_factors": [
-      3,
-      3,
-      3,
-      4,
-      4,
-      4,
-      6,
-      7,
-      7,
-      7
-    ],
-    "factor_multiplicities": {
-      "3": 3,
-      "4": 3,
-      "6": 1,
-      "7": 3
-    },
-    "number_of_factors": 10,
-    "endomorphism_dim": 50,
-    "contains_dim_8_factor": false
+  "owner": "GAP 4.12 MTX",
+  "q5": {
+    "shadow_dimension": 24,
+    "full_Sp4_order": 9360000,
+    "composition_factors_MTX": [24],
+    "irreducible": true
   },
-  "reading": "the q=7 shadow's composition factors: unlike the q=3 shadow (a single irreducible 8 = E8), the q=7 O+(48,2) module splits into factors [3, 3, 3, 4, 4, 4, 6, 7, 7, 7]. The E8 shadow is NOT a factor; the higher ladder rungs are built from the substrate's larger char-2 irreducibles, so E8's irreducibility at q=3 is special to the smallest field",
+  "q7": {
+    "shadow_dimension": 48,
+    "full_Sp4_order": 276595200,
+    "composition_factors_MTX": [24,24],
+    "irreducible": false,
+    "contains_dimension_8_factor": false
+  },
+  "corrected_ladder_reading": {
+    "q3": "irreducible dimension 8",
+    "q5": "irreducible dimension 24",
+    "q7": "composition factors 24+24",
+    "E8_unique_irreducible_rung": false,
+    "higher_rungs_always_reducible": false,
+    "scope": "only q=3,5,7 are certified; no extrapolation beyond them"
+  },
+  "correction": {
+    "coordinate_basis_spin_search_removed": true,
+    "full_five_transvection_groups_used": true,
+    "MTX_composition_factors_used": true
+  },
   "checks": {
-    "shadow_dim_48": true,
-    "action_wellformed": true,
-    "factors_sum_to_48": true,
-    "endomorphism_recorded": true,
-    "composition_series_computed": true
+    "q5_factor_24": true,
+    "q7_factors_24_24": true,
+    "no_q7_dimension_8_factor": true
   }
 }

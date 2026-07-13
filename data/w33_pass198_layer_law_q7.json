@@ -1,85 +1,42 @@
 {
-  "schema": "w33.pass198.layer_law_q7.v1",
+  "schema": "w33.pass198.layer_law_q7.gap.v2",
   "status": "PASS",
+  "owner": "GAP 4.12+",
   "q7": {
     "points": 400,
-    "dims": {
-      "C": 175,
-      "imA2": 176,
-      "kerA2": 224,
-      "Cperp": 225
-    },
-    "layers": [
-      1,
-      174,
-      1,
-      48,
-      1,
-      174,
-      1
-    ],
+    "dims": {"C": 175, "imA2": 176, "kerA2": 224, "Cperp": 225},
+    "ranks_C_imA_kerA_Cperp": [175,176,224,225],
+    "rank_increment_mnemonic": [1,174,1,48,1,174,1],
+    "dim_C_intersection_imA": 175,
+    "nested_incidence_sandwich": true,
     "shadow_dimension": 48,
+    "quadratic_refinement": "x^T A x/4 mod 2",
+    "polar_form": "x^T A y/2 mod 2",
+    "polar_rank": 48,
     "polar_radical_dim": 0,
-    "arf_if_nondegenerate": 0
+    "radical_dimension": 0,
+    "arf": 0,
+    "witt_index": 24
   },
-  "closed_form_packet": {
-    "layers": "(1, d(q), 1, q^2-1, 1, d(q), 1)",
-    "d": "d(q) = (q-1)(q^2+q+2)/2",
-    "anchors": {
-      "3": [
-        1,
-        14,
-        1,
-        8,
-        1,
-        14,
-        1
-      ],
-      "5": [
-        1,
-        64,
-        1,
-        24,
-        1,
-        64,
-        1
-      ],
-      "7": [
-        1,
-        174,
-        1,
-        48,
-        1,
-        174,
-        1
-      ]
-    },
-    "pairing_dichotomy": "A^2/2 = ((q^2-1)/2)I - A + ((q+1)/2)J: the divided pairing is A-reproducing mod 2 iff (q^2-1)/2 and (q+1)/2 are both even, i.e. q = 3 mod 8",
-    "pairing_survivors": {
-      "3": true,
-      "5": false,
-      "7": true,
-      "11": true,
-      "13": false,
-      "19": true
-    },
-    "prediction": "the next nondegenerate quadratic shadow after E8 (q=3, dim 8) is at q = 11, dimension 120"
+  "coefficient_parity_law": {
+    "identity": "A^2/2=((q^2-1)/2)I-A+((q+1)/2)J",
+    "nondegenerate_residue_class": "q congruent 3 mod 4",
+    "q3": true,
+    "q5": false,
+    "q7": true,
+    "q11_coefficient_prediction_only": true,
+    "q13_coefficient_prediction_only": false,
+    "q19_coefficient_prediction_only": true
   },
-  "lean_handoff": "three exact anchors for the layer formulas and the mod-8 pairing dichotomy, extending the odd-q rank formalization from dimensions to module structure",
+  "correction": {
+    "old_q3_mod8_wording_refuted": true,
+    "right_kernel_point_code_verified": true,
+    "computed_matrix_anchors": [3,5,7]
+  },
   "checks": {
-    "q7_points_400": true,
-    "q7_A2_differential": true,
-    "q7_rank_theorem": true,
-    "q7_gram_rank_theorem": true,
-    "q7_chain_holds": true,
-    "q7_layers_1_174_1_48_1_174_1": true,
-    "q7_middle_dim": 48,
-    "q7_polar_radical_dim": 0,
-    "q7_q_vanishes_on_radical": true,
-    "q7_hyperbolic_pairs": true,
-    "q7_shadow_dim_48": true,
-    "dichotomy_matches_q3": true,
-    "dichotomy_matches_q5": true,
-    "dichotomy_matches_q7_prediction": true
+    "q7_A2_square_zero": true,
+    "q7_exact_polar_identity": true,
+    "q7_form_descends": true,
+    "q7_plus_type": true
   }
 }

@@ -1,46 +1,35 @@
 {
-  "schema": "w33.pass199.q7_shadow_identity.v1",
+  "schema": "w33.pass199.q7_shadow_identity.gap.v2",
   "status": "PASS",
+  "owner": "GAP 4.12 MTX",
+  "group": {
+    "name": "Sp(4,7)",
+    "standard_transvection_generators": 5,
+    "matrix_group_order": 276595200,
+    "projective_point_group_order": 138297600,
+    "shadow_image_order": 138297600,
+    "shadow_action_projectively_faithful": true
+  },
   "shadow": {
     "dimension": 48,
+    "quadratic_refinement": "x^T A x/4 mod 2",
     "type": "plus",
     "arf": 0,
     "witt_index": 24,
     "isotropic_vectors": 140737496743936,
-    "isotropic_formula": "2^47 + 2^23",
-    "f2_irreducible_under_substrate": false,
-    "cyclic_submodule_dims": {
-      "27": 1,
-      "28": 1,
-      "31": 5,
-      "34": 5,
-      "35": 2,
-      "38": 4,
-      "42": 30
-    }
+    "isotropic_formula": "2^47+2^23",
+    "composition_factors_MTX": [24,24],
+    "irreducible": false
   },
-  "comparison": {
-    "q3_E8": {
-      "dim": 8,
-      "type": "plus",
-      "witt_index": 4
-    },
-    "q7": {
-      "dim": 48,
-      "type": "plus",
-      "witt_index": 24
-    },
-    "reading": "the second rung of the odd-q ladder is a plus-type O+(48,2) shadow of Witt index 24 preserved by the substrate collineation group -- but F2-REDUCIBLE (unlike the irreducible E8 shadow at q=3), so the ladder's higher rungs decompose into smaller substrate constituents; the cyclic-submodule profile records the split"
+  "correction": {
+    "old_two_generator_SL2_subgroup_refuted": true,
+    "old_small_cyclic_submodule_profile_removed": true,
+    "actual_factor_statement": "24+24 under the full projective Sp(4,7) action"
   },
   "checks": {
-    "q7_400_points": true,
-    "gens_are_collineations": true,
-    "shadow_dim_48": true,
-    "polar_nondegenerate": true,
-    "symplectic_pairs_24": true,
-    "plus_type": true,
-    "action_preserves_shadow": true,
-    "irreducibility_decided": true,
-    "submodule_profile_recorded": true
+    "five_transvections_generate_full_Sp4_7": true,
+    "action_preserves_polar_form": true,
+    "action_preserves_quadratic_refinement": true,
+    "MTX_factors_24_24": true
   }
 }

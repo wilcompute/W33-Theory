@@ -2531,6 +2531,71 @@
               trades as <code>S4</code> on tetrahedral edges. Complement-pairing gives the three axes and the
               quotient <code>S4&rarr;S3</code>; the six signed states are not a regular S3 frame.</div>
           </div>
+          <div class="card" id="odd-q-shadow-gap-correction">
+            <div class="label">Passes 194/198/199/200/205 &mdash; GAP Odd-q Shadow Correction</div>
+            <div class="detail">The point-side sandwich survives, but its quadratic refinement is
+              <code>Q(x)=x<sup>T</sup>Ax/4 mod 2</code>, with polar form
+              <code>B(x,y)=x<sup>T</sup>Ay/2 mod 2</code>; the former <code>/2</code> quadratic expression was
+              not a refinement. Full five-transvection groups and GAP MTX give the certified anchor table
+              <code>q=3:[8]</code> (plus, irreducible), <code>q=5:[24]</code> (zero form, irreducible), and
+              <code>q=7:[24,24]</code> (plus). Thus the old q=5 <code>{14,20}</code> profile, the q=7 small-factor
+              multiset, and &ldquo;E8 is the unique irreducible rung&rdquo; are withdrawn. Only q=3,5,7 are
+              module-certified; higher residue classes remain coefficient-law predictions.
+              <a href="../analysis/w33_odd_q_shadow_correction_capstone.g">Run the GAP correction capstone</a>.
+            </div>
+          </div>
+          <div class="card" id="pass209-210-silent-spread-route-atlas">
+            <div class="label">Passes 209&ndash;210 &mdash; Canonical Silent Spreads and the S6 Route Atlas</div>
+            <div class="detail">For every route-shell double-six <code>D</code>, the ten W33 lines on which all
+              twelve shell vectors vanish form a spread <code>&Sigma;(D)</code>. These are exactly all
+              <code>36</code> W33 spreads, giving the previously missing canonical, PSp(4,3)-equivariant
+              double-six/spread bijection. The crown&rsquo;s six crossing pairs are the natural S6 six-set, and
+              its ten unordered <code>3+3</code> bisections identify equivariantly with the ten lines of
+              <code>&Sigma;(D)</code>. Duads and synthemes of that six-set derive the doily
+              <code>GQ(2,2)</code>; the doily is a functorial route atlas, not a 15-point subgeometry of the
+              twelve crown vertices. Line/double-six pairs split into a silent <code>360</code> and active
+              <code>1080</code>; on the active stratum the common stabilizer is
+              <code>S4&rarr;S3</code> with kernel <code>V4</code>.
+              <a href="../analysis/w33_pass209_silent_spread_two_clock.g">Run the Pass 209 GAP witness</a> and
+              <a href="../analysis/w33_pass210_s6_route_atlas.g">the Pass 210 GAP atlas</a>.
+            </div>
+          </div>
+          <div class="card" id="pass211-212-pgsp-canonical-path-carrier">
+            <div class="label">Passes 211&ndash;212 &mdash; The Exact PGSp Controller and Canonical 4320 Carrier</div>
+            <div class="detail">PGSp(4,3), of order <code>51840</code>, is transitive on the
+              <code>4320</code> ordered nonlocal paths. A path stabilizer is
+              <code>S3&times;C2</code> of order <code>12</code>, its three-completion action is full S3 with
+              central kernel C2, and fixing one completion leaves V4:
+              <code>51840=4320&middot;12=4320&middot;3&middot;4</code>. For the sentinel
+              <code>[[40,10,4]]</code> CSS code, <code>H=C<sup>&perp;</sup>/C</code> is only the common
+              ten-dimensional X/Z label space; the full logical Pauli space has dimension <code>20</code>, and
+              a coordinate permutation acts as <code>diag(M,M<sup>-T</sup>)</code> in
+              <code>Sp(20,2)</code>&mdash;correcting the former Sp(10,2) reading.
+              <a href="../analysis/w33_pass211_pgsp_controller_clifford.g">Run the Pass 211 GAP certificate</a>.
+              Pass 212 then constructs the canonical PSp(4,3)-equivariant bijection
+              <code>(&Sigma;,L,p)&harr;(L,M,N)</code>, with
+              <code>L&notin;&Sigma;</code> and <code>p&isin;L</code>:
+              <code>36&middot;30&middot;4=1080&middot;4=4320</code>. Adding the three completions gives the exact flag tower
+              <code>1080&middot;4&middot;3=12960</code>. The tempting last identification is false: on the four points
+              of a chosen completion line, V4 has only a C2 image and orbit sizes
+              <code>1+1+2</code>, so those points are not the controller&rsquo;s four semantic probe slots.
+              <a href="../analysis/w33_pass212_4320_carrier_equivariant_bijection.g">Run the Pass 212 GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass213-w33-foundation-group-audit">
+            <div class="label">Pass 213 &mdash; W(3,3) Foundation and Group-Ledger Correction</div>
+            <div class="detail">GAP rebuilds the <code>40</code> projective points, <code>40</code> totally isotropic
+              lines, and <code>240</code> edges, proving that every edge spans one unique isotropic line and recovering
+              <code>SRG(40,12,2,4)</code>. It separates the group ledger:
+              <code>PSp(4,3)=U4(2)</code> has order <code>25920</code> and is already edge-transitive;
+              <code>PGSp(4,3)=U4(2):2 &cong; W(E6)</code> has order <code>51840</code>; the same-order matrix group
+              <code>Sp(4,3)=2.U4(2)</code> has center C2 and is not the projective extension. CTblLib also verifies
+              four order-3 classes, <code>800</code> elements total, and Steinberg trace zero on all four, giving
+              complex phase multiplicities <code>27+27+27</code>&mdash;not a cyclic permutation of three integral
+              summands. The symplectic construction identifies W(3,3); its SRG parameters alone do not.
+              <a href="../analysis/w33_pass213_foundation_group_audit.g">Run the GAP Pass 213 audit</a>.
+            </div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching
@@ -2581,8 +2646,8 @@
               <code>270</code> pairs and <code>1</code> line for <code>360</code> pairs; E6 double-six overlaps
               are <code>4</code> weights for <code>270</code> pairs and <code>6</code> weights for
               <code>360</code> pairs. The overlap-4 graph is <code>srg(36,15,6,6)</code> on both sides, and the
-              complementary class is <code>srg(36,20,10,12)</code>. This proves a scheme-level bridge while
-              leaving the canonical spread-to-double-six labeling as the next target.
+              complementary class is <code>srg(36,20,10,12)</code>. This proved the scheme-level bridge; the
+              intrinsic labeling still open at this stage is closed above by Pass 209&rsquo;s silent-spread map.
             </div>
           </div>
           <div class="card">
@@ -2592,7 +2657,8 @@
               <code>36</code>-label bijection that preserves both overlap classes:
               <code>4&rarr;4</code> and <code>1&rarr;6</code>. The same mapping works for all eight E6 matter
               charts with zero relation failures. This proves existence of a spread-to-double-six scheme
-              isomorphism while still leaving uniqueness and intrinsic canonicity open.
+              isomorphism; Pass 209 later replaces this anchored witness by the canonical equivariant map
+              <code>D&rarr;&Sigma;(D)</code>.
             </div>
           </div>
           <div class="card">
@@ -2602,8 +2668,8 @@
               order <code>1440</code>, so
               <code>|Aut|=36&times;1440=51840=2<sup>7</sup>&times;3<sup>4</sup>&times;5</code>.
               By the explicit spread/double-six isomorphism, the E6 double-six scheme carries the same automorphism
-              order. The group order is solved at scheme level; intrinsic canonical labeling remains the sharper
-              open problem.
+              order. The group order was solved here at scheme level; Pass 209 later solves the intrinsic
+              canonical-labeling problem for the route-shell double-sixes.
             </div>
           </div>
           <div class="card">
@@ -13893,15 +13959,17 @@
           </div>
           <div class="card">
             <div class="num">51,840</div>
-            <div class="label">|Aut| = |W(E₆)|</div>
-            <div class="detail">The automorphism group Sp(4,3) has order 51,840, isomorphic to the Weyl group of E₆.
+            <div class="label">Aut(W33) &cong; W(E₆)</div>
+            <div class="detail">The full projective group PGSp(4,3) &cong; Aut(PSp(4,3)) has order 51,840 and is
+              isomorphic to W(E₆). The same-order matrix group Sp(4,3)=2.U4(2) is a different central cover.
             </div>
           </div>
           <div class="card">
             <div class="num">81</div>
             <div class="label">H₁ = ℤ⁸¹ = 27+27+27</div>
-            <div class="detail">First homology splits as three copies of 27 — three chiral generations, topologically
-              protected.</div>
+            <div class="detail">For every order-3 element, H₁&otimes;C has phase eigenspaces
+              27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub>. This exact character statement does not by
+              itself identify three physical generations.</div>
           </div>
           <div class="card">
             <div class="num">3/13</div>
@@ -13949,8 +14017,8 @@
           </tr>
           <tr>
             <td>Automorphism group</td>
-            <td><strong>Sp(4,3) ≅ W(E₆)</strong></td>
-            <td>Weyl group of E₆, order 51,840</td>
+            <td><strong>PGSp(4,3) &cong; Aut(PSp(4,3)) &cong; W(E₆)</strong></td>
+            <td>Order 51,840; PSp(4,3) is the normal simple subgroup of order 25,920</td>
           </tr>
           <tr>
             <td>First homology H₁(W33; ℤ)</td>
@@ -13969,8 +14037,8 @@
           </tr>
           <tr>
             <td>Order-3 eigenspace split</td>
-            <td><strong>81 = 27+27+27</strong> (all 800 elements)</td>
-            <td>Three fermion generations</td>
+            <td><strong>H₁&otimes;C = 27<sub>1</sub>+27<sub>&omega;</sub>+27<sub>&omega;&sup2;</sub></strong> (all 800 elements)</td>
+            <td>Exact phase multiplicities; a generation interpretation needs an additional bridge</td>
           </tr>
           <tr>
             <td>E₆ Hessian tritangents</td>
@@ -14076,15 +14144,23 @@
         </div>
 
         <h3>Step 1 — The Geometry</h3>
-        <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is the unique
-          strongly regular graph <strong>SRG(40, 12, 2, 4)</strong> with eigenvalues 12, 2, −4.
-          It has 40 vertices (isotropic 1-spaces in GF(3)⁴), 240 edges (pairs spanning hyperbolic planes),
-          diameter 2, and is Ramanujan.</p>
+        <p>W(3,3) is the symplectic polar space W(3, 𝔽₃). Its collinearity graph is a distinguished
+          <strong>SRG(40, 12, 2, 4)</strong> with eigenvalues 12, 2, −4. It has 40 vertices (the projective
+          1-spaces in GF(3)⁴; every 1-space is isotropic for an alternating form) and 240 edges. Each edge is a pair
+          of orthogonal points spanning a unique <em>totally isotropic projective line</em>. A nonedge, not an edge,
+          spans an ordinary hyperbolic projective line. The graph has diameter 2 and is Ramanujan.</p>
 
         <div class="math-block">
           <span class="eq">v ~ w</span> ⟺ <span class="eq">v<sup>T</sup> J w ≡ 0 (mod 3)</span><br>
           where J is the standard symplectic form on GF(3)⁴
         </div>
+        <p>The parameter tuple does not identify W(3,3): Spence classified exactly
+          <a href="https://doi.org/10.37236/1500">28 nonisomorphic SRG(40,12,2,4) graphs</a>. The object here is fixed
+          by the displayed symplectic construction. Its full geometry/graph automorphism group is
+          <code>Aut(PSp(4,3)) &cong; PGSp(4,3) &cong; W(E6)</code>, order <code>51840</code>, with normal inner group
+          <code>PSp(4,3)</code> of order <code>25920</code>. The same-order matrix group
+          <code>Sp(4,3)=2.U4(2)</code> has center <code>C2</code> and is not that faithful projective extension
+          (<a href="https://cage.ugent.be/~hvm/artikels/246.pdf">finite-geometry reference</a>; GAP Pass 213).</p>
 
         <h3>Step 2 — Homology Reveals Matter</h3>
         <p>The simplicial chain complex of the collinearity graph yields:</p>
@@ -14134,10 +14210,13 @@
         </p>
 
         <h3>Step 4 — Three Generations</h3>
-        <p>Every order-3 element of PSp(4,3) decomposes H₁ = ℤ⁸¹ as <strong>27 ⊕ 27 ⊕ 27</strong>.
-          There are 800 such elements; <em>all</em> give this decomposition. The three 27-dimensional
-          subspaces are cyclically permuted by a ℤ₃ automorphism, making the generation symmetry
-          <strong>topologically protected</strong>.
+        <p>There are four order-3 conjugacy classes in <code>PSp(4,3)</code>, totalling <code>800</code> elements.
+          The 81-dimensional homology character is zero on all four, so over the complex numbers every such element
+          has exact phase multiplicities
+          <strong>H₁&otimes;C = 27<sub>1</sub> &oplus; 27<sub>&omega;</sub> &oplus; 27<sub>&omega;&sup2;</sub></strong>.
+          The element acts by the three phases; it does not cyclically permute these eigenspaces, and no canonical
+          three-summand decomposition over ℤ follows. Connecting the exact <code>27+27+27</code> character fact to
+          physical generations therefore remains a bridge claim, not a consequence of the split alone (GAP Pass 213).
         </p>
 
         <h3>Step 5 — Electroweak Shells</h3>
@@ -14154,7 +14233,7 @@
         <h3>Step 6 — Edge–Root Correspondence</h3>
         <p>The 240 edges decompose as <strong>240 = 40 × 3 × 2</strong> (lines × matchings × edges/matching).
           Under E₈ → E₆ × SU(3), this matches the branching <strong>240 = 3 × (24 + 2 + 27 + 27)</strong>.
-          The automorphism group Sp(4,3) acts <strong>edge-transitively</strong> (single orbit on all 240 edges),
+          The inner projective group PSp(4,3) already acts <strong>edge-transitively</strong> (single orbit on all 240 edges),
           but no equivariant bijection to E₈ roots exists — the connection is representation-theoretic, not
           lattice-geometric.</p>
         <p>An <strong>E₈ Dynkin subgraph</strong> is found directly in the W(3,3) adjacency graph at vertices
@@ -14279,8 +14358,8 @@
           </tr>
           <tr>
             <td>5</td>
-            <td>Aut(GQ(q,q)) ≅ W(E₆)</td>
-            <td>Classical: only q = 3</td>
+            <td>|PGSp(4,q)| = |W(E₆)| for the classical symplectic quadrangle</td>
+            <td>The order equality selects q = 3; at q=3 the projective extension is W(E₆)</td>
           </tr>
         </table>
         <p><strong>Euler-characteristic shell split:</strong> <code>40 − 240 + 160 = -40 = -v</code> is the exact

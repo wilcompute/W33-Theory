@@ -1,23 +1,26 @@
 {
-  "schema": "w33.pass201.sentinel_css_logical_shadow.v1",
+  "schema": "w33.pass201.sentinel_css_logical_shadow.v2",
   "status": "PASS",
   "css_code": {
     "parameters": "[[40, 10, 4]]",
     "stabilizer_code": "C = sentinel [40,15,8], doubly even, self-orthogonal",
     "logical_qubits": 10,
+    "full_logical_pauli_dimension": 20,
     "distance": 4,
     "distance_witness": "the 40 lines are weight-4 logical operators"
   },
-  "logicals_are_so10_shadow": {
-    "logical_space": "C^perp / C = H10 (Pass 164)",
-    "logical_form": "polar form |x cap y| mod 2, nondegenerate",
-    "type": "plus (O+(10,2)), 528 isotropic logical operators",
-    "reading": "the sentinel CSS code's 10 logical qubits ARE the SO(10) shadow; the logical Pauli algebra is the O+(10,2) geometry"
+  "one_label_copy_is_so10_shadow": {
+    "label_space": "C^perp / C = H10 (Pass 164)",
+    "full_pauli_space": "H_X plus H_Z, dimension 20",
+    "label_form": "polar form |x cap y| mod 2, nondegenerate",
+    "type": "plus (O+(10,2)), 528 isotropic labels",
+    "reading": "H10 is one common X/Z label copy, not the whole logical Pauli algebra; the latter is the 20-dimensional hyperbolic space H_X plus H_Z"
   },
-  "transversal_gates": {
-    "group": "PGSp(4,3) -> O+(10,2)",
+  "coordinate_automorphisms": {
+    "group": "PSp(4,3) -> O+(10,2)",
     "image_order": 25920,
-    "reading": "the substrate automorphism group is a group of transversal (qubit-permutation) logical gates acting faithfully on the 10 logicals -- the protected register carries a built-in fault-tolerant gate set"
+    "corrected_clifford_lift": "diag(M,M^(-T)) in Sp(20,2) (Pass 211)",
+    "reading": "the substrate permutations are weight-preserving code automorphisms acting faithfully on one label copy; this certificate does not claim a built-in fault-tolerant gate set"
   },
   "checks": {
     "sentinel_dim_15": true,

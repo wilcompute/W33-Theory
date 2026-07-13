@@ -1,78 +1,45 @@
 {
-  "schema": "w33.pass194.odd_q_shadow_ladder.v1",
+  "schema": "w33.pass194.odd_q_shadow_ladder.gap.v2",
   "status": "PASS",
+  "owner": "GAP 4.12+",
+  "quadratic_refinement": "q(x)=x^T A x/4 mod 2",
+  "polar_form": "B(x,y)=x^T A y/2 mod 2",
   "ladder": {
-    "3": {
-      "points": 40,
-      "dims": {
-        "C": 15,
-        "imA2": 16,
-        "kerA2": 24,
-        "Cperp": 25
-      },
-      "layers": [
-        1,
-        14,
-        1,
-        8,
-        1,
-        14,
-        1
-      ],
-      "shadow_dimension": 8,
-      "polar_radical_dim": 0,
-      "nondegenerate_rank": 8,
-      "arf_invariant": 0,
-      "type": "plus (O+)"
-    },
-    "5": {
-      "points": 156,
-      "dims": {
-        "C": 65,
-        "imA2": 66,
-        "kerA2": 90,
-        "Cperp": 91
-      },
-      "layers": [
-        1,
-        64,
-        1,
-        24,
-        1,
-        64,
-        1
-      ],
-      "shadow_dimension": 24,
-      "polar_radical_dim": 24,
-      "nondegenerate_rank": 0,
-      "arf_invariant": 0,
-      "type": "plus (O+)"
-    }
+    "3": {"dims": {"C": 15, "imA2": 16, "kerA2": 24, "Cperp": 25}, "polar_radical_dim": 0, "arf_invariant": 0},
+    "5": {"dims": {"C": 65, "imA2": 66, "kerA2": 90, "Cperp": 91}, "polar_radical_dim": 24, "arf_invariant": 0}
   },
-  "laws": {
-    "differential": "A^2 = 0 mod 2 for every odd q",
-    "code_layer": "d(q) = (q-1)(q^2+q+2)/2  [14, 64, 174, ...]",
-    "shadow_dimension": "m(q) = q^2 - 1  [8, 24, 48, ...]"
+  "q3": {
+    "points": 40,
+    "ranks_C_imA_kerA_Cperp": [15,16,24,25],
+    "rank_increment_mnemonic": [1,14,1,8,1,14,1],
+    "dim_C_intersection_imA": 15,
+    "nested_incidence_sandwich": true,
+    "shadow_dimension": 8,
+    "polar_rank": 8,
+    "radical_dimension": 0,
+    "arf": 0
   },
-  "reading": "the E8 shadow is the first rung of an odd-q ladder: at q=5 the sandwich reappears with layers 1,64,1,24,1,64,1 and a canonical 24-dimensional quadratic shadow whose type is decided by its Arf invariant -- the natural comparison object at dimension 24 being the Leech lattice mod 2",
+  "q5": {
+    "points": 156,
+    "ranks_C_imA_kerA_Cperp": [65,66,90,91],
+    "rank_increment_mnemonic": [1,64,1,24,1,64,1],
+    "dim_C_intersection_imA": 65,
+    "nested_incidence_sandwich": true,
+    "shadow_dimension": 24,
+    "polar_rank": 0,
+    "radical_dimension": 24,
+    "q_vanishes_on_radical": true
+  },
+  "correction": {
+    "old_half_quadratic_refinement_refuted": true,
+    "surviving_homology": "im(A) subset ker(A); shadow = ker(A)/im(A)",
+    "nullspace_convention": "point code uses right kernel ker(N), represented in GAP by NullspaceMat(TransposedMat(N))"
+  },
   "checks": {
-    "odd_q_differential_law": true,
-    "q3_A2_differential": true,
-    "q3_chain_holds": true,
-    "q3_layer_formulas": true,
-    "q3_middle_dim": 8,
-    "q3_polar_radical_dim": 0,
-    "q3_q_vanishes_on_radical": true,
-    "q3_hyperbolic_pairs": true,
-    "q3_shadow_dim_q2_minus_1": true,
-    "q5_A2_differential": true,
-    "q5_chain_holds": true,
-    "q5_layer_formulas": true,
-    "q5_middle_dim": 24,
-    "q5_polar_radical_dim": 24,
-    "q5_q_vanishes_on_radical": true,
-    "q5_hyperbolic_pairs": true,
-    "q5_shadow_dim_q2_minus_1": true,
-    "q3_reproduces_e8_plus": true
+    "A2_square_zero_both_q": true,
+    "exact_polar_identity_both_q": true,
+    "quadratic_form_descends_both_q": true,
+    "q3_plus_type": true,
+    "q5_polar_radical_24": true
   }
 }
