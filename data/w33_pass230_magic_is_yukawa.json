@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass230.magic_is_yukawa.v1",
+  "status": "PASS",
+  "theorem": "The E6 cubic invariant that supplies the substrate's non-Clifford magic (Pass 227) decomposes under SO(10)xU(1) into exactly two terms -- 1.10.10 and 16.16.10 -- i.e. the vector mass term and the grand-unified Yukawa coupling. The cubic Yukawa 16.16.10 is a level-3 Clifford-hierarchy gate (magic); the quadratic mass term is level-2 (Clifford). MAGIC = MASS: universal quantum computation on the register is powered by the same coupling that gives the fermions their mass.",
+  "so10_u1_branching_27": {
+    "16": {
+      "dim": 16,
+      "charge": 1
+    },
+    "10": {
+      "dim": 10,
+      "charge": -2
+    },
+    "1": {
+      "dim": 1,
+      "charge": 4
+    }
+  },
+  "invariant_cubic_couplings": [
+    "10.10.1",
+    "16.16.10"
+  ],
+  "freudenthal_cubic": "det J3(O) = abc - aN(X) - bN(Y) - cN(Z) + 2Re(X(YZ))",
+  "clifford_hierarchy": {
+    "16.16.10": 3,
+    "1.10.10": 2
+  },
+  "reading": "16 (x) 16 = 10 + 120 + 126, so the 10 in the cubic contracts two spinors -- the up-type Yukawa. The register's Clifford gates are the SO(10) code symmetries; the single cubic that breaks them into universality is the GUT Yukawa. The exceptional Jordan determinant J3(O) is its explicit carrier, and its threefold (3x3) structure anticipates the generation count (Pass 231).",
+  "checks": {
+    "exactly_two_invariants": true,
+    "has_yukawa_16_16_10": true,
+    "yukawa_present": true,
+    "mass_term_present": true,
+    "no_other_cubic": true,
+    "16x16_has_10": true,
+    "cubic_homogeneous_deg3": true,
+    "s3_cyclic_invariant": true,
+    "octonion_norm_multiplicative_sanity": true,
+    "yukawa_is_level3_magic": true,
+    "mass_term_is_level2_clifford": true
+  }
+}

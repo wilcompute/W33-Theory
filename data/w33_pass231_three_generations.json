@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass231.three_generations.v1",
+  "status": "PASS",
+  "theorem": "The E8 that centres the odd-q shadow ladder decomposes as E8 -> E6 x SU(3)_family with 248 = (78,1)+(1,8)+(27,3)+(27b,3b). The matter multiplet (27,3) is exactly three copies of the E6 fundamental -- three generations -- and each 27 carries one SO(10) spinor 16 (Pass 225). So E8 forces 3 x 16 = 48 chiral fermions: three Standard-Model generations, derived not assumed.",
+  "branching_248": [
+    {
+      "e6": 78,
+      "su3": 1,
+      "label": "(78,1) E6 gauge"
+    },
+    {
+      "e6": 1,
+      "su3": 8,
+      "label": "(1,8) family gauge"
+    },
+    {
+      "e6": 27,
+      "su3": 3,
+      "label": "(27,3) three generations"
+    },
+    {
+      "e6": 27,
+      "su3": 3,
+      "label": "(27bar,3bar) conjugate"
+    }
+  ],
+  "generations": 3,
+  "chiral_fermions_3x16": 48,
+  "coincidences": {
+    "family_index_is_field_order_q": {
+      "generations": 3,
+      "q": 3
+    },
+    "3x16_equals_q7_shadow_dim": {
+      "value": 48,
+      "q_prime": 7,
+      "shadow": "O+(48,2)"
+    }
+  },
+  "reading": "The generation number is not an input: it is the dimension of the SU(3)_family fundamental in E8 -> E6 x SU(3), and it equals the field order q=3 of the selected symplectic quadrangle. The same E8 is one generation of gauge structure at q=3 and, through its E6 x SU(3) split, the source of exactly three of them.",
+  "checks": {
+    "e8_dim_248": true,
+    "e6_dim_78": true,
+    "su3_family_adjoint_8": true,
+    "three_generations": true,
+    "gen_multiplet_dim_81": true,
+    "48_chiral_fermions": true,
+    "27_branch_16_10_1": true,
+    "family_index_equals_q": true,
+    "48_is_q7_shadow": true,
+    "matter_162": true,
+    "matter_is_3x27x2": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "w33.pass233.lattice_theta.v1",
+  "status": "PASS",
+  "lattice": {
+    "name": "L = (1/sqrt2) Construction-A(sentinel [40,15,8])",
+    "dimension": 40,
+    "even": true,
+    "det": "2^10",
+    "min_norm_rescaled": 2,
+    "roots_A1_40": 80,
+    "modular_weight": 20,
+    "level": "Gamma_0(4)"
+  },
+  "theta_unscaled_norms": {
+    "0": 1,
+    "4": 80,
+    "8": 14640,
+    "12": 3765440,
+    "16": 643725360
+  },
+  "theta_even_lattice_norms": {
+    "0": 1,
+    "2": 80,
+    "4": 14640,
+    "6": 3765440,
+    "8": 643725360
+  },
+  "reading": "The doubly-even sentinel lifts to a rank-40 even lattice with 80 roots (A_1^40), det 2^10, whose theta is a weight-20 modular form for Gamma_0(4). The 80 minimal vectors are exactly the '80' in the Pass 168 context theta, so the code, its dual, the lattice and the modular form are one object. The two logicals above the E8 layer (k=q^2+1 vs q^2-1) are the lattice's non-root glue directions.",
+  "checks": {
+    "theta0_is_1": true,
+    "nonneg_integers": true,
+    "norms_div4_only": true,
+    "roots_80_at_norm4": true,
+    "roots_eq_2n": true,
+    "det_2_pow_10": true,
+    "modular_weight_20": true,
+    "recovers_pass168_80": true
+  }
+}

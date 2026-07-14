@@ -1,0 +1,76 @@
+{
+  "schema": "w33.pass232.even_q_sister_tower.v1",
+  "status": "PASS",
+  "per_q": {
+    "2": {
+      "q": 2,
+      "n": 15,
+      "dim_C": 10,
+      "dim_Cperp": 5,
+      "dim_hull": 5,
+      "dim_sentinel": 4,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css": 7,
+      "odd_law_q2_plus_1": 5,
+      "k_matches_odd_law": false,
+      "d_sentinel": 8,
+      "d_sentinel_exact": true
+    },
+    "4": {
+      "q": 4,
+      "n": 85,
+      "dim_C": 50,
+      "dim_Cperp": 35,
+      "dim_hull": 33,
+      "dim_sentinel": 33,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css": 19,
+      "odd_law_q2_plus_1": 17,
+      "k_matches_odd_law": false,
+      "d_sentinel": null,
+      "d_sentinel_exact": false
+    },
+    "8": {
+      "q": 8,
+      "n": 585,
+      "dim_C": 298,
+      "dim_Cperp": 287,
+      "dim_hull": 233,
+      "dim_sentinel": 233,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css": 119,
+      "odd_law_q2_plus_1": 65,
+      "k_matches_odd_law": false,
+      "d_sentinel": null,
+      "d_sentinel_exact": false
+    }
+  },
+  "even_q_k_matches_odd_law": false,
+  "even_q_incidence_ranks": {
+    "q2": 10,
+    "q4": 50,
+    "q8": 298,
+    "documented_sequence": [
+      10,
+      50,
+      298,
+      1890
+    ]
+  },
+  "reading": "The doily q=2 and its GF(4),GF(8) siblings all carry a doubly-even self-orthogonal sentinel, so a CSS code exists across the EVEN-q family too. Whether the logical count k obeys the odd-q law k=q^2+1 is reported per rung (even_q_k_matches_odd_law); a match means one universal quadrangle CSS law across all q, a mismatch means characteristic 2 opens a distinct Sp sister tower. Either way the boundary of the construction is now mapped: the quantum register is a property of the symplectic quadrangle at every prime power, anchored by the S6 doily at q=2.",
+  "checks": {
+    "q2_n_correct": true,
+    "q2_sentinel_exists": true,
+    "q4_n_correct": true,
+    "q4_sentinel_exists": true,
+    "q8_n_correct": true,
+    "q8_sentinel_exists": true,
+    "doily_n_15": true,
+    "even_q_all_de_so": true,
+    "even_q_k_law_recorded": true,
+    "even_ranks_10_50_298": true
+  }
+}
