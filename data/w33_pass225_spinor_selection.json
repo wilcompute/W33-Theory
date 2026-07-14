@@ -1,0 +1,62 @@
+{
+  "schema": "w33.pass225.spinor_selection.v1",
+  "status": "PASS",
+  "theorem": "Among the symplectic quadrangles W(3,q), the shadow group SO(q^2+1,2) has a complex (chiral) half-spinor of dimension 2^{(q^2-1)/2} at every odd q, but that spinor equals a single Standard-Model generation (dim 16 = SO(10) spinor) at EXACTLY one rung: q=3. The one-generation condition 2^{(q^2-1)/2}=16 has the unique odd solution q=3.",
+  "rungs": {
+    "3": {
+      "shadow_group": "SO(10,2)",
+      "vector_dim_eq_k_css": 10,
+      "so_rank_m": 5,
+      "e8_central_layer_q2_minus_1": 8,
+      "half_spinor_dim": 16,
+      "spinor_exponent_is_half_e8_layer": true,
+      "N_mod_8": 2,
+      "chiral_complex_spinor": true,
+      "is_one_generation": true
+    },
+    "5": {
+      "shadow_group": "SO(26,2)",
+      "vector_dim_eq_k_css": 26,
+      "so_rank_m": 13,
+      "e8_central_layer_q2_minus_1": 24,
+      "half_spinor_dim": 4096,
+      "spinor_exponent_is_half_e8_layer": true,
+      "N_mod_8": 2,
+      "chiral_complex_spinor": true,
+      "is_one_generation": false
+    },
+    "7": {
+      "shadow_group": "SO(50,2)",
+      "vector_dim_eq_k_css": 50,
+      "so_rank_m": 25,
+      "e8_central_layer_q2_minus_1": 48,
+      "half_spinor_dim": 16777216,
+      "spinor_exponent_is_half_e8_layer": true,
+      "N_mod_8": 2,
+      "chiral_complex_spinor": true,
+      "is_one_generation": false
+    },
+    "11": {
+      "shadow_group": "SO(122,2)",
+      "vector_dim_eq_k_css": 122,
+      "so_rank_m": 61,
+      "e8_central_layer_q2_minus_1": 120,
+      "half_spinor_dim": 1152921504606846976,
+      "spinor_exponent_is_half_e8_layer": true,
+      "N_mod_8": 2,
+      "chiral_complex_spinor": true,
+      "is_one_generation": false
+    }
+  },
+  "reading": "The CSS logical register (Pass 224) transforms as the VECTOR q^2+1 of SO(q^2+1); the matter content is the half-SPINOR 2^{(q^2-1)/2} of the SAME group. Every rung is chiral (q^2+1 == 2 mod 8), so the tower is never vector-like, but only q=3 gives spinor 16 = one generation -- SO(26),SO(50),... give 4096, 16M and have no one-generation reading. This is a selection principle picking q=3 (our SO(10)) out of the family, grounded only in representation dimensions.",
+  "checks": {
+    "all_rungs_chiral": true,
+    "exponent_is_half_e8_layer": true,
+    "unique_one_generation_rung": true,
+    "q3_spinor_16": true,
+    "q3_vector_10": true,
+    "q5_spinor_4096": true,
+    "q7_spinor_16M": true,
+    "selection_equation_unique": true
+  }
+}

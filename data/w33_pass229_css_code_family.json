@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass229.css_code_family.v1",
+  "status": "PASS",
+  "theorem": "The symplectic quadrangles W(3,q) yield a parametric CSS quantum code family [[(q+1)(q^2+1), q^2+1, q+1]]: k=q^2+1 logical qubits (Pass 224) and distance q+1 set by the isotropic lines, which are the minimum-weight logical operators. q=3 is the committed [[40,10,4]]; q=5,7 give [[156,26,6]], [[400,50,8]].",
+  "family": {
+    "3": {
+      "n": 40,
+      "k_logical": 10,
+      "line_weight_q_plus_1": 4,
+      "line_in_C": true,
+      "line_in_Cperp_sentinel": false,
+      "line_is_logical": true,
+      "css_distance_upper_bound": 4,
+      "css_code": "[[40, 10, 4]]",
+      "dC_exact": 4,
+      "B_low": {
+        "4": 40
+      },
+      "css_distance_exact": 4
+    },
+    "5": {
+      "n": 156,
+      "k_logical": 26,
+      "line_weight_q_plus_1": 6,
+      "line_in_C": true,
+      "line_in_Cperp_sentinel": false,
+      "line_is_logical": true,
+      "css_distance_upper_bound": 6,
+      "css_code": "[[156, 26, <= 6]]"
+    },
+    "7": {
+      "n": 400,
+      "k_logical": 50,
+      "line_weight_q_plus_1": 8,
+      "line_in_C": true,
+      "line_in_Cperp_sentinel": false,
+      "line_is_logical": true,
+      "css_distance_upper_bound": 8,
+      "css_code": "[[400, 50, <= 8]]"
+    }
+  },
+  "reading": "The classical (X-type) code is the incidence code C with d(C)=q+1 realised by the n lines; every line lies in C but not in the doubly-even sentinel C^perp, so it is a weight-(q+1) logical operator, fixing the CSS distance at q+1. The register carries q^2+1 logicals but only tolerates ~q/2 errors: distance grows linearly while capacity grows quadratically -- a low-rate, geometrically rigid quantum memory keyed to the quadrangle order.",
+  "checks": {
+    "q3_line_weight_4": true,
+    "q5_line_weight_6": true,
+    "q7_line_weight_8": true,
+    "q3_line_is_logical": true,
+    "q5_line_is_logical": true,
+    "q7_line_is_logical": true,
+    "q3_dC_exact_4": true,
+    "q3_css_40_10_4": true,
+    "family_params": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "w33.pass226.sentinel_distance_tower.v1",
+  "status": "PASS",
+  "conjectured_closed_form": "d_sentinel = 2(q+1)  [8, 12, 16 for q=3,5,7]",
+  "per_q": {
+    "3": {
+      "n": 40,
+      "dim_sentinel": 15,
+      "doubly_even": true,
+      "distance_lower_bound_div4": 4,
+      "d_exact": 8,
+      "method": "exhaustive 2^dim enumeration"
+    },
+    "5": {
+      "n": 156,
+      "dim_sentinel": 65,
+      "doubly_even": true,
+      "distance_lower_bound_div4": 4,
+      "d_exact": null,
+      "d_upper_bound": 12,
+      "d_upper_bound_prev_random": 52,
+      "method": "reduced-basis depth-3 low-weight search",
+      "divisible_by_4": true
+    },
+    "7": {
+      "n": 400,
+      "dim_sentinel": 175,
+      "doubly_even": true,
+      "distance_lower_bound_div4": 4,
+      "d_exact": null,
+      "d_upper_bound": 16,
+      "d_upper_bound_prev_random": 148,
+      "method": "reduced-basis depth-3 low-weight search",
+      "divisible_by_4": true
+    }
+  },
+  "reading": "The sentinel (dual code C^perp) has exact minimum distance 8 at q=3. For q=5,7 the distance is an open exact quantity (min-dist is NP-hard); a reduced-basis search tightens the upper bounds below the Pass 224 random bounds, and doubly-evenness forces d == 0 (mod 4). Note the SENTINEL distance is NOT the quantum code distance -- the CSS distance is q+1 (Pass 229); the sentinel weight governs the STABILISER weight (check locality).",
+  "checks": {
+    "q3_d_exact_8": true,
+    "q3_doubly_even": true,
+    "q5_improved": true,
+    "q7_improved": true,
+    "q5_ub_div4": true,
+    "q7_ub_div4": true,
+    "q3_matches_2q_plus_2": true,
+    "q5_ub_equals_2q_plus_2": true,
+    "q7_ub_equals_2q_plus_2": true
+  }
+}

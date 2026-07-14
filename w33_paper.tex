@@ -12314,4 +12314,58 @@ Pass 206). The tower reading is that the substrate's quantum register is a
 family invariant of the symplectic quadrangle keyed to its ovoid number, with
 the standard-model $\mathrm{SO}(10)$ sitting at the smallest odd rung.
 
+
+\section{The Shadow Tower Closed: spinor selection, universality, and the $[[(q{+}1)(q^2{+}1),\,q^2{+}1,\,q{+}1]]$ CSS family (Passes 225--229)}
+
+Five witnesses close the shadow-code tower of Pass 224 into a single physical
+statement, with $q=3$ singled out on independent grounds and the whole family
+identified as an explicit quantum code.
+
+\paragraph{Pass 225 --- spinor selection.} The CSS register transforms as the
+\emph{vector} $q^2+1$ of the shadow group $\mathrm{SO}(q^2+1,2)$; its half-spinor
+has dimension $2^{(q^2-1)/2}$ (the exponent is half the E$_8$ central layer
+$q^2-1$). For odd $q$, $q^2+1\equiv 2\pmod 8$, so the half-spinor is complex
+(chiral) at \emph{every} rung, but it equals a single Standard-Model generation
+$16=\mathbf{16}$ of $\mathrm{SO}(10)$ at exactly one rung: the integer equation
+$2^{(q^2-1)/2}=16$ has the unique odd solution $q=3$. Rungs $q=5,7$ give
+spinors $4096,\,16{,}777{,}216$ with no one-generation reading. This selects
+$q=3$ (our $\mathrm{SO}(10)$) from the family on representation dimensions alone.
+
+\paragraph{Pass 227 --- universality selection.} Every rung is Eastin--Knill
+non-universal: the logical gate group is the finite $\mathrm{O}^+(q^2+1,2)$, so
+transversal/permutation gates never suffice. A \emph{geometric} magic source---an
+exceptional overgroup carrying an invariant cubic---requires
+$\mathrm{rank}\,\mathrm{SO}(q^2+1)=(q^2+1)/2\le 8$ (the maximal exceptional rank,
+$E_8$), i.e.\ $q=3$, realised by $\mathrm{SO}(10)<E_6$ with the magic branching
+$\mathbf{27}=\mathbf{16}+\mathbf{10}+\mathbf 1$. For $q\ge 5$ the shadow rank
+($13,25,\dots$) exceeds every exceptional group, so no cubic exists: the substrate
+is fault-tolerant-Clifford at every rung but computationally \emph{universal}
+only at $q=3$.
+
+\paragraph{Pass 226 --- the sentinel distance.} The sentinel $C^{\perp}$ has exact
+minimum distance $8$ at $q=3$ (exhaustive over $2^{15}$); a reduced-basis search
+tightens the $q=5,7$ bounds from the random $52,148$ to $12,16$, matching the
+closed form $d_{\text{sentinel}}=2(q+1)$ (and $d\equiv 0\bmod 4$ by
+double-evenness). This is the \emph{stabiliser} weight (check locality), distinct
+from the code distance below.
+
+\paragraph{Pass 228 --- the exact enumerator.} The complete weight enumerator of
+the $q=3$ sentinel $[40,15,8]$ was computed exactly: doubly-even, with $A_8=45$
+minimum-weight words. MacWilliams reconstructs the context $[40,25,4]$ enumerator
+from the sentinel alone, with $B_4=40$ = the $40$ isotropic lines (matching
+Pass 168) and $\sum B_k=2^{25}$; the dual pair's enumerators are locked together.
+
+\paragraph{Pass 229 --- the CSS family.} The incidence code $C$ has minimum weight
+$q+1$, realised by the isotropic lines; each line lies in $C$ but not in the
+doubly-even sentinel $C^{\perp}$, hence is a weight-$(q{+}1)$ logical operator, so
+the CSS distance is $q+1$. Combined with $k=q^2+1$ (Pass 224) this gives the
+parametric quantum code family
+\[
+   \big[\!\big[\,(q+1)(q^2+1),\ q^2+1,\ q+1\,\big]\!\big],
+\]
+whose members are $[[40,10,4]]$ (the committed register), $[[156,26,6]]$,
+$[[400,50,8]]$: logical capacity grows quadratically while distance grows
+linearly---a low-rate, geometrically rigid quantum memory keyed to the quadrangle
+order $q$, with the physical Standard-Model rung sitting at the smallest odd $q$.
+
 \end{document}

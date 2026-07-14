@@ -1,0 +1,50 @@
+{
+  "schema": "w33.pass227.magic_universality_tower.v1",
+  "status": "PASS",
+  "theorem": "Every rung of the W(3,q) CSS tower is Eastin-Knill non-universal (its logical gate group is the finite O+(q^2+1,2)), so magic must come from outside the code permutations. A GEOMETRIC magic source -- an exceptional overgroup with an invariant cubic -- exists at exactly one rung: q=3, where SO(10) < E6 with 27 = 16+10+1. For q>=5 the shadow rank (q^2+1)/2 exceeds E8's rank 8, so no exceptional overgroup and no geometric cubic exist. q=3 is the unique universal rung.",
+  "rungs": {
+    "3": {
+      "shadow_group": "SO(10,2)",
+      "so_rank": 5,
+      "logical_group_is_finite": true,
+      "logical_group_order_O+(N,2)": 46998591897600,
+      "eastin_knill_nonuniversal": true,
+      "fits_in_exceptional": true,
+      "exceptional_overgroup": "E6",
+      "magic_cubic_branching": "27 = 16 + 10 + 1 (spinor + vector + singlet)",
+      "geometric_magic_available": true
+    },
+    "5": {
+      "shadow_group": "SO(26,2)",
+      "so_rank": 13,
+      "logical_group_is_finite": true,
+      "logical_group_order_O+(N,2)": 94113776163631710738682904135511475474753450673423038046830858876704123361966351199879823360000000,
+      "eastin_knill_nonuniversal": true,
+      "fits_in_exceptional": false,
+      "exceptional_overgroup": null,
+      "magic_cubic_branching": null,
+      "geometric_magic_available": false
+    },
+    "7": {
+      "shadow_group": "SO(50,2)",
+      "so_rank": 25,
+      "logical_group_is_finite": true,
+      "logical_group_order_O+(N,2)": 795613773336564640326728659439524216007358584365449203810778299222522786138697440219478357179958904175479649995652409537382616002541716973293794325221086982651251220813618885688025968584287687162066799074899097081692919913446460641220872812457809757677537707620580936689955124293014184120027424240477206984711203211301080079452324526422493379981684716339200000000000000,
+      "eastin_knill_nonuniversal": true,
+      "fits_in_exceptional": false,
+      "exceptional_overgroup": null,
+      "magic_cubic_branching": null,
+      "geometric_magic_available": false
+    }
+  },
+  "reading": "Fault tolerance (transversal Clifford) is a family property; computational universality (Clifford + magic cubic) is NOT. The E6 cubic that lifts the q=3 register to universality is an exceptional coincidence available only because SO(10) is small enough (rank 5) to fit in E6. SO(26), SO(50) have ranks 13, 25 -- larger than any exceptional group -- so their registers stay Clifford-only. The substrate computes universally only at q=3.",
+  "checks": {
+    "eastin_knill_all_rungs": true,
+    "unique_exceptional_rung_is_q3": true,
+    "rank_criterion": true,
+    "q3_e6_branching_16_10_1": true,
+    "q3_so10_rank_5": true,
+    "e6_rank_6_contains_so10": true,
+    "q3_logical_order_positive": true
+  }
+}

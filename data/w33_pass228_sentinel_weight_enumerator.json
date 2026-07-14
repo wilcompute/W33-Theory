@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass228.sentinel_weight_enumerator.v1",
+  "status": "PASS",
+  "sentinel_40_15_8": {
+    "dimension": 15,
+    "min_distance": 8,
+    "doubly_even": true,
+    "A8_min_weight_words": 45,
+    "weight_spectrum": {
+      "0": 1,
+      "8": 45,
+      "12": 720,
+      "16": 6930,
+      "20": 17376,
+      "24": 6930,
+      "28": 720,
+      "32": 45,
+      "40": 1
+    },
+    "total_words": 32768
+  },
+  "context_40_25_4_via_macwilliams": {
+    "min_distance": 4,
+    "B4_lines": 40,
+    "low_weight_spectrum": {
+      "0": 1,
+      "4": 40,
+      "6": 240,
+      "8": 5085,
+      "10": 47824,
+      "12": 353920
+    },
+    "total_words": 33554432,
+    "reconstructed_from": "sentinel enumerator alone (MacWilliams)"
+  },
+  "reading": "The q=3 sentinel [40,15,8] is doubly-even with A_8 minimum-weight words; MacWilliams reconstructs the context [40,25,4] enumerator from it exactly, with B_4 = 40 = the isotropic lines (Pass 168). The two dual codes' weight enumerators are locked together, certifying the doubly-even self-orthogonal shadow picture. The q=5,7 sentinel enumerators (dim 65,175) are beyond exhaustive reach -- the exact theta tower is open.",
+  "checks": {
+    "sentinel_dim_15": true,
+    "sentinel_total_2^15": true,
+    "sentinel_doubly_even": true,
+    "sentinel_dmin_8": true,
+    "macwilliams_nonneg_integers": true,
+    "context_total_2^25": true,
+    "context_dmin_4": true,
+    "context_A4_eq_40_lines": true
+  }
+}
