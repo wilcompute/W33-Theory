@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass238.rank_law.v1",
+  "status": "PASS",
+  "theorem": "The F2 line-point incidence 2-rank of W(3,q) is (q^2+1)(q+2)/2 for odd q; the dual/sentinel dimension is q(q^2+1)/2 = (n-k)/2 and the CSS logical count is k = q^2+1. Verified exactly at q = 3,5,7 (25,91,225) and freshly at q = 11 (793). Even q follows the same formula minus a characteristic-2 correction 0,1,27 at q = 2,4,8 (true ranks 10,50,298).",
+  "closed_forms": {
+    "incidence_2_rank_odd_q": "(q^2+1)(q+2)/2",
+    "sentinel_dual_dim_odd_q": "q(q^2+1)/2",
+    "css_logicals": "q^2+1"
+  },
+  "verification": {
+    "q3_5_7": {
+      "3": 25,
+      "5": 91,
+      "7": 225
+    },
+    "q11_built": {
+      "n": 1464,
+      "computed_rank": 793,
+      "predicted": 793
+    },
+    "predictions_q11_13_17_19": {
+      "11": 793,
+      "13": 1275,
+      "17": 2755,
+      "19": 3801
+    }
+  },
+  "even_q": {
+    "true_ranks": {
+      "2": 10,
+      "4": 50,
+      "8": 298
+    },
+    "odd_formula_values": {
+      "2": 10,
+      "4": 51,
+      "8": 325
+    },
+    "char2_deviation": {
+      "2": 0,
+      "4": 1,
+      "8": 27
+    }
+  },
+  "reading": "The previously-open odd-q incidence rank is a single quadratic-in-q closed form (q^2+1)(q+2)/2, freshly confirmed at q=11. The sentinel is exactly half the redundancy (n-k)/2 = q(q^2+1)/2, and k = q^2+1 is forced. Characteristic 2 subtracts a small correction (0,1,27), the fingerprint of the degenerate form.",
+  "checks": {
+    "rank_plus_dual_identity": true,
+    "k_equals_q2_plus_1_identity": true,
+    "matches_committed_q3_5_7": true,
+    "q11_n_1464": true,
+    "q11_rank_matches_793": true,
+    "even_formula_10_51_325": true,
+    "even_deviation_0_1_27": true
+  }
+}

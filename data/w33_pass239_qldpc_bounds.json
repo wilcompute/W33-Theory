@@ -1,0 +1,130 @@
+{
+  "schema": "w33.pass239.qldpc_bounds.v1",
+  "status": "PASS",
+  "theorem": "The family [[(q+1)(q^2+1), q^2+1, q+1]] satisfies k*d = n exactly (it lies on the conservation curve), with k ~ n^{2/3} logical qubits and d ~ n^{1/3} distance. It obeys the quantum Singleton bound with slack, requires embedding dimension D >= 3 (not 2D-local by BPT), and is NOT asymptotically good (rate and rel. distance both -> 0). Its worth is the gate structure -- transversal Clifford (Pass 204) plus the cubic-magic Yukawa (Pass 230) -- not the raw parameters.",
+  "per_q": {
+    "3": {
+      "n": 40,
+      "k": 10,
+      "d": 4,
+      "check_weight": 8,
+      "rate": "1/4",
+      "rate_val": 0.25,
+      "rel_distance": "1/10",
+      "rel_distance_val": 0.1,
+      "k_times_d": 40,
+      "k_times_d_eq_n": true,
+      "singleton_bound_rhs": 34,
+      "singleton_slack": 24,
+      "singleton_ok": true,
+      "min_embedding_dim_BPT": 3
+    },
+    "5": {
+      "n": 156,
+      "k": 26,
+      "d": 6,
+      "check_weight": 12,
+      "rate": "1/6",
+      "rate_val": 0.16666666666666666,
+      "rel_distance": "1/26",
+      "rel_distance_val": 0.038461538461538464,
+      "k_times_d": 156,
+      "k_times_d_eq_n": true,
+      "singleton_bound_rhs": 146,
+      "singleton_slack": 120,
+      "singleton_ok": true,
+      "min_embedding_dim_BPT": 3
+    },
+    "7": {
+      "n": 400,
+      "k": 50,
+      "d": 8,
+      "check_weight": 16,
+      "rate": "1/8",
+      "rate_val": 0.125,
+      "rel_distance": "1/50",
+      "rel_distance_val": 0.02,
+      "k_times_d": 400,
+      "k_times_d_eq_n": true,
+      "singleton_bound_rhs": 386,
+      "singleton_slack": 336,
+      "singleton_ok": true,
+      "min_embedding_dim_BPT": 3
+    },
+    "11": {
+      "n": 1464,
+      "k": 122,
+      "d": 12,
+      "check_weight": 24,
+      "rate": "1/12",
+      "rate_val": 0.08333333333333333,
+      "rel_distance": "1/122",
+      "rel_distance_val": 0.00819672131147541,
+      "k_times_d": 1464,
+      "k_times_d_eq_n": true,
+      "singleton_bound_rhs": 1442,
+      "singleton_slack": 1320,
+      "singleton_ok": true,
+      "min_embedding_dim_BPT": 3
+    },
+    "13": {
+      "n": 2380,
+      "k": 170,
+      "d": 14,
+      "check_weight": 28,
+      "rate": "1/14",
+      "rate_val": 0.07142857142857142,
+      "rel_distance": "1/170",
+      "rel_distance_val": 0.0058823529411764705,
+      "k_times_d": 2380,
+      "k_times_d_eq_n": true,
+      "singleton_bound_rhs": 2354,
+      "singleton_slack": 2184,
+      "singleton_ok": true,
+      "min_embedding_dim_BPT": 3
+    }
+  },
+  "asymptotics": {
+    "k_exponent": 0.6783,
+    "d_exponent": 0.3217,
+    "reading": "k ~ n^{2/3}, d ~ n^{1/3}, k*d = n"
+  },
+  "comparison": {
+    "surface_code": {
+      "k": "1",
+      "d_scaling": "n^{1/2}",
+      "rate": "1/n -> 0"
+    },
+    "good_qLDPC": {
+      "k": "Theta(n)",
+      "d_scaling": "Theta(n)",
+      "rate": "const"
+    },
+    "this_family": {
+      "k": "n^{2/3}",
+      "d_scaling": "n^{1/3}",
+      "rate": "1/(q+1) -> 0",
+      "note": "k*d = n exactly; transversal Clifford + cubic magic"
+    }
+  },
+  "reading": "This is a high-rate-of-logicals (k ~ n^{2/3}) but modest-distance (d ~ n^{1/3}) code family sitting exactly on k*d = n -- between the surface code (k=1) and good qLDPC (k,d linear). It is a transversal-gate code, not a parameter-optimal one: the substrate trades asymptotic goodness for a native fault-tolerant gate set whose logical group is the Standard-Model SO(10).",
+  "checks": {
+    "q3_kd_eq_n": true,
+    "q3_singleton_ok": true,
+    "q3_needs_dim_ge_3": true,
+    "q5_kd_eq_n": true,
+    "q5_singleton_ok": true,
+    "q5_needs_dim_ge_3": true,
+    "q7_kd_eq_n": true,
+    "q7_singleton_ok": true,
+    "q7_needs_dim_ge_3": true,
+    "q11_kd_eq_n": true,
+    "q11_singleton_ok": true,
+    "q11_needs_dim_ge_3": true,
+    "q13_kd_eq_n": true,
+    "q13_singleton_ok": true,
+    "q13_needs_dim_ge_3": true,
+    "k_scales_n_two_thirds": true,
+    "d_scales_n_one_third": true
+  }
+}

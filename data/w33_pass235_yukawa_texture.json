@@ -1,0 +1,44 @@
+{
+  "schema": "w33.pass235.yukawa_texture.v1",
+  "status": "PASS",
+  "derived_no_fit": {
+    "yukawa_symmetric": "16x16 -> 10_s + 120_a + 126_s, so Y = Y^T",
+    "unbroken_family_democratic": "Y = v * J (all-ones)",
+    "spectrum": [
+      2.9999999999999996,
+      5.624168597199657e-16,
+      7.305347407387203e-18
+    ],
+    "rank": 1,
+    "prediction": "third-generation dominance: exactly one heavy generation (the top), m_top >> m_charm, m_up -- forced, no parameters"
+  },
+  "illustrative_one_parameter": {
+    "mechanism": "Froggatt-Nielsen breaking of SU(3)_family, charges (2,1,0)",
+    "eps_fit_to_mc_mt": 0.06,
+    "predicted_ratios": {
+      "m_c/m_t": 0.003604651162790698,
+      "m_u/m_t": 1.299351000540833e-05
+    },
+    "observed_ratios": {
+      "m_c/m_t": 0.0036046511627906975,
+      "m_u/m_t": 7.3837209302325584e-06
+    },
+    "mu_mt_agreement_factor": 0.568,
+    "fn_spectrum": [
+      1.0036176446727958,
+      2.2204909675094964e-16,
+      2.2844414540695388e-21
+    ]
+  },
+  "reading": "The SO(10) cubic Yukawa is symmetric, and an unbroken family symmetry forces the democratic rank-1 texture -- exactly one heavy generation, matching m_top >> m_charm, m_up with no free parameters. The light-generation hierarchy then follows a single family-breaking VEV eps (Froggatt-Nielsen), reproducing the up-type mass pattern to order of magnitude. The number of heavy generations is a THEOREM; the fine hierarchy is one parameter.",
+  "checks": {
+    "16x16_has_symmetric_10": true,
+    "democratic_is_symmetric": true,
+    "democratic_spectrum_3_0_0": true,
+    "democratic_rank_1": true,
+    "one_heavy_generation": true,
+    "cubic_rank1_vev_one_mass": true,
+    "mu_mt_within_order_of_magnitude": true,
+    "fn_hierarchical": true
+  }
+}

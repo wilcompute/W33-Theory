@@ -1,0 +1,66 @@
+{
+  "schema": "w33.pass237.magic_distillation.v1",
+  "status": "PASS",
+  "code": "[[40, 10, 4]]",
+  "distillation": {
+    "distance": 4,
+    "suppression_order_ceil_d_2": 2,
+    "leading_coefficient_A4": 40,
+    "A4_identity": "the 40 weight-4 isotropic lines (verified)",
+    "rate_k_over_n": 0.25,
+    "outputs_per_block": 10,
+    "eps_out_leading": "40 * p^2"
+  },
+  "vs_15_to_1": {
+    "this": {
+      "eps_out": "40 p^2",
+      "rate": "1/4",
+      "outputs": 10,
+      "transversal_group": "SO(10) = O+(10,2)"
+    },
+    "reed_muller_15_to_1": {
+      "eps_out": "35 p^3",
+      "rate": "1/15",
+      "outputs": 1
+    },
+    "tradeoff": "15-to-1 wins fidelity (cubic); [[40,10,4]] wins rate (3.75x) and outputs (10x), with a Standard-Model gate set",
+    "rate_advantage": 3.75
+  },
+  "eps_out_samples": {
+    "0.01": {
+      "this_40_10_4": 0.004,
+      "ref_15_to_1": 3.5000000000000004e-05,
+      "outputs_per_block": {
+        "this": 10,
+        "ref": 1
+      }
+    },
+    "0.001": {
+      "this_40_10_4": 3.9999999999999996e-05,
+      "ref_15_to_1": 3.5e-08,
+      "outputs_per_block": {
+        "this": 10,
+        "ref": 1
+      }
+    },
+    "0.0001": {
+      "this_40_10_4": 4e-07,
+      "ref_15_to_1": 3.500000000000001e-11,
+      "outputs_per_block": {
+        "this": 10,
+        "ref": 1
+      }
+    }
+  },
+  "reading": "The substrate's [[40,10,4]] code distils magic with quadratic suppression (order ceil(d/2)=2, leading coefficient 40 = the isotropic lines) at rate 1/4 with 10 parallel logical outputs. It sacrifices one order of error suppression relative to 15-to-1 for a 3.75x rate gain and a native SO(10) transversal gate set -- a high-throughput distillery whose magic state is the GUT Yukawa.",
+  "checks": {
+    "n_40": true,
+    "k_10": true,
+    "distance_4": true,
+    "A4_is_40_lines": true,
+    "quadratic_suppression": true,
+    "rate_one_quarter": true,
+    "ref_better_fidelity_our_better_rate": true,
+    "rate_advantage_3_75x": true
+  }
+}
