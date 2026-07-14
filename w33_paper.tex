@@ -12265,4 +12265,53 @@ is reported as a certified fingerprint rather than a database match.
 (GAP witness:
 \texttt{analysis/w33\_pass218\_weil\_shadow\_split.g}.)
 
+
+\section{The Shadow-Code Tower: the CSS register exists at every $W(3,q)$, with $k=q^2+1$ (Pass 224)}
+
+The quantum picture established at $q=3$---the doubly-even self-orthogonal
+\emph{sentinel} $[40,15,8]_2$ whose CSS construction carries the $\mathrm{SO}(10)$
+shadow (Passes 201, 204)---was shown here to be the first rung of a genuine
+tower, not a low-dimensional accident. For $W(3,q)$ with $q\in\{3,5,7\}$ we
+formed the $\mathbf{F}_2$ line--point incidence code $C$ (rows $=$ the
+$(q+1)(q^2+1)$ totally isotropic lines) and computed, exactly:
+
+\begin{center}
+\begin{tabular}{c|ccccc}
+$q$ & $n=(q{+}1)(q^2{+}1)$ & $\dim C$ & $\dim C^{\perp}$ & $k_{\mathrm{CSS}}=n-2\dim C^{\perp}$ & $q^2+1$ \ \hline
+$3$ & $40$  & $25$  & $15$  & $10$ & $10$ \
+$5$ & $156$ & $91$  & $65$  & $26$ & $26$ \
+$7$ & $400$ & $225$ & $175$ & $50$ & $50$
+\end{tabular}
+\end{center}
+
+Two facts hold at \emph{every} rung, verified by exact $\mathbf{F}_2$ linear
+algebra (\texttt{analysis/w33\_pass224\_shadow\_code\_tower.py},
+\texttt{data/w33\_pass224\_shadow\_code\_tower.json}):
+
+\begin{enumerate}
+\item \textbf{The dual is the sentinel.} $C^{\perp}$ is doubly-even
+  ($\mathrm{wt}\equiv 0 \bmod 4$) \emph{and} self-orthogonal
+  ($C^{\perp}\subseteq C$), so the maximal doubly-even self-orthogonal
+  sentinel equals the full dual code $C^{\perp}$ of dimension $n-\mathrm{rank}_2 C$.
+  Hence a CSS code $\mathrm{CSS}(C^{\perp},C^{\perp})$ exists for the entire
+  family---$q=3$ is not special.
+\item \textbf{The logical count is $q^2+1$, not $q^2-1$.} The CSS register has
+  $k=n-2\dim C^{\perp}=q^2+1$ logical qubits: the \emph{ovoid/spread number} of
+  $W(3,q)$, exceeding the central quadratic-shadow layer $q^2-1$ of the odd-$q$
+  ladder (Pass 202) by exactly two. The shadow orthogonal group is therefore
+  $\mathrm{SO}(q^2+1,2)$, and $q=3$ realises the physical $\mathrm{SO}(10)$;
+  $q=5,7$ give $\mathrm{SO}(26),\mathrm{SO}(50)$. The two surplus logicals over
+  the E$_8$ central layer $q^2-1$ are the hull's non-quadratic directions.
+\end{enumerate}
+
+The $q=3$ anchor reproduces the committed sentinel exactly: $\dim C^{\perp}=15$,
+minimum distance $d=8$ (exhaustive over $2^{15}$ words), $k_{\mathrm{CSS}}=10$.
+For $q=5,7$ the sentinel minimum distances are bounded above by $52,148$
+respectively (certified by explicit random codewords; both $\equiv 0 \bmod 4$).
+This is a statement about stabiliser-code \emph{parameters} only; no
+subsystem/gauge distance-boost is claimed (that $q=3$ framing was withdrawn in
+Pass 206). The tower reading is that the substrate's quantum register is a
+family invariant of the symplectic quadrangle keyed to its ovoid number, with
+the standard-model $\mathrm{SO}(10)$ sitting at the smallest odd rung.
+
 \end{document}

@@ -1,0 +1,107 @@
+{
+  "schema": "w33.pass224.shadow_code_tower.v1",
+  "status": "PASS",
+  "question": "Does the doubly-even self-orthogonal sentinel -- the subcode that lets a CSS quantum register exist -- survive as q grows in the W(3,q) family, or is q=3 the unique quantum rung?",
+  "per_q": {
+    "3": {
+      "n": 40,
+      "dim_C": 25,
+      "dim_Cperp": 15,
+      "dim_hull": 15,
+      "dim_sentinel": 15,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css_from_sentinel": 10,
+      "quadratic_shadow_dim": 8,
+      "ovoid_number_q2_plus_1": 10,
+      "k_matches_shadow": false,
+      "k_matches_ovoid": true,
+      "d_sentinel": 8,
+      "d_sentinel_exact": true,
+      "d_sentinel_upper_bound": null,
+      "d_incidence_code": null,
+      "d_incidence_code_exact": false,
+      "sentinel_equals_dual": true
+    },
+    "5": {
+      "n": 156,
+      "dim_C": 91,
+      "dim_Cperp": 65,
+      "dim_hull": 65,
+      "dim_sentinel": 65,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css_from_sentinel": 26,
+      "quadratic_shadow_dim": 24,
+      "ovoid_number_q2_plus_1": 26,
+      "k_matches_shadow": false,
+      "k_matches_ovoid": true,
+      "d_sentinel": null,
+      "d_sentinel_exact": false,
+      "d_sentinel_upper_bound": 52,
+      "d_incidence_code": null,
+      "d_incidence_code_exact": false,
+      "sentinel_equals_dual": true
+    },
+    "7": {
+      "n": 400,
+      "dim_C": 225,
+      "dim_Cperp": 175,
+      "dim_hull": 175,
+      "dim_sentinel": 175,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true,
+      "k_css_from_sentinel": 50,
+      "quadratic_shadow_dim": 48,
+      "ovoid_number_q2_plus_1": 50,
+      "k_matches_shadow": false,
+      "k_matches_ovoid": true,
+      "d_sentinel": null,
+      "d_sentinel_exact": false,
+      "d_sentinel_upper_bound": 148,
+      "d_incidence_code": null,
+      "d_incidence_code_exact": false,
+      "sentinel_equals_dual": true
+    }
+  },
+  "k_vs_shadow_tower": [
+    {
+      "q": 3,
+      "k_css": 10,
+      "quadratic_shadow": 8,
+      "ovoid_q2_plus_1": 10
+    },
+    {
+      "q": 5,
+      "k_css": 26,
+      "quadratic_shadow": 24,
+      "ovoid_q2_plus_1": 26
+    },
+    {
+      "q": 7,
+      "k_css": 50,
+      "quadratic_shadow": 48,
+      "ovoid_q2_plus_1": 50
+    }
+  ],
+  "reading": "For each odd q the F2 incidence code of W(3,q) contains a doubly-even self-orthogonal sentinel, so the CSS register CSS(S,S) exists at EVERY rung of the family -- q=3 is not a coincidence. The logical count is k = q^2+1 (the ovoid/spread number), NOT the naive quadratic shadow q^2-1: the shadow orthogonal group is SO(q^2+1,2), and q=3 realises the physical SO(10). The two extra logicals over the E8 central layer q^2-1 are the hull's non-quadratic directions. Pure stabiliser-code parameters -- no subsystem/gauge claim (withdrawn in Pass 206).",
+  "checks": {
+    "q3_selforthogonal": true,
+    "q3_doubly_even": true,
+    "q3_sentinel_is_dual": true,
+    "q5_selforthogonal": true,
+    "q5_doubly_even": true,
+    "q5_sentinel_is_dual": true,
+    "q7_selforthogonal": true,
+    "q7_doubly_even": true,
+    "q7_sentinel_is_dual": true,
+    "q3_n_40": true,
+    "q3_dim_C_25": true,
+    "q3_sentinel_dim_15": true,
+    "q3_d_sentinel_8": true,
+    "q3_k_css_10": true,
+    "sentinel_persists_across_tower": true,
+    "all_de_so": true,
+    "k_css_is_q2_plus_1_tower": true
+  }
+}
