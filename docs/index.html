@@ -2702,6 +2702,70 @@
               <a href="../analysis/w33_pass332_integral_halfspin_lift.g">Run the 39-check GAP witness</a>.
             </div>
           </div>
+          <div class="card" id="pass333-outer-s3-lift">
+            <div class="label">Pass 333 &mdash; The Missing Integral Reflection Closes the Outer S3</div>
+            <div class="detail">A frozen integral <code>10&times;10</code> involution <code>T</code> has
+              determinant <code>&minus;1</code>, normalizes <code>U4(2)</code>, and generates
+              <code>U4(2).2 = W(E6)</code>. It inverts the Eisenstein scalar,
+              <code>T<sup>&minus;1</sup>&omega;T=&omega;<sup>&minus;1</sup></code>, so
+              <code>&lang;&omega;,T&rang;=S3</code>. On the three integral leaves,
+              <code>&omega;</code> is <code>[3,1,2]</code> and <code>T</code> is
+              <code>[1,3,2]</code>, with exact unimodular leaf maps. Six Eisenstein-unit reflections give the
+              three transpositions of <code>P&sup1;(F2)</code> twice each.
+              <a href="../analysis/w33_pass333_outer_s3_lift.g">Run the 29-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass334-selector-leaf-bundle-obstruction">
+            <div class="label">Pass 334 &mdash; The Selector Is a Curved Bundle, Not the Flat Three-Leaf Product</div>
+            <div class="detail">The selector is exactly the transitive coset bundle
+              <code>G/H&rarr;G/K</code> with stabilizer orders
+              <code>25920&gt;648&gt;216</code>; its line stabilizer acts as full <code>S3</code> on each
+              three-sheet fibre. The Pass-332 lattice product instead has three global <code>40</code>-orbits and
+              only an external commuting <code>C3</code>. Their local overlap rows agree, but the selector has
+              holonomy <code>1<sup>11070</sup>2<sup>29160</sup>3<sup>19440</sup></code> while the flat product has
+              <code>1<sup>59670</sup></code>. Thus no natural PSp-equivariant or overlap-scheme bijection exists;
+              the exact missing object is a line-dependent <code>S3</code> lattice connection.
+              <a href="../analysis/w33_pass334_selector_leaf_bundle_obstruction.g">Run the 20-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass335-stable-lattice-polar-lift">
+            <div class="label">Pass 335 &mdash; Five Stable Classes; the Polar Lift Exists but the Quadratic Lift Does Not</div>
+            <div class="detail">The complete <code>U4(2)</code>-stable 2-adic complex has five classes
+              <code>{L,R,L1,L2,L3}</code>: three triangles sharing the spine <code>L&ndash;R</code>, with
+              index-two skeleton <code>K(2,3)</code>. No class is both symmetric-even and unimodular. Yet the
+              invariant alternating form becomes unimodular on all three H10 leaves. Each has exactly two
+              invariant plus-type quadratic refinements with <code>528</code> zeros, swapped by the nontrivial
+              H10 module automorphism; their difference is dual to the unique isotropic socle. The obstruction
+              is the refinement choice, not the symplectic polar form. Kirschmer&rsquo;s symplectic classification
+              externally anticipates a small lattice-class count for the related U4(2) normalizers; the new
+              content here is the explicit local five-vertex incidence complex and its H10 form/refinement ledger,
+              not the bare number five.
+              <a href="../analysis/w33_pass335_complete_stable_lattice_complex.g">Run the 33-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass336-integral-halfspin-lattices">
+            <div class="label">Pass 336 &mdash; Integral Half-Spins Exist and Are Perfect 2-Adic Duals</div>
+            <div class="detail">GAP constructs invariant rank-<code>32</code> integer lattices for both half-spin
+              restrictions. Their mod-2 reductions are dual but nonisomorphic. The exact trace&ndash;wedge pairing
+              has Smith diagonal <code>1<sup>16</sup>,3<sup>16</sup></code>, determinant
+              <code>3<sup>16</sup></code>, and full mod-2 rank, hence is a perfect 2-adic duality. This closes
+              abstract integral half-spin existence, but not a leafwise Clifford functor: the three symmetric
+              H10 forms remain odd of determinant <code>3<sup>5</sup></code>.
+              <a href="../analysis/w33_pass336_integral_halfspin_lattices.g">Run the 22-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass337-epsilon-e8-baer-separation">
+            <div class="label">Pass 337 &mdash; Dual-Number Epsilon Is Not the Signed-E8 Extension Class</div>
+            <div class="detail">The H10 top-to-socle map <code>&epsilon;</code> belongs to a nonsplit module
+              extension, but adjoining <code>1+&epsilon;</code> gives the split group
+              <code>C2&times;PGSp(4,3)</code> of order <code>103680</code>, derived order <code>25920</code>, and
+              abelianization <code>C2&times;C2</code>. The signed-E8 Atlas cover <code>2.U4(2).2</code> has the same
+              order but derived core <code>Sp(4,3)</code> of order <code>51840</code> and abelianization
+              <code>C2</code>. They are nonisomorphic: <code>&epsilon;</code> is the split endpoint deck, not the
+              signed-E8 Schur/Bockstein class.
+              <a href="../analysis/w33_pass337_epsilon_e8_baer_separation.g">Run the 20-check GAP witness</a>.
+            </div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching
@@ -14416,11 +14480,14 @@
           algebra.
         </p>
         <div class="spotlight">
-          <p><strong>Exact boundary.</strong> The module map is PSp-equivariant, not yet PGSp-equivariant or
-            quadratic-isometric. Raw coefficient conjugation inverts <code>&omega;</code> but fails to normalize
-            the standardized 5a image, so the predicted outer
-            <code>C3&#8906;C2 &cong; S3</code> action is still an unbuilt map. No integral half-spin lattice,
-            canonical chirality, or physical generation identification is asserted.</p>
+          <p><strong>Passes 333&ndash;337 resolve the old boundary.</strong> An explicit integral outer reflection
+            now normalizes the standardized 5a image and closes the global <code>S3</code> action. The full stable
+            lattice complex has five classes; its H10 polar form lifts unimodularly and symplectically, but no
+            stable symmetric form is both even and unimodular. Integral half-spin lattices exist as perfect
+            2-adic duals. Finally, the dual-number deck extension is split and is not the nonsplit signed-E8
+            cover. What remains is sharper: the physical selector needs a <em>line-dependent</em> curved
+            <code>S3</code> connection, and neither quadratic refinement nor half-spin chirality is canonically
+            selected or physically identified.</p>
         </div>
 
         <h3>Step 7 — The Curved 4D Bridge</h3>

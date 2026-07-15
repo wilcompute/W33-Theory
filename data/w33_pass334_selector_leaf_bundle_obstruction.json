@@ -1,0 +1,81 @@
+{
+  "schema": "w33.pass334.selector_leaf_bundle_obstruction.gap.v1",
+  "producer": "GAP 4.12.1",
+  "status": "PASS",
+  "check_count": 20,
+  "passed_check_count": 20,
+  "headline": "The selector 120-set is the twisted transitive coset bundle G/H to G/K with full S3 fibre monodromy; the Pass332 P1(F2) leaves form a flat three-orbit product with only an external commuting C3, so no natural PSp-equivariant bijection exists",
+  "actual_selector_bundle": {
+    "group": "PSp(4,3)=U4(2)",
+    "group_order": 25920,
+    "degree": 120,
+    "orbits": [ 120 ],
+    "subdegrees": [ 1, 2, 27, 36, 54 ],
+    "permutation_character_norm": 5,
+    "line_stabilizer_order": 648,
+    "line_stabilizer_structure": "(C3 x C3 x C3) : S4",
+    "sheet_stabilizer_order": 216,
+    "sheet_stabilizer_structure": "(C3 x C3 x C3) : D8",
+    "indices_GK_KH_GH": [40,3,120],
+    "coset_projection": "G/H -> G/K, Hg -> Kg",
+    "projection_fibre_profile": [ [ 3, 40 ] ],
+    "fibre_action": "S3",
+    "fibre_action_kernel_order": 108,
+    "equivariant_deck_centralizer_order": 1
+  },
+  "pass332_leaf_product": {
+    "leaf_count": 3,
+    "psp_generator_leaf_actions": [ [ 1, 2, 3 ], [ 1, 2, 3 ] ],
+    "eisenstein_omega_leaf_action": [ 3, 1, 2 ],
+    "binary_commutant_leaf_group": "C3",
+    "natural_product_group_order": 25920,
+    "natural_product_orbits": [ 40, 40, 40 ],
+    "natural_product_point_stabilizer_order": 648,
+    "natural_product_character_norm": 27,
+    "with_eisenstein_c3_group_order": 77760,
+    "with_eisenstein_c3_orbits": [ 120 ],
+    "with_eisenstein_c3_point_stabilizer_order": 648
+  },
+  "overlap_and_holonomy": {
+    "overlap_row_profile": [ [ 2, 54 ], [ 4, 27 ], [ 12, 36 ], [ 54, 2 ], [ 108, 1 ] ],
+    "intrinsic_overlap54_fibres": true,
+    "skew_line_matchings": 540,
+    "selector_transport_group": "S3",
+    "skew_quadrangles": 59670,
+    "selector_holonomy_order_profile": [ [ 1, 11070 ], [ 2, 29160 ], [ 3, 19440 ] ],
+    "flat_product_holonomy_order_profile": [[1,59670]]
+  },
+  "verdict": {
+    "bare_fibre_bijection": "EXISTS noncanonically as a bijection of three-element sets",
+    "natural_psp_equivariant_bijection": "REFUTED by orbit decomposition 120 versus 40+40+40, stabilizers 216 versus 648, and character norms 5 versus 27",
+    "overlap_scheme_bijection_to_flat_product": "REFUTED by curved S3 holonomy versus flat identity holonomy",
+    "constructive_salvage": "Externally equip P1(F2) with the selector line-stabilizer action K->S3 and induce G x_K P1(F2); this recovers G/H but imports selector monodromy rather than deriving it from Pass332"
+  },
+  "honesty_boundary": [
+    "Pass332 supplies three global PSp-stable lattice leaves and a commuting Eisenstein C3, not the selector line-dependent S3 transport",
+    "The probe does not construct an integral reflection completing the Pass332 C3 to the selector S3",
+    "The probe identifies the exact missing local-system action; it does not claim a physical phase or chirality identification"
+  ],
+  "checks": {
+    "selector_generators_have_unique_overlap_preserving_lifts": true,
+    "selector_is_transitive_psp_gset_of_degree_120": true,
+    "selector_subdegrees_are_1_2_27_36_54": true,
+    "actual_bundle_has_stabilizer_chain_25920_648_216": true,
+    "line_stabilizer_acts_as_full_s3_on_selector_fibre": true,
+    "actual_selector_is_exact_coset_bundle_g_over_h_to_g_over_k": true,
+    "actual_selector_has_no_nontrivial_equivariant_deck_group": true,
+    "pass332_has_three_global_psp_fixed_leaves": true,
+    "pass332_eisenstein_scalar_is_singer_three_cycle": true,
+    "pass332_binary_commutant_supplies_only_external_c3_deck": true,
+    "natural_pass332_bundle_is_three_disjoint_line_orbits": true,
+    "adjoining_eisenstein_deck_gives_psp_times_c3_not_selector": true,
+    "no_psp_equivariant_bijection_product_to_selector": true,
+    "same_line_fibres_are_intrinsic_overlap54_components": true,
+    "actual_and_flat_models_have_same_local_overlap_row_counts": true,
+    "actual_skew_transport_generates_full_s3": true,
+    "actual_selector_connection_has_all_holonomy_orders": true,
+    "flat_pass332_product_connection_has_only_identity_holonomy": true,
+    "no_overlap_scheme_bijection_to_flat_pass332_product": true,
+    "twisted_p1f2_bundle_requires_external_k_to_s3_action": true
+  }
+}

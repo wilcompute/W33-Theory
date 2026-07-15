@@ -17,9 +17,9 @@ searches ran and failed. A rediscovery always shares one thing with its original
 parameter, or sequence. If it hits, read those files *end to end* (Pass 286:
 shallow reads caused two retractions) before writing.
 
-Indexed **1305** files; **2454** distinctive results
+Indexed **1306** files; **2454** distinctive results
 (a token in >10 files identifies a topic, not a result, and is dropped).
-**878** appear in exactly one file — the sharpest signal.
+**876** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -116,12 +116,13 @@ Indexed **1305** files; **2454** distinctive results
 | `[1,1,1]` | `analysis/BT893_grade_yukawa_reflection_degeneracy.md` |
 | `[1,2,3]` | `analysis/BT1807_BT1809_breakthrough_summary.md` · `analysis/BT1810_BT1811_breakthrough_summary.md` · `analysis/BT1810_hesse_hinge_orbit.md` |
 | `[1,2,9]` | `analysis/BT876_gauge_sector_centralizer.md` |
+| `[1,3,2]` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `docs/index.html` · `w33_paper.tex` |
 | `[1,3,3]` | `analysis/BT937_tetracode_action_on_chain.md` |
 | `[1,3,8]` | `analysis/BT1035_ncg_inner_fluctuation_gap_audit.md` · `analysis/BT1037_inner_fluctuation_test_harness.md` · `analysis/BT1038_af_representation_candidate.md` |
 | `[1,7,7]` | `analysis/BT806_a7_ladder_antiflag.md` |
 | `[2,2,2]` | `PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE.md` · `analysis/2026-07-08_pass72_deep_structure.md` |
 | `[2,4,3]` | `analysis/BT1758_BT1760_execution_summary.md` · `analysis/BT1761_BT1763_execution_summary.md` |
-| `[3,1,2]` | `analysis/BT1859_css_subsystem_split_search.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` |
+| `[3,1,2]` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1859_css_subsystem_split_search.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
 | `[3,1,3]` | `analysis/BT1752_BT1754_execution_summary.md` · `analysis/BT1752_BT1757_execution_summary.md` |
 | `[3,2,1]` | `analysis/2026-07-08_pass72_cumulative_bijection.md` · `analysis/2026-07-08_pass72_deep_structure.md` · `analysis/2026-07-08_pass73_kneser_css_moonshine.md` |
 | `[3,5,9]` | `docs/index.html` |
@@ -270,7 +271,7 @@ Indexed **1305** files; **2454** distinctive results
 | `101101` | `analysis/BT1405_continuous_q6_path_router.md` |
 | `101325` | `W33_FOR_EVERYONE.tex` · `docs/index.html` · `toe_constants_companion.tex` · `toe_master_synthesis.tex` · *(+1)* |
 | `103090` | `manuscripts/tex/part23_continuum_lift.tex` · `part23_continuum_lift.tex` |
-| `103680` | `holonet_practical_implications.tex` · `photonic_holonet.tex` · `w33_paper.tex` |
+| `103680` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `docs/index.html` · `holonet_practical_implications.tex` · `photonic_holonet.tex` · *(+1)* |
 | `110101` | `analysis/BT1405_continuous_q6_path_router.md` |
 | `110111` | `analysis/BT1405_continuous_q6_path_router.md` · `photonic_holonet.tex` |
 | `110488` | `analysis/BT1000_k3_level2_feasibility_gate.md` |
@@ -385,7 +386,7 @@ Indexed **1305** files; **2454** distinctive results
 | `10785` | `docs/index.html` |
 | `10800` | `docs/index.html` |
 | `10980` | `analysis/BT1327_BT1328_q4_diamond_epoch_audit.md` · `analysis/BT1332_q4_diamond_paper.md` |
-| `11070` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `docs/index.html` |
+| `11070` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `docs/index.html` · `w33_paper.tex` |
 | `11095` | `photonic_holonet.tex` |
 | `11200` | `docs/index.html` · `manuscripts/tex/part17_gaussian_unification.tex` · `part17_gaussian_unification.tex` |
 | `11520` | `PASS87_THETA_LATTICE.md` · `analysis/BT1001_full_heat_supertrace_estimator_stack.md` · `analysis/BT992_cp2_k3_edgewise_level1_incidence.md` · `analysis/BT993_edgewise_density_recurrences.md` · *(+1)* |
@@ -451,7 +452,7 @@ Indexed **1305** files; **2454** distinctive results
 | `19200` | `PASS75_ZETA_EQUIDISTRIBUTION.md` · `analysis/PASS53_parity_tablefree_promotion_review.md` · `docs/index.html` |
 | `19287` | `analysis/2026-07-10_levi_next5_v3.md` |
 | `19344` | `analysis/BT1000_k3_level2_feasibility_gate.md` · `analysis/BT993_edgewise_density_recurrences.md` · `analysis/BT998_cp2_level2_edgewise_rank_pipeline.md` |
-| `19440` | `analysis/BT1307_BT1309_holonet_latency_collision_pulse_budget.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1589_BT1591_oam_radial_lane_frontend.md` · `analysis/BT1590_full_witness_lane_sheet_compiler.md` · *(+1)* |
+| `19440` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1307_BT1309_holonet_latency_collision_pulse_budget.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1589_BT1591_oam_radial_lane_frontend.md` · *(+3)* |
 | `20086` | `analysis/BT1384_BT1386_maxsat_port_paper.md` |
 | `20160` | `W36_PAPER.tex` · `docs/index.html` |
 | `20440` | `analysis/W33_TWO_CONTINUA_symplectic_metric.md` · `w33_paper.tex` |
@@ -482,7 +483,7 @@ Indexed **1305** files; **2454** distinctive results
 | `27648` | `analysis/BT994_edgewise_hodge_laplacians.md` |
 | `27750` | `analysis/2026-07-08_pass75_uniqueness_constants_synthesis.md` |
 | `28800` | `docs/index.html` |
-| `29160` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `docs/index.html` |
+| `29160` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `docs/index.html` · *(+1)* |
 | `29524` | `analysis/2026-05-30_qutrit_projection_fiber_tower.md` |
 | `29957` | `analysis/2026-07-10_levi_next5_v3.md` |
 | `30240` | `PASS123_W33_AXIS_GLUE_E8_LIFT.md` |
@@ -528,12 +529,12 @@ Indexed **1305** files; **2454** distinctive results
 | `59050` | `analysis/W33_TWO_CONTINUA_symplectic_metric.md` |
 | `59292` | `analysis/W33_TWO_CONTINUA_symplectic_metric.md` |
 | `59536` | `analysis/W33_TWO_CONTINUA_symplectic_metric.md` |
-| `59670` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `docs/index.html` |
+| `59670` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `docs/index.html` · `w33_paper.tex` |
 | `61011` | `analysis/2026-07-08_pass74_stabilizers_w33_parent.md` |
 | `61181` | `analysis/BT732_selector_sibling_exports_certificate.md` |
 | `61440` | `docs/index.html` · `w33_paper.tex` |
 | `61560` | `analysis/BT1242_four_transvection_regime_classifier.md` · `analysis/BT1244_four_transvection_regression.md` |
-| `62208` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `w33_paper.tex` |
+| `62208` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `w33_paper.tex` |
 | `62600` | `docs/index.html` · `manuscripts/tex/part5_unified_breakthrough.tex` · `w33_paper.tex` |
 | `64000` | `photonic_holonet.tex` |
 | `65025` | `analysis/BT941_compiled_exhaustive_search_engine.md` · `analysis/BT944_bitset_recursion_search.md` |
@@ -906,9 +907,9 @@ Indexed **1305** files; **2454** distinctive results
 | `1364` | `analysis/BT1364_BT1366_q6_phase_2160_clock_lifts.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · `docs/index.html` |
 | `1365` | `analysis/BT1364_BT1366_q6_phase_2160_clock_lifts.md` · `analysis/BT1598_BT1600_full_witting_cycle.md` · `analysis/BT1599_same_ray_phase_sheet_weld.md` · `docs/index.html` |
 | `1366` | `analysis/BT1364_BT1366_q6_phase_2160_clock_lifts.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · `docs/index.html` |
-| `1367` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · `analysis/BT1504_BT1506_orbit_traces_splicer.md` · *(+1)* |
+| `1367` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · *(+3)* |
 | `1368` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT797_fractal_consensus_protocol.md` · `docs/index.html` |
-| `1369` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · `docs/index.html` |
+| `1369` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · *(+1)* |
 | `1370` | `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1373_BT1375_synchronization_packet_operator_lifts.md` · `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · *(+2)* |
 | `1371` | `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1373_BT1375_synchronization_packet_operator_lifts.md` · `analysis/BT1405_continuous_q6_path_router.md` · `analysis/BT1413_BT1415_toroidal_q4_dual_port_syndrome.md` · *(+3)* |
 | `1372` | `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT1373_BT1375_synchronization_packet_operator_lifts.md` · `analysis/BT1378_BT1380_runtime_contracts.md` · `docs/index.html` |
@@ -1726,7 +1727,6 @@ Indexed **1305** files; **2454** distinctive results
 | `8640` | `w33_paper.tex` |
 | `8730` | `docs/index.html` |
 | `8869` | `docs/index.html` |
-| `8906` | `docs/index.html` |
 | `8938` | `analysis/2026-06-23_full_commit_analysis.md` |
 | `8984` | `docs/index.html` |
 | `9009` | `docs/index.html` |
@@ -1813,7 +1813,6 @@ Indexed **1305** files; **2454** distinctive results
 | `116` | `PASS_116_SNF_ALL28.md` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/BT1865_BT1868_summary.md` · `analysis/BT1865_css_commutation_matrix.md` · *(+6)* |
 | `118` | `PASS117_122_E8_LATTICE_HOPF_SYNTHESIS.md` · `analysis/2026-07-10_levi_next5_v4.md` · `analysis/BT1068_P22_projector_template.md` · `docs/index.html` |
 | `119` | `PAPER_SECTION5_MODULAR.tex` · `PASS117_122_E8_LATTICE_HOPF_SYNTHESIS.md` · `analysis/BT1068_P22_projector_template.md` · `docs/index.html` · *(+2)* |
-| `124` | `PAPER_SECTION5_MODULAR.tex` · `PASS124_SYMPLECTIC_SP82.md` · `analysis/BT1852_BT1855_summary.md` · `analysis/BT1855_holonet_w33_k12_synthesis.md` · *(+6)* |
 | `131` | `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/BT648_canonical_s4_orbit_selector.md` · `docs/index.html` |
 | `133` | `W36_PAPER.tex` · `analysis/2026-05-18_metric_pell_exceptional_lift.md` · `analysis/BT1405_continuous_q6_path_router.md` · `docs/index.html` · *(+5)* |
 | `138` | `analysis/BT1068_P22_projector_template.md` · `analysis/BT1677_gauge_bridge_survival_metric.md` · `docs/index.html` · `w33_paper.tex` |
@@ -1838,7 +1837,7 @@ Indexed **1305** files; **2454** distinctive results
 | `165` | `docs/index.html` · `w33_paper.tex` |
 | `166` | `docs/index.html` · `w33_paper.tex` |
 | `167` | `PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md` · `analysis/BT1003_ci_status_probe.md` · `docs/index.html` · `w33_paper.tex` |
-| `170` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `analysis/THE_SELECTION_LAYER.md` · *(+3)* |
+| `170` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · *(+4)* |
 | `171` | `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `analysis/2026-07-10_levi_next5.md` · `analysis/BT836_gc_hemicells_in_spreads.md` · `docs/index.html` · *(+1)* |
 | `172` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · `analysis/BT1260_cross_regime_labelled_geodesic_comparison.md` · *(+5)* |
 | `176` | `PASS176_INCIDENCE_FIXED_LINE_E8_BRIDGE.md` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · `analysis/2026-07-10_levi_five_frontiers.md` · *(+6)* |
@@ -1876,7 +1875,7 @@ Indexed **1305** files; **2454** distinctive results
 | `218` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `docs/index.html` · `holonet_practical_implications.tex` · `photonic_holonet.tex` · *(+1)* |
 | `219` | `w33_submission.tex` |
 | `220` | `BT412_TIER_TABLE.md` · `BT424_PRL_UPDATE.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT1212_materialized_z2_s3_summary.md` · *(+3)* |
-| `221` | `analysis/BT1801_BT1803_nullspace_fibre_orbit.md` · `docs/index.html` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` · `w33_paper.tex` |
+| `221` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1801_BT1803_nullspace_fibre_orbit.md` · `docs/index.html` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` · *(+1)* |
 | `223` | `analysis/THE_SELECTION_LAYER.md` |
 | `226` | `analysis/2026-07-10_levi_five_frontiers.md` · `docs/index.html` · `w33_paper.tex` |
 | `227` | `analysis/BT1834_BT1836_summary.md` · `analysis/BT1834_correlated_error_stress.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · *(+2)* |
@@ -1922,7 +1921,7 @@ Indexed **1305** files; **2454** distinctive results
 | `278` | `w33_paper.tex` |
 | `279` | `analysis/W33_HONEST_SYNTHESIS.md` · `w33_paper.tex` |
 | `281` | `analysis/BT1473_scirp_prefilled_transcription_packet.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `formal/W33/RankLaw.lean` · `w33_paper.tex` |
-| `282` | `photonic_holonet.tex` |
+| `282` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `photonic_holonet.tex` |
 | `283` | `analysis/2026-07-10_levi_next5_v2.md` · `analysis/W33_HONEST_SYNTHESIS.md` |
 | `285` | `analysis/BT1473_scirp_prefilled_transcription_packet.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `w33_paper.tex` |
 | `286` | `analysis/BT1837_BT1839_summary.md` · `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `w33_paper.tex` |
@@ -1959,12 +1958,13 @@ Indexed **1305** files; **2454** distinctive results
 | `327` | `analysis/BT945_selector_appendix_compile_record.md` · `analysis/THE_SELECTION_LAYER.md` · `w33_paper.tex` |
 | `328` | `analysis/THE_SELECTION_LAYER.md` |
 | `329` | `PASS88_SMITH_GROUP.md` · `analysis/THE_SELECTION_LAYER.md` |
-| `331` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `W33_FOR_EVERYONE.tex` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
-| `332` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `toe_constants_companion.tex` · *(+2)* |
-| `333` | `W33_FOR_EVERYONE.tex` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · `docs/index.html` · *(+3)* |
-| `334` | `analysis/BT1745_June24_25_commit_audit.md` · `docs/index.html` |
-| `335` | `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `docs/index.html` |
-| `336` | `W33_FOR_EVERYONE.tex` · `analysis/2026-05-31_heawood_eight_systems_singer_sylow.md` · `analysis/2026-05-31_heawood_eight_toroidal_face_systems.md` · `analysis/2026-05-31_heawood_toroidal_orbit_correction.md` · *(+3)* |
+| `331` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
+| `332` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+3)* |
+| `333` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · *(+5)* |
+| `334` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
+| `335` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
+| `336` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-31_heawood_eight_systems_singer_sylow.md` · `analysis/2026-05-31_heawood_eight_toroidal_face_systems.md` · *(+6)* |
+| `337` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `w33_paper.tex` |
 | `338` | `docs/index.html` |
 | `339` | `analysis/BT1260_cross_regime_labelled_geodesic_comparison.md` · `analysis/BT1263_regression_through_bt1261.md` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` |
 | `340` | `analysis/BT1056_chain_native_Q_operator.md` · `docs/index.html` |
@@ -1985,7 +1985,7 @@ Indexed **1305** files; **2454** distinctive results
 | `356` | `analysis/BT1767_BT1769_summary.md` · `analysis/BT1867_rule110_glider_diagnostics.md` |
 | `358` | `analysis/BT1867_rule110_glider_diagnostics.md` · `docs/index.html` |
 | `359` | `analysis/2026-07-07_pass69_three_perpendicular_tracks.md` · `docs/index.html` · `w33_paper.tex` |
-| `361` | `analysis/2026-07-08_pass74_stabilizers_w33_parent.md` · `analysis/BT1364_BT1366_q6_phase_2160_clock_lifts.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `docs/index.html` |
+| `361` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/2026-07-08_pass74_stabilizers_w33_parent.md` · `analysis/BT1364_BT1366_q6_phase_2160_clock_lifts.md` · `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · *(+1)* |
 | `363` | `W33_FOR_EVERYONE.tex` · `analysis/BT1233_sp43_word_metric_tomography_protocol.md` · `analysis/BT1236_clifford_word_metric_integration_manifest.md` · `analysis/BT1237_word_metric_recovery_bands.md` · *(+3)* |
 | `365` | `w33_paper.tex` |
 | `366` | `analysis/2026-07-10_levi_next5.md` · `w33_paper.tex` |
@@ -2362,7 +2362,7 @@ Indexed **1305** files; **2454** distinctive results
 | `859` | `analysis/BT859_bell_compass_parabolic_router.md` · `analysis/BT866_h2_oriented_irreducible_decomposition.md` · `analysis/BT867_cache_split_transport_nonsplit_boundary.md` · `docs/index.html` · *(+1)* |
 | `860` | `analysis/BT860_bell_shell_register_arithmetic.md` · `analysis/BT987_cp2_k3_edgewise_conversion.md` · `analysis/BT989_edgewise_density_constants.md` · `analysis/BT990_r3_fat_tower_paper_patch.md` · *(+6)* |
 | `865` | `analysis/BT1373_BT1375_synchronization_packet_operator_lifts.md` · `analysis/BT865_dual_torsor_steinberg_compiler.md` · `analysis/BT866_h2_oriented_irreducible_decomposition.md` · `analysis/BT992_cp2_k3_edgewise_level1_incidence.md` · *(+3)* |
-| `866` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `analysis/BT866_h2_oriented_irreducible_decomposition.md` · `analysis/BT867_cache_split_transport_nonsplit_boundary.md` · `docs/index.html` · *(+2)* |
+| `866` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT866_h2_oriented_irreducible_decomposition.md` · `analysis/BT867_cache_split_transport_nonsplit_boundary.md` · *(+3)* |
 | `867` | `analysis/BT867_cache_split_transport_nonsplit_boundary.md` · `docs/index.html` · `photonic_holonet.tex` |
 | `868` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT868_joint_generation_chirality_grading.md` · `analysis/BT869_involution_chirality_classes.md` · `analysis/BT886_standard_model_spine.md` · *(+2)* |
 | `871` | `W33_FOR_EVERYONE.tex` · `analysis/BT871_berry_phase_qcd_center.md` · `analysis/BT880_generation_is_gauge_center.md` · `docs/index.html` · *(+1)* |
@@ -2453,7 +2453,7 @@ Indexed **1305** files; **2454** distinctive results
 | `969` | `docs/index.html` |
 | `970` | `analysis/BT970_final_stack_update.md` · `docs/index.html` |
 | `971` | `analysis/BT971_nontrivial_lane_transport_maps.md` · `docs/index.html` |
-| `972` | `analysis/BT1828_BT1830_execution_summary.md` · `analysis/BT972_final_paper_compile_workflow.md` · `docs/index.html` |
+| `972` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1828_BT1830_execution_summary.md` · `analysis/BT972_final_paper_compile_workflow.md` · `docs/index.html` · *(+1)* |
 | `973` | `analysis/BT973_rail_generation_phase_theorem.md` · `analysis/BT974_direct_final_paper_build.md` · `docs/index.html` |
 | `974` | `analysis/BT974_direct_final_paper_build.md` · `analysis/BT979_local_build_attempt_manifest.md` · `docs/index.html` |
 | `975` | `analysis/BT975_full_d8_failure_modes.md` · `analysis/BT978_full_d8_orbit_abi.md` · `docs/index.html` |

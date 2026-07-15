@@ -85,11 +85,16 @@ incidence `H10`. Over characteristic zero the vector is `5a+5a*`, and its exteri
 algebra gives the two conjugate half-spins
 `S+=1+10a+5b` and `S-=5a+10b+1`.
 
-**What still blocks the physical conclusion:** the lift is PSp-equivariant but
-not yet PGSp-equivariant or quadratic-isometric; no integral spinor lattice is
-built; and nothing canonically selects `S+` over `S-` or proves that either is a
-physical Standard-Model generation. The change-of-characteristic map is now an
-object. The physical identification remains an antecedent.
+**What still blocks the physical conclusion, after Passes 333--337:** Pass 332's
+map was not yet PGSp-equivariant, but Pass 333 now supplies its explicit integral
+outer reflection and global `S3`. Pass 335 proves that the polar form lifts
+unimodularly and symplectically on all three H10 leaves, while also proving that
+no stable class is symmetric-even and unimodular. Pass 336 builds both integral
+half-spin lattices as perfect 2-adic duals. What remains is not existence: no
+canonical quadratic refinement or half-spin chirality is selected, and no
+leafwise Clifford functor or physical Standard-Model identification is built.
+The change-of-characteristic map is an object. The physical identification
+remains an antecedent.
 
 ### 2.3 Selection B (Pass 227) — the exceptional rank
 
@@ -197,20 +202,35 @@ The same characteristic-zero module gives the split vector `5a+5a*` and the
 standard exterior half-spins `1+10a+5b` and `5a+10b+1`. That is the explicit
 change-of-characteristic object Pass 170 requested.
 
-### 5.3 The live boundary
+### 5.3 The live boundary after Passes 333--337
 
-The mathematical bridge is built at the PSp module level. Five boundaries remain:
+Four of the old boundaries have now been executed rather than renamed:
 
-1. The lift is not yet extended to the PGSp outer controller.
-2. Raw coefficient conjugation inverts `omega` but does not normalize the chosen
-   ATLAS image; the predicted outer `S3`, rather than `C6`, remains unbuilt.
-3. The module intertwiner is not a quadratic isometry: the transported H10 form
-   is alternating, while the halved integral lattice form is odd of determinant
-   `3^5`.
-4. No integral Clifford or half-spin lattice is constructed.
-5. Neither chirality is canonically selected or identified with a physical
-   Standard-Model generation.
+- Pass 333 freezes an integral `10x10` outer involution `T`, proves
+  `<U4(2),T>=U4(2).2`, and gives the exact `S3` action on the three leaves.
+- Pass 335 exhausts the stable 2-adic complex at five classes (three triangles
+  sharing one spine), builds the unimodular symplectic polar lift, and proves the
+  symmetric/quadratic lattice obstruction on every class. Kirschmer's
+  symplectic classification already gives closely related global lattice-class
+  counts (two for the Eisenstein normalizer, five for a related subgroup), so
+  the bare count is externally anticipated; the local incidence and
+  polar/refinement ledger are the scoped contribution.
+- Pass 336 constructs invariant rank-32 integral lattices for both half-spins;
+  their wedge pairing has Smith diagonal `1^16,3^16` and is perfect at 2.
+- Pass 337 proves that `1+epsilon` gives the split endpoint deck, not the
+  nonsplit signed-E8 Schur/Bockstein class.
 
-Those are named maps and falsifiable algebraic questions. More rank-law or code-
-parameter passes would return to the rediscovery failure this document was written
-to stop.
+Pass 334 also prevents a new over-read. The 120 selector sheets are the curved
+transitive bundle `G/H -> G/K`, with full line-stabilizer `S3` monodromy and
+trivial equivariant deck centralizer. The Pass-332 leaf torsor is the flat product
+of 40 lines with three globally fixed leaves. It has the same local overlap row
+profile but the wrong orbit decomposition and trivial quadrangle holonomy. Thus
+the global outer `S3` does **not** by itself identify lattice leaves with selector
+phases. The missing object is a line-dependent `S3` lattice transport.
+
+The live mathematical boundary is now threefold: construct or obstruct that
+curved lattice transport; decide whether any additional datum canonically chooses
+one of the two plus quadratic refinements and one half-spin chirality; and build a
+leafwise integral Clifford functor if such a choice exists. None of those is a
+physical Standard-Model identification. More rank-law or code-parameter passes
+would return to the rediscovery failure this document was written to stop.

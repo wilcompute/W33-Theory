@@ -13102,4 +13102,133 @@ quadratic-isometric lattice lift. No integral half-spin lattice is constructed,
 and the lift is presently $\PSp(4,3)$-equivariant rather than
 $\mathrm{PGSp}(4,3)$-equivariant.
 
+\section{Outer Symmetry, the Polarization Complex, and Extension Separation
+  (Passes 333--337)}
+
+This section supersedes the open-map statements at the end of the preceding
+section.  Its complete reproducible ledger is
+\texttt{PASS333\_337\_OUTER\_POLARIZATION\_SPIN\_BAER\_SYNTHESIS.md}.
+The selector-leaf bundle comparison below also prevents the global outer
+symmetry from being over-read as the physical selector connection.
+
+\paragraph{Pass 333 --- the outer reflection is integral.}
+In the rational restriction of the standardized ATLAS $5_a$, GAP constructs an
+explicit $10\times10$ integral matrix $T$ satisfying
+\[
+ T^2=1,\qquad \det T=-1,\qquad
+ \langle U_4(2),T\rangle\cong U_4(2).2=W(E_6).
+\]
+It normalizes both displayed generators by checked words and obeys
+\[
+ T^{-1}\omega T=\omega^{-1},\qquad
+ \langle\omega,T\rangle\cong S_3.
+\]
+On the three index-two lattice leaves, $\omega$ acts as $[3,1,2]$ and $T$ as
+$[1,3,2]$, with exact unimodular maps between the corresponding lattices.
+Moreover $T=R(S)C$, where $C$ is Eisenstein coefficient conjugation and
+$S\in\operatorname{GL}_5(\ZZ[\omega])$ has determinant $-1$.  The six
+norm-one Eisenstein multiples of $T$ give the three transpositions of
+$\PG(1,2)$ exactly twice each.  Thus the formerly predicted outer $S_3$ is an
+object, not an order count.
+
+\paragraph{Pass 334 --- equal fibres do not give the selector bundle.}
+Let $G=\PSp(4,3)$ act on the $120$ selector sheets.  The intrinsic overlap-$54$
+relation gives $40$ fibres of size three and an exact stabilizer chain
+\[
+ |G|=25920>|K|=648>|H|=216,
+ \qquad X=G/H\longrightarrow G/K,\quad Hg\longmapsto Kg.
+\]
+The action of $K$ on a fibre is the full $S_3$, with kernel of order $108$,
+and $N_G(H)/H$ is trivial.  By contrast, the Pass-332 leaf product
+$(G/K)\times\PG(1,2)$ has three $40$-orbits; $G$ fixes every leaf globally, and
+the Eisenstein $C_3$ is an external commuting deck action.  Hence there is no
+natural $G$-equivariant bijection.  The obstruction survives after forgetting
+the action: both models have the same local overlap row profile, but the
+selector connection has holonomy-order distribution
+\[
+ 1^{11070}\,2^{29160}\,3^{19440},
+ \]
+whereas the flat leaf product has $1^{59670}$.  These holonomy counts are the
+previous BT1367 result reused here; the new result is their exact comparison
+with the Pass-332 lattice torsor.  The constructive residue is precise:
+$G\times_K\PG(1,2)\cong G/H$ only after importing the selector's nontrivial
+$K\to S_3$ action.  The missing map is therefore a line-dependent $S_3$
+lattice connection.
+
+\paragraph{Pass 335 --- the polar lift exists, the quadratic lift does not.}
+Expanding every invariant-submodule direction closes the complete
+$U_4(2)$-stable $2$-adic lattice complex at five homothety classes
+\[
+ \{L,R,L_1,L_2,L_3\}.
+\]
+It is three triangles $(L,R,L_i)$ sharing the spine $(L,R)$; its index-two
+skeleton is $K_{2,3}$, and $\omega$ cycles the three $L_i$.  The bare count
+is not presented as novel: Kirschmer's classification of finite
+symplectic matrix groups reports two global lattice-isomorphism classes for
+the corresponding $U_4(2)$ Eisenstein normalizer and five for a related
+subgroup.\footnote{M.~Kirschmer, \emph{Finite symplectic matrix groups},
+pp.~112--113,
+\url{https://www.math.rwth-aachen.de/~Markus.Kirschmer/symplectic/thesis.pdf}.}
+Those are global $\ZZ G$-module classes rather than the local $2$-adic
+homothety incidence complex and form/refinement data computed here.  The unique
+invariant symmetric form is even but $2$-singular on $L$ and $R$, with
+primitive determinants $62208$ and $972$, while every $L_i$ is unimodular but
+odd, with determinant $243=3^5$.  No stable class is both even and unimodular.
+Independently, the rational discriminant has unit $3\pmod8$, whereas a rank-ten
+even plus lattice has unit $7\pmod8$, so a quadratic-isometric lift is globally
+obstructed inside this rational representation.
+
+The missing positive half is an invariant alternating form.  Its space is
+one-dimensional and, for the symmetric form $S$, it satisfies the exact
+Hermitian relation
+\[
+ A=-\frac{(2\omega+1)S}{3},\qquad \det(A|_L)=2^8.
+\]
+On every $H_{10}$ leaf the primitive alternating form has determinant one and
+full rank modulo two.  Thus the $H_{10}$ polar form \emph{does} lift
+symplectically.  It has exactly two invariant quadratic refinements, both plus
+type with $528$ zeros; their difference is polar-dual to the unique isotropic
+socle, and the nontrivial $H_{10}$ module automorphism swaps them.  The datum
+that fails to lift canonically is the quadratic refinement, not the polar form.
+
+\paragraph{Pass 336 --- the integral half-spins exist.}
+The even and odd exterior powers of $5_a$ admit explicit invariant rank-$32$
+$\ZZ$-lattices.  Their reductions modulo two have the same composition-factor
+profile $1^4+6^2+8^2$ but different submodule censuses; their equivariant Hom
+space has dimension $12$ and contains no rank-$32$ map.  Hence the reductions
+are dual but nonisomorphic, although the rational restrictions are isomorphic.
+The transported trace--wedge pairing has Smith diagonal
+\[
+ 1^{16},3^{16},\qquad \det=3^{16},\qquad \operatorname{rank}_{\FF_2}=32,
+\]
+so it is a perfect $2$-adic duality.  This closes abstract integral half-spin
+existence.  It does not produce a leafwise integral Clifford functor: the
+symmetric $H_{10}$ leaves remain odd, and the two polar refinements remain
+unselected.
+
+\paragraph{Pass 337 --- $\varepsilon$ is not the signed-$E_8$ class.}
+The rank-one square-zero endomorphism of $H_{10}=1|8|1$ is exactly the
+top-to-socle map; both adjacent module extensions are nonsplit.  But adjoining
+the central involution $1+\varepsilon$ to the full logical image gives
+\[
+ C_2\times\PGSp(4,3),\quad |\cdot|=103680,\quad
+ |[\cdot,\cdot]|=25920,\quad (\cdot)_{\rm ab}=C_2^2.
+\]
+The signed-$E_8$ pullback, anchored independently by the ATLAS group
+$2.U_4(2).2$, has the same order but derived subgroup $\Sp(4,3)$ of order
+$51840$ and abelianization $C_2$.  The two groups are therefore not isomorphic:
+$1+\varepsilon$ realizes the split endpoint deck, not the nonsplit
+signed-$E_8$ Schur/Bockstein class.  A nonsplit Yoneda extension of modules does
+not become a nonsplit central extension of groups.
+
+\paragraph{Current boundary.}
+Four old construction gaps are now closed or sharply resolved: the integral
+outer controller exists; the full stable lattice complex is classified; the
+symplectic polar and abstract integral half-spin lattices exist; and the two
+candidate $C_2$ extension classes are separated.  The selector comparison
+refutes the naive objectwise identification and names the next missing object,
+a curved line-dependent $S_3$ lattice transport.  No result here selects one
+quadratic refinement or half-spin chirality, identifies either with a physical
+generation, or derives a Standard-Model observable.
+
 \end{document}

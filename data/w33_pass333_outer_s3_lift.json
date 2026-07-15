@@ -1,0 +1,91 @@
+{
+  "schema": "w33.pass333.outer_s3_lift.gap.v1",
+  "status": "PASS",
+  "producer": "GAP + AtlasRep + exact rational and modular linear algebra",
+  "headline": "the Eisenstein C3 lattice torsor has an explicit integral outer reflection, so its controller is exactly S3",
+  "representation": {
+    "inner_group": "U4(2)=PSp(4,3), order 25920",
+    "Atlas_anchor": "U42G1-Ar5aB0 over Z[omega]",
+    "rational_module": "restriction of scalars of 5a, dimension 10",
+    "basis_convention": "each coordinate uses row pair [a,b] for a+b*omega"
+  },
+  "frozen_outer_reflection_T": [[1,0,1,0,1,1,0,0,0,0],[-1,-1,-1,-1,0,-1,0,0,0,0],[0,0,0,0,-1,-1,0,0,0,0],[0,0,0,0,0,1,0,0,0,0],[0,0,-1,-1,0,0,0,0,0,0],[0,0,0,1,0,0,0,0,0,0],[0,0,1,1,0,1,0,1,0,0],[0,0,0,-1,1,0,1,0,0,0],[0,0,-1,-1,0,-1,0,0,0,1],[0,0,0,1,-1,0,0,0,1,0]],
+  "semilinear_lift": {
+    "formula": "T=R(S)C, where C is coefficient conjugation and R is restriction of scalars",
+    "entry_encoding": "[a,b] means a+b*omega",
+    "S": [[[1,0],[1,0],[0,-1],[0,0],[0,0]],[[0,0],[0,0],[0,1],[0,0],[0,0]],[[0,0],[0,1],[0,0],[0,0],[0,0]],[[0,0],[0,-1],[-1,-1],[-1,-1],[0,0]],[[0,0],[0,1],[1,1],[0,0],[-1,-1]]],
+    "determinant_S": -1
+  },
+  "generator_automorphism": {
+    "alpha_a": "a",
+    "alpha_b": "(b^-1*a)^2*b^2*a*b^-1*(b^-1*a)^2*b^2*a",
+    "equations": "T^-1*a*T=alpha_a and T^-1*b*T=alpha_b"
+  },
+  "group_ledger": {
+    "inner_order": 25920,
+    "outer_order": 51840,
+    "derived_order": 25920,
+    "outer_center_order": 1,
+    "T_order": 2,
+    "T_determinant": -1,
+    "Atlas_outer_identification": "U4(2).2=W(E6)",
+    "omega_T_group": "S3, order 6",
+    "relation": "T^-1*omega*T=omega^-1"
+  },
+  "commutant_ledger": {
+    "inner": "Q(omega), basis {I,omega}",
+    "outer": "Q",
+    "outer_intertwiner_space": "Q(omega)*T"
+  },
+  "lattice_leaf_ledger": {
+    "base_submodule_dimensions": [0,8,9,9,9,10],
+    "omega_permutation": [3,1,2],
+    "T_permutation": [1,3,2],
+    "T_leaf_map_determinants": [-1,-1,-1],
+    "interpretation": "omega is the 3-cycle and T fixes one leaf while swapping the other two"
+  },
+  "reflection_family": {
+    "norm_formula": "((u+v*omega)T)^2=(u^2-u*v+v^2)I",
+    "unit_pairs": [[1,0],[0,1],[-1,0],[0,-1],[1,1],[-1,-1]],
+    "leaf_permutations": [[1,3,2],[2,1,3],[1,3,2],[2,1,3],[3,2,1],[3,2,1]],
+    "reading": "six Eisenstein units give six integral outer involutions; signs coincide modulo two, leaving the three transpositions of P1(F2)"
+  },
+  "honest_boundary": [
+    "This closes the outer PGSp/W(E6) module lift and the S3 action on the three integral polarization leaves.",
+    "It does not repair Pass 332's mismatch between the odd determinant-3^5 lattice forms and the alternating plus-type H10 form.",
+    "It does not construct integral Clifford or half-spin lattices.",
+    "It does not identify a lattice leaf or half-spin sector with a physical generation or Standard Model field."
+  ],
+  "check_count": 29,
+  "checks": {
+    "Atlas_5a_anchor": true,
+    "inner_U4_2_order": true,
+    "omega_is_integral_central_order_three": true,
+    "frozen_reflection_is_integral_unimodular_involution": true,
+    "first_generator_is_fixed": true,
+    "second_generator_has_explicit_word": true,
+    "reflection_normalizes_inner_group": true,
+    "reflection_is_not_inner_matrix": true,
+    "outer_group_has_order_51840": true,
+    "outer_derived_group_is_inner_U4_2": true,
+    "outer_group_has_trivial_center": true,
+    "outer_group_is_Atlas_U4_2_dot_2": true,
+    "reflection_inverts_omega": true,
+    "omega_reflection_group_is_S3": true,
+    "inner_commutant_is_Q_omega": true,
+    "outer_commutant_reduces_to_Q": true,
+    "outer_intertwiner_space_is_Q_omega_times_T": true,
+    "base_mod2_submodule_profile": true,
+    "three_lattice_head_lines": true,
+    "omega_cycles_lattice_leaves": true,
+    "reflection_fixes_one_leaf_and_swaps_two": true,
+    "leaf_permutations_obey_S3_relation": true,
+    "reflection_maps_index_two_lattices_exactly": true,
+    "Eisenstein_norm_one_solutions_are_six_units": true,
+    "all_six_unit_reflections_are_outer_involutions": true,
+    "six_reflections_reduce_to_three_transpositions_twice": true,
+    "all_six_reflections_map_lattice_leaves_exactly": true,
+    "semilinear_matrix_is_compact_Eisenstein_lift": true,
+    "outer_coset_trace_is_zero": true
+  }
+}

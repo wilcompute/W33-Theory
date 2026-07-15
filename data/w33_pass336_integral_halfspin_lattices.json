@@ -1,0 +1,56 @@
+{
+  "schema": "w33.pass336.integral_halfspin_lattices.gap.v1",
+  "status": "PASS",
+  "headline": "integral rank-32 half-spin lattices exist and are perfect 2-adic duals, but the three H10 leaves remain odd and supply no certified Clifford attachment",
+  "integral_halfspins": {
+    "ranks": [32,32],
+    "composition_factors_mod2": [ [ 1, 4 ], [ 6, 2 ], [ 8, 2 ] ],
+    "plus_submodule_dimension_census": [ [ 0, 1 ], [ 1, 15 ], [ 2, 35 ], [ 3, 15 ], [ 4, 1 ], [ 6, 3 ], [ 7, 45 ], [ 8, 105 ], [ 9, 45 ], [ 10, 4 ], [ 11, 3 ], [ 12, 2 ], [ 13, 15 ], [ 14, 35 ], [ 15, 15 ], [ 16, 4 ], [ 17, 9 ], [ 18, 3 ], [ 20, 1 ], [ 21, 15 ], [ 22, 39 ], [ 23, 27 ], [ 24, 5 ], [ 30, 1 ], [ 31, 3 ], [ 32, 1 ] ],
+    "minus_submodule_dimension_census": [ [ 0, 1 ], [ 1, 3 ], [ 2, 1 ], [ 8, 5 ], [ 9, 27 ], [ 10, 39 ], [ 11, 15 ], [ 12, 1 ], [ 14, 3 ], [ 15, 9 ], [ 16, 4 ], [ 17, 15 ], [ 18, 35 ], [ 19, 15 ], [ 20, 2 ], [ 21, 3 ], [ 22, 4 ], [ 23, 45 ], [ 24, 105 ], [ 25, 45 ], [ 26, 3 ], [ 28, 1 ], [ 29, 15 ], [ 30, 35 ], [ 31, 15 ], [ 32, 1 ] ],
+    "Hom_mod2_dimension": 12,
+    "Hom_mod2_rank_spectrum": [ 0, 1, 2, 8, 9, 10, 16, 17, 18 ],
+    "verdict": "rationally isomorphic after restriction of scalars; integrally distinct at 2 because their mod-2 reductions are dual and nonisomorphic"
+  },
+  "wedge_pairing": {
+    "Smith_diagonal": [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ],
+    "determinant": 43046721,
+    "rank_mod2": 32,
+    "reading": "cokernel (Z/3)^16; the pairing is perfect over Z_2 and proves exact mod-2 duality"
+  },
+  "leaf_attachment_boundary": {
+    "leaf_determinants": [ 243, 243, 243 ],
+    "odd_diagonal_weights_mod2": [ 5, 5, 5 ],
+    "verdict": "all three Li have odd nonalternating reduced forms, so the abstract half-spin lattices are not yet functorial Clifford images of the H10 leaves"
+  },
+  "honest_boundary": [
+    "integral invariant lattices for both half-spin representations are now explicit",
+    "their perfect 2-adic duality does not select one chirality",
+    "no even quadratic lattice among the three certified H10 leaves was found, so a leafwise Clifford functor remains obstructed",
+    "no physical fermion or Standard Model identification is inferred"
+  ],
+  "check_count": 22,
+  "checks": {
+    "Atlas_5a_anchor": true,
+    "halfspin_rational_dimensions": true,
+    "halfspin_image_orders": true,
+    "invariant_Z_lattices_exist": true,
+    "integral_generators_are_unimodular": true,
+    "exact_mod2_composition_profiles": true,
+    "mod2_submodule_censuses_are_distinct": true,
+    "mod2_Hom_dimension_twelve": true,
+    "mod2_halfspins_are_nonisomorphic": true,
+    "rational_restrictions_are_isomorphic": true,
+    "K_wedge_pairing_is_invariant": true,
+    "trace_wedge_pairing_is_integral_invariant": true,
+    "trace_wedge_Smith_is_one16_three16": true,
+    "trace_wedge_determinant_is_3_to_16": true,
+    "trace_wedge_is_perfect_at_two": true,
+    "mod2_halfspins_are_exact_duals": true,
+    "central_omega_integral_order_three": true,
+    "central_omega_commutes_with_inner_group": true,
+    "three_H10_leaf_forms_recomputed": true,
+    "three_halved_leaf_determinants_are_3_to_5": true,
+    "every_leaf_form_is_odd_mod_two": true,
+    "no_certified_even_leaf_for_Clifford_attachment": true
+  }
+}
