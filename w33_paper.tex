@@ -12807,4 +12807,68 @@ readily such a search manufactures a coincidence. The substrate's only genuine
 quadratic irrationality is $\sqrt{17}$, from the even-$q$ transfer matrix: a
 different field. With Pass 274, one more route to explaining Koide is closed.
 
+
+\section{Honest Synthesis and Errata (Passes 308--316)}
+
+This section consolidates the arc and, where earlier sections of this paper
+overstate their results, corrects them. It supersedes the framing of any earlier
+section it contradicts. The full ledger is
+\texttt{analysis/W33\_HONEST\_SYNTHESIS.md}.
+
+\paragraph{Errata.} Five claims made in earlier sections are withdrawn:
+\begin{itemize}
+\item ``$\sqrt{21}$ is absent from the substrate'' (Passes 279/285) is
+  \textbf{false}: it appears in the edge lengths of both Szilassi realizations
+  (Pass 286). The error was of scope --- those passes searched spectra and counts,
+  while the target was metric.
+\item ``$\sqrt{21}$ is the unique metric invariant of the Szilassi pole''
+  (Passes 290/291) is \textbf{withdrawn}: the realization space is continuous
+  even under $C_2$ symmetry, so $\sqrt{21}$ is a coordinate choice, not an
+  invariant (Passes 293/299).
+\item ``$\det B=|\mathbf F_2^4|$'' (Pass 275) is \textbf{refuted}: $\det B_3=76$,
+  not $3^4=81$; the $p=2$ agreement was a coincidence (Pass 281).
+\item ``Koide's field can never come from the substrate'' (Pass 300) is an
+  \textbf{over-read}: the theorem holds for one geometry, but the $q=3$ and $q=7$
+  rungs together give $\sqrt{6}\cdot\sqrt{14}=2\sqrt{21}$ (Pass 304).
+\item ``$\operatorname{Aut}(\text{Cs\'asz\'ar})=\mathrm{AGL}(1,7)$ is a genuine
+  tie to the substrate'' (Pass 305) is \textbf{deflated}: $7\nmid 51840$, so
+  $\mathrm{AGL}(1,7)$ does not embed in $\mathrm{PGSp}(4,3)$; the tie is
+  numerical only (Pass 309).
+\end{itemize}
+Two further statements were true but vacuous: the ``trace law''
+$\operatorname{Tr}(B_p)=\frac12(p^2+1)(p+2)-1$ restates a definition (Pass 287),
+and the reading $42=2q\Phi_6$ holds at $q=3$ only because $\Phi_6-1=6=2q$ there.
+
+\paragraph{Pass 313 --- a selection argument retracted.} Pass 308 presented the
+TBM-field containment as a third selection argument for characteristic~3. It is
+\emph{decorative}: Pass 225 ($2^{(q^2-1)/2}=16\iff q=3$) and Pass 227
+($\tfrac12(q^2+1)\le 8\iff q=3$) are each \emph{independently sufficient}, and the
+intersection $\{3\}$ is unchanged without Pass 308, which selects the family
+$q=3^{\text{odd}}$ (so $q=27$ passes it while failing both real selectors).
+
+\paragraph{Pass 314 --- the char-3 tower is a conjecture.} Pass 281 fitted a
+$2\times2$ transfer matrix to \emph{two} ranks ($\operatorname{rank}_3W(3,3)=25$
+and $\operatorname{rank}_3W(3,9)=425$), giving $\operatorname{Tr}=24$,
+$\det=76$, and predicting $\operatorname{rank}_3W(3,27)=8353$. But two points
+determine a $2\times2$ matrix up to similarity, so the fit is forced and the
+prediction carries the entire empirical content --- and it is untested. The char-2
+tower is not in this position: it was fitted at $t=1,2$ and then correctly
+predicted $t=3,4,5$, with $1890$ verified by construction. A validated mod-$p$
+elimination (checked against $\operatorname{rank}_3W(3,9)=425$) puts the $q=27$
+verification at ${\sim}120$ minutes; it is running.
+
+\paragraph{Pass 315 --- unbuilt objects.} A third failure mode, beyond coordinate
+artefacts and over-reads: claims that name no object. The corpus asserts that the
+Heawood clock is ``a coupled module'' of the machine while never specifying the
+map; Pass 310 found every obvious route obstructed (girth $6$ vs $8$; $7\nmid
+51840$; $14\nmid 80$; coupling edges destroy the field). Such a claim can be
+neither refuted nor used.
+
+\paragraph{Pass 311 --- the measured prior.} Five retractions, all from the
+metric/coordinate/over-read side; zero from the spectral, algebraic or
+representation-theoretic side, across ${\sim}12$ load-bearing claims. This is
+structural rather than luck: a rank, an eigenvalue multiplicity, an invariant
+factor and a branching rule are basis-free by construction, whereas a polyhedron
+arrives with a drawing and a matrix arrives with a basis.
+
 \end{document}

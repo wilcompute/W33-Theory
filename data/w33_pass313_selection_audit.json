@@ -1,0 +1,122 @@
+{
+  "schema": "w33.pass313.selection_audit.v1",
+  "status": "PASS",
+  "VERDICT": "Pass 308 is DECORATIVE. Each of Pass 225 (2^{(q^2-1)/2} = 16 <=> q = 3) and Pass 227 ((q^2+1)/2 <= 8 <=> q = 3 for odd q) is INDEPENDENTLY SUFFICIENT to force q = 3. Pass 308 selects the family {3, 27, 243, ...}, and the intersection of all three ({3}) equals the intersection of 225 and 227 alone ({3}). Removing 308 changes nothing, so calling it 'a third selection argument' overstates it.",
+  "selectors": {
+    "225 spinor selection": {
+      "condition": "2^{(q^2-1)/2} = 16",
+      "selects": [
+        3
+      ],
+      "sufficient_alone": true
+    },
+    "227 exceptional rank": {
+      "condition": "(q^2+1)/2 <= 8",
+      "selects": [
+        3
+      ],
+      "sufficient_alone": true
+    },
+    "308 TBM field": {
+      "condition": "sf(q) = 3",
+      "selects": [
+        3,
+        27,
+        243
+      ],
+      "sufficient_alone": false
+    }
+  },
+  "intersections": {
+    "all_three": [
+      3
+    ],
+    "225_and_227_only": [
+      3
+    ],
+    "308_contributes": false
+  },
+  "the_discriminating_case": {
+    "q": 27,
+    "passes_308": true,
+    "fails_225": "half-spinor = 2^364, not 16",
+    "fails_227": "rank SO(730) = 365 >> 8",
+    "meaning": "q=27 is exactly where 308 and the real selectors disagree, and the real selectors win"
+  },
+  "per_q": {
+    "3": {
+      "225_spinor_is_16": true,
+      "227_rank_le_8": true,
+      "308_TBM_field": true
+    },
+    "5": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "7": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "9": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "11": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "13": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "17": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "19": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "23": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "25": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    },
+    "27": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": true
+    },
+    "29": {
+      "225_spinor_is_16": false,
+      "227_rank_le_8": false,
+      "308_TBM_field": false
+    }
+  },
+  "what_308_does_still_show": "That the TBM field is NOT reached by q = 5, 7, 11, by any even q, or by q = 9 and 81 (even Frobenius degree). That is a real fact about the field ladder. It simply is not a SELECTION principle, because the two genuine ones collapse the space to a point before it is consulted.",
+  "the_pattern_this_confirms": "Pass 311 catalogued two failure modes: coordinate artefacts, and correct results over-stated. This is the second kind, caught one round later on my own pass -- 308's arithmetic is right, its framing as 'a third selection argument' is not. The prior 311 recommended (treat any claim whose scope exceeds its proof as an over-read) flags it immediately, which is the point of having the prior.",
+  "checks": {
+    "225_selects_only_3": true,
+    "227_selects_only_3": true,
+    "308_selects_a_family": true,
+    "all_three_intersect_at_3": true,
+    "225_and_227_alone_already_give_3": true,
+    "308_ADDS_NOTHING": true,
+    "308_is_decorative": true,
+    "q27_passes_308": true,
+    "q27_fails_225": true,
+    "q27_fails_227": true
+  }
+}

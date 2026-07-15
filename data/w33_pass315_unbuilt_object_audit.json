@@ -1,0 +1,163 @@
+{
+  "schema": "w33.pass315.unbuilt_object_audit.v1",
+  "status": "PASS",
+  "THE_DEFECT": "A claim of the form 'X is coupled to / realises / IS the Y of Z' where the map itself is never exhibited. Such a claim cannot be refuted (nothing to check) and cannot be used (nothing to compute with), yet it reads like a result and gets quoted forward. Pass 310 found one blocking Pass 307.",
+  "confirmed_case": {
+    "bt1654_heawood_clock_homology.py": {
+      "asserted": "the Heawood clock is 'a separate clock/homology module coupled to the W33 machine'",
+      "object_built": false,
+      "type_specified": null,
+      "obstructions_found_by_310": [
+        "girth 6 vs 8 -- not a subgraph (re-verified)",
+        "7 does not divide |PGSp(4,3)| = 51840 -- no group action",
+        "14 does not divide 80 -- no orbit decomposition",
+        "coupling edges push the spectrum out of Q(sqrt2,sqrt3) (Pass 307)"
+      ],
+      "consequence": "Pass 307 blocked; Pass 303's TBM-field observation cannot be upgraded from arithmetic about two fields to physics of one system"
+    }
+  },
+  "candidate_assertions_found": [
+    {
+      "file": "bt1036_finite_to_ncg_gauge_bridge.py",
+      "phrase": "is the cellular boundary carrier",
+      "context": "ng\": \"the finite 12-dimensional gauge module is the local adjoint profile; the 120 sector is the cellular boundary carrier that can host replicated/localized gauge one-forms\"         },         \"requi"
+    },
+    {
+      "file": "bt1144_w33_finite_carrier_alignment.py",
+      "phrase": "is the continuum carrier",
+      "context": "es the carrier theorem in executable form: the metric/topological K3 curvature functional is the continuum carrier, and the finite W33 Hodge--Dirac spectrum supplies the coefficients multiplying it in"
+    },
+    {
+      "file": "bt1195_d4_coset_half_fiber_alignment.py",
+      "phrase": "is the same carrier",
+      "context": "f-fiber has 48 slots.  Therefore the product      45 cosets x 48 half-fiber slots = 2160  is the same carrier BT1194 found.  This gives the most concrete candidate for what the universal 2160 carrier"
+    },
+    {
+      "file": "bt1320_q5_holonet_bridge.py",
+      "phrase": "corresponds to",
+      "context": "ack. Q5 (32 vertices, 80 edges) is the next natural hop in the binary hypercube tower and corresponds to the doubled Hamming [8,4,4] code space: one codeword layer per Q5 vertex gives 32 extende"
+    },
+    {
+      "file": "bt1323_toroidal_heptad_physical_realizability.py",
+      "phrase": "corresponds to",
+      "context": "as a 4-port      photonic beamsplitter network.   5. The [8,4,4] Hamming code router lift corresponds to an 8-port      optical interferometer with 4 input modes and distance-4 error correction."
+    },
+    {
+      "file": "bt1654_heawood_clock_homology.py",
+      "phrase": "coupled to",
+      "context": "ood     clock is not a literal Levi subgraph.  It is a separate clock/homology     module coupled to the W33 machine. \"\"\" from __future__ import annotations  import itertools import json imp"
+    },
+    {
+      "file": "bt1655_clock_matter_spectral_coupling.py",
+      "phrase": "is the Heawood/Fano flag-clock",
+      "context": "55 \u2014 Clock-to-matter spectral coupling theorem.  This continues BT1654.  The clock module is the Heawood/Fano flag-clock L(H), whose Laplacian has endpoint 6^8.  The matter graph is the complement of "
+    },
+    {
+      "file": "bt1747_e8_root_hexagon_bus_allocation.py",
+      "phrase": "is the local atlas incidence bus",
+      "context": "ght whole hexagons to each of five Clifford-grade buses gives five 48-root buses. One bus is the local atlas incidence bus (48); the other four are framed flag buses (192). This realizes 240 = 48 + 19"
+    },
+    {
+      "file": "bt1874_final_selector_quotient_certificate.py",
+      "phrase": "coupled to",
+      "context": "canonical_control_crosswalk\", \"witness\": \"BT1880/Levi closure\", \"claim\": \"columns 2s,2s+1 coupled to the two stage-s J4 control rails\"},     {\"stage\": \"basis_level_phase_gram_action\", \"statu"
+    },
+    {
+      "file": "bt642_tetrahedral_parity_sheet_action.py",
+      "phrase": "is the scalar -I on the regular S4 carrier",
+      "context": "r: the regular action of S4, the full tetrahedral permutation group.  The parity operator is the scalar -I on the regular S4 carrier, so its trace powers are 24*(-1)^n.  The even/odd split is A4 plus "
+    },
+    {
+      "file": "bt678_fano_gauge_d6_stabilizer_weld.py",
+      "phrase": "is the secondary carrier",
+      "context": "times one global side flip.  Thus it has order 6*2=12 and is D6 ~= W(G2).  Boundary: this is the secondary carrier-label/frame quotient.  It is not a raw 160-flag Levi action and it is not a real fold"
+    },
+    {
+      "file": "bt691_k33_classical_vs_quantum_code_boundary.py",
+      "phrase": "is the graph-cycle code / homology carrier",
+      "context": "ank(H)=5 for connected bipartite K33, so dim ker(H)=4   and dim ker(H^T)=0.  Thus [9,4,4] is the graph-cycle code / homology carrier; it can support a four-dimensional logical/fusion register, but it "
+    },
+    {
+      "file": "bt774_decimal_shadow_clock.py",
+      "phrase": "is the SHADOW of that clock",
+      "context": "fied the duo bit as the central half-turn r^6.  BT774 proves the decimal expansion of 1/7 is the SHADOW of that clock:    T1. ord_7(10) = 6: the decimal digit clock of 1/7 is Z6 = Z12/<r^6> -       th"
+    },
+    {
+      "file": "bt789_toroidal_genus_phase_bridge.py",
+      "phrase": "is the C3 phase clock",
+      "context": "= 2 + 2      (tomotope has two F4 phase planes)  The 4 is the F4-plane cardinality; the 3 is the C3 phase clock.  Their product is the mod-12 toroidal residue normalizer. \"\"\" from __future__ import an"
+    },
+    {
+      "file": "bt868_joint_generation_chirality_grading.py",
+      "phrase": "is the sign-twisted (chirality) carrier",
+      "context": "(chirality).  BT863: order-3 vanishing gives the 27+27+27 generation split. BT862: H2 is the sign-twisted (chirality) carrier. An order-6 element g has g^2 (order 3, generation) and g^3 (order 2, chir"
+    },
+    {
+      "file": "bt899_photonic_holonet_static_guard.py",
+      "phrase": "is the geometry is the carrier",
+      "context": "ant Yukawa texture\",r\"gives a circulant Yukawa texture\"] SECTIONS=[\"Overture: the machine is the geometry is the carrier\",\"The substrate\",\"The carrier: how to self-entangle a photon\",\"The network: atl"
+    },
+    {
+      "file": "holonet_node.py",
+      "phrase": "is the robus",
+      "context": "tor tracks them) and do not affect the group evolution or the routing. The 9^t magic cost is the robustness bound (Pass 38); this emulator does not execute the exponential magic layer -- that"
+    },
+    {
+      "file": "w33_bc_helix_quasicrystal.py",
+      "phrase": "IS the clock",
+      "context": "#!/usr/bin/env python3 \"\"\" The BC helix IS the clock: the twist arccos(-2/3) is a Niven-irrational angle, so the tetrahedral helix never close"
+    },
+    {
+      "file": "w33_bc_helix_quasicrystal.py",
+      "phrase": "is the quasicrystal clock",
+      "context": "= 720 * 72 = |Sp(4,3)|  (the full Clifford supercycle). So the helix's flat aperiodicity is the quasicrystal clock, and its 4D (S^3) closure number h(E8)=30 is the supercycle's middle factor: the geom"
+    },
+    {
+      "file": "w33_bc_helix_quasicrystal.py",
+      "phrase": "is the timing of the machine",
+      "context": "closure number h(E8)=30 is the supercycle's middle factor: the geometry of the tetrahelix is the timing of the machine.  Verifies: -2/3 not a Niven value; the cumulative twist never closes in 3D for n"
+    },
+    {
+      "file": "w33_bc_helix_quasicrystal.py",
+      "phrase": "is the clock",
+      "context": "out[\"supercycle\"] = supercycle      print(\"\\nRESULT: the Boerdijk-Coxeter tetrahelix is the clock. Its twist\")     print(\"  arccos(-2/3) is Niven-irrational, so the helix never closes in"
+    },
+    {
+      "file": "w33_BREAKTHROUGH_175_gq42_cubic_surface_schlafli.py",
+      "phrase": "corresponds to",
+      "context": "rface in P^3 carry the W(E6)-symmetric incidence structure.  The outer involution (BT173) corresponds to the Geiser involution of the cubic surface.  Key:   45 GQ points = 45 tritangent planes o"
+    },
+    {
+      "file": "w33_BREAKTHROUGH_17_ljunggren_substrate.py",
+      "phrase": "corresponds to",
+      "context": "ely many solutions classified by Ljunggren (1942) and Mihailescu (Catalan). Each solution corresponds to a substrate cube-defect point.  ========================================================="
+    },
+    {
+      "file": "w33_BREAKTHROUGH_280_spacetime_uniqueness_Coxeter.py",
+      "phrase": "corresponds to",
+      "context": "======================================================  The exceptional Coxeter group F_4 corresponds to the regular 24-cell.   |F_4| = 1152   |Vertices of 24-cell| = 24 = f   |Cells| = 24   Sel"
+    },
+    {
+      "file": "w33_BREAKTHROUGH_297_elliptic_curves_F_q_substrate.py",
+      "phrase": "corresponds to",
+      "context": "t Heegner Phi_6   j(-2^q)  =  (lambda * Phi_4)^3   j(-p_Ih) = -(lambda^F_5)^3  Each j(-d) corresponds to an elliptic curve with CM by O_K of discriminant d. The CM curve over Q has good reductio"
+    }
+  ],
+  "candidate_count": 79,
+  "files_scanned": 2282,
+  "what_a_BUILT_claim_looks_like": {
+    "266 the sentinel IS the -(q+1) eigenspace": "g = q(q^2+1)/2 computed as an SRG multiplicity and matched to the sentinel dimension -- both sides constructed",
+    "270 the +1 IS the all-ones vector": "j exhibited in C, and dim(C/<j>) computed and matched to Tr(B^t) -- both sides constructed",
+    "305 Aut(Csaszar) = AGL(1,7)": "the group computed by brute force and matched to AGL(1,7) by order profile -- both sides constructed (though Pass 309 then showed the TIE to the substrate is only numerical, which is a different defect)",
+    "229 the lines ARE the logical operators": "each line verified to be in C and not in C^perp -- constructed"
+  },
+  "the_distinction_that_matters": "bt1654 also states a proper honest boundary -- the W(3,3) Levi graph has girth 8 and no 6-cycles, so the Heawood clock is not a literal Levi subgraph. That is checkable and Pass 310 checked it. The defect is NOT the boundary; it is the positive claim on the other side of it ('but it IS a coupled module'), which names no object at all.",
+  "how_this_relates_to_311": "Pass 311 catalogued two failure modes -- coordinate artefacts, and correct results over-stated. This is a THIRD, and arguably the worst: claims that are neither right nor wrong because they have no content. A coordinate artefact can be refuted by another drawing; an over-read can be trimmed to its proof. An unbuilt object can only be built or abandoned, and until one or the other happens everything downstream of it inherits the vacuum.",
+  "recommendation": "Every 'X is coupled to Y' in the corpus should either name the map (functor, embedding, action, correspondence, quotient) or be restated as the open question it is. The candidates listed here are phrase-matches, not verdicts -- each needs reading, which is exactly the lesson of Passes 279/285/286.",
+  "checks": {
+    "scanned_analysis_dir": true,
+    "found_assertions": true,
+    "heawood_coupling_is_unbuilt": true,
+    "contrast_cases_listed": true
+  }
+}

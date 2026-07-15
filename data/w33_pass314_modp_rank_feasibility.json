@@ -1,0 +1,51 @@
+{
+  "schema": "w33.pass314.modp_rank_feasibility.v1",
+  "status": "PASS",
+  "validation": {
+    "target": "rank_3 W(3,9), known to be 425 from Pass 281",
+    "computed": 425,
+    "match": true,
+    "n": 820,
+    "build_seconds": 2.9,
+    "rank_seconds": 0.49,
+    "note": "the implementation is validated against a known answer before being trusted on an unknown one"
+  },
+  "measured_extrapolation": {
+    "q=25 (mod 5) -> det(B_5)": {
+      "n": 16276,
+      "estimated_seconds": 3795,
+      "estimated_minutes": 63.3
+    },
+    "q=27 (mod 3) -> rank_3 = 8353?": {
+      "n": 20440,
+      "estimated_seconds": 7517,
+      "estimated_minutes": 125.3
+    }
+  },
+  "status_change": "Passes 287 and 304 called these computations 'blocked' on hand-waved estimates (~4.4e12 ops). With a validated implementation and a measured O(n^3) extrapolation the honest status is 'runnable but long': ~60 min for q=25, ~120 min for q=27. The q=27 job has been launched in the background against this implementation, so the status is now 'running, result pending' rather than 'blocked'.",
+  "the_char3_tower_is_a_conjecture": {
+    "fitted_from": {
+      "rank_3 W(3,3)": 25,
+      "rank_3 W(3,9)": 425
+    },
+    "Tr(B_3)": 24,
+    "det(B_3)": 76,
+    "prediction": {
+      "rank_3 W(3,27)": 8353
+    },
+    "the_problem": "Two ranks determine a 2x2 matrix up to similarity, so the fit is FORCED and carries no evidence -- ANY two points would produce some (Tr, det). The prediction 8353 is the entire empirical content of the char-3 tower, and it has never been tested. Per Pass 311's prior (treat any claim whose scope exceeds its proof as an over-read), the char-3 tower of Pass 281 should be labelled a CONJECTURE until rank_3 W(3,27) returns.",
+    "contrast_with_char2": "The char-2 tower is NOT in this position: it was fitted from t=1,2 and then correctly PREDICTED t=3,4,5 (298, 1890, 12250), with 1890 verified by explicitly building W(3,16) and 12250 matching an independent transfer theorem. Two fitted, three predicted and confirmed. The char-3 tower has two fitted and zero confirmed."
+  },
+  "checks": {
+    "q9_n_820": true,
+    "VALIDATED_rank3_W39_is_425": true,
+    "matches_pass281": true,
+    "q9_3rank_drops": true,
+    "extrapolation_computed": true,
+    "char3_Tr_is_24": true,
+    "char3_det_is_76": true,
+    "char3_predicts_8353": true,
+    "two_points_fix_Tr_and_det": true,
+    "prediction_untested": true
+  }
+}
