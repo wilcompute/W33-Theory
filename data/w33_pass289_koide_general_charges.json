@@ -1,0 +1,124 @@
+{
+  "schema": "w33.pass289.koide_general_charges.v1",
+  "status": "PASS",
+  "question": "is the cyclotomic collapse Q = Phi_6/Phi_3 structural, or an artefact of the (2,1,0) charges?",
+  "the_210_case": {
+    "Q": "Phi_6(eps)/Phi_3(eps) = (eps^2-eps+1)/(eps^2+eps+1)",
+    "why": "x^4 + x^2 + 1 = Phi_3 * Phi_6 exactly, and the denominator is Phi_3^2, so one factor of Phi_3 cancels"
+  },
+  "general_charges": {
+    "(1,0,0)": {
+      "Q": "(x**2 + 2)/(x**2 + 4*x + 4)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(2,0,0)": {
+      "Q": "(x**4 + 2)/(x**4 + 4*x**2 + 4)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(2,1,0)": {
+      "Q": "(x**2 - x + 1)/(x**2 + x + 1)",
+      "numerator_divisible_by_denominator_root": true,
+      "reduces": true
+    },
+    "(3,0,0)": {
+      "Q": "(x**6 + 2)/(x**6 + 4*x**3 + 4)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(3,1,0)": {
+      "Q": "(x**6 + x**2 + 1)/(x**6 + 2*x**4 + 2*x**3 + x**2 + 2*x + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(3,2,0)": {
+      "Q": "(x**6 + x**4 + 1)/(x**6 + 2*x**5 + x**4 + 2*x**3 + 2*x**2 + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(4,0,0)": {
+      "Q": "(x**8 + 2)/(x**8 + 4*x**4 + 4)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(4,1,0)": {
+      "Q": "(x**8 + x**2 + 1)/(x**8 + 2*x**5 + 2*x**4 + x**2 + 2*x + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(4,2,0)": {
+      "Q": "(x**4 - x**2 + 1)/(x**4 + x**2 + 1)",
+      "numerator_divisible_by_denominator_root": true,
+      "reduces": true
+    },
+    "(4,3,0)": {
+      "Q": "(x**8 + x**6 + 1)/(x**8 + 2*x**7 + x**6 + 2*x**4 + 2*x**3 + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(5,0,0)": {
+      "Q": "(x**10 + 2)/(x**10 + 4*x**5 + 4)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(5,1,0)": {
+      "Q": "(x**8 - x**7 + x**5 - x**4 + x**2 - x + 1)/(x**8 - x**7 + x**5 + x**4 - x**2 + x + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(5,2,0)": {
+      "Q": "(x**10 + x**4 + 1)/(x**10 + 2*x**7 + 2*x**5 + x**4 + 2*x**2 + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(5,3,0)": {
+      "Q": "(x**10 + x**6 + 1)/(x**10 + 2*x**8 + x**6 + 2*x**5 + 2*x**3 + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    },
+    "(5,4,0)": {
+      "Q": "(x**8 - x**7 + x**6 - x**4 + x**3 - x + 1)/(x**8 + x**7 - x**6 + x**4 + x**3 - x + 1)",
+      "numerator_divisible_by_denominator_root": false,
+      "reduces": true
+    }
+  },
+  "cases_that_factor_cleanly": [
+    "(2,1,0)",
+    "(4,2,0)"
+  ],
+  "only_210_factors": false,
+  "koide_roots_per_charge": {
+    "(1,0,0)": [],
+    "(2,0,0)": [],
+    "(2,1,0)": [
+      "5/2 - sqrt(21)/2"
+    ],
+    "(3,0,0)": [],
+    "(3,1,0)": [
+      "CRootOf(x**6 - 4*x**4 - 4*x**3 + x**2 - 4*x + 1, 0)"
+    ],
+    "(3,2,0)": [
+      "2**(413/748)*3**(41/748)*5**(533/748)*7**(90/187)/30"
+    ],
+    "(4,0,0)": [],
+    "(4,1,0)": [
+      "CRootOf(x**8 - 4*x**5 - 4*x**4 + x**2 - 4*x + 1, 0)"
+    ],
+    "(4,2,0)": [
+      "sqrt(5/2 - sqrt(21)/2)"
+    ],
+    "(4,3,0)": [
+      "CRootOf(x**8 - 4*x**7 + x**6 - 4*x**4 - 4*x**3 + 1, 0)"
+    ]
+  },
+  "verdict": "the clean factorisation also occurs for ['(2,1,0)', '(4,2,0)'], so the cyclotomic structure is not unique to (2,1,0)",
+  "consequence_for_285": "Pass 285's identity Q = Phi_6/Phi_3 stands as arithmetic, and the Phi_6 shared with part18's Csaszar parameterisation (Phi_6(q)=q^2-q+1, = 7 at q=3) is still a real coincidence of polynomials. But if the collapse is special to (2,1,0), the appearance of Phi_6 on the Koide side is tied to that charge choice rather than to FN structure generally -- which weakens, without killing, the link. What does NOT depend on this: Pass 286's finding that sqrt(21) genuinely appears in the Szilassi edge lengths.",
+  "checks": {
+    "Q210_is_Phi6_over_Phi3": true,
+    "numerator_factors_cyclotomically": true,
+    "(2,1,0)_factors": true,
+    "special_to_210_determined": true,
+    "roots_computed": true
+  }
+}

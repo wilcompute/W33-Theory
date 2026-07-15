@@ -1,0 +1,53 @@
+{
+  "schema": "w33.pass288.angle_genericity_audit.v1",
+  "status": "PASS",
+  "method": "for each angle, hold the OTHER two angles and Dm21/Dm31 fixed and sample general symmetric mass matrices; ask where the measured value falls in the induced distribution",
+  "results": {
+    "theta12": {
+      "n": 250,
+      "observed": 33.41,
+      "median": 28.810574819090256,
+      "p5": 2.840246141093435,
+      "p95": 82.16427716871745,
+      "percentile_of_observed": 54.0,
+      "is_generic": true,
+      "verdict": "GENERIC -- needs no mechanism"
+    },
+    "theta13": {
+      "n": 250,
+      "observed": 8.54,
+      "median": 31.688116289224908,
+      "p5": 3.6950623178437345,
+      "p95": 60.49488582905606,
+      "percentile_of_observed": 13.200000000000001,
+      "is_generic": true,
+      "verdict": "GENERIC -- needs no mechanism"
+    },
+    "theta23": {
+      "n": 250,
+      "observed": 49.1,
+      "median": 46.87723068780785,
+      "p5": 8.653880789226774,
+      "p95": 82.51349662484752,
+      "percentile_of_observed": 55.2,
+      "is_generic": true,
+      "verdict": "GENERIC -- needs no mechanism"
+    }
+  },
+  "generic_angles": [
+    "theta12",
+    "theta13",
+    "theta23"
+  ],
+  "atypical_angles": [],
+  "POWER_CAVEAT": "The induced bands are VERY wide (e.g. theta_12 in [2.8, 82.2], nearly the whole range), which means two angles plus the mass ratio barely constrain the third. A wide band makes everything 'generic' almost automatically, so this test has LOW POWER and cannot sharply distinguish generic from special. It is strong evidence only where the observed value sits near the MEDIAN -- theta_23 (55th percentile) and theta_12 (54th) qualify; theta_13 at the 13th percentile is inside the band but toward its edge, so it is the weakest of the three and the one most likely to be genuinely constrained. Read this as 'no evidence of a mechanism', not as 'proof that none exists'.",
+  "verdict": "GENERIC (no mechanism needed): ['theta12', 'theta13', 'theta23']. ATYPICAL (genuinely demand explanation): none. Any angle in the first list should be struck from the list of things the substrate must explain -- including, where applicable, ones this program has previously claimed to account for.",
+  "reading": "Pass 283 applied this test to theta_23 and found it generic, which explained why Passes 264/268/273/278 all failed to find a mechanism. Applying it to every angle says which of the remaining targets are real. A quantity only needs explaining if it is atypical given everything else that is measured; this is the cheapest way to find out, and it should have been the first question asked. But note the POWER_CAVEAT: the bands are wide enough that this test mostly shows the angles do not constrain each other, which is weaker than showing any given one is unremarkable.",
+  "checks": {
+    "theta12_audited": true,
+    "theta13_audited": true,
+    "theta23_audited": true,
+    "all_three_audited": true,
+    "theta23_reproduces_pass283": true
+  }
+}

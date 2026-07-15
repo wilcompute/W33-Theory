@@ -1,0 +1,94 @@
+{
+  "schema": "w33.pass286.sqrt21_found_retraction.v1",
+  "status": "PASS",
+  "RETRACTION": "Passes 279 and 285 concluded that sqrt(21) does not appear in the substrate. THAT IS FALSE and both conclusions are hereby WITHDRAWN. sqrt(21) appears in the EDGE LENGTHS of both Szilassi realizations, computed here directly from the published vertex coordinates.",
+  "source": "data/Toroidal-Polyhedra-Realizations.txt (Szilassi, 'On Three Classes of Regular Toroids', 2004) -- 5 Csaszar + 2 Szilassi = 7 realizations, carried in this repo all along",
+  "finding": {
+    "szilassi_v1": "5*sqrt(21)/2 (x2) and 5*sqrt(21) (x2) -> 4 of 21 edges",
+    "szilassi_v2": "2*sqrt(21) (x2) and 21*sqrt(21)/4 (x2) -> 4 of 21 edges",
+    "csaszar_v1_to_v5": "no sqrt(21) in any of the five",
+    "pattern": "sqrt(21) is a SZILASSI phenomenon: present in BOTH Szilassi realizations, absent from all five Csaszar ones",
+    "note": "Szilassi v2's 21*sqrt(21)/4 = 21^{3/2}/4 carries 21 both as a coefficient and under the root"
+  },
+  "per_realization": {
+    "csaszar": {
+      "1": {
+        "edge_count": 21,
+        "distinct_lengths": 10,
+        "sqrt21_lengths": {},
+        "sqrt21_edge_count": 0
+      },
+      "2": {
+        "edge_count": 21,
+        "distinct_lengths": 9,
+        "sqrt21_lengths": {},
+        "sqrt21_edge_count": 0
+      },
+      "3": {
+        "edge_count": 21,
+        "distinct_lengths": 10,
+        "sqrt21_lengths": {},
+        "sqrt21_edge_count": 0
+      },
+      "4": {
+        "edge_count": 21,
+        "distinct_lengths": 8,
+        "sqrt21_lengths": {},
+        "sqrt21_edge_count": 0
+      },
+      "5": {
+        "edge_count": 21,
+        "distinct_lengths": 9,
+        "sqrt21_lengths": {},
+        "sqrt21_edge_count": 0
+      }
+    },
+    "szilassi": {
+      "1": {
+        "edge_count": 21,
+        "distinct_lengths": 12,
+        "sqrt21_lengths": {
+          "5*sqrt(21)": 2,
+          "5*sqrt(21)/2": 2
+        },
+        "sqrt21_edge_count": 4
+      },
+      "2": {
+        "edge_count": 21,
+        "distinct_lengths": 11,
+        "sqrt21_lengths": {
+          "21*sqrt(21)/4": 2,
+          "2*sqrt(21)": 2
+        },
+        "sqrt21_edge_count": 4
+      }
+    }
+  },
+  "why_279_and_285_missed_it": "Method error, not arithmetic. Pass 279 searched SPECTRA (SRG eigenvalues, discriminants, group orders) and correctly noted that the SRG discriminant is 4q^2 -- a perfect square -- so the collinearity graph is rational throughout. Its rule 'test discriminants, not squarefree parts' was right but silently assumed every irrationality in play is SPECTRAL. A polyhedron's edge lengths are METRIC: square roots of integer quadratic forms in the vertex coordinates, generating real quadratic fields with no discriminant in sight. Pass 285 then compounded it by arguing about COUNTS (21 = C(7,2), Fano flags) and concluding a rational 21 cannot manufacture sqrt(21) -- true but irrelevant: the sqrt(21) was never coming from the count, it was in the metric.",
+  "what_survives_from_285": "The cyclotomic identity stands: the FN(2,1,0) Koide function is Q(eps) = Phi_6(eps)/Phi_3(eps), and part18_jungerman_ringel.tex parameterises the Csaszar torus by Phi_6(q) = q^2-q+1 = 7 at q=3. What changes is the verdict: sqrt(21) is NOT absent from the geometry, so the door 285 tried to close is open again.",
+  "significance": "eps* = (5 - sqrt 21)/2, the FN parameter on the Koide light cone (Pass 274), lives in Q(sqrt 21). That field is now known to be realised in the substrate's own metric data -- specifically in the Szilassi polyhedron, the dual toroid of Csaszar and the genus-1 rung of the Jungerman-Ringel ladder that part18 ties to W(3,3). Whether the two occurrences of Q(sqrt 21) are related is now a live question rather than a closed one.",
+  "checks": {
+    "data_file_exists": true,
+    "five_csaszar_blocks": true,
+    "two_szilassi_blocks": true,
+    "seven_realizations_total": true,
+    "csaszar_v1_has_21_edges": true,
+    "csaszar_v2_has_21_edges": true,
+    "csaszar_v3_has_21_edges": true,
+    "csaszar_v4_has_21_edges": true,
+    "csaszar_v5_has_21_edges": true,
+    "szilassi_v1_has_21_edges": true,
+    "szilassi_v2_has_21_edges": true,
+    "szilassi_v1_has_sqrt21": true,
+    "szilassi_v2_has_sqrt21": true,
+    "both_szilassi_have_sqrt21": true,
+    "each_szilassi_has_four_sqrt21_edges": true,
+    "no_csaszar_has_sqrt21": true,
+    "sqrt21_IS_in_the_substrate": true,
+    "file_states_5sqrt21_over_2": true,
+    "file_states_5sqrt21": true,
+    "file_states_2sqrt21": true,
+    "file_states_21sqrt21_over_4": true,
+    "eps_star_lives_in_Q_sqrt21": true
+  }
+}
