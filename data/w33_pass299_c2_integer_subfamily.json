@@ -1,0 +1,138 @@
+{
+  "schema": "w33.pass299.c2_integer_subfamily.v1",
+  "status": "PASS",
+  "question": "Pass 293's open question: does a natural sub-family (C2 symmetry) force sqrt(21), rescuing the invariance claim?",
+  "c2_action": "(x,y,z) -> (-x,-y,z), pairing 0<->1, 2<->3, 4<->5, 6<->7, 8<->9, 10<->11, 12<->13",
+  "dimension_count": {
+    "free_numbers_in_slice": 21,
+    "gauge_inside_slice": "rotation about z (1) + translation along z (1) + scale (1) = 3",
+    "planarity_constraints": 21,
+    "naive_dimension": -3,
+    "note": "unlike the full space (~14), the symmetric slice is naively near-zero-dimensional, so rigidity is a real possibility here"
+  },
+  "trials": [
+    {
+      "planarity_residual": 1.3382315014242523e-10,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.069779,
+        0.035635,
+        0.069779,
+        0.035635
+      ],
+      "max_shift": 22.8431
+    },
+    {
+      "planarity_residual": 1.5316163839236418e-14,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.018865,
+        0.010599,
+        0.018865,
+        0.010599
+      ],
+      "max_shift": 22.894014
+    },
+    {
+      "planarity_residual": 3.5912949135343286e-13,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.213455,
+        0.035654,
+        0.213455,
+        0.035654
+      ],
+      "max_shift": 22.699423
+    },
+    {
+      "planarity_residual": 1.830698070037164e-15,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.000324,
+        0.000218,
+        0.000324,
+        0.000218
+      ],
+      "max_shift": 22.912555
+    },
+    {
+      "planarity_residual": 2.581599053952534e-10,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.016282,
+        0.007042,
+        0.016282,
+        0.007042
+      ],
+      "max_shift": 22.896597
+    },
+    {
+      "planarity_residual": 0.0,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.075324,
+        0.02671,
+        0.075324,
+        0.02671
+      ],
+      "max_shift": 22.837555
+    },
+    {
+      "planarity_residual": 8.090380368409203e-16,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.002182,
+        0.001124,
+        0.002182,
+        0.001124
+      ],
+      "max_shift": 22.910697
+    },
+    {
+      "planarity_residual": 3.5545936899259436e-14,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.010469,
+        0.012641,
+        0.010469,
+        0.012641
+      ],
+      "max_shift": 22.902409
+    },
+    {
+      "planarity_residual": 9.170407323226841e-14,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.001409,
+        0.000371,
+        0.001409,
+        0.000371
+      ],
+      "max_shift": 22.91147
+    },
+    {
+      "planarity_residual": 0.0,
+      "valid": true,
+      "sqrt21_edge_lengths": [
+        0.002183,
+        0.000779,
+        0.002183,
+        0.000779
+      ],
+      "max_shift": 22.910695
+    }
+  ],
+  "valid_found": 10,
+  "valid_with_shifted_sqrt21_edges": 10,
+  "verdict": "The C2-symmetric slice is ALSO continuous: valid symmetric realizations exist with the sqrt(21)-edges moved away from 5*sqrt(21) = 22.9129. So C2 symmetry does NOT force d^2 = 21*square either, and Pass 293's deflation is FINAL -- sqrt(21) is a property of Szilassi's particular coordinate choices, not of the symmetric family.",
+  "reading": "This is the one route left to rescue sqrt(21) as an invariant. The full realization space is ~14-dimensional and manifestly does not force it (Pass 293). The C2-symmetric slice is much tighter -- 21 free numbers against 21 constraints -- so it could plausibly be rigid. The trials decide it, and the result is reported as it comes.",
+  "checks": {
+    "published_v1_is_C2_symmetric": true,
+    "c2_slice_has_21_free_numbers": true,
+    "c2_config_reproduces_v1": true,
+    "c2_v1_is_planar": true,
+    "naive_c2_count_is_nonpositive": true,
+    "c2_slice_admits_solutions": true,
+    "c2_family_continuity_determined": true
+  }
+}

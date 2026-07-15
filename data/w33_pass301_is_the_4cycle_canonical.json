@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass301.is_the_4cycle_canonical.v1",
+  "status": "PASS",
+  "aut_csaszar_order": 42,
+  "the_4cycle": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "orbit_size": 21,
+  "total_4cycles_in_K7": 105,
+  "orbit_fraction": 0.2,
+  "measurement": "Aut(Csaszar) has order 42. The sqrt(21) 4-cycle 0-1-2-5-0 has an orbit of size 21 among the 105 four-cycles of K7 (20.0%).",
+  "honest_reading": "The orbit is a proper subset, so the cycle is 'distinguished' in the literal sense that Aut does not move it everywhere. But that is cheap: with |Aut| = 42 the orbit CANNOT exceed 42, so essentially every 4-cycle lies in a small proper orbit and the label carries almost no information. Combined with Passes 293/299 -- which showed the sqrt(21) edges were selected by a coordinate accident rather than by structure -- the fair conclusion is that this 4-cycle names nothing established. It is reported as a measurement, not a finding.",
+  "checks": {
+    "csaszar_has_14_faces": true,
+    "skeleton_is_K7_21_edges": true,
+    "aut_nonempty": true,
+    "identity_is_in_aut": true,
+    "k7_has_105_four_cycles": true,
+    "the_cycle_is_a_k7_4cycle": true,
+    "orbit_is_proper_subset": true,
+    "orbit_bounded_by_aut_order": true
+  }
+}

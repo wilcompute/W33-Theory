@@ -1,0 +1,118 @@
+{
+  "schema": "w33.pass300.sqrt21_unreachable_theorem.v1",
+  "status": "PASS",
+  "THEOREM": "Q(sqrt 21) is not reachable as the spectral field of any Levi graph in this family. Levi(PG(2,q)) gives Q(sqrt q) and Levi(GQ(q,q)) gives Q(sqrt 2q), and q must be a PRIME POWER. sqrt(q) = sqrt(21) would need q = 21 = 3*7, not a prime power; sqrt(2q) = sqrt(21) would need q = 21/2, not an integer. Hence no projective plane and no symplectic quadrangle over any prime power has sqrt(21) in its incidence spectrum.",
+  "reachable_fields": {
+    "1": [
+      "GQ(2,2)",
+      "GQ(32,32)",
+      "GQ(8,8)",
+      "PG(2,121)"
+    ],
+    "2": [
+      "GQ(121,121)",
+      "GQ(16,16)",
+      "GQ(169,169)",
+      "GQ(25,25)"
+    ],
+    "3": [
+      "PG(2,27)",
+      "PG(2,3)"
+    ],
+    "5": [
+      "PG(2,125)",
+      "PG(2,5)"
+    ],
+    "6": [
+      "GQ(27,27)",
+      "GQ(3,3)"
+    ],
+    "7": [
+      "PG(2,7)"
+    ],
+    "10": [
+      "GQ(125,125)",
+      "GQ(5,5)"
+    ],
+    "11": [
+      "PG(2,11)"
+    ],
+    "13": [
+      "PG(2,13)"
+    ],
+    "14": [
+      "GQ(7,7)"
+    ],
+    "17": [
+      "PG(2,17)"
+    ],
+    "19": [
+      "PG(2,19)"
+    ],
+    "22": [
+      "GQ(11,11)"
+    ],
+    "23": [
+      "PG(2,23)"
+    ],
+    "26": [
+      "GQ(13,13)"
+    ],
+    "29": [
+      "PG(2,29)"
+    ],
+    "31": [
+      "PG(2,31)"
+    ],
+    "34": [
+      "GQ(17,17)"
+    ],
+    "37": [
+      "PG(2,37)"
+    ],
+    "38": [
+      "GQ(19,19)"
+    ],
+    "41": [
+      "PG(2,41)"
+    ],
+    "43": [
+      "PG(2,43)"
+    ],
+    "46": [
+      "GQ(23,23)"
+    ],
+    "47": [
+      "PG(2,47)"
+    ],
+    "53": [
+      "PG(2,53)"
+    ],
+    "58": [
+      "GQ(29,29)"
+    ],
+    "59": [
+      "PG(2,59)"
+    ]
+  },
+  "the_near_misses": {
+    "sqrt3": "reachable -- PG(2,3)",
+    "sqrt7": "reachable -- PG(2,7)",
+    "sqrt6": "reachable -- GQ(3,3), THE SUBSTRATE ITSELF",
+    "sqrt14": "reachable -- GQ(7,7)",
+    "sqrt21": "UNREACHABLE -- 21 = 3*7 is a product of two distinct odd primes, and a single geometry has a single order, so Q(sqrt3) and Q(sqrt7) cannot be multiplied together"
+  },
+  "consequence_for_koide": "eps* = (5 - sqrt21)/2 lives in Q(sqrt 21) and therefore cannot arise from any incidence spectrum in this family -- for a STRUCTURAL reason, not a failed search. With Passes 293/299 (sqrt21 is a coordinate choice, not forced, even under C2 symmetry) and Pass 274 (FN accommodates rather than derives Koide), the geometric route to Koide is closed on independent grounds. This closure is a THEOREM rather than an absence of evidence -- exactly the distinction Pass 292 said to insist on after the 279/285 failures.",
+  "checks": {
+    "sqrt2_reachable": true,
+    "sqrt3_reachable": true,
+    "sqrt6_reachable_the_substrate": true,
+    "sqrt7_reachable": true,
+    "sqrt14_reachable": true,
+    "21_is_not_a_prime_power": true,
+    "21_factors_as_3_times_7": true,
+    "2q_equals_21_has_no_integer_solution": true,
+    "sqrt21_UNREACHABLE": true,
+    "3_and_7_reachable_but_not_their_product": true
+  }
+}

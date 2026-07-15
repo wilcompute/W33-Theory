@@ -1,0 +1,148 @@
+{
+  "schema": "w33.pass298.forced_field_ladder.v1",
+  "status": "PASS",
+  "what_sqrt2_actually_is": "The Heawood graph is the Levi graph of the Fano plane PG(2,2). Computed at q = 2,3,5, Levi(PG(2,q)) has spectrum +-(q+1), +-sqrt(q), so its field is Q(sqrt q). The clock's sqrt(2) is therefore just sqrt(q) for a plane of order 2 -- not a universal constant, but the order of one particular small plane.",
+  "the_substrate_has_a_DIFFERENT_field": "W(3,q) is a generalized QUADRANGLE, not a plane. Computed at q = 2,3,4,5, Levi(GQ(q,q)) has spectrum +-(q+1), +-sqrt(2q), 0, so its field is Q(sqrt(2q)). At the substrate's own order q = 3 that is Q(sqrt 6) -- NOT Q(sqrt 2). (The doily q=2 gives sqrt4 = 2, rational; q=4 gives sqrt8 -> Q(sqrt2).)",
+  "projective_planes": {
+    "2": {
+      "vertices": 14,
+      "edges": 21,
+      "distinct_eigenvalues": [
+        -3.0,
+        -1.414214,
+        1.414214,
+        3.0
+      ],
+      "predicted": [
+        -3,
+        -1.4142135623730951,
+        1.4142135623730951,
+        3
+      ],
+      "field": "Q(sqrt2)"
+    },
+    "3": {
+      "vertices": 26,
+      "edges": 52,
+      "distinct_eigenvalues": [
+        -4.0,
+        -1.732051,
+        1.732051,
+        4.0
+      ],
+      "predicted": [
+        -4,
+        -1.7320508075688772,
+        1.7320508075688772,
+        4
+      ],
+      "field": "Q(sqrt3)"
+    },
+    "5": {
+      "vertices": 62,
+      "edges": 186,
+      "distinct_eigenvalues": [
+        -6.0,
+        -2.236068,
+        2.236068,
+        6.0
+      ],
+      "predicted": [
+        -6,
+        -2.23606797749979,
+        2.23606797749979,
+        6
+      ],
+      "field": "Q(sqrt5)"
+    }
+  },
+  "generalized_quadrangles": {
+    "2": {
+      "vertices": 30,
+      "edges": 45,
+      "distinct_eigenvalues": [
+        -3.0,
+        -2.0,
+        -0.0,
+        2.0,
+        3.0
+      ],
+      "sqrt_2q": 2.0,
+      "squarefree_2q": 1,
+      "field": "Q (rational)"
+    },
+    "3": {
+      "vertices": 80,
+      "edges": 160,
+      "distinct_eigenvalues": [
+        -4.0,
+        -2.44949,
+        -0.0,
+        2.44949,
+        4.0
+      ],
+      "sqrt_2q": 2.449489742783178,
+      "squarefree_2q": 6,
+      "field": "Q(sqrt6)"
+    },
+    "4": {
+      "vertices": 170,
+      "edges": 425,
+      "distinct_eigenvalues": [
+        -5.0,
+        -2.828427,
+        -0.0,
+        2.828427,
+        5.0
+      ],
+      "sqrt_2q": 2.8284271247461903,
+      "squarefree_2q": 2,
+      "field": "Q(sqrt2)"
+    },
+    "5": {
+      "vertices": 312,
+      "edges": 936,
+      "distinct_eigenvalues": [
+        -6.0,
+        -3.162278,
+        -0.0,
+        3.162278,
+        6.0
+      ],
+      "sqrt_2q": 3.1622776601683795,
+      "squarefree_2q": 10,
+      "field": "Q(sqrt10)"
+    }
+  },
+  "the_forced_field_ladder": {
+    "tetrahedron K4 (genus 0)": "Q  (equilateral; Pass 295)",
+    "doily W(3,2) Levi": "Q (rational)",
+    "Fano/Heawood clock PG(2,2) Levi": "Q(sqrt2)",
+    "substrate W(3,3) Levi": "Q(sqrt6)",
+    "Koide eps* = (5-sqrt21)/2": "Q(sqrt21)  -- matches NEITHER"
+  },
+  "consequence": "bt1654_heawood_clock_homology.py already recorded the honest boundary -- the W(3,3) Levi graph has girth 8 and no 6-cycles, so the Heawood clock is NOT a Levi subgraph of the machine but a separate coupled module. This pass gives that boundary a field-theoretic form: the coupled clock lives in Q(sqrt 2) because its order is 2; the machine lives in Q(sqrt 6) because its order is 3. And Koide's Q(sqrt 21) is neither -- so the 'chase sqrt(2)' route closes as cleanly as Pass 293 closed the sqrt(21) one. Three forced fields are now on the table (Q, Q(sqrt2), Q(sqrt6)) and the Koide constant sits in none of them.",
+  "checks": {
+    "PG2_2_has_sqrt_q": true,
+    "PG2_2_has_q_plus_1": true,
+    "PG2_3_has_sqrt_q": true,
+    "PG2_3_has_q_plus_1": true,
+    "PG2_5_has_sqrt_q": true,
+    "PG2_5_has_q_plus_1": true,
+    "heawood_field_is_Q_sqrt2": true,
+    "GQ_2_has_sqrt_2q": true,
+    "GQ_2_has_q_plus_1": true,
+    "GQ_3_has_sqrt_2q": true,
+    "GQ_3_has_q_plus_1": true,
+    "GQ_4_has_sqrt_2q": true,
+    "GQ_4_has_q_plus_1": true,
+    "GQ_5_has_sqrt_2q": true,
+    "GQ_5_has_q_plus_1": true,
+    "substrate_W33_field_is_Q_sqrt6": true,
+    "doily_levi_is_rational": true,
+    "substrate_field_is_NOT_sqrt2": true,
+    "koide_field_is_21": true,
+    "koide_not_sqrt2": true,
+    "koide_not_sqrt6": true
+  }
+}
