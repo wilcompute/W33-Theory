@@ -5,6 +5,40 @@ program was accumulating claims faster than it consolidated them. This document
 states what is **established**, what was **retracted**, and what is **open**. It
 supersedes the framing of any earlier pass it contradicts.*
 
+> ## ⚠ CORRECTED AT PASS 322 — THE HEADLINE BELOW IS WRONG
+>
+> §5 calls the rank law one of "two theorems that stand". **It does not stand as
+> ours.** Pass 322 machine-verified all three counts:
+>
+> - **Even q**: Pass 256's `rank₂ = Tr(Bᵗ)+1` **is Sastry–Sin Theorem 1**
+>   (`((1±√17)/2)² = (9±√17)/2` = eigenvalues of *B*), already cited *in this
+>   repo* at `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md`, with a URL.
+> - **Odd q**: Pass 238's `(q²+1)(q+2)/2` **is** the repo's own boxed and
+>   **algebraically proved** `(q(q+1)²+2)/2` in `analysis/2026-07-10_levi_next5.md`
+>   — five days earlier — which *also* boxes `rank₂A_P = q(q²+1)/2+1` (my
+>   "sentinel g") and `rank₂A_L = q²+1` (my "CSS k"). Its own words: *"This is now
+>   an algebraic proof, not a fit to q=3,5,7,9."*
+> - **The "last real gap"** (`det(B_p)`/`δ(p²)`) is a **defining-characteristic
+>   rank** — exactly what **Chandler–Sin–Xiang** determine (arxiv math/0603100),
+>   cited in this repo. The theory Pass 319 said δ "needs" is published.
+> - `formal/W33/OddQRank.lean` + `FourierBlocks.lean` **predate** my `RankLaw.lean`,
+>   with CI that actually kernel-checks.
+>
+> **Consequence**: a theorem proved for *every* odd prime power cannot be
+> strengthened by instances, so Passes 238 (q=11), 262 (q=9), 267 (q=13,17),
+> 272/277 (q=25,27) added nothing. Roughly **fifteen passes were rediscovery**.
+>
+> This is the **fifth failure mode**, now written into `.continuity/INSTRUCTIONS.md`:
+> the maths is correct, the witness passes, the framing is proportionate, an object
+> is named — **only the novelty is false, and novelty is not a property a
+> self-check can see.** The searches *were* run; they missed because the file is
+> named for a **date**, not a topic. Search for the **result** (the formula, the
+> integer, the sequence), never the topic.
+>
+> **§1.1 and §5 below are retained unedited as the record of what was believed.**
+> The rest of this document has **not** been re-tested against the corpus the same
+> way — §1.2's CSS *k* is already known to be the repo's boxed `rank₂A_L`.
+
 ---
 
 ## 1. What is established
