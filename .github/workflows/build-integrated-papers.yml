@@ -36,13 +36,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install TeX Live and pytest
+      - name: Install TeX Live, pytest, and NumPy
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             texlive-latex-base texlive-latex-recommended \
             texlive-latex-extra texlive-fonts-recommended \
-            texlive-science latexmk python3-pytest
+            texlive-science latexmk python3-pytest python3-numpy
 
       - name: Run integrated paper build
         run: |

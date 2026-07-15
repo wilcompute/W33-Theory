@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install test dependency
-        run: python -m pip install pytest
+      - name: Install runtime dependencies
+        run: python -m pip install pytest numpy
       - name: Run runtime frontier release lock
         run: bash tools/bt1389_run_runtime_frontier_release_lock.sh
