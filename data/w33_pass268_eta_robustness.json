@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass268.eta_robustness.v1",
+  "status": "PASS",
+  "method": "sample base matrices reproducing theta_12 and Dm21/Dm31 at eta=0; for each, fit eta to theta_13 = 8.54 and record the predicted |theta_23 - 45|. The spread is the honest prediction band.",
+  "observed_dev23": 4.100000000000001,
+  "bands": {
+    "A": {
+      "n_bases": 27,
+      "dev23_median": 7.546433738295995,
+      "dev23_p10": 0.38588640470185426,
+      "dev23_p90": 17.710612383218514,
+      "dev23_min": 0.25264359026378713,
+      "dev23_max": 21.252448762200782,
+      "eta_median": 0.6117981055200589,
+      "observed_inside_p10_p90": true,
+      "observed_inside_full_range": true
+    },
+    "B": {
+      "n_bases": 27,
+      "dev23_median": 5.027833791836947,
+      "dev23_p10": 0.8342773693415267,
+      "dev23_p90": 10.829676377714247,
+      "dev23_min": 0.5705505758061022,
+      "dev23_max": 24.523999321019843,
+      "eta_median": 1.3080693457484576,
+      "observed_inside_p10_p90": true,
+      "observed_inside_full_range": true
+    }
+  },
+  "pass264_point_estimates": {
+    "A": 10.09,
+    "B": 2.49
+  },
+  "verdict": "both bands contain the observation: the test does NOT discriminate once base-matrix freedom is marginalised -- Pass 264's point estimate was over-confident",
+  "reading": "Pass 264 fired the one-parameter test at a single best-fit base and concluded that mode B (mu-mu/tau-tau breaking) is selected. This witness marginalises over the base-matrix freedom to see whether that conclusion survives. Whatever the bands say is reported as such: a point estimate that dissolves under marginalisation would mean Pass 264 was over-confident, and that is worth knowing.",
+  "checks": {
+    "found_admissible_bases": true,
+    "mode_A_band_computed": true,
+    "mode_B_band_computed": true,
+    "bands_are_informative": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass267.prime_power_full_structure.v1",
+  "status": "PASS",
+  "q": 9,
+  "verified_structure": {
+    "n": 820,
+    "rank_2": 451,
+    "dim_C_perp_sentinel": 369,
+    "k_css": 82,
+    "sentinel_self_orthogonal": true,
+    "sentinel_doubly_even": true,
+    "seconds": 3.3
+  },
+  "laws_checked_at_q9": {
+    "n = (q+1)(q^2+1)": true,
+    "rank = (q^2+1)(q+2)/2": true,
+    "sentinel = q(q^2+1)/2": true,
+    "k = q^2+1": true,
+    "CSS register exists": true
+  },
+  "feasibility_q25": {
+    "next_odd_prime_power": 25,
+    "n": 16276,
+    "predicted_rank": 8451,
+    "predicted_sentinel": 7825,
+    "predicted_k": 626,
+    "status": "NOT ATTEMPTED -- out of reach of the present method",
+    "why": "n = 16276 requires eliminating 16276 rows of 16276 bits against ~8451 pivots (~1e8 big-integer XORs on 255-word operands); the Python bitmask elimination that handles n=4369 in seconds would take hours here. A packed uint64 / GF(2) library would be needed."
+  },
+  "reading": "Every component of the odd-q package -- the point count, the characteristic-0 rank, the sentinel dimension (= the SRG multiplicity g of Pass 266), the logical count k = q^2+1, and the doubly-even self-orthogonality that makes the CSS register exist -- holds exactly at q = 9. Since 9 is a prime POWER, this confirms Pass 266's mechanism: the odd-q tower is a CROSS-CHARACTERISTIC phenomenon (2 does not divide q), with no dependence on the Frobenius degree t. The next odd prime power q=25 is honestly out of computational reach here and is left as a stated prediction.",
+  "checks": {
+    "n_820": true,
+    "lines_820": true,
+    "n_matches_formula": true,
+    "rank_451": true,
+    "rank_matches_char0_law": true,
+    "sentinel_369": true,
+    "sentinel_matches_law": true,
+    "sentinel_equals_dual": true,
+    "sentinel_is_SRG_multiplicity_g": true,
+    "sentinel_self_orthogonal": true,
+    "sentinel_doubly_even": true,
+    "css_register_exists_at_q9": true,
+    "k_82": true,
+    "k_matches_q2_plus_1": true
+  }
+}

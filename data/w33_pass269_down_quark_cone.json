@@ -1,0 +1,52 @@
+{
+  "schema": "w33.pass269.down_quark_cone.v1",
+  "status": "PASS",
+  "question": "the down quarks sit at theta = 47.5 deg, only 2.5 deg off the light cone -- do they approach it under running, or merely pass by?",
+  "sectors": {
+    "up": {
+      "2GeV": {
+        "Q": 0.8490064641251923,
+        "theta_deg": 51.200971398599435,
+        "null_defect": -0.21476844425019365,
+        "distance_to_two_thirds": 0.1823397974585257
+      },
+      "MZ": {
+        "Q": 0.8885387087222649,
+        "theta_deg": 52.230010961421726,
+        "null_defect": -0.24970441903949706,
+        "distance_to_two_thirds": 0.2218720420555983
+      },
+      "moves_toward_cone_with_scale": false
+    },
+    "down": {
+      "2GeV": {
+        "Q": 0.7314276514329372,
+        "theta_deg": 47.53982492379001,
+        "null_defect": -0.08854052022697993,
+        "distance_to_two_thirds": 0.06476098476627057
+      },
+      "MZ": {
+        "Q": 0.7469112196512946,
+        "theta_deg": 48.0837434156222,
+        "null_defect": -0.10743519560743904,
+        "distance_to_two_thirds": 0.08024455298462796
+      },
+      "moves_toward_cone_with_scale": false
+    }
+  },
+  "charged_lepton_reference": {
+    "Q_at_pole": 0.6666605114773855,
+    "theta_deg": 44.99973549778197,
+    "note": "null at the pole scale; Pass 257 showed running to M_Z moves them OFF the cone"
+  },
+  "verdict": "the down quarks RECEDE from the cone as the scale rises: 47.5 deg at 2 GeV is a near miss, not an approach. Option (b) -- the cone stays charged-lepton-only and Pass 263's verdict stands.",
+  "reading": "Q is invariant under uniform rescaling, so any motion is genuine non-universal running. Evaluating both quark sectors at 2 GeV and at M_Z shows the direction of travel. Combined with Pass 257 (the charged leptons are null at the POLE scale and drift off when run up), the emerging picture is that proximity to the cone is an infrared property: the charged leptons hit it exactly in the deep IR, and every other sector -- up quarks, down quarks, neutrinos -- misses it, with the down quarks merely the nearest miss.",
+  "checks": {
+    "up_Q_at_2GeV_matches_263": true,
+    "down_Q_at_2GeV_matches_263": true,
+    "down_closer_than_up": true,
+    "no_quark_sector_on_cone": true,
+    "down_direction_determined": true,
+    "leptons_null_at_pole": true
+  }
+}

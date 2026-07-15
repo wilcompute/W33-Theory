@@ -1,0 +1,80 @@
+{
+  "schema": "w33.pass265.B_is_a_similarity_class.v1",
+  "status": "PASS",
+  "theorem": "The even-q transfer matrix is determined up to SIMILARITY by the first two ranks: rank(t=1)=10 gives Tr(B)=9, and rank(t=2)=50 gives Tr(B^2)=49, whence det(B)=(81-49)/2=16. A 2x2 matrix is fixed up to similarity by (Tr, det), so the entries 4,2,2,5 are a basis choice carrying no extra information -- the companion matrix [[0,-16],[1,9]] and any conjugate reproduce the tower identically. The meaningful content is (Tr, det) = (9, 16), and t=3,4,5 (298, 1890, 12250) are then PREDICTIONS, not fits.",
+  "invariants": {
+    "trace": 9,
+    "det": 16,
+    "discriminant": 17
+  },
+  "fitted_vs_predicted": {
+    "fitted": {
+      "t=1": 10,
+      "t=2": 50
+    },
+    "predicted": {
+      "t=3": 298,
+      "t=4": 1890,
+      "t=5": 12250
+    },
+    "predictions_correct": true,
+    "note": "1890 was machine-verified by building W(3,16) (Pass 250); 12250 matches the independent transfer theorem (Pass 178)"
+  },
+  "gauge_freedom": {
+    "committed": [
+      [
+        4,
+        2
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "companion": [
+      [
+        0,
+        -16
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "alternative": [
+      [
+        1,
+        -2
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "all_give_same_tower": true
+  },
+  "invariant_meaning": {
+    "Tr(B) = 9": "rank_2 W(3,2) - 1 = 10 - 1: the doily's F2 rank minus the trivial (all-ones) module",
+    "det(B) = 16": "2^4 = |F_2^4|, the ambient symplectic vector space",
+    "disc = 17": "Tr^2 - 4 det = 81 - 64, the quadratic irrationality of the even tower"
+  },
+  "reading": "'Why 4,2,2,5?' dissolves: those entries are a choice of basis. What is canonical is (Tr, det) = (9, 16) -- the doily's rank minus the trivial module, and the size of the ambient F_2^4. And the law is not curve-fitted: two ranks fix the similarity class, and the class then correctly forecasts three further ranks, one of which was verified by explicit construction only afterwards. The remaining question is why Tr = 9 and det = 2^4 -- a question about the characteristic-2 module (Pass 266), not about a matrix's entries.",
+  "checks": {
+    "trace_from_t1": true,
+    "trace_sq_from_t2": true,
+    "det_forced_16": true,
+    "det_derivation_exact": true,
+    "committed_B_has_these_invariants": true,
+    "predicts_298_1890_12250": true,
+    "all_anchors_reproduced": true,
+    "two_fitted_three_predicted": true,
+    "companion_same_invariants": true,
+    "companion_reproduces_tower": true,
+    "conjugates_reproduce_tower": true,
+    "alt_same_invariants": true,
+    "alt_reproduces_tower": true,
+    "trace_is_doily_rank_minus_one": true,
+    "det_is_2_pow_4": true,
+    "disc_is_17": true
+  }
+}

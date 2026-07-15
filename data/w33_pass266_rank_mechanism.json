@@ -1,0 +1,162 @@
+{
+  "schema": "w33.pass266.rank_mechanism.v1",
+  "status": "PASS",
+  "theorem": "The point graph of W(3,q) is SRG((q+1)(q^2+1), q(q+1), q-1, q+1) with eigenvalue s = -(q+1) of multiplicity g = q(q^2+1)/2 -- exactly the sentinel dimension. Since N N^T = (q+1)I + A has eigenvalues {(q+1)^2, 2q, 0} with multiplicities {1, f, g}, the CHARACTERISTIC-0 rank of the incidence matrix is v - g = (q^2+1)(q+2)/2 for EVERY q. The so-called 'odd law' is simply the char-0 rank. The dichotomy is whether reduction mod 2 loses rank: odd q is CROSS characteristic (no drop, rank_2 = rank_char0, true even at prime powers like q=9), while q = 2^t is DEFINING characteristic (rank drops by delta = 0,1,27,423, whose closed form is Tr(B^t)+1).",
+  "identifications": {
+    "g = q(q^2+1)/2": "multiplicity of SRG eigenvalue -(q+1) = the SENTINEL dimension (Pass 238) = corank of N",
+    "v - g = (q^2+1)(q+2)/2": "the characteristic-0 rank of N, for ALL q",
+    "delta": "the 2-modular (defining-characteristic) rank drop",
+    "k = q^2+1": "n - 2g, the CSS logical count (Pass 224)"
+  },
+  "explicit_verification": {
+    "2": {
+      "n": 15,
+      "even": true,
+      "NNt_is_qplus1_I_plus_A": true,
+      "top_eigenvalue": 9.0,
+      "expected_top": 9,
+      "zero_multiplicity": 5,
+      "expected_g": 5,
+      "char0_rank": 10,
+      "expected_char0": 10,
+      "f2_rank": 10,
+      "committed_f2": 10,
+      "rank_drop_delta": 0
+    },
+    "3": {
+      "n": 40,
+      "even": false,
+      "NNt_is_qplus1_I_plus_A": true,
+      "top_eigenvalue": 16.0,
+      "expected_top": 16,
+      "zero_multiplicity": 15,
+      "expected_g": 15,
+      "char0_rank": 25,
+      "expected_char0": 25,
+      "f2_rank": 25,
+      "committed_f2": 25,
+      "rank_drop_delta": 0
+    },
+    "4": {
+      "n": 85,
+      "even": true,
+      "NNt_is_qplus1_I_plus_A": true,
+      "top_eigenvalue": 25.0,
+      "expected_top": 25,
+      "zero_multiplicity": 34,
+      "expected_g": 34,
+      "char0_rank": 51,
+      "expected_char0": 51,
+      "f2_rank": 50,
+      "committed_f2": 50,
+      "rank_drop_delta": 1
+    },
+    "5": {
+      "n": 156,
+      "even": false,
+      "NNt_is_qplus1_I_plus_A": true,
+      "top_eigenvalue": 36.0,
+      "expected_top": 36,
+      "zero_multiplicity": 65,
+      "expected_g": 65,
+      "char0_rank": 91,
+      "expected_char0": 91,
+      "f2_rank": 91,
+      "committed_f2": 91,
+      "rank_drop_delta": 0
+    }
+  },
+  "rank_drops": {
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 0,
+    "7": 0,
+    "8": 27,
+    "9": 0,
+    "11": 0,
+    "13": 0,
+    "16": 423,
+    "17": 0
+  },
+  "two_adic_fingerprint": {
+    "3": {
+      "v2((q+1)^2)": 4,
+      "v2(2q)": 1,
+      "parity": "odd"
+    },
+    "5": {
+      "v2((q+1)^2)": 2,
+      "v2(2q)": 1,
+      "parity": "odd"
+    },
+    "7": {
+      "v2((q+1)^2)": 6,
+      "v2(2q)": 1,
+      "parity": "odd"
+    },
+    "9": {
+      "v2((q+1)^2)": 2,
+      "v2(2q)": 1,
+      "parity": "odd"
+    },
+    "2": {
+      "v2((q+1)^2)": 0,
+      "v2(2q)": 2,
+      "parity": "even"
+    },
+    "4": {
+      "v2((q+1)^2)": 0,
+      "v2(2q)": 3,
+      "parity": "even"
+    },
+    "8": {
+      "v2((q+1)^2)": 0,
+      "v2(2q)": 4,
+      "parity": "even"
+    },
+    "16": {
+      "v2((q+1)^2)": 0,
+      "v2(2q)": 5,
+      "parity": "even"
+    }
+  },
+  "resolves": {
+    "pass262": "Why the polynomial survives at the odd prime power q=9 (which refuted the transfer-matrix unification): odd q is cross characteristic, so there is never a 2-modular drop, regardless of the Frobenius degree t. The unification was doomed because it tried to make odd q exponential in t when odd q has no t-dependence at all.",
+    "pass256": "delta = 0,1,27,423 is the defining-characteristic rank drop; Tr(B^t)+1 is the closed form of (char-0 rank) - delta.",
+    "pass238": "the sentinel IS the -(q+1) eigenspace of the point graph."
+  },
+  "reading": "The whole rank story collapses to one sentence: the incidence matrix has char-0 rank v - g = (q^2+1)(q+2)/2 given by the SRG eigenvalue multiplicities, and reduction mod 2 is faithful exactly when 2 does not divide q. Odd q (any prime power) keeps the full rank; q = 2^t loses delta. The sentinel is the -(q+1) eigenspace, which is why its dimension q(q^2+1)/2 appeared in Pass 238 -- it was an SRG multiplicity all along.",
+  "checks": {
+    "g_equals_q_q2_plus_1_over_2": true,
+    "g_equals_sentinel_law": true,
+    "v_minus_g_is_the_polynomial": true,
+    "q2_NNt_structure": true,
+    "q2_top_eig_is_(q+1)^2": true,
+    "q2_zero_mult_is_g": true,
+    "q2_char0_rank_is_polynomial": true,
+    "q2_f2_matches_committed": true,
+    "q3_NNt_structure": true,
+    "q3_top_eig_is_(q+1)^2": true,
+    "q3_zero_mult_is_g": true,
+    "q3_char0_rank_is_polynomial": true,
+    "q3_f2_matches_committed": true,
+    "q4_NNt_structure": true,
+    "q4_top_eig_is_(q+1)^2": true,
+    "q4_zero_mult_is_g": true,
+    "q4_char0_rank_is_polynomial": true,
+    "q4_f2_matches_committed": true,
+    "q5_NNt_structure": true,
+    "q5_top_eig_is_(q+1)^2": true,
+    "q5_zero_mult_is_g": true,
+    "q5_char0_rank_is_polynomial": true,
+    "q5_f2_matches_committed": true,
+    "odd_q_no_rank_drop": true,
+    "even_q_drops_0_1_27_423": true,
+    "drop_positive_for_q_ge_4_even": true,
+    "q9_prime_power_no_drop": true,
+    "odd_q_v2_2q_is_1": true,
+    "even_q_(q+1)^2_is_unit": true,
+    "even_q_v2_2q_grows": true
+  }
+}

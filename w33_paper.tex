@@ -12634,4 +12634,66 @@ big, disfavoured); Mode~B ($\mu\mu$/$\tau\tau$ breaking) gives $2.49^\circ$ --- 
 right ballpark from one parameter, $39\%$ low. The structural content: the
 $\mu$--$\tau$ breaking must sit in the $\mu\mu/\tau\tau$ entry.
 
+
+\section{The Rank Mechanism: the ``odd law'' is the characteristic-$0$ rank, and $\delta$ is a $2$-modular drop (Passes 265--269)}
+
+\paragraph{Pass 266 --- the mechanism (theorem).} The point graph of $W(3,q)$ is
+$\mathrm{SRG}\bigl((q+1)(q^2+1),\,q(q+1),\,q-1,\,q+1\bigr)$, whose eigenvalue
+$s=-(q+1)$ has multiplicity, exactly,
+\[
+   g \;=\; \tfrac12 q(q^2+1),
+\]
+which is precisely the sentinel dimension of Pass 238 --- \emph{the sentinel is
+the $-(q+1)$ eigenspace}. Since $NN^{T}=(q+1)I+A$ has eigenvalues
+$\{(q+1)^2,\,2q,\,0\}$ with multiplicities $\{1,f,g\}$,
+\[
+   \operatorname{rank}_{\text{char }0}(N)\;=\;v-g\;=\;\tfrac12(q^2+1)(q+2)
+   \qquad\textbf{for every } q .
+\]
+So the ``odd law'' is not an odd law at all: it is the characteristic-$0$ rank.
+The dichotomy is whether reduction mod $2$ is faithful. For odd $q$ ($2\nmid q$)
+it is --- \emph{cross characteristic}, no drop, verified at
+$q=3,5,7,9,11,13,17$, \emph{including the prime power $9$}, which is exactly why
+Pass 262's transfer-matrix unification had to fail. For $q=2^t$ ($2\mid q$) it is
+not --- \emph{defining characteristic}, and the rank drops by
+$\delta=0,1,27,423$, whose closed form is $\operatorname{Tr}(B^t)+1$ (Pass 256).
+Explicit verification at $q=2,3,4,5$ confirms $NN^T=(q+1)I+A$, the zero-multiplicity
+$=g$, and $\operatorname{rank}_{\text{char }0}=v-g$; the drops are $0$ for every
+odd $q$ and $1,27,423$ at $q=4,8,16$. The $2$-adic fingerprint is opposite in the
+two cases: for odd $q$, $(q+1)^2$ is $2$-divisible and $v_2(2q)=1$; for $q=2^t$,
+$(q+1)^2$ is a \emph{unit} mod $2$ while $v_2(2q)=t+1$ grows.
+
+\paragraph{Pass 265 --- ``why $4,2,2,5$'' dissolves.} $\operatorname{rank}(t{=}1)=10$
+gives $\operatorname{Tr}B=9$; $\operatorname{rank}(t{=}2)=50$ gives
+$\operatorname{Tr}B^2=49$, forcing $\det B=\tfrac12(81-49)=16$. A $2\times2$ matrix
+is fixed up to similarity by $(\operatorname{Tr},\det)$, so the entries are a basis
+choice: the companion $[[0,-16],[1,9]]$, the alternative $[[1,-2],[4,8]]$, and any
+conjugate reproduce the tower identically. Two ranks are fitted; $t=3,4,5$
+($298,1890,12250$) are then \emph{forced} and all three are correct --- the law is
+not curve-fitting. What needs explaining is $\operatorname{Tr}=9$ (the doily's rank
+minus the trivial module) and $\det=16=|\mathbf F_2^4|$.
+
+\paragraph{Pass 267 --- the full package at $q=9$.} Every component holds at the
+first odd prime power: $n=820$, $\operatorname{rank}_2=451=\tfrac12(q^2+1)(q+2)$,
+$\dim C^{\perp}=369=\tfrac12 q(q^2+1)=g$, $k=82=q^2+1$, and $C^{\perp}$ is
+doubly-even and self-orthogonal, so the CSS register exists at $q=9$. The odd
+tower is cross-characteristic, not prime. ($q=25$, $n=16276$, is honestly out of
+reach of the present elimination.)
+
+\paragraph{Pass 268 --- a retraction.} Pass 264 concluded from a \emph{single}
+best-fit base matrix that mode~B ($\mu\mu/\tau\tau$ breaking) is selected.
+Marginalising over all base matrices that reproduce $\theta_{12}$ and
+$\Delta m^2_{21}/\Delta m^2_{31}$, both bands contain the observed
+$|\theta_{23}-45^\circ|=4.10^\circ$ (mode~A range $[0.25,21.25]$, mode~B
+$[0.57,24.52]$). \textbf{The test does not discriminate once base-matrix freedom is
+marginalised; Pass 264's point estimate was over-confident and its conclusion is
+withdrawn.}
+
+\paragraph{Pass 269 --- the cone stays charged-lepton-only.} The down quarks sit
+at $47.5^\circ$, only $2.5^\circ$ off the cone. Running decides: $Q$ moves
+$0.7314\to0.7469$ ($2$~GeV $\to M_Z$), i.e.\ \emph{away}. The up quarks likewise
+recede ($0.849\to0.889$). So $47.5^\circ$ is a near miss, not an approach, and
+Pass 263's verdict stands: only the charged leptons are null, and only in the deep
+infrared.
+
 \end{document}
