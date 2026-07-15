@@ -42,7 +42,7 @@ def build_edge_list(points: List[Tuple]) -> List[Tuple[int,int]]:
                 edges.append((i, j))
     return edges
 
-def ihara_zeta_inverse_coeffs(eigenvalues_A: List[float], n: int, k: int) -> dict:
+def ihara_zeta_inverse_coeffs(eigenvalues_A: List[float], n: int, k: int) -> list[dict]:
     """
     For a k-regular graph on n vertices with adjacency eigenvalues lambda_i:
     Z_W(u)^{-1} = (1-u^2)^{|E|-n} * prod_i (1 - lambda_i * u + (k-1)*u^2)
@@ -50,20 +50,25 @@ def ihara_zeta_inverse_coeffs(eigenvalues_A: List[float], n: int, k: int) -> dic
     """
     poles = []
     for lam in eigenvalues_A:
+        spectral_sector = "perron" if math.isclose(lam, float(k)) else "nontrivial"
         # Roots of 1 - lam*u + (k-1)*u^2 = 0
         # (k-1)*u^2 - lam*u + 1 = 0
         disc = lam**2 - 4*(k-1)
         if disc >= 0:
             u1 = (lam + math.sqrt(disc)) / (2*(k-1))
             u2 = (lam - math.sqrt(disc)) / (2*(k-1))
-            poles.extend([{"u": u1, "abs_u": abs(u1), "type": "real", "lambda": lam},
-                          {"u": u2, "abs_u": abs(u2), "type": "real", "lambda": lam}])
+            poles.extend([{"u": u1, "abs_u": abs(u1), "type": "real", "lambda": lam,
+                           "spectral_sector": spectral_sector},
+                          {"u": u2, "abs_u": abs(u2), "type": "real", "lambda": lam,
+                           "spectral_sector": spectral_sector}])
         else:
             re = lam / (2*(k-1))
             im = math.sqrt(-disc) / (2*(k-1))
             abs_u = math.sqrt(re**2 + im**2)
-            poles.append({"u_real": re, "u_imag": im, "abs_u": abs_u, "type": "complex", "lambda": lam})
-            poles.append({"u_real": re, "u_imag": -im, "abs_u": abs_u, "type": "complex", "lambda": lam})
+            poles.append({"u_real": re, "u_imag": im, "abs_u": abs_u, "type": "complex",
+                          "lambda": lam, "spectral_sector": spectral_sector})
+            poles.append({"u_real": re, "u_imag": -im, "abs_u": abs_u, "type": "complex",
+                          "lambda": lam, "spectral_sector": spectral_sector})
     return poles
 
 
@@ -95,17 +100,17 @@ def main() -> None:
     # The Graph-RH for W(3,3): non-trivial poles satisfy |u| = 1/sqrt(k-1) = 1/sqrt(11)
     grh_radius = 1.0 / math.sqrt(k - 1)
     
-    # Trivial poles: from (1-u^2)^{E-n} factor, at u = +/-1
-    trivial_pole_u = [1.0, -1.0]
-    
-    # Non-trivial poles: all others
-    non_trivial = [p for p in poles if abs(p["abs_u"] - 1.0) > 1e-9 and abs(p["abs_u"] - 1.0) > 1e-9]
+    # The Perron quadratic is
+    #   1 - 12u + 11u^2 = (1-u)(1-11u).
+    # Both u=1 and u=1/11 are trivial.  The old Track E classifier excluded
+    # only |u|=1 and therefore falsely reported u=1/11 as a GRH violation.
+    perron_trivial = [p for p in poles if p["spectral_sector"] == "perron"]
+    non_trivial = [p for p in poles if p["spectral_sector"] == "nontrivial"]
     
     # Check GRH: all non-trivial poles have |u| = grh_radius (within tolerance)
     tol = 1e-8
-    grh_violations = [p for p in poles
-                      if abs(p["abs_u"] - 1.0) > tol  # not trivial
-                      and abs(p["abs_u"] - grh_radius) > 1e-6]  # not on GRH circle
+    grh_violations = [p for p in non_trivial
+                      if abs(p["abs_u"] - grh_radius) > 1e-6]
     
     # Min |u| among all poles (excluding u=0)
     min_abs_u = min(p["abs_u"] for p in poles if p["abs_u"] > tol)
@@ -120,8 +125,23 @@ def main() -> None:
         "grh_radius_formula": "1/sqrt(k-1) = 1/sqrt(11)",
         "eigenvalues": [{"lambda": lam, "multiplicity": mult} for lam, mult in eigenvalues_with_mult],
         "total_poles_computed": len(poles),
+        "total_vertex_factor_roots_computed": len(poles),
+        "perron_factor": "1 - 12u + 11u^2 = (1-u)(1-11u)",
+        "perron_trivial_poles": [1.0, 1.0 / (k - 1)],
+        "bass_prefactor_trivial_poles": [1.0, -1.0],
+        "nontrivial_vertex_factor_root_count": len(non_trivial),
+        "nontrivial_factors": [
+            "1 - 2u + 11u^2 (multiplicity 24)",
+            "1 + 4u + 11u^2 (multiplicity 15)",
+        ],
+        "nontrivial_root_modulus_squared": 1.0 / (k - 1),
         "grh_violations": len(grh_violations),
         "grh_satisfied": len(grh_violations) == 0,
+        "pole_classification_audit_pass": (
+            len(perron_trivial) == 2
+            and len(non_trivial) == 78
+            and all(abs(p["abs_u"] - grh_radius) <= 1e-6 for p in non_trivial)
+        ),
         "min_abs_u_nonzero": min_abs_u,
         "ramanujan_check": all(abs(lam) <= 2*math.sqrt(k-1) for lam, _ in eigenvalues_with_mult[1:]),
         "note": "GRH for W(3,3): all Ihara zeta non-trivial poles lie on |u|=1/sqrt(11) circle",

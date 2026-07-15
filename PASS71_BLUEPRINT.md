@@ -1,5 +1,12 @@
 # Pass 71 Forward-Attack Blueprint
 
+> **Historical plan, superseded by the executed audits.** Track D's proposed
+> adjacency/complement checks fail with `H_X H_Z^T = A != 0` over `F_2`, so they
+> do not construct `[[360,9,>=9]]`. Track E's correct critical radius is
+> `1/sqrt(11)`, not `1/sqrt(7)`; Pass 344 verifies all 78 nontrivial roots
+> exactly. Track F remains a conditional incidence dictionary, not a derivation
+> of physical PMNS parameters.
+
 ## Mission
 Pass 71 targets the three hardest open verification gaps in the W33 programme:
 1. **Explicit HX/HZ parity-check matrix construction** for the claimed `[[360,9,≥9]]` code

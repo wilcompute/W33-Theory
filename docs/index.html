@@ -2875,6 +2875,37 @@
               <a href="../analysis/w33_pass342_global_lattice_reconciliation.g">Run the 12-check GAP witness</a>.
             </div>
           </div>
+          <div class="card" id="pass343-pass71-css-obstruction">
+            <div class="label">Pass 343 &mdash; The Old Pass 71 CSS Pair Is Refuted</div>
+            <div class="detail">The proposed binary checks <code>H<sub>X</sub>=A</code> and
+              <code>H<sub>Z</sub>=J-I-A</code> do not commute. GAP proves
+              <code>H<sub>X</sub>H<sub>Z</sub><sup>T</sup>=A</code>, with binary rank <code>16</code> and weight
+              <code>480</code>. Thus the old <code>[[360,9,&ge;9]]</code> line was not constructed by this witness;
+              the row weights <code>12</code> and <code>27</code> were not distance lower bounds.
+              <a href="../analysis/w33_pass343_pass71_css_obstruction.g">Run the 12-check GAP correction</a>.
+            </div>
+          </div>
+          <div class="card" id="pass344-pass71-ihara-pole-audit">
+            <div class="label">Pass 344 &mdash; Graph RH Survives the Track E Audit</div>
+            <div class="detail">The second Pass 71 CI failure was a classifier bug, not a theorem failure. GAP
+              factors the Perron term exactly as <code>1-12u+11u<sup>2</sup>=(1-u)(1-11u)</code>, so both
+              <code>u=1</code> and <code>u=1/11</code> are trivial. The remaining <code>78</code> roots come from
+              discriminants <code>-40</code> and <code>-28</code>; every one has
+              <code>|u|<sup>2</sup>=1/11</code>. Track E now reports zero violations and distinguishes correction
+              of an implementation from retraction of a theorem.
+              <a href="../analysis/w33_pass344_pass71_ihara_trivial_pole_audit.g">Run the 14-check GAP audit</a>.
+            </div>
+          </div>
+          <div class="card" id="pass345-pass70-spectral-code-retraction">
+            <div class="label">Pass 345 &mdash; A Spectrum Is Not a Quantum Code</div>
+            <div class="detail">The result-first index exposed a still-older contradiction. Pass 70 advertised
+              <code>[[360,9,9]]</code>, its tracked JSON said <code>[[360,9,1]]</code>, and its literal formula gives
+              <code>ceil(360/250)=2</code>. GAP confirms the only exact statement is the multiplicity ledger
+              <code>360=1+40+9+15+15+15+15+250</code>. No stabilizer matrices or distance computation were present,
+              so none of those three numbers is a certified distance and the code claim is withdrawn.
+              <a href="../analysis/w33_pass345_pass70_spectral_code_retraction.g">Run the 12-check GAP audit</a>.
+            </div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching

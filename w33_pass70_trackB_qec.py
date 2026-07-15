@@ -1,11 +1,12 @@
-"""Pass 70 Track B: [[360,9,d]] logical-sector witness.
+"""Pass 70 Track B: audit of the 360-dimensional spectral ledger.
 
-Packages the eigenspace bookkeeping used in the 360-dimensional W33 code claim.
+The multiplicities sum to 360 and one labelled sector has multiplicity 9, but
+spectral multiplicities alone do not construct a stabilizer code or determine
+its distance.
 """
 from __future__ import annotations
 
 import json
-import math
 from pathlib import Path
 
 
@@ -23,19 +24,32 @@ EIGENSPACES = [
 
 def main() -> None:
     n = sum(item["multiplicity"] for item in EIGENSPACES)
-    k = next(item["multiplicity"] for item in EIGENSPACES if item["sector"] == "logical_space")
+    distinguished_multiplicity = next(
+        item["multiplicity"] for item in EIGENSPACES if item["sector"] == "logical_space"
+    )
     largest_nonlogical = max(item["multiplicity"] for item in EIGENSPACES if item["sector"] != "logical_space")
-    d_lower_bound = math.ceil(n / largest_nonlogical)
+    heuristic_ceil_ratio = (n + largest_nonlogical - 1) // largest_nonlogical
 
     payload = {
         "track": "B",
-        "title": "W33 logical sector code witness",
+        "title": "W33 360-dimensional spectral-ledger audit",
         "length_n": n,
-        "logical_dimension_k": k,
-        "distance_lower_bound": d_lower_bound,
-        "claimed_code": f"[[{n},{k},{d_lower_bound}]]",
+        "distinguished_multiplicity": distinguished_multiplicity,
+        "logical_dimension_k": None,
+        "distance_lower_bound": None,
+        "claimed_code": None,
+        "retracted_claims": ["[[360,9,9]]", "[[360,9,1]]"],
         "largest_nonlogical_eigenspace": largest_nonlogical,
+        "heuristic_ceil_ratio": heuristic_ceil_ratio,
         "logical_decomposition": "3 x 3",
+        "stabilizer_matrices_constructed": False,
+        "distance_computed": False,
+        "audit_note": (
+            "The ledger certifies only the multiplicity identity 360 = "
+            "1+40+9+15+15+15+15+250. A multiplicity labelled logical_space "
+            "is not a code dimension, and ceil(360/250)=2 is not a distance bound."
+        ),
+        "audit_pass": n == 360 and distinguished_multiplicity == 9 and heuristic_ceil_ratio == 2,
         "eigenspaces": EIGENSPACES,
     }
 

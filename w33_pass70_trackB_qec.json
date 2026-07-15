@@ -1,20 +1,62 @@
 {
   "track": "B",
-  "title": "W33 logical sector code witness",
+  "title": "W33 360-dimensional spectral-ledger audit",
   "length_n": 360,
-  "logical_dimension_k": 9,
-  "distance_lower_bound": 1,
-  "claimed_code": "[[360,9,1]]",
+  "distinguished_multiplicity": 9,
+  "logical_dimension_k": null,
+  "distance_lower_bound": null,
+  "claimed_code": null,
+  "retracted_claims": [
+    "[[360,9,9]]",
+    "[[360,9,1]]"
+  ],
   "largest_nonlogical_eigenspace": 250,
+  "heuristic_ceil_ratio": 2,
   "logical_decomposition": "3 x 3",
+  "stabilizer_matrices_constructed": false,
+  "distance_computed": false,
+  "audit_note": "The ledger certifies only the multiplicity identity 360 = 1+40+9+15+15+15+15+250. A multiplicity labelled logical_space is not a code dimension, and ceil(360/250)=2 is not a distance bound.",
+  "audit_pass": true,
   "eigenspaces": [
-    {"eigenvalue": 8, "multiplicity": 1, "sector": "vacuum"},
-    {"eigenvalue": 3, "multiplicity": 40, "sector": "gauge_bosons"},
-    {"eigenvalue": -4, "multiplicity": 9, "sector": "logical_space"},
-    {"eigenvalue": "(1+sqrt(97))/2", "multiplicity": 15, "sector": "quark_lepton_doublets"},
-    {"eigenvalue": "(1-sqrt(97))/2", "multiplicity": 15, "sector": "quark_lepton_doublets_conjugate"},
-    {"eigenvalue": "(-1+sqrt(97))/2", "multiplicity": 15, "sector": "conjugate_sector"},
-    {"eigenvalue": "(-1-sqrt(97))/2", "multiplicity": 15, "sector": "conjugate_sector_dual"},
-    {"eigenvalue": 0, "multiplicity": 250, "sector": "bulk_modes"}
+    {
+      "eigenvalue": 8,
+      "multiplicity": 1,
+      "sector": "vacuum"
+    },
+    {
+      "eigenvalue": 3,
+      "multiplicity": 40,
+      "sector": "gauge_bosons"
+    },
+    {
+      "eigenvalue": -4,
+      "multiplicity": 9,
+      "sector": "logical_space"
+    },
+    {
+      "eigenvalue": "(1+sqrt(97))/2",
+      "multiplicity": 15,
+      "sector": "quark_lepton_doublets"
+    },
+    {
+      "eigenvalue": "(1-sqrt(97))/2",
+      "multiplicity": 15,
+      "sector": "quark_lepton_doublets_conjugate"
+    },
+    {
+      "eigenvalue": "(-1+sqrt(97))/2",
+      "multiplicity": 15,
+      "sector": "conjugate_sector"
+    },
+    {
+      "eigenvalue": "(-1-sqrt(97))/2",
+      "multiplicity": 15,
+      "sector": "conjugate_sector_dual"
+    },
+    {
+      "eigenvalue": 0,
+      "multiplicity": 250,
+      "sector": "bulk_modes"
+    }
   ]
 }

@@ -30,14 +30,20 @@ def run_all() -> None:
     E = results["w33_pass71_trackE_ihara_zeta_poles.json"]
     F = results["w33_pass71_trackF_pmns_angles.json"]
 
-    assert D["css_condition_satisfied"] is True, "CSS condition H_X * H_Z^T != 0"
+    assert D["audit_pass"] is True, "Track D obstruction audit failed"
+    assert D["css_condition_satisfied"] is False, "The invalid CSS pair reappeared"
+    assert D["css_product_equals_adjacency"] is True
+    assert D["css_product_rank"] == 16 and D["css_product_weight"] == 480
     assert D["n_points"] == 40, "Expected 40 W(3,3) points"
     assert E["n_vertices"] == 40 and E["n_edges"] == 240, "W(3,3) graph dimensions wrong"
+    assert E["pole_classification_audit_pass"] is True, "Ihara pole classification failed"
+    assert E["perron_trivial_poles"] == [1.0, 1.0 / 11.0]
+    assert E["nontrivial_vertex_factor_root_count"] == 78
     assert E["grh_satisfied"] is True, "Graph-RH violated"
     assert F["spectral_parameters"]["k"] == 12, "Degree mismatch"
 
     print("\nAll Pass 71 tracks completed and cross-validated.")
-    print(f"  Track D: CSS verified, d_lower = {D['d_lower_bound']}")
+    print("  Track D: CSS proposal refuted, H_X H_Z^T = A (rank 16, weight 480)")
     print(f"  Track E: GRH satisfied = {E['grh_satisfied']}, radius = {E['grh_radius']:.6f}")
     print(f"  Track F: theta_12 = {F['w33_predictions']['theta_12_deg']:.2f} deg (PDG: {F['pdg_2024_values']['theta_12_deg']})")
 

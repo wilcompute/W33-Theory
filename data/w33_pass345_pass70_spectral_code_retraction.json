@@ -1,0 +1,30 @@
+{
+  "schema": "w33.pass345.pass70_spectral_code_retraction.gap.v1",
+  "status": "PASS",
+  "headline": "the Pass 70 Track B spectrum is a 360-dimensional ledger, not a stabilizer code",
+  "multiplicities": [1, 40, 9, 15, 15, 15, 15, 250],
+  "multiplicity_sum": 360,
+  "distinguished_multiplicity": 9,
+  "largest_multiplicity": 250,
+  "literal_ceiling_ratio": 2,
+  "stabilizer_matrices_constructed": false,
+  "distance_computed": false,
+  "claimed_code": null,
+  "retracted_claims": ["[[360,9,9]]", "[[360,9,1]]"],
+  "boundary": "multiplicity 9 is not a logical dimension and ceil(360/250)=2 is not a code distance",
+  "check_count": 12,
+  "checks": {
+    "eight_multiplicities_are_recorded": true,
+    "all_multiplicities_are_positive": true,
+    "multiplicity_sum_is_360": true,
+    "distinguished_multiplicity_is_9": true,
+    "largest_multiplicity_is_250": true,
+    "literal_ceiling_ratio_is_2": true,
+    "literal_ceiling_ratio_is_not_1": true,
+    "literal_ceiling_ratio_is_not_9": true,
+    "nine_times_forty_is_360": true,
+    "spectral_ledger_alone_has_no_css_product": true,
+    "spectral_ledger_alone_has_no_distance_computation": true,
+    "old_code_parameter_is_not_certified": true
+  }
+}

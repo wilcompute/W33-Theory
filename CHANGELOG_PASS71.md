@@ -1,15 +1,22 @@
 # CHANGELOG PASS 71
 
-## Verified execution layers
-- Pass 70: master runner plus JSON witnesses for Tracks A, B, C.
-- Pass 71: master runner plus JSON witnesses for Tracks D, E, F.
-- CI workflow added for Python 3.11 and 3.12 with pytest and witness checks.
+## Current audit status
 
-## Breakthrough framing
-- Track D converted CSS claims into explicit parity-check verification scaffolding.
-- Track E converted the Ihara zeta GRH statement into a machine-checkable witness packet.
-- Track F exposed direct PMNS falsifiability against PDG-style reference values.
+- Pass 70 has a master runner and JSON outputs, but Track B certifies only a
+  360-dimensional multiplicity ledger; its former code claim is withdrawn.
+- Pass 71 has a master runner and JSON outputs. Track D is now an exact CSS
+  obstruction, Track E is a corrected Graph-RH certificate, and Track F is a
+  conditional incidence dictionary rather than a physical derivation.
+- CI covers Python 3.11 and 3.12; Passes 343-345 preserve the corrections with
+  GAP-owned exact witnesses where the mathematical claim requires one.
 
-## Release prep
-- Next publishing action is the `pass-71-verified` release tag to trigger Zenodo DOI minting.
-- Next research action is Pass 72 execution across Yang-Mills gap, CKM, and Koide tracks.
+## What survived
+
+- Track D's explicit matrices made the failure measurable:
+  `H_X H_Z^T = A`, with binary rank 16 and weight 480.
+- Track E's theorem survived after classifying `u=1/11` as Perron-trivial; all
+  78 nontrivial roots satisfy `|u|^2=1/11`.
+- Track F preserves finite ratios for study, with no claim that they force PMNS
+  observables.
+
+This changelog is retained as provenance, not as a release-readiness statement.

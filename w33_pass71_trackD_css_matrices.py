@@ -1,6 +1,7 @@
-"""Pass 71 Track D: [[360,9,d]] CSS parity-check matrix construction and verification.
+"""Pass 71 Track D: exact obstruction to the proposed adjacency/complement CSS pair.
 
-Builds H_X and H_Z from the W(3,3) symplectic structure and verifies the CSS condition.
+Builds H_X and H_Z from the W(3,3) symplectic structure and checks the
+commutation product instead of assuming it vanishes.
 """
 from __future__ import annotations
 import json
@@ -56,8 +57,8 @@ def build_css_matrices(points: List[Tuple], A: List[List[int]]):
     H_X encodes the collinearity (isotropic line) incidence.
     H_Z encodes the complement (non-adjacent) incidence.
     Both are 40x40 for the base graph layer.
-    For the 360-dimensional code, we use a 9-fold tensor product structure.
-    Here we build the base layer and verify CSS: H_X * H_Z^T = 0 mod 2.
+    No 360-dimensional lift is constructed here; the base pair is audited
+    directly and fails CSS commutation.
     """
     n = len(points)  # 40
     # H_X: rows = points, columns = points; H_X[i][j]=1 iff i~j (collinear, A[i][j]=1)
@@ -76,6 +77,22 @@ def matmul_mod2(A, B):
             result[i][j] = sum(A[i][k] * B[j][k] for k in range(len(A[0]))) % 2
     return result
 
+
+def rank_mod2(matrix: List[List[int]]) -> int:
+    """Exact row rank over F_2."""
+    work = [row[:] for row in matrix]
+    rank = 0
+    for col in range(len(work[0])):
+        pivot = next((r for r in range(rank, len(work)) if work[r][col]), None)
+        if pivot is None:
+            continue
+        work[rank], work[pivot] = work[pivot], work[rank]
+        for r in range(len(work)):
+            if r != rank and work[r][col]:
+                work[r] = [x ^ y for x, y in zip(work[r], work[rank])]
+        rank += 1
+    return rank
+
 def bfs_min_distance(H: List[List[int]]) -> int:
     """Lower bound on minimum distance: min Hamming weight of rows."""
     return min(sum(row) for row in H if any(x != 0 for x in row))
@@ -92,34 +109,47 @@ def main() -> None:
     
     H_X, H_Z = build_css_matrices(points, A)
     
-    # CSS check: H_X * H_Z^T = 0 mod 2
+    # Exact obstruction: H_X * H_Z^T = A, not zero, over F_2.
     product_mat = matmul_mod2(H_X, H_Z)
     css_satisfied = all(product_mat[i][j] == 0 for i in range(40) for j in range(40))
+    product_equals_adjacency = product_mat == A
+    product_rank = rank_mod2(product_mat)
+    product_weight = sum(sum(row) for row in product_mat)
+    adjacency_square_zero = not any(any(row) for row in matmul_mod2(A, A))
     
     dx = bfs_min_distance(H_X)
     dz = bfs_min_distance(H_Z)
-    d_lower = min(dx, dz)
-    
-    # Rank estimation for logical qubit count k = n - rank(H_X) - rank(H_Z)
-    # For the base 40x40 layer, k_base = 40 - rank(H_X) - rank(H_Z)
-    # Full [[360,9,d]] arises from 9-fold logical sector (eigenspace of -4 has mult 9 in extended)
-    
+
     payload = {
         "track": "D",
-        "title": "W33 CSS parity-check matrix construction and verification",
+        "title": "W33 adjacency/complement CSS obstruction",
         "n_points": len(points),
         "degree_check": "all vertices have degree 12",
         "css_condition_satisfied": css_satisfied,
+        "css_product_equals_adjacency": product_equals_adjacency,
+        "css_product_rank": product_rank,
+        "css_product_weight": product_weight,
+        "adjacency_square_zero_mod2": adjacency_square_zero,
         "H_X_shape": [40, 40],
         "H_Z_shape": [40, 40],
-        "d_X_lower": dx,
-        "d_Z_lower": dz,
-        "d_lower_bound": d_lower,
-        "logical_sector_eigenspace": "eigenvalue -4, multiplicity 9 in extended 360-dim space",
-        "claimed_code": "[[360, 9, >=9]]",
-        "css_note": "Base 40x40 layer verified; full [[360,9,d]] arises from 9-fold tensor extension",
+        "H_X_row_weight": dx,
+        "H_Z_row_weight": dz,
+        "claimed_code": None,
+        "retracted_claim": "[[360, 9, >=9]] from this base pair",
+        "css_note": (
+            "The base pair fails CSS commutation exactly: H_X H_Z^T = A has "
+            "GF(2) rank 16 and weight 480. No 360-dimensional extension or "
+            "distance bound is constructed by this witness."
+        ),
         "collinear_pairs": sum(sum(row) for row in A) // 2,
         "non_adjacent_pairs": sum(sum(row) for row in H_Z) // 2,
+        "audit_pass": (
+            not css_satisfied
+            and product_equals_adjacency
+            and product_rank == 16
+            and product_weight == 480
+            and adjacency_square_zero
+        ),
     }
     
     out = Path("w33_pass71_trackD_css_matrices.json")

@@ -1,0 +1,32 @@
+{
+  "schema": "w33.pass344.pass71_ihara_trivial_pole_audit.gap.v1",
+  "status": "PASS",
+  "headline": "u=1/11 is the second Perron-trivial Ihara pole, not a Graph-RH violation",
+  "perron_factor": "1 - 12u + 11u^2 = (1-u)(1-11u)",
+  "perron_trivial_poles": ["1", "1/11"],
+  "nontrivial_factors": ["1 - 2u + 11u^2", "1 + 4u + 11u^2"],
+  "nontrivial_discriminants": [-40, -28],
+  "nontrivial_root_forms": ["(1 +/- sqrt(-10))/11", "(-2 +/- sqrt(-7))/11"],
+  "nontrivial_root_modulus_squared": "1/11",
+  "nontrivial_root_count": 78,
+  "vertex_factor_root_count": 80,
+  "graph_rh_satisfied": true,
+  "correction_boundary": "the theorem was already correct; only the legacy Track E pole classifier was wrong",
+  "check_count": 14,
+  "checks": {
+    "bass_parameter_is_11": true,
+    "spectrum_multiplicities_sum_to_40": true,
+    "perron_factorization_is_exact": true,
+    "u_1_is_a_perron_root": true,
+    "u_1_over_11_is_a_perron_root": true,
+    "gauge_discriminant_is_minus_40": true,
+    "chiral_discriminant_is_minus_28": true,
+    "nontrivial_discriminants_are_negative": true,
+    "gauge_root_norm_squared_is_1_over_11": true,
+    "chiral_root_norm_squared_is_1_over_11": true,
+    "nontrivial_root_count_is_78": true,
+    "vertex_factor_root_count_is_80": true,
+    "only_two_vertex_roots_are_perron_trivial": true,
+    "graph_rh_classification_is_exact": true
+  }
+}

@@ -16,10 +16,12 @@ searches ran and failed. A rediscovery always shares one thing with its original
 **Before claiming anything is new**, grep this file for your number, code
 parameter, or sequence. If it hits, read those files *end to end* (Pass 286:
 shallow reads caused two retractions) before writing.
+This is a presence index, not an endorsement ledger: a hit may be a proof,
+a reuse, an obstruction, or an explicit retraction.
 
-Indexed **1307** files; **2453** distinctive results
+Indexed **1307** files; **2456** distinctive results
 (a token in >10 files identifies a topic, not a result, and is dropped).
-**874** appear in exactly one file — the sharpest signal.
+**872** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -35,7 +37,8 @@ Indexed **1307** files; **2453** distinctive results
 | `[[40,20,11]]` | `docs/index.html` · `photonic_holonet.tex` |
 | `[[400,50,8]]` | `passes/README_passes_240_249.md` · `w33_paper.tex` |
 | `[[137,1,3]]` | `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` |
-| `[[360,9,9]]` | `PASS70_TRACKS_A_B_C.md` |
+| `[[360,9,1]]` | `PASS70_TRACKS_A_B_C.md` · `docs/index.html` |
+| `[[360,9,9]]` | `PASS70_TRACKS_A_B_C.md` · `docs/index.html` |
 | `[[40,10,4]]` | `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `passes/README_passes_240_249.md` · *(+1)* |
 | `[[40,12,4]]` | `docs/index.html` |
 | `[[63,1,11]]` | `analysis/2026-06-19_bt1327_bt1330_summary.md` · `analysis/2026-06-19_validation_thread_summary.md` |
@@ -83,7 +86,8 @@ Indexed **1307** files; **2453** distinctive results
 | `[16,16,1]` | `BT471_BREAKTHROUGH.md` |
 | `[23,12,7]` | `BT471_BREAKTHROUGH.md` · `BT472_GOLAY_BREAKTHROUGH.md` · `docs/index.html` |
 | `[32,6,16]` | `analysis/BT1320_BT1325_hypercube_tower_holonet.md` |
-| `[360,9,9]` | `PASS70_TRACKS_A_B_C.md` |
+| `[360,9,1]` | `PASS70_TRACKS_A_B_C.md` · `docs/index.html` |
+| `[360,9,9]` | `PASS70_TRACKS_A_B_C.md` · `docs/index.html` |
 | `[40,10,4]` | `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `passes/README_passes_240_249.md` · *(+1)* |
 | `[40,12,4]` | `docs/index.html` |
 | `[40,20,4]` | `AUDIT_PASS126_156_SUBMISSION_PACKET.md` · `PAPER_SECTION5_MODULAR.tex` · `w33_submission.tex` |
@@ -1896,7 +1900,7 @@ Indexed **1307** files; **2453** distinctive results
 | `245` | `passes/README_passes_240_249.md` |
 | `247` | `W36_PAPER.tex` · `docs/index.html` · `manuscripts/tex/part22_fano_synthesis.tex` · `part22_fano_synthesis.tex` · *(+2)* |
 | `249` | `docs/index.html` · `passes/README_passes_240_249.md` |
-| `250` | `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `W36_PAPER.tex` · `docs/index.html` · `formal/W33/RankLaw.lean` · *(+2)* |
+| `250` | `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md` · `PASS70_TRACKS_A_B_C.md` · `W36_PAPER.tex` · `docs/index.html` · *(+3)* |
 | `251` | `PASS81_ROTATION_NOISE_TAIL_VM_CLASSIFIER.md` · `w33_paper.tex` |
 | `253` | `W33_FOR_EVERYONE.tex` · `docs/index.html` · `w33_paper.tex` |
 | `254` | `analysis/BT1837_BT1839_summary.md` · `analysis/BT1837_covariance_calibration_loop.md` · `analysis/BT1839_adaptive_stopping_decoder.md` · `analysis/BT1840_BT1842_summary.md` · *(+3)* |
@@ -1969,8 +1973,9 @@ Indexed **1307** files; **2453** distinctive results
 | `340` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1056_chain_native_Q_operator.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
 | `341` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1741_BT1744_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
 | `342` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `w33_paper.tex` |
-| `343` | `W33_FOR_EVERYONE.tex` · `analysis/BT797_fractal_consensus_protocol.md` · `docs/index.html` · `w33_paper.tex` |
-| `345` | `analysis/BT1102_A12_structure_constants.md` · `docs/index.html` |
+| `343` | `PASS70_TRACKS_A_B_C.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT797_fractal_consensus_protocol.md` · `docs/index.html` · *(+1)* |
+| `344` | `PASS71_BLUEPRINT.md` · `docs/index.html` |
+| `345` | `PASS70_TRACKS_A_B_C.md` · `analysis/BT1102_A12_structure_constants.md` · `docs/index.html` |
 | `346` | `W33_FOR_EVERYONE.tex` · `docs/index.html` |
 | `347` | `analysis/BT1749_BT1751_execution_summary.md` · `analysis/BT1752_BT1754_execution_summary.md` · `docs/index.html` |
 | `348` | `docs/index.html` |

@@ -16,15 +16,26 @@ def _run(module: str, outfile: str) -> dict:
     return json.loads(Path(outfile).read_text())
 
 
-def test_track_d_css_condition():
+def test_track_d_css_obstruction():
     data = _run("w33_pass71_trackD_css_matrices", "w33_pass71_trackD_css_matrices.json")
-    assert data["css_condition_satisfied"] is True
+    assert data["audit_pass"] is True
+    assert data["css_condition_satisfied"] is False
+    assert data["css_product_equals_adjacency"] is True
+    assert data["css_product_rank"] == 16
+    assert data["css_product_weight"] == 480
+    assert data["adjacency_square_zero_mod2"] is True
+    assert data["claimed_code"] is None
     assert data["n_points"] == 40
     assert data["collinear_pairs"] == 240  # 40 * 12 / 2
 
 
 def test_track_e_grh():
     data = _run("w33_pass71_trackE_ihara_zeta", "w33_pass71_trackE_ihara_zeta_poles.json")
+    assert data["pole_classification_audit_pass"] is True
+    assert data["perron_factor"] == "1 - 12u + 11u^2 = (1-u)(1-11u)"
+    assert data["perron_trivial_poles"] == [1.0, 1.0 / 11.0]
+    assert data["nontrivial_vertex_factor_root_count"] == 78
+    assert abs(data["nontrivial_root_modulus_squared"] - 1.0 / 11.0) < 1e-12
     assert data["grh_satisfied"] is True
     assert data["grh_violations"] == 0
     expected_radius = 1.0 / math.sqrt(11)

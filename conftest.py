@@ -30,13 +30,13 @@ _skip_triggers = {
 _W33_GP_TIMEOUT_NODEIDS: list[str] = []
 
 
-def pytest_ignore_collect(path, config):
+def pytest_ignore_collect(collection_path: Path, config):
     """Skip collecting test files that reference optional heavy dependencies
     which are not available in the current environment. This prevents
     the test run from failing with ImportError on machines without
     those optional packages (e.g., CI runners without Sage or user venvs
     without pandas)."""
-    p = Path(str(path))
+    p = Path(collection_path)
 
     # Only apply this heuristic to Python test files. Scanning the entire repo can be
     # very noisy and slow, and can trigger surprising capture/log issues.
@@ -72,7 +72,7 @@ def pytest_ignore_collect(path, config):
                 if trig.search(text):
                     # skip collecting this test file
                     if getattr(config.option, "verbose", 0) > 0:
-                        print(f"Skipping {path} (requires {mod})")
+                        print(f"Skipping {collection_path} (requires {mod})")
                     return True
     return None
 

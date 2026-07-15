@@ -111,6 +111,8 @@ def main():
         "**Before claiming anything is new**, grep this file for your number, code",
         "parameter, or sequence. If it hits, read those files *end to end* (Pass 286:",
         "shallow reads caused two retractions) before writing.",
+        "This is a presence index, not an endorsement ledger: a hit may be a proof,",
+        "a reuse, an obstruction, or an explicit retraction.",
         "",
         f"Indexed **{len(files)}** files; **{len(kept)}** distinctive results",
         f"(a token in >{MAX_FILES} files identifies a topic, not a result, and is dropped).",

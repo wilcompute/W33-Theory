@@ -15,7 +15,7 @@ PAPER = ROOT / "photonic_holonet.tex"
 INSERT = ROOT / "analysis" / "BT1136_holonet_product_heat_pointer_insert.tex"
 SENTINEL = "Inherited K3 product coefficient split"
 MARKER = "\\end{itemize}\nNone of the three is a gap in the machine's \\emph{operation}"
-REPLACEMENT = "\\end{itemize}\n\n{insert}\nNone of the three is a gap in the machine's \\emph{{operation}}"
+REPLACEMENT = "\\end{itemize}\n\n{insert}\nNone of the three is a gap in the machine's \\emph{operation}"
 
 
 def main() -> int:
@@ -26,7 +26,7 @@ def main() -> int:
         return 0
     if MARKER not in paper:
         raise SystemExit(f"marker not found: {MARKER}")
-    paper = paper.replace(MARKER, REPLACEMENT.format(insert=insert), 1)
+    paper = paper.replace(MARKER, REPLACEMENT.replace("{insert}", insert), 1)
     PAPER.write_text(paper, encoding="utf-8")
     print("Integrated BT1136 into photonic_holonet.tex after residual list")
     return 0

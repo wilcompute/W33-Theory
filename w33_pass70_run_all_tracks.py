@@ -42,8 +42,12 @@ def run_all() -> None:
             sys.exit(1)
 
     # Cross-track consistency check:
-    # Track B length_n must equal 360
+    # Track B preserves only the spectral ledger; it does not construct a code.
     assert results[OUTPUTS[1]]["length_n"] == 360, "Track B n mismatch"
+    assert results[OUTPUTS[1]]["distinguished_multiplicity"] == 9
+    assert results[OUTPUTS[1]]["heuristic_ceil_ratio"] == 2
+    assert results[OUTPUTS[1]]["claimed_code"] is None
+    assert results[OUTPUTS[1]]["audit_pass"] is True
     # Track A lambda2 must equal Track C lambda2
     tol = 1e-12
     assert abs(results[OUTPUTS[0]]["lambda2"] - results[OUTPUTS[2]]["lambda2"]) < tol, \

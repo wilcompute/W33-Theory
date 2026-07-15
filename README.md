@@ -189,6 +189,15 @@ five recurring failure modes:
 4. sound calculations attached to one ungrounded physical sentence;
 5. rediscovery of a result already in the repo or literature.
 
+The newest example is Pass 343: CI forced a stale Pass 71 CSS claim to regenerate, and GAP proved the proposed
+checks satisfy `H_X H_Z^T = A ≠ 0` over `F_2` (rank `16`, weight `480`). The advertised `[[360,9,≥9]]` code was
+therefore withdrawn rather than patched around. The same audit then produced the opposite outcome in Pass 344:
+Graph RH survived because GAP identified `u=1/11` as the second Perron-trivial pole and certified that all `78`
+nontrivial roots have modulus squared `1/11`. The repository records both kinds of correction—retraction when a
+claim fails, and preservation when only an implementation fails. Pass 345 then follows the correction backward:
+the older `[[360,9,9]]` headline, `[[360,9,1]]` JSON, and literal ratio `ceil(360/250)=2` all collapse to one honest
+statement—a 360-dimensional multiplicity ledger with no constructed stabilizers or distance.
+
 Before claiming novelty, search for the **result itself**—the formula, integer sequence, group order, code
 parameter, or orbit structure—not just the topic. Then check [RESULTS_INDEX.md](RESULTS_INDEX.md), the live atlas,
 recent analysis files, and external primary sources. The pre-commit rediscovery check warns on likely duplicate

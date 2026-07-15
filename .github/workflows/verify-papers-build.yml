@@ -64,8 +64,8 @@ jobs:
           test -f w33_paper.pdf || { echo "FAIL: w33_paper.pdf not produced"; exit 1; }
           test -f photonic_holonet.pdf || { echo "FAIL: photonic_holonet.pdf not produced"; exit 1; }
           # page-count sanity from the final-pass log (master ~232pp, holonet ~36pp)
-          w33_pages=$(grep -oE 'Output written on w33_paper.pdf \(([0-9]+) page' w33_pass3.log | grep -oE '[0-9]+' | head -1)
-          hol_pages=$(grep -oE 'Output written on photonic_holonet.pdf \(([0-9]+) page' holonet_pass2.log | grep -oE '[0-9]+' | head -1)
+          w33_pages=$(sed -nE 's/.*Output written on w33_paper\.pdf \(([0-9]+) pages?.*/\1/p' w33_pass3.log | head -1)
+          hol_pages=$(sed -nE 's/.*Output written on photonic_holonet\.pdf \(([0-9]+) pages?.*/\1/p' holonet_pass2.log | head -1)
           echo "w33_paper pages: ${w33_pages:-unknown}; photonic_holonet pages: ${hol_pages:-unknown}"
           test "${w33_pages:-0}" -ge 100 || { echo "FAIL: w33_paper.pdf too short (${w33_pages:-0} pages, expected >=100)"; exit 1; }
           test "${hol_pages:-0}" -ge 20  || { echo "FAIL: photonic_holonet.pdf too short (${hol_pages:-0} pages, expected >=20)"; exit 1; }

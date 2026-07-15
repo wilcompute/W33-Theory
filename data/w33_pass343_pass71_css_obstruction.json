@@ -1,0 +1,27 @@
+{
+  "schema": "w33.pass343.pass71_css_obstruction.gap.v1",
+  "status": "PASS",
+  "headline": "the Pass 71 adjacency/complement pair is not CSS: H_X H_Z^T = A, not zero",
+  "field": "F2",
+  "matrix_identity": "H_X H_Z^T = A",
+  "css_condition_satisfied": false,
+  "css_product_rank": 16,
+  "css_product_weight": 480,
+  "retracted_claim": "[[360,9,>=9]] from this base pair",
+  "boundary": "row weights 12 and 27 are not code-distance lower bounds; no 360-dimensional extension is built here",
+  "check_count": 12,
+  "checks": {
+    "projective_point_count_is_40": true,
+    "adjacency_is_40_by_40": true,
+    "every_adjacency_row_has_weight_12": true,
+    "edge_count_is_240": true,
+    "every_complement_row_has_weight_27": true,
+    "nonedge_count_is_540": true,
+    "adjacency_square_is_zero_mod_2": true,
+    "css_product_equals_adjacency": true,
+    "css_product_is_nonzero": true,
+    "css_product_rank_is_16": true,
+    "css_product_weight_is_480": true,
+    "proposed_css_condition_is_false": true
+  }
+}
