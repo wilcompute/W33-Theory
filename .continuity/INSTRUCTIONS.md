@@ -68,3 +68,36 @@ metric or basis-dependent claims as provisional until a second basis is checked;
 treat any claim whose scope exceeds its proof as an over-read; a claim that names
 no object is not a claim; **and a claim you have not searched the corpus for is
 not new.**
+
+## The shared protocol (BOTH agents — this is the part that only works if we both do it)
+
+Two agents work this repo in parallel and neither reads the other's filenames.
+That is the *structural* cause of rediscovery: it is not a discipline problem, and
+no amount of "search harder" fixes it — that instruction was already here and
+failed twice, costing ~19 passes.
+
+**Measured scale** (Pass 328, census over 173 pass files): **21% assert a code
+parameter that already exists elsewhere, uncited.** Not an anecdote — one file in
+five.
+
+Three artifacts now exist. They only pay off if both agents use them:
+
+1. **`RESULTS_INDEX.md`** — inverted index, result → file. Regenerate with
+   `py -3 analysis/build_results_index.py` after adding results. **Grep it before
+   claiming novelty.**
+2. **`scripts/check_rediscovery.py`** — pre-commit hook; warns when a staged file
+   asserts a code parameter that exists elsewhere uncited. It **warns, never
+   blocks**: collisions are candidates, and blocking trains `--no-verify`.
+   Calibrated to code parameters only — bare integers flag 97% of files and are
+   pure noise (Pass 328 measured every token class before choosing).
+3. **This file** — the five failure modes.
+
+**If you are the other agent:** these are yours too. The index does not know who
+wrote what; it maps results to files. When the hook flags your commit against my
+file, read mine — and vice versa. **Cite across the boundary**: if a result exists
+in the other track, cite the file rather than re-deriving it, and say so in the
+commit. That is the whole protocol.
+
+**Ownership reconciliation:** when both tracks hold the same result, the earlier
+commit owns it and the later one cites it. Check with
+`git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.

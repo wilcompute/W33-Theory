@@ -10,28 +10,23 @@
 This project uses Continuity to keep repo-local decisions and session context available through MCP and generated instruction files. Prefer MCP when connected; otherwise fall back to the repo files.
 
 ## Project Context
-- **Total Decisions:** 4421
+- **Total Decisions:** 4424
 - **Known Topics:** needs-review, auto-draft, why, w33, testing, toe, architecture, holonet, docs, photonic, audit, qec, github, selector, tomotope
 
 ## Current State
 **Branch:** master
 
 **Recent Commits:**
+- `f6a5baf95 Pass 326 + paper attribution + rediscovery guard: the last survivors are ours, conditional, and smaller than advertised`
+- `1c637cc3b Passes 323-325 + RESULTS_INDEX: the audit completes — no headline survives, CSX closes the last gap and confirms 8353, and the real contribution is the selection layer`
+- `fb0088e1d Pass 322: the rank law was already ours — and already published. The fifth failure mode: REDISCOVERY.`
 - `c68610e71 Passes 319-321 + paper sweep: my own delta idea was tautological, "frequency is a mass" has no scale, and 42 is a coincidence`
 - `4065ed3ce Passes 317-318 + paper prune: "why B" reduces to "why delta(p^2)"; the holonet corpus is mostly BUILT (315 over-flagged); two verifications running`
-- `c4f49c1ec Passes 313-316: CONSOLIDATION + errata — retracting Pass 308, labelling the char-3 tower a conjecture, and writing the honest synthesis`
-- `b98efb3d1 Passes 308-312: TBM selects characteristic 3; AGL(1,7) does NOT embed (deflating 305); the coupling does not exist; and the retraction rate measured`
-- `f836e60ac Passes 303-307: the clock x machine compositum IS the tribimaximal field; Aut(Csaszar) = AGL(1,7); and a nuance that partly reopens sqrt21`
 
 **Working Tree:**
 - M .continuity/INSTRUCTIONS.md
 - M .continuity/SESSION_NOTES.md
-- M .cursorrules
-- M .github/copilot-instructions.md
-- M AGENTS.md
-- M CLAUDE.md
-- M GEMINI.md
-- M analysis/W33_HONEST_SYNTHESIS.md
+- M scripts/check_rediscovery.py
 - ?? .continuity/.gitattributes
 - ?? .continuity/decisions.json
 - ?? .continuity/decisions.jsonl
@@ -39,12 +34,17 @@ This project uses Continuity to keep repo-local decisions and session context av
 - ?? E8
 - ?? PART_BT367_E6_HOLONOMY_BRIDGE.md
 - ?? _check_vals.py
+- ?? _gap_120sheet_scheme.g
+- ?? _gap_we6_steiner_trihedra.g
+- ?? _gap_we6_test.g
+- ?? _search_eigenspace_signings.py
+- ?? analysis/BT367_association_scheme.g
 
 ## Working Memory Snapshot
 **Mode:** degraded-fallback
-**Generated At:** 2026-07-15T13:19:11.277Z
-**Startup Summary:** mode=degraded-fallback | decisions=4420 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
-**Decision Count:** 4420
+**Generated At:** 2026-07-15T13:51:25.293Z
+**Startup Summary:** mode=degraded-fallback | decisions=4422 | lastTask=2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet. | next=Recent commits: | branch=master | health=MCP server disconnected. | fallback-files=12
+**Decision Count:** 4422
 **Fallback Chain:** AGENTS.md, CLAUDE.md, GEMINI.md, .cursorrules, .github/copilot-instructions.md, .continuity/INSTRUCTIONS.md, .continuity/SESSION_NOTES.md, .continuity/mcp-health.json, .continuity/unfinished-task.json, .continuity/working-memory.json, SESSION_HANDOFF.md, .continuity/decisions.json
 
 ## Workspace MCP Self-Test
@@ -54,10 +54,10 @@ This project uses Continuity to keep repo-local decisions and session context av
 
 ## Resume Snapshot
 **Last Task:** 2026-06-05 current goal: refresh origin/master, absorb the BT285-BT317 remote batch, and continue the selector/hypercube theory with a scoped verified packet.
-**Last Completed Milestone:** Auto-saved at 2026-07-15T12:51:17.864Z (reason: threshold-commits)
+**Last Completed Milestone:** Auto-saved at 2026-07-15T13:50:52.335Z (reason: threshold-commits)
 **Next Expected Step:** Recent commits:
 **Last Successful Tool Call:** log_decision @ 2026-07-03T21:11:53.588Z
-**Relevant Files:** .continuity/SESSION_NOTES.md, .cursorrules, .github/copilot-instructions.md, AGENTS.md, CLAUDE.md, GEMINI.md
+**Relevant Files:** analysis\W33_HONEST_SYNTHESIS.md, .continuity\INSTRUCTIONS.md, analysis\w33_genus_ladder_clock.py, data\Toroidal-Polyhedra-Realizations.txt, tools\bt1526_csaszar_all_five_tetra_audit.py, .vscode\mcp.json
 
 ## Workflow
 
@@ -223,11 +223,44 @@ treat any claim whose scope exceeds its proof as an over-read; a claim that name
 no object is not a claim; **and a claim you have not searched the corpus for is
 not new.**
 
+## The shared protocol (BOTH agents — this is the part that only works if we both do it)
+
+Two agents work this repo in parallel and neither reads the other's filenames.
+That is the *structural* cause of rediscovery: it is not a discipline problem, and
+no amount of "search harder" fixes it — that instruction was already here and
+failed twice, costing ~19 passes.
+
+**Measured scale** (Pass 328, census over 173 pass files): **21% assert a code
+parameter that already exists elsewhere, uncited.** Not an anecdote — one file in
+five.
+
+Three artifacts now exist. They only pay off if both agents use them:
+
+1. **`RESULTS_INDEX.md`** — inverted index, result → file. Regenerate with
+   `py -3 analysis/build_results_index.py` after adding results. **Grep it before
+   claiming novelty.**
+2. **`scripts/check_rediscovery.py`** — pre-commit hook; warns when a staged file
+   asserts a code parameter that exists elsewhere uncited. It **warns, never
+   blocks**: collisions are candidates, and blocking trains `--no-verify`.
+   Calibrated to code parameters only — bare integers flag 97% of files and are
+   pure noise (Pass 328 measured every token class before choosing).
+3. **This file** — the five failure modes.
+
+**If you are the other agent:** these are yours too. The index does not know who
+wrote what; it maps results to files. When the hook flags your commit against my
+file, read mine — and vice versa. **Cite across the boundary**: if a result exists
+in the other track, cite the file rather than re-deriving it, and say so in the
+commit. That is the whole protocol.
+
+**Ownership reconciliation:** when both tracks hold the same result, the earlier
+commit owns it and the later one cites it. Check with
+`git log --diff-filter=A --format='%ad %h' --date=short -1 -- <file>`, not memory.
+
 
 ## Recent Decisions
-1. **decision-804cac83** (7/15/2026) [why, w33]
-   - Q: Why Passes 319-321 + paper sweep?
-   - A: Commit c68610e71, pushed. 319 DEFLATES MY OWN IDEA: the delta(2^t) 'consisten...
+1. **decision-595a088a** (7/15/2026) [why, audit]
+   - Q: Where does the W(3,q) rank law and CSS code actually come from, and what is g...
+   - A: Passes 322-325 completed the audit; NO headline survives as new. Rank law eve...
 
 2. **decision-17840831** (7/13/2026) [auto-draft, needs-review]
    - Q: Why: Passes 204-208: ninth round — the QEC gate set and the second Platonic c...

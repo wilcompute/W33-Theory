@@ -1,0 +1,45 @@
+{
+  "schema": "w33.pass327.building_the_map.v1",
+  "status": "PASS",
+  "idea_1_the_map": {
+    "the_good_news": "It is NOT a 42-style coincidence. Pass 309 killed '42 = |AGL(1,7)| = |D(2T) anyons|' as the same integer for unrelated reasons, so the first job was to check whether '16 = 16' has that disease. It does not: the shadow exponent (q^2-1)/2 and the D_n half-spinor exponent (q^2+1)/2 - 1 (with 2n = q^2+1) are IDENTICAL as polynomials. The two 16s are the SAME formula -- the half-spinor of Dynkin type D_{(q^2+1)/2}, which at q=3 is D5 on both sides. The Dynkin type genuinely matches. This is stronger than Pass 326 credited.",
+    "the_bad_news": {
+      "the_shadow": "D5(2) = Omega+(10,2), order 23,499,295,948,800, over F2",
+      "the_gut": "D5(C) = Spin(10); a generation is its COMPLEX CHIRAL 16",
+      "same": "Dynkin type; abstract rep (the D5 half-spinor is 16-dim over ANY field)",
+      "different": "THE FIELD -- and it is not a detail",
+      "THE_OBSTRUCTION": "F2 HAS NO COMPLEX STRUCTURE, so the F2 half-spinor has NO CHIRALITY. Chirality is the entire physical content of 'a generation': the 16 of Spin(10) is a generation precisely BECAUSE it is complex and chiral -- that is what makes the SM fermion content anomaly-free and parity-violating. The F2 object has the right dimension and the right Dynkin type and cannot have chirality at all: there is no i, no complex conjugate, no notion of a rep being self-conjugate or not."
+    },
+    "THE_HONEST_STATUS": "Neither 'coincidence' nor 'derivation' but a THIRD thing, worth stating precisely because the position is real and unusual: a DYNKIN-TYPE CORRESPONDENCE. The shadow and the generation are the same representation of the same Dynkin type over different fields. Transporting one to the other is not a map -- it is a change of characteristic, and the physical content (chirality) lives only on the C side.",
+    "what_it_does_and_does_not_do": "It does NOT upgrade Pass 225 to unconditional. It names the missing ingredient exactly: a complex structure. Anything supplying one -- a Weil representation over C, a lift of Omega+(10,2) to a complex form -- is where the work would have to go. That is a sharper open question than 'the identification is assumed'."
+  },
+  "idea_2_non_geometric_magic": {
+    "the_question": "Pass 227 assumes the magic resource must be an exceptional-group cubic. Does the substrate admit a non-geometric one?",
+    "the_answer": "YES, immediately. [[40,10,4]] is a STABILIZER code. Magic-state injection and distillation work for any stabilizer code -- the standard route around Eastin-Knill, requiring no Lie theory. A T-state injected into any of the 10 logical qubits restores universality. Nothing about W(3,3) forbids it.",
+    "worse_for_227": "This repo's OWN Pass 237 distils magic states with [[40,10,4]] -- i.e. it already uses the standard, non-geometric machinery. The code does not need the E6 cubic to be universal; the cubic is one resource among many.",
+    "VERDICT": "The 'geometric' requirement is not a necessity of quantum computing but a STRUCTURAL PREFERENCE -- an aesthetic the substrate happens to satisfy. 227 does NOT select q=3 among computationally universal rungs; EVERY rung is universal. What 227 actually says is: q=3 is the only rung whose magic resource is ALSO a geometric object of the same tower. That is a statement about elegance and self-containment, not computability, and it should be written that way."
+  },
+  "net_effect_on_the_program": "Pass 326 called the two selections 'independent conditional selections'. After building: 225's identification is a real Dynkin-type correspondence blocked only by characteristic (a sharp, attackable gap); 227's is a preference, not a constraint (a much weaker claim than advertised). So the two are NOT of equal strength. 225 is the one worth pursuing; 227 should be restated as an elegance argument.",
+  "checks": {
+    "shadow_exponent_is_the_Dn_halfspinor_exponent": true,
+    "not_a_42_style_coincidence": true,
+    "at_q3_both_are_D5": true,
+    "at_q3_both_are_16": true,
+    "16_unique_odd_solution_q3": true,
+    "omega_plus_10_2_order": true,
+    "shadow_is_D5_over_F2": true,
+    "gut_is_D5_over_C": true,
+    "halfspinor_exists_over_any_field_dim_16": true,
+    "F2_has_no_complex_structure": true,
+    "so_F2_halfspinor_has_no_chirality": true,
+    "chirality_is_the_physical_content_of_a_generation": true,
+    "map_does_not_exist_as_a_map": true,
+    "it_is_a_dynkin_type_correspondence": true,
+    "code_is_a_stabilizer_code": true,
+    "magic_injection_works_for_any_stabilizer_code": true,
+    "T_state_restores_universality_without_lie_theory": true,
+    "pass_237_already_uses_standard_distillation": true,
+    "so_geometric_is_a_preference_not_a_necessity": true,
+    "227_does_not_select_among_universal_rungs": true
+  }
+}

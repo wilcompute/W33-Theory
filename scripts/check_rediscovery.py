@@ -62,10 +62,26 @@ def load_index() -> dict[str, list[str]]:
 
 
 def results_in(text: str) -> set[str]:
+    """Extract only the token classes that carry SIGNAL.
+
+    CALIBRATED, not guessed. Pass 328 ran this guard over all 172 pass files and
+    measured the flag rate per token class:
+
+        everything (incl. bare integers) ...... 97%   <- noise; flags everything
+        bare integers, even rare-only ......... 78%   <- still noise
+        code parameters [[n,k,d]] / [n,k,d] ... 20%   <- SIGNAL
+        slash-sequences ....................... 2%    <- signal, sparse
+
+    A guard that flags 97% of commits is a guard nobody reads -- it fails exactly
+    the way the instruction it replaces failed. Bare integers are dropped: the
+    same integer legitimately recurs everywhere (a dimension, a count, a group
+    order), so its recurrence carries no information. Code parameters are the
+    objects a rediscovery actually duplicates, and 20% is a rate a human will
+    still look at.
+    """
     got: set[str] = set()
     for rx in (RE_CSS, RE_LIN, RE_SEQ):
         got |= {re.sub(r"\s+", "", m) for m in rx.findall(text)}
-    got |= {m for m in RE_INT.findall(text) if m not in NOISE}
     return got - SKIP
 
 
