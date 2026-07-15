@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass255.cross_track_audit.v1",
+  "status": "PASS",
+  "scope": "audit of passes/pass_240_249_{qldpc_bounds,yukawa_texture}.py against this track's committed Passes 235/239/226/229/234",
+  "agreements": {
+    "k_times_d_eq_n": {
+      "both": true,
+      "value": "10*4 = 40"
+    },
+    "democratic_yukawa_rank_1": {
+      "both": true,
+      "meaning": "exactly one heavy generation"
+    }
+  },
+  "discrepancies": [
+    {
+      "id": "BPT ratio",
+      "their_claim": "k*d^2/n = 1 exactly",
+      "actual": "k*d^2/n = 4.0 = q+1",
+      "note": "their own code computes k*d**2/n correctly; the '=1' in the printed annotation is k*d/n mislabelled",
+      "consequence": "the family is NOT 2D-local; min embedding dim 3 (Pass 239)",
+      "severity": "annotation contradicts own output"
+    },
+    {
+      "id": "check weight",
+      "their_claim": "w = q+1 (=4 at q=3)",
+      "actual": "min stabiliser weight = 8 = 2(q+1)",
+      "note": "q+1 is the weight of the LINES, which are logical operators (Pass 229), not stabilisers; the stabilisers are the sentinel with min weight 8 (Pass 226 exact, Pass 234 distribution {8:11, 12:4})",
+      "consequence": "their LDPC/locality discussion understates the check weight by a factor ~2",
+      "severity": "substantive"
+    },
+    {
+      "id": "quantum Singleton",
+      "their_claim": "k <= n - 4(d-1)",
+      "actual": "Knill-Laflamme: k <= n - 2(d-1)",
+      "note": "correct rhs 34, theirs 28; both hold for k=10, so their conclusion stands",
+      "consequence": "none (bound misstated but conclusion unaffected)",
+      "severity": "cosmetic"
+    }
+  ],
+  "reading": "Independent re-derivation by the parallel track CONFIRMS the two load-bearing results of this one: k*d = n exactly, and the democratic Yukawa is rank 1 (one heavy generation). Three discrepancies were found, all resolved in favour of this track and re-verified here from the geometry: the BPT ratio is q+1 (so the codes need >=3 spatial dimensions, they are not 2D-local), the check weight is 2(q+1)=8 rather than q+1=4 (the weight-4 lines are logicals, not stabilisers), and the quantum Singleton bound is n-2(d-1). Cross-checking two agents is cheap and caught real errors.",
+  "checks": {
+    "agree_k_times_d_eq_n": true,
+    "agree_democratic_rank_1": true,
+    "bpt_ratio_is_q_plus_1_not_1": true,
+    "bpt_ratio_not_1": true,
+    "kd2_over_n_identity_q_plus_1": true,
+    "true_min_check_weight_8": true,
+    "check_weight_is_2q_plus_2_not_q_plus_1": true,
+    "q_plus_1_words_are_logicals_not_checks": true,
+    "singleton_correct_form_holds": true,
+    "their_stricter_form_also_holds": true,
+    "their_bound_is_stricter": true
+  }
+}

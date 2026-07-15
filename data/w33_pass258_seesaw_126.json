@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass258.seesaw_126.v1",
+  "status": "PASS",
+  "derived": {
+    "channel": "16 x 16 = 10_s + 120_a + 126_s; the 126 gives the right-handed Majorana mass M_R (symmetric)",
+    "seesaw": "m_nu = - m_D^T M_R^{-1} m_D  (type I)",
+    "fn_cancellation": "with m_D ~ v eps^{a_i+a_j} and M_R ~ M eps^{a_i+a_j} the right-handed FN charges CANCEL, leaving m_nu ~ (v^2/M) eps^{a_i+a_j}: the light neutrinos carry the LEFT-handed family texture alone",
+    "prediction": "hierarchical light spectrum => NORMAL ordering (m1 < m2 < m3), not inverted"
+  },
+  "numerics": {
+    "eps": 0.06,
+    "fn_charges": [
+      2,
+      1,
+      0
+    ],
+    "light_masses_arb_units": [
+      2.9298645370217233e-15,
+      9.316270345402459e-14,
+      1.1716788458833768e-10
+    ],
+    "m2_over_m3": 0.0007951214940966644,
+    "m1_over_m3": 2.5005696290546053e-05,
+    "ordering": "normal"
+  },
+  "honest_scope": "The ORDERING is a genuine prediction of the FN-textured seesaw. The overall scale v^2/M_R is NOT fixed by the geometry, so Sum m_nu is a calibration, not a prediction; we merely note the scale that saturates the cosmology bound Sum m_nu < 0.12 eV.",
+  "reading": "The 126 channel of the SO(10) register supplies exactly the symmetric Majorana matrix the seesaw needs. The Froggatt-Nielsen charges of the right-handed neutrinos cancel between m_D and M_R^{-1}, so the light neutrino texture is governed by the left-handed family charges alone -- the same charges that set the up-quark hierarchy in Pass 235. A hierarchical texture forces NORMAL ordering, which is what current global fits prefer. The absolute scale awaits a determination of M_R.",
+  "checks": {
+    "16x16_decomposition": true,
+    "126_symmetric_channel": true,
+    "symmetric_square_136": true,
+    "antisymmetric_square_120": true,
+    "M_R_symmetric": true,
+    "m_nu_symmetric": true,
+    "fn_charges_cancel_in_seesaw": true,
+    "diag_orders_track_2a_i": true
+  }
+}

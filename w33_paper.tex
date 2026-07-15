@@ -12521,4 +12521,63 @@ $GQ(4,2)=H(3,4)$ -- the $SRG(45,12,3,3)$ of the trade tower, examined as a CSS
 register for the first time ($k=17$) -- also yields no self-dual sentinel. Every
 quadrangle stores information; the vacuum rung does not exist.
 
+
+\section{The Even-$q$ Law Closed, Koide on the Light Cone, and the Two-Clock Resolution (Passes 255--259)}
+
+\paragraph{Pass 256 --- the even-$q$ rank law, CLOSED (theorem).} Pass 250
+refuted the \emph{homogeneous} Sastry--Sin recurrence and declared the even-$q$
+correction $0,1,27,423$ open. It was one term away. The rank obeys the
+\emph{inhomogeneous} recurrence
+\[
+   a(t+1) = 9\,a(t) - 16\,a(t-1) + 8,\qquad a(1)=10,\ a(2)=50,
+\]
+generating $10,50,298,1890,12250$. Since the particular solution is $a^\ast=1$
+and the constants come out $A=B=1$, this collapses to the clean identity
+\[
+   \boxed{\ \operatorname{rank}_2 W(3,2^t) \;=\; \lambda_+^t+\lambda_-^t+1
+   \;=\; \operatorname{Tr}(B^t)+1,\qquad B=\begin{pmatrix}4&2\2&5\end{pmatrix}\ }
+\]
+with $\lambda_\pm=(9\pm\sqrt{17})/2$ --- the trace of the Sastry--Sin transfer
+matrix plus one, equivalently the Lucas sequence $V_t(9,16)+1$. Two
+\emph{independent} anchors confirm it: the value $1890$ that Pass 250
+machine-verified by building $W(3,16)$, and the value $12250$ at $q=32$ from the
+independently-derived transfer theorem of Pass 178. Together with Pass 238's
+odd-$q$ law $\tfrac12(q^2+1)(q+2)$, the incidence $2$-rank of $W(3,q)$ is now
+closed form for \emph{both} parities.
+
+\paragraph{Pass 255 --- cross-track audit.} A parallel agent independently
+re-derived Passes 235/239. It \emph{confirms} both load-bearing results ($k\,d=n$;
+democratic Yukawa is rank~1). Three discrepancies were found and resolved in
+favour of this track, each re-verified from the geometry: the BPT ratio is
+$k d^2/n=q+1$, not $1$ (so the codes are \emph{not} 2D-local, $D\ge3$); the check
+weight is $2(q+1)=8$, not $q+1=4$ (the weight-$4$ lines are \emph{logicals}, not
+stabilisers); and the quantum Singleton bound is $k\le n-2(d-1)$.
+
+\paragraph{Pass 257 --- Koide is a light-cone condition.} Equipartition
+$z^T(2P_{\mathbf 1}-I)z=0$ means $z$ is \emph{null} for the $S_3$-invariant form
+$\eta=2P_{\mathbf 1}-I$ of Minkowski signature $(1,2)$, timelike direction the
+democratic singlet: the charged leptons lie on the \emph{light cone of the family
+clock}, and $Q$ is scale-invariant so it constrains only the direction of $z$.
+The natural dynamical hypothesis fails honestly: the pole masses are null
+($\theta=44.99974^\circ$, defect $9.2\times10^{-6}$) but the $\overline{\rm MS}$
+masses at $M_Z$ are not ($\theta=45.054^\circ$, defect $-1.9\times10^{-3}$), so
+$45^\circ$ is an \emph{on-shell/IR} property, not an RG fixed point.
+
+\paragraph{Pass 258 --- the $\mathbf{126}$ seesaw.} The remaining channel of
+$\mathbf{16}\otimes\mathbf{16}$ supplies the symmetric Majorana $M_R$. With
+Froggatt--Nielsen textures the right-handed charges \emph{cancel} between $m_D$
+and $M_R^{-1}$, leaving $m_\nu\sim(v^2/M)\varepsilon^{a_i+a_j}$: the light
+neutrinos inherit the left-handed family texture alone, forcing a hierarchical
+spectrum and hence \emph{normal ordering}. The absolute scale awaits $M_R$.
+
+\paragraph{Pass 259 --- the two-clock resolution.} Any $\mu$--$\tau$
+exchange-symmetric mass matrix has \emph{exactly} $\theta_{23}=45^\circ$ and
+$\theta_{13}=0$ (the antisymmetric vector $(0,1,-1)/\sqrt2$ is always an
+eigenvector). That exchange is the transposition $(2\,3)$ inside the $S_3$ line
+clock. So Pass 252's $2$--$3$ failure resolves: the $1$--$2$ sector is set by the
+$C_3$ family clock (trimaximal), the $2$--$3$ sector by the line-clock $\mu$--$\tau$
+$Z_2$. Two clocks, two sectors --- which is exactly why one sum rule worked and
+the other did not, and the breaking that lifts $\theta_{13}$ off zero tilts
+$\theta_{23}$ off maximal in step.
+
 \end{document}

@@ -1,0 +1,63 @@
+{
+  "schema": "w33.pass256.even_q_closed_form.v1",
+  "status": "PASS",
+  "theorem": "For q = 2^t the F2 incidence 2-rank of W(3,q) obeys the INHOMOGENEOUS Sastry-Sin recurrence a(t+1) = 9a(t) - 16a(t-1) + 8 with a(1)=10, a(2)=50, giving 10, 50, 298, 1890, 12250. The homogeneous part is the Sastry-Sin transfer matrix [[4,2],[2,5]] (charpoly lambda^2-9lambda+16, eigenvalues (9 +- sqrt17)/2); the constant +8 is the term Pass 250 was missing. Since A = B = 1 the closed form collapses to the clean identity rank_2 W(3,2^t) = lam_+^t + lam_-^t + 1 = Tr(B^t) + 1, i.e. the trace of the Sastry-Sin transfer matrix plus one -- equivalently the Lucas sequence V_t(9,16) + 1.",
+  "closed_form": {
+    "recurrence": "a(t+1) = 9 a(t) - 16 a(t-1) + 8",
+    "initial": {
+      "a(1)": 10,
+      "a(2)": 50
+    },
+    "eigenvalues": "lambda_pm = (9 +- sqrt 17)/2",
+    "particular": "1",
+    "A": "1",
+    "B": "1",
+    "closed_form_values": {
+      "1": 10,
+      "2": 50,
+      "3": 298,
+      "4": 1890,
+      "5": 12250
+    },
+    "CLEAN_FORM": "rank_2 W(3,2^t) = Tr(B^t) + 1,  B = [[4,2],[2,5]]",
+    "lucas_form": "rank = V_t(P=9, Q=16) + 1  (Lucas sequence)"
+  },
+  "anchors": {
+    "q2_4_8": "classical",
+    "q16_1890": "MACHINE-VERIFIED in Pass 250 by building W(3,16)/GF(16)",
+    "q32_12250": "independent Sastry-Sin transfer theorem (Pass 178)",
+    "note": "two independent anchors from different derivations both land on this single recurrence"
+  },
+  "deviation_from_odd_law": {
+    "odd_law": "(q^2+1)(q+2)/2  [Pass 238]",
+    "deltas": {
+      "2": 0,
+      "4": 1,
+      "8": 27,
+      "16": 423,
+      "32": 5175
+    },
+    "reading": "delta(q) = (q^2+1)(q+2)/2 - a(log2 q), now closed form"
+  },
+  "resolves_pass250": "Pass 250 correctly refuted the HOMOGENEOUS recurrence 9a(t)-16a(t-1) (it gives 290, not 298) and correctly refuted the cube law, then declared the problem open. It was one term away: the inhomogeneous +8 closes it. The machine-verified 1890 from Pass 250 is what makes this identification trustworthy.",
+  "predictions": {
+    "64": 80018,
+    "128": 524170
+  },
+  "reading": "The incidence 2-rank of W(3,q) is now CLOSED FORM for both parities: (q^2+1)(q+2)/2 for odd q (Pass 238, verified to q=11), and the sqrt17 recurrence a(t+1)=9a(t)-16a(t-1)+8 for q=2^t (verified to q=16 by construction and to q=32 against the independent transfer theorem). The even-q sequence 0/1/27/423 that looked like numerology is the shadow of an inhomogeneous linear recurrence with quadratic irrationality sqrt 17.",
+  "checks": {
+    "recurrence_matches_q2_4_8": true,
+    "recurrence_matches_verified_1890": true,
+    "recurrence_matches_pass178_12250": true,
+    "all_five_anchors": true,
+    "transfer_charpoly_is_lam2_9lam_16": true,
+    "roots_are_9_pm_sqrt17_over_2": true,
+    "particular_solution_is_1": true,
+    "closed_form_reproduces_all_anchors": true,
+    "deltas_0_1_27_423": true,
+    "homogeneous_form_indeed_fails": true,
+    "A_and_B_are_both_1": true,
+    "rank_eq_trace_B_pow_t_plus_1": true,
+    "trace_is_lucas_V_t_9_16": true
+  }
+}

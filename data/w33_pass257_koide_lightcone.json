@@ -1,0 +1,49 @@
+{
+  "schema": "w33.pass257.koide_lightcone.v1",
+  "status": "PASS",
+  "theorem": "Koide's Q = 2/3 is exactly the statement that the sqrt-mass vector is NULL for the S3-invariant Lorentzian metric eta = 2P_singlet - I of signature (1,2) on generation space, whose timelike direction is the democratic singlet. The charged leptons lie on the light cone of the family clock. Q is invariant under z -> lambda z, so the condition constrains only the direction of z.",
+  "lorentzian_form": {
+    "eta": "2 P_singlet - I",
+    "eigenvalues": [
+      1.0000000000000004,
+      -0.9999999999999999,
+      -1.0000000000000002
+    ],
+    "signature": "(1,2) Minkowski; timelike = democratic singlet",
+    "koide_condition": "z^T eta z = 0  (z lightlike)"
+  },
+  "pole_masses": {
+    "masses_MeV": {
+      "e": 0.51099895,
+      "mu": 105.6583755,
+      "tau": 1776.86
+    },
+    "Q": 0.6666605114773855,
+    "theta_deg": 44.99973549778197,
+    "null_defect_zT_eta_z_over_z2": 9.232869167025176e-06
+  },
+  "msbar_at_MZ": {
+    "masses_MeV": {
+      "e": 0.48657,
+      "mu": 102.718,
+      "tau": 1746.24
+    },
+    "Q": 0.667928852396166,
+    "theta_deg": 45.05413597424593,
+    "null_defect_zT_eta_z_over_z2": -0.0018897008640531045
+  },
+  "rg_verdict": "NOT an RG fixed point: the pole masses sit on the light cone (theta = 44.99974 deg, defect 9.23e-06) while the MS-bar masses at M_Z do not (theta = 45.0541 deg, defect -1.89e-03). Since Q is invariant under uniform rescaling, only the non-universal part of the running moves it -- and it does. The equipartition is an ON-SHELL (IR) property that selects the pole scale, not a scale-invariant fixed point.",
+  "reading": "Koide becomes geometry: the charged-lepton sqrt-mass vector is a null ray of the family clock's Minkowski metric, and Q measures only its direction. The natural dynamical hypothesis -- that 45 degrees is an RG fixed point -- is FALSE: running to M_Z moves the vector off the cone. So whatever fixes the leptons on the light cone acts at the on-shell/IR scale. That is a sharper and more falsifiable statement than the original numerical coincidence, and it tells the next investigation where to look.",
+  "checks": {
+    "eta_signature_1_2": true,
+    "eta_symmetric": true,
+    "timelike_dir_is_singlet": true,
+    "constructed_is_null": true,
+    "null_vector_gives_Q_two_thirds": true,
+    "Q_scale_invariant": true,
+    "pole_theta_is_45": true,
+    "pole_nearly_null": true,
+    "running_moves_theta_off_45": true,
+    "msbar_less_null_than_pole": true
+  }
+}
