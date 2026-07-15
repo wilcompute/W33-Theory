@@ -1,0 +1,64 @@
+{
+  "schema": "w33.pass309.agl17_does_not_embed.v1",
+  "status": "PASS",
+  "THE_OBSTRUCTION": "|PGSp(4,3)| = 51840 = 2^7 * 3^4 * 5 and 7 does not divide it, so by Lagrange PGSp(4,3) has NO element of order 7. AGL(1,7) has six elements of order 7, so it is NOT a subgroup of PGSp(4,3) -- nor of PSp(4,3) (25920 = 2^6 * 3^4 * 5). Not even the cyclic C_7 embeds.",
+  "group_orders": {
+    "PGSp(4,3)": {
+      "order": 51840,
+      "factorisation": {
+        "2": 7,
+        "3": 4,
+        "5": 1
+      }
+    },
+    "PSp(4,3)": {
+      "order": 25920,
+      "factorisation": {
+        "2": 6,
+        "3": 4,
+        "5": 1
+      }
+    },
+    "AGL(1,7)": {
+      "order": 42,
+      "factorisation": {
+        "2": 1,
+        "3": 1,
+        "7": 1
+      }
+    },
+    "W(E6)": {
+      "order": 51840,
+      "factorisation": {
+        "2": 7,
+        "3": 4,
+        "5": 1
+      }
+    },
+    "S6": {
+      "order": 720,
+      "factorisation": {
+        "2": 4,
+        "3": 2,
+        "5": 1
+      }
+    }
+  },
+  "what_the_tie_actually_is": "Purely NUMERICAL: 7 = Phi_6(3) = q^2 - q + 1 at q = 3. Csaszar has 7 vertices because g(K_n) = 1 first happens at n = 7; the substrate has Phi_6(3) = 7 because that is what the cyclotomic polynomial evaluates to. Both are 7. That is the whole of it -- an equality of integers, not a shared symmetry.",
+  "deflates_pass305": "Pass 305 called Aut(Csaszar) = AGL(1,7) 'a genuine FORCED tie between the toroidal pole and the substrate's Phi_6 -- the kind of link the metric coincidences only pretended to be'. The FORCED part is right (an automorphism group is combinatorial and survives every realization). The TIE part is not: there is no homomorphism, no subgroup, no action. Being forced is not the same as being meaningful -- a forced coincidence is still a coincidence.",
+  "the_general_lesson": "Pass 302's forced/chosen test filters out artefacts of drawings; it does NOT certify significance. Pass 305 passed that test and was immediately over-read on the strength of passing it. The test is a necessary condition for a claim to mean anything, not a sufficient one, and this program has now over-read on both sides: metric coincidences (286/290 -> 293), and a forced-but-empty one (305 -> here).",
+  "checks": {
+    "pgsp43_order_51840": true,
+    "pgsp43_factors_2_7_3_4_5": true,
+    "7_does_not_divide_pgsp43": true,
+    "7_does_not_divide_psp43": true,
+    "agl17_has_order_7_elements": true,
+    "42_does_not_divide_51840": true,
+    "AGL_1_7_NOT_a_subgroup_of_PGSp43": true,
+    "AGL_1_7_NOT_a_subgroup_of_PSp43": true,
+    "C7_cannot_embed_either": true,
+    "phi6_of_3_is_7": true,
+    "csaszar_has_7_vertices": true,
+    "the_shared_object_is_the_integer_7": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "w33.pass308.tbm_field_selects_char3.v1",
+  "status": "PASS",
+  "the_arithmetic": "The machine at rung q has Levi field Q(sqrt 2q) (Pass 298), so the compositum with the clock's Q(sqrt2) is Q(sqrt2, sqrt(2q)) = Q(sqrt2, sqrt q), since sqrt q = sqrt(2q)/sqrt2. That equals the TBM field Q(sqrt2, sqrt3) exactly when the squarefree part of q is 3, i.e. when q = 3^t with t ODD.",
+  "per_rung": {
+    "2": {
+      "p": 2,
+      "t": 1,
+      "machine_field": "Q",
+      "compositum": "Q(sqrt2, sqrt2)",
+      "is_TBM_field": false
+    },
+    "4": {
+      "p": 2,
+      "t": 2,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "8": {
+      "p": 2,
+      "t": 3,
+      "machine_field": "Q",
+      "compositum": "Q(sqrt2, sqrt2)",
+      "is_TBM_field": false
+    },
+    "16": {
+      "p": 2,
+      "t": 4,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "3": {
+      "p": 3,
+      "t": 1,
+      "machine_field": "Q(sqrt6)",
+      "compositum": "Q(sqrt2, sqrt3)",
+      "is_TBM_field": true
+    },
+    "9": {
+      "p": 3,
+      "t": 2,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "27": {
+      "p": 3,
+      "t": 3,
+      "machine_field": "Q(sqrt6)",
+      "compositum": "Q(sqrt2, sqrt3)",
+      "is_TBM_field": true
+    },
+    "81": {
+      "p": 3,
+      "t": 4,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "5": {
+      "p": 5,
+      "t": 1,
+      "machine_field": "Q(sqrt10)",
+      "compositum": "Q(sqrt2, sqrt5)",
+      "is_TBM_field": false
+    },
+    "25": {
+      "p": 5,
+      "t": 2,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "125": {
+      "p": 5,
+      "t": 3,
+      "machine_field": "Q(sqrt10)",
+      "compositum": "Q(sqrt2, sqrt5)",
+      "is_TBM_field": false
+    },
+    "7": {
+      "p": 7,
+      "t": 1,
+      "machine_field": "Q(sqrt14)",
+      "compositum": "Q(sqrt2, sqrt7)",
+      "is_TBM_field": false
+    },
+    "49": {
+      "p": 7,
+      "t": 2,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    },
+    "11": {
+      "p": 11,
+      "t": 1,
+      "machine_field": "Q(sqrt22)",
+      "compositum": "Q(sqrt2, sqrt11)",
+      "is_TBM_field": false
+    },
+    "121": {
+      "p": 11,
+      "t": 2,
+      "machine_field": "Q(sqrt2)",
+      "compositum": "Q(sqrt2)",
+      "is_TBM_field": false
+    }
+  },
+  "rungs_giving_the_TBM_field": [
+    3,
+    27
+  ],
+  "VERDICT": "The TBM field selects CHARACTERISTIC 3 with ODD Frobenius degree (q = 3, 27, 243, ...). It does NOT select q = 3 uniquely -- q = 27 works too, and q = 9 does not (even degree kills it). Every other characteristic misses: q=5 gives Q(sqrt2,sqrt5), q=7 gives Q(sqrt2,sqrt7), and all even q collapse to Q(sqrt2).",
+  "honest_weight": "A third selection argument for characteristic 3, but WEAKER than the two genuine uniqueness results it joins: Pass 225 (the half-spinor equals one generation only at q=3 -- an integer equation with a unique solution) and Pass 227 (the shadow rank fits an exceptional group only at q=3). This one selects a FAMILY (3^odd) rather than a point, and a field containment is a coarse instrument. Combined, q=3 is picked out -- but this pass alone would not do it.",
+  "checks": {
+    "compositum_identity": true,
+    "q3_gives_TBM": true,
+    "q27_also_gives_TBM": true,
+    "hits_are_odd_powers_of_3": true,
+    "q9_does_NOT": true,
+    "q5_does_NOT": true,
+    "q7_does_NOT": true,
+    "even_q_does_NOT": true,
+    "sf_3_to_t_is_3_iff_t_odd": true,
+    "not_unique_to_q3": true
+  }
+}

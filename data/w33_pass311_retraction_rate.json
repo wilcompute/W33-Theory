@@ -1,0 +1,67 @@
+{
+  "schema": "w33.pass311.retraction_rate.v1",
+  "status": "PASS",
+  "THE_NUMBER": "5 of 5 retractions came from the metric / coordinate / over-read side. 0 of 12 load-bearing spectral, algebraic or representation-theoretic claims failed.",
+  "failures": {
+    "279+285 sqrt21 absent": {
+      "class": "metric",
+      "fate": "FALSE",
+      "refuted_by": "286",
+      "cause": "searched spectra/counts; target was metric"
+    },
+    "290+291 sqrt21 is a metric invariant": {
+      "class": "metric",
+      "fate": "WITHDRAWN",
+      "refuted_by": "293, 299",
+      "cause": "coordinate choice; realization space continuous even under C2"
+    },
+    "275 det(B) = |ambient|": {
+      "class": "basis",
+      "fate": "REFUTED",
+      "refuted_by": "281",
+      "cause": "det(B_3)=76 not 81; 16=2^4 was a p=2 coincidence"
+    },
+    "300 Koide's field unreachable": {
+      "class": "over-read",
+      "fate": "OVER-READ",
+      "refuted_by": "304",
+      "cause": "quantified over ONE geometry; the ladder has many rungs"
+    },
+    "305 a genuine tie to the substrate": {
+      "class": "over-read",
+      "fate": "DEFLATED",
+      "refuted_by": "309",
+      "cause": "AGL(1,7) does not embed; 7 does not divide 51840"
+    }
+  },
+  "standing_claims": {
+    "238/256/266 the rank law + mechanism": "spectral",
+    "224/229 the CSS family [[(q+1)(q^2+1), q^2+1, q+1]]": "algebraic",
+    "225 spinor selection": "representation",
+    "227 Eastin-Knill / exceptional rank": "representation",
+    "230 magic = Yukawa": "representation",
+    "231 three generations": "representation",
+    "235 third-generation dominance": "algebraic",
+    "271 delta = even invariant factors": "algebraic",
+    "276 delta = non-lifting kernel directions": "algebraic",
+    "298 the forced-field ladder": "spectral",
+    "270 the +1 is the all-ones vector": "algebraic",
+    "261 the +8 from Cayley-Hamilton": "algebraic"
+  },
+  "tautologies_deflated_separately": {
+    "281's 'trace law' Tr(B_p) = (p^2+1)(p+2)/2 - 1": "deflated by 287 -- true but vacuous (Tr is DEFINED as rank_p(t=1)-1 and t=1 never drops)",
+    "305's '42 = 2*q*Phi_6' reading": "deflated in 305/309 -- holds at q=3 only because Phi_6-1 = 6 = 2q there; a small-case coincidence"
+  },
+  "why_it_is_not_luck": "Representation theory and spectra have no coordinates to be fooled by: a rank, an eigenvalue multiplicity, an invariant factor and a branching rule are all basis-free by construction. A polyhedron always arrives with a drawing and a matrix always arrives with a basis, so a claim about either has to be checked against every other valid drawing or basis -- and this program repeatedly did not, until Pass 293 made it a habit.",
+  "the_two_over_reads_are_their_own_category": "Passes 300 and 305 were not metric errors -- both were TRUE. They failed by being read wider than they were proved: 300 quantified over one geometry and was quoted as being about the substrate; 305 established a forced automorphism group and was quoted as a structural tie. So there are two distinct failure modes -- coordinate artefacts, and correct results over-stated -- and the second is the harder one to catch, because the pass itself is right.",
+  "the_operational_prior": "Trust spectral/algebraic/representation-theoretic claims by default; treat metric or basis-dependent claims as provisional until a second realization or basis is checked; and treat any claim whose scope is wider than its proof as an over-read regardless of which side it came from. On this arc's evidence that prior would have caught all five failures before they were published.",
+  "checks": {
+    "all_failures_are_metric_basis_or_overread": true,
+    "zero_spectral_failures": true,
+    "five_failures_total": true,
+    "twelve_standing_claims": true,
+    "standing_are_all_spectral_or_algebraic": true,
+    "metric_failure_share_is_1": true,
+    "spectral_failure_share_is_0": true
+  }
+}

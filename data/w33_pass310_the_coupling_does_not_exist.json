@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass310.the_coupling_does_not_exist.v1",
+  "status": "PASS",
+  "the_missing_object": "bt1654_heawood_clock_homology.py asserts the Heawood clock is 'a separate clock/homology module coupled to the W33 machine' but never specifies the coupling. Pass 307 was blocked on exactly this. Without it there is no combined spectrum, so Pass 303's compositum remains a statement about two SEPARATE systems.",
+  "measurements": {
+    "heawood": {
+      "V": 14,
+      "E": 21,
+      "girth": 6
+    },
+    "w33_levi": {
+      "V": 80,
+      "E": 160,
+      "girth": 8
+    }
+  },
+  "obstructions": {
+    "girth": "girth(Heawood) = 6 but girth(W(3,3) Levi) = 8; a subgraph cannot have shorter cycles than its host, so Heawood is NOT a subgraph -- bt1654 said this and it is re-verified here rather than taken on trust",
+    "order": "|PGSp(4,3)| = 51840 = 2^7*3^4*5 has no factor 7, so the substrate's symmetry group has no element of order 7 and cannot act with the Fano 7-fold symmetry (Pass 309)",
+    "size": "14 does not divide 80, so there is no clean orbit decomposition of the machine into clock-sized pieces",
+    "field": "Pass 307: adding coupling edges pushes the spectrum out of Q(sqrt2, sqrt3), so a field-preserving coupling would have to be very special, and none of the obvious ones is"
+  },
+  "attempts": {
+    "vertex_identification": {
+      "possible_as_a_map": true,
+      "but": "an arbitrary injection of 14 into 80 carries no structure; there is no canonical choice, and any choice breaks the Fano 7-fold symmetry that PGSp(4,3) cannot support anyway"
+    },
+    "subgraph_embedding": {
+      "possible": false,
+      "why": "girth(Heawood) = 6 < 8 = girth(W(3,3) Levi); a subgraph cannot have shorter cycles than its host"
+    },
+    "group_action": {
+      "possible": false,
+      "why": "PGSp(4,3) has order 51840 with no factor 7, so it has no element of order 7 and cannot realise the Fano symmetry (Pass 309)"
+    },
+    "edge_coupling": {
+      "possible": true,
+      "but": "Pass 307 showed adding coupling edges pushes the spectrum OUT of Q(sqrt2, sqrt3); the nice field does not survive"
+    }
+  },
+  "VERDICT": "The coupling is NOT constructed, and the obstructions suggest it is not a graph embedding (girth), not a group action (order), and not a clean decomposition (size). bt1654's phrase 'coupled module' is doing unexamined work: it asserts a relationship whose TYPE has never been specified. Until someone specifies it, Pass 303's TBM-field observation must stay what it is -- an arithmetic fact about two forced fields, not the physics of one system.",
+  "what_would_settle_it": "A stated type for the coupling: is it a functor, a spectral correspondence, a quotient, a fibration? Each is testable. The current corpus asserts the conclusion without the object, which is how the sqrt(21) episode began.",
+  "checks": {
+    "heawood_14_21": true,
+    "w33_levi_80_160": true,
+    "heawood_girth_6": true,
+    "w33_levi_girth_8": true,
+    "girths_differ": true,
+    "heawood_cannot_be_a_subgraph_of_W33_levi": true,
+    "pgsp43_has_no_order_7": true,
+    "clock_symmetry_cannot_act": true,
+    "14_does_not_divide_80": true,
+    "no_clean_orbit_decomposition": true,
+    "all_obvious_routes_examined": true,
+    "no_route_works": true
+  }
+}

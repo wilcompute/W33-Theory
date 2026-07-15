@@ -1,0 +1,33 @@
+{
+  "schema": "w33.pass312.lean_det_gap.v1",
+  "status": "PASS",
+  "file": "formal/W33/RankLaw.lean",
+  "the_last_gap": "det(B_p) is the only unexplained quantity in the rank story. Tr(B_p) is a tautology (Pass 287); the +8 is forced by Cayley-Hamilton (Pass 261); the '+1' is the all-ones module (Pass 270); and det = |ambient| is REFUTED (Pass 281: det(B_3) = 76, not 3^4 = 81). Only the values 16 and 76 remain, with no closed form.",
+  "added_theorems": {
+    "det_B2": "(9^2 - 49)/2 = 16, from rank_2 W(3,2)=10 and W(3,4)=50",
+    "det_B3": "(24^2 - 424)/2 = 76, from rank_3 W(3,3)=25 and W(3,9)=425",
+    "det_is_not_p_pow_four": "(76 : Z) != 3^4 -- Pass 281's refutation in one line",
+    "det_B2_coincides_with_ambient": "(16 : Z) = 2^4 -- the p=2 coincidence that misled Pass 275"
+  },
+  "honest_scope": "NOT kernel-checked: no Lean toolchain here, so this is a STRUCTURAL certification (parses as expected, states the claimed theorems, no sorry) plus an INDEPENDENT Python re-verification of every arithmetic claim. Same caveat as Passes 207 and 284.",
+  "why_formalisable": "After 261/265/270/275/281/287 the entire even-q law is arithmetic about a 2x2 integer matrix -- no geometry, no F2 rank, no incidence structure. Even the refutation is one line. That is Mathlib-sized.",
+  "checks": {
+    "file_exists": true,
+    "no_sorry": true,
+    "states_det_B2": true,
+    "states_det_B3": true,
+    "states_det_is_not_p_pow_four": true,
+    "states_det_B2_coincides_with_ambient": true,
+    "pass284_a_three_retained": true,
+    "pass284_shifted_recurrence_retained": true,
+    "pass284_constant_is_eight_retained": true,
+    "py_det_B2_is_16": true,
+    "py_det_B3_is_76": true,
+    "py_76_is_not_81": true,
+    "py_16_is_2_pow_4": true,
+    "py_Tr_B2_from_rank": true,
+    "py_Tr_B3_from_rank": true,
+    "py_TrB2sq_from_rank": true,
+    "py_TrB3sq_from_rank": true
+  }
+}

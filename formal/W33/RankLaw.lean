@@ -72,3 +72,38 @@ the even tower (Pass 256). -/
 theorem discriminant_seventeen : (9 ^ 2 - 4 * 16 : ℤ) = 17 := by norm_num
 
 end W33.RankLaw
+
+/-!
+## The remaining gap: `det B`
+
+Passes 265/270/275 reduced the even-`q` law to two invariants, and Pass 270
+identified the first: `Tr B = rank₂ W(3,2) - 1 = 9`, the doily's rank minus the
+trivial all-ones module.  Pass 287 then showed the "trace law"
+`Tr(B_p) = (p²+1)(p+2)/2 - 1` is a TAUTOLOGY (it restates that `t = 1` never
+drops), so `det` is the only real content.
+
+Pass 275 conjectured `det B = |𝔽₂⁴| = 16`, the ambient size.  Pass 281 REFUTED
+it: at `p = 3` the determinant is `76`, not `3⁴ = 81`.  So `det(B₂) = 16 = 2⁴`
+was a coincidence at `p = 2`, and `det(B_p)` has no known closed form:
+
+    p = 2 → det = 16
+    p = 3 → det = 76
+
+Both are recorded here as data.  This is the last unexplained quantity in the
+rank story.
+-/
+
+/-- The transfer determinant at `p = 2`, from `rank₂ W(3,2) = 10` and
+`rank₂ W(3,4) = 50` via `Tr(B²) = (Tr B)² - 2 det B`. -/
+theorem det_B2 : (9 ^ 2 - 49 : ℤ) / 2 = 16 := by norm_num
+
+/-- The transfer determinant at `p = 3`, from `rank₃ W(3,3) = 25` and
+`rank₃ W(3,9) = 425` (Pass 281). -/
+theorem det_B3 : (24 ^ 2 - 424 : ℤ) / 2 = 76 := by norm_num
+
+/-- **Pass 281's refutation, in one line.**  If `det B_p = p⁴` held, then at
+`p = 3` we would need `76 = 81`.  It does not. -/
+theorem det_is_not_p_pow_four : (76 : ℤ) ≠ 3 ^ 4 := by decide
+
+/-- At `p = 2` the coincidence `det = 2⁴` that misled Pass 275. -/
+theorem det_B2_coincides_with_ambient : (16 : ℤ) = 2 ^ 4 := by norm_num
