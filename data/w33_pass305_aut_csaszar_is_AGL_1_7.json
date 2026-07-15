@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass305.aut_csaszar_is_AGL_1_7.v1",
+  "status": "PASS",
+  "THE_GROUP": "Aut(Csaszar) = AGL(1,7) = C_7 : C_6, the Frobenius group F_42 -- the affine group of the line over F_7, equivalently the normaliser of a Sylow-7 in S_7. Established by brute force over S_7: order 42, transitive on the 7 vertices with point stabiliser 6, and element-order profile {1:1, 2:7, 3:14, 6:14, 7:6} matching AGL(1,7) exactly.",
+  "dart_regular": "The Csaszar map has 14 faces x 3 = 42 darts and |Aut| = 42, so Aut acts REGULARLY on darts: the map is dart-regular (reflexible).",
+  "measurements": {
+    "order": 42,
+    "darts": 42,
+    "element_order_profile": {
+      "1": 1,
+      "2": 7,
+      "3": 14,
+      "6": 14,
+      "7": 6
+    },
+    "AGL(1,7)_profile": {
+      "1": 1,
+      "2": 7,
+      "3": 14,
+      "6": 14,
+      "7": 6
+    },
+    "transitive": true,
+    "point_stabiliser": 6
+  },
+  "why_seven": "The 7 is not free. Csaszar has 7 vertices because g(K_n) = 1 first happens at n = 7, and the repo's genus ladder records 7 = Phi_6 with Phi_6(q) = q^2 - q + 1, so Phi_6(3) = 7 at the substrate's own order. Hence |Aut(Csaszar)| = |AGL(1, Phi_6(3))| = Phi_6 * (Phi_6 - 1) = 7 * 6 = 42.",
+  "an_honest_deflation": "The reading 42 = 2*q*Phi_6 = 2*3*7 also holds at q=3, but only because Phi_6 - 1 = 6 happens to equal 2q there. The structural statement is 42 = Phi_6*(Phi_6 - 1) = |AGL(1,Phi_6)|; the 2*q*Phi_6 form is a coincidence of the small case and should not be quoted forward.",
+  "why_this_one_matters": "Every claim in the sqrt(21) episode failed Pass 302's forced/chosen test -- edge lengths and labelled cycles are properties of a drawing. An automorphism group is COMBINATORIAL: it survives every realization. So this is a genuine FORCED tie between the toroidal pole and the substrate's Phi_6 -- the kind of link the metric coincidences only pretended to be.",
+  "checks": {
+    "aut_order_42": true,
+    "dart_count_42": true,
+    "aut_acts_regularly_on_darts": true,
+    "transitive_on_7_vertices": true,
+    "point_stabiliser_order_6": true,
+    "orbit_stabiliser": true,
+    "profile_matches_AGL_1_7": true,
+    "six_elements_of_order_7": true,
+    "seven_involutions": true,
+    "normal_C7_exists": true,
+    "42_is_7_times_6": true,
+    "phi6_of_3_is_7": true,
+    "aut_order_is_phi6_times_phi6_minus_1": true,
+    "2_q_phi6_also_42_at_q3": true,
+    "that_reading_is_a_small_case_coincidence": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "w33.pass303.q_sqrt6_and_the_tbm_field.v1",
+  "status": "PASS",
+  "the_two_forced_fields": {
+    "coupled clock (Fano PG(2,2) Levi)": "Q(sqrt2)  -- = sqrt(q), q=2",
+    "the machine (W(3,3) GQ Levi)": "Q(sqrt6)  -- = sqrt(2q), q=3",
+    "note": "both are SPECTRAL, hence forced (Pass 302's test): no coordinate choice appears anywhere in this statement"
+  },
+  "THE_COMPOSITUM": "Q(sqrt2) and Q(sqrt6) generate Q(sqrt2, sqrt6) = Q(sqrt2, sqrt3), since sqrt3 = sqrt6/sqrt2. That degree-4 field is EXACTLY the field of the tribimaximal mixing matrix: TBM's entries sqrt6/3, sqrt3/3, sqrt6/6, sqrt2/2 generate Q(sqrt2, sqrt3) and nothing more.",
+  "tbm": {
+    "entries": [
+      "sqrt(6)/6",
+      "sqrt(3)/3",
+      "sqrt(2)/2",
+      "sqrt(6)/3"
+    ],
+    "field": "Q(sqrt2, sqrt3)",
+    "angles_deg": {
+      "theta12": 35.2644,
+      "theta23": 45.0,
+      "theta13": 0.0
+    },
+    "observed_deg": {
+      "theta12": 33.41,
+      "theta23": 49.1,
+      "theta13": 8.54
+    }
+  },
+  "reading": "The two forced fields of the substrate -- the machine's Q(sqrt6) and its coupled clock's Q(sqrt2) -- compose precisely to the field in which tribimaximal lepton mixing is written. Pass 236 derived TBM from the family clock by representation theory; this is the same object arriving independently from the SPECTRA.",
+  "honest_weight": "A field-containment statement, not a derivation of TBM. Q(sqrt2, sqrt3) is small and many things live in it, and Pass 288 found theta_12 generic given the other angles (albeit with low power). What makes it worth recording is that BOTH generators are FORCED -- spectral invariants surviving every realization -- so unlike the sqrt(21) episode (Passes 286/290 -> 293/299) there is no coordinate choice anywhere in it. This is the first field statement in the program that passes Pass 302's forced/chosen test outright.",
+  "checks": {
+    "clock_field_sqrt2": true,
+    "machine_field_sqrt6": true,
+    "machine_field_is_sqrt_2q": true,
+    "clock_field_is_sqrt_q_fano": true,
+    "sqrt3_equals_sqrt6_over_sqrt2": true,
+    "compositum_is_Q_sqrt2_sqrt3": true,
+    "tbm_is_orthogonal": true,
+    "tbm_entries_are_sqrt6_6__sqrt3_3__sqrt2_2__sqrt6_3": true,
+    "all_tbm_entries_in_Q_sqrt2_sqrt3": true,
+    "sqrt6_appears_in_tbm": true,
+    "sqrt2_appears_in_tbm": true,
+    "sqrt3_appears_in_tbm": true,
+    "tbm_theta12_is_35_26": true
+  }
+}

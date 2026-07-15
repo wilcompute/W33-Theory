@@ -1,0 +1,69 @@
+{
+  "schema": "w33.pass304.compositum_reopens_sqrt21.v1",
+  "status": "PASS",
+  "pass300_untouched": "The theorem as literally stated stands: no SINGLE Levi spectrum contains sqrt(21), since 21 is neither a prime power nor twice one. Re-verified here.",
+  "THE_NUANCE": "Pass 300 quantifies over ONE geometry, but the substrate is not one geometry -- the odd-q ladder has rungs q = 3,5,7,... existing simultaneously. Their Levi fields are Q(sqrt 2q), so q=3 gives Q(sqrt6) (the machine itself) and q=7 gives Q(sqrt14). Since sqrt6 * sqrt14 = sqrt84 = 2*sqrt21, we get sqrt21 = (sqrt6*sqrt14)/2 in Q(sqrt6, sqrt14). So sqrt(21) IS reachable -- from the COMPOSITUM of the q=3 and q=7 rungs.",
+  "the_two_routes": {
+    "quadrangles": "Q(sqrt6) x Q(sqrt14) from the q=3 and q=7 GQ rungs; sqrt6*sqrt14 = 2 sqrt21",
+    "planes": "Q(sqrt3) x Q(sqrt7) from PG(2,3) and PG(2,7); sqrt3*sqrt7 = sqrt21 directly"
+  },
+  "rung_pairs": {
+    "q=3 x q=5": {
+      "fields": [
+        "Q(sqrt6)",
+        "Q(sqrt10)"
+      ],
+      "product_squarefree": 15
+    },
+    "q=3 x q=7": {
+      "fields": [
+        "Q(sqrt6)",
+        "Q(sqrt14)"
+      ],
+      "product_squarefree": 21
+    },
+    "q=3 x q=11": {
+      "fields": [
+        "Q(sqrt6)",
+        "Q(sqrt22)"
+      ],
+      "product_squarefree": 33
+    },
+    "q=5 x q=7": {
+      "fields": [
+        "Q(sqrt10)",
+        "Q(sqrt14)"
+      ],
+      "product_squarefree": 35
+    },
+    "q=5 x q=11": {
+      "fields": [
+        "Q(sqrt10)",
+        "Q(sqrt22)"
+      ],
+      "product_squarefree": 55
+    },
+    "q=7 x q=11": {
+      "fields": [
+        "Q(sqrt14)",
+        "Q(sqrt22)"
+      ],
+      "product_squarefree": 77
+    }
+  },
+  "what_is_withdrawn": "The sweeping reading of Pass 300 -- 'Koide's field can never come from the substrate' -- is WITHDRAWN. The substrate contains more than one rung, and q=3 together with q=7 does generate Q(sqrt21).",
+  "honest_status_of_koide": "Not derived, and not structurally excluded either -- one notch back from where Pass 300 left it. A compositum of two ladder rungs is a far weaker object than a single spectrum: it requires invoking two different geometries at once with no mechanism coupling them, and the planes of order 3 and 7 would do the same job just as well. So this reopens a door rather than walking through it. The contrast with Pass 303 is instructive: there, ONE compositum (clock x machine) lands on the TBM field with both generators forced and both structures already known to be coupled; here, the q=3 x q=7 compositum lands on Koide's field with no coupling on offer.",
+  "method_note": "This pass exists because Pass 302's rule -- ask whether the claim survives a change of setup -- should be applied to my own theorems, not only to the metric claims it was invented for. Pass 300 was sound but over-read, and the over-reading is the kind of thing that would otherwise have been quoted forward as settled.",
+  "checks": {
+    "pass300_theorem_still_holds": true,
+    "single_geometry_cannot_give_sqrt21": true,
+    "q3_rung_field_is_sqrt6": true,
+    "q7_rung_field_is_sqrt14": true,
+    "sqrt6_times_sqrt14_is_2sqrt21": true,
+    "sqrt21_from_the_compositum": true,
+    "planes_3_and_7_also_give_sqrt21": true,
+    "sqrt3_reachable": true,
+    "sqrt7_reachable": true,
+    "q3_x_q7_product_is_21": true
+  }
+}

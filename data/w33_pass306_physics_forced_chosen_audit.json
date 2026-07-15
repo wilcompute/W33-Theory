@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass306.physics_forced_chosen_audit.v1",
+  "status": "PASS",
+  "the_test": "Would a different basis, coordinate system, scheme or fit give a different answer? Representation dimensions and branching multiplicities are group invariants, so they cannot. Numerical fits to data can.",
+  "classification": {
+    "FORCED -- representation/branching arithmetic, basis-free": {
+      "225 spinor selection": "2^{(q^2-1)/2} = 16 only at q=3; q^2+1 = 2 mod 8 gives chirality at every odd q. Pure rep dimensions -- no basis, no fit.",
+      "230 magic = Yukawa": "27 = 16+10+1 under SO(10)xU(1), and the charge-0 cubics are exactly {1.10.10, 16.16.10}. Branching multiplicities and U(1) charges are group invariants.",
+      "231 three generations": "E8 -> E6 x SU(3) with 248 = 78+8+81+81; the (27,3) is three copies. A branching rule.",
+      "235 third-generation dominance": "the democratic matrix has spectrum (3,0,0), rank 1, hence exactly ONE heavy generation. An eigenvalue fact, basis-free.",
+      "227 Eastin-Knill non-universality": "the logical group is the FINITE O+(q^2+1,2); finiteness is a group fact.",
+      "303 the compositum field Q(sqrt2,sqrt3)": "both generators are SPECTRAL (Pass 298), so the containment is forced.",
+      "305 Aut(Csaszar) = AGL(1,7)": "an automorphism group survives every realization."
+    },
+    "FITTED -- depends on data, scheme or a chosen parameter": {
+      "235 the FN hierarchy eps = 0.06": "fitted to m_c/m_t; the CHARGES (2,1,0) are also a choice. Only the rank-1 dominance is forced.",
+      "236/242 the mixing angle comparisons": "numerical agreement with PMNS/CKM depends on the fit; Pass 288 found the angles generic given the others (with low power).",
+      "241/257 Koide's theta = 45 deg": "an empirical fact about POLE masses; Pass 257 showed it moves under running, so it is scheme-dependent, not invariant.",
+      "243 the proton lifetime": "needs M_X, which the geometry does not fix -- explicitly flagged in that pass.",
+      "258 the neutrino scale": "v^2/M_R is an input; only the ORDERING is a prediction."
+    }
+  },
+  "counts": {
+    "forced": 7,
+    "fitted": 5
+  },
+  "the_verdict": "The physics passes PASS the test where it matters: their load-bearing claims are branching arithmetic (spinor 16 only at q=3; 27 = 16+10+1 with exactly two charge-0 cubics; E8 -> E6 x SU(3) forcing three generations; the democratic Yukawa having rank 1), and every one of those is a group invariant re-verified here. This is a real contrast with the geometry: Pass 302 found the geometric claims split messily into forced and chosen, whereas the physics claims were built on representation theory from the start and are basis-free by construction.",
+  "where_the_fitting_is": "The fitted parts are exactly where the passes already said they were: eps in the FN hierarchy, the numerical mixing-angle comparisons, Koide's 45 degrees (pole-mass specific -- Pass 257 showed it moves under running), M_X for the proton lifetime, and the neutrino mass scale. None of those was ever claimed as forced, and the demarcation held up under audit.",
+  "the_asymmetry_worth_noting": "The geometric side produced three retractions in three rounds (281 det=|ambient|, 293/299 sqrt21, 304 the over-read of 300). The physics side produced none. The reason is structural rather than luck: representation theory has no coordinates to be fooled by, whereas a polyhedron always comes with a drawing.",
+  "checks": {
+    "225_spinor_dims_16_4096_16M": true,
+    "225_one_generation_unique_at_q3": true,
+    "225_all_rungs_chiral": true,
+    "230_27_branches_16_10_1": true,
+    "230_exactly_two_invariant_cubics": true,
+    "230_yukawa_and_mass_term": true,
+    "230_16x16_is_10_120_126": true,
+    "231_e8_dim_248": true,
+    "231_three_generations": true,
+    "231_48_chiral_fermions": true,
+    "235_democratic_rank_1": true,
+    "235_democratic_spectrum_3_0_0": true,
+    "305_aut_is_combinatorial": true,
+    "audit_covers_both": true,
+    "physics_forced_claims_verified_here": true
+  }
+}
