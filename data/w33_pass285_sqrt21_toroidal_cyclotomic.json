@@ -1,0 +1,51 @@
+{
+  "schema": "w33.pass285.sqrt21_toroidal_cyclotomic.v1",
+  "status": "PASS",
+  "new_identity": {
+    "statement": "the FN(2,1,0) Koide function is a CYCLOTOMIC RATIO: Q(eps) = Phi_6(eps)/Phi_3(eps)",
+    "because": "x^4 + x^2 + 1 = Phi_3(x) * Phi_6(x), so Q = Phi_3*Phi_6 / Phi_3^2 = Phi_6/Phi_3",
+    "koide_condition": "Q = 2/3  <=>  3 Phi_6(eps) = 2 Phi_3(eps)  <=>  eps^2 - 5 eps + 1 = 0",
+    "eps_star": "(5 - sqrt 21)/2 = 0.2087121525",
+    "novelty": "not previously noted in this program"
+  },
+  "where_21_lives": {
+    "Fano PG(2,2) flags": 21,
+    "K_7 edges": 21,
+    "Heawood graph edges": 21,
+    "Csaszar polyhedron edges (torus)": 21,
+    "Szilassi polyhedron edges (torus)": 21,
+    "octonion Fano-triple incidences (Pass 230)": 21,
+    "C(Phi_6(3), 2)": 21
+  },
+  "the_same_21": "these are ONE 21, not six: the Csaszar skeleton IS K_7 embedded in the torus, which IS the Fano/Heawood incidence structure, which IS the octonion multiplication table (Pass 230)",
+  "already_in_the_repo": {
+    "file": "part18_jungerman_ringel.tex",
+    "content": "the minimal-triangulation ladder lists at genus 1: Phi_6 = 7 vertices, 21 edges, 14 faces, 'Csaszar (torus)', claiming every structural element is parameterised by W(3,3)",
+    "Phi_6(q)": "q^2 - q + 1, the 6th cyclotomic polynomial; = 7 at q=3",
+    "so": "21 = C(Phi_6(3), 2) is already substrate data"
+  },
+  "the_link": "The SAME Phi_6 appears on both sides: it indexes the substrate's toroidal polyhedron (Phi_6(3) = 7 Csaszar vertices, C(7,2) = 21 edges) AND it is the numerator of the Koide function (Q = Phi_6/Phi_3). That is a genuine structural connection between the toroidal/Fano sector and the Koide condition, and it is new.",
+  "the_honest_limit": "It is still not sqrt(21). The two 21s are different KINDS of object: in Csaszar/K_7/Fano, 21 is an edge or flag COUNT -- a rational integer; in eps* = (5-sqrt21)/2, 21 is a DISCRIMINANT, the thing under the root. Per Pass 279's lesson a rational 21 cannot manufacture an irrational sqrt(21). Even the repo's own square-root identity sqrt(1 + 48 genus(K_n)) = 2n - Phi_6 evaluates at n=7 to sqrt(49) = 7, which is rational. The substrate's only genuine quadratic irrationality remains sqrt(17), from the even-q transfer matrix -- a different field from Q(sqrt 21).",
+  "verdict": "FOUND: a real and previously-unnoticed link -- the Koide function is the cyclotomic ratio Phi_6/Phi_3, and Phi_6 is exactly the polynomial the repo already uses to parameterise the Csaszar torus (Phi_6(3)=7 vertices, 21 edges). NOT FOUND: sqrt(21) itself. The connection is at the level of Phi_6, not of the irrationality; the 21 of the toroidal polyhedra is a count, the 21 of eps* is a discriminant, and the two do not meet.",
+  "checks": {
+    "Phi3_is_x2_x_1": true,
+    "Phi6_is_x2_minus_x_1": true,
+    "Phi3_times_Phi6_is_x4_x2_1": true,
+    "Koide_FN_Q_is_Phi6_over_Phi3": true,
+    "Koide_condition_is_3Phi6_eq_2Phi3": true,
+    "eps_star_is_5_minus_sqrt21_over_2": true,
+    "Phi6_at_q3_is_7": true,
+    "C_7_2_is_21": true,
+    "csaszar_euler_is_torus": true,
+    "szilassi_euler_is_torus": true,
+    "fano_flags_21": true,
+    "heawood_edges_21": true,
+    "octonion_triple_incidences_21": true,
+    "all_the_21s_agree": true,
+    "repo_sqrt_identity_is_rational": true,
+    "repo_sqrt_gives_49_not_21": true,
+    "eps_disc_is_21": true,
+    "csaszar_21_is_a_count_not_a_disc": true,
+    "sqrt21_still_absent": true
+  }
+}

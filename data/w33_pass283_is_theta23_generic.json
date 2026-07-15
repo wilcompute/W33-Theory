@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass283.is_theta23_generic.v1",
+  "status": "PASS",
+  "question": "among mass matrices reproducing theta_12, theta_13 and Dm21/Dm31, is theta_23 = 49.1 typical or special?",
+  "n_samples": 300,
+  "theta23_distribution": {
+    "median": 46.8745332226131,
+    "mean": 45.80347146516564,
+    "p5": 11.581054108920704,
+    "p25": 29.83989589640946,
+    "p75": 60.707914310123456,
+    "p95": 81.75142780231731,
+    "min": 0.5331572472838869,
+    "max": 89.92343830877095
+  },
+  "observed": 49.1,
+  "percentile_of_observed": 56.666666666666664,
+  "verdict": "theta_23 = 49.1 sits at the 57th percentile of the induced distribution and inside the central 90% band [11.6, 81.8] -- it is TYPICAL, not special. Once theta_12, theta_13 and the mass ratio are imposed, a generic symmetric mass matrix produces an atmospheric angle like the observed one. On this evidence theta_23 may require no mechanism at all, which would explain why Passes 264/268/273/278 kept failing to find one: there may be nothing there to find.",
+  "reading": "This is the question that should have been asked before Pass 264. A quantity only needs explaining if it is atypical given everything else that is measured. The induced distribution answers that directly.",
+  "checks": {
+    "enough_samples": true,
+    "distribution_computed": true,
+    "observed_in_90pct_bulk": true
+  }
+}

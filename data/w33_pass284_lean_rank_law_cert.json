@@ -1,0 +1,38 @@
+{
+  "schema": "w33.pass284.lean_rank_law_cert.v1",
+  "status": "PASS",
+  "file": "formal\\W33\\RankLaw.lean",
+  "formalized": [
+    "the sequence a: a 1 = 10, a 2 = 50, a(t+1) = 9 a t - 16 a(t-1) + 8",
+    "anchors a 3 = 298, a 4 = 1890, a 5 = 12250 (by decide)",
+    "shifted_recurrence: the Cayley-Hamilton identity (by ring) forcing the inhomogeneous constant c*(1 - Tr + det)",
+    "constant_is_eight: c=1, Tr=9, det=16 => the constant is exactly 8",
+    "trace_from_doily_rank, det_forced, discriminant_seventeen"
+  ],
+  "honest_scope": "NOT kernel-checked: there is no Lean toolchain in this container, so this is a STRUCTURAL certification (parses as expected, states the claimed theorems, contains no sorry) plus an INDEPENDENT Python re-verification of every arithmetic claim. A real `lake build` is still required before calling any of it machine-checked -- the same caveat carried by formal/W33/ShadowDichotomy.lean since Pass 207.",
+  "why_this_is_formalizable": "After Passes 256/261/265/270/275 the even-q law is a statement about a 2x2 integer matrix -- no geometry, no F2 rank, no incidence structure. That is Mathlib-sized, which is why this is the first part of the rank story to reach Lean.",
+  "checks": {
+    "file_exists": true,
+    "no_sorry": true,
+    "imports_mathlib": true,
+    "declares_namespace": true,
+    "states_a_one": true,
+    "states_a_two": true,
+    "states_a_three": true,
+    "states_a_four": true,
+    "states_a_five": true,
+    "states_shifted_recurrence": true,
+    "states_constant_is_eight": true,
+    "states_trace_from_doily_rank": true,
+    "states_det_forced": true,
+    "states_discriminant_seventeen": true,
+    "in_root_import": true,
+    "python_a3_298": true,
+    "python_a4_1890": true,
+    "python_a5_12250": true,
+    "shift_lemma_is_an_identity": true,
+    "python_constant_is_8": true,
+    "python_det_forced_16": true,
+    "python_disc_17": true
+  }
+}
