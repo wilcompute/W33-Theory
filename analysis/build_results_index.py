@@ -45,15 +45,47 @@ OUT = ROOT / "RESULTS_INDEX.md"
 # staged file and then looked up in an index that had never heard of it. A guard
 # and an index that disagree are worse than either alone.
 sys.path.insert(0, str(ROOT / "scripts"))
-from check_rediscovery import RE_NAMED, RE_ROOT  # noqa: E402
+from check_rediscovery import RE_NAMED, RE_ROOT, compounds  # noqa: E402
 
 # corpus: the places results actually live (Pass 322 learned analysis/*.md and
-# AUDIT_*.md the hard way -- they were NOT in the old "index.html + .tex" rule)
-GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "passes/*.md",
+# AUDIT_*.md the hard way -- they were NOT in the old "index.html + .tex" rule).
+#
+# Pass 349 found the far bigger hole: *.py was NEVER indexed. The index covered
+# 1,311 files while 2,299 analysis/*.py sat outside it -- roughly two thirds of
+# the corpus, including all 173 w33_pass*.py witnesses AND
+# w33_eisenstein_grand_synthesis.py, the very file Pass 347 rediscovered. The
+# index could not have caught that rediscovery by any token, because it had never
+# read the file. Pass 348 blamed the token classes ("A2 is a ubiquitous atom") and
+# was looking at the wrong layer: the corpus definition was wrong. Witnesses ARE
+# results; a tool that indexes only prose indexes only the write-up.
+GLOBS = ["docs/index.html", "*.tex", "analysis/*.md", "analysis/*.py",
+         "passes/*.md", "passes/*.py", "exploration/*.py", "scripts/*.py",
          "PASS*.md", "AUDIT*.md", "BT*.md", "PART*.md", "formal/**/*.lean",
          "manuscripts/**/*.tex"]
 
-MAX_FILES = 10          # above this a token is a topic, not a result
+# Above this a token is a topic, not a result.
+#
+# RE-TUNED at Pass 349, because the Pass 328 calibration that produced 10 was run
+# against an index missing two thirds of the corpus (*.py was never globbed). On
+# the real 5,815-file corpus, measured flag rate over the 173 pass witnesses:
+#
+#     MAX   flag rate   [[40,10,4]] survives?
+#      10      31%        no   <- the flagship catch is DROPPED
+#      20      39%        yes
+#      25      39%        yes
+#      30      43%        yes
+#      60      51%        yes
+#
+# 25 buys back [[40,10,4]] (18 files) at no extra noise over 20, and stays far
+# under the Pass 328 noise line (>90% = a guard nobody reads).
+#
+# THE INDEX HAS A HALF-LIFE, and this is what it looks like. [[40,10,4]] lived in
+# 4 files when the index was built and lives in 18 now; [40,15,8] lives in 29 and
+# is a topic at any usable cut. A result the corpus works ON becomes a topic OF
+# the corpus -- so the index loses the power to flag a result exactly as that
+# result becomes central. The cut must be re-measured as the corpus grows; it is
+# not a constant.
+MAX_FILES = 25
 SKIP_DIRS = {".git", "node_modules", ".venv", "data"}
 
 RE_CSS = re.compile(r"\[\[\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\]\]")
@@ -98,6 +130,9 @@ def main():
             index[m.lower()].add(rel)
         for m in RE_ROOT.findall(txt):
             index[m].add(rel)
+        # compounds (Pass 349): a pair of topics is a result
+        for c in compounds(txt):
+            index[c].add(rel)
 
     kept = {t: fs for t, fs in index.items() if 1 <= len(fs) <= MAX_FILES}
     uniq = {t: fs for t, fs in kept.items() if len(fs) == 1}
