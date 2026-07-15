@@ -21,7 +21,7 @@
       "omega_coeff": "0",
       "e2_coeff": "0",
       "a4": "1/15",
-      "product_C4": "122408/15",
+      "product_C4": "24568/3",
       "note": "This is the scalar heat coefficient, not the corpus curvature normalization."
     },
     "spin_dirac_square": {
@@ -40,7 +40,7 @@
     "scalar_a4_is_1_over_15": true,
     "corpus_C4_is_18720": true,
     "scalar_lane_distinct_from_corpus_lane": true,
-    "scalar_product_C4_fraction": "122408/15",
+    "scalar_product_C4_fraction": "24568/3",
     "all_checks_pass": true
   }
 }

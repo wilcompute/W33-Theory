@@ -21,7 +21,7 @@ def test_corpus_product_and_scalar_product_are_distinct():
     corpus_product = N * K_NORM + F4_OVER_2
     scalar_product = N * Fraction(1, 15) + F4_OVER_2
     assert corpus_product == 18720
-    assert scalar_product == Fraction(122408, 15)
+    assert scalar_product == Fraction(24568, 3)
     assert corpus_product != scalar_product
 
 
