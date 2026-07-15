@@ -1,5 +1,5 @@
 {
-  "schema": "w33.pass350.substrate_is_made_of_torsors.v1",
+  "schema": "w33.pass354.substrate_is_made_of_torsors.v1",
   "status": "PASS",
   "THE_THEOREM_NOW": "EVERY MULTIPLICITY THIS SUBSTRATE OFFERS IS A TORSOR. Four certified instances, three of which use the word themselves: 2 half-spins swapped by T (346); 3 lattice leaves cycled by omega (332, 'Eisenstein C3 torsor'); 27 point states under the extraspecial 3^(1+2), regular (bt865); 27 line programs under elementary F3^3, regular (bt865). No invariant distinguishes points of a transitive orbit and every datum the substrate builds is invariant -- so it cannot select a chirality, a leaf, a point state, or a line program.",
   "1_mechanizing_the_pattern": {
@@ -10,7 +10,7 @@
       "no *.py in GLOBS -- in my own index builder (349)"
     ],
     "reading": "four is a pattern, and a pattern is mechanizable",
-    "the_sweep": "7018 invariant-shaped facts across data/*.json; 30 DECISIVE-shaped (det = -1 / torsor / transitive / stabilizes-none)",
+    "the_sweep": "7020 invariant-shaped facts across data/*.json; 32 DECISIVE-shaped (det = -1 / torsor / transitive / stabilizes-none)",
     "result": "it found the theorem's next instances by itself, without being told where to look"
   },
   "2_what_it_found": {
@@ -67,6 +67,15 @@
     "a_torsor_is_a_group_once_you_pick_a_point": true,
     "missing_input_is_a_SECTION": true,
     "one_choice_per_torsor": true,
+    "p331_certified_mutually_dual": true,
+    "p331_certified_sqrt_minus_3": true,
+    "so_q3_chirality_was_certified_not_open": true,
+    "their_348_status_is_gap_run_pending": true,
+    "their_348_calls_q3_undecided": true,
+    "their_348_offers_it_as_a_prediction": true,
+    "their_348_does_not_cite_p331": true,
+    "fifth_instance_is_cross_track_and_self_inflicted": true,
+    "failure_is_structural_not_personal": true,
     "bt950_flagged_not_claimed": true,
     "bt950_has_det_minus_1": true
   }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 349: my index never read the code -- and Pass 348 diagnosed the wrong layer.
+"""Pass 353: my index never read the code -- and Pass 348 diagnosed the wrong layer.
 
 Pass 348 found that the guard missed the Pass 347 rediscovery, blamed the token
 classes ("A2 is a ubiquitous atom, dropped as a topic"), declared that the floor
@@ -110,7 +110,7 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "w33_pass349_the_index_never_read_the_code.json"
+OUT = ROOT / "data" / "w33_pass353_the_index_never_read_the_code.json"
 sys.path.insert(0, str(ROOT / "scripts"))
 from check_rediscovery import RE_ATOM, RE_ROOT, compounds, load_index  # noqa: E402
 
@@ -185,7 +185,7 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass349.index_never_read_the_code.v1",
+        "schema": "w33.pass353.index_never_read_the_code.v1",
         "status": "PASS" if all_pass else "FAIL",
         "HEADLINE": (
             "My index had never read a single Python file. The GLOBS list had no "

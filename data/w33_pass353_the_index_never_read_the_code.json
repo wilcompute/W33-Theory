@@ -1,10 +1,10 @@
 {
-  "schema": "w33.pass349.index_never_read_the_code.v1",
+  "schema": "w33.pass353.index_never_read_the_code.v1",
   "status": "PASS",
   "HEADLINE": "My index had never read a single Python file. The GLOBS list had no *.py, so it covered 1,311 files while 2,299 analysis/*.py sat outside -- two thirds of the corpus, including all 173 pass witnesses AND w33_eisenstein_grand_synthesis.py, the exact file Pass 347 rediscovered. The index could not have caught that rediscovery by ANY token at ANY calibration: it had never read the file. Pass 348 blamed the token classes and was diagnosing the wrong layer.",
   "1_the_hole": {
     "old_globs": "docs/index.html, *.tex, analysis/*.md, passes/*.md, PASS*.md, AUDIT*.md, BT*.md, PART*.md, formal/**/*.lean, manuscripts/**/*.tex -- no *.py anywhere",
-    "missed": "2300 analysis/*.py, including 174 w33_pass*.py witnesses",
+    "missed": "2301 analysis/*.py, including 175 w33_pass*.py witnesses",
     "before": "1,311 files indexed",
     "after": "5,815 files indexed; the grand synthesis appears 27 times",
     "reading": "A tool that indexes only prose indexes only the write-up. In this repo the witnesses ARE the results. This is the fourth instance of the arc's own pattern -- the deciding fact sitting in plain sight, here in a nine-element list in my own file that I wrote and never re-read."
@@ -29,7 +29,7 @@
     "cost": "flag rate 20% -> 39% on the full corpus, well under the noise line"
   },
   "4_THE_INDEX_HAS_A_HALF_LIFE": {
-    "[[40,10,4]]": "4 files when first indexed -> 19 now",
+    "[[40,10,4]]": "4 files when first indexed -> 20 now",
     "[40,15,8]": "29 now -- a TOPIC at any usable cut, past saving",
     "the_law": "a result the corpus works ON becomes a topic OF the corpus. The index loses the power to flag a result exactly as that result becomes central -- which is exactly when people are most likely to re-derive it. The tool decays through success, and the decay is fastest where the risk is highest.",
     "consequence": "MAX_FILES is not a constant; it is a measurement that must be re-run as the corpus grows. This pass re-runs it."

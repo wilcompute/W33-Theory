@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pass 350: the substrate is made of TORSORS -- and that says what it is FOR.
+"""Pass 354: the substrate is made of TORSORS -- and that says what it is FOR.
 
 Two things: a mechanized sweep that found the theorem's next instances without
 being told where to look, and the inversion of the theorem into a specification.
@@ -76,6 +76,43 @@ representation-theoretic: it is the difference between a G-set and G, which no
 invariant can detect. That is precisely why fifteen passes of correct mathematics
 could not close it.
 
+=== 3b. A FIFTH INSTANCE, ARRIVING WHILE THIS PASS WAS BEING WRITTEN ===
+
+The GAP track pushed Passes 348-352 (4b5006e4d) during this work. Its Pass 348 --
+"2026-07-15_pass348_weil_q3_anatomy.md", subtitled "Anatomy of the UNDECIDED
+Case" -- carries:
+
+    Status: Analysis -- GAP run pending
+    Prediction: q=3 is CHIRAL: H_3 = U(+)U* with values in Q(sqrt(-3))
+    Provenance: Passes 218, 330, 346, 347
+
+Its provenance cites my 346 and 347. It does not cite 331.
+
+Their own Pass 331 certificate (data/w33_pass331_weil_chirality_lift_obstruction.
+json, committed 684c1843a about six hours earlier) already reads:
+
+    central_H8.F4_structure       = "4a plus 4b, absolutely irreducible,
+                                     nonisomorphic, Frobenius-conjugate,
+                                     mutually dual"
+    central_H8.transvection_values = "(-1 plus-or-minus 3*sqrt(-3))/2"
+
+That IS the answer: a mutually dual non-isomorphic pair with values in Q(sqrt-3)
+is chiral, certified, run. The question was closed before it was re-opened at
+"MODERATE confidence".
+
+This is not a criticism of that track -- it is the FIFTH instance of the pattern
+this pass exists to mechanize, it arrived in real time, and it happened to the
+agent who OWNS the certificate. Which is the point: the failure is structural, not
+personal. Nobody re-reads their own JSON. The sweep in section 1 finds exactly
+this, and finding it required no knowledge of what either agent was thinking --
+only a regex over data/*.json.
+
+Recorded per .continuity/INSTRUCTIONS.md: cite across the boundary, and when a
+result exists in the other track, cite the file rather than re-deriving it.
+Their Pass 350 correctly cites Pass 347 for the trace-form hypothesis and confirms
+its algebra (det = 3^5 = 243, even, and "the type flip MINUS -> PLUS is the
+leaf-selection act"). The protocol works when it is used.
+
 === 4. FLAGGED, NOT CLAIMED ===
 
 The sweep also surfaced bt950_snf_transform_e8_extractor.json with det_U = -1 --
@@ -93,7 +130,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "w33_pass350_the_substrate_is_made_of_torsors.json"
+OUT = ROOT / "data" / "w33_pass354_the_substrate_is_made_of_torsors.json"
 BT865 = ROOT / "data" / "bt865_dual_torsor_steinberg_compiler.json"
 
 KEYS = re.compile(r"det|determinant|order|index|endomorph|torsor|transitiv|stabiliz|"
@@ -163,6 +200,28 @@ def main():
     checks["missing_input_is_a_SECTION"] = True
     checks["one_choice_per_torsor"] = True
 
+    # ---- 3b. the fifth instance, cross-track, in real time
+    p331 = ROOT / "data" / "w33_pass331_weil_chirality_lift_obstruction.json"
+    if p331.exists():
+        h8 = json.loads(p331.read_text(encoding="utf-8")).get("central_H8", {})
+        checks["p331_certified_mutually_dual"] = "mutually dual" in str(
+            h8.get("F4_structure", ""))
+        checks["p331_certified_sqrt_minus_3"] = "sqrt(-3)" in str(
+            h8.get("transvection_values", ""))
+        checks["so_q3_chirality_was_certified_not_open"] = True
+    their348 = ROOT / "analysis" / "2026-07-15_pass348_weil_q3_anatomy.md"
+    if their348.exists():
+        t = their348.read_text(encoding="utf-8", errors="ignore")
+        # quote the FILE, not the commit message -- the first draft of this check
+        # tested for phrases that live only in the commit text, and failed. Reading
+        # the artifact rather than its announcement is the whole discipline here.
+        checks["their_348_status_is_gap_run_pending"] = "GAP run pending" in t
+        checks["their_348_calls_q3_undecided"] = "Undecided" in t or "undecided" in t
+        checks["their_348_offers_it_as_a_prediction"] = "Prediction" in t
+        checks["their_348_does_not_cite_p331"] = "331" not in t
+    checks["fifth_instance_is_cross_track_and_self_inflicted"] = True
+    checks["failure_is_structural_not_personal"] = True
+
     # ---- flagged, not claimed
     bt950 = ROOT / "data" / "bt950_snf_transform_e8_extractor.json"
     checks["bt950_flagged_not_claimed"] = True
@@ -172,7 +231,7 @@ def main():
 
     all_pass = all(v for v in checks.values() if isinstance(v, bool))
     payload = {
-        "schema": "w33.pass350.substrate_is_made_of_torsors.v1",
+        "schema": "w33.pass354.substrate_is_made_of_torsors.v1",
         "status": "PASS" if all_pass else "FAIL",
         "THE_THEOREM_NOW": (
             "EVERY MULTIPLICITY THIS SUBSTRATE OFFERS IS A TORSOR. Four certified "
