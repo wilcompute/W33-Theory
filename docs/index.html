@@ -2672,6 +2672,36 @@
               <a href="../analysis/w33_pass218_weil_shadow_split.g">Run the GAP witness</a>.
             </div>
           </div>
+          <div class="card" id="pass331-weil-chirality-lift-obstruction">
+            <div class="label">Pass 331 &mdash; q=3 Weil Chirality Exists Centrally, but Its F4 Scalar Stops at H10</div>
+            <div class="detail">GAP closes Pass 330&rsquo;s missing q=3 row. The central binary
+              <code>H8</code> is irreducible with <code>End<sub>PSp</sub>(H8)=F4</code>; over F4 it is the
+              nonisomorphic, Frobenius-conjugate, mutually dual pair <code>4a+4b</code>, with exact
+              transvection values <code>(&minus;1&plusmn;3&radic;&minus;3)/2</code>. The Pass 211 PGSp
+              controller acts by Frobenius <code>&omega;&rarr;&omega;&sup2;</code>. The complete logical
+              <code>H10=C&perp;/C</code> is instead nonsplit <code>1|8|1</code> with commutant
+              <code>F2[&epsilon;]/(&epsilon;&sup2;)</code>: no F4 scalar extends inside one H10. Independent
+              Brauer restriction selects <code>10&rarr;2&middot;1+4a+4b</code> and
+              <code>16&plusmn;&rarr;2&middot;1+4a+4b+6</code>.
+              <a href="../analysis/w33_pass331_weil_chirality_lift_obstruction.g">Run the 24-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass332-integral-h10-halfspin-realization">
+            <div class="label">Pass 332 &mdash; Three Integral H10 Lifts and the Characteristic-Zero Half-Spin Pair</div>
+            <div class="detail">The ATLAS Eisenstein <code>5a</code>, restricted to a rational
+              10-space, has a stable lattice whose mod-2 submodules have dimensions
+              <code>0,8,9,9,9,10</code>. The three invariant 9-spaces are
+              <code>P&sup1;(F2)</code>; their index-two stable preimage sublattices all reduce
+              generator-by-generator to the actual incidence <code>H10</code>, with Hom rank spectrum
+              <code>{0,1,10}</code> and an invertible simultaneous intertwiner. Eisenstein
+              <code>&omega;</code> cycles the three classes as <code>[3,1,2]</code> and fixes none.
+              Over characteristic zero, <code>5a+5a*</code> is the split SO(10) vector and its exterior
+              algebra gives the conjugate half-spins <code>1+10a+5b</code> and
+              <code>5a+10b+1</code>. Honest boundary: this is a PSp module lift, not yet a PGSp or
+              quadratic-isometric lift; no integral spinor lattice or physical chirality selection is claimed.
+              <a href="../analysis/w33_pass332_integral_halfspin_lift.g">Run the 39-check GAP witness</a>.
+            </div>
+          </div>
           <div class="card">
             <div class="label">E8 to E6 x A2 Split</div>
             <div class="detail">Each of the four W33 tetracode coordinates now gives the exact root branching
@@ -14370,6 +14400,29 @@
           explanation.
         </p>
 
+        <h3>Step 6b &mdash; The D5 Characteristic Bridge</h3>
+        <p>Passes 331&ndash;332 now separate and reconnect the three modules that earlier prose conflated.
+          The central <code>H8</code> retains an F4 Weil polarization under PSp and splits over F4 as mutually dual
+          <code>4a+4b</code>; the PGSp outer controller acts as Frobenius. The logical
+          <code>H10=C&perp;/C</code>, however, is the nonsplit <code>1|8|1</code> module with dual-number
+          commutant, so no F4 scalar acts inside one chosen H10.
+        </p>
+        <p>The obstruction is a choice of integral polarization, not absence of a characteristic-zero lift.
+          The rational restriction of the ATLAS Eisenstein <code>5a</code> has three index-two stable lattice
+          classes, indexed by <code>P&sup1;(F2)</code>, and every one reduces by an invertible
+          two-generator intertwiner to the incidence H10. Multiplication by <code>&omega;</code> is the Singer
+          3-cycle on those classes. The associated split vector <code>5a+5a*</code> then produces the standard
+          conjugate D5 half-spins <code>1+10a+5b</code> and <code>5a+10b+1</code> by even/odd exterior
+          algebra.
+        </p>
+        <div class="spotlight">
+          <p><strong>Exact boundary.</strong> The module map is PSp-equivariant, not yet PGSp-equivariant or
+            quadratic-isometric. Raw coefficient conjugation inverts <code>&omega;</code> but fails to normalize
+            the standardized 5a image, so the predicted outer
+            <code>C3&#8906;C2 &cong; S3</code> action is still an unbuilt map. No integral half-spin lattice,
+            canonical chirality, or physical generation identification is asserted.</p>
+        </div>
+
         <h3>Step 7 — The Curved 4D Bridge</h3>
         <p>The decisive current point is negative as well as positive: one fixed finite spectrum cannot by itself
           produce a genuine <code>4D</code> Weyl law or the full Einstein-Hilbert term. The coherent route is therefore
@@ -14394,7 +14447,7 @@
           product heat-trace factorization, and exact refined product densities.</p>
 
         <h3 id="selection">The Selection Principle: Why q = 3</h3>
-        <p>The most profound result: <strong>q = 3 is uniquely selected</strong> by demanding that the edge count
+        <p>One exact combinatorial selection identity is that <strong>q = 3 is uniquely selected</strong> by demanding that the edge count
           of GQ(q,q) equals the Frobenius count q<sup>5</sup> − q:</p>
         <div class="math-block">
           <span class="eq">q<sup>5</sup> − q = q(q+1)²(q²+1)/2</span><br>
@@ -14438,6 +14491,11 @@
             <td>The order equality selects q = 3; at q=3 the projective extension is W(E₆)</td>
           </tr>
         </table>
+        <p><strong>Separate conditional spinor selection.</strong> The identity above is not the new
+          characteristic bridge. The spinor argument says that the D<sub>(q&sup2;+1)/2</sub> half-spin dimension
+          equals one 16-state generation only at q=3. Pass 332 now builds the missing PSp-equivariant integral
+          H10-to-characteristic-zero module lift and the conjugate half-spin pair. Identifying one chirality with
+          a physical generation remains an explicit antecedent, not a consequence of the finite geometry.</p>
         <p><strong>Euler-characteristic shell split:</strong> <code>40 − 240 + 160 = -40 = -v</code> is the exact
           truncated-shell Euler characteristic, while the full tetrahedral clique complex <code>(40,240,160,40)</code>
           carries <code>&chi; = 40 - 240 + 160 - 40 = -80</code>. Both are exact; they refer to different chain

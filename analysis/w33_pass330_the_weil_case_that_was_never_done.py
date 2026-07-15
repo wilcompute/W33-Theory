@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Pass 330: searching first FOUND the machinery -- and the one case nobody ran.
 
+SUPERSEDED BY PASSES 331--332.  The q=3 case had in fact already been drafted
+in the uncommitted Pass 223 packet, and the new GAP witnesses recompute it from
+scratch.  At q=3, End(H8)=F4 while H8 over F4 is a pair of mutually dual Weil
+modules: End=F4 does not imply achirality.  Pass 331 separates that central
+eight from the nonsplit logical H10; Pass 332 then supplies the explicit
+characteristic-zero integral lift that this file left open.  The text below is
+retained as an audit trail, not as the current mathematical status.
+
 Pass 327 established that Selection A (Pass 225) is a Dynkin-type correspondence
 blocked by a change of characteristic: the shadow is D5(2) over F2, the generation
 is D5(C)'s complex chiral 16, and F2 has no complex structure, hence no chirality.

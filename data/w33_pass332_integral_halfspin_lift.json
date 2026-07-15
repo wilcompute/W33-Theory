@@ -1,0 +1,88 @@
+{
+  "schema": "w33.pass332.integral_halfspin_lift.gap.v1",
+  "status": "PASS",
+  "producer": "GAP 4.12.1 + AtlasRep + CTblLib + MeatAxe",
+  "headline": "integral H10 lift and characteristic-zero half-spin realization: the three index-two stable sublattices reduce exactly to H10",
+  "provenance": {
+    "Pass170": "already found the 5a+5b composition-factor match and explicitly left the extension class open",
+    "BT866": "already found the conjugate 5a+5b pair in oriented H2 and its degree-10 W(E6) fusion",
+    "new_object_here": "the invariant lattices and simultaneous invertible intertwiners closing the actual H10 extension class"
+  },
+  "integral_lift": {
+    "source": "Res_{Q(zeta3)/Q}(Atlas 5a)",
+    "group_order": 25920,
+    "base_mod2_submodule_dimensions": [ 0, 8, 9, 9, 9, 10 ],
+    "invariant_nine_spaces": 3,
+    "stable_lattice_star": "the three 9-spaces contain the unique 8-space and are the three P1(F2) lines in the 2-dimensional trivial head; zeta3 is their Singer 3-cycle",
+    "neighbor_submodule_dimensions": [ [ 0, 1, 9, 10 ], [ 0, 1, 9, 10 ], [ 0, 1, 9, 10 ] ],
+    "Hom_dimensions_to_H10": [ 2, 2, 2 ],
+    "Hom_rank_spectra": [ [ 0, 1, 10 ], [ 0, 1, 10 ], [ 0, 1, 10 ] ],
+    "intertwiner_equation": "A_i X = X H_i for both standardized Atlas generators; an invertible X exists for all three neighbors",
+    "omega_neighbor_permutation": [ 3, 1, 2 ],
+    "omega_reading": "zeta3 cyclically permutes the three lattices and stabilizes none, so an individual H10 does not inherit F4 scalars"
+  },
+  "forms": {
+    "H10_isotropic_vectors": 528,
+    "primitive_form_determinant": 62208,
+    "halved_neighbor_determinants": [ 243, 243, 243 ],
+    "isometry_verdict": "NOT BUILT: transported H10 polar forms are alternating, while the primitive halved lattice forms are odd (though nondegenerate mod 2)"
+  },
+  "halfspin": {
+    "orthogonal_vector": "5a plus 5a-dual in SO(10,Q(zeta3)), with explicit split hyperbolic form",
+    "S_plus": "Lambda^0(5a)+Lambda^2(5a)+Lambda^4(5a) = 1+10a+5b",
+    "S_minus": "Lambda^1(5a)+Lambda^3(5a)+Lambda^5(5a) = 5a+10b+1",
+    "duality": "nonisomorphic complex-conjugate 16s with an explicit nondegenerate invariant wedge pairing"
+  },
+  "outer_boundary": {
+    "raw_conjugation_generator_membership": [ true, false ],
+    "verdict": "coefficient conjugation squares to one and inverts zeta3, but does not normalize the standardized 5a image; the desired outer S3 action is not constructed here"
+  },
+  "honest_boundary": [
+    "this is a PSp(4,3)=U4(2) module lift, not yet a PGSp(4,3) outer lift",
+    "no integral half-spin lattice or Clifford-algebra lattice is constructed",
+    "Pass 170's module-lift obstruction is removed; Pass 331's F4-scalar obstruction remains on every individual H10 reduction",
+    "selecting S+ versus S- and identifying it with a physical Standard Model generation remain antecedents"
+  ],
+  "check_count": 39,
+  "checks": {
+    "Atlas_5a_anchor": true,
+    "Atlas_p40a_anchor": true,
+    "U4_2_group_order": true,
+    "scalar_restriction_is_integral_10d": true,
+    "invariant_lattice_is_unimodular": true,
+    "base_mod2_submodule_profile": true,
+    "base_mod2_composition_profile": true,
+    "exactly_three_invariant_nine_spaces": true,
+    "three_nine_spaces_are_P1_F2_head_lines": true,
+    "omega_is_integral_central_order_three": true,
+    "omega_cycles_the_three_nine_spaces": true,
+    "omega_cycles_index_two_lattices_exactly": true,
+    "raw_conjugation_inverts_omega": true,
+    "raw_conjugation_is_not_the_outer_normalizer": true,
+    "W33_line_count": true,
+    "H10_dimensions_15_25_10": true,
+    "H10_image_order": true,
+    "H10_uniserial_profile": true,
+    "H10_plus_type_quadratic_space": true,
+    "neighbor_indices_are_two": true,
+    "neighbor_actions_are_integral": true,
+    "all_neighbors_are_uniserial_1_8_1": true,
+    "all_neighbor_factors_are_1_1_8": true,
+    "all_Hom_spaces_have_dimension_two": true,
+    "all_Hom_rank_spectra_are_0_1_10": true,
+    "all_neighbors_are_generator_level_H10": true,
+    "transported_H10_polar_forms_are_exact": true,
+    "primitive_rational_form_is_symmetric_invariant": true,
+    "neighbor_forms_are_even_as_bilinear_matrices": true,
+    "halved_neighbor_forms_have_determinant_3_to_5": true,
+    "halved_neighbor_forms_are_odd_unimodular_mod2": true,
+    "module_lift_is_not_lattice_form_isometry": true,
+    "five_a_generators_have_determinant_one": true,
+    "vector_5_plus_dual_is_exact_SO10": true,
+    "halfspin_dimensions_and_image_orders": true,
+    "halfspin_wedge_pairing_is_nondegenerate_invariant": true,
+    "exterior_power_character_chain_is_1_5_10_10_5_1": true,
+    "halfspin_character_decompositions_exact": true,
+    "halfspins_are_conjugate_and_nonisomorphic": true
+  }
+}

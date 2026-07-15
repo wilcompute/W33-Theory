@@ -104,6 +104,7 @@
 \newcommand{\PG}{\mathrm{PG}}
 \newcommand{\Sp}{\mathrm{Sp}}
 \newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\PGSp}{\mathrm{PGSp}}
 \newcommand{\SU}{\mathrm{SU}}
 \newcommand{\SO}{\mathrm{SO}}
 \newcommand{\Aut}{\mathrm{Aut}}
@@ -252,8 +253,11 @@ $q=3$); Pass 227 assumes the magic resource must be an exceptional-group cubic
 ($\operatorname{rank}\le8$ then holds only at $q=3$) --- the QEC literature
 requires no such thing, restoring universality with \emph{any} magic state. The
 two assumptions differ, so the independence is real. The honest thesis is: \emph{if}
-these identifications hold, $q=3$ is doubly forced. Also ours: $d\le q+1$
-(Pass 229) and the forced-field ladder $\mathbf Q(\sqrt6)$ (Pass 298).
+these identifications hold, $q=3$ is doubly forced. Also repo-specific are the
+bound $d\le q+1$ (Pass 229) and Pass 332's explicit three-lattice lift of the
+incidence $H_{10}$, with the standard ATLAS and exterior-algebra ingredients
+cited. Attribution correction: $\mathbf Q(\sqrt6)$ predates Pass 298 in the May
+18 and July 10 repo tracks; Pass 298 is a later forcing route, not ownership.
 
 \smallskip
 \textbf{What fell:} every \emph{metric} or \emph{basis-dependent} geometric claim
@@ -11151,10 +11155,13 @@ $\{1,1,4,\bar4\}$. The decomposition matrix (GAP, CTblLib) shows that the
 two degree-$5$ ordinary irreducibles --- which appear
 in \emph{none} of the nine permutation carriers of Pass~163 --- reduce mod
 $2$ as $1+4$ and $1+\bar4$, so $5\oplus\bar 5$ reduces with exactly
-$H_{10}$'s composition-factor multiset.  This does \emph{not} determine
+$H_{10}$'s composition-factor multiset.  This did \emph{not} determine
 the uniserial extension class of $H_{10}$ or prove a modular-module
-isomorphism; an explicit module map or extension calculation remains
-necessary.  The kinematic degree-$10$s instead reduce as $4+6$ and
+isomorphism; an explicit module map or extension calculation was still
+necessary.  \emph{[Closed by Pass 332: the three invariant index-two stable
+sublattices of the rational restriction of the ATLAS $5_a$ each reduce to the
+actual incidence $H_{10}$ through an invertible simultaneous intertwiner for
+both standard generators.]}  The kinematic degree-$10$s instead reduce as $4+6$ and
 $\bar4+6$.
 (Witness: \texttt{analysis/w33\_pass170\_modular\_shadow\_brauer.py},
 GAP-assisted.)
@@ -12344,9 +12351,9 @@ $(q+1)(q^2+1)$ totally isotropic lines) and computed, exactly:
 
 \begin{center}
 \begin{tabular}{c|ccccc}
-$q$ & $n=(q{+}1)(q^2{+}1)$ & $\dim C$ & $\dim C^{\perp}$ & $k_{\mathrm{CSS}}=n-2\dim C^{\perp}$ & $q^2+1$ \ \hline
-$3$ & $40$  & $25$  & $15$  & $10$ & $10$ \
-$5$ & $156$ & $91$  & $65$  & $26$ & $26$ \
+$q$ & $n=(q{+}1)(q^2{+}1)$ & $\dim C$ & $\dim C^{\perp}$ & $k_{\mathrm{CSS}}=n-2\dim C^{\perp}$ & $q^2+1$ \\ \hline
+$3$ & $40$  & $25$  & $15$  & $10$ & $10$ \\
+$5$ & $156$ & $91$  & $65$  & $26$ & $26$ \\
 $7$ & $400$ & $225$ & $175$ & $50$ & $50$
 \end{tabular}
 \end{center}
@@ -12389,14 +12396,25 @@ statement, with $q=3$ singled out on independent grounds and the whole family
 identified as an explicit quantum code.
 
 \paragraph{Pass 225 --- spinor selection.} The CSS register transforms as the
-\emph{vector} $q^2+1$ of the shadow group $\mathrm{SO}(q^2+1,2)$; its half-spinor
+\emph{vector} $q^2+1$ of the shadow group $\mathrm{SO}(q^2+1,2)$; the associated
+characteristic-zero $D_{(q^2+1)/2}$ half-spinor
 has dimension $2^{(q^2-1)/2}$ (the exponent is half the E$_8$ central layer
 $q^2-1$). For odd $q$, $q^2+1\equiv 2\pmod 8$, so the half-spinor is complex
-(chiral) at \emph{every} rung, but it equals a single Standard-Model generation
+(chiral) at \emph{every} characteristic-zero rung, but it equals a single Standard-Model generation
 $16=\mathbf{16}$ of $\mathrm{SO}(10)$ at exactly one rung: the integer equation
 $2^{(q^2-1)/2}=16$ has the unique odd solution $q=3$. Rungs $q=5,7$ give
 spinors $4096,\,16{,}777{,}216$ with no one-generation reading. This selects
 $q=3$ (our $\mathrm{SO}(10)$) from the family on representation dimensions alone.
+
+\emph{[Forward correction (Passes 331--332).} The binary central $H_8$ has
+$\operatorname{End}_{\PSp}(H_8)=\mathbf F_4$ and splits over $\mathbf F_4$ as a
+mutually dual $4_a+4_b$ pair, but the logical $H_{10}=C^\perp/C$ is the nonsplit
+$1|8|1$ module with dual-number commutant, so that scalar does not extend inside
+one $H_{10}$. Pass 332 nevertheless constructs the required characteristic-zero
+module lift: three index-two stable integral sublattices reduce
+generator-by-generator to $H_{10}$, and the associated exterior algebra gives
+the conjugate half-spins $1+10_a+5_b$ and $5_a+10_b+1$. The module bridge is
+built; choosing a physical chirality remains conditional.]
 
 \paragraph{Pass 227 --- \textnormal{[RESTATED --- this is an elegance argument,
 not a selection.]}} Every rung is Eastin--Knill
@@ -12432,24 +12450,26 @@ closed form $d_{\text{sentinel}}=2(q+1)$ (and $d\equiv 0\bmod 4$ by
 double-evenness). This is the \emph{stabiliser} weight (check locality), distinct
 from the code distance below.
 
-\paragraph{Pass 228 --- the exact enumerator.} The complete weight enumerator of
-the $q=3$ sentinel $[40,15,8]$ was computed exactly: doubly-even, with $A_8=45$
+\paragraph{Pass 228 --- \textnormal{[REDISCOVERY / INDEPENDENT REVERIFICATION]}
+the exact enumerator.} The complete weight enumerator of
+the $q=3$ sentinel $[40,15,8]$ was already present in
+\texttt{analysis/2026-07-10\_levi\_next5\_v2.md} (and earlier in this manuscript's
+Pass 159/167 material). Pass 228 recomputed it exactly: doubly-even, with $A_8=45$
 minimum-weight words. MacWilliams reconstructs the context $[40,25,4]$ enumerator
 from the sentinel alone, with $B_4=40$ = the $40$ isotropic lines (matching
 Pass 168) and $\sum B_k=2^{25}$; the dual pair's enumerators are locked together.
 
-\paragraph{Pass 229 --- the CSS family.} The incidence code $C$ has minimum weight
-$q+1$, realised by the isotropic lines; each line lies in $C$ but not in the
-doubly-even sentinel $C^{\perp}$, hence is a weight-$(q{+}1)$ logical operator, so
-the CSS distance is $q+1$. Combined with $k=q^2+1$ (Pass 224) this gives the
-parametric quantum code family
+\paragraph{Pass 229 --- the CSS upper-bound family.} Each isotropic line lies in
+$C$ but not in the doubly-even sentinel $C^{\perp}$, hence supplies a
+weight-$(q{+}1)$ logical operator. This proves $d\le q+1$; equality is established
+only at $q=3$. Combined with $k=q^2+1$ (already proved in the July 10 repo track),
+the honest parametric statement is
 \[
-   \big[\!\big[\,(q+1)(q^2+1),\ q^2+1,\ q+1\,\big]\!\big],
+   \big[\!\big[\,(q+1)(q^2+1),\ q^2+1,\ \le q+1\,\big]\!\big],
 \]
-whose members are $[[40,10,4]]$ (the committed register), $[[156,26,6]]$,
-$[[400,50,8]]$: logical capacity grows quadratically while distance grows
-linearly---a low-rate, geometrically rigid quantum memory keyed to the quadrangle
-order $q$, with the physical Standard-Model rung sitting at the smallest odd $q$.
+with the committed $[[40,10,4]]$ register as the one exact-distance anchor. The
+previously printed $[[156,26,6]]$ and $[[400,50,8]]$ distances were upper bounds,
+not proved equalities.
 
 
 \section{Deep Dive: magic is mass, three generations, the even-$q$ sister, the modular lattice, and the photonic device (Passes 230--234)}
@@ -12618,7 +12638,7 @@ generating $10,50,298,1890,12250$. Since the particular solution is $a^\ast=1$
 and the constants come out $A=B=1$, this collapses to the clean identity
 \[
    \boxed{\ \operatorname{rank}_2 W(3,2^t) \;=\; \lambda_+^t+\lambda_-^t+1
-   \;=\; \operatorname{Tr}(B^t)+1,\qquad B=\begin{pmatrix}4&2\2&5\end{pmatrix}\ }
+   \;=\; \operatorname{Tr}(B^t)+1,\qquad B=\begin{pmatrix}4&2\\2&5\end{pmatrix}\ }
 \]
 with $\lambda_\pm=(9\pm\sqrt{17})/2$ --- the trace of the Sastry--Sin transfer
 matrix plus one, equivalently the Lucas sequence $V_t(9,16)+1$. Two
@@ -12956,5 +12976,130 @@ representation-theoretic side, across ${\sim}12$ load-bearing claims. This is
 structural rather than luck: a rank, an eigenvalue multiplicity, an invariant
 factor and a branching rule are basis-free by construction, whereas a polyhedron
 arrives with a drawing and a matrix arrives with a basis.
+
+
+\section{The Selection-Layer Characteristic Bridge (Passes 331--332)}
+
+This section supersedes Pass 330's statement that the $q=3$ Weil case had never
+been computed, and it closes the explicit module-map question left open in
+Pass 170. The complete reproducible synthesis is
+\texttt{PASS331\_332\_WEIL\_INTEGRAL\_CHIRALITY\_BRIDGE.md}.
+
+\paragraph{Ownership before the new computation.}
+Pass 170 already proved from the $2$-modular decomposition matrix that the
+ordinary Eisenstein pair $5_a+5_b$ has the composition factors
+$1,1,4_a,4_b$ of the logical module $H_{10}=C^\perp/C$, but explicitly did not
+identify its uniserial extension class. BT866 already proved that $5_a$ and
+$5_b$ are Eisenstein conjugates and fuse to a degree-$10$ character under
+$U_4(2).2$. The ATLAS construction of $5_a$ over $\ZZ[\omega]$ and the standard
+exterior-algebra model of the $D_5$ half-spins are borrowed. What Pass 332 adds
+is the stable-lattice switch and the invertible generator-level intertwiner to
+the actual incidence module.
+
+\paragraph{Pass 331 --- two different commutants.}
+For the central shadow $H_8=\ker(A_2)/\operatorname{im}(A_2)$, GAP computes
+\[
+ \operatorname{End}_{\PSp(4,3)}(H_8)\cong\FF_4,
+ \qquad
+ H_8\otimes_{\FF_2}\FF_4=4_a\oplus4_b,
+ \qquad 4_b\cong4_a^*.
+\]
+The two factors are absolutely irreducible, nonisomorphic, Frobenius-conjugate
+and mutually dual, with transvection values
+\[
+ \frac{-1\pm3\sqrt{-3}}2.
+\]
+Thus an $\FF_4$ endomorphism field does \emph{not} imply achirality. The Pass 211
+outer controller acts by exact Frobenius conjugation
+\[
+ t^{-1}\omega t=\omega^2=\omega+1,
+ \qquad
+ \operatorname{End}_{\mathrm{PGSp}(4,3)}(H_8)=\FF_2.
+\]
+By contrast, the full logical module is nonsplit:
+\[
+ H_{10}:1|8|1,
+ \qquad
+ \operatorname{End}_{\PSp}(H_{10})
+ =\operatorname{End}_{\mathrm{PGSp}}(H_{10})
+ \cong\FF_2[\varepsilon]/(\varepsilon^2).
+\]
+Here $\varepsilon$ has rank one, image the unique socle and kernel the unique
+$9$-dimensional radical. There is no commuting root of $x^2+x+1$, so the central
+$\FF_4$ scalar cannot extend inside a chosen $H_{10}$.
+
+\paragraph{Pass 332 --- three stable integral lifts.}
+Let $K=\QQ(\omega)$ and take the standardized ATLAS $5_a$ over $K$. After
+restriction of scalars to $\QQ$, GAP constructs a $U_4(2)$-stable integral
+lattice $L$. Its reduction $M=L/2L$ has submodule dimensions
+\[
+ 0,8,9,9,9,10
+\]
+and composition profile $8+1+1$. Hence the three invariant $9$-spaces are the
+three projective lines of the two-dimensional trivial head:
+\[
+ 0\longrightarrow H_8\longrightarrow M\longrightarrow\FF_2^2
+ \longrightarrow0,
+ \qquad \{U_i/H_8\}=\PG(1,2).
+\]
+Define the index-two stable preimage sublattices
+\[
+ L_i=\{x\in L:x\bmod2L\in U_i\},\qquad i=1,2,3.
+\]
+For each $i$, the simultaneous Hom space from $L_i/2L_i$ to the independently
+reconstructed incidence $H_{10}$ has dimension two and rank spectrum
+$\{0,1,10\}$. Therefore an invertible $X_i$ exists with
+\[
+ A_{i,j}X_i=X_iH_j\quad(j=1,2),
+ \qquad
+ \boxed{L_i/2L_i\cong H_{10}}.
+\]
+This closes precisely Pass 170's missing extension-class/module-map theorem.
+The tilted structure is explained by
+\[
+ 0\to H_8\to U_i\to1\to0,
+ \qquad
+ 0\to2L/2L_i\cong1\to L_i/2L_i\to U_i\to0,
+\]
+which assemble to $1|8|1$.
+
+\paragraph{The Eisenstein scalar acts on the polarization torsor.}
+Multiplication by $\omega$ is integral on $L$, centralizes $U_4(2)$, and cycles
+the three stable lattice classes as
+\[
+ (U_1,U_2,U_3)\longmapsto(U_3,U_1,U_2).
+\]
+It fixes no individual class. The resolution of the apparent contradiction is
+therefore arithmetic: the characteristic-zero family retains the Eisenstein
+scalar across the three-leaf $\PG(1,2)$ star, whereas choosing one leaf produces
+an $H_{10}$ with only the dual-number commutant. Chirality is a torsor of
+integral polarizations, not an endomorphism of one binary polarization.
+
+An outer involution compatible with $t^{-1}\omega t=\omega^{-1}$ would reflect
+the $3$-cycle and generate $C_3\rtimes C_2\cong S_3$, not $C_6$. Raw coefficient
+conjugation does invert $\omega$, but GAP proves that it does not normalize the
+standardized $5_a$ image. The outer $S_3$ lift remains a named open map.
+
+\paragraph{Characteristic-zero half-spins.}
+Over $K$ the checked split orthogonal vector is $5_a\oplus5_a^*$, and the
+exterior actions are
+\[
+ S^+=\Lambda^{\mathrm{even}}5_a=1+10_a+5_b,
+ \qquad
+ S^-=\Lambda^{\mathrm{odd}}5_a=5_a+10_b+1.
+\]
+Both have image order $25920$; they are nonisomorphic complex conjugates and
+carry a nondegenerate invariant wedge pairing. This builds the characteristic-
+zero $D_5$ module bridge. It does not select $S^+$ over $S^-$ or identify either
+with a physical Standard-Model generation.
+
+\paragraph{Form and equivariance boundary.}
+The transported $H_{10}$ polar form is alternating of plus type with $528$
+isotropic vectors. The primitive rational lattice form has determinant $62208$;
+after the index-two switch and halving, each integral form is odd modulo two and
+has determinant $243=3^5$. Thus the certified map is a module isomorphism, not a
+quadratic-isometric lattice lift. No integral half-spin lattice is constructed,
+and the lift is presently $\PSp(4,3)$-equivariant rather than
+$\mathrm{PGSp}(4,3)$-equivariant.
 
 \end{document}

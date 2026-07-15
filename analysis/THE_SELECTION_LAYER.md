@@ -10,13 +10,15 @@ contradicts, including `W33_HONEST_SYNTHESIS.md`'s "two theorems that stand".*
 
 ## 0. The one-paragraph version
 
-The W(3,3) programme's mathematical results are **not ours**. The incidence rank
-law is published (Sastry–Sin; Chandler–Sin–Xiang) *and* was already proved in this
-repository before the passes that re-derived it. The `[[40,10,4]]` CSS code and its
-sentinel were already documented here, with a *stronger* structure theorem than we
-produced. What is ours is one thing, and it is not a theorem: **an argument that
-q=3 is forced rather than assumed.** It rests on two independent identifications,
-both of which we can now state exactly — including exactly what blocks each.
+The incidence-rank and CSS headlines are **not ours**. The rank law is published
+(Sastry–Sin; Chandler–Sin–Xiang) *and* was already proved in this repository
+before the passes that re-derived it. The `[[40,10,4]]` CSS code, sentinel, and
+exact sentinel enumerator were also present before the passes that reclaimed
+them. What survives is the **selection argument** that q=3 is forced rather than
+assumed, plus one exact object-level result produced while auditing that argument:
+Pass 332 closes Pass 170's explicit module-map gap by lifting the incidence
+`H10=Cperp/C` through three integral Eisenstein lattice classes. The selection
+remains conditional as physics; the characteristic bridge is now a theorem.
 
 ---
 
@@ -30,6 +32,7 @@ both of which we can now state exactly — including exactly what blocks each.
 | `rank_p`, defining characteristic; `det(B_p)` | **Chandler–Sin–Xiang** | *J. Algebra* **323** (2010) 3157–3181; [math/0603100](https://arxiv.org/abs/math/0603100), Thm 1.1 |
 | `[[40,10,4]]`, `[40,15,8]` | **this repo, Passes 187/189** | `docs/index.html` (pre-Pass-224) |
 | `F₂⁴⁰` uniserial `1\|14\|1\|8\|1\|14\|1`, `C⊥/C` forced | **Passes 187/189** | same — *stronger than ours* |
+| exact `[40,15,8]` weight enumerator | **this repo, 2026-07-10** | `analysis/2026-07-10_levi_next5_v2.md`; Pass 228 is re-verification |
 | 16/generation, three generations | **this repo** | `docs/index.html`, via trinification |
 | Eastin–Knill; magic-state distillation | **standard QEC** | Eastin & Knill 2009 |
 
@@ -61,25 +64,32 @@ Setting that equal to **16** — one Standard Model generation, empirically 16 W
 fermions including ν_R — has the **unique odd solution q=3** (q=5 → 4096, q=7 →
 16.7M).
 
-**Status: a Dynkin-type correspondence, blocked by characteristic.** This is
+**Status: a Dynkin-type correspondence with its module lift now built.** This is
 *not* a numerical coincidence — Pass 327 checked for the disease that killed the
 "42" claim and it is absent. The shadow exponent `(q²−1)/2` and the D_n
 half-spinor exponent `(q²+1)/2 − 1` (with `2n = q²+1`) are **identically equal as
 polynomials**. Both 16s are the half-spinor of Dynkin type `D_{(q²+1)/2}`, which
 at q=3 is **D5 on both sides**. The type genuinely matches.
 
-**What blocks it:** the shadow is `D5(2) = Ω⁺(10,2)` over **F₂**; the GUT is
-`D5(ℂ) = Spin(10)`, and a generation is its **complex chiral** 16.
+Pass 331 first separates the objects that earlier prose conflated. The central
+binary `H8` has `End_PSp(H8)=F4` and splits over F4 as the nonisomorphic,
+Frobenius-conjugate, **mutually dual** Weil pair `4a+4b`; the PGSp outer controller
+acts by `omega -> omega²`. But `H8` is not the D5 vector module. The logical
+`H10=Cperp/C` is the nonsplit `1|8|1` module with
+`End(H10)=F2[epsilon]/(epsilon²)`, so no F4 scalar extends inside one `H10`.
 
-> **F₂ has no complex structure, so the F₂ half-spinor has no chirality** — and
-> chirality is the entire physical content of "a generation". The F₂ object has
-> the right dimension and the right Dynkin type and *cannot* have the property
-> that matters.
+Pass 332 then closes the different question Pass 170 actually left open. Starting
+from the ATLAS Eisenstein `5a`, it constructs three index-two stable integral
+sublattices whose reductions are each generator-by-generator isomorphic to the
+incidence `H10`. Over characteristic zero the vector is `5a+5a*`, and its exterior
+algebra gives the two conjugate half-spins
+`S+=1+10a+5b` and `S-=5a+10b+1`.
 
-The identification is therefore neither coincidence nor derivation, but a **change
-of characteristic**. To close it you must supply a complex structure — a Weil
-representation over ℂ, or a lift of `Ω⁺(10,2)` to a complex form. **That is the
-sharpest open question this programme has.**
+**What still blocks the physical conclusion:** the lift is PSp-equivariant but
+not yet PGSp-equivariant or quadratic-isometric; no integral spinor lattice is
+built; and nothing canonically selects `S+` over `S-` or proves that either is a
+physical Standard-Model generation. The change-of-characteristic map is now an
+object. The physical identification remains an antecedent.
 
 ### 2.3 Selection B (Pass 227) — the exceptional rank
 
@@ -98,14 +108,21 @@ rung is computationally universal.** What 227 actually establishes:
 
 That is self-containment, not computability, and it should be written that way.
 
-### 2.4 Also ours
+### 2.4 Repo-specific results, with ownership scoped
 
 - **`d ≤ q+1`** (Pass 229) — the CSS distance upper bound. The *equality* is
   proved only at q=3, where the code was already known. The honest family is
   **`[[(q+1)(q²+1), q²+1, ≤q+1]]`**, and `k·d = n` is a **tautology** (n is
   *defined* as `(q+1)(q²+1)`).
-- **`Q(√6)`** (Pass 298) — the substrate's forced field. Survives the
-  forced/chosen test.
+- **The three-lattice `H10` lift** (Pass 332) — closes the module isomorphism
+  explicitly left open in Pass 170. The ATLAS Eisenstein representation and the
+  exterior-algebra half-spin construction are standard; the stable-lattice switch
+  and simultaneous intertwiners are the repo contribution.
+
+**Attribution correction:** `Q(√6)` is not first ours at Pass 298. It appears
+explicitly in `analysis/2026-05-18_chiral_horizon_discriminant_bridge.md` and
+spectrally in `analysis/2026-07-10_levi_duality_defect.md`. Pass 298 is a later
+forcing route/repackaging, not ownership of the field.
 
 ---
 
@@ -115,9 +132,10 @@ That is self-containment, not computability, and it should be written that way.
 > magic resource must be geometric, **then** q=3 is doubly forced — by two
 > independent arguments resting on different assumptions.
 
-Selection A's antecedent is a real Dynkin-type correspondence with one named
-obstruction (chirality). Selection B's antecedent is a preference. **They are not
-of equal strength. A is worth pursuing; B should be restated.**
+Selection A now has a real Dynkin-type correspondence and an explicit integral
+module lift to the characteristic-zero vector and associated half-spin pair. Its
+remaining antecedent is the physical identification and chirality choice.
+Selection B's antecedent is a preference. **They are not of equal strength.**
 
 ---
 
@@ -128,8 +146,8 @@ multi-hour jobs computing a published closed form, and **four** measurements tha
 were uninformative by construction (Pass 287 the trace law, 319 the δ table, 323
 `k·d=n`, 328 the guard's 97% flag rate — the last caught *before* shipping).
 
-Against that: two conditional selections, one distance bound, one field ladder —
-and the method: the five failure modes (`.continuity/INSTRUCTIONS.md`),
+Against that: two conditional selections, one distance bound, and now one exact
+integral module lift — plus the method: the five failure modes (`.continuity/INSTRUCTIONS.md`),
 `RESULTS_INDEX.md`, and a calibrated pre-commit guard. **Measured duplication rate:
 21% of pass files assert a code parameter that already exists uncited** (Pass 328).
 
@@ -144,48 +162,55 @@ failed twice, the method is plausibly the more durable output.
 The selection layer is a **paper-sized result, not a Theory-of-Everything-sized
 one**, and it is honest at that size.
 
-### 5.1 The one open computation that decides it (Pass 330)
+### 5.1 Pass 331 closes the q=3 computation
 
-**Do not build a complex structure — one already exists on this tower, and the
-deciding case was simply never run.**
+Pass 330 is superseded: the q=3 case had already been drafted in the uncommitted
+Pass 223 packet, and Pass 331 recomputes it independently. The exact Weil table is:
 
-`PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` (the other track,
-GAP-verified) builds the **characteristic-two Weil structure of the shadow at
-exactly Selection A's degree `(q²−1)/2`**, citing
-[Szechtman](https://arxiv.org/abs/math/0212378). And it splits by character field:
+| q | transvection values | binary descent | duality over a splitting field |
+|---|---|---|---|
+| 3 | `(−1±3√−3)/2` | one irreducible F2 8 with `End=F4` | nonisomorphic mutually dual `4a+4b` |
+| 5 | `(−1±5√5)/2` | one irreducible F2 24 with `End=F4` | Frobenius-conjugate self-dual `12a+12b` |
+| 7 | `(−1±7√−7)/2` | split F2 `24+24` | nonisomorphic mutually dual pair |
 
-| q | transvection values | field | module | chirality |
-|---|---|---|---|---|
-| 5 | `(−1±5√5)/2` | `Q(√5)` — **real** | `12a+12b` over F₄, self-dual | achiral |
-| 7 | `(−1±7√−7)/2` | `Q(√−7)` — **complex** | `H₇ = U ⊕ U*`, non-isomorphic duals | **chiral** |
-| **3** | **never computed** | ? | ? | **?** |
+The conclusion is not a q5/q7 binary choice. **Mod 8 controls descent; mod 4
+controls duality.** In particular, `End=F4` is compatible with a mutually dual
+pair at q=3. The outer PGSp controller acts as F4 Frobenius on `H8`, while the
+full logical `H10` has only the dual-number commutant.
 
-A complex character field gives a dual pair `U ⊕ U*` — **that is chirality,
-intrinsically, in characteristic two.** So Pass 327's "F₂ has no complex
-structure" is too strong as a blanket claim: the structure exists at q=7. The
-question is which side **q=3** is on, and the two indicators **conflict**:
+### 5.2 Pass 332 closes the module-lift gap
 
-- **By congruence** q=3 resembles q=7 (Gauss sum: `q ≡ 3 mod 4 → √−q`, complex → **chiral**).
-- **By endomorphism field** q=3 resembles q=5 (`End(central 8) = F₄`, per Passes 187/189 → **achiral**).
+For the rational restriction of the ATLAS Eisenstein `5a`, GAP finds a stable
+lattice `L` whose mod-2 submodule dimensions are `0,8,9,9,9,10`. The three
+9-spaces are the three lines of the trivial two-dimensional head
+`P1(F2)`. Their index-two preimage sublattices `L1,L2,L3` satisfy
 
-Nothing in the q=5,7 data settles it — the two-point trap again (Pass 314; Pass 324
-confirmed `det(B_p)` flips sign between p=5 and p=7, invisible from two points).
+> `Li/2Li ~= H10` for all three `i`, by an invertible simultaneous intertwiner
+> for both standardized generators.
 
-> **The deciding run:** `gap -q analysis/w33_pass218_weil_shadow_split.g` at **q=3**.
-> **Chiral** → Selection A's obstruction is removed and it becomes the strongest
-> result the programme has. **Achiral** → Selection A is conditional forever.
-> Either way it closes. *(GAP is not installed in the Claude track; this is handed
-> to the GAP-owning track.)*
+Multiplication by `omega` cycles the three lattice classes as `[3,1,2]` and fixes
+none. This is why the characteristic-zero family retains its Eisenstein scalar
+while a chosen binary `H10` does not: the scalar acts on the **torsor of three
+integral polarizations**, not inside one polarization.
 
-### 5.2 The freeze
+The same characteristic-zero module gives the split vector `5a+5a*` and the
+standard exterior half-spins `1+10a+5b` and `5a+10b+1`. That is the explicit
+change-of-characteristic object Pass 170 requested.
 
-**Pending that one run, this arc is frozen.** The yield over passes 224–330 is two
-conditional selections — one now demoted to elegance (§2.3) — one distance bound,
-and one field ladder, against ~19 passes of rediscovery and four
-uninformative-by-construction measurements. Duplication is **~20% across both
-tracks** (Pass 330), so more passes at this rate have arguably negative expected
-value.
+### 5.3 The live boundary
 
-The remaining mathematics is **one GAP run**, not a hundred passes. Everything else
-here is bookkeeping on other people's theorems — and that is a result too, arrived
-at honestly.
+The mathematical bridge is built at the PSp module level. Five boundaries remain:
+
+1. The lift is not yet extended to the PGSp outer controller.
+2. Raw coefficient conjugation inverts `omega` but does not normalize the chosen
+   ATLAS image; the predicted outer `S3`, rather than `C6`, remains unbuilt.
+3. The module intertwiner is not a quadratic isometry: the transported H10 form
+   is alternating, while the halved integral lattice form is odd of determinant
+   `3^5`.
+4. No integral Clifford or half-spin lattice is constructed.
+5. Neither chirality is canonically selected or identified with a physical
+   Standard-Model generation.
+
+Those are named maps and falsifiable algebraic questions. More rank-law or code-
+parameter passes would return to the rediscovery failure this document was written
+to stop.
