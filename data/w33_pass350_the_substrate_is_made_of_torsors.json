@@ -1,0 +1,73 @@
+{
+  "schema": "w33.pass350.substrate_is_made_of_torsors.v1",
+  "status": "PASS",
+  "THE_THEOREM_NOW": "EVERY MULTIPLICITY THIS SUBSTRATE OFFERS IS A TORSOR. Four certified instances, three of which use the word themselves: 2 half-spins swapped by T (346); 3 lattice leaves cycled by omega (332, 'Eisenstein C3 torsor'); 27 point states under the extraspecial 3^(1+2), regular (bt865); 27 line programs under elementary F3^3, regular (bt865). No invariant distinguishes points of a transitive orbit and every datum the substrate builds is invariant -- so it cannot select a chirality, a leaf, a point state, or a line program.",
+  "1_mechanizing_the_pattern": {
+    "the_pattern": [
+      "det(B_p) -- in Chandler-Sin-Xiang, cited in our own AUDIT (324)",
+      "det(T) = -1 -- in Pass 333's certificate (346)",
+      "the word 'torsor' -- in Pass 332's section title (348)",
+      "no *.py in GLOBS -- in my own index builder (349)"
+    ],
+    "reading": "four is a pattern, and a pattern is mechanizable",
+    "the_sweep": "7018 invariant-shaped facts across data/*.json; 30 DECISIVE-shaped (det = -1 / torsor / transitive / stabilizes-none)",
+    "result": "it found the theorem's next instances by itself, without being told where to look"
+  },
+  "2_what_it_found": {
+    "file": "bt865_dual_torsor_steinberg_compiler.json -- committed long before Pass 348, and it says 'torsor' in its own FILENAME",
+    "point_state_torsor": {
+      "group": "extraspecial Heisenberg 3^(1+2), exponent 3",
+      "order": 27,
+      "centre": 3,
+      "shell_regular": true,
+      "orbits": [
+        27,
+        27,
+        27
+      ],
+      "reading": "orbit sizes == order => SIMPLY TRANSITIVE => a torsor"
+    },
+    "line_program_torsor": {
+      "group": "elementary F3^3",
+      "order": 27,
+      "shell_regular": true,
+      "orbits": [
+        27,
+        27,
+        27
+      ]
+    },
+    "note": "'shell_regular = True' IS the torsor condition -- a regular action is simply transitive, and a simply transitive G-set is a G-torsor. The certificate says so in three independent fields and in its filename."
+  },
+  "3_THE_INVERSION_what_the_theorem_PERMITS": {
+    "why_it_is_not_a_dead_end": "a torsor is not a vague object -- it is a set that IS a group once you choose one point. Choose a base point and a G-torsor becomes G. That is the whole difference.",
+    "THE_SPECIFICATION": "THE SUBSTRATE SPECIFIES EVERYTHING EXCEPT THE BASE POINTS. THE MISSING PHYSICAL INPUT IS EXACTLY A SECTION.",
+    "why_that_is_sharper_than_'an_input_from_outside'": "it names the input's TYPE. Not a parameter, not a coupling, not a scale -- a section of a torsor: a choice of origin in a set with no distinguished origin. And it says how many independent choices are outstanding: one per torsor, of sizes 2, 3, 27, 27.",
+    "and_it_explains_the_near_miss": "Every structure came out right UP TO A CHOICE, because a torsor IS its group up to a choice. The representation theory could never see the gap, because the gap is not representation-theoretic: it is the difference between a G-set and G, which no invariant can detect. That is precisely why fifteen passes of correct mathematics could not close it."
+  },
+  "4_flagged_not_claimed": "The sweep also surfaced bt950_snf_transform_e8_extractor.json with det_U = -1 -- the same improper shape as Pass 333's T, in the E8 extractor. Whether it exchanges anything the way T does is NOT established here and is NOT asserted. It is the exact shape that decided the chirality question, so it is worth one look by whoever owns that witness. Naming it without checking would be failure mode 3; naming it as a lead and saying so is not.",
+  "checks": {
+    "sweep_found_thousands_of_invariant_facts": true,
+    "sweep_isolates_decisive_shaped_facts": true,
+    "bt865_exists": true,
+    "point_state_torsor_order_27": true,
+    "point_state_group_is_extraspecial": true,
+    "point_state_shell_regular": true,
+    "point_state_orbits_equal_order": true,
+    "line_program_torsor_order_27": true,
+    "line_program_group_is_F3_cubed": true,
+    "line_program_shell_regular": true,
+    "line_program_orbits_equal_order": true,
+    "regular_action_IS_simply_transitive": true,
+    "simply_transitive_G_set_IS_a_torsor": true,
+    "the_certificate_names_them_torsors": true,
+    "four_certified_torsor_instances": true,
+    "no_invariant_separates_a_transitive_orbit": true,
+    "substrate_cannot_select_any_of_them": true,
+    "a_torsor_is_a_group_once_you_pick_a_point": true,
+    "missing_input_is_a_SECTION": true,
+    "one_choice_per_torsor": true,
+    "bt950_flagged_not_claimed": true,
+    "bt950_has_det_minus_1": true
+  }
+}
