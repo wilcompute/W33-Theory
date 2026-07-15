@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass253.proton_decay.v1",
+  "status": "PASS",
+  "derived_group_theory": {
+    "SO10_adjoint_45": {
+      "24": 24,
+      "10": 10,
+      "10bar": 10,
+      "1": 1
+    },
+    "SO10_spinor_16": {
+      "10": 10,
+      "5bar": 5,
+      "1": 1
+    },
+    "SU5_adjoint_24_to_SM": {
+      "(8,1) gluons": 8,
+      "(1,3) W": 3,
+      "(1,1) B": 1,
+      "(3,2) X,Y": 6,
+      "(3bar,2) Xbar,Ybar": 6
+    },
+    "leptoquark_count": 12,
+    "dominant_channel": "p -> e+ pi0 (gauge-mediated, dim-6 qqql)",
+    "why_16_not_15": "the SU(5) singlet in 16 is the right-handed neutrino -- SO(10) unifies a full generation plus nu_R (Pass 225)"
+  },
+  "lifetime": {
+    "scaling": "tau ~ M_X^4 / (alpha_GUT^2 m_p^5)",
+    "alpha_GUT_used": 0.04,
+    "benchmark": "M_X = 1e16 GeV -> tau ~ 1e36 yr",
+    "tau_samples_years": {
+      "4e+15": 2.5600000000000006e+34,
+      "1e+16": 1e+36,
+      "2e+16": 1.6e+37
+    }
+  },
+  "experimental_inversion": {
+    "superK_bound_years": 2.4e+34,
+    "implied_M_X_min_GeV": 3935979342530861.0,
+    "reading": "the register's SO(10) survives current limits provided M_X > ~3.94e+15 GeV"
+  },
+  "honest_scope": "The DECAY CHANNEL and the leptoquark content are derived exactly from the register's SO(10) (12 X,Y bosons in the 45, dim-6 qqql, p -> e+ pi0 dominant). The LIFETIME is not a substrate prediction: it requires the unification scale M_X, which the geometry does not currently fix. We therefore report the experimentally-implied lower bound on M_X rather than claiming a lifetime prediction.",
+  "reading": "The substrate's quantum register is not gauge-neutral: its logical group SO(10) necessarily contains 12 leptoquark generators, so the proton MUST decay, dominantly to e+ pi0. This is a falsifiable consequence of the code's symmetry -- the same 45 that supplies the transversal Clifford structure also destabilises the proton. Current Super-K limits push the unification scale above ~4e15 GeV.",
+  "checks": {
+    "adjoint_45_sums": true,
+    "spinor_16_sums": true,
+    "su5_24_sums": true,
+    "16_is_15_plus_nuR": true,
+    "twelve_leptoquarks": true,
+    "leptoquarks_inside_45": true,
+    "M_X_min_positive": true,
+    "M_X_min_in_expected_window": true,
+    "inversion_consistent": true
+  }
+}

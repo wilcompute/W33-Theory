@@ -1,0 +1,37 @@
+{
+  "schema": "w33.pass251.koide_equipartition.v1",
+  "status": "PASS",
+  "theorem": "Q = 1/(3 cos^2 theta) where theta is the angle between the sqrt-mass vector and the democratic (S3 singlet) direction. Hence Koide's Q = 2/3 <=> theta = 45 degrees <=> the sqrt-mass vector splits its norm EQUALLY between the S3 singlet and the S3 doublet. Koide's constant is an equipartition of the family clock.",
+  "charged_leptons": {
+    "masses_MeV": {
+      "e": 0.51099895,
+      "mu": 105.6583755,
+      "tau": 1776.86
+    },
+    "Q": 0.6666605114773855,
+    "Q_minus_two_thirds": -6.155189281153994e-06,
+    "theta_deg": 44.99973549778197,
+    "singlet_norm2": 941.5233801069261,
+    "doublet_norm2": 941.5059943430739,
+    "equipartition_relative_gap": 9.232869167145926e-06
+  },
+  "quarks_honest_negative": {
+    "up_type_Q": 0.8490064641251923,
+    "up_type_theta_deg": 51.200971398599435,
+    "down_type_Q": 0.7314276514329372,
+    "down_type_theta_deg": 47.53982492379001,
+    "note": "Koide fails for both quark sectors -- the equipartition is a charged-lepton phenomenon, consistent with leptons (not quarks) aligning to the family clock (Pass 236)"
+  },
+  "reading": "The Koide 2/3 is exactly the statement that the charged-lepton sqrt-mass vector sits at 45 degrees to the democratic axis -- equal norm in the S3 singlet and doublet. The substrate supplies the S3 family clock that makes 'singlet vs doublet' meaningful, and Pass 236 already found that LEPTONS (not quarks) align to the family clock; Koide holding for leptons and failing for quarks is the same dichotomy. The equivalence is a theorem; WHY the leptons equipartition remains the open dynamical question, but it is now a sharp geometric statement about the clock rather than a numerical coincidence.",
+  "checks": {
+    "identity_Q_eq_1_over_3cos2": true,
+    "constructed_45deg": true,
+    "constructed_Q_is_two_thirds": true,
+    "constructed_equipartition": true,
+    "lepton_Q_near_two_thirds": true,
+    "lepton_theta_near_45": true,
+    "lepton_equipartition": true,
+    "up_quarks_not_koide": true,
+    "down_quarks_not_koide": true
+  }
+}

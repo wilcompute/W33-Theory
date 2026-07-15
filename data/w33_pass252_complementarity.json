@@ -1,0 +1,57 @@
+{
+  "schema": "w33.pass252.complementarity.v1",
+  "status": "PASS",
+  "derived_target": {
+    "angle_deg": 45.0,
+    "origin": "the C3 family-clock DFT is trimaximal (Pass 236); its maximal mixing angle is 45 deg -- derived, not fitted"
+  },
+  "tests": {
+    "QLC_1_2_sector": {
+      "relation": "theta12(PMNS) + theta12(CKM) = 45",
+      "lhs": 46.45,
+      "target": 45.0,
+      "deviation_deg": 1.45,
+      "relative": 0.0322,
+      "verdict": "GOOD (~3%)"
+    },
+    "QLC_2_3_sector": {
+      "relation": "theta23(PMNS) + theta23(CKM) = 45",
+      "lhs": 51.48,
+      "target": 45.0,
+      "deviation_deg": 6.48,
+      "relative": 0.144,
+      "verdict": "POOR (~14%) -- the 2-3 sector does NOT obey complementarity; honest negative"
+    },
+    "reactor_angle": {
+      "relation": "theta13(PMNS) = theta_C / sqrt2",
+      "predicted": 9.221,
+      "observed": 8.54,
+      "deviation_deg": 0.681,
+      "relative": 0.0797,
+      "verdict": "FAIR (~8%)"
+    }
+  },
+  "observed": {
+    "PMNS": {
+      "theta12": 33.41,
+      "theta23": 49.1,
+      "theta13": 8.54
+    },
+    "CKM": {
+      "theta12": 13.04,
+      "theta23": 2.38,
+      "theta13": 0.201
+    }
+  },
+  "reading": "The 45-degree maximal angle is DERIVED from the family clock (Pass 236), so quark-lepton complementarity becomes a test rather than a fit. It works well in the 1-2 sector (33.41 + 13.04 = 46.45 vs 45, ~3%), fairly for the reactor angle (theta_C/sqrt2 = 9.22 vs 8.54, ~8%), and FAILS in the 2-3 sector (51.5 vs 45, ~14%). So the two-clock picture captures the 1-2 mixing and the reactor angle at the few-percent level but does not explain the near-maximal atmospheric angle -- a partial success, reported as such.",
+  "checks": {
+    "qlc12_within_2deg": true,
+    "qlc12_within_5pct": true,
+    "qlc23_worse_than_qlc12": true,
+    "theta13_within_1deg": true,
+    "theta13_within_10pct": true,
+    "target_is_derived_trimaximal_45": true,
+    "quark_mixing_small": true,
+    "lepton_mixing_large": true
+  }
+}

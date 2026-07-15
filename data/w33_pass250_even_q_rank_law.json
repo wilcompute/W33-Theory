@@ -1,0 +1,104 @@
+{
+  "schema": "w33.pass250.even_q_rank_law.v1",
+  "status": "PASS",
+  "odd_law": "(q^2+1)(q+2)/2  [Pass 238, verified through q=11]",
+  "even_q": {
+    "known_ranks": {
+      "2": 10,
+      "4": 50,
+      "8": 298
+    },
+    "deltas_from_odd_law": {
+      "2": 0,
+      "4": 1,
+      "8": 27
+    },
+    "cube_hypothesis": "delta(q) = (q/2 - 1)^3",
+    "cube_values_q2_4_8": {
+      "2": 0,
+      "4": 1,
+      "8": 27
+    },
+    "predicted_delta16": 343,
+    "predicted_rank16": 1970,
+    "literature_claim_rank16": 1890
+  },
+  "decisive_q16": {
+    "n": 4369,
+    "lines": 4369,
+    "computed_rank": 1890,
+    "odd_formula_value": 2313,
+    "actual_delta16": 423,
+    "cube_law_confirmed": false,
+    "literature_1890_confirmed": true
+  },
+  "verdict": "literature 1890 CONFIRMED by explicit construction; cube law REFUTED",
+  "verified_sequence": {
+    "ranks_q_2_4_8_16": [
+      10,
+      50,
+      298,
+      1890
+    ],
+    "deltas_from_odd_law": [
+      0,
+      1,
+      27,
+      423
+    ],
+    "note": "q=16 rank 1890 now MACHINE-VERIFIED by explicit construction (previously an unverified quoted value)"
+  },
+  "refuted_hypotheses": {
+    "cube_law_(q/2-1)^3": {
+      "predicted_deltas": [
+        0,
+        1,
+        27,
+        343
+      ],
+      "actual": [
+        0,
+        1,
+        27,
+        423
+      ],
+      "holds": false
+    },
+    "sastry_sin_sqrt17_recurrence_9a-16b": {
+      "predicted_ranks": [
+        10,
+        50,
+        290,
+        1810
+      ],
+      "actual": [
+        10,
+        50,
+        298,
+        1890
+      ],
+      "holds": false
+    },
+    "homogeneous_order2_integer_recurrence": {
+      "coeffs": [
+        "25/3",
+        "-178/15"
+      ],
+      "integral": false
+    }
+  },
+  "closed_form_even_q": "STILL OPEN: deltas 0/1/27/423 fit no cube, no sqrt17 recurrence, and no homogeneous integer order-2 recurrence",
+  "reading": "W(3,16) was built over GF(16) (4369 points, 4369 isotropic lines) and its F2 incidence rank computed directly, settling the even-q correction by explicit construction rather than extrapolation. RESULT: the quoted 1890 is CONFIRMED -- now machine-verified for the first time -- and the elegant cube law delta=(q/2-1)^3, which fits q=2,4,8 perfectly, is REFUTED at q=16 (343 predicted vs 423 actual). The odd-q law (Pass 238) stands; the even-q correction 0/1/27/423 remains genuinely open, now with four verified points and three hypotheses eliminated. An honest negative that narrows the problem rather than an extrapolation that would have been wrong.",
+  "checks": {
+    "known_deltas_0_1_27": true,
+    "cube_fits_q2_4_8": true,
+    "predicts_1970": true,
+    "q16_n_4369": true,
+    "q16_lines_4369": true,
+    "q16_rank_computed": true,
+    "decisive_result_recorded": true,
+    "cube_law_refuted": true,
+    "sqrt17_recurrence_refuted": true,
+    "no_integer_order2_recurrence": true
+  }
+}

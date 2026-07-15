@@ -1,0 +1,37 @@
+{
+  "schema": "w33.pass254.vacuum_rung_search.v1",
+  "status": "PASS",
+  "no_go_theorem": "In the W(3,q) family the sentinel has dim q(q^2+1)/2 while self-duality requires (q+1)(q^2+1)/2; equality would force q = q+1. So no symplectic rung is self-dual and k = q^2+1 > 0 always -- the family contains NO vacuum (k=0) rung.",
+  "widened_search": {
+    "Q(5,2) = GQ(2,4)": {
+      "n": 27,
+      "dim_C": 21,
+      "dim_sentinel": 6,
+      "k_css": 15,
+      "self_dual_sentinel": false,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true
+    },
+    "GQ(4,2) = H(3,4) [dual, the SRG(45,12,3,3)]": {
+      "n": 45,
+      "dim_C": 21,
+      "dim_sentinel": 14,
+      "k_css": 17,
+      "self_dual_sentinel": false,
+      "sentinel_self_orthogonal": true,
+      "sentinel_doubly_even": true
+    }
+  },
+  "verdict": "no vacuum rung found: neither the symplectic family (by theorem) nor the elliptic quadric Q(5,2)/GQ(4,2) yields a self-dual sentinel",
+  "reading": "The substrate's quadrangle codes are always genuine memories, never stabiliser states: k = q^2+1 > 0 is forced by q != q+1. Extending to the elliptic quadric Q(5,2) = GQ(2,4) (27 points, 45 lines) and its dual GQ(4,2) = H(3,4) -- the SRG(45,12,3,3) of the trade tower, examined here as a CSS register for the first time -- also produces no self-dual sentinel. The 'vacuum rung' does not exist in the classical GQ family: every quadrangle stores information.",
+  "checks": {
+    "W3q_never_self_dual": true,
+    "nogo_reason_q_ne_q_plus_1": true,
+    "k_always_positive": true,
+    "q52_27_points": true,
+    "q52_45_lines": true,
+    "q52_no_vacuum": true,
+    "gq42_no_vacuum": true,
+    "search_found_no_vacuum": true
+  }
+}
