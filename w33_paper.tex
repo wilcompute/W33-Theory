@@ -12580,4 +12580,58 @@ $Z_2$. Two clocks, two sectors --- which is exactly why one sum rule worked and
 the other did not, and the breaking that lifts $\theta_{13}$ off zero tilts
 $\theta_{23}$ off maximal in step.
 
+
+\section{The Rank Dichotomy is About Characteristic, and the Light Cone is Charged-Lepton-Only (Passes 260--264)}
+
+\paragraph{Pass 260 --- two fresh odd anchors.} Building $W(3,13)$ ($n=2380$) and
+$W(3,17)$ ($n=5220$) gives ranks $1275$ and $2755$, matching
+$\tfrac12(q^2+1)(q+2)$ exactly. The odd law is now attested at six odd
+\emph{primes}: $q=3,5,7,11,13,17$.
+
+\paragraph{Pass 262 --- the decisive prime-power test (conjecture refuted).}
+Since $B_2=[[4,2],[2,5]]$ has $\operatorname{Tr}=9=\tfrac12(p^2+1)(p+2)-1$ and
+$\det=16=p^4$ at $p=2$, it was natural to conjecture one law
+$\operatorname{rank}_2 W(3,p^t)=\operatorname{Tr}(B_p^t)+1$, making the odd
+polynomial merely the $t=1$ case. At $p=3,t=2$ it predicts $415$ against the
+polynomial's $451$. Building $W(3,9)$ over $\mathrm{GF}(9)$ ($820$ points) gives
+$\operatorname{rank}_2=\mathbf{451}$: \textbf{the unification is refuted}, and the
+odd polynomial holds at the first odd prime \emph{power} ever tested. The
+informative content is that the dichotomy is about \emph{characteristic}, not
+Frobenius degree: char~$\neq2$ is polynomial in $q$; char~$2$ is exponential in
+$t$ and deviates from its own polynomial ($10,51,325,2313$ would be predicted;
+$10,50,298,1890$ is true).
+
+\paragraph{Pass 261 --- why the $+8$ (theorem).} For any $2\times2$ matrix $B$ and
+constant $c$, Cayley--Hamilton gives
+$\operatorname{Tr}(B^{t+1})=\operatorname{Tr}(B)\operatorname{Tr}(B^t)-\det(B)
+\operatorname{Tr}(B^{t-1})$, so $a(t)=\operatorname{Tr}(B^t)+c$ obeys
+\[
+   a(t+1)=\operatorname{Tr}(B)\,a(t)-\det(B)\,a(t-1)+c\bigl(1-\operatorname{Tr}B+\det B\bigr).
+\]
+The recurrence is homogeneous \emph{iff} $c=0$. With $c=1$, $\operatorname{Tr}=9$,
+$\det=16$ the constant is $1-9+16=8$: \emph{the ``$+8$'' is exactly the ``$+1$''}
+of the trivial module pushed through Cayley--Hamilton. Pass 250's homogeneous
+test was doomed a priori and failed by precisely $8$. (Honest scope: this fixes
+the \emph{shape} of the law, not the entries $4,2,2,5$.)
+
+\paragraph{Pass 263 --- the light cone is charged-lepton-only.} Surveying all
+sectors against $\eta=2P_{\mathbf1}-I$: charged leptons $Q=0.6667$
+($\theta=45.000^\circ$, on the cone); up quarks $Q=0.849$; down quarks $Q=0.731$;
+and the neutrinos \emph{cannot reach} $Q=2/3$ at \emph{any} absolute scale in
+either ordering---$Q$ is maximised at zero lightest mass, giving only $0.584$
+(normal) and $0.500$ (inverted), and falls to $1/3$ as the scale grows. The
+measured splittings are simply not hierarchical enough. So the light-cone
+condition does not fix the neutrino mass scale; it excludes neutrinos from the
+cone entirely, leaving the charged-lepton nullness as the single fact needing
+explanation.
+
+\paragraph{Pass 264 --- the one-parameter test discriminates.} Pinning the base
+$\mu$--$\tau$ matrix with $\theta_{12}$ and $\Delta m^2_{21}/\Delta m^2_{31}$
+leaves the breaking $\eta$ as the only freedom; fitting it to $\theta_{13}=8.54^\circ$
+makes $|\theta_{23}-45^\circ|$ a prediction. Mode~A ($e$--$\mu$/$e$--$\tau$
+breaking) gives $10.09^\circ$ against the observed $4.10^\circ$ ($2.5\times$ too
+big, disfavoured); Mode~B ($\mu\mu$/$\tau\tau$ breaking) gives $2.49^\circ$ --- the
+right ballpark from one parameter, $39\%$ low. The structural content: the
+$\mu$--$\tau$ breaking must sit in the $\mu\mu/\tau\tau$ entry.
+
 \end{document}

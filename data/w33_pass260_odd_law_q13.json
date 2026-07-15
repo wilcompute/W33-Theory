@@ -1,0 +1,42 @@
+{
+  "schema": "w33.pass260.odd_law_q13.v1",
+  "status": "PASS",
+  "law": "rank_2 W(3,q) = (q^2+1)(q+2)/2   (q odd PRIME; see Pass 262)",
+  "fresh_anchors": {
+    "13": {
+      "q": 13,
+      "n": 2380,
+      "lines": 2380,
+      "rank": 1275,
+      "predicted": 1275,
+      "match": true,
+      "seconds": 4.72
+    },
+    "17": {
+      "q": 17,
+      "n": 5220,
+      "lines": 5220,
+      "rank": 2755,
+      "predicted": 2755,
+      "match": true,
+      "seconds": 22.9
+    }
+  },
+  "all_odd_anchors": {
+    "3": 25,
+    "5": 91,
+    "7": 225,
+    "11": 793,
+    "13": 1275
+  },
+  "reading": "W(3,13) was built (2380 points, 2380 isotropic lines) and its F2 incidence rank computed directly, giving a fresh independent anchor for the odd-q law. Together with q = 3,5,7,11 the law is now attested at five odd primes. NOTE: every one of these anchors is a PRIME; whether the same polynomial holds at odd prime POWERS is a separate question, settled in Pass 262.",
+  "checks": {
+    "q13_n_2380": true,
+    "q13_lines_2380": true,
+    "q13_rank_1275": true,
+    "q13_matches_law": true,
+    "q17_matches_law": true,
+    "identities_hold": true,
+    "all_odd_anchors_match_law": true
+  }
+}

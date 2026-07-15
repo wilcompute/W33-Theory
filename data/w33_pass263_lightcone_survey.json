@@ -1,0 +1,67 @@
+{
+  "schema": "w33.pass263.lightcone_survey.v1",
+  "status": "PASS",
+  "structure": {
+    "Q_identity": "Q = 1/(3 cos^2 theta), u = (1,1,1) the S3 singlet",
+    "window": "for non-negative masses Q in [1/3, 1): 1/3 = degenerate (timelike), 2/3 = NULL (light cone), ->1 = one dominant"
+  },
+  "sectors": {
+    "charged_leptons": {
+      "Q": 0.6666605114773855,
+      "theta_deg": 44.99973549778197,
+      "null_defect": 9.232869167025176e-06,
+      "on_cone": true
+    },
+    "up_quarks": {
+      "Q": 0.8490064641251923,
+      "theta_deg": 51.200971398599435,
+      "null_defect": -0.21476844425019365,
+      "on_cone": false
+    },
+    "down_quarks": {
+      "Q": 0.7314276514329372,
+      "theta_deg": 47.53982492379001,
+      "null_defect": -0.08854052022697993,
+      "on_cone": false
+    },
+    "neutrinos": {
+      "NO": {
+        "Q_at_zero_lightest": 0.5839944574961611,
+        "Q_max_over_scale": 0.5839944574961611,
+        "Q_min_over_scale": 0.33333333360355716,
+        "two_thirds_reachable": false,
+        "masses_at_zero_lightest_eV": [
+          0.0,
+          0.008677557259966655,
+          0.049527769988159165
+        ]
+      },
+      "IO": {
+        "Q_at_zero_lightest": 0.5000070979849278,
+        "Q_max_over_scale": 0.5000070979849278,
+        "Q_min_over_scale": 0.33333333362242185,
+        "two_thirds_reachable": false,
+        "masses_at_zero_lightest_eV": [
+          0.04960544324970799,
+          0.050358713248056686,
+          0.0
+        ]
+      }
+    }
+  },
+  "neutrino_verdict": "DECISIVE NEGATIVE: the neutrinos can NOT be placed on the light cone at any absolute mass scale. Q is maximised at zero lightest mass (maximum hierarchy), giving only Q = 0.5840 (normal) and 0.5000 (inverted), both short of 2/3; increasing the scale drives Q toward the degenerate value 1/3. The measured splittings are simply not hierarchical enough. So the light-cone condition does NOT fix the neutrino mass scale -- it excludes the neutrinos from the cone entirely.",
+  "reading": "The light cone of the family clock is a CHARGED-LEPTON phenomenon, not a universal law of the substrate's mass vectors. The charged leptons sit on it to five digits; the up quarks (Q = 0.849) and down quarks (Q = 0.731) sit off it; and the neutrinos cannot reach it for ANY absolute scale, in either ordering, because their measured splittings cap Q below 2/3. This is a sharp, falsifiable negative that kills the natural 'everything is null' extrapolation and leaves the charged-lepton nullness as the single fact needing explanation -- consistent with Pass 236/259, where it is the charged leptons (not quarks, not neutrinos) that align to the family clock.",
+  "checks": {
+    "leptons_on_cone": true,
+    "up_quarks_off_cone": true,
+    "down_quarks_off_cone": true,
+    "Q_window_third_to_one": true,
+    "degenerate_gives_third": true,
+    "dominant_approaches_one": true,
+    "nu_NO_cannot_reach_two_thirds": true,
+    "nu_IO_cannot_reach_two_thirds": true,
+    "nu_NO_max_at_zero": true,
+    "nu_NO_max_below_two_thirds": true,
+    "nu_IO_max_below_two_thirds": true
+  }
+}

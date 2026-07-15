@@ -1,0 +1,54 @@
+{
+  "schema": "w33.pass262.unified_rank_law.v1",
+  "status": "PASS",
+  "unified_conjecture": {
+    "statement": "rank_2 W(3,p^t) = Tr(B_p^t) + 1",
+    "trace_law": "Tr(B_p) = (p^2+1)(p+2)/2 - 1",
+    "det_law": "det(B_p) = p^4",
+    "p2_check": {
+      "Tr": 9,
+      "det": 16,
+      "matches_committed_B": "[[4,2],[2,5]]"
+    },
+    "p2_tower": {
+      "2": 10,
+      "4": 50,
+      "8": 298,
+      "16": 1890,
+      "32": 12250
+    },
+    "p3_params": {
+      "Tr": 24,
+      "det": 81,
+      "Tr(B^2)": 414
+    }
+  },
+  "decisive_q9": {
+    "n": 820,
+    "lines": 820,
+    "computed_rank": 451,
+    "unified_prediction": 415,
+    "naive_polynomial_prediction": 451,
+    "unified_confirmed": false,
+    "naive_confirmed": true,
+    "seconds": 3.1
+  },
+  "verdict": "naive polynomial holds at q=9; the unified conjecture is REFUTED",
+  "strengthened_odd_law": "The refutation is informative. q=9 is the FIRST odd prime POWER ever tested here, and the polynomial (q^2+1)(q+2)/2 holds there exactly (451). So the odd law is not a prime-only accident: it is polynomial in q across odd prime powers. The odd/even dichotomy is therefore about CHARACTERISTIC, not about the Frobenius degree t: char != 2 is polynomial in q, char 2 is exponential in t (Tr(B^t)+1, and NOT the polynomial, which would give 10/51/325/2313). Characteristic 2 is genuinely the odd one out.",
+  "reading": "W(3,9) was built over GF(9) = F_3[x]/(x^2+1) (820 points, 820 isotropic lines) and its F2 incidence rank computed directly. This is the first ODD PRIME POWER ever tested in this program: every previous odd anchor (q=3,5,7,11,13) is a prime, so the polynomial law (q^2+1)(q+2)/2 had never been separated from a possible transfer-matrix law that merely agrees at t=1. The two hypotheses differ by 36 at q=9, so this single computation decides between 'one polynomial for all odd q' and 'one transfer law for all q'.",
+  "checks": {
+    "p2_trace_is_9": true,
+    "p2_det_is_16": true,
+    "p2_tower_10_50_298_1890_12250": true,
+    "unified_predicts_415": true,
+    "naive_predicts_451": true,
+    "predictions_differ": true,
+    "gf9_has_9_elements": true,
+    "gf9_all_invertible": true,
+    "q9_n_820": true,
+    "q9_lines_820": true,
+    "decisive_result_obtained": true,
+    "odd_polynomial_holds_at_prime_power_9": true,
+    "char2_deviates_from_polynomial": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "w33.pass264.theta13_predicts_theta23.v1",
+  "status": "PASS",
+  "setup": {
+    "base_matrix_abcd": [
+      0.9038444261994589,
+      1.4730034498101119,
+      0.20883003019890137,
+      -1.0889355375516905
+    ],
+    "base_fit_cost": 7.274152735592642e-20,
+    "constrained_to": {
+      "theta12": 33.41,
+      "Dm21/Dm31": 0.030697105584997962
+    },
+    "unbroken_fixed_point": {
+      "theta13": 5.70910319314789e-15,
+      "theta23": 44.99999999999999
+    },
+    "free_parameter": "eta (the mu-tau breaking), fitted to theta_13 only"
+  },
+  "modes": {
+    "A": "breaking in M[0,2] (e-mu / e-tau asymmetry)",
+    "B": "breaking in M[2,2] (mu-mu / tau-tau asymmetry)"
+  },
+  "results": {
+    "A": {
+      "eta_fit": 0.5500430745072902,
+      "theta13_reproduced": 8.540000000000015,
+      "theta23_predicted": 55.09166605660605,
+      "abs_dev23_predicted": 10.091666056606051,
+      "abs_dev23_observed": 4.100000000000001,
+      "ratio_pred_over_obs": 2.4613819650258653,
+      "agrees_within_2deg": false
+    },
+    "B": {
+      "eta_fit": 0.4374903843905396,
+      "theta13_reproduced": 8.53999999999707,
+      "theta23_predicted": 47.49190723870067,
+      "abs_dev23_predicted": 2.4919072387006693,
+      "abs_dev23_observed": 4.100000000000001,
+      "ratio_pred_over_obs": 0.6077822533416265,
+      "agrees_within_2deg": true
+    }
+  },
+  "observed": {
+    "theta12": 33.41,
+    "theta13": 8.54,
+    "theta23": 49.1,
+    "abs_dev23": 4.100000000000001
+  },
+  "verdict": "THE TEST DISCRIMINATES. mode A: |dev23| predicted 10.09 deg vs observed 4.10 deg (x2.46); mode B: |dev23| predicted 2.49 deg vs observed 4.10 deg (x0.61). Mode A (e-mu/e-tau breaking) overshoots by ~2.5x and is disfavoured; mode B (mu-mu/tau-tau breaking) lands within 1.6 deg of the observed deviation (~39% low in magnitude) -- the right ballpark from ONE fitted parameter, but not a precision success. The structural content is that the mu-tau breaking must sit in the mu-mu/tau-tau entry, not the e-mu/e-tau entry.",
+  "reading": "This is the falsifiable test Pass 259 set up: with the base matrix pinned by theta_12 and the mass-squared ratio, the mu-tau breaking eta is the ONLY freedom, so fitting it to theta_13 leaves theta_23 as a genuine prediction. The result is reported as it comes out. Note the SIGN of theta_23 - 45 is not predicted (flipping the sign of eta flips it while leaving theta_13 unchanged), so only the MAGNITUDE |theta_23 - 45| is a real prediction; the observed magnitude is 4.1 deg.",
+  "checks": {
+    "base_fits_theta12": true,
+    "base_theta13_zero": true,
+    "base_theta23_maximal": true,
+    "mode_A_eta_found": true,
+    "mode_A_reproduces_theta13": true,
+    "mode_B_eta_found": true,
+    "mode_B_reproduces_theta13": true,
+    "some_mode_reproduces_theta13": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "w33.pass261.why_the_transfer_matrix.v1",
+  "status": "PASS",
+  "theorem": "For any 2x2 matrix B and constant c, a(t) = Tr(B^t) + c satisfies a(t+1) = Tr(B) a(t) - det(B) a(t-1) + c(1 - Tr(B) + det(B)), by Cayley-Hamilton. The recurrence is homogeneous iff c = 0. For the substrate c = 1, Tr(B) = 9, det(B) = 16, so the inhomogeneous constant is exactly 1*(1 - 9 + 16) = 8. The '+8' IS the '+1'.",
+  "derivation": {
+    "cayley_hamilton": "B^2 = Tr(B) B - det(B) I",
+    "trace_recurrence": "Tr(B^{t+1}) = Tr(B) Tr(B^t) - det(B) Tr(B^{t-1})",
+    "shift": "a(t) = Tr(B^t) + c",
+    "result": "a(t+1) = Tr(B) a(t) - det(B) a(t-1) + c(1 - Tr B + det B)",
+    "substrate": "c=1, Tr=9, det=16  =>  constant = 1 - 9 + 16 = 8"
+  },
+  "why_pass250_failed": "Pass 250 tested the HOMOGENEOUS recurrence 9a(t)-16a(t-1) and got 290 instead of 298 -- off by exactly 8, the pencil value. The test was doomed a priori: the trivial module contributes an additive +1 to the rank, and by the theorem above ANY nonzero additive constant forces an inhomogeneous term. The refutation was correct; the conclusion 'open' was premature.",
+  "invariants_of_B": {
+    "matrix": [
+      [
+        4,
+        2
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "trace": 9,
+    "trace_meaning": "the t=1 rank (10) minus the trivial module (1)",
+    "det": 16,
+    "det_meaning": "16 = 2^4 = |F_2^4|, the ambient symplectic space",
+    "discriminant": 17,
+    "discriminant_meaning": "17 -- the quadratic irrationality of the even tower, eigenvalues (9 +- sqrt17)/2"
+  },
+  "why_a_trace": "Tr(B^t) counts closed walks of length t in the 2-state weighted digraph with adjacency B (verified). A Frobenius-degree-t counting problem is naturally a count of length-t cyclic configurations, which is exactly what a trace of a t-th power computes -- this is why a transfer matrix appears at all.",
+  "honest_scope": "This pass explains the SHAPE of the even-q law: why a trace, why the recurrence must be inhomogeneous, and what the constant must be (8, forced). It does NOT derive the entries 4,2,2,5 from the geometry -- that remains open. Pass 262 further shows the transfer structure does not extend to odd p, so B is a characteristic-2 object.",
+  "checks": {
+    "general_theorem_holds": true,
+    "inhomogeneous_unless_c_zero": true,
+    "pencil_is_8": true,
+    "so_constant_is_8": true,
+    "trace_9": true,
+    "det_16_eq_2_pow_4": true,
+    "discriminant_17": true,
+    "cayley_hamilton_B": true,
+    "derived_recurrence_reproduces_a": true,
+    "a_matches_anchors": true,
+    "homogeneous_gives_290_not_298": true,
+    "homogeneous_off_by_8_at_t3": true,
+    "trace_counts_closed_walks": true
+  }
+}
