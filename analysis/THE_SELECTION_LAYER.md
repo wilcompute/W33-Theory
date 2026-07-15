@@ -29,7 +29,7 @@ both of which we can now state exactly — including exactly what blocks each.
 | `rank₂A_L = q²+1` (**= the CSS k**) | **this repo, 2026-07-10** | same, boxed |
 | `rank_p`, defining characteristic; `det(B_p)` | **Chandler–Sin–Xiang** | *J. Algebra* **323** (2010) 3157–3181; [math/0603100](https://arxiv.org/abs/math/0603100), Thm 1.1 |
 | `[[40,10,4]]`, `[40,15,8]` | **this repo, Passes 187/189** | `docs/index.html` (pre-Pass-224) |
-| `F₂⁴⁰` uniserial `1|14|1|8|1|14|1`, `C⊥/C` forced | **Passes 187/189** | same — *stronger than ours* |
+| `F₂⁴⁰` uniserial `1\|14\|1\|8\|1\|14\|1`, `C⊥/C` forced | **Passes 187/189** | same — *stronger than ours* |
 | 16/generation, three generations | **this repo** | `docs/index.html`, via trinification |
 | Eastin–Knill; magic-state distillation | **standard QEC** | Eastin & Knill 2009 |
 
@@ -142,7 +142,50 @@ failed twice, the method is plausibly the more durable output.
 ## 5. The boundary
 
 The selection layer is a **paper-sized result, not a Theory-of-Everything-sized
-one**, and it is honest at that size. The single highest-value piece of
-mathematics remaining is **Selection A's complex structure**: build the Weil
-representation over ℂ, or prove no lift exists. Everything else here is
-bookkeeping on other people's theorems.
+one**, and it is honest at that size.
+
+### 5.1 The one open computation that decides it (Pass 330)
+
+**Do not build a complex structure — one already exists on this tower, and the
+deciding case was simply never run.**
+
+`PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` (the other track,
+GAP-verified) builds the **characteristic-two Weil structure of the shadow at
+exactly Selection A's degree `(q²−1)/2`**, citing
+[Szechtman](https://arxiv.org/abs/math/0212378). And it splits by character field:
+
+| q | transvection values | field | module | chirality |
+|---|---|---|---|---|
+| 5 | `(−1±5√5)/2` | `Q(√5)` — **real** | `12a+12b` over F₄, self-dual | achiral |
+| 7 | `(−1±7√−7)/2` | `Q(√−7)` — **complex** | `H₇ = U ⊕ U*`, non-isomorphic duals | **chiral** |
+| **3** | **never computed** | ? | ? | **?** |
+
+A complex character field gives a dual pair `U ⊕ U*` — **that is chirality,
+intrinsically, in characteristic two.** So Pass 327's "F₂ has no complex
+structure" is too strong as a blanket claim: the structure exists at q=7. The
+question is which side **q=3** is on, and the two indicators **conflict**:
+
+- **By congruence** q=3 resembles q=7 (Gauss sum: `q ≡ 3 mod 4 → √−q`, complex → **chiral**).
+- **By endomorphism field** q=3 resembles q=5 (`End(central 8) = F₄`, per Passes 187/189 → **achiral**).
+
+Nothing in the q=5,7 data settles it — the two-point trap again (Pass 314; Pass 324
+confirmed `det(B_p)` flips sign between p=5 and p=7, invisible from two points).
+
+> **The deciding run:** `gap -q analysis/w33_pass218_weil_shadow_split.g` at **q=3**.
+> **Chiral** → Selection A's obstruction is removed and it becomes the strongest
+> result the programme has. **Achiral** → Selection A is conditional forever.
+> Either way it closes. *(GAP is not installed in the Claude track; this is handed
+> to the GAP-owning track.)*
+
+### 5.2 The freeze
+
+**Pending that one run, this arc is frozen.** The yield over passes 224–330 is two
+conditional selections — one now demoted to elegance (§2.3) — one distance bound,
+and one field ladder, against ~19 passes of rediscovery and four
+uninformative-by-construction measurements. Duplication is **~20% across both
+tracks** (Pass 330), so more passes at this rate have arguably negative expected
+value.
+
+The remaining mathematics is **one GAP run**, not a hundred passes. Everything else
+here is bookkeeping on other people's theorems — and that is a result too, arrived
+at honestly.

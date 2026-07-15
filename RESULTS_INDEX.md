@@ -185,7 +185,7 @@ Indexed **1307** files; **2451** distinctive results
 | `0/1/2` | `analysis/2026-05-21_q4_horizon_2skeleton_bridge.md` |
 | `2/4/8` | `passes/README_passes_240_249.md` |
 | `4/7/2` | `docs/index.html` |
-| `0212378` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `w33_paper.tex` |
+| `0212378` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `w33_paper.tex` |
 | `0302219` | `W36_PRL_LETTER.tex` |
 | `0310429` | `analysis/BT852_seventeen_universals.md` |
 | `0603100` | `AUDIT_JUL10_11_2026_RECENT_COMMITS_PASS157_192_V5.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `w33_paper.tex` |
@@ -1868,10 +1868,10 @@ Indexed **1307** files; **2451** distinctive results
 | `209` | `docs/index.html` · `holonet_practical_implications.tex` · `photonic_holonet.tex` · `w33_paper.tex` |
 | `212` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `analysis/BT1425_BT1427_retwined_fano_pipeline.md` · `analysis/BT1428_BT1430_symmetry_pulse_holonet.md` · `docs/index.html` · *(+3)* |
 | `213` | `analysis/BT1656_runtime_word_cycle_basis.md` · `docs/index.html` · `w33_paper.tex` |
-| `214` | `BT424_PRL_UPDATE.md` · `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `docs/index.html` · `holonet_practical_implications.tex` · *(+3)* |
+| `214` | `BT424_PRL_UPDATE.md` · `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+4)* |
 | `215` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `analysis/BT900_holonet_patch_compile.md` · `docs/index.html` · `holonet_practical_implications.tex` · *(+2)* |
 | `217` | `BT407_PAPER.tex` · `BT412_TIER_TABLE.md` · `BT424_PRL_UPDATE.md` · `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · *(+5)* |
-| `218` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `docs/index.html` · `holonet_practical_implications.tex` · `photonic_holonet.tex` · *(+1)* |
+| `218` | `PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `holonet_practical_implications.tex` · *(+2)* |
 | `219` | `w33_submission.tex` |
 | `220` | `BT412_TIER_TABLE.md` · `BT424_PRL_UPDATE.md` · `W33_FOR_EVERYONE.tex` · `analysis/BT1212_materialized_z2_s3_summary.md` · *(+3)* |
 | `221` | `analysis/BT1801_BT1803_nullspace_fibre_orbit.md` · `docs/index.html` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` · `w33_paper.tex` |
@@ -1944,7 +1944,7 @@ Indexed **1307** files; **2451** distinctive results
 | `311` | `analysis/2026-07-10_levi_next5_v3.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `w33_paper.tex` |
 | `312` | `analysis/BT1869_BT1871_summary.md` · `analysis/BT1871_larger_ring_glider_lift.md` · `docs/index.html` · `w33_paper.tex` |
 | `313` | `analysis/W33_HONEST_SYNTHESIS.md` · `toe_constants_companion.tex` · `toe_master_synthesis.tex` · `w33_paper.tex` |
-| `314` | `analysis/W33_HONEST_SYNTHESIS.md` · `toe_master_synthesis.tex` · `w33_paper.tex` |
+| `314` | `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `toe_master_synthesis.tex` · `w33_paper.tex` |
 | `315` | `analysis/BT1707_BT1709_qubit_contextuality_hesse_bridge.md` · `analysis/BT869_involution_chirality_classes.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · *(+2)* |
 | `316` | `analysis/W33_HONEST_SYNTHESIS.md` · `toe_master_synthesis.tex` |
 | `317` | `analysis/BT732_selector_sibling_exports_certificate.md` · `w33_paper.tex` |
@@ -1953,7 +1953,7 @@ Indexed **1307** files; **2451** distinctive results
 | `322` | `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `manuscripts/tex/part26_amplituhedron.tex` · `part26_amplituhedron.tex` · *(+3)* |
 | `323` | `W36_PAPER.tex` · `analysis/2026-05-19_hamming_horizon_functor_search.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · *(+2)* |
 | `325` | `analysis/THE_SELECTION_LAYER.md` · `analysis/W33_HONEST_SYNTHESIS.md` · `docs/index.html` · `toe_master_synthesis.tex` · *(+1)* |
-| `327` | `analysis/BT945_selector_appendix_compile_record.md` · `analysis/THE_SELECTION_LAYER.md` |
+| `327` | `analysis/BT945_selector_appendix_compile_record.md` · `analysis/THE_SELECTION_LAYER.md` · `w33_paper.tex` |
 | `328` | `analysis/THE_SELECTION_LAYER.md` |
 | `329` | `PASS88_SMITH_GROUP.md` · `analysis/THE_SELECTION_LAYER.md` |
 | `331` | `W33_FOR_EVERYONE.tex` · `docs/index.html` |

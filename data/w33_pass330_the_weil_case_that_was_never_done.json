@@ -1,0 +1,55 @@
+{
+  "schema": "w33.pass330.weil_case_never_done.v1",
+  "status": "PASS",
+  "HEADLINE": "Searching first found the machinery AND the deciding datum. The other track already built the characteristic-two Weil structure of the shadow at EXACTLY Pass 225's degree (q^2-1)/2 -- GAP-verified, Szechtman-cited, in a file named for a torsor and an ovoid that no grep for 'chirality' or 'spinor' could ever reach. And it computed q=5 and q=7 but NEVER q=3 -- the one case the programme is about.",
+  "the_chirality_dichotomy_already_exists": {
+    "q=5": "transvection values (-1 +- 5 sqrt5)/2 in Q(sqrt5), REAL; End(H_5)=F4; splits over F4 as 12a+12b, Frobenius-conjugate, SELF-DUAL -> achiral",
+    "q=7": "transvection values (-1 +- 7 sqrt-7)/2 in Q(sqrt-7), COMPLEX; H_7 = U (+) U*, two absolute 24s, NONISOMORPHIC DUALS -> CHIRAL",
+    "reading": "A real character field gives a self-dual (achiral) module; a complex one gives a dual pair U (+) U*, which IS chirality -- intrinsically, in characteristic two. So the complex structure Pass 327 called missing EXISTS on this tower: present at q=7, absent at q=5."
+  },
+  "THE_QUESTION_RESTATED": "Not 'can a complex structure be built' but 'WHICH SIDE OF THE DICHOTOMY IS q=3 ON'. Pass 218 did q=5 and q=7; Pass 216 did q=4/3. The one case the programme is about is the one case never computed.",
+  "why_it_cannot_be_extrapolated": {
+    "by_congruence_q3_looks_like_q7": "transvection values follow the quadratic Gauss sum: q=1 mod 4 -> sqrt(+q) REAL (5 -> Q(sqrt5), matches); q=3 mod 4 -> sqrt(-q) COMPLEX (7 -> Q(sqrt-7), matches). 3 = 3 mod 4 -> Q(sqrt-3) -> predicts U (+) U*, CHIRAL.",
+    "by_endomorphism_field_q3_looks_like_q5": "docs/index.html (Passes 187/189) states the central eight has End = F4 -- the same F4 that makes H_5 non-absolutely-irreducible and SELF-DUAL, whereas q=7 is already split over F2. Predicts ACHIRAL.",
+    "verdict": "One indicator is wrong at q=3 and nothing in the q=5,7 data settles which. Exactly the two-point trap Pass 314 named and Pass 324 confirmed (det(B_p) changes sign between p=5 and p=7 -- invisible from two points). q=3 is UNDETERMINED."
+  },
+  "why_the_landazuri_seitz_lookup_was_the_wrong_question": "The plan was to look up the minimal faithful complex degree of Omega+(10,2) and refute Selection A if it exceeds 16. Wrong question: Selection A needs the SHADOW to be chiral, not the shadow GROUP to have a 16-dim complex representation. q=7 proves chirality is available intrinsically in characteristic two with no complex representation of the group anywhere. The lookup would have refuted a claim nobody makes. (The reference is real -- Landazuri-Seitz, J. Algebra 1974 -- but the search did not surface the D5(2) value, and this pass declines to quote a number it has not verified. That is the entire lesson of Passes 322-328.)",
+  "THE_DECIDING_COMPUTATION": {
+    "command": "gap -q analysis/w33_pass218_weil_shadow_split.g  (at q=3)",
+    "if_chiral": "H_3 = U (+) U* with transvection values in Q(sqrt-3) -> the shadow is CHIRAL, Selection A's missing complex structure EXISTS intrinsically, and 225 upgrades from 'conditional on an unbuilt identification' to a real correspondence with its obstruction removed. That would be the strongest result this programme has.",
+    "if_achiral": "H_3 self-dual over F4 (the q=5 pattern) -> Pass 327's obstruction stands permanently and Selection A is CONDITIONAL FOREVER -- also decisive, also worth knowing.",
+    "cost": "one GAP run against a witness that already exists and is already verified at two other values of q"
+  },
+  "second_result_rediscovery_is_structural": {
+    "mine (analysis/w33_pass*)": "33/169 = 20%",
+    "other (PASS*.md)": "11/59 = 19%",
+    "other (BT*.md)": "7/29 = 24%",
+    "other (analysis/*.g)": "8/33 = 24%",
+    "date-named (analysis/20*.md)": "14/133 = 11%",
+    "reading": "Both tracks duplicate at the SAME rate, ~20%. Rediscovery is not one agent's discipline problem -- it is a property of a corpus indexed by date and worked by two parties who cannot see each other's filenames. That vindicates making the protocol shared rather than personal, and means the fix must be structural -- which is what RESULTS_INDEX.md and the guard are."
+  },
+  "checks": {
+    "weil_synthesis_file_exists": true,
+    "it_states_degree_q2_minus_1_over_2": true,
+    "it_cites_szechtman": true,
+    "q5_is_real_field_sqrt5": true,
+    "q7_is_complex_field_sqrt_minus_7": true,
+    "q7_splits_as_U_plus_Ustar": true,
+    "q5_called_self_dual": true,
+    "pass218_did_q5_and_q7": true,
+    "225_exponent_is_weil_degree": true,
+    "weil_degree_at_q3_is_4": true,
+    "weil_degree_at_q5_is_12": true,
+    "weil_degree_at_q7_is_24": true,
+    "matches_pass218_12_and_24": true,
+    "halfspinor_is_2_to_the_weil_degree": true,
+    "q5_congruence_predicts_real": true,
+    "q7_congruence_predicts_complex": true,
+    "congruence_matches_pass218_at_q5_q7": true,
+    "q3_congruence_predicts_COMPLEX": true,
+    "index_says_central_eight_has_End_F4": true,
+    "F4_is_the_q5_selfdual_pattern": true,
+    "indicators_conflict_at_q3": true,
+    "so_q3_is_undetermined_by_computed_data": true
+  }
+}

@@ -12398,16 +12398,32 @@ $2^{(q^2-1)/2}=16$ has the unique odd solution $q=3$. Rungs $q=5,7$ give
 spinors $4096,\,16{,}777{,}216$ with no one-generation reading. This selects
 $q=3$ (our $\mathrm{SO}(10)$) from the family on representation dimensions alone.
 
-\paragraph{Pass 227 --- universality selection.} Every rung is Eastin--Knill
+\paragraph{Pass 227 --- \textnormal{[RESTATED --- this is an elegance argument,
+not a selection.]}} Every rung is Eastin--Knill
 non-universal: the logical gate group is the finite $\mathrm{O}^+(q^2+1,2)$, so
 transversal/permutation gates never suffice. A \emph{geometric} magic source---an
 exceptional overgroup carrying an invariant cubic---requires
 $\mathrm{rank}\,\mathrm{SO}(q^2+1)=(q^2+1)/2\le 8$ (the maximal exceptional rank,
 $E_8$), i.e.\ $q=3$, realised by $\mathrm{SO}(10)<E_6$ with the magic branching
 $\mathbf{27}=\mathbf{16}+\mathbf{10}+\mathbf 1$. For $q\ge 5$ the shadow rank
-($13,25,\dots$) exceeds every exceptional group, so no cubic exists: the substrate
-is fault-tolerant-Clifford at every rung but computationally \emph{universal}
-only at $q=3$.
+($13,25,\dots$) exceeds every exceptional group, so no cubic exists.
+
+\emph{[Erratum (Pass 327). This paragraph originally concluded that the substrate
+``is fault-tolerant-Clifford at every rung but computationally \emph{universal}
+only at $q=3$''. That conclusion is \textbf{withdrawn}. $[[40,10,4]]$ is a
+stabiliser code, and magic-state injection restores universality for \emph{any}
+stabiliser code---the standard route around Eastin--Knill, requiring no Lie theory
+whatever; this manuscript's own Pass 237 distils magic with $[[40,10,4]]$ using
+exactly that machinery. \textbf{Every rung is computationally universal.} The word
+``geometric'' carries the entire argument and is an \emph{assumption}, not a
+constraint imposed by quantum computing. What survives is a statement about
+self-containment, not computability:
+\[
+\textit{$q=3$ is the only rung whose magic resource is \textbf{also} a geometric
+object of the same tower.}
+\]
+That is worth saying, and it is not a selection theorem. See
+\texttt{analysis/THE\_SELECTION\_LAYER.md}.]}
 
 \paragraph{Pass 226 --- the sentinel distance.} The sentinel $C^{\perp}$ has exact
 minimum distance $8$ at $q=3$ (exhaustive over $2^{15}$); a reduced-basis search
