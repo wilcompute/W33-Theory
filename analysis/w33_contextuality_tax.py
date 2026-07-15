@@ -115,6 +115,10 @@ def classify_failure_sets(q=3):
             len(found) > 500
         ):  # safety valve; should terminate at the number of failure sets
             break
+    # HiGHS may return equally optimal ILP solutions in a different order across
+    # platforms.  Canonicalize the complete set before deriving aligned centers
+    # and emitting the promoted certificate.
+    found.sort()
     # star test: a failure set is a point-star iff all its lines share a common point
     star_points = []
     all_stars = True
@@ -167,8 +171,13 @@ def main(argv=None):
     rows = deficit_law(qs)
     print("deficit law (one star of q+1 contexts for odd q, zero for even q):")
     for r in rows:
+        deficit_label = (
+            "0 (ovoid)"
+            if r["q"] % 2 == 0
+            else f"q+1 = {r['q'] + 1} (one star)"
+        )
         chk(
-            f"q={r['q']}: deficit {r['deficit']} = {'0 (ovoid)' if r['q'] % 2 == 0 else f'q+1 = {r['q']+1} (one star)'}",
+            f"q={r['q']}: deficit {r['deficit']} = {deficit_label}",
             r["deficit"] == r["deficit_predicted"],
         )
     # the gap-by-parity corollary
@@ -260,6 +269,7 @@ def main(argv=None):
     }
     with open("data/w33_contextuality_tax.json", "w") as fh:
         json.dump(out, fh, indent=2)
+        fh.write("\n")
     print("wrote data/w33_contextuality_tax.json")
     return 0 if all_ok else 1
 

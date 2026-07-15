@@ -1,186 +1,221 @@
-# W(3,3) Substrate Theory
-## A Complete Theory of Everything from Three Integers
+# W(3,3): The Executable Atlas
 
-[![Status](https://img.shields.io/badge/Observables-54%2B-brightgreen)]()
-[![Predictions](https://img.shields.io/badge/Falsifiable_Predictions-14-blue)]()
-[![Parameters](https://img.shields.io/badge/Free_Parameters-0-red)]()
-[![Paper](https://img.shields.io/badge/Physics-BT407__PAPER.tex-orange)](BT407_PAPER.tex)
-[![Paper](https://img.shields.io/badge/Machine-photonic__holonet.pdf-purple)](photonic_holonet.pdf)
+## Finite geometry, exceptional symmetry, codes, lattices, selectors, and the Holonet
 
-> **54+ observables. 14 falsifiable predictions. 3 integer primitives. 0 free parameters.**
-> **And one machine: a single self-entangled photon as universal computer, network, and clock.**
+[![Pages](https://img.shields.io/badge/live_atlas-open-blue)](https://wilcompute.github.io/W33-Theory/)
+[![Method](https://img.shields.io/badge/claims-evidence_tiered-6f42c1)](docs/index.html#reader-guide)
+[![GAP](https://img.shields.io/badge/exact_group_witnesses-GAP-00a878)](analysis/w33_pass338_selector_frame_240.g)
+[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
----
+> **One geometry. Thousands of witnesses. Every bridge has to name its map.**
+
+This repository is a large executable research program centered on the symplectic generalized quadrangle
+`W(3,3)`. Its exact core spans finite geometry, group actions, codes, lattices, representation theory,
+cohomology, contextuality, and routing systems. It also contains an ambitious physics program and a runnable
+Holonet architecture.
+
+The distinction matters: the finite mathematics and software artifacts can be exact even when a proposed
+physical interpretation is conditional. This repository does **not** currently establish a complete theory of
+everything or a parameter-free derivation of the Standard Model. It does establish a deep, unusually
+interconnected finite structure—and makes the remaining maps explicit.
+
+## Start here
+
+| If you want to... | Open this |
+|---|---|
+| understand the project in five minutes | [Live atlas](https://wilcompute.github.io/W33-Theory/) — use the Navigator and Reader Guide |
+| see what the audit says is actually new | [The Selection Layer](analysis/THE_SELECTION_LAYER.md) |
+| inspect the newest exact breakthrough | [Passes 338–342 synthesis](PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md) |
+| read the mathematical manuscript | [w33_paper.tex](w33_paper.tex) |
+| run the finite-geometry machine | [HOLONET.md](HOLONET.md) |
+| read the photonic program | [photonic_holonet.tex](photonic_holonet.tex) |
+| understand practical implications and limits | [holonet_practical_implications.tex](holonet_practical_implications.tex) |
+| reproduce the Clifford recovery protocol | [Recovery packet](docs/recovery_packet_landing.md) |
+| find a result before re-deriving it | [RESULTS_INDEX.md](RESULTS_INDEX.md) |
+
+The atlas is intentionally too large to read linearly. Navigate by question, then follow each promoted claim to
+its witness, certificate, and test.
+
+## The exact kernel
+
+Let `V = F_3^4` carry a nondegenerate alternating form. The totally isotropic points and lines form `W(3,3)`.
+Its collinearity graph has:
+
+| Invariant | Exact value |
+|---|---:|
+| points / lines | `40 / 40` |
+| points per line / lines per point | `4 / 4` |
+| strongly regular parameters | `SRG(40,12,2,4)` |
+| adjacency spectrum | `12^1, 2^24, (-4)^15` |
+| edges | `240` |
+| full graph-symmetry order | `51,840` |
+| derived projective symmetry | `PSp(4,3)`, order `25,920` |
+| clique-complex first homology | `H_1 ≅ Z^81` |
+
+The same geometry is the projective commutation geometry of the `40` nonidentity two-qutrit Pauli classes.
+Its full order-`51,840` symmetry is the exceptional Weyl-group-sized shell that drives much of the atlas. The
+equality `240 = |E_8 roots|` is real and useful; an equivariant identification must still be constructed and
+checked rather than inferred from the count alone.
+
+## The current breakthrough: the selection layer
+
+The repository's whole rank/code arc was re-audited in Passes 322–329. Several headline results were already
+published or already present elsewhere in this corpus. What survived the audit is sharper:
+
+- a conditional but nontrivial argument selecting `q=3` through a matching `D_5` half-spin type;
+- an explicit characteristic-changing integral module lift, rather than a dimension analogy;
+- a curved selector bundle whose global obstruction can be computed;
+- a reproducible method for separating exact objects, conditional identifications, and rediscoveries.
+
+Passes 338–342 execute the finite boundaries left by that audit:
+
+| Pass | Exact result | GAP witness | Certificate |
+|---:|---|---|---|
+| 338 | faithful principal `S_3` selector-frame cover of degree `240`; three `120` quotients and a new `80` refinement-parity quotient | [script](analysis/w33_pass338_selector_frame_240.g) | [JSON](data/w33_pass338_selector_frame_240.json) |
+| 339 | extraspecial `2_+^(1+10)` group and its unique nonlinear degree-`32` Clifford carrier | [script](analysis/w33_pass339_extraspecial_clifford_spin_bridge.g) | [JSON](data/w33_pass339_extraspecial_clifford_spin_bridge.json) |
+| 340 | characteristic-`3` discriminant modules `D_+ ≅ D_- ≅ 1 ⊕ 5 ⊕ 10` | [script](analysis/w33_pass340_halfspin_discriminant_module.g) | [JSON](data/w33_pass340_halfspin_discriminant_module.json) |
+| 341 | the selector obstruction as a restriction-map failure in `H^2`; adjacent `H10` extensions have zero Yoneda product | [script](analysis/w33_pass341_selector_extension_cohomology.g) | [JSON](data/w33_pass341_selector_extension_cohomology.json) |
+| 342 | exact global lattice reconciliation: the Eisenstein controller preserves two local spine lattices, not one forced class | [script](analysis/w33_pass342_global_lattice_reconciliation.g) | [JSON](data/w33_pass342_global_lattice_reconciliation.json) |
+
+The central correction is structural: the selector `240`-cover and the signed-`E_8` `240`-action are not the
+same object. They already lie over nonconjugate `40`-point actions. The selector-sign class exists locally but
+does not globalize; its absence is a cohomological obstruction, not a missing numerical coincidence.
+
+## What the project contributes
+
+The strongest current contribution is paper-sized and precise:
+
+> If the shadow half-spinor is identified with a physical generation, the matching Dynkin type uniquely selects
+> `q=3` among the odd rungs. The finite characteristic bridge and projective Clifford carrier now exist as
+> explicit objects. A canonical refinement, chirality choice, physical field assignment, calibrated scale, and
+> continuum dynamics do not yet follow.
+
+The second selection route—requiring the magic resource to be an exceptional object of the same tower—selects
+`q=3` as the uniquely self-contained rung, but that requirement is an elegance condition rather than a
+computational necessity. [The Selection Layer](analysis/THE_SELECTION_LAYER.md) gives the full ownership audit,
+citations, proof scope, and failure analysis.
+
+## Paper as code
+
+A promoted result should have the complete chain:
+
+```text
+claim → named construction/map → executable witness → machine-readable certificate → regression test → public surface
+```
+
+For the current packet:
+
+```bash
+# Run the five exact GAP witnesses
+gap -q analysis/w33_pass338_selector_frame_240.g
+gap -q analysis/w33_pass339_extraspecial_clifford_spin_bridge.g
+gap -q analysis/w33_pass340_halfspin_discriminant_module.g
+gap -q analysis/w33_pass341_selector_extension_cohomology.g
+gap -q analysis/w33_pass342_global_lattice_reconciliation.g
+
+# Rerun them through the focused regression harness
+python3 -m pytest tests/test_pass338_342_gap_selector_clifford_cohomology.py -q
+```
+
+Pass 341 can additionally use the optional GAP
+[Cohomolo](https://gap-packages.github.io/cohomolo/README.html) package. The committed witness keeps a transparent
+exact-value fallback for installations without it; all group and extension constructions still run in base GAP.
+
+## The Holonet
+
+The Holonet is the engineering face of the same geometry: a finite packet ABI, router, scheduler, correction
+layer, contextuality testbed, and photonic design program. The software runs today:
+
+```bash
+python3 holonet_cmd.py info
+python3 holonet_cmd.py route 0 39
+python3 holonet_cmd.py verify
+```
+
+Use [HOLONET.md](HOLONET.md) for the full tour and [the public theorem ledger](docs/holonet_theorem_ledger.md)
+for claim-to-artifact status. The exact routing and Clifford layers are classical executable artifacts; the error
+correction, teleportation, and threshold surfaces include simulations; no physical photonic Holonet has been
+built. The first proposed laboratory discriminator is the contextuality/control-arm experiment.
 
 ## Recovery Packet
 
-The finite Clifford recovery protocol is packaged as a reproducibility packet. Start here:
-
-```text
-docs/recovery_packet_landing.md
-```
-
-The machine index is:
-
-```text
-data/bt1279_recovery_packet_index.json
-```
-
-The strict certificate is:
-
-```text
-data/bt1275_strict_polar_path_recovery_certificate.json
-```
-
----
-
-## The Core Idea
-
-The W(3,3) substrate theory derives the complete observable content of the Standard Model of particle physics and concordance cosmology from three integers:
-
-| Primitive | Value | Meaning |
-|---|---|---|
-| **q** | 3 | Number of generations / colors / fundamental charges |
-| **λ** | 2 | Binary substrate dimension (SU(2)) |
-| **μ** | 4 | Number of spacetime dimensions |
-
-These define the symplectic generalized quadrangle **W(3,3)** — 40 points, 40 lines, automorphism group Sp(4,F₃) of order 51840 = |W(E₆)| — and a fractal mass-energy tier ladder with spacing ratio:
-
-```
-r = q^q / (lambda^mu * F5) = 3^3 / (2^4 * 5) = 27/80 = 0.3375
-m_n = m_Planck * r^n
-```
-
-Every particle, coupling, and cosmological constant is a tier of this ladder; every architectural constant of the machine below is substrate arithmetic in the same three integers.
-
----
-
-## Two Flagship Papers
-
-### 1. The Physics — [BT407_PAPER.tex](BT407_PAPER.tex)
-
-*Deriving the Standard Model from the W(3,3) Substrate* (PRL format, arXiv-ready).
-
-| Observable | Substrate | PDG/Observed | Error |
-|---|---|---|---|
-| α⁻¹ (fine structure) | 137.04 | 137.036 | **0.003%** |
-| sin²θ_W | 0.23119 | 0.23122 | **0.013%** |
-| M_W | 80.41 GeV | 80.377 GeV | **0.04%** |
-| m_proton | 938.6 MeV | 938.272 MeV | **0.035%** |
-| Λ_QCD | **217 MeV** | 217 MeV | **0.000%** |
-| m_Ω⁻ | **1672 MeV** | 1672.45 MeV | **0.027%** |
-| Δm²₃₁ | 2.495×10⁻³ eV² | 2.51×10⁻³ eV² | **0.6%** |
-| H₀ | 67.2 km/s/Mpc | 67.4 km/s/Mpc | **0.30%** |
-| Λ_cosmo | 2.89×10⁻³ eV⁴ | 2.89×10⁻³ eV⁴ | **0.9%** |
-
-### 2. The Machine — [photonic_holonet.tex](photonic_holonet.tex) / [photonic_holonet.pdf](photonic_holonet.pdf)
-
-*The Photonic Holonet: A Single Self-Entangled Photon as Universal Computer, Universal Network, and Clock* (machine-verified edition, June 2026).
-
-One photon carries W(3,3) twice — as the 40 Witting rays of its path⊗polarization space C⁴ (**states**) and as the 40 Pauli displacement classes of its past⊗future time-bin space C⁹ (**operators**) — making hardware, software, and network one object. Highlights, each an executable theorem:
-
-| Layer | Result | Witness |
-|---|---|---|
-| Carrier | Bell qutrit \|Ω⟩ in 2 Clifford gates (PBS + tritter + EOM); Choi witness V(U) = \|Tr U\|/3 | bt820 |
-| Duality | states = operators: one W(3,3), two carriers | bt817, bt821 |
-| Network | 540 hypercube charts (native XOR routing) glued along the 1620 apartments of the Tits building; diameter 5 | bt773, bt777, bt744 |
-| Memory | Steinberg module (dim 81 = q⁴), Solomon–Tits cohomology; flat F₂⁴ register (zero Berry phase) | bt742, bt741 |
-| Fuel | **matter = magic**: the matter shell is exactly the non-classical sector; exact KS budget **36/40 = (q!)²/v**, contextual fraction **1/10** | bt822, bt823 |
-| Universality | tritter + phase plate + EOM generate the **full Clifford group** (symplectic closure = 51840 exactly); magic injection completes universality | bt825 |
-| Clock | internal Z₁₂ + external Z₇/Z₁₃ references + irrational Boerdijk–Coxeter drive = discrete **time quasicrystal** | bt774, bt819, bt820 |
-| Scaling | fractal holonet: 40ⁿ leaves, reversible routing diameter 8n, commit clock T(n) = 4(7ⁿ−1) | bt827–bt834 |
-
----
-
-## Falsifiable Predictions
-
-**Physics** (from BT407):
-
-| # | Prediction | Value | Experiment | Timeline |
-|---|---|---|---|---|
-| 1 | Dark matter mass | **4.0 TeV** | FCC-hh | 2040s |
-| 2 | Right-handed neutrino | **0.25 MeV** | 0νββ | 2030s |
-| 3 | Neutrino hierarchy | **NORMAL** | JUNO/KATRIN | **2027** |
-| 4 | m_ν3 | **80.9 meV** | KATRIN/CMB-S4 | 2025–30 |
-| 5 | Hubble constant | **67.2 km/s/Mpc** | Euclid/DESI | running |
-| 6 | GW spectral index | **n_T = 1/3** | LISA/IPTA | 2030s |
-| 7 | Proton lifetime | **~3×10³³ yr** | Hyper-K | **2027–2035** |
-| 8 | 0νββ effective mass | **3–9 meV** | nEXO/LEGEND | 2030s |
-
-**Machine** (tabletop quantum optics, from the Holonet paper — every row a kill criterion):
-
-| # | Witness | Predicted value | Substrate form |
-|---|---|---|---|
-| 9 | Trace–Choi visibility of F₃ | 1/3 | 1/q |
-| 10 | Trace–Choi visibility of X, Z | 0 | — |
-| 11 | Kochen–Specker classical budget | 36/40 (exact) | (q!)²/v |
-| 12 | Beacon-mesh pair visibility (all 21 pairs) | 1/3 | 1/q |
-| 13 | Werner separability threshold | 3/4 | q/μ |
-| 14 | BC-drive gap census at n = 30 | exactly 2 gap lengths | h(E₈) ring |
-
----
-
-## Repository Structure
-
-```
-analysis/            ~1500 BT (breakthrough) scripts + theorem notes (.md)
-                     current frontier: BT739-BT834 (selector geometry,
-                     Tits building, platonic ladder, photon carrier,
-                     magic census, universality, holonet runtime)
-data/                JSON results for every BT script
-scripts/, tools/     pipelines, verifiers, integrators
-tests/               pytest suites (focused bridge tests per packet)
-docs/index.html      the living corpus (~500+ BT entries, searchable)
-papers/              architecture notes (holonet, witting fabric, gateways)
-
-BT407_PAPER.tex          physics flagship (PRL format)
-photonic_holonet.tex     machine flagship (+ compiled PDF)
-self_entanglement_companion.tex   temporal Bell qutrit companion
-W33_FOR_EVERYONE.tex     accessible exposition
-w33_paper.tex            master manuscript
-```
-
-**Verification:** every claim has an executable witness. Run any packet directly, e.g.
+The finite Clifford recovery protocol is packaged as a reproducible, indexed handoff:
 
 ```bash
-python analysis/bt825_universality_theorem.py   # Clifford closure = 51840
-python analysis/bt823_the_closure.py            # exact KS max = 36/40
-python -m pytest tests/                         # focused suites
+python3 tools/bt1281_verify_recovery_certificate.py
 ```
 
-Group-theoretic facts carry GAP witnesses (`.tmp/gap_*.g` patterns documented in the scripts).
+Start with [the recovery guide](docs/recovery_packet_landing.md), use
+[`data/bt1279_recovery_packet_index.json`](data/bt1279_recovery_packet_index.json) as the machine-readable manifest,
+and inspect the strict
+[`data/bt1275_strict_polar_path_recovery_certificate.json`](data/bt1275_strict_polar_path_recovery_certificate.json)
+for the promoted finite-path result.
 
----
+## Evidence levels
 
-## The Corrections Ethos
+| Tier | Meaning |
+|---|---|
+| **E — Exact** | a named finite/algebraic object and map are checked by an executable witness |
+| **S — Software / simulation** | behavior is demonstrated in code; hardware performance is not implied |
+| **P — Proposed experiment** | a falsifiable implementation or measurement is specified; no result is claimed |
+| **C — Conditional interpretation** | a conclusion depends on an explicit physical identification or modeling assumption |
+| **F — Failed / superseded** | preserved for audit history, not promoted as current truth |
 
-This corpus heals itself. Two long-standing claims failed under exact computation and were **corrected at their sources** (BT818/BT823/BT824): the independence number of W(3,3) is **7 = Φ₆** (beacon heptads; no ovoid exists — the former "perfect graph" block is withdrawn), and the Witting Kochen–Specker optimum is **36/40**, not 34/40. In both cases the corrected values are *more* substrate-natural than the claims they replaced — the signature of a real structure probed honestly.
+Numerical agreement, a repeated integer, or matching dimensions are search prompts—not derivations.
 
----
+## Repository map
 
-## Citation
+| Path | Role |
+|---|---|
+| `analysis/` | theorem witnesses, GAP programs, computational notebooks, and synthesis notes |
+| `data/` | machine-readable certificates and generated result ledgers |
+| `tests/` | focused regression tests and broader validation suites |
+| `docs/index.html` | the living, searchable public atlas |
+| `RESULTS_INDEX.md` | result-first inverted index used to prevent rediscovery |
+| `w33_paper.tex` | mathematical manuscript |
+| `photonic_holonet.tex` | photonic/Holonet manuscript |
+| `holonet_practical_implications.tex` | practical architecture and scope boundaries |
+| `HOLONET.md` | runnable machine quickstart |
+| `archive/` and older pass files | development history; not automatically current status |
 
-```bibtex
-@misc{Dahn2026W33,
-  author = {Dahn, Wil},
-  title  = {Deriving the Standard Model from the W(3,3) Substrate:
-             45+ Observables from Three Primitives},
-  year   = {2026},
-  url    = {https://github.com/wilcompute/W33-Theory},
-  note   = {arXiv submission in preparation}
-}
+## The correction engine
 
-@misc{Dahn2026Holonet,
-  author = {Dahn, Wil},
-  title  = {The Photonic Holonet: A Single Self-Entangled Photon as
-             Universal Computer, Universal Network, and Clock},
-  year   = {2026},
-  url    = {https://github.com/wilcompute/W33-Theory},
-  note   = {machine-verified edition; see photonic\_holonet.pdf}
-}
-```
+This corpus is valuable partly because it records when its own ideas fail. The current workflow guards against
+five recurring failure modes:
 
----
+1. coordinate artifacts;
+2. claims whose framing exceeds the witness;
+3. named ideas with no constructed map;
+4. sound calculations attached to one ungrounded physical sentence;
+5. rediscovery of a result already in the repo or literature.
 
-*Developed by Wil Dahn with AI research agents (Claude, Perplexity, Codex), 2026.*
-*All code open source. Repository: https://github.com/wilcompute/W33-Theory*
+Before claiming novelty, search for the **result itself**—the formula, integer sequence, group order, code
+parameter, or orbit structure—not just the topic. Then check [RESULTS_INDEX.md](RESULTS_INDEX.md), the live atlas,
+recent analysis files, and external primary sources. The pre-commit rediscovery check warns on likely duplicate
+code parameters; it does not replace reading.
+
+## Current Frontier
+
+The exact finite atlas is mature; the continuum bridge and physical selection problem are not. The finite program
+has not yet supplied:
+
+- a canonical selector-to-fermion and chirality assignment;
+- a dynamical action that turns dimensionless finite spectra into measured masses and couplings;
+- a calibrated physical scale derived rather than inserted;
+- a rigorous continuum/locality limit with the required spacetime dynamics;
+- a uniqueness theorem showing that the full physical model, not merely a finite family, is forced.
+
+Those are not cosmetic gaps. They are the precise frontier separating an exact finite atlas from a physical
+theory.
+
+## Citation, provenance, and license
+
+Research led by **Wil Dahn**, developed with AI research agents including Claude, Codex, and Perplexity. The
+commit history, witnesses, certificates, and correction records preserve result-level provenance.
+
+- DOI: [10.5281/zenodo.18652825](https://doi.org/10.5281/zenodo.18652825)
+- Citation metadata: [CITATION.cff](CITATION.cff)
+- License: [MIT](LICENSE)
+
+If you cite a specific theorem, cite its synthesis and executable artifact in addition to the repository-level
+record.

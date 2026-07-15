@@ -1,0 +1,26 @@
+{
+  "schema": "w33.pass340.halfspin_discriminant_module.gap.v1",
+  "status": "PASS",
+  "headline": "both 3^16 half-spin discriminant cokernels are the same faithful semisimple U4(2)-module 1+5+10",
+  "module": {"field":"F3","dimension":16,"decomposition":[1,5,10],"submodule_dimensions":[0,1,5,6,10,11,15,16],"endomorphism_algebra":"F3^3","self_dual":true,"plus_equals_minus":true},
+  "Eisenstein_action": {"plus":"identity","minus":"identity","verdict":"the determinant 3^16 is ramified discriminant size, not a 16-state irreducible qutrit phase carrier"},
+  "spin16_separation": {"U4(2)_irreducible_16_exists":false,"double_cover":"2.U4(2)","center_action":"-I16","image_order":51840},
+  "check_count": 15,
+  "checks": {
+    "Smith_diagonal_is_one16_three16": true,
+    "pairing_rank_mod3_is_16": true,
+    "both_cokernels_have_dimension_16": true,
+    "both_factor_profiles_are_one_plus_five_plus_ten": true,
+    "both_modules_are_completely_semisimple": true,
+    "exact_eight_submodule_census": true,
+    "endomorphism_algebras_are_F3_cubed": true,
+    "chiral_cokernels_are_isomorphic": true,
+    "plus_is_selfdual": true,
+    "minus_is_selfdual": true,
+    "constituents_match_ATLAS_5_and_10": true,
+    "actions_are_faithful_U42": true,
+    "Eisenstein_scalar_dies_on_both_cokernels": true,
+    "no_ATLAS_U42_irreducible_16_in_characteristic_3": true,
+    "double_cover_spin16_is_genuine_and_irreducible": true
+  }
+}

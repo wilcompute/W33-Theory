@@ -17,9 +17,9 @@ searches ran and failed. A rediscovery always shares one thing with its original
 parameter, or sequence. If it hits, read those files *end to end* (Pass 286:
 shallow reads caused two retractions) before writing.
 
-Indexed **1306** files; **2454** distinctive results
+Indexed **1307** files; **2453** distinctive results
 (a token in >10 files identifies a topic, not a result, and is dropped).
-**876** appear in exactly one file — the sharpest signal.
+**874** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -293,7 +293,7 @@ Indexed **1306** files; **2454** distinctive results
 | `151803` | `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` |
 | `152247` | `docs/index.html` |
 | `153153` | `docs/index.html` |
-| `155520` | `BT468_BREAKTHROUGH.md` · `docs/index.html` · `photonic_holonet.tex` |
+| `155520` | `BT468_BREAKTHROUGH.md` · `docs/index.html` · `photonic_holonet.tex` · `w33_paper.tex` |
 | `165916` | `analysis/BT994_edgewise_hodge_laplacians.md` |
 | `169260` | `docs/index.html` |
 | `172554` | `docs/index.html` |
@@ -654,7 +654,7 @@ Indexed **1306** files; **2454** distinctive results
 | `1053` | `analysis/BT1053_assignment_ledger.md` · `analysis/BT1057_full_162_slot_table.md` · `docs/index.html` |
 | `1054` | `analysis/BT1054_amplitude_protocol.md` · `analysis/BT1056_chain_native_Q_operator.md` · `analysis/BT1060_chain_native_Q_sanity_checks.md` |
 | `1055` | `analysis/BT1055_bridge_fragment_A.md` · `analysis/BT1055_bridge_fragment_B.md` · `analysis/BT1055_bridge_fragment_C.md` · `docs/index.html` |
-| `1056` | `analysis/2026-05-18_staircase_parity_horizon_lift.md` · `analysis/BT1056_chain_native_Q_operator.md` · `analysis/BT1060_chain_native_Q_sanity_checks.md` · `analysis/BT1827_cyclic_residue_winding_protection.md` · *(+2)* |
+| `1056` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/2026-05-18_staircase_parity_horizon_lift.md` · `analysis/BT1056_chain_native_Q_operator.md` · `analysis/BT1060_chain_native_Q_sanity_checks.md` · *(+4)* |
 | `1057` | `analysis/BT1057_full_162_slot_table.md` · `analysis/BT1058_representation_boundary.md` · `analysis/BT1059_physical_particle_table_attempt.md` · `analysis/BT1068_P22_projector_template.md` · *(+1)* |
 | `1058` | `analysis/BT1058_representation_boundary.md` |
 | `1059` | `analysis/BT1059_physical_particle_table_attempt.md` |
@@ -1960,16 +1960,15 @@ Indexed **1306** files; **2454** distinctive results
 | `329` | `PASS88_SMITH_GROUP.md` · `analysis/THE_SELECTION_LAYER.md` |
 | `331` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
 | `332` | `PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md` · `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+3)* |
-| `333` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · `analysis/2026-05-21_universal_oscillator_stack.md` · *(+5)* |
-| `334` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
-| `335` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
-| `336` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-31_heawood_eight_systems_singer_sylow.md` · `analysis/2026-05-31_heawood_eight_toroidal_face_systems.md` · *(+6)* |
-| `337` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `w33_paper.tex` |
-| `338` | `docs/index.html` |
-| `339` | `analysis/BT1260_cross_regime_labelled_geodesic_comparison.md` · `analysis/BT1263_regression_through_bt1261.md` · `manuscripts/tex/PART_LXIII_ARXIV_COMPLETE_PAPER.tex` |
-| `340` | `analysis/BT1056_chain_native_Q_operator.md` · `docs/index.html` |
-| `341` | `analysis/BT1741_BT1744_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · `docs/index.html` |
-| `342` | `docs/index.html` |
+| `333` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `W33_FOR_EVERYONE.tex` · `analysis/2026-05-21_pascal_oscillator_horizon_code.md` · *(+6)* |
+| `334` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
+| `335` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1376_s3_gauge_radius3_local_optimum_certificate.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
+| `337` | `PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md` · `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
+| `338` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `w33_paper.tex` |
+| `339` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1260_cross_regime_labelled_geodesic_comparison.md` · `analysis/BT1263_regression_through_bt1261.md` · `analysis/THE_SELECTION_LAYER.md` · *(+3)* |
+| `340` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1056_chain_native_Q_operator.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · *(+1)* |
+| `341` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/BT1741_BT1744_execution_summary.md` · `analysis/BT1745_June24_25_commit_audit.md` · `analysis/THE_SELECTION_LAYER.md` · *(+2)* |
+| `342` | `PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `docs/index.html` · `w33_paper.tex` |
 | `343` | `W33_FOR_EVERYONE.tex` · `analysis/BT797_fractal_consensus_protocol.md` · `docs/index.html` · `w33_paper.tex` |
 | `345` | `analysis/BT1102_A12_structure_constants.md` · `docs/index.html` |
 | `346` | `W33_FOR_EVERYONE.tex` · `docs/index.html` |

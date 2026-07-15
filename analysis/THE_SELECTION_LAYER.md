@@ -210,11 +210,12 @@ Four of the old boundaries have now been executed rather than renamed:
   `<U4(2),T>=U4(2).2`, and gives the exact `S3` action on the three leaves.
 - Pass 335 exhausts the stable 2-adic complex at five classes (three triangles
   sharing one spine), builds the unimodular symplectic polar lift, and proves the
-  symmetric/quadratic lattice obstruction on every class. Kirschmer's
-  symplectic classification already gives closely related global lattice-class
-  counts (two for the Eisenstein normalizer, five for a related subgroup), so
-  the bare count is externally anticipated; the local incidence and
-  polar/refinement ledger are the scoped contribution.
+  symmetric/quadratic lattice obstruction on every class. The former shorthand
+  citation to Kirschmer's global counts was too loose: Pass 342 shows exactly
+  which local vertices are stable under the Eisenstein controller, while the
+  thesis's nearby counts refer to differently named groups, dimensions, or
+  equivalences. The scoped contribution is the local incidence and
+  polar/refinement ledger, not any unproved identification with those tables.
 - Pass 336 constructs invariant rank-32 integral lattices for both half-spins;
   their wedge pairing has Smith diagonal `1^16,3^16` and is perfect at 2.
 - Pass 337 proves that `1+epsilon` gives the split endpoint deck, not the
@@ -228,9 +229,50 @@ profile but the wrong orbit decomposition and trivial quadrangle holonomy. Thus
 the global outer `S3` does **not** by itself identify lattice leaves with selector
 phases. The missing object is a line-dependent `S3` lattice transport.
 
-The live mathematical boundary is now threefold: construct or obstruct that
-curved lattice transport; decide whether any additional datum canonically chooses
-one of the two plus quadratic refinements and one half-spin chirality; and build a
-leafwise integral Clifford functor if such a choice exists. None of those is a
-physical Standard-Model identification. More rank-law or code-parameter passes
-would return to the rediscovery failure this document was written to stop.
+### 5.4 Passes 338--342 close the named finite boundaries
+
+Pass 338 builds the missing curved object.  In the actual `p40b` W(3,3) action,
+the unique chain `51840 > 1296 > 216` gives a faithful principal `S3` coset
+cover of degree 240. Its three order-two block quotients are the selector
+120-actions; its order-three quotient is a new 80-sheet refinement-parity
+cover. The signed-E8 240-action is inequivalent already at the base: its forty
+hexads give the nonconjugate `p40a` action.
+
+Pass 339 puts the plus H10 module into the exact extraspecial sequence
+`2_+^(1+10) -> Clifford -> O^+(10,2)`. The extraspecial group has its unique
+nonlinear degree-32 character, so the finite projective Clifford carrier exists.
+This closes the representation-theoretic carrier, not the choice of one of the
+two plus refinements.
+
+Pass 340 names the `3^16` discriminant residual:
+
+> `D+ ~= D- ~= 1 + 5 + 10` over `F3 U4(2)`.
+
+The modules are faithful, semisimple, self-dual, and have endomorphism algebra
+`F3^3`; Eisenstein omega acts trivially. The genuine irreducible 16 is instead
+a `2.U4(2)` module with central action `-I`. Thus the cokernel carries neither
+a nontrivial qutrit phase nor a chirality distinction.
+
+Pass 341 gives the conceptual obstruction.  Both `H^2(PGSp,F2)` and the local
+`H^2(K,F2)` are two-dimensional, but their bases are different. Globally the
+classes are signed-E8 and the outer-sign Bockstein; locally they are the signed
+restriction and the selector-sign Bockstein. The outer class dies on `K`, so
+the restriction image is only the signed line. The selector class is the
+missing local direction and cannot globalize. Moreover, the long exact
+sequence for `0 -> 1 -> rad9 -> 8 -> 0` makes the adjacent `1|8|1` Yoneda
+product zero. It is neither of the two group-extension classes.
+
+Pass 342 globalizes the local lattice census without forcing an external
+count. Omega acts as `[1,2,5,3,4]`, leaving precisely the two spine lattices
+stable and cycling the three H10 leaves. The integral reflection acts as
+`[1,2,3,5,4]` and does not merge the spine. The exact result is therefore five
+local vertices and two controller-stable spine lattices; further comparison to
+Kirschmer requires an explicit equality of group representations and lattice
+equivalences.
+
+The remaining finite boundary is now narrower: identify an additional datum,
+if one exists, that selects one plus refinement and one half-spin chirality.
+The selector frame, Clifford carrier, discriminant module, extension
+obstruction, and local-to-global lattice action are built. None is a physical
+Standard-Model identification. More rank-law or code-parameter passes would
+return to the rediscovery failure this document was written to stop.

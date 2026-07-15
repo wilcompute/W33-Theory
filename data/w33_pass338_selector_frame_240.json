@@ -1,0 +1,40 @@
+{
+  "schema": "w33.pass338.selector_frame_240.gap.v1",
+  "status": "PASS",
+  "headline": "the W(3,3) selector has a faithful principal S3 frame cover of degree 240 over p40b; signed E8 lies over nonconjugate p40a",
+  "selector_frame": {
+    "orders_G_K_N": [51840,1296,216],
+    "deck": "S3",
+    "subdegrees": [ 1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 72 ],
+    "inner_subdegrees": [ 1, 1, 1, 1, 1, 1, 27, 27, 27, 27, 27, 27, 36, 36 ],
+    "block_sizes": {"2":3,"3":1,"6":1},
+    "quotients": "three degree-120 selector quotients, one degree-80 refinement-parity quotient, and the degree-40 W(3,3) base"
+  },
+  "signed_E8_comparison": {
+    "order": 103680,
+    "subdegrees": [1,1,4,54,72,108],
+    "forty_hexad_base": "p40a, not p40b",
+    "equivalent_to_selector_frame": false
+  },
+  "refinement_twist": {"integral_orbits":[3,3],"sign_twisted_orbit":[6],"interpretation":"the central refinement flip converts the natural two-copy S3 action into the regular fibre action"},
+  "check_count": 17,
+  "checks": {
+    "p40a_and_p40b_are_nonconjugate": true,
+    "selector_line_stabilizer_exact": true,
+    "unique_kernel_and_regular_deck": true,
+    "principal_240_cover_is_faithful_and_transitive": true,
+    "inner_group_is_also_transitive": true,
+    "full_rank_and_subdegrees": true,
+    "inner_rank_and_subdegrees": true,
+    "block_ledger_is_S3_subgroup_lattice": true,
+    "intermediate_quotients_exact": true,
+    "three_120_quotients_recover_selector_action": true,
+    "new_80_parity_quotient_exact": true,
+    "integral_refinement_action_is_three_plus_three": true,
+    "refinement_flip_is_central": true,
+    "sign_twist_is_regular_S3": true,
+    "signed_E8_action_exact": true,
+    "signed_hexad_base_is_p40a": true,
+    "selector_frame_is_not_signed_E8": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass339.extraspecial_clifford_spin_bridge.gap.v1",
+  "status": "PASS",
+  "headline": "the plus-type H10 selector module and the unique 32-dimensional irreducible of 2_+^(1+10) are the two sides of the finite Clifford lift",
+  "extraspecial_group": {"structure":"2_+^(1+10)","order":2048,"center":2,"exponent":4,"square_one_elements":1056,"trace_distribution":[[-32,1],[0,2046],[32,1]],"unique_nonlinear_degree":32},
+  "H10_orthogonal_action": {"image":"U4(2)","order":25920,"dimension":10,"type":"plus","invariant_refinements":2,"zeros_per_refinement":528},
+  "bridge": {"exact_sequence":"2_+^(1+10) -> Clifford(H10,q) -> O^+(10,2)","lift":"the U4(2) orthogonal action pulls back to the unique 32-dimensional Stone-von Neumann carrier","scope":"canonical projective Clifford lift; no canonical quadratic refinement, chirality, or physical generation is selected"},
+  "check_count": 14,
+  "checks": {
+    "extraspecial_order": true,
+    "center_derived_and_Frattini_are_C2": true,
+    "exponent_is_four": true,
+    "plus_type_involution_census": true,
+    "faithful_character_trace_distribution": true,
+    "degree_32_character_is_irreducible": true,
+    "unique_nonlinear_degree_is_32": true,
+    "H10_dimension_and_faithful_U42_image": true,
+    "H10_submodule_structure_is_one_eight_one": true,
+    "H10_polar_form_is_nondegenerate": true,
+    "exactly_two_invariant_plus_refinements": true,
+    "ambient_orthogonal_group_is_Oplus10_2": true,
+    "U42_embeds_properly_in_Oplus10_2": true,
+    "Clifford_carrier_dimension_matches_halfspin_rank": true
+  }
+}

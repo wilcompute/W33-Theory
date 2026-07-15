@@ -146,6 +146,11 @@ data/*
 !data/w33_pass216_q43_dual_ovoid_carrier.json
 !data/w33_pass217_w3q_owner_spread_uniqueness.json
 !data/w33_pass218_weil_shadow_split.json
+!data/w33_pass338_selector_frame_240.json
+!data/w33_pass339_extraspecial_clifford_spin_bridge.json
+!data/w33_pass340_halfspin_discriminant_module.json
+!data/w33_pass341_selector_extension_cohomology.json
+!data/w33_pass342_global_lattice_reconciliation.json
 
 # Small vendored test fixtures needed for offline/CI collection
 !artifacts/

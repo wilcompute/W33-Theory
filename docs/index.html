@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>W(3,3)-E8 Live Paper -- Exact Closure and Finite-Geometry Program</title>
   <meta name="description"
-    content="Evidence-tiered live paper for the W(3,3) program: exact two-qutrit Pauli geometry, the local Heisenberg/E6 shell, promoted spectral closure, and the remaining integral E8 and dynamical frontier.">
+    content="Evidence-tiered live paper for the W(3,3) program: exact two-qutrit geometry, verified finite and integral bridges, executable certificates, and clearly separated conditional interpretations.">
   <meta name="theme-color" content="#0d1117">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://wilcompute.github.io/W33-Theory/">
@@ -1568,18 +1568,18 @@
       <a href="#bridge-2026">Refinement Bridge</a>
       <a href="#numbers">Core Numbers</a>
       <a href="#breakthroughs-2026">Breakthroughs</a>
-      <a href="#toe-capstone" style="color: var(--gold); font-weight: 700;">Theory of Everything</a>
-      <a href="#gauge-hierarchy">Gauge Hierarchy</a>
-      <a href="#weinberg-resolved">Weinberg Angle</a>
+      <a href="#toe-capstone" style="color: var(--gold); font-weight: 700;">Theory Synthesis</a>
+      <a href="#gauge-hierarchy">Gauge-Hierarchy Ansatz</a>
+      <a href="#weinberg-resolved">Weinberg-Angle Model</a>
       <a href="#ncg-gravity-lift">NCG Gravity</a>
       <a href="#qca-info-oscillator">QCA &amp; Oscillators</a>
       <a href="#frontier-connections">Frontier (2024&ndash;26)</a>
-      <a href="#ckm-matrix">CKM Matrix</a>
-      <a href="#inflation-r">Inflation &amp; r</a>
+      <a href="#ckm-matrix">CKM Ansatz</a>
+      <a href="#inflation-r">Inflation Ansatz</a>
       <a href="#exp-scorecard-2026">Exp. Scorecard</a>
       <a href="#langlands-w33">Langlands</a>
       <a href="#monster-decomposition" style="color: var(--gold);">Monster 196883</a>
-      <a href="#ultimate-theorem" style="color: var(--gold); font-weight: 700;">Uniqueness Theorem</a>
+      <a href="#ultimate-theorem" style="color: var(--gold); font-weight: 700;">Uniqueness Studies</a>
       <a href="#neutrino-splitting">Neutrino Ratio</a>
       <a href="#independent-verification">Verification</a>
       <a href="#dashboard">Dashboard</a>
@@ -1613,15 +1613,11 @@
       <div class="p" style="left:92%;animation-duration:11s;animation-delay:1.5s;width:2px;height:2px"></div>
     </div>
     <h1>W(3,3)&ndash;<span>E&#8326;</span> Theory</h1>
-    <div class="subtitle">Exact qutrit kernel first &middot; Local E<sub>6</sub> bridge exact &middot; Promoted spectral
-      closure after that &middot; 1000+ tests pass</div>
-    <div style="margin:0.6em 0;">
-      <a href="https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml" target="_blank"
-        rel="noopener">
-        <img src="https://github.com/wilcompute/W33-Theory/actions/workflows/holonet-ci.yml/badge.svg"
-          alt="holonet CI status"></a>
-      <span style="font-size:0.85em;opacity:0.8;margin-left:0.5em;">the runnable Holonet VM self-tests on every push
-        &mdash; <code>holonet verify</code></span>
+    <div class="subtitle">Exact qutrit kernel &middot; Verified finite and integral bridges &middot; Executable certificates
+      &middot; Interpretations tiered separately</div>
+    <div style="margin:0.6em 0;font-size:0.85em;opacity:0.85;">
+      <a href="#independent-verification">Executable verification</a>
+      &mdash; finite-geometry witnesses, regression tests, and <code>holonet verify</code>
     </div>
     <div class="tagline">
       The public theorem spine now starts with the exact statement that
@@ -1845,21 +1841,21 @@
       <div class="toc-group-title" onclick="this.parentElement.classList.toggle('expanded')">Results</div>
       <div class="toc-items">
         <a class="toc-item" href="#breakthroughs-2026">Breakthroughs (New)</a>
-        <a class="toc-item" href="#toe-capstone" style="color: var(--gold);">Theory of Everything</a>
-        <a class="toc-item" href="#grand-unification" style="color: var(--accent);">Grand Unification (Q8)</a>
-        <a class="toc-item" href="#gauge-hierarchy">Gauge Hierarchy — Solved</a>
-        <a class="toc-item" href="#weinberg-resolved">Weinberg Angle — Resolved</a>
+        <a class="toc-item" href="#toe-capstone" style="color: var(--gold);">Theory Synthesis</a>
+        <a class="toc-item" href="#grand-unification" style="color: var(--accent);">Unification Studies</a>
+        <a class="toc-item" href="#gauge-hierarchy">Gauge-Hierarchy Ansatz</a>
+        <a class="toc-item" href="#weinberg-resolved">Weinberg-Angle Model</a>
         <a class="toc-item" href="#ncg-gravity-lift">NCG Gravity Lift</a>
         <a class="toc-item" href="#qca-info-oscillator">QCA, Info &amp; Oscillators</a>
         <a class="toc-item" href="#frontier-connections">Frontier Connections (2024–26)</a>
-        <a class="toc-item" href="#ckm-matrix">CKM Matrix Derivation</a>
-        <a class="toc-item" href="#inflation-r">Inflation &amp; r = 1/300</a>
+        <a class="toc-item" href="#ckm-matrix">CKM Parameter Ansatz</a>
+        <a class="toc-item" href="#inflation-r">Inflation Parameter Ansatz</a>
         <a class="toc-item" href="#exp-scorecard-2026">Experimental Scorecard (2025–26)</a>
         <a class="toc-item" href="#langlands-w33">Finite Langlands Correspondence</a>
         <a class="toc-item" href="#qcd-beta-identity">QCD β₀ = Φ₆ Identity</a>
         <a class="toc-item" href="#independent-verification">Independent Verification</a>
         <a class="toc-item" href="#dashboard">Verification Dashboard</a>
-        <a class="toc-item" href="#predictions">Key Predictions</a>
+        <a class="toc-item" href="#predictions">Proposed Tests</a>
         <a class="toc-item" href="#validation">External Validation</a>
         <a class="toc-item" href="#open">Open Problems</a>
         <a class="toc-item" href="#about">About</a>
@@ -1885,12 +1881,74 @@
             at <a href="#hard-computation">Hard Computation Phases</a>. The page is meant to be navigated by question,
             not read straight through.</p>
         </div>
+        <div class="spotlight" style="border-left-color: var(--accent2);">
+          <h3 style="margin-top:0;">Current audited scope</h3>
+          <p><strong>Finite exact core:</strong> <code>W(3,3)=SRG(40,12,2,4)</code>, its group actions, codes,
+            lattices, selector covers, and representation-theoretic bridges are studied through named constructions
+            with GAP/Python witnesses and regression certificates.</p>
+          <p><strong>Holonet software:</strong> the repository contains a runnable finite-geometry VM, routing and
+            scheduling experiments, simulators, and reproducibility tools. These are software artifacts, not evidence
+            that a photonic device or fault-tolerant quantum computer has been physically built.</p>
+          <p><strong>Physics interpretation:</strong> Standard-Model, flavour, gravity, and continuum connections are
+            research hypotheses unless an explicit map and theorem establish them. Numerical agreement or a shared
+            dimension is never promoted by itself.</p>
+        </div>
+        <h3>Evidence levels used on this site</h3>
+        <div class="card-grid plain-english-grid">
+          <div class="card">
+            <div class="label">E &mdash; Exact</div>
+            <div class="detail">A named finite or algebraic object is constructed, its map is explicit, and a witness
+              checks the stated invariant. This is the strongest internal tier.</div>
+          </div>
+          <div class="card">
+            <div class="label">S &mdash; Software / Simulation</div>
+            <div class="detail">Executable engineering behavior is demonstrated in code or simulation. Hardware and
+              experimental performance are not implied.</div>
+          </div>
+          <div class="card">
+            <div class="label">P &mdash; Proposed Experiment</div>
+            <div class="detail">A falsifiable measurement or implementation path is specified, but no result is
+              claimed until data exist.</div>
+          </div>
+          <div class="card">
+            <div class="label">C &mdash; Conditional Interpretation</div>
+            <div class="detail">The conclusion follows only after a clearly stated physical identification or
+              modeling assumption. It is not part of the exact finite theorem.</div>
+          </div>
+          <div class="card">
+            <div class="label">F &mdash; Failed or Superseded</div>
+            <div class="detail">A historical idea was refuted, narrowed, or replaced. It remains useful as an audit
+              trail, not as current status.</div>
+          </div>
+        </div>
+        <div class="spotlight">
+          <h3 style="margin-top:0;">Best starting points</h3>
+          <ul class="quick-list">
+            <li><a href="#verified">Verified Results</a> &mdash; the concise exact theorem layer.</li>
+            <li><a href="#current-synthesis">Current Synthesis</a> &mdash; the present evidence-tiered state.</li>
+            <li><a href="../analysis/THE_SELECTION_LAYER.md">The Selection Layer</a> &mdash; the audited mathematical
+              contribution and its remaining boundary.</li>
+            <li><a href="../PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md">Passes 338--342</a> &mdash; the
+              latest selector, Clifford, discriminant, and cohomology packet.</li>
+            <li><a href="holonet_theorem_ledger.md">Holonet theorem ledger</a> &mdash; claim-to-artifact status for the
+              software and architecture track.</li>
+            <li><a href="#independent-verification">Independent Verification</a> &mdash; commands and certificates;
+              <a href="#archive">Historical Archive</a> &mdash; the development record.</li>
+          </ul>
+        </div>
+        <details class="reader-history" hidden aria-hidden="true">
+          <summary style="cursor:pointer;color:var(--fg2);">Historical development and detailed claim ledger</summary>
+          <div class="spotlight" style="margin-top:0.8rem;border-left-color:var(--fg2);">
+            <p><strong>Archive notice:</strong> the material below preserves the project’s chronological development.
+              Individual cards may describe a frontier that a later card closes, narrows, or rejects. For current
+              status, use the evidence map above and the named verification artifacts.</p>
+          </div>
         <div class="spotlight">
           <p><strong>Physics memo:</strong> the promoted claim is already a physics claim. One finite interaction graph
             fixes the bosonic electroweak action, the three-generation fermion-count backbone, the exact vacuum/units
             package, and a discrete Einstein-Hilbert channel.</p>
-          <p><strong>What is still open:</strong> the last internal Yukawa spectral packet and the full continuum proof
-            that the discrete gravity bridge converges to the smooth 4D spectral-action theorem.</p>
+          <p><strong>Historical status note:</strong> this archived memo predates the evidence-tier audit. Its former
+            two-item completion claim is superseded by the current Reader Guide and Selection Layer boundary.</p>
           <p><strong>Why the geometry is here:</strong> the torus, Heawood, Klein, quartic, and tomotope sections are
             the explanation layer for the physics. They show why the same exact selectors keep reappearing in couplings,
             matter counts, transport channels, and curvature instead of treating those numbers as isolated coincidences.
@@ -1908,8 +1966,8 @@
             backbone, the vacuum standards package, and a discrete gravity mode. In natural units the vacuum is not an
             extra parameter here: it is the normalized Fano/toroidal complement law on a shared <code>7</code>-packet,
             and the weak mixing split is the next exact refinement of that same unit package:
-            <code>1 = 3/13 + 10/13</code>. The exact remaining work is smaller: finish the last Yukawa packet and the
-            full continuum gravity lift.
+            <code>1 = 3/13 + 10/13</code>. These statements are preserved as historical hypotheses; current scope is
+            defined by the audited evidence map above.
           </p>
           <p><strong>How to read the geometry:</strong> repeated shells like <code>3,4,7,12,42,54,84,168,336</code> are
             not decorative numerology. They are compact operator and symmetry packets that keep reappearing when the
@@ -1922,8 +1980,9 @@
             <div class="label">Standard Model Claim</div>
             <div class="detail">The live promoted claim is already physical: the graph fixes the bosonic electroweak
               action, the exact fermion count <code>16</code> per generation, three generations, anomaly cancellation,
-              the Higgs ratio, and the PMNS / Cabibbo backbone. The honest remaining Standard-Model gap is the last
-              Yukawa spectral packet, not the action scaffold itself.</div>
+              the Higgs ratio, and the PMNS / Cabibbo backbone. This is an archived claim, not current promoted status;
+              a canonical fermion/chirality map, calibrated scale, and independent physical derivation are not supplied
+              by the finite counts alone.</div>
           </div>
           <div class="card">
             <div class="label">Mass And Mixing</div>
@@ -2764,6 +2823,56 @@
               <code>C2</code>. They are nonisomorphic: <code>&epsilon;</code> is the split endpoint deck, not the
               signed-E8 Schur/Bockstein class.
               <a href="../analysis/w33_pass337_epsilon_e8_baer_separation.g">Run the 20-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass338-selector-frame-240">
+            <div class="label">Pass 338 &mdash; The Principal S3 Selector-Frame 240-Cover</div>
+            <div class="detail">The actual W(3,3) <code>p40b</code> line stabilizer has the unique chain
+              <code>51840&gt;1296&gt;216</code> with quotient <code>S3</code>. Its faithful degree-240 coset action is a
+              principal frame cover with subdegrees <code>1<sup>6</sup>,27<sup>6</sup>,72</code>. Three block systems
+              recover the selector 120-action and a fourth gives a new 80-sheet refinement-parity cover. Signed E8 is
+              inequivalent already at the base: its forty hexads lie over nonconjugate <code>p40a</code>.
+              <a href="../analysis/w33_pass338_selector_frame_240.g">Run the 17-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass339-extraspecial-clifford-spin-bridge">
+            <div class="label">Pass 339 &mdash; The Exact 32-Dimensional Clifford Carrier</div>
+            <div class="detail">The real five-qubit Pauli group is
+              <code>2<sub>+</sub><sup>1+10</sup></code>, with order <code>2048</code>, <code>1056</code> square-one
+              elements, and unique nonlinear degree <code>32</code>. The faithful H10 action is
+              <code>U4(2)&lt;O<sup>+</sup>(10,2)</code> with exactly two plus refinements. Finite Stone&ndash;von Neumann
+              theory supplies the projective Clifford lift; it does not choose a refinement or physical chirality.
+              <a href="../analysis/w33_pass339_extraspecial_clifford_spin_bridge.g">Run the 14-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass340-halfspin-discriminant-module">
+            <div class="label">Pass 340 &mdash; The 3<sup>16</sup> Residual Is 1 + 5 + 10</div>
+            <div class="detail">Both chiral half-spin cokernels are the same faithful semisimple
+              <code>F3 U4(2)</code>-module <code>1+5+10</code>, with eight submodules and endomorphism algebra
+              <code>F3<sup>3</sup></code>. Eisenstein omega acts trivially. The genuine irreducible spin-16 exists only
+              for <code>2.U4(2)</code>, where the centre acts as <code>&minus;I</code>; the determinant exponent records
+              discriminant size, not a surviving qutrit phase.
+              <a href="../analysis/w33_pass340_halfspin_discriminant_module.g">Run the 15-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass341-selector-extension-cohomology">
+            <div class="label">Pass 341 &mdash; The Selector Twist Is the Missing Local H2 Direction</div>
+            <div class="detail">Cohomolo gives <code>dim H2(PGSp)=2</code>, <code>dim H2(PSp)=1</code>, and
+              <code>dim H2(K)=2</code>. The global basis is signed E8 plus the outer-sign Bockstein; the local basis is
+              the signed restriction plus the selector-sign Bockstein. Only the signed line is in the restriction
+              image, so the selector twist cannot globalize. The adjacent <code>1|8|1</code> module extensions also
+              have zero Yoneda product.
+              <a href="../analysis/w33_pass341_selector_extension_cohomology.g">Run the 19-check GAP witness</a>.
+            </div>
+          </div>
+          <div class="card" id="pass342-global-lattice-reconciliation">
+            <div class="label">Pass 342 &mdash; Five Local Vertices, Two Stable Spines</div>
+            <div class="detail">On <code>(L,R,L1,L2,L3)</code>, omega acts as
+              <code>[1,2,5,3,4]</code> and the integral reflection as <code>[1,2,3,5,4]</code>. Exactly the two spine
+              lattices are stable under the Eisenstein controller; the reflection does not merge them. This replaces
+              the earlier loose Kirschmer count comparison with the exact GAP object and keeps external table counts
+              scoped to their own groups and equivalences.
+              <a href="../analysis/w33_pass342_global_lattice_reconciliation.g">Run the 12-check GAP witness</a>.
             </div>
           </div>
           <div class="card">
@@ -6426,10 +6535,11 @@
             operator, symmetry, incidence, or refinement theorem carrying that same quantity in multiple ways.
           </p>
         </div>
+        </details>
       </section>
 
       <section id="current-synthesis">
-        <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">April 2026</span></h2>
+        <h2><span class="icon">◎</span> Current Synthesis <span class="section-badge">Evidence-Tiered</span></h2>
 
         <div class="spotlight" style="border-left-color: var(--accent2);">
           <p><strong>The repo is no longer at a blank-slate stage.</strong> The exact core is already rigid:
@@ -7078,8 +7188,8 @@
             coupling. The honest continuum target is therefore the smooth refined <code>a<sub>4</sub></code> density
             together with the coupling of that reduced external coefficient to the still-open Yukawa / family closure,
             not the leading <code>&Lambda;<sup>4</sup></code> or <code>&Lambda;<sup>2</sup></code> coefficients. The
-            open obligations are the smooth <code>4D</code> spectral-action / Einstein-Hilbert theorem, the last Yukawa
-            spectral packet, and a broader uniqueness argument beyond the current repo-searched landscape. So the honest
+            research obligations include a canonical fermion/chirality assignment, an observable scale, a rigorous
+            continuum construction, and broader uniqueness beyond the current repo-searched landscape. So the honest
             claim today is not “accepted TOE”; it is that the finite internal side is unusually rigid and the
             continuum-dynamical closure remains the live frontier.
           </p>
@@ -7096,16 +7206,17 @@
             </div>
           </div>
           <div class="card">
-            <div class="label">Promoted Dressed Shell</div>
-            <div class="detail">The live electroweak / flavour package is strongest where multiple routes round-trip the
-              same number: <code>3/13</code> reappears in the dressed weak share, Cabibbo denominator, PMNS package, and
-              curved-refinement residue locks. This is the layer that should be read as promoted phenomenology.</div>
+            <div class="label">Conditional Phenomenology</div>
+            <div class="detail">Repeated ratios can motivate electroweak or flavour models, but a shared number is not
+              a derivation. These cards are conditional until a named representation, action, and scale map the finite
+              object to measured observables.</div>
           </div>
           <div class="card">
-            <div class="label">Open Bridge</div>
-            <div class="detail">The remaining gap is not whether the finite graph has structure. It is whether the
-              refinement family plus almost-commutative product can be turned into a rigorous continuum theorem with the
-              right short-time asymptotics, dynamical gravity, and final Yukawa closure. The sharpest exact local clue
+            <div class="label">Interpretive Boundary</div>
+            <div class="detail">The finite graph, selector, code, and lattice structures are exact. Connecting them to
+              a unique physical model requires additional maps: a canonical fermion/chirality assignment, a calibrated
+              observable scale, and a rigorous continuum construction. Earlier cards may describe candidate routes;
+              they are not promoted merely because the finite arithmetic is exact. The sharpest exact local clue
               is now that the family spurion is invisible at <code>A<sub>0</sub></code> and <code>A<sub>2</sub></code>,
               first enters at <code>A<sub>4</sub></code>, stays on the same external <code>A<sub>0</sub></code> RG
               channel, the local nonlinear packet is already fixed as an <code>a<sub>4</sub></code>-only term with
@@ -7129,19 +7240,20 @@
               <code>3U</code> core with negative-definite rank-<code>16</code> complement. The selector survives
               barycentric pullback with exact scale <code>120</code>, while the lattice side fixes the reduced external
               coefficient <code>351/(4&pi;<sup>2</sup>)</code> after coupling to <code>Q<sub>curv</sub> = 52</code>. So
-              the remaining ambiguity is no longer seed choice or first-step sign on the explicit K3 host; it is the
-              smooth continuum lift and its coupling to the still-open Yukawa / family closure.
+              these finite identities remain candidate bridge data; a smooth continuum lift and a physical family map
+              have not been established by them.
             </div>
           </div>
           <div class="card">
-            <div class="label">Nonlinear Yukawa Core</div>
-            <div class="detail">The last Yukawa packet is already compressed far beyond a generic
+            <div class="label">Historical Yukawa Ansatz &mdash; Conditional</div>
+            <div class="detail">The archived program compresses a generic
               <code>24&times;24</code> ansatz: the diagonal <code>l<sub>6</sub></code> ceiling is
               <code>9 -&gt; 10</code>, the first native mixed-seed lift is <code>11 -&gt; 12</code>, the reduced packet
               is now two explicit radical <code>2&times;2</code> blocks on the <code>240<sup>2</sup></code> shell plus
               the scalar channels <code>169</code>, <code>275</code>, <code>323</code>, and the exact family side
-              already has a canonical one-versus-two normal form with common flag basis
-              <code>(1,1,0),(0,0,1),(1,-1,0)</code> and common square <code>2E<sub>13</sub></code>.
+              already has a one-versus-two normal form with common flag basis
+              <code>(1,1,0),(0,0,1),(1,-1,0)</code> and common square <code>2E<sub>13</sub></code>. This is a finite
+              ansatz ledger, not a derivation of measured Yukawa couplings.
             </div>
           </div>
         </div>
@@ -7149,6 +7261,26 @@
 
       <!-- ═══════════════════════ HIGHLIGHTS BANNER ═══════════════════════ -->
       <div class="highlights-banner">
+        <h3>Executable Results and Audited Boundaries</h3>
+        <div class="highlights-grid">
+          <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Exact finite kernel</strong>
+              &mdash; <code>W(3,3)=SRG(40,12,2,4)</code>, its incidence structure, group actions, codes, and local
+              geometries have named witnesses.</span></div>
+          <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Selector layer</strong> &mdash;
+              Passes 338&ndash;342 construct the faithful 240-frame cover, extraspecial Clifford carrier, characteristic-3
+              discriminant modules, extension cohomology, and exact two-spine lattice boundary.</span></div>
+          <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Runnable Holonet</strong> &mdash;
+              routing, scheduling, correction, and packet experiments are executable software artifacts with explicit
+              hardware and universality boundaries.</span></div>
+          <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Correction ledger</strong> &mdash;
+              failed, superseded, rediscovered, and conditional claims remain visible as an audit trail rather than
+              being counted as current theorems.</span></div>
+          <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Physics boundary</strong> &mdash;
+              numerical dictionaries are hypotheses until a representation, action, calibrated scale, continuum map,
+              and uniqueness argument are actually constructed.</span></div>
+        </div>
+      </div>
+      <div class="highlights-banner" hidden aria-hidden="true">
         <h3>Latest Results &mdash; 400+ Phases, 49/49 Master Checks, Q1&ndash;Q8 All Closed</h3>
         <div class="highlights-grid">
           <div class="highlight-item"><span class="hi-icon">★</span><span><strong>Spectral Action</strong> — Full NCG
@@ -10052,11 +10184,13 @@
           </div>
           <div class="card">
             <div class="num">4/13</div>
-            <div class="label">Exact PMNS route</div>
-            <div class="detail">The promoted PMNS formulas are the cyclotomic ones: sin^2(theta_12)=4/13,
-              sin^2(theta_23)=7/13, sin^2(theta_13)=2/91 from PMNS_CYCLOTOMIC.py. The sector column is exact too:
-              collinear / transversal / tangent = 4 / 7 / 2, and theta_13 is the tangent sector with extra 1/Phi_6
-              suppression.</div>
+            <div class="label">PMNS incidence dictionary &mdash; Tier C</div>
+            <div class="detail"><code>PMNS_CYCLOTOMIC.py</code> exactly records the finite ratios
+              <code>4/13, 7/13, 2/91</code> and the incidence column
+              <code>collinear / transversal / tangent = 4 / 7 / 2</code>. Identifying those ratios with measured
+              PMNS angles is a conditional postdiction, not a dynamics-derived mixing matrix; the
+              <code>1/Phi_6</code> factor is part of the finite formula, not an established physical suppression
+              mechanism.</div>
           </div>
           <div class="card">
             <div class="num">41/60</div>
@@ -14019,7 +14153,7 @@
               algebras, homotopy, zeta functions, modular forms, Jordan algebras, number theory. Self-referential loop:
               <code>W(3,3)&rarr;E<sub>6</sub>&rarr;W(E<sub>6</sub>)&rarr;W(3,3)</code>. 5 checks, 0 failures.
             </td>
-            <td class="status-ok">&#x2705; <strong>Theory of Everything COMPLETE</strong></td>
+            <td class="status-partial"><strong>Historical synthesis claim; physics maps remain conditional</strong></td>
           </tr>
           <tr>
             <td>Spectral algebra &amp; characteristic polynomial (Q46)</td>
@@ -23883,30 +24017,30 @@
               <div class="stat-label">tree-level (m<sub>H</sub>)</div>
             </div>
             <div class="stat-card">
-              <div class="stat-num">0</div>
-              <div class="stat-label">unresolved tensions</div>
+              <div class="stat-num">Named</div>
+              <div class="stat-label">bridge obligations tracked explicitly</div>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- ═══ THE THEORY OF EVERYTHING — Final Capstone ═══ -->
+      <!-- ═══ THEORY SYNTHESIS ═══ -->
       <section id="toe-capstone">
         <div class="container">
-          <h2><span class="icon">◉</span> The Theory of Everything <span class="section-badge">Capstone — April
-              2026</span></h2>
+          <h2><span class="icon">◉</span> Theory Synthesis <span class="section-badge">Exact Core / Conditional
+              Physics</span></h2>
 
           <div class="highlights-banner"
             style="border-color: var(--gold); background: linear-gradient(135deg, rgba(227,179,65,0.08), rgba(88,166,255,0.06));">
-            <h3 style="color: var(--gold);">One Equation. One Graph. One Universe.</h3>
+            <h3 style="color: var(--gold);">One Finite Kernel. Many Exact Structures. A Physical Map Still to Build.</h3>
             <div class="math-block" style="margin: 1.5rem 0;">
               <span class="eq" style="font-size: 1.3em;">(q+1)&sup2; = 2(q+1)(q&minus;1)</span>
             </div>
-            <p style="color: var(--fg); max-width: 700px; margin: 0 auto;">This equation &mdash; &ldquo;the
-              common-neighbor count squared equals twice the valence excess&rdquo; &mdash; has one positive solution:
-              <strong style="color: var(--accent);">q = 3</strong>. From this single integer, everything follows.
-            </p>
+            <p style="color: var(--fg); max-width: 700px; margin: 0 auto;">Within the stated arithmetic family this
+              equation selects <strong style="color: var(--accent);">q = 3</strong>. The repository then constructs
+              exact finite and integral consequences. It does not, by itself, select a unique spacetime or derive the
+              measured Standard Model.</p>
           </div>
 
           <!-- Foundational Principle -->
@@ -24284,17 +24418,15 @@
         </div>
       </section>
 
-      <!-- ═══ GAUGE HIERARCHY SOLUTION ═══ -->
+      <!-- ═══ GAUGE HIERARCHY ANSATZ ═══ -->
       <section id="gauge-hierarchy">
         <div class="container">
-          <h2><span class="icon">⬦</span> The Gauge Hierarchy Problem &mdash; Solved <span class="section-badge">April
-              2026</span></h2>
+          <h2><span class="icon">⬦</span> Gauge-Hierarchy Ansatz <span class="section-badge">Conditional</span></h2>
 
           <div class="spotlight">
-            <p>The electroweak hierarchy v<sub>EW</sub>/M<sub>Pl</sub> &asymp; 10<sup>&minus;17</sup> is the central
-              fine-tuning puzzle of particle physics. W(3,3) solves it: the ratio is determined by graph parameters with
-              <strong>zero</strong> free parameters.
-            </p>
+            <p>The electroweak hierarchy v<sub>EW</sub>/M<sub>Pl</sub> &asymp; 10<sup>&minus;17</sup> is a central
+              fine-tuning puzzle. The expression below is a graph-motivated numerical ansatz. No dynamical map currently
+              derives the decimal scale factor or proves that this finite combination is the physical hierarchy.</p>
           </div>
 
           <div class="math-block">
@@ -24400,16 +24532,17 @@
         </div>
       </section>
 
-      <!-- ═══ WEINBERG ANGLE RESOLUTION ═══ -->
+      <!-- ═══ WEINBERG ANGLE MODEL ═══ -->
       <section id="weinberg-resolved">
         <div class="container">
-          <h2><span class="icon">⊘</span> Weinberg Angle: 15&sigma; &rarr; 0.3&sigma; <span
-              class="section-badge">Resolved</span></h2>
+          <h2><span class="icon">⊘</span> Weinberg-Angle Scale Ansatz <span
+              class="section-badge">Conditional</span></h2>
 
           <div class="spotlight" style="border-left-color: var(--accent2);">
-            <p><strong>The 15&sigma; tension was a scale misidentification, not a failure.</strong> The graph gives
-              sin&sup2;&theta;<sub>W</sub> = 3/13 at its <em>natural</em> scale Q<sub>0</sub> =
-              &lambda;&Phi;<sub>6</sub>&sup2; = 98 GeV, not at M<sub>Z</sub> = 91.2 GeV.</p>
+            <p>The archived proposal identifies sin&sup2;&theta;<sub>W</sub> = 3/13 with a candidate scale
+              Q<sub>0</sub> = &lambda;&Phi;<sub>6</sub>&sup2; = 98 GeV and applies a near-pole running estimate. The finite
+              graph does not derive that scale identification, so the numerical agreement below is not a resolution
+              theorem.</p>
           </div>
 
           <div class="math-block">
@@ -24786,15 +24919,15 @@
       </section>
 
 
-      <!-- ═══ CKM MATRIX FROM GRAPH PARAMETERS ═══ -->
+      <!-- ═══ CKM PARAMETER ANSATZ ═══ -->
       <section id="ckm-matrix">
         <div class="container">
-          <h2><span class="icon">◈</span> The CKM Matrix from Graph Parameters <span class="section-badge">April
-              2026</span></h2>
+          <h2><span class="icon">◈</span> CKM Parameter Ansatz <span class="section-badge">Conditional</span></h2>
 
           <div class="spotlight">
-            <p>The Cabibbo-Kobayashi-Maskawa matrix governs quark flavor-changing transitions. W(3,3) derives all four
-              CKM parameters from SRG data:</p>
+            <p>The Cabibbo-Kobayashi-Maskawa matrix governs quark flavor-changing transitions. The table records
+              graph-motivated formulas for its four parameters; a canonical quark representation and Yukawa
+              diagonalization producing this matrix have not been constructed.</p>
           </div>
 
           <table>
@@ -24859,15 +24992,16 @@
         </div>
       </section>
 
-      <!-- ═══ INFLATION & PRIMORDIAL GRAVITATIONAL WAVES ═══ -->
+      <!-- ═══ INFLATION PARAMETER ANSATZ ═══ -->
       <section id="inflation-r">
         <div class="container">
-          <h2><span class="icon">&sim;</span> Inflation &amp; Primordial Gravitational Waves <span
-              class="section-badge">April 2026</span></h2>
+          <h2><span class="icon">&sim;</span> Inflation Parameter Ansatz <span
+              class="section-badge">Conditional</span></h2>
 
           <div class="spotlight" style="border-left-color: var(--accent4);">
-            <p>The spectral action on M&sup4; &times; W(3,3) naturally produces <strong>Starobinsky-like
-                inflation</strong> with a precise tensor-to-scalar ratio. A new identity underlies the prediction.</p>
+            <p>If a Starobinsky action and the stated e-fold identification are assumed, the finite parameters produce
+              the values below. The repository has not derived that continuum action from W(3,3), so these are model
+              outputs rather than finite-geometry predictions.</p>
           </div>
 
           <div class="math-block">
@@ -25945,12 +26079,10 @@
                 After close reading: the W(3,3)–E₈ correspondence is NOT a complete theory of everything. It is a
                 remarkable finite-geometric framework that
                 <ul class="quick-list" style="margin-top: 0.5rem;">
-                  <li>provides the most successful predictions of neutrino mixing angles from any discrete symmetry
-                    model</li>
-                  <li>derives all five exceptional Lie algebra dimensions from one SRG parameter set</li>
-                  <li>connects particle physics numerology to a single geometric object with a 51840-fold symmetry</li>
-                  <li>identifies two genuine open problems clearly: the Yukawa spectral packet and the continuum gravity
-                    lift</li>
+                  <li>constructs a large exact finite-geometry, code, lattice, and representation-theory corpus</li>
+                  <li>provides executable witnesses and correction trails for promoted finite claims</li>
+                  <li>organizes candidate physics dictionaries around one highly symmetric finite object</li>
+                  <li>makes the missing maps explicit instead of treating numerical agreement as a derivation</li>
                 </ul>
                 The honest remaining questions are whether the physical interpretations are derivations or post-hoc
                 fits, and whether the continuum bridge can be rigorously established.
@@ -27758,10 +27890,10 @@
       </section>
 
       <section id="open">
-        <h2><span class="icon">?</span> Open Problems and Exact Boundaries</h2>
-        <p>The strongest current statement is not “nothing works yet”; it is that a large exact finite kernel is already
-          closed, a local E<sub>6</sub> bridge is exact, and the remaining uncertainty lives in a narrower global-lift
-          frontier. The table below separates what is already exact from what is still genuinely open.</p>
+        <h2><span class="icon">?</span> Verified Scope and Research Boundaries</h2>
+        <p>This table distinguishes constructed finite objects from conditional interpretation. “Closed” applies only
+          to the named mathematical object and witness; it does not automatically close a physical identification,
+          hardware implementation, measured parameter, or continuum limit.</p>
         <table>
           <tr>
             <th>#</th>
@@ -27845,7 +27977,7 @@
           <li><a href="../scripts/w33_flavor_frontier_audit.py">Flavor Frontier Audit</a></li>
           <li><a href="../scripts/w33_exact_flavor_spine_bridge.py">Exact Flavor Spine Bridge</a></li>
           <li><a href="../scripts/w33_standard_model_tqc_boundary_audit.py">Standard Model TQC Boundary Audit</a></li>
-          <li><a href="w33_complete_theory.html">Complete Theory</a></li>
+          <li><a href="w33_complete_theory.html">Historical Complete-Theory Page</a></li>
           <li><a href="w33_the_apex.html">The Apex</a></li>
           <li><a href="w33_busted_wide_open.html">Busted Wide Open</a></li>
           <li><a href="w33_monster_landauer.html">Monster Landauer</a></li>
@@ -27861,12 +27993,12 @@
             href="https://github.com/wilcompute/W33-Theory">github.com/wilcompute/W33-Theory</a></p>
         <p><strong>License:</strong> MIT</p>
         <p><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.18652825">10.5281/zenodo.18652825</a></p>
-        <p><strong>Scale:</strong> 444+ phases of hard computation &middot; 5,500+ test files &middot; 30k+ automated
-          tests/checks &middot; 4,700+ theorems &middot; 250+ mathematical domains &middot; 49/49 master checks pass
-          &middot; Q1&ndash;Q8 all closed &middot; <strong style="color: #ffd700;">live ledger currently
-            passing</strong></p>
-        <p><strong>Foundation:</strong> The entire theory derives from SRG(40,12,2,4) — five integers that encode the
-          Standard Model, gravity, and cosmology with no free parameters.</p>
+        <p><strong>Scale:</strong> a large living corpus of GAP/Python witnesses, regression tests, papers, generated
+          certificates, historical conjectures, and correction records. Current status is defined by named artifacts
+          and the evidence levels above, not by accumulated phase or closure counts.</p>
+        <p><strong>Foundation:</strong> The exact research core begins with
+          <code>W(3,3)=SRG(40,12,2,4)</code>. The repository studies how far its finite geometry, codes, lattices, and
+          representations can be carried by explicit maps. Physical interpretations are separately evidence-tiered.</p>
       </section>
 
     </div><!-- /container -->
@@ -27881,11 +28013,12 @@
       <a href="https://doi.org/10.5281/zenodo.18652825">DOI</a> &middot;
       <a href="https://github.com/wilcompute/W33-Theory/blob/master/docs/march_2026_frontier_note.md">Frontier Note</a>
     </p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem;">Last updated: May 2026 &middot; Cite via the DOI above or
-      <code>CITATION.cff</code> in the repo root
+    <p style="margin-top: 0.4rem; font-size: 0.8rem;">Living research atlas &middot; Current status is defined by the
+      Reader Guide, named certificates, and correction ledger &middot; Cite via the DOI above or
+      <code>CITATION.cff</code>
     </p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem;">30k+ tests/checks &middot; 5,500+ files &middot; 4,700+ theorems
-      &middot; 444+ phases &middot; 250+ domains &middot; 49/49 master checks &middot; Q1&ndash;Q8 closed</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem;">Exact finite core &middot; executable Holonet experiments &middot;
+      evidence-tiered interpretations &middot; public correction history</p>
   </footer>
 
   <script>

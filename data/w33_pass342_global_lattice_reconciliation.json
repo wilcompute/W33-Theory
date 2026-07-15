@@ -1,0 +1,25 @@
+{
+  "schema": "w33.pass342.global_lattice_reconciliation.gap.v1",
+  "status": "PASS",
+  "headline": "five local 2-adic vertices globalize to two omega-stable spine lattices; the tested outer normalizer does not merge them",
+  "local_nodes": [ "L", "R", "L1", "L2", "L3" ],
+  "omega_permutation": [ 1, 2, 5, 3, 4 ],
+  "outer_reflection_permutation": [ 1, 2, 3, 5, 4 ],
+  "compression": "omega removes the three H10 leaves as individual stable global classes; L and R remain separately stable and the outer reflection fixes each",
+  "Kirschmer_reconciliation": {"source":"Finite symplectic matrix groups, Theorem 4.6.1 proof, printed p.64, plus the dimension-20 discussion on printed p.113","verdict":"do not equate the thesis counts with the Pass 335 local vertices without an explicit group-and-equivalence identification","correction":"the GAP object in this pass has exactly two omega-stable local classes; nearby counts 1, 2, 5 and 15 occur for differently named maximal or dimension-20 groups and table columns"},
+  "check_count": 12,
+  "checks": {
+    "inner_group_is_U42": true,
+    "local_submodule_census_recovers_five_vertices": true,
+    "local_index_exponents_are_0_2_1_1_1": true,
+    "omega_action_is_two_fixed_plus_three_cycle": true,
+    "reflection_normalizes_inner_group": true,
+    "reflection_lattice_permutation_is_defined": true,
+    "reflection_fixes_both_omega_stable_spine_lattices": true,
+    "maximal_Eisenstein_normalizer_order_and_structure": true,
+    "maximal_group_uses_same_integral_root_lattice": true,
+    "outer_normalizer_order": true,
+    "exactly_two_local_vertices_are_globally_omega_stable": true,
+    "the_two_spine_lattices_remain_distinct_under_outer_reflection": true
+  }
+}

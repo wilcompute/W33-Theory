@@ -1,31 +1,34 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
-title: "W(3,3)-E8 Correspondence Theorem"
+message: "If you use this repository, cite the atlas and the specific witness or synthesis supporting the result."
+title: "W(3,3): The Executable Atlas"
 type: software
 authors:
   - family-names: "Dahn"
     given-names: "Wil"
-version: "2026.03.02"
-date-released: "2026-03-02"
+version: "2026.07.15"
+date-released: "2026-07-15"
 url: "https://github.com/wilcompute/W33-Theory"
 repository-code: "https://github.com/wilcompute/W33-Theory"
 license: MIT
 keywords:
   - "generalized quadrangle"
   - "E8 Lie algebra"
-  - "Standard Model"
+  - "finite geometry"
+  - "selector systems"
+  - "lattice theory"
+  - "group cohomology"
+  - "quantum information"
+  - "Holonet"
   - "Hodge theory"
-  - "spectral geometry"
-  - "gauge theory"
-  - "particle physics"
+  - "computational mathematics"
 abstract: >-
-  Complete derivation of the Standard Model from the W(3,3)
-  generalized quadrangle and E8 Lie algebra. 207 proved pillars
-  establish that the 240 edges of W(3,3) biject to the 240 roots
-  of E8, the first homology H₁ = Z⁸¹ carries an irreducible
-  representation matching matter content, the Hodge spectrum
-  0⁸¹+4¹²⁰+10²⁴+16¹⁵ encodes gauge structure, sin²θ_W = 3/13
-  (EW, running from 3/8 at SU(5) GUT), and α_GUT^{-1} = 8π is derived
-  from W33 geometry. All results verified by 5500+ automated tests
-  and 225/225 master checks, with zero free parameters.
+  An executable research atlas centered on the symplectic generalized
+  quadrangle W(3,3). The repository develops exact finite-geometry,
+  group-action, code, lattice, representation-theoretic, cohomological,
+  contextuality, and routing constructions through named witnesses,
+  machine-readable certificates, and regression tests. It also studies
+  conditional bridges to exceptional structures, quantum information,
+  photonic architectures, and physics. Exact results, software and
+  simulations, proposed experiments, conditional interpretations, and
+  failed or superseded claims are explicitly separated.
 

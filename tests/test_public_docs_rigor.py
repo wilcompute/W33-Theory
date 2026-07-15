@@ -10,16 +10,15 @@ def _read(rel: str) -> str:
     return (ROOT / rel).read_text(encoding="utf-8")
 
 
-def test_readme_tracks_current_frontier_and_exact_pmns() -> None:
+def test_readme_tracks_current_frontier_and_evidence_boundaries() -> None:
     text = _read("README.md")
+    assert "# W(3,3): The Executable Atlas" in text
     assert "Current Frontier" in text
     assert "continuum bridge" in text
-    assert "4/13" in text
-    assert "7/13" in text
-    assert "2/91" in text
-    assert "TQFT invariants" in text
-    assert "Continuum Limit & Spectral Action Convergence" in text
-    assert "Information-Theoretic Closure & Holographic Bound" in text
+    assert "Recovery Packet" in text
+    assert "Evidence levels" in text
+    assert "does **not** currently establish a complete theory" in text
+    assert "Numerical agreement, a repeated integer, or matching dimensions" in text
 
 
 def test_pages_live_index_uses_current_top_level_language() -> None:
@@ -35,8 +34,8 @@ def test_pages_live_index_uses_current_top_level_language() -> None:
     assert "residual gap" in text
 
 
-def test_pages_verified_section_promotes_exact_pmns_route_and_spectral_bridge() -> None:
-    text = _read("docs/index.html")
+def test_pages_verified_section_scopes_pmns_dictionary_and_spectral_bridge() -> None:
+    text = " ".join(_read("docs/index.html").split())
     start = text.index('<section id="verified">')
     end = text.index('<section id="conjectural">')
     verified = text[start:end]
@@ -45,7 +44,9 @@ def test_pages_verified_section_promotes_exact_pmns_route_and_spectral_bridge() 
     assert "7/13" in verified
     assert "2/91" in verified
     assert "collinear / transversal / tangent = 4 / 7 / 2" in verified
-    assert "1/Phi_6 suppression" in verified
+    assert "PMNS incidence dictionary" in verified
+    assert "conditional postdiction" in verified
+    assert "not an established physical suppression" in verified
     assert "tests/test_exact_spectral_bridge.py" in verified
     assert "Str(e^-tD^2)=-80" in verified
     assert "137.036004" in verified
@@ -65,7 +66,7 @@ def test_pages_verified_section_promotes_exact_pmns_route_and_spectral_bridge() 
     assert "L6 chiral gauge bridge" in verified
     assert "3.523729" in verified
     assert "0.826695" in verified
-    assert "rank <code>9</code>" in verified
+    assert "rank 9" in verified
     assert "rank 10" in verified
     assert "only the Cartan slice" in verified
     assert "Spinor finite-geometry screen" in verified

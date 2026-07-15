@@ -13163,11 +13163,12 @@ $U_4(2)$-stable $2$-adic lattice complex at five homothety classes
 \]
 It is three triangles $(L,R,L_i)$ sharing the spine $(L,R)$; its index-two
 skeleton is $K_{2,3}$, and $\omega$ cycles the three $L_i$.  The bare count
-is not presented as novel: Kirschmer's classification of finite
-symplectic matrix groups reports two global lattice-isomorphism classes for
-the corresponding $U_4(2)$ Eisenstein normalizer and five for a related
-subgroup.\footnote{M.~Kirschmer, \emph{Finite symplectic matrix groups},
-pp.~112--113,
+is not presented as a published global class count.  Kirschmer's classification
+contains closely related Eisenstein and $U_4(2)$ groups, but its nearby counts
+use different groups, dimensions, table fields, or lattice equivalences; Pass
+342 below shows that they cannot be substituted for this local building without
+an explicit identification.\footnote{M.~Kirschmer, \emph{Finite symplectic
+matrix groups}, Theorem~4.6.1 and the dimension-20 case analysis,
 \url{https://www.math.rwth-aachen.de/~Markus.Kirschmer/symplectic/thesis.pdf}.}
 Those are global $\ZZ G$-module classes rather than the local $2$-adic
 homothety incidence complex and form/refinement data computed here.  The unique
@@ -13221,14 +13222,110 @@ $1+\varepsilon$ realizes the split endpoint deck, not the nonsplit
 signed-$E_8$ Schur/Bockstein class.  A nonsplit Yoneda extension of modules does
 not become a nonsplit central extension of groups.
 
+\paragraph{Pass 338 --- the selector has a principal $S_3$ frame cover.}
+The W(3,3) line action is the ATLAS $p40b$ action, whose stabilizer has the
+unique chain
+\[
+ |G|=51840>|K|=1296>|N|=216,\qquad K/N\cong S_3.
+\]
+The faithful coset action $G/N$ is transitive of degree $240$, has rank $13$
+and subdegrees $1^6,27^6,72$, and is a principal $S_3$ cover of the forty
+lines.  Its three order-two block quotients recover the selector actions of
+degree $120$ and subdegrees $1,2,27,36,54$.  The order-three block quotient is
+a new $80$-sheet refinement-parity cover, with subdegrees $1,1,24,27,27$;
+$U_4(2)$ splits the $24$ as $12+12$.  This cover is not the signed-$E_8$
+action: the latter has rank $6$, subdegrees $1,1,4,54,72,108$, and its forty
+hexads lie over the nonconjugate $p40a$ action.  On the six refined lattice
+states the direct integral $S_3$ action is $3+3$; twisting odd elements by the
+central simultaneous refinement flip produces the regular fibre.
+
+\paragraph{Pass 339 --- the extraspecial Clifford carrier exists.}
+Let $E$ be the real five-qubit Pauli group.  GAP gives
+\[
+ E\cong 2_+^{1+10},\quad |E|=2048,\quad
+ |Z(E)|=|E'|=|\Phi(E)|=2,
+\]
+with exponent four, $1056$ square-one elements, and trace distribution
+$\{-32^1,0^{2046},32^1\}$.  The trace inner product is one; since
+$|E/E'|=1024$, the unique nonlinear character has degree $32$.  Independently,
+the faithful $U_4(2)$ action on $H_{10}$ preserves a nondegenerate plus
+quadratic space and exactly two refinements, each with $528$ zeros.  Hence the
+finite Stone--von Neumann construction supplies the projective Clifford lift
+\[
+ 2_+^{1+10}\longrightarrow \operatorname{Cliff}(H_{10},q)
+ \longrightarrow O^+(10,2)
+\]
+on the unique $32$-dimensional carrier.  This does not select one refinement or
+one chirality.
+
+\paragraph{Pass 340 --- the $3^{16}$ discriminant module is $1+5+10$.}
+For the integral half-spin pairing $P$, GAP constructs the quotient actions on
+\[
+ D_+=\FF_3^{32}/\operatorname{row}(\bar P),\qquad
+ D_-=\FF_3^{32}/\operatorname{row}(\bar P^{\mathsf T}).
+\]
+Explicit MeatAxe isomorphisms give
+\[
+ D_+\cong D_-\cong \mathbf1\oplus V_5\oplus V_{10}
+\]
+as faithful semisimple $\FF_3U_4(2)$-modules.  Each has the eight submodule
+dimensions $0,1,5,6,10,11,15,16$, is self-dual, and has endomorphism algebra
+$\FF_3^3$.  Eisenstein $\omega$ acts trivially.  There is no irreducible
+characteristic-three $16$ for $U_4(2)$; the genuine irreducible $16$ belongs to
+$2.U_4(2)$, whose centre acts as $-I_{16}$.  Thus $3^{16}$ is discriminant
+size, not a surviving qutrit phase or chirality label.
+
+\paragraph{Pass 341 --- the selector obstruction is the missing restriction
+direction.}
+GAP Cohomolo computes
+\[
+ \dim H^2(\PGSp(4,3),\FF_2)=2,\quad
+ \dim H^2(\PSp(4,3),\FF_2)=1,
+\]
+and, for the inner line stabilizer $K=3^3:S_4$, its sign kernel
+$A=3^3:A_4$, and selector kernel $N=3^3:V_4$,
+\[
+ \dim H^2(K,\FF_2)=2,\qquad
+ \dim H^2(A,\FF_2)=1,\qquad
+ \dim H^2(N,\FF_2)=3.
+\]
+The signed-$E_8$ restriction is $3^3:\GL(2,3)$ over $K$ and remains nonsplit
+as $3^3:\mathrm{SL}(2,3)$ over $A$.  The selector-sign Bockstein is
+$3^3:(A_4:C_4)$ over $K$ but splits as $C_2\times(3^3:A_4)$ over $A$.
+These form a basis of $H^2(K,\FF_2)$.  Globally the second direction is the
+outer-sign Bockstein, which vanishes on $\PSp(4,3)$ and hence on $K$.
+Therefore the restriction image is exactly the one-dimensional signed-$E_8$
+span; the selector Bockstein cannot globalize.
+
+The same calculation corrects the module-extension reading.  For
+$0\to\mathbf1\to\operatorname{rad}_9\to V_8\to0$, the $H^1$ dimensions of
+$(\mathbf1,V_8,\operatorname{rad}_9)$ are $(0,2,2)$ for $\PSp$ and $(1,1,2)$
+for $\PGSp$.  Since $H^0(\mathbf1)\to H^0(\operatorname{rad}_9)$ is an
+isomorphism and $H^0(V_8)=0$, exactness makes the connecting map to
+$H^2(\mathbf1)$ zero.  The adjacent nonsplit $1|8|1$ extensions have zero
+Yoneda product; it is neither group-extension class.
+
+\paragraph{Pass 342 --- five local vertices give two controller-stable
+spines.}
+Reconstructing the five lattices gives the exact controller permutations
+\[
+ \omega=[1,2,5,3,4],\qquad T=[1,2,3,5,4]
+\]
+on $(L,R,L_1,L_2,L_3)$.  Thus $\omega$ fixes $L,R$ and cycles the three
+$H_{10}$ leaves, while $T$ fixes both spine lattices individually and swaps two
+leaves.  The maximal Eisenstein normalizer $C_6\times U_4(2)$ has order
+$155520$ and retains precisely the two spine lattices among this local complex.
+The exact result is five local vertices and two controller-stable spines; the
+nearby Kirschmer counts cannot be identified with it without matching both the
+group representation and lattice equivalence.
+
 \paragraph{Current boundary.}
-Four old construction gaps are now closed or sharply resolved: the integral
-outer controller exists; the full stable lattice complex is classified; the
-symplectic polar and abstract integral half-spin lattices exist; and the two
-candidate $C_2$ extension classes are separated.  The selector comparison
-refutes the naive objectwise identification and names the next missing object,
-a curved line-dependent $S_3$ lattice transport.  No result here selects one
-quadratic refinement or half-spin chirality, identifies either with a physical
-generation, or derives a Standard-Model observable.
+The principal curved selector frame, the finite Clifford carrier, the
+characteristic-three discriminant module, the global/local extension-class
+ledger, and the local-to-global lattice action are now explicit.  The remaining
+finite question is whether any additional datum canonically selects one of the
+two plus quadratic refinements and one half-spin chirality.  No result here
+identifies either with a physical generation or derives a Standard-Model
+observable.
 
 \end{document}
